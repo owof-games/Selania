@@ -22,6 +22,10 @@ public class DialogueManager : MonoBehaviour
 
     private static DialogueManager instance;
 
+    //Forse qui posso risolvere con "speaker" uguale a una lista di possibili outcome dei personaggi (player, mentore etc.)?
+    private const string SPEAKER_TAG = "speaker";
+    private const string PORTRAIT_TAG = "portrait";
+    private const string LAYOUT_TAG = "layout";
 
 
     private void Awake()
@@ -95,12 +99,53 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text = currentStory.Continue();
             //E chiamiamo le eventuali scelte che abbiamo settato
             DisplayChoices();
+            //Gestione tag
+            HandleTags(currentStory.currentTags);
+
+
         }
         else
         {
            StartCoroutine(ExitDialogueMode()); 
         }
 
+    }
+
+    private void HandleTags(List<string> currentTags)
+    {
+        //loopiamo la comunque
+        foreach (string tag in currentTags)
+        {
+            //dividi il tag in base al :
+            string[] splitTag = tag.Split(':');
+            //Check di sicurezza per evitare che ci siano più di due elementi
+            if (splitTag.Length != 2)
+            {
+                Debug.LogError("Tag could not appropriately parsed: " + tag);
+            }
+            //Posso partire da qui per recuperare il nome del parlante?
+            string tagKey = splitTag[0].Trim();
+            string tagValue = splitTag[1].Trim();
+
+            //Da qui partiamo con uno switch dei tag
+            //NOTA: anche per i portraits farei comunque poi una costante, con la player sempre a sinistra e gli altri a destra
+            switch (tagKey)
+            {
+                case SPEAKER_TAG:
+                    Debug.Log("speaker=" + tagValue);
+                    break;
+                case PORTRAIT_TAG:
+                    Debug.Log("portrait=" + tagValue);
+                    break;
+                case LAYOUT_TAG:
+                    Debug.Log("layout=" + tagValue);
+                    break;
+                 default: 
+                 Debug.LogWarning("Tag came in but is not currently handled: "+ tag);
+                 break;  
+            }
+
+        }
     }
 
     private IEnumerator ExitDialogueMode()
