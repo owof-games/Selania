@@ -2807,6 +2807,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1471477365736583005, guid: 3a23e2cf4302a674bb6f92c35036d432, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471477365736583005, guid: 3a23e2cf4302a674bb6f92c35036d432, type: 3}
+      propertyPath: m_Color.g
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471477365736583005, guid: 3a23e2cf4302a674bb6f92c35036d432, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195740012728452527, guid: 3a23e2cf4302a674bb6f92c35036d432, type: 3}
+      propertyPath: m_Color.b
+      value: 0.32941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195740012728452527, guid: 3a23e2cf4302a674bb6f92c35036d432, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195740012728452527, guid: 3a23e2cf4302a674bb6f92c35036d432, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9254902
+      objectReference: {fileID: 0}
     - target: {fileID: 4053686744089097562, guid: 3a23e2cf4302a674bb6f92c35036d432, type: 3}
       propertyPath: m_Name
       value: Anima
