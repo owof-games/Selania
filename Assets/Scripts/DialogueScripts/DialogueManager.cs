@@ -1,12 +1,19 @@
 using UnityEngine;
 using TMPro;
 using Ink.Runtime;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
 {
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
+
+    [Header("Choices UI")]
+    [SerializeField] private GameObject[] choices;
+    private TextMeshProUGUI[] choicesText;
 
     private Story currentStory;
 
@@ -32,6 +39,17 @@ public class DialogueManager : MonoBehaviour
         //In questo modo a inizio del gioco resetto la variabile e disattivo il panel di testo
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
+        
+        //Con l'opzione qui sotto facciamo in modo che il testo nelle scelte coincida con la quantità di opzioni di scelta presenti nell'array. Prima definiamo la lunghezza dell'array dei GameObject "choices". Da lì aggiungiamo un bottone alla volta.
+        choicesText = new TextMeshProUGUI[choices.Length];
+        int index = 0;
+        foreach (GameObject choice in choices)
+        {
+            choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
+            index++;
+
+        }
+
     }
 
 
@@ -75,21 +93,73 @@ public class DialogueManager : MonoBehaviour
         {
             //Questo dice a TextMeshPro che testo mostrare (giusto?)
             dialogueText.text = currentStory.Continue();
+            //E chiamiamo le eventuali scelte che abbiamo settato
+            DisplayChoices();
         }
         else
         {
-           ExitDialogueMode(); 
+           StartCoroutine(ExitDialogueMode()); 
         }
 
     }
 
-    private void ExitDialogueMode()
+    private IEnumerator ExitDialogueMode()
     {
+        //diciamo di aspettare un quinto di secondo prima di fare qualsiasi cosa a dialogo finito.
+        yield return new WaitForSeconds(0.2f);
+
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         //Credo che l'opzione sotto serva a svuotare TextMeshPro così che non si porti dietro rimasugli di testo?
         dialogueText.text = "";
 
     }
+
+    private void DisplayChoices()
+    {
+        List<Choice> currentChoices = currentStory.currentChoices;
+
+        //Questo è un check per essere sicura che non ci siano in ink più scelte di quante non siano accessibili nell'interfaccia di unity
+        if (currentChoices.Count > choices.Length)
+        {
+            Debug.LogError("More choices were given than the UI che support. Number of choice given; " + currentChoices.Count);
+        }
+
+        int index = 0;
+
+        //enable and initialize the coices up to the amount of choices for this line of dialogu
+        foreach(Choice choice in currentChoices)
+        {
+            choices[index].gameObject.SetActive(true);
+            choicesText[index].text = choice.text;
+            index++;
+        }
+
+        //skippa poi le scelte che sono vuote e non vanno attivate nell'interfaccia
+        for(int i = index; i <choices.Length; i++)
+        {
+            choices[i].gameObject.SetActive(false);
+        }
+
+        StartCoroutine(SelectFirstChoice());
+
+    }
+
+
+    //Questa funzione risolve il problema per cui non ci sono opzioni cliccabili evidenziando la prima di default.
+    private IEnumerator SelectFirstChoice()
+    {
+        //EventSystem chiede prima di venir svuotato, poi di selezionare il primo utile
+        EventSystem.current.SetSelectedGameObject(null);
+        yield return new WaitForEndOfFrame();
+        EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
+
+    }
+
+    public void MakeChoice(int choiceIndex)
+    {
+        currentStory.ChooseChoiceIndex(choiceIndex);
+    }
+
 
 }
