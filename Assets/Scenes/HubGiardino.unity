@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 118962487}
   - component: {fileID: 118962488}
+  - component: {fileID: 118962489}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -145,7 +146,7 @@ Transform:
   m_GameObject: {fileID: 118962486}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.57, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -185,7 +186,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.06636, y: -2.9198573}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -195,8 +196,22 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.3981619, y: 1.9954028}
   m_EdgeRadius: 0
+--- !u!114 &118962489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118962486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4e8a1a90a575a844bebeaff5b1ea6f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visualCue: {fileID: 202097925}
+  inkJson: {fileID: 4900000, guid: b87a2ed9078bc4543aff90f9ed301d18, type: 3}
 --- !u!1 &202097925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,7 +1371,7 @@ Transform:
   m_GameObject: {fileID: 2069692463}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6536803, y: -0.85418653, z: 0.032995865}
+  m_LocalPosition: {x: -0.56, y: -0.85418653, z: 0.032995865}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
