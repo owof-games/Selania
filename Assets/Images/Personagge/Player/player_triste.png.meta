@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2ed310401f876ce4089760c7f02d99cc
+guid: dc0096bd9264f4144bf7ff7774e5471f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9134389364396946891
-    second: PSD_icone_personagge_0
+      213: -7996488331841205752
+    second: player_triste_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PSD_icone_personagge_0
+      name: player_triste_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc57cf81bbed3ce70800000000000000
-      internalID: 9134389364396946891
+      spriteID: 80a8c0aba34c60190800000000000000
+      internalID: -7996488331841205752
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      PSD_icone_personagge_0: 9134389364396946891
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2ed310401f876ce4089760c7f02d99cc
+guid: d0f93c3859b737146b299a5bb1ef8ce4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9134389364396946891
-    second: PSD_icone_personagge_0
+      213: 6196463870856694419
+    second: player_seccato_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PSD_icone_personagge_0
+      name: player_seccato_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc57cf81bbed3ce70800000000000000
-      internalID: 9134389364396946891
+      spriteID: 39a84fd6f034ef550800000000000000
+      internalID: 6196463870856694419
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      PSD_icone_personagge_0: 9134389364396946891
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
