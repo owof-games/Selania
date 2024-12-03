@@ -31,10 +31,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //if (DialogueManager.GetInstance().dialogueIsPlaying)
-        //{
-            //return;
-        //}
+        //Qui vado a prendere un'istanza dal mio script DialogueManager e vado a vedere se "dialogueIsPlayng" è = vero: se sì, non faccio le cose sotto (ovvero, non si muove), altrimenti può muoversi.
+        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
 
         UpdateIsGrounded();
 

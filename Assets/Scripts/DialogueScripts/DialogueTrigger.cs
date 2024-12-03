@@ -29,13 +29,14 @@ public class DialogueTrigger : MonoBehaviour
     private void Update()
         {
             
-            if (playerInRange)
+            if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
+            //La logica è: posso avviare una sola conversazione e vedere il visualCue attivo solo se non ci sono altre conversazioni in corso.
                 {
                     visualCue.SetActive(true);
                     //Mi sa che alla base base è questa la cosa che mi serve.
                     if (InputManager.GetInstance().GetInteractPressed())
                         {
-                            Debug.Log(inkJson.text);
+                            DialogueManager.GetInstance().EnterDialogueMode(inkJson);
                         }
                 }
 
