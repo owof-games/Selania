@@ -146,6 +146,14 @@ public class DialogueManager : MonoBehaviour
                 case SPEAKER_TAG:
                     //displayNameText è l'oggetto creato in Unity per mostrare il nome.
                     displayNameText.text = tagValue;
+                    //Questo è un tentativo di regolare la posizione del layout a seconda di chi parla
+                    //{
+                        //if (SPEAKER_TAG == "player")  
+                        //{layoutAnimator.Play(left);}
+                        //if (SPEAKER_TAG != "player") 
+                        //{layoutAnimator.Play(right);}
+
+                    //}
                     break;
                 case PORTRAIT_TAG:
                     //Play anima un oggetto chiamato (qui, chiamato dal nome del tag)
