@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 143527392}
   - component: {fileID: 143527394}
   - component: {fileID: 143527393}
+  - component: {fileID: 143527395}
   m_Layer: 5
   m_Name: DialoguePanel
   m_TagString: Untagged
@@ -199,6 +200,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143527391}
   m_CullTransparentMesh: 1
+--- !u!95 &143527395
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143527391}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bd18c9ce9eeda254797e51d5682be745, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &329967033
 GameObject:
   m_ObjectHideFlags: 0
@@ -2331,6 +2354,7 @@ MonoBehaviour:
   dialoguePanel: {fileID: 143527391}
   dialogueText: {fileID: 1625733884}
   displayNameText: {fileID: 754360673}
+  portraitAnimator: {fileID: 914013262}
   choices:
   - {fileID: 1751463282}
   - {fileID: 1924385861}
@@ -2843,6 +2867,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1471477365736583005, guid: 3a23e2cf4302a674bb6f92c35036d432, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3195740012728452527, guid: 3a23e2cf4302a674bb6f92c35036d432, type: 3}
       propertyPath: m_Color.b
       value: 0.32941177
@@ -3016,6 +3044,10 @@ PrefabInstance:
     - target: {fileID: 4820185104160970428, guid: a81b0af81cdb8a84f9a826793073feb8, type: 3}
       propertyPath: m_Name
       value: Mentore
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969801624941159280, guid: a81b0af81cdb8a84f9a826793073feb8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
