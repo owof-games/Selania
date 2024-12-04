@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private TextMeshProUGUI displayNameText;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -132,7 +133,8 @@ public class DialogueManager : MonoBehaviour
             switch (tagKey)
             {
                 case SPEAKER_TAG:
-                    Debug.Log("speaker=" + tagValue);
+                    //displayNameText è l'oggetto creato in Unity per mostrare il nome.
+                    displayNameText.text = tagValue;
                     break;
                 case PORTRAIT_TAG:
                     Debug.Log("portrait=" + tagValue);
