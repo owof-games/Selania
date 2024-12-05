@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      player_seccato_0: 6196463870856694419
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
