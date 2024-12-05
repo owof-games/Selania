@@ -26,11 +26,12 @@ public class ObjectFound : MonoBehaviour
     {
         if(objectFound == false)
         {
-            return;
+            infoPanel.SetActive(false);
         }
         else
         {   infoPanel.SetActive(true);
             infoText.text = "Hai trovato un oggetto!";
+            //ci serve qualcosa per cui "onClick" setti objectFound su false e quindi si disattivi il pannello
         }
     }
 
