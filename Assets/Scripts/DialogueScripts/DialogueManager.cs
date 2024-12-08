@@ -226,6 +226,8 @@ public class DialogueManager : MonoBehaviour
     public void MakeChoice(int choiceIndex)
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
+        //Abbiamo messo questa cosa perché ink prima si sposta sulla scelta, e poi avanza. cosa che nel codice prima non c'era
+        ContinueStory();
     }
 
 
