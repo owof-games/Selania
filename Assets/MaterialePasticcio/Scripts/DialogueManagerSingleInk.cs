@@ -1,11 +1,16 @@
 using Ink.Runtime;
 using UnityEngine;
+using TMPro;
 
 public class DialogueManagerSingleInk : MonoBehaviour
 {
     //Field è la variabile all'interno di una classe
     [SerializeField] private TextAsset inkAssetJSON;
     [SerializeField] private GameObject[] entities;
+
+    //Queste sono modifiche fatte dopo il lavoro con Mattia.
+    [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private TextMeshProUGUI dialogueText;
     private Story story;
 
 
@@ -13,6 +18,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
     {
         story = new Story(inkAssetJSON.text);
         ContinueStory();
+        //Queste sono modifiche fatte dopo il lavoro con Mattia. L'idea è di iniziare settando comunque come attivo il panel di dialogo per testare i testi, poi si procederà con il disattivarlo quando necessario.
+        dialoguePanel.SetActive(true);
     }
 
     void ContinueStory()
