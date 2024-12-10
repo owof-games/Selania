@@ -10,6 +10,8 @@
 === mentore
 + [Mentore]
 Mentore: Ti dico delle cose.
+Mentore: E altre cose.
+Mentore: Giusto per vedere quanto la tiro lunga.
 -> main
 
 === anima
