@@ -2,6 +2,7 @@
 
 === main
 @interact
+//Ricorda: in INK la logica è che una riga è attaccata a tutte le scelte dopo, per cui @interacti è collegato ora anche a mentore, anima.
 
 <- mentore
 <- anima
