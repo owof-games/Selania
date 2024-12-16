@@ -1,29 +1,69 @@
 using Ink.Runtime;
 using UnityEngine;
 using TMPro;
+using System.Collections.Generic;
+using System.Collections;
+using UnityEngine.EventSystems;
+using Microsoft.Unity.VisualStudio.Editor;
+using UnityEditor.U2D;
 
 public class DialogueManagerSingleInk : MonoBehaviour
 {
     //Field è la variabile all'interno di una classe
-    [SerializeField] private TextAsset inkAssetJSON;
-    [SerializeField] private GameObject[] entities;
 
-    //Queste sono modifiche fatte dopo il lavoro con Mattia.
+    [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
     private Story story;
+
+    [Header("Text elements")]
+    [SerializeField] private TextAsset inkAssetJSON;
+    [SerializeField] private GameObject[] entities;
+
+    [Header("Choices UI")]
+    [SerializeField] private GameObject[] choices;
+    private TextMeshProUGUI[] choicesText;
+
+    [Header("Background")]
+    //prova per cambiare il background//
+    private const string BACKGROUND_TAG = "background";
+    [SerializeField] private Image background;
+    private Sprite newSprite;
+
+
 
 
     void Start()
     {
         story = new Story(inkAssetJSON.text);
         ContinueStory();
-        //Queste sono modifiche fatte dopo il lavoro con Mattia. L'idea è di iniziare settando comunque come attivo il panel di dialogo per testare i testi, poi si procederà con il disattivarlo quando necessario.
+
         dialoguePanel.SetActive(false);
+
+        //Con l'opzione qui sotto facciamo in modo che il testo nelle scelte coincida con la quantità di opzioni di scelta presenti nell'array. Prima definiamo la lunghezza dell'array dei GameObject "choices". Da lì aggiungiamo un bottone alla volta.
+        choicesText = new TextMeshProUGUI[choices.Length];
+        int index = 0;
+            foreach (GameObject choice in choices)
+            {
+                choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
+                index++;
+            }
+
+        GetComponent<Image>();    
     }
 
     void Update()
     {
+        //Se non ci sono conversazioni in corso, skippiamo (return)
+        // if(!dialogueIsPlaying)
+        //    return;
+        //}
+
+        //Se invece il dialogo è in corso, ci interessa sapere se il giocatore preme il tasto di interazione per mandare avanti la conversazione
+        // if (InputManager.GetInstance().GetSubmitPressed())
+        // {
+        //     ContinueStory();
+        // }
     }
 
     void ContinueStory()
@@ -91,7 +131,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 dialoguePanel.SetActive(true);
                 //Associamo al testo di Unity il testo di INK.
                 dialogueText.text = story.Continue();
-                //DisplayChoices(); -> questo poi me lo attivo appena l'ho sistemato.
+                DisplayChoices();
             }
 
         }
@@ -125,51 +165,89 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
 
 //Questa roba ti permette di attivare i tasti e metterci il testo, adattala poi a questa situazione (viene dal prototipo originale.)
-    //  private void DisplayChoices()
+    private void DisplayChoices()
+    {
+        List<Choice> currentChoices = story.currentChoices;
+
+        //Questo è un check per essere sicura che non ci siano in ink più scelte di quante non siano accessibili nell'interfaccia di unity
+        if (currentChoices.Count > choices.Length)
+        {
+            Debug.LogError("More choices were given than the UI che support. Number of choice given; " + currentChoices.Count);
+        }
+
+        int index = 0;
+
+        //enable and initialize the coices up to the amount of choices for this line of dialogu
+        foreach(Choice choice in currentChoices)
+        {
+            choices[index].gameObject.SetActive(true);
+            choicesText[index].text = choice.text;
+            index++;
+        }
+
+        //skippa poi le scelte che sono vuote e non vanno attivate nell'interfaccia
+        for(int i = index; i <choices.Length; i++)
+        {
+            choices[i].gameObject.SetActive(false);
+        }
+
+        StartCoroutine(SelectFirstChoice());
+
+    }
+
+
+    //Questa funzione risolve il problema per cui non ci sono opzioni cliccabili evidenziando la prima di default.
+    private IEnumerator SelectFirstChoice()
+    {
+        //EventSystem chiede prima di venir svuotato, poi di selezionare il primo utile
+        EventSystem.current.SetSelectedGameObject(null);
+        yield return new WaitForEndOfFrame();
+        EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
+
+    }
+
+    public void MakeChoice(int choiceIndex)
+    {
+        story.ChooseChoiceIndex(choiceIndex);
+        //Abbiamo messo questa cosa perché ink prima si sposta sulla scelta, e poi avanza. cosa che nel codice prima non c'era
+        ContinueStory();
+    }
+
+
+    //  private void HandleTags(List<string> currentTags)
     // {
-    //     List<Choice> currentChoices = currentStory.currentChoices;
-
-    //     //Questo è un check per essere sicura che non ci siano in ink più scelte di quante non siano accessibili nell'interfaccia di unity
-    //     if (currentChoices.Count > choices.Length)
+    //     //loopiamo la comunque
+    //     foreach (string tag in currentTags)
     //     {
-    //         Debug.LogError("More choices were given than the UI che support. Number of choice given; " + currentChoices.Count);
-    //     }
+    //         //dividi il tag in base al :
+    //         string[] splitTag = tag.Split(':');
+    //         //Check di sicurezza per evitare che ci siano più di due elementi
+    //         if (splitTag.Length != 2)
+    //         {
+    //             Debug.LogError("Tag could not appropriately parsed: " + tag);
+    //         }
+    //         //Posso partire da qui per recuperare il nome del parlante?
+    //         string tagKey = splitTag[0].Trim();
+    //         string tagValue = splitTag[1].Trim();
 
-    //     int index = 0;
+            //Da qui partiamo con uno switch dei tag
+            // switch (tagKey)
+            // {
+            //     case BACKGROUND_TAG:
+            //         //newSprite = tagKey;
+            //         //background.sprite = newSprite;
 
-    //     //enable and initialize the coices up to the amount of choices for this line of dialogu
-    //     foreach(Choice choice in currentChoices)
-    //     {
-    //         choices[index].gameObject.SetActive(true);
-    //         choicesText[index].text = choice.text;
-    //         index++;
-    //     }
-
-    //     //skippa poi le scelte che sono vuote e non vanno attivate nell'interfaccia
-    //     for(int i = index; i <choices.Length; i++)
-    //     {
-    //         choices[i].gameObject.SetActive(false);
-    //     }
-
-    //     StartCoroutine(SelectFirstChoice());
-
-    // }
+            //         //displayNameText è l'oggetto creato in Unity per mostrare il nome.
+            //         //displayNameText.text = tagValue;
+            //         break;
+          
 
 
-    // //Questa funzione risolve il problema per cui non ci sono opzioni cliccabili evidenziando la prima di default.
-    // private IEnumerator SelectFirstChoice()
-    // {
-    //     //EventSystem chiede prima di venir svuotato, poi di selezionare il primo utile
-    //     EventSystem.current.SetSelectedGameObject(null);
-    //     yield return new WaitForEndOfFrame();
-    //     EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
+            //      default: 
+            //      Debug.LogWarning("Tag came in but is not currently handled: "+ tag);
+            //      break;  
+            // }
 
-    // }
+        }
+    
 
-    // public void MakeChoice(int choiceIndex)
-    // {
-    //     currentStory.ChooseChoiceIndex(choiceIndex);
-    //     //Abbiamo messo questa cosa perché ink prima si sposta sulla scelta, e poi avanza. cosa che nel codice prima non c'era
-    //     ContinueStory();
-    // }
-}
