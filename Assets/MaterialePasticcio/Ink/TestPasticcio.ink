@@ -6,6 +6,7 @@
 @interact
 <- mentore
 <- anima
+<- inventario
 + -> main
 
 === mentore
@@ -15,11 +16,22 @@ Mentore: E altre cose.
 Mentore: Giusto per vedere quanto la tiro lunga.
 -
     + Buffo no?
-    + Altra scelta.
+    + Altra scelta
 -
 -> main
 
 === anima
 +[Anima]
 Anima: Io dico altre cose.
+- 
+    + Cosa ne pensi?
+-    
+-> main
+
+=== inventario
++ [Inventario]
+Nell'inventario ci sono mele, pere, kiwi.
+    -
+    + Manca qualcosa?
+    -
 -> main

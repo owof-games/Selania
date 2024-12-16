@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.EventSystems;
 using Microsoft.Unity.VisualStudio.Editor;
-using UnityEditor.U2D;
+
 
 public class DialogueManagerSingleInk : MonoBehaviour
 {
@@ -49,7 +49,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 index++;
             }
 
-        GetComponent<Image>();    
+        //GetComponent<Image>();    
     }
 
     void Update()
