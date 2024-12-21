@@ -166,6 +166,11 @@ public class DialogueManagerSingleInk : MonoBehaviour
         }
     }
 
+    public void OnClickContinue()
+    {
+        ContinueStory();
+    }
+
 //Elemento aggiunto dopo l'ultima "lezione" di Mattia
 //Questa roba ti permette di attivare i tasti e metterci il testo, adattala poi a questa situazione (viene dal prototipo originale.)
     private void DisplayChoices()
