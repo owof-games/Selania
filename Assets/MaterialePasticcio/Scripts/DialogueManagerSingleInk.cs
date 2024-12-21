@@ -133,7 +133,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 //Attiviamo il panel di dialogo
                 dialoguePanel.SetActive(true);
                 //Associamo al testo di Unity il testo di INK.
-                dialogueText.text = story.Continue();
+                dialogueText.text = currentLine;
                 DisplayChoices();
             }
 
