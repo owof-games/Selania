@@ -40,7 +40,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
         dialoguePanel.SetActive(false);
 
+        //Elemento aggiunto dopo l'ultima "lezione" di Mattia
         //Con l'opzione qui sotto facciamo in modo che il testo nelle scelte coincida con la quantità di opzioni di scelta presenti nell'array. Prima definiamo la lunghezza dell'array dei GameObject "choices". Da lì aggiungiamo un bottone alla volta.
+        //Questa roba forse l'ho capita fino a un certo punto: perché uso GetComponent e non SetActive?
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
             foreach (GameObject choice in choices)
@@ -118,13 +120,14 @@ public class DialogueManagerSingleInk : MonoBehaviour
             // //Qui posso inserire ulteriori eccezioni (es: @move, se dovessi farne uso?)
             
 
-            // //Se invece la storia può continuare (story.canContinue == true) ma non ci sono eccezioni, cosa voglio che accada?
-            // //Che all'interazione con un oggetto, parta il corrispettivo dialogo.
-            // //Forse un primo step può essere solo che se clicco un oggetto si apre il box di dialogo.
-            // //E che poi venga stampata una frase (senza fare un distinguo tra chi dice cosa, che potrei fare poi).
-            // //E per far questa cosa, devo associare il testo di ink al box di testo di Unity (cosa più easy).
+            //Se invece la storia può continuare (story.canContinue == true) ma non ci sono eccezioni, cosa voglio che accada?
+            //Che all'interazione con un oggetto, parta il corrispettivo dialogo.
+            //Forse un primo step può essere solo che se clicco un oggetto si apre il box di dialogo.
+            //E che poi venga stampata una frase (senza fare un distinguo tra chi dice cosa, che potrei fare poi).
+            //E per far questa cosa, devo associare il testo di ink al box di testo di Unity (cosa più easy).
 
-            // //Da qui in sotto son tutti tentativi di far partire il dialogo, tentativi che NON VANNO, sob
+            //Elemento aggiunto dopo l'ultima "lezione" di Mattia
+            //Da qui in sotto son tutti tentativi di far partire il dialogo, tentativi che NON VANNO, sob
             else
             {
                 //Attiviamo il panel di dialogo
@@ -153,7 +156,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 //Questo è "scegli questo indice di scelta", vai a questa scelta (Es: mentore 0 come indice, vai alla scelta 0, quindi il mentore)
                 story.ChooseChoiceIndex(choiceIndex);
                 //In ink questo significa andare all'inizio della parentesi quadra (+[xsxx]), non ha ancora compito la scelta.
-            //Attiviamo il panel di dialogo
+                //Attiviamo il panel di dialogo
                 dialoguePanel.SetActive(true);
                 //Associamo al testo di Unity il testo di INK.
                 ContinueStory(); 
@@ -163,7 +166,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
         }
     }
 
-
+//Elemento aggiunto dopo l'ultima "lezione" di Mattia
 //Questa roba ti permette di attivare i tasti e metterci il testo, adattala poi a questa situazione (viene dal prototipo originale.)
     private void DisplayChoices()
     {
@@ -177,7 +180,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
         int index = 0;
 
-        //enable and initialize the coices up to the amount of choices for this line of dialogu
+        //enable and initialize the choices up to the amount of choices for this line of dialogue
         foreach(Choice choice in currentChoices)
         {
             choices[index].gameObject.SetActive(true);
@@ -213,7 +216,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
         ContinueStory();
     }
 
-
+    //Elemento aggiunto dopo l'ultima "lezione" di Mattia. Spoiler: è un disastro
     //  private void HandleTags(List<string> currentTags)
     // {
     //     //loopiamo la comunque
