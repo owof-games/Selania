@@ -12,7 +12,7 @@
 === mentore
 + [Mentore]
 Mentore: Ti dico delle cose.
-Mentore: E altre cose.
+Mentore: E altre cose. #background: BackDue
 Mentore: Giusto per vedere quanto la tiro lunga.
 -
     + Buffo no?

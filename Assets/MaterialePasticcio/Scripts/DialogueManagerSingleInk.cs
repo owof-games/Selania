@@ -4,7 +4,7 @@ using TMPro;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.EventSystems;
-using Microsoft.Unity.VisualStudio.Editor;
+using UnityEngine.UI;
 
 
 public class DialogueManagerSingleInk : MonoBehaviour
@@ -28,7 +28,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     //prova per cambiare il background//
     private const string BACKGROUND_TAG = "background";
     [SerializeField] private Image background;
-    private Sprite newSprite;
+    [SerializeField] private Sprite backDue;
 
 
 
@@ -137,6 +137,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 DisplayChoices();
             }
 
+            HandleTags(story.currentTags);
+
         }
     }
 
@@ -169,6 +171,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     public void OnClickContinue()
     {
         ContinueStory();
+        //TODO: disabilita bottone quando c'è una scelta.
     }
 
 //Elemento aggiunto dopo l'ultima "lezione" di Mattia
@@ -222,40 +225,47 @@ public class DialogueManagerSingleInk : MonoBehaviour
     }
 
     //Elemento aggiunto dopo l'ultima "lezione" di Mattia. Spoiler: è un disastro
-    //  private void HandleTags(List<string> currentTags)
-    // {
-    //     //loopiamo la comunque
-    //     foreach (string tag in currentTags)
-    //     {
-    //         //dividi il tag in base al :
-    //         string[] splitTag = tag.Split(':');
-    //         //Check di sicurezza per evitare che ci siano più di due elementi
-    //         if (splitTag.Length != 2)
-    //         {
-    //             Debug.LogError("Tag could not appropriately parsed: " + tag);
-    //         }
-    //         //Posso partire da qui per recuperare il nome del parlante?
-    //         string tagKey = splitTag[0].Trim();
-    //         string tagValue = splitTag[1].Trim();
+     private void HandleTags(List<string> currentTags)
+    {
+        //loopiamo la comunque
+        foreach (string tag in currentTags)
+        {
+            //dividi il tag in base al :
+            //Split non divide in due, divide ogni volta che c'è un : e poi ricomincia il giro (foreach), tipo gatto: cane: giardino
+            string[] splitTag = tag.Split(':');
+            //Check di sicurezza per evitare che ci siano più di due elementi
+            if (splitTag.Length != 2)
+            {
+                Debug.LogError("Tag could not appropriately parsed: " + tag);
+            }
+            //Posso partire da qui per recuperare il nome del parlante?
+            string tagKey = splitTag[0].Trim();
+            string tagValue = splitTag[1].Trim();
+
 
             //Da qui partiamo con uno switch dei tag
-            // switch (tagKey)
-            // {
-            //     case BACKGROUND_TAG:
-            //         //newSprite = tagKey;
-            //         //background.sprite = newSprite;
+            switch (tagKey)
+            {
+                case BACKGROUND_TAG:
+                    if(tagValue == "BackDue") {
+                        background.sprite = backDue;
+                    }
+                    // newSprite = tagValue;
+                    //background.sprite = newSprite;
 
-            //         //displayNameText è l'oggetto creato in Unity per mostrare il nome.
-            //         //displayNameText.text = tagValue;
-            //         break;
+                    //displayNameText è l'oggetto creato in Unity per mostrare il nome.
+                    //displayNameText.text = tagValue;
+                    break;
           
 
 
-            //      default: 
-            //      Debug.LogWarning("Tag came in but is not currently handled: "+ tag);
-            //      break;  
-            // }
+                 default: 
+                 Debug.LogWarning("Tag came in but is not currently handled: "+ tag);
+                 break;  
+            }
 
         }
+    }
+}
     
 
