@@ -27,6 +27,7 @@
     POTENZIALI CONTENUTI
 
         * Prima di andartene il mentore ti chiede: c'è qualcuno che vuoi salutare? e puoi chiamare una delle anime che hai incontrato.
+        * il mentore non conosceva uno dei luoghi che si apre (perchè?)
         
 
     
