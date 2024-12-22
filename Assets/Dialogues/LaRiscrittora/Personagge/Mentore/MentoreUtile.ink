@@ -19,7 +19,7 @@ TODO: Inizio: più che scegliere il tuo nome, scegli un nuovo nome per quel luog
         + Sì -> trigger_warning
         + Più tardi
     -
-    -> hub_giardino
+    -> main
 
 /* ---------------------------------
 
