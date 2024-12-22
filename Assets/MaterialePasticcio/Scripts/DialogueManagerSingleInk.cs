@@ -29,6 +29,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     private const string BACKGROUND_TAG = "background";
     [SerializeField] private Image background;
     [SerializeField] private Sprite backDue;
+    [SerializeField] private Sprite backBiblioteca;
 
 
 
@@ -156,6 +157,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 //In questo modo recuperiamo il valore indice di una scelta
                 var choiceIndex = choice.index;
                 //Questo è "scegli questo indice di scelta", vai a questa scelta (Es: mentore 0 come indice, vai alla scelta 0, quindi il mentore)
+                //Se il metodo parte con dei verbi come Choose, Set, Get sono "agenti". Con Is, etc, restituiscono valori.
                 story.ChooseChoiceIndex(choiceIndex);
                 //In ink questo significa andare all'inizio della parentesi quadra (+[xsxx]), non ha ancora compito la scelta.
                 //Attiviamo il panel di dialogo
@@ -247,8 +249,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
             switch (tagKey)
             {
                 case BACKGROUND_TAG:
-                    if(tagValue == "BackDue") {
+                    if(tagValue == "backDue") {
                         background.sprite = backDue;
+                    }
+
+                    if(tagValue == "backBiblioteca") {
+                        background.sprite = backBiblioteca;
                     }
                     // newSprite = tagValue;
                     //background.sprite = newSprite;
