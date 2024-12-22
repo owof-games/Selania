@@ -31,13 +31,34 @@
 ->->
 
 //Funzioni di gestione del background
-
+//Per la nomenclatura: il back di default è backLuogo, il resto vediamo man mano.
 === function tag_background()
 {
+
+    - entity_location(PG) == Giardino:
+        ~ return "backGiardino"
+        
+    - entity_location(PG) == Mausoleo:
+        ~ return "backMausoleo"
+        
+    - entity_location(PG) == Funghi:
+       ~ return "backFunghi"
+
+    - entity_location(PG) == Falene:
+        ~ return "backFalene"
+        
+    - entity_location(PG) == Labirinto:
+        ~ return "backLabirinto"
+        
+    - entity_location(PG) == Sirene:
+       ~ return "backSirene"
+
     - entity_location(PG) == Biblioteca:
        ~ return "backBiblioteca"
-    - entity_location(PG) == Giardino:
-        ~ return "backDue"
+
+    - entity_location(PG) == Tisane:
+       ~ return "backTisane"       
+                            
 }
 
 

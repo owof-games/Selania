@@ -24,12 +24,25 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
 
-    [Header("Background")]
+    [Header("Background setting")]
     [SerializeField] private Image background;
     private const string BACKGROUND_TAG = "background";
-    [SerializeField] private Sprite backDue;
-    [SerializeField] private Sprite backBiblioteca;
+    [Header("Garden Backgrounds")]
     [SerializeField] private Sprite backGiardino;
+    [Header("Mausoleum Backgrounds")]
+    [SerializeField] private Sprite backMausoleo;
+    [Header("Serra Backgrounds")]
+    [SerializeField] private Sprite backFunghi;
+    [Header("Pets Backgrounds")]
+    [SerializeField] private Sprite backFalene;
+    [Header("Labirint Backgrounds")]
+    [SerializeField] private Sprite backLabirinto;
+    [Header("Sirens Backgrounds")]
+    [SerializeField] private Sprite backSirene;
+    [Header("Library Backgrounds")]
+    [SerializeField] private Sprite backBiblioteca;
+    [Header("Tea Backgrounds")]
+    [SerializeField] private Sprite backTisane;
 
 
 
@@ -250,20 +263,50 @@ public class DialogueManagerSingleInk : MonoBehaviour
             switch (tagKey)
             {
                 case BACKGROUND_TAG:
-                    if(tagValue == "backDue") {
-                        background.sprite = backDue;
-                    }
 
-                    if(tagValue == "backBiblioteca") {
-                        background.sprite = backBiblioteca;
-                    }
-
+                //TAG GESTIONE DEL GIARDINO
                     if(tagValue == "backGiardino") {
                         background.sprite = backGiardino;
                     }
 
+                //TAG GESTIONE DEL MAUSOLEO    
+                    if(tagValue == "backMausoleo") {
+                        background.sprite = backMausoleo;
+                    }
+
+                //TAG GESTIONE DEL SERRA  
+                    if(tagValue == "backFunghi") {
+                        background.sprite = backFunghi;
+                    }
+
+                //TAG GESTIONE DEL FALENE  
+                    if(tagValue == "backFalene") {
+                        background.sprite = backFalene;
+                    }
+
+                //TAG GESTIONE DEL LABIRINTO                      
+                    if(tagValue == "backLabirinto") {
+                        background.sprite = backLabirinto;
+                    }
+                    
+                //TAG GESTIONE DEL SIRENE  
+                    if(tagValue == "backSirene") {
+                        background.sprite = backSirene;
+                    }
+
+                //TAG GESTIONE DEL BIBLIOTECA  
+                    if(tagValue == "backBiblioteca") {
+                        background.sprite = backBiblioteca;
+                    }
+
+                //TAG GESTIONE DEL TISANE  
+                    if(tagValue == "backTisane") {
+                        background.sprite = backTisane;
+                    }                    
+
+
                     break;
-          
+
 
 
                  default: 
