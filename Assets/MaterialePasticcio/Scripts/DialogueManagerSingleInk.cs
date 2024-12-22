@@ -25,11 +25,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
     private TextMeshProUGUI[] choicesText;
 
     [Header("Background")]
-    //prova per cambiare il background//
-    private const string BACKGROUND_TAG = "background";
     [SerializeField] private Image background;
+    private const string BACKGROUND_TAG = "background";
     [SerializeField] private Sprite backDue;
     [SerializeField] private Sprite backBiblioteca;
+    [SerializeField] private Sprite backGiardino;
+
 
 
 
@@ -256,11 +257,11 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     if(tagValue == "backBiblioteca") {
                         background.sprite = backBiblioteca;
                     }
-                    // newSprite = tagValue;
-                    //background.sprite = newSprite;
 
-                    //displayNameText è l'oggetto creato in Unity per mostrare il nome.
-                    //displayNameText.text = tagValue;
+                    if(tagValue == "backGiardino") {
+                        background.sprite = backGiardino;
+                    }
+
                     break;
           
 
