@@ -1,5 +1,5 @@
 === main
-@interact
+@interact #background: {tag_background()}
 ~ temp my_location = entity_location(PG)
 
 //Dialoghi del mentore

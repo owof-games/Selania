@@ -30,10 +30,15 @@
         - 
 ->->
 
-//Funzioni di gestione della numerazione
+//Funzioni di gestione del background
 
-//Takes the bottom element from a list, and returns it, modifying the list.
-//Returns the empty list () if the source list is empty.
-// I eat the {pop(fruitBowl)}. Now the bowl contains {fruitBowl}.
+=== function tag_background()
+{
+    - entity_location(PG) == Biblioteca:
+       ~ return "backBiblioteca"
+    - entity_location(PG) == Giardino:
+        ~ return "backDue"
+}
+
 
 
