@@ -4168,7 +4168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 143527391}
   dialogueText: {fileID: 1625733884}
-  inkAssetJSON: {fileID: 4900000, guid: 0ca1c06dee460da419e70667e196579c, type: 3}
+  inkAssetJSON: {fileID: 4900000, guid: 52a25747e603e6e4aacb94e87b22a990, type: 3}
   entities:
   - {fileID: 2045264602}
   - {fileID: 188066338}

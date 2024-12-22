@@ -10,6 +10,7 @@
             * All'inizio il nostro mentore ci dà qualcosa, oppure il primo "fungo" è scriptato così arriva un dono.
             * la frase (qualcosa sta cambiando, crescendo etc) spostata dal test dentro direttamente la pianta in crescita (così posso "personalizzarla") e poi creare un tier 0 per le prime visite, così non cresce tutto subito.
             * todo per zona funghi etc: creare un altro tag che si sovrappone poi al background per fare un certo tipo di effetto
+            * Creare asset PG al volo per anime e animelle affinché poi vengano associate su Unity senza drammi (ora errore perché voci non riconosciute)
 
         Con calma
             * A tempo perso, caricare a ruota nomi nella lista:

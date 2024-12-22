@@ -166,44 +166,44 @@ VAR contenutoSirene = ()
 
 === spostamenti 
 // Mausoleo, Funghi, Biblioteca, Falene, Labirinto, Tisane, Sirene
-+ {entity_location(PG) == Biblioteca||entity_location(PG) == Mausoleo|| entity_location(PG) == Falene||entity_location(PG) == Funghi||entity_location(PG) == Labirinto||entity_location(PG) == Tisane} [{~ Ti sposti in|Vai nel|Ti rechi al} giardino]
++ {entity_location(PG) == Mausoleo||entity_location(PG) == Biblioteca|| entity_location(PG) == Falene||entity_location(PG) == Funghi||entity_location(PG) == Labirinto||entity_location(PG) == Tisane||entity_location(PG) == Sirene} [Giardino]
     ~ move_entity(PG, Giardino)
     
     -> hub_giardino
 
-+ {entity_location(PG) == Giardino} [{~ Ti sposti verso il|Vai nel|Ti rechi al} mausoleo]
++ {entity_location(PG) == Giardino} [Mausoleo]
     ~ move_entity(PG, Mausoleo)
     
     -> hub_mausoleo
 
 
-+ {entity_location(PG) == Giardino} [{~ Ti sposti in|Vai nella|Ti rechi alla} biblioteca]
++ {entity_location(PG) == Giardino} [Biblioteca]
     ~ move_entity(PG, Biblioteca)
     
     -> hub_biblioteca
 
-+ {entity_location(PG) == Giardino} [{~ Ti sposti dalle|Vai dalle|Ti rechi dalle} falene]
++ {entity_location(PG) == Giardino} [Falene]
     ~ move_entity(PG, Falene)
     -> hub_falene
     
-+ {entity_location(PG) == Giardino} [{~ Ti sposti dai|Vai dai|Ti rechi dai} funghi]
++ {entity_location(PG) == Giardino} [Funghi]
     ~ move_entity(PG, Funghi)
     
     -> hub_funghi   
     
-+ {entity_location(PG) == Giardino} [{~ Ti sposti nel|Vai nel|Ti rechi nel} labirinto]
++ {entity_location(PG) == Giardino} [Labirinto]
     ~ move_entity(PG, Labirinto)
  
     
     -> hub_labirinto
     
-+ {entity_location(PG) == Giardino} [{~ Ti sposti dalle|Vai dalle|Ti rechi dalle} tisane]
++ {entity_location(PG) == Giardino} [Tisane]
     ~ move_entity(PG, Tisane)
 
     
     -> hub_tisane
 
-+ {entity_location(PG) == Giardino} [{~ Ti sposti nell'|Vai alla|Ti rechi nell'} area delle sirene]
++ {entity_location(PG) == Giardino} [Sirene]
     ~ move_entity(PG, Sirene)
 
     
