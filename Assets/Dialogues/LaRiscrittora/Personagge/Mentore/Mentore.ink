@@ -8,8 +8,10 @@
 Cosa vuoi sapere {pronomi has maschili: amico mio|{pronomi has femminili: amica mia|amicə miə}}?
     - (top)
      + Domande private al mentore
-     + Avrei bisogno di un aiuto -> supporto
-     + Abbandoni la conversazione -> main
+     + Avrei bisogno di un aiuto
+     -> supporto
+     + Abbandoni la conversazione
+     -> main
      -
     -> top
 

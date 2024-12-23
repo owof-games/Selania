@@ -16,7 +16,8 @@ TODO: Inizio: più che scegliere il tuo nome, scegli un nuovo nome per quel luog
     E {pronomi has maschili: benvenuto|{pronomi has femminili: benvenuta|benvenutə}}. Spero ti troverai bene, qui.
     C'è la possibilità che tu possa incontrare dei temi delicati.
     Puoi avere un warning su alcuni dei principali, vuoi vedere quali?
-        + Sì -> trigger_warning
+        + Sì
+        -> trigger_warning
         + Più tardi
     -
     -> main

@@ -1,9 +1,11 @@
 === storylets_mentore ===
 {
 //Introduzioni
-    - inizio == 0: -> inizio
+    - inizio == 0:
+    -> inizio
     //- presentazioni == 0: -> presentazioni
-    - tutorial == 0: -> tutorial
+    - tutorial == 0:
+    -> tutorial
 
 //Presentazione dei luoghi
     - are_entities_together_in(PG, Mentore, Funghi) && not prima_visita_funghi: -> prima_visita_funghi

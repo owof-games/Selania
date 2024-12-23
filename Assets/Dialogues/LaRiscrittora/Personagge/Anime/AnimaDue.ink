@@ -4,9 +4,12 @@
 
 = parlareConAnima
 {
-    - not stitch_uno: -> stitch_uno
-    - not stitch_due: -> stitch_due
-    - not stitch_tre: -> stitch_tre
+    - not stitch_uno:
+    -> stitch_uno
+    - not stitch_due:
+    -> stitch_due
+    - not stitch_tre:
+    -> stitch_tre
     - else: storie finite seconda anima ->->
 }
 
