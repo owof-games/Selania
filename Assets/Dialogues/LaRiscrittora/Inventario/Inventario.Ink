@@ -3,7 +3,7 @@
     {doniTrovati != (): -> inventarietto|->vuoto}
 
     =inventarietto
-    Hai con te {list_with_commas(doniTrovati)}.
+    Hai con te {list_with_commas(doniTrovati)}
     -> main
 
     = vuoto
