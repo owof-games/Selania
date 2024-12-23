@@ -1,4 +1,5 @@
 === hub_labirinto ===
+#background: {tag_background()}
 //Qui non compare né mentore né anime e animelle
 
 //Forse la parte più introspettiva per la giocatrice, con domande diverse su come sta o simili, ma ancora non ne sono sicura.

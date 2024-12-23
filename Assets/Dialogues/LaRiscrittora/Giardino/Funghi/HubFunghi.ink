@@ -1,7 +1,9 @@
 === hub_funghi ===
+#background: {tag_background()}
+//+ [Funghi]
     -> randomizzazione_dono_luoghi ->
     -
-    
+
 {
     - fungoProposto != ():
         ->cura

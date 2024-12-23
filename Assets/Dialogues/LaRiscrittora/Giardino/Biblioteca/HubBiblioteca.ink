@@ -1,4 +1,5 @@
 === hub_biblioteca ===
+#background: {tag_background()}
 //Qui avremo qualche info generica e poi la possibilità di leggerci qualcosa
 Sei in biblioteca
 -> randomizzazione_dono_luoghi ->
