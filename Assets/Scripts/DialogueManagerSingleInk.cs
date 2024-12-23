@@ -229,17 +229,34 @@ public class DialogueManagerSingleInk : MonoBehaviour
         ContinueStory();
     }
 
-    //Primo tentativo di settare salvataggio e caricamento
-    // public void Save()
+    // public void SaveGame()
     // {
-    
-    //    public string savedJson = story.state.ToJson();
+    //     SaveData saveData = new SaveData
+    //     {
+    //         inkState = story.state.ToJson()
+    //     };
 
+    //     string json = JsonUtility.ToJson(saveData);
+    //     File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
+    //     Debug.Log("Gioco salvato!");
     // }
-    
-    // public void Load()
+
+    // public void LoadGame()
     // {
-    //      story.state.LoadJson(savedJson);
+    //     string path = Application.persistentDataPath + "/savefile.json";
+    //     if (File.Exists(path))
+    //     {
+    //         string json = File.ReadAllText(path);
+    //         SaveData saveData = JsonUtility.FromJson<SaveData>(json);
+
+    //         // Ripristina lo stato di Ink
+    //         story.state.LoadJson(saveData.inkState);
+    //         Debug.Log("Gioco caricato!");
+    //     }
+    //     else
+    //     {
+    //         Debug.LogWarning("Nessun salvataggio trovato!");
+    //     }
     // }
 
 
