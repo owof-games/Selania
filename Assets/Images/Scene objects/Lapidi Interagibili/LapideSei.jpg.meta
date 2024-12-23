@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LapideSei_0: -7377978091021049688
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
