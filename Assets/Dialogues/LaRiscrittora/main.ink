@@ -23,7 +23,7 @@
 //Inventario
 <- contenuti_inventario
 
-//Interazione con le lapidi
+//Elementi del mausoleo
 <-lapide_uno
 <-lapide_due
 <-lapide_tre
@@ -31,5 +31,11 @@
 <-lapide_cinque
 <-lapide_sei
 <-lapide_sette
+
+//Elementi della serra
+<- call_test
+
+//Elementi del giardino
+<- panchina
 
 + -> main

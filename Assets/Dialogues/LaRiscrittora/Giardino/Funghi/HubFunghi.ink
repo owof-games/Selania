@@ -28,3 +28,14 @@ Eccoti alle serre
     + [Ti guardi attorno]
     -
     -> main
+    
+=== call_test
+    + {contenutoFunghi has PG} [TestFunghi]
+    {
+    - fungoProposto != ():
+        -> cura
+    - else:
+        -> test_coltivazioni
+    
+    }
+    

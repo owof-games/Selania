@@ -13,6 +13,7 @@ Questo è il giardino.
 
 
 === panchina
++ {contenutoGiardino has PG} [Panchina]
 Questo posto ti riempie di serenità.
 -> main
 
