@@ -54,7 +54,7 @@ VAR counterLuoghi = 0
 
 }
 
--> DONE
+-> main
 
 //Se seleziono un'amimella, viene randomizzata la comparsa di una di queste e viene levata dalla lista delle animelle che possono comparire nella storia
 === random_animelle
