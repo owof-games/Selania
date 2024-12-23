@@ -1,4 +1,3 @@
-TODO: vedere con Mattia come mai dopo la randomizzazione ottengo errore
 === animella_uno
 + {are_two_entities_together(AnimellaUno, PG)} [Parli con una animella] 
     -> parlareConAnimella
