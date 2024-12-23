@@ -9,23 +9,24 @@
     
     = opzioni
         //opzione se non hai mai esplorato questa storia, e se non ci sono storie attive
-        + {not (storiaSette == InCorso or storiaSette == Conclusa) and not (storiaUno == InCorso or storiaTre == InCorso)} Potresti conoscere la storia della settima lapide, {effettivoStatoSpettroSette}
+        + {contenutoMausoleo has PG && not (storiaSette == InCorso or storiaSette == Conclusa) and not (storiaUno == InCorso or storiaTre == InCorso)} Potresti conoscere la storia della settima lapide, {effettivoStatoSpettroSette}
             -> storia_sette
         
         //opzione se c'è un'altra storia attiva
-        + {storiaSei == InCorso or storiaCinque == InCorso or storiaSette == Conclusa} La settima lapide appartiene a {effettivoStatoSpettroSette}
+        + {contenutoMausoleo has PG && storiaSei == InCorso or storiaCinque == InCorso or storiaSette == Conclusa} La settima lapide appartiene a {effettivoStatoSpettroSette}
         -> main
         
         //opzione se questa storia è attiva
-        + {storiaSette == InCorso} Il fantasma della settima storia ti attende -> aiuto_storia_sette
+        + {contenutoMausoleo has PG && storiaSette == InCorso} Il fantasma della settima storia ti attende -> aiuto_storia_sette
         
         + ->
     
         -> DONE
     
     = not_yet
-        + Sulla lapide è incisa una sola parola: {effettivoStatoSpettroSette}
-            -> lapidi
+        + {contenutoMausoleo has PG} [LapideSette] 
+        Sulla lapide è incisa una sola parola: {effettivoStatoSpettroSette}
+            -> main
 
 
 

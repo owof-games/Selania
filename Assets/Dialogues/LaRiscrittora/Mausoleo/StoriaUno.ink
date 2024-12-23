@@ -1,16 +1,16 @@
 === lapide_uno ===
     //opzione se non hai mai esplorato questa storia, e se non ci sono storie attive
-    + {not (storiaUno == InCorso or storiaUno == Conclusa) and not (storiaDue == InCorso or storiaTre == InCorso)}[LapideUno]
+    + {contenutoMausoleo has PG && not (storiaUno == InCorso or storiaUno == Conclusa) and not (storiaDue == InCorso or storiaTre == InCorso)}[LapideUno]
         Potresti conoscere la storia della prima lapide, {effettivoStatoSpettroUno}
         -> storia_uno
     
     //opzione se c'è un'altra storia attiva
-    + {storiaUno == Conclusa} [LapideUno]
+    + {contenutoMausoleo has PG && storiaUno == Conclusa} [LapideUno]
         La prima lapide appartiene a {effettivoStatoSpettroUno}
         -> main
     
     //opzione se questa storia è attiva
-    + {storiaUno == InCorso} [LapideUno]
+    + {contenutoMausoleo has PG && storiaUno == InCorso} [LapideUno]
     Il fantasma della prima storia ti attende
         -> aiuto_storia_uno
     
