@@ -6,7 +6,7 @@
 
 TODO: Inizio: più che scegliere il tuo nome, scegli un nuovo nome per quel luogo, il tuo nuovo inizio. La domanda del mentore è ambigua in questo senso. Lo è già ora, ma potrebbe essere interessante vedere qualcosa di ancora più ambiguo nel caso.
 
-
+TODO: c'è la possibilità che sia il primo spettro a farmi questa domanda, per cui mettere condizione: se è così, allora cambia il testo del mentore (anche solo (ti trovi bene col tuo nome?))
 === presentazioni ===
     Ma dimmi, come vuoi che ti chiami?
         -> il_mio_nome ->
