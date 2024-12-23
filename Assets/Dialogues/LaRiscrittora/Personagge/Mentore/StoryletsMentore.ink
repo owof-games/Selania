@@ -1,7 +1,8 @@
 === storylets_mentore ===
 {
-//Introduzioni    
-    - presentazioni == 0: -> presentazioni
+//Introduzioni
+    - inizio == 0: -> inizio
+    //- presentazioni == 0: -> presentazioni
     - tutorial == 0: -> tutorial
 
 //Presentazione dei luoghi
