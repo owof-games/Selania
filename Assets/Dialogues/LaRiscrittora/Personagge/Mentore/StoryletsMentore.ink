@@ -29,6 +29,14 @@
 + ->
 -> DONE
 
+//Passiamo da qui solo a inizio del gioco.
+=== inizio
+La storia inizia ora
+    + Qualcuno ti osserva: gli parli
+        -> presentazioni
+    -
+-> main
+
 // STORYLETS PRESENTAZIONE DEI LUOGHI
 === prima_visita_funghi
     Mentore: Hai trovato il nostro orto, il regno degli odori.

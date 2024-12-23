@@ -1,6 +1,6 @@
 === hub_funghi ===
 #background: {tag_background()}
-//+ [Funghi]
+Eccoti alle serre
     -> randomizzazione_dono_luoghi ->
     -
 

@@ -5,24 +5,24 @@
     ~ move_entity(PG, Giardino)
     //come prova, lascio che inCrescita aumenti sempre, perché poi viene resettato all'ingresso del test. Vediamo se ha senso o se crea solo casini.
     ~ inCrescita ++
-    //-> random_luogo_mentore ->
-    //-> comparsa_anime ->
+    -> random_luogo_mentore ->
+    -> comparsa_anime ->
     
     -> hub_giardino
 
 + {my_location == Giardino} [Mausoleo]
     ~ move_entity(PG, Mausoleo)
     ~ inCrescita ++
-    //-> random_luogo_mentore ->
-    //-> comparsa_anime ->
+    -> random_luogo_mentore ->
+    -> comparsa_anime ->
     
     -> hub_mausoleo
     
 + {my_location == Giardino} [Funghi]
     ~ move_entity(PG, Funghi)
     ~ inCrescita ++
-    //-> random_luogo_mentore ->
-   // -> comparsa_anime ->
+    -> random_luogo_mentore ->
+   -> comparsa_anime ->
     
     -> hub_funghi       
 

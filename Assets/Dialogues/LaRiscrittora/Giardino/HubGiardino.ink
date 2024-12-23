@@ -1,6 +1,6 @@
 === hub_giardino ===
 #background: {tag_background()}
-//+ [Giardino]
+Questo è il giardino.
 //Questo è il punto che troveremo a inizio gioco, e che fa da hub centrale della storia.
 //Troveremo sempre un piccolo descrittore (randomico o meno, da vedere)
     + Ti guardi attorno
@@ -15,10 +15,3 @@
 
 -> main
 
-//Passiamo da qui solo a inizio del gioco.
-=== inizio
-La storia inizia ora
-    + Qualcuno ti osserva: gli parli
-        -> presentazioni
-    -
--> main
