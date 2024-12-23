@@ -229,6 +229,20 @@ public class DialogueManagerSingleInk : MonoBehaviour
         ContinueStory();
     }
 
+    //Primo tentativo di settare salvataggio e caricamento
+    // public void Save()
+    // {
+    
+    //    public string savedJson = story.state.ToJson();
+
+    // }
+    
+    // public void Load()
+    // {
+    //      story.state.LoadJson(savedJson);
+    // }
+
+
      private void HandleTags(List<string> currentTags)
     {
         //loopiamo la comunque
