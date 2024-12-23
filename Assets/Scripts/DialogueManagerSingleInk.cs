@@ -243,6 +243,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     // }
 
 
+
      private void HandleTags(List<string> currentTags)
     {
         //loopiamo la comunque
