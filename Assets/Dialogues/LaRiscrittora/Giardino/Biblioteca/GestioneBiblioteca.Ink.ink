@@ -1,4 +1,3 @@
-
 //Variabili per la gestione della biblioteca
 LIST libri = libroCeci, libroGabri, libroGreta, libroAnna
 VAR libriLetti = ()

@@ -96,7 +96,7 @@ INCLUDE Giardino\Biblioteca\GestioneBiblioteca.Ink.ink
 
 
 //Punto di partenza della storia
--> inizio
+-> main
 
 
 

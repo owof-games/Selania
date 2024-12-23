@@ -1,5 +1,5 @@
 === hub_tisane ===
-//In quest'angolo possiamo assaporarci una bella tisana creata da noi.
+//In quest'angolo possiamo assaporarci una bella tisana creata da noi, e vedere i quadri delle ame.
 Eccoci: è il momento di una bella tisana
 
     + Inizi a preparare una tisana

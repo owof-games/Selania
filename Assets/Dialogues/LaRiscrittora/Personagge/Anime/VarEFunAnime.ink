@@ -59,21 +59,20 @@ VAR counterLuoghi = 0
 //Se seleziono un'amimella, viene randomizzata la comparsa di una di queste e viene levata dalla lista delle animelle che possono comparire nella storia
 === random_animelle
 ~ temp animellina = LIST_RANDOM(animelleDaIncontrare)
+~ temp my_location = entity_location(PG)
+~ move_entity(animellina, my_location)
 {debug: ho preso l'animella {animellina}}
+    ~ animelleDaIncontrare -= animellina
+    ~ animelleIncontrate += animellina
+    
 {animellina:
     - animellaUno:
-        ~ animelleDaIncontrare -= animellina
-        ~ animelleIncontrate += animellina
         {debug: La lista animelle contiene: {animelleDaIncontrare}}
         -> animella_uno
     - animellaDue:
-        ~ animelleDaIncontrare -= animellina
-        ~ animelleIncontrate += animellina
         {debug: La lista animelle contiene: {animelleDaIncontrare}}
         -> animella_due
     - animellaTre:
-        ~ animelleDaIncontrare -= animellina
-        ~ animelleIncontrate += animellina
         {debug: La lista animelle contiene: {animelleDaIncontrare}}
         -> animella_tre
     - else: non ho più animelle da estrarre ->->

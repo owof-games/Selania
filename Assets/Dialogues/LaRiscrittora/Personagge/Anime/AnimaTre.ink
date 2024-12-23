@@ -1,5 +1,5 @@
 === anima_tre
-+ {are_two_entities_together(AnimaTre, PG)} [Parli con l'anima] 
++ {are_two_entities_together(AnimaTre, PG)} [AnimaTre] 
     -> parlareConAnima
 
 = parlareConAnima

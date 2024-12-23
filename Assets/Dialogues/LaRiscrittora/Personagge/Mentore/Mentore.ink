@@ -1,5 +1,5 @@
 === mentore ===
-+ {are_two_entities_together(Mentore, PG)} [{Parli col mentore|Interroghi il mentore}] -> parlareColMentore
++ {are_two_entities_together(Mentore, PG)} [Mentore] -> parlareColMentore
 
 
 === parlareColMentore
