@@ -24,7 +24,7 @@
         -> DONE
     
     = not_yet
-        + {contenutoMausoleo has PG} [LapideSette] 
+        + {contenutoMausoleo has PG} [LapideSette]
         Sulla lapide è incisa una sola parola: {effettivoStatoSpettroSette}
             -> main
 
