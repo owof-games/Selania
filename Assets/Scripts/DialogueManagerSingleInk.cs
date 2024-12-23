@@ -132,17 +132,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
                 }
             }
-            // //Qui posso inserire ulteriori eccezioni (es: @move, se dovessi farne uso?)
             
-
-            //Se invece la storia può continuare (story.canContinue == true) ma non ci sono eccezioni, cosa voglio che accada?
-            //Che all'interazione con un oggetto, parta il corrispettivo dialogo.
-            //Forse un primo step può essere solo che se clicco un oggetto si apre il box di dialogo.
-            //E che poi venga stampata una frase (senza fare un distinguo tra chi dice cosa, che potrei fare poi).
-            //E per far questa cosa, devo associare il testo di ink al box di testo di Unity (cosa più easy).
-
-            //Elemento aggiunto dopo l'ultima "lezione" di Mattia
-            //Da qui in sotto son tutti tentativi di far partire il dialogo, tentativi che NON VANNO, sob
             else
             {
                 //Attiviamo il panel di dialogo
@@ -190,7 +180,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
         //TODO: disabilita bottone quando c'è una scelta.
     }
 
-//Elemento aggiunto dopo l'ultima "lezione" di Mattia
 //Questa roba ti permette di attivare i tasti e metterci il testo, adattala poi a questa situazione (viene dal prototipo originale.)
     private void DisplayChoices()
     {
@@ -240,7 +229,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
         ContinueStory();
     }
 
-    //Elemento aggiunto dopo l'ultima "lezione" di Mattia. Spoiler: è un disastro
      private void HandleTags(List<string> currentTags)
     {
         //loopiamo la comunque
