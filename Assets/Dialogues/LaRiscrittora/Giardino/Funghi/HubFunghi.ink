@@ -17,13 +17,14 @@ Eccoti alle serre
     {~ In questo momento, l'orto è vuoto|Non c'è nulla in crescita|Ci sei solo tu, coi tuoi pensieri}.
     + [Vuoi elaborare qualcosa di nuovo]
         -> test_coltivazioni
-    + [Te ne vai]
-        -> main
-
+    + [Ti guardi attorno]
+    -
+    -> main
 
 === cura
     Ti prendi cura della serra.
     {~ L'aria sembra più dolce oggi|Da qualche parte, tra le foglie, qualcosa canta|Piccole luci sfarfallano sopra il terreno}.
     -> plant_check -> 
-    + [Te ne vai]
+    + [Ti guardi attorno]
+    -
     -> main

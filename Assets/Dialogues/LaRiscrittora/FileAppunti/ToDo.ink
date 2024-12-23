@@ -11,6 +11,7 @@
             * la frase (qualcosa sta cambiando, crescendo etc) spostata dal test dentro direttamente la pianta in crescita (così posso "personalizzarla") e poi creare un tier 0 per le prime visite, così non cresce tutto subito.
             * todo per zona funghi etc: creare un altro tag che si sovrappone poi al background per fare un certo tipo di effetto
             * Creare asset PG al volo per anime e animelle affinché poi vengano associate su Unity senza drammi (ora errore perché voci non riconosciute)
+            * Se mi guardo attorno serve comunque sempre un interagibile per decidere che cosa fare con quello spazio (es:  voglio coltivare qualcosa), altrimenti posso solo andarmene (non molto divertente)
 
         Con calma
             * A tempo perso, caricare a ruota nomi nella lista:
@@ -18,6 +19,7 @@
             * Modi per proporre libri (con tag) nella biblioteca:
                 -> fatto, manca qualcosa che riduca la quantità di scelte a disposizione, creando la situa: tasto per scelta a, tasto per scelta b, tasto per scelta c, tasto per avere altre proposte, tasto per uscire. Non è comunque urgente, anzi.
                 --->>> Il modo in cui ho gestito la cosa coi funghi potrebbe funzionare molto bene ed essere più stimolante :D
+            * Più avanti forse ha senso che quando entriamo in un luogo non ci sia per forza un commento, o no?     
 
             *Pensare a dove posizionare il canto finale
 
