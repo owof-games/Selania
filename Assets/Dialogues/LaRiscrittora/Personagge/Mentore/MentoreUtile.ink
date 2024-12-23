@@ -33,7 +33,7 @@ Tutorial
     + Lo voglio ascoltare
         -> indicazioni
     + Passo
-        ->->
+        -> main
     -
 -> DONE
 
@@ -149,7 +149,8 @@ VAR lutto = false
         ~ abusi = false
     + Non me la sento di parlare di morte
         ~ lutto = false
-    + Sono apposto così. ->parlareColMentore
+    + Sono apposto così.
+    ->parlareColMentore
     -  
 -> top
 

@@ -8,7 +8,8 @@
 //Presentazione dei luoghi
     - are_entities_together_in(PG, Mentore, Funghi) && not prima_visita_funghi: -> prima_visita_funghi
 
-    - are_entities_together_in(PG, Mentore, Biblioteca) && not prima_visita_biblioteca: -> prima_visita_biblioteca
+    - are_entities_together_in(PG, Mentore, Biblioteca) && not prima_visita_biblioteca:
+    -> prima_visita_biblioteca
 
     - are_entities_together_in(PG, Mentore, Sirene) && not prima_visita_sirene: -> prima_visita_sirene
 
@@ -16,7 +17,8 @@
 
     - are_entities_together_in(PG, Mentore, Tisane) && not prima_visita_tisane: -> prima_visita_tisane
 
-    - are_entities_together_in(PG, Mentore, Mausoleo) && not prima_visita_mausoleo: -> prima_visita_mausoleo
+    - are_entities_together_in(PG, Mentore, Mausoleo) && not prima_visita_mausoleo:
+    -> prima_visita_mausoleo
  
 //Da creare: storylets per quando anime (non animelle) e Mentore sono assieme
 
@@ -40,28 +42,28 @@
     Mentore: Riscrivere è un lavoro faticoso, e per questo è importante che ogni {pronomi has maschili: riscrittore|{pronomi has femminili: riscrittora|riscrittorə}} abbia dei momenti per prendersi cura di sé.
     Mentore: Tornaci spesso: tutto nel giardino cambia spesso.
 
-->->
+-> main
 
 === prima_visita_mausoleo
 
-->->
+-> main
 
 === prima_visita_falene
 
-->->
+-> main
 
 
 === prima_visita_biblioteca
 
-->->
+-> main
 
 
 === prima_visita_sirene
 
-->->
+-> main
 
 === prima_visita_tisane
 
-->->
+-> main
 
-//Da creare: storylets per quando anime (non animelle) e Mentore sono assieme
+TODO: Da creare: storylets per quando anime (non animelle) e Mentore sono assieme
