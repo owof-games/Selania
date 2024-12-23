@@ -6,7 +6,7 @@ Eccoti alle serre
 
 {
     - fungoProposto != ():
-        ->cura
+        -> cura
     - else:
         -> pre_test
     

@@ -29,8 +29,10 @@ L'aria si muove tra le fronde, portandoti storie lontane.
 
 === test
 {
-    - counter < 2: -> random
-    - counter == 2: -> results
+    - counter < 2:
+        -> random
+    - counter == 2:
+        -> results
 }
 
 = random

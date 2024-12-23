@@ -1,8 +1,10 @@
 === lapide_due ===
     //Questa struttura per ora è così per il prototipo, poi in fase definitiva ragionerà secondo i tier riportati nella lista appunti
     {
-    - storiaUno == Conclusa: -> opzioni
-    - else: ->not_yet
+    - storiaUno == Conclusa:
+    -> opzioni
+    - else:
+    ->not_yet
     }
     
     = opzioni
@@ -38,7 +40,7 @@
     + {doniTrovati != ()} Offro un dono allo spettro
     -> gestione_inventario -> capitolo_uno
     + ->
-    {doniTrovati == (): Non parlo senza un dono adeguato! ->hub_mausoleo}
+    {doniTrovati == (): Non parlo senza un dono adeguato! ->main}
     
     
     

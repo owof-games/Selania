@@ -4,10 +4,12 @@
         -> storia_uno
     
     //opzione se c'è un'altra storia attiva
-    + {storiaUno == Conclusa} La prima lapide appartiene a {effettivoStatoSpettroUno} -> main
+    + {storiaUno == Conclusa} La prima lapide appartiene a {effettivoStatoSpettroUno}
+        -> main
     
     //opzione se questa storia è attiva
-    + {storiaUno == InCorso} Il fantasma della prima storia ti attende -> aiuto_storia_uno
+    + {storiaUno == InCorso} Il fantasma della prima storia ti attende
+        -> aiuto_storia_uno
     
     + ->
     
@@ -17,7 +19,8 @@
     //la storia in corso viene attivata, e le altre non saranno accessibili fino alla sua conclusione
     ~ storiaUno = InCorso
     {
-    - alcolismo == false: -> trigger_alcolismo
+    - alcolismo == false:
+        -> trigger_alcolismo
 
     }
 - (top)    
@@ -31,8 +34,10 @@
 = trigger_alcolismo
     Hai segnalato che l'alcool per te è un problema, ed è uno dei temi della storia.
     Puoi decidere se affrontarla comunque, o saltarla.
-        + Affronto -> top
-        + Salto -> scelta_nome_uno
+        + Affronto
+            -> top
+        + Salto
+            -> scelta_nome_uno
         -
 ->->
 
@@ -40,7 +45,7 @@
     + {doniTrovati != ()} Offri un dono allo spettro e inizi la sua storia
         -> gestione_inventario -> capitolo_uno
     + ->
-    {doniTrovati == (): Non parlo senza un dono adeguato! ->hub_mausoleo}       
+    {doniTrovati == (): Non parlo senza un dono adeguato!->main}       
 
 
     //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco

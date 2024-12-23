@@ -1,8 +1,10 @@
 === lapide_tre ===
     //Questa struttura per ora è così per il prototipo, poi in fase definitiva ragionerà secondo i tier riportati nella lista appunti
     {
-    - storiaUno == Conclusa: -> opzioni
-    - else: ->not_yet
+    - storiaUno == Conclusa:
+    -> opzioni
+    - else:
+    ->not_yet
     }
 
     = opzioni
@@ -11,7 +13,8 @@
             -> storia_tre
         
         //opzione se c'è un'altra storia attiva
-        + {storiaDue == InCorso or storiaQuattro == InCorso or storiaTre == Conclusa} La terza lapide, appartenente a {effettivoStatoSpettroTre} -> main
+        + {storiaDue == InCorso or storiaQuattro == InCorso or storiaTre == Conclusa} La terza lapide, appartenente a {effettivoStatoSpettroTre}
+        -> main
         
         //opzione se questa storia è attiva
         + {storiaTre == InCorso} Il fantasma della terza storia ti attende -> aiuto_storia_tre
@@ -37,7 +40,7 @@
     + {doniTrovati != ()} Offro un dono allo spettro
         -> gestione_inventario -> capitolo_uno
         + ->
-    {doniTrovati == (): Non parlo senza un dono adeguato! ->hub_mausoleo}
+    {doniTrovati == (): Non parlo senza un dono adeguato! ->main}
     
     
     = capitolo_uno

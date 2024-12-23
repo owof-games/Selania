@@ -102,7 +102,8 @@ TODO: settare valori oggetti creati
     
     //Se la lista è vuota
     + {doniTrovati == ()} Non hai nulla da donare
-    + Mmm, per ora passo -> main 
+    + Mmm, per ora passo
+        -> main 
     + ->
     - 
 -> main

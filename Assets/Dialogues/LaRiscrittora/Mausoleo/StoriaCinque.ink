@@ -1,8 +1,10 @@
 === lapide_cinque ===
     //Questa struttura per ora è così per il prototipo, poi in fase definitiva ragionerà secondo i tier riportati nella lista appunti
     {
-    - storiaDue == Conclusa && storiaTre == Conclusa && storiaQuattro == Conclusa: -> opzioni
-    - else: ->not_yet
+    - storiaDue == Conclusa && storiaTre == Conclusa && storiaQuattro == Conclusa:
+    -> opzioni
+    - else:
+    ->not_yet
     }
     
     = opzioni
@@ -11,7 +13,8 @@
             -> storia_cinque
         
         //opzione se c'è un'altra storia attiva
-        + {storiaSei == InCorso or storiaSette == InCorso or storiaCinque == Conclusa} La quinta lapide appartiene a {effettivoStatoSpettroCinque} -> main
+        + {storiaSei == InCorso or storiaSette == InCorso or storiaCinque == Conclusa} La quinta lapide appartiene a {effettivoStatoSpettroCinque}
+        -> main
         
         //opzione se questa storia è attiva
         + {storiaCinque == InCorso} Il fantasma della quinta storia ti attende -> aiuto_storia_cinque
@@ -38,7 +41,7 @@
     + {doniTrovati != ()} Offro un dono allo spettro
     -> gestione_inventario -> capitolo_uno
     + ->
-    {doniTrovati == (): Non parlo senza un dono adeguato! ->hub_mausoleo}
+    {doniTrovati == (): Non parlo senza un dono adeguato! ->main}
     
     
     
