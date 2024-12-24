@@ -32,28 +32,28 @@
         + [No]
             -> main
             
-- (top)    
-    Ho freddo, ho tanto freddo.
-    Un freddo che non sta fermo.
-    Un freddo che è pronto ad esplodere.
-    Forse sono io?
-    Forse sto per rovinare tutto, di nuovo?
-    O forse è il vuoto?
-    Lasciami solo.
-    Lasciami solo.
-    Lasciami solo.
-    -> main
+    - (top)    
+        Ho freddo, ho tanto freddo.
+        Un freddo che non sta fermo.
+        Un freddo che è pronto ad esplodere.
+        Forse sono io?
+        Forse sto per rovinare tutto, di nuovo?
+        O forse è il vuoto?
+        Lasciami solo.
+        Lasciami solo.
+        Lasciami solo.
+        -> main
 
 
-= trigger_alcolismo
-    Hai segnalato che l'alcool per te è un problema, ed è uno dei temi della storia.
-    Puoi decidere se affrontarla comunque, o saltarla.
-        * Affronto
-            -> top
-        * Salto
-            -> scelta_nome_uno
-        -
-->->
+    = trigger_alcolismo
+        Hai segnalato che l'alcool per te è un problema, ed è uno dei temi della storia.
+        Puoi decidere se affrontarla comunque, o saltarla.
+            * Affronto
+                -> top
+            * Salto
+                -> scelta_nome_uno
+            -
+    ->->
 
 === aiuto_storia_uno ===
     + {doniTrovati != ()} Forse con un dono adeguato, lo spettro sarà disponibile a parlarti.
@@ -62,8 +62,10 @@
     -
     -> main
 
-    //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
+    
+
     = capitolo_uno
+    
     <i>Dopo il tuo dono, la quantità di inchiostro a disposizione è {statoInchiostroSpettroUno}.</i>
              -> azioniInchiostro ->
     Può essere una festa. Un compleanno. Un giorno di giochi. Un festival. Capodanno.
@@ -84,12 +86,13 @@
         -> primo_blocco_domande 
 
 
-    = primo_blocco_domande         
+    = primo_blocco_domande
+    
             * In che senso giocare d’anticipo? (il riccio)
             {statoInchiostroSpettroUno == Vuoto: Non hai abbastanza inchiostro per fare questa domanda. -> primo_blocco_domande}
                 ~ statoInchiostroSpettroUno --
                 Lo spettro si sente preso in contropiede.    
-                Lo stato dell'inchiostro è ora a {statoInchiostroSpettroUno}
+                <i>Lo stato dell'inchiostro è ora a {statoInchiostroSpettroUno}</i>
                 Il Vuoto: cose 
                 * * Scelta uno: aumenta riccio
                     ~ riccio ++
@@ -119,7 +122,7 @@
             {statoInchiostroSpettroUno == Vuoto: Non hai abbastanza inchiostro per fare questa domanda. -> secondo_blocco_domande}
                 ~ statoInchiostroSpettroUno --
                 Lo spettro si sente preso in contropiede.    
-                Lo stato dell'inchiostro è ora a {statoInchiostroSpettroUno}
+                <i>Lo stato dell'inchiostro è ora a {statoInchiostroSpettroUno}</i>
                 Il Vuoto: cose 
                 * * Scelta uno: aumenta riccio
                     ~ riccio ++
@@ -130,7 +133,7 @@
                 {statoInchiostroSpettroUno == Vuoto: Non hai abbastanza inchiostro per fare questa domanda. -> secondo_blocco_domande}
                 ~ statoInchiostroSpettroUno --
                 Lo spettro si sente preso in contropiede.    
-                Lo stato dell'inchiostro è ora a {statoInchiostroSpettroUno}
+                <i>Lo stato dell'inchiostro è ora a {statoInchiostroSpettroUno}</i>
                 Il Vuoto: cose 
                 * * Scelta uno: aumenta accentratore
                     ~ accentratore ++
@@ -151,7 +154,7 @@
             {statoInchiostroSpettroUno == Vuoto: Non hai abbastanza inchiostro per fare questa domanda. -> terzo_blocco_domande}
                 ~ statoInchiostroSpettroUno --
                 Lo spettro si sente preso in contropiede.    
-                Lo stato dell'inchiostro è ora a {statoInchiostroSpettroUno}
+                <i>Lo stato dell'inchiostro è ora a {statoInchiostroSpettroUno}</i>
                 Il Vuoto: cose 
                 * * Scelta uno: aumenta riccio
                     ~ riccio ++
@@ -162,7 +165,7 @@
                 {statoInchiostroSpettroUno == Vuoto: Non hai abbastanza inchiostro per fare questa domanda. -> terzo_blocco_domande}
                 ~ statoInchiostroSpettroUno --
                 Lo spettro si sente preso in contropiede.    
-                Lo stato dell'inchiostro è ora a {statoInchiostroSpettroUno}
+                <i>Lo stato dell'inchiostro è ora a {statoInchiostroSpettroUno}</i>
                 Il Vuoto: cose 
                 * * Scelta uno: aumenta riccio
                     ~ riccio ++
@@ -177,12 +180,7 @@
                     ~ accentratore ++
             -
          -> chi_sono
-    /*
-    VAR riccio = 0
-    VAR guardiano = 0
-    VAR accentratore = 0 
-*/ 
-     
+
      = chi_sono
         Il Vuoto: Credo di aver capito cosa intendi, ora.
         {
@@ -214,7 +212,9 @@
             
             * * {effettivoStatoSpettroUno == IlGuardiano}
                 Non credo tu sia un guardiano.
-                * * * {statoInchiostroSpettroUno == Scarso or statoInchiostroSpettroUno == Normale or statoInchiostroSpettroUno == Medio or statoInchiostroSpettroUno ==  Altissimo} Credo tu sia un riccio.
+                * * * Credo tu sia un riccio.
+                    {statoInchiostroSpettroUno == Scarso or statoInchiostroSpettroUno == Normale or statoInchiostroSpettroUno == Medio or statoInchiostroSpettroUno ==  Altissimo: Non hai abbastanza inchiostro per convincerlo: -> finale_due}
+                    Il Vuoto: Uh, non ci avevo pensato!
                     ~ effettivoStatoSpettroUno = IlRiccio
                     -> finale_uno
                 
@@ -228,7 +228,9 @@
             * * {effettivoStatoSpettroUno == IlRiccio}
                 Non credo tu sia un riccio.
                 
-                * * * {statoInchiostroSpettroUno == Scarso or statoInchiostroSpettroUno == Normale or statoInchiostroSpettroUno == Medio or statoInchiostroSpettroUno ==  Altissimo} Credo tu sia un guardiano.
+                * * * Credo tu sia un guardiano.
+                {statoInchiostroSpettroUno == Scarso or statoInchiostroSpettroUno == Normale or statoInchiostroSpettroUno == Medio or statoInchiostroSpettroUno ==  Altissimo: Non hai abbastanza inchiostro per convincerlo: -> finale_due}
+                Il Vuoto: Uh, dici davvero?
                     ~ effettivoStatoSpettroUno = IlGuardiano
                     -> finale_uno
                 
@@ -242,11 +244,13 @@
             * * {effettivoStatoSpettroUno == LAccentratore}
                 Non credo tu sia un accentratore.
                 
-                * * * {statoInchiostroSpettroUno == Scarso or statoInchiostroSpettroUno == Normale or statoInchiostroSpettroUno == Medio or statoInchiostroSpettroUno ==  Altissimo} Credo tu sia un riccio.
+                * * * Credo tu sia un riccio.
+                {statoInchiostroSpettroUno == Scarso or statoInchiostroSpettroUno == Normale or statoInchiostroSpettroUno == Medio or statoInchiostroSpettroUno ==  Altissimo: Non hai abbastanza inchiostro per convincerlo: -> finale_due}
                     ~ effettivoStatoSpettroUno = IlRiccio
                     -> finale_uno
                 
-                * * * {statoInchiostroSpettroUno == Normale or statoInchiostroSpettroUno == Medio or statoInchiostroSpettroUno ==  Altissimo}Credo tu sia un guardiano.
+                * * *Credo tu sia un guardiano.
+                {statoInchiostroSpettroUno == Normale or statoInchiostroSpettroUno == Medio or statoInchiostroSpettroUno ==  Altissimo: Non hai abbastanza inchiostro per convincerlo: -> finale_due}
                     ~ effettivoStatoSpettroUno = IlGuardiano
                     -> finale_uno
                 
