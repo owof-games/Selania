@@ -1,12 +1,12 @@
 === lapide_uno ===
     //opzione se non hai mai esplorato questa storia, e se non ci sono storie attive
     + {contenutoMausoleo has PG && not (storiaUno == InCorso or storiaUno == Conclusa) and not (storiaDue == InCorso or storiaTre == InCorso)}[LapideUno]
-        Qui giace {effettivoStatoSpettroUno}
+        Qui giace {traduttoreSpettri(effettivoStatoSpettroUno)}
         -> storia_uno
     
     //opzione se c'è un'altra storia attiva
     + {contenutoMausoleo has PG && storiaUno == Conclusa} [LapideUno]
-        La prima lapide appartiene a {effettivoStatoSpettroUno}
+        La prima lapide appartiene a {traduttoreSpettri(effettivoStatoSpettroUno)}
         -> main
     
     //opzione se questa storia è attiva

@@ -60,3 +60,17 @@ VAR eventoSpecialeSpettroCinque = false
 VAR eventoSpecialeSpettroSei = false
 VAR eventoSpecialeSpettroSette = false
 
+=== function traduttoreSpettri(effettivoStatoSpettro)
+{effettivoStatoSpettro:
+
+- SpettroDelVuoto:
+    ~ return "lo spettro del Vuoto"
+- IlRiccio: 
+    ~ return "il Riccio"
+- IlGuardiano: 
+    ~ return "il Guardiano"    
+- LAccentratore: 
+    ~ return "l'Accentratore"
+
+
+}
