@@ -9,15 +9,19 @@
 
     = opzioni
         //opzione se non hai mai esplorato questa storia, e se non ci sono storie attive
-        + {contenutoMausoleo has PG && not (storiaTre == InCorso or storiaTre == Conclusa) and not (storiaDue == InCorso or storiaQuattro == InCorso)} Potresti conoscere la storia della terza lapide, {effettivoStatoSpettroTre}
+        + {contenutoMausoleo has PG && not (storiaTre == InCorso or storiaTre == Conclusa) and not (storiaDue == InCorso or storiaQuattro == InCorso)} [LapideTre]
+            Potresti conoscere la storia della terza lapide, {effettivoStatoSpettroTre}
             -> storia_tre
         
         //opzione se c'è un'altra storia attiva
-        + {contenutoMausoleo has PG && storiaDue == InCorso or storiaQuattro == InCorso or storiaTre == Conclusa} La terza lapide, appartenente a {effettivoStatoSpettroTre}
+        + {contenutoMausoleo has PG && storiaDue == InCorso or storiaQuattro == InCorso or storiaTre == Conclusa} [LapideTre]
+            La terza lapide, appartenente a {effettivoStatoSpettroTre}
         -> main
         
         //opzione se questa storia è attiva
-        + {contenutoMausoleo has PG && storiaTre == InCorso} Il fantasma della terza storia ti attende -> aiuto_storia_tre
+        + {contenutoMausoleo has PG && storiaTre == InCorso} [LapideTre]
+        Il fantasma della terza storia ti attende
+        -> aiuto_storia_tre
         
         + ->
         
