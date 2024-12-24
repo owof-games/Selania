@@ -22,12 +22,17 @@
     ~ doniTrovati -= muschiodelleamanti
     ~ doniDonati += muschiodelleamanti
     {
+    - storiaUno == InCorso:
+    Lo spettro è confuso dal tuo dono.
+    ~ donoSpettroUno = true
+    -> aiuto_storia_uno.capitolo_uno
+    
     - storiaDue == InCorso:
         ~ statoInchiostroSpettroDue ++
         ~ statoInchiostroSpettroDue ++
         Spettro due ha apprezzato molto il tuo dono.
-    - storiaUno == InCorso:
-        Lo spettro è confuso dal tuo dono.
+    
+
     - storiaTre == InCorso:
         ~ statoInchiostroSpettroTre --
         Spettro tre è disgustato dal tuo dono.
@@ -41,8 +46,12 @@
     {
     - storiaUno == InCorso:
         Lo spettro è confuso dal tuo dono.
+        ~ donoSpettroUno = true
+        -> aiuto_storia_uno.capitolo_uno
+    
     - storiaDue == InCorso:
         Hai regalato a spettro due qualcosa che proprio non gli interessa
+    
     - storiaTre == InCorso:
         ~ statoInchiostroSpettroTre ++
         Spettro tre apprezza mediamente il tuo dono.
@@ -59,9 +68,12 @@
         ~ statoInchiostroSpettroUno ++
         Spettro uno ti guarda sorpreso, e si porta il frammento al petto.
         ~ eventoSpecialeSpettroUno = true
+        ~ donoSpettroUno = true
+        -> aiuto_storia_uno.capitolo_uno
 
     - storiaDue == InCorso:
         Hai regalato a spettro due qualcosa che proprio non gli interessa
+    
     - storiaTre == InCorso:
         ~ statoInchiostroSpettroTre ++
         Spettro tre apprezza mediamente il tuo dono.
@@ -77,8 +89,12 @@
         ~ statoInchiostroSpettroUno ++
         Lo spettro se la avvolge attorno al corpo.
         Sembra sollevato.
+        ~ donoSpettroUno = true
+        -> aiuto_storia_uno.capitolo_uno
+    
     - storiaDue == InCorso:
         Hai regalato a spettro due qualcosa che proprio non gli interessa
+    
     - storiaTre == InCorso:
         ~ statoInchiostroSpettroTre ++
         Spettro tre apprezza mediamente il tuo dono.
@@ -92,8 +108,12 @@
     - storiaUno == InCorso:
         ~ statoInchiostroSpettroUno --
         Lo spettro ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.
+        ~ donoSpettroUno = true
+        -> aiuto_storia_uno.capitolo_uno
+    
     - storiaDue == InCorso:
         Hai regalato a spettro due qualcosa che proprio non gli interessa
+    
     - storiaTre == InCorso:
         ~ statoInchiostroSpettroTre ++
         Spettro tre apprezza mediamente il tuo dono.

@@ -2,7 +2,6 @@
 // Lista con i possibili stati delle variabili legate alle contraddizioni
 LIST statoStorie = NonIniziata, InCorso, Conclusa
 
-VAR storiaUno = NonIniziata
 VAR storiaDue = NonIniziata
 VAR storiaTre = NonIniziata
 VAR storiaQuattro = NonIniziata
@@ -10,11 +9,29 @@ VAR storiaCinque = NonIniziata
 VAR storiaSei = NonIniziata
 VAR storiaSette = NonIniziata
 
-//Lista denominatori dei singoli spettri
-//Questi denominatori poi verranno adattati al singolo spettro
-//C'è la possibilità che serva una qualche forma di conversione, es: variabile compatta, quindi LaInsicura, e poi formula che stampi La Insicura.
+
+VAR donoSpettroDue = false
+VAR donoSpettroTre = false
+VAR donoSpettroQuattro = false
+VAR donoSpettroCinque = false
+VAR donoSpettroSei = false
+VAR donoSpettroSette = false
+
+
+//Gestione spettro uno: il Vuoto.
 LIST possibiliStatiSpettroUno = SpettroDelVuoto, IlRiccio, IlGuardiano, LAccentratore
 VAR effettivoStatoSpettroUno = SpettroDelVuoto
+
+VAR storiaUno = NonIniziata
+VAR donoSpettroUno = false
+VAR eventoSpecialeSpettroUno = false
+
+VAR riccio = 0
+VAR guardiano = 0
+VAR accentratore = 0
+
+
+//Gestione spettro due
 
 LIST possibiliStatiSpettroDue = StatoDefaultDue, NuovoStatoUnoDue, NuovoStatoDueDue, NuovoStatoTreDue
 VAR effettivoStatoSpettroDue = StatoDefaultDue
@@ -35,7 +52,7 @@ LIST possibiliStatiSpettroSette = StatoDefaultSette, NuovoStatoUnoSette, NuovoSt
 VAR effettivoStatoSpettroSette= StatoDefaultSette
 
 //Variabili per verificare se c'è o meno l'accesso all'evento speciale di un singolo spettro
-VAR eventoSpecialeSpettroUno = false
+
 VAR eventoSpecialeSpettroDue = false
 VAR eventoSpecialeSpettroTre = false
 VAR eventoSpecialeSpettroQuattro = false
