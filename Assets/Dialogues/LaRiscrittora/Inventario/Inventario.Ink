@@ -18,6 +18,7 @@
 === gestione_inventario ===
 TODO: settare valori oggetti creati
 {debug: I doni trovati sono {doniTrovati}}
+
 + {doniTrovati has muschiodelleamanti} Doni del muschio delle amanti.
     ~ doniTrovati -= muschiodelleamanti
     ~ doniDonati += muschiodelleamanti
@@ -27,12 +28,7 @@ TODO: settare valori oggetti creati
         ~ statoInchiostroSpettroDue ++
         Spettro due ha apprezzato molto il tuo dono.
     - storiaUno == InCorso:
-        ~ statoInchiostroSpettroUno ++
-        ~ statoInchiostroSpettroUno ++
-        ~ statoInchiostroSpettroUno ++
-        Hai regalato a spettro uno la sua cosa preferita.
-        //Questa occasione sblocca un pezzo speciale di storia
-        ~ eventoSpecialeSpettroUno = true
+        Lo spettro è confuso dal tuo dono.
     - storiaTre == InCorso:
         ~ statoInchiostroSpettroTre --
         Spettro tre è disgustato dal tuo dono.
@@ -40,13 +36,12 @@ TODO: settare valori oggetti creati
     
    -> main
 
-+ {doniTrovati has baccadellaaddolorata} Doni una bacca della Addolorata
++ {doniTrovati has baccadellaaddolorata} Doni una bacca della Addolorata.
     ~ doniTrovati -= baccadellaaddolorata
     ~ doniDonati += baccadellaaddolorata
     {
     - storiaUno == InCorso:
-        ~ statoInchiostroSpettroUno --
-        Spettro uno inizia a piangere
+        Lo spettro è confuso dal tuo dono.
     - storiaDue == InCorso:
         Hai regalato a spettro due qualcosa che proprio non gli interessa
     - storiaTre == InCorso:
@@ -55,13 +50,17 @@ TODO: settare valori oggetti creati
     }
    -> main    
 
-+ {doniTrovati has mela} Doni una mela
-    ~ doniTrovati -= mela
-    ~ doniDonati += mela
++ {doniTrovati has laspezzata} Doni un frammento della spezzata.
+    ~ doniTrovati -= laspezzata
+    ~ doniDonati += laspezzata
     {
     - storiaUno == InCorso:
-        ~ statoInchiostroSpettroUno --
-        Spettro uno inizia a piangere
+        ~ statoInchiostroSpettroUno ++
+        ~ statoInchiostroSpettroUno ++
+        ~ statoInchiostroSpettroUno ++
+        Spettro uno ti guarda sorpreso, e si porta il frammento al petto.
+        ~ eventoSpecialeSpettroUno = true
+
     - storiaDue == InCorso:
         Hai regalato a spettro due qualcosa che proprio non gli interessa
     - storiaTre == InCorso:
@@ -70,13 +69,15 @@ TODO: settare valori oggetti creati
     }
    -> main
 
-+ {doniTrovati has pera} Doni una pera
-    ~ doniTrovati -= pera
-    ~ doniDonati += pera
++ {doniTrovati has coperta} Doni una coperta.
+    ~ doniTrovati -= coperta
+    ~ doniDonati += coperta
     {
     - storiaUno == InCorso:
-        ~ statoInchiostroSpettroUno --
-        Spettro uno inizia a piangere
+        ~ statoInchiostroSpettroUno ++
+        ~ statoInchiostroSpettroUno ++
+        Lo spettro se la avvolge attorno al corpo.
+        Sembra sollevato.
     - storiaDue == InCorso:
         Hai regalato a spettro due qualcosa che proprio non gli interessa
     - storiaTre == InCorso:
@@ -85,13 +86,13 @@ TODO: settare valori oggetti creati
     }
    -> main
     
-+ {doniTrovati has fungo} Doni un fungo
-    ~ doniTrovati -= fungo
-    ~ doniDonati += fungo
++ {doniTrovati has vasovuoto} Doni un vaso vuoto.
+    ~ doniTrovati -= vasovuoto
+    ~ doniDonati += vasovuoto
     {
     - storiaUno == InCorso:
         ~ statoInchiostroSpettroUno --
-        Spettro uno inizia a piangere
+        Lo spettro ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.
     - storiaDue == InCorso:
         Hai regalato a spettro due qualcosa che proprio non gli interessa
     - storiaTre == InCorso:
@@ -102,7 +103,7 @@ TODO: settare valori oggetti creati
     
     //Se la lista è vuota
     + {doniTrovati == ()} Non hai nulla da donare
-    + Mmm, per ora passo
+    + Ho bisogno di ragionarci ancora un poco.
         -> main 
     + ->
     - 

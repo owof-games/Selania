@@ -33,14 +33,13 @@
 
 === function traduttoreIngredienti(ingrediente)
 {ingrediente:
-- mela: 
-    ~ return "una mela"
-- fungo:
-    ~ return "un fungo"
-- banana: 
-    ~ return "una banana"
-- pera: 
-    ~ return "una pera"    
+
+- vasovuoto:
+    ~ return "un vaso vuoto"
+- coperta: 
+    ~ return "una coperta"
+- laspezzata: 
+    ~ return "un residuo della spezzata"    
 - baccadellaaddolorata: 
     ~ return "una bacca della Addolorata"
 - muschiodelleamanti:
