@@ -82,17 +82,20 @@
      = finali    
             + Ho risolto la prima storia e attribuito allo spettro il primo nuovo stato
                 ~ storiaUno = Conclusa
-                ~ effettivoStatoSpettroUno = NuovoStatoUno
+                ~ effettivoStatoSpettroUno = IlRiccio
             + Ho risolto la prima storia e attribuito allo spettro il secondo nuovo stato
                 ~ storiaUno = Conclusa
-                ~ effettivoStatoSpettroUno = NuovoStatoDue        
+                ~ effettivoStatoSpettroUno = IlGuardiano
+            + Ho risolto la prima storia e attribuito allo spettro il secondo nuovo stato
+                ~ storiaUno = Conclusa
+                ~ effettivoStatoSpettroUno = LAccentratore
             + {eventoSpecialeSpettroUno} Tastino perché hai sbloccato l'evento speciale
                 -> evento_speciale
             + Non ho risolto la storia
             -
         -> main
-    
-    
+
+TODO: creare un traduttore per gli stati degli spettri come quello dell'inventario (da IlRiccio a Il riccio).    
     = evento_speciale
         Sei finita nell'evento speciale
         ~ storiaUno = Conclusa
