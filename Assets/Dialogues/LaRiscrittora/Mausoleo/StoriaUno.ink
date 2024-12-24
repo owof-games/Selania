@@ -213,7 +213,7 @@
             * * {effettivoStatoSpettroUno == IlGuardiano}
                 Non credo tu sia un guardiano.
                 * * * Credo tu sia un riccio.
-                    {statoInchiostroSpettroUno == Scarso or statoInchiostroSpettroUno == Normale or statoInchiostroSpettroUno == Medio or statoInchiostroSpettroUno ==  Altissimo: Non hai abbastanza inchiostro per convincerlo: -> finale_due}
+                    {statoInchiostroSpettroUno == Scarso or statoInchiostroSpettroUno == Normale or statoInchiostroSpettroUno == Medio or statoInchiostroSpettroUno ==  Altissimo: Non hai abbastanza inchiostro per convincerlo. -> finale_due}
                     Il Vuoto: Uh, non ci avevo pensato!
                     ~ effettivoStatoSpettroUno = IlRiccio
                     -> finale_uno
@@ -229,7 +229,7 @@
                 Non credo tu sia un riccio.
                 
                 * * * Credo tu sia un guardiano.
-                {statoInchiostroSpettroUno == Scarso or statoInchiostroSpettroUno == Normale or statoInchiostroSpettroUno == Medio or statoInchiostroSpettroUno ==  Altissimo: Non hai abbastanza inchiostro per convincerlo: -> finale_due}
+                {statoInchiostroSpettroUno == Scarso or statoInchiostroSpettroUno == Normale or statoInchiostroSpettroUno == Medio or statoInchiostroSpettroUno ==  Altissimo: Non hai abbastanza inchiostro per convincerlo. -> finale_due}
                 Il Vuoto: Uh, dici davvero?
                     ~ effettivoStatoSpettroUno = IlGuardiano
                     -> finale_uno
@@ -250,7 +250,7 @@
                     -> finale_uno
                 
                 * * *Credo tu sia un guardiano.
-                {statoInchiostroSpettroUno == Normale or statoInchiostroSpettroUno == Medio or statoInchiostroSpettroUno ==  Altissimo: Non hai abbastanza inchiostro per convincerlo: -> finale_due}
+                {statoInchiostroSpettroUno == Normale or statoInchiostroSpettroUno == Medio or statoInchiostroSpettroUno ==  Altissimo: Non hai abbastanza inchiostro per convincerlo. -> finale_due}
                     ~ effettivoStatoSpettroUno = IlGuardiano
                     -> finale_uno
                 

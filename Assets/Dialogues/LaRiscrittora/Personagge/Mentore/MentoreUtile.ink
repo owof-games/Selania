@@ -45,9 +45,17 @@ Indicazioni tutorial
 -(top)
     + Sul mausoleo
         Informazioni
+        {
+        - doniTrovati hasnt laspezzata: Gli spettri apprezzano sempre i doni. Tieni questo pezzettino di Spazzata.
+        ~ doniTrovati += laspezzata
+        }   
             -> top
-    + Sui funghi
-        Informazioni
+    + Sulla serra
+        Info
+            {
+            - doniTrovati hasnt laspezzata: Uh, e poi a volte qui crescono doni utili per parlare con gli spettri. Tieni questo pezzettino di Spazzata.
+            ~ doniTrovati += laspezzata
+            }
             -> top
     + {storiaUno == Conclusa}Sulle falene
         Informazioni
