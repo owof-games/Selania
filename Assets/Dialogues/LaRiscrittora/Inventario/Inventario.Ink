@@ -16,7 +16,6 @@
 
 
 === gestione_inventario ===
-TODO: settare valori oggetti creati
 {debug: I doni trovati sono {doniTrovati}}
 
 + {doniTrovati has muschiodelleamanti} Doni del muschio delle amanti.
