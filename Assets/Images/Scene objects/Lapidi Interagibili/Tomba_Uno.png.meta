@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3238b9b4315bdda4ebe7811f0aa4c386
+guid: 406f81b10c17b8949be972758588e75c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -757533580728158558
-    second: BackgroundHubGiardino_0
+      213: 7801108721578007233
+    second: Tomba_Uno_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BackgroundHubGiardino_0
+      name: Tomba_Uno_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 680
+        x: 55
+        y: 30
+        width: 139
+        height: 194
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2a6b44fc833bc75f0800000000000000
-      internalID: -757533580728158558
+      spriteID: 1cadbdbdc0b134c60800000000000000
+      internalID: 7801108721578007233
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      BackgroundHubGiardino_0: -757533580728158558
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

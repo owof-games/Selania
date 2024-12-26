@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 07d3360c86d0a694e9302cbef15d84f6
+guid: e93ec8022a3349c4ea547dcc83a0d6f5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1998612870410713146
-    second: LapideDue_0
+      213: -3333786444702375756
+    second: IconaSerra_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LapideDue_0
+      name: IconaSerra_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 474
-        height: 671
+        x: 25
+        y: 52
+        width: 308
+        height: 178
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c745a7fe208344e0800000000000000
-      internalID: -1998612870410713146
+      spriteID: 4b0a08644e20cb1d0800000000000000
+      internalID: -3333786444702375756
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      LapideDue_0: -1998612870410713146
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

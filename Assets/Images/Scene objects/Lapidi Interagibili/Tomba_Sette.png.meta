@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6a9384e62641c5f44b82522ef072dc30
+guid: 714610f5351488d429fbf97e1d4b41aa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7377978091021049688
-    second: LapideSei_0
+      213: -2698898316777626856
+    second: Tomba_Sette_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LapideSei_0
+      name: Tomba_Sette_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 828
-        height: 828
+        x: 6
+        y: 27
+        width: 361
+        height: 154
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a0631434082c9990800000000000000
-      internalID: -7377978091021049688
+      spriteID: 813e19fb7469b8ad0800000000000000
+      internalID: -2698898316777626856
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      LapideSei_0: -7377978091021049688
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

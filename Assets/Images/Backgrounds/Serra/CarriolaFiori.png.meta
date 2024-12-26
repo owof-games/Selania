@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: d8945099f36949048941c7de96e1f10a
+guid: ccab2fc12d328bf438203dd95ae1dc0e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3615872058979130105
-    second: Giardino_0
+      213: 2856374073374951825
+    second: CarriolaFiori_0
+  - first:
+      213: 904374311477153764
+    second: CarriolaFiori_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Giardino_0
+      name: CarriolaFiori_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 292
+        y: 430
+        width: 9
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9fa16bcda782e2230800000000000000
-      internalID: 3615872058979130105
+      spriteID: 19946250611e3a720800000000000000
+      internalID: 2856374073374951825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CarriolaFiori_1
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 72
+        width: 356
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ef859b05abfc8c00800000000000000
+      internalID: 904374311477153764
       vertices: []
       indices: 
       edges: []
@@ -134,8 +159,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Giardino_0: 3615872058979130105
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
