@@ -35,12 +35,12 @@
     ->->
 
         = trigger_solitudine
-            Hai segnalato che preferiresti non sentire storie riguardanti la solitudine, che è uno dei temi di questo spettro.
-            Puoi decidere se continuare comunque, o saltare la sua storia.
-            Nel secondo caso, potrai (in modo un po' arbitrario) aiutarlo a riscrivere il suo nome.
-                * Affronto
+            <i>Hai segnalato che preferiresti non sentire storie riguardanti la solitudine, che è uno dei <i>temi di questo spettro.</i>
+            Puoi decidere se continuare comunque, o saltare la sua storia.</i>
+            <i>Nel secondo caso, potrai (in modo un po' arbitrario) aiutarlo a riscrivere il suo nome.</i>
+                * [Voglio ascoltare la sua storia]
                     -> intro
-                * Salto
+                * [Salto]
                     -> scelta_nome_uno
                 -
                 ->->
@@ -69,9 +69,9 @@
 === doni_storia_uno ===
 //Qui è la fase di check per i doni, se donarne, quali, o non farlo.
     Tutto sommato è una cosa così banale, così banale. Eppure questo freddo non se ne vuole andare.
-    + {doniTrovati != ()} Forse con un dono adeguato, lo spettro sarà disponibile a parlarti.
+    + {doniTrovati != ()} <i>Forse con un dono adeguato, lo spettro sarà disponibile a parlarti.</i>
         -> gestione_inventario
-    + [Ti allontani]
+    + [Mi allontano]
         -> main
     -
     -> main
@@ -88,7 +88,7 @@
 
     = primo_blocco
         Spettro: Sei {pronomi has maschili: tornato|{pronomi has femminili: tornata|tornatə}}, non me l'aspettavo.
-        C'è qualcosa che vorrei chiederti:
+        Tu: C'è qualcosa che vorrei chiederti:
             * (vuoto) Ti è capitato di sentire altre volte questo vuoto?
                 Spettro: Forse.
                 Spettro: <b>Ricordo</b>...
@@ -114,7 +114,7 @@
             -> secondo_blocco
 
     = secondo_blocco
-            * Prima hai detto che ci sono cose a cui non volevi pensare...
+            * Tu: Prima hai detto che ci sono cose a cui non volevi pensare...
                 Spettro: Sì.
 
                 * * E ti andrebbe di raccontarmele?
@@ -210,11 +210,11 @@
             -> terzo_blocco
 
     = terzo_blocco
-        C'è una cosa ancora che vorrei chiederti, che vorrei capire.
+        Tu: C'è una cosa ancora che vorrei chiederti, che vorrei capire.
         //Questa cosa ci permette di capire qual è lo stato d'animo emergente.
 
             * Perché proprio questo ricordo?
-                Perché è questa la cosa che continua a bloccarti qui?
+                Tu: Perché è questa la cosa che continua a bloccarti qui?
                 {
                 - rabbia > abbandono && rabbia > terrore:
                     Spettro: Perché ora l'unica cosa che rimane è la <b>rabbia</b>, la furia.
@@ -241,13 +241,13 @@
 
 
 === riscrittora_storia_uno
-        Sai, io sono qui per aiutarti a rileggere la tua storia.
-        E forse ci sono dei modi diversi di guardare a quello che ti è accaduto.
+        Tu: Sai, io sono qui per aiutarti a rileggere la tua storia.
+        Tu: E forse ci sono dei modi diversi di guardare a quello che ti è accaduto.
 
         //Più abbiamo preso un certo topic di petto, più veniamo premiate? E quindi un punteggio alto in realtà favorisce una certa lettura di sè?
         //Ma se non abbiamo toccato un sentimento, una paura, non abbiamo modo di rileggere quella cosa in quel modo, e allora possiamo solo confermare lo status quo.
         //Arrivo qui con un massimo di 3 punti su un elemento
-        Il vuoto ti ha inseguito perché...
+        Tu: Il vuoto ti ha inseguito perché...
         //Mettere qualcosa per far riconoscere che una scelta usa inchiostro e l'altra no.
             - (top1)
                 + {rabbia > 0} La tua rabbia:
@@ -399,8 +399,9 @@
         }
 
     = evento_speciale
-        Ma visto che mi hai fatto un dono speciale, voglio condividere con te una cosa che ho imparato.
-        E ora, me ne vado. Addio.
+        Spettro: Ma visto che mi hai fatto un dono speciale, voglio condividere con te una cosa che ho imparato.
+        Spettro: E ora, me ne vado.
+        Spettro: Addio.
         ~ storiaUno = Conclusa
         -> main
 
