@@ -3,27 +3,11 @@ ACCESSO AD ELEMENTI RICORRENTI (MENTORE, LISTA OGGETTI, ANIME)
 Accade solo negli hub, non nelle scene singole, che sono private (credo)
 
 
-OGGETTI
-    La struttura per assegnare un oggetto random è
-    
-        ~ temp dono = LIST_RANDOM(doniNonTrovati)
-        Hai trovato {dono}
-            ~ doniNonTrovati -= dono
-            ~ doniTrovati += dono
-        
-        Per fare un eventuale debug:
-        {debug: Doni non trovati: {doniNonTrovati}}
-        {debug: Doni trovati:{doniTrovati}}
-        {debug: Doni donati:{doniDonati}}
-        
-        La randomizzazione è solo per i luoghi, e vale solo una volta. Altri oggetti compaiono con interazioni specifiche (certi spiriti, il mentore, tisane, i funghi e via di seguito)
-        
-        Alcuni oggetti possono essere usati in altre aree? (es: un fungo particolare per una certa tisana, una canzone per far crescere un fungo e via di seguito)
-    
+
 AREE DEL GIARDINO
-    Non si aprono in modo randomico, ma in modo strutturato, ragionando per tier.
+    Si aprono in modo strutturato, ragionando per tier.
     Es:
-        -> Tier uno: tutorial. Si apre il giardino con funghi e fiori. Trovo tre oggetti utili per la prima storia: uno dal mentore, uno nel giardino stesso (se osservo il mondo dalla panchina), l'altro collaborando con un fungo o un fiore o che.
+        -> Tier uno: tutorial. Si apre il giardino con funghi e fiori + il mausoleo. Trovo tre oggetti utili per la prima storia: uno dal mentore, uno nel giardino stesso (se osservo il mondo dalla panchina), l'altro collaborando con un fungo o un fiore o che.
         -> Tier due: si apre lo spazio delle falene e il labirinto
         -> Tier tre: si apre il resto: tisane, biblioteca, canzoni
     
@@ -42,14 +26,17 @@ TOMBE
     
     Le sette tombe saranno sempre e comunque visibili e accessibili. Se non sono sbloccate, ci diranno solo l'epitaffio.    
         
-    Una volta che decidi di sbloccare una tomba, segui solo quella storia. Con una logica tipo:
+    LOOP per la relazione con gli spettri:
         -> arrivo al mausoleo
-        -> scelgo quale storia avviare
-        -> ascolto la ministoria
-        -> a quel punto le lapidi mi danno tutte una informazione generica, ma rimane presente e interagibile la fantasma della storia che sto seguendo.
-        -> risolvo il suo percorso
-        -> il nome sulla sua tomba si aggiorna
-        -> posso interagire di nuovo con le altre lapidi, e avviare una storia tra quelle disponibili
+        -> decido quale tra le storie disponibili voglio avviare
+        -> ascolto la storia (una scena significativa che mi dà potenziali spunti per dei doni)
+        -> cerco i doni
+        -> se parlo prima di dare il dono, ricevo una frase che riassume un po' il rimpianto dello spettro
+        -> quando offro il dono, viene rimpolpato l'inchiostro (con o senza dichiarazione dei dati, della quantità)
+        -> a quel punto posso fare delle domande
+        -> A domande finite, propongo una rilettura della storia del personaggio, consumando più o meno inchiostro (questo quindi ci fa anche capire che tendenzialmente un punto chiave è più sul fondo della storia)
+        -> questa rilettura farà sì che sarà il personaggio stesso a darsi una nuova etichetta.
+   
         
 ANIME
     Ci troviamo in uno spazio di rielaborazione e rilettura di ciò che è accaduto nel nostro passato.

@@ -7,6 +7,7 @@ COSE POST PROTOTIPO
             * Più avanti forse ha senso che quando entriamo in un luogo non ci sia per forza un commento, o no?     
             * Pensare a dove posizionare il canto finale
             * Per la versione in inglese: fare una premessa sul fatto che non è la mia prima lingua, che per questioni etiche non voglio usare traduttori online e che per questo forse non sarà l'inglese migliore del mondo, ma di provare a godersi il gioco come se fosse narrato da una vecchia nonna italiana. Una nonna italiana che forse apprezza la pizza con l'ananas.
+            * Fare setting per come è pensato (no numeri di sorta) o facilitato (con numeri visibili, per fare power play
 
 
 POTENZIALI CONTENUTI
