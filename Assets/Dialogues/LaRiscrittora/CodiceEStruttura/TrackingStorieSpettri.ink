@@ -19,16 +19,20 @@ VAR donoSpettroSette = false
 
 
 //Gestione spettro uno: il Vuoto.
-LIST possibiliStatiSpettroUno = SpettroDelVuoto, IlRiccio, IlGuardiano, LAccentratore
+LIST possibiliStatiSpettroUno = SpettroDelVuoto, LArrabbiato, IlFerito, IlTerrorizzato, LAbbandonato, IlSocievole, IlConsapevole
 VAR effettivoStatoSpettroUno = SpettroDelVuoto
 
 VAR storiaUno = NonIniziata
 VAR donoSpettroUno = false
 VAR eventoSpecialeSpettroUno = false
 
-VAR riccio = 0
-VAR guardiano = 0
-VAR accentratore = 0
+VAR terrore = 0
+VAR abbandono = 0
+VAR rabbia = 0
+
+VAR ferito = 0
+VAR socievole = 0
+VAR consapevole = 0
 
 
 //Gestione spettro due
@@ -61,16 +65,35 @@ VAR eventoSpecialeSpettroSei = false
 VAR eventoSpecialeSpettroSette = false
 
 === function traduttoreSpettri(effettivoStatoSpettro)
-{effettivoStatoSpettro:
+    {effettivoStatoSpettro:
 
-- SpettroDelVuoto:
-    ~ return "lo spettro del Vuoto"
-- IlRiccio: 
-    ~ return "il Riccio"
-- IlGuardiano: 
-    ~ return "il Guardiano"    
-- LAccentratore: 
-    ~ return "l'Accentratore"
+    //Spettro Uno
+        - SpettroDelVuoto:
+            ~ return "lo spettro del Vuoto"
+        - IlConsapevole: 
+            ~ return "il Consapevole"
+        - IlFerito: 
+            ~ return "il Ferito"    
+        - IlSocievole: 
+            ~ return "il Socievole"
+        - IlTerrorizzato: 
+            ~ return "il Terrorizzato"
+        - LAbbandonato: 
+            ~ return "l'Abbandonato"    
+        - LArrabbiato: 
+            ~ return "l'Arrabbiato"    
+
+    }
 
 
+=== function check_statusVsInchiostro(status, list)
+{
+    - status == 1 && list hasnt (Vuoto, Scarso, Normale):
+	    ~ return true
+    - status == 2 && list hasnt (Vuoto, Scarso):
+	    ~ return true
+    - status == 3 && list hasnt Vuoto:
+	    ~ return true
+    - else:
+        ~ return false
 }
