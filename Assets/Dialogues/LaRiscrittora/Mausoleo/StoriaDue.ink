@@ -36,9 +36,13 @@
 
 === storia_due ===
     //la storia in corso viene attivata, e le altre non saranno accessibili fino alla sua conclusione
-    ~ storiaDue = InCorso
-    Ascolti la seconda storia
-    -> main
+        <i>Vuoi ascoltare la sua storia?</i>
+        + [Sì]
+            ~ storiaDue = InCorso
+            -> aiuto_storia_due
+        + [No]
+            -> main
+    ->-> 
 
 
 

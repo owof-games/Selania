@@ -36,10 +36,14 @@
 
 === storia_cinque ===
     //la storia in corso viene attivata, e le altre non saranno accessibili fino alla sua conclusione
-    ~ storiaCinque = InCorso
-    Ascolti la quinta storia
-    -> main
 
+        <i>Vuoi ascoltare la sua storia?</i>
+        + [Sì]
+            ~ storiaCinque = InCorso        
+            -> aiuto_storia_cinque
+        + [No]
+            -> main
+    ->-> 
 
 
 === aiuto_storia_cinque ===
