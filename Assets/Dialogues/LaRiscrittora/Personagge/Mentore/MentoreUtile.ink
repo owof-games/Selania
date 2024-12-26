@@ -154,15 +154,33 @@ VAR lutto = false
 - (top)
     + Preferirei non leggere nulla che riguardi l'abuso di alcool
         ~ alcolismo = false
+         + + C'è altro che vorrei evitare
+            -> top
+         + + Sono apposto così
+            -> parlareColMentore
+         - -   
     + Non voglio leggere storie su relazioni abusanti
         ~ abusi = false
+        + + C'è altro che vorrei evitare
+            -> top
+        + + Sono apposto così
+            -> parlareColMentore
+         - -  
     + Non me la sento di parlare di morte
         ~ lutto = false
+         + + C'è altro che vorrei evitare
+            -> top
+         + + Sono apposto così
+            -> parlareColMentore
+         - -          
     + Preferirei evitare storie di solitudine e abbandono
-        ~ solitudine = false    
+        ~ solitudine = false
+         + + C'è altro che vorrei evitare
+            -> top
+         + + Sono apposto così
+            -> parlareColMentore
+         - -          
     + Sono apposto così.
     ->parlareColMentore
     -  
--> top
-
  -> main
