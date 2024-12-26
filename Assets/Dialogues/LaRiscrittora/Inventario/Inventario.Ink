@@ -25,7 +25,7 @@
     - storiaUno == InCorso:
     Lo spettro è confuso dal tuo dono.
     ~ donoSpettroUno = true
-    -> aiuto_storia_uno.capitolo_uno
+    -> storia_uno.capitolo_uno
     
     - storiaDue == InCorso:
         ~ statoInchiostroSpettroDue ++
@@ -47,7 +47,7 @@
     - storiaUno == InCorso:
         Lo spettro è confuso dal tuo dono.
         ~ donoSpettroUno = true
-        -> aiuto_storia_uno.capitolo_uno
+        -> storia_uno.capitolo_uno
     
     - storiaDue == InCorso:
         Hai regalato a spettro due qualcosa che proprio non gli interessa
@@ -69,7 +69,7 @@
         Spettro uno ti guarda sorpreso, e si porta il frammento al petto.
         ~ eventoSpecialeSpettroUno = true
         ~ donoSpettroUno = true
-        -> aiuto_storia_uno.capitolo_uno
+        -> storia_uno.capitolo_uno
 
     - storiaDue == InCorso:
         Hai regalato a spettro due qualcosa che proprio non gli interessa
@@ -90,7 +90,7 @@
         Lo spettro se la avvolge attorno al corpo.
         Sembra sollevato.
         ~ donoSpettroUno = true
-        -> aiuto_storia_uno.capitolo_uno
+        -> storia_uno.capitolo_uno
     
     - storiaDue == InCorso:
         Hai regalato a spettro due qualcosa che proprio non gli interessa
@@ -109,7 +109,7 @@
         ~ statoInchiostroSpettroUno --
         Lo spettro ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.
         ~ donoSpettroUno = true
-        -> aiuto_storia_uno.capitolo_uno
+        -> storia_uno.capitolo_uno
     
     - storiaDue == InCorso:
         Hai regalato a spettro due qualcosa che proprio non gli interessa

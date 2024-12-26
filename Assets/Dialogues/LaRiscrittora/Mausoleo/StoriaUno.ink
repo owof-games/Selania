@@ -2,7 +2,7 @@
     //opzione se non hai mai esplorato questa storia, e se non ci sono storie attive
     + {contenutoMausoleo has PG && not (storiaUno == InCorso or storiaUno == Conclusa) and not (storiaDue == InCorso or storiaTre == InCorso)}[LapideUno]
         Qui giace {traduttoreSpettri(effettivoStatoSpettroUno)}
-        -> storia_uno
+        -> intro_storia_uno
     
     //opzione se c'è un'altra storia attiva
     + {contenutoMausoleo has PG && storiaUno == Conclusa} [LapideUno]
@@ -12,14 +12,15 @@
     //opzione se questa storia è attiva
     + {contenutoMausoleo has PG && storiaUno == InCorso} [LapideUno]
     Lo spettro del vuoto ondeggia inquieto accanto alla sua lapide.
-        -> aiuto_storia_uno
+        -> doni_storia_uno
     
     + ->
     
     -> main
 
-=== storia_uno ===
+=== intro_storia_uno ===
     //la storia in corso viene attivata, e le altre non saranno accessibili fino alla sua conclusione
+    //In questo primo step quello che succede è che verifichiamo se ci sono trigger problematici per la giocatrice. Le permettiamo di scegliere se andare o meno avanti, e poi abbiamo la presentazione della storia.
     ~ storiaUno = InCorso
     {
     - alcolismo == false:
@@ -28,34 +29,43 @@
     }
     Vuoi ascoltare la sua storia?
         + [Sì]
-            -> top
+            -> main
         + [No]
             -> main
-            
-    - (top)    
-        Ho freddo, ho tanto freddo.
-        Un freddo che non sta fermo.
-        Un freddo che è pronto ad esplodere.
-        Forse sono io?
-        Forse sto per rovinare tutto, di nuovo?
-        O forse è il vuoto?
-        Lasciami solo.
-        Lasciami solo.
-        Lasciami solo.
-        -> main
-
-
-    = trigger_alcolismo
-        Hai segnalato che l'alcool per te è un problema, ed è uno dei temi della storia.
-        Puoi decidere se affrontarla comunque, o saltarla.
-            * Affronto
-                -> top
-            * Salto
-                -> scelta_nome_uno
-            -
     ->->
 
-=== aiuto_storia_uno ===
+        = trigger_alcolismo
+            Hai segnalato che l'alcool per te è un problema, ed è uno dei temi della storia.
+            Puoi decidere se affrontarla comunque, o saltarla.
+                * Affronto
+                    -> intro
+                * Salto
+                    -> scelta_nome_uno
+                -
+                ->->
+
+        = intro  
+            Può essere una festa. Un compleanno. Un giorno di giochi. Un festival. Capodanno.
+            Possono esserci amici, persone care, persone amate.
+            L’unica certezza è che a un certo punto il vuoto mi raggiungerà.
+            Dita di ghiaccio nello stomaco, pensieri come cemento, i rumori che si fanno ovattati.
+            Solo. Sono solo. Sono inutile, sostituibile, dimenticabile. Bisognoso, instabile. Ferito, e quindi difettoso.
+            Dimenticato anche in questa moltitudine.
+            Può essere che resti in silenzio, sparendo pian piano, dimenticato.
+            Può essere che chieda aiuto, per non venire ascoltato.
+            Può essere che la rabbia esploda, e a quel punto verrò allontanato.
+            Sono destinato a fingere, ridere, cazzeggiare.
+            Ma fingere è faticoso, e quindi comunque a un certo punto il freddo tornerà, e l’unica cosa certa è che presto o tardi rimarrò solo.
+            * E qual è il tuo rimpianto?
+            -
+            Non è ovvio? L’unica soluzione era giocare d’anticipo.
+
+            -> main
+
+
+=== doni_storia_uno ===
+//Qui è la fase di check per i doni, se donarne, quali, o non farlo.
+    Il Vuoto: Frase concisa che riassume quanto già detto.
     + {doniTrovati != ()} Forse con un dono adeguato, lo spettro sarà disponibile a parlarti.
         -> gestione_inventario
     + [Ti allontani] -> main
@@ -63,27 +73,13 @@
     -> main
 
     
-
+=== storia_uno
+//Una volta che abbiamo fatto il dono, parte la vera e propria storia.
     = capitolo_uno
-    
-    <i>Dopo il tuo dono, la quantità di inchiostro a disposizione è {statoInchiostroSpettroUno}.</i>
+        //Informativa sullo stato dell'inchiostro.
+        <i>Dopo il tuo dono, la quantità di inchiostro a disposizione è {statoInchiostroSpettroUno}.</i>
              -> azioniInchiostro ->
-    Può essere una festa. Un compleanno. Un giorno di giochi. Un festival. Capodanno.
-    Possono esserci amici, persone care, persone amate.
-    L’unica certezza è che a un certo punto il vuoto mi raggiungerà.
-    Dita di ghiaccio nello stomaco, pensieri come cemento, i rumori che si fanno ovattati.
-    Solo. Sono solo. Sono inutile, sostituibile, dimenticabile. Bisognoso, instabile. Ferito, e quindi difettoso.
-    Dimenticato anche in questa moltitudine.
-    Può essere che resti in silenzio, sparendo pian piano, dimenticato.
-    Può essere che chieda aiuto, per non venire ascoltato.
-    Può essere che la rabbia esploda, e a quel punto verrò allontanato.
-    Sono destinato a fingere, ridere, cazzeggiare.
-    Ma fingere è faticoso, e quindi comunque a un certo punto il freddo tornerà, e l’unica cosa certa è che presto o tardi rimarrò solo.
-    * E qual è il tuo rimpianto?
-    -
-    Non è ovvio? L’unica soluzione era giocare d’anticipo.
-    
-        -> primo_blocco_domande 
+            -> primo_blocco_domande 
 
 
     = primo_blocco_domande
@@ -179,10 +175,27 @@
                 * * Scelta due: aumenta accentratore
                     ~ accentratore ++
             -
-         -> chi_sono
+         -> riscrittora_storia_uno
 
-     = chi_sono
-        Il Vuoto: Credo di aver capito cosa intendi, ora.
+
+=== riscrittora_storia_uno
+Qui, con una serie di condizioni che poi andremo a tracciare, possiamo riscrivere alcuni aspetti della storia dello spettro.
+-> parte_uno
+    = parte_uno
+
+    -> parte_due
+
+    = parte_due
+
+    -> parte_tre
+
+    = parte_tre
+
+    -> chi_sono_storia_uno
+
+=== chi_sono_storia_uno
+//Qui vediamo se lasciarla con avanzi di inchiostro o meno.
+    Il Vuoto: Credo di aver capito cosa intendi, ora.
         {
         
             - accentratore < riccio:
