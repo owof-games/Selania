@@ -19,7 +19,7 @@ VAR donoSpettroSette = false
 
 
 //Gestione spettro uno: il Vuoto.
-LIST possibiliStatiSpettroUno = SpettroDelVuoto, LArrabbiato, IlFerito, IlTerrorizzato, LAbbandonato, IlSocievole, IlConsapevole
+LIST possibiliStatiSpettroUno = SpettroDelVuoto, LArrabbiato, IlGuarente, IlTerrorizzato, LAbbandonato, IlSocievole, IlConsapevole
 VAR effettivoStatoSpettroUno = SpettroDelVuoto
 
 VAR storiaUno = NonIniziata
@@ -72,7 +72,7 @@ VAR eventoSpecialeSpettroSette = false
             ~ return "lo spettro del Vuoto"
         - IlConsapevole: 
             ~ return "il Consapevole"
-        - IlFerito: 
+        - IlGuarente: 
             ~ return "il Ferito"    
         - IlSocievole: 
             ~ return "il Socievole"

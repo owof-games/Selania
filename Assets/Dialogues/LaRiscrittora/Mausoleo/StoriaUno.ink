@@ -353,23 +353,23 @@
                 {
                     - rabbia > ferito: Spettro: l'Arrabbiato.
                         ~ effettivoStatoSpettroUno = LArrabbiato
-                    - else: Spettro: Il Ferito.
-                         ~ effettivoStatoSpettroUno = ilFerito
+                    - else: Spettro: il Guarente.
+                         ~ effettivoStatoSpettroUno = IlGuarente
                 }
                 - else:
                 {
                     - terrore > consapevole: Spettro: il Terrorizzato.
-                         ~ effettivoStatoSpettroUno = ilTerrorizzato
-                    - else: Spettro: Il Consapevole.
-                         ~ effettivoStatoSpettroUno = ilConsapevole
+                         ~ effettivoStatoSpettroUno = IlTerrorizzato
+                    - else: Spettro: il Consapevole.
+                         ~ effettivoStatoSpettroUno = IlConsapevole
                 }
             }
             - abbandono > terrore:
                 {
                     - terrore > consapevole: Spettro: il Terrorizzato.
-                         ~ effettivoStatoSpettroUno = ilTerrorizzato
+                         ~ effettivoStatoSpettroUno = IlTerrorizzato
                     - else: Spettro: il Consapevole.
-                         ~ effettivoStatoSpettroUno = ilConsapevole
+                         ~ effettivoStatoSpettroUno = IlConsapevole
                 }
             - else:
                 {
@@ -383,7 +383,7 @@
         {effettivoStatoSpettroUno:
             - IlSocievole: Spettro: Ora so che ho bisogno delle altre persone, anche quando la cosa mi fa paura.
             - IlConsapevole: Spettro: Vedo i limiti del mondo che ci circonda, e capisco che queste paure sono figlie di quel sistema.
-            - IlFerito: La mia rabbia mi ha aiutato a capire dove si trovano le mie ferite, e ora so cosa affrontare.
+            - IlGuarente: La mia rabbia mi ha aiutato a capire dove si trovano le mie ferite, e ora so cosa affrontare.
             - IlTerrorizzato: Quello che ho dentro è mostruoso, deve rimanere nascosto dagli altri, a qualunque costo.
             - LAbbandonato: Le mie debolezze allontaneranno sempre gli altri. L'unica soluzione è giocare d'anticipo, e far tutto da solo.
             - LArrabbiato: Se questo mondo mi fa male, è mio diritto far male a questo mondo, mordere prima che lui mi morda.
@@ -410,7 +410,7 @@
     + Il Consapevole
          ~ effettivoStatoSpettroUno = IlConsapevole
     + Il Ferito
-         ~ effettivoStatoSpettroUno = IlFerito
+         ~ effettivoStatoSpettroUno = IlGuarente
     -
 ~ storiaUno = Conclusa
 -> main
