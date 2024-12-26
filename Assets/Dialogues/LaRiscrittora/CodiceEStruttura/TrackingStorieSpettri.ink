@@ -87,8 +87,10 @@ VAR eventoSpecialeSpettroSette = false
 
 
 === function check_statusVsInchiostro(status, list)
+TODO: risolvere problema questa funzione
+
 {
-    - status == 1 && list hasnt (Vuoto, Scarso, Normale):
+    - status == 1 && list hasnt Vuoto or list hasnt Scarso or list hasnt Normale:
 	    ~ return true
     - status == 2 && list hasnt (Vuoto, Scarso):
 	    ~ return true
