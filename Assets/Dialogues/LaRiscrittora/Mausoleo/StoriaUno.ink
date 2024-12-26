@@ -23,8 +23,8 @@
     //In questo primo step quello che succede è che verifichiamo se ci sono trigger problematici per la giocatrice. Le permettiamo di scegliere se andare o meno avanti, e poi abbiamo la presentazione della storia.
     ~ storiaUno = InCorso
     {
-    - alcolismo == false:
-        -> trigger_alcolismo
+    - solitudine == false:
+        -> trigger_solitudine
 
     }
     Vuoi ascoltare la sua storia?
@@ -34,9 +34,10 @@
             -> main
     ->->
 
-        = trigger_alcolismo
-            Hai segnalato che l'alcool per te è un problema, ed è uno dei temi della storia.
-            Puoi decidere se affrontarla comunque, o saltarla.
+        = trigger_solitudine
+            Hai segnalato che preferiresti non sentire storie riguardanti la solitudine, che è uno dei temi di questo spettro.
+            Puoi decidere se continuare comunque, o saltare la sua storia.
+            Nel secondo caso, potrai (in modo un po' arbitrario) aiutarlo a riscrivere il suo nome.
                 * Affronto
                     -> intro
                 * Salto
@@ -45,20 +46,19 @@
                 ->->
 
         = intro  
-            Può essere una festa. Un compleanno. Un giorno di giochi. Un festival. Capodanno.
-            Possono esserci amici, persone care, persone amate.
-            L’unica certezza è che a un certo punto il vuoto mi raggiungerà.
-            Dita di ghiaccio nello stomaco, pensieri come cemento, i rumori che si fanno ovattati.
-            Solo. Sono solo. Sono inutile, sostituibile, dimenticabile. Bisognoso, instabile. Ferito, e quindi difettoso.
-            Dimenticato anche in questa moltitudine.
-            Può essere che resti in silenzio, sparendo pian piano, dimenticato.
-            Può essere che chieda aiuto, per non venire ascoltato.
-            Può essere che la rabbia esploda, e a quel punto verrò allontanato.
-            Sono destinato a fingere, ridere, cazzeggiare.
-            Ma fingere è faticoso, e quindi comunque a un certo punto il freddo tornerà, e l’unica cosa certa è che presto o tardi rimarrò solo.
-            * E qual è il tuo rimpianto?
-            -
-            Non è ovvio? L’unica soluzione era giocare d’anticipo.
+            Vigilia di Natale.
+            Per la prima volta da mesi ho tempo libero: non sto lavorando, non sto correndo da nessuna parte.
+            Cammino lentamente col cane, sto andando a una cena con amici; eppure, c’è questo enorme senso di vuoto. Mi prende la pancia con dita lunghe e fredde, mi fa pensare cose che non voglio pensare.
+            Ho voglia di chiamare qualcuno: non sento mamma da settimane, e poi ci sono messaggi, audio, meme che attendono risposte da tempi imbarazzanti.
+            Mentre aspetto il bus provo a pensare con chi potrei confidarmi. Mando un audio a Lele, che mi risponde raccontandomi i suoi drammi.
+            Ascolto un vocale di Cate, ma man mano che mi consola per le rotture di lavoro mi passa il coraggio di condividere qualcosa di più pesante, cazzo quanto sono pesante, e rispondo con delle cazzate.
+            Provo a scrivere a Sandro, ma poi il testo cambia perché messe a parole quelle cose non sono esattamente così, non hanno la voce giusta.
+            L’unica cosa che potrei fare è provare a gridare, gridare, gridare. E poi, insomma, ognuno c’ha i suoi cazzi.
+            L’autobus arriva, lo lascio passare.
+            Il cane inizia a tirare. 
+            Il vuoto mi trascina in giro per il paese, il cellulare inizia a vibrare. Non ce la posso fare, non ce la posso fare.
+            Torno a casa, disattivo internet, disattivo il cellulare, e mi rimetto a lavorare.
+
 
             -> main
 

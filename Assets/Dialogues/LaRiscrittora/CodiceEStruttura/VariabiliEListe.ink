@@ -29,3 +29,4 @@ VAR contenutoCasettaAnime = (AnimaUno, AnimaDue, AnimaTre, AnimellaUno, Animella
 VAR alcolismo = true
 VAR abusi = true
 VAR lutto = true
+VAR solitudine = true

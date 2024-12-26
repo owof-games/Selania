@@ -158,6 +158,8 @@ VAR lutto = false
         ~ abusi = false
     + Non me la sento di parlare di morte
         ~ lutto = false
+    + Preferirei evitare storie di solitudine e abbandono
+        ~ solitudine = false    
     + Sono apposto così.
     ->parlareColMentore
     -  
