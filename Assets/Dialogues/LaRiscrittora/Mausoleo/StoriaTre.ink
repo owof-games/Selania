@@ -10,17 +10,17 @@
     = opzioni
         //opzione se non hai mai esplorato questa storia, e se non ci sono storie attive
         + {contenutoMausoleo has PG && not (storiaTre == InCorso or storiaTre == Conclusa) and not (storiaDue == InCorso or storiaQuattro == InCorso)} [LapideTre]
-            Potresti conoscere la storia della terza lapide, {effettivoStatoSpettroTre}
+            Potresti conoscere la storia della terza lapide, {traduttoreSpettri(effettivoStatoSpettroTre)}
             -> storia_tre
         
         //opzione se c'è un'altra storia attiva
         + {contenutoMausoleo has PG && storiaDue == InCorso or storiaQuattro == InCorso or storiaTre == Conclusa} [LapideTre]
-            La terza lapide, appartenente a {effettivoStatoSpettroTre}
+            La terza lapide, appartenente a {traduttoreSpettri(effettivoStatoSpettroTre)}
         -> main
         
         //opzione se questa storia è attiva
         + {contenutoMausoleo has PG && storiaTre == InCorso} [LapideTre]
-        Il fantasma della terza storia ti attende
+        {traduttoreSpettri(effettivoStatoSpettroTre)} ti attende
         -> aiuto_storia_tre
         
         + ->
@@ -29,7 +29,7 @@
     
     = not_yet
         + {contenutoMausoleo has PG} [LapideTre]
-        Sulla lapide è incisa una sola parola: {effettivoStatoSpettroTre}
+        Sulla lapide è incisa una sola parola: {traduttoreSpettri(effettivoStatoSpettroTre)}
             -> main
         
         

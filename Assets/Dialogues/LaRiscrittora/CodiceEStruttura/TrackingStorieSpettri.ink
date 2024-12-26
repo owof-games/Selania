@@ -37,23 +37,23 @@ VAR consapevole = 0
 
 //Gestione spettro due
 
-LIST possibiliStatiSpettroDue = StatoDefaultDue, NuovoStatoUnoDue, NuovoStatoDueDue, NuovoStatoTreDue
-VAR effettivoStatoSpettroDue = StatoDefaultDue
+LIST possibiliStatiSpettroDue = LaVegliante, NuovoStatoUnoDue, NuovoStatoDueDue, NuovoStatoTreDue
+VAR effettivoStatoSpettroDue = LaVegliante
 
-LIST possibiliStatiSpettroTre = StatoDefaultTre, NuovoStatoUnoTre, NuovoStatoDueTre, NuovoStatoTreTre
-VAR effettivoStatoSpettroTre = StatoDefaultTre
+LIST possibiliStatiSpettroTre = LIndeciso, NuovoStatoUnoTre, NuovoStatoDueTre, NuovoStatoTreTre
+VAR effettivoStatoSpettroTre = LIndeciso
 
-LIST possibiliStatiSpettroQuattro = StatoDefaultQuattro, NuovoStatoUnoQuattro, NuovoStatoDueQuattro, NuovoStatoTreQuattro
-VAR effettivoStatoSpettroQuattro = StatoDefaultQuattro
+LIST possibiliStatiSpettroQuattro = LaMondatrice, NuovoStatoUnoQuattro, NuovoStatoDueQuattro, NuovoStatoTreQuattro
+VAR effettivoStatoSpettroQuattro = LaMondatrice
 
-LIST possibiliStatiSpettroCinque = StatoDefaultCinque, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
-VAR effettivoStatoSpettroCinque = StatoDefaultCinque
+LIST possibiliStatiSpettroCinque = Oscar, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
+VAR effettivoStatoSpettroCinque = Oscar
 
-LIST possibiliStatiSpettroSei = StatoDefaultSei, NuovoStatoUnoSei, NuovoStatoDueSei, NuovoStatoTreSei
-VAR effettivoStatoSpettroSei = StatoDefaultSei
+LIST possibiliStatiSpettroSei = LoSpecchio, NuovoStatoUnoSei, NuovoStatoDueSei, NuovoStatoTreSei
+VAR effettivoStatoSpettroSei = LoSpecchio
 
-LIST possibiliStatiSpettroSette = StatoDefaultSette, NuovoStatoUnoSette, NuovoStatoDueSette, NuovoStatoTreSette
-VAR effettivoStatoSpettroSette= StatoDefaultSette
+LIST possibiliStatiSpettroSette = LaDisegnatrice, NuovoStatoUnoSette, NuovoStatoDueSette, NuovoStatoTreSette
+VAR effettivoStatoSpettroSette= LaDisegnatrice
 
 //Variabili per verificare se c'è o meno l'accesso all'evento speciale di un singolo spettro
 
@@ -81,7 +81,19 @@ VAR eventoSpecialeSpettroSette = false
         - LAbbandonato: 
             ~ return "l'Abbandonato"    
         - LArrabbiato: 
-            ~ return "l'Arrabbiato"    
+            ~ return "l'Arrabbiato"
+        - LaVegliante:
+            ~ return "la Vegliante"
+        - LIndeciso:
+            ~ return "l'Indeciso"
+        - LaMondatrice:
+            ~ return "la Mondatrice"
+        - Oscar:
+            ~ return "Oscar"
+        - LoSpecchio:
+            ~ return "lo Specchio"
+        - LaDisegnatrice:
+            ~ return "la Disegnatrice"
 
     }
 
