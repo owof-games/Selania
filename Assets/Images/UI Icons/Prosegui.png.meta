@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 7bcec236e04ab6d4f903e5778106467a
+guid: c6e9237c1fc4d3949ab48fdb4650a7a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1246867464998888086
-    second: triangle-icon-size_24_0
-  - first:
-      213: -2897423475696172950
-    second: triangle-icon-size_24_1
+      213: 7072648353672758633
+    second: Prosegui_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: triangle-icon-size_24_0
+      name: Prosegui_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 24
-        height: 23
+        x: 53
+        y: 34
+        width: 217
+        height: 106
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 692204d6a53cd4110800000000000000
-      internalID: 1246867464998888086
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: triangle-icon-size_24_1
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 17
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a60804733b84ac7d0800000000000000
-      internalID: -2897423475696172950
+      spriteID: 9658ae58438172260800000000000000
+      internalID: 7072648353672758633
       vertices: []
       indices: 
       edges: []
@@ -159,9 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      triangle-icon-size_24_0: 1246867464998888086
-      triangle-icon-size_24_1: -2897423475696172950
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
