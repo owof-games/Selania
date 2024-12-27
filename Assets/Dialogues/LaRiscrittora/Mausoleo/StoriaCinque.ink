@@ -19,7 +19,7 @@
         -> main
         
         //opzione se questa storia è attiva
-        + {contenutoMausoleo has PG && storiaCinque == InCorso} [LapideCinque]
+        + {contenutoMausoleo has PG && storiaCinque == InCorso} [SpettroCinque]
         {traduttoreSpettri(effettivoStatoSpettroCinque)} ti attende
         -> aiuto_storia_cinque
         
