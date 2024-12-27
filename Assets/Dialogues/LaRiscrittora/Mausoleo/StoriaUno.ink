@@ -10,7 +10,7 @@
         -> main
 
     //opzione se questa storia è attiva
-    + {contenutoMausoleo has PG && storiaUno == InCorso} [LapideUno]
+    + {contenutoMausoleo has PG && storiaUno == InCorso} [SpettroUno]
     <i>Lo spettro del vuoto ondeggia inquieto accanto alla sua lapide.</i>
         -> doni_storia_uno
 
