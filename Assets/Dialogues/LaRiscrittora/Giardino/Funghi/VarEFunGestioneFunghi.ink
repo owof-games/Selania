@@ -94,8 +94,7 @@ L'aria si muove tra le fronde, portandoti storie lontane.
  ~ thirdQuest = false
  ~ counter = 0
  ~ inCrescita = 1
-{~ Qualcosa sta crescendo|Qualcosa è cambiato|Ora, devi solo aspettare}.
-    
+ 
     {
     - tipoColtivazioni == (collaborazione, ciclicità):
         ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteCiclicità)

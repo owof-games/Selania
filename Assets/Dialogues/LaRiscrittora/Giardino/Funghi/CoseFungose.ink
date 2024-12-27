@@ -2,6 +2,7 @@
 {
     - fungoProposto has licheneDegliAbissi:
     {
+        - inCrescita <2: -> lichene_degli_abissi.step_zero
         - inCrescita <5: -> lichene_degli_abissi.step_uno
         - inCrescita <8: -> lichene_degli_abissi.step_due
         - inCrescita <10: -> lichene_degli_abissi.step_tre
@@ -10,6 +11,7 @@
 
     - fungoProposto has muschioDelleAmanti:
     {
+        - inCrescita <2: -> muschio_delle_amanti.step_zero
         - inCrescita <5: -> muschio_delle_amanti.step_uno
         - inCrescita <8: -> muschio_delle_amanti.step_due
         - inCrescita <10: -> muschio_delle_amanti.step_tre
@@ -18,6 +20,7 @@
 
     - fungoProposto has cantoDelleCompagne:
     {
+        - inCrescita <2: -> canto_delle_compagne.step_zero    
         - inCrescita <5: -> canto_delle_compagne.step_uno
         - inCrescita <8: -> canto_delle_compagne.step_due
         - inCrescita <10: -> canto_delle_compagne.step_tre
@@ -26,6 +29,7 @@
 
     - fungoProposto has laSpazzata:
     {
+        - inCrescita <2: -> la_spazzata.step_zero 
         - inCrescita <5: -> la_spazzata.step_uno
         - inCrescita <8: -> la_spazzata.step_due
         - inCrescita <10: -> la_spazzata.step_tre
@@ -34,6 +38,7 @@
 
     - fungoProposto has baccaDellaAddolorata:
     {
+        - inCrescita <2: -> bacca_della_addolorata.step_zero 
         - inCrescita <5: -> bacca_della_addolorata.step_uno
         - inCrescita <8: -> bacca_della_addolorata.step_due
         - inCrescita <10: -> bacca_della_addolorata.step_tre
@@ -42,6 +47,7 @@
 
     - fungoProposto has nonTiScordarDiTe:
     {
+        - inCrescita <2: -> non_ti_scordar_di_te.step_zero     
         - inCrescita <5: -> non_ti_scordar_di_te.step_uno
         - inCrescita <8: -> non_ti_scordar_di_te.step_due
         - inCrescita <10: -> non_ti_scordar_di_te.step_tre
@@ -53,6 +59,7 @@
 === lichene_degli_abissi
 //Collaborazione, ciclicità, cancellazione
 //Outcome: allontana qualcuno.
+    = step_zero
     Una punticina bluastra emerge dal terreno.
       -> main
     = step_uno
@@ -85,7 +92,8 @@
 === muschio_delle_amanti
 //Collaborazione, novità, ricordo
 //Outcome: datti piacere
-    È solo una tua impressione, o i rami hanno iniziato a brillare?
+    = step_zero
+        È solo una tua impressione, o i rami hanno iniziato a brillare?
       -> main
     = step_uno
         C'è una polvere ramata, brillante, che scende da alcuni rami.
@@ -120,6 +128,10 @@
 === canto_delle_compagne
 //Collaborazione, ciclicità, ricordo
 //Outcome: canta, sola o con le compagne
+    = step_zero
+        Qualcosa vibra e ti sveglia le gambe.
+        Hai voglia di danzare.
+        -> main
     = step_uno
         Piccole palline rosse sul terreno caldo.
         L'umidità evapora creando una nebbiolina rossastra.
@@ -153,11 +165,15 @@
 === la_spazzata
 //Indipendenza, novità, cancellazione
 //Outcome: prometti di dire qualcosa che ti pesa sullo stomaco.
-    = step_uno
+    = step_zero
         Uh. Non vedi nulla. Forse qualcosa è andato storto?
+         -> main
+    = step_uno
+         La serra è vuota, eppure qualcosa è cambiato.
           -> main
     = step_due
-        La serra è vuota, eppure qualcosa è cambiato. Le luci sono più tenui. Il soffitto di rami sfiora la tua testa.
+        Le luci sono più tenui.
+        Il soffitto di rami sfiora la tua testa.
           -> main
     = step_tre
         Tutto scricchiola, gli alberi sembrano gemere dal dolore.
@@ -184,6 +200,10 @@
 === bacca_della_addolorata
 //Indipendenza, novità, cancellazione
 //Outcome: liberazione, invito ad avanzare
+    = step_zero
+        Cinque punte scure emergono dal terreno.
+    -> main
+    
     = step_uno
         Una mano rugosa stritola il terreno, le sue dita sembrano arrivare a infinita profondità.
           -> main
@@ -216,8 +236,12 @@
 === non_ti_scordar_di_te
 //Indipendenza, ciclicità, ricordo
 //Outcome: ricordo di chi non c'è più
-    = step_uno
+    = step_zero
         Su uno dei tronchi a terra è comparsa una sostanza viscosa, gelatinosa.
+    -> main
+    
+    = step_uno
+        La sostanza si è espansa.
         Non è invitante al tatto, ma l'aria attorno ti ricorda qualcosa: sigaro, tabacco forse?
         O è canfora? O addirittura torta, o rabarbaro, o caffè.
         Qualunque cosa sia, ti piace.
