@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CarriolaFiori_0: 2856374073374951825
+      CarriolaFiori_1: 904374311477153764
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

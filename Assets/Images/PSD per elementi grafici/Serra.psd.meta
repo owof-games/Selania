@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a42bbf19ce2f2b74d8db968a089ec29d
+guid: abf0888510c58ca4d8db38fd24b0eb34
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4309133201950794463
-    second: SerraCompleta_0
+      213: 6504780476288621940
+    second: Serra_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SerraCompleta_0
+      name: Serra_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12d91effe22e234c0800000000000000
-      internalID: -4309133201950794463
+      spriteID: 47d541f116f954a50800000000000000
+      internalID: 6504780476288621940
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      SerraCompleta_0: -4309133201950794463
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

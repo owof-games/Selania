@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: a42bbf19ce2f2b74d8db968a089ec29d
+guid: fb84f2996fdb4364fb113b5cc8230453
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4309133201950794463
-    second: SerraCompleta_0
+      213: -3333786444702375756
+    second: IconaSerra_0
+  - first:
+      213: -753058945304525899
+    second: IconaSerra_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SerraCompleta_0
+      name: IconaSerra_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 119
+        y: 17
+        width: 1772
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12d91effe22e234c0800000000000000
-      internalID: -4309133201950794463
+      spriteID: 4b0a08644e20cb1d0800000000000000
+      internalID: -3333786444702375756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconaSerra_1
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 1030
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b3813e01e89c85f0800000000000000
+      internalID: -753058945304525899
       vertices: []
       indices: 
       edges: []
@@ -134,8 +159,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      SerraCompleta_0: -4309133201950794463
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
