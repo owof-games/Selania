@@ -41,5 +41,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2389513147
+    locked: 0
+  - name: Interazioni
+    uniqueID: 3798589765
+    locked: 0
+  - name: PNG
+    uniqueID: 1165489853
+    locked: 0
   m_RenderingLayers:
   - Default
