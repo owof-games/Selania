@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 
 public class DialogueManagerSingleInk : MonoBehaviour
@@ -14,6 +15,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
+
+    [SerializeField] private GameObject continueButton;
     private Story story;
 
     [Header("Text elements")]
@@ -176,8 +179,19 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     public void OnClickContinue()
     {
+        //Tentativo disabilitare presenza bottone in caso di scelte disponibili
+        // List<Choice> currentChoices = story.currentChoices;
+        // if (currentChoices.Count == 0)
+        // {
+        //     continueButton.SetActive(true);
+        //     ContinueStory();
+        // }
+        // else
+        // {
+        //     continueButton.SetActive(false);
+        // }
         ContinueStory();
-        //TODO: disabilita bottone quando c'è una scelta.
+        
     }
 
 //Questa roba ti permette di attivare i tasti e metterci il testo, adattala poi a questa situazione (viene dal prototipo originale.)
@@ -207,6 +221,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
             choices[i].gameObject.SetActive(false);
         }
 
+        
         StartCoroutine(SelectFirstChoice());
 
     }
