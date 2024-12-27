@@ -45,7 +45,7 @@ VAR luoghiDono = ()
         {
         - luoghiDono has luogoDono: ->->
         - luoghiDono hasnt luogoDono:
-            Hai trovato {list_with_commas(dono)}.
+            <i>Hai trovato {list_with_commas(dono)}.</i>
             ~ doniNonTrovatiLuogo -= dono
             ~ doniTrovati += dono
             ~ luoghiDono += luogoDono
