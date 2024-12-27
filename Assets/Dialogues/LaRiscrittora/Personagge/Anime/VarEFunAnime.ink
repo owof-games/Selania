@@ -1,8 +1,8 @@
-LIST animelle = animellaUno, animellaDue, animellaTre
-LIST anime = animaUno, animaDue, animaTre
+VAR animelle = (AnimellaUno, AnimellaDue, AnimellaTre)
+VAR anime = (AnimaUno, AnimaDue, AnimaTre)
 VAR animelleIncontrate  = ()
-VAR animelleDaIncontrare = (animellaUno, animellaDue, animellaTre)
-VAR animeDaIncontrare = (animaUno, animaDue, animaTre)
+VAR animelleDaIncontrare = (AnimellaUno, AnimellaDue, AnimellaTre)
+VAR animeDaIncontrare = (AnimaUno, AnimaDue, AnimaTre)
 //Conto da quanto tempo ho visto una delle anime principali
 VAR ultimaVoltaVistaAnima = 0
 //Tengo conto del numero di luoghi visitati dall'ultimo incontro con un'anima o animella
@@ -48,11 +48,11 @@ VAR counterLuoghi = 0
 ~ temp anima = LIST_RANDOM(animeDaIncontrare)
 {debug: ho preso l'anima {anima}}
 {anima:
-    - animaUno:
+    - AnimaUno:
     -> anima_uno
-    - animaDue:
+    - AnimaDue:
     -> anima_due
-    - animaTre:
+    - AnimaTre:
     -> anima_tre
 
 }
@@ -69,13 +69,13 @@ VAR counterLuoghi = 0
     ~ animelleIncontrate += animellina
     
 {animellina:
-    - animellaUno:
+    - AnimellaUno:
         {debug: La lista animelle contiene: {animelleDaIncontrare}}
         -> animella_uno
-    - animellaDue:
+    - AnimellaDue:
         {debug: La lista animelle contiene: {animelleDaIncontrare}}
         -> animella_due
-    - animellaTre:
+    - AnimellaTre:
         {debug: La lista animelle contiene: {animelleDaIncontrare}}
         -> animella_tre
     - else: non ho più animelle da estrarre ->->

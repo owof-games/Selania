@@ -1,5 +1,5 @@
 === animella_uno
-+ {are_two_entities_together(AnimellaUno, PG)} [Parli con una animella] 
++ {are_two_entities_together(AnimellaUno, PG)} [AnimellaUno] 
     -> parlareConAnimella
 
 = parlareConAnimella
@@ -16,7 +16,7 @@
 -> main
 
 === animella_due
-+ {are_two_entities_together(AnimellaDue, PG)} [Parli con una animella] 
++ {are_two_entities_together(AnimellaDue, PG)} [AnimellaDue] 
     -> parlareConAnimella
 = parlareConAnimella 
 
@@ -25,7 +25,7 @@
 -> main
 
 === animella_tre
-+ {are_two_entities_together(AnimellaTre, PG)} [Parli con una animella] 
++ {are_two_entities_together(AnimellaTre, PG)} [AnimellaTre] 
     -> parlareConAnimella
 
 = parlareConAnimella
