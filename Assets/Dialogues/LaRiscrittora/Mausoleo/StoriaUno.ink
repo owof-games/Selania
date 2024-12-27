@@ -21,6 +21,15 @@
 === intro_storia_uno ===
     //la storia in corso viene attivata, e le altre non saranno accessibili fino alla sua conclusione
     //In questo primo step quello che succede è che verifichiamo se ci sono trigger problematici per la giocatrice. Le permettiamo di scegliere se andare o meno avanti, e poi abbiamo la presentazione della storia.
+    {
+    - presentazioni == 0:
+        Spettro: Ehi, prima parla col mentore.
+        Spettro: Lo riconosci perché assomiglia a una lampada.
+        Spettro: Sicuro ha qualcosa da dire a una persona appena arrivata.
+            -> main
+    }
+    
+    
     ~ storiaUno = InCorso
     {
     - solitudine == false:
