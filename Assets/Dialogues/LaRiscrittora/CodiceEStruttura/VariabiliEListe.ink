@@ -22,7 +22,7 @@ VAR contenutoFalene = ()
 VAR contenutoBiblioteca = ()
 VAR contenutoTisane = ()
 VAR contenutoSirene = ()
-VAR contenutoCasettaAnime = (AnimaUno, AnimaDue, AnimaTre, animellaUno, AnimellaDue, AnimellaTre)
+VAR contenutoCasettaAnime = (AnimaUno, AnimaDue, AnimaTre, AnimellaUno, AnimellaDue, AnimellaTre)
 
     
 //Variabili per tracciare i trigger warning. True = non è TW, posso mostrare quelle storie
