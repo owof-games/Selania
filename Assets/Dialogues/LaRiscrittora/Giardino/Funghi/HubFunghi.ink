@@ -30,7 +30,7 @@
         -> main
     
 === call_test
-    + {contenutoFunghi has PG} [TestFunghi]
+    + {contenutoFunghi has PG} [Wheelbarrow]
         {
         
             - fungoProposto != ():

@@ -9,17 +9,17 @@
     
     = opzioni
         //opzione se non hai mai esplorato questa storia, e se non ci sono storie attive
-        + {contenutoMausoleo has PG && not (storiaDue == InCorso or storiaDue == Conclusa) and not (storiaQuattro == InCorso or storiaTre == InCorso)} [LapideDue]
+        + {are_two_entities_together(LapideDue, PG) && not (storiaDue == InCorso or storiaDue == Conclusa) and not (storiaQuattro == InCorso or storiaTre == InCorso)} [LapideDue]
             Potresti conoscere la storia della seconda lapide, {traduttoreSpettri(effettivoStatoSpettroDue)}
             -> storia_due
         
         //opzione se c'è un'altra storia attiva
-        + {contenutoMausoleo has PG && storiaTre == InCorso or storiaQuattro == InCorso or storiaDue == Conclusa}[LapideDue]
+        + {are_two_entities_together(LapideDue, PG) && storiaTre == InCorso or storiaQuattro == InCorso or storiaDue == Conclusa}[LapideDue]
             La seconda lapide appartiene a {traduttoreSpettri(effettivoStatoSpettroDue)}
         -> main
         
         //opzione se questa storia è attiva
-        + {contenutoMausoleo has PG && storiaDue == InCorso} [SpettroDue]
+        + {are_two_entities_together(SpettroDue, PG)&& storiaDue == InCorso} [SpettroDue]
             {traduttoreSpettri(effettivoStatoSpettroDue)} ti attende 
         -> aiuto_storia_due
         
@@ -28,7 +28,7 @@
         -> DONE
     
     = not_yet
-        + {contenutoMausoleo has PG} [LapideDue]
+        + {are_two_entities_together(LapideDue, PG)} [LapideDue]
         Sulla lapide è incisa una sola parola: {traduttoreSpettri(effettivoStatoSpettroDue)}
             -> main
 

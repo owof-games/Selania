@@ -9,17 +9,17 @@
     
     = opzioni
         //opzione se non hai mai esplorato questa storia, e se non ci sono storie attive
-        + {contenutoMausoleo has PG && not (storiaQuattro == InCorso or storiaQuattro == Conclusa) and not (storiaDue == InCorso or storiaTre == InCorso)} [LapideQuattro]
+        + {are_two_entities_together(LapideQuattro, PG) && not (storiaQuattro == InCorso or storiaQuattro == Conclusa) and not (storiaDue == InCorso or storiaTre == InCorso)} [LapideQuattro]
             Potresti conoscere la storia della quarta lapide, {traduttoreSpettri(effettivoStatoSpettroQuattro)}
             -> storia_quattro
         
         //opzione se c'è un'altra storia attiva
-        + {contenutoMausoleo has PG && storiaTre == InCorso or storiaDue == InCorso or storiaQuattro == Conclusa} [LapideQuattro]
+        + {are_two_entities_together(LapideQuattro, PG) && storiaTre == InCorso or storiaDue == InCorso or storiaQuattro == Conclusa} [LapideQuattro]
             La quarta lapide appartiene a {traduttoreSpettri(effettivoStatoSpettroQuattro)}
         -> main
         
         //opzione se questa storia è attiva
-        + {contenutoMausoleo has PG && storiaQuattro == InCorso} [SpettroQuattro]
+        + {are_two_entities_together(SpettroQuattro, PG) && storiaQuattro == InCorso} [SpettroQuattro]
         {traduttoreSpettri(effettivoStatoSpettroQuattro)} ti attende
         -> aiuto_storia_quattro
         
@@ -28,7 +28,7 @@
         -> DONE
     
     = not_yet
-        + {contenutoMausoleo has PG} [LapideQuattro]
+        + {are_two_entities_together(LapideQuattro, PG)} [LapideQuattro]
         Sulla lapide è incisa una sola parola: {traduttoreSpettri(effettivoStatoSpettroQuattro)}
             -> main
 

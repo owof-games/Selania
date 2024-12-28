@@ -11,23 +11,26 @@ LIST pronomi = maschili, femminili, neutri
 LIST luoghi = Giardino, Mausoleo, Funghi, Biblioteca, Falene, Labirinto, Tisane, Sirene, CasettaAnime
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
-LIST personagge = Mentore, PG, AnimaUno, AnimaDue, AnimaTre, AnimellaUno, AnimellaDue, AnimellaTre
+LIST personagge = Mentore, PG
 
 //Per giardino: crea oggetto lista + tasto con daMausoleoAGiardino, da SerraAGiardino
 LIST transizioni = FromMausoleumToGarden, FromGardenToMausoleum, FromGreenhouseToGarden, FromGardenToGreenhouse
 
-TODO: fare lista degli oggetti (panchina, carriola, spettroUno, LapideUno etc) e poi metterli nei luoghi previsti 
+LIST sceneObjects = Bench, Wheelbarrow, LapideUno, LapideDue, LapideTre, LapideQuattro, LapideCinque, LapideSei, LapideSette
+
+LIST souls = SpettroUno, SpettroDue, SpettroTre, SpettroQuattro, SpettroCinque, SpettroSei, SpettroSette, AnimaUno, AnimaDue, AnimaTre, AnimellaUno, AnimellaDue, AnimellaTre
+
 
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
-VAR contenutoGiardino = (PG, Mentore, FromGardenToMausoleum, FromGardenToGreenhouse)
-VAR contenutoMausoleo = (FromMausoleumToGarden)
-VAR contenutoFunghi = (FromGreenhouseToGarden)
+VAR contenutoGiardino = (PG, Mentore, Bench, FromGardenToMausoleum, FromGardenToGreenhouse)
+VAR contenutoMausoleo = (FromMausoleumToGarden, LapideUno, LapideDue, LapideTre, LapideQuattro, LapideCinque, LapideSei, LapideSette)
+VAR contenutoFunghi = (FromGreenhouseToGarden, Wheelbarrow)
 VAR contenutoLabirinto = ()
 VAR contenutoFalene = ()
 VAR contenutoBiblioteca = ()
 VAR contenutoTisane = ()
 VAR contenutoSirene = ()
-VAR contenutoCasettaAnime = (AnimaUno, AnimaDue, AnimaTre, AnimellaUno, AnimellaDue, AnimellaTre)
+VAR contenutoCasettaAnime = (SpettroUno, SpettroDue, SpettroTre, SpettroQuattro, SpettroCinque, SpettroSei, SpettroSette, AnimaUno, AnimaDue, AnimaTre, AnimellaUno, AnimellaDue, AnimellaTre)
 
     
 //Variabili per tracciare i trigger warning. True = non è TW, posso mostrare quelle storie

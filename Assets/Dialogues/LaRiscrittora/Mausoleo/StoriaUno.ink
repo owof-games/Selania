@@ -1,16 +1,16 @@
 === lapide_uno ===
     //opzione se non hai mai esplorato questa storia, e se non ci sono storie attive
-    + {contenutoMausoleo has PG && not (storiaUno == InCorso or storiaUno == Conclusa) and not (storiaDue == InCorso or storiaTre == InCorso)}[LapideUno]
+    + {are_two_entities_together(LapideUno, PG) && not (storiaUno == InCorso or storiaUno == Conclusa) and not (storiaDue == InCorso or storiaTre == InCorso)}[LapideUno]
         <i>Qui giace {traduttoreSpettri(effettivoStatoSpettroUno)}</i>
         -> intro_storia_uno
 
     //opzione se c'è un'altra storia attiva
-    + {contenutoMausoleo has PG && storiaUno == Conclusa} [LapideUno]
+    + {are_two_entities_together(LapideUno, PG) && storiaUno == Conclusa} [LapideUno]
         <i>La prima lapide appartiene a {traduttoreSpettri(effettivoStatoSpettroUno)}</i>
         -> main
 
     //opzione se questa storia è attiva
-    + {contenutoMausoleo has PG && storiaUno == InCorso} [SpettroUno]
+    + {are_two_entities_together(SpettroUno, PG) && storiaUno == InCorso} [SpettroUno]
     <i>Lo spettro del vuoto ondeggia inquieto accanto alla sua lapide.</i>
         -> doni_storia_uno
 

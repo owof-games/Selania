@@ -14,7 +14,7 @@
 
 
 === panchina
-+ {contenutoGiardino has PG} [Panchina]
++ {contenutoGiardino has PG} [Bench]
     <i>Questo posto è pieno di serenità</i>
     -> main
 
