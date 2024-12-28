@@ -1,5 +1,6 @@
 === hub_giardino ===
 #background: {tag_background()}
+#ambientSounds: {tag_ambientSounds()}
 <i>Questo è il giardino</i>
 -> randomizzazione_dono_luoghi ->
 //Questo è il punto che troveremo a inizio gioco, e che fa da hub centrale della storia.

@@ -189,7 +189,7 @@ public void OnOffObject()
                 {
                     bool found = false;
 
-                    if (charactersInThePlace.ContainsItemNamed(entity.name)){
+                    if (charactersInThePlace.ContainsItemNamed(entity.name)||entity.name=="Load"||entity.name == "Save"||entity.name == "Inventario"){
                         found = true;
                     }
                     

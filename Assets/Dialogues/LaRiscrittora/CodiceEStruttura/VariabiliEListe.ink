@@ -13,10 +13,15 @@ LIST luoghi = Giardino, Mausoleo, Funghi, Biblioteca, Falene, Labirinto, Tisane,
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
 LIST personagge = Mentore, PG, AnimaUno, AnimaDue, AnimaTre, AnimellaUno, AnimellaDue, AnimellaTre
 
+//Per giardino: crea oggetto lista + tasto con daMausoleoAGiardino, da SerraAGiardino
+LIST transizioni = GiardinoTrans, MausoleoTrans, FunghiTrans, DaSerraAGiardino
+
+TODO: fare lista degli oggetti (panchina, carriola, spettroUno, LapideUno etc) e poi metterli nei luoghi previsti 
+
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
-VAR contenutoGiardino = (PG, Mentore)
-VAR contenutoMausoleo = ()
-VAR contenutoFunghi = ()
+VAR contenutoGiardino = (PG, Mentore, MausoleoTrans, FunghiTrans)
+VAR contenutoMausoleo = (GiardinoTrans)
+VAR contenutoFunghi = (DaSerraAGiardino)
 VAR contenutoLabirinto = ()
 VAR contenutoFalene = ()
 VAR contenutoBiblioteca = ()

@@ -1,6 +1,6 @@
 === hub_funghi ===
 #background: {tag_background()}
-<i>Queste sono le serre</i>
+#ambientSounds: {tag_ambientSounds()}
     -> randomizzazione_dono_luoghi ->
     -
 

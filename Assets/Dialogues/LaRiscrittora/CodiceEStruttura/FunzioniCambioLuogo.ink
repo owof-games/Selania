@@ -1,7 +1,16 @@
 //Funzione per spostarsi da un luogo all'altro a seconda di dove mi trovo -> da vedere se ha senso o meno.
  
  === move_between_rooms(my_location)
-+ {my_location == Biblioteca|| my_location == Falene||my_location == Funghi||my_location == Labirinto||my_location == Tisane} [Giardino]
+//+ {my_location == Biblioteca|| my_location == Falene||my_location == Funghi||my_location == Labirinto||my_location == Tisane} [Giardino]
+  //  ~ move_entity(PG, Giardino)
+    //come prova, lascio che inCrescita aumenti sempre, perché poi viene resettato all'ingresso del test. Vediamo se ha senso o se crea solo casini.
+   // ~ inCrescita ++
+    //-> random_luogo_mentore ->
+    //-> comparsa_anime ->
+    
+    //-> hub_giardino
+    
++ {are_two_entities_together(PG, GiardinoTrans)} [GiardinoTrans]
     ~ move_entity(PG, Giardino)
     //come prova, lascio che inCrescita aumenti sempre, perché poi viene resettato all'ingresso del test. Vediamo se ha senso o se crea solo casini.
     ~ inCrescita ++
@@ -9,17 +18,17 @@
     -> comparsa_anime ->
     
     -> hub_giardino
-    
-+ {my_location == Mausoleo} [GiardinoDue]
+
++ {are_two_entities_together(PG, DaSerraAGiardino)} [DaSerraAGiardino]
     ~ move_entity(PG, Giardino)
     //come prova, lascio che inCrescita aumenti sempre, perché poi viene resettato all'ingresso del test. Vediamo se ha senso o se crea solo casini.
     ~ inCrescita ++
     -> random_luogo_mentore ->
     -> comparsa_anime ->
     
-    -> hub_giardino    
+    -> hub_giardino        
 
-+ {my_location == Giardino} [Mausoleo]
++ {are_two_entities_together(PG, MausoleoTrans)}  [MausoleoTrans]
     ~ move_entity(PG, Mausoleo)
     ~ inCrescita ++
     -> random_luogo_mentore ->
@@ -27,7 +36,7 @@
     
     -> hub_mausoleo
     
-+ {my_location == Giardino} [Funghi]
++ {are_two_entities_together(PG, FunghiTrans)}  [FunghiTrans]
     ~ move_entity(PG, Funghi)
     ~ inCrescita ++
     -> random_luogo_mentore ->
