@@ -1,7 +1,7 @@
 //Funzione per spostarsi da un luogo all'altro a seconda di dove mi trovo -> da vedere se ha senso o meno.
  
  === move_between_rooms(my_location)
-+ {my_location == Biblioteca||my_location == Mausoleo|| my_location == Falene||my_location == Funghi||my_location == Labirinto||my_location == Tisane} [Giardino]
++ {my_location == Biblioteca|| my_location == Falene||my_location == Funghi||my_location == Labirinto||my_location == Tisane} [Giardino]
     ~ move_entity(PG, Giardino)
     //come prova, lascio che inCrescita aumenti sempre, perché poi viene resettato all'ingresso del test. Vediamo se ha senso o se crea solo casini.
     ~ inCrescita ++
@@ -9,6 +9,15 @@
     -> comparsa_anime ->
     
     -> hub_giardino
+    
++ {my_location == Mausoleo} [GiardinoDue]
+    ~ move_entity(PG, Giardino)
+    //come prova, lascio che inCrescita aumenti sempre, perché poi viene resettato all'ingresso del test. Vediamo se ha senso o se crea solo casini.
+    ~ inCrescita ++
+    -> random_luogo_mentore ->
+    -> comparsa_anime ->
+    
+    -> hub_giardino    
 
 + {my_location == Giardino} [Mausoleo]
     ~ move_entity(PG, Mausoleo)
