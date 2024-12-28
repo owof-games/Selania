@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System.IO;
 using Unity.VisualScripting;
+using UnityEditor.Overlays;
 
 
 public class DialogueManagerSingleInk : MonoBehaviour
@@ -16,16 +18,21 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
 
+
     [SerializeField] private GameObject continueButton;
     private Story story;
+
+
 
     [Header("Text elements")]
     [SerializeField] private TextAsset inkAssetJSON;
     [SerializeField] private GameObject[] entities;
 
+
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
+
 
     [Header("Background setting")]
     [SerializeField] private Image background;
@@ -46,6 +53,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private Sprite backBiblioteca;
     [Header("Tea Backgrounds")]
     [SerializeField] private Sprite backTisane;
+    
 
     [Header("Sounds")]
     [SerializeField] private AudioSource ambientSounds;
@@ -254,35 +262,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
         ContinueStory();
     }
 
-    // public void SaveGame()
-    // {
-    //     SaveData saveData = new SaveData
-    //     {
-    //         inkState = story.state.ToJson()
-    //     };
-
-    //     string json = JsonUtility.ToJson(saveData);
-    //     File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
-    //     Debug.Log("Gioco salvato!");
-    // }
-
-    // public void LoadGame()
-    // {
-    //     string path = Application.persistentDataPath + "/savefile.json";
-    //     if (File.Exists(path))
-    //     {
-    //         string json = File.ReadAllText(path);
-    //         SaveData saveData = JsonUtility.FromJson<SaveData>(json);
-
-    //         // Ripristina lo stato di Ink
-    //         story.state.LoadJson(saveData.inkState);
-    //         Debug.Log("Gioco caricato!");
-    //     }
-    //     else
-    //     {
-    //         Debug.LogWarning("Nessun salvataggio trovato!");
-    //     }
-    // }
 
 
 
@@ -385,6 +364,45 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
         }
     }
+
+    
+    //Mea culpa: questa roba viene da chatGPT
+    [System.Serializable]
+    public class SaveData
+        {
+        public string inkState; // Stato della storia Ink
+
+        }
+    public void SaveGame()
+    {
+        SaveData saveData = new SaveData
+        {
+            inkState = story.state.ToJson()
+        };
+
+        string json = JsonUtility.ToJson(saveData);
+        File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
+        Debug.Log("Gioco salvato!");
+    }
+
+    public void LoadGame()
+    {
+        string path = Application.persistentDataPath + "/savefile.json";
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);
+            SaveData saveData = JsonUtility.FromJson<SaveData>(json);
+
+            // Ripristina lo stato di Ink
+            story.state.LoadJson(saveData.inkState);
+            Debug.Log("Gioco caricato!");
+        }
+        else
+        {
+            Debug.LogWarning("Nessun salvataggio trovato!");
+        }
+    }
+
 }
 
 
