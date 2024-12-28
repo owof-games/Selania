@@ -61,5 +61,32 @@
                             
 }
 
+//Funzioni di gestione sottofondo audio
+=== function tag_ambientSounds()
+{
 
+    - entity_location(PG) == Giardino:
+        ~ return "gardenSounds"
+        
+    - entity_location(PG) == Mausoleo:
+        ~ return "mausoleumSounds"
+        
+    - entity_location(PG) == Funghi:
+       ~ return "greenhouseSounds"
 
+    - entity_location(PG) == Falene:
+        ~ return "mothSounds"
+        
+    - entity_location(PG) == Labirinto:
+        ~ return "labirinthSounds"
+        
+    - entity_location(PG) == Sirene:
+       ~ return "sirensSounds"
+
+    - entity_location(PG) == Biblioteca:
+       ~ return "librarySounds"
+
+    - entity_location(PG) == Tisane:
+       ~ return "teaSounds"       
+                            
+}

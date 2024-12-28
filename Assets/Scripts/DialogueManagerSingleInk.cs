@@ -47,6 +47,13 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Tea Backgrounds")]
     [SerializeField] private Sprite backTisane;
 
+    [Header("Sounds")]
+    [SerializeField] private AudioSource ambientSounds;
+    private const string AMBIENTSOUNDS_TAG = "ambientSounds";
+    [SerializeField] private AudioClip gardenSounds;
+    [SerializeField] private AudioClip mausoleumSounds;
+    [SerializeField] private AudioClip greenhouseSounds;
+
 
 
 
@@ -69,7 +76,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 index++;
             }
 
-        //GetComponent<Image>();    
+        //GetComponent<Image>();
     }
 
     void Update()
@@ -129,13 +136,13 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     //Invece di fare check if/else, dato che valore found true/false sempre, chiamo direttamente SetActive(found);
                     entity.SetActive(found);
 
-                    
+
                     //Ci sono altre cose che dobbiamo fare con i contenuti di @interact?
                     //Plausibilmente non in questa funzione: sicuramente gli oggetti in scena poi ci passeranno dei testi quando interagiremo con loro, ma per questo aspetto conviene fare una funzione sperata, perché è una cosa diversa.
 
                 }
             }
-            
+
             else
             {
                 //Attiviamo il panel di dialogo
@@ -150,7 +157,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
         }
     }
 
-        
+
 
 
 //Mi serve per cominciare la conversazione
@@ -170,7 +177,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 //Attiviamo il panel di dialogo
                 dialoguePanel.SetActive(true);
                 //Associamo al testo di Unity il testo di INK.
-                ContinueStory(); 
+                ContinueStory();
                 break;
                 //break esce dal primo ciclo che trova, in modo da evitare che mi vada a testare tutto il rimanente. Metterla sempre.
             }
@@ -191,7 +198,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
         //     continueButton.SetActive(false);
         // }
         ContinueStory();
-        
+
     }
 
 //Questa roba ti permette di attivare i tasti e metterci il testo, adattala poi a questa situazione (viene dal prototipo originale.)
@@ -221,7 +228,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
             choices[i].gameObject.SetActive(false);
         }
 
-        
+
         StartCoroutine(SelectFirstChoice());
 
     }
@@ -299,58 +306,79 @@ public class DialogueManagerSingleInk : MonoBehaviour
             {
                 case BACKGROUND_TAG:
 
-                //TAG GESTIONE DEL GIARDINO
-                    if(tagValue == "backGiardino") {
-                        background.sprite = backGiardino;
-                    }
+                    //TAG GESTIONE DEL GIARDINO
+                        if(tagValue == "backGiardino") {
+                            background.sprite = backGiardino;
+                        }
 
-                //TAG GESTIONE DEL MAUSOLEO    
-                    if(tagValue == "backMausoleo") {
-                        background.sprite = backMausoleo;
-                    }
+                    //TAG GESTIONE DEL MAUSOLEO
+                        if(tagValue == "backMausoleo") {
+                            background.sprite = backMausoleo;
+                        }
 
-                //TAG GESTIONE DEL SERRA  
-                    if(tagValue == "backFunghi") {
-                        background.sprite = backFunghi;
-                    }
+                    //TAG GESTIONE DEL SERRA
+                        if(tagValue == "backFunghi") {
+                            background.sprite = backFunghi;
+                        }
 
-                //TAG GESTIONE DEL FALENE  
-                    if(tagValue == "backFalene") {
-                        background.sprite = backFalene;
-                    }
+                    //TAG GESTIONE DEL FALENE
+                        if(tagValue == "backFalene") {
+                            background.sprite = backFalene;
+                        }
 
-                //TAG GESTIONE DEL LABIRINTO                      
-                    if(tagValue == "backLabirinto") {
-                        background.sprite = backLabirinto;
-                    }
-                    
-                //TAG GESTIONE DEL SIRENE  
-                    if(tagValue == "backSirene") {
-                        background.sprite = backSirene;
-                    }
+                    //TAG GESTIONE DEL LABIRINTO
+                        if(tagValue == "backLabirinto") {
+                            background.sprite = backLabirinto;
+                        }
 
-                //TAG GESTIONE DEL BIBLIOTECA  
-                    if(tagValue == "backBiblioteca") {
-                        background.sprite = backBiblioteca;
-                    }
+                    //TAG GESTIONE DEL SIRENE
+                        if(tagValue == "backSirene") {
+                            background.sprite = backSirene;
+                        }
 
-                //TAG GESTIONE DEL TISANE  
-                    if(tagValue == "backTisane") {
-                        background.sprite = backTisane;
-                    }                    
+                    //TAG GESTIONE DEL BIBLIOTECA
+                        if(tagValue == "backBiblioteca") {
+                            background.sprite = backBiblioteca;
+                        }
 
+                    //TAG GESTIONE DEL TISANE
+                        if(tagValue == "backTisane") {
+                            background.sprite = backTisane;
+                        }
 
-                    break;
+                        break;
 
+                    case AMBIENTSOUNDS_TAG:
 
+                    //TAG MUSICA SOTTOFONDO GIARDINO
+                    if(tagValue == "gardenSounds") {
+                            ambientSounds.clip = gardenSounds;
+                        }
+                    //TAG MUSICA SOTTOFONDO MAUSOLEO
+                    if(tagValue == "mausoleumSounds") {
+                            ambientSounds.clip = mausoleumSounds;
+                        } 
 
-                 default: 
+                    //TAG MUSICA SOTTOFONDO SERRA
+                    if(tagValue == "greenhouseSounds") {
+                            ambientSounds.clip = greenhouseSounds;
+                        }         
+
+                      break;  
+
+                 default:
                  Debug.LogWarning("Tag came in but is not currently handled: "+ tag);
-                 break;  
+                 break;
+
+
             }
+
+
+
+                
 
         }
     }
 }
-    
+
 

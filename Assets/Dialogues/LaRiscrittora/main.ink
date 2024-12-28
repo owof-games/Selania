@@ -1,6 +1,7 @@
 === main
 ~ temp my_location = entity_location(PG)
 #background: {tag_background()}
+#ambientSounds: {tag_ambientSounds()}
 @interact 
 
 
