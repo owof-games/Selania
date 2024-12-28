@@ -370,7 +370,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [System.Serializable]
     public class SaveData
         {
-        public string inkState; // Stato della storia Ink
+            public string inkState; // Stato della storia di ink
 
         }
     public void SaveGame()

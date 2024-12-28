@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Giardino_0: 3615872058979130105
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
