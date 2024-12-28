@@ -11,9 +11,9 @@ LIST pronomi = maschili, femminili, neutri
 LIST luoghi = Giardino, Mausoleo, Funghi, Biblioteca, Falene, Labirinto, Tisane, Sirene, CasettaAnime
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
-LIST personagge = Mentore, PG
+LIST characters = Mentore, PG
 
-LIST transizioni = FromMausoleumToGarden, FromGardenToMausoleum, FromGreenhouseToGarden, FromGardenToGreenhouse
+LIST transitions = FromMausoleumToGarden, FromGardenToMausoleum, FromGreenhouseToGarden, FromGardenToGreenhouse
 
 LIST sceneObjects = Bench, Wheelbarrow, LapideUno, LapideDue, LapideTre, LapideQuattro, LapideCinque, LapideSei, LapideSette
 
