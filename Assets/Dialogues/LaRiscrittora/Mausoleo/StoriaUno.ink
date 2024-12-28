@@ -78,7 +78,7 @@
 === doni_storia_uno ===
 //Qui è la fase di check per i doni, se donarne, quali, o non farlo.
     Tutto sommato è una cosa così banale, così banale. Eppure questo freddo non se ne vuole andare.
-    + {doniTrovati != ()} <i>Forse con un dono adeguato, lo spettro sarà disponibile a parlarti.</i>
+    + {doniTrovati != ()} [Forse con un dono adeguato, lo spettro sarà disponibile a parlarmi]
         -> gestione_inventario
     + [Mi allontano]
         -> main
@@ -98,13 +98,13 @@
     = primo_blocco
         Spettro: Sei {pronomi has maschili: tornato|{pronomi has femminili: tornata|tornatə}}, non me l'aspettavo.
         Tu: C'è qualcosa che vorrei chiederti:
-            * (vuoto) Ti è capitato di sentire altre volte questo vuoto?
+            * (vuoto) [Ti è capitato di sentire altre volte questo vuoto?]
                 Spettro: Forse.
                 Spettro: <b>Ricordo</b>...
                 Spettro: Mi manca l'aria, scusa.
                 ~ terrore ++
 
-            * (lavoro) Il tuo lavoro ti faceva stare bene?
+            * (lavoro) [Il tuo lavoro ti faceva stare bene?]
                 Spettro: Sì.
                 Spettro: Il problema è che non conoscevo mai il limite.
                 Spettro: E c'era questa sensazione, questa preoccupazione di essere sempre in ritardo su qualcosa.
@@ -112,7 +112,7 @@
                 Spettro: E a quel punto il piacere spariva, e rimaneva solo il <b>dovere</b>.
                 ~ rabbia ++
 
-            * (amici) I tuoi amici ti raccontano i loro problemi?
+            * (amici) [I tuoi amici ti raccontano i loro problemi?]
                 Spettro: A volte.
                 Spettro: Ma ultimamente sempre meno.
                 Spettro: Non so se perché le cose andavano meglio.
@@ -123,24 +123,24 @@
             -> secondo_blocco
 
     = secondo_blocco
-            * Tu: Prima hai detto che ci sono cose a cui non volevi pensare...
+            * [Prima hai detto che ci sono cose a cui non volevi pensare.]
                 Spettro: Sì.
 
-                * * E ti andrebbe di raccontarmele?
+                * * [E ti andrebbe di raccontarmele?]
                     ~ terrore ++
                     Spettro: No.
                     Spettro: Non perché non mi fidi di te.
                     Spettro: Ma perché fintanto che le cose non escono dalla testa, allora non sono vere, no?
                     Spettro: E io non voglio che divengano vere.
 
-                * * Capita anche a me, sai?
+                * * [Capita anche a me, sai?]
                     Spettro: Vedi, è come con Lele.
                     Spettro: Queste cose mi ricordano che quello che provo è comune.
                     Spettro: Banale.
                     Spettro: Stupido io che lascio che mi facciano così male.
                     ~ abbandono ++
 
-                * * A volte la nostra testa sembra volerci fare solo del male.
+                * * [A volte la nostra testa sembra volerci fare solo del male.]
                     Spettro: Già.
                     Spettro: È come avere un nemico in testa.
                     Spettro: Qualcosa che non puoi schiacciare.
@@ -149,7 +149,7 @@
                     Spettro: È terribilmente frustrante.
                     ~ rabbia ++
 
-            * (vuoto2) {vuoto} Non ti scusare. Però forse questo ricordo è importante.
+            * (vuoto2) {vuoto} [Non ti scusare. Però forse questo ricordo è importante.]
                 ~ terrore ++
                 Spettro: Il vuoto, questo gelo.
                 Spettro: Credo che in realtà ci sia sempre.
@@ -159,7 +159,7 @@
                 Spettro: Ci sono un po' di modi per disturbarlo, sfiancarlo, ma come mi rilasso, è pronto a bussare.
                 Spettro: Mi insegue nei sogni, non mi lascia respirare.
 
-            * (lavoro2) {lavoro} Perché quando il lavoro diventa un dovere, non prendi una pausa?
+            * (lavoro2) {lavoro} [Perché quando il lavoro diventa un dovere, non prendi una pausa?]
                 ~ rabbia ++
                 Spettro: Pensi non ci abbia provato?!?
                 Spettro: Scusa.
@@ -172,7 +172,7 @@
                 Spettro: Per far sì che accada qualcosa.
 
 
-            * (amici2) {amici} Anche se accadono a tutti, non è che non sono importanti per te.
+            * (amici2) {amici} [Anche se accadono a tutti, non è che non sono importanti per te.]
                 ~ abbandono ++
                 Spettro: Ma il punto non è quello.
                 Spettro: È che poi le persone si annoiano.
@@ -183,8 +183,8 @@
 
 
 
-            * Quando hai deciso di non andare alla cena...
-                * * Perché non hai detto la verità ai tuoi amici?
+            * [Quando hai deciso di non andare alla cena...]
+                * * [Perché non hai detto la verità ai tuoi amici?]
                     ~ terrore ++
                     Spettro: Perché qualcuno avrebbe voluto aiutare.
                     Spettro: Chiamare.
@@ -195,7 +195,7 @@
                     Spettro: Ma per esserlo devo ascoltare, devo prestare davvero attenzione.
                     Spettro: Fare meno cose, quando l'unica certezza che ho è che il Vuoto è silenzioso solo se continuo a lavorare.
 
-                * * Non hai pensato ai loro sentimenti?
+                * * [Non hai pensato ai loro sentimenti?]
                     ~ abbandono ++
                     Spettro: Beh, gli ho fatto un favore.
                     Spettro: Già sanno che sono inaffidabile, che non rispondo alle chiamate, che arrivo dopo settimane a scrivere un messaggio.
@@ -204,7 +204,7 @@
                     Spettro: E la prossima volta faranno senza di me.
 
 
-                * * Non ti sei fatto solo del male da solo?
+                * * [Non ti sei fatto solo del male da solo?]
                     ~ rabbia ++
                     Spettro: Probabile.
                     Spettro: Ma meglio così che rovinare la festa a tutti, no?
@@ -222,7 +222,7 @@
         Tu: C'è una cosa ancora che vorrei chiederti, che vorrei capire.
         //Questa cosa ci permette di capire qual è lo stato d'animo emergente.
 
-            * Perché proprio questo ricordo?
+            * [Perché proprio questo ricordo?]
                 Tu: Perché è questa la cosa che continua a bloccarti qui?
                 {
                 - rabbia > abbandono && rabbia > terrore:
@@ -259,96 +259,94 @@
         Tu: Il vuoto ti ha inseguito perché...
         //Mettere qualcosa per far riconoscere che una scelta usa inchiostro e l'altra no.
             - (top1)
-                + {rabbia > 0} La tua rabbia:
+                * {rabbia > 0} [La tua rabbia..]
                   {check_statusVsInchiostro(rabbia, statoInchiostroSpettroUno):
-                    - false: Non hai abbastanza inchiostro per questa scelta:
-                    -> top1
+                    - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
+                            -> top1
                   }
-                  Dico cose sulla rabbia.
+                  Dici cose sulla rabbia.
                   ~ statoInchiostroSpettroUno --
                   ~ ferito ++
-                + {abbandono > 0} rilettura abbandono:
+                * {abbandono > 0} [rilettura abbandono]
                     {check_statusVsInchiostro(abbandono,statoInchiostroSpettroUno):
-                    - false: Non hai abbastanza inchiostro per questa scelta:
+                    - false: <i>Non hai abbastanza inchiostro per questa scelta</i>
                     -> top1
                   }
-                    Dico cose sull'abbandono.
+                    Dici cose sull'abbandono.
                     ~ statoInchiostroSpettroUno --
                     ~ socievole ++
-                + {terrore > 0} rilettura terrore:
+                * {terrore > 0} [rilettura terrore]
                     {check_statusVsInchiostro(terrore,statoInchiostroSpettroUno):
-                    - false: Non hai abbastanza inchiostro per questa scelta:
+                    - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                     -> top1
                   }
-                    Dico cose sul terrore.
-                    ~ statoInchiostroSpettroUno --
-                    ~ consapevole ++
-                + {rabbia == 0}conferma rabbia:
-                + {abbandono == 0}conferma abbandono:
-                + {terrore == 0}conferma terrore:
-                + Risposta "neutra", sempre presente.
+                    Dici cose sul terrore.
+                        ~ statoInchiostroSpettroUno --
+                        ~ consapevole ++
+                * {rabbia == 0}[conferma rabbia]
+                * {abbandono == 0}[conferma abbandono]
+                *  {terrore == 0}[conferma terrore]
                 -
         E per questo...
             - (top2)
-                + {rabbia > 0} La tua rabbia:
+                *  {rabbia > 0} [La tua rabbia]
                   {check_statusVsInchiostro(rabbia, statoInchiostroSpettroUno):
-                    - false: Non hai abbastanza inchiostro per questa scelta:
+                    - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                     -> top2
                   }
-                  Dico cose sulla rabbia.
-                  ~ statoInchiostroSpettroUno --
-                  ~ ferito ++
-                + {abbandono > 0} rilettura abbandono:
+                  Dici cose sulla rabbia.
+                    ~ statoInchiostroSpettroUno --
+                    ~ ferito ++
+                *  {abbandono > 0} [rilettura abbandono]
                     {check_statusVsInchiostro(abbandono, statoInchiostroSpettroUno):
-                    - false: Non hai abbastanza inchiostro per questa scelta:
-                    -> top2
+                    - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
+                        -> top2
                   }
-                    Dico cose sull'abbandono.
-                    ~ statoInchiostroSpettroUno --
-                    ~ socievole ++
-                + {terrore > 0} rilettura terrore:
+                    Dici cose sull'abbandono.
+                        ~ statoInchiostroSpettroUno --
+                        ~ socievole ++
+                *  {terrore > 0} [rilettura terrore]
                     {check_statusVsInchiostro(terrore, statoInchiostroSpettroUno):
-                    - false: Non hai abbastanza inchiostro per questa scelta:
+                    - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                     -> top2
                   }
-                    Dico cose sul terrore.
-                    ~ statoInchiostroSpettroUno --
-                    ~ consapevole ++
-                + {rabbia == 0}conferma rabbia:
-                + {abbandono == 0}conferma abbandono:
-                + {terrore == 0}conferma terrore:
-                + Risposta "neutra", sempre presente.
+                    Dici cose sul terrore.
+                        ~ statoInchiostroSpettroUno --
+                        ~ consapevole ++
+                *  {rabbia == 0}[conferma rabbia]
+                *  {abbandono == 0}[conferma abbandono]
+                *  {terrore == 0}[conferma terrore]
                 -
+        
         Altra opzione
             - (top3)
-                + {rabbia > 0} La tua rabbia:
+                *  {rabbia > 0} [La tua rabbia]
                   {check_statusVsInchiostro(rabbia, statoInchiostroSpettroUno):
-                    - false: Non hai abbastanza inchiostro per questa scelta:
+                    - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                     -> top3
                   }
-                  Dico cose sulla rabbia.
-                  ~ statoInchiostroSpettroUno --
-                  ~ ferito ++
-                + {abbandono > 0} rilettura abbandono:
+                  Dici cose sulla rabbia.
+                    ~ statoInchiostroSpettroUno --
+                    ~ ferito ++
+                *  {abbandono > 0} [rilettura abbandono]
                     {check_statusVsInchiostro(abbandono, statoInchiostroSpettroUno):
-                    - false: Non hai abbastanza inchiostro per questa scelta:
+                    - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                     -> top3
                   }
-                    Dico cose sull'abbandono.
-                    ~ statoInchiostroSpettroUno --
-                    ~ socievole ++
-                + {terrore > 0} rilettura terrore:
+                    Dici cose sull'abbandono.
+                        ~ statoInchiostroSpettroUno --
+                        ~ socievole ++
+                *  {terrore > 0} [rilettura terrore]
                     {check_statusVsInchiostro(terrore, statoInchiostroSpettroUno):
-                    - false: Non hai abbastanza inchiostro per questa scelta:
+                    - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                     -> top3
                   }
-                    Dico cose sul terrore.
-                    ~ statoInchiostroSpettroUno --
-                    ~ consapevole ++
-                + {rabbia == 0}conferma rabbia:
-                + {abbandono == 0}conferma abbandono:
-                + {terrore == 0}conferma terrore:
-                + Risposta "neutra", sempre presente.
+                    Dici cose sul terrore.
+                        ~ statoInchiostroSpettroUno --
+                        ~ consapevole ++
+                *  {rabbia == 0} [conferma rabbia]
+                *  {abbandono == 0} [conferma abbandono]
+                * {terrore == 0} [conferma terrore]
                 -
             -> chi_sono_storia_uno
 
@@ -415,11 +413,11 @@
         -> main
 
 === scelta_nome_uno
-    + Il Socievole
+    * Il Socievole
          ~ effettivoStatoSpettroUno = IlSocievole
-    + Il Consapevole
+    * Il Consapevole
          ~ effettivoStatoSpettroUno = IlConsapevole
-    + Il Ferito
+    * Il Ferito
          ~ effettivoStatoSpettroUno = IlGuarente
     -
 ~ storiaUno = Conclusa
