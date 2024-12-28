@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 112976948}
   - component: {fileID: 112976947}
   m_Layer: 5
-  m_Name: MausoleoTrans
+  m_Name: FromGardenToMausoleum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,7 +254,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MausoleoTrans
+          m_StringArgument: FromGardenToMausoleum
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &112976948
@@ -2258,7 +2258,7 @@ GameObject:
   - component: {fileID: 629166473}
   - component: {fileID: 629166472}
   m_Layer: 5
-  m_Name: FunghiTrans
+  m_Name: FromGardenToGreenhouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2317,7 +2317,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FunghiTrans
+          m_StringArgument: FromGardenToGreenhouse
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &629166473
@@ -2660,7 +2660,7 @@ GameObject:
   - component: {fileID: 760274122}
   - component: {fileID: 760274121}
   m_Layer: 5
-  m_Name: GiardinoTrans
+  m_Name: FromMausoleumToGarden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2738,7 +2738,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: GiardinoTrans
+          m_StringArgument: FromMausoleumToGarden
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &760274122
@@ -3401,7 +3401,7 @@ GameObject:
   - component: {fileID: 945020906}
   - component: {fileID: 945020905}
   m_Layer: 5
-  m_Name: DaSerraAGiardino
+  m_Name: FromGreenhouseToGarden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3460,7 +3460,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: DaSerraAGiardino
+          m_StringArgument: FromGreenhouseToGarden
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &945020906

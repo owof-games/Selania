@@ -10,7 +10,7 @@
     
     //-> hub_giardino
     
-+ {are_two_entities_together(PG, GiardinoTrans)} [GiardinoTrans]
++ {are_two_entities_together(PG, FromMausoleumToGarden)} [FromMausoleumToGarden]
     ~ move_entity(PG, Giardino)
     //come prova, lascio che inCrescita aumenti sempre, perché poi viene resettato all'ingresso del test. Vediamo se ha senso o se crea solo casini.
     ~ inCrescita ++
@@ -19,7 +19,7 @@
     
     -> hub_giardino
 
-+ {are_two_entities_together(PG, DaSerraAGiardino)} [DaSerraAGiardino]
++ {are_two_entities_together(PG, FromGreenhouseToGarden)} [FromGreenhouseToGarden]
     ~ move_entity(PG, Giardino)
     //come prova, lascio che inCrescita aumenti sempre, perché poi viene resettato all'ingresso del test. Vediamo se ha senso o se crea solo casini.
     ~ inCrescita ++
@@ -28,7 +28,7 @@
     
     -> hub_giardino        
 
-+ {are_two_entities_together(PG, MausoleoTrans)}  [MausoleoTrans]
++ {are_two_entities_together(PG, FromGardenToMausoleum)}  [FromGardenToMausoleum]
     ~ move_entity(PG, Mausoleo)
     ~ inCrescita ++
     -> random_luogo_mentore ->
@@ -36,7 +36,7 @@
     
     -> hub_mausoleo
     
-+ {are_two_entities_together(PG, FunghiTrans)}  [FunghiTrans]
++ {are_two_entities_together(PG, FromGardenToGreenhouse)}  [FromGardenToGreenhouse]
     ~ move_entity(PG, Funghi)
     ~ inCrescita ++
     -> random_luogo_mentore ->

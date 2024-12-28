@@ -14,14 +14,14 @@ LIST luoghi = Giardino, Mausoleo, Funghi, Biblioteca, Falene, Labirinto, Tisane,
 LIST personagge = Mentore, PG, AnimaUno, AnimaDue, AnimaTre, AnimellaUno, AnimellaDue, AnimellaTre
 
 //Per giardino: crea oggetto lista + tasto con daMausoleoAGiardino, da SerraAGiardino
-LIST transizioni = GiardinoTrans, MausoleoTrans, FunghiTrans, DaSerraAGiardino
+LIST transizioni = FromMausoleumToGarden, FromGardenToMausoleum, FromGreenhouseToGarden, FromGardenToGreenhouse
 
 TODO: fare lista degli oggetti (panchina, carriola, spettroUno, LapideUno etc) e poi metterli nei luoghi previsti 
 
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
-VAR contenutoGiardino = (PG, Mentore, MausoleoTrans, FunghiTrans)
-VAR contenutoMausoleo = (GiardinoTrans)
-VAR contenutoFunghi = (DaSerraAGiardino)
+VAR contenutoGiardino = (PG, Mentore, FromGardenToMausoleum, FromGardenToGreenhouse)
+VAR contenutoMausoleo = (FromMausoleumToGarden)
+VAR contenutoFunghi = (FromGreenhouseToGarden)
 VAR contenutoLabirinto = ()
 VAR contenutoFalene = ()
 VAR contenutoBiblioteca = ()
