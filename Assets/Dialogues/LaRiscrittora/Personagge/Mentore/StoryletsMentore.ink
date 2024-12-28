@@ -33,8 +33,8 @@
 
 //Passiamo da qui solo a inizio del gioco.
 === inizio
-La storia inizia ora
-    + Qualcuno ti osserva: gli parli
+<>Qualcuno ti osserva</i>
+    + [Voglio parlargli]
         -> presentazioni
     -
 -> main

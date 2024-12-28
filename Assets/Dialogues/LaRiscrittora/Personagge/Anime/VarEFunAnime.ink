@@ -26,7 +26,7 @@ VAR counterLuoghi = 0
         {debug: valore dado = {dice_roll}}
         {
         - dice_roll > 3:
-        {~ Qualcuno vuole raccontarti la sua storia.|Qualcuno ti aspetta.|C'è una storia per te}
+        <i>{~ Qualcuno vuole raccontarti la sua storia.|Qualcuno ti aspetta.|C'è una storia per te}.</i>
             {
             - ultimaVoltaVistaAnima > 3:
                 {debug: ultimaVoltaVistaAnima > 3}

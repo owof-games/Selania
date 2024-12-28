@@ -13,14 +13,14 @@
     E {pronomi has maschili: benvenuto|{pronomi has femminili: benvenuta|benvenutə}}. Spero ti troverai bene, qui.
     C'è la possibilità che tu possa incontrare dei temi delicati.
     Puoi avere un warning su alcuni dei principali, vuoi vedere quali?
-        + Sì
+        + [Sì]
             -> trigger_warning ->
-        + Più tardi
+        + [Più tardi]
         -
     Vuoi avere qualche informazione su dove ti trovi?
-        + Sì
+        + [Sì]
             -> tutorial
-        + Non adesso, scusa
+        + [Non adesso, scusa]
         -
     -> main
 
@@ -33,9 +33,9 @@
 
 === tutorial
 Tutorial
-    + Lo voglio ascoltare
+    + [Lo voglio ascoltare]
         -> indicazioni
-    + Passo
+    + [Passo]
         -> main
     -
 -> DONE
@@ -43,38 +43,39 @@ Tutorial
 
 === indicazioni
 //Strutturare come wave sintetica?
-Indicazioni tutorial
+Su cosa vorresti avere informazioni?
+
 -(top)
-    + Sul mausoleo
+    + [Sul mausoleo]
         Informazioni
         {
         - doniTrovati hasnt laspezzata: Gli spettri apprezzano sempre i doni. Tieni questo pezzettino di Spazzata.
         ~ doniTrovati += laspezzata
         }   
             -> top
-    + Sulla serra
+    + [Sulla serra]
         Info
             {
             - doniTrovati hasnt laspezzata: Uh, e poi a volte qui crescono doni utili per parlare con gli spettri. Tieni questo pezzettino di Spazzata.
             ~ doniTrovati += laspezzata
             }
             -> top
-    + {storiaUno == Conclusa}Sulle falene
+    + {storiaUno == Conclusa}[Sulle falene]
         Informazioni
             -> top
-    + {storiaUno == Conclusa}Sul labirinto
+    + {storiaUno == Conclusa}[Sul labirinto]
         Informazioni
             -> top
-    + {storiaDue == Conclusa}Sulle tisane
+    + {storiaDue == Conclusa}[Sulle tisane]
         Informazioni
             -> top
-    + {storiaDue == Conclusa}Sulle sirene
+    + {storiaDue == Conclusa}[Sulle sirene]
         Informazioni
             -> top
-    + {storiaDue == Conclusa}Sulla biblioteca
+    + {storiaDue == Conclusa}[Sulla biblioteca]
         Informazioni
             -> top
-    + Ho cambiato idea
+    + [Ho cambiato idea]
         -> parlareColMentore
     -
 
@@ -154,35 +155,35 @@ VAR lutto = false
  E sono consapevole che ne mancano diversi, ma qui è un lavoro complicato, come unico mentore, ma sono pronto ad accogliere ogni segnalazione.
  Nel caso, contatta pure la mia controparte umana.
 - (top)
-    + Preferirei non leggere nulla che riguardi l'abuso di alcool
+    + [Preferirei non leggere nulla che riguardi l'abuso di alcool]
         ~ alcolismo = false
-         + + C'è altro che vorrei evitare
+         + + [C'è altro che vorrei evitare]
             -> top
-         + + Sono apposto così
+         + + [Sono apposto così]
             -> parlareColMentore
          - -   
-    + Non voglio leggere storie su relazioni abusanti
+    + [Non voglio leggere storie su relazioni abusanti]
         ~ abusi = false
-        + + C'è altro che vorrei evitare
+         + + [C'è altro che vorrei evitare]
             -> top
-        + + Sono apposto così
+         + + [Sono apposto così]
             -> parlareColMentore
          - -  
-    + Non me la sento di parlare di morte
+    + [Non me la sento di parlare di lutto]
         ~ lutto = false
-         + + C'è altro che vorrei evitare
+         + + [C'è altro che vorrei evitare]
             -> top
-         + + Sono apposto così
+         + + [Sono apposto così]
             -> parlareColMentore
          - -          
-    + Preferirei evitare storie di solitudine e abbandono
+    + [Preferirei evitare storie di solitudine e abbandono]
         ~ solitudine = false
-         + + C'è altro che vorrei evitare
+         + + [C'è altro che vorrei evitare]
             -> top
-         + + Sono apposto così
+         + + [Sono apposto così]
             -> parlareColMentore
          - -          
-    + Sono apposto così.
+    + [Sono apposto così]
     ->parlareColMentore
     -  
  -> main
