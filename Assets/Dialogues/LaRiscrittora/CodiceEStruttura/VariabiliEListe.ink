@@ -13,7 +13,6 @@ LIST luoghi = Giardino, Mausoleo, Funghi, Biblioteca, Falene, Labirinto, Tisane,
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
 LIST personagge = Mentore, PG
 
-//Per giardino: crea oggetto lista + tasto con daMausoleoAGiardino, da SerraAGiardino
 LIST transizioni = FromMausoleumToGarden, FromGardenToMausoleum, FromGreenhouseToGarden, FromGardenToGreenhouse
 
 LIST sceneObjects = Bench, Wheelbarrow, LapideUno, LapideDue, LapideTre, LapideQuattro, LapideCinque, LapideSei, LapideSette
