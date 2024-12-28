@@ -34,7 +34,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private Sprite backGiardino;
     [Header("Mausoleum Backgrounds")]
     [SerializeField] private Sprite backMausoleo;
-    [Header("Serra Backgrounds")]
+    [Header("Greenhouse Backgrounds")]
     [SerializeField] private Sprite backFunghi;
     [Header("Pets Backgrounds")]
     [SerializeField] private Sprite backFalene;
@@ -50,8 +50,11 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Sounds")]
     [SerializeField] private AudioSource ambientSounds;
     private const string AMBIENTSOUNDS_TAG = "ambientSounds";
+    [Header("Garden Sounds")]
     [SerializeField] private AudioClip gardenSounds;
+    [Header("Mausoleum Sounds")]
     [SerializeField] private AudioClip mausoleumSounds;
+    [Header("Greenhouse Sounds")]
     [SerializeField] private AudioClip greenhouseSounds;
 
 
@@ -353,15 +356,18 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     //TAG MUSICA SOTTOFONDO GIARDINO
                     if(tagValue == "gardenSounds") {
                             ambientSounds.clip = gardenSounds;
+                            ambientSounds.Play();
                         }
                     //TAG MUSICA SOTTOFONDO MAUSOLEO
                     if(tagValue == "mausoleumSounds") {
                             ambientSounds.clip = mausoleumSounds;
+                            ambientSounds.Play();
                         } 
 
                     //TAG MUSICA SOTTOFONDO SERRA
                     if(tagValue == "greenhouseSounds") {
                             ambientSounds.clip = greenhouseSounds;
+                            ambientSounds.Play();
                         }         
 
                       break;  
