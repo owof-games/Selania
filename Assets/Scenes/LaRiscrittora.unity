@@ -3415,14 +3415,14 @@ RectTransform:
   m_GameObject: {fileID: 956713568}
   m_LocalRotation: {x: -0, y: -0, z: 0.023371257, w: 0.99972695}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1.0693998, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.3, y: 1.3902197, z: 1.3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1415701069}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.678}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -816, y: 435}
+  m_AnchoredPosition: {x: -816, y: 496}
   m_SizeDelta: {x: 143.1424, y: 143.1425}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &956713570
@@ -3501,7 +3501,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f9559358cdfade148b40aeed8fccb2b7, type: 3}
+  m_Sprite: {fileID: -522367714226421056, guid: 6153d5966dfb9f34dba83285daa86506, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4803,14 +4803,14 @@ RectTransform:
   m_GameObject: {fileID: 1375716174}
   m_LocalRotation: {x: -0, y: -0, z: 0.023371257, w: 0.99972695}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1.0693998, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.3, y: 1.3902197, z: 1.3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1415701069}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.678}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -816, y: 435}
+  m_AnchoredPosition: {x: -816, y: 291}
   m_SizeDelta: {x: 143.1424, y: 143.1425}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1375716176
@@ -4889,7 +4889,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f9559358cdfade148b40aeed8fccb2b7, type: 3}
+  m_Sprite: {fileID: 3467344597976185553, guid: 1d6d0749912fa8e48a80654feaa51e79, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4917,7 +4917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1415701069}
   m_Layer: 5
-  m_Name: === DA IMPLEMENTARE ===
+  m_Name: === SALVATAGGIO ETC ===
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6684,7 +6684,6 @@ MonoBehaviour:
   - {fileID: 1469967280}
   - {fileID: 1191973292}
   - {fileID: 324776841}
-  - {fileID: 956713568}
   choices:
   - {fileID: 1751463282}
   - {fileID: 1924385861}
