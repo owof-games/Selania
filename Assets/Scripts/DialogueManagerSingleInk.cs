@@ -365,6 +365,11 @@ public class DialogueManagerSingleInk : MonoBehaviour
         }
     }
 
+    //Per chiudere il gioco quando vuoi.
+    public void OnQuitButton ()
+        {
+            Application.Quit();
+        }
     
     //Mea culpa: questa roba viene da chatGPT
     [System.Serializable]
