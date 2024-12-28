@@ -1,12 +1,12 @@
 === hub_giardino ===
 #background: {tag_background()}
-Questo è il giardino.
+<i>Questo è il giardino</i>
 -> randomizzazione_dono_luoghi ->
 //Questo è il punto che troveremo a inizio gioco, e che fa da hub centrale della storia.
 //Troveremo sempre un piccolo descrittore (randomico o meno, da vedere)
-    + [Ti guardi attorno]
-    + [Ti siedi sulla panchina]
-    -> panchina
+    + [Mi guardo attorno]
+    + [Mi siedo sulla panchina]
+        -> panchina
     -
 
 -> main
@@ -14,6 +14,6 @@ Questo è il giardino.
 
 === panchina
 + {contenutoGiardino has PG} [Panchina]
-Questo posto ti riempie di serenità.
--> main
+    <i>Questo posto è pieno di serenità</i>
+    -> main
 

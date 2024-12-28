@@ -108,14 +108,14 @@ VAR Inchiostro = ()
     - Vuoto:
         <i>Non hai inchiostro per lo spettro, dovrai trovare la tua strada da solo.</i>
     - Scarso:
-        <i>Hai una azione forte a disposizione.</i>
+        <i>Hai una azione forte a disposizione</i>
     - Normale:
-       <i> Hai due azioni forti a disposizione.</i>
+        <i>Hai due azioni forti a disposizione</i>
     - Medio:
-       <i> Hai tre azioni forti a disposizione.</i>
+        <i>Hai tre azioni forti a disposizione</i>
     - Altissimo:
-       <i> Hai tre azioni forti a disposizione.</i>
+        <i>Hai tre azioni forti a disposizione</i>
     - else:
-        Errore
+        <i>Errore: non riesco a capire quante azioni hai a disposizione</i>
 }
 ->->

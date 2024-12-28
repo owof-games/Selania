@@ -1,41 +1,42 @@
 === hub_funghi ===
 #background: {tag_background()}
-Eccoti alle serre
+<i>Queste sono le serre</i>
     -> randomizzazione_dono_luoghi ->
     -
 
-{
-    - fungoProposto != ():
-        -> cura
-    - else:
-        -> pre_test
+    {
     
-}
+        - fungoProposto != ():
+            -> cura
+        - else:
+            -> pre_test
+        
+    }
 
 
 === pre_test
-    {~ In questo momento, l'orto è vuoto|Non c'è nulla in crescita|Ci sei solo tu, coi tuoi pensieri}.
-    + [Vuoi elaborare qualcosa di nuovo]
+    <i>{~ In questo momento la serra è vuota|Non c'è nulla in crescita}</i>
+    + [Voglio consultare la serra]
         -> test_coltivazioni
-    + [Ti guardi attorno]
+    + [Mi guardo attorno]
     -
-    -> main
+        -> main
 
 === cura
-    Ti prendi cura della serra.
-    {~ L'aria sembra più dolce oggi|Da qualche parte, tra le foglie, qualcosa canta|Piccole luci sfarfallano sopra il terreno}.
-    -> plant_check -> 
-    + [Ti guardi attorno]
+    <i>{~ L'aria sembra più dolce oggi|Da qualche parte, tra le foglie, qualcosa canta|Piccole luci sfarfallano sopra il terreno}</i>
+        -> plant_check -> 
+    + [Mi guardo attorno]
     -
-    -> main
+        -> main
     
 === call_test
     + {contenutoFunghi has PG} [TestFunghi]
-    {
-    - fungoProposto != ():
-        -> cura
-    - else:
-        -> test_coltivazioni
-    
-    }
+        {
+        
+            - fungoProposto != ():
+                -> cura
+            - else:
+                -> test_coltivazioni
+            
+        }
     

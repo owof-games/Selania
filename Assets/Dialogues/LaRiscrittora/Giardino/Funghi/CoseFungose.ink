@@ -60,31 +60,36 @@
 //Collaborazione, ciclicità, cancellazione
 //Outcome: allontana qualcuno.
     = step_zero
-    Una punticina bluastra emerge dal terreno.
-      -> main
+        <i>Una punticina bluastra emerge dal terreno.</i>
+        -> main
+    
     = step_uno
-        Un odore salmastro si diffonde per la serra.
-        Ora la punta è più grande, e attorno c'è un foro circolare.
+        <i>Un odore salmastro si diffonde per la serra.</i>
+        <i>Ora la punta è più grande, e attorno c'è un foro circolare.</i>
           -> main
+          
     = step_due
-        Il foro ha le dimensioni di un pugno, mentre la punta sembra roteare nell'aria a incredibile velocità, completamente silenziosa.
+        <i>Il foro ha le dimensioni di un pugno, mentre la punta sembra roteare nell'aria a incredibile velocità, completamente silenziosa.</i>
           -> main
+          
     = step_tre
-        Eccolo qui. Un <i>Lichene degli abissi</i>.
+        <i>Eccolo qui. Un Lichene degli abissi.
         Il lichene degli abissi è una danza, un roteare costante di fungo ed alga. Un ripetersi anche nell'errore, nel dolore.
         Alga e fungo girano e rigirano senza mai afferrarsi.
-        Se qualcuno sfiora il lichene, questo è destinato a scomparire.
-            + +  Tocchi il lichene.
-                Un piccolo sbuffo. Le tue dita ora sanno di mare.
+        Se qualcuno sfiora il lichene, questo è destinato a scomparire.</i>
+            
+            + + [Tocco il lichene]
+                <i> Un piccolo sbuffo. Le tue dita ora sanno di mare.
                 Il lichene è scomparso, tu no.
-                C'è qualcuno che devi allontanare?
-                ~ inCrescita = 0
-                ~ fungoProposto = ()
-            + + Lo lasci dov'è.
+                C'è qualcuno che devi allontanare?</i>
+                    ~ inCrescita = 0
+                    ~ fungoProposto = ()
+            + + [Lo lascio dov'è]
             - -
               -> main
+              
     = step_quattro
-        Troppo tempo è passato, e non rimane che un foro nel terreno.
+        <i>Troppo tempo è passato, e non rimane che un foro nel terreno.</i>
             ~ inCrescita = 0
             ~ fungoProposto = ()
               -> main

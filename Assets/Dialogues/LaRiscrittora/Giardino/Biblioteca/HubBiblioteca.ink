@@ -1,13 +1,12 @@
 === hub_biblioteca ===
 #background: {tag_background()}
 //Qui avremo qualche info generica e poi la possibilità di leggerci qualcosa
-Sei in biblioteca
+<i>Sei in biblioteca</i>
 -> randomizzazione_dono_luoghi ->
 
-    + Leggi un libro
+    + [Leggo un libro]
         -> test_libri
-    + {doniTrovati != ()} Controlla la lista di oggetti che hai con te
-        -> contenuti_inventario
+    + [Mi guardo attorno]
     -
     
 -> main
