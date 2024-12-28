@@ -360,29 +360,29 @@
             {
                 - rabbia > terrore:
                 {
-                    - rabbia > ferito: Spettro: l'Arrabbiato.
+                    - rabbia > ferito: l'Arrabbiato.
                         ~ effettivoStatoSpettroUno = LArrabbiato
-                    - else: Spettro: il Guarente.
+                    - else:  il Guarente.
                          ~ effettivoStatoSpettroUno = IlGuarente
                 }
                 - else:
                 {
-                    - terrore > consapevole: Spettro: il Terrorizzato.
+                    - terrore > consapevole: il Terrorizzato.
                          ~ effettivoStatoSpettroUno = IlTerrorizzato
-                    - else: Spettro: il Consapevole.
+                    - else: il Consapevole.
                          ~ effettivoStatoSpettroUno = IlConsapevole
                 }
             }
             - abbandono > terrore:
                 {
-                    - terrore > consapevole: Spettro: il Terrorizzato.
+                    - terrore > consapevole: il Terrorizzato.
                          ~ effettivoStatoSpettroUno = IlTerrorizzato
-                    - else: Spettro: il Consapevole.
+                    - else: il Consapevole.
                          ~ effettivoStatoSpettroUno = IlConsapevole
                 }
             - else:
                 {
-                    - abbandono > socievole: Spettro: l'abbandonato.
+                    - abbandono > socievole: l'abbandonato.
                          ~ effettivoStatoSpettroUno = LAbbandonato
                     - else: il Socievole.
                          ~ effettivoStatoSpettroUno = IlSocievole

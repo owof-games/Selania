@@ -14,9 +14,14 @@
     C'è la possibilità che tu possa incontrare dei temi delicati.
     Puoi avere un warning su alcuni dei principali, vuoi vedere quali?
         + Sì
-        -> trigger_warning
+            -> trigger_warning ->
         + Più tardi
-    -
+        -
+    Vuoi avere qualche informazione su dove ti trovi?
+        + Sì
+            -> tutorial
+        + Non adesso, scusa
+        -
     -> main
 
 /* ---------------------------------

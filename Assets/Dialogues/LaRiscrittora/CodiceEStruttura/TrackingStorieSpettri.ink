@@ -99,13 +99,38 @@ VAR eventoSpecialeSpettroSette = false
 
 
 === function check_statusVsInchiostro(status, list)
+//  A seconda del valore di un certo status di una entità (es: rabbia, terrore etc), dobbiamo verificare se l'inchiostro è sufficiente per intervenire o meno su quello status, e di conseguenza permettere o meno di condizionare lo spettro.
+// PIù è ALTO IL VALORE DI UNO STATUS, MENO INCHIOSTRO MI SERVE (perché significa che ci ho lavorato durante la conversazione)
+
 {
-    - status == 1 && list hasnt Vuoto or list hasnt Scarso or list hasnt Normale:
-	    ~ return true
-    - status == 2 && list hasnt (Vuoto, Scarso):
-	    ~ return true
-    - status == 3 && list hasnt Vuoto:
-	    ~ return true
+    - status == 1:
+        {
+        - list has Medio:
+            ~ return true
+        - list has Altissimo:
+            ~ return true
+        - else:
+            ~ return false            
+        }
+    - status == 2:
+        {
+        - list has Normale:
+            ~ return true
+        - list has Medio:
+            ~ return true
+        - list has Altissimo:
+            ~ return true
+        - else:
+            ~ return false            
+        }
+    - status == 3:
+        {
+        - list hasnt Vuoto:
+            ~ return true
+        - else:
+            ~ return false
+        }
+
     - else:
         ~ return false
 }
