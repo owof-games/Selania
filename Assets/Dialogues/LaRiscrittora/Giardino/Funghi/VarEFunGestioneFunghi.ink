@@ -23,8 +23,8 @@ VAR thirdQuest = false
 VAR inCrescita = 0    
 
 === test_coltivazioni ===
-Sassi, foglie e acqua ha qualcosa da raccontarti.
-L'aria si muove tra le fronde, portandoti storie lontane.
+<i>Sassi, foglie e acqua ha qualcosa da raccontarti.
+L'aria si muove tra le fronde, portandoti storie lontane.</i>
     -> test
 
 === test
@@ -52,7 +52,7 @@ L'aria si muove tra le fronde, portandoti storie lontane.
     = first_question
      ~ firstQuest = true
  
-        Sul terreno le foglie e i sassi...
+        <i>Sul terreno le foglie e i sassi...</i>
             + [{~ Si sfiorano|Si perdono gli uni nelle altre}]
                 ~ tipoColtivazioni += collaborazione
             + [{~ Si osservano distaccati|Difendono i propri confini}]
@@ -64,7 +64,7 @@ L'aria si muove tra le fronde, portandoti storie lontane.
     = second_question
     ~ secondQuest = true
 
-        L'aria...
+        <i>L'aria...</i>
             + [{~ Insegue sé stessa, gioca con le foglie creando mulinelli|Ruota e ruzzola portando odori dal passato}]
                 ~ tipoColtivazioni += ciclicità
             + [{~ È scoppiettante, fremente, carica di elettricità|Esplora cautamente ogni angolo della serra}]
@@ -76,7 +76,7 @@ L'aria si muove tra le fronde, portandoti storie lontane.
 
     = third_question
      ~ thirdQuest = true
-        L'acqua...
+        <i>L'acqua...</i>
             + [{~ È ferma, mossa solo sulla superficie|È torbida|È piena di foglie e petali}]
                 ~ tipoColtivazioni += ricordo
             + [{~ Scava, portando con sé il terriccio|Schiaccia foglie e sassi|La sua voce è potente}]

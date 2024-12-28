@@ -4,14 +4,12 @@
 
 //Forse la parte più introspettiva per la giocatrice, con domande diverse su come sta o simili, ma ancora non ne sono sicura.
 //Lavorando anche su questioni di genere.
-Sei nel labirinto
+<i>Ecco il labirinto</i>
 
-    + Inizi a camminare
-    + {doniTrovati != ()} Controlla li lista di oggetti che hai con te
-        -> contenuti_inventario
+    + [Inizio a camminare]
         //Per il labirinto, valutare se non andarci a mani vuote (nel senso: non controllo più)
-    + Trovi lo specchio
+    + [Trovo lo specchio]
         -> lo_specchio
     -
     
--> hub_labirinto
+-> main

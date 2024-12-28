@@ -98,107 +98,122 @@
 //Collaborazione, novità, ricordo
 //Outcome: datti piacere
     = step_zero
-        È solo una tua impressione, o i rami hanno iniziato a brillare?
-      -> main
+        <i>È solo una tua impressione, o i rami hanno iniziato a brillare?</i>
+        -> main
+    
     = step_uno
-        C'è una polvere ramata, brillante, che scende da alcuni rami.
+        <i>C'è una polvere ramata, brillante, che scende da alcuni rami.</i>
           -> main
+          
     = step_due
-        La polvere si è intrecciata, arrotolata, come a formare dei fili.
+        <i>La polvere si è intrecciata, arrotolata, come a formare dei fili.</i>
           -> main
+    
     = step_tre
-        Senti un fremito nel ventre. I rami ora sono coperti da un fitto tappeto del color dell'alba.
+        <i>Senti un fremito nel ventre. I rami ora sono coperti da un fitto tappeto del color dell'alba.
         Quando lo sfiori le tue labbra tremano, ricordi ti invadono: quel bacio, quelle dita desiderate tra le coscie.
-        Pienezza ti riempie: è per forza del <i>Muschio delle amanti</i>.
-        Potresti portarne un po' con te, sapendo che sparirà.
+        Pienezza ti riempie: è per forza del Muschio delle amanti.
+        Potresti portarne un po' con te, sapendo che sparirà.</i>
         O lasciarlo qui sull'albero.
-            + + Raccogli un po' di muschio.
+            
+            + + [Raccolgo un po' del muschio]
                 Così vicino, il muschio ti chiama.
                 Ti invita a fermare per un attimo tutto, a premiare come più ti piace il tuo corpo, dentro o fuori che sia.
-                ~ inCrescita = 0
-                ~ fungoProposto = ()
-                {
-                - doniTrovati hasnt muschiodelleamanti:
-                ~ doniTrovati += muschiodelleamanti
-                }
-            + + Non è ancora il momento.
+                    ~ inCrescita = 0
+                    ~ fungoProposto = ()
+                    {
+                        - doniTrovati hasnt muschiodelleamanti:
+                        ~ doniTrovati += muschiodelleamanti
+                    }
+            + + [Non è ancora il momento]
             - -
              -> main
+    
     = step_quattro
-        Qualcosa ti titilla lo stomaco, ma qualunque cosa stesse crescendo, non c'è più.
-        ~ inCrescita = 0
-        ~ fungoProposto = ()
-          -> main
+        <i>Qualcosa ti titilla lo stomaco, ma qualunque cosa stesse crescendo, non c'è più.</i>
+                ~ inCrescita = 0
+                ~ fungoProposto = ()
+            -> main
 
 === canto_delle_compagne
 //Collaborazione, ciclicità, ricordo
 //Outcome: canta, sola o con le compagne
     = step_zero
-        Qualcosa vibra e ti sveglia le gambe.
-        Hai voglia di danzare.
+        <i>Qualcosa vibra e ti sveglia le gambe.
+        Hai voglia di danzare.</i>
         -> main
+        
     = step_uno
-        Piccole palline rosse sul terreno caldo.
-        L'umidità evapora creando una nebbiolina rossastra.
+        <i>Piccole palline rosse sul terreno caldo.
+        L'umidità evapora creando una nebbiolina rossastra.</i>
           -> main
+          
     = step_due
-        Le palline ondeggiano nella nebbia ora, sospinte da un vento invisibile.
-        Si rincorrono e si tuffano sul terreno, facendo come un suono di risata.
+        <i>Le palline ondeggiano nella nebbia ora, sospinte da un vento invisibile.
+        Si rincorrono e si tuffano sul terreno, facendo come un suono di risata.</i>
           -> main
+          
     = step_tre
-        La serra tutta si è fatta rossa, uno stupendo <i>Canto delle compagne</i> galleggia sul terreno.
+        <i>La serra tutta si è fatta rossa, uno stupendo Canto delle compagnegalleggia sul terreno.
         In un altro tempo, più pauroso, questo fungo veniva chiamato
         "Canto delle streghe".
         L'euforia ti riempie i polmoni, senti la gioia di sapere che non sei mai stata davvero sola.
         Hai voglia di cantare.
-        Questo spingerà il fungo altrove, verso altre streghe, altre compagne.
-        + + È il momento di cantare.
-                Puoi farlo da te, o chiamare qualcuno a cui tieni.
+        Questo spingerà il fungo altrove, verso altre streghe, altre compagne.</i>
+        
+        + + [È il momento di cantare]
+                <i>Puoi farlo da te, o chiamare qualcuno a cui tieni.
                 Riempiti dell'euforia del fungo, e lascia che il mondo intero ascolti la tua voce.
-                Con l'ultima nota, il fungo sarà altrove, da un'altra compagna bisognosa.
-                ~ inCrescita = 0
-                ~ fungoProposto = ()
-                  -> main
-        + + No, non ora.
+                Con l'ultima nota, il fungo sarà altrove, da un'altra compagna bisognosa.</i>
+                    ~ inCrescita = 0
+                    ~ fungoProposto = ()
+                    -> main
+        + + [No, non ora]
               -> main
+              
     = step_quattro
-        Rimane un coro lontano dell'aria, nulla di più.
-        ~ inCrescita = 0
-        ~ fungoProposto = ()
-          -> main
+        <i>Rimane un coro lontano dell'aria, nulla di più.</i>
+            ~ inCrescita = 0
+            ~ fungoProposto = ()
+            -> main
 
 === la_spazzata
 //Indipendenza, novità, cancellazione
 //Outcome: prometti di dire qualcosa che ti pesa sullo stomaco.
     = step_zero
-        Uh. Non vedi nulla. Forse qualcosa è andato storto?
-         -> main
+        <i>Uh. Non vedi nulla. Forse qualcosa è andato storto?</i>
+            -> main
+         
     = step_uno
-         La serra è vuota, eppure qualcosa è cambiato.
-          -> main
+         <i>La serra è vuota, eppure qualcosa è cambiato.</i>
+            -> main
+    
     = step_due
-        Le luci sono più tenui.
-        Il soffitto di rami sfiora la tua testa.
-          -> main
+        <i>Le luci sono più tenui.
+        Il soffitto di rami sfiora la tua testa.</i>
+            -> main
+    
     = step_tre
-        Tutto scricchiola, gli alberi sembrano gemere dal dolore.
+        <i>Tutto scricchiola, gli alberi sembrano gemere dal dolore.
         Il terreno stesso è impacciato, crepato.
         Ora riconosci cosa hai piantato: una grossa, esplosiva <i>Spazzata</i>.
         La Spazzata non è un fungo, non è una pianta, ma è un insieme di tutte queste cose.
-        E se non viene fatta sfogare, esploderà spazzando via tutta la serra.
-        + + Bene: facciamola sfogare!
-            Questa è la parte più facile: basta prometterle che dirai a qualcuno qualcosa che senti sullo stomaco. Qualcosa che sono giorni o settimane (uh: questa Spazzata è molto grande. forse mesi?) che ti pesa.
+        E se non viene fatta sfogare, esploderà spazzando via tutta la serra.</i>
+        
+        + + [Bene: facciamola sfogare!]
+            <i>Questa è la parte più facile: basta prometterle che dirai a qualcuno qualcosa che senti sullo stomaco. Qualcosa che sono giorni o settimane (uh: questa Spazzata è molto grande. forse mesi?) che ti pesa.
                 Falle la promessa, e se ne andrà.
-                Ma se poi tradisci la promessa, la Spazzata tornerà ancora più forte.
-                ~ inCrescita = 0
-                ~ fungoProposto = ()
-              -> main
-        + + Non ora.
+                Ma se poi tradisci la promessa, la Spazzata tornerà ancora più forte.</i>
+                    ~ inCrescita = 0
+                    ~ fungoProposto = ()
+                    -> main
+        + + [Non ora]
             -> main
+    
     = step_quattro
-        Il soffitto di rami sembra incavato. Ciò che c'era, ora non è più.
-        ~ inCrescita = 0
-        ~ fungoProposto = ()    
+        <i>Il soffitto di rami sembra incavato. Ciò che c'era, ora non è più.</i>
+            ~ inCrescita = 0
+            ~ fungoProposto = ()    
           -> main
 
 
@@ -206,73 +221,81 @@
 //Indipendenza, novità, cancellazione
 //Outcome: liberazione, invito ad avanzare
     = step_zero
-        Cinque punte scure emergono dal terreno.
-    -> main
+        <i>Cinque punte scure emergono dal terreno.</i>
+            -> main
     
     = step_uno
-        Una mano rugosa stritola il terreno, le sue dita sembrano arrivare a infinita profondità.
-          -> main
+        <i>Una mano rugosa stritola il terreno, le sue dita sembrano arrivare a infinita profondità.</i>
+            -> main
+    
     = step_due
-        Dalla troncatura della mano emergono piccoli rami ricolmi di fiorellini bianchi. Ogni volta che espiri, un fiorellino vola via.
+        <i>Dalla troncatura della mano emergono piccoli rami ricolmi di fiorellini bianchi. Ogni volta che espiri, un fiorellino vola via.</i>
           -> main
+          
     = step_tre
-        Nè rami, nè fiori. Solo la mano, e una piccolissima bacca vermiglia.
+        <i>Nè rami, nè fiori. Solo la mano, e una piccolissima bacca vermiglia.
         Hai trovato una <i>Bacca dell'addolorata</i>. Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ad avanzare.
-        La sua bacca aiuta a capire cosa ci vincola, cosa non ci lascia allontanare.
-            + + La afferri.
-            La mano molla la sua presa, rivelandosi per quel che era dall'inizio: solo un insieme tenace di radici.
-            Senti dalle tue spalle qualcosa sciogliersi, scivolare via: ora hai un po' meno paura di camminare.
+        La sua bacca aiuta a capire cosa ci vincola, cosa non ci lascia allontanare.</i>
+            
+            + + [La afferro]
+            <i>La mano molla la sua presa, rivelandosi per quel che era dall'inizio: solo un insieme tenace di radici.
+            Senti dalle tue spalle qualcosa sciogliersi, scivolare via: ora hai un po' meno paura di camminare.</i>
+                ~ inCrescita = 0
+                ~ fungoProposto = ()
+                    {
+                        - doniTrovati hasnt baccadellaaddolorata:
+                        ~ doniTrovati += baccadellaaddolorata
+                    }
+            
+                -> main
+            + + [Non è il momento]
+                -> main
+              
+    = step_quattro
+        <i>Una mano tremante nel terreno, rinsecchita. Si sbriciola al primo soffio d'aria.</i>          
             ~ inCrescita = 0
             ~ fungoProposto = ()
-                {
-                - doniTrovati hasnt baccadellaaddolorata:
-                ~ doniTrovati += baccadellaaddolorata
-                }
-            
-              -> main
-            + + Non è il momento.
-              -> main
-    = step_quattro
-        Una mano tremante nel terreno, rinsecchita. Si sbriciola al primo soffio d'aria.            
-        ~ inCrescita = 0
-        ~ fungoProposto = ()
-          -> main
+            -> main
 
 === non_ti_scordar_di_te
 //Indipendenza, ciclicità, ricordo
 //Outcome: ricordo di chi non c'è più
     = step_zero
-        Su uno dei tronchi a terra è comparsa una sostanza viscosa, gelatinosa.
-    -> main
+        <i>Su uno dei tronchi a terra è comparsa una sostanza viscosa, gelatinosa.</i>
+            -> main
     
     = step_uno
-        La sostanza si è espansa.
+        <i>La sostanza si è espansa.
         Non è invitante al tatto, ma l'aria attorno ti ricorda qualcosa: sigaro, tabacco forse?
         O è canfora? O addirittura torta, o rabarbaro, o caffè.
-        Qualunque cosa sia, ti piace.
+        Qualunque cosa sia, ti piace.</i>
           -> main
+          
     = step_due
-        La sostanza si è solidificata, e nel farlo il tronco è in più punti sparito.
+        <i>La sostanza si è solidificata, e nel farlo il tronco è in più punti sparito.
         No, non sparito: è trasparente.
-        Fili di vetro sembrano puntare verso il cielo.
+        Fili di vetro sembrano puntare verso il cielo.</i>
           -> main
+          
     = step_tre
-        Tronco e sostanza sono una cosa sola: un fungo di vetro, dita che si sfiora e intrecciano lanciate verso il cielo.
+        <i>Tronco e sostanza sono una cosa sola: un fungo di vetro, dita che si sfiora e intrecciano lanciate verso il cielo.
         Hai trovato un <i>Non ti scordar di te</i>.
         Cresce su ciò che è passato, che non c'è più, per renderlo parte di sè.
         Qualcosa di nuovo, eppure antico.
-        Quando sfiorisce, il ciclo ricomincia.
-        + + Intrecci le tue dita alle sue
-            Si sciolgono tra le tue mani, rilasciando di nuovo un profumo familiare.
+        Quando sfiorisce, il ciclo ricomincia.</i>
+        
+        + + [Intreccio le tue dita alle sue]
+            <i>Si sciolgono tra le tue mani, rilasciando di nuovo un profumo familiare.
             Ti porti quel che rimane alle labbra: il tuo corpo viene invaso da fiducia e calore.
-            Senti in te chi non c'è più: siete parte della stessa storia.
+            Senti in te chi non c'è più: siete parte della stessa storia.</i>
                 ~ inCrescita = 0
                 ~ fungoProposto = ()
               -> main
-        + + Non ora 
+        + + [Non ora]
               -> main
+              
     = step_quattro
-        Malinconia. La sensazione di aver fatto tardi, di aver perso qualcosa di importante.
-        ~ inCrescita = 0
-        ~ fungoProposto = ()
-       -> main
+        <i>Malinconia. La sensazione di aver fatto tardi, di aver perso qualcosa di importante.</i>
+            ~ inCrescita = 0
+            ~ fungoProposto = ()
+        -> main

@@ -3,11 +3,11 @@
     {doniTrovati != (): -> inventarietto|->vuoto}
 
     =inventarietto
-    Hai con te {list_with_commas(doniTrovati)}
+    <i>Hai con te {list_with_commas(doniTrovati)}</i>
     -> main
 
     = vuoto
-    L'inventario è vuoto
+    <i>L'inventario è vuoto</i>
     -> main
 
 
@@ -18,12 +18,12 @@
 === gestione_inventario ===
 {debug: I doni trovati sono {doniTrovati}}
 
-+ {doniTrovati has muschiodelleamanti} Doni del muschio delle amanti.
++ {doniTrovati has muschiodelleamanti} [Dono del muschio delle amanti]
     ~ doniTrovati -= muschiodelleamanti
     ~ doniDonati += muschiodelleamanti
     {
     - storiaUno == InCorso:
-    Lo spettro è confuso dal tuo dono.
+    <i>Lo spettro è confuso dal dono.</i>
     ~ donoSpettroUno = true
     -> storia_uno.capitolo_uno
     
@@ -40,12 +40,12 @@
     
    -> main
 
-+ {doniTrovati has baccadellaaddolorata} Doni una bacca della Addolorata.
++ {doniTrovati has baccadellaaddolorata} [Dono una bacca della Addolorata]
     ~ doniTrovati -= baccadellaaddolorata
     ~ doniDonati += baccadellaaddolorata
     {
     - storiaUno == InCorso:
-        Lo spettro è confuso dal tuo dono.
+        <i>Lo spettro è confuso dal dono.</i>
         ~ donoSpettroUno = true
         -> storia_uno.capitolo_uno
     
@@ -58,7 +58,7 @@
     }
    -> main    
 
-+ {doniTrovati has laspezzata} Doni un frammento della spezzata.
++ {doniTrovati has laspezzata} [Dono un frammento della Spezzata]
     ~ doniTrovati -= laspezzata
     ~ doniDonati += laspezzata
     {
@@ -66,7 +66,7 @@
         ~ statoInchiostroSpettroUno ++
         ~ statoInchiostroSpettroUno ++
         ~ statoInchiostroSpettroUno ++
-        Spettro uno ti guarda sorpreso, e si porta il frammento al petto.
+        <i>Spettro uno ti guarda sorpreso, e si porta il frammento al petto.</i>
         ~ eventoSpecialeSpettroUno = true
         ~ donoSpettroUno = true
         -> storia_uno.capitolo_uno
@@ -80,15 +80,15 @@
     }
    -> main
 
-+ {doniTrovati has coperta} Doni una coperta.
++ {doniTrovati has coperta} [Dono una coperta]
     ~ doniTrovati -= coperta
     ~ doniDonati += coperta
     {
     - storiaUno == InCorso:
         ~ statoInchiostroSpettroUno ++
         ~ statoInchiostroSpettroUno ++
-        Lo spettro se la avvolge attorno al corpo.
-        Sembra sollevato.
+        <i>Lo spettro se la avvolge attorno al corpo.
+        Sembra sollevato.</i>
         ~ donoSpettroUno = true
         -> storia_uno.capitolo_uno
     
@@ -101,13 +101,13 @@
     }
    -> main
     
-+ {doniTrovati has vasovuoto} Doni un vaso vuoto.
++ {doniTrovati has vasovuoto} [Dono un vaso vuoto]
     ~ doniTrovati -= vasovuoto
     ~ doniDonati += vasovuoto
     {
     - storiaUno == InCorso:
         ~ statoInchiostroSpettroUno --
-        Lo spettro ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.
+        <i>Lo spettro ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
         ~ donoSpettroUno = true
         -> storia_uno.capitolo_uno
     
@@ -121,8 +121,8 @@
     -> main
     
     //Se la lista è vuota
-    + {doniTrovati == ()} Non hai nulla da donare
-    + Ho bisogno di ragionarci ancora un poco.
+    + {doniTrovati == ()} [Non ho nulla da donare]
+    + [Ho bisogno di ragionarci ancora un poco]
         -> main 
     + ->
     - 
