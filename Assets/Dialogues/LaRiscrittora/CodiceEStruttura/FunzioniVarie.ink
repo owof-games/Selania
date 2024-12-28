@@ -90,3 +90,15 @@
        ~ return "teaSounds"       
                             
 }
+
+=== save ===
+    + [Save]
+    <i>Il gioco è stato salvato!</i>
+    -
+    -> main
+
+=== load ===
+    + [Load]
+    <i>Il salvataggio è stato correttamente caricato</i>
+    -
+    -> main

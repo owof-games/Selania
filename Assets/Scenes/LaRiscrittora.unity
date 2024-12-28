@@ -3400,7 +3400,7 @@ GameObject:
   - component: {fileID: 956713571}
   - component: {fileID: 956713570}
   m_Layer: 5
-  m_Name: SaveButton
+  m_Name: Save
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3469,6 +3469,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1863324329}
+        m_TargetAssemblyTypeName: DialogueManagerSingleInk, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Save
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1863324329}
         m_TargetAssemblyTypeName: DialogueManagerSingleInk, Assembly-CSharp
         m_MethodName: SaveGame
@@ -4788,7 +4800,7 @@ GameObject:
   - component: {fileID: 1375716177}
   - component: {fileID: 1375716176}
   m_Layer: 5
-  m_Name: LoadButton
+  m_Name: Load
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4857,6 +4869,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1863324329}
+        m_TargetAssemblyTypeName: DialogueManagerSingleInk, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Load
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1863324329}
         m_TargetAssemblyTypeName: DialogueManagerSingleInk, Assembly-CSharp
         m_MethodName: LoadGame
@@ -6684,6 +6708,8 @@ MonoBehaviour:
   - {fileID: 1469967280}
   - {fileID: 1191973292}
   - {fileID: 324776841}
+  - {fileID: 956713568}
+  - {fileID: 1375716174}
   choices:
   - {fileID: 1751463282}
   - {fileID: 1924385861}

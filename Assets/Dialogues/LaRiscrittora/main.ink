@@ -39,4 +39,8 @@
 //Elementi del giardino
 <- panchina
 
+//Elementi gestione interfaccia
+<- save
+<- load
+
 + -> main
