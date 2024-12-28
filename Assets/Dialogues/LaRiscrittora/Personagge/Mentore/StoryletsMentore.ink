@@ -79,5 +79,3 @@ La storia inizia ora
 === prima_visita_tisane
 
 -> main
-
-TODO: Da creare: storylets per quando anime (non animelle) e Mentore sono assieme
