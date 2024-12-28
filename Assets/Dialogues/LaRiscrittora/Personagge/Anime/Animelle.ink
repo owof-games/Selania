@@ -12,6 +12,8 @@
     }
     //Se alcolismo attivo come trigger, salto la storia
     + Storia animella uno
+        //A conversazione finita con l'animella, torna nella casetta.
+        ~ move_entity(AnimellaUno, CasettaAnime)
     -
 -> main
 
@@ -21,6 +23,7 @@
 = parlareConAnimella 
 
     + Storia animella due
+            ~ move_entity(AnimellaDue, CasettaAnime)
     -
 -> main
 
@@ -30,5 +33,6 @@
 
 = parlareConAnimella
     + Storia animella tre
+                ~ move_entity(AnimellaTre, CasettaAnime)
     -
 -> main
