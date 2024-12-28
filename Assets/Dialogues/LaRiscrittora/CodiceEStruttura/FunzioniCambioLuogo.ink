@@ -26,7 +26,7 @@
     -> random_luogo_mentore ->
     -> comparsa_anime ->
     
-    -> hub_giardino        
+    -> hub_giardino     
 
 + {are_two_entities_together(PG, FromGardenToMausoleum)}  [FromGardenToMausoleum]
     ~ move_entity(PG, Mausoleo)
@@ -40,9 +40,9 @@
     ~ move_entity(PG, Funghi)
     ~ inCrescita ++
     -> random_luogo_mentore ->
-   -> comparsa_anime ->
+    -> comparsa_anime ->
     
-    -> hub_funghi       
+    -> hub_funghi 
 
 + {my_location == Giardino && storiaDue == Conclusa && storiaTre == Conclusa && storiaQuattro == Conclusa} [Biblioteca]
     ~ move_entity(PG, Biblioteca)
