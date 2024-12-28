@@ -6813,6 +6813,15 @@ MonoBehaviour:
   dialoguePanel: {fileID: 143527391}
   dialogueText: {fileID: 1625733884}
   continueButton: {fileID: 921273106}
+  allPlaces:
+  - contenutoGiardino
+  - contenutoMausoleo
+  - contenutoFunghi
+  - contenutoLabirinto
+  - contenutoFalene
+  - contenutoBiblioteca
+  - contenutoTisane
+  - contenutoSirene
   inkAssetJSON: {fileID: 4900000, guid: 52a25747e603e6e4aacb94e87b22a990, type: 3}
   entities:
   - {fileID: 2045264602}

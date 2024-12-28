@@ -22,7 +22,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private GameObject continueButton;
     private Story story;
 
-
+    [SerializeField] private string[] allPlaces;
 
     [Header("Text elements")]
     [SerializeField] private TextAsset inkAssetJSON;
@@ -115,6 +115,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
             //Creo una variabile string a cui assegno il valore della riga corrente di ink
             //Devo leggere il codice qui sotto al contrario: prima chiamo story.Continue() che mi dà il contenuto, poi lo assegno alla variabile.
             string currentLine = story.Continue().Trim();
+            //così facciamo un check a ogni "continue"
+            OnOffObject();
 
             if (currentLine == "@interact")
             {
@@ -126,32 +128,31 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 //Per fare tutta questa cosa, utilizziamo una versione semplificata del for. Funziona per array, liste.
 
                 //Entity è una variabile locale creata per questo foreach, che viene associata a tutti i GameObject "entities" che abbiamo caricato su Unity.
-                foreach (var entity in entities)
-                {
-                    bool found = false;
+                // foreach (var entity in entities)
+                // {
+                //     bool found = false;
 
-                    //Choice è una variabile locale creata per questo foreach, a cui viene associata una choice in INK (story.currentChoices, dove "story" è il nome che abbiamo dato noi alla nostra storia, e currentChoices è una delle funzione di INK)
-                    foreach (var choice in story.currentChoices)
-                    {
-                        //Qui abbiamo recuperato il testo della scelta e l'abbiamo assegnato a una variabile
-                        var choiceText = choice.text.Trim();
-                        //Qui abbiamo recuperato il nome del nostro game object e l'abbiamo assegnato a una variabile
-                        var entityName = entity.name;
-                        //Qui verifichiamo se le due cose sono uguali o no
-                        if (entityName == choiceText)
-                        {
-                            found = true;
-                        }
-                    }
+                //     //Choice è una variabile locale creata per questo foreach, a cui viene associata una choice in INK (story.currentChoices, dove "story" è il nome che abbiamo dato noi alla nostra storia, e currentChoices è una delle funzione di INK)
+                //     foreach (var choice in story.currentChoices)
+                //     {
+                //         //Qui abbiamo recuperato il testo della scelta e l'abbiamo assegnato a una variabile
+                //         var choiceText = choice.text.Trim();
+                //         //Qui abbiamo recuperato il nome del nostro game object e l'abbiamo assegnato a una variabile
+                //         var entityName = entity.name;
+                //         //Qui verifichiamo se le due cose sono uguali o no
+                //         if (entityName == choiceText)
+                //         {
+                //             found = true;
+                //         }
+                //     }
 
-                    //Invece di fare check if/else, dato che valore found true/false sempre, chiamo direttamente SetActive(found);
-                    entity.SetActive(found);
+                //     //Invece di fare check if/else, dato che valore found true/false sempre, chiamo direttamente SetActive(found);
+                //     entity.SetActive(found);
 
+                //     //Ci sono altre cose che dobbiamo fare con i contenuti di @interact?
+                //     //Plausibilmente non in questa funzione: sicuramente gli oggetti in scena poi ci passeranno dei testi quando interagiremo con loro, ma per questo aspetto conviene fare una funzione sperata, perché è una cosa diversa.
 
-                    //Ci sono altre cose che dobbiamo fare con i contenuti di @interact?
-                    //Plausibilmente non in questa funzione: sicuramente gli oggetti in scena poi ci passeranno dei testi quando interagiremo con loro, ma per questo aspetto conviene fare una funzione sperata, perché è una cosa diversa.
-
-                }
+                // }
             }
 
             else
@@ -168,6 +169,59 @@ public class DialogueManagerSingleInk : MonoBehaviour
         }
     }
 
+
+//Funzione per accendere e spegnere entità in scena usando una lista di ink
+
+public void OnOffObject()
+//Cosa ci serve: dove ci troviamo, e cosa c'è dove ci troviamo
+{
+    //primo step: fare un ciclo tra le variabili per capire se hanno PG, e in caso negativo, andare avanti
+
+    foreach(var placeVariableName in allPlaces){
+        var charactersInThePlace = (InkList)story.variablesState[placeVariableName];
+        //quando usiamo cast? per trasformare un tipo di espressione in un'altra quando sappiamo qual è il tipo di quella variabile.
+        //(InkList) è il nostro cast ora
+
+        Debug.Log(charactersInThePlace);
+        if( charactersInThePlace.ContainsItemNamed("PG")){
+
+                foreach (var entity in entities)
+                {
+                    bool found = false;
+
+                    if (charactersInThePlace.ContainsItemNamed(entity.name)){
+                        found = true;
+                    }
+                    
+
+                    // //Choice è una variabile locale creata per questo foreach, a cui viene associata una choice in INK (story.currentChoices, dove "story" è il nome che abbiamo dato noi alla nostra storia, e currentChoices è una delle funzione di INK)
+                    // foreach (var choice in story.currentChoices)
+                    // {
+                    //     //Qui abbiamo recuperato il testo della scelta e l'abbiamo assegnato a una variabile
+                    //     var choiceText = choice.text.Trim();
+                    //     //Qui abbiamo recuperato il nome del nostro game object e l'abbiamo assegnato a una variabile
+                    //     var entityName = entity.name;
+                    //     //Qui verifichiamo se le due cose sono uguali o no
+                    //     if (entityName == choiceText)
+                    //     {
+                    //         found = true;
+                    //     }
+                    //}
+
+                    //Invece di fare check if/else, dato che valore found true/false sempre, chiamo direttamente SetActive(found);
+                    entity.SetActive(found);
+
+                    //Ci sono altre cose che dobbiamo fare con i contenuti di @interact?
+                    //Plausibilmente non in questa funzione: sicuramente gli oggetti in scena poi ci passeranno dei testi quando interagiremo con loro, ma per questo aspetto conviene fare una funzione sperata, perché è una cosa diversa.
+
+                }
+            break;
+        }
+
+    }
+
+
+}
 
 
 
