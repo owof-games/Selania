@@ -5,7 +5,7 @@
  ----------------------------------*/
 
 === presentazioni ===
-    Ma dimmi, come vuoi che ti chiami?
+    Ma dimmi, come <size=50>vuoi</size> che ti chiami?
         -> il_mio_nome ->
     E quali sono i pronomi in cui ti riconosci?
         -> assegnazione_genere ->

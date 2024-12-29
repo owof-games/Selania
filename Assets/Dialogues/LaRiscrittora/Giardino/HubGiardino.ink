@@ -1,7 +1,7 @@
 === hub_giardino ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-<i>Questo è il giardino</i>
+<i><color=green>Questo è il giardino</color></i>
 -> randomizzazione_dono_luoghi ->
     + [Mi guardo attorno]
     -
