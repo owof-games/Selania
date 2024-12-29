@@ -239,16 +239,17 @@ public void OnOffObject()
         }
     }
 
-    // public void OnClickContinue()
-    // {
-    //         if(story.canContinue){
-    //             continueButton.SetActive(true);
-    //         }
-    //         else{
-    //             continueButton.SetActive(false);
-    //         }
+    public void OnClickContinue()
+    {
+        ContinueStory();
+            // if(story.canContinue){
+            //     continueButton.SetActive(true);
+            // }
+            // else{
+            //     continueButton.SetActive(false);
+            // }
 
-    // }
+    }
 
 //Questa roba ti permette di attivare i tasti e metterci il testo, adattala poi a questa situazione (viene dal prototipo originale.)
     private void DisplayChoices()
