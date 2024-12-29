@@ -73,7 +73,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
     {
         story = new Story(inkAssetJSON.text);
         ContinueStory();
-
         dialoguePanel.SetActive(false);
 
         //Elemento aggiunto dopo l'ultima "lezione" di Mattia
@@ -87,21 +86,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 index++;
             }
 
-        //GetComponent<Image>();
     }
 
     void Update()
     {
-        //Se non ci sono conversazioni in corso, skippiamo (return)
-        // if(!dialogueIsPlaying)
-        //    return;
-        //}
+        //OnClickContinue();
 
-        //Se invece il dialogo è in corso, ci interessa sapere se il giocatore preme il tasto di interazione per mandare avanti la conversazione
-        // if (InputManager.GetInstance().GetSubmitPressed())
-        // {
-        //     ContinueStory();
-        // }
     }
 
     void ContinueStory()
@@ -249,22 +239,16 @@ public void OnOffObject()
         }
     }
 
-    public void OnClickContinue()
-    {
-        //Tentativo disabilitare presenza bottone in caso di scelte disponibili
-        // List<Choice> currentChoices = story.currentChoices;
-        // if (currentChoices.Count == 0)
-        // {
-        //     continueButton.SetActive(true);
-        //     ContinueStory();
-        // }
-        // else
-        // {
-        //     continueButton.SetActive(false);
-        // }
-        ContinueStory();
+    // public void OnClickContinue()
+    // {
+    //         if(story.canContinue){
+    //             continueButton.SetActive(true);
+    //         }
+    //         else{
+    //             continueButton.SetActive(false);
+    //         }
 
-    }
+    // }
 
 //Questa roba ti permette di attivare i tasti e metterci il testo, adattala poi a questa situazione (viene dal prototipo originale.)
     private void DisplayChoices()
