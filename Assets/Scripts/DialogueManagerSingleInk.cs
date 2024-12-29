@@ -53,7 +53,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private Sprite backBiblioteca;
     [Header("Tea Backgrounds")]
     [SerializeField] private Sprite backTisane;
-    
+
 
     [Header("Sounds")]
     [SerializeField] private AudioSource ambientSounds;
@@ -80,11 +80,11 @@ public class DialogueManagerSingleInk : MonoBehaviour
         //Questa roba forse l'ho capita fino a un certo punto: perché uso GetComponent e non SetActive?
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
-            foreach (GameObject choice in choices)
-            {
-                choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
-                index++;
-            }
+        foreach (GameObject choice in choices)
+        {
+            choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
+            index++;
+        }
 
     }
 
@@ -107,6 +107,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
             string currentLine = story.Continue().Trim();
             //così facciamo un check a ogni "continue"
             OnOffObject();
+            CheckContinueButton();
 
             if (currentLine == "@interact")
             {
@@ -159,30 +160,45 @@ public class DialogueManagerSingleInk : MonoBehaviour
         }
     }
 
+    public void CheckContinueButton()
+    {
+        if (story.canContinue)
+        {
 
-//Funzione per accendere e spegnere entità in scena usando una lista di ink
+            continueButton.SetActive(true);
+        }
+        else
+        {
+            continueButton.SetActive(false);
+        }
+    }
 
-public void OnOffObject()
-//Cosa ci serve: dove ci troviamo, e cosa c'è dove ci troviamo
-{
-    //primo step: fare un ciclo tra le variabili per capire se hanno PG, e in caso negativo, andare avanti
+    //Funzione per accendere e spegnere entità in scena usando una lista di ink
 
-    foreach(var placeVariableName in allPlaces){
-        var charactersInThePlace = (InkList)story.variablesState[placeVariableName];
-        //quando usiamo cast? per trasformare un tipo di espressione in un'altra quando sappiamo qual è il tipo di quella variabile.
-        //(InkList) è il nostro cast ora
+    public void OnOffObject()
+    //Cosa ci serve: dove ci troviamo, e cosa c'è dove ci troviamo
+    {
+        //primo step: fare un ciclo tra le variabili per capire se hanno PG, e in caso negativo, andare avanti
 
-        Debug.Log(charactersInThePlace);
-        if( charactersInThePlace.ContainsItemNamed("PG")){
+        foreach (var placeVariableName in allPlaces)
+        {
+            var charactersInThePlace = (InkList)story.variablesState[placeVariableName];
+            //quando usiamo cast? per trasformare un tipo di espressione in un'altra quando sappiamo qual è il tipo di quella variabile.
+            //(InkList) è il nostro cast ora
+
+            Debug.Log(charactersInThePlace);
+            if (charactersInThePlace.ContainsItemNamed("PG"))
+            {
 
                 foreach (var entity in entities)
                 {
                     bool found = false;
 
-                    if (charactersInThePlace.ContainsItemNamed(entity.name)||entity.name=="Load"||entity.name == "Save"||entity.name == "Inventario"||entity.name=="Quit"){
+                    if (charactersInThePlace.ContainsItemNamed(entity.name) || entity.name == "Load" || entity.name == "Save" || entity.name == "Inventario" || entity.name == "Quit")
+                    {
                         found = true;
                     }
-                    
+
 
                     // //Choice è una variabile locale creata per questo foreach, a cui viene associata una choice in INK (story.currentChoices, dove "story" è il nome che abbiamo dato noi alla nostra storia, e currentChoices è una delle funzione di INK)
                     // foreach (var choice in story.currentChoices)
@@ -205,23 +221,23 @@ public void OnOffObject()
                     //Plausibilmente non in questa funzione: sicuramente gli oggetti in scena poi ci passeranno dei testi quando interagiremo con loro, ma per questo aspetto conviene fare una funzione sperata, perché è una cosa diversa.
 
                 }
-            break;
+                break;
+            }
+
         }
+
 
     }
 
 
-}
 
-
-
-//Mi serve per cominciare la conversazione
+    //Mi serve per cominciare la conversazione
     public void OnClick(string entity)
     {
         //scorriamo tutte le scelte possibili, e poi confrontiamo ogni scelta con il valore di stringa "entity"
         foreach (var choice in story.currentChoices)
         {
-            if(choice.text.Trim() == entity)
+            if (choice.text.Trim() == entity)
             {
                 //In questo modo recuperiamo il valore indice di una scelta
                 var choiceIndex = choice.index;
@@ -241,17 +257,14 @@ public void OnOffObject()
 
     public void OnClickContinue()
     {
+
         ContinueStory();
-            // if(story.canContinue){
-            //     continueButton.SetActive(true);
-            // }
-            // else{
-            //     continueButton.SetActive(false);
-            // }
+
+
 
     }
 
-//Questa roba ti permette di attivare i tasti e metterci il testo, adattala poi a questa situazione (viene dal prototipo originale.)
+    //Questa roba ti permette di attivare i tasti e metterci il testo, adattala poi a questa situazione (viene dal prototipo originale.)
     private void DisplayChoices()
     {
         List<Choice> currentChoices = story.currentChoices;
@@ -265,7 +278,7 @@ public void OnOffObject()
         int index = 0;
 
         //enable and initialize the choices up to the amount of choices for this line of dialogue
-        foreach(Choice choice in currentChoices)
+        foreach (Choice choice in currentChoices)
         {
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
@@ -273,7 +286,7 @@ public void OnOffObject()
         }
 
         //skippa poi le scelte che sono vuote e non vanno attivate nell'interfaccia
-        for(int i = index; i <choices.Length; i++)
+        for (int i = index; i < choices.Length; i++)
         {
             choices[i].gameObject.SetActive(false);
         }
@@ -304,7 +317,7 @@ public void OnOffObject()
 
 
 
-     private void HandleTags(List<string> currentTags)
+    private void HandleTags(List<string> currentTags)
     {
         //loopiamo la comunque
         foreach (string tag in currentTags)
@@ -328,95 +341,106 @@ public void OnOffObject()
                 case BACKGROUND_TAG:
 
                     //TAG GESTIONE DEL GIARDINO
-                        if(tagValue == "backGiardino") {
-                            background.sprite = backGiardino;
-                        }
+                    if (tagValue == "backGiardino")
+                    {
+                        background.sprite = backGiardino;
+                    }
 
                     //TAG GESTIONE DEL MAUSOLEO
-                        if(tagValue == "backMausoleo") {
-                            background.sprite = backMausoleo;
-                        }
+                    if (tagValue == "backMausoleo")
+                    {
+                        background.sprite = backMausoleo;
+                    }
 
                     //TAG GESTIONE DEL SERRA
-                        if(tagValue == "backFunghi") {
-                            background.sprite = backFunghi;
-                        }
+                    if (tagValue == "backFunghi")
+                    {
+                        background.sprite = backFunghi;
+                    }
 
                     //TAG GESTIONE DEL FALENE
-                        if(tagValue == "backFalene") {
-                            background.sprite = backFalene;
-                        }
+                    if (tagValue == "backFalene")
+                    {
+                        background.sprite = backFalene;
+                    }
 
                     //TAG GESTIONE DEL LABIRINTO
-                        if(tagValue == "backLabirinto") {
-                            background.sprite = backLabirinto;
-                        }
+                    if (tagValue == "backLabirinto")
+                    {
+                        background.sprite = backLabirinto;
+                    }
 
                     //TAG GESTIONE DEL SIRENE
-                        if(tagValue == "backSirene") {
-                            background.sprite = backSirene;
-                        }
+                    if (tagValue == "backSirene")
+                    {
+                        background.sprite = backSirene;
+                    }
 
                     //TAG GESTIONE DEL BIBLIOTECA
-                        if(tagValue == "backBiblioteca") {
-                            background.sprite = backBiblioteca;
-                        }
+                    if (tagValue == "backBiblioteca")
+                    {
+                        background.sprite = backBiblioteca;
+                    }
 
                     //TAG GESTIONE DEL TISANE
-                        if(tagValue == "backTisane") {
-                            background.sprite = backTisane;
-                        }
+                    if (tagValue == "backTisane")
+                    {
+                        background.sprite = backTisane;
+                    }
 
-                        break;
+                    break;
 
-                    case AMBIENTSOUNDS_TAG:
+                case AMBIENTSOUNDS_TAG:
 
                     //TAG MUSICA SOTTOFONDO GIARDINO
-                    if(tagValue == "gardenSounds") {
-                            ambientSounds.clip = gardenSounds;
-                            ambientSounds.Play();
-                        }
+                    if (tagValue == "gardenSounds")
+                    {
+                        ambientSounds.clip = gardenSounds;
+                        ambientSounds.Play();
+                    }
                     //TAG MUSICA SOTTOFONDO MAUSOLEO
-                    if(tagValue == "mausoleumSounds") {
-                            ambientSounds.clip = mausoleumSounds;
-                            ambientSounds.Play();
-                        } 
+                    if (tagValue == "mausoleumSounds")
+                    {
+                        ambientSounds.clip = mausoleumSounds;
+                        ambientSounds.Play();
+                    }
 
                     //TAG MUSICA SOTTOFONDO SERRA
-                    if(tagValue == "greenhouseSounds") {
-                            ambientSounds.clip = greenhouseSounds;
-                            ambientSounds.Play();
-                        }         
+                    if (tagValue == "greenhouseSounds")
+                    {
+                        ambientSounds.clip = greenhouseSounds;
+                        ambientSounds.Play();
+                    }
 
-                      break;  
+                    break;
 
-                 default:
-                 Debug.LogWarning("Tag came in but is not currently handled: "+ tag);
-                 break;
+                default:
+                    Debug.LogWarning("Tag came in but is not currently handled: " + tag);
+                    break;
 
 
             }
 
 
 
-                
+
 
         }
     }
 
     //Per chiudere il gioco quando vuoi.
-    public void OnQuitButton ()
-        {
-            Application.Quit();
-        }
-    
+    public void OnQuitButton()
+    {
+        Application.Quit();
+    }
+
     //Mea culpa: questa roba viene da chatGPT
     [System.Serializable]
     public class SaveData
-        {
-            public string inkState; // Stato della storia di ink
+    {
+        public string inkState; // Stato della storia di ink
 
-        }
+    }
     public void SaveGame()
     {
         SaveData saveData = new SaveData
