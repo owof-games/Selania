@@ -14,8 +14,6 @@
 
 === pre_test
     <i>{~ In questo momento la serra è vuota|Non c'è nulla in crescita}</i>
-        + [Voglio consultare la serra]
-            -> test_coltivazioni
         + [Mi guardo attorno]
         -
             -> main
@@ -28,7 +26,7 @@
         -> main
     
 === call_test
-    + {contenutoFunghi has PG} [Wheelbarrow]
+    + {are_two_entities_together(Wheelbarrow, PG)} [Wheelbarrow]
         {
         
             - fungoProposto != ():

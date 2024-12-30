@@ -10,7 +10,7 @@
 
 
 === panchina
-+ {contenutoGiardino has PG} [Bench]
++ {are_two_entities_together(Bench, PG)} [Bench]
     <i>Questo posto è pieno di serenità</i>
     -> main
 

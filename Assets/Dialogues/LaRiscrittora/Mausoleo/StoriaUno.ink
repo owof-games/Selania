@@ -72,6 +72,8 @@
             Il vuoto mi trascina in giro per il paese, il suo gelo mi schiaccia lo stomaco, mi fa esplodere il cuore.
             Il cellulare inizia a vibrare. Non ce la posso fare, non ce la posso fare.
             Torno a casa, disattivo internet, disattivo il cellulare, e mi rimetto a lavorare.
+            ~ move_entity(SpettroUno, Mausoleo)
+            ~ move_entity(LapideUno, CasettaAnime)
             -> main
 
 
@@ -402,6 +404,8 @@
             - else:
                 Spettro: E ora posso andarmene in pace.
                 ~ storiaUno = Conclusa
+            ~ move_entity(SpettroUno, CasettaAnime)
+            ~ move_entity(LapideUno, Mausoleo)
                 -> main
         }
 
@@ -410,6 +414,8 @@
         Spettro: E ora, me ne vado.
         Spettro: Addio.
         ~ storiaUno = Conclusa
+        ~ move_entity(SpettroUno, CasettaAnime)
+        ~ move_entity(LapideUno, Mausoleo)
         -> main
 
 === scelta_nome_uno
