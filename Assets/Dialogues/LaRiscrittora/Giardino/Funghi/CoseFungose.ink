@@ -154,7 +154,7 @@
           -> main
           
     = step_tre
-        <i>La serra tutta si è fatta rossa, uno stupendo Canto delle compagnegalleggia sul terreno.
+        <i>La serra tutta si è fatta rossa, uno stupendo Canto delle compagne galleggia sul terreno.
         In un altro tempo, più pauroso, questo fungo veniva chiamato
         "Canto delle streghe".
         L'euforia ti riempie i polmoni, senti la gioia di sapere che non sei mai stata davvero sola.
