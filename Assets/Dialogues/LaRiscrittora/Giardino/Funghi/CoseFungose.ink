@@ -278,7 +278,7 @@
           -> main
           
     = step_tre
-        <i>Tronco e sostanza sono una cosa sola: un fungo di vetro, dita che si sfiora e intrecciano lanciate verso il cielo.
+        <i>Tronco e sostanza sono una cosa sola: un fungo di vetro, dita che si sfiorano e intrecciano lanciate verso il cielo.
         Hai trovato un <i>Non ti scordar di te</i>.
         Cresce su ciò che è passato, che non c'è più, per renderlo parte di sè.
         Qualcosa di nuovo, eppure antico.
