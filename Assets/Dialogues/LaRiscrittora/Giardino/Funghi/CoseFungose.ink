@@ -73,6 +73,7 @@
           -> main
           
     = step_tre
+    + {are_two_entities_together(LicheneDegliAbissi, PG) && fungoProposto has licheneDegliAbissi} [LicheneDegliAbissi]
         <i>Eccolo qui. Un Lichene degli abissi.
         Il lichene degli abissi è una danza, un roteare costante di fungo ed alga. Un ripetersi anche nell'errore, nel dolore.
         Alga e fungo girano e rigirano senza mai afferrarsi.

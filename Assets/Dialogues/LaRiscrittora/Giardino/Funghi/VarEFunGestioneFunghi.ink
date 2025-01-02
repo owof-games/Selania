@@ -1,4 +1,5 @@
 //Variabili per la gestione della serra
+TODO: come per anime etc, trasforma tutto in liste VAR con maiuscoletto
 LIST coltivazioni = licheneDegliAbissi, muschioDelleAmanti, cantoDelleCompagne, laSpazzata, baccaDellaAddolorata, nonTiScordarDiTe
 
 LIST tipoColtivazioni = collaborazione, ciclicità, novità, cancellazione, ricordo, indipendenza

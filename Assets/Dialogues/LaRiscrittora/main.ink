@@ -34,13 +34,13 @@
 <-lapide_sette
 
 //Elementi della serra
-// <- call_test
-// <- non_ti_scordar_di_te
-// <- bacca_della_addolorata
-// <- la_spazzata
+<- call_test
+// <- non_ti_scordar_di_te.step_tre
+// <- bacca_della_addolorata.step_tre
+// <- la_spazzata.step_tre
 // <- canto_delle_compagne
-// <- muschio_delle_amanti
-// <- lichene_degli_abissi
+// <- muschio_delle_amanti.step_tre
+// <- lichene_degli_abissi.step_tre
 
 //Elementi del giardino
 <- panchina
