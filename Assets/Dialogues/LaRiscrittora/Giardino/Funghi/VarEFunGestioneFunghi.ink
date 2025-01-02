@@ -1,15 +1,15 @@
 //Variabili per la gestione della serra
-TODO: come per anime etc, trasforma tutto in liste VAR con maiuscoletto
-LIST coltivazioni = licheneDegliAbissi, muschioDelleAmanti, cantoDelleCompagne, laSpazzata, baccaDellaAddolorata, nonTiScordarDiTe
+
+//VAR coltivazioni = (LicheneDegliAbissi, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, NonTiScordarDiTe)
 
 LIST tipoColtivazioni = collaborazione, ciclicità, novità, cancellazione, ricordo, indipendenza
 
-VAR pianteCollaborazione = (licheneDegliAbissi, muschioDelleAmanti, cantoDelleCompagne)
-VAR pianteCiclicità = (licheneDegliAbissi, cantoDelleCompagne, nonTiScordarDiTe)
-VAR pianteIndipendenza = (laSpazzata, baccaDellaAddolorata, nonTiScordarDiTe)
-VAR pianteNovità =(muschioDelleAmanti,laSpazzata, baccaDellaAddolorata)
-VAR pianteRicordo =(muschioDelleAmanti, cantoDelleCompagne, nonTiScordarDiTe)
-VAR pianteCancellazione =(licheneDegliAbissi,laSpazzata, baccaDellaAddolorata)
+VAR pianteCollaborazione = (LicheneDegliAbissi, MuschioDelleAmanti, CantoDelleCompagne)
+VAR pianteCiclicità = (LicheneDegliAbissi, CantoDelleCompagne, NonTiScordarDiTe)
+VAR pianteIndipendenza = (LaSpazzata, BaccaDellaAddolorata, NonTiScordarDiTe)
+VAR pianteNovità =(MuschioDelleAmanti,LaSpazzata, BaccaDellaAddolorata)
+VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe)
+VAR pianteCancellazione =(LicheneDegliAbissi,LaSpazzata, BaccaDellaAddolorata)
 
     //Pianta che verrà proposta. La uso anche per tracking dello stato delle piante.
     VAR fungoProposto = ()
@@ -24,8 +24,8 @@ VAR thirdQuest = false
 VAR inCrescita = 0    
 
 === test_coltivazioni ===
-<i>Sassi, foglie e acqua ha qualcosa da raccontarti.
-L'aria si muove tra le fronde, portandoti storie lontane.</i>
+<i>Sassi, foglie e acqua ha qualcosa da raccontarti.</i>
+<i>L'aria si muove tra le fronde, portandoti storie lontane.</i>
     -> test
 
 === test
@@ -78,7 +78,7 @@ L'aria si muove tra le fronde, portandoti storie lontane.</i>
     = third_question
      ~ thirdQuest = true
         <i>L'acqua...</i>
-            + [{~ È ferma, mossa solo sulla superficie|È torbida|È piena di foglie e petali}]
+            + [{~ È ferma, mosLaSpazzatasa solo sulla superficie|È torbida|È piena di foglie e petali}]
                 ~ tipoColtivazioni += ricordo
             + [{~ Scava, portando con sé il terriccio|Schiaccia foglie e sassi|La sua voce è potente}]
                 ~ tipoColtivazioni += cancellazione    
@@ -160,17 +160,17 @@ L'aria si muove tra le fronde, portandoti storie lontane.</i>
 
 === da_lista_a_coltivazioni ===
 {fungoProposto:
-    - licheneDegliAbissi:
+    - LicheneDegliAbissi:
         -> lichene_degli_abissi
-    - muschioDelleAmanti:
+    - MuschioDelleAmanti:
         -> muschio_delle_amanti
-    - cantoDelleCompagne:
+    - CantoDelleCompagne:
         -> canto_delle_compagne
-    - laSpazzata:
+    - LaSpazzata:
         -> la_spazzata
-    - baccaDellaAddolorata:
+    - BaccaDellaAddolorata:
         -> bacca_della_addolorata
-    - nonTiScordarDiTe:
+    - NonTiScordarDiTe:
         -> non_ti_scordar_di_te
 }
 

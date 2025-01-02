@@ -1,6 +1,6 @@
 === plant_check
 {
-    - fungoProposto has licheneDegliAbissi:
+    - fungoProposto has LicheneDegliAbissi:
     {
         - inCrescita <2: -> lichene_degli_abissi.step_zero
         - inCrescita <5: -> lichene_degli_abissi.step_uno
@@ -9,7 +9,7 @@
         - inCrescita <20: -> lichene_degli_abissi.step_quattro
     }
 
-    - fungoProposto has muschioDelleAmanti:
+    - fungoProposto has MuschioDelleAmanti:
     {
         - inCrescita <2: -> muschio_delle_amanti.step_zero
         - inCrescita <5: -> muschio_delle_amanti.step_uno
@@ -18,7 +18,7 @@
         - inCrescita <20: -> muschio_delle_amanti.step_quattro
     }
 
-    - fungoProposto has cantoDelleCompagne:
+    - fungoProposto has CantoDelleCompagne:
     {
         - inCrescita <2: -> canto_delle_compagne.step_zero    
         - inCrescita <5: -> canto_delle_compagne.step_uno
@@ -27,7 +27,7 @@
         - inCrescita <20: -> canto_delle_compagne.step_quattro
     }
 
-    - fungoProposto has laSpazzata:
+    - fungoProposto has LaSpazzata:
     {
         - inCrescita <2: -> la_spazzata.step_zero 
         - inCrescita <5: -> la_spazzata.step_uno
@@ -36,7 +36,7 @@
         - inCrescita <20: -> la_spazzata.step_quattro
     }
 
-    - fungoProposto has baccaDellaAddolorata:
+    - fungoProposto has BaccaDellaAddolorata:
     {
         - inCrescita <2: -> bacca_della_addolorata.step_zero 
         - inCrescita <5: -> bacca_della_addolorata.step_uno
@@ -45,7 +45,7 @@
         - inCrescita <20: -> bacca_della_addolorata.step_quattro
     }
 
-    - fungoProposto has nonTiScordarDiTe:
+    - fungoProposto has NonTiScordarDiTe:
     {
         - inCrescita <2: -> non_ti_scordar_di_te.step_zero     
         - inCrescita <5: -> non_ti_scordar_di_te.step_uno
@@ -53,6 +53,7 @@
         - inCrescita <10: -> non_ti_scordar_di_te.step_tre
         - inCrescita <20: -> non_ti_scordar_di_te.step_quattro
     }
+    ->->
 }
 
 
@@ -73,7 +74,9 @@
           -> main
           
     = step_tre
-    + {are_two_entities_together(LicheneDegliAbissi, PG) && fungoProposto has licheneDegliAbissi} [LicheneDegliAbissi]
+    + {are_two_entities_together(LicheneDegliAbissi, PG) && fungoProposto has LicheneDegliAbissi && inCrescita >9} [LicheneDegliAbissi]
+    + ->
+    -
         <i>Eccolo qui. Un Lichene degli abissi.
         Il lichene degli abissi è una danza, un roteare costante di fungo ed alga. Un ripetersi anche nell'errore, nel dolore.
         Alga e fungo girano e rigirano senza mai afferrarsi.
@@ -111,6 +114,9 @@
           -> main
     
     = step_tre
+    + {are_two_entities_together(MuschioDelleAmanti, PG) && fungoProposto has MuschioDelleAmanti && inCrescita >9} [MuschioDelleAmanti]
+    + ->
+    -
         <i>Senti un fremito nel ventre. I rami ora sono coperti da un fitto tappeto del color dell'alba.
         Quando lo sfiori le tue labbra tremano, ricordi ti invadono: quel bacio, quelle dita desiderate tra le coscie.
         Pienezza ti riempie: è per forza del Muschio delle amanti.
@@ -155,6 +161,9 @@
           -> main
           
     = step_tre
+    + {are_two_entities_together(CantoDelleCompagne, PG) && fungoProposto has CantoDelleCompagne && inCrescita >9} [CantoDelleCompagne]
+    + ->
+    -
         <i>La serra tutta si è fatta rossa, uno stupendo Canto delle compagne galleggia sul terreno.
         In un altro tempo, più pauroso, questo fungo veniva chiamato
         "Canto delle streghe".
@@ -195,6 +204,9 @@
             -> main
     
     = step_tre
+    + {are_two_entities_together(LaSpazzata, PG) && fungoProposto has LaSpazzata && inCrescita >9} [LaSpazzata]
+    + ->
+    -
         <i>Tutto scricchiola, gli alberi sembrano gemere dal dolore.
         Il terreno stesso è impacciato, crepato.
         Ora riconosci cosa hai piantato: una grossa, esplosiva <i>Spazzata</i>.
@@ -234,6 +246,9 @@
           -> main
           
     = step_tre
+    + {are_two_entities_together(BaccaDellaAddolorata, PG) && fungoProposto has BaccaDellaAddolorata && inCrescita >9} [BaccaDellaAddolorata]
+    + ->
+    -
         <i>Nè rami, nè fiori. Solo la mano, e una piccolissima bacca vermiglia.
         Hai trovato una <i>Bacca dell'addolorata</i>. Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ad avanzare.
         La sua bacca aiuta a capire cosa ci vincola, cosa non ci lascia allontanare.</i>
@@ -279,6 +294,9 @@
           -> main
           
     = step_tre
+    + {are_two_entities_together(NonTiScordarDiTe, PG) && fungoProposto has NonTiScordarDiTe && inCrescita >9} [NonTiScordarDiTe]
+    + ->
+    -
         <i>Tronco e sostanza sono una cosa sola: un fungo di vetro, dita che si sfiorano e intrecciano lanciate verso il cielo.
         Hai trovato un <i>Non ti scordar di te</i>.
         Cresce su ciò che è passato, che non c'è più, per renderlo parte di sè.

@@ -19,13 +19,13 @@ LIST sceneObjects = Bench, Wheelbarrow, LapideUno, LapideDue, LapideTre, LapideQ
 
 LIST souls = SpettroUno, SpettroDue, SpettroTre, SpettroQuattro, SpettroCinque, SpettroSei, SpettroSette, AnimaUno, AnimaDue, AnimaTre, AnimellaUno, AnimellaDue, AnimellaTre
 
-LIST mushrooms = LicheneDegliAbissi
+LIST mushrooms = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti,  CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata
 
 
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
 VAR contenutoGiardino = (PG, Mentore, Bench, FromGardenToMausoleum, FromGardenToGreenhouse)
 VAR contenutoMausoleo = (FromMausoleumToGarden, LapideUno, LapideDue, LapideTre, LapideQuattro, LapideCinque, LapideSei, LapideSette)
-VAR contenutoFunghi = (FromGreenhouseToGarden, Wheelbarrow)
+VAR contenutoFunghi = (FromGreenhouseToGarden, Wheelbarrow, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti,  CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata)
 VAR contenutoLabirinto = ()
 VAR contenutoFalene = ()
 VAR contenutoBiblioteca = ()
