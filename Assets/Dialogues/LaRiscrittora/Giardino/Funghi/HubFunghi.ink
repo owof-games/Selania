@@ -1,14 +1,13 @@
 === hub_funghi ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-
-<i> Eccoti nella serra </i>
-
-
+{hub_funghi == 1:<i> Eccoti nella serra </i>|<i>La serra {~ pulsa nell'aria tiepida|risplende|ti attende quieta}</i>}
     -> randomizzazione_dono_luoghi ->
     {
-        - fungoProposto != (): -> cura
-        - else: -> pre_test
+        - fungoProposto != ():
+            -> cura
+        - else:
+            -> pre_test
     }
 
 
