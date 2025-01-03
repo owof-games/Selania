@@ -5,23 +5,118 @@
  ----------------------------------*/
 
 === presentazioni ===
-    Ma dimmi, come <size=50>vuoi</size> che ti chiami?
-        -> il_mio_nome ->
-    E quali sono i pronomi in cui ti riconosci?
-        -> assegnazione_genere ->
-    E allora: piacere di conoscerti, {nome}.
-    E {pronomi has maschili: benvenuto|{pronomi has femminili: benvenuta|benvenutə}}. Spero ti troverai bene, qui.
-    C'è la possibilità che tu possa incontrare dei temi delicati.
-    Puoi avere un warning su alcuni dei principali, vuoi vedere quali?
-        + [Sì]
-            -> trigger_warning ->
-        + [Più tardi]
-        -
-    Vuoi avere qualche informazione su dove ti trovi?
-        + [Sì]
-            -> tutorial
-        + [Non adesso, scusa]
-        -
+    Che buffo, è da un po' che non incontravo una persona nuova.
+    Immagino tu abbia un milione di domande, vero?
+    - (top)
+        * [Dove sono?]
+            {chiSei:Mentore|Sconosciuto}: Questa è una risposta che potrai trovare solo col tempo.
+            {chiSei:Mentore|Sconosciuto}: La cosa che posso dirti con certezza però è che un posto sicuro.
+            {chiSei:Mentore|Sconosciuto}: Un posto dove prenderti le cose coi tuoi tempi, direi.
+            {chiSei:Mentore|Sconosciuto}: Che non è poi male, no?
+            {chiSei:Mentore|Sconosciuto}: So che fuori da qui è tutto un vortice continuo di casini.
+                -> top
+        * (chiSei) [Chi sei?]
+            Sconosciuto: Dipende molto dal momento, e dalla persona che ho davanti.
+            Sconosciuto: Ma direi che puoi chiamarmi Mentore.
+            Mentore: Non un nome originale ma ehi, almeno ti ricordi chi chiamare se sei in difficoltà, no?
+                -> top
+        * [Come me ne vado da qui?]
+            {chiSei:Mentore|Sconosciuto}: Dipende.
+            {chiSei:Mentore|Sconosciuto}: Se con "qui" intendi questa conversazione, di solito interrompere le chiacchierate è sempre possibile.
+            {chiSei:Mentore|Sconosciuto}: Basta dire qualcosa tipo "me ne vado" o simili.
+            {chiSei:Mentore|Sconosciuto}: Nei casi più estremi c'è chi dice "quit", che credo sia il verso di un uccellino.
+            {chiSei:Mentore|Sconosciuto}: Spesso tornano comunque, e la cosa mi fa piacere.
+            {chiSei:Mentore|Sconosciuto}: Per il resto: se sei qui è perché in qualche modo l'hai chiesto.
+            {chiSei:Mentore|Sconosciuto}: Forse ancora non lo sapevi, ma non è un problema: Presto o tardi capirai il perché direi.
+                -> top
+        * [Naa, tutto chiaro] -> name
+        * -> name
+    
+    = name    
+        {chiSei:Mentore|Sconosciuto}:Ora tocca a me farti una domanda: come ti devo chiamare?
+        {chiSei:Mentore|Sconosciuto}:Puoi usare qualsiasi nome: prendi questa occasione come un piccolo nuovo inizio.
+            -> il_mio_nome ->
+        {chiSei:Mentore|Sconosciuto}: E quali sono i pronomi in cui ti riconosci?
+        {chiSei:Mentore|Sconosciuto}: Ti chiedo già scusa per la quantità ridotta di scelte.
+        {chiSei:Mentore|Sconosciuto}: Da qualche parte un giorno ho trovato un testo firmato <i>dev</i> dove qualcuno piangeva nel cercare di "programmare scelte multiple attorno all'uso dei pronomi".
+        {chiSei:Mentore|Sconosciuto}: Non ho ben compreso sinceramente, ma mai dire mai: magari in futuro qualche persona troverà una soluzione più efficace.
+            -> assegnazione_genere ->
+        {chiSei:Mentore|Sconosciuto}: piacere di conoscerti, {nome}.
+        {chiSei:Mentore|Sconosciuto} E {pronomi has maschili: benvenuto|{pronomi has femminili: benvenuta|benvenutə}}. Spero ti troverai bene, qui.
+        {!chiSei: Sconosciuto: Ah, che sbadato. Invece tu chiamami <b>Mentore</b>.}
+        {!chiSei: Mentore: Forse un po' didascalica come scelta, ma ti assicuro che è molto comoda.}
+        Mentore: Ma che sbadato, non ti ho detto cosa devi fare qui!
+            * [Devo?]
+            * [Ok, hai la mia attenzione]
+            * [Mmm, dimmelo dopo, capo]
+                Mentore: Bene, abbiamo una persona intrapprendente qui!
+                Mentore: Ricorda comunque che se ti senti {pronomi has maschili: confuso|{pronomi has femminili: confusa|confusə}} puoi sempre cercarmi e farmi tutte le domande che vuoi.
+                    -> riscrittora            
+            -
+        Mentore: Te la faccio breve: nel <b>Mausoleo</b> incontrerai delle <b>anime</b>.
+        Mentore: Sono totalmente innocue, l'unico problema è che non hanno trovato una soluzione a questioni rimaste aperte quando erano in vita.
+        Mentore: Spesso sono storie di rimpianto o rimorso, in alcuni causi di traumi, o sensi di colpa.
+        Mentore: E a volte hanno avuto una vita così bella che non accettano davvero di morire.
+        Mentore: In tutte queste situazioni arrivi tu, {nome}:
+        Mentore: ascolti per bene quello che dicono,
+        Mentore: fai loro un dono adeguato,
+        Mentore: e poi aiuti queste anime a rileggere un pezzo della loro storia, il pezzo che le blocca qui.
+            - (top2)
+            * [Tipo gasligthing?]
+                Mentore: No no no assolutamente no.
+                Mentore: Anche perché un'anima presa in giro è un'anima che diventa davvero, davvero, davvero fastidiosa.
+                    -> top2
+            * [Così, senza conoscere questa anima?]
+                Mentore: A volte è più facile dare consigli a persone sconosciute.
+                Mentore: E mentre riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
+                Mentore: E poi... no, questo te lo dirò tra qualche tempo.
+                    -> top2
+            * [Un dono?]
+                Mentore: Esatto.
+                Mentore: Le anime tendono ad essere un po' chiuse.
+                Mentore: Ma se fai il giusto dono, se capisci di cosa possono aver bisogno quando ti raccontano la loro storia, puoi aprirti una strada verso il loro cuoricino.
+                Mentore: Molti doni li troverai man mano spostandoti tra questi luoghi.
+                Mentore: E alcune delle piante della serra possono essere donate.
+                Mentore: E poi ci sono decine di altre cose, ma te ne parlerò quando vorrai.
+                    -> top2
+            * [Ascolto. Dono. Risolvo. Chiaro]
+                Mentore: Mi fido di te, {nome}.
+                    -> riscrittora
+            *-> riscrittora        
+            -    
+    
+    = riscrittora
+        Mentore: Giusto per chiarirci per bene sul perché sei qui.
+        Mentore: Non so se ti capita che ti fissi su una cosa perché magari l'ansia o le insicurezze ti mandano nel pallone.
+        Mentore: E quella cosa non è per nulla male, ma il tuo cervello proprio non lo vuole capire.
+        Mentore: E poi arriva una persona amica, o un libro, una canzone, un videogioco, un film, e a un certo punto torni a vedere le cose da una prospettiva più serena.
+        Mentore: Ecco, tu farai qualcosa del genere.
+        Mentore: Qui chiamiamo il tuo ruolo quello {pronomi has maschili: del <b>Riscrittore</b>|{pronomi has femminili: della <b>Riscrittora</b>|dellə <b>Riscrittorə</b>}}, perché aiuterai queste persone a riscrivere e rileggere il loro passato.
+        Mentore: Ma è importante anche il tuo, di benessere.
+            -> trigger
+
+
+    = trigger    
+        Mentore: Nel tuo soggiorno in questo luogo potrebbe accadere che incontrerai qualche situazione complessa.
+        Mentore: Non posso prometterti di avere il controllo su tutto, perché in fondo sono il Mentore, non <i>dev</i>.
+        Mentore: Ma se ti va puoi dirmi quali sono le cose che ti creano disagio, e farò del mio meglio per non fartele incontrare.
+        Mentore: Ci sono temi che vuoi evitare?
+            * [Sì]
+                -> trigger_warning ->
+            * [Ci penso un poco]
+                Mentore: Per questa come per altre cose, puoi sempre farmi le domande che vuoi quando mi incontri in giro.
+            -
+        Mentore: Un'ultima cosa, prima di lasciarti andare.
+        Mentore: Questo posto è più grande di quello che possa sembrare.
+        Mentore: Vuoi che ti dia qualche informazione in merito?
+        Mentore: O preferisci scoprire tutto da {pronomi has maschili: solo|{pronomi has femminili: sola|solə}}?
+            * [Raccontami tutto, Mentore!]
+                -> tutorial
+            * [Naa, preferisco fare le cose di testa mia]
+                Mentore: Ottimo direi.
+                Mentore: Ricorda che puoi comunque farmi tutte le domande che vuoi in qualsiasi momento.
+                Mentore: E quindi: buona riscrittura, {nome}!
+            -
     -> main
 
 /* ---------------------------------
@@ -32,18 +127,9 @@
 
 
 === tutorial
-Tutorial
-    + [Lo voglio ascoltare]
-        -> indicazioni
-    + [Passo]
-        -> main
-    -
--> DONE
-
-
-=== indicazioni
 //Strutturare come wave sintetica?
-Su cosa vorresti avere informazioni?
+    Mentore: Ecco i luoghi che puoi visitare in questo momento.
+    Mentre: Su quali vorresti avere un po' di informazioni?
 
 -(top)
     + [Sul mausoleo]

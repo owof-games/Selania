@@ -13,11 +13,11 @@ VAR mentore_location = ()
 
         {   
             - storiaDue == Conclusa && storiaTre == Conclusa && storiaQuattro == Conclusa:
-            -> random_luogo_mentore_terzo_tier
+                -> random_luogo_mentore_terzo_tier
             - storiaUno == Conclusa:
-            -> random_luogo_mentore_secondo_tier
+                -> random_luogo_mentore_secondo_tier
             - else: 
-            -> random_luogo_mentore_primo_tier
+                -> random_luogo_mentore_primo_tier
         }
 
 

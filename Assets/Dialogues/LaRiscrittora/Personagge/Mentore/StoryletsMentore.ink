@@ -33,7 +33,7 @@
 
 //Passiamo da qui solo a inizio del gioco.
 === inizio
-<>Qualcuno ti osserva</i>
+<>Qualcuno sembra attenderti, sereno e sorridente</i>
     + [Voglio parlargli]
         -> presentazioni
     -
