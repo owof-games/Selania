@@ -3,10 +3,7 @@
 //Introduzioni
     - inizio == 0:
     -> inizio
-    //- presentazioni == 0: -> presentazioni
-    - tutorial == 0:
-    -> tutorial
-
+    
 //Presentazione dei luoghi
     - are_entities_together_in(PG, Mentore, Funghi) && not prima_visita_funghi: -> prima_visita_funghi
 
@@ -24,12 +21,10 @@
  
 //Da creare: storylets per quando anime (non animelle) e Mentore sono assieme
 
-- else: ->->
+    - else: ->->
 
 }
 
-+ ->
--> DONE
 
 //Passiamo da qui solo a inizio del gioco.
 === inizio
