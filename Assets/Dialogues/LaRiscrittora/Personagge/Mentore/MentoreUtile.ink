@@ -53,28 +53,35 @@
                 Mentore: Ricorda comunque che se ti senti {pronomi has maschili: confuso|{pronomi has femminili: confusa|confusə}} puoi sempre cercarmi e farmi tutte le domande che vuoi.
                     -> riscrittora            
             -
-        Mentore: Te la faccio breve: nel <b>Mausoleo</b> incontrerai delle <b>anime</b>.
+        Mentore: Te la faccio breve: nel <b>Mausoleo</b> incontrerai degli <b>spettri</b>.
         Mentore: Sono totalmente innocue, l'unico problema è che non hanno trovato una soluzione a questioni rimaste aperte quando erano in vita.
         Mentore: Spesso sono storie di rimpianto o rimorso, in alcuni causi di traumi, o sensi di colpa.
         Mentore: E a volte hanno avuto una vita così bella che non accettano davvero di morire.
         Mentore: In tutte queste situazioni arrivi tu, {nome}:
         Mentore: ascolti per bene quello che dicono,
         Mentore: fai loro un dono adeguato,
-        Mentore: e poi aiuti queste anime a rileggere un pezzo della loro storia, il pezzo che le blocca qui.
+        Mentore: e poi aiuti questi spettri a rileggere un pezzo della loro storia, il pezzo che le blocca qui.
+        Mentore: A darsi un nuovo nome.
+
             - (top2)
             * [Tipo gasligthing?]
                 Mentore: No no no assolutamente no.
-                Mentore: Anche perché un'anima presa in giro è un'anima che diventa davvero, davvero, davvero fastidiosa.
+                Mentore: Anche perché uno spettro preso in giro è uno spettro che diventa davvero, davvero, davvero fastidiosa.
                     -> top2
-            * [Così, senza conoscere questa anima?]
+            * [Così, senza conoscere questo spettro?]
                 Mentore: A volte è più facile dare consigli a persone sconosciute.
                 Mentore: E mentre riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
                 Mentore: E poi... no, questo te lo dirò tra qualche tempo.
                     -> top2
             * [Un dono?]
                 Mentore: Esatto.
-                Mentore: Le anime tendono ad essere un po' chiuse.
+                Mentore: Gli spettri tendono ad essere un po' chiusi.
                 Mentore: Ma se fai il giusto dono, se capisci di cosa possono aver bisogno quando ti raccontano la loro storia, puoi aprirti una strada verso il loro cuoricino.
+                        {
+                            - doniTrovati hasnt BrinaDellImpossibile: Mentore: E a proposito: eccoti un po' di Brina dell'Impossibile. Son sicuro che ti servirà a breve.
+                                <i>Le linee della tua mano si fanno trasparenti. Il vento le attraversa, eppure le dita funzionano correttamente e non senti dolore</i>
+                                ~ doniTrovati += BrinaDellImpossibile
+                        }   
                 Mentore: Molti doni li troverai man mano spostandoti tra questi luoghi.
                 Mentore: E alcune delle piante della serra possono essere donate.
                 Mentore: E poi ci sono decine di altre cose, ma te ne parlerò quando vorrai.
@@ -92,7 +99,10 @@
         Mentore: E poi arriva una persona amica, o un libro, una canzone, un videogioco, un film, e a un certo punto torni a vedere le cose da una prospettiva più serena.
         Mentore: Ecco, tu farai qualcosa del genere.
         Mentore: Qui chiamiamo il tuo ruolo quello {pronomi has maschili: del <b>Riscrittore</b>|{pronomi has femminili: della <b>Riscrittora</b>|dellə <b>Riscrittorə</b>}}, perché aiuterai queste persone a riscrivere e rileggere il loro passato.
-        Mentore: Ma è importante anche il tuo, di benessere.
+        Mentore: Due cose importantissime: ci sono più strade per aiutare ogni spettro.
+        Mentore: E non sempre puoi dare a tutti la risoluzione che spereresti, e va bene così.
+        Mentore: Il tuo compito è aiutarli ad uscire dallo stallo in cui sono.
+        Mentore: Il mio invece è di occuparmi anche del tuo benessere, e quindi devo dirti un'altra cosa.
             -> trigger
 
 
@@ -133,13 +143,23 @@
 
 -(top)
     + [Sul mausoleo]
-        Informazioni
+        Mentore: Il Mausoleo, ad est del Giardino, è il posto dove si trovano i vari spettri.
+        Mentore: Non saranno tantissime, non ti preoccupare: ogni {pronomi has maschili: Riscrittore|{pronomi has femminili: Riscrittora|Riscrittorə}} si occupa di uno specifico mausoleo.
+        Mentore: All'ingresso troverai diverse lapidi. Ognuna indica lo spettro che vi è contenuto e il nome che si è dato prima di morire.
+        Mentore: Alcune richiedono un po' di esperienza prima di interagirci, altre ti chiederanno di ascoltare subito la loro storia.
+        Mentore: Ricorda che non puoi mai iniziare una riscrittura senza un dono.
+        Mentore: I doni li trovi in giro camminando, col tempo imparerai anche che alcuni luoghi hanno doni specifici.
+        Mentore: O possono aiutarti a crearne tu, di nuovi, come le <b>Serre</b>.
         {
-        - doniTrovati hasnt BrinaDellImpossibile: Gli spettri apprezzano sempre i doni. Tieni questo pezzettino di Brina dell'Impossibile.
+        - doniTrovati hasnt BrinaDellImpossibile: Mentore: E a proposito di doni: tieni questo pezzettino di Brina dell'Impossibile. Potrebbe tornarti utile.
         <i>Le linee della tua mano si fanno trasparenti. Il vento le attraversa, eppure le dita funzionano correttamente e non senti dolore</i>
         ~ doniTrovati += BrinaDellImpossibile
-        }   
+        }
+        Mentore: Più il dono è vicino a quello che di cui ha bisogno lo spettro, più sarà facile convincerlo a riscrivere la sua versione di sé.
+        Mentore: Dopo il dono ti verrà indicata la quantità di <b>inchiostro</b> (non fare domande, è roba stranda del <i>dev</i>): più è alto, più sarai capace di riscrivere la visione di sé che ha lo spettro.
+        Mentore: E in alcuni casi, potresti scoprire qualcosa di speciale.
             -> top
+            
     + [Sulla serra]
         Info
             {
