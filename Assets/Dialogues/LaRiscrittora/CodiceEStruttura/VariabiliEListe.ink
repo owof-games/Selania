@@ -13,7 +13,7 @@ LIST luoghi = Giardino, Mausoleo, Funghi, Biblioteca, Falene, Labirinto, Tisane,
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
 LIST characters = Mentore, PG
 
-LIST transitions = FromMausoleumToGarden, FromGardenToMausoleum, FromGreenhouseToGarden, FromGardenToGreenhouse
+LIST transitions = FromMausoleumToGarden, FromGardenToMausoleum, FromGreenhouseToGarden, FromGardenToGreenhouse, FromGardenToNothing, FromMausoleumToNothing
 
 LIST sceneObjects = Bench, Wheelbarrow, LapideUno, LapideDue, LapideTre, LapideQuattro, LapideCinque, LapideSei, LapideSette
 
@@ -23,8 +23,8 @@ LIST mushrooms = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti,  Cant
 
 
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
-VAR contenutoGiardino = (PG, Mentore, Bench, FromGardenToMausoleum, FromGardenToGreenhouse)
-VAR contenutoMausoleo = (FromMausoleumToGarden, LapideUno, LapideDue, LapideTre, LapideQuattro, LapideCinque, LapideSei, LapideSette)
+VAR contenutoGiardino = (PG, Mentore, Bench, FromGardenToMausoleum, FromGardenToGreenhouse, FromGardenToNothing)
+VAR contenutoMausoleo = (FromMausoleumToGarden, LapideUno, LapideDue, LapideTre, LapideQuattro, LapideCinque, LapideSei, LapideSette, FromMausoleumToNothing)
 VAR contenutoFunghi = (FromGreenhouseToGarden, Wheelbarrow)
 VAR contenutoLabirinto = ()
 VAR contenutoFalene = ()

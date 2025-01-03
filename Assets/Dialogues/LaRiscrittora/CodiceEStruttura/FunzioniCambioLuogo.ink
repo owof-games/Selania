@@ -9,6 +9,13 @@
     //-> comparsa_anime ->
     
     //-> hub_giardino
+
++ {are_two_entities_together(PG, FromGardenToNothing)} [FromGardenToNothing]
+    <i>Questa strada risulta bloccata, per ora</i>
+    -> main
++ {are_two_entities_together(PG, FromMausoleumToNothing)} [FromMausoleumToNothing]
+    <i>L'acqua alta blocca la strada. Eppure senti una voce cantare</i>
+    -> main
     
 + {are_two_entities_together(PG, FromMausoleumToGarden)} [FromMausoleumToGarden]
     ~ move_entity(PG, Giardino)
