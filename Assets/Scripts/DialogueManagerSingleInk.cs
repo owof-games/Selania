@@ -342,7 +342,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     public void OnQuitButton()
     {
+        SaveGame();
         Application.Quit();
+
     }
 
     [System.Serializable]

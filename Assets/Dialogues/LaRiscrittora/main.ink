@@ -49,5 +49,6 @@
 //Elementi gestione interfaccia
 <- save
 <- load
+<- quit
 
 + -> main

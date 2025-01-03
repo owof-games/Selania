@@ -102,3 +102,8 @@
     <i>Il salvataggio è stato correttamente caricato</i>
     -
     -> main
+=== quit ===
+    + [Quit]
+    <i>Progresso salvato. A presto!</i>
+    -
+    -> main
