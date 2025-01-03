@@ -49,15 +49,17 @@ Su cosa vorresti avere informazioni?
     + [Sul mausoleo]
         Informazioni
         {
-        - doniTrovati hasnt LaSpazzata: Gli spettri apprezzano sempre i doni. Tieni questo pezzettino di Spazzata.
-        ~ doniTrovati += LaSpazzata
+        - doniTrovati hasnt BrinaDellImpossibile: Gli spettri apprezzano sempre i doni. Tieni questo pezzettino di Brina dell'Impossibile.
+        <i>Le linee della tua mano si fanno trasparenti. Il vento le attraversa, eppure le dita funzionano correttamente e non senti dolore</i>
+        ~ doniTrovati += BrinaDellImpossibile
         }   
             -> top
     + [Sulla serra]
         Info
             {
-            - doniTrovati hasnt LaSpazzata: Uh, e poi a volte qui crescono doni utili per parlare con gli spettri. Tieni questo pezzettino di Spazzata.
-            ~ doniTrovati += LaSpazzata
+            - doniTrovati hasnt BrinaDellImpossibile: Uh, e poi a volte qui crescono doni utili per parlare con gli spettri. Tieni questo pezzettino di Brina dell'Impossibile.
+            <i>Le linee della tua mano si fanno trasparenti. Il vento le attraversa, eppure le dita funzionano correttamente e non senti dolore</i>    
+            ~ doniTrovati += BrinaDellImpossibile
             }
             -> top
     + {storiaUno == Conclusa}[Sulle falene]

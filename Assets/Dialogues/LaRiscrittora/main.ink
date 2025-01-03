@@ -41,6 +41,7 @@
 <- canto_delle_compagne.step_tre
 <- muschio_delle_amanti.step_tre
 <- lichene_degli_abissi.step_tre
+<- brina_dell_impossibile.step_tre
 
 //Elementi del giardino
 <- panchina

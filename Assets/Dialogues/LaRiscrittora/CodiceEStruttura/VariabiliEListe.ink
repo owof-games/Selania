@@ -19,7 +19,7 @@ LIST sceneObjects = Bench, Wheelbarrow, LapideUno, LapideDue, LapideTre, LapideQ
 
 LIST souls = SpettroUno, SpettroDue, SpettroTre, SpettroQuattro, SpettroCinque, SpettroSei, SpettroSette, AnimaUno, AnimaDue, AnimaTre, AnimellaUno, AnimellaDue, AnimellaTre
 
-LIST mushrooms = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti,  CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata
+LIST mushrooms = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti,  CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile
 
 
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
@@ -31,7 +31,7 @@ VAR contenutoFalene = ()
 VAR contenutoBiblioteca = ()
 VAR contenutoTisane = ()
 VAR contenutoSirene = ()
-VAR contenutoCasettaAnime = (AnimaUno, AnimaDue, AnimaTre, AnimellaUno, AnimellaDue, AnimellaTre, SpettroUno, SpettroDue, SpettroTre, SpettroQuattro, SpettroCinque, SpettroSei, SpettroSette, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata)
+VAR contenutoCasettaAnime = (AnimaUno, AnimaDue, AnimaTre, AnimellaUno, AnimellaDue, AnimellaTre, SpettroUno, SpettroDue, SpettroTre, SpettroQuattro, SpettroCinque, SpettroSei, SpettroSette, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
 
     
 //Variabili per tracciare i trigger warning. True = non è TW, posso mostrare quelle storie

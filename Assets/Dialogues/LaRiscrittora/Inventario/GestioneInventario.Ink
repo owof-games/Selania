@@ -39,10 +39,12 @@
 - coperta: 
     ~ return "una coperta"
 - LaSpazzata: 
-    ~ return "un residuo della spezzata"    
+    ~ return "un residuo della Spezzata"    
 - BaccaDellaAddolorata: 
-    ~ return "una bacca della Addolorata"
+    ~ return "una Bacca della Addolorata"
 - MuschioDelleAmanti:
-    ~ return "del muschio delle amanti"
+    ~ return "del Muschio delle Amanti"
+- BrinaDellImpossibile:
+    ~ return "della Brina dell'Impossibile"    
 
 }

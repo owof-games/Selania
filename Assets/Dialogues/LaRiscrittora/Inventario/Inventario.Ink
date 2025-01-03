@@ -13,8 +13,6 @@
 
 
 
-
-
 === gestione_inventario ===
 {debug: I doni trovati sono {doniTrovati}}
 
@@ -64,10 +62,7 @@
     {
     - storiaUno == InCorso:
         ~ statoInchiostroSpettroUno ++
-        ~ statoInchiostroSpettroUno ++
-        ~ statoInchiostroSpettroUno ++
-        <i>Spettro uno ti guarda sorpreso, e si porta il frammento al petto.</i>
-        ~ eventoSpecialeSpettroUno = true
+        <i>Spettro uno apprezza il dono</i>
         ~ donoSpettroUno = true
         -> storia_uno.capitolo_uno
 
@@ -119,6 +114,30 @@
         Spettro tre apprezza mediamente il tuo dono.
     }
     -> main
+    
++ {doniTrovati has BrinaDellImpossibile} [Dono un frammento di Brina dell'Impossibile]
+    ~ doniTrovati -= BrinaDellImpossibile
+    ~ doniDonati += BrinaDellImpossibile
+    {
+    - storiaUno == InCorso:
+        ~ statoInchiostroSpettroUno ++
+        ~ statoInchiostroSpettroUno ++
+        ~ statoInchiostroSpettroUno ++
+        <i>Spettro uno si porta la Brina al petto, e ti guarda commosso</i>
+        <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano</i>
+        ~ donoSpettroUno = true
+         ~ eventoSpecialeSpettroUno = true
+        -> storia_uno.capitolo_uno
+
+    - storiaDue == InCorso:
+        Hai regalato a spettro due qualcosa che proprio non gli interessa
+        <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano</i>
+    - storiaTre == InCorso:
+        ~ statoInchiostroSpettroTre ++
+        Spettro tre apprezza mediamente il tuo dono.
+        <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano</i>        
+    }
+   -> main    
     
     //Se la lista è vuota
     + {doniTrovati == ()} [Non ho nulla da donare]
