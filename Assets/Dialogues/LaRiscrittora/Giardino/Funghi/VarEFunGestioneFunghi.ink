@@ -24,7 +24,7 @@ VAR thirdQuest = false
 VAR inCrescita = 0    
 
 === test_coltivazioni ===
-<i>Sassi, foglie e acqua ha qualcosa da raccontarti.</i>
+<i>Sassi, foglie e acqua hanno qualcosa da raccontarti.</i>
 <i>L'aria si muove tra le fronde, portandoti storie lontane.</i>
     -> test
 
@@ -171,7 +171,14 @@ VAR inCrescita = 0
     - BaccaDellaAddolorata:
         -> bacca_della_addolorata
     - NonTiScordarDiTe:
-        -> non_ti_scordar_di_te
+        {
+        //Se il trigger warning sul lutto è stato dichiarato, allora prendo un altro risultato.
+            - lutto == true:
+                -> non_ti_scordar_di_te
+            - lutto == false:
+                -> results
+        }
+        
 }
 
 
