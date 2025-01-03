@@ -374,6 +374,10 @@
                 ~ move_entity(BrinaDellImpossibile, CasettaAnime)
                 ~ inCrescita = 0
                 ~ fungoProposto = ()
+                    {
+                        - doniTrovati hasnt BrinaDellImpossibile:
+                        ~ doniTrovati += BrinaDellImpossibile
+                    }                
               -> main
         + + [Ho bisogno di pensarci un poco]
               -> main
@@ -383,10 +387,7 @@
             ~ move_entity(BrinaDellImpossibile, CasettaAnime)
             ~ inCrescita = 0
             ~ fungoProposto = ()
-                    {
-                        - doniTrovati hasnt BrinaDellImpossibile:
-                        ~ doniTrovati += BrinaDellImpossibile
-                    }
+
                         
         -> main      
           
