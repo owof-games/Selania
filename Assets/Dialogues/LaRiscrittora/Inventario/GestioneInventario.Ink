@@ -38,11 +38,11 @@
     ~ return "un vaso vuoto"
 - coperta: 
     ~ return "una coperta"
-- laspezzata: 
+- LaSpazzata: 
     ~ return "un residuo della spezzata"    
-- baccadellaaddolorata: 
+- BaccaDellaAddolorata: 
     ~ return "una bacca della Addolorata"
-- muschiodelleamanti:
+- MuschioDelleAmanti:
     ~ return "del muschio delle amanti"
 
 }

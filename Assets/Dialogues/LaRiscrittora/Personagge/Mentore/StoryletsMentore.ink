@@ -52,8 +52,8 @@
     Mentore: Riscrivere è un lavoro faticoso, e per questo è importante che ogni {pronomi has maschili: riscrittore|{pronomi has femminili: riscrittora|riscrittorə}} abbia dei momenti per prendersi cura di sé.
     Mentore: Tornaci spesso: tutto nel giardino cambia spesso.
     {
-    - doniTrovati hasnt laspezzata: Uh, e poi a volte qui crescono doni utili per parlare con gli spettri. Tieni questo pezzettino di Spazzata.
-        ~ doniTrovati += laspezzata
+    - doniTrovati hasnt LaSpazzata: Uh, e poi a volte qui crescono doni utili per parlare con gli spettri. Tieni questo pezzettino di Spazzata.
+        ~ doniTrovati += LaSpazzata
     }
 
 -> main

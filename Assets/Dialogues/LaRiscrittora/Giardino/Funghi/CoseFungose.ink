@@ -5,7 +5,9 @@
         - inCrescita <2: -> lichene_degli_abissi.step_zero
         - inCrescita <5: -> lichene_degli_abissi.step_uno
         - inCrescita <8: -> lichene_degli_abissi.step_due
-        - inCrescita <10: -> lichene_degli_abissi.step_tre
+        - inCrescita <10:
+            ~ move_entity(LicheneDegliAbissi, Funghi)
+            -> lichene_degli_abissi.step_tre
         - inCrescita <20: -> lichene_degli_abissi.step_quattro
     }
 
@@ -14,7 +16,9 @@
         - inCrescita <2: -> muschio_delle_amanti.step_zero
         - inCrescita <5: -> muschio_delle_amanti.step_uno
         - inCrescita <8: -> muschio_delle_amanti.step_due
-        - inCrescita <10: -> muschio_delle_amanti.step_tre
+        - inCrescita <10:
+             ~ move_entity(MuschioDelleAmanti, Funghi)
+            -> muschio_delle_amanti.step_tre
         - inCrescita <20: -> muschio_delle_amanti.step_quattro
     }
 
@@ -23,7 +27,9 @@
         - inCrescita <2: -> canto_delle_compagne.step_zero    
         - inCrescita <5: -> canto_delle_compagne.step_uno
         - inCrescita <8: -> canto_delle_compagne.step_due
-        - inCrescita <10: -> canto_delle_compagne.step_tre
+        - inCrescita <10:
+             ~ move_entity(CantoDelleCompagne, Funghi)
+            -> canto_delle_compagne.step_tre
         - inCrescita <20: -> canto_delle_compagne.step_quattro
     }
 
@@ -32,7 +38,9 @@
         - inCrescita <2: -> la_spazzata.step_zero 
         - inCrescita <5: -> la_spazzata.step_uno
         - inCrescita <8: -> la_spazzata.step_due
-        - inCrescita <10: -> la_spazzata.step_tre
+        - inCrescita <10:
+             ~ move_entity(LaSpazzata, Funghi)
+            -> la_spazzata.step_tre
         - inCrescita <20: -> la_spazzata.step_quattro
     }
 
@@ -41,7 +49,9 @@
         - inCrescita <2: -> bacca_della_addolorata.step_zero 
         - inCrescita <5: -> bacca_della_addolorata.step_uno
         - inCrescita <8: -> bacca_della_addolorata.step_due
-        - inCrescita <10: -> bacca_della_addolorata.step_tre
+        - inCrescita <10:
+             ~ move_entity(BaccaDellaAddolorata, Funghi)
+            -> bacca_della_addolorata.step_tre
         - inCrescita <20: -> bacca_della_addolorata.step_quattro
     }
 
@@ -50,7 +60,9 @@
         - inCrescita <2: -> non_ti_scordar_di_te.step_zero     
         - inCrescita <5: -> non_ti_scordar_di_te.step_uno
         - inCrescita <8: -> non_ti_scordar_di_te.step_due
-        - inCrescita <10: -> non_ti_scordar_di_te.step_tre
+        - inCrescita <10:
+             ~ move_entity(NonTiScordarDiTe, Funghi)
+            -> non_ti_scordar_di_te.step_tre
         - inCrescita <20: -> non_ti_scordar_di_te.step_quattro
     }
     ->->
@@ -74,9 +86,7 @@
           -> main
           
     = step_tre
-    + {are_two_entities_together(LicheneDegliAbissi, PG) && fungoProposto has LicheneDegliAbissi && inCrescita >9} [LicheneDegliAbissi]
-    + ->
-    -
+    + {are_two_entities_together(LicheneDegliAbissi, PG)} [LicheneDegliAbissi]
         <i>Eccolo qui. Un Lichene degli abissi.
         Il lichene degli abissi è una danza, un roteare costante di fungo ed alga. Un ripetersi anche nell'errore, nel dolore.
         Alga e fungo girano e rigirano senza mai afferrarsi.
@@ -86,6 +96,7 @@
                 <i> Un piccolo sbuffo. Le tue dita ora sanno di mare.
                 Il lichene è scomparso, tu no.
                 C'è qualcuno che devi allontanare?</i>
+                    ~ move_entity(LicheneDegliAbissi, CasettaAnime)
                     ~ inCrescita = 0
                     ~ fungoProposto = ()
             + + [Lo lascio dov'è]
@@ -94,6 +105,7 @@
               
     = step_quattro
         <i>Troppo tempo è passato, e non rimane che un foro nel terreno.</i>
+            ~ move_entity(LicheneDegliAbissi, CasettaAnime)
             ~ inCrescita = 0
             ~ fungoProposto = ()
               -> main
@@ -114,9 +126,7 @@
           -> main
     
     = step_tre
-    + {are_two_entities_together(MuschioDelleAmanti, PG) && fungoProposto has MuschioDelleAmanti && inCrescita >9} [MuschioDelleAmanti]
-    + ->
-    -
+    + {are_two_entities_together(MuschioDelleAmanti, PG)} [MuschioDelleAmanti]
         <i>Senti un fremito nel ventre. I rami ora sono coperti da un fitto tappeto del color dell'alba.
         Quando lo sfiori le tue labbra tremano, ricordi ti invadono: quel bacio, quelle dita desiderate tra le coscie.
         Pienezza ti riempie: è per forza del Muschio delle amanti.
@@ -126,11 +136,12 @@
             + + [Raccolgo un po' del muschio]
                 Così vicino, il muschio ti chiama.
                 Ti invita a fermare per un attimo tutto, a premiare come più ti piace il tuo corpo, dentro o fuori che sia.
+                    ~ move_entity(MuschioDelleAmanti, CasettaAnime)
                     ~ inCrescita = 0
                     ~ fungoProposto = ()
                     {
-                        - doniTrovati hasnt muschiodelleamanti:
-                        ~ doniTrovati += muschiodelleamanti
+                        - doniTrovati hasnt MuschioDelleAmanti:
+                        ~ doniTrovati += MuschioDelleAmanti
                     }
             + + [Non è ancora il momento]
             - -
@@ -138,6 +149,7 @@
     
     = step_quattro
         <i>Qualcosa ti titilla lo stomaco, ma qualunque cosa stesse crescendo, non c'è più.</i>
+                ~ move_entity(MuschioDelleAmanti, CasettaAnime)
                 ~ inCrescita = 0
                 ~ fungoProposto = ()
             -> main
@@ -161,9 +173,7 @@
           -> main
           
     = step_tre
-    + {are_two_entities_together(CantoDelleCompagne, PG) && fungoProposto has CantoDelleCompagne && inCrescita >9} [CantoDelleCompagne]
-    + ->
-    -
+    + {are_two_entities_together(CantoDelleCompagne, PG)} [CantoDelleCompagne]
         <i>La serra tutta si è fatta rossa, uno stupendo Canto delle compagne galleggia sul terreno.
         In un altro tempo, più pauroso, questo fungo veniva chiamato
         "Canto delle streghe".
@@ -175,6 +185,7 @@
                 <i>Puoi farlo da te, o chiamare qualcuno a cui tieni.
                 Riempiti dell'euforia del fungo, e lascia che il mondo intero ascolti la tua voce.
                 Con l'ultima nota, il fungo sarà altrove, da un'altra compagna bisognosa.</i>
+                    ~ move_entity(CantoDelleCompagne, CasettaAnime)
                     ~ inCrescita = 0
                     ~ fungoProposto = ()
                     -> main
@@ -183,6 +194,7 @@
               
     = step_quattro
         <i>Rimane un coro lontano dell'aria, nulla di più.</i>
+            ~ move_entity(CantoDelleCompagne, CasettaAnime)
             ~ inCrescita = 0
             ~ fungoProposto = ()
             -> main
@@ -204,9 +216,7 @@
             -> main
     
     = step_tre
-    + {are_two_entities_together(LaSpazzata, PG) && fungoProposto has LaSpazzata && inCrescita >9} [LaSpazzata]
-    + ->
-    -
+    + {are_two_entities_together(LaSpazzata, PG)} [LaSpazzata]
         <i>Tutto scricchiola, gli alberi sembrano gemere dal dolore.
         Il terreno stesso è impacciato, crepato.
         Ora riconosci cosa hai piantato: una grossa, esplosiva <i>Spazzata</i>.
@@ -217,6 +227,7 @@
             <i>Questa è la parte più facile: basta prometterle che dirai a qualcuno qualcosa che senti sullo stomaco. Qualcosa che sono giorni o settimane (uh: questa Spazzata è molto grande. forse mesi?) che ti pesa.
                 Falle la promessa, e se ne andrà.
                 Ma se poi tradisci la promessa, la Spazzata tornerà ancora più forte.</i>
+                    ~ move_entity(LaSpazzata, CasettaAnime)
                     ~ inCrescita = 0
                     ~ fungoProposto = ()
                     -> main
@@ -225,6 +236,7 @@
     
     = step_quattro
         <i>Il soffitto di rami sembra incavato. Ciò che c'era, ora non è più.</i>
+            ~ move_entity(LaSpazzata, CasettaAnime)
             ~ inCrescita = 0
             ~ fungoProposto = ()    
           -> main
@@ -246,9 +258,7 @@
           -> main
           
     = step_tre
-    + {are_two_entities_together(BaccaDellaAddolorata, PG) && fungoProposto has BaccaDellaAddolorata && inCrescita >9} [BaccaDellaAddolorata]
-    + ->
-    -
+    + {are_two_entities_together(BaccaDellaAddolorata, PG)} [BaccaDellaAddolorata]
         <i>Nè rami, nè fiori. Solo la mano, e una piccolissima bacca vermiglia.
         Hai trovato una <i>Bacca dell'addolorata</i>. Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ad avanzare.
         La sua bacca aiuta a capire cosa ci vincola, cosa non ci lascia allontanare.</i>
@@ -256,11 +266,12 @@
             + + [La afferro]
             <i>La mano molla la sua presa, rivelandosi per quel che era dall'inizio: solo un insieme tenace di radici.
             Senti dalle tue spalle qualcosa sciogliersi, scivolare via: ora hai un po' meno paura di camminare.</i>
+                ~ move_entity(BaccaDellaAddolorata, CasettaAnime)
                 ~ inCrescita = 0
                 ~ fungoProposto = ()
                     {
-                        - doniTrovati hasnt baccadellaaddolorata:
-                        ~ doniTrovati += baccadellaaddolorata
+                        - doniTrovati hasnt BaccaDellaAddolorata:
+                        ~ doniTrovati += BaccaDellaAddolorata
                     }
             
                 -> main
@@ -268,7 +279,8 @@
                 -> main
               
     = step_quattro
-        <i>Una mano tremante nel terreno, rinsecchita. Si sbriciola al primo soffio d'aria.</i>          
+        <i>Una mano tremante nel terreno, rinsecchita. Si sbriciola al primo soffio d'aria.</i>
+            ~ move_entity(BaccaDellaAddolorata, CasettaAnime)
             ~ inCrescita = 0
             ~ fungoProposto = ()
             -> main
@@ -294,9 +306,7 @@
           -> main
           
     = step_tre
-    + {are_two_entities_together(NonTiScordarDiTe, PG) && fungoProposto has NonTiScordarDiTe && inCrescita >9} [NonTiScordarDiTe]
-    + ->
-    -
+    + {are_two_entities_together(NonTiScordarDiTe, PG)} [NonTiScordarDiTe]
         <i>Tronco e sostanza sono una cosa sola: un fungo di vetro, dita che si sfiorano e intrecciano lanciate verso il cielo.
         Hai trovato un <i>Non ti scordar di te</i>.
         Cresce su ciò che è passato, che non c'è più, per renderlo parte di sè.
@@ -307,6 +317,7 @@
             <i>Si sciolgono tra le tue mani, rilasciando di nuovo un profumo familiare.
             Ti porti quel che rimane alle labbra: il tuo corpo viene invaso da fiducia e calore.
             Senti in te chi non c'è più: siete parte della stessa storia.</i>
+                ~ move_entity(NonTiScordarDiTe, CasettaAnime)
                 ~ inCrescita = 0
                 ~ fungoProposto = ()
               -> main
@@ -315,6 +326,7 @@
               
     = step_quattro
         <i>Malinconia. La sensazione di aver fatto tardi, di aver perso qualcosa di importante.</i>
+            ~ move_entity(NonTiScordarDiTe, CasettaAnime)
             ~ inCrescita = 0
             ~ fungoProposto = ()
         -> main

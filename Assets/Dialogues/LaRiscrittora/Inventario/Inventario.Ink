@@ -18,9 +18,9 @@
 === gestione_inventario ===
 {debug: I doni trovati sono {doniTrovati}}
 
-+ {doniTrovati has muschiodelleamanti} [Dono del muschio delle amanti]
-    ~ doniTrovati -= muschiodelleamanti
-    ~ doniDonati += muschiodelleamanti
++ {doniTrovati has MuschioDelleAmanti} [Dono del muschio delle amanti]
+    ~ doniTrovati -= MuschioDelleAmanti
+    ~ doniDonati += MuschioDelleAmanti
     {
     - storiaUno == InCorso:
     <i>Lo spettro è confuso dal dono.</i>
@@ -40,9 +40,9 @@
     
    -> main
 
-+ {doniTrovati has baccadellaaddolorata} [Dono una bacca della Addolorata]
-    ~ doniTrovati -= baccadellaaddolorata
-    ~ doniDonati += baccadellaaddolorata
++ {doniTrovati has BaccaDellaAddolorata} [Dono una bacca della Addolorata]
+    ~ doniTrovati -= BaccaDellaAddolorata
+    ~ doniDonati += BaccaDellaAddolorata
     {
     - storiaUno == InCorso:
         <i>Lo spettro è confuso dal dono.</i>
@@ -58,9 +58,9 @@
     }
    -> main    
 
-+ {doniTrovati has laspezzata} [Dono un frammento della Spezzata]
-    ~ doniTrovati -= laspezzata
-    ~ doniDonati += laspezzata
++ {doniTrovati has LaSpazzata} [Dono un frammento della Spezzata]
+    ~ doniTrovati -= LaSpazzata
+    ~ doniDonati += LaSpazzata
     {
     - storiaUno == InCorso:
         ~ statoInchiostroSpettroUno ++

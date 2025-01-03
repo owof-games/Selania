@@ -15,9 +15,11 @@
 //dato che alcuni doni possono venire da altre liste (es: serra) e avere quindi già in uso lo stesso nome, la nomenclatura qui sarà tutta in minuscolo
 
 
-LIST doni = muschiodelleamanti, baccadellaaddolorata, laspezzata, coperta, vasovuoto
+LIST doni = coperta, vasovuoto
 
-VAR doniNonTrovati = (laspezzata, muschiodelleamanti, baccadellaaddolorata)
+VAR doniColtivabili = (MuschioDelleAmanti, BaccaDellaAddolorata, LaSpazzata)
+
+VAR doniNonTrovati = (MuschioDelleAmanti, BaccaDellaAddolorata, LaSpazzata)
 VAR doniNonTrovatiLuogo = (coperta, vasovuoto)
 
 VAR doniTrovati = ()

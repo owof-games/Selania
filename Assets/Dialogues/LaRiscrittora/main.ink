@@ -35,12 +35,12 @@
 
 //Elementi della serra
 <- call_test
-<- non_ti_scordar_di_te
-//<- bacca_della_addolorata.step_tre
-//<- la_spazzata.step_tre
-//<- canto_delle_compagne.step_tre
-//<- muschio_delle_amanti.step_tre
-//<- lichene_degli_abissi.step_tre
+<- non_ti_scordar_di_te.step_tre
+<- bacca_della_addolorata.step_tre
+<- la_spazzata.step_tre
+<- canto_delle_compagne.step_tre
+<- muschio_delle_amanti.step_tre
+<- lichene_degli_abissi.step_tre
 
 //Elementi del giardino
 <- panchina

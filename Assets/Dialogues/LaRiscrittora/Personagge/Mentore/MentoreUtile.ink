@@ -49,15 +49,15 @@ Su cosa vorresti avere informazioni?
     + [Sul mausoleo]
         Informazioni
         {
-        - doniTrovati hasnt laspezzata: Gli spettri apprezzano sempre i doni. Tieni questo pezzettino di Spazzata.
-        ~ doniTrovati += laspezzata
+        - doniTrovati hasnt LaSpazzata: Gli spettri apprezzano sempre i doni. Tieni questo pezzettino di Spazzata.
+        ~ doniTrovati += LaSpazzata
         }   
             -> top
     + [Sulla serra]
         Info
             {
-            - doniTrovati hasnt laspezzata: Uh, e poi a volte qui crescono doni utili per parlare con gli spettri. Tieni questo pezzettino di Spazzata.
-            ~ doniTrovati += laspezzata
+            - doniTrovati hasnt LaSpazzata: Uh, e poi a volte qui crescono doni utili per parlare con gli spettri. Tieni questo pezzettino di Spazzata.
+            ~ doniTrovati += LaSpazzata
             }
             -> top
     + {storiaUno == Conclusa}[Sulle falene]
