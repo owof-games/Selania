@@ -45,7 +45,7 @@
 
         = trigger_solitudine
             <i>Hai segnalato che preferiresti non sentire storie riguardanti la solitudine, che è uno dei <i>temi di questo spettro.</i>
-            Puoi decidere se continuare comunque, o saltare la sua storia.</i>
+            <i>Puoi decidere se continuare comunque, o saltare la sua storia.</i>
             <i>Nel secondo caso, potrai (in modo un po' arbitrario) aiutarlo a riscrivere il suo nome.</i>
                 * [Voglio comunque ascoltare la sua storia.]
                     -> intro
@@ -80,7 +80,7 @@
 === doni_storia_uno ===
 //Qui è la fase di check per i doni, se donarne, quali, o non farlo.
     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Tutto sommato è una cosa così banale, così banale. Eppure questo freddo non se ne vuole andare.
-        + {doniTrovati != ()} [Forse con un dono adeguato, lo spettro sarà disponibile a parlarmi.]
+        + {doniTrovati != ()} [Ho un dono per lo spettro.]
             -> gestione_inventario
         + [Mi allontano.]
             -> main

@@ -79,7 +79,7 @@
                 Mentore: Ma se fai il giusto dono, se capisci di cosa possono aver bisogno quando ti raccontano la loro storia, puoi aprirti una strada verso il loro cuoricino.
                         {
                             - doniTrovati hasnt BrinaDellImpossibile: Mentore: E a proposito: eccoti un po' di Brina dell'Impossibile. Son sicuro che ti servirà a breve.
-                                <i>Le linee della tua mano si fanno trasparenti. Il vento le attraversa, eppure le dita funzionano correttamente e non senti dolore</i>
+                                <i>Le linee della tua mano si fanno trasparenti. Il vento le attraversa, eppure le dita funzionano correttamente e non senti dolore.</i>
                                 ~ doniTrovati += BrinaDellImpossibile
                         }   
                 Mentore: Molti doni li troverai man mano spostandoti tra questi luoghi.
@@ -152,7 +152,7 @@
             Mentore: O possono aiutarti a crearne tu, di nuovi, come le <b>Serre</b>.
                 {
                 - doniTrovati hasnt BrinaDellImpossibile: Mentore: E a proposito di doni: tieni questo pezzettino di Brina dell'Impossibile. Potrebbe tornarti utile.
-                <i>Le linee della tua mano si fanno trasparenti. Il vento le attraversa, eppure le dita funzionano correttamente e non senti dolore</i>
+                <i>Le linee della tua mano si fanno trasparenti. Il vento le attraversa, eppure le dita funzionano correttamente e non senti dolore.</i>
                 ~ doniTrovati += BrinaDellImpossibile
                 }
             Mentore: Più il dono è vicino a quello che di cui ha bisogno lo spettro, più sarà facile convincerlo a riscrivere la sua versione di sé.
@@ -167,7 +167,7 @@
             Mentore: Ci cresce di tutto: funghi, pianti, muschi e cose che non credo abbiano una vera classificazione fuori di qui.
                 {
                 - doniTrovati hasnt BrinaDellImpossibile: Mentore: Tipo questo pezzettino di Brina dell'Impossibile, che potrebbe piacere a qualche spettro.
-                    <i>Le linee della tua mano si fanno trasparenti. Il vento le attraversa, eppure le dita funzionano correttamente e non senti dolore</i>    
+                    <i>Le linee della tua mano si fanno trasparenti. Il vento le attraversa, eppure le dita funzionano correttamente e non senti dolore.</i>    
                 ~ doniTrovati += BrinaDellImpossibile
                 }
             Mentore: Le cose crescono col loro tempo, nelle serre.

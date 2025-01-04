@@ -14,7 +14,7 @@
 
 
 === gestione_inventario ===
-{debug: I doni trovati sono {doniTrovati}}.
+{debug: I doni trovati sono {doniTrovati}}
 
 + {doniTrovati has MuschioDelleAmanti} [Dono del muschio delle amanti.]
     ~ doniTrovati -= MuschioDelleAmanti

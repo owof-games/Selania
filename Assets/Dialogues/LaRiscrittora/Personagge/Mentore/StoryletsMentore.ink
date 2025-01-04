@@ -55,7 +55,7 @@
     Mentore: Tornaci spesso: tutto nel giardino cambia spesso.
     {
     - doniTrovati hasnt BrinaDellImpossibile: Uh, e poi a volte qui crescono doni utili per parlare con gli spettri. Tieni questo pezzettino di Brina dell'Impossibile.
-        <i>Le linee della tua mano si fanno trasparenti. Il vento le attraversa, eppure le dita funzionano correttamente e non senti dolore</i>
+        <i>Le linee della tua mano si fanno trasparenti. Il vento le attraversa, eppure le dita funzionano correttamente e non senti dolore.</i>
         ~ doniTrovati += BrinaDellImpossibile
     }
 
