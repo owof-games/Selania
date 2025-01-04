@@ -69,7 +69,7 @@ VAR eventoSpecialeSpettroSette = false
 
     //Spettro Uno
         - SpettroDelVuoto:
-            ~ return "lo spettro del Vuoto"
+            ~ return "il Vuoto"
         - IlConsapevole: 
             ~ return "il Consapevole"
         - IlGuarente: 
@@ -97,6 +97,38 @@ VAR eventoSpecialeSpettroSette = false
 
     }
 
+=== function traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettro)
+    {effettivoStatoSpettro:
+
+    //Spettro Uno
+        - SpettroDelVuoto:
+            ~ return "Il Vuoto"
+        - IlConsapevole: 
+            ~ return "Il Consapevole"
+        - IlGuarente: 
+            ~ return "Il Ferito"    
+        - IlSocievole: 
+            ~ return "Il Socievole"
+        - IlTerrorizzato: 
+            ~ return "Il Terrorizzato"
+        - LAbbandonato: 
+            ~ return "L'Abbandonato"    
+        - LArrabbiato: 
+            ~ return "L'Arrabbiato"
+        - LaVegliante:
+            ~ return "La Vegliante"
+        - LIndeciso:
+            ~ return "L'Indeciso"
+        - LaMondatrice:
+            ~ return "La Mondatrice"
+        - Oscar:
+            ~ return "Oscar"
+        - LoSpecchio:
+            ~ return "Lo Specchio"
+        - LaDisegnatrice:
+            ~ return "La Disegnatrice"
+
+    }
 
 === function check_statusVsInchiostro(status, list)
 //  A seconda del valore di un certo status di una entità (es: rabbia, terrore etc), dobbiamo verificare se l'inchiostro è sufficiente per intervenire o meno su quello status, e di conseguenza permettere o meno di condizionare lo spettro.
