@@ -18,12 +18,14 @@
     -> stitch_due
     - not stitch_tre:
     -> stitch_tre
-    - else: Sono finite le storie per la prima anima ->->
+    - else: Sono finite le storie per la prima anima
+        ->->
 }
 
     = stitch_uno
-        + Primo contenuto anima uno
-    -> main
+        AnimaUno: Avrò una storia da raccontarti con il secondo prototipo, per ora sono qui perché <i>dev</i> deve capire se la frequenza di comparsa è sensata.
+            + [Ok, alla prossima]
+            -> main
     
     = stitch_due
         + Secondo contenuto anima uno 

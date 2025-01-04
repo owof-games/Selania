@@ -14,7 +14,9 @@
 }
 
     = stitch_uno
-        + Primo contenuto anima due
+        AnimaDue: Avrò una storia da raccontarti con il secondo prototipo, per ora sono qui perché <i>dev</i> deve capire se la frequenza di comparsa è sensata.
+            + [Ok, alla prossima]
+            -> main
   -> main
     
     = stitch_due
