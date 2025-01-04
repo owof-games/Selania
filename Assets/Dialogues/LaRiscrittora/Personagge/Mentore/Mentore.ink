@@ -8,9 +8,9 @@
     Mentore: Cosa vuoi sapere {pronomi has maschili: amico mio|{pronomi has femminili: amica mia|amicə miə}}?
     - (top)
         //+ [Voglio conoscere meglio il mentore]
-        + [Ho bisogno di un aiuto]
+        + [Ho bisogno di un aiuto.]
             -> supporto
-        + [Abbandono la conversazione]
+        + [Abbandono la conversazione.]
             -> main
         -
     -> top
@@ -25,13 +25,13 @@
             -> compito
         + [Mi diresti a cosa servono i vari luoghi?]
             -> tutorial
-        + [Vorrei cambiare il mio nome]
+        + [Vorrei cambiare il mio nome.]
             -> il_mio_nome ->
-        + [Vorrei cambiare i miei pronomi]
+        + [Vorrei cambiare i miei pronomi.]
             -> assegnazione_genere ->
-        + [Vorrei aggiornare la lista dei miei temi delicati]
+        + [Vorrei aggiornare la lista dei miei temi delicati.]
             -> trigger_warning       
-        + [Vorrei parlare d'altro]
+        + [Vorrei parlare d'altro.]
             -> parlareColMentore
         -
     -> top   

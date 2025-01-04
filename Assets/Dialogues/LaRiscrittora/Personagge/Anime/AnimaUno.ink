@@ -24,7 +24,7 @@
 
     = stitch_uno
         AnimaUno: Avrò una storia da raccontarti con il secondo prototipo, per ora sono qui perché <i>dev</i> deve capire se la frequenza di comparsa è sensata.
-            + [Ok, alla prossima]
+            + [Ok, alla prossima.]
             -> main
     
     = stitch_due

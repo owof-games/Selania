@@ -1,13 +1,13 @@
 === lapide_uno ===
     //opzione se non hai mai esplorato questa storia, e se non ci sono storie attive
     + {are_two_entities_together(LapideUno, PG) && not (storiaUno == InCorso or storiaUno == Conclusa) and not (storiaDue == InCorso or storiaTre == InCorso)}[LapideUno]
-        <i>Qui giace {traduttoreSpettri(effettivoStatoSpettroUno)}</i>
-        -> intro_storia_uno
+        <i>Qui giace {traduttoreSpettri(effettivoStatoSpettroUno)}.</i>
+            -> intro_storia_uno
 
     //opzione se c'è un'altra storia attiva
     + {are_two_entities_together(LapideUno, PG) && storiaUno == Conclusa} [LapideUno]
-        <i>La prima lapide appartiene a {traduttoreSpettri(effettivoStatoSpettroUno)}</i>
-        -> main
+        <i>La prima lapide appartiene a {traduttoreSpettri(effettivoStatoSpettroUno)}.</i>
+            -> main
 
     //opzione se questa storia è attiva
     + {are_two_entities_together(SpettroUno, PG) && storiaUno == InCorso} [SpettroUno]
@@ -37,9 +37,9 @@
 
     }
     <i>Vuoi ascoltare la sua storia?</i>
-        + [Sì]
+        + [Sì.]
             -> intro
-        + [No]
+        + [No.]
             -> main
     ->->
 
@@ -47,9 +47,9 @@
             <i>Hai segnalato che preferiresti non sentire storie riguardanti la solitudine, che è uno dei <i>temi di questo spettro.</i>
             Puoi decidere se continuare comunque, o saltare la sua storia.</i>
             <i>Nel secondo caso, potrai (in modo un po' arbitrario) aiutarlo a riscrivere il suo nome.</i>
-                * [Voglio ascoltare la sua storia]
+                * [Voglio comunque ascoltare la sua storia.]
                     -> intro
-                * [Salto]
+                * [Salto.]
                     -> scelta_nome_uno
                 -
                 ->->
@@ -80,9 +80,9 @@
 === doni_storia_uno ===
 //Qui è la fase di check per i doni, se donarne, quali, o non farlo.
     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Tutto sommato è una cosa così banale, così banale. Eppure questo freddo non se ne vuole andare.
-        + {doniTrovati != ()} [Forse con un dono adeguato, lo spettro sarà disponibile a parlarmi]
+        + {doniTrovati != ()} [Forse con un dono adeguato, lo spettro sarà disponibile a parlarmi.]
             -> gestione_inventario
-        + [Mi allontano]
+        + [Mi allontano.]
             -> main
         -
             -> main
@@ -252,13 +252,13 @@
 
 
 === riscrittora_storia_uno
-        Tu: Sai, io sono qui per aiutarti a rileggere la tua storia.
-        Tu: E forse ci sono dei modi diversi di guardare a quello che ti è accaduto.
+        Sai, io sono qui per aiutarti a rileggere la tua storia.
+        E forse ci sono dei modi diversi di guardare a quello che ti è accaduto.
 
         //Più abbiamo preso un certo topic di petto, più veniamo premiate? E quindi un punteggio alto in realtà favorisce una certa lettura di sè?
         //Ma se non abbiamo toccato un sentimento, una paura, non abbiamo modo di rileggere quella cosa in quel modo, e allora possiamo solo confermare lo status quo.
         //Arrivo qui con un massimo di 3 punti su un elemento
-        Tu: Il vuoto ti ha inseguito perché...
+        Il vuoto ti ha inseguito perché...
         //Mettere qualcosa per far riconoscere che una scelta usa inchiostro e l'altra no.
             - (top1)
                 * {rabbia > 0} [La tua rabbia..]
@@ -419,11 +419,11 @@
                 -> main
 
 === scelta_nome_uno
-    * Il Socievole
+    * Il Socievole.
          ~ effettivoStatoSpettroUno = IlSocievole
-    * Il Consapevole
+    * Il Consapevole.
          ~ effettivoStatoSpettroUno = IlConsapevole
-    * Il Ferito
+    * Il Ferito.
          ~ effettivoStatoSpettroUno = IlGuarente
     -
     ~ storiaUno = Conclusa

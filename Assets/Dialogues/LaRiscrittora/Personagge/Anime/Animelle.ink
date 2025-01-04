@@ -12,7 +12,7 @@
     }
     //Se alcolismo attivo come trigger, salto la storia
         AnimellaUno: Avrò una storia da raccontarti con il secondo prototipo, per ora sono qui perché <i>dev</i> deve capire se la frequenza di comparsa è sensata.
-            + [Ok, alla prossima]
+            + [Ok, alla prossima.]
         //A conversazione finita con l'animella, torna nella casetta.
                 ~ move_entity(AnimellaUno, CasettaAnime)            
                 -> main    
@@ -24,7 +24,7 @@
     -> parlareConAnimella
 = parlareConAnimella 
         AnimellaDue: Avrò una storia da raccontarti con il secondo prototipo, per ora sono qui perché <i>dev</i> deve capire se la frequenza di comparsa è sensata.
-            + [Ok, alla prossima]
+            + [Ok, alla prossima.]
                 ~ move_entity(AnimellaDue, CasettaAnime)            
                 -> main  
 
@@ -35,6 +35,6 @@
 
 = parlareConAnimella
         AnimellaTre: Avrò una storia da raccontarti con il secondo prototipo, per ora sono qui perché <i>dev</i> deve capire se la frequenza di comparsa è sensata.
-            + [Ok, alla prossima]
+            + [Ok, alla prossima.]
                 ~ move_entity(AnimellaTre, CasettaAnime)            
                 -> main  

@@ -18,7 +18,7 @@
             -> main
 
 === cura
-    <i>{~ L'aria sembra più dolce oggi|Da qualche parte, tra le foglie, qualcosa canta|Piccole luci sfarfallano sopra il terreno.}</i>
+    <i>{~ L'aria sembra più dolce oggi|Da qualche parte, tra le foglie, qualcosa canta|Piccole luci sfarfallano sopra il terreno}.</i>
         -> plant_check -> 
     + [Mi guardo attorno.]
     -

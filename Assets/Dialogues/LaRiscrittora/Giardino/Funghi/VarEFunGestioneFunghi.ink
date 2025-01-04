@@ -54,37 +54,37 @@ VAR inCrescita = 0
      ~ firstQuest = true
  
         <i>Sul terreno le foglie e i sassi...</i>
-            + [{~ Si sfiorano|Si perdono gli uni nelle altre}]
-                ~ tipoColtivazioni += collaborazione
-            + [{~ Si osservano distaccati|Difendono i propri confini}]
-                ~ tipoColtivazioni += indipendenza    
+            + [{~ Si sfiorano|Si perdono gli uni nelle altre}.]
+                    ~ tipoColtivazioni += collaborazione
+            + [{~ Si osservano distaccati|Difendono i propri confini}.]
+                    ~ tipoColtivazioni += indipendenza    
             -   
-            ~ counter ++
-            -> test
+                ~ counter ++
+                    -> test
     
     = second_question
     ~ secondQuest = true
 
         <i>L'aria...</i>
-            + [{~ Insegue sé stessa, gioca con le foglie creando mulinelli|Ruota e ruzzola portando odori dal passato}]
-                ~ tipoColtivazioni += ciclicità
-            + [{~ È scoppiettante, fremente, carica di elettricità|Esplora cautamente ogni angolo della serra}]
-                ~ tipoColtivazioni += novità    
+            + [{~ Insegue sé stessa, gioca con le foglie creando mulinelli|Ruota e ruzzola portando odori dal passato}.]
+                    ~ tipoColtivazioni += ciclicità
+            + [{~ È scoppiettante, fremente, carica di elettricità|Esplora cautamente ogni angolo della serra}.]
+                    ~ tipoColtivazioni += novità    
             -   
-            ~ counter ++
-            -> test
+                ~ counter ++
+                    -> test
     
 
     = third_question
      ~ thirdQuest = true
         <i>L'acqua...</i>
-            + [{~ È ferma, mosLaSpazzatasa solo sulla superficie|È torbida|È piena di foglie e petali}]
-                ~ tipoColtivazioni += ricordo
-            + [{~ Scava, portando con sé il terriccio|Schiaccia foglie e sassi|La sua voce è potente}]
-                ~ tipoColtivazioni += cancellazione    
+            + [{~ È ferma, mosLaSpazzatasa solo sulla superficie|È torbida|È piena di foglie e petali}.]
+                    ~ tipoColtivazioni += ricordo
+            + [{~ Scava, portando con sé il terriccio|Schiaccia foglie e sassi|La sua voce è potente}.]
+                    ~ tipoColtivazioni += cancellazione    
             -   
-            ~ counter ++
-            -> test
+                ~ counter ++
+                    -> test
 
 
 

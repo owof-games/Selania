@@ -32,11 +32,13 @@
 
 //Passiamo da qui solo a inizio del gioco.
 === inizio
-<>Qualcuno sembra attenderti, sereno e sorridente</i>
-    + [Voglio parlargli]
+<>Qualcuno sembra attenderti, sereno e sorridente.</i>
+    + [Voglio parlargli.]
         -> presentazioni
+    + [Preferisco continuare a curiosare in giro.]
+        -> main
     -
-    -> main
+        -> main
 
 // STORYLETS PRESENTAZIONE DEI LUOGHI
 === prima_visita_funghi

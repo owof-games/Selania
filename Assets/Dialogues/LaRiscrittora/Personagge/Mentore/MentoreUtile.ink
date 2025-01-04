@@ -5,8 +5,8 @@
  ----------------------------------*/
 
 === presentazioni ===
-    Che buffo, è da un po' che non incontravo una persona nuova.
-    Immagino tu abbia un milione di domande, vero?
+    Sconosciuto: Che buffo, è da un po' che non incontravo una persona nuova.
+    Sconosciuto: Immagino tu abbia un milione di domande, vero?
     - (top)
         * [Dove sono?]
             {chiSei:Mentore|Sconosciuto}: Questa è una risposta che potrai trovare solo col tempo.
@@ -29,7 +29,7 @@
             {chiSei:Mentore|Sconosciuto}: Per il resto: se sei qui è perché in qualche modo l'hai chiesto.
             {chiSei:Mentore|Sconosciuto}: Forse ancora non lo sapevi, ma non è un problema: Presto o tardi capirai il perché direi.
                 -> top
-        * [Naa, tutto chiaro] -> name
+        * [Naa, tutto chiaro.] -> name
         * -> name
     
     = name    
@@ -47,8 +47,8 @@
         {not chiSei: Mentore: Forse un po' didascalica come scelta, ma ti assicuro che è molto comoda.|Mentore: Ma se qualcosa non va, non farti problemi a dirmelo.}
         Mentore: Ma che sbadato, non ti ho detto cosa devi fare qui!
             * [Devo?]
-            * [Ok, hai la mia attenzione]
-            * [Mmm, dimmelo dopo, capo]
+            * [Ok, hai la mia attenzione.]
+            * [Mmm, dimmelo dopo, capo.]
                 Mentore: Bene, abbiamo una persona intrapprendente qui!
                 Mentore: Ricorda comunque che se ti senti {pronomi has maschili: confuso|{pronomi has femminili: confusa|confusə}} puoi sempre cercarmi e farmi tutte le domande che vuoi.
                     -> riscrittora            
@@ -86,7 +86,7 @@
                 Mentore: E alcune delle piante della serra possono essere donate.
                 Mentore: E poi ci sono decine di altre cose, ma te ne parlerò quando vorrai.
                     -> top2
-            * [Ascolto. Dono. Risolvo. Chiaro]
+            * [Ascolto. Dono. Risolvo. Chiaro.]
                 Mentore: Mi fido di te, {nome}.
                     -> riscrittora
             *-> riscrittora        
@@ -111,9 +111,9 @@
         Mentore: Non posso prometterti di avere il controllo su tutto, perché in fondo sono il Mentore, non <i>dev</i>.
         Mentore: Ma se ti va puoi dirmi quali sono le cose che ti creano disagio, e farò del mio meglio per non fartele incontrare.
         Mentore: Ci sono temi che vuoi evitare?
-            * [Sì]
+            * [Sì.]
                 -> trigger_warning ->
-            * [Ci penso un poco]
+            * [Ci penso un poco.]
                 Mentore: Per questa come per altre cose, puoi sempre farmi le domande che vuoi quando mi incontri in giro.
             -
         Mentore: Un'ultima cosa, prima di lasciarti andare.
@@ -122,7 +122,7 @@
         Mentore: O preferisci scoprire tutto da {pronomi has maschili: solo|{pronomi has femminili: sola|solə}}?
             * [Raccontami tutto, Mentore!]
                 -> tutorial
-            * [Naa, preferisco fare le cose di testa mia]
+            * [Naa, preferisco fare le cose di testa mia.]
                 Mentore: Ottimo direi.
                 Mentore: Ricorda che puoi comunque farmi tutte le domande che vuoi in qualsiasi momento.
                 Mentore: E quindi: buona riscrittura, {nome}!
@@ -142,7 +142,7 @@
     Mentre: Su quali vorresti avere un po' di informazioni?
 
 -(top)
-    + [Sul mausoleo]
+    + [Sul mausoleo.]
             Mentore: Il Mausoleo, ad est del Giardino, è il posto dove si trovano i vari spettri.
             Mentore: Non saranno tantissime, non ti preoccupare: ogni {pronomi has maschili: Riscrittore|{pronomi has femminili: Riscrittora|Riscrittorə}} si occupa di uno specifico mausoleo.
             Mentore: All'ingresso troverai diverse lapidi. Ognuna indica lo spettro che vi è contenuto e il nome che si è dato prima di morire.
@@ -160,7 +160,7 @@
             Mentore: E in alcuni casi, potresti scoprire qualcosa di speciale.
                 -> top
 
-    + [Sulle serre]
+    + [Sulle serre.]
             Mentore: La serra è un piccolo posto di meditazione.
             Mentore: Tu vai lì, ti guardi in giro.
             Mentore: E se non cresce nulla puoi provare a raccontare qualcosa e lasciare che poi cresca la pianta giusta.
@@ -175,25 +175,25 @@
             Mentore: Merita andarci ogni tanto.
             -> top
 
-    + [Sul giardino]
+    + [Sul giardino.]
             Mentore: Quello è un po' il nostro posto di passaggio.
             Mentore: Prima era un bosco, ma a forza di camminare è rimasta solo l'erbetta.
             Mentore: E una bella panchina su cui rilassarsi quando il mondo va troppo di fretta.
             -> top
 
-    + {storiaUno == Conclusa}[Sulle falene]
+    + {storiaUno == Conclusa}[Sulle falene.]
         Informazioni
             -> top
-    + {storiaUno == Conclusa}[Sul labirinto]
+    + {storiaUno == Conclusa}[Sul labirinto.]
         Informazioni
             -> top
-    + {storiaDue == Conclusa}[Sulle tisane]
+    + {storiaDue == Conclusa}[Sulle tisane.]
         Informazioni
             -> top
-    + {storiaDue == Conclusa}[Sulle sirene]
+    + {storiaDue == Conclusa}[Sulle sirene.]
         Informazioni
             -> top
-    + {storiaDue == Conclusa}[Sulla biblioteca]
+    + {storiaDue == Conclusa}[Sulla biblioteca.]
         Informazioni
             -> top
     + [Ho cambiato idea]
@@ -297,39 +297,39 @@ VAR lutto = false
 
     - (top)
     Mentore: Cosa vorresti evitare?
-    + [Preferirei non leggere nulla che riguardi l'abuso di alcool]
+    + [Preferirei non leggere nulla che riguardi l'abuso di alcool.]
         Mentore: Capisco benissimo. Preferenza registrata.
         ~ alcolismo = false
-         + + [C'è altro che vorrei evitare]
+         + + [C'è altro che vorrei evitare.]
                 -> top
-         + + [Sono a posto così]
+         + + [Sono a posto così.]
                 -> parlareColMentore
          - -   
-    + [Non voglio leggere storie su relazioni abusanti]
+    + [Non voglio leggere storie su relazioni abusanti.]
         Mentore: Hai il mio appoggio. Preferenza registrata.
         ~ abusi = false
-         + + [C'è altro che vorrei evitare]
+         + + [C'è altro che vorrei evitare.]
                 -> top
-         + + [Sono a posto così]
+         + + [Sono a posto così.]
                 -> parlareColMentore
          - -  
-    + [Non me la sento di parlare di lutto]
+    + [Non me la sento di parlare di lutto.]
         Mentore: Sentiti a casa. Preferenza registrata.
         ~ lutto = false
-         + + [C'è altro che vorrei evitare]
+         + + [C'è altro che vorrei evitare.]
                 -> top
          + + [Sono a posto così]
                 -> parlareColMentore
          - -          
-    + [Preferirei evitare storie di solitudine e abbandono]
+    + [Preferirei evitare storie di solitudine e abbandono.]
         Mentore: Preferenza registrata. E se butta male, sono qui.
         ~ solitudine = false
-         + + [C'è altro che vorrei evitare]
+         + + [C'è altro che vorrei evitare.]
                 -> top
-         + + [Sono a posto così]
+         + + [Sono a posto così.]
                 -> parlareColMentore
          - -          
-    + [Sono a posto così]
+    + [Sono a posto così.]
         ->parlareColMentore
     -  
  -> main
