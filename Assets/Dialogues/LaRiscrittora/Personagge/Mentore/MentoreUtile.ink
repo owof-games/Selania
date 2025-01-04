@@ -221,7 +221,7 @@
         Mentore: Due cose importantissime: ci sono più strade per aiutare ogni spettro.
         Mentore: E non sempre puoi dare a tutti la risoluzione che spereresti, e va bene così.
         Mentore: Il tuo compito è aiutarli ad uscire dallo stallo in cui sono.    
-    ->->
+            ->->
 /* ---------------------------------
 
    Aiuto con le storie
@@ -247,34 +247,34 @@
 
 === consigli_storia_uno
 {~ Consiglio storia uno|Consiglio storia uno|Consiglio storia uno}
-->parlareColMentore
+    ->parlareColMentore
 
 === consigli_storia_due
 Consiglio storia due
-->parlareColMentore
+    ->parlareColMentore
 
 === consigli_storia_tre
 Consiglio storia tre
-->parlareColMentore
+    ->parlareColMentore
 
 === consigli_storia_quattro
 Consiglio storia quattro
-->parlareColMentore
+    ->parlareColMentore
 
 
 === consigli_storia_cinque
 Consiglio storia cinque
-->parlareColMentore
+    ->parlareColMentore
 
 
 === consigli_storia_sei
 Consiglio storia sei
-->parlareColMentore
+    ->parlareColMentore
 
 
 === consigli_storia_sette
 Consiglio storia sette
-->parlareColMentore
+    ->parlareColMentore
 
 
 
@@ -296,39 +296,40 @@ VAR lutto = false
     Mentore: Nel caso, prova ad evocare <i>dev</i>.
 
     - (top)
+    Mentore: Cosa vorresti evitare?
     + [Preferirei non leggere nulla che riguardi l'abuso di alcool]
         Mentore: Capisco benissimo. Preferenza registrata.
         ~ alcolismo = false
          + + [C'è altro che vorrei evitare]
-            -> top
+                -> top
          + + [Sono a posto così]
-            -> parlareColMentore
+                -> parlareColMentore
          - -   
     + [Non voglio leggere storie su relazioni abusanti]
         Mentore: Hai il mio appoggio. Preferenza registrata.
         ~ abusi = false
          + + [C'è altro che vorrei evitare]
-            -> top
+                -> top
          + + [Sono a posto così]
-            -> parlareColMentore
+                -> parlareColMentore
          - -  
     + [Non me la sento di parlare di lutto]
         Mentore: Sentiti a casa. Preferenza registrata.
         ~ lutto = false
          + + [C'è altro che vorrei evitare]
-            -> top
+                -> top
          + + [Sono a posto così]
-            -> parlareColMentore
+                -> parlareColMentore
          - -          
     + [Preferirei evitare storie di solitudine e abbandono]
         Mentore: Preferenza registrata. E se butta male, sono qui.
         ~ solitudine = false
          + + [C'è altro che vorrei evitare]
-            -> top
+                -> top
          + + [Sono a posto così]
-            -> parlareColMentore
+                -> parlareColMentore
          - -          
     + [Sono a posto così]
-    ->parlareColMentore
+        ->parlareColMentore
     -  
  -> main

@@ -140,4 +140,4 @@ VAR mentore_location = ()
     {debug: il mentore si trova in {mentore_location}, la lista aggiornata dei luoghi che deve ancora visitare è: {luoghiMentoreTerzoTier}, quella dei luoghi visitati è: {luoghiMentoreIncontrato}}
     
     
-    ->->
+        ->->
