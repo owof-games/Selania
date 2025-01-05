@@ -285,9 +285,9 @@
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top1
                         }
-                        {racconto: Non è vero che se racconti ciò che hai in testa, diventa vero.}
-                        {vuoto2: A scuola, coi genitori, a lavoro: sono situazioni che possono diventare davvero pesanti.}
-                        {verità: Nel mondo in cui viviamo, fatto di numeri e bilanci, è normale pensare che se qualcuno ci aiuta, allora siamo in debito.}
+                        {storia_uno.secondo_blocco.racconto: Non è vero che se racconti ciò che hai in testa, diventa vero.}
+                        {storia_uno.secondo_blocco.vuoto2: A scuola, coi genitori, a lavoro: sono situazioni che possono diventare davvero pesanti.}
+                        {storia_uno.secondo_blocco.verità: Nel mondo in cui viviamo, fatto di numeri e bilanci, è normale pensare che se qualcuno ci aiuta, allora siamo in debito.}
                         Il vuoto è un segnale, non è un problema da risolvere.
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: ...
                             ~ statoInchiostroSpettroUno --
@@ -324,9 +324,9 @@
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top2
                         }
-                        {racconto: Raccontare ciò che hai in testa, condividerlo, ti permette di smontarlo.}
-                        {vuoto2: Quando sei in compagnia e la situazione è difficile, può essere utile avere una persona alleata al tuo fianco.}
-                        {verità: È importante ricordarti che le persone che ti vogliono bene ti aiutano perché gli va, non perché devono.}
+                        {storia_uno.secondo_blocco.racconto: Raccontare ciò che hai in testa, condividerlo, ti permette di smontarlo.}
+                        {storia_uno.secondo_blocco.vuoto2: Quando sei in compagnia e la situazione è difficile, può essere utile avere una persona alleata al tuo fianco.}
+                        {storia_uno.secondo_blocco.verità: È importante ricordarti che le persone che ti vogliono bene ti aiutano perché gli va, non perché devono.}
                         Non siamo fatti per affrontare il mondo da soli, e va bene così.
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: ...
                             ~ statoInchiostroSpettroUno --
