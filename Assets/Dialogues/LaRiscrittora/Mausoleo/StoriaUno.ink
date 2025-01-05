@@ -37,10 +37,10 @@
         -> trigger_solitudine
 
     }
-    <i>Vuoi ascoltare la sua storia?</i>
-        + [Sì.]
+    <i>{traduttoreSpettri(effettivoStatoSpettroUno)} ti osserva malinconico.</i>
+        + [Raccontami la tua storia.]
             -> intro
-        + [No.]
+        + [Torno tra poco.]
             -> main
     ->->
 
@@ -109,7 +109,7 @@
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Mi manca l'aria, scusa.
                 ~ terrore ++
 
-            * (lavoro) [Il tuo lavoro ti faceva stare bene?]
+            * (lavoro) [Il tuo lavoro ti fa stare bene?]
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Sì.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Il problema è che non conosco mai il limite.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: E c'era questa sensazione, questa preoccupazione di essere sempre in ritardo su qualcosa.
@@ -120,8 +120,8 @@
             * (amici) [I tuoi amici ti raccontano i loro problemi?]
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: A volte.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ma ultimamente sempre meno.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Non so se perché le cose andavano meglio.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Se perché ero troppo assente.
+                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Non so se perché le cose gli vanno meglio.
+                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Se perché sono troppo assente.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: O solo perché alla fin fine sono sempre le solite cose noiose che accadono <b>a tutti.</b>
                 ~ abbandono ++
             -
@@ -156,7 +156,7 @@
 
             * (vuoto2) {vuoto} [Non ti scusare. Però forse questo ricordo è importante.]
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Il vuoto, questo gelo.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Credo che in realtà ci sia sempre.
+                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Credo che in realtà ci sia da sempre.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Compariva quando ero piccolo, quando i miei litigavano.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: A scuola, se rimanevo da solo.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Alle cene di lavoro, quando non avevo niente da raccontare.
@@ -164,7 +164,7 @@
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Mi insegue nei sogni, non mi lascia respirare.
                 ~ terrore ++
 
-            * (lavoro2) {lavoro} [Perché quando il lavoro diventa un dovere, non prendi una pausa?]
+            * (lavoro2) {lavoro} [Perché quando il lavoro diventa un dovere non prendi una pausa?]
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Pensi non ci abbia provato?!?
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Scusa.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ma non hai idea della frustrazione.
@@ -444,7 +444,12 @@
 
 === chi_sono_storia_uno
 
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: quindi io sono <>
+        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ora ricordo.
+        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ricordo che questa cosa è successa molto tempo fa.
+        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Che sono bloccato qui non so nemmeno da quanto.
+        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ma vedo le cose con chiarezza.
+        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Non sono {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}.
+        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Io sono <>
         {
             - rabbia > abbandono:
             {
