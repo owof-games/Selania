@@ -37,8 +37,8 @@
         * -> name
     
     = name    
-        {chiSei:Mentore|Sconosciuto}:Ora tocca a me farti una domanda: come ti devo chiamare?
-        {chiSei:Mentore|Sconosciuto}:Puoi usare qualsiasi nome: prendi questa occasione come un piccolo nuovo inizio.
+        {chiSei:Mentore|Sconosciuto}: Ora tocca a me farti una domanda: come ti devo chiamare?
+        {chiSei:Mentore|Sconosciuto}: Puoi usare qualsiasi nome: prendi questa occasione come un piccolo nuovo inizio.
             -> il_mio_nome ->
         {chiSei:Mentore|Sconosciuto}: E quali sono i pronomi in cui ti riconosci?
         {chiSei:Mentore|Sconosciuto}: Ti chiedo già scusa per la quantità ridotta di scelte.
@@ -46,7 +46,7 @@
         {chiSei:Mentore|Sconosciuto}: Non ho ben compreso sinceramente, ma mai dire mai: magari in futuro qualche persona troverà una soluzione più efficace.
             -> assegnazione_genere ->
         {chiSei:Mentore|Sconosciuto}: piacere di conoscerti, {nome}.
-        {chiSei:Mentore|Sconosciuto} E {pronomi has maschili: benvenuto|{pronomi has femminili: benvenuta|benvenutə}}. Spero ti troverai bene, qui.
+        {chiSei:Mentore|Sconosciuto}: E {pronomi has maschili: benvenuto|{pronomi has femminili: benvenuta|benvenutə}}. Spero ti troverai bene, qui.
         {not chiSei: Sconosciuto: Ah, che sbadato. Invece tu chiamami <b>Mentore</b>.|Mentore: Forse ne va un po' del mio orgoglio.}
         {not chiSei: Mentore: Forse un po' didascalica come scelta, ma ti assicuro che è molto comoda.|Mentore: Ma se qualcosa non va, non farti problemi a dirmelo.}
         Mentore: Ma non ti ho detto cosa devi fare qui!
@@ -304,7 +304,7 @@ VAR lutto = false
          + + [C'è altro che vorrei evitare.]
                 -> top
          + + [Sono a posto così.]
-                -> parlareColMentore
+                ->->
          - -   
     + [Non voglio leggere storie su relazioni abusanti.]
         Mentore: Hai il mio appoggio. Preferenza registrata.
@@ -312,7 +312,7 @@ VAR lutto = false
          + + [C'è altro che vorrei evitare.]
                 -> top
          + + [Sono a posto così.]
-                -> parlareColMentore
+                ->->
          - -  
     + [Non me la sento di parlare di lutto.]
         Mentore: Sentiti a casa. Preferenza registrata.
@@ -320,7 +320,7 @@ VAR lutto = false
          + + [C'è altro che vorrei evitare.]
                 -> top
          + + [Sono a posto così]
-                -> parlareColMentore
+                ->->
          - -          
     + [Preferirei evitare storie di solitudine e abbandono.]
         Mentore: Preferenza registrata. E se butta male, sono qui.
@@ -328,9 +328,9 @@ VAR lutto = false
          + + [C'è altro che vorrei evitare.]
                 -> top
          + + [Sono a posto così.]
-                -> parlareColMentore
+                ->->
          - -          
     + [Sono a posto così.]
-        ->parlareColMentore
+        ->->
     -  
  -> main

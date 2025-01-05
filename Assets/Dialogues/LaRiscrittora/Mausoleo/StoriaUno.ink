@@ -102,7 +102,7 @@
 
     = primo_blocco
         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Sei {pronomi has maschili: tornato|{pronomi has femminili: tornata|tornatə}}, non me l'aspettavo.
-        C'è qualcosa che vorrei chiederti:
+        {nome}: C'è qualcosa che vorrei chiederti:
             * (vuoto) [Ti è capitato di sentire altre volte questo vuoto?]
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Forse.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: <b>Ricordo</b>...
@@ -128,7 +128,7 @@
             -> secondo_blocco
 
     = secondo_blocco
-            * [Prima hai detto che ci sono cose a cui non volevi pensare.]
+            * Prima hai detto che ci sono cose a cui non volevi pensare.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Sì.
 
                 * * (racconto)[E ti andrebbe di raccontarmele?]
@@ -188,7 +188,7 @@
 
 
 
-            * [Quando hai deciso di non andare alla cena...]
+            * Quando hai deciso di non andare alla cena...
                 * * (verità) [Perché non hai detto la verità ai tuoi amici?]
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Perché qualcuno avrebbe voluto aiutare.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Chiamare.
@@ -222,11 +222,11 @@
                     -> terzo_blocco
 
     = terzo_blocco
-        C'è una cosa ancora che vorrei chiederti, che vorrei capire.
+        {nome}: C'è una cosa ancora che vorrei chiederti, che vorrei capire.
         //Questa cosa ci permette di capire qual è lo stato d'animo emergente.
 
             * [Perché proprio questo ricordo?]
-                Perché è questa la cosa che continua a bloccarti qui?
+                {nome}: Perché è questa la cosa che continua a bloccarti qui?
                 {
                 - rabbia > abbandono && rabbia > terrore:
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Perché ora l'unica cosa che rimane è la <b>rabbia</b>, la furia.
@@ -253,13 +253,13 @@
 
 
 === riscrittora_storia_uno
-        Sai, io sono qui per aiutarti a rileggere la tua storia.
-        E forse ci sono dei modi diversi di guardare a quello che ti è accaduto.
+        {nome}: Sai, io sono qui per aiutarti a rileggere la tua storia.
+        {nome}: E forse ci sono dei modi diversi di guardare a quello che ti è accaduto.
 
         //Più abbiamo preso un certo topic di petto, più veniamo premiate? E quindi un punteggio alto in realtà favorisce una certa lettura di sè?
         //Ma se non abbiamo toccato un sentimento, una paura, non abbiamo modo di rileggere quella cosa in quel modo, e allora possiamo solo confermare lo status quo.
         //Arrivo qui con un massimo di 3 punti su un elemento
-        Il vuoto...
+        {nome}: Il vuoto...
         //Mettere qualcosa per far riconoscere che una scelta usa inchiostro e l'altra no.
             - (top1)
                 
@@ -268,10 +268,10 @@
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top1
                         }
-                        {storia_uno.secondo_blocco.lavoro2: Hai detto che il piacere è sparito, che a volte vorresti litigare solo perché qualcosa possa cambiare.}                        
-                        {storia_uno.secondo_blocco.testa: Ti manca il respiro, ti arrabbi, e non sai come affrontare questa cosa.}
-                        {storia_uno.secondo_blocco.male: Non ti perdoni. Ti descrivi come un fallimento sociale.}
-                        Il vuoto è una ferita che continua a farti male, ma che non sai come riparare.
+                        {storia_uno.secondo_blocco.lavoro2: {nome}: Hai detto che il piacere è sparito, che a volte vorresti litigare solo perché qualcosa possa cambiare.}                        
+                        {storia_uno.secondo_blocco.testa: {nome}: Ti manca il respiro, ti arrabbi, e non sai come affrontare questa cosa.}
+                        {storia_uno.secondo_blocco.male: {nome}: Non ti perdoni. Ti descrivi come un fallimento sociale.}
+                        {nome}: Il vuoto è una ferita che continua a farti male, ma che non sai come riparare.
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Dimmi qualcosa che non so.
                             ~ statoInchiostroSpettroUno --
                             ~ ferito ++
@@ -281,10 +281,10 @@
                             - false: <i>Non hai abbastanza inchiostro per questa scelta</i>
                                 -> top1
                         }
-                        {storia_uno.secondo_blocco.amici2: Ascoltare e condividere le "para" sono cose di cui abbiamo tutte bisogno.}                        
-                        {storia_uno.secondo_blocco.capita: È vero che molte delle cose che proviamo sono comuni, ed è questo il bello: rende più facile la comprensione.}
-                        {storia_uno.secondo_blocco.sentimenti: Hai detto che sei ignorabile, dimenticabile. Ma non hai mai detto di star meglio senza le altre persone.}
-                        Il vuoto è la tua fame di socialità, la tua voglia di connetterti, di unirti alle altre persone.
+                        {storia_uno.secondo_blocco.amici2: {nome}: Ascoltare e condividere le "para" sono cose di cui abbiamo tutte bisogno.}                        
+                        {storia_uno.secondo_blocco.capita: {nome}: È vero che molte delle cose che proviamo sono comuni, ed è questo il bello: rende più facile la comprensione.}
+                        {storia_uno.secondo_blocco.sentimenti: {nome}: Hai detto che sei ignorabile, dimenticabile. Ma non hai mai detto di star meglio senza le altre persone.}
+                        {nome}: Il vuoto è la tua fame di socialità, la tua voglia di connetterti, di unirti alle altre persone.
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: No, questa cosa mi farebbe solo del male.
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Perché presto o tardi tutti se ne andranno.
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ma continua.
@@ -296,10 +296,10 @@
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top1
                         }
-                        {storia_uno.secondo_blocco.racconto: Non è vero che se racconti ciò che hai in testa, diventa vero.}
-                        {storia_uno.secondo_blocco.vuoto2: A scuola, coi genitori, a lavoro: sono situazioni che possono diventare davvero pesanti.}
-                        {storia_uno.secondo_blocco.verità: Nel mondo in cui viviamo, fatto di numeri e bilanci, è normale pensare che se qualcuno ci aiuta, allora siamo in debito.}
-                        Il vuoto è un segnale, non è un problema da risolvere.
+                        {storia_uno.secondo_blocco.racconto: {nome}: Non è vero che se racconti ciò che hai in testa, diventa vero.}
+                        {storia_uno.secondo_blocco.vuoto2: {nome}: A scuola, coi genitori, a lavoro: sono situazioni che possono diventare davvero pesanti.}
+                        {storia_uno.secondo_blocco.verità: {nome}: Nel mondo in cui viviamo, fatto di numeri e bilanci, è normale pensare che se qualcuno ci aiuta, allora siamo in debito.}
+                        {nome}: Il vuoto è un segnale, non è un problema da risolvere.
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: ...
                             ~ statoInchiostroSpettroUno --
                             ~ consapevole ++
@@ -320,19 +320,19 @@
 
 
                 -
-        E per questo...
+        {nome}: E per questo...
             - (top2)
                 *  {rabbia > 0} [Quello di cui hai bisogno è un momento di sosta.]
                         {check_statusVsInchiostro(rabbia, statoInchiostroSpettroUno):
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top2
                         }
-                        {storia_uno.secondo_blocco.lavoro2: Iniziare a riscoprire il piacere.}                        
-                        {storia_uno.secondo_blocco.testa: Smetterla di trattare il vuoto come un nemico.}
-                        {storia_uno.secondo_blocco.male: Concerderti di essere un lamentone, un frignone.}
-                        Se non ti fermi e non capisci cosa provi, non ha senso avanzare.
-                        Non ha senso lavorare.
-                        E prima o poi il vuoto, la rabbia, troveranno modi per farsi notare.
+                        {storia_uno.secondo_blocco.lavoro2: {nome}: Iniziare a riscoprire il piacere.}                        
+                        {storia_uno.secondo_blocco.testa: {nome}: Smetterla di trattare il vuoto come un nemico.}
+                        {storia_uno.secondo_blocco.male: {nome}: Concerderti di essere un lamentone, un frignone.}
+                        {nome}: Se non ti fermi e non capisci cosa provi, non ha senso avanzare.
+                        {nome}: Non ha senso lavorare.
+                        {nome}: E prima o poi il vuoto, la rabbia, troveranno modi per farsi notare.
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Io... Io...
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Uhm.                       
                             ~ statoInchiostroSpettroUno --
@@ -343,11 +343,11 @@
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top2
                         }
-                        {storia_uno.secondo_blocco.amici2: Dici di essere assente: è un modo per difenderti dalla paura, ma è anche il modo migliore per far sì che davvero prima o poi le persone si allontanino.}               
-                        {storia_uno.secondo_blocco.capita: Tutte veniamo ferite da cose "banali", ma che non lo sono davvero: ci feriscono per il nostro passato, per la nostra storia.}
-                        {storia_uno.secondo_blocco.sentimenti: Mettersi nella posizione di essere "dimenticabile" non cancella il dolore che possono provare loro, nella tua assenza.}
-                        È come quella cosa, quella roba della profezia che si autoavvera.
-                        Cerchi così tanto di non venire abbandonato, che alla fine fai di tutto perché le altre persone se ne vadano.
+                        {storia_uno.secondo_blocco.amici2: {nome}: Dici di essere assente: è un modo per difenderti dalla paura, ma è anche il modo migliore per far sì che davvero prima o poi le persone si allontanino.}               
+                        {storia_uno.secondo_blocco.capita: {nome}: Tutte veniamo ferite da cose "banali", ma che non lo sono davvero: ci feriscono per il nostro passato, per la nostra storia.}
+                        {storia_uno.secondo_blocco.sentimenti: {nome}: Mettersi nella posizione di essere "dimenticabile" non cancella il dolore che possono provare loro, nella tua assenza.}
+                        {nome}: È come quella cosa, quella roba della profezia che si autoavvera.
+                        {nome}: Cerchi così tanto di non venire abbandonato, che alla fine fai di tutto perché le altre persone se ne vadano.
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Eppure tu sei ancora qui.
                         Già: eppure sono ancora qui.
                         E ti conosco solo da qualche minuto.
@@ -359,22 +359,22 @@
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top2
                         }
-                        {storia_uno.secondo_blocco.racconto: Raccontare ciò che hai in testa, condividerlo, ti permette di smontarlo.}
-                        {storia_uno.secondo_blocco.vuoto2: Quando sei in compagnia e la situazione è difficile, può essere utile avere una persona alleata al tuo fianco.}
-                        {storia_uno.secondo_blocco.verità: È importante ricordarti che le persone che ti vogliono bene ti aiutano perché gli va, non perché devono.}
-                        Non siamo fatti per affrontare il mondo da soli, e va bene così.
+                        {storia_uno.secondo_blocco.racconto: {nome}: Raccontare ciò che hai in testa, condividerlo, ti permette di smontarlo.}
+                        {storia_uno.secondo_blocco.vuoto2: {nome}: Quando sei in compagnia e la situazione è difficile, può essere utile avere una persona alleata al tuo fianco.}
+                        {storia_uno.secondo_blocco.verità: {nome}: È importante ricordarti che le persone che ti vogliono bene ti aiutano perché gli va, non perché devono.}
+                        {nome}: Non siamo fatti per affrontare il mondo da soli, e va bene così.
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: ...
                             ~ statoInchiostroSpettroUno --
                             ~ consapevole ++
                 
                 *  {rabbia == 0}[Hai bisogno di esplodere.]
-                        Gridare al mondo quello che non va.
-                        Bruciare tutto.
-                        Solo quando tutto è cancellato, allora possiamo ricominciare.
+                        {nome}: Gridare al mondo quello che non va.
+                        {nome}: Bruciare tutto.
+                        {nome}: Solo quando tutto è cancellato, allora possiamo ricominciare.
 
                 *  {abbandono == 0}[Devi cercare di stare bene da solo.]
-                        Gli altri ci saranno, comunque.
-                        Ma se non trovi la chiave per amare te stesso, c'è poco da trovare soddisfazione nelle relazioni.
+                        {nome}: Gli altri ci saranno, comunque.
+                        {nome}: Ma se non trovi la chiave per amare te stesso, c'è poco da trovare soddisfazione nelle relazioni.
 
                 *  {terrore == 0}[Il vuoto forse è qualcosa da accogliere.]
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Trasformarmi nel vuoto.
@@ -382,17 +382,17 @@
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: L'eco di una persona.                                                            
                 -
         
-        La tua storia...
+        {nome}: La tua storia...
             - (top3)
                 *  {rabbia > 0} [È quella di una persona che riscopre le sue ferite.]
                         {check_statusVsInchiostro(rabbia, statoInchiostroSpettroUno):
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top3
                         }
-                        Che vede nella rabbia, nella frustrazione non un nemico, ma un indicatore: qui è stato superato un confine.
-                        E allora si siede, e si ascolta.
-                        Lascia che la sua ferita gli dica di cosa ha bisogno, di cosa prendersi cura.
-                        Affinché pian piano possa chiudersi e guarire.
+                        {nome}: Che vede nella rabbia, nella frustrazione non un nemico, ma un indicatore: qui è stato superato un confine.
+                        {nome}: E allora si siede, e si ascolta.
+                        {nome}: Lascia che la sua ferita gli dica di cosa ha bisogno, di cosa prendersi cura.
+                        {nome}: Affinché pian piano possa chiudersi e guarire.
                             ~ statoInchiostroSpettroUno --
                             ~ ferito ++
 
@@ -401,11 +401,11 @@
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top3
                         }
-                        E che non cerca di essere qualcuno che non è.
-                        Che è incasinato dal lavoro, dalla vita, eppure alla fine torna sempre.
-                        Che si preoccupa per Lele, che cerca di non stressare Cate.
-                        E che ora imparerà ad essere indulgente con sé stesso, a smetterla di nascondersi lasciandosi un po' coccolare.
-                        Condividendo le sue fragilità.
+                        {nome}: E che non cerca di essere qualcuno che non è.
+                        {nome}: Che è incasinato dal lavoro, dalla vita, eppure alla fine torna sempre.
+                        {nome}: Che si preoccupa per Lele, che cerca di non stressare Cate.
+                        {nome}: E che ora imparerà ad essere indulgente con sé stesso, a smetterla di nascondersi lasciandosi un po' coccolare.
+                        {nome}: Condividendo le sue fragilità.
                             ~ statoInchiostroSpettroUno --
                             ~ socievole ++
 
@@ -414,31 +414,31 @@
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top3
                         }
-                        Che vede il mondo, i rapporti, e ne comprende le complessità.
-                        Una vedetta consapevole.
-                        Sola, la vedetta è spaventata, terrorizzata.
-                        Ma assieme alle altre persone diventa parte di una rete, di una conversazione capace di trasformare ciò che non va.
+                        {nome}: Che vede il mondo, i rapporti, e ne comprende le complessità.
+                        {nome}: Una vedetta consapevole.
+                        {nome}: Sola, la vedetta è spaventata, terrorizzata.
+                        {nome}: Ma assieme alle altre persone diventa parte di una rete, di una conversazione capace di trasformare ciò che non va.
                             ~ statoInchiostroSpettroUno --
                             ~ consapevole ++
                 
                 *  {rabbia == 0} [È un inno alla rabbia.]
-                        Sei fuoco.
-                        Ti alimenti della tua frustrazione.
-                        Quello che è da capire è cosa distruggerà la tua esplosione: le persone care?
-                        Te stesso?
-                        O ciò che non funziona?
+                        {nome}: Sei fuoco.
+                        {nome}: Ti alimenti della tua frustrazione.
+                        {nome}: Quello che è da capire è cosa distruggerà la tua esplosione: le persone care?
+                        {nome}: Te stesso?
+                        {nome}: O ciò che non funziona?
 
                 *  {abbandono == 0} [È il viaggio solitario dell'eroe.]
-                        Che avanza di giorno in giorno affrondando da solo i suoi drammi, la spada sporca di sangue.
-                        Che cambia città, regione, stato ogni volta, lasciandosi il vuoto alle spalle.
-                        Ma quando la notte sale e il fuoco crepita, si chiede: ne è valsa davvero la pena?
-                        Non potrei forse fermarmi in un'osteria per qualche notte?
-                        Un po' di vino, buone chiacchiere.
-                        E forse una faccia amica con cui riprendere a camminare?
+                        {nome}: Che avanza di giorno in giorno affrondando da solo i suoi drammi, la spada sporca di sangue.
+                        {nome}: Che cambia città, regione, stato ogni volta, lasciandosi il vuoto alle spalle.
+                        {nome}: Ma quando la notte sale e il fuoco crepita, si chiede: ne è valsa davvero la pena?
+                        {nome}: Non potrei forse fermarmi in un'osteria per qualche notte?
+                        {nome}: Un po' di vino, buone chiacchiere.
+                        {nome}: E forse una faccia amica con cui riprendere a camminare?
                 
                 *  {terrore == 0} [È una storia di paura.]
-                        E la paura non è una colpa.
-                        Il mondo è un gran casino, ci sta sentirsi costantemente in allarme.
+                        {nome}: E la paura non è una colpa.
+                        {nome}: Il mondo è un gran casino, ci sta sentirsi costantemente in allarme.
                 -
                     -> chi_sono_storia_uno
 
@@ -525,5 +525,5 @@
     * Il Ferito.
          ~ effettivoStatoSpettroUno = IlGuarente
     -
-    ~ storiaUno = Conclusa
-    -> main
+        ~ storiaUno = Conclusa
+        -> main
