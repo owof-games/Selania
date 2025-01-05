@@ -20,7 +20,7 @@
             Sconosciuto: Ma direi che puoi chiamarmi Mentore.
             Mentore: Non un nome originale ma ehi, almeno ti ricordi chi chiamare se sei in difficoltà, no?
                 -> top
-        * [Come me ne vado da qui?]
+        * (vado) [Come me ne vado da qui?]
             {chiSei:Mentore|Sconosciuto}: Dipende.
             {chiSei:Mentore|Sconosciuto}: Se con "qui" intendi questa conversazione, di solito interrompere le chiacchierate è sempre possibile.
             {chiSei:Mentore|Sconosciuto}: Basta dire qualcosa tipo "me ne vado" o simili.
@@ -30,6 +30,10 @@
             {chiSei:Mentore|Sconosciuto}: Forse ancora non lo sapevi, ma non è un problema: Presto o tardi capirai il perché direi.
                 -> top
         * [Naa, tutto chiaro.] -> name
+        * {vado} [Me ne vado.]
+            {chiSei:Mentore|Sconosciuto}: Certamente.
+            {chiSei:Mentore|Sconosciuto}: Quando vuoi, mi trovi a vagare per questi spazi.
+            -> main
         * -> name
     
     = name    
@@ -45,7 +49,7 @@
         {chiSei:Mentore|Sconosciuto} E {pronomi has maschili: benvenuto|{pronomi has femminili: benvenuta|benvenutə}}. Spero ti troverai bene, qui.
         {not chiSei: Sconosciuto: Ah, che sbadato. Invece tu chiamami <b>Mentore</b>.|Mentore: Forse ne va un po' del mio orgoglio.}
         {not chiSei: Mentore: Forse un po' didascalica come scelta, ma ti assicuro che è molto comoda.|Mentore: Ma se qualcosa non va, non farti problemi a dirmelo.}
-        Mentore: Ma che sbadato, non ti ho detto cosa devi fare qui!
+        Mentore: Ma non ti ho detto cosa devi fare qui!
             * [Devo?]
             * [Ok, hai la mia attenzione.]
             * [Mmm, dimmelo dopo, capo.]
@@ -54,24 +58,24 @@
                     -> riscrittora            
             -
         Mentore: Te la faccio breve: nel <b>Mausoleo</b> incontrerai degli <b>spettri</b>.
-        Mentore: Sono totalmente innocue, l'unico problema è che non hanno trovato una soluzione a questioni rimaste aperte quando erano in vita.
+        Mentore: Sono totalmente innocui, l'unico problema è che non hanno trovato una soluzione a questioni rimaste aperte quando erano in vita.
         Mentore: Spesso sono storie di rimpianto o rimorso, in alcuni causi di traumi, o sensi di colpa.
         Mentore: E a volte hanno avuto una vita così bella che non accettano davvero di morire.
         Mentore: Sia quel che sia, sono fermi su quel ricordo, convinti che il passato sia il presente.        
-        Mentore: In tutte queste situazioni arrivi tu, {nome}:
-        Mentore: ascolti per bene quello che dicono,
-        Mentore: fai loro un dono adeguato,
-        Mentore: e poi aiuti questi spettri a rileggere un pezzo della loro storia, il pezzo che le blocca qui.
+        Mentore: In tutte queste situazioni arrivi tu, {nome}.
+        Mentore: Prima ascolti per bene quello che dicono.
+        Mentore: Poi fai loro un dono adeguato.
+        Mentore: E infine aiuti questi spettri a rileggere un pezzo della loro storia, il pezzo che le blocca qui.
         Mentore: A darsi un nuovo nome.
 
             - (top2)
             * [Tipo gasligthing?]
                 Mentore: No no no assolutamente no.
-                Mentore: Anche perché uno spettro preso in giro è uno spettro che diventa davvero, davvero, davvero fastidiosa.
+                Mentore: Anche perché uno spettro preso in giro è uno spettro che diventa davvero, davvero, davvero fastidioso.
                     -> top2
-            * [Così, senza conoscere questo spettro?]
-                Mentore: A volte è più facile dare consigli a persone sconosciute.
-                Mentore: E mentre riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
+            * [Dovrei dare consigli a uno sconosciuto?]
+                Mentore: A volte è più facile aprirsi a chi non si conosce.
+                Mentore: E mentre noi riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
                 Mentore: E poi... no, questo te lo dirò tra qualche tempo.
                     -> top2
             * [Un dono?]
@@ -79,7 +83,7 @@
                 Mentore: Gli spettri tendono ad essere un po' chiusi.
                 Mentore: Ma se fai il giusto dono, se capisci di cosa possono aver bisogno quando ti raccontano la loro storia, puoi aprirti una strada verso il loro cuoricino.
                         {
-                            - doniTrovati hasnt BrinaDellImpossibile: Mentore: E a proposito: eccoti un po' di Brina dell'Impossibile. Son sicuro che ti servirà a breve.
+                            - doniTrovati hasnt BrinaDellImpossibile: Mentore: E a proposito: eccoti un po' di <b>Brina dell'Impossibile</b>. Son sicuro che ti servirà a breve.
                                 <i>Le linee della tua mano si fanno trasparenti. Il vento le attraversa, eppure le dita funzionano correttamente e non senti dolore.</i>
                                 ~ doniTrovati += BrinaDellImpossibile
                         }   
@@ -152,7 +156,7 @@
             Mentore: I doni li trovi in giro camminando, col tempo imparerai anche che alcuni luoghi hanno doni specifici.
             Mentore: O possono aiutarti a crearne tu, di nuovi, come le <b>Serre</b>.
                 {
-                - doniTrovati hasnt BrinaDellImpossibile: Mentore: E a proposito di doni: tieni questo pezzettino di Brina dell'Impossibile. Potrebbe tornarti utile.
+                - doniTrovati hasnt BrinaDellImpossibile: Mentore: E a proposito di doni: tieni questo pezzettino di <b>Brina dell'Impossibile</b>. Potrebbe tornarti utile.
                 <i>Le linee della tua mano si fanno trasparenti. Il vento le attraversa, eppure le dita funzionano correttamente e non senti dolore.</i>
                 ~ doniTrovati += BrinaDellImpossibile
                 }
@@ -167,7 +171,7 @@
             Mentore: E se non cresce nulla puoi provare a raccontare qualcosa e lasciare che poi cresca la pianta giusta.
             Mentore: Ci cresce di tutto: funghi, pianti, muschi e cose che non credo abbiano una vera classificazione fuori di qui.
                 {
-                - doniTrovati hasnt BrinaDellImpossibile: Mentore: Tipo questo pezzettino di Brina dell'Impossibile, che potrebbe piacere a qualche spettro.
+                - doniTrovati hasnt BrinaDellImpossibile: Mentore: Tipo questo pezzettino di <b>Brina dell'Impossibile</b>, che potrebbe piacere a qualche spettro.
                     <i>Le linee della tua mano si fanno trasparenti. Il vento le attraversa, eppure le dita funzionano correttamente e non senti dolore.</i>    
                 ~ doniTrovati += BrinaDellImpossibile
                 }
@@ -287,9 +291,9 @@ VAR lutto = false
  ----------------------------------*/
  
  === trigger_warning ===
-    Mentore: Qui sono i principali temi delicati che potresti incontrare durante il tuo lavoro.
-    Mentore: Riuscirò per la maggior parte dei casi a fare in modo che tu non ne venga mai in contatto se li disabiliti, ma in alcune situazioni (vedi spettri) le cose sono un po' complicate.
-    Mentore: E sono consapevole che ne mancano diversi, ma qui è un lavoro complicato, come unico mentore, ma sono pronto ad accogliere ogni segnalazione.
+    Mentore: Qui sono i principali temi delicati che potresti incontrare durante le tue chiacchierate.
+    Mentore: Riuscirò per la maggior parte dei casi a fare in modo che tu non ne venga mai in contatto se li disabiliti, ma in alcune situazioni. come con gli spettri, le cose sono un po' complicate.
+    Mentore: E sono consapevole che ne mancano diversi, ma qui è un lavoro complicato, sono l'unico mentore, ma sono sempre pronto ad accogliere ogni segnalazione.
     Mentore: Nel caso, prova ad evocare <i>dev</i>.
 
     - (top)
