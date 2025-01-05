@@ -155,7 +155,6 @@
                     ~ rabbia ++
 
             * (vuoto2) {vuoto} [Non ti scusare. Però forse questo ricordo è importante.]
-                ~ terrore ++
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Il vuoto, questo gelo.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Credo che in realtà ci sia sempre.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Compariva quando ero piccolo, quando i miei litigavano.
@@ -163,9 +162,9 @@
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Alle cene di lavoro, quando non avevo niente da raccontare.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ci sono un po' di modi per disturbarlo, sfiancarlo, ma come mi rilasso, è pronto a bussare.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Mi insegue nei sogni, non mi lascia respirare.
+                ~ terrore ++
 
             * (lavoro2) {lavoro} [Perché quando il lavoro diventa un dovere, non prendi una pausa?]
-                ~ rabbia ++
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Pensi non ci abbia provato?!?
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Scusa.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ma non hai idea della frustrazione.
@@ -175,16 +174,17 @@
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: A volte finisco per litigare solo per il piacere di litigare.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Per gridare.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Per far sì che accada qualcosa.
+                ~ rabbia ++
 
 
             * (amici2) {amici} [Anche se accadono a tutti, non è che non sono importanti per te.]
-                ~ abbandono ++
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ma il punto non è quello.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: È che poi le persone si annoiano.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Con tutti i casini, chi ha davvero voglia di ascoltare le para di qualcun altro.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: E poi, alle persone non piace la fragilità.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: La fragilità è sorella del bisogno, e le persone bisognose...
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Lascia fare.
+                ~ abbandono ++
 
 
 
@@ -209,7 +209,7 @@
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: E la prossima volta faranno senza di me.
 
 
-                * * [Non ti sei fatto solo del male da solo?]
+                * * (male) [Non ti sei fatto solo del male da solo?]
                     ~ rabbia ++
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Probabile.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ma meglio così che rovinare la festa a tutti, no?
@@ -264,14 +264,20 @@
         Il vuoto...
         //Mettere qualcosa per far riconoscere che una scelta usa inchiostro e l'altra no.
             - (top1)
-                * {rabbia > 0} [La tua rabbia..]
+                
+                * {rabbia > 0} [Esplode per la tua frustrazione.]
                         {check_statusVsInchiostro(rabbia, statoInchiostroSpettroUno):
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top1
                         }
-                        Dici cose sulla rabbia.
+                        {storia_uno.secondo_blocco.lavoro2: Hai detto che il piacere è sparito, che a volte vorresti litigare solo perché qualcosa possa cambiare.}                        
+                        {storia_uno.secondo_blocco.testa: Ti manca il respiro, ti arrabbi, e non sai come affrontare questa cosa.}
+                        {storia_uno.secondo_blocco.male: Non ti perdoni. Ti descrivi come un fallimento sociale.}
+                        Il vuoto è una ferita che continua a farti male, ma che non sai come riparare.
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Dimmi qualcosa che non so.
                             ~ statoInchiostroSpettroUno --
                             ~ ferito ++
+                
                 * {abbandono > 0} [rilettura abbandono]
                         {check_statusVsInchiostro(abbandono,statoInchiostroSpettroUno):
                             - false: <i>Non hai abbastanza inchiostro per questa scelta</i>
@@ -280,6 +286,7 @@
                         Dici cose sull'abbandono.
                             ~ statoInchiostroSpettroUno --
                             ~ socievole ++
+                
                 * {terrore > 0} [Ti sta indicando le cose che ti fanno paura.]
                         {check_statusVsInchiostro(terrore,statoInchiostroSpettroUno):
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
@@ -292,8 +299,13 @@
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: ...
                             ~ statoInchiostroSpettroUno --
                             ~ consapevole ++
-                * {rabbia == 0}[conferma rabbia]
+                
+                * {rabbia == 0}[È la tua rabbia.]
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Tutto qui?
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Come se esistesse un motivo per non essere incazzati col mondo.                                            
+                
                 * {abbandono == 0}[conferma abbandono]
+                
                 * {terrore == 0}[È la tua paura.]
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Quindi sono persino un codardo?
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Beh, dirlo ad alta voce un po' mi consola.
@@ -303,14 +315,22 @@
                 -
         E per questo...
             - (top2)
-                *  {rabbia > 0} [La tua rabbia]
+                *  {rabbia > 0} [Quello di cui hai bisogno è un momento di sosta.]
                         {check_statusVsInchiostro(rabbia, statoInchiostroSpettroUno):
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top2
                         }
-                        Dici cose sulla rabbia.
+                        {storia_uno.secondo_blocco.lavoro2: Iniziare a riscoprire il piacere.}                        
+                        {storia_uno.secondo_blocco.testa: Smetterla di trattare il vuoto come un nemico.}
+                        {storia_uno.secondo_blocco.male: Concerderti di essere un lamentone, un frignone.}
+                        Se non ti fermi e non capisci cosa provi, non ha senso avanzare.
+                        Non ha senso lavorare.
+                        E prima o poi il vuoto, la rabbia, troveranno modi per farsi notare.
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Io... Io...
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Uhm.                       
                             ~ statoInchiostroSpettroUno --
                             ~ ferito ++
+                
                 *  {abbandono > 0} [rilettura abbandono]
                         {check_statusVsInchiostro(abbandono, statoInchiostroSpettroUno):
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
@@ -319,6 +339,7 @@
                         Dici cose sull'abbandono.
                             ~ statoInchiostroSpettroUno --
                             ~ socievole ++
+                
                 *  {terrore > 0} [Anche se fa paura, aprirsi è la soluzione.]
                         {check_statusVsInchiostro(terrore, statoInchiostroSpettroUno):
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
@@ -331,8 +352,14 @@
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: ...
                             ~ statoInchiostroSpettroUno --
                             ~ consapevole ++
-                *  {rabbia == 0}[conferma rabbia]
-                *  {abbandono == 0}[conferma abbandono]
+                
+                *  {rabbia == 0}[Hai bisogno di esplodere.]
+                        Gridare al mondo quello che non va.
+                        Bruciare tutto.
+                        Solo quando tutto è cancellato, allora possiamo ricominciare.
+
+                *  {abbandono == 0}[.]
+
                 *  {terrore == 0}[Il vuoto forse è qualcosa da accogliere.]
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Trasformarmi nel vuoto.
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Sparire.
@@ -341,14 +368,18 @@
         
         La tua storia...
             - (top3)
-                *  {rabbia > 0} [La tua rabbia]
+                *  {rabbia > 0} [È quella di una persona che riscopre le sue ferite.]
                         {check_statusVsInchiostro(rabbia, statoInchiostroSpettroUno):
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top3
                         }
-                        Dici cose sulla rabbia.
+                        Che vede nella rabbia, nella frustrazione non un nemico, ma un indicatore: qui è stato superato un confine.
+                        E allora si siede, e si ascolta.
+                        Lascia che la sua ferita gli dica di cosa ha bisogno, di cosa prendersi cura.
+                        Affinché pian piano possa chiudersi e guarire.
                             ~ statoInchiostroSpettroUno --
                             ~ ferito ++
+
                 *  {abbandono > 0} [rilettura abbandono]
                         {check_statusVsInchiostro(abbandono, statoInchiostroSpettroUno):
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
@@ -368,8 +399,16 @@
                         Ma assieme alle altre persone diventa parte di una rete, di una conversazione capace di trasformare ciò che non va.
                             ~ statoInchiostroSpettroUno --
                             ~ consapevole ++
-                *  {rabbia == 0} [conferma rabbia]
+                
+                *  {rabbia == 0} [È un inno alla rabbia.]
+                        Sei fuoco.
+                        Ti alimenti della tua frustrazione.
+                        Quello che è da capire è cosa distruggerà la tua esplosione: le persone care?
+                        Te stesso?
+                        O ciò che non funziona?
+
                 *  {abbandono == 0} [conferma abbandono]
+                
                 *  {terrore == 0} [È una storia di paura.]
                         E la paura non è una colpa.
                         Il mondo è un gran casino, ci sta sentirsi costantemente in allarme.
@@ -416,10 +455,10 @@
         {effettivoStatoSpettroUno:
             - IlSocievole: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ora so che ho bisogno delle altre persone, anche quando la cosa mi fa paura.
             - IlConsapevole: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Vedo i dolori del mondo e capisco che sono prodotti di quel sistema. Unendomi alle altre persone, posso cambiare un po' di cose.
-            - IlGuarente: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:La mia rabbia mi ha aiutato a capire dove si trovano le mie ferite, e ora so cosa affrontare.
+            - IlGuarente: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:La mia rabbia è una guida: ora so dove si trovano le mie ferite, e come affrontarle.
             - IlTerrorizzato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:Quello che ho dentro è mostruoso, deve rimanere nascosto dagli altri, a qualunque costo.
             - LAbbandonato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:Le mie debolezze allontaneranno sempre gli altri. L'unica soluzione è giocare d'anticipo, e far tutto da solo.
-            - LArrabbiato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:Se questo mondo mi fa male, è mio diritto far male a questo mondo, mordere prima che lui mi morda.
+            - LArrabbiato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:Il mondo è sempre pronto a mordere, e io lo morderò sempre prima che lui possa ferirmi.
         }
         -
         {
