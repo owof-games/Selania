@@ -4,7 +4,7 @@
 VAR debug = false
 
 //Nome giocatrice e pronomi
-VAR nome = ""
+VAR nome = "Senza Nome"
 LIST pronomi = maschili, femminili, neutri
 
 //Lista di tutti i luoghi del gioco
