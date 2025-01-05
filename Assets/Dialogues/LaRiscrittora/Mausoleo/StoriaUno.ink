@@ -111,10 +111,10 @@
 
             * (lavoro) [Il tuo lavoro ti faceva stare bene?]
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Sì.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Il problema è che non conoscevo mai il limite.
+                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Il problema è che non conosco mai il limite.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: E c'era questa sensazione, questa preoccupazione di essere sempre in ritardo su qualcosa.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Era davvero difficile riposarsi, sai? Staccare un po'.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: E a quel punto il piacere spariva, e rimaneva solo il <b>dovere</b>.
+                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: È davvero difficile riposarsi, sai? Staccare un po'.
+                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: E intanto il piacere sparisce, e rimaneva solo il <b>dovere</b>.
                 ~ rabbia ++
 
             * (amici) [I tuoi amici ti raccontano i loro problemi?]
@@ -190,7 +190,6 @@
 
             * [Quando hai deciso di non andare alla cena...]
                 * * (verità) [Perché non hai detto la verità ai tuoi amici?]
-                    ~ terrore ++
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Perché qualcuno avrebbe voluto aiutare.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Chiamare.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Salire a casa e fare qualcosa, risolvere qualcosa assieme.
@@ -199,18 +198,17 @@
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Che devo essere riconoscente.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ma per esserlo devo ascoltare, devo prestare davvero attenzione.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Fare meno cose, quando l'unica certezza che ho è che il Vuoto è silenzioso solo se continuo a lavorare.
+                    ~ terrore ++
 
-                * * [Non hai pensato ai loro sentimenti?]
-                    ~ abbandono ++
+                * * (sentimenti) [Non hai pensato ai loro sentimenti?]
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Beh, gli ho fatto un favore.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Già sanno che sono inaffidabile, che non rispondo alle chiamate, che arrivo dopo settimane a scrivere un messaggio.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Almeno così hanno avuto la conferma che sono dimenticabile.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ignorabile.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: E la prossima volta faranno senza di me.
-
+                    ~ abbandono ++
 
                 * * (male) [Non ti sei fatto solo del male da solo?]
-                    ~ rabbia ++
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Probabile.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ma meglio così che rovinare la festa a tutti, no?
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Chi ha voglia di starsene a tavola con un fantasma piagnone?
@@ -218,7 +216,7 @@
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Io no.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Non ho nemmeno voglia di restare con me.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Non capisco perché ci stia tu, quì.
-
+                    ~ rabbia ++
             -
 
                     -> terzo_blocco
@@ -278,12 +276,18 @@
                             ~ statoInchiostroSpettroUno --
                             ~ ferito ++
                 
-                * {abbandono > 0} [rilettura abbandono]
+                * {abbandono > 0} [È il tuo bisogno di relazioni.]
                         {check_statusVsInchiostro(abbandono,statoInchiostroSpettroUno):
                             - false: <i>Non hai abbastanza inchiostro per questa scelta</i>
                                 -> top1
                         }
-                        Dici cose sull'abbandono.
+                        {storia_uno.secondo_blocco.amici2: Ascoltare e condividere le "para" sono cose di cui abbiamo tutte bisogno.}                        
+                        {storia_uno.secondo_blocco.capita: È vero che molte delle cose che proviamo sono comuni, ed è questo il bello: rende più facile la comprensione.}
+                        {storia_uno.secondo_blocco.sentimenti: Hai detto che sei ignorabile, dimenticabile. Ma non hai mai detto di star meglio senza le altre persone.}
+                        Il vuoto è la tua fame di socialità, la tua voglia di connetterti, di unirti alle altre persone.
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: No, questa cosa mi farebbe solo del male.
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Perché presto o tardi tutti se ne andranno.
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ma continua.
                             ~ statoInchiostroSpettroUno --
                             ~ socievole ++
                 
@@ -300,12 +304,15 @@
                             ~ statoInchiostroSpettroUno --
                             ~ consapevole ++
                 
-                * {rabbia == 0}[È la tua rabbia.]
+                * {rabbia == 0}[È il riflesso della tua rabbia.]
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Tutto qui?
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Come se esistesse un motivo per non essere incazzati col mondo.                                            
                 
-                * {abbandono == 0}[conferma abbandono]
-                
+                * {abbandono == 0}[È l'isolamento che vai cercando.]
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Vedi?                
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Alla fine me lo merito.
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Merito di restare da solo.
+
                 * {terrore == 0}[È la tua paura.]
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Quindi sono persino un codardo?
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Beh, dirlo ad alta voce un po' mi consola.
@@ -331,12 +338,19 @@
                             ~ statoInchiostroSpettroUno --
                             ~ ferito ++
                 
-                *  {abbandono > 0} [rilettura abbandono]
+                *  {abbandono > 0} [Guarda i rapporti che già hai, e parti da lì.]
                         {check_statusVsInchiostro(abbandono, statoInchiostroSpettroUno):
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top2
                         }
-                        Dici cose sull'abbandono.
+                        {storia_uno.secondo_blocco.amici2: Dici di essere assente: è un modo per difenderti dalla paura, ma è anche il modo migliore per far sì che davvero prima o poi le persone si allontanino.}               
+                        {storia_uno.secondo_blocco.capita: Tutte veniamo ferite da cose "banali", ma che non lo sono davvero: ci feriscono per il nostro passato, per la nostra storia.}
+                        {storia_uno.secondo_blocco.sentimenti: Mettersi nella posizione di essere "dimenticabile" non cancella il dolore che possono provare loro, nella tua assenza.}
+                        È come quella cosa, quella roba della profezia che si autoavvera.
+                        Cerchi così tanto di non venire abbandonato, che alla fine fai di tutto perché le altre persone se ne vadano.
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Eppure tu sei ancora qui.
+                        Già: eppure sono ancora qui.
+                        E ti conosco solo da qualche minuto.
                             ~ statoInchiostroSpettroUno --
                             ~ socievole ++
                 
@@ -358,7 +372,9 @@
                         Bruciare tutto.
                         Solo quando tutto è cancellato, allora possiamo ricominciare.
 
-                *  {abbandono == 0}[.]
+                *  {abbandono == 0}[Devi cercare di stare bene da solo.]
+                        Gli altri ci saranno, comunque.
+                        Ma se non trovi la chiave per amare te stesso, c'è poco da trovare soddisfazione nelle relazioni.
 
                 *  {terrore == 0}[Il vuoto forse è qualcosa da accogliere.]
                         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Trasformarmi nel vuoto.
@@ -380,14 +396,19 @@
                             ~ statoInchiostroSpettroUno --
                             ~ ferito ++
 
-                *  {abbandono > 0} [rilettura abbandono]
+                *  {abbandono > 0} [È quella di una persona che ama la compagnia.]
                         {check_statusVsInchiostro(abbandono, statoInchiostroSpettroUno):
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top3
                         }
-                        Dici cose sull'abbandono.
+                        E che non cerca di essere qualcuno che non è.
+                        Che è incasinato dal lavoro, dalla vita, eppure alla fine torna sempre.
+                        Che si preoccupa per Lele, che cerca di non stressare Cate.
+                        E che ora imparerà ad essere indulgente con sé stesso, a smetterla di nascondersi lasciandosi un po' coccolare.
+                        Condividendo le sue fragilità.
                             ~ statoInchiostroSpettroUno --
                             ~ socievole ++
+
                 *  {terrore > 0} [È quella di qualcuno che accoglie le sue paure.]
                         {check_statusVsInchiostro(terrore, statoInchiostroSpettroUno):
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
@@ -407,7 +428,13 @@
                         Te stesso?
                         O ciò che non funziona?
 
-                *  {abbandono == 0} [conferma abbandono]
+                *  {abbandono == 0} [È il viaggio solitario dell'eroe.]
+                        Che avanza di giorno in giorno affrondando da solo i suoi drammi, la spada sporca di sangue.
+                        Che cambia città, regione, stato ogni volta, lasciandosi il vuoto alle spalle.
+                        Ma quando la notte sale e il fuoco crepita, si chiede: ne è valsa davvero la pena?
+                        Non potrei forse fermarmi in un'osteria per qualche notte?
+                        Un po' di vino, buone chiacchiere.
+                        E forse una faccia amica con cui riprendere a camminare?
                 
                 *  {terrore == 0} [È una storia di paura.]
                         E la paura non è una colpa.
@@ -453,11 +480,11 @@
         }
 
         {effettivoStatoSpettroUno:
-            - IlSocievole: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ora so che ho bisogno delle altre persone, anche quando la cosa mi fa paura.
+            - IlSocievole: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ora so che sto bene quando sono con altre persone, e che posso smetterla di tenerle lontane.
             - IlConsapevole: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Vedo i dolori del mondo e capisco che sono prodotti di quel sistema. Unendomi alle altre persone, posso cambiare un po' di cose.
             - IlGuarente: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:La mia rabbia è una guida: ora so dove si trovano le mie ferite, e come affrontarle.
             - IlTerrorizzato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:Quello che ho dentro è mostruoso, deve rimanere nascosto dagli altri, a qualunque costo.
-            - LAbbandonato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:Le mie debolezze allontaneranno sempre gli altri. L'unica soluzione è giocare d'anticipo, e far tutto da solo.
+            - LAbbandonato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Sono abituato a fare tutto da solo, così saprò come sopravvivere quando gli altri inevitabilmente se ne andranno.
             - LArrabbiato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:Il mondo è sempre pronto a mordere, e io lo morderò sempre prima che lui possa ferirmi.
         }
         -
