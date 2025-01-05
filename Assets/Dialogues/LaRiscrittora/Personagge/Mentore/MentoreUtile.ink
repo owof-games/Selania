@@ -57,6 +57,7 @@
         Mentore: Sono totalmente innocue, l'unico problema è che non hanno trovato una soluzione a questioni rimaste aperte quando erano in vita.
         Mentore: Spesso sono storie di rimpianto o rimorso, in alcuni causi di traumi, o sensi di colpa.
         Mentore: E a volte hanno avuto una vita così bella che non accettano davvero di morire.
+        Mentore: Sia quel che sia, sono fermi su quel ricordo, convinti che il passato sia il presente.        
         Mentore: In tutte queste situazioni arrivi tu, {nome}:
         Mentore: ascolti per bene quello che dicono,
         Mentore: fai loro un dono adeguato,
@@ -204,23 +205,19 @@
 
 === compito
         Mentore: Te la faccio breve: nel <b>Mausoleo</b> incontrerai degli <b>spettri</b>.
-        Mentore: Sono totalmente innocue, l'unico problema è che non hanno trovato una soluzione a questioni rimaste aperte quando erano in vita.
+        Mentore: Sono totalmente innocui, l'unico problema è che non hanno trovato una soluzione a questioni rimaste aperte quando erano in vita.
         Mentore: Spesso sono storie di rimpianto o rimorso, in alcuni causi di traumi, o sensi di colpa.
         Mentore: E a volte hanno avuto una vita così bella che non accettano davvero di morire.
+        Mentore: Sia quel che sia, sono fermi su quel ricordo, convinti che il passato sia il presente.
         Mentore: In tutte queste situazioni arrivi tu, {nome}:
         Mentore: ascolti per bene quello che dicono,
         Mentore: fai loro un dono adeguato,
         Mentore: e poi aiuti questi spettri a rileggere un pezzo della loro storia, il pezzo che le blocca qui.
         Mentore: A darsi un nuovo nome.
-        Mentore: Giusto per chiarirci per bene sul perché sei qui.
-        Mentore: Non so se ti capita che ti fissi su una cosa perché magari l'ansia o le insicurezze ti mandano nel pallone.
-        Mentore: E quella cosa non è per nulla male, ma il tuo cervello proprio non lo vuole capire.
-        Mentore: E poi arriva una persona amica, o un libro, una canzone, un videogioco, un film, e a un certo punto torni a vedere le cose da una prospettiva più serena.
-        Mentore: Ecco, tu farai qualcosa del genere.
         Mentore: Qui chiamiamo il tuo ruolo quello {pronomi has maschili: del <b>Riscrittore</b>|{pronomi has femminili: della <b>Riscrittora</b>|dellə <b>Riscrittorə</b>}}, perché aiuterai queste persone a riscrivere e rileggere il loro passato.
         Mentore: Due cose importantissime: ci sono più strade per aiutare ogni spettro.
-        Mentore: E non sempre puoi dare a tutti la risoluzione che spereresti, e va bene così.
-        Mentore: Il tuo compito è aiutarli ad uscire dallo stallo in cui sono.    
+        Mentore: E non sempre puoi portare alla risoluzione che vorresti, e va bene così.
+        Mentore: Il tuo obiettivo principale è aiutarli ad uscire dallo stallo in cui sono, il resto viene dopo.
             ->->
 /* ---------------------------------
 
