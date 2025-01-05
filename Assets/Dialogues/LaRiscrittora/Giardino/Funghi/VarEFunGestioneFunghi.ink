@@ -176,7 +176,7 @@ VAR inCrescita = 0
             - lutto == true:
                 -> non_ti_scordar_di_te
             - lutto == false:
-                -> results
+                -> canto_delle_compagne
         }
         
 }
