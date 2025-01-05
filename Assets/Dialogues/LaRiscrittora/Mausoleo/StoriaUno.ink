@@ -500,9 +500,13 @@
         }
 
     = evento_speciale
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ma visto che mi hai fatto un dono speciale, voglio condividere con te una cosa che ho imparato.
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: E ora, me ne vado.
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Addio.
+        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Prima di andarmene, vorrei dirti una cosa.
+        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Mi hai dato un dono speciale, e vorrei ringraziarti in qualche modo.
+        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: E quindi: presta attenzione al mentore.
+        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Perché potrebbe essere qualcuno che già conosci.
+        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Fuori da qui.
+        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Dal mondo da cui provieni.
+        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Addio.                              
             ~ storiaUno = Conclusa
             ~ move_entity(SpettroUno, CasettaAnime)
             ~ move_entity(LapideUno, Mausoleo)
