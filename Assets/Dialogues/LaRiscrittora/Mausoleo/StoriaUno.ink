@@ -1,17 +1,17 @@
 === lapide_uno ===
     //opzione se non hai mai esplorato questa storia, e se non ci sono storie attive
     + {are_two_entities_together(LapideUno, PG) && not (storiaUno == InCorso or storiaUno == Conclusa) and not (storiaDue == InCorso or storiaTre == InCorso)}[LapideUno]
-        <i>Qui giace {traduttoreSpettri(effettivoStatoSpettroUno)}.</i>
+        <i>Qui attende {traduttoreSpettri(effettivoStatoSpettroUno)}.</i>
             -> intro_storia_uno
 
     //opzione se c'è un'altra storia attiva
     + {are_two_entities_together(LapideUno, PG) && storiaUno == Conclusa} [LapideUno]
-        <i>La prima lapide appartiene a {traduttoreSpettri(effettivoStatoSpettroUno)}.</i>
+        <i>Qui riposa {traduttoreSpettri(effettivoStatoSpettroUno)}.</i>
             -> main
 
     //opzione se questa storia è attiva
     + {are_two_entities_together(SpettroUno, PG) && storiaUno == InCorso} [SpettroUno]
-    <i>Lo spettro del vuoto ondeggia inquieto accanto alla sua lapide.</i>
+    <i>{traduttoreSpettri(effettivoStatoSpettroUno)} ondeggia inquieto accanto alla sua lapide.</i>
         -> doni_storia_uno
 
     + ->
@@ -23,7 +23,8 @@
     //In questo primo step quello che succede è che verifichiamo se ci sono trigger problematici per la giocatrice. Le permettiamo di scegliere se andare o meno avanti, e poi abbiamo la presentazione della storia.
     {
     - presentazioni == 0:
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ehi, prima parla col mentore.
+        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Non penso tu voglia parlare davvero con me.
+        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ma anche fosse, prima parla col mentore.
         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Lo riconosci perché assomiglia a una lampada.
         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Sicuro ha qualcosa da dire a una persona appena arrivata.
             -> main
@@ -44,7 +45,7 @@
     ->->
 
         = trigger_solitudine
-            <i>Hai segnalato che preferiresti non sentire storie riguardanti la solitudine, che è uno dei <i>temi di questo spettro.</i>
+            <i>Hai segnalato che preferiresti non sentire storie riguardanti la <b>solitudine</b>, che è uno dei temi di questo spettro.
             <i>Puoi decidere se continuare comunque, o saltare la sua storia.</i>
             <i>Nel secondo caso, potrai (in modo un po' arbitrario) aiutarlo a riscrivere il suo nome.</i>
                 * [Voglio comunque ascoltare la sua storia.]
@@ -57,21 +58,23 @@
         = intro
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Vigilia di Natale.
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Per la prima volta da mesi ho tempo libero: non sto lavorando, non sto correndo da nessuna parte.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Cammino lentamente col cane, sto andando a una cena con amici; eppure, c’è questo enorme senso di vuoto.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Mi prende la pancia con dita lunghe e fredde, mi fa pensare cose che non voglio pensare, più fredde della brina che rimane sulle strade.
+            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Cammino lentamente col cane, andando a una cena con amici.
+            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Eppure, non riesco a liberarmi di questo enorme senso di vuoto.
+            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Mi prende la pancia con dita lunghe e fredde, mi fa pensare cose che non voglio pensare, più fredde della brina che già ricopre le strade.
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ho bisogno di parlare con qualcuno: non sento mamma da settimane, e poi ci sono messaggi, audio, meme che attendono risposte da tempi imbarazzanti.
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Mentre aspetto il bus provo a pensare con chi potrei confidarmi.
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Mando un audio a Lele, che mi risponde raccontandomi i suoi drammi.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ascolto un vocale di Cate, ma man mano che mi consola per le rotture di lavoro mi passa il coraggio di condividere qualcosa di più pesante, cazzo quanto sono pesante, e rispondo con delle cazzate.
+            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ascolto un vocale di Cate, ma man mano che la sua voce dal passato mi consola per le rotture di lavoro mi passa il coraggio di condividere qualcosa di più pesante.
+            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Cazzo quanto sono pesante. Rispondo con delle cazzate.
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Provo a scrivere a Sandro, ma poi il testo cambia perché messe a parole quelle cose non sono esattamente così, non hanno la voce giusta.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: L’unica cosa che potrei fare è provare a gridare, gridare, gridare.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: E poi, insomma, ognuno c’ha i suoi cazzi.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Penso alla cena in arrivo, al dover far finta che tutto vada bene.
+            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: L’unica cosa che vorrei fare è gridare, gridare, gridare.
+            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: E poi dai, ognuno c’ha i suoi cazzi.
+            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Continuo a pensare alla cena in arrivo, al dover far finta che tutto vada bene.
+            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ridere alle battute, dire cose come "Ma dai!" e "Non ci credo!".
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: L’autobus arriva, lo lascio passare.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Il cane inizia a tirare.
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Il vuoto mi trascina in giro per il paese, il suo gelo mi schiaccia lo stomaco, mi fa esplodere il cuore.
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Il cellulare inizia a vibrare. Non ce la posso fare, non ce la posso fare.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Torno a casa, disattivo internet, disattivo il cellulare, e mi rimetto a lavorare.
+            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Torno a casa, disattivo il telefono, e mi rimetto a lavorare.
                 ~ move_entity(SpettroUno, Mausoleo)
                 ~ move_entity(LapideUno, CasettaAnime)
                 -> main
@@ -126,23 +129,23 @@
 
     = secondo_blocco
             * [Prima hai detto che ci sono cose a cui non volevi pensare.]
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:  Sì.
+                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Sì.
 
-                * * [E ti andrebbe di raccontarmele?]
-                    ~ terrore ++
+                * * (racconto)[E ti andrebbe di raccontarmele?]
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: No.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Non perché non mi fidi di te.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ma perché fintanto che le cose non escono dalla testa, allora non sono vere, no?
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: E io non voglio che divengano vere.
+                        ~ terrore ++
 
-                * * [Capita anche a me, sai?]
+                * * (capita)[Capita anche a me, sai?]
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Vedi, è come con Lele.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Queste cose mi ricordano che quello che provo è comune.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Banale.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Stupido io che lascio che mi facciano così male.
                     ~ abbandono ++
 
-                * * [A volte la nostra testa sembra volerci fare solo del male.]
+                * * (testa) [A volte la nostra testa sembra volerci fare solo del male.]
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Già.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: È come avere un nemico in testa.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Qualcosa che non puoi schiacciare.
@@ -186,7 +189,7 @@
 
 
             * [Quando hai deciso di non andare alla cena...]
-                * * [Perché non hai detto la verità ai tuoi amici?]
+                * * (verità) [Perché non hai detto la verità ai tuoi amici?]
                     ~ terrore ++
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Perché qualcuno avrebbe voluto aiutare.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Chiamare.
@@ -258,7 +261,7 @@
         //Più abbiamo preso un certo topic di petto, più veniamo premiate? E quindi un punteggio alto in realtà favorisce una certa lettura di sè?
         //Ma se non abbiamo toccato un sentimento, una paura, non abbiamo modo di rileggere quella cosa in quel modo, e allora possiamo solo confermare lo status quo.
         //Arrivo qui con un massimo di 3 punti su un elemento
-        Il vuoto ti ha inseguito perché...
+        Il vuoto...
         //Mettere qualcosa per far riconoscere che una scelta usa inchiostro e l'altra no.
             - (top1)
                 * {rabbia > 0} [La tua rabbia..]
@@ -277,17 +280,26 @@
                         Dici cose sull'abbandono.
                             ~ statoInchiostroSpettroUno --
                             ~ socievole ++
-                * {terrore > 0} [rilettura terrore]
+                * {terrore > 0} [Ti sta indicando le cose che ti fanno paura.]
                         {check_statusVsInchiostro(terrore,statoInchiostroSpettroUno):
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top1
                         }
-                        Dici cose sul terrore.
+                        {racconto: Non è vero che se racconti ciò che hai in testa, diventa vero.}
+                        {vuoto2: A scuola, coi genitori, a lavoro: sono situazioni che possono diventare davvero pesanti.}
+                        {verità: Nel mondo in cui viviamo, fatto di numeri e bilanci, è normale pensare che se qualcuno ci aiuta, allora siamo in debito.}
+                        Il vuoto è un segnale, non è un problema da risolvere.
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: ...
                             ~ statoInchiostroSpettroUno --
                             ~ consapevole ++
                 * {rabbia == 0}[conferma rabbia]
                 * {abbandono == 0}[conferma abbandono]
-                * {terrore == 0}[conferma terrore]
+                * {terrore == 0}[È la tua paura.]
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Quindi sono persino un codardo?
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Beh, dirlo ad alta voce un po' mi consola.
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Almeno so chi sono.
+
+
                 -
         E per questo...
             - (top2)
@@ -307,20 +319,27 @@
                         Dici cose sull'abbandono.
                             ~ statoInchiostroSpettroUno --
                             ~ socievole ++
-                *  {terrore > 0} [rilettura terrore]
+                *  {terrore > 0} [Anche se fa paura, aprirsi è la soluzione.]
                         {check_statusVsInchiostro(terrore, statoInchiostroSpettroUno):
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top2
                         }
-                        Dici cose sul terrore.
+                        {racconto: Raccontare ciò che hai in testa, condividerlo, ti permette di smontarlo.}
+                        {vuoto2: Quando sei in compagnia e la situazione è difficile, può essere utile avere una persona alleata al tuo fianco.}
+                        {verità: È importante ricordarti che le persone che ti vogliono bene ti aiutano perché gli va, non perché devono.}
+                        Non siamo fatti per affrontare il mondo da soli, e va bene così.
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: ...
                             ~ statoInchiostroSpettroUno --
                             ~ consapevole ++
                 *  {rabbia == 0}[conferma rabbia]
                 *  {abbandono == 0}[conferma abbandono]
-                *  {terrore == 0}[conferma terrore]
+                *  {terrore == 0}[Il vuoto forse è qualcosa da accogliere.]
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Trasformarmi nel vuoto.
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Sparire.
+                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: L'eco di una persona.                                                            
                 -
         
-        Altra opzione
+        La tua storia...
             - (top3)
                 *  {rabbia > 0} [La tua rabbia]
                         {check_statusVsInchiostro(rabbia, statoInchiostroSpettroUno):
@@ -338,17 +357,22 @@
                         Dici cose sull'abbandono.
                             ~ statoInchiostroSpettroUno --
                             ~ socievole ++
-                *  {terrore > 0} [rilettura terrore]
+                *  {terrore > 0} [È quella di qualcuno che accoglie le sue paure.]
                         {check_statusVsInchiostro(terrore, statoInchiostroSpettroUno):
                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
                                 -> top3
                         }
-                        Dici cose sul terrore.
+                        Che vede il mondo, i rapporti, e ne comprende le complessità.
+                        Una vedetta consapevole.
+                        Sola, la vedetta è spaventata, terrorizzata.
+                        Ma assieme alle altre persone diventa parte di una rete, di una conversazione capace di trasformare ciò che non va.
                             ~ statoInchiostroSpettroUno --
                             ~ consapevole ++
                 *  {rabbia == 0} [conferma rabbia]
                 *  {abbandono == 0} [conferma abbandono]
-                *  {terrore == 0} [conferma terrore]
+                *  {terrore == 0} [È una storia di paura.]
+                        E la paura non è una colpa.
+                        Il mondo è un gran casino, ci sta sentirsi costantemente in allarme.
                 -
                     -> chi_sono_storia_uno
 
@@ -391,7 +415,7 @@
 
         {effettivoStatoSpettroUno:
             - IlSocievole: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ora so che ho bisogno delle altre persone, anche quando la cosa mi fa paura.
-            - IlConsapevole: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Vedo i limiti del mondo che ci circonda, e capisco che queste paure sono figlie di quel sistema.
+            - IlConsapevole: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Vedo i dolori del mondo e capisco che sono prodotti di quel sistema. Unendomi alle altre persone, posso cambiare un po' di cose.
             - IlGuarente: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:La mia rabbia mi ha aiutato a capire dove si trovano le mie ferite, e ora so cosa affrontare.
             - IlTerrorizzato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:Quello che ho dentro è mostruoso, deve rimanere nascosto dagli altri, a qualunque costo.
             - LAbbandonato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:Le mie debolezze allontaneranno sempre gli altri. L'unica soluzione è giocare d'anticipo, e far tutto da solo.
