@@ -3,9 +3,9 @@
     - fungoProposto has LicheneDegliAbissi:
     {
         - inCrescita <2: -> lichene_degli_abissi.step_zero
-        - inCrescita <5: -> lichene_degli_abissi.step_uno
-        - inCrescita <8: -> lichene_degli_abissi.step_due
-        - inCrescita <10:
+        - inCrescita <4: -> lichene_degli_abissi.step_uno
+        - inCrescita <6: -> lichene_degli_abissi.step_due
+        - inCrescita <8:
             ~ move_entity(LicheneDegliAbissi, Funghi)
             -> lichene_degli_abissi.step_tre
         - inCrescita <20: -> lichene_degli_abissi.step_quattro
@@ -14,9 +14,9 @@
     - fungoProposto has MuschioDelleAmanti:
     {
         - inCrescita <2: -> muschio_delle_amanti.step_zero
-        - inCrescita <5: -> muschio_delle_amanti.step_uno
-        - inCrescita <8: -> muschio_delle_amanti.step_due
-        - inCrescita <10:
+        - inCrescita <4: -> muschio_delle_amanti.step_uno
+        - inCrescita <6: -> muschio_delle_amanti.step_due
+        - inCrescita <8:
              ~ move_entity(MuschioDelleAmanti, Funghi)
             -> muschio_delle_amanti.step_tre
         - inCrescita <20: -> muschio_delle_amanti.step_quattro
@@ -25,9 +25,9 @@
     - fungoProposto has CantoDelleCompagne:
     {
         - inCrescita <2: -> canto_delle_compagne.step_zero    
-        - inCrescita <5: -> canto_delle_compagne.step_uno
-        - inCrescita <8: -> canto_delle_compagne.step_due
-        - inCrescita <10:
+        - inCrescita <4: -> canto_delle_compagne.step_uno
+        - inCrescita <6: -> canto_delle_compagne.step_due
+        - inCrescita <8:
              ~ move_entity(CantoDelleCompagne, Funghi)
             -> canto_delle_compagne.step_tre
         - inCrescita <20: -> canto_delle_compagne.step_quattro
@@ -36,9 +36,9 @@
     - fungoProposto has LaSpazzata:
     {
         - inCrescita <2: -> la_spazzata.step_zero 
-        - inCrescita <5: -> la_spazzata.step_uno
-        - inCrescita <8: -> la_spazzata.step_due
-        - inCrescita <10:
+        - inCrescita <4: -> la_spazzata.step_uno
+        - inCrescita <6: -> la_spazzata.step_due
+        - inCrescita <8:
              ~ move_entity(LaSpazzata, Funghi)
             -> la_spazzata.step_tre
         - inCrescita <20: -> la_spazzata.step_quattro
@@ -47,9 +47,9 @@
     - fungoProposto has BaccaDellaAddolorata:
     {
         - inCrescita <2: -> bacca_della_addolorata.step_zero 
-        - inCrescita <5: -> bacca_della_addolorata.step_uno
-        - inCrescita <8: -> bacca_della_addolorata.step_due
-        - inCrescita <10:
+        - inCrescita <4: -> bacca_della_addolorata.step_uno
+        - inCrescita <6: -> bacca_della_addolorata.step_due
+        - inCrescita <8:
              ~ move_entity(BaccaDellaAddolorata, Funghi)
             -> bacca_della_addolorata.step_tre
         - inCrescita <20: -> bacca_della_addolorata.step_quattro
@@ -58,9 +58,9 @@
     - fungoProposto has NonTiScordarDiTe:
     {
         - inCrescita <2: -> non_ti_scordar_di_te.step_zero     
-        - inCrescita <5: -> non_ti_scordar_di_te.step_uno
-        - inCrescita <8: -> non_ti_scordar_di_te.step_due
-        - inCrescita <10:
+        - inCrescita <4: -> non_ti_scordar_di_te.step_uno
+        - inCrescita <6: -> non_ti_scordar_di_te.step_due
+        - inCrescita <8:
              ~ move_entity(NonTiScordarDiTe, Funghi)
             -> non_ti_scordar_di_te.step_tre
         - inCrescita <20: -> non_ti_scordar_di_te.step_quattro
@@ -69,9 +69,9 @@
     - fungoProposto has BrinaDellImpossibile:
     {
         - inCrescita <2: -> brina_dell_impossibile.step_zero     
-        - inCrescita <5: -> brina_dell_impossibile.step_uno
-        - inCrescita <8: -> brina_dell_impossibile.step_due
-        - inCrescita <10:
+        - inCrescita <4: -> brina_dell_impossibile.step_uno
+        - inCrescita <6: -> brina_dell_impossibile.step_due
+        - inCrescita <8:
              ~ move_entity(BrinaDellImpossibile, Funghi)
             -> brina_dell_impossibile.step_tre
         - inCrescita <20: -> brina_dell_impossibile.step_quattro
