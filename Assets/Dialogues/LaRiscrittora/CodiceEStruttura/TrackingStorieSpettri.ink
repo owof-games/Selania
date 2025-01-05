@@ -73,7 +73,7 @@ VAR eventoSpecialeSpettroSette = false
         - IlConsapevole: 
             ~ return "il Consapevole"
         - IlGuarente: 
-            ~ return "il Ferito"    
+            ~ return "il guarente"    
         - IlSocievole: 
             ~ return "il Socievole"
         - IlTerrorizzato: 
@@ -106,7 +106,7 @@ VAR eventoSpecialeSpettroSette = false
         - IlConsapevole: 
             ~ return "Il Consapevole"
         - IlGuarente: 
-            ~ return "Il Ferito"    
+            ~ return "Il Guarente"    
         - IlSocievole: 
             ~ return "Il Socievole"
         - IlTerrorizzato: 

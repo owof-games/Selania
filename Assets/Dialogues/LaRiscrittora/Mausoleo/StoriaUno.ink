@@ -11,7 +11,7 @@
 
     //opzione se questa storia è attiva
     + {are_two_entities_together(SpettroUno, PG) && storiaUno == InCorso} [SpettroUno]
-    <i>{traduttoreSpettri(effettivoStatoSpettroUno)} ondeggia inquieto accanto alla sua lapide.</i>
+    <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)} ondeggia inquieto accanto alla sua lapide.</i>
         -> doni_storia_uno
 
     + ->
@@ -37,7 +37,7 @@
         -> trigger_solitudine
 
     }
-    <i>{traduttoreSpettri(effettivoStatoSpettroUno)} ti osserva malinconico.</i>
+    <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)} ti osserva malinconico.</i>
         + [Raccontami la tua storia.]
             -> intro
         + [Torno tra poco.]
@@ -145,7 +145,7 @@
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Stupido io che lascio che mi facciano così male.
                     ~ abbandono ++
 
-                * * (testa) [A volte la nostra testa sembra volerci fare solo del male.]
+                * * (testa) [A volte la nostra testa sembra volerci fare del male.]
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Già.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: È come avere un nemico in testa.
                     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Qualcosa che non puoi schiacciare.
@@ -164,7 +164,7 @@
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Mi insegue nei sogni, non mi lascia respirare.
                 ~ terrore ++
 
-            * (lavoro2) {lavoro} [Perché quando il lavoro diventa un dovere non prendi una pausa?]
+            * (lavoro2) {lavoro} [Quando il lavoro diventa un dovere non prendi una pausa?]
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Pensi non ci abbia provato?!?
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Scusa.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ma non hai idea della frustrazione.
@@ -177,7 +177,7 @@
                 ~ rabbia ++
 
 
-            * (amici2) {amici} [Anche se accadono a tutti, non è che non sono importanti per te.]
+            * (amici2) {amici} [Anche se accadono a tutti, sono importanti per te.]
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ma il punto non è quello.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: È che poi le persone si annoiano.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Con tutti i casini, chi ha davvero voglia di ascoltare le para di qualcun altro.
@@ -487,8 +487,8 @@
         {effettivoStatoSpettroUno:
             - IlSocievole: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Ora so che sto bene quando sono con altre persone, e che posso smetterla di tenerle lontane.
             - IlConsapevole: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Vedo i dolori del mondo e capisco che sono prodotti di quel sistema. Unendomi alle altre persone, posso cambiare un po' di cose.
-            - IlGuarente: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:La mia rabbia è una guida: ora so dove si trovano le mie ferite, e come affrontarle.
-            - IlTerrorizzato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:Quello che ho dentro è mostruoso, deve rimanere nascosto dagli altri, a qualunque costo.
+            - IlGuarente: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: La mia rabbia è una guida: ora so dove si trovano le mie ferite, e come affrontarle.
+            - IlTerrorizzato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Quello che ho dentro è mostruoso, deve rimanere nascosto dagli altri, a qualunque costo.
             - LAbbandonato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Sono abituato a fare tutto da solo, così saprò come sopravvivere quando gli altri inevitabilmente se ne andranno.
             - LArrabbiato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:Il mondo è sempre pronto a mordere, e io lo morderò sempre prima che lui possa ferirmi.
         }

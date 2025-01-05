@@ -15,8 +15,8 @@
 
 === gestione_inventario ===
 {debug: I doni trovati sono {doniTrovati}}
-
-+ {doniTrovati has MuschioDelleAmanti} [Dono del muschio delle amanti.]
+Dono...
++ {doniTrovati has MuschioDelleAmanti} [Del muschio delle amanti.]
     ~ doniTrovati -= MuschioDelleAmanti
     ~ doniDonati += MuschioDelleAmanti
     {
@@ -38,7 +38,7 @@
     
    -> main
 
-+ {doniTrovati has BaccaDellaAddolorata} [Dono una bacca della Addolorata.]
++ {doniTrovati has BaccaDellaAddolorata} [Una bacca della Addolorata.]
     ~ doniTrovati -= BaccaDellaAddolorata
     ~ doniDonati += BaccaDellaAddolorata
     {
@@ -56,7 +56,7 @@
     }
    -> main    
 
-+ {doniTrovati has LaSpazzata} [Dono un frammento della Spezzata.]
++ {doniTrovati has LaSpazzata} [Un frammento della Spezzata.]
     ~ doniTrovati -= LaSpazzata
     ~ doniDonati += LaSpazzata
     {
@@ -75,7 +75,7 @@
     }
    -> main
 
-+ {doniTrovati has coperta} [Dono una coperta.]
++ {doniTrovati has coperta} [Una coperta.]
     ~ doniTrovati -= coperta
     ~ doniDonati += coperta
     {
@@ -83,7 +83,7 @@
         ~ statoInchiostroSpettroUno ++
         ~ statoInchiostroSpettroUno ++
         <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)} se la avvolge attorno al corpo.
-        Sembra sollevato.</i>
+        <i>Sembra sollevato.</i>
         ~ donoSpettroUno = true
         -> storia_uno.capitolo_uno
     
@@ -96,7 +96,7 @@
     }
    -> main
     
-+ {doniTrovati has vasovuoto} [Dono un vaso vuoto.]
++ {doniTrovati has vasovuoto} [Un vaso vuoto.]
     ~ doniTrovati -= vasovuoto
     ~ doniDonati += vasovuoto
     {
@@ -115,7 +115,7 @@
     }
     -> main
     
-+ {doniTrovati has BrinaDellImpossibile} [Dono un frammento di Brina dell'Impossibile.]
++ {doniTrovati has BrinaDellImpossibile} [Un frammento di Brina dell'Impossibile.]
     ~ doniTrovati -= BrinaDellImpossibile
     ~ doniDonati += BrinaDellImpossibile
     {
