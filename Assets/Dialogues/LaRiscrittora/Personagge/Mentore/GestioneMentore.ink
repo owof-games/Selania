@@ -1,7 +1,7 @@
 //Liste per gestire i luoghi dove troviamo il mentore
 //NOTA: IL MENTORE NON COMPARE MAI NEL LABIRINTO, QUELLO è SPAZIO PRIVATO
 VAR luoghiMentorePrimoTier =(Giardino, Mausoleo, Funghi)
-VAR luoghiMentoreSecondoTier =(Giardino, Mausoleo, Funghi, Falene)
+VAR luoghiMentoreSecondoTier =(Giardino, Mausoleo) //, Funghi, Falene da rimettere poi dopo prototipo
 VAR luoghiMentoreTerzoTier = (Giardino, Mausoleo, Biblioteca, Falene, Funghi, Tisane, Sirene)
 VAR luoghiMentoreIncontrato = ()
 VAR mentore_location = ()
@@ -19,6 +19,7 @@ VAR mentore_location = ()
             - else:
                 //Nel primo tier, il mentore è sempre e solo nel Mausoleo
                 ~ move_entity(Mentore, Mausoleo)
+                ->->
         }
 
 
@@ -61,7 +62,7 @@ VAR mentore_location = ()
         - luoghiMentoreSecondoTier != ():
             -> runDomSecondoTier
         - else:
-            ~ luoghiMentoreSecondoTier = (Giardino, Mausoleo, Funghi, Falene)
+            ~ luoghiMentoreSecondoTier = (Giardino, Mausoleo) //, Funghi, Falene da mettere dopo secondo tier
             ~ luoghiMentoreIncontrato = ()
         {debug: la lista dei luoghi era vuota, ma ora contiene di nuovo tutto (check) {luoghiMentoreSecondoTier}}
             -> runDomSecondoTier

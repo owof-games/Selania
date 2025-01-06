@@ -1,13 +1,19 @@
 === storylets_mentore ===
 {
 //Introduzioni
-    - inizio == 0:
-        -> inizio
+    - presentazioni == 0:
+        -> presentazioni
     - not dono_e_inchiostro:
-        -> dono_e_inchiostro
+        {
+            - intro_storia_uno.intro:
+                -> dono_e_inchiostro
+            - else: Mentore: Parla con quello spettro, ti aspetterò qui!
+                -> main
+        }
+        
     - not domande_e_obiettivo:
         {
-            - doni_storia_uno:
+            - storia_uno.capitolo_uno:
                 -> domande_e_obiettivo
             - else: Mentore: Fai la tua offerta allo spettro, e poi torna da me.
                 -> main
@@ -17,7 +23,8 @@
         {
             - storia_uno.primo_blocco:
                 -> feedback_spettro_uno
-            - else: Mentore: Aiuta lo spettro, e poi torna da me.    
+            - else: Mentore: Aiuta lo spettro, e poi torna da me.
+                -> main
     
         }
         

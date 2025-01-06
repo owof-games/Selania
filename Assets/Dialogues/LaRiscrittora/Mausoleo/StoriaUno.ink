@@ -92,7 +92,8 @@
 === doni_storia_uno ===
 //Qui è la fase di check per i doni, se donarne, quali, o non farlo.
 {
-    - not dono_e_inchiostro: Mentore: Torna a parlare da me!
+    - not dono_e_inchiostro: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Credo che il Mentore prima voglia parlarti.
+        -> main
     - else:
         -> internal_inventario
 }
@@ -507,7 +508,7 @@
             - IlGuarente: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: La mia rabbia è una guida: ora so dove si trovano le mie ferite, e come affrontarle.
             - IlTerrorizzato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Quello che ho dentro è mostruoso, deve rimanere nascosto dagli altri, a qualunque costo.
             - LAbbandonato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Sono abituato a fare tutto da solo, così saprò come sopravvivere quando gli altri inevitabilmente se ne andranno.
-            - LArrabbiato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}:Il mondo è sempre pronto a mordere, e io lo morderò sempre prima che lui possa ferirmi.
+            - LArrabbiato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Il mondo è sempre pronto a mordere, e io lo morderò sempre prima che lui possa ferirmi.
         }
         -
         {
