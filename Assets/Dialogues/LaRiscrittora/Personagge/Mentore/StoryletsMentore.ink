@@ -3,6 +3,12 @@
 //Introduzioni
     - inizio == 0:
         -> inizio
+    - not dono_e_inchiostro:
+        -> dono_e_inchiostro
+    - not domande_e_obiettivo:
+        -> domande_e_obiettivo
+    - not feedback_spettro_uno:
+        -> feedback_spettro_uno
     
 //Presentazione dei luoghi
     - are_entities_together_in(PG, Mentore, Funghi) && not prima_visita_funghi:
@@ -32,7 +38,7 @@
 
 //Passiamo da qui solo a inizio del gioco.
 === inizio
-<>Qualcuno sembra attenderti, sereno e sorridente.</i>
+<i>Qualcuno sembra attenderti, sereno e sorridente.</i>
     + [Voglio parlargli.]
         -> presentazioni
     + [Preferisco continuare a curiosare in giro.]

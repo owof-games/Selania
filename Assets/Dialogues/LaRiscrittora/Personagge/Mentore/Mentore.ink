@@ -8,7 +8,7 @@
     Mentore: Cosa vuoi sapere {pronomi has maschili: amico mio|{pronomi has femminili: amica mia|amicə miə}}?
     - (top)
         //+ [Voglio conoscere meglio il mentore]
-        + [Ho bisogno di un aiuto.]
+        + [Qualcosa non mi è chiaro.]
             -> supporto
         + [Abbandono la conversazione.]
             -> main
