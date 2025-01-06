@@ -348,15 +348,15 @@
 //Ricordo, collaborazione, novità
 //Outcome: prova una strada nuova
     = step_zero
-        <i>Le vetrate della serra sembrano più opache</i>
+        <i>Le vetrate della serra sembrano più opache.</i>
             -> main
     
     = step_uno
-        <i>Al centro di una delle vetrare è comparso quello che sembra un foro</i>
+        <i>Al centro di una delle vetrate è comparso quello che sembra un foro.</i>
           -> main
           
     = step_due
-        <i>Il foro si è trasformato in un reticolato irregolare</i>
+        <i>Il foro si è trasformato in un reticolato irregolare.</i>
           -> main
     
     = step_tre
