@@ -1,4 +1,5 @@
 === anima_uno
+
 + {are_two_entities_together(AnimaUno, PG)} [AnimaUno] 
     -> parlareConAnima
 

@@ -130,7 +130,7 @@
             * (lavoro) [Il tuo lavoro ti fa stare bene?]
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Sì.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Il problema è che non conosco mai il limite.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: E c'era questa sensazione, questa preoccupazione di essere sempre in ritardo su qualcosa.
+                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: E c'è questa sensazione, questa preoccupazione di essere sempre in ritardo su qualcosa.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: È davvero difficile riposarsi, sai? Staccare un po'.
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: E intanto il piacere sparisce, e rimaneva solo il <b>dovere</b>.
                 ~ rabbia ++
