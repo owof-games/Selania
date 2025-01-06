@@ -159,6 +159,7 @@ VAR inCrescita = 0
 
 
 === da_lista_a_coltivazioni ===
+<i>Qualcosa sta crescendo. Torna tra un po'.</i>
 {fungoProposto:
     - LicheneDegliAbissi:
         -> lichene_degli_abissi
