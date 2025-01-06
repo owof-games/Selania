@@ -8,7 +8,7 @@
     Sconosciuto: Che buffo, è da un po' che non incontravo una persona nuova.
     Sconosciuto: Immagino tu abbia un milione di domande, vero?
     - (top)
-        * [Dove sono?]
+        * (dove) [Dove sono?]
             {chiSei:Mentore|Sconosciuto}: Questa è una risposta che potrai trovare solo col tempo.
             {chiSei:Mentore|Sconosciuto}: La cosa che posso dirti con certezza però è che un posto sicuro.
             {chiSei:Mentore|Sconosciuto}: Un posto dove prenderti le cose coi tuoi tempi, direi.
@@ -32,6 +32,8 @@
         * {vado} [Me ne vado.]
             {chiSei:Mentore|Sconosciuto}: Giusto un secondo, persona nuova.
             -> name
+        * {vado or chiSei or dove} [Perfetto: ma ora?]
+            -> name 
         * -> name
     
     = name    
