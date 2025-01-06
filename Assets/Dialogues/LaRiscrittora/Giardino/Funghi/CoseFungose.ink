@@ -5,10 +5,10 @@
         - inCrescita <2: -> lichene_degli_abissi.step_zero
         - inCrescita <4: -> lichene_degli_abissi.step_uno
         - inCrescita <6: -> lichene_degli_abissi.step_due
-        - inCrescita <8:
+        - inCrescita <20:
             ~ move_entity(LicheneDegliAbissi, Funghi)
             -> lichene_degli_abissi.step_tre
-        - inCrescita <20: -> lichene_degli_abissi.step_quattro
+        - else: -> lichene_degli_abissi.step_quattro
     }
 
     - fungoProposto has MuschioDelleAmanti:
@@ -16,10 +16,10 @@
         - inCrescita <2: -> muschio_delle_amanti.step_zero
         - inCrescita <4: -> muschio_delle_amanti.step_uno
         - inCrescita <6: -> muschio_delle_amanti.step_due
-        - inCrescita <8:
+        - inCrescita <20:
              ~ move_entity(MuschioDelleAmanti, Funghi)
             -> muschio_delle_amanti.step_tre
-        - inCrescita <20: -> muschio_delle_amanti.step_quattro
+        - else: -> muschio_delle_amanti.step_quattro
     }
 
     - fungoProposto has CantoDelleCompagne:
@@ -27,10 +27,10 @@
         - inCrescita <2: -> canto_delle_compagne.step_zero    
         - inCrescita <4: -> canto_delle_compagne.step_uno
         - inCrescita <6: -> canto_delle_compagne.step_due
-        - inCrescita <8:
+        - inCrescita <20:
              ~ move_entity(CantoDelleCompagne, Funghi)
             -> canto_delle_compagne.step_tre
-        - inCrescita <20: -> canto_delle_compagne.step_quattro
+        - else: -> canto_delle_compagne.step_quattro
     }
 
     - fungoProposto has LaSpazzata:
@@ -38,10 +38,10 @@
         - inCrescita <2: -> la_spazzata.step_zero 
         - inCrescita <4: -> la_spazzata.step_uno
         - inCrescita <6: -> la_spazzata.step_due
-        - inCrescita <8:
+        - inCrescita <20:
              ~ move_entity(LaSpazzata, Funghi)
             -> la_spazzata.step_tre
-        - inCrescita <20: -> la_spazzata.step_quattro
+        - else: -> la_spazzata.step_quattro
     }
 
     - fungoProposto has BaccaDellaAddolorata:
@@ -49,10 +49,10 @@
         - inCrescita <2: -> bacca_della_addolorata.step_zero 
         - inCrescita <4: -> bacca_della_addolorata.step_uno
         - inCrescita <6: -> bacca_della_addolorata.step_due
-        - inCrescita <8:
+        - inCrescita <20:
              ~ move_entity(BaccaDellaAddolorata, Funghi)
             -> bacca_della_addolorata.step_tre
-        - inCrescita <20: -> bacca_della_addolorata.step_quattro
+        - else: -> bacca_della_addolorata.step_quattro
     }
 
     - fungoProposto has NonTiScordarDiTe:
@@ -60,10 +60,10 @@
         - inCrescita <2: -> non_ti_scordar_di_te.step_zero     
         - inCrescita <4: -> non_ti_scordar_di_te.step_uno
         - inCrescita <6: -> non_ti_scordar_di_te.step_due
-        - inCrescita <8:
+        - inCrescita <20:
              ~ move_entity(NonTiScordarDiTe, Funghi)
             -> non_ti_scordar_di_te.step_tre
-        - inCrescita <20: -> non_ti_scordar_di_te.step_quattro
+        - else: -> non_ti_scordar_di_te.step_quattro
     }
 
     - fungoProposto has BrinaDellImpossibile:
@@ -71,10 +71,10 @@
         - inCrescita <2: -> brina_dell_impossibile.step_zero     
         - inCrescita <4: -> brina_dell_impossibile.step_uno
         - inCrescita <6: -> brina_dell_impossibile.step_due
-        - inCrescita <8:
+        - inCrescita <20:
              ~ move_entity(BrinaDellImpossibile, Funghi)
             -> brina_dell_impossibile.step_tre
-        - inCrescita <20: -> brina_dell_impossibile.step_quattro
+        - else: -> brina_dell_impossibile.step_quattro
     }    
     ->->
 }
@@ -97,21 +97,21 @@
           -> main
           
     = step_tre
-    + {are_two_entities_together(LicheneDegliAbissi, PG)} [LicheneDegliAbissi]
+    // + {are_two_entities_together(LicheneDegliAbissi, PG)} [LicheneDegliAbissi]
         <i>Eccolo qui. Un <b>Lichene degli abissi</b></i>
         <i>Il lichene degli abissi è una danza, un roteare costante di fungo ed alga. Un ripetersi anche nell'errore, nel dolore.</i>
         <i>Alga e fungo girano e rigirano senza mai afferrarsi.</i>
         <i>Se qualcuno sfiora il lichene, questo è destinato a scomparire.</i>
             
-            + + [Tocco il lichene.]
+            + [Tocco il lichene.]
                 <i> Un piccolo sbuffo. Le tue dita ora sanno di mare.</i>
                 <i>Il lichene è scomparso, tu no.</i>
                 <i>C'è qualcuno che devi allontanare?</i>
                     ~ move_entity(LicheneDegliAbissi, CasettaAnime)
                     ~ inCrescita = 0
                     ~ fungoProposto = ()
-            + + [Lo lascio dov'è.]
-            - -
+            + [Lo lascio dov'è.]
+            -
               -> main
               
     = step_quattro
@@ -137,14 +137,14 @@
           -> main
     
     = step_tre
-    + {are_two_entities_together(MuschioDelleAmanti, PG)} [MuschioDelleAmanti]
+    // + {are_two_entities_together(MuschioDelleAmanti, PG)} [MuschioDelleAmanti]
         <i>Senti un fremito nel ventre. I rami ora sono coperti da un fitto tappeto del color dell'alba.</i>
         <i>Quando lo sfiori le tue labbra tremano, ricordi ti invadono: quel bacio, quelle dita desiderate tra le coscie.</i>
         <i>Pienezza ti riempie: è per forza del <b>Muschio delle amanti</b></i>.
         <i>Potresti portarne un po' con te, sapendo che sparirà.</i>
         <i>O lasciarlo qui sull'albero.
             
-            + + [Raccolgo un po' del muschio.]
+            + [Raccolgo un po' del muschio.]
                 <i>Così vicino, il muschio ti chiama.</i>
                 <i>Ti invita a fermare per un attimo tutto, a premiare come più ti piace il tuo corpo, dentro o fuori che sia.</i>
                     ~ move_entity(MuschioDelleAmanti, CasettaAnime)
@@ -154,8 +154,8 @@
                         - doniTrovati hasnt MuschioDelleAmanti:
                         ~ doniTrovati += MuschioDelleAmanti
                     }
-            + + [Non è ancora il momento.]
-            - -
+            + [Non è ancora il momento.]
+            -
              -> main
     
     = step_quattro
@@ -184,14 +184,14 @@
             -> main
           
     = step_tre
-    + {are_two_entities_together(CantoDelleCompagne, PG)} [CantoDelleCompagne]
+    // + {are_two_entities_together(CantoDelleCompagne, PG)} [CantoDelleCompagne]
         <i>La serra tutta si è fatta rossa, uno stupendo <b>Canto delle compagne</b> galleggia sul terreno.</i>
         <i>In un altro tempo, più pauroso, questo fungo veniva chiamato "Canto delle streghe".</i>
         <i>L'euforia ti riempie i polmoni, senti la gioia di sapere che non sei mai stata davvero sola.</i>
         <i>Hai voglia di cantare.</i>
         <i>Questo spingerà il fungo altrove, verso altre streghe, altre compagne.</i>
         
-        + + [È il momento di cantare.]
+        + [È il momento di cantare.]
                 <i>Puoi farlo da te, o chiamare qualcuno a cui tieni.
                 Riempiti dell'euforia del fungo, e lascia che il mondo intero ascolti la tua voce.
                 Con l'ultima nota, il fungo sarà altrove, da un'altra compagna bisognosa.</i>
@@ -199,7 +199,7 @@
                     ~ inCrescita = 0
                     ~ fungoProposto = ()
                     -> main
-        + + [No, non ora.]
+        + [No, non ora.]
               -> main
               
     = step_quattro
@@ -226,14 +226,14 @@
             -> main
     
     = step_tre
-    + {are_two_entities_together(LaSpazzata, PG)} [LaSpazzata]
+    // + {are_two_entities_together(LaSpazzata, PG)} [LaSpazzata]
         <i>Tutto scricchiola, gli alberi sembrano gemere dal dolore.
         Il terreno stesso è impacciato, crepato.</i>
         <i>Ora riconosci cosa hai piantato: una grossa, esplosiva <b>Spazzata</b></i>.
         <i>La Spazzata non è un fungo, non è una pianta, ma è un insieme di tutte queste cose.</i>
         <i>E se non viene fatta sfogare, esploderà spazzando via tutta la serra.</i>
         
-        + + [Bene: facciamola sfogare!]
+        + [Bene: facciamola sfogare!]
             <i>Questa è la parte più facile: basta prometterle che dirai a qualcuno qualcosa che senti sullo stomaco.
             <i>Qualcosa che sono giorni o settimane (uh: questa Spazzata è molto grande. forse mesi?) che ti pesa.</i>
             <i>Falle la promessa, e se ne andrà.</i>
@@ -242,7 +242,7 @@
                     ~ inCrescita = 0
                     ~ fungoProposto = ()
                     -> main
-        + + [Non ora.]
+        + [Non ora.]
             -> main
     
     = step_quattro
@@ -269,13 +269,13 @@
           -> main
           
     = step_tre
-    + {are_two_entities_together(BaccaDellaAddolorata, PG)} [BaccaDellaAddolorata]
+    // + {are_two_entities_together(BaccaDellaAddolorata, PG)} [BaccaDellaAddolorata]
         <i>Nè rami, nè fiori. Solo la mano, e una piccolissima bacca vermiglia.<i>
         <i>Hai trovato una <b>Bacca dell'addolorata</b></i>
         <i>Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ad avanzare</i>
         <i>La sua bacca aiuta a capire cosa ci vincola, cosa non ci lascia allontanare.</i>
             
-            + + [La afferro.]
+            + [La afferro.]
             <i>La mano molla la sua presa, rivelandosi per quel che era dall'inizio: solo un insieme tenace di radici.</i>
             <i>Senti dalle tue spalle qualcosa sciogliersi, scivolare via: ora hai un po' meno paura di camminare.</i>
                 ~ move_entity(BaccaDellaAddolorata, CasettaAnime)
@@ -287,7 +287,7 @@
                     }
             
                 -> main
-            + + [Non è il momento.]
+            + [Non è il momento.]
                 -> main
               
     = step_quattro
@@ -318,14 +318,14 @@
           -> main
           
     = step_tre
-    + {are_two_entities_together(NonTiScordarDiTe, PG)} [NonTiScordarDiTe]
+    // + {are_two_entities_together(NonTiScordarDiTe, PG)} [NonTiScordarDiTe]
         <i>Tronco e sostanza sono una cosa sola: un fungo di vetro, dita che si sfiorano e intrecciano lanciate verso il cielo.</i>
         <i>Hai trovato un <i><b>Non ti scordar di te</b></i>
         <i>Cresce su ciò che è passato, che non c'è più, per renderlo parte di sè.</i>
         <i>Qualcosa di nuovo, eppure antico.</i>
         <i>Quando sfiorisce, il ciclo ricomincia.</i>
         
-        + + [Intreccio le tue dita alle sue.]
+        + [Intreccio le tue dita alle sue.]
             <i>Si sciolgono tra le tue mani, rilasciando di nuovo un profumo familiare.</i>
             <i>Ti porti quel che rimane alle labbra: il tuo corpo viene invaso da fiducia e calore.</i>
             <i>Senti in te chi non c'è più: siete parte della stessa storia.</i>
@@ -333,7 +333,7 @@
                 ~ inCrescita = 0
                 ~ fungoProposto = ()
               -> main
-        + + [Non ora.]
+        + [Non ora.]
               -> main
               
     = step_quattro
@@ -360,14 +360,14 @@
           -> main
     
     = step_tre
-    + {are_two_entities_together(BrinaDellImpossibile, PG)} [BrinaDellImpossibile]
+    // + {are_two_entities_together(BrinaDellImpossibile, PG)} [BrinaDellImpossibile]
         <i>Isole di vetro galleggiano nell'aria.</i>
         <i>La vetrata dovrebbe crollare, sparire, svanire ma invece resta dov'è, e se la spingi non si sposta.</i>
         <i>Eppure api e petali attraversano il reticolato.</i>
         <i>E quando provi a infilarci un dito, un ricordo imprevisto: sai che questa cosa si chiama <b>Brina dell'Impossibile</b></i>.
         <i>Sai che puoi raccoglierla, anche se non sai cosa accadrà.</i>
         
-        + + [Infilo la mano tra quegli spazi vuoti.]
+        + [Infilo la mano tra quegli spazi vuoti.]
             <i>Il vetro si rinsalda, spingendo via la tua mano.</i>
             <i>Le linee del tuo palmo si fanno trasparenti, inconsistenti. Eppure puoi muovere le dita, e non provi alcun dolore.</i>
             <i>Non tutti i cambiamenti sono così facili, ma ora hai la certezza che puoi provare quella cosa che rimandi da sempre: la paura di trovarti a pezzi è solo quello: paura.</i>
@@ -379,7 +379,7 @@
                         ~ doniTrovati += BrinaDellImpossibile
                     }                
               -> main
-        + + [Ho bisogno di pensarci un poco.]
+        + [Ho bisogno di pensarci un poco.]
               -> main
               
     = step_quattro
