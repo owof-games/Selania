@@ -6,9 +6,21 @@
     - not dono_e_inchiostro:
         -> dono_e_inchiostro
     - not domande_e_obiettivo:
-        -> domande_e_obiettivo
+        {
+            - doni_storia_uno:
+                -> domande_e_obiettivo
+            - else: Mentore: Fai la tua offerta allo spettro, e poi torna da me.
+                -> main
+        }
+        
     - not feedback_spettro_uno:
-        -> feedback_spettro_uno
+        {
+            - storia_uno.primo_blocco:
+                -> feedback_spettro_uno
+            - else: Mentore: Aiuta lo spettro, e poi torna da me.    
+    
+        }
+        
     
 //Presentazione dei luoghi
     - are_entities_together_in(PG, Mentore, Funghi) && not prima_visita_funghi:

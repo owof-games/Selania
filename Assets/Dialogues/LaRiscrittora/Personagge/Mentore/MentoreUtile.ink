@@ -105,8 +105,7 @@
         Mentore: Tutti i doni che hai trovato fino a un dato momento sono all'interno del tuo <b>inventario</b>.
         Mentore: Per cui prenditi del tuo tempo, controlla quello che hai nell'inventario.
         Mentore: Cammina, vai alla serra, e torna quando sei {pronomi has maschili: sicuro|{pronomi has femminili: sicura|sicurə}} di avere il dono che ti convince.
-        Mentore: Poi parla con lo spettro, e dagli il dono.
-            
+        Mentore: Poi parla con lo spettro, dagli il dono, e torna da me.
             * [Capito]
                     -> main
 
@@ -157,7 +156,8 @@
         Mentore: Ma vedrai che ci incontreremo spesso qui in giro.
         Mentore: E per ogni momento di confusione, ricordati che potrai chiedermi qualsiasi cosa.
         Mentore: A presto!
-        -> main
+            ~ move_entity(Mentore, Funghi)
+            -> main
        
 
 /* ---------------------------------

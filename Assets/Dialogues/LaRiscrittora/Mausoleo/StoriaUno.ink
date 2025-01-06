@@ -1,18 +1,27 @@
 === lapide_uno ===
-    //opzione se non hai mai esplorato questa storia, e se non ci sono storie attive
+    //opzione se non hai mai esplorato questa storia e se non ci sono storie attive
     + {are_two_entities_together(LapideUno, PG) && not (storiaUno == InCorso or storiaUno == Conclusa) and not (storiaDue == InCorso or storiaTre == InCorso)}[LapideUno]
         <i>Qui attende {traduttoreSpettri(effettivoStatoSpettroUno)}.</i>
             -> intro_storia_uno
 
-    //opzione se c'è un'altra storia attiva
+    //opzione se ho finito la storia dello spettro uno
     + {are_two_entities_together(LapideUno, PG) && storiaUno == Conclusa} [LapideUno]
         <i>Qui riposa {traduttoreSpettri(effettivoStatoSpettroUno)}.</i>
             -> main
 
-    //opzione se questa storia è attiva
-    + {are_two_entities_together(SpettroUno, PG) && storiaUno == InCorso} [SpettroUno]
+    //opzione se questa storia è attiva e non ho fatto un dono
+    + {are_two_entities_together(SpettroUno, PG) && storiaUno == InCorso && not storia_uno.capitolo_uno} [SpettroUno]
     <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)} ondeggia inquieto accanto alla sua lapide.</i>
         -> doni_storia_uno
+
+      //opzione se questa storia è attiva e ho fatto un dono ma non ho fatto lo step Mentore "domande e obiettivo"
+    + {are_two_entities_together(SpettroUno, PG) && storiaUno == InCorso && storia_uno.capitolo_uno && not domande_e_obiettivo} [SpettroUno]
+    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Mi sa che il mentore vuole dirti qualcosa prima che continuiamo.
+        -> main
+    
+    //Ho finito tutti e tre i pezzi di tutorial (intr, dono_e_inchiostro, domande_e_obbiettivo) e posso finalmente aiutare lo spettro
+    + {are_two_entities_together(SpettroUno, PG) && storiaUno == InCorso && storia_uno.capitolo_uno && domande_e_obiettivo} [SpettroUno]
+        -> storia_uno.primo_blocco   
 
     + ->
 
@@ -82,6 +91,13 @@
 
 === doni_storia_uno ===
 //Qui è la fase di check per i doni, se donarne, quali, o non farlo.
+{
+    - not dono_e_inchiostro: Mentore: Torna a parlare da me!
+    - else:
+        -> internal_inventario
+}
+
+= internal_inventario
     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Tutto sommato è una cosa così banale, così banale. Eppure questo freddo non se ne vuole andare.
         + {doniTrovati != ()} [Ho un dono per lo spettro.]
             -> gestione_inventario
@@ -96,8 +112,9 @@
     = capitolo_uno
         //Informativa sullo stato dell'inchiostro.
         <i>Dopo il tuo dono, la quantità di inchiostro a disposizione è {statoInchiostroSpettroUno}.</i>
-            -> azioniInchiostro ->
-            -> primo_blocco
+//Faccio il dono, ho un feedback, esco così da parlare con il Mentore.
+            -> azioniInchiostro -> main
+            //-> primo_blocco
 
 
     = primo_blocco

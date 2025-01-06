@@ -16,8 +16,9 @@ VAR mentore_location = ()
                 -> random_luogo_mentore_terzo_tier
             - storiaUno == Conclusa:
                 -> random_luogo_mentore_secondo_tier
-            - else: 
-                -> random_luogo_mentore_primo_tier
+            - else:
+                //Nel primo tier, il mentore è sempre e solo nel Mausoleo
+                ~ move_entity(Mentore, Mausoleo)
         }
 
 
