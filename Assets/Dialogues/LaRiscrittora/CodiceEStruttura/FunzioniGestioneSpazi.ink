@@ -23,7 +23,7 @@
     - else:
         DEBUG: error, cannot find {entity} anywhere!
         {contenutoCasettaAnime}
-        ~ return 0
+        ~ return Giardino
 }
 
 
