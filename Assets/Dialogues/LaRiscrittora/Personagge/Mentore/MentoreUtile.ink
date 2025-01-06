@@ -217,7 +217,7 @@
     + {storiaDue == Conclusa}[Sulla biblioteca.]
         Informazioni
             -> top
-    + [Ho cambiato idea]
+    + [Vorrei parlare di qualcosa di diverso.]
         -> parlareColMentore
     -
 
