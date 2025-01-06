@@ -31,7 +31,6 @@
     }
     
     
-    ~ storiaUno = InCorso
     {
     - solitudine == false:
         -> trigger_solitudine
@@ -56,6 +55,7 @@
                 ->->
 
         = intro
+            ~ storiaUno = InCorso
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Vigilia di Natale.
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Per la prima volta da mesi ho tempo libero: non sto lavorando, non sto correndo da nessuna parte.
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Cammino lentamente col cane, andando a una cena con amici.
