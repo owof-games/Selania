@@ -29,10 +29,14 @@ VAR inCrescita = 0
     -> test
 
 === test
+{debug: Sono passato da <i>test</i>.}
+
 {
     - counter < 2:
+    {debug: Counter ha valore {counter} e per questo vado a Random.}
         -> random
     - counter == 2:
+    {debug: Counter ha valore {counter} e per questo vado a Results.}
         -> results
 }
 
@@ -40,36 +44,46 @@ VAR inCrescita = 0
 ~ temp dice = RANDOM(1,3)
 {dice:
     - 1 && !firstQuest:
+    {debug: Il dado ha valore {dice} e {firstQuest: ho già proposto la prima domanda e quindi la salto|non ho già proposto la prima domanda e quindi ci vado.}}
         -> first_question
-    - 2 && !secondQuest: 
+    - 2 && !secondQuest:
+    {debug: Il dado ha valore {dice} e {secondQuest: ho già proposto la seconda domanda e quindi la salto|non ho già proposto la seconda domanda e quindi ci vado.}}
         -> second_question
     - 3 && !thirdQuest:
+    {debug: Il dado ha valore {dice} e {thirdQuest: ho già proposto la terza domanda e quindi la salto|non ho già proposto la terza domanda e quindi ci vado.}}    
         -> third_question
     - else:
+    {debug: Il dado ha valore {dice} e non ci sono condizioni valide per proporre una delle tre domande, per cui vado a random.}
         -> random
 }
 
 
     = first_question
+    {debug: Entro in first_question. {firstQuest: firstQuest ora = true|firstQuest = false}}
      ~ firstQuest = true
  
         <i>Sul terreno le foglie e i sassi...</i>
             + [{~ Si sfiorano|Si perdono gli uni nelle altre}.]
                     ~ tipoColtivazioni += collaborazione
+                    {debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}
             + [{~ Si osservano distaccati|Difendono i propri confini}.]
-                    ~ tipoColtivazioni += indipendenza    
+                    ~ tipoColtivazioni += indipendenza
+                    {debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             -   
                 ~ counter ++
                     -> test
     
     = second_question
+    {debug: Entro in second_question. {secondQuest: SecondQuest ora = true|SecondQuest = false}}
     ~ secondQuest = true
 
         <i>L'aria...</i>
             + [{~ Insegue sé stessa, gioca con le foglie creando mulinelli|Ruota e ruzzola portando odori dal passato}.]
                     ~ tipoColtivazioni += ciclicità
+                    {debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             + [{~ È scoppiettante, fremente, carica di elettricità|Esplora cautamente ogni angolo della serra}.]
-                    ~ tipoColtivazioni += novità    
+                    ~ tipoColtivazioni += novità
+                    {debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             -   
                 ~ counter ++
                     -> test
@@ -77,11 +91,14 @@ VAR inCrescita = 0
 
     = third_question
      ~ thirdQuest = true
+    {debug: Entro in third_question. {thirdQuest: thirdQuest ora = true|thirdQuest = false}.}
         <i>L'acqua...</i>
             + [{~ È ferma, mosLaSpazzatasa solo sulla superficie|È torbida|È piena di foglie e petali}.]
                     ~ tipoColtivazioni += ricordo
+                    {debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             + [{~ Scava, portando con sé il terriccio|Schiaccia foglie e sassi|La sua voce è potente}.]
-                    ~ tipoColtivazioni += cancellazione    
+                    ~ tipoColtivazioni += cancellazione
+                    {debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             -   
                 ~ counter ++
                     -> test
@@ -95,59 +112,86 @@ VAR inCrescita = 0
  ~ thirdQuest = false
  ~ counter = 0
  ~ inCrescita = 1
+ {debug: Entro in results. Il valore di counter è {counter}, il valore di inCrescita è {inCrescita}. firstQuest è {firstQuest}, secondQuest è {secondQuest}, thirdQuest è {thirdQuest}}
  
     {
     - tipoColtivazioni == (collaborazione, ciclicità):
+    {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteCiclicità)
+    {debug: il fungo proposto è {fungoProposto}.}
         -> da_lista_a_coltivazioni
         
     - tipoColtivazioni == (collaborazione, novità):
+    {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteNovità)
+    {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni    
         
     - tipoColtivazioni == (collaborazione, cancellazione):
+    {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteCancellazione)
+    {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
         
     - tipoColtivazioni == (collaborazione, ricordo):
+    {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteRicordo)
+    {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
         
         
     - tipoColtivazioni == (indipendenza, ciclicità):
+    {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteIndipendenza ^ pianteCiclicità)
+    {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
                 
     - tipoColtivazioni == (indipendenza, novità):
+    {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteIndipendenza ^ pianteNovità)
+    {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
         
     - tipoColtivazioni == (indipendenza, cancellazione):
+    {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
             ~ fungoProposto = LIST_RANDOM(pianteIndipendenza ^ pianteCancellazione)
+    {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
         
     - tipoColtivazioni == (indipendenza, ricordo):
+    {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteIndipendenza ^ pianteRicordo)
+    {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
         
     - tipoColtivazioni == (ciclicità, cancellazione):
+    {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteCiclicità ^ pianteCancellazione)
+    {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
         
     - tipoColtivazioni == (ciclicità, ricordo):
+    {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteCiclicità ^ pianteRicordo)
+    {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
         
     - tipoColtivazioni == (novità, cancellazione):
+    {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteNovità ^ pianteCancellazione)
+    {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
         
     - tipoColtivazioni == (novità, ricordo):
+    {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteNovità ^ pianteRicordo)
+    {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni    
         
-    - else: 
-         ~ LIST_RANDOM(tipoColtivazioni)
+    - else:
+    {debug: Passo da else nella lista tipoColtivazioni perché non c'è un fungo adatto.}
+         ~ fungoProposto = LIST_RANDOM(tipoColtivazioni)
+    {debug: il fungo proposto è {fungoProposto}.}     
         -> da_lista_a_coltivazioni
     }
     
