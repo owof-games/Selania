@@ -1,15 +1,16 @@
 === anima_tre
-+ {are_two_entities_together(AnimaTre, PG)} [AnimaTre] 
++ {are_two_entities_together(AnimaTre, PG)} [AnimaTre]
+    ~ counterLuoghi = 0
     -> parlareConAnima
 
 = parlareConAnima
 {
     - not stitch_uno:
-    -> stitch_uno
+        -> stitch_uno
     - not stitch_due:
-    -> stitch_due
+        -> stitch_due
     - not stitch_tre:
-    -> stitch_tre
+        -> stitch_tre
     - else: storie finite terza anima ->->
 }
 
@@ -26,3 +27,4 @@
     = stitch_tre
         + Terzo contenuto anima tre
     -> main
+->->

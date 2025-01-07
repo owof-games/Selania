@@ -12,7 +12,7 @@ VAR counterLuoghi = 0
 //Funzione per randomizzare la comparsa di ogni tipo di anima
 === comparsa_anime
     //Anime e animelle devono comparire solo dopo l'inizio della prima storia.
-    {storiaUno == NonIniziata : ->->}
+    //{storiaUno == NonIniziata : ->->}
     //Anime e animelle non possono comparire nel Labirinto.
     {contenutoLabirinto has PG: ->->}
     ~ counterLuoghi ++
@@ -26,13 +26,12 @@ VAR counterLuoghi = 0
             {debug: valore dado = {dice_roll}}
             {
             - dice_roll > 3:
-            <i>{~ Qualcuno vuole raccontarti la sua storia.|Qualcuno ti aspetta.|C'è una storia per te}.</i>
                 {
-                - ultimaVoltaVistaAnima > 3:
-                    {debug: ultimaVoltaVistaAnima > 3}
+                - ultimaVoltaVistaAnima > 2:
+                    {debug: ultimaVoltaVistaAnima > 2}
                     -> random_anime
                 - else:
-                    {debug: ultimaVoltaVistaAnima < 4}
+                    {debug: ultimaVoltaVistaAnima < 3}
                     ~ ultimaVoltaVistaAnima ++
                     -> random_animelle
                 }
@@ -46,6 +45,8 @@ VAR counterLuoghi = 0
     //Resetto il contatore legato alle anime principali
     ~ ultimaVoltaVistaAnima = 0
     ~ temp anima = LIST_RANDOM(animeDaIncontrare)
+    ~ temp my_location = entity_location(PG)
+    ~ move_entity(anima, my_location)    
     {debug: ho preso l'anima {anima}}
     {anima:
         - AnimaUno:
@@ -61,7 +62,19 @@ VAR counterLuoghi = 0
 
 //Se seleziono un'amimella, viene randomizzata la comparsa di una di queste e viene levata dalla lista delle animelle che possono comparire nella storia
 === random_animelle
+    {
+        - animelleDaIncontrare != ():
+        {debug: animelleDaIncontrare non è vuoto e contiene {animelleDaIncontrare}, per questo posso continuare col processo di randomizzazione.}
+        <i>{~ Qualcuno vuole raccontarti la sua storia.|Qualcuno ti aspetta.|C'è una storia per te}.</i>
+            -> continue
+        - else:
+    {debug: animelleDaIncontrare è vuoto, e infatti contiene {animelleDaIncontrare}, per questo non posso continuare col processo di randomizzazione e torno indietro.}    
+            ->->
+    }
+    
+    = continue
     ~ temp animellina = LIST_RANDOM(animelleDaIncontrare)
+    ~ counterLuoghi = 0
     ~ temp my_location = entity_location(PG)
     ~ move_entity(animellina, my_location)
 {debug: ho preso l'animella {animellina}}

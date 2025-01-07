@@ -1,5 +1,6 @@
 === anima_due
-+ {are_two_entities_together(AnimaDue, PG)} [AnimaDue] 
++ {are_two_entities_together(AnimaDue, PG)} [AnimaDue]
+    ~ counterLuoghi = 0
     -> parlareConAnima
 
 = parlareConAnima
