@@ -1,7 +1,7 @@
 //~ SEED_RANDOM(235)
 
 //Per abilitare o meno il debug
-VAR debug = false
+VAR debug = true
 
 //Nome giocatrice e pronomi
 VAR nome = "Senza Nome"

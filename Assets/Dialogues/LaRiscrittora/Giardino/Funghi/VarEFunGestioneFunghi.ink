@@ -43,13 +43,13 @@ VAR inCrescita = 0
 = random
 ~ temp dice = RANDOM(1,3)
 {dice:
-    - 1 && !firstQuest:
+    - 1 && firstQuest == false:
     {debug: Il dado ha valore {dice} e {firstQuest: ho già proposto la prima domanda e quindi la salto|non ho già proposto la prima domanda e quindi ci vado.}}
         -> first_question
-    - 2 && !secondQuest:
+    - 2 && secondQuest == false :
     {debug: Il dado ha valore {dice} e {secondQuest: ho già proposto la seconda domanda e quindi la salto|non ho già proposto la seconda domanda e quindi ci vado.}}
         -> second_question
-    - 3 && !thirdQuest:
+    - 3 && thirdQuest == false:
     {debug: Il dado ha valore {dice} e {thirdQuest: ho già proposto la terza domanda e quindi la salto|non ho già proposto la terza domanda e quindi ci vado.}}    
         -> third_question
     - else:
@@ -59,8 +59,8 @@ VAR inCrescita = 0
 
 
     = first_question
-    {debug: Entro in first_question. {firstQuest: firstQuest ora = true|firstQuest = false}}
      ~ firstQuest = true
+         {debug: Entro in first_question. {firstQuest: firstQuest ora = true|firstQuest = false}}
  
         <i>Sul terreno le foglie e i sassi...</i>
             + [{~ Si sfiorano|Si perdono gli uni nelle altre}.]
@@ -74,8 +74,8 @@ VAR inCrescita = 0
                     -> test
     
     = second_question
-    {debug: Entro in second_question. {secondQuest: SecondQuest ora = true|SecondQuest = false}}
     ~ secondQuest = true
+        {debug: Entro in second_question. {secondQuest: SecondQuest ora = true|SecondQuest = false}}
 
         <i>L'aria...</i>
             + [{~ Insegue sé stessa, gioca con le foglie creando mulinelli|Ruota e ruzzola portando odori dal passato}.]
@@ -92,6 +92,7 @@ VAR inCrescita = 0
     = third_question
      ~ thirdQuest = true
     {debug: Entro in third_question. {thirdQuest: thirdQuest ora = true|thirdQuest = false}.}
+    
         <i>L'acqua...</i>
             + [{~ È ferma, mosLaSpazzatasa solo sulla superficie|È torbida|È piena di foglie e petali}.]
                     ~ tipoColtivazioni += ricordo
@@ -107,12 +108,7 @@ VAR inCrescita = 0
 
  
  === results
- ~ firstQuest = false
- ~ secondQuest = false
- ~ thirdQuest = false
- ~ counter = 0
- ~ inCrescita = 1
- {debug: Entro in results. Il valore di counter è {counter}, il valore di inCrescita è {inCrescita}. firstQuest è {firstQuest}, secondQuest è {secondQuest}, thirdQuest è {thirdQuest}}
+{debug: Entro in results}
  
     {
     - tipoColtivazioni == (collaborazione, ciclicità):
@@ -190,7 +186,7 @@ VAR inCrescita = 0
         
     - else:
     {debug: Passo da else nella lista tipoColtivazioni perché non c'è un fungo adatto.}
-         ~ fungoProposto = LIST_RANDOM(tipoColtivazioni)
+         ~ fungoProposto = LIST_RANDOM(mushrooms)
     {debug: il fungo proposto è {fungoProposto}.}     
         -> da_lista_a_coltivazioni
     }
@@ -204,6 +200,15 @@ VAR inCrescita = 0
 
 === da_lista_a_coltivazioni ===
 <i>Qualcosa sta crescendo. Torna tra un po'.</i>
+ ~ tipoColtivazioni = ()
+ ~ firstQuest = false
+ ~ secondQuest = false
+ ~ thirdQuest = false
+ ~ counter = 0
+ ~ inCrescita = 1
+ {debug: Entro in da_lista_a_coltivazioni. Il valore di counter è {counter}, il valore di inCrescita è {inCrescita}. firstQuest è {firstQuest}, secondQuest è {secondQuest}, thirdQuest è {thirdQuest}}
+{debug: Svuoto lista tipo Coltivazioni. Il contenuto di tipo Coltivazioni ora è {tipoColtivazioni}}
+
 {fungoProposto:
     - LicheneDegliAbissi:
         -> lichene_degli_abissi
