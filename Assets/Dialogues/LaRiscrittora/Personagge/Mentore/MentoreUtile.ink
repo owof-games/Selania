@@ -61,7 +61,7 @@
             -
         Mentore: Ma in tutto questo non ti ho detto cosa devi fare!
         Mentore: Facciamo così: prova a parlare con uno degli spettri qui nel <b>Mausoleo</b>.
-        Mentore: Tipo quello con la tomba gialla.
+        Mentore: Tipo quello con la tomba arancione.
         Mentore: E poi torna da me.
     -> main      
             
