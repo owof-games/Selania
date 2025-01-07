@@ -42,19 +42,47 @@ VAR inCrescita = 0
 
 = random
 ~ temp dice = RANDOM(1,3)
-{dice:
-    - 1 && firstQuest == false:
-    {debug: Il dado ha valore {dice} e {firstQuest: ho già proposto la prima domanda e quindi la salto|non ho già proposto la prima domanda e quindi ci vado.}}
-        -> first_question
-    - 2 && secondQuest == false :
-    {debug: Il dado ha valore {dice} e {secondQuest: ho già proposto la seconda domanda e quindi la salto|non ho già proposto la seconda domanda e quindi ci vado.}}
-        -> second_question
-    - 3 && thirdQuest == false:
-    {debug: Il dado ha valore {dice} e {thirdQuest: ho già proposto la terza domanda e quindi la salto|non ho già proposto la terza domanda e quindi ci vado.}}    
-        -> third_question
+{debug: Il dado ha valore {dice}}
+{
+    - dice == 1: 
+        {
+            - firstQuest == false:
+            {debug: Il valore di firstQuest è {firstQuest} e per questo vado alla domanda.}
+                    -> first_question
+            - firstQuest == true:
+            {debug: Il valore di firstQuest è {firstQuest} e per questo torno a random.}
+                    -> random
+        }
+    
+        
+    - dice == 2:
+        {
+            -secondQuest == false:
+            {debug: Il valore di secondQuest è {secondQuest} e per questo vado alla domanda.}
+                    -> second_question
+            
+            -secondQuest == true:
+            {debug: Il valore di secondQuest è {secondQuest} e per questo torno a random.}    
+                    -> random
+        }
+
+
+        
+    - dice == 3:
+        {
+            - thirdQuest == false:
+                {debug: Il valore di thirdQuest è {thirdQuest} e per questo vado alla domanda.}        
+                    -> third_question
+                
+            - thirdQuest == true:
+                {debug: Il valore di thirdQuest è {thirdQuest} e per questo torno a random.}           
+                    -> random
+        }
+
+
     - else:
-    {debug: Il dado ha valore {dice} e non ci sono condizioni valide per proporre una delle tre domande, per cui vado a random.}
-        -> random
+        {debug: Il dado ha valore {dice} e non ci sono condizioni valide per proporre una delle tre domande, per cui vado a random.}
+                    -> random
 }
 
 
