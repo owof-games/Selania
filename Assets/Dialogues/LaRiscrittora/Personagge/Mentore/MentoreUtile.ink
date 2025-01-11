@@ -311,38 +311,44 @@ VAR lutto = false
 
     - (top)
     Mentore: Cosa vorresti evitare?
-    + [Preferirei non leggere nulla che riguardi l'abuso di alcool.]
+    + {alcolismo == true}[Preferirei non leggere nulla che riguardi l'abuso di alcool.]
         Mentore: Capisco benissimo. Preferenza registrata.
         ~ alcolismo = false
-         + + [C'è altro che vorrei evitare.]
-                -> top
-         + + [Sono a posto così.]
-                ->->
-         - -   
-    + [Non voglio leggere storie su relazioni abusanti.]
+            -> top
+    + {alcolismo == false}[Ho cambiato idea: introducimi pure storie che parlano di abuso d'alcool.]
+        Mentore: Ottimo. Preferenza registrata.
+        ~ alcolismo = true
+            -> top
+        
+  
+    + {abusi == true}[Non voglio leggere storie su relazioni abusanti.]
         Mentore: Hai il mio appoggio. Preferenza registrata.
         ~ abusi = false
-         + + [C'è altro che vorrei evitare.]
-                -> top
-         + + [Sono a posto così.]
-                ->->
-         - -  
-    + [Non me la sento di parlare di lutto.]
+            -> top
+    + {abusi == false}[Sai, forse mi va bene di affrontare storie che parlano di abusi relazionali.]
+        Mentore: Perfetto. Preferenza registrata.
+        ~ abusi = true
+            -> top
+
+
+    + {lutto == true} [Non me la sento di parlare di lutto.]
         Mentore: Sentiti a casa. Preferenza registrata.
         ~ lutto = false
-         + + [C'è altro che vorrei evitare.]
-                -> top
-         + + [Sono a posto così]
-                ->->
-         - -          
-    + [Preferirei evitare storie di solitudine e abbandono.]
+            -> top
+    + {lutto == false} [Ho cambiato idea: me la sento di parlare di lutto.]
+        Mentore: Grandioso. Preferenza registrata.
+        ~ lutto = true
+            -> top
+        
+    + {solitudine == true} [Preferirei evitare storie di solitudine e abbandono.]
         Mentore: Preferenza registrata. E se butta male, sono qui.
         ~ solitudine = false
-         + + [C'è altro che vorrei evitare.]
-                -> top
-         + + [Sono a posto così.]
-                ->->
-         - -          
+            -> top
+    + {solitudine == false} [Sono {pronomi has maschili: pronto|{pronomi has femminili: pronta|prontə}} ad ascoltare storie di solitudine e abbandono.]
+        Mentore: Preferenza registrata. E se butta male, puoi sempre cambiare idea.
+        ~ solitudine = true
+            -> top
+            
     + [Sono a posto così.]
         ->->
     -  
