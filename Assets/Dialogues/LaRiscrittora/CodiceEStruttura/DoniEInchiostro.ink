@@ -108,7 +108,7 @@ VAR Inchiostro = ()
 
 {Inchiostro:
     - Vuoto:
-        <i>Non hai inchiostro per lo spettro, dovrai trovare la tua strada da solo.</i>
+        <i>Non hai inchiostro per lo spettro, dovrai trovare la tua strada da {pronomi has maschili: solo|{pronomi has femminili: sola|solə}}.</i>
     - Scarso:
         <i>Hai una azione forte a disposizione</i>
     - Normale:

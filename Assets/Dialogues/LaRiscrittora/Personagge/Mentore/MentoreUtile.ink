@@ -38,7 +38,7 @@
     
     = name    
         {chiSei:Mentore|Sconosciuto}: Ora tocca a me farti una domanda: come ti devo chiamare?
-        {chiSei:Mentore|Sconosciuto}: Puoi usare qualsiasi nome: prendi questa occasione come un piccolo nuovo inizio.
+        {chiSei:Mentore|Sconosciuto}: Puoi usare qualsiasi nome: prendi questa occasione come un nuovo inizio.
             -> il_mio_nome ->
         {chiSei:Mentore|Sconosciuto}: E quali sono i pronomi in cui ti riconosci?
         {chiSei:Mentore|Sconosciuto}: Ti chiedo già scusa per la quantità ridotta di scelte.
@@ -63,7 +63,7 @@
     === dono_e_inchiostro
         Mentore: Sembra che qualcuno ti abbia raccontato la sua storia!
         Mentore: Gli spettri sono totalmente innocui, l'unico problema è che non hanno trovato una soluzione a questioni rimaste aperte quando erano in vita.
-        Mentore: Spesso sono storie di rimpianto o rimorso, in alcuni causi di traumi, o sensi di colpa.
+        Mentore: Spesso sono storie di rimpianto o rimorso, in alcuni casi di traumi, o sensi di colpa.
         Mentore: E a volte hanno avuto una vita così bella che non accettano davvero di morire.
         Mentore: Sia quel che sia, sono fermi su quel ricordo, convinti che il passato sia il presente.        
         Mentore: In tutte queste situazioni arrivi tu, {nome}.
@@ -223,7 +223,7 @@
 === compito
         Mentore: Te la faccio breve: nel <b>Mausoleo</b> incontrerai degli <b>spettri</b>.
         Mentore: Sono totalmente innocui, l'unico problema è che non hanno trovato una soluzione a questioni rimaste aperte quando erano in vita.
-        Mentore: Spesso sono storie di rimpianto o rimorso, in alcuni causi di traumi, o sensi di colpa.
+        Mentore: Spesso sono storie di rimpianto o rimorso, in alcuni casi di traumi, o sensi di colpa.
         Mentore: E a volte hanno avuto una vita così bella che non accettano davvero di morire.
         Mentore: Sia quel che sia, sono fermi su quel ricordo, convinti che il passato sia il presente.
         Mentore: In tutte queste situazioni arrivi tu, {nome}:

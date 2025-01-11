@@ -325,7 +325,7 @@
         <i>Qualcosa di nuovo, eppure antico.</i>
         <i>Quando sfiorisce, il ciclo ricomincia.</i>
         
-        + [Intreccio le tue dita alle sue.]
+        + [Intreccio le mie dita alle sue.]
             <i>Si sciolgono tra le tue mani, rilasciando di nuovo un profumo familiare.</i>
             <i>Ti porti quel che rimane alle labbra: il tuo corpo viene invaso da fiducia e calore.</i>
             <i>Senti in te chi non c'è più: siete parte della stessa storia.</i>

@@ -122,7 +122,7 @@ VAR inCrescita = 0
     {debug: Entro in third_question. {thirdQuest: thirdQuest ora = true|thirdQuest = false}.}
     
         <i>L'acqua...</i>
-            + [{~ È ferma, mosLaSpazzatasa solo sulla superficie|È torbida|È piena di foglie e petali}.]
+            + [{~ È ferma, mossa solo sulla superficie|È torbida|È piena di foglie e petali}.]
                     ~ tipoColtivazioni += ricordo
                     {debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             + [{~ Scava, portando con sé il terriccio|Schiaccia foglie e sassi|La sua voce è potente}.]
