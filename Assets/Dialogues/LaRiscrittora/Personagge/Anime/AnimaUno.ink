@@ -24,17 +24,22 @@
 }
 
     = stitch_uno
-        AnimaUno: Avrò una storia da raccontarti con il secondo prototipo, per ora sono qui perché <i>dev</i> deve capire se la frequenza di comparsa è sensata.
+        AnimaUno: StitchUno: Avrò una storia da raccontarti con il secondo prototipo, per ora sono qui perché <i>dev</i> deve capire se la frequenza di comparsa è sensata.
             + [Ok, alla prossima.]
-            -> main
+                ~ move_entity(AnimaUno, CasettaAnime) 
+                -> main
     
     = stitch_due
-        + Secondo contenuto anima uno 
-        
-    -> main
+            AnimaUno: Stitch Due: Avrò una storia da raccontarti con il secondo prototipo, per ora sono qui perché <i>dev</i> deve capire se la frequenza di comparsa è sensata.
+            + [Ok, alla prossima.]
+                ~ move_entity(AnimaUno, CasettaAnime) 
+                -> main
+
     = stitch_tre
-        + Terzo contenuto anima uno
-    ->main
+            AnimaUno: Stitch Tre: Avrò una storia da raccontarti con il secondo prototipo, per ora sono qui perché <i>dev</i> deve capire se la frequenza di comparsa è sensata.
+            + [Ok, alla prossima.]
+                ~ move_entity(AnimaUno, CasettaAnime) 
+                ->main
  
 
 
