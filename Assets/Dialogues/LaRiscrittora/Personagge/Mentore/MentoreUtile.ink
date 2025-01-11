@@ -53,12 +53,7 @@
         Mentore: Nel tuo soggiorno in questo luogo potrebbe accadere che incontrerai qualche situazione complessa.
         Mentore: Non posso prometterti di avere il controllo su tutto, perché in fondo sono il Mentore, non <i>dev</i>.
         Mentore: Ma se ti va puoi dirmi quali sono le cose che ti creano disagio, e farò del mio meglio per non fartele incontrare.
-        Mentore: Ci sono temi che vuoi evitare?
-            * [Sì.]
                 -> trigger_warning ->
-            * [Ci penso un poco.]
-                Mentore: Per questa come per altre cose, puoi sempre farmi le domande che vuoi quando mi incontri in giro.
-            -
         Mentore: Ma in tutto questo non ti ho detto cosa devi fare!
         Mentore: Facciamo così: prova a parlare con uno degli spettri qui nel <b>Mausoleo</b>.
         Mentore: Tipo quello con la tomba arancione.
@@ -309,7 +304,7 @@ VAR lutto = false
  ----------------------------------*/
  
  === trigger_warning ===
-    Mentore: Qui sono i principali temi delicati che potresti incontrare durante le tue chiacchierate.
+    Mentore: Questi sono i principali temi delicati che potresti incontrare durante le tue chiacchierate.
     Mentore: Riuscirò per la maggior parte dei casi a fare in modo che tu non ne venga mai in contatto se li disabiliti, ma in alcune situazioni. come con gli spettri, le cose sono un po' complicate.
     Mentore: E sono consapevole che ne mancano diversi, ma qui è un lavoro complicato, sono l'unico mentore, ma sono sempre pronto ad accogliere ogni segnalazione.
     Mentore: Nel caso, prova ad evocare <i>dev</i>.
