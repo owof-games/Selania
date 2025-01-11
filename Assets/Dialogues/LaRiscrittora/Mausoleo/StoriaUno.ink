@@ -100,8 +100,10 @@
 
 = internal_inventario
     {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Tutto sommato è una cosa così banale, così banale. Eppure questo freddo non se ne vuole andare.
-        + {doniTrovati != ()} [Ho un dono per lo spettro.]
+        + {doniTrovati != ()} [Ho un dono per te, <i>{traduttoreSpettri(effettivoStatoSpettroUno)}</i>.]
             -> gestione_inventario
+        + [Vorrei riascoltare la tua storia, <i>{traduttoreSpettri(effettivoStatoSpettroUno)}</i>.]
+            -> intro_storia_uno.intro
         + [Mi allontano.]
             -> main
         -
