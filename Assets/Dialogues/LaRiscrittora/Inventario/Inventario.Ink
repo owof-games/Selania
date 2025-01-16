@@ -1,3 +1,7 @@
+//con questa logica traccio chi è l'effettivo ricettore del dono, così da presentare la linea di dialogo corretta
+
+VAR currentReceiver = ()
+
 === contenuti_inventario ===
 + [Inventario]
     {doniTrovati != (): -> inventarietto|->vuoto}
@@ -11,115 +15,144 @@
     -> main
 
 
-TODO: da ripensare la logica dell'inventario, perché ora non funziona più. Settare un "current_speaker" quando si entra nella scena?
-
 === gestione_inventario ===
 {debug: I doni trovati sono {doniTrovati}}
 Dono...
 + {doniTrovati has MuschioDelleAmanti} [Del muschio delle amanti.]
     ~ doniTrovati -= MuschioDelleAmanti
     ~ doniDonati += MuschioDelleAmanti
+    
     {
-    - storiaUno == InCorso:
-    <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} è confuso dal dono.</i>
-    ~ donoPersonaggiaUno = true
-    -> storia_uno.capitolo_uno
+        - currentReceiver has PersonaggiaUno:
+        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} è confuso dal dono.</i>
+            ~ donoPersonaggiaUno = true
+            ~ currentReceiver = ()
+            -> dono_storia_uno.esito_inchiostro
+        
+        - currentReceiver has PersonaggiaDue:
+            ~ statoInchiostroPersonaggiaDue ++
+            ~ statoInchiostroPersonaggiaDue ++
+            {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)} ha apprezzato molto il tuo dono.
+            ~ currentReceiver = ()
+            -> dono_storia_due.esito_inchiostro
+        
     
-    - storiaDue == InCorso:
-        ~ statoInchiostroPersonaggiaDue ++
-        ~ statoInchiostroPersonaggiaDue ++
-        Spettro due ha apprezzato molto il tuo dono.
-    
-
-    - storiaTre == InCorso:
-        ~ statoInchiostroPersonaggiaTre --
-        Spettro tre è disgustato dal tuo dono.
+        - currentReceiver has PersonaggiaTre:
+            ~ statoInchiostroPersonaggiaTre --
+            Spettro tre è disgustato dal tuo dono.
+            ~ currentReceiver = ()    
+            -> dono_storia_tre.esito_inchiostro
     }
-    
-   -> main
+    -> main
 
 + {doniTrovati has BaccaDellaAddolorata} [Una bacca della Addolorata.]
     ~ doniTrovati -= BaccaDellaAddolorata
     ~ doniDonati += BaccaDellaAddolorata
+    
     {
-    - storiaUno == InCorso:
-        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} è confuso dal dono.</i>
+    - currentReceiver has PersonaggiaUno:
+        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} apprezza il dono.</i>
         ~ donoPersonaggiaUno = true
-        -> storia_uno.capitolo_uno
+        ~ currentReceiver = ()
+        -> dono_storia_uno.esito_inchiostro
     
-    - storiaDue == InCorso:
-        Hai regalato a spettro due qualcosa che proprio non gli interessa
+    - currentReceiver has PersonaggiaDue:
+        Hai regalato a {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)} qualcosa che proprio non gli interessa
+        ~ currentReceiver = ()
+        -> dono_storia_due.esito_inchiostro
     
-    - storiaTre == InCorso:
+    - currentReceiver has PersonaggiaTre:
         ~ statoInchiostroPersonaggiaTre ++
-        Spettro tre apprezza mediamente il tuo dono.
+       <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaTre)} è confuso dal dono.</i>
+       ~ currentReceiver = ()
+        -> dono_storia_tre.esito_inchiostro
     }
    -> main    
 
 + {doniTrovati has LaSpazzata} [Un frammento della Spezzata.]
     ~ doniTrovati -= LaSpazzata
     ~ doniDonati += LaSpazzata
+    
     {
-    - storiaUno == InCorso:
+    - currentReceiver has PersonaggiaUno:
         ~ statoInchiostroPersonaggiaUno ++
         <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} apprezza il dono</i>
         ~ donoPersonaggiaUno = true
-        -> storia_uno.capitolo_uno
+        ~ currentReceiver = ()
+        -> dono_storia_uno.esito_inchiostro
 
-    - storiaDue == InCorso:
-        Hai regalato a spettro due qualcosa che proprio non gli interessa
+    - currentReceiver has PersonaggiaDue:
+        Hai regalato a {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)} qualcosa che proprio non gli interessa
+        -> dono_storia_due.esito_inchiostro
     
-    - storiaTre == InCorso:
+    - currentReceiver has PersonaggiaTre:
         ~ statoInchiostroPersonaggiaTre ++
-        Spettro tre apprezza mediamente il tuo dono.
+        {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaTre)} apprezza mediamente il tuo dono.
+        ~ currentReceiver = ()
+        -> dono_storia_tre.esito_inchiostro
     }
    -> main
 
 + {doniTrovati has coperta} [Una coperta.]
     ~ doniTrovati -= coperta
     ~ doniDonati += coperta
+    
     {
-    - storiaUno == InCorso:
+    - currentReceiver has PersonaggiaUno:
         ~ statoInchiostroPersonaggiaUno ++
         ~ statoInchiostroPersonaggiaUno ++
         <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} se la avvolge attorno al corpo.
         <i>Sembra sollevato.</i>
         ~ donoPersonaggiaUno = true
-        -> storia_uno.capitolo_uno
+        ~ currentReceiver = ()
+        -> dono_storia_uno.esito_inchiostro
     
-    - storiaDue == InCorso:
-        Hai regalato a spettro due qualcosa che proprio non gli interessa
+    - currentReceiver has PersonaggiaDue:
+        Hai regalato a {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)} qualcosa che proprio non gli interessa
+        -> dono_storia_due.esito_inchiostro
     
-    - storiaTre == InCorso:
+    - currentReceiver has PersonaggiaTre:
         ~ statoInchiostroPersonaggiaTre ++
-        Spettro tre apprezza mediamente il tuo dono.
+        ~ statoInchiostroPersonaggiaTre ++
+        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaTre)} se la avvolge attorno al corpo.
+        <i>Sembra sollevato.</i>
+        ~ currentReceiver = ()
+        -> dono_storia_tre.esito_inchiostro
     }
    -> main
     
 + {doniTrovati has vasovuoto} [Un vaso vuoto.]
     ~ doniTrovati -= vasovuoto
     ~ doniDonati += vasovuoto
+    
     {
-    - storiaUno == InCorso:
+    - currentReceiver has PersonaggiaUno:
         ~ statoInchiostroPersonaggiaUno --
         <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
         ~ donoPersonaggiaUno = true
-        -> storia_uno.capitolo_uno
+        ~ currentReceiver = ()
+        -> dono_storia_uno.esito_inchiostro
     
-    - storiaDue == InCorso:
-        Hai regalato a spettro due qualcosa che proprio non gli interessa
+    - currentReceiver has PersonaggiaDue:
+        Hai regalato a {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)} qualcosa che proprio non gli interessa
+        ~ currentReceiver = ()
+        -> dono_storia_due.esito_inchiostro
     
-    - storiaTre == InCorso:
-        ~ statoInchiostroPersonaggiaTre ++
-        Spettro tre apprezza mediamente il tuo dono.
+    - currentReceiver has PersonaggiaTre:
+        ~ statoInchiostroPersonaggiaTre --
+        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaTre)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
+        ~ donoPersonaggiaTre = true
+        ~ currentReceiver = ()
+        -> dono_storia_tre.esito_inchiostro
     }
     -> main
     
 + {doniTrovati has BrinaDellImpossibile} [Un frammento di Brina dell'Impossibile.]
     ~ doniTrovati -= BrinaDellImpossibile
     ~ doniDonati += BrinaDellImpossibile
+    
     {
-    - storiaUno == InCorso:
+    - currentReceiver has PersonaggiaUno:
         ~ statoInchiostroPersonaggiaUno ++
         ~ statoInchiostroPersonaggiaUno ++
         ~ statoInchiostroPersonaggiaUno ++
@@ -127,15 +160,25 @@ Dono...
         <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
         ~ donoPersonaggiaUno = true
          ~ eventoSpecialePersonaggiaUno = true
-        -> storia_uno.capitolo_uno
+         ~ currentReceiver = ()
+        -> dono_storia_uno.esito_inchiostro
 
-    - storiaDue == InCorso:
-        Hai regalato a spettro due qualcosa che proprio non gli interessa
+    - currentReceiver has PersonaggiaDue:
+        Hai regalato a {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)} qualcosa che proprio non gli interessa
         <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano</i>
-    - storiaTre == InCorso:
+        ~ currentReceiver = ()
+        -> dono_storia_due.esito_inchiostro
+        
+    - currentReceiver has PersonaggiaTre:
         ~ statoInchiostroPersonaggiaTre ++
-        Spettro tre apprezza mediamente il tuo dono.
-        <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano</i>        
+        ~ statoInchiostroPersonaggiaTre ++
+        ~ statoInchiostroPersonaggiaTre ++
+        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaTre)} si porta la Brina al petto, e ti guarda commosso.</i>
+        <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
+            ~ donoPersonaggiaTre = true
+         ~ eventoSpecialePersonaggiaTre = true
+         ~ currentReceiver = ()
+        -> dono_storia_tre.esito_inchiostro
     }
    -> main    
     

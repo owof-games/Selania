@@ -1,3 +1,5 @@
+~ temp charNameCinque= traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaCinque)
+
 === personaggia_cinque ===
         //opzione se questa storia è attiva
         + {are_two_entities_together(PersonaggiaCinque, PG) && storiaCinque == InCorso} [PersonaggiaCinque]

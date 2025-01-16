@@ -1,3 +1,5 @@
+~ temp charNameDue = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)
+
 === personaggia_due ===
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
@@ -23,6 +25,7 @@
         -> main
     //Faccio così per questione di ordine
        + {not dono_storia_due.esito_inchiostro} Dono
+        ~ currentReceiver += PersonaggiaDue
         -> dono_storia_due
     
     //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
@@ -53,6 +56,8 @@
         {
         - solitudine == false:
             -> trigger_solitudine
+            - else:
+            -> main_story_personaggia_due        
     
         }
         

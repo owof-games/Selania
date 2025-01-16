@@ -3,29 +3,22 @@
 //Introduzioni
     - presentazioni == 0:
         -> presentazioni
-    - not dono_e_inchiostro:
-        {
-            - intro_storia_uno.intro:
+    - dono_e_inchiostro == 0:
                 -> dono_e_inchiostro
-            - else: Mentore: Parla con quello spettro, ti aspetterò qui!
-                -> main
-        }
         
     - not domande_e_obiettivo:
         {
-            - storia_uno.capitolo_uno:
+            - dono_storia_uno.esito_inchiostro:
                 -> domande_e_obiettivo
             - else: Mentore: Fai la tua offerta allo spettro, e poi torna da me.
                 -> main
         }
         
-    - not feedback_spettro_uno:
+    - not feedback_personaggia_uno:
         {
-            - storia_uno.primo_blocco:
-                -> feedback_spettro_uno
-            - else: Mentore: Aiuta lo spettro, e poi torna da me.
-                -> main
-    
+            - storiaUno == Conclusa:
+                -> feedback_personaggia_uno
+
         }
         
     

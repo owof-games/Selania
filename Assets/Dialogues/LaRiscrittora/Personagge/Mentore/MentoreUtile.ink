@@ -138,7 +138,7 @@
                     -> main
         
         
-    === feedback_spettro_uno
+    === feedback_personaggia_uno
         Mentore: Beh, direi che è andata, {nome}.
         {effettivoStatoPersonaggiaUno:
             - IlSocievole: Mentore: Hai aiutato lo spettro a riscoprire la sua natura socievole!
