@@ -52,7 +52,7 @@
 
 
  === dono_storia_uno ===
-        + {doniTrovati != ()} Offro un dono allo spettro
+        + {doniTrovati != ()} Offro un dono. 
             -> gestione_inventario -> esito_inchiostro 
         + {doniTrovati == ()} <i> Il tuo inventario è vuoto </i>
             ->main

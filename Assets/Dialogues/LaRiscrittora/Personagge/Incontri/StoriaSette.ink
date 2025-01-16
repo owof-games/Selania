@@ -28,7 +28,7 @@
 
 
 === aiuto_storia_sette ===
-    + {doniTrovati != ()} Offro un dono allo spettro
+    + {doniTrovati != ()} Offro un dono.
     -> gestione_inventario -> capitolo_uno
     + ->
     {doniTrovati == (): Non parlo senza un dono adeguato! ->main}

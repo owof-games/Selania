@@ -41,7 +41,7 @@
 
     //QUESTO è LO SPAZIO PER IL DONO
     === dono_storia_due ===
-        + {doniTrovati != ()} Offro un dono allo spettro
+        + {doniTrovati != ()} Offro un dono.
             -> gestione_inventario -> esito_inchiostro 
         + {doniTrovati == ()} <i> Il tuo inventario è vuoto </i>
             ->main

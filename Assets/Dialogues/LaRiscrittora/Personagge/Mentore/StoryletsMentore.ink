@@ -10,7 +10,7 @@
         {
             - dono_storia_uno.esito_inchiostro:
                 -> domande_e_obiettivo
-            - else: Mentore: Fai la tua offerta allo spettro, e poi torna da me.
+            - else: Mentore: Fai la tua offerta e poi torna da me.
                 -> main
         }
         
