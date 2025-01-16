@@ -13,7 +13,7 @@ INCLUDE FileAppunti\ToDo.ink
 INCLUDE CodiceEStruttura\VariabiliEListe.ink
 INCLUDE CodiceEStruttura\FunzioniGestioneSpazi.ink
 INCLUDE CodiceEStruttura\FunzioniCambioLuogo.ink
-INCLUDE CodiceEStruttura\DoniEInchiostro.ink
+
 
 INCLUDE CodiceEStruttura\FunzioniVarie.ink
 
@@ -25,12 +25,16 @@ INCLUDE main.ink
 
  ----------------------------------*/
 //Dialoghi dalle varie spettre etc.
+INCLUDE Personagge\CommonPNGFunctions.ink
+
 INCLUDE Personagge\Mentore\Mentore.ink
 INCLUDE Personagge\Mentore\StoryletsMentore.ink
 INCLUDE Personagge\Mentore\MentoreUtile.ink
-INCLUDE Personagge\Mentore\GestioneMentore.ink
+
 
 INCLUDE Personagge\Incontri\GestioneStorieIncontri.ink
+INCLUDE Personagge\Incontri\DoniEInchiostro.ink
+
 INCLUDE Personagge\Incontri\StoriaUno.ink
 INCLUDE Personagge\Incontri\StoriaDue.ink
 INCLUDE Personagge\Incontri\StoriaTre.ink

@@ -8,8 +8,6 @@
     -
         -> main
         
-TODO: metter qualche nota all'inizio, non delle altre personagge? note sbiadite? una sola?        
-
 === note_personaggia_uno ===
     + {are_two_entities_together(NotePersonaggiaUno, PG)}[NotePersonaggiaUno]
     Lettere random note da parte della personaggia

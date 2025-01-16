@@ -21,7 +21,7 @@ Dono...
     ~ doniDonati += MuschioDelleAmanti
     {
     - storiaUno == InCorso:
-    <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)} è confuso dal dono.</i>
+    <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} è confuso dal dono.</i>
     ~ donoPersonaggiaUno = true
     -> storia_uno.capitolo_uno
     
@@ -43,7 +43,7 @@ Dono...
     ~ doniDonati += BaccaDellaAddolorata
     {
     - storiaUno == InCorso:
-        <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)} è confuso dal dono.</i>
+        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} è confuso dal dono.</i>
         ~ donoPersonaggiaUno = true
         -> storia_uno.capitolo_uno
     
@@ -62,7 +62,7 @@ Dono...
     {
     - storiaUno == InCorso:
         ~ statoInchiostroPersonaggiaUno ++
-        <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)} apprezza il dono</i>
+        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} apprezza il dono</i>
         ~ donoPersonaggiaUno = true
         -> storia_uno.capitolo_uno
 
@@ -82,7 +82,7 @@ Dono...
     - storiaUno == InCorso:
         ~ statoInchiostroPersonaggiaUno ++
         ~ statoInchiostroPersonaggiaUno ++
-        <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)} se la avvolge attorno al corpo.
+        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} se la avvolge attorno al corpo.
         <i>Sembra sollevato.</i>
         ~ donoPersonaggiaUno = true
         -> storia_uno.capitolo_uno
@@ -102,7 +102,7 @@ Dono...
     {
     - storiaUno == InCorso:
         ~ statoInchiostroPersonaggiaUno --
-        <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
+        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
         ~ donoPersonaggiaUno = true
         -> storia_uno.capitolo_uno
     
@@ -123,7 +123,7 @@ Dono...
         ~ statoInchiostroPersonaggiaUno ++
         ~ statoInchiostroPersonaggiaUno ++
         ~ statoInchiostroPersonaggiaUno ++
-        <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)} si porta la Brina al petto, e ti guarda commosso.</i>
+        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} si porta la Brina al petto, e ti guarda commosso.</i>
         <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
         ~ donoPersonaggiaUno = true
          ~ eventoSpecialePersonaggiaUno = true

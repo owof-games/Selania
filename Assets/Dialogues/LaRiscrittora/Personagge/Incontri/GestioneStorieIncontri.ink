@@ -71,8 +71,8 @@
     VAR eventoSpecialePersonaggiaSette = false
 
 //Funzione di traduzione da variabile a stringa con articolo minuscolo
-=== function traduttoreSpettri(effettivoStatoSpettro)
-    {effettivoStatoSpettro:
+=== function traduttorePersonaggeMinuscolo(effettivoStatoPersonaggia)
+    {effettivoStatoPersonaggia:
 
     //Personaggia Uno
         - SpettroDelVuoto:
@@ -111,8 +111,8 @@
     }
 
 //Funzione di traduzione da variabile a stringa con articolo maiuscolo
-=== function traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettro)
-    {effettivoStatoSpettro:
+=== function traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggia)
+    {effettivoStatoPersonaggia:
 
     //Personaggia Uno
         - SpettroDelVuoto:

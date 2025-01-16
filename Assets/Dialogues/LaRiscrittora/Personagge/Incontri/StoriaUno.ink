@@ -1,14 +1,14 @@
-~ temp charName = traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)
+~ temp charName = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)
 
 === personaggia_uno ===
     //Opzione di dialogo
     + {are_two_entities_together(PersonaggiaUno, PG) && storiaUno == InCorso}[PersonaggiaUno]
-        <i>Qui attende {traduttoreSpettri(effettivoStatoPersonaggiaUno)}.</i>
+        <i>Qui attende {traduttorePersonaggeMinuscolo(effettivoStatoPersonaggiaUno)}.</i>
             -> intro_storia_uno
 
     //Dialoghi ed elementi che possono comparire dopo la chiusura dell'arco.
     + {are_two_entities_together(PersonaggiaUno, PG) && storiaUno == Conclusa} [PersonaggiaUno]
-        <i>Qui riposa {traduttoreSpettri(effettivoStatoPersonaggiaUno)}.</i>
+        <i>Qui riposa {traduttorePersonaggeMinuscolo(effettivoStatoPersonaggiaUno)}.</i>
             -> personaggia_uno_storia_conclusa
 
 TODO: questa diventa una opzione di dialogo.
@@ -104,9 +104,9 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
 
 = internal_inventario
     {charName}: Tutto sommato è una cosa così banale, così banale. Eppure questo freddo non se ne vuole andare.
-        + {doniTrovati != ()} [Ho un dono per te, <i>{traduttoreSpettri(effettivoStatoPersonaggiaUno)}</i>.]
+        + {doniTrovati != ()} [Ho un dono per te, <i>{traduttorePersonaggeMinuscolo(effettivoStatoPersonaggiaUno)}</i>.]
             -> gestione_inventario
-        + [Vorrei riascoltare la tua storia, <i>{traduttoreSpettri(effettivoStatoPersonaggiaUno)}</i>.]
+        + [Vorrei riascoltare la tua storia, <i>{traduttorePersonaggeMinuscolo(effettivoStatoPersonaggiaUno)}</i>.]
             -> intro_storia_uno.intro
         + [Mi allontano.]
             -> main
