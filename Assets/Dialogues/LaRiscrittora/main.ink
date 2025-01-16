@@ -34,7 +34,8 @@
 // <- brina_dell_impossibile.step_tre
 
 //Elementi del giardino
-<- panchina
+<- bench
+<- tree
 
 //Elementi della fermata del bus
 <- note_personaggia_uno

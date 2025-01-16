@@ -9,8 +9,12 @@
 -> main
 
 
-=== panchina
+=== bench
 + {are_two_entities_together(Bench, PG)} [Bench]
     <i>Questo posto è pieno di serenità</i>.
     -> main
 
+=== tree
++ {are_two_entities_together(Tree, PG)} [Tree]
+    <i>L'albero è smonco</i>.
+    -> main

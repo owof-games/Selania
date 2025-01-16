@@ -5,7 +5,7 @@
 
 //Gestione prima personaggia.
     LIST possibiliStatiPersonaggiaUno = IlGiocoso, LIndeciso
-    VAR effettivoStatoPersonaggiaUno = IlGiocoso
+    VAR effettivoStatoPersonaggiaUno = LIndeciso
     
     VAR storiaUno = NonIniziata
     //VAR donoPersonaggiaUno = false

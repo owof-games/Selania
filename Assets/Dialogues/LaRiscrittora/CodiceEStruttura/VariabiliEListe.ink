@@ -23,13 +23,13 @@ LIST characters = Mentore, PG, PersonaggiaUno, PersonaggiaDue, PersonaggiaTre, P
 
 LIST transitions = FromBusStopToGarden, FromGardenToBusStop, FromGreenhouseToGarden, FromGardenToGreenhouse, FromGardenToNothing, FromBusStopToExitGame
 
-LIST sceneObjects = Bench, Wheelbarrow, NotePersonaggiaUno, NotePersonaggiaDue, NotePersonaggiaTre, NotePersonaggiaQuattro, NotePersonaggiaCinque, NotePersonaggiaSei, NotePersonaggiaSette
+LIST sceneObjects = Bench, Wheelbarrow, Tree, NotePersonaggiaUno, NotePersonaggiaDue, NotePersonaggiaTre, NotePersonaggiaQuattro, NotePersonaggiaCinque, NotePersonaggiaSei, NotePersonaggiaSette
 
-LIST mushrooms = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti,  CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile
+LIST mushrooms = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile
 
 
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
-VAR contenutoGiardino = (Mentore, Bench, FromGardenToBusStop, FromGardenToGreenhouse, FromGardenToNothing)
+VAR contenutoGiardino = (Mentore, Bench, Tree, FromGardenToBusStop, FromGardenToGreenhouse, FromGardenToNothing)
 VAR contenutoBusStop = (FromBusStopToGarden, PG, FromBusStopToExitGame)
 VAR contenutoFunghi = (FromGreenhouseToGarden, Wheelbarrow)
 VAR contenutoLabirinto = ()
