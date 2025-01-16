@@ -80,6 +80,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        //Da vedere se funziona autosave.
+        SaveGame();
+    }
+    
     void ContinueStory()
     {
 
