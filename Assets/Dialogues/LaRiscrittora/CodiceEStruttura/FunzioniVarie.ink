@@ -51,9 +51,6 @@
         
     - entity_location(PG) == Labirinto:
         ~ return "backLabirinto"
-        
-    - entity_location(PG) == Sirene:
-       ~ return "backSirene"
 
     - entity_location(PG) == Biblioteca:
        ~ return "backBiblioteca"
@@ -81,9 +78,6 @@
         
     - entity_location(PG) == Labirinto:
         ~ return "labirinthSounds"
-        
-    - entity_location(PG) == Sirene:
-       ~ return "sirensSounds"
 
     - entity_location(PG) == Biblioteca:
        ~ return "librarySounds"

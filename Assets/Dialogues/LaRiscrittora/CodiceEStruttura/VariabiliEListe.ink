@@ -10,7 +10,7 @@ LIST pronomi = maschili, femminili, neutri
 VAR counterSpostamenti = 0
 
 //Lista di tutti i luoghi del gioco
-LIST luoghi = Giardino, BusStop, Funghi, Biblioteca, Falene, Labirinto, Tisane, Sirene, CasettaAnime
+LIST luoghi = Giardino, BusStop, Funghi, Biblioteca, Falene, Labirinto, Tisane, CasettaAnime
 
 //Settaggio luoghi attivi a seconda del tier
 VAR firstTierPlaces =(Giardino, BusStop, Funghi)
@@ -36,7 +36,6 @@ VAR contenutoLabirinto = ()
 VAR contenutoFalene = ()
 VAR contenutoBiblioteca = ()
 VAR contenutoTisane = ()
-VAR contenutoSirene = ()
 VAR contenutoCasettaAnime = (PersonaggiaUno, PersonaggiaDue, PersonaggiaTre, PersonaggiaQuattro, PersonaggiaCinque, PersonaggiaSei, PersonaggiaSette, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, NotePersonaggiaUno, NotePersonaggiaDue, NotePersonaggiaTre, NotePersonaggiaQuattro, NotePersonaggiaCinque, NotePersonaggiaSei, NotePersonaggiaSette)
 
     

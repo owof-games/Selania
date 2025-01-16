@@ -16,8 +16,6 @@
         ~ return Labirinto
     - contenutoTisane has entity:
         ~ return Tisane   
-    - contenutoSirene has entity:
-        ~ return Sirene
     - contenutoCasettaAnime has entity:
         ~ return CasettaAnime                  
     - else:
@@ -50,8 +48,6 @@
         ~ contenutoLabirinto -= entity
     - Tisane:
         ~ contenutoTisane -= entity
-    - Sirene:
-        ~ contenutoSirene -= entity
     - CasettaAnime:
         ~ contenutoCasettaAnime -= entity    
         
@@ -74,8 +70,6 @@
         ~ contenutoLabirinto += entity
     - Tisane:
         ~ contenutoTisane += entity        
-    - Sirene:
-        ~ contenutoSirene += entity
     - CasettaAnime:
         ~ contenutoCasettaAnime += entity            
     - else:

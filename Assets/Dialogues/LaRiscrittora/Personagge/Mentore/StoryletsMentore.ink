@@ -36,9 +36,6 @@
     - are_entities_together_in(PG, Mentore, Biblioteca) && not prima_visita_biblioteca:
         -> prima_visita_biblioteca
 
-    - are_entities_together_in(PG, Mentore, Sirene) && not prima_visita_sirene:
-        -> prima_visita_sirene
-
     - are_entities_together_in(PG, Mentore, Falene) && not prima_visita_falene:
         -> prima_visita_falene
 

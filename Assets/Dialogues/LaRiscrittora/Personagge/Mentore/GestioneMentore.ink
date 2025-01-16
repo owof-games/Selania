@@ -1,10 +1,4 @@
-//Liste per gestire i luoghi dove troviamo il mentore
-//NOTA: IL MENTORE NON COMPARE MAI NEL LABIRINTO, QUELLO è SPAZIO PRIVATO
-VAR luoghiMentoreIncontrato = ()
-VAR mentore_location = ()
-    
-
-=== random_luogo_mentore
+=== randomizer_png_location
 //Ho una lista di luoghi che svuoto e poi resetto, così che sia percepibile come effettivamente randomica
 //Quando poi avrò le storie un attimo settate, andranno risistemate le condizioni del cambio tier
 VAR firstTier = false

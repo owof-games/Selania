@@ -6,7 +6,7 @@
   //  ~ move_entity(PG, Giardino)
     //come prova, lascio che inCrescita aumenti sempre, perché poi viene resettato all'ingresso del test. Vediamo se ha senso o se crea solo casini.
    // ~ inCrescita ++
-    //-> random_luogo_mentore ->
+    //-> randomizer_png_location ->
     //-> comparsa_anime ->
     
     //-> hub_giardino
@@ -25,7 +25,7 @@
     //come prova, lascio che inCrescita aumenti sempre, perché poi viene resettato all'ingresso del test. Vediamo se ha senso o se crea solo casini.
     ~ inCrescita ++
     ~ counterSpostamenti ++
-    -> random_luogo_mentore ->
+    -> randomizer_png_location ->
     -> story_time_management_for_PNG->
     // -> comparsa_anime ->
     
@@ -36,7 +36,7 @@
     //come prova, lascio che inCrescita aumenti sempre, perché poi viene resettato all'ingresso del test. Vediamo se ha senso o se crea solo casini.
     ~ inCrescita ++
     ~ counterSpostamenti ++
-    -> random_luogo_mentore ->
+    -> randomizer_png_location ->
     -> story_time_management_for_PNG->
     // -> comparsa_anime ->
     
@@ -46,7 +46,7 @@
     ~ move_entity(PG, BusStop)
     ~ inCrescita ++
     ~ counterSpostamenti ++    
-    -> random_luogo_mentore ->
+    -> randomizer_png_location ->
     -> story_time_management_for_PNG->
     // -> comparsa_anime ->
     
@@ -56,7 +56,7 @@
     ~ move_entity(PG, Funghi)
     ~ inCrescita ++
     ~ counterSpostamenti ++    
-    -> random_luogo_mentore ->
+    -> randomizer_png_location ->
     -> story_time_management_for_PNG->
     // -> comparsa_anime ->
     
@@ -66,7 +66,7 @@
     ~ move_entity(PG, Biblioteca)
     ~ inCrescita ++
     ~ counterSpostamenti ++    
-    -> random_luogo_mentore ->
+    -> randomizer_png_location ->
     -> story_time_management_for_PNG->
     // -> comparsa_anime ->
     
@@ -76,7 +76,7 @@
     ~ move_entity(PG, Falene)
     ~ inCrescita ++
     ~ counterSpostamenti ++    
-    -> random_luogo_mentore ->
+    -> randomizer_png_location ->
     -> story_time_management_for_PNG->
     // -> comparsa_anime ->
     
@@ -88,7 +88,7 @@
     ~ move_entity(PG, Labirinto)
     ~ inCrescita ++
     ~ counterSpostamenti ++    
-    -> random_luogo_mentore ->
+    -> randomizer_png_location ->
     -> story_time_management_for_PNG->
     // -> comparsa_anime ->
     
@@ -98,7 +98,7 @@
     ~ move_entity(PG, Tisane)
     ~ inCrescita ++
     ~ counterSpostamenti ++    
-    -> random_luogo_mentore ->
+    -> randomizer_png_location ->
     -> story_time_management_for_PNG->
     // -> comparsa_anime ->
     
