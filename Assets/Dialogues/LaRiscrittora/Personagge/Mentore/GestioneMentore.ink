@@ -1,9 +1,5 @@
 //Liste per gestire i luoghi dove troviamo il mentore
 //NOTA: IL MENTORE NON COMPARE MAI NEL LABIRINTO, QUELLO è SPAZIO PRIVATO
-TODO: trasformare questa in una parte comune per tutte le personagge
-VAR luoghiMentorePrimoTier =(Giardino, BusStop, Funghi)
-VAR luoghiMentoreSecondoTier =(Giardino, BusStop) //, Funghi, Falene da rimettere poi dopo prototipo
-VAR luoghiMentoreTerzoTier = (Giardino, BusStop, Biblioteca, Falene, Funghi, Tisane, Sirene)
 VAR luoghiMentoreIncontrato = ()
 VAR mentore_location = ()
     
@@ -11,136 +7,199 @@ VAR mentore_location = ()
 === random_luogo_mentore
 //Ho una lista di luoghi che svuoto e poi resetto, così che sia percepibile come effettivamente randomica
 //Quando poi avrò le storie un attimo settate, andranno risistemate le condizioni del cambio tier
-
-        {   
-            - storiaDue == Conclusa && storiaTre == Conclusa && storiaQuattro == Conclusa:
-                -> random_luogo_mentore_terzo_tier
+VAR firstTier = false
+VAR secondTier = false
+VAR thirdTier = false
+VAR fourthTier = false
+VAR randomizable_characters = (Mentore)
+    //Check stato tier
+    {   
+            - storiaCinque == Conclusa or storiaSei == Conclusa or storiaSette == Conclusa:
+                    ~ fourthTier = true
+                    
+            - (storiaDue == Conclusa && storiaTre == Conclusa) or (storiaQuattro == Conclusa && storiaDue == Conclusa) or (storiaQuattro == Conclusa && storiaTre == Conclusa):
+                     ~ thirdTier = true
+                     
             - storiaUno == Conclusa:
-                -> random_luogo_mentore_secondo_tier
-            - else:
-                //Nel primo tier, il mentore è sempre e solo alla fermata del bus? Potrebbe accogliere te.
+                     ~ secondTier = true
+                     
+            - storiaUno == InCorso or storiaUno == NonIniziata:
                 ~ move_entity(Mentore, BusStop)
+                     ~ firstTier = true
+    }
+    {
+        - storiaUno == InCorso && dialogo_personaggia_uno:
+            ~ randomizable_characters += PersonaggiaUno
+        - storiaDue == InCorso && dialogo_personaggia_due:
+            ~ randomizable_characters += PersonaggiaDue
+            //Aggiungere poi gli altri
+    }
+    
+    
+    {   
+            - fourthTier == true:
+                ~ randomizable_characters += Mentore
+                -> randomizer_fourth_tier
+            - thirdTier == true:
+                ~ randomizable_characters += Mentore
+                -> randomizer_third_tier
+            - secondTier == true:
+                ~ randomizable_characters += Mentore
+                -> randomizer_second_tier
+            - firstTier == true:
+                ~ randomizable_characters += Mentore
+                -> randomizer_first_tier
+    }    
+
+
+
+=== randomizer_first_tier
+    = top
+        ~ temp character = LIST_RANDOM(randomizable_characters)
+        ~ temp location = LIST_RANDOM(firstTierPlaces)
+        ~ move_entity(character, location)
+        ~ randomizable_characters -= character
+    
+        {debug: {character} si trova in {location}}
+        
+        {
+            - randomizable_characters != ():
+                -> top
+            - else:
                 ->->
         }
-
-
-
-=== random_luogo_mentore_primo_tier
-    {
-        - luoghiMentorePrimoTier != ():
-            -> runDomPrimoTier
-        - else:
-            ~ luoghiMentorePrimoTier = (Giardino, BusStop, Funghi)
-            ~ luoghiMentoreIncontrato = ()
-        {debug: la lista dei luoghi era vuota, ma ora contiene di nuovo tutto (check) {luoghiMentorePrimoTier}}
-            -> runDomPrimoTier
-    }
-
-
-    = runDomPrimoTier
-    ~ mentore_location = LIST_RANDOM(luoghiMentorePrimoTier)
-    {mentore_location:
-        - Giardino:
-            ~ move_entity(Mentore, Giardino)
-            ~ luoghiMentorePrimoTier -= Giardino
-            ~ luoghiMentoreIncontrato += Giardino
-        - BusStop:
-            ~ move_entity(Mentore, BusStop)
-            ~ luoghiMentorePrimoTier -= BusStop
-            ~ luoghiMentoreIncontrato += BusStop
-        - Funghi:
-            ~ move_entity(Mentore, Funghi)
-            ~ luoghiMentorePrimoTier -= Funghi
-            ~ luoghiMentoreIncontrato += Funghi
-     
-    }
-    {debug: il mentore si trova in {mentore_location}, la lista aggiornata dei luoghi che deve ancora visitare è: {luoghiMentorePrimoTier}, quella dei luoghi visitati è: {luoghiMentoreIncontrato}}
+        
+        {debug: {character} è stato spostato in {location}}
+      //  {location:
+      //  - Giardino:
+      //   ~ move_entity(character, Giardino)
+      //  - BusStop:
+      //  ~ move_entity(character, BusStop)
+      //  - Funghi:
+      //  ~ move_entity(character, Funghi)
+    // }
     
+=== randomizer_second_tier
+    = top
+        ~ temp character = LIST_RANDOM(randomizable_characters)
+        ~ temp location = LIST_RANDOM(secondTierPlaces)
+        ~ move_entity(character, location)
+        ~ randomizable_characters -= character    
+        
+        {
+            - randomizable_characters != ():
+                -> top
+            - else:
+                ->->
+        }
+    
+    // {mentore_location:
+    //     - Giardino:
+    //         ~ move_entity(Mentore, Giardino)
+    //         ~ luoghiAttiviSecondoTier -= Giardino
+    //         ~ luoghiMentoreIncontrato += Giardino
+    //     - BusStop:
+    //         ~ move_entity(Mentore, BusStop)
+    //         ~ luoghiAttiviSecondoTier -= BusStop
+    //         ~ luoghiMentoreIncontrato += BusStop
+    //     - Falene:
+    //         ~ move_entity(Mentore, Falene)
+    //         ~ luoghiAttiviSecondoTier -= Falene
+    //         ~ luoghiMentoreIncontrato += Falene
+    //     - Funghi:
+    //         ~ move_entity(Mentore, Funghi)
+    //         ~ luoghiAttiviSecondoTier -= Funghi
+    //         ~ luoghiMentoreIncontrato += Funghi
+    
+    // }
+    {debug: {character} è stato spostato in {location}}
     ->->
 
-=== random_luogo_mentore_secondo_tier
-    {
-        - luoghiMentoreSecondoTier != ():
-            -> runDomSecondoTier
-        - else:
-            ~ luoghiMentoreSecondoTier = (Giardino, BusStop) //, Funghi, Falene da mettere dopo secondo tier
-            ~ luoghiMentoreIncontrato = ()
-        {debug: la lista dei luoghi era vuota, ma ora contiene di nuovo tutto (check) {luoghiMentoreSecondoTier}}
-            -> runDomSecondoTier
-    }
+=== randomizer_third_tier
+    = top
+        ~ temp character = LIST_RANDOM(randomizable_characters)
+        ~ temp location = LIST_RANDOM(thirdTierPlaces)
+        ~ move_entity(character, location)
+        ~ randomizable_characters -= character
+        
+        {debug: {character} si trova in {location}}
+        
+        {
+            - randomizable_characters != ():
+                -> top
+            - else:
+                ->->
+        }
+        
+        {debug: {character} è stato spostato in {location}}
     
-    
-    ->->
+    // {mentore_location:
+    //     - Giardino:
+    //         ~ move_entity(Mentore, Giardino)
+    //         ~ luoghiAttiviTerzoTier -= Giardino
+    //         ~ luoghiMentoreIncontrato += Giardino
+    //     - BusStop:
+    //         ~ move_entity(Mentore, BusStop)
+    //         ~ luoghiAttiviTerzoTier -= BusStop
+    //         ~ luoghiMentoreIncontrato += BusStop
+    //     - Biblioteca:
+    //         ~ move_entity(Mentore, Biblioteca)
+    //         ~ luoghiAttiviTerzoTier -= Biblioteca
+    //         ~ luoghiMentoreIncontrato += Biblioteca
+    //     - Falene:
+    //         ~ move_entity(Mentore, Falene)
+    //         ~ luoghiAttiviTerzoTier -= Falene
+    //         ~ luoghiMentoreIncontrato += Falene
+    //     - Funghi:
+    //         ~ move_entity(Mentore, Funghi)
+    //         ~ luoghiAttiviTerzoTier -= Funghi
+    //         ~ luoghiMentoreIncontrato += Funghi
 
-    = runDomSecondoTier
-    ~ mentore_location = LIST_RANDOM(luoghiMentoreSecondoTier)
-    {mentore_location:
-        - Giardino:
-            ~ move_entity(Mentore, Giardino)
-            ~ luoghiMentoreSecondoTier -= Giardino
-            ~ luoghiMentoreIncontrato += Giardino
-        - BusStop:
-            ~ move_entity(Mentore, BusStop)
-            ~ luoghiMentoreSecondoTier -= BusStop
-            ~ luoghiMentoreIncontrato += BusStop
-        - Falene:
-            ~ move_entity(Mentore, Falene)
-            ~ luoghiMentoreSecondoTier -= Falene
-            ~ luoghiMentoreIncontrato += Falene
-        - Funghi:
-            ~ move_entity(Mentore, Funghi)
-            ~ luoghiMentoreSecondoTier -= Funghi
-            ~ luoghiMentoreIncontrato += Funghi
+    // }
+        ->->
     
-    }
-    {debug: il mentore si trova in {mentore_location}, la lista aggiornata dei luoghi che deve ancora visitare è: {luoghiMentoreTerzoTier}, quella dei luoghi visitati è: {luoghiMentoreIncontrato}}
-    ->->
+=== randomizer_fourth_tier
+        = top
+        ~ temp character = LIST_RANDOM(randomizable_characters)
+        ~ temp location = LIST_RANDOM(firstTierPlaces)
+        ~ move_entity(character, location)
+        ~ randomizable_characters -= character
+        
+        {debug: {character} si trova in {location}}
+        
+        {
+            - randomizable_characters != ():
+                -> top
+            - else:
+                ->->
+        }
+        
+        {debug: {character} è stato spostato in {location}}
+    // {mentore_location:
+    //     - Giardino:
+    //         ~ move_entity(Mentore, Giardino)
+    //         ~ luoghiAttiviTerzoTier -= Giardino
+    //         ~ luoghiMentoreIncontrato += Giardino
+    //     - BusStop:
+    //         ~ move_entity(Mentore, BusStop)
+    //         ~ luoghiAttiviTerzoTier -= BusStop
+    //         ~ luoghiMentoreIncontrato += BusStop
+    //     - Biblioteca:
+    //         ~ move_entity(Mentore, Biblioteca)
+    //         ~ luoghiAttiviTerzoTier -= Biblioteca
+    //         ~ luoghiMentoreIncontrato += Biblioteca
+    //     - Falene:
+    //         ~ move_entity(Mentore, Falene)
+    //         ~ luoghiAttiviTerzoTier -= Falene
+    //         ~ luoghiMentoreIncontrato += Falene
+    //     - Funghi:
+    //         ~ move_entity(Mentore, Funghi)
+    //         ~ luoghiAttiviTerzoTier -= Funghi
+    //         ~ luoghiMentoreIncontrato += Funghi
+    //     - Tisane:
+    //         ~ move_entity(Mentore, Tisane)
+    //         ~ luoghiAttiviTerzoTier -= Tisane
+    //         ~ luoghiMentoreIncontrato += Tisane
 
-=== random_luogo_mentore_terzo_tier
-    {
-        - luoghiMentoreTerzoTier != ():
-            -> runDomTerzoTier
-        - else:
-            ~ luoghiMentoreTerzoTier = (Giardino, BusStop, Biblioteca, Falene, Funghi, Tisane, Sirene)
-            ~ luoghiMentoreIncontrato = ()
-        {debug: la lista dei luoghi era vuota, ma ora contiene di nuovo tutto (check) {luoghiMentoreTerzoTier}}
-            -> runDomTerzoTier
-    }
-    
-    = runDomTerzoTier
-    
-    ~ mentore_location = LIST_RANDOM(luoghiMentoreTerzoTier)
-    {mentore_location:
-        - Giardino:
-            ~ move_entity(Mentore, Giardino)
-            ~ luoghiMentoreTerzoTier -= Giardino
-            ~ luoghiMentoreIncontrato += Giardino
-        - BusStop:
-            ~ move_entity(Mentore, BusStop)
-            ~ luoghiMentoreTerzoTier -= BusStop
-            ~ luoghiMentoreIncontrato += BusStop
-        - Biblioteca:
-            ~ move_entity(Mentore, Biblioteca)
-            ~ luoghiMentoreTerzoTier -= Biblioteca
-            ~ luoghiMentoreIncontrato += Biblioteca
-        - Falene:
-            ~ move_entity(Mentore, Falene)
-            ~ luoghiMentoreTerzoTier -= Falene
-            ~ luoghiMentoreIncontrato += Falene
-        - Funghi:
-            ~ move_entity(Mentore, Funghi)
-            ~ luoghiMentoreTerzoTier -= Funghi
-            ~ luoghiMentoreIncontrato += Funghi
-        - Tisane:
-            ~ move_entity(Mentore, Tisane)
-            ~ luoghiMentoreTerzoTier -= Tisane
-            ~ luoghiMentoreIncontrato += Tisane
-        - Sirene:
-            ~ move_entity(Mentore, Sirene)
-            ~ luoghiMentoreTerzoTier -= Sirene
-            ~ luoghiMentoreIncontrato += Sirene
-    }
-    {debug: il mentore si trova in {mentore_location}, la lista aggiornata dei luoghi che deve ancora visitare è: {luoghiMentoreTerzoTier}, quella dei luoghi visitati è: {luoghiMentoreIncontrato}}
-    
-    
+    // }
         ->->

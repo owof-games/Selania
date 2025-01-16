@@ -30,6 +30,8 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
 
     -> main
 
+=== dialogo_personaggia_uno
+-> END
 === intro_storia_uno ===
     //la storia in corso viene attivata, e le altre non saranno accessibili fino alla sua conclusione
     //In questo primo step quello che succede è che verifichiamo se ci sono trigger problematici per la giocatrice. Le permettiamo di scegliere se andare o meno avanti, e poi abbiamo la presentazione della storia.

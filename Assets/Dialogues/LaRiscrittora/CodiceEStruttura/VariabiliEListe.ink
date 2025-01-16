@@ -1,7 +1,7 @@
-//~ SEED_RANDOM(235)
+~ SEED_RANDOM(235)
 
 //Per abilitare o meno il debug
-VAR debug = false
+VAR debug = true
 
 //Nome giocatrice e pronomi
 VAR nome = "Senza Nome"
@@ -11,6 +11,12 @@ VAR counterSpostamenti = 0
 
 //Lista di tutti i luoghi del gioco
 LIST luoghi = Giardino, BusStop, Funghi, Biblioteca, Falene, Labirinto, Tisane, Sirene, CasettaAnime
+
+//Settaggio luoghi attivi a seconda del tier
+VAR firstTierPlaces =(Giardino, BusStop, Funghi)
+VAR secondTierPlaces =(Giardino, BusStop, Funghi, Biblioteca)
+VAR thirdTierPlaces = (Giardino, BusStop, Biblioteca, Falene, Funghi)
+VAR fourthTierPlaces = (Giardino, BusStop, Biblioteca, Falene, Funghi, Tisane)
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
 LIST characters = Mentore, PG, PersonaggiaUno, PersonaggiaDue, PersonaggiaTre, PersonaggiaQuattro, PersonaggiaCinque, PersonaggiaSei, PersonaggiaSette
