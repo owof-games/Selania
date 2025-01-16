@@ -11,12 +11,6 @@
     
         -> DONE
     
-    = not_yet
-        + {are_two_entities_together(LapideSette, PG)} [LapideSette]
-        Sulla lapide è incisa una sola parola: {traduttoreSpettri(effettivoStatoPersonaggiaSette)}
-            -> main
-
-
 
 === storia_sette ===
     //la storia in corso viene attivata, e le altre non saranno accessibili fino alla sua conclusione

@@ -1,28 +1,10 @@
 //Variabili legate alle personagge
-// Lista con i possibili stati delle variabili legate alle contraddizioni
 //Con nuova versione: NonIniziata non riguarda più la storia principale, ma l'accesso alla personaggia
 LIST statoStorie = NonIniziata, InCorso, Conclusa
 
-VAR storiaDue = NonIniziata
-VAR storiaTre = NonIniziata
-VAR storiaQuattro = NonIniziata
-VAR storiaCinque = NonIniziata
-VAR storiaSei = NonIniziata
-VAR storiaSette = NonIniziata
 
 
-VAR donoPersonaggiaDue = false
-VAR donoPersonaggiaTre = false
-VAR donoPersonaggiaQuattro = false
-VAR donoPersonaggiaCinque = false
-VAR donoPersonaggiaSei = false
-VAR donoPersonaggiaSette = false
-
-
-VAR counterSpostamenti = 0
-
-
-//Gestione spettro uno: il Vuoto.
+//Gestione prima personaggia.
 LIST possibiliStatiPersonaggiaUno = SpettroDelVuoto, LArrabbiato, IlGuarente, IlTerrorizzato, LAbbandonato, IlSocievole, IlConsapevole
 VAR effettivoStatoPersonaggiaUno = SpettroDelVuoto
 
@@ -38,46 +20,71 @@ VAR ferito = 0
 VAR socievole = 0
 VAR consapevole = 0
 
-
-//Gestione spettro due
-
+//Gestione seconda personaggia.
 LIST possibiliStatiPersonaggiaDue = LaVegliante, NuovoStatoUnoDue, NuovoStatoDueDue, NuovoStatoTreDue
 VAR effettivoStatoPersonaggiaDue = LaVegliante
 
+VAR storiaDue = NonIniziata
+VAR donoPersonaggiaDue = false
+VAR eventoSpecialePersonaggiaDue = false
+
+
+//Gestione terza personaggia
 LIST possibiliStatiPersonaggiaTre = LIndeciso, NuovoStatoUnoTre, NuovoStatoDueTre, NuovoStatoTreTre
 VAR effettivoStatoPersonaggiaTre = LIndeciso
 
+VAR storiaTre = NonIniziata
+VAR donoPersonaggiaTre = false
+VAR eventoSpecialePersonaggiaTre = false
+
+
+//Gestione quarta personaggia
 LIST possibiliStatiPersonaggiaQuattro = LaMondatrice, NuovoStatoUnoQuattro, NuovoStatoDueQuattro, NuovoStatoTreQuattro
 VAR effettivoStatoPersonaggiaQuattro = LaMondatrice
 
+VAR donoPersonaggiaQuattro = false
+VAR storiaQuattro = NonIniziata
+VAR eventoSpecialePersonaggiaQuattro = false
+
+//Gestione quinta personaggia
 LIST possibiliStatiPersonaggiaCinque = Oscar, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
 VAR effettivoStatoPersonaggiaCinque = Oscar
 
+VAR donoPersonaggiaCinque = false
+VAR storiaCinque = NonIniziata
+VAR eventoSpecialePersonaggiaCinque = false
+
+//Gestione sesta personaggia
 LIST possibiliStatiPersonaggiaSei = LoSpecchio, NuovoStatoUnoSei, NuovoStatoDueSei, NuovoStatoTreSei
 VAR effettivoStatoPersonaggiaSei = LoSpecchio
 
+VAR donoPersonaggiaSei = false
+VAR storiaSei = NonIniziata
+VAR eventoSpecialePersonaggiaSei = false
+
+
+//Gestione settima personaggia
 LIST possibiliStatiPersonaggiaSette = LaDisegnatrice, NuovoStatoUnoSette, NuovoStatoDueSette, NuovoStatoTreSette
 VAR effettivoStatoPersonaggiaSette= LaDisegnatrice
 
+VAR donoPersonaggiaSette= false
+VAR storiaSette = NonIniziata
+VAR eventoSpecialePersonaggiaSette = false
+
+
 //Variabili per verificare se c'è o meno l'accesso all'evento speciale di un singolo spettro
 
-VAR eventoSpecialePersonaggiaDue = false
-VAR eventoSpecialePersonaggiaTre = false
-VAR eventoSpecialePersonaggiaQuattro = false
-VAR eventoSpecialePersonaggiaCinque = false
-VAR eventoSpecialePersonaggiaSei = false
-VAR eventoSpecialePersonaggiaSette = false
 
 === function traduttoreSpettri(effettivoStatoSpettro)
     {effettivoStatoSpettro:
 
-    //Spettro Uno
+    //Personaggia Uno
         - SpettroDelVuoto:
             ~ return "il Vuoto"
         - IlConsapevole: 
             ~ return "il Consapevole"
         - IlGuarente: 
-            ~ return "il guarente"    
+            ~ return "il Guarente"    
         - IlSocievole: 
             ~ return "il Socievole"
         - IlTerrorizzato: 
@@ -86,16 +93,22 @@ VAR eventoSpecialePersonaggiaSette = false
             ~ return "l'Abbandonato"    
         - LArrabbiato: 
             ~ return "l'Arrabbiato"
+    //Personaggia Due       
         - LaVegliante:
             ~ return "la Vegliante"
+    //Personaggia Tre      
         - LIndeciso:
             ~ return "l'Indeciso"
+    //Personaggia Quattro             
         - LaMondatrice:
             ~ return "la Mondatrice"
+    //Personaggia Cinque         
         - Oscar:
             ~ return "Oscar"
+    //Personaggia Sei        
         - LoSpecchio:
             ~ return "lo Specchio"
+    //Personaggia Sette        
         - LaDisegnatrice:
             ~ return "la Disegnatrice"
 
@@ -104,7 +117,7 @@ VAR eventoSpecialePersonaggiaSette = false
 === function traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettro)
     {effettivoStatoSpettro:
 
-    //Spettro Uno
+    //Personaggia Uno
         - SpettroDelVuoto:
             ~ return "Il Vuoto"
         - IlConsapevole: 
@@ -119,16 +132,22 @@ VAR eventoSpecialePersonaggiaSette = false
             ~ return "L'Abbandonato"    
         - LArrabbiato: 
             ~ return "L'Arrabbiato"
+    //Personaggia Due        
         - LaVegliante:
             ~ return "La Vegliante"
+    //Personaggia Tre        
         - LIndeciso:
             ~ return "L'Indeciso"
+    //Personaggia Quattro        
         - LaMondatrice:
             ~ return "La Mondatrice"
+    //Personaggia Cinque        
         - Oscar:
             ~ return "Oscar"
+    //Personaggia Sei        
         - LoSpecchio:
             ~ return "Lo Specchio"
+    //Personaggia Sette        
         - LaDisegnatrice:
             ~ return "La Disegnatrice"
 

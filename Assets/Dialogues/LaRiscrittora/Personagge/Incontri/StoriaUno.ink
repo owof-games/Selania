@@ -1,7 +1,7 @@
 === personaggia_uno ===
 TODO: dare a variabile temp "name" il valore di traduzioneSpettri blah blah così è più veloce.
     //Opzione di dialogo
-    + {are_two_entities_together(LapideUno, PG) && storiaUno == InCorso}[PersonaggiaUno]
+    + {are_two_entities_together(PersonaggiaUno, PG) && storiaUno == InCorso}[PersonaggiaUno]
         <i>Qui attende {traduttoreSpettri(effettivoStatoPersonaggiaUno)}.</i>
             -> intro_storia_uno
 
@@ -87,8 +87,6 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Il vuoto mi trascina in giro per il paese, il suo gelo mi schiaccia lo stomaco, mi fa esplodere il cuore.
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Il cellulare inizia a vibrare. Non ce la posso fare, non ce la posso fare.
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Torno a casa, disattivo il telefono, e mi rimetto a lavorare.
-                ~ move_entity(PersonaggiaUno, BusStop)
-                ~ move_entity(LapideUno, CasettaAnime)
                 -> main
 
 
@@ -522,8 +520,6 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
             - else:
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: E ora posso andarmene in pace.
                 ~ storiaUno = Conclusa
-                ~ move_entity(PersonaggiaUno, CasettaAnime)
-                ~ move_entity(LapideUno, BusStop)
                 ~ counterSpostamenti = 0
                     -> main
         }
@@ -537,8 +533,6 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Dal mondo da cui provieni.
         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Addio.                              
             ~ storiaUno = Conclusa
-            ~ move_entity(PersonaggiaUno, CasettaAnime)
-            ~ move_entity(LapideUno, BusStop)
                 -> main
 
 === scelta_nome_uno

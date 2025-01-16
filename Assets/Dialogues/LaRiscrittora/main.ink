@@ -8,16 +8,6 @@
 //Dialoghi del mentore
 <- mentore
 
-// //Dialoghi delle anime
-// <- anima_uno
-// <- anima_due
-// <- anima_tre
-
-// //Dialoghi delle animelle
-// <- animella_uno
-// <- animella_due
-// <- animella_tre
-
 //Spostamenti
 <- move_between_rooms(my_location)
 
@@ -45,6 +35,16 @@
 
 //Elementi del giardino
 <- panchina
+
+//Elementi della fermata del bus
+<- note_personaggia_uno
+<- note_personaggia_due
+<- note_personaggia_tre
+<- note_personaggia_quattro
+<- note_personaggia_cinque
+<- note_personaggia_sei
+<- note_personaggia_sette
+
 
 //Elementi gestione interfaccia
 <- save
