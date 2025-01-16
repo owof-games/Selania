@@ -39,11 +39,11 @@ INCLUDE Personagge\Incontri\StoriaCinque.ink
 INCLUDE Personagge\Incontri\StoriaSei.ink
 INCLUDE Personagge\Incontri\StoriaSette.ink
 
-INCLUDE Personagge\Anime\AnimaUno.ink
-INCLUDE Personagge\Anime\AnimaDue.ink
-INCLUDE Personagge\Anime\AnimaTre.ink
-INCLUDE Personagge\Anime\Animelle.ink
-INCLUDE Personagge\Anime\VarEFunAnime.ink
+// INCLUDE Personagge\Anime\AnimaUno.ink
+// INCLUDE Personagge\Anime\AnimaDue.ink
+// INCLUDE Personagge\Anime\AnimaTre.ink
+// INCLUDE Personagge\Anime\Animelle.ink
+// INCLUDE Personagge\Anime\VarEFunAnime.ink
 
 
 //Gestione dell'inventario
