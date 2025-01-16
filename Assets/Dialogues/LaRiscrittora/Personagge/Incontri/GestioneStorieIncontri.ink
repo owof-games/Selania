@@ -1,80 +1,76 @@
 //Variabili legate alle personagge
 //Con nuova versione: NonIniziata non riguarda più la storia principale, ma l'accesso alla personaggia
-LIST statoStorie = NonIniziata, InCorso, Conclusa
-
+    LIST statoStorie = NonIniziata, InCorso, Conclusa
 
 
 //Gestione prima personaggia.
-LIST possibiliStatiPersonaggiaUno = SpettroDelVuoto, LArrabbiato, IlGuarente, IlTerrorizzato, LAbbandonato, IlSocievole, IlConsapevole
-VAR effettivoStatoPersonaggiaUno = SpettroDelVuoto
-
-VAR storiaUno = NonIniziata
-VAR donoPersonaggiaUno = false
-VAR eventoSpecialePersonaggiaUno = false
-
-VAR terrore = 0
-VAR abbandono = 0
-VAR rabbia = 0
-
-VAR ferito = 0
-VAR socievole = 0
-VAR consapevole = 0
+    LIST possibiliStatiPersonaggiaUno = SpettroDelVuoto, LArrabbiato, IlGuarente, IlTerrorizzato, LAbbandonato, IlSocievole, IlConsapevole
+    VAR effettivoStatoPersonaggiaUno = SpettroDelVuoto
+    
+    VAR storiaUno = NonIniziata
+    VAR donoPersonaggiaUno = false
+    VAR eventoSpecialePersonaggiaUno = false
+    
+    VAR terrore = 0
+    VAR abbandono = 0
+    VAR rabbia = 0
+    
+    VAR ferito = 0
+    VAR socievole = 0   
+    VAR consapevole = 0
 
 //Gestione seconda personaggia.
-LIST possibiliStatiPersonaggiaDue = LaVegliante, NuovoStatoUnoDue, NuovoStatoDueDue, NuovoStatoTreDue
-VAR effettivoStatoPersonaggiaDue = LaVegliante
-
-VAR storiaDue = NonIniziata
-VAR donoPersonaggiaDue = false
-VAR eventoSpecialePersonaggiaDue = false
+    LIST possibiliStatiPersonaggiaDue = LaVegliante, NuovoStatoUnoDue, NuovoStatoDueDue, NuovoStatoTreDue
+    VAR effettivoStatoPersonaggiaDue = LaVegliante
+    
+    VAR storiaDue = NonIniziata
+    VAR donoPersonaggiaDue = false
+    VAR eventoSpecialePersonaggiaDue = false
 
 
 //Gestione terza personaggia
-LIST possibiliStatiPersonaggiaTre = LIndeciso, NuovoStatoUnoTre, NuovoStatoDueTre, NuovoStatoTreTre
-VAR effettivoStatoPersonaggiaTre = LIndeciso
-
-VAR storiaTre = NonIniziata
-VAR donoPersonaggiaTre = false
-VAR eventoSpecialePersonaggiaTre = false
+    LIST possibiliStatiPersonaggiaTre = LIndeciso, NuovoStatoUnoTre, NuovoStatoDueTre, NuovoStatoTreTre
+    VAR effettivoStatoPersonaggiaTre = LIndeciso
+    
+    VAR storiaTre = NonIniziata
+    VAR donoPersonaggiaTre = false
+    VAR eventoSpecialePersonaggiaTre = false
 
 
 //Gestione quarta personaggia
-LIST possibiliStatiPersonaggiaQuattro = LaMondatrice, NuovoStatoUnoQuattro, NuovoStatoDueQuattro, NuovoStatoTreQuattro
-VAR effettivoStatoPersonaggiaQuattro = LaMondatrice
-
-VAR donoPersonaggiaQuattro = false
-VAR storiaQuattro = NonIniziata
-VAR eventoSpecialePersonaggiaQuattro = false
+    LIST possibiliStatiPersonaggiaQuattro = LaMondatrice, NuovoStatoUnoQuattro, NuovoStatoDueQuattro, NuovoStatoTreQuattro
+    VAR effettivoStatoPersonaggiaQuattro = LaMondatrice
+    
+    VAR donoPersonaggiaQuattro = false
+    VAR storiaQuattro = NonIniziata
+    VAR eventoSpecialePersonaggiaQuattro = false
 
 //Gestione quinta personaggia
-LIST possibiliStatiPersonaggiaCinque = Oscar, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
-VAR effettivoStatoPersonaggiaCinque = Oscar
-
-VAR donoPersonaggiaCinque = false
-VAR storiaCinque = NonIniziata
-VAR eventoSpecialePersonaggiaCinque = false
+    LIST possibiliStatiPersonaggiaCinque = Oscar, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
+    VAR effettivoStatoPersonaggiaCinque = Oscar
+    
+    VAR donoPersonaggiaCinque = false
+    VAR storiaCinque = NonIniziata
+    VAR eventoSpecialePersonaggiaCinque = false
 
 //Gestione sesta personaggia
-LIST possibiliStatiPersonaggiaSei = LoSpecchio, NuovoStatoUnoSei, NuovoStatoDueSei, NuovoStatoTreSei
-VAR effettivoStatoPersonaggiaSei = LoSpecchio
-
-VAR donoPersonaggiaSei = false
-VAR storiaSei = NonIniziata
-VAR eventoSpecialePersonaggiaSei = false
+    LIST possibiliStatiPersonaggiaSei = LoSpecchio, NuovoStatoUnoSei, NuovoStatoDueSei, NuovoStatoTreSei
+    VAR effettivoStatoPersonaggiaSei = LoSpecchio
+    
+    VAR donoPersonaggiaSei = false
+    VAR storiaSei = NonIniziata
+    VAR eventoSpecialePersonaggiaSei = false
 
 
 //Gestione settima personaggia
-LIST possibiliStatiPersonaggiaSette = LaDisegnatrice, NuovoStatoUnoSette, NuovoStatoDueSette, NuovoStatoTreSette
-VAR effettivoStatoPersonaggiaSette= LaDisegnatrice
+    LIST possibiliStatiPersonaggiaSette = LaDisegnatrice, NuovoStatoUnoSette, NuovoStatoDueSette, NuovoStatoTreSette
+    VAR effettivoStatoPersonaggiaSette= LaDisegnatrice
+    
+    VAR donoPersonaggiaSette= false
+    VAR storiaSette = NonIniziata
+    VAR eventoSpecialePersonaggiaSette = false
 
-VAR donoPersonaggiaSette= false
-VAR storiaSette = NonIniziata
-VAR eventoSpecialePersonaggiaSette = false
-
-
-//Variabili per verificare se c'è o meno l'accesso all'evento speciale di un singolo spettro
-
-
+//Funzione di traduzione da variabile a stringa con articolo minuscolo
 === function traduttoreSpettri(effettivoStatoSpettro)
     {effettivoStatoSpettro:
 
@@ -114,6 +110,7 @@ VAR eventoSpecialePersonaggiaSette = false
 
     }
 
+//Funzione di traduzione da variabile a stringa con articolo maiuscolo
 === function traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettro)
     {effettivoStatoSpettro:
 
@@ -191,9 +188,8 @@ VAR eventoSpecialePersonaggiaSette = false
 }
 
 
-//Non è una funzione, ma un check per vedere se attivare o meno le storie delle personagge
-=== story_start
-
+//Check per avvio e chiusura storia personagge
+=== story_time_management_for_PNG
 {
 //Dopo dieci spostamenti, compare il personaggio uno
     - counterSpostamenti == 5 && storiaUno == NonIniziata:
@@ -229,6 +225,35 @@ VAR eventoSpecialePersonaggiaSette = false
     - storiaSette == NonIniziata && storiaDue == Conclusa && storiaTre == Conclusa && storiaQuattro == Conclusa:
                 ~ move_entity(PersonaggiaSette, BusStop)    
                 ~ storiaSette = InCorso
+
+//Check per l'allontanamento delle personagge
+    - storiaUno == Conclusa && counterSpostamenti > 10:
+        ~ move_entity(PersonaggiaUno, contenutoCasettaAnime)
+        ~ move_entity(NotePersonaggiaUno, BusStop)
+        
+    - storiaDue == Conclusa && counterSpostamenti > 10:
+        ~ move_entity(PersonaggiaDue, contenutoCasettaAnime)
+        ~ move_entity(NotePersonaggiaDue, BusStop)
+        
+    - storiaTre == Conclusa && counterSpostamenti > 10:
+        ~ move_entity(PersonaggiaTre, contenutoCasettaAnime)
+        ~ move_entity(NotePersonaggiaTre, BusStop)
+        
+    - storiaQuattro == Conclusa && counterSpostamenti > 10:
+        ~ move_entity(PersonaggiaQuattro, contenutoCasettaAnime)
+        ~ move_entity(NotePersonaggiaQuattro, BusStop)
+        
+    - storiaCinque == Conclusa && counterSpostamenti > 10:
+        ~ move_entity(PersonaggiaCinque, contenutoCasettaAnime)
+        ~ move_entity(NotePersonaggiaCinque, BusStop)
+        
+    - storiaSei == Conclusa && counterSpostamenti > 10:
+        ~ move_entity(PersonaggiaSei, contenutoCasettaAnime)
+        ~ move_entity(NotePersonaggiaSei, BusStop)
+        
+    - storiaSette == Conclusa && counterSpostamenti > 10:
+        ~ move_entity(PersonaggiaSette, contenutoCasettaAnime)
+        ~ move_entity(NotePersonaggiaSette, BusStop)        
                                 
 }
 

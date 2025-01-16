@@ -13,7 +13,6 @@ INCLUDE FileAppunti\ToDo.ink
 INCLUDE CodiceEStruttura\VariabiliEListe.ink
 INCLUDE CodiceEStruttura\FunzioniGestioneSpazi.ink
 INCLUDE CodiceEStruttura\FunzioniCambioLuogo.ink
-INCLUDE CodiceEStruttura\TrackingStorieSpettri.ink
 INCLUDE CodiceEStruttura\DoniEInchiostro.ink
 
 INCLUDE CodiceEStruttura\FunzioniVarie.ink
@@ -31,6 +30,7 @@ INCLUDE Personagge\Mentore\StoryletsMentore.ink
 INCLUDE Personagge\Mentore\MentoreUtile.ink
 INCLUDE Personagge\Mentore\GestioneMentore.ink
 
+INCLUDE Personagge\Incontri\GestioneStorieIncontri.ink
 INCLUDE Personagge\Incontri\StoriaUno.ink
 INCLUDE Personagge\Incontri\StoriaDue.ink
 INCLUDE Personagge\Incontri\StoriaTre.ink
@@ -38,12 +38,6 @@ INCLUDE Personagge\Incontri\StoriaQuattro.ink
 INCLUDE Personagge\Incontri\StoriaCinque.ink
 INCLUDE Personagge\Incontri\StoriaSei.ink
 INCLUDE Personagge\Incontri\StoriaSette.ink
-
-// INCLUDE Personagge\Anime\AnimaUno.ink
-// INCLUDE Personagge\Anime\AnimaDue.ink
-// INCLUDE Personagge\Anime\AnimaTre.ink
-// INCLUDE Personagge\Anime\Animelle.ink
-// INCLUDE Personagge\Anime\VarEFunAnime.ink
 
 
 //Gestione dell'inventario
@@ -54,7 +48,7 @@ INCLUDE Inventario\GestioneInventario.ink
 //LUOGHI APERTI DALL'INIZIO DEL GIOCO
 
 //File dedicato alla gestion della fermata del bus
-INCLUDE Mausoleo\HubMausoleo.ink
+INCLUDE BusStop\HubBusStop.ink
 
 
 //File dedicata alla gestione del giardino

@@ -22,7 +22,6 @@
     + Lasci il dialogo
         -> main
     //Faccio così per questione di ordine
-    <- opzioni_dono_e_storia_pg_due
        + {not dono_storia_due.esito_inchiostro} Dono
         -> dono_storia_due
     
@@ -88,29 +87,41 @@
  ----------------------------------*/
 Storia finita:
         ~ storiaDue = Conclusa
+        //Resetto il counter degli spostamenti. In questo modo da qui posso iniziare a tener traccia dello spostamento della personaggia. Alcune potrebbero anche salutarci e bona.
+        ~ counterSpostamenti = 0
 -> main
         
 
 
-=== personaggia_due_storia_conclusa        
+=== personaggia_due_storia_conclusa
+//Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
+//In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
+~ temp dialogue = 0
+{
+    - dialogue < 10:
+        -> top
+    - else:
+        -> goodbye
+}
+
+    - (top)
         + opzione
+            ~ dialogue ++
+                -> top
         + opzione
+            ~ dialogue ++
+                -> top
         + opzione
+            ~ dialogue ++
+                -> top
+        + esci dalla conversazione
+            -> main
         -
     -> main
     
-
-
-=== opzioni_dono_e_storia_pg_due
-    //LE PROSSIME TRE OPZIONI SI DEVONO ESCLUDERE A VICENDA
+    = goodbye
+    Ciao ciao
+        ~ move_entity(PersonaggiaDue, contenutoCasettaAnime)
+        ~ move_entity(NotePersonaggiaDue, BusStop)
+    -> main
     
-    //QUESTA OPZIONE C'è FINO A QUANDO NON OFFRO UN DONO    
-    + {not dono_storia_due.esito_inchiostro} Dono
-        -> dono_storia_due
-    
-    //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
-    + {dono_storia_due.esito_inchiostro && not main_story_personaggia_due} Ti va di affrontare quella cosa?
-            -> storia_due_chech_trigger
-    
-    //SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
-    + {dono_storia_due.esito_inchiostro && main_story_personaggia_due} Riprendiamo quella storia?     -> main_story_personaggia_due

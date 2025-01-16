@@ -26,7 +26,7 @@
     ~ inCrescita ++
     ~ counterSpostamenti ++
     -> random_luogo_mentore ->
-    -> story_start ->
+    -> story_time_management_for_PNG->
     // -> comparsa_anime ->
     
     -> hub_giardino
@@ -37,7 +37,7 @@
     ~ inCrescita ++
     ~ counterSpostamenti ++
     -> random_luogo_mentore ->
-    -> story_start ->
+    -> story_time_management_for_PNG->
     // -> comparsa_anime ->
     
     -> hub_giardino     
@@ -47,7 +47,7 @@
     ~ inCrescita ++
     ~ counterSpostamenti ++    
     -> random_luogo_mentore ->
-    -> story_start ->
+    -> story_time_management_for_PNG->
     // -> comparsa_anime ->
     
     -> hub_bus_stop
@@ -57,7 +57,7 @@
     ~ inCrescita ++
     ~ counterSpostamenti ++    
     -> random_luogo_mentore ->
-    -> story_start ->
+    -> story_time_management_for_PNG->
     // -> comparsa_anime ->
     
     -> hub_funghi 
@@ -67,7 +67,7 @@
     ~ inCrescita ++
     ~ counterSpostamenti ++    
     -> random_luogo_mentore ->
-    -> story_start ->
+    -> story_time_management_for_PNG->
     // -> comparsa_anime ->
     
     -> hub_biblioteca
@@ -77,7 +77,7 @@
     ~ inCrescita ++
     ~ counterSpostamenti ++    
     -> random_luogo_mentore ->
-    -> story_start ->
+    -> story_time_management_for_PNG->
     // -> comparsa_anime ->
     
     -> hub_falene
@@ -89,7 +89,7 @@
     ~ inCrescita ++
     ~ counterSpostamenti ++    
     -> random_luogo_mentore ->
-    -> story_start ->
+    -> story_time_management_for_PNG->
     // -> comparsa_anime ->
     
     -> hub_labirinto
@@ -99,7 +99,7 @@
     ~ inCrescita ++
     ~ counterSpostamenti ++    
     -> random_luogo_mentore ->
-    -> story_start ->
+    -> story_time_management_for_PNG->
     // -> comparsa_anime ->
     
     -> hub_tisane
