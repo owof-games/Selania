@@ -18,6 +18,9 @@ VAR donoSpettroSei = false
 VAR donoSpettroSette = false
 
 
+VAR counterPersonagge = 0
+
+
 //Gestione spettro uno: il Vuoto.
 LIST possibiliStatiSpettroUno = SpettroDelVuoto, LArrabbiato, IlGuarente, IlTerrorizzato, LAbbandonato, IlSocievole, IlConsapevole
 VAR effettivoStatoSpettroUno = SpettroDelVuoto

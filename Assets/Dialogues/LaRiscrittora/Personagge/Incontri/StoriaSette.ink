@@ -1,4 +1,4 @@
-=== lapide_sette ===
+=== personaggio_sette ===
     //Questa struttura per ora è così per il prototipo, poi in fase definitiva ragionerà secondo i tier riportati nella lista appunti
     {
     - storiaDue == Conclusa && storiaTre == Conclusa && storiaQuattro == Conclusa:

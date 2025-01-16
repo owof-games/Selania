@@ -11,27 +11,25 @@ LIST pronomi = maschili, femminili, neutri
 LIST luoghi = Giardino, BusStop, Funghi, Biblioteca, Falene, Labirinto, Tisane, Sirene, CasettaAnime
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
-LIST characters = Mentore, PG
+LIST characters = Mentore, PG, SpettroUno, SpettroDue, SpettroTre, SpettroQuattro, SpettroCinque, SpettroSei, SpettroSette
 
-LIST transitions = FromMausoleumToGarden, FromGardenToMausoleum, FromGreenhouseToGarden, FromGardenToGreenhouse, FromGardenToNothing, FromMausoleumToNothing
+LIST transitions = FromBusStopToGarden, FromGardenToBusStop, FromGreenhouseToGarden, FromGardenToGreenhouse, FromGardenToNothing, FromBusStopToExitGame
 
 LIST sceneObjects = Bench, Wheelbarrow, LapideUno, LapideDue, LapideTre, LapideQuattro, LapideCinque, LapideSei, LapideSette
-
-LIST souls = SpettroUno, SpettroDue, SpettroTre, SpettroQuattro, SpettroCinque, SpettroSei, SpettroSette
 
 LIST mushrooms = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti,  CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile
 
 
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
-VAR contenutoGiardino = (PG, Bench, FromGardenToMausoleum, FromGardenToGreenhouse, FromGardenToNothing)
-VAR contenutoBusStop = (FromMausoleumToGarden, Mentore, LapideUno, LapideDue, LapideTre, LapideQuattro, LapideCinque, LapideSei, LapideSette)
+VAR contenutoGiardino = (Mentore, Bench, FromGardenToBusStop, FromGardenToGreenhouse, FromGardenToNothing)
+VAR contenutoBusStop = (FromBusStopToGarden, PG, FromBusStopToExitGame)
 VAR contenutoFunghi = (FromGreenhouseToGarden, Wheelbarrow)
 VAR contenutoLabirinto = ()
 VAR contenutoFalene = ()
 VAR contenutoBiblioteca = ()
 VAR contenutoTisane = ()
 VAR contenutoSirene = ()
-VAR contenutoCasettaAnime = (SpettroUno, SpettroDue, SpettroTre, SpettroQuattro, SpettroCinque, SpettroSei, SpettroSette, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
+VAR contenutoCasettaAnime = (SpettroUno, SpettroDue, SpettroTre, SpettroQuattro, SpettroCinque, SpettroSei, SpettroSette, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, LapideUno, LapideDue, LapideTre, LapideQuattro, LapideCinque, LapideSei, LapideSette)
 
     
 //Variabili per tracciare i trigger warning. True = non è TW, posso mostrare quelle storie

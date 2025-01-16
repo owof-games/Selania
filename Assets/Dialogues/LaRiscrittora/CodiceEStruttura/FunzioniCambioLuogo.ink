@@ -17,7 +17,7 @@
 //     <i>L'acqua alta blocca la strada. Eppure senti una voce cantare.</i>
 //     -> main
     
-+ {are_two_entities_together(PG, FromMausoleumToGarden)} [FromMausoleumToGarden]
++ {are_two_entities_together(PG, FromBusStopToGarden)} [FromMausoleumToGarden]
     ~ move_entity(PG, Giardino)
     //come prova, lascio che inCrescita aumenti sempre, perché poi viene resettato all'ingresso del test. Vediamo se ha senso o se crea solo casini.
     ~ inCrescita ++
@@ -35,7 +35,7 @@
     
     -> hub_giardino     
 
-+ {are_two_entities_together(PG, FromGardenToMausoleum)}  [FromGardenToBusStop]
++ {are_two_entities_together(PG, FromGardenToBusStop)}  [FromGardenToBusStop]
     ~ move_entity(PG, BusStop)
     ~ inCrescita ++
     -> random_luogo_mentore ->

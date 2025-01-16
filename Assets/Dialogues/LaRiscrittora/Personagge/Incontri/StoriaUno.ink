@@ -1,4 +1,4 @@
-=== lapide_uno ===
+=== personaggio_uno ===
     //opzione se non hai mai esplorato questa storia e se non ci sono storie attive
     + {are_two_entities_together(LapideUno, PG) && not (storiaUno == InCorso or storiaUno == Conclusa) and not (storiaDue == InCorso or storiaTre == InCorso)}[LapideUno]
         <i>Qui attende {traduttoreSpettri(effettivoStatoSpettroUno)}.</i>
