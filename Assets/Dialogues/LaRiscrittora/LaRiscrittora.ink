@@ -31,13 +31,13 @@ INCLUDE Personagge\Mentore\StoryletsMentore.ink
 INCLUDE Personagge\Mentore\MentoreUtile.ink
 INCLUDE Personagge\Mentore\GestioneMentore.ink
 
-INCLUDE Mausoleo\StoriaUno.ink
-INCLUDE Mausoleo\StoriaDue.ink
-INCLUDE Mausoleo\StoriaTre.ink
-INCLUDE Mausoleo\StoriaQuattro.ink
-INCLUDE Mausoleo\StoriaCinque.ink
-INCLUDE Mausoleo\StoriaSei.ink
-INCLUDE Mausoleo\StoriaSette.ink
+INCLUDE Personagge\Incontri\StoriaUno.ink
+INCLUDE Personagge\Incontri\StoriaDue.ink
+INCLUDE Personagge\Incontri\StoriaTre.ink
+INCLUDE Personagge\Incontri\StoriaQuattro.ink
+INCLUDE Personagge\Incontri\StoriaCinque.ink
+INCLUDE Personagge\Incontri\StoriaSei.ink
+INCLUDE Personagge\Incontri\StoriaSette.ink
 
 INCLUDE Personagge\Anime\AnimaUno.ink
 INCLUDE Personagge\Anime\AnimaDue.ink
