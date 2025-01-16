@@ -17,7 +17,7 @@ LIST transitions = FromMausoleumToGarden, FromGardenToMausoleum, FromGreenhouseT
 
 LIST sceneObjects = Bench, Wheelbarrow, LapideUno, LapideDue, LapideTre, LapideQuattro, LapideCinque, LapideSei, LapideSette
 
-LIST souls = SpettroUno, SpettroDue, SpettroTre, SpettroQuattro, SpettroCinque, SpettroSei, SpettroSette, AnimaUno, AnimaDue, AnimaTre, AnimellaUno, AnimellaDue, AnimellaTre
+LIST souls = SpettroUno, SpettroDue, SpettroTre, SpettroQuattro, SpettroCinque, SpettroSei, SpettroSette
 
 LIST mushrooms = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti,  CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile
 
@@ -31,7 +31,7 @@ VAR contenutoFalene = ()
 VAR contenutoBiblioteca = ()
 VAR contenutoTisane = ()
 VAR contenutoSirene = ()
-VAR contenutoCasettaAnime = (AnimaUno, AnimaDue, AnimaTre, AnimellaUno, AnimellaDue, AnimellaTre, SpettroUno, SpettroDue, SpettroTre, SpettroQuattro, SpettroCinque, SpettroSei, SpettroSette, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
+VAR contenutoCasettaAnime = (SpettroUno, SpettroDue, SpettroTre, SpettroQuattro, SpettroCinque, SpettroSei, SpettroSette, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
 
     
 //Variabili per tracciare i trigger warning. True = non è TW, posso mostrare quelle storie

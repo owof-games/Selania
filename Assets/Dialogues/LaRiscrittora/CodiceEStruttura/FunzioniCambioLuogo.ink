@@ -22,7 +22,7 @@
     //come prova, lascio che inCrescita aumenti sempre, perché poi viene resettato all'ingresso del test. Vediamo se ha senso o se crea solo casini.
     ~ inCrescita ++
     -> random_luogo_mentore ->
-    -> comparsa_anime ->
+    // -> comparsa_anime ->
     
     -> hub_giardino
 
@@ -31,7 +31,7 @@
     //come prova, lascio che inCrescita aumenti sempre, perché poi viene resettato all'ingresso del test. Vediamo se ha senso o se crea solo casini.
     ~ inCrescita ++
     -> random_luogo_mentore ->
-    -> comparsa_anime ->
+    // -> comparsa_anime ->
     
     -> hub_giardino     
 
@@ -39,7 +39,7 @@
     ~ move_entity(PG, Mausoleo)
     ~ inCrescita ++
     -> random_luogo_mentore ->
-    -> comparsa_anime ->
+    // -> comparsa_anime ->
     
     -> hub_mausoleo
     
@@ -47,7 +47,7 @@
     ~ move_entity(PG, Funghi)
     ~ inCrescita ++
     -> random_luogo_mentore ->
-    -> comparsa_anime ->
+    // -> comparsa_anime ->
     
     -> hub_funghi 
 
@@ -55,7 +55,7 @@
     ~ move_entity(PG, Biblioteca)
     ~ inCrescita ++
     -> random_luogo_mentore ->
-    -> comparsa_anime ->
+    // -> comparsa_anime ->
     
     -> hub_biblioteca
 
@@ -63,7 +63,7 @@
     ~ move_entity(PG, Falene)
     ~ inCrescita ++
     -> random_luogo_mentore ->
-    -> comparsa_anime ->
+    // -> comparsa_anime ->
     
     -> hub_falene
     
@@ -73,7 +73,7 @@
     ~ move_entity(PG, Labirinto)
     ~ inCrescita ++
     -> random_luogo_mentore ->
-    -> comparsa_anime ->
+    // -> comparsa_anime ->
     
     -> hub_labirinto
     
@@ -81,7 +81,7 @@
     ~ move_entity(PG, Tisane)
     ~ inCrescita ++
     -> random_luogo_mentore ->
-    -> comparsa_anime ->
+    // -> comparsa_anime ->
     
     -> hub_tisane
 
@@ -89,7 +89,7 @@
     ~ move_entity(PG, Sirene)
     ~ inCrescita ++
     -> random_luogo_mentore ->
-    -> comparsa_anime ->
+    // -> comparsa_anime ->
     
     -> hub_sirene   
 
