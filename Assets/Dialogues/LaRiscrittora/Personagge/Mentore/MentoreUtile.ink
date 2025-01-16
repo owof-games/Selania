@@ -108,9 +108,9 @@
 
     
     === domande_e_obiettivo
-        {statoInchiostroSpettroUno == Vuoto or statoInchiostroSpettroUno == Scarso: Mentore: Non ti demoralizzare, capita a chiunque di non dare il massimo al primo colpo.}
-        {statoInchiostroSpettroUno == Normale or statoInchiostroSpettroUno == Medio: Mentore: Bel colpo! Ti sei {pronomi has maschili: guadagnato|{pronomi has femminili: guadagnata|guadagnatə}} subito una bella dose di inchiostro!}
-        {statoInchiostroSpettroUno == Altissimo: Mentore: Beh, hai dato allo spettro il suo dono preferito! Sei già {pronomi has maschili: pronto|{pronomi has femminili: pronta|prontə}} per questo incarico!}
+        {statoInchiostroPersonaggiaUno == Vuoto or statoInchiostroPersonaggiaUno == Scarso: Mentore: Non ti demoralizzare, capita a chiunque di non dare il massimo al primo colpo.}
+        {statoInchiostroPersonaggiaUno == Normale or statoInchiostroPersonaggiaUno == Medio: Mentore: Bel colpo! Ti sei {pronomi has maschili: guadagnato|{pronomi has femminili: guadagnata|guadagnatə}} subito una bella dose di inchiostro!}
+        {statoInchiostroPersonaggiaUno == Altissimo: Mentore: Beh, hai dato allo spettro il suo dono preferito! Sei già {pronomi has maschili: pronto|{pronomi has femminili: pronta|prontə}} per questo incarico!}
         Mentore: Ora arriva la parte più complessa.
         Mentore: Puoi immaginare di dividere questa situazione in due fasi.
         Mentore: Nella prima, poni delle domande allo spettro, in modo da capire meglio cosa prova o pensa.
@@ -140,7 +140,7 @@
         
     === feedback_spettro_uno
         Mentore: Beh, direi che è andata, {nome}.
-        {effettivoStatoSpettroUno:
+        {effettivoStatoPersonaggiaUno:
             - IlSocievole: Mentore: Hai aiutato lo spettro a riscoprire la sua natura socievole!
             - IlConsapevole: Mentore: Ora lo spettro è capace di riconoscere la necessità della collaborazione!
             - IlGuarente: Mentore: Vedere le proprie ferite è il primo passo per accogliere le parti di noi che non amiamo.

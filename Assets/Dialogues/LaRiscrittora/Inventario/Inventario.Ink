@@ -21,18 +21,18 @@ Dono...
     ~ doniDonati += MuschioDelleAmanti
     {
     - storiaUno == InCorso:
-    <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)} è confuso dal dono.</i>
-    ~ donoSpettroUno = true
+    <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)} è confuso dal dono.</i>
+    ~ donoPersonaggiaUno = true
     -> storia_uno.capitolo_uno
     
     - storiaDue == InCorso:
-        ~ statoInchiostroSpettroDue ++
-        ~ statoInchiostroSpettroDue ++
+        ~ statoInchiostroPersonaggiaDue ++
+        ~ statoInchiostroPersonaggiaDue ++
         Spettro due ha apprezzato molto il tuo dono.
     
 
     - storiaTre == InCorso:
-        ~ statoInchiostroSpettroTre --
+        ~ statoInchiostroPersonaggiaTre --
         Spettro tre è disgustato dal tuo dono.
     }
     
@@ -43,15 +43,15 @@ Dono...
     ~ doniDonati += BaccaDellaAddolorata
     {
     - storiaUno == InCorso:
-        <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)} è confuso dal dono.</i>
-        ~ donoSpettroUno = true
+        <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)} è confuso dal dono.</i>
+        ~ donoPersonaggiaUno = true
         -> storia_uno.capitolo_uno
     
     - storiaDue == InCorso:
         Hai regalato a spettro due qualcosa che proprio non gli interessa
     
     - storiaTre == InCorso:
-        ~ statoInchiostroSpettroTre ++
+        ~ statoInchiostroPersonaggiaTre ++
         Spettro tre apprezza mediamente il tuo dono.
     }
    -> main    
@@ -61,16 +61,16 @@ Dono...
     ~ doniDonati += LaSpazzata
     {
     - storiaUno == InCorso:
-        ~ statoInchiostroSpettroUno ++
-        <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)} apprezza il dono</i>
-        ~ donoSpettroUno = true
+        ~ statoInchiostroPersonaggiaUno ++
+        <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)} apprezza il dono</i>
+        ~ donoPersonaggiaUno = true
         -> storia_uno.capitolo_uno
 
     - storiaDue == InCorso:
         Hai regalato a spettro due qualcosa che proprio non gli interessa
     
     - storiaTre == InCorso:
-        ~ statoInchiostroSpettroTre ++
+        ~ statoInchiostroPersonaggiaTre ++
         Spettro tre apprezza mediamente il tuo dono.
     }
    -> main
@@ -80,18 +80,18 @@ Dono...
     ~ doniDonati += coperta
     {
     - storiaUno == InCorso:
-        ~ statoInchiostroSpettroUno ++
-        ~ statoInchiostroSpettroUno ++
-        <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)} se la avvolge attorno al corpo.
+        ~ statoInchiostroPersonaggiaUno ++
+        ~ statoInchiostroPersonaggiaUno ++
+        <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)} se la avvolge attorno al corpo.
         <i>Sembra sollevato.</i>
-        ~ donoSpettroUno = true
+        ~ donoPersonaggiaUno = true
         -> storia_uno.capitolo_uno
     
     - storiaDue == InCorso:
         Hai regalato a spettro due qualcosa che proprio non gli interessa
     
     - storiaTre == InCorso:
-        ~ statoInchiostroSpettroTre ++
+        ~ statoInchiostroPersonaggiaTre ++
         Spettro tre apprezza mediamente il tuo dono.
     }
    -> main
@@ -101,16 +101,16 @@ Dono...
     ~ doniDonati += vasovuoto
     {
     - storiaUno == InCorso:
-        ~ statoInchiostroSpettroUno --
-        <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
-        ~ donoSpettroUno = true
+        ~ statoInchiostroPersonaggiaUno --
+        <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
+        ~ donoPersonaggiaUno = true
         -> storia_uno.capitolo_uno
     
     - storiaDue == InCorso:
         Hai regalato a spettro due qualcosa che proprio non gli interessa
     
     - storiaTre == InCorso:
-        ~ statoInchiostroSpettroTre ++
+        ~ statoInchiostroPersonaggiaTre ++
         Spettro tre apprezza mediamente il tuo dono.
     }
     -> main
@@ -120,20 +120,20 @@ Dono...
     ~ doniDonati += BrinaDellImpossibile
     {
     - storiaUno == InCorso:
-        ~ statoInchiostroSpettroUno ++
-        ~ statoInchiostroSpettroUno ++
-        ~ statoInchiostroSpettroUno ++
-        <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)} si porta la Brina al petto, e ti guarda commosso.</i>
+        ~ statoInchiostroPersonaggiaUno ++
+        ~ statoInchiostroPersonaggiaUno ++
+        ~ statoInchiostroPersonaggiaUno ++
+        <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)} si porta la Brina al petto, e ti guarda commosso.</i>
         <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
-        ~ donoSpettroUno = true
-         ~ eventoSpecialeSpettroUno = true
+        ~ donoPersonaggiaUno = true
+         ~ eventoSpecialePersonaggiaUno = true
         -> storia_uno.capitolo_uno
 
     - storiaDue == InCorso:
         Hai regalato a spettro due qualcosa che proprio non gli interessa
         <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano</i>
     - storiaTre == InCorso:
-        ~ statoInchiostroSpettroTre ++
+        ~ statoInchiostroPersonaggiaTre ++
         Spettro tre apprezza mediamente il tuo dono.
         <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano</i>        
     }

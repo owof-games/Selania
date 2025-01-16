@@ -1,36 +1,15 @@
-=== personaggio_quattro ===
-    //Questa struttura per ora è così per il prototipo, poi in fase definitiva ragionerà secondo i tier riportati nella lista appunti
-    {
-    - storiaUno == Conclusa:
-    -> opzioni
-    - else:
-    ->not_yet
-    }
-    
-    = opzioni
-        //opzione se non hai mai esplorato questa storia, e se non ci sono storie attive
-        + {are_two_entities_together(LapideQuattro, PG) && not (storiaQuattro == InCorso or storiaQuattro == Conclusa) and not (storiaDue == InCorso or storiaTre == InCorso)} [LapideQuattro]
-            Potresti conoscere la storia della quarta lapide, {traduttoreSpettri(effettivoStatoSpettroQuattro)}
+=== personaggia_quattro ===
+        //opzione se c'è un'altra storia attiva
+        + {are_two_entities_together(PersonaggiaQuattro, PG) && storiaQuattro == InCorso} [PersonaggiaQuattro]
             -> storia_quattro
         
-        //opzione se c'è un'altra storia attiva
-        + {are_two_entities_together(LapideQuattro, PG) && storiaTre == InCorso or storiaDue == InCorso or storiaQuattro == Conclusa} [LapideQuattro]
-            La quarta lapide appartiene a {traduttoreSpettri(effettivoStatoSpettroQuattro)}
-        -> main
-        
         //opzione se questa storia è attiva
-        + {are_two_entities_together(SpettroQuattro, PG) && storiaQuattro == InCorso} [SpettroQuattro]
-        {traduttoreSpettri(effettivoStatoSpettroQuattro)} ti attende
-        -> aiuto_storia_quattro
+        + {are_two_entities_together(PersonaggiaQuattro, PG) && storiaQuattro == Conclusa} [PersonaggiaQuattro]
+            -> personaggia_quattro_storia_conclusa
         
         + ->
     
         -> DONE
-    
-    = not_yet
-        + {are_two_entities_together(LapideQuattro, PG)} [LapideQuattro]
-        Sulla lapide è incisa una sola parola: {traduttoreSpettri(effettivoStatoSpettroQuattro)}
-            -> main
 
 
 
@@ -56,12 +35,19 @@
     
     
     = capitolo_uno    
-        Dopo il tuo dono, la quantità di inchiostro a disposizione è {statoInchiostroSpettroQuattro}.
+        Dopo il tuo dono, la quantità di inchiostro a disposizione è {statoInchiostroPersonaggiaQuattro}.
              -> azioniInchiostro ->
         //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
              + Ho risolto la quarta storia dando al quarto spettro un nuovo stato
                 ~ storiaQuattro = Conclusa
-                ~ effettivoStatoSpettroQuattro = NuovoStatoUnoQuattro
+                ~ effettivoStatoPersonaggiaQuattro = NuovoStatoUnoQuattro
              + Non ho risolto la storia
              -
         -> main
+
+=== personaggia_quattro_storia_conclusa        
+        + opzione
+        + opzione
+        + opzione
+        -
+    -> main            

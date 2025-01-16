@@ -11,7 +11,7 @@ LIST pronomi = maschili, femminili, neutri
 LIST luoghi = Giardino, BusStop, Funghi, Biblioteca, Falene, Labirinto, Tisane, Sirene, CasettaAnime
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
-LIST characters = Mentore, PG, SpettroUno, SpettroDue, SpettroTre, SpettroQuattro, SpettroCinque, SpettroSei, SpettroSette
+LIST characters = Mentore, PG, PersonaggiaUno, PersonaggiaDue, PersonaggiaTre, PersonaggiaQuattro, PersonaggiaCinque, PersonaggiaSei, PersonaggiaSette
 
 LIST transitions = FromBusStopToGarden, FromGardenToBusStop, FromGreenhouseToGarden, FromGardenToGreenhouse, FromGardenToNothing, FromBusStopToExitGame
 
@@ -29,7 +29,7 @@ VAR contenutoFalene = ()
 VAR contenutoBiblioteca = ()
 VAR contenutoTisane = ()
 VAR contenutoSirene = ()
-VAR contenutoCasettaAnime = (SpettroUno, SpettroDue, SpettroTre, SpettroQuattro, SpettroCinque, SpettroSei, SpettroSette, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, LapideUno, LapideDue, LapideTre, LapideQuattro, LapideCinque, LapideSei, LapideSette)
+VAR contenutoCasettaAnime = (PersonaggiaUno, PersonaggiaDue, PersonaggiaTre, PersonaggiaQuattro, PersonaggiaCinque, PersonaggiaSei, PersonaggiaSette, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, LapideUno, LapideDue, LapideTre, LapideQuattro, LapideCinque, LapideSei, LapideSette)
 
     
 //Variabili per tracciare i trigger warning. True = non è TW, posso mostrare quelle storie

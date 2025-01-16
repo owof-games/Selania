@@ -75,13 +75,13 @@ VAR luoghiDono = ()
 
 //Gestione dell'inchiostro per i vari spettri. Nomi e valori sono temporanei. L'idea per ora è: se sono su Scarso, posso fare solo una scelta forte. Con Normale, due e via di seguito. Ogni scelta mi scala indietro nella lista di stati.
 LIST statoInchiostro = Vuoto, Scarso, Normale, Medio, Altissimo
-VAR statoInchiostroSpettroUno = Scarso
-VAR statoInchiostroSpettroDue = Scarso
-VAR statoInchiostroSpettroTre = Scarso
-VAR statoInchiostroSpettroQuattro = Scarso
-VAR statoInchiostroSpettroCinque = Scarso
-VAR statoInchiostroSpettroSei = Scarso
-VAR statoInchiostroSpettroSette = Scarso
+VAR statoInchiostroPersonaggiaUno = Scarso
+VAR statoInchiostroPersonaggiaDue = Scarso
+VAR statoInchiostroPersonaggiaTre = Scarso
+VAR statoInchiostroPersonaggiaQuattro = Scarso
+VAR statoInchiostroPersonaggiaCinque = Scarso
+VAR statoInchiostroPersonaggiaSei = Scarso
+VAR statoInchiostroPersonaggiaSette = Scarso
 
 
 
@@ -91,19 +91,19 @@ VAR statoInchiostroSpettroSette = Scarso
 VAR Inchiostro = ()
 {
     - storiaUno == InCorso:
-        ~ Inchiostro = statoInchiostroSpettroUno
+        ~ Inchiostro = statoInchiostroPersonaggiaUno
     - storiaDue == InCorso:
-        ~ Inchiostro = statoInchiostroSpettroDue
+        ~ Inchiostro = statoInchiostroPersonaggiaDue
     - storiaTre == InCorso:
-        ~ Inchiostro = statoInchiostroSpettroTre
+        ~ Inchiostro = statoInchiostroPersonaggiaTre
     - storiaQuattro == InCorso:
-        ~ Inchiostro = statoInchiostroSpettroQuattro
+        ~ Inchiostro = statoInchiostroPersonaggiaQuattro
     - storiaCinque == InCorso:
-        ~ Inchiostro = statoInchiostroSpettroCinque
+        ~ Inchiostro = statoInchiostroPersonaggiaCinque
     - storiaSei== InCorso:
-        ~ Inchiostro = statoInchiostroSpettroSei 
+        ~ Inchiostro = statoInchiostroPersonaggiaSei 
     - storiaSette == InCorso:
-        ~ Inchiostro = statoInchiostroSpettroSette     
+        ~ Inchiostro = statoInchiostroPersonaggiaSette     
 }
 
 {Inchiostro:

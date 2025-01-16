@@ -1,5 +1,6 @@
 //Liste per gestire i luoghi dove troviamo il mentore
 //NOTA: IL MENTORE NON COMPARE MAI NEL LABIRINTO, QUELLO è SPAZIO PRIVATO
+TODO: trasformare questa in una parte comune per tutte le personagge
 VAR luoghiMentorePrimoTier =(Giardino, BusStop, Funghi)
 VAR luoghiMentoreSecondoTier =(Giardino, BusStop) //, Funghi, Falene da rimettere poi dopo prototipo
 VAR luoghiMentoreTerzoTier = (Giardino, BusStop, Biblioteca, Falene, Funghi, Tisane, Sirene)

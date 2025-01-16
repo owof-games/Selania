@@ -1,37 +1,15 @@
-=== personaggio_sei===
-    //Questa struttura per ora è così per il prototipo, poi in fase definitiva ragionerà secondo i tier riportati nella lista appunti
-    {
-    - storiaDue == Conclusa && storiaTre == Conclusa && storiaQuattro == Conclusa:
-    -> opzioni
-    - else:
-    ->not_yet
-    }
-    
-    = opzioni
-        //opzione se non hai mai esplorato questa storia, e se non ci sono storie attive
-        + {are_two_entities_together(LapideSei, PG) && not (storiaSei == InCorso or storiaSei == Conclusa) and not (storiaSette == InCorso or storiaCinque == InCorso)} [LapideSei]
-        Potresti conoscere la storia della sesta lapide, {traduttoreSpettri(effettivoStatoSpettroSei)}
-            -> storia_sei
+=== personaggia_sei===
+         //opzione se questa storia è attiva
+        + {are_two_entities_together(PersonaggiaSei, PG) && storiaSei == InCorso} [PersonaggiaSei]
+                -> storia_sei
         
         //opzione se c'è un'altra storia attiva
-        + {are_two_entities_together(LapideSei, PG) && storiaCinque == InCorso or storiaSette == InCorso or storiaSei == Conclusa} [LapideSei]
-        La sesta lapide appartiene a {traduttoreSpettri(effettivoStatoSpettroSei)}
-        -> main
-        
-        //opzione se questa storia è attiva
-        + {are_two_entities_together(SpettroSei, PG) && storiaSei== InCorso} [SpettroSei]
-        {traduttoreSpettri(effettivoStatoSpettroSei)} ti attende
-        -> aiuto_storia_sei
-        
+        + {are_two_entities_together(PersonaggiaSei, PG) && storiaSei == Conclusa}[PersonaggiaSei]
+                -> personaggia_sei_storia_conclusa
+                
         + ->
     
         -> DONE
-    
-    = not_yet
-        + {are_two_entities_together(LapideSei, PG)} [LapideSei]
-        Sulla lapide è incisa una sola parola: {traduttoreSpettri(effettivoStatoSpettroSei)}
-            -> main
-
 
 
 === storia_sei ===
@@ -56,12 +34,19 @@
     
     
     = capitolo_uno    
-        Dopo il tuo dono, la quantità di inchiostro a disposizione è {statoInchiostroSpettroSei}.
+        Dopo il tuo dono, la quantità di inchiostro a disposizione è {statoInchiostroPersonaggiaSei}.
              -> azioniInchiostro ->
         //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
              + Ho risolto la sesta storia dando al sesto spettro un nuovo stato
                 ~ storiaSei = Conclusa
-                ~ effettivoStatoSpettroSei = NuovoStatoUnoSei
+                ~ effettivoStatoPersonaggiaSei = NuovoStatoUnoSei
              + Non ho risolto la storia
              -
         -> main
+
+=== personaggia_sei_storia_conclusa        
+        + opzione
+        + opzione
+        + opzione
+        -
+    -> main            

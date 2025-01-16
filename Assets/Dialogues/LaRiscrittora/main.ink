@@ -25,13 +25,13 @@
 <- contenuti_inventario
 
 //Personagge da aiutare
-<-personaggio_uno
-<-personaggio_due
-<-personaggio_tre
-<-personaggio_quattro
-<-personaggio_cinque
-<-personaggio_sei
-<-personaggio_sette
+<-personaggia_uno
+<-personaggia_due
+<-personaggia_tre
+<-personaggia_quattro
+<-personaggia_cinque
+<-personaggia_sei
+<-personaggia_sette
 
 //Elementi della serra
 <- call_test

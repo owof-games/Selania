@@ -1,5 +1,6 @@
 //Variabili legate alle personagge
 // Lista con i possibili stati delle variabili legate alle contraddizioni
+//Con nuova versione: NonIniziata non riguarda più la storia principale, ma l'accesso alla personaggia
 LIST statoStorie = NonIniziata, InCorso, Conclusa
 
 VAR storiaDue = NonIniziata
@@ -10,24 +11,24 @@ VAR storiaSei = NonIniziata
 VAR storiaSette = NonIniziata
 
 
-VAR donoSpettroDue = false
-VAR donoSpettroTre = false
-VAR donoSpettroQuattro = false
-VAR donoSpettroCinque = false
-VAR donoSpettroSei = false
-VAR donoSpettroSette = false
+VAR donoPersonaggiaDue = false
+VAR donoPersonaggiaTre = false
+VAR donoPersonaggiaQuattro = false
+VAR donoPersonaggiaCinque = false
+VAR donoPersonaggiaSei = false
+VAR donoPersonaggiaSette = false
 
 
-VAR counterPersonagge = 0
+VAR counterSpostamenti = 0
 
 
 //Gestione spettro uno: il Vuoto.
-LIST possibiliStatiSpettroUno = SpettroDelVuoto, LArrabbiato, IlGuarente, IlTerrorizzato, LAbbandonato, IlSocievole, IlConsapevole
-VAR effettivoStatoSpettroUno = SpettroDelVuoto
+LIST possibiliStatiPersonaggiaUno = SpettroDelVuoto, LArrabbiato, IlGuarente, IlTerrorizzato, LAbbandonato, IlSocievole, IlConsapevole
+VAR effettivoStatoPersonaggiaUno = SpettroDelVuoto
 
 VAR storiaUno = NonIniziata
-VAR donoSpettroUno = false
-VAR eventoSpecialeSpettroUno = false
+VAR donoPersonaggiaUno = false
+VAR eventoSpecialePersonaggiaUno = false
 
 VAR terrore = 0
 VAR abbandono = 0
@@ -40,32 +41,32 @@ VAR consapevole = 0
 
 //Gestione spettro due
 
-LIST possibiliStatiSpettroDue = LaVegliante, NuovoStatoUnoDue, NuovoStatoDueDue, NuovoStatoTreDue
-VAR effettivoStatoSpettroDue = LaVegliante
+LIST possibiliStatiPersonaggiaDue = LaVegliante, NuovoStatoUnoDue, NuovoStatoDueDue, NuovoStatoTreDue
+VAR effettivoStatoPersonaggiaDue = LaVegliante
 
-LIST possibiliStatiSpettroTre = LIndeciso, NuovoStatoUnoTre, NuovoStatoDueTre, NuovoStatoTreTre
-VAR effettivoStatoSpettroTre = LIndeciso
+LIST possibiliStatiPersonaggiaTre = LIndeciso, NuovoStatoUnoTre, NuovoStatoDueTre, NuovoStatoTreTre
+VAR effettivoStatoPersonaggiaTre = LIndeciso
 
-LIST possibiliStatiSpettroQuattro = LaMondatrice, NuovoStatoUnoQuattro, NuovoStatoDueQuattro, NuovoStatoTreQuattro
-VAR effettivoStatoSpettroQuattro = LaMondatrice
+LIST possibiliStatiPersonaggiaQuattro = LaMondatrice, NuovoStatoUnoQuattro, NuovoStatoDueQuattro, NuovoStatoTreQuattro
+VAR effettivoStatoPersonaggiaQuattro = LaMondatrice
 
-LIST possibiliStatiSpettroCinque = Oscar, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
-VAR effettivoStatoSpettroCinque = Oscar
+LIST possibiliStatiPersonaggiaCinque = Oscar, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
+VAR effettivoStatoPersonaggiaCinque = Oscar
 
-LIST possibiliStatiSpettroSei = LoSpecchio, NuovoStatoUnoSei, NuovoStatoDueSei, NuovoStatoTreSei
-VAR effettivoStatoSpettroSei = LoSpecchio
+LIST possibiliStatiPersonaggiaSei = LoSpecchio, NuovoStatoUnoSei, NuovoStatoDueSei, NuovoStatoTreSei
+VAR effettivoStatoPersonaggiaSei = LoSpecchio
 
-LIST possibiliStatiSpettroSette = LaDisegnatrice, NuovoStatoUnoSette, NuovoStatoDueSette, NuovoStatoTreSette
-VAR effettivoStatoSpettroSette= LaDisegnatrice
+LIST possibiliStatiPersonaggiaSette = LaDisegnatrice, NuovoStatoUnoSette, NuovoStatoDueSette, NuovoStatoTreSette
+VAR effettivoStatoPersonaggiaSette= LaDisegnatrice
 
 //Variabili per verificare se c'è o meno l'accesso all'evento speciale di un singolo spettro
 
-VAR eventoSpecialeSpettroDue = false
-VAR eventoSpecialeSpettroTre = false
-VAR eventoSpecialeSpettroQuattro = false
-VAR eventoSpecialeSpettroCinque = false
-VAR eventoSpecialeSpettroSei = false
-VAR eventoSpecialeSpettroSette = false
+VAR eventoSpecialePersonaggiaDue = false
+VAR eventoSpecialePersonaggiaTre = false
+VAR eventoSpecialePersonaggiaQuattro = false
+VAR eventoSpecialePersonaggiaCinque = false
+VAR eventoSpecialePersonaggiaSei = false
+VAR eventoSpecialePersonaggiaSette = false
 
 === function traduttoreSpettri(effettivoStatoSpettro)
     {effettivoStatoSpettro:
@@ -169,3 +170,47 @@ VAR eventoSpecialeSpettroSette = false
     - else:
         ~ return false
 }
+
+
+//Non è una funzione, ma un check per vedere se attivare o meno le storie delle personagge
+=== story_start
+
+{
+//Dopo dieci spostamenti, compare il personaggio uno
+    - counterSpostamenti == 5 && storiaUno == NonIniziata:
+            ~ move_entity(PersonaggiaUno, BusStop)
+            ~ storiaUno = InCorso
+            
+//Finita la storia col personaggio uno ho resettato il counter, e dopo dieci spostamenti compaiono il personaggio due e tre.        
+    - counterSpostamenti == 5 && storiaUno == Conclusa && storiaDue == NonIniziata:
+            ~ move_entity(PersonaggiaDue, BusStop)    
+            ~ storiaDue = InCorso
+            
+    - counterSpostamenti == 5 && storiaUno == Conclusa && storiaTre == NonIniziata:
+            ~ move_entity(PersonaggiaTre, BusStop)    
+            ~ storiaTre = InCorso
+            
+//I reset ci sono solo a fine di una storia. Per cui per creare un po' di delay con la comparsa del quarto personaggio, aumento solo il valoure del counterSpostamenti
+    - counterSpostamenti == 20 && storiaUno == Conclusa && storiaQuattro == NonIniziata:
+        //Ma magari questo spettro vuole comparire altrove
+            ~ move_entity(PersonaggiaQuattro, BusStop)
+            ~ storiaQuattro = InCorso
+            
+//Ora l'idea è che le altre storie si aprano sempre con un certo delay, ma non posso sapere quale delle tre precedenti verrà affrontata prima o dopo dalla giocatrice.
+//Una idea può essere: fare in modo che 5 compaia quando una delle tre storie intermedie sia conclusa, 6 quando due son concluse, 7 quando tutte son state concluse.
+//Quindi il counter non serve più a nulla.
+    - storiaCinque == NonIniziata && storiaDue == Conclusa or storiaTre == Conclusa or storiaQuattro == Conclusa:
+                ~ move_entity(PersonaggiaCinque, BusStop)
+                ~ storiaCinque = InCorso
+                
+    - storiaSei == NonIniziata && (storiaDue == Conclusa && storiaTre == Conclusa) or (storiaDue == Conclusa && storiaQuattro == Conclusa) or (storiaTre == Conclusa && storiaQuattro == Conclusa):
+                ~ move_entity(PersonaggiaSei, BusStop)    
+                ~ storiaSei = InCorso
+                
+    - storiaSette == NonIniziata && storiaDue == Conclusa && storiaTre == Conclusa && storiaQuattro == Conclusa:
+                ~ move_entity(PersonaggiaSette, BusStop)    
+                ~ storiaSette = InCorso
+                                
+}
+
+->->
