@@ -43,7 +43,7 @@ public class DialogueCommentatoPerStudio : MonoBehaviour
     [Header("Garden Backgrounds")]
     [SerializeField] private Sprite backGiardino;
     [Header("Mausoleum Backgrounds")]
-    [SerializeField] private Sprite backMausoleo;
+    [SerializeField] private Sprite backBusStop;
     [Header("Greenhouse Backgrounds")]
     [SerializeField] private Sprite backFunghi;
     [Header("Pets Backgrounds")]
@@ -64,7 +64,7 @@ public class DialogueCommentatoPerStudio : MonoBehaviour
     [Header("Garden Sounds")]
     [SerializeField] private AudioClip gardenSounds;
     [Header("Mausoleum Sounds")]
-    [SerializeField] private AudioClip mausoleumSounds;
+    [SerializeField] private AudioClip busstopSounds;
     [Header("Greenhouse Sounds")]
     [SerializeField] private AudioClip greenhouseSounds;
 
@@ -349,10 +349,10 @@ public class DialogueCommentatoPerStudio : MonoBehaviour
                         background.sprite = backGiardino;
                     }
 
-                    //TAG GESTIONE DEL MAUSOLEO
-                    if (tagValue == "backMausoleo")
+                    //TAG GESTIONE DEL BusStop
+                    if (tagValue == "backBusStop")
                     {
-                        background.sprite = backMausoleo;
+                        background.sprite = backBusStop;
                     }
 
                     //TAG GESTIONE DEL SERRA
@@ -401,10 +401,10 @@ public class DialogueCommentatoPerStudio : MonoBehaviour
                         ambientSounds.clip = gardenSounds;
                         ambientSounds.Play();
                     }
-                    //TAG MUSICA SOTTOFONDO MAUSOLEO
-                    if (tagValue == "mausoleumSounds")
+                    //TAG MUSICA SOTTOFONDO BusStop
+                    if (tagValue == "busstopSounds")
                     {
-                        ambientSounds.clip = mausoleumSounds;
+                        ambientSounds.clip = busstopSounds;
                         ambientSounds.Play();
                     }
 

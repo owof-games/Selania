@@ -7,7 +7,7 @@ Accade solo negli hub, non nelle scene singole, che sono private (credo)
 AREE DEL GIARDINO
     Si aprono in modo strutturato, ragionando per tier.
     Es:
-        -> Tier uno: tutorial. Si apre il giardino con funghi e fiori + il mausoleo. Trovo tre oggetti utili per la prima storia: uno dal mentore, uno nel giardino stesso (se osservo il mondo dalla panchina), l'altro collaborando con un fungo o un fiore o che.
+        -> Tier uno: tutorial. Si apre il giardino con funghi e fiori + il BusStop. Trovo tre oggetti utili per la prima storia: uno dal mentore, uno nel giardino stesso (se osservo il mondo dalla panchina), l'altro collaborando con un fungo o un fiore o che.
         -> Tier due: si apre lo spazio delle falene e il labirinto
         -> Tier tre: si apre il resto: tisane, biblioteca, canzoni
     
@@ -27,7 +27,6 @@ TOMBE
     Le sette tombe saranno sempre e comunque visibili e accessibili. Se non sono sbloccate, ci diranno solo l'epitaffio.    
         
     LOOP per la relazione con gli spettri:
-        -> arrivo al mausoleo
         -> decido quale tra le storie disponibili voglio avviare
         -> ascolto la storia (una scena significativa che mi dà potenziali spunti per dei doni)
         -> cerco i doni

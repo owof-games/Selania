@@ -1,8 +1,8 @@
 //Liste per gestire i luoghi dove troviamo il mentore
 //NOTA: IL MENTORE NON COMPARE MAI NEL LABIRINTO, QUELLO è SPAZIO PRIVATO
-VAR luoghiMentorePrimoTier =(Giardino, Mausoleo, Funghi)
-VAR luoghiMentoreSecondoTier =(Giardino, Mausoleo) //, Funghi, Falene da rimettere poi dopo prototipo
-VAR luoghiMentoreTerzoTier = (Giardino, Mausoleo, Biblioteca, Falene, Funghi, Tisane, Sirene)
+VAR luoghiMentorePrimoTier =(Giardino, BusStop, Funghi)
+VAR luoghiMentoreSecondoTier =(Giardino, BusStop) //, Funghi, Falene da rimettere poi dopo prototipo
+VAR luoghiMentoreTerzoTier = (Giardino, BusStop, Biblioteca, Falene, Funghi, Tisane, Sirene)
 VAR luoghiMentoreIncontrato = ()
 VAR mentore_location = ()
     
@@ -17,8 +17,8 @@ VAR mentore_location = ()
             - storiaUno == Conclusa:
                 -> random_luogo_mentore_secondo_tier
             - else:
-                //Nel primo tier, il mentore è sempre e solo nel Mausoleo
-                ~ move_entity(Mentore, Mausoleo)
+                //Nel primo tier, il mentore è sempre e solo alla fermata del bus? Potrebbe accogliere te.
+                ~ move_entity(Mentore, BusStop)
                 ->->
         }
 
@@ -29,7 +29,7 @@ VAR mentore_location = ()
         - luoghiMentorePrimoTier != ():
             -> runDomPrimoTier
         - else:
-            ~ luoghiMentorePrimoTier = (Giardino, Mausoleo, Funghi)
+            ~ luoghiMentorePrimoTier = (Giardino, BusStop, Funghi)
             ~ luoghiMentoreIncontrato = ()
         {debug: la lista dei luoghi era vuota, ma ora contiene di nuovo tutto (check) {luoghiMentorePrimoTier}}
             -> runDomPrimoTier
@@ -43,10 +43,10 @@ VAR mentore_location = ()
             ~ move_entity(Mentore, Giardino)
             ~ luoghiMentorePrimoTier -= Giardino
             ~ luoghiMentoreIncontrato += Giardino
-        - Mausoleo:
-            ~ move_entity(Mentore, Mausoleo)
-            ~ luoghiMentorePrimoTier -= Mausoleo
-            ~ luoghiMentoreIncontrato += Mausoleo
+        - BusStop:
+            ~ move_entity(Mentore, BusStop)
+            ~ luoghiMentorePrimoTier -= BusStop
+            ~ luoghiMentoreIncontrato += BusStop
         - Funghi:
             ~ move_entity(Mentore, Funghi)
             ~ luoghiMentorePrimoTier -= Funghi
@@ -62,7 +62,7 @@ VAR mentore_location = ()
         - luoghiMentoreSecondoTier != ():
             -> runDomSecondoTier
         - else:
-            ~ luoghiMentoreSecondoTier = (Giardino, Mausoleo) //, Funghi, Falene da mettere dopo secondo tier
+            ~ luoghiMentoreSecondoTier = (Giardino, BusStop) //, Funghi, Falene da mettere dopo secondo tier
             ~ luoghiMentoreIncontrato = ()
         {debug: la lista dei luoghi era vuota, ma ora contiene di nuovo tutto (check) {luoghiMentoreSecondoTier}}
             -> runDomSecondoTier
@@ -78,10 +78,10 @@ VAR mentore_location = ()
             ~ move_entity(Mentore, Giardino)
             ~ luoghiMentoreSecondoTier -= Giardino
             ~ luoghiMentoreIncontrato += Giardino
-        - Mausoleo:
-            ~ move_entity(Mentore, Mausoleo)
-            ~ luoghiMentoreSecondoTier -= Mausoleo
-            ~ luoghiMentoreIncontrato += Mausoleo
+        - BusStop:
+            ~ move_entity(Mentore, BusStop)
+            ~ luoghiMentoreSecondoTier -= BusStop
+            ~ luoghiMentoreIncontrato += BusStop
         - Falene:
             ~ move_entity(Mentore, Falene)
             ~ luoghiMentoreSecondoTier -= Falene
@@ -100,7 +100,7 @@ VAR mentore_location = ()
         - luoghiMentoreTerzoTier != ():
             -> runDomTerzoTier
         - else:
-            ~ luoghiMentoreTerzoTier = (Giardino, Mausoleo, Biblioteca, Falene, Funghi, Tisane, Sirene)
+            ~ luoghiMentoreTerzoTier = (Giardino, BusStop, Biblioteca, Falene, Funghi, Tisane, Sirene)
             ~ luoghiMentoreIncontrato = ()
         {debug: la lista dei luoghi era vuota, ma ora contiene di nuovo tutto (check) {luoghiMentoreTerzoTier}}
             -> runDomTerzoTier
@@ -114,10 +114,10 @@ VAR mentore_location = ()
             ~ move_entity(Mentore, Giardino)
             ~ luoghiMentoreTerzoTier -= Giardino
             ~ luoghiMentoreIncontrato += Giardino
-        - Mausoleo:
-            ~ move_entity(Mentore, Mausoleo)
-            ~ luoghiMentoreTerzoTier -= Mausoleo
-            ~ luoghiMentoreIncontrato += Mausoleo
+        - BusStop:
+            ~ move_entity(Mentore, BusStop)
+            ~ luoghiMentoreTerzoTier -= BusStop
+            ~ luoghiMentoreIncontrato += BusStop
         - Biblioteca:
             ~ move_entity(Mentore, Biblioteca)
             ~ luoghiMentoreTerzoTier -= Biblioteca

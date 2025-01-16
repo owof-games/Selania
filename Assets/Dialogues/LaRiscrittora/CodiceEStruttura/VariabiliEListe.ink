@@ -8,7 +8,7 @@ VAR nome = "Senza Nome"
 LIST pronomi = maschili, femminili, neutri
 
 //Lista di tutti i luoghi del gioco
-LIST luoghi = Giardino, Mausoleo, Funghi, Biblioteca, Falene, Labirinto, Tisane, Sirene, CasettaAnime
+LIST luoghi = Giardino, BusStop, Funghi, Biblioteca, Falene, Labirinto, Tisane, Sirene, CasettaAnime
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
 LIST characters = Mentore, PG
@@ -24,7 +24,7 @@ LIST mushrooms = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti,  Cant
 
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
 VAR contenutoGiardino = (PG, Bench, FromGardenToMausoleum, FromGardenToGreenhouse, FromGardenToNothing)
-VAR contenutoMausoleo = (FromMausoleumToGarden, Mentore, LapideUno, LapideDue, LapideTre, LapideQuattro, LapideCinque, LapideSei, LapideSette, FromMausoleumToNothing)
+VAR contenutoBusStop = (FromMausoleumToGarden, Mentore, LapideUno, LapideDue, LapideTre, LapideQuattro, LapideCinque, LapideSei, LapideSette)
 VAR contenutoFunghi = (FromGreenhouseToGarden, Wheelbarrow)
 VAR contenutoLabirinto = ()
 VAR contenutoFalene = ()

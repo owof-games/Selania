@@ -31,6 +31,14 @@ INCLUDE Personagge\Mentore\StoryletsMentore.ink
 INCLUDE Personagge\Mentore\MentoreUtile.ink
 INCLUDE Personagge\Mentore\GestioneMentore.ink
 
+INCLUDE Mausoleo\StoriaUno.ink
+INCLUDE Mausoleo\StoriaDue.ink
+INCLUDE Mausoleo\StoriaTre.ink
+INCLUDE Mausoleo\StoriaQuattro.ink
+INCLUDE Mausoleo\StoriaCinque.ink
+INCLUDE Mausoleo\StoriaSei.ink
+INCLUDE Mausoleo\StoriaSette.ink
+
 INCLUDE Personagge\Anime\AnimaUno.ink
 INCLUDE Personagge\Anime\AnimaDue.ink
 INCLUDE Personagge\Anime\AnimaTre.ink
@@ -45,15 +53,9 @@ INCLUDE Inventario\GestioneInventario.ink
 
 //LUOGHI APERTI DALL'INIZIO DEL GIOCO
 
-//File dedicati alla gestione del Mausoleo
+//File dedicato alla gestion della fermata del bus
 INCLUDE Mausoleo\HubMausoleo.ink
-INCLUDE Mausoleo\StoriaUno.ink
-INCLUDE Mausoleo\StoriaDue.ink
-INCLUDE Mausoleo\StoriaTre.ink
-INCLUDE Mausoleo\StoriaQuattro.ink
-INCLUDE Mausoleo\StoriaCinque.ink
-INCLUDE Mausoleo\StoriaSei.ink
-INCLUDE Mausoleo\StoriaSette.ink
+
 
 //File dedicata alla gestione del giardino
 INCLUDE Giardino\HubGiardino.ink

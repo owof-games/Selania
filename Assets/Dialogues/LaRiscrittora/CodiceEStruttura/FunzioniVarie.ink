@@ -40,8 +40,8 @@
     - entity_location(PG) == Giardino:
         ~ return "backGiardino"
         
-    - entity_location(PG) == Mausoleo:
-        ~ return "backMausoleo"
+    - entity_location(PG) == BusStop:
+        ~ return "backBusStop"
         
     - entity_location(PG) == Funghi:
        ~ return "backFunghi"
@@ -70,8 +70,8 @@
     - entity_location(PG) == Giardino:
         ~ return "gardenSounds"
         
-    - entity_location(PG) == Mausoleo:
-        ~ return "mausoleumSounds"
+    - entity_location(PG) == BusStop:
+        ~ return "busstopSounds"
         
     - entity_location(PG) == Funghi:
        ~ return "greenhouseSounds"

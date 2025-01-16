@@ -4,8 +4,8 @@
 {
     - contenutoGiardino has entity:
         ~ return Giardino
-    - contenutoMausoleo has entity:
-        ~ return Mausoleo
+    - contenutoBusStop has entity:
+        ~ return BusStop
     - contenutoBiblioteca has entity:
         ~ return Biblioteca
     - contenutoFalene has entity:
@@ -38,8 +38,8 @@
 {CurrentLocation:
     - Giardino:
         ~ contenutoGiardino -= entity
-    - Mausoleo:
-        ~ contenutoMausoleo -= entity
+    - BusStop:
+        ~ contenutoBusStop -= entity
     - Biblioteca:
         ~ contenutoBiblioteca -= entity
     - Falene:
@@ -62,8 +62,8 @@
 {destination:
     - Giardino:
         ~ contenutoGiardino += entity
-    - Mausoleo:
-        ~ contenutoMausoleo += entity
+    - BusStop:
+        ~ contenutoBusStop += entity
     - Biblioteca:
         ~ contenutoBiblioteca += entity
     - Falene:

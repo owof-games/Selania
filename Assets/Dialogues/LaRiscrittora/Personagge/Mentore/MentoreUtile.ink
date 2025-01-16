@@ -55,7 +55,7 @@
         Mentore: Ma se ti va puoi dirmi quali sono le cose che ti creano disagio, e farò del mio meglio per non fartele incontrare.
                 -> trigger_warning ->
         Mentore: Ma in tutto questo non ti ho detto cosa devi fare!
-        Mentore: Facciamo così: prova a parlare con uno degli spettri qui nel <b>Mausoleo</b>.
+        Mentore: Facciamo così: prova a parlare con uno degli spettri qui alla <b>fermata del bus</b>.
         Mentore: Tipo quello con la tomba arancione.
         Mentore: E poi torna da me.
     -> main      
@@ -170,9 +170,9 @@
     Mentre: Su quali vorresti avere un po' di informazioni?
 
 -(top)
-    + [Sul mausoleo.]
-            Mentore: Il Mausoleo, ad est del Giardino, è il posto dove si trovano i vari spettri.
-            Mentore: Non saranno tantissime, non ti preoccupare: ogni {pronomi has maschili: Riscrittore|{pronomi has femminili: Riscrittora|Riscrittorə}} si occupa di uno specifico mausoleo.
+    + [Sulla fermata del bus.]
+            Mentore: La fermata, ad est del Giardino, è il posto dove si trovano i vari spettri.
+            Mentore: Non saranno tantissime, non ti preoccupare: ogni {pronomi has maschili: Riscrittore|{pronomi has femminili: Riscrittora|Riscrittorə}} si occupa di uno specifico giardino.
             Mentore: All'ingresso troverai diverse lapidi. Ognuna indica lo spettro che vi è contenuto e il nome che si è dato prima di morire.
             Mentore: Alcune richiedono un po' di esperienza prima di interagirci, altre ti chiederanno di ascoltare subito la loro storia.
             Mentore: Ricorda che non puoi mai iniziare una riscrittura senza un dono.
@@ -221,7 +221,7 @@
     -> parlareColMentore
 
 === compito
-        Mentore: Te la faccio breve: nel <b>Mausoleo</b> incontrerai degli <b>spettri</b>.
+        Mentore: Te la faccio breve: alla <b>fermata del bus</b> incontrerai degli <b>spettri</b>.
         Mentore: Sono totalmente innocui, l'unico problema è che non hanno trovato una soluzione a questioni rimaste aperte quando erano in vita.
         Mentore: Spesso sono storie di rimpianto o rimorso, in alcuni casi di traumi, o sensi di colpa.
         Mentore: E a volte hanno avuto una vita così bella che non accettano davvero di morire.

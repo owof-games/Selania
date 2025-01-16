@@ -13,9 +13,9 @@
 + {are_two_entities_together(PG, FromGardenToNothing)} [FromGardenToNothing]
     <i>Questa strada risulta bloccata, per ora.</i>
     -> main
-+ {are_two_entities_together(PG, FromMausoleumToNothing)} [FromMausoleumToNothing]
-    <i>L'acqua alta blocca la strada. Eppure senti una voce cantare.</i>
-    -> main
+// + {are_two_entities_together(PG, FromMausoleumToNothing)} [FromMausoleumToNothing]
+//     <i>L'acqua alta blocca la strada. Eppure senti una voce cantare.</i>
+//     -> main
     
 + {are_two_entities_together(PG, FromMausoleumToGarden)} [FromMausoleumToGarden]
     ~ move_entity(PG, Giardino)
@@ -35,13 +35,13 @@
     
     -> hub_giardino     
 
-+ {are_two_entities_together(PG, FromGardenToMausoleum)}  [FromGardenToMausoleum]
-    ~ move_entity(PG, Mausoleo)
++ {are_two_entities_together(PG, FromGardenToMausoleum)}  [FromGardenToBusStop]
+    ~ move_entity(PG, BusStop)
     ~ inCrescita ++
     -> random_luogo_mentore ->
     // -> comparsa_anime ->
     
-    -> hub_mausoleo
+    -> hub_bus_stop
     
 + {are_two_entities_together(PG, FromGardenToGreenhouse)}  [FromGardenToGreenhouse]
     ~ move_entity(PG, Funghi)

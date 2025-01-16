@@ -84,7 +84,7 @@
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Il vuoto mi trascina in giro per il paese, il suo gelo mi schiaccia lo stomaco, mi fa esplodere il cuore.
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Il cellulare inizia a vibrare. Non ce la posso fare, non ce la posso fare.
             {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Torno a casa, disattivo il telefono, e mi rimetto a lavorare.
-                ~ move_entity(SpettroUno, Mausoleo)
+                ~ move_entity(SpettroUno, BusStop)
                 ~ move_entity(LapideUno, CasettaAnime)
                 -> main
 
@@ -520,7 +520,7 @@
                 {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: E ora posso andarmene in pace.
                 ~ storiaUno = Conclusa
                 ~ move_entity(SpettroUno, CasettaAnime)
-                ~ move_entity(LapideUno, Mausoleo)
+                ~ move_entity(LapideUno, BusStop)
                     -> main
         }
 
@@ -534,7 +534,7 @@
         {traduttoreSpettriArticoloMaiuscolo(effettivoStatoSpettroUno)}: Addio.                              
             ~ storiaUno = Conclusa
             ~ move_entity(SpettroUno, CasettaAnime)
-            ~ move_entity(LapideUno, Mausoleo)
+            ~ move_entity(LapideUno, BusStop)
                 -> main
 
 === scelta_nome_uno

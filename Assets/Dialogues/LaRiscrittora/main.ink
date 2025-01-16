@@ -24,7 +24,7 @@
 //Inventario
 <- contenuti_inventario
 
-//Elementi del mausoleo
+//Personagge da aiutare
 <-lapide_uno
 <-lapide_due
 <-lapide_tre

@@ -45,8 +45,8 @@
     - are_entities_together_in(PG, Mentore, Tisane) && not prima_visita_tisane:
         -> prima_visita_tisane
 
-    - are_entities_together_in(PG, Mentore, Mausoleo) && not prima_visita_mausoleo:
-        -> prima_visita_mausoleo
+    - are_entities_together_in(PG, Mentore, BusStop) && not prima_visita_bus_stop:
+        -> prima_visita_bus_stop
  
 //Da creare: storylets per quando anime (non animelle) e Mentore sono assieme
 
@@ -86,8 +86,8 @@
 
     -> main
 
-=== prima_visita_mausoleo
-    Mentore: Questo è il mausoleo.
+=== prima_visita_bus_stop
+    Mentore: Questa è la fermata del bus.
     Mentore: Ehm, forse le tombe potevano darne una mezza idea.
     Mentore: Questo è un posto di ristoro e meditazione, e per questo motivo non incontrerai nessun altro a parte me e gli spettri.
     Mentore: Uno alla volta, per concedere loro la giusta intimità.
