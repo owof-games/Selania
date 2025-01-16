@@ -25,7 +25,6 @@ Dono...
     {
         - currentReceiver has PersonaggiaUno:
         <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} è confuso dal dono.</i>
-            ~ donoPersonaggiaUno = true
             ~ currentReceiver = ()
             -> dono_storia_uno.esito_inchiostro
         
@@ -52,7 +51,6 @@ Dono...
     {
     - currentReceiver has PersonaggiaUno:
         <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} apprezza il dono.</i>
-        ~ donoPersonaggiaUno = true
         ~ currentReceiver = ()
         -> dono_storia_uno.esito_inchiostro
     
@@ -77,7 +75,6 @@ Dono...
     - currentReceiver has PersonaggiaUno:
         ~ statoInchiostroPersonaggiaUno ++
         <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} apprezza il dono</i>
-        ~ donoPersonaggiaUno = true
         ~ currentReceiver = ()
         -> dono_storia_uno.esito_inchiostro
 
@@ -103,7 +100,6 @@ Dono...
         ~ statoInchiostroPersonaggiaUno ++
         <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} se la avvolge attorno al corpo.
         <i>Sembra sollevato.</i>
-        ~ donoPersonaggiaUno = true
         ~ currentReceiver = ()
         -> dono_storia_uno.esito_inchiostro
     
@@ -129,7 +125,6 @@ Dono...
     - currentReceiver has PersonaggiaUno:
         ~ statoInchiostroPersonaggiaUno --
         <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
-        ~ donoPersonaggiaUno = true
         ~ currentReceiver = ()
         -> dono_storia_uno.esito_inchiostro
     
@@ -141,7 +136,6 @@ Dono...
     - currentReceiver has PersonaggiaTre:
         ~ statoInchiostroPersonaggiaTre --
         <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaTre)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
-        ~ donoPersonaggiaTre = true
         ~ currentReceiver = ()
         -> dono_storia_tre.esito_inchiostro
     }
@@ -158,7 +152,6 @@ Dono...
         ~ statoInchiostroPersonaggiaUno ++
         <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} si porta la Brina al petto, e ti guarda commosso.</i>
         <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
-        ~ donoPersonaggiaUno = true
          ~ eventoSpecialePersonaggiaUno = true
          ~ currentReceiver = ()
         -> dono_storia_uno.esito_inchiostro
@@ -175,7 +168,6 @@ Dono...
         ~ statoInchiostroPersonaggiaTre ++
         <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaTre)} si porta la Brina al petto, e ti guarda commosso.</i>
         <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
-            ~ donoPersonaggiaTre = true
          ~ eventoSpecialePersonaggiaTre = true
          ~ currentReceiver = ()
         -> dono_storia_tre.esito_inchiostro

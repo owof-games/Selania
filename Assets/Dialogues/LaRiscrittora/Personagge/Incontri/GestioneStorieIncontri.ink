@@ -4,13 +4,30 @@
 
 
 //Gestione prima personaggia.
-    LIST possibiliStatiPersonaggiaUno = SpettroDelVuoto, LArrabbiato, IlGuarente, IlTerrorizzato, LAbbandonato, IlSocievole, IlConsapevole
-    VAR effettivoStatoPersonaggiaUno = SpettroDelVuoto
+    LIST possibiliStatiPersonaggiaUno = IlGiocoso, LIndeciso
+    VAR effettivoStatoPersonaggiaUno = IlGiocoso
     
     VAR storiaUno = NonIniziata
-    VAR donoPersonaggiaUno = false
+    //VAR donoPersonaggiaUno = false
     VAR eventoSpecialePersonaggiaUno = false
+
+
+//Gestione seconda personaggia.
+    LIST possibiliStatiPersonaggiaDue = LaVegliante, NuovoStatoUnoDue, NuovoStatoDueDue, NuovoStatoTreDue
+    VAR effettivoStatoPersonaggiaDue = LaVegliante
     
+    VAR storiaDue = NonIniziata
+    VAR eventoSpecialePersonaggiaDue = false
+
+
+//Gestione terza personaggia
+    LIST possibiliStatiPersonaggiaTre = SpettroDelVuoto, LArrabbiato, IlGuarente, IlTerrorizzato, LAbbandonato, IlSocievole, IlConsapevole
+    VAR effettivoStatoPersonaggiaTre = SpettroDelVuoto
+    
+    VAR storiaTre = NonIniziata
+    VAR eventoSpecialePersonaggiaTre = false
+    
+        
     VAR terrore = 0
     VAR abbandono = 0
     VAR rabbia = 0
@@ -19,29 +36,11 @@
     VAR socievole = 0   
     VAR consapevole = 0
 
-//Gestione seconda personaggia.
-    LIST possibiliStatiPersonaggiaDue = LaVegliante, NuovoStatoUnoDue, NuovoStatoDueDue, NuovoStatoTreDue
-    VAR effettivoStatoPersonaggiaDue = LaVegliante
-    
-    VAR storiaDue = NonIniziata
-    VAR donoPersonaggiaDue = false
-    VAR eventoSpecialePersonaggiaDue = false
-
-
-//Gestione terza personaggia
-    LIST possibiliStatiPersonaggiaTre = LIndeciso, NuovoStatoUnoTre, NuovoStatoDueTre, NuovoStatoTreTre
-    VAR effettivoStatoPersonaggiaTre = LIndeciso
-    
-    VAR storiaTre = NonIniziata
-    VAR donoPersonaggiaTre = false
-    VAR eventoSpecialePersonaggiaTre = false
-
 
 //Gestione quarta personaggia
     LIST possibiliStatiPersonaggiaQuattro = LaMondatrice, NuovoStatoUnoQuattro, NuovoStatoDueQuattro, NuovoStatoTreQuattro
     VAR effettivoStatoPersonaggiaQuattro = LaMondatrice
     
-    VAR donoPersonaggiaQuattro = false
     VAR storiaQuattro = NonIniziata
     VAR eventoSpecialePersonaggiaQuattro = false
 
@@ -49,7 +48,6 @@
     LIST possibiliStatiPersonaggiaCinque = Oscar, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
     VAR effettivoStatoPersonaggiaCinque = Oscar
     
-    VAR donoPersonaggiaCinque = false
     VAR storiaCinque = NonIniziata
     VAR eventoSpecialePersonaggiaCinque = false
 
@@ -57,7 +55,6 @@
     LIST possibiliStatiPersonaggiaSei = LoSpecchio, NuovoStatoUnoSei, NuovoStatoDueSei, NuovoStatoTreSei
     VAR effettivoStatoPersonaggiaSei = LoSpecchio
     
-    VAR donoPersonaggiaSei = false
     VAR storiaSei = NonIniziata
     VAR eventoSpecialePersonaggiaSei = false
 
@@ -66,7 +63,6 @@
     LIST possibiliStatiPersonaggiaSette = LaDisegnatrice, NuovoStatoUnoSette, NuovoStatoDueSette, NuovoStatoTreSette
     VAR effettivoStatoPersonaggiaSette= LaDisegnatrice
     
-    VAR donoPersonaggiaSette= false
     VAR storiaSette = NonIniziata
     VAR eventoSpecialePersonaggiaSette = false
 
