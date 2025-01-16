@@ -1,6 +1,6 @@
+=== personaggia_due ===
 ~ temp charNameDue = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)
 
-=== personaggia_due ===
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
         + {are_two_entities_together(PersonaggiaDue, PG) && storiaDue == InCorso}[PersonaggiaDue]
@@ -15,6 +15,8 @@
     
 
 === dialogo_personaggia_due ===
+~ temp charNameDue = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)
+
 //QUI FINISCONO TUTTE LE POSSIBILI CONVERSAZIONI
 - (top)
     + Dialogo
@@ -41,6 +43,8 @@
 
     //QUESTO è LO SPAZIO PER IL DONO
     === dono_storia_due ===
+    ~ temp charNameDue = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)
+
         + {doniTrovati != ()} Offro un dono.
             -> gestione_inventario -> esito_inchiostro 
         + {doniTrovati == ()} <i> Il tuo inventario è vuoto </i>
@@ -53,6 +57,8 @@
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
     === storia_due_chech_trigger
+    ~ temp charNameDue = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)
+
         {
         - solitudine == false:
             -> trigger_solitudine
@@ -72,6 +78,8 @@
         -> END
 
 === main_story_personaggia_due
+~ temp charNameDue = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)
+
     /* ---------------------------------
 
    Qui avrò una funzione che mi manda sugli step utili in base a dove ho abbandonato l'ultima conversazione. Es
@@ -99,6 +107,8 @@ Storia finita:
 
 
 === personaggia_due_storia_conclusa
+~ temp charNameDue = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)
+
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
 ~ temp dialogue = 0
