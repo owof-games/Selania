@@ -79,9 +79,6 @@ INCLUDE Giardino\Tisane\HubTisane.ink
 INCLUDE Giardino\Tisane\CoseTisane.ink
 INCLUDE Giardino\Tisane\DipintiERitratti.ink
 
-//Area del canto
-INCLUDE Giardino\Sirene\HubSirene.ink
-
 //Storie dalla biblioteca
 INCLUDE Giardino\Biblioteca\HubBiblioteca.ink
 INCLUDE Giardino\Biblioteca\RaccontoUno.ink

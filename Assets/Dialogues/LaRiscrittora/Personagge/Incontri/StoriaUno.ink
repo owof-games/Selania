@@ -1,5 +1,6 @@
+~ temp charName = traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)
+
 === personaggia_uno ===
-TODO: dare a variabile temp "name" il valore di traduzioneSpettri blah blah così è più veloce.
     //Opzione di dialogo
     + {are_two_entities_together(PersonaggiaUno, PG) && storiaUno == InCorso}[PersonaggiaUno]
         <i>Qui attende {traduttoreSpettri(effettivoStatoPersonaggiaUno)}.</i>
@@ -13,13 +14,13 @@ TODO: dare a variabile temp "name" il valore di traduzioneSpettri blah blah cos�
 TODO: questa diventa una opzione di dialogo.
     //opzione se questa storia è attiva e non ho fatto un dono
     + {are_two_entities_together(PersonaggiaUno, PG) && storiaUno == InCorso && not storia_uno.capitolo_uno} [PersonaggiaUno]
-    <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)} ondeggia inquieto accanto alla sua lapide.</i>
+    <i>{charName} ondeggia inquieto accanto alla sua lapide.</i>
         -> doni_storia_uno
 
 TODO: qui e sotto dipende da come settiamo il tutorial.
       //opzione se questa storia è attiva e ho fatto un dono ma non ho fatto lo step Mentore "domande e obiettivo"
     + {are_two_entities_together(PersonaggiaUno, PG) && storiaUno == InCorso && storia_uno.capitolo_uno && not domande_e_obiettivo} [PersonaggiaUno]
-    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Mi sa che il mentore vuole dirti qualcosa prima che continuiamo.
+    {charName}: Mi sa che il mentore vuole dirti qualcosa prima che continuiamo.
         -> main
     
     //Ho finito tutti e tre i pezzi di tutorial (intr, dono_e_inchiostro, domande_e_obbiettivo) e posso finalmente aiutare lo spettro
@@ -37,10 +38,10 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
     //In questo primo step quello che succede è che verifichiamo se ci sono trigger problematici per la giocatrice. Le permettiamo di scegliere se andare o meno avanti, e poi abbiamo la presentazione della storia.
     {
     - presentazioni == 0:
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Non penso tu voglia parlare davvero con me.
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ma anche fosse, prima parla col mentore.
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Lo riconosci perché assomiglia a una lampada.
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Sicuro ha qualcosa da dire a una persona appena arrivata.
+        {charName}: Non penso tu voglia parlare davvero con me.
+        {charName}: Ma anche fosse, prima parla col mentore.
+        {charName}: Lo riconosci perché assomiglia a una lampada.
+        {charName}: Sicuro ha qualcosa da dire a una persona appena arrivata.
             -> main
     }
     
@@ -50,7 +51,7 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
         -> trigger_solitudine
 
     }
-    <i>{traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)} ti osserva malinconico.</i>
+    <i>{charName} ti osserva malinconico.</i>
         + [Raccontami la tua storia.]
             -> intro
         + [Torno tra poco.]
@@ -70,39 +71,39 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
 
         = intro
             ~ storiaUno = InCorso
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Vigilia di Natale.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Per la prima volta da mesi ho tempo libero: non sto lavorando, non sto correndo da nessuna parte.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Cammino lentamente col cane, andando a una cena con amici.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Eppure, non riesco a liberarmi di questo enorme senso di vuoto.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Mi prende la pancia con dita lunghe e fredde, mi fa pensare cose che non voglio pensare, più fredde della brina che già ricopre le strade.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ho bisogno di parlare con qualcuno: non sento mamma da settimane, e poi ci sono messaggi, audio, meme che attendono risposte da tempi imbarazzanti.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Mentre aspetto il bus provo a pensare con chi potrei confidarmi.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Mando un audio a Lele, che mi risponde raccontandomi i suoi drammi.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ascolto un vocale di Cate, ma man mano che la sua voce dal passato mi consola per le rotture di lavoro mi passa il coraggio di condividere qualcosa di più pesante.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Cazzo quanto sono pesante. Rispondo con delle cazzate.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Provo a scrivere a Sandro, ma poi il testo cambia perché messe a parole quelle cose non sono esattamente così, non hanno la voce giusta.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: L’unica cosa che vorrei fare è gridare, gridare, gridare.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: E poi dai, ognuno c’ha i suoi cazzi.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Continuo a pensare alla cena in arrivo, al dover far finta che tutto vada bene.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ridere alle battute, dire cose come "Ma dai!" e "Non ci credo!".
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: L’autobus arriva, lo lascio passare.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Il vuoto mi trascina in giro per il paese, il suo gelo mi schiaccia lo stomaco, mi fa esplodere il cuore.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Il cellulare inizia a vibrare. Non ce la posso fare, non ce la posso fare.
-            {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Torno a casa, disattivo il telefono, e mi rimetto a lavorare.
+            {charName}: Vigilia di Natale.
+            {charName}: Per la prima volta da mesi ho tempo libero: non sto lavorando, non sto correndo da nessuna parte.
+            {charName}: Cammino lentamente col cane, andando a una cena con amici.
+            {charName}: Eppure, non riesco a liberarmi di questo enorme senso di vuoto.
+            {charName}: Mi prende la pancia con dita lunghe e fredde, mi fa pensare cose che non voglio pensare, più fredde della brina che già ricopre le strade.
+            {charName}: Ho bisogno di parlare con qualcuno: non sento mamma da settimane, e poi ci sono messaggi, audio, meme che attendono risposte da tempi imbarazzanti.
+            {charName}: Mentre aspetto il bus provo a pensare con chi potrei confidarmi.
+            {charName}: Mando un audio a Lele, che mi risponde raccontandomi i suoi drammi.
+            {charName}: Ascolto un vocale di Cate, ma man mano che la sua voce dal passato mi consola per le rotture di lavoro mi passa il coraggio di condividere qualcosa di più pesante.
+            {charName}: Cazzo quanto sono pesante. Rispondo con delle cazzate.
+            {charName}: Provo a scrivere a Sandro, ma poi il testo cambia perché messe a parole quelle cose non sono esattamente così, non hanno la voce giusta.
+            {charName}: L’unica cosa che vorrei fare è gridare, gridare, gridare.
+            {charName}: E poi dai, ognuno c’ha i suoi cazzi.
+            {charName}: Continuo a pensare alla cena in arrivo, al dover far finta che tutto vada bene.
+            {charName}: Ridere alle battute, dire cose come "Ma dai!" e "Non ci credo!".
+            {charName}: L’autobus arriva, lo lascio passare.
+            {charName}: Il vuoto mi trascina in giro per il paese, il suo gelo mi schiaccia lo stomaco, mi fa esplodere il cuore.
+            {charName}: Il cellulare inizia a vibrare. Non ce la posso fare, non ce la posso fare.
+            {charName}: Torno a casa, disattivo il telefono, e mi rimetto a lavorare.
                 -> main
 
 
 === doni_storia_uno ===
 //Qui è la fase di check per i doni, se donarne, quali, o non farlo.
 {
-    - not dono_e_inchiostro: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Credo che il Mentore prima voglia parlarti.
+    - not dono_e_inchiostro: {charName}: Credo che il Mentore prima voglia parlarti.
         -> main
     - else:
         -> internal_inventario
 }
 
 = internal_inventario
-    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Tutto sommato è una cosa così banale, così banale. Eppure questo freddo non se ne vuole andare.
+    {charName}: Tutto sommato è una cosa così banale, così banale. Eppure questo freddo non se ne vuole andare.
         + {doniTrovati != ()} [Ho un dono per te, <i>{traduttoreSpettri(effettivoStatoPersonaggiaUno)}</i>.]
             -> gestione_inventario
         + [Vorrei riascoltare la tua storia, <i>{traduttoreSpettri(effettivoStatoPersonaggiaUno)}</i>.]
@@ -124,121 +125,121 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
 
 
     = primo_blocco
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Sei {pronomi has maschili: tornato|{pronomi has femminili: tornata|tornatə}}, non me l'aspettavo.
+        {charName}: Sei {pronomi has maschili: tornato|{pronomi has femminili: tornata|tornatə}}, non me l'aspettavo.
         {nome}: C'è qualcosa che vorrei chiederti:
             * (vuoto) [Ti è capitato di sentire altre volte questo vuoto?]
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Forse.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: <b>Ricordo</b>...
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Mi manca l'aria, scusa.
+                {charName}: Forse.
+                {charName}: <b>Ricordo</b>...
+                {charName}: Mi manca l'aria, scusa.
                 ~ terrore ++
 
             * (lavoro) [Il tuo lavoro ti fa stare bene?]
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Sì.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Il problema è che non conosco mai il limite.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: E c'è questa sensazione, questa preoccupazione di essere sempre in ritardo su qualcosa.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: È davvero difficile riposarsi, sai? Staccare un po'.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: E intanto il piacere sparisce, e rimaneva solo il <b>dovere</b>.
+                {charName}: Sì.
+                {charName}: Il problema è che non conosco mai il limite.
+                {charName}: E c'è questa sensazione, questa preoccupazione di essere sempre in ritardo su qualcosa.
+                {charName}: È davvero difficile riposarsi, sai? Staccare un po'.
+                {charName}: E intanto il piacere sparisce, e rimaneva solo il <b>dovere</b>.
                 ~ rabbia ++
 
             * (amici) [I tuoi amici ti raccontano i loro problemi?]
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: A volte.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ma ultimamente sempre meno.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Non so se perché le cose gli vanno meglio.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Se perché sono troppo assente.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: O solo perché alla fin fine sono sempre le solite cose noiose che accadono <b>a tutti.</b>
+                {charName}: A volte.
+                {charName}: Ma ultimamente sempre meno.
+                {charName}: Non so se perché le cose gli vanno meglio.
+                {charName}: Se perché sono troppo assente.
+                {charName}: O solo perché alla fin fine sono sempre le solite cose noiose che accadono <b>a tutti.</b>
                 ~ abbandono ++
             -
             -> secondo_blocco
 
     = secondo_blocco
             * Prima hai detto che ci sono cose a cui non volevi pensare.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Sì.
+                    {charName}: Sì.
 
                 * * (racconto)[E ti andrebbe di raccontarmele?]
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: No.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Non perché non mi fidi di te.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ma perché fintanto che le cose non escono dalla testa, allora non sono vere, no?
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: E io non voglio che divengano vere.
+                    {charName}: No.
+                    {charName}: Non perché non mi fidi di te.
+                    {charName}: Ma perché fintanto che le cose non escono dalla testa, allora non sono vere, no?
+                    {charName}: E io non voglio che divengano vere.
                         ~ terrore ++
 
                 * * (capita)[Capita anche a me, sai?]
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Vedi, è come con Lele.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Queste cose mi ricordano che quello che provo è comune.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Banale.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Stupido io che lascio che mi facciano così male.
+                    {charName}: Vedi, è come con Lele.
+                    {charName}: Queste cose mi ricordano che quello che provo è comune.
+                    {charName}: Banale.
+                    {charName}: Stupido io che lascio che mi facciano così male.
                     ~ abbandono ++
 
                 * * (testa) [A volte la nostra testa sembra volerci fare del male.]
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Già.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: È come avere un nemico in testa.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Qualcosa che non puoi schiacciare.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Che ti comanda e non ti lascia respirare.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: E che mi fa incazzare.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: È terribilmente frustrante.
+                    {charName}: Già.
+                    {charName}: È come avere un nemico in testa.
+                    {charName}: Qualcosa che non puoi schiacciare.
+                    {charName}: Che ti comanda e non ti lascia respirare.
+                    {charName}: E che mi fa incazzare.
+                    {charName}: È terribilmente frustrante.
                     ~ rabbia ++
 
             * (vuoto2) {vuoto} [Non ti scusare. Però forse questo ricordo è importante.]
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Il vuoto, questo gelo.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Credo che in realtà ci sia da sempre.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Compariva quando ero piccolo, quando i miei litigavano.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: A scuola, se rimanevo da solo.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Alle cene di lavoro, quando non avevo niente da raccontare.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ci sono un po' di modi per disturbarlo, sfiancarlo, ma come mi rilasso, è pronto a bussare.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Mi insegue nei sogni, non mi lascia respirare.
+                {charName}: Il vuoto, questo gelo.
+                {charName}: Credo che in realtà ci sia da sempre.
+                {charName}: Compariva quando ero piccolo, quando i miei litigavano.
+                {charName}: A scuola, se rimanevo da solo.
+                {charName}: Alle cene di lavoro, quando non avevo niente da raccontare.
+                {charName}: Ci sono un po' di modi per disturbarlo, sfiancarlo, ma come mi rilasso, è pronto a bussare.
+                {charName}: Mi insegue nei sogni, non mi lascia respirare.
                 ~ terrore ++
 
             * (lavoro2) {lavoro} [Quando il lavoro diventa un dovere non prendi una pausa?]
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Pensi non ci abbia provato?!?
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Scusa.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ma non hai idea della frustrazione.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ci ho messo una vita per vivere di ciò che amavo fare.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: E quando questo è successo, non avevo più uno spazio di sfogo.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Un posto dove respirare.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: A volte finisco per litigare solo per il piacere di litigare.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Per gridare.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Per far sì che accada qualcosa.
+                {charName}: Pensi non ci abbia provato?!?
+                {charName}: Scusa.
+                {charName}: Ma non hai idea della frustrazione.
+                {charName}: Ci ho messo una vita per vivere di ciò che amavo fare.
+                {charName}: E quando questo è successo, non avevo più uno spazio di sfogo.
+                {charName}: Un posto dove respirare.
+                {charName}: A volte finisco per litigare solo per il piacere di litigare.
+                {charName}: Per gridare.
+                {charName}: Per far sì che accada qualcosa.
                 ~ rabbia ++
 
 
             * (amici2) {amici} [Anche se accadono a tutti, sono importanti per te.]
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ma il punto non è quello.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: È che poi le persone si annoiano.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Con tutti i casini, chi ha davvero voglia di ascoltare le para di qualcun altro.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: E poi, alle persone non piace la fragilità.
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: La fragilità è sorella del bisogno, e le persone bisognose...
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Lascia fare.
+                {charName}: Ma il punto non è quello.
+                {charName}: È che poi le persone si annoiano.
+                {charName}: Con tutti i casini, chi ha davvero voglia di ascoltare le para di qualcun altro.
+                {charName}: E poi, alle persone non piace la fragilità.
+                {charName}: La fragilità è sorella del bisogno, e le persone bisognose...
+                {charName}: Lascia fare.
                 ~ abbandono ++
 
 
 
             * Quando hai deciso di non andare alla cena...
                 * * (verità) [Perché non hai detto la verità ai tuoi amici?]
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Perché qualcuno avrebbe voluto aiutare.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Chiamare.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Salire a casa e fare qualcosa, risolvere qualcosa assieme.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ma io non so come fare, non ho idea di come reagire a queste cose.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: E il Vuoto allora mi dice che sono in debito.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Che devo essere riconoscente.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ma per esserlo devo ascoltare, devo prestare davvero attenzione.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Fare meno cose, quando l'unica certezza che ho è che il Vuoto è silenzioso solo se continuo a lavorare.
+                    {charName}: Perché qualcuno avrebbe voluto aiutare.
+                    {charName}: Chiamare.
+                    {charName}: Salire a casa e fare qualcosa, risolvere qualcosa assieme.
+                    {charName}: Ma io non so come fare, non ho idea di come reagire a queste cose.
+                    {charName}: E il Vuoto allora mi dice che sono in debito.
+                    {charName}: Che devo essere riconoscente.
+                    {charName}: Ma per esserlo devo ascoltare, devo prestare davvero attenzione.
+                    {charName}: Fare meno cose, quando l'unica certezza che ho è che il Vuoto è silenzioso solo se continuo a lavorare.
                     ~ terrore ++
 
                 * * (sentimenti) [Non hai pensato ai loro sentimenti?]
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Beh, gli ho fatto un favore.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Già sanno che sono inaffidabile, che non rispondo alle chiamate, che arrivo dopo settimane a scrivere un messaggio.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Almeno così hanno avuto la conferma che sono dimenticabile.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ignorabile.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: E la prossima volta faranno senza di me.
+                    {charName}: Beh, gli ho fatto un favore.
+                    {charName}: Già sanno che sono inaffidabile, che non rispondo alle chiamate, che arrivo dopo settimane a scrivere un messaggio.
+                    {charName}: Almeno così hanno avuto la conferma che sono dimenticabile.
+                    {charName}: Ignorabile.
+                    {charName}: E la prossima volta faranno senza di me.
                     ~ abbandono ++
 
                 * * (male) [Non ti sei fatto solo del male da solo?]
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Probabile.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ma meglio così che rovinare la festa a tutti, no?
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Chi ha voglia di starsene a tavola con un fantasma piagnone?
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Con un fallimento sociale?
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Io no.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Non ho nemmeno voglia di restare con me.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Non capisco perché ci stia tu, quì.
+                    {charName}: Probabile.
+                    {charName}: Ma meglio così che rovinare la festa a tutti, no?
+                    {charName}: Chi ha voglia di starsene a tavola con un fantasma piagnone?
+                    {charName}: Con un fallimento sociale?
+                    {charName}: Io no.
+                    {charName}: Non ho nemmeno voglia di restare con me.
+                    {charName}: Non capisco perché ci stia tu, quì.
                     ~ rabbia ++
             -
 
@@ -252,25 +253,25 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
                 {nome}: Perché è questa la cosa che continua a bloccarti qui?
                 {
                 - rabbia > abbandono && rabbia > terrore:
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Perché ora l'unica cosa che rimane è la <b>rabbia</b>, la furia.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: E non so, non ricordo se l'ho mai rivolta contro qualcuno a cui tengo.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Perché a volte questo vuoto fa così male, che vorrei distruggere tutto.
+                    {charName}: Perché ora l'unica cosa che rimane è la <b>rabbia</b>, la furia.
+                    {charName}: E non so, non ricordo se l'ho mai rivolta contro qualcuno a cui tengo.
+                    {charName}: Perché a volte questo vuoto fa così male, che vorrei distruggere tutto.
 
                 - abbandono > rabbia && abbandono > terrore:
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Perché mi sono sentito così vuoto, così solo, così dimenticato.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: E quel vuoto è come un buco nero.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: E non conta cosa è accaduto prima, cosa è venuto dopo.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: So solo che presto o tardi verrò <b>abbandonato</b>.
+                    {charName}: Perché mi sono sentito così vuoto, così solo, così dimenticato.
+                    {charName}: E quel vuoto è come un buco nero.
+                    {charName}: E non conta cosa è accaduto prima, cosa è venuto dopo.
+                    {charName}: So solo che presto o tardi verrò <b>abbandonato</b>.
 
                 - terrore > rabbia && terrore > abbandono:
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Perché avrei voluto parlare del vuoto.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ma il vuoto è come un vortice che prende e travolge tutto.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: E l'unica cosa che rimane è il <b>terrore</b> di cosa possa esserci dopo il vuoto.
+                    {charName}: Perché avrei voluto parlare del vuoto.
+                    {charName}: Ma il vuoto è come un vortice che prende e travolge tutto.
+                    {charName}: E l'unica cosa che rimane è il <b>terrore</b> di cosa possa esserci dopo il vuoto.
 
                 - else:
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Perché racconta qualcosa di chi ero.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Di chi sono stato.
-                    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: E di chi poi sono diventato.
+                    {charName}: Perché racconta qualcosa di chi ero.
+                    {charName}: Di chi sono stato.
+                    {charName}: E di chi poi sono diventato.
                 }
                     -> riscrittora_storia_uno
 
@@ -295,7 +296,7 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
                         {storia_uno.secondo_blocco.testa: {nome}: Ti manca il respiro, ti arrabbi, e non sai come affrontare questa cosa.}
                         {storia_uno.secondo_blocco.male: {nome}: Non ti perdoni. Ti descrivi come un fallimento sociale.}
                         {nome}: Il vuoto è una ferita che continua a farti male, ma che non sai come riparare.
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Dimmi qualcosa che non so.
+                        {charName}: Dimmi qualcosa che non so.
                             ~ statoInchiostroPersonaggiaUno --
                             ~ ferito ++
                 
@@ -308,9 +309,9 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
                         {storia_uno.secondo_blocco.capita: {nome}: È vero che molte delle cose che proviamo sono comuni, ed è questo il bello: rende più facile la comprensione.}
                         {storia_uno.secondo_blocco.sentimenti: {nome}: Hai detto che sei ignorabile, dimenticabile. Ma non hai mai detto di star meglio senza le altre persone.}
                         {nome}: Il vuoto è la tua fame di socialità, la tua voglia di connetterti, di unirti alle altre persone.
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: No, questa cosa mi farebbe solo del male.
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Perché presto o tardi tutti se ne andranno.
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ma continua.
+                        {charName}: No, questa cosa mi farebbe solo del male.
+                        {charName}: Perché presto o tardi tutti se ne andranno.
+                        {charName}: Ma continua.
                             ~ statoInchiostroPersonaggiaUno --
                             ~ socievole ++
                 
@@ -323,23 +324,23 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
                         {storia_uno.secondo_blocco.vuoto2: {nome}: A scuola, coi genitori, a lavoro: sono situazioni che possono diventare davvero pesanti.}
                         {storia_uno.secondo_blocco.verità: {nome}: Nel mondo in cui viviamo, fatto di numeri e bilanci, è normale pensare che se qualcuno ci aiuta, allora siamo in debito.}
                         {nome}: Il vuoto è un segnale, non è un problema da risolvere.
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: ...
+                        {charName}: ...
                             ~ statoInchiostroPersonaggiaUno --
                             ~ consapevole ++
                 
                 * {rabbia == 0}[È il riflesso della tua rabbia.]
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Tutto qui?
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Come se esistesse un motivo per non essere incazzati col mondo.                                            
+                        {charName}: Tutto qui?
+                        {charName}: Come se esistesse un motivo per non essere incazzati col mondo.                                            
                 
                 * {abbandono == 0}[È l'isolamento che vai cercando.]
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Vedi?                
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Alla fine me lo merito.
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Merito di restare da solo.
+                        {charName}: Vedi?                
+                        {charName}: Alla fine me lo merito.
+                        {charName}: Merito di restare da solo.
 
                 * {terrore == 0}[È la tua paura.]
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Quindi sono persino un codardo?
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Beh, dirlo ad alta voce un po' mi consola.
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Almeno so chi sono.
+                        {charName}: Quindi sono persino un codardo?
+                        {charName}: Beh, dirlo ad alta voce un po' mi consola.
+                        {charName}: Almeno so chi sono.
 
 
                 -
@@ -356,8 +357,8 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
                         {nome}: Se non ti fermi e non capisci cosa provi, non ha senso avanzare.
                         {nome}: Non ha senso lavorare.
                         {nome}: E prima o poi il vuoto, la rabbia, troveranno modi per farsi notare.
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Io... Io...
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Uhm.                       
+                        {charName}: Io... Io...
+                        {charName}: Uhm.                       
                             ~ statoInchiostroPersonaggiaUno --
                             ~ ferito ++
                 
@@ -371,7 +372,7 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
                         {storia_uno.secondo_blocco.sentimenti: {nome}: Mettersi nella posizione di essere "dimenticabile" non cancella il dolore che possono provare loro, nella tua assenza.}
                         {nome}: È come quella cosa, quella roba della profezia che si autoavvera.
                         {nome}: Cerchi così tanto di non venire abbandonato, che alla fine fai di tutto perché le altre persone se ne vadano.
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Eppure tu sei ancora qui.
+                        {charName}: Eppure tu sei ancora qui.
                         Già: eppure sono ancora qui.
                         E ti conosco solo da qualche minuto.
                             ~ statoInchiostroPersonaggiaUno --
@@ -386,7 +387,7 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
                         {storia_uno.secondo_blocco.vuoto2: {nome}: Quando sei in compagnia e la situazione è difficile, può essere utile avere una persona alleata al tuo fianco.}
                         {storia_uno.secondo_blocco.verità: {nome}: È importante ricordarti che le persone che ti vogliono bene ti aiutano perché gli va, non perché devono.}
                         {nome}: Non siamo fatti per affrontare il mondo da soli, e va bene così.
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: ...
+                        {charName}: ...
                             ~ statoInchiostroPersonaggiaUno --
                             ~ consapevole ++
                 
@@ -400,9 +401,9 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
                         {nome}: Ma se non trovi la chiave per amare te stesso, c'è poco da trovare soddisfazione nelle relazioni.
 
                 *  {terrore == 0}[Il vuoto forse è qualcosa da accogliere.]
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Trasformarmi nel vuoto.
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Sparire.
-                        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: L'eco di una persona.                                                            
+                        {charName}: Trasformarmi nel vuoto.
+                        {charName}: Sparire.
+                        {charName}: L'eco di una persona.                                                            
                 -
         
         {nome}: La tua storia...
@@ -467,12 +468,12 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
 
 === chi_sono_storia_uno
 
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ora ricordo.
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ricordo che questa cosa è successa molto tempo fa.
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Che sono bloccato qui non so nemmeno da quanto.
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ma vedo le cose con chiarezza.
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Non sono {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}.
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Io sono <>
+        {charName}: Ora ricordo.
+        {charName}: Ricordo che questa cosa è successa molto tempo fa.
+        {charName}: Che sono bloccato qui non so nemmeno da quanto.
+        {charName}: Ma vedo le cose con chiarezza.
+        {charName}: Non sono {charName}.
+        {charName}: Io sono <>
         {
             - rabbia > abbandono:
             {
@@ -508,32 +509,32 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
         }
 
         {effettivoStatoPersonaggiaUno:
-            - IlSocievole: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Ora so che sto bene quando sono con altre persone, e che posso smetterla di tenerle lontane.
-            - IlConsapevole: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Vedo i dolori del mondo e capisco che sono prodotti di quel sistema. Unendomi alle altre persone, posso cambiare un po' di cose.
-            - IlGuarente: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: La mia rabbia è una guida: ora so dove si trovano le mie ferite, e come affrontarle.
-            - IlTerrorizzato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Quello che ho dentro è mostruoso, deve rimanere nascosto dagli altri, a qualunque costo.
-            - LAbbandonato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Sono abituato a fare tutto da solo, così saprò come sopravvivere quando gli altri inevitabilmente se ne andranno.
-            - LArrabbiato: {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Il mondo è sempre pronto a mordere, e io lo morderò sempre prima che lui possa ferirmi.
+            - IlSocievole: {charName}: Ora so che sto bene quando sono con altre persone, e che posso smetterla di tenerle lontane.
+            - IlConsapevole: {charName}: Vedo i dolori del mondo e capisco che sono prodotti di quel sistema. Unendomi alle altre persone, posso cambiare un po' di cose.
+            - IlGuarente: {charName}: La mia rabbia è una guida: ora so dove si trovano le mie ferite, e come affrontarle.
+            - IlTerrorizzato: {charName}: Quello che ho dentro è mostruoso, deve rimanere nascosto dagli altri, a qualunque costo.
+            - LAbbandonato: {charName}: Sono abituato a fare tutto da solo, così saprò come sopravvivere quando gli altri inevitabilmente se ne andranno.
+            - LArrabbiato: {charName}: Il mondo è sempre pronto a mordere, e io lo morderò sempre prima che lui possa ferirmi.
         }
         -
         {
             - eventoSpecialePersonaggiaUno == true:
                 -> evento_speciale
             - else:
-                {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: E ora posso andarmene in pace.
+                {charName}: E ora posso andarmene in pace.
                 ~ storiaUno = Conclusa
                 ~ counterSpostamenti = 0
                     -> main
         }
 
     = evento_speciale
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Prima di andarmene, vorrei dirti una cosa.
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Mi hai dato un dono speciale, e vorrei ringraziarti in qualche modo.
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: E quindi: presta attenzione al mentore.
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Perché potrebbe essere qualcuno che già conosci.
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Fuori da qui.
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Dal mondo da cui provieni.
-        {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Addio.                              
+        {charName}: Prima di andarmene, vorrei dirti una cosa.
+        {charName}: Mi hai dato un dono speciale, e vorrei ringraziarti in qualche modo.
+        {charName}: E quindi: presta attenzione al mentore.
+        {charName}: Perché potrebbe essere qualcuno che già conosci.
+        {charName}: Fuori da qui.
+        {charName}: Dal mondo da cui provieni.
+        {charName}: Addio.                              
             ~ storiaUno = Conclusa
                 -> main
 
@@ -550,7 +551,7 @@ TODO: qui e sotto dipende da come settiamo il tutorial.
         -> main
         
 === personaggia_uno_storia_conclusa
-    {traduttoreSpettriArticoloMaiuscolo(effettivoStatoPersonaggiaUno)}: Dico cose.
+    {charName}: Dico cose.
         + Opzione
         + Opzione
         + Opzione
