@@ -11,7 +11,7 @@
     -> main
 
 
-
+TODO: da ripensare la logica dell'inventario, perché ora non funziona più. Settare un "current_speaker" quando si entra nella scena?
 
 === gestione_inventario ===
 {debug: I doni trovati sono {doniTrovati}}
