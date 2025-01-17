@@ -35,18 +35,25 @@ public class DialogueManagerSingleInk : MonoBehaviour
     private const string BACKGROUND_TAG = "background";
     [Header("Garden Backgrounds")]
     [SerializeField] private Sprite backGiardino;
-    [Header("Mausoleum Backgrounds")]
+
+    [Header("Bus Stop Backgrounds")]
     [SerializeField] private Sprite backBusStop;
+
     [Header("Greenhouse Backgrounds")]
     [SerializeField] private Sprite backFunghi;
+
     [Header("Pets Backgrounds")]
     [SerializeField] private Sprite backFalene;
+
     [Header("Labirint Backgrounds")]
     [SerializeField] private Sprite backLabirinto;
+
     [Header("Sirens Backgrounds")]
     [SerializeField] private Sprite backSirene;
+
     [Header("Library Backgrounds")]
     [SerializeField] private Sprite backBiblioteca;
+
     [Header("Tea Backgrounds")]
     [SerializeField] private Sprite backTisane;
 
