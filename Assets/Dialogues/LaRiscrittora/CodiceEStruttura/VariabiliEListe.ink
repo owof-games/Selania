@@ -29,8 +29,8 @@ LIST mushrooms = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, Canto
 
 
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
-VAR contenutoGiardino = (Mentore, Bench, Tree, FromGardenToBusStop, FromGardenToGreenhouse, FromGardenToNothing)
-VAR contenutoBusStop = (FromBusStopToGarden, PG, FromBusStopToExitGame)
+VAR contenutoGiardino = (Mentore, Bench, Tree, PG, FromGardenToBusStop, FromGardenToGreenhouse, FromGardenToNothing)
+VAR contenutoBusStop = (FromBusStopToGarden, FromBusStopToExitGame)
 VAR contenutoFunghi = (FromGreenhouseToGarden, Wheelbarrow)
 VAR contenutoLabirinto = ()
 VAR contenutoFalene = ()
