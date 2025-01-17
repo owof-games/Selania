@@ -1,0 +1,1079 @@
+fileFormatVersion: 2
+guid: a1c3885d0ac24c949adc759bc4cc58b3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5085143907109089615
+    second: Canto delle Compagne_0
+  - first:
+      213: -9155035730981388447
+    second: Canto delle Compagne_1
+  - first:
+      213: -3006674265403059387
+    second: Canto delle Compagne_2
+  - first:
+      213: 6007274121806692595
+    second: Canto delle Compagne_3
+  - first:
+      213: -1123155215421929766
+    second: Canto delle Compagne_4
+  - first:
+      213: 8036502601822702599
+    second: Canto delle Compagne_5
+  - first:
+      213: 5492052828576542850
+    second: Canto delle Compagne_6
+  - first:
+      213: -5642830231961684627
+    second: Canto delle Compagne_7
+  - first:
+      213: 2568142300608410754
+    second: Canto delle Compagne_8
+  - first:
+      213: 7147315115055697888
+    second: Canto delle Compagne_9
+  - first:
+      213: 8764612494099967823
+    second: Canto delle Compagne_10
+  - first:
+      213: 3978179290377478593
+    second: Canto delle Compagne_11
+  - first:
+      213: 6792419116124355775
+    second: Canto delle Compagne_12
+  - first:
+      213: -8211538243918315670
+    second: Canto delle Compagne_13
+  - first:
+      213: 344826687197846205
+    second: Canto delle Compagne_14
+  - first:
+      213: 6521976058050001401
+    second: Canto delle Compagne_15
+  - first:
+      213: -4066630160151765070
+    second: Canto delle Compagne_16
+  - first:
+      213: 8206262107739984283
+    second: Canto delle Compagne_17
+  - first:
+      213: -7257979795382804014
+    second: Canto delle Compagne_18
+  - first:
+      213: 5277255338899834244
+    second: Canto delle Compagne_19
+  - first:
+      213: -9144945265595831883
+    second: Canto delle Compagne_20
+  - first:
+      213: -8432316977717860514
+    second: Canto delle Compagne_21
+  - first:
+      213: -2543604765702239236
+    second: Canto delle Compagne_22
+  - first:
+      213: 4530320852045664378
+    second: Canto delle Compagne_23
+  - first:
+      213: 6233140682495097469
+    second: Canto delle Compagne_24
+  - first:
+      213: 3761745556470606564
+    second: Canto delle Compagne_25
+  - first:
+      213: 1458114656273554881
+    second: Canto delle Compagne_26
+  - first:
+      213: -5311418581905443787
+    second: Canto delle Compagne_27
+  - first:
+      213: -4115161280113540442
+    second: Canto delle Compagne_28
+  - first:
+      213: -6726985420668432888
+    second: Canto delle Compagne_29
+  - first:
+      213: -3476674869215046981
+    second: Canto delle Compagne_30
+  - first:
+      213: 3338374074128285282
+    second: Canto delle Compagne_31
+  - first:
+      213: -4775796705736816064
+    second: Canto delle Compagne_32
+  - first:
+      213: -1525285316490870948
+    second: Canto delle Compagne_33
+  - first:
+      213: 6974407436384262137
+    second: Canto delle Compagne_34
+  - first:
+      213: -8883774622589865717
+    second: Canto delle Compagne_35
+  - first:
+      213: -1915762330237730733
+    second: Canto delle Compagne_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Canto delle Compagne_0
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 248
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41baf6f07f029640800000000000000
+      internalID: 5085143907109089615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_1
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 202
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f78d41287c2f080800000000000000
+      internalID: -9155035730981388447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_2
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 197
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54397578fa52646d0800000000000000
+      internalID: -3006674265403059387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_3
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 217
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f04fa26cff1e5350800000000000000
+      internalID: 6007274121806692595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_4
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 163
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad606254840c960f0800000000000000
+      internalID: -1123155215421929766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_5
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 195
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70c05228984678f60800000000000000
+      internalID: 8036502601822702599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_6
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 182
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 280fbfe03f0b73c40800000000000000
+      internalID: 5492052828576542850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_7
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 187
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d65b6101dc3a0b1b0800000000000000
+      internalID: -5642830231961684627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_8
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 154
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2843b68d0dfd3a320800000000000000
+      internalID: 2568142300608410754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_9
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 157
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0efcca2aa3d503360800000000000000
+      internalID: 7147315115055697888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_10
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 139
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f67c060a822a970800000000000000
+      internalID: 8764612494099967823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_11
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 172
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c1e3cfbcf4553730800000000000000
+      internalID: 3978179290377478593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_12
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 159
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbc3a26c235834e50800000000000000
+      internalID: 6792419116124355775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_13
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 161
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6fb6b74971ca0e80800000000000000
+      internalID: -8211538243918315670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_14
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 161
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dba90878b0219c400800000000000000
+      internalID: 344826687197846205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_15
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 119
+        width: 24
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f93cad7ba6b28a50800000000000000
+      internalID: 6521976058050001401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_16
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 107
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bf934f4a6d6097c0800000000000000
+      internalID: -4066630160151765070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_17
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 116
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b91179988ef72e170800000000000000
+      internalID: 8206262107739984283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_18
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 123
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d1ee3d94d9764b90800000000000000
+      internalID: -7257979795382804014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_19
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 135
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 485882845c39c3940800000000000000
+      internalID: 5277255338899834244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_20
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 101
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b925c1abb0a61180800000000000000
+      internalID: -9144945265595831883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_21
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 113
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e57a1a592646afa80800000000000000
+      internalID: -8432316977717860514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_22
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 98
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfbc35331fc43bcd0800000000000000
+      internalID: -2543604765702239236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_23
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 110
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a701ab0ffceeede30800000000000000
+      internalID: 4530320852045664378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_24
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 94
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7af7271d60908650800000000000000
+      internalID: 6233140682495097469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_25
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 69
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eaa5dc27a7643430800000000000000
+      internalID: 3761745556470606564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_26
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 48
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cdd9f0fd834c3410800000000000000
+      internalID: 1458114656273554881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_27
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 534fd1cd0fc0a46b0800000000000000
+      internalID: -5311418581905443787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_28
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 77
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a204696e9204e6c0800000000000000
+      internalID: -4115161280113540442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_29
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 65
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80e83d7a662f4a2a0800000000000000
+      internalID: -6726985420668432888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_30
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 30
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb2d8ec60ae50cfc0800000000000000
+      internalID: -3476674869215046981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_31
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 46
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26e3acf6889445e20800000000000000
+      internalID: 3338374074128285282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_32
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 57
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04a831b0336f8bdb0800000000000000
+      internalID: -4775796705736816064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_33
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 47
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5f3171061915dae0800000000000000
+      internalID: -1525285316490870948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_34
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 49
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f7d6848c921ac060800000000000000
+      internalID: 6974407436384262137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_35
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 49
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01b6eb8c0e76b480800000000000000
+      internalID: -8883774622589865717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Canto delle Compagne_36
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 42
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3500b109f48d965e0800000000000000
+      internalID: -1915762330237730733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Canto delle Compagne_0: 5085143907109089615
+      Canto delle Compagne_1: -9155035730981388447
+      Canto delle Compagne_10: 8764612494099967823
+      Canto delle Compagne_11: 3978179290377478593
+      Canto delle Compagne_12: 6792419116124355775
+      Canto delle Compagne_13: -8211538243918315670
+      Canto delle Compagne_14: 344826687197846205
+      Canto delle Compagne_15: 6521976058050001401
+      Canto delle Compagne_16: -4066630160151765070
+      Canto delle Compagne_17: 8206262107739984283
+      Canto delle Compagne_18: -7257979795382804014
+      Canto delle Compagne_19: 5277255338899834244
+      Canto delle Compagne_2: -3006674265403059387
+      Canto delle Compagne_20: -9144945265595831883
+      Canto delle Compagne_21: -8432316977717860514
+      Canto delle Compagne_22: -2543604765702239236
+      Canto delle Compagne_23: 4530320852045664378
+      Canto delle Compagne_24: 6233140682495097469
+      Canto delle Compagne_25: 3761745556470606564
+      Canto delle Compagne_26: 1458114656273554881
+      Canto delle Compagne_27: -5311418581905443787
+      Canto delle Compagne_28: -4115161280113540442
+      Canto delle Compagne_29: -6726985420668432888
+      Canto delle Compagne_3: 6007274121806692595
+      Canto delle Compagne_30: -3476674869215046981
+      Canto delle Compagne_31: 3338374074128285282
+      Canto delle Compagne_32: -4775796705736816064
+      Canto delle Compagne_33: -1525285316490870948
+      Canto delle Compagne_34: 6974407436384262137
+      Canto delle Compagne_35: -8883774622589865717
+      Canto delle Compagne_36: -1915762330237730733
+      Canto delle Compagne_4: -1123155215421929766
+      Canto delle Compagne_5: 8036502601822702599
+      Canto delle Compagne_6: 5492052828576542850
+      Canto delle Compagne_7: -5642830231961684627
+      Canto delle Compagne_8: 2568142300608410754
+      Canto delle Compagne_9: 7147315115055697888
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -12,34 +12,34 @@
         
     + {are_two_entities_together(PG, FromBusStopToGarden)} [FromBusStopToGarden]
             ~ move_entity(PG, Giardino)
-            //~ inCrescita ++
-            //~ counterSpostamenti ++
-            // -> randomizer_png_location ->
-            // -> story_time_management_for_PNG->
+            ~ inCrescita ++
+            ~ counterSpostamenti ++
+            -> randomizer_png_location ->
+            -> story_time_management_for_PNG->
         -> hub_giardino
     
     + {are_two_entities_together(PG, FromGreenhouseToGarden)} [FromGreenhouseToGarden]
             ~ move_entity(PG, Giardino)
-            //~ inCrescita ++
-            //~ counterSpostamenti ++
-            // -> randomizer_png_location ->
-            // -> story_time_management_for_PNG->
+            ~ inCrescita ++
+            ~ counterSpostamenti ++
+            -> randomizer_png_location ->
+            -> story_time_management_for_PNG->
         -> hub_giardino     
     
     + {are_two_entities_together(PG, FromGardenToBusStop)}  [FromGardenToBusStop]
             ~ move_entity(PG, BusStop)
-            //~ inCrescita ++
-            //~ counterSpostamenti ++    
-            // -> randomizer_png_location ->
-            // -> story_time_management_for_PNG->
+            ~ inCrescita ++
+            ~ counterSpostamenti ++    
+            -> randomizer_png_location ->
+            -> story_time_management_for_PNG->
         -> hub_bus_stop
         
     + {are_two_entities_together(PG, FromGardenToGreenhouse)}  [FromGardenToGreenhouse]
             ~ move_entity(PG, Funghi)
-            //~ inCrescita ++
-            //~ counterSpostamenti ++    
-            // -> randomizer_png_location ->
-            // -> story_time_management_for_PNG->
+            ~ inCrescita ++
+            ~ counterSpostamenti ++    
+            -> randomizer_png_location ->
+            -> story_time_management_for_PNG->
         -> hub_funghi 
 
 // + {my_location == Giardino && storiaDue == Conclusa && storiaTre == Conclusa && storiaQuattro == Conclusa} [Biblioteca]
