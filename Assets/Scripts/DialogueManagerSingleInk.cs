@@ -48,9 +48,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Labirint Backgrounds")]
     [SerializeField] private Sprite backLabirinto;
 
-    [Header("Sirens Backgrounds")]
-    [SerializeField] private Sprite backSirene;
-
     [Header("Library Backgrounds")]
     [SerializeField] private Sprite backBiblioteca;
 
@@ -293,12 +290,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     if (tagValue == "backLabirinto")
                     {
                         background.sprite = backLabirinto;
-                    }
-
-                    //TAG GESTIONE DEL SIRENE
-                    if (tagValue == "backSirene")
-                    {
-                        background.sprite = backSirene;
                     }
 
                     //TAG GESTIONE DEL BIBLIOTECA
