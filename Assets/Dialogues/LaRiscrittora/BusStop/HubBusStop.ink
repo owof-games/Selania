@@ -17,7 +17,11 @@
 -> main
 === note_personaggia_uno ===
     + {are_two_entities_together(FirstPersonNotes, PG)}[FirstPersonNotes]
-    Lettere random note da parte della personaggia
+    Ciao {nome}, come stai?
+    Qui succedono un sacco di cose da quando me ne sono andato.
+    Tuo.
+    {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)}
+    
     -> main
     
 === note_personaggia_due ===
