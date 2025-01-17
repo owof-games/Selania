@@ -8045,7 +8045,7 @@ MonoBehaviour:
   - {fileID: 231093295}
   background: {fileID: 1753709286}
   backGiardino: {fileID: 3615872058979130105, guid: d8945099f36949048941c7de96e1f10a, type: 3}
-  backMausoleo: {fileID: 7739376263340202994, guid: cce98f4b0a2c66748945632eb8c7cc35, type: 3}
+  backBusStop: {fileID: 7739376263340202994, guid: cce98f4b0a2c66748945632eb8c7cc35, type: 3}
   backFunghi: {fileID: 6504780476288621940, guid: c68bc48bef04f2c47bbc5cfcda15f5c7, type: 3}
   backFalene: {fileID: -3239163318168165702, guid: 16e88c7ff044338449f76e5a912abaef, type: 3}
   backLabirinto: {fileID: -5714562920491157450, guid: 137d24d3ff34fdf40a68f8ab67d5d2ea, type: 3}
@@ -8054,7 +8054,7 @@ MonoBehaviour:
   backTisane: {fileID: -3070273842284801829, guid: ed53d17256160094bb8745f874ba201d, type: 3}
   ambientSounds: {fileID: 1863324330}
   gardenSounds: {fileID: 8300000, guid: 0610a4476c76fbf41a11b679f4b27c4f, type: 3}
-  mausoleumSounds: {fileID: 8300000, guid: 0edcaa325c84c2d47b9f70a7f219ed5d, type: 3}
+  busstopSounds: {fileID: 0}
   greenhouseSounds: {fileID: 8300000, guid: f094a8aef5c73a149a1c89f989d24cdf, type: 3}
 --- !u!82 &1863324330
 AudioSource:

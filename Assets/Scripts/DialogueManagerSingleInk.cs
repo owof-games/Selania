@@ -63,7 +63,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     private const string AMBIENTSOUNDS_TAG = "ambientSounds";
     [Header("Garden Sounds")]
     [SerializeField] private AudioClip gardenSounds;
-    [Header("Mausoleum Sounds")]
+    [Header("Bus Stop Sounds")]
     [SerializeField] private AudioClip busstopSounds;
     [Header("Greenhouse Sounds")]
     [SerializeField] private AudioClip greenhouseSounds;
