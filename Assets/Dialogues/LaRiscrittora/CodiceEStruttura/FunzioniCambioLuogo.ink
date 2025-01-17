@@ -15,12 +15,16 @@
     <i>Questa strada risulta bloccata, per ora.</i>
     -> main
     
++ {are_two_entities_together(PG, FromBusStopToExitGame)} [FromBusStopToExitGame]
+    <i>Progresso salvato. A presto!</i>
+    -> main    
+    
     
 // + {are_two_entities_together(PG, FromMausoleumToNothing)} [FromMausoleumToNothing]
 //     <i>L'acqua alta blocca la strada. Eppure senti una voce cantare.</i>
 //     -> main
     
-+ {are_two_entities_together(PG, FromBusStopToGarden)} [FromMausoleumToGarden]
++ {are_two_entities_together(PG, FromBusStopToGarden)} [FromBusStopToGarden]
     ~ move_entity(PG, Giardino)
     //come prova, lascio che inCrescita aumenti sempre, perché poi viene resettato all'ingresso del test. Vediamo se ha senso o se crea solo casini.
     ~ inCrescita ++
