@@ -225,11 +225,11 @@
 //Check per l'allontanamento delle personagge
     - storiaUno == Conclusa && counterSpostamenti > 10:
         ~ move_entity(PersonaggiaUno, contenutoCasettaAnime)
-        ~ move_entity(NotePersonaggiaUno, BusStop)
+        ~ move_entity(FirstPersonNotes, BusStop)
         
     - storiaDue == Conclusa && counterSpostamenti > 10:
         ~ move_entity(PersonaggiaDue, contenutoCasettaAnime)
-        ~ move_entity(NotePersonaggiaDue, BusStop)
+        ~ move_entity(SecondPersonNotes, BusStop)
         
     - storiaTre == Conclusa && counterSpostamenti > 10:
         ~ move_entity(PersonaggiaTre, contenutoCasettaAnime)

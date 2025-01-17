@@ -8,13 +8,20 @@
     -
         -> main
         
+        
+=== starting_note ===
+    + {are_two_entities_together(StartingNote, PG)}[StartingNote]
+    Note Iniziali
+    -> main
+
+-> main
 === note_personaggia_uno ===
-    + {are_two_entities_together(NotePersonaggiaUno, PG)}[NotePersonaggiaUno]
+    + {are_two_entities_together(FirstPersonNotes, PG)}[FirstPersonNotes]
     Lettere random note da parte della personaggia
     -> main
     
 === note_personaggia_due ===
-    + {are_two_entities_together(NotePersonaggiaDue, PG)}[NotePersonaggiaDue]
+    + {are_two_entities_together(SecondPersonNotes, PG)}[SecondPersonNotes]
     Lettere random note da parte della personaggia
     -> main
     

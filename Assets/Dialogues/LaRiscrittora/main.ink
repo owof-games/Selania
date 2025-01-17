@@ -38,6 +38,7 @@
 <- tree
 
 //Elementi della fermata del bus
+<- starting_note
 <- note_personaggia_uno
 <- note_personaggia_due
 <- note_personaggia_tre

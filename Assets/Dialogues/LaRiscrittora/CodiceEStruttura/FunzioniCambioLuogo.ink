@@ -6,9 +6,9 @@
             <i>Questa strada risulta bloccata, per ora.</i>
         -> main
         
-    + {are_two_entities_together(PG, FromBusStopToExitGame)} [FromBusStopToExitGame]
-            <i>Progresso salvato. A presto!</i>
-        -> main    
+    //+ {are_two_entities_together(PG, FromBusStopToExitGame)} [FromBusStopToExitGame]
+            // <i>Progresso salvato. A presto!</i>
+        // -> main    
         
     + {are_two_entities_together(PG, FromBusStopToGarden)} [FromBusStopToGarden]
             ~ move_entity(PG, Giardino)
