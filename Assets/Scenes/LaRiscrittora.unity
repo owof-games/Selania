@@ -174,7 +174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &60044267
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6230,13 +6230,12 @@ MonoBehaviour:
   continueButton: {fileID: 921273106}
   allPlaces:
   - contenutoGiardino
-  - contenutoMausoleo
+  - contenutoBusStop
   - contenutoFunghi
   - contenutoLabirinto
   - contenutoFalene
   - contenutoBiblioteca
   - contenutoTisane
-  - contenutoSirene
   inkAssetJSON: {fileID: 4900000, guid: 52a25747e603e6e4aacb94e87b22a990, type: 3}
   entities:
   - {fileID: 2045264602}
