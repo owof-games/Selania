@@ -42,6 +42,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Greenhouse Backgrounds")]
     [SerializeField] private Sprite backFunghi;
 
+    [Header("Greenhouse Middle Path Backgrounds")]
+    [SerializeField] private Sprite backGreenhouseMiddlePath;    
+
     [Header("Pets Backgrounds")]
     [SerializeField] private Sprite backFalene;
 
@@ -64,6 +67,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private AudioClip busstopSounds;
     [Header("Greenhouse Sounds")]
     [SerializeField] private AudioClip greenhouseSounds;
+
+    [Header("Greenhouse Middle Path Sounds")]
+    [SerializeField] private AudioClip greenhousemiddlepathSounds;    
 
 
 
@@ -280,6 +286,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
                         background.sprite = backFunghi;
                     }
 
+                    //BACKGROUND TAG FOR GREENHOUSE MIDDLE PATH
+                    if (tagValue == "backGreenhouseMiddlePath")
+                    {
+                        background.sprite = backGreenhouseMiddlePath;
+                    }                    
+
                     //TAG GESTIONE DEL FALENE
                     if (tagValue == "backFalene")
                     {
@@ -327,6 +339,13 @@ public class DialogueManagerSingleInk : MonoBehaviour
                         ambientSounds.clip = greenhouseSounds;
                         ambientSounds.Play();
                     }
+
+                    //MUSIC TAG FOR GREENHOUSE MIDDLE PATH
+                    if (tagValue == "greenhousemiddlepathSounds")
+                    {
+                        ambientSounds.clip = greenhousemiddlepathSounds;
+                        ambientSounds.Play();
+                    }                    
 
                     break;
 

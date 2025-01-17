@@ -15,7 +15,9 @@
     - contenutoLabirinto has entity:
         ~ return Labirinto
     - contenutoTisane has entity:
-        ~ return Tisane   
+        ~ return Tisane
+    - contenutoGreenhouseMiddlePath has entity:
+        ~ return GreenhouseMiddlePath         
     - contenutoCasettaAnime has entity:
         ~ return CasettaAnime                  
     - else:
@@ -48,6 +50,8 @@
         ~ contenutoLabirinto -= entity
     - Tisane:
         ~ contenutoTisane -= entity
+    - GreenhouseMiddlePath:
+        ~ contenutoGreenhouseMiddlePath -= entity        
     - CasettaAnime:
         ~ contenutoCasettaAnime -= entity    
         
@@ -69,17 +73,15 @@
     - Labirinto:
         ~ contenutoLabirinto += entity
     - Tisane:
-        ~ contenutoTisane += entity        
+        ~ contenutoTisane += entity
+    - GreenhouseMiddlePath:
+        ~ contenutoGreenhouseMiddlePath += entity         
     - CasettaAnime:
         ~ contenutoCasettaAnime += entity            
     - else:
         DEBUG: error, cannot understand location {destination} while trying to move {entity} in.
 }
 
-// (sempre che lo faccia in futuro) se è la PG a spostarsi, allora parte anche il cambio dello scenario.
-/*{entity == PG:
-  @moveTo roomName:{destination}
-}*/
 
 //Funzioni per capire se due entità sono nello stesso luogo
 === function are_two_entities_together(entity1, entity2)

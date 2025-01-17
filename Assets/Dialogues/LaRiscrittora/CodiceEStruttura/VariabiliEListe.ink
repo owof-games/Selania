@@ -10,18 +10,18 @@ LIST pronomi = maschili, femminili, neutri
 VAR counterSpostamenti = 0
 
 //Lista di tutti i luoghi del gioco
-LIST luoghi = Giardino, BusStop, Funghi, Biblioteca, Falene, Labirinto, Tisane, CasettaAnime
+LIST luoghi = Giardino, BusStop, Funghi, Biblioteca, Falene, Labirinto, Tisane, CasettaAnime, GreenhouseMiddlePath
 
 //Settaggio luoghi attivi a seconda del tier
-VAR firstTierPlaces =(Giardino, BusStop, Funghi)
-VAR secondTierPlaces =(Giardino, BusStop, Funghi, Biblioteca)
-VAR thirdTierPlaces = (Giardino, BusStop, Biblioteca, Falene, Funghi)
-VAR fourthTierPlaces = (Giardino, BusStop, Biblioteca, Falene, Funghi, Tisane)
+VAR firstTierPlaces =(Giardino, BusStop, GreenhouseMiddlePath)
+VAR secondTierPlaces =(Giardino, BusStop, Biblioteca, GreenhouseMiddlePath)
+VAR thirdTierPlaces = (Giardino, BusStop, Biblioteca, Falene, GreenhouseMiddlePath)
+VAR fourthTierPlaces = (Giardino, BusStop, Biblioteca, Falene, Tisane, GreenhouseMiddlePath)
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
 LIST characters = Mentore, PG, PersonaggiaUno, PersonaggiaDue, PersonaggiaTre, PersonaggiaQuattro, PersonaggiaCinque, PersonaggiaSei, PersonaggiaSette
 
-LIST transitions = FromBusStopToGarden, FromGardenToBusStop, FromGreenhouseToGarden, FromGardenToGreenhouse, FromGardenToNothing
+LIST transitions = FromBusStopToGarden, FromGardenToBusStop, FromGardenToGreenhouseMiddlePath, FromGardenToNothing,  FromGreenhouseMiddlePathToGarden, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNothing, FromGreenhouseToGreenhouseMiddlePath
 
 LIST sceneObjects = Bench, Wheelbarrow, Tree, FirstPersonNotes, SecondPersonNotes, NotePersonaggiaTre, NotePersonaggiaQuattro, NotePersonaggiaCinque, NotePersonaggiaSei, NotePersonaggiaSette, StartingNote
 
@@ -29,9 +29,10 @@ LIST mushrooms = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, Canto
 
 
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
-VAR contenutoGiardino = (Mentore, Bench, Tree, FromGardenToBusStop, FromGardenToGreenhouse, FromGardenToNothing)
+VAR contenutoGiardino = (Mentore, Bench, Tree, FromGardenToBusStop, FromGardenToGreenhouseMiddlePath, FromGardenToNothing)
 VAR contenutoBusStop = (FromBusStopToGarden, PG, StartingNote)
-VAR contenutoFunghi = (FromGreenhouseToGarden, Wheelbarrow)
+VAR contenutoFunghi = (FromGreenhouseToGreenhouseMiddlePath, Wheelbarrow)
+VAR contenutoGreenhouseMiddlePath = (FromGreenhouseMiddlePathToGarden, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNothing)
 VAR contenutoLabirinto = ()
 VAR contenutoFalene = ()
 VAR contenutoBiblioteca = ()

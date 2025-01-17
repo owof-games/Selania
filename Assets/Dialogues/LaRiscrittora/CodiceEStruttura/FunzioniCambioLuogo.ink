@@ -2,30 +2,19 @@
  TODO: vedere se ha senso accorpare tutte le azioni che faccio a ogni cambio di luogo sotto un unico nodo o funzione.
  
  === move_between_rooms(my_location)
+ //Strade bloccate
     + {are_two_entities_together(PG, FromGardenToNothing)} [FromGardenToNothing]
             <i>Questa strada risulta bloccata, per ora.</i>
         -> main
-        
+    
+    + {are_two_entities_together(PG, FromGreenhouseMiddlePathToNothing)} [FromGreenhouseMiddlePathToNothing]
+            <i>Questa strada risulta bloccata, per ora.</i>
+        -> main    
     //+ {are_two_entities_together(PG, FromBusStopToExitGame)} [FromBusStopToExitGame]
             // <i>Progresso salvato. A presto!</i>
-        // -> main    
-        
-    + {are_two_entities_together(PG, FromBusStopToGarden)} [FromBusStopToGarden]
-            ~ move_entity(PG, Giardino)
-            ~ inCrescita ++
-            ~ counterSpostamenti ++
-            -> randomizer_png_location ->
-            -> story_time_management_for_PNG->
-        -> hub_giardino
-    
-    + {are_two_entities_together(PG, FromGreenhouseToGarden)} [FromGreenhouseToGarden]
-            ~ move_entity(PG, Giardino)
-            ~ inCrescita ++
-            ~ counterSpostamenti ++
-            -> randomizer_png_location ->
-            -> story_time_management_for_PNG->
-        -> hub_giardino     
-    
+        // -> main
+
+//Strade per arrivare al Bus Stop    
     + {are_two_entities_together(PG, FromGardenToBusStop)}  [FromGardenToBusStop]
             ~ move_entity(PG, BusStop)
             ~ inCrescita ++
@@ -33,8 +22,45 @@
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
         -> hub_bus_stop
+                
+//Streets to Garden       
+    + {are_two_entities_together(PG, FromBusStopToGarden)} [FromBusStopToGarden]
+            ~ move_entity(PG, Giardino)
+            ~ inCrescita ++
+            ~ counterSpostamenti ++
+            -> randomizer_png_location ->
+            -> story_time_management_for_PNG->
+        -> hub_giardino
         
-    + {are_two_entities_together(PG, FromGardenToGreenhouse)}  [FromGardenToGreenhouse]
+        
+    + {are_two_entities_together(PG, FromGreenhouseMiddlePathToGarden)} [FromGreenhouseMiddlePathToGarden]
+            ~ move_entity(PG, Giardino)
+            ~ inCrescita ++
+            ~ counterSpostamenti ++
+            -> randomizer_png_location ->
+            -> story_time_management_for_PNG->
+        -> hub_giardino  
+    
+ //Streets to GreenhouseMiddlePath   
+    + {are_two_entities_together(PG, FromGreenhouseToGreenhouseMiddlePath)} [FromGreenhouseToGreenhouseMiddlePath]
+            ~ move_entity(PG, GreenhouseMiddlePath)
+            ~ inCrescita ++
+            ~ counterSpostamenti ++
+            -> randomizer_png_location ->
+            -> story_time_management_for_PNG->
+        -> greenhouse_middle_path
+        
+    + {are_two_entities_together(PG, FromGardenToGreenhouseMiddlePath)} [FromGardenToGreenhouseMiddlePath]
+            ~ move_entity(PG, GreenhouseMiddlePath)
+            ~ inCrescita ++
+            ~ counterSpostamenti ++
+            -> randomizer_png_location ->
+            -> story_time_management_for_PNG->
+        -> greenhouse_middle_path
+        
+        
+//Streets to Greenhouse
+    + {are_two_entities_together(PG, FromGreenhouseMiddlePathToGreenhouse)}  [FromGreenhouseMiddlePathToGreenhouse]
             ~ move_entity(PG, Funghi)
             ~ inCrescita ++
             ~ counterSpostamenti ++    

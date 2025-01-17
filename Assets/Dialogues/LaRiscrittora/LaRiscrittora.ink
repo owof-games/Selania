@@ -61,6 +61,8 @@ INCLUDE Giardino\HubGiardino.ink
 INCLUDE Giardino\Funghi\HubFunghi.ink
 INCLUDE Giardino\Funghi\CoseFungose.ink
 INCLUDE Giardino\Funghi\VarEFunGestioneFunghi.ink
+INCLUDE Giardino\Funghi\GreenhouseMiddlePath.ink
+
 
 //LUOGHI CHE SI SBLOCCANO COL SECONDO TIER
 
@@ -89,6 +91,7 @@ INCLUDE Giardino\Biblioteca\RaccontoDue.ink
 INCLUDE Giardino\Biblioteca\RaccontoTre.ink
 INCLUDE Giardino\Biblioteca\RaccontoQuattro.ink
 INCLUDE Giardino\Biblioteca\GestioneBiblioteca.Ink.ink
+
 
 
 //Punto di partenza della storia
