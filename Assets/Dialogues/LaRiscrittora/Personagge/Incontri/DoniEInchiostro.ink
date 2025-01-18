@@ -45,6 +45,7 @@ VAR luoghiDono = ()
     - dice_roll > 3: ->->
     - else:
         {
+        - doniNonTrovatiLuogo == (): ->->
         - luoghiDono has luogoDono: ->->
         - luoghiDono hasnt luogoDono:
             <i>Hai trovato {list_with_commas(dono)}.</i>
