@@ -25,7 +25,7 @@
         -> main
     
 === call_test
-    + {are_two_entities_together(Wheelbarrow, PG)} [Wheelbarrow]
+    + {are_two_entities_together(WateringCan, PG)} [WateringCan]
         {
         
             - fungoProposto != ():
