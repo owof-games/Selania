@@ -14,6 +14,7 @@
     
 === dialogo_personaggia_uno
 ~ temp charNameUno = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)
+{charNameUno}: {~ Ero sicuro di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicuro di star capendo tutto di questo luogo.}
 - (top)
     + Dialogo
         -> top
