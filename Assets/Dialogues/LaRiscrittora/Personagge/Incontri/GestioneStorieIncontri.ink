@@ -4,7 +4,7 @@
 
 
 //Gestione prima personaggia.
-    LIST possibiliStatiPersonaggiaUno = IlGiocoso, LIndeciso
+    LIST possibiliStatiPersonaggiaUno =  LIndeciso, IlGiocoso, StatoDue, StatoTre, StatoQuattro, StatoCinque, StatoSei
     VAR effettivoStatoPersonaggiaUno = LIndeciso
     
     VAR storiaUno = NonIniziata

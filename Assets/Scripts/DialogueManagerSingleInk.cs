@@ -90,10 +90,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     }
 
-    void Update()
+    //Questo viene utilizzato dai BranchManager
+    public InkList GetEffettivoStato()
     {
-
+        return (InkList)story.variablesState["effettivoStatoPersonaggiaUno"];
     }
+
     
     void ContinueStory()
     {

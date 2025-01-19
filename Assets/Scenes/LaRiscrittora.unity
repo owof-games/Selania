@@ -3137,6 +3137,7 @@ GameObject:
   - component: {fileID: 751186467}
   - component: {fileID: 751186469}
   - component: {fileID: 751186468}
+  - component: {fileID: 751186470}
   m_Layer: 5
   m_Name: BranchPersonaggio1
   m_TagString: Untagged
@@ -3201,6 +3202,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751186466}
   m_CullTransparentMesh: 1
+--- !u!114 &751186470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751186466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d591d97267510424a9ee53f89c664bf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 1863324329}
+  immagineBranch: {fileID: 751186468}
+  IlGiocoso: {fileID: 0}
 --- !u!1 &754360671
 GameObject:
   m_ObjectHideFlags: 0
