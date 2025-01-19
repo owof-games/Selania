@@ -92,8 +92,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     void Update()
     {
-        //Da vedere se funziona autosave.
-        //SaveGame();
+
     }
     
     void ContinueStory()
@@ -105,6 +104,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
             string currentLine = story.Continue().Trim();
             OnOffObject();
             CheckContinueButton();
+            SaveGame();
 
             if (currentLine == "@interact")
             {
