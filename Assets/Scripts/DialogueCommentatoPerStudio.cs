@@ -68,6 +68,11 @@ public class DialogueCommentatoPerStudio : MonoBehaviour
     [Header("Greenhouse Sounds")]
     [SerializeField] private AudioClip greenhouseSounds;
 
+//Questo è publico dialogue manager.
+    public InkList GetEffettivoStato()
+    {
+        return (InkList)story.variablesState["effettivoStato"];
+    }
 
 
 
@@ -313,11 +318,29 @@ public class DialogueCommentatoPerStudio : MonoBehaviour
     public void MakeChoice(int choiceIndex)
     {
         story.ChooseChoiceIndex(choiceIndex);
+    
         //Abbiamo messo questa cosa perché ink prima si sposta sulla scelta, e poi avanza. cosa che nel codice prima non c'era
         ContinueStory();
     }
 
 
+[SerializeField] Image immagineBranch; //Questa cosa la imposto da editor
+[SerializeField] Sprite LArrabbiato;
+[SerializeField] DialogueManager dialogueManager; //qui su unity gli associo il dialogue
+    // private void StatoFinalePersonagge()
+    // //Chiamo poi in ogni update
+    // {
+    //     //Chiamare il dialogue manager e fargli eseguire questa riga di codice
+    //     //var statoFinale = dialogueManager.GetEffettivoStato(); -> questo così mi recupera quello che mi erve.
+    //     if (statoFinale.ContainsItemNamed("SpettrodelVuoto"))
+    //     {
+    //         immagineBranch.sprite = null;
+    //     }
+    //     else if (statoFinale.ContainsItemNamed("LArrabbiato"))
+    //     {
+    //         immagineBranch.sprite = LArrabbiato;
+    //     }
+    // }
 
 
     private void HandleTags(List<string> currentTags)

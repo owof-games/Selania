@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mausoleo_0: 7739376263340202994
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

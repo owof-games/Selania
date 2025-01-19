@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Animelle_0: 7245884134932547623
+      Animelle_1: 5908277666272359735
+      Animelle_2: -2665831274544144697
+      Animelle_3: -8212193347401404646
+      Animelle_4: 1283366481810227770
+      Animelle_5: -1513316043593145989
+      Animelle_6: -720949000661191875
+      Animelle_7: 7606286691082517193
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
