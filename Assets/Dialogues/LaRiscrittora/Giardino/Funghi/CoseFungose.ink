@@ -1,11 +1,21 @@
 === plant_check
+TODO: probabilmente ha più senso fare uno script come quello per l'albero e bona, così ho un solo oggetto.
 {
     - fungoProposto has LicheneDegliAbissi:
     {
-        - inCrescita <2: -> lichene_degli_abissi.step_zero
-        - inCrescita <4: -> lichene_degli_abissi.step_uno
-        - inCrescita <6: -> lichene_degli_abissi.step_due
+        - inCrescita <2:
+            ~ move_entity(LicheneDegliAbissiSZ, Funghi)
+            -> lichene_degli_abissi.step_zero
+        - inCrescita <4:
+            ~ move_entity(LicheneDegliAbissiSZ, CasettaAnime)
+            ~ move_entity(LicheneDegliAbissiSU, Funghi)
+            -> lichene_degli_abissi.step_uno
+        - inCrescita <6:
+            ~ move_entity(LicheneDegliAbissiSU, CasettaAnime)
+            ~ move_entity(LicheneDegliAbissiSD, Funghi)
+            -> lichene_degli_abissi.step_due
         - else:
+            ~ move_entity(LicheneDegliAbissiSD, CasettaAnime)
             ~ move_entity(LicheneDegliAbissi, Funghi)
             -> lichene_degli_abissi.step_tre
         // - else: -> lichene_degli_abissi.step_quattro
