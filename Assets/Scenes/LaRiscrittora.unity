@@ -3184,7 +3184,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 7627683275842373084, guid: 5065a7d5c5293c34d90ea30958a63d9a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3216,7 +3216,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 1863324329}
   immagineBranch: {fileID: 751186468}
-  IlGiocoso: {fileID: 0}
+  LIndeciso: {fileID: 7627683275842373084, guid: 5065a7d5c5293c34d90ea30958a63d9a, type: 3}
+  IlGiocoso: {fileID: -8610999899546527099, guid: 623f157d8e705d14398dd3f868ea19fa, type: 3}
+  StatoDue: {fileID: 0}
+  StatoTre: {fileID: 0}
+  StatoQuattro: {fileID: 0}
+  StatoCinque: {fileID: 0}
+  StatoSei: {fileID: 0}
 --- !u!1 &754360671
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class BranchManagerFirstPG : MonoBehaviour
 
 [SerializeField] DialogueManagerSingleInk dialogueManager; //qui su unity gli associo il dialogue
 [SerializeField] Image immagineBranch; //Questa cosa la imposto da editor, ed è l'immagine della prima personaggia
+[SerializeField] Sprite LIndeciso;
 [SerializeField] Sprite IlGiocoso;
 [SerializeField] Sprite StatoDue;
 [SerializeField] Sprite StatoTre;
@@ -42,8 +43,8 @@ public class BranchManagerFirstPG : MonoBehaviour
         var statoFinale = dialogueManager.GetEffettivoStato();
         if (statoFinale.ContainsItemNamed("LIndeciso"))
         {
-            Debug.Log(statoFinale);
-            immagineBranch.sprite = null;
+            //Debug.Log(statoFinale);
+            immagineBranch.sprite = LIndeciso;
         }
         else if (statoFinale.ContainsItemNamed("IlGiocoso"))
         {
