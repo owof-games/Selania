@@ -5,10 +5,10 @@
         - inCrescita <2: -> lichene_degli_abissi.step_zero
         - inCrescita <4: -> lichene_degli_abissi.step_uno
         - inCrescita <6: -> lichene_degli_abissi.step_due
-        - inCrescita <20:
+        - else:
             ~ move_entity(LicheneDegliAbissi, Funghi)
             -> lichene_degli_abissi.step_tre
-        - else: -> lichene_degli_abissi.step_quattro
+        // - else: -> lichene_degli_abissi.step_quattro
     }
 
     - fungoProposto has MuschioDelleAmanti:
@@ -16,10 +16,10 @@
         - inCrescita <2: -> muschio_delle_amanti.step_zero
         - inCrescita <4: -> muschio_delle_amanti.step_uno
         - inCrescita <6: -> muschio_delle_amanti.step_due
-        - inCrescita <20:
+        - else: <20:
              ~ move_entity(MuschioDelleAmanti, Funghi)
             -> muschio_delle_amanti.step_tre
-        - else: -> muschio_delle_amanti.step_quattro
+        // - else: -> muschio_delle_amanti.step_quattro
     }
 
     - fungoProposto has CantoDelleCompagne:
@@ -27,10 +27,10 @@
         - inCrescita <2: -> canto_delle_compagne.step_zero    
         - inCrescita <4: -> canto_delle_compagne.step_uno
         - inCrescita <6: -> canto_delle_compagne.step_due
-        - inCrescita <20:
+        - else:
              ~ move_entity(CantoDelleCompagne, Funghi)
             -> canto_delle_compagne.step_tre
-        - else: -> canto_delle_compagne.step_quattro
+        // - else: -> canto_delle_compagne.step_quattro
     }
 
     - fungoProposto has LaSpazzata:
@@ -38,10 +38,10 @@
         - inCrescita <2: -> la_spazzata.step_zero 
         - inCrescita <4: -> la_spazzata.step_uno
         - inCrescita <6: -> la_spazzata.step_due
-        - inCrescita <20:
+        - else:
              ~ move_entity(LaSpazzata, Funghi)
             -> la_spazzata.step_tre
-        - else: -> la_spazzata.step_quattro
+        // - else: -> la_spazzata.step_quattro
     }
 
     - fungoProposto has BaccaDellaAddolorata:
@@ -49,10 +49,10 @@
         - inCrescita <2: -> bacca_della_addolorata.step_zero 
         - inCrescita <4: -> bacca_della_addolorata.step_uno
         - inCrescita <6: -> bacca_della_addolorata.step_due
-        - inCrescita <20:
+        - else:
              ~ move_entity(BaccaDellaAddolorata, Funghi)
             -> bacca_della_addolorata.step_tre
-        - else: -> bacca_della_addolorata.step_quattro
+        // - else: -> bacca_della_addolorata.step_quattro
     }
 
     - fungoProposto has NonTiScordarDiTe:
@@ -60,10 +60,10 @@
         - inCrescita <2: -> non_ti_scordar_di_te.step_zero     
         - inCrescita <4: -> non_ti_scordar_di_te.step_uno
         - inCrescita <6: -> non_ti_scordar_di_te.step_due
-        - inCrescita <20:
+        - else:
              ~ move_entity(NonTiScordarDiTe, Funghi)
             -> non_ti_scordar_di_te.step_tre
-        - else: -> non_ti_scordar_di_te.step_quattro
+        //- else: -> non_ti_scordar_di_te.step_quattro
     }
 
     - fungoProposto has BrinaDellImpossibile:
@@ -71,10 +71,10 @@
         - inCrescita <2: -> brina_dell_impossibile.step_zero     
         - inCrescita <4: -> brina_dell_impossibile.step_uno
         - inCrescita <6: -> brina_dell_impossibile.step_due
-        - inCrescita <20:
+        - else:
              ~ move_entity(BrinaDellImpossibile, Funghi)
             -> brina_dell_impossibile.step_tre
-        - else: -> brina_dell_impossibile.step_quattro
+        //- else: -> brina_dell_impossibile.step_quattro
     }    
     ->->
 }
@@ -114,12 +114,12 @@
             -
               -> main
               
-    = step_quattro
-        <i>Troppo tempo è passato, e non rimane che un foro nel terreno.</i>
-            //~ move_entity(LicheneDegliAbissi, CasettaAnime)
-            ~ inCrescita = 0
-            ~ fungoProposto = ()
-              -> main
+    // = step_quattro
+    //     <i>Troppo tempo è passato, e non rimane che un foro nel terreno.</i>
+    //         //~ move_entity(LicheneDegliAbissi, CasettaAnime)
+    //         ~ inCrescita = 0
+    //         ~ fungoProposto = ()
+    //           -> main
 
 === muschio_delle_amanti
 //Collaborazione, novità, ricordo
@@ -158,12 +158,12 @@
             -
              -> main
     
-    = step_quattro
-        <i>Qualcosa ti titilla lo stomaco, ma qualunque cosa stesse crescendo, non c'è più.</i>
-                //~ move_entity(MuschioDelleAmanti, CasettaAnime)
-                ~ inCrescita = 0
-                ~ fungoProposto = ()
-            -> main
+    // = step_quattro
+    //     <i>Qualcosa ti titilla lo stomaco, ma qualunque cosa stesse crescendo, non c'è più.</i>
+    //             //~ move_entity(MuschioDelleAmanti, CasettaAnime)
+    //             ~ inCrescita = 0
+    //             ~ fungoProposto = ()
+    //         -> main
 
 === canto_delle_compagne
 //Collaborazione, ciclicità, ricordo
@@ -202,12 +202,12 @@
         + [No, non ora.]
               -> main
               
-    = step_quattro
-        <i>Rimane un coro lontano dell'aria, nulla di più.</i>
-                //~ move_entity(CantoDelleCompagne, CasettaAnime)
-            ~ inCrescita = 0
-            ~ fungoProposto = ()
-            -> main
+    // = step_quattro
+    //     <i>Rimane un coro lontano dell'aria, nulla di più.</i>
+    //             //~ move_entity(CantoDelleCompagne, CasettaAnime)
+    //         ~ inCrescita = 0
+    //         ~ fungoProposto = ()
+    //         -> main
 
 === la_spazzata
 //Indipendenza, novità, cancellazione
@@ -245,12 +245,12 @@
         + [Non ora.]
             -> main
     
-    = step_quattro
-        <i>Il soffitto di rami sembra incavato. Ciò che c'era, ora non è più.</i>
-            //~ move_entity(LaSpazzata, CasettaAnime)
-            ~ inCrescita = 0
-            ~ fungoProposto = ()    
-          -> main
+    // = step_quattro
+    //     <i>Il soffitto di rami sembra incavato. Ciò che c'era, ora non è più.</i>
+    //         //~ move_entity(LaSpazzata, CasettaAnime)
+    //         ~ inCrescita = 0
+    //         ~ fungoProposto = ()    
+    //       -> main
 
 
 === bacca_della_addolorata
@@ -290,12 +290,12 @@
             + [Non è il momento.]
                 -> main
               
-    = step_quattro
-        <i>Una mano tremante nel terreno, rinsecchita. Si sbriciola al primo soffio d'aria.</i>
-            //~ move_entity(BaccaDellaAddolorata, CasettaAnime)
-            ~ inCrescita = 0
-            ~ fungoProposto = ()
-            -> main
+    // = step_quattro
+    //     <i>Una mano tremante nel terreno, rinsecchita. Si sbriciola al primo soffio d'aria.</i>
+    //         //~ move_entity(BaccaDellaAddolorata, CasettaAnime)
+    //         ~ inCrescita = 0
+    //         ~ fungoProposto = ()
+    //         -> main
 
 === non_ti_scordar_di_te
 //Indipendenza, ciclicità, ricordo
@@ -336,12 +336,12 @@
         + [Non ora.]
               -> main
               
-    = step_quattro
-        <i>Malinconia. La sensazione di aver fatto tardi, di aver perso qualcosa di importante.</i>
-            //~ move_entity(NonTiScordarDiTe, CasettaAnime)
-            ~ inCrescita = 0
-            ~ fungoProposto = ()
-        -> main
+    // = step_quattro
+    //     <i>Malinconia. La sensazione di aver fatto tardi, di aver perso qualcosa di importante.</i>
+    //         //~ move_entity(NonTiScordarDiTe, CasettaAnime)
+    //         ~ inCrescita = 0
+    //         ~ fungoProposto = ()
+    //     -> main
         
 
 === brina_dell_impossibile
@@ -382,14 +382,14 @@
         + [Ho bisogno di pensarci un poco.]
               -> main
               
-    = step_quattro
-        <i>Non noti nulla di strano. Qualcosa è cambiato, senza che te ne accorgessi.</i>
-            //~ move_entity(BrinaDellImpossibile, CasettaAnime)
-            ~ inCrescita = 0
-            ~ fungoProposto = ()
+    // = step_quattro
+    //     <i>Non noti nulla di strano. Qualcosa è cambiato, senza che te ne accorgessi.</i>
+    //         //~ move_entity(BrinaDellImpossibile, CasettaAnime)
+    //         ~ inCrescita = 0
+    //         ~ fungoProposto = ()
 
                         
-        -> main      
+    //     -> main      
           
 
 -> main
