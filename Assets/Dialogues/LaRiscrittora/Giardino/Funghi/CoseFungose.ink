@@ -107,7 +107,7 @@
                 <i> Un piccolo sbuffo. Le tue dita ora sanno di mare.</i>
                 <i>Il lichene è scomparso, tu no.</i>
                 <i>C'è qualcuno che devi allontanare?</i>
-                    ~ move_entity(LicheneDegliAbissi, CasettaAnime)
+                    //~ move_entity(LicheneDegliAbissi, CasettaAnime)
                     ~ inCrescita = 0
                     ~ fungoProposto = ()
             + [Lo lascio dov'è.]
@@ -116,7 +116,7 @@
               
     = step_quattro
         <i>Troppo tempo è passato, e non rimane che un foro nel terreno.</i>
-            ~ move_entity(LicheneDegliAbissi, CasettaAnime)
+            //~ move_entity(LicheneDegliAbissi, CasettaAnime)
             ~ inCrescita = 0
             ~ fungoProposto = ()
               -> main
@@ -147,7 +147,7 @@
             + [Raccolgo un po' del muschio.]
                 <i>Così vicino, il muschio ti chiama.</i>
                 <i>Ti invita a fermare per un attimo tutto, a premiare come più ti piace il tuo corpo, dentro o fuori che sia.</i>
-                    ~ move_entity(MuschioDelleAmanti, CasettaAnime)
+                    //~ move_entity(MuschioDelleAmanti, CasettaAnime)
                     ~ inCrescita = 0
                     ~ fungoProposto = ()
                     {
@@ -160,7 +160,7 @@
     
     = step_quattro
         <i>Qualcosa ti titilla lo stomaco, ma qualunque cosa stesse crescendo, non c'è più.</i>
-                ~ move_entity(MuschioDelleAmanti, CasettaAnime)
+                //~ move_entity(MuschioDelleAmanti, CasettaAnime)
                 ~ inCrescita = 0
                 ~ fungoProposto = ()
             -> main
@@ -195,7 +195,7 @@
                 <i>Puoi farlo da te, o chiamare qualcuno a cui tieni.
                 Riempiti dell'euforia del fungo, e lascia che il mondo intero ascolti la tua voce.
                 Con l'ultima nota, il fungo sarà altrove, da un'altra compagna bisognosa.</i>
-                    ~ move_entity(CantoDelleCompagne, CasettaAnime)
+                    //~ move_entity(CantoDelleCompagne, CasettaAnime)
                     ~ inCrescita = 0
                     ~ fungoProposto = ()
                     -> main
@@ -204,7 +204,7 @@
               
     = step_quattro
         <i>Rimane un coro lontano dell'aria, nulla di più.</i>
-            ~ move_entity(CantoDelleCompagne, CasettaAnime)
+                //~ move_entity(CantoDelleCompagne, CasettaAnime)
             ~ inCrescita = 0
             ~ fungoProposto = ()
             -> main
@@ -238,7 +238,7 @@
             <i>Qualcosa che sono giorni o settimane (uh: questa Spazzata è molto grande. forse mesi?) che ti pesa.</i>
             <i>Falle la promessa, e se ne andrà.</i>
             <i>Ma se poi tradisci la promessa, la Spazzata tornerà ancora più forte.</i>
-                    ~ move_entity(LaSpazzata, CasettaAnime)
+                    //~ move_entity(LaSpazzata, CasettaAnime)
                     ~ inCrescita = 0
                     ~ fungoProposto = ()
                     -> main
@@ -247,7 +247,7 @@
     
     = step_quattro
         <i>Il soffitto di rami sembra incavato. Ciò che c'era, ora non è più.</i>
-            ~ move_entity(LaSpazzata, CasettaAnime)
+            //~ move_entity(LaSpazzata, CasettaAnime)
             ~ inCrescita = 0
             ~ fungoProposto = ()    
           -> main
@@ -278,7 +278,7 @@
             + [La afferro.]
             <i>La mano molla la sua presa, rivelandosi per quel che era dall'inizio: solo un insieme tenace di radici.</i>
             <i>Senti dalle tue spalle qualcosa sciogliersi, scivolare via: ora hai un po' meno paura di camminare.</i>
-                ~ move_entity(BaccaDellaAddolorata, CasettaAnime)
+                //~ move_entity(BaccaDellaAddolorata, CasettaAnime)
                 ~ inCrescita = 0
                 ~ fungoProposto = ()
                     {
@@ -292,7 +292,7 @@
               
     = step_quattro
         <i>Una mano tremante nel terreno, rinsecchita. Si sbriciola al primo soffio d'aria.</i>
-            ~ move_entity(BaccaDellaAddolorata, CasettaAnime)
+            //~ move_entity(BaccaDellaAddolorata, CasettaAnime)
             ~ inCrescita = 0
             ~ fungoProposto = ()
             -> main
@@ -329,7 +329,7 @@
             <i>Si sciolgono tra le tue mani, rilasciando di nuovo un profumo familiare.</i>
             <i>Ti porti quel che rimane alle labbra: il tuo corpo viene invaso da fiducia e calore.</i>
             <i>Senti in te chi non c'è più: siete parte della stessa storia.</i>
-                ~ move_entity(NonTiScordarDiTe, CasettaAnime)
+                //~ move_entity(NonTiScordarDiTe, CasettaAnime)
                 ~ inCrescita = 0
                 ~ fungoProposto = ()
               -> main
@@ -338,7 +338,7 @@
               
     = step_quattro
         <i>Malinconia. La sensazione di aver fatto tardi, di aver perso qualcosa di importante.</i>
-            ~ move_entity(NonTiScordarDiTe, CasettaAnime)
+            //~ move_entity(NonTiScordarDiTe, CasettaAnime)
             ~ inCrescita = 0
             ~ fungoProposto = ()
         -> main
@@ -371,7 +371,7 @@
             <i>Il vetro si rinsalda, spingendo via la tua mano.</i>
             <i>Le linee del tuo palmo si fanno trasparenti, inconsistenti. Eppure puoi muovere le dita, e non provi alcun dolore.</i>
             <i>Non tutti i cambiamenti sono così facili, ma ora hai la certezza che puoi provare quella cosa che rimandi da sempre: la paura di trovarti a pezzi è solo quello: paura.</i>
-                ~ move_entity(BrinaDellImpossibile, CasettaAnime)
+                //~ move_entity(BrinaDellImpossibile, CasettaAnime)
                 ~ inCrescita = 0
                 ~ fungoProposto = ()
                     {
@@ -384,7 +384,7 @@
               
     = step_quattro
         <i>Non noti nulla di strano. Qualcosa è cambiato, senza che te ne accorgessi.</i>
-            ~ move_entity(BrinaDellImpossibile, CasettaAnime)
+            //~ move_entity(BrinaDellImpossibile, CasettaAnime)
             ~ inCrescita = 0
             ~ fungoProposto = ()
 

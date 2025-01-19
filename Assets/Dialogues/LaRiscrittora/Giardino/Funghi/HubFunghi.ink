@@ -12,7 +12,7 @@
 
 
 === pre_test
-    <i>{~ In questo momento la serra è vuota|Non c'è nulla in crescita}.</i>
+    <i>{~ In questo momento non c'è nulla in crescita|Cose}.</i>
         + [Mi guardo attorno.]
         -
             -> main

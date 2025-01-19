@@ -142,24 +142,32 @@ VAR inCrescita = 0
     - tipoColtivazioni == (collaborazione, ciclicità):
     {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteCiclicità)
+        ~ pianteCollaborazione -= fungoProposto
+        ~ pianteCiclicità -= fungoProposto
     {debug: il fungo proposto è {fungoProposto}.}
         -> da_lista_a_coltivazioni
         
     - tipoColtivazioni == (collaborazione, novità):
     {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteNovità)
+        ~ pianteCollaborazione -= fungoProposto
+        ~ pianteNovità -= fungoProposto
     {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni    
         
     - tipoColtivazioni == (collaborazione, cancellazione):
     {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteCancellazione)
+        ~ pianteCollaborazione -= fungoProposto
+        ~ pianteCancellazione -= fungoProposto
     {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
         
     - tipoColtivazioni == (collaborazione, ricordo):
     {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteRicordo)
+        ~ pianteCollaborazione -= fungoProposto
+        ~ pianteRicordo -= fungoProposto
     {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
         
@@ -167,48 +175,64 @@ VAR inCrescita = 0
     - tipoColtivazioni == (indipendenza, ciclicità):
     {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteIndipendenza ^ pianteCiclicità)
+        ~ pianteCiclicità -= fungoProposto
+        ~ pianteIndipendenza -= fungoProposto
     {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
                 
     - tipoColtivazioni == (indipendenza, novità):
     {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteIndipendenza ^ pianteNovità)
+        ~ pianteNovità -= fungoProposto
+        ~ pianteIndipendenza -= fungoProposto
     {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
         
     - tipoColtivazioni == (indipendenza, cancellazione):
     {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
-            ~ fungoProposto = LIST_RANDOM(pianteIndipendenza ^ pianteCancellazione)
+        ~ fungoProposto = LIST_RANDOM(pianteIndipendenza ^ pianteCancellazione)
+        ~ pianteCancellazione -= fungoProposto  
+        ~ pianteIndipendenza -= fungoProposto
     {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
         
     - tipoColtivazioni == (indipendenza, ricordo):
     {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteIndipendenza ^ pianteRicordo)
+        ~ pianteIndipendenza -= fungoProposto
+        ~ pianteRicordo -= fungoProposto
     {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
         
     - tipoColtivazioni == (ciclicità, cancellazione):
     {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteCiclicità ^ pianteCancellazione)
+        ~ pianteCancellazione -= fungoProposto
+        ~ pianteCiclicità -= fungoProposto
     {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
         
     - tipoColtivazioni == (ciclicità, ricordo):
     {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteCiclicità ^ pianteRicordo)
+        ~ pianteRicordo -= fungoProposto
+        ~ pianteCiclicità -= fungoProposto
     {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
         
     - tipoColtivazioni == (novità, cancellazione):
     {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteNovità ^ pianteCancellazione)
+        ~ pianteCancellazione -= fungoProposto
+        ~ pianteNovità -= fungoProposto
     {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni
         
     - tipoColtivazioni == (novità, ricordo):
     {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
         ~ fungoProposto = LIST_RANDOM(pianteNovità ^ pianteRicordo)
+        ~ pianteRicordo -= fungoProposto
+        ~ pianteNovità -= fungoProposto
     {debug: il fungo proposto è {fungoProposto}.}    
         -> da_lista_a_coltivazioni    
         
