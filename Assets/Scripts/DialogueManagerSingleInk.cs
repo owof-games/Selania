@@ -227,11 +227,13 @@ public class DialogueManagerSingleInk : MonoBehaviour
         }
 
 
-        StartCoroutine(SelectFirstChoice());
+        //StartCoroutine(SelectFirstChoice());
 
     }
 
 
+    //Nota: disabilitato per ora perché sennò non mi mette in evidenza la prima scelta.
+    //Più avanti ci sarà la possibilità di risolvere questa cosa in modo complesso perché Unity merda
     private IEnumerator SelectFirstChoice()
     {
         EventSystem.current.SetSelectedGameObject(null);
