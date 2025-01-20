@@ -1,16 +1,6 @@
 using UnityEngine;
 using Ink.Runtime;
-using TMPro;
-using System.Collections.Generic;
-using System.Collections;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using System.IO;
-using Unity.VisualScripting;
-using System.Diagnostics;
-using EasyTextEffects.Editor.MyBoxCopy.Extensions;
-using Debug = UnityEngine.Debug;
-
 
 public class BranchManagerFirstPG : MonoBehaviour
 {
@@ -40,7 +30,7 @@ public class BranchManagerFirstPG : MonoBehaviour
     //Chiamo poi in ogni update
     {
         //Chiamare il dialogue manager e fargli eseguire questa riga di codice
-        var statoFinale = dialogueManager.GetEffettivoStato();
+        var statoFinale = dialogueManager.GetEffettivoStatoPGUno();
         if (statoFinale.ContainsItemNamed("LIndeciso"))
         {
             //Debug.Log(statoFinale);

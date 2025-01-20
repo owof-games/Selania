@@ -1,7 +1,4 @@
-LIST growStep = stepZero, stepUno, stepDue, stepTre
 === plant_check
-TODO: probabilmente ha più senso fare uno script come quello per l'albero e bona, così ho un solo oggetto.
-
 {
     - inCrescita < 2:
         ~ growStep = ()
@@ -22,87 +19,113 @@ TODO: probabilmente ha più senso fare uno script come quello per l'albero e bon
     - fungoProposto has LicheneDegliAbissi:
     {
         - growStep has stepZero:
-            //~ move_entity(LicheneDegliAbissiSZ, Funghi)
+            ~ statoLicheneDegliAbissi = stepZero
             -> lichene_degli_abissi.step_zero
         - growStep has stepUno:
-            //~ move_entity(LicheneDegliAbissiSZ, CasettaAnime)
-            //~ move_entity(LicheneDegliAbissiSU, Funghi)
+            ~ statoLicheneDegliAbissi = stepUno
             -> lichene_degli_abissi.step_uno
         - growStep has stepDue:
-            //~ move_entity(LicheneDegliAbissiSU, CasettaAnime)
-            //~ move_entity(LicheneDegliAbissiSD, Funghi)
+            ~ statoLicheneDegliAbissi = stepDue
             -> lichene_degli_abissi.step_due
         - growStep has stepTre:
-            //~ move_entity(LicheneDegliAbissiSD, CasettaAnime)
-            ~ move_entity(LicheneDegliAbissi, Funghi)
+            ~ statoLicheneDegliAbissi = stepTre
             -> lichene_degli_abissi.step_tre
-        // - growStep has stepTre:: -> lichene_degli_abissi.step_quattro
     }
 
     - fungoProposto has MuschioDelleAmanti:
     {
-        - growStep has stepZero: -> muschio_delle_amanti.step_zero
-        - growStep has stepUno: -> muschio_delle_amanti.step_uno
-        - growStep has stepDue: -> muschio_delle_amanti.step_due
+        - growStep has stepZero:
+            ~ statoMuschioDelleAmanti = stepZero
+            -> muschio_delle_amanti.step_zero
+        - growStep has stepUno:
+            ~ statoMuschioDelleAmanti = stepUno
+            -> muschio_delle_amanti.step_uno
+        - growStep has stepDue:
+            ~ statoMuschioDelleAmanti = stepDue
+            -> muschio_delle_amanti.step_due
         - growStep has stepTre:
-             ~ move_entity(MuschioDelleAmanti, Funghi)
+             ~ statoMuschioDelleAmanti = stepTre
             -> muschio_delle_amanti.step_tre
-        // - growStep has stepTre:: -> muschio_delle_amanti.step_quattro
     }
 
     - fungoProposto has CantoDelleCompagne:
     {
-        - growStep has stepZero: -> canto_delle_compagne.step_zero    
-        - growStep has stepUno: -> canto_delle_compagne.step_uno
-        - growStep has stepDue: -> canto_delle_compagne.step_due
+        - growStep has stepZero:
+            ~ statoCantoDelleCompagne = stepZero
+            -> canto_delle_compagne.step_zero    
+        - growStep has stepUno:
+            ~ statoCantoDelleCompagne = stepUno
+            -> canto_delle_compagne.step_uno
+        - growStep has stepDue:
+            ~ statoCantoDelleCompagne = stepDue
+            -> canto_delle_compagne.step_due
         - growStep has stepTre:
-             ~ move_entity(CantoDelleCompagne, Funghi)
+             ~ statoCantoDelleCompagne = stepTre
             -> canto_delle_compagne.step_tre
-        // - growStep has stepTre:: -> canto_delle_compagne.step_quattro
     }
 
     - fungoProposto has LaSpazzata:
     {
-        - growStep has stepZero: -> la_spazzata.step_zero 
-        - growStep has stepUno: -> la_spazzata.step_uno
-        - growStep has stepDue: -> la_spazzata.step_due
+        - growStep has stepZero:
+            ~ statoLaSpazzata = stepZero
+            -> la_spazzata.step_zero 
+        - growStep has stepUno:
+            ~ statoLaSpazzata = stepUno
+            -> la_spazzata.step_uno
+        - growStep has stepDue:
+            ~ statoLaSpazzata = stepDue
+            -> la_spazzata.step_due
         - growStep has stepTre:
-             ~ move_entity(LaSpazzata, Funghi)
+            ~ statoLaSpazzata = stepTre
             -> la_spazzata.step_tre
-        // - growStep has stepTre:: -> la_spazzata.step_quattro
     }
 
     - fungoProposto has BaccaDellaAddolorata:
     {
-        - growStep has stepZero: -> bacca_della_addolorata.step_zero 
-        - growStep has stepUno: -> bacca_della_addolorata.step_uno
-        - growStep has stepDue: -> bacca_della_addolorata.step_due
+        - growStep has stepZero:
+            ~ statoBaccaDellaAddolorata = stepZero
+            -> bacca_della_addolorata.step_zero
+        - growStep has stepUno:
+            ~ statoBaccaDellaAddolorata = stepUno
+            -> bacca_della_addolorata.step_uno
+        - growStep has stepDue:
+            ~ statoBaccaDellaAddolorata = stepDue
+            -> bacca_della_addolorata.step_due
         - growStep has stepTre:
-             ~ move_entity(BaccaDellaAddolorata, Funghi)
+            ~ statoBaccaDellaAddolorata = stepTre
             -> bacca_della_addolorata.step_tre
-        // - growStep has stepTre:: -> bacca_della_addolorata.step_quattro
     }
 
     - fungoProposto has NonTiScordarDiTe:
     {
-        - growStep has stepZero: -> non_ti_scordar_di_te.step_zero     
-        - growStep has stepUno: -> non_ti_scordar_di_te.step_uno
-        - growStep has stepDue: -> non_ti_scordar_di_te.step_due
+        - growStep has stepZero:
+            ~ statoNonTiScordarDiTe = stepZero
+            -> non_ti_scordar_di_te.step_zero     
+        - growStep has stepUno:
+            ~ statoNonTiScordarDiTe = stepUno
+            -> non_ti_scordar_di_te.step_uno
+        - growStep has stepDue:
+            ~ statoNonTiScordarDiTe = stepDue
+            -> non_ti_scordar_di_te.step_due
         - growStep has stepTre:
-             ~ move_entity(NonTiScordarDiTe, Funghi)
+            ~ statoNonTiScordarDiTe = stepTre
             -> non_ti_scordar_di_te.step_tre
-        //- growStep has stepTre:: -> non_ti_scordar_di_te.step_quattro
     }
 
     - fungoProposto has BrinaDellImpossibile:
     {
-        - growStep has stepZero: -> brina_dell_impossibile.step_zero     
-        - growStep has stepUno: -> brina_dell_impossibile.step_uno
-        - growStep has stepDue: -> brina_dell_impossibile.step_due
+        - growStep has stepZero:
+            ~ statoBrinaDellImpossibile = stepZero
+            -> brina_dell_impossibile.step_zero     
+        - growStep has stepUno:
+            ~ statoBrinaDellImpossibile = stepUno
+            -> brina_dell_impossibile.step_uno
+        - growStep has stepDue:
+            ~ statoBrinaDellImpossibile = stepDue
+            -> brina_dell_impossibile.step_due
         - growStep has stepTre:
-             ~ move_entity(BrinaDellImpossibile, Funghi)
+             ~ statoBrinaDellImpossibile = stepTre
             -> brina_dell_impossibile.step_tre
-        //- growStep has stepTre:: -> brina_dell_impossibile.step_quattro
     }    
     ->->
 }

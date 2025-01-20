@@ -1,7 +1,14 @@
+//VARIABILI PER LA GESTIONE DELLA CRESCITA DEI COLTIVABILI
+LIST growStep = stepVuoto, stepZero, stepUno, stepDue, stepTre
+VAR statoCantoDelleCompagne = stepVuoto
+VAR statoLicheneDegliAbissi = stepVuoto
+VAR statoMuschioDelleAmanti = stepVuoto
+VAR statoBrinaDellImpossibile = stepVuoto
+VAR statoLaSpazzata = stepVuoto
+VAR statoBaccaDellaAddolorata = stepVuoto
+VAR statoNonTiScordarDiTe = stepVuoto
+
 //Variabili per la gestione della serra
-
-//VAR coltivazioni = (LicheneDegliAbissi, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, NonTiScordarDiTe)
-
 LIST tipoColtivazioni = collaborazione, ciclicità, novità, cancellazione, ricordo, indipendenza
 
 //QUESTE LISTE HANNO UN VALORE CATALOGATIVO E PER LA GESTIONE DELLE DOMANDE

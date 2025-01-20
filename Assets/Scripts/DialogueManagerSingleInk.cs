@@ -90,12 +90,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     }
 
-    //Questo viene utilizzato dai BranchManager
-    public InkList GetEffettivoStato()
-    {
-        return (InkList)story.variablesState["effettivoStatoPersonaggiaUno"];
-    }
-
     
     void ContinueStory()
     {
@@ -229,7 +223,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
         }
 
 
-        //StartCoroutine(SelectFirstChoice());
+        StartCoroutine(SelectFirstChoice());
 
     }
 
@@ -366,6 +360,22 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
         }
     }
+
+
+    
+    //Questo viene utilizzato dai BranchManager
+    public InkList GetEffettivoStatoPGUno()
+    {
+        return (InkList)story.variablesState["effettivoStatoPersonaggiaUno"];
+    }
+
+
+    //Questo viene utilizzato dai coltivabili
+    public InkList GetEffettivoStatoCantoDelleCompagne()
+    {
+        return (InkList)story.variablesState["statoCantoDelleCompagne"];
+    }
+
 
     public void OnQuitButton()
     {

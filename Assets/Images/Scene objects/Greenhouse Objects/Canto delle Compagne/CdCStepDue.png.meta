@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: a2691d2710babce4d97fac9b07fc858d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5100801632298192129
+    second: CdCStepDue_0
+  - first:
+      213: 7680272418765000138
+    second: CdCStepDue_1
+  - first:
+      213: 6565831533235500965
+    second: CdCStepDue_2
+  - first:
+      213: 8808007198724358815
+    second: CdCStepDue_3
+  - first:
+      213: -3437563210685492555
+    second: CdCStepDue_4
+  - first:
+      213: -4299627428809448588
+    second: CdCStepDue_5
+  - first:
+      213: -5058019401834894639
+    second: CdCStepDue_6
+  - first:
+      213: 1401461193400412118
+    second: CdCStepDue_7
+  - first:
+      213: -4037797270408312756
+    second: CdCStepDue_8
+  - first:
+      213: -6083811122122840419
+    second: CdCStepDue_9
+  - first:
+      213: -9133335957509682540
+    second: CdCStepDue_10
+  - first:
+      213: -601054333987155346
+    second: CdCStepDue_11
+  - first:
+      213: 2127374192202840485
+    second: CdCStepDue_12
+  - first:
+      213: 6473957741450271093
+    second: CdCStepDue_13
+  - first:
+      213: -8979283373871043136
+    second: CdCStepDue_14
+  - first:
+      213: -8010221172633034431
+    second: CdCStepDue_15
+  - first:
+      213: 161832545914957883
+    second: CdCStepDue_16
+  - first:
+      213: -4672384499951483221
+    second: CdCStepDue_17
+  - first:
+      213: 4983859292484922165
+    second: CdCStepDue_18
+  - first:
+      213: -1639391560546788106
+    second: CdCStepDue_19
+  - first:
+      213: 4114576632484724485
+    second: CdCStepDue_20
+  - first:
+      213: -7050192735384824886
+    second: CdCStepDue_21
+  - first:
+      213: -6546340163208889227
+    second: CdCStepDue_22
+  - first:
+      213: 3634568892867047099
+    second: CdCStepDue_23
+  - first:
+      213: -615547028437601217
+    second: CdCStepDue_24
+  - first:
+      213: 6996507486943540388
+    second: CdCStepDue_25
+  - first:
+      213: -6973170171422501810
+    second: CdCStepDue_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CdCStepDue_0
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 187
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10dcdd23f00b9c640800000000000000
+      internalID: 5100801632298192129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_1
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 147
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acdc7b2b21fc59a60800000000000000
+      internalID: 7680272418765000138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_2
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 153
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a77f810ef48e1b50800000000000000
+      internalID: 6565831533235500965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_3
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 159
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f928c0361e35c3a70800000000000000
+      internalID: 8808007198724358815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_4
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 133
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b2d32e09725b40d0800000000000000
+      internalID: -3437563210685492555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_5
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 140
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 473694742a7a454c0800000000000000
+      internalID: -4299627428809448588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_6
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 134
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dae89e072e4ec9b0800000000000000
+      internalID: -5058019401834894639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_7
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 127
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d76027b78df27310800000000000000
+      internalID: 1401461193400412118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_8
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 143
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c48454696ccd6f7c0800000000000000
+      internalID: -4037797270408312756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_9
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 120
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d962c419406f19ba0800000000000000
+      internalID: -6083811122122840419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_10
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 129
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49a455e465fdf3180800000000000000
+      internalID: -9133335957509682540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_11
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 119
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e629cfb8440a8a7f0800000000000000
+      internalID: -601054333987155346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_12
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 125
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a975967e83f58d10800000000000000
+      internalID: 2127374192202840485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 121
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 579980ee34e18d950800000000000000
+      internalID: 6473957741450271093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_14
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 116
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cd68d2885d236380800000000000000
+      internalID: -8979283373871043136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_15
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 109
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14125e0984af5d090800000000000000
+      internalID: -8010221172633034431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_16
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 100
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b30bb54d7d1fe3200800000000000000
+      internalID: 161832545914957883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_17
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 83
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba6c95a7d0b582fb0800000000000000
+      internalID: -4672384499951483221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_18
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 87
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53be713fe993a2540800000000000000
+      internalID: 4983859292484922165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_19
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 106
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fcd5d1cf06bf39e0800000000000000
+      internalID: -1639391560546788106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_20
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 85
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50fff54b5a9e91930800000000000000
+      internalID: 4114576632484724485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_21
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 77
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac319598f0fa82e90800000000000000
+      internalID: -7050192735384824886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 93
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57cbf093e4ab625a0800000000000000
+      internalID: -6546340163208889227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_23
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 72
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbe660bb625907230800000000000000
+      internalID: 3634568892867047099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_24
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 63
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f34fd6b2d332577f0800000000000000
+      internalID: -615547028437601217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_25
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 76
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a471a38d76981160800000000000000
+      internalID: 6996507486943540388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CdCStepDue_26
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 25
+        width: 121
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e44130eaca25a3f90800000000000000
+      internalID: -6973170171422501810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CdCStepDue_0: 5100801632298192129
+      CdCStepDue_1: 7680272418765000138
+      CdCStepDue_10: -9133335957509682540
+      CdCStepDue_11: -601054333987155346
+      CdCStepDue_12: 2127374192202840485
+      CdCStepDue_13: 6473957741450271093
+      CdCStepDue_14: -8979283373871043136
+      CdCStepDue_15: -8010221172633034431
+      CdCStepDue_16: 161832545914957883
+      CdCStepDue_17: -4672384499951483221
+      CdCStepDue_18: 4983859292484922165
+      CdCStepDue_19: -1639391560546788106
+      CdCStepDue_2: 6565831533235500965
+      CdCStepDue_20: 4114576632484724485
+      CdCStepDue_21: -7050192735384824886
+      CdCStepDue_22: -6546340163208889227
+      CdCStepDue_23: 3634568892867047099
+      CdCStepDue_24: -615547028437601217
+      CdCStepDue_25: 6996507486943540388
+      CdCStepDue_26: -6973170171422501810
+      CdCStepDue_3: 8808007198724358815
+      CdCStepDue_4: -3437563210685492555
+      CdCStepDue_5: -4299627428809448588
+      CdCStepDue_6: -5058019401834894639
+      CdCStepDue_7: 1401461193400412118
+      CdCStepDue_8: -4037797270408312756
+      CdCStepDue_9: -6083811122122840419
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
