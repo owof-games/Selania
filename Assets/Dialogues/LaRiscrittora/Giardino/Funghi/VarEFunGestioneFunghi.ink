@@ -38,7 +38,7 @@ VAR fourteenthQuest = false
 
 //Questa è una strategia (basic e temporanea) per evitare che il testing vada in loop se non ci sono combinazioni sensate di domande.
 VAR randomCounter = 0
-VAR maxRandomCounter = 50
+VAR maxRandomCounter = 100
 
 //Variabili monitoraggio stato vegetali
 VAR inCrescita = 0    
@@ -83,7 +83,7 @@ VAR inCrescita = 0
                 - else:
                 <i>{debugColtivabili: Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}</i>
                 {
-                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != ():
+                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && firstAnswerTracker != pianteCollaborazione && firstAnswerTracker != pianteIndipendenza:
                     <i>{debugColtivabili: L'intersezione tra prima scelta e piantecollaborazione produce {pianteCollaborazione^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {pianteIndipendenza^firstAnswerTracker}}</i>
                     <i>{debugColtivabili: Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}</i>
                         -> first_question
@@ -114,7 +114,7 @@ VAR inCrescita = 0
                 - else:
                 <i>{debugColtivabili: Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}</i>
                 {
-                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteNovità^firstAnswerTracker) != ():
+                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && firstAnswerTracker != pianteCollaborazione && firstAnswerTracker != pianteNovità:
                     <i>{debugColtivabili: L'intersezione tra prima scelta e piante ciclicità produce {pianteCiclicità^firstAnswerTracker}, quella tra prima scelta e piante novità produce {pianteNovità^firstAnswerTracker}.}</i>
                     <i>{debugColtivabili: Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}</i>
                         -> second_question
@@ -146,7 +146,7 @@ VAR inCrescita = 0
                 - else:
                 <i>{debugColtivabili: Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} </i>
                 {
-                    - LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != ():
+                    - LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && firstAnswerTracker != pianteCollaborazione && firstAnswerTracker != pianteCancellazione:
                     <i>{debugColtivabili: L'intersezione tra prima scelta e piante ricordo produce {pianteRicordo^firstAnswerTracker}, quella tra prima scelta e piante cancellazione produce {pianteCancellazione^firstAnswerTracker}.}</i>
                     <i>{debugColtivabili: Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}</i>
                         -> third_question
@@ -175,7 +175,7 @@ VAR inCrescita = 0
                 
                 - else:
                 {
-                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != ():
+                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && firstAnswerTracker != pianteCollaborazione && firstAnswerTracker != pianteCiclicità:
                         -> fourth_question
                     - else:
                         ~ randomCounter ++
@@ -197,7 +197,7 @@ VAR inCrescita = 0
                 
                 - else:
                 {
-                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != ():
+                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && firstAnswerTracker != pianteCollaborazione && firstAnswerTracker != pianteRicordo:
                         -> fifth_question
                     - else:
                         ~ randomCounter ++
@@ -219,7 +219,7 @@ VAR inCrescita = 0
                 
                 - else:
                 {
-                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != ():
+                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && firstAnswerTracker != pianteCollaborazione && firstAnswerTracker != pianteCancellazione:
                         -> sixth_question
                     - else:
                         ~ randomCounter ++
@@ -241,7 +241,7 @@ VAR inCrescita = 0
                 
                 - else:
                 {
-                    - LIST_RANDOM(pianteCiclicità ^firstAnswerTracker) != () && LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != ():
+                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && firstAnswerTracker != pianteCiclicità && firstAnswerTracker != pianteCiclicità:
                         -> seventh_question
                     - else:
                         ~ randomCounter ++
@@ -263,7 +263,7 @@ VAR inCrescita = 0
                 
                 - else:
                 {
-                    - LIST_RANDOM(pianteCiclicità ^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != ():
+                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && firstAnswerTracker != pianteCiclicità && firstAnswerTracker != pianteRicordo:
                         -> eighth_question
                     - else:
                         ~ randomCounter ++
@@ -285,7 +285,7 @@ VAR inCrescita = 0
                 
                 - else:
                 {
-                    - LIST_RANDOM(pianteCiclicità ^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != ():
+                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && firstAnswerTracker != pianteCiclicità && firstAnswerTracker != pianteCancellazione:
                         -> ninth_question
                     - else:
                         ~ randomCounter ++
@@ -303,7 +303,7 @@ VAR inCrescita = 0
                 
                 - else:
                 {
-                    - LIST_RANDOM(pianteIndipendenza  ^firstAnswerTracker) != () && LIST_RANDOM(pianteNovità^firstAnswerTracker) != ():
+                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && firstAnswerTracker != pianteIndipendenza && firstAnswerTracker != pianteNovità:
                         -> tenth_question
                     - else:
                         ~ randomCounter ++
@@ -326,7 +326,7 @@ VAR inCrescita = 0
                 
                 - else:
                 {
-                    - LIST_RANDOM(pianteIndipendenza  ^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != ():
+                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && firstAnswerTracker != pianteIndipendenza && firstAnswerTracker != pianteRicordo:
                         -> eleventh_question
                     - else:
                         ~ randomCounter ++
@@ -347,7 +347,7 @@ VAR inCrescita = 0
                 
                 - else:
                 {
-                    - LIST_RANDOM(pianteIndipendenza  ^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != ():
+                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && firstAnswerTracker != pianteIndipendenza && firstAnswerTracker != pianteCancellazione:
                         -> twelfth_question
                     - else:
                         ~ randomCounter ++
@@ -368,7 +368,7 @@ VAR inCrescita = 0
                 
                 - else:
                 {
-                    - LIST_RANDOM(pianteNovità   ^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != ():
+                    - LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && firstAnswerTracker != pianteNovità && firstAnswerTracker != pianteRicordo:
                         -> thirteenth_question
                     - else:
                         ~ randomCounter ++
@@ -389,7 +389,7 @@ VAR inCrescita = 0
                 
                 - else:
                 {
-                    - LIST_RANDOM(pianteNovità   ^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != ():
+                    - LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && firstAnswerTracker != pianteNovità && firstAnswerTracker != pianteCancellazione:
                         -> fourteenth_question
                     - else:
                         ~ randomCounter ++
