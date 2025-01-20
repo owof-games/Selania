@@ -1,90 +1,107 @@
 === plant_check
 TODO: probabilmente ha più senso fare uno script come quello per l'albero e bona, così ho un solo oggetto.
+LIST growStep = stepZero, stepUno, stepDue, stepTre
+{
+    - growStep has stepZero:
+        ~ growStep = ()
+        ~ growStep += stepZero
+    - growStep has stepUno:
+        ~ growStep = ()
+        ~ growStep += stepUno    
+    - growStep has stepDue:
+        ~ growStep = ()
+        ~ growStep += stepDue
+    - inCrescita > 8:
+        ~ growStep = ()
+        ~ growStep += stepTre
+
+}
+
 {
     - fungoProposto has LicheneDegliAbissi:
     {
-        - inCrescita <2:
-            ~ move_entity(LicheneDegliAbissiSZ, Funghi)
+        - growStep has stepZero:
+            //~ move_entity(LicheneDegliAbissiSZ, Funghi)
             -> lichene_degli_abissi.step_zero
-        - inCrescita <4:
-            ~ move_entity(LicheneDegliAbissiSZ, CasettaAnime)
-            ~ move_entity(LicheneDegliAbissiSU, Funghi)
+        - growStep has stepUno:
+            //~ move_entity(LicheneDegliAbissiSZ, CasettaAnime)
+            //~ move_entity(LicheneDegliAbissiSU, Funghi)
             -> lichene_degli_abissi.step_uno
-        - inCrescita <6:
-            ~ move_entity(LicheneDegliAbissiSU, CasettaAnime)
-            ~ move_entity(LicheneDegliAbissiSD, Funghi)
+        - growStep has stepDue:
+            //~ move_entity(LicheneDegliAbissiSU, CasettaAnime)
+            //~ move_entity(LicheneDegliAbissiSD, Funghi)
             -> lichene_degli_abissi.step_due
-        - else:
-            ~ move_entity(LicheneDegliAbissiSD, CasettaAnime)
+        - growStep has stepTre:
+            //~ move_entity(LicheneDegliAbissiSD, CasettaAnime)
             ~ move_entity(LicheneDegliAbissi, Funghi)
             -> lichene_degli_abissi.step_tre
-        // - else: -> lichene_degli_abissi.step_quattro
+        // - growStep has stepTre:: -> lichene_degli_abissi.step_quattro
     }
 
     - fungoProposto has MuschioDelleAmanti:
     {
-        - inCrescita <2: -> muschio_delle_amanti.step_zero
-        - inCrescita <4: -> muschio_delle_amanti.step_uno
-        - inCrescita <6: -> muschio_delle_amanti.step_due
-        - else: <20:
+        - growStep has stepZero: -> muschio_delle_amanti.step_zero
+        - growStep has stepUno: -> muschio_delle_amanti.step_uno
+        - growStep has stepDue: -> muschio_delle_amanti.step_due
+        - growStep has stepTre::
              ~ move_entity(MuschioDelleAmanti, Funghi)
             -> muschio_delle_amanti.step_tre
-        // - else: -> muschio_delle_amanti.step_quattro
+        // - growStep has stepTre:: -> muschio_delle_amanti.step_quattro
     }
 
     - fungoProposto has CantoDelleCompagne:
     {
-        - inCrescita <2: -> canto_delle_compagne.step_zero    
-        - inCrescita <4: -> canto_delle_compagne.step_uno
-        - inCrescita <6: -> canto_delle_compagne.step_due
-        - else:
+        - growStep has stepZero: -> canto_delle_compagne.step_zero    
+        - growStep has stepUno: -> canto_delle_compagne.step_uno
+        - growStep has stepDue: -> canto_delle_compagne.step_due
+        - growStep has stepTre::
              ~ move_entity(CantoDelleCompagne, Funghi)
             -> canto_delle_compagne.step_tre
-        // - else: -> canto_delle_compagne.step_quattro
+        // - growStep has stepTre:: -> canto_delle_compagne.step_quattro
     }
 
     - fungoProposto has LaSpazzata:
     {
-        - inCrescita <2: -> la_spazzata.step_zero 
-        - inCrescita <4: -> la_spazzata.step_uno
-        - inCrescita <6: -> la_spazzata.step_due
-        - else:
+        - growStep has stepZero: -> la_spazzata.step_zero 
+        - growStep has stepUno: -> la_spazzata.step_uno
+        - growStep has stepDue: -> la_spazzata.step_due
+        - growStep has stepTre::
              ~ move_entity(LaSpazzata, Funghi)
             -> la_spazzata.step_tre
-        // - else: -> la_spazzata.step_quattro
+        // - growStep has stepTre:: -> la_spazzata.step_quattro
     }
 
     - fungoProposto has BaccaDellaAddolorata:
     {
-        - inCrescita <2: -> bacca_della_addolorata.step_zero 
-        - inCrescita <4: -> bacca_della_addolorata.step_uno
-        - inCrescita <6: -> bacca_della_addolorata.step_due
-        - else:
+        - growStep has stepZero: -> bacca_della_addolorata.step_zero 
+        - growStep has stepUno: -> bacca_della_addolorata.step_uno
+        - growStep has stepDue: -> bacca_della_addolorata.step_due
+        - growStep has stepTre::
              ~ move_entity(BaccaDellaAddolorata, Funghi)
             -> bacca_della_addolorata.step_tre
-        // - else: -> bacca_della_addolorata.step_quattro
+        // - growStep has stepTre:: -> bacca_della_addolorata.step_quattro
     }
 
     - fungoProposto has NonTiScordarDiTe:
     {
-        - inCrescita <2: -> non_ti_scordar_di_te.step_zero     
-        - inCrescita <4: -> non_ti_scordar_di_te.step_uno
-        - inCrescita <6: -> non_ti_scordar_di_te.step_due
-        - else:
+        - growStep has stepZero: -> non_ti_scordar_di_te.step_zero     
+        - growStep has stepUno: -> non_ti_scordar_di_te.step_uno
+        - growStep has stepDue: -> non_ti_scordar_di_te.step_due
+        - growStep has stepTre::
              ~ move_entity(NonTiScordarDiTe, Funghi)
             -> non_ti_scordar_di_te.step_tre
-        //- else: -> non_ti_scordar_di_te.step_quattro
+        //- growStep has stepTre:: -> non_ti_scordar_di_te.step_quattro
     }
 
     - fungoProposto has BrinaDellImpossibile:
     {
-        - inCrescita <2: -> brina_dell_impossibile.step_zero     
-        - inCrescita <4: -> brina_dell_impossibile.step_uno
-        - inCrescita <6: -> brina_dell_impossibile.step_due
-        - else:
+        - growStep has stepZero: -> brina_dell_impossibile.step_zero     
+        - growStep has stepUno: -> brina_dell_impossibile.step_uno
+        - growStep has stepDue: -> brina_dell_impossibile.step_due
+        - growStep has stepTre::
              ~ move_entity(BrinaDellImpossibile, Funghi)
             -> brina_dell_impossibile.step_tre
-        //- else: -> brina_dell_impossibile.step_quattro
+        //- growStep has stepTre:: -> brina_dell_impossibile.step_quattro
     }    
     ->->
 }
