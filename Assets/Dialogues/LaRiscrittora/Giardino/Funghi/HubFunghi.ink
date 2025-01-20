@@ -3,15 +3,21 @@
 #ambientSounds: {tag_ambientSounds()}
 {hub_funghi == 1:<i> Eccoti nella serra</i>|<i>La serra {~ pulsa nell'aria tiepida|risplende|ti attende quieta}</i>}.
     -> randomizzazione_dono_luoghi ->
+
+{
+	- fungoProposto != ():
+        -> cura
+        
+    - else:
     {
-        - fungoProposto != ():
-            -> cura
-        - backupColtivabili == ():
-            <i>Al momento non è possibile coltivare nulla</i>. 
-            -> main
-        - else:     
+        - backupColtivabili != ():
             -> pre_test
+        - else:
+            <i>Al momento non è possibile coltivare nulla</i>.
+	    -> main
+        
     }
+}
 
 
 === pre_test
@@ -29,12 +35,32 @@
     
 === call_test
     + {are_two_entities_together(WateringCan, PG)} [WateringCan]
-        {
+    {
+    	- backupColtivabili != ():
+            {
+                - fungoProposto != ():
+                        -> cura
+                - else:     
+                        -> test_coltivazioni
+            }
+            	- else:
+    	    <i>Al momento non è possibile coltivare nulla</i>.
+    	    -> main
+    }
+    
+    {
+	- fungoProposto != ():
+        -> cura
         
-            - fungoProposto != ():
-                -> cura
-            - else:
-                -> test_coltivazioni
-            
-        }
+    - else:
+    {
+        - backupColtivabili != ():
+            -> pre_test
+        - else:
+            <i>Al momento non è possibile coltivare nulla</i>.
+	    -> main
+        
+    }
+}
+
     

@@ -44,7 +44,7 @@ TODO: probabilmente ha più senso fare uno script come quello per l'albero e bon
         - growStep has stepZero: -> muschio_delle_amanti.step_zero
         - growStep has stepUno: -> muschio_delle_amanti.step_uno
         - growStep has stepDue: -> muschio_delle_amanti.step_due
-        - growStep has stepTre::
+        - growStep has stepTre:
              ~ move_entity(MuschioDelleAmanti, Funghi)
             -> muschio_delle_amanti.step_tre
         // - growStep has stepTre:: -> muschio_delle_amanti.step_quattro
@@ -66,7 +66,7 @@ TODO: probabilmente ha più senso fare uno script come quello per l'albero e bon
         - growStep has stepZero: -> la_spazzata.step_zero 
         - growStep has stepUno: -> la_spazzata.step_uno
         - growStep has stepDue: -> la_spazzata.step_due
-        - growStep has stepTre::
+        - growStep has stepTre:
              ~ move_entity(LaSpazzata, Funghi)
             -> la_spazzata.step_tre
         // - growStep has stepTre:: -> la_spazzata.step_quattro
@@ -99,7 +99,7 @@ TODO: probabilmente ha più senso fare uno script come quello per l'albero e bon
         - growStep has stepZero: -> brina_dell_impossibile.step_zero     
         - growStep has stepUno: -> brina_dell_impossibile.step_uno
         - growStep has stepDue: -> brina_dell_impossibile.step_due
-        - growStep has stepTre::
+        - growStep has stepTre:
              ~ move_entity(BrinaDellImpossibile, Funghi)
             -> brina_dell_impossibile.step_tre
         //- growStep has stepTre:: -> brina_dell_impossibile.step_quattro
@@ -255,8 +255,8 @@ TODO: probabilmente ha più senso fare uno script come quello per l'albero e bon
     
     = step_tre
     // + {are_two_entities_together(LaSpazzata, PG)} [LaSpazzata]
-        <i>Tutto scricchiola, gli alberi sembrano gemere dal dolore.
-        Il terreno stesso è impacciato, crepato.</i>
+        <i>Tutto scricchiola, gli alberi sembrano gemere dal dolore.</i>
+        <i>Il terreno stesso è impacciato, crepato.</i>
         <i>Ora riconosci cosa hai piantato: una grossa, esplosiva <b>Spazzata</b></i>.
         <i>La Spazzata non è un fungo, non è una pianta, ma è un insieme di tutte queste cose.</i>
         <i>E se non viene fatta sfogare, esploderà spazzando via tutta la serra.</i>
