@@ -21,6 +21,7 @@ public class CantoDelleCompagne : MonoBehaviour
     void Update()
     {
         StatoColtivabile();
+        Debug.Log("Sto chiamando StatoColtivabile per Canto Della Compagna");
     }
 
     
@@ -32,27 +33,27 @@ public class CantoDelleCompagne : MonoBehaviour
         var step = dialogueManager.GetEffettivoStatoCantoDelleCompagne();
         if (step.ContainsItemNamed("StepVuoto"))
         {
-            Debug.Log(step);
+            Debug.Log("Lo stato del Canto della Compagna è" + step);
             image.sprite = StepVuoto;
         }
         else if (step.ContainsItemNamed("StepZero"))
 
-        {   Debug.Log(step);
+        {   Debug.Log("Lo stato del Canto della Compagna è" + step);
             image.sprite = StepZero;
         }
         else if (step.ContainsItemNamed("StepUno"))
 
-        {   Debug.Log(step);
+        {   Debug.Log("Lo stato del Canto della Compagna è" + step);
             image.sprite = StepUno;
         }
         else if (step.ContainsItemNamed("StepDue"))
         {   
-            Debug.Log(step);
+            Debug.Log("Lo stato del Canto della Compagna è" + step);
             image.sprite = StepDue;
         }
         else if (step.ContainsItemNamed("StepTre"))
         {
-            Debug.Log(step);
+            Debug.Log("Lo stato del Canto della Compagna è" + step);
             image.sprite = StepTre;
         }
     }
