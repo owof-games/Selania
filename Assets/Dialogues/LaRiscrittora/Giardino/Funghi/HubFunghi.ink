@@ -19,7 +19,7 @@
     }
 }
 
-
+TODO: valutare se invece di far cresere i funghi in base a tutti gli spostamenti per il gioco, non crescano di accesso in accesso alla serra :D
 === pre_test
     <i>{~ In questo momento non c'è nulla in crescita|Cose}.</i>
         + [Mi guardo attorno.]

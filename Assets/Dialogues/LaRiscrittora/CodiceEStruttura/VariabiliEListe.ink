@@ -27,13 +27,13 @@ LIST transitions = FromBusStopToGarden, FromGardenToBusStop, FromGardenToGreenho
 LIST sceneObjects = Bench, WateringCan , Tree, FirstPersonNotes, SecondPersonNotes, NotePersonaggiaTre, NotePersonaggiaQuattro, NotePersonaggiaCinque, NotePersonaggiaSei, NotePersonaggiaSette, StartingNote
 
 //Nomenclatura: Nome intero == step definitivo, NomeSZ: stepZero, NomeSU: stepUno, NomeSD: stepDue
-LIST mushrooms = LicheneDegliAbissi, LicheneDegliAbissiSZ, LicheneDegliAbissiSU, LicheneDegliAbissiSD, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile
+LIST mushrooms = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile
 
 
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
 VAR contenutoGiardino = (Mentore, Bench, Tree, FromGardenToBusStop, FromGardenToGreenhouseMiddlePath, FromGardenToNothing)
 VAR contenutoBusStop = (FromBusStopToGarden, PG, StartingNote)
-VAR contenutoFunghi = (FromGreenhouseToGreenhouseMiddlePath, WateringCan, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
+VAR contenutoFunghi = (FromGreenhouseToGreenhouseMiddlePath, WateringCan, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
 VAR contenutoGreenhouseMiddlePath = (FromGreenhouseMiddlePathToGarden, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNothing)
 VAR contenutoLabirinto = ()
 VAR contenutoFalene = ()
