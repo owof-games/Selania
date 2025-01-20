@@ -166,11 +166,254 @@ VAR inCrescita = 0
         }
 
 
+        - dice == 4: 
+        {
+            - fourthQuest == false:
+            {
+                - tipoColtivazioni == ():
+                    -> fourth_question
+                
+                - else:
+                {
+                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != ():
+                        -> fourth_question
+                    - else:
+                        ~ randomCounter ++
+                        ->random
+                }
+            }
+                    
+            - else:
+                    ~ randomCounter ++
+                    -> random
+        }
+        
+        - dice == 5: 
+        {
+            - fifthQuest == false:
+            {
+                - tipoColtivazioni == ():
+                    -> fifth_question
+                
+                - else:
+                {
+                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != ():
+                        -> fifth_question
+                    - else:
+                        ~ randomCounter ++
+                        ->random
+                }
+            }
+                    
+            - else:
+                    ~ randomCounter ++
+                    -> random
+        }        
+        
+        - dice == 6: 
+        {
+            - sixthQuest == false:
+            {
+                - tipoColtivazioni == ():
+                    -> sixth_question
+                
+                - else:
+                {
+                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != ():
+                        -> sixth_question
+                    - else:
+                        ~ randomCounter ++
+                        ->random
+                }
+            }
+                    
+            - else:
+                    ~ randomCounter ++
+                    -> random
+        }          
+        
+        - dice == 7: 
+        {
+            - seventhQuest == false:
+            {
+                - tipoColtivazioni == ():
+                    -> seventh_question
+                
+                - else:
+                {
+                    - LIST_RANDOM(pianteCiclicità ^firstAnswerTracker) != () && LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != ():
+                        -> seventh_question
+                    - else:
+                        ~ randomCounter ++
+                        ->random
+                }
+            }
+                    
+            - else:
+                    ~ randomCounter ++
+                    -> random
+        }         
+        
+        - dice == 8: 
+        {
+            - eighthQuest == false:
+            {
+                - tipoColtivazioni == ():
+                    -> eighth_question
+                
+                - else:
+                {
+                    - LIST_RANDOM(pianteCiclicità ^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != ():
+                        -> eighth_question
+                    - else:
+                        ~ randomCounter ++
+                        ->random
+                }
+            }
+                    
+            - else:
+                    ~ randomCounter ++
+                    -> random
+        }        
+
+        - dice == 9: 
+        {
+            - ninthQuest == false:
+            {
+                - tipoColtivazioni == ():
+                    -> ninth_question
+                
+                - else:
+                {
+                    - LIST_RANDOM(pianteCiclicità ^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != ():
+                        -> ninth_question
+                    - else:
+                        ~ randomCounter ++
+                        ->random
+                }
+            }
+        }
+        
+        - dice == 10: 
+        {
+            - tenthQuest == false:
+            {
+                - tipoColtivazioni == ():
+                    -> tenth_question
+                
+                - else:
+                {
+                    - LIST_RANDOM(pianteIndipendenza  ^firstAnswerTracker) != () && LIST_RANDOM(pianteNovità^firstAnswerTracker) != ():
+                        -> tenth_question
+                    - else:
+                        ~ randomCounter ++
+                        ->random
+                }
+            }
+ 
+            
+            - else:
+                    ~ randomCounter ++
+                    -> random
+        }         
+
+        - dice == 11: 
+        {
+            - eleventhQuest == false:
+            {
+                - tipoColtivazioni == ():
+                    -> eleventh_question
+                
+                - else:
+                {
+                    - LIST_RANDOM(pianteIndipendenza  ^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != ():
+                        -> eleventh_question
+                    - else:
+                        ~ randomCounter ++
+                        ->random
+                }
+            }
+                    - else:
+                    ~ randomCounter ++
+                    -> random
+        }
+        
+        - dice == 12: 
+        {
+            - twelfthQuest == false:
+            {
+                - tipoColtivazioni == ():
+                    -> twelfth_question
+                
+                - else:
+                {
+                    - LIST_RANDOM(pianteIndipendenza  ^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != ():
+                        -> twelfth_question
+                    - else:
+                        ~ randomCounter ++
+                        ->random
+                }
+            }
+                    - else:
+                    ~ randomCounter ++
+                    -> random
+        } 
+        
+        - dice == 13: 
+        {
+            - thirteenthQuest == false:
+            {
+                - tipoColtivazioni == ():
+                    -> thirteenth_question
+                
+                - else:
+                {
+                    - LIST_RANDOM(pianteNovità   ^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != ():
+                        -> thirteenth_question
+                    - else:
+                        ~ randomCounter ++
+                        ->random
+                }
+            }
+                    - else:
+                    ~ randomCounter ++
+                    -> random
+        } 
+
+        - dice == 14: 
+        {
+            - fourteenthQuest == false:
+            {
+                - tipoColtivazioni == ():
+                    -> fourteenth_question
+                
+                - else:
+                {
+                    - LIST_RANDOM(pianteNovità   ^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != ():
+                        -> fourteenth_question
+                    - else:
+                        ~ randomCounter ++
+                        ->random
+                }
+            }
+                    - else:
+                    ~ randomCounter ++
+                    -> random
+        }
+        
     - else:
         <i>{debugColtivabili: Il dado ha valore {dice} e non ci sono condizioni valide per proporre una delle tre domande, per offro una risposta negativa.}</i>
         <i>In questo momento non è possibile coltivare nulla</i>
                     -> main
 }
+
+
+/* ---------------------------------
+
+QUESTIONS
+
+ ----------------------------------*/
+
 
 
     = first_question
@@ -282,7 +525,7 @@ VAR inCrescita = 0
     
         <i>Domanda..</i>
             + [ciclicità]
-                    ~ tipoColtivazioni += ciclicità 
+                    ~ tipoColtivazioni += ciclicità
                     ~ firstAnswerTracker = pianteCiclicità 
                     <i>{debugColtivabili: tipoColtivazioni contiene ora {tipoColtivazioni}.}</i>                    
             + [indipendenza]
