@@ -54,7 +54,7 @@ VAR randomizable_characters = (Mentore)
         ~ move_entity(character, location)
         ~ randomizable_characters -= character
     
-        {debug: {character} si trova in {location}}
+        <i>{debug: {character} si trova in {location}.}</i>
         
         {
             - randomizable_characters != ():
@@ -63,7 +63,7 @@ VAR randomizable_characters = (Mentore)
                 ->->
         }
         
-        {debug: {character} è stato spostato in {location}}
+        <i>{debug: {character} è stato spostato in {location}.}</i>
       //  {location:
       //  - Giardino:
       //   ~ move_entity(character, Giardino)
@@ -79,6 +79,8 @@ VAR randomizable_characters = (Mentore)
         ~ temp location = LIST_RANDOM(secondTierPlaces)
         ~ move_entity(character, location)
         ~ randomizable_characters -= character    
+        
+        <i>{debug: {character} si trova in {location}.}</i>       
         
         {
             - randomizable_characters != ():
@@ -106,7 +108,7 @@ VAR randomizable_characters = (Mentore)
     //         ~ luoghiMentoreIncontrato += Funghi
     
     // }
-    {debug: {character} è stato spostato in {location}}
+    <i>{debug: {character} è stato spostato in {location}.}</i>
     ->->
 
 === randomizer_third_tier
@@ -116,7 +118,7 @@ VAR randomizable_characters = (Mentore)
         ~ move_entity(character, location)
         ~ randomizable_characters -= character
         
-        {debug: {character} si trova in {location}}
+        <i>{debug: {character} si trova in {location}.}</i>
         
         {
             - randomizable_characters != ():
@@ -125,7 +127,7 @@ VAR randomizable_characters = (Mentore)
                 ->->
         }
         
-        {debug: {character} è stato spostato in {location}}
+        <i>{debug: {character} è stato spostato in {location}.}</i>
     
     // {mentore_location:
     //     - Giardino:
@@ -159,7 +161,7 @@ VAR randomizable_characters = (Mentore)
         ~ move_entity(character, location)
         ~ randomizable_characters -= character
         
-        {debug: {character} si trova in {location}}
+        <i>{debug: {character} si trova in {location}.}</i>
         
         {
             - randomizable_characters != ():
@@ -168,7 +170,7 @@ VAR randomizable_characters = (Mentore)
                 ->->
         }
         
-        {debug: {character} è stato spostato in {location}}
+        <i>{debug: {character} è stato spostato in {location}.}</i>
     // {mentore_location:
     //     - Giardino:
     //         ~ move_entity(Mentore, Giardino)

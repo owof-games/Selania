@@ -4,6 +4,7 @@
 
 LIST tipoColtivazioni = collaborazione, ciclicità, novità, cancellazione, ricordo, indipendenza
 
+//QUESTE LISTE HANNO UN VALORE CATALOGATIVO E PER LA GESTIONE DELLE DOMANDE
 VAR pianteCollaborazione = (LicheneDegliAbissi, MuschioDelleAmanti, CantoDelleCompagne, BrinaDellImpossibile)
 VAR pianteCiclicità = (LicheneDegliAbissi, CantoDelleCompagne, NonTiScordarDiTe)
 VAR pianteIndipendenza = (LaSpazzata, BaccaDellaAddolorata, NonTiScordarDiTe)
@@ -11,7 +12,7 @@ VAR pianteNovità =(MuschioDelleAmanti,LaSpazzata, BaccaDellaAddolorata, BrinaDe
 VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, BrinaDellImpossibile)
 VAR pianteCancellazione =(LicheneDegliAbissi,LaSpazzata, BaccaDellaAddolorata)
 
-//Questa la uso per fare in modo che fintanto che c'è almeno un fungo pescabile, questo venga estratto.
+//QUESTA LISTA LA USO PER GESTIRE LA PESCATA O MENO DEI COLTIVABILI
 VAR backupColtivabili = (LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
 
     //Pianta che verrà proposta. La uso anche per tracking dello stato delle piante.
@@ -32,26 +33,26 @@ VAR inCrescita = 0
     -> test
 
 === test
-{debug: Sono passato da <i>test</i>.}
-{debug: Gli elementi ancora coltivabili sono: {backupColtivabili}}
+<i>{debug: Sono passato da <i>test</i>.}</i>
+<i>{debug: Gli elementi ancora coltivabili sono: {backupColtivabili}}</i>
 
 {
     - counter < 2:
-    {debug: Counter ha valore {counter} e per questo vado a Random.}
+    <i>{debug: Counter ha valore {counter} e per questo vado a Random.}</i>
         -> random
     - counter == 2:
-    {debug: Counter ha valore {counter} e per questo vado a Results.}
+    <i>{debug: Counter ha valore {counter} e per questo vado a Results.}</i>
         -> results
 }
 
 = random
 ~ temp dice = RANDOM(1,3)
-{debug: Il dado ha valore {dice}}
+<i>{debug: Il dado ha valore {dice}}</i>
 {
     - dice == 1: 
         {
             - firstQuest == false:
-            {debug: Il valore di firstQuest è {firstQuest} {pianteCollaborazione} e {pianteIndipendenza} e per questo vado alla domanda.}
+            <i>{debug: Il valore di firstQuest è {firstQuest}. Piante Collaborazione contiene: {pianteCollaborazione}. Piante Indipendenza contiene: {pianteIndipendenza} e per questo vado alla domanda.}</i>
                     -> first_question
             - else:
             {debug: Torno a random.}
@@ -62,11 +63,11 @@ VAR inCrescita = 0
     - dice == 2:
         {
             -secondQuest == false:
-            {debug: Il valore di secondQuest è {secondQuest} e {pianteCiclicità} e {pianteNovità} e per questo vado alla domanda.}
+            <i>{debug: Il valore di secondQuest è {secondQuest}. Piante Ciclicità contiene: {pianteCiclicità}. Piante Novità contiene: {pianteNovità} e per questo vado alla domanda.}</i>
                     -> second_question
             
             -secondQuest == true:
-            {debug: Il valore di secondQuest è {secondQuest} e per questo torno a random.}    
+            {debug: Il valore di secondQuest è {secondQuest} e per questo torno a random.}
                     -> random
         }
 
@@ -75,47 +76,47 @@ VAR inCrescita = 0
     - dice == 3:
         {
             - thirdQuest == false:
-                {debug: Il valore di thirdQuest è {thirdQuest} e {pianteRicordo} e {pianteCancellazione} e per questo vado alla domanda.}        
+                <i>{debug: Il valore di thirdQuest è {thirdQuest}. Piante Ricordo contiene: {pianteRicordo}. Piante Cancellazione contiene: {pianteCancellazione} e per questo vado alla domanda.}</i>    
                     -> third_question
                 
             - thirdQuest == true:
-                {debug: Il valore di thirdQuest è {thirdQuest} e per questo torno a random.}           
+                <i>{debug: Il valore di thirdQuest è {thirdQuest} e per questo torno a random.}</i>      
                     -> random
         }
 
 
     - else:
-        {debug: Il dado ha valore {dice} e non ci sono condizioni valide per proporre una delle tre domande, per cui vado a random.}
+        <i>{debug: Il dado ha valore {dice} e non ci sono condizioni valide per proporre una delle tre domande, per cui vado a random.}</i>
                     -> random
 }
 
 
     = first_question
      ~ firstQuest = true
-         {debug: Entro in first_question. {firstQuest: firstQuest ora = true|firstQuest = false}}
+         <i>{debug: Entro in first_question. {firstQuest: firstQuest ora = true|firstQuest = false}}</i>
  
         <i>Sul terreno le foglie e i sassi...</i>
             + [{~ Si sfiorano|Si perdono gli uni nelle altre}.]
                     ~ tipoColtivazioni += collaborazione
-                    {debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}
+                    <i>{debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}</i>
             + [{~ Si osservano distaccati|Difendono i propri confini}.]
                     ~ tipoColtivazioni += indipendenza
-                    {debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    <i>{debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}</i>                    
             -   
                 ~ counter ++
                     -> test
     
     = second_question
     ~ secondQuest = true
-        {debug: Entro in second_question. {secondQuest: SecondQuest ora = true|SecondQuest = false}}
+        <i>{debug: Entro in second_question. {secondQuest: SecondQuest ora = true|SecondQuest = false}}</i>
 
         <i>L'aria...</i>
             + [{~ Insegue sé stessa, gioca con le foglie creando mulinelli|Ruota e ruzzola portando odori dal passato}.]
                     ~ tipoColtivazioni += ciclicità
-                    {debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    <i>{debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}</i>                    
             + [{~ È scoppiettante, fremente, carica di elettricità|Esplora cautamente ogni angolo della serra}.]
                     ~ tipoColtivazioni += novità
-                    {debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    <i>{debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}</i>                    
             -   
                 ~ counter ++
                     -> test
@@ -123,15 +124,15 @@ VAR inCrescita = 0
 
     = third_question
      ~ thirdQuest = true
-    {debug: Entro in third_question. {thirdQuest: thirdQuest ora = true|thirdQuest = false}.}
+    <i>{debug: Entro in third_question. {thirdQuest: thirdQuest ora = true|thirdQuest = false}.}</i>
     
         <i>L'acqua...</i>
             + [{~ È ferma, mossa solo sulla superficie|È torbida|È piena di foglie e petali}.]
                     ~ tipoColtivazioni += ricordo
-                    {debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    <i>{debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}</i>                    
             + [{~ Scava, portando con sé il terriccio|Schiaccia foglie e sassi|La sua voce è potente}.]
                     ~ tipoColtivazioni += cancellazione
-                    {debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    <i>{debug: tipoColtivazioni contiene ora {tipoColtivazioni}.}</i>                    
             -   
                 ~ counter ++
                     -> test
@@ -140,274 +141,263 @@ VAR inCrescita = 0
 
  
  === results
-{debug: <i>Entro in results</i>}
+<i>{debug: Entro in results.}</i>
+<i>{debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}</i>
  
     {
     - tipoColtivazioni == (collaborazione, ciclicità):{
+    
         - pianteCollaborazione == () or pianteCiclicità == ():
+            <i>{debug: Una delle liste è vuota, e quindi pesco il coltivabile dal backup.}</i>
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            ~ backupColtivabili -= fungoProposto
-            {
-            //In questo modo evito di levarlo dal backup ma non dalle singole liste, portando al rischio di riproporlo
-                - pianteCollaborazione has fungoProposto:
-                    ~ pianteCollaborazione -= fungoProposto
-                - pianteCiclicità has fungoProposto:
-                    ~ pianteCiclicità -= fungoProposto                    
-            }
-            -> da_lista_a_coltivazioni
+            <i>{debug: Il fungo proposto è {fungoProposto}.}</i>   
+                -> remove_fungo_proposto
+            
         - else: 
-        {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
-            ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteCiclicità)
-            ~ pianteCollaborazione -= fungoProposto
-            ~ pianteCiclicità -= fungoProposto
-            ~ backupColtivabili -= fungoProposto
-        {debug: il fungo proposto è {fungoProposto}.}
-        -> da_lista_a_coltivazioni
-        }
+        <i>{debug: Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}</i>
+                ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteCiclicità)
+                {
+                    - backupColtivabili has fungoProposto:
+                    <i>{debug: backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}</i>
+                        -> remove_fungo_proposto
+                    //Questo è un check extra: non dovrebbe mai accadere, ma non si sa mai.    
+                    - backupColtivabili hasnt fungoProposto:
+                    <i>{debug: backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}</i>
+                        -> results
+                }
+    }
         
         
     - tipoColtivazioni == (collaborazione, novità): {
         - pianteCollaborazione == () or pianteNovità == ():
+            <i>{debug: Una delle liste è vuota, e quindi pesco il coltivabile dal backup.}</i>         
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            ~ backupColtivabili -= fungoProposto
-            {
-                - pianteCollaborazione has fungoProposto:
-                    ~ pianteCollaborazione -= fungoProposto
-                - pianteNovità has fungoProposto:
-                    ~ pianteNovità -= fungoProposto 
-            }            
-            -> da_lista_a_coltivazioni
-        - else: 
-            {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
+            <i>{debug: Il fungo proposto è {fungoProposto}.}</i>   
+            -> remove_fungo_proposto
+            
+        - else:
+        <i>{debug: Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}</i>
                 ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteNovità)
-                ~ pianteCollaborazione -= fungoProposto
-                ~ pianteNovità -= fungoProposto
-                ~ backupColtivabili -= fungoProposto
-            {debug: il fungo proposto è {fungoProposto}.}    
-                -> da_lista_a_coltivazioni
+                {
+                - backupColtivabili has fungoProposto:
+                <i>{debug: backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}</i>
+                    -> remove_fungo_proposto
+                - backupColtivabili hasnt fungoProposto:
+                <i>{debug: backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}</i>
+                    -> results
+                }
         }
         
         
     - tipoColtivazioni == (collaborazione, cancellazione):{
         - pianteCollaborazione == () or pianteCancellazione == ():
+        <i>{debug: Una delle liste è vuota, e quindi pesco il coltivabile dal backup.}</i>
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            ~ backupColtivabili -= fungoProposto
-            {
-                - pianteCollaborazione has fungoProposto:
-                    ~ pianteCollaborazione -= fungoProposto
-                - pianteCancellazione has fungoProposto:
-                    ~ pianteCancellazione -= fungoProposto          
-            }            
-            -> da_lista_a_coltivazioni
-        - else: 
-        {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
+            <i>{debug: Il fungo proposto è {fungoProposto}.}</i>   
+            -> remove_fungo_proposto
+            
+        - else:
+        <i>{debug: Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}</i>
             ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteCancellazione)
-            ~ pianteCollaborazione -= fungoProposto
-            ~ pianteCancellazione -= fungoProposto
-            ~ backupColtivabili -= fungoProposto
-    {debug: il fungo proposto è {fungoProposto}.}    
-        -> da_lista_a_coltivazioni
+                {
+                - backupColtivabili has fungoProposto:
+                <i>{debug: backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}</i>
+                    -> remove_fungo_proposto
+                - backupColtivabili hasnt fungoProposto:
+                <i>{debug: backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}</i>
+                    -> results
+                }
         }
         
         
     - tipoColtivazioni == (collaborazione, ricordo):{
         - pianteCollaborazione == () or pianteRicordo == ():
+        <i>{debug: Una delle liste è vuota, e quindi pesco il coltivabile dal backup.}</i>
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            ~ backupColtivabili -= fungoProposto
-            {
-                - pianteCollaborazione has fungoProposto:
-                    ~ pianteCollaborazione -= fungoProposto
-                - pianteRicordo has fungoProposto:
-                    ~ pianteRicordo -= fungoProposto          
-            }              
-            -> da_lista_a_coltivazioni
-        - else: 
-        {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
+            <i>{debug: Il fungo proposto è {fungoProposto}.}</i>   
+            -> remove_fungo_proposto
+            
+        - else:
+        <i>{debug: Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}</i>
             ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteRicordo)
-            ~ pianteCollaborazione -= fungoProposto
-            ~ pianteRicordo -= fungoProposto
-            ~ backupColtivabili -= fungoProposto
-        {debug: il fungo proposto è {fungoProposto}.}    
-            -> da_lista_a_coltivazioni
+                {
+                - backupColtivabili has fungoProposto:
+                <i>{debug: backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}</i>
+                    -> remove_fungo_proposto
+                - backupColtivabili hasnt fungoProposto:
+                <i>{debug: backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}</i>
+                    -> results
+                }
         }
         
         
         
     - tipoColtivazioni == (indipendenza, ciclicità):{
         - pianteIndipendenza == () or pianteCiclicità == ():
+        <i>{debug: Una delle liste è vuota, e quindi pesco il coltivabile dal backup.}</i>
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            ~ backupColtivabili -= fungoProposto
-                {
-                - pianteIndipendenza has fungoProposto:
-                    ~ pianteIndipendenza -= fungoProposto
-                - pianteCiclicità has fungoProposto:
-                    ~ pianteCiclicità -= fungoProposto          
-            }          
-            -> da_lista_a_coltivazioni
-        - else: 
-        {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
+            <i>{debug: Il fungo proposto è {fungoProposto}.}</i>   
+            -> remove_fungo_proposto
+            
+        - else:
+        <i>{debug: Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}</i>
             ~ fungoProposto = LIST_RANDOM(pianteIndipendenza ^ pianteCiclicità)
-            ~ pianteCiclicità -= fungoProposto
-            ~ pianteIndipendenza -= fungoProposto
-            ~ backupColtivabili -= fungoProposto
-        {debug: il fungo proposto è {fungoProposto}.}    
-            -> da_lista_a_coltivazioni
+                {
+                - backupColtivabili has fungoProposto:
+                <i>{debug: backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}</i>
+                    -> remove_fungo_proposto
+                - backupColtivabili hasnt fungoProposto:
+                <i>{debug: backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}</i>
+                    -> results
+                }
         }
                 
     - tipoColtivazioni == (indipendenza, novità):{
         - pianteIndipendenza == () or pianteNovità == ():
+        <i>{debug: Una delle liste è vuota, e quindi pesco il coltivabile dal backup.}</i>
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            ~ backupColtivabili -= fungoProposto
-            {
-                - pianteIndipendenza has fungoProposto:
-                    ~ pianteIndipendenza -= fungoProposto
-                - pianteNovità has fungoProposto:
-                    ~ pianteNovità -= fungoProposto          
-            }              
-            -> da_lista_a_coltivazioni
-        - else: 
-        {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
+            <i>{debug: Il fungo proposto è {fungoProposto}.}</i>   
+            -> remove_fungo_proposto
+            
+        - else:
+        <i>{debug: Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}</i>
             ~ fungoProposto = LIST_RANDOM(pianteIndipendenza ^ pianteNovità)
-            ~ pianteNovità -= fungoProposto
-            ~ pianteIndipendenza -= fungoProposto
-            ~ backupColtivabili -= fungoProposto
-        {debug: il fungo proposto è {fungoProposto}.}    
-            -> da_lista_a_coltivazioni
+                {
+                - backupColtivabili has fungoProposto:
+                <i>{debug: backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}</i>
+                    -> remove_fungo_proposto
+                - backupColtivabili hasnt fungoProposto:
+                <i>{debug: backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}</i>
+                    -> results
+                }
         }
         
     - tipoColtivazioni == (indipendenza, cancellazione): {
         - pianteCancellazione == () or pianteIndipendenza == ():
+        <i>{debug: Una delle liste è vuota, e quindi pesco il coltivabile dal backup.}</i>
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            ~ backupColtivabili -= fungoProposto
-            {
-                - pianteIndipendenza has fungoProposto:
-                    ~ pianteIndipendenza -= fungoProposto
-                - pianteCancellazione has fungoProposto:
-                    ~ pianteCancellazione -= fungoProposto          
-            }              
-            -> da_lista_a_coltivazioni
-        - else: 
-        {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
+            <i>{debug: Il fungo proposto è {fungoProposto}.}</i>   
+            -> remove_fungo_proposto
+        - else:
+        <i>{debug: Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}</i>
             ~ fungoProposto = LIST_RANDOM(pianteIndipendenza ^ pianteCancellazione)
-            ~ pianteCancellazione -= fungoProposto  
-            ~ pianteIndipendenza -= fungoProposto
-            ~ backupColtivabili -= fungoProposto
-        {debug: il fungo proposto è {fungoProposto}.}    
-            -> da_lista_a_coltivazioni
-        }
+                {
+                - backupColtivabili has fungoProposto:
+                <i>{debug: backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}</i>
+                    -> remove_fungo_proposto
+                - backupColtivabili hasnt fungoProposto:
+                <i>{debug: backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}</i>
+                    -> results
+                }
+            }
         
     - tipoColtivazioni == (indipendenza, ricordo): {
         - pianteRicordo == () or pianteIndipendenza == ():
+        <i>{debug: Una delle liste è vuota, e quindi pesco il coltivabile dal backup.}</i>
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            ~ backupColtivabili -= fungoProposto
-            {
-                - pianteIndipendenza has fungoProposto:
-                    ~ pianteIndipendenza -= fungoProposto
-                - pianteRicordo has fungoProposto:
-                    ~ pianteRicordo -= fungoProposto          
-            }              
-            -> da_lista_a_coltivazioni
-        - else: 
-        {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
+            <i>{debug: Il fungo proposto è {fungoProposto}.}</i>   
+            -> remove_fungo_proposto
+            
+        - else:
+        <i>{debug: Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}</i>
             ~ fungoProposto = LIST_RANDOM(pianteIndipendenza ^ pianteRicordo)
-            ~ pianteIndipendenza -= fungoProposto
-            ~ pianteRicordo -= fungoProposto
-            ~ backupColtivabili -= fungoProposto
-        {debug: il fungo proposto è {fungoProposto}.}    
-        -> da_lista_a_coltivazioni
+                {
+                - backupColtivabili has fungoProposto:
+                <i>{debug: backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}</i>
+                    -> remove_fungo_proposto
+                - backupColtivabili hasnt fungoProposto:
+                <i>{debug: backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}</i>
+                    -> results
+                }
         }
         
     - tipoColtivazioni == (ciclicità, cancellazione):{
         - pianteCancellazione == () or pianteCiclicità == ():
+        <i>{debug: Una delle liste è vuota, e quindi pesco il coltivabile dal backup.}</i>
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            ~ backupColtivabili -= fungoProposto
-            {
-                - pianteCancellazione has fungoProposto:
-                    ~ pianteCancellazione -= fungoProposto
-                - pianteCiclicità has fungoProposto:
-                    ~ pianteCiclicità -= fungoProposto          
-            }              
-            -> da_lista_a_coltivazioni
-        - else: 
-        {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
+            <i>{debug: Il fungo proposto è {fungoProposto}.}</i>   
+            -> remove_fungo_proposto
+            
+        - else:
+        <i>{debug: Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}</i>
             ~ fungoProposto = LIST_RANDOM(pianteCiclicità ^ pianteCancellazione)
-            ~ pianteCancellazione -= fungoProposto
-            ~ pianteCiclicità -= fungoProposto
-            ~ backupColtivabili -= fungoProposto
-        {debug: il fungo proposto è {fungoProposto}.}    
-        -> da_lista_a_coltivazioni
+                {
+                - backupColtivabili has fungoProposto:
+                <i>{debug: backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}</i>
+                    -> remove_fungo_proposto
+                - backupColtivabili hasnt fungoProposto:
+                <i>{debug: backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}</i>
+                    -> results
+                }
         }
         
     - tipoColtivazioni == (ciclicità, ricordo):{
         - pianteRicordo == () or pianteCiclicità == ():
+        <i>{debug: Una delle liste è vuota, e quindi pesco il coltivabile dal backup.}</i>
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            ~ backupColtivabili -= fungoProposto
-            {
-                - pianteRicordo has fungoProposto:
-                    ~ pianteRicordo -= fungoProposto
-                - pianteCiclicità has fungoProposto:
-                    ~ pianteCiclicità -= fungoProposto          
-            }              
-            -> da_lista_a_coltivazioni
-        - else: 
-        {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
+            <i>{debug: Il fungo proposto è {fungoProposto}.}</i>   
+            -> remove_fungo_proposto
+            
+        - else:
+        <i>{debug: Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}</i>
             ~ fungoProposto = LIST_RANDOM(pianteCiclicità ^ pianteRicordo)
-            ~ pianteRicordo -= fungoProposto
-            ~ pianteCiclicità -= fungoProposto
-            ~ backupColtivabili -= fungoProposto
-        {debug: il fungo proposto è {fungoProposto}.}    
-        -> da_lista_a_coltivazioni
+                {
+                - backupColtivabili has fungoProposto:
+                <i>{debug: backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}</i>
+                    -> remove_fungo_proposto
+                - backupColtivabili hasnt fungoProposto:
+                <i>{debug: backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}</i>
+                    -> results
+                }
         }
         
     - tipoColtivazioni == (novità, cancellazione):{
         - pianteCancellazione == () or pianteNovità == ():
+        <i>{debug: Una delle liste è vuota, e quindi pesco il coltivabile dal backup.}</i>
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            ~ backupColtivabili -= fungoProposto
-                {
-                - pianteCancellazione has fungoProposto:
-                    ~ pianteCancellazione -= fungoProposto
-                - pianteNovità has fungoProposto:
-                    ~ pianteNovità -= fungoProposto          
-            }          
-            -> da_lista_a_coltivazioni
-        - else: 
-        {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
+            <i>{debug: Il fungo proposto è {fungoProposto}.}</i>   
+            -> remove_fungo_proposto
+            
+        - else:
+        <i>{debug: Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}</i>
             ~ fungoProposto = LIST_RANDOM(pianteNovità ^ pianteCancellazione)
-            ~ pianteCancellazione -= fungoProposto
-            ~ pianteNovità -= fungoProposto
-            ~ backupColtivabili -= fungoProposto
-        {debug: il fungo proposto è {fungoProposto}.}    
-            -> da_lista_a_coltivazioni
+                {
+                - backupColtivabili has fungoProposto:
+                <i>{debug: backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}</i>
+                    -> remove_fungo_proposto
+                - backupColtivabili hasnt fungoProposto:
+                <i>{debug: backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}</i>
+                    -> results
+                }
         }
         
     - tipoColtivazioni == (novità, ricordo): {
         - pianteRicordo == () or pianteNovità == ():
+        <i>{debug: Una delle liste è vuota, e quindi pesco il coltivabile dal backup.}</i>
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            ~ backupColtivabili -= fungoProposto
-            {
-                - pianteRicordo has fungoProposto:
-                    ~ pianteRicordo -= fungoProposto
-                - pianteCiclicità has fungoProposto:
-                    ~ pianteNovità -= fungoProposto          
-            }              
-            -> da_lista_a_coltivazioni
-        - else: 
-        {debug: il valore di tipoColtivazioni è {tipoColtivazioni}.}
+            <i>{debug: il fungo proposto è {fungoProposto}.}</i>   
+            -> remove_fungo_proposto
+            
+        - else:
+        <i>{debug: Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}</i>
             ~ fungoProposto = LIST_RANDOM(pianteNovità ^ pianteRicordo)
-            ~ pianteRicordo -= fungoProposto
-            ~ pianteNovità -= fungoProposto
-            ~ backupColtivabili -= fungoProposto
-        {debug: il fungo proposto è {fungoProposto}.}    
-        -> da_lista_a_coltivazioni    
+                {
+                - backupColtivabili has fungoProposto:
+                <i>{debug: backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}</i>
+                    -> remove_fungo_proposto
+                - backupColtivabili hasnt fungoProposto:
+                <i>{debug: backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}</i>
+                    -> results
+                }
         }
         
     
     - else:
-    {debug: Passo da else nella lista tipoColtivazioni perché non c'è un fungo adatto.}
+    <i>{debug: Passo da else nella lista tipoColtivazioni perché non c'è un fungo adatto.}</i>
          ~ fungoProposto = LIST_RANDOM(backupColtivabili)
          ~ backupColtivabili -= fungoProposto
-    {debug: il fungo proposto è {fungoProposto}.}     
-        -> da_lista_a_coltivazioni
+    <i>{debug: Il fungo proposto è {fungoProposto}.}</i>      
+        -> remove_fungo_proposto
     
     }
     
@@ -425,9 +415,9 @@ VAR inCrescita = 0
  ~ thirdQuest = false
  ~ counter = 0
  ~ inCrescita = 1
- {debug: Entro in da_lista_a_coltivazioni. Il valore di counter è {counter}, il valore di inCrescita è {inCrescita}. firstQuest è {firstQuest}, secondQuest è {secondQuest}, thirdQuest è {thirdQuest}}
-{debug: Gli elementi ancora coltivabili sono: {backupColtivabili}}
-{debug: Svuoto lista tipo Coltivazioni. Il contenuto di tipo Coltivazioni ora è {tipoColtivazioni}}
+ <i>{debug: Entro in da_lista_a_coltivazioni. Il valore di counter è {counter}, il valore di inCrescita è {inCrescita}. firstQuest è {firstQuest}, secondQuest è {secondQuest}, thirdQuest è {thirdQuest}.}</i>
+<i>{debug: Gli elementi ancora coltivabili sono: {backupColtivabili}.}</i>
+<i>{debug: Svuoto lista tipo Coltivazioni. Il contenuto di tipo Coltivazioni ora è {tipoColtivazioni}.}</i>
 
 {fungoProposto:
     - LicheneDegliAbissi:
@@ -453,3 +443,25 @@ VAR inCrescita = 0
 
 
 -> main
+
+
+=== remove_fungo_proposto
+//Questa azione mi permette di rimuovere il fungo selezionato da ogni lista che lo può contenere. E dato che col tempo le liste possono aumentare, devo solo mettere un remove qui e non OVUNQUE XD
+<i>{debug: Passo dalla funzione remove_fungo_proposto e rimuovo {fungoProposto} da tutte le liste che lo contengono}
+{
+    - pianteRicordo has fungoProposto:
+        ~ pianteRicordo -= fungoProposto
+    - pianteNovità has fungoProposto:    
+        ~ pianteNovità -= fungoProposto
+    - pianteCollaborazione has fungoProposto:
+        ~ pianteCollaborazione -= fungoProposto
+    - pianteCiclicità has fungoProposto:
+        ~ pianteCiclicità -= fungoProposto
+    - pianteIndipendenza has fungoProposto:
+        ~ pianteIndipendenza -= fungoProposto
+    - pianteCancellazione has fungoProposto:
+        ~ pianteCancellazione -= fungoProposto
+    - backupColtivabili has fungoProposto:
+        ~ backupColtivabili -= fungoProposto
+}
+-> da_lista_a_coltivazioni
