@@ -33,11 +33,11 @@ VAR luoghiDono = ()
 ~ temp dono = LIST_RANDOM(doniNonTrovatiLuogo)
 ~ temp dice_roll = RANDOM(1, 6)
 
-{debug: Doni non trovati: {doniNonTrovatiLuogo}}
-{debug: Doni trovati: {doniTrovati}}
-{debug: Doni donati: {doniDonati}}
-{debug: Luoghi da cui hai già ricevuto un dono: {luoghiDono}}
-{debug: Valore dado: {dice_roll}}
+// {debug: Doni non trovati: {doniNonTrovatiLuogo}}
+// {debug: Doni trovati: {doniTrovati}}
+// {debug: Doni donati: {doniDonati}}
+// {debug: Luoghi da cui hai già ricevuto un dono: {luoghiDono}}
+// {debug: Valore dado: {dice_roll}}
 
 
 
@@ -60,10 +60,10 @@ VAR luoghiDono = ()
 
 
 
-{debug: Doni non trovati: {doniNonTrovatiLuogo}}
-{debug: Doni trovati: {doniTrovati}}
-{debug: Doni donati: {doniDonati}}
-{debug: Luoghi da cui hai già ricevuto un dono: {luoghiDono}}
+// {debug: Doni non trovati: {doniNonTrovatiLuogo}}
+// {debug: Doni trovati: {doniTrovati}}
+// {debug: Doni donati: {doniDonati}}
+// {debug: Luoghi da cui hai già ricevuto un dono: {luoghiDono}}
     
 
 ->->
