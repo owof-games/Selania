@@ -25,6 +25,10 @@ VAR firstQuest = false
 VAR secondQuest = false
 VAR thirdQuest = false
 
+//Questa è una strategia (basic e temporanea) per evitare che il testing vada in loop se non ci sono combinazioni sensate di domande.
+VAR randomCounter = 0
+VAR maxRandomCounter = 50
+
 //Variabili monitoraggio stato vegetali
 VAR inCrescita = 0    
 
@@ -51,6 +55,11 @@ VAR inCrescita = 0
 
 <i>{debug: Il dado ha valore {dice}}</i>
 {
+
+    - randomCounter == maxRandomCounter:
+    {debug: randomCounter {randomCounter} ha raggiunto il livello massimo {maxRandomCounter}}
+        <i>In questo momento non è possibile coltivare altro</i>
+            -> main
     - dice == 1: 
         {
             - firstQuest == false:
@@ -70,12 +79,14 @@ VAR inCrescita = 0
                     - else:
                     <i>{debug: Non ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}</i>
                     <i>{debug: L'intersezione tra prima scelta e piantecollaborazione produce {pianteCollaborazione^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {pianteIndipendenza^firstAnswerTracker}}</i>
+                        ~ randomCounter ++
                         ->random
                 }
                 }
                     
             - else:
-            {debug: Torno a random.}
+             {debug: Il valore di firstQuest è {firstQuest} e per questo torno a random.}
+                    ~ randomCounter ++
                     -> random
         }
     
@@ -99,12 +110,14 @@ VAR inCrescita = 0
                     - else:
                     <i>{debug: Non ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}</i>
                     <i>{debug: L'intersezione tra prima scelta e piante ciclicità produce {pianteCiclicità^firstAnswerTracker}, quella tra prima scelta e piante novità produce {pianteNovità^firstAnswerTracker}.}</i>
+                            ~ randomCounter ++
                         ->random
                 }
             
             }
             - else:
             {debug: Il valore di secondQuest è {secondQuest} e per questo torno a random.}
+                        ~ randomCounter ++
                     -> random
         }
 
@@ -129,20 +142,23 @@ VAR inCrescita = 0
                     - else:
                     <i>{debug: Non ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}</i>
                     <i>{debug: L'intersezione tra prima scelta e piante cancellazione produce {pianteRicordo^firstAnswerTracker}, quella tra prima scelta e piante novità produce {pianteCancellazione^firstAnswerTracker}.}</i>
+                            ~ randomCounter ++
                         ->random
                 }
             
             }
                 
             - thirdQuest == true:
-                <i>{debug: Il valore di thirdQuest è {thirdQuest} e per questo torno a random.}</i>      
+                <i>{debug: Il valore di thirdQuest è {thirdQuest} e per questo torno a random.}</i>
+                        ~ randomCounter ++
                     -> random
         }
 
 
     - else:
-        <i>{debug: Il dado ha valore {dice} e non ci sono condizioni valide per proporre una delle tre domande, per cui vado a random.}</i>
-                    -> random
+        <i>{debug: Il dado ha valore {dice} e non ci sono condizioni valide per proporre una delle tre domande, per offro una risposta negativa.}</i>
+        <i>In questo momento non è possibile coltivare nulla</i>
+                    -> main
 }
 
 
@@ -476,6 +492,7 @@ VAR inCrescita = 0
  ~ counter = 0
  ~ inCrescita = 1
  ~ firstAnswerTracker = ()
+ ~ randomCounter = 0
 
  
  <i>{debug: Entro in da_lista_a_coltivazioni. Il valore di counter è {counter}, il valore di inCrescita è {inCrescita}. firstQuest è {firstQuest}, secondQuest è {secondQuest}, thirdQuest è {thirdQuest}.}</i>
