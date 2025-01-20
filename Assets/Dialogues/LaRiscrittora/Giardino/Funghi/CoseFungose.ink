@@ -1,17 +1,18 @@
+LIST growStep = stepZero, stepUno, stepDue, stepTre
 === plant_check
 TODO: probabilmente ha più senso fare uno script come quello per l'albero e bona, così ho un solo oggetto.
-LIST growStep = stepZero, stepUno, stepDue, stepTre
+
 {
-    - growStep has stepZero:
+    - inCrescita < 2:
         ~ growStep = ()
         ~ growStep += stepZero
-    - growStep has stepUno:
+    - inCrescita < 4:
         ~ growStep = ()
         ~ growStep += stepUno    
-    - growStep has stepDue:
+    - inCrescita < 6:
         ~ growStep = ()
         ~ growStep += stepDue
-    - inCrescita > 8:
+    - else:
         ~ growStep = ()
         ~ growStep += stepTre
 
@@ -54,7 +55,7 @@ LIST growStep = stepZero, stepUno, stepDue, stepTre
         - growStep has stepZero: -> canto_delle_compagne.step_zero    
         - growStep has stepUno: -> canto_delle_compagne.step_uno
         - growStep has stepDue: -> canto_delle_compagne.step_due
-        - growStep has stepTre::
+        - growStep has stepTre:
              ~ move_entity(CantoDelleCompagne, Funghi)
             -> canto_delle_compagne.step_tre
         // - growStep has stepTre:: -> canto_delle_compagne.step_quattro
@@ -76,7 +77,7 @@ LIST growStep = stepZero, stepUno, stepDue, stepTre
         - growStep has stepZero: -> bacca_della_addolorata.step_zero 
         - growStep has stepUno: -> bacca_della_addolorata.step_uno
         - growStep has stepDue: -> bacca_della_addolorata.step_due
-        - growStep has stepTre::
+        - growStep has stepTre:
              ~ move_entity(BaccaDellaAddolorata, Funghi)
             -> bacca_della_addolorata.step_tre
         // - growStep has stepTre:: -> bacca_della_addolorata.step_quattro
@@ -87,7 +88,7 @@ LIST growStep = stepZero, stepUno, stepDue, stepTre
         - growStep has stepZero: -> non_ti_scordar_di_te.step_zero     
         - growStep has stepUno: -> non_ti_scordar_di_te.step_uno
         - growStep has stepDue: -> non_ti_scordar_di_te.step_due
-        - growStep has stepTre::
+        - growStep has stepTre:
              ~ move_entity(NonTiScordarDiTe, Funghi)
             -> non_ti_scordar_di_te.step_tre
         //- growStep has stepTre:: -> non_ti_scordar_di_te.step_quattro
