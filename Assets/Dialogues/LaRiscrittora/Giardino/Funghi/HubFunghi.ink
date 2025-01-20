@@ -7,7 +7,7 @@
         - fungoProposto != ():
             -> cura
         - backupColtivabili == ():
-            <i>Al momento non è possibile coltivare nulla</i> 
+            <i>Al momento non è possibile coltivare nulla</i>. 
             -> main
         - else:     
             -> pre_test

@@ -33,6 +33,7 @@ VAR inCrescita = 0
 
 === test
 {debug: Sono passato da <i>test</i>.}
+{debug: Gli elementi ancora coltivabili sono: {backupColtivabili}}
 
 {
     - counter < 2:
@@ -139,7 +140,7 @@ VAR inCrescita = 0
 
  
  === results
-{debug: Entro in results}
+{debug: <i>Entro in results</i>}
  
     {
     - tipoColtivazioni == (collaborazione, ciclicità):{
@@ -425,6 +426,7 @@ VAR inCrescita = 0
  ~ counter = 0
  ~ inCrescita = 1
  {debug: Entro in da_lista_a_coltivazioni. Il valore di counter è {counter}, il valore di inCrescita è {inCrescita}. firstQuest è {firstQuest}, secondQuest è {secondQuest}, thirdQuest è {thirdQuest}}
+{debug: Gli elementi ancora coltivabili sono: {backupColtivabili}}
 {debug: Svuoto lista tipo Coltivazioni. Il contenuto di tipo Coltivazioni ora è {tipoColtivazioni}}
 
 {fungoProposto:
