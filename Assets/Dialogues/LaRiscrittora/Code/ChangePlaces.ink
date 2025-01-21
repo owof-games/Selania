@@ -1,6 +1,5 @@
-//Funzione per spostarsi da un luogo all'altro a seconda di dove mi trovo -> da vedere se ha senso o meno.
- TODO: vedere se ha senso accorpare tutte le azioni che faccio a ogni cambio di luogo sotto un unico nodo o funzione.
- 
+//Funzione per spostarsi da un luogo all'altro a seconda di dove mi trovo
+
  === move_between_rooms(my_location)
  //Strade bloccate
     + {are_two_entities_together(PG, FromForestToLibrary)} [FromForestToLibrary]
@@ -17,7 +16,6 @@
 //Strade per arrivare al Bus Stop    
     + {are_two_entities_together(PG, FromForestToBusStop)}  [FromForestToBusStop]
             ~ move_entity(PG, BusStop)
-            ~ inCrescita ++
             ~ counterSpostamenti ++    
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
@@ -26,7 +24,6 @@
 //Streets to Garden       
     + {are_two_entities_together(PG, FromBusStopToForest)} [FromBusStopToForest]
             ~ move_entity(PG, Forest)
-            ~ inCrescita ++
             ~ counterSpostamenti ++
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
@@ -35,7 +32,6 @@
         
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToForest)} [FromGreenhouseMiddlePathToForest]
             ~ move_entity(PG, Forest)
-            ~ inCrescita ++
             ~ counterSpostamenti ++
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
@@ -44,7 +40,6 @@
  //Streets to GreenhouseMiddlePath   
     + {are_two_entities_together(PG, FromGreenhouseToGreenhouseMiddlePath)} [FromGreenhouseToGreenhouseMiddlePath]
             ~ move_entity(PG, GreenhouseMiddlePath)
-            ~ inCrescita ++
             ~ counterSpostamenti ++
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
@@ -52,7 +47,6 @@
         
     + {are_two_entities_together(PG, FromForestToGreenhouseMiddlePath)} [FromForestToGreenhouseMiddlePath]
             ~ move_entity(PG, GreenhouseMiddlePath)
-            ~ inCrescita ++
             ~ counterSpostamenti ++
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
@@ -62,8 +56,8 @@
 //Streets to Greenhouse
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToGreenhouse)}  [FromGreenhouseMiddlePathToGreenhouse]
             ~ move_entity(PG, Greenhouse)
-            ~ inCrescita ++
-            ~ counterSpostamenti ++    
+            ~ counterSpostamenti ++
+            ~ inCrescita ++ 
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
         -> greenhouse
