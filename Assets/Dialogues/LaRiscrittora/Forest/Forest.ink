@@ -14,9 +14,9 @@
         ~ temp dice = RANDOM(1, 2)
         {
             - dice == 1:
-                <i>C'è una blanket abbandonata sulla panchina.</i>
+                <i>C'è una coperta abbandonata sulla panchina.</i>
                 <i>Portala con te: qualcuno potrebbe avere freddo.</i>
-                <b>Hai ottenuto: blanket</b>
+                <b>Hai ottenuto: coperta</b>
                 ~ findedGifts += blanket
                 -> main
             - dice == 2:

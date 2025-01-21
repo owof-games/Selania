@@ -416,11 +416,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 1863324329}
   image: {fileID: 68773256}
-  StepVuoto: {fileID: 21300000, guid: 2939438a51ca72b4d9c85ae38b69b098, type: 3}
+  NotStarted: {fileID: 21300000, guid: 2939438a51ca72b4d9c85ae38b69b098, type: 3}
   StepZero: {fileID: 21300000, guid: b85a49b2d23bf04498e4a7acc9a945f0, type: 3}
-  StepUno: {fileID: 21300000, guid: e0b50f960ffc4f540bc8b24807dee2c4, type: 3}
-  StepDue: {fileID: 21300000, guid: e0b50f960ffc4f540bc8b24807dee2c4, type: 3}
-  StepTre: {fileID: 21300000, guid: 60a0cee66cfb3f14185ee42aba6ff60d, type: 3}
+  StepOne: {fileID: 21300000, guid: e0b50f960ffc4f540bc8b24807dee2c4, type: 3}
+  StepTwo: {fileID: 21300000, guid: e0b50f960ffc4f540bc8b24807dee2c4, type: 3}
+  StepThree: {fileID: 21300000, guid: 60a0cee66cfb3f14185ee42aba6ff60d, type: 3}
 --- !u!114 &68773256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -850,11 +850,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 1863324329}
   image: {fileID: 141645127}
-  StepVuoto: {fileID: 21300000, guid: 01c39b2cefb71dc45b28ac02fe539c91, type: 3}
+  NotStarted: {fileID: 21300000, guid: 01c39b2cefb71dc45b28ac02fe539c91, type: 3}
   StepZero: {fileID: 21300000, guid: 300cd282e60c0e741a18bb92ca49a1d9, type: 3}
-  StepUno: {fileID: 21300000, guid: 300cd282e60c0e741a18bb92ca49a1d9, type: 3}
-  StepDue: {fileID: 21300000, guid: 300cd282e60c0e741a18bb92ca49a1d9, type: 3}
-  StepTre: {fileID: 21300000, guid: 674bca27cf1f7214faee63c902ff374a, type: 3}
+  StepOne: {fileID: 21300000, guid: 300cd282e60c0e741a18bb92ca49a1d9, type: 3}
+  StepTwo: {fileID: 21300000, guid: 300cd282e60c0e741a18bb92ca49a1d9, type: 3}
+  StepThree: {fileID: 21300000, guid: 674bca27cf1f7214faee63c902ff374a, type: 3}
 --- !u!114 &141645127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5499,11 +5499,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 1863324329}
   image: {fileID: 1065807756}
-  StepVuoto: {fileID: 21300000, guid: 50b9b329985463d49b51052f0e66ce8e, type: 3}
+  NotStarted: {fileID: 21300000, guid: 50b9b329985463d49b51052f0e66ce8e, type: 3}
   StepZero: {fileID: 21300000, guid: 69be503ddaed2fb46b7551dc2435575f, type: 3}
-  StepUno: {fileID: 21300000, guid: 026c331b9e3543049a4829cf1852a90a, type: 3}
-  StepDue: {fileID: 21300000, guid: a2691d2710babce4d97fac9b07fc858d, type: 3}
-  StepTre: {fileID: 21300000, guid: a1c3885d0ac24c949adc759bc4cc58b3, type: 3}
+  StepOne: {fileID: 21300000, guid: 026c331b9e3543049a4829cf1852a90a, type: 3}
+  StepTwo: {fileID: 21300000, guid: a2691d2710babce4d97fac9b07fc858d, type: 3}
+  StepThree: {fileID: 21300000, guid: a1c3885d0ac24c949adc759bc4cc58b3, type: 3}
 --- !u!114 &1065807756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6517,11 +6517,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 1863324329}
   image: {fileID: 1347029863}
-  StepVuoto: {fileID: 21300000, guid: 0d7379880062f624bba82740977276d3, type: 3}
+  NotStarted: {fileID: 21300000, guid: 0d7379880062f624bba82740977276d3, type: 3}
   StepZero: {fileID: 21300000, guid: 0d7379880062f624bba82740977276d3, type: 3}
-  StepUno: {fileID: 21300000, guid: b249f4a525ed9574d8d5eb7b3da35e73, type: 3}
-  StepDue: {fileID: 21300000, guid: 6da3a3433a06e054ca8d45d35722f295, type: 3}
-  StepTre: {fileID: 21300000, guid: 33e109928f2a19d4da067d1c478cb339, type: 3}
+  StepOne: {fileID: 21300000, guid: b249f4a525ed9574d8d5eb7b3da35e73, type: 3}
+  StepTwo: {fileID: 21300000, guid: 6da3a3433a06e054ca8d45d35722f295, type: 3}
+  StepThree: {fileID: 21300000, guid: 33e109928f2a19d4da067d1c478cb339, type: 3}
 --- !u!114 &1347029863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6756,11 +6756,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 1863324329}
   image: {fileID: 1377626964}
-  StepVuoto: {fileID: 21300000, guid: 8c96ecc09bd932e499eb3c9bd3f41985, type: 3}
+  NotStarted: {fileID: 21300000, guid: 8c96ecc09bd932e499eb3c9bd3f41985, type: 3}
   StepZero: {fileID: 21300000, guid: 04c31c9511dd6e7479d92a3b017089fd, type: 3}
-  StepUno: {fileID: 21300000, guid: 99e45f625c497844998dc1bc8368e446, type: 3}
-  StepDue: {fileID: 21300000, guid: 99e45f625c497844998dc1bc8368e446, type: 3}
-  StepTre: {fileID: 2148471270680927742, guid: 6b093b293994b404ca5c4f4541c6beec, type: 3}
+  StepOne: {fileID: 21300000, guid: 99e45f625c497844998dc1bc8368e446, type: 3}
+  StepTwo: {fileID: 21300000, guid: 99e45f625c497844998dc1bc8368e446, type: 3}
+  StepThree: {fileID: 2148471270680927742, guid: 6b093b293994b404ca5c4f4541c6beec, type: 3}
 --- !u!114 &1377626964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7072,11 +7072,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 1863324329}
   image: {fileID: 1438031604}
-  StepVuoto: {fileID: 21300000, guid: 4515f1f699f8e5c4084cd3b9cdcfc32d, type: 3}
+  NotStarted: {fileID: 21300000, guid: 4515f1f699f8e5c4084cd3b9cdcfc32d, type: 3}
   StepZero: {fileID: 21300000, guid: a141c6e257e87e543be2f58e3fdd00dd, type: 3}
-  StepUno: {fileID: 21300000, guid: bb754686074338e4dae1d756c8b89d22, type: 3}
-  StepDue: {fileID: 21300000, guid: 552bdb46fdacc8d4494639c3ad81d513, type: 3}
-  StepTre: {fileID: 21300000, guid: cac6525bed1edd24d8d93c860a0fb64f, type: 3}
+  StepOne: {fileID: 21300000, guid: bb754686074338e4dae1d756c8b89d22, type: 3}
+  StepTwo: {fileID: 21300000, guid: 552bdb46fdacc8d4494639c3ad81d513, type: 3}
+  StepThree: {fileID: 21300000, guid: cac6525bed1edd24d8d93c860a0fb64f, type: 3}
 --- !u!114 &1438031604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7783,11 +7783,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 1863324329}
   image: {fileID: 1706631908}
-  StepVuoto: {fileID: -3019154105434497370, guid: 016c5b8b33c947441a73a36b2d4ddf02, type: 3}
+  NotStarted: {fileID: -3019154105434497370, guid: 016c5b8b33c947441a73a36b2d4ddf02, type: 3}
   StepZero: {fileID: -3871811294541048848, guid: 525d0b31d95bba3458aca23a58bd5575, type: 3}
-  StepUno: {fileID: -3871811294541048848, guid: 525d0b31d95bba3458aca23a58bd5575, type: 3}
-  StepDue: {fileID: -3871811294541048848, guid: 525d0b31d95bba3458aca23a58bd5575, type: 3}
-  StepTre: {fileID: 21300000, guid: 91a1ce9d5e20078408c6951f9e41f8a4, type: 3}
+  StepOne: {fileID: -3871811294541048848, guid: 525d0b31d95bba3458aca23a58bd5575, type: 3}
+  StepTwo: {fileID: 21300000, guid: 91a1ce9d5e20078408c6951f9e41f8a4, type: 3}
+  StepThree: {fileID: 21300000, guid: 91a1ce9d5e20078408c6951f9e41f8a4, type: 3}
 --- !u!114 &1706631908
 MonoBehaviour:
   m_ObjectHideFlags: 0
