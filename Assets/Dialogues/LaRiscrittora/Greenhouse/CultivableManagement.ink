@@ -1,6 +1,6 @@
 //VARIABILI PER LA GESTIONE DELLA CRESCITA DEI COLTIVABILI
 LIST growStep = stepVuoto, stepZero, stepUno, stepDue, stepTre
-VAR statoCantoDelleCompagne = stepVuoto
+VAR statoCantoDelleCompagne = stepDue
 VAR statoLicheneDegliAbissi = stepVuoto
 VAR statoMuschioDelleAmanti = stepVuoto
 VAR statoBrinaDellImpossibile = stepVuoto

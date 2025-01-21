@@ -1,7 +1,7 @@
 using UnityEngine;
 using Ink.Runtime;
 using UnityEngine.UI;
-using Debug = UnityEngine.Debug;
+//using Debug = UnityEngine.Debug;
 
 
 public class CantoDelleCompagne : MonoBehaviour
@@ -21,7 +21,6 @@ public class CantoDelleCompagne : MonoBehaviour
     void Update()
     {
         StatoColtivabile();
-        Debug.Log("Sto chiamando StatoColtivabile per Canto Della Compagna");
         
     }
 
@@ -32,29 +31,28 @@ public class CantoDelleCompagne : MonoBehaviour
     {
         //Chiamare il dialogue manager e fargli eseguire questa riga di codice
         var step = dialogueManager.GetEffettivoStatoCantoDelleCompagne();
-        if (step.ContainsItemNamed("StepVuoto"))
+        if (step.ContainsItemNamed("stepVuoto"))
         {
-            Debug.Log("Lo stato del Canto della Compagna è" + step);
             image.sprite = StepVuoto;
         }
-        else if (step.ContainsItemNamed("StepZero"))
+        else if (step.ContainsItemNamed("stepZero"))
 
-        {   Debug.Log("Lo stato del Canto della Compagna è" + step);
+        {   
             image.sprite = StepZero;
         }
-        else if (step.ContainsItemNamed("StepUno"))
+        else if (step.ContainsItemNamed("stepUno"))
 
-        {   Debug.Log("Lo stato del Canto della Compagna è" + step);
+        {   
             image.sprite = StepUno;
         }
-        else if (step.ContainsItemNamed("StepDue"))
+        else if (step.ContainsItemNamed("stepDue"))
         {   
-            Debug.Log("Lo stato del Canto della Compagna è" + step);
+           
             image.sprite = StepDue;
         }
-        else if (step.ContainsItemNamed("StepTre"))
+        else if (step.ContainsItemNamed("stepTre"))
         {
-            Debug.Log("Lo stato del Canto della Compagna è" + step);
+            
             image.sprite = StepTre;
         }
     }
