@@ -3,7 +3,7 @@
 VAR currentReceiver = ()
 
 === contenuti_inventario ===
-+ [Inventario]
++ [Inventory]
     {doniTrovati != (): -> inventarietto|->vuoto}
 
     =inventarietto

@@ -45,16 +45,16 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Greenhouse Middle Path Backgrounds")]
     [SerializeField] private Sprite backGreenhouseMiddlePath;    
 
-    [Header("Pets Backgrounds")]
+    [Header("Nest Backgrounds")]
     [SerializeField] private Sprite backNest;
 
-    [Header("Labirint Backgrounds")]
+    [Header("Labyrinth Backgrounds")]
     [SerializeField] private Sprite backLabyrinth;
 
     [Header("Library Backgrounds")]
     [SerializeField] private Sprite backLibrary;
 
-    [Header("Tea Backgrounds")]
+    [Header("Laboratory Backgrounds")]
     [SerializeField] private Sprite backLaboratory;
 
 
@@ -151,7 +151,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 {
                     bool found = false;
 
-                    if (charactersInThePlace.ContainsItemNamed(entity.name) || entity.name == "Load" || entity.name == "Save" || entity.name == "Inventario" || entity.name == "Quit")
+                    if (charactersInThePlace.ContainsItemNamed(entity.name) || entity.name == "Load" || entity.name == "Save" || entity.name == "Inventory" || entity.name == "Quit")
                     {
                         found = true;
                     }
@@ -325,7 +325,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                         ambientSounds.Play();
                     }
                     //TAG MUSICA SOTTOFONDO BusStop
-                    if (tagValue == "busstopounds")
+                    if (tagValue == "busstopSounds")
                     {
                         ambientSounds.clip = busstopSounds;
                         ambientSounds.Play();
@@ -339,7 +339,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     }
 
                     //MUSIC TAG FOR GREENHOUSE MIDDLE PATH
-                    if (tagValue == "greenhousemiddlepathSounds")
+                    if (tagValue == "greenhouseMiddlePathSounds")
                     {
                         ambientSounds.clip = greenhousemiddlepathSounds;
                         ambientSounds.Play();

@@ -56,7 +56,7 @@
         ~ return "backLabyrinth"
 
     - entity_location(PG) == Libary:
-       ~ return "backLibary"
+       ~ return "backLibrary"
 
     - entity_location(PG) == Laboratory:
        ~ return "backLaboratory"       
@@ -68,7 +68,7 @@
 {
 
     - entity_location(PG) == Forest:
-        ~ return "gardenSounds"
+        ~ return "forestSounds"
         
     - entity_location(PG) == BusStop:
         ~ return "busstopSounds"
