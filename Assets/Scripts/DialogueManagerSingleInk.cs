@@ -223,7 +223,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
         }
 
 
-        StartCoroutine(SelectFirstChoice());
+        //StartCoroutine(SelectFirstChoice());
 
     }
 

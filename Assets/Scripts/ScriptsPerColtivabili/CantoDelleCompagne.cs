@@ -22,6 +22,7 @@ public class CantoDelleCompagne : MonoBehaviour
     {
         StatoColtivabile();
         Debug.Log("Sto chiamando StatoColtivabile per Canto Della Compagna");
+        
     }
 
     
