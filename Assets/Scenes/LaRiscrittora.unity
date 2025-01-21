@@ -7479,7 +7479,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1625733884}
   continueButton: {fileID: 921273106}
   allPlaces:
-  - contenutoBusStop
+  - busStopContents
   - forestContents
   - contenutoGreenhouseMiddlePath
   - contenutoFunghi

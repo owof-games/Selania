@@ -3,7 +3,7 @@
  
  === move_between_rooms(my_location)
  //Strade bloccate
-    + {are_two_entities_together(PG, FromGardenToNothing)} [FromGardenToNothing]
+    + {are_two_entities_together(PG, FromForestToLibrary)} [FromForestToLibrary]
             <i>Questa strada risulta bloccata, per ora.</i>
         -> main
     
@@ -15,7 +15,7 @@
         // -> main
 
 //Strade per arrivare al Bus Stop    
-    + {are_two_entities_together(PG, FromGardenToBusStop)}  [FromGardenToBusStop]
+    + {are_two_entities_together(PG, FromForestToBusStop)}  [FromForestToBusStop]
             ~ move_entity(PG, BusStop)
             ~ inCrescita ++
             ~ counterSpostamenti ++    
@@ -50,7 +50,7 @@
             -> story_time_management_for_PNG->
         -> greenhouse_middle_path
         
-    + {are_two_entities_together(PG, FromGardenToGreenhouseMiddlePath)} [FromGardenToGreenhouseMiddlePath]
+    + {are_two_entities_together(PG, FromForestToGreenhouseMiddlePath)} [FromForestToGreenhouseMiddlePath]
             ~ move_entity(PG, GreenhouseMiddlePath)
             ~ inCrescita ++
             ~ counterSpostamenti ++

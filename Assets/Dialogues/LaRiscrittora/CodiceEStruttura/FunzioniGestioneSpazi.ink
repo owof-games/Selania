@@ -4,7 +4,7 @@
 {
     - forestContents has entity:
         ~ return Forest
-    - contenutoBusStop has entity:
+    - busStopContents has entity:
         ~ return BusStop
     - contenutoBiblioteca has entity:
         ~ return Biblioteca
@@ -39,7 +39,7 @@
     - Forest:
         ~ forestContents -= entity
     - BusStop:
-        ~ contenutoBusStop -= entity
+        ~ busStopContents -= entity
     - Biblioteca:
         ~ contenutoBiblioteca -= entity
     - Falene:
@@ -63,7 +63,7 @@
     - Forest:
         ~ forestContents += entity
     - BusStop:
-        ~ contenutoBusStop += entity
+        ~ busStopContents += entity
     - Biblioteca:
         ~ contenutoBiblioteca += entity
     - Falene:
