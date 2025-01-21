@@ -2391,7 +2391,7 @@ GameObject:
   - component: {fileID: 600094919}
   - component: {fileID: 600094918}
   m_Layer: 5
-  m_Name: FromGreenhouseMiddlePathToGarden
+  m_Name: FromGreenhouseMiddlePathToForest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2469,7 +2469,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FromGreenhouseMiddlePathToGarden
+          m_StringArgument: FromGreenhouseMiddlePathToForest
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &600094919
@@ -3450,7 +3450,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FromBusStopToGarden
+          m_StringArgument: FromBusStopToForest
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &760274122
