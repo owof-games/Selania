@@ -25,21 +25,21 @@
                 
 //Streets to Garden       
     + {are_two_entities_together(PG, FromBusStopToGarden)} [FromBusStopToGarden]
-            ~ move_entity(PG, Giardino)
+            ~ move_entity(PG, Forest)
             ~ inCrescita ++
             ~ counterSpostamenti ++
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
-        -> hub_giardino
+        -> forest
         
         
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToGarden)} [FromGreenhouseMiddlePathToGarden]
-            ~ move_entity(PG, Giardino)
+            ~ move_entity(PG, Forest)
             ~ inCrescita ++
             ~ counterSpostamenti ++
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
-        -> hub_giardino  
+        -> forest
     
  //Streets to GreenhouseMiddlePath   
     + {are_two_entities_together(PG, FromGreenhouseToGreenhouseMiddlePath)} [FromGreenhouseToGreenhouseMiddlePath]
@@ -68,7 +68,7 @@
             -> story_time_management_for_PNG->
         -> hub_funghi 
 
-// + {my_location == Giardino && storiaDue == Conclusa && storiaTre == Conclusa && storiaQuattro == Conclusa} [Biblioteca]
+// + {my_location == Forest && storiaDue == Conclusa && storiaTre == Conclusa && storiaQuattro == Conclusa} [Biblioteca]
 //     ~ move_entity(PG, Biblioteca)
 //     ~ inCrescita ++
 //     ~ counterSpostamenti ++    
@@ -78,7 +78,7 @@
     
 //     -> hub_biblioteca
 
-// + {my_location == Giardino && storiaUno == Conclusa} [Falene]
+// + {my_location == Forest && storiaUno == Conclusa} [Falene]
 //     ~ move_entity(PG, Falene)
 //     ~ inCrescita ++
 //     ~ counterSpostamenti ++    
@@ -90,7 +90,7 @@
     
 
     
-// + {my_location == Giardino && storiaUno == Conclusa} [Labirinto]
+// + {my_location == Forest && storiaUno == Conclusa} [Labirinto]
 //     ~ move_entity(PG, Labirinto)
 //     ~ inCrescita ++
 //     ~ counterSpostamenti ++    
@@ -100,7 +100,7 @@
     
 //     -> hub_labirinto
     
-// + {my_location == Giardino && storiaDue == Conclusa && storiaTre == Conclusa && storiaQuattro == Conclusa} [Tisane]
+// + {my_location == Forest && storiaDue == Conclusa && storiaTre == Conclusa && storiaQuattro == Conclusa} [Tisane]
 //     ~ move_entity(PG, Tisane)
 //     ~ inCrescita ++
 //     ~ counterSpostamenti ++    

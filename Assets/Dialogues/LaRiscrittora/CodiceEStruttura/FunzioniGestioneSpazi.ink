@@ -2,8 +2,8 @@
 
 === function entity_location(entity)
 {
-    - contenutoGiardino has entity:
-        ~ return Giardino
+    - forestContents has entity:
+        ~ return Forest
     - contenutoBusStop has entity:
         ~ return BusStop
     - contenutoBiblioteca has entity:
@@ -23,7 +23,7 @@
     - else:
         DEBUG: error, cannot find {entity} anywhere!
         {contenutoCasettaAnime}
-        ~ return Giardino
+        ~ return Forest
 }
 
 
@@ -36,8 +36,8 @@
 
 ~ temp CurrentLocation = entity_location(entity)
 {CurrentLocation:
-    - Giardino:
-        ~ contenutoGiardino -= entity
+    - Forest:
+        ~ forestContents -= entity
     - BusStop:
         ~ contenutoBusStop -= entity
     - Biblioteca:
@@ -60,8 +60,8 @@
 }
 
 {destination:
-    - Giardino:
-        ~ contenutoGiardino += entity
+    - Forest:
+        ~ forestContents += entity
     - BusStop:
         ~ contenutoBusStop += entity
     - Biblioteca:

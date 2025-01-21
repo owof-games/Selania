@@ -37,7 +37,7 @@
 === function tag_background()
 {
 
-    - entity_location(PG) == Giardino:
+    - entity_location(PG) == Forest:
         ~ return "backGiardino"
         
     - entity_location(PG) == BusStop:
@@ -67,7 +67,7 @@
 === function tag_ambientSounds()
 {
 
-    - entity_location(PG) == Giardino:
+    - entity_location(PG) == Forest:
         ~ return "gardenSounds"
         
     - entity_location(PG) == BusStop:

@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 112976948}
   - component: {fileID: 112976947}
   m_Layer: 5
-  m_Name: FromGardenToBusStop
+  m_Name: FromForestToBusStop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -530,7 +530,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FromGardenToBusStop
+          m_StringArgument: FromForestToBusStop
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &112976948
@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 132282103}
   - component: {fileID: 132282102}
   m_Layer: 5
-  m_Name: FromGardenToNothing
+  m_Name: FromForestToLibrary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -662,7 +662,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FromGardenToNothing
+          m_StringArgument: FromForestToLibrary
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &132282103
@@ -2743,7 +2743,7 @@ GameObject:
   - component: {fileID: 629166473}
   - component: {fileID: 629166472}
   m_Layer: 5
-  m_Name: FromGardenToGreenhouseMiddlePath
+  m_Name: FromForestToGreenhouseMiddlePath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2802,7 +2802,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FromGardenToGreenhouseMiddlePath
+          m_StringArgument: FromForestToGreenhouseMiddlePath
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &629166473
@@ -7480,7 +7480,7 @@ MonoBehaviour:
   continueButton: {fileID: 921273106}
   allPlaces:
   - contenutoBusStop
-  - contenutoGiardino
+  - forestContents
   - contenutoGreenhouseMiddlePath
   - contenutoFunghi
   - contenutoLabirinto

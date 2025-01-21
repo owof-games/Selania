@@ -1,11 +1,10 @@
-=== hub_giardino ===
+=== forest ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-{hub_giardino == 1:<i>Questo è il giardino</i>|<i>Il giardino {~ è una distesa di fresca ombra|è canto sospeso|riposa}</i>}.
+{forest == 1:<i>Questo è il giardino</i>|<i>Il giardino {~ è una distesa di fresca ombra|è canto sospeso|riposa}</i>}.
     + [Mi guardo attorno.]
     -
-
--> main
+    -> main
 
 
 === bench

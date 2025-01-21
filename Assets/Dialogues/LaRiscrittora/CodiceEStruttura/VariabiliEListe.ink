@@ -11,13 +11,13 @@ LIST pronomi = maschili, femminili, neutri
 VAR counterSpostamenti = 0
 
 //Lista di tutti i luoghi del gioco
-LIST luoghi = Giardino, BusStop, Funghi, Biblioteca, Falene, Labirinto, Tisane, CasettaAnime, GreenhouseMiddlePath
+LIST luoghi = Forest, BusStop, Funghi, Biblioteca, Falene, Labirinto, Tisane, CasettaAnime, GreenhouseMiddlePath
 
 //Settaggio luoghi attivi a seconda del tier
-VAR firstTierPlaces =(Giardino, BusStop, GreenhouseMiddlePath)
-VAR secondTierPlaces =(Giardino, BusStop, Biblioteca, GreenhouseMiddlePath)
-VAR thirdTierPlaces = (Giardino, BusStop, Biblioteca, Falene, GreenhouseMiddlePath)
-VAR fourthTierPlaces = (Giardino, BusStop, Biblioteca, Falene, Tisane, GreenhouseMiddlePath)
+VAR firstTierPlaces =(Forest, BusStop, GreenhouseMiddlePath)
+VAR secondTierPlaces =(Forest, BusStop, Biblioteca, GreenhouseMiddlePath)
+VAR thirdTierPlaces = (Forest, BusStop, Biblioteca, Falene, GreenhouseMiddlePath)
+VAR fourthTierPlaces = (Forest, BusStop, Biblioteca, Falene, Tisane, GreenhouseMiddlePath)
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
 LIST characters = Mentore, PG, PersonaggiaUno, PersonaggiaDue, PersonaggiaTre, PersonaggiaQuattro, PersonaggiaCinque, PersonaggiaSei, PersonaggiaSette
@@ -32,7 +32,7 @@ LIST mushrooms = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, Canto
 
 
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
-VAR contenutoGiardino = (Mentore, Bench, TheFungus, FromGardenToBusStop, FromGardenToGreenhouseMiddlePath, FromGardenToNothing)
+VAR forestContents = (Mentore, Bench, TheFungus, FromGardenToBusStop, FromGardenToGreenhouseMiddlePath, FromGardenToNothing)
 VAR contenutoBusStop = (FromBusStopToGarden, PG, StartingNote)
 VAR contenutoFunghi = (FromGreenhouseToGreenhouseMiddlePath, WateringCan, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
 VAR contenutoGreenhouseMiddlePath = (FromGreenhouseMiddlePathToGarden, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNothing)
