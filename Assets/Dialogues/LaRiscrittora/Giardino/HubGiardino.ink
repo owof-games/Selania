@@ -26,8 +26,8 @@
     }
     -> main
 
-=== tree
-+ {are_two_entities_together(Tree, PG)} [Tree]
+=== the_fungus
++ {are_two_entities_together(TheFungus, PG)} [TheFungus]
     <i>L'albero è smonco</i>.
     {firstTier && doniTrovati hasnt vasovuoto:
         ~ temp dice = RANDOM(1, 2)

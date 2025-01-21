@@ -35,7 +35,7 @@
 
 //Elementi del giardino
 <- bench
-<- tree
+<- the_fungus
 
 //Elementi della fermata del bus
 <- starting_note
