@@ -55,42 +55,42 @@ INCLUDE BusStop\HubBusStop.ink
 
 
 //File dedicata alla gestione del giardino
-INCLUDE Giardino\HubGiardino.ink
+INCLUDE Forest\Forest.ink
 
 //Cura di fiori e funghi
-INCLUDE Giardino\Funghi\HubFunghi.ink
-INCLUDE Giardino\Funghi\CoseFungose.ink
-INCLUDE Giardino\Funghi\VarEFunGestioneFunghi.ink
-INCLUDE Giardino\Funghi\GreenhouseMiddlePath.ink
+INCLUDE Forest\Greenhouse\Greenhouse.ink
+INCLUDE Forest\Greenhouse\Cultivable.ink
+INCLUDE Forest\Greenhouse\CultivableManagement.ink
+INCLUDE Forest\Greenhouse\GreenhouseMiddlePath.ink
 
 
 //LUOGHI CHE SI SBLOCCANO COL SECONDO TIER
 
 //Angolo delle falene
-INCLUDE Giardino\Falene\HubFalene.ink
-INCLUDE Giardino\Falene\CoseFalene.ink
+INCLUDE Forest\Falene\HubFalene.ink
+INCLUDE Forest\Falene\CoseFalene.ink
 
 
 //Il labirinto
-INCLUDE Giardino\Labirinto\HubLabirinto.ink
-INCLUDE Giardino\Labirinto\CoseLabirinto.ink
-INCLUDE Giardino\Labirinto\Specchio.ink
+INCLUDE Forest\Labirinto\HubLabirinto.ink
+INCLUDE Forest\Labirinto\CoseLabirinto.ink
+INCLUDE Forest\Labirinto\Specchio.ink
 
 
 //LUOGHI CHE SI SBLOCCANO COL TERZO TIER
 
 //Angolo delle tisane
-INCLUDE Giardino\Tisane\HubTisane.ink
-INCLUDE Giardino\Tisane\CoseTisane.ink
-INCLUDE Giardino\Tisane\DipintiERitratti.ink
+INCLUDE Forest\Tisane\HubTisane.ink
+INCLUDE Forest\Tisane\CoseTisane.ink
+INCLUDE Forest\Tisane\DipintiERitratti.ink
 
 //Storie dalla biblioteca
-INCLUDE Giardino\Biblioteca\HubBiblioteca.ink
-INCLUDE Giardino\Biblioteca\RaccontoUno.ink
-INCLUDE Giardino\Biblioteca\RaccontoDue.ink
-INCLUDE Giardino\Biblioteca\RaccontoTre.ink
-INCLUDE Giardino\Biblioteca\RaccontoQuattro.ink
-INCLUDE Giardino\Biblioteca\GestioneBiblioteca.Ink.ink
+INCLUDE Forest\Biblioteca\HubBiblioteca.ink
+INCLUDE Forest\Biblioteca\RaccontoUno.ink
+INCLUDE Forest\Biblioteca\RaccontoDue.ink
+INCLUDE Forest\Biblioteca\RaccontoTre.ink
+INCLUDE Forest\Biblioteca\RaccontoQuattro.ink
+INCLUDE Forest\Biblioteca\GestioneBiblioteca.Ink.ink
 
 
 
