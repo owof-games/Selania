@@ -148,7 +148,6 @@
           -> main
           
     = step_tre
-    // + {are_two_entities_together(LicheneDegliAbissi, PG)} [LicheneDegliAbissi]
         <i>Eccolo qui. Un <b>Lichene degli abissi</b></i>
         <i>Il lichene degli abissi è una danza, un roteare costante di fungo ed alga. Un ripetersi anche nell'errore, nel dolore.</i>
         <i>Alga e fungo girano e rigirano senza mai afferrarsi.</i>
@@ -158,19 +157,13 @@
                 <i> Un piccolo sbuffo. Le tue dita ora sanno di mare.</i>
                 <i>Il lichene è scomparso, tu no.</i>
                 <i>C'è qualcuno che devi allontanare?</i>
-                    //~ move_entity(LicheneDegliAbissi, Safekeeping)
                     ~ inCrescita = 0
                     ~ fungoProposto = ()
             + [Lo lascio dov'è.]
             -
               -> main
               
-    // = step_quattro
-    //     <i>Troppo tempo è passato, e non rimane che un foro nel terreno.</i>
-    //         //~ move_entity(LicheneDegliAbissi, Safekeeping)
-    //         ~ inCrescita = 0
-    //         ~ fungoProposto = ()
-    //           -> main
+
 
 === muschio_delle_amanti
 //Collaborazione, novità, ricordo
@@ -188,7 +181,6 @@
           -> main
     
     = step_tre
-    // + {are_two_entities_together(MuschioDelleAmanti, PG)} [MuschioDelleAmanti]
         <i>Senti un fremito nel ventre. I rami ora sono coperti da un fitto tappeto del color dell'alba.</i>
         <i>Quando lo sfiori le tue labbra tremano, ricordi ti invadono: quel bacio, quelle dita desiderate tra le coscie.</i>
         <i>Pienezza ti riempie: è per forza del <b>Muschio delle amanti</b></i>.
@@ -198,7 +190,6 @@
             + [Raccolgo un po' del muschio.]
                 <i>Così vicino, il muschio ti chiama.</i>
                 <i>Ti invita a fermare per un attimo tutto, a premiare come più ti piace il tuo corpo, dentro o fuori che sia.</i>
-                    //~ move_entity(MuschioDelleAmanti, Safekeeping)
                     ~ inCrescita = 0
                     ~ fungoProposto = ()
                     {
@@ -209,13 +200,6 @@
             + [Non è ancora il momento.]
             -
              -> main
-    
-    // = step_quattro
-    //     <i>Qualcosa ti titilla lo stomaco, ma qualunque cosa stesse crescendo, non c'è più.</i>
-    //             //~ move_entity(MuschioDelleAmanti, Safekeeping)
-    //             ~ inCrescita = 0
-    //             ~ fungoProposto = ()
-    //         -> main
 
 === canto_delle_compagne
 //Collaborazione, ciclicità, ricordo
@@ -236,7 +220,6 @@
             -> main
           
     = step_tre
-    // + {are_two_entities_together(CantoDelleCompagne, PG)} [CantoDelleCompagne]
         <i>La serra tutta si è fatta rossa, uno stupendo <b>Canto delle compagne</b> galleggia sul terreno.</i>
         <i>In un altro tempo, più pauroso, questo fungo veniva chiamato "Canto delle streghe".</i>
         <i>L'euforia ti riempie i polmoni, senti la gioia di sapere che non sei mai stata davvero sola.</i>
@@ -247,20 +230,12 @@
                 <i>Puoi farlo da te, o chiamare qualcuno a cui tieni.
                 Riempiti dell'euforia del fungo, e lascia che il mondo intero ascolti la tua voce.
                 Con l'ultima nota, il fungo sarà altrove, da un'altra compagna bisognosa.</i>
-                    //~ move_entity(CantoDelleCompagne, Safekeeping)
                     ~ inCrescita = 0
                     ~ fungoProposto = ()
                     -> main
         + [No, non ora.]
               -> main
               
-    // = step_quattro
-    //     <i>Rimane un coro lontano dell'aria, nulla di più.</i>
-    //             //~ move_entity(CantoDelleCompagne, Safekeeping)
-    //         ~ inCrescita = 0
-    //         ~ fungoProposto = ()
-    //         -> main
-
 === la_spazzata
 //Indipendenza, novità, cancellazione
 //Outcome: prometti di dire qualcosa che ti pesa sullo stomaco.
@@ -278,7 +253,6 @@
             -> main
     
     = step_tre
-    // + {are_two_entities_together(LaSpazzata, PG)} [LaSpazzata]
         <i>Tutto scricchiola, gli alberi sembrano gemere dal dolore.</i>
         <i>Il terreno stesso è impacciato, crepato.</i>
         <i>Ora riconosci cosa hai piantato: una grossa, esplosiva <b>Spazzata</b></i>.
@@ -290,19 +264,12 @@
             <i>Qualcosa che sono giorni o settimane (uh: questa Spazzata è molto grande. forse mesi?) che ti pesa.</i>
             <i>Falle la promessa, e se ne andrà.</i>
             <i>Ma se poi tradisci la promessa, la Spazzata tornerà ancora più forte.</i>
-                    //~ move_entity(LaSpazzata, Safekeeping)
                     ~ inCrescita = 0
                     ~ fungoProposto = ()
                     -> main
         + [Non ora.]
             -> main
-    
-    // = step_quattro
-    //     <i>Il soffitto di rami sembra incavato. Ciò che c'era, ora non è più.</i>
-    //         //~ move_entity(LaSpazzata, Safekeeping)
-    //         ~ inCrescita = 0
-    //         ~ fungoProposto = ()    
-    //       -> main
+
 
 
 === bacca_della_addolorata
@@ -321,7 +288,6 @@
           -> main
           
     = step_tre
-    // + {are_two_entities_together(BaccaDellaAddolorata, PG)} [BaccaDellaAddolorata]
         <i>Nè rami, nè fiori. Solo la mano, e una piccolissima bacca vermiglia.<i>
         <i>Hai trovato una <b>Bacca dell'addolorata</b></i>
         <i>Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ad avanzare</i>
@@ -330,7 +296,6 @@
             + [La afferro.]
             <i>La mano molla la sua presa, rivelandosi per quel che era dall'inizio: solo un insieme tenace di radici.</i>
             <i>Senti dalle tue spalle qualcosa sciogliersi, scivolare via: ora hai un po' meno paura di camminare.</i>
-                //~ move_entity(BaccaDellaAddolorata, Safekeeping)
                 ~ inCrescita = 0
                 ~ fungoProposto = ()
                     {
@@ -343,13 +308,6 @@
             + [Non è il momento.]
                 -> main
               
-    // = step_quattro
-    //     <i>Una mano tremante nel terreno, rinsecchita. Si sbriciola al primo soffio d'aria.</i>
-    //         //~ move_entity(BaccaDellaAddolorata, Safekeeping)
-    //         ~ inCrescita = 0
-    //         ~ fungoProposto = ()
-    //         -> main
-
 === non_ti_scordar_di_te
 //Indipendenza, ciclicità, ricordo
 //Outcome: ricordo di chi non c'è più
@@ -371,7 +329,6 @@
           -> main
           
     = step_tre
-    // + {are_two_entities_together(NonTiScordarDiTe, PG)} [NonTiScordarDiTe]
         <i>Tronco e sostanza sono una cosa sola: un fungo di vetro, dita che si sfiorano e intrecciano lanciate verso il cielo.</i>
         <i>Hai trovato un <i><b>Non ti scordar di te</b></i>
         <i>Cresce su ciò che è passato, che non c'è più, per renderlo parte di sè.</i>
@@ -382,20 +339,12 @@
             <i>Si sciolgono tra le tue mani, rilasciando di nuovo un profumo familiare.</i>
             <i>Ti porti quel che rimane alle labbra: il tuo corpo viene invaso da fiducia e calore.</i>
             <i>Senti in te chi non c'è più: siete parte della stessa storia.</i>
-                //~ move_entity(NonTiScordarDiTe, Safekeeping)
                 ~ inCrescita = 0
                 ~ fungoProposto = ()
               -> main
         + [Non ora.]
               -> main
               
-    // = step_quattro
-    //     <i>Malinconia. La sensazione di aver fatto tardi, di aver perso qualcosa di importante.</i>
-    //         //~ move_entity(NonTiScordarDiTe, Safekeeping)
-    //         ~ inCrescita = 0
-    //         ~ fungoProposto = ()
-    //     -> main
-        
 
 === brina_dell_impossibile
 //Ricordo, collaborazione, novità
@@ -413,7 +362,6 @@
           -> main
     
     = step_tre
-    // + {are_two_entities_together(BrinaDellImpossibile, PG)} [BrinaDellImpossibile]
         <i>Isole di vetro galleggiano nell'aria.</i>
         <i>La vetrata dovrebbe crollare, sparire, svanire ma invece resta dov'è, e se la spingi non si sposta.</i>
         <i>Eppure api e petali attraversano il reticolato.</i>
@@ -424,7 +372,6 @@
             <i>Il vetro si rinsalda, spingendo via la tua mano.</i>
             <i>Le linee del tuo palmo si fanno trasparenti, inconsistenti. Eppure puoi muovere le dita, e non provi alcun dolore.</i>
             <i>Non tutti i cambiamenti sono così facili, ma ora hai la certezza che puoi provare quella cosa che rimandi da sempre: la paura di trovarti a pezzi è solo quello: paura.</i>
-                //~ move_entity(BrinaDellImpossibile, Safekeeping)
                 ~ inCrescita = 0
                 ~ fungoProposto = ()
                     {
@@ -435,15 +382,7 @@
               -> main
         + [Ho bisogno di pensarci un poco.]
               -> main
-              
-    // = step_quattro
-    //     <i>Non noti nulla di strano. Qualcosa è cambiato, senza che te ne accorgessi.</i>
-    //         //~ move_entity(BrinaDellImpossibile, Safekeeping)
-    //         ~ inCrescita = 0
-    //         ~ fungoProposto = ()
-
-                        
-    //     -> main      
+ 
           
 
 -> main
