@@ -10,14 +10,14 @@
 === bench
 + {are_two_entities_together(Bench, PG)} [Bench]
     <i>Questo posto è pieno di serenità</i>.
-    {firstTier && doniTrovati hasnt coperta:
+    {firstTier && findedGifts hasnt blanket:
         ~ temp dice = RANDOM(1, 2)
         {
             - dice == 1:
-                <i>C'è una coperta abbandonata sulla panchina.</i>
+                <i>C'è una blanket abbandonata sulla panchina.</i>
                 <i>Portala con te: qualcuno potrebbe avere freddo.</i>
-                <b>Hai ottenuto: coperta</b>
-                ~ doniTrovati += coperta
+                <b>Hai ottenuto: blanket</b>
+                ~ findedGifts += blanket
                 -> main
             - dice == 2:
             -> main
@@ -28,14 +28,14 @@
 === the_fungus
 + {are_two_entities_together(TheFungus, PG)} [TheFungus]
     <i>L'albero è smonco</i>.
-    {firstTier && doniTrovati hasnt vasovuoto:
+    {firstTier && findedGifts hasnt emptyvase:
         ~ temp dice = RANDOM(1, 2)
         {
             - dice == 1:
                 <i>C'è un vaso vuoto.</i>
                 <i>In questo luogo anche la cosa più insolita può essere un tesoro.</i>
                 <b>Hai ottenuto: vaso vuoto</b>
-                ~ doniTrovati += vasovuoto
+                ~ findedGifts += emptyvase
                 -> main
             - dice == 2:
             -> main

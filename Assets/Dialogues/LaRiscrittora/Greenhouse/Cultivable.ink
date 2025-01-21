@@ -193,8 +193,8 @@
                     ~ inCrescita = 0
                     ~ fungoProposto = ()
                     {
-                        - doniTrovati hasnt MuschioDelleAmanti:
-                        ~ doniTrovati += MuschioDelleAmanti
+                        - findedGifts hasnt MuschioDelleAmanti:
+                        ~ findedGifts += MuschioDelleAmanti
                         <b>Hai ottenuto: Muschio delle Amanti.</b>
                     }
             + [Non è ancora il momento.]
@@ -299,8 +299,8 @@
                 ~ inCrescita = 0
                 ~ fungoProposto = ()
                     {
-                        - doniTrovati hasnt BaccaDellaAddolorata:
-                        ~ doniTrovati += BaccaDellaAddolorata
+                        - findedGifts hasnt BaccaDellaAddolorata:
+                        ~ findedGifts += BaccaDellaAddolorata
                         <b>Hai ottenuto: Bacca della Addolorata</b>
                     }
             
@@ -375,8 +375,8 @@
                 ~ inCrescita = 0
                 ~ fungoProposto = ()
                     {
-                        - doniTrovati hasnt BrinaDellImpossibile:
-                        ~ doniTrovati += BrinaDellImpossibile
+                        - findedGifts hasnt BrinaDellImpossibile:
+                        ~ findedGifts += BrinaDellImpossibile
                         <b>Hai ottenuto: Brina dell'Impossibile</b>
                     }                
               -> main

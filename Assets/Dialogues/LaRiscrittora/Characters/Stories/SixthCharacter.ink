@@ -1,4 +1,4 @@
-~ temp charNameSei = traduttorePersonaggeMaiuscolo(sixthCharacterState)
+~ temp charNameSei = uppercaseTranslator(sixthCharacterState)
 
 === personaggia_sei===
          //opzione se questa storia è attiva
@@ -28,16 +28,16 @@
 
 
 === aiuto_storia_sei ===
-    + {doniTrovati != ()} Offro un dono.
+    + {findedGifts != ()} Offro un dono.
     -> gestione_inventario -> capitolo_uno
     + ->
-    {doniTrovati == (): Non parlo senza un dono adeguato! ->main}
+    {findedGifts == (): Non parlo senza un dono adeguato! ->main}
     
     
     
     = capitolo_uno    
-        Dopo il tuo dono, la quantità di inchiostro a disposizione è {statoInchiostroPersonaggiaSei}.
-             -> azioniInchiostro ->
+        Dopo il tuo dono, la quantità di inchiostro a disposizione è {sixthCharacterInkLevel}.
+             -> inkActions ->
         //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
              + Ho risolto la sesta storia dando al sesto spettro un nuovo stato
                 ~ sixthStory = Ended

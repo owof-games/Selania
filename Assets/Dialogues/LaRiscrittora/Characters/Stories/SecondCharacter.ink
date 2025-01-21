@@ -1,5 +1,5 @@
 === personaggia_due ===
-~ temp charNameDue = traduttorePersonaggeMaiuscolo(secondCharacterState)
+~ temp charNameDue = uppercaseTranslator(secondCharacterState)
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
@@ -15,7 +15,7 @@
     
 
 === dialogo_personaggia_due ===
-~ temp charNameDue = traduttorePersonaggeMaiuscolo(secondCharacterState)
+~ temp charNameDue = uppercaseTranslator(secondCharacterState)
 
 //QUI FINISCONO TUTTE LE POSSIBILI CONVERSAZIONI
 - (top)
@@ -43,21 +43,21 @@
 
     //QUESTO è LO SPAZIO PER IL DONO
     === dono_storia_due ===
-    ~ temp charNameDue = traduttorePersonaggeMaiuscolo(secondCharacterState)
+    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
 
-        + {doniTrovati != ()} Offro un dono.
+        + {findedGifts != ()} Offro un dono.
             -> gestione_inventario -> esito_inchiostro 
-        + {doniTrovati == ()} <i> Il tuo inventario è vuoto </i>
+        + {findedGifts == ()} <i> Il tuo inventario è vuoto </i>
             ->main
         
     
         = esito_inchiostro    
-            Dopo il tuo dono, la quantità di inchiostro a disposizione è {statoInchiostroPersonaggiaDue}.
-                 -> azioniInchiostro -> dialogo_personaggia_due.top
+            Dopo il tuo dono, la quantità di inchiostro a disposizione è {secondCharacterInkLevel}.
+                 -> inkActions -> dialogo_personaggia_due.top
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
     === storia_due_chech_trigger
-    ~ temp charNameDue = traduttorePersonaggeMaiuscolo(secondCharacterState)
+    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
 
         {
         - loneliness == false:
@@ -78,7 +78,7 @@
         -> END
 
 === main_story_personaggia_due
-~ temp charNameDue = traduttorePersonaggeMaiuscolo(secondCharacterState)
+~ temp charNameDue = uppercaseTranslator(secondCharacterState)
 
     /* ---------------------------------
 
@@ -107,7 +107,7 @@ Storia finita:
 
 
 === personaggia_due_storia_conclusa
-~ temp charNameDue = traduttorePersonaggeMaiuscolo(secondCharacterState)
+~ temp charNameDue = uppercaseTranslator(secondCharacterState)
 
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)

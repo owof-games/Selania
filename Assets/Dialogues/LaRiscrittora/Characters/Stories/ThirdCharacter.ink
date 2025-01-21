@@ -1,4 +1,4 @@
-~ temp charNameTre = traduttorePersonaggeMaiuscolo(thirdCharacterState)
+~ temp charNameTre = uppercaseTranslator(thirdCharacterState)
 
 === personaggia_tre ===
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
@@ -41,15 +41,15 @@
 
     //QUESTO è LO SPAZIO PER IL DONO
     === dono_storia_tre ===
-        + {doniTrovati != ()} Offro un dono.
+        + {findedGifts != ()} Offro un dono.
             -> gestione_inventario -> esito_inchiostro 
-        + {doniTrovati == ()} <i> Il tuo inventario è vuoto </i>
+        + {findedGifts == ()} <i> Il tuo inventario è vuoto </i>
             ->main
         
     
         = esito_inchiostro    
-            Dopo il tuo dono, la quantità di inchiostro a disposizione è {statoInchiostroPersonaggiaTre}.
-                 -> azioniInchiostro -> dialogo_personaggia_tre.top
+            Dopo il tuo dono, la quantità di inchiostro a disposizione è {thirdCharacterInkLevel}.
+                 -> inkActions -> dialogo_personaggia_tre.top
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
     === storia_tre_chech_trigger
@@ -170,7 +170,7 @@ Storia finita:
 
 // = internal_inventario
 //     {charNameUno}: Tutto sommato è una cosa così banale, così banale. Eppure questo freddo non se ne vuole andare.
-//         + {doniTrovati != ()} [Ho un dono per te, <i>{traduttorePersonaggeMinuscolo(effettivoStatoPersonaggiaUno)}</i>.]
+//         + {findedGifts != ()} [Ho un dono per te, <i>{traduttorePersonaggeMinuscolo(effettivoStatoPersonaggiaUno)}</i>.]
 //             -> gestione_inventario
 //         + [Vorrei riascoltare la tua storia, <i>{traduttorePersonaggeMinuscolo(effettivoStatoPersonaggiaUno)}</i>.]
 //             -> intro_storia_uno.intro
@@ -186,7 +186,7 @@ Storia finita:
 //         //Informativa sullo stato dell'inchiostro.
 //         <i>Dopo il tuo dono, la quantità di inchiostro a disposizione è {statoInchiostroPersonaggiaUno}.</i>
 // //Faccio il dono, ho un feedback, esco così da parlare con il Mentore.
-//             -> azioniInchiostro -> main
+//             -> inkActions -> main
 //             //-> primo_blocco
 
 
@@ -354,7 +354,7 @@ Storia finita:
 //             - (top1)
                 
 //                 * {rabbia > 0} [Esplode per la tua frustrazione.]
-//                         {check_statusVsInchiostro(rabbia, statoInchiostroPersonaggiaUno):
+//                         {check_statusVsInk(rabbia, statoInchiostroPersonaggiaUno):
 //                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
 //                                 -> top1
 //                         }
@@ -367,7 +367,7 @@ Storia finita:
 //                             ~ ferito ++
                 
 //                 * {abbandono > 0} [È il tuo bisogno di relazioni.]
-//                         {check_statusVsInchiostro(abbandono,statoInchiostroPersonaggiaUno):
+//                         {check_statusVsInk(abbandono,statoInchiostroPersonaggiaUno):
 //                             - false: <i>Non hai abbastanza inchiostro per questa scelta</i>
 //                                 -> top1
 //                         }
@@ -382,7 +382,7 @@ Storia finita:
 //                             ~ socievole ++
                 
 //                 * {terrore > 0} [Ti sta indicando le cose che ti fanno paura.]
-//                         {check_statusVsInchiostro(terrore,statoInchiostroPersonaggiaUno):
+//                         {check_statusVsInk(terrore,statoInchiostroPersonaggiaUno):
 //                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
 //                                 -> top1
 //                         }
@@ -413,7 +413,7 @@ Storia finita:
 //         {nome}: E per questo...
 //             - (top2)
 //                 *  {rabbia > 0} [Quello di cui hai bisogno è un momento di sosta.]
-//                         {check_statusVsInchiostro(rabbia, statoInchiostroPersonaggiaUno):
+//                         {check_statusVsInk(rabbia, statoInchiostroPersonaggiaUno):
 //                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
 //                                 -> top2
 //                         }
@@ -429,7 +429,7 @@ Storia finita:
 //                             ~ ferito ++
                 
 //                 *  {abbandono > 0} [Guarda i rapporti che già hai, e parti da lì.]
-//                         {check_statusVsInchiostro(abbandono, statoInchiostroPersonaggiaUno):
+//                         {check_statusVsInk(abbandono, statoInchiostroPersonaggiaUno):
 //                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
 //                                 -> top2
 //                         }
@@ -445,7 +445,7 @@ Storia finita:
 //                             ~ socievole ++
                 
 //                 *  {terrore > 0} [Anche se fa paura, aprirsi è la soluzione.]
-//                         {check_statusVsInchiostro(terrore, statoInchiostroPersonaggiaUno):
+//                         {check_statusVsInk(terrore, statoInchiostroPersonaggiaUno):
 //                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
 //                                 -> top2
 //                         }
@@ -475,7 +475,7 @@ Storia finita:
 //         {nome}: La tua storia...
 //             - (top3)
 //                 *  {rabbia > 0} [È quella di una persona che riscopre le sue ferite.]
-//                         {check_statusVsInchiostro(rabbia, statoInchiostroPersonaggiaUno):
+//                         {check_statusVsInk(rabbia, statoInchiostroPersonaggiaUno):
 //                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
 //                                 -> top3
 //                         }
@@ -487,7 +487,7 @@ Storia finita:
 //                             ~ ferito ++
 
 //                 *  {abbandono > 0} [È quella di una persona che ama la compagnia.]
-//                         {check_statusVsInchiostro(abbandono, statoInchiostroPersonaggiaUno):
+//                         {check_statusVsInk(abbandono, statoInchiostroPersonaggiaUno):
 //                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
 //                                 -> top3
 //                         }
@@ -500,7 +500,7 @@ Storia finita:
 //                             ~ socievole ++
 
 //                 *  {terrore > 0} [È quella di qualcuno che accoglie le sue paure.]
-//                         {check_statusVsInchiostro(terrore, statoInchiostroPersonaggiaUno):
+//                         {check_statusVsInk(terrore, statoInchiostroPersonaggiaUno):
 //                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
 //                                 -> top3
 //                         }

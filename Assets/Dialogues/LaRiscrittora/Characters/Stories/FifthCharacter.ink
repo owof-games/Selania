@@ -1,4 +1,4 @@
-~ temp charNameCinque= traduttorePersonaggeMaiuscolo(fifthCharacterState)
+~ temp charNameCinque= uppercaseTranslator(fifthCharacterState)
 
 === personaggia_cinque ===
         //opzione se questa storia è attiva
@@ -27,16 +27,16 @@
 
 
 === aiuto_storia_cinque ===
-    + {doniTrovati != ()} Offro un dono.
+    + {findedGifts != ()} Offro un dono.
     -> gestione_inventario -> capitolo_uno
     + ->
-    {doniTrovati == (): Non parlo senza un dono adeguato! ->main}
+    {findedGifts == (): Non parlo senza un dono adeguato! ->main}
     
     
     
     = capitolo_uno    
-        Dopo il tuo dono, la quantità di inchiostro a disposizione è {statoInchiostroPersonaggiaCinque}.
-             -> azioniInchiostro ->
+        Dopo il tuo dono, la quantità di inchiostro a disposizione è {fifthCharacterInkLevel}.
+             -> inkActions ->
         //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
              + Ho risolto la quinta storia dando al quinto spettro un nuovo stato
                 ~ fifthStory = Ended

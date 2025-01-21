@@ -34,9 +34,9 @@
 === function traduttoreIngredienti(ingrediente)
 {ingrediente:
 
-- vasovuoto:
+- emptyvase:
     ~ return "un vaso vuoto"
-- coperta: 
+- blanket: 
     ~ return "una coperta"
 - LaSpazzata: 
     ~ return "un residuo della Spezzata"    

@@ -67,12 +67,12 @@
     VAR seventhCharacterSpecialEvent = false
 
 //Funzione di traduzione da variabile a stringa con articolo minuscolo
-=== function traduttorePersonaggeMinuscolo(effettivoStatoPersonaggia)
-    {effettivoStatoPersonaggia:
+=== function lowercaseTranslator(characterState)
+    {characterState:
 
     //Personaggia Uno
         - SpettroDelVuoto:
-            ~ return "il Vuoto"
+            ~ return "il Empty"
         - IlConsapevole: 
             ~ return "il Consapevole"
         - IlGuarente: 
@@ -107,12 +107,12 @@
     }
 
 //Funzione di traduzione da variabile a stringa con articolo maiuscolo
-=== function traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggia)
-    {effettivoStatoPersonaggia:
+=== function uppercaseTranslator(characterState)
+    {characterState:
 
     //Personaggia Uno
         - SpettroDelVuoto:
-            ~ return "Il Vuoto"
+            ~ return "Il Empty"
         - IlConsapevole: 
             ~ return "Il Consapevole"
         - IlGuarente: 
@@ -146,34 +146,34 @@
 
     }
 
-=== function check_statusVsInchiostro(status, list)
+=== function check_statusVsInk(status, list)
 //  A seconda del valore di un certo status di una entità (es: rabbia, terrore etc), dobbiamo verificare se l'inchiostro è sufficiente per intervenire o meno su quello status, e di conseguenza permettere o meno di condizionare lo spettro.
 // PIù è ALTO IL VALORE DI UNO STATUS, MENO INCHIOSTRO MI SERVE (perché significa che ci ho lavorato durante la conversazione)
 
 {
     - status == 1:
         {
-        - list has Medio:
+        - list has Medium:
             ~ return true
-        - list has Altissimo:
+        - list has High:
             ~ return true
         - else:
             ~ return false            
         }
     - status == 2:
         {
-        - list has Normale:
+        - list has Normal:
             ~ return true
-        - list has Medio:
+        - list has Medium:
             ~ return true
-        - list has Altissimo:
+        - list has High:
             ~ return true
         - else:
             ~ return false            
         }
     - status == 3:
         {
-        - list hasnt Vuoto:
+        - list hasnt Empty:
             ~ return true
         - else:
             ~ return false

@@ -1,4 +1,4 @@
-~ temp charNameSette = traduttorePersonaggeMaiuscolo(seventhCharacterState)
+~ temp charNameSette = uppercaseTranslator(seventhCharacterState)
 
 === personaggia_sette ===
          //opzione se questa storia è attiva
@@ -28,16 +28,16 @@
 
 
 === aiuto_storia_sette ===
-    + {doniTrovati != ()} Offro un dono.
+    + {findedGifts != ()} Offro un dono.
     -> gestione_inventario -> capitolo_uno
     + ->
-    {doniTrovati == (): Non parlo senza un dono adeguato! ->main}
+    {findedGifts == (): Non parlo senza un dono adeguato! ->main}
     
     
     
     = capitolo_uno    
-        Dopo il tuo dono, la quantità di inchiostro a disposizione è {statoInchiostroPersonaggiaSette}.
-             -> azioniInchiostro ->
+        Dopo il tuo dono, la quantità di inchiostro a disposizione è {seventhCharacterInkLevel}.
+             -> inkActions ->
         //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
              + Ho risolto la settima storia dando al settimo spettro un nuovo stato
                 ~ seventhStory = Ended

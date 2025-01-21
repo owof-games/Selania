@@ -4,53 +4,53 @@
     Gestione inchiostro
 
  ----------------------------------*/
-//Lista dei doni che si possono trovare in gioco.
-LIST doni = coperta, vasovuoto 
-VAR doniTrovati = ()
+//Lista dei gifts che si possono trovare in gioco.
+LIST gifts = blanket, emptyvase 
+VAR findedGifts = ()
 
-//Gestione dell'inchiostro per i vari spettri. Nomi e valori sono temporanei. L'idea per ora è: se sono su Scarso, posso fare solo una scelta forte. Con Normale, due e via di seguito. Ogni scelta mi scala indietro nella lista di stati.
-LIST statoInchiostro = Vuoto, Scarso, Normale, Medio, Altissimo
-VAR statoInchiostroPersonaggiaUno = Scarso
-VAR statoInchiostroPersonaggiaDue = Scarso
-VAR statoInchiostroPersonaggiaTre = Scarso
-VAR statoInchiostroPersonaggiaQuattro = Scarso
-VAR statoInchiostroPersonaggiaCinque = Scarso
-VAR statoInchiostroPersonaggiaSei = Scarso
-VAR statoInchiostroPersonaggiaSette = Scarso
+//Gestione dell'inchiostro per i vari spettri. Nomi e valori sono temporanei. L'idea per ora è: se sono su Low, posso fare solo una scelta forte. Con Normal, due e via di seguito. Ogni scelta mi scala indietro nella lista di stati.
+LIST inkLevel = Empty, Low, Normal, Medium, High
+VAR firstCharacterInkLevel = Low
+VAR secondCharacterInkLevel = Low
+VAR thirdCharacterInkLevel = Low
+VAR fourthCharacterInkLevel = Low
+VAR fifthCharacterInkLevel = Low
+VAR sixthCharacterInkLevel = Low
+VAR seventhCharacterInkLevel = Low
 
 
 
 
 //Formula per tradurre la quantità di inchiostro in valori espliciti
-=== azioniInchiostro
-VAR Inchiostro = ()
+=== inkActions
+VAR Ink = ()
 {
     - firstStory == Active:
-        ~ Inchiostro = statoInchiostroPersonaggiaUno
+        ~ Ink = firstCharacterInkLevel
     - secondStory == Active:
-        ~ Inchiostro = statoInchiostroPersonaggiaDue
+        ~ Ink = secondCharacterInkLevel
     - thirdStory == Active:
-        ~ Inchiostro = statoInchiostroPersonaggiaTre
+        ~ Ink = thirdCharacterInkLevel
     - fourthStory == Active:
-        ~ Inchiostro = statoInchiostroPersonaggiaQuattro
+        ~ Ink = fourthCharacterInkLevel
     - fifthStory == Active:
-        ~ Inchiostro = statoInchiostroPersonaggiaCinque
+        ~ Ink = fifthCharacterInkLevel
     - sixthStory== Active:
-        ~ Inchiostro = statoInchiostroPersonaggiaSei 
+        ~ Ink = sixthCharacterInkLevel 
     - seventhStory == Active:
-        ~ Inchiostro = statoInchiostroPersonaggiaSette     
+        ~ Ink = seventhCharacterInkLevel     
 }
 
-{Inchiostro:
-    - Vuoto:
+{Ink:
+    - Empty:
         <i>Non hai inchiostro per lo spettro, dovrai trovare la tua strada da {pronouns has him: solo|{pronouns has her: sola|solə}}.</i>
-    - Scarso:
+    - Low:
         <i>Hai una azione forte a disposizione</i>
-    - Normale:
+    - Normal:
         <i>Hai due azioni forti a disposizione</i>
-    - Medio:
+    - Medium:
         <i>Hai tre azioni forti a disposizione</i>
-    - Altissimo:
+    - High:
         <i>Hai tre azioni forti a disposizione</i>
     - else:
         <i>Errore: non riesco a capire quante azioni hai a disposizione</i>

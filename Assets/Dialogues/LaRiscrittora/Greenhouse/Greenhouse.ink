@@ -5,7 +5,7 @@
 
 {
 	- fungoProposto != ():
-        -> cura
+        -> cure
         
     - else:
     {
@@ -24,7 +24,7 @@
         -
             -> main
 
-=== cura
+=== cure
     <i>{~ L'aria sembra più dolce oggi|Da qualche parte, tra le foglie, qualcosa canta|Piccole luci sfarfallano sopra il terreno}.</i>
         -> plant_check -> 
     + [Mi guardo attorno.]
@@ -37,7 +37,7 @@
     	- backupColtivabili != ():
             {
                 - fungoProposto != ():
-                        -> cura
+                        -> cure
                 - else:     
                         -> test_coltivazioni
             }
@@ -48,7 +48,7 @@
     
     {
 	- fungoProposto != ():
-        -> cura
+        -> cure
         
     - else:
     {

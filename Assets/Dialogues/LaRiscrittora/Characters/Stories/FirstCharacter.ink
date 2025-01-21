@@ -1,5 +1,5 @@
 === personaggia_uno ===
-~ temp charNameUno = traduttorePersonaggeMaiuscolo(firstCharacterState)
+~ temp charNameUno = uppercaseTranslator(firstCharacterState)
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
         + {are_two_entities_together(FirstCharacter, PG) && firstStory == Active}[FirstCharacter]
@@ -13,7 +13,7 @@
         -> DONE
     
 === dialogo_personaggia_uno
-~ temp charNameUno = traduttorePersonaggeMaiuscolo(firstCharacterState)
+~ temp charNameUno = uppercaseTranslator(firstCharacterState)
 {charNameUno}: {~ Ero sicuro di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicuro di star capendo tutto di questo luogo.}
 - (top)
     + Dialogo
@@ -38,10 +38,10 @@
     + {dono_storia_uno.esito_inchiostro && not main_story_personaggia_uno} Ti va di affrontare quella cosa?
         {
             - not questions:
-            {traduttorePersonaggeMaiuscolo(firstCharacterState)}: Ti chiedo un ultimo sforzo, parla direttamente col mentore prima. Io non scappo.
+            {uppercaseTranslator(firstCharacterState)}: Ti chiedo un ultimo sforzo, parla direttamente col mentore prima. Io non scappo.
                 -> main
             - questions:
-                {traduttorePersonaggeMaiuscolo(firstCharacterState)}: Certo!
+                {uppercaseTranslator(firstCharacterState)}: Certo!
                 -> storia_uno_chech_trigger
         }        
     
@@ -53,21 +53,21 @@
 
 
  === dono_storia_uno ===
- ~ temp charNameUno = traduttorePersonaggeMaiuscolo(firstCharacterState)
+ ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
  
-        + {doniTrovati != ()} Offro un dono. 
+        + {findedGifts != ()} Offro un dono. 
             -> gestione_inventario -> esito_inchiostro 
-        + {doniTrovati == ()} <i> Il tuo inventario è vuoto </i>
+        + {findedGifts == ()} <i> Il tuo inventario è vuoto </i>
             ->main
         
     
         = esito_inchiostro    
-            Dopo il tuo dono, la quantità di inchiostro a disposizione è {statoInchiostroPersonaggiaDue}.
-                 -> azioniInchiostro -> dialogo_personaggia_uno.top
+            Dopo il tuo dono, la quantità di inchiostro a disposizione è {firstCharacterInkLevel}.
+                 -> inkActions -> dialogo_personaggia_uno.top
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
     === storia_uno_chech_trigger
-    ~ temp charNameUno = traduttorePersonaggeMaiuscolo(firstCharacterState)
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     
         {
         - loneliness == false:
@@ -88,7 +88,7 @@
         -> END
 
 === main_story_personaggia_uno
-~ temp charNameUno = traduttorePersonaggeMaiuscolo(firstCharacterState)
+~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     /* ---------------------------------
 
    Qui avrò una funzione che mi manda sugli step utili in base a dove ho abbandonato l'ultima conversazione. Es
@@ -116,7 +116,7 @@ Storia finita:
 
 
 === personaggia_uno_storia_conclusa
-~ temp charNameUno = traduttorePersonaggeMaiuscolo(firstCharacterState)
+~ temp charNameUno = uppercaseTranslator(firstCharacterState)
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
 
