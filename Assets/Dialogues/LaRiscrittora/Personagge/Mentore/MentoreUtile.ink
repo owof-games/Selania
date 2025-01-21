@@ -211,7 +211,7 @@
     + {storiaDue == Conclusa}[Sulle sirene.]
         Informazioni
             -> top
-    + {storiaDue == Conclusa}[Sulla biblioteca.]
+    + {storiaDue == Conclusa}[Sulla Libary.]
         Informazioni
             -> top
     + [Vorrei parlare di qualcosa di diverso.]

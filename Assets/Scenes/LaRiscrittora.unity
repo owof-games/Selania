@@ -7485,7 +7485,7 @@ MonoBehaviour:
   - greenhouseContents
   - contenutoLabirinto
   - contenutoFalene
-  - contenutoBiblioteca
+  - libaryContents
   - contenutoTisane
   inkAssetJSON: {fileID: 4900000, guid: 52a25747e603e6e4aacb94e87b22a990, type: 3}
   entities:

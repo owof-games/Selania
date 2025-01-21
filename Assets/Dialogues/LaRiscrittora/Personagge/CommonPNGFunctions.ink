@@ -138,10 +138,10 @@ VAR randomizable_characters = (Mentore)
     //         ~ move_entity(Mentore, BusStop)
     //         ~ luoghiAttiviTerzoTier -= BusStop
     //         ~ luoghiMentoreIncontrato += BusStop
-    //     - Biblioteca:
-    //         ~ move_entity(Mentore, Biblioteca)
-    //         ~ luoghiAttiviTerzoTier -= Biblioteca
-    //         ~ luoghiMentoreIncontrato += Biblioteca
+    //     - Libary:
+    //         ~ move_entity(Mentore, Libary)
+    //         ~ luoghiAttiviTerzoTier -= Libary
+    //         ~ luoghiMentoreIncontrato += Libary
     //     - Falene:
     //         ~ move_entity(Mentore, Falene)
     //         ~ luoghiAttiviTerzoTier -= Falene
@@ -180,10 +180,10 @@ VAR randomizable_characters = (Mentore)
     //         ~ move_entity(Mentore, BusStop)
     //         ~ luoghiAttiviTerzoTier -= BusStop
     //         ~ luoghiMentoreIncontrato += BusStop
-    //     - Biblioteca:
-    //         ~ move_entity(Mentore, Biblioteca)
-    //         ~ luoghiAttiviTerzoTier -= Biblioteca
-    //         ~ luoghiMentoreIncontrato += Biblioteca
+    //     - Libary:
+    //         ~ move_entity(Mentore, Libary)
+    //         ~ luoghiAttiviTerzoTier -= Libary
+    //         ~ luoghiMentoreIncontrato += Libary
     //     - Falene:
     //         ~ move_entity(Mentore, Falene)
     //         ~ luoghiAttiviTerzoTier -= Falene

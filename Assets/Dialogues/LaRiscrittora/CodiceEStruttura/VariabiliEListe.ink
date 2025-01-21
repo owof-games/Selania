@@ -11,13 +11,13 @@ LIST pronomi = maschili, femminili, neutri
 VAR counterSpostamenti = 0
 
 //Lista di tutti i luoghi del gioco
-LIST luoghi = Forest, BusStop, Greenhouse, Biblioteca, Falene, Labirinto, Tisane, CasettaAnime, GreenhouseMiddlePath
+LIST luoghi = Forest, BusStop, Greenhouse, Libary, Falene, Labirinto, Tisane, CasettaAnime, GreenhouseMiddlePath
 
 //Settaggio luoghi attivi a seconda del tier
 VAR firstTierPlaces =(Forest, BusStop, GreenhouseMiddlePath)
-VAR secondTierPlaces =(Forest, BusStop, Biblioteca, GreenhouseMiddlePath)
-VAR thirdTierPlaces = (Forest, BusStop, Biblioteca, Falene, GreenhouseMiddlePath)
-VAR fourthTierPlaces = (Forest, BusStop, Biblioteca, Falene, Tisane, GreenhouseMiddlePath)
+VAR secondTierPlaces =(Forest, BusStop, Libary, GreenhouseMiddlePath)
+VAR thirdTierPlaces = (Forest, BusStop, Libary, Falene, GreenhouseMiddlePath)
+VAR fourthTierPlaces = (Forest, BusStop, Libary, Falene, Tisane, GreenhouseMiddlePath)
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
 LIST characters = Mentore, PG, PersonaggiaUno, PersonaggiaDue, PersonaggiaTre, PersonaggiaQuattro, PersonaggiaCinque, PersonaggiaSei, PersonaggiaSette
@@ -38,7 +38,7 @@ VAR greenhouseContents = (FromGreenhouseToGreenhouseMiddlePath, WateringCan, Lic
 VAR contenutoGreenhouseMiddlePath = (FromGreenhouseMiddlePathToGarden, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNothing)
 VAR contenutoLabirinto = ()
 VAR contenutoFalene = ()
-VAR contenutoBiblioteca = ()
+VAR libaryContents = ()
 VAR contenutoTisane = ()
 VAR contenutoCasettaAnime = (PersonaggiaUno, PersonaggiaDue, PersonaggiaTre, PersonaggiaQuattro, PersonaggiaCinque, PersonaggiaSei, PersonaggiaSette,  FirstPersonNotes, SecondPersonNotes, NotePersonaggiaTre, NotePersonaggiaQuattro, NotePersonaggiaCinque, NotePersonaggiaSei, NotePersonaggiaSette)
 

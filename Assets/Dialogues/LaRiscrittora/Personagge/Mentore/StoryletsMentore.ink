@@ -26,8 +26,8 @@
     - are_entities_together_in(PG, Mentore, Greenhouse) && not prima_visita_funghi:
         -> prima_visita_funghi
 
-    - are_entities_together_in(PG, Mentore, Biblioteca) && not prima_visita_biblioteca:
-        -> prima_visita_biblioteca
+    - are_entities_together_in(PG, Mentore, Libary) && not prima_visita_Libary:
+        -> prima_visita_Libary
 
     - are_entities_together_in(PG, Mentore, Falene) && not prima_visita_falene:
         -> prima_visita_falene
@@ -90,7 +90,7 @@
     -> main
 
 
-=== prima_visita_biblioteca
+=== prima_visita_Libary
 
     -> main
 
