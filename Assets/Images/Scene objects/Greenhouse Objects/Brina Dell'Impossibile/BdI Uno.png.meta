@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: dc34944894c768b4899fb5ab55f2eb52
+guid: bb754686074338e4dae1d756c8b89d22
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6654987023325724205
-    second: Muschio delle Amanti_0
-  - first:
-      213: 4251274456541833599
-    second: Muschio delle Amanti_1
-  - first:
-      213: 732985277858982356
-    second: Muschio delle Amanti_2
-  - first:
-      213: -6417757666031589774
-    second: Muschio delle Amanti_3
+      213: -1748437704320256794
+    second: BdI Uno_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Muschio delle Amanti_0
+      name: BdI Uno_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 76
-        width: 323
-        height: 116
+        x: 15
+        y: 15
+        width: 274
+        height: 502
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d2ef92620734b5c50800000000000000
-      internalID: 6654987023325724205
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Muschio delle Amanti_1
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 46
-        width: 29
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f792ed0189f8ffa30800000000000000
-      internalID: 4251274456541833599
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Muschio delle Amanti_2
-      rect:
-        serializedVersion: 2
-        x: 326
-        y: 31
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4d920680a361c2a00800000000000000
-      internalID: 732985277858982356
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Muschio delle Amanti_3
-      rect:
-        serializedVersion: 2
-        x: 306
-        y: 6
-        width: 18
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 276a5adc76b8fe6a0800000000000000
-      internalID: -6417757666031589774
+      spriteID: 6e4771aeb2d4cb7e0800000000000000
+      internalID: -1748437704320256794
       vertices: []
       indices: 
       edges: []
@@ -210,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Muschio delle Amanti_0: 6654987023325724205
-      Muschio delle Amanti_1: 4251274456541833599
-      Muschio delle Amanti_2: 732985277858982356
-      Muschio delle Amanti_3: -6417757666031589774
+      BdI Uno_0: -1748437704320256794
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

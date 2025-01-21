@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9b5f42c3127f7a84bb39cd8551d11d59
+guid: 99e45f625c497844998dc1bc8368e446
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2148471270680927742
-    second: Non Ti Scordar Di Te_0
+      213: -7009592506343593728
+    second: NTSDTUno_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Non Ti Scordar Di Te_0
+      name: NTSDTUno_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 31
-        width: 205
-        height: 201
+        x: 45
+        y: 26
+        width: 154
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: efd9113dc37e0dd10800000000000000
-      internalID: 2148471270680927742
+      spriteID: 009662ff0cce8be90800000000000000
+      internalID: -7009592506343593728
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Non Ti Scordar Di Te_0: 2148471270680927742
+      NTSDTUno_0: -7009592506343593728
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

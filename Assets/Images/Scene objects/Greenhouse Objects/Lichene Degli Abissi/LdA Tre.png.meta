@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 60a0cee66cfb3f14185ee42aba6ff60d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3423938974608543767
+    second: LdA Tre_0
+  - first:
+      213: 5070420759919509445
+    second: LdA Tre_1
+  - first:
+      213: 5765122452738119203
+    second: LdA Tre_2
+  - first:
+      213: -2144080065697924234
+    second: LdA Tre_3
+  - first:
+      213: -8203370529952436795
+    second: LdA Tre_4
+  - first:
+      213: -6969499238296224463
+    second: LdA Tre_5
+  - first:
+      213: -4452870535872154658
+    second: LdA Tre_6
+  - first:
+      213: 6340931077743703344
+    second: LdA Tre_7
+  - first:
+      213: -8186114231999474397
+    second: LdA Tre_8
+  - first:
+      213: 8208553557283308352
+    second: LdA Tre_9
+  - first:
+      213: 8735762696117242790
+    second: LdA Tre_10
+  - first:
+      213: -3257823420108861836
+    second: LdA Tre_11
+  - first:
+      213: 1970820864206197073
+    second: LdA Tre_12
+  - first:
+      213: -3982368169785264134
+    second: LdA Tre_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LdA Tre_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 174
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9efa7d5b4a9bb70d0800000000000000
+      internalID: -3423938974608543767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LdA Tre_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 187
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cfb4c021d0cd5640800000000000000
+      internalID: 5070420759919509445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LdA Tre_2
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 168
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 326951a6354d10050800000000000000
+      internalID: 5765122452738119203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LdA Tre_3
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 186
+        width: 59
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67b34124a82be32e0800000000000000
+      internalID: -2144080065697924234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LdA Tre_4
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 137
+        width: 38
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cde64167f5c72e80800000000000000
+      internalID: -8203370529952436795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LdA Tre_5
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 181
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d7ff66e5d574f90800000000000000
+      internalID: -6969499238296224463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LdA Tre_6
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 156
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3798607d93432c0800000000000000
+      internalID: -4452870535872154658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LdA Tre_7
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 158
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035f52238338ff750800000000000000
+      internalID: 6340931077743703344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LdA Tre_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 149
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 325d6e65a74156e80800000000000000
+      internalID: -8186114231999474397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LdA Tre_9
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 157
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04304a538f3aae170800000000000000
+      internalID: 8208553557283308352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LdA Tre_10
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 131
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ab4d2853e9ab3970800000000000000
+      internalID: 8735762696117242790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LdA Tre_11
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 118
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47e867f2cd2e9c2d0800000000000000
+      internalID: -3257823420108861836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LdA Tre_12
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 126
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15150f65223c95b10800000000000000
+      internalID: 1970820864206197073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LdA Tre_13
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 26
+        width: 155
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af77023cf39cbb8c0800000000000000
+      internalID: -3982368169785264134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LdA Tre_0: -3423938974608543767
+      LdA Tre_1: 5070420759919509445
+      LdA Tre_10: 8735762696117242790
+      LdA Tre_11: -3257823420108861836
+      LdA Tre_12: 1970820864206197073
+      LdA Tre_13: -3982368169785264134
+      LdA Tre_2: 5765122452738119203
+      LdA Tre_3: -2144080065697924234
+      LdA Tre_4: -8203370529952436795
+      LdA Tre_5: -6969499238296224463
+      LdA Tre_6: -4452870535872154658
+      LdA Tre_7: 6340931077743703344
+      LdA Tre_8: -8186114231999474397
+      LdA Tre_9: 8208553557283308352
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
