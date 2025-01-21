@@ -17,7 +17,7 @@
 -> main
 === note_personaggia_uno ===
     + {are_two_entities_together(FirstPersonNotes, PG)}[FirstPersonNotes]
-    Ciao {nome}, come stai?
+    Ciao {name}, come stai?
     Qui succedono un sacco di cose da quando me ne sono andato.
     Tuo.
     {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)}

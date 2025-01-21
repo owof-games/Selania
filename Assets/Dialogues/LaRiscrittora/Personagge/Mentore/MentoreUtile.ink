@@ -18,7 +18,7 @@
         * (chiSei) [Chi sei?]
             Sconosciuto: Dipende molto dal momento, e dalla persona che ho davanti.
             Sconosciuto: Ma direi che puoi chiamarmi Mentore.
-            Mentore: Non un nome originale ma ehi, almeno ti ricordi chi chiamare se sei in difficoltà, no?
+            Mentore: Non un name originale ma ehi, almeno ti ricordi chi chiamare se sei in difficoltà, no?
                 -> top
         * (vado) [Come me ne vado da qui?]
             {chiSei:Mentore|Sconosciuto}: Dipende.
@@ -36,20 +36,20 @@
             -> name 
         * -> name
     
-    = name    
+    = nome    
         {chiSei:Mentore|Sconosciuto}: Ora tocca a me farti una domanda: come ti devo chiamare?
-        {chiSei:Mentore|Sconosciuto}: Puoi usare qualsiasi nome: prendi questa occasione come un nuovo inizio.
+        {chiSei:Mentore|Sconosciuto}: Puoi usare qualsiasi name: prendi questa occasione come un nuovo inizio.
             -> il_mio_nome ->
         {chiSei:Mentore|Sconosciuto}: E quali sono i pronomi in cui ti riconosci?
         {chiSei:Mentore|Sconosciuto}: Ti chiedo già scusa per la quantità ridotta di scelte.
         {chiSei:Mentore|Sconosciuto}: Da qualche parte un giorno ho trovato un testo firmato <i>dev</i> dove qualcuno piangeva nel cercare di "programmare scelte multiple attorno all'uso dei pronomi".
         {chiSei:Mentore|Sconosciuto}: Non ho ben compreso sinceramente, ma mai dire mai: magari in futuro qualche persona troverà una soluzione più efficace.
             -> assegnazione_genere ->
-        {chiSei:Mentore|Sconosciuto}: piacere di conoscerti, {nome}.
+        {chiSei:Mentore|Sconosciuto}: piacere di conoscerti, {name}.
         {chiSei:Mentore|Sconosciuto}: E {pronomi has maschili: benvenuto|{pronomi has femminili: benvenuta|benvenutə}}. Spero ti troverai bene, qui.
         {not chiSei: Sconosciuto: Ah, che sbadato. Invece tu chiamami <b>Mentore</b>.|Mentore: Forse ne va un po' del mio orgoglio.}
         {not chiSei: Mentore: Forse un po' didascalica come scelta, ma ti assicuro che è molto comoda.|Mentore: Ma se qualcosa non va, non farti problemi a dirmelo.}
-        Mentore: Un'altra cosa importante, {nome}.
+        Mentore: Un'altra cosa importante, {name}.
         Mentore: Nel tuo soggiorno in questo luogo potrebbe accadere che incontrerai qualche situazione complessa.
         Mentore: Non posso prometterti di avere il controllo su tutto, perché in fondo sono il Mentore, non <i>dev</i>.
         Mentore: Ma se ti va puoi dirmi quali sono le cose che ti creano disagio, e farò del mio meglio per non fartele incontrare.
@@ -66,11 +66,11 @@
         Mentore: Spesso sono storie di rimpianto o rimorso, in alcuni casi di traumi, o sensi di colpa.
         Mentore: E a volte hanno avuto una vita così bella che non accettano davvero di morire.
         Mentore: Sia quel che sia, sono fermi su quel ricordo, convinti che il passato sia il presente.        
-        Mentore: In tutte queste situazioni arrivi tu, {nome}.
+        Mentore: In tutte queste situazioni arrivi tu, {name}.
         Mentore: Prima ascolti per bene quello che dicono.
         Mentore: Poi fai loro un dono adeguato.
         Mentore: E infine aiuti questi spettri a riscrivere un pezzo della loro storia, il pezzo che le blocca qui.
-        Mentore: A darsi un nuovo nome.
+        Mentore: A darsi un nuovo name.
 
             - (top2)
             * [Tipo gaslighting?]
@@ -117,20 +117,20 @@
         Mentore: Tieni conto che dato che il tuo obiettivo è quello di convincerlo ad avere una visione di sé diversa, è più efficace se riesci a farlo riflettere sullo stesso tema o stato d'animo.
         Mentore: Metti ad esempio che è una persona insicura e rabbiosa: farla riflettere solo sulle sue insicurezze o sulla rabbia ti renderà poi la seconda parte più facile.
         Mentore: Ma non demoralizzarti se non è sempre chiaro: come per tutt3 noi, i pensieri di uno spettro sono cose complesse da articolare.
-        Mentore: Poi arriva la seconda fase, quella che da il vero e proprio nome al tuo ruolo.
+        Mentore: Poi arriva la seconda fase, quella che da il vero e proprio name al tuo ruolo.
             * [Il mio ruolo?]
             Mentore: Ah, già, ehm, dimenticavo.
             Mentore: Qui chiamiamo il tuo ruolo quello {pronomi has maschili: del <b>Riscrittore</b>|{pronomi has femminili: della <b>Riscrittora</b>|dellə <b>Riscrittorə</b>}}, perché aiuterai queste persone a riscrivere e rileggere il loro passato.
             Mentore: Sei un po' come la persona cara che ti aiuta a cambiare prospettiva quando tutto sembra impossibile.
             Mentore: O il film, il gioco, il libro che ti dà un po' di respiro quando il cervello è travolto dall'ansia.
-            Mentore: E quando arriva questo momento di chiarezza, allora lo spettro può finalmente darsi un nuovo nome.
+            Mentore: E quando arriva questo momento di chiarezza, allora lo spettro può finalmente darsi un nuovo name.
             -
         Mentore: E così arriviamo alla seconda fase. Non farai più domande, ma affermazioni.
         Mentore: Affermazioni per guidare lo spettro a rileggere la sua storia.
         Mentore: Qui, più inchiostro avrai a disposizione più avrai a disposizioni delle "azioni forti": un modo per dire che hai più forza di coinvincimento.
         Mentore: Se sei {pronomi has maschili: riuscito|{pronomi has femminili: riuscita|riuscitə}} nella fase uno a farlo riflettere sullo stesso tema, ti sarà tutto più facile.
             * [E se fallisco?]
-                Mentore: Se non c'è azione, non c'è fallimento, {nome}.
+                Mentore: Se non c'è azione, non c'è fallimento, {name}.
                 Mentore: Ma se non c'è azione, non c'è nemmeno la vita.
                 Mentore: Il tuo compito qui è quello di aiutare lo spettro ad uscire dal suo stallo.
                 Mentore: A volte i risultati potrebbero essere diversi da quelli che speravi, e ci sta.
@@ -139,7 +139,7 @@
         
         
     === feedback_personaggia_uno
-        Mentore: Beh, direi che è andata, {nome}.
+        Mentore: Beh, direi che è andata, {name}.
         {effettivoStatoPersonaggiaUno:
             - IlSocievole: Mentore: Hai aiutato lo spettro a riscoprire la sua natura socievole!
             - IlConsapevole: Mentore: Ora lo spettro è capace di riconoscere la necessità della collaborazione!
@@ -173,7 +173,7 @@
     + [Sulla fermata del bus.]
             Mentore: La fermata, ad est del Giardino, è il posto dove si trovano i vari spettri.
             Mentore: Non saranno tantissime, non ti preoccupare: ogni {pronomi has maschili: Riscrittore|{pronomi has femminili: Riscrittora|Riscrittorə}} si occupa di uno specifico giardino.
-            Mentore: All'ingresso troverai diverse lapidi. Ognuna indica lo spettro che vi è contenuto e il nome che si è dato prima di morire.
+            Mentore: All'ingresso troverai diverse lapidi. Ognuna indica lo spettro che vi è contenuto e il name che si è dato prima di morire.
             Mentore: Alcune richiedono un po' di esperienza prima di interagirci, altre ti chiederanno di ascoltare subito la loro storia.
             Mentore: Ricorda che non puoi mai iniziare una riscrittura senza un dono.
             Mentore: I doni li trovi in giro camminando.
@@ -226,11 +226,11 @@
         Mentore: Spesso sono storie di rimpianto o rimorso, in alcuni casi di traumi, o sensi di colpa.
         Mentore: E a volte hanno avuto una vita così bella che non accettano davvero di morire.
         Mentore: Sia quel che sia, sono fermi su quel ricordo, convinti che il passato sia il presente.
-        Mentore: In tutte queste situazioni arrivi tu, {nome}:
+        Mentore: In tutte queste situazioni arrivi tu, {name}:
         Mentore: ascolti per bene quello che dicono,
         Mentore: fai loro un dono adeguato,
         Mentore: e poi aiuti questi spettri a rileggere un pezzo della loro storia, il pezzo che le blocca qui.
-        Mentore: A darsi un nuovo nome.
+        Mentore: A darsi un nuovo name.
         Mentore: Qui chiamiamo il tuo ruolo quello {pronomi has maschili: del <b>Riscrittore</b>|{pronomi has femminili: della <b>Riscrittora</b>|dellə <b>Riscrittorə</b>}}, perché aiuterai queste persone a riscrivere e rileggere il loro passato.
         Mentore: Due cose importantissime: ci sono più strade per aiutare ogni spettro.
         Mentore: E non sempre puoi portare alla risoluzione che vorresti, e va bene così.

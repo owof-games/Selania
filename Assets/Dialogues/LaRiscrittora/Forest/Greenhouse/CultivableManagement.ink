@@ -56,54 +56,54 @@ VAR inCrescita = 0
     -> test
 
 === test
-{debugColtivabili: <i>Sono passato da <i>test.}
-{debugColtivabili: <i>Gli elementi ancora coltivabili sono: {backupColtivabili}.<i>}
+{debugCultivable: <i>Sono passato da <i>test.}
+{debugCultivable: <i>Gli elementi ancora coltivabili sono: {backupColtivabili}.<i>}
 
 {
     - counter < 2:
-    {debugColtivabili: <i>Counter ha valore {counter} e per questo vado a Random.}
+    {debugCultivable: <i>Counter ha valore {counter} e per questo vado a Random.}
         -> random
     - counter == 2:
-    {debugColtivabili: <i>Counter ha valore {counter} e per questo vado a Results.}
+    {debugCultivable: <i>Counter ha valore {counter} e per questo vado a Results.}
         -> results
 }
 
 = random
 ~ temp dice = RANDOM(1,14)
 
-{debugColtivabili: <i>Il dado ha valore {dice}}
+{debugCultivable: <i>Il dado ha valore {dice}}
 {
 
     - randomCounter == maxRandomCounter:
-    {debugColtivabili: <i>randomCounter {randomCounter} ha raggiunto il livello massimo {maxRandomCounter}.}
+    {debugCultivable: <i>randomCounter {randomCounter} ha raggiunto il livello massimo {maxRandomCounter}.}
         <i>In questo momento non è possibile coltivare altro.
             -> main
     - dice == 1: 
         {
             - firstQuest == false:
-            {debugColtivabili: <i>Il valore di firstQuest è {firstQuest}. Piante Collaborazione contiene: {pianteCollaborazione}. Piante Indipendenza contiene: {pianteIndipendenza}.}
+            {debugCultivable: <i>Il valore di firstQuest è {firstQuest}. Piante Collaborazione contiene: {pianteCollaborazione}. Piante Indipendenza contiene: {pianteIndipendenza}.}
             {
                 - tipoColtivazioni == ():
-                {debugColtivabili: <i>Questa è la prima domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi vado direttamente alla domanda.}
+                {debugCultivable: <i>Questa è la prima domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi vado direttamente alla domanda.}
                     -> first_question
                 
                 - else:
-                {debugColtivabili: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}
+                {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}
                 {
                     - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && firstAnswerTracker != pianteCollaborazione && firstAnswerTracker != pianteIndipendenza:
-                    {debugColtivabili: <i>L'intersezione tra prima scelta e piantecollaborazione produce {pianteCollaborazione^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {pianteIndipendenza^firstAnswerTracker}}
-                    {debugColtivabili: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
+                    {debugCultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {pianteCollaborazione^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {pianteIndipendenza^firstAnswerTracker}}
+                    {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> first_question
                     - else:
-                    {debugColtivabili: <i>Non ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
-                    {debugColtivabili: <i>L'intersezione tra prima scelta e piantecollaborazione produce {pianteCollaborazione^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {pianteIndipendenza^firstAnswerTracker}}
+                    {debugCultivable: <i>Non ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
+                    {debugCultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {pianteCollaborazione^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {pianteIndipendenza^firstAnswerTracker}}
                         ~ randomCounter ++
                         ->random
                 }
                 }
                     
             - else:
-             {debugColtivabili: <i>Il valore di firstQuest è {firstQuest} e per questo torno a random.}
+             {debugCultivable: <i>Il valore di firstQuest è {firstQuest} e per questo torno a random.}
                     ~ randomCounter ++
                     -> random
         }
@@ -112,29 +112,29 @@ VAR inCrescita = 0
     - dice == 2:
         {
             -secondQuest == false:
-            {debugColtivabili: <i>Il valore di secondQuest è {secondQuest}. Piante Ciclicità contiene: {pianteCiclicità}. Piante Novità contiene: {pianteNovità} e per questo vado alla domanda.}
+            {debugCultivable: <i>Il valore di secondQuest è {secondQuest}. Piante Ciclicità contiene: {pianteCiclicità}. Piante Novità contiene: {pianteNovità} e per questo vado alla domanda.}
             {
                 - tipoColtivazioni == ():
-                {debugColtivabili: <i>Questa è la prima domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi vado direttamente alla domanda.}
+                {debugCultivable: <i>Questa è la prima domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi vado direttamente alla domanda.}
                    -> second_question
                 
                 - else:
-                {debugColtivabili: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}
+                {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}
                 {
                     - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && firstAnswerTracker != pianteCollaborazione && firstAnswerTracker != pianteNovità:
-                    {debugColtivabili: <i>L'intersezione tra prima scelta e piante ciclicità produce {pianteCiclicità^firstAnswerTracker}, quella tra prima scelta e piante novità produce {pianteNovità^firstAnswerTracker}.}
-                    {debugColtivabili: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
+                    {debugCultivable: <i>L'intersezione tra prima scelta e piante ciclicità produce {pianteCiclicità^firstAnswerTracker}, quella tra prima scelta e piante novità produce {pianteNovità^firstAnswerTracker}.}
+                    {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> second_question
                     - else:
-                    {debugColtivabili: <i>Non ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
-                    {debugColtivabili: <i>L'intersezione tra prima scelta e piante ciclicità produce {pianteCiclicità^firstAnswerTracker}, quella tra prima scelta e piante novità produce {pianteNovità^firstAnswerTracker}.}
+                    {debugCultivable: <i>Non ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
+                    {debugCultivable: <i>L'intersezione tra prima scelta e piante ciclicità produce {pianteCiclicità^firstAnswerTracker}, quella tra prima scelta e piante novità produce {pianteNovità^firstAnswerTracker}.}
                             ~ randomCounter ++
                         ->random
                 }
             
             }
             - else:
-            {debugColtivabili: <i>Il valore di secondQuest è {secondQuest} e per questo torno a random.}
+            {debugCultivable: <i>Il valore di secondQuest è {secondQuest} e per questo torno a random.}
                         ~ randomCounter ++
                     -> random
         }
@@ -144,22 +144,22 @@ VAR inCrescita = 0
     - dice == 3:
         {
             - thirdQuest == false:
-                {debugColtivabili: <i>Il valore di thirdQuest è {thirdQuest}. Piante Ricordo contiene: {pianteRicordo}. Piante Cancellazione contiene: {pianteCancellazione} e per questo vado alla domanda.}    
+                {debugCultivable: <i>Il valore di thirdQuest è {thirdQuest}. Piante Ricordo contiene: {pianteRicordo}. Piante Cancellazione contiene: {pianteCancellazione} e per questo vado alla domanda.}    
                     {
                 - tipoColtivazioni == ():
-                {debugColtivabili: <i>Questa è la prima domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi vado direttamente alla domanda.}
+                {debugCultivable: <i>Questa è la prima domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi vado direttamente alla domanda.}
                    -> third_question
                 
                 - else:
-                {debugColtivabili: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
+                {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
                     - LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && firstAnswerTracker != pianteCollaborazione && firstAnswerTracker != pianteCancellazione:
-                    {debugColtivabili: <i>L'intersezione tra prima scelta e piante ricordo produce {pianteRicordo^firstAnswerTracker}, quella tra prima scelta e piante cancellazione produce {pianteCancellazione^firstAnswerTracker}.}
-                    {debugColtivabili: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
+                    {debugCultivable: <i>L'intersezione tra prima scelta e piante ricordo produce {pianteRicordo^firstAnswerTracker}, quella tra prima scelta e piante cancellazione produce {pianteCancellazione^firstAnswerTracker}.}
+                    {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> third_question
                     - else:
-                    {debugColtivabili: <i>Non ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
-                    {debugColtivabili: <i>L'intersezione tra prima scelta e piante cancellazione produce {pianteRicordo^firstAnswerTracker}, quella tra prima scelta e piante novità produce {pianteCancellazione^firstAnswerTracker}.}
+                    {debugCultivable: <i>Non ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
+                    {debugCultivable: <i>L'intersezione tra prima scelta e piante cancellazione produce {pianteRicordo^firstAnswerTracker}, quella tra prima scelta e piante novità produce {pianteCancellazione^firstAnswerTracker}.}
                             ~ randomCounter ++
                         ->random
                 }
@@ -167,7 +167,7 @@ VAR inCrescita = 0
             }
                 
             - thirdQuest == true:
-                {debugColtivabili: <i>Il valore di thirdQuest è {thirdQuest} e per questo torno a random.}
+                {debugCultivable: <i>Il valore di thirdQuest è {thirdQuest} e per questo torno a random.}
                         ~ randomCounter ++
                     -> random
         }
@@ -409,7 +409,7 @@ VAR inCrescita = 0
         }
         
     - else:
-        {debugColtivabili: <i>Il dado ha valore {dice} e non ci sono condizioni valide per proporre una delle tre domande, per offro una risposta negativa.}
+        {debugCultivable: <i>Il dado ha valore {dice} e non ci sono condizioni valide per proporre una delle tre domande, per offro una risposta negativa.}
         <i>In questo momento non è possibile coltivare nulla
                     -> main
 }
@@ -425,34 +425,34 @@ QUESTIONS
 
     = first_question
      ~ firstQuest = true
-         {debugColtivabili: <i>Entro in first_question. {firstQuest: firstQuest ora = true|firstQuest = false}}
+         {debugCultivable: <i>Entro in first_question. {firstQuest: firstQuest ora = true|firstQuest = false}}
  
         <i>Sul terreno le foglie e i sassi...
             + [{~ Si sfiorano|Si perdono gli uni nelle altre}.]
                     ~ tipoColtivazioni += collaborazione
                     ~ firstAnswerTracker = pianteCollaborazione
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}
             + [{~ Si osservano distaccati|Difendono i propri confini}.]
                     ~ tipoColtivazioni += indipendenza
                     ~ firstAnswerTracker = pianteIndipendenza
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             -   
                 ~ counter ++
                     -> test
     
     = second_question
     ~ secondQuest = true
-        {debugColtivabili: <i>Entro in second_question. {secondQuest: SecondQuest ora = true|SecondQuest = false}}
+        {debugCultivable: <i>Entro in second_question. {secondQuest: SecondQuest ora = true|SecondQuest = false}}
 
         <i>L'aria...
             + [{~ Insegue sé stessa, gioca con le foglie creando mulinelli|Ruota e ruzzola portando odori dal passato}.]
                     ~ tipoColtivazioni += ciclicità
                     ~ firstAnswerTracker = pianteCiclicità
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             + [{~ È scoppiettante, fremente, carica di elettricità|Esplora cautamente ogni angolo della serra}.]
                     ~ tipoColtivazioni += novità
                     ~ firstAnswerTracker = pianteNovità
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             -   
                 ~ counter ++
                     -> test
@@ -460,228 +460,228 @@ QUESTIONS
 
     = third_question
      ~ thirdQuest = true
-    {debugColtivabili:<i>Entro in third_question. {thirdQuest: thirdQuest ora = true|thirdQuest = false}.}
+    {debugCultivable:<i>Entro in third_question. {thirdQuest: thirdQuest ora = true|thirdQuest = false}.}
     
         <i>L'acqua...
             + [{~ È ferma, mossa solo sulla superficie|È torbida|È piena di foglie e petali}.]
                     ~ tipoColtivazioni += ricordo
                     ~ firstAnswerTracker = pianteRicordo
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             + [{~ Scava, portando con sé il terriccio|Schiaccia foglie e sassi|La sua voce è potente}.]
                     ~ tipoColtivazioni += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             -   
                 ~ counter ++
                     -> test
 
     = fourth_question
      ~ fourthQuest = true
-    {debugColtivabili: <i>Entro in fourthQuest. {fourthQuest: fourthQuest ora = true|fourthQuest = false}.}
+    {debugCultivable: <i>Entro in fourthQuest. {fourthQuest: fourthQuest ora = true|fourthQuest = false}.}
     
         <i>Domanda..
             + [Collaborazione]
                     ~ tipoColtivazioni += collaborazione
                     ~ firstAnswerTracker = pianteCollaborazione 
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             + [Ciclicità]
                     ~ tipoColtivazioni += ciclicità
                     ~ firstAnswerTracker = pianteCiclicità
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             -   
                 ~ counter ++
                     -> test
     
     = fifth_question
      ~ fifthQuest = true
-    {debugColtivabili: <i>Entro in fifthQuest. {fifthQuest: fifthQuest ora = true|fifthQuest = false}.}
+    {debugCultivable: <i>Entro in fifthQuest. {fifthQuest: fifthQuest ora = true|fifthQuest = false}.}
     
         <i>Domanda..
             + [collaborazione]
                     ~ tipoColtivazioni += collaborazione
                     ~ firstAnswerTracker = pianteCollaborazione 
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             + [ricordo]
                     ~ tipoColtivazioni += ricordo
                     ~ firstAnswerTracker = pianteRicordo
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             -   
                 ~ counter ++
                     -> test
                     
     = sixth_question
      ~ sixthQuest = true
-    {debugColtivabili: Entro in sixfthQuest. {sixthQuest: <i>sixfthQuest ora = true|sixfthQuest = false}.}
+    {debugCultivable: Entro in sixfthQuest. {sixthQuest: <i>sixfthQuest ora = true|sixfthQuest = false}.}
     
         <i>Domanda..
             + [collaborazione]
                     ~ tipoColtivazioni += collaborazione
                     ~ firstAnswerTracker = pianteCollaborazione 
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             + [cancellazione]
                     ~ tipoColtivazioni += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             -   
                 ~ counter ++
                     -> test
     
     = seventh_question
      ~ seventhQuest = true
-    {debugColtivabili: <i>Entro in seventhQuest. {seventhQuest: seventhQuest ora = true|seventhQuest = false}.}
+    {debugCultivable: <i>Entro in seventhQuest. {seventhQuest: seventhQuest ora = true|seventhQuest = false}.}
     
         <i>Domanda..
             + [ciclicità]
                     ~ tipoColtivazioni += ciclicità
                     ~ firstAnswerTracker = pianteCiclicità 
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             + [indipendenza]
                     ~ tipoColtivazioni += indipendenza
                     ~ firstAnswerTracker = pianteIndipendenza
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             -   
                 ~ counter ++
                     -> test
                     
     = eighth_question
      ~ eighthQuest = true
-    {debugColtivabili: <i>Entro in eighthQuest. {eighthQuest: eighthQuest ora = true|eighthQuest = false}.}
+    {debugCultivable: <i>Entro in eighthQuest. {eighthQuest: eighthQuest ora = true|eighthQuest = false}.}
     
         <i>Domanda..
             + [ciclicità]
                     ~ tipoColtivazioni += ciclicità 
                     ~ firstAnswerTracker = pianteCiclicità 
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             + [ricordo]
                     ~ tipoColtivazioni += ricordo
                     ~ firstAnswerTracker = pianteRicordo
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             -   
                 ~ counter ++
                     -> test                   
 
     = ninth_question
      ~ ninthQuest = true
-    {debugColtivabili: <i>Entro in ninthQuest. {ninthQuest: ninthQuest ora = true|ninthQuest = false}.}
+    {debugCultivable: <i>Entro in ninthQuest. {ninthQuest: ninthQuest ora = true|ninthQuest = false}.}
     
         <i>Domanda..
             + [ciclicità]
                     ~ tipoColtivazioni += ciclicità 
                     ~ firstAnswerTracker = pianteCiclicità 
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             + [cancellazione]
                     ~ tipoColtivazioni += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             -   
                 ~ counter ++
                     -> test                   
    
     = tenth_question
      ~ tenthQuest = true
-    {debugColtivabili: <i>Entro in tenthQuest. {tenthQuest: tenthQuest ora = true|tenthQuest = false}.}
+    {debugCultivable: <i>Entro in tenthQuest. {tenthQuest: tenthQuest ora = true|tenthQuest = false}.}
     
         <i>Domanda..
             + [indipendenza ]
                     ~ tipoColtivazioni += indipendenza  
                     ~ firstAnswerTracker = pianteIndipendenza 
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             + [novità]
                     ~ tipoColtivazioni += novità
                     ~ firstAnswerTracker = pianteNovità
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             -   
                 ~ counter ++
                     -> test
     = eleventh_question
      ~ eleventhQuest = true
-    {debugColtivabili: <i>Entro in eleventhQuest. {eleventhQuest: eleventhQuest ora = true|eleventhQuest = false}.}
+    {debugCultivable: <i>Entro in eleventhQuest. {eleventhQuest: eleventhQuest ora = true|eleventhQuest = false}.}
     
         <i>Domanda..
             + [indipendenza ]
                     ~ tipoColtivazioni += indipendenza  
                     ~ firstAnswerTracker = pianteIndipendenza 
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             + [ricordo]
                     ~ tipoColtivazioni += ricordo
                     ~ firstAnswerTracker = pianteRicordo
-                {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             -   
                 ~ counter ++
                     -> test                     
  
      = twelfth_question
      ~ twelfthQuest = true
-    {debugColtivabili: <i>Entro in twelfthQuest. {twelfthQuest: twelfthQuest ora = true|twelfthQuest = false}.}
+    {debugCultivable: <i>Entro in twelfthQuest. {twelfthQuest: twelfthQuest ora = true|twelfthQuest = false}.}
     
         <i>Domanda..
             + [indipendenza ]
                     ~ tipoColtivazioni += indipendenza  
                     ~ firstAnswerTracker = pianteIndipendenza 
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             + [cancellazione]
                     ~ tipoColtivazioni += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             -   
                 ~ counter ++
                     -> test 
     
     = thirteenth_question
      ~ thirteenthQuest = true
-    {debugColtivabili: <i>Entro in thirteenthQuest. {thirteenthQuest: thirteenthQuest ora = true|thirteenthQuest = false}.}
+    {debugCultivable: <i>Entro in thirteenthQuest. {thirteenthQuest: thirteenthQuest ora = true|thirteenthQuest = false}.}
     
         <i>Domanda..
             + [novità  ]
                     ~ tipoColtivazioni += novità   
                     ~ firstAnswerTracker = pianteNovità 
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             + [ricordo]
                     ~ tipoColtivazioni += ricordo
                     ~ firstAnswerTracker = pianteRicordo
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             -   
                 ~ counter ++
                     -> test                    
 
     = fourteenth_question
      ~ fourteenthQuest = true
-    {debugColtivabili: <i>Entro in fourteenthQuest. {fourteenthQuest: fourteenthQuest ora = true|fourteenthQuest = false}.}
+    {debugCultivable: <i>Entro in fourteenthQuest. {fourteenthQuest: fourteenthQuest ora = true|fourteenthQuest = false}.}
     
         <i>Domanda..
             + [novità  ]
                     ~ tipoColtivazioni += novità   
                     ~ firstAnswerTracker = pianteNovità 
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             + [cancellazione]
                     ~ tipoColtivazioni += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
-                    {debugColtivabili: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
             -   
                 ~ counter ++
                     -> test
  === results
-{debugColtivabili: <i>Entro in results.}
-{debugColtivabili: <i>Il valore di tipoColtivazioni è {tipoColtivazioni}.}
+{debugCultivable: <i>Entro in results.}
+{debugCultivable: <i>Il valore di tipoColtivazioni è {tipoColtivazioni}.}
  
     {
     - tipoColtivazioni == (collaborazione, ciclicità):{
         - LIST_RANDOM(pianteCollaborazione ^ pianteCiclicità) == ():
-            {debugColtivabili: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
+            {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            {debugColtivabili: <i>Il fungo proposto è {fungoProposto}.}   
+            {debugCultivable: <i>Il fungo proposto è {fungoProposto}.}   
                 -> remove_fungo_proposto
             
         - else: 
-        {debugColtivabili: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
+        {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
                 ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteCiclicità)
                 {
                     - backupColtivabili has fungoProposto:
-                    {debugColtivabili: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
+                    {debugCultivable: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
                         -> remove_fungo_proposto
                     //Questo è un check extra: non dovrebbe mai accadere, ma non si sa mai.    
                     - backupColtivabili hasnt fungoProposto:
-                    {debugColtivabili: <i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
+                    {debugCultivable: <i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
                         -> results
                 }
     }
@@ -689,20 +689,20 @@ QUESTIONS
         
     - tipoColtivazioni == (collaborazione, novità): {
         - LIST_RANDOM(pianteCollaborazione ^ pianteNovità) == ():
-            {debugColtivabili: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}       
+            {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}       
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            {debugColtivabili: <i> Il fungo proposto è {fungoProposto}.}   
+            {debugCultivable: <i> Il fungo proposto è {fungoProposto}.}   
             -> remove_fungo_proposto
             
         - else:
-        {debugColtivabili: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
+        {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
                 ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteNovità)
                 {
                 - backupColtivabili has fungoProposto:
-                {debugColtivabili: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
+                {debugCultivable: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
                     -> remove_fungo_proposto
                 - backupColtivabili hasnt fungoProposto:
-                {debugColtivabili: <i> backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
+                {debugCultivable: <i> backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
                     -> results
                 }
         }
@@ -710,20 +710,20 @@ QUESTIONS
         
     - tipoColtivazioni == (collaborazione, cancellazione):{
         - LIST_RANDOM(pianteCollaborazione ^ pianteCancellazione) == ():
-        {debugColtivabili: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
+        {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            {debugColtivabili: <i>Il fungo proposto è {fungoProposto}.}   
+            {debugCultivable: <i>Il fungo proposto è {fungoProposto}.}   
             -> remove_fungo_proposto
             
         - else:
-        {debugColtivabili: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
+        {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteCancellazione)
                 {
                 - backupColtivabili has fungoProposto:
-                {debugColtivabili: <i> backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
+                {debugCultivable: <i> backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
                     -> remove_fungo_proposto
                 - backupColtivabili hasnt fungoProposto:
-                {debugColtivabili: <i> backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
+                {debugCultivable: <i> backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
                     -> results
                 }
         }
@@ -731,20 +731,20 @@ QUESTIONS
         
     - tipoColtivazioni == (collaborazione, ricordo):{
         - LIST_RANDOM(pianteCollaborazione ^ pianteRicordo) == ():
-        {debugColtivabili: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
+        {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            {debugColtivabili: <i>Il fungo proposto è {fungoProposto}.}   
+            {debugCultivable: <i>Il fungo proposto è {fungoProposto}.}   
             -> remove_fungo_proposto
             
         - else:
-        {debugColtivabili: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
+        {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ fungoProposto = LIST_RANDOM(pianteCollaborazione ^ pianteRicordo)
                 {
                 - backupColtivabili has fungoProposto:
-                {debugColtivabili: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
+                {debugCultivable: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
                     -> remove_fungo_proposto
                 - backupColtivabili hasnt fungoProposto:
-                {debugColtivabili:<i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
+                {debugCultivable:<i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
                     -> results
                 }
         }
@@ -753,169 +753,169 @@ QUESTIONS
         
     - tipoColtivazioni == (indipendenza, ciclicità):{
         - LIST_RANDOM(pianteIndipendenza ^ pianteCiclicità) == ():
-       {debugColtivabili: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
+       {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            {debugColtivabili: <i> Il fungo proposto è {fungoProposto}.}   
+            {debugCultivable: <i> Il fungo proposto è {fungoProposto}.}   
             -> remove_fungo_proposto
             
         - else:
-        {debugColtivabili: <i> Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
+        {debugCultivable: <i> Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ fungoProposto = LIST_RANDOM(pianteIndipendenza ^ pianteCiclicità)
                 {
                 - backupColtivabili has fungoProposto:
-                {debugColtivabili: <i> backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
+                {debugCultivable: <i> backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
                     -> remove_fungo_proposto
                 - backupColtivabili hasnt fungoProposto:
-                {debugColtivabili: <i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
+                {debugCultivable: <i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
                     -> results
                 }
         }
                 
     - tipoColtivazioni == (indipendenza, novità):{
         - LIST_RANDOM(pianteIndipendenza ^ pianteNovità) == ():
-        {debugColtivabili: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
+        {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            {debugColtivabili: <i> Il fungo proposto è {fungoProposto}.}   
+            {debugCultivable: <i> Il fungo proposto è {fungoProposto}.}   
             -> remove_fungo_proposto
             
         - else:
-        {debugColtivabili: <i> Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
+        {debugCultivable: <i> Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ fungoProposto = LIST_RANDOM(pianteIndipendenza ^ pianteNovità)
                 {
                 - backupColtivabili has fungoProposto:
-                {debugColtivabili: <i> backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
+                {debugCultivable: <i> backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
                     -> remove_fungo_proposto
                 - backupColtivabili hasnt fungoProposto:
-                {debugColtivabili: <i> backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
+                {debugCultivable: <i> backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
                     -> results
                 }
         }
         
     - tipoColtivazioni == (indipendenza, cancellazione): {
         - LIST_RANDOM(pianteIndipendenza ^ pianteCancellazione) == ():
-        {debugColtivabili: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
+        {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            {debugColtivabili: <i>Il fungo proposto è {fungoProposto}.}   
+            {debugCultivable: <i>Il fungo proposto è {fungoProposto}.}   
             -> remove_fungo_proposto
         - else:
-        {debugColtivabili: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
+        {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ fungoProposto = LIST_RANDOM(pianteIndipendenza ^ pianteCancellazione)
                 {
                 - backupColtivabili has fungoProposto:
-                {debugColtivabili: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
+                {debugCultivable: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
                     -> remove_fungo_proposto
                 - backupColtivabili hasnt fungoProposto:
-                {debugColtivabili: <i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
+                {debugCultivable: <i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
                     -> results
                 }
             }
         
     - tipoColtivazioni == (indipendenza, ricordo): {
         - LIST_RANDOM(pianteIndipendenza ^ pianteRicordo) == ():
-        {debugColtivabili: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
+        {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            {debugColtivabili: <i>Il fungo proposto è {fungoProposto}.}   
+            {debugCultivable: <i>Il fungo proposto è {fungoProposto}.}   
             -> remove_fungo_proposto
             
         - else:
-        {debugColtivabili: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
+        {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ fungoProposto = LIST_RANDOM(pianteIndipendenza ^ pianteRicordo)
                 {
                 - backupColtivabili has fungoProposto:
-                {debugColtivabili: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
+                {debugCultivable: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
                     -> remove_fungo_proposto
                 - backupColtivabili hasnt fungoProposto:
-                {debugColtivabili: <i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
+                {debugCultivable: <i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
                     -> results
                 }
         }
         
     - tipoColtivazioni == (ciclicità, cancellazione):{
         - LIST_RANDOM(pianteCiclicità ^ pianteCancellazione) == ():
-        {debugColtivabili: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
+        {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            {debugColtivabili: <i>Il fungo proposto è {fungoProposto}.}   
+            {debugCultivable: <i>Il fungo proposto è {fungoProposto}.}   
             -> remove_fungo_proposto
             
         - else:
-        {debugColtivabili: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
+        {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ fungoProposto = LIST_RANDOM(pianteCiclicità ^ pianteCancellazione)
                 {
                 - backupColtivabili has fungoProposto:
-                {debugColtivabili: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
+                {debugCultivable: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
                     -> remove_fungo_proposto
                 - backupColtivabili hasnt fungoProposto:
-                {debugColtivabili: <i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
+                {debugCultivable: <i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
                     -> results
                 }
         }
         
     - tipoColtivazioni == (ciclicità, ricordo):{
         - LIST_RANDOM(pianteCiclicità ^ pianteRicordo) == ():
-        {debugColtivabili: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
+        {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-         {debugColtivabili: <i>Il fungo proposto è {fungoProposto}.}   
+         {debugCultivable: <i>Il fungo proposto è {fungoProposto}.}   
             -> remove_fungo_proposto
             
         - else:
-        {debugColtivabili:<i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
+        {debugCultivable:<i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ fungoProposto = LIST_RANDOM(pianteCiclicità ^ pianteRicordo)
                 {
                 - backupColtivabili has fungoProposto:
-                {debugColtivabili: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
+                {debugCultivable: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
                     -> remove_fungo_proposto
                 - backupColtivabili hasnt fungoProposto:
-                {debugColtivabili: <i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
+                {debugCultivable: <i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
                     -> results
                 }
         }
         
     - tipoColtivazioni == (novità, cancellazione):{
         - LIST_RANDOM(pianteCancellazione ^ pianteNovità) == ():
-        {debugColtivabili:<i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
+        {debugCultivable:<i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            {debugColtivabili: <i>Il fungo proposto è {fungoProposto}.}   
+            {debugCultivable: <i>Il fungo proposto è {fungoProposto}.}   
             -> remove_fungo_proposto
             
         - else:
-        {debugColtivabili: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
+        {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ fungoProposto = LIST_RANDOM(pianteNovità ^ pianteCancellazione)
                 {
                 - backupColtivabili has fungoProposto:
-                {debugColtivabili: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
+                {debugCultivable: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
                     -> remove_fungo_proposto
                 - backupColtivabili hasnt fungoProposto:
-                {debugColtivabili: <i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
+                {debugCultivable: <i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
                     -> results
                 }
         }
         
     - tipoColtivazioni == (novità, ricordo): {
         - LIST_RANDOM(pianteRicordo ^ pianteNovità) == ():
-        {debugColtivabili: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
+        {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ fungoProposto = LIST_RANDOM(backupColtivabili)
-            {debugColtivabili: <i>il fungo proposto è {fungoProposto}.}   
+            {debugCultivable: <i>il fungo proposto è {fungoProposto}.}   
             -> remove_fungo_proposto
             
         - else:
-        {debugColtivabili: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
+        {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ fungoProposto = LIST_RANDOM(pianteNovità ^ pianteRicordo)
                 {
                 - backupColtivabili has fungoProposto:
-                {debugColtivabili: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
+                {debugCultivable: <i>backupColtivabili contiene {fungoProposto} e per questo lo rimuovo}
                     -> remove_fungo_proposto
                 - backupColtivabili hasnt fungoProposto:
-                {debugColtivabili: <i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
+                {debugCultivable: <i>backupColtivabili non contiene {fungoProposto} e per questo rilancio "results".}
                     -> results
                 }
         }
         
     
     - else:
-    {debugColtivabili: <i>Passo da else nella lista tipoColtivazioni perché non c'è un fungo adatto.}
+    {debugCultivable: <i>Passo da else nella lista tipoColtivazioni perché non c'è un fungo adatto.}
          ~ fungoProposto = LIST_RANDOM(backupColtivabili)
          ~ backupColtivabili -= fungoProposto
-    {debugColtivabili: Il fungo proposto è {fungoProposto}.}      
+    {debugCultivable: Il fungo proposto è {fungoProposto}.}      
         -> remove_fungo_proposto
     
     }
@@ -949,10 +949,10 @@ QUESTIONS
     ~ randomCounter = 0
 
  
-{debugColtivabili: <i>Entro in da_lista_a_coltivazioni. Il valore di counter è {counter}, il valore di inCrescita è {inCrescita}. firstQuest è {firstQuest}, secondQuest è {secondQuest}, thirdQuest è {thirdQuest}.}
-{debugColtivabili: <i>Gli elementi ancora coltivabili sono: {backupColtivabili}.}
-{debugColtivabili: <i>Svuoto lista tipo Coltivazioni. Il contenuto di tipo Coltivazioni ora è {tipoColtivazioni}.}
-{debugColtivabili: <i>Svuoto lista firstAnswerTracker. Il contenuto di tipo firstAnswerTracker ora è {firstAnswerTracker}.}
+{debugCultivable: <i>Entro in da_lista_a_coltivazioni. Il valore di counter è {counter}, il valore di inCrescita è {inCrescita}. firstQuest è {firstQuest}, secondQuest è {secondQuest}, thirdQuest è {thirdQuest}.}
+{debugCultivable: <i>Gli elementi ancora coltivabili sono: {backupColtivabili}.}
+{debugCultivable: <i>Svuoto lista tipo Coltivazioni. Il contenuto di tipo Coltivazioni ora è {tipoColtivazioni}.}
+{debugCultivable: <i>Svuoto lista firstAnswerTracker. Il contenuto di tipo firstAnswerTracker ora è {firstAnswerTracker}.}
 
 {fungoProposto:
     - LicheneDegliAbissi:
@@ -982,40 +982,40 @@ QUESTIONS
 
 === remove_fungo_proposto
 //Questa azione mi permette di rimuovere il fungo selezionato da ogni lista che lo può contenere. E dato che col tempo le liste possono aumentare, devo solo mettere un remove qui e non OVUNQUE XD
-{debugColtivabili: <i>Passo dalla funzione remove_fungo_proposto e rimuovo {fungoProposto} da:}
+{debugCultivable: <i>Passo dalla funzione remove_fungo_proposto e rimuovo {fungoProposto} da:}
 {
     - pianteRicordo has fungoProposto:
         ~ pianteRicordo -= fungoProposto
-        {debugColtivabili: <i>piante ricordo.}
+        {debugCultivable: <i>piante ricordo.}
 }
 {
     - pianteNovità has fungoProposto:    
         ~ pianteNovità -= fungoProposto
-       {debugColtivabili: <i>piante novità.}        
+       {debugCultivable: <i>piante novità.}        
 }
 {
     - pianteCollaborazione has fungoProposto:
         ~ pianteCollaborazione -= fungoProposto
-    {debugColtivabili: <i>piante collaborazione.}    
+    {debugCultivable: <i>piante collaborazione.}    
 }
 {
     - pianteCiclicità has fungoProposto:
         ~ pianteCiclicità -= fungoProposto
-    {debugColtivabili: <i>piante ciclicità.}    
+    {debugCultivable: <i>piante ciclicità.}    
 }
 {
     - pianteIndipendenza has fungoProposto:
         ~ pianteIndipendenza -= fungoProposto
-    {debugColtivabili: <i>piante indipendenza.}    
+    {debugCultivable: <i>piante indipendenza.}    
 }
 {
     - pianteCancellazione has fungoProposto:
         ~ pianteCancellazione -= fungoProposto
-    {debugColtivabili: <i>piante cancellazione.}    
+    {debugCultivable: <i>piante cancellazione.}    
 }
 {
     - backupColtivabili has fungoProposto:
         ~ backupColtivabili -= fungoProposto
-    {debugColtivabili: <i>backup Coltivabili.}    
+    {debugCultivable: <i>backup Coltivabili.}    
 }
 -> da_lista_a_coltivazioni

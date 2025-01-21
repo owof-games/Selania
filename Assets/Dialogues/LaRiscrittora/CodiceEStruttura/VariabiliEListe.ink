@@ -2,10 +2,10 @@
 
 //Per abilitare o meno i debug
 VAR debug = false
-VAR debugColtivabili = false
+VAR debugCultivable = false
 
 //Nome giocatrice e pronomi
-VAR nome = "Senza Nome"
+VAR name = "Senza name"
 LIST pronomi = maschili, femminili, neutri
 //Traccio gli spostamenti della personaggia per gestire la comparsa delle personagge
 VAR counterSpostamenti = 0

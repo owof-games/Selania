@@ -25,7 +25,7 @@
             -> compito
         + [Mi diresti a cosa servono i vari luoghi?]
             -> tutorial
-        + [Vorrei cambiare il mio nome.]
+        + [Vorrei cambiare il mio name.]
             -> il_mio_nome ->
         + [Vorrei cambiare i miei pronomi.]
             -> assegnazione_genere ->
