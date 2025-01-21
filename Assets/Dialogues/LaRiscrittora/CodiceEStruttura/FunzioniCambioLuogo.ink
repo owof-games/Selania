@@ -7,7 +7,7 @@
             <i>Questa strada risulta bloccata, per ora.</i>
         -> main
     
-    + {are_two_entities_together(PG, FromGreenhouseMiddlePathToNothing)} [FromGreenhouseMiddlePathToNothing]
+    + {are_two_entities_together(PG, FromGreenhouseMiddlePathToNest)} [FromGreenhouseMiddlePathToNest]
             <i>Questa strada risulta bloccata, per ora.</i>
         -> main    
     //+ {are_two_entities_together(PG, FromBusStopToExitGame)} [FromBusStopToExitGame]
@@ -33,7 +33,7 @@
         -> forest
         
         
-    + {are_two_entities_together(PG, FromGreenhouseMiddlePathToGarden)} [FromGreenhouseMiddlePathToGarden]
+    + {are_two_entities_together(PG, FromGreenhouseMiddlePathToForest)} [FromGreenhouseMiddlePathToForest]
             ~ move_entity(PG, Forest)
             ~ inCrescita ++
             ~ counterSpostamenti ++

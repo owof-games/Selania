@@ -1193,7 +1193,7 @@ GameObject:
   - component: {fileID: 267910713}
   - component: {fileID: 267910712}
   m_Layer: 5
-  m_Name: FromGreenhouseMiddlePathToNothing
+  m_Name: FromGreenhouseMiddlePathToNest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1271,7 +1271,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FromGreenhouseMiddlePathToNothing
+          m_StringArgument: FromGreenhouseMiddlePathToNest
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &267910713
@@ -7484,9 +7484,9 @@ MonoBehaviour:
   - contenutoGreenhouseMiddlePath
   - greenhouseContents
   - contenutoLabirinto
-  - contenutoFalene
+  - nestContents
   - libaryContents
-  - contenutoTisane
+  - laboratoryContents
   inkAssetJSON: {fileID: 4900000, guid: 52a25747e603e6e4aacb94e87b22a990, type: 3}
   entities:
   - {fileID: 2045264602}

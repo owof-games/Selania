@@ -49,8 +49,8 @@
     - entity_location(PG) == Greenhouse:
        ~ return "backFunghi"       
 
-    - entity_location(PG) == Falene:
-        ~ return "backFalene"
+    - entity_location(PG) == Nest:
+        ~ return "backNest"
         
     - entity_location(PG) == Labirinto:
         ~ return "backLabirinto"
@@ -79,7 +79,7 @@
     - entity_location(PG) == Greenhouse:
        ~ return "greenhouseSounds"
 
-    - entity_location(PG) == Falene:
+    - entity_location(PG) == Nest:
         ~ return "mothSounds"
         
     - entity_location(PG) == Labirinto:

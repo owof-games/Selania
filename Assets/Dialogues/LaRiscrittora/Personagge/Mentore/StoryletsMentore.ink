@@ -29,8 +29,8 @@
     - are_entities_together_in(PG, Mentore, Libary) && not prima_visita_Libary:
         -> prima_visita_Libary
 
-    - are_entities_together_in(PG, Mentore, Falene) && not prima_visita_falene:
-        -> prima_visita_falene
+    - are_entities_together_in(PG, Mentore, Nest) && not prima_visita_Nest:
+        -> prima_visita_Nest
 
     - are_entities_together_in(PG, Mentore, Tisane) && not prima_visita_tisane:
         -> prima_visita_tisane
@@ -85,7 +85,7 @@
 
     -> main
 
-=== prima_visita_falene
+=== prima_visita_Nest
 
     -> main
 

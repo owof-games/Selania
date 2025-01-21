@@ -8,8 +8,8 @@
         ~ return BusStop
     - libaryContents has entity:
         ~ return Libary
-    - contenutoFalene has entity:
-        ~ return Falene
+    - nestContents has entity:
+        ~ return Nest
     - greenhouseContents has entity:
         ~ return Greenhouse
     - contenutoLabirinto has entity:
@@ -42,8 +42,8 @@
         ~ busStopContents -= entity
     - Libary:
         ~ libaryContents -= entity
-    - Falene:
-        ~ contenutoFalene -= entity
+    - Nest:
+        ~ nestContents-= entity
     - Greenhouse:
         ~ greenhouseContents -= entity
     - Labirinto:
@@ -66,8 +66,8 @@
         ~ busStopContents += entity
     - Libary:
         ~ libaryContents += entity
-    - Falene:
-        ~ contenutoFalene += entity
+    - Nest:
+        ~ nestContents += entity
     - Greenhouse:
         ~ greenhouseContents += entity
     - Labirinto:
