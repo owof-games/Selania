@@ -70,7 +70,7 @@
     ~ temp charNameUno = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)
     
         {
-        - solitudine == false:
+        - loneliness == false:
             -> trigger_solitudine
         - else:
             -> main_story_personaggia_uno
@@ -145,7 +145,7 @@ Storia finita:
     = goodbye
     Ciao ciao
         ~ move_entity(FirstCharacter, Safekeeping)
-        ~ move_entity(FirstPersonNotes, BusStop)
+        ~ move_entity(FirstCharacterNotes, BusStop)
     -> main
 
 

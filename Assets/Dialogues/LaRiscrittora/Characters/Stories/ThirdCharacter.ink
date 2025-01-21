@@ -54,7 +54,7 @@
 
     === storia_tre_chech_trigger
         {
-        - solitudine == false:
+        - loneliness == false:
             -> trigger_solitudine
         - else:
             -> main_story_personaggia_tre
@@ -126,7 +126,7 @@ Storia finita:
     = goodbye
     Ciao ciao
         ~ move_entity(ThirdCharacter, Safekeeping)
-        ~ move_entity(NotePersonaggiaTre, BusStop)
+        ~ move_entity(ThirdCharacterNotes, BusStop)
     -> main
     
 

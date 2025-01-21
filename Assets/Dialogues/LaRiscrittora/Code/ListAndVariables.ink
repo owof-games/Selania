@@ -24,7 +24,7 @@ LIST characters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacter, F
 
 LIST transitions = FromBusStopToForest, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibrary,  FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, FromGreenhouseToGreenhouseMiddlePath
 
-LIST sceneObjects = Bench, WateringCan , TheFungus, FirstPersonNotes, SecondPersonNotes, NotePersonaggiaTre, NotePersonaggiaQuattro, NotePersonaggiaCinque, NotePersonaggiaSei, NotePersonaggiaSette, StartingNote
+LIST sceneObjects = Bench, WateringCan , TheFungus, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, SixthCharacterNotes, SeventhCharacterNotes, StartingNote
 
 //Nomenclatura: Nome intero == step definitivo, NomeSZ: stepZero, NomeSU: stepUno, NomeSD: stepDue
 LIST mushrooms = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile
@@ -40,11 +40,11 @@ VAR labirinthContents = ()
 VAR nestContents = ()
 VAR libaryContents = ()
 VAR laboratoryContents = ()
-VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FifthCharacter, SixthCharacter, SeventhCharacter,  FirstPersonNotes, SecondPersonNotes, NotePersonaggiaTre, NotePersonaggiaQuattro, NotePersonaggiaCinque, NotePersonaggiaSei, NotePersonaggiaSette)
+VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FifthCharacter, SixthCharacter, SeventhCharacter,  FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, SixthCharacterNotes, SeventhCharacterNotes)
 
     
 //Variabili per tracciare i trigger warning. True = non è TW, posso mostrare quelle storie
-VAR alcolismo = true
-VAR abusi = true
-VAR lutto = true
-VAR solitudine = true
+VAR alcoholism = true
+VAR abuses = true
+VAR mourning = true
+VAR loneliness = true

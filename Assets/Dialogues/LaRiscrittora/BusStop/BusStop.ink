@@ -16,7 +16,7 @@
 
 -> main
 === first_character_notes ===
-    + {are_two_entities_together(FirstPersonNotes, PG)}[FirstPersonNotes]
+    + {are_two_entities_together(FirstCharacterNotes, PG)}[FirstCharacterNotes]
     Ciao {name}, come stai?
     Qui succedono un sacco di cose da quando me ne sono andato.
     Tuo.
@@ -25,31 +25,31 @@
     -> main
     
 === second_character_notes ===
-    + {are_two_entities_together(SecondPersonNotes, PG)}[SecondPersonNotes]
+    + {are_two_entities_together(SecondCharacterNotes, PG)}[SecondCharacterNotes]
     Lettere random note da parte della personaggia
     -> main
     
 === third_character_notes ===
-    + {are_two_entities_together(NotePersonaggiaTre, PG)}[NotePersonaggiaTre]
+    + {are_two_entities_together(ThirdCharacterNotes, PG)}[ThirdCharacterNotes]
     Lettere random note da parte della personaggia
     -> main
     
 === fourth_character_notes ===
-    + {are_two_entities_together(NotePersonaggiaQuattro, PG)}[NotePersonaggiaQuattro]
+    + {are_two_entities_together(FourthCharacterNotes, PG)}[FourthCharacterNotes]
     Lettere random note da parte della personaggia
     -> main
 
 === fifth_character_notes ===
-    + {are_two_entities_together(NotePersonaggiaCinque, PG)}[NotePersonaggiaCinque]
+    + {are_two_entities_together(FifthCharacterNotes, PG)}[FifthCharacterNotes]
     Lettere random note da parte della personaggia
     -> main
 
 === sixth_character_notes ===
-    + {are_two_entities_together(NotePersonaggiaSei, PG)}[NotePersonaggiaSei]
+    + {are_two_entities_together(SixthCharacterNotes, PG)}[SixthCharacterNotes]
     Lettere random note da parte della personaggia
     -> main
 
 === seventh_character_notes ===
-    + {are_two_entities_together(NotePersonaggiaSette, PG)}[NotePersonaggiaSette]
+    + {are_two_entities_together(SeventhCharacterNotes, PG)}[SeventhCharacterNotes]
     Lettere random note da parte della personaggia
     -> main

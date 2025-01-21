@@ -225,31 +225,31 @@
 //Check per l'allontanamento delle personagge
     - storiaUno == Conclusa && movementsCounter > 10:
         ~ move_entity(FirstCharacter, Safekeeping)
-        ~ move_entity(FirstPersonNotes, BusStop)
+        ~ move_entity(FirstCharacterNotes, BusStop)
         
     - storiaDue == Conclusa && movementsCounter > 10:
         ~ move_entity(SecondCharacter, Safekeeping)
-        ~ move_entity(SecondPersonNotes, BusStop)
+        ~ move_entity(SecondCharacterNotes, BusStop)
         
     - storiaTre == Conclusa && movementsCounter > 10:
         ~ move_entity(ThirdCharacter, Safekeeping)
-        ~ move_entity(NotePersonaggiaTre, BusStop)
+        ~ move_entity(ThirdCharacterNotes, BusStop)
         
     - storiaQuattro == Conclusa && movementsCounter > 10:
         ~ move_entity(FourthCharacter, Safekeeping)
-        ~ move_entity(NotePersonaggiaQuattro, BusStop)
+        ~ move_entity(FourthCharacterNotes, BusStop)
         
     - storiaCinque == Conclusa && movementsCounter > 10:
         ~ move_entity(FifthCharacter, Safekeeping)
-        ~ move_entity(NotePersonaggiaCinque, BusStop)
+        ~ move_entity(FifthCharacterNotes, BusStop)
         
     - storiaSei == Conclusa && movementsCounter > 10:
         ~ move_entity(SixthCharacter, Safekeeping)
-        ~ move_entity(NotePersonaggiaSei, BusStop)
+        ~ move_entity(SixthCharacterNotes, BusStop)
         
     - storiaSette == Conclusa && movementsCounter > 10:
         ~ move_entity(SeventhCharacter, Safekeeping)
-        ~ move_entity(NotePersonaggiaSette, BusStop)        
+        ~ move_entity(SeventhCharacterNotes, BusStop)        
                                 
 }
 

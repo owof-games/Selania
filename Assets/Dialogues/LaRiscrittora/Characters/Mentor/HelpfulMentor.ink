@@ -145,7 +145,7 @@
             - IlConsapevole: Mentor: Ora lo spettro è capace di riconoscere la necessità della collaborazione!
             - IlGuarente: Mentor: Vedere le proprie ferite è il primo passo per accogliere le parti di noi che non amiamo.
             - IlTerrorizzato: Mentor: La sua paura è stata più forte della tua dedizione. Questo lavoro è più difficile di quanto sembri.
-            - LAbbandonato: Mentor: Lo spettro si è ancorato alla sua paura della solitudine, ma son sicuro che tu hai imparato qualcosa di importante.
+            - LAbbandonato: Mentor: Lo spettro si è ancorato alla sua paura della loneliness, ma son sicuro che tu hai imparato qualcosa di importante.
             - LArrabbiato: Mentor: La rabbia è una grande trasformatrice. Spero solo che il nostro spettro sappia cosa farne.
         }
         
@@ -297,9 +297,9 @@ Consiglio storia sette
    Trigger Warning
        
 //Variabili per tracciare i trigger warning
-VAR alcolismo = false
-VAR abusi = false
-VAR lutto = false
+VAR alcoholism = false
+VAR abuses = false
+VAR mourning = false
 
  ----------------------------------*/
  
@@ -311,42 +311,42 @@ VAR lutto = false
 
     - (top)
     Mentor: Cosa vorresti evitare?
-    + {alcolismo == true}[Preferirei non leggere nulla che riguardi l'abuso di alcool.]
+    + {alcoholism == true}[Preferirei non leggere nulla che riguardi l'abuso di alcool.]
         Mentor: Capisco benissimo. Preferenza registrata.
-        ~ alcolismo = false
+        ~ alcoholism = false
             -> top
-    + {alcolismo == false}[Ho cambiato idea: introducimi pure storie che parlano di abuso d'alcool.]
+    + {alcoholism == false}[Ho cambiato idea: introducimi pure storie che parlano di abuso d'alcool.]
         Mentor: Ottimo. Preferenza registrata.
-        ~ alcolismo = true
+        ~ alcoholism = true
             -> top
         
   
-    + {abusi == true}[Non voglio leggere storie su relazioni abusanti.]
+    + {abuses == true}[Non voglio leggere storie su relazioni abusanti.]
         Mentor: Hai il mio appoggio. Preferenza registrata.
-        ~ abusi = false
+        ~ abuses = false
             -> top
-    + {abusi == false}[Sai, forse mi va bene di affrontare storie che parlano di abusi relazionali.]
+    + {abuses == false}[Sai, forse mi va bene di affrontare storie che parlano di abuses relazionali.]
         Mentor: Perfetto. Preferenza registrata.
-        ~ abusi = true
+        ~ abuses = true
             -> top
 
 
-    + {lutto == true} [Non me la sento di parlare di lutto.]
+    + {mourning == true} [Non me la sento di parlare di mourning.]
         Mentor: Sentiti a casa. Preferenza registrata.
-        ~ lutto = false
+        ~ mourning = false
             -> top
-    + {lutto == false} [Ho cambiato idea: me la sento di parlare di lutto.]
+    + {mourning == false} [Ho cambiato idea: me la sento di parlare di mourning.]
         Mentor: Grandioso. Preferenza registrata.
-        ~ lutto = true
+        ~ mourning = true
             -> top
         
-    + {solitudine == true} [Preferirei evitare storie di solitudine e abbandono.]
+    + {loneliness == true} [Preferirei evitare storie di loneliness e abbandono.]
         Mentor: Preferenza registrata. E se butta male, sono qui.
-        ~ solitudine = false
+        ~ loneliness = false
             -> top
-    + {solitudine == false} [Sono {pronouns has him: pronto|{pronouns has her: pronta|prontə}} ad ascoltare storie di solitudine e abbandono.]
+    + {loneliness == false} [Sono {pronouns has him: pronto|{pronouns has her: pronta|prontə}} ad ascoltare storie di loneliness e abbandono.]
         Mentor: Preferenza registrata. E se butta male, puoi sempre cambiare idea.
-        ~ solitudine = true
+        ~ loneliness = true
             -> top
             
     + [Sono a posto così.]
