@@ -1,10 +1,9 @@
 using UnityEngine;
 using Ink.Runtime;
 using UnityEngine.UI;
-//using Debug = UnityEngine.Debug;
 
 
-public class CantoDelleCompagne : MonoBehaviour
+public class LicheneDegliAbissi : MonoBehaviour
 {
 [SerializeField] DialogueManagerSingleInk dialogueManager; //qui su unity gli associo il dialogue
 [SerializeField] Image image; //Questa cosa la imposto da editor, ed è l'immagine della prima personaggia
@@ -28,7 +27,7 @@ public class CantoDelleCompagne : MonoBehaviour
     //Chiamo poi in ogni update
     {
         //Chiamare il dialogue manager e fargli eseguire questa riga di codice
-        var step = dialogueManager.GetEffettivoStatoCantoDelleCompagne();
+        var step = dialogueManager.GetEffettivoStatoLicheneDegliAbissi();
         if (step.ContainsItemNamed("stepVuoto"))
         {
             image.sprite = StepVuoto;

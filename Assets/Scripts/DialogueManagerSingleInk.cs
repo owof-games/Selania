@@ -376,7 +376,31 @@ public class DialogueManagerSingleInk : MonoBehaviour
         return (InkList)story.variablesState["statoCantoDelleCompagne"];
     }
 
+    public InkList GetEffettivoStatoLaSpazzata()
+    {
+        return (InkList)story.variablesState["statoLaSpazzata"];
+    }
+    public InkList GetEffettivoStatoLicheneDegliAbissi()
+    {
+        return (InkList)story.variablesState["statoLicheneDegliAbissi"];
+    }    
+    public InkList GetEffettivoStatoBrinaDellImpossibile()
+    {
+        return (InkList)story.variablesState["statoBrinaDellImpossibile"];
+    }    
 
+    public InkList GetEffettivoStatoBaccaDellaAddolorata()
+    {
+        return (InkList)story.variablesState["statoBaccaDellaAddolorata"];
+    } 
+    public InkList GetEffettivoStatoNonTiScordarDiTe()
+    {
+        return (InkList)story.variablesState["statoNonTiScordarDiTe"];
+    }
+    public InkList GetEffettivoStatoMuschioDelleAmanti()
+    {
+        return (InkList)story.variablesState["statoMuschioDelleAmanti"];
+    } 
     public void OnQuitButton()
     {
         SaveGame();
