@@ -7481,9 +7481,9 @@ MonoBehaviour:
   allPlaces:
   - busStopContents
   - forestContents
-  - contenutoGreenhouseMiddlePath
+  - greenhouseMiddlePathContents
   - greenhouseContents
-  - contenutoLabirinto
+  - labirinthContents
   - nestContents
   - libaryContents
   - laboratoryContents

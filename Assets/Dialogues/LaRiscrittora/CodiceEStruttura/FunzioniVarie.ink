@@ -1,17 +1,17 @@
-//Per assegnare/cambiare pronomi di riferimento
+//Per assegnare/cambiare pronouns di riferimento
 === assegnazione_genere ===
-    + {assegnazione_genere> 1} Mi trovo a mio agio con i pronomi {pronomi}.
+    + {assegnazione_genere> 1} Mi trovo a mio agio con i pronomi {pronouns}.
         ->->
     + {assegnazione_genere > 1} <i> Forse qualcosa è cambiato. </i>
         -> top
     + ->
     - (top)
         + [Mi trovo a mio agio col maschile.]
-            ~ pronomi += maschili
+            ~ pronouns += maschili
         + [Preferisco i pronomi femminili.]
-            ~ pronomi += femminili
+            ~ pronouns += femminili
         + [Vai di neutro, ama.]
-            ~ pronomi += neutri
+            ~ pronouns += neutri
         -
 ->->
 
@@ -58,8 +58,8 @@
     - entity_location(PG) == Libary:
        ~ return "backLibary"
 
-    - entity_location(PG) == Tisane:
-       ~ return "backTisane"       
+    - entity_location(PG) == Laboratory:
+       ~ return "backLaboratory"       
                             
 }
 
@@ -88,7 +88,7 @@
     - entity_location(PG) == Libary:
        ~ return "librarySounds"
 
-    - entity_location(PG) == Tisane:
+    - entity_location(PG) == Laboratory:
        ~ return "teaSounds"       
                             
 }

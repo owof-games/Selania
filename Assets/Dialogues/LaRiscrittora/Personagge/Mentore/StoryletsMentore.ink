@@ -32,8 +32,8 @@
     - are_entities_together_in(PG, Mentore, Nest) && not prima_visita_Nest:
         -> prima_visita_Nest
 
-    - are_entities_together_in(PG, Mentore, Tisane) && not prima_visita_tisane:
-        -> prima_visita_tisane
+    - are_entities_together_in(PG, Mentore, Laboratory) && not prima_visita_Laboratory:
+        -> prima_visita_Laboratory
 
     - are_entities_together_in(PG, Mentore, BusStop) && not prima_visita_bus_stop:
         -> prima_visita_bus_stop
@@ -66,7 +66,7 @@
     Mentore: E poi hanno migliaia di odori diversi, per la gioia del mio nasino.
     Mentore: Qui svolgono anche un'altra funzione:
     Mentore: consegnando loro ciò che vogliamo che rimanga nel passato, ci offrono nutrimenti per il presente e il futuro.
-    Mentore: Riscrivere è un lavoro faticoso, e per questo è importante che ogni {pronomi has maschili: riscrittore|{pronomi has femminili: riscrittora|riscrittorə}} abbia dei momenti per prendersi cura di sé.
+    Mentore: Riscrivere è un lavoro faticoso, e per questo è importante che ogni {pronouns has maschili: riscrittore|{pronouns has femminili: riscrittora|riscrittorə}} abbia dei momenti per prendersi cura di sé.
     Mentore: Tornaci spesso: tutto nel giardino cambia spesso.
     {
     - doniTrovati hasnt BrinaDellImpossibile: Uh, e poi a volte qui crescono doni utili per parlare con gli spettri. Tieni questo pezzettino di Brina dell'Impossibile.
@@ -99,6 +99,6 @@
 
     -> main
 
-=== prima_visita_tisane
+=== prima_visita_Laboratory
 
     -> main

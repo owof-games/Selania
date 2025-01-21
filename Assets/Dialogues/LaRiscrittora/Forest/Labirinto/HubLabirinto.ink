@@ -1,4 +1,4 @@
-=== hub_labirinto ===
+=== labirinto ===
 #background: {tag_background()}
 //Qui non compare né mentore né anime e animelle
 
@@ -9,7 +9,7 @@
     + [Inizio a camminare]
         //Per il labirinto, valutare se non andarci a mani vuote (nel senso: non controllo più)
     + [Trovo lo specchio]
-        -> lo_specchio
+        -> mirror
     -
     
 -> main

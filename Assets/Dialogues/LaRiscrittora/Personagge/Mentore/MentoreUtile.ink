@@ -40,13 +40,13 @@
         {chiSei:Mentore|Sconosciuto}: Ora tocca a me farti una domanda: come ti devo chiamare?
         {chiSei:Mentore|Sconosciuto}: Puoi usare qualsiasi name: prendi questa occasione come un nuovo inizio.
             -> il_mio_nome ->
-        {chiSei:Mentore|Sconosciuto}: E quali sono i pronomi in cui ti riconosci?
+        {chiSei:Mentore|Sconosciuto}: E quali sono i pronouns in cui ti riconosci?
         {chiSei:Mentore|Sconosciuto}: Ti chiedo già scusa per la quantità ridotta di scelte.
-        {chiSei:Mentore|Sconosciuto}: Da qualche parte un giorno ho trovato un testo firmato <i>dev</i> dove qualcuno piangeva nel cercare di "programmare scelte multiple attorno all'uso dei pronomi".
+        {chiSei:Mentore|Sconosciuto}: Da qualche parte un giorno ho trovato un testo firmato <i>dev</i> dove qualcuno piangeva nel cercare di "programmare scelte multiple attorno all'uso dei pronouns".
         {chiSei:Mentore|Sconosciuto}: Non ho ben compreso sinceramente, ma mai dire mai: magari in futuro qualche persona troverà una soluzione più efficace.
             -> assegnazione_genere ->
         {chiSei:Mentore|Sconosciuto}: piacere di conoscerti, {name}.
-        {chiSei:Mentore|Sconosciuto}: E {pronomi has maschili: benvenuto|{pronomi has femminili: benvenuta|benvenutə}}. Spero ti troverai bene, qui.
+        {chiSei:Mentore|Sconosciuto}: E {pronouns has maschili: benvenuto|{pronouns has femminili: benvenuta|benvenutə}}. Spero ti troverai bene, qui.
         {not chiSei: Sconosciuto: Ah, che sbadato. Invece tu chiamami <b>Mentore</b>.|Mentore: Forse ne va un po' del mio orgoglio.}
         {not chiSei: Mentore: Forse un po' didascalica come scelta, ma ti assicuro che è molto comoda.|Mentore: Ma se qualcosa non va, non farti problemi a dirmelo.}
         Mentore: Un'altra cosa importante, {name}.
@@ -92,7 +92,7 @@
         Mentore: Una cosa comodissima è che finiranno direttamente nel tuo zainetto.
         Mentore: Un altro tipo di doni sono quelli che puoi crescere in serra.
         Mentore: Mediti, coltivi qualcosa, e quando questa è cresciuta in alcuni casi puoi raccoglierla come dono.
-        Mentore: Altri modi compariranno man mano che sarai più {pronomi has maschili: esperto|{pronomi has femminili: esperta|espertə}}.
+        Mentore: Altri modi compariranno man mano che sarai più {pronouns has maschili: esperto|{pronouns has femminili: esperta|espertə}}.
         Mentore: Ora, la cosa più importante.
         Mentore: I doni non sono cose a caso da dare allo spettro, ma sono modi per fargli capire che hai ascoltato la sua storia, e che vuoi aiutarlo.
         Mentore: Per aiutarlo avrai bisogno di una risorsa che noi mentori chiamiamo <i>inchiostro</i>: uno strumento che può servirti per aiutare lo spettro a riscrivere la sua storia.
@@ -101,7 +101,7 @@
         Mentore: In alcuni casi un dono potrebbe perfino permetterti di scoprire un segreto sullo spettro.
         Mentore: Tutti i doni che hai trovato fino a un dato momento sono all'interno del tuo <b>inventario</b>.
         Mentore: Per cui prenditi del tuo tempo, controlla quello che hai nell'inventario.
-        Mentore: Cammina, vai alla serra, e torna quando sei {pronomi has maschili: sicuro|{pronomi has femminili: sicura|sicurə}} di avere il dono che ti convince.
+        Mentore: Cammina, vai alla serra, e torna quando sei {pronouns has maschili: sicuro|{pronouns has femminili: sicura|sicurə}} di avere il dono che ti convince.
         Mentore: Poi parla con lo spettro, dagli il dono, e torna da me.
             * [Capito]
                     -> main
@@ -109,8 +109,8 @@
     
     === domande_e_obiettivo
         {statoInchiostroPersonaggiaUno == Vuoto or statoInchiostroPersonaggiaUno == Scarso: Mentore: Non ti demoralizzare, capita a chiunque di non dare il massimo al primo colpo.}
-        {statoInchiostroPersonaggiaUno == Normale or statoInchiostroPersonaggiaUno == Medio: Mentore: Bel colpo! Ti sei {pronomi has maschili: guadagnato|{pronomi has femminili: guadagnata|guadagnatə}} subito una bella dose di inchiostro!}
-        {statoInchiostroPersonaggiaUno == Altissimo: Mentore: Beh, hai dato allo spettro il suo dono preferito! Sei già {pronomi has maschili: pronto|{pronomi has femminili: pronta|prontə}} per questo incarico!}
+        {statoInchiostroPersonaggiaUno == Normale or statoInchiostroPersonaggiaUno == Medio: Mentore: Bel colpo! Ti sei {pronouns has maschili: guadagnato|{pronouns has femminili: guadagnata|guadagnatə}} subito una bella dose di inchiostro!}
+        {statoInchiostroPersonaggiaUno == Altissimo: Mentore: Beh, hai dato allo spettro il suo dono preferito! Sei già {pronouns has maschili: pronto|{pronouns has femminili: pronta|prontə}} per questo incarico!}
         Mentore: Ora arriva la parte più complessa.
         Mentore: Puoi immaginare di dividere questa situazione in due fasi.
         Mentore: Nella prima, poni delle domande allo spettro, in modo da capire meglio cosa prova o pensa.
@@ -120,7 +120,7 @@
         Mentore: Poi arriva la seconda fase, quella che da il vero e proprio name al tuo ruolo.
             * [Il mio ruolo?]
             Mentore: Ah, già, ehm, dimenticavo.
-            Mentore: Qui chiamiamo il tuo ruolo quello {pronomi has maschili: del <b>Riscrittore</b>|{pronomi has femminili: della <b>Riscrittora</b>|dellə <b>Riscrittorə</b>}}, perché aiuterai queste persone a riscrivere e rileggere il loro passato.
+            Mentore: Qui chiamiamo il tuo ruolo quello {pronouns has maschili: del <b>Riscrittore</b>|{pronouns has femminili: della <b>Riscrittora</b>|dellə <b>Riscrittorə</b>}}, perché aiuterai queste persone a riscrivere e rileggere il loro passato.
             Mentore: Sei un po' come la persona cara che ti aiuta a cambiare prospettiva quando tutto sembra impossibile.
             Mentore: O il film, il gioco, il libro che ti dà un po' di respiro quando il cervello è travolto dall'ansia.
             Mentore: E quando arriva questo momento di chiarezza, allora lo spettro può finalmente darsi un nuovo name.
@@ -128,7 +128,7 @@
         Mentore: E così arriviamo alla seconda fase. Non farai più domande, ma affermazioni.
         Mentore: Affermazioni per guidare lo spettro a rileggere la sua storia.
         Mentore: Qui, più inchiostro avrai a disposizione più avrai a disposizioni delle "azioni forti": un modo per dire che hai più forza di coinvincimento.
-        Mentore: Se sei {pronomi has maschili: riuscito|{pronomi has femminili: riuscita|riuscitə}} nella fase uno a farlo riflettere sullo stesso tema, ti sarà tutto più facile.
+        Mentore: Se sei {pronouns has maschili: riuscito|{pronouns has femminili: riuscita|riuscitə}} nella fase uno a farlo riflettere sullo stesso tema, ti sarà tutto più facile.
             * [E se fallisco?]
                 Mentore: Se non c'è azione, non c'è fallimento, {name}.
                 Mentore: Ma se non c'è azione, non c'è nemmeno la vita.
@@ -172,7 +172,7 @@
 -(top)
     + [Sulla fermata del bus.]
             Mentore: La fermata, ad est del Giardino, è il posto dove si trovano i vari spettri.
-            Mentore: Non saranno tantissime, non ti preoccupare: ogni {pronomi has maschili: Riscrittore|{pronomi has femminili: Riscrittora|Riscrittorə}} si occupa di uno specifico giardino.
+            Mentore: Non saranno tantissime, non ti preoccupare: ogni {pronouns has maschili: Riscrittore|{pronouns has femminili: Riscrittora|Riscrittorə}} si occupa di uno specifico giardino.
             Mentore: All'ingresso troverai diverse lapidi. Ognuna indica lo spettro che vi è contenuto e il name che si è dato prima di morire.
             Mentore: Alcune richiedono un po' di esperienza prima di interagirci, altre ti chiederanno di ascoltare subito la loro storia.
             Mentore: Ricorda che non puoi mai iniziare una riscrittura senza un dono.
@@ -205,7 +205,7 @@
     + {storiaUno == Conclusa}[Sul labirinto.]
         Informazioni
             -> top
-    + {storiaDue == Conclusa}[Sulle tisane.]
+    + {storiaDue == Conclusa}[Sulle Laboratory.]
         Informazioni
             -> top
     + {storiaDue == Conclusa}[Sulle sirene.]
@@ -231,7 +231,7 @@
         Mentore: fai loro un dono adeguato,
         Mentore: e poi aiuti questi spettri a rileggere un pezzo della loro storia, il pezzo che le blocca qui.
         Mentore: A darsi un nuovo name.
-        Mentore: Qui chiamiamo il tuo ruolo quello {pronomi has maschili: del <b>Riscrittore</b>|{pronomi has femminili: della <b>Riscrittora</b>|dellə <b>Riscrittorə</b>}}, perché aiuterai queste persone a riscrivere e rileggere il loro passato.
+        Mentore: Qui chiamiamo il tuo ruolo quello {pronouns has maschili: del <b>Riscrittore</b>|{pronouns has femminili: della <b>Riscrittora</b>|dellə <b>Riscrittorə</b>}}, perché aiuterai queste persone a riscrivere e rileggere il loro passato.
         Mentore: Due cose importantissime: ci sono più strade per aiutare ogni spettro.
         Mentore: E non sempre puoi portare alla risoluzione che vorresti, e va bene così.
         Mentore: Il tuo obiettivo principale è aiutarli ad uscire dallo stallo in cui sono, il resto viene dopo.
@@ -344,7 +344,7 @@ VAR lutto = false
         Mentore: Preferenza registrata. E se butta male, sono qui.
         ~ solitudine = false
             -> top
-    + {solitudine == false} [Sono {pronomi has maschili: pronto|{pronomi has femminili: pronta|prontə}} ad ascoltare storie di solitudine e abbandono.]
+    + {solitudine == false} [Sono {pronouns has maschili: pronto|{pronouns has femminili: pronta|prontə}} ad ascoltare storie di solitudine e abbandono.]
         Mentore: Preferenza registrata. E se butta male, puoi sempre cambiare idea.
         ~ solitudine = true
             -> top

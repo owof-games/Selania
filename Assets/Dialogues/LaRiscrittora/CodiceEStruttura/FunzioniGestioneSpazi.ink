@@ -12,17 +12,17 @@
         ~ return Nest
     - greenhouseContents has entity:
         ~ return Greenhouse
-    - contenutoLabirinto has entity:
+    - labirinthContents has entity:
         ~ return Labirinto
-    - contenutoTisane has entity:
-        ~ return Tisane
-    - contenutoGreenhouseMiddlePath has entity:
+    - laboratoryContents has entity:
+        ~ return Laboratory
+    - greenhouseMiddlePathContents has entity:
         ~ return GreenhouseMiddlePath         
-    - contenutoCasettaAnime has entity:
-        ~ return CasettaAnime                  
+    - safekeepingContents has entity:
+        ~ return Safekeeping                  
     - else:
         DEBUG: error, cannot find {entity} anywhere!
-        {contenutoCasettaAnime}
+        {safekeepingContents}
         ~ return Forest
 }
 
@@ -47,13 +47,13 @@
     - Greenhouse:
         ~ greenhouseContents -= entity
     - Labirinto:
-        ~ contenutoLabirinto -= entity
-    - Tisane:
-        ~ contenutoTisane -= entity
+        ~ labirinthContents -= entity
+    - Laboratory:
+        ~ laboratoryContents -= entity
     - GreenhouseMiddlePath:
-        ~ contenutoGreenhouseMiddlePath -= entity        
-    - CasettaAnime:
-        ~ contenutoCasettaAnime -= entity    
+        ~ greenhouseMiddlePathContents -= entity        
+    - Safekeeping:
+        ~ safekeepingContents -= entity    
         
     - else:
         DEBUG: error, cannot understand location {CurrentLocation} while trying to move {entity} out.
@@ -71,13 +71,13 @@
     - Greenhouse:
         ~ greenhouseContents += entity
     - Labirinto:
-        ~ contenutoLabirinto += entity
-    - Tisane:
-        ~ contenutoTisane += entity
+        ~ labirinthContents += entity
+    - Laboratory:
+        ~ laboratoryContents += entity
     - GreenhouseMiddlePath:
-        ~ contenutoGreenhouseMiddlePath += entity         
-    - CasettaAnime:
-        ~ contenutoCasettaAnime += entity            
+        ~ greenhouseMiddlePathContents += entity         
+    - Safekeeping:
+        ~ safekeepingContents += entity            
     - else:
         DEBUG: error, cannot understand location {destination} while trying to move {entity} in.
 }

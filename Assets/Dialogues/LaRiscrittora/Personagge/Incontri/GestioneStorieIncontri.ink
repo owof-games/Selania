@@ -224,31 +224,31 @@
 
 //Check per l'allontanamento delle personagge
     - storiaUno == Conclusa && counterSpostamenti > 10:
-        ~ move_entity(PersonaggiaUno, contenutoCasettaAnime)
+        ~ move_entity(PersonaggiaUno, safekeepingContents)
         ~ move_entity(FirstPersonNotes, BusStop)
         
     - storiaDue == Conclusa && counterSpostamenti > 10:
-        ~ move_entity(PersonaggiaDue, contenutoCasettaAnime)
+        ~ move_entity(PersonaggiaDue, safekeepingContents)
         ~ move_entity(SecondPersonNotes, BusStop)
         
     - storiaTre == Conclusa && counterSpostamenti > 10:
-        ~ move_entity(PersonaggiaTre, contenutoCasettaAnime)
+        ~ move_entity(PersonaggiaTre, safekeepingContents)
         ~ move_entity(NotePersonaggiaTre, BusStop)
         
     - storiaQuattro == Conclusa && counterSpostamenti > 10:
-        ~ move_entity(PersonaggiaQuattro, contenutoCasettaAnime)
+        ~ move_entity(PersonaggiaQuattro, safekeepingContents)
         ~ move_entity(NotePersonaggiaQuattro, BusStop)
         
     - storiaCinque == Conclusa && counterSpostamenti > 10:
-        ~ move_entity(PersonaggiaCinque, contenutoCasettaAnime)
+        ~ move_entity(PersonaggiaCinque, safekeepingContents)
         ~ move_entity(NotePersonaggiaCinque, BusStop)
         
     - storiaSei == Conclusa && counterSpostamenti > 10:
-        ~ move_entity(PersonaggiaSei, contenutoCasettaAnime)
+        ~ move_entity(PersonaggiaSei, safekeepingContents)
         ~ move_entity(NotePersonaggiaSei, BusStop)
         
     - storiaSette == Conclusa && counterSpostamenti > 10:
-        ~ move_entity(PersonaggiaSette, contenutoCasettaAnime)
+        ~ move_entity(PersonaggiaSette, safekeepingContents)
         ~ move_entity(NotePersonaggiaSette, BusStop)        
                                 
 }

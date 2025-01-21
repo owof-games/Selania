@@ -64,15 +64,7 @@ VAR randomizable_characters = (Mentore)
         }
         
     {debug:<i> {character} è stato spostato in {location}.}
-      //  {location:
-      //  - Giardino:
-      //   ~ move_entity(character, Giardino)
-      //  - BusStop:
-      //  ~ move_entity(character, BusStop)
-      //  - Greenhouse:
-      //  ~ move_entity(character, Greenhouse)
-    // }
-    
+
 === randomizer_second_tier
     = top
         ~ temp character = LIST_RANDOM(randomizable_characters)
@@ -88,26 +80,7 @@ VAR randomizable_characters = (Mentore)
             - else:
                 ->->
         }
-    
-    // {mentore_location:
-    //     - Giardino:
-    //         ~ move_entity(Mentore, Giardino)
-    //         ~ luoghiAttiviSecondoTier -= Giardino
-    //         ~ luoghiMentoreIncontrato += Giardino
-    //     - BusStop:
-    //         ~ move_entity(Mentore, BusStop)
-    //         ~ luoghiAttiviSecondoTier -= BusStop
-    //         ~ luoghiMentoreIncontrato += BusStop
-    //     - Falene:
-    //         ~ move_entity(Mentore, Falene)
-    //         ~ luoghiAttiviSecondoTier -= Falene
-    //         ~ luoghiMentoreIncontrato += Falene
-    //     - Greenhouse:
-    //         ~ move_entity(Mentore, Greenhouse)
-    //         ~ luoghiAttiviSecondoTier -= Greenhouse
-    //         ~ luoghiMentoreIncontrato += Greenhouse
-    
-    // }
+
     {debug: <i>{character} è stato spostato in {location}.}
     ->->
 
@@ -129,29 +102,7 @@ VAR randomizable_characters = (Mentore)
         
         {debug: <i>{character} è stato spostato in {location}.}
     
-    // {mentore_location:
-    //     - Giardino:
-    //         ~ move_entity(Mentore, Giardino)
-    //         ~ luoghiAttiviTerzoTier -= Giardino
-    //         ~ luoghiMentoreIncontrato += Giardino
-    //     - BusStop:
-    //         ~ move_entity(Mentore, BusStop)
-    //         ~ luoghiAttiviTerzoTier -= BusStop
-    //         ~ luoghiMentoreIncontrato += BusStop
-    //     - Libary:
-    //         ~ move_entity(Mentore, Libary)
-    //         ~ luoghiAttiviTerzoTier -= Libary
-    //         ~ luoghiMentoreIncontrato += Libary
-    //     - Falene:
-    //         ~ move_entity(Mentore, Falene)
-    //         ~ luoghiAttiviTerzoTier -= Falene
-    //         ~ luoghiMentoreIncontrato += Falene
-    //     - Greenhouse:
-    //         ~ move_entity(Mentore, Greenhouse)
-    //         ~ luoghiAttiviTerzoTier -= Greenhouse
-    //         ~ luoghiMentoreIncontrato += Greenhouse
 
-    // }
         ->->
     
 === randomizer_fourth_tier
@@ -171,31 +122,5 @@ VAR randomizable_characters = (Mentore)
         }
         
         {debug:<i> {character} è stato spostato in {location}.}
-    // {mentore_location:
-    //     - Giardino:
-    //         ~ move_entity(Mentore, Giardino)
-    //         ~ luoghiAttiviTerzoTier -= Giardino
-    //         ~ luoghiMentoreIncontrato += Giardino
-    //     - BusStop:
-    //         ~ move_entity(Mentore, BusStop)
-    //         ~ luoghiAttiviTerzoTier -= BusStop
-    //         ~ luoghiMentoreIncontrato += BusStop
-    //     - Libary:
-    //         ~ move_entity(Mentore, Libary)
-    //         ~ luoghiAttiviTerzoTier -= Libary
-    //         ~ luoghiMentoreIncontrato += Libary
-    //     - Falene:
-    //         ~ move_entity(Mentore, Falene)
-    //         ~ luoghiAttiviTerzoTier -= Falene
-    //         ~ luoghiMentoreIncontrato += Falene
-    //     - Greenhouse:
-    //         ~ move_entity(Mentore, Greenhouse)
-    //         ~ luoghiAttiviTerzoTier -= Greenhouse
-    //         ~ luoghiMentoreIncontrato += Greenhouse
-    //     - Tisane:
-    //         ~ move_entity(Mentore, Tisane)
-    //         ~ luoghiAttiviTerzoTier -= Tisane
-    //         ~ luoghiMentoreIncontrato += Tisane
 
-    // }
         ->->

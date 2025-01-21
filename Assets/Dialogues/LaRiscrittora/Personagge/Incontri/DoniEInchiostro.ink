@@ -1,72 +1,3 @@
-/* ---------------------------------
-
-    Gestione dei doni
-    
- ----------------------------------*/
-
-
-//Liste per la gestione dei doni agli spettri
-//DONI: lista di tutti i possibili doni.
-//DONINONTROVATI: sono i doni che verranno dati da eventi, anime etc.
-//DONINONTROVATILUOGO: sono quelli assegnati invece in modo randomico da un luogo.
-//DONITROVATI: i doni che abbiamo nell'inventario.
-//DONIDONATI: i doni che abbiamo già consegnato.
-//LUOGHIDONO: ci serve per far sì che a turno ogni luogo conceda un dono.
-//dato che alcuni doni possono venire da altre liste (es: serra) e avere quindi già in uso lo stesso nome, la nomenclatura qui sarà tutta in minuscolo
-
-
-// LIST doni = coperta, vasovuoto
-
-// VAR doniColtivabili = (MuschioDelleAmanti, BaccaDellaAddolorata, LaSpazzata)
-
-// VAR doniNonTrovati = (MuschioDelleAmanti, BaccaDellaAddolorata, LaSpazzata)
-// VAR doniNonTrovatiLuogo = (coperta, vasovuoto)
-
-
-// VAR doniDonati = ()
-// VAR luoghiDono = ()
-
-
-// //Funzione di randomizzazione dono nei luoghi
-// === randomizzazione_dono_luoghi
-// ~ temp luogoDono = entity_location(PG)
-// ~ temp dono = LIST_RANDOM(doniNonTrovatiLuogo)
-// ~ temp dice_roll = RANDOM(1, 6)
-
-// {debug: Doni non trovati: {doniNonTrovatiLuogo}}
-// {debug: Doni trovati: {doniTrovati}}
-// {debug: Doni donati: {doniDonati}}
-// {debug: Luoghi da cui hai già ricevuto un dono: {luoghiDono}}
-// {debug: Valore dado: {dice_roll}}
-
-
-
-// {
-//     - dice_roll > 3: ->->
-//     - else:
-//         {
-//         - doniNonTrovatiLuogo == (): ->->
-//         - luoghiDono has luogoDono: ->->
-//         - luoghiDono hasnt luogoDono:
-//             <i>Hai trovato {list_with_commas(dono)}.</i>
-//             ~ doniNonTrovatiLuogo -= dono
-//             ~ doniTrovati += dono
-//             ~ luoghiDono += luogoDono
-//         - else:
-//             Errore: non riesco a rintracciare il luogo
-//         }
-    
-// }
-
-
-
-// {debug: Doni non trovati: {doniNonTrovatiLuogo}}
-// {debug: Doni trovati: {doniTrovati}}
-// {debug: Doni donati: {doniDonati}}
-// {debug: Luoghi da cui hai già ricevuto un dono: {luoghiDono}}
-    
-
-// ->->
 
 /* ---------------------------------
 
@@ -112,7 +43,7 @@ VAR Inchiostro = ()
 
 {Inchiostro:
     - Vuoto:
-        <i>Non hai inchiostro per lo spettro, dovrai trovare la tua strada da {pronomi has maschili: solo|{pronomi has femminili: sola|solə}}.</i>
+        <i>Non hai inchiostro per lo spettro, dovrai trovare la tua strada da {pronouns has maschili: solo|{pronouns has femminili: sola|solə}}.</i>
     - Scarso:
         <i>Hai una azione forte a disposizione</i>
     - Normale:

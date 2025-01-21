@@ -144,7 +144,7 @@ Storia finita:
     
     = goodbye
     Ciao ciao
-        ~ move_entity(PersonaggiaUno, contenutoCasettaAnime)
+        ~ move_entity(PersonaggiaUno, safekeepingContents)
         ~ move_entity(FirstPersonNotes, BusStop)
     -> main
 

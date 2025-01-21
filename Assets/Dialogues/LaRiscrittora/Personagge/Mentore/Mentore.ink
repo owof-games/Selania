@@ -5,7 +5,7 @@
 
 === parlareColMentore
 -> storylets_mentore ->
-    Mentore: Cosa vuoi sapere {pronomi has maschili: amico mio|{pronomi has femminili: amica mia|amicə miə}}?
+    Mentore: Cosa vuoi sapere {pronouns has maschili: amico mio|{pronouns has femminili: amica mia|amicə miə}}?
     - (top)
         //+ [Voglio conoscere meglio il mentore]
         + [Qualcosa non mi è chiaro.]
