@@ -69,8 +69,8 @@ VAR randomizable_characters = (Mentore)
       //   ~ move_entity(character, Giardino)
       //  - BusStop:
       //  ~ move_entity(character, BusStop)
-      //  - Funghi:
-      //  ~ move_entity(character, Funghi)
+      //  - Greenhouse:
+      //  ~ move_entity(character, Greenhouse)
     // }
     
 === randomizer_second_tier
@@ -102,10 +102,10 @@ VAR randomizable_characters = (Mentore)
     //         ~ move_entity(Mentore, Falene)
     //         ~ luoghiAttiviSecondoTier -= Falene
     //         ~ luoghiMentoreIncontrato += Falene
-    //     - Funghi:
-    //         ~ move_entity(Mentore, Funghi)
-    //         ~ luoghiAttiviSecondoTier -= Funghi
-    //         ~ luoghiMentoreIncontrato += Funghi
+    //     - Greenhouse:
+    //         ~ move_entity(Mentore, Greenhouse)
+    //         ~ luoghiAttiviSecondoTier -= Greenhouse
+    //         ~ luoghiMentoreIncontrato += Greenhouse
     
     // }
     {debug: <i>{character} è stato spostato in {location}.}
@@ -146,10 +146,10 @@ VAR randomizable_characters = (Mentore)
     //         ~ move_entity(Mentore, Falene)
     //         ~ luoghiAttiviTerzoTier -= Falene
     //         ~ luoghiMentoreIncontrato += Falene
-    //     - Funghi:
-    //         ~ move_entity(Mentore, Funghi)
-    //         ~ luoghiAttiviTerzoTier -= Funghi
-    //         ~ luoghiMentoreIncontrato += Funghi
+    //     - Greenhouse:
+    //         ~ move_entity(Mentore, Greenhouse)
+    //         ~ luoghiAttiviTerzoTier -= Greenhouse
+    //         ~ luoghiMentoreIncontrato += Greenhouse
 
     // }
         ->->
@@ -188,10 +188,10 @@ VAR randomizable_characters = (Mentore)
     //         ~ move_entity(Mentore, Falene)
     //         ~ luoghiAttiviTerzoTier -= Falene
     //         ~ luoghiMentoreIncontrato += Falene
-    //     - Funghi:
-    //         ~ move_entity(Mentore, Funghi)
-    //         ~ luoghiAttiviTerzoTier -= Funghi
-    //         ~ luoghiMentoreIncontrato += Funghi
+    //     - Greenhouse:
+    //         ~ move_entity(Mentore, Greenhouse)
+    //         ~ luoghiAttiviTerzoTier -= Greenhouse
+    //         ~ luoghiMentoreIncontrato += Greenhouse
     //     - Tisane:
     //         ~ move_entity(Mentore, Tisane)
     //         ~ luoghiAttiviTerzoTier -= Tisane

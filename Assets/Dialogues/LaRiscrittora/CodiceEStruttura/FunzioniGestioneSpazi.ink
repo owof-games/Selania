@@ -10,8 +10,8 @@
         ~ return Biblioteca
     - contenutoFalene has entity:
         ~ return Falene
-    - contenutoFunghi has entity:
-        ~ return Funghi
+    - greenhouseContents has entity:
+        ~ return Greenhouse
     - contenutoLabirinto has entity:
         ~ return Labirinto
     - contenutoTisane has entity:
@@ -44,8 +44,8 @@
         ~ contenutoBiblioteca -= entity
     - Falene:
         ~ contenutoFalene -= entity
-    - Funghi:
-        ~ contenutoFunghi -= entity
+    - Greenhouse:
+        ~ greenhouseContents -= entity
     - Labirinto:
         ~ contenutoLabirinto -= entity
     - Tisane:
@@ -68,8 +68,8 @@
         ~ contenutoBiblioteca += entity
     - Falene:
         ~ contenutoFalene += entity
-    - Funghi:
-        ~ contenutoFunghi += entity
+    - Greenhouse:
+        ~ greenhouseContents += entity
     - Labirinto:
         ~ contenutoLabirinto += entity
     - Tisane:

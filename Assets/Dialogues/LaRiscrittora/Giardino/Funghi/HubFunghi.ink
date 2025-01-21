@@ -1,7 +1,7 @@
-=== hub_funghi ===
+=== greenhouse ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-{hub_funghi == 1:<i> Eccoti nella serra</i>|<i>La serra {~ pulsa nell'aria tiepida|risplende|ti attende quieta}</i>}.
+{greenhouse == 1:<i> Eccoti nella serra</i>|<i>La serra {~ pulsa nell'aria tiepida|risplende|ti attende quieta}</i>}.
 
 {
 	- fungoProposto != ():

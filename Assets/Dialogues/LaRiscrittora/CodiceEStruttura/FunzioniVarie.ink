@@ -46,7 +46,7 @@
     - entity_location(PG) == GreenhouseMiddlePath:
        ~ return "backGreenhouseMiddlePath"
        
-    - entity_location(PG) == Funghi:
+    - entity_location(PG) == Greenhouse:
        ~ return "backFunghi"       
 
     - entity_location(PG) == Falene:
@@ -76,7 +76,7 @@
     - entity_location(PG) == GreenhouseMiddlePath:
        ~ return "greenhouseMiddlePathSounds"        
         
-    - entity_location(PG) == Funghi:
+    - entity_location(PG) == Greenhouse:
        ~ return "greenhouseSounds"
 
     - entity_location(PG) == Falene:

@@ -23,7 +23,7 @@
         
     
 //Presentazione dei luoghi
-    - are_entities_together_in(PG, Mentore, Funghi) && not prima_visita_funghi:
+    - are_entities_together_in(PG, Mentore, Greenhouse) && not prima_visita_funghi:
         -> prima_visita_funghi
 
     - are_entities_together_in(PG, Mentore, Biblioteca) && not prima_visita_biblioteca:

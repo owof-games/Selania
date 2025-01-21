@@ -21,10 +21,10 @@
             ~ counterSpostamenti ++    
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
-        -> hub_bus_stop
+        -> bus_stop
                 
 //Streets to Garden       
-    + {are_two_entities_together(PG, FromBusStopToGarden)} [FromBusStopToGarden]
+    + {are_two_entities_together(PG, FromBusStopToForest)} [FromBusStopToForest]
             ~ move_entity(PG, Forest)
             ~ inCrescita ++
             ~ counterSpostamenti ++
@@ -61,54 +61,13 @@
         
 //Streets to Greenhouse
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToGreenhouse)}  [FromGreenhouseMiddlePathToGreenhouse]
-            ~ move_entity(PG, Funghi)
+            ~ move_entity(PG, Greenhouse)
             ~ inCrescita ++
             ~ counterSpostamenti ++    
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
-        -> hub_funghi 
+        -> greenhouse
 
-// + {my_location == Forest && storiaDue == Conclusa && storiaTre == Conclusa && storiaQuattro == Conclusa} [Biblioteca]
-//     ~ move_entity(PG, Biblioteca)
-//     ~ inCrescita ++
-//     ~ counterSpostamenti ++    
-//     -> randomizer_png_location ->
-//     -> story_time_management_for_PNG->
-//     // -> comparsa_anime ->
-    
-//     -> hub_biblioteca
-
-// + {my_location == Forest && storiaUno == Conclusa} [Falene]
-//     ~ move_entity(PG, Falene)
-//     ~ inCrescita ++
-//     ~ counterSpostamenti ++    
-//     -> randomizer_png_location ->
-//     -> story_time_management_for_PNG->
-//     // -> comparsa_anime ->
-    
-//     -> hub_falene
-    
-
-    
-// + {my_location == Forest && storiaUno == Conclusa} [Labirinto]
-//     ~ move_entity(PG, Labirinto)
-//     ~ inCrescita ++
-//     ~ counterSpostamenti ++    
-//     -> randomizer_png_location ->
-//     -> story_time_management_for_PNG->
-//     // -> comparsa_anime ->
-    
-//     -> hub_labirinto
-    
-// + {my_location == Forest && storiaDue == Conclusa && storiaTre == Conclusa && storiaQuattro == Conclusa} [Tisane]
-//     ~ move_entity(PG, Tisane)
-//     ~ inCrescita ++
-//     ~ counterSpostamenti ++    
-//     -> randomizer_png_location ->
-//     -> story_time_management_for_PNG->
-//     // -> comparsa_anime ->
-    
-//     -> hub_tisane
 
 -    
 -> main

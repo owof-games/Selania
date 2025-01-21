@@ -153,7 +153,7 @@
         Mentore: Ma vedrai che ci incontreremo spesso qui in giro.
         Mentore: E per ogni momento di confusione, ricordati che potrai chiedermi qualsiasi cosa.
         Mentore: A presto!
-            ~ move_entity(Mentore, Funghi)
+            ~ move_entity(Mentore, Greenhouse)
             -> main
        
 
