@@ -30,6 +30,7 @@ LIST sceneObjects = Bench, WateringCan , Tree, FirstPersonNotes, SecondPersonNot
 LIST mushrooms = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile
 
 
+
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
 VAR contenutoGiardino = (Mentore, Bench, Tree, FromGardenToBusStop, FromGardenToGreenhouseMiddlePath, FromGardenToNothing)
 VAR contenutoBusStop = (FromBusStopToGarden, PG, StartingNote)

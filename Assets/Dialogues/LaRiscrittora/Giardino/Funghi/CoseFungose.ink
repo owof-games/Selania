@@ -204,6 +204,7 @@
                     {
                         - doniTrovati hasnt MuschioDelleAmanti:
                         ~ doniTrovati += MuschioDelleAmanti
+                        <b>Hai ottenuto: Muschio delle Amanti.</b>
                     }
             + [Non è ancora il momento.]
             -
@@ -335,6 +336,7 @@
                     {
                         - doniTrovati hasnt BaccaDellaAddolorata:
                         ~ doniTrovati += BaccaDellaAddolorata
+                        <b>Hai ottenuto: Bacca della Addolorata</b>
                     }
             
                 -> main
@@ -428,6 +430,7 @@
                     {
                         - doniTrovati hasnt BrinaDellImpossibile:
                         ~ doniTrovati += BrinaDellImpossibile
+                        <b>Hai ottenuto: Brina dell'Impossibile</b>
                     }                
               -> main
         + [Ho bisogno di pensarci un poco.]

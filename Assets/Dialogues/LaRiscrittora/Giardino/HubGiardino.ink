@@ -2,7 +2,6 @@
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
 {hub_giardino == 1:<i>Questo è il giardino</i>|<i>Il giardino {~ è una distesa di fresca ombra|è canto sospeso|riposa}</i>}.
--> randomizzazione_dono_luoghi ->
     + [Mi guardo attorno.]
     -
 
@@ -12,9 +11,35 @@
 === bench
 + {are_two_entities_together(Bench, PG)} [Bench]
     <i>Questo posto è pieno di serenità</i>.
+    {firstTier && doniTrovati hasnt coperta:
+        ~ temp dice = RANDOM(1, 2)
+        {
+            - dice == 1:
+                <i>C'è una coperta abbandonata sulla panchina.</i>
+                <i>Portala con te: qualcuno potrebbe avere freddo.</i>
+                <b>Hai ottenuto: coperta.</b>
+                ~ doniTrovati += coperta
+                ->->
+            - dice == 2:
+            ->->
+        }
+    }
     -> main
 
 === tree
 + {are_two_entities_together(Tree, PG)} [Tree]
     <i>L'albero è smonco</i>.
+    {firstTier && doniTrovati hasnt vasovuoto:
+        ~ temp dice = RANDOM(1, 2)
+        {
+            - dice == 1:
+                <i>C'è un vaso vuoto.</i>
+                <i>in questo luogo anche la cosa più insolita può essere un tesoro.</i>
+                <b>Hai ottenuto: vaso vuoto.</b>
+                ~ doniTrovati += vasovuoto
+                ->->
+            - dice == 2:
+            ->->
+        }
+    }    
     -> main

@@ -20,8 +20,6 @@ VAR currentReceiver = ()
 Dono...
 + {doniTrovati has MuschioDelleAmanti} [Del muschio delle amanti.]
     ~ doniTrovati -= MuschioDelleAmanti
-    ~ doniDonati += MuschioDelleAmanti
-    
     {
         - currentReceiver has PersonaggiaUno:
         <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} è confuso dal dono.</i>
@@ -46,8 +44,7 @@ Dono...
 
 + {doniTrovati has BaccaDellaAddolorata} [Una bacca della Addolorata.]
     ~ doniTrovati -= BaccaDellaAddolorata
-    ~ doniDonati += BaccaDellaAddolorata
-    
+
     {
     - currentReceiver has PersonaggiaUno:
         <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} apprezza il dono.</i>
@@ -69,7 +66,6 @@ Dono...
 
 + {doniTrovati has LaSpazzata} [Un frammento della Spezzata.]
     ~ doniTrovati -= LaSpazzata
-    ~ doniDonati += LaSpazzata
     
     {
     - currentReceiver has PersonaggiaUno:
@@ -92,7 +88,6 @@ Dono...
 
 + {doniTrovati has coperta} [Una coperta.]
     ~ doniTrovati -= coperta
-    ~ doniDonati += coperta
     
     {
     - currentReceiver has PersonaggiaUno:
@@ -119,7 +114,6 @@ Dono...
     
 + {doniTrovati has vasovuoto} [Un vaso vuoto.]
     ~ doniTrovati -= vasovuoto
-    ~ doniDonati += vasovuoto
     
     {
     - currentReceiver has PersonaggiaUno:
@@ -143,8 +137,7 @@ Dono...
     
 + {doniTrovati has BrinaDellImpossibile} [Un frammento di Brina dell'Impossibile.]
     ~ doniTrovati -= BrinaDellImpossibile
-    ~ doniDonati += BrinaDellImpossibile
-    
+
     {
     - currentReceiver has PersonaggiaUno:
         ~ statoInchiostroPersonaggiaUno ++

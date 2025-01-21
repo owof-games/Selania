@@ -15,64 +15,67 @@
 //dato che alcuni doni possono venire da altre liste (es: serra) e avere quindi già in uso lo stesso nome, la nomenclatura qui sarà tutta in minuscolo
 
 
-LIST doni = coperta, vasovuoto
+// LIST doni = coperta, vasovuoto
 
-VAR doniColtivabili = (MuschioDelleAmanti, BaccaDellaAddolorata, LaSpazzata)
+// VAR doniColtivabili = (MuschioDelleAmanti, BaccaDellaAddolorata, LaSpazzata)
 
-VAR doniNonTrovati = (MuschioDelleAmanti, BaccaDellaAddolorata, LaSpazzata)
-VAR doniNonTrovatiLuogo = (coperta, vasovuoto)
-
-VAR doniTrovati = ()
-VAR doniDonati = ()
-VAR luoghiDono = ()
+// VAR doniNonTrovati = (MuschioDelleAmanti, BaccaDellaAddolorata, LaSpazzata)
+// VAR doniNonTrovatiLuogo = (coperta, vasovuoto)
 
 
-//Funzione di randomizzazione dono nei luoghi
-=== randomizzazione_dono_luoghi
-~ temp luogoDono = entity_location(PG)
-~ temp dono = LIST_RANDOM(doniNonTrovatiLuogo)
-~ temp dice_roll = RANDOM(1, 6)
-
-{debug: Doni non trovati: {doniNonTrovatiLuogo}}
-{debug: Doni trovati: {doniTrovati}}
-{debug: Doni donati: {doniDonati}}
-{debug: Luoghi da cui hai già ricevuto un dono: {luoghiDono}}
-{debug: Valore dado: {dice_roll}}
+// VAR doniDonati = ()
+// VAR luoghiDono = ()
 
 
+// //Funzione di randomizzazione dono nei luoghi
+// === randomizzazione_dono_luoghi
+// ~ temp luogoDono = entity_location(PG)
+// ~ temp dono = LIST_RANDOM(doniNonTrovatiLuogo)
+// ~ temp dice_roll = RANDOM(1, 6)
 
-{
-    - dice_roll > 3: ->->
-    - else:
-        {
-        - doniNonTrovatiLuogo == (): ->->
-        - luoghiDono has luogoDono: ->->
-        - luoghiDono hasnt luogoDono:
-            <i>Hai trovato {list_with_commas(dono)}.</i>
-            ~ doniNonTrovatiLuogo -= dono
-            ~ doniTrovati += dono
-            ~ luoghiDono += luogoDono
-        - else:
-            Errore: non riesco a rintracciare il luogo
-        }
+// {debug: Doni non trovati: {doniNonTrovatiLuogo}}
+// {debug: Doni trovati: {doniTrovati}}
+// {debug: Doni donati: {doniDonati}}
+// {debug: Luoghi da cui hai già ricevuto un dono: {luoghiDono}}
+// {debug: Valore dado: {dice_roll}}
+
+
+
+// {
+//     - dice_roll > 3: ->->
+//     - else:
+//         {
+//         - doniNonTrovatiLuogo == (): ->->
+//         - luoghiDono has luogoDono: ->->
+//         - luoghiDono hasnt luogoDono:
+//             <i>Hai trovato {list_with_commas(dono)}.</i>
+//             ~ doniNonTrovatiLuogo -= dono
+//             ~ doniTrovati += dono
+//             ~ luoghiDono += luogoDono
+//         - else:
+//             Errore: non riesco a rintracciare il luogo
+//         }
     
-}
+// }
 
 
 
-{debug: Doni non trovati: {doniNonTrovatiLuogo}}
-{debug: Doni trovati: {doniTrovati}}
-{debug: Doni donati: {doniDonati}}
-{debug: Luoghi da cui hai già ricevuto un dono: {luoghiDono}}
+// {debug: Doni non trovati: {doniNonTrovatiLuogo}}
+// {debug: Doni trovati: {doniTrovati}}
+// {debug: Doni donati: {doniDonati}}
+// {debug: Luoghi da cui hai già ricevuto un dono: {luoghiDono}}
     
 
-->->
+// ->->
 
 /* ---------------------------------
 
     Gestione inchiostro
 
  ----------------------------------*/
+//Lista dei doni che si possono trovare in gioco.
+LIST doni = coperta, vasovuoto 
+VAR doniTrovati = ()
 
 //Gestione dell'inchiostro per i vari spettri. Nomi e valori sono temporanei. L'idea per ora è: se sono su Scarso, posso fare solo una scelta forte. Con Normale, due e via di seguito. Ogni scelta mi scala indietro nella lista di stati.
 LIST statoInchiostro = Vuoto, Scarso, Normale, Medio, Altissimo
