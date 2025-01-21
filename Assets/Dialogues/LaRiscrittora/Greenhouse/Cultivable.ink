@@ -1,130 +1,130 @@
 === plant_check
 {
-    - inCrescita < 2:
+    - growing < 2:
         ~ growStep = ()
         ~ growStep += stepZero
-    - inCrescita < 4:
+    - growing < 4:
         ~ growStep = ()
-        ~ growStep += stepUno    
-    - inCrescita < 6:
+        ~ growStep += stepOne    
+    - growing < 6:
         ~ growStep = ()
-        ~ growStep += stepDue
+        ~ growStep += stepTwo
     - else:
         ~ growStep = ()
-        ~ growStep += stepTre
+        ~ growStep += stepThree
 
 }
 
 {
-    - fungoProposto has LicheneDegliAbissi:
+    - chosenCultivable has LicheneDegliAbissi:
     {
         - growStep has stepZero:
             ~ statoLicheneDegliAbissi = stepZero
             -> lichene_degli_abissi.step_zero
-        - growStep has stepUno:
-            ~ statoLicheneDegliAbissi = stepUno
+        - growStep has stepOne:
+            ~ statoLicheneDegliAbissi = stepOne
             -> lichene_degli_abissi.step_uno
-        - growStep has stepDue:
-            ~ statoLicheneDegliAbissi = stepDue
+        - growStep has stepTwo:
+            ~ statoLicheneDegliAbissi = stepTwo
             -> lichene_degli_abissi.step_due
-        - growStep has stepTre:
-            ~ statoLicheneDegliAbissi = stepTre
+        - growStep has stepThree:
+            ~ statoLicheneDegliAbissi = stepThree
             -> lichene_degli_abissi.step_tre
     }
 
-    - fungoProposto has MuschioDelleAmanti:
+    - chosenCultivable has MuschioDelleAmanti:
     {
         - growStep has stepZero:
             ~ statoMuschioDelleAmanti = stepZero
             -> muschio_delle_amanti.step_zero
-        - growStep has stepUno:
-            ~ statoMuschioDelleAmanti = stepUno
+        - growStep has stepOne:
+            ~ statoMuschioDelleAmanti = stepOne
             -> muschio_delle_amanti.step_uno
-        - growStep has stepDue:
-            ~ statoMuschioDelleAmanti = stepDue
+        - growStep has stepTwo:
+            ~ statoMuschioDelleAmanti = stepTwo
             -> muschio_delle_amanti.step_due
-        - growStep has stepTre:
-             ~ statoMuschioDelleAmanti = stepTre
+        - growStep has stepThree:
+             ~ statoMuschioDelleAmanti = stepThree
             -> muschio_delle_amanti.step_tre
     }
 
-    - fungoProposto has CantoDelleCompagne:
+    - chosenCultivable has CantoDelleCompagne:
     {
         - growStep has stepZero:
             ~ statoCantoDelleCompagne = stepZero
             -> canto_delle_compagne.step_zero    
-        - growStep has stepUno:
-            ~ statoCantoDelleCompagne = stepUno
+        - growStep has stepOne:
+            ~ statoCantoDelleCompagne = stepOne
             -> canto_delle_compagne.step_uno
-        - growStep has stepDue:
-            ~ statoCantoDelleCompagne = stepDue
+        - growStep has stepTwo:
+            ~ statoCantoDelleCompagne = stepTwo
             -> canto_delle_compagne.step_due
-        - growStep has stepTre:
-             ~ statoCantoDelleCompagne = stepTre
+        - growStep has stepThree:
+             ~ statoCantoDelleCompagne = stepThree
             -> canto_delle_compagne.step_tre
     }
 
-    - fungoProposto has LaSpazzata:
+    - chosenCultivable has LaSpazzata:
     {
         - growStep has stepZero:
             ~ statoLaSpazzata = stepZero
             -> la_spazzata.step_zero 
-        - growStep has stepUno:
-            ~ statoLaSpazzata = stepUno
+        - growStep has stepOne:
+            ~ statoLaSpazzata = stepOne
             -> la_spazzata.step_uno
-        - growStep has stepDue:
-            ~ statoLaSpazzata = stepDue
+        - growStep has stepTwo:
+            ~ statoLaSpazzata = stepTwo
             -> la_spazzata.step_due
-        - growStep has stepTre:
-            ~ statoLaSpazzata = stepTre
+        - growStep has stepThree:
+            ~ statoLaSpazzata = stepThree
             -> la_spazzata.step_tre
     }
 
-    - fungoProposto has BaccaDellaAddolorata:
+    - chosenCultivable has BaccaDellaAddolorata:
     {
         - growStep has stepZero:
             ~ statoBaccaDellaAddolorata = stepZero
             -> bacca_della_addolorata.step_zero
-        - growStep has stepUno:
-            ~ statoBaccaDellaAddolorata = stepUno
+        - growStep has stepOne:
+            ~ statoBaccaDellaAddolorata = stepOne
             -> bacca_della_addolorata.step_uno
-        - growStep has stepDue:
-            ~ statoBaccaDellaAddolorata = stepDue
+        - growStep has stepTwo:
+            ~ statoBaccaDellaAddolorata = stepTwo
             -> bacca_della_addolorata.step_due
-        - growStep has stepTre:
-            ~ statoBaccaDellaAddolorata = stepTre
+        - growStep has stepThree:
+            ~ statoBaccaDellaAddolorata = stepThree
             -> bacca_della_addolorata.step_tre
     }
 
-    - fungoProposto has NonTiScordarDiTe:
+    - chosenCultivable has NonTiScordarDiTe:
     {
         - growStep has stepZero:
             ~ statoNonTiScordarDiTe = stepZero
             -> non_ti_scordar_di_te.step_zero     
-        - growStep has stepUno:
-            ~ statoNonTiScordarDiTe = stepUno
+        - growStep has stepOne:
+            ~ statoNonTiScordarDiTe = stepOne
             -> non_ti_scordar_di_te.step_uno
-        - growStep has stepDue:
-            ~ statoNonTiScordarDiTe = stepDue
+        - growStep has stepTwo:
+            ~ statoNonTiScordarDiTe = stepTwo
             -> non_ti_scordar_di_te.step_due
-        - growStep has stepTre:
-            ~ statoNonTiScordarDiTe = stepTre
+        - growStep has stepThree:
+            ~ statoNonTiScordarDiTe = stepThree
             -> non_ti_scordar_di_te.step_tre
     }
 
-    - fungoProposto has BrinaDellImpossibile:
+    - chosenCultivable has BrinaDellImpossibile:
     {
         - growStep has stepZero:
             ~ statoBrinaDellImpossibile = stepZero
             -> brina_dell_impossibile.step_zero     
-        - growStep has stepUno:
-            ~ statoBrinaDellImpossibile = stepUno
+        - growStep has stepOne:
+            ~ statoBrinaDellImpossibile = stepOne
             -> brina_dell_impossibile.step_uno
-        - growStep has stepDue:
-            ~ statoBrinaDellImpossibile = stepDue
+        - growStep has stepTwo:
+            ~ statoBrinaDellImpossibile = stepTwo
             -> brina_dell_impossibile.step_due
-        - growStep has stepTre:
-             ~ statoBrinaDellImpossibile = stepTre
+        - growStep has stepThree:
+             ~ statoBrinaDellImpossibile = stepThree
             -> brina_dell_impossibile.step_tre
     }    
     ->->
@@ -157,8 +157,8 @@
                 <i> Un piccolo sbuffo. Le tue dita ora sanno di mare.</i>
                 <i>Il lichene è scomparso, tu no.</i>
                 <i>C'è qualcuno che devi allontanare?</i>
-                    ~ inCrescita = 0
-                    ~ fungoProposto = ()
+                    ~ growing = 0
+                    ~ chosenCultivable = ()
             + [Lo lascio dov'è.]
             -
               -> main
@@ -190,8 +190,8 @@
             + [Raccolgo un po' del muschio.]
                 <i>Così vicino, il muschio ti chiama.</i>
                 <i>Ti invita a fermare per un attimo tutto, a premiare come più ti piace il tuo corpo, dentro o fuori che sia.</i>
-                    ~ inCrescita = 0
-                    ~ fungoProposto = ()
+                    ~ growing = 0
+                    ~ chosenCultivable = ()
                     {
                         - findedGifts hasnt MuschioDelleAmanti:
                         ~ findedGifts += MuschioDelleAmanti
@@ -230,8 +230,8 @@
                 <i>Puoi farlo da te, o chiamare qualcuno a cui tieni.
                 Riempiti dell'euforia del fungo, e lascia che il mondo intero ascolti la tua voce.
                 Con l'ultima nota, il fungo sarà altrove, da un'altra compagna bisognosa.</i>
-                    ~ inCrescita = 0
-                    ~ fungoProposto = ()
+                    ~ growing = 0
+                    ~ chosenCultivable = ()
                     -> main
         + [No, non ora.]
               -> main
@@ -264,8 +264,8 @@
             <i>Qualcosa che sono giorni o settimane (uh: questa Spazzata è molto grande. forse mesi?) che ti pesa.</i>
             <i>Falle la promessa, e se ne andrà.</i>
             <i>Ma se poi tradisci la promessa, la Spazzata tornerà ancora più forte.</i>
-                    ~ inCrescita = 0
-                    ~ fungoProposto = ()
+                    ~ growing = 0
+                    ~ chosenCultivable = ()
                     -> main
         + [Non ora.]
             -> main
@@ -296,8 +296,8 @@
             + [La afferro.]
             <i>La mano molla la sua presa, rivelandosi per quel che era dall'inizio: solo un insieme tenace di radici.</i>
             <i>Senti dalle tue spalle qualcosa sciogliersi, scivolare via: ora hai un po' meno paura di camminare.</i>
-                ~ inCrescita = 0
-                ~ fungoProposto = ()
+                ~ growing = 0
+                ~ chosenCultivable = ()
                     {
                         - findedGifts hasnt BaccaDellaAddolorata:
                         ~ findedGifts += BaccaDellaAddolorata
@@ -339,8 +339,8 @@
             <i>Si sciolgono tra le tue mani, rilasciando di nuovo un profumo familiare.</i>
             <i>Ti porti quel che rimane alle labbra: il tuo corpo viene invaso da fiducia e calore.</i>
             <i>Senti in te chi non c'è più: siete parte della stessa storia.</i>
-                ~ inCrescita = 0
-                ~ fungoProposto = ()
+                ~ growing = 0
+                ~ chosenCultivable = ()
               -> main
         + [Non ora.]
               -> main
@@ -372,8 +372,8 @@
             <i>Il vetro si rinsalda, spingendo via la tua mano.</i>
             <i>Le linee del tuo palmo si fanno trasparenti, inconsistenti. Eppure puoi muovere le dita, e non provi alcun dolore.</i>
             <i>Non tutti i cambiamenti sono così facili, ma ora hai la certezza che puoi provare quella cosa che rimandi da sempre: la paura di trovarti a pezzi è solo quello: paura.</i>
-                ~ inCrescita = 0
-                ~ fungoProposto = ()
+                ~ growing = 0
+                ~ chosenCultivable = ()
                     {
                         - findedGifts hasnt BrinaDellImpossibile:
                         ~ findedGifts += BrinaDellImpossibile

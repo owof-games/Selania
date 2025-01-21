@@ -4,12 +4,12 @@
 {greenhouse == 1:<i> Eccoti nella serra</i>|<i>La serra {~ pulsa nell'aria tiepida|risplende|ti attende quieta}</i>}.
 
 {
-	- fungoProposto != ():
+	- chosenCultivable != ():
         -> cure
         
     - else:
     {
-        - backupColtivabili != ():
+        - backupCultivable != ():
             -> pre_test
         - else:
             <i>Al momento non è possibile coltivare nulla</i>.
@@ -34,9 +34,9 @@
 === call_test
     + {are_two_entities_together(WateringCan, PG)} [WateringCan]
     {
-    	- backupColtivabili != ():
+    	- backupCultivable != ():
             {
-                - fungoProposto != ():
+                - chosenCultivable != ():
                         -> cure
                 - else:     
                         -> test_coltivazioni
@@ -47,12 +47,12 @@
     }
     
     {
-	- fungoProposto != ():
+	- chosenCultivable != ():
         -> cure
         
     - else:
     {
-        - backupColtivabili != ():
+        - backupCultivable != ():
             -> pre_test
         - else:
             <i>Al momento non è possibile coltivare nulla</i>.
