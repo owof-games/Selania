@@ -31,12 +31,12 @@
                 -> top
         * {vado} [Me ne vado.]
             {chiSei:Mentor|Sconosciuto}: Giusto un secondo, persona nuova.
-            -> name
+            -> your_name
         * {vado or chiSei or dove} [Perfetto: ma ora?]
-            -> name 
-        * -> name
+            -> your_name
+        * -> your_name
     
-    = nome    
+    = your_name    
         {chiSei:Mentor|Sconosciuto}: Ora tocca a me farti una domanda: come ti devo chiamare?
         {chiSei:Mentor|Sconosciuto}: Puoi usare qualsiasi name: prendi questa occasione come un nuovo inizio.
             -> il_mio_nome ->

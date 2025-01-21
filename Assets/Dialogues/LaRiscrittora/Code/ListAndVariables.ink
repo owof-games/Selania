@@ -20,7 +20,7 @@ VAR thirdTierPlaces = (Forest, BusStop, Libary, Nest, GreenhouseMiddlePath)
 VAR fourthTierPlaces = (Forest, BusStop, Libary, Nest, Laboratory, GreenhouseMiddlePath)
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
-LIST characters = Mentor, PG, PersonaggiaUno, PersonaggiaDue, PersonaggiaTre, PersonaggiaQuattro, PersonaggiaCinque, PersonaggiaSei, PersonaggiaSette
+LIST characters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FifthCharacter, SixthCharacter, SeventhCharacter
 
 LIST transitions = FromBusStopToForest, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibrary,  FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, FromGreenhouseToGreenhouseMiddlePath
 
@@ -40,7 +40,7 @@ VAR labirinthContents = ()
 VAR nestContents = ()
 VAR libaryContents = ()
 VAR laboratoryContents = ()
-VAR safekeepingContents = (PersonaggiaUno, PersonaggiaDue, PersonaggiaTre, PersonaggiaQuattro, PersonaggiaCinque, PersonaggiaSei, PersonaggiaSette,  FirstPersonNotes, SecondPersonNotes, NotePersonaggiaTre, NotePersonaggiaQuattro, NotePersonaggiaCinque, NotePersonaggiaSei, NotePersonaggiaSette)
+VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FifthCharacter, SixthCharacter, SeventhCharacter,  FirstPersonNotes, SecondPersonNotes, NotePersonaggiaTre, NotePersonaggiaQuattro, NotePersonaggiaCinque, NotePersonaggiaSei, NotePersonaggiaSette)
 
     
 //Variabili per tracciare i trigger warning. True = non è TW, posso mostrare quelle storie

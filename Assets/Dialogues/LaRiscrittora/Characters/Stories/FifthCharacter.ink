@@ -2,11 +2,11 @@
 
 === personaggia_cinque ===
         //opzione se questa storia è attiva
-        + {are_two_entities_together(PersonaggiaCinque, PG) && storiaCinque == InCorso} [PersonaggiaCinque]
+        + {are_two_entities_together(FifthCharacter, PG) && storiaCinque == InCorso} [FifthCharacter]
                 -> storia_cinque
         
         //opzione se c'è un'altra storia attiva
-        + {are_two_entities_together(PersonaggiaCinque, PG) && storiaCinque == Conclusa}[PersonaggiaCinque]
+        + {are_two_entities_together(FifthCharacter, PG) && storiaCinque == Conclusa}[FifthCharacter]
                 -> personaggia_cinque_storia_conclusa
                 
         + ->

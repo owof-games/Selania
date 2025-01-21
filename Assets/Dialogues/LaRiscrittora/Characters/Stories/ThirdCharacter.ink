@@ -3,11 +3,11 @@
 === personaggia_tre ===
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
-        + {are_two_entities_together(PersonaggiaTre, PG) && storiaTre == InCorso}[PersonaggiaTre]
+        + {are_two_entities_together(ThirdCharacter, PG) && storiaTre == InCorso}[ThirdCharacter]
             -> dialogo_personaggia_tre
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(PersonaggiaTre, PG) && storiaTre == Conclusa} [PersonaggiaTre]
+        + {are_two_entities_together(ThirdCharacter, PG) && storiaTre == Conclusa} [ThirdCharacter]
             -> personaggia_tre_storia_conclusa
         + ->
     
@@ -25,7 +25,7 @@
         -> main
     //Faccio così per questione di ordine
        + {not dono_storia_tre.esito_inchiostro} Dono
-            ~ currentReceiver += PersonaggiaTre
+            ~ currentReceiver += ThirdCharacter
         -> dono_storia_tre
     
     //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
@@ -125,7 +125,7 @@ Storia finita:
     
     = goodbye
     Ciao ciao
-        ~ move_entity(PersonaggiaTre, Safekeeping)
+        ~ move_entity(ThirdCharacter, Safekeeping)
         ~ move_entity(NotePersonaggiaTre, BusStop)
     -> main
     

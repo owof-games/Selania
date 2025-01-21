@@ -2,11 +2,11 @@
 ~ temp charNameUno = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
-        + {are_two_entities_together(PersonaggiaUno, PG) && storiaUno == InCorso}[PersonaggiaUno]
+        + {are_two_entities_together(FirstCharacter, PG) && storiaUno == InCorso}[FirstCharacter]
             -> dialogo_personaggia_uno
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(PersonaggiaUno, PG) && storiaUno == Conclusa} [PersonaggiaUno]
+        + {are_two_entities_together(FirstCharacter, PG) && storiaUno == Conclusa} [FirstCharacter]
             -> personaggia_uno_storia_conclusa
         + ->
     
@@ -31,7 +31,7 @@
         
     //Se non ho ancora fatto il dono e ho parlato con il mentore
        + {not dono_storia_uno.esito_inchiostro && dono_e_inchiostro} Dono
-             ~ currentReceiver += PersonaggiaUno
+             ~ currentReceiver += FirstCharacter
             -> dono_storia_uno
     
     //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
@@ -144,7 +144,7 @@ Storia finita:
     
     = goodbye
     Ciao ciao
-        ~ move_entity(PersonaggiaUno, Safekeeping)
+        ~ move_entity(FirstCharacter, Safekeeping)
         ~ move_entity(FirstPersonNotes, BusStop)
     -> main
 

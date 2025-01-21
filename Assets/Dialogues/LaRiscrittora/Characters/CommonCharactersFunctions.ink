@@ -23,9 +23,9 @@ VAR randomizable_characters = (Mentor)
     }
     {
         - storiaUno == InCorso && dialogo_personaggia_uno:
-            ~ randomizable_characters += PersonaggiaUno
+            ~ randomizable_characters += FirstCharacter
         - storiaDue == InCorso && dialogo_personaggia_due:
-            ~ randomizable_characters += PersonaggiaDue
+            ~ randomizable_characters += SecondCharacter
             //Aggiungere poi gli altri
     }
     
