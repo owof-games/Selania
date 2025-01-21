@@ -8,8 +8,8 @@
     VAR effettivoStatoPersonaggiaUno = LIndeciso
     
     VAR storiaUno = NonIniziata
-    //VAR donoPersonaggiaUno = false
     VAR eventoSpecialePersonaggiaUno = false
+    VAR firstCharEndingDialogue = 0
 
 
 //Gestione seconda personaggia.
@@ -224,31 +224,31 @@
 
 //Check per l'allontanamento delle personagge
     - storiaUno == Conclusa && counterSpostamenti > 10:
-        ~ move_entity(PersonaggiaUno, safekeepingContents)
+        ~ move_entity(PersonaggiaUno, Safekeeping)
         ~ move_entity(FirstPersonNotes, BusStop)
         
     - storiaDue == Conclusa && counterSpostamenti > 10:
-        ~ move_entity(PersonaggiaDue, safekeepingContents)
+        ~ move_entity(PersonaggiaDue, Safekeeping)
         ~ move_entity(SecondPersonNotes, BusStop)
         
     - storiaTre == Conclusa && counterSpostamenti > 10:
-        ~ move_entity(PersonaggiaTre, safekeepingContents)
+        ~ move_entity(PersonaggiaTre, Safekeeping)
         ~ move_entity(NotePersonaggiaTre, BusStop)
         
     - storiaQuattro == Conclusa && counterSpostamenti > 10:
-        ~ move_entity(PersonaggiaQuattro, safekeepingContents)
+        ~ move_entity(PersonaggiaQuattro, Safekeeping)
         ~ move_entity(NotePersonaggiaQuattro, BusStop)
         
     - storiaCinque == Conclusa && counterSpostamenti > 10:
-        ~ move_entity(PersonaggiaCinque, safekeepingContents)
+        ~ move_entity(PersonaggiaCinque, Safekeeping)
         ~ move_entity(NotePersonaggiaCinque, BusStop)
         
     - storiaSei == Conclusa && counterSpostamenti > 10:
-        ~ move_entity(PersonaggiaSei, safekeepingContents)
+        ~ move_entity(PersonaggiaSei, Safekeeping)
         ~ move_entity(NotePersonaggiaSei, BusStop)
         
     - storiaSette == Conclusa && counterSpostamenti > 10:
-        ~ move_entity(PersonaggiaSette, safekeepingContents)
+        ~ move_entity(PersonaggiaSette, Safekeeping)
         ~ move_entity(NotePersonaggiaSette, BusStop)        
                                 
 }

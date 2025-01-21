@@ -119,9 +119,9 @@ Storia finita:
 ~ temp charNameUno = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
-~ temp dialogue = 0
+
 {
-    - dialogue < 10:
+    - firstCharEndingDialogue < 10:
         -> top
     - else:
         -> goodbye
@@ -129,14 +129,14 @@ Storia finita:
 
     - (top)
         + opzione
-            ~ dialogue ++
-                -> top
+            ~ firstCharEndingDialogue ++
+                -> personaggia_uno_storia_conclusa
         + opzione
-            ~ dialogue ++
-                -> top
+            ~ firstCharEndingDialogue ++
+                -> personaggia_uno_storia_conclusa
         + opzione
-            ~ dialogue ++
-                -> top
+            ~ firstCharEndingDialogue ++
+                -> personaggia_uno_storia_conclusa
         + esci dalla conversazione
             -> main
         -
@@ -144,7 +144,7 @@ Storia finita:
     
     = goodbye
     Ciao ciao
-        ~ move_entity(PersonaggiaUno, safekeepingContents)
+        ~ move_entity(PersonaggiaUno, Safekeeping)
         ~ move_entity(FirstPersonNotes, BusStop)
     -> main
 

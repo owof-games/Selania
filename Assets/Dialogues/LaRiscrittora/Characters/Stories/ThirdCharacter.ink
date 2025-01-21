@@ -125,7 +125,7 @@ Storia finita:
     
     = goodbye
     Ciao ciao
-        ~ move_entity(PersonaggiaTre, safekeepingContents)
+        ~ move_entity(PersonaggiaTre, Safekeeping)
         ~ move_entity(NotePersonaggiaTre, BusStop)
     -> main
     
