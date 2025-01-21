@@ -1,12 +1,12 @@
-~ temp charNameCinque= traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaCinque)
+~ temp charNameCinque= traduttorePersonaggeMaiuscolo(fifthCharacterState)
 
 === personaggia_cinque ===
         //opzione se questa storia è attiva
-        + {are_two_entities_together(FifthCharacter, PG) && storiaCinque == InCorso} [FifthCharacter]
+        + {are_two_entities_together(FifthCharacter, PG) && fifthStory == Active} [FifthCharacter]
                 -> storia_cinque
         
         //opzione se c'è un'altra storia attiva
-        + {are_two_entities_together(FifthCharacter, PG) && storiaCinque == Conclusa}[FifthCharacter]
+        + {are_two_entities_together(FifthCharacter, PG) && fifthStory == Ended}[FifthCharacter]
                 -> personaggia_cinque_storia_conclusa
                 
         + ->
@@ -19,7 +19,7 @@
 
         <i>Vuoi ascoltare la sua storia?</i>
         + [Sì]
-            ~ storiaCinque = InCorso        
+            ~ fifthStory = Active        
             -> aiuto_storia_cinque
         + [No]
             -> main
@@ -39,8 +39,8 @@
              -> azioniInchiostro ->
         //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
              + Ho risolto la quinta storia dando al quinto spettro un nuovo stato
-                ~ storiaCinque = Conclusa
-                ~ effettivoStatoPersonaggiaCinque = NuovoStatoUnoCinque
+                ~ fifthStory = Ended
+                ~ fifthCharacterState = NuovoStatoUnoCinque
              + Non ho risolto la storia
              -
         -> main

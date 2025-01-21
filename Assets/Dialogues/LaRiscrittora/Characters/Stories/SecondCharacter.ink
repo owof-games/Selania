@@ -1,13 +1,13 @@
 === personaggia_due ===
-~ temp charNameDue = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)
+~ temp charNameDue = traduttorePersonaggeMaiuscolo(secondCharacterState)
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
-        + {are_two_entities_together(SecondCharacter, PG) && storiaDue == InCorso}[SecondCharacter]
+        + {are_two_entities_together(SecondCharacter, PG) && secondStory == Active}[SecondCharacter]
             -> dialogo_personaggia_due
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(SecondCharacter, PG) && storiaDue == Conclusa} [SecondCharacter]
+        + {are_two_entities_together(SecondCharacter, PG) && secondStory == Ended} [SecondCharacter]
             -> personaggia_due_storia_conclusa
         + ->
     
@@ -15,7 +15,7 @@
     
 
 === dialogo_personaggia_due ===
-~ temp charNameDue = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)
+~ temp charNameDue = traduttorePersonaggeMaiuscolo(secondCharacterState)
 
 //QUI FINISCONO TUTTE LE POSSIBILI CONVERSAZIONI
 - (top)
@@ -43,7 +43,7 @@
 
     //QUESTO è LO SPAZIO PER IL DONO
     === dono_storia_due ===
-    ~ temp charNameDue = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)
+    ~ temp charNameDue = traduttorePersonaggeMaiuscolo(secondCharacterState)
 
         + {doniTrovati != ()} Offro un dono.
             -> gestione_inventario -> esito_inchiostro 
@@ -57,7 +57,7 @@
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
     === storia_due_chech_trigger
-    ~ temp charNameDue = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)
+    ~ temp charNameDue = traduttorePersonaggeMaiuscolo(secondCharacterState)
 
         {
         - loneliness == false:
@@ -78,7 +78,7 @@
         -> END
 
 === main_story_personaggia_due
-~ temp charNameDue = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)
+~ temp charNameDue = traduttorePersonaggeMaiuscolo(secondCharacterState)
 
     /* ---------------------------------
 
@@ -99,7 +99,7 @@
         etc
  ----------------------------------*/
 Storia finita:
-        ~ storiaDue = Conclusa
+        ~ secondStory = Ended
         //Resetto il counter degli spostamenti. In questo modo da qui posso iniziare a tener traccia dello spostamento della personaggia. Alcune potrebbero anche salutarci e bona.
         ~ movementsCounter = 0
 -> main
@@ -107,7 +107,7 @@ Storia finita:
 
 
 === personaggia_due_storia_conclusa
-~ temp charNameDue = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)
+~ temp charNameDue = traduttorePersonaggeMaiuscolo(secondCharacterState)
 
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)

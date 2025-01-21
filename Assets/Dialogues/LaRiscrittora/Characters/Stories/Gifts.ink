@@ -25,19 +25,19 @@ VAR statoInchiostroPersonaggiaSette = Scarso
 === azioniInchiostro
 VAR Inchiostro = ()
 {
-    - storiaUno == InCorso:
+    - firstStory == Active:
         ~ Inchiostro = statoInchiostroPersonaggiaUno
-    - storiaDue == InCorso:
+    - secondStory == Active:
         ~ Inchiostro = statoInchiostroPersonaggiaDue
-    - storiaTre == InCorso:
+    - thirdStory == Active:
         ~ Inchiostro = statoInchiostroPersonaggiaTre
-    - storiaQuattro == InCorso:
+    - fourthStory == Active:
         ~ Inchiostro = statoInchiostroPersonaggiaQuattro
-    - storiaCinque == InCorso:
+    - fifthStory == Active:
         ~ Inchiostro = statoInchiostroPersonaggiaCinque
-    - storiaSei== InCorso:
+    - sixthStory== Active:
         ~ Inchiostro = statoInchiostroPersonaggiaSei 
-    - storiaSette == InCorso:
+    - seventhStory == Active:
         ~ Inchiostro = statoInchiostroPersonaggiaSette     
 }
 

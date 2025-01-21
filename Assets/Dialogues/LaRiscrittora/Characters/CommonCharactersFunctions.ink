@@ -8,23 +8,23 @@ VAR fourthTier = false
 VAR randomizable_characters = (Mentor)
     //Check stato tier
     {   
-            - storiaCinque == Conclusa or storiaSei == Conclusa or storiaSette == Conclusa:
+            - fifthStory == Ended or sixthStory == Ended or seventhStory == Ended:
                     ~ fourthTier = true
                     
-            - (storiaDue == Conclusa && storiaTre == Conclusa) or (storiaQuattro == Conclusa && storiaDue == Conclusa) or (storiaQuattro == Conclusa && storiaTre == Conclusa):
+            - (secondStory == Ended && thirdStory == Ended) or (fourthStory == Ended && secondStory == Ended) or (fourthStory == Ended && thirdStory == Ended):
                      ~ thirdTier = true
                      
-            - storiaUno == Conclusa:
+            - firstStory == Ended:
                      ~ secondTier = true
                      
-            - storiaUno == InCorso or storiaUno == NonIniziata:
+            - firstStory == Active or firstStory == NotStarted:
                 ~ move_entity(Mentor, BusStop)
                      ~ firstTier = true
     }
     {
-        - storiaUno == InCorso && dialogo_personaggia_uno:
+        - firstStory == Active && dialogo_personaggia_uno:
             ~ randomizable_characters += FirstCharacter
-        - storiaDue == InCorso && dialogo_personaggia_due:
+        - secondStory == Active && dialogo_personaggia_due:
             ~ randomizable_characters += SecondCharacter
             //Aggiungere poi gli altri
     }

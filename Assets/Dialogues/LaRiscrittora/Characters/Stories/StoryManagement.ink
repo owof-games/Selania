@@ -1,31 +1,31 @@
 //Variabili legate alle personagge
-//Con nuova versione: NonIniziata non riguarda più la storia principale, ma l'accesso alla personaggia
-    LIST statoStorie = NonIniziata, InCorso, Conclusa
+//Con nuova versione: NotStarted non riguarda più la storia principale, ma l'accesso alla personaggia
+    LIST storyStates = NotStarted, Active, Ended
 
 
 //Gestione prima personaggia.
-    LIST possibiliStatiPersonaggiaUno =  LIndeciso, IlGiocoso, StatoDue, StatoTre, StatoQuattro, StatoCinque, StatoSei
-    VAR effettivoStatoPersonaggiaUno = LIndeciso
+    LIST firstCharacterPossibleStates =  LIndeciso, IlGiocoso, StatoDue, StatoTre, StatoQuattro, StatoCinque, StatoSei
+    VAR firstCharacterState = LIndeciso
     
-    VAR storiaUno = NonIniziata
-    VAR eventoSpecialePersonaggiaUno = false
+    VAR firstStory = NotStarted
+    VAR firstCharacterSpecialEvent = false
     VAR firstCharEndingDialogue = 0
 
 
 //Gestione seconda personaggia.
-    LIST possibiliStatiPersonaggiaDue = LaVegliante, NuovoStatoUnoDue, NuovoStatoDueDue, NuovoStatoTreDue
-    VAR effettivoStatoPersonaggiaDue = LaVegliante
+    LIST secondCharacterPossibleStates = LaVegliante, NuovoStatoUnoDue, NuovoStatoDueDue, NuovoStatoTreDue
+    VAR secondCharacterState = LaVegliante
     
-    VAR storiaDue = NonIniziata
-    VAR eventoSpecialePersonaggiaDue = false
+    VAR secondStory = NotStarted
+    VAR secondCharacterSpecialEvent = false
 
 
 //Gestione terza personaggia
-    LIST possibiliStatiPersonaggiaTre = SpettroDelVuoto, LArrabbiato, IlGuarente, IlTerrorizzato, LAbbandonato, IlSocievole, IlConsapevole
-    VAR effettivoStatoPersonaggiaTre = SpettroDelVuoto
+    LIST thirdCharacterPossibleStates = SpettroDelVuoto, LArrabbiato, IlGuarente, IlTerrorizzato, LAbbandonato, IlSocievole, IlConsapevole
+    VAR thirdCharacterState = SpettroDelVuoto
     
-    VAR storiaTre = NonIniziata
-    VAR eventoSpecialePersonaggiaTre = false
+    VAR thirdStory = NotStarted
+    VAR thirdCharacterSpecialEvent = false
     
         
     VAR terrore = 0
@@ -38,33 +38,33 @@
 
 
 //Gestione quarta personaggia
-    LIST possibiliStatiPersonaggiaQuattro = LaMondatrice, NuovoStatoUnoQuattro, NuovoStatoDueQuattro, NuovoStatoTreQuattro
-    VAR effettivoStatoPersonaggiaQuattro = LaMondatrice
+    LIST fourthCharacterPossibleStates = LaMondatrice, NuovoStatoUnoQuattro, NuovoStatoDueQuattro, NuovoStatoTreQuattro
+    VAR fourthCharacterState = LaMondatrice
     
-    VAR storiaQuattro = NonIniziata
-    VAR eventoSpecialePersonaggiaQuattro = false
+    VAR fourthStory = NotStarted
+    VAR fourthCharacterSpecialEvent = false
 
 //Gestione quinta personaggia
-    LIST possibiliStatiPersonaggiaCinque = Oscar, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
-    VAR effettivoStatoPersonaggiaCinque = Oscar
+    LIST fifthCharacterPossibleStates = Oscar, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
+    VAR fifthCharacterState = Oscar
     
-    VAR storiaCinque = NonIniziata
-    VAR eventoSpecialePersonaggiaCinque = false
+    VAR fifthStory = NotStarted
+    VAR fifthCharacterSpecialEvent = false
 
 //Gestione sesta personaggia
-    LIST possibiliStatiPersonaggiaSei = LoSpecchio, NuovoStatoUnoSei, NuovoStatoDueSei, NuovoStatoTreSei
-    VAR effettivoStatoPersonaggiaSei = LoSpecchio
+    LIST sixthCharacterPossibleStates = LoSpecchio, NuovoStatoUnoSei, NuovoStatoDueSei, NuovoStatoTreSei
+    VAR sixthCharacterState = LoSpecchio
     
-    VAR storiaSei = NonIniziata
-    VAR eventoSpecialePersonaggiaSei = false
+    VAR sixthStory = NotStarted
+    VAR sixthCharacterSpecialEvent = false
 
 
 //Gestione settima personaggia
-    LIST possibiliStatiPersonaggiaSette = LaDisegnatrice, NuovoStatoUnoSette, NuovoStatoDueSette, NuovoStatoTreSette
-    VAR effettivoStatoPersonaggiaSette= LaDisegnatrice
+    LIST seventhCharacterPossibleStates= LaDisegnatrice, NuovoStatoUnoSette, NuovoStatoDueSette, NuovoStatoTreSette
+    VAR seventhCharacterState= LaDisegnatrice
     
-    VAR storiaSette = NonIniziata
-    VAR eventoSpecialePersonaggiaSette = false
+    VAR seventhStory = NotStarted
+    VAR seventhCharacterSpecialEvent = false
 
 //Funzione di traduzione da variabile a stringa con articolo minuscolo
 === function traduttorePersonaggeMinuscolo(effettivoStatoPersonaggia)
@@ -188,66 +188,66 @@
 === story_time_management_for_PNG
 {
 //Dopo dieci spostamenti, compare il personaggio uno
-    - movementsCounter == 5 && storiaUno == NonIniziata:
+    - movementsCounter == 5 && firstStory == NotStarted:
             ~ move_entity(FirstCharacter, BusStop)
-            ~ storiaUno = InCorso
+            ~ firstStory = Active
             
 //Finita la storia col personaggio uno ho resettato il counter, e dopo dieci spostamenti compaiono il personaggio due e tre.        
-    - movementsCounter == 5 && storiaUno == Conclusa && storiaDue == NonIniziata:
+    - movementsCounter == 5 && firstStory == Ended && secondStory == NotStarted:
             ~ move_entity(SecondCharacter, BusStop)    
-            ~ storiaDue = InCorso
+            ~ secondStory = Active
             
-    - movementsCounter == 5 && storiaUno == Conclusa && storiaTre == NonIniziata:
+    - movementsCounter == 5 && firstStory == Ended && thirdStory == NotStarted:
             ~ move_entity(ThirdCharacter, BusStop)    
-            ~ storiaTre = InCorso
+            ~ thirdStory = Active
             
 //I reset ci sono solo a fine di una storia. Per cui per creare un po' di delay con la comparsa del quarto personaggio, aumento solo il valoure del movementsCounter
-    - movementsCounter == 20 && storiaUno == Conclusa && storiaQuattro == NonIniziata:
+    - movementsCounter == 20 && firstStory == Ended && fourthStory == NotStarted:
         //Ma magari questo spettro vuole comparire altrove
             ~ move_entity(FourthCharacter, BusStop)
-            ~ storiaQuattro = InCorso
+            ~ fourthStory = Active
             
 //Ora l'idea è che le altre storie si aprano sempre con un certo delay, ma non posso sapere quale delle tre precedenti verrà affrontata prima o dopo dalla giocatrice.
 //Una idea può essere: fare in modo che 5 compaia quando una delle tre storie intermedie sia conclusa, 6 quando due son concluse, 7 quando tutte son state concluse.
 //Quindi il counter non serve più a nulla.
-    - storiaCinque == NonIniziata && storiaDue == Conclusa or storiaTre == Conclusa or storiaQuattro == Conclusa:
+    - fifthStory == NotStarted && secondStory == Ended or thirdStory == Ended or fourthStory == Ended:
                 ~ move_entity(FifthCharacter, BusStop)
-                ~ storiaCinque = InCorso
+                ~ fifthStory = Active
                 
-    - storiaSei == NonIniziata && (storiaDue == Conclusa && storiaTre == Conclusa) or (storiaDue == Conclusa && storiaQuattro == Conclusa) or (storiaTre == Conclusa && storiaQuattro == Conclusa):
+    - sixthStory == NotStarted && (secondStory == Ended && thirdStory == Ended) or (secondStory == Ended && fourthStory == Ended) or (thirdStory == Ended && fourthStory == Ended):
                 ~ move_entity(SixthCharacter, BusStop)    
-                ~ storiaSei = InCorso
+                ~ sixthStory = Active
                 
-    - storiaSette == NonIniziata && storiaDue == Conclusa && storiaTre == Conclusa && storiaQuattro == Conclusa:
+    - seventhStory == NotStarted && secondStory == Ended && thirdStory == Ended && fourthStory == Ended:
                 ~ move_entity(SeventhCharacter, BusStop)    
-                ~ storiaSette = InCorso
+                ~ seventhStory = Active
 
 //Check per l'allontanamento delle personagge
-    - storiaUno == Conclusa && movementsCounter > 10:
+    - firstStory == Ended && movementsCounter > 10:
         ~ move_entity(FirstCharacter, Safekeeping)
         ~ move_entity(FirstCharacterNotes, BusStop)
         
-    - storiaDue == Conclusa && movementsCounter > 10:
+    - secondStory == Ended && movementsCounter > 10:
         ~ move_entity(SecondCharacter, Safekeeping)
         ~ move_entity(SecondCharacterNotes, BusStop)
         
-    - storiaTre == Conclusa && movementsCounter > 10:
+    - thirdStory == Ended && movementsCounter > 10:
         ~ move_entity(ThirdCharacter, Safekeeping)
         ~ move_entity(ThirdCharacterNotes, BusStop)
         
-    - storiaQuattro == Conclusa && movementsCounter > 10:
+    - fourthStory == Ended && movementsCounter > 10:
         ~ move_entity(FourthCharacter, Safekeeping)
         ~ move_entity(FourthCharacterNotes, BusStop)
         
-    - storiaCinque == Conclusa && movementsCounter > 10:
+    - fifthStory == Ended && movementsCounter > 10:
         ~ move_entity(FifthCharacter, Safekeeping)
         ~ move_entity(FifthCharacterNotes, BusStop)
         
-    - storiaSei == Conclusa && movementsCounter > 10:
+    - sixthStory == Ended && movementsCounter > 10:
         ~ move_entity(SixthCharacter, Safekeeping)
         ~ move_entity(SixthCharacterNotes, BusStop)
         
-    - storiaSette == Conclusa && movementsCounter > 10:
+    - seventhStory == Ended && movementsCounter > 10:
         ~ move_entity(SeventhCharacter, Safekeeping)
         ~ move_entity(SeventhCharacterNotes, BusStop)        
                                 

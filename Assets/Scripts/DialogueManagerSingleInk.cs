@@ -366,7 +366,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     //Questo viene utilizzato dai BranchManager
     public InkList GetEffettivoStatoPGUno()
     {
-        return (InkList)story.variablesState["effettivoStatoPersonaggiaUno"];
+        return (InkList)story.variablesState["firstCharacterState"];
     }
 
 

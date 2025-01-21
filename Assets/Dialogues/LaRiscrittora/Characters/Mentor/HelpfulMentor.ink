@@ -4,7 +4,7 @@
 
  ----------------------------------*/
 
-=== presentazioni ===
+=== welcome ===
     Sconosciuto: Che buffo, è da un po' che non incontravo una persona nuova.
     Sconosciuto: Immagino tu abbia un milione di domande, vero?
     - (top)
@@ -39,12 +39,12 @@
     = your_name    
         {chiSei:Mentor|Sconosciuto}: Ora tocca a me farti una domanda: come ti devo chiamare?
         {chiSei:Mentor|Sconosciuto}: Puoi usare qualsiasi name: prendi questa occasione come un nuovo inizio.
-            -> il_mio_nome ->
+            -> name_choice ->
         {chiSei:Mentor|Sconosciuto}: E quali sono i pronouns in cui ti riconosci?
         {chiSei:Mentor|Sconosciuto}: Ti chiedo già scusa per la quantità ridotta di scelte.
         {chiSei:Mentor|Sconosciuto}: Da qualche parte un giorno ho trovato un testo firmato <i>dev</i> dove qualcuno piangeva nel cercare di "programmare scelte multiple attorno all'uso dei pronouns".
         {chiSei:Mentor|Sconosciuto}: Non ho ben compreso sinceramente, ma mai dire mai: magari in futuro qualche persona troverà una soluzione più efficace.
-            -> assegnazione_genere ->
+            -> gender ->
         {chiSei:Mentor|Sconosciuto}: piacere di conoscerti, {name}.
         {chiSei:Mentor|Sconosciuto}: E {pronouns has him: benvenuto|{pronouns has her: benvenuta|benvenutə}}. Spero ti troverai bene, qui.
         {not chiSei: Sconosciuto: Ah, che sbadato. Invece tu chiamami <b>Mentor</b>.|Mentor: Forse ne va un po' del mio orgoglio.}
@@ -60,7 +60,7 @@
         Mentor: E poi torna da me.
     -> main      
             
-    === dono_e_inchiostro
+    === gifts_and_ink
         Mentor: Sembra che qualcuno ti abbia raccontato la sua storia!
         Mentor: Gli spettri sono totalmente innocui, l'unico problema è che non hanno trovato una soluzione a questioni rimaste aperte quando erano in vita.
         Mentor: Spesso sono storie di rimpianto o rimorso, in alcuni casi di traumi, o sensi di colpa.
@@ -82,9 +82,9 @@
                 Mentor: E mentre noi riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
                 Mentor: E poi... no, questo te lo dirò tra qualche tempo.
                     -> top2
-            *-> dono       
+            * -> gift      
              
-    = dono
+    = gift
         Mentor: Quindi: hai sentito la storia di questo spettro.
         Mentor: Il passaggio successivo è fargli un dono.
         Mentor: I doni sono oggetti che puoi recuperare in modi diversi.
@@ -107,7 +107,7 @@
                     -> main
 
     
-    === domande_e_obiettivo
+    === questions
         {statoInchiostroPersonaggiaUno == Vuoto or statoInchiostroPersonaggiaUno == Scarso: Mentor: Non ti demoralizzare, capita a chiunque di non dare il massimo al primo colpo.}
         {statoInchiostroPersonaggiaUno == Normale or statoInchiostroPersonaggiaUno == Medio: Mentor: Bel colpo! Ti sei {pronouns has him: guadagnato|{pronouns has her: guadagnata|guadagnatə}} subito una bella dose di inchiostro!}
         {statoInchiostroPersonaggiaUno == Altissimo: Mentor: Beh, hai dato allo spettro il suo dono preferito! Sei già {pronouns has him: pronto|{pronouns has her: pronta|prontə}} per questo incarico!}
@@ -138,9 +138,9 @@
                     -> main
         
         
-    === feedback_personaggia_uno
+    === first_character_feedback
         Mentor: Beh, direi che è andata, {name}.
-        {effettivoStatoPersonaggiaUno:
+        {firstCharacterState:
             - IlSocievole: Mentor: Hai aiutato lo spettro a riscoprire la sua natura socievole!
             - IlConsapevole: Mentor: Ora lo spettro è capace di riconoscere la necessità della collaborazione!
             - IlGuarente: Mentor: Vedere le proprie ferite è il primo passo per accogliere le parti di noi che non amiamo.
@@ -168,7 +168,7 @@
 //Strutturare come wave sintetica?
     Mentor: Ecco i luoghi che puoi visitare in questo momento.
     Mentre: Su quali vorresti avere un po' di informazioni?
-
+TODO: riordinare in base ai nuovi tier
 -(top)
     + [Sulla fermata del bus.]
             Mentor: La fermata, ad est del Giardino, è il posto dove si trovano i vari spettri.
@@ -193,34 +193,34 @@
             Mentor: Merita andarci ogni tanto.
             -> top
 
-    + [Sul giardino.]
+    + [Sulla foresta.]
             Mentor: Quello è un po' il nostro posto di passaggio.
             Mentor: Prima era un bosco, ma a forza di camminare è rimasta solo l'erbetta.
             Mentor: E una bella panchina su cui rilassarsi quando il mondo va troppo di fretta.
             -> top
 
-    + {storiaUno == Conclusa}[Sulle falene.]
+    + {firstStory == Ended}[Sulle falene.]
         Informazioni
             -> top
-    + {storiaUno == Conclusa}[Sul labirinto.]
+    + {firstStory == Ended}[Sul labirinto.]
         Informazioni
             -> top
-    + {storiaDue == Conclusa}[Sulle Laboratory.]
+    + {secondStory == Ended}[Sulle Laboratory.]
         Informazioni
             -> top
-    + {storiaDue == Conclusa}[Sulle sirene.]
+    + {secondStory == Ended}[Sulle sirene.]
         Informazioni
             -> top
-    + {storiaDue == Conclusa}[Sulla Libary.]
+    + {secondStory == Ended}[Sulla Libary.]
         Informazioni
             -> top
     + [Vorrei parlare di qualcosa di diverso.]
-        -> parlareColMentore
+        -> speaking_with_mentor
     -
 
-    -> parlareColMentore
+    -> speaking_with_mentor
 
-=== compito
+=== to_do
         Mentor: Te la faccio breve: alla <b>fermata del bus</b> incontrerai degli <b>spettri</b>.
         Mentor: Sono totalmente innocui, l'unico problema è che non hanno trovato una soluzione a questioni rimaste aperte quando erano in vita.
         Mentor: Spesso sono storie di rimpianto o rimorso, in alcuni casi di traumi, o sensi di colpa.
@@ -243,52 +243,52 @@
  ----------------------------------*/
 === consigli_storie ===
 {
-    - storiaUno == InCorso:
+    - firstStory == Active:
         -> consigli_storia_uno
-    - storiaDue == InCorso:
+    - secondStory == Active:
         -> consigli_storia_due
-    - storiaTre == InCorso:
+    - thirdStory == Active:
         -> consigli_storia_tre
-    - storiaQuattro == InCorso:
+    - fourthCharacterState == Active:
         -> consigli_storia_quattro
-    - storiaCinque == InCorso:
+    - fifthStory == Active:
         -> consigli_storia_cinque
-    - storiaSei == InCorso:
+    - sixthStory == Active:
         -> consigli_storia_sei
-    - storiaSette == InCorso:
+    - seventhStory == Active:
         -> consigli_storia_sette 
 }
 
 === consigli_storia_uno
 {~ Consiglio storia uno|Consiglio storia uno|Consiglio storia uno}
-    ->parlareColMentore
+    ->speaking_with_mentor
 
 === consigli_storia_due
 Consiglio storia due
-    ->parlareColMentore
+    ->speaking_with_mentor
 
 === consigli_storia_tre
 Consiglio storia tre
-    ->parlareColMentore
+    ->speaking_with_mentor
 
 === consigli_storia_quattro
 Consiglio storia quattro
-    ->parlareColMentore
+    ->speaking_with_mentor
 
 
 === consigli_storia_cinque
 Consiglio storia cinque
-    ->parlareColMentore
+    ->speaking_with_mentor
 
 
 === consigli_storia_sei
 Consiglio storia sei
-    ->parlareColMentore
+    ->speaking_with_mentor
 
 
 === consigli_storia_sette
 Consiglio storia sette
-    ->parlareColMentore
+    ->speaking_with_mentor
 
 
 

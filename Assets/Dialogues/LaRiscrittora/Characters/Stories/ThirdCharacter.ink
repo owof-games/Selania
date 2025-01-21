@@ -1,13 +1,13 @@
-~ temp charNameTre = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaTre)
+~ temp charNameTre = traduttorePersonaggeMaiuscolo(thirdCharacterState)
 
 === personaggia_tre ===
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
-        + {are_two_entities_together(ThirdCharacter, PG) && storiaTre == InCorso}[ThirdCharacter]
+        + {are_two_entities_together(ThirdCharacter, PG) && thirdStory == Active}[ThirdCharacter]
             -> dialogo_personaggia_tre
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(ThirdCharacter, PG) && storiaTre == Conclusa} [ThirdCharacter]
+        + {are_two_entities_together(ThirdCharacter, PG) && thirdStory == Ended} [ThirdCharacter]
             -> personaggia_tre_storia_conclusa
         + ->
     
@@ -90,7 +90,7 @@
         etc
  ----------------------------------*/
 Storia finita:
-        ~ storiaTre = Conclusa
+        ~ thirdStory = Ended
         //Resetto il counter degli spostamenti. In questo modo da qui posso iniziare a tener traccia dello spostamento della personaggia. Alcune potrebbero anche salutarci e bona.
         ~ movementsCounter = 0
 -> main
@@ -136,7 +136,7 @@ Storia finita:
 
 
 //         = intro
-//             ~ storiaUno = InCorso
+//             ~ storiaUno = Active
 //             {charNameUno}: Vigilia di Natale.
 //             {charNameUno}: Per la prima volta da mesi ho tempo libero: non sto lavorando, non sto correndo da nessuna parte.
 //             {charNameUno}: Cammino lentamente col cane, andando a una cena con amici.
@@ -588,7 +588,7 @@ Storia finita:
 //                 -> evento_speciale
 //             - else:
 //                 {charNameUno}: E ora posso andarmene in pace.
-//                 ~ storiaUno = Conclusa
+//                 ~ storiaUno = Ended
 //                 ~ movementsCounter = 0
 //                     -> main
 //         }
@@ -601,7 +601,7 @@ Storia finita:
 //         {charNameUno}: Fuori da qui.
 //         {charNameUno}: Dal mondo da cui provieni.
 //         {charNameUno}: Addio.                              
-//             ~ storiaUno = Conclusa
+//             ~ storiaUno = Ended
 //                 -> main
 
 // === scelta_nome_uno
@@ -613,7 +613,7 @@ Storia finita:
 //          ~ effettivoStatoPersonaggiaUno = IlGuarente
 //     -
 //         ~ movementsCounter = 0
-//         ~ storiaUno = Conclusa
+//         ~ storiaUno = Ended
 //         -> main
         
      

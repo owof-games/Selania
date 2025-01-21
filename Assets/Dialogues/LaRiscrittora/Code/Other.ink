@@ -1,8 +1,8 @@
 //Per assegnare/cambiare pronouns di riferimento
-=== assegnazione_genere ===
-    + {assegnazione_genere> 1} Mi trovo a mio agio con i pronomi {pronouns}.
+=== gender ===
+    + {gender> 1} Mi trovo a mio agio con i pronomi {pronouns}.
         ->->
-    + {assegnazione_genere > 1} <i> Forse qualcosa è cambiato. </i>
+    + {gender > 1} <i> Forse qualcosa è cambiato. </i>
         -> top
     + ->
     - (top)
@@ -16,10 +16,10 @@
 ->->
 
 //Per la scelta del nome
-=== il_mio_nome ===
-    + {il_mio_nome > 1} Il mio nome è {name}.
+=== name_choice ===
+    + {name_choice > 1} Il mio nome è {name}.
         ->->
-    + {il_mio_nome > 1} <i>Non sento più questo nome come mio.</i>
+    + {name_choice > 1} <i>Non sento più questo nome come mio.</i>
         -> top
     + ->
     - (top)
@@ -80,7 +80,7 @@
        ~ return "greenhouseSounds"
 
     - entity_location(PG) == Nest:
-        ~ return "mothSounds"
+        ~ return "nestSounds"
         
     - entity_location(PG) == Labyrinth:
         ~ return "labirinthSounds"

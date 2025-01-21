@@ -1,38 +1,38 @@
-=== mentore ===
+=== mentor ===
 + {are_two_entities_together(Mentor, PG)} [Mentor]
-    -> parlareColMentore
+    -> speaking_with_mentor
 
 
-=== parlareColMentore
--> storylets_mentore ->
-    Mentor: Cosa vuoi sapere {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?
+=== speaking_with_mentor
+-> mentor_storylets ->
+    Mentore: Cosa vuoi sapere {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?
     - (top)
         //+ [Voglio conoscere meglio il mentore]
         + [Qualcosa non mi è chiaro.]
-            -> supporto
+            -> support
         + [Abbandono la conversazione.]
             -> main
         -
     -> top
 
 
-=== supporto
-    Mentor: Come posso aiutarti?
+=== support
+    Mentore: Come posso aiutarti?
     - (top)
         //+ {storiaUno == InCorso or storiaDue == InCorso or storiaTre == InCorso} [Potresti darmi un consiglio legato alla storia in corso?]
         //    -> consigli_storie
         + [Mi ripeteresti cosa devo fare?]
-            -> compito
+            -> to_do
         + [Mi diresti a cosa servono i vari luoghi?]
             -> tutorial
         + [Vorrei cambiare il mio name.]
-            -> il_mio_nome ->
+            -> name_choice ->
         + [Vorrei cambiare i miei pronomi.]
-            -> assegnazione_genere ->
+            -> gender ->
         + [Vorrei aggiornare la lista dei miei temi delicati.]
             -> trigger_warning       
         + [Vorrei parlare d'altro.]
-            -> parlareColMentore
+            -> speaking_with_mentor
         -
     -> top   
 

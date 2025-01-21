@@ -1,42 +1,42 @@
-=== storylets_mentore ===
+=== mentor_storylets ===
 {
 //Introduzioni
-    - presentazioni == 0:
-        -> presentazioni
-    - dono_e_inchiostro == 0:
-                -> dono_e_inchiostro
+    - welcome == 0:
+        -> welcome
+    - gifts_and_ink == 0:
+                -> gifts_and_ink
         
-    - not domande_e_obiettivo:
+    - not questions:
         {
             - dono_storia_uno.esito_inchiostro:
-                -> domande_e_obiettivo
-            - else: Mentor: Fai la tua offerta e poi torna da me.
+                -> questions
+            - else: Mentore: Fai la tua offerta e poi torna da me.
                 -> main
         }
         
-    - not feedback_personaggia_uno:
+    - not first_character_feedback:
         {
-            - storiaUno == Conclusa:
-                -> feedback_personaggia_uno
+            - firstStory == Ended:
+                -> first_character_feedback
 
         }
         
     
 //Presentazione dei luoghi
-    - are_entities_together_in(PG, Mentor, Greenhouse) && not prima_visita_funghi:
-        -> prima_visita_funghi
+    - are_entities_together_in(PG, Mentor, Greenhouse) && not first_greenhouse_visit:
+        -> first_greenhouse_visit
 
-    - are_entities_together_in(PG, Mentor, Libary) && not prima_visita_Libary:
-        -> prima_visita_Libary
+    - are_entities_together_in(PG, Mentor, Libary) && not first_library_visit:
+        -> first_library_visit
 
-    - are_entities_together_in(PG, Mentor, Nest) && not prima_visita_Nest:
-        -> prima_visita_Nest
+    - are_entities_together_in(PG, Mentor, Nest) && not first_nest_visit:
+        -> first_nest_visit
 
-    - are_entities_together_in(PG, Mentor, Laboratory) && not prima_visita_Laboratory:
-        -> prima_visita_Laboratory
+    - are_entities_together_in(PG, Mentor, Laboratory) && not first_laboratory_visit:
+        -> first_laboratory_visit
 
-    - are_entities_together_in(PG, Mentor, BusStop) && not prima_visita_bus_stop:
-        -> prima_visita_bus_stop
+    - are_entities_together_in(PG, Mentor, BusStop) && not first_bus_stop_visit:
+        -> first_bus_stop_visit
  
 //Da creare: storylets per quando anime (non animelle) e Mentor sono assieme
 
@@ -45,24 +45,15 @@
 }
 
 
-//Passiamo da qui solo a inizio del gioco.
-=== inizio
-<i>Qualcuno sembra attenderti, sereno e sorridente.</i>
-    + [Voglio parlargli.]
-        -> presentazioni
-    + [Preferisco continuare a curiosare in giro.]
-        -> main
-    -
-        -> main
 
 // STORYLETS PRESENTAZIONE DEI LUOGHI
-=== prima_visita_funghi
-    Mentor: Hai trovato le serre!
-    Mentor: Qui puoi far crescere moltissime cose del sottobosco.
-    Mentor: Tutte quelle cosine che tendiamo a ignorare ma sono fondamentali per la vita.
-    Mentor: Sapevi ad esempio che i funghi sono il punto di contatto tra vita e morte?
-    Mentor: Trasformano la materia inorganica e in decomposizione in sostanze fondamentali per i viventi.
-    Mentor: Senza funghi la vita stessa sarebbe impensabile.
+=== first_greenhouse_visit
+    Mentore: Hai trovato le serre!
+    Mentore: Qui puoi far crescere moltissime cose del sottobosco.
+    Mentore: Tutte quelle cosine che tendiamo a ignorare ma sono fondamentali per la vita.
+    Mentore: Sapevi ad esempio che i funghi sono il punto di contatto tra vita e morte?
+    Mentore: Trasformano la materia inorganica e in decomposizione in sostanze fondamentali per i viventi.
+    Mentore: Senza funghi la vita stessa sarebbe impensabile.
     Mentor: E poi hanno migliaia di odori diversi, per la gioia del mio nasino.
     Mentor: Qui svolgono anche un'altra funzione:
     Mentor: consegnando loro ciò che vogliamo che rimanga nel passato, ci offrono nutrimenti per il presente e il futuro.
@@ -76,7 +67,7 @@
 
     -> main
 
-=== prima_visita_bus_stop
+=== first_bus_stop_visit
     Mentor: Questa è la fermata del bus.
     Mentor: Ehm, forse le tombe potevano darne una mezza idea.
     Mentor: Questo è un posto di ristoro e meditazione, e per questo motivo non incontrerai nessun altro a parte me e gli spettri.
@@ -85,20 +76,16 @@
 
     -> main
 
-=== prima_visita_Nest
+=== first_nest_visit
 
     -> main
 
 
-=== prima_visita_Libary
+=== first_library_visit
 
     -> main
 
 
-=== prima_visita_sirene
-
-    -> main
-
-=== prima_visita_Laboratory
+=== first_laboratory_visit
 
     -> main

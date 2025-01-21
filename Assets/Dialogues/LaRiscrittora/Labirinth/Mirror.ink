@@ -1,5 +1,5 @@
 === mirror ===
-    -> il_mio_nome ->
-    -> assegnazione_genere ->
+    -> name_choice ->
+    -> gender ->
 Eventi dello specchio    
 -> main    

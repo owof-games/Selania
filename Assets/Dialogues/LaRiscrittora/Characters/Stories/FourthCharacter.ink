@@ -1,12 +1,12 @@
-~ temp charNameQuattro = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaQuattro)
+~ temp charNameQuattro = traduttorePersonaggeMaiuscolo(fourthCharacterState)
 
 === personaggia_quattro ===
         //opzione se c'è un'altra storia attiva
-        + {are_two_entities_together(FourthCharacter, PG) && storiaQuattro == InCorso} [FourthCharacter]
+        + {are_two_entities_together(FourthCharacter, PG) && fourthStory == Active} [FourthCharacter]
             -> storia_quattro
         
         //opzione se questa storia è attiva
-        + {are_two_entities_together(FourthCharacter, PG) && storiaQuattro == Conclusa} [FourthCharacter]
+        + {are_two_entities_together(FourthCharacter, PG) && fourthStory == Ended} [FourthCharacter]
             -> personaggia_quattro_storia_conclusa
         
         + ->
@@ -20,7 +20,7 @@
 
         <i>Vuoi ascoltare la sua storia?</i>
         + [Sì]
-        ~ storiaQuattro = InCorso            
+        ~ fourthStory = Active            
             -> aiuto_storia_quattro
         + [No]
             -> main
@@ -41,8 +41,8 @@
              -> azioniInchiostro ->
         //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
              + Ho risolto la quarta storia dando al quarto spettro un nuovo stato
-                ~ storiaQuattro = Conclusa
-                ~ effettivoStatoPersonaggiaQuattro = NuovoStatoUnoQuattro
+                ~ fourthStory = Ended
+                ~ fourthCharacterState = NuovoStatoUnoQuattro
              + Non ho risolto la storia
              -
         -> main

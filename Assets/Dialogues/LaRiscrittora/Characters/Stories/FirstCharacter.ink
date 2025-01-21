@@ -1,19 +1,19 @@
 === personaggia_uno ===
-~ temp charNameUno = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)
+~ temp charNameUno = traduttorePersonaggeMaiuscolo(firstCharacterState)
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
-        + {are_two_entities_together(FirstCharacter, PG) && storiaUno == InCorso}[FirstCharacter]
+        + {are_two_entities_together(FirstCharacter, PG) && firstStory == Active}[FirstCharacter]
             -> dialogo_personaggia_uno
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(FirstCharacter, PG) && storiaUno == Conclusa} [FirstCharacter]
+        + {are_two_entities_together(FirstCharacter, PG) && firstStory == Ended} [FirstCharacter]
             -> personaggia_uno_storia_conclusa
         + ->
     
         -> DONE
     
 === dialogo_personaggia_uno
-~ temp charNameUno = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)
+~ temp charNameUno = traduttorePersonaggeMaiuscolo(firstCharacterState)
 {charNameUno}: {~ Ero sicuro di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicuro di star capendo tutto di questo luogo.}
 - (top)
     + Dialogo
@@ -23,25 +23,25 @@
     + Lasci il dialogo
         -> main
     //Se non ho ancora fatto il dono e NON ho parlato col mentore
-    + {not dono_storia_uno.esito_inchiostro && not dono_e_inchiostro} Dono
+    + {not dono_storia_uno.esito_inchiostro && not gifts_and_ink} Dono
         {charNameUno}: Sai, è gentile da parte tua, davvero.
         {charNameUno}: Ma credo che tu non abbia ancora chiesto al mentore come queste cose funzionino.
         {charNameUno}: Forse conviene che prima parli con lui.
             -> main
         
     //Se non ho ancora fatto il dono e ho parlato con il mentore
-       + {not dono_storia_uno.esito_inchiostro && dono_e_inchiostro} Dono
+       + {not dono_storia_uno.esito_inchiostro && gifts_and_ink} Dono
              ~ currentReceiver += FirstCharacter
             -> dono_storia_uno
     
     //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
     + {dono_storia_uno.esito_inchiostro && not main_story_personaggia_uno} Ti va di affrontare quella cosa?
         {
-            - not domande_e_obiettivo:
-            {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)}: Ti chiedo un ultimo sforzo, parla direttamente col mentore prima. Io non scappo.
+            - not questions:
+            {traduttorePersonaggeMaiuscolo(firstCharacterState)}: Ti chiedo un ultimo sforzo, parla direttamente col mentore prima. Io non scappo.
                 -> main
-            - domande_e_obiettivo:
-                {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)}: Certo!
+            - questions:
+                {traduttorePersonaggeMaiuscolo(firstCharacterState)}: Certo!
                 -> storia_uno_chech_trigger
         }        
     
@@ -53,7 +53,7 @@
 
 
  === dono_storia_uno ===
- ~ temp charNameUno = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)
+ ~ temp charNameUno = traduttorePersonaggeMaiuscolo(firstCharacterState)
  
         + {doniTrovati != ()} Offro un dono. 
             -> gestione_inventario -> esito_inchiostro 
@@ -67,7 +67,7 @@
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
     === storia_uno_chech_trigger
-    ~ temp charNameUno = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)
+    ~ temp charNameUno = traduttorePersonaggeMaiuscolo(firstCharacterState)
     
         {
         - loneliness == false:
@@ -88,7 +88,7 @@
         -> END
 
 === main_story_personaggia_uno
-~ temp charNameUno = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)
+~ temp charNameUno = traduttorePersonaggeMaiuscolo(firstCharacterState)
     /* ---------------------------------
 
    Qui avrò una funzione che mi manda sugli step utili in base a dove ho abbandonato l'ultima conversazione. Es
@@ -108,7 +108,7 @@
         etc
  ----------------------------------*/
 Storia finita:
-        ~ storiaUno = Conclusa
+        ~ firstStory = Ended
         //Resetto il counter degli spostamenti. In questo modo da qui posso iniziare a tener traccia dello spostamento della personaggia. Alcune potrebbero anche salutarci e bona.
         ~ movementsCounter = 0
 -> main
@@ -116,7 +116,7 @@ Storia finita:
 
 
 === personaggia_uno_storia_conclusa
-~ temp charNameUno = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)
+~ temp charNameUno = traduttorePersonaggeMaiuscolo(firstCharacterState)
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
 

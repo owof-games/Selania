@@ -6,7 +6,7 @@
 
 
 //Dialoghi del mentore
-<- mentore
+<- mentor
 
 //Spostamenti
 <- move_between_rooms(my_location)

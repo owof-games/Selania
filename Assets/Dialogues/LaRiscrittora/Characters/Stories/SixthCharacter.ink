@@ -1,12 +1,12 @@
-~ temp charNameSei = traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaSei)
+~ temp charNameSei = traduttorePersonaggeMaiuscolo(sixthCharacterState)
 
 === personaggia_sei===
          //opzione se questa storia è attiva
-        + {are_two_entities_together(SixthCharacter, PG) && storiaSei == InCorso} [SixthCharacter]
+        + {are_two_entities_together(SixthCharacter, PG) && sixthStory == Active} [SixthCharacter]
                 -> storia_sei
         
         //opzione se c'è un'altra storia attiva
-        + {are_two_entities_together(SixthCharacter, PG) && storiaSei == Conclusa}[SixthCharacter]
+        + {are_two_entities_together(SixthCharacter, PG) && sixthStory == Ended}[SixthCharacter]
                 -> personaggia_sei_storia_conclusa
                 
         + ->
@@ -19,7 +19,7 @@
 
         <i>Vuoi ascoltare la sua storia?</i>
         + [Sì]
-        ~ storiaSei = InCorso        
+        ~ sixthStory = Active        
             -> aiuto_storia_sei
         + [No]
             -> main
@@ -40,8 +40,8 @@
              -> azioniInchiostro ->
         //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
              + Ho risolto la sesta storia dando al sesto spettro un nuovo stato
-                ~ storiaSei = Conclusa
-                ~ effettivoStatoPersonaggiaSei = NuovoStatoUnoSei
+                ~ sixthStory = Ended
+                ~ sixthCharacterState = NuovoStatoUnoSei
              + Non ho risolto la storia
              -
         -> main

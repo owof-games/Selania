@@ -22,14 +22,14 @@ Dono...
     ~ doniTrovati -= MuschioDelleAmanti
     {
         - currentReceiver has FirstCharacter:
-        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} è confuso dal dono.</i>
+        <i>{traduttorePersonaggeMaiuscolo(firstCharacterState)} è confuso dal dono.</i>
             ~ currentReceiver = ()
             -> dono_storia_uno.esito_inchiostro
         
         - currentReceiver has SecondCharacter:
             ~ statoInchiostroPersonaggiaDue ++
             ~ statoInchiostroPersonaggiaDue ++
-            {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)} ha apprezzato molto il tuo dono.
+            {traduttorePersonaggeMaiuscolo(secondCharacterState)} ha apprezzato molto il tuo dono.
             ~ currentReceiver = ()
             -> dono_storia_due.esito_inchiostro
         
@@ -47,18 +47,18 @@ Dono...
 
     {
     - currentReceiver has FirstCharacter:
-        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} apprezza il dono.</i>
+        <i>{traduttorePersonaggeMaiuscolo(firstCharacterState)} apprezza il dono.</i>
         ~ currentReceiver = ()
         -> dono_storia_uno.esito_inchiostro
     
     - currentReceiver has SecondCharacter:
-        Hai regalato a {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)} qualcosa che proprio non gli interessa
+        Hai regalato a {traduttorePersonaggeMaiuscolo(secondCharacterState)} qualcosa che proprio non gli interessa
         ~ currentReceiver = ()
         -> dono_storia_due.esito_inchiostro
     
     - currentReceiver has ThirdCharacter:
         ~ statoInchiostroPersonaggiaTre ++
-       <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaTre)} è confuso dal dono.</i>
+       <i>{traduttorePersonaggeMaiuscolo(thirdCharacterState)} è confuso dal dono.</i>
        ~ currentReceiver = ()
         -> dono_storia_tre.esito_inchiostro
     }
@@ -70,17 +70,17 @@ Dono...
     {
     - currentReceiver has FirstCharacter:
         ~ statoInchiostroPersonaggiaUno ++
-        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} apprezza il dono</i>
+        <i>{traduttorePersonaggeMaiuscolo(firstCharacterState)} apprezza il dono</i>
         ~ currentReceiver = ()
         -> dono_storia_uno.esito_inchiostro
 
     - currentReceiver has SecondCharacter:
-        Hai regalato a {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)} qualcosa che proprio non gli interessa
+        Hai regalato a {traduttorePersonaggeMaiuscolo(secondCharacterState)} qualcosa che proprio non gli interessa
         -> dono_storia_due.esito_inchiostro
     
     - currentReceiver has ThirdCharacter:
         ~ statoInchiostroPersonaggiaTre ++
-        {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaTre)} apprezza mediamente il tuo dono.
+        {traduttorePersonaggeMaiuscolo(thirdCharacterState)} apprezza mediamente il tuo dono.
         ~ currentReceiver = ()
         -> dono_storia_tre.esito_inchiostro
     }
@@ -93,19 +93,19 @@ Dono...
     - currentReceiver has FirstCharacter:
         ~ statoInchiostroPersonaggiaUno ++
         ~ statoInchiostroPersonaggiaUno ++
-        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} se la avvolge attorno al corpo.
+        <i>{traduttorePersonaggeMaiuscolo(firstCharacterState)} se la avvolge attorno al corpo.
         <i>Sembra sollevato.</i>
         ~ currentReceiver = ()
         -> dono_storia_uno.esito_inchiostro
     
     - currentReceiver has SecondCharacter:
-        Hai regalato a {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)} qualcosa che proprio non gli interessa
+        Hai regalato a {traduttorePersonaggeMaiuscolo(secondCharacterState)} qualcosa che proprio non gli interessa
         -> dono_storia_due.esito_inchiostro
     
     - currentReceiver has ThirdCharacter:
         ~ statoInchiostroPersonaggiaTre ++
         ~ statoInchiostroPersonaggiaTre ++
-        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaTre)} se la avvolge attorno al corpo.
+        <i>{traduttorePersonaggeMaiuscolo(thirdCharacterState)} se la avvolge attorno al corpo.
         <i>Sembra sollevato.</i>
         ~ currentReceiver = ()
         -> dono_storia_tre.esito_inchiostro
@@ -118,18 +118,18 @@ Dono...
     {
     - currentReceiver has FirstCharacter:
         ~ statoInchiostroPersonaggiaUno --
-        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
+        <i>{traduttorePersonaggeMaiuscolo(firstCharacterState)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
         ~ currentReceiver = ()
         -> dono_storia_uno.esito_inchiostro
     
     - currentReceiver has SecondCharacter:
-        Hai regalato a {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)} qualcosa che proprio non gli interessa
+        Hai regalato a {traduttorePersonaggeMaiuscolo(secondCharacterState)} qualcosa che proprio non gli interessa
         ~ currentReceiver = ()
         -> dono_storia_due.esito_inchiostro
     
     - currentReceiver has ThirdCharacter:
         ~ statoInchiostroPersonaggiaTre --
-        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaTre)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
+        <i>{traduttorePersonaggeMaiuscolo(thirdCharacterState)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
         ~ currentReceiver = ()
         -> dono_storia_tre.esito_inchiostro
     }
@@ -143,14 +143,14 @@ Dono...
         ~ statoInchiostroPersonaggiaUno ++
         ~ statoInchiostroPersonaggiaUno ++
         ~ statoInchiostroPersonaggiaUno ++
-        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaUno)} si porta la Brina al petto, e ti guarda commosso.</i>
+        <i>{traduttorePersonaggeMaiuscolo(firstCharacterState)} si porta la Brina al petto, e ti guarda commosso.</i>
         <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
-         ~ eventoSpecialePersonaggiaUno = true
+         ~ firstCharacterSpecialEvent = true
          ~ currentReceiver = ()
         -> dono_storia_uno.esito_inchiostro
 
     - currentReceiver has SecondCharacter:
-        Hai regalato a {traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaDue)} qualcosa che proprio non gli interessa
+        Hai regalato a {traduttorePersonaggeMaiuscolo(secondCharacterState)} qualcosa che proprio non gli interessa
         <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano</i>
         ~ currentReceiver = ()
         -> dono_storia_due.esito_inchiostro
@@ -159,9 +159,9 @@ Dono...
         ~ statoInchiostroPersonaggiaTre ++
         ~ statoInchiostroPersonaggiaTre ++
         ~ statoInchiostroPersonaggiaTre ++
-        <i>{traduttorePersonaggeMaiuscolo(effettivoStatoPersonaggiaTre)} si porta la Brina al petto, e ti guarda commosso.</i>
+        <i>{traduttorePersonaggeMaiuscolo(thirdCharacterState)} si porta la Brina al petto, e ti guarda commosso.</i>
         <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
-         ~ eventoSpecialePersonaggiaTre = true
+         ~ thirdCharacterSpecialEvent = true
          ~ currentReceiver = ()
         -> dono_storia_tre.esito_inchiostro
     }
