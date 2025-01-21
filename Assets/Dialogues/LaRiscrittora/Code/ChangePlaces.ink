@@ -16,7 +16,7 @@
 //Strade per arrivare al Bus Stop    
     + {are_two_entities_together(PG, FromForestToBusStop)}  [FromForestToBusStop]
             ~ move_entity(PG, BusStop)
-            ~ counterSpostamenti ++    
+            ~ movementsCounter ++    
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
         -> bus_stop
@@ -24,7 +24,7 @@
 //Streets to Garden       
     + {are_two_entities_together(PG, FromBusStopToForest)} [FromBusStopToForest]
             ~ move_entity(PG, Forest)
-            ~ counterSpostamenti ++
+            ~ movementsCounter ++
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
         -> forest
@@ -32,7 +32,7 @@
         
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToForest)} [FromGreenhouseMiddlePathToForest]
             ~ move_entity(PG, Forest)
-            ~ counterSpostamenti ++
+            ~ movementsCounter ++
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
         -> forest
@@ -40,14 +40,14 @@
  //Streets to GreenhouseMiddlePath   
     + {are_two_entities_together(PG, FromGreenhouseToGreenhouseMiddlePath)} [FromGreenhouseToGreenhouseMiddlePath]
             ~ move_entity(PG, GreenhouseMiddlePath)
-            ~ counterSpostamenti ++
+            ~ movementsCounter ++
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
         -> greenhouse_middle_path
         
     + {are_two_entities_together(PG, FromForestToGreenhouseMiddlePath)} [FromForestToGreenhouseMiddlePath]
             ~ move_entity(PG, GreenhouseMiddlePath)
-            ~ counterSpostamenti ++
+            ~ movementsCounter ++
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
         -> greenhouse_middle_path
@@ -56,7 +56,7 @@
 //Streets to Greenhouse
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToGreenhouse)}  [FromGreenhouseMiddlePathToGreenhouse]
             ~ move_entity(PG, Greenhouse)
-            ~ counterSpostamenti ++
+            ~ movementsCounter ++
             ~ inCrescita ++ 
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->

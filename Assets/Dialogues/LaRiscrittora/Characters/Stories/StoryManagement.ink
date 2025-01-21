@@ -188,21 +188,21 @@
 === story_time_management_for_PNG
 {
 //Dopo dieci spostamenti, compare il personaggio uno
-    - counterSpostamenti == 5 && storiaUno == NonIniziata:
+    - movementsCounter == 5 && storiaUno == NonIniziata:
             ~ move_entity(PersonaggiaUno, BusStop)
             ~ storiaUno = InCorso
             
 //Finita la storia col personaggio uno ho resettato il counter, e dopo dieci spostamenti compaiono il personaggio due e tre.        
-    - counterSpostamenti == 5 && storiaUno == Conclusa && storiaDue == NonIniziata:
+    - movementsCounter == 5 && storiaUno == Conclusa && storiaDue == NonIniziata:
             ~ move_entity(PersonaggiaDue, BusStop)    
             ~ storiaDue = InCorso
             
-    - counterSpostamenti == 5 && storiaUno == Conclusa && storiaTre == NonIniziata:
+    - movementsCounter == 5 && storiaUno == Conclusa && storiaTre == NonIniziata:
             ~ move_entity(PersonaggiaTre, BusStop)    
             ~ storiaTre = InCorso
             
-//I reset ci sono solo a fine di una storia. Per cui per creare un po' di delay con la comparsa del quarto personaggio, aumento solo il valoure del counterSpostamenti
-    - counterSpostamenti == 20 && storiaUno == Conclusa && storiaQuattro == NonIniziata:
+//I reset ci sono solo a fine di una storia. Per cui per creare un po' di delay con la comparsa del quarto personaggio, aumento solo il valoure del movementsCounter
+    - movementsCounter == 20 && storiaUno == Conclusa && storiaQuattro == NonIniziata:
         //Ma magari questo spettro vuole comparire altrove
             ~ move_entity(PersonaggiaQuattro, BusStop)
             ~ storiaQuattro = InCorso
@@ -223,31 +223,31 @@
                 ~ storiaSette = InCorso
 
 //Check per l'allontanamento delle personagge
-    - storiaUno == Conclusa && counterSpostamenti > 10:
+    - storiaUno == Conclusa && movementsCounter > 10:
         ~ move_entity(PersonaggiaUno, Safekeeping)
         ~ move_entity(FirstPersonNotes, BusStop)
         
-    - storiaDue == Conclusa && counterSpostamenti > 10:
+    - storiaDue == Conclusa && movementsCounter > 10:
         ~ move_entity(PersonaggiaDue, Safekeeping)
         ~ move_entity(SecondPersonNotes, BusStop)
         
-    - storiaTre == Conclusa && counterSpostamenti > 10:
+    - storiaTre == Conclusa && movementsCounter > 10:
         ~ move_entity(PersonaggiaTre, Safekeeping)
         ~ move_entity(NotePersonaggiaTre, BusStop)
         
-    - storiaQuattro == Conclusa && counterSpostamenti > 10:
+    - storiaQuattro == Conclusa && movementsCounter > 10:
         ~ move_entity(PersonaggiaQuattro, Safekeeping)
         ~ move_entity(NotePersonaggiaQuattro, BusStop)
         
-    - storiaCinque == Conclusa && counterSpostamenti > 10:
+    - storiaCinque == Conclusa && movementsCounter > 10:
         ~ move_entity(PersonaggiaCinque, Safekeeping)
         ~ move_entity(NotePersonaggiaCinque, BusStop)
         
-    - storiaSei == Conclusa && counterSpostamenti > 10:
+    - storiaSei == Conclusa && movementsCounter > 10:
         ~ move_entity(PersonaggiaSei, Safekeeping)
         ~ move_entity(NotePersonaggiaSei, BusStop)
         
-    - storiaSette == Conclusa && counterSpostamenti > 10:
+    - storiaSette == Conclusa && movementsCounter > 10:
         ~ move_entity(PersonaggiaSette, Safekeeping)
         ~ move_entity(NotePersonaggiaSette, BusStop)        
                                 

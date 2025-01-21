@@ -6,9 +6,9 @@ VAR debugCultivable = false
 
 //Nome giocatrice e pronouns
 VAR name = "Senza name"
-LIST pronouns = maschili, femminili, neutri
+LIST pronouns = him, her, they
 //Traccio gli spostamenti della personaggia per gestire la comparsa delle personagge
-VAR counterSpostamenti = 0
+VAR movementsCounter = 0
 
 //Lista di tutti i luoghi del gioco
 LIST places = Forest, BusStop, Greenhouse, Libary, Nest, Labyrinth, Laboratory, Safekeeping, GreenhouseMiddlePath
@@ -20,7 +20,7 @@ VAR thirdTierPlaces = (Forest, BusStop, Libary, Nest, GreenhouseMiddlePath)
 VAR fourthTierPlaces = (Forest, BusStop, Libary, Nest, Laboratory, GreenhouseMiddlePath)
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
-LIST characters = Mentore, PG, PersonaggiaUno, PersonaggiaDue, PersonaggiaTre, PersonaggiaQuattro, PersonaggiaCinque, PersonaggiaSei, PersonaggiaSette
+LIST characters = Mentor, PG, PersonaggiaUno, PersonaggiaDue, PersonaggiaTre, PersonaggiaQuattro, PersonaggiaCinque, PersonaggiaSei, PersonaggiaSette
 
 LIST transitions = FromBusStopToForest, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibrary,  FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, FromGreenhouseToGreenhouseMiddlePath
 
@@ -32,7 +32,7 @@ LIST mushrooms = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, Canto
 
 
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
-VAR forestContents = (Mentore, Bench, TheFungus, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibrary)
+VAR forestContents = (Mentor, Bench, TheFungus, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibrary)
 VAR busStopContents = (FromBusStopToForest, PG, StartingNote)
 VAR greenhouseContents = (FromGreenhouseToGreenhouseMiddlePath, WateringCan, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
 VAR greenhouseMiddlePathContents = (FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest)

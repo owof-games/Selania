@@ -8868,7 +8868,7 @@ GameObject:
   - component: {fileID: 2045264605}
   - component: {fileID: 2045264604}
   m_Layer: 5
-  m_Name: Mentore
+  m_Name: Mentor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8946,7 +8946,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Mentore
+          m_StringArgument: Mentor
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2045264605

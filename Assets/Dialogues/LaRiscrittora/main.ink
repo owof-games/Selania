@@ -39,13 +39,13 @@
 
 //Elementi della fermata del bus
 <- starting_note
-<- note_personaggia_uno
-<- note_personaggia_due
-<- note_personaggia_tre
-<- note_personaggia_quattro
-<- note_personaggia_cinque
-<- note_personaggia_sei
-<- note_personaggia_sette
+<- first_character_notes
+<- second_character_notes
+<- third_character_notes
+<- fourth_character_notes
+<- fifth_character_notes
+<- sixth_character_notes
+<- seventh_character_notes
 
 
 //Elementi gestione interfaccia

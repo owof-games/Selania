@@ -1,11 +1,11 @@
 === mentore ===
-+ {are_two_entities_together(Mentore, PG)} [Mentore]
++ {are_two_entities_together(Mentor, PG)} [Mentor]
     -> parlareColMentore
 
 
 === parlareColMentore
 -> storylets_mentore ->
-    Mentore: Cosa vuoi sapere {pronouns has maschili: amico mio|{pronouns has femminili: amica mia|amicə miə}}?
+    Mentor: Cosa vuoi sapere {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?
     - (top)
         //+ [Voglio conoscere meglio il mentore]
         + [Qualcosa non mi è chiaro.]
@@ -17,7 +17,7 @@
 
 
 === supporto
-    Mentore: Come posso aiutarti?
+    Mentor: Come posso aiutarti?
     - (top)
         //+ {storiaUno == InCorso or storiaDue == InCorso or storiaTre == InCorso} [Potresti darmi un consiglio legato alla storia in corso?]
         //    -> consigli_storie

@@ -5,7 +5,7 @@ VAR firstTier = false
 VAR secondTier = false
 VAR thirdTier = false
 VAR fourthTier = false
-VAR randomizable_characters = (Mentore)
+VAR randomizable_characters = (Mentor)
     //Check stato tier
     {   
             - storiaCinque == Conclusa or storiaSei == Conclusa or storiaSette == Conclusa:
@@ -18,7 +18,7 @@ VAR randomizable_characters = (Mentore)
                      ~ secondTier = true
                      
             - storiaUno == InCorso or storiaUno == NonIniziata:
-                ~ move_entity(Mentore, BusStop)
+                ~ move_entity(Mentor, BusStop)
                      ~ firstTier = true
     }
     {
@@ -32,16 +32,16 @@ VAR randomizable_characters = (Mentore)
     
     {   
             - fourthTier == true:
-                ~ randomizable_characters += Mentore
+                ~ randomizable_characters += Mentor
                 -> randomizer_fourth_tier
             - thirdTier == true:
-                ~ randomizable_characters += Mentore
+                ~ randomizable_characters += Mentor
                 -> randomizer_third_tier
             - secondTier == true:
-                ~ randomizable_characters += Mentore
+                ~ randomizable_characters += Mentor
                 -> randomizer_second_tier
             - firstTier == true:
-                ~ randomizable_characters += Mentore
+                ~ randomizable_characters += Mentor
                 -> randomizer_first_tier
     }    
 

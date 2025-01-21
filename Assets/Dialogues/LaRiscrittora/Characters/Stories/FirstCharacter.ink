@@ -110,7 +110,7 @@
 Storia finita:
         ~ storiaUno = Conclusa
         //Resetto il counter degli spostamenti. In questo modo da qui posso iniziare a tener traccia dello spostamento della personaggia. Alcune potrebbero anche salutarci e bona.
-        ~ counterSpostamenti = 0
+        ~ movementsCounter = 0
 -> main
         
 
