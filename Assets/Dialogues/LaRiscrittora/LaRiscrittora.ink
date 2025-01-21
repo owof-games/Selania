@@ -20,16 +20,14 @@ INCLUDE Code\Other.ink
    CONTENUTI
 
  ----------------------------------*/
-//Dialoghi dalle varie spettre etc.
+//Personagge
 INCLUDE main.ink
-
 
 INCLUDE Characters\CommonCharactersFunctions.ink
 
 INCLUDE Characters\Mentor\Mentor.ink
 INCLUDE Characters\Mentor\MentorStorylets.ink
 INCLUDE Characters\Mentor\HelpfulMentor.ink
-
 
 INCLUDE Characters\Stories\StoryManagement.ink
 INCLUDE Characters\Stories\Gifts.ink
@@ -48,41 +46,31 @@ INCLUDE Inventory\Inventory.ink
 INCLUDE Inventory\InventoryManagement.ink
 
 
-//LUOGHI APERTI DALL'INIZIO DEL GIOCO
-
-//File dedicato alla gestion della fermata del bus
+//Bus Stop
 INCLUDE BusStop\BusStop.ink
 
 
-//File dedicata alla gestione del giardino
+//Forest
 INCLUDE Forest\Forest.ink
 
-//Cura di fiori e funghi
+//Greenhouse
 INCLUDE Greenhouse\Greenhouse.ink
 INCLUDE Greenhouse\Cultivable.ink
 INCLUDE Greenhouse\CultivableManagement.ink
 INCLUDE Greenhouse\GreenhouseMiddlePath.ink
 
-
-
-
-//Il nido
+//Nest
 INCLUDE Nest\Nest.ink
 
-
-
-//Il labirinto
+//Labirinth
 INCLUDE Labirinth\Labirinth.ink
 INCLUDE Labirinth\Mirror.ink
 
 
-//LUOGHI CHE SI SBLOCCANO COL TERZO TIER
-
-//Angolo delle tisane
+//Laboratory
 INCLUDE Laboratory\Laboratory.ink
 
-
-//Storie dalla biblioteca
+//Library
 INCLUDE Library\Library.ink
 INCLUDE Library\FirstStory.ink
 INCLUDE Library\SecondStory.ink
@@ -92,7 +80,7 @@ INCLUDE Library\LibaryManagement.ink
 
 
 
-//Punto di partenza della storia
+//Starting point
 -> main
 
 
