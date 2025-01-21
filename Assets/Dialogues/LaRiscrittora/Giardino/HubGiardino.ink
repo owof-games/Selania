@@ -17,11 +17,11 @@
             - dice == 1:
                 <i>C'è una coperta abbandonata sulla panchina.</i>
                 <i>Portala con te: qualcuno potrebbe avere freddo.</i>
-                <b>Hai ottenuto: coperta.</b>
+                <b>Hai ottenuto: coperta</b>
                 ~ doniTrovati += coperta
-                ->->
+                -> main
             - dice == 2:
-            ->->
+            -> main
         }
     }
     -> main
@@ -34,12 +34,12 @@
         {
             - dice == 1:
                 <i>C'è un vaso vuoto.</i>
-                <i>in questo luogo anche la cosa più insolita può essere un tesoro.</i>
-                <b>Hai ottenuto: vaso vuoto.</b>
+                <i>In questo luogo anche la cosa più insolita può essere un tesoro.</i>
+                <b>Hai ottenuto: vaso vuoto</b>
                 ~ doniTrovati += vasovuoto
-                ->->
+                -> main
             - dice == 2:
-            ->->
+            -> main
         }
     }    
     -> main
