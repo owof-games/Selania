@@ -71,14 +71,22 @@ VAR inCrescita = 0
 = random
 ~ temp dice = RANDOM(1,14)
 
-{debugCultivable: <i>Il dado ha valore {dice}}
+{debugCultivable: <i>Il dado ha valore: {dice}.}
 {
 
     - randomCounter == maxRandomCounter:
     {debugCultivable: <i>randomCounter {randomCounter} ha raggiunto il livello massimo {maxRandomCounter}.}
+    {
+    - backupColtivabili != ():
+        ~ fungoProposto = LIST_RANDOM(backupColtivabili)
+        {debugCultivable: <i>Erano presenti ancora coltivabili in backupCultivable e ho estratto {fungoProposto}.}
+    - else:
         <i>In questo momento non è possibile coltivare altro.
             -> main
-    - dice == 1: 
+    
+    }
+
+    - dice == 1 && pianteCollaborazione != () && pianteIndipendenza != (): 
         {
             - firstQuest == false:
             {debugCultivable: <i>Il valore di firstQuest è {firstQuest}. Piante Collaborazione contiene: {pianteCollaborazione}. Piante Indipendenza contiene: {pianteIndipendenza}.}
@@ -90,7 +98,7 @@ VAR inCrescita = 0
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}
                 {
-                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && tipoColtivazioni hasnt pianteCollaborazione && tipoColtivazioni hasnt pianteIndipendenza:
+                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && tipoColtivazioni hasnt collaborazione && tipoColtivazioni hasnt indipendenza:
                     {debugCultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {pianteCollaborazione^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {pianteIndipendenza^firstAnswerTracker}}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> first_question
@@ -109,7 +117,7 @@ VAR inCrescita = 0
         }
     
         
-    - dice == 2:
+    - dice == 2 && pianteCiclicità != () && pianteNovità != ():
         {
             -secondQuest == false:
             {debugCultivable: <i>Il valore di secondQuest è {secondQuest}. Piante Ciclicità contiene: {pianteCiclicità}. Piante Novità contiene: {pianteNovità} e per questo vado alla domanda.}
@@ -121,7 +129,7 @@ VAR inCrescita = 0
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}
                 {
-                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && tipoColtivazioni hasnt pianteCollaborazione && tipoColtivazioni hasnt pianteNovità:
+                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && tipoColtivazioni hasnt ciclicità && tipoColtivazioni hasnt novità:
                     {debugCultivable: <i>L'intersezione tra prima scelta e piante ciclicità produce {pianteCiclicità^firstAnswerTracker}, quella tra prima scelta e piante novità produce {pianteNovità^firstAnswerTracker}.}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> second_question
@@ -141,7 +149,7 @@ VAR inCrescita = 0
 
 
         
-    - dice == 3:
+    - dice == 3 && pianteRicordo != () && pianteCancellazione != ():
         {
             - thirdQuest == false:
                 {debugCultivable: <i>Il valore di thirdQuest è {thirdQuest}. Piante Ricordo contiene: {pianteRicordo}. Piante Cancellazione contiene: {pianteCancellazione} e per questo vado alla domanda.}    
@@ -153,7 +161,7 @@ VAR inCrescita = 0
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && tipoColtivazioni hasnt pianteCollaborazione && tipoColtivazioni hasnt pianteCancellazione:
+                    - LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && tipoColtivazioni hasnt ricordo && tipoColtivazioni hasnt cancellazione:
                     {debugCultivable: <i>L'intersezione tra prima scelta e piante ricordo produce {pianteRicordo^firstAnswerTracker}, quella tra prima scelta e piante cancellazione produce {pianteCancellazione^firstAnswerTracker}.}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> third_question
@@ -173,7 +181,7 @@ VAR inCrescita = 0
         }
 
 
-        - dice == 4: 
+        - dice == 4 && pianteCollaborazione != () && pianteCiclicità != (): 
         {
             - fourthQuest == false:
             {
@@ -183,7 +191,7 @@ VAR inCrescita = 0
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}                 
                 {
-                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && tipoColtivazioni hasnt pianteCollaborazione && tipoColtivazioni hasnt pianteCiclicità:
+                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && tipoColtivazioni hasnt collaborazione && tipoColtivazioni hasnt ciclicità:
                         -> fourth_question
                     - else:
                         ~ randomCounter ++
@@ -196,7 +204,7 @@ VAR inCrescita = 0
                     -> random
         }
         
-        - dice == 5: 
+        - dice == 5 && pianteCollaborazione != () && pianteRicordo != (): 
         {
             - fifthQuest == false:
             {
@@ -206,7 +214,7 @@ VAR inCrescita = 0
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && tipoColtivazioni hasnt pianteCollaborazione && tipoColtivazioni hasnt pianteRicordo:
+                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && tipoColtivazioni hasnt collaborazione && tipoColtivazioni hasnt ricordo:
                         -> fifth_question
                     - else:
                         ~ randomCounter ++
@@ -219,7 +227,7 @@ VAR inCrescita = 0
                     -> random
         }        
         
-        - dice == 6: 
+        - dice == 6 && pianteCollaborazione != () && pianteCancellazione != (): 
         {
             - sixthQuest == false:
             {
@@ -229,7 +237,7 @@ VAR inCrescita = 0
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && tipoColtivazioni hasnt pianteCollaborazione && tipoColtivazioni hasnt pianteCancellazione:
+                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && tipoColtivazioni hasnt collaborazione && tipoColtivazioni hasnt cancellazione:
                         -> sixth_question
                     - else:
                         ~ randomCounter ++
@@ -242,7 +250,7 @@ VAR inCrescita = 0
                     -> random
         }          
         
-        - dice == 7: 
+        - dice == 7 && pianteCiclicità != () && pianteIndipendenza != (): 
         {
             - seventhQuest == false:
             {
@@ -252,7 +260,7 @@ VAR inCrescita = 0
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && tipoColtivazioni hasnt pianteCiclicità && tipoColtivazioni hasnt pianteCiclicità:
+                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && tipoColtivazioni hasnt ciclicità && tipoColtivazioni hasnt indipendenza:
                         -> seventh_question
                     - else:
                         ~ randomCounter ++
@@ -265,18 +273,20 @@ VAR inCrescita = 0
                     -> random
         }         
         
-        - dice == 8: 
+        - dice == 8 && pianteCiclicità != () && pianteRicordo != (): 
         {
             - eighthQuest == false:
-            {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
+  
             {
                 - tipoColtivazioni == ():
                     -> eighth_question
                 
                 - else:
-                {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
+                {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}
+                   {debugCultivable: <i>L'intersezione tra prima scelta e piante ricordo produce {pianteCiclicità^firstAnswerTracker}, quella tra prima scelta e piante cancellazione produce {pianteRicordo^firstAnswerTracker}.}                
                 {
-                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && tipoColtivazioni hasnt pianteCiclicità && tipoColtivazioni hasnt pianteRicordo:
+                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && tipoColtivazioni hasnt ciclicità && tipoColtivazioni hasnt ricordo:
+                   
                         -> eighth_question
                     - else:
                         ~ randomCounter ++
@@ -289,7 +299,7 @@ VAR inCrescita = 0
                     -> random
         }        
 
-        - dice == 9: 
+        - dice == 9 && pianteCiclicità != () && pianteCancellazione != (): 
         {
             - ninthQuest == false:
             {
@@ -299,7 +309,7 @@ VAR inCrescita = 0
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && tipoColtivazioni hasnt pianteCiclicità && tipoColtivazioni hasnt pianteCancellazione:
+                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && tipoColtivazioni hasnt ciclicità && tipoColtivazioni hasnt cancellazione:
                         -> ninth_question
                     - else:
                         ~ randomCounter ++
@@ -308,7 +318,7 @@ VAR inCrescita = 0
             }
         }
         
-        - dice == 10: 
+        - dice == 10 && pianteIndipendenza != () && pianteNovità != (): 
         {
             - tenthQuest == false:
             {
@@ -318,7 +328,7 @@ VAR inCrescita = 0
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && tipoColtivazioni hasnt pianteIndipendenza && tipoColtivazioni hasnt pianteNovità:
+                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && tipoColtivazioni hasnt indipendenza && tipoColtivazioni hasnt novità:
                         -> tenth_question
                     - else:
                         ~ randomCounter ++
@@ -332,7 +342,7 @@ VAR inCrescita = 0
                     -> random
         }         
 
-        - dice == 11: 
+        - dice == 11 && pianteIndipendenza != () && pianteRicordo != (): 
         {
             - eleventhQuest == false:
             {
@@ -342,7 +352,7 @@ VAR inCrescita = 0
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && tipoColtivazioni hasnt pianteIndipendenza && tipoColtivazioni hasnt pianteRicordo:
+                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && tipoColtivazioni hasnt indipendenza && tipoColtivazioni hasnt ricordo:
                         -> eleventh_question
                     - else:
                         ~ randomCounter ++
@@ -354,7 +364,7 @@ VAR inCrescita = 0
                     -> random
         }
         
-        - dice == 12: 
+        - dice == 12 && pianteIndipendenza != () && pianteCancellazione != (): 
         {
             - twelfthQuest == false:
             {
@@ -363,7 +373,7 @@ VAR inCrescita = 0
                 
                 - else:
                 {
-                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && tipoColtivazioni hasnt pianteIndipendenza && tipoColtivazioni hasnt pianteCancellazione:
+                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && tipoColtivazioni hasnt indipendenza && tipoColtivazioni hasnt cancellazione:
                         -> twelfth_question
                     - else:
                         ~ randomCounter ++
@@ -375,7 +385,7 @@ VAR inCrescita = 0
                     -> random
         } 
         
-        - dice == 13: 
+        - dice == 13 && pianteNovità != () && pianteRicordo != (): 
         {
             - thirteenthQuest == false:
             {
@@ -385,7 +395,7 @@ VAR inCrescita = 0
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && tipoColtivazioni hasnt pianteNovità && tipoColtivazioni hasnt pianteRicordo:
+                    - LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && tipoColtivazioni hasnt novità && tipoColtivazioni hasnt ricordo:
                         -> thirteenth_question
                     - else:
                         ~ randomCounter ++
@@ -397,7 +407,7 @@ VAR inCrescita = 0
                     -> random
         } 
 
-        - dice == 14: 
+        - dice == 14 && pianteNovità != () && pianteCancellazione != (): 
         {
             - fourteenthQuest == false:
             {
@@ -407,7 +417,7 @@ VAR inCrescita = 0
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && tipoColtivazioni hasnt pianteNovità && tipoColtivazioni hasnt pianteCancellazione:
+                    - LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && tipoColtivazioni hasnt novità && tipoColtivazioni hasnt cancellazione:
                         -> fourteenth_question
                     - else:
                         ~ randomCounter ++
@@ -420,9 +430,8 @@ VAR inCrescita = 0
         }
         
     - else:
-        {debugCultivable: <i>Il dado ha valore {dice} e non ci sono condizioni valide per proporre una delle tre domande, per offro una risposta negativa.}
-        <i>In questo momento non è possibile coltivare nulla
-                    -> main
+        {debugCultivable: <i>Il dado ha valore {dice} e non ci sono condizioni valide per proporre una delle domande e per questo ritiro.}
+                    -> random
 }
 
 
