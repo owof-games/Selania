@@ -38,7 +38,7 @@
 {
 
     - entity_location(PG) == Forest:
-        ~ return "backGiardino"
+        ~ return "backForest"
         
     - entity_location(PG) == BusStop:
         ~ return "backBusStop"
@@ -47,13 +47,13 @@
        ~ return "backGreenhouseMiddlePath"
        
     - entity_location(PG) == Greenhouse:
-       ~ return "backFunghi"       
+       ~ return "backGreenhouse"       
 
     - entity_location(PG) == Nest:
         ~ return "backNest"
         
-    - entity_location(PG) == Labirinto:
-        ~ return "backLabirinto"
+    - entity_location(PG) == Labyrinth:
+        ~ return "backLabyrinth"
 
     - entity_location(PG) == Libary:
        ~ return "backLibary"
@@ -82,7 +82,7 @@
     - entity_location(PG) == Nest:
         ~ return "mothSounds"
         
-    - entity_location(PG) == Labirinto:
+    - entity_location(PG) == Labyrinth:
         ~ return "labirinthSounds"
 
     - entity_location(PG) == Libary:

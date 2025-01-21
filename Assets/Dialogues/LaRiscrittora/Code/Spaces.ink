@@ -13,7 +13,7 @@
     - greenhouseContents has entity:
         ~ return Greenhouse
     - labirinthContents has entity:
-        ~ return Labirinto
+        ~ return Labyrinth
     - laboratoryContents has entity:
         ~ return Laboratory
     - greenhouseMiddlePathContents has entity:
@@ -46,7 +46,7 @@
         ~ nestContents-= entity
     - Greenhouse:
         ~ greenhouseContents -= entity
-    - Labirinto:
+    - Labyrinth:
         ~ labirinthContents -= entity
     - Laboratory:
         ~ laboratoryContents -= entity
@@ -70,7 +70,7 @@
         ~ nestContents += entity
     - Greenhouse:
         ~ greenhouseContents += entity
-    - Labirinto:
+    - Labyrinth:
         ~ labirinthContents += entity
     - Laboratory:
         ~ laboratoryContents += entity

@@ -1,4 +1,4 @@
-=== labirinto ===
+=== labyrinth ===
 #background: {tag_background()}
 //Qui non compare né mentore né anime e animelle
 

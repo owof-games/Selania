@@ -33,36 +33,36 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Background setting")]
     [SerializeField] private Image background;
     private const string BACKGROUND_TAG = "background";
-    [Header("Garden Backgrounds")]
-    [SerializeField] private Sprite backGiardino;
+    [Header("Forest Backgrounds")]
+    [SerializeField] private Sprite backForest;
 
     [Header("Bus Stop Backgrounds")]
     [SerializeField] private Sprite backBusStop;
 
     [Header("Greenhouse Backgrounds")]
-    [SerializeField] private Sprite backFunghi;
+    [SerializeField] private Sprite backGreenhouse;
 
     [Header("Greenhouse Middle Path Backgrounds")]
     [SerializeField] private Sprite backGreenhouseMiddlePath;    
 
     [Header("Pets Backgrounds")]
-    [SerializeField] private Sprite backFalene;
+    [SerializeField] private Sprite backNest;
 
     [Header("Labirint Backgrounds")]
-    [SerializeField] private Sprite backLabirinto;
+    [SerializeField] private Sprite backLabyrinth;
 
     [Header("Library Backgrounds")]
-    [SerializeField] private Sprite backBiblioteca;
+    [SerializeField] private Sprite backLibrary;
 
     [Header("Tea Backgrounds")]
-    [SerializeField] private Sprite backTisane;
+    [SerializeField] private Sprite backLaboratory;
 
 
     [Header("Sounds")]
     [SerializeField] private AudioSource ambientSounds;
     private const string AMBIENTSOUNDS_TAG = "ambientSounds";
-    [Header("Garden Sounds")]
-    [SerializeField] private AudioClip gardenSounds;
+    [Header("Forest Sounds")]
+    [SerializeField] private AudioClip forestSounds;
     [Header("Bus Stop Sounds")]
     [SerializeField] private AudioClip busstopSounds;
     [Header("Greenhouse Sounds")]
@@ -266,22 +266,22 @@ public class DialogueManagerSingleInk : MonoBehaviour
             {
                 case BACKGROUND_TAG:
 
-                    //TAG GESTIONE DEL GIARDINO
-                    if (tagValue == "backGiardino")
+                    //TAG GESTIONE DELLA FORESTA
+                    if (tagValue == "backForest")
                     {
-                        background.sprite = backGiardino;
+                        background.sprite = backForest;
                     }
 
-                    //TAG GESTIONE DEL BusStop
+                    //TAG GESTIONE DEL BUSSTOP
                     if (tagValue == "backBusStop")
                     {
                         background.sprite = backBusStop;
                     }
 
-                    //TAG GESTIONE DEL SERRA
-                    if (tagValue == "backFunghi")
+                    //TAG GESTIONE DELLA SERRA
+                    if (tagValue == "backGreenhouse")
                     {
-                        background.sprite = backFunghi;
+                        background.sprite = backGreenhouse;
                     }
 
                     //BACKGROUND TAG FOR GREENHOUSE MIDDLE PATH
@@ -290,28 +290,28 @@ public class DialogueManagerSingleInk : MonoBehaviour
                         background.sprite = backGreenhouseMiddlePath;
                     }                    
 
-                    //TAG GESTIONE DEL FALENE
-                    if (tagValue == "backFalene")
+                    //TAG GESTIONE DEL NIDO
+                    if (tagValue == "backNest")
                     {
-                        background.sprite = backFalene;
+                        background.sprite = backNest;
                     }
 
                     //TAG GESTIONE DEL LABIRINTO
-                    if (tagValue == "backLabirinto")
+                    if (tagValue == "backLabyrinth")
                     {
-                        background.sprite = backLabirinto;
+                        background.sprite = backLabyrinth;
                     }
 
-                    //TAG GESTIONE DEL BIBLIOTECA
-                    if (tagValue == "backBiblioteca")
+                    //TAG GESTIONE DELLA BIBLIOTECA
+                    if (tagValue == "backLibrary")
                     {
-                        background.sprite = backBiblioteca;
+                        background.sprite = backLibrary;
                     }
 
-                    //TAG GESTIONE DEL TISANE
-                    if (tagValue == "backTisane")
+                    //TAG GESTIONE DEL LABORATORIO
+                    if (tagValue == "backLaboratory")
                     {
-                        background.sprite = backTisane;
+                        background.sprite = backLaboratory;
                     }
 
                     break;
@@ -319,9 +319,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 case AMBIENTSOUNDS_TAG:
 
                     //TAG MUSICA SOTTOFONDO GIARDINO
-                    if (tagValue == "gardenSounds")
+                    if (tagValue == "forestSounds")
                     {
-                        ambientSounds.clip = gardenSounds;
+                        ambientSounds.clip = forestSounds;
                         ambientSounds.Play();
                     }
                     //TAG MUSICA SOTTOFONDO BusStop

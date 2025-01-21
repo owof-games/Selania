@@ -11,7 +11,7 @@ LIST pronouns = maschili, femminili, neutri
 VAR counterSpostamenti = 0
 
 //Lista di tutti i luoghi del gioco
-LIST places = Forest, BusStop, Greenhouse, Libary, Nest, Labirinto, Laboratory, Safekeeping, GreenhouseMiddlePath
+LIST places = Forest, BusStop, Greenhouse, Libary, Nest, Labyrinth, Laboratory, Safekeeping, GreenhouseMiddlePath
 
 //Settaggio luoghi attivi a seconda del tier
 VAR firstTierPlaces =(Forest, BusStop, GreenhouseMiddlePath)
