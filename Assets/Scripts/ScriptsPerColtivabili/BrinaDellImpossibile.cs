@@ -32,20 +32,21 @@ public class BrinaDellImpossibile : MonoBehaviour
             image.sprite = NotStarted;
         }
         else if (step.ContainsItemNamed("stepZero"))
-
         {   
             image.sprite = StepZero;
         }
-        else if (step.ContainsItemNamed("stepOne"))
 
+        else if (step.ContainsItemNamed("stepOne"))
         {   
             image.sprite = StepOne;
         }
+
         else if (step.ContainsItemNamed("stepTwo"))
         {   
            
             image.sprite = StepTwo;
         }
+        
         else if (step.ContainsItemNamed("stepThree"))
         {
             

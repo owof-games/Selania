@@ -1,5 +1,6 @@
 //VARIABILI PER LA GESTIONE DELLA CRESCITA DEI COLTIVABILI
 LIST growStep = notStarted, stepZero, stepOne, stepTwo, stepThree
+
 VAR statoCantoDelleCompagne = notStarted
 VAR statoLicheneDegliAbissi = notStarted
 VAR statoMuschioDelleAmanti = notStarted

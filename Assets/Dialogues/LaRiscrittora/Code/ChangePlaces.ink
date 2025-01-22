@@ -57,7 +57,8 @@
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToGreenhouse)}  [FromGreenhouseMiddlePathToGreenhouse]
             ~ move_entity(PG, Greenhouse)
             ~ movementsCounter ++
-            ~ growing ++ 
+            ~ growing ++
+            -> growing_check ->
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
         -> greenhouse
