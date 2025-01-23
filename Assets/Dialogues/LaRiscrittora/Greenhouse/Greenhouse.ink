@@ -19,7 +19,7 @@
 }
 
 === pre_test
-    <i>{~ In questo momento non c'è nulla in crescita|Cose}.</i>
+    <i>{~ In questo momento non c'è nulla in crescita|La serra attende le tue visioni}.</i>
         + [Mi guardo attorno.]
         -
             -> main
