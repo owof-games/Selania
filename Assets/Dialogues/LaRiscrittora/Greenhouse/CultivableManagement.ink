@@ -591,15 +591,15 @@ QUESTIONS
      ~ ninthQuest = true
     {debugCultivable: <i>Entro in ninthQuest. {ninthQuest: ninthQuest ora = true|ninthQuest = false}.}
     
-        <i>Il cervo volante..
+        <i>Il cervo volante...
             + [<i>{~Insegue l'odore di frutta matura|Scava nel legno lunghe gallerie|Trascina pensieri dimenticati}.]
                     ~ tipoColtivazioni += ciclicità 
                     ~ firstAnswerTracker = pianteCiclicità 
-                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}               
             + [<i>{~Lotta temibile e inquieto|Spacca la crisalide, asciugandosi al vento}.]
                     ~ tipoColtivazioni += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
-                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}         
             -   
                 ~ counter ++
                     -> test                   
@@ -658,7 +658,7 @@ QUESTIONS
      ~ thirteenthQuest = true
     {debugCultivable: <i>Entro in thirteenthQuest. {thirteenthQuest: thirteenthQuest ora = true|thirteenthQuest = false}.}
     
-        {<i>pronouns has him: Il riscrittore...|{pronouns has her:La riscrittora...|Lə riscrittorə...}}
+        {pronouns has him: <i>Il riscrittore...|{pronouns has her:<i>La riscrittora...|<i>Lə riscrittorə...}}
         
             + [<i>{~Assapora sulla lingua il sapore del cambiamento|Sente sulle mani un accesso di futuro|Freme nel lanciarsi verso ciò che arriverà}.]
                     ~ tipoColtivazioni += novità   
