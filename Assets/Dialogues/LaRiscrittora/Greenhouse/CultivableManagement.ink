@@ -13,11 +13,17 @@ VAR statoNonTiScordarDiTe = notStarted
 LIST tipoColtivazioni = collaborazione, ciclicità, novità, cancellazione, ricordo, indipendenza
 
 //QUESTE LISTE HANNO UN VALORE CATALOGATIVO E PER LA GESTIONE DELLE DOMANDE
+    //Relazione: piante che parlano del rapporto con l'altra. Che per lo più è positiva, ma non sempre. Forse in questo senso la Brina ci azzecca poco.
 VAR pianteCollaborazione = (LicheneDegliAbissi, MuschioDelleAmanti, CantoDelleCompagne, BrinaDellImpossibile)
+    //Movimento: elementi che parlano di movimento fisico o emotivo
 VAR pianteCiclicità = (LicheneDegliAbissi, CantoDelleCompagne, NonTiScordarDiTe)
+    //Soglia: siamo a ridosso di qualcosa: lo accogliamo o lo rifiutiamo?
 VAR pianteIndipendenza = (LaSpazzata, BaccaDellaAddolorata, NonTiScordarDiTe)
+    //Futuro: il cambiamento è inevitabile.
 VAR pianteNovità =(MuschioDelleAmanti,LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
+    //Passato: rimaniamo nello spazio della memoria, del ricordo
 VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, BrinaDellImpossibile)
+    //Esplosione: le cose cambiano di botto
 VAR pianteCancellazione =(LicheneDegliAbissi,LaSpazzata, BaccaDellaAddolorata)
 
 //QUESTA LISTA LA USO PER GESTIRE LA PESCATA O MENO DEI COLTIVABILI
@@ -52,8 +58,8 @@ VAR maxRandomCounter = 100
 VAR growing = 0    
 
 === test_coltivazioni ===
-<i>Sassi, foglie e acqua hanno qualcosa da raccontarti.
-<i>L'aria si muove tra le fronde, portandoti storie lontane.
+<i>La serra ha qualcosa da svelarti.
+<i>Sussurri serpeggiano tra i vasi, ponendoti domande.
     -> test
 
 === test
@@ -448,12 +454,12 @@ QUESTIONS
      ~ firstQuest = true
          {debugCultivable: <i>Entro in first_question. {firstQuest: firstQuest ora = true|firstQuest = false}}
  
-        <i>Sul terreno le foglie e i sassi...
-            + [{~ Si sfiorano|Si perdono gli uni nelle altre}.]
+        <i>Le foglie...
+            + <i>[{~ Si sfiorano|Si mescolano|Si proteggono le une con le altre}.]
                     ~ tipoColtivazioni += collaborazione
                     ~ firstAnswerTracker = pianteCollaborazione
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}
-            + [{~ Si osservano distaccati|Difendono i propri confini}.]
+            + <i>[{~ Si accumulano sulla soglia|Si dispongono in ordine attorno ai vasi|Resistono al vento}.]
                     ~ tipoColtivazioni += indipendenza
                     ~ firstAnswerTracker = pianteIndipendenza
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
@@ -466,11 +472,11 @@ QUESTIONS
         {debugCultivable: <i>Entro in second_question. {secondQuest: SecondQuest ora = true|SecondQuest = false}}
 
         <i>L'aria...
-            + [{~ Insegue sé stessa, gioca con le foglie creando mulinelli|Ruota e ruzzola portando odori dal passato}.]
+            + <i>[{~ Insegue sé stessa|Crea mulinelli di foglie|Ruota e ruzzola portando odori inaspettati}.]
                     ~ tipoColtivazioni += ciclicità
                     ~ firstAnswerTracker = pianteCiclicità
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
-            + [{~ È scoppiettante, fremente, carica di elettricità|Esplora cautamente ogni angolo della serra}.]
+            + <i>[{~ È scoppiettante|Freme, carica di elettricità|Corre in avanti, sempre}.]
                     ~ tipoColtivazioni += novità
                     ~ firstAnswerTracker = pianteNovità
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
@@ -484,11 +490,11 @@ QUESTIONS
     {debugCultivable:<i>Entro in third_question. {thirdQuest: thirdQuest ora = true|thirdQuest = false}.}
     
         <i>L'acqua...
-            + [{~ È ferma, mossa solo sulla superficie|È torbida|È piena di foglie e petali}.]
+            + <i>[{~ È mossa solo sulla superficie|È torbida|È piena di foglie e petali}.]
                     ~ tipoColtivazioni += ricordo
                     ~ firstAnswerTracker = pianteRicordo
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
-            + [{~ Scava, portando con sé il terriccio|Schiaccia foglie e sassi|La sua voce è potente}.]
+            + <i>[{~ Scava, portando con sé ogni cosa|Schiaccia foglie e sassi|Rimbomba tra i vasi}.]
                     ~ tipoColtivazioni += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
@@ -500,12 +506,12 @@ QUESTIONS
      ~ fourthQuest = true
     {debugCultivable: <i>Entro in fourthQuest. {fourthQuest: fourthQuest ora = true|fourthQuest = false}.}
     
-        <i>Domanda..
-            + [Collaborazione]
+        <i>Le api...
+            + <i>[{~Proteggono la regina|Si scambiano direzioni|Si puliscono a vicenda}.]
                     ~ tipoColtivazioni += collaborazione
                     ~ firstAnswerTracker = pianteCollaborazione 
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
-            + [Ciclicità]
+            + <i>[{~Danzano in sintonia|Cercano il sole|Spargono polline tra i fiori}.]
                     ~ tipoColtivazioni += ciclicità
                     ~ firstAnswerTracker = pianteCiclicità
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
@@ -517,12 +523,12 @@ QUESTIONS
      ~ fifthQuest = true
     {debugCultivable: <i>Entro in fifthQuest. {fifthQuest: fifthQuest ora = true|fifthQuest = false}.}
     
-        <i>Domanda..
-            + [collaborazione]
+        <i>Le formiche...
+            + <i>[{~Lasciano tracce per le compagne|Accumulano cibo per l'inverno|Creano ponti di foglie}.]
                     ~ tipoColtivazioni += collaborazione
                     ~ firstAnswerTracker = pianteCollaborazione 
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
-            + [ricordo]
+            + <i>[{~Pensano alle amiche perse|Ricordano ciò che non sono più|Si aggrappano ai sogni}.]
                     ~ tipoColtivazioni += ricordo
                     ~ firstAnswerTracker = pianteRicordo
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
@@ -534,12 +540,12 @@ QUESTIONS
      ~ sixthQuest = true
     {debugCultivable: Entro in sixfthQuest. {sixthQuest: <i>sixfthQuest ora = true|sixfthQuest = false}.}
     
-        <i>Domanda..
-            + [collaborazione]
+        <i>I sassi...
+            + <i>[{~Creano scale verso il cielo|Si fanno mura, protezione|Si scaldano fregandosi lentamente l'un l'altro}.]
                     ~ tipoColtivazioni += collaborazione
                     ~ firstAnswerTracker = pianteCollaborazione 
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
-            + [cancellazione]
+            + <i>[{~Lasciano pezzi di sè sul terreno|Si lanciano contro porte serrate|Schiacciano noci per gli scoiattoli}.]
                     ~ tipoColtivazioni += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
@@ -551,12 +557,12 @@ QUESTIONS
      ~ seventhQuest = true
     {debugCultivable: <i>Entro in seventhQuest. {seventhQuest: seventhQuest ora = true|seventhQuest = false}.}
     
-        <i>Domanda..
-            + [ciclicità]
+        <i>La terra..
+            + <i>[{~Avanza massaggiando le radici nodose delle quercie|Scivola, trascinando con sé i rospi|Asciutta, rotola a valle}.]
                     ~ tipoColtivazioni += ciclicità
                     ~ firstAnswerTracker = pianteCiclicità 
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
-            + [indipendenza]
+            + <i>[{~Tentenna sulla cima della collina|Si accumula inquieta lungo la strada|Si solleva dall'acqua, facendosi diga}.]
                     ~ tipoColtivazioni += indipendenza
                     ~ firstAnswerTracker = pianteIndipendenza
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
@@ -568,12 +574,12 @@ QUESTIONS
      ~ eighthQuest = true
     {debugCultivable: <i>Entro in eighthQuest. {eighthQuest: eighthQuest ora = true|eighthQuest = false}.}
     
-        <i>Domanda..
-            + [ciclicità]
+        <i>I cardellini...
+            + <i>[{~Svolazzano in stormi sopra alla foresta|Saltellano tra i rami del salice}.]
                     ~ tipoColtivazioni += ciclicità 
                     ~ firstAnswerTracker = pianteCiclicità 
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
-            + [ricordo]
+            + <i>[{~Cantano i nomi dei compagni persi|Ricostruiscono i nidi di chi non c'è più|Controllano le vecchie scorte dell'inverno}.]
                     ~ tipoColtivazioni += ricordo
                     ~ firstAnswerTracker = pianteRicordo
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
@@ -585,12 +591,12 @@ QUESTIONS
      ~ ninthQuest = true
     {debugCultivable: <i>Entro in ninthQuest. {ninthQuest: ninthQuest ora = true|ninthQuest = false}.}
     
-        <i>Domanda..
-            + [ciclicità]
+        <i>Il cervo volante..
+            + <i>[{~Insegue l'odore di frutta matura|Scava nel legno lunghe gallerie|Trascina pensieri dimenticati}.]
                     ~ tipoColtivazioni += ciclicità 
                     ~ firstAnswerTracker = pianteCiclicità 
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
-            + [cancellazione]
+            + <i>[{~Lotta temibile e inquieto|Spacca la crisalide, asciugandosi al vento}.]
                     ~ tipoColtivazioni += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
@@ -602,12 +608,12 @@ QUESTIONS
      ~ tenthQuest = true
     {debugCultivable: <i>Entro in tenthQuest. {tenthQuest: tenthQuest ora = true|tenthQuest = false}.}
     
-        <i>Domanda..
-            + [indipendenza ]
+        <i>Il sole...
+            + <i>[{~Mostra il cammino|Offre coraggio alle lucertole|Solleva goccie dalla palude silente}. ]
                     ~ tipoColtivazioni += indipendenza  
                     ~ firstAnswerTracker = pianteIndipendenza 
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
-            + [novità]
+            + <i>[{~Accresce gli steli delle lenticchie selvatiche|Scalda le uova del fagiano|Carezza le foglie verdi di primavera}.]
                     ~ tipoColtivazioni += novità
                     ~ firstAnswerTracker = pianteNovità
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
@@ -618,12 +624,12 @@ QUESTIONS
      ~ eleventhQuest = true
     {debugCultivable: <i>Entro in eleventhQuest. {eleventhQuest: eleventhQuest ora = true|eleventhQuest = false}.}
     
-        <i>Domanda..
-            + [indipendenza]
+        <i>La notte...
+            + <i>[{~Nasconde i sotterfugi delle falene|Raccoglie i baci delle amanti|Accompagna i ghiri nello spazio del sogno}.]
                     ~ tipoColtivazioni += indipendenza  
                     ~ firstAnswerTracker = pianteIndipendenza 
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
-            + [ricordo]
+            + <i>[{~Nasconde nomi amati tra le nuvole|Riempie di ricordi i sogni della lepre|Asciuga le lacrime tristi del riccio}.]
                     ~ tipoColtivazioni += ricordo
                     ~ firstAnswerTracker = pianteRicordo
                 {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
@@ -635,12 +641,12 @@ QUESTIONS
      ~ twelfthQuest = true
     {debugCultivable: <i>Entro in twelfthQuest. {twelfthQuest: twelfthQuest ora = true|twelfthQuest = false}.}
     
-        <i>Domanda..
-            + [indipendenza]
+        <i>La neve...
+            + <i>[{~Nasconde allo stambecco il burrone|Spinge ai confini del parco|Piega le punte degli abeti più alti}.]
                     ~ tipoColtivazioni += indipendenza  
                     ~ firstAnswerTracker = pianteIndipendenza 
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
-            + [cancellazione]
+            + <i>[{~Schiaccia i nidi delle tortore|Tradisce il passo della volpe}.]
                     ~ tipoColtivazioni += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
@@ -652,12 +658,12 @@ QUESTIONS
      ~ thirteenthQuest = true
     {debugCultivable: <i>Entro in thirteenthQuest. {thirteenthQuest: thirteenthQuest ora = true|thirteenthQuest = false}.}
     
-        <i>Domanda..
-            + [novità]
+        <i>{pronouns has him: Il riscrittore|{pronouns has her:La riscrittora|Lə riscrittorə}}...
+            + <i>[{~Assapora sulla lingua il sapore del cambiamento|Sente sulle mani un accesso di futuro|Freme nel lanciarsi verso ciò che arriverà}.]
                     ~ tipoColtivazioni += novità   
                     ~ firstAnswerTracker = pianteNovità 
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
-            + [ricordo]
+            + <i>[{~Indugia su ciò che è stato|Trova conforto nel ricordo di ciò che era|Si chiede dove sia casa}.]
                     ~ tipoColtivazioni += ricordo
                     ~ firstAnswerTracker = pianteRicordo
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
@@ -669,12 +675,12 @@ QUESTIONS
      ~ fourteenthQuest = true
     {debugCultivable: <i>Entro in fourteenthQuest. {fourteenthQuest: fourteenthQuest ora = true|fourteenthQuest = false}.}
     
-        <i>Domanda..
-            + [novità]
+        <i>La serra...
+            + <i>[{~Brama la crescita di una nuova pianta|Gioisce per l'erbetta che cresce tra le travi|Spalanca le sue porte a nuove sementi}.]
                     ~ tipoColtivazioni += novità   
                     ~ firstAnswerTracker = pianteNovità 
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
-            + [cancellazione]
+            + <i>[{~Scaccia cimici e cavallette|Acceca il corvo ingordo}.]
                     ~ tipoColtivazioni += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
