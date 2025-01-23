@@ -1,7 +1,7 @@
 === forest ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-{forest == 1:<i>Questo è il giardino</i>|<i>Il giardino {~ è una distesa di fresca ombra|è canto sospeso|riposa}</i>}.
+{forest == 1:<i>La foresta ti accoglie con le sue ombre e l'odore di resina</i>|<i>La foresta{~ è una distesa di fresca ombra|è canto sospeso|cresce lentamente}</i>}.
     + [Mi guardo attorno.]
     -
     -> main

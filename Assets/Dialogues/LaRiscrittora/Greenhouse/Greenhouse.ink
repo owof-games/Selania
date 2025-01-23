@@ -1,7 +1,7 @@
 === greenhouse ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-{greenhouse == 1:<i> Eccoti nella serra</i>|<i>La serra {~ pulsa nell'aria tiepida|risplende|ti attende quieta}</i>}.
+{greenhouse == 1:<i>Eccoti nella serra</i>|<i>La serra {~pulsa nell'aria tiepida|odora di terra e tranquillità|chiede ascolto|raccoglie risponde|propone domande}</i>}.
 
 {
 	- chosenCultivable != ():

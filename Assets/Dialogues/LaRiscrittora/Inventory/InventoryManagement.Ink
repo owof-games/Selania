@@ -45,6 +45,13 @@
 - MuschioDelleAmanti:
     ~ return "del Muschio delle Amanti"
 - BrinaDellImpossibile:
-    ~ return "della Brina dell'Impossibile"    
+    ~ return "della Brina dell'Impossibile"
+
+- CantoDelleCompagne: 
+    ~ return "del Canto delle Compagne"
+- LicheneDegliAbissi:
+    ~ return "del Lichene degli Abissi"
+- NonTiScordarDiTe:
+    ~ return "del Non Ti Scordar di Te"     
 
 }

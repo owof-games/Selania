@@ -16,8 +16,15 @@ VAR currentReceiver = ()
 
 
 === gestione_inventario ===
-{debug: I doni trovati sono {findedGifts}}
+{debug: I doni trovati sono {findedGifts}.}
 Dono...
+/* ---------------------------------
+
+            Coltivabili
+
+ ----------------------------------*/
+
+
 + {findedGifts has MuschioDelleAmanti} [Del muschio delle amanti.]
     ~ findedGifts -= MuschioDelleAmanti
     {
@@ -42,6 +49,8 @@ Dono...
     }
     -> main
 
+
+
 + {findedGifts has BaccaDellaAddolorata} [Una bacca della Addolorata.]
     ~ findedGifts -= BaccaDellaAddolorata
 
@@ -63,6 +72,9 @@ Dono...
         -> dono_storia_tre.esito_inchiostro
     }
    -> main    
+
+
+
 
 + {findedGifts has LaSpazzata} [Un frammento della Spezzata.]
     ~ findedGifts -= LaSpazzata
@@ -86,55 +98,8 @@ Dono...
     }
    -> main
 
-+ {findedGifts has blanket} [Una blanket.]
-    ~ findedGifts -= blanket
-    
-    {
-    - currentReceiver has FirstCharacter:
-        ~ firstCharacterInkLevel ++
-        ~ firstCharacterInkLevel ++
-        <i>{uppercaseTranslator(firstCharacterState)} se la avvolge attorno al corpo.
-        <i>Sembra sollevato.</i>
-        ~ currentReceiver = ()
-        -> dono_storia_uno.esito_inchiostro
-    
-    - currentReceiver has SecondCharacter:
-        Hai regalato a {uppercaseTranslator(secondCharacterState)} qualcosa che proprio non gli interessa
-        -> dono_storia_due.esito_inchiostro
-    
-    - currentReceiver has ThirdCharacter:
-        ~ thirdCharacterInkLevel ++
-        ~ thirdCharacterInkLevel ++
-        <i>{uppercaseTranslator(thirdCharacterState)} se la avvolge attorno al corpo.
-        <i>Sembra sollevato.</i>
-        ~ currentReceiver = ()
-        -> dono_storia_tre.esito_inchiostro
-    }
-   -> main
-    
-+ {findedGifts has emptyvase} [Un vaso vuoto.]
-    ~ findedGifts -= emptyvase
-    
-    {
-    - currentReceiver has FirstCharacter:
-        ~ firstCharacterInkLevel --
-        <i>{uppercaseTranslator(firstCharacterState)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
-        ~ currentReceiver = ()
-        -> dono_storia_uno.esito_inchiostro
-    
-    - currentReceiver has SecondCharacter:
-        Hai regalato a {uppercaseTranslator(secondCharacterState)} qualcosa che proprio non gli interessa
-        ~ currentReceiver = ()
-        -> dono_storia_due.esito_inchiostro
-    
-    - currentReceiver has ThirdCharacter:
-        ~ thirdCharacterInkLevel --
-        <i>{uppercaseTranslator(thirdCharacterState)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
-        ~ currentReceiver = ()
-        -> dono_storia_tre.esito_inchiostro
-    }
-    -> main
-    
+
+
 + {findedGifts has BrinaDellImpossibile} [Un frammento di Brina dell'Impossibile.]
     ~ findedGifts -= BrinaDellImpossibile
 
@@ -165,8 +130,165 @@ Dono...
          ~ currentReceiver = ()
         -> dono_storia_tre.esito_inchiostro
     }
-   -> main    
+    -> main
     
+    
++ {findedGifts has CantoDelleCompagne} [Una goccia di Canto delle Compagne.]
+    ~ findedGifts -= CantoDelleCompagne
+
+    {
+    - currentReceiver has FirstCharacter:
+        ~ firstCharacterInkLevel ++
+        ~ firstCharacterInkLevel ++
+        ~ firstCharacterInkLevel ++
+        <i>{uppercaseTranslator(firstCharacterState)} si porta la Brina al petto, e ti guarda commosso.</i>
+        <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
+         ~ firstCharacterSpecialEvent = true
+         ~ currentReceiver = ()
+        -> dono_storia_uno.esito_inchiostro
+
+    - currentReceiver has SecondCharacter:
+        Hai regalato a {uppercaseTranslator(secondCharacterState)} qualcosa che proprio non gli interessa
+        <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano</i>
+        ~ currentReceiver = ()
+        -> dono_storia_due.esito_inchiostro
+        
+    - currentReceiver has ThirdCharacter:
+        ~ thirdCharacterInkLevel ++
+        ~ thirdCharacterInkLevel ++
+        ~ thirdCharacterInkLevel ++
+        <i>{uppercaseTranslator(thirdCharacterState)} si porta la Brina al petto, e ti guarda commosso.</i>
+        <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
+         ~ thirdCharacterSpecialEvent = true
+         ~ currentReceiver = ()
+        -> dono_storia_tre.esito_inchiostro
+    }
+    -> main
+
++ {findedGifts has LicheneDegliAbissi} [Una traccia dell'odore del Lichene degli Abissi.]
+    ~ findedGifts -= LicheneDegliAbissi
+
+    {
+    - currentReceiver has FirstCharacter:
+        ~ firstCharacterInkLevel ++
+        ~ firstCharacterInkLevel ++
+        ~ firstCharacterInkLevel ++
+        <i>{uppercaseTranslator(firstCharacterState)} si porta la Brina al petto, e ti guarda commosso.</i>
+        <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
+         ~ firstCharacterSpecialEvent = true
+         ~ currentReceiver = ()
+        -> dono_storia_uno.esito_inchiostro
+
+    - currentReceiver has SecondCharacter:
+        Hai regalato a {uppercaseTranslator(secondCharacterState)} qualcosa che proprio non gli interessa
+        <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano</i>
+        ~ currentReceiver = ()
+        -> dono_storia_due.esito_inchiostro
+        
+    - currentReceiver has ThirdCharacter:
+        ~ thirdCharacterInkLevel ++
+        ~ thirdCharacterInkLevel ++
+        ~ thirdCharacterInkLevel ++
+        <i>{uppercaseTranslator(thirdCharacterState)} si porta la Brina al petto, e ti guarda commosso.</i>
+        <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
+         ~ thirdCharacterSpecialEvent = true
+         ~ currentReceiver = ()
+        -> dono_storia_tre.esito_inchiostro
+    }
+    -> main
+
++ {findedGifts has NonTiScordarDiTe} [L'impronta del Non Ti Scordar di Te.]
+    ~ findedGifts -= NonTiScordarDiTe
+
+    {
+    - currentReceiver has FirstCharacter:
+        ~ firstCharacterInkLevel ++
+        ~ firstCharacterInkLevel ++
+        ~ firstCharacterInkLevel ++
+        <i>{uppercaseTranslator(firstCharacterState)} si porta la Brina al petto, e ti guarda commosso.</i>
+        <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
+         ~ firstCharacterSpecialEvent = true
+         ~ currentReceiver = ()
+        -> dono_storia_uno.esito_inchiostro
+
+    - currentReceiver has SecondCharacter:
+        Hai regalato a {uppercaseTranslator(secondCharacterState)} qualcosa che proprio non gli interessa
+        <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano</i>
+        ~ currentReceiver = ()
+        -> dono_storia_due.esito_inchiostro
+        
+    - currentReceiver has ThirdCharacter:
+        ~ thirdCharacterInkLevel ++
+        ~ thirdCharacterInkLevel ++
+        ~ thirdCharacterInkLevel ++
+        <i>{uppercaseTranslator(thirdCharacterState)} si porta la Brina al petto, e ti guarda commosso.</i>
+        <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
+         ~ thirdCharacterSpecialEvent = true
+         ~ currentReceiver = ()
+        -> dono_storia_tre.esito_inchiostro
+    }
+    -> main
+    
+/* ---------------------------------
+
+            Oggetti trovabili
+
+ ----------------------------------*/    
++ {findedGifts has blanket} [Una coperta.]
+    ~ findedGifts -= blanket
+    
+    {
+    - currentReceiver has FirstCharacter:
+        ~ firstCharacterInkLevel ++
+        ~ firstCharacterInkLevel ++
+        <i>{uppercaseTranslator(firstCharacterState)} se la avvolge attorno al corpo.
+        <i>Sembra sollevato.</i>
+        ~ currentReceiver = ()
+        -> dono_storia_uno.esito_inchiostro
+    
+    - currentReceiver has SecondCharacter:
+        Hai regalato a {uppercaseTranslator(secondCharacterState)} qualcosa che proprio non gli interessa
+        -> dono_storia_due.esito_inchiostro
+    
+    - currentReceiver has ThirdCharacter:
+        ~ thirdCharacterInkLevel ++
+        ~ thirdCharacterInkLevel ++
+        <i>{uppercaseTranslator(thirdCharacterState)} se la avvolge attorno al corpo.
+        <i>Sembra sollevato.</i>
+        ~ currentReceiver = ()
+        -> dono_storia_tre.esito_inchiostro
+    }
+
+ 
+    
++ {findedGifts has emptyvase} [Un vaso vuoto.]
+    ~ findedGifts -= emptyvase
+    
+    {
+    - currentReceiver has FirstCharacter:
+        ~ firstCharacterInkLevel --
+        <i>{uppercaseTranslator(firstCharacterState)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
+        ~ currentReceiver = ()
+        -> dono_storia_uno.esito_inchiostro
+    
+    - currentReceiver has SecondCharacter:
+        Hai regalato a {uppercaseTranslator(secondCharacterState)} qualcosa che proprio non gli interessa
+        ~ currentReceiver = ()
+        -> dono_storia_due.esito_inchiostro
+    
+    - currentReceiver has ThirdCharacter:
+        ~ thirdCharacterInkLevel --
+        <i>{uppercaseTranslator(thirdCharacterState)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
+        ~ currentReceiver = ()
+        -> dono_storia_tre.esito_inchiostro
+    }
+    
+    
+    
+    -> main
+    
+    
+
     //Se la lista è vuota
     + {findedGifts == ()} [Non ho nulla da donare.]
     + [Ho bisogno di ragionarci ancora un poco.]

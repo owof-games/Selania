@@ -191,7 +191,6 @@
     ->->
 }
 
-TODO: setta in inventario e traduttore i nuovi coltivabili
 === lichene_degli_abissi
 //Collaborazione, ciclicità, cancellazione
 //Outcome: allontana qualcuno.
