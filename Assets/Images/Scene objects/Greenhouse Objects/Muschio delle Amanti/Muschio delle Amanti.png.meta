@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Muschio delle Amanti_0: 6654987023325724205
+      Muschio delle Amanti_1: 4251274456541833599
+      Muschio delle Amanti_2: 732985277858982356
+      Muschio delle Amanti_3: -6417757666031589774
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

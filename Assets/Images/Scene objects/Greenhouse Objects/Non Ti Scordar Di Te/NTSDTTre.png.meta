@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 016c5b8b33c947441a73a36b2d4ddf02
+guid: 2c6ebf361a06d7f4ca4a647a4a35e741
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3019154105434497370
-    second: MdA Vuoto_0
+      213: -7881660356520215007
+    second: NTSDTTre_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MdA Vuoto_0
+      name: NTSDTTre_0
       rect:
         serializedVersion: 2
-        x: 81
-        y: 124
-        width: 212
-        height: 147
+        x: 37
+        y: 34
+        width: 154
+        height: 149
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ae1a67565fc916d0800000000000000
-      internalID: -3019154105434497370
+      spriteID: 12e75512aa7be9290800000000000000
+      internalID: -7881660356520215007
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MdA Vuoto_0: -3019154105434497370
+      NTSDTTre_0: -7881660356520215007
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

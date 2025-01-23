@@ -191,36 +191,45 @@
     ->->
 }
 
-
+TODO: setta in inventario e traduttore i nuovi coltivabili
 === lichene_degli_abissi
 //Collaborazione, ciclicità, cancellazione
 //Outcome: allontana qualcuno.
     = step_zero
         ~ statoLicheneDegliAbissi = stepZero
-        <i>Una punticina bluastra emerge dal terreno.</i>
+        <i>Qualcosa vortica sopra al vaso.</i>
+        <i>La terra si è sollevata ai lati, lasciando un incavo nel terreno.</i>
         -> main
     
     = step_uno
         <i>Un odore salmastro si diffonde per la serra.</i>
-        <i>Ora la punta è più grande, e attorno c'è un foro circolare.</i>
+        <i>Una punticina bluastra emerge dal terreno.</i>
           -> main
           
     = step_due
-        <i>Il foro ha le dimensioni di un pugno, mentre la punta sembra roteare nell'aria a incredibile velocità, completamente silenziosa.</i>
+        <i>La punta ora più grande, rotea nell'aria a incredibile velocità, completamente silenziosa.</i>
           -> main
           
     = step_tre
-        <i>Eccolo qui. Un <b>Lichene degli abissi</b></i>
-        <i>Il lichene degli abissi è una danza, un roteare costante di fungo ed alga. Un ripetersi anche nell'errore, nel dolore.</i>
-        <i>Alga e fungo girano e rigirano senza mai afferrarsi.</i>
-        <i>Se qualcuno sfiora il lichene, questo è destinato a scomparire.</i>
-            
-            + [Tocco il lichene.]
-                <i> Un piccolo sbuffo. Le tue dita ora sanno di mare.</i>
-                <i>Il lichene è scomparso, tu no.</i>
-                <i>C'è qualcuno che devi allontanare?</i>
+        <i>L'odore ora è così forte da farti lacrimare gli occhi.</i>
+        <i>Davanti a te vortica un <b>Lichene degli abissi</b></i>
+        <i>Il lichene degli abissi è una danza, un roteare incessante di fungo e alga.</i>
+        <i>Si inseguono nel piacere, si inseguono nel dolore, senza mai afferrarsi.</i>
+        <i>Persi nella loro distruzione, estremamente fragili.</i>
+
+            + [Fermo il lichene.]
+                ~ statoLicheneDegliAbissi = stepZero
+                <i>Un piccolo sbuffo, rimane solo un foro.</i>
+                <i>Le tue dita sanno di ricordo, sanno di mare.</i>
+                <i>Pensi a qualcuno.</i>
+                <i>A volte c'è pace solo nell'allontanare.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
+                    {
+                        - findedGifts hasnt LicheneDegliAbissi:
+                        ~ findedGifts += LicheneDegliAbissi
+                        <b>Hai ottenuto: Lichene degli Abissi.</b>
+                    }                    
             + [Lo lascio dov'è.]
             -
               -> main
@@ -232,27 +241,30 @@
 //Outcome: datti piacere
     = step_zero
     ~ statoMuschioDelleAmanti = stepZero
-        <i>È solo una tua impressione, o i rami hanno iniziato a brillare?</i>
+        <i>È solo una tua impressione, o il vaso ha iniziato a brillare?</i>
         -> main
     
     = step_uno
-        <i>C'è una polvere ramata, brillante, che scende da alcuni rami.</i>
+        <i>Nettare color rame sale lungo le corde che reggono il vaso.</i>
           -> main
           
     = step_due
-        <i>La polvere si è intrecciata, arrotolata, come a formare dei fili.</i>
+        <i>Il nettare si è intrecciato, arrotolato, cerca le venature del legno della serra.</i>
+        <i>Lo saggia, si mischia, lo penetra.</i>
           -> main
     
     = step_tre
-        <i>Senti un fremito nel ventre. I rami ora sono coperti da un fitto tappeto del color dell'alba.</i>
-        <i>Quando lo sfiori le tue labbra tremano, ricordi ti invadono: quel bacio, quelle dita desiderate tra le coscie.</i>
-        <i>Pienezza ti riempie: è per forza del <b>Muschio delle amanti</b></i>.
-        <i>Potresti portarne un po' con te, sapendo che sparirà.</i>
-        <i>O lasciarlo qui sull'albero.
-            
-            + [Raccolgo un po' del muschio.]
-                <i>Così vicino, il muschio ti chiama.</i>
-                <i>Ti invita a fermare per un attimo tutto, a premiare come più ti piace il tuo corpo, dentro o fuori che sia.</i>
+        <i>Calore nel ventre.</i>
+        <i>Un pezzo di serra è ora coperto da un fitto tappeto del color dell'alba.</i>
+        <i>Sembra la cosa più gustosa che tu abbia mai incontrato.</i>
+            + [Provo a leccarlo.]
+                <i>Per un attimo perdi i tuoi confini.</i>
+                <i>Sei un bacio nella notte, dita desiderate tra le coscie.</i>
+                <i>Sei acqua sulle labbra, pelle nuda sulla terra umida.</i>
+                <i>Pienezza ti riempie, la forza del <b>Muschio delle amanti</b></i>.
+                <i>Il tuo corpo ha fame di piacere.</i>
+                <i>Perditi un attimo nel desiderio.</i>
+               // <i>Ti invita a fermare per un attimo tutto, a premiare come più ti piace il tuo corpo, dentro o fuori che sia.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     {
@@ -260,13 +272,13 @@
                         ~ findedGifts += MuschioDelleAmanti
                         <b>Hai ottenuto: Muschio delle Amanti.</b>
                     }
-            + [Non è ancora il momento.]
+            + [Ora non me la sento.]
             -
              -> main
 
 === canto_delle_compagne
 //Collaborazione, ciclicità, ricordo
-//Outcome: canta, sola o con le compagne
+//Outcome: danza, sola o con le compagne
     = step_zero
         ~ statoCantoDelleCompagne = stepZero
         <i>Qualcosa vibra e ti sveglia le gambe.<i>
@@ -274,28 +286,35 @@
             -> main
         
     = step_uno
-        <i>Piccole palline rosse sul terreno caldo.</i>
-        <i>L'umidità evapora creando una nebbiolina rossastra.</i>
+        <i>Il vaso è caldo al tocco.</i>
+        <i>L'umidità del terreno evapora creando una nebbiolina rossastra.</i>
           -> main
           
     = step_due
-        <i>Le palline ondeggiano nella nebbia ora, sospinte da un vento invisibile.</i>
-        <i>Si rincorrono e si tuffano sul terreno, facendo come un suono di risata.</i>
+        <i>La nebbia si è fatta ora goccia, goccie rosse che vibrano.</i>
+        <i>Che si rincorrono e si tuffano nel vaso.</i>
+        <i>E quando si scontrano, la serra riecheggia di una festosa risata.</i>
             -> main
           
     = step_tre
-        <i>La serra tutta si è fatta rossa, uno stupendo <b>Canto delle compagne</b> galleggia sul terreno.</i>
-        <i>In un altro tempo, più pauroso, questo fungo veniva chiamato "Canto delle streghe".</i>
-        <i>L'euforia ti riempie i polmoni, senti la gioia di sapere che non sei mai stata davvero sola.</i>
-        <i>Hai voglia di cantare.</i>
-        <i>Questo spingerà il fungo altrove, verso altre streghe, altre compagne.</i>
-        
-        + [È il momento di cantare.]
-                <i>Puoi farlo da te, o chiamare qualcuno a cui tieni.
-                Riempiti dell'euforia del fungo, e lascia che il mondo intero ascolti la tua voce.
-                Con l'ultima nota, il fungo sarà altrove, da un'altra compagna bisognosa.</i>
+        <i>La serra vibra e si scuote, persino le travi sembrano voler danzare.</i>
+        <i>Ilare, <b>Canto delle compagne</b> turbina e gioca sospesa sul vaso.</i>
+        <i>In un altro tempo questo fungo veniva chiamato "Canto delle streghe".</i>
+        <i>L'euforia ti riempie i polmoni, senti la gioia di sapere che non sei mai stata davvero {pronouns has him: solo|{pronouns has her: sola|solə}}.</i>
+
+        + [È il momento di festeggiare.]
+                <i>Il canto ti invita alla danza.</i>
+                <i>Spinge le tue gambe nella stanza.</i>
+                <i>O ad alzare al voce, cantare, e chiamare le compagne.</i>
+                <i>Lasciando che la musica vi unisca, rendendo il mondo intero il vostro palcoscenico.</i>
+                <i>Se qualcuno avrà paura, è solo perché non sa più come ballare.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
+                    {
+                        - findedGifts hasnt CantoDelleCompagne:
+                        ~ findedGifts += CantoDelleCompagne
+                        <b>Hai ottenuto: Canto delle Compagne.</b>
+                    }
                     -> main
         + [No, non ora.]
               -> main
@@ -305,32 +324,42 @@
 //Outcome: prometti di dire qualcosa che ti pesa sullo stomaco.
     = step_zero
     ~ statoLaSpazzata = stepZero
-        <i>Uh. Non vedi nulla. Forse qualcosa è andato storto?</i>
+        <i>Niente sembra cambiare.</i>
+        <i>Eppure l'aria sembra più pesante.</i>
             -> main
          
     = step_uno
-         <i>La serra è vuota, eppure qualcosa è cambiato.</i>
+         <i>La serra è vuota ma fatichi a respirare.</i>
+         <i>C'è qualcosa, qualcosa di fastidioso ma non sai come tu te ne possa sbarazzare.</i>
             -> main
     
     = step_due
-        <i>Le luci sono più tenui.</i>
-        <i>Il soffitto di rami sfiora la tua testa.</i>
+        <i>La luce sembra scomparsa.</i>
+        <i>Vedi, eppure ti senti {pronouns has him: accecato|{pronouns has her: accecata|accecatə}}.</i>
             -> main
     
     = step_tre
-        <i>Tutto scricchiola, gli alberi sembrano gemere dal dolore.</i>
-        <i>Il terreno stesso è impacciato, crepato.</i>
-        <i>Ora riconosci cosa hai piantato: una grossa, esplosiva <b>Spazzata</b></i>.
-        <i>La Spazzata non è un fungo, non è una pianta, ma è un insieme di tutte queste cose.</i>
-        <i>E se non viene fatta sfogare, esploderà spazzando via tutta la serra.</i>
-        
-        + [Bene: facciamola sfogare!]
-            <i>Questa è la parte più facile: basta prometterle che dirai a qualcuno qualcosa che senti sullo stomaco.
-            <i>Qualcosa che sono giorni o settimane (uh: questa Spazzata è molto grande. forse mesi?) che ti pesa.</i>
-            <i>Falle la promessa, e se ne andrà.</i>
-            <i>Ma se poi tradisci la promessa, la Spazzata tornerà ancora più forte.</i>
+        <i>Il tetto della serra scricchiola, le sue travi sembrano gemere dal dolore.</i>
+        <i>La tua testa sembra pronta ad esplodere.</i>
+        <i>Sopra di te si contrae nervosa una grossa, esplosiva <b>Spazzata</b></i>.
+        <i>La Spazzata è e non è.</i>
+        <i>Si abbuffa delle cose non dette.</i>
+        <i>E quando non ce la fa più, travolge ogni cosa.</i>
+
+        + [Sfioro i suoi rami.]
+            <i>Una forte contrazione.</i>
+            <i>E poi si sgretola.</i>
+            <i>Ti lascia in pancia un senso di vuoto.</i>
+            <i>La sensazione di quando hai condiviso qualcosa che pensi sia terribile.</i>
+            <i>Eppure il mondo non finisce.</i>
+            <i>Vedi lucidamente ora chi vorresti chiamare.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
+                    {
+                        - findedGifts hasnt LaSpazzata:
+                        ~ findedGifts += LaSpazzata
+                        <b>Hai ottenuto: La Spazzata.</b>
+                    }
                     -> main
         + [Non ora.]
             -> main
@@ -342,26 +371,28 @@
 //Outcome: liberazione, invito ad avanzare
     = step_zero
     ~ statoBaccaDellaAddolorata = stepZero
-        <i>Cinque punte scure emergono dal terreno.</i>
+        <i>Cinque punte scure emergono dal vaso.</i>
             -> main
     
     = step_uno
-        <i>Una mano rugosa stritola il terreno, le sue dita sembrano arrivare a infinita profondità.</i>
+        <i>Rami come dita rattrappite sembrano artigliare l'aria.</i>
             -> main
     
     = step_due
-        <i>Dalla troncatura della mano emergono piccoli rami ricolmi di fiorellini bianchi. Ogni volta che espiri, un fiorellino vola via.</i>
+        <i>Le dita si sollevano ora in una mano.</i>
+        <i>Sulle punte brillano piccoli fiorellini bianchi. Ogni volta che espiri i petali svolazzano via.</i>
           -> main
           
     = step_tre
-        <i>Nè rami, nè fiori. Solo la mano, e una piccolissima bacca vermiglia.<i>
-        <i>Hai trovato una <b>Bacca dell'addolorata</b></i>
-        <i>Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ad avanzare</i>
-        <i>La sua bacca aiuta a capire cosa ci vincola, cosa non ci lascia allontanare.</i>
-            
-            + [La afferro.]
+        <i>Non più fiori.</i>
+        <i>Solo la mano, e una lucida pallina vermiglia.<i>
+        <i>Hai trovato una <b>Bacca dell'addolorata</b>.</i>
+        <i>Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ad avanzare.</i>
+
+            + [Afferro una bacca.]
             <i>La mano molla la sua presa, rivelandosi per quel che era dall'inizio: solo un insieme tenace di radici.</i>
-            <i>Senti dalle tue spalle qualcosa sciogliersi, scivolare via: ora hai un po' meno paura di camminare.</i>
+            <i>Senti le tue spalle sciogliersi, l'incertezza scivolare via.</i>
+            <i>Il cambiamento fa paura, ma tu sai come camminare.</i>
                 ~ growing = 0
                 ~ chosenCultivable = ()
                     {
@@ -379,35 +410,41 @@
 //Outcome: ricordo di chi non c'è più
     = step_zero
         ~ statoNonTiScordarDiTe = stepZero
-        <i>Su uno dei tronchi a terra è comparsa una sostanza viscosa, gelatinosa.</i>
+        <i>Su uno vecchio tronco è comparsa una sostanza gelatinosa.</i>
             -> main
     
     = step_uno
-        <i>La sostanza si è espansa.</i>
-        <i>Non è invitante al tatto, ma l'aria attorno ti ricorda qualcosa: sigaro, tabacco forse?</i>
+        <i>La gelatina si tende verso l'alto, biancastra.</i>
+        <i>Non è invitante al tatto, ma l'aria ha un profumo sa di, di cosa? Sigaro, tabacco forse?</i>
         <i>O è canfora? O addirittura torta, o rabarbaro, o caffè.
-        <i>Qualunque cosa sia, ti piace.</i>
+        <i>L'odore di un vecchio e fidato maglione.</i>
           -> main
           
     = step_due
-        <i>La sostanza si è solidificata, e nel farlo il tronco è in più punti sparito.</i>
+        <i>La gelatina ora sembra vetro, il tronco è in più punti sparito.</i>
         <i>No, non sparito: è trasparente.</i>
-        <i>Fili di vetro sembrano puntare verso il cielo.</i>
+        <i>La luce della serra sembra più calda, accogliente.</i>
           -> main
           
     = step_tre
         <i>Tronco e sostanza sono una cosa sola: un fungo di vetro, dita che si sfiorano e intrecciano lanciate verso il cielo.</i>
-        <i>Hai trovato un <i><b>Non ti scordar di te</b></i>
-        <i>Cresce su ciò che è passato, che non c'è più, per renderlo parte di sè.</i>
-        <i>Qualcosa di nuovo, eppure antico.</i>
-        <i>Quando sfiorisce, il ciclo ricomincia.</i>
-        
+        <i>Hai trovato un <b>Non ti scordar di te</b>.</i>
+        <i>Trasforma ciò che è passato, che non c'è più, per renderlo vita nuova.</i>
+        <i>Il nuovo nell'antico, il noi nel nostro passato.</i>
+
         + [Intreccio le mie dita alle sue.]
-            <i>Si sciolgono tra le tue mani, rilasciando di nuovo un profumo familiare.</i>
-            <i>Ti porti quel che rimane alle labbra: il tuo corpo viene invaso da fiducia e calore.</i>
-            <i>Senti in te chi non c'è più: siete parte della stessa storia.</i>
+            <i>Ti metti a piangere.</i>
+            <i>Sorridi e piangi.</i>
+            <i>L'aria è riscaldata da un profumo familiare.</i>
+            <i>Una carezza sul viso: un saluto di chi non c'è più, ma vive in te.</i>
+            <i>Siete parte della stessa storia.</i>
                 ~ growing = 0
                 ~ chosenCultivable = ()
+                {
+                        - findedGifts hasnt NonTiScordarDiTe:
+                        ~ findedGifts += NonTiScordarDiTe
+                        <b>Hai ottenuto: Non Ti Scordar di Te.</b>
+                    }
               -> main
         + [Non ora.]
               -> main
@@ -418,28 +455,29 @@
 //Outcome: prova una strada nuova
     = step_zero
     ~ statoBrinaDellImpossibile = stepZero
-        <i>Le vetrate della serra sembrano più opache.</i>
+        <i>Qualcosa ha rotto un vetro della serra?</i>
             -> main
     
     = step_uno
-        <i>Al centro di una delle vetrate è comparso quello che sembra un foro.</i>
+        <i>Le crepe si sono fatte ora più fitte, investendo anche il vaso.</i>
           -> main
           
     = step_due
-        <i>Il foro si è trasformato in un reticolato irregolare.</i>
+        <i>Vaso, vetro e mobile: linee nette mostrano il cielo fuori dalla serra.</i>
+        <i>Eppure non sembrano cadere, non sembrano tentennare.</i>
           -> main
     
     = step_tre
-        <i>Isole di vetro galleggiano nell'aria.</i>
-        <i>La vetrata dovrebbe crollare, sparire, svanire ma invece resta dov'è, e se la spingi non si sposta.</i>
-        <i>Eppure api e petali attraversano il reticolato.</i>
-        <i>E quando provi a infilarci un dito, un ricordo imprevisto: sai che questa cosa si chiama <b>Brina dell'Impossibile</b></i>.
-        <i>Sai che puoi raccoglierla, anche se non sai cosa accadrà.</i>
-        
-        + [Infilo la mano tra quegli spazi vuoti.]
+        <i>Isole di vetro, terracotta e legno galleggiano nell'aria.</i>
+        <i>Le spingi ma non si spostano.</i>
+        <i>Api e petali attraversano le ferite, il cielo bluastro le riempie.</i>
+
+        + [Infilo la mano tra gli spazi vuoti.]
             <i>Il vetro si rinsalda, spingendo via la tua mano.</i>
             <i>Le linee del tuo palmo si fanno trasparenti, inconsistenti. Eppure puoi muovere le dita, e non provi alcun dolore.</i>
-            <i>Non tutti i cambiamenti sono così facili, ma ora hai la certezza che puoi provare quella cosa che rimandi da sempre: la paura di trovarti a pezzi è solo quello: paura.</i>
+            <i>La <b>Brina dell'Impossibile</b> si raccoglie nel luogo di un trauma.</i>
+            <i>Riempie le ferite per permetterci di vederle, ascoltarle.</i>
+            <i>Ci permette di vivere, e non dimenticare.</i>
                 ~ growing = 0
                 ~ chosenCultivable = ()
                     {
@@ -448,7 +486,7 @@
                         <b>Hai ottenuto: Brina dell'Impossibile</b>
                     }                
               -> main
-        + [Ho bisogno di pensarci un poco.]
+        + [Ora non me la sento.]
               -> main
  
           
