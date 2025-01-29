@@ -190,7 +190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 22.902893, y: 0}
+  m_AnchoredPosition: {x: 22.902832, y: 0}
   m_SizeDelta: {x: 45.8058, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &53599710
@@ -6186,7 +6186,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -22.252625, y: -0.0045166016}
+  m_AnchoredPosition: {x: -22.252686, y: -0.0045166016}
   m_SizeDelta: {x: 44.505, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1227257108
@@ -6914,7 +6914,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1415701069}
   m_Layer: 5
-  m_Name: === PERMANENT BUTTONS ===
+  m_Name: === UI BUTTONS ===
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7128,7 +7128,7 @@ GameObject:
   - component: {fileID: 1456382447}
   - component: {fileID: 1456382446}
   m_Layer: 5
-  m_Name: Inventario
+  m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7206,7 +7206,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Inventario
+          m_StringArgument: Inventory
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1456382447
@@ -8226,6 +8226,9 @@ MonoBehaviour:
   - {fileID: 937375254}
   - {fileID: 856353203}
   - {fileID: 1197664118}
+  - {fileID: 956713568}
+  - {fileID: 1375716174}
+  - {fileID: 828939237}
   choices:
   - {fileID: 1751463282}
   - {fileID: 1924385861}
