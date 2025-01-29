@@ -82,16 +82,17 @@ VAR growing = 0
 {
 
     - randomCounter == maxRandomCounter:
-    {debugCultivable: <i>randomCounter {randomCounter} ha raggiunto il livello massimo {maxRandomCounter}.}
-    {
-    - backupCultivable != ():
-        ~ chosenCultivable = LIST_RANDOM(backupCultivable)
-        {debugCultivable: <i>Erano presenti ancora coltivabili in backupCultivable e ho estratto {chosenCultivable}.}
-    - else:
-        <i>In questo momento non è possibile coltivare altro.
-            -> main
-    
-    }
+        {debugCultivable: <i>randomCounter {randomCounter} ha raggiunto il livello massimo {maxRandomCounter}.}
+        {
+            - backupCultivable != ():
+                ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+                {debugCultivable: <i>Erano presenti ancora coltivabili in backupCultivable e ho estratto {chosenCultivable}.}
+                -> remove_fungo_proposto
+            - else:
+            <i>In questo momento non è possibile coltivare altro.
+                -> main
+        
+        }
 
     - dice == 1 && pianteCollaborazione != () && pianteIndipendenza != (): 
         {
@@ -624,6 +625,7 @@ QUESTIONS
             -   
                 ~ counter ++
                     -> test
+    
     = eleventh_question
      ~ eleventhQuest = true
     {debugCultivable: <i>Entro in eleventhQuest. {eleventhQuest: eleventhQuest ora = true|eleventhQuest = false}.}
