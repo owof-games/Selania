@@ -100,7 +100,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
             string currentLine = story.Continue().Trim();
             OnOffObject();
             CheckContinueButton();
-            SaveGame();
+            //SaveGame();
 
             if (currentLine == "@interact")
             {

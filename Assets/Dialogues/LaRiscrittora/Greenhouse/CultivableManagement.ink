@@ -323,6 +323,9 @@ VAR growing = 0
                         ->random
                 }
             }
+            - else:
+                ~ randomCounter ++
+                -> random        
         }
         
         - dice == 10 && pianteIndipendenza != () && pianteNovità != (): 
@@ -593,14 +596,15 @@ QUESTIONS
     
         <i>Il cervo volante...
             + [<i>{~Insegue l'odore di frutta matura|Scava nel legno lunghe gallerie|Trascina pensieri dimenticati}.]
-                    ~ tipoColtivazioni += ciclicità 
-                    ~ firstAnswerTracker = pianteCiclicità 
-                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}               
+                    ~ tipoColtivazioni += ciclicità
+                    ~ firstAnswerTracker = pianteCiclicità
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}
+                    
             + [<i>{~Lotta temibile e inquieto|Spacca la crisalide, asciugandosi al vento}.]
                     ~ tipoColtivazioni += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
-                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}         
-            -   
+                    {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}
+            -
                 ~ counter ++
                     -> test                   
    
@@ -688,6 +692,9 @@ QUESTIONS
             -   
                 ~ counter ++
                     -> test
+ 
+ ->->
+ 
  === results
 {debugCultivable: <i>Entro in results.}
 {debugCultivable: <i>Il valore di tipoColtivazioni è {tipoColtivazioni}.}

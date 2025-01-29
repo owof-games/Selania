@@ -104,8 +104,8 @@
     <i>Il salvataggio è stato correttamente caricato.</i>
     -
     -> main
-=== quit ===
-    + {are_two_entities_together(Quit, PG)} [Quit]
-    <i>Progresso salvato. A presto!</i>
-    -
-    -> main
+// === quit ===
+    // + {are_two_entities_together(Quit, PG)} [Quit]
+    // <i>Progresso salvato. A presto!</i>
+    // -
+    // -> main
