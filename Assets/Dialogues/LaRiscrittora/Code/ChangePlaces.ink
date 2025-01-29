@@ -9,9 +9,10 @@
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToNest)} [FromGreenhouseMiddlePathToNest]
             <i>Questa strada risulta bloccata, per ora.</i>
         -> main    
-    //+ {are_two_entities_together(PG, FromBusStopToExitGame)} [FromBusStopToExitGame]
-            // <i>Progresso salvato. A presto!</i>
-        // -> main
+    
+    + {are_two_entities_together(PG, FromBusStopToExitGame)} [FromBusStopToExitGame]
+         <i>Progresso salvato. A presto!</i>
+     -> main
 
 //Strade per arrivare al Bus Stop    
     + {are_two_entities_together(PG, FromForestToBusStop)}  [FromForestToBusStop]

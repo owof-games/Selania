@@ -28,13 +28,13 @@ LIST sceneObjects = Bench, WateringCan , TheFungus, FirstCharacterNotes, SecondC
 
 LIST cultivable = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile
 
-LIST buttons = Save, Load, Quit
+LIST buttons = Save, Load, FromBusStopToExitGame
 
 
 
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
 VAR forestContents = (Mentor, Bench, TheFungus, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibrary)
-VAR busStopContents = (FromBusStopToForest, PG, StartingNote, Quit)
+VAR busStopContents = (FromBusStopToForest, PG, StartingNote, FromBusStopToExitGame)
 VAR greenhouseContents = (FromGreenhouseToGreenhouseMiddlePath, WateringCan, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
 VAR greenhouseMiddlePathContents = (FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest)
 VAR labirinthContents = ()
