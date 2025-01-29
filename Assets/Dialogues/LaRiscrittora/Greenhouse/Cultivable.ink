@@ -1,12 +1,13 @@
 === growing_check
+TODO: ridotto per testing tempo di comparsa, poi sistemare
 {
     - growing < 2:
         ~ growStep = ()
         ~ growStep += stepZero
-    - growing < 4:
+    - growing < 3:
         ~ growStep = ()
         ~ growStep += stepOne    
-    - growing < 6:
+    - growing < 4:
         ~ growStep = ()
         ~ growStep += stepTwo
     - else:
@@ -453,7 +454,7 @@
 //Ricordo, collaborazione, novità
 //Outcome: prova una strada nuova
     = step_zero
-    ~ statoBrinaDellImpossibile = stepZero
+        ~ statoBrinaDellImpossibile = stepZero
         <i>Qualcosa ha rotto un vetro della serra?</i>
             -> main
     
