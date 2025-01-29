@@ -369,9 +369,9 @@ VAR growing = 0
                         ->random
                 }
             }
-                    - else:
-                    ~ randomCounter ++
-                    -> random
+            - else:
+                ~ randomCounter ++
+                -> random
         }
         
         - dice == 12 && pianteIndipendenza != () && pianteCancellazione != (): 
@@ -434,9 +434,9 @@ VAR growing = 0
                         ->random
                 }
             }
-                    - else:
-                    ~ randomCounter ++
-                    -> random
+            - else:
+             ~ randomCounter ++
+                -> random
         }
         
     - else:
@@ -458,11 +458,11 @@ QUESTIONS
          {debugCultivable: <i>Entro in first_question. {firstQuest: firstQuest ora = true|firstQuest = false}}
  
         <i>Le foglie...
-            + <i>[{~ Si sfiorano|Si mescolano|Si proteggono le une con le altre}.]
+            + [<i>{~ Si sfiorano|Si mescolano|Si proteggono le une con le altre}.]
                     ~ tipoColtivazioni += collaborazione
                     ~ firstAnswerTracker = pianteCollaborazione
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}
-            + <i>[{~ Si accumulano sulla soglia|Si dispongono in ordine attorno ai vasi|Resistono al vento}.]
+            + [<i>{~ Si accumulano sulla soglia|Si dispongono in ordine attorno ai vasi|Resistono al vento}.]
                     ~ tipoColtivazioni += indipendenza
                     ~ firstAnswerTracker = pianteIndipendenza
                     {debugCultivable: <i>tipoColtivazioni contiene ora {tipoColtivazioni}.}                    
