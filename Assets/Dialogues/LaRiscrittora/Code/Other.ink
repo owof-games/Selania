@@ -36,7 +36,9 @@
 //Per la nomenclatura: il back di default è backLuogo, il resto vediamo man mano.
 === function tag_background()
 {
-
+    - entity_location(PG) == Bedroom:
+       ~ return "backBedroom"
+       
     - entity_location(PG) == Forest:
         ~ return "backForest"
         
@@ -66,7 +68,9 @@
 //Funzioni di gestione sottofondo audio
 === function tag_ambientSounds()
 {
-
+    - entity_location(PG) == Bedroom:
+       ~ return "bedroomSounds"
+       
     - entity_location(PG) == Forest:
         ~ return "forestSounds"
         
@@ -89,7 +93,7 @@
        ~ return "librarySounds"
 
     - entity_location(PG) == Laboratory:
-       ~ return "teaSounds"       
+       ~ return "laboratorySounds"       
                             
 }
 

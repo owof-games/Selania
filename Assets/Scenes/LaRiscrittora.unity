@@ -3822,7 +3822,7 @@ GameObject:
   - component: {fileID: 828939240}
   - component: {fileID: 828939239}
   m_Layer: 5
-  m_Name: FromBusStopToExitGame
+  m_Name: FromBusStopToBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3900,7 +3900,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FromBusStopToExitGame
+          m_StringArgument: FromBusStopToBedroom
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1863324329}
@@ -8088,6 +8088,7 @@ MonoBehaviour:
   - {fileID: 2144606741}
   - {fileID: 231093295}
   background: {fileID: 1753709286}
+  backBedroom: {fileID: 0}
   backForest: {fileID: 21300000, guid: 0faabba094d971b4a9946617a3b5cd4f, type: 3}
   backBusStop: {fileID: 21300000, guid: b569490a602e2ed4093b74a772e7232d, type: 3}
   backGreenhouse: {fileID: 21300000, guid: 4e7db147f93ea6e4b851dd19572590df, type: 3}
@@ -8097,6 +8098,7 @@ MonoBehaviour:
   backLibrary: {fileID: 839684415986950889, guid: faa11d4193a3eae43a0060dc6eb83985, type: 3}
   backLaboratory: {fileID: -3070273842284801829, guid: ed53d17256160094bb8745f874ba201d, type: 3}
   ambientSounds: {fileID: 1863324330}
+  bedroomSounds: {fileID: 0}
   forestSounds: {fileID: 8300000, guid: 0610a4476c76fbf41a11b679f4b27c4f, type: 3}
   busstopSounds: {fileID: 8300000, guid: 0edcaa325c84c2d47b9f70a7f219ed5d, type: 3}
   greenhouseSounds: {fileID: 8300000, guid: f094a8aef5c73a149a1c89f989d24cdf, type: 3}

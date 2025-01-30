@@ -33,6 +33,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Background setting")]
     [SerializeField] private Image background;
     private const string BACKGROUND_TAG = "background";
+    [Header("Bedroom Backgrounds")]
+    [SerializeField] private Sprite backBedroom;
     [Header("Forest Backgrounds")]
     [SerializeField] private Sprite backForest;
 
@@ -61,6 +63,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Sounds")]
     [SerializeField] private AudioSource ambientSounds;
     private const string AMBIENTSOUNDS_TAG = "ambientSounds";
+    [Header("Bedroom Sounds")]
+    [SerializeField] private AudioClip bedroomSounds;
     [Header("Forest Sounds")]
     [SerializeField] private AudioClip forestSounds;
     [Header("Bus Stop Sounds")]
@@ -266,6 +270,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
             {
                 case BACKGROUND_TAG:
 
+                    //TAG GESTIONE DELLA CAMERA DA LETTO
+                    if (tagValue == "backBedroom")
+                    {
+                        background.sprite = backBedroom;
+                    }
+
                     //TAG GESTIONE DELLA FORESTA
                     if (tagValue == "backForest")
                     {
@@ -318,6 +328,13 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
                 case AMBIENTSOUNDS_TAG:
 
+                    //TAG MUSICA SOTTOFONDO CAMERDA DA LETTO
+                    if (tagValue == "bedroomSounds")
+                    {
+                        ambientSounds.clip = bedroomSounds;
+                        ambientSounds.Play();
+                    }
+                    
                     //TAG MUSICA SOTTOFONDO GIARDINO
                     if (tagValue == "forestSounds")
                     {
@@ -406,6 +423,11 @@ public class DialogueManagerSingleInk : MonoBehaviour
         SaveGame();
         Application.Quit();
 
+    }
+
+    public void OnExitGame()
+    {
+        Application.Quit();
     }
 
     [System.Serializable]
