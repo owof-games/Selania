@@ -10,9 +10,10 @@
             <i>Questa strada risulta bloccata, per ora.</i>
         -> main    
     
-    + {are_two_entities_together(PG, FromBusStopToExitGame)} [FromBusStopToExitGame]
+    + {are_two_entities_together(PG, FromBusStopToBedroom)} [FromBusStopToBedroom]
+        ~ move_entity(PG, Bedroom)
          <i>Progresso salvato. A presto!</i>
-     -> main
+     -> bedroom
 
 //Strade per arrivare al Bus Stop    
     + {are_two_entities_together(PG, FromForestToBusStop)}  [FromForestToBusStop]
@@ -20,7 +21,7 @@
             ~ movementsCounter ++    
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
-        -> bus_stop
+            -> bus_stop
                 
 //Streets to Garden       
     + {are_two_entities_together(PG, FromBusStopToForest)} [FromBusStopToForest]

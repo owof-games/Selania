@@ -93,19 +93,4 @@
                             
 }
 
-=== save ===
-    + {are_two_entities_together(Save, PG)} [Save]
-    <i>Il gioco è stato salvato!</i>
-    -
-    -> main
 
-=== load ===
-    + {are_two_entities_together(Load, PG)} [Load]
-    <i>Il salvataggio è stato correttamente caricato.</i>
-    -
-    -> main
-// === quit ===
-    // + {are_two_entities_together(Quit, PG)} [Quit]
-    // <i>Progresso salvato. A presto!</i>
-    // -
-    // -> main

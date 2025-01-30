@@ -11,7 +11,7 @@ LIST pronouns = him, her, they
 VAR movementsCounter = 0
 
 //Lista di tutti i luoghi del gioco
-LIST places = Forest, BusStop, Greenhouse, Libary, Nest, Labyrinth, Laboratory, Safekeeping, GreenhouseMiddlePath
+LIST places = Forest, BusStop, Greenhouse, Libary, Nest, Labyrinth, Laboratory, Safekeeping, GreenhouseMiddlePath, Bedroom
 
 //Settaggio luoghi attivi a seconda del tier
 VAR firstTierPlaces =(Forest, BusStop, GreenhouseMiddlePath)
@@ -28,20 +28,21 @@ LIST sceneObjects = Bench, WateringCan , TheFungus, FirstCharacterNotes, SecondC
 
 LIST cultivable = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile
 
-LIST buttons = Save, Load, FromBusStopToExitGame
-
+//Quit esce e salva, exit esce e basta (è l'uscita quando siamo in camera da letto. Menu Load non è nei piani perché sennò mi devo ricordare dove cavolo sono.
+LIST buttons = MenuSave, MenuQuit, RoomExit, RoomLoad, FromBusStopToBedroom
 
 
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
 VAR forestContents = (Mentor, Bench, TheFungus, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibrary)
-VAR busStopContents = (FromBusStopToForest, PG, StartingNote, FromBusStopToExitGame)
+VAR busStopContents = (FromBusStopToForest, PG, StartingNote, FromBusStopToBedroom)
 VAR greenhouseContents = (FromGreenhouseToGreenhouseMiddlePath, WateringCan, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
 VAR greenhouseMiddlePathContents = (FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest)
 VAR labirinthContents = ()
 VAR nestContents = ()
 VAR libaryContents = ()
 VAR laboratoryContents = ()
-VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FifthCharacter, SixthCharacter, SeventhCharacter,  FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, SixthCharacterNotes, SeventhCharacterNotes, Save, Load)
+VAR bedroomContents = (RoomExit, RoomLoad)
+VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FifthCharacter, SixthCharacter, SeventhCharacter,  FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, SixthCharacterNotes, SeventhCharacterNotes, MenuSave, MenuQuit)
 
     
 //Variabili per tracciare i trigger warning. True = non è TW, posso mostrare quelle storie

@@ -19,7 +19,9 @@
     - greenhouseMiddlePathContents has entity:
         ~ return GreenhouseMiddlePath         
     - safekeepingContents has entity:
-        ~ return Safekeeping                  
+        ~ return Safekeeping
+    - bedroomContents has entity:
+        ~ return Bedroom
     - else:
         DEBUG: error, cannot find {entity} anywhere!
         {safekeepingContents}
@@ -53,8 +55,9 @@
     - GreenhouseMiddlePath:
         ~ greenhouseMiddlePathContents -= entity        
     - Safekeeping:
-        ~ safekeepingContents -= entity    
-        
+        ~ safekeepingContents -= entity
+    - Bedroom:
+        ~ bedroomContents -= entity
     - else:
         DEBUG: error, cannot understand location {CurrentLocation} while trying to move {entity} out.
 }
@@ -77,7 +80,9 @@
     - GreenhouseMiddlePath:
         ~ greenhouseMiddlePathContents += entity         
     - Safekeeping:
-        ~ safekeepingContents += entity            
+        ~ safekeepingContents += entity
+    - Bedroom:
+        ~ bedroomContents += entity    
     - else:
         DEBUG: error, cannot understand location {destination} while trying to move {entity} in.
 }
