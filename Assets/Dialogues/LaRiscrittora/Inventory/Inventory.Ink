@@ -3,7 +3,7 @@
 VAR currentReceiver = ()
 
 === contenuti_inventario ===
-+ {are_two_entities_together(Inventory, PG)}[Inventory]
++ {bedroomContents hasnt PG}[Inventory]
     {findedGifts != (): -> inventarietto|->vuoto}
 
     =inventarietto

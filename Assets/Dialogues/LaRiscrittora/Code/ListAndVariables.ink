@@ -35,18 +35,18 @@ LIST buttons = MenuSave, MenuQuit, RoomExit, RoomLoad, Inventory, FromBusStopToB
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
 VAR bedroomContents = (RoomExit, RoomLoad, PG)
 
-VAR busStopContents = (FromBusStopToForest, StartingNote, FromBusStopToBedroom, Inventory)
+VAR busStopContents = (FromBusStopToForest, StartingNote, FromBusStopToBedroom)
 
-VAR forestContents = (Mentor, Bench, TheFungus, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibrary, Inventory)
+VAR forestContents = (Mentor, Bench, TheFungus, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibrary)
 
-VAR greenhouseMiddlePathContents = (FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, Inventory)
+VAR greenhouseMiddlePathContents = (FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest)
 
-VAR greenhouseContents = (FromGreenhouseToGreenhouseMiddlePath, WateringCan, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, Inventory)
+VAR greenhouseContents = (FromGreenhouseToGreenhouseMiddlePath, WateringCan, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
 
-VAR labirinthContents = (Inventory)
-VAR nestContents = (Inventory)
-VAR libaryContents = (Inventory)
-VAR laboratoryContents = (Inventory)
+VAR labirinthContents = ()
+VAR nestContents = ()
+VAR libaryContents = ()
+VAR laboratoryContents = ()
 
 VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FifthCharacter, SixthCharacter, SeventhCharacter,  FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, SixthCharacterNotes, SeventhCharacterNotes, MenuSave, MenuQuit)
 

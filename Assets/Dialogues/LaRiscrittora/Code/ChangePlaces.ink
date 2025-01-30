@@ -24,8 +24,7 @@
     + {are_two_entities_together(PG, RoomExit)} [RoomExit]
         <i>A presto!</i>
         -> END
-    -    
-        
+      
 
 //Strade per arrivare al Bus Stop    
     + {are_two_entities_together(PG, FromForestToBusStop)}  [FromForestToBusStop]
