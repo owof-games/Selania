@@ -3,7 +3,7 @@
 VAR currentReceiver = ()
 
 === contenuti_inventario ===
-+ {bedroomContents hasnt PG}[Inventory]
++ [Inventory]
     {findedGifts != (): -> inventarietto|->vuoto}
 
     =inventarietto
