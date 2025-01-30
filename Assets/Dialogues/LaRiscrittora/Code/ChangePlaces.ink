@@ -12,17 +12,14 @@
     
 //Passaggi funzionali
     + {are_two_entities_together(PG, RoomLoad)} [RoomLoad]
-        <i>Il salvataggio è stato correttamente caricato.</i>
         ~ move_entity(PG, BusStop)
         -> bus_stop
     
     + {are_two_entities_together(PG, FromBusStopToBedroom)} [FromBusStopToBedroom]
         ~ move_entity(PG, Bedroom)
-         <i>Progresso salvato. A presto!</i>
         -> bedroom
         
     + {are_two_entities_together(PG, RoomExit)} [RoomExit]
-        <i>A presto!</i>
         -> END
       
 

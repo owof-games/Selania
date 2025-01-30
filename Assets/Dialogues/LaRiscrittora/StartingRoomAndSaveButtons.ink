@@ -1,7 +1,8 @@
 === bedroom ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-
+<i>A presto!</i>
+     + [chiudi]
 -> main
 
 
