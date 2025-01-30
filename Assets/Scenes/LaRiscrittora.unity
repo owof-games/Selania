@@ -154,8 +154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.261}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -284, y: -325}
-  m_SizeDelta: {x: 573.9212, y: 436.9997}
+  m_AnchoredPosition: {x: -550, y: -354}
+  m_SizeDelta: {x: 331.2152, y: 657.9549}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &9773733
 MonoBehaviour:
@@ -626,8 +626,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.261}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 476, y: -125}
-  m_SizeDelta: {x: 321.4878, y: 551.3915}
+  m_AnchoredPosition: {x: 363, y: -420}
+  m_SizeDelta: {x: 810.2226, y: 606.7262}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &75481280
 MonoBehaviour:
@@ -4120,8 +4120,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.261}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 856, y: -415}
-  m_SizeDelta: {x: 192.2668, y: 379.3675}
+  m_AnchoredPosition: {x: 881, y: -412}
+  m_SizeDelta: {x: 170.8044, y: 370.7023}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &828939239
 MonoBehaviour:
@@ -4211,7 +4211,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 392fee52dbcf1ce42a1130258b96dfcc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 89384acff49a4e6448cb9d0f5523f614, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -8000,7 +8000,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b940254c540b38146b1c0f5994dc739f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b569490a602e2ed4093b74a772e7232d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8113,7 +8113,7 @@ MonoBehaviour:
   - {fileID: 2144606741}
   - {fileID: 231093295}
   background: {fileID: 1753709286}
-  backBedroom: {fileID: 21300000, guid: b940254c540b38146b1c0f5994dc739f, type: 3}
+  backBedroom: {fileID: 21300000, guid: e90da0db04ab2f84ab424edaafd7120d, type: 3}
   backForest: {fileID: 21300000, guid: 0faabba094d971b4a9946617a3b5cd4f, type: 3}
   backBusStop: {fileID: 21300000, guid: b569490a602e2ed4093b74a772e7232d, type: 3}
   backGreenhouse: {fileID: 21300000, guid: 4e7db147f93ea6e4b851dd19572590df, type: 3}
