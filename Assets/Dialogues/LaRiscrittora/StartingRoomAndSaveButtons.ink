@@ -1,14 +1,8 @@
 === bedroom ===
-    + {are_two_entities_together(RoomLoad, PG)} [RoomLoad]
-    <i>Il salvataggio è stato correttamente caricato.</i>
-    ~ move_entity(PG, BusStop)
-    -> bus_stop
-    
-    + {are_two_entities_together(RoomExit, PG)} [RoomExit]
-    <i>A presto!</i>
-    -> END
+#background: {tag_background()}
+#ambientSounds: {tag_ambientSounds()}
 
--> END
+-> main
 
 
 //SONO ELEMENTI CHE FINIRANNO NEL MENU QUANDO VERRA' CREATO

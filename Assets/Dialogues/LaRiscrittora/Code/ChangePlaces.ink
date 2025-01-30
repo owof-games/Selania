@@ -10,10 +10,22 @@
             <i>Questa strada risulta bloccata, per ora.</i>
         -> main    
     
+//Passaggi funzionali
+    + {are_two_entities_together(PG, RoomLoad)} [RoomLoad]
+        <i>Il salvataggio è stato correttamente caricato.</i>
+        ~ move_entity(PG, BusStop)
+        -> bus_stop
+    
     + {are_two_entities_together(PG, FromBusStopToBedroom)} [FromBusStopToBedroom]
         ~ move_entity(PG, Bedroom)
          <i>Progresso salvato. A presto!</i>
-     -> bedroom
+        -> bedroom
+        
+    + {are_two_entities_together(PG, RoomExit)} [RoomExit]
+        <i>A presto!</i>
+        -> END
+    -    
+        
 
 //Strade per arrivare al Bus Stop    
     + {are_two_entities_together(PG, FromForestToBusStop)}  [FromForestToBusStop]

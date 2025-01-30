@@ -155,7 +155,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 {
                     bool found = false;
 
-                    if (charactersInThePlace.ContainsItemNamed(entity.name) || entity.name == "Inventory")
+                    if (charactersInThePlace.ContainsItemNamed(entity.name)) // || entity.name == "Inventory"
                     {
                         found = true;
                     }
