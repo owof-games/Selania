@@ -8,7 +8,7 @@
         
     - not questions:
         {
-            - dono_storia_uno.esito_inchiostro:
+            - first_story_gift.ink_outcome:
                 -> questions
             - else: Mentore: Fai la tua offerta e poi torna da me.
                 -> main

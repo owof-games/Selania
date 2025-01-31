@@ -109,7 +109,7 @@
     
     === questions
         {firstCharacterInkLevel == Empty or firstCharacterInkLevel == Low: Mentor: Non ti demoralizzare, capita a chiunque di non dare il massimo al primo colpo.}
-        {firstCharacterInkLevel == Normal or firstCharacterInkLevel == Medium: Mentor: Bel colpo! Ti sei {pronouns has him: guadagnato|{pronouns has her: guadagnata|guadagnatə}} subito una bella dose di inchiostro!}
+        {firstCharacterInkLevel == Normal: Mentor: Bel colpo! Ti sei {pronouns has him: guadagnato|{pronouns has her: guadagnata|guadagnatə}} subito una bella dose di inchiostro!}
         {firstCharacterInkLevel == High: Mentor: Beh, hai dato allo spettro il suo dono preferito! Sei già {pronouns has him: pronto|{pronouns has her: pronta|prontə}} per questo incarico!}
         Mentor: Ora arriva la parte più complessa.
         Mentor: Puoi immaginare di dividere questa situazione in due fasi.

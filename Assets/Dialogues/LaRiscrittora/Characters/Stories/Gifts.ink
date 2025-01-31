@@ -24,6 +24,7 @@ VAR seventhCharacterInkLevel = Low
 //Formula per tradurre la quantità di inchiostro in valori espliciti
 === inkActions
 VAR Ink = ()
+TODO: questa formula è da trasformare come quella qui sotto
 {
     - firstStory == Active:
         ~ Ink = firstCharacterInkLevel
@@ -43,16 +44,38 @@ VAR Ink = ()
 
 {Ink:
     - Empty:
-        <i>Non hai inchiostro per lo spettro, dovrai trovare la tua strada da {pronouns has him: solo|{pronouns has her: sola|solə}}.</i>
+        <i>Non hai inchiostro a disposizione.</i>
     - Low:
-        <i>Hai una azione forte a disposizione</i>
+        <i>Hai una goccia di inchiostro a disposizione.</i>
     - Normal:
-        <i>Hai due azioni forti a disposizione</i>
+        <i>Hai due goccie di inchiostro a disposizione.</i>
     - Medium:
-        <i>Hai tre azioni forti a disposizione</i>
+        <i>Hai tre goccie di inchiostro a disposizione.</i>        
     - High:
-        <i>Hai tre azioni forti a disposizione</i>
+        <i>Hai tre goccie di inchiostro a disposizione, e la personaggia ti darà una informazione importante.</i>
     - else:
-        <i>Errore: non riesco a capire quante azioni hai a disposizione</i>
+        <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>
 }
 ->->
+
+=== function inkTranslator(InkLevel)
+{
+    - InkLevel == firstCharacterInkLevel:
+        ~ Ink = firstCharacterInkLevel
+    - InkLevel == secondCharacterInkLevel:
+        ~ Ink = secondCharacterInkLevel
+}
+{Ink:
+    - Empty:
+        vuoto
+    - Low:
+        hai una goccia di inchiostro
+    - Normal:
+        hai due goccie di inchiostro
+    - Medium:
+        hai tre goccie di inchiostro a disposizione     
+    - High:
+        hai tre goccie di inchiostro a disposizione, e la personaggia ti darà una informazione importante
+    - else:
+        <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>
+}

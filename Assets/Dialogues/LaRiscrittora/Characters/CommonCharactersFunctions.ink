@@ -22,11 +22,11 @@ VAR randomizable_characters = (Mentor)
                      ~ firstTier = true
     }
     {
-        - firstStory == Active && dialogo_personaggia_uno:
+        - firstStory == Active && talk_with_first_character:
             ~ randomizable_characters += FirstCharacter
         - secondStory == Active && dialogo_personaggia_due:
             ~ randomizable_characters += SecondCharacter
-            //Aggiungere poi gli altri
+            //Aggiungere poi gli altri. La logica è: iniziano a spostarsi dopo che ci abbiamo parlato.
     }
     
     

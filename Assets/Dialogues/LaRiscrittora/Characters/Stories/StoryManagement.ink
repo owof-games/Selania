@@ -1,16 +1,25 @@
 //Variabili legate alle personagge
 //Con nuova versione: NotStarted non riguarda più la storia principale, ma l'accesso alla personaggia
     LIST storyStates = NotStarted, Active, Ended
-
+    VAR minStoryQuesTCount = 4
+//COME PROMEMORIA. LISTA DI TIPI DI TONO CHE POSSIAMO TENERE IN UNA CONVERSAZIONE: ROSSO (RABBIA, PASSIONE, AZIONE, OPPOSIZIONE). VIOLA (SPIRITUALITA', VISIONE DEL GRANDE SCHEMA DELLE COSE, SGUARDO POETICO, TESA VERSO UNA MISSIONE). GIALLO (GIOCOSITA', RISATA, DIVERTIMENTO, FANCIULLEZZA). VERDE (CUORE, AFFETTI, CURA DELLE PERSONE CARE, RIFLESSIONE EMOTIVA). BLU (RAZIONALITA', CALCOLO, VISIONE PRATICA, DISCIPLINA).
 
 //Gestione prima personaggia.
     LIST firstCharacterPossibleStates =  LIndeciso, IlGiocoso, StatoDue, StatoTre, StatoQuattro, StatoCinque, StatoSei
     VAR firstCharacterState = LIndeciso
     
     VAR firstStory = NotStarted
+    VAR firstStoryQuestCount = 0
     VAR firstCharacterSpecialEvent = false
     VAR firstCharEndingDialogue = 0
-
+    //STATI UP: Viola e Giallo.
+    //STATI DOWN: Blu.
+    VAR firstPurple = 0
+    VAR firstYellow = 0
+    VAR firstBlue = 0
+    VAR firstGreen = 0
+    VAR firstRed = 0
+    
 
 //Gestione seconda personaggia.
     LIST secondCharacterPossibleStates = LaVegliante, NuovoStatoUnoDue, NuovoStatoDueDue, NuovoStatoTreDue
@@ -153,8 +162,6 @@
 {
     - status == 1:
         {
-        - list has Medium:
-            ~ return true
         - list has High:
             ~ return true
         - else:
@@ -163,8 +170,6 @@
     - status == 2:
         {
         - list has Normal:
-            ~ return true
-        - list has Medium:
             ~ return true
         - list has High:
             ~ return true
@@ -252,5 +257,19 @@
         ~ move_entity(SeventhCharacterNotes, BusStop)        
                                 
 }
+
+->->
+
+//La logica è: se entrambi i valori che apprezza personaggia uno sono maggiori di quelli che detesta, a quel punto prendo due punti affinità. Se uno dei due soltanto è maggiore, un punto affinità. Altrimenti non prendo nulla.
+=== firstAffinityCalc ===
+    {
+        - firstPurple && firstYellow > firstBlue:
+            ~ firstCharacterInkLevel ++
+            ~ firstCharacterInkLevel ++
+                ->->
+        - firstPurple or firstYellow > firstBlue:
+            ~ firstCharacterInkLevel ++
+                ->->
+    }
 
 ->->

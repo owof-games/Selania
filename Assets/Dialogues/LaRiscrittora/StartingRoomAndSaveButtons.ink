@@ -6,7 +6,7 @@
 -> main
 
 
-//SONO ELEMENTI CHE FINIRANNO NEL MENU QUANDO VERRA' CREATO
+//ELEMENTI CHE FINIRANNO NEL MENU QUANDO VERRA' CREATO
 
 // === save ===
     // + {are_two_entities_together(MenuSave, PG)} [MenuSave]

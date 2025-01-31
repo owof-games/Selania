@@ -8,7 +8,7 @@
     - (top)
         + [Mi trovo a mio agio col maschile.]
             ~ pronouns += him
-        + [Preferisco i pronomi her.]
+        + [Preferisco i pronomi femminili.]
             ~ pronouns += her
         + [Vai di neutro, ama.]
             ~ pronouns += they
