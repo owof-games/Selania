@@ -100,28 +100,34 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
         if (story.canContinue)
         {
-        
+
             string currentLine = story.Continue().Trim();
-            OnOffObject();
-            CheckContinueButton();
-            //SaveGame();
+            UpdateUI(currentLine);
 
-            if (currentLine == "@interact")
-            {
-                dialoguePanel.SetActive(false);
-                
-            }
-
-            else
-            {
-                dialoguePanel.SetActive(true);
-                dialogueText.text = currentLine;
-                DisplayChoices();
-            }
-
-            HandleTags(story.currentTags);
+            SaveGame();
 
         }
+    }
+
+    private void UpdateUI(string currentLine)
+    {
+        OnOffObject();
+        CheckContinueButton();
+
+        if (currentLine == "@interact")
+        {
+            dialoguePanel.SetActive(false);
+
+        }
+
+        else
+        {
+            dialoguePanel.SetActive(true);
+            dialogueText.text = currentLine;
+            DisplayChoices();
+        }
+
+        HandleTags(story.currentTags);
     }
 
     public void CheckContinueButton()
@@ -438,6 +444,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
     }
     public void SaveGame()
     {
+        //Se PG è nella stanza, mando return e non faccio nulla, altrimenti salvo
+        if (IsPGInBedroom())
+        {
+            return;
+        }
+
         SaveData saveData = new SaveData
         {
             inkState = story.state.ToJson()
@@ -459,11 +471,23 @@ public class DialogueManagerSingleInk : MonoBehaviour
             // Ripristina lo stato di Ink
             story.state.LoadJson(saveData.inkState);
             Debug.Log("Gioco caricato!");
+            ContinueStory();
+            UpdateUI(story.currentText.Trim());
         }
         else
         {
             Debug.LogWarning("Nessun salvataggio trovato!");
+            OnClick("RoomLoad");
+
         }
+    }
+
+
+    public bool IsPGInBedroom()
+    {
+       var bedroomContents = (InkList)story.variablesState["bedroomContents"];
+       return bedroomContents.ContainsItemNamed("PG");
+       
     }
 
 }
