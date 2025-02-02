@@ -103,29 +103,27 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
             string currentLine = story.Continue().Trim();
             UpdateUI(currentLine);
-
-            SaveGame();
-
         }
     }
 
     private void UpdateUI(string currentLine)
     {
-        OnOffObject();
-        CheckContinueButton();
-
+        bool buttonsEnabled;
         if (currentLine == "@interact")
         {
             dialoguePanel.SetActive(false);
-
+            buttonsEnabled = true;
         }
-
         else
         {
             dialoguePanel.SetActive(true);
             dialogueText.text = currentLine;
             DisplayChoices();
+            buttonsEnabled = false;
         }
+
+        OnOffObject(buttonsEnabled);
+        CheckContinueButton();
 
         HandleTags(story.currentTags);
     }
@@ -144,7 +142,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     }
 
 
-    public void OnOffObject()
+    public void OnOffObject(bool buttonsEnabled)
     {
    
 
@@ -169,6 +167,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
         
                     entity.SetActive(found);
+
+                    entity.GetComponent<Button>().interactable = buttonsEnabled;
 
                 }
                 break;
@@ -330,6 +330,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
                         background.sprite = backLaboratory;
                     }
 
+                    // Salviamo solo quando entriamo in una nuova "scena"
+                    SaveGame();
+
                     break;
 
                 case AMBIENTSOUNDS_TAG:
@@ -426,7 +429,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
     } 
     public void OnQuitButton()
     {
-        SaveGame();
         Application.Quit();
 
     }
