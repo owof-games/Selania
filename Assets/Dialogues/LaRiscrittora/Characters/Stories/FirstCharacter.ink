@@ -16,12 +16,15 @@
 
 === talk_with_first_character
 ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
-TODO: inserire opzione per cui dopo tot chiacchiere ti dice di tornare tra un po'
+        {
+        - not knowing_first_character.one:
+        -> knowing_first_character.one
+        }
+        
 {charNameUno}: {~ Ero sicuro di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicuro di star capendo tutto di questo luogo.}
-
     + [Ti va di parlare?]
         -> knowing_first_character
-    + [Che ne pensi di...]
+    + [Hai visto qualcosa di interessante?]
         -> first_character_opinions
     //Se non ho ancora fatto il dono e NON ho parlato col mentore e ho parlato abbastanza con lei
     + {firstStoryQuestCount > minStoryQuesTCount && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
@@ -50,12 +53,13 @@ TODO: inserire opzione per cui dopo tot chiacchiere ti dice di tornare tra un po
     + {first_story_gift.ink_outcome && main_story_first_character} [Riprendiamo quella storia?]
         -> main_story_first_character
     
-    + Lasci il dialogo
+    + [Lasci il dialogo.]
         -> main
     -
     -> talk_with_first_character
     
 === knowing_first_character
+~ temp charNameUno = uppercaseTranslator(firstCharacterState)
 //Qui man mano faccio avanzare i temi toccati dalla personaggia
     {
         - not one:
@@ -77,8 +81,54 @@ TODO: inserire opzione per cui dopo tot chiacchiere ti dice di tornare tra un po
     }
 
     = one
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     ~ firstStoryQuestCount ++
-    Discorso uno
+    
+    ???: Non è che hai visto passare di qui una persona?
+    ???: Altə all’incirca come una balla di fieno e che si muove come un violino, probabilmente presə a stordire di domanda quel tizio, il mentore.
+    ???: Oh, non posso essere arrivata qui da sola, vero? Ma che poi, cos’è qui?
+        + [Opzione che aumenta il blu]
+            ~ firstBlue ++
+            Reazione leggermente infastidita
+        + [Opzione che aumenta il giallo]
+            ~ firstYellow ++
+            Reazione positiva
+        + [Opzione che aumenta il rosso]
+            ~ firstRed ++
+            Reazione neutra
+        + [Opzione che aumenta il verde]
+            ~ firstGreen ++
+            Reazione neutra
+        + [Opzione che aumenta il viola]
+            ~ firstPurple ++
+            Reazione positiva
+        -
+    ???: Talco, dimmi che sei qui anche tu, ti prego, non so capire il mondo senza di te.
+    ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameUno}.
+    {charNameUno}: No, io sono {charNameUno}.
+    {charNameUno}: Mmm. Cosa buffa, non è questo il mio nome.
+    {charNameUno}: <i>{charNameUno}</i>.
+    {charNameUno}: Forse se provo a dirlo al contrario? Nome contrario.
+    {charNameUno}: Uh. Uh.
+    {charNameUno}: Prova tu. Come ti chiami?
+	    + [Mi chiamo {name}.]
+	    + [No, il mio nome ora è...]
+	        -> name_choice ->
+	    -
+    {charNameUno}: Credi che il tuo nome sia importante?
+	    + [Opzione che aumenta il blu]
+            ~ firstBlue ++
+        + [Opzione che aumenta il giallo]
+            ~ firstYellow ++
+        + [Opzione che aumenta il rosso]
+            ~ firstRed ++
+        + [Opzione che aumenta il verde]
+            ~ firstGreen ++
+        + [Opzione che aumenta il viola]
+            ~ firstPurple ++
+        -
+   {charNameUno}: Comunque sì, ti si addice benissimo, hai proprio una faccia da {name}.
+   {charNameUno}: Forse la mia faccia è cambiata? Ti sembro una {charNameUno}?
         + [Opzione che aumenta il blu]
             ~ firstBlue ++
         + [Opzione che aumenta il giallo]
@@ -90,14 +140,30 @@ TODO: inserire opzione per cui dopo tot chiacchiere ti dice di tornare tra un po
         + [Opzione che aumenta il viola]
             ~ firstPurple ++
         -
+   {charNameUno}: Come mi dovrei chiamare secondo te?
+	+ Scelta non possibile (variazione se abbiamo o meno parlato col mentore)
+	-
+    {charNameUno}: Interessante.
+    {charNameUno}: Forse quel mentore può aiutarci a capire qualcosa?
+    {charNameUno}: O forse va bene così.
+    {charNameUno}: Forse mi serve questa confusione. Forse sto suonando da troppo tempo la solita canzone, ma non è più la mia.
+    {charNameUno}: Forse devo trovare nuove note, o un nuovo strumento.
+    {charNameUno}: O forse questo luogo ha bisogno della mia musica?
+    {charNameUno}: L’unica cosa certa è che ho bisogno di Talco.
+    {charNameUno}: Tu l’hai visto?
+    {charNameUno}: No, non dirmelo.
+    {charNameUno}: So che non può essere qui, ma non voglio ancora accettare questa solitudine.
+    {charNameUno}: Mi prendo un po’ di tempo per me {name}, a dopo.
         
         -> talk_with_first_character
         
     = two
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     ~ firstStoryQuestCount ++
     Discorso due
         + [Opzione che aumenta il blu]
             ~ firstBlue ++
+            Posso mettere delle variazioni per cui a seconda di quale sia lo stato di un colore o l'altro (tanto è tutto lineare questo blocco) posso avere reazioni diverse.
         + [Opzione che aumenta il giallo]
             ~ firstYellow ++
         + [Opzione che aumenta il rosso]
@@ -110,6 +176,7 @@ TODO: inserire opzione per cui dopo tot chiacchiere ti dice di tornare tra un po
         -> talk_with_first_character
         
     = three
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     ~ firstStoryQuestCount ++
     Discorso tre
         + [Opzione che aumenta il blu]
@@ -126,6 +193,7 @@ TODO: inserire opzione per cui dopo tot chiacchiere ti dice di tornare tra un po
         -> talk_with_first_character
         
     = four
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     ~ firstStoryQuestCount ++
         + [Opzione che aumenta il blu]
             ~ firstBlue ++
@@ -143,6 +211,7 @@ TODO: inserire opzione per cui dopo tot chiacchiere ti dice di tornare tra un po
         -> talk_with_first_character
         
     = five
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     ~ firstStoryQuestCount ++
         + [Opzione che aumenta il blu]
             ~ firstBlue ++
@@ -159,6 +228,7 @@ TODO: inserire opzione per cui dopo tot chiacchiere ti dice di tornare tra un po
         -> talk_with_first_character
     
     = six
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     ~ firstStoryQuestCount ++
         + [Opzione che aumenta il blu]
             ~ firstBlue ++
@@ -175,6 +245,7 @@ TODO: inserire opzione per cui dopo tot chiacchiere ti dice di tornare tra un po
         -> talk_with_first_character
     
     = seven
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     ~ firstStoryQuestCount ++
         + [Opzione che aumenta il blu]
             ~ firstBlue ++
@@ -191,11 +262,13 @@ TODO: inserire opzione per cui dopo tot chiacchiere ti dice di tornare tra un po
         -> talk_with_first_character
 
     = other
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     
     
         -> talk_with_first_character
         
 === first_character_opinions
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     ~ firstStoryQuestCount ++
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
     {Credo che il mentore...|La serra...|La fermata...|Ho visto delle api...}

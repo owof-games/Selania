@@ -5,7 +5,7 @@ VAR debug = false
 VAR debugCultivable = false
 
 //Nome giocatrice e pronouns
-VAR name = "Senza name"
+VAR name = "Senza nome"
 LIST pronouns = him, her, they
 //Traccio gli spostamenti della personaggia per gestire la comparsa delle personagge
 VAR movementsCounter = 0
