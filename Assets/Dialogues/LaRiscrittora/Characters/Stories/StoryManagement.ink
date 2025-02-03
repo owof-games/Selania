@@ -7,6 +7,8 @@
 //Gestione prima personaggia.
     LIST firstCharacterPossibleStates =  LIndeciso, IlGiocoso, StatoDue, StatoTre, StatoQuattro, StatoCinque, StatoSei
     VAR firstCharacterState = LIndeciso
+    VAR firstPauseTalking = false
+    
     
     VAR firstStory = NotStarted
     VAR firstStoryQuestCount = 0

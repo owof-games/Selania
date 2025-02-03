@@ -19,6 +19,10 @@
         {
         - not knowing_first_character.one:
         -> knowing_first_character.one
+        TODO: settare questa cosa
+        - firstPauseTalking == true:
+            {charNameUno}: Torna più tardi, {name}.
+            -> main
         }
         
 {charNameUno}: {~ Ero sicuro di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicuro di star capendo tutto di questo luogo.}
@@ -154,8 +158,8 @@
     {charNameUno}: No, non dirmelo.
     {charNameUno}: So che non può essere qui, ma non voglio ancora accettare questa solitudine.
     {charNameUno}: Mi prendo un po’ di tempo per me {name}, a dopo.
-        
-        -> talk_with_first_character
+         ~ firstPauseTalking = true
+        -> main
         
     = two
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
