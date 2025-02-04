@@ -1,6 +1,8 @@
 === mentor_storylets ===
+TODO: adatta questa parte alla nuova struttura, e snellisci
 {
 //Introduzioni
+
     - welcome == 0:
         -> welcome
     - gifts_and_ink == 0:
@@ -40,7 +42,7 @@
  
 //Da creare: storylets per quando anime (non animelle) e Mentor sono assieme
 
-    - else: ->->
+    - else: -> main
 
 }
 
