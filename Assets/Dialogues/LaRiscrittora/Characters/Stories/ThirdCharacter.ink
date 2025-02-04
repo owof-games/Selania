@@ -49,7 +49,8 @@
     
         = esito_inchiostro    
             Dopo il tuo dono, la quantità di inchiostro a disposizione è {thirdCharacterInkLevel}.
-                 -> inkActions -> dialogo_personaggia_tre.top
+                 ~ inkActions(thirdCharacterInkLevel)
+                 -> dialogo_personaggia_tre.top
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
     === storia_tre_chech_trigger

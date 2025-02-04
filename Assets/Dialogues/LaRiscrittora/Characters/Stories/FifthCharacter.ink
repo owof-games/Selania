@@ -36,7 +36,7 @@
     
     = capitolo_uno    
         Dopo il tuo dono, la quantità di inchiostro a disposizione è {fifthCharacterInkLevel}.
-             -> inkActions ->
+             ~ inkActions(fifthCharacterInkLevel)
         //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
              + Ho risolto la quinta storia dando al quinto spettro un nuovo stato
                 ~ fifthStory = Ended

@@ -8,6 +8,9 @@
 LIST gifts = blanket, emptyvase 
 VAR findedGifts = ()
 
+//Spazio dove caricare temporaneamente quale livello di inchiostro stiamo controllando
+VAR Ink = ()
+
 //Gestione dell'inchiostro per i vari spettri. Nomi e valori sono temporanei. L'idea per ora è: se sono su Low, posso fare solo una scelta forte. Con Normal, due e via di seguito. Ogni scelta mi scala indietro nella lista di stati.
 LIST inkLevel = Empty, Low, Normal, Medium, High
 VAR firstCharacterInkLevel = Low
@@ -22,24 +25,12 @@ VAR seventhCharacterInkLevel = Low
 
 
 //Formula per tradurre la quantità di inchiostro in valori espliciti
-=== inkActions
-VAR Ink = ()
-TODO: questa formula è da trasformare come quella qui sotto
+=== function inkActions(InkLevel)
 {
-    - firstStory == Active:
+    - InkLevel == firstCharacterInkLevel:
         ~ Ink = firstCharacterInkLevel
-    - secondStory == Active:
+    - InkLevel == secondCharacterInkLevel:
         ~ Ink = secondCharacterInkLevel
-    - thirdStory == Active:
-        ~ Ink = thirdCharacterInkLevel
-    - fourthStory == Active:
-        ~ Ink = fourthCharacterInkLevel
-    - fifthStory == Active:
-        ~ Ink = fifthCharacterInkLevel
-    - sixthStory== Active:
-        ~ Ink = sixthCharacterInkLevel 
-    - seventhStory == Active:
-        ~ Ink = seventhCharacterInkLevel     
 }
 
 {Ink:

@@ -388,7 +388,8 @@
     
         = ink_outcome    
             Dopo il tuo dono {inkTranslator(firstCharacterInkLevel)}.
-                 -> inkActions -> talk_with_first_character
+                 ~ inkActions(firstCharacterInkLevel)
+                 -> talk_with_first_character
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
     === first_story_chech_trigger
@@ -421,7 +422,8 @@
         {firstPurple &&  firstYellow < firstBlue: {charNameUno}: Commento meh.}
         {not (firstPurple && firstYellow > firstBlue) && not (firstPurple or firstYellow > firstBlue) && not (firstPurple &&  firstYellow < firstBlue): {charNameUno}: Commento base.}
     Abbiamo lo stato dell'inchiostro complessivo
-        -> inkActions -> statement
+        ~ inkActions(firstCharacterInkLevel)
+        -> statement
 
     = statement
         Qui dichiaro sostanzialmente su cosa voglio concentrarmi.
