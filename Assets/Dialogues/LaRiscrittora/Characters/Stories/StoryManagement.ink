@@ -7,13 +7,19 @@
 //Gestione prima personaggia.
     LIST firstCharacterPossibleStates =  LIndeciso, IlGiocoso, StatoDue, StatoTre, StatoQuattro, StatoCinque, StatoSei
     VAR firstCharacterState = LIndeciso
-    VAR firstPauseTalking = false
+    
     
     
     VAR firstStory = NotStarted
     VAR firstStoryQuestCount = 0
     VAR firstCharacterSpecialEvent = false
+    
+    //Variabile per il countdown per la sua uscita di scena
     VAR firstCharEndingDialogue = 0
+    //Variabili per mettere in pausa la conversazione
+    VAR firstPauseTalking = 0
+    VAR firstCharPauseDurantion = 3
+    
     //STATI UP: Viola e Giallo.
     //STATI DOWN: Blu.
     VAR firstPurple = 0

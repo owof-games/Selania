@@ -27,17 +27,19 @@
     + {are_two_entities_together(PG, FromForestToBusStop)}  [FromForestToBusStop]
             ~ move_entity(PG, BusStop)
             ~ movementsCounter ++    
+            -> characters_speaking ->
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
-            -> bus_stop
+                -> bus_stop
                 
 //Streets to Garden       
     + {are_two_entities_together(PG, FromBusStopToForest)} [FromBusStopToForest]
             ~ move_entity(PG, Forest)
             ~ movementsCounter ++
+            -> characters_speaking ->
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
-        -> forest
+                -> forest
         
         
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToForest)} [FromGreenhouseMiddlePathToForest]
@@ -45,7 +47,8 @@
             ~ movementsCounter ++
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
-        -> forest
+            -> characters_speaking ->
+                -> forest
     
  //Streets to GreenhouseMiddlePath   
     + {are_two_entities_together(PG, FromGreenhouseToGreenhouseMiddlePath)} [FromGreenhouseToGreenhouseMiddlePath]
@@ -53,14 +56,16 @@
             ~ movementsCounter ++
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
-        -> greenhouse_middle_path
+            -> characters_speaking ->
+                -> greenhouse_middle_path
         
     + {are_two_entities_together(PG, FromForestToGreenhouseMiddlePath)} [FromForestToGreenhouseMiddlePath]
             ~ move_entity(PG, GreenhouseMiddlePath)
             ~ movementsCounter ++
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
-        -> greenhouse_middle_path
+            -> characters_speaking ->
+                -> greenhouse_middle_path
         
         
 //Streets to Greenhouse
@@ -71,7 +76,8 @@
             -> growing_check ->
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
-        -> greenhouse
+            -> characters_speaking ->
+                -> greenhouse
 
 
 -    

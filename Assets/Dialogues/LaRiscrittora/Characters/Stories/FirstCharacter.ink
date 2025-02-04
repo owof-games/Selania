@@ -17,19 +17,17 @@
 === talk_with_first_character
 ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
         {
-        - not knowing_first_character.one:
-        -> knowing_first_character.one
-        TODO: settare questa cosa
-        - firstPauseTalking == true:
-            {charNameUno}: Torna più tardi, {name}.
-            -> main
+            - not knowing_first_character.one:
+                -> knowing_first_character.one
+            - firstPauseTalking == 0:
+                -> knowing_first_character
+            - else:
+                ->first_character_opinions
         }
         
-{charNameUno}: {~ Ero sicuro di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicuro di star capendo tutto di questo luogo.}
-    + [Ti va di parlare?]
+{charNameUno}: {~ Ero sicura di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicura di star capendo tutto di questo luogo.}
+    + [Ti va di raccontarmi qualcosa di te?]
         -> knowing_first_character
-    + [Hai visto qualcosa di interessante?]
-        -> first_character_opinions
     //Se non ho ancora fatto il dono e NON ho parlato col mentore e ho parlato abbastanza con lei
     + {firstStoryQuestCount > minStoryQuesTCount && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
             {charNameUno}: Sai, è gentile da parte tua, davvero.
@@ -81,7 +79,7 @@
         - not seven:
             -> seven
         - else:
-            -> other
+            -> first_character_opinions
     }
 
     = one
@@ -110,15 +108,17 @@
     ???: Talco, dimmi che sei qui anche tu, ti prego, non so capire il mondo senza di te.
     ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameUno}.
     {charNameUno}: No, io sono {charNameUno}.
-    {charNameUno}: Mmm. Cosa buffa, non è questo il mio nome.
+    {charNameUno}: Ehi! Non è questo il mio nome.
     {charNameUno}: <i>{charNameUno}</i>.
     {charNameUno}: Forse se provo a dirlo al contrario? Nome contrario.
     {charNameUno}: Uh. Uh.
     {charNameUno}: Prova tu. Come ti chiami?
-	    + [Mi chiamo {name}.]
-	    + [No, il mio nome ora è...]
+	    + {name_choice} [Mi chiamo {name}.]
+	    + [Il mio nome è...]
 	        -> name_choice ->
 	    -
+	{not gender}: E con che pronomi vuoi che ti chiami?
+	    {not gender: -> gender -> }
     {charNameUno}: Credi che il tuo nome sia importante?
 	    + [Opzione che aumenta il blu]
             ~ firstBlue ++
@@ -158,7 +158,7 @@
     {charNameUno}: No, non dirmelo.
     {charNameUno}: So che non può essere qui, ma non voglio ancora accettare questa solitudine.
     {charNameUno}: Mi prendo un po’ di tempo per me {name}, a dopo.
-         ~ firstPauseTalking = true
+         ~ firstPauseTalking = firstCharPauseDurantion
         -> main
         
     = two
@@ -177,6 +177,7 @@
         + [Opzione che aumenta il viola]
             ~ firstPurple ++
         -
+        ~ firstPauseTalking = firstCharPauseDurantion
         -> talk_with_first_character
         
     = three
@@ -193,7 +194,8 @@
             ~ firstGreen ++
         + [Opzione che aumenta il viola]
             ~ firstPurple ++
-        -    
+        -
+        ~ firstPauseTalking = firstCharPauseDurantion
         -> talk_with_first_character
         
     = four
@@ -211,7 +213,7 @@
             ~ firstPurple ++
         -    
     
-    
+        ~ firstPauseTalking = firstCharPauseDurantion
         -> talk_with_first_character
         
     = five
@@ -228,7 +230,7 @@
         + [Opzione che aumenta il viola]
             ~ firstPurple ++
         -    
-    
+        ~ firstPauseTalking = firstCharPauseDurantion
         -> talk_with_first_character
     
     = six
@@ -245,7 +247,7 @@
         + [Opzione che aumenta il viola]
             ~ firstPurple ++
         -    
-    
+        ~ firstPauseTalking = firstCharPauseDurantion
         -> talk_with_first_character
     
     = seven
@@ -262,14 +264,10 @@
         + [Opzione che aumenta il viola]
             ~ firstPurple ++
         -    
-
+        ~ firstPauseTalking = firstCharPauseDurantion
         -> talk_with_first_character
 
-    = other
-    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
-    
-    
-        -> talk_with_first_character
+  
         
 === first_character_opinions
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
@@ -277,7 +275,7 @@
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
     {Credo che il mentore...|La serra...|La fermata...|Ho visto delle api...}
 
-    -> talk_with_first_character
+    -> main
 
 
  === first_story_gift ===
