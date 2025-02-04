@@ -5,10 +5,8 @@
 //COME PROMEMORIA. LISTA DI TIPI DI TONO CHE POSSIAMO TENERE IN UNA CONVERSAZIONE: ROSSO (RABBIA, PASSIONE, AZIONE, OPPOSIZIONE). VIOLA (SPIRITUALITA', VISIONE DEL GRANDE SCHEMA DELLE COSE, SGUARDO POETICO, TESA VERSO UNA MISSIONE). GIALLO (GIOCOSITA', RISATA, DIVERTIMENTO, FANCIULLEZZA). VERDE (CUORE, AFFETTI, CURA DELLE PERSONE CARE, RIFLESSIONE EMOTIVA). BLU (RAZIONALITA', CALCOLO, VISIONE PRATICA, DISCIPLINA).
 
 //Gestione prima personaggia.
-    LIST firstCharacterPossibleStates =  LIndeciso, IlGiocoso, StatoDue, StatoTre, StatoQuattro, StatoCinque, StatoSei
-    VAR firstCharacterState = LIndeciso
-    
-    
+    LIST firstCharacterPossibleStates =  Rinuncia, IlGiocoso, StatoDue, StatoTre, StatoQuattro, StatoCinque, StatoSei
+    VAR firstCharacterState = Rinuncia
     
     VAR firstStory = NotStarted
     VAR firstStoryQuestCount = 0
@@ -77,11 +75,20 @@
 
 
 //Gestione settima personaggia
-    LIST seventhCharacterPossibleStates= LaDisegnatrice, NuovoStatoUnoSette, NuovoStatoDueSette, NuovoStatoTreSette
-    VAR seventhCharacterState= LaDisegnatrice
+    LIST seventhCharacterPossibleStates= IlMentore, NuovoStatoUnoSette, NuovoStatoDueSette, NuovoStatoTreSette
+    VAR seventhCharacterState= IlMentore
     
     VAR seventhStory = NotStarted
     VAR seventhCharacterSpecialEvent = false
+    
+    
+    //STATI UP: Verde e Blu.
+    //STATI DOWN: Rosso.
+    VAR seventhPurple = 0
+    VAR seventhYellow = 0
+    VAR seventhBlue = 0
+    VAR seventhGreen = 0
+    VAR seventhRed = 0
 
 //Funzione di traduzione da variabile a stringa con articolo minuscolo
 === function lowercaseTranslator(characterState)
@@ -106,8 +113,8 @@
         - LaVegliante:
             ~ return "la Vegliante"
     //Personaggia Tre      
-        - LIndeciso:
-            ~ return "l'Indeciso"
+        - Rinuncia:
+            ~ return "Rinuncia"
     //Personaggia Quattro             
         - LaMondatrice:
             ~ return "la Mondatrice"
@@ -118,8 +125,8 @@
         - LoSpecchio:
             ~ return "lo Specchio"
     //Personaggia Sette        
-        - LaDisegnatrice:
-            ~ return "la Disegnatrice"
+        - IlMentore:
+            ~ return "il Mentore"
 
     }
 
@@ -146,8 +153,8 @@
         - LaVegliante:
             ~ return "La Vegliante"
     //Personaggia Tre        
-        - LIndeciso:
-            ~ return "L'Indeciso"
+        - Rinuncia:
+            ~ return "Rinuncia"
     //Personaggia Quattro        
         - LaMondatrice:
             ~ return "La Mondatrice"
@@ -158,8 +165,8 @@
         - LoSpecchio:
             ~ return "Lo Specchio"
     //Personaggia Sette        
-        - LaDisegnatrice:
-            ~ return "La Disegnatrice"
+        - IlMentore:
+            ~ return "Il Mentore"
 
     }
 

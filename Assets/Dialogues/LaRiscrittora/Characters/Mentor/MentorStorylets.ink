@@ -1,4 +1,5 @@
 === mentor_storylets ===
+~ temp charName = uppercaseTranslator(seventhCharacterState)
 TODO: adatta questa parte alla nuova struttura, e snellisci
 {
 //Introduzioni
@@ -12,7 +13,7 @@ TODO: adatta questa parte alla nuova struttura, e snellisci
         {
             - first_story_gift.ink_outcome:
                 -> questions
-            - else: Mentore: Fai la tua offerta e poi torna da me.
+            - else: {charName}:  Fai la tua offerta e poi torna da me.
                 -> main
         }
         
@@ -50,44 +51,72 @@ TODO: adatta questa parte alla nuova struttura, e snellisci
 
 // STORYLETS PRESENTAZIONE DEI LUOGHI
 === first_greenhouse_visit
-    Mentore: Hai trovato le serre!
-    Mentore: Qui puoi far crescere moltissime cose del sottobosco.
-    Mentore: Tutte quelle cosine che tendiamo a ignorare ma sono fondamentali per la vita.
-    Mentore: Sapevi ad esempio che i funghi sono il punto di contatto tra vita e morte?
-    Mentore: Trasformano la materia inorganica e in decomposizione in sostanze fondamentali per i viventi.
-    Mentore: Senza funghi la vita stessa sarebbe impensabile.
-    Mentor: E poi hanno migliaia di odori diversi, per la gioia del mio nasino.
-    Mentor: Qui svolgono anche un'altra funzione:
-    Mentor: consegnando loro ciò che vogliamo che rimanga nel passato, ci offrono nutrimenti per il presente e il futuro.
-    Mentor: Riscrivere è un lavoro faticoso, e per questo è importante che ogni {pronouns has him: riscrittore|{pronouns has her: riscrittora|riscrittorə}} abbia dei momenti per prendersi cura di sé.
-    Mentor: Tornaci spesso: tutto nel giardino cambia spesso.
+~ temp charName = uppercaseTranslator(seventhCharacterState)
+    {charName}: Hai trovato le serre!
+    {charName}: Qui puoi far crescere moltissime cose del sottobosco.
+    {charName}: Tutte quelle cosine che tendiamo a ignorare ma sono fondamentali per la vita.
+    {charName}: Sapevi ad esempio che i funghi sono il punto di contatto tra vita e morte?
+    {charName}: Trasformano la materia inorganica e in decomposizione in sostanze fondamentali per i viventi.
+    {charName}: Senza funghi la vita stessa sarebbe impensabile.
+    {charName}: E poi hanno migliaia di odori diversi, per la gioia del mio nasino.
+    {charName}: Qui svolgono anche un'altra funzione:
+    {charName}: consegnando loro ciò che vogliamo che rimanga nel passato, ci offrono nutrimenti per il presente e il futuro.
+    {charName}: Riscrivere è un lavoro faticoso, e per questo è importante che ogni {pronouns has him: riscrittore|{pronouns has her: riscrittora|riscrittorə}} abbia dei momenti per prendersi cura di sé.
+    {charName}: Tornaci spesso: tutto nel giardino cambia spesso.
     {
     - findedGifts hasnt BrinaDellImpossibile: Uh, e poi a volte qui crescono doni utili per parlare con gli spettri. Tieni questo pezzettino di Brina dell'Impossibile.
         <i>Le linee della tua mano si fanno trasparenti. Il vento le attraversa, eppure le dita funzionano correttamente e non senti dolore.</i>
         ~ findedGifts += BrinaDellImpossibile
     }
-
+    
+    
+        + [Opzione che aumenta il blu]
+            ~ seventhBlue ++
+        + [Opzione che aumenta il giallo]
+            ~ seventhYellow ++
+        + [Opzione che aumenta il rosso]
+            ~ seventhRed ++
+        + [Opzione che aumenta il verde]
+            ~ seventhGreen ++
+        + [Opzione che aumenta il viola]
+            ~ seventhPurple ++
+        -         
     -> main
 
 === first_bus_stop_visit
-    Mentor: Questa è la fermata del bus.
-    Mentor: Ehm, forse le tombe potevano darne una mezza idea.
-    Mentor: Questo è un posto di ristoro e meditazione, e per questo motivo non incontrerai nessun altro a parte me e gli spettri.
-    Mentor: Uno alla volta, per concedere loro la giusta intimità.
-    Mentor: Anche per questo ho poco da dire: quello che conta sono le loro storie.
+~ temp charName = uppercaseTranslator(seventhCharacterState)
+    {charName}: Questa è la fermata del bus.
+    {charName}: Ehm, forse le tombe potevano darne una mezza idea.
+    {charName}: Questo è un posto di ristoro e meditazione, e per questo motivo non incontrerai nessun altro a parte me e gli spettri.
+    {charName}: Uno alla volta, per concedere loro la giusta intimità.
+    {charName}: Anche per questo ho poco da dire: quello che conta sono le loro storie.
+        + [Opzione che aumenta il blu]
+            ~ seventhBlue ++
+        + [Opzione che aumenta il giallo]
+            ~ seventhYellow ++
+        + [Opzione che aumenta il rosso]
+            ~ seventhRed ++
+        + [Opzione che aumenta il verde]
+            ~ seventhGreen ++
+        + [Opzione che aumenta il viola]
+            ~ seventhPurple ++
+        - 
 
     -> main
 
 === first_nest_visit
+~ temp charName = uppercaseTranslator(seventhCharacterState)
 
     -> main
 
 
 === first_library_visit
+~ temp charName = uppercaseTranslator(seventhCharacterState)
 
     -> main
 
 
 === first_laboratory_visit
+~ temp charName = uppercaseTranslator(seventhCharacterState)
 
     -> main
