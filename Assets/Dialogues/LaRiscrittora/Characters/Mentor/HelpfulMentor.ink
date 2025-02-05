@@ -61,6 +61,7 @@
         {charName}: Facciamo così: prova a parlare con uno degli spettri qui alla <b>fermata del bus</b>.
         {charName}: Tipo quello con la tomba arancione.
         {charName}: E poi torna da me.
+            ~ firstPauseTalking = 0
     -> main      
             
     === gifts_and_ink
@@ -120,6 +121,7 @@
         {charName}: Per cui prenditi del tuo tempo, controlla quello che hai nell'inventario.
         {charName}: Cammina, vai alla serra, e torna quando sei {pronouns has him: sicuro|{pronouns has her: sicura|sicurə}} di avere il dono che ti convince.
         {charName}: Poi parla con lo spettro, dagli il dono, e torna da me.
+        ~ firstPauseTalking = 0
             * [Capito]
                     -> main
 
@@ -154,6 +156,7 @@
                 {charName}: Il tuo compito qui è quello di aiutare lo spettro ad uscire dal suo stallo.
                 {charName}: A volte i risultati potrebbero essere diversi da quelli che speravi, e ci sta.
                 {charName}: Ma con una buona dose di ascolto ho la certezza che farai qualcosa di magnifico!
+                ~ firstPauseTalking = 0
                     -> main
         
         

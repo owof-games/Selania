@@ -63,12 +63,7 @@ TODO: adatta questa parte alla nuova struttura, e snellisci
     {charName}: consegnando loro ciò che vogliamo che rimanga nel passato, ci offrono nutrimenti per il presente e il futuro.
     {charName}: Riscrivere è un lavoro faticoso, e per questo è importante che ogni {pronouns has him: riscrittore|{pronouns has her: riscrittora|riscrittorə}} abbia dei momenti per prendersi cura di sé.
     {charName}: Tornaci spesso: tutto nel giardino cambia spesso.
-    {
-    - findedGifts hasnt BrinaDellImpossibile: Uh, e poi a volte qui crescono doni utili per parlare con gli spettri. Tieni questo pezzettino di Brina dell'Impossibile.
-        <i>Le linee della tua mano si fanno trasparenti. Il vento le attraversa, eppure le dita funzionano correttamente e non senti dolore.</i>
-        ~ findedGifts += BrinaDellImpossibile
-    }
-    
+
     
         + [Opzione che aumenta il blu]
             ~ seventhBlue ++
