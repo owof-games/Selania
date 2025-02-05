@@ -226,7 +226,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         {charNameUno}: Alla fine, niente Talco.
         {charNameUno}: Non ricordo quando è stata l'ultima volta che sono andata da qualche parte senza di ləi.
         {charNameUno}: Prima mi sono persa nel cercarlə.
-        {charNameUno}: Ok, forse mi sono distratta nel cercar di raggiungere uno scoiattolo perché aveva la ghianda più bella che avessi mai visto.
+        {charNameUno}: Ok, forse mi sono distratta nel cercare di raggiungere uno scoiattolo perché aveva la ghianda più bella che avessi mai visto.
         {charNameUno}: Volevo insegnargli a suonarla, e invece mi sono ritrovata tra gli alberi senza sapere dove andare e c’era otto sentieri diversi davanti a me.
         {charNameUno}: Otto!
         {charNameUno}: Ma poi come fanno ad esserci otto sentieri in un posto dove ci siamo solo noi?
@@ -244,8 +244,10 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Sappiamo essere indipendenti.
                 {charNameUno}: Ma in momenti come questo, so suonare solo se è con me.
                     ~ firstRed ++
-            + [Opzione che aumenta il verde]
-                ~ firstGreen ++
+            + [Vorresti suonare qualcosa per Talco?]
+                {charNameUno}: Sarebbe carino, sì.
+                {charNameUno}: Ma forse prima devo capire perché ho questo nuovo nome, cosa farmene.
+                    ~ firstGreen ++
             + [Opzione che aumenta il viola]
                 ~ firstPurple ++
             -    
@@ -274,9 +276,12 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Sono più dell'idea di ricrearlo assieme.
                 {charNameUno}: Ascoltarci a vicenda, entrare in armonia.
                 {charNameUno}: E ricostruire sulle macerie che ci circondano.
-                ~ firstRed ++
-            + [Opzione che aumenta il verde]
-                ~ firstGreen ++
+                    ~ firstRed ++
+            + [E cosa vuole {charNameUno}?]
+                {charNameUno}: Ora?
+                {charNameUno}: Un letto caldo, una copertina.
+                {charNameUno}: E non doversi porre questa domanda.
+                    ~ firstGreen ++
             + [Tutte le strade sono sbagliate, se non sai dove stai andando.]
                 ~ firstPurple ++
             -    
@@ -300,20 +305,22 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Testare gli arbusti della foresta?
                 {charNameUno}: No, scusa, non è quello che hai detto.
                 {charNameUno}: Ma studiare crea una divisione tra studiato e studiante, e a me questa cosa sta sul culo.
-                ~ firstBlue ++
+                    ~ firstBlue ++
             + [Più silenzio significa più spazio per fare rumore!]
                 {charNameUno}: Hai ragione, però mi sento un po' sciocca.
                 {charNameUno}: Un po' come quando fai le prove per un concerto in un'enorme sala vuota.
                 {charNameUno}: Non che mi sia mai capitato, ma immagino ci si senta così.
                 {charNameUno}: Esposte, spaesate.
                 {charNameUno}: Ridicole.
-                ~ firstYellow ++
+                    ~ firstYellow ++
             + [Se corri abbastanza, il ritmo lo crei da sola.]
                 {charNameUno}: Ma poi serve qualcuno che suoni con te.
                 {charNameUno}: E una voce che dia un senso a quel ritmo.
-                ~ firstRed ++
-            + [Opzione che aumenta il verde]
-                ~ firstGreen ++
+                    ~ firstRed ++
+            + [Forse il silenzio è il posto giusto per raccontarti.]
+                {charNameUno}: Ma non conosco bene le parole.
+                {charNameUno}: L'unica cosa che so fare, è suonare.
+                    ~ firstGreen ++
             + [Il giardino tutto è musica, si tratta solo di ascoltare.]
                 ~ firstPurple ++
             -
@@ -334,13 +341,16 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                     {charNameUno}: Forse il vetro non ci reggerebbe a lungo.
                     {charNameUno}: Ma secondo me quelle piante sanno cantare.
                         ~ firstYellow ++
-                + [Forse ti serve fare più rumore allora.]
+                + [Allora serve fare più rumore.]
                     {charNameUno}: Riprendere a stordirmi di cose?
                     {charNameUno}: Può essere un'idea.
                     {charNameUno}: Ma se sono qui, con questo nome, forse non è la vera soluzione.
                         ~ firstRed ++
-                + [Opzione che aumenta il verde]
-                    ~ firstGreen ++
+                + [Forse non è la festa, ma è il senso di unione che ti manca ora.]
+                    {charNameUno}: Ma con chi, qui?
+                    {charNameUno}: Scusa, non per offenderti.
+                    {charNameUno}: Sei una persona molto dolce, ma non sei <i>loro</i>.
+                        ~ firstGreen ++
                 + [Opzione che aumenta il viola]
                     ~ firstPurple ++
                 -
@@ -377,8 +387,12 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Con o senza compromessi.
                 {charNameUno}: Questa è l'unica soluzione?
                     ~ firstRed ++
-            + [Opzione che aumenta il verde]
-                ~ firstGreen ++
+            + [Donala senza chiedere altro in cambio, e qualcosa arriverà.]
+                {charNameUno}: Forse in questa foresta, in questo giardino.
+                {charNameUno}: Ma da dove vengo, tutto prende e non dà nulla.
+                {charNameUno}: A parte le persone a cui voglio bene.
+                {charNameUno}: Forse dovrei donare loro quello che so fare?
+                    ~ firstGreen ++
             + [Opzione che aumenta il viola]
                 ~ firstPurple ++
             -    
@@ -410,7 +424,11 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Anche se poi credo che il disordine sia solo una questione di prospettiva.
                 {charNameUno}: Alla lunga ci si abiuta anche a quello, e a quel punto diventa difficile comunque cambiare.
                     ~ firstRed ++
-            + [Opzione che aumenta il verde]
+            + [Sembrano le parole di una persona ferita.]
+                {charNameUno}: Lo dice anche Talco.
+                {charNameUno}: E a quel punto, come curare la sua ferita?
+                {charNameUno}: Rispettando la sua ossessione per le regole?
+                {charNameUno}: O regalandogli un po' di caos?
                 ~ firstGreen ++
             + [Opzione che aumenta il viola]
                 ~ firstPurple ++
@@ -436,8 +454,11 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Vero.
                 {charNameUno}: Anche se a volte è bello anche sedersi assieme al sole, e riposare.
                     ~ firstRed ++
-            + [Opzione che aumenta il verde]
-                ~ firstGreen ++
+            + [Una comunità sboccia da sè quando c'è affetto e fiducia.]
+                {charNameUno}: Una casa in campagna con le persone amate.
+                {charNameUno}: Un giardino.
+                {charNameUno}: Una fuga, senza mai chiamarla fuga.
+                    ~ firstGreen ++
             + [Opzione che aumenta il viola]
                 ~ firstPurple ++
             -    
@@ -470,10 +491,16 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Dare un volto all'avversario, e lottare.
                 {charNameUno}: Sarei ancora me stessa, dopo?
                     ~ firstRed ++
-            + [Opzione che aumenta il verde]
-                ~ firstGreen ++
-            + [Opzione che aumenta il viola]
-                ~ firstPurple ++
+            + [Forse è più una ninna nanna. E l'imprevedibile è ciò che sognerai.]
+                {charNameUno}: Un pigiama party.
+                {charNameUno}: Un momento tra persone care.
+                {charNameUno}: Un sogno condiviso, sognando sognare.
+                    ~ firstGreen ++
+            + [Ogni temporale toglie a qualcuna, dà a qualcun altro.]
+                {charNameUno}: Come le piante nella serra.
+                {charNameUno}: Per crescere prendono da terra, da ciò che manco vedo.
+                {charNameUno}: E ci danno in cambio odori e idee.
+                    ~ firstPurple ++
             -
         {charNameUno}: Comunque, continua a tornarmi in mente un ricordo.
         {charNameUno}: L'anno scorso abbiamo occupato questo parco per una settimana.
@@ -500,10 +527,13 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Motivata.
                 {charNameUno}: Motivata fino al cuore.
                 {charNameUno}: Non so difendere molto bene me e le mie posizioni.
-                {charNameUno}: Ma quella settimana, per una volta, ho sentito che stavo facendo qualcosa di utile e importante.
+                {charNameUno}: Ma quella settimana, per una volta, ho capito che stavo facendo qualcosa di sensato.
                     ~ firstRed ++
-            + [Opzione che aumenta il verde]
-                ~ firstGreen ++
+            + [Sono sicura che gli alberi qui ricordano la tua lotta.]
+                {charNameUno}: Sarebbe bello.
+                {charNameUno}: Ma allora chiederei loro la strada verso casa.
+                {charNameUno}: Non so più quanto ancora voglia restare quì.
+                    ~ firstGreen ++
             + [Opzione che aumenta il viola]
                 ~ firstPurple ++
             -    
@@ -541,8 +571,12 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Lui è davvero felice di ciò che fa.
                 {charNameUno}: Il problema è che non contempla per le altre persone modi diversi di essere altrettanto felici.
                     ~ firstRed ++
-            + [Opzione che aumenta il verde]
-                ~ firstGreen ++
+            + [E tu hai ripreso ad accrescere l'albero della tua famiglia.]
+                {charNameUno}: In un certo senso.
+                {charNameUno}: Per nonno la musica era occasione di unione.
+                {charNameUno}: La festa un momento per appianare le divergenze.
+                {charNameUno}: E questa è una cosa che posso capire.
+                    ~ firstGreen ++
             + [Opzione che aumenta il viola]
                 ~ firstPurple ++
             -
@@ -566,8 +600,11 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Vero, credo.
                 {charNameUno}: Ma presto o tardi dovrò pure capire come mangiare, e a quel punto cosa me ne faccio di quegli insegnamenti?
                         ~ firstRed ++
-            + [Opzione che aumenta il verde]
-                ~ firstGreen ++
+            + [Secondo te tua mamma vuole il tuo o il suo di bene?]
+                {charNameUno}: Forse quello del nome della famiglia.
+                {charNameUno}: Come se poi fosse prestigioso.
+                {charNameUno}: Mamma ha poche radici, e allora continua a guardare al futuro.
+                    ~ firstGreen ++
             + [Opzione che aumenta il viola]
                 ~ firstPurple ++
             -    
