@@ -239,8 +239,11 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Cavoli! Scoiattoli e falene, sarebbe la miglior band possibile!
                 {charNameUno}: E credo di aver visto una lumaca prima, potrebbe tenere il tempo!
                 ~ firstYellow ++
-            + [Opzione che aumenta il rosso]
-                ~ firstRed ++
+            + [Capisco l'amicizia con Talco, ma è importante essere indipendenti.]
+                {charNameUno}: Talco e io siamo due parti della stessa armonia.
+                {charNameUno}: Sappiamo essere indipendenti.
+                {charNameUno}: Ma in momenti come questo, so suonare solo se è con me.
+                    ~ firstRed ++
             + [Opzione che aumenta il verde]
                 ~ firstGreen ++
             + [Opzione che aumenta il viola]
@@ -268,6 +271,9 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Tipo suonare con una papera in testa!
                     ~ firstYellow ++
             + [Ascolta Olga e invadi il mondo!]
+                {charNameUno}: Sono più dell'idea di ricrearlo assieme.
+                {charNameUno}: Ascoltarci a vicenda, entrare in armonia.
+                {charNameUno}: E ricostruire sulle macerie che ci circondano.
                 ~ firstRed ++
             + [Opzione che aumenta il verde]
                 ~ firstGreen ++
@@ -302,7 +308,9 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Esposte, spaesate.
                 {charNameUno}: Ridicole.
                 ~ firstYellow ++
-            + [Opzione che aumenta il rosso]
+            + [Se corri abbastanza, il ritmo lo crei da sola.]
+                {charNameUno}: Ma poi serve qualcuno che suoni con te.
+                {charNameUno}: E una voce che dia un senso a quel ritmo.
                 ~ firstRed ++
             + [Opzione che aumenta il verde]
                 ~ firstGreen ++
@@ -326,8 +334,11 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                     {charNameUno}: Forse il vetro non ci reggerebbe a lungo.
                     {charNameUno}: Ma secondo me quelle piante sanno cantare.
                         ~ firstYellow ++
-                + [Opzione che aumenta il rosso]
-                    ~ firstRed ++
+                + [Forse ti serve fare più rumore allora.]
+                    {charNameUno}: Riprendere a stordirmi di cose?
+                    {charNameUno}: Può essere un'idea.
+                    {charNameUno}: Ma se sono qui, con questo nome, forse non è la vera soluzione.
+                        ~ firstRed ++
                 + [Opzione che aumenta il verde]
                     ~ firstGreen ++
                 + [Opzione che aumenta il viola]
@@ -361,8 +372,11 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Ma per me è da molto ormai che è <i>domani</i>.
                 {charNameUno}: Il conservatorio è finito da mesi, e io canto, ballo, e non so ancora che cosa fare.
                     ~ firstYellow ++
-            + [Opzione che aumenta il rosso]
-                ~ firstRed ++
+            + [Mezzo compromesso è già un'intera sconfitta.]
+                {charNameUno}: Eppure Jonah ha perso del tutto, comunque.
+                {charNameUno}: Con o senza compromessi.
+                {charNameUno}: Questa è l'unica soluzione?
+                    ~ firstRed ++
             + [Opzione che aumenta il verde]
                 ~ firstGreen ++
             + [Opzione che aumenta il viola]
@@ -379,7 +393,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         {charNameUno}: Stavo ripensando al prof Ghiberti.
         {charNameUno}: Te ne ho già parlato? Non ricordo.
         {charNameUno}: Lui vede tutta la musica come una cosa matematica.
-        {charNameUno}: Non è una cosa strana, ci sono pianisti che trattano il piano come se fosse un abaco, ma senza rinunciare alla poesia.
+        {charNameUno}: Non è una cosa strana, ci sono pianisti che trattano il piano come fosse un abaco, ma senza rinunciare alla poesia.
         {charNameUno}: Per Ghiberti invece tutto va ridotto a una specie di lista di elementi primitivi che possono essere combinati solo in un determinato modo per ottenere soluzioni prevedibili.
         {charNameUno}: Una volta a vocina bassa ha detto che il jazz è un errore.
             + [La prevedibilità <b>è</b> poetica. La cosa più rara al mondo.]
@@ -391,14 +405,17 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Credo che tu gli abbia appena regalato un crepacuore.
                 {charNameUno}: Tutta la musica è gioco, se sai rinunciare al divismo e perderti con band e pubblico.
                 ~ firstYellow ++
-            + [Opzione che aumenta il rosso]
-                ~ firstRed ++
+            + [Forse aveva paura di vedere la trasformazione nel disordine.]
+                {charNameUno}: Già, è una possibilità.
+                {charNameUno}: Anche se poi credo che il disordine sia solo una questione di prospettiva.
+                {charNameUno}: Alla lunga ci si abiuta anche a quello, e a quel punto diventa difficile comunque cambiare.
+                    ~ firstRed ++
             + [Opzione che aumenta il verde]
                 ~ firstGreen ++
             + [Opzione che aumenta il viola]
                 ~ firstPurple ++
             - 
-        {charNameUno}: Sembra un uomo felice, sorride molto, eppure a volte mi sembra il sorriso che avrebbe una macchina per fare bulloni o una pressa.
+        {charNameUno}: Ghiberti sembra un uomo felice, sorride molto, eppure a volte mi sembra il sorriso che avrebbe una macchina per fare bulloni o una pressa.
         {charNameUno}: Un sorriso che dice “Così è, così si fa, c’è davvero altro da pensare?”.
         {charNameUno}: A me spaventa un sacco quel sorriso, quel modo di fare.
         {charNameUno}: Tutti questi numerini e fattori tolgono l’esperienza, l’errore, il senso di comunità.
@@ -415,8 +432,10 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: In effetti è liberatorio ridere assieme di qualcosa.
                 {charNameUno}: Ma mi chiedo sempre se non stiamo ridendo di qualcuno, senza rendercene conto.
                     ~ firstYellow ++
-            + [Opzione che aumenta il rosso]
-                ~ firstRed ++
+            + [Ci si accresce nel dissenso, nella discussione.]
+                {charNameUno}: Vero.
+                {charNameUno}: Anche se a volte è bello anche sedersi assieme al sole, e riposare.
+                    ~ firstRed ++
             + [Opzione che aumenta il verde]
                 ~ firstGreen ++
             + [Opzione che aumenta il viola]
@@ -440,13 +459,17 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Mi ricordi perché continuo a raccontarti queste cose?
                 {charNameUno}: Ah, sì, perché siamo solo noi.
                 {charNameUno}: E il mentore.
-                ~ firstBlue ++
+                    ~ firstBlue ++
             + [Qui l'aria sa di mare e zucchero filato!]
                 {charNameUno}: Vero? Che è assurdo, perché non ho visto il mare da nessuna parte.
                 {charNameUno}: Né dello zucchero filato se è per quello.
-                ~ firstYellow ++
-            + [Opzione che aumenta il rosso]
-                ~ firstRed ++
+                    ~ firstYellow ++
+            + [O come il momento prima di una battaglia.]
+                {charNameUno}: Non è qualcosa che conosco.
+                {charNameUno}: Ma forse a volte dovrei provare.
+                {charNameUno}: Dare un volto all'avversario, e lottare.
+                {charNameUno}: Sarei ancora me stessa, dopo?
+                    ~ firstRed ++
             + [Opzione che aumenta il verde]
                 ~ firstGreen ++
             + [Opzione che aumenta il viola]
@@ -458,7 +481,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         {charNameUno}: E il primo giorno è stato tutto adrenalina.
         {charNameUno}: La prima notte il freddo non l'abbiamo sentito da come eravamo prese dalla gioia.
         {charNameUno}: Man mano però l'euforia è andata scemando.
-        {charNameUno}: Alcune persone se ne sono andate, altre sono rimaste ma erano arrese.
+        {charNameUno}: Alcune persone se ne sono andate, altre sono restate ma senza spinta.
         {charNameUno}: L'ultima sera c'è stato un momento di puro silenzio.
         {charNameUno}: Non i nostri strumenti, non le nostre voci.
         {charNameUno}: Non il muoversi della polizia, il megafono degli assessori.
@@ -473,8 +496,12 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Sentivo il bisogno di qualcosa di più intimo.
                 {charNameUno}: Muovermi a volte mi sembra che rompa le cose.
                     ~ firstYellow ++
-            + [Opzione che aumenta il rosso]
-                ~ firstRed ++
+            + [Come ti sei sentita, a lottare per qualcun altro?]
+                {charNameUno}: Motivata.
+                {charNameUno}: Motivata fino al cuore.
+                {charNameUno}: Non so difendere molto bene me e le mie posizioni.
+                {charNameUno}: Ma quella settimana, per una volta, ho sentito che stavo facendo qualcosa di utile e importante.
+                    ~ firstRed ++
             + [Opzione che aumenta il verde]
                 ~ firstGreen ++
             + [Opzione che aumenta il viola]
@@ -508,8 +535,12 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Sì, ma non ora.
                 {charNameUno}: Appena avrò risolto questa cosa del nome, con piacere.
                     ~ firstYellow ++
-            + [Opzione che aumenta il rosso]
-                ~ firstRed ++
+            + [Credi che tuo padre si sia arreso?]
+                {charNameUno}: Merda, ci vai giù piano {name}!
+                {charNameUno}: No, non credo comunque.
+                {charNameUno}: Lui è davvero felice di ciò che fa.
+                {charNameUno}: Il problema è che non contempla per le altre persone modi diversi di essere altrettanto felici.
+                    ~ firstRed ++
             + [Opzione che aumenta il verde]
                 ~ firstGreen ++
             + [Opzione che aumenta il viola]
@@ -531,8 +562,10 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Anche se forse non lo chiamerei divertimento.
                 {charNameUno}: Va in un altro luogo, un posto speciale che non ho ancora trovato.
                     ~ firstYellow ++
-            + [Opzione che aumenta il rosso]
-                ~ firstRed ++
+            + [La strada sbagliata è sempre quella con più insegnamenti.]
+                {charNameUno}: Vero, credo.
+                {charNameUno}: Ma presto o tardi dovrò pure capire come mangiare, e a quel punto cosa me ne faccio di quegli insegnamenti?
+                        ~ firstRed ++
             + [Opzione che aumenta il verde]
                 ~ firstGreen ++
             + [Opzione che aumenta il viola]
