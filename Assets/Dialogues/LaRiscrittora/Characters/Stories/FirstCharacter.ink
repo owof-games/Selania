@@ -172,13 +172,13 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
             -
        {charNameUno}: Comunque sì, ti si addice benissimo, hai proprio una faccia da {name}.
        {charNameUno}: Ma forse la mia faccia è cambiata? Ti sembro una {charNameUno}?
-            + [No, la faccia è una cosa che hai anche se non avessi un nome.]
+            + [No, la faccia è una cosa che hai anche se non hai un nome.]
                 {firstBlue > 1: {charNameUno}: {name}, sai che ogni tanto puoi scendere da ovviolandia, vero? }
                 {charNameUno}: Forse dovrei chiamarti Linea.
                 {charNameUno}: Anzi, Quadrato.
                 {charNameUno}: Perché neanche a volerlo sai rotolare troppo lontano dalla superficie delle cose.
                     ~ firstBlue ++
-            + [Quindi possiamo cambiarci la faccia solo cambiando di nome?]
+            + [Quindi per cambiare faccia basta cambiarci il nome?]
                 {firstYellow > 1: {charNameUno}: {name}, tu e io faremo amicizia presto!}
                 {charNameUno}: Cavolo, passerei le giornate a essere chiunque!
                 {charNameUno}: E forse ora potrei essere Talco.
@@ -226,7 +226,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         {charNameUno}: Alla fine, niente Talco.
         {charNameUno}: Non ricordo quando è stata l'ultima volta che sono andata da qualche parte senza di ləi.
         {charNameUno}: Prima mi sono persa nel cercarlə.
-        {charNameUno}: Ok, forse mi sono distratta nel cercar di  raggiungere uno scoiattolo perché aveva la ghianda più bella che avessi mai visto.
+        {charNameUno}: Ok, forse mi sono distratta nel cercar di raggiungere uno scoiattolo perché aveva la ghianda più bella che avessi mai visto.
         {charNameUno}: Volevo insegnargli a suonarla, e invece mi sono ritrovata tra gli alberi senza sapere dove andare e c’era otto sentieri diversi davanti a me.
         {charNameUno}: Otto!
         {charNameUno}: Ma poi come fanno ad esserci otto sentieri in un posto dove ci siamo solo noi?
@@ -235,7 +235,9 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Un po' come puoi suonare qualsiasi strumento, se hai del tempo.
                 {charNameUno}: Ma quanto tempo serve per otto sentieri, da sola?
                     ~ firstBlue ++
-            + [Opzione che aumenta il giallo]
+            + [Non so molto di scoiattoli, ma le falene sicuro suonano i girasoli!]
+                {charNameUno}: Cavoli! Scoiattoli e falene, sarebbe la miglior band possibile!
+                {charNameUno}: E credo di aver visto una lumaca prima, potrebbe tenere il tempo!
                 ~ firstYellow ++
             + [Opzione che aumenta il rosso]
                 ~ firstRed ++
@@ -260,9 +262,12 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: A questo punto dovevo iscrivermi ad economia.
                 {charNameUno}: E inventare nuove supercazzole per fregare il prossimo.
                     ~ firstBlue ++
-            + [Opzione che aumenta il giallo]
-                ~ firstYellow ++
-            + [Opzione che aumenta il rosso]
+            + [La risposta è sempre dove c'è casino: ascolta Talco!]
+                {charNameUno}: Voi due andreste d'accordo tantissimo, cavolo.
+                {charNameUno}: Potrei portarvi sul palco e fare qualcosa di assurdo.
+                {charNameUno}: Tipo suonare con una papera in testa!
+                    ~ firstYellow ++
+            + [Ascolta Olga e invadi il mondo!]
                 ~ firstRed ++
             + [Opzione che aumenta il verde]
                 ~ firstGreen ++
@@ -290,7 +295,12 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: No, scusa, non è quello che hai detto.
                 {charNameUno}: Ma studiare crea una divisione tra studiato e studiante, e a me questa cosa sta sul culo.
                 ~ firstBlue ++
-            + [Opzione che aumenta il giallo]
+            + [Più silenzio significa più spazio per fare rumore!]
+                {charNameUno}: Hai ragione, però mi sento un po' sciocca.
+                {charNameUno}: Un po' come quando fai le prove per un concerto in un'enorme sala vuota.
+                {charNameUno}: Non che mi sia mai capitato, ma immagino ci si senta così.
+                {charNameUno}: Esposte, spaesate.
+                {charNameUno}: Ridicole.
                 ~ firstYellow ++
             + [Opzione che aumenta il rosso]
                 ~ firstRed ++
@@ -310,9 +320,12 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 + [La disciplina può aiutare a spegnere i pensieri.]
                     {charNameUno}: Anche l'alcool se è per quello.
                     {charNameUno}: Ma non reggo bene nessuna delle due cose.
-                    ~ firstBlue ++
-                + [Opzione che aumenta il giallo]
-                    ~ firstYellow ++
+                        ~ firstBlue ++
+                + [La serra ha un tetto! E io so sudare!]
+                    {charNameUno}: Questo è un piano, in effetti.
+                    {charNameUno}: Forse il vetro non ci reggerebbe a lungo.
+                    {charNameUno}: Ma secondo me quelle piante sanno cantare.
+                        ~ firstYellow ++
                 + [Opzione che aumenta il rosso]
                     ~ firstRed ++
                 + [Opzione che aumenta il verde]
@@ -343,8 +356,11 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Vorrei però qualcosa di meglio di sopravvivere, no?
                 {charNameUno}: Banale, ma vorrei permettermi il lusso di vivere.
                 ~ firstBlue ++
-            + [Opzione che aumenta il giallo]
-                ~ firstYellow ++
+            + [Canta e balla. Domani è una cosa lontana.]
+                {charNameUno}: Mi sembra di sentire Talco, con queste frasi.
+                {charNameUno}: Ma per me è da molto ormai che è <i>domani</i>.
+                {charNameUno}: Il conservatorio è finito da mesi, e io canto, ballo, e non so ancora che cosa fare.
+                    ~ firstYellow ++
             + [Opzione che aumenta il rosso]
                 ~ firstRed ++
             + [Opzione che aumenta il verde]
@@ -371,7 +387,9 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Perché se so dove qualcosa andrà a parare, quella cosa mi sembra priva di vita.
                 {charNameUno}: E la poesia è qualcosa che porta vita.
                     ~ firstBlue ++
-            + [Opzione che aumenta il giallo]
+            + [Un errore è non saper giocare, e il jazz è musica che gioca.]
+                {charNameUno}: Credo che tu gli abbia appena regalato un crepacuore.
+                {charNameUno}: Tutta la musica è gioco, se sai rinunciare al divismo e perderti con band e pubblico.
                 ~ firstYellow ++
             + [Opzione che aumenta il rosso]
                 ~ firstRed ++
@@ -388,12 +406,15 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         {charNameUno}: Che diavolo ci fai con una canzone fatta con la sola precisione?
         {charNameUno}: È come quella roba con l’AI, orecchiabile, prevedibile, dimenticabile.
         {charNameUno}: Odio poche cose, ma questa su tutte: odio tutte le cosine pratiche e calcolabili, sono una rinuncia alla vita.
+        {charNameUno}: Come sta in piedi una comunità, così?
             + [Una comunità non regge a lungo senza un po' di senso pratico.]
                 {charNameUno}: Ma quando tutto è solo senso pratico?
                 {charNameUno}: A quel punto comunque la comunità è destinata a morire.
                     ~ firstBlue ++
-            + [Opzione che aumenta il giallo]
-                ~ firstYellow ++
+            + [Ciò che ci tiene unite è il ridere.]
+                {charNameUno}: In effetti è liberatorio ridere assieme di qualcosa.
+                {charNameUno}: Ma mi chiedo sempre se non stiamo ridendo di qualcuno, senza rendercene conto.
+                    ~ firstYellow ++
             + [Opzione che aumenta il rosso]
                 ~ firstRed ++
             + [Opzione che aumenta il verde]
@@ -420,7 +441,9 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Ah, sì, perché siamo solo noi.
                 {charNameUno}: E il mentore.
                 ~ firstBlue ++
-            + [Opzione che aumenta il giallo]
+            + [Qui l'aria sa di mare e zucchero filato!]
+                {charNameUno}: Vero? Che è assurdo, perché non ho visto il mare da nessuna parte.
+                {charNameUno}: Né dello zucchero filato se è per quello.
                 ~ firstYellow ++
             + [Opzione che aumenta il rosso]
                 ~ firstRed ++
@@ -444,9 +467,12 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
             + [Gli alberi "cantano" per mettere in allarme altri alberi.]
                 {charNameUno}: Quindi ero immersa in un coro di disperazione?
                 {charNameUno}: Forse mi sento viva solo nel dolore?
-                ~ firstBlue ++
-            + [Opzione che aumenta il giallo]
-                ~ firstYellow ++
+                    ~ firstBlue ++
+            + [Hai anche danzato con gli alberi?]
+                {charNameUno}: No, non ci avevo pensato sul momento.
+                {charNameUno}: Sentivo il bisogno di qualcosa di più intimo.
+                {charNameUno}: Muovermi a volte mi sembra che rompa le cose.
+                    ~ firstYellow ++
             + [Opzione che aumenta il rosso]
                 ~ firstRed ++
             + [Opzione che aumenta il verde]
@@ -473,12 +499,15 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         {charNameUno}: Ma ogni tanto ci permetteva di sentire le vecchie registrazioni, di quando nonno suonava e cantava nelle balere.
         {charNameUno}: E allora ci mettevamo a ballare con lui e mamma.
         {charNameUno}: E in questi ricordi c'è sempre un raggio di sole caldo che gli illumina il sorriso.
-            + [Questo ricordo ti è di aiuto, ora?]
-            {charNameUno}: Un po'.
-            {charNameUno}: Mi ricorda che c'è stato un momento in cui tutto andava bene.
-                ~ firstBlue ++
-            + [Opzione che aumenta il giallo]
-                ~ firstYellow ++
+            + [Esistono lavori veri e lavori non veri?]
+                {charNameUno}: Bella domanda.
+                {charNameUno}: Ma tendenzialmente per mio padre la risposta è <i>sì</i>.
+                {charNameUno}: E non sono veri i lavori che riguardano le mie passioni.
+                    ~ firstBlue ++
+            + [Ti va di ballare con me?]
+                {charNameUno}: Sì, ma non ora.
+                {charNameUno}: Appena avrò risolto questa cosa del nome, con piacere.
+                    ~ firstYellow ++
             + [Opzione che aumenta il rosso]
                 ~ firstRed ++
             + [Opzione che aumenta il verde]
@@ -486,7 +515,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
             + [Opzione che aumenta il viola]
                 ~ firstPurple ++
             -
-        {charNameUno}: Per certi versi, mamma è più cinica di papà.
+        {charNameUno}: A pensarci, per certi versi, mamma è più cinica di papà.
         {charNameUno}: È grazie a lei se papà ha ceduto e mi sono iscritta al conservatorio.
         {charNameUno}: Ma per lei l'obiettivo è che mi trasformi in Lang Lang, Mitsuko Uchida, Alfred Brendel.
         {charNameUno}: Prestigio, onoreficienze e denaro.
@@ -496,9 +525,12 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Esattamente.
                 {charNameUno}: Per cui direi che sono fallita e posso appendere il piano al muro.
                 {charNameUno}: E non dire che non è una cosa fattibile o urlo.
-                ~ firstBlue ++
-            + [Opzione che aumenta il giallo]
-                ~ firstYellow ++
+                    ~ firstBlue ++
+            + [Ma loro si divertono, quando suonano?]
+                {charNameUno}: Credo di sì. Uchida è una gioia per gli occhi.
+                {charNameUno}: Anche se forse non lo chiamerei divertimento.
+                {charNameUno}: Va in un altro luogo, un posto speciale che non ho ancora trovato.
+                    ~ firstYellow ++
             + [Opzione che aumenta il rosso]
                 ~ firstRed ++
             + [Opzione che aumenta il verde]
