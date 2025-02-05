@@ -47,7 +47,7 @@ VAR seventhCharacterInkLevel = Low
     - else:
         <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>
 }
-->->
+
 
 === function inkTranslator(InkLevel)
 {
