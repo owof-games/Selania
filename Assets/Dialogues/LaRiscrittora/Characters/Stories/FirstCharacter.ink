@@ -37,8 +37,8 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 
             //Se non ho ancora fatto il dono e NON ho parlato col mentore e ho parlato abbastanza con lei
             + {firstStoryQuestCount > minStoryQuesTCount && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
-                    {charNameUno}: Sai, è gentile da parte tua, davvero.
-                    {charNameUno}: Ma credo che tu non abbia ancora chiesto al mentore come queste cose funzionino.
+                    {charNameUno}: È gentile da parte tua.
+                    {charNameUno}: Ma non hai ancora chiesto al mentore a cosa servono.
                     {charNameUno}: Forse conviene che prima parli con lui.
                         -> main
             
@@ -51,7 +51,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
             + {first_story_gift.ink_outcome && not main_story_first_character} [Credo tu abbia un problema, e potrei aiutarti ad affrontarlo.]
                 {
                     - not questions:
-                    {uppercaseTranslator(firstCharacterState)}: Ti chiedo un ultimo sforzo, parla direttamente col mentore prima. Io non scappo.
+                    {uppercaseTranslator(firstCharacterState)}: Non credo che il mentore ti abbia spiegato come si fa questa cosa. Vai da lui prima.
                         -> main
                     - questions:
                         {uppercaseTranslator(firstCharacterState)}: Certo!
@@ -65,7 +65,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
             + [Lasci il dialogo.]
                 -> main
             -
-            -> talk_with_first_character
+                -> talk_with_first_character
     
 === knowing_first_character
 ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
@@ -95,8 +95,8 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         ~ firstStoryQuestCount ++
         
         ???: Non è che hai visto passare di qui una persona?
-        ???: Altə all’incirca una balla di fieno e che si muove come un violino, probabilmente presə a stordire di domanda quel tizio, il mentore.
-        ???: Oh, non posso essere arrivata qui da sola, vero? Qualsiasi cosa sia <i>qui</i>.
+        ???: Altə all’incirca una balla di fieno e che si muove come un violino, probabilmente presə a stordire di domande quel tizio, il mentore.
+        ???: Non posso essere arrivata qui da sola, vero? Qualsiasi cosa sia <i>qui</i>.
         ???: Come lə trovo?
             + [Dammi dettagli più concreti.]
                     ~ firstBlue ++
@@ -104,7 +104,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 ???: Si muove. Respira. Mangia. Saltella. Canta.
                 ???: A volte tutte queste cose assieme.
                 ???: E ha molta fantasia.
-                ???: Ma non so se sia il tuo forte.
+                ???: Sempre che tu sappia cosa sia.
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
                     ~ firstYellow ++
                 ???: Non ci avevo pensato!
@@ -114,7 +114,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
                 ~ firstRed ++
                 ???: Ha senso, ma Talco non è persona da azione.
-                ???: Si muove nello spazio come se fosse vento.
+                ???: Si trascina nello spazio come se fosse vento.
                 ???: E lascia alle sue spalle l'odore della primavera.
             + [Se ti senti sola, sono qui ad ascoltarti.]
                 ~ firstGreen ++
@@ -126,7 +126,6 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 ???: Grazie.
                 ???: Avevo bisogno di queste parole.
                 ???: Ora lə sento più vicinə, anche se ho comunque bisogno di un suo abbraccio.
-                ???: Cavolo.
             -
         ???: Talco, dimmi che sei qui anche tu, ti prego, non so capire il mondo senza di te.
         ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameUno}.
@@ -143,11 +142,12 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     	    -
     	{charNameUno}: E con che pronomi vuoi che ti chiami?
     	        -> gender ->
-        {charNameUno}: {name}, secondo te il nome di una persona è qualcosa di importante?
+    	{charNameUno}: Grandioso, io uso i femminili.      
+        {charNameUno}: Ma {name}, secondo te il nome di una persona è qualcosa di importante?
     	    + [È utile, altrimenti come ci distinguiamo?]
     	        {charNameUno}: Tu devi essere la persona più divertente della festa, vero?
     	        {charNameUno}: Anche se immagino che una visione pratica abbia dei vantaggi.
-    	        {charNameUno}: O per lo meno, faresti felice mio padre.
+    	        {charNameUno}: Per lo meno faresti felice mio padre.
                     ~ firstBlue ++
             + [Solo se possiamo continuamente cambiarlo.]
                 {charNameUno}: Ah ah ah!
@@ -160,7 +160,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                     ~ firstRed ++
             + [È un dono della tua famiglia che resterà sempre con te.]
                 {charNameUno}: Non ci avevo mai pensato.
-                {charNameUno}: Non per tutt3 è un piacere, questa cosa.
+                {charNameUno}: Ma non tutt3 ne sono felici.
                 {charNameUno}: E per alcune persone il nome è qualcosa che si sceglie.
                 {charNameUno}: Una liberazione.
                     ~ firstGreen ++
@@ -196,7 +196,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Talco è una persona che agisce, non resta ad aspettare.
                     ~ firstGreen ++
             + [Rinunciare al superfluo ci avvicina alla natura delle cose.]
-                {firstPurple > 1: {charNameUno}: Le tue parole mi aiutano a sentire un po' meno la solitudine di questo luogo.}
+                {firstPurple > 1: {charNameUno}: Le tue parole mi fanno sentire meno sola.}
                 {charNameUno}: Ho pensato subito che {charNameUno} avesse un valore negativo.
                 {charNameUno}: Dimenticandomi che in ogni brano il silenzio è parte fondamentale.
                 {charNameUno}: Grazie, {name}. La tua saggezza è illuminante.
@@ -209,7 +209,8 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         {charNameUno}: Interessante.
         {charNameUno}: Forse quel mentore può aiutarci a capire qualcosa?
         {charNameUno}: O forse va bene così.
-        {charNameUno}: Forse mi serve questa confusione. Forse sto suonando da troppo tempo la solita canzone, ma non è più la mia.
+        {charNameUno}: Forse mi serve questa confusione.
+        {charNameUno}: Forse sto suonando da troppo tempo la solita canzone, ma non è più la mia.
         {charNameUno}: Forse devo trovare nuove note, o un nuovo strumento.
         {charNameUno}: O forse questo luogo ha bisogno della mia musica?
         {charNameUno}: L’unica cosa certa è che ho bisogno di Talco.
@@ -224,17 +225,17 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         //Paura di deludere la famiglia scelta
         ~ firstStoryQuestCount ++
         
-        {charNameUno}: Alla fine, niente Talco.
+        {charNameUno}: Alla fine niente Talco.
         {charNameUno}: Non ricordo quando è stata l'ultima volta che sono andata da qualche parte senza di ləi.
         {charNameUno}: Prima mi sono persa nel cercarlə.
-        {charNameUno}: Ok, forse mi sono distratta nel cercare di raggiungere uno scoiattolo perché aveva la ghianda più bella che avessi mai visto.
+        {charNameUno}: Ok, forse mi sono distratta cercando di raggiungere uno scoiattolo perché aveva la ghianda più bella che avessi mai visto.
         {charNameUno}: Volevo insegnargli a suonarla, e invece mi sono ritrovata tra gli alberi senza sapere dove andare e c’era otto sentieri diversi davanti a me.
         {charNameUno}: Otto!
         {charNameUno}: Ma poi come fanno ad esserci otto sentieri in un posto dove ci siamo solo noi?
             + [Esiste un numero definito di sentieri per persona?]
                 {charNameUno}: Credo dipenda dal tempo a disposizione.
                 {charNameUno}: Un po' come puoi suonare qualsiasi strumento, se hai del tempo.
-                {charNameUno}: Ma quanto tempo serve per otto sentieri, da sola?
+                {charNameUno}: Ma quanto tempo serve per creare otto sentieri da sola?
                     ~ firstBlue ++
             + [Non so molto di scoiattoli, ma le falene suonano i girasoli!]
                 {charNameUno}: Cavoli! Scoiattoli e falene, sarebbe la miglior band possibile!
@@ -255,15 +256,15 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: E non so dove andare.
                     ~ firstPurple ++
             -    
-        {charNameUno}: Sarà tutta roba del mentore?
+        {charNameUno}: Non è che saranno tutti i passi del mentore?
         {charNameUno}: Cammina così tanto, e per cosa poi?
         {charNameUno}: Oh.
         {charNameUno}: Oh.
         {charNameUno}: Sto iniziando a ragionare come Anna.
-        {charNameUno}: Anna è una delle mie amiche del conservatorio, è un anno più giovane di me e ora spinge perché mi proponga come assistente di Ghiberti.
+        {charNameUno}: Anna è una delle mie amiche del conservatorio, è un anno più giovane di me e ora vuole che mi proponga come assistente di Ghiberti.
         {charNameUno}: Dice che lui ha stima di me e questa è la mia occasione.
-        {charNameUno}: Anna e Olga discutono spesso su questa cosa, perché Olga pensa che con la classica io sia sprecata, che devo mettere su una band e invadere tutti i locali della città.
-        {charNameUno}: A volte Olga pensa che Talco la veda come lei, ma in realtà Talco è dell’idea che debba puntare sui reality show: dice che non importa vincere, importa farmi vedere, e magari fare qualcosa di casinoso così poi sui social se ne parla.
+        {charNameUno}: Anna e Olga discutono spesso perché Olga pensa che con la classica io sia sprecata, che devo mettere su una band e invadere tutti i locali della città.
+        {charNameUno}: Olga crede che Talco la veda come lei, ma in realtà Talco vuole che punti sui reality show: dice che non importa vincere, importa fare casino così poi sui social se ne parla.
         {charNameUno}: E poi Ennio, no Ennio no.
         {charNameUno}: Ennio dice che ho sbagliato strada.
             + [Anna ha ragione: bisogna essere pratiche nella vita.]
@@ -288,8 +289,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                     ~ firstGreen ++
             + [Tutte le strade sono sbagliate se non sai dove stai andando.]
                 {charNameUno}: Mi ricordi il nonno.
-                {charNameUno}: Anche davanti alle cose più fastidiose cercava di avere uno sguardo ampio.
-                {charNameUno}: Ignorava i piccoli fastidi per notare il grande insieme.
+                {charNameUno}: Ignorava i piccoli fastidi per concentrarsi sul grande insieme delle cose.
                     ~ firstPurple ++
             -    
         {charNameUno}: Oh, tutti hanno una loro opinione su cosa dovrei fare.
@@ -311,7 +311,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Dovrei vivisezionare una di quelle lumacone trovate dietro alla serra?
                 {charNameUno}: Testare gli arbusti della foresta?
                 {charNameUno}: No, scusa, non è quello che hai detto.
-                {charNameUno}: Ma studiare crea una divisione tra studiato e studiante, e a me questa cosa sta sul culo.
+                {charNameUno}: Ma studiare crea una divisione tra studiato e studiante, odio questa cosa.
                     ~ firstBlue ++
             + [Più silenzio significa più spazio per fare rumore!]
                 {charNameUno}: Hai ragione, però mi sento un po' sciocca.
@@ -326,7 +326,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                     ~ firstRed ++
             + [Il silenzio ti sta offrendo la vulnerabilità necessaria per raccontarti.]
                 {charNameUno}: Ma non conosco bene le parole.
-                {charNameUno}: L'unica cosa che so fare, è suonare.
+                {charNameUno}: L'unica cosa che so fare è suonare.
                     ~ firstGreen ++
             + [Il giardino tutto è musica, si tratta solo di ascoltare.]
                 {charNameUno}: Hai ragione, {name}.
@@ -336,10 +336,10 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
             -
         {charNameUno}: Sono abituata a essere circondata da gente tutto il giorno, sai?
         {charNameUno}: A vivere nella festa.
-        {charNameUno}: Sto in una casa con altre cinque persone, un posto pieno di muffa e corridoi e camere con collegamenti assurdi, ma tutto questo non pesa perché c’è sempre festa, c’è sempre qualcosa di giocoso da fare.
-        {charNameUno}: Talco crea strumenti con qualsiasi cosa trovi in giro.
-        {charNameUno}: D’estate quando scende il caldo saliamo sul tetto e iniziamo a cantare e improvvisare e a quel punto vento e sudore si portano via le preoccupazioni e non c’è nulla a cui pensare.
-        {charNameUno}: E allora arriva la sensazione, quel sentirti parte di tutto, priva di confini.
+        {charNameUno}: Sto in una casa con altre cinque persone, un posto pieno di muffa e corridoi e armadi e c’è sempre una festa da fare.
+        {charNameUno}: Talco crea strumenti con qualsiasi cosa trova in giro.
+        {charNameUno}: Le sere d'estate saliamo sul tetto a cantare e improvvisare e vento e sudore si portano via le preoccupazioni e non c’è nulla a cui pensare.
+        {charNameUno}: A quel punto arriva la sensazione, quel sentirti parte di tutto, priva di confini.
         {charNameUno}: Sei la musica, sei l’umidità nell’aria, sei la gola del vicino che si lamenta del casino.
         {charNameUno}: Ma qui, qui è tutto così calmo, posso sentire i pensieri dei miei pensieri e rimango intrappolata dentro a me stessa.
                 + [La disciplina può aiutare a spegnere i pensieri.]
@@ -375,11 +375,9 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         //Paura delle conseguenze della scelta.
         ~ firstStoryQuestCount ++
         
-        {charNameUno}: Conoscevo questo ragazzo, Jonah.
-        {charNameUno}: Un genio, per me un genio.
-        {charNameUno}: Ti prendeva in mano un’arpa e trasformava il suo suono in qualsiasi cosa.
-        {charNameUno}: Per due anni ha fatto da spalla a un tizio di Beijing, una specie di rockstar della musica classica in Cina, ma poi Jonah ha iniziato a sentire la mancanza dell’Europa ed è tornato cercando di fare una carriera da solista.
-        {charNameUno}: Però man mano che le porte si chiudevano, si chiudeva anche la sua sicurezza, e il suo amore per la musica.
+        {charNameUno}: Conoscevo questo ragazzo, Jonah, un arpista e un genio.
+        {charNameUno}: Per due anni ha fatto da spalla a un tizio di Beijing, una rockstar della musica classica, ma poi Jonah ha iniziato a sentire la mancanza dell’Europa ed è tornato cercando di fare una carriera da solista.
+        {charNameUno}: Però man mano che le porte si chiudevano, si chiudeva anche la sua sicurezza e il suo amore per la musica.
         {charNameUno}: Ora non so più dove sia, Jonah.
         {charNameUno}: Qualche compagna di corso giura di averlo visto mendicare, qualche altro che suona sotto pseudonimo alle feste di odiosi ricconi.
         {charNameUno}: Una volta ho creduto di averlo visto lavorare in un supermercato.
@@ -387,13 +385,13 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         {charNameUno}: Scendi a compromessi, o accetti il rischio di morire di fame?
         {charNameUno}: O aspetti fino a quando non sia il mondo a decidere per te?
             + [Siamo votat3 alla sopravvivenza, una soluzione si trova sempre.]
-                {charNameUno}: Vorrei però qualcosa di meglio di sopravvivere, no?
+                {charNameUno}: Grazie ma voglio qualcosa di più che sopravvivere.
                 {charNameUno}: Banale, ma vorrei permettermi il lusso di vivere.
                 ~ firstBlue ++
             + [Canta e balla. Domani è una cosa lontana.]
                 {charNameUno}: Mi sembra di sentire Talco, con queste frasi.
                 {charNameUno}: Ma per me è da molto ormai che è <i>domani</i>.
-                {charNameUno}: Il conservatorio è finito da mesi, e io canto, ballo, e non so ancora che cosa fare.
+                {charNameUno}: Il conservatorio è finito da mesi, e io suono, ballo, ma non so ancora che cosa fare.
                     ~ firstYellow ++
             + [Mezzo compromesso è già una completa sconfitta.]
                 {charNameUno}: Eppure Jonah ha perso del tutto, comunque.
@@ -419,10 +417,9 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         ~ firstStoryQuestCount ++
         
         {charNameUno}: Stavo ripensando al prof Ghiberti.
-        {charNameUno}: Te ne ho già parlato? Non ricordo.
         {charNameUno}: Lui vede tutta la musica come una cosa matematica.
-        {charNameUno}: Non è una cosa strana, ci sono pianisti che trattano il piano come fosse un abaco, ma senza rinunciare alla poesia.
-        {charNameUno}: Per Ghiberti invece tutto va ridotto a una specie di lista di elementi primitivi che possono essere combinati solo in un determinato modo per ottenere soluzioni prevedibili.
+        {charNameUno}: Ci sono pianisti che trattano il piano come fosse un abaco, ma senza rinunciare alla poesia.
+        {charNameUno}: Per Ghiberti invece il mondo è una lista di elementi primitivi che possono essere combinati solo in un determinato modo per ottenere soluzioni prevedibili.
         {charNameUno}: Una volta a vocina bassa ha detto che il jazz è un errore.
             + [La prevedibilità <b>è</b> poetica. La cosa più rara al mondo.]
                 {charNameUno}: Allora non sono una persona poetica.
@@ -431,7 +428,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                     ~ firstBlue ++
             + [È un errore smettere di giocare, e il jazz è musica che gioca.]
                 {charNameUno}: Credo che tu gli abbia appena regalato un crepacuore.
-                {charNameUno}: Tutta la musica è gioco, se sai rinunciare al divismo e perderti con band e pubblico.
+                {charNameUno}: Tutta la musica è gioco, se sai rinunciare all'ego e perderti con band e pubblico.
                 ~ firstYellow ++
             + [Ha paura di vedere la trasformazione che viene dal disordine.]
                 {charNameUno}: Già, è una possibilità.
@@ -451,7 +448,6 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                     ~ firstPurple ++
             - 
         {charNameUno}: Ghiberti sembra un uomo felice, sorride molto, eppure a volte mi sembra il sorriso che avrebbe una macchina per fare bulloni o una pressa.
-        {charNameUno}: Un sorriso che dice “Così è, così si fa, c’è davvero altro da pensare?”.
         {charNameUno}: A me spaventa un sacco quel sorriso, quel modo di fare.
         {charNameUno}: Tutti questi numerini e fattori tolgono l’esperienza, l’errore, il senso di comunità.
         {charNameUno}: Una comunità canta, ma per farlo deve sbagliare, essere imprevedibile.
@@ -459,7 +455,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         {charNameUno}: È come quella roba con l’AI, orecchiabile, prevedibile, dimenticabile.
         {charNameUno}: Odio poche cose, ma questa su tutte: odio tutte le cosine pratiche e calcolabili, sono una rinuncia alla vita.
         {charNameUno}: Come sta in piedi una comunità, così?
-            + [Una comunità non regge a lungo senza un po' di senso pratico.]
+            + [Una comunità non regge a lungo senza senso pratico.]
                 {charNameUno}: Ma quando tutto è solo senso pratico?
                 {charNameUno}: A quel punto comunque la comunità è destinata a morire.
                     ~ firstBlue ++
@@ -491,9 +487,8 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         {charNameUno}: Sai, mi sto abituando a questo luogo.
         {charNameUno}: Anche se non sembra cambiare mai niente.
         {charNameUno}: Ma non è un blocco brutto.
-        {charNameUno}: Sembra più il momento prima del temporale, quando sai che sta per succedere qualcosa.
-        {charNameUno}: E non sai nemmeno cosa aspettarti.
-        {charNameUno}: E allora annusi l'aria, e ti senti viva.
+        {charNameUno}: Sembra più il momento prima del temporale, quando sai che sta per succedere qualcosa, ma non sai cosa.
+        {charNameUno}: Annusi l'aria e ti senti viva.
         {charNameUno}: Merda, faccio davvero schifo a parlare.
             + [Non tanto a parlare, quanto ad arrivare al punto.]
                 {charNameUno}: Mi ricordi perché continuo a raccontarti queste cose?
@@ -524,9 +519,8 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         {charNameUno}: Comunque, continua a tornarmi in mente un ricordo.
         {charNameUno}: L'anno scorso abbiamo occupato questo parco per una settimana.
         {charNameUno}: Il comune voleva distruggere gli alberi, e volevamo fare qualcosa di utile, sai.
-        {charNameUno}: E il primo giorno è stato tutto adrenalina.
         {charNameUno}: La prima notte il freddo non l'abbiamo sentito da come eravamo prese dalla gioia.
-        {charNameUno}: Man mano però l'euforia è andata scemando.
+        {charNameUno}: Però man mano l'euforia è andata scemando.
         {charNameUno}: Alcune persone se ne sono andate, altre sono restate ma senza spinta.
         {charNameUno}: L'ultima sera c'è stato un momento di puro silenzio.
         {charNameUno}: Non i nostri strumenti, non le nostre voci.
@@ -610,7 +604,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         {charNameUno}: Ma per lei l'obiettivo è che mi trasformi in Lang Lang, Mitsuko Uchida, Alfred Brendel.
         {charNameUno}: Prestigio, onoreficienze e denaro.
         {charNameUno}: Chi glielo dice che a ventitrè anni per queste cose sono già vecchia?
-        {charNameUno}: Con queste premesse, la mia strada è totalmente sbagliata.
+        {charNameUno}: Con queste premesse la mia strada è totalmente sbagliata.
             + [Tutt3 e tre hanno fatto concerti prima della maggiore età.]
                 {charNameUno}: Esattamente.
                 {charNameUno}: Per cui direi che sono fallita e posso appendere il piano al muro.
@@ -645,7 +639,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
 ~ temp charNameUno = uppercaseTranslator(firstCharacterState) 
     ~ firstStoryQuestCount ++
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
-    {charNameUno}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?|Secondo te potrei insegnare alle api a creare un quartetto? Con quelle codine sarebbero perfette con la viola. O forse qualcosa da suonare con le ali, che vibri. Potrebbero muoversi nella cassa di una chitarra e fare i loro suonini.|Durante le lezioni il prof Ghiberti aveva l’abitudine di tirarsi il colletto del maglioncino. Li aveva tutti rovinati, se li tirava così tanto che a volte ti chiedevi se gli mancava l’aria.|Al Conservatorio ci sono troppe cose che non c’entrano con la musica. C’è competitività, c’è senso di fretta, di perfezione. Però mi manca, sai? Tutto quello che sta tra una lezione e l’altra, tutto quel parlare di musica mi faceva sentire viva.|Quando ho solo la mia chitarrina, è come se uscisse un’altra me. Non conta più l’insieme ma il momento, la singola nota è come un tratto di pennello, e improvvisare diventa come dipingere. Non so improvvisare col pianoforte, ci sono troppe cose. Però con la chitarra posso fare qualunque cosa.|Litigo spesso con mio padre. È un brav’uomo, molto pratico. Si preoccupa per me perché nel suo mondo tutto fatto di numeri e linee uscire dalla via principale significa morire. E forse ha ragione ma per me è morire anche restare in quelle cose. Schiacciata tra quelle regole.}
+    {charNameUno}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?|Secondo te potrei insegnare alle api a creare un quartetto? Con quelle codine sarebbero perfette con la viola. O forse qualcosa da suonare con le ali, che vibri. Potrebbero muoversi nella cassa di una chitarra e fare i loro suonini.|Durante le lezioni il prof Ghiberti aveva l’abitudine di tirarsi il colletto del maglioncino. Li aveva tutti rovinati, se li tirava così tanto che a volte ti chiedevi se gli mancava l’aria.|Al Conservatorio ci sono troppe cose che non c’entrano con la musica. C’è competitività, c’è senso di fretta, di perfezione. Però mi manca, sai? Tutto quello che sta tra una lezione e l’altra, tutto quel parlare di musica mi faceva sentire viva.|Quando ho solo la mia chitarrina, è come se uscisse un’altra me. Non conta più l’insieme ma il momento, la singola nota è come un tratto di pennello, e improvvisare diventa come dipingere. Non so improvvisare col pianoforte, ci sono troppe aspettative.|Litigo spesso con mio padre. È un brav’uomo, molto pratico. Si preoccupa per me perché nel suo mondo tutto fatto di numeri e linee uscire dalla via principale significa morire. E forse ha ragione ma per me è morire anche restare in quelle cose. Schiacciata tra quelle regole.}
             -> main
 
 
@@ -730,27 +724,25 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
         <i>Questo è l'inchiostro che hai a disposione per aiutare {charNameUno} a riscrivere la sua storia.</i>
             ~ inkActions(firstCharacterInkLevel)
-        <i>Puoi dire un'ultima cosa a {charNameUno} prima di provare a farle riscrivere la sua paura.</i>
-        + {firstRed} [{charNameUno}: prendi una strada e se non ti piace cambiala!]
-                ~ firstRed ++
-                -> one
-        + {firstYellow} [{charNameUno}: ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti ora!]
-                ~ firstYellow ++
-                -> one
-        + {firstGreen} [{charNameUno}: hai paura di deludere i tuoi amici, e questo ti blocca.]
-                ~ firstGreen ++
-                -> one
-        + {firstBlue} [{charNameUno}: hai preso una strada che non è la tua. Succede.]
-                ~ firstBlue ++
-                -> one
-        + {firstPurple} [{charNameUno}: quello che stai cercando è una vita con uno scopo più grande.]
-                ~ firstPurple ++
-                -> one
+        + [Iniziamo ad aiutarla!]
+            -> one
         + [Preferisco prendermi del tempo.]
             -> main
 
     
     = one
+    Per questi quattro punti ricollego vari elementi delle prime quattro storie obbligatorie, creando dei temi, e aggiungo poi delle possibilità esplorative se sono state ascoltate le altre storie.
+ 
+    Per la prima domanda rompiamo la convinzione che non faccia scelte sulle scelte che in realtà ha già fatto: le persone care, crearsi una nuova rete, cantare sul tetto.
+    
+    Per la seconda la paura che le persone si sentano tradite: il rapporto con Talco è centrale, la stima che prova. E Talco la accoglie per quel che è, con le sue insicurezze. (magari aggiungere che è l'uncia persona con cui litiga, eppure non se ne va).
+    
+    Per le strade chiuse: Jonah, e ognuna aveva idee diverse su cosa gli fosse accaduto, alcune idee brutte, altre belle, ma tutte possibilità. E nessuna ha ascoltato Jonah: e se fosse più felice ora come cassiere del supermercato? Se avesse reciso i contatti con le altre persone perché la pressione sociale era troppo alta, come sta accadendo ora a lei?
+    
+    Sulla rinuncia: anche la rinuncia è una scelta, alla fine. scegliere per scegliere, non è più divertente a questo punto farlo in modo esplicito? Anche scegliendo di rinunciare, preparandoti ad accogliere cosa sta per arrivare.
+    
+    DEVO SOLO CAPIRE COME QUESTA COSA CONDIZIONI IL FINALE.   
+    
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
         Qui abbiamo la prima affermazione vera e propria, che spingerà verso uno degli stati possibili. è l'unica che c'è a prescindere dal livello di inchiostro.
             + Esploro un tema
@@ -798,6 +790,19 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
 
  = ending
  ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
+ Ultima dichiarazione.
+        + {firstRed} [{charNameUno}: prendi una strada e se non ti piace cambiala!]
+                ~ firstRed ++
+        + {firstYellow} [{charNameUno}: ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti ora!]
+                ~ firstYellow ++
+        + {firstGreen} [{charNameUno}: hai paura di deludere i tuoi amici, ma loro saranno sempre con te.]
+                ~ firstGreen ++
+        + {firstBlue} [{charNameUno}: hai preso una strada che non è la tua. Succede. Ora che lo sai, puoi cambiare.]
+                ~ firstBlue ++
+        + {firstPurple} [{charNameUno}: quello che stai cercando è una vita con uno scopo più grande.]
+                ~ firstPurple ++
+        -     
+        
     Qui a seconda di com'è andata prima la situazione, la personaggia può darsi un nuovo nome o mantenere lo stesso. E poi, se firstCharacterSpecialEvent == true, darci anche una info sulla mentore.
         ~ firstStory = Ended
         //Resetto il counter degli spostamenti. In questo modo da qui posso iniziare a tener traccia dello spostamento della personaggia. Alcune potrebbero anche salutarci e bona.
