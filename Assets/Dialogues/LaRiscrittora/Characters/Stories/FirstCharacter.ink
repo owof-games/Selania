@@ -128,6 +128,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 ???: Ora lə sento più vicinə, anche se ho comunque bisogno di un suo abbraccio.
             -
         ???: Talco, dimmi che sei qui anche tu, ti prego, non so capire il mondo senza di te.
+        ???: Sei l'unica persona con cui posso permettermi di litigare.
         ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameUno}.
         {charNameUno}: No, io sono {charNameUno}.
         {charNameUno}: Ehi! Non è questo il mio nome.
@@ -263,6 +264,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         {charNameUno}: Sto iniziando a ragionare come Anna.
         {charNameUno}: Anna è una delle mie amiche del conservatorio, è un anno più giovane di me e ora vuole che mi proponga come assistente di Ghiberti.
         {charNameUno}: Dice che lui ha stima di me e questa è la mia occasione.
+        {charNameUno}: Anna è così sicura di sè da quando ha lasciato l'ex molesto.
         {charNameUno}: Anna e Olga discutono spesso perché Olga pensa che con la classica io sia sprecata, che devo mettere su una band e invadere tutti i locali della città.
         {charNameUno}: Olga crede che Talco la veda come lei, ma in realtà Talco vuole che punti sui reality show: dice che non importa vincere, importa fare casino così poi sui social se ne parla.
         {charNameUno}: E poi Ennio, no Ennio no.
@@ -731,15 +733,34 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
 
     
     = one
-    Per questi quattro punti ricollego vari elementi delle prime quattro storie obbligatorie, creando dei temi, e aggiungo poi delle possibilità esplorative se sono state ascoltate le altre storie.
+    {name}: Prima hai detto che hai il terrore di fare una scelta.
+        + {firstGreen} [Eppure hai deciso di costruire una nuova famiglia con l3 tu3 amic3.]
+            {name}: Hai aperto il tuo cuore, e loro ti amano.
+            {name}: Si preoccupano per te, cercano di aiutarti a trovare la tua strada.
+            {name}: E questo amore è frutto di infinite piccole scelte fatte ogni giorno.
+        
+        + {firstYellow} [Ma poi hai accettato il rischio più volte di suonare sul tetto.]
+            {name}: Hai accettato di essere festa in un mondo severo.
+            {name}: Hai cercato il gioco quando tutto ti dice che devi lavorare.
+            {name}: Hai accolto falene, scoiattoli e altri animali suonanti.
+        
+        + {firstRed} [Invece stai dimenticando che per finire il conservatorio hai lottato per anni.]
+            {name}: Che ogni esame che hai dato è stata una scelta.
+            {name}: Che ogni lezione che hai seguito è stata una scelta.
+            {name}: E presto o tardi, hai trovato la volontà di continuare.
+        
+        + {firstBlue} [Però da che sei qui hai esplorato tutto questo luogo.]
+            {name}: Hai inseguito uno scoiattolo.
+            {name}: Hai cercato Talco.
+            {name}: Non ti sei fatta spaventare dalla novità.
+        
+        + {firstPurple}[La stessa persona che ha accettato il suo nuovo nome, cercando di capire da dove venga.]
+            {name}: Accettare è una scelta, {charNameUno}.
+            {name}: Cercare risposte è un'altra scelta ancora.
+            {name}: E ammettere una propria paura, una scelta enorme.
+        -
  
-    Per la prima domanda rompiamo la convinzione che non faccia scelte sulle scelte che in realtà ha già fatto: le persone care, crearsi una nuova rete, cantare sul tetto.
-    
-    Per la seconda la paura che le persone si sentano tradite: il rapporto con Talco è centrale, la stima che prova. E Talco la accoglie per quel che è, con le sue insicurezze. (magari aggiungere che è l'uncia persona con cui litiga, eppure non se ne va).
-    
-    Per le strade chiuse: Jonah, e ognuna aveva idee diverse su cosa gli fosse accaduto, alcune idee brutte, altre belle, ma tutte possibilità. E nessuna ha ascoltato Jonah: e se fosse più felice ora come cassiere del supermercato? Se avesse reciso i contatti con le altre persone perché la pressione sociale era troppo alta, come sta accadendo ora a lei?
-    
-    Sulla rinuncia: anche la rinuncia è una scelta, alla fine. scegliere per scegliere, non è più divertente a questo punto farlo in modo esplicito? Anche scegliendo di rinunciare, preparandoti ad accogliere cosa sta per arrivare.
+
     
     DEVO SOLO CAPIRE COME QUESTA COSA CONDIZIONI IL FINALE.   
     
@@ -764,7 +785,32 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         
     = two
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
-        Secondo giro
+    {name}: Temi che le persone a cui vuoi bene si sentano tradite dalla scelta che farai.
+
+        + {firstGreen} [Il tuo cuore si preoccupa molto di loro, e poco di te.]
+            {name}: Non ti sei chiesta molto dove eri, ti sei messa solo a cercare Talco.
+            {name}: Ti sei preoccupata per Jonah.
+            {name}: Ma per te?
+        
+        + {firstYellow} [Giocando tradiamo la fiducia solo rompendo le regole a nostro vantaggio.]
+            {name}: Hai deciso di giocare con loro e lasciar loro tutto il potere?
+            {name}: O è una regola implicita, che non avete mai concordato ma che senti nell'aria?
+            {name}: E a prescindere: abbiamo sempre il diritto di revocare un accordo, una regola.
+        
+        + {firstRed} [Con Talco puoi litigare, eppure siete legatissim3.]
+            {name}: Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
+            {name}: Il Talco che hai raccontato si arrabbierebbe di più se tu facessi una scelta per te pensando a ləi.
+        
+        + {firstBlue} [Forse accadrà, ma non è un tuo problema.]
+            {name}: Stai costruendo la tua vita, non la loro.
+            {name}: Se la pensano diversamente, non è amicizia, e ti sei salvata da qualcosa di peggiore.
+        
+        + {firstPurple}[La paura di tradire è un'altra faccia dell'ego.]
+            {name}: È la voglia di sembrare impeccabili.
+            {name}: Infallibili.
+            {name}: Inattaccabili.
+            {name}: Ma amore e crescita prosperano nell'errore e nella vulnerabilità.
+        -
         {
         - firstCharacterInkLevel == Low:
             -> ending
@@ -774,7 +820,34 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         
     = three
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
-        Terzo giro
+    {name}: Vedi una scelta come una strada chiusa, qualcosa da cui non poter tornare indietro.
+
+        + {firstGreen} [Ragioni come se fossi sola se dovessi cadere.]
+            {name}: Pensi che Talco ti abbandonerebbe?
+            {name}: Anna? Olga? Persino Ennio.
+            {name}: I tuoi genitori.
+            {name}: Anche se a volte i vostri cuori sono distanti, quando c'è un bisogno sappiamo sempre ritrovarci.
+            
+        + {firstYellow} [Se non tiri nessun dado, non c'è storia da far avanzare.]
+            {name}: Quando giochi non sempre le cose vanno come vuoi, ma comunque <i>vanno</i>.
+            {name}: E fintanto che le cose hanno di dove andare, c'è tempo per cambiare.
+            {name}: E a volte anche ritirare i dadi.
+            
+        + {firstRed} [La storia di Jonah non è un ammonimento, è un successo.]
+            {name}: Ha deciso che non gli stava più bene quello che aveva, e si è mosso per cambiarlo.
+            {name}: E il leggere negativamente le cose che forse gli sono capitate raccontano nulla di Jonah e molto di chi le racconta.
+            {name}: C'è orgoglio anche dietro una cassa del supermercato, non solo su palco.
+        
+        + {firstBlue} [Ogni persona che conosci ha immaginato sorti diverse per Jonah.]
+            {name}: E nessuna di queste è una fine.
+        
+        + {firstPurple}[Eppure la prima cosa che hai visto qui sono otto sentieri.]
+            {name}: Otto luoghi dove andare.
+            {name}: E ogni sentiero ha una direzione in cui andare, e una da cui tornare.
+            {name}: A volte l'erba può essere cresciuta.
+            {name}: A volte l'acqua può averne cancellato un pezzo.
+            {name}: Ma il sentiero è sempre lì, ad aspettare.
+        -
         {
         - firstCharacterInkLevel == Normal:
             -> ending
@@ -784,13 +857,34 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     
     = four
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
-        Quarto e ultimo giro giro
+        {name} Questo posto ti ha assegnato un nome, e quel nome è {charNameUno}.
+
+        + {firstGreen} [Quando Anna ha rinunciato all'ex, ha scoperto la sicurezza.]
+            {name}: Rinunciare vuol dire anche prendersi cura di sé.
+            {name}: Un atto d'amore quando qualcosa non ci fa più bene.
+     
+        + {firstYellow} [Giocare è bello perché puoi sempre rinunciare a farlo.]
+            {name}: Quando una roba la devi fare anche quando non vuoi, quello è il lavoro.
+            {name}: Per questo fa schifo.
+         
+        + {firstRed} [C'è più coraggio nella rinuncia che nel compromesso.]
+            {name}: Spesso è più costosa, ma la coerenza personale non ha prezzo.
+        
+        + {firstBlue} [Rinunciare alla ricerca di Talco è stato un atto di autopreservazione.]
+            {name}: Se una cosa non ha senso, non ha senso anche se continuiamo ad insistere nel farla.
+        
+        + {firstPurple}[Un infinito più piccolo resta comunque infinito.]
+            {name}: Rinuncia a una cosa e sarai comunque tutto.
+            {name}: Un nome è solo un nome.
+            {name}: Una persona è un universo intero.
+    
+        -
         
         -> ending
 
  = ending
  ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
- Ultima dichiarazione.
+     Per questo il mio consiglio è...
         + {firstRed} [{charNameUno}: prendi una strada e se non ti piace cambiala!]
                 ~ firstRed ++
         + {firstYellow} [{charNameUno}: ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti ora!]
@@ -803,11 +897,27 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 ~ firstPurple ++
         -     
         
-    Qui a seconda di com'è andata prima la situazione, la personaggia può darsi un nuovo nome o mantenere lo stesso. E poi, se firstCharacterSpecialEvent == true, darci anche una info sulla mentore.
-        ~ firstStory = Ended
-        //Resetto il counter degli spostamenti. In questo modo da qui posso iniziare a tener traccia dello spostamento della personaggia. Alcune potrebbero anche salutarci e bona.
-        ~ movementsCounter = 0
-    -> main
+    {charNameUno}: Grazie, {name}.
+    {charNameUno}: Mentre parlavi mi è nata una nuova canzone in testa.
+    {charNameUno}: Qualcosa di fresco, di pronto a cambiare.
+    {charNameUno}: La canzone del mio vero nome.
+    {charNameUno}: E il mio vero nome è:
+    
+        {
+        - firstCharacterSpecialEvent == true:
+            -> secret_ending
+        - else:
+             ~ firstStory = Ended
+             ~ movementsCounter = 0
+            -> main
+        }
+    
+    
+= secret_ending
+
+    ~ firstStory = Ended
+    ~ movementsCounter = 0
+        -> main
         
 
 
@@ -817,20 +927,20 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
 
     {
-        - firstCharEndingDialogue < 10:
+        - firstCharEndingDialogue < 4:
             -> top
         - else:
             -> goodbye
     }
     
         - (top)
-            + opzione
+            * opzione
                 ~ firstCharEndingDialogue ++
                     -> personaggia_uno_storia_conclusa
-            + opzione
+            * opzione
                 ~ firstCharEndingDialogue ++
                     -> personaggia_uno_storia_conclusa
-            + opzione
+            * opzione
                 ~ firstCharEndingDialogue ++
                     -> personaggia_uno_storia_conclusa
             + esci dalla conversazione
