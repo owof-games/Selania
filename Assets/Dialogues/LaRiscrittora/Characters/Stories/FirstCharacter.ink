@@ -195,7 +195,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Ma la risposta lo sarebbe meno.
                 {charNameUno}: Talco è una persona che agisce, non resta ad aspettare.
                     ~ firstGreen ++
-            + [Rinunciare al superfluo può avvicinarci alla natura delle cose.]
+            + [Rinunciare al superfluo ci avvicina alla natura delle cose.]
                 {firstPurple > 1: {charNameUno}: Le tue parole mi aiutano a sentire un po' meno la solitudine di questo luogo.}
                 {charNameUno}: Ho pensato subito che {charNameUno} avesse un valore negativo.
                 {charNameUno}: Dimenticandomi che in ogni brano il silenzio è parte fondamentale.
@@ -248,8 +248,11 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Sarebbe carino, sì.
                 {charNameUno}: Ma forse prima devo capire perché ho questo nuovo nome, cosa farmene.
                     ~ firstGreen ++
-            + [Opzione che aumenta il viola]
-                ~ firstPurple ++
+            + [O forse il sentiero è unico, ma ci sono otto {charNameUno}.]
+                {charNameUno}: In effetti mi sento divisa, frammentata.
+                {charNameUno}: In questo periodo della mia vita ci sono troppe spinte.
+                {charNameUno}: E non so dove andare.
+                    ~ firstPurple ++
             -    
         {charNameUno}: Sarà tutta roba del mentore?
         {charNameUno}: Cammina così tanto, e per cosa poi?
@@ -282,8 +285,11 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Un letto caldo, una copertina.
                 {charNameUno}: E non doversi porre questa domanda.
                     ~ firstGreen ++
-            + [Tutte le strade sono sbagliate, se non sai dove stai andando.]
-                ~ firstPurple ++
+            + [Tutte le strade sono sbagliate se non sai dove stai andando.]
+                {charNameUno}: Mi ricordi il nonno.
+                {charNameUno}: Anche davanti alle cose più fastidiose cercava di avere uno sguardo ampio.
+                {charNameUno}: Ignorava i piccoli fastidi per notare il grande insieme.
+                    ~ firstPurple ++
             -    
         {charNameUno}: Oh, tutti hanno una loro opinione su cosa dovrei fare.
         {charNameUno}: Tutt3 loro sembra abbiano preso una strada precisa e definita, non ho idea di come facciano.
@@ -322,7 +328,10 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: L'unica cosa che so fare, è suonare.
                     ~ firstGreen ++
             + [Il giardino tutto è musica, si tratta solo di ascoltare.]
-                ~ firstPurple ++
+                {charNameUno}: Hai ragione, {name}.
+                {charNameUno}: Ma per ascoltare serve restare in silenzio.
+                {charNameUno}: E la mia testa ora è piena di domande.
+                    ~ firstPurple ++
             -
         {charNameUno}: Sono abituata a essere circondata da gente tutto il giorno, sai?
         {charNameUno}: A vivere nella festa.
@@ -351,8 +360,11 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                     {charNameUno}: Scusa, non per offenderti.
                     {charNameUno}: Sei una persona molto dolce, ma non sei <i>loro</i>.
                         ~ firstGreen ++
-                + [Opzione che aumenta il viola]
-                    ~ firstPurple ++
+                + [I pensieri sono specchi: rompine uno e troverai cosa è reale e cosa è riflesso.]
+                    {charNameUno}: Forse dovrei stendermi e meditare.
+                    {charNameUno}: Lasciare che si spengano uno per uno.
+                    {charNameUno}: Ignorare la paura che ho all'idea di vedere le cose come stanno.
+                        ~ firstPurple ++
                 -
             ~ firstPauseTalking = firstCharPauseDurantion
             -> talk_with_first_character
@@ -387,14 +399,15 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Con o senza compromessi.
                 {charNameUno}: Questa è l'unica soluzione?
                     ~ firstRed ++
-            + [Donala senza chiedere altro in cambio, e qualcosa arriverà.]
+            + [Dona la tua musica senza chiedere e qualcosa arriverà.]
                 {charNameUno}: Forse in questa foresta, in questo giardino.
                 {charNameUno}: Ma da dove vengo, tutto prende e non dà nulla.
                 {charNameUno}: A parte le persone a cui voglio bene.
                 {charNameUno}: Forse dovrei donare loro quello che so fare?
                     ~ firstGreen ++
-            + [Opzione che aumenta il viola]
-                ~ firstPurple ++
+            + [Se cedi te stessa cedi al compromesso. Ma se resti come sei, porti cambiamento.]
+                {charNameUno}: E a quel punto ogni decisione sarebbe la <i>mia</i> decisione.
+                    ~ firstPurple ++
             -    
             ~ firstPauseTalking = firstCharPauseDurantion
             -> talk_with_first_character
@@ -415,11 +428,11 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Perché se so dove qualcosa andrà a parare, quella cosa mi sembra priva di vita.
                 {charNameUno}: E la poesia è qualcosa che porta vita.
                     ~ firstBlue ++
-            + [Un errore è non saper giocare, e il jazz è musica che gioca.]
+            + [È un errore smettere di giocare, e il jazz è musica che gioca.]
                 {charNameUno}: Credo che tu gli abbia appena regalato un crepacuore.
                 {charNameUno}: Tutta la musica è gioco, se sai rinunciare al divismo e perderti con band e pubblico.
                 ~ firstYellow ++
-            + [Forse aveva paura di vedere la trasformazione nel disordine.]
+            + [Forse ha paura di vedere la trasformazione nel disordine.]
                 {charNameUno}: Già, è una possibilità.
                 {charNameUno}: Anche se poi credo che il disordine sia solo una questione di prospettiva.
                 {charNameUno}: Alla lunga ci si abiuta anche a quello, e a quel punto diventa difficile comunque cambiare.
@@ -430,8 +443,11 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Rispettando la sua ossessione per le regole?
                 {charNameUno}: O regalandogli un po' di caos?
                 ~ firstGreen ++
-            + [Opzione che aumenta il viola]
-                ~ firstPurple ++
+            + [Ogni persona ha il suo percorso e le sue verità da scoprire.]
+                {charNameUno}: Di solito concorderei.
+                {charNameUno}: Ma non è troppo facile così?
+                {charNameUno}: Non è togliersi la responsabilità verso le altre persone?
+                    ~ firstPurple ++
             - 
         {charNameUno}: Ghiberti sembra un uomo felice, sorride molto, eppure a volte mi sembra il sorriso che avrebbe una macchina per fare bulloni o una pressa.
         {charNameUno}: Un sorriso che dice “Così è, così si fa, c’è davvero altro da pensare?”.
@@ -459,8 +475,10 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Un giardino.
                 {charNameUno}: Una fuga, senza mai chiamarla fuga.
                     ~ firstGreen ++
-            + [Opzione che aumenta il viola]
-                ~ firstPurple ++
+            + [Una comunità resiste solo se segue un obiettivo superiore.]
+                {charNameUno}: Come rendere il mondo più giusto.
+                {charNameUno}: O trasformare qualcosa di terribile in un gioco.
+                    ~ firstPurple ++
             -    
             ~ firstPauseTalking = firstCharPauseDurantion
             -> talk_with_first_character
@@ -534,8 +552,11 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Ma allora chiederei loro la strada verso casa.
                 {charNameUno}: Non so più quanto ancora voglia restare quì.
                     ~ firstGreen ++
-            + [Opzione che aumenta il viola]
-                ~ firstPurple ++
+            + [E quindi è {charNameUno} che ha lottato per gli alberi, o gli alberi hanno lottato per lei?]
+                {charNameUno}: L'una ha aiutato gli altri e viceversa.
+                {charNameUno}: Solo nell'illusione di essere separate, uno fa per l'altra.
+                {charNameUno}: Non c'è melodia se le note non si perdono in essa.
+                    ~ firstPurple ++
             -    
     
         {charNameUno}: Alla fine comunque ci hanno trascinati via, bastonati e tutto il resto.
@@ -551,7 +572,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         {charNameUno}: Vuoi sapere una cosa buffa? La passione per la musica l'ho presa da mio papà.
         {charNameUno}: Lo stesso uomo che ora vorrebbe cercassi un "lavoro vero".
         {charNameUno}: Casa è piena di vecchi strumenti pieni di polvere.
-        {charNameUno}: Sono del nonno che non ho mai conosciuto.
+        {charNameUno}: Sono del nonno paterno.
         {charNameUno}: Papà li tiene come se fossero delle reliquie.
         {charNameUno}: Ma ogni tanto ci permetteva di sentire le vecchie registrazioni, di quando nonno suonava e cantava nelle balere.
         {charNameUno}: E allora ci mettevamo a ballare con lui e mamma.
@@ -577,8 +598,11 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: La festa un momento per appianare le divergenze.
                 {charNameUno}: E questa è una cosa che posso capire.
                     ~ firstGreen ++
-            + [Opzione che aumenta il viola]
-                ~ firstPurple ++
+            + [C'è poco di divino in uno strumento condannato a non suonare.]
+                {charNameUno}: Per questo ogni tanto li rubavo e suonavo in camera.
+                {charNameUno}: Alcuni avevano un suono storto, forse per colpa delle tarme.
+                {charNameUno}: Eppure erano quelli con più storie da raccontare.
+                    ~ firstPurple ++
             -
         {charNameUno}: A pensarci, per certi versi, mamma è più cinica di papà.
         {charNameUno}: È grazie a lei se papà ha ceduto e mi sono iscritta al conservatorio.
@@ -605,8 +629,11 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Come se poi fosse prestigioso.
                 {charNameUno}: Mamma ha poche radici, e allora continua a guardare al futuro.
                     ~ firstGreen ++
-            + [Opzione che aumenta il viola]
-                ~ firstPurple ++
+            + [Ci trasformiamo sempre, ma non possiamo diventare qualcun altro.]
+                {charNameUno}: Dillo a lei.
+                {charNameUno}: Forse è la cosa più difficile di questo periodo.
+                {charNameUno}: Non se ne rende conto, ma è come se mi dicesse sempre che sono sbagliata.
+                    ~ firstPurple ++
             -    
             ~ firstPauseTalking = firstCharPauseDurantion
             -> talk_with_first_character
