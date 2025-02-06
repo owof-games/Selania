@@ -4,6 +4,13 @@
     VAR minStoryQuesTCount = 4
 //COME PROMEMORIA. LISTA DI TIPI DI TONO CHE POSSIAMO TENERE IN UNA CONVERSAZIONE: ROSSO (RABBIA, PASSIONE, AZIONE, OPPOSIZIONE). VIOLA (SPIRITUALITA', VISIONE DEL GRANDE SCHEMA DELLE COSE, SGUARDO POETICO, TESA VERSO UNA MISSIONE). GIALLO (GIOCOSITA', RISATA, DIVERTIMENTO, FANCIULLEZZA). VERDE (CUORE, AFFETTI, CURA DELLE PERSONE CARE, RIFLESSIONE EMOTIVA). BLU (RAZIONALITA', CALCOLO, VISIONE PRATICA, DISCIPLINA).
 
+//Opzioni per la affermazione finale.
+    VAR redAffirmation = false
+    VAR blueAffirmation = false
+    VAR yellowAffirmation = false
+    VAR greenAffirmation = false
+    VAR purpleAffirmation = false
+    
 //Gestione prima personaggia.
     LIST firstCharacterPossibleStates =  Rinuncia, IlGiocoso, StatoDue, StatoTre, StatoQuattro, StatoCinque, StatoSei
     VAR firstCharacterState = Rinuncia
@@ -288,3 +295,37 @@
     }
 
 ->->
+
+TODO: capire come settare a modo questa cosa
+=== function statement_count(story)
+VAR red = 0
+VAR blue = 0
+VAR yellow = 0
+VAR green = 0
+VAR purple = 0
+{
+    - story == firstStory:
+        ~ red = firstRed
+        ~ blue = firstBlue
+        ~ yellow = firstYellow
+        ~ green = firstGreen
+        ~ purple = firstPurple
+}
+
+{
+    - red > blue:
+        {
+            - red > yellow:
+                ~ redAffirmation = true
+            - else:
+                {
+                - red > green:
+                    ~ redAffirmation = true
+                - else:
+                    {
+                        - red > purple:
+                           ~ redAffirmation = true
+                    }
+                }
+        }
+}

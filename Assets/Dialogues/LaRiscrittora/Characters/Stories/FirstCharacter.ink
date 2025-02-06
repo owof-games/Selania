@@ -637,13 +637,15 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
 
     === first_story_chech_trigger
       ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
-        {
-        - loneliness == false:
-            -> loneliness_trigger
-        - else:
+      //In questa storia non ci sono trigger, lascio la struttura perché non si sa mai.
+      
+        //{
+        //- loneliness == false:
+        //    -> loneliness_trigger
+        //- else:
+        //    -> main_story_first_character
+        //}
             -> main_story_first_character
-    
-        }
         
         = loneliness_trigger
         Info
@@ -661,7 +663,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     {
         - not confession:
             -> confession
-        - not statement:
+        - not one:
             -> statement
         - else:
             -> one
@@ -669,12 +671,12 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     = confession
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
         {charNameUno}: Ho realizzato una cosa, una cosa su noi due.
-        -> firstAffinityCalc ->
+            -> firstAffinityCalc ->
         {firstPurple && firstYellow > firstBlue: {charNameUno}: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.}
         {firstPurple or firstYellow > firstBlue:{charNameUno}: Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.}
         {firstPurple &&  firstYellow < firstBlue: {charNameUno}: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.}
         {not (firstPurple && firstYellow > firstBlue) && not (firstPurple or firstYellow > firstBlue) && not (firstPurple &&  firstYellow < firstBlue): {charNameUno}: A volte siamo sullo stesso brano, altre no. E non ho ancora capito chi tra noi stia ignorando l'altra parte.}
-        {charNameUno}: Comunque: credo di aver capito perché il mio nome qui è {charNameUno}.
+        {charNameUno}: E credo di aver capito perché il mio nome qui è {charNameUno}.
         {charNameUno}: Penso al Ghiberti.
         {charNameUno}: Penso ai miei amici.
         {charNameUno}: Penso alla mia famiglia.
@@ -698,12 +700,27 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
 
     = statement
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
-        Abbiamo lo stato dell'inchiostro complessivo
-        ~ inkActions(firstCharacterInkLevel)
-        Qui dichiaro sostanzialmente su cosa voglio concentrarmi.
-        Non porta un'effettiva variazione di qualcosa, è utile solo per la giocatrice per capire su quali direzioni può andare.
-        O forse è qualcosa che dichiara la personaggia.
-        -> one
+        <i>Questo è l'inchiostro che hai a disposione per aiutare {charNameUno} a riscrivere la sua storia.</i>
+            ~ inkActions(firstCharacterInkLevel)
+        <i>Puoi dire un'ultima cosa a {charNameUno} prima di provare a farle riscrivere la sua paura.</i>
+        + {firstRed} [{charNameUno}: prendi una strada e se non ti piace cambiala!]
+                ~ firstRed ++
+                -> one
+        + {firstYellow} [{charNameUno}: ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti ora!]
+                ~ firstYellow ++
+                -> one
+        + {firstGreen} [{charNameUno}: hai paura di deludere i tuoi amici, e questo ti blocca.]
+                ~ firstGreen ++
+                -> one
+        + {firstBlue} [{charNameUno}: hai preso una strada che non è la tua. Succede.]
+                ~ firstBlue ++
+                -> one
+        + {firstPurple} [{charNameUno}: quello che stai cercando è una vita con uno scopo più grande.]
+                ~ firstPurple ++
+                -> one
+        + [Preferisco prendermi del tempo.]
+            -> main
+
     
     = one
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
@@ -750,24 +767,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         Quarto e ultimo giro giro
         
         -> ending
-    /* ---------------------------------
 
-   Qui avrò una funzione che mi manda sugli step utili in base a dove ho abbandonato l'ultima conversazione. Es
-   {
-   - not step_uno:
-        -> step_uno
-   - not step_due:
-        -> step_due
-        etc
-   }
-    
-    E quindi poi avrò.
-    = step_uno
-        Affronto la storia
-    = step_due
-        Interventi
-        etc
- ----------------------------------*/
  = ending
  ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     Qui a seconda di com'è andata prima la situazione, la personaggia può darsi un nuovo nome o mantenere lo stesso. E poi, se firstCharacterSpecialEvent == true, darci anche una info sulla mentore.
