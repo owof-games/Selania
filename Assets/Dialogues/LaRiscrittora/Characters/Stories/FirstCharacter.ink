@@ -731,8 +731,9 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         + [Preferisco prendermi del tempo.]
             -> main
 
-    
+    TODO: per questi quattro punti mettere un po' di cenni anche alle altre tre "storie"
     = one
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     {name}: Prima hai detto che hai il terrore di fare una scelta.
         + {firstGreen} [Eppure hai deciso di costruire una nuova famiglia con l3 tu3 amic3.]
             {name}: Hai aperto il tuo cuore, e loro ti amano.
@@ -760,22 +761,6 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
             {name}: E ammettere una propria paura, una scelta enorme.
         -
  
-
-    
-    DEVO SOLO CAPIRE COME QUESTA COSA CONDIZIONI IL FINALE.   
-    
-    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
-        Qui abbiamo la prima affermazione vera e propria, che spingerà verso uno degli stati possibili. è l'unica che c'è a prescindere dal livello di inchiostro.
-            + Esploro un tema
-                Ottengo risposte
-                 + + E magari faccio altre domande.
-                 + + E altre ancora
-                    Con altre risposte
-            + O un altro
-                E aumenta il suo valore
-            + O un altro
-                E aumenta il suo valore
-            -
         {
         - firstCharacterInkLevel == Empty:
             -> ending
@@ -882,8 +867,8 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         
         -> ending
 
- = ending
- ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
+    = ending
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
      Per questo il mio consiglio è...
         + {firstRed} [{charNameUno}: prendi una strada e se non ti piace cambiala!]
                 ~ firstRed ++
@@ -913,12 +898,12 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         }
     
     
-= secret_ending
-
-    ~ firstStory = Ended
-    ~ movementsCounter = 0
-        -> main
-        
+    = secret_ending
+    
+        ~ firstStory = Ended
+        ~ movementsCounter = 0
+            -> main
+            
 
 
 === personaggia_uno_storia_conclusa
