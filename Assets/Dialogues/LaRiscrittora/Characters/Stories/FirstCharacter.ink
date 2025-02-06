@@ -98,14 +98,14 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         ???: Altə all’incirca una balla di fieno e che si muove come un violino, probabilmente presə a stordire di domanda quel tizio, il mentore.
         ???: Oh, non posso essere arrivata qui da sola, vero? Qualsiasi cosa sia <i>qui</i>.
         ???: Come lə trovo?
-            + [Prova a darmi dei dettagli più concreti.]
+            + [Dammi dettagli più concreti.]
                     ~ firstBlue ++
                 ???: Concreti?
                 ???: Si muove. Respira. Mangia. Saltella. Canta.
                 ???: A volte tutte queste cose assieme.
                 ???: E ha molta fantasia.
                 ???: Ma non so se sia il tuo forte.
-            + [Se è come un violino, magari ha bisogno di un tamburo per tornare.]
+            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
                     ~ firstYellow ++
                 ???: Non ci avevo pensato!
                 ???: Ma il suo violino è più da pianoforte.
@@ -116,12 +116,12 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 ???: Ha senso, ma Talco non è persona da azione.
                 ???: Si muove nello spazio come se fosse vento.
                 ???: E lascia alle sue spalle l'odore della primavera.
-            + [Se ti senti sola, puoi parlare con me, mi farebbe piacere.]
+            + [Se ti senti sola, sono qui ad ascoltarti.]
                 ~ firstGreen ++
                 ???: È una cosa molto gentile, davvero.
                 ???: Ma è come chiedermi di fare un concerto con una persona sconosciuta.
                 ???: Ci vuole tempo per mostrare la mia anima.
-            + [Se è qualcunə a cui vuoi bene, è sempre con te.]
+            + [Tu sei sempre con ləi, ləi è sempre con te.]
                 ~ firstPurple ++
                 ???: Grazie.
                 ???: Avevo bisogno di queste parole.
@@ -144,12 +144,12 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     	{charNameUno}: E con che pronomi vuoi che ti chiami?
     	        -> gender ->
         {charNameUno}: {name}, secondo te il nome di una persona è qualcosa di importante?
-    	    + [È utile, altrimenti come ci chiamiamo?]
+    	    + [È utile, altrimenti come ci distinguiamo?]
     	        {charNameUno}: Tu devi essere la persona più divertente della festa, vero?
     	        {charNameUno}: Anche se immagino che una visione pratica abbia dei vantaggi.
     	        {charNameUno}: O per lo meno, faresti felice mio padre.
                     ~ firstBlue ++
-            + [Solo se può continuamente cambiare.]
+            + [Solo se possiamo continuamente cambiarlo.]
                 {charNameUno}: Ah ah ah!
                 {charNameUno}: Adoro.
                 {charNameUno}: Passo le giornate a cambiare melodie, e non avevo mai pensato di cambiare il mio nome!
@@ -158,7 +158,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: O uno strumento d'amore.
                 {charNameUno}: Pensa a tutti i modi in cui qualcuno lo può gridare.
                     ~ firstRed ++
-            + [È un dono della tua famiglia, un ricordo che resta con te.]
+            + [È un dono della tua famiglia che resterà sempre con te.]
                 {charNameUno}: Non ci avevo mai pensato.
                 {charNameUno}: Non per tutt3 è un piacere, questa cosa.
                 {charNameUno}: E per alcune persone il nome è qualcosa che si sceglie.
@@ -189,7 +189,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: {charNameUno} non è il mio vero nome, ma non trovo più il mio.
                 {charNameUno}: E poi, parlare con te non è già una forma di azione?
                     ~ firstRed ++
-            + [Talco cosa direbbe di questo nome?]
+            + [Cosa pensi direbbe Talco di questo nome?]
                 {firstGreen > 1: {charNameUno}: Ancora non ci conosciamo, ma ho l'impressione che tu sappia parlare molto col cuore.}
                 {charNameUno}: Questa è una domanda molto tenera.
                 {charNameUno}: Ma la risposta lo sarebbe meno.
@@ -203,7 +203,8 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                     ~ firstPurple ++
             -
        {charNameUno}: Come mi dovrei chiamare secondo te?
-    	    + Scelta non possibile (variazione se abbiamo o meno parlato col mentore)
+    	    + [Secondo il mentore è qualcosa che capiremo col tempo, assieme.]
+    	    + [<i>Qualsiasi cosa tu abbia pensato, non riesci a dirla.</i>]
     	-
         {charNameUno}: Interessante.
         {charNameUno}: Forse quel mentore può aiutarci a capire qualcosa?
@@ -235,7 +236,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Un po' come puoi suonare qualsiasi strumento, se hai del tempo.
                 {charNameUno}: Ma quanto tempo serve per otto sentieri, da sola?
                     ~ firstBlue ++
-            + [Non so molto di scoiattoli, ma le falene sicuro suonano i girasoli!]
+            + [Non so molto di scoiattoli, ma le falene suonano i girasoli!]
                 {charNameUno}: Cavoli! Scoiattoli e falene, sarebbe la miglior band possibile!
                 {charNameUno}: E credo di aver visto una lumaca prima, potrebbe tenere il tempo!
                 ~ firstYellow ++
@@ -319,11 +320,11 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Esposte, spaesate.
                 {charNameUno}: Ridicole.
                     ~ firstYellow ++
-            + [Se corri abbastanza, il ritmo lo crei da sola.]
+            + [Se corri veloce il ritmo lo crei da sola.]
                 {charNameUno}: Ma poi serve qualcuno che suoni con te.
                 {charNameUno}: E una voce che dia un senso a quel ritmo.
                     ~ firstRed ++
-            + [Forse il silenzio è il posto giusto per raccontarti.]
+            + [Il silenzio ti sta offrendo la vulnerabilità necessaria per raccontarti.]
                 {charNameUno}: Ma non conosco bene le parole.
                 {charNameUno}: L'unica cosa che so fare, è suonare.
                     ~ firstGreen ++
@@ -360,7 +361,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                     {charNameUno}: Scusa, non per offenderti.
                     {charNameUno}: Sei una persona molto dolce, ma non sei <i>loro</i>.
                         ~ firstGreen ++
-                + [I pensieri sono specchi: rompine uno e troverai cosa è reale e cosa è riflesso.]
+                + [I pensieri sono specchi: rompine uno e scoprirai cosa è reale e cosa è riflesso.]
                     {charNameUno}: Forse dovrei stendermi e meditare.
                     {charNameUno}: Lasciare che si spengano uno per uno.
                     {charNameUno}: Ignorare la paura che ho all'idea di vedere le cose come stanno.
@@ -385,7 +386,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         {charNameUno}: Cosa puoi fare quando sai fare bene solo una cosa ma il mondo non ti permette di farla?
         {charNameUno}: Scendi a compromessi, o accetti il rischio di morire di fame?
         {charNameUno}: O aspetti fino a quando non sia il mondo a decidere per te?
-            + [Siamo votat3 alla sopravvivenza, una soluzione si trova.]
+            + [Siamo votat3 alla sopravvivenza, una soluzione si trova sempre.]
                 {charNameUno}: Vorrei però qualcosa di meglio di sopravvivere, no?
                 {charNameUno}: Banale, ma vorrei permettermi il lusso di vivere.
                 ~ firstBlue ++
@@ -394,7 +395,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Ma per me è da molto ormai che è <i>domani</i>.
                 {charNameUno}: Il conservatorio è finito da mesi, e io canto, ballo, e non so ancora che cosa fare.
                     ~ firstYellow ++
-            + [Mezzo compromesso è già un'intera sconfitta.]
+            + [Mezzo compromesso è già una completa sconfitta.]
                 {charNameUno}: Eppure Jonah ha perso del tutto, comunque.
                 {charNameUno}: Con o senza compromessi.
                 {charNameUno}: Questa è l'unica soluzione?
@@ -405,7 +406,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: A parte le persone a cui voglio bene.
                 {charNameUno}: Forse dovrei donare loro quello che so fare?
                     ~ firstGreen ++
-            + [Se cedi te stessa cedi al compromesso. Ma se resti come sei, porti cambiamento.]
+            + [È compromesso se cedi te stessa. Ma se resti fedele a chi sei, porterai cambiamento.]
                 {charNameUno}: E a quel punto ogni decisione sarebbe la <i>mia</i> decisione.
                     ~ firstPurple ++
             -    
@@ -432,7 +433,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Credo che tu gli abbia appena regalato un crepacuore.
                 {charNameUno}: Tutta la musica è gioco, se sai rinunciare al divismo e perderti con band e pubblico.
                 ~ firstYellow ++
-            + [Forse ha paura di vedere la trasformazione nel disordine.]
+            + [Ha paura di vedere la trasformazione che viene dal disordine.]
                 {charNameUno}: Già, è una possibilità.
                 {charNameUno}: Anche se poi credo che il disordine sia solo una questione di prospettiva.
                 {charNameUno}: Alla lunga ci si abiuta anche a quello, e a quel punto diventa difficile comunque cambiare.
@@ -443,7 +444,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Rispettando la sua ossessione per le regole?
                 {charNameUno}: O regalandogli un po' di caos?
                 ~ firstGreen ++
-            + [Ogni persona ha il suo percorso e le sue verità da scoprire.]
+            + [Ognuna ha il suo modo di raggiungere la verità.]
                 {charNameUno}: Di solito concorderei.
                 {charNameUno}: Ma non è troppo facile così?
                 {charNameUno}: Non è togliersi la responsabilità verso le altre persone?
@@ -462,11 +463,11 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Ma quando tutto è solo senso pratico?
                 {charNameUno}: A quel punto comunque la comunità è destinata a morire.
                     ~ firstBlue ++
-            + [Ciò che ci tiene unite è il ridere.]
+            + [Ciò che ci tiene unite è il giocare.]
                 {charNameUno}: In effetti è liberatorio ridere assieme di qualcosa.
                 {charNameUno}: Ma mi chiedo sempre se non stiamo ridendo di qualcuno, senza rendercene conto.
                     ~ firstYellow ++
-            + [Ci si accresce nel dissenso, nella discussione.]
+            + [Ci si accresce nel dissenso e nella discussione.]
                 {charNameUno}: Vero.
                 {charNameUno}: Anche se a volte è bello anche sedersi assieme al sole, e riposare.
                     ~ firstRed ++
@@ -475,7 +476,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Un giardino.
                 {charNameUno}: Una fuga, senza mai chiamarla fuga.
                     ~ firstGreen ++
-            + [Una comunità resiste solo se segue un obiettivo superiore.]
+            + [Una comunità resiste solo seguendo un obiettivo superiore.]
                 {charNameUno}: Come rendere il mondo più giusto.
                 {charNameUno}: O trasformare qualcosa di terribile in un gioco.
                     ~ firstPurple ++
@@ -514,7 +515,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Un momento tra persone care.
                 {charNameUno}: Un sogno condiviso, sognando sognare.
                     ~ firstGreen ++
-            + [Ogni temporale toglie a qualcuna, dà a qualcun altro.]
+            + [Ogni temporale toglie a qualcuna per dare a qualcun altro.]
                 {charNameUno}: Come le piante nella serra.
                 {charNameUno}: Per crescere prendono da terra, da ciò che manco vedo.
                 {charNameUno}: E ci danno in cambio odori e idee.
@@ -541,18 +542,18 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {charNameUno}: Sentivo il bisogno di qualcosa di più intimo.
                 {charNameUno}: Muovermi a volte mi sembra che rompa le cose.
                     ~ firstYellow ++
-            + [Come ti sei sentita, a lottare per qualcun altro?]
+            + [Come ti sei sentita a combattere per qualcun altro?]
                 {charNameUno}: Motivata.
                 {charNameUno}: Motivata fino al cuore.
                 {charNameUno}: Non so difendere molto bene me e le mie posizioni.
                 {charNameUno}: Ma quella settimana, per una volta, ho capito che stavo facendo qualcosa di sensato.
                     ~ firstRed ++
-            + [Sono sicura che gli alberi qui ricordano la tua lotta.]
+            + [Credo che gli alberi qui conoscano la storia della tua lotta.]
                 {charNameUno}: Sarebbe bello.
                 {charNameUno}: Ma allora chiederei loro la strada verso casa.
                 {charNameUno}: Non so più quanto ancora voglia restare quì.
                     ~ firstGreen ++
-            + [E quindi è {charNameUno} che ha lottato per gli alberi, o gli alberi hanno lottato per lei?]
+            + [È {charNameUno} che ha lottato per gli alberi, o gli alberi hanno lottato per lei?]
                 {charNameUno}: L'una ha aiutato gli altri e viceversa.
                 {charNameUno}: Solo nell'illusione di essere separate, uno fa per l'altra.
                 {charNameUno}: Non c'è melodia se le note non si perdono in essa.
