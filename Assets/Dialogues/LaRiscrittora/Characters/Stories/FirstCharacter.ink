@@ -655,7 +655,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     
         = ink_outcome    
             <i>Dopo il tuo dono {inkTranslator(firstCharacterInkLevel)}.
-                 ~ inkActions(firstCharacterInkLevel)
+                // ~ inkLevel(firstCharacterInkLevel)
                  -> talk_with_first_character
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
@@ -724,9 +724,9 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
 
     = statement
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
-        <i>Questo è l'inchiostro che hai a disposione per aiutare {charNameUno} a riscrivere la sua storia.</i>
-        TODO: check per vedere se tiene conto della nuova struttura e da un feedback complessivo
-            ~ inkActions(firstCharacterInkLevel)
+        <i>A seguito del rapporto che hai creato con {charNameUno}, questo è l'inchiostro che hai a disposione per aiutarla riscrivere la sua storia.</i>
+        //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
+            ~ inkLevel(firstCharacterInkLevel)
         + [Iniziamo ad aiutarla!]
             -> one
         + [Preferisco prendermi del tempo.]
@@ -871,42 +871,63 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     = ending
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
      Per questo il mio consiglio è...
-        + {firstRed} [{charNameUno}: prendi una strada e se non ti piace cambiala!]
-                ~ firstRed ++
-        + {firstYellow} [{charNameUno}: ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti ora!]
-                ~ firstYellow ++
-        + {firstGreen} [{charNameUno}: hai paura di deludere i tuoi amici, ma loro saranno sempre con te.]
-                ~ firstGreen ++
-        + {firstBlue} [{charNameUno}: hai preso una strada che non è la tua. Succede. Ora che lo sai, puoi cambiare.]
-                ~ firstBlue ++
-        + {firstPurple} [{charNameUno}: quello che stai cercando è una vita con uno scopo più grande.]
-                ~ firstPurple ++
+        + {firstRed > 0} [{charNameUno}: prendi una strada e se non ti piace cambiala!]
+                
+        + {firstYellow > 0} [{charNameUno}: ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti ora!]
+                
+        + {firstGreen > 0} [{charNameUno}: hai paura di deludere i tuoi amici, ma loro saranno sempre con te.]
+                
+        + {firstBlue > 0} [{charNameUno}: hai preso una strada che non è la tua. Succede. Ora che lo sai, puoi cambiare.]
+                
+        + {firstPurple > 0} [{charNameUno}: quello che stai cercando è una vita con uno scopo più grande.]
+                
         -     
         
-    {charNameUno}: Grazie, {name}.
-    {charNameUno}: Mentre parlavi mi è nata una nuova canzone in testa.
-    {charNameUno}: Qualcosa di fresco, di pronto a cambiare.
-    {charNameUno}: La canzone del mio vero nome.
-    {charNameUno}: E il mio vero nome è:
+    Rinuncia: Grazie, {name}.
+    Rinuncia: Mentre parlavi mi è nata una nuova canzone in testa.
+    Rinuncia: Qualcosa di fresco, di pronto a cambiare.
+    Rinuncia: La canzone del mio vero nome.
+        
+        {
+            - firstCharacterPossibleStates has Rinuncia:
+                Rinuncia: Che resterà Rinuncia, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
+            - firstCharacterPossibleStates has Triangolo:
+                Rinuncia: E il mio vero nome è Triangolo, perché pensavo di essere uno strumento, e invece ho solo fallito.
+            - firstCharacterPossibleStates has RagazzaOrchestra:
+                Rinuncia: Mi chiamerò Ragazza Orchestra: nel non saper rinunciare sono diventata l'ornitorinco della musica.
+            - firstCharacterPossibleStates has FlautoDolce:
+                Rinuncia: Il mio nome è Flauto Dolce: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
+            - firstCharacterPossibleStates has Ocarina:
+                Rinuncia: Mi chiamerò Ocarina: perché il suo suono è gioco e festa.
+            - firstCharacterPossibleStates has Violino:
+                Rinuncia: Io sono Violino: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
+        }
     
         {
         - firstCharacterSpecialEvent == true:
             -> secret_ending
         - else:
-             ~ firstStory = Ended
-             ~ movementsCounter = 0
-            -> main
+
+            -> exit
         }
     
     
     = secret_ending
-    
-        ~ firstStory = Ended
-        ~ movementsCounter = 0
-            -> main
+        {charNameUno}: C'è una cosa che vorrei dirti, {name}.
+        {charNameUno}: Riguarda Il mentore.
+        {charNameUno}: Qual è il confine tra essere un bravo ragazzo ed essere un manipolatore?
+        {charNameUno}: Me lo sto chiedendo da quando sono arrivata.
+        {charNameUno}: E se hai intenzione di restare qui a lungo, forse devi chiedertelo anche tu.
+            ~ firstStory = Ended
+            ~ movementsCounter = 0
+                -> main
             
-
-
+    = exit
+        {charNameUno}: Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
+            ~ firstStory = Ended
+            ~ movementsCounter = 0
+        -> main  
+    
 === personaggia_uno_storia_conclusa
 ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.

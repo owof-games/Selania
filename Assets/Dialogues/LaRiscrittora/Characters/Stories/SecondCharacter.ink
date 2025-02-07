@@ -53,7 +53,7 @@
     
         = esito_inchiostro    
             Dopo il tuo dono, la quantità di inchiostro a disposizione è {secondCharacterInkLevel}.
-                 ~ inkActions(secondCharacterInkLevel)
+                 ~ inkLevel(secondCharacterInkLevel)
                  -> dialogo_personaggia_due.top
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 

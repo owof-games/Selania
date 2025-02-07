@@ -12,7 +12,7 @@ VAR findedGifts = ()
 VAR Ink = ()
 
 //Gestione dell'inchiostro per i vari spettri. Nomi e valori sono temporanei. L'idea per ora è: se sono su Low, posso fare solo una scelta forte. Con Normal, due e via di seguito. Ogni scelta mi scala indietro nella lista di stati.
-LIST inkLevel = Empty, Low, Normal, Medium, High
+LIST ink = Empty, Low, Normal, Medium, High
 VAR firstCharacterInkLevel = Low
 VAR secondCharacterInkLevel = Low
 VAR thirdCharacterInkLevel = Low
@@ -24,8 +24,8 @@ VAR seventhCharacterInkLevel = Low
 
 
 
-//Formula per tradurre la quantità di inchiostro in valori espliciti
-=== function inkActions(InkLevel)
+//Formula chiamata prima dello statement, per tenere conto del rapporto effettivo.
+=== function inkLevel(InkLevel)
 {
     - InkLevel == firstCharacterInkLevel:
         ~ Ink = firstCharacterInkLevel
@@ -35,20 +35,21 @@ VAR seventhCharacterInkLevel = Low
 
 {Ink:
     - Empty:
-        <i>Non hai inchiostro a disposizione.</i>
+        <i>Non hai inchiostro a disposizione. Potrai fare solo un intervento.</i>
     - Low:
-        <i>Hai una goccia di inchiostro a disposizione.</i>
+        <i>Hai una goccia di inchiostro a disposizione. Potrai fare due interventi.</i>
     - Normal:
-        <i>Hai due goccie di inchiostro a disposizione.</i>
+        <i>Hai due goccie di inchiostro a disposizione. Potrai fare tre interventi.</i>
     - Medium:
-        <i>Hai tre goccie di inchiostro a disposizione.</i>        
+        <i>Hai tre goccie di inchiostro a disposizione. Potrai fare quattro interventi. </i>        
     - High:
-        <i>Hai tre goccie di inchiostro a disposizione, e la personaggia ti darà una informazione importante.</i>
+        <i>Hai tre goccie di inchiostro a disposizione. Potrai fare quattro interventi, e la personaggia ti darà una informazione importante.</i>
     - else:
         <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>
 }
 
 
+//Funzione che chiamo dopo il dono, per dire quanto inchiostro ho guadagnato.
 === function inkTranslator(InkLevel)
 {
     - InkLevel == firstCharacterInkLevel:
@@ -58,15 +59,15 @@ VAR seventhCharacterInkLevel = Low
 }
 {Ink:
     - Empty:
-        vuoto
+        non hai guadagnato alcuna goccia di inchiostro.
     - Low:
-        hai una goccia di inchiostro
+        hai guadagnato una goccia di inchiostro
     - Normal:
-        hai due goccie di inchiostro
+        hai guadagnato due goccie di inchiostro
     - Medium:
-        hai tre goccie di inchiostro a disposizione     
+        hai guadagnato tre goccie di inchiostro a disposizione     
     - High:
-        hai tre goccie di inchiostro a disposizione, e la personaggia ti darà una informazione importante
+        hai guadagnato tre goccie di inchiostro a disposizione, e la personaggia ti darà una informazione importante
     - else:
         <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>
 }

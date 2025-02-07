@@ -10,9 +10,11 @@
     VAR yellowAffirmation = false
     VAR greenAffirmation = false
     VAR purpleAffirmation = false
-    
+
+
 //Gestione prima personaggia.
-    LIST firstCharacterPossibleStates =  Rinuncia, IlGiocoso, StatoDue, StatoTre, StatoQuattro, StatoCinque, StatoSei
+//Ordine degli stati: 0, Blue, Rosso, Verde, Giallo, Viola.
+    LIST firstCharacterPossibleStates = Rinuncia, Triangolo, RagazzaOrchestra, FlautoDolce, Ocarina, Violino
     VAR firstCharacterState = Rinuncia
     
     VAR firstStory = NotStarted
@@ -97,11 +99,31 @@
     VAR seventhGreen = 0
     VAR seventhRed = 0
 
+
+
 //Funzione di traduzione da variabile a stringa con articolo minuscolo
 === function lowercaseTranslator(characterState)
     {characterState:
 
     //Personaggia Uno
+        - Rinuncia:
+            ~ return "Rinuncia"
+        - Triangolo:
+            ~ return "Triangolo"
+        - RagazzaOrchestra:
+            ~ return "Ragazza Orchestra"
+        - FlautoDolce:
+            ~ return "Flauto Dolce"
+        - Ocarina:
+            ~ return "Ocarina"
+        - Violino:
+            ~ return "Violino"
+        
+    //Personaggia Due       
+        - LaVegliante:
+            ~ return "la Vegliante"
+            
+    //Personaggia Tre
         - SpettroDelVuoto:
             ~ return "il Empty"
         - IlConsapevole: 
@@ -116,22 +138,12 @@
             ~ return "l'Abbandonato"    
         - LArrabbiato: 
             ~ return "l'Arrabbiato"
-    //Personaggia Due       
-        - LaVegliante:
-            ~ return "la Vegliante"
-    //Personaggia Tre      
-        - Rinuncia:
-            ~ return "Rinuncia"
+
     //Personaggia Quattro             
         - LaMondatrice:
             ~ return "la Mondatrice"
-    //Personaggia Cinque         
-        - Oscar:
-            ~ return "Oscar"
-    //Personaggia Sei        
-        - LoSpecchio:
-            ~ return "lo Specchio"
-    //Personaggia Sette        
+
+    //Personaggia Cinque        
         - IlMentore:
             ~ return "il Mentore"
 
@@ -140,8 +152,26 @@
 //Funzione di traduzione da variabile a stringa con articolo maiuscolo
 === function uppercaseTranslator(characterState)
     {characterState:
-
+    
     //Personaggia Uno
+        - Rinuncia:
+            ~ return "La Rinuncia"
+        - Triangolo:
+            ~ return "Il Triangolo"
+        - RagazzaOrchestra:
+            ~ return "La Ragazza Orchestra"
+        - FlautoDolce:
+            ~ return "Il Flauto Dolce"
+        - Ocarina:
+            ~ return "L'Ocarina"
+        - Violino:
+            ~ return "Il Violino"
+
+    //Personaggia Due        
+        - LaVegliante:
+            ~ return "La Vegliante"
+
+    //Personaggia Tre
         - SpettroDelVuoto:
             ~ return "Il Empty"
         - IlConsapevole: 
@@ -155,60 +185,18 @@
         - LAbbandonato: 
             ~ return "L'Abbandonato"    
         - LArrabbiato: 
-            ~ return "L'Arrabbiato"
-    //Personaggia Due        
-        - LaVegliante:
-            ~ return "La Vegliante"
-    //Personaggia Tre        
-        - Rinuncia:
-            ~ return "Rinuncia"
+            ~ return "L'Arrabbiato"            
+    
     //Personaggia Quattro        
         - LaMondatrice:
             ~ return "La Mondatrice"
-    //Personaggia Cinque        
-        - Oscar:
-            ~ return "Oscar"
-    //Personaggia Sei        
-        - LoSpecchio:
-            ~ return "Lo Specchio"
+
     //Personaggia Sette        
         - IlMentore:
             ~ return "Il Mentore"
 
     }
 
-=== function check_statusVsInk(status, list)
-//  A seconda del valore di un certo status di una entità (es: rabbia, terrore etc), dobbiamo verificare se l'inchiostro è sufficiente per intervenire o meno su quello status, e di conseguenza permettere o meno di condizionare lo spettro.
-// PIù è ALTO IL VALORE DI UNO STATUS, MENO INCHIOSTRO MI SERVE (perché significa che ci ho lavorato durante la conversazione)
-
-{
-    - status == 1:
-        {
-        - list has High:
-            ~ return true
-        - else:
-            ~ return false            
-        }
-    - status == 2:
-        {
-        - list has Normal:
-            ~ return true
-        - list has High:
-            ~ return true
-        - else:
-            ~ return false            
-        }
-    - status == 3:
-        {
-        - list hasnt Empty:
-            ~ return true
-        - else:
-            ~ return false
-        }
-
-    - else:
-        ~ return false
-}
 
 
 //Check per avvio e chiusura storia personagge
@@ -296,36 +284,3 @@
 
 ->->
 
-TODO: capire come settare a modo questa cosa
-=== function statement_count(story)
-VAR red = 0
-VAR blue = 0
-VAR yellow = 0
-VAR green = 0
-VAR purple = 0
-{
-    - story == firstStory:
-        ~ red = firstRed
-        ~ blue = firstBlue
-        ~ yellow = firstYellow
-        ~ green = firstGreen
-        ~ purple = firstPurple
-}
-
-{
-    - red > blue:
-        {
-            - red > yellow:
-                ~ redAffirmation = true
-            - else:
-                {
-                - red > green:
-                    ~ redAffirmation = true
-                - else:
-                    {
-                        - red > purple:
-                           ~ redAffirmation = true
-                    }
-                }
-        }
-}
