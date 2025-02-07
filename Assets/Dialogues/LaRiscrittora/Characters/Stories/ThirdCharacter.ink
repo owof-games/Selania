@@ -25,7 +25,7 @@
         -> main
     //Faccio così per questione di ordine
        + {not dono_storia_tre.esito_inchiostro} Dono
-            ~ currentReceiver += ThirdCharacter
+            
         -> dono_storia_tre
     
     //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
@@ -42,6 +42,7 @@
     //QUESTO è LO SPAZIO PER IL DONO
     === dono_storia_tre ===
         + {findedGifts != ()} Offro un dono.
+            ~ currentReceiver += ThirdCharacter
             -> gestione_inventario -> esito_inchiostro 
         + {findedGifts == ()} <i> Il tuo inventario è vuoto </i>
             ->main

@@ -27,7 +27,7 @@
         -> main
     //Faccio così per questione di ordine
        + {not dono_storia_due.esito_inchiostro} Dono
-        ~ currentReceiver += SecondCharacter
+        
         -> dono_storia_due
     
     //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
@@ -46,6 +46,7 @@
     ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
 
         + {findedGifts != ()} Offro un dono.
+            ~ currentReceiver += SecondCharacter
             -> gestione_inventario -> esito_inchiostro 
         + {findedGifts == ()} <i> Il tuo inventario è vuoto </i>
             ->main

@@ -43,7 +43,6 @@
             
             //Se non ho ancora fatto il dono e ho parlato con il mentore e ho parlato abbastanza con lei
             + {firstStoryQuestCount > minStoryQuesTCount && not first_story_gift.ink_outcome && gifts_and_ink && findedGifts != ()} [Ti vorrei donare questa cosa.]
-                     ~ currentReceiver += FirstCharacter
                     -> first_story_gift
         
             //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
@@ -718,6 +717,7 @@
  === first_story_gift ===
 ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
         + {findedGifts != ()} [Offro un dono.]
+            ~ currentReceiver += FirstCharacter
             -> gestione_inventario -> ink_outcome 
         + {findedGifts == ()} <i> Il tuo inventario è vuoto.</i>
             ->main

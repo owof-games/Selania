@@ -293,6 +293,7 @@ Dono...
     //Se la lista è vuota
     + {findedGifts == ()} [Non ho nulla da donare.]
     + [Ho bisogno di ragionarci ancora un poco.]
+        ~ currentReceiver = ()
         -> main 
     + ->
     - 
