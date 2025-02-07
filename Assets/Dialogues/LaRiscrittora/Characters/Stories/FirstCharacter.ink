@@ -725,6 +725,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     = statement
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
         <i>Questo è l'inchiostro che hai a disposione per aiutare {charNameUno} a riscrivere la sua storia.</i>
+        TODO: check per vedere se tiene conto della nuova struttura e da un feedback complessivo
             ~ inkActions(firstCharacterInkLevel)
         + [Iniziamo ad aiutarla!]
             -> one
