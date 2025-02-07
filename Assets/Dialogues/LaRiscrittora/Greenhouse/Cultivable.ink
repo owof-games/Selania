@@ -1,13 +1,12 @@
 === growing_check
-TODO: ridotto per testing tempo di comparsa, poi sistemare
 {
     - growing < 2:
         ~ growStep = ()
         ~ growStep += stepZero
-    - growing < 3:
+    - growing < 4:
         ~ growStep = ()
         ~ growStep += stepOne    
-    - growing < 4:
+    - growing < 6:
         ~ growStep = ()
         ~ growStep += stepTwo
     - else:
@@ -389,7 +388,7 @@ TODO: ridotto per testing tempo di comparsa, poi sistemare
         <i>Hai trovato una <b>Bacca dell'addolorata</b>.</i>
         <i>Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ad avanzare.</i>
 
-            + [Afferro una bacca.]
+            + [Afferro la bacca.]
             <i>La mano molla la sua presa, rivelandosi per quel che era dall'inizio: solo un insieme tenace di radici.</i>
             <i>Senti le tue spalle sciogliersi, l'incertezza scivolare via.</i>
             <i>Il cambiamento fa paura, ma tu sai come camminare.</i>
@@ -477,7 +476,7 @@ TODO: ridotto per testing tempo di comparsa, poi sistemare
             <i>Le linee del tuo palmo si fanno trasparenti, inconsistenti. Eppure puoi muovere le dita, e non provi alcun dolore.</i>
             <i>La <b>Brina dell'Impossibile</b> si raccoglie nel luogo di un trauma.</i>
             <i>Riempie le ferite per permetterci di vederle, ascoltarle.</i>
-            <i>Ci permette di vivere, e non dimenticare.</i>
+            <i>Ti permette di vivere, e non dimenticare.</i>
                 ~ growing = 0
                 ~ chosenCultivable = ()
                     {

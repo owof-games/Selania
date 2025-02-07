@@ -44,6 +44,10 @@ VAR seventhCharacterInkLevel = Empty
         <i>Hai tre goccie di inchiostro a disposizione. Potrai fare quattro interventi. </i>        
     - High:
         <i>Hai tre goccie di inchiostro a disposizione. Potrai fare quattro interventi, e la personaggia ti darà una informazione importante.</i>
+        {
+            - InkLevel == firstCharacterInkLevel:
+                ~ firstCharacterSpecialEvent = true
+        }
     - else:
         <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>
 }

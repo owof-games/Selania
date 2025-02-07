@@ -29,9 +29,11 @@ Dono...
     ~ findedGifts -= MuschioDelleAmanti
     {
         - currentReceiver has FirstCharacter:
-        <i>{uppercaseTranslator(firstCharacterState)} è confuso dal dono.</i>
+        <i>{uppercaseTranslator(firstCharacterState)} è confusa dal dono.</i>
             ~ currentReceiver = ()
             -> first_story_gift.ink_outcome
+        
+        
         
         - currentReceiver has SecondCharacter:
             ~ secondCharacterInkLevel ++
@@ -56,9 +58,13 @@ Dono...
 
     {
     - currentReceiver has FirstCharacter:
-        <i>{uppercaseTranslator(firstCharacterState)} apprezza il dono.</i>
+        <i>{uppercaseTranslator(firstCharacterState)} Ti sorride.</i>
+        <i>Si rigira la bacca tra la mani, e sembra più serena.</i>
+        ~ firstCharacterInkLevel ++
+        ~ firstCharacterInkLevel ++
         ~ currentReceiver = ()
         -> first_story_gift.ink_outcome
+        
     
     - currentReceiver has SecondCharacter:
         Hai regalato a {uppercaseTranslator(secondCharacterState)} qualcosa che proprio non gli interessa
@@ -82,8 +88,7 @@ Dono...
     {
     - currentReceiver has FirstCharacter:
         ~ firstCharacterInkLevel ++
-        <i>{uppercaseTranslator(firstCharacterState)} apprezza il dono</i>
-        ~ currentReceiver = ()
+        <i>{uppercaseTranslator(firstCharacterState)} è infastidita dalla tensione che viene dal frammento, e se lo getta alle spalle.</i>
         -> first_story_gift.ink_outcome
 
     - currentReceiver has SecondCharacter:
@@ -105,13 +110,13 @@ Dono...
 
     {
     - currentReceiver has FirstCharacter:
-        ~ firstCharacterInkLevel ++
-        ~ firstCharacterInkLevel ++
-        <i>{uppercaseTranslator(firstCharacterState)} si porta la Brina al petto, e ti guarda commosso.</i>
-        <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
-         ~ firstCharacterSpecialEvent = true
+        <i>{uppercaseTranslator(firstCharacterState)} rifiuta il tuo dono, disgustata.</i>
+         //~ firstCharacterSpecialEvent = true
          ~ currentReceiver = ()
         -> first_story_gift.ink_outcome
+
+
+
 
     - currentReceiver has SecondCharacter:
         Hai regalato a {uppercaseTranslator(secondCharacterState)} qualcosa che proprio non gli interessa
@@ -136,11 +141,14 @@ Dono...
 
     {
     - currentReceiver has FirstCharacter:
-        ~ firstCharacterInkLevel --
-        <i>{uppercaseTranslator(firstCharacterState)} è schifata dal dono.</i>
-         ~ firstCharacterSpecialEvent = true
+        ~ firstCharacterInkLevel ++
+        ~ firstCharacterInkLevel ++
+        <i>{uppercaseTranslator(firstCharacterState)} inizia a saltellare di gioia.</i>
          ~ currentReceiver = ()
         -> first_story_gift.ink_outcome
+
+
+
 
     - currentReceiver has SecondCharacter:
         Hai regalato a {uppercaseTranslator(secondCharacterState)} qualcosa che proprio non gli interessa
@@ -165,14 +173,11 @@ Dono...
 
     {
     - currentReceiver has FirstCharacter:
-        ~ firstCharacterInkLevel ++
-        ~ firstCharacterInkLevel ++
-        ~ firstCharacterInkLevel ++
-        <i>{uppercaseTranslator(firstCharacterState)} si porta la Brina al petto, e ti guarda commosso.</i>
-        <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
-         ~ firstCharacterSpecialEvent = true
+        <i>{uppercaseTranslator(firstCharacterState)} ti guarda delusa.</i>
          ~ currentReceiver = ()
         -> first_story_gift.ink_outcome
+        
+        
 
     - currentReceiver has SecondCharacter:
         Hai regalato a {uppercaseTranslator(secondCharacterState)} qualcosa che proprio non gli interessa
@@ -199,12 +204,12 @@ Dono...
     - currentReceiver has FirstCharacter:
         ~ firstCharacterInkLevel ++
         ~ firstCharacterInkLevel ++
-        ~ firstCharacterInkLevel ++
-        <i>{uppercaseTranslator(firstCharacterState)} si porta la Brina al petto, e ti guarda commosso.</i>
-        <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
-         ~ firstCharacterSpecialEvent = true
+        <i>{uppercaseTranslator(firstCharacterState)} sussurra "nonno".</i>
+        <i>Le lacrime le rigano il viso.</i>
          ~ currentReceiver = ()
-        -> first_story_gift.ink_outcome
+            -> first_story_gift.ink_outcome
+
+
 
     - currentReceiver has SecondCharacter:
         Hai regalato a {uppercaseTranslator(secondCharacterState)} qualcosa che proprio non gli interessa
@@ -235,11 +240,12 @@ Dono...
     {
     - currentReceiver has FirstCharacter:
         ~ firstCharacterInkLevel ++
-        ~ firstCharacterInkLevel ++
-        <i>{uppercaseTranslator(firstCharacterState)} se la avvolge attorno al corpo.
-        <i>Sembra sollevato.</i>
+        <i>{uppercaseTranslator(firstCharacterState)} la stende a terra, e si rilassa.</i>
+        <i>Sembra sollevata.</i>
         ~ currentReceiver = ()
         -> first_story_gift.ink_outcome
+    
+    
     
     - currentReceiver has SecondCharacter:
         Hai regalato a {uppercaseTranslator(secondCharacterState)} qualcosa che proprio non gli interessa
@@ -261,8 +267,8 @@ Dono...
     
     {
     - currentReceiver has FirstCharacter:
-        ~ firstCharacterInkLevel --
-        <i>{uppercaseTranslator(firstCharacterState)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
+        <i>{uppercaseTranslator(firstCharacterState)} ti guarda perplessa.</i>
+        <i>Prova a suonarlo, ma non esce nulla di buono.</i>
         ~ currentReceiver = ()
         -> first_story_gift.ink_outcome
     
