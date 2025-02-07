@@ -52,7 +52,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 {
                     - not questions:
                     {uppercaseTranslator(firstCharacterState)}: Non credo che il mentore ti abbia spiegato come si fa questa cosa. Vai da lui prima.
-                        -> main
+                            -> main
                     - questions:
                         {uppercaseTranslator(firstCharacterState)}: Certo!
                         -> first_story_chech_trigger
