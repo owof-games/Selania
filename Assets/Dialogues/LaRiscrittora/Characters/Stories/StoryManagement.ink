@@ -201,11 +201,10 @@
 
 //Check per avvio e chiusura storia personagge
 === story_time_management_for_PNG
-TODO: riportare poi a 5
 
 {
 //Dopo dieci spostamenti, compare il personaggio uno
-    - movementsCounter == 1 && firstStory == NotStarted:
+    - movementsCounter == 5 && firstStory == NotStarted:
             ~ move_entity(FirstCharacter, BusStop)
             ~ firstStory = Active
             

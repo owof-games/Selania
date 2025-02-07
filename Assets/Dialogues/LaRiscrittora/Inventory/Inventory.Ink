@@ -58,7 +58,7 @@ Dono...
 
     {
     - currentReceiver has FirstCharacter:
-        <i>{uppercaseTranslator(firstCharacterState)} Ti sorride.</i>
+        <i>{uppercaseTranslator(firstCharacterState)} ti sorride.</i>
         <i>Si rigira la bacca tra la mani, e sembra più serena.</i>
         ~ firstCharacterInkLevel ++
         ~ firstCharacterInkLevel ++

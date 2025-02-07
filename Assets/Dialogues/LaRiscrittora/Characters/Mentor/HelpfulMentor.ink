@@ -49,7 +49,7 @@
             -> gender ->
         {chiSei:{charName}|Sconosciuto}: piacere di conoscerti, {name}.
         {chiSei:{charName}|Sconosciuto}: E {pronouns has him: benvenuto|{pronouns has her: benvenuta|benvenutə}}. Spero ti troverai bene, qui.
-        {not chiSei: Sconosciuto: Ah, che sbadato. Invece tu chiamami <b>{charName}</b>.|{charName}: È il mio dovere farvi stare benr.}
+        {not chiSei: Sconosciuto: Ah, che sbadato. Invece tu chiamami <b>{charName}</b>.|{charName}: È il mio dovere farvi stare bene.}
         {charName}: Un'altra cosa importante, {name}.
         {charName}: Nel tuo soggiorno in questo luogo potrebbe accadere che incontrerai qualche situazione complessa.
         {charName}: Se ti va di dirmi quali sono le cose che ti creano disagio, farò del mio meglio per non fartele incontrare.

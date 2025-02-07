@@ -55,7 +55,7 @@
 //Da creare: storylets per quando anime (non animelle) e Mentor sono assieme
 
     - else:
-        -> main
+        ->->
 
 }
 
