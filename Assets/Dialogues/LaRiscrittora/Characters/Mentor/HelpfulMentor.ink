@@ -132,7 +132,7 @@
     
         {firstCharacterInkLevel == Empty or firstCharacterInkLevel == Low: {charName}: Non ti demoralizzare, capita a chiunque di non dare il massimo al primo colpo.}
         {firstCharacterInkLevel == Normal: {charName}: Bel colpo! Ti sei {pronouns has him: guadagnato|{pronouns has her: guadagnata|guadagnatə}} subito una bella dose di inchiostro!}
-        {firstCharacterInkLevel == High: {charName}: Beh, hai dato allo spettro il suo dono preferito! Sei già {pronouns has him: pronto|{pronouns has her: pronta|prontə}} per questo incarico!}
+        {firstCharacterInkLevel == High: {charName}: Beh, hai dato alla persona il suo dono preferito! Sei già {pronouns has him: pronto|{pronouns has her: pronta|prontə}} per questo incarico!}
         {charName}: Ora: a cosa serve l'inchiostro?
         {charName}: Sostanzialmente più alto è il valore di inchiostro, più interventi puoi fare.
         {charName}: Gli interventi sono domande o commenti che puoi fare su cose diverse che preoccupano la persona.
