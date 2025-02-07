@@ -21,6 +21,8 @@ TODO: adatta questa parte alla nuova struttura, e snellisci
         {
             - firstStory == Ended:
                 -> first_character_feedback
+            - else:
+                ->->
 
         }
         
@@ -43,7 +45,8 @@ TODO: adatta questa parte alla nuova struttura, e snellisci
  
 //Da creare: storylets per quando anime (non animelle) e Mentor sono assieme
 
-    - else: -> main
+    - else:
+        -> main
 
 }
 

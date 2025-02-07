@@ -13,13 +13,13 @@ VAR Ink = ()
 
 //Gestione dell'inchiostro per i vari spettri. Nomi e valori sono temporanei. L'idea per ora è: se sono su Low, posso fare solo una scelta forte. Con Normal, due e via di seguito. Ogni scelta mi scala indietro nella lista di stati.
 LIST ink = Empty, Low, Normal, Medium, High
-VAR firstCharacterInkLevel = Low
-VAR secondCharacterInkLevel = Low
-VAR thirdCharacterInkLevel = Low
-VAR fourthCharacterInkLevel = Low
-VAR fifthCharacterInkLevel = Low
-VAR sixthCharacterInkLevel = Low
-VAR seventhCharacterInkLevel = Low
+VAR firstCharacterInkLevel = Empty
+VAR secondCharacterInkLevel = Empty
+VAR thirdCharacterInkLevel = Empty
+VAR fourthCharacterInkLevel = Empty
+VAR fifthCharacterInkLevel = Empty
+VAR sixthCharacterInkLevel = Empty
+VAR seventhCharacterInkLevel = Empty
 
 
 
@@ -53,10 +53,13 @@ VAR seventhCharacterInkLevel = Low
 === function inkTranslator(InkLevel)
 {
     - InkLevel == firstCharacterInkLevel:
+
         ~ Ink = firstCharacterInkLevel
+    
     - InkLevel == secondCharacterInkLevel:
         ~ Ink = secondCharacterInkLevel
 }
+
 {Ink:
     - Empty:
         non hai guadagnato alcuna goccia di inchiostro.
@@ -70,4 +73,6 @@ VAR seventhCharacterInkLevel = Low
         hai guadagnato tre goccie di inchiostro a disposizione, e la personaggia ti darà una informazione importante
     - else:
         <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>
+        {debug: <i>Il livello di inchiostro per la prima personaggia è {firstCharacterInkLevel}}
+
 }

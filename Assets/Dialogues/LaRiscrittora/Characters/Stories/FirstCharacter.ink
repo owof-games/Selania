@@ -129,6 +129,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
             -
         ???: Talco, dimmi che sei qui anche tu, ti prego, non so capire il mondo senza di te.
         ???: Sei l'unica persona con cui posso permettermi di litigare.
+        ???: E l'unica che mi sopporta da quando ho finito il conservatorio.
         ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameUno}.
         {charNameUno}: No, io sono {charNameUno}.
         {charNameUno}: Ehi! Non è questo il mio nome.
@@ -172,7 +173,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                     ~ firstPurple ++
             -
        {charNameUno}: Comunque sì, ti si addice benissimo, hai proprio una faccia da {name}.
-       {charNameUno}: Ma forse la mia faccia è cambiata? Ti sembro una {charNameUno}?
+       {charNameUno}: Ma forse la mia faccia è cambiata? Ti sembro una che può chiamarsi {charNameUno}?
             + [No, la faccia è una cosa che hai anche se non hai un nome.]
                 {firstBlue > 1: {charNameUno}: {name}, sai che ogni tanto puoi scendere da ovviolandia, vero? }
                 {charNameUno}: Forse dovrei chiamarti Linea.
@@ -639,7 +640,6 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         
 === first_character_opinions
 ~ temp charNameUno = uppercaseTranslator(firstCharacterState) 
-    ~ firstStoryQuestCount ++
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
     {charNameUno}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?|Secondo te potrei insegnare alle api a creare un quartetto? Con quelle codine sarebbero perfette con la viola. O forse qualcosa da suonare con le ali, che vibri. Potrebbero muoversi nella cassa di una chitarra e fare i loro suonini.|Durante le lezioni il prof Ghiberti aveva l’abitudine di tirarsi il colletto del maglioncino. Li aveva tutti rovinati, se li tirava così tanto che a volte ti chiedevi se gli mancava l’aria.|Al Conservatorio ci sono troppe cose che non c’entrano con la musica. C’è competitività, c’è senso di fretta, di perfezione. Però mi manca, sai? Tutto quello che sta tra una lezione e l’altra, tutto quel parlare di musica mi faceva sentire viva.|Quando ho solo la mia chitarrina, è come se uscisse un’altra me. Non conta più l’insieme ma il momento, la singola nota è come un tratto di pennello, e improvvisare diventa come dipingere. Non so improvvisare col pianoforte, ci sono troppe aspettative.|Litigo spesso con mio padre. È un brav’uomo, molto pratico. Si preoccupa per me perché nel suo mondo tutto fatto di numeri e linee uscire dalla via principale significa morire. E forse ha ragione ma per me è morire anche restare in quelle cose. Schiacciata tra quelle regole.}
             -> main
@@ -724,7 +724,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
 
     = statement
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
-        <i>A seguito del rapporto che hai creato con {charNameUno}, questo è l'inchiostro che hai a disposione per aiutarla riscrivere la sua storia.</i>
+        <i>A seguito del rapporto che hai creato con {charNameUno}, questo è l'inchiostro che hai a disposizione per aiutarla riscrivere la sua storia.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(firstCharacterInkLevel)
         + [Iniziamo ad aiutarla!]
@@ -934,36 +934,51 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     = ending
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
      Per questo il mio consiglio è...
-        + {firstRed > 0} [Rinuncia: prendi una strada e se non ti piace cambiala!]
+        + {firstRed > 0} [{charNameUno}: prendi una strada e se non ti piace cambiala!]
                 
-        + {firstYellow > 0} [Rinuncia: ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti ora!]
+        + {firstYellow > 0} [{charNameUno}:ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti ora!]
                 
-        + {firstGreen > 0} [Rinuncia: hai paura di deludere i tuoi amici, ma loro saranno sempre con te.]
+        + {firstGreen > 0} [{charNameUno}: hai paura di deludere i tuoi amici, ma loro saranno sempre con te.]
                 
-        + {firstBlue > 0} [Rinuncia: hai preso una strada che non è la tua. Succede. Ora che lo sai, puoi cambiare.]
+        + {firstBlue > 0} [{charNameUno}: hai preso una strada che non è la tua. Succede. Ora che lo sai, puoi cambiare.]
                 
-        + {firstPurple > 0} [Rinuncia: quello che stai cercando è una vita con uno scopo più grande.]
+        + {firstPurple > 0} [{charNameUno}: quello che stai cercando è una vita con uno scopo più grande.]
                 
         -     
         
-    Rinuncia: Grazie, {name}.
-    Rinuncia: Mentre parlavi mi è nata una nuova canzone in testa.
-    Rinuncia: Qualcosa di fresco, di pronto a cambiare.
-    Rinuncia: La canzone del mio vero nome.
+    {charNameUno}: Grazie, {name}.
+    {charNameUno}: Mentre parlavi mi è nata una nuova canzone in testa.
+    {charNameUno}: Qualcosa di fresco, di pronto a cambiare.
+    {charNameUno}: La canzone del mio vero nome.
         
         {
             - firstCharacterPossibleStates has Rinuncia:
-                Rinuncia: Che resterà Rinuncia, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
+                {charNameUno}: Che resterà Rinuncia, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
+            
             - firstCharacterPossibleStates has Triangolo:
-                Rinuncia: E il mio vero nome è Triangolo, perché pensavo di essere uno strumento, e invece ho solo fallito.
+                {charNameUno}: E il mio vero nome è Triangolo, perché pensavo di essere uno strumento, e invece ho solo fallito.
+                    ~ firstCharacterState = ()
+                    ~ firstCharacterState += Triangolo
+            
             - firstCharacterPossibleStates has RagazzaOrchestra:
-                Rinuncia: Mi chiamerò Ragazza Orchestra: nel non saper rinunciare sono diventata l'ornitorinco della musica.
+                {charNameUno}: Mi chiamerò Ragazza Orchestra: nel non saper rinunciare sono diventata l'ornitorinco della musica.
+                    ~ firstCharacterState = ()
+                    ~ firstCharacterState += RagazzaOrchestra
+            
             - firstCharacterPossibleStates has FlautoDolce:
-                Rinuncia: Il mio nome è Flauto Dolce: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
+                {charNameUno}: Il mio nome è Flauto Dolce: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
+                    ~ firstCharacterState = ()
+                    ~ firstCharacterState += FlautoDolce                
+            
             - firstCharacterPossibleStates has Ocarina:
-                Rinuncia: Mi chiamerò Ocarina: perché il suo suono è gioco e festa.
+                {charNameUno}: Mi chiamerò Ocarina: perché il suo suono è gioco e festa.
+                    ~ firstCharacterState = ()
+                    ~ firstCharacterState += Ocarina
+            
             - firstCharacterPossibleStates has Violino:
-                Rinuncia: Io sono Violino: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
+                {charNameUno}: Io sono Violino: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
+                    ~ firstCharacterState = ()
+                    ~ firstCharacterState += Violino
         }
     
         {
@@ -1006,8 +1021,8 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     }
     
         - (top)
-    {charNameUno}: {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me|Sono sicura di aver visto un'altra persona alla fermata del bus, ma quando ho cercato di raggiungerla è scomparsa|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
-    
+        {charNameUno}: {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me|Sono sicura di aver visto un'altra persona alla fermata del bus, ma quando ho cercato di raggiungerla è scomparsa|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
+                ~ firstCharEndingDialogue ++
         -> main
         
         = goodbye

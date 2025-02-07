@@ -249,7 +249,7 @@ Dono...
         ~ thirdCharacterInkLevel ++
         ~ thirdCharacterInkLevel ++
         <i>{uppercaseTranslator(thirdCharacterState)} se la avvolge attorno al corpo.
-        <i>Sembra sollevato.</i>
+        <i>Sembra sollevata.</i>
         ~ currentReceiver = ()
         -> dono_storia_tre.esito_inchiostro
     }
