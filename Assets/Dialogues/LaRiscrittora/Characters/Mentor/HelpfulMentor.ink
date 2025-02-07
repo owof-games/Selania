@@ -110,31 +110,34 @@
         {charName}: Perché tu {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}} sei {pronouns has him: un riscrittore|{pronouns has her: una riscrittora|unə riscrittorə}}!
         {charName}: Aiuti queste persone bloccate a guardare la loro storia in modo diverso, e a scegliersi un nuovo nome.
         
-            + [Un nome è un nome. Che se ne fanno di uno nuovo?]
-                {charName}: Un nome è come una magia.
-                {charName}: Lo carichiamo di volta in volta di significato.
-                {charName}: E quando lo usiamo, ci dice chi siamo.
-                {charName}: A volte quella magia non va più bene, e dobbiamo cercare una nuova formula. Un nuovo nome.
-                    ~ seventhBlue ++
-            + [Con l'inchiostro ci posso disegnare?]
-                {charName}: No, {name}.
-                {charName}: Tu sei {pronouns has him: un riscrittore|{pronouns has her: una riscrittora|unə riscrittorə}}, non {pronouns has him: un disegnatore|{pronouns has her: una disegnatrice|unə disegnatricə}}
-                    ~ seventhYellow ++
-            + [Tipo gaslighting?]
-                {charName}: No no no assolutamente no.
-                {charName}: Anche perché se una persona si sente presa in giro, sarà tutto fuorché disponibile a fidarsi di te.
-                        ~ seventhRed ++
-            + [Ci vuole un gruppo di persone care per guardarsi in modo diverso.]
-                {charName}: A volte è più facile aprirsi a chi non si conosce.
-                {charName}: E mentre noi riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
-                {charName}: E poi... no, questo te lo dirò tra qualche tempo.
-                        ~ seventhGreen ++
             + [E tu, hai bisogno di un nuovo nome?]
                 {charName}: Io?
                 {charName}: No!
                 {charName}: Questo è sempre stato il mio nome.
                 {charName}: Ed è la cosa che amo più fare.
                     ~ seventhPurple ++
+                    
+            + [Con l'inchiostro ci posso disegnare?]
+                {charName}: No, {name}.
+                {charName}: Tu sei {pronouns has him: un riscrittore|{pronouns has her: una riscrittora|unə riscrittorə}}, non {pronouns has him: un disegnatore|{pronouns has her: una disegnatrice|unə disegnatricə}}
+                    ~ seventhYellow ++
+            + [Ci vuole un gruppo di persone care per guardarsi in modo diverso.]
+                {charName}: A volte è più facile aprirsi a chi non si conosce.
+                {charName}: E mentre noi riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
+                {charName}: E poi... no, questo te lo dirò tra qualche tempo.
+                        ~ seventhGreen ++
+                        
+            + [Tipo gaslighting?]
+                {charName}: No no no assolutamente no.
+                {charName}: Anche perché se una persona si sente presa in giro, sarà tutto fuorché disponibile a fidarsi di te.
+                        ~ seventhRed ++
+            
+            + [Un nome è un nome. Che se ne fanno di uno nuovo?]
+                {charName}: Un nome è come una magia.
+                {charName}: Lo carichiamo di volta in volta di significato.
+                {charName}: E quando lo usiamo, ci dice chi siamo.
+                {charName}: A volte quella magia non va più bene, e dobbiamo cercare una nuova formula. Un nuovo nome.
+                    ~ seventhBlue ++
             -
         
 
@@ -157,25 +160,30 @@
         {charName}: Più interventi hai a disposizione, più puoi convincere la persona a vedere le cose diversamente.
         {charName}: A raggiungere il tuo obiettivo:
         {charName}: riscrivere la loro storia.
-            + [{charNameUno} non è una persona particolarmente razionale. Può farcela?]
-                {charName}: {name}, capisco la tua perplessità, ma sì, ce la può fare.
-                    ~ seventhBlue ++
-            + [Gli scoiattoli non hanno bisogno di riscriverla, invece?]
-                {charName}: Gli scoiattoli non hanno intelletto.
-                {charName}: Non si fanno queste domande.
-                {charName}: Gli scoiattoli <i>sono</i>, e basta.
-                    ~ seventhYellow ++
-            + [Invece di parlare così tanto, non posso dirle: chiamati così, ciao, adios!?]
-                {charName}: Un nuovo nome è una nuova esperienza.
-                {charName}: E l'esperienza viene dal percorso.
-                {charName}: Se non c'è percorso, non c'è cambiamento.
-                    ~ seventhRed ++
+        
             + [Hai un consiglio da darmi, Mentore?]
                 {charName}: Sii chi sei.
                 {charName}: Non essere altro.
                 {charName}: Non chiedere alla persona di essere altro.
                 {charName}: La stai aiutando a trovare chi è, non un'altra persona diversa da sé.
                     ~ seventhGreen ++
+                    
+            + [Invece di parlare così tanto, non posso dirle: chiamati così, ciao, adios!?]
+                {charName}: Un nuovo nome è una nuova esperienza.
+                {charName}: E l'esperienza viene dal percorso.
+                {charName}: Se non c'è percorso, non c'è cambiamento.
+                    ~ seventhRed ++
+            
+            + [{charNameUno} non è una persona particolarmente razionale. Può farcela?]
+                {charName}: {name}, capisco la tua perplessità, ma sì, ce la può fare.
+                    ~ seventhBlue ++
+                    
+            + [Gli scoiattoli non hanno bisogno di riscriverla, invece?]
+                {charName}: Gli scoiattoli non hanno intelletto.
+                {charName}: Non si fanno queste domande.
+                {charName}: Gli scoiattoli <i>sono</i>, e basta.
+                    ~ seventhYellow ++
+                    
             + [Mentore, ti stimo, ma non sei tu a decidere il mio obiettivo.]
                 {charName}: Il tuo obiettivo <i>qui</i>, perdonami.
                 {charName}: Non avendo altri luoghi in cui andare, mi dimentico che possono esserci sono altre vite, altri obiettivi da raggiungere.
