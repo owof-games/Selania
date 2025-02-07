@@ -3,10 +3,10 @@
     - growing < 2:
         ~ growStep = ()
         ~ growStep += stepZero
-    - growing < 4:
+    - growing < 3:
         ~ growStep = ()
         ~ growStep += stepOne    
-    - growing < 6:
+    - growing < 4:
         ~ growStep = ()
         ~ growStep += stepTwo
     - else:
