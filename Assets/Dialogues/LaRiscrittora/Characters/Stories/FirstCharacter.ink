@@ -976,6 +976,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     
     
     = secret_ending
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
         {charNameUno}: C'è una cosa che vorrei dirti, {name}.
         {charNameUno}: Riguarda Il mentore.
         {charNameUno}: Qual è il confine tra essere un bravo ragazzo ed essere un manipolatore?
@@ -986,6 +987,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                 -> main
             
     = exit
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
         {charNameUno}: Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
             ~ firstStory = Ended
             ~ movementsCounter = 0
@@ -1004,25 +1006,23 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     }
     
         - (top)
-            * opzione
-                ~ firstCharEndingDialogue ++
-                    -> personaggia_uno_storia_conclusa
-            * opzione
-                ~ firstCharEndingDialogue ++
-                    -> personaggia_uno_storia_conclusa
-            * opzione
-                ~ firstCharEndingDialogue ++
-                    -> personaggia_uno_storia_conclusa
-            + esci dalla conversazione
-                -> main
-            -
+    {charNameUno}: {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me|Sono sicura di aver visto un'altra persona alla fermata del bus, ma quando ho cercato di raggiungerla è scomparsa|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
+    
         -> main
         
         = goodbye
         ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
-        Ciao ciao
+        {charNameUno}: {name}, per me è arrivato il momento di tornare a casa.
+        {firstCharacterPossibleStates hasnt Rinuncia: {charNameUno}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
+        {firstCharacterPossibleStates hasnt Rinuncia: {charNameUno}: Grazie per quello che hai fatto, davvero.}
+        {firstCharacterPossibleStates has Rinuncia: {charNameUno}: Vedremo cosa mi accadrà.}
             ~ move_entity(FirstCharacter, Safekeeping)
-            ~ move_entity(FirstCharacterNotes, BusStop)
+            //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
+            {
+                - firstCharacterPossibleStates hasnt Rinuncia:
+                    ~ move_entity(FirstCharacterNotes, BusStop)
+            }    
+            
         -> main
 
 
