@@ -82,45 +82,62 @@
         {charName}: Ad esempio, coltivando qualcosa <b>alla serra</b>.
         {charName}: Il dono è una cosa importante, perché è il tuo modo di dimostrare loro che l3 hai ascoltat3.
 
-            + [Opzione che aumenta il blu]
-                ~ seventhBlue ++
-            + [Opzione che aumenta il giallo]
-                ~ seventhYellow ++
-            + [Opzione che aumenta il rosso]
-                ~ seventhRed ++
-            + [Opzione che aumenta il verde]
-                ~ seventhGreen ++
-            + [Opzione che aumenta il viola]
-                ~ seventhPurple ++
+            + [Matematico: ascolto, analizzo, scelgo il dono.]
+                {charName}: Magari non proprio <i>matematico</i>.
+                {charName}: Piuttosto, direi empatico.
+                    ~ seventhBlue ++
+            + [È un po' come un videogioco: comprendi il loop, dai il meglio di te.]
+                {charName}: Sì.
+                {charName}: Anche se le persone non sono un loop.
+                {charName}: E tu non devi dare il meglio, ma quello che sei.
+                    ~ seventhYellow ++
+            + [Sostanzialmente mi chiedi di lavorare senza darmi un soldo.]
+                {charName}: Non è un lavoro.
+                {charName}: E qui non c'è denaro.
+                {charName}: E non sono un tuo nemico: non serve questo atteggiamento aggressivo.
+                    ~ seventhRed ++
+            + [Mi stai chiedendo di creare una relazione con queste persone, quindi.]
+                {charName}: Sì, secondo i tuoi bisogni e i tuoi limiti ovviamente.
+                {charName}: Non serve a nessuno che tu ti annulli per aiutare chi hai davanti.
+                    ~ seventhGreen ++
+            + [La fiducia non si conquista, la fiducia è un dono.]
+                {charName}: Esatto.
+                {charName}: E quindi puoi vedere tutto questo come uno scambio.
+                    ~ seventhPurple ++
             -
         {charName}: Ora, perché devi dare un dono?
         {charName}: Non solo per dimostrare a queste persone che le hai ascoltate, ma anche per aumentare la tua quantità di inchiostro.
         {charName}: Perché tu {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}} sei {pronouns has him: un riscrittore|{pronouns has her: una riscrittora|unə riscrittorə}}!
         {charName}: Aiuti queste persone bloccate a guardare la loro storia in modo diverso, e a scegliersi un nuovo nome.
         
-            + [Opzione che aumenta il blu]
-                ~ seventhBlue ++
-            + [Opzione che aumenta il giallo]
-                ~ seventhYellow ++
-            + [Opzione che aumenta il rosso]
-                ~ seventhRed ++
-            + [Opzione che aumenta il verde]
-                ~ seventhGreen ++
-            + [Opzione che aumenta il viola]
-                ~ seventhPurple ++
-            -
-        
-            - (top2)
-            * [Tipo gaslighting?]
+            + [Un nome è un nome. Che se ne fanno di uno nuovo?]
+                {charName}: Un nome è come una magia.
+                {charName}: Lo carichiamo di volta in volta di significato.
+                {charName}: E quando lo usiamo, ci dice chi siamo.
+                {charName}: A volte quella magia non va più bene, e dobbiamo cercare una nuova formula. Un nuovo nome.
+                    ~ seventhBlue ++
+            + [Con l'inchiostro ci posso disegnare?]
+                {charName}: No, {name}.
+                {charName}: Tu sei {pronouns has him: un riscrittore|{pronouns has her: una riscrittora|unə riscrittorə}}, non {pronouns has him: un disegnatore|{pronouns has her: una disegnatrice|unə disegnatricə}}
+                    ~ seventhYellow ++
+            + [Tipo gaslighting?]
                 {charName}: No no no assolutamente no.
-                {charName}: Anche perché uno spettro preso in giro è uno spettro che diventa davvero, davvero, davvero fastidioso.
-                    -> top2
-            * [Dovrei dare consigli a uno sconosciuto?]
+                {charName}: Anche perché se una persona si sente presa in giro, sarà tutto fuorché disponibile a fidarsi di te.
+                        ~ seventhRed ++
+            + [Ci vuole un gruppo di persone care per guardarsi in modo diverso.]
                 {charName}: A volte è più facile aprirsi a chi non si conosce.
                 {charName}: E mentre noi riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
                 {charName}: E poi... no, questo te lo dirò tra qualche tempo.
-                    -> top2
-            
+                        ~ seventhGreen ++
+            + [E tu, hai bisogno di un nuovo nome?]
+                {charName}: Io?
+                {charName}: No!
+                {charName}: Questo è sempre stato il mio nome.
+                {charName}: Ed è la cosa che amo più fare.
+                    ~ seventhPurple ++
+            -
+        
+
             {charName}: Quindi: quando avrai conquistato la fiducia di quella persona e le avrai donato qualcosa, torna da me per le ultime istruzioni.
             ~ firstPauseTalking = 0
             -> main
@@ -129,6 +146,7 @@
     
     === questions
     ~ temp charName = uppercaseTranslator(seventhCharacterState)
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     
         {firstCharacterInkLevel == Empty or firstCharacterInkLevel == Low: {charName}: Non ti demoralizzare, capita a chiunque di non dare il massimo al primo colpo.}
         {firstCharacterInkLevel == Normal: {charName}: Bel colpo! Ti sei {pronouns has him: guadagnato|{pronouns has her: guadagnata|guadagnatə}} subito una bella dose di inchiostro!}
@@ -137,18 +155,31 @@
         {charName}: Sostanzialmente più alto è il valore di inchiostro, più interventi puoi fare.
         {charName}: Gli interventi sono domande o commenti che puoi fare su cose diverse che preoccupano la persona.
         {charName}: Più interventi hai a disposizione, più puoi convincere la persona a vedere le cose diversamente.
-        {charName}: Riscrivere la sua storia.
-        {charName}: Trovare un nuovo nome.
-            + [Opzione che aumenta il blu]
-                ~ seventhBlue ++
-            + [Opzione che aumenta il giallo]
-                ~ seventhYellow ++
-            + [Opzione che aumenta il rosso]
-                ~ seventhRed ++
-            + [Opzione che aumenta il verde]
-                ~ seventhGreen ++
-            + [Opzione che aumenta il viola]
-                ~ seventhPurple ++
+        {charName}: A raggiungere il tuo obiettivo:
+        {charName}: riscrivere la loro storia.
+            + [{charNameUno} non è una persona particolarmente razionale. Può farcela?]
+                {charName}: {name}, capisco la tua perplessità, ma sì, ce la può fare.
+                    ~ seventhBlue ++
+            + [Gli scoiattoli non hanno bisogno di riscriverla, invece?]
+                {charName}: Gli scoiattoli non hanno intelletto.
+                {charName}: Non si fanno queste domande.
+                {charName}: Gli scoiattoli <i>sono</i>, e basta.
+                    ~ seventhYellow ++
+            + [Invece di parlare così tanto, non posso dirle: chiamati così, ciao, adios!?]
+                {charName}: Un nuovo nome è una nuova esperienza.
+                {charName}: E l'esperienza viene dal percorso.
+                {charName}: Se non c'è percorso, non c'è cambiamento.
+                    ~ seventhRed ++
+            + [Hai un consiglio da darmi, Mentore?]
+                {charName}: Sii chi sei.
+                {charName}: Non essere altro.
+                {charName}: Non chiedere alla persona di essere altro.
+                {charName}: La stai aiutando a trovare chi è, non un'altra persona diversa da sé.
+                    ~ seventhGreen ++
+            + [Mentore, ti stimo, ma non sei tu a decidere il mio obiettivo.]
+                {charName}: Il tuo obiettivo <i>qui</i>, perdonami.
+                {charName}: Non avendo altri luoghi in cui andare, mi dimentico che possono esserci sono altre vite, altri obiettivi da raggiungere.
+                    ~ seventhPurple ++
             -
         {charName}: Ricorda {name}: sei una guida, ma sta alla persona decidere alla fine chi è, e di cosa ha bisogno.
         {charName}: Quando te la senti, affronta questo ultimo passaggio, e poi torna da me.
@@ -242,7 +273,7 @@
         {charName}: Step tre: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.
         {charName}: Step quattro: la persona sceglierà il suo nuovo nome.
         {charName}: Step cinque: ti riposi.
-            ->->
+           -> speaking_with_mentor
 /* ---------------------------------
 
    Aiuto con le storie

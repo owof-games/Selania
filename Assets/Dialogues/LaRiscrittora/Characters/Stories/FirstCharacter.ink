@@ -205,7 +205,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
                     ~ firstPurple ++
             -
        {charNameUno}: Come mi dovrei chiamare secondo te?
-    	    + [Secondo il mentore è qualcosa che capiremo col tempo, assieme.]
+    	    + {gifts_and_ink}[Secondo il mentore è qualcosa che capiremo col tempo, assieme.]
     	    + [<i>Qualsiasi cosa tu abbia pensato, non riesci a dirla.</i>]
     	-
         {charNameUno}: Interessante.
