@@ -728,6 +728,7 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(firstCharacterInkLevel)
         + [Iniziamo ad aiutarla!]
+            -> firstNaming -> 
             -> one
         + [Preferisco prendermi del tempo.]
             -> main
@@ -736,30 +737,46 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     = one
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     {name}: Prima hai detto che hai il terrore di fare una scelta.
-        + {firstGreen} [Eppure hai deciso di costruire una nuova famiglia con l3 tu3 amic3.]
+        + [Eppure hai deciso di costruire una nuova famiglia con l3 tu3 amic3.]
             {name}: Hai aperto il tuo cuore, e loro ti amano.
             {name}: Si preoccupano per te, cercano di aiutarti a trovare la tua strada.
             {name}: E questo amore è frutto di infinite piccole scelte fatte ogni giorno.
         
-        + {firstYellow} [Ma poi hai accettato il rischio più volte di suonare sul tetto.]
+        + [Ma poi hai accettato il rischio più volte di suonare sul tetto.]
             {name}: Hai accettato di essere festa in un mondo severo.
             {name}: Hai cercato il gioco quando tutto ti dice che devi lavorare.
             {name}: Hai accolto falene, scoiattoli e altri animali suonanti.
+                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }            
         
-        + {firstRed} [Invece stai dimenticando che per finire il conservatorio hai lottato per anni.]
+        + [Invece stai dimenticando che per finire il conservatorio hai lottato per anni.]
             {name}: Che ogni esame che hai dato è stata una scelta.
             {name}: Che ogni lezione che hai seguito è stata una scelta.
             {name}: E presto o tardi, hai trovato la volontà di continuare.
         
-        + {firstBlue} [Però da che sei qui hai esplorato tutto questo luogo.]
+        + [Però da che sei qui hai esplorato tutto questo luogo.]
             {name}: Hai inseguito uno scoiattolo.
             {name}: Hai cercato Talco.
             {name}: Non ti sei fatta spaventare dalla novità.
+                {
+                	- firstCharacterPossibleStates hasnt Rinuncia:
+    		            ~ firstCharacterPossibleStates --
+    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }
+            
         
-        + {firstPurple}[La stessa persona che ha accettato il suo nuovo nome, cercando di capire da dove venga.]
-            {name}: Accettare è una scelta, {charNameUno}.
+        + [La stessa persona che ha accettato il suo nuovo nome, cercando di capire da dove venga.]
+            {name}: Accettare è una scelta.
             {name}: Cercare risposte è un'altra scelta ancora.
             {name}: E ammettere una propria paura, una scelta enorme.
+                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }            
         -
  
         {
@@ -773,29 +790,44 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     {name}: Temi che le persone a cui vuoi bene si sentano tradite dalla scelta che farai.
 
-        + {firstGreen} [Il tuo cuore si preoccupa molto di loro, e poco di te.]
+        + [Il tuo cuore si preoccupa molto di loro, e poco di te.]
             {name}: Non ti sei chiesta molto dove eri, ti sei messa solo a cercare Talco.
             {name}: Ti sei preoccupata per Jonah.
             {name}: Ma per te?
         
-        + {firstYellow} [Giocando tradiamo la fiducia solo rompendo le regole a nostro vantaggio.]
+        + [Giocando tradiamo la fiducia solo rompendo le regole a nostro vantaggio.]
             {name}: Hai deciso di giocare con loro e lasciar loro tutto il potere?
             {name}: O è una regola implicita, che non avete mai concordato ma che senti nell'aria?
             {name}: E a prescindere: abbiamo sempre il diritto di revocare un accordo, una regola.
+                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }            
         
-        + {firstRed} [Con Talco puoi litigare, eppure siete legatissim3.]
+        + [Con Talco puoi litigare, eppure siete legatissim3.]
             {name}: Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
             {name}: Il Talco che hai raccontato si arrabbierebbe di più se tu facessi una scelta per te pensando a ləi.
         
-        + {firstBlue} [Forse accadrà, ma non è un tuo problema.]
+        + [Forse accadrà, ma non è un tuo problema.]
             {name}: Stai costruendo la tua vita, non la loro.
             {name}: Se la pensano diversamente, non è amicizia, e ti sei salvata da qualcosa di peggiore.
+                {
+                	- firstCharacterPossibleStates hasnt Rinuncia:
+    		            ~ firstCharacterPossibleStates --
+    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }            
         
-        + {firstPurple}[La paura di tradire è un'altra faccia dell'ego.]
+        + [La paura di tradire è un'altra faccia dell'ego.]
             {name}: È la voglia di sembrare impeccabili.
             {name}: Infallibili.
             {name}: Inattaccabili.
             {name}: Ma amore e crescita prosperano nell'errore e nella vulnerabilità.
+                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }            
         -
         {
         - firstCharacterInkLevel == Low:
@@ -808,31 +840,47 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     {name}: Vedi una scelta come una strada chiusa, qualcosa da cui non poter tornare indietro.
 
-        + {firstGreen} [Ragioni come se fossi sola se dovessi cadere.]
+        + [Ragioni come se fossi sola se dovessi cadere.]
             {name}: Pensi che Talco ti abbandonerebbe?
             {name}: Anna? Olga? Persino Ennio.
             {name}: I tuoi genitori.
             {name}: Anche se a volte i vostri cuori sono distanti, quando c'è un bisogno sappiamo sempre ritrovarci.
             
-        + {firstYellow} [Se non tiri nessun dado, non c'è storia da far avanzare.]
+        + [Se non tiri nessun dado, non c'è storia da far avanzare.]
             {name}: Quando giochi non sempre le cose vanno come vuoi, ma comunque <i>vanno</i>.
             {name}: E fintanto che le cose hanno di dove andare, c'è tempo per cambiare.
             {name}: E a volte anche ritirare i dadi.
+                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }
+
             
-        + {firstRed} [La storia di Jonah non è un ammonimento, è un successo.]
+        + [La storia di Jonah non è un ammonimento, è un successo.]
             {name}: Ha deciso che non gli stava più bene quello che aveva, e si è mosso per cambiarlo.
             {name}: E il leggere negativamente le cose che forse gli sono capitate raccontano nulla di Jonah e molto di chi le racconta.
             {name}: C'è orgoglio anche dietro una cassa del supermercato, non solo su palco.
         
-        + {firstBlue} [Ogni persona che conosci ha immaginato sorti diverse per Jonah.]
+        + [Ogni persona che conosci ha immaginato sorti diverse per Jonah.]
             {name}: E nessuna di queste è una fine.
+                {
+                	- firstCharacterPossibleStates hasnt Rinuncia:
+    		            ~ firstCharacterPossibleStates --
+    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }            
         
-        + {firstPurple}[Eppure la prima cosa che hai visto qui sono otto sentieri.]
+        + [Eppure la prima cosa che hai visto qui sono otto sentieri.]
             {name}: Otto luoghi dove andare.
             {name}: E ogni sentiero ha una direzione in cui andare, e una da cui tornare.
             {name}: A volte l'erba può essere cresciuta.
             {name}: A volte l'acqua può averne cancellato un pezzo.
             {name}: Ma il sentiero è sempre lì, ad aspettare.
+                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }            
         -
         {
         - firstCharacterInkLevel == Normal:
@@ -843,26 +891,41 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     
     = four
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
-        {name} Questo posto ti ha assegnato un nome, e quel nome è {charNameUno}.
+        {name} Questo posto ti ha assegnato un nome, e quel nome è Rinuncia.
 
-        + {firstGreen} [Quando Anna ha rinunciato all'ex, ha scoperto la sicurezza.]
+        + [Quando Anna ha rinunciato all'ex, ha scoperto la sicurezza.]
             {name}: Rinunciare vuol dire anche prendersi cura di sé.
             {name}: Un atto d'amore quando qualcosa non ci fa più bene.
      
-        + {firstYellow} [Giocare è bello perché puoi sempre rinunciare a farlo.]
+        + [Giocare è bello perché puoi sempre rinunciare a farlo.]
             {name}: Quando una roba la devi fare anche quando non vuoi, quello è il lavoro.
             {name}: Per questo fa schifo.
+                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }            
          
-        + {firstRed} [C'è più coraggio nella rinuncia che nel compromesso.]
+        + [C'è più coraggio nella rinuncia che nel compromesso.]
             {name}: Spesso è più costosa, ma la coerenza personale non ha prezzo.
         
-        + {firstBlue} [Rinunciare alla ricerca di Talco è stato un atto di autopreservazione.]
+        + [Rinunciare alla ricerca di Talco è stato un atto di autopreservazione.]
             {name}: Se una cosa non ha senso, non ha senso anche se continuiamo ad insistere nel farla.
+                {
+                	- firstCharacterPossibleStates hasnt Rinuncia:
+    		            ~ firstCharacterPossibleStates --
+    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }            
         
-        + {firstPurple}[Un infinito più piccolo resta comunque infinito.]
+        + [Un infinito più piccolo resta comunque infinito.]
             {name}: Rinuncia a una cosa e sarai comunque tutto.
             {name}: Un nome è solo un nome.
             {name}: Una persona è un universo intero.
+                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }            
     
         -
         
@@ -871,15 +934,15 @@ TODO: a testi conclusi, cambia in modo randomico ordine delle risposte.
     = ending
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
      Per questo il mio consiglio è...
-        + {firstRed > 0} [{charNameUno}: prendi una strada e se non ti piace cambiala!]
+        + {firstRed > 0} [Rinuncia: prendi una strada e se non ti piace cambiala!]
                 
-        + {firstYellow > 0} [{charNameUno}: ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti ora!]
+        + {firstYellow > 0} [Rinuncia: ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti ora!]
                 
-        + {firstGreen > 0} [{charNameUno}: hai paura di deludere i tuoi amici, ma loro saranno sempre con te.]
+        + {firstGreen > 0} [Rinuncia: hai paura di deludere i tuoi amici, ma loro saranno sempre con te.]
                 
-        + {firstBlue > 0} [{charNameUno}: hai preso una strada che non è la tua. Succede. Ora che lo sai, puoi cambiare.]
+        + {firstBlue > 0} [Rinuncia: hai preso una strada che non è la tua. Succede. Ora che lo sai, puoi cambiare.]
                 
-        + {firstPurple > 0} [{charNameUno}: quello che stai cercando è una vita con uno scopo più grande.]
+        + {firstPurple > 0} [Rinuncia: quello che stai cercando è una vita con uno scopo più grande.]
                 
         -     
         

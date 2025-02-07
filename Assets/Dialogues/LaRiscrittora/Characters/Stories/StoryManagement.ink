@@ -284,3 +284,33 @@
 
 ->->
 
+//Settaggio nome quando partiamo con la discussione
+=== firstNaming ===
+    {
+        - (firstBlue > firstGreen) && (firstBlue > firstRed) && (firstBlue > firstYellow) && (firstBlue > firstPurple):
+            ~ firstCharacterPossibleStates += Triangolo
+                ->->
+                
+        - (firstRed > firstGreen) && (firstRed > firstBlue) && (firstRed > firstYellow) && (firstRed > firstPurple):
+            ~ firstCharacterPossibleStates += RagazzaOrchestra
+                ->->
+                
+        - (firstGreen > firstBlue) && (firstGreen > firstRed) && (firstGreen > firstYellow) && (firstGreen > firstPurple):
+            ~ firstCharacterPossibleStates += FlautoDolce    
+                ->->
+                
+        - (firstYellow > firstGreen) && (firstYellow > firstRed) && (firstYellow > firstBlue) && (firstYellow > firstPurple):
+            ~ firstCharacterPossibleStates += Ocarina   
+                ->->
+                
+        - (firstPurple > firstGreen) && (firstPurple > firstRed) && (firstPurple > firstYellow) && (firstPurple > firstBlue):
+            ~ firstCharacterPossibleStates += Violino    
+                ->->
+                
+        - else:
+            ~ firstCharacterPossibleStates += Rinuncia 
+            ->->
+                
+    }
+
+->->

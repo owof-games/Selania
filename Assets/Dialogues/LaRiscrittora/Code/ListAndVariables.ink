@@ -3,6 +3,7 @@
 //Per abilitare o meno i debug
 VAR debug = false
 VAR debugCultivable = false
+VAR debugChangeName = false
 
 //Nome giocatrice e pronouns
 VAR name = "Senza nome"
