@@ -228,7 +228,13 @@
                         - findedGifts hasnt LicheneDegliAbissi:
                         ~ findedGifts += LicheneDegliAbissi
                         Hai ottenuto: <b>Lichene degli Abissi.</b>
-                    }                    
+                    }
+                    
+                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> test_coltivazioni
+                + + [Mi aggiro per la serra.]    
+                    -> main
+                    
             + [Lo lascio dov'è.]
             -
               -> main
@@ -271,6 +277,12 @@
                         ~ findedGifts += MuschioDelleAmanti
                         Hai ottenuto: <b>Muschio delle Amanti.</b>
                     }
+                
+                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> test_coltivazioni
+                + + [Mi aggiro per la serra.]    
+                    -> main
+                    
             + [Ora non me la sento.]
             -
              -> main
@@ -314,7 +326,12 @@
                         ~ findedGifts += CantoDelleCompagne
                         Hai ottenuto: <b>Canto delle Compagne.</b>
                     }
+                
+                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> test_coltivazioni
+                + + [Mi aggiro per la serra.]    
                     -> main
+                    
         + [No, non ora.]
               -> main
               
@@ -359,7 +376,12 @@
                         ~ findedGifts += LaSpazzata
                         Hai ottenuto: <b>La Spazzata.</b>
                     }
+                
+                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> test_coltivazioni
+                + + [Mi aggiro per la serra.]    
                     -> main
+                    
         + [Non ora.]
             -> main
 
@@ -400,7 +422,11 @@
                         Hai ottenuto: <b>Bacca della Addolorata</b>
                     }
             
-                -> main
+                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> test_coltivazioni
+                + + [Mi aggiro per la serra.]    
+                    -> main
+                    
             + [Non è il momento.]
                 -> main
               
@@ -444,7 +470,11 @@
                         ~ findedGifts += NonTiScordarDiTe
                         Hai ottenuto: <b>Non Ti Scordar di Te.</b>
                     }
-              -> main
+                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> test_coltivazioni
+                + + [Mi aggiro per la serra.]    
+                    -> main                    
+       
         + [Non ora.]
               -> main
               
@@ -483,8 +513,11 @@
                         - findedGifts hasnt BrinaDellImpossibile:
                         ~ findedGifts += BrinaDellImpossibile
                         Hai ottenuto: <b>Brina dell'Impossibile</b>
-                    }                
-              -> main
+                    }
+                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> test_coltivazioni
+                + + [Mi aggiro per la serra.]    
+                    -> main
         + [Ora non me la sento.]
               -> main
  
