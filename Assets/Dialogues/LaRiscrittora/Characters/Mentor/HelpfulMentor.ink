@@ -121,7 +121,7 @@
                 {charName}: No, {name}.
                 {charName}: Tu sei {pronouns has him: un riscrittore|{pronouns has her: una riscrittora|unə riscrittorə}}, non {pronouns has him: un disegnatore|{pronouns has her: una disegnatrice|unə disegnatricə}}
                     ~ seventhYellow ++
-            + [Ci vuole un gruppo di persone care per guardarsi in modo diverso.]
+            + [Servono le persone care per guardarsi in modo diverso.]
                 {charName}: A volte è più facile aprirsi a chi non si conosce.
                 {charName}: E mentre noi riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
                 {charName}: E poi... no, questo te lo dirò tra qualche tempo.
@@ -168,20 +168,20 @@
                 {charName}: La stai aiutando a trovare chi è, non un'altra persona diversa da sé.
                     ~ seventhGreen ++
                     
-            + [Invece di parlare così tanto, non posso dirle: chiamati così, ciao, adios!?]
+            + [Ma non posso dirle: chiamati così, ciao, adios!?]
                 {charName}: Un nuovo nome è una nuova esperienza.
                 {charName}: E l'esperienza viene dal percorso.
                 {charName}: Se non c'è percorso, non c'è cambiamento.
                     ~ seventhRed ++
             
-            + [{charNameUno} non è una persona particolarmente razionale. Può farcela?]
+            + [Non è una persona particolarmente razionale. Può farcela?]
                 {charName}: {name}, capisco la tua perplessità, ma sì, ce la può fare.
                     ~ seventhBlue ++
                     
             + [Gli scoiattoli non hanno bisogno di riscriverla, invece?]
                 {charName}: Gli scoiattoli non hanno intelletto.
                 {charName}: Non si fanno queste domande.
-                {charName}: Gli scoiattoli <i>sono</i>, e basta.
+                {charName}: Gli scoiattoli <i>sono</i> e basta.
                     ~ seventhYellow ++
                     
             + [Mentore, ti stimo, ma non sei tu a decidere il mio obiettivo.]

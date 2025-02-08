@@ -25,6 +25,7 @@
             //Altre opzioni        
                 - else:
                     {charNameUno}: {~ Ho bisogno di tempo per me.|Ti spiace tornare tra un po'?|Credo di aver bisogno di silenzio, torna più tardi.}
+                -> main    
             }
 
 = intro_chat
@@ -260,7 +261,7 @@
                 {charNameUno}: E non so dove andare.
                     ~ firstPurple ++
             
-            + [Capisco l'amicizia con Talco, ma è importante essere indipendenti.]
+            + [Ok l'amicizia con Talco, ma devi essere indipendente.]
                 {charNameUno}: Talco e io siamo due parti della stessa armonia.
                 {charNameUno}: Sappiamo essere indipendenti.
                 {charNameUno}: Ma in momenti come questo, so suonare solo se è con me.
@@ -285,15 +286,16 @@
             -    
         {charNameUno}: Non è che saranno tutti i passi del mentore?
         {charNameUno}: Cammina così tanto, e per cosa poi?
-        {charNameUno}: Oh.
-        
+        {charNameUno}: Uh, forse devo imitarlo.
+        {charNameUno}: Credo farò due passi.
              ~ firstPauseTalking = firstCharPauseDurantion
-            -> main       
+            -> main  
+            
     = three
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     ~ firstStoryQuestCount ++
     
-        {charNameUno}: Sto iniziando a ragionare come Anna.
+        {charNameUno}: Stavo pensando ad Anna.
         {charNameUno}: Anna è una delle mie amiche del conservatorio.
         {charNameUno}: Ha un anno meno di me e ora vuole che mi proponga come assistente di Ghiberti.
         {charNameUno}: Dice che lui ha stima di me e questa è la mia occasione.
@@ -383,14 +385,15 @@
                 {charNameUno}: E la mia testa ora è piena di domande.
                     ~ firstPurple ++
             -
-            
+        {charNameUno}: Forse il mentore è abbastanza vecchio da avere una radio?
              ~ firstPauseTalking = firstCharPauseDurantion
-            -> main       
+            -> main 
+            
     = five
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     ~ firstStoryQuestCount ++
     
-        {charNameUno}: Sono abituata a essere circondata da gente tutto il giorno, sai?
+        {charNameUno}: Sono abituata a essere circondata da gente tutto il giorno.
         {charNameUno}: A vivere nella festa.
         {charNameUno}: Sto in una casa con altre cinque persone, un posto pieno di muffa e corridoi e armadi e c’è sempre una festa da fare.
         {charNameUno}: Talco crea strumenti con qualsiasi cosa trova in giro.
@@ -405,7 +408,7 @@
                     {charNameUno}: Ma se sono qui, con questo nome, forse non è la vera soluzione.
                         ~ firstRed ++
                         
-                + [I pensieri sono specchi: rompili e scoprirai cosa è reale e cosa è riflesso.]
+                + [I pensieri sono specchi: rompili e vedrai cosa è reale e cosa riflesso.]
                     {charNameUno}: Forse dovrei stendermi e meditare.
                     {charNameUno}: Lasciare che si spengano uno per uno.
                     {charNameUno}: Ignorare la paura che ho all'idea di vedere le cose come stanno.
@@ -416,7 +419,7 @@
                     {charNameUno}: Ma non reggo bene nessuna delle due cose.
                         ~ firstBlue ++
                         
-                + [Forse non è la festa, ma è il senso di unione che ti manca ora.]
+                + [Forse non è la festa, ma è il senso di unione che ti manca.]
                     {charNameUno}: Ma con chi, qui?
                     {charNameUno}: Scusa, non per offenderti.
                     {charNameUno}: Sei una persona molto dolce, ma non sei <i>loro</i>.
@@ -454,12 +457,12 @@
                 {charNameUno}: Il conservatorio è finito da mesi, e io suono, ballo, ma non so ancora che cosa fare.
                     ~ firstYellow ++
                     
-            + [Siamo votat3 alla sopravvivenza, una soluzione si trova sempre.]
+            + [Siamo programmat3 per sopravvivere, una soluzione c'è sempre.]
                 {charNameUno}: Grazie ma voglio qualcosa di più che sopravvivere.
                 {charNameUno}: Banale, ma vorrei permettermi il lusso di vivere.
                 ~ firstBlue ++
                     
-            + [È compromesso se cedi te stessa. Restati fedele e porterai cambiamento.]
+            + [È compromesso se ti tradisci. Restati fedele e porterai cambiamento.]
                 {charNameUno}: E a quel punto ogni decisione sarebbe la <i>mia</i> decisione.
                     ~ firstPurple ++
             
@@ -514,7 +517,7 @@
                 {charNameUno}: O regalandogli un po' di caos?
                 ~ firstGreen ++
                 
-            + [Ha paura di vedere la trasformazione che viene dal disordine.]
+            + [Ha paura di accoglire la potenza del disordine.]
                 {charNameUno}: Già, è una possibilità.
                 {charNameUno}: Anche se poi credo che il disordine sia solo una questione di prospettiva.
                 {charNameUno}: Alla lunga ci si abiuta anche a quello, e a quel punto diventa difficile comunque cambiare.
@@ -579,7 +582,7 @@
         {charNameUno}: Annusi l'aria e ti senti viva.
         {charNameUno}: Merda, faccio davvero schifo a parlare.
             
-            + [Forse è più una ninna nanna. E l'imprevedibile è ciò che sognerai.]
+            + [È una ninna nanna. E l'imprevedibile è ciò che sognerai.]
                 {charNameUno}: Un pigiama party.
                 {charNameUno}: Un momento tra persone care.
                 {charNameUno}: Un sogno condiviso, sognando sognare.
@@ -590,7 +593,7 @@
                 {charNameUno}: Ah, sì, perché siamo solo noi.
                 {charNameUno}: E il mentore.
                     ~ firstBlue ++
-            + [Ogni temporale toglie a qualcuna per dare a qualcun altro.]
+            + [Ogni temporale toglie a qualcuna e dà a qualcun altro.]
                 {charNameUno}: Come le piante nella serra.
                 {charNameUno}: Per crescere prendono da terra, da ciò che manco vedo.
                 {charNameUno}: E ci danno in cambio odori e idee.
@@ -609,14 +612,14 @@
                     ~ firstYellow ++         
     
             -
-            
+        {charNameUno}: Credo resterò ad aspettare questo temporale.
+        
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main   
     = ten
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     ~ firstStoryQuestCount ++
     
-        {charNameUno}: Comunque, continua a tornarmi in mente un ricordo.
         {charNameUno}: L'anno scorso abbiamo occupato questo parco per una settimana.
         {charNameUno}: Il comune voleva distruggere gli alberi, e volevamo fare qualcosa di utile, sai.
         {charNameUno}: La prima notte il freddo non l'abbiamo sentito da come eravamo prese dalla gioia.
@@ -669,6 +672,7 @@
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
         //Famiglia d'origine
         ~ firstStoryQuestCount ++
+        
         {charNameUno}: Vuoi sapere una cosa buffa? La passione per la musica l'ho presa da mio papà.
         {charNameUno}: Lo stesso uomo che ora vorrebbe cercassi un "lavoro vero".
         {charNameUno}: Casa è piena di vecchi strumenti pieni di polvere.
@@ -708,7 +712,9 @@
                 {charNameUno}: E non sono veri i lavori che riguardano le mie passioni.
                     ~ firstBlue ++
             -
-
+            
+        {charNameUno}: Forse con l'approccio giusto, posso convincere papà ad ascoltare di nuovo le vecchie registazioni di nonno.
+        
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
             
@@ -766,7 +772,8 @@
 
  === first_story_gift ===
 ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
-        + {findedGifts != ()} [Offro un dono.]
+<i> Stai per donare qualcosa a {charNameUno}-</i>
+        + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += FirstCharacter
             -> gestione_inventario -> ink_outcome 
         + {findedGifts == ()} <i> Il tuo inventario è vuoto.</i>
@@ -847,7 +854,7 @@
         <i>A seguito del rapporto che hai creato con {charNameUno}, questo è l'inchiostro che hai a disposizione per aiutarla riscrivere la sua storia.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(firstCharacterInkLevel)
-        + [Iniziamo ad aiutarla!]
+        + [Voglio cominciare la riscrittura.]
             -> firstNaming -> 
             -> one
         + [Preferisco prendermi del tempo.]
@@ -858,7 +865,7 @@
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     {name}: Prima hai detto che hai il terrore di fare una scelta.
         
-        + [Qau accettato il suo nuovo nome, cercando di capire da dove venga.]
+        + [Qui accettato il tuo nuovo nome.]
             {name}: Accettare è una scelta.
             {name}: Cercare risposte è un'altra scelta ancora.
             {name}: E ammettere una propria paura, una scelta enorme.
@@ -868,12 +875,12 @@
 	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }            
         
-        + [Eppure hai deciso di costruire una nuova famiglia con l3 tu3 amic3.]
+        + [Eppure hai deciso di costruire una famiglia con l3 tu3 amic3.]
             {name}: Hai aperto il tuo cuore, e loro ti amano.
             {name}: Si preoccupano per te, cercano di aiutarti a trovare la tua strada.
             {name}: E questo amore è frutto di infinite piccole scelte fatte ogni giorno.
         
-        + [Dimenticando che per finire il conservatorio hai lottato per anni.]
+        + [Dimenticando che per finire gli studi hai lottato per anni.]
             {name}: Che ogni esame che hai dato è stata una scelta.
             {name}: Che ogni lezione che hai seguito è stata una scelta.
             {name}: E presto o tardi, hai trovato la volontà di continuare.
@@ -941,7 +948,7 @@
     		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
                 
-        + [Tradiamo la fiducia quando rompiamo le regole a nostro vantaggio.]
+        + [Tradiamo la fiducia rompendo le regole a nostro vantaggio.]
             {name}: Hai deciso di giocare con loro e lasciar loro tutto il potere?
             {name}: O è una regola implicita, che non avete mai concordato ma che senti nell'aria?
             {name}: E a prescindere: abbiamo sempre il diritto di revocare un accordo, una regola.
@@ -974,7 +981,7 @@
 	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
         
-        + [Ogni persona che conosci ha immaginato sorti diverse per Jonah.]
+        + [Ma ogni persona ha immaginato sorti diverse per Jonah.]
             {name}: E nessuna di queste è una fine.
                 {
                 	- firstCharacterPossibleStates hasnt Rinuncia:
@@ -1041,7 +1048,7 @@
 	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }    
             
-        + [Rinunciare a cercare Talco è stato un atto di autopreservazione.]
+        + [Rinunciando a cercare Talco ti sei tutelata.]
             {name}: Se una cosa non ha senso, non ha senso anche se continuiamo ad insistere nel farla.
                 {
                 	- firstCharacterPossibleStates hasnt Rinuncia:
@@ -1052,8 +1059,6 @@
         + [C'è più coraggio nella rinuncia che nel compromesso.]
             {name}: Spesso è più costosa, ma la coerenza personale non ha prezzo.
             
-                    
-    
         -
         
         -> ending
@@ -1063,13 +1068,13 @@
      Per questo il mio consiglio è...
         + {firstRed > 0} [Prendi una strada e se non ti piace cambiala!]
         
-        + {firstPurple > 0} [Quello che stai cercando è una vita con uno scopo più grande.]
+        + {firstPurple > 0} [Dai alla tua vita uno scopo più grande.]
         
-        + {firstYellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti ora!]
+        + {firstYellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
                 
         + {firstGreen > 0} [Hai paura di deludere i tuoi amici, ma loro saranno sempre con te.]
                 
-        + {firstBlue > 0} [Hai preso una strada che non è la tua. Succede. Ora che lo sai, puoi cambiare.]
+        + {firstBlue > 0} [Questa non è la tua strada. Succede. Ora puoi cambiare.]
                 
         
                 
