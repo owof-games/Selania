@@ -80,6 +80,16 @@
                 -> six
             - not seven:
                 -> seven
+            - not eight:
+                -> eight
+            - not nine:
+                -> nine
+            - not ten:
+                -> ten
+            - not eleven:
+                -> eleven
+            - not twelve:
+                -> twelve
             - else:
                 -> first_character_opinions
         }
@@ -276,6 +286,13 @@
         {charNameUno}: Non è che saranno tutti i passi del mentore?
         {charNameUno}: Cammina così tanto, e per cosa poi?
         {charNameUno}: Oh.
+        
+             ~ firstPauseTalking = firstCharPauseDurantion
+            -> main       
+    = three
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
+    ~ firstStoryQuestCount ++
+    
         {charNameUno}: Sto iniziando a ragionare come Anna.
         {charNameUno}: Anna è una delle mie amiche del conservatorio.
         {charNameUno}: Ha un anno meno di me e ora vuole che mi proponga come assistente di Ghiberti.
@@ -328,7 +345,7 @@
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
         
-    = three
+    = four
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     //Silenzio
         ~ firstStoryQuestCount ++
@@ -366,6 +383,13 @@
                 {charNameUno}: E la mia testa ora è piena di domande.
                     ~ firstPurple ++
             -
+            
+             ~ firstPauseTalking = firstCharPauseDurantion
+            -> main       
+    = five
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
+    ~ firstStoryQuestCount ++
+    
         {charNameUno}: Sono abituata a essere circondata da gente tutto il giorno, sai?
         {charNameUno}: A vivere nella festa.
         {charNameUno}: Sto in una casa con altre cinque persone, un posto pieno di muffa e corridoi e armadi e c’è sempre una festa da fare.
@@ -408,7 +432,7 @@
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
         
-    = four
+    = six
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
         //Paura delle conseguenze della scelta.
         ~ firstStoryQuestCount ++
@@ -456,7 +480,7 @@
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
         
-    = five
+    = seven
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     //Razionalità
         ~ firstStoryQuestCount ++
@@ -495,7 +519,14 @@
                 {charNameUno}: Anche se poi credo che il disordine sia solo una questione di prospettiva.
                 {charNameUno}: Alla lunga ci si abiuta anche a quello, e a quel punto diventa difficile comunque cambiare.
                     ~ firstRed ++
-            - 
+            -
+            
+             ~ firstPauseTalking = firstCharPauseDurantion
+            -> main           
+    = eight
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
+    ~ firstStoryQuestCount ++
+    
         {charNameUno}: Ghiberti sembra un uomo felice, sorride molto.
         {charNameUno}: Eppure a volte mi sembra il sorriso che avrebbe una macchina per fare bulloni o una pressa.
         {charNameUno}: A me spaventa un sacco quel sorriso, quel modo di fare.
@@ -536,10 +567,11 @@
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
     
-    = six
+    = nine
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
         //Voglia di fare qualcosa di utile, importante
         ~ firstStoryQuestCount ++
+        
         {charNameUno}: Sai, mi sto abituando a questo luogo.
         {charNameUno}: Anche se non sembra cambiare mai niente.
         {charNameUno}: Ma non è un blocco brutto.
@@ -575,8 +607,15 @@
                 {charNameUno}: Vero? Che è assurdo, perché non ho visto il mare da nessuna parte.
                 {charNameUno}: Né dello zucchero filato se è per quello.
                     ~ firstYellow ++         
-            
+    
             -
+            
+             ~ firstPauseTalking = firstCharPauseDurantion
+            -> main   
+    = ten
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
+    ~ firstStoryQuestCount ++
+    
         {charNameUno}: Comunque, continua a tornarmi in mente un ricordo.
         {charNameUno}: L'anno scorso abbiamo occupato questo parco per una settimana.
         {charNameUno}: Il comune voleva distruggere gli alberi, e volevamo fare qualcosa di utile, sai.
@@ -626,7 +665,7 @@
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
     
-    = seven
+    = eleven
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
         //Famiglia d'origine
         ~ firstStoryQuestCount ++
@@ -669,6 +708,14 @@
                 {charNameUno}: E non sono veri i lavori che riguardano le mie passioni.
                     ~ firstBlue ++
             -
+
+            ~ firstPauseTalking = firstCharPauseDurantion
+            -> main
+            
+    = twelve
+    ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
+    ~ firstStoryQuestCount ++
+    
         {charNameUno}: A pensarci, per certi versi, mamma è più cinica di papà.
         {charNameUno}: È grazie a lei se papà ha ceduto e mi sono iscritta al conservatorio.
         {charNameUno}: Ma per lei l'obiettivo è che mi trasformi in Lang Lang, Mitsuko Uchida, Alfred Brendel.
