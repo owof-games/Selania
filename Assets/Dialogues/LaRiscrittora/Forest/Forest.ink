@@ -16,7 +16,7 @@
             - dice == 1:
                 <i>C'è una coperta abbandonata sulla panchina.</i>
                 <i>Portala con te: qualcuno potrebbe avere freddo.</i>
-                <b>Hai ottenuto: coperta</b>
+                Hai ottenuto: <b>coperta</b>
                 ~ findedGifts += blanket
                 -> main
             - dice == 2:
@@ -34,7 +34,7 @@
             - dice == 1:
                 <i>C'è un vaso vuoto.</i>
                 <i>In questo luogo anche la cosa più insolita può essere un tesoro.</i>
-                <b>Hai ottenuto: vaso vuoto</b>
+                Hai ottenuto: <b>vaso vuoto</b>
                 ~ findedGifts += emptyvase
                 -> main
             - dice == 2:

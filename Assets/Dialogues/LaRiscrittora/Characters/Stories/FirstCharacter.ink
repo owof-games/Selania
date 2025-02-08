@@ -7,7 +7,7 @@
             
             //Chiacchiera a fine storia
             + {are_two_entities_together(FirstCharacter, PG) && firstStory == Ended} [FirstCharacter]
-                -> personaggia_uno_storia_conclusa
+                -> first_char_story_ended
             + ->
         
             -> DONE
@@ -24,7 +24,7 @@
                     -> intro_chat
             //Altre opzioni        
                 - else:
-                    ->first_character_opinions
+                    {charNameUno}: {~ Ho bisogno di tempo per me.|Ti spiace tornare tra un po'?|Credo di aver bisogno di silenzio, torna più tardi.}
             }
 
 = intro_chat
@@ -46,15 +46,12 @@
                     -> first_story_gift
         
             //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
-            + {first_story_gift.ink_outcome && not main_story_first_character} [Credo tu abbia un problema, e potrei aiutarti ad affrontarlo.]
-                {
-                    - not questions:
+            + {first_story_gift.ink_outcome && not main_story_first_character && not questions} [Vorrei aiutarti a guardare le cose in modo diverso.]
                     {uppercaseTranslator(firstCharacterState)}: Non credo che il mentore ti abbia spiegato come si fa questa cosa. Vai da lui prima.
                             -> main
-                    - questions:
-                        {uppercaseTranslator(firstCharacterState)}: Certo!
-                        -> first_story_chech_trigger
-                }        
+                            
+            + {first_story_gift.ink_outcome && not main_story_first_character &&  questions} [Ti va di riscrivere la tua storia con me?]
+                    -> first_story_chech_trigger
     
             //SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
             + {first_story_gift.ink_outcome && main_story_first_character} [Riprendiamo quella storia?]
@@ -243,10 +240,11 @@
         {charNameUno}: Non ricordo quando è stata l'ultima volta che sono andata da qualche parte senza di ləi.
         {charNameUno}: Prima mi sono persa nel cercarlə.
         {charNameUno}: Ok, forse mi sono distratta cercando di raggiungere uno scoiattolo perché aveva la ghianda più bella che avessi mai visto.
-        {charNameUno}: Volevo insegnargli a suonarla, e invece mi sono ritrovata tra gli alberi senza sapere dove andare e c’era otto sentieri diversi davanti a me.
+        {charNameUno}: Volevo insegnargli a suonarla, e invece mi sono ritrovata tra gli alberi senza sapere dove andare.
+        {charNameUno}: E c’erano otto sentieri diversi davanti a me.
         {charNameUno}: Otto!
         {charNameUno}: Ma poi come fanno ad esserci otto sentieri in un posto dove ci siamo solo noi?
-            + [O forse il sentiero è unico, ma ci sono otto {charNameUno}.]
+            + [O forse il sentiero è unico, ma ci sono otto te.]
                 {charNameUno}: In effetti mi sento divisa, frammentata.
                 {charNameUno}: In questo periodo della mia vita ci sono troppe spinte.
                 {charNameUno}: E non so dove andare.
@@ -280,11 +278,14 @@
         {charNameUno}: Oh.
         {charNameUno}: Oh.
         {charNameUno}: Sto iniziando a ragionare come Anna.
-        {charNameUno}: Anna è una delle mie amiche del conservatorio, è un anno più giovane di me e ora vuole che mi proponga come assistente di Ghiberti.
+        {charNameUno}: Anna è una delle mie amiche del conservatorio.
+        {charNameUno}: Ha un anno meno di me e ora vuole che mi proponga come assistente di Ghiberti.
         {charNameUno}: Dice che lui ha stima di me e questa è la mia occasione.
         {charNameUno}: Anna è così sicura di sè da quando ha lasciato l'ex molesto.
-        {charNameUno}: Anna e Olga discutono spesso perché Olga pensa che con la classica io sia sprecata, che devo mettere su una band e invadere tutti i locali della città.
-        {charNameUno}: Olga crede che Talco la veda come lei, ma in realtà Talco vuole che punti sui reality show: dice che non importa vincere, importa fare casino così poi sui social se ne parla.
+        {charNameUno}: Anna e Olga discutono spesso perché Olga pensa che con la classica io sia sprecata.
+        {charNameUno}: Che devo mettere su una band e invadere tutti i locali della città.
+        {charNameUno}: Olga crede che Talco la veda come lei, ma in realtà Talco vuole che punti sui reality show.
+        {charNameUno}: Dice che non importa vincere, importa fare casino così poi sui social se ne parla.
         {charNameUno}: E poi Ennio, no Ennio no.
         {charNameUno}: Ennio dice che ho sbagliato strada.
         
@@ -326,7 +327,7 @@
         {charNameUno}: Sono la mia famiglia, loro.
         {charNameUno}: E nessuna di queste scelte può accontentare tutt3.
             ~ firstPauseTalking = firstCharPauseDurantion
-            -> talk_with_first_character
+            -> main
         
     = three
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
@@ -355,7 +356,7 @@
                 {charNameUno}: E una voce che dia un senso a quel ritmo.
                     ~ firstRed ++
                     
-            + [Il silenzio ti sta offrendo la vulnerabilità necessaria per raccontarti.]
+            + [Il silenzio ti offre la vulnerabilità necessaria per raccontarti.]
                 {charNameUno}: Ma non conosco bene le parole.
                 {charNameUno}: L'unica cosa che so fare è suonare.
                     ~ firstGreen ++
@@ -380,7 +381,7 @@
                     {charNameUno}: Ma se sono qui, con questo nome, forse non è la vera soluzione.
                         ~ firstRed ++
                         
-                + [I pensieri sono specchi: rompine uno e scoprirai cosa è reale e cosa è riflesso.]
+                + [I pensieri sono specchi: rompili e scoprirai cosa è reale e cosa è riflesso.]
                     {charNameUno}: Forse dovrei stendermi e meditare.
                     {charNameUno}: Lasciare che si spengano uno per uno.
                     {charNameUno}: Ignorare la paura che ho all'idea di vedere le cose come stanno.
@@ -405,7 +406,7 @@
                 
                 -
             ~ firstPauseTalking = firstCharPauseDurantion
-            -> talk_with_first_character
+            -> main
         
     = four
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
@@ -413,7 +414,8 @@
         ~ firstStoryQuestCount ++
         
         {charNameUno}: Conoscevo questo ragazzo, Jonah, un arpista e un genio.
-        {charNameUno}: Per due anni ha fatto da spalla a un tizio di Beijing, una rockstar della musica classica, ma poi Jonah ha iniziato a sentire la mancanza dell’Europa ed è tornato cercando di fare una carriera da solista.
+        {charNameUno}: Per due anni ha fatto da spalla a un tizio di Beijing, una rockstar della musica classica.
+        {charNameUno}: Ma poi Jonah ha iniziato a sentire la mancanza dell’Europa ed è tornato cercando di fare una carriera da solista.
         {charNameUno}: Però man mano che le porte si chiudevano, si chiudeva anche la sua sicurezza e il suo amore per la musica.
         {charNameUno}: Ora non so più dove sia, Jonah.
         {charNameUno}: Qualche compagna di corso giura di averlo visto mendicare, qualche altro che suona sotto pseudonimo alle feste di odiosi ricconi.
@@ -433,7 +435,7 @@
                 {charNameUno}: Banale, ma vorrei permettermi il lusso di vivere.
                 ~ firstBlue ++
                     
-            + [È compromesso se cedi te stessa. Ma se resti fedele a chi sei, porterai cambiamento.]
+            + [È compromesso se cedi te stessa. Restati fedele e porterai cambiamento.]
                 {charNameUno}: E a quel punto ogni decisione sarebbe la <i>mia</i> decisione.
                     ~ firstPurple ++
             
@@ -452,7 +454,7 @@
             
             -    
             ~ firstPauseTalking = firstCharPauseDurantion
-            -> talk_with_first_character
+            -> main
         
     = five
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
@@ -494,7 +496,8 @@
                 {charNameUno}: Alla lunga ci si abiuta anche a quello, e a quel punto diventa difficile comunque cambiare.
                     ~ firstRed ++
             - 
-        {charNameUno}: Ghiberti sembra un uomo felice, sorride molto, eppure a volte mi sembra il sorriso che avrebbe una macchina per fare bulloni o una pressa.
+        {charNameUno}: Ghiberti sembra un uomo felice, sorride molto.
+        {charNameUno}: Eppure a volte mi sembra il sorriso che avrebbe una macchina per fare bulloni o una pressa.
         {charNameUno}: A me spaventa un sacco quel sorriso, quel modo di fare.
         {charNameUno}: Tutti questi numerini e fattori tolgono l’esperienza, l’errore, il senso di comunità.
         {charNameUno}: Una comunità canta, ma per farlo deve sbagliare, essere imprevedibile.
@@ -531,7 +534,7 @@
      
             -    
             ~ firstPauseTalking = firstCharPauseDurantion
-            -> talk_with_first_character
+            -> main
     
     = six
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
@@ -598,7 +601,7 @@
                 {charNameUno}: Muovermi a volte mi sembra che rompa le cose.
                     ~ firstYellow ++
                     
-            + [È {charNameUno} che ha lottato per gli alberi, o gli alberi hanno lottato per lei?]
+            + [Sei tu che hai lottato per gli alberi, o gli alberi hanno lottato per te?]
                 {charNameUno}: L'una ha aiutato gli altri e viceversa.
                 {charNameUno}: Solo nell'illusione di essere separate, uno fa per l'altra.
                 {charNameUno}: Non c'è melodia se le note non si perdono in essa.
@@ -621,7 +624,7 @@
         {charNameUno}: Hanno tagliato gli alberi.
         {charNameUno}: E la mia voce non ha portato alcun cambiamento.
             ~ firstPauseTalking = firstCharPauseDurantion
-            -> talk_with_first_character
+            -> main
     
     = seven
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
@@ -642,7 +645,7 @@
                 {charNameUno}: Eppure erano quelli con più storie da raccontare.
                     ~ firstPurple ++
                     
-            + [E tu hai ripreso ad accrescere l'albero della tua famiglia.]
+            + [E ora accresci l'albero della tua famiglia.]
                 {charNameUno}: In un certo senso.
                 {charNameUno}: Per nonno la musica era occasione di unione.
                 {charNameUno}: La festa un momento per appianare le divergenze.
@@ -696,14 +699,14 @@
                 {charNameUno}: Va in un altro luogo, un posto speciale che non ho ancora trovato.
                     ~ firstYellow ++
                     
-            + [Ci trasformiamo sempre, ma non possiamo diventare qualcun altro.]
+            + [Cambiamo sempre, ma non possiamo diventare qualcun altro.]
                 {charNameUno}: Dillo a lei.
                 {charNameUno}: Forse è la cosa più difficile di questo periodo.
                 {charNameUno}: Non se ne rende conto, ma è come se mi dicesse sempre che sono sbagliata.
                     ~ firstPurple ++
             -    
             ~ firstPauseTalking = firstCharPauseDurantion
-            -> talk_with_first_character
+            -> main
 
   
         
@@ -786,9 +789,9 @@
         {charNameUno}: Lasciare che le altre persone scelgano per te.
         {charNameUno}: O che lo faccia il mondo.
             
-            + [{charNameUno}, credo di sapere come aiutarti.]
+            + [Credo di sapere come aiutarti.]
                 -> statement
-            + [{charNameUno}, capisco il tuo dolore, ho bisogno giusto di riflettere un attimo.]
+            + [Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.]
                 -> main
 
 
@@ -808,7 +811,7 @@
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     {name}: Prima hai detto che hai il terrore di fare una scelta.
         
-        + [La stessa persona che ha accettato il suo nuovo nome, cercando di capire da dove venga.]
+        + [Qau accettato il suo nuovo nome, cercando di capire da dove venga.]
             {name}: Accettare è una scelta.
             {name}: Cercare risposte è un'altra scelta ancora.
             {name}: E ammettere una propria paura, una scelta enorme.
@@ -823,12 +826,12 @@
             {name}: Si preoccupano per te, cercano di aiutarti a trovare la tua strada.
             {name}: E questo amore è frutto di infinite piccole scelte fatte ogni giorno.
         
-        + [Invece stai dimenticando che per finire il conservatorio hai lottato per anni.]
+        + [Dimenticando che per finire il conservatorio hai lottato per anni.]
             {name}: Che ogni esame che hai dato è stata una scelta.
             {name}: Che ogni lezione che hai seguito è stata una scelta.
             {name}: E presto o tardi, hai trovato la volontà di continuare.
             
-        + [Ma poi hai accettato il rischio più volte di suonare sul tetto.]
+        + [Ma hai più volte accettato il rischio di suonare sul tetto.]
             {name}: Hai accettato di essere festa in un mondo severo.
             {name}: Hai cercato il gioco quando tutto ti dice che devi lavorare.
             {name}: Hai accolto falene, scoiattoli e altri animali suonanti.
@@ -891,7 +894,7 @@
     		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
                 
-        + [Giocando tradiamo la fiducia solo rompendo le regole a nostro vantaggio.]
+        + [Tradiamo la fiducia quando rompiamo le regole a nostro vantaggio.]
             {name}: Hai deciso di giocare con loro e lasciar loro tutto il potere?
             {name}: O è una regola implicita, che non avete mai concordato ma che senti nell'aria?
             {name}: E a prescindere: abbiamo sempre il diritto di revocare un accordo, una regola.
@@ -945,7 +948,7 @@
                 }
             
         
-        + [La storia di Jonah non è un ammonimento, è un successo.]
+        + [La storia di Jonah è un successo.]
             {name}: Ha deciso che non gli stava più bene quello che aveva, e si è mosso per cambiarlo.
             {name}: E il leggere negativamente le cose che forse gli sono capitate raccontano nulla di Jonah e molto di chi le racconta.
             {name}: C'è orgoglio anche dietro una cassa del supermercato, non solo su palco.
@@ -991,7 +994,7 @@
 	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }    
             
-        + [Rinunciare alla ricerca di Talco è stato un atto di autopreservazione.]
+        + [Rinunciare a cercare Talco è stato un atto di autopreservazione.]
             {name}: Se una cosa non ha senso, non ha senso anche se continuiamo ad insistere nel farla.
                 {
                 	- firstCharacterPossibleStates hasnt Rinuncia:
@@ -1011,15 +1014,15 @@
     = ending
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
      Per questo il mio consiglio è...
-        + {firstRed > 0} [{charNameUno}: prendi una strada e se non ti piace cambiala!]
+        + {firstRed > 0} [Prendi una strada e se non ti piace cambiala!]
         
-        + {firstPurple > 0} [{charNameUno}: quello che stai cercando è una vita con uno scopo più grande.]
+        + {firstPurple > 0} [Quello che stai cercando è una vita con uno scopo più grande.]
         
-        + {firstYellow > 0} [{charNameUno}:ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti ora!]
+        + {firstYellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti ora!]
                 
-        + {firstGreen > 0} [{charNameUno}: hai paura di deludere i tuoi amici, ma loro saranno sempre con te.]
+        + {firstGreen > 0} [Hai paura di deludere i tuoi amici, ma loro saranno sempre con te.]
                 
-        + {firstBlue > 0} [{charNameUno}: hai preso una strada che non è la tua. Succede. Ora che lo sai, puoi cambiare.]
+        + {firstBlue > 0} [Hai preso una strada che non è la tua. Succede. Ora che lo sai, puoi cambiare.]
                 
         
                 
@@ -1096,7 +1099,7 @@
             ~ movementsCounter = 0
         -> main  
     
-=== personaggia_uno_storia_conclusa
+=== first_char_story_ended
 ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)

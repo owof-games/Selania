@@ -227,7 +227,7 @@
                     {
                         - findedGifts hasnt LicheneDegliAbissi:
                         ~ findedGifts += LicheneDegliAbissi
-                        <b>Hai ottenuto: Lichene degli Abissi.</b>
+                        Hai ottenuto: <b>Lichene degli Abissi.</b>
                     }                    
             + [Lo lascio dov'è.]
             -
@@ -269,7 +269,7 @@
                     {
                         - findedGifts hasnt MuschioDelleAmanti:
                         ~ findedGifts += MuschioDelleAmanti
-                        <b>Hai ottenuto: Muschio delle Amanti.</b>
+                        Hai ottenuto: <b>Muschio delle Amanti.</b>
                     }
             + [Ora non me la sento.]
             -
@@ -312,7 +312,7 @@
                     {
                         - findedGifts hasnt CantoDelleCompagne:
                         ~ findedGifts += CantoDelleCompagne
-                        <b>Hai ottenuto: Canto delle Compagne.</b>
+                        Hai ottenuto: <b>Canto delle Compagne.</b>
                     }
                     -> main
         + [No, non ora.]
@@ -357,7 +357,7 @@
                     {
                         - findedGifts hasnt LaSpazzata:
                         ~ findedGifts += LaSpazzata
-                        <b>Hai ottenuto: La Spazzata.</b>
+                        Hai ottenuto: <b>La Spazzata.</b>
                     }
                     -> main
         + [Non ora.]
@@ -397,7 +397,7 @@
                     {
                         - findedGifts hasnt BaccaDellaAddolorata:
                         ~ findedGifts += BaccaDellaAddolorata
-                        <b>Hai ottenuto: Bacca della Addolorata</b>
+                        Hai ottenuto: <b>Bacca della Addolorata</b>
                     }
             
                 -> main
@@ -442,7 +442,7 @@
                 {
                         - findedGifts hasnt NonTiScordarDiTe:
                         ~ findedGifts += NonTiScordarDiTe
-                        <b>Hai ottenuto: Non Ti Scordar di Te.</b>
+                        Hai ottenuto: <b>Non Ti Scordar di Te.</b>
                     }
               -> main
         + [Non ora.]
@@ -482,7 +482,7 @@
                     {
                         - findedGifts hasnt BrinaDellImpossibile:
                         ~ findedGifts += BrinaDellImpossibile
-                        <b>Hai ottenuto: Brina dell'Impossibile</b>
+                        Hai ottenuto: <b>Brina dell'Impossibile</b>
                     }                
               -> main
         + [Ora non me la sento.]
