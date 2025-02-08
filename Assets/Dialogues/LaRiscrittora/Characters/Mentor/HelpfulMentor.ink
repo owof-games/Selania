@@ -19,7 +19,7 @@
         
         * (chiSei) [Chi sei?]
             Sconosciuto: Dipende molto dal momento, e dalla persona che ho davanti.
-            Sconosciuto: Ma direi che puoi chiamarmi {lowercaseTranslator(seventhCharacterState)}.
+            Sconosciuto: Ma direi che puoi chiamarmi <b>{lowercaseTranslator(seventhCharacterState)}</b>.
             {charName}: Non un name originale ma ehi, almeno ti ricordi chi chiamare se sei in difficoltà, no?
                 -> top
         
@@ -74,10 +74,10 @@
         {charName}: Quindi: ogni tanto capita che delle persone si ritrovino in questo posto.
         {charName}: Sono sempre persone che sono rimaste bloccate in qualcosa.
         {charName}: Spesso sono storie di rimpianto o rimorso, in alcuni casi di traumi, o sensi di colpa.
-        {charName}: Ma quale che siano il motivo, non riescono più ad andare avanti con la loro vita.        
+        {charName}: Ma quale che sia il motivo, non riescono più ad andare avanti con la loro vita.        
         {charName}: In tutte queste situazioni arrivi tu, {name}.
         {charName}: Cerca di ascoltarle, di capirle, di intuire come ragionano.
-        {charName}: Conquista la loro fiducia, e quando saranno aperte con te, ti verrà offerta l'occasione di dare loro un dono.
+        {charName}: Conquista la loro fiducia, e quando saranno aperte con te, ti verrà offerta l'occasione di dare loro un </b>dono<b>.
         {charName}: I doni sono oggetti che a volte troverai in questo luogo, ma che il più delle volte creerai da te.
         {charName}: Ad esempio, coltivando qualcosa <b>alla serra</b>.
         {charName}: Il dono è una cosa importante, perché è il tuo modo di dimostrare loro che l3 hai ascoltat3.
@@ -86,17 +86,17 @@
                 {charName}: Magari non proprio <i>matematico</i>.
                 {charName}: Piuttosto, direi empatico.
                     ~ seventhBlue ++
-            + [È un po' come un videogioco: comprendi il loop, dai il meglio di te.]
+            + [Come un videogioco: comprendi il loop, dai il meglio di te.]
                 {charName}: Sì.
                 {charName}: Anche se le persone non sono un loop.
                 {charName}: E tu non devi dare il meglio, ma quello che sei.
                     ~ seventhYellow ++
-            + [Sostanzialmente mi chiedi di lavorare senza darmi un soldo.]
+            + [Mi stai chiedendo di lavorare senza darmi un soldo.]
                 {charName}: Non è un lavoro.
                 {charName}: E qui non c'è denaro.
                 {charName}: E non sono un tuo nemico: non serve questo atteggiamento aggressivo.
                     ~ seventhRed ++
-            + [Mi stai chiedendo di creare una relazione con queste persone, quindi.]
+            + [Quindi devo creare una relazione con queste persone?]
                 {charName}: Sì, secondo i tuoi bisogni e i tuoi limiti ovviamente.
                 {charName}: Non serve a nessuno che tu ti annulli per aiutare chi hai davanti.
                     ~ seventhGreen ++
@@ -106,7 +106,7 @@
                     ~ seventhPurple ++
             -
         {charName}: Ora, perché devi dare un dono?
-        {charName}: Non solo per dimostrare a queste persone che le hai ascoltate, ma anche per aumentare la tua quantità di inchiostro.
+        {charName}: Non solo per dimostrare a queste persone che le hai ascoltate, ma anche per aumentare la tua quantità di <b>inchiostro</b>.
         {charName}: Perché tu {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}} sei {pronouns has him: un riscrittore|{pronouns has her: una riscrittora|unə riscrittorə}}!
         {charName}: Aiuti queste persone bloccate a guardare la loro storia in modo diverso, e a scegliersi un nuovo nome.
         
@@ -155,7 +155,7 @@
         {firstCharacterInkLevel == Normal: {charName}: Bel colpo! Ti sei {pronouns has him: guadagnato|{pronouns has her: guadagnata|guadagnatə}} subito una bella dose di inchiostro!}
         {firstCharacterInkLevel == High: {charName}: Beh, hai dato alla persona il suo dono preferito! Sei già {pronouns has him: pronto|{pronouns has her: pronta|prontə}} per questo incarico!}
         {charName}: Ora: a cosa serve l'inchiostro?
-        {charName}: Sostanzialmente più alto è il valore di inchiostro, più interventi puoi fare.
+        {charName}: Sostanzialmente più alto è il valore di inchiostro, più <b>interventi</b> puoi fare.
         {charName}: Gli interventi sono domande o commenti che puoi fare su cose diverse che preoccupano la persona.
         {charName}: Più interventi hai a disposizione, più puoi convincere la persona a vedere le cose diversamente.
         {charName}: A raggiungere il tuo obiettivo:
@@ -239,7 +239,7 @@
             {charName}: O da cui andartene, quando vorrai.
                 -> top
 
-    + [La serra.]
+    + [Sulla serra.]
             {charName}: La serra è un piccolo posto di meditazione.
             {charName}: Se non sta crescendo nulla, puoi provare a seguire le sue suggestioni.
             {charName}: Col tempo qualcosa crescerà, e a quel punto forse avrai anche una risposta a una domanda che non sapevi di doverti fare.
@@ -275,12 +275,12 @@
 === to_do
 ~ temp charName = uppercaseTranslator(seventhCharacterState)
 
-        {charName}: Step uno: parli con la persona, cerchi di capire di cosa ha bisogno, come ragiona, e conquisti la sua fiducia.
-        {charName}: Step due: le fai un dono.
-        {charName}: Più il dono è qualcosa di gradito, più avrai inchiostro per aiutarla a riscrivere la sua storia.
-        {charName}: Step tre: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.
-        {charName}: Step quattro: la persona sceglierà il suo nuovo nome.
-        {charName}: Step cinque: ti riposi.
+        {charName}: Step uno: <b>parli</b> con la persona, cerchi di capire di cosa ha bisogno, come ragiona, e conquisti la sua fiducia.
+        {charName}: Step due: le fai un <b>dono</b>.
+        {charName}: Più il dono è qualcosa di gradito, più avrai <b>inchiostro</b> per aiutarla a riscrivere la sua storia.
+        {charName}: Step tre: inizi i tuoi <b>interventi</b>, riprendendo eventi della sua storia e la aiuti a guardarli sotto una luce diversa.
+        {charName}: Step quattro: la persona sceglierà il suo <b>nuovo nome</b>.
+        {charName}: Step cinque: ti <b>riposi</b>.
            -> speaking_with_mentor
 /* ---------------------------------
 

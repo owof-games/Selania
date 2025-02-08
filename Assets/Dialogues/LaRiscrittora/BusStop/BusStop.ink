@@ -48,7 +48,7 @@
                 {charNameUno}: Sembrerà assurdo, ma mi sono resa conto che forse, con la musica, possiamo parlare con gli animali.
                 {charNameUno}: Se così fosse, potrei dimostrare che siamo tutto fuorché distanti.
         }
-    {charNameUno}: Spero che li vada tutto bene.
+    {charNameUno}: Spero che lì vada tutto bene.
     {charNameUno}: Alla prossima lettera.
     {charNameUno}: <i>{charNameUno}</i>
 

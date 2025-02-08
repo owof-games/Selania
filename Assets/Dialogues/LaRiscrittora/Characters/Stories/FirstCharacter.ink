@@ -57,7 +57,7 @@
             + {first_story_gift.ink_outcome && main_story_first_character} [Riprendiamo quella storia?]
                 -> main_story_first_character
             
-            + [Lasci il dialogo.]
+            + [Lascio il dialogo.]
                 -> main
             -
                 -> talk_with_first_character
@@ -118,7 +118,7 @@
                 ~ firstGreen ++
                 ???: È una cosa molto gentile, davvero.
                 ???: Ma è come chiedermi di fare un concerto con una persona sconosciuta.
-                ???: Ci vuole tempo per mostrare la mia anima.
+                ???: Ci vuole tempo per capire come armonizzare.
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
                 ~ firstPurple ++
@@ -276,7 +276,6 @@
         {charNameUno}: Non è che saranno tutti i passi del mentore?
         {charNameUno}: Cammina così tanto, e per cosa poi?
         {charNameUno}: Oh.
-        {charNameUno}: Oh.
         {charNameUno}: Sto iniziando a ragionare come Anna.
         {charNameUno}: Anna è una delle mie amiche del conservatorio.
         {charNameUno}: Ha un anno meno di me e ora vuole che mi proponga come assistente di Ghiberti.
@@ -371,7 +370,8 @@
         {charNameUno}: A vivere nella festa.
         {charNameUno}: Sto in una casa con altre cinque persone, un posto pieno di muffa e corridoi e armadi e c’è sempre una festa da fare.
         {charNameUno}: Talco crea strumenti con qualsiasi cosa trova in giro.
-        {charNameUno}: Le sere d'estate saliamo sul tetto a cantare e improvvisare e vento e sudore si portano via le preoccupazioni e non c’è nulla a cui pensare.
+        {charNameUno}: Le sere d'estate saliamo sul tetto a cantare e improvvisare.
+        {charNameUno}: E vento e sudore si portano via le preoccupazioni e non c’è nulla a cui pensare.
         {charNameUno}: A quel punto arriva la sensazione, quel sentirti parte di tutto, priva di confini.
         {charNameUno}: Sei la musica, sei l’umidità nell’aria, sei la gola del vicino che si lamenta del casino.
         {charNameUno}: Ma qui, qui è tutto così calmo, posso sentire i pensieri dei miei pensieri e rimango intrappolata dentro a me stessa.
@@ -635,7 +635,7 @@
         {charNameUno}: Casa è piena di vecchi strumenti pieni di polvere.
         {charNameUno}: Sono del nonno paterno.
         {charNameUno}: Papà li tiene come se fossero delle reliquie.
-        {charNameUno}: Ma ogni tanto ci permetteva di sentire le vecchie registrazioni, di quando nonno suonava e cantava nelle balere.
+        {charNameUno}: Ma ogni tanto mi permetteva di sentire le vecchie registrazioni, di quando nonno suonava e cantava nelle balere.
         {charNameUno}: E allora ci mettevamo a ballare con lui e mamma.
         {charNameUno}: E in questi ricordi c'è sempre un raggio di sole caldo che gli illumina il sorriso.
         

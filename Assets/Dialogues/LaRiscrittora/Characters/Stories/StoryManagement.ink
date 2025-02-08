@@ -147,17 +147,17 @@
     
     //Personaggia Uno
         - Rinuncia:
-            ~ return "La Rinuncia"
+            ~ return "Rinuncia"
         - Triangolo:
-            ~ return "Il Triangolo"
+            ~ return "Triangolo"
         - RagazzaOrchestra:
-            ~ return "La Ragazza Orchestra"
+            ~ return "Ragazza Orchestra"
         - FlautoDolce:
-            ~ return "Il Flauto Dolce"
+            ~ return "Flauto Dolce"
         - Ocarina:
-            ~ return "L'Ocarina"
+            ~ return "Ocarina"
         - Violino:
-            ~ return "Il Violino"
+            ~ return "Violino"
 
     //Personaggia Due        
         - LaVegliante:
