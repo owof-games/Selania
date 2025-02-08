@@ -10,12 +10,12 @@ VAR playerGreen = 0
 VAR playerRed = 0
 
 // Tracciamento esiti
-LIST playerStatus = blueStatus, purpleStatus, greenStatus, yellowStatus, redStatus
-VAR playerFirstStory = ()
-VAR playerSecondStory = ()
-VAR playerThirdStory = ()
-VAR playerFourthStory = ()
-VAR playerFifthStory = ()
+LIST playerStatus = emptyStatus, blueStatus, purpleStatus, greenStatus, yellowStatus, redStatus, mixedStatus
+VAR playerFirstStory = emptyStatus
+VAR playerSecondStory = emptyStatus
+VAR playerThirdStory = emptyStatus
+VAR playerFourthStory = emptyStatus
+VAR playerFifthStory = emptyStatus
 
 //Traccio gli spostamenti della personaggia per gestire la comparsa delle personagge
 VAR movementsCounter = 0
@@ -159,6 +159,20 @@ VAR purple  = ()
                 ~ playerFourthStory += purpleStatus
             - char == fifthStory:
                 ~ playerFifthStory += purpleStatus
+        }
+    
+    - else:
+        {
+            - char == firstStory:
+                ~ playerFirstStory += mixedStatus
+            - char == secondStory:
+                ~ playerSecondStory += mixedStatus
+            - char == thirdStory:
+                ~ playerThirdStory += mixedStatus
+            - char == fourthStory:
+                ~ playerFourthStory += mixedStatus
+            - char == fifthStory:
+                ~ playerFifthStory += mixedStatus
         }    
 
 }
