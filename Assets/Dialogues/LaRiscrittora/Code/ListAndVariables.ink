@@ -8,6 +8,14 @@ VAR debugChangeName = false
 //Nome giocatrice e pronouns
 VAR name = "Senza nome"
 LIST pronouns = him, her, they
+
+//Tracciamento colori personaggia
+VAR playerPurple = 0
+VAR playerYellow = 0
+VAR playerBlue = 0
+VAR playerGreen = 0
+VAR playerRed = 0
+
 //Traccio gli spostamenti della personaggia per gestire la comparsa delle personagge
 VAR movementsCounter = 0
 

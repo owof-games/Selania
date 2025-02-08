@@ -210,7 +210,7 @@
                 {charNameUno}: Talco è una persona che agisce, non resta ad aspettare.
                     ~ firstGreen ++
             
-            + [A te va bene essere {charNameUno}? Perché non essere Lotta? Azione?]
+            + [A te va bene essere {charNameUno}? Perché non Lotta? Azione?]
                 {firstRed > 1: {charNameUno}: Ho l'impressione che tu prenda tutto di pancia, vero?}
                 {charNameUno}: {charNameUno} non è il mio vero nome, ma non trovo più il mio.
                 {charNameUno}: E poi, parlare con te non è già una forma di azione?
@@ -1059,6 +1059,15 @@
                     ~ firstCharacterState = ()
                     ~ firstCharacterState += Violino
         }
+    
+            //Qui aggiorno i valori delle scelte di player one
+            ~ playerRed = playerRed + firstRed
+            ~ playerPurple = playerPurple + firstPurple
+            ~ playerGreen = playerGreen + firstGreen
+            ~ playerYellow = playerYellow + firstYellow
+            ~ playerBlue = playerBlue + firstBlue
+        
+     
     
         {
         - firstCharacterSpecialEvent == true:
