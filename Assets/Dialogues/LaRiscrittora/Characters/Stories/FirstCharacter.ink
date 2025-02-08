@@ -1114,21 +1114,13 @@
                     ~ firstCharacterState = ()
                     ~ firstCharacterState += Violino
         }
-    
-            //Qui aggiorno i valori delle scelte di player one
-            ~ playerRed = playerRed + firstRed
-            ~ playerPurple = playerPurple + firstPurple
-            ~ playerGreen = playerGreen + firstGreen
-            ~ playerYellow = playerYellow + firstYellow
-            ~ playerBlue = playerBlue + firstBlue
         
-     
-    
+            
+        
         {
         - firstCharacterSpecialEvent == true:
             -> secret_ending
         - else:
-
             -> exit
         }
     
@@ -1142,6 +1134,7 @@
         {charNameUno}: E se hai intenzione di restare qui a lungo, forse devi chiedertelo anche tu.
             ~ firstStory = Ended
             ~ movementsCounter = 0
+            ~ PG_advace_management(firstStory)
                 -> main
             
     = exit
@@ -1149,6 +1142,7 @@
         {charNameUno}: Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
             ~ firstStory = Ended
             ~ movementsCounter = 0
+            ~ PG_advace_management(firstStory)
         -> main  
     
 === first_char_story_ended

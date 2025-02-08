@@ -5,19 +5,6 @@ VAR debug = false
 VAR debugCultivable = false
 VAR debugChangeName = false
 
-//Nome giocatrice e pronouns
-VAR name = "Senza nome"
-LIST pronouns = him, her, they
-
-//Tracciamento colori personaggia
-VAR playerPurple = 0
-VAR playerYellow = 0
-VAR playerBlue = 0
-VAR playerGreen = 0
-VAR playerRed = 0
-
-//Traccio gli spostamenti della personaggia per gestire la comparsa delle personagge
-VAR movementsCounter = 0
 
 //Lista di tutti i luoghi del gioco
 LIST places = Forest, BusStop, Greenhouse, Libary, Nest, Labyrinth, Laboratory, Safekeeping, GreenhouseMiddlePath, Bedroom
@@ -60,8 +47,3 @@ VAR laboratoryContents = (Inventory)
 VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FifthCharacter, SixthCharacter, SeventhCharacter,  FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, SixthCharacterNotes, SeventhCharacterNotes, MenuSave, MenuQuit)
 
     
-//Variabili per tracciare i trigger warning. True = non è TW, posso mostrare quelle storie
-VAR alcoholism = true
-VAR abuses = true
-VAR mourning = true
-VAR loneliness = true

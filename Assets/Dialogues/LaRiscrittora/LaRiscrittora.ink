@@ -11,6 +11,7 @@ INCLUDE Notes\ToDo.ink
 
 //File dedicati alla gestione complessiva del progetto
 INCLUDE Code\ListAndVariables.ink
+INCLUDE Code\PGManagement.ink
 INCLUDE Code\Spaces.ink
 INCLUDE Code\ChangePlaces.ink
 INCLUDE Code\Other.ink
@@ -78,6 +79,7 @@ INCLUDE Library\ThirdStory.ink
 INCLUDE Library\FourthStory.ink
 INCLUDE Library\LibaryManagement.ink
 INCLUDE StartingRoomAndSaveButtons.ink
+
 
 
 
