@@ -174,7 +174,7 @@
                 {charName}: Se non c'è percorso, non c'è cambiamento.
                     ~ seventhRed ++
             
-            + [Non è una persona particolarmente razionale. Può farcela?]
+            + [Non è una persona razionale. Può farcela?]
                 {charName}: {name}, capisco la tua perplessità, ma sì, ce la può fare.
                     ~ seventhBlue ++
                     

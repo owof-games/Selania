@@ -81,20 +81,27 @@ VAR purple  = ()
         ~ blue = firstBlue
         ~ yellow = firstYellow
         ~ purple = firstPurple
+        ~ playerFirstStory = ()
 }
 
     //Qui aggiorno i valori delle scelte della player
     ~ playerRed = playerRed + red
+        {debug: Il valore di PlayerRed è {playerRed}}
     ~ playerPurple = playerPurple + purple
+        {debug: Il valore di playerPurple è {playerPurple}}
     ~ playerGreen = playerGreen + green
+        {debug: Il valore di playerGreen è {playerGreen}}
     ~ playerYellow = playerYellow + yellow
+        {debug: Il valore di playerYellow è {playerYellow}}
     ~ playerBlue = playerBlue + blue
+        {debug: Il valore di playerBlue è {playerBlue}}
 
 {
     - (playerGreen > playerBlue) && (playerGreen > playerRed) && (playerGreen > playerYellow) && (playerGreen > playerPurple):
         {
             - char == firstStory:
                ~ playerFirstStory += greenStatus
+               {debug: Lo status di playerFirstStory è {playerFirstStory}}
             - char == secondStory:
                 ~ playerSecondStory += greenStatus
             - char == thirdStory:
@@ -109,6 +116,7 @@ VAR purple  = ()
         {
             - char == firstStory:
                 ~ playerFirstStory += blueStatus
+                {debug: Lo status di playerFirstStory è {playerFirstStory}}
             - char == secondStory:
                 ~ playerSecondStory += blueStatus
             - char == thirdStory:
@@ -123,6 +131,7 @@ VAR purple  = ()
         {
             - char == firstStory:
                 ~ playerFirstStory += redStatus
+                {debug: Lo status di playerFirstStory è {playerFirstStory}}
             - char == secondStory:
                 ~ playerSecondStory += redStatus
             - char == thirdStory:
@@ -137,6 +146,7 @@ VAR purple  = ()
         {
             - char == firstStory:
                 ~ playerFirstStory += yellowStatus
+                {debug: Lo status di playerFirstStory è {playerFirstStory}}
             - char == secondStory:
                 ~ playerSecondStory += yellowStatus
             - char == thirdStory:
@@ -151,6 +161,7 @@ VAR purple  = ()
         {
             - char == firstStory:
                 ~ playerFirstStory += purpleStatus
+                {debug: Lo status di playerFirstStory è {playerFirstStory}}
             - char == secondStory:
                 ~ playerSecondStory += purpleStatus
             - char == thirdStory:
@@ -165,6 +176,7 @@ VAR purple  = ()
         {
             - char == firstStory:
                 ~ playerFirstStory += mixedStatus
+                {debug: Lo status di playerFirstStory è {playerFirstStory}}
             - char == secondStory:
                 ~ playerSecondStory += mixedStatus
             - char == thirdStory:

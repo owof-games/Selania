@@ -408,7 +408,7 @@
                     {charNameUno}: Ma se sono qui, con questo nome, forse non è la vera soluzione.
                         ~ firstRed ++
                         
-                + [I pensieri sono specchi: rompili e vedrai cosa è reale e cosa riflesso.]
+                + [Il pensiero è specchio: rompilo per distinguere reale e riflesso.]
                     {charNameUno}: Forse dovrei stendermi e meditare.
                     {charNameUno}: Lasciare che si spengano uno per uno.
                     {charNameUno}: Ignorare la paura che ho all'idea di vedere le cose come stanno.
@@ -457,12 +457,12 @@
                 {charNameUno}: Il conservatorio è finito da mesi, e io suono, ballo, ma non so ancora che cosa fare.
                     ~ firstYellow ++
                     
-            + [Siamo programmat3 per sopravvivere, una soluzione c'è sempre.]
+            + [È imperativo sopravvivere, troviamo sempre una soluzione.]
                 {charNameUno}: Grazie ma voglio qualcosa di più che sopravvivere.
                 {charNameUno}: Banale, ma vorrei permettermi il lusso di vivere.
                 ~ firstBlue ++
                     
-            + [È compromesso se ti tradisci. Restati fedele e porterai cambiamento.]
+            + [Restati fedele e non ci sarà compromesso ma cambiamento.]
                 {charNameUno}: E a quel punto ogni decisione sarebbe la <i>mia</i> decisione.
                     ~ firstPurple ++
             
@@ -772,7 +772,7 @@
 
  === first_story_gift ===
 ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
-<i> Stai per donare qualcosa a {charNameUno}-</i>
+<i> Stai per donare qualcosa a {charNameUno}.</i>
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += FirstCharacter
             -> gestione_inventario -> ink_outcome 
@@ -1065,14 +1065,14 @@
 
     = ending
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
-     Per questo il mio consiglio è...
+     Per questo ti dico...
         + {firstRed > 0} [Prendi una strada e se non ti piace cambiala!]
         
         + {firstPurple > 0} [Dai alla tua vita uno scopo più grande.]
         
         + {firstYellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
                 
-        + {firstGreen > 0} [Hai paura di deludere i tuoi amici, ma loro saranno sempre con te.]
+        + {firstGreen > 0} [Non deluderai i tuoi amici: loro saranno sempre con te.]
                 
         + {firstBlue > 0} [Questa non è la tua strada. Succede. Ora puoi cambiare.]
                 
