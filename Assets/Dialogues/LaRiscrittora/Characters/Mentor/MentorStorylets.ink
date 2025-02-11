@@ -1,5 +1,6 @@
 === mentor_storylets ===
 ~ temp charName = uppercaseTranslator(seventhCharacterState)
+~ temp charNameUno = uppercaseTranslator(firstCharacterState)
 {
 //Introduzioni
 
@@ -21,8 +22,13 @@
             - first_story_gift.ink_outcome:
                 -> questions
             - else:
-                {charName}: Hai fatto il tuo dono?
-                ->->
+            {
+                - firstStoryQuestCount >= minStoryQuesTCount: {charName}: Hai fatto il tuo dono?
+                  ->->
+                - else:
+                    {charName}: Quando conoscerai meglio {charNameUno} potrai donarle qualcosa.
+                      ->->
+            }
         }
         
     - not first_character_feedback:

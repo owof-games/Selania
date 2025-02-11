@@ -1,7 +1,7 @@
 === forest ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-{forest == 1:<i>La foresta ti accoglie con le sue ombre e l'odore di resina</i>|<i>La foresta {~ è una distesa di fresca ombra|è canto sospeso|cresce lentamente}</i>}.
+{forest == 1:<i>La foresta ti accoglie con le sue ombre.</i>|<i>{~La foresta è una distesa di fresca ombra.|La foresta è canto sospeso.|La foresta cresce lentamente.|La resina intrappola il tempo.|I rami si scaldano al vento.|Il sottobosco condivide pettegolezzi.|Sulla panchina scivolano ricordi.}</i>}.
     + [Mi guardo attorno.]
     -
     -> main
@@ -9,7 +9,7 @@
 
 === bench
 + {are_two_entities_together(Bench, PG)} [Bench]
-    <i>Questo posto è pieno di serenità</i>.
+    <i>La panchina vibra, incompleta.</i>.
     {firstTier && findedGifts hasnt blanket:
         ~ temp dice = RANDOM(1, 2)
         {
@@ -27,7 +27,7 @@
 
 === the_fungus
 + {are_two_entities_together(TheFungus, PG)} [TheFungus]
-    <i>L'albero è smonco</i>.
+    {!firstStory == Ended:<i>{~ I rami son tristi, secchi.|Non si vedono radici.|Altre cose da settare.|}</i>| ->talking_fungus}
     {firstTier && findedGifts hasnt emptyvase:
         ~ temp dice = RANDOM(1, 2)
         {
@@ -42,3 +42,8 @@
         }
     }    
     -> main
+    
+=== talking_fungus
+Cose che compaiono finita la prima storia.
+-> main
+
