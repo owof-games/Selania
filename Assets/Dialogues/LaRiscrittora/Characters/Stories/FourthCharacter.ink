@@ -47,6 +47,10 @@
              -
         -> main
 
+=== dialogo_personaggia_quattro
+    sss
+    -> main
+
 === personaggia_quattro_storia_conclusa        
         + opzione
         + opzione

@@ -23,10 +23,10 @@
         -> END
       
 
-//Strade per arrivare al Bus Stop    
+//Streets to Bus Stop    
     + {are_two_entities_together(PG, FromForestToBusStop)}  [FromForestToBusStop]
             ~ move_entity(PG, BusStop)
-            ~ movementsCounter ++    
+            ~ movementsCounter ++
             -> characters_speaking ->
             -> randomizer_png_location ->
             -> story_time_management_for_PNG->
