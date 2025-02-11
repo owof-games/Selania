@@ -78,6 +78,13 @@
                 -> main
         -
         -> END
+        
+        //Questa roba poi è da risistemare
+        === knowing_second_character
+
+        = five
+        
+        -> main
 
 === main_story_personaggia_due
 ~ temp charNameDue = uppercaseTranslator(secondCharacterState)

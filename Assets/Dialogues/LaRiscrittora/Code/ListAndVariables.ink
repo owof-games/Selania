@@ -9,11 +9,6 @@ VAR debugChangeName = false
 //Lista di tutti i luoghi del gioco
 LIST places = Forest, BusStop, Greenhouse, Libary, Nest, Labyrinth, Laboratory, Safekeeping, GreenhouseMiddlePath, Bedroom
 
-//Settaggio luoghi attivi a seconda del tier
-VAR firstTierPlaces =(Forest, BusStop, GreenhouseMiddlePath)
-VAR secondTierPlaces =(Forest, BusStop, Libary, GreenhouseMiddlePath)
-VAR thirdTierPlaces = (Forest, BusStop, Libary, Nest, GreenhouseMiddlePath)
-VAR fourthTierPlaces = (Forest, BusStop, Libary, Nest, Laboratory, GreenhouseMiddlePath)
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
 LIST characters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FifthCharacter, SixthCharacter, SeventhCharacter

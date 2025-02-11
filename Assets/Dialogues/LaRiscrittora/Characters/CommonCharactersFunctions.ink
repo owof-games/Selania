@@ -1,26 +1,42 @@
-//Gestione spostamenti: tempo
-VAR changeLocationTimer = 0
-VAR changeLocationTrigger = 5
+/* ---------------------------------
 
-//Gestione spostamenti: luoghi
-VAR firstTier = false
-VAR secondTier = false
-VAR thirdTier = false
-VAR fourthTier = false
+   Funzioni legate a comparsa e spostamenti personagge 
+
+ ----------------------------------*/
+//REMIND: tendenzialmente  metà storia personaggia -> compare nuova personaggia. Fine storia personaggia -> si attiva un nuovo luogo.
+
+//Gestione spostamenti: tempo
+    VAR changeLocationTimer = 0
+    VAR changeLocationTrigger = 5
+
+//Settaggio luoghi attivi a seconda del tier
+    VAR firstTierPlaces =(Forest, BusStop, GreenhouseMiddlePath)
+    VAR secondTierPlaces =(Forest, BusStop, Libary, GreenhouseMiddlePath)
+    VAR thirdTierPlaces = (Forest, BusStop, Libary, Nest, GreenhouseMiddlePath)
+    VAR fourthTierPlaces = (Forest, BusStop, Libary, Nest, Laboratory, GreenhouseMiddlePath)
+
+//Gestione spostamenti: luoghi. I luoghi si aprono alla fine di ogni storia.
+//First tier: tier iniziale.
+    VAR firstTier = false
+//Second tier. Con la fine della prima storia.
+    VAR secondTier = false
+//Third Tier. Con la fine della seconda storia.
+    VAR thirdTier = false
+//Fourth Tier. Con la fine della terza storia.
+    VAR fourthTier = false
 
 //Gestione spostamenti: personagge
-VAR randomizable_characters = (Mentor)
+    VAR randomizable_characters = (Mentor)
     
 === randomizer_png_location
 //Ho una lista di luoghi che svuoto e poi resetto, così che sia percepibile come effettivamente randomica
-//Quando poi avrò le storie un attimo settate, andranno risistemate le condizioni del cambio tier
 
     //Check stato tier
     {   
-            - fifthStory == Ended or sixthStory == Ended or seventhStory == Ended:
+            - thirdStory == Ended:
                     ~ fourthTier = true
                     
-            - (secondStory == Ended && thirdStory == Ended) or (fourthStory == Ended && secondStory == Ended) or (fourthStory == Ended && thirdStory == Ended):
+            - secondStory == Ended:
                      ~ thirdTier = true
                      
             - firstStory == Ended:
@@ -148,3 +164,118 @@ VAR randomizable_characters = (Mentor)
         {debug:<i> {character} è stato spostato in {location}.}
 
         ->->
+
+
+/* ---------------------------------
+
+   Gestione avvio e chiusura storie personagge 
+
+ ----------------------------------*/
+//Attesa comparsa prima personaggia
+VAR delayFirstChar = 5
+//Attesa comparsa quarta personaggia
+VAR delayFourthChar = 20
+    
+=== story_time_management_for_PNG
+
+{
+    - movementsCounter == delayFirstChar && firstStory == NotStarted:
+            ~ move_entity(FirstCharacter, BusStop)
+            ~ firstStory = Active
+            
+//A metà della storia della prima personaggia, compare la seconda      
+    - knowing_first_character.five && secondStory == NotStarted:
+            ~ move_entity(SecondCharacter, BusStop)    
+            ~ secondStory = Active
+
+//A metà della storia della seconda personaggia e finita la prima (così la biblioteca è aperta), compare la terza
+    - knowing_second_character.five && firstStory == Ended && thirdStory == NotStarted:
+            ~ move_entity(ThirdCharacter, BusStop)    
+            ~ thirdStory = Active
+            
+//Dopo un po' da quando la terza storia è finita, compare una quarta personaggia
+    - movementsCounter == delayFourthChar && thirdStory:
+        //Ma magari questo spettro vuole comparire altrove
+            ~ move_entity(FourthCharacter, BusStop)
+            ~ fourthStory = Active
+            
+//E quando la storia della quarta è a metà, iniziamo a modo quella della mentore
+    - knowing_fourth_character.five && fifthStory == NotStarted:
+            ~ fifthStory = Active
+                
+
+
+//Check per l'allontanamento delle personagge
+    - firstStory == Ended && movementsCounter > 10:
+        ~ move_entity(FirstCharacter, Safekeeping)
+        ~ move_entity(FirstCharacterNotes, BusStop)
+        
+    - secondStory == Ended && movementsCounter > 10:
+        ~ move_entity(SecondCharacter, Safekeeping)
+        ~ move_entity(SecondCharacterNotes, BusStop)
+        
+    - thirdStory == Ended && movementsCounter > 10:
+        ~ move_entity(ThirdCharacter, Safekeeping)
+        ~ move_entity(ThirdCharacterNotes, BusStop)
+        
+    - fourthStory == Ended && movementsCounter > 10:
+        ~ move_entity(FourthCharacter, Safekeeping)
+        ~ move_entity(FourthCharacterNotes, BusStop)
+        
+    - fifthStory == Ended && movementsCounter > 10:
+        ~ move_entity(FifthCharacter, Safekeeping)
+        ~ move_entity(FifthCharacterNotes, BusStop)
+}
+
+->->
+
+
+/* ---------------------------------
+
+   Calcolatori affinità
+
+ ----------------------------------*/
+//Per la prima personaggia l'importante è che il blu sia bassissimo
+=== firstAffinityCalc ===
+    {
+        - firstPurple && firstYellow > firstBlue:
+            ~ firstCharacterInkLevel ++
+            ~ firstCharacterInkLevel ++
+                ->->
+        - firstPurple or firstYellow > firstBlue:
+            ~ firstCharacterInkLevel ++
+                ->->
+    }
+
+->->
+
+//Settaggio nome quando partiamo con la discussione
+=== firstNaming ===
+    {
+        - (firstBlue > firstGreen) && (firstBlue > firstRed) && (firstBlue > firstYellow) && (firstBlue > firstPurple):
+            ~ firstCharacterPossibleStates += Triangolo
+                ->->
+                
+        - (firstRed > firstGreen) && (firstRed > firstBlue) && (firstRed > firstYellow) && (firstRed > firstPurple):
+            ~ firstCharacterPossibleStates += RagazzaOrchestra
+                ->->
+                
+        - (firstGreen > firstBlue) && (firstGreen > firstRed) && (firstGreen > firstYellow) && (firstGreen > firstPurple):
+            ~ firstCharacterPossibleStates += FlautoDolce    
+                ->->
+                
+        - (firstYellow > firstGreen) && (firstYellow > firstRed) && (firstYellow > firstBlue) && (firstYellow > firstPurple):
+            ~ firstCharacterPossibleStates += Ocarina   
+                ->->
+                
+        - (firstPurple > firstGreen) && (firstPurple > firstRed) && (firstPurple > firstYellow) && (firstPurple > firstBlue):
+            ~ firstCharacterPossibleStates += Violino    
+                ->->
+                
+        - else:
+            ~ firstCharacterPossibleStates += Rinuncia 
+            ->->
+                
+    }
+
+->->        

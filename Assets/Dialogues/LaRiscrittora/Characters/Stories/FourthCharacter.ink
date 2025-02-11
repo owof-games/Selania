@@ -51,6 +51,13 @@
     sss
     -> main
 
+        //Questa roba poi è da risistemare
+=== knowing_fourth_character
+
+        = five
+        
+        -> main    
+
 === personaggia_quattro_storia_conclusa        
         + opzione
         + opzione
