@@ -65,16 +65,16 @@
 === first_greenhouse_visit
 ~ temp charName = uppercaseTranslator(seventhCharacterState)
     {charName}: Hai trovato la serra!
-    {charName}: Qui puoi far crescere moltissime cose del sottobosco.
-    {charName}: Tutte quelle cosine che tendiamo a ignorare ma sono fondamentali per la vita.
-    {charName}: Sapevi ad esempio che i funghi sono il punto di contatto tra vita e morte?
+    {charName}: Qui puoi coltivare cose molto diverse tra loro.
+    {charName}: Tutte quelle cose che tendiamo a ignorare ma che sono fondamentali per la vita.
+    {charName}: Ad esempio: sapevi che i funghi sono il punto di contatto tra vita e morte?
     {charName}: Trasformano la materia inorganica e in decomposizione in sostanze fondamentali per i viventi.
     {charName}: Senza funghi la vita stessa sarebbe impensabile.
-    {charName}: E poi hanno migliaia di odori diversi, per la gioia del mio nasino.
-    {charName}: Qui svolgono anche un'altra funzione:
-    {charName}: consegnando loro ciò che vogliamo che rimanga nel passato, ci offrono nutrimenti per il presente e il futuro.
+    {charName}: E senza la serra, ogni riscrittura sarebbe più difficile.
+    {charName}: Lasciati coinvolgere dalle sue suggestioni, e quando quello che hai coltivato sarà cresciuto, potresti trovare qualcosa di utile per le altre persone.
+    {charName}: E per te.
     {charName}: Riscrivere è un lavoro faticoso, e per questo è importante che ogni {pronouns has him: riscrittore|{pronouns has her: riscrittora|riscrittorə}} abbia dei momenti per prendersi cura di sé.
-    {charName}: Tornaci spesso: tutto nel giardino cambia spesso.
+    {charName}: Tornaci spesso: momento dopo momento quello che hai piantato sarà via via più rigoglioso.
         -> main
 
 === first_bus_stop_visit
