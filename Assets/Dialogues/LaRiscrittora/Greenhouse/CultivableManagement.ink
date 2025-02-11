@@ -1003,13 +1003,8 @@ QUESTIONS
     - BaccaDellaAddolorata:
         -> bacca_della_addolorata
     - NonTiScordarDiTe:
-        {
-        //Se il trigger warning sul mourning è stato dichiarato, allora prendo un altro risultato.
-            - mourning == true:
-                -> non_ti_scordar_di_te
-            - mourning == false:
-                -> canto_delle_compagne
-        }
+        -> non_ti_scordar_di_te
+
         
 }
 

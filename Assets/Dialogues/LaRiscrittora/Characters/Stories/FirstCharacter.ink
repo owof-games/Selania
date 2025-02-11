@@ -141,7 +141,7 @@
         ???: Sei l'unica persona con cui posso permettermi di litigare.
         ???: E l'unica che mi sopporta da quando ho finito il conservatorio.
         ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameUno}.
-        {charNameUno}: No, io sono {charNameUno}.
+        {charNameUno}: No, io sono <b>{charNameUno}</b>.
         {charNameUno}: Ehi! Non è questo il mio nome.
         {charNameUno}: <i>{charNameUno}</i>.
         {charNameUno}: Forse se provo a dirlo al contrario?
@@ -169,7 +169,7 @@
                     ~ firstYellow ++
                     
             + [Solo se sei tu a definirne il significato e non altri.]
-                {charNameUno}: Tu si che sai guardare al cuore delle cose!
+                {charNameUno}: Tu sì che sai guardare al cuore delle cose!
                 {charNameUno}: Eppure ora mi ritrovo con un nome nuovo.
                 {charNameUno}: E non so cosa significhi, cosa doverci fare.
                     ~ firstPurple ++
@@ -297,7 +297,7 @@
     
         {charNameUno}: Stavo pensando ad Anna.
         {charNameUno}: Anna è una delle mie amiche del conservatorio.
-        {charNameUno}: Ha un anno meno di me e ora vuole che mi proponga come assistente di Ghiberti.
+        {charNameUno}: Ha un anno meno di me e ora vuole che mi proponga come assistente del Ghiberti.
         {charNameUno}: Dice che lui ha stima di me e questa è la mia occasione.
         {charNameUno}: Anna è così sicura di sè da quando ha lasciato l'ex molesto.
         {charNameUno}: Anna e Olga discutono spesso perché Olga pensa che con la classica io sia sprecata.
@@ -517,7 +517,7 @@
                 {charNameUno}: O regalandogli un po' di caos?
                 ~ firstGreen ++
                 
-            + [Ha paura di accoglire la potenza del disordine.]
+            + [Ha paura di accogliere la potenza del disordine.]
                 {charNameUno}: Già, è una possibilità.
                 {charNameUno}: Anche se poi credo che il disordine sia solo una questione di prospettiva.
                 {charNameUno}: Alla lunga ci si abiuta anche a quello, e a quel punto diventa difficile comunque cambiare.
@@ -865,7 +865,7 @@
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     {name}: Prima hai detto che hai il terrore di fare una scelta.
         
-        + [Qui accettato il tuo nuovo nome.]
+        + [Qui hai accettato il tuo nuovo nome.]
             {name}: Accettare è una scelta.
             {name}: Cercare risposte è un'altra scelta ancora.
             {name}: E ammettere una propria paura, una scelta enorme.
@@ -1087,30 +1087,30 @@
         
         {
             - firstCharacterPossibleStates has Rinuncia:
-                {charNameUno}: Che resterà Rinuncia, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
+                {charNameUno}: Che <b>resterà Rinuncia</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
             
             - firstCharacterPossibleStates has Triangolo:
-                {charNameUno}: E il mio vero nome è Triangolo, perché pensavo di essere uno strumento, e invece ho solo fallito.
+                {charNameUno}: E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
                     ~ firstCharacterState = ()
                     ~ firstCharacterState += Triangolo
             
             - firstCharacterPossibleStates has RagazzaOrchestra:
-                {charNameUno}: Mi chiamerò Ragazza Orchestra: nel non saper rinunciare sono diventata l'ornitorinco della musica.
+                {charNameUno}: Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper rinunciare sono diventata l'ornitorinco della musica.
                     ~ firstCharacterState = ()
                     ~ firstCharacterState += RagazzaOrchestra
             
             - firstCharacterPossibleStates has FlautoDolce:
-                {charNameUno}: Il mio nome è Flauto Dolce: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
+                {charNameUno}: Il mio nome è <b>Flauto Dolce</b>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
                     ~ firstCharacterState = ()
                     ~ firstCharacterState += FlautoDolce                
             
             - firstCharacterPossibleStates has Ocarina:
-                {charNameUno}: Mi chiamerò Ocarina: perché il suo suono è gioco e festa.
+                {charNameUno}: Mi chiamerò <b>Ocarina</b>: perché il suo suono è gioco e festa.
                     ~ firstCharacterState = ()
                     ~ firstCharacterState += Ocarina
             
             - firstCharacterPossibleStates has Violino:
-                {charNameUno}: Io sono Violino: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
+                {charNameUno}: Io sono <b>Violino</b>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
                     ~ firstCharacterState = ()
                     ~ firstCharacterState += Violino
         }
@@ -1158,7 +1158,7 @@
     }
     
         - (top)
-        {charNameUno}: {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me|Sono sicura di aver visto un'altra persona alla fermata del bus, ma quando ho cercato di raggiungerla è scomparsa|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
+        {charNameUno}: {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me.|Sono sicura di aver visto un'altra persona alla fermata del bus, ma quando ho cercato di raggiungerla è scomparsa.|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
                 ~ firstCharEndingDialogue ++
         -> main
         

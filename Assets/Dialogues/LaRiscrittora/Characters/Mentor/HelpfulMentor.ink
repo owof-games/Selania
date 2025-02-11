@@ -20,7 +20,7 @@
         * (chiSei) [Chi sei?]
             Sconosciuto: Dipende molto dal momento, e dalla persona che ho davanti.
             Sconosciuto: Ma direi che puoi chiamarmi <b>{lowercaseTranslator(seventhCharacterState)}</b>.
-            {charName}: Non un name originale ma ehi, almeno ti ricordi chi chiamare se sei in difficoltà, no?
+            {charName}: Non un nome originale ma ehi, almeno ti ricordi chi chiamare se sei in difficoltà, no?
                 -> top
         
         * (vado) [Come me ne vado da qui?]
@@ -47,7 +47,7 @@
             -> name_choice ->
         {chiSei:{charName}|Sconosciuto}: E quali sono i pronomi in cui ti riconosci?
             -> gender ->
-        {chiSei:{charName}|Sconosciuto}: piacere di conoscerti, {name}.
+        {chiSei:{charName}|Sconosciuto}: Piacere di conoscerti, {name}.
         {chiSei:{charName}|Sconosciuto}: E {pronouns has him: benvenuto|{pronouns has her: benvenuta|benvenutə}}. Spero ti troverai bene, qui.
         {not chiSei: Sconosciuto: Ah, che sbadato. Invece tu chiamami <b>{charName}</b>.|{charName}: È il mio dovere farvi stare bene.}
         {charName}: Un'altra cosa importante, {name}.
@@ -71,7 +71,7 @@
             
     === gifts_and_ink
     ~ temp charName = uppercaseTranslator(seventhCharacterState)
-        {charName}: Quindi: ogni tanto capita che delle persone si ritrovino in questo posto.
+        {charName}: Ogni tanto capita che delle persone si ritrovino in questo posto.
         {charName}: Sono sempre persone che sono rimaste bloccate in qualcosa.
         {charName}: Spesso sono storie di rimpianto o rimorso, in alcuni casi di traumi, o sensi di colpa.
         {charName}: Ma quale che sia il motivo, non riescono più ad andare avanti con la loro vita.        
@@ -107,7 +107,7 @@
             -
         {charName}: Ora, perché devi dare un dono?
         {charName}: Non solo per dimostrare a queste persone che le hai ascoltate, ma anche per aumentare la tua quantità di <b>inchiostro</b>.
-        {charName}: Perché tu {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}} sei {pronouns has him: un riscrittore|{pronouns has her: una riscrittora|unə riscrittorə}}!
+        {charName}: Perché tu {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}} sei <b>{pronouns has him: un riscrittore|{pronouns has her: una riscrittora|unə riscrittorə}}</b>!
         {charName}: Aiuti queste persone bloccate a guardare la loro storia in modo diverso, e a scegliersi un nuovo nome.
         
             + [E tu, hai bisogno di un nuovo nome?]
@@ -159,7 +159,7 @@
         {charName}: Gli interventi sono domande o commenti che puoi fare su cose diverse che preoccupano la persona.
         {charName}: Più interventi hai a disposizione, più puoi convincere la persona a vedere le cose diversamente.
         {charName}: A raggiungere il tuo obiettivo:
-        {charName}: riscrivere la loro storia.
+        {charName}: riscrivere la sua storia.
         
             + [Hai un consiglio da darmi, Mentore?]
                 {charName}: Sii chi sei.
@@ -384,10 +384,16 @@ VAR mourning = false
     + {mourning == true} [Non me la sento di parlare di lutto.]
         {charName}: Sentiti a casa. Preferenza registrata.
         ~ mourning = false
+            //Rimuovo coltivabile legato a lutto
+            ~ pianteCiclicità -= NonTiScordarDiTe
+            ~ pianteIndipendenza -= NonTiScordarDiTe
+            ~ pianteRicordo -= NonTiScordarDiTe
+            ~ backupCultivable -= NonTiScordarDiTe
             -> top
     + {mourning == false} [Ho cambiato idea: me la sento di parlare di lutto.]
         {charName}: Grandioso. Preferenza registrata.
         ~ mourning = true
+        
             -> top
         
     + {loneliness == true} [Preferirei evitare storie di solitudine e abbandono.]
