@@ -111,7 +111,6 @@ Dono...
     {
     - currentReceiver has FirstCharacter:
         <i>{uppercaseTranslator(firstCharacterState)} rifiuta il tuo dono, disgustata.</i>
-         //~ firstCharacterSpecialEvent = true
          ~ currentReceiver = ()
         -> first_story_gift.ink_outcome
 

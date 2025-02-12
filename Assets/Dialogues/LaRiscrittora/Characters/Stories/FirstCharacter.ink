@@ -782,7 +782,6 @@
     
         = ink_outcome    
             <i>Dopo il tuo dono {inkTranslator(firstCharacterInkLevel)}.
-                // ~ inkLevel(firstCharacterInkLevel)
                  -> talk_with_first_character
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
