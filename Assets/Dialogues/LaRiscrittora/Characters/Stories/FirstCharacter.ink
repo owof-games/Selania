@@ -104,7 +104,7 @@
         ???: Altə all’incirca una balla di fieno e che si muove come un violino, probabilmente presə a stordire di domande quel tizio, il mentore.
         ???: Non posso essere arrivata qui da sola, vero? Qualsiasi cosa sia <i>qui</i>.
         ???: Come lə trovo?
-            + [Dammi dettagli più concreti.]
+            + (oneBlue) [Dammi dettagli più concreti.]
                     ~ firstBlue ++
                 ???: Concreti?
                 ???: Si muove. Respira. Mangia. Saltella. Canta.
@@ -112,26 +112,26 @@
                 ???: E ha molta fantasia.
                 ???: Sempre che tu sappia cosa sia.
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + (oneYellow) [Sicuro che il violino ha bisogno di un tamburo per tornare.]
                     ~ firstYellow ++
                 ???: Non ci avevo pensato!
                 ???: Ma il suo violino è più da pianoforte.
                 ???: Forse potrei cercare nella serra, e trovare qualcosa da suonare.
                 ???: Mi piace comunque il tuo modo di pensare!
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + (oneRed) [Seguiamo le sue tracce! Fiutiamo il suo odore.]
                 ~ firstRed ++
                 ???: Ha senso, ma Talco non è persona da azione.
                 ???: Si trascina nello spazio come se fosse vento.
                 ???: E lascia alle sue spalle l'odore della primavera.
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + (oneGreen) [Se ti senti sola, sono qui ad ascoltarti.]
                 ~ firstGreen ++
                 ???: È una cosa molto gentile, davvero.
                 ???: Ma è come chiedermi di fare un concerto con una persona sconosciuta.
                 ???: Ci vuole tempo per capire come armonizzare.
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + (onePurple) [Tu sei sempre con ləi, ləi è sempre con te.]
                 ~ firstPurple ++
                 ???: Grazie.
                 ???: Avevo bisogno di queste parole.
@@ -1083,6 +1083,7 @@
     {charNameUno}: Mentre parlavi mi è nata una nuova canzone in testa.
     {charNameUno}: Qualcosa di fresco, di pronto a cambiare.
     {charNameUno}: La canzone del mio vero nome.
+    TODO: a voce definita qui la personaggia ci spiega anche perché ha compiuto questa scelta in base a qualcosa che abbiamo detto prima (renditela facile)
         
         {
             - firstCharacterPossibleStates has Rinuncia:

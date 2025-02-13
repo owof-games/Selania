@@ -61,35 +61,21 @@
     VAR fourthCharacterSpecialEvent = false
 
 //Gestione quinta personaggia
-    LIST fifthCharacterPossibleStates = Oscar, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
-    VAR fifthCharacterState = Oscar
+    LIST fifthCharacterPossibleStates= IlMentore, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
+    VAR fifthCharacterState= IlMentore
     
     VAR fifthStory = NotStarted
     VAR fifthCharacterSpecialEvent = false
-
-//Gestione sesta personaggia
-    LIST sixthCharacterPossibleStates = LoSpecchio, NuovoStatoUnoSei, NuovoStatoDueSei, NuovoStatoTreSei
-    VAR sixthCharacterState = LoSpecchio
-    
-    VAR sixthStory = NotStarted
-    VAR sixthCharacterSpecialEvent = false
-
-
-//Gestione settima personaggia
-    LIST seventhCharacterPossibleStates= IlMentore, NuovoStatoUnoSette, NuovoStatoDueSette, NuovoStatoTreSette
-    VAR seventhCharacterState= IlMentore
-    
-    VAR seventhStory = NotStarted
-    VAR seventhCharacterSpecialEvent = false
     
     
     //STATI UP: Verde e Blu.
     //STATI DOWN: Rosso.
-    VAR seventhPurple = 0
-    VAR seventhYellow = 0
-    VAR seventhBlue = 0
-    VAR seventhGreen = 0
-    VAR seventhRed = 0
+    VAR fifthPurple = 0
+    VAR fifthYellow = 0
+    VAR fifthBlue = 0
+    VAR fifthGreen = 0
+    VAR fifthRed = 0
+    
 
 
 
@@ -183,7 +169,7 @@
         - LaMondatrice:
             ~ return "La Mondatrice"
 
-    //Personaggia Sette        
+    //Personaggia Cinque        
         - IlMentore:
             ~ return "Il Mentore"
 

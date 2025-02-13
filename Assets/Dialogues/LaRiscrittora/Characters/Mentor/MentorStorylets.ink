@@ -1,5 +1,5 @@
 === mentor_storylets ===
-~ temp charName = uppercaseTranslator(seventhCharacterState)
+~ temp charName = uppercaseTranslator(fifthCharacterState)
 ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
 {
 //Introduzioni
@@ -69,7 +69,7 @@
 
 // STORYLETS PRESENTAZIONE DEI LUOGHI
 === first_greenhouse_visit
-~ temp charName = uppercaseTranslator(seventhCharacterState)
+~ temp charName = uppercaseTranslator(fifthCharacterState)
     {charName}: Hai trovato la serra!
     {charName}: Qui puoi coltivare cose molto diverse tra loro.
     {charName}: Tutte quelle cose che tendiamo a ignorare ma che sono fondamentali per la vita.
@@ -84,25 +84,25 @@
         -> main
 
 === first_bus_stop_visit
-~ temp charName = uppercaseTranslator(seventhCharacterState)
+~ temp charName = uppercaseTranslator(fifthCharacterState)
     {charName}: Questa è la fermata del bus.
     {charName}: È un posto di passaggio: è da qui che arrivano e vanno le persone che cercano il tuo aiuto.
     {charName}: Ed è da qui che potrai andare e tornare quando vorrai.
         -> main
 
 === first_nest_visit
-~ temp charName = uppercaseTranslator(seventhCharacterState)
+~ temp charName = uppercaseTranslator(fifthCharacterState)
 
     -> main
 
 
 === first_library_visit
-~ temp charName = uppercaseTranslator(seventhCharacterState)
+~ temp charName = uppercaseTranslator(fifthCharacterState)
 
     -> main
 
 
 === first_laboratory_visit
-~ temp charName = uppercaseTranslator(seventhCharacterState)
+~ temp charName = uppercaseTranslator(fifthCharacterState)
 
     -> main

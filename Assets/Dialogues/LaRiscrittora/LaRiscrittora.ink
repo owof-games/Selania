@@ -38,9 +38,6 @@ INCLUDE Characters\Stories\SecondCharacter.ink
 INCLUDE Characters\Stories\ThirdCharacter.ink
 INCLUDE Characters\Stories\FourthCharacter.ink
 INCLUDE Characters\Stories\FifthCharacter.ink
-INCLUDE Characters\Stories\SixthCharacter.ink
-INCLUDE Characters\Stories\SeventhCharacter.ink
-
 
 //Gestione dell'inventario
 INCLUDE Inventory\Inventory.ink

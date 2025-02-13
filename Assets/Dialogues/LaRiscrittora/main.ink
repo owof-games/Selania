@@ -19,8 +19,7 @@
 <-personaggia_tre
 <-personaggia_quattro
 <-personaggia_cinque
-<-personaggia_sei
-<-personaggia_sette
+
 
 //Elementi della serra
 <- call_test
@@ -37,8 +36,7 @@
 <- third_character_notes
 <- fourth_character_notes
 <- fifth_character_notes
-<- sixth_character_notes
-<- seventh_character_notes
+
 
 
 //Elementi gestione interfaccia

@@ -5,7 +5,7 @@
  ----------------------------------*/
 
 === welcome ===
-~ temp charName = uppercaseTranslator(seventhCharacterState)
+~ temp charName = uppercaseTranslator(fifthCharacterState)
     Sconosciuto: Che buffo, è da un po' che non incontravo una persona nuova.
     Sconosciuto: Immagino tu abbia un milione di domande, vero?
     - (top)
@@ -19,7 +19,7 @@
         
         * (chiSei) [Chi sei?]
             Sconosciuto: Dipende molto dal momento, e dalla persona che ho davanti.
-            Sconosciuto: Ma direi che puoi chiamarmi <b>{lowercaseTranslator(seventhCharacterState)}</b>.
+            Sconosciuto: Ma direi che puoi chiamarmi <b>{lowercaseTranslator(fifthCharacterState)}</b>.
             {charName}: Non un nome originale ma ehi, almeno ti ricordi chi chiamare se sei in difficoltà, no?
                 -> top
         
@@ -40,7 +40,7 @@
         * -> your_name
     
     = your_name
-        ~ temp charName = uppercaseTranslator(seventhCharacterState)
+        ~ temp charName = uppercaseTranslator(fifthCharacterState)
         
         {chiSei:{charName}|Sconosciuto}: Ora tocca a me farti una domanda: come ti devo chiamare?
         {chiSei:{charName}|Sconosciuto}: Puoi usare qualsiasi nome: prendi questa occasione come un nuovo inizio.
@@ -70,7 +70,9 @@
 
             
     === gifts_and_ink
-    ~ temp charName = uppercaseTranslator(seventhCharacterState)
+    ~ temp charName = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameUno = uppercaseTranslator
+    
         {charName}: Ogni tanto capita che delle persone si ritrovino in questo posto.
         {charName}: Sono sempre persone che sono rimaste bloccate in qualcosa.
         {charName}: Spesso sono storie di rimpianto o rimorso, in alcuni casi di traumi, o sensi di colpa.
@@ -78,6 +80,23 @@
         {charName}: In tutte queste situazioni arrivi tu, {name}.
         {charName}: Cerca di ascoltarle, di capirle, di intuire come ragionano.
         {charName}: Conquista la loro fiducia, e quando saranno aperte con te, ti verrà offerta l'occasione di dare loro un </b>dono<b>.
+        {
+            - knowing_first_character.one.oneYellow:
+            {charName}: E credo che parlare con {charNameUno} dei violini e dei tamburi sia stato un ottimo inizio.
+            
+            - knowing_first_character.one.oneRed:
+            {charName}: L'idea di {charNameUno} per esempio è stata originale, indubbiamente, ma non l'ho percepita particolarmente entusiasta all'idea.
+            
+            - knowing_first_character.one.oneBlue:
+            {charName}: Anche se ho visto che hai risposto a {charNameUno} in modo molto razionale. Non la cosa che preferisce.
+            
+            - knowing_first_character.one.oneGreen:
+            {charName}: La tua proposta di ascoltare {charNameUno} per esempio è stata molto tenera, ma non sono sicura che sia molto nelle sue corde.
+            
+            - knowing_first_character.one.onePurple:
+            {charName}: Ho l'impressione che dire a {charNameUno} che Talco sarà sempre con lei abbia fatto partire le cose col piede giusto.
+        
+        }
         {charName}: I doni sono oggetti che a volte troverai in questo luogo, ma che il più delle volte creerai da te.
         {charName}: Ad esempio, coltivando qualcosa <b>alla serra</b>.
         {charName}: Il dono è una cosa importante, perché è il tuo modo di dimostrare loro che l3 hai ascoltat3.
@@ -85,25 +104,25 @@
             + [Matematico: ascolto, analizzo, scelgo il dono.]
                 {charName}: Magari non proprio <i>matematico</i>.
                 {charName}: Piuttosto, direi empatico.
-                    ~ seventhBlue ++
+                    ~ fifthBlue ++
             + [Come un videogioco: comprendi il loop, dai il meglio di te.]
                 {charName}: Sì.
                 {charName}: Anche se le persone non sono un loop.
                 {charName}: E tu non devi dare il meglio, ma quello che sei.
-                    ~ seventhYellow ++
+                    ~ fifthYellow ++
             + [Mi stai chiedendo di lavorare senza darmi un soldo.]
                 {charName}: Non è un lavoro.
                 {charName}: E qui non c'è denaro.
                 {charName}: E non sono un tuo nemico: non serve questo atteggiamento aggressivo.
-                    ~ seventhRed ++
+                    ~ fifthRed ++
             + [Quindi devo creare una relazione con queste persone?]
                 {charName}: Sì, secondo i tuoi bisogni e i tuoi limiti ovviamente.
                 {charName}: Non serve a nessuno che tu ti annulli per aiutare chi hai davanti.
-                    ~ seventhGreen ++
+                    ~ fifthGreen ++
             + [La fiducia non si conquista, la fiducia è un dono.]
                 {charName}: Esatto.
                 {charName}: E quindi puoi vedere tutto questo come uno scambio.
-                    ~ seventhPurple ++
+                    ~ fifthPurple ++
             -
         {charName}: Ora, perché devi dare un dono?
         {charName}: Non solo per dimostrare a queste persone che le hai ascoltate, ma anche per aumentare la tua quantità di <b>inchiostro</b>.
@@ -115,29 +134,29 @@
                 {charName}: No!
                 {charName}: Questo è sempre stato il mio nome.
                 {charName}: Ed è la cosa che amo più fare.
-                    ~ seventhPurple ++
+                    ~ fifthPurple ++
                     
             + [Con l'inchiostro ci posso disegnare?]
                 {charName}: No, {name}.
                 {charName}: Tu sei {pronouns has him: un riscrittore|{pronouns has her: una riscrittora|unə riscrittorə}}, non {pronouns has him: un disegnatore|{pronouns has her: una disegnatrice|unə disegnatricə}}
-                    ~ seventhYellow ++
+                    ~ fifthYellow ++
             + [Servono le persone care per guardarsi in modo diverso.]
                 {charName}: A volte è più facile aprirsi a chi non si conosce.
                 {charName}: E mentre noi riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
                 {charName}: E poi... no, questo te lo dirò tra qualche tempo.
-                        ~ seventhGreen ++
+                        ~ fifthGreen ++
                         
             + [Tipo gaslighting?]
                 {charName}: No no no assolutamente no.
                 {charName}: Anche perché se una persona si sente presa in giro, sarà tutto fuorché disponibile a fidarsi di te.
-                        ~ seventhRed ++
+                        ~ fifthRed ++
             
             + [Un nome è un nome. Che se ne fanno di uno nuovo?]
                 {charName}: Un nome è come una magia.
                 {charName}: Lo carichiamo di volta in volta di significato.
                 {charName}: E quando lo usiamo, ci dice chi siamo.
                 {charName}: A volte quella magia non va più bene, e dobbiamo cercare una nuova formula. Un nuovo nome.
-                    ~ seventhBlue ++
+                    ~ fifthBlue ++
             -
         
 
@@ -148,7 +167,7 @@
 
     
     === questions
-    ~ temp charName = uppercaseTranslator(seventhCharacterState)
+    ~ temp charName = uppercaseTranslator(fifthCharacterState)
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     
         {firstCharacterInkLevel == Empty or firstCharacterInkLevel == Low: {charName}: Non ti demoralizzare, capita a chiunque di non dare il massimo al primo colpo.}
@@ -166,28 +185,28 @@
                 {charName}: Non essere altro.
                 {charName}: Non chiedere alla persona di essere altro.
                 {charName}: La stai aiutando a trovare chi è, non un'altra persona diversa da sé.
-                    ~ seventhGreen ++
+                    ~ fifthGreen ++
                     
             + [Ma non posso dirle: chiamati così, ciao, adios!?]
                 {charName}: Un nuovo nome è una nuova esperienza.
                 {charName}: E l'esperienza viene dal percorso.
                 {charName}: Se non c'è percorso, non c'è cambiamento.
-                    ~ seventhRed ++
+                    ~ fifthRed ++
             
             + [Non è una persona razionale. Può farcela?]
                 {charName}: {name}, capisco la tua perplessità, ma sì, ce la può fare.
-                    ~ seventhBlue ++
+                    ~ fifthBlue ++
                     
             + [Gli scoiattoli non hanno bisogno di riscriverla, invece?]
                 {charName}: Gli scoiattoli non hanno intelletto.
                 {charName}: Non si fanno queste domande.
                 {charName}: Gli scoiattoli <i>sono</i> e basta.
-                    ~ seventhYellow ++
+                    ~ fifthYellow ++
                     
             + [Mentore, ti stimo, ma non sei tu a decidere il mio obiettivo.]
                 {charName}: Il tuo obiettivo <i>qui</i>, perdonami.
                 {charName}: Non avendo altri luoghi in cui andare, mi dimentico che possono esserci sono altre vite, altri obiettivi da raggiungere.
-                    ~ seventhPurple ++
+                    ~ fifthPurple ++
             -
         {charName}: Ricorda {name}: sei una guida, ma sta alla persona decidere alla fine chi è, e di cosa ha bisogno.
         {charName}: Quando te la senti, affronta questo ultimo passaggio, e poi torna da me.
@@ -196,11 +215,12 @@
         
         
     === first_character_feedback
-    ~ temp charName = uppercaseTranslator(seventhCharacterState)
+    ~ temp charName = uppercaseTranslator(fifthCharacterState)
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     
         {charName}: Beh, direi che è andata, {name}.
-    {
+        TODO: quando la voce è definita, qui ci "giudica".
+        {
             - firstCharacterPossibleStates has Triangolo:
                 {charName}: Hai aiutato {charNameUno} a riscoprire il suo lato più pratico, razionale.
             - firstCharacterPossibleStates has RagazzaOrchestra:
@@ -228,7 +248,7 @@
 
 
 === tutorial
-~ temp charName = uppercaseTranslator(seventhCharacterState)
+~ temp charName = uppercaseTranslator(fifthCharacterState)
 //Strutturare come wave sintetica?
     {charName}: Ecco i luoghi che puoi visitare in questo momento.
     {charName}: Su quali vorresti avere un po' di informazioni?
@@ -250,22 +270,19 @@
             {charName}: Non ho idea di chi abbia messo la panchina, sinceramente.
             {charName}: E quella pianta, fungo, cosa che è nel mezzo, non ho ancora capito come farla rifiorire.
             -> top
+    
+    + {secondTier}[Sulla Libary.]
+        Informazioni
+            -> top
+            
+    + {thirdTier}[Sulle Laboratory.]
+        Informazioni
+            -> top
 
-    + {firstStory == Ended}[Sulle falene.]
+    + {fourthTier}[Sul nest.]
         Informazioni
             -> top
-    + {firstStory == Ended}[Sul labirinto.]
-        Informazioni
-            -> top
-    + {secondStory == Ended}[Sulle Laboratory.]
-        Informazioni
-            -> top
-    + {secondStory == Ended}[Sulle sirene.]
-        Informazioni
-            -> top
-    + {secondStory == Ended}[Sulla Libary.]
-        Informazioni
-            -> top
+
     + [Vorrei parlare di qualcosa di diverso.]
         -> speaking_with_mentor
     -
@@ -273,7 +290,7 @@
     -> speaking_with_mentor
 
 === to_do
-~ temp charName = uppercaseTranslator(seventhCharacterState)
+~ temp charName = uppercaseTranslator(fifthCharacterState)
 
         {charName}: Step uno: <b>parli</b> con la persona, cerchi di capire di cosa ha bisogno, come ragiona, e conquisti la sua fiducia.
         {charName}: Step due: le fai un <b>dono</b>.
@@ -282,63 +299,6 @@
         {charName}: Step quattro: la persona sceglierà il suo <b>nuovo nome</b>.
         {charName}: Step cinque: ti <b>riposi</b>.
            -> speaking_with_mentor
-/* ---------------------------------
-
-   Aiuto con le storie
-
- ----------------------------------*/
-=== consigli_storie ===
-~ temp charName = uppercaseTranslator(seventhCharacterState)
-
-{
-    - firstStory == Active:
-        -> consigli_storia_uno
-    - secondStory == Active:
-        -> consigli_storia_due
-    - thirdStory == Active:
-        -> consigli_storia_tre
-    - fourthCharacterState == Active:
-        -> consigli_storia_quattro
-    - fifthStory == Active:
-        -> consigli_storia_cinque
-    - sixthStory == Active:
-        -> consigli_storia_sei
-    - seventhStory == Active:
-        -> consigli_storia_sette 
-}
-
-=== consigli_storia_uno
-~ temp charName = uppercaseTranslator(seventhCharacterState)
-
-{~ Consiglio storia uno|Consiglio storia uno|Consiglio storia uno}
-    ->speaking_with_mentor
-
-=== consigli_storia_due
-Consiglio storia due
-    ->speaking_with_mentor
-
-=== consigli_storia_tre
-Consiglio storia tre
-    ->speaking_with_mentor
-
-=== consigli_storia_quattro
-Consiglio storia quattro
-    ->speaking_with_mentor
-
-
-=== consigli_storia_cinque
-Consiglio storia cinque
-    ->speaking_with_mentor
-
-
-=== consigli_storia_sei
-Consiglio storia sei
-    ->speaking_with_mentor
-
-
-=== consigli_storia_sette
-Consiglio storia sette
-    ->speaking_with_mentor
 
 
 
@@ -354,7 +314,7 @@ VAR mourning = false
  ----------------------------------*/
  
  === trigger_warning ===
- ~ temp charName = uppercaseTranslator(seventhCharacterState)
+ ~ temp charName = uppercaseTranslator(fifthCharacterState)
  
     {charName}: Questi sono i principali temi delicati che potresti incontrare durante le tue chiacchierate.
     {charName}: Riuscirò per la maggior parte dei casi a fare in modo che tu non ne venga mai in contatto se li disabiliti.

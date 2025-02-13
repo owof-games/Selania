@@ -105,13 +105,3 @@
     + {are_two_entities_together(FifthCharacterNotes, PG)}[FifthCharacterNotes]
     Lettere random note da parte della personaggia
     -> main
-
-=== sixth_character_notes ===
-    + {are_two_entities_together(SixthCharacterNotes, PG)}[SixthCharacterNotes]
-    Lettere random note da parte della personaggia
-    -> main
-
-=== seventh_character_notes ===
-    + {are_two_entities_together(SeventhCharacterNotes, PG)}[SeventhCharacterNotes]
-    Lettere random note da parte della personaggia
-    -> main

@@ -4,7 +4,7 @@
 
 
 === speaking_with_mentor
-~ temp charName = uppercaseTranslator(seventhCharacterState)
+~ temp charName = uppercaseTranslator(fifthCharacterState)
 -> mentor_storylets ->
     {charName}: Cosa vuoi sapere {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?
     - (top)
@@ -32,11 +32,9 @@
 
 
 === support
-~ temp charName = uppercaseTranslator(seventhCharacterState)
+~ temp charName = uppercaseTranslator(fifthCharacterState)
     {charName}: Come posso aiutarti?
     - (top)
-        //+ {storiaUno == InCorso or storiaDue == InCorso or storiaTre == InCorso} [Potresti darmi un consiglio legato alla storia in corso?]
-        //    -> consigli_storie
         + {questions}[Mi ripeteresti cosa devo fare?]
             -> to_do
         + [Mi diresti a cosa servono i vari luoghi?]
