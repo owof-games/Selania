@@ -44,6 +44,36 @@
     -> main
     
 === talking_fungus
-Cose che compaiono finita la prima storia.
--> main
+~ temp charNameUno = uppercaseTranslator(firstCharacterState)
+{
+    - not first_story_ended_check:
+        -> first_story_ended_check
+    - else:
+        -> discourse
+}
+
+    = first_story_ended_check
+    <i>Osserva {name} e si chiede cosa provi dopo aver aiutato {charNameUno}.</i>
+        + [Scelta verde.]
+            ~ playerGreen ++
+        + [Scelta rossa.]
+            ~ playerRed ++
+        + [Scelta blu.]
+            ~ playerBlue ++
+        + [Scelta gialla.]
+            ~ playerYellow ++
+        + [Scelta viola.]
+            ~ playerPurple ++
+        -
+    <i>Risponde cose.</i>
+        -> main
+    
+    
+    
+    
+    = discourse
+    Variazioni diverse a seconda della progressione della storia
+    
+    
+    -> main
 
