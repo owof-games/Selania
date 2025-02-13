@@ -175,6 +175,7 @@
         {firstCharacterInkLevel == High: {charName}: Beh, hai dato alla persona il suo dono preferito! Sei già {pronouns has him: pronto|{pronouns has her: pronta|prontə}} per questo incarico!}
         {charName}: Ora: a cosa serve l'inchiostro?
         {charName}: Sostanzialmente più alto è il valore di inchiostro, più <b>interventi</b> puoi fare.
+        {charName}: Un intervento ti è sempre garantito, per provare a cambiare le cose, ma gli altri te li devi meritare.
         {charName}: Gli interventi sono domande o commenti che puoi fare su cose diverse che preoccupano la persona.
         {charName}: Più interventi hai a disposizione, più puoi convincere la persona a vedere le cose diversamente.
         {charName}: A raggiungere il tuo obiettivo:

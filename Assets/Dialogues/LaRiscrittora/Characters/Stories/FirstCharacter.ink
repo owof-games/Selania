@@ -822,10 +822,24 @@
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
         {charNameUno}: Ho realizzato una cosa, una cosa su noi due.
             -> firstAffinityCalc ->
-        {firstPurple && firstYellow > firstBlue: {charNameUno}: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.}
-        {firstPurple or firstYellow > firstBlue:{charNameUno}: Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.}
-        {firstPurple &&  firstYellow < firstBlue: {charNameUno}: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.}
-        {not (firstPurple && firstYellow > firstBlue) && not (firstPurple or firstYellow > firstBlue) && not (firstPurple &&  firstYellow < firstBlue): {charNameUno}: A volte siamo sullo stesso brano, altre no. E non ho ancora capito chi tra noi stia ignorando l'altra parte.}
+        {
+        - firstPurple && firstYellow > firstBlue: {charNameUno}: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
+        <i>{charNameUno} vede {name} come una persona amica e fidata.</i>
+        
+        -firstPurple or firstYellow > firstBlue:{charNameUno}: Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
+        
+        <i>{charNameUno} si trova bene con {name}.</i>
+        
+        - firstPurple && firstYellow < firstBlue: {charNameUno}: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
+        
+        <i>{charNameUno} non si è sentita capita da {name}.</i>
+        
+        
+        - else: A volte siamo sullo stesso brano, altre no. E non ho ancora capito chi tra noi stia ignorando l'altra parte.
+        
+        <i>{charNameUno} non riesce a capire che rapporto sta costruendo con {name}.</i>
+        
+        }
         {charNameUno}: E credo di aver capito perché il mio nome qui è {charNameUno}.
         {charNameUno}: Penso al Ghiberti.
         {charNameUno}: Penso ai miei amici.
@@ -850,7 +864,7 @@
 
     = statement
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
-        <i>A seguito del rapporto che hai creato con {charNameUno}, questo è l'inchiostro che hai a disposizione per aiutarla riscrivere la sua storia.</i>
+        <i>A seguito del rapporto che {name} ha creato con {charNameUno} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità.|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(firstCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]
@@ -980,6 +994,7 @@
 	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
         
+        TODO: poco chiaro dove voglia andare a parare
         + [Ma ogni persona ha immaginato sorti diverse per Jonah.]
             {name}: E nessuna di queste è una fine.
                 {
