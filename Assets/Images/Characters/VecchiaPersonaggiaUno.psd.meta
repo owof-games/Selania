@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VecchiaPersonaggiaUno_0: -6046365276238348436
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
