@@ -292,12 +292,12 @@
 === to_do
 ~ temp charName = uppercaseTranslator(fifthCharacterState)
 
-        {charName}: Step uno: <b>parli</b> con la persona, cerchi di capire di cosa ha bisogno, come ragiona, e conquisti la sua fiducia.
-        {charName}: Step due: le fai un <b>dono</b>.
-        {charName}: Più il dono è qualcosa di gradito, più avrai <b>inchiostro</b> per aiutarla a riscrivere la sua storia.
-        {charName}: Step tre: inizi i tuoi <b>interventi</b>, riprendendo eventi della sua storia e la aiuti a guardarli sotto una luce diversa.
-        {charName}: Step quattro: la persona sceglierà il suo <b>nuovo nome</b>.
-        {charName}: Step cinque: ti <b>riposi</b>.
+        {gifts_and_ink}{charName}: Step uno: <b>parli</b> con la persona, cerchi di capire di cosa ha bisogno, come ragiona, e conquisti la sua fiducia.
+        {gifts_and_ink}{charName}: Step due: le fai un <b>dono</b>.
+        {gifts_and_ink}{charName}: Più il dono è qualcosa di gradito, più avrai <b>inchiostro</b> per aiutarla a riscrivere la sua storia.
+        {questions}{charName}: Step tre: inizi i tuoi <b>interventi</b>, riprendendo eventi della sua storia e la aiuti a guardarli sotto una luce diversa.
+        {questions}{charName}: Step quattro: la persona sceglierà il suo <b>nuovo nome</b>.
+        {questions}{charName}: Step cinque: ti <b>riposi</b>.
            -> speaking_with_mentor
 
 

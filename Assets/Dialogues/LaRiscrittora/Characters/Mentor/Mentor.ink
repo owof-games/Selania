@@ -35,7 +35,7 @@
 ~ temp charName = uppercaseTranslator(fifthCharacterState)
     {charName}: Come posso aiutarti?
     - (top)
-        + {questions}[Mi ripeteresti cosa devo fare?]
+        + {gifts_and_ink}[Mi ripeteresti cosa devo fare?]
             -> to_do
         + [Mi diresti a cosa servono i vari luoghi?]
             -> tutorial
