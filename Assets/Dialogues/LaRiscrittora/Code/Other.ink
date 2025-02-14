@@ -21,9 +21,6 @@
 
     - entity_location(PG) == Nest:
         ~ return "backNest"
-        
-    - entity_location(PG) == Labyrinth:
-        ~ return "backLabyrinth"
 
     - entity_location(PG) == Library:
        ~ return "backLibrary"
@@ -53,9 +50,6 @@
 
     - entity_location(PG) == Nest:
         ~ return "nestSounds"
-        
-    - entity_location(PG) == Labyrinth:
-        ~ return "labirinthSounds"
 
     - entity_location(PG) == Library:
        ~ return "librarySounds"

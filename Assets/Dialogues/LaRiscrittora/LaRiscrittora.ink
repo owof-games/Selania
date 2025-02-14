@@ -60,11 +60,6 @@ INCLUDE Greenhouse\GreenhouseMiddlePath.ink
 //Nest
 INCLUDE Nest\Nest.ink
 
-//Labirinth
-INCLUDE Labirinth\Labirinth.ink
-INCLUDE Labirinth\Mirror.ink
-
-
 //Laboratory
 INCLUDE Laboratory\Laboratory.ink
 

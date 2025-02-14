@@ -7,7 +7,7 @@ VAR debugChangeName = false
 
 
 //Lista di tutti i luoghi del gioco
-LIST places = Forest, BusStop, Greenhouse, Library, Nest, Labyrinth, Laboratory, Safekeeping, GreenhouseMiddlePath, Bedroom
+LIST places = Forest, BusStop, Greenhouse, Library, Nest, Laboratory, Safekeeping, GreenhouseMiddlePath, Bedroom
 
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
@@ -43,4 +43,3 @@ VAR laboratoryContents = (Inventory)
 
 VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FifthCharacter, SixthCharacter, SeventhCharacter,  FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, SixthCharacterNotes, SeventhCharacterNotes, MenuSave, MenuQuit)
 
-VAR labirinthContents = (Inventory)    
