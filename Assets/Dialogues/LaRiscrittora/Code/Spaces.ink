@@ -6,8 +6,8 @@
         ~ return Forest
     - busStopContents has entity:
         ~ return BusStop
-    - libaryContents has entity:
-        ~ return Libary
+    - libraryContents has entity:
+        ~ return Library
     - nestContents has entity:
         ~ return Nest
     - greenhouseContents has entity:
@@ -42,8 +42,8 @@
         ~ forestContents -= entity
     - BusStop:
         ~ busStopContents -= entity
-    - Libary:
-        ~ libaryContents -= entity
+    - Library:
+        ~ libraryContents -= entity
     - Nest:
         ~ nestContents-= entity
     - Greenhouse:
@@ -67,8 +67,8 @@
         ~ forestContents += entity
     - BusStop:
         ~ busStopContents += entity
-    - Libary:
-        ~ libaryContents += entity
+    - Library:
+        ~ libraryContents += entity
     - Nest:
         ~ nestContents += entity
     - Greenhouse:

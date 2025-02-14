@@ -272,7 +272,7 @@
             {charName}: E quella pianta, fungo, cosa che è nel mezzo, non ho ancora capito come farla rifiorire.
             -> top
     
-    + {secondTier}[Sulla Libary.]
+    + {secondTier}[Sulla Library.]
         Informazioni
             -> top
             

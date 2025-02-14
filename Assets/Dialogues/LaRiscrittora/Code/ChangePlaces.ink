@@ -2,19 +2,16 @@
 
  === move_between_rooms(my_location)
  //Strade bloccate
-    + {are_two_entities_together(PG, FromForestToLibrary)} [FromForestToLibrary]
-            <i>Questa strada risulta bloccata, per ora.</i>
-        -> main
-    
+
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToNest)} [FromGreenhouseMiddlePathToNest]
-            <i>Questa strada risulta bloccata, per ora.</i>
-        -> main    
-    
-//Passaggi funzionali
-    + {are_two_entities_together(PG, RoomLoad)} [RoomLoad]
-        ~ move_entity(PG, BusStop)
-        -> bus_stop
-    
+            <i>Questa strada risulta bloccata.</i>
+        -> main
+        
+    + {are_two_entities_together(PG, FromLibraryToLaboratory)} [FromLibraryToLaboratory]
+            <i>Questa strada risulta bloccata.</i>
+        -> main
+        
+//Streets to and into the Bedroom
     + {are_two_entities_together(PG, FromBusStopToBedroom)} [FromBusStopToBedroom]
         ~ move_entity(PG, Bedroom)
         -> bedroom
@@ -23,7 +20,11 @@
         -> END
       
 
-//Streets to Bus Stop    
+//Streets to Bus Stop
+    + {are_two_entities_together(PG, RoomLoad)} [RoomLoad]
+        ~ move_entity(PG, BusStop)
+        -> bus_stop
+    
     + {are_two_entities_together(PG, FromForestToBusStop)}  [FromForestToBusStop]
             ~ move_entity(PG, BusStop)
             ~ movementsCounter ++
@@ -49,6 +50,15 @@
             -> story_time_management_for_PNG->
             -> characters_speaking ->
                 -> forest
+    
+    + {are_two_entities_together(PG, FromLibraryToForest)} [FromLibraryToForest]
+            ~ move_entity(PG, Forest)
+            ~ movementsCounter ++
+            -> randomizer_png_location ->
+            -> story_time_management_for_PNG->
+            -> characters_speaking ->
+                -> forest
+    
     
  //Streets to GreenhouseMiddlePath   
     + {are_two_entities_together(PG, FromGreenhouseToGreenhouseMiddlePath)} [FromGreenhouseToGreenhouseMiddlePath]
@@ -79,6 +89,22 @@
             -> characters_speaking ->
                 -> greenhouse
 
+//Streets to Library
+    + {are_two_entities_together(PG, FromForestToLibrary)} [FromForestToLibrary]
+        {
+            - not secondTier: <i>Questa strada risulta bloccata, per ora.</i>
+                -> main
+            
+            - else:
+                ~ move_entity(PG, Library)
+                ~ movementsCounter ++
+                -> randomizer_png_location ->
+                -> story_time_management_for_PNG->
+                -> characters_speaking ->
+                    -> library
+        }
+            
+    
 
 -    
 -> main

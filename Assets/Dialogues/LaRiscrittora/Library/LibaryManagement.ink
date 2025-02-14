@@ -64,7 +64,7 @@ VAR libriZ = (libroGabri, libroGreta)
 + {libriLetti != ()} Vorrei qualcosa che ho già letto
         -> rilettura
 + Mmm, mi è passata la voglia di leggere
-    -> libary
+    -> library
 -
 -> DONE
 
@@ -99,5 +99,5 @@ VAR libriZ = (libroGabri, libroGreta)
     + Ho cambiato idea, voglio una storia nuova.
         -> test_libri
     -    
--> libary
+-> library
 

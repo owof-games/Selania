@@ -7,15 +7,15 @@ VAR debugChangeName = false
 
 
 //Lista di tutti i luoghi del gioco
-LIST places = Forest, BusStop, Greenhouse, Libary, Nest, Labyrinth, Laboratory, Safekeeping, GreenhouseMiddlePath, Bedroom
+LIST places = Forest, BusStop, Greenhouse, Library, Nest, Labyrinth, Laboratory, Safekeeping, GreenhouseMiddlePath, Bedroom
 
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
 LIST characters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FifthCharacter, SixthCharacter, SeventhCharacter
 
-LIST transitions = FromBusStopToForest, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibrary,  FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, FromGreenhouseToGreenhouseMiddlePath
+LIST transitions = FromBusStopToForest, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibrary,  FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, FromGreenhouseToGreenhouseMiddlePath, FromLibraryToForest, FromLibraryToLaboratory
 
-LIST sceneObjects = Bench, WateringCan , TheFungus, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, SixthCharacterNotes, SeventhCharacterNotes, StartingNote
+LIST sceneObjects = Bench, WateringCan , TheFungus, ReadingPlace, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, SixthCharacterNotes, SeventhCharacterNotes, StartingNote
 
 LIST cultivable = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile
 
@@ -34,11 +34,13 @@ VAR greenhouseMiddlePathContents = (FromGreenhouseMiddlePathToForest, FromGreenh
 
 VAR greenhouseContents = (FromGreenhouseToGreenhouseMiddlePath, WateringCan, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, Inventory)
 
-VAR labirinthContents = (Inventory)
+VAR libraryContents = (Inventory, FromLibraryToForest, FromLibraryToLaboratory, ReadingPlace)
+
+
 VAR nestContents = (Inventory)
-VAR libaryContents = (Inventory)
+
 VAR laboratoryContents = (Inventory)
 
 VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FifthCharacter, SixthCharacter, SeventhCharacter,  FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, SixthCharacterNotes, SeventhCharacterNotes, MenuSave, MenuQuit)
 
-    
+VAR labirinthContents = (Inventory)    

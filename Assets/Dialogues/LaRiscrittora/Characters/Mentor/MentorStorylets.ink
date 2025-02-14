@@ -46,7 +46,7 @@
     - are_entities_together_in(PG, Mentor, Greenhouse) && not first_greenhouse_visit:
         -> first_greenhouse_visit
 
-    - are_entities_together_in(PG, Mentor, Libary) && not first_library_visit:
+    - are_entities_together_in(PG, Mentor, Library) && not first_library_visit:
         -> first_library_visit
 
     - are_entities_together_in(PG, Mentor, Nest) && not first_nest_visit:

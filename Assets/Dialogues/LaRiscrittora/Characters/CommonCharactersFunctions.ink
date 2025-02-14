@@ -11,9 +11,9 @@
 
 //Settaggio luoghi attivi a seconda del tier
     VAR firstTierPlaces =(Forest, BusStop, GreenhouseMiddlePath)
-    VAR secondTierPlaces =(Forest, BusStop, Libary, GreenhouseMiddlePath)
-    VAR thirdTierPlaces = (Forest, BusStop, Libary, Nest, GreenhouseMiddlePath)
-    VAR fourthTierPlaces = (Forest, BusStop, Libary, Nest, Laboratory, GreenhouseMiddlePath)
+    VAR secondTierPlaces =(Forest, BusStop, Library, GreenhouseMiddlePath)
+    VAR thirdTierPlaces = (Forest, BusStop, Library, Nest, GreenhouseMiddlePath)
+    VAR fourthTierPlaces = (Forest, BusStop, Library, Nest, Laboratory, GreenhouseMiddlePath)
 
 //Gestione spostamenti: luoghi. I luoghi si aprono alla fine di ogni storia.
 //First tier: tier iniziale.
