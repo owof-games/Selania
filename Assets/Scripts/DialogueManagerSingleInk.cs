@@ -50,9 +50,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Nest Backgrounds")]
     [SerializeField] private Sprite backNest;
 
-    [Header("Labyrinth Backgrounds")]
-    [SerializeField] private Sprite backLabyrinth;
-
     [Header("Library Backgrounds")]
     [SerializeField] private Sprite backLibrary;
 
@@ -65,17 +62,21 @@ public class DialogueManagerSingleInk : MonoBehaviour
     private const string AMBIENTSOUNDS_TAG = "ambientSounds";
     [Header("Bedroom Sounds")]
     [SerializeField] private AudioClip bedroomSounds;
+    
     [Header("Forest Sounds")]
     [SerializeField] private AudioClip forestSounds;
+    
     [Header("Bus Stop Sounds")]
     [SerializeField] private AudioClip busstopSounds;
+    
     [Header("Greenhouse Sounds")]
     [SerializeField] private AudioClip greenhouseSounds;
 
     [Header("Greenhouse Middle Path Sounds")]
     [SerializeField] private AudioClip greenhousemiddlepathSounds;    
 
-
+    [Header("Library Path Sounds")]
+    [SerializeField] private AudioClip librarySounds;    
 
 
 
@@ -312,12 +313,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
                         background.sprite = backNest;
                     }
 
-                    //TAG GESTIONE DEL LABIRINTO
-                    if (tagValue == "backLabyrinth")
-                    {
-                        background.sprite = backLabyrinth;
-                    }
-
                     //TAG GESTIONE DELLA BIBLIOTECA
                     if (tagValue == "backLibrary")
                     {
@@ -369,7 +364,14 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     {
                         ambientSounds.clip = greenhousemiddlepathSounds;
                         ambientSounds.Play();
-                    }                    
+                    }
+
+                    //MUSIC TAG FOR LIBRARY
+                    if (tagValue == "librarySounds")
+                    {
+                        ambientSounds.clip = librarySounds;
+                        ambientSounds.Play();
+                    }                                       
 
                     break;
 
