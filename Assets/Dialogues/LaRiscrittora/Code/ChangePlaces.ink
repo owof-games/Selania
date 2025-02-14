@@ -1,16 +1,6 @@
 //Funzione per spostarsi da un luogo all'altro a seconda di dove mi trovo
 
  === move_between_rooms(my_location)
- //Strade bloccate
-
-    + {are_two_entities_together(PG, FromGreenhouseMiddlePathToNest)} [FromGreenhouseMiddlePathToNest]
-            <i>Questa strada risulta bloccata.</i>
-        -> main
-        
-    + {are_two_entities_together(PG, FromLibraryToLaboratory)} [FromLibraryToLaboratory]
-            <i>Questa strada risulta bloccata.</i>
-        -> main
-        
 //Streets to and into the Bedroom
     + {are_two_entities_together(PG, FromBusStopToBedroom)} [FromBusStopToBedroom]
         ~ move_entity(PG, Bedroom)
@@ -104,7 +94,42 @@
                     -> library
         }
             
+
+//Streets to Nest
     
+    + {are_two_entities_together(PG, FromGreenhouseMiddlePathToNest)} [FromGreenhouseMiddlePathToNest]
+    
+    {
+        - not thirdTier: <i>Questa strada risulta bloccata.</i>
+            -> main
+        - else:
+            ~ move_entity(PG, Nest)
+            ~ movementsCounter ++
+            -> randomizer_png_location ->
+            -> story_time_management_for_PNG->
+            -> characters_speaking ->
+                -> nest
+    }    
+    
+
+
+//Streets to Laboratory
+        
+    + {are_two_entities_together(PG, FromLibraryToLaboratory)} [FromLibraryToLaboratory]
+    
+    {
+        - not fourthTier: <i>Questa strada risulta bloccata.</i>
+            -> main
+        - else:
+            ~ move_entity(PG, Laboratory)
+            ~ movementsCounter ++
+            -> randomizer_png_location ->
+            -> story_time_management_for_PNG->
+            -> characters_speaking ->
+                -> laboratory
+    }
+            
+        
 
 -    
 -> main
