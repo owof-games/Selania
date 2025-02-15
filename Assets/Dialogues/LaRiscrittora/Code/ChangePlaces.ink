@@ -17,66 +17,45 @@
     
     + {are_two_entities_together(PG, FromForestToBusStop)}  [FromForestToBusStop]
             ~ move_entity(PG, BusStop)
-            ~ movementsCounter ++
-            -> characters_speaking ->
-            -> randomizer_png_location ->
-            -> story_time_management_for_PNG->
+            -> on_movement_events ->
                 -> bus_stop
                 
 //Streets to Garden       
     + {are_two_entities_together(PG, FromBusStopToForest)} [FromBusStopToForest]
             ~ move_entity(PG, Forest)
-            ~ movementsCounter ++
-            -> characters_speaking ->
-            -> randomizer_png_location ->
-            -> story_time_management_for_PNG->
+            -> on_movement_events ->
                 -> forest
         
         
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToForest)} [FromGreenhouseMiddlePathToForest]
             ~ move_entity(PG, Forest)
-            ~ movementsCounter ++
-            -> randomizer_png_location ->
-            -> story_time_management_for_PNG->
-            -> characters_speaking ->
+            -> on_movement_events ->
                 -> forest
     
     + {are_two_entities_together(PG, FromLibraryToForest)} [FromLibraryToForest]
             ~ move_entity(PG, Forest)
-            ~ movementsCounter ++
-            -> randomizer_png_location ->
-            -> story_time_management_for_PNG->
-            -> characters_speaking ->
+            -> on_movement_events ->
                 -> forest
     
     
  //Streets to GreenhouseMiddlePath   
     + {are_two_entities_together(PG, FromGreenhouseToGreenhouseMiddlePath)} [FromGreenhouseToGreenhouseMiddlePath]
             ~ move_entity(PG, GreenhouseMiddlePath)
-            ~ movementsCounter ++
-            -> randomizer_png_location ->
-            -> story_time_management_for_PNG->
-            -> characters_speaking ->
+            -> on_movement_events ->
                 -> greenhouse_middle_path
         
     + {are_two_entities_together(PG, FromForestToGreenhouseMiddlePath)} [FromForestToGreenhouseMiddlePath]
             ~ move_entity(PG, GreenhouseMiddlePath)
-            ~ movementsCounter ++
-            -> randomizer_png_location ->
-            -> story_time_management_for_PNG->
-            -> characters_speaking ->
+            -> on_movement_events ->
                 -> greenhouse_middle_path
         
         
 //Streets to Greenhouse
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToGreenhouse)}  [FromGreenhouseMiddlePathToGreenhouse]
             ~ move_entity(PG, Greenhouse)
-            ~ movementsCounter ++
             ~ growing ++
             -> growing_check ->
-            -> randomizer_png_location ->
-            -> story_time_management_for_PNG->
-            -> characters_speaking ->
+            -> on_movement_events ->
                 -> greenhouse
 
 //Streets to Library
@@ -87,10 +66,7 @@
             
             - else:
                 ~ move_entity(PG, Library)
-                ~ movementsCounter ++
-                -> randomizer_png_location ->
-                -> story_time_management_for_PNG->
-                -> characters_speaking ->
+                -> on_movement_events ->
                     -> library
         }
             
@@ -104,10 +80,7 @@
             -> main
         - else:
             ~ move_entity(PG, Nest)
-            ~ movementsCounter ++
-            -> randomizer_png_location ->
-            -> story_time_management_for_PNG->
-            -> characters_speaking ->
+            -> on_movement_events ->
                 -> nest
     }    
     
@@ -122,10 +95,7 @@
             -> main
         - else:
             ~ move_entity(PG, Laboratory)
-            ~ movementsCounter ++
-            -> randomizer_png_location ->
-            -> story_time_management_for_PNG->
-            -> characters_speaking ->
+            -> on_movement_events ->
                 -> laboratory
     }
             

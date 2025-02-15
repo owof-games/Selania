@@ -59,4 +59,29 @@
                             
 }
 
+=== on_movement_events
+//Qui metto tutte quelle funzioni e variazioni che sono richieste a ogni cambio stanza.
 
+//Riduzioni di contatori legati al tempo:
+    ~ firstWritingPause --
+    ~ secondWritingPause --
+    ~ thirdWritingPause --
+    
+//Aumento di contatori:
+    ~ movementsCounter ++
+    
+//Altre funzioni:
+    -> characters_speaking ->
+    -> randomizer_png_location ->
+    -> story_time_management_for_PNG->    
+->->
+
+
+=== characters_speaking
+    {
+        - firstPauseTalking > 0:
+            ~ firstPauseTalking --
+            {debug: Il valore di firstCharEndingDialogue è {firstPauseTalking}}
+    }
+->->
+    

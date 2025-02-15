@@ -96,11 +96,3 @@
     ~ temp entity2_location = entity_location(entity2)
     ~ move_entity(entity1, entity2_location)
     
-=== characters_speaking
-    {
-        - firstPauseTalking > 0:
-            ~ firstPauseTalking --
-            {debug: Il valore di firstCharEndingDialogue è {firstPauseTalking}}
-    }
-->->
-    
