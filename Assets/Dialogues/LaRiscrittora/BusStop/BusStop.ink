@@ -17,16 +17,21 @@
             -> main
 
 -> main
+
 === first_character_notes ===
     ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
     + {are_two_entities_together(FirstCharacterNotes, PG)}[FirstCharacterNotes]
     
         {
-            - one == 0:
+            - not one:
                 -> one
-            - else:
+                
+            - not two && firstWritingPause < 0:
                 -> two
-    
+                
+            - not three && firstWritingPause < 0:
+                -> three
+            
         }
     
     = one
@@ -51,7 +56,7 @@
     {charNameUno}: Spero che lì vada tutto bene.
     {charNameUno}: Alla prossima lettera.
     {charNameUno}: <i>{charNameUno}</i>
-
+            ~ firstWritingPause = firstWritingPauseDuration
         -> main
     
     = two
@@ -84,17 +89,79 @@
     {charNameUno}: E lì invece? Come stanno le tue piante?
     {charNameUno}: Sono arrivate nuove persone interessanti?
     {charNameUno}: A presto, <i>{charNameUno}</i>.
+        ~ firstWritingPause = firstWritingPauseDuration
         -> main
+        
+    = three
+    {charNameUno}: terza lettera
+        ~ firstWritingPause = firstWritingPauseDuration
+    -> main
     
 === second_character_notes ===
     + {are_two_entities_together(SecondCharacterNotes, PG)}[SecondCharacterNotes]
-    Lettere random note da parte della personaggia
-    -> main
+    
+    {
+            - not one:
+                -> one
+                
+            - not two && secondWritingPause < 0:
+                -> two
+                
+            - not three && secondWritingPause < 0:
+                -> three
+            
+        }
+    
+    = one
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    {charNameTwo}: Lettere random note da parte della personaggia
+        ~ secondWritingPause = secondWritingPauseDuration
+        -> main
+    
+    = two
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    {charNameTwo}: seconda lettera
+    ~ secondWritingPause = secondWritingPauseDuration
+        -> main
+    
+    = three
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    {charNameTwo}: terza lettera
+    ~ secondWritingPause = secondWritingPauseDuration
+
+        -> main
     
 === third_character_notes ===
     + {are_two_entities_together(ThirdCharacterNotes, PG)}[ThirdCharacterNotes]
-    Lettere random note da parte della personaggia
-    -> main
+    {
+            - not one:
+                -> one
+                
+            - not two && thirdWritingPause < 0:
+                -> two
+                
+            - not three && thirdWritingPause < 0:
+                -> three
+            
+        }
+        
+    = one
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    {charNameThree}: Lettere random note da parte della personaggia
+        ~ thirdWritingPause = thirdWritingPauseDuration
+        -> main
+    
+    = two
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    {charNameThree}: seconda lettera
+        ~ thirdWritingPause = thirdWritingPauseDuration
+        -> main
+    
+    = three
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    {charNameThree}: terza lettera
+        ~ thirdWritingPause = thirdWritingPauseDuration
+        -> main
     
 === fourth_character_notes ===
     + {are_two_entities_together(FourthCharacterNotes, PG)}[FourthCharacterNotes]

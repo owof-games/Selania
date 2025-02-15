@@ -13,11 +13,17 @@
     VAR firstStoryQuestCount = 0
     VAR firstCharacterSpecialEvent = false
     
-    //Variabile per il countdown per la sua uscita di scena
-    VAR firstCharEndingDialogue = 0
+
     //Variabili per mettere in pausa la conversazione
     VAR firstPauseTalking = 0
     VAR firstCharPauseDurantion = 3
+    
+    //Variabile per il countdown per la sua uscita di scena
+    VAR firstCharEndingDialogue = 0
+    
+    //Variabile per il tempo di attesa tra una lettera e l'altra
+    VAR firstWritingPause = 0
+    VAR firstWritingPauseDuration = 5
     
     //STATI UP: Viola e Giallo.
     //STATI DOWN: Blu.
@@ -34,6 +40,10 @@
     
     VAR secondStory = NotStarted
     VAR secondCharacterSpecialEvent = false
+    
+    
+    VAR secondWritingPause = 0
+    VAR secondWritingPauseDuration = 5
 
 
 //Gestione terza personaggia
@@ -43,7 +53,9 @@
     VAR thirdStory = NotStarted
     VAR thirdCharacterSpecialEvent = false
     
-        
+    VAR thirdWritingPause = 0
+    VAR thirdWritingPauseDuration = 5
+    
     VAR terrore = 0
     VAR abbandono = 0
     VAR rabbia = 0
