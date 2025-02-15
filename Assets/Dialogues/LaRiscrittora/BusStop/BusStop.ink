@@ -132,6 +132,7 @@
         -> main
     
 === third_character_notes ===
+//Forse le sue lettere saranno scritte da una persona cara, vicina.
     + {are_two_entities_together(ThirdCharacterNotes, PG)}[ThirdCharacterNotes]
     {
             - not one:

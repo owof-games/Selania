@@ -249,7 +249,20 @@ VAR delayFourthChar = 20
 
 ->->
 
-//Per il secondo personaggio la cosa che conta è coerenza. Ha bisogno di stabilità. A manoni la logica sarà: tengo conto di un counter delle domande a cui ha risposto la giocatrice e se un determinato valore è >= di counter - x allora ++, se >= counter -x-1 allora +
+//Per il secondo personaggio la cosa che conta è coerenza. Ha bisogno di stabilità. A manoni la logica sarà: tengo conto di un counter delle domande a cui ha risposto la giocatrice e se un determinato valore è >= di counter - x allora ++, se >= counter -x-1 allora +. Probabilmente da bilanciare.
+=== secondAffinityCalc ===
+{
+    - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
+        ~ secondCharacterInkLevel ++
+        ~ secondCharacterInkLevel ++
+            ->->
+    - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2):
+        ~ secondCharacterInkLevel ++
+            ->->     
+}
+
+
+->->
 
 //Settaggio nome quando partiamo con la discussione
 === firstNaming ===
