@@ -2,20 +2,20 @@
 
 VAR currentReceiver = ()
 
-=== contenuti_inventario ===
+=== inventory_contents ===
 + [Inventory]
-    {findedGifts != (): -> inventarietto|->vuoto}
+    {findedGifts != (): -> inventory|-> empty}
 
-    =inventarietto
+    = inventory
     <i>Hai con te {list_with_commas(findedGifts)}.</i>
     -> main
 
-    = vuoto
+    = empty
     <i>L'inventario è vuoto.</i>
     -> main
 
 
-=== gestione_inventario ===
+=== inventory_management ===
 {debug: I doni trovati sono {findedGifts}.}
 Dono...
 /* ---------------------------------

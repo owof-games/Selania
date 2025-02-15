@@ -1,75 +1,75 @@
 //Variabili per la gestione della biblioteca
-LIST libri = libroCeci, libroGabri, libroGreta, libroAnna
-VAR libriLetti = ()
-VAR libriX = (libroCeci, libroGabri, libroAnna)
-VAR libriY = (libroCeci, libroGreta, libroAnna)
-VAR libriZ = (libroGabri, libroGreta)
+LIST books = libroCeci, libroGabri, libroGreta, libroAnna
+VAR readBooks = ()
+VAR XBooks = (libroCeci, libroGabri, libroAnna)
+VAR YBooks = (libroCeci, libroGreta, libroAnna)
+VAR ZBooks = (libroGabri, libroGreta)
     //Libro che verrà proposto
-    VAR libro = ()
+    VAR book = ()
     
     
     
-=== test_libri ===
-+ {libriX != ()}Vorrei un libro x
-    + + {libriX ^ libriZ != ()} Con qualcosa di z
-        ~ libro = LIST_MIN(libriX ^ libriZ)
-        {libro}
-        ~ libriX -= libro
-        ~ libriZ -= libro
-        ~ libriLetti += libro
-        -> da_lista_a_libri
-    + + {libriX ^ libriY!= ()} Con qualcosa di y    
-        ~ libro = LIST_MIN(libriX ^ libriY)
-        {libro}
-        ~ libriX -= libro
-        ~ libriY -= libro
-        ~ libriLetti += libro
-        -> da_lista_a_libri
+=== books_test ===
++ {XBooks != ()}Vorrei un book x
+    + + {XBooks ^ ZBooks != ()} Con qualcosa di z
+        ~ book = LIST_MIN(XBooks ^ ZBooks)
+        {book}
+        ~ XBooks -= book
+        ~ ZBooks -= book
+        ~ readBooks += book
+        -> from_list_to_books
+    + + {XBooks ^ YBooks!= ()} Con qualcosa di y    
+        ~ book = LIST_MIN(XBooks ^ YBooks)
+        {book}
+        ~ XBooks -= book
+        ~ YBooks -= book
+        ~ readBooks += book
+        -> from_list_to_books
     + + No, vorrei qualcosa di diverso!
-        -> test_libri
+        -> books_test
 
-+ {libriY != ()}Vorrei un libro y
-    + + {libriY ^ libriZ != ()} Con qualcosa di z
-        ~ libro = LIST_MIN(libriY ^ libriZ)
-        ~ libriZ -= libro
-        ~ libriY -= libro
-        ~ libriLetti += libro
-        -> da_lista_a_libri
-    + + {libriX ^ libriY != ()} Con qualcosa di x    
-        ~ libro = LIST_MIN(libriX ^ libriY)
-        ~ libriX -= libro
-        ~ libriY -= libro
-        ~ libriLetti += libro
-        -> da_lista_a_libri
++ {YBooks != ()}Vorrei un book y
+    + + {YBooks ^ ZBooks != ()} Con qualcosa di z
+        ~ book = LIST_MIN(YBooks ^ ZBooks)
+        ~ ZBooks -= book
+        ~ YBooks -= book
+        ~ readBooks += book
+        -> from_list_to_books
+    + + {XBooks ^ YBooks != ()} Con qualcosa di x    
+        ~ book = LIST_MIN(XBooks ^ YBooks)
+        ~ XBooks -= book
+        ~ YBooks -= book
+        ~ readBooks += book
+        -> from_list_to_books
     + + No, vorrei qualcosa di diverso!
-        -> test_libri
+        -> books_test
         
 
-+ {libriZ != ()}Vorrei un libro z
-    + + {libriY ^ libriZ != ()} Con qualcosa di y
-        ~ libro = LIST_MIN(libriY ^ libriZ)
-        ~ libriZ -= libro
-        ~ libriY -= libro
-        ~ libriLetti += libro
-        -> da_lista_a_libri
-    + + {libriX ^ libriZ != ()} Con qualcosa di x    
-        ~ libro = LIST_MIN(libriX ^ libriZ)
-        ~ libriX -= libro
-        ~ libriZ -= libro
-        ~ libriLetti += libro
-        -> da_lista_a_libri
++ {ZBooks != ()}Vorrei un book z
+    + + {YBooks ^ ZBooks != ()} Con qualcosa di y
+        ~ book = LIST_MIN(YBooks ^ ZBooks)
+        ~ ZBooks -= book
+        ~ YBooks -= book
+        ~ readBooks += book
+        -> from_list_to_books
+    + + {XBooks ^ ZBooks != ()} Con qualcosa di x    
+        ~ book = LIST_MIN(XBooks ^ ZBooks)
+        ~ XBooks -= book
+        ~ ZBooks -= book
+        ~ readBooks += book
+        -> from_list_to_books
     + + No, vorrei qualcosa di diverso!
-        -> test_libri
+        -> books_test
         
-+ {libriLetti != ()} Vorrei qualcosa che ho già letto
-        -> rilettura
++ {readBooks != ()} Vorrei qualcosa che ho già letto
+        -> rereading
 + Mmm, mi è passata la voglia di leggere
     -> library
 -
 -> DONE
 
-=== da_lista_a_libri ===
-{libro:
+=== from_list_to_books ===
+{book:
     - libroAnna:
         -> libro_anna
     - libroCeci:
@@ -79,25 +79,25 @@ VAR libriZ = (libroGabri, libroGreta)
     - libroGreta:
         -> libro_greta
 
-    - else: Non ho trovato un libro adatto, mi spiace
-    -> test_libri
+    - else: Non ho trovato un book adatto, mi spiace
+    -> books_test
     
 }
 
 
 -> DONE
 
-=== rilettura ===
-    + {libriLetti has libroAnna} Rileggi il racconto di Anna
+=== rereading ===
+    + {readBooks has libroAnna} Rileggi il racconto di Anna
         -> libro_anna
-    + {libriLetti has libroCeci} Rileggi il racconto di Ceci
+    + {readBooks has libroCeci} Rileggi il racconto di Ceci
         ->libro_ceci
-    + {libriLetti has libroGabri} Rileggi il racconto di Gabri
+    + {readBooks has libroGabri} Rileggi il racconto di Gabri
         -> libro_gabri
-    + {libriLetti has libroGreta} Rileggi il racconto di Greta
+    + {readBooks has libroGreta} Rileggi il racconto di Greta
         -> libro_greta
     + Ho cambiato idea, voglio una storia nuova.
-        -> test_libri
+        -> books_test
     -    
 -> library
 

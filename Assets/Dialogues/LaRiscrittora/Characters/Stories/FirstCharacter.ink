@@ -1,5 +1,5 @@
 ~ temp charNameUno = uppercaseTranslator(firstCharacterState)
-=== personaggia_uno ===
+=== first_character ===
     //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
             //Chiacchiera normale
             + {are_two_entities_together(FirstCharacter, PG) && firstStory == Active}[FirstCharacter]
@@ -775,7 +775,7 @@
 <i> Stai per donare qualcosa a {charNameUno}.</i>
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += FirstCharacter
-            -> gestione_inventario -> ink_outcome 
+            -> inventory_management -> ink_outcome 
         + {findedGifts == ()} <i> Il tuo inventario è vuoto.</i>
             ->main
         

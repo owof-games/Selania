@@ -231,7 +231,7 @@
                     }
                     
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    -> test_coltivazioni
+                    -> cultivable_test
                 + + [Mi aggiro per la serra.]    
                     -> main
                     
@@ -279,7 +279,7 @@
                     }
                 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    -> test_coltivazioni
+                    -> cultivable_test
                 + + [Mi aggiro per la serra.]    
                     -> main
                     
@@ -328,7 +328,7 @@
                     }
                 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    -> test_coltivazioni
+                    -> cultivable_test
                 + + [Mi aggiro per la serra.]    
                     -> main
                     
@@ -378,7 +378,7 @@
                     }
                 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    -> test_coltivazioni
+                    -> cultivable_test
                 + + [Mi aggiro per la serra.]    
                     -> main
                     
@@ -423,7 +423,7 @@
                     }
             
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    -> test_coltivazioni
+                    -> cultivable_test
                 + + [Mi aggiro per la serra.]    
                     -> main
                     
@@ -471,7 +471,7 @@
                         Hai ottenuto: <b>Non Ti Scordar di Te.</b>
                     }
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    -> test_coltivazioni
+                    -> cultivable_test
                 + + [Mi aggiro per la serra.]    
                     -> main                    
        
@@ -515,7 +515,7 @@
                         Hai ottenuto: <b>Brina dell'Impossibile</b>
                     }
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    -> test_coltivazioni
+                    -> cultivable_test
                 + + [Mi aggiro per la serra.]    
                     -> main
         + [Ora non me la sento.]

@@ -47,7 +47,7 @@
 
         + {findedGifts != ()} Offro un dono.
             ~ currentReceiver += SecondCharacter
-            -> gestione_inventario -> esito_inchiostro 
+            -> inventory_management -> esito_inchiostro 
         + {findedGifts == ()} <i> Il tuo inventario è vuoto </i>
             ->main
         

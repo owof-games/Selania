@@ -30,7 +30,7 @@
 
 === aiuto_storia_quattro ===
     + {findedGifts != ()} Offro un dono.
-    -> gestione_inventario -> capitolo_uno
+    -> inventory_management -> capitolo_uno
     + ->
     {findedGifts == (): Non parlo senza un dono adeguato! ->main}
     

@@ -43,7 +43,7 @@
     === dono_storia_tre ===
         + {findedGifts != ()} Offro un dono.
             ~ currentReceiver += ThirdCharacter
-            -> gestione_inventario -> esito_inchiostro 
+            -> inventory_management -> esito_inchiostro 
         + {findedGifts == ()} <i> Il tuo inventario è vuoto </i>
             ->main
         
@@ -173,7 +173,7 @@ Storia finita:
 // = internal_inventario
 //     {charNameUno}: Tutto sommato è una cosa così banale, così banale. Eppure questo freddo non se ne vuole andare.
 //         + {findedGifts != ()} [Ho un dono per te, <i>{traduttorePersonaggeMinuscolo(effettivoStatoPersonaggiaUno)}</i>.]
-//             -> gestione_inventario
+//             -> inventory_management
 //         + [Vorrei riascoltare la tua storia, <i>{traduttorePersonaggeMinuscolo(effettivoStatoPersonaggiaUno)}</i>.]
 //             -> intro_storia_uno.intro
 //         + [Mi allontano.]

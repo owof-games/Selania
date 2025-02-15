@@ -11,10 +11,10 @@
 <- move_between_rooms(my_location)
 
 //Inventario
-<- contenuti_inventario
+<- inventory_contents
 
 //Personagge da aiutare
-<-personaggia_uno
+<-first_character
 <-personaggia_due
 <-personaggia_tre
 <-personaggia_quattro

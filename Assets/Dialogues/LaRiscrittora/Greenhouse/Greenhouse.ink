@@ -38,7 +38,7 @@
                 - chosenCultivable != ():
                         -> cure
                 - else:     
-                        -> test_coltivazioni
+                        -> cultivable_test
             }
             	- else:
     	    <i>Al momento non è possibile coltivare nulla.</i>
