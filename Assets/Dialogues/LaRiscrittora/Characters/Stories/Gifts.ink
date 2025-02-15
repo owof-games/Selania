@@ -1,4 +1,3 @@
-
 /* ---------------------------------
 
     Gestione inchiostro
@@ -18,8 +17,6 @@ VAR secondCharacterInkLevel = Empty
 VAR thirdCharacterInkLevel = Empty
 VAR fourthCharacterInkLevel = Empty
 VAR fifthCharacterInkLevel = Empty
-VAR sixthCharacterInkLevel = Empty
-VAR seventhCharacterInkLevel = Empty
 
 
 
@@ -29,8 +26,12 @@ VAR seventhCharacterInkLevel = Empty
 {
     - InkLevel == firstCharacterInkLevel:
         ~ Ink = firstCharacterInkLevel
+    
     - InkLevel == secondCharacterInkLevel:
         ~ Ink = secondCharacterInkLevel
+    
+    - InkLevel == thirdCharacterInkLevel:
+        ~ Ink = thirdCharacterInkLevel        
 }
 
 TODO: a voce del fungo creata, scrivere meglio.
@@ -48,7 +49,12 @@ TODO: a voce del fungo creata, scrivere meglio.
         {
             - InkLevel == firstCharacterInkLevel:
                 ~ firstCharacterSpecialEvent = true
+            - InkLevel == secondCharacterInkLevel:
+                ~ secondCharacterSpecialEvent = true
+            - InkLevel == thirdCharacterInkLevel:
+                ~ thirdCharacterSpecialEvent = true    
         }
+        
     - else:
         <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>
 }
@@ -58,11 +64,14 @@ TODO: a voce del fungo creata, scrivere meglio.
 === function inkTranslator(InkLevel)
 {
     - InkLevel == firstCharacterInkLevel:
-
         ~ Ink = firstCharacterInkLevel
     
     - InkLevel == secondCharacterInkLevel:
         ~ Ink = secondCharacterInkLevel
+
+    - InkLevel == thirdCharacterInkLevel:
+        ~ Ink = thirdCharacterInkLevel
+
 }
 
 {Ink:
