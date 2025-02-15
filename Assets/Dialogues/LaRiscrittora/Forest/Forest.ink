@@ -45,7 +45,7 @@
     
 === talking_fungus
 ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
 ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
 
 {

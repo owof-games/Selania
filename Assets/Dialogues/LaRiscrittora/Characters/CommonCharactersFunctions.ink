@@ -55,7 +55,7 @@
         - secondStory == Active && talk_with_second_character:
             ~ randomizable_characters += SecondCharacter
         
-        - thirdStory == Active && dialogo_personaggia_tre:
+        - thirdStory == Active && talk_with_third_character:
             ~ randomizable_characters += ThirdCharacter
         
         - fourthStory == Active && dialogo_personaggia_quattro:
@@ -261,6 +261,11 @@ VAR delayFourthChar = 20
             ->->     
 }
 
+
+->->
+
+
+=== thirdAffinityCalc ===
 
 ->->
 

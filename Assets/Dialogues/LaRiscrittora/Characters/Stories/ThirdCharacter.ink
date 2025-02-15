@@ -1,135 +1,840 @@
-~ temp charNameTre = uppercaseTranslator(thirdCharacterState)
+=== third_character ===
+~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
 
-=== personaggia_tre ===
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
         + {are_two_entities_together(ThirdCharacter, PG) && thirdStory == Active}[ThirdCharacter]
-            -> dialogo_personaggia_tre
+            -> talk_with_third_character
         
         //Chiacchiera a fine storia
         + {are_two_entities_together(ThirdCharacter, PG) && thirdStory == Ended} [ThirdCharacter]
-            -> personaggia_tre_storia_conclusa
+            -> third_char_story_ended
         + ->
     
         -> DONE
     
 
-=== dialogo_personaggia_tre ===
-//QUI FINISCONO TUTTE LE POSSIBILI CONVERSAZIONI
-- (top)
-    + Dialogo
-        -> top
-    + Dialogo
-        -> top
-    + Lasci il dialogo
+=== talk_with_third_character ===
+~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+
+   {//Se prima chiacchierata
+        - not knowing_third_character.one:
+            -> knowing_third_character.one
+    //Se prima chiacchierata fatta e passato abbastanza tempo dalla pausa prevista        
+        - thirdPauseTalking == 0:
+            -> hub
+    //Altre opzioni        
+        - else:
+            {charNameThree}: {~ Ho bisogno di tempo per me.|Ti spiace tornare tra un po'?|Credo di aver bisogno di silenzio, torna più tardi.}
         -> main
-    //Faccio così per questione di ordine
-       + {not dono_storia_tre.esito_inchiostro} Dono
+    }
+
+= hub
+~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+
+    {charNameThree}: {~ Ero sicura di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicura di star capendo tutto di questo luogo.}
+            + [Ti va di raccontarmi qualcosa di te?]
+                -> knowing_third_character
+                
+    
+            //Se non ho ancora fatto e ho parlato abbastanza con lui
+            + {thirdStoryQuestCount > minStoryQuesTCount && findedGifts != ()} [Ti vorrei donare questa cosa.]
+                    -> third_story_gift
+        
+            //Dono fatto ma non ho avviato la main story
+            + {third_story_gift.ink_outcome && not main_story_third_character} [Ti va di riscrivere la tua storia con me?]
+                    -> third_story_chech_trigger
+    
+            //SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
+            + {third_story_gift.ink_outcome && main_story_third_character} [Riprendiamo quella storia?]
+                -> main_story_third_character
             
-        -> dono_storia_tre
+            + [Lascio il dialogo.]
+                -> main
+            -
+                -> talk_with_third_character
+
+
+
+
+=== knowing_third_character
+~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    //Qui man mano faccio avanzare i temi toccati dalla personaggia
+        {
+            - not one:
+                -> one
+            - not three:
+                -> three
+            - not three:
+                -> three
+            - not four:
+                -> four
+            - not five:
+                -> five
+            - not six:
+                -> six
+            - not seven:
+                -> seven
+            - not eight:
+                -> eight
+            - not nine:
+                -> nine
+            - not ten:
+                -> ten
+            - not eleven:
+                -> eleven
+            - not twelve:
+                -> twelve
+            - else:
+                -> third_character_opinions
+        }
+
+    = one
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
     
-    //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
-    + {dono_storia_tre.esito_inchiostro && not main_story_personaggia_tre} Ti va di affrontare quella cosa?
-            -> storia_tre_chech_trigger
+        //Presentazione.
+        ~ thirdStoryQuestCount ++
+        
+        ???: Non è che hai visto passare di qui una persona?
+            + (threeBlue) [Dammi dettagli più concreti.]
+                    ~ thirdBlue ++
+                
+            + (threeYellow) [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+                    ~ thirdYellow ++
+                
+            + (threeRed) [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+                ~ thirdRed ++
+
+                
+            + (threeGreen) [Se ti senti sola, sono qui ad ascoltarti.]
+                ~ thirdGreen ++
+  
+                
+            + (threePurple) [Tu sei sempre con ləi, ləi è sempre con te.]
+                ~ thirdPurple ++
+ 
+            -
+        ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameThree}.
+        {charNameThree}: No, io sono <b>{charNameThree}</b>.
+        {charNameThree}: Ehi! Non è questo il mio nome.
+        {charNameThree}: <i>{charNameThree}</i>.
+        {charNameThree}: Forse se provo a dirlo al contrario?
+        {charNameThree}: Aicnunir.
+        {charNameThree}: Uh.
+        {charNameThree}: Prova tu. Come ti chiami?
+    	    + {name_choice} [Mi chiamo {name}.]
+    	    + [Il mio nome è...]
+    	        -> name_choice ->
+    	    -
+    	{charNameThree}: E con che pronomi vuoi che ti chiami?
+    	        -> gender ->
+    	{charNameThree}: Grandioso, io uso i femminili.      
+             ~ thirdPauseTalking = thirdCharPauseDurantion
+            -> main
+    = two
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
     
-    //SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
-    + {dono_storia_tre.esito_inchiostro && main_story_personaggia_tre} Riprendiamo quella storia?     -> main_story_personaggia_tre
+        //Presentazione.
+        ~ thirdStoryQuestCount ++
+        
+        {charNameThree}: Non è che hai visto passare di qui una persona?
+            + [Dammi dettagli più concreti.]
+                    ~ thirdBlue ++
+                
+            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+                    ~ thirdYellow ++
+                
+            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+                ~ thirdRed ++
 
-    -
-    -> top
+                
+            + [Se ti senti sola, sono qui ad ascoltarti.]
+                ~ thirdGreen ++
+  
+                
+            + [Tu sei sempre con ləi, ləi è sempre con te.]
+                ~ thirdPurple ++
+ 
+            -
+             ~ thirdPauseTalking = thirdCharPauseDurantion
+            -> main
 
 
-    //QUESTO è LO SPAZIO PER IL DONO
-    === dono_storia_tre ===
-        + {findedGifts != ()} Offro un dono.
+    
+    = three
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    
+        //Presentazione.
+        ~ thirdStoryQuestCount ++
+        
+        {charNameThree}: Non è che hai visto passare di qui una persona?
+            + [Dammi dettagli più concreti.]
+                    ~ thirdBlue ++
+                
+            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+                    ~ thirdYellow ++
+                
+            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+                ~ thirdRed ++
+
+                
+            + [Se ti senti sola, sono qui ad ascoltarti.]
+                ~ thirdGreen ++
+  
+                
+            + [Tu sei sempre con ləi, ləi è sempre con te.]
+                ~ thirdPurple ++
+ 
+            -
+             ~ thirdPauseTalking = thirdCharPauseDurantion
+            -> main
+    
+    
+    
+    
+    = four
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    
+        //Presentazione.
+        ~ thirdStoryQuestCount ++
+        
+        {charNameThree}: Non è che hai visto passare di qui una persona?
+            + [Dammi dettagli più concreti.]
+                    ~ thirdBlue ++
+                
+            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+                    ~ thirdYellow ++
+                
+            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+                ~ thirdRed ++
+
+                
+            + [Se ti senti sola, sono qui ad ascoltarti.]
+                ~ thirdGreen ++
+  
+                
+            + [Tu sei sempre con ləi, ləi è sempre con te.]
+                ~ thirdPurple ++
+ 
+            -
+             ~ thirdPauseTalking = thirdCharPauseDurantion
+            -> main
+    = five
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    
+        //Presentazione.
+        ~ thirdStoryQuestCount ++
+        
+        {charNameThree}: Non è che hai visto passare di qui una persona?
+            + [Dammi dettagli più concreti.]
+                    ~ thirdBlue ++
+                
+            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+                    ~ thirdYellow ++
+                
+            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+                ~ thirdRed ++
+
+                
+            + [Se ti senti sola, sono qui ad ascoltarti.]
+                ~ thirdGreen ++
+  
+                
+            + [Tu sei sempre con ləi, ləi è sempre con te.]
+                ~ thirdPurple ++
+ 
+            -
+             ~ thirdPauseTalking = thirdCharPauseDurantion
+            -> main
+    
+    
+    = six
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    
+        //Presentazione.
+        ~ thirdStoryQuestCount ++
+        
+        {charNameThree}: Non è che hai visto passare di qui una persona?
+            + [Dammi dettagli più concreti.]
+                    ~ thirdBlue ++
+                
+            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+                    ~ thirdYellow ++
+                
+            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+                ~ thirdRed ++
+
+                
+            + [Se ti senti sola, sono qui ad ascoltarti.]
+                ~ thirdGreen ++
+  
+                
+            + [Tu sei sempre con ləi, ləi è sempre con te.]
+                ~ thirdPurple ++
+ 
+            -
+             ~ thirdPauseTalking = thirdCharPauseDurantion
+            -> main
+    = seven
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    
+        //Presentazione.
+        ~ thirdStoryQuestCount ++
+        
+        {charNameThree}: Non è che hai visto passare di qui una persona?
+            + [Dammi dettagli più concreti.]
+                    ~ thirdBlue ++
+                
+            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+                    ~ thirdYellow ++
+                
+            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+                ~ thirdRed ++
+
+                
+            + [Se ti senti sola, sono qui ad ascoltarti.]
+                ~ thirdGreen ++
+  
+                
+            + [Tu sei sempre con ləi, ləi è sempre con te.]
+                ~ thirdPurple ++
+ 
+            -
+             ~ thirdPauseTalking = thirdCharPauseDurantion
+            -> main        
+            
+            
+    = eight
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    
+        //Presentazione.
+        ~ thirdStoryQuestCount ++
+        
+        {charNameThree}: Non è che hai visto passare di qui una persona?
+            + [Dammi dettagli più concreti.]
+                    ~ thirdBlue ++
+                
+            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+                    ~ thirdYellow ++
+                
+            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+                ~ thirdRed ++
+
+                
+            + [Se ti senti sola, sono qui ad ascoltarti.]
+                ~ thirdGreen ++
+  
+                
+            + [Tu sei sempre con ləi, ləi è sempre con te.]
+                ~ thirdPurple ++
+ 
+            -
+             ~ thirdPauseTalking = thirdCharPauseDurantion
+            -> main    
+    
+    
+    = nine
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    
+        //Presentazione.
+        ~ thirdStoryQuestCount ++
+        
+        {charNameThree}: Non è che hai visto passare di qui una persona?
+            + [Dammi dettagli più concreti.]
+                    ~ thirdBlue ++
+                
+            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+                    ~ thirdYellow ++
+                
+            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+                ~ thirdRed ++
+
+                
+            + [Se ti senti sola, sono qui ad ascoltarti.]
+                ~ thirdGreen ++
+  
+                
+            + [Tu sei sempre con ləi, ləi è sempre con te.]
+                ~ thirdPurple ++
+ 
+            -
+             ~ thirdPauseTalking = thirdCharPauseDurantion
+            -> main    
+    
+    = ten
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    
+        //Presentazione.
+        ~ thirdStoryQuestCount ++
+        
+        {charNameThree}: Non è che hai visto passare di qui una persona?
+            + [Dammi dettagli più concreti.]
+                    ~ thirdBlue ++
+                
+            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+                    ~ thirdYellow ++
+                
+            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+                ~ thirdRed ++
+
+                
+            + [Se ti senti sola, sono qui ad ascoltarti.]
+                ~ thirdGreen ++
+  
+                
+            + [Tu sei sempre con ləi, ləi è sempre con te.]
+                ~ thirdPurple ++
+ 
+            -
+             ~ thirdPauseTalking = thirdCharPauseDurantion
+            -> main    
+    
+    = eleven
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    
+        //Presentazione.
+        ~ thirdStoryQuestCount ++
+        
+        {charNameThree}: Non è che hai visto passare di qui una persona?
+            + [Dammi dettagli più concreti.]
+                    ~ thirdBlue ++
+                
+            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+                    ~ thirdYellow ++
+                
+            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+                ~ thirdRed ++
+
+                
+            + [Se ti senti sola, sono qui ad ascoltarti.]
+                ~ thirdGreen ++
+  
+                
+            + [Tu sei sempre con ləi, ləi è sempre con te.]
+                ~ thirdPurple ++
+ 
+            -
+             ~ thirdPauseTalking = thirdCharPauseDurantion
+            -> main    
+    = twelve
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    
+        //Presentazione.
+        ~ thirdStoryQuestCount ++
+        
+        {charNameThree}: Non è che hai visto passare di qui una persona?
+            + [Dammi dettagli più concreti.]
+                    ~ thirdBlue ++
+                
+            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+                    ~ thirdYellow ++
+                
+            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+                ~ thirdRed ++
+
+                
+            + [Se ti senti sola, sono qui ad ascoltarti.]
+                ~ thirdGreen ++
+  
+                
+            + [Tu sei sempre con ləi, ləi è sempre con te.]
+                ~ thirdPurple ++
+ 
+            -
+             ~ thirdPauseTalking = thirdCharPauseDurantion
+            -> main            
+            
+            
+
+
+
+        
+=== third_character_opinions
+~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
+    {charNameThree}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
+            -> main
+
+
+=== third_story_gift ===
+~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+<i> Stai per donare qualcosa a {charNameThree}.</i>
+        + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += ThirdCharacter
-            -> inventory_management -> esito_inchiostro 
-        + {findedGifts == ()} <i> Il tuo inventario è vuoto </i>
+            -> inventory_management -> ink_outcome 
+        + {findedGifts == ()} <i> Il tuo inventario è vuoto.</i>
             ->main
         
     
-        = esito_inchiostro    
-            Dopo il tuo dono, la quantità di inchiostro a disposizione è {thirdCharacterInkLevel}.
-                 ~ inkLevel(thirdCharacterInkLevel)
-                 -> dialogo_personaggia_tre.top
+        = ink_outcome    
+            <i>Dopo il tuo dono {inkTranslator(thirdCharacterInkLevel)}.
+                 -> talk_with_third_character
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
-    === storia_tre_chech_trigger
-        {
-        - loneliness == false:
-            -> trigger_solitudine
-        - else:
-            -> main_story_personaggia_tre
-        }
+=== third_story_chech_trigger
+      ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+      //In questa storia non ci sono trigger, lascio la struttura perché non si sa mai.
+      
+        //{
+        //- loneliness == false:
+        //    -> loneliness_trigger
+        //- else:
+        //    -> main_story_first_character
+        //}
+            -> main_story_third_character
         
-        = trigger_solitudine
+        = loneliness_trigger
         Info
             * [Voglio comunque approfondire la storia di questa personaggia.]
-                -> main_story_personaggia_tre
+                -> main_story_third_character
             * [Salto.]
             //FUTURA SOLUZIONE A QUESTA SITUAZIONE
                 -> main
         -
         -> END
 
-=== main_story_personaggia_tre
-    /* ---------------------------------
-
-   Qui avrò una funzione che mi manda sugli step utili in base a dove ho abbandonato l'ultima conversazione. Es
-   {
-   - not step_uno:
-        -> step_uno
-   - not step_tre:
-        -> step_tre
-        etc
-   }
-    
-    E quindi poi avrò.
-    = step_uno
-        Affronto la storia
-    = step_tre
-        Interventi
-        etc
- ----------------------------------*/
-Storia finita:
-        ~ thirdStory = Ended
-        //Resetto il counter degli spostamenti. In questo modo da qui posso iniziare a tener traccia dello spostamento della personaggia. Alcune potrebbero anche salutarci e bona.
-        ~ movementsCounter = 0
--> main
+=== main_story_third_character
+~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+//Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
+    {
+        - not confession:
+            -> confession
+        - not one:
+            -> statement
+        - else:
+            -> one
+    }
+    = confession
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+        {charNameThree}: Ho realizzato una cosa, una cosa su noi due.
+            -> thirdAffinityCalc ->
+        {
+        - firstPurple && firstYellow > firstBlue: {charNameThree}: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
+        <i>{charNameThree} vede {name} come una persona amica e fidata.</i>
         
+        -firstPurple or firstYellow > firstBlue:{charNameThree}: Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
+        
+        <i>{charNameThree} si trova bene con {name}.</i>
+        
+        - firstPurple && firstYellow < firstBlue: {charNameThree}: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
+        
+        <i>{charNameThree} non si è sentita capita da {name}.</i>
+        
+        
+        - else: A volte siamo sullo stesso brano, altre no. E non ho ancora capito chi tra noi stia ignorando l'altra parte.
+        
+        <i>{charNameThree} non riesce a capire che rapporto sta costruendo con {name}.</i>
+        
+        }
+        {charNameThree}: E credo di aver capito perché il mio nome
+            
+            + [Credo di sapere come aiutarti.]
+                -> statement
+            + [Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.]
+                -> main
 
 
-=== personaggia_tre_storia_conclusa
+    = statement
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+        <i>A seguito del rapporto che {name} ha creato con {charNameThree} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità.|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
+        //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
+            ~ inkLevel(thirdCharacterInkLevel)
+        + [Voglio cominciare la riscrittura.]
+            -> thirdNaming -> 
+            -> one
+        + [Preferisco prendermi del tempo.]
+            -> main
+
+    = one
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    {name}: Prima hai detto che hai il terrore di fare una scelta.
+        
+        + [Qui hai accettato il tuo nuovo nome.]
+            {name}: E ammettere una propria paura, una scelta enorme.
+                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }            
+        
+        + [Eppure hai deciso di costruire una famiglia con l3 tu3 amic3.]
+  
+        
+        + [Dimenticando che per finire gli studi hai lottato per anni.]
+     
+            
+        + [Ma hai più volte accettato il rischio di suonare sul]
+                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }
+        + [Però da che sei qui hai esplorato tutto questo luogo.]
+           
+                {
+                	- firstCharacterPossibleStates hasnt Rinuncia:
+    		            ~ firstCharacterPossibleStates --
+    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }
+            
+        -
+ 
+        {
+        - thirdCharacterInkLevel == Empty:
+            -> ending
+        - else: 
+            -> three
+        }        
+        
+    = two
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+
+        + [Con Talco puoi litigare, eppure siete legatissim3.]
+            {name}: Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
+            {name}: Il Talco che hai raccontato si arrabbierebbe di più se tu facessi una scelta per te pensando a ləi.
+            
+                    
+        + [La paura di tradire è un'altra faccia dell'ego.]
+                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }
+    
+            
+        + [Il tuo cuore si preoccupa molto di loro, e poco di te.]
+   
+            
+        + [Forse accadrà, ma non è un tuo problema.]
+ 
+                {
+                	- firstCharacterPossibleStates hasnt Rinuncia:
+    		            ~ firstCharacterPossibleStates --
+    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }
+                
+        + [Tradiamo la fiducia rompendo le regole a nostro vantaggio.]
+ 
+                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }
+                    
+        -
+        {
+        - thirdCharacterInkLevel == Low:
+            -> ending
+        - else: 
+            -> three
+        }
+        
+    = three
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+            
+        + [Se non tiri nessun dado, non c'è storia da far avanzare.]
+         
+                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }
+        
+        + [Ma ogni persona ha immaginato sorti diverse per Jonah.]
+                {
+                	- firstCharacterPossibleStates hasnt Rinuncia:
+    		            ~ firstCharacterPossibleStates --
+    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }
+                
+        + [Eppure la prima cosa che hai visto qui sono otto sentieri.]
+ 
+                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }
+            
+        
+        + [La storia di Jonah è un successo.]
+
+                
+        + [Ragioni come se fossi sola se dovessi cadere.]
+     
+        -
+        {
+        - firstCharacterInkLevel == Normal:
+            -> ending
+        - else: 
+            -> four
+        }
+    
+    = four
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+
+        + [Giocare è bello perché puoi sempre rinunciare a farlo.]
+
+                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }            
+         
+        
+        + [Quando Anna ha rinunciato all'ex, ha scoperto la sicurezza.]
+
+        
+        + [Un infinito più piccolo resta comunque infinito.]
+
+                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }    
+            
+        + [Rinunciando a cercare Talco ti sei tutelata.]
+ 
+                {
+                	- firstCharacterPossibleStates hasnt Rinuncia:
+    		            ~ firstCharacterPossibleStates --
+    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }            
+        
+        + [C'è più coraggio nella rinuncia che nel compromesso.]
+ 
+            
+        -
+        
+        -> ending
+
+    = ending
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+     Per questo ti dico...
+        + {thirdRed > 0} [Prendi una strada e se non ti piace cambiala!]
+        
+        + {thirdPurple > 0} [Dai alla tua vita uno scopo più grande.]
+        
+        + {thirdYellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
+                
+        + {thirdGreen > 0} [Non deluderai i tuoi amici: loro saranno sempre con te.]
+                
+        + {thirdBlue > 0} [Questa non è la tua strada. Succede. Ora puoi cambiare.]
+                
+        
+                
+        -     
+        
+    {charNameThree}: Grazie, {name}.
+    {charNameThree}: Mentre parlavi mi è nata una nuova canzone in testa.
+    {charNameThree}: Qualcosa di fresco, di pronto a cambiare.
+    {charNameThree}: La canzone del mio vero nome.
+
+        {
+            - firstCharacterPossibleStates has Rinuncia:
+                {charNameThree}: Che <b>resterà Rinuncia</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
+            
+            - firstCharacterPossibleStates has Triangolo:
+                {charNameThree}: E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
+                    ~ thirdCharacterState = ()
+                    ~ thirdCharacterState += Triangolo
+            
+            - firstCharacterPossibleStates has RagazzaOrchestra:
+                {charNameThree}: Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper rinunciare sono diventata l'ornitorinco della musica.
+                    ~ thirdCharacterState = ()
+                    ~ thirdCharacterState += RagazzaOrchestra
+            
+            - firstCharacterPossibleStates has FlautoDolce:
+                {charNameThree}: Il mio nome è <b>Flauto Dolce</b>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
+                    ~ thirdCharacterState = ()
+                    ~ thirdCharacterState += FlautoDolce                
+            
+            - firstCharacterPossibleStates has Ocarina:
+                {charNameThree}: Mi chiamerò <b>Ocarina</b>: perché il suo suono è gioco e festa.
+                    ~ thirdCharacterState = ()
+                    ~ thirdCharacterState += Ocarina
+            
+            - firstCharacterPossibleStates has Violino:
+                {charNameThree}: Io sono <b>Violino</b>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
+                    ~ thirdCharacterState = ()
+                    ~ thirdCharacterState += Violino
+        }
+        
+            
+        
+        {
+        - thirdCharacterSpecialEvent == true:
+            -> secret_ending
+        - else:
+            -> exit
+        }
+    
+    
+    = secret_ending
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+        {charNameThree}: C'è una cosa che vorrei dirti, {name}.
+        {charNameThree}: Riguarda Il mentore.
+
+            ~ thirdStory = Ended
+            ~ movementsCounter = 0
+            ~ PG_advace_management(thirdStory)
+                -> main
+            
+    = exit
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+        {charNameThree}: Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
+            ~ thirdStory = Ended
+            ~ movementsCounter = 0
+            ~ PG_advace_management(thirdStory)
+        -> main  
+    
+=== third_char_story_ended
+~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
-~ temp dialogue = 0
-{
-    - dialogue < 10:
-        -> top
-    - else:
-        -> goodbye
-}
 
-    - (top)
-        + opzione
-            ~ dialogue ++
-                -> top
-        + opzione
-            ~ dialogue ++
-                -> top
-        + opzione
-            ~ dialogue ++
-                -> top
-        + esci dalla conversazione
-            -> main
-        -
-    -> main
+    {
+        - thirdCharEndingDialogue < 4:
+            -> top
+        - else:
+            -> goodbye
+    }
     
-    = goodbye
-    Ciao ciao
-        ~ move_entity(ThirdCharacter, Safekeeping)
-        ~ move_entity(ThirdCharacterNotes, BusStop)
-    -> main
+        - (top)
+        {charNameThree}: {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me.|Sono sicura di aver visto un'altra persona alla fermata del bus, ma quando ho cercato di raggiungerla è scomparsa.|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
+                ~ thirdCharEndingDialogue ++
+        -> main
+        
+        = goodbye
+        ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+        {charNameThree}: {name}, per me è arrivato il momento di tornare a casa.
+        {firstCharacterPossibleStates hasnt Rinuncia: {charNameThree}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
+        {firstCharacterPossibleStates hasnt Rinuncia: {charNameThree}: Grazie per quello che hai fatto, davvero.}
+        {firstCharacterPossibleStates has Rinuncia: {charNameThree}: Vedremo cosa mi accadrà.}
+            ~ move_entity(ThirdCharacter, Safekeeping)
+            //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
+            {
+                - thirdCharacterPossibleStates hasnt Rinuncia:
+                    ~ move_entity(ThirdCharacterNotes, BusStop)
+            }    
+            
+        -> main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 
 
@@ -217,9 +922,9 @@ Storia finita:
 //                 {charNameUno}: O solo perché alla fin fine sono sempre le solite cose noiose che accadono <b>a tutti.</b>
 //                 ~ abbandono ++
 //             -
-//             -> secondo_blocco
+//             -> thirdo_blocco
 
-//     = secondo_blocco
+//     = thirdo_blocco
 //             * Prima hai detto che ci sono cose a cui non volevi pensare.
 //                     {charNameUno}: Sì.
 
@@ -360,9 +1065,9 @@ Storia finita:
 //                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
 //                                 -> top1
 //                         }
-//                         {storia_uno.secondo_blocco.lavoro2: {nome}: Hai detto che il piacere è sparito, che a volte vorresti litigare solo perché qualcosa possa cambiare.}                        
-//                         {storia_uno.secondo_blocco.testa: {nome}: Ti manca il respiro, ti arrabbi, e non sai come affrontare questa cosa.}
-//                         {storia_uno.secondo_blocco.male: {nome}: Non ti perdoni. Ti descrivi come un fallimento sociale.}
+//                         {storia_uno.thirdo_blocco.lavoro2: {nome}: Hai detto che il piacere è sparito, che a volte vorresti litigare solo perché qualcosa possa cambiare.}                        
+//                         {storia_uno.thirdo_blocco.testa: {nome}: Ti manca il respiro, ti arrabbi, e non sai come affrontare questa cosa.}
+//                         {storia_uno.thirdo_blocco.male: {nome}: Non ti perdoni. Ti descrivi come un fallimento sociale.}
 //                         {nome}: Il vuoto è una ferita che continua a farti male, ma che non sai come riparare.
 //                         {charNameUno}: Dimmi qualcosa che non so.
 //                             ~ statoInchiostroPersonaggiaUno --
@@ -373,9 +1078,9 @@ Storia finita:
 //                             - false: <i>Non hai abbastanza inchiostro per questa scelta</i>
 //                                 -> top1
 //                         }
-//                         {storia_uno.secondo_blocco.amici2: {nome}: Ascoltare e condividere le "para" sono cose di cui abbiamo tutte bisogno.}                        
-//                         {storia_uno.secondo_blocco.capita: {nome}: È vero che molte delle cose che proviamo sono comuni, ed è questo il bello: rende più facile la comprensione.}
-//                         {storia_uno.secondo_blocco.sentimenti: {nome}: Hai detto che sei ignorabile, dimenticabile. Ma non hai mai detto di star meglio senza le altre persone.}
+//                         {storia_uno.thirdo_blocco.amici2: {nome}: Ascoltare e condividere le "para" sono cose di cui abbiamo tutte bisogno.}                        
+//                         {storia_uno.thirdo_blocco.capita: {nome}: È vero che molte delle cose che proviamo sono comuni, ed è questo il bello: rende più facile la comprensione.}
+//                         {storia_uno.thirdo_blocco.sentimenti: {nome}: Hai detto che sei ignorabile, dimenticabile. Ma non hai mai detto di star meglio senza le altre persone.}
 //                         {nome}: Il vuoto è la tua fame di socialità, la tua voglia di connetterti, di unirti alle altre persone.
 //                         {charNameUno}: No, questa cosa mi farebbe solo del male.
 //                         {charNameUno}: Perché presto o tardi tutti se ne andranno.
@@ -388,9 +1093,9 @@ Storia finita:
 //                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
 //                                 -> top1
 //                         }
-//                         {storia_uno.secondo_blocco.racconto: {nome}: Non è vero che se racconti ciò che hai in testa, diventa vero.}
-//                         {storia_uno.secondo_blocco.vuoto2: {nome}: A scuola, coi genitori, a lavoro: sono situazioni che possono diventare davvero pesanti.}
-//                         {storia_uno.secondo_blocco.verità: {nome}: Nel mondo in cui viviamo, fatto di numeri e bilanci, è normale pensare che se qualcuno ci aiuta, allora siamo in debito.}
+//                         {storia_uno.thirdo_blocco.racconto: {nome}: Non è vero che se racconti ciò che hai in testa, diventa vero.}
+//                         {storia_uno.thirdo_blocco.vuoto2: {nome}: A scuola, coi genitori, a lavoro: sono situazioni che possono diventare davvero pesanti.}
+//                         {storia_uno.thirdo_blocco.verità: {nome}: Nel mondo in cui viviamo, fatto di numeri e bilanci, è normale pensare che se qualcuno ci aiuta, allora siamo in debito.}
 //                         {nome}: Il vuoto è un segnale, non è un problema da risolvere.
 //                         {charNameUno}: ...
 //                             ~ statoInchiostroPersonaggiaUno --
@@ -419,9 +1124,9 @@ Storia finita:
 //                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
 //                                 -> top2
 //                         }
-//                         {storia_uno.secondo_blocco.lavoro2: {nome}: Iniziare a riscoprire il piacere.}                        
-//                         {storia_uno.secondo_blocco.testa: {nome}: Smetterla di trattare il vuoto come un nemico.}
-//                         {storia_uno.secondo_blocco.male: {nome}: Concerderti di essere un lamentone, un frignone.}
+//                         {storia_uno.thirdo_blocco.lavoro2: {nome}: Iniziare a riscoprire il piacere.}                        
+//                         {storia_uno.thirdo_blocco.testa: {nome}: Smetterla di trattare il vuoto come un nemico.}
+//                         {storia_uno.thirdo_blocco.male: {nome}: Concerderti di essere un lamentone, un frignone.}
 //                         {nome}: Se non ti fermi e non capisci cosa provi, non ha senso avanzare.
 //                         {nome}: Non ha senso lavorare.
 //                         {nome}: E prima o poi il vuoto, la rabbia, troveranno modi per farsi notare.
@@ -435,9 +1140,9 @@ Storia finita:
 //                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
 //                                 -> top2
 //                         }
-//                         {storia_uno.secondo_blocco.amici2: {nome}: Dici di essere assente: è un modo per difenderti dalla paura, ma è anche il modo migliore per far sì che davvero prima o poi le persone si allontanino.}               
-//                         {storia_uno.secondo_blocco.capita: {nome}: Tutte veniamo ferite da cose "banali", ma che non lo sono davvero: ci feriscono per il nostro passato, per la nostra storia.}
-//                         {storia_uno.secondo_blocco.sentimenti: {nome}: Mettersi nella posizione di essere "dimenticabile" non cancella il dolore che possono provare loro, nella tua assenza.}
+//                         {storia_uno.thirdo_blocco.amici2: {nome}: Dici di essere assente: è un modo per difenderti dalla paura, ma è anche il modo migliore per far sì che davvero prima o poi le persone si allontanino.}               
+//                         {storia_uno.thirdo_blocco.capita: {nome}: Tutte veniamo ferite da cose "banali", ma che non lo sono davvero: ci feriscono per il nostro passato, per la nostra storia.}
+//                         {storia_uno.thirdo_blocco.sentimenti: {nome}: Mettersi nella posizione di essere "dimenticabile" non cancella il dolore che possono provare loro, nella tua assenza.}
 //                         {nome}: È come quella cosa, quella roba della profezia che si autoavvera.
 //                         {nome}: Cerchi così tanto di non venire abbandonato, che alla fine fai di tutto perché le altre persone se ne vadano.
 //                         {charNameUno}: Eppure tu sei ancora qui.
@@ -451,9 +1156,9 @@ Storia finita:
 //                             - false: <i>Non hai abbastanza inchiostro per questa scelta.</i>
 //                                 -> top2
 //                         }
-//                         {storia_uno.secondo_blocco.racconto: {nome}: Raccontare ciò che hai in testa, condividerlo, ti permette di smontarlo.}
-//                         {storia_uno.secondo_blocco.vuoto2: {nome}: Quando sei in compagnia e la situazione è difficile, può essere utile avere una persona alleata al tuo fianco.}
-//                         {storia_uno.secondo_blocco.verità: {nome}: È importante ricordarti che le persone che ti vogliono bene ti aiutano perché gli va, non perché devono.}
+//                         {storia_uno.thirdo_blocco.racconto: {nome}: Raccontare ciò che hai in testa, condividerlo, ti permette di smontarlo.}
+//                         {storia_uno.thirdo_blocco.vuoto2: {nome}: Quando sei in compagnia e la situazione è difficile, può essere utile avere una persona alleata al tuo fianco.}
+//                         {storia_uno.thirdo_blocco.verità: {nome}: È importante ricordarti che le persone che ti vogliono bene ti aiutano perché gli va, non perché devono.}
 //                         {nome}: Non siamo fatti per affrontare il mondo da soli, e va bene così.
 //                         {charNameUno}: ...
 //                             ~ statoInchiostroPersonaggiaUno --

@@ -1,5 +1,5 @@
 === second_character ===
-~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
@@ -15,7 +15,7 @@
     
 
 === talk_with_second_character ===
-~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
 
    {//Se prima chiacchierata
         - not knowing_second_character.one:
@@ -25,14 +25,14 @@
             -> hub
     //Altre opzioni        
         - else:
-            {charNameDue}: {~ Ho bisogno di tempo per me.|Ti spiace tornare tra un po'?|Credo di aver bisogno di silenzio, torna più tardi.}
+            {charNameTwo}: {~ Ho bisogno di tempo per me.|Ti spiace tornare tra un po'?|Credo di aver bisogno di silenzio, torna più tardi.}
         -> main
     }
 
 = hub
-~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
 
-    {charNameDue}: {~ Ero sicura di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicura di star capendo tutto di questo luogo.}
+    {charNameTwo}: {~ Ero sicura di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicura di star capendo tutto di questo luogo.}
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_second_character
                 
@@ -58,7 +58,7 @@
 
 
 === knowing_second_character
-~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {
             - not one:
@@ -90,7 +90,7 @@
         }
 
     = one
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     
         //Presentazione.
         ~ secondStoryQuestCount ++
@@ -114,30 +114,30 @@
                 ~ secondPurple ++
  
             -
-        ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameOne}.
-        {charNameDue}: No, io sono <b>{charNameOne}</b>.
-        {charNameDue}: Ehi! Non è questo il mio nome.
-        {charNameDue}: <i>{charNameOne}</i>.
-        {charNameDue}: Forse se provo a dirlo al contrario?
-        {charNameDue}: Aicnunir.
-        {charNameDue}: Uh.
-        {charNameDue}: Prova tu. Come ti chiami?
+        ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameTwo}.
+        {charNameTwo}: No, io sono <b>{charNameTwo}</b>.
+        {charNameTwo}: Ehi! Non è questo il mio nome.
+        {charNameTwo}: <i>{charNameTwo}</i>.
+        {charNameTwo}: Forse se provo a dirlo al contrario?
+        {charNameTwo}: Aicnunir.
+        {charNameTwo}: Uh.
+        {charNameTwo}: Prova tu. Come ti chiami?
     	    + {name_choice} [Mi chiamo {name}.]
     	    + [Il mio nome è...]
     	        -> name_choice ->
     	    -
-    	{charNameDue}: E con che pronomi vuoi che ti chiami?
+    	{charNameTwo}: E con che pronomi vuoi che ti chiami?
     	        -> gender ->
-    	{charNameDue}: Grandioso, io uso i femminili.      
+    	{charNameTwo}: Grandioso, io uso i femminili.      
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
     = two
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     
         //Presentazione.
         ~ secondStoryQuestCount ++
         
-        {charNameDue}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
@@ -162,12 +162,12 @@
 
     
     = three
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     
         //Presentazione.
         ~ secondStoryQuestCount ++
         
-        {charNameDue}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
@@ -193,12 +193,12 @@
     
     
     = four
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     
         //Presentazione.
         ~ secondStoryQuestCount ++
         
-        {charNameDue}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
@@ -220,12 +220,12 @@
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
     = five
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     
         //Presentazione.
         ~ secondStoryQuestCount ++
         
-        {charNameDue}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
@@ -249,12 +249,12 @@
     
     
     = six
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     
         //Presentazione.
         ~ secondStoryQuestCount ++
         
-        {charNameDue}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
@@ -276,12 +276,12 @@
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
     = seven
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     
         //Presentazione.
         ~ secondStoryQuestCount ++
         
-        {charNameDue}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
@@ -305,12 +305,12 @@
             
             
     = eight
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     
         //Presentazione.
         ~ secondStoryQuestCount ++
         
-        {charNameDue}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
@@ -334,12 +334,12 @@
     
     
     = nine
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     
         //Presentazione.
         ~ secondStoryQuestCount ++
         
-        {charNameDue}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
@@ -362,12 +362,12 @@
             -> main    
     
     = ten
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     
         //Presentazione.
         ~ secondStoryQuestCount ++
         
-        {charNameDue}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
@@ -390,12 +390,12 @@
             -> main    
     
     = eleven
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     
         //Presentazione.
         ~ secondStoryQuestCount ++
         
-        {charNameDue}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
@@ -417,12 +417,12 @@
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main    
     = twelve
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     
         //Presentazione.
         ~ secondStoryQuestCount ++
         
-        {charNameDue}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
@@ -450,15 +450,15 @@
 
         
 === second_character_opinions
-~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
-    {charNameDue}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
+    {charNameTwo}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
             -> main
 
 
 === second_story_gift ===
-~ temp charNameDue = uppercaseTranslator(secondCharacterState)
-<i> Stai per donare qualcosa a {charNameDue}.</i>
+~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+<i> Stai per donare qualcosa a {charNameTwo}.</i>
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += SecondCharacter
             -> inventory_management -> ink_outcome 
@@ -472,7 +472,7 @@
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
 === second_story_chech_trigger
-      ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+      ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
       //In questa storia non ci sono trigger, lascio la struttura perché non si sa mai.
       
         //{
@@ -494,7 +494,7 @@
         -> END
 
 === main_story_second_character
-~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
     {
         - not confession:
@@ -505,28 +505,28 @@
             -> one
     }
     = confession
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
-        {charNameDue}: Ho realizzato una cosa, una cosa su noi due.
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        {charNameTwo}: Ho realizzato una cosa, una cosa su noi due.
             -> secondAffinityCalc ->
         {
-        - firstPurple && firstYellow > firstBlue: {charNameDue}: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
-        <i>{charNameOne} vede {name} come una persona amica e fidata.</i>
+        - firstPurple && firstYellow > firstBlue: {charNameTwo}: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
+        <i>{charNameTwo} vede {name} come una persona amica e fidata.</i>
         
-        -firstPurple or firstYellow > firstBlue:{charNameDue}: Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
+        -firstPurple or firstYellow > firstBlue:{charNameTwo}: Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
         
-        <i>{charNameOne} si trova bene con {name}.</i>
+        <i>{charNameTwo} si trova bene con {name}.</i>
         
-        - firstPurple && firstYellow < firstBlue: {charNameDue}: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
+        - firstPurple && firstYellow < firstBlue: {charNameTwo}: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
         
-        <i>{charNameOne} non si è sentita capita da {name}.</i>
+        <i>{charNameTwo} non si è sentita capita da {name}.</i>
         
         
         - else: A volte siamo sullo stesso brano, altre no. E non ho ancora capito chi tra noi stia ignorando l'altra parte.
         
-        <i>{charNameOne} non riesce a capire che rapporto sta costruendo con {name}.</i>
+        <i>{charNameTwo} non riesce a capire che rapporto sta costruendo con {name}.</i>
         
         }
-        {charNameDue}: E credo di aver capito perché il mio nome
+        {charNameTwo}: E credo di aver capito perché il mio nome
             
             + [Credo di sapere come aiutarti.]
                 -> statement
@@ -535,8 +535,8 @@
 
 
     = statement
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
-        <i>A seguito del rapporto che {name} ha creato con {charNameDue} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità.|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità.|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(secondCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]
@@ -546,7 +546,7 @@
             -> main
 
     = one
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     {name}: Prima hai detto che hai il terrore di fare una scelta.
         
         + [Qui hai accettato il tuo nuovo nome.]
@@ -587,7 +587,7 @@
         }        
         
     = two
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
 
         + [Con Talco puoi litigare, eppure siete legatissim3.]
             {name}: Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
@@ -630,7 +630,7 @@
         }
         
     = three
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
             
         + [Se non tiri nessun dado, non c'è storia da far avanzare.]
          
@@ -670,7 +670,7 @@
         }
     
     = four
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
 
         + [Giocare è bello perché puoi sempre rinunciare a farlo.]
 
@@ -708,7 +708,7 @@
         -> ending
 
     = ending
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
      Per questo ti dico...
         + {secondRed > 0} [Prendi una strada e se non ti piace cambiala!]
         
@@ -724,37 +724,37 @@
                 
         -     
         
-    {charNameDue}: Grazie, {name}.
-    {charNameDue}: Mentre parlavi mi è nata una nuova canzone in testa.
-    {charNameDue}: Qualcosa di fresco, di pronto a cambiare.
-    {charNameDue}: La canzone del mio vero nome.
+    {charNameTwo}: Grazie, {name}.
+    {charNameTwo}: Mentre parlavi mi è nata una nuova canzone in testa.
+    {charNameTwo}: Qualcosa di fresco, di pronto a cambiare.
+    {charNameTwo}: La canzone del mio vero nome.
 
         {
             - firstCharacterPossibleStates has Rinuncia:
-                {charNameDue}: Che <b>resterà Rinuncia</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
+                {charNameTwo}: Che <b>resterà Rinuncia</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
             
             - firstCharacterPossibleStates has Triangolo:
-                {charNameDue}: E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
+                {charNameTwo}: E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += Triangolo
             
             - firstCharacterPossibleStates has RagazzaOrchestra:
-                {charNameDue}: Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper rinunciare sono diventata l'ornitorinco della musica.
+                {charNameTwo}: Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper rinunciare sono diventata l'ornitorinco della musica.
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += RagazzaOrchestra
             
             - firstCharacterPossibleStates has FlautoDolce:
-                {charNameDue}: Il mio nome è <b>Flauto Dolce</b>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
+                {charNameTwo}: Il mio nome è <b>Flauto Dolce</b>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += FlautoDolce                
             
             - firstCharacterPossibleStates has Ocarina:
-                {charNameDue}: Mi chiamerò <b>Ocarina</b>: perché il suo suono è gioco e festa.
+                {charNameTwo}: Mi chiamerò <b>Ocarina</b>: perché il suo suono è gioco e festa.
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += Ocarina
             
             - firstCharacterPossibleStates has Violino:
-                {charNameDue}: Io sono <b>Violino</b>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
+                {charNameTwo}: Io sono <b>Violino</b>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += Violino
         }
@@ -770,9 +770,9 @@
     
     
     = secret_ending
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
-        {charNameDue}: C'è una cosa che vorrei dirti, {name}.
-        {charNameDue}: Riguarda Il mentore.
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        {charNameTwo}: C'è una cosa che vorrei dirti, {name}.
+        {charNameTwo}: Riguarda Il mentore.
 
             ~ secondStory = Ended
             ~ movementsCounter = 0
@@ -780,15 +780,15 @@
                 -> main
             
     = exit
-    ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
-        {charNameDue}: Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        {charNameTwo}: Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
             ~ secondStory = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(secondStory)
         -> main  
     
 === second_char_story_ended
-~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
 
@@ -800,16 +800,16 @@
     }
     
         - (top)
-        {charNameDue}: {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me.|Sono sicura di aver visto un'altra persona alla fermata del bus, ma quando ho cercato di raggiungerla è scomparsa.|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
+        {charNameTwo}: {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me.|Sono sicura di aver visto un'altra persona alla fermata del bus, ma quando ho cercato di raggiungerla è scomparsa.|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
                 ~ secondCharEndingDialogue ++
         -> main
         
         = goodbye
-        ~ temp charNameDue = uppercaseTranslator(secondCharacterState)
-        {charNameDue}: {name}, per me è arrivato il momento di tornare a casa.
-        {firstCharacterPossibleStates hasnt Rinuncia: {charNameDue}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
-        {firstCharacterPossibleStates hasnt Rinuncia: {charNameDue}: Grazie per quello che hai fatto, davvero.}
-        {firstCharacterPossibleStates has Rinuncia: {charNameDue}: Vedremo cosa mi accadrà.}
+        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        {charNameTwo}: {name}, per me è arrivato il momento di tornare a casa.
+        {firstCharacterPossibleStates hasnt Rinuncia: {charNameTwo}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
+        {firstCharacterPossibleStates hasnt Rinuncia: {charNameTwo}: Grazie per quello che hai fatto, davvero.}
+        {firstCharacterPossibleStates has Rinuncia: {charNameTwo}: Vedremo cosa mi accadrà.}
             ~ move_entity(SecondCharacter, Safekeeping)
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             {

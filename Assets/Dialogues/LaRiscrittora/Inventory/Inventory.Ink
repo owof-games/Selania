@@ -47,7 +47,7 @@ Dono...
             ~ thirdCharacterInkLevel --
             Spettro tre è disgustato dal tuo dono.
             ~ currentReceiver = ()    
-            -> dono_storia_tre.esito_inchiostro
+            -> third_story_gift.ink_outcome
     }
     -> main
 
@@ -75,7 +75,7 @@ Dono...
         ~ thirdCharacterInkLevel ++
        <i>{uppercaseTranslator(thirdCharacterState)} è confuso dal dono.</i>
        ~ currentReceiver = ()
-        -> dono_storia_tre.esito_inchiostro
+        -> third_story_gift.ink_outcome
     }
    -> main    
 
@@ -99,7 +99,7 @@ Dono...
         ~ thirdCharacterInkLevel ++
         {uppercaseTranslator(thirdCharacterState)} apprezza mediamente il tuo dono.
         ~ currentReceiver = ()
-        -> dono_storia_tre.esito_inchiostro
+        -> third_story_gift.ink_outcome
     }
    -> main
 
@@ -130,7 +130,7 @@ Dono...
         <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
          ~ thirdCharacterSpecialEvent = true
          ~ currentReceiver = ()
-        -> dono_storia_tre.esito_inchiostro
+        -> third_story_gift.ink_outcome
     }
     -> main
     
@@ -163,7 +163,7 @@ Dono...
         <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
          ~ thirdCharacterSpecialEvent = true
          ~ currentReceiver = ()
-        -> dono_storia_tre.esito_inchiostro
+        -> third_story_gift.ink_outcome
     }
     -> main
 
@@ -192,7 +192,7 @@ Dono...
         <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
          ~ thirdCharacterSpecialEvent = true
          ~ currentReceiver = ()
-        -> dono_storia_tre.esito_inchiostro
+        -> third_story_gift.ink_outcome
     }
     -> main
 
@@ -224,7 +224,7 @@ Dono...
         <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
          ~ thirdCharacterSpecialEvent = true
          ~ currentReceiver = ()
-        -> dono_storia_tre.esito_inchiostro
+        -> third_story_gift.ink_outcome
     }
     -> main
     
@@ -256,7 +256,7 @@ Dono...
         <i>{uppercaseTranslator(thirdCharacterState)} se la avvolge attorno al corpo.
         <i>Sembra sollevata.</i>
         ~ currentReceiver = ()
-        -> dono_storia_tre.esito_inchiostro
+        -> third_story_gift.ink_outcome
     }
 
  
@@ -280,7 +280,7 @@ Dono...
         ~ thirdCharacterInkLevel --
         <i>{uppercaseTranslator(thirdCharacterState)} ti guarda con orrore, e lascia che il vaso cada a terra, frantumandosi.</i>
         ~ currentReceiver = ()
-        -> dono_storia_tre.esito_inchiostro
+        -> third_story_gift.ink_outcome
     }
     
     
