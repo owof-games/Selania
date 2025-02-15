@@ -15,7 +15,7 @@
 
 //Personagge da aiutare
 <-first_character
-<-personaggia_due
+<-second_character
 <-personaggia_tre
 <-personaggia_quattro
 <-personaggia_cinque

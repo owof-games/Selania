@@ -4,26 +4,26 @@
 
 
 === speaking_with_mentor
-~ temp charName = uppercaseTranslator(fifthCharacterState)
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 -> mentor_storylets ->
-    {charName}: Cosa vuoi sapere {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?
+    {charNameFive}: Cosa vuoi sapere {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?
     - (top)
         //+ [Voglio conoscere meglio il mentore]
         + [Qualcosa non mi è chiaro.]
             -> support
         + (voices){pre_test && not voices}[Perché c'è una voce che mi racconta le cose?]
-            {charName}: Voce?
+            {charNameFive}: Voce?
             {name}: Sì. Ad esempio mi descrive le cose della serra.
             {name}: O i luoghi in cui entro.
-            {charName}: Molto spesso chi si occupa di riscrivere la storie di altre persone ha una forte empatia.
-            {charName}: Vedrai che è il tuo modo di capire questo luogo.
-            {charName}: Un intuito latente che ora è più forte.
+            {charNameFive}: Molto spesso chi si occupa di riscrivere la storie di altre persone ha una forte empatia.
+            {charNameFive}: Vedrai che è il tuo modo di capire questo luogo.
+            {charNameFive}: Un intuito latente che ora è più forte.
                 -> top
         + (infoImpo){firstCharacterInkLevel has High && not infoImpo} [Cosa significa "la personaggia ti darà una informazione importante"?]
-            {charName}: E dove l'hai sentita questa cosa?
+            {charNameFive}: E dove l'hai sentita questa cosa?
             {name}: Quando stavo per fare le ultime domande alla persona, {voices: la|una} voce mi ha detto "Hai tre goccie di inchiostro a disposizione. Potrai fare quattro interventi, e la personaggia ti darà una informazione importante."
-            {not voices: {charName}: Per la voce sarà la stanchezza, questo lavoro è faticoso.}
-            {charName}: Comunque non ha senso questa cosa, {name}.
+            {not voices: {charNameFive}: Per la voce sarà la stanchezza, questo lavoro è faticoso.}
+            {charNameFive}: Comunque non ha senso questa cosa, {name}.
                 -> top
         + [Abbandono la conversazione.]
             -> main
@@ -32,8 +32,8 @@
 
 
 === support
-~ temp charName = uppercaseTranslator(fifthCharacterState)
-    {charName}: Come posso aiutarti?
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    {charNameFive}: Come posso aiutarti?
     - (top)
         + {gifts_and_ink}[Mi ripeteresti cosa devo fare?]
             -> to_do

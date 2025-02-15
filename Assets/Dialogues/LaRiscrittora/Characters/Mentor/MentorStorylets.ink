@@ -1,6 +1,7 @@
 === mentor_storylets ===
-~ temp charName = uppercaseTranslator(fifthCharacterState)
-~ temp charNameUno = uppercaseTranslator(firstCharacterState)
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+
 {
 //Introduzioni
 
@@ -9,10 +10,10 @@
     - gifts_and_ink == 0:
         {
             - not talk_with_first_character:
-                {charName}: Hai provato a parlare con quella persona?
+                {charNameFive}: Hai provato a parlare con quella persona?
                 ->->
             - talk_with_first_character:
-                {charName}: Sembra che quella persona ti abbia raccontato qualcosa di sè!
+                {charNameFive}: Sembra che quella persona ti abbia raccontato qualcosa di sè!
                 -> gifts_and_ink
         }
                 
@@ -23,10 +24,10 @@
                 -> questions
             - else:
             {
-                - firstStoryQuestCount >= minStoryQuesTCount: {charName}: Hai fatto il tuo dono?
+                - firstStoryQuestCount >= minStoryQuesTCount: {charNameFive}: Hai fatto il tuo dono?
                   ->->
                 - else:
-                    {charName}: Quando conoscerai meglio {charNameUno} potrai donarle qualcosa.
+                    {charNameFive}: Quando conoscerai meglio {charNameOne} potrai donarle qualcosa.
                       ->->
             }
         }
@@ -36,7 +37,7 @@
             - firstStory == Ended:
                 -> first_character_feedback
             - else:
-                {charName}: Prenditi il tuo tempo, ma ricordati che presto o tardi dovrai aiutare quella persona a trovare il suo nuovo nome.
+                {charNameFive}: Prenditi il tuo tempo, ma ricordati che presto o tardi dovrai aiutare quella persona a trovare il suo nuovo nome.
                 ->->
 
         }
@@ -69,40 +70,41 @@
 
 // STORYLETS PRESENTAZIONE DEI LUOGHI
 === first_greenhouse_visit
-~ temp charName = uppercaseTranslator(fifthCharacterState)
-    {charName}: Hai trovato la serra!
-    {charName}: Qui puoi coltivare cose molto diverse tra loro.
-    {charName}: Tutte quelle cose che tendiamo a ignorare ma che sono fondamentali per la vita.
-    {charName}: Ad esempio: sapevi che i funghi sono il punto di contatto tra vita e morte?
-    {charName}: Trasformano la materia inorganica e in decomposizione in sostanze fondamentali per i viventi.
-    {charName}: Senza funghi la vita stessa sarebbe impensabile.
-    {charName}: E senza la serra, ogni riscrittura sarebbe più difficile.
-    {charName}: Lasciati coinvolgere dalle sue suggestioni, e quando quello che hai coltivato sarà cresciuto, potresti trovare qualcosa di utile per le altre persone.
-    {charName}: E per te.
-    {charName}: Riscrivere è un lavoro faticoso, e per questo è importante che ogni {pronouns has him: riscrittore|{pronouns has her: riscrittora|riscrittorə}} abbia dei momenti per prendersi cura di sé.
-    {charName}: Tornaci spesso: momento dopo momento quello che hai piantato sarà via via più rigoglioso.
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+
+    {charNameFive}: Hai trovato la serra!
+    {charNameFive}: Qui puoi coltivare cose molto diverse tra loro.
+    {charNameFive}: Tutte quelle cose che tendiamo a ignorare ma che sono fondamentali per la vita.
+    {charNameFive}: Ad esempio: sapevi che i funghi sono il punto di contatto tra vita e morte?
+    {charNameFive}: Trasformano la materia inorganica e in decomposizione in sostanze fondamentali per i viventi.
+    {charNameFive}: Senza funghi la vita stessa sarebbe impensabile.
+    {charNameFive}: E senza la serra, ogni riscrittura sarebbe più difficile.
+    {charNameFive}: Lasciati coinvolgere dalle sue suggestioni, e quando quello che hai coltivato sarà cresciuto, potresti trovare qualcosa di utile per le altre persone.
+    {charNameFive}: E per te.
+    {charNameFive}: Riscrivere è un lavoro faticoso, e per questo è importante che ogni {pronouns has him: riscrittore|{pronouns has her: riscrittora|riscrittorə}} abbia dei momenti per prendersi cura di sé.
+    {charNameFive}: Tornaci spesso: momento dopo momento quello che hai piantato sarà via via più rigoglioso.
         -> main
 
 === first_bus_stop_visit
-~ temp charName = uppercaseTranslator(fifthCharacterState)
-    {charName}: Questa è la fermata del bus.
-    {charName}: È un posto di passaggio: è da qui che arrivano e vanno le persone che cercano il tuo aiuto.
-    {charName}: Ed è da qui che potrai andare e tornare quando vorrai.
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    {charNameFive}: Questa è la fermata del bus.
+    {charNameFive}: È un posto di passaggio: è da qui che arrivano e vanno le persone che cercano il tuo aiuto.
+    {charNameFive}: Ed è da qui che potrai andare e tornare quando vorrai.
         -> main
 
 === first_nest_visit
-~ temp charName = uppercaseTranslator(fifthCharacterState)
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 
     -> main
 
 
 === first_library_visit
-~ temp charName = uppercaseTranslator(fifthCharacterState)
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 
     -> main
 
 
 === first_laboratory_visit
-~ temp charName = uppercaseTranslator(fifthCharacterState)
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 
     -> main

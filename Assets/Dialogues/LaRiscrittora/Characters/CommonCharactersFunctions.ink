@@ -52,7 +52,7 @@
         - firstStory == Active && talk_with_first_character:
             ~ randomizable_characters += FirstCharacter
         
-        - secondStory == Active && dialogo_personaggia_due:
+        - secondStory == Active && talk_with_second_character:
             ~ randomizable_characters += SecondCharacter
         
         - thirdStory == Active && dialogo_personaggia_tre:
@@ -293,4 +293,12 @@ VAR delayFourthChar = 20
                 
     }
 
-->->        
+->->
+
+=== secondNaming ==
+
+->->
+
+=== thirdNaming ===
+
+->->

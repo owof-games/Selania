@@ -44,7 +44,10 @@
     -> main
     
 === talking_fungus
-~ temp charNameUno = uppercaseTranslator(firstCharacterState)
+~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+~ temp charNameDue = uppercaseTranslator(secondCharacterState)
+~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+
 {
     - not first_story_ended_check:
         -> first_story_ended_check
@@ -53,7 +56,7 @@
 }
 
     = first_story_ended_check
-    <i>Osserva {name} e si chiede cosa provi dopo aver aiutato {charNameUno}.</i>
+    <i>Osserva {name} e si chiede cosa provi dopo aver aiutato {charNameOne}.</i>
         + [Scelta verde.]
             ~ playerGreen ++
         + [Scelta rossa.]
