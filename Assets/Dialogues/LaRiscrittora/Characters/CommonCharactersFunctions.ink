@@ -19,7 +19,7 @@
 //First tier: tier iniziale.
     VAR firstTier = false
 //Second tier. Con la fine della prima storia.
-    VAR secondTier = true
+    VAR secondTier = false
 //Third Tier. Con la fine della seconda storia.
     VAR thirdTier = false
 //Fourth Tier. Con la fine della terza storia.

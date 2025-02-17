@@ -28,6 +28,7 @@ VAR aboutSelfLove = (Val)
 
 === book_test_intro ===
         + {readStories != ()} [Voglio rileggere qualcosa.]
+        La tua libreria contiene {number_translator(readStories)} {libro_libri(readStories)}.
             -> reread
             
         + [Vorrei una nuova storia casuale.]
@@ -45,7 +46,7 @@ VAR aboutSelfLove = (Val)
 === storyRandom ===
 //Questo è il più facile: recupero un titolo randomico tra i libri non letti.
     ~ book = LIST_RANDOM(unreadStories)
-    ->from_list_to_books
+    -> refresh_book_lists ->from_list_to_books
 
 
 
@@ -53,19 +54,27 @@ VAR aboutSelfLove = (Val)
 
 
 === storyQuestions ===
-//Una volta selezionati i temi, sostanzialmente si farà la stessa cosa per ogni tema. Solo l'ultima voce è diversa.
-//Opzione extra: visto che uso [storia about qualcosa] posso randomizzare il contenuto lì dentro rimanendo comunque coerente [es random amore|relazioni] così da dare sempre senso di varietà. Da vedere se funziona o se si bara.
-//Extra Extra: usare termini della classificazione libraria (vedi Tales of a librarian di Tori amos.
 
-    + {shortStories != ()} [Un racconto brevissimo.]
-        ~ readingDuration += Short
-    + {averageStories != ()} [Una storia più lunga.]
-        ~ readingDuration += Average
-    + {longStories != ()} [Qualcosa che richieda qualche minuto.]
-        ~ readingDuration += Long
-    -
-    -> about_love
+
+    = step_one
+        + {shortStories != ()} [Un racconto brevissimo.]
+            ~ readingDuration += Short
+        + {averageStories != ()} [Una storia più lunga.]
+            ~ readingDuration += Average
+        + {longStories != ()} [Qualcosa che richieda qualche minuto.]
+            ~ readingDuration += Long
+        -
+        -> shuffle
         
+    
+    = shuffle
+        {shuffle:
+            - {aboutLove != (): -> about_love| -> shuffle}
+            - {aboutRage != (): -> about_rage| -> shuffle}
+            - {aboutBody != (): -> about_body| -> shuffle}
+        }
+    
+    
     
     = about_love
         + {readingDuration has Short && shortStories^ aboutLove != ()} [Che parli d'amore.]
@@ -81,11 +90,16 @@ VAR aboutSelfLove = (Val)
             -> refresh_book_lists -> from_list_to_books
         
         //Qui vale per ogni scelta: se effettivamente posso scegliere quel tema, posso decidere di andare comunque avanti. Se invece quel tema è vuoto nella intersezione con la lunghezza della storia selezionata, passo avanti.
+        TODO: come fare in modo che non venga proposto questo tasto se non ci sono altri temi disponibili?
         + {(readingDuration has Short && shortStories^ aboutLove != ()) or (readingDuration has Average && averageStories^ aboutLove != ()) or (readingDuration has Long && longStories^ aboutLove != ())} [No, vorrei un altro tema.]
-                -> about_rage
+                -> shuffle
+        
+        + {(readingDuration has Short && shortStories^ aboutLove != ()) or (readingDuration has Average && averageStories^ aboutLove != ()) or (readingDuration has Long && longStories^ aboutLove != ())} [Non ho più voglia di leggere.]
+                ~ readingDuration = ()
+                -> book_test_intro      
         
         + {(readingDuration has Short && shortStories^ aboutLove == ()) or (readingDuration has Average && averageStories^ aboutLove == ()) or (readingDuration has Long && longStories^ aboutLove == ())}
-            -> about_rage
+            -> shuffle
         
     = about_rage        
             
@@ -103,10 +117,15 @@ VAR aboutSelfLove = (Val)
         
         
         + {(readingDuration has Short && shortStories^ aboutRage != ()) or (readingDuration has Average && averageStories^ aboutRage != ()) or (readingDuration has Long && longStories^ aboutRage != ())}[No, vorrei un altro tema.]
-                -> about_body
+                -> shuffle
+                
+                
+        + {(readingDuration has Short && shortStories^ aboutRage != ()) or (readingDuration has Average && averageStories^ aboutRage != ()) or (readingDuration has Long && longStories^ aboutRage != ())} [Non ho più voglia di leggere.]
+                ~ readingDuration = ()
+                -> book_test_intro           
         
         + {(readingDuration has Short && shortStories^ aboutRage == ()) or (readingDuration has Average && averageStories^ aboutRage == ()) or (readingDuration has Long && longStories^ aboutRage == ())}
-            -> about_body           
+                -> shuffle          
             
             
     = about_body     
@@ -123,11 +142,16 @@ VAR aboutSelfLove = (Val)
             -> refresh_book_lists -> from_list_to_books            
         
         //Scelte di uscita se ho rifiutato tutte le opzioni precedenti.
-        + [Voglio riprovare uno dei temi precedenti.]
-            -> about_love
-        + [Non ho più voglia di leggere.]
-            ~ readingDuration = ()
-            -> book_test_intro
+        + {(readingDuration has Short && shortStories^ aboutBody != ()) or (readingDuration has Average && averageStories^ aboutBody != ()) or (readingDuration has Long && longStories^ aboutBody != ())}[No, vorrei un altro tema.]
+                -> shuffle
+                
+                
+        + {(readingDuration has Short && shortStories^ aboutBody != ()) or (readingDuration has Average && averageStories^ aboutBody != ()) or (readingDuration has Long && longStories^ aboutBody != ())} [Non ho più voglia di leggere.]
+                ~ readingDuration = ()
+                -> book_test_intro           
+        
+        + {(readingDuration has Short && shortStories^ aboutBody == ()) or (readingDuration has Average && averageStories^ aboutBody == ()) or (readingDuration has Long && longStories^ aboutBody == ())}
+                -> shuffle 
         
 ->->
 
@@ -184,6 +208,8 @@ VAR aboutSelfLove = (Val)
 -> DONE
 
 === reread ===
+
+
 {shuffle:
     - {readStories has Val: -> title_val| ->reread}
     - {readStories has Francesco: -> title_fra| -> reread}
@@ -197,7 +223,7 @@ VAR aboutSelfLove = (Val)
     = title_val
         + [Rileggo il racconto di Val.]
                 -> libro_val
-        + [Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro        
@@ -205,7 +231,7 @@ VAR aboutSelfLove = (Val)
     = title_leti
         + [Rileggo il racconto di Leti.]
                 -> libro_leti
-        + [Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
@@ -213,7 +239,7 @@ VAR aboutSelfLove = (Val)
     = title_fra
         + [Rileggo il racconto di Francesco.]
                 -> libro_francesco
-        + [Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
@@ -221,7 +247,7 @@ VAR aboutSelfLove = (Val)
     = title_ceci
         + [Rileggo il racconto di Ceci.]
                 -> libro_ceci
-        + [Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
@@ -229,7 +255,7 @@ VAR aboutSelfLove = (Val)
     = title_gabri
         + [Rileggo il racconto di Gabri.]
                 -> libro_gabri
-        + [Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
@@ -237,7 +263,7 @@ VAR aboutSelfLove = (Val)
     = title_mario
         + [Rileggo il racconto di Mario.]
                 -> libro_mario
-        + [Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
@@ -245,7 +271,7 @@ VAR aboutSelfLove = (Val)
     = title_maura
         + [Rileggo il racconto di Maura.]
                 -> libro_maura
-        + [Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
@@ -253,3 +279,20 @@ VAR aboutSelfLove = (Val)
 
 
 ->->
+
+=== function number_translator(list)
+{
+    - LIST_COUNT(list) == 0: zero
+    - LIST_COUNT(list) == 1: un
+    - LIST_COUNT(list) == 2: due
+    - LIST_COUNT(list) == 3: tre
+    - LIST_COUNT(list) == 4: quattro
+    - LIST_COUNT(list) == 5: cinque
+    - LIST_COUNT(list) == 6: sei
+    - LIST_COUNT(list) == 7: sette
+    
+}
+
+
+=== function libro_libri(list)
+    {LIST_COUNT(list) == 1:racconto|racconti}

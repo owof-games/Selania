@@ -29,6 +29,9 @@
 <- bench
 <- the_fungus
 
+//Elementi della libreria
+<- reading_place
+
 //Elementi della fermata del bus
 <- starting_note
 <- first_character_notes
