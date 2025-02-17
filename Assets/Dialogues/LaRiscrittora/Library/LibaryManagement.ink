@@ -185,20 +185,13 @@ VAR aboutSelfLove = (Val)
 
 === reread ===
 {shuffle:
-    - {readStories has Val} 
-        -> title_val
-    - {readStories has Francesco}
-        -> title_fra
-    - {readStories has Ceci}
-        -> title_ceci
-    - {readStories has Gabri}
-        -> title_gabri
-    - {readStories has Mario}
-        -> title_mario
-    - {readStories has Maura}
-        -> title_maura
-    - {readStories has Leti}
-        -> title_leti
+    - {readStories has Val: -> title_val| ->reread}
+    - {readStories has Francesco: -> title_fra| -> reread}
+    - {readStories has Ceci: -> title_ceci| -> reread}
+    - {readStories has Gabri: -> title_gabri| -> reread}
+    - {readStories has Mario: -> title_mario| -> reread}
+    - {readStories has Maura: -> title_maura| -> reread}
+    - {readStories has Leti: -> title_leti| -> reread}
 }
 
     = title_val
