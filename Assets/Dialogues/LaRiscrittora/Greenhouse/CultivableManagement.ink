@@ -1,6 +1,9 @@
 //VARIABILI PER LA GESTIONE DELLA CRESCITA DEI COLTIVABILI
 LIST growStep = notStarted, stepZero, stepOne, stepTwo, stepThree
 
+//QUESTA LISTA LA USO PER GESTIRE LA PESCATA O MENO DEI COLTIVABILI
+VAR backupCultivable = (LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
+
 VAR statoCantoDelleCompagne = notStarted
 VAR statoLicheneDegliAbissi = notStarted
 VAR statoMuschioDelleAmanti = notStarted
@@ -26,8 +29,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
     //Esplosione: le cose cambiano di botto
 VAR pianteCancellazione =(LicheneDegliAbissi,LaSpazzata, BaccaDellaAddolorata)
 
-//QUESTA LISTA LA USO PER GESTIRE LA PESCATA O MENO DEI COLTIVABILI
-VAR backupCultivable = (LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
+
 
     //Pianta che verrà proposta. La uso anche per tracking dello stato delle piante.
     VAR chosenCultivable = ()
