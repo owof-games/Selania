@@ -25,6 +25,8 @@ VAR alcoholism = true
 VAR abuses = true
 VAR mourning = true
 VAR loneliness = true
+VAR dysphoria = true
+VAR sex = true
 
 /* ---------------------------------
 

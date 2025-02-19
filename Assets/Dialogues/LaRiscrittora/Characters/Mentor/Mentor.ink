@@ -4,28 +4,37 @@
 
 
 === speaking_with_mentor
+~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+
 -> mentor_storylets ->
-    {charNameFive}: Cosa vuoi sapere {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?
+    {charNameFive}: Come posso esserti utile, {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?
     - (top)
         //+ [Voglio conoscere meglio il mentore]
         + [Qualcosa non mi è chiaro.]
             -> support
-        + (voices){pre_test && not voices}[Perché c'è una voce che mi racconta le cose?]
+        * (voices){pre_test && not voices}[C'è una voce che mi racconta cose.]
             {charNameFive}: Voce?
-            {name}: Sì. Ad esempio mi descrive le cose della serra.
+            {name}: Sì.
+            {name}: Ad esempio mi descrive le piante della serra.
             {name}: O i luoghi in cui entro.
-            {charNameFive}: Molto spesso chi si occupa di riscrivere la storie di altre persone ha una forte empatia.
-            {charNameFive}: Vedrai che è il tuo modo di capire questo luogo.
+            {charNameFive}: Riscrivere la storie di altre persone richiede una forte empatia.
+            {charNameFive}: Sicuramente quella voce è il tuo modo di capire questo luogo.
             {charNameFive}: Un intuito latente che ora è più forte.
+            {charNameFive}: Meglio della stanchezza dell'essere mentore, fidati.
                 -> top
-        + (infoImpo){firstCharacterInkLevel has High && not infoImpo} [Cosa significa "la personaggia ti darà una informazione importante"?]
-            {charNameFive}: E dove l'hai sentita questa cosa?
-            {name}: Quando stavo per fare le ultime domande alla persona, {voices: la|una} voce mi ha detto "Hai tre goccie di inchiostro a disposizione. Potrai fare quattro interventi, e la personaggia ti darà una informazione importante."
-            {not voices: {charNameFive}: Per la voce sarà la stanchezza, questo lavoro è faticoso.}
-            {charNameFive}: Comunque non ha senso questa cosa, {name}.
+                
+        * (infoImpo){firstCharacterInkLevel has High && not infoImpo} [Cosa significa "la personaggia ti darà una informazione importante"?]
+            {charNameFive}: Dove l'hai sentita questa cosa, stellina?
+            {name}: Quando stavo per fare le ultime domande a {charNameOne}, {voices: la|una} voce mi ha detto quanto inchiostro avevo e che avrei ricevuto una informazione importante.
+            {not voices: {charNameFive}: Per la voce sarà la stanchezza, questo lavoro è faticoso.|{charNameFive}: Come ti dicevo, vedrai che è solo la tua empatia che parla.}
+            {charNameFive}: Comunque ogni cosa qui è importante, {name}.
+            {charNameFive}: Soprattutto se ti aiuta a raggiungere il tuo obiettivo.
                 -> top
-        + [Abbandono la conversazione.]
+        + [Nulla, scusa.]
             -> main
         -
     -> top
@@ -37,7 +46,7 @@
     - (top)
         + {gifts_and_ink}[Mi ripeteresti cosa devo fare?]
             -> to_do
-        + [Mi diresti a cosa servono i vari luoghi?]
+        + [Ho una domanda su un luogo.]
             -> tutorial
         + [Vorrei cambiare il mio nome.]
             -> name_choice ->

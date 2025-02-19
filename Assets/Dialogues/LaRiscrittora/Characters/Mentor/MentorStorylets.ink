@@ -1,6 +1,10 @@
 === mentor_storylets ===
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+
 
 {
 //Introduzioni
@@ -10,10 +14,10 @@
     - gifts_and_ink == 0:
         {
             - not talk_with_first_character:
-                {charNameFive}: Hai provato a parlare con quella persona?
+                {charNameFive}: Hai parlato con {charNameOne}?
                 ->->
             - talk_with_first_character:
-                {charNameFive}: Sembra che quella persona ti abbia raccontato qualcosa di sè!
+                {charNameFive}: Sembra che {charNameOne} ti abbia raccontato qualcosa di sè!
                 -> gifts_and_ink
         }
                 
@@ -24,10 +28,10 @@
                 -> questions
             - else:
             {
-                - firstStoryQuestCount >= minStoryQuesTCount: {charNameFive}: Hai fatto il tuo dono?
+                - firstStoryQuestCount >= minStoryQuesTCount: {charNameFive}: Hai fatto il tuo dono a {charNameOne}?
                   ->->
                 - else:
-                    {charNameFive}: Quando conoscerai meglio {charNameOne} potrai donarle qualcosa.
+                    {charNameFive}: Continua a conoscere {charNameOne}, così potrai farle il dono.
                       ->->
             }
         }
@@ -37,7 +41,7 @@
             - firstStory == Ended:
                 -> first_character_feedback
             - else:
-                {charNameFive}: Prenditi il tuo tempo, ma ricordati che presto o tardi dovrai aiutare quella persona a trovare il suo nuovo nome.
+                {charNameFive}: Prenditi il tuo tempo, ma ricordati che presto o tardi dovrai aiutare {charNameOne} a trovare il suo nuovo nome.
                 ->->
 
         }
