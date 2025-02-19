@@ -134,7 +134,7 @@
             + [Mi stai chiedendo di lavorare senza darmi un soldo.]
                 {charNameFive}: Non è un lavoro.
                 {charNameFive}: E qui non c'è denaro.
-                {charNameFive}: Ma è colpa mia, sto dando troppe cose per scontato.
+                {charNameFive}: Ma è colpa mia, sto dando troppe cose per scontate.
                     ~ fifthRed ++
                     
             + [Quindi devo creare una relazione con queste persone?]
@@ -160,7 +160,7 @@
                     
             + [Con l'inchiostro ci posso disegnare?]
                 {charNameFive}: Apprezzo la tua creatività, {name}.
-                {charNameFive}: Ma tu sei {pronouns has him: un riscrittore|{pronouns has her: una riscrittora|unə riscrittorə}}, non {pronouns has him: un disegnatore|{pronouns has her: una disegnatrice|unə disegnatricə}}
+                {charNameFive}: Ma tu sei {pronouns has him: un riscrittore|{pronouns has her: una riscrittora|unə riscrittorə}}, non {pronouns has him: un disegnatore|{pronouns has her: una disegnatrice|unə disegnatricə}}.
                     ~ fifthYellow ++
                     
             + [Solo le persone care ci fanno vedere in modo diverso.]
@@ -197,22 +197,21 @@
     ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     
-        {firstCharacterInkLevel == Empty or firstCharacterInkLevel == Low: {charNameFive}: Non ti demoralizzare, capita a chiunque di non dare il massimo al primo colpo.}
-        {firstCharacterInkLevel == Normal: {charNameFive}: Bel colpo! Ti sei {pronouns has him: guadagnato|{pronouns has her: guadagnata|guadagnatə}} subito una bella dose di inchiostro!}
-        {firstCharacterInkLevel == High: {charNameFive}: Beh, hai dato alla persona il suo dono preferito! Sei già {pronouns has him: pronto|{pronouns has her: pronta|prontə}} per questo incarico!}
-        {charNameFive}: Ora: a cosa serve l'inchiostro?
+        {firstCharacterInkLevel == Empty or firstCharacterInkLevel == Low: {charNameFive}: Non hai ottenuto molto inchiostro. Ma come si dice: se {pronouns has him: l'alunno|{pronouns has her: la alunna|l'alunnə}}} sbaglia, la colpa è del maestro.
+        {firstCharacterInkLevel == Normal: {charNameFive}: Bel colpo! Ti sei {pronouns has him: guadagnato|{pronouns has her: guadagnata|guadagnatə}} subito una bella dose di inchiostro! Avessi fatto meglio il mio lavoro, sarebbe stato il massimo!}
+        {firstCharacterInkLevel == High: {charNameFive}: {name}, hai dato alla persona il suo dono preferito! Riempi questo cuore di orgoglio!}
+        {charNameFive}: E adesso, l'ultima lezione: a cosa serve l'inchiostro?
         {charNameFive}: Sostanzialmente più alto è il valore di inchiostro, più <b>interventi</b> puoi fare.
-        {charNameFive}: Un intervento ti è sempre garantito, per provare a cambiare le cose, ma gli altri te li devi meritare.
         {charNameFive}: Gli interventi sono domande o commenti che puoi fare su cose diverse che preoccupano la persona.
-        {charNameFive}: Più interventi hai a disposizione, più puoi convincere la persona a vedere le cose diversamente.
+        {charNameFive}: Un intervento ti è sempre garantito, per provare a cambiare le cose, ma gli altri te li devi meritare.
+        {charNameFive}: E più interventi hai a disposizione, più puoi convincere la persona a vedere le cose diversamente.
         {charNameFive}: A raggiungere il tuo obiettivo:
         {charNameFive}: riscrivere la sua storia.
         
-            + [Hai un consiglio da darmi, Mentore?]
+            + [Hai un consiglio da darmi Mentore?]
                 {charNameFive}: Sii chi sei.
-                {charNameFive}: Non essere altro.
-                {charNameFive}: Non chiedere alla persona di essere altro.
-                {charNameFive}: La stai aiutando a trovare chi è, non un'altra persona diversa da sé.
+                {charNameFive}: Segui i miei consigli.
+                {charNameFive}: E non chiedere all'altra persona di diventare qualcosa che non è.
                     ~ fifthGreen ++
                     
             + [Ma non posso dirle: chiamati così, ciao, adios!?]
@@ -222,12 +221,13 @@
                     ~ fifthRed ++
             
             + [Non è una persona razionale. Può farcela?]
-                {charNameFive}: {name}, capisco la tua perplessità, ma sì, ce la può fare.
+                {charNameFive}: {name}, capisco la tua perplessità, ma con la giusta guida, ce la può fare.
+                {charNameFive}: E assieme noi non possiamo di certo sbagliare!
                     ~ fifthBlue ++
                     
             + [Gli scoiattoli non hanno bisogno di riscriverla, invece?]
-                {charNameFive}: Gli scoiattoli non hanno intelletto.
-                {charNameFive}: Non si fanno queste domande.
+                {charNameFive}: {name}, apprezzo la tua creatività, ma mantieni l'attenzione sull'obiettivo.
+                {charNameFive}: E gli scoiattoli non si fanno queste domande.
                 {charNameFive}: Gli scoiattoli <i>sono</i> e basta.
                     ~ fifthYellow ++
                     
@@ -250,24 +250,44 @@
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     
         {charNameFive}: Beh, direi che è andata, {name}.
-        TODO: quando la voce è definita, qui ci "giudica".
         {
             - firstCharacterPossibleStates has Triangolo:
                 {charNameFive}: Hai aiutato {charNameOne} a riscoprire il suo lato più pratico, razionale.
+                {charNameFive}: Non quello di cui aveva bisogno, temo.
+                {charNameFive}: Ma per essere la tua prima riscrittura hai dato davvero il massimo.
+                {charNameFive}: Il resto, è colpa dei miei consigli imperfetti.
+                {charNameFive}: Spero mi concederai il tempo di migliorarmi.
+                
             - firstCharacterPossibleStates has RagazzaOrchestra:
                 {charNameFive}: {charNameOne} ora sa di possedere un'idole più attiva, e anche oppositiva se serve.
+                {charNameFive}: Forse avrei potuto guidarti meglio, non sono sicura che sia la natura più vicina alla sua indole.
+                {charNameFive}: Ma faremo meglio la prossima volta.
+                
             - firstCharacterPossibleStates has FlautoDolce:
                 {charNameFive}: Grazie al tuo lavoro, {charNameOne} ha scoperto che gli affetti sono la cosa per lei fondamentale.
+                {charNameFive}: Forse qualcosa che sapeva già.
+                {charNameFive}: Forse ora sta meglio, giusto?
+                {charNameFive}: Questo è il massimo che potevamo fare per lei, vero?
+                
             - firstCharacterPossibleStates has Ocarina:
-                {charNameFive}: {charNameOne} ha trovato nella giocosità uno sblocco, ed è pronta ad abbandonarsi alla sua creatività,
+                {charNameFive}: {charNameOne} ha trovato nella giocosità uno sblocco, ed è pronta ad abbandonarsi alla sua creatività.
+                {charNameFive}: E chi sono io per giudicare cosa fa star bene un'altra persona?
+                {charNameFive}: E indubbiamente sembra molto più felice di quando è arrivata.
+                
             - firstCharacterPossibleStates has Violino:
                 {charNameFive}: {charNameOne} aveva bisogno di riconoscere che per lei la vita ha senso solo con uno scopo più grande, e grazie a te, ce l'ha fatta.
+                {charNameFive}: Abbiamo fatto un grande lavoro assieme, {name}.
+                {charNameFive}: Non vedo l'ora di aiutare la prossima persona con te!
+                
             - else: {charNameFive}: Non tutte le persone sono disposte a cambiare, ma questa non è una tua colpa. 
+                    {charNameFive}: Questa è mia. Il mio compito è renderti {pronouns has him: pronto|{pronouns has her: pronta|prontə}} per ogni evenienza.
+                    {charNameFive}: A qualunque costo.
         }
         
         {charNameFive}: Non ti conosco ancora abbastanza, ma ci tengo a dirtelo: sentiti {pronouns has him: soddisfatto|{pronouns has her: soddisfatta|soddisfattə}}!
         {charNameFive}: Questo è un lavoro complesso, ma vedrai che col tempo sarà tutto più facile.
         {charNameFive}: E per ogni momento di confusione o incertezza, ricordati che potrai chiedermi qualsiasi cosa.
+        {charNameFive}: Ora vado a sistemare quel disastro che è la biblioteca, che già ci ho messo ore per sbloccare la porta.
             -> main
        
 
@@ -314,7 +334,7 @@
             {charNameFive}: E questo mi lascia molto frustrata.
             -> top
             
-    + [No, non sono questi i luoghi di cui vorrei parlare.]
+    + [Sono altri i luoghi di cui vorrei parlare.]
         -> second_top
 
     

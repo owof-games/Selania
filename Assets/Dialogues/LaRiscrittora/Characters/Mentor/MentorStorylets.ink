@@ -87,6 +87,7 @@
     {charNameFive}: E per te.
     {charNameFive}: Riscrivere è un lavoro faticoso, e per questo è importante che ogni {pronouns has him: riscrittore|{pronouns has her: riscrittora|riscrittorə}} abbia dei momenti per prendersi cura di sé.
     {charNameFive}: Tornaci spesso: momento dopo momento quello che hai piantato sarà via via più rigoglioso.
+    {charNameFive}: E non fare caso a me mentre lucido il legno, è una cosa che mi rilassa.
         -> main
 
 === first_bus_stop_visit
@@ -94,7 +95,21 @@
     {charNameFive}: Questa è la fermata del bus.
     {charNameFive}: È un posto di passaggio: è da qui che arrivano e vanno le persone che cercano il tuo aiuto.
     {charNameFive}: Ed è da qui che potrai andare e tornare quando vorrai.
+    {charNameFive}: Anche se spero non resterai via a lungo: alla lunga qui mi sento sola.
         -> main
+        
+=== first_library_visit
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    {charNameFive}: La biblioteca!
+    {charNameFive}: Sinceramente, è stata una fatica immensa sbloccarla.
+    {charNameFive}: Speravo avrei trovato qualcosa di più utile.
+    {charNameFive}: Una guida per il tuo lavoro per esempio.
+    {charNameFive}: O un modo per parlare all3 adolescenti.
+    {charNameFive}: Non amo ammetterlo, ma non so cosa farei se dovesse entrarne unə.
+    {charNameFive}: Quando sono bloccat3, tendono ad essere molto molto molto irrazionali.
+    {charNameFive}: Per fortuna non tocca a me riscrivere le loro storie.
+    -> main
+
 
 === first_nest_visit
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
@@ -102,10 +117,6 @@
     -> main
 
 
-=== first_library_visit
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-
-    -> main
 
 
 === first_laboratory_visit
