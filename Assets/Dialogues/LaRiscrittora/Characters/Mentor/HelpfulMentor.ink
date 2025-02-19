@@ -209,9 +209,25 @@
  
  
  
- === mindfulness 
+ === mindfulness
+ //Randomizzo i contenuti e nel caso posso usare anche qui i trigger warning.
+ {shuffle:
+    - one:
+        -> one
+    - two:
+        -> two
+    - three:
+        -> three
+    - four:
+        -> four
+ }
  
- 
- Mind
+= one
+ ->->
+= two
+ ->->
+= three
+ ->->
+ = four
  ->->
 

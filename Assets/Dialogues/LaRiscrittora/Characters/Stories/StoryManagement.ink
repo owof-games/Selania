@@ -204,7 +204,7 @@
 
     //Personaggia Cinque        
         - IlMentore:
-            ~ return "il Mentore"
+            ~ return "la Mentore"
 
     }
 
@@ -252,7 +252,7 @@
 
     //Personaggia Cinque        
         - IlMentore:
-            ~ return "Il Mentore"
+            ~ return "La Mentore"
 
     }
 

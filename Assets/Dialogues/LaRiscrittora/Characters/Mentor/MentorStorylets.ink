@@ -13,7 +13,7 @@
     - gifts_and_ink == 0:
         {
             - not talk_with_first_character:
-                {charNameFive}: Hai parlato con {charNameOne}?
+                {charNameFive}: Hai parlato con la nuova persona?
                 ->->
             - talk_with_first_character:
                 {charNameFive}: Sembra che {charNameOne} ti abbia raccontato qualcosa di sè!
@@ -148,40 +148,40 @@
 ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 
-    Sconosciuto: Sapevo che sarebbe arrivata una nuova persona!
-    Sconosciuto: Immagino tu abbia un milione di domande, vero?
+    Sconosciutə: Sapevo che sarebbe arrivata una nuova persona!
+    Sconosciutə: Immagino tu abbia un milione di domande, vero?
     - (top)
         * (dove) [Dove sono?]
-            {chiSei:{charNameFive}|Sconosciuto}: Bella domanda.
-            {chiSei:{charNameFive}|Sconosciuto}: La cosa che posso dirti con certezza è che faccio di tutto per renderlo un posto sicuro.
-            {chiSei:{charNameFive}|Sconosciuto}: Un posto dove prenderti cura di te.
-            {chiSei:{charNameFive}|Sconosciuto}: Non male, no?
-            {chiSei:{charNameFive}|Sconosciuto}: Soprattutto quando fuori da qui è difficile trovare un senso.
+            {chiSei:{charNameFive}|Sconosciutə}: Bella domanda.
+            {chiSei:{charNameFive}|Sconosciutə}: La cosa che posso dirti con certezza è che faccio di tutto per renderlo un posto sicuro.
+            {chiSei:{charNameFive}|Sconosciutə}: Un posto dove prenderti cura di te.
+            {chiSei:{charNameFive}|Sconosciutə}: Non male, no?
+            {chiSei:{charNameFive}|Sconosciutə}: Soprattutto quando fuori da qui è difficile trovare un senso.
                 -> top
         
         * (chiSei) [Chi sei?]
-            Sconosciuto: Sostanzialmente, la persona che tieni in piedi questo luogo.
-            Sconosciuto: Ma tu puoi chiamarmi <b>{lowercaseTranslator(fifthCharacterState)}</b>.
+            Sconosciutə: Sostanzialmente, la persona che tieni in piedi questo luogo.
+            Sconosciutə: Ma tu puoi chiamarmi <b>{lowercaseTranslator(fifthCharacterState)}</b>.
             {charNameFive}: Così puoi ricordarti con facilità qual è il mio ruolo.
                 -> top
         
         * (vado) [Come me ne vado da qui?]
-            {chiSei:{charNameFive}|Sconosciuto}: Vuoi già andartene?
-            {chiSei:{charNameFive}|Sconosciuto}: Merda, forse devo rivedere il mio benvenuto.
-            {chiSei:{charNameFive}|Sconosciuto}: Forse sono stata troppo formale?
-            {chiSei:{charNameFive}|Sconosciuto}: O dovrei essere più autorevole?
-            {chiSei:{charNameFive}|Sconosciuto}: Ma non devo essere scortese, ora.
-            {chiSei:{charNameFive}|Sconosciuto}: Mi hai fatto una domanda, e vedrò di rispondere.
-            {chiSei:{charNameFive}|Sconosciuto}: Ad est della fermata del bus troverai un sentiero che ti riporterà a casa.
-            {chiSei:{charNameFive}|Sconosciuto}: E se deciderai di tornare, troverai tutto salvato come l'hai lasciato.
+            {chiSei:{charNameFive}|Sconosciutə}: Vuoi già andartene?
+            {chiSei:{charNameFive}|Sconosciutə}: Cavolo, forse devo rivedere il mio benvenuto.
+            {chiSei:{charNameFive}|Sconosciutə}: Forse sono stata troppo formale?
+            {chiSei:{charNameFive}|Sconosciutə}: O dovrei essere più autorevole?
+            {chiSei:{charNameFive}|Sconosciutə}: Ma non devo essere scortese, ora.
+            {chiSei:{charNameFive}|Sconosciutə}: Mi hai fatto una domanda, e vedrò di rispondere.
+            {chiSei:{charNameFive}|Sconosciutə}: Ad est della fermata del bus troverai un sentiero che ti riporterà a casa.
+            {chiSei:{charNameFive}|Sconosciutə}: E se deciderai di tornare, troverai tutto salvato come l'hai lasciato.
                 -> top
                 
         * {vado} [Non ho più voglia di parlare.]
-            {chiSei:{charNameFive}|Sconosciuto}: Lascia che ti rubi giusto un secondo!
+            {chiSei:{charNameFive}|Sconosciutə}: Lascia che ti rubi giusto un secondo!
             -> your_name
             
         * {vado or chiSei or dove} [Ma perché sono qui?]
-            {chiSei:{charNameFive}|Sconosciuto}: Ora tocca a me farti una domanda.
+            {chiSei:{charNameFive}|Sconosciutə}: Ora tocca a me farti una domanda.
             -> your_name
             
         * -> your_name
@@ -190,14 +190,14 @@
         ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
         ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         
-        {chiSei:{charNameFive}|Sconosciuto}: Come ti devo chiamare?
-        {chiSei:{charNameFive}|Sconosciuto}: Puoi usare qualsiasi nome: prendi questa occasione come un nuovo inizio.
+        {chiSei:{charNameFive}|Sconosciutə}: Come ti devo chiamare?
+        {chiSei:{charNameFive}|Sconosciutə}: Puoi usare qualsiasi nome: prendi questa occasione come un nuovo inizio.
             -> name_choice ->
-        {chiSei:{charNameFive}|Sconosciuto}: E quali sono i pronomi in cui ti riconosci?
+        {chiSei:{charNameFive}|Sconosciutə}: E quali sono i pronomi in cui ti riconosci?
             -> gender ->
-        {chiSei:{charNameFive}|Sconosciuto}: Piacere di conoscerti, {name}.
-        {chiSei:{charNameFive}|Sconosciuto}: E {pronouns has him: benvenuto|{pronouns has her: benvenuta|benvenutə}}.
-        {not chiSei: Sconosciuto: Ah, che sbadata. Invece tu chiamami <b>{charNameFive}</b>.|{charNameFive}: È mio dovere farti stare bene.}
+        {chiSei:{charNameFive}|Sconosciutə}: Piacere di conoscerti, {name}.
+        {chiSei:{charNameFive}|Sconosciutə}: E {pronouns has him: benvenuto|{pronouns has her: benvenuta|benvenutə}}.
+        {not chiSei: Sconosciutə: Ah, che sbadata. Invece tu chiamami <b>{charNameFive}</b>.|{charNameFive}: È mio dovere farti stare bene.}
         {charNameFive}: Un'altra domanda importante, {name}.
         {charNameFive}: Nel tuo soggiorno in questo luogo potrebbe accadere che incontrerai qualche situazione complessa.
         {charNameFive}: Se ti va di dirmi quali sono le cose che ti creano disagio, farò del mio meglio per non fartele incontrare.

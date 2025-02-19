@@ -24,7 +24,7 @@
 
     {charNameFive}: Come posso esserti utile, {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?
     
-        + [Qualcosa non mi è chiaro.]
+        + [Avrei bisogno di una mano.]
             -> support
         
         + {(pre_test && not little_storylets.voices) or (firstCharacterInkLevel has High && not little_storylets.infoImpo)}[Mi è successa una cosa strana.]
