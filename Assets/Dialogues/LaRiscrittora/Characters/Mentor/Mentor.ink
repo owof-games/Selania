@@ -48,15 +48,22 @@
             -> to_do
         + [Ho una domanda su un luogo.]
             -> tutorial
-        + [Vorrei cambiare il mio nome.]
-            -> name_choice ->
-        + [Vorrei cambiare i miei pronomi.]
-            -> gender ->
-        + [Vorrei aggiornare la lista dei miei temi delicati.]
-            -> trigger_warning       
+        + [C'è una cosa che mi riguarda.]
+            -> myself
         + [Vorrei parlare d'altro.]
             -> speaking_with_mentor
         -
     -> top   
 
+= myself
+    + [Vorrei cambiare il mio nome.]
+            -> name_choice -> support
+    + [Vorrei cambiare i miei pronomi.]
+            -> gender -> support
+    + [Vorrei consigli su come stare meglio.]
+            -> mindfulness -> support
+    + [Vorrei aggiornare la lista dei miei temi delicati.]
+            -> trigger_warning   
+    + [Sono apposto così, grazie.]
+            -> speaking_with_mentor
 
