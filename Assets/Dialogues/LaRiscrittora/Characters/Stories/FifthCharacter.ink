@@ -77,17 +77,18 @@
         {
             - not one:
                 -> one
-            - not two:
+            - not two && firstStory == Ended:
                 -> two
-            - not three:
+            - not three && firstStory == Ended:
                 -> three
-            - not four:
+            - not four && secondStory == Ended:
                 -> four
-            - not five:
+            - not five && secondStory == Ended:
                 -> five
-            //Metà delle storie della mentore sono disponibili sostanzialmente da subito, le altre dopo che le condizioni per attivare la storia a tutti gli effetti sono state raggiunte.     
-            - not six && fifthStory == Active:
+            //Forse solo una di queste, perché con la terza storia avremo degli storylets ad hoc.    
+            - not six && thirdStory == Ended:
                 -> six
+            //Metà delle storie della mentore sono disponibili sostanzialmente da subito, le altre dopo che le condizioni per attivare la storia a tutti gli effetti sono state raggiunte.      
             - not seven && fifthStory == Active:
                 -> seven
             - not eight && fifthStory == Active:

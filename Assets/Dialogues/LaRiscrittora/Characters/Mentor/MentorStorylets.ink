@@ -8,7 +8,6 @@
 
 {
 //Introduzioni
-
     - welcome == 0:
         -> welcome
     - gifts_and_ink == 0:
@@ -35,7 +34,8 @@
                       ->->
             }
         }
-        
+
+//Feedback
     - not first_character_feedback:
         {
             - firstStory == Ended:
@@ -43,9 +43,19 @@
             - else:
                 {charNameFive}: Prenditi il tuo tempo, ma ricordati che presto o tardi dovrai aiutare {charNameOne} a trovare il suo nuovo nome.
                 ->->
-
         }
-        
+    
+    - not second_character_feedback && secondStory == Ended:
+        -> second_character_feedback
+
+    - not third_character_feedback && thirdStory == Ended:
+        -> third_character_feedback        
+
+    - not fourth_character_feedback && fourthStory == Ended:
+        -> fourth_character_feedback        
+
+    - not fifth_character_feedback && fifthStory == Ended:
+        -> fifth_character_feedback        
     
 //Presentazione dei luoghi
     - are_entities_together_in(PG, Mentor, Greenhouse) && not first_greenhouse_visit:
@@ -63,7 +73,7 @@
     - are_entities_together_in(PG, Mentor, BusStop) && not first_bus_stop_visit:
         -> first_bus_stop_visit
  
-//Da creare: storylets per quando anime (non animelle) e Mentor sono assieme
+//Storylets legati alla terza storia.
 
     - else:
         ->->
@@ -369,7 +379,38 @@
                     -> main
         
         
-    === first_character_feedback
+    
+   
+   === little_storylets
+    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    
+        * (voices){pre_test && not voices}[C'è una voce che mi racconta cose.]
+            {charNameFive}: Voce?
+            {name}: Sì.
+            {name}: Ad esempio mi descrive le piante della serra.
+            {name}: O i luoghi in cui entro.
+            {charNameFive}: Riscrivere la storie di altre persone richiede una forte empatia.
+            {charNameFive}: Sicuramente quella voce è il tuo modo di capire questo luogo.
+            {charNameFive}: Un intuito latente che ora è più forte.
+            {charNameFive}: Meglio della stanchezza dell'essere mentore, fidati.
+                ->->
+                
+        * (infoImpo){firstCharacterInkLevel has High && not infoImpo} [Cosa significa "la personaggia ti darà una informazione importante"?]
+            {charNameFive}: Dove l'hai sentita questa cosa, stellina?
+            {name}: Quando stavo per fare le ultime domande a {charNameOne}, {voices: la|una} voce mi ha detto quanto inchiostro avevo e che avrei ricevuto una informazione importante.
+            {not voices: {charNameFive}: Per la voce sarà la stanchezza, questo lavoro è faticoso.|{charNameFive}: Come ti dicevo, vedrai che è solo la tua empatia che parla.}
+            {charNameFive}: Comunque ogni cosa qui è importante, {name}.
+            {charNameFive}: Soprattutto se ti aiuta a raggiungere il tuo obiettivo.
+                 ->->
+   
+   ->->
+   
+   //Feedback//
+=== first_character_feedback
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
@@ -416,32 +457,43 @@
         {charNameFive}: E per ogni momento di confusione o incertezza, ricordati che potrai chiedermi qualsiasi cosa.
         {charNameFive}: Ora vado a sistemare quel disastro che è la biblioteca, che già ci ho messo ore per sbloccare la porta.
             -> main
-       
+          
+   === second_character_feedback
+    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)   
+    
+   second_character_feedback
+   ->->
    
-   === little_storylets
+   === third_character_feedback
+    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState) 
+    
+   third_character_feedback
+   ->->
+   
+   === fourth_character_feedback
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
     ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     
-        * (voices){pre_test && not voices}[C'è una voce che mi racconta cose.]
-            {charNameFive}: Voce?
-            {name}: Sì.
-            {name}: Ad esempio mi descrive le piante della serra.
-            {name}: O i luoghi in cui entro.
-            {charNameFive}: Riscrivere la storie di altre persone richiede una forte empatia.
-            {charNameFive}: Sicuramente quella voce è il tuo modo di capire questo luogo.
-            {charNameFive}: Un intuito latente che ora è più forte.
-            {charNameFive}: Meglio della stanchezza dell'essere mentore, fidati.
-                ->->
-                
-        * (infoImpo){firstCharacterInkLevel has High && not infoImpo} [Cosa significa "la personaggia ti darà una informazione importante"?]
-            {charNameFive}: Dove l'hai sentita questa cosa, stellina?
-            {name}: Quando stavo per fare le ultime domande a {charNameOne}, {voices: la|una} voce mi ha detto quanto inchiostro avevo e che avrei ricevuto una informazione importante.
-            {not voices: {charNameFive}: Per la voce sarà la stanchezza, questo lavoro è faticoso.|{charNameFive}: Come ti dicevo, vedrai che è solo la tua empatia che parla.}
-            {charNameFive}: Comunque ogni cosa qui è importante, {name}.
-            {charNameFive}: Soprattutto se ti aiuta a raggiungere il tuo obiettivo.
-                 ->->
-   
-   ->->
+    fourth_character_feedback
+    ->->
+    
+    === fifth_character_feedback
+    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)    
+    
+    fifth_character_feedback
+    ->->
