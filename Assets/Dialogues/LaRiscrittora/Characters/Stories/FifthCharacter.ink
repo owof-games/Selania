@@ -19,7 +19,9 @@
 ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
 ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+
 -> fifth_character_storylets ->
+
     {charNameFive}: Come posso esserti utile, {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?
     
         + [Qualcosa non mi è chiaro.]
@@ -28,12 +30,13 @@
         + {(pre_test && not little_storylets.voices) or (firstCharacterInkLevel has High && not little_storylets.infoImpo)}[Mi è successa una cosa strana.]
             -> little_storylets
             
-        + [Vorrei conoscerti meglio.]
+        + {knowing_second_character}[Vorrei conoscerti meglio.]
             {
                 - fifthPauseTalking == 0:
                     -> talk_with_fifth_character
                 - else:
-            {charNameFive}: {~ Ho bisogno di tempo per me.|Ti spiace tornare tra un po'?|Credo di aver bisogno di silenzio, torna più tardi.}
+            //Valutare se per la mentore non abbia senso invece dell'invito alla pausa, darci frasi sul contesto.    
+            {charNameFive}: {~ Ora non mi va, ma non mi chiedi aiuto da un po', tutto ok?|Ho bisogno di una pausa, ma se serve aiuto sono qui.|Devo decidere cosa sistemare poi, ma se ti serve aiuto invece, chiedi pure.}
                 -> talk_with_mentor
             }
             
@@ -48,12 +51,12 @@
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_fifth_character
                 
-            //Se non ho ancora fatto e ho parlato abbastanza con lui
-            + {fifthStoryQuestCount > minStoryQuesTCount && findedGifts != ()} [Ti vorrei donare questa cosa.]
+            //Per la mentore: dono solo dopo la fine della quarta storia.
+            + {fifthStoryQuestCount > minStoryQuesTCount && findedGifts != () && fourthStory == Ended} [Ti vorrei donare questa cosa.]
                     -> second_story_gift
         
             //Dono fatto ma non ho avviato la main story
-            + {second_story_gift.ink_outcome && not main_story_fifth_character} [Ti va di riscrivere la tua storia con me?]
+            + {fifth_story_gift.ink_outcome && not main_story_fifth_character} [Ti va di riscrivere la tua storia con me?]
                     -> fifth_story_chech_trigger
     
             //SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
@@ -82,51 +85,49 @@
                 -> four
             - not five:
                 -> five
-            - not six:
+            //Metà delle storie della mentore sono disponibili sostanzialmente da subito, le altre dopo che le condizioni per attivare la storia a tutti gli effetti sono state raggiunte.     
+            - not six && fifthStory == Active:
                 -> six
-            - not seven:
+            - not seven && fifthStory == Active:
                 -> seven
-            - not eight:
+            - not eight && fifthStory == Active:
                 -> eight
-            - not nine:
+            - not nine && fifthStory == Active:
                 -> nine
-            - not ten:
+            - not ten && fifthStory == Active:
                 -> ten
-            - not eleven:
+            - not eleven && fifthStory == Active:
                 -> eleven
-            - not twelve:
+            - not twelve && fifthStory == Active:
                 -> twelve
             - else:
-                -> second_character_opinions
+                -> fifth_character_opinions
         }
 
     = one
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    
-        //Presentazione.
         ~ fifthStoryQuestCount ++
         
         ???: Non è che hai visto passare di qui una persona?
-            + (twoBlue) [Dammi dettagli più concreti.]
-                    ~ fifthBlue ++
+            + (fiveBlue) [Dammi dettagli più concreti.]
+                ~ fifthBlue ++
                 
-            + (twoYellow) [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ fifthYellow ++
+            + (fiveYellow) [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+                ~ fifthYellow ++
                 
-            + (twoRed) [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + (fiveRed) [Seguiamo le sue tracce! Fiutiamo il suo odore.]
                 ~ fifthRed ++
 
                 
-            + (twoGreen) [Se ti senti sola, sono qui ad ascoltarti.]
+            + (fiveGreen) [Se ti senti sola, sono qui ad ascoltarti.]
                 ~ fifthGreen ++
   
                 
-            + (twoPurple) [Tu sei sempre con ləi, ləi è sempre con te.]
+            + (fivePurple) [Tu sei sempre con ləi, ləi è sempre con te.]
                 ~ fifthPurple ++
  
             -
         ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameFive}.
-      
              ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
     = two
@@ -271,6 +272,8 @@
                 ~ fifthPurple ++
  
             -
+            //Qui potrebbe aver senso ridurre i tempi di attesa tra un dialogo e l'altro.
+             ~  fifthCharPauseDurantion = 5
              ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
     = seven
@@ -447,11 +450,6 @@
 
 
         
-=== fifth_character_opinions
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
-    {charNameFive}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
-            -> main
 
 
 === fifth_story_gift ===
@@ -820,6 +818,44 @@
 
 
 
+=== fifth_character_opinions
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        {   
+            //Opinioni dopo la fine della terza storia
+            - fourthTier == true:
+                -> four
+            //Opinioni dopo la fine della seconda storia    
+            - thirdTier == true:
+                -> three
+            //Opinioni dopo la fine della prima storia      
+            - secondTier == true:
+                -> two
+            //Opinioni presenti da inizio gioco    
+            - firstTier == true:
+                -> one
+
+
+        }
+
+   = one
+   ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    {charNameFive}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
+            -> main
+    
+    = two
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    {charNameFive}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
+            -> main
+            
+    = three
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    {charNameFive}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
+            -> main
+            
+    = four
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    {charNameFive}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
+            -> main        
 
 
 

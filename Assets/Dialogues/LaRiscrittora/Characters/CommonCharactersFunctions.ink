@@ -184,17 +184,17 @@ VAR delayFourthChar = 20
             ~ firstStory = Active
             
 //A metà della storia della prima personaggia, compare la seconda      
-    - knowing_first_character.five && secondStory == NotStarted:
+    - knowing_first_character.four && secondStory == NotStarted:
             ~ move_entity(SecondCharacter, BusStop)    
             ~ secondStory = Active
 
 //A metà della storia della seconda personaggia e finita la prima (così la biblioteca è aperta), compare la terza
-    - knowing_second_character.five && firstStory == Ended && thirdStory == NotStarted:
+    - knowing_second_character.four && firstStory == Ended && thirdStory == NotStarted:
             ~ move_entity(ThirdCharacter, BusStop)    
             ~ thirdStory = Active
             
 //Dopo un po' da quando la terza storia è finita, compare una quarta personaggia
-    - movementsCounter == delayFourthChar && thirdStory:
+    - movementsCounter == delayFourthChar && thirdStory == Ended:
         //Ma magari questo spettro vuole comparire altrove
             ~ move_entity(FourthCharacter, BusStop)
             ~ fourthStory = Active
@@ -305,5 +305,13 @@ VAR delayFourthChar = 20
 ->->
 
 === thirdNaming ===
+
+->->
+
+=== fourthNaming ===
+
+->->
+
+=== fifthNaming ===
 
 ->->

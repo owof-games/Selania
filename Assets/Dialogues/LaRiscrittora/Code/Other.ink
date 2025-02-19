@@ -66,6 +66,7 @@
     ~ firstWritingPause --
     ~ secondWritingPause --
     ~ thirdWritingPause --
+    ~ fifthWritingPause --
     
 //Aumento di contatori:
     ~ movementsCounter ++
@@ -76,12 +77,21 @@
     -> story_time_management_for_PNG->    
 ->->
 
-
+//Riduzione del tempo di pausa del dialogo fino a quando non siamo a 0
 === characters_speaking
     {
         - firstPauseTalking > 0:
             ~ firstPauseTalking --
-            {debug: Il valore di firstCharEndingDialogue è {firstPauseTalking}}
+            {debug: Il valore di firstPauseTalking è {firstPauseTalking}}
+        
+        - secondPauseTalking > 0:
+            ~ secondPauseTalking --
+        
+        - thirdPauseTalking > 0:
+            ~ thirdPauseTalking --
+        
+        - fifthPauseTalking > 0:
+            ~ fifthPauseTalking --    
     }
 ->->
     

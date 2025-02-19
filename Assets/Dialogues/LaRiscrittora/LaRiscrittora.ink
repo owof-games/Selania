@@ -26,7 +26,6 @@ INCLUDE main.ink
 
 INCLUDE Characters\CommonCharactersFunctions.ink
 
-INCLUDE Characters\Mentor\Mentor.ink
 INCLUDE Characters\Mentor\MentorStorylets.ink
 INCLUDE Characters\Mentor\HelpfulMentor.ink
 
