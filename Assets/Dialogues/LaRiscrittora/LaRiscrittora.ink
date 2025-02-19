@@ -71,6 +71,8 @@ INCLUDE Library\ThirdStory.ink
 INCLUDE Library\FourthStory.ink
 INCLUDE Library\LibaryManagement.ink
 INCLUDE StartingRoomAndSaveButtons.ink
+INCLUDE Library/StoryNotes.ink
+
 
 
 
