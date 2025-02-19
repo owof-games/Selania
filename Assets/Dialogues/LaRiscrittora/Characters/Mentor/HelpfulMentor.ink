@@ -222,12 +222,26 @@
         -> four
  }
  
-= one
- ->->
-= two
- ->->
-= three
- ->->
- = four
- ->->
+    = one
+     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        {charNameFive}: Quando inizio a pensare molto, ma molto molto, una cosa che mi aiuta è concentrarmi su quello che mi circonda.
+        {charNameFive}: Inizio ad osservare un oggetto e a dirmi dentro la testa cosa è.
+        {charNameFive}: Una sedia, uno sgabello, un frigorifero, un tostapane, una lavatrice.
+        {charNameFive}: Se la confusione è molta, cerco di partire con il generico, come <i>elettrodomestico</i>, e poi man mano che divento più concentrata inizio a scendere nel dettaglio.
+        {charNameFive}: Se ci sono poche cose, provo a descrivere le parti di un oggetto.
+        {charNameFive}: O del mio corpo.
+        {charNameFive}: Cosa che evito nei giorni in cui non mi piaccio.
+            ->->
+    
+    = two
+     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ->->
+    
+    = three
+     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ->->
+    
+    = four
+     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ->->
 
