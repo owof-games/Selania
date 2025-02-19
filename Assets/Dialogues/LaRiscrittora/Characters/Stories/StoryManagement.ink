@@ -111,19 +111,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
             /* ---------------------------------
             
                Gestione quarta personaggia. 
@@ -148,7 +135,7 @@
     
     VAR fifthStory = NotStarted
     //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
-    VAR fifthdStoryQuestCount = 0
+    VAR fifthStoryQuestCount = 0
     VAR fifthCharacterSpecialEvent = false
     
     //Variabili per mettere in pausa la conversazione

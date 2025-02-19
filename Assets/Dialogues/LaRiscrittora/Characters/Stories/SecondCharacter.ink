@@ -663,7 +663,7 @@
      
         -
         {
-        - firstCharacterInkLevel == Normal:
+        - secondCharacterInkLevel == Normal:
             -> ending
         - else: 
             -> four
@@ -675,9 +675,9 @@
         + [Giocare è bello perché puoi sempre rinunciare a farlo.]
 
                 {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                - secondCharacterPossibleStates hasnt Violino:
+		                ~ secondCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {secondCharacterPossibleStates }}
                 }            
          
         
@@ -687,7 +687,7 @@
         + [Un infinito più piccolo resta comunque infinito.]
 
                 {
-	                - firstCharacterPossibleStates hasnt Violino:
+	                - secondCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
 	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }    
@@ -695,7 +695,7 @@
         + [Rinunciando a cercare Talco ti sei tutelata.]
  
                 {
-                	- firstCharacterPossibleStates hasnt Rinuncia:
+                	- secondCharacterPossibleStates hasnt Rinuncia:
     		            ~ firstCharacterPossibleStates --
     		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }            

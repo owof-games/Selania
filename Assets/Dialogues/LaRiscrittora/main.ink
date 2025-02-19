@@ -4,8 +4,7 @@
 #ambientSounds: {tag_ambientSounds()}
 @interact 
 
-//Dialoghi del mentore
-<- mentor
+
 
 //Spostamenti
 <- move_between_rooms(my_location)
@@ -18,7 +17,7 @@
 <-second_character
 <-third_character
 <-personaggia_quattro
-<-personaggia_cinque
+<-fifth_character
 
 
 //Elementi della serra

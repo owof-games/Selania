@@ -223,7 +223,7 @@ VAR delayFourthChar = 20
         ~ move_entity(FourthCharacterNotes, BusStop)
         
     - fifthStory == Ended && movementsCounter > 10:
-        ~ move_entity(FifthCharacter, Safekeeping)
+        ~ move_entity(Mentor, Safekeeping)
         ~ move_entity(FifthCharacterNotes, BusStop)
 }
 
