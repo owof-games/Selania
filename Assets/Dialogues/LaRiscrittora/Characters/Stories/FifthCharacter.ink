@@ -323,7 +323,7 @@
     = six
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     
-TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della sua reazione.
+TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della sua reazione. -> si parla esplicitamente di responsabilità personale (in antitesi anche con la visione del fungo)?
 
         ~ fifthStoryQuestCount ++
         
@@ -907,8 +907,6 @@ TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della su
             //Opinioni presenti da inizio gioco    
             - firstTier == true:
                 -> one
-
-
         }
 
    = one

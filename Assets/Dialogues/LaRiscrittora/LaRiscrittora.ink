@@ -49,6 +49,7 @@ INCLUDE BusStop\BusStop.ink
 
 //Forest
 INCLUDE Forest\Forest.ink
+INCLUDE Forest/Fungus.ink
 
 //Greenhouse
 INCLUDE Greenhouse\Greenhouse.ink
@@ -71,6 +72,8 @@ INCLUDE Library\FourthStory.ink
 INCLUDE Library\LibaryManagement.ink
 INCLUDE StartingRoomAndSaveButtons.ink
 INCLUDE Library/StoryNotes.ink
+
+
 
 
 
