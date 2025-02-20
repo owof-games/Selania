@@ -51,8 +51,8 @@
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_fifth_character
                 
-            //Per la mentore: dono solo dopo la fine della quarta storia.
-            + {fifthStoryQuestCount > minStoryQuesTCount && findedGifts != () && fourthStory == Ended} [Ti vorrei donare questa cosa.]
+            //Per la mentore: dono solo dopo la fine della quarta storia, per questo metto un knot come differenziatore.
+            + {knowing_fifth_character.seven && findedGifts != () && fourthStory == Ended} [Ti vorrei donare questa cosa.]
                     -> second_story_gift
         
             //Dono fatto ma non ho avviato la main story
@@ -60,7 +60,7 @@
                     -> fifth_story_chech_trigger
     
             //SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
-            + {fifth_story_gift.ink_outcome && main_story_second_character} [Riprendiamo quella storia?]
+            + {fifth_story_gift.ink_outcome && main_story_fifth_character} [Riprendiamo quella storia?]
                 -> main_story_fifth_character
             
             + [Lascio il dialogo.]
@@ -133,8 +133,6 @@
             -> main
     = two
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    
-        //Presentazione.
         ~ fifthStoryQuestCount ++
         
         {charNameFive}: Non è che hai visto passare di qui una persona?
@@ -163,31 +161,53 @@
     
     = three
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    
-        //Presentazione.
+        //Questo è un riferimento indiretto anche ai figli che ora non la chiamano molto.
         ~ fifthStoryQuestCount ++
-        
-        {charNameFive}: Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+        {charNameFive}: A volte un po' mi pesa, tutto questo via vai.
+        {charNameFive}: Ci sono persone a cui mi sono affezionata, che non rivedrò più.
+        {charNameFive}: Persone che ho aiutato e ora vorrei sentire più spesso.
+        {charNameFive}: Ma poi le loro lettere non arrivano, o arrivano sempre meno.
+        {charNameFive}: E allora mi chiedo se ho sbagliato qualcosa.
+        {charNameFive}: Non mi fraintendere: sono felice di quello che faccio, di quello che ho fatto.
+        {charNameFive}: E per me è una gioia tenere tutto questo in piedi, giorno per giorno.
+
+            + [Ogni lavoro ha la sua quota di sacrificio.]
+                {charNameFive}: Vero.
+                {charNameFive}: Il valore di qualcosa viene da quanto ci è costata.
+                {charNameFive}: E la maggior parte delle volte non paghiamo in denaro.
                     ~ fifthBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [Forse hanno l'indirizzo sbagliato. O le volpi si mangiano le lettere!]
+                {charNameFive}: La fantasia è un modo piacevole di affrontare la realtà, {name}.
+                {charNameFive}: Ma alla lunga rende difficile capire cosa sia vero e cosa no.
                     ~ fifthYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ fifthRed ++
+            + [Il mondo è pieno di ingrati.]
+                {charNameFive}: No.
+                {charNameFive}: Direi che il mondo è pieno di persone distratte.
+                {charNameFive}: Le cose da fare sono infinite, e finiamo per dimenticarci di chi non vediamo tutti i giorni.
+                {charNameFive}: Non è ingratitudine, è una vita che scorre troppo veloce.
+                    ~ fifthRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ fifthGreen ++
+            + [Ti prometto che ti scriverò ogni giorno.]
+                {charNameFive}: Oh, {pronouns has him: caro|{pronouns has her: cara|carə}}, è una bella promessa.
+                {charNameFive}: Una promessa che ho sentito decine di volte.
+                    ~ fifthGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ fifthPurple ++
+            + [Esiste un confine tra {charNameFive} e questo luogo?]
+                {charNameFive}: A volte mi sento <i>solo</i> questo luogo.
+                {charNameFive}: Non mi chiedo spesso se andarmene o meno.
+                {charNameFive}: O dove.
+                    ~ fifthPurple ++
  
             -
-             ~ fifthPauseTalking = fifthCharPauseDurantion
-            -> main
+            {charNameFive}: Ma basta con questo spirito malinconico!
+            {charNameFive}: Mi sono appena ricordata che ci sono delle erbacce fastidiose sotto la poltrona della biblioteca,
+            {charNameFive}: Devo inventarmi un modo per liberarmene!
+                ~ fifthPauseTalking = fifthCharPauseDurantion
+                    -> main
     
     
     

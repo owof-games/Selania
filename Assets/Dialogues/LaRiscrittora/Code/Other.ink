@@ -68,8 +68,11 @@
     ~ thirdWritingPause --
     ~ fifthWritingPause --
     
+    ~ lastMindfulness --
+    
 //Aumento di contatori:
     ~ movementsCounter ++
+    
     
 //Altre funzioni:
     -> characters_speaking ->
