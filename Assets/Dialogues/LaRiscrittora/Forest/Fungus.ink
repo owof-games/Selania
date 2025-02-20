@@ -1,22 +1,12 @@
-
+//Variabili per mettere in pausa la conversazione
+    VAR fungusPauseTalking = 0
+    VAR fungusCharPauseDurantion = 6
+    
 === the_fungus
 + {are_two_entities_together(TheFungus, PG)} [TheFungus]
-    {!firstStory == Ended:<i>{~ I rami sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba se ne resta lontana dalla base della pianta.}</i>| ->talking_fungus}
+   ->talking_fungus
     
-    {firstTier && findedGifts hasnt emptyvase:
-        ~ temp dice = RANDOM(1, 2)
-        {
-            - dice == 1:
-                <i>C'è un vaso vuoto.</i>
-                <i>In questo luogo anche la cosa più insolita può essere un tesoro.</i>
-                Hai ottenuto: <b>vaso vuoto</b>
-                ~ findedGifts += emptyvase
-                -> main
-            - dice == 2:
-            -> main
-        }
-    }    
-    -> main
+
     
 === talking_fungus
 ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
@@ -39,8 +29,11 @@
             -> fifth_story_ended_check    
     
     //Discorsi riempitivi
-    - else:
+    - fungusPauseTalking == 0 && firstStory == Ended:
         -> discourse
+    
+    - else:
+        -> descriptions
 }
 
     = first_story_ended_check
@@ -139,6 +132,15 @@
             <i>E {name} decide di osservare le cose nell'interezza.</i>
                 
         -
+    <i>L'acqua nel terreno ci racconta che {charNameFive} ha molto aiutato {name} in questo viaggio.</i>
+    <i>Anche noi vogliamo aiutare {name}, e per questo condividiamo una cosa.</i>
+    <i>{name} può scegliere di studiare la persona che ha davanti.</i>
+    <i>Di capire come parla, cosa le piace, cosa le piace sentirsi dire.</i>
+    <i>Oppure {name} può decidere di essere sé {pronouns has him: stesso|{pronouns has her: stessa|stessə}}, anche se questo può infastidire l'altra persona.</i>
+    <i>E scoprire che alcune persone sono felici di venire contraddette e infastidite.</i>
+    <i>Così come a volte l'acqua rinfresca, a volte diventa fango.</i>
+    <i>Permettendo a nuova vita di crescere.</i>
+    <i>Nessuna persona è uguale, nessuna persona vuole lo stesso trattamento.</i>
     <i>Altri funghi solleticano le nostre nuove radici.</i>
     <i>Ringraziandoti ancora {name} per ora ti congediamo.</i>
     <i>Ma anche dall'altra parte del mondo sai già che non saremo mai lontani.</i>
@@ -265,6 +267,38 @@
     
     = two
     
+    -> main
+
+    = three
+    
+    -> main
+
+    = four
+    
+    -> main
+
+=== descriptions
+    {   
+        //Opinioni dopo la fine della terza storia
+        - fourthTier == true:
+            -> four
+        //Opinioni dopo la fine della seconda storia    
+        - thirdTier == true:
+            -> three
+        //Opinioni dopo la fine della prima storia      
+        - secondTier == true:
+            -> two
+        //Opinioni presenti da inizio gioco    
+          - firstTier == true:
+            -> one
+    }
+    
+    = one
+     <i>{~ I rami sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba se ne resta lontana dalla base della pianta.}</i>
+        -> main
+    
+    = two
+    <i>{~ Le radici hanno trovato vecchi tesori.|I bruchi solleticano le giovani radici.|Porcellini di terra si riparano tra le nostre radici.}</i>
     -> main
 
     = three

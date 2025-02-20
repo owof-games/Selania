@@ -2,9 +2,24 @@
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
 {forest == 1:<i>La foresta ti accoglie con le sue ombre.</i>|<i>{~La foresta è una distesa di fresca ombra.|La foresta è canto sospeso.|La foresta cresce lentamente.|La resina intrappola il tempo.|I rami si scaldano al vento.|Il sottobosco condivide pettegolezzi.|Sulla panchina scivolano ricordi.}</i>}
-    + [Mi guardo attorno.]
-    -
-    -> main
+    
+        {firstTier && findedGifts hasnt emptyvase:
+            ~ temp dice = RANDOM(1, 2)
+                {
+                    - dice == 1:
+                        <i>C'è un vaso vuoto.</i>
+                        <i>In questo luogo anche la cosa più insolita può essere un tesoro.</i>
+                        Hai ottenuto: <b>vaso vuoto</b>
+                        ~ findedGifts += emptyvase
+                        -> main
+                    - dice == 2:
+                    -> main
+                }
+        }    
+        
+        + [Mi guardo attorno.]
+        -
+            -> main
 
 
 === bench
