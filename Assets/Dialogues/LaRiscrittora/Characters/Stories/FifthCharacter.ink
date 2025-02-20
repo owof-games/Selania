@@ -267,8 +267,7 @@
     
     = four
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    
-        //Presentazione.
+    TODO: scrivere questa e la prossima a storia due finita
         ~ fifthStoryQuestCount ++
         
         {charNameFive}: Non è che hai visto passare di qui una persona?
@@ -324,7 +323,8 @@
     = six
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     
-        //Presentazione.
+TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della sua reazione.
+
         ~ fifthStoryQuestCount ++
         
         {charNameFive}: Non è che hai visto passare di qui una persona?
@@ -913,13 +913,13 @@
 
    = one
    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    {charNameFive}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
+    {charNameFive}: {~ Sinceramente, non so che ne sarebbe di questo luogo senza tutta la manutenzione che devo fare.|Hai notato la bacheca alla fermata del bus? Anche se è da molto che non arrivano lettere.|A volte vorrei che le cose in serra crescessero più velocemente, così da sapere subito se ho sbagliato qualcosa.|A ovest dello stagno c'è spesso un grande baccano, ma fiori e fieno sono troppo alti per poter vedere cosa ci sia da quelle parti.}
             ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
     
     = two
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    {charNameFive}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
+    {charNameFive}: {~ Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.|A volte ho questo timore; posso davvero essere una buona mentore, anche se sono poco istruita?|Sono contenta di aver aperto la biblioteca, ma quella poltrona mi invita troppo a riposare, quando invece ci sono mille cose da fare.}
             ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
             
