@@ -35,7 +35,6 @@
                 - fifthPauseTalking == 0:
                     -> talk_with_fifth_character
                 - else:
-            //Valutare se per la mentore non abbia senso invece dell'invito alla pausa, darci frasi sul contesto.    
             {charNameFive}: {~ Ora non mi va, ma non mi chiedi aiuto da un po', tutto ok?|Ho bisogno di una pausa, ma se serve aiuto sono qui.|Devo decidere cosa sistemare poi, ma se ti serve aiuto invece, chiedi pure.}
                 -> talk_with_mentor
             }
@@ -108,27 +107,53 @@
     = one
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         ~ fifthStoryQuestCount ++
+        //Amore per il giardinaggio e la possibilità, per la giocatrice, di esprimere qualcosa che poi si potrebbe avvicinare ai possibili finali.
         
-        ???: Non è che hai visto passare di qui una persona?
-            + (fiveBlue) [Dammi dettagli più concreti.]
-                ~ fifthBlue ++
-                
-            + (fiveYellow) [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                ~ fifthYellow ++
-                
-            + (fiveRed) [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ fifthRed ++
+        {charNameFive}: Non è giusto avere delle preferenze, ma la serra credo proprio sia il mio posto preferito.
+        {charNameFive}: C'è qualcosa nel vedere crescere piante, fiori, funghi che mi fa sentire appagata.
+        {charNameFive}: Non è solo l'odore della terra, o l'umidità nell'aria nei giorni più caldi.
+        {charNameFive}: Ma quella sensazione che con le tue mani puoi permettere a un altro corpo di crescere al meglio.
 
+            + (fiveBlue) [Preferisco la fermata del bus, è ordinata, precisa.]
+                    ~ fifthBlue ++
+                {charNameFive}: Sì, ne capisco il fascino.
+                {charNameFive}: A volte mi siedo lì e mi godo per qualche istante l'attesa.
+                {charNameFive}: Il nulla che accade.
+                {charNameFive}: Ma poi le mani fremono, e devo riprendere a fare cose.
                 
-            + (fiveGreen) [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ fifthGreen ++
+            + (fiveYellow) [Lo stagno è divertente, succede di tutto.]
+                    ~ fifthYellow ++
+                {charNameFive}: Forse succede <i>di troppo</i>.
+                {charNameFive}: Non sembra pensare a nulla.
+                {charNameFive}: L'acqua è lì e lascia che tutto accada, senza pensare al domani.
+                
+            + (fiveRed) [La foresta domina tutto, è lotta, è potenza!]
+                    ~ fifthRed ++
+                {charNameFive}: E disordinata, sporca.
+                {charNameFive}: Posso capirne il fascino, ma non è un luogo dove resto con piacere.
+                {charNameFive}: E quella pianta al centro non vuole saperne né di crescere né di morire.
+                {charNameFive}: Una cosa davvero fastidiosa.
+                    
+                
+            + (fiveGreen) [Un po' come prendersi cura delle persone, qui.]
+                    ~ fifthGreen ++
+                {charNameFive}: Sì, anche se con meno aspettative.
+                {charNameFive}: Le persone a volte fanno cose che non ci aspettiamo.
+                {charNameFive}: Un <i>Lichene degli abissi</i> con le giuste condizioni cresce sempre allo stesso modo.
   
-                
-            + (fivePurple) [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ fifthPurple ++
+            + (fivePurple) [Per me è il contrario: sono felice che crescano a prescidere da me.]
+                    ~ fifthPurple ++
+                {charNameFive}: Non condivido, sinceramente.
+                {charNameFive}: Ma sicuramente è un mio limite.
+                {charNameFive}: Non riesco a capire come possano crescere senza il nostro intervento.
+                {charNameFive}: Come possano resistere alle erbacce, al freddo.
+                {charNameFive}: No, non capisco, scusa.
+                    
  
             -
-        ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameFive}.
+        {charNameFive}: Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di libri che blocca il sentiero ad ovest della foresta.
+        {charNameFive}: È arrivato il momento di capire dove possa portare.
+        {charNameFive}: Ma ti ringrazio per la chiacchierata.
              ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
     = two
@@ -861,21 +886,25 @@
    = one
    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     {charNameFive}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
+            ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
     
     = two
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     {charNameFive}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
+            ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
             
     = three
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     {charNameFive}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
+            ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
             
     = four
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     {charNameFive}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
+            ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main        
 
 
