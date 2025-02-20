@@ -156,31 +156,59 @@
         {charNameFive}: Ma ti ringrazio per la chiacchierata.
              ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
+    
     = two
+    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         ~ fifthStoryQuestCount ++
+        //Partendo dalla prima personaggia, dipendenza dai rapporti (circa)
+        {charNameFive}: Non me l'aspettavo, ma un po' la storia di {charNameOne} mi è rimasta addosso.
+        {charNameFive}: Non tanto il suo blocco, quello è una cosa comune a quell'età.
+        {charNameFive}: Quanto invece fosse consapevole delle opinioni di tutte le persone care.
+        {charNameFive}: Senza però perdere sé stessa.
+        {charNameFive}: Questa è una cosa difficile anche alla mia età.
         
-        {charNameFive}: Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+            + [I numeri sono indicatori, non fatti assoluti.]
                     ~ fifthBlue ++
+                {charNameFive}: Su questo hai ragione, {name}.
+                {charNameFive}: Eppure posso assicurarti che i miei cinquanta e rotti anni si portano addosso anche un bel po' di fatti.
+                   
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [{charNameOne} sapeva ridere, giocare, e questo ti rende libera.]
                     ~ fifthYellow ++
+                {charNameFive}: E la libertà può farti perdere ancora di più.
+                {charNameFive}: A volte non c'è maggiore libertà di essere stabili nel proprio ruolo su questo pianeta.
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ fifthRed ++
+                
+            + [Non c'è vera azione senza consapevolezza.]
+                    ~ fifthRed ++
+                {charNameFive}: Allora la maggior parte di noi non agisce mai veramente.
+                {charNameFive}: Eppure riusciamo a farci del male, e a farci del bene.
+                {charNameFive}: Qualcosa deve sempre cambiare.
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ fifthGreen ++
-  
+            + [E tu sei molto ricettiva verso le altre persone.]
+                    ~ fifthGreen ++
+                {charNameFive}: Forse non <i>molto</i>.
+                {charNameFive}: Ma indubbiamente quello che hanno da dire e quello che provano, conta.
+                {charNameFive}: Una mentore è una guida, ma per imparare a guidare deve capire chi ha dall'altra parte.
+                {charNameFive}: Di cosa abbia bisogno.
+                {charNameFive}: Dove voglia andare.
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ fifthPurple ++
- 
+                
+            + [Ci sono momenti in cui è necessario anche perdersi.]
+                    ~ fifthPurple ++
+                {charNameFive}: E in questo luogo in fondo arrivano solo persone che si sono perse.
+                {charNameFive}: E che se ne vanno più serene.
+                {charNameFive}: Avrebbero scoperto quella serenità, senza un po' di smarrimento?
+                
             -
+        {charNameFive}: Indubbiamente questa è una delle cose belle di questo luogo.
+        {charNameFive}: Sei qui per aiutare le altre persone, e finisci per scoprire cose di te.
+        {charNameFive}: Ma ora devo fare una cosa che mi farà scoprire solo nuovi odori fastidiosi.
+        {charNameFive}: È il momeno di svuotare lo stagno dalle sue cose più schifose.
              ~ fifthPauseTalking = fifthCharPauseDurantion
-            -> main
+                -> main
 
 
     
