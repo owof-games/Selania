@@ -28,9 +28,9 @@
         - not fifth_story_ended_check && fifthStory == Ended:
             -> fifth_story_ended_check    
     
-    //Discorsi riempitivi
+    //Storylets
     - fungusPauseTalking == 0 && firstStory == Ended:
-        -> discourse
+        -> fungus_storylets
     
     - else:
         -> descriptions
@@ -53,7 +53,7 @@
             <i>Sfioraci.</i>
             <i>{name} sente la voce del Canto delle Compagne.</i>
             <i>{name} realizza che è collegata a {charNameOne}.</i>
-            <i>Che tutto riporta a pochi istanti fa, quando ha sfiorato il suo viso, e ha portato un ricordo.</i>
+            <i>Che tutto riporta a pochi istanti fa, quando ha sfiorato il suo stesso viso, e ha portato un ricordo.</i>
             <i>E quel ricordo, {name}, è ora che ci stai sfiorando.</i>
             
         + [Esci dalla mia testa!]
@@ -62,7 +62,7 @@
             <i>Non più di quanto tu sia nella tua testa.</i>
             <i>Non meno di quanto tu sei in noi.</i>
             <i>È come se ci chiedessi di non essere.</i>
-            <i>E questa è una cosa che non sappiamo capire.</i>
+            <i>E questa è una cosa che è ma non sarà.</i>
             
         + [Le piante non dovrebbero parlare.]
             ~ playerBlue ++
@@ -76,7 +76,7 @@
             
         + [Ci piace la gioia!]
             ~ playerYellow ++
-            <i>E a noi ci piace {name}.</i>
+            <i>E a noi piace {name}.</i>
             <i>E tutte le emozioni che si spostano in questo terreno e nell'aria.</i>
             <i>E tutti i tempi che {name} vive, ha vissuto e vivrà.</i>
         
@@ -122,7 +122,7 @@
             <i>Quando il leone salta su un altro leone, trova la rissa.</i>
             <i>Ma quando un leoncino salta su un altro leoncino, trova ruzzoloni e corse.</i>
             <i>Il gioco non è nell'azione, ma nell'attitudine.</i>
-            <i>Quale attitudine è radicata in {name}?</i>
+            <i>Quale attitudine è radicata nelle azioni di {name}?</i>
         
         + [Spero che {charNameOne} sia capace di portare il suo cambiamento nel mondo.]
                 ~ playerPurple ++
@@ -134,14 +134,13 @@
         -
     <i>L'acqua nel terreno ci racconta che {charNameFive} ha molto aiutato {name} in questo viaggio.</i>
     <i>Anche noi vogliamo aiutare {name}, e per questo condividiamo una cosa.</i>
-    <i>{name} può scegliere di studiare la persona che ha davanti.</i>
-    <i>Di capire come parla, cosa le piace, cosa le piace sentirsi dire.</i>
-    <i>Oppure {name} può decidere di essere sé {pronouns has him: stesso|{pronouns has her: stessa|stessə}}, anche se questo può infastidire l'altra persona.</i>
-    <i>E scoprire che alcune persone sono felici di venire contraddette e infastidite.</i>
-    <i>Così come a volte l'acqua rinfresca, a volte diventa fango.</i>
-    <i>Permettendo a nuova vita di crescere.</i>
+    <i>{name} può seguire la voce di {charNameFive} e scegliere di studiare la persona che ha davanti come un uomo studia la vita attraverso un libro.</i>
+    <i>Oppure {name} può decidere di essere sé {pronouns has him: stesso|{pronouns has her: stessa|stessə}}, anche se questo può creare attrito con l'altra persona.</i>
+    <i>E scoprire che alcune persone hanno bisogno di venire contraddette.</i>
+    <i>A volte l'attrito genera fastidio, o volte genera fuoco.</i>
+    <i>A volte brucia il vecchio, permettendo al nuovo di crescere.</i>
     <i>Nessuna persona è uguale, nessuna persona vuole lo stesso trattamento.</i>
-    <i>Altri funghi solleticano le nostre nuove radici.</i>
+    <i>Ma altri funghi solleticano e distraggono le nostre nuove radici.</i>
     <i>Ringraziandoti ancora {name} per ora ti congediamo.</i>
     <i>Ma anche dall'altra parte del mondo sai già che non saremo mai lontani.</i>
             -> main
@@ -245,24 +244,18 @@
         -        
             -> main
         
-=== discourse
+=== fungus_storylets
     {   
-        //Opinioni dopo la fine della terza storia
-        - fourthTier == true:
-            -> four
-        //Opinioni dopo la fine della seconda storia    
-        - thirdTier == true:
-            -> three
-        //Opinioni dopo la fine della prima storia      
-        - secondTier == true:
-            -> two
-        //Opinioni presenti da inizio gioco    
-          - firstTier == true:
+        //Qui tracciamo le condizioni per determinati storylets. Me lo immagino silenzioso comunque fino a quando non esplode la situa col terzo personaggio.
+        - firstTier == true:
             -> one
+        
+        - else:
+            -> descriptions
     }
     
     = one
-    
+     <i>{~ I rami tozzi sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba osserva lontana dalla base della pianta.}</i>
     -> main
     
     = two
@@ -294,7 +287,7 @@
     }
     
     = one
-     <i>{~ I rami sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba se ne resta lontana dalla base della pianta.}</i>
+     <i>{~ I rami sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba osserva lontana dalla base della pianta.}</i>
         -> main
     
     = two

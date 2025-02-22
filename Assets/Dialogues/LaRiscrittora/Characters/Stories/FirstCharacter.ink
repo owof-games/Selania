@@ -25,22 +25,21 @@
                     -> hub
             //Altre opzioni        
                 - else:
-                    {charNameOne}: {~ Ho bisogno di tempo per me.|Ti spiace tornare tra un po'?|Credo di aver bisogno di silenzio, torna più tardi.}
+                    {charNameOne}: {~ Ho bisogno di tempo da sola.|Torna tra un po'.|Mi serve un po' di silenzio ora.}
                 -> main    
             }
 
 = hub
 ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
 
-    {charNameOne}: {~ Ero sicura di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicura di star capendo tutto di questo luogo.}
+    {charNameOne}: {~ Qui le farfalle non smettono mai di giocare!|Sono sicura di aver visto due scoiattoli giocare a nascondino!|Questo luogo odora di cose vere e antiche.}
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_first_character
                 
                 
             //Se non ho ancora fatto il dono e NON ho parlato col mentore e ho parlato abbastanza con lei
             + {firstStoryQuestCount > minStoryQuesTCount && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
-                    {charNameOne}: È gentile da parte tua.
-                    {charNameOne}: Ma non hai ancora chiesto al mentore a cosa servono.
+                    {charNameOne}: Ti ringrazio, non hai ancora chiesto al mentore a cosa servono.
                     {charNameOne}: Forse conviene che prima parli con lui.
                         -> main
             
