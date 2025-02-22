@@ -16,19 +16,19 @@
         + [Vorrei parlare d'altro.]
             -> talk_with_mentor
         -
-    -> top   
+            -> top   
 
-= myself
-    + [Vorrei cambiare il mio nome.]
-            -> name_choice -> support
-    + [Vorrei cambiare i miei pronomi.]
-            -> gender -> support
-    + [Vorrei consigli su come stare meglio.]
-            -> mindfulness -> support
-    + [Vorrei aggiornare la lista dei miei temi delicati.]
-            -> trigger_warning   
-    + [Sono a posto così, grazie.]
-            -> talk_with_mentor
+    = myself
+        + [Vorrei cambiare il mio nome.]
+                -> name_choice -> support
+        + [Vorrei cambiare i miei pronomi.]
+                -> gender -> support
+        + [Vorrei consigli su come stare meglio.]
+                -> mindfulness -> support
+        + [Vorrei aggiornare la lista dei miei temi delicati.]
+                -> trigger_warning   
+        + [Sono a posto così, grazie.]
+                -> talk_with_mentor
  
  
 
@@ -89,16 +89,19 @@
             {charNameFive}: Però un paio di volte ho usato la poltrona per fare del body scan, e non è stato male.
             {charNameFive}: Mi sono quasi addormentata.
             {charNameFive}: Quasi.
-            -> top
+            -> second_top
             
     + {thirdTier}[Sul laboratorio.]
         Informazioni
-            -> top
+            -> second_top
 
     + {fourthTier}[Sul nido.]
         Informazioni
+            -> second_top
+    
+    + {secondTier} [Vorrei parlare di un altro luogo.]
             -> top
-
+    
     + [Vorrei parlare di qualcosa di diverso.]
         -> talk_with_mentor
     -
@@ -112,7 +115,7 @@
         {gifts_and_ink}{charNameFive}: Ci <b>parli</b>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.
         {gifts_and_ink}{charNameFive}: Poi, le fai un <b>dono</b>.
         {gifts_and_ink}{charNameFive}: Più il dono è qualcosa che le dimostra che l'hai ascoltata, più avrai <b>inchiostro</b> per aiutarla a riscrivere la sua storia.
-        {questions}{charNameFive}: A quel punto inizi i tuoi <b>interventi</b>, riprendendo eventi della sua storia e la aiuti a guardarli sotto una luce diversa.
+        {questions}{charNameFive}: A quel punto inizi i tuoi <b>interventi</b>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.
         {questions}{charNameFive}: Più inchiostro hai, più interventi puoi fare.
         {questions}{charNameFive}: Infine: in base alle cose che avrai detto, la persona sceglierà il suo <b>nuovo nome</b>.
         {questions}{charNameFive}: E poi si ricomincia.
@@ -256,6 +259,7 @@
  
     = one
      ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+     
         {charNameFive}: Quando inizio a pensare molto, ma molto molto, una cosa che mi aiuta è concentrarmi su quello che mi circonda.
         {charNameFive}: Inizio ad osservare un oggetto e a dirmi dentro la testa cosa è.
         {charNameFive}: Una sedia, uno sgabello, un frigorifero, un tostapane, una lavatrice.
@@ -263,10 +267,13 @@
         {charNameFive}: Se ci sono poche cose, provo a descrivere le parti di un oggetto.
         {charNameFive}: O del mio corpo.
         {charNameFive}: Cosa che evito nei giorni in cui non mi piaccio.
+        {charNameFive}: Questa cosa funziona benissimo anche con gli odori, o i suoni, o il tatto, o persino il gusto.
+        {charNameFive}: Ti aiuta a tornare coi piedi per terra.
             ->->
     
     = two
      ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+     
         {charNameFive}: Ci sono volte in cui mi focalizzo solo sulle cose che non vanno.
         {charNameFive}: Una cosa che mi aiuta in queste situazioni è puntare una sveglia ogni due ore.
         {charNameFive}: E quando la sveglia suona provo a chiedermi:
@@ -280,6 +287,7 @@
     
     = three
      ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+     
      {charNameFive}: Un tempo conoscevo una ragazza che soffriva di attacchi d'ansia e che mi ha dato una dritta che puoi applicare ovunque.
      {charNameFive}: Se il pensiero si inceppa su qualcosa, prova a stringere con forza degli oggetti che hai vicino.
      {charNameFive}: Può essere il bracciolo di una sedia.
@@ -291,6 +299,7 @@
     
     = four
      ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+     
     {charNameFive}: Il mio migliore amico è il body scan.
     {charNameFive}: Lo faccio al risveglio tra gli arbusti della foresta.
     {charNameFive}: Prima di tutto mi stendo, comoda, e faccio qualche respiro profondo.
@@ -305,6 +314,7 @@
         
     = five
      ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+     
     {charNameFive}: Non so se ti capita di avere l'addome contratto.
     {charNameFive}: Per molte persone quell'area, e il diaframma in particolare, accumula un sacco di tensione e preoccupazione.
     {charNameFive}: Un modo per allentarla è prendere un suono che ti piace, una vocale, un <i>Aum</i>, tutte le vocali, e iniziare a ripeterle, con calma.

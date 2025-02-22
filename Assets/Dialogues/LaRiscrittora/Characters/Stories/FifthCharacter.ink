@@ -27,7 +27,7 @@
         + [Avrei bisogno di una mano.]
             -> support
         
-        + {(pre_test && not little_storylets.voices) or (firstCharacterInkLevel has High && not little_storylets.infoImpo)}[Mi è successa una cosa strana.]
+        + {(pre_test && not little_storylets.voices) or (firstCharacterInkLevel has High && not little_storylets.infoImpo) or talking_fungus.first_story_ended_check}[Mi è successa una cosa strana.]
             -> little_storylets
             
         + {knowing_second_character}[Vorrei conoscerti meglio.]
@@ -39,7 +39,7 @@
                 -> talk_with_mentor
             }
             
-        + [Nulla, scusa.]
+        + [Ho cambiato idea.]
             -> main
         -
 -> main
@@ -109,7 +109,7 @@
         ~ fifthStoryQuestCount ++
         //Amore per il giardinaggio e la possibilità, per la giocatrice, di esprimere qualcosa che poi si potrebbe avvicinare ai possibili finali.
         
-        {charNameFive}: Non è giusto avere delle preferenze, ma la serra credo proprio sia il mio posto preferito.
+        {charNameFive}: Non è giusto avere delle preferenze, ma la serra è il mio posto preferito.
         {charNameFive}: C'è qualcosa nel vedere crescere piante, fiori, funghi che mi fa sentire appagata.
         {charNameFive}: Non è solo l'odore della terra, o l'umidità nell'aria nei giorni più caldi.
         {charNameFive}: Ma quella sensazione che con le tue mani puoi permettere a un altro corpo di crescere al meglio.
@@ -119,7 +119,7 @@
                 {charNameFive}: Sì, ne capisco il fascino.
                 {charNameFive}: A volte mi siedo lì e mi godo per qualche istante l'attesa.
                 {charNameFive}: Il nulla che accade.
-                {charNameFive}: Ma poi le mani fremono, e devo riprendere a fare cose.
+                {charNameFive}: Ma poi le mani fremono, mi supplicano di sistemare qualcosa fuori posto.
                 
             + (fiveYellow) [Lo stagno è divertente, succede di tutto.]
                     ~ fifthYellow ++
@@ -131,7 +131,7 @@
                     ~ fifthRed ++
                 {charNameFive}: E disordinata, sporca.
                 {charNameFive}: Posso capirne il fascino, ma non è un luogo dove resto con piacere.
-                {charNameFive}: E quella pianta al centro non vuole saperne né di crescere né di morire.
+                {charNameFive}: E quel tronco al centro non vuole saperne né di crescere né di morire.
                 {charNameFive}: Una cosa davvero fastidiosa.
                     
                 
@@ -143,17 +143,16 @@
   
             + (fivePurple) [Per me è il contrario: sono felice che crescano a prescidere da me.]
                     ~ fifthPurple ++
-                {charNameFive}: Non condivido, sinceramente.
-                {charNameFive}: Ma sicuramente è un mio limite.
-                {charNameFive}: Non riesco a capire come possano crescere senza il nostro intervento.
-                {charNameFive}: Come possano resistere alle erbacce, al freddo.
-                {charNameFive}: No, non capisco, scusa.
+                {charNameFive}: Senza di te? Dobbiamo bagnare il terreno, prepararlo, seminare.
+                {charNameFive}: Non ci sarebbe nulla senza il nostro lavoro.
+                {charNameFive}: Non saprebbero resistere alle erbacce, al freddo.
+                {charNameFive}: No, non sono d'accordo, scusa.
                     
  
             -
         {charNameFive}: Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di libri che blocca il sentiero ad ovest della foresta.
         {charNameFive}: È arrivato il momento di capire dove possa portare.
-        {charNameFive}: Ma ti ringrazio per la chiacchierata.
+        {charNameFive}: Grazie per la chiacchierata, {name}.
              ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
     
@@ -161,8 +160,9 @@
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         ~ fifthStoryQuestCount ++
+        
         //Partendo dalla prima personaggia, dipendenza dai rapporti (circa)
-        {charNameFive}: Non me l'aspettavo, ma un po' la storia di {charNameOne} mi è rimasta addosso.
+        {charNameFive}: La storia di {charNameOne} mi ha colpita.
         {charNameFive}: Non tanto il suo blocco, quello è una cosa comune a quell'età.
         {charNameFive}: Quanto invece fosse consapevole delle opinioni di tutte le persone care.
         {charNameFive}: Senza però perdere sé stessa.
@@ -171,13 +171,13 @@
             + [I numeri sono indicatori, non fatti assoluti.]
                     ~ fifthBlue ++
                 {charNameFive}: Su questo hai ragione, {name}.
-                {charNameFive}: Eppure posso assicurarti che i miei cinquanta e rotti anni si portano addosso anche un bel po' di fatti.
+                {charNameFive}: Eppure posso assicurarti che i miei cinquanta e rotti anni si portano addosso anche un bel po' di fatti scricchiolanti e ricordi.
                    
                 
-            + [{charNameOne} sapeva ridere, giocare, e questo ti rende libera.]
+            + [{charNameOne} sapeva ridere, giocare, e questo l'ha resa libera.]
                     ~ fifthYellow ++
                 {charNameFive}: E la libertà può farti perdere ancora di più.
-                {charNameFive}: A volte non c'è maggiore libertà di essere stabili nel proprio ruolo su questo pianeta.
+                {charNameFive}: A volte non c'è maggiore libertà di essere stabili e felici nel proprio ruolo.
                 
                 
             + [Non c'è vera azione senza consapevolezza.]
@@ -203,10 +203,10 @@
                 {charNameFive}: Avrebbero scoperto quella serenità, senza un po' di smarrimento?
                 
             -
-        {charNameFive}: Indubbiamente questa è una delle cose belle di questo luogo.
+        {charNameFive}: Questo luogo continua a stupirmi.
         {charNameFive}: Sei qui per aiutare le altre persone, e finisci per scoprire cose di te.
-        {charNameFive}: Ma ora devo fare una cosa che mi farà scoprire solo nuovi odori fastidiosi.
-        {charNameFive}: È il momeno di svuotare lo stagno dalle sue cose più schifose.
+        {charNameFive}: Ma ora è il momeno di svuotare lo stagno dalle sue cose più schifose.
+        {charNameFive}: A dopo, {name}.
              ~ fifthPauseTalking = fifthCharPauseDurantion
                 -> main
 
@@ -216,6 +216,7 @@
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         //Questo è un riferimento indiretto anche ai figli che ora non la chiamano molto.
         ~ fifthStoryQuestCount ++
+         
         {charNameFive}: A volte un po' mi pesa, tutto questo via vai.
         {charNameFive}: Ci sono persone a cui mi sono affezionata, che non rivedrò più.
         {charNameFive}: Persone che ho aiutato e ora vorrei sentire più spesso.
@@ -323,7 +324,7 @@
     = six
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     
-TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della sua reazione. -> si parla esplicitamente di responsabilità personale (in antitesi anche con la visione del fungo)?
+TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della sua reazione. -> si parla esplicitamente di responsabilità personale (in antitesi anche con la visione del fungo)? Questa è una visione di RABBIA.
 
         ~ fifthStoryQuestCount ++
         
@@ -917,7 +918,7 @@ TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della su
     
     = two
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    {charNameFive}: {~ Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.|A volte ho questo timore; posso davvero essere una buona mentore, anche se sono poco istruita?|Sono contenta di aver aperto la biblioteca, ma quella poltrona mi invita troppo a riposare, quando invece ci sono mille cose da fare.}
+    {charNameFive}: {~ Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.|A volte ho questo timore: posso davvero essere una buona mentore, anche se sono poco istruita?|Sono contenta di aver aperto la biblioteca, ma quella poltrona mi invita troppo a riposare, quando invece ci sono mille cose da fare.}
             ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
             
