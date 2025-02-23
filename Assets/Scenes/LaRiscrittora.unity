@@ -8413,7 +8413,6 @@ MonoBehaviour:
   backGreenhouse: {fileID: 21300000, guid: 4e7db147f93ea6e4b851dd19572590df, type: 3}
   backGreenhouseMiddlePath: {fileID: -4100362581192935312, guid: d1755486176423b47a98bf0ace6e90f9, type: 3}
   backNest: {fileID: -3239163318168165702, guid: 16e88c7ff044338449f76e5a912abaef, type: 3}
-  backLabyrinth: {fileID: -5714562920491157450, guid: 137d24d3ff34fdf40a68f8ab67d5d2ea, type: 3}
   backLibrary: {fileID: 21300000, guid: 96006235423b21540ae3a23fb73408c9, type: 3}
   backLaboratory: {fileID: -3070273842284801829, guid: ed53d17256160094bb8745f874ba201d, type: 3}
   ambientSounds: {fileID: 1863324330}
@@ -8422,6 +8421,7 @@ MonoBehaviour:
   busstopSounds: {fileID: 8300000, guid: 0edcaa325c84c2d47b9f70a7f219ed5d, type: 3}
   greenhouseSounds: {fileID: 8300000, guid: f094a8aef5c73a149a1c89f989d24cdf, type: 3}
   greenhousemiddlepathSounds: {fileID: 8300000, guid: f094a8aef5c73a149a1c89f989d24cdf, type: 3}
+  librarySounds: {fileID: 0}
 --- !u!82 &1863324330
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9056,17 +9056,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045264602}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0014740629, w: 0.9999989}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 46204316}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.169}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 458, y: -416}
-  m_SizeDelta: {x: 166.884, y: 325.202}
+  m_AnchoredPosition: {x: 570, y: -392}
+  m_SizeDelta: {x: 344.1675, y: 471.6873}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2045264604
 MonoBehaviour:
