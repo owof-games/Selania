@@ -26,7 +26,7 @@ Il libro di Mario
     + Me ne vado  
     -> main
 === libro_val
-Il libro di Val
+<i>Home</i>, di Val Fausto Lattanzio (he/they)
     + Vorrei leggere ancora
        -> book_test_intro
     + Me ne vado  
