@@ -1,5 +1,7 @@
 //Variabili legate alle personagge
 //Con nuova versione: NotStarted non riguarda più la storia principale, ma l'accesso alla personaggia
+TODO: per tutte le personagge poi aggiungere dei commenti ad hoc dove sensato da parte di eventuali personaggi presenti in scena.
+
     LIST storyStates = NotStarted, Active, Ended
     VAR minStoryQuesTCount = 7
 //COME PROMEMORIA. LISTA DI TIPI DI TONO CHE POSSIAMO TENERE IN UNA CONVERSAZIONE: ROSSO (RABBIA, PASSIONE, AZIONE, OPPOSIZIONE). VIOLA (SPIRITUALITA', VISIONE DEL GRANDE SCHEMA DELLE COSE, SGUARDO POETICO, TESA VERSO UNA MISSIONE). GIALLO (GIOCOSITA', RISATA, DIVERTIMENTO, FANCIULLEZZA). VERDE (CUORE, AFFETTI, CURA DELLE PERSONE CARE, RIFLESSIONE EMOTIVA). BLU (RAZIONALITA', CALCOLO, VISIONE PRATICA, DISCIPLINA).
@@ -48,8 +50,8 @@
              ----------------------------------*/
 
 //Ordine degli stati:
-    LIST secondCharacterPossibleStates = LaVegliante, NuovoStatoUnoDue, NuovoStatoDueDue, NuovoStatoTreDue
-    VAR secondCharacterState = LaVegliante
+    LIST secondCharacterPossibleStates = IlRiccio, IlGrizzly, IlLupo, IlDelfino, IlCapibara, IlCorvo
+    VAR secondCharacterState = IlRiccio
     
     VAR secondStory = NotStarted
     //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
@@ -179,8 +181,18 @@
             ~ return "Violino"
         
     //Personaggia Due       
-        - LaVegliante:
-            ~ return "la Vegliante"
+        - IlRiccio:
+            ~ return "il Riccio"
+        - IlGrizzly:
+            ~ return "il Grizzly"
+        - IlLupo:
+            ~ return "il Lupo"
+        - IlDelfino:
+            ~ return "il Delfino"
+        - IlCapibara:
+            ~ return "il Capibara"
+        - IlCorvo:
+            ~ return "il Corvo"
             
     //Personaggia Tre
         - SpettroDelVuoto:
@@ -226,9 +238,19 @@
         - Violino:
             ~ return "Violino"
 
-    //Personaggia Due        
-        - LaVegliante:
-            ~ return "La Vegliante"
+    //Personaggia Due       
+        - IlRiccio:
+            ~ return "Riccio"
+        - IlGrizzly:
+            ~ return "Grizzly"
+        - IlLupo:
+            ~ return "Lupo"
+        - IlDelfino:
+            ~ return "Delfino"
+        - IlCapibara:
+            ~ return "Capibara"
+        - IlCorvo:
+            ~ return "Corvo"
 
     //Personaggia Tre
         - SpettroDelVuoto:

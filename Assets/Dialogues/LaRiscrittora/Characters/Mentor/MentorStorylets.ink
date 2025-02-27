@@ -543,7 +543,10 @@
         + [Tu sei sempre con ləi, ləi è sempre con te.]
                 ~ fifthPurple ++
         -
-    {charNameFive}: Comunque è un bugiardo!
+    {charNameFive}: Comunque è una piccola bestiola.
+    {charNameFive}: Mi sembra un riccio.
+    {charNameFive}: Così carino, tenero.
+    {charNameFive}: Ma poi come ti avvicini ti fa male.
     {charNameFive}: No, non è il caso di perdere la pazienza.
     {charNameFive}: E sono sicura che troverai una soluzione.
     {charNameFive}: Prenditi il tuo tempo per allontanarlo.

@@ -141,6 +141,7 @@
         ???: Talco, dimmi che sei qui anche tu, ti prego, non so capire il mondo senza di te.
         ???: Sei l'unica persona con cui posso permettermi di litigare.
         ???: E l'unica che mi sopporta da quando ho finito il conservatorio.
+        TODO: scegliere strumento di partenza, dare a quello strumento un valore di rinuncia (a partire dal triangolo, sfigatissimo).
         ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameOne}.
         {charNameOne}: No, io sono <b>{charNameOne}</b>.
         {charNameOne}: Ehi! Non è questo il mio nome.
