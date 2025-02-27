@@ -25,24 +25,25 @@
             -> hub
     //Altre opzioni        
         - else:
-            {charNameTwo}: {~ Ho bisogno di tempo per me.|Ti spiace tornare tra un po'?|Credo di aver bisogno di silenzio, torna più tardi.}
+            {charNameTwo}: {~ Torna dopo.|Ora ho voglia di stare da solo.|Lasciami in pace.}
         -> main
     }
 
 = hub
 ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
 
-    {charNameTwo}: {~ Ero sicura di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicura di star capendo tutto di questo luogo.}
+    {charNameTwo}: {~ Ciao.|...}
+    
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_second_character
                 
     
             //Se non ho ancora fatto e ho parlato abbastanza con lui
-            + {secondStoryQuestCount > minStoryQuesTCount && findedGifts != ()} [Ti vorrei donare questa cosa.]
+            + {secondStoryQuestCount > minStoryQuesTCount && findedGifts != ()} [TVoglio regalarti questa cosa.]
                     -> second_story_gift
         
             //Dono fatto ma non ho avviato la main story
-            + {second_story_gift.ink_outcome && not main_story_second_character} [Ti va di riscrivere la tua storia con me?]
+            + {second_story_gift.ink_outcome && not main_story_second_character} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
                     -> second_story_chech_trigger
     
             //SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
@@ -64,13 +65,29 @@
             - not one:
                 -> one
             - not two:
-                -> two
+                {
+                    - that_little_liar_storylet:
+                        -> two
+                    - else:
+                        ???: Non ci parlo con chi parla con quella là!
+                        ???: Mi ha fatto male!
+                        -> main
+                }
+                
             - not three:
                 -> three
             - not four:
                 -> four
             - not five:
-                -> five
+                {
+                    - watering_can_storylet:
+                        -> five
+                    - else:
+                        {charNameTwo}: La mentore ce l'ha con me!
+                        {charNameTwo}: Dille qualcosa!
+                        -> main
+                }
+                
             - not six:
                 -> six
             - not seven:
@@ -90,71 +107,99 @@
         }
 
     = one
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    
-        //Presentazione.
+    //Obiettivo: Presentare l’elemento delle bugie. Vengono dette cose sconfessate poi nella terza storia.
+    //Contenuto: Compleanno, giochi
+        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ secondStoryQuestCount ++
         
-        ???: Non è che hai visto passare di qui una persona?
-            + (twoBlue) [Dammi dettagli più concreti.]
-                    ~ secondBlue ++
+        ???: Perché sei qui?
+            
+            + [t]
+                ~ secondBlue ++
                 
-            + (twoYellow) [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ secondYellow ++
+            + [t]
+                ~ secondYellow ++
                 
-            + (twoRed) [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + [t]
                 ~ secondRed ++
 
                 
-            + (twoGreen) [Se ti senti sola, sono qui ad ascoltarti.]
+            + [t]
                 ~ secondGreen ++
   
                 
-            + (twoPurple) [Tu sei sempre con ləi, ləi è sempre con te.]
+            + [t]
                 ~ secondPurple ++
- 
+            -    
+        
+        ???: Io sono qui perché è il mio compleanno.
+        ???: E mamma voleva regalarmi qualcosa di figo.
+        ???: L'anno scorso per Natale mi ha preso tutte le figurine di Cartone animato.
+        ???: Ma poi mio fratello me le ha rubate tutte.
+        ???: Ma lii qui di sicuro non ci può venire.
+        ???: Perché mamma ha promesso qualcosa di figo a me, non a lui.
+        ???: Ma dove trovo le caramelle?
+        ???: Non c'è compleanno senza caramelle!
+        
+            + (twoBlue) [t]
+                    ~ secondBlue ++
+                
+            + (twoYellow) [t]
+                    ~ secondYellow ++
+                
+            + (twoRed) [t]
+                ~ secondRed ++
+
+                
+            + (twoGreen) [t]
+                ~ secondGreen ++
+  
+                
+            + (twoPurple) [t]
+                ~ secondPurple ++
             -
-        ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameTwo}.
-        {charNameTwo}: No, io sono <b>{charNameTwo}</b>.
-        {charNameTwo}: Ehi! Non è questo il mio nome.
-        {charNameTwo}: <i>{charNameTwo}</i>.
-        {charNameTwo}: Forse se provo a dirlo al contrario?
-        {charNameTwo}: Aicnunir.
-        {charNameTwo}: Uh.
-        {charNameTwo}: Prova tu. Come ti chiami?
-    	    + {name_choice} [Mi chiamo {name}.]
-    	    + [Il mio nome è...]
-    	        -> name_choice ->
-    	    -
-    	{charNameTwo}: E con che pronomi vuoi che ti chiami?
-    	        -> gender ->
-    	{charNameTwo}: Grandioso, io uso i femminili.      
+            
+        ???: Comunque ora che ci penso voglio aspettare gli altri.
+        ???: Così inizia la festa.
+        ???: A dopo!
+            -
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
+   
     = two
+    //Obiettivo: Messa in evidenza della rabbia, ma anche della sua curiosità (finale rosso o finale viola: vede la bellezza nelle cose brutte.)
+    //Contenuto: Prima gioia per gli insetti, ecc, poi domande sulla sua violenza alla mentore.
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    
-        //Presentazione.
         ~ secondStoryQuestCount ++
         
-        {charNameTwo}: Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+        {charNameTwo}: Questo posto è PIENO di insetti!
+        {charNameTwo}: Ma ho lasciato a casa il tablet.
+        {charNameTwo}: Come le faccio tutte le foto per la scuola?
+        {charNameTwo}: Sapevi che INSETTO fa COSA?
+        {charNameTwo}: e che?
+        {charNameTwo}: e che anche...
+        {charNameTwo}: A scuola mi prendono in giro per questa cosa.
+        {charNameTwo}: Ma sono comunque il più bravo!
+        
+        //Opzioni, varianti sulla violenza alla mentore, risposte diverse?
+     
+            + (twoBlue) [t]
                     ~ secondBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + (twoYellow) [t]
                     ~ secondYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + (twoRed) [t]
                 ~ secondRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + (twoGreen) [t]
                 ~ secondGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + (twoPurple) [t]
                 ~ secondPurple ++
- 
+
             -
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
@@ -162,12 +207,53 @@
 
     
     = three
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    //Obiettivo: mostrare che ha mentito all'inizio
+    //Contenuto: Ci chiede come ci chiamiamo, emerge una bugia diversa a seconda del genere -> Qui però scopriamo che ci mente, possiamo decidere di mettere in evidenza o meno questa bugia, solitudine.
     
-        //Presentazione.
-        ~ secondStoryQuestCount ++
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ secondStoryQuestCount ++
         
-        {charNameTwo}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: Ma come ti chiami?
+        
+            + {name_choice} [Mi chiamo {name}.]
+    	    + [Il mio nome è...]
+    	        -> name_choice ->
+    	    -
+    	    {name}: E i miei pronomi sono...
+    	        -> gender ->
+    	        
+    	 {
+    	    - pronouns has him:
+    	        -> him_liar
+    	    - pronouns has her:
+    	        -> her_liar
+    	    - pronouns has they:
+    	        -> they_liar
+    	 }       
+    	        
+    	        
+        	  = him_liar
+        	  ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        	  //le carte non sono mai esistite tranne una, che ha regalato ad Amir di sua volontà
+        	    
+        	    -> three_continue
+        	  
+        	  = her_liar
+        	  ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        	  //mamma si è dimenticata dell'ultimo compleanno
+        	    -> three_continue
+        	  
+        	  = they_liar
+        	  ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+              //non è il compleanno  
+                -> three_continue
+       
+       
+        = three_continue 
+        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+            //Opzioni diverse a seconda delle scelte sopra, ma solo per le due legate all'evidenza della bugia.
+        
+            
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
@@ -193,11 +279,12 @@
     
     
     = four
+    //Obiettivo: Far vedere che c'è qualcosa che non va a casa.
+    //Contenuto: Momento di vulnerabilità, ci parla della nonna (ma non ci dice che è morta) e ci dice che è fuggito da casa.
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ secondStoryQuestCount ++
     
-        //Presentazione.
-        ~ secondStoryQuestCount ++
-        
+    //All'inizio mettiamo un commento in base al tipo di relazione che stiamo creando, per vedere se stiamo confermando o meno una forma di stabilità, di credibilità.    
         {charNameTwo}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
@@ -219,13 +306,15 @@
             -
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
-    = five
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     
-        //Presentazione.
-        ~ secondStoryQuestCount ++
+    = five
+    //Obiettivo: Mostrare sempre il carattere complicato ma anche la posizione complicata socialmente. La scuola è un posto in cui non è al sicuro.
+    //Contenuto: Lo accusiamo del furto, da lì emergono alcune cose sulla scuola. A seconda del rapporto, mente per evitare le punizioni, o è sincero. Il discorso dei compagni parte a prescindere.
+  
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ secondStoryQuestCount ++
         
-        {charNameTwo}: Non è che hai visto passare di qui una persona?
+        {name}: Dalla serra è scomparso l'innaffiatoio.
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
@@ -244,14 +333,15 @@
                 ~ secondPurple ++
  
             -
+            {charNameTwo}: Comunque l'innaffiatoio sicuramente ora è alla serra.
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
     
     
     = six
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    
-        //Presentazione.
+    //Obiettivo: Mostrare che sta iniziando a non mentire.
+    //Contenuto: Ci racconta della rana, possiamo decidere di non credergli o meno.
+        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ secondStoryQuestCount ++
         
         {charNameTwo}: Non è che hai visto passare di qui una persona?
@@ -276,9 +366,9 @@
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
     = seven
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    
-        //Presentazione.
+    //Obiettivo: raccontare il suo rapporto con la fantasia e le tensioni in famiglia (finale verde e finale viola)
+    //Contenuto: Parla della fantasia, e del fatto che la sera si riscrive la giornata, capiamo che la famiglia litiga spesso.
+        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ secondStoryQuestCount ++
         
         {charNameTwo}: Non è che hai visto passare di qui una persona?
@@ -305,10 +395,10 @@
             
             
     = eight
+    //Obiettivo: presentare la relazione col fratello maggiore, che è una persona molto pragmatica (finale blu, finale giallo)
+    //Contenuti: ci parla del fratello come mito, riferimento, modello. All'inizio mente, ma poi si ridimensiona da solo (sta iniziano a fidarsi).
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    
-        //Presentazione.
-        ~ secondStoryQuestCount ++
+    ~ secondStoryQuestCount ++
         
         {charNameTwo}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
@@ -334,9 +424,9 @@
     
     
     = nine
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    
-        //Presentazione.
+    //Obiettivo: mostrare tra le righe la paura per il futuro, anche dimostrazione di rabbia verso di sè? (finale rosso sicuro, finale blu?
+    //Contenuti: tutti sanno cosa diventare da grandi, io no
+        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ secondStoryQuestCount ++
         
         {charNameTwo}: Non è che hai visto passare di qui una persona?
@@ -362,9 +452,9 @@
             -> main    
     
     = ten
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    
-        //Presentazione.
+    //Obiettivo: si fida di noi, mostriamo il suo rapporto con la violenza. Finale rosso, finale viola (aiutare gli altri).
+    //Contenuti: capiamo che a scuola è un bullo, ma ci sono persone che protegge.
+        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ secondStoryQuestCount ++
         
         {charNameTwo}: Non è che hai visto passare di qui una persona?
@@ -390,9 +480,9 @@
             -> main    
     
     = eleven
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    
-        //Presentazione.
+    //Obiettivo: curiosità, sperimentazione. finale giallo, finale viola
+    //Contenuti: esperimenti in casa (microscopio, muro bruciato col Meccano
+        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ secondStoryQuestCount ++
         
         {charNameTwo}: Non è che hai visto passare di qui una persona?
@@ -416,10 +506,11 @@
             -
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main    
-    = twelve
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     
-        //Presentazione.
+    = twelve
+    //Obiettivo: narrativamente, lasciarcelo con una immagine positiva. Far vedere il peso dei genitori. Finale verde, finale giallo.
+    //Contenuti. Momento tenero. L'altra nonna, la casa al mare, momenti di pace. I genitori non ci sono in queste occasioni
+        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ secondStoryQuestCount ++
         
         {charNameTwo}: Non è che hai visto passare di qui una persona?

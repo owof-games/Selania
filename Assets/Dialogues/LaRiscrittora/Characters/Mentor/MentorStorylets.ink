@@ -73,8 +73,10 @@
     - are_entities_together_in(PG, Mentor, BusStop) && not first_bus_stop_visit:
         -> first_bus_stop_visit
  
-//Storylets legati alla terza storia.
-
+//Storylets legati alla seconda storia
+    - knowing_second_character.one:
+        -> that_little_liar_storylet
+    
     - else:
         ->->
 
@@ -512,3 +514,47 @@
     
     fifth_character_feedback
     ->->
+    
+//Storylets sul secondo personaggio
+    === that_little_liar_storylet
+        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    
+    {charNameFive}: Dimmi che sei {pronouns has him: riuscito|{pronouns has her: riuscita|riuscitə}} a rimandare quella pest- quel bambino a casa.
+    {charNameFive}: Non è mai successo che qui arrivassero dei bambini!
+    {charNameFive}: E mi ha tirato un calcio!
+    {name}: Lui dice che gli hai fatto male.
+    
+        + [Dammi dettagli più concreti.]
+                    ~ fifthBlue ++
+                
+        + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+                    ~ fifthYellow ++
+                
+        + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+                ~ fifthRed ++
+
+                
+        + [Se ti senti sola, sono qui ad ascoltarti.]
+                ~ fifthGreen ++
+  
+                
+        + [Tu sei sempre con ləi, ləi è sempre con te.]
+                ~ fifthPurple ++
+        -
+    {charNameFive}: Comunque è un bugiardo!
+    {charNameFive}: No, non è il caso di perdere la pazienza.
+    {charNameFive}: E sono sicura che troverai una soluzione.
+    {charNameFive}: Prenditi il tuo tempo per allontanarlo.
+    {charNameFive}: Ma non troppo, per favore.
+        ~ secondPauseTalking = 0
+    ->->
+    
+    === watering_can_storylet
+        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    Mentore ci dice che è sicura che l'ha preso il ragazzino.
+    ->->
+
