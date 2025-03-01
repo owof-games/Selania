@@ -416,7 +416,7 @@
         {charNameTwo}: Se faccio cadere le cose per terra.
         {charNameTwo}: Se mi distraggo.
         {charNameTwo}: Una volta nonna, quando stava bene, è venuta e ha sgridato tutte le maestre.
-        {charNameTwo}: Ora sono un po' più brave con me.
+        {charNameTwo}: Ora sono un po' più gentili.
         {charNameTwo}: Ma quella di matematica dice sempre che le dispiace per me.
         {charNameTwo}: E non mi piace quando fa così.
             
@@ -460,14 +460,27 @@
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ secondStoryQuestCount ++
         
-        {charNameTwo}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: Prima ho visto una rana allo stagno.
+        {charNameTwo}: E so tutto sulle rane.
+        {charNameTwo}: Che mica chiudono gli occhi per dormire.
+        {charNameTwo}: E che alcune sono velenose.
+        {charNameTwo}: E velenoso e tossico non sono la stessa cosa.
+        {charNameTwo}: Nonna dice che se lo lecchi e stai male, è tossico.
+        {charNameTwo}: Se lo tocchi e stai male, è velenoso.
+        {charNameTwo}: E se ti guarda e stai male, è mamma.
+        {charNameTwo}: E so altre cose sulle rane.
+        {charNameTwo}: Ma non ho mai visto una rana parlare.
+        {charNameTwo}: O fare dei regali.
+        {charNameTwo}: E quella dello stagno mi ha parlato.
+        {charNameTwo}: Ma mi ha detto che il regalo è per te invece.
+        
             + [Dammi dettagli più concreti.]
-                    ~ secondBlue ++
+                ~ secondBlue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ secondYellow ++
+                ~ secondYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + [Menti!]
                 ~ secondRed ++
 
                 
@@ -475,7 +488,7 @@
                 ~ secondGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + [Menti!]
                 ~ secondPurple ++
  
             -
