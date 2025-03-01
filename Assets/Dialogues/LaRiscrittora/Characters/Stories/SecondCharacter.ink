@@ -494,6 +494,7 @@
             -
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
+    
     = seven
     //Obiettivo: raccontare il suo rapporto con la fantasia e le tensioni in famiglia (finale verde e finale viola)
     //Contenuto: Parla della fantasia, e del fatto che la sera si riscrive la giornata, capiamo che la famiglia litiga spesso. Tensione in casa anche per la morte della nonna
@@ -501,12 +502,30 @@
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ secondStoryQuestCount ++
         
-        {charNameTwo}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: La rana prima mi ha detto che tu scrivi storie.
+        {charNameTwo}: A me piacciono le storie.
+        {charNameTwo}: C'è una cosa che non dico mai a nessuno.
+        {charNameTwo}: Mamma è felice perché vado a letto presto senza fare mica storie.
+        {charNameTwo}: Ma è perché mi piace stare al buio da solo.
+        {charNameTwo}: Così posso pensare alle cose che ho fatto durante il giorno.
+        {charNameTwo}: E correggere quelle che non mi piacciono.
+        {charNameTwo}: Quando uno di quinta mi ha picchiato, la sera ho corretto tutto e l'ho picchiato io.
+        {charNameTwo}: E i miei compagni poi erano miei amici così.
+        {charNameTwo}: Una volta ho preso un brutto voto e papà e mamma hanno litigato perché si davano la colpa.
+        {charNameTwo}: Ma allora ho corretto tutto e io non prendevo un brutto voto.
+        {charNameTwo}: E andavamo a prendere un gelato.
+        {charNameTwo}: E c'era ancora la nonna.
+        {charNameTwo}: E quando papà è tornato dopo essere andato via ed era arrabbiato, invece è tornato con un cane.
+        {charNameTwo}: Non ho mai avuto un cane.
+        {charNameTwo}: Sai che i cani sentono suoni fino a duecento metri?
+        {charNameTwo}: Se li chiami e non vengono è perché non vogliono.
+        {charNameTwo}: Anche io faccio così.
+        
             + [Dammi dettagli più concreti.]
-                    ~ secondBlue ++
+                ~ secondBlue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ secondYellow ++
+                ~ secondYellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
                 ~ secondRed ++
