@@ -1,6 +1,7 @@
 === greenhouse ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
+{not are_two_entities_together(WateringCan, PG): -> stolen_watering_can}
 {greenhouse == 1:<i>Eccoti nella serra.</i>|<i>{~La serra pulsa nell'aria tiepida.|C'è odore di terra e tranquillità.|I vasi chiedono di essere ascoltati.|Le ragnatele raccolgono risposte.|Le venature del legno propongono domande.}</i>}
 
 {
@@ -17,6 +18,8 @@
         
     }
 }
+
+
 
 === pre_test
     <i>{~ In questo momento non c'è nulla in crescita.|La serra attende le tue visioni.}</i>
@@ -59,5 +62,9 @@
         
     }
 }
+
+=== stolen_watering_can
+<i>La serra è smarrita, non si trova più il suo innaffiatoio, e ora non sa più cosa cantare.</i>
+-> main
 
     

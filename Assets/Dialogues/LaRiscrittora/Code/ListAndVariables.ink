@@ -32,7 +32,7 @@ VAR forestContents = (Mentor, Bench, TheFungus, FromForestToBusStop, FromForestT
 
 VAR greenhouseMiddlePathContents = (FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, Inventory)
 
-VAR greenhouseContents = (FromGreenhouseToGreenhouseMiddlePath, WateringCan, LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, Inventory)
+VAR greenhouseContents = (FromGreenhouseToGreenhouseMiddlePath,  LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, Inventory, WateringCan)
 
 VAR libraryContents = (Inventory, FromLibraryToForest, FromLibraryToLaboratory, ReadingPlace)
 

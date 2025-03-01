@@ -894,6 +894,7 @@ TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della su
 
 
 === fifth_character_opinions
+TODO: valutare se questa parte settarla non per tier ma per personagge, per cui ci dà dei commenti diversi a seconda di alcuni momenti cruciali del rapporto con la personaggia (quindi non tutti e dodici gli storylet per personaggia, ma due o tre, oppure in punti salienti del rapporto: conoscenza, dono, pre-riscrittura).
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         {   
             //Opinioni dopo la fine della terza storia

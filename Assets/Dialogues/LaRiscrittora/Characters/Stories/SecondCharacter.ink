@@ -25,7 +25,12 @@
             -> hub
     //Altre opzioni        
         - else:
-            {charNameTwo}: {~ Torna dopo.|Ora ho voglia di stare da solo.|Lasciami in pace.}
+            {
+                - second_story_gift.ink_outcome: {charNameTwo}: {~ Mi sento triste, ti spiace tornare dopo?|Scusa {name} ma voglio stare solo.|In questo momento sono giù, torneresti dopo?}
+                
+                - else: {charNameTwo}: {~ Torna dopo.|Ora ho voglia di stare da solo.|Lasciami in pace.}
+            }
+            
         -> main
     }
 
@@ -70,9 +75,7 @@
                         -> two
                     //Altrimenti    
                     - else:
-                        ???: Non ci parlo con chi parla con quella là!
-                        ???: Mi ha fatto male!
-                        -> main
+                        -> not_talk
                 }
                 
             - not three:
@@ -126,9 +129,10 @@
                 ~ secondRed ++
 
                 
-            + [t]
-                ~ secondGreen ++
-  
+            + [Per aiutare chi è in difficoltà.]
+                ???: Come il veterinario?
+                ???: O come la maestra di educazione fisica quando non riesco a fare la cavallina?
+                    ~ secondGreen ++
                 
             + [t]
                 ~ secondPurple ++
@@ -153,8 +157,10 @@
                 ~ secondRed ++
 
                 
-            + (twoGreen) [t]
-                ~ secondGreen ++
+            + (twoGreen) [Vuoi molto bene a tua mamma?]
+                ???: Lei è la mamma migliore della terra.
+                ???: Anche se è sempre stanca ora.
+                    ~ secondGreen ++
   
                 
             + (twoPurple) [t]
@@ -206,6 +212,7 @@
      
         - (top)
         {name}: {charNameFive} dice che l'hai picchiata.
+            
             + (twoBlue) [t]
                 ~ secondBlue ++
                 
@@ -216,7 +223,7 @@
                 ~ secondRed ++
 
                 
-            + (twoGreen) [t]
+            + (twoGreen) [C'è rimasta male, e anche io.]
                 ~ secondGreen ++
   
                 
@@ -381,7 +388,9 @@
                 ~ secondPurple ++
  
             -
-             ~ secondPauseTalking = secondCharPauseDurantion
+            //Leviamo l'innaffiatoio
+            ~ move_entity(WateringCan, Safekeeping)
+            ~ secondPauseTalking = secondCharPauseDurantion
             -> main
     
     = five
@@ -450,8 +459,10 @@
             {charNameTwo}: Ma.
             {charNameTwo}: Sono sicuro che se cerchi bene lo trovi dove l'avete lasciato.
             
-             ~ secondPauseTalking = secondCharPauseDurantion
-            -> main
+            //Ricompare l'innaffiatoio
+            ~ move_entity(WateringCan, Greenhouse)
+            ~ secondPauseTalking = secondCharPauseDurantion
+                -> main
     
     
     = six
@@ -803,7 +814,11 @@
             
             
 
-
+    = not_talk
+    ???: Non ci parlo con chi parla con quella là!
+    ???: Mi ha fatto male!
+        -> main
+                        
 
         
 === second_character_opinions

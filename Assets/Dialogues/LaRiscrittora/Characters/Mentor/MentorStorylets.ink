@@ -74,9 +74,15 @@
         -> first_bus_stop_visit
  
 //Storylets legati alla seconda storia
-    - knowing_second_character.one:
+    //Dopo le presentazioni con due:
+    - knowing_second_character.one && not that_little_liar_storylet:
         -> that_little_liar_storylet
     
+    //Se abbiamo visto che manca l'innaffiatoio e/o due ci ha detto che non parla con lei:
+    - stolen_watering_can or knowing_second_character.not_talk && not watering_can_storylet:
+        -> watering_can_storylet
+        
+        
     - else:
         ->->
 
