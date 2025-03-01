@@ -270,15 +270,16 @@ VAR delayFourthChar = 20
                 {charNameTwo}: Sai? Mi sembri una persona che dice sempre le cose giuste.
                 {charNameTwo}: Non giuste giuste tipo per me.
                 {charNameTwo}: Ma che si assomigliano tutte.
-                {charNameTwo}: Non mi dici prima mele e poi pere come fanno gli altri adulti.
+                {charNameTwo}: Non mi dici mica prima mele e poi pere come fanno gli altri adulti.
                 {charNameTwo}: Questo mi piace.
                     ->->
             - else:
-                {charNameTwo}: Comunque ho visto che cambi sempre idea.
+                {charNameTwo}: Non sono scemo.
+                {charNameTwo}: Ho visto che cambi sempre idea.
                 {charNameTwo}: Mi rispondi sempre cose diverse.
                 {charNameTwo}: Non mi piace.
                 {charNameTwo}: Gli adulti fanno così quando voglio avere ragione.
-                {charNameTwo}: E mi trattano come un bambino.
+                {charNameTwo}: E io mica sono un bambino.
                     ->->     
         }
 

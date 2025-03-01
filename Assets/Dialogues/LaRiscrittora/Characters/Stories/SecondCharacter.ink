@@ -135,11 +135,11 @@
             -    
         
         ???: Io sono qui perché è il mio compleanno.
-        ???: Mamma voleva regalarmi qualcosa di figo.
+        ???: Mamma mi ha promesso qualcosa di FIGHISSIMO!
         ???: L'anno scorso per Natale mi ha preso tutte le action figures dei miei videogiochi preferiti.
         ???: Ma poi mio fratello me le ha rubate tutte.
-        ???: Ma lui qui di sicuro non ci può venire.
-        ???: Perché mamma ha promesso qualcosa di figo a me, non a lui.
+        ???: Ma lui qui mica ci può venire.
+        ???: Perché mamma ha detto che avrebbe dato solo a me qualcosa di bellissimo.
         ???: Ma dove trovo le caramelle?
         ???: Mamma dice sempre che non c'è compleanno senza caramelle!
         
@@ -161,8 +161,8 @@
                 ~ secondPurple ++
             -
             
-        ???: Comunque ora che ci penso voglio aspettare gli altri.
-        ???: Così inizia la festa.
+        ???: Ma dove saranno i miei compagni di scuola?
+        ???: Cercali!
         ???: A dopo!
             -
              ~ secondPauseTalking = secondCharPauseDurantion
@@ -178,15 +178,34 @@
         {charNameTwo}: Questo posto è PIENO di animali!
         {charNameTwo}: Ma ho lasciato a casa il tablet.
         {charNameTwo}: Come le faccio tutte le foto per la scuola?
-        {charNameTwo}: Sapevi che INSETTO fa COSA?
-        {charNameTwo}: e che?
-        {charNameTwo}: e che anche...
-        {charNameTwo}: A scuola mi prendono in giro per questa cosa.
+        {charNameTwo}: Sapevi che gli uccelli vedono dieci colori?
+        {charNameTwo}: DIECI! Mica solo tre come noi!
+        {charNameTwo}: E che l'acso, atso, axotolot si fa ricrescere le braccia?
+            + [Gli chiedo perché ha picchiato {charNameFive}.]
+                -> top
+            + [Lo lascio continuare]
+            -
+            
+        {charNameTwo}: E le capre hanno dei loro accenti!
+        {charNameTwo}: Non sono mica tutti dei beeeeeeeeee uguali!
+        {charNameTwo}: Solo i colibrì sanno volare all'indietro!
+        {charNameTwo}: Tu sai camminare indietro? Secondo me no.
+            + [Gli chiedo perché ha picchiato {charNameFive}.]
+                -> top
+            + [Lo lascio continuare]
+            -
+        {charNameTwo}: I nasi dei cani sotto tutti diversi, non ci sono due cani con lo stesso naso.
+        {charNameTwo}: E...
+        {charNameTwo}: Ma mi sa che non mi stai mica ascoltando.
+        {charNameTwo}: Come a scuola.
+        {charNameTwo}: A scuola mi prendono in giro perché parlo solo di animali.
         {charNameTwo}: Ma sono comunque il più bravo!
-        {name}: {charNameFive} dice che l'hai picchiata.
+            -> top
         
         //Opzioni, varianti sulla violenza alla mentore, risposte diverse?
      
+        - (top)
+        {name}: {charNameFive} dice che l'hai picchiata.
             + (twoBlue) [t]
                 ~ secondBlue ++
                 
@@ -214,10 +233,15 @@
     //Obiettivo: mostrare che ha mentito all'inizio
     //Contenuto: Ci chiede come ci chiamiamo, emerge una bugia diversa a seconda del genere -> Qui però scopriamo che ci mente, possiamo decidere di mettere in evidenza o meno questa bugia, solitudine.
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     ~ secondStoryQuestCount ++
         
-        {charNameTwo}: Ma come ti chiami?
-        
+        {charNameTwo}: Mica mi hai detto come ti chiami.
+            
+        - (top)
+            * [Prima dimmi il tuo.]
+                {charNameTwo}: No, prima mi dici il tuo.
+                    -> top
             + {name_choice} [Mi chiamo {name}.]
     	    + [Il mio nome è...]
     	        -> name_choice ->
@@ -237,11 +261,16 @@
     	        
         	  = him_liar
             	  ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+            	  ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+            	  
+            	  {charNameTwo}: Sono contento che sei un maschio.
+            	  {charNameTwo}: {charNameFive} è così noiosa.
             	  {charNameTwo}: Ma a te piacciono le action figures?
             	  {charNameTwo}: Tutti i miei compagni di classe ne hanno, ma io no.
             	  {charNameTwo}: Mamma fa sempre storie se le chiedo di comprarmi qualcosa.
             	  {charNameTwo}: Ne avevo una di Kratos.
-            	  {charNameTwo}: Mamma voleva buttarla perché dice che è troppo violento per un bambino.
+            	  {charNameTwo}: Ma mamma voleva buttarla perché dice che è troppo violento per un bambino.
+            	  {charNameTwo}: Ma mica sono un bambino.
             	  {charNameTwo}: E così l'ho regalata a mio fratello.
             	  {charNameTwo}: Che l'ha nascosta sotto al letto.
             	  {charNameTwo}: Mamma non ci guarda sotto al suo letto, nemmeno quando è arrabbiata.
@@ -250,7 +279,9 @@
         	  
         	  = her_liar
         	  ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-            	  {charNameTwo}: Non parlo mai molto con le ragazze, sono strane.
+            	  {charNameTwo}: Ah.
+            	  {charNameTwo}: Sei una ragazza quindi.
+            	  {charNameTwo}: Non ci parlo mica molto con le ragazze, siete strane.
             	  {charNameTwo}: Devo ancora capire se sei strana anche tu.
             	  {charNameTwo}: Anche mamma è strana.
             	  {charNameTwo}: Ma le voglio bene.
@@ -266,13 +297,12 @@
         	        {charNameTwo}: Mmm.
         	        {charNameTwo}: Capito.
         	        {charNameTwo}: Anche io vorrei un pronome strano.
-        	        {charNameTwo}: Ma dubito che mamma lo userebbe bene.
+        	        {charNameTwo}: Ma poi mamma lo dice male, sicuro.
         	        {charNameTwo}: Già oggi si è dimenticata del mio compleanno.
-        	        {charNameTwo}: Anche se non è proprio proprio il mio compleanno.
-        	        {charNameTwo}: Ma quello di quando ho iniziato a vivere con loro.
-        	        {charNameTwo}: Mi hanno affidato, come Spiderman.
+        	        {charNameTwo}: E anche l'anno scorso.
+        	        {charNameTwo}: Ma poi però mi ha regalato una action figure di Spiderman.
         	        {charNameTwo}: Ma preferisco le tartarughe ninja.
-        	        {charNameTwo}: Le fogne sembrano belle.
+        	        {charNameTwo}: Così poi vedo i coccodrilli delle fogne.
           
                 -> three_continue
        
@@ -287,31 +317,21 @@
             + {him_liar} [Tuo fratello non te le aveva rubate tutte?]
                     ~ secondGreen ++
             
-            
             + {her_liar or they_liar} [Non avevi detto che questo è il regalo di compleanno di tua mamma?]
                     ~ secondBlue ++
             
             + {her_liar} [Si arrabbia spesso, mamma?]
                     ~ secondGreen ++
             
-            + {they_liar} [Quindi mi hai detto una bugia, non è il tuo compleanno.]
+            + {they_liar} [Perdonami, ma non era il suo regalo di compleanno, questo?]
                     ~ secondGreen ++
             
-            
-            
-            + [Dammi dettagli più concreti.]
-                    ~ secondBlue ++
-                
+
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
                     ~ secondYellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
                 ~ secondRed ++
-
-                
-            + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ secondGreen ++
-  
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
                 ~ secondPurple ++
@@ -328,9 +348,21 @@
     //Contenuto: Momento di vulnerabilità, ci parla della nonna (ma non ci dice che è morta) e ci dice che è fuggito da casa.
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     ~ secondStoryQuestCount ++
-    -> secondAffinityCheckCalc ->
-     
-        {charNameTwo}: Non è che hai visto passare di qui una persona?
+        -> secondAffinityCheckCalc ->
+        
+        {charNameTwo}: Nonna non mi tratta mai come un bambino.
+        {charNameTwo}: Mi ha anche insegnato come barare a carte.
+        {charNameTwo}: E come aprire il cassetto dei dolci di mamma.
+        {charNameTwo}: Quando mamma e papà ci lasciano a casa da soli mangiamo sempre cose buone.
+        {charNameTwo}: E guardiamo assieme la tele.
+        {charNameTwo}: E posso scegliere cosa guardare.
+        {charNameTwo}: Quando papà è andato via nonna ha aiutato mamma a stare bene.
+        {charNameTwo}: Anche se a mamma mica piace la nonna.
+        {charNameTwo}: E quando papà è tornato ha ripreso a trattarla male.
+        {charNameTwo}: Ma nonna dice che succede.
+        {charNameTwo}: Che gli adulti fanno cose cattive senza saperlo.
+        {charNameTwo}: Mi spiace essere scappato di casa.
+        
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
