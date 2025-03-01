@@ -759,7 +759,27 @@
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ secondStoryQuestCount ++
         
-        {charNameTwo}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: Mi piace la biblioteca.
+        {charNameTwo}: Ma non mi piace leggere.
+        {charNameTwo}: Però mi ricorda la casa della nonna.
+        {charNameTwo}: L'altra nonna, quella che sta al mare.
+        {charNameTwo}: Ci vado d'estate e mi diverto tantissimo.
+        {charNameTwo}: Lei mi prepara un sacco di cose buone.
+        {charNameTwo}: E io le insegno tutte le cose più strane sugli animali.
+        {charNameTwo}: Mamma e papà non vengono mai.
+        {charNameTwo}: Ma mio fratello e il suo amico sì.
+        {charNameTwo}: Una volta mi hanno portato a una festa sulla spiaggia.
+        {charNameTwo}: E mi hanno fatto cantare nel microfono.
+        {charNameTwo}: Da nonna mi addormento subito.
+        {charNameTwo}: Non devo correggere le giornate.
+        {charNameTwo}: Quando arriva fine agosto però mi sento triste.
+        {charNameTwo}: E arrabbiato.
+        {charNameTwo}: Ora che nonna non c'è più, vorrei vivere sempre con l'altra nonna.
+        {charNameTwo}: Tanto so studiare da solo.
+        {charNameTwo}: Magari studio come si curano i pesci.
+        {charNameTwo}: Anche se non gli puoi mica fare le coccole.
+        {charNameTwo}: Uffi.
+            
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
