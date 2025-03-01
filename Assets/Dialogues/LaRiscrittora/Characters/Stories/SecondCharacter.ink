@@ -680,6 +680,7 @@
         {charNameTwo}: Mio fratello dice che succede.
         {charNameTwo}: Che tra bambini ci si picchia.
         {charNameTwo}: E anche tra adulti.
+        {charNameTwo}: Penso che gli adulti facciano schifo.
         {charNameTwo}: Quando papà mi picchia dice che è colpa mia.
         {charNameTwo}: Ma a me non piace farmi picchiare.
         {charNameTwo}: O picchiare.
@@ -713,7 +714,24 @@
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ secondStoryQuestCount ++
         
-        {charNameTwo}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: Quando vado da mio fratello e non c'è il suo amico, mi lascia sperimentare con le sue cose.
+        {charNameTwo}: Il suo amico fa il pasticciere.
+        {charNameTwo}: E ha tantissime cose strane in cucina.
+        {charNameTwo}: E a me piacciono le cose strane.
+        {charNameTwo}: Mi piace provare le cose.
+        {charNameTwo}: Capire.
+        {charNameTwo}: Non mi piacciono le cose che non capisco.
+        {charNameTwo}: Ma a volte faccio dei pasticci.
+        {charNameTwo}: Una volta ho mischiato le cose per pulire casa e ho vomitato tutto il pomeriggio.
+        {charNameTwo}: Una volta ho riempito il letto di mamma di sabbia e si è grattata per una settimana.
+        {charNameTwo}: E una volta ho provato ad attaccare un mio robot al frullatore dell'amico di mio fratello.
+        {charNameTwo}: E ha fatto una fiammata gigante e un pezzo di muro si è fatto nero.
+        {charNameTwo}: Mio fratello si è spaventato tantissimo.
+        {charNameTwo}: Ma io ero contento perché non sapevo che ci sono dei fili nel muro.
+        {charNameTwo}: E ora so cosa è l'elettricità.
+        {charNameTwo}: Ma qui non c'è.
+        {charNameTwo}: Chissà se è la rana che fa accadere le cose allora.
+        
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
