@@ -549,8 +549,31 @@
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     ~ secondStoryQuestCount ++
         
-        {charNameTwo}: Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+        {charNameTwo}: Sai che mio fratello è campione di Karate?
+        {charNameTwo}: E ha una macchina enorme gialla che fa arrabbiare papà
+        {charNameTwo}: E...
+        {charNameTwo}: Bugia.
+        {charNameTwo}: Scusa.
+        {charNameTwo}: Non è proprio campione in realtà.
+        {charNameTwo}: Però per me è bravissimo.
+        {charNameTwo}: E la macchina è di papà.
+        {charNameTwo}: Che si arrabbia perché prima era nera, e lui l'ha colorata di giallo.
+        {charNameTwo}: Mio fratello è super però.
+        {charNameTwo}: Lavora in una officina e nel tempo libero fa delle statue col saldatore e i pezzi rotti delle macchine.
+        {charNameTwo}: E vive in una casa piccola piccola assieme al suo amico.
+        {charNameTwo}: Viene a trovarci quando non c'è papà perché non si piacciono.
+        {charNameTwo}: Mi ha promesso che mi porta a pescare una volta.
+        {charNameTwo}: Senza dirlo a mamma perché lei ha paura perché non so nuotare.
+        {charNameTwo}: Ma lui sa fare tutto.
+        {charNameTwo}: E il suo amico fa dei dolci buonissimi.
+        {charNameTwo}: E anche lui non sa nuotare.
+        {charNameTwo}: Ma non mi sembra felice quando vado da loro e quindi ci vado poco.
+            
+            + [Ma non hai detto che tua mamma non guarda sotto al letto di tuo fratello.]
+                {charNameTwo}: Sì.
+                {charNameTwo}: E non è una bugia, perché ha un letto.
+                {charNameTwo}: E mamma va al garage ogni tanto.
+                {charNameTwo}: Ma non ci guarda mica sotto.
                     ~ secondBlue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
@@ -560,7 +583,7 @@
                 ~ secondRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + [Se non sai nuotare forse non dovresti andare allo stagno da solo.]
                 ~ secondGreen ++
   
                 
