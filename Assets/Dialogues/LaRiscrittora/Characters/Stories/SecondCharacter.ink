@@ -389,9 +389,39 @@
     //Contenuto: Lo accusiamo del furto, da lì emergono alcune cose sulla scuola. A seconda del rapporto, mente per evitare le punizioni, o è sincero. Il discorso dei compagni parte a prescindere.
   
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     ~ secondStoryQuestCount ++
         
         {name}: Dalla serra è scomparso l'innaffiatoio.
+            + [Secondo {charNameFive} sei stato tu a prenderlo.]
+                {charNameTwo}: Perché lei mi odia.
+            + [Secondo me sei stato tu a prenderlo.]
+                {charNameTwo}: Perché date sempre la colpa a me?
+            + [Hai idea di dove sia?]
+                {charNameTwo}: Pensi che è colpa mia?
+            -
+     
+        {charNameTwo}: Anche a scuola danno sempre la colpa a me.
+        {charNameTwo}: Non mi piace mica tanto la scuola.
+        {charNameTwo}: I ragazzi più grandi fanno male.
+        {charNameTwo}: Ma io non piango.
+        {charNameTwo}: Non sono una femmina.
+        {charNameTwo}: E sono più forte di loro.
+        {charNameTwo}: Ma non coi pugni.
+        {charNameTwo}: E le ragazze della mia età sono strane.
+        {charNameTwo}: E mi dicono che.
+        {charNameTwo}: No, non te lo dico.
+        {charNameTwo}: E le maestre mi mettono sempre in castigo.
+        {charNameTwo}: Se mi nascondo nell'armadio perché ho sonno.
+        {charNameTwo}: Se faccio cadere le cose per terra.
+        {charNameTwo}: Se mi distraggo.
+        {charNameTwo}: Una volta nonna, quando stava bene, è venuta e ha sgridato tutte le maestre.
+        {charNameTwo}: Ora sono un po' più brave con me.
+        {charNameTwo}: Ma quella di matematica dice sempre che le dispiace per me.
+        {charNameTwo}: E non mi piace quando fa così.
+            
+        
+        
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
@@ -410,7 +440,16 @@
                 ~ secondPurple ++
  
             -
-            {charNameTwo}: Comunque l'innaffiatoio sicuramente ora è alla serra.
+            //Se fiducia bassa.
+            {charNameTwo}: Non ho mai visto nessun innaffiacoso.
+            {charNameTwo}: Non bagno mica le piante, io.
+            {charNameTwo}: Cerca bene e vedi che lo trovi.
+            
+            //Se fiducia alta.
+            {charNameTwo}: Non l'ho mica visto.
+            {charNameTwo}: Ma.
+            {charNameTwo}: Sono sicuro che se cerchi bene lo trovi dove l'avete lasciato.
+            
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
     
