@@ -601,7 +601,8 @@
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ secondStoryQuestCount ++
         
-        {charNameTwo}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: Tu hai sempre voluto fare {pronouns has him: il riscrittore|{pronouns has her: la riscrittora|lə riscrittorə}} come lavoro?
+        
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
@@ -620,6 +621,43 @@
                 ~ secondPurple ++
  
             -
+            
+        {charNameTwo}: I miei compagni fanno un sacco di cose.
+        {charNameTwo}: Calcio.
+        {charNameTwo}: Basket.
+        {charNameTwo}: Corsi di pianoforte o chitarra o la batteria.
+        {charNameTwo}: Oppure imparano il cinese e l'inglese.
+        {charNameTwo}: E vanno a cavallo.
+        {charNameTwo}: E sanno già cosa vogliono fare come lavoro.
+        {charNameTwo}: E io ho un sacco di tempo libero invece.
+        {charNameTwo}: Non posso fare quei corsi.
+        {charNameTwo}: Mamma dice che i bambini devono giocare, non fare gli adulti.
+        {charNameTwo}: Ma non ho nessuno con cui giocare.
+        {charNameTwo}: E non so cosa voglio fare.
+        {charNameTwo}: E questa cosa mi fa arrabbiare.
+        {charNameTwo}: Non voglio essere un bambino per sempre.
+        {charNameTwo}: Ma non mi piace essere grande.
+            
+            + [Dammi dettagli più concreti.]
+                    ~ secondBlue ++
+                
+            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+                    ~ secondYellow ++
+                
+            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+                ~ secondRed ++
+
+                
+            + [Se ti senti sola, sono qui ad ascoltarti.]
+                ~ secondGreen ++
+  
+                
+            + [Tu sei sempre con ləi, ləi è sempre con te.]
+                ~ secondPurple ++
+ 
+            -
+        {charNameTwo}: Però mi piacerebbe fare il veterinario.
+        
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main    
     
