@@ -667,7 +667,25 @@
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ secondStoryQuestCount ++
         
-        {charNameTwo}: Non è che hai visto passare di qui una persona?
+        {charNameTwo}: Stavo ripensando a un bambino.
+        {charNameTwo}: Uno di seconda.
+        {charNameTwo}: L'ho picchiato perché mi andava.
+        {charNameTwo}: Ero DAVVERO arrabbiato quel giorno.
+        {charNameTwo}: E lui ha pianto e mi sono arrabbiato ancora di più.
+        {charNameTwo}: La maestra di matematica mi ha messo in castigo.
+        {charNameTwo}: E quando sono tornato a casa papà mi ha picchiato.
+        {charNameTwo}: E ora quando vedo il bambino mi sento in colpa.
+        {charNameTwo}: Ho provato a chiedergli scusa ma lui scappa.
+        {charNameTwo}: E sua sorella una volta mi ha lanciato una scarpa in faccia.
+        {charNameTwo}: Mio fratello dice che succede.
+        {charNameTwo}: Che tra bambini ci si picchia.
+        {charNameTwo}: E anche tra adulti.
+        {charNameTwo}: Quando papà mi picchia dice che è colpa mia.
+        {charNameTwo}: Ma a me non piace farmi picchiare.
+        {charNameTwo}: O picchiare.
+        {charNameTwo}: Ma se sono arrabbiato e non so cosa fare.
+        
+        
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
