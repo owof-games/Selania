@@ -284,6 +284,87 @@ VAR delayFourthChar = 20
         }
 
         ->-> 
+
+=== secondColourCheck
+{debugChangeName: Passo per secondColourCheck.}
+
+VAR secondRedMax = false
+VAR secondBlueMax = false
+VAR secondYellowMax = false
+VAR secondGreenMax = false
+VAR secondPurpleMax = false
+
+//Resettiamo, così che per ogni scelta sia tutto su falso per sicurezza.
+~  secondYellowMax = false
+~  secondGreenMax = false
+~  secondBlueMax = false
+~  secondPurpleMax = false
+~  secondRedMax = false
+
+
+{
+//Potrebbe capitare un pareggio, e va bene così, così non è punitivo per la giocatrice.
+    - secondRed >= secondBlue && secondRed >= secondYellow && secondRed >= secondGreen && secondRed >= secondPurple && secondRed >= secondGreen:
+                ~  secondRedMax = true
+    {debugChangeName: Il valore di secondRedMax è {secondRedMax}.}
+    
+    - secondBlue >= secondRed && secondBlue >= secondYellow && secondBlue >= secondGreen && secondBlue >= secondPurple && secondBlue >= secondGreen:
+                ~  secondBlueMax = true
+     {debugChangeName: Il valore di secondBlueMax è {secondBlueMax}.}
+     
+    - secondGreen >= secondBlue && secondGreen >= secondYellow && secondGreen >= secondGreen && secondGreen >= secondPurple && secondGreen >= secondRed:
+                ~  secondGreenMax = true
+        {debugChangeName: Il valore di secondGreenMax è {secondGreenMax}.}  
+        
+    - secondPurple >= secondBlue && secondPurple >= secondYellow && secondPurple >= secondGreen && secondPurple >= secondRed && secondPurple >= secondGreen:
+                ~  secondPurpleMax = true
+        {debugChangeName: Il valore di secondPurpleMax è {secondPurpleMax}.}  
+        
+    - secondYellow >= secondBlue && secondYellow >= secondRed && secondYellow >= secondGreen && secondYellow >= secondPurple && secondYellow >= secondGreen:
+                ~  secondYellowMax = true 
+    {debugChangeName: Il valore di secondGreenMax è {secondGreenMax}.}                  
+
+
+}
+
+->->
+    
+
+=== function secondStatementVariation(color)
+~ temp secondCheckColor = false
+{debugChangeName: Passo per function secondStatementVariation.}
+
+    {
+        - color == red:
+           ~ secondCheckColor = secondRedMax
+        - color == blue:
+            ~ secondCheckColor = secondBlueMax
+        - color == yellow:
+            ~ secondCheckColor = secondYellowMax
+        - color == green:
+            ~ secondCheckColor = secondGreenMax
+        - color == purple:
+            ~ secondCheckColor = secondPurpleMax
+            
+    }
+
+    {debugChangeName: Il valore di secondCheckColor è {secondCheckColor}.}                    
+    {
+    - secondCheckColor:
+        {
+         - secondCharacterPossibleStates hasnt IlCorvo:
+            ~ secondCharacterPossibleStates ++
+            {debugChangeName: Aumento lo stato del secondo personaggio, che ora è {secondCharacterPossibleStates }}
+        }
+    
+    - else:
+        {
+         - secondCharacterPossibleStates hasnt IlRiccio:
+        ~ secondCharacterPossibleStates --
+        {debugChangeName: Diminuisco lo stato del secondo personaggio, che ora è {secondCharacterPossibleStates }}
+        }
+    	            
+    }  
     
     
 === thirdAffinityCalc ===
@@ -322,7 +403,26 @@ VAR delayFourthChar = 20
 ->->
 
 === secondNaming ==
-
+    {
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
+            ~ secondCharacterPossibleStates += IlCorvo
+                ->->
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2):
+            ~ secondCharacterPossibleStates += IlCapibara   
+                ->-> 
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 3):
+            ~ secondCharacterPossibleStates += IlDelfino    
+                ->->
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 4):
+            ~ secondCharacterPossibleStates += IlLupo
+                ->->
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 5):
+            ~ secondCharacterPossibleStates += IlGrizzly
+                ->->
+        - else:     
+            ~ secondCharacterPossibleStates += IlRiccio
+                ->->
+    }
 ->->
 
 === thirdNaming ===

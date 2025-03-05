@@ -1078,6 +1078,7 @@
 
     = ending
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    TODO: qui ho dimenticato di portare una variazione sullo stato della personaggia XD
      Per questo ti dico...
         + {firstRed > 0} [Prendi una strada e se non ti piace cambiala!]
         

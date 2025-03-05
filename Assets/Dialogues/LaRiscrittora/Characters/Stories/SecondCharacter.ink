@@ -961,35 +961,37 @@
 
     = one
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    {name}: Prima hai detto che hai il terrore di fare una scelta.
+    
+    //Affrontiamo i genitori
+    {name}: Tua mamma e tuo papà ti dicono che devi crescere, comportarti da adulto, non piangere.
+   
         
-        + [Qui hai accettato il tuo nuovo nome.]
+        + [Rosso.]
             {name}: E ammettere una propria paura, una scelta enorme.
-                {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }            
+                   ~ secondRed ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(red)
         
-        + [Eppure hai deciso di costruire una famiglia con l3 tu3 amic3.]
-  
+        + [Verde.]
+                   ~ secondGreen ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(green)  
         
-        + [Dimenticando che per finire gli studi hai lottato per anni.]
+        + [Giallo.]
+                   ~ secondYellow ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(yellow)          
      
             
-        + [Ma hai più volte accettato il rischio di suonare sul]
-                {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }
-        + [Però da che sei qui hai esplorato tutto questo luogo.]
+        + [Blu]
+                   ~ secondBlue ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(blue)    
+        + [Viola.]
            
-                {
-                	- firstCharacterPossibleStates hasnt Rinuncia:
-    		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }
+                   ~ secondPurple ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(purple)    
             
         -
  
@@ -1002,38 +1004,40 @@
         
     = two
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    
+    //Affrontiamo gli adulti in generale
+    {name}: Hai detto che i grandi fanno schifo, che non ti fidi di loro. //Nonna, fratello, grandi come grossi bambini
+    
 
-        + [Con Talco puoi litigare, eppure siete legatissim3.]
-            {name}: Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
-            {name}: Il Talco che hai raccontato si arrabbierebbe di più se tu facessi una scelta per te pensando a ləi.
-            
+        + [Giallo.]
+                   ~ secondYellow ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(yellow)            
+  
                     
-        + [La paura di tradire è un'altra faccia dell'ego.]
-                {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }
+        + [Blu.]
+                   ~ secondBlue ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(blue)    
     
             
-        + [Il tuo cuore si preoccupa molto di loro, e poco di te.]
-   
+        + [Rosso.]
+                    ~ secondRed ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(red)            
             
-        + [Forse accadrà, ma non è un tuo problema.]
+        + [Verde.]
  
-                {
-                	- firstCharacterPossibleStates hasnt Rinuncia:
-    		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }
+                   ~ secondGreen ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(green)  
                 
-        + [Tradiamo la fiducia rompendo le regole a nostro vantaggio.]
+        + [Viola.]
  
-                {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }
+                   ~ secondPurple ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(purple)    
+            
                     
         -
         {
@@ -1045,36 +1049,37 @@
         
     = three
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-            
-        + [Se non tiri nessun dado, non c'è storia da far avanzare.]
+    //Affrontiamo il mondo. Rabbia, bugie, fantasia, violenza etc.
+    {name}: Dici che il mondo fa schifo.
+    
+        + [Viola.]
          
-                {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }
-        
-        + [Ma ogni persona ha immaginato sorti diverse per Jonah.]
-                {
-                	- firstCharacterPossibleStates hasnt Rinuncia:
-    		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }
-                
-        + [Eppure la prima cosa che hai visto qui sono otto sentieri.]
- 
-                {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }
+                   ~ secondPurple ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(purple)    
             
         
-        + [La storia di Jonah è un successo.]
+        + [Verde.]
+                   ~ secondGreen ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(green)  
+                
+        + [Rosso.]
+                    ~ secondRed ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(red)
+            
+        
+        + [Giallo.]
+                   ~ secondYellow ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(yellow)            
 
                 
-        + [Ragioni come se fossi sola se dovessi cadere.]
-     
+        + [Blu.]
+                   ~ secondBlue ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(blue)         
         -
         {
         - secondCharacterInkLevel == Normal:
@@ -1085,37 +1090,38 @@
     
     = four
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-
-        + [Giocare è bello perché puoi sempre rinunciare a farlo.]
-
-                {
-	                - secondCharacterPossibleStates hasnt Violino:
-		                ~ secondCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {secondCharacterPossibleStates }}
-                }            
-         
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)    
+    
+    //Commento più personale
+    {name}: {charNameFive} ti ha chiamato {charNameTwo}.
+    
+        + [Rosso.]
+                    ~ secondRed ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(red)
         
-        + [Quando Anna ha rinunciato all'ex, ha scoperto la sicurezza.]
-
+        + [Blu.]
+                   ~ secondBlue ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(blue)    
         
-        + [Un infinito più piccolo resta comunque infinito.]
+        + [Viola.]
 
-                {
-	                - secondCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }    
+                   ~ secondPurple ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(purple)    
+             
             
-        + [Rinunciando a cercare Talco ti sei tutelata.]
+        + [Verde.]
  
-                {
-                	- secondCharacterPossibleStates hasnt Rinuncia:
-    		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }            
+                   ~ secondGreen ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(green)          
         
-        + [C'è più coraggio nella rinuncia che nel compromesso.]
- 
+        + [Giallo.]
+                    ~ secondYellow ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(yellow)    
             
         -
         
@@ -1124,15 +1130,32 @@
     = ending
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
      Per questo ti dico...
-        + {secondRed > 0} [Prendi una strada e se non ti piace cambiala!]
+     
+        + {secondRed > 0} [Non farti schiacciare dal mondo.]
+                    ~ secondRed ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(red)        
         
-        + {secondPurple > 0} [Dai alla tua vita uno scopo più grande.]
+        + {secondPurple > 0} [Tutti abbiamo paura. Condividi questa paura con le altre persone.]
+                   ~ secondPurple ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(purple)    
+                    
         
-        + {secondYellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
+        + {secondYellow > 0} [La tua fantasia, le tue storie possono far star meglio altre persone.]
+                   ~ secondYellow ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(yellow)            
                 
-        + {secondGreen > 0} [Non deluderai i tuoi amici: loro saranno sempre con te.]
+        + {secondGreen > 0} [I tuoi genitori sono spaventati, aiutatevi a vicenda.]
+                   ~ secondGreen ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(green)          
                 
-        + {secondBlue > 0} [Questa non è la tua strada. Succede. Ora puoi cambiare.]
+        + {secondBlue > 0} [Con la tua intelligenza puoi rendere il mondo migliore.]
+                   ~ secondBlue ++
+                    -> secondColourCheck ->
+                    ~ secondStatementVariation(blue)            
                 
         
                 
@@ -1144,33 +1167,33 @@
     {charNameTwo}: La canzone del mio vero nome.
 
         {
-            - firstCharacterPossibleStates has Rinuncia:
+            - secondCharacterPossibleStates has IlRiccio:
                 {charNameTwo}: Che <b>resterà Rinuncia</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
             
-            - firstCharacterPossibleStates has Triangolo:
+            - secondCharacterPossibleStates has IlGrizzly:
                 {charNameTwo}: E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
                     ~ secondCharacterState = ()
-                    ~ secondCharacterState += Triangolo
+                    ~ secondCharacterState += IlGrizzly
             
-            - firstCharacterPossibleStates has RagazzaOrchestra:
+            - secondCharacterPossibleStates has IlLupo:
                 {charNameTwo}: Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper rinunciare sono diventata l'ornitorinco della musica.
                     ~ secondCharacterState = ()
-                    ~ secondCharacterState += RagazzaOrchestra
+                    ~ secondCharacterState += IlLupo
             
-            - firstCharacterPossibleStates has FlautoDolce:
+            - secondCharacterPossibleStates has IlDelfino:
                 {charNameTwo}: Il mio nome è <b>Flauto Dolce</b>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
                     ~ secondCharacterState = ()
-                    ~ secondCharacterState += FlautoDolce                
+                    ~ secondCharacterState += IlDelfino                
             
-            - firstCharacterPossibleStates has Ocarina:
+            - secondCharacterPossibleStates has IlCapibara:
                 {charNameTwo}: Mi chiamerò <b>Ocarina</b>: perché il suo suono è gioco e festa.
                     ~ secondCharacterState = ()
-                    ~ secondCharacterState += Ocarina
+                    ~ secondCharacterState += IlCapibara
             
-            - firstCharacterPossibleStates has Violino:
+            - secondCharacterPossibleStates has IlCorvo:
                 {charNameTwo}: Io sono <b>Violino</b>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
                     ~ secondCharacterState = ()
-                    ~ secondCharacterState += Violino
+                    ~ secondCharacterState += IlCorvo
         }
         
             
@@ -1221,13 +1244,13 @@
         = goodbye
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         {charNameTwo}: {name}, per me è arrivato il momento di tornare a casa.
-        {firstCharacterPossibleStates hasnt Rinuncia: {charNameTwo}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
-        {firstCharacterPossibleStates hasnt Rinuncia: {charNameTwo}: Grazie per quello che hai fatto, davvero.}
-        {firstCharacterPossibleStates has Rinuncia: {charNameTwo}: Vedremo cosa mi accadrà.}
+        {secondCharacterPossibleStates hasnt Rinuncia: {charNameTwo}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
+        {secondCharacterPossibleStates hasnt Rinuncia: {charNameTwo}: Grazie per quello che hai fatto, davvero.}
+        {secondCharacterPossibleStates has Rinuncia: {charNameTwo}: Vedremo cosa mi accadrà.}
             ~ move_entity(SecondCharacter, Safekeeping)
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             {
-                - secondCharacterPossibleStates hasnt Rinuncia:
+                - secondCharacterPossibleStates hasnt IlRiccio:
                     ~ move_entity(SecondCharacterNotes, BusStop)
             }    
             
