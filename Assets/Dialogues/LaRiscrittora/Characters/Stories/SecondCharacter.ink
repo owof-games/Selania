@@ -878,17 +878,20 @@
     }
     = confession
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    
     //Parole chiave legate alla fiducia.
         {charNameTwo}: Abbiamo parlato un sacco.
         {charNameTwo}: Ma davvero UN SACCO.
         {charNameTwo}: Sai cosa penso di te?
             -> secondAffinityCalc ->
         {
+        
         //Migliore outcome
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): {charNameTwo}: Non sei male, per essere grande.
             {charNameTwo}: Dici sempre le cose allo stesso modo.
             {charNameTwo}: Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
             {charNameTwo}: E questo mi fa stare al sicuro.
+            {charNameTwo}: C'è una cosa che devo dire a qualcuno, e voglio dirla a te.
         <i>{charNameTwo} vede {name} come una persona amica e fidata.</i>
         
         //Secondo migliore outcome
@@ -896,6 +899,7 @@
             {charNameTwo}: Secondo me non dici <i>sempre</i> le cose in modo preciso.
             {charNameTwo}: Sembri un po' un gatto.
             {charNameTwo}: Ma mi fido.
+            {charNameTwo}: C'è una cosa che devo dire a qualcuno, e voglio dirla a te.
         
         <i>{charNameTwo} si trova bene con {name}.</i>
         
@@ -904,17 +908,41 @@
             {charNameTwo}: Tutte le cose che dici cambiano, sono disordinate.
             {charNameTwo}: Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
             {charNameTwo}: Non mi piace come cosa.
+            {charNameTwo}: C'è una cosa che devo dire a qualcuno.
+            {charNameTwo}: E posso dirla solo a te.
+            {charNameTwo}: Purtroppo.
         <i>{charNameTwo} non si è sentito capito da {name}.</i>
         
         //Outcome neutro
         - else: {charNameTwo}: Che non ho capito cosa pensi. Sei come quando guardo nel terrario e non capisco se c'è l'insetto stecco o sono solo rami.
+            {charNameTwo}: C'è una cosa che devo dire a qualcuno.
+            {charNameTwo}: E posso dirla solo a te.
+            {charNameTwo}: Purtroppo.
         
         <i>{charNameTwo} non riesce a capire che rapporto sta costruendo con {name}.</i>
         
         }
-        {charNameTwo}: E credo di aver capito perché il mio nome
-            
-            + [Credo di sapere come aiutarti.]
+       
+        {charNameTwo}: Da quando nonna non c'è più fa tutto schifo.
+        {charNameTwo}: Papà è tornato ma litiga sempre con mamma.
+        {charNameTwo}: E mamma quando papà non c'è si arrabbia sempre con me.
+        {charNameTwo}: E l'unica cosa che mi dice è che devo smetterla di piangere e fare il grande.
+        {charNameTwo}: Che anche se piango nonna non torna.
+        {charNameTwo}: E a scuola le maestre sono fastidiose.
+        {charNameTwo}: <b>Stronze</b>.
+        {charNameTwo}: Scusa.
+        {charNameTwo}: Non mi fido degli adulti.
+        {charNameTwo}: Papà dice che devo crescere, che ora sono grande.
+        {charNameTwo}: Ma i grandi fanno schifo.
+        {charNameTwo}: E non voglio fare schifo.
+        {charNameTwo}: Mio fratello dice che il mondo è un posto orribile.
+        {charNameTwo}: Per questo sono venuto qui.
+        {charNameTwo}: Per stare con gli animali.
+        {charNameTwo}: Per stare lontano dagli adulti.
+        {charNameTwo}: Non è il mio compleanno.
+        {charNameTwo}: Scusa per la bugia.
+
+            + [Forse so come farti vedere le cose in modo diverso.]
                 -> statement
             + [Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.]
                 -> main
