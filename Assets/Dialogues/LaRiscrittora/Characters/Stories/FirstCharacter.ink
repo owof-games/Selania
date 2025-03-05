@@ -1078,17 +1078,30 @@
 
     = ending
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    TODO: qui ho dimenticato di portare una variazione sullo stato della personaggia XD
      Per questo ti dico...
         + {firstRed > 0} [Prendi una strada e se non ti piace cambiala!]
         
         + {firstPurple > 0} [Dai alla tua vita uno scopo più grande.]
+                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }           
         
         + {firstYellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
-                
+                                {
+	                - firstCharacterPossibleStates hasnt Violino:
+		                ~ firstCharacterPossibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }   
         + {firstGreen > 0} [Non deluderai i tuoi amici: loro saranno sempre con te.]
                 
         + {firstBlue > 0} [Questa non è la tua strada. Succede. Ora puoi cambiare.]
+                {
+                	- firstCharacterPossibleStates hasnt Rinuncia:
+    		            ~ firstCharacterPossibleStates --
+    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                }           
                 
         
                 
