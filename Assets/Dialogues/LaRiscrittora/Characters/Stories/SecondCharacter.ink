@@ -123,8 +123,14 @@
             + [t]
                 ~ secondBlue ++
                 
-            + [t]
-                ~ secondYellow ++
+            + [Perché è pieno di cose strane!]
+                ???: Uh.
+                ???: Per ora ho visto solo questa fermata.
+                ???: Però il tabellone con le lettere è strano.
+                ???: Le lettere non si danno al postino?
+                ???: E il postino non le porta alle persone?
+                ???: Mica le appende così!
+                    ~ secondYellow ++
                 
             + [t]
                 ~ secondRed ++
@@ -152,7 +158,12 @@
             + (twoBlue) [t]
                     ~ secondBlue ++
                 
-            + (twoYellow) [t]
+            + (twoYellow) [Non ho trovato le caramelle, ma c'è uno stagno dove nuotare!]
+                ???: FIGO!
+                ???: Non ho mai visto uno stagno!
+                ???: Però questa estato ho visto un mare gigantesco.
+                ???: Più grande anche del cielo!
+                ???: Questo qui non c'è di sicuro!
                     ~ secondYellow ++
                 
             + (twoRed) [t]
@@ -219,8 +230,19 @@
             + (twoBlue) [delusione]
                 ~ secondBlue ++
                 
-            + (twoYellow) [t]
-                ~ secondYellow ++
+            + (twoYellow) [Perché non le hai fatto il solletico? O uno scherzo?]
+                ???: Perché ero arrabbiato.
+                ???: E non so fare gli scherzi.
+                ???: Ma lei continuava a dire che i bambini qui non ci possono stare.
+                ???: Che non potevo saltare nel fiume.
+                ???: E mi ha tirato per un braccio.
+                ???: E a me
+                ???: non
+                ???: piace
+                ???: quando
+                ???: i grandi
+                ???: mi toccano.
+                    ~ secondYellow ++
                 
             + (twoRed) [t]
                 ~ secondRed ++
@@ -399,7 +421,12 @@
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [Insegni a barare anche a me?]
+                {charNameTwo}: Ho una idea!
+                {charNameTwo}: Troviamo delle carte.
+                {charNameTwo}: Ti insegno come si bara.
+                {charNameTwo}: E poi stracciamo {charNameFive}.
+                {charNameTwo}: Così la smette di dirmi cosa non devo fare.
                     ~ secondYellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
@@ -1079,7 +1106,10 @@
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)
         
-        + [Verde.]
+        + [Eppure loro non piangono e sono tristi e infelici.]
+            {name}: Litigano spesso.
+            {name}: Non sono felici di quello che fanno.
+            {name}: Se vuoi piangere, puoi essere più libero e felice.
                    ~ secondGreen ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)  
