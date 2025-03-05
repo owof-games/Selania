@@ -65,6 +65,7 @@
 
 === knowing_second_character
 ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {
             - not one:
@@ -88,7 +89,7 @@
                         -> five
                     //Altrimenti
                     - else:
-                        {charNameTwo}: La mentore ce l'ha con me!
+                        {charNameTwo}: {charNameFive} ce l'ha con me!
                         {charNameTwo}: Fa qualcosa!
                         -> main
                 }
@@ -131,7 +132,8 @@
                 
             + [Per aiutare chi è in difficoltà.]
                 ???: Come il veterinario?
-                ???: O come la maestra di educazione fisica quando non riesco a fare la cavallina?
+                ???: O come la maestra di ginnastica, che dice di aiutarmi.
+                ???: Ma poi mi sgrida se sbaglio?
                     ~ secondGreen ++
                 
             + [t]
@@ -141,7 +143,7 @@
         ???: Io sono qui perché è il mio compleanno.
         ???: Mamma mi ha promesso qualcosa di FIGHISSIMO!
         ???: L'anno scorso per Natale mi ha preso tutte le action figures dei miei videogiochi preferiti.
-        ???: Ma poi mio fratello me le ha rubate tutte.
+        ???: Ma poi papà me le ha rubate tutte.
         ???: Ma lui qui mica ci può venire.
         ???: Perché mamma ha detto che avrebbe dato solo a me qualcosa di bellissimo.
         ???: Ma dove trovo le caramelle?
@@ -158,7 +160,7 @@
 
                 
             + (twoGreen) [Vuoi molto bene a tua mamma?]
-                ???: Lei è la mamma migliore della terra.
+                ???: Lei è la mamma migliore del pianeta.
                 ???: Anche se è sempre stanca ora.
                     ~ secondGreen ++
   
@@ -213,7 +215,7 @@
         - (top)
         {name}: {charNameFive} dice che l'hai picchiata.
             
-            + (twoBlue) [t]
+            + (twoBlue) [delusione]
                 ~ secondBlue ++
                 
             + (twoYellow) [t]
@@ -223,7 +225,10 @@
                 ~ secondRed ++
 
                 
-            + (twoGreen) [C'è rimasta male, e anche io.]
+            + (twoGreen) [Come mai l'hai fatto?]
+                ???: Mi ha sgridato perché saltavo nel fiume.
+                ???: E poi mi ha detto che i bambini qui non ci devono stare.
+                ???: E mi ha tirato per il braccio.
                 ~ secondGreen ++
   
                 
@@ -231,6 +236,10 @@
                 ~ secondPurple ++
 
             -
+        {charNameTwo}: Se {charNameFive} non mi lascia in pace chiamo il mio papà.
+        {charNameTwo}: Lui è superforte.
+        {charNameTwo}: Ora lasciamo in pace.
+        
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
 
@@ -279,13 +288,14 @@
             	  {charNameTwo}: Ma mamma voleva buttarla perché dice che è troppo violento per un bambino.
             	  {charNameTwo}: Ma mica sono un bambino.
             	  {charNameTwo}: E così l'ho regalata a mio fratello.
-            	  {charNameTwo}: Che l'ha nascosta sotto al letto.
-            	  {charNameTwo}: Mamma non ci guarda sotto al suo letto, nemmeno quando è arrabbiata.
-            	  {charNameTwo}: Sennò lui si arrabbia più di lei.
+            	  {charNameTwo}: E quando vado a trovarlo posso vederla.
+            	  {charNameTwo}: E posso giocare con la Switch.
+            	  
         	    -> three_continue
         	  
         	  = her_liar
         	  ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        	  
             	  {charNameTwo}: Ah.
             	  {charNameTwo}: Sei una ragazza quindi.
             	  {charNameTwo}: Non ci parlo mica molto con le ragazze, siete strane.
@@ -357,16 +367,16 @@
     ~ secondStoryQuestCount ++
         -> secondAffinityCheckCalc ->
         
-        {charNameTwo}: Nonna non mi tratta mai come un bambino.
+        {charNameTwo}: Nonna non mi trattava mai come un bambino.
         {charNameTwo}: Mi ha anche insegnato come barare a carte.
         {charNameTwo}: E come aprire il cassetto dei dolci di mamma.
-        {charNameTwo}: Quando mamma e papà ci lasciano a casa da soli mangiamo sempre cose buone.
-        {charNameTwo}: E guardiamo assieme la tele.
-        {charNameTwo}: E posso scegliere cosa guardare.
+        {charNameTwo}: Quando mamma e papà ci lasciavano a casa da soli mangiavamo sempre cose buone.
+        {charNameTwo}: E guardavamo assieme la tele.
+        {charNameTwo}: E potevo scegliere cosa guardare.
         {charNameTwo}: Quando papà è andato via nonna ha aiutato mamma a stare bene.
-        {charNameTwo}: Anche se a mamma mica piace la nonna.
+        {charNameTwo}: Anche se a mamma mica piaceva la nonna.
         {charNameTwo}: E quando papà è tornato ha ripreso a trattarla male.
-        {charNameTwo}: Ma nonna dice che succede.
+        {charNameTwo}: Ma nonna diceva che succede.
         {charNameTwo}: Che gli adulti fanno cose cattive senza saperlo.
         {charNameTwo}: Mi spiace essere scappato di casa.
         
@@ -640,7 +650,7 @@
         {charNameTwo}: Oppure imparano il cinese e l'inglese.
         {charNameTwo}: E vanno a cavallo.
         {charNameTwo}: E sanno già cosa vogliono fare come lavoro.
-        {charNameTwo}: E io ho un sacco di tempo libero invece.
+        {charNameTwo}: E io ho tanto tempo libero invece.
         {charNameTwo}: Non posso fare quei corsi.
         {charNameTwo}: Mamma dice che i bambini devono giocare, non fare gli adulti.
         {charNameTwo}: Ma non ho nessuno con cui giocare.
@@ -741,7 +751,7 @@
         {charNameTwo}: Ma io ero contento perché non sapevo che ci sono dei fili nel muro.
         {charNameTwo}: E ora so cosa è l'elettricità.
         {charNameTwo}: Ma qui non c'è.
-        {charNameTwo}: Chissà se è la rana che fa accadere le cose allora.
+        {charNameTwo}: Chissà se è la rana che fa accadere le cose.
         
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
@@ -775,7 +785,7 @@
         {charNameTwo}: Però mi ricorda la casa della nonna.
         {charNameTwo}: L'altra nonna, quella che sta al mare.
         {charNameTwo}: Ci vado d'estate e mi diverto tantissimo.
-        {charNameTwo}: Lei mi prepara un sacco di cose buone.
+        {charNameTwo}: Lei mi prepara tutte le cose buone.
         {charNameTwo}: E io le insegno tutte le cose più strane sugli animali.
         {charNameTwo}: Mamma e papà non vengono mai.
         {charNameTwo}: Ma mio fratello e il suo amico sì.
@@ -788,7 +798,7 @@
         {charNameTwo}: Ora che nonna non c'è più, vorrei vivere sempre con l'altra nonna.
         {charNameTwo}: Tanto so studiare da solo.
         {charNameTwo}: Magari studio come si curano i pesci.
-        {charNameTwo}: Anche se non gli puoi mica fare le coccole.
+        {charNameTwo}: Anche se non ci puoi mica giocare con loro.
         {charNameTwo}: Uffi.
             
             + [Dammi dettagli più concreti.]
