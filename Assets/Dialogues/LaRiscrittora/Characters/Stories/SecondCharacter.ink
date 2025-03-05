@@ -161,7 +161,8 @@
                 
             + (twoGreen) [Vuoi molto bene a tua mamma?]
                 ???: Lei è la mamma migliore del pianeta.
-                ???: Anche se è sempre stanca ora.
+                ???: Dell'universo.
+                ???: Più della tua!
                     ~ secondGreen ++
   
                 
@@ -225,11 +226,13 @@
                 ~ secondRed ++
 
                 
-            + (twoGreen) [Come mai l'hai fatto?]
-                ???: Mi ha sgridato perché saltavo nel fiume.
+            + (twoGreen) [Non è una cosa bella da fare, lo sai vero?]
+                ???: Lo so.
+                ???: Ma mi ha sgridato perché saltavo nel fiume.
                 ???: E poi mi ha detto che i bambini qui non ci devono stare.
                 ???: E mi ha tirato per il braccio.
-                ~ secondGreen ++
+                ???: Non mi piace quando mi toccano.
+                    ~ secondGreen ++
   
                 
             + (twoPurple) [t]
@@ -331,16 +334,27 @@
             + {him_liar} [Avevi detto di esser pieno di action figures.]
                     ~ secondBlue ++
             
-            + {him_liar} [Tuo fratello non te le aveva rubate tutte?]
+            + {him_liar} [Caro, prima mi avevi detto che tutte le action te le ha rubate tuo padre.]
+                {charNameTwo}: No.
+                {charNameTwo}: Ricordi male.
+                {charNameTwo}: Papà è bravo, non fa queste cose. 
                     ~ secondGreen ++
             
             + {her_liar or they_liar} [Non avevi detto che questo è il regalo di compleanno di tua mamma?]
                     ~ secondBlue ++
             
-            + {her_liar} [Si arrabbia spesso, mamma?]
+            + {her_liar} [Tua mamma si arrabbia spesso?]
+                {charNameTwo}: Un po'.
+                {charNameTwo}: Non è cattiva, è che sono cattivo io.
+                {charNameTwo}: E così perde la pazienza.
+                {charNameTwo}: Ma è colpa mia.
                     ~ secondGreen ++
             
             + {they_liar} [Perdonami, ma non era il suo regalo di compleanno, questo?]
+                {charNameTwo}: Sì, certo che sì.
+                {charNameTwo}: Si è dimenticata il compleanno, ma poi ha deciso di farmi questo.
+                {charNameTwo}: Per scusarsi.
+                {charNameTwo}: E poi mi prenderà un cane!
                     ~ secondGreen ++
             
 
@@ -364,6 +378,8 @@
     //Obiettivo: Far vedere che c'è qualcosa che non va a casa.
     //Contenuto: Momento di vulnerabilità, ci parla della nonna (ma non ci dice che è morta) e ci dice che è fuggito da casa.
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    
     ~ secondStoryQuestCount ++
         -> secondAffinityCheckCalc ->
         
@@ -387,17 +403,38 @@
                     ~ secondYellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ secondRed ++
+                    ~ secondRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ secondGreen ++
+            + [Ti manca casa? Vorresti tornare?]
+                {charNameTwo}: No.
+                {charNameTwo}: Sì.
+                {charNameTwo}: Voglio tornare.
+                {charNameTwo}: Ma non so come.
+                {charNameTwo}: E se poi mamma si arrabbia?
+                {charNameTwo}: O papà?
+                {charNameTwo}: Vorrei tornare a casa di mio fratello.
+                {charNameTwo}: Lì mi piace.
+                {charNameTwo}: Ma non piaccio al suo amico.
+                {charNameTwo}: Dove devo andare?
+                    ~ secondGreen ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ secondPurple ++
+                    ~ secondPurple ++
  
             -
+        {charNameTwo}: Mi spiace, {name}.    
+        {charNameTwo}: Prima ho detto delle bugie.
+        {charNameTwo}: Non è vero che mamma mi ha mandato qui.
+        {charNameTwo}: Ma volevo così tanto avere un bel compleanno.
+        {charNameTwo}: Questo posto è pieno di animali!
+        {charNameTwo}: E nessuno si arrabbia con me.
+        {charNameTwo}: A parte {charNameFive}.
+        {charNameTwo}: Ti prometto che non dirò più bugie.
+        {charNameTwo}: Ma tu la terrai lontano, vero?
+        {charNameTwo}: Ora però lasciami solo.
+        
             //Leviamo l'innaffiatoio
             ~ move_entity(WateringCan, Safekeeping)
             ~ secondPauseTalking = secondCharPauseDurantion
@@ -414,8 +451,10 @@
         {name}: Dalla serra è scomparso l'innaffiatoio.
             + [Secondo {charNameFive} sei stato tu a prenderlo.]
                 {charNameTwo}: Perché lei mi odia.
+            
             + [Secondo me sei stato tu a prenderlo.]
                 {charNameTwo}: Perché date sempre la colpa a me?
+            
             + [Hai idea di dove sia?]
                 {charNameTwo}: Pensi che è colpa mia?
             -
@@ -451,7 +490,13 @@
                 ~ secondRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + [Ti arrabbi se ti dico che anche a me spiace per te?]
+            {charNameTwo}: Sì.
+            {charNameTwo}: No.
+            {charNameTwo}: Non so cosa provo se lo dici.
+            {charNameTwo}: Mi viene da piangere.
+            {charNameTwo}: Ma non voglio piangere.
+            {charNameTwo}: Quindi non dirlo più.
                 ~ secondGreen ++
   
                 
@@ -505,8 +550,14 @@
                 ~ secondRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ secondGreen ++
+            + [Sembra una rana molto gentile.]
+                {charNameTwo}: A me sta simpatica.
+                {charNameTwo}: E non credo sia tossica o velenosa.
+                {charNameTwo}: Però anche io vorrei un regalo.
+                {charNameTwo}: Se non ti piace mi dai quello che ti dà?
+                {charNameTwo}: Spero tanto in un cucciolo.
+                {charNameTwo}: O nella play!
+                    ~ secondGreen ++
   
                 
             + [Menti!]
@@ -514,7 +565,7 @@
  
             -
              ~ secondPauseTalking = secondCharPauseDurantion
-            -> main
+                -> main
     
     = seven
     //Obiettivo: raccontare il suo rapporto con la fantasia e le tensioni in famiglia (finale verde e finale viola)
@@ -552,8 +603,15 @@
                 ~ secondRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ secondGreen ++
+            + [Grazie per avermi raccontato questa cosa.]
+                {charNameTwo}: Non è una cosa così grossa comunque.
+                {charNameTwo}: Però mi piace.
+                {charNameTwo}: Non è poi che lo faccio proprio sempre.
+                {charNameTwo}: Solo con le cose brutte.
+                {charNameTwo}: O quando non succede niente.
+                {charNameTwo}: A volte è peggio.
+                {charNameTwo}: Non mi piace annoiarmi.
+                    ~ secondGreen ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
@@ -604,8 +662,15 @@
                 ~ secondRed ++
 
                 
-            + [Se non sai nuotare forse non dovresti andare allo stagno da solo.]
-                ~ secondGreen ++
+            + [Hai mai chiesto all'amico di tuo fratello cosa pensa di te?]
+                {charNameTwo}: Scherzi?
+                {charNameTwo}: Quella è una cosa davvero strana.
+                {charNameTwo}: Però una volta l'ho chiesto a mio fratello.
+                {charNameTwo}: E mi ha detto che gli piaccio molto.
+                {charNameTwo}: Ma non ci credo molto.
+                {charNameTwo}: Anche perché dice che non gli piacciono i bambini.
+                {charNameTwo}: Ed è una cosa che rende molto triste mio fratello.
+                    ~ secondGreen ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
@@ -634,8 +699,16 @@
                 ~ secondRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ secondGreen ++
+            + [Mi è sempre piaciuto far stare bene le persone.]
+                {charNameTwo}: Questa è una cosa bella.
+                {charNameTwo}: Ma difficile.
+                {charNameTwo}: Gli adulti pensano sempre di sapere cosa fare.
+                {charNameTwo}: Cosa vogliono gli altri.
+                {charNameTwo}: Ma poi sbagliano.
+                {charNameTwo}: E invece di dire "Ho sbagliato", se la prendono con la persona che volevano aiutare.
+                {charNameTwo}: Per questo si fa prima a fare da soli.
+                {charNameTwo}: Mica puoi litigare con te stesso, no?
+                    ~ secondGreen ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
@@ -654,12 +727,12 @@
         {charNameTwo}: Non posso fare quei corsi.
         {charNameTwo}: Mamma dice che i bambini devono giocare, non fare gli adulti.
         {charNameTwo}: Ma non ho nessuno con cui giocare.
-        {charNameTwo}: E non so cosa voglio fare.
+        {charNameTwo}: E non so cosa voglio fare da grande.
         {charNameTwo}: E questa cosa mi fa arrabbiare.
         {charNameTwo}: Non voglio essere un bambino per sempre.
-        {charNameTwo}: Ma non mi piace essere grande.
+        {charNameTwo}: Ma non voglio essere grande.
             
-            + [Dammi dettagli più concreti.]
+            + [Sai che crescerai anche se non lo vuoi, vero?]
                     ~ secondBlue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
@@ -669,8 +742,15 @@
                 ~ secondRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ secondGreen ++
+            + [Sai, hai moltissimo tempo per decidere che fare.]
+                {charNameTwo}: Sarà.
+                {charNameTwo}: Ma Lara sa già parlare due lingue.
+                {charNameTwo}: E Jin è appena entrato nella giovanile della Fiorentina.
+                {charNameTwo}: Tommaso legge così tanto che sicuro sicuro diventa un genio.
+                {charNameTwo}: Io l'unica cosa che so fare è dire cose stupide sugli animali.
+                {charNameTwo}: E trovare nascondigli in ogni posto.
+                {charNameTwo}: E dire bugie.
+                 ~ secondGreen ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
@@ -718,7 +798,11 @@
                 ~ secondRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + [Nessuno merita di essere picchiato, né tu né quel bambino.]
+                {charNameTwo}: Però se papà mi picchia c'è un motivo.
+                {charNameTwo}: Mamma dice che papà non lascia mai nulla al caso.
+                {charNameTwo}: E per questo è il più bravo a lavoro.
+                {charNameTwo}: E quel bambino è davvero fastidioso.
                 ~ secondGreen ++
   
                 
@@ -763,8 +847,13 @@
                 ~ secondRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ secondGreen ++
+            + [Ti prego, non mangiare nulla di strano, qui.]
+                {charNameTwo}: Troppo tardi.
+                {charNameTwo}: Ho assaggiato un po' di cose della serra.
+                {charNameTwo}: Ma hanno tutte un sapore strano.
+                {charNameTwo}: Però per un attimo una delle piante mi ha fatto vedere le cose con colori strani.
+                {charNameTwo}: Ma è durato pochissimo e poi avevo solo tanta sete.
+                        ~ secondGreen ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
@@ -811,8 +900,16 @@
                 ~ secondRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ secondGreen ++
+            + [Vorresti che venissero anche mamma e papà?]
+                {charNameTwo}: Io...
+                {charNameTwo}: Sono cattivo se dico di no?
+                {charNameTwo}: Mi piace un posto dove nessuno litiga.
+                {charNameTwo}: O si arrabbia con me.
+                {charNameTwo}: L'altra nonna, quella del mare, non si arrabbia mai con me.
+                {charNameTwo}: Nemmeno quando ho versato tutto il caffè sul divano.
+                {charNameTwo}: O quando le ho rubato la grappa.
+                {charNameTwo}: Che brutto essere ubriaco!
+                    ~ secondGreen ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
