@@ -857,9 +857,9 @@
         
         = loneliness_trigger
         Info
-            * [Voglio comunque approfondire la storia di questa personaggia.]
+            + [Voglio comunque approfondire la storia di questa personaggia.]
                 -> main_story_second_character
-            * [Salto.]
+            + [Salto.]
             //FUTURA SOLUZIONE A QUESTA SITUAZIONE
                 -> main
         -
@@ -878,22 +878,36 @@
     }
     = confession
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        {charNameTwo}: Ho realizzato una cosa, una cosa su noi due.
+    //Parole chiave legate alla fiducia.
+        {charNameTwo}: Abbiamo parlato un sacco.
+        {charNameTwo}: Ma davvero UN SACCO.
+        {charNameTwo}: Sai cosa penso di te?
             -> secondAffinityCalc ->
         {
-        - firstPurple && firstYellow > firstBlue: {charNameTwo}: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
+        //Migliore outcome
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): {charNameTwo}: Non sei male, per essere grande.
+            {charNameTwo}: Dici sempre le cose allo stesso modo.
+            {charNameTwo}: Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
+            {charNameTwo}: E questo mi fa stare al sicuro.
         <i>{charNameTwo} vede {name} come una persona amica e fidata.</i>
         
-        -firstPurple or firstYellow > firstBlue:{charNameTwo}: Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
+        //Secondo migliore outcome
+        -secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): {charNameTwo}: Un po' mi fido.
+            {charNameTwo}: Secondo me non dici <i>sempre</i> le cose in modo preciso.
+            {charNameTwo}: Sembri un po' un gatto.
+            {charNameTwo}: Ma mi fido.
         
         <i>{charNameTwo} si trova bene con {name}.</i>
         
-        - firstPurple && firstYellow < firstBlue: {charNameTwo}: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
+        //Outcome peggiore
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow < (secondStoryQuestCount/2):  {charNameTwo}: Secondo me mi tratti come un bambino.
+            {charNameTwo}: Tutte le cose che dici cambiano, sono disordinate.
+            {charNameTwo}: Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
+            {charNameTwo}: Non mi piace come cosa.
+        <i>{charNameTwo} non si è sentito capito da {name}.</i>
         
-        <i>{charNameTwo} non si è sentita capita da {name}.</i>
-        
-        
-        - else: A volte siamo sullo stesso brano, altre no. E non ho ancora capito chi tra noi stia ignorando l'altra parte.
+        //Outcome neutro
+        - else: {charNameTwo}: Che non ho capito cosa pensi. Sei come quando guardo nel terrario e non capisco se c'è l'insetto stecco o sono solo rami.
         
         <i>{charNameTwo} non riesce a capire che rapporto sta costruendo con {name}.</i>
         
@@ -908,7 +922,7 @@
 
     = statement
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità.|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
+        <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): l'inchiostro è aumentato di due unità.|{secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(secondCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]

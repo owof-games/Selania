@@ -817,6 +817,7 @@
             -> one
     }
     = confession
+    //Per il feedback, temi legati al rapporto, all'amicizia
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
         {charNameOne}: Ho realizzato una cosa, una cosa su noi due.
             -> firstAffinityCalc ->
@@ -833,7 +834,7 @@
         <i>{charNameOne} non si è sentita capita da {name}.</i>
         
         
-        - else: A volte siamo sullo stesso brano, altre no. E non ho ancora capito chi tra noi stia ignorando l'altra parte.
+        - else: {charNameOne}: A volte siamo sullo stesso brano, altre no. E non ho ancora capito chi tra noi stia ignorando l'altra parte.
         
         <i>{charNameOne} non riesce a capire che rapporto sta costruendo con {name}.</i>
         
