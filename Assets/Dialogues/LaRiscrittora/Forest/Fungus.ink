@@ -6,7 +6,7 @@
 + {are_two_entities_together(TheFungus, PG)} [TheFungus]
    ->talking_fungus
     
-
+TODO: quando compaiono la prima volta rami o radici, ci dice che "la cicatrice di ciò che è stato rimane", per giustificare la linea nera del contorno.
     
 === talking_fungus
 ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
