@@ -397,6 +397,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
         return (InkList)story.variablesState["playerFirstStory"];
     }
 
+    public InkList GetPlayerSecondStory()
+    {
+        return (InkList)story.variablesState["playerSecondStory"];
+    }
 
     //Questo viene utilizzato dai coltivabili
     public InkList GetEffettivoStatoCantoDelleCompagne()
