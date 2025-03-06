@@ -125,7 +125,7 @@
                 
             + [Perché è pieno di cose strane!]
                 ???: Uh.
-                ???: Per ora ho visto solo questa fermata.
+                ???: Per ora ho esplorato solo la fermata.
                 ???: Però il tabellone con le lettere è strano.
                 ???: Le lettere non si danno al postino?
                 ???: E il postino non le porta alle persone?
@@ -230,7 +230,7 @@
             + (twoBlue) [delusione]
                 ~ secondBlue ++
                 
-            + (twoYellow) [Perché non le hai fatto il solletico? O uno scherzo?]
+            + (twoYellow) [Perché non le hai fatto uno scherzo invece?]
                 ???: Perché ero arrabbiato.
                 ???: E non so fare gli scherzi.
                 ???: Ma lei continuava a dire che i bambini qui non ci possono stare.
@@ -1093,6 +1093,7 @@
         {charNameTwo}: Per stare lontano dagli adulti.
         {charNameTwo}: Non è il mio compleanno.
         {charNameTwo}: Scusa per la bugia.
+        {charNameTwo}: Ma se non c'è un motivo, nessuno mi ascolta.
 
             + [Forse so come farti vedere le cose in modo diverso.]
                 -> statement
