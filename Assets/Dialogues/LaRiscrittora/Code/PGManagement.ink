@@ -84,6 +84,15 @@ VAR purple  = ()
         ~ yellow = firstYellow
         ~ purple = firstPurple
         ~ playerFirstStory = ()
+
+    - char == secondStory:
+        ~ red = secondRed
+        ~ green = secondGreen
+        ~ blue = secondBlue
+        ~ yellow = secondYellow
+        ~ purple = secondPurple
+        ~ playerSecondStory = ()
+
 }
 
     //Qui aggiorno i valori delle scelte della player
@@ -98,6 +107,8 @@ VAR purple  = ()
     ~ playerBlue = playerBlue + blue
         {debug: Il valore di playerBlue è {playerBlue}}
 
+
+    //E poi confronto quella che è la storia della personaggia, la progressione delle sue scelte: di fatto per ora basta che non ci siano pareggi tra colori per evitare il marrone. A quel punto emerge il colore dominante.
 {
     - (playerGreen > playerBlue) && (playerGreen > playerRed) && (playerGreen > playerYellow) && (playerGreen > playerPurple):
         {
