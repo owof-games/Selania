@@ -170,7 +170,7 @@
                 ~ secondRed ++
 
                 
-            + (twoGreen) [Vuoi molto bene a tua mamma?]
+            + (twoGreen) [Vuoi molto bene alla tua mamma?]
                 ???: Lei è la mamma migliore del pianeta.
                 ???: Dell'universo.
                 ???: Più della tua!
@@ -203,7 +203,7 @@
         {charNameTwo}: E che l'acso, atso, axotolot si fa ricrescere le braccia?
             + [Gli chiedo perché ha picchiato {charNameFive}.]
                 -> top
-            + [Lo lascio continuare]
+            + [Lo lascio continuare.]
             -
             
         {charNameTwo}: E le capre hanno dei loro accenti!
@@ -212,7 +212,7 @@
         {charNameTwo}: Tu sai camminare indietro? Secondo me no.
             + [Gli chiedo perché ha picchiato {charNameFive}.]
                 -> top
-            + [Lo lascio continuare]
+            + [Lo lascio continuare.]
             -
         {charNameTwo}: I nasi dei cani sotto tutti diversi, non ci sono due cani con lo stesso naso.
         {charNameTwo}: E...
@@ -248,9 +248,9 @@
                 ~ secondRed ++
 
                 
-            + (twoGreen) [Non è una cosa bella da fare, lo sai vero?]
-                ???: Lo so.
-                ???: Ma mi ha sgridato perché saltavo nel fiume.
+            + (twoGreen) [C'è rimasta male, sai?]
+                ???: E a me che mi importa?
+                ???: Mi ha sgridato perché saltavo nel fiume.
                 ???: E poi mi ha detto che i bambini qui non ci devono stare.
                 ???: E mi ha tirato per il braccio.
                 ???: Non mi piace quando mi toccano.
@@ -306,6 +306,10 @@
             	  
             	  {charNameTwo}: Sono contento che sei un maschio.
             	  {charNameTwo}: {charNameFive} è così noiosa.
+            	  {charNameTwo}: Vuole cacciarmi.
+            	  {charNameTwo}: Ma io sto qui.
+            	  {charNameTwo}: Mamma si è dimenticata di nuovo il mio compleanno.
+            	  {charNameTwo}: E da qui non me ne vado!
             	  {charNameTwo}: Ma a te piacciono le action figures?
             	  {charNameTwo}: Tutti i miei compagni di classe ne hanno, ma io no.
             	  {charNameTwo}: Mamma fa sempre storie se le chiedo di comprarmi qualcosa.
@@ -345,7 +349,8 @@
         	        {charNameTwo}: Ma poi però mi ha regalato una action figure di Spiderman.
         	        {charNameTwo}: Ma preferisco le tartarughe ninja.
         	        {charNameTwo}: Così poi vedo i coccodrilli delle fogne.
-          
+                    {charNameTwo}: Non ho mai visto un coccodrillo.
+                    
                 -> three_continue
        
        
@@ -356,35 +361,50 @@
             + {him_liar} [Avevi detto di esser pieno di action figures.]
                     ~ secondBlue ++
             
-            + {him_liar} [Caro, prima mi avevi detto che tutte le action te le ha rubate tuo padre.]
+            + {him_liar} [Prima hai detto che tutte le action te le ha rubate tuo padre.]
+                    ~ secondRed ++
                 {charNameTwo}: No.
                 {charNameTwo}: Ricordi male.
                 {charNameTwo}: Papà è bravo, non fa queste cose. 
-                    ~ secondGreen ++
+               
             
-            + {her_liar or they_liar} [Non avevi detto che questo è il regalo di compleanno di tua mamma?]
-                    ~ secondBlue ++
             
             + {her_liar} [Tua mamma si arrabbia spesso?]
+                    ~ secondRed ++
                 {charNameTwo}: Un po'.
                 {charNameTwo}: Non è cattiva, è che sono cattivo io.
                 {charNameTwo}: E così perde la pazienza.
                 {charNameTwo}: Ma è colpa mia.
-                    ~ secondGreen ++
             
+            
+            + {her_liar or they_liar} [Non avevi detto che questo è il regalo di compleanno di tua mamma?]
+                    ~ secondBlue ++
+            
+                  
             + {they_liar} [Perdonami, ma non era il suo regalo di compleanno, questo?]
+                    ~ secondRed ++
                 {charNameTwo}: Sì, certo che sì.
                 {charNameTwo}: Si è dimenticata il compleanno, ma poi ha deciso di farmi questo.
                 {charNameTwo}: Per scusarsi.
                 {charNameTwo}: E poi mi prenderà un cane!
-                    ~ secondGreen ++
+                   
+                 
+                 
+            + [Ci stai male, quando mamma dimentica il tuo compleanno?]
+                {charNameTwo}: Un po'.
+                {charNameTwo}: Ma solo perché fa tante promesse tutto l'anno.
+                {charNameTwo}: E poi non succede mai niente.
+                {charNameTwo}: Voglio festeggiarlo con mio fratello.
+                {charNameTwo}: Ma poi papà si arrabbia.
+                {charNameTwo}: E così non facciamo mai nulla.
+                {charNameTwo}: E allora vado a letto prestissimo e correggo tutta la giornata.
+                    ~ secondGreen ++          
             
 
+            
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
                     ~ secondYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ secondRed ++
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
                 ~ secondPurple ++
@@ -517,14 +537,14 @@
                 ~ secondRed ++
 
                 
-            + [Ti arrabbi se ti dico che anche a me spiace per te?]
-            {charNameTwo}: Sì.
-            {charNameTwo}: No.
-            {charNameTwo}: Non so cosa provo se lo dici.
-            {charNameTwo}: Mi viene da piangere.
-            {charNameTwo}: Ma non voglio piangere.
-            {charNameTwo}: Quindi non dirlo più.
-                ~ secondGreen ++
+            + [A me spiace per te, sai?]
+                {charNameTwo}: Mmm.
+                {charNameTwo}: Non dirlo.
+                {charNameTwo}: Non so cosa provo se lo dici.
+                {charNameTwo}: Mi viene da piangere.
+                {charNameTwo}: Ma non voglio piangere.
+                {charNameTwo}: Quindi non dirlo più.
+                    ~ secondGreen ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
@@ -769,7 +789,7 @@
                 ~ secondRed ++
 
                 
-            + [Sai, hai moltissimo tempo per decidere che fare.]
+            + [Non ti preoccupare: hai moltissimo tempo per decidere che fare.]
                 {charNameTwo}: Sarà.
                 {charNameTwo}: Ma Lara sa già parlare due lingue.
                 {charNameTwo}: E Jin è appena entrato nella giovanile della Fiorentina.
@@ -801,8 +821,7 @@
         {charNameTwo}: Ero DAVVERO arrabbiato quel giorno.
         {charNameTwo}: E lui ha pianto e mi sono arrabbiato ancora di più.
         {charNameTwo}: La maestra di matematica mi ha messo in castigo.
-        {charNameTwo}: E quando sono tornato a casa papà mi ha picchiato.
-        {charNameTwo}: E ora quando vedo il bambino mi sento in colpa.
+        {charNameTwo}: Ora quando vedo il bambino mi sento in colpa.
         {charNameTwo}: Ho provato a chiedergli scusa ma lui scappa.
         {charNameTwo}: E sua sorella una volta mi ha lanciato una scarpa in faccia.
         {charNameTwo}: Mio fratello dice che succede.
@@ -849,7 +868,6 @@
         {charNameTwo}: Quando vado da mio fratello e non c'è il suo amico, mi lascia sperimentare con le sue cose.
         {charNameTwo}: Il suo amico fa il pasticciere.
         {charNameTwo}: E ha tantissime cose strane in cucina.
-        {charNameTwo}: E a me piacciono le cose strane.
         {charNameTwo}: Mi piace provare le cose.
         {charNameTwo}: Capire.
         {charNameTwo}: Non mi piacciono le cose che non capisco.
@@ -874,10 +892,10 @@
                 ~ secondRed ++
 
                 
-            + [Ti prego, non mangiare nulla di strano, qui.]
+            + [Promettimi che non mangerai nulla di strano, qui.]
                 {charNameTwo}: Troppo tardi.
                 {charNameTwo}: Ho assaggiato un po' di cose della serra.
-                {charNameTwo}: Ma hanno tutte un sapore strano.
+                {charNameTwo}: Ma hanno tutte un sapore fastidioso.
                 {charNameTwo}: Però per un attimo una delle piante mi ha fatto vedere le cose con colori strani.
                 {charNameTwo}: Ma è durato pochissimo e poi avevo solo tanta sete.
                         ~ secondGreen ++
@@ -907,6 +925,7 @@
         {charNameTwo}: Ma mio fratello e il suo amico sì.
         {charNameTwo}: Una volta mi hanno portato a una festa sulla spiaggia.
         {charNameTwo}: E mi hanno fatto cantare nel microfono.
+        {charNameTwo}: E hanno riso tutti quando ho ruttato fortissimo.
         {charNameTwo}: Da nonna mi addormento subito.
         {charNameTwo}: Non devo correggere le giornate.
         {charNameTwo}: Quando arriva fine agosto però mi sento triste.
@@ -915,7 +934,6 @@
         {charNameTwo}: Tanto so studiare da solo.
         {charNameTwo}: Magari studio come si curano i pesci.
         {charNameTwo}: Anche se non ci puoi mica giocare con loro.
-        {charNameTwo}: Uffi.
             
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
