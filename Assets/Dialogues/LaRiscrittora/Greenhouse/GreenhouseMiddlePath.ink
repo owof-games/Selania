@@ -6,3 +6,13 @@
     -
     
 -> main
+
+
+=== the_frog
++ {are_two_entities_together(TheFrog, PG)} [TheFrog]
+   ->talking_frog
+   
+   
+=== talking_frog
+    La Rana Parlante: Cra Cra
+-> main

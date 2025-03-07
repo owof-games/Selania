@@ -612,6 +612,7 @@
  
             -
              ~ secondPauseTalking = secondCharPauseDurantion
+             ~  move_entity(TheFrog, GreenhouseMiddlePath)
                 -> main
     
     = seven

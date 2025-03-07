@@ -13,7 +13,7 @@ LIST places = Forest, BusStop, Greenhouse, Library, Nest, Laboratory, Safekeepin
 LIST bedroomBGStates = (bedroomBGZero), bedroomBGOne, bedroomBGTwo, bedroomBGThree
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
-LIST characters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, SixthCharacter, SeventhCharacter
+LIST characters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, SixthCharacter, SeventhCharacter, TheFrog
 
 LIST transitions = FromBusStopToForest, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibrary,  FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, FromGreenhouseToGreenhouseMiddlePath, FromLibraryToForest, FromLibraryToLaboratory
 
@@ -43,5 +43,5 @@ VAR nestContents = (Inventory)
 
 VAR laboratoryContents = (Inventory)
 
-VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, MenuSave, MenuQuit)
+VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, MenuSave, MenuQuit, TheFrog)
 
