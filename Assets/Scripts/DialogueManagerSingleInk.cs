@@ -33,8 +33,13 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Background setting")]
     [SerializeField] private Image background;
     private const string BACKGROUND_TAG = "background";
+
     [Header("Bedroom Backgrounds")]
-    [SerializeField] private Sprite backBedroom;
+    [SerializeField] private Sprite bedroomZero;
+    [SerializeField] private Sprite bedroomOne;
+    [SerializeField] private Sprite bedroomTwo;
+    [SerializeField] private Sprite bedroomThree;
+
     [Header("Forest Backgrounds")]
     [SerializeField] private Sprite backForest;
 
@@ -278,9 +283,24 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 case BACKGROUND_TAG:
 
                     //TAG GESTIONE DELLA CAMERA DA LETTO
-                    if (tagValue == "backBedroom")
+                    if (tagValue == "bedroomZero")
                     {
-                        background.sprite = backBedroom;
+                        background.sprite = bedroomZero;
+                    }
+                    
+                    if (tagValue == "bedroomOne")
+                    {
+                        background.sprite = bedroomOne;
+                    }
+
+                    if (tagValue == "bedroomTwo")
+                    {
+                        background.sprite = bedroomTwo;
+                    }
+
+                    if (tagValue == "bedroomThree")
+                    {
+                        background.sprite = bedroomThree;
                     }
 
                     //TAG GESTIONE DELLA FORESTA

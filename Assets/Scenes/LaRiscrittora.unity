@@ -154,8 +154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.261}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -550, y: -354}
-  m_SizeDelta: {x: 331.2152, y: 657.9549}
+  m_AnchoredPosition: {x: -651, y: -371}
+  m_SizeDelta: {x: 321.3417, y: 659.4505}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &9773733
 MonoBehaviour:
@@ -8293,7 +8293,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3296238398069684936, guid: 4a975d2d422c30d48837ee647b25f9c0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7896b8b0eb43225458521d0501e5713f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8542,7 +8542,10 @@ MonoBehaviour:
   - {fileID: 863804826}
   - {fileID: 1924385861}
   background: {fileID: 1753709286}
-  backBedroom: {fileID: 21300000, guid: e90da0db04ab2f84ab424edaafd7120d, type: 3}
+  bedroomZero: {fileID: 21300000, guid: c6b1100f4257c054aae7e3701c7e215c, type: 3}
+  bedroomOne: {fileID: 21300000, guid: de8ec455e1d2d68488cc6cf82fa40252, type: 3}
+  bedroomTwo: {fileID: 21300000, guid: ddf99c71b42c9c746877c1f72846f5b7, type: 3}
+  bedroomThree: {fileID: 21300000, guid: 7896b8b0eb43225458521d0501e5713f, type: 3}
   backForest: {fileID: 21300000, guid: 0faabba094d971b4a9946617a3b5cd4f, type: 3}
   backBusStop: {fileID: 21300000, guid: b569490a602e2ed4093b74a772e7232d, type: 3}
   backGreenhouse: {fileID: 21300000, guid: 4e7db147f93ea6e4b851dd19572590df, type: 3}
