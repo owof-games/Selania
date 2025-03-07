@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b940254c540b38146b1c0f5994dc739f
+guid: de8ec455e1d2d68488cc6cf82fa40252
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4943050309376865436
-    second: white-bedroom-with-lateral-view-of-a-bed-place-for-suitcases-tv-and-balcony-door-with-view-of-a-tree-2JG7YT7_0
+      213: -3531233522805410395
+    second: Bedroom_one_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: white-bedroom-with-lateral-view-of-a-bed-place-for-suitcases-tv-and-balcony-door-with-view-of-a-tree-2JG7YT7_0
+      name: Bedroom_one_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1300
-        height: 960
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c94fa45211e399440800000000000000
-      internalID: 4943050309376865436
+      spriteID: 5a57b3ef1d98efec0800000000000000
+      internalID: -3531233522805410395
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      white-bedroom-with-lateral-view-of-a-bed-place-for-suitcases-tv-and-balcony-door-with-view-of-a-tree-2JG7YT7_0: 4943050309376865436
+      Bedroom_one_0: -3531233522805410395
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

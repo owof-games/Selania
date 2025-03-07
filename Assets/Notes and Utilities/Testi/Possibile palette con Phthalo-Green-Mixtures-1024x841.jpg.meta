@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Possibile palette con Phthalo-Green-Mixtures-1024x841_0: 4172192180010851283
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
