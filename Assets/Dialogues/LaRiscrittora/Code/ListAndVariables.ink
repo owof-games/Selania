@@ -9,6 +9,8 @@ VAR debugChangeName = false
 //Lista di tutti i luoghi del gioco
 LIST places = Forest, BusStop, Greenhouse, Library, Nest, Laboratory, Safekeeping, GreenhouseMiddlePath, Bedroom
 
+//Gestione background
+LIST bedroomBGStates = (bedroomBGZero), bedroomBGOne, bedroomBGTwo, bedroomBGThree
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
 LIST characters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, SixthCharacter, SeventhCharacter

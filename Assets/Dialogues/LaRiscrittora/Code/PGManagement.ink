@@ -20,6 +20,7 @@ VAR playerFifthStory = emptyStatus
 //Traccio gli spostamenti della personaggia per gestire la comparsa delle personagge
 VAR movementsCounter = 0
 
+
 //Variabili per tracciare i trigger warning. True = non è TW, posso mostrare quelle storie
 VAR alcoholism = true
 VAR abuses = true

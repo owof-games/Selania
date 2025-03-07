@@ -3,6 +3,8 @@
  === move_between_rooms(my_location)
 //Streets to and into the Bedroom
     + {are_two_entities_together(PG, FromBusStopToBedroom)} [FromBusStopToBedroom]
+        //Calcolo del background
+        -> bedroom_backgrounds_calculator ->
         ~ move_entity(PG, Bedroom)
         -> bedroom
         

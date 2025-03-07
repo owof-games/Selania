@@ -2,10 +2,26 @@
 
 //Funzioni di gestione del background
 //Per la nomenclatura: il back di default è backLuogo, il resto vediamo man mano.
+// LIST bedroomBGStates = bedroomBGZero, bedroomBGOne, bedroomBGTwo, bedroomBGThree
+
 === function tag_background()
 {
     - entity_location(PG) == Bedroom:
-       ~ return "backBedroom"
+    {
+        - bedroomBGStates has bedroomBGThree:
+                ~ return "bedroomThree"
+    
+        - bedroomBGStates has bedroomBGTwo:
+                ~ return "bedroomTwo"
+        
+        - bedroomBGStates has bedroomBGOne:
+                ~ return "bedroomOne"
+        
+        - bedroomBGStates has bedroomBGZero:
+                ~ return "bedroomZero"
+    
+    }
+       
        
     - entity_location(PG) == Forest:
         ~ return "backForest"
@@ -97,4 +113,28 @@
             ~ fifthPauseTalking --    
     }
 ->->
+
+
+=== bedroom_backgrounds_calculator
+
     
+    {
+        - from_list_to_books && (lichene_degli_abissi.step_tre or muschio_delle_amanti.step_tre or canto_delle_compagne.step_tre or la_spazzata.step_tre or bacca_della_addolorata.step_tre or non_ti_scordar_di_te.step_tre or brina_dell_impossibile.step_tre):
+                ~ bedroomBGStates += ()
+                ~ bedroomBGStates += bedroomBGThree
+        
+        - (lichene_degli_abissi.step_tre or muschio_delle_amanti.step_tre or canto_delle_compagne.step_tre or la_spazzata.step_tre or bacca_della_addolorata.step_tre or non_ti_scordar_di_te.step_tre or brina_dell_impossibile.step_tre) && (welcome or talking_fungus):
+                ~ bedroomBGStates += ()
+                ~ bedroomBGStates += bedroomBGTwo
+            
+        - welcome or talking_fungus:
+                ~ bedroomBGStates += ()
+                ~ bedroomBGStates += bedroomBGOne
+            
+        - else:
+                ~ bedroomBGStates += ()
+                ~ bedroomBGStates += bedroomBGZero
+
+    } 
+
+->->
