@@ -5,45 +5,8 @@
 ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 
-
 {
-//Introduzioni
-    - welcome == 0:
-        -> welcome
-    - gifts_and_ink == 0:
-        {
-            - not talk_with_first_character:
-                {charNameFive}: Hai parlato con la nuova persona?
-            - talk_with_first_character:
-                {charNameFive}: Sembra che {charNameOne} ti abbia raccontato qualcosa di sè!
-                -> gifts_and_ink
-        }
-                
-        
-    - not questions:
-        {
-            - first_story_gift.ink_outcome:
-                -> questions
-            - else:
-            {
-                - firstStoryQuestCount >= minStoryQuesTCount: {charNameFive}: Hai fatto il tuo dono a {charNameOne}?
-                - else:
-                    {charNameFive}: Continua a conoscere {charNameOne}, così potrai farle il dono.
-            }
-        }
-
 //Feedback
-    - not first_character_feedback:
-        {
-            - firstStory == Ended:
-                -> first_character_feedback
-            - else:
-                {charNameFive}: Prenditi il tuo tempo, ma ricordati che presto o tardi dovrai aiutare {charNameOne} a trovare il suo nuovo nome.
-        }
-    
-    - not second_character_feedback && secondStory == Ended:
-        -> second_character_feedback
-
     - not third_character_feedback && thirdStory == Ended:
         -> third_character_feedback        
 
@@ -69,7 +32,75 @@
     - are_entities_together_in(PG, Mentor, BusStop) && not first_bus_stop_visit:
         -> first_bus_stop_visit
  
-//Storylets legati alla seconda storia
+    - else:
+        ->->
+
+}
+
+=== mentor_and_first_char_storylets ===
+~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+
+{
+    - welcome == 0:
+        -> welcome
+    
+    - gifts_and_ink == 0:
+        {
+            - not talk_with_first_character:
+                {charNameFive}: Hai parlato con la nuova persona?
+                    ->->
+            - talk_with_first_character:
+                {charNameFive}: Sembra che {charNameOne} ti abbia raccontato qualcosa di sè!
+                -> gifts_and_ink
+        }
+                
+        
+    - not questions:
+        {
+            - first_story_gift.ink_outcome:
+                -> questions
+            - else:
+            {
+                - firstStoryQuestCount >= minStoryQuesTCount: {charNameFive}: Hai fatto il tuo dono a {charNameOne}?
+                        ->->
+                - else:
+                    {charNameFive}: Continua a conoscere {charNameOne}, così potrai farle il dono.
+                        ->->
+            }
+        }
+        
+//Feedback
+    - not first_character_feedback:
+        {
+            - firstStory == Ended:
+                -> first_character_feedback
+            - else:
+                {charNameFive}: Prenditi il tuo tempo, ma ricordati che presto o tardi dovrai aiutare {charNameOne} a trovare il suo nuovo nome.
+                    ->->
+        }
+    
+    - else:
+        ->->    
+
+}
+
+=== mentor_and_second_char_storylets ===
+~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+
+{
+
+    - not second_character_feedback && secondStory == Ended:
+        -> second_character_feedback
+        
+
     //Dopo le presentazioni con due:
     - knowing_second_character.one && not that_little_liar_storylet:
         -> that_little_liar_storylet
@@ -83,7 +114,7 @@
         ->->
 
 }
-
+->->
 
 
 // STORYLETS PRESENTAZIONE DEI LUOGHI
