@@ -17,9 +17,9 @@
 
 //Gestione spostamenti: luoghi. I luoghi si aprono alla fine di ogni storia.
 //First tier: tier iniziale.
-    VAR firstTier = false
+    VAR firstTier = true
 //Second tier. Con la fine della prima storia.
-    VAR secondTier = false
+    VAR secondTier = true
 //Third Tier. Con la fine della seconda storia.
     VAR thirdTier = false
 //Fourth Tier. Con la fine della terza storia.

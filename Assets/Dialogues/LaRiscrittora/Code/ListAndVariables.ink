@@ -30,7 +30,7 @@ VAR bedroomContents = (RoomExit, RoomLoad, PG)
 
 VAR busStopContents = (FromBusStopToForest, StartingNote, FromBusStopToBedroom, Inventory)
 
-VAR forestContents = (Mentor, Bench, TheFungus, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat, Inventory)
+VAR forestContents = (Mentor, Bench, TheFungus, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibrary,  Inventory)
 
 VAR greenhouseMiddlePathContents = (FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, Inventory)
 
@@ -43,5 +43,5 @@ VAR nestContents = (Inventory)
 
 VAR laboratoryContents = (Inventory)
 
-VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, MenuSave, MenuQuit, FromForestToLibrary, TheFrog)
+VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, MenuSave, MenuQuit, TheFrog, FromForestToLibraryDesat)
 
