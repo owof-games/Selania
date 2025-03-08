@@ -27,7 +27,7 @@
         + [Avrei bisogno di una mano.]
             -> support
         
-        + {(pre_test && not little_storylets.voices) or (firstCharacterInkLevel has High && not little_storylets.infoImpo) or talking_fungus.first_story_ended_check}[Mi è successa una cosa strana.]
+        + {(pre_test && not little_storylets.voices) or (firstCharacterInkLevel has High && not little_storylets.infoImpo) or talking_fungus.first_story_ended_check && not little_storylets.talkingFungus}[Mi è successa una cosa strana.]
             -> little_storylets
             
         + {knowing_second_character}[Vorrei conoscerti meglio.]

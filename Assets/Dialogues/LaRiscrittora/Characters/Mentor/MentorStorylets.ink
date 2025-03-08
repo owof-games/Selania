@@ -14,7 +14,6 @@
         {
             - not talk_with_first_character:
                 {charNameFive}: Hai parlato con la nuova persona?
-                ->->
             - talk_with_first_character:
                 {charNameFive}: Sembra che {charNameOne} ti abbia raccontato qualcosa di sè!
                 -> gifts_and_ink
@@ -28,10 +27,8 @@
             - else:
             {
                 - firstStoryQuestCount >= minStoryQuesTCount: {charNameFive}: Hai fatto il tuo dono a {charNameOne}?
-                  ->->
                 - else:
                     {charNameFive}: Continua a conoscere {charNameOne}, così potrai farle il dono.
-                      ->->
             }
         }
 
@@ -42,7 +39,6 @@
                 -> first_character_feedback
             - else:
                 {charNameFive}: Prenditi il tuo tempo, ma ricordati che presto o tardi dovrai aiutare {charNameOne} a trovare il suo nuovo nome.
-                ->->
         }
     
     - not second_character_feedback && secondStory == Ended:
@@ -419,7 +415,7 @@
             {charNameFive}: Soprattutto se ti aiuta a raggiungere il tuo obiettivo.
                 ->->
         
-        * {talking_fungus.first_story_ended_check} [Prima ho parlato con il tronco.]
+        * (talkingFungus) {talking_fungus.first_story_ended_check} [Prima ho parlato con il tronco.]
             {name}: E mi ha chiesto come stavo dopo aver aiutato {charNameOne}.
             {infoImpo or voices: {charNameFive}: Stellina, di nuovo con questa voce?|{charNameFive}: Senti le voci, stellina?}
             {name}: Sono in questo posto da non so quanto e non ho mai parlato con tronchi o rami o radici.

@@ -26,10 +26,23 @@
             - not one:
                 -> one
                 
-            - not two && firstWritingPause < 0:
-                -> two
+            - not two:
+                {  
+                    - firstWritingPause < 0:
+                        -> two
+                    - else:
+                        -> one
+                }
                 
-            - not three && firstWritingPause < 0:
+            - not three:
+                {  
+                    - firstWritingPause < 0:
+                        -> three
+                    - else:
+                        -> two
+                }
+            
+            - else:
                 -> three
             
         }

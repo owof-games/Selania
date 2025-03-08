@@ -61,11 +61,11 @@
                 -> greenhouse
 
 //Streets to Library
-    + {are_two_entities_together(PG, FromForestToLibraryDesat)} [FromForestToLibraryDesat]
+    + {are_two_entities_together(PG, FromForestToLibraryDesat) && secondTier == false} [FromForestToLibraryDesat]
         <i>Questa strada risulta bloccata, per ora.</i>
             -> main
             
-    + {are_two_entities_together(PG, FromForestToLibrary)} [FromForestToLibrary]
+    + {are_two_entities_together(PG, FromForestToLibrary) && secondTier == true} [FromForestToLibrary]
             ~ move_entity(PG, Library)
             -> on_movement_events ->
                 -> library

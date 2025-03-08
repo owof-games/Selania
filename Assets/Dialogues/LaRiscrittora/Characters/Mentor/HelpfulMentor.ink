@@ -77,7 +77,7 @@
     + {secondTier or thirdTier or fourthTier}[Sono altri i luoghi di cui vorrei parlare.]
         -> second_top
     
-    + {not secondTier or thirdTier or fourthTier}[Ho cambiato idea.]
+    + {not secondTier or thirdTier or fourthTier}[Voglio parlare d'altro.]
         -> talk_with_mentor  
 
     
@@ -111,14 +111,14 @@
 === to_do
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 
-        {gifts_and_ink}{charNameFive}: La prima cosa da fare è: conquistare la <b>fiducia</b> della persona che devi aiutare.
-        {gifts_and_ink}{charNameFive}: Ci <b>parli</b>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.
-        {gifts_and_ink}{charNameFive}: Poi, le fai un <b>dono</b>.
-        {gifts_and_ink}{charNameFive}: Più il dono è qualcosa che le dimostra che l'hai ascoltata, più avrai <b>inchiostro</b> per aiutarla a riscrivere la sua storia.
-        {questions}{charNameFive}: A quel punto inizi i tuoi <b>interventi</b>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.
-        {questions}{charNameFive}: Più inchiostro hai, più interventi puoi fare.
-        {questions}{charNameFive}: Infine: in base alle cose che avrai detto, la persona sceglierà il suo <b>nuovo nome</b>.
-        {questions}{charNameFive}: E poi si ricomincia.
+        {gifts_and_ink:{charNameFive}: La prima cosa da fare è: conquistare la <b>fiducia</b> della persona che devi aiutare.}
+        {gifts_and_ink:{charNameFive}: Ci <b>parli</b>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.}
+        {gifts_and_ink:{charNameFive}: Poi, le fai un <b>dono</b>.}
+        {gifts_and_ink:{charNameFive}: Più il dono è qualcosa che le dimostra che l'hai ascoltata, più avrai <b>inchiostro</b> per aiutarla a riscrivere la sua storia.}
+        {questions: {charNameFive}: A quel punto inizi i tuoi <b>interventi</b>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.}
+        {questions: {charNameFive}: Più inchiostro hai, più interventi puoi fare.}
+        {questions: {charNameFive}: Infine: in base alle cose che avrai detto, la persona sceglierà il suo <b>nuovo nome</b>.}
+        {questions: {charNameFive}: E poi si ricomincia.}
            -> talk_with_mentor
 
 
@@ -178,7 +178,7 @@
     
     + [I temi che voglio evitare sono altri.]
         -> top_due
-    + [Ho cambiato idea.]
+    + [Sono a posto così.]
         ->->
 
     

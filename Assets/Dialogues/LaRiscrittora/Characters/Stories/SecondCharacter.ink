@@ -28,7 +28,7 @@
             {
                 - second_story_gift.ink_outcome: {charNameTwo}: {~ Mi sento triste, ti spiace tornare dopo?|Scusa {name} ma voglio stare solo.|In questo momento sono giù, torneresti dopo?}
                 
-                - else: {charNameTwo}: {~ Torna dopo.|Ora ho voglia di stare da solo.|Lasciami in pace.}
+                - else: {knowing_second_character.two:{charNameTwo}|???}: {~ Torna dopo.|Ora ho voglia di stare da solo.|Lasciami in pace.}
             }
             
         -> main
@@ -37,7 +37,7 @@
 = hub
 ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
 
-    {charNameTwo}: {~ Ciao.|...}
+    {knowing_second_character.two:{charNameTwo}|???}: {~ Ciao.|...}
     
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_second_character

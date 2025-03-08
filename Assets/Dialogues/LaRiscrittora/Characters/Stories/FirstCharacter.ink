@@ -39,8 +39,8 @@
                 
             //Se non ho ancora fatto il dono e NON ho parlato col mentore e ho parlato abbastanza con lei
             + {firstStoryQuestCount > minStoryQuesTCount && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
-                    {charNameOne}: Ti ringrazio, non hai ancora chiesto al mentore a cosa servono.
-                    {charNameOne}: Forse conviene che prima parli con lui.
+                    {charNameOne}: Ti ringrazio, non hai ancora chiesto alla mentore a cosa servono.
+                    {charNameOne}: Forse conviene che prima parli con lei.
                         -> main
             
             //Se non ho ancora fatto il dono e ho parlato con il mentore e ho parlato abbastanza con lei
@@ -49,7 +49,7 @@
         
             //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
             + {first_story_gift.ink_outcome && not main_story_first_character && not questions} [Vorrei aiutarti a guardare le cose in modo diverso.]
-                    {uppercaseTranslator(firstCharacterState)}: Non credo che il mentore ti abbia spiegato come si fa questa cosa. Vai da lui prima.
+                    {uppercaseTranslator(firstCharacterState)}: Non credo che il mentore ti abbia spiegato come si fa questa cosa. Vai da lei prima.
                             -> main
                             
             + {first_story_gift.ink_outcome && not main_story_first_character &&  questions} [Ti va di riscrivere la tua storia con me?]
@@ -102,7 +102,7 @@
         ~ firstStoryQuestCount ++
         
         ???: Non è che hai visto passare di qui una persona?
-        ???: Altə all’incirca una balla di fieno e che si muove come un violino, probabilmente presə a stordire di domande quel tizio, il mentore.
+        ???: Altə all’incirca una balla di fieno e che si muove come un violino, probabilmente presə a stordire di domande quella tizia, la mentore.
         ???: Non posso essere arrivata qui da sola, vero? Qualsiasi cosa sia <i>qui</i>.
         ???: Come lə trovo?
             + (oneBlue) [Dammi dettagli più concreti.]
@@ -227,11 +227,13 @@
                     ~ firstRed ++
             -
        {charNameOne}: Come mi dovrei chiamare secondo te?
-    	    + {gifts_and_ink}[Secondo il mentore è qualcosa che capiremo col tempo, assieme.]
+    	    + {gifts_and_ink}[Secondo la mentore è qualcosa che capiremo col tempo, assieme.]
     	    + [<i>Qualsiasi cosa tu abbia pensato, non riesci a dirla.</i>]
     	-
+        {charNameOne}: Mmm.
+        {charNameOne}: La tua bocca si muove ma non esce nulla.
         {charNameOne}: Interessante.
-        {charNameOne}: Forse quel mentore può aiutarci a capire qualcosa?
+        {charNameOne}: Forse quella mentore può aiutarci a capire qualcosa?
         {charNameOne}: O forse va bene così.
         {charNameOne}: Forse mi serve questa confusione.
         {charNameOne}: Forse sto suonando da troppo tempo la solita canzone, ma non è più la mia.
@@ -286,7 +288,7 @@
                 ~ firstYellow ++
     
             -    
-        {charNameOne}: Non è che saranno tutti i passi del mentore?
+        {charNameOne}: Non è che saranno tutti i passi della mentore?
         {charNameOne}: Cammina così tanto, e per cosa poi?
         {charNameOne}: Uh, forse devo imitarlo.
         {charNameOne}: Credo farò due passi.
@@ -387,7 +389,7 @@
                 {charNameOne}: E la mia testa ora è piena di domande.
                     ~ firstPurple ++
             -
-        {charNameOne}: Forse il mentore è abbastanza vecchio da avere una radio?
+        {charNameOne}: Forse la mentore è abbastanza vecchio da avere una radio?
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main 
             
@@ -593,7 +595,7 @@
             + [Non tanto a parlare, quanto ad arrivare al punto.]
                 {charNameOne}: Mi ricordi perché continuo a raccontarti queste cose?
                 {charNameOne}: Ah, sì, perché siamo solo noi.
-                {charNameOne}: E il mentore.
+                {charNameOne}: E la mentore.
                     ~ firstBlue ++
             + [Ogni temporale toglie a qualcuna e dà a qualcun altro.]
                 {charNameOne}: Come le piante nella serra.
@@ -1156,7 +1158,7 @@
     = secret_ending
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
         {charNameOne}: C'è una cosa che vorrei dirti, {name}.
-        {charNameOne}: Riguarda Il mentore.
+        {charNameOne}: Riguarda la mentore.
         {charNameOne}: Qual è il confine tra essere un bravo ragazzo ed essere un manipolatore?
         {charNameOne}: Me lo sto chiedendo da quando sono arrivata.
         {charNameOne}: E se hai intenzione di restare qui a lungo, forse devi chiedertelo anche tu.
