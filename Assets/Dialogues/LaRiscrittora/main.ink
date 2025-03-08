@@ -28,6 +28,9 @@
 <- bench
 <- the_fungus
 
+//Elementi dello stagno
+<-the_frog
+
 //Elementi della libreria
 <- reading_place
 

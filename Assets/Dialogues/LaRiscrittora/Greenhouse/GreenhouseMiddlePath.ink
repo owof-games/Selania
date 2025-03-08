@@ -10,9 +10,10 @@
 
 === the_frog
 + {are_two_entities_together(TheFrog, PG)} [TheFrog]
-   ->talking_frog
+    <i>Una rana bluastra ti osserva incuriosita.</i>
+        La Rana Parlante: Cra Cra
+        La Rana Parlante: Cra
+        La Rana Parlante: Cra?
+   -> main
    
    
-=== talking_frog
-    La Rana Parlante: Cra Cra
--> main
