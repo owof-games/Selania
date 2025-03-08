@@ -61,30 +61,29 @@
                 -> greenhouse
 
 //Streets to Library
+    + {are_two_entities_together(PG, FromForestToLibraryDesat)} [FromForestToLibraryDesat]
+        <i>Questa strada risulta bloccata, per ora.</i>
+            -> main
+            
     + {are_two_entities_together(PG, FromForestToLibrary)} [FromForestToLibrary]
-        {
-            - not secondTier: <i>Questa strada risulta bloccata, per ora.</i>
-                -> main
-            
-            - else:
-                ~ move_entity(PG, Library)
-                -> on_movement_events ->
-                    -> library
-        }
-            
-
+            ~ move_entity(PG, Library)
+            -> on_movement_events ->
+                -> library
+        
 //Streets to Nest
     
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToNest)} [FromGreenhouseMiddlePathToNest]
-    
-    {
-        - not thirdTier: <i>Questa strada risulta bloccata.</i>
+            <i>Questa strada risulta bloccata.</i>
             -> main
-        - else:
-            ~ move_entity(PG, Nest)
-            -> on_movement_events ->
-                -> nest
-    }    
+    
+    //{
+    //    - not thirdTier: <i>Questa strada risulta bloccata.</i>
+    //        -> main
+    //    - else:
+    //        ~ move_entity(PG, Nest)
+    //        -> on_movement_events ->
+    //            -> nest
+    //}    
     
 
 

@@ -15,7 +15,7 @@ LIST bedroomBGStates = (bedroomBGZero), bedroomBGOne, bedroomBGTwo, bedroomBGThr
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
 LIST characters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, SixthCharacter, SeventhCharacter, TheFrog
 
-LIST transitions = FromBusStopToForest, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibrary,  FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, FromGreenhouseToGreenhouseMiddlePath, FromLibraryToForest, FromLibraryToLaboratory
+LIST transitions = FromBusStopToForest, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat, FromForestToLibrary, FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, FromGreenhouseToGreenhouseMiddlePath, FromLibraryToForest, FromLibraryToLaboratory
 
 LIST sceneObjects = Bench, WateringCan , TheFungus, ReadingPlace, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, SixthCharacterNotes, SeventhCharacterNotes, StartingNote
 
@@ -30,7 +30,7 @@ VAR bedroomContents = (RoomExit, RoomLoad, PG)
 
 VAR busStopContents = (FromBusStopToForest, StartingNote, FromBusStopToBedroom, Inventory)
 
-VAR forestContents = (Mentor, Bench, TheFungus, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibrary, Inventory)
+VAR forestContents = (Mentor, Bench, TheFungus, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat, Inventory)
 
 VAR greenhouseMiddlePathContents = (FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, Inventory)
 
@@ -43,5 +43,5 @@ VAR nestContents = (Inventory)
 
 VAR laboratoryContents = (Inventory)
 
-VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, MenuSave, MenuQuit, TheFrog)
+VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, MenuSave, MenuQuit, TheFrog, FromForestToLibrary)
 

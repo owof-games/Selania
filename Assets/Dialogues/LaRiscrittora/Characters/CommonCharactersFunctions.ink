@@ -41,6 +41,9 @@
                      
             - firstStory == Ended:
                      ~ secondTier = true
+                     //Abilito l'accesso alla library
+                     ~ move_entity(FromForestToLibraryDesat, Safekeeping)
+                     ~ move_entity(FromForestToLibrary, Forest)
                      
             - firstStory == Active or firstStory == NotStarted:
                 ~ move_entity(Mentor, BusStop)
