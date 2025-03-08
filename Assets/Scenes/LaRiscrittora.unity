@@ -1552,8 +1552,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.681}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 1015, y: 270}
-  m_SizeDelta: {x: 354.4729, y: 344.736}
+  m_AnchoredPosition: {x: 1421.701, y: 344}
+  m_SizeDelta: {x: 403.1773, y: 363.2166}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &246737548
 MonoBehaviour:
@@ -1684,7 +1684,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -178, y: 224}
+  m_AnchoredPosition: {x: -175, y: 248}
   m_SizeDelta: {x: 104.3991, y: 157.081}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &267910712
@@ -1816,8 +1816,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.681}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 1071, y: 122}
-  m_SizeDelta: {x: 181.7601, y: 158.36}
+  m_AnchoredPosition: {x: 402, y: -111}
+  m_SizeDelta: {x: 251.6069, y: 208.7793}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &282739420
 MonoBehaviour:
@@ -3174,8 +3174,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.681}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 783, y: -173}
-  m_SizeDelta: {x: 297.0175, y: 116.8461}
+  m_AnchoredPosition: {x: 1002, y: -165}
+  m_SizeDelta: {x: 395.1159, y: 168.9577}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &600094918
 MonoBehaviour:
@@ -8558,7 +8558,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7896b8b0eb43225458521d0501e5713f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bfb4e241c7f7a28448c80b57812ff03c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8816,7 +8816,7 @@ MonoBehaviour:
   backForest: {fileID: 21300000, guid: 0faabba094d971b4a9946617a3b5cd4f, type: 3}
   backBusStop: {fileID: 21300000, guid: b569490a602e2ed4093b74a772e7232d, type: 3}
   backGreenhouse: {fileID: 21300000, guid: 4e7db147f93ea6e4b851dd19572590df, type: 3}
-  backGreenhouseMiddlePath: {fileID: -4100362581192935312, guid: d1755486176423b47a98bf0ace6e90f9, type: 3}
+  backGreenhouseMiddlePath: {fileID: 21300000, guid: d1755486176423b47a98bf0ace6e90f9, type: 3}
   backNest: {fileID: -3239163318168165702, guid: 16e88c7ff044338449f76e5a912abaef, type: 3}
   backLibrary: {fileID: 21300000, guid: 96006235423b21540ae3a23fb73408c9, type: 3}
   backLaboratory: {fileID: -3070273842284801829, guid: ed53d17256160094bb8745f874ba201d, type: 3}
@@ -9568,7 +9568,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.169}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 564, y: -377}
+  m_AnchoredPosition: {x: 564, y: -375}
   m_SizeDelta: {x: 289.4198, y: 408.0837}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2045264604
