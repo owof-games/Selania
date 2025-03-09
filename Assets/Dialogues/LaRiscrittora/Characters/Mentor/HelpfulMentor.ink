@@ -26,7 +26,7 @@
         + [Vorrei consigli su come stare meglio.]
                 -> mindfulness -> support
         + [Vorrei aggiornare la lista dei miei temi delicati.]
-                -> trigger_warning   
+                -> trigger_warning -> support 
         + [Sono a posto così, grazie.]
                 -> talk_with_mentor
  

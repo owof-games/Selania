@@ -8762,9 +8762,8 @@ MonoBehaviour:
   - forestContents
   - greenhouseMiddlePathContents
   - greenhouseContents
-  - labirinthContents
   - nestContents
-  - libaryContents
+  - libraryContents
   - laboratoryContents
   inkAssetJSON: {fileID: 4900000, guid: 52a25747e603e6e4aacb94e87b22a990, type: 3}
   entities:

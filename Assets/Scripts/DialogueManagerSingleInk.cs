@@ -155,6 +155,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
         foreach (var placeVariableName in allPlaces)
         {
             var charactersInThePlace = (InkList)story.variablesState[placeVariableName];
+            Debug.Log($"Place name ={placeVariableName},characters = {charactersInThePlace}");
+            Debug.Assert(charactersInThePlace != null, "Se è null vuol dire che la variabile non esiste lato ink.");
            
 
             Debug.Log(charactersInThePlace);
