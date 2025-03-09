@@ -111,8 +111,11 @@ public class DialogueManagerSingleInk : MonoBehaviour
         if (story.canContinue)
         {
 
-            string currentLine = story.Continue().Trim();
-            UpdateUI(currentLine);
+            string currentLine;
+            do {
+                currentLine = story.Continue().Trim();
+                UpdateUI(currentLine);
+            } while(currentLine == "" && story.canContinue);
         }
     }
 
