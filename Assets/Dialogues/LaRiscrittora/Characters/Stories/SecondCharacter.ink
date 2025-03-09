@@ -44,7 +44,7 @@
                 
     
             //Se non ho ancora fatto e ho parlato abbastanza con lui
-            + {secondStoryQuestCount > minStoryQuesTCount && findedGifts != ()} [Voglio regalarti questa cosa.]
+            + {secondStoryQuestCount > minStoryQuesTCount && not second_story_gift.ink_outcome} [Voglio regalarti una cosa.]
                     -> second_story_gift
         
             //Dono fatto ma non ho avviato la main story

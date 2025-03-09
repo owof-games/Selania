@@ -40,7 +40,7 @@ VAR sex = true
 === gender ===
     + {gender> 1} Mi trovo a mio agio con i pronomi {pronouns has him: maschili|{pronouns has her: femminili|neutri}}.
         ->->
-    + {gender > 1} <i> Forse qualcosa è cambiato. </i>
+    + {gender > 1} <i>Qualcosa è cambiato, questi non sono più i miei pronomi.</i>
         -> top
     + ->
     - (top)
