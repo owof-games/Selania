@@ -50,7 +50,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private Sprite backGreenhouse;
 
     [Header("Greenhouse Middle Path Backgrounds")]
-    [SerializeField] private Sprite backGreenhouseMiddlePath;    
+    [SerializeField] private Sprite backGreenhouseMiddlePath;
 
     [Header("Nest Backgrounds")]
     [SerializeField] private Sprite backNest;
@@ -67,28 +67,31 @@ public class DialogueManagerSingleInk : MonoBehaviour
     private const string AMBIENTSOUNDS_TAG = "ambientSounds";
     [Header("Bedroom Sounds")]
     [SerializeField] private AudioClip bedroomSounds;
-    
+
     [Header("Forest Sounds")]
     [SerializeField] private AudioClip forestSounds;
-    
+
     [Header("Bus Stop Sounds")]
     [SerializeField] private AudioClip busstopSounds;
-    
+
     [Header("Greenhouse Sounds")]
     [SerializeField] private AudioClip greenhouseSounds;
 
     [Header("Greenhouse Middle Path Sounds")]
-    [SerializeField] private AudioClip greenhousemiddlepathSounds;    
+    [SerializeField] private AudioClip greenhousemiddlepathSounds;
 
     [Header("Library Path Sounds")]
-    [SerializeField] private AudioClip librarySounds;    
+    [SerializeField] private AudioClip librarySounds;
 
 
 
     void Start()
     {
         story = new Story(inkAssetJSON.text);
-        ContinueStory();
+        if (!LoadGame())
+        {
+            ContinueStory();
+        }
         dialoguePanel.SetActive(false);
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
@@ -98,9 +101,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
             index++;
         }
 
+
     }
 
-    
+
     void ContinueStory()
     {
 
@@ -150,14 +154,14 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     public void OnOffObject(bool buttonsEnabled)
     {
-   
+
 
         foreach (var placeVariableName in allPlaces)
         {
             var charactersInThePlace = (InkList)story.variablesState[placeVariableName];
             Debug.Log($"Place name ={placeVariableName},characters = {charactersInThePlace}");
             Debug.Assert(charactersInThePlace != null, "Se è null vuol dire che la variabile non esiste lato ink.");
-           
+
 
             Debug.Log(charactersInThePlace);
             if (charactersInThePlace.ContainsItemNamed("PG"))
@@ -173,7 +177,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     }
 
 
-        
+
                     entity.SetActive(found);
 
                     entity.GetComponent<Button>().interactable = buttonsEnabled;
@@ -196,9 +200,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
             if (choice.text.Trim() == entity)
             {
                 var choiceIndex = choice.index;
-              
+
                 story.ChooseChoiceIndex(choiceIndex);
-              
+
                 dialoguePanel.SetActive(true);
 
                 ContinueStory();
@@ -289,7 +293,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     {
                         background.sprite = bedroomZero;
                     }
-                    
+
                     if (tagValue == "bedroomOne")
                     {
                         background.sprite = bedroomOne;
@@ -327,7 +331,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     if (tagValue == "backGreenhouseMiddlePath")
                     {
                         background.sprite = backGreenhouseMiddlePath;
-                    }                    
+                    }
 
                     //TAG GESTIONE DEL NIDO
                     if (tagValue == "backNest")
@@ -360,7 +364,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                         ambientSounds.clip = bedroomSounds;
                         ambientSounds.Play();
                     }
-                    
+
                     //TAG MUSICA SOTTOFONDO GIARDINO
                     if (tagValue == "forestSounds")
                     {
@@ -393,7 +397,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     {
                         ambientSounds.clip = librarySounds;
                         ambientSounds.Play();
-                    }                                       
+                    }
 
                     break;
 
@@ -412,7 +416,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     }
 
 
-    
+
     //Questo viene utilizzato dai BranchManager
     public InkList GetPlayerFirstStory()
     {
@@ -437,16 +441,16 @@ public class DialogueManagerSingleInk : MonoBehaviour
     public InkList GetEffettivoStatoLicheneDegliAbissi()
     {
         return (InkList)story.variablesState["statoLicheneDegliAbissi"];
-    }    
+    }
     public InkList GetEffettivoStatoBrinaDellImpossibile()
     {
         return (InkList)story.variablesState["statoBrinaDellImpossibile"];
-    }    
+    }
 
     public InkList GetEffettivoStatoBaccaDellaAddolorata()
     {
         return (InkList)story.variablesState["statoBaccaDellaAddolorata"];
-    } 
+    }
     public InkList GetEffettivoStatoNonTiScordarDiTe()
     {
         return (InkList)story.variablesState["statoNonTiScordarDiTe"];
@@ -454,7 +458,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     public InkList GetEffettivoStatoMuschioDelleAmanti()
     {
         return (InkList)story.variablesState["statoMuschioDelleAmanti"];
-    } 
+    }
     public void OnQuitButton()
     {
         Application.Quit();
@@ -475,10 +479,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
     public void SaveGame()
     {
         //Se PG è nella stanza, mando return e non faccio nulla, altrimenti salvo
-        if (IsPGInBedroom())
-        {
-            return;
-        }
+        // if (IsPGInBedroom())
+        // {
+        //     return;
+        // }
 
         SaveData saveData = new SaveData
         {
@@ -490,7 +494,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
         Debug.Log("Gioco salvato!");
     }
 
-    public void LoadGame()
+    public bool LoadGame()
     {
         string path = Application.persistentDataPath + "/savefile.json";
         if (File.Exists(path))
@@ -503,11 +507,13 @@ public class DialogueManagerSingleInk : MonoBehaviour
             Debug.Log("Gioco caricato!");
             ContinueStory();
             UpdateUI(story.currentText.Trim());
+            return true;
         }
         else
         {
             Debug.LogWarning("Nessun salvataggio trovato!");
-            OnClick("RoomLoad");
+            //OnClick("RoomLoad");
+            return false;
 
         }
     }
@@ -515,9 +521,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     public bool IsPGInBedroom()
     {
-       var bedroomContents = (InkList)story.variablesState["bedroomContents"];
-       return bedroomContents.ContainsItemNamed("PG");
-       
+        var bedroomContents = (InkList)story.variablesState["bedroomContents"];
+        return bedroomContents.ContainsItemNamed("PG");
+
     }
 
 }
