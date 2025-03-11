@@ -150,7 +150,12 @@
                     ~ secondGreen ++
                 
             + [Per capire meglio chi sono.]
-                ~ secondPurple ++
+                ???: Non sai chi sei?
+                ???: A me piacerebbe essere un'altra persona a volte.
+                ???: O un labrador, così se mi rotolo nel fango tutti ridono e non si arrabbiano.
+                ???: Ma non un gatto: sapevi che i gatti non sentono mica il sapore dolce?
+                ???: Che cosa triste!
+                    ~ secondPurple ++
             -    
         
         ???: Io sono qui perché è il mio compleanno.
@@ -333,11 +338,10 @@
             	  {charNameTwo}: Mamma fa sempre storie se le chiedo di comprarmi qualcosa.
             	  {charNameTwo}: Ne avevo una di Kratos.
             	  {charNameTwo}: Ma mamma voleva buttarla perché dice che è troppo violento per un bambino.
-            	  {charNameTwo}: Ma mica sono un bambino.
+            	  {charNameTwo}: E che non devo diventare violento.
             	  {charNameTwo}: E così l'ho regalata a mio fratello.
             	  {charNameTwo}: E quando vado a trovarlo posso vederla.
             	  {charNameTwo}: E posso giocare con la Switch.
-            	  
         	    -> three_continue
         	  
         	  = her_liar
@@ -352,6 +356,7 @@
             	  {charNameTwo}: Anche se a volte si dimentica le cose.
             	  {charNameTwo}: Però se lo faccio io si arrabbia.
             	  {charNameTwo}: Il mese scorso mi sono dimenticato dell'anniversario suo e di papà e non mi ha parlato tutto il giorno.
+            	  {charNameTwo}: Pensava che non le voglio bene.
             	  {charNameTwo}: Ma poi lei oggi si è dimenticata il mio compleanno.
             	  {charNameTwo}: Non so nemmeno se sa che sono qui.
         	    -> three_continue
@@ -365,10 +370,10 @@
         	        {charNameTwo}: Già oggi si è dimenticata del mio compleanno.
         	        {charNameTwo}: E anche l'anno scorso.
         	        {charNameTwo}: Ma poi però mi ha regalato una action figure di Spiderman.
+        	        {charNameTwo}: E mi ha chiesto scusa per due giorni.
         	        {charNameTwo}: Ma preferisco le tartarughe ninja.
         	        {charNameTwo}: Così poi vedo i coccodrilli delle fogne.
                     {charNameTwo}: Non ho mai visto un coccodrillo.
-                    
                 -> three_continue
        
        
@@ -419,7 +424,6 @@
                     ~ secondGreen ++          
             
 
-            
             + [Però non mi hai detto il tuo nome. Sei una spia?]
                 {charNameTwo}: Sì!
                 {charNameTwo}: Anzi: no!
@@ -430,8 +434,14 @@
                     ~ secondYellow ++
                 
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ secondPurple ++
+            + [Sembra che tua mamma sia piena di preoccupazioni.]
+                {charNameTwo}: Mamma è sempre preoccupata di tutto.
+                {charNameTwo}: Mio fratello prova ad aiutarla, ma a volte si arrabbia perché lei non vuole.
+                {charNameTwo}: Dice che ce la vuole fare da sola.
+                {charNameTwo}: E anche io ci provo.
+                {charNameTwo}: Lei dice che farsi aiutare è barare.
+                {charNameTwo}: Nonna dice che a volte bisogna barare per andare avanti.
+                    ~ secondPurple ++
  
             -
              ~ secondPauseTalking = secondCharPauseDurantion
@@ -643,7 +653,7 @@
                     ~ secondYellow ++
                 
             + [Menti!]
-                ~ secondRed ++
+                    ~ secondRed ++
 
                 
             + [Sembra una rana molto gentile.]
@@ -709,7 +719,7 @@
                         ~ secondYellow ++
                         
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ secondRed ++
+                    ~ secondRed ++
 
                 
             + [Grazie per avermi raccontato questa cosa.]
@@ -775,7 +785,7 @@
                     ~ secondYellow ++
                 
             + [t.]
-                ~ secondRed ++
+                    ~ secondRed ++
 
                 
             + [Hai mai chiesto all'amico di tuo fratello cosa pensa di te?]
@@ -796,7 +806,7 @@
                 {charNameTwo}: A parte {charNameFive}, ma lei di sicuro non mi piace mica.
                 {charNameTwo}: Poi le cose qui sono belle.
                 {charNameTwo}: Le bugie sono meno interessanti.
-                ~ secondPurple ++
+                    ~ secondPurple ++
  
             -
              ~ secondPauseTalking = secondCharPauseDurantion
@@ -878,7 +888,7 @@
                     ~ secondYellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ secondRed ++
+                    ~ secondRed ++
 
                 
             + [Non ti preoccupare: hai moltissimo tempo per decidere che fare.]
@@ -889,7 +899,7 @@
                 {charNameTwo}: Io l'unica cosa che so fare è dire cose stupide sugli animali.
                 {charNameTwo}: E trovare nascondigli in ogni posto.
                 {charNameTwo}: E dire bugie.
-                 ~ secondGreen ++
+                    ~ secondGreen ++
   
                 
             + [Anche giocando si impara il mondo.]
@@ -944,8 +954,8 @@
                 {charNameTwo}: Chi lo dice che non faccio male ai mostri?
                     ~ secondYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ secondRed ++
+            + [Padre e rabbia.]
+                    ~ secondRed ++
 
                 
             + [Nessuno merita di essere picchiato, né tu né quel bambino.]
@@ -953,11 +963,16 @@
                 {charNameTwo}: Mamma dice che papà non lascia mai nulla al caso.
                 {charNameTwo}: E per questo è il più bravo a lavoro.
                 {charNameTwo}: E quel bambino è davvero fastidioso.
-                ~ secondGreen ++
+                    ~ secondGreen ++
   
                 
-            + [Padre e rabbia.]
-                ~ secondPurple ++
+            + [La tua rabbia fa male, ma la rabbia della ragazzina ha protetto il fratello.]
+                {charNameTwo}: Ma chi protegge me?
+                {charNameTwo}: Uh, bugia, scusa.
+                {charNameTwo}: Qui sono stato io a fare il cattivo.
+                {charNameTwo}: Forse potrei chiedere a lei come fa?
+                {charNameTwo}: Ma sarebbe stupido.
+                    ~ secondPurple ++
  
             -
              ~ secondPauseTalking = secondCharPauseDurantion
@@ -986,7 +1001,7 @@
         {charNameTwo}: Ma qui non c'è.
         {charNameTwo}: Chissà se è la rana che fa accadere le cose.
         
-            + [Dammi dettagli più concreti.]
+            + [Hai la mente da scienziato: se una cosa non la provi allora non è vera!]
                     ~ secondBlue ++
                 
             + [Proviamo con la lampada della biblioteca!]
@@ -997,10 +1012,10 @@
                 {charNameTwo}: Oppure ci mettiamo un faro!
                 {charNameTwo}: Ma ci serve qualcosa di alto.
                 {charNameTwo}: Forse se prendo tutti i rami del bosco...
-                    ~ secondYellow ++
+                        ~ secondYellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ secondRed ++
+                    ~ secondRed ++
 
                 
             + [Promettimi che non mangerai nulla di strano, qui.]
@@ -1012,8 +1027,14 @@
                         ~ secondGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ secondPurple ++
+            + [Tuo fratello ti lascia essere te stesso.]
+                {charNameTwo}: Sì!
+                {charNameTwo}: Lui non mi sgrida mai.
+                {charNameTwo}: E se si arrabbia con me, mi spiega il perché.
+                {charNameTwo}: E se non sono d'accordo e glielo dico, mi ascolta.
+                {charNameTwo}: Per questo mi piace stare con lui.
+                {charNameTwo}: Non mi fa sentire stupido.
+                    ~ secondPurple ++
  
             -
              ~ secondPauseTalking = secondCharPauseDurantion
@@ -1029,7 +1050,7 @@
         {charNameTwo}: Ma non mi piace leggere.
         {charNameTwo}: Però mi ricorda la casa della nonna.
         {charNameTwo}: L'altra nonna, quella che sta al mare.
-        {charNameTwo}: Ci vado d'estate e mi diverto tantissimo.
+        {charNameTwo}: Ci vado d'estate e mi diverto tantissimo e ci sono tantissimi libri.
         {charNameTwo}: Lei mi prepara tutte le cose buone.
         {charNameTwo}: E io le insegno tutte le cose più strane sugli animali.
         {charNameTwo}: Mamma e papà non vengono mai.
@@ -1039,7 +1060,7 @@
         {charNameTwo}: E hanno riso tutti quando ho ruttato fortissimo.
         {charNameTwo}: Da nonna mi addormento subito.
         {charNameTwo}: Non devo correggere le giornate.
-        {charNameTwo}: Quando arriva fine agosto però mi sento triste.
+        {charNameTwo}: Quando finiscono le vacanze però mi sento triste.
         {charNameTwo}: E arrabbiato.
         {charNameTwo}: Ora che nonna è nella casa dei vecchi, vorrei vivere sempre con l'altra nonna.
         {charNameTwo}: Tanto so studiare da solo.
@@ -1059,7 +1080,7 @@
                     ~ secondYellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ secondRed ++
+                    ~ secondRed ++
 
                 
             + [Vorresti che venissero anche mamma e papà?]
@@ -1074,8 +1095,16 @@
                     ~ secondGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ secondPurple ++
+            + [Ti piace insegnare le cose all'altra nonna.]
+                {charNameTwo}: Mi aiuta a capirle meglio.
+                {charNameTwo}: Tante cose ce le ho solo in testa e stanno assieme tutte contemporaneamente.
+                {charNameTwo}: E per me hanno senso.
+                {charNameTwo}: Ma quando dico le cose ad alta voce, allora devo metterle in ordine.
+                {charNameTwo}: Ed è difficile.
+                {charNameTwo}: Anche per questo a volte dico bugie.
+                {charNameTwo}: Perché le parole sono sbagliate, ma il contenuto è quello che so o sento.
+                {charNameTwo}: Non so se mi sono spiegato.
+                    ~ secondPurple ++
  
             -
              ~ secondPauseTalking = secondCharPauseDurantion
