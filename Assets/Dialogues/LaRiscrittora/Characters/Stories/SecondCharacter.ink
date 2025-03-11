@@ -95,7 +95,14 @@
                 }
                 
             - not six:
-                -> six
+                //Lo storylet non parte se siamo allo stagno.
+                {
+                    - not entity_location(PG) == GreenhouseMiddlePath:
+                        -> six
+                    - else: {knowing_second_character.two:{charNameTwo}|???}: {~ Torna dopo.|Ora ho voglia di stare da solo.|Lasciami in pace.}
+                        -> main
+                }
+
             - not seven:
                 -> seven
             - not eight:
@@ -142,7 +149,7 @@
                 ???: Ma poi mi sgrida se sbaglio?
                     ~ secondGreen ++
                 
-            + [t]
+            + [Per capire meglio chi sono.]
                 ~ secondPurple ++
             -    
         
@@ -151,7 +158,7 @@
         ???: L'anno scorso per Natale mi ha preso tutte le action figures dei miei videogiochi preferiti.
         ???: Ma poi papà me le ha rubate tutte.
         ???: Ma lui qui mica ci può venire.
-        ???: Perché mamma ha detto che avrebbe dato solo a me qualcosa di bellissimo.
+        ???: Perché mamma ha detto che avrebbe dato solo a me qualcosa di bellissimo che papà non può rubare.
         ???: Ma dove trovo le caramelle?
         ???: Mamma dice sempre che non c'è compleanno senza caramelle!
         
@@ -177,7 +184,13 @@
                     ~ secondGreen ++
   
                 
-            + (twoPurple) [t]
+            + (twoPurple) [Quindi, rubandoti i giochi, tuo papà ti ha fatto un favore.]
+                ???: In che senso?
+                ???: Perché mamma mi ha dato questo?
+                ???: Non funziona così, sai?
+                ???: Mi ha dato questo perché sono bravo.
+                ???: E le action figures anche.
+                ???: Papà non c'entra nulla!
                 ~ secondPurple ++
             -
             
@@ -230,12 +243,12 @@
             + (twoBlue) [delusione]
                 ~ secondBlue ++
                 
-            + (twoYellow) [Perché non le hai fatto uno scherzo invece?]
+            + (twoYellow) [Perché non le hai fatto uno scherzo?]
                 ???: Perché ero arrabbiato.
                 ???: E non so fare gli scherzi.
                 ???: Ma lei continuava a dire che i bambini qui non ci possono stare.
                 ???: Che non potevo saltare nel fiume.
-                ???: E mi ha tirato per un braccio.
+                ???: E mi ha messo una mano sulla spalla.
                 ???: E a me
                 ???: non
                 ???: piace
@@ -252,16 +265,21 @@
                 ???: E a me che mi importa?
                 ???: Mi ha sgridato perché saltavo nel fiume.
                 ???: E poi mi ha detto che i bambini qui non ci devono stare.
-                ???: E mi ha tirato per il braccio.
+                ???: E mi ha preso per la spalla.
                 ???: Non mi piace quando mi toccano.
                     ~ secondGreen ++
   
                 
-            + (twoPurple) [t]
-                ~ secondPurple ++
+            + (twoPurple) [Hai ottenuto quello che volevi?]
+                ???: Ha smesso di dirmi che non devo stare qui.
+                ???: Che devo tornare a casa.
+                ???: E ha mollato la mia spalla.
+                ???: Non le volevo fare mica male.
+                ???: Ma non mi piace quando i grandi mi toccano.
+                    ~ secondPurple ++
 
             -
-        {charNameTwo}: Se {charNameFive} non mi lascia in pace chiamo il mio papà.
+        {charNameTwo}: Se {charNameFive} non mi lascia in pace chiamo mio fratello.
         {charNameTwo}: Lui è superforte.
         {charNameTwo}: Ora lasciamo in pace.
         
@@ -431,7 +449,7 @@
     ~ secondStoryQuestCount ++
         -> secondAffinityCheckCalc ->
         
-        {charNameTwo}: Nonna non mi trattava mai come un bambino.
+        {charNameTwo}: Nonna non mi tratta mai come un bambino.
         {charNameTwo}: Mi ha anche insegnato come barare a carte.
         {charNameTwo}: E come aprire il cassetto dei dolci di mamma.
         {charNameTwo}: Quando mamma e papà ci lasciavano a casa da soli mangiavamo sempre cose buone.
@@ -440,8 +458,8 @@
         {charNameTwo}: Quando papà è andato via nonna ha aiutato mamma a stare bene.
         {charNameTwo}: Anche se a mamma mica piaceva la nonna.
         {charNameTwo}: E quando papà è tornato ha ripreso a trattarla male.
-        {charNameTwo}: Ma nonna diceva che succede.
-        {charNameTwo}: Che gli adulti fanno cose cattive senza saperlo.
+        {charNameTwo}: Ma nonna dice che succede.
+        {charNameTwo}: Che i grandi fanno cose cattive senza saperlo.
         {charNameTwo}: Mi spiace essere scappato di casa.
         
             + [Dammi dettagli più concreti.]
@@ -473,7 +491,13 @@
                     ~ secondGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + [Quando i grandi hanno paura, fanno cose cattive.]
+                {charNameTwo}: Papà dice che i grandi non hanno paura.
+                {charNameTwo}: Ma non gli credo.
+                {charNameTwo}: Mio fratello a volte ha paura che l'amico lo lascia.
+                {charNameTwo}: Mamma delle bollette.
+                {charNameTwo}: Nonna però non ha paura di nulla.
+                {charNameTwo}: Però si arrabbia tanto quando gioca a briscola.
                     ~ secondPurple ++
  
             -
@@ -561,8 +585,14 @@
                     ~ secondGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ secondPurple ++
+            + [I castighi sono inutili. Hai mai imparato qualcosa dai castighi?]
+                {charNameTwo}: A non farmi scoprire.
+                {charNameTwo}: I castighi sono proprio brutti.
+                {charNameTwo}: Sentire tutti che giocano e si divertono.
+                {charNameTwo}: E tu non puoi fare nulla.
+                {charNameTwo}: Ti viene solo più rabbia.
+                {charNameTwo}: Sono ingiusti.
+                    ~ secondPurple ++
  
             -
             //Se fiducia bassa.
@@ -592,7 +622,7 @@
         {charNameTwo}: Che mica chiudono gli occhi per dormire.
         {charNameTwo}: E che alcune sono velenose.
         {charNameTwo}: E velenoso e tossico non sono la stessa cosa.
-        {charNameTwo}: Nonna diceva che se lo lecchi e stai male, è tossico.
+        {charNameTwo}: Nonna dice che se lo lecchi e stai male, è tossico.
         {charNameTwo}: Se lo tocchi e stai male, è velenoso.
         {charNameTwo}: E se ti guarda e stai male, è mamma.
         {charNameTwo}: E so altre cose sulle rane.
@@ -626,8 +656,12 @@
                     ~ secondGreen ++
   
                 
-            + [Menti!]
-                ~ secondPurple ++
+            + [Se lo tocchi e stai male è velenoso, se lo senti e prudono le orecchie, è una bugia.]
+                {charNameTwo}: Non è una bugia!
+                {charNameTwo}: Perché non mi credi?
+                {charNameTwo}: Non siamo amici?
+                {charNameTwo}: Ti giuro che c'è una rana nello stagno!
+                    ~ secondPurple ++
  
             -
              ~ secondPauseTalking = secondCharPauseDurantion
@@ -689,8 +723,12 @@
                     ~ secondGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ secondPurple ++
+            + [Come mai se qualcuno ti chiama non rispondi?]
+                {charNameTwo}: Perché se qualcuno mi chiama è arrabbiato con me.
+                {charNameTwo}: O mi chiede di fare qualcosa.
+                {charNameTwo}: Non succede mai che è per una bella sorpresa.
+                {charNameTwo}: O per guardare i cartoni assieme.
+                    ~ secondPurple ++
  
             -
              ~ secondPauseTalking = secondCharPauseDurantion
@@ -701,6 +739,7 @@
     //Obiettivo: presentare la relazione col fratello maggiore, che è una persona molto pragmatica (finale blu, finale giallo)
     //Contenuti: ci parla del fratello come mito, riferimento, modello. All'inizio mente, ma poi si ridimensiona da solo (sta iniziano a fidarsi).
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     ~ secondStoryQuestCount ++
         
         {charNameTwo}: Sai che mio fratello è campione di Karate?
@@ -750,7 +789,13 @@
                     ~ secondGreen ++
   
                 
-            + [T.]
+            + [Grazie per aver corretto le tue bugie.]
+                {charNameTwo}: Già.
+                {charNameTwo}: Non so ancora se mi piaci.
+                {charNameTwo}: Ma sei l'unica persona qui.
+                {charNameTwo}: A parte {charNameFive}, ma lei di sicuro non mi piace mica.
+                {charNameTwo}: Poi le cose qui sono belle.
+                {charNameTwo}: Le bugie sono meno interessanti.
                 ~ secondPurple ++
  
             -
@@ -770,7 +815,7 @@
                     ~ secondBlue ++
                 
             + [Questo non è il mio lavoro. I lavori sono noiosi.]
-                {charNameTwo}: Però agli adulti piace parlare di lavoro.
+                {charNameTwo}: Però ai grandi piace parlare di lavoro.
                 {charNameTwo}: E le maestre parlano sempre del futuro.
                 {charNameTwo}: E dicono che ci devo lavorare con le cose in cui sono bravo.
                 {charNameTwo}: Ma io voglio solo imparare cose nuove!
@@ -783,7 +828,7 @@
             + [Mi è sempre piaciuto far stare bene le persone.]
                 {charNameTwo}: Questa è una cosa bella.
                 {charNameTwo}: Ma difficile.
-                {charNameTwo}: Gli adulti pensano sempre di sapere cosa fare.
+                {charNameTwo}: I grandi pensano sempre di sapere cosa fare.
                 {charNameTwo}: Cosa vogliono gli altri.
                 {charNameTwo}: Ma poi sbagliano.
                 {charNameTwo}: E invece di dire "Ho sbagliato", se la prendono con la persona che volevano aiutare.
@@ -792,8 +837,14 @@
                     ~ secondGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ secondPurple ++
+            + [Mi piace portare un cambiamento grande partendo dal piccolo.]
+                {charNameTwo}: Sembra una cosa faticosa.
+                {charNameTwo}: Però la capisco.
+                {charNameTwo}: È come l'elettricità.
+                {charNameTwo}: È così piccola che non la vedi.
+                {charNameTwo}: Ma fa muovere le cose grandi!
+                {charNameTwo}: O bruciare i muri.
+                    ~ secondPurple ++
  
             -
             
@@ -806,7 +857,7 @@
         {charNameTwo}: E sanno già cosa vogliono fare come lavoro.
         {charNameTwo}: E io ho tanto tempo libero invece.
         {charNameTwo}: Non posso fare quei corsi.
-        {charNameTwo}: Mamma dice che i bambini devono giocare, non fare gli adulti.
+        {charNameTwo}: Mamma dice che i bambini devono giocare, non fare i grandi.
         {charNameTwo}: Ma non ho nessuno con cui giocare.
         {charNameTwo}: E non so cosa voglio fare da grande.
         {charNameTwo}: E questa cosa mi fa arrabbiare.
@@ -817,7 +868,7 @@
                     ~ secondBlue ++
                 
             + [E se invece rimanessi sia bambino che adulto?]
-                {charNameTwo}: Nonna diceva che è il problema di mamma.
+                {charNameTwo}: Nonna dice che è il problema di mamma.
                 {charNameTwo}: Che non si prende le sue responsabilità.
                 {charNameTwo}: A me mica mi dispiacciono le responsabilità.
                 {charNameTwo}: Ma tutto il resto mi spaventa.
@@ -841,8 +892,14 @@
                  ~ secondGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ secondPurple ++
+            + [Anche giocando si impara il mondo.]
+                {charNameTwo}: So tantissime cose infatti!
+                {charNameTwo}: E anche gli animali giocano.
+                {charNameTwo}: Anche gli insetti!
+                {charNameTwo}: Lo fanno perché gli va.
+                {charNameTwo}: E io vorrei sempre fare quello che mi va.
+                {charNameTwo}: Il resto è una rottura.
+                    ~ secondPurple ++
  
             -
         {charNameTwo}: Però mi piacerebbe fare il veterinario.
@@ -867,8 +924,8 @@
         {charNameTwo}: E sua sorella una volta mi ha lanciato una scarpa in faccia.
         {charNameTwo}: Mio fratello dice che succede.
         {charNameTwo}: Che tra bambini ci si picchia.
-        {charNameTwo}: E anche tra adulti.
-        {charNameTwo}: Penso che gli adulti facciano schifo.
+        {charNameTwo}: E anche tra grandi.
+        {charNameTwo}: Penso che i grandi facciano schifo.
         {charNameTwo}: Quando papà mi picchia dice che è colpa mia.
         {charNameTwo}: Ma a me non piace farmi picchiare.
         {charNameTwo}: O picchiare.
@@ -899,7 +956,7 @@
                 ~ secondGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + [Padre e rabbia.]
                 ~ secondPurple ++
  
             -
@@ -1356,7 +1413,7 @@
                     ~ secondStatementVariation(purple)    
                     
         
-        + {secondYellow > 0} [La tua fantasia, le tue storie possono far star meglio altre persone.]
+        + {secondYellow > 0} [the opposite of doom is curiosity.]
                    ~ secondYellow ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)            
