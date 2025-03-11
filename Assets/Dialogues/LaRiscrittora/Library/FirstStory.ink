@@ -1,46 +1,15 @@
-=== libro_francesco
-Il libro di Fra
+//Cognome A-E
+
+=== adri_allora
+<i>TITOLO</i> di Adri Allora (xx/XXX)
     + Vorrei leggere ancora
        -> book_test_intro
     + Me ne vado  
         -> main
 
-=== libro_ceci
-Il libro di Ceci
-    + Vorrei leggere ancora
-       -> book_test_intro
-    + Me ne vado  
-    -> main
 
-=== libro_gabri
-Il libro di Gabri
-    + Vorrei leggere ancora
-       -> book_test_intro
-    + Me ne vado  
-    -> main
-
-=== libro_mario
-Il libro di Mario
-    + Vorrei leggere ancora
-       -> book_test_intro
-    + Me ne vado  
-    -> main
-=== libro_val
-<i>Home</i>, di Val Fausto Lattanzio (he/they)
-    + Vorrei leggere ancora
-       -> book_test_intro
-    + Me ne vado  
-    -> main
-
-=== libro_maura
-Il libro di Maura
-    + Vorrei leggere ancora
-       -> book_test_intro
-    + Me ne vado  
-    -> main
-
-=== libro_leti
-Il libro di Leti
+=== salvatore_ciaccio
+<i>Il cancello</i> di Salvatore Ciaccio (he/him)
     + Vorrei leggere ancora
        -> book_test_intro
     + Me ne vado  
