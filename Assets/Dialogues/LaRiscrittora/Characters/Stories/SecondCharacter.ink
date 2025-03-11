@@ -161,7 +161,7 @@
             + (twoYellow) [Non ho trovato le caramelle, ma c'è uno stagno dove nuotare!]
                 ???: FIGO!
                 ???: Non ho mai visto uno stagno!
-                ???: Però questa estato ho visto un mare gigantesco.
+                ???: Però questa estate ho visto un mare gigantesco.
                 ???: Più grande anche del cielo!
                 ???: Questo qui non c'è di sicuro!
                     ~ secondYellow ++
@@ -197,7 +197,7 @@
         
         {charNameTwo}: Questo posto è PIENO di animali!
         {charNameTwo}: Ma ho lasciato a casa il tablet.
-        {charNameTwo}: Come le faccio tutte le foto per la scuola?
+        {charNameTwo}: Come faccio a capire cosa fanno?
         {charNameTwo}: Sapevi che gli uccelli vedono dieci colori?
         {charNameTwo}: DIECI! Mica solo tre come noi!
         {charNameTwo}: E che l'acso, atso, axotolot si fa ricrescere le braccia?
@@ -402,7 +402,13 @@
             
 
             
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [Però non mi hai detto il tuo nome. Sei una spia?]
+                {charNameTwo}: Sì!
+                {charNameTwo}: Anzi: no!
+                {charNameTwo}: Una spia non direbbe mai che è una spia.
+                {charNameTwo}: Oppure ti confonde, così non capisci cosa è vero o cosa no.
+                {charNameTwo}: Così è più interessante.
+                {charNameTwo}: Però tu non puoi farlo!
                     ~ secondYellow ++
                 
                 
@@ -518,7 +524,7 @@
         {charNameTwo}: No, non te lo dico.
         {charNameTwo}: E le maestre mi mettono sempre in castigo.
         {charNameTwo}: Se mi nascondo nell'armadio perché ho sonno.
-        {charNameTwo}: Se faccio cadere le cose per terra.
+        {charNameTwo}: Se spingo gli altri per terra.
         {charNameTwo}: Se mi distraggo.
         {charNameTwo}: Una volta nonna, quando stava bene, è venuta e ha sgridato tutte le maestre.
         {charNameTwo}: Ora sono un po' più gentili.
@@ -530,7 +536,15 @@
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [La scuola è un posto terribile, non c'è spazio per la fantasia!]
+                {charNameTwo}: Già.
+                {charNameTwo}: A me mi piace tanto raccontare le storie.
+                {charNameTwo}: Inventare cose nuove.
+                {charNameTwo}: Fare gli esperimenti.
+                {charNameTwo}: Parlare di animali.
+                {charNameTwo}: Ma ogni cosa che faccio fa arrabbiare qualcuno.
+                {charNameTwo}: Ma se non faccio cose mi annoio.
+                {charNameTwo}: E se mi annoio comunque finisco in castigo.
                     ~ secondYellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
@@ -578,7 +592,7 @@
         {charNameTwo}: Che mica chiudono gli occhi per dormire.
         {charNameTwo}: E che alcune sono velenose.
         {charNameTwo}: E velenoso e tossico non sono la stessa cosa.
-        {charNameTwo}: Nonna dice che se lo lecchi e stai male, è tossico.
+        {charNameTwo}: Nonna diceva che se lo lecchi e stai male, è tossico.
         {charNameTwo}: Se lo tocchi e stai male, è velenoso.
         {charNameTwo}: E se ti guarda e stai male, è mamma.
         {charNameTwo}: E so altre cose sulle rane.
@@ -590,8 +604,13 @@
             + [Dammi dettagli più concreti.]
                 ~ secondBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                ~ secondYellow ++
+            + [Speriamo sia il nuovo Super Wario!]
+                {charNameTwo}: Posso giocarci anche io?
+                {charNameTwo}: Ma dove lo attacchiamo?
+                {charNameTwo}: Qui non ci sono TV.
+                {charNameTwo}: Però lo stagno sberluccica.
+                {charNameTwo}: Forse la rana lo trasforma in uno schermo!
+                    ~ secondYellow ++
                 
             + [Menti!]
                 ~ secondRed ++
@@ -602,8 +621,8 @@
                 {charNameTwo}: E non credo sia tossica o velenosa.
                 {charNameTwo}: Però anche io vorrei un regalo.
                 {charNameTwo}: Se non ti piace mi dai quello che ti dà?
-                {charNameTwo}: Spero tanto in un cucciolo.
-                {charNameTwo}: O nella play!
+                {charNameTwo}: Spero tanto sia un cucciolo.
+                {charNameTwo}: O la Play!
                     ~ secondGreen ++
   
                 
@@ -634,7 +653,7 @@
         {charNameTwo}: Una volta ho preso un brutto voto e papà e mamma hanno litigato perché si davano la colpa.
         {charNameTwo}: Ma allora ho corretto tutto e io non prendevo un brutto voto.
         {charNameTwo}: E andavamo a prendere un gelato.
-        {charNameTwo}: E c'era ancora la nonna.
+        {charNameTwo}: E la nonna non era nella casa dei vecchi.
         {charNameTwo}: E quando papà è tornato dopo essere andato via ed era arrabbiato, invece è tornato con un cane.
         {charNameTwo}: Non ho mai avuto un cane.
         {charNameTwo}: Sai che i cani sentono suoni fino a duecento metri?
@@ -644,9 +663,17 @@
             + [Dammi dettagli più concreti.]
                 ~ secondBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                ~ secondYellow ++
-                
+            + [Hai mai corretto una giornata mettendoci i vampiri? O gli zombie?]
+                {charNameTwo}: Sì!
+                {charNameTwo}: Una volta siamo andati in gita a vedere i Camuni.
+                {charNameTwo}: E la guida diceva tutte queste cose noiose.
+                {charNameTwo}: E a casa ho corretto tutto perché ero un camuno.
+                {charNameTwo}: E i disegni sul muro li avevo fatti io.
+                {charNameTwo}: E lottavamo contro i cervombie.
+                {charNameTwo}: Cervi zombie.
+                {charNameTwo}: Ho riso tantissimo quella sera!
+                        ~ secondYellow ++
+                        
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
                 ~ secondRed ++
 
@@ -696,17 +723,19 @@
         {charNameTwo}: E anche lui non sa nuotare.
         {charNameTwo}: Ma non mi sembra felice quando vado da loro e quindi ci vado poco.
             
-            + [Ma non hai detto che tua mamma non guarda sotto al letto di tuo fratello.]
-                {charNameTwo}: Sì.
-                {charNameTwo}: E non è una bugia, perché ha un letto.
-                {charNameTwo}: E mamma va al garage ogni tanto.
-                {charNameTwo}: Ma non ci guarda mica sotto.
+            + [t.]
                     ~ secondBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [Le statue di tuo fratello si muovono?]
+                {charNameTwo}: Forse quando non ci siamo?
+                {charNameTwo}: Mio fratello è superdisordinato.
+                {charNameTwo}: Quindi se si spostano non è che lo capisci con facilità.
+                {charNameTwo}: Però gli serve l'elettricità.
+                {charNameTwo}: Voglio costruirne una anche io.
+                {charNameTwo}: Forse in biblioteca c'è una guida!
                     ~ secondYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + [t.]
                 ~ secondRed ++
 
                 
@@ -721,7 +750,7 @@
                     ~ secondGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + [T.]
                 ~ secondPurple ++
  
             -
@@ -740,7 +769,11 @@
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [Questo non è il mio lavoro. I lavori sono noiosi.]
+                {charNameTwo}: Però agli adulti piace parlare di lavoro.
+                {charNameTwo}: E le maestre parlano sempre del futuro.
+                {charNameTwo}: E dicono che ci devo lavorare con le cose in cui sono bravo.
+                {charNameTwo}: Ma io voglio solo imparare cose nuove!
                     ~ secondYellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
@@ -764,10 +797,10 @@
  
             -
             
-        {charNameTwo}: I miei compagni fanno un sacco di cose.
+        {charNameTwo}: I miei compagni fanno tantissime cose.
         {charNameTwo}: Calcio.
         {charNameTwo}: Basket.
-        {charNameTwo}: Corsi di pianoforte o chitarra o la batteria.
+        {charNameTwo}: Suonano il pianoforte o la chitarra o la batteria.
         {charNameTwo}: Oppure imparano il cinese e l'inglese.
         {charNameTwo}: E vanno a cavallo.
         {charNameTwo}: E sanno già cosa vogliono fare come lavoro.
@@ -783,7 +816,14 @@
             + [Sai che crescerai anche se non lo vuoi, vero?]
                     ~ secondBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [E se invece rimanessi sia bambino che adulto?]
+                {charNameTwo}: Nonna diceva che è il problema di mamma.
+                {charNameTwo}: Che non si prende le sue responsabilità.
+                {charNameTwo}: A me mica mi dispiacciono le responsabilità.
+                {charNameTwo}: Ma tutto il resto mi spaventa.
+                {charNameTwo}: Tutti i litigi.
+                {charNameTwo}: La rabbia.
+                {charNameTwo}: A me non mi piace la mia rabbia.
                     ~ secondYellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
@@ -838,7 +878,13 @@
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [Immagina di picchiare i mostri invece dei compagni!]
+                {charNameTwo}: I mostri mi piacciono.
+                {charNameTwo}: Ma anche i miei compagni.
+                {charNameTwo}: Però non faccio male a qualcosa che non esiste, no?
+                {charNameTwo}: Ma anche questo posto non doveva esistere, credo.
+                {charNameTwo}: E invece è qui.
+                {charNameTwo}: Chi lo dice che non faccio male ai mostri?
                     ~ secondYellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
@@ -876,7 +922,7 @@
         {charNameTwo}: Una volta ho mischiato le cose per pulire casa e ho vomitato tutto il pomeriggio.
         {charNameTwo}: Una volta ho riempito il letto di mamma di sabbia e si è grattata per una settimana.
         {charNameTwo}: E una volta ho provato ad attaccare un mio robot al frullatore dell'amico di mio fratello.
-        {charNameTwo}: E ha fatto una fiammata gigante e un pezzo di muro si è fatto nero.
+        {charNameTwo}: E ha fatto una fiammata gigante e un pezzo di muro è diventato nero.
         {charNameTwo}: Mio fratello si è spaventato tantissimo.
         {charNameTwo}: Ma io ero contento perché non sapevo che ci sono dei fili nel muro.
         {charNameTwo}: E ora so cosa è l'elettricità.
@@ -886,7 +932,14 @@
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [Proviamo con la lampada della biblioteca!]
+                {charNameTwo}: Sì!
+                {charNameTwo}: Ci possiamo attaccare la stazione.
+                {charNameTwo}: Così le persone sanno come arrivare qui.
+                {charNameTwo}: Secondo me tantissime persone si perdono per venire qui.
+                {charNameTwo}: Oppure ci mettiamo un faro!
+                {charNameTwo}: Ma ci serve qualcosa di alto.
+                {charNameTwo}: Forse se prendo tutti i rami del bosco...
                     ~ secondYellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
@@ -931,7 +984,7 @@
         {charNameTwo}: Non devo correggere le giornate.
         {charNameTwo}: Quando arriva fine agosto però mi sento triste.
         {charNameTwo}: E arrabbiato.
-        {charNameTwo}: Ora che nonna non c'è più, vorrei vivere sempre con l'altra nonna.
+        {charNameTwo}: Ora che nonna è nella casa dei vecchi, vorrei vivere sempre con l'altra nonna.
         {charNameTwo}: Tanto so studiare da solo.
         {charNameTwo}: Magari studio come si curano i pesci.
         {charNameTwo}: Anche se non ci puoi mica giocare con loro.
@@ -939,7 +992,13 @@
             + [Dammi dettagli più concreti.]
                     ~ secondBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [Secondo me dobbiamo solo capire la lingua dei pesci e allora ci possiamo giocare.]
+                {charNameTwo}: Magari è come con le pecore che fanno tanti "bee" diversi.
+                {charNameTwo}: Magari hanno tutti i loro dialetti.
+                {charNameTwo}: Per me la sogliola parla come i milanesi.
+                {charNameTwo}: Ma la carpa ha la faccia da toscana.
+                {charNameTwo}: E il pesce spada sicuro che è romano!
+                {charNameTwo}: Posso creare un traduttore pescese/umano!
                     ~ secondYellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
@@ -1033,8 +1092,8 @@
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     
     //Parole chiave legate alla fiducia.
-        {charNameTwo}: Abbiamo parlato un sacco.
-        {charNameTwo}: Ma davvero UN SACCO.
+        {charNameTwo}: Abbiamo parlato tantissimo.
+        {charNameTwo}: Ma davvero TANTISSSSSSIMO!
         {charNameTwo}: Sai cosa penso di te?
             -> secondAffinityCalc ->
         {
@@ -1076,7 +1135,7 @@
         
         }
        
-        {charNameTwo}: Da quando nonna non c'è più fa tutto schifo.
+        {charNameTwo}: Da quando nonna è nella casa dei vecchi fa tutto schifo.
         {charNameTwo}: Papà è tornato ma litiga sempre con mamma.
         {charNameTwo}: E mamma quando papà non c'è si arrabbia sempre con me.
         {charNameTwo}: E l'unica cosa che mi dice è che devo smetterla di piangere e fare il grande.
@@ -1084,17 +1143,15 @@
         {charNameTwo}: E a scuola le maestre sono fastidiose.
         {charNameTwo}: <b>Stronze</b>.
         {charNameTwo}: Scusa.
-        {charNameTwo}: Non mi fido degli adulti.
         {charNameTwo}: Papà dice che devo crescere, che ora sono grande.
         {charNameTwo}: Ma i grandi fanno schifo.
         {charNameTwo}: E non voglio fare schifo.
         {charNameTwo}: Mio fratello dice che il mondo è un posto orribile.
         {charNameTwo}: Per questo sono venuto qui.
         {charNameTwo}: Per stare con gli animali.
-        {charNameTwo}: Per stare lontano dagli adulti.
         {charNameTwo}: Non è il mio compleanno.
         {charNameTwo}: Scusa per la bugia.
-        {charNameTwo}: Ma se non c'è un motivo, nessuno mi ascolta.
+        {charNameTwo}: Ma se non mi invento un motivo per le cose nessuno mi ascolta.
 
             + [Forse so come farti vedere le cose in modo diverso.]
                 -> statement
