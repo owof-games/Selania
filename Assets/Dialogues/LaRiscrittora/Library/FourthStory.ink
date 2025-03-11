@@ -26,7 +26,7 @@
 
 === queerginia_wolf
 <i>Titolo</i> di Queerginia Wolf/Marco Spelgatti (she/he/they)
-
+TODO: più rabbia XD
     Non hai fatto nulla di male.
     Lanciavi i tuoi fiori nell'aria, il polline rendeva il sentiero giallo per settimane.
     Accoglievi gli uccelli, offrivi i tuoi vecchi rami ai cani felici che correvano sopra le tue radici.
