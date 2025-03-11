@@ -1173,7 +1173,7 @@
             
     = exit
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        {charNameOne}: Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
+        {charNameOne}: Credo rimarrò ancora in giro per un poco, in attesa del prossimo treno.
             ~ firstStory = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(firstStory)
@@ -1192,7 +1192,7 @@
     }
     
         - (top)
-        {charNameOne}: {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me.|Sono sicura di aver visto un'altra persona alla fermata del bus, ma quando ho cercato di raggiungerla è scomparsa.|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
+        {charNameOne}: {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me.|Sono sicura di aver visto un'altra persona alla stazione, ma quando ho cercato di raggiungerla è scomparsa.|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
                 ~ firstCharEndingDialogue ++
         -> main
         

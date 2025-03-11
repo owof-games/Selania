@@ -137,7 +137,7 @@
 
 === first_bus_stop_visit
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    {charNameFive}: Questa è la fermata del bus.
+    {charNameFive}: Questa è la stazione del treno.
     {charNameFive}: È un posto di passaggio: è da qui che arrivano e vanno le persone che cercano il tuo aiuto.
     {charNameFive}: Ed è da qui che potrai andare e tornare quando vorrai.
     {charNameFive}: Anche se spero non resterai via per molto: alla lunga qui mi sento sola.
@@ -210,7 +210,7 @@
             {chiSei:{charNameFive}|Sconosciutə}: O dovrei essere più autorevole?
             {chiSei:{charNameFive}|Sconosciutə}: Ma non devo essere scortese ora.
             {chiSei:{charNameFive}|Sconosciutə}: Mi hai fatto una domanda, e vedrò di rispondere.
-            {chiSei:{charNameFive}|Sconosciutə}: Ad est della fermata del bus troverai un sentiero che ti riporterà a casa.
+            {chiSei:{charNameFive}|Sconosciutə}: Ad est della stazione troverai un sentiero che ti riporterà a casa.
             {chiSei:{charNameFive}|Sconosciutə}: E se deciderai di tornare, troverai tutto nello stato in cui l'hai lasciato.
                 -> top
                 
@@ -245,7 +245,7 @@
             
             {
                 - not talk_with_first_character: 
-                    {charNameFive}: Facciamo così: prova a parlare con la persona che troverai alla <b>fermata del bus</b>.
+                    {charNameFive}: Facciamo così: prova a parlare con la persona che troverai alla <b>stazione del treno</b>.
                     {charNameFive}: E poi torna da me.
                     {charNameFive}: Nel frattempo raccolgo le foglie del giardino.
                          ~ firstPauseTalking = 0

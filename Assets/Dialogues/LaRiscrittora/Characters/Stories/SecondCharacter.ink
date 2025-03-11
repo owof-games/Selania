@@ -132,7 +132,7 @@
                 
             + [Perché è pieno di cose strane!]
                 ???: Uh.
-                ???: Per ora ho esplorato solo la fermata.
+                ???: Per ora ho esplorato solo la stazione.
                 ???: Però il tabellone con le lettere è strano.
                 ???: Le lettere non si danno al postino?
                 ???: E il postino non le porta alle persone?

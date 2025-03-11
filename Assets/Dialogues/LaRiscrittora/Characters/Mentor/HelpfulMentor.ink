@@ -50,9 +50,9 @@
     {charNameFive}: Su quali vorresti avere informazioni?
 
 - (top)
-    + [Sulla fermata del bus.]
+    + [Sulla stazione.]
             {charNameFive}: Intendi il luogo dove passo ore a spalare neve?
-            {charNameFive}: La fermata, ad est del Giardino, è il posto dove approdano le nuove persone.
+            {charNameFive}: La stazione, ad est del Giardino, è il posto dove approdano le nuove persone.
             {charNameFive}: È anche il luogo attraverso cui potrai raggiungerci.
             {charNameFive}: O da cui andartene, quando vorrai.
                 -> top

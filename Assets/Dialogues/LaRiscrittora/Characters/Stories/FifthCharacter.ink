@@ -116,7 +116,7 @@
         {charNameFive}: Non è solo l'odore della terra, o l'umidità nell'aria nei giorni più caldi.
         {charNameFive}: Ma quella sensazione che con le tue mani puoi permettere a un altro corpo di crescere al meglio.
 
-            + (fiveBlue) [Preferisco la fermata del bus, è ordinata, precisa.]
+            + (fiveBlue) [Preferisco la stazione dei treni, è ordinata, precisa.]
                     ~ fifthBlue ++
                 {charNameFive}: Sì, ne capisco il fascino.
                 {charNameFive}: A volte mi siedo lì e mi godo per qualche istante l'attesa.
@@ -913,7 +913,7 @@
 
    = one
    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    {charNameFive}: {~ Sinceramente, non so che ne sarebbe di questo luogo senza tutta la manutenzione che devo fare.|Hai notato la bacheca alla fermata del bus? Anche se è da molto che non arrivano lettere.|A volte vorrei che le cose in serra crescessero più velocemente, così da sapere subito se ho sbagliato qualcosa.|A ovest dello stagno c'è spesso un grande baccano, ma fiori e fieno sono troppo alti per poter vedere cosa ci sia da quelle parti.}
+    {charNameFive}: {~ Sinceramente, non so che ne sarebbe di questo luogo senza tutta la manutenzione che devo fare.|Hai notato la bacheca alla stazione dei treni? Anche se è da molto che non arrivano lettere.|A volte vorrei che le cose in serra crescessero più velocemente, così da sapere subito se ho sbagliato qualcosa.|A ovest dello stagno c'è spesso un grande baccano, ma fiori e fieno sono troppo alti per poter vedere cosa ci sia da quelle parti.}
             ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
     
