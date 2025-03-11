@@ -34,7 +34,6 @@ VAR fifthCharacterInkLevel = Empty
         ~ Ink = thirdCharacterInkLevel        
 }
 
-TODO: a voce del fungo creata, scrivere meglio.
 {Ink:
     - Empty:
         <i>Dopo il dono consegnato e il rapporto creato, {name} si ritrova senza inchiostro. Potrà fare solo l'intervento garantito.</i>
@@ -45,7 +44,7 @@ TODO: a voce del fungo creata, scrivere meglio.
     - Medium:
         <i>Dopo il dono consegnato e il rapporto creato, {name} ha tre goccie di inchiostro a disposizione. Potrà fare l'intervento garantito e altri tre interventi extra.</i>        
     - High:
-        <i>Dopo il dono consegnato e il rapporto creato, {name} ha tre goccie di inchiostro a disposizione. Potrà fare l'intervento garantito e altri tre interventi extra. E riceverà una informazione importante.</i>
+        <i>Dopo il dono consegnato e il rapporto creato, {name} ha tre goccie di inchiostro a disposizione. Potrà fare l'intervento garantito e altri tre interventi extra. E riceverà un'informazione importante.</i>
         {
             - InkLevel == firstCharacterInkLevel:
                 ~ firstCharacterSpecialEvent = true

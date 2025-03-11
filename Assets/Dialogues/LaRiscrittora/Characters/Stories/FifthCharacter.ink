@@ -270,7 +270,6 @@
     
     = four
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    TODO: scrivere questa e la prossima a storia due finita
         ~ fifthStoryQuestCount ++
         
         {charNameFive}: Non è che hai visto passare di qui una persona?
@@ -326,7 +325,7 @@
     = six
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     
-TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della sua reazione. -> si parla esplicitamente di responsabilità personale (in antitesi anche con la visione del fungo)? Questa è una visione di RABBIA.
+    // -> si parla esplicitamente di responsabilità personale (in antitesi anche con la visione del fungo)? Questa è una visione di RABBIA.
 
         ~ fifthStoryQuestCount ++
         
@@ -645,7 +644,7 @@ TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della su
         + [Però da che sei qui hai esplorato tutto questo luogo.]
            
                 {
-                	- firstCharacterPossibleStates hasnt Rinuncia:
+                	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
     		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
@@ -681,7 +680,7 @@ TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della su
         + [Forse accadrà, ma non è un tuo problema.]
  
                 {
-                	- firstCharacterPossibleStates hasnt Rinuncia:
+                	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
     		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
@@ -715,7 +714,7 @@ TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della su
         
         + [Ma ogni persona ha immaginato sorti diverse per Jonah.]
                 {
-                	- fifthCharacterPossibleStates hasnt Rinuncia:
+                	- fifthCharacterPossibleStates hasnt Chitarra:
     		            ~ fifthCharacterPossibleStates --
     		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {fifthCharacterPossibleStates }}
                 }
@@ -745,7 +744,7 @@ TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della su
     = four
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 
-        + [Giocare è bello perché puoi sempre rinunciare a farlo.]
+        + [Giocare è bello perché puoi sempre Chitarrare a farlo.]
 
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
@@ -754,7 +753,7 @@ TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della su
                 }            
          
         
-        + [Quando Anna ha rinunciato all'ex, ha scoperto la sicurezza.]
+        + [Quando Anna ha Chitarrato all'ex, ha scoperto la sicurezza.]
 
         
         + [Un infinito più piccolo resta comunque infinito.]
@@ -765,15 +764,15 @@ TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della su
 	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }    
             
-        + [Rinunciando a cercare Talco ti sei tutelata.]
+        + [Chitarrando a cercare Talco ti sei tutelata.]
  
                 {
-                	- firstCharacterPossibleStates hasnt Rinuncia:
+                	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
     		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }            
         
-        + [C'è più coraggio nella rinuncia che nel compromesso.]
+        + [C'è più coraggio nella Chitarra che nel compromesso.]
  
             
         -
@@ -803,8 +802,8 @@ TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della su
     {charNameFive}: La canzone del mio vero nome.
 
         {
-            - firstCharacterPossibleStates has Rinuncia:
-                {charNameFive}: Che <b>resterà Rinuncia</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
+            - firstCharacterPossibleStates has Chitarra:
+                {charNameFive}: Che <b>resterà Chitarra</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
             
             - firstCharacterPossibleStates has Triangolo:
                 {charNameFive}: E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
@@ -812,7 +811,7 @@ TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della su
                     ~ fifthCharacterState += Triangolo
             
             - firstCharacterPossibleStates has RagazzaOrchestra:
-                {charNameFive}: Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper rinunciare sono diventata l'ornitorinco della musica.
+                {charNameFive}: Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += RagazzaOrchestra
             
@@ -880,13 +879,13 @@ TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della su
         = goodbye
         ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         {charNameFive}: {name}, per me è arrivato il momento di tornare a casa.
-        {firstCharacterPossibleStates hasnt Rinuncia: {charNameFive}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
-        {firstCharacterPossibleStates hasnt Rinuncia: {charNameFive}: Grazie per quello che hai fatto, davvero.}
-        {firstCharacterPossibleStates has Rinuncia: {charNameFive}: Vedremo cosa mi accadrà.}
+        {firstCharacterPossibleStates hasnt Chitarra: {charNameFive}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
+        {firstCharacterPossibleStates hasnt Chitarra: {charNameFive}: Grazie per quello che hai fatto, davvero.}
+        {firstCharacterPossibleStates has Chitarra: {charNameFive}: Vedremo cosa mi accadrà.}
             ~ move_entity(Mentor, Safekeeping)
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             {
-                - fifthCharacterPossibleStates hasnt Rinuncia:
+                - fifthCharacterPossibleStates hasnt Chitarra:
                     ~ move_entity(FifthCharacterNotes, BusStop)
             }    
             
@@ -896,7 +895,6 @@ TODO: scrivere questa a storia tre finita, iniziamo a capire il perché della su
 
 
 === fifth_character_opinions
-TODO: valutare se questa parte settarla non per tier ma per personagge, per cui ci dà dei commenti diversi a seconda di alcuni momenti cruciali del rapporto con la personaggia (quindi non tutti e dodici gli storylet per personaggia, ma due o tre, oppure in punti salienti del rapporto: conoscenza, dono, pre-riscrittura).
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         {   
             //Opinioni dopo la fine della terza storia

@@ -1,6 +1,5 @@
 //Variabili legate alle personagge
 //Con nuova versione: NotStarted non riguarda più la storia principale, ma l'accesso alla personaggia
-TODO: per tutte le personagge poi aggiungere dei commenti ad hoc dove sensato da parte di eventuali personaggi presenti in scena.
 
     LIST storyStates = NotStarted, Active, Ended
     VAR minStoryQuesTCount = 7
@@ -13,8 +12,8 @@ TODO: per tutte le personagge poi aggiungere dei commenti ad hoc dove sensato da
              ----------------------------------*/
 
 //Ordine degli stati: 0, Blue, Rosso, Verde, Giallo, Viola.
-    LIST firstCharacterPossibleStates = Rinuncia, Triangolo, RagazzaOrchestra, FlautoDolce, Ocarina, Violino
-    VAR firstCharacterState = Rinuncia
+    LIST firstCharacterPossibleStates = Chitarra, Triangolo, RagazzaOrchestra, FlautoDolce, Ocarina, Violino
+    VAR firstCharacterState = Chitarra
     
     VAR firstStory = NotStarted
     //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
@@ -167,8 +166,8 @@ TODO: per tutte le personagge poi aggiungere dei commenti ad hoc dove sensato da
     {characterState:
 
     //Personaggia Uno
-        - Rinuncia:
-            ~ return "Rinuncia"
+        - Chitarra:
+            ~ return "Chitarra"
         - Triangolo:
             ~ return "Triangolo"
         - RagazzaOrchestra:
@@ -225,8 +224,8 @@ TODO: per tutte le personagge poi aggiungere dei commenti ad hoc dove sensato da
     {characterState:
     
     //Personaggia Uno
-        - Rinuncia:
-            ~ return "Rinuncia"
+        - Chitarra:
+            ~ return "Chitarra"
         - Triangolo:
             ~ return "Triangolo"
         - RagazzaOrchestra:

@@ -141,13 +141,12 @@
         ???: Talco, dimmi che sei qui anche tu, ti prego, non so capire il mondo senza di te.
         ???: Sei l'unica persona con cui posso permettermi di litigare.
         ???: E l'unica che mi sopporta da quando ho finito il conservatorio.
-        TODO: scegliere strumento di partenza, dare a quello strumento un valore di rinuncia (a partire dal triangolo, sfigatissimo).
         ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameOne}.
         {charNameOne}: No, io sono <b>{charNameOne}</b>.
         {charNameOne}: Ehi! Non è questo il mio nome.
         {charNameOne}: <i>{charNameOne}</i>.
         {charNameOne}: Forse se provo a dirlo al contrario?
-        {charNameOne}: Aicnunir.
+        {charNameOne}: Arratihc.
         {charNameOne}: Uh.
         {charNameOne}: Prova tu. Come ti chiami?
     	    + {name_choice} [Mi chiamo {name}.]
@@ -156,7 +155,13 @@
     	    -
     	{charNameOne}: E con che pronomi vuoi che ti chiami?
     	        -> gender ->
-    	{charNameOne}: Grandioso, io uso i femminili.      
+    	{charNameOne}: Grandioso, io uso i femminili.
+    	{charNameOne}: Comunque questa cosa del nome è strano.
+    	{charNameOne}: Non so.
+    	{charNameOne}: Non è male la chitarra.
+    	{charNameOne}: Ma per una del conservatorio è tipo rinunciare a tutto.
+    	{charNameOne}: Alle ambizioni.
+    	{charNameOne}: Dove vado se sono solo una arresa chitarra?
         {charNameOne}: Ma {name}, secondo te il nome di una persona è qualcosa di importante?
     	    
             + [È uno strumento di controllo.]
@@ -192,6 +197,7 @@
             
        {charNameOne}: Comunque sì, ti si addice benissimo, hai proprio una faccia da {name}.
        {charNameOne}: Ma forse la mia faccia è cambiata? Ti sembro una che può chiamarsi {charNameOne}?
+       {charNameOne}: Una che ha rinunciato ad essere un pianoforte? Una viola?
             + [Quindi per cambiare faccia basta cambiarci il nome?]
                 {firstYellow > 1: {charNameOne}: {name}, tu e io faremo amicizia presto!}
                 {charNameOne}: Cavolo, passerei le giornate a essere chiunque!
@@ -874,7 +880,6 @@
         + [Preferisco prendermi del tempo.]
             -> main
 
-    TODO: per questi quattro punti mettere un po' di cenni anche alle altre tre "storie"
     = one
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     {name}: Prima hai detto che hai il terrore di fare una scelta.
@@ -913,7 +918,7 @@
             {name}: Hai cercato Talco.
             {name}: Non ti sei fatta spaventare dalla novità.
                 {
-                	- firstCharacterPossibleStates hasnt Rinuncia:
+                	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
     		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
@@ -957,7 +962,7 @@
             {name}: Stai costruendo la tua vita, non la loro.
             {name}: Se la pensano diversamente, non è amicizia, e ti sei salvata da qualcosa di peggiore.
                 {
-                	- firstCharacterPossibleStates hasnt Rinuncia:
+                	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
     		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
@@ -995,11 +1000,11 @@
 	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
         
-        TODO: poco chiaro dove voglia andare a parare
-        + [Ma ogni persona ha immaginato sorti diverse per Jonah.]
-            {name}: E nessuna di queste è una fine.
+        + [Ma ogni persona ha immaginato sorti diverse per Jonah, ma nessuna fine.]
+            {name}: Ogni passo avanti prevede la possibilità di tornare indietro.
+            {name}: A volte è più difficile, a volte meno, ma è sempre possibile.
                 {
-                	- firstCharacterPossibleStates hasnt Rinuncia:
+                	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
     		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
@@ -1037,7 +1042,7 @@
     
     = four
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        {name} Questo posto ti ha assegnato un nome, e quel nome è Rinuncia.
+        {name} Questo posto ti ha assegnato un nome, e quel nome è Chitarra, e tu lo vedi come una rinuncia.
 
         + [Giocare è bello perché puoi sempre rinunciare a farlo.]
             {name}: Quando una roba la devi fare anche quando non vuoi, quello è il lavoro.
@@ -1066,7 +1071,7 @@
         + [Rinunciando a cercare Talco ti sei tutelata.]
             {name}: Se una cosa non ha senso, non ha senso anche se continuiamo ad insistere nel farla.
                 {
-                	- firstCharacterPossibleStates hasnt Rinuncia:
+                	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
     		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }            
@@ -1100,7 +1105,7 @@
                 
         + {firstBlue > 0} [Questa non è la tua strada. Succede. Ora puoi cambiare.]
                 {
-                	- firstCharacterPossibleStates hasnt Rinuncia:
+                	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
     		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }           
@@ -1113,11 +1118,10 @@
     {charNameOne}: Mentre parlavi mi è nata una nuova canzone in testa.
     {charNameOne}: Qualcosa di fresco, di pronto a cambiare.
     {charNameOne}: La canzone del mio vero nome.
-    TODO: a voce definita qui la personaggia ci spiega anche perché ha compiuto questa scelta in base a qualcosa che abbiamo detto prima (renditela facile)
         
         {
-            - firstCharacterPossibleStates has Rinuncia:
-                {charNameOne}: Che <b>resterà Rinuncia</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
+            - firstCharacterPossibleStates has Chitarra:
+                {charNameOne}: Che <b>resterà Chitarra</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
             
             - firstCharacterPossibleStates has Triangolo:
                 {charNameOne}: E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
@@ -1195,13 +1199,13 @@
         = goodbye
         ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
         {charNameOne}: {name}, per me è arrivato il momento di tornare a casa.
-        {firstCharacterPossibleStates hasnt Rinuncia: {charNameOne}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
-        {firstCharacterPossibleStates hasnt Rinuncia: {charNameOne}: Grazie per quello che hai fatto, davvero.}
-        {firstCharacterPossibleStates has Rinuncia: {charNameOne}: Vedremo cosa mi accadrà.}
+        {firstCharacterPossibleStates hasnt Chitarra: {charNameOne}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
+        {firstCharacterPossibleStates hasnt Chitarra: {charNameOne}: Grazie per quello che hai fatto, davvero.}
+        {firstCharacterPossibleStates has Chitarra: {charNameOne}: Vedremo cosa mi accadrà.}
             ~ move_entity(FirstCharacter, Safekeeping)
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             {
-                - firstCharacterPossibleStates hasnt Rinuncia:
+                - firstCharacterPossibleStates hasnt Chitarra:
                     ~ move_entity(FirstCharacterNotes, BusStop)
             }    
             

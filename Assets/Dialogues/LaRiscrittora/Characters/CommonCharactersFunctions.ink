@@ -398,7 +398,7 @@ VAR secondPurpleMax = false
                 ->->
                 
         - else:
-            ~ firstCharacterPossibleStates += Rinuncia 
+            ~ firstCharacterPossibleStates += Chitarra 
             ->->
                 
     }

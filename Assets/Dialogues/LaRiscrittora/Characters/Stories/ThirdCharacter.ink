@@ -572,7 +572,7 @@
         + [Però da che sei qui hai esplorato tutto questo luogo.]
            
                 {
-                	- firstCharacterPossibleStates hasnt Rinuncia:
+                	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
     		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
@@ -608,7 +608,7 @@
         + [Forse accadrà, ma non è un tuo problema.]
  
                 {
-                	- firstCharacterPossibleStates hasnt Rinuncia:
+                	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
     		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
@@ -642,7 +642,7 @@
         
         + [Ma ogni persona ha immaginato sorti diverse per Jonah.]
                 {
-                	- firstCharacterPossibleStates hasnt Rinuncia:
+                	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
     		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
@@ -672,7 +672,7 @@
     = four
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
 
-        + [Giocare è bello perché puoi sempre rinunciare a farlo.]
+        + [Giocare è bello perché puoi sempre Chitarrare a farlo.]
 
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
@@ -681,7 +681,7 @@
                 }            
          
         
-        + [Quando Anna ha rinunciato all'ex, ha scoperto la sicurezza.]
+        + [Quando Anna ha Chitarrato all'ex, ha scoperto la sicurezza.]
 
         
         + [Un infinito più piccolo resta comunque infinito.]
@@ -692,15 +692,15 @@
 	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }    
             
-        + [Rinunciando a cercare Talco ti sei tutelata.]
+        + [Chitarrando a cercare Talco ti sei tutelata.]
  
                 {
-                	- firstCharacterPossibleStates hasnt Rinuncia:
+                	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
     		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }            
         
-        + [C'è più coraggio nella rinuncia che nel compromesso.]
+        + [C'è più coraggio nella Chitarra che nel compromesso.]
  
             
         -
@@ -730,8 +730,8 @@
     {charNameThree}: La canzone del mio vero nome.
 
         {
-            - firstCharacterPossibleStates has Rinuncia:
-                {charNameThree}: Che <b>resterà Rinuncia</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
+            - firstCharacterPossibleStates has Chitarra:
+                {charNameThree}: Che <b>resterà Chitarra</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
             
             - firstCharacterPossibleStates has Triangolo:
                 {charNameThree}: E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
@@ -739,7 +739,7 @@
                     ~ thirdCharacterState += Triangolo
             
             - firstCharacterPossibleStates has RagazzaOrchestra:
-                {charNameThree}: Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper rinunciare sono diventata l'ornitorinco della musica.
+                {charNameThree}: Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
                     ~ thirdCharacterState = ()
                     ~ thirdCharacterState += RagazzaOrchestra
             
@@ -807,13 +807,13 @@
         = goodbye
         ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
         {charNameThree}: {name}, per me è arrivato il momento di tornare a casa.
-        {firstCharacterPossibleStates hasnt Rinuncia: {charNameThree}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
-        {firstCharacterPossibleStates hasnt Rinuncia: {charNameThree}: Grazie per quello che hai fatto, davvero.}
-        {firstCharacterPossibleStates has Rinuncia: {charNameThree}: Vedremo cosa mi accadrà.}
+        {firstCharacterPossibleStates hasnt Chitarra: {charNameThree}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
+        {firstCharacterPossibleStates hasnt Chitarra: {charNameThree}: Grazie per quello che hai fatto, davvero.}
+        {firstCharacterPossibleStates has Chitarra: {charNameThree}: Vedremo cosa mi accadrà.}
             ~ move_entity(ThirdCharacter, Safekeeping)
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             {
-                - thirdCharacterPossibleStates hasnt Rinuncia:
+                - thirdCharacterPossibleStates hasnt Chitarra:
                     ~ move_entity(ThirdCharacterNotes, BusStop)
             }    
             

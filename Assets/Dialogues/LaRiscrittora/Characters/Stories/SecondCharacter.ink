@@ -1468,7 +1468,7 @@
 
         {
             - secondCharacterPossibleStates has IlRiccio:
-                {charNameTwo}: Che <b>resterà Rinuncia</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
+                {charNameTwo}: Che <b>resterà Chitarra</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
             
             - secondCharacterPossibleStates has IlGrizzly:
                 {charNameTwo}: E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
@@ -1476,7 +1476,7 @@
                     ~ secondCharacterState += IlGrizzly
             
             - secondCharacterPossibleStates has IlLupo:
-                {charNameTwo}: Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper rinunciare sono diventata l'ornitorinco della musica.
+                {charNameTwo}: Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += IlLupo
             
@@ -1544,9 +1544,9 @@
         = goodbye
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         {charNameTwo}: {name}, per me è arrivato il momento di tornare a casa.
-        {secondCharacterPossibleStates hasnt Rinuncia: {charNameTwo}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
-        {secondCharacterPossibleStates hasnt Rinuncia: {charNameTwo}: Grazie per quello che hai fatto, davvero.}
-        {secondCharacterPossibleStates has Rinuncia: {charNameTwo}: Vedremo cosa mi accadrà.}
+        {secondCharacterPossibleStates hasnt Chitarra: {charNameTwo}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
+        {secondCharacterPossibleStates hasnt Chitarra: {charNameTwo}: Grazie per quello che hai fatto, davvero.}
+        {secondCharacterPossibleStates has Chitarra: {charNameTwo}: Vedremo cosa mi accadrà.}
             ~ move_entity(SecondCharacter, Safekeeping)
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             {
