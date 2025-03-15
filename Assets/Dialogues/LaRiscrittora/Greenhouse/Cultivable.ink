@@ -435,7 +435,7 @@
 //Outcome: ricordo di chi non c'è più
     = step_zero
         ~ statoNonTiScordarDiTe = stepZero
-        <i>Su uno vecchio tronco è comparsa una sostanza gelatinosa.</i>
+        <i>Su uno vecchio ramo è comparsa una sostanza gelatinosa.</i>
             -> main
     
     = step_uno
@@ -446,13 +446,13 @@
           -> main
           
     = step_due
-        <i>La gelatina ora sembra vetro, il tronco è in più punti sparito.</i>
+        <i>La gelatina ora sembra vetro, il ramo è in più punti sparito.</i>
         <i>No, non sparito: è trasparente.</i>
         <i>La luce della serra sembra più calda, accogliente.</i>
           -> main
           
     = step_tre
-        <i>Tronco e sostanza sono una cosa sola: un fungo di vetro, dita che si sfiorano e intrecciano lanciate verso il cielo.</i>
+        <i>Ramo e sostanza sono una cosa sola: un fungo di vetro, dita che si sfiorano e intrecciano lanciate verso il cielo.</i>
         <i>Hai trovato un <b>Non ti scordar di te</b>.</i>
         <i>Trasforma ciò che è passato, che non c'è più, per renderlo vita nuova.</i>
         <i>Il nuovo nell'antico, il noi nel nostro passato.</i>

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Greenhouse1_0: 1016386501614356932
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
