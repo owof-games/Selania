@@ -244,6 +244,7 @@
 === muschio_delle_amanti
 //Collaborazione, novità, ricordo
 //Outcome: datti piacere
+TODO: diventa Edera delle amanti
     = step_zero
     ~ statoMuschioDelleAmanti = stepZero
         <i>È solo una tua impressione, o il vaso ha iniziato a brillare?</i>

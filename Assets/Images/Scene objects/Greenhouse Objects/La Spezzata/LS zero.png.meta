@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: f79e30b14072e8247bab361b42a95f2b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2618210764119071522
+    second: LS zero_0
+  - first:
+      213: 8739790099271762979
+    second: LS zero_1
+  - first:
+      213: 8822923268420572857
+    second: LS zero_2
+  - first:
+      213: 5520707299188495747
+    second: LS zero_3
+  - first:
+      213: 8116195833128290808
+    second: LS zero_4
+  - first:
+      213: 4192365832154997497
+    second: LS zero_5
+  - first:
+      213: 5847545289800732555
+    second: LS zero_6
+  - first:
+      213: 4493357484789297544
+    second: LS zero_7
+  - first:
+      213: 2896444151027512603
+    second: LS zero_8
+  - first:
+      213: 4619579609907270945
+    second: LS zero_9
+  - first:
+      213: 4822915365777229091
+    second: LS zero_10
+  - first:
+      213: 8157951189970559593
+    second: LS zero_11
+  - first:
+      213: -8552076159456095698
+    second: LS zero_12
+  - first:
+      213: 1283072028108536310
+    second: LS zero_13
+  - first:
+      213: -7734716447948307074
+    second: LS zero_14
+  - first:
+      213: 7225599408563990434
+    second: LS zero_15
+  - first:
+      213: -2289573101470386875
+    second: LS zero_16
+  - first:
+      213: 8557649363135174374
+    second: LS zero_17
+  - first:
+      213: 2661486087747824427
+    second: LS zero_18
+  - first:
+      213: 6907460912976133895
+    second: LS zero_19
+  - first:
+      213: -6824879791610040081
+    second: LS zero_20
+  - first:
+      213: 4346752550649422991
+    second: LS zero_21
+  - first:
+      213: 678322826159578719
+    second: LS zero_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LS zero_0
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 143
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22bdb6e61d0c55420800000000000000
+      internalID: 2618210764119071522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_1
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 140
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 324c1963ac8f94970800000000000000
+      internalID: 8739790099271762979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_2
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 63
+        width: 102
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b69cbe77f1517a70800000000000000
+      internalID: 8822923268420572857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_3
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 148
+        width: 41
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3855905e90e7d9c40800000000000000
+      internalID: 5520707299188495747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_4
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 145
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f90e19db1582a070800000000000000
+      internalID: 8116195833128290808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_5
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 116
+        width: 20
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f2651223864e2a30800000000000000
+      internalID: 4192365832154997497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_6
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 73
+        width: 32
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8fc49e9577a62150800000000000000
+      internalID: 5847545289800732555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_7
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 101
+        width: 27
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88175b953dc9b5e30800000000000000
+      internalID: 4493357484789297544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_8
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 119
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b15b0cdfb9c323820800000000000000
+      internalID: 2896444151027512603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_9
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 119
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 125192cfd2b0c1040800000000000000
+      internalID: 4619579609907270945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_10
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 127
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 325cce6e8ff6ee240800000000000000
+      internalID: 4822915365777229091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_11
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 118
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962ab25726dd63170800000000000000
+      internalID: 8157951189970559593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_12
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 89
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2258873b0ce05980800000000000000
+      internalID: -8552076159456095698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_13
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 108
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f936a826336ec110800000000000000
+      internalID: 1283072028108536310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_14
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 82
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e758ba1fe54c8a490800000000000000
+      internalID: -7734716447948307074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_15
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 88
+        width: 42
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2afaab4116c764460800000000000000
+      internalID: 7225599408563990434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_16
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 73
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5457197156dc930e0800000000000000
+      internalID: -2289573101470386875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_17
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 73
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e6150261c0e2c670800000000000000
+      internalID: 8557649363135174374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_18
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 57
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b6ad2ee7f7fe420800000000000000
+      internalID: 2661486087747824427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_19
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 60
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f76d16a1b3cdf50800000000000000
+      internalID: 6907460912976133895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_20
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 63
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe077524df72941a0800000000000000
+      internalID: -6824879791610040081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_21
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 53
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f846bfb2a64c25c30800000000000000
+      internalID: 4346752550649422991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LS zero_22
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 44
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5ed7483403e96900800000000000000
+      internalID: 678322826159578719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LS zero_0: 2618210764119071522
+      LS zero_1: 8739790099271762979
+      LS zero_10: 4822915365777229091
+      LS zero_11: 8157951189970559593
+      LS zero_12: -8552076159456095698
+      LS zero_13: 1283072028108536310
+      LS zero_14: -7734716447948307074
+      LS zero_15: 7225599408563990434
+      LS zero_16: -2289573101470386875
+      LS zero_17: 8557649363135174374
+      LS zero_18: 2661486087747824427
+      LS zero_19: 6907460912976133895
+      LS zero_2: 8822923268420572857
+      LS zero_20: -6824879791610040081
+      LS zero_21: 4346752550649422991
+      LS zero_22: 678322826159578719
+      LS zero_3: 5520707299188495747
+      LS zero_4: 8116195833128290808
+      LS zero_5: 4192365832154997497
+      LS zero_6: 5847545289800732555
+      LS zero_7: 4493357484789297544
+      LS zero_8: 2896444151027512603
+      LS zero_9: 4619579609907270945
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

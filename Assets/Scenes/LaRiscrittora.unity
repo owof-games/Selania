@@ -2788,7 +2788,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.88}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14, y: 391}
+  m_AnchoredPosition: {x: -504, y: 373}
   m_SizeDelta: {x: 94.2154, y: 70.3269}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &498498419
@@ -7214,9 +7214,9 @@ MonoBehaviour:
   dialogueManager: {fileID: 1863324329}
   image: {fileID: 1347029863}
   NotStarted: {fileID: 21300000, guid: 0d7379880062f624bba82740977276d3, type: 3}
-  StepZero: {fileID: 21300000, guid: 0d7379880062f624bba82740977276d3, type: 3}
-  StepOne: {fileID: 21300000, guid: 0d7379880062f624bba82740977276d3, type: 3}
-  StepTwo: {fileID: 21300000, guid: 0d7379880062f624bba82740977276d3, type: 3}
+  StepZero: {fileID: 21300000, guid: f79e30b14072e8247bab361b42a95f2b, type: 3}
+  StepOne: {fileID: 21300000, guid: b249f4a525ed9574d8d5eb7b3da35e73, type: 3}
+  StepTwo: {fileID: 21300000, guid: 6da3a3433a06e054ca8d45d35722f295, type: 3}
   StepThree: {fileID: 21300000, guid: 33e109928f2a19d4da067d1c478cb339, type: 3}
 --- !u!114 &1347029863
 MonoBehaviour:
