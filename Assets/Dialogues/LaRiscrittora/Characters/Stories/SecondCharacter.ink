@@ -846,6 +846,7 @@
         {charNameTwo}: Lavora in una officina e nel tempo libero fa delle statue col saldatore e i pezzi rotti delle macchine.
         {charNameTwo}: E vive in una casa piccola piccola assieme al suo amico.
         {charNameTwo}: Viene a trovarci quando non c'è papà perché non si piacciono.
+        {charNameTwo}: Ma se papà mi fa male allora viene apposta quando c'è e gli urla addosso tantissime cose.
         {charNameTwo}: Mi ha promesso che mi porta a pescare una volta.
         {charNameTwo}: Senza dirlo a mamma perché lei ha paura perché non so nuotare.
         {charNameTwo}: Ma lui sa fare tutto.
@@ -1380,10 +1381,11 @@
         {charNameTwo}: E a scuola le maestre sono fastidiose.
         {charNameTwo}: <b>Stronze</b>.
         {charNameTwo}: Scusa.
+        {charNameTwo}: Mio fratello dice che il mondo è un posto orribile e che non si può più aggiustare.
         {charNameTwo}: Papà dice che devo crescere, che ora sono grande.
         {charNameTwo}: Ma i grandi fanno schifo.
         {charNameTwo}: E non voglio fare schifo.
-        {charNameTwo}: Mio fratello dice che il mondo è un posto orribile.
+        {charNameTwo}: E non voglio diventare grande.
         {charNameTwo}: Per questo sono venuto qui.
         {charNameTwo}: Per stare con gli animali.
         {charNameTwo}: Non è il mio compleanno.
@@ -1409,26 +1411,23 @@
 
     = one
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+      //Affrontiamo gli adulti in generale
+    {name}: Hai detto che i grandi fanno schifo, che non ti fidi di loro. //Nonna, fratello, grandi come grossi bambini
     
-    //Affrontiamo i genitori
-    {name}: Tua mamma e tuo papà ti dicono che devi crescere, comportarti da adulto, non piangere.
-   
         
-        + [Rosso.]
+        + [Però tua nonna è una tizia che spacca.]
             {name}: E ammettere una propria paura, una scelta enorme.
                    ~ secondRed ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)
         
-        + [Eppure loro non piangono e sono tristi e infelici.]
-            {name}: Litigano spesso.
-            {name}: Non sono felici di quello che fanno.
-            {name}: Se vuoi piangere, puoi essere più libero e felice.
+        + [Però vuoi molto bene a tuo fratello.]
+
                    ~ secondGreen ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)  
         
-        + [Giallo.]
+        + [Forse il loro problema è che non sanno giocare.]
                    ~ secondYellow ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)          
@@ -1455,11 +1454,9 @@
         
     = two
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    
-    //Affrontiamo gli adulti in generale
-    {name}: Hai detto che i grandi fanno schifo, che non ti fidi di loro. //Nonna, fratello, grandi come grossi bambini
-    
-
+        //Affrontiamo i genitori
+    {name}: Tua mamma e tuo papà ti dicono che devi crescere, comportarti da adulto, non piangere.
+  
         + [Giallo.]
                    ~ secondYellow ++
                     -> secondColourCheck ->
@@ -1477,8 +1474,10 @@
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)            
             
-        + [Verde.]
- 
+        + [Eppure loro non piangono e sono tristi e infelici.]
+            {name}: Litigano spesso.
+            {name}: Non sono felici di quello che fanno.
+            {name}: Se vuoi piangere, puoi essere più libero e felice.
                    ~ secondGreen ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)  
@@ -1501,33 +1500,33 @@
     = three
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     //Affrontiamo il mondo. Rabbia, bugie, fantasia, violenza etc.
-    {name}: Dici che il mondo fa schifo.
+    {name}: Tuo fratello dice che il mondo è orribile, che non si può più aggiustare.
     
-        + [Viola.]
+        + [Eppure crea arte.]
          
                    ~ secondPurple ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
             
         
-        + [Verde.]
+        + [Eppure ama il suo amico.]
                    ~ secondGreen ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)  
                 
-        + [Rosso.]
+        + [Eppure lotta contro tuo padre perché tu stia meglio.]
                     ~ secondRed ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)
             
         
-        + [Giallo.]
+        + [Eppure gioca con te.]
                    ~ secondYellow ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)            
 
                 
-        + [Blu.]
+        + [Eppure per lavoro aggiusta le cose.]
                    ~ secondBlue ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)         
@@ -1546,30 +1545,30 @@
     //Commento più personale
     {name}: {charNameFive} ti ha chiamato {charNameTwo}.
     
-        + [Rosso.]
+        + [Vuoi davvero dargliela vinta?]
                     ~ secondRed ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)
         
-        + [Blu.]
+        + [I ricci resistono a tantissimi veleni.]
                    ~ secondBlue ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)    
         
-        + [Viola.]
+        + [A volte abbiamo bisogno di raggomitolarci per superare le cose peggiori.]
 
                    ~ secondPurple ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
              
             
-        + [Verde.]
+        + [Ma anche se il dorso ha le spine, il loro dorso è tenero e gentile.]
  
                    ~ secondGreen ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)          
         
-        + [Giallo.]
+        + [I ricci hanno un olfatto super, e possono trovare tutte le caramelle del mondo.]
                     ~ secondYellow ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)    
@@ -1582,7 +1581,7 @@
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
      Per questo ti dico...
      
-        + {secondRed > 0} [Non farti schiacciare dal mondo.]
+        + {secondRed > 0} [Diventa il più forte, il più coraggioso.]
                     ~ secondRed ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)        
@@ -1593,7 +1592,7 @@
                     ~ secondStatementVariation(purple)    
                     
         
-        + {secondYellow > 0} [the opposite of doom is curiosity.]
+        + {secondYellow > 0} [L'opposto della paura è la curiosità.]
                    ~ secondYellow ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)            
