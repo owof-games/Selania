@@ -666,14 +666,19 @@
  
             -
             //Se fiducia bassa.
-            {charNameTwo}: Non ho mai visto nessun innaffiacoso.
-            {charNameTwo}: Non bagno mica le piante, io.
-            {charNameTwo}: Cerca bene e vedi che lo trovi.
+            {
+                - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
+                    {charNameTwo}: Non l'ho mica visto.
+                    {charNameTwo}: Ma.
+                    {charNameTwo}: Sono sicuro che se cerchi bene lo trovi dove l'avete lasciato.  
+                - else:
+                    {charNameTwo}: Non ho mai visto nessun innaffiacoso.
+                    {charNameTwo}: Non bagno mica le piante, io.
+                    {charNameTwo}: Cerca bene e vedi che lo trovi.
+            }
             
             //Se fiducia alta.
-            {charNameTwo}: Non l'ho mica visto.
-            {charNameTwo}: Ma.
-            {charNameTwo}: Sono sicuro che se cerchi bene lo trovi dove l'avete lasciato.
+
             
             //Ricompare l'innaffiatoio
             ~ move_entity(WateringCan, Greenhouse)
@@ -1270,11 +1275,6 @@
                         
 
         
-=== second_character_opinions
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
-    {charNameTwo}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
-            -> main
 
 
 === second_story_gift ===
@@ -1708,6 +1708,12 @@
         -> main
 
 
+=== second_character_opinions
+~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
+    {charNameTwo}: {~ Nonna dice che non si scappa dalla periferia. Che papà ce l'ha dentro e se l'è portata anche quando siamo andati a vivere in centro.|Non mi piacciono i cartoni per quelli della mia età. Dicono tutte cose che so già.|Se ci pensi bene dire una bugia o scrivere una storia sono la stessa cosa. no?|Ogni persona ha un animale dentro secondo me. Prendi{charNameFive}: sembra un gufo. Anzi anzi: un avvoltoio! No, dai. Un fagiano, quelli femmina, tutti grigi grigi.|Mio fratello dice che devo fidarmi di più degli adulti, ma secondo me lo dice perché è adulto.|Per me il veterinario è come il druido dei videogiochi, solo non deve tirare dei dadi per salvare gli animali.|Un po' mi piacerebbe dormire e basta, senza pensieri.|Forse non mi dispiace così tanto che sei qui.|Se vado via di qui vorrei tanto portare la rana con me.}
+            -> main
 
 
 
