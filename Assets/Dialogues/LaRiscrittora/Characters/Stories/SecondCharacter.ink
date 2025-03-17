@@ -127,7 +127,7 @@
         
         ???: Perché sei qui?
             
-            + [t]
+            + [Perché è un luogo strano, e voglio capirlo.]
                 ~ secondBlue ++
                 
             + [Perché è pieno di cose strane!]
@@ -139,8 +139,9 @@
                 ???: Mica le appende così!
                     ~ secondYellow ++
                 
-            + [t]
-                ~ secondRed ++
+            + [Perché <b>tu</b> sei qui?]
+                ???: Ehi, era solo una domanda!
+                    ~ secondRed ++
 
                 
             + [Per aiutare chi è in difficoltà.]
@@ -178,8 +179,12 @@
                 ???: Questo qui non c'è di sicuro!
                     ~ secondYellow ++
                 
-            + (twoRed) [t]
-                ~ secondRed ++
+            + (twoRed) [E come ti sei ripreso i giocattoli?]
+                ???: Non sono giocattoli.
+                ???: E non me li sono ripresi.
+                ???: Papà è buono, fino a quando non si arrabbia.
+                ???: E non voglio farlo arrabbiare.
+                    ~ secondRed ++
 
                 
             + (twoGreen) [Vuoi molto bene alla tua mamma?]
@@ -196,7 +201,7 @@
                 ???: Mi ha dato questo perché sono bravo.
                 ???: E le action figures anche.
                 ???: Papà non c'entra nulla!
-                ~ secondPurple ++
+                    ~ secondPurple ++
             -
             
         ???: Ma dove saranno i miei compagni di scuola?
@@ -262,8 +267,14 @@
                 ???: mi toccano.
                     ~ secondYellow ++
                 
-            + (twoRed) [t]
-                ~ secondRed ++
+            + (twoRed) [Picchiare una così è un po' da sfigati.]
+                ???: Mi aveva preso il braccio!
+                ???: E continuava a dire che sono un bambino e che i bambini qui non ci devono stare.
+                ???: E che devo tornare a casa e io NON ci voglio tornare a casa.
+                ???: Non volevo picchiarla.
+                ???: Volevo solo spingerla via.
+                ???: Ma mi sono arrabbiato troppo.
+                    ~ secondRed ++
 
                 
             + (twoGreen) [C'è rimasta male, sai?]
@@ -286,7 +297,7 @@
             -
         {charNameTwo}: Se {charNameFive} non mi lascia in pace chiamo mio fratello.
         {charNameTwo}: Lui è superforte.
-        {charNameTwo}: Ora lasciamo in pace.
+        {charNameTwo}: Ora lasciami in pace.
         
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
@@ -404,7 +415,7 @@
                     ~ secondBlue ++
             
                   
-            + {they_liar} [Perdonami, ma non era il suo regalo di compleanno, questo?]
+            + {they_liar} [Ma non era il suo regalo di compleanno questo?]
                     ~ secondRed ++
                 {charNameTwo}: Sì, certo che sì.
                 {charNameTwo}: Si è dimenticata il compleanno, ma poi ha deciso di farmi questo.
@@ -483,7 +494,14 @@
                 {charNameTwo}: Così la smette di dirmi cosa non devo fare.
                     ~ secondYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + [Tua nonna sembra una tipa forte!]
+                {charNameTwo}: "Forte"?
+                {charNameTwo}: Quanto sei {pronouns has him: vecchio|{pronouns has her: vecchia|vecchiə}}?
+                {charNameTwo}: Però sì, lei spacca proprio.
+                {charNameTwo}: Una volta ha lanciato una ciabatta in faccia a papà perché l'ha chiamata strega.
+                {charNameTwo}: E poi gli ha sputato di nascosto nel caffé.
+                {charNameTwo}: E lui si è arrabbiato perché io ridevo mentre lo beveva.
+                {charNameTwo}: Abbiamo tantissimi segreti lei e io!
                     ~ secondRed ++
 
                 
@@ -567,7 +585,7 @@
             
         
         
-            + [Dammi dettagli più concreti.]
+            + [Anche i maschi piangono, esempio animale.]
                     ~ secondBlue ++
                 
             + [La scuola è un posto terribile, non c'è spazio per la fantasia!]
@@ -581,8 +599,12 @@
                 {charNameTwo}: E se mi annoio comunque finisco in castigo.
                     ~ secondYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ secondRed ++
+            + [Stringi i denti, lotta, e diventa più forte degli altri!]
+                {charNameTwo}: Lo dice anche papà.
+                {charNameTwo}: Ma a me non mi interessa mica tanto.
+                {charNameTwo}: Voglio solo studiare gli animali.
+                {charNameTwo}: E che mi lascino in pace.
+                    ~ secondRed ++
 
                 
             + [A me spiace per te, sai?]
@@ -652,7 +674,11 @@
                 {charNameTwo}: Forse la rana lo trasforma in uno schermo!
                     ~ secondYellow ++
                 
-            + [Menti!]
+            + [{charNameTwo}, se continui con le balle non mi fido più di te!]
+                {charNameTwo}: Non sono balle!
+                {charNameTwo}: Mi piacciono gli animali.
+                {charNameTwo}: Non mi serve inventare altri animali perché quelli che ci sono mi piacciono già.
+                {charNameTwo}: La rana c'è, vai a vedere!
                     ~ secondRed ++
 
                 
@@ -718,7 +744,12 @@
                 {charNameTwo}: Ho riso tantissimo quella sera!
                         ~ secondYellow ++
                         
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + [Se i grandi ti picchiano, devi fare squadra con gli altri!]
+                {charNameTwo}: Una volta ci ho provato.
+                {charNameTwo}: Ma io non piaccio molto agli altri.
+                {charNameTwo}: A volte mi dicono che sono scemo, per via degli animali.
+                {charNameTwo}: A volte che sono strano.
+                {charNameTwo}: E che non gli piace quando mi arrabbio.
                     ~ secondRed ++
 
                 
@@ -784,7 +815,13 @@
                 {charNameTwo}: Forse in biblioteca c'è una guida!
                     ~ secondYellow ++
                 
-            + [t.]
+            + [{charNameTwo}, non devi sempre dare ragione agli adulti.]
+                {charNameTwo}: Non è mica facile!
+                {charNameTwo}: Papà se si arrabbia mi picchia.
+                {charNameTwo}: E se invece parli dell'amico di mio fratello...
+                {charNameTwo}: Credo che lui sia buono.
+                {charNameTwo}: Ma se poi si arrabbia con me e non mi vuole più lì?
+                {charNameTwo}: Poi non ci posso più stare con mio fratello!
                     ~ secondRed ++
 
                 
@@ -814,9 +851,11 @@
     
     
     = nine
+    TODO: Bimbo ha consapevolezza climatica, riscrivo paura futuro di quella e no lavoro (e ama gli animali, tenero, paura per loro, conosce dati e situazioni).
     //Obiettivo: mostrare tra le righe la paura per il futuro, anche dimostrazione di rabbia verso di sè? (finale rosso sicuro, finale blu?
     //Contenuti: tutti sanno cosa diventare da grandi, io voglio fare il veterinaio ma?
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         ~ secondStoryQuestCount ++
         
         {charNameTwo}: Tu hai sempre voluto fare {pronouns has him: il riscrittore|{pronouns has her: la riscrittora|lə riscrittorə}} come lavoro?
@@ -831,8 +870,12 @@
                 {charNameTwo}: Ma io voglio solo imparare cose nuove!
                     ~ secondYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ secondRed ++
+            + [In realtà non l'ho scelto. Manco mi pagano.]
+                {charNameTwo}: Che fregatura.
+                {charNameTwo}: Nemmeno mamma mi paga per i lavoretti a casa.
+                {charNameTwo}: Dice che è una cosa che devono fare tutti, grandi e piccoli, maschi e femmine.
+                {charNameTwo}: Forse {charNameFive} è come mia mamma.
+                    ~ secondRed ++
 
                 
             + [Mi è sempre piaciuto far stare bene le persone.]
@@ -859,17 +902,19 @@
             -
             
         {charNameTwo}: I miei compagni fanno tantissime cose.
-        {charNameTwo}: Calcio.
-        {charNameTwo}: Basket.
+        {charNameTwo}: Calcio. Basket. Pallavolo.
         {charNameTwo}: Suonano il pianoforte o la chitarra o la batteria.
         {charNameTwo}: Oppure imparano il cinese e l'inglese.
         {charNameTwo}: E vanno a cavallo.
         {charNameTwo}: E sanno già cosa vogliono fare come lavoro.
-        {charNameTwo}: E io ho tanto tempo libero invece.
-        {charNameTwo}: Non posso fare quei corsi.
-        {charNameTwo}: Mamma dice che i bambini devono giocare, non fare i grandi.
-        {charNameTwo}: Ma non ho nessuno con cui giocare.
-        {charNameTwo}: E non so cosa voglio fare da grande.
+        {charNameTwo}: A me piacciono solo gli animali.
+        {charNameTwo}: Ma so anche le cose brutte degli animali.
+        {charNameTwo}: Che molti stanno sparendo per colpa dell'inquinamento.
+        {charNameTwo}: Che gli oceani sono sempre più vuoti.
+        {charNameTwo}: Che gli incendi uccidono un sacco di animali ogni anno.
+        {charNameTwo}: E che il futuro sarà sempre peggiore.
+        {charNameTwo}: E quindi non so cosa fare da grande.
+        {charNameTwo}: Non so se ci saranno ancora gli animali quando sarò grande.
         {charNameTwo}: E questa cosa mi fa arrabbiare.
         {charNameTwo}: Non voglio essere un bambino per sempre.
         {charNameTwo}: Ma non voglio essere grande.
@@ -887,7 +932,14 @@
                 {charNameTwo}: A me non mi piace la mia rabbia.
                     ~ secondYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + [Puoi fare il ribelle e salvare gli animali!]
+                {charNameTwo}: Tipo Greta!
+                {charNameTwo}: A mio fratello piace tanto.
+                {charNameTwo}: Però mio fratello dice che bisogna picchiare "quelli". Farli fuori.
+                {charNameTwo}: Non ho capito chi sono "quelli".
+                {charNameTwo}: Magari posso programmare le statue di mio fratello.
+                {charNameTwo}: E ci pensano loro a far fuori "quelli".
+                {charNameTwo}: Non ho capito mica nemmeno cosa sia "fare fuori".
                     ~ secondRed ++
 
                 
@@ -902,8 +954,9 @@
                     ~ secondGreen ++
   
                 
-            + [Anche giocando si impara il mondo.]
-                {charNameTwo}: So tantissime cose infatti!
+            + [Potresti diventare uno storico degli animali.]
+                {charNameTwo}: Qualcuno che racconta le loro storie?
+                {charNameTwo}: Come un gioco forse.
                 {charNameTwo}: E anche gli animali giocano.
                 {charNameTwo}: Anche gli insetti!
                 {charNameTwo}: Lo fanno perché gli va.
@@ -954,7 +1007,13 @@
                 {charNameTwo}: Chi lo dice che non faccio male ai mostri?
                     ~ secondYellow ++
                 
-            + [Padre e rabbia.]
+            + [Tuo padre ti picchia, e tu hai imparato da lui a picchiare.]
+                {charNameTwo}: NO!
+                {charNameTwo}: No.
+                {charNameTwo}: Non lo so.
+                {charNameTwo}: Mi sembra una cosa difficile.
+                {charNameTwo}: Ma voglio tanto che non mi picchi più.
+                {charNameTwo}: Non mi piace avere paura di lui.
                     ~ secondRed ++
 
                 
@@ -987,13 +1046,12 @@
         {charNameTwo}: Quando vado da mio fratello e non c'è il suo amico, mi lascia sperimentare con le sue cose.
         {charNameTwo}: Il suo amico fa il pasticciere.
         {charNameTwo}: E ha tantissime cose strane in cucina.
-        {charNameTwo}: Mi piace provare le cose.
-        {charNameTwo}: Capire.
+        {charNameTwo}: Mi piace provare le cose, capire.
         {charNameTwo}: Non mi piacciono le cose che non capisco.
-        {charNameTwo}: Ma a volte faccio dei pasticci.
+        {charNameTwo}: Ma a volte faccio dei casini.
         {charNameTwo}: Una volta ho mischiato le cose per pulire casa e ho vomitato tutto il pomeriggio.
-        {charNameTwo}: Una volta ho riempito il letto di mamma di sabbia e si è grattata per una settimana.
-        {charNameTwo}: E una volta ho provato ad attaccare un mio robot al frullatore dell'amico di mio fratello.
+        {charNameTwo}: Un giorno ho riempito il letto di mamma di sabbia e si è grattata per una settimana.
+        {charNameTwo}: E poi ho provato ad attaccare un mio robot al frullatore dell'amico di mio fratello.
         {charNameTwo}: E ha fatto una fiammata gigante e un pezzo di muro è diventato nero.
         {charNameTwo}: Mio fratello si è spaventato tantissimo.
         {charNameTwo}: Ma io ero contento perché non sapevo che ci sono dei fili nel muro.
@@ -1012,9 +1070,18 @@
                 {charNameTwo}: Oppure ci mettiamo un faro!
                 {charNameTwo}: Ma ci serve qualcosa di alto.
                 {charNameTwo}: Forse se prendo tutti i rami del bosco...
-                        ~ secondYellow ++
+                    ~ secondYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + [Mi piaci, perché alla fine fai quello che ti va.]
+                {charNameTwo}: Già.
+                {charNameTwo}: Questa cosa agli adulti non piace molto.
+                {charNameTwo}: Ma se non posso capire le cose, mi rimangono in testa.
+                {charNameTwo}: Mi danno davvero fastidio.
+                {charNameTwo}: A volte mi sveglio apposta presto e faccio tutte le cose che non dovrei fare.
+                {charNameTwo}: Come provare gli attrezzi di papà.
+                {charNameTwo}: O il respiratore di nonna.
+                {charNameTwo}: Solo per capire.
+                {charNameTwo}: Poi li rimetto a posto prima che si svegliano tutti.
                     ~ secondRed ++
 
                 
@@ -1044,6 +1111,7 @@
     //Obiettivo: narrativamente, lasciarcelo con una immagine positiva. Far vedere il peso dei genitori. Finale verde, finale giallo.
     //Contenuti. Momento tenero. L'altra nonna, la casa al mare, momenti di pace. I genitori non ci sono in queste occasioni
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         ~ secondStoryQuestCount ++
         
         {charNameTwo}: Mi piace la biblioteca.
@@ -1079,7 +1147,12 @@
                 {charNameTwo}: Posso creare un traduttore pescese/umano!
                     ~ secondYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + [Andiamo a ruttare da {charNameFive} e la facciamo arrabbiare?]
+                {charNameTwo}: Ci sto!
+                {charNameTwo}: Però mi serve della roba frizzante sennò non mi vengono bene.
+                {charNameTwo}: Che poi ora ho capito che non ce l'ha mica con me.
+                {charNameTwo}: Forse mi inizia anche a piacere.
+                {charNameTwo}: Ma sì, un rutto se lo merita.
                     ~ secondRed ++
 
                 
