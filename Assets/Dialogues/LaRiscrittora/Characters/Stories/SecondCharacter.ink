@@ -127,10 +127,15 @@
         
         ???: Perché sei qui?
             
-            + [Perché è un luogo strano, e voglio capirlo.]
-                ~ secondBlue ++
+            + [Questo luogo non dovrebbe esistere e voglio capirlo.]
+                ???: Anche a me piace capire le cose.
+                ???: I grandi si arrabbiano se faccio troppe domande.
+                ???: Tipo: perché c'è la neve ma non fa freddo?
+                ???: Perché c'è una stazione ma non passa nessun treno?
+                ???: Perché c'è vicino alla stazione ma non ci posso entrare?
+                    ~ secondBlue ++
                 
-            + [Perché è pieno di cose strane!]
+            + [Perché è pieno di cose buffe!]
                 ???: Uh.
                 ???: Per ora ho esplorato solo la stazione.
                 ???: Però il tabellone con le lettere è strano.
@@ -168,7 +173,12 @@
         ???: Ma dove trovo le caramelle?
         ???: Mamma dice sempre che non c'è compleanno senza caramelle!
         
-            + (twoBlue) [t]
+            + (twoBlue) [Tecnicamente, il compleanno arriva a prescindere dalle caramelle.]
+                ???: Forse la data.
+                ???: Quella sì.
+                ???: Ma il compleanno è un'altra cosa.
+                ???: È un momento tutto tuo.
+                ???: E infatti lo puoi festeggiare in ritardo e comunque è il tuo compleanno!
                     ~ secondBlue ++
                 
             + (twoYellow) [Non ho trovato le caramelle, ma c'è uno stagno dove nuotare!]
@@ -250,48 +260,58 @@
         - (top)
         {name}: {charNameFive} dice che l'hai picchiata.
             
-            + (twoBlue) [delusione]
-                ~ secondBlue ++
+            + (twoBlue) [Credevo tu fossi più disciplinato. Che delusione.]
+                {charNameTwo}: Ehi! Chiedimi perché lo fatto!
+                {charNameTwo}: Vi odio.
+                {charNameTwo}: Tu e lei.
+                {charNameTwo}: Mi ha tirato il braccio.
+                {charNameTwo}: E continuava a dire che i bambini qui
+                {charNameTwo}: non
+                {charNameTwo}: ci
+                {charNameTwo}: devono
+                {charNameTwo}: stare!
+                {charNameTwo}: Mi ha fatto arrabbiare.
+                    ~ secondBlue ++
                 
             + (twoYellow) [Perché non le hai fatto uno scherzo?]
-                ???: Perché ero arrabbiato.
-                ???: E non so fare gli scherzi.
-                ???: Ma lei continuava a dire che i bambini qui non ci possono stare.
-                ???: Che non potevo saltare nel fiume.
-                ???: E mi ha messo una mano sulla spalla.
-                ???: E a me
-                ???: non
-                ???: piace
-                ???: quando
-                ???: i grandi
-                ???: mi toccano.
+                {charNameTwo}: Perché ero arrabbiato.
+                {charNameTwo}: E non so fare gli scherzi.
+                {charNameTwo}: Ma lei continuava a dire che i bambini qui non ci possono stare.
+                {charNameTwo}: Che non potevo saltare nel fiume.
+                {charNameTwo}: E mi ha messo una mano sulla spalla.
+                {charNameTwo}: E a me
+                {charNameTwo}: non
+                {charNameTwo}: piace
+                {charNameTwo}: quando
+                {charNameTwo}: i grandi
+                {charNameTwo}: mi toccano.
                     ~ secondYellow ++
                 
             + (twoRed) [Picchiare una così è un po' da sfigati.]
-                ???: Mi aveva preso il braccio!
-                ???: E continuava a dire che sono un bambino e che i bambini qui non ci devono stare.
-                ???: E che devo tornare a casa e io NON ci voglio tornare a casa.
-                ???: Non volevo picchiarla.
-                ???: Volevo solo spingerla via.
-                ???: Ma mi sono arrabbiato troppo.
+                {charNameTwo}: Mi aveva preso il braccio!
+                {charNameTwo}: E continuava a dire che sono un bambino e che i bambini qui non ci devono stare.
+                {charNameTwo}: E che devo tornare a casa e io NON ci voglio tornare a casa.
+                {charNameTwo}: Non volevo picchiarla.
+                {charNameTwo}: Volevo solo spingerla via.
+                {charNameTwo}: Ma mi sono arrabbiato troppo.
                     ~ secondRed ++
 
                 
             + (twoGreen) [C'è rimasta male, sai?]
-                ???: E a me che mi importa?
-                ???: Mi ha sgridato perché saltavo nel fiume.
-                ???: E poi mi ha detto che i bambini qui non ci devono stare.
-                ???: E mi ha preso per la spalla.
-                ???: Non mi piace quando mi toccano.
+                {charNameTwo}: E a me che mi importa?
+                {charNameTwo}: Mi ha sgridato perché saltavo nel fiume.
+                {charNameTwo}: E poi mi ha detto che i bambini qui non ci devono stare.
+                {charNameTwo}: E mi ha preso per la spalla.
+                {charNameTwo}: Non mi piace quando mi toccano.
                     ~ secondGreen ++
   
                 
             + (twoPurple) [Hai ottenuto quello che volevi?]
-                ???: Ha smesso di dirmi che non devo stare qui.
-                ???: Che devo tornare a casa.
-                ???: E ha mollato la mia spalla.
-                ???: Non le volevo fare mica male.
-                ???: Ma non mi piace quando i grandi mi toccano.
+                {charNameTwo}: Ha smesso di dirmi che non devo stare qui.
+                {charNameTwo}: Che devo tornare a casa.
+                {charNameTwo}: E ha mollato la mia spalla.
+                {charNameTwo}: Non le volevo fare mica male.
+                {charNameTwo}: Ma non mi piace quando i grandi mi toccano.
                     ~ secondPurple ++
 
             -
@@ -392,8 +412,11 @@
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
             //Definire meglio in base ai colori.
             
-            + {him_liar} [Avevi detto di esser pieno di action figures.]
+            + {him_liar} [Bugia: hai detto di esser pieno di action figures.]
                     ~ secondBlue ++
+                {charNameTwo}: "Pieno" è un modo di dire.
+                {charNameTwo}: Come "Furbo come una volpe".
+                {charNameTwo}: O "Simpatico come {name}".
             
             + {him_liar} [Prima hai detto che tutte le action te le ha rubate tuo padre.]
                     ~ secondRed ++
@@ -411,7 +434,10 @@
                 {charNameTwo}: Ma è colpa mia.
             
             
-            + {her_liar or they_liar} [Non avevi detto che questo è il regalo di compleanno di tua mamma?]
+            + {her_liar or they_liar} [Avevi detto che questo è il regalo di compleanno di tua mamma.]
+                {charNameTwo}: Sì.
+                {charNameTwo}: Anche.
+                {charNameTwo}: Uffi, che noia che fai!
                     ~ secondBlue ++
             
                   
@@ -477,13 +503,19 @@
         {charNameTwo}: E guardavamo assieme la tele.
         {charNameTwo}: E potevo scegliere cosa guardare.
         {charNameTwo}: Quando papà è andato via nonna ha aiutato mamma a stare bene.
-        {charNameTwo}: Anche se a mamma mica piaceva la nonna.
+        {charNameTwo}: Anche se a mamma mica piace la nonna.
         {charNameTwo}: E quando papà è tornato ha ripreso a trattarla male.
         {charNameTwo}: Ma nonna dice che succede.
         {charNameTwo}: Che i grandi fanno cose cattive senza saperlo.
         {charNameTwo}: Mi spiace essere scappato di casa.
         
-            + [Dammi dettagli più concreti.]
+            + [Non parli mai del tuo nonno. Deduco che non ci sia più?]
+                {charNameTwo}: Se ne è andato quando papà era molto piccolo.
+                {charNameTwo}: Più di me.
+                {charNameTwo}: Ogni tanto scriveva delle lettere che facevano arrabbiare mamma.
+                {charNameTwo}: Poi ha smesso.
+                {charNameTwo}: Mamma dice che spera sia anneggato in mare.
+                {charNameTwo}: Papà invece ha ancora tutte le sue lettere nascoste nel garage.
                     ~ secondBlue ++
                 
             + [Insegni a barare anche a me?]
@@ -585,7 +617,13 @@
             
         
         
-            + [Anche i maschi piangono, esempio animale.]
+            + [Anche i maschi piangono, piangono anche gli orsi e gli elefanti.]
+                {charNameTwo}: Gli orsi mi piacciono.
+                {charNameTwo}: Sono forti.
+                {charNameTwo}: Ma comunque piangono.
+                {charNameTwo}: Questa è una cosa nuova.
+                {charNameTwo}: E mi piace.
+                {charNameTwo}: Ma non so se mi piace piangere comunque.
                     ~ secondBlue ++
                 
             + [La scuola è un posto terribile, non c'è spazio per la fantasia!]
@@ -663,8 +701,12 @@
         {charNameTwo}: E quella dello stagno mi ha parlato.
         {charNameTwo}: Ma mi ha detto che il regalo è per te invece.
         
-            + [Dammi dettagli più concreti.]
-                ~ secondBlue ++
+            + [Il fatto che di solito le rane non parlano, non esclude che lo possano fare.]
+                {charNameTwo}: Quindi tutto è possibile?
+                {charNameTwo}: Anche che salto e volo?
+                {charNameTwo}: O che la serra diventa di cioccolato?
+                {charNameTwo}: O che la mentore faccia una battuta carina?
+                    ~ secondBlue ++
                 
             + [Speriamo sia il nuovo Super Wario!]
                 {charNameTwo}: Posso giocarci anche io?
@@ -730,8 +772,11 @@
         {charNameTwo}: Se li chiami e non vengono è perché non vogliono.
         {charNameTwo}: Anche io faccio così.
         
-            + [Dammi dettagli più concreti.]
-                ~ secondBlue ++
+            + [Con questa fantasia potresti fare cose più pratiche.]
+                {charNameTwo}: Ma non mi servono le cose pratiche.
+                {charNameTwo}: Mi serve immaginare cose più belle.
+                {charNameTwo}: Così le giornate sono più facili.
+                    ~ secondBlue ++
                 
             + [Hai mai corretto una giornata mettendoci i vampiri? O gli zombie?]
                 {charNameTwo}: Sì!
@@ -803,7 +848,13 @@
         {charNameTwo}: E anche lui non sa nuotare.
         {charNameTwo}: Ma non mi sembra felice quando vado da loro e quindi ci vado poco.
             
-            + [t.]
+            + [A essere pratici, non devi sapere nuotare per pescare.]
+                {charNameTwo}: Esatto!
+                {charNameTwo}: Ma lei non lo vuole capire.
+                {charNameTwo}: "E se cadi in acqua?"
+                {charNameTwo}: "E se un'onda ti investe?"
+                {charNameTwo}: "E se tuo fratello si distrae?"
+                {charNameTwo}: Mamma è davvero faticosa.
                     ~ secondBlue ++
                 
             + [Le statue di tuo fratello si muovono?]
@@ -851,7 +902,6 @@
     
     
     = nine
-    TODO: Bimbo ha consapevolezza climatica, riscrivo paura futuro di quella e no lavoro (e ama gli animali, tenero, paura per loro, conosce dati e situazioni).
     //Obiettivo: mostrare tra le righe la paura per il futuro, anche dimostrazione di rabbia verso di sè? (finale rosso sicuro, finale blu?
     //Contenuti: tutti sanno cosa diventare da grandi, io voglio fare il veterinaio ma?
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
@@ -860,7 +910,13 @@
         
         {charNameTwo}: Tu hai sempre voluto fare {pronouns has him: il riscrittore|{pronouns has her: la riscrittora|lə riscrittorə}} come lavoro?
         
-            + [Dammi dettagli più concreti.]
+            + [Fino a poco fa nemmeno sapevo esistesse questo posto.]
+                {charNameTwo}: Figo!
+                {charNameTwo}: Quindi non sono l'unico.
+                {charNameTwo}: Se chiedo qualcosa a {charNameFive} mi fa sentire stupido.
+                {charNameTwo}: "Bimbo, te le spiego lentamente le cose ora, vieni."
+                {charNameTwo}: Non mi deve spiegare le cose.
+                {charNameTwo}: Io so fare le frazioni!
                     ~ secondBlue ++
                 
             + [Questo non è il mio lavoro. I lavori sono noiosi.]
@@ -920,6 +976,11 @@
         {charNameTwo}: Ma non voglio essere grande.
             
             + [Sai che crescerai anche se non lo vuoi, vero?]
+                {charNameTwo}: Non è detto.
+                {charNameTwo}: Magari resto qui e magari qui il tempo non passa mica.
+                {charNameTwo}: E magari riesco a fare venire qui anche mio fratello.
+                {charNameTwo}: E la nonna.
+                {charNameTwo}: Così siamo tutti felici.
                     ~ secondBlue ++
                 
             + [E se invece rimanessi sia bambino che adulto?]
@@ -995,7 +1056,13 @@
         {charNameTwo}: Ma se sono arrabbiato e non so cosa fare.
         
         
-            + [Dammi dettagli più concreti.]
+            + [Solo gli animali non sanno controllarsi.]
+                {charNameTwo}: Allora sono un lupo.
+                {charNameTwo}: Una giraffa.
+                {charNameTwo}: Un coccodrillo.
+                {charNameTwo}: Un serpente.
+                {charNameTwo}: Un riccio.
+                {charNameTwo}: E ora ti spino!
                     ~ secondBlue ++
                 
             + [Immagina di picchiare i mostri invece dei compagni!]
@@ -1060,6 +1127,11 @@
         {charNameTwo}: Chissà se è la rana che fa accadere le cose.
         
             + [Hai la mente da scienziato: se una cosa non la provi allora non è vera!]
+                {charNameTwo}: Lo dice anche mio fratello.
+                {charNameTwo}: Per questo mi lascia fare gli esperimenti.
+                {charNameTwo}: Ma senza elettricità, dopo l'incidente.
+                {charNameTwo}: Però posso usare le batterie.
+                {charNameTwo}: Voglio fargli un regalo con le cose della serra, sai?
                     ~ secondBlue ++
                 
             + [Proviamo con la lampada della biblioteca!]
@@ -1135,7 +1207,13 @@
         {charNameTwo}: Magari studio come si curano i pesci.
         {charNameTwo}: Anche se non ci puoi mica giocare con loro.
             
-            + [Dammi dettagli più concreti.]
+            + [I libri ti insegnano tante cose.]
+                {charNameTwo}: Anche guardare le cose.
+                {charNameTwo}: E toccarle.
+                {charNameTwo}: Ho imparato tantissime cose da quando sono qui.
+                {charNameTwo}: Senza usare un libro.
+                {charNameTwo}: A parte quando ne ho impilati alcuni per raggiungere i vasi alti della serra.
+                {charNameTwo}: Non dirlo a {charNameFive}, ti prego!
                     ~ secondBlue ++
                 
             + [Secondo me dobbiamo solo capire la lingua dei pesci e allora ci possiamo giocare.]
