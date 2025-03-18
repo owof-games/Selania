@@ -38,7 +38,7 @@
                 
     
             //Se non ho ancora fatto e ho parlato abbastanza con lui
-            + {thirdStoryQuestCount > minStoryQuesTCount && findedGifts != ()} [Ti vorrei donare questa cosa.]
+            + {thirdStoryQuestCount > minStoryQuesTCountFirstChar && findedGifts != ()} [Ti vorrei donare questa cosa.]
                     -> third_story_gift
         
             //Dono fatto ma non ho avviato la main story

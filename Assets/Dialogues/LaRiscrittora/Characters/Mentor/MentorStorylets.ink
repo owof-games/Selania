@@ -65,7 +65,7 @@
                 -> questions
             - else:
             {
-                - firstStoryQuestCount >= minStoryQuesTCount: {charNameFive}: Hai fatto il tuo dono a {charNameOne}?
+                - firstStoryQuestCount >= minStoryQuesTCountFirstChar: {charNameFive}: Hai fatto il tuo dono a {charNameOne}?
                         ->->
                 - else:
                     {charNameFive}: Continua a conoscere {charNameOne}, così potrai farle il dono.

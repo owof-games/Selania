@@ -38,13 +38,13 @@
                 
                 
             //Se non ho ancora fatto il dono e NON ho parlato col mentore e ho parlato abbastanza con lei
-            + {firstStoryQuestCount > minStoryQuesTCount && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
+            + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
                     {charNameOne}: Ti ringrazio, non hai ancora chiesto alla mentore a cosa servono.
                     {charNameOne}: Forse conviene che prima parli con lei.
                         -> main
             
             //Se non ho ancora fatto il dono e ho parlato con il mentore e ho parlato abbastanza con lei
-            + {firstStoryQuestCount > minStoryQuesTCount && not first_story_gift.ink_outcome && gifts_and_ink && findedGifts != ()} [Ti vorrei donare questa cosa.]
+            + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && gifts_and_ink && findedGifts != ()} [Ti vorrei donare questa cosa.]
                     -> first_story_gift
         
             //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
@@ -1161,9 +1161,11 @@
     
     = secret_ending
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    
         {charNameOne}: C'è una cosa che vorrei dirti, {name}.
-        {charNameOne}: Riguarda la mentore.
-        {charNameOne}: Qual è il confine tra essere un bravo ragazzo ed essere un manipolatore?
+        {charNameOne}: Riguarda {charNameFive}.
+        {charNameOne}: Qual è il confine tra essere una brava persona ed essere una manipolatrice?
         {charNameOne}: Me lo sto chiedendo da quando sono arrivata.
         {charNameOne}: E se hai intenzione di restare qui a lungo, forse devi chiedertelo anche tu.
             ~ firstStory = Ended

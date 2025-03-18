@@ -44,7 +44,7 @@
                 
     
             //Se non ho ancora fatto e ho parlato abbastanza con lui
-            + {secondStoryQuestCount > minStoryQuesTCount && not second_story_gift.ink_outcome} [Voglio regalarti una cosa.]
+            + {secondStoryQuestCount > minStoryQuesTCountSecondChar && not second_story_gift.ink_outcome} [Voglio regalarti una cosa.]
                     -> second_story_gift
         
             //Dono fatto ma non ho avviato la main story
@@ -938,7 +938,6 @@
                 {charNameTwo}: Dice che è una cosa che devono fare tutti, grandi e piccoli, maschi e femmine.
                 {charNameTwo}: Forse {charNameFive} è come mia mamma.
                     ~ secondRed ++
-
                 
             + [Mi è sempre piaciuto far stare bene le persone.]
                 {charNameTwo}: Questa è una cosa bella.
@@ -1382,7 +1381,8 @@
         {charNameTwo}: <b>Stronze</b>.
         {charNameTwo}: Scusa.
         {charNameTwo}: Mio fratello dice che il mondo è un posto orribile e che non si può più aggiustare.
-        {charNameTwo}: Papà dice che devo crescere, che ora sono grande.
+        {charNameTwo}: Gli animali spariranno tutti ed è colpa nostra.
+        {charNameTwo}: Papà dice che devo crescere, non pensare agli animali perché ora sono grande.
         {charNameTwo}: Ma i grandi fanno schifo.
         {charNameTwo}: E non voglio fare schifo.
         {charNameTwo}: E non voglio diventare grande.
@@ -1415,30 +1415,47 @@
     {name}: Hai detto che i grandi fanno schifo, che non ti fidi di loro. //Nonna, fratello, grandi come grossi bambini
     
         
-        + [Però tua nonna è una tizia che spacca.]
-            {name}: E ammettere una propria paura, una scelta enorme.
+        + [Però tua nonna e tuo fratello spaccano.]
+            {name}: Tua nonna ti ha insegnato a barare!
+            {name}: Tuo fratello crea cose e ti protegge.
+            {name}: Anche loro sono adulti.
                    ~ secondRed ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)
         
-        + [Però vuoi molto bene a tuo fratello.]
-
+        + [I tuoi genitori sono infelici, essere adulti è difficile.]
+            {name}: Tutti i litigi, la fuga di tuo padre.
+            {name}: Diventiamo grandi, abbiamo un sacco di doveri, e non sappiamo cosa fare.
+            {name}: Per questo i grandi fanno cose brutte.
+            {name}: Ma questo non li rende schifosi.
                    ~ secondGreen ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)  
         
-        + [Forse il loro problema è che non sanno giocare.]
+        + [Il problema è che agli adulti non è permesso giocare.]
+            {name}: Tua nonna gioca, bara, e infatti è super.
+            {name}: I tuoi genitori lavorano e litigano e sono infelici.
+            {name}: Tu puoi essere un grande che gioca.
+            {name}: E che gioca con gli animali per vivere.
+            {name}: Ed essere felice.
                    ~ secondYellow ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)          
      
             
-        + [Blu]
+        + [Però gli adulti hanno anche scoperto le cose che ti piacciono.]
+            {name}: L'elettricità.
+            {name}: Gli studi sugli animali.
+            {name}: Le caramelle.
+            {name}: Le action figures.
                    ~ secondBlue ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)    
-        + [Viola.]
-           
+        
+        + [Hai ragione. Ma tu puoi essere un altro tipo di adulto.]
+            {name}: Un adulto che sa correggere le giornate.
+            {name}: Anche per le altre persone.
+            {name}: Che può tornare a fidarsi delle altre persone.
                    ~ secondPurple ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
@@ -1452,38 +1469,52 @@
             -> two
         }        
         
+    
     = two
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        //Affrontiamo i genitori
-    {name}: Tua mamma e tuo papà ti dicono che devi crescere, comportarti da adulto, non piangere.
+    {name}: Hai paura che il mondo stia finendo, che spariranno tutti gli animali.
   
-        + [Giallo.]
+        + [Non puoi prevedere il futuro. Goditi quello che c'è senza rimpianti.]
+            {name}: Se le cose sono incerte, prenditi le certezze.
+            {name}: E la cosa certa è che gli animali ci sono ancora.
+            {name}: Che tuo fratello ti vuole bene.
+            {name}: E le caramelle sono buone.
                    ~ secondYellow ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)            
   
                     
-        + [Blu.]
+        + [Sei giovane ma sai già un sacco di cose. Studia e salvali.]
+            {name}: Si ha paura solo se non si conosce una cosa.
+            {name}: Impara a conoscere quello di cui hai paura.
+            {name}: E a quel punto saprai anche come cambiare le cose.
                    ~ secondBlue ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)    
     
             
-        + [Rosso.]
+        + [E allora lotta. Unisciti ad altri e protesta!]
+            {name}: Sei abituato a stare in castigo, di cosa hai paura?
+            {name}: A scuola fai quello che vuoi.
+            {name}: Fallo anche fuori.
+            {name}: Per salvare il mondo.
                     ~ secondRed ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)            
             
-        + [Eppure loro non piangono e sono tristi e infelici.]
-            {name}: Litigano spesso.
-            {name}: Non sono felici di quello che fanno.
-            {name}: Se vuoi piangere, puoi essere più libero e felice.
+        + [Inventa storie, bugie che creino compassione, che cambino le persone.]
+            {name}: Un po' come la bugia del compleanno.
+            {name}: Ma per far sì che ogni bosco abbia migliaia di compleanni.
+            {name}: Usa il tuo dono per convincere le persone a cambiare.
                    ~ secondGreen ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)  
                 
-        + [Viola.]
- 
+        + [La paura blocca, la paura è una scusa comoda.]
+            {name}: La paura è un rifugio.
+            {name}: Se hai paura, non agisci.
+            {name}: Se agisci non cambi nulla.
+            {name}: Davvero vuoi restare per sempre bloccato dalla paura?
                    ~ secondPurple ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
@@ -1503,30 +1534,45 @@
     {name}: Tuo fratello dice che il mondo è orribile, che non si può più aggiustare.
     
         + [Eppure crea arte.]
-         
+            {name}: E l'arte è respiro, futuro, è cambiamento.
+            {name}: L'arte è credere che le cose possano migliorare.
+            {name}: Definisce un presente, per lanciarci altrove.
+            {name}: E rende il mondo un posto meno orribile.
                    ~ secondPurple ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
             
         
         + [Eppure ama il suo amico.]
+            {name}: E ama te.
+            {name}: E fa in modo che possiate passare tanto tempo assieme.
+            {name}: Che tu possa avere uno spazio felice.
+            {name}: E così rende il mondo un po' meno orribile.
                    ~ secondGreen ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)  
                 
         + [Eppure lotta contro tuo padre perché tu stia meglio.]
+            {name}: Si è creato una nuova casa.
+            {name}: Non si è fatto mettere i piedi in testa da nessuno.
+            {name}: E questo lo fai se pensi ci sia un futuro dove andare.
                     ~ secondRed ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)
             
         
         + [Eppure gioca con te.]
+            {name}: Si diverte, lascia che le cose belle accadano.
+            {name}: In un mondo orribile, esisterebbe davvero il piacere?
                    ~ secondYellow ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)            
 
                 
         + [Eppure per lavoro aggiusta le cose.]
+            {name}: Vede le cose rotte e le ripara.
+            {name}: Quindi ci sono cose che si possono aggiustare.
+            {name}: Serve solo un meccanico per le cose che lo spaventano.
                    ~ secondBlue ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)         
@@ -1546,29 +1592,46 @@
     {name}: {charNameFive} ti ha chiamato {charNameTwo}.
     
         + [Vuoi davvero dargliela vinta?]
+            {name}: Non ti piace da quando sei arrivato qui.
+            {name}: Ti ha fatto arrabbiare dal primo momento.
+            {name}: Vuoi davvero che sia lei a decidere come ti chiami?
                     ~ secondRed ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)
         
         + [I ricci resistono a tantissimi veleni.]
+            {name}: Ogni animale ha la sua dote, il suo modo di superare le paure.
+            {name}: Puoi studiare e diventare un superanimale.
+            {name}: O divertirti a cambiare quando vuoi.
+            {name}: E tornare riccio, quando le cose si fanno velenose.
                    ~ secondBlue ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)    
         
         + [A volte abbiamo bisogno di raggomitolarci per superare le cose peggiori.]
-
+            {name}: Quello che conta è: cosa facciamo, dopo?
+            {name}: Quando le cose sono superate?
+            {name}: Restiamo ancora nel nostro posto sicuro?
+            {name}: O decidiamo di guardare le cose da una prospettiva diversa, e cambiarle?
                    ~ secondPurple ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
              
             
-        + [Ma anche se il dorso ha le spine, il loro dorso è tenero e gentile.]
- 
+        + [Ma anche se la schiena ha le spine, la loro pancia è tenera e gentile.]
+            {name}: E tu sei stato tenero molte volte da quando sei qui.
+            {name}: Con me, con la rana.
+            {name}: E con le cose che hai raccontato.
+            {name}: Ti servono ancora quelle spine?
                    ~ secondGreen ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)          
         
         + [I ricci hanno un olfatto super, e possono trovare tutte le caramelle del mondo.]
+            {name}: E dopo che hai trovato le caramelle, cambia animale.
+            {name}: Diventa qualcosa che vede fino alla luna, e insegui le stelle.
+            {name}: Oppure impara a nuotare fino all'altra parte del mondo.
+            {name}: Continua a cambiare.
                     ~ secondYellow ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)    
@@ -1582,27 +1645,43 @@
      Per questo ti dico...
      
         + {secondRed > 0} [Diventa il più forte, il più coraggioso.]
+            {name}: Sei un testardo, bugiardo, dispettoso.
+            {name}: Queste cose unite possono renderti indistruttibile.
+            {name}: E di cosa avrà mai paura un ragazzo indistruttibile?
                     ~ secondRed ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)        
         
         + {secondPurple > 0} [Tutti abbiamo paura. Condividi questa paura con le altre persone.]
+            {name}: Falle sentire meno sole.
+            {name}: Meno sbagliate.
+            {name}: A quel punto saranno pronte a fare il passo.
+            {name}: A cambiare le cose a loro volta.
+            {name}: Assieme.
                    ~ secondPurple ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
                     
         
         + {secondYellow > 0} [L'opposto della paura è la curiosità.]
+            {name}: E tu sei il ritratto della curiosità.
+            {name}: Guarda le cose che arriveranno chiedendoti "Chissà se..." o "E se invece..." o "Perché accade questo?".
+            {name}: E a quel punto ogni paura diventerà solo un problema da risolvere.
                    ~ secondYellow ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)            
                 
         + {secondGreen > 0} [I tuoi genitori sono spaventati, aiutatevi a vicenda.]
+            {name}: Nessuna persona può cambiare il mondo da sola.
+            {name}: Ma possiamo partire dal cambiare le cose che ci circondano, un pezzo alla volta.
                    ~ secondGreen ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)          
                 
         + {secondBlue > 0} [Con la tua intelligenza puoi rendere il mondo migliore.]
+            {name}: Puoi aiutare gli adulti a essere meno tristi.
+            {name}: E gli animali a non morire.
+            {name}: E tua nonna a uscire dalla casa dei vecchi.
                    ~ secondBlue ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)            
@@ -1611,37 +1690,44 @@
                 
         -     
         
-    {charNameTwo}: Grazie, {name}.
-    {charNameTwo}: Mentre parlavi mi è nata una nuova canzone in testa.
-    {charNameTwo}: Qualcosa di fresco, di pronto a cambiare.
-    {charNameTwo}: La canzone del mio vero nome.
+    {charNameTwo}: {name}.
+    {charNameTwo}: Ti ascolto e mi dico che c'è un animale.
+    {charNameTwo}: Un animale che mi piace.
+    {charNameTwo}: Un animale che un po' è me.
+    {charNameTwo}: Il mio nome.
 
         {
             - secondCharacterPossibleStates has IlRiccio:
-                {charNameTwo}: Che <b>resterà Chitarra</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
+                {charNameTwo}: Quell'animale è il <b>Riccio</b>.
+                {charNameTwo}: Perché l'unico modo per sopravvivere è difendersi da tutto.
             
             - secondCharacterPossibleStates has IlGrizzly:
-                {charNameTwo}: E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
+                {charNameTwo}: Il mio vero nome è <b>Grizzly</b>: per combattere la paura diventerò il più forte di tutti, imbattibile!
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += IlGrizzly
             
             - secondCharacterPossibleStates has IlLupo:
-                {charNameTwo}: Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
+                {charNameTwo}: Mi chiamerò <b>Lupo</b>, e proteggerò il mio branco.
+                {charNameTwo}: Mamma, papà, e mio fratello.
+                {charNameTwo}: Nessuna delle persone a cui voglio bene deve avere paura.
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += IlLupo
             
             - secondCharacterPossibleStates has IlDelfino:
-                {charNameTwo}: Il mio nome è <b>Flauto Dolce</b>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
+                {charNameTwo}: E il mio nome è <b>Delfino</b>: tutto è un gioco.
+                {charNameTwo}: La mia fantasia e le mie bugie aiuteranno le altre persone ad avere meno paura.
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += IlDelfino                
             
             - secondCharacterPossibleStates has IlCapibara:
-                {charNameTwo}: Mi chiamerò <b>Ocarina</b>: perché il suo suono è gioco e festa.
+                {charNameTwo}: Mi chiamerò <b>Capibara</b>: mi farò tantissimi amici.
+                {charNameTwo}: E ci sentiremo meno soli!
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += IlCapibara
             
             - secondCharacterPossibleStates has IlCorvo:
-                {charNameTwo}: Io sono <b>Violino</b>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
+                {charNameTwo}: Io sono <b>Corvo</b>: sono sveglio e posso capire ciò che mi circonda!
+                {charNameTwo}: E posso cambiare le cose che mi fanno paura.
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += IlCorvo
         }
@@ -1658,9 +1744,13 @@
     
     = secret_ending
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        {charNameTwo}: C'è una cosa che vorrei dirti, {name}.
-        {charNameTwo}: Riguarda Il mentore.
-
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        {charNameTwo}: Voglio dirti una cosa {name}.
+        {charNameTwo}: Su {charNameFive}.
+        {charNameTwo}: A me non mi sembra mica felice.
+        {charNameTwo}: Mi ricorda mamma quando gira per casa dando consigli e dicendo cose e sorridendo.
+        {charNameTwo}: E poi si rinchiude in camera e resta in silenzio per ore.
+        {charNameTwo}: Non credo stia bene.
             ~ secondStory = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(secondStory)
@@ -1668,7 +1758,8 @@
             
     = exit
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        {charNameTwo}: Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
+        {charNameTwo}: Voglio stare ancora un po' qui, prima di prendere il treno.
+        {charNameTwo}: Mi mancherà la rana!
             ~ secondStory = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(secondStory)
