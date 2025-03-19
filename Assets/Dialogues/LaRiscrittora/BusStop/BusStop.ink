@@ -111,6 +111,7 @@
     -> main
     
 === second_character_notes ===
+//Mettere cose sul rapporto con nonna, papà. mamma, fratello, animali, futuro.
     + {are_two_entities_together(SecondCharacterNotes, PG)}[SecondCharacterNotes]
     
     {
