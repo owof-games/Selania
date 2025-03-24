@@ -57,7 +57,7 @@
             <i>E quel ricordo, {name}, è ora che ci stai sfiorando.</i>
             
         + [Esci dalla mia testa!]
-                ~ playerRed ++
+            ~ playerRed ++
             <i>Non siamo nella tua testa.</i>
             <i>Non più di quanto tu sia nella tua testa.</i>
             <i>Non meno di quanto tu sei in noi.</i>
@@ -152,23 +152,54 @@
         ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
         ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
         ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-        
-        + [Mi chiedo se sono all'altezza di tutto questo.]
+    <i>I nostri rami saggiano il cielo.</i>
+    <i>L'aria finalmente ci rinfresca.</i>
+    <i>E gli uccelli ci raccontano cose su {name}.</i>
+    <i>E su quello che ha fatto per {charNameTwo}.</i>
+    <i>E noi ci chiediamo: come sta {name} ora che {charNameTwo} è libero?</i>
+    
+        + [Mi chiedo chi sarei ora, con una famiglia diversa alle spalle.]
                 ~ playerGreen ++
-            
-        + [Sono felice per lei, ma il mondo non dovrebbe fare così paura.]
+            <i>La gemma sul ramo ignora il tronco, eppure cresce.</i>
+            <i>Il girino nuota, non importa la dimensione dello stagno.</i>
+            <i>{name} prova a riscrivere il passato: non si ama per ciò che è in questo presente?</i>
+ 
+        + [Secondo te serve uno scopo più grande per vivere davvero?]
+            <i>La rondine crea un nido di paglia.</i>
+            <i>E quando l'inverno arriva il nido cade sul terreno.</i>
+            <i>Formiche e funghi lo trasformano in cibo.</i>
+            <i>Arricchiscono il terreno.</i>
+            <i>In primavera l'erba ricresce, col caldo si secca.</i>
+            <i>E la rondine ha paglia a sufficienza per un nuovo nido.</i>
+                ~ playerPurple ++
+                        
+        + [Nonostante tutto, mi ha fatto rivalutare la forza della rabbia.]
+            <i>La lava scorre e brucia.</i>
+            <i>Ma col tempo rende il terreno fertile.</i>
+            <i>E dove prima cresceva solo erba, ora c'è un'intera foresta.</i>
                 ~ playerRed ++
             
-        + [Non ho apprezzato la sua mancanza di senso pratico.]
+        + [Avevo dimenticato quanto conforto possa dare il sapere.]
+            <i>Il sapere è una luce.</i>
+            <i>Il sapere è un rifugio.</i>
+            <i>Una luce troppo forte confonde strada e burrone.</i>
+            <i>Un rifugio col tempo può diventare prigione.</i>
                 ~ playerBlue ++
      
-        + [Pensavo sarebbe stato più divertente.]
+        + [Dovrei reimparare a giocare, a prendere le cose alla leggera.]
+            <i>Le radici ridono quando l'erba fa solletico.</i>
+            <i>Le foglie ridono quando il vento le sfiora.</i>
+            <i>{name} forse ride quando non è {pronouns has him: solo|{pronouns has her: sola|solə}}.</i>
                 ~ playerYellow ++
- 
-        + [Spero che {charNameOne} sia capace di portare il suo cambiamento nel mondo.]
-                ~ playerPurple ++
-        
-        -    
+        -
+    
+    <i>L'acqua ci ha portato le lacrime di {charNameFive}.</i>
+    <i>Questa storia per lei è stata faticosa.</i>
+    <i>Le sue radici sembrano solide, ma il tronco ondeggia al primo accenno di burrasca.</i>
+    <i>Forse {name} può essere il suo sostegno.</i>
+    <i>O forse {name} può lasciarla cadere, e ricominciare.</i>
+    <i>Ora noi ci godiamo la brezza e il sole.</i>
+    <i>Ma più tardi tornaci a trovare.</i>
             -> main
         
     = third_story_ended_check
@@ -287,12 +318,12 @@
     }
     
     = one
-     <i>{~ I rami sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba osserva lontana dalla base della pianta.}</i>
-        -> main
+        <i>{~ Le radici hanno trovato vecchi tesori.|I bruchi solleticano le giovani radici.|Porcellini di terra si riparano tra le nostre radici.}</i>
+            -> main
     
     = two
-    <i>{~ Le radici hanno trovato vecchi tesori.|I bruchi solleticano le giovani radici.|Porcellini di terra si riparano tra le nostre radici.}</i>
-    -> main
+        <i>{~ I rami sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba osserva lontana dalla base della pianta.}</i>
+        -> main
 
     = three
     
