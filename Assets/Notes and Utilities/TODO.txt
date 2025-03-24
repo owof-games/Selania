@@ -3,12 +3,10 @@
 * Quinta storia mentore.
 * Check "opinioni" mentore tier uno e due.
 * Valutare se inserire dei commenti, delle opinioni della mentore legati a determinate storie di personaggia uno e personaggio due.
-* second_story_ended_check per il fungo.
 * Correzione coltivabili in base a nuovi nomi e forme/luoghi.
 * Correzione e alleggerimento peronaggia uno.
 * Scrittura nuove note peronaggia uno.
 * Inserire piccoli commenti/scenette a seconda di luogo e personaggi3 presenti.
-* Rana e regalo: commento?
 
 Inoltre:
 * Check storia Bea
