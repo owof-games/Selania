@@ -1,12 +1,8 @@
 24 marzo 2025 e a seguire (in ordine di priorità)
-* Quarta storia mentore.
-* Quinta storia mentore.
-* Check "opinioni" mentore tier uno e due.
-* Valutare se inserire dei commenti, delle opinioni della mentore legati a determinate storie di personaggia uno e personaggio due.
 * Correzione coltivabili in base a nuovi nomi e forme/luoghi.
-* Correzione e alleggerimento peronaggia uno.
+* Correzione e alleggerimento personaggia uno.
 * Scrittura nuove note peronaggia uno.
-* Inserire piccoli commenti/scenette a seconda di luogo e personaggi3 presenti.
+
 
 Inoltre:
 * Check storia Bea
@@ -20,7 +16,14 @@ Infine:
 
 
 
-
+are_two_entities_together(TheFrog, PG)
+are_two_entities_together(Mentor, PG)
+are_two_entities_together(FirstCharacter, PG)
+are_two_entities_together(SecondCharacter, PG) (dopo quarta storia primo pg)
+entity_location(PG) == BusStop
+entity_location(PG) == Forest
+entity_location(PG) == GreenhouseMiddlePath
+entity_location(PG) == Library
 
 
 ----------------------------------------------------------------------------
