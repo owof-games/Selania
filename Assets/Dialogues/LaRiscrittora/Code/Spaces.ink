@@ -96,3 +96,13 @@
     ~ temp entity2_location = entity_location(entity2)
     ~ move_entity(entity1, entity2_location)
     
+=== function change_entity_place(entity)
+    {
+        - are_two_entities_together(entity, PG):
+            {
+                - entity_location(PG) == BusStop:
+                    ~ move_entity(entity, Forest)
+                - else:
+                    ~ move_entity(entity, BusStop)
+            }
+    }  

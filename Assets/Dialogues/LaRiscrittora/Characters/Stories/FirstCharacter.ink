@@ -16,6 +16,7 @@
 
 === talk_with_first_character
 ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+-> common_storylets ->
 
             {//Se prima chiacchierata
                 - not knowing_first_character.one:
@@ -98,6 +99,7 @@
 
     = one
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         //Presentazione.
         ~ firstStoryQuestCount ++
         
@@ -254,6 +256,7 @@
         
     = two
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         //Paura di deludere la famiglia scelta
         ~ firstStoryQuestCount ++
         
@@ -303,6 +306,7 @@
             
     = three
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     ~ firstStoryQuestCount ++
     
         {charNameOne}: Stavo pensando ad Anna.
@@ -359,6 +363,7 @@
         
     = four
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     //Silenzio
         ~ firstStoryQuestCount ++
         
@@ -395,18 +400,21 @@
                 {charNameOne}: E la mia testa ora è piena di domande.
                     ~ firstPurple ++
             -
-        {charNameOne}: Forse la mentore è abbastanza vecchio da avere una radio?
+        {charNameOne}: Forse la mentore è abbastanza vecchia da avere una radio?
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main 
             
     = five
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     ~ firstStoryQuestCount ++
     
         {charNameOne}: Sono abituata a essere circondata da gente tutto il giorno.
         {charNameOne}: A vivere nella festa.
         {charNameOne}: Sto in una casa con altre cinque persone, un posto pieno di muffa e corridoi e armadi e c’è sempre una festa da fare.
         {charNameOne}: Talco crea strumenti con qualsiasi cosa trova in giro.
+        {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Mi piacerebbe conoscere Talco!}        
         {charNameOne}: Le sere d'estate saliamo sul tetto a cantare e improvvisare.
         {charNameOne}: E vento e sudore si portano via le preoccupazioni e non c’è nulla a cui pensare.
         {charNameOne}: A quel punto arriva la sensazione, quel sentirti parte di tutto, priva di confini.
@@ -447,6 +455,8 @@
         
     = six
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         //Paura delle conseguenze della scelta.
         ~ firstStoryQuestCount ++
         
@@ -495,6 +505,8 @@
         
     = seven
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     //Razionalità
         ~ firstStoryQuestCount ++
         
@@ -538,6 +550,8 @@
             -> main           
     = eight
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     ~ firstStoryQuestCount ++
     
         {charNameOne}: Ghiberti sembra un uomo felice, sorride molto.
@@ -549,6 +563,7 @@
         {charNameOne}: È come quella roba con l’AI, orecchiabile, prevedibile, dimenticabile.
         {charNameOne}: Odio poche cose, ma questa su tutte: odio tutte le cosine pratiche e calcolabili, sono una rinuncia alla vita.
         {charNameOne}: Come sta in piedi una comunità, così?
+        {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Certo che voi grandi dite tantissime parole strane.}        
             
             + [Una comunità sboccia da sè quando c'è affetto e fiducia.]
                 {charNameOne}: Una casa in campagna con le persone amate.
@@ -582,6 +597,8 @@
     
     = nine
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         //Voglia di fare qualcosa di utile, importante
         ~ firstStoryQuestCount ++
         
@@ -628,10 +645,14 @@
             -> main   
     = ten
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     ~ firstStoryQuestCount ++
     
         {charNameOne}: L'anno scorso abbiamo occupato questo parco per una settimana.
         {charNameOne}: Il comune voleva distruggere gli alberi, e volevamo fare qualcosa di utile, sai.
+        {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: La prossima volta voglio aiutarvi!}
+        {are_two_entities_together(SecondCharacter, PG):{charNameOne}: Sarai il primo a venire chiamato, promesso!}        
         {charNameOne}: La prima notte il freddo non l'abbiamo sentito da come eravamo prese dalla gioia.
         {charNameOne}: Però man mano l'euforia è andata scemando.
         {charNameOne}: Alcune persone se ne sono andate, altre sono restate ma senza spinta.
@@ -680,6 +701,8 @@
     
     = eleven
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         //Famiglia d'origine
         ~ firstStoryQuestCount ++
         
@@ -730,6 +753,8 @@
             
     = twelve
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     ~ firstStoryQuestCount ++
     
         {charNameOne}: A pensarci, per certi versi, mamma è più cinica di papà.
@@ -737,6 +762,7 @@
         {charNameOne}: Ma per lei l'obiettivo è che mi trasformi in Lang Lang, Mitsuko Uchida, Alfred Brendel.
         {charNameOne}: Prestigio, onoreficienze e denaro.
         {charNameOne}: Chi glielo dice che a ventitrè anni per queste cose sono già vecchia?
+        {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Moooooolto vecchia!}        
         {charNameOne}: Con queste premesse la mia strada è totalmente sbagliata.
         
             + [Secondo te tua mamma vuole il tuo o il suo di bene?]
@@ -827,7 +853,18 @@
     = confession
     //Per il feedback, temi legati al rapporto, all'amicizia
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         {charNameOne}: Ho realizzato una cosa, una cosa su noi due.
+        {
+            -   are_two_entities_together(Mentor, PG):{charNameFive}: Sicuro è il caso che vi lasci il vostro spazio.
+                    ~ change_entity_place(Mentor)
+        }
+        {
+            -   are_two_entities_together(SecondCharacter, PG):{charNameOne}: {charNameTwo}, ci lasceresti da sole per poco?
+                    ~ change_entity_place(SecondCharacter)
+        }        
+        
             -> firstAffinityCalc ->
         {
         - firstPurple && firstYellow > firstBlue: {charNameOne}: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
@@ -882,6 +919,16 @@
 
     = one
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    {
+        -   are_two_entities_together(Mentor, PG):{charNameFive}: Vi lascio, a dopo.
+                ~ change_entity_place(Mentor)
+    }
+    {
+        -   are_two_entities_together(SecondCharacter, PG):{charNameOne}: {charNameTwo}, avremmo bisogno di privacy, puoi andare a fare due passi?
+                ~ change_entity_place(SecondCharacter)
+    }      
     {name}: Prima hai detto che hai il terrore di fare una scelta.
         
         + [Qui hai accettato il tuo nuovo nome.]

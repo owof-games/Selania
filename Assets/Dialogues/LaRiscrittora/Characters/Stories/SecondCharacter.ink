@@ -16,6 +16,7 @@
 
 === talk_with_second_character ===
 ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+-> common_storylets ->
 
    {//Se prima chiacchierata
         - not knowing_second_character.one:
@@ -123,6 +124,8 @@
     //Obiettivo: Presentare l’elemento delle bugie. Vengono dette cose sconfessate poi nella terza storia.
     //Contenuto: Compleanno, giochi
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         ~ secondStoryQuestCount ++
         
         ???: Perché sei qui?
@@ -169,10 +172,13 @@
         ???: Mamma mi ha promesso qualcosa di FIGHISSIMO!
         ???: L'anno scorso per Natale mi ha preso tutte le action figures dei miei videogiochi preferiti.
         ???: Ma poi papà me le ha rubate tutte.
+        {are_two_entities_together(SecondCharacter, PG): {charNameFive}: Povera anima!}
         ???: Ma lui mica ci può venire qui.
         ???: Perché mamma ha detto che avrebbe dato solo a me qualcosa di bellissimo che papà non può rubare.
         ???: Ma dove trovo le caramelle?
         ???: Mamma dice sempre che non c'è compleanno senza caramelle!
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Tua mamma e io potremmo andare d'accordo!}
+        
         
             + (twoBlue) [Tecnicamente, il compleanno arriva a prescindere dalle caramelle.]
                 ???: Forse la data.
@@ -225,7 +231,10 @@
     //Contenuto: Prima gioia per gli insetti, ecc, poi domande sulla sua violenza alla mentore.
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-        ~ secondStoryQuestCount ++
+    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ change_entity_place(Mentor)
+    ~ secondStoryQuestCount ++
+      
         
         {charNameTwo}: Questo posto è PIENO di animali!
         {charNameTwo}: Ma ho lasciato a casa il tablet.
@@ -316,7 +325,7 @@
         {charNameTwo}: Se {charNameFive} non mi lascia in pace chiamo mio fratello.
         {charNameTwo}: Lui è superforte.
         {charNameTwo}: Ora lasciami in pace.
-        
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Mi ero dimenticata di quanto fosse terribile essere piccoli.}        
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
 
@@ -327,7 +336,10 @@
     //Contenuto: Ci chiede come ci chiamiamo, emerge una bugia diversa a seconda del genere -> Qui però scopriamo che ci mente, possiamo decidere di mettere in evidenza o meno questa bugia, solitudine.
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ change_entity_place(Mentor)
     ~ secondStoryQuestCount ++
+
         
         {charNameTwo}: Mica mi hai detto come ti chiami.
             
@@ -380,6 +392,7 @@
             	  {charNameTwo}: Ah.
             	  {charNameTwo}: Sei una ragazza quindi.
             	  {charNameTwo}: Non ci parlo mica molto con le ragazze, siete strane.
+                {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Disse quello che passa le ore a studiarsi le caccole.}
             	  {charNameTwo}: Devo ancora capire se sei strana anche tu.
             	  {charNameTwo}: Anche mamma è strana.
             	  {charNameTwo}: Ma le voglio bene.
@@ -409,6 +422,7 @@
        
         = three_continue 
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
             //Definire meglio in base ai colori.
             
             + {him_liar} [Bugia: hai detto di esser pieno di action figures.]
@@ -486,6 +500,8 @@
     //Contenuto: Momento di vulnerabilità, ci parla della nonna (ma non ci dice che è morta) e ci dice che è fuggito da casa.
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ change_entity_place(Mentor)
     
     ~ secondStoryQuestCount ++
         -> secondAffinityCheckCalc ->
@@ -503,6 +519,7 @@
         {charNameTwo}: Ma nonna dice che succede.
         {charNameTwo}: Che i grandi fanno cose cattive senza saperlo.
         {charNameTwo}: Mi spiace essere scappato di casa.
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Se Talco fosse qui, ti avrebbe già adottato.}        
         
             + [Non parli mai del tuo nonno. Deduco che non ci sia più?]
                 {charNameTwo}: Se ne è andato quando papà era molto piccolo.
@@ -574,6 +591,9 @@
   
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ change_entity_place(Mentor)
+    
     ~ secondStoryQuestCount ++
         
         {name}: Dalla serra è scomparso l'innaffiatoio.
@@ -681,6 +701,10 @@
     //Obiettivo: Mostrare che sta iniziando a non mentire.
     //Contenuto: Ci racconta della rana, possiamo decidere di non credergli o meno.
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ change_entity_place(Mentor)
+        
         ~ secondStoryQuestCount ++
         
         {charNameTwo}: Prima ho visto una rana allo stagno.
@@ -691,6 +715,7 @@
         {charNameTwo}: Nonna dice che se lo lecchi e stai male, è tossico.
         {charNameTwo}: Se lo tocchi e stai male, è velenoso.
         {charNameTwo}: E se ti guarda e stai male, è mamma.
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Questa cattiveria me la riciclo.}        
         {charNameTwo}: E so altre cose sulle rane.
         {charNameTwo}: Ma non ho mai visto una rana parlare.
         {charNameTwo}: O fare dei regali.
@@ -747,6 +772,10 @@
     //Contenuto: Parla della fantasia, e del fatto che la sera si riscrive la giornata, capiamo che la famiglia litiga spesso. Tensione in casa anche per la morte della nonna
     
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ change_entity_place(Mentor)
+        
         ~ secondStoryQuestCount ++
         
         {charNameTwo}: La rana prima mi ha detto che tu scrivi storie.
@@ -823,6 +852,9 @@
     //Contenuti: ci parla del fratello come mito, riferimento, modello. All'inizio mente, ma poi si ridimensiona da solo (sta iniziano a fidarsi).
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ change_entity_place(Mentor)
+    
     ~ secondStoryQuestCount ++
         
         {charNameTwo}: Sai che mio fratello è campione di Karate?
@@ -904,6 +936,9 @@
     //Contenuti: tutti sanno cosa diventare da grandi, io voglio fare il veterinaio ma?
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+        ~ change_entity_place(Mentor)
+        
         ~ secondStoryQuestCount ++
         
         {charNameTwo}: Tu hai sempre voluto fare {pronouns has him: il riscrittore|{pronouns has her: la riscrittora|lə riscrittorə}} come lavoro?
@@ -970,6 +1005,7 @@
         {charNameTwo}: E questa cosa mi fa arrabbiare.
         {charNameTwo}: Non voglio essere un bambino per sempre.
         {charNameTwo}: Ma non voglio essere grande.
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Bimbo, mi stai facendo sentire una piagnona egoista così.}        
             
             + [Sai che crescerai anche se non lo vuoi, vero?]
                 {charNameTwo}: Sì no boh.
@@ -1033,6 +1069,10 @@
     //Obiettivo: si fida di noi, mostriamo il suo rapporto con la violenza. Finale rosso, finale viola (aiutare gli altri).
     //Contenuti: capiamo che a scuola è un bullo, ma ci sono persone che protegge.
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ change_entity_place(Mentor)
+        
         ~ secondStoryQuestCount ++
         
         {charNameTwo}: Stavo ripensando a un bambino.
@@ -1052,7 +1092,8 @@
         {charNameTwo}: Ma a me non piace farmi picchiare.
         {charNameTwo}: O picchiare.
         {charNameTwo}: Ma se sono arrabbiato e non so cosa fare.
-        
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Mai provato a suonare la batteria?}
+        {are_two_entities_together(FirstCharacter, PG): {charNameTwo}: Poi papà ha un altro motivo per arrabbiarsi.}
         
             + [Solo gli animali non sanno controllarsi.]
                 {charNameTwo}: Allora sono un lupo.
@@ -1106,6 +1147,10 @@
     //Obiettivo: curiosità, sperimentazione. finale giallo, finale viola
     //Contenuti: esperimenti in casa (microscopio, muro bruciato col Meccano
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ change_entity_place(Mentor)
+        
         ~ secondStoryQuestCount ++
         
         {charNameTwo}: Quando vado da mio fratello e non c'è il suo amico, mi lascia sperimentare con le sue cose.
@@ -1183,6 +1228,9 @@
     //Contenuti. Momento tenero. L'altra nonna, la casa al mare, momenti di pace. I genitori non ci sono in queste occasioni
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+        ~ change_entity_place(Mentor)
+        
         ~ secondStoryQuestCount ++
         
         {charNameTwo}: Mi piace la biblioteca.
@@ -1198,6 +1246,7 @@
         {charNameTwo}: E hanno riso tutti quando ho ruttato fortissimo.
         {charNameTwo}: Da nonna mi addormento subito.
         {charNameTwo}: Non devo correggere le giornate.
+        {are_two_entities_together(FirstCharacter, PG): {charNameTwo}: Vedi tu se dovevo iniziare a provare affetto per un bimbo, mannaggia.}
         {charNameTwo}: Quando finiscono le vacanze però mi sento triste.
         {charNameTwo}: E arrabbiato.
         {charNameTwo}: Ora che nonna è nella casa dei vecchi, vorrei vivere sempre con l'altra nonna.
@@ -1321,11 +1370,17 @@
     }
     = confession
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ change_entity_place(Mentor)
     
     //Parole chiave legate alla fiducia.
         {charNameTwo}: Abbiamo parlato tantissimo.
         {charNameTwo}: Ma davvero TANTISSSSSSIMO!
         {charNameTwo}: Sai cosa penso di te?
+    {
+        -   are_two_entities_together(FirstCharacter, PG):{charNameOne}: E questo è il momento per me di levarmi da qui e lasciarvi in pace.
+                ~ change_entity_place(FirstCharacter)
+    }          
             -> secondAffinityCalc ->
         {
         
@@ -1403,6 +1458,11 @@
 
     = one
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ change_entity_place(Mentor)
+    {
+        -   are_two_entities_together(FirstCharacter, PG):{charNameOne}: Qui le cose si fanno serie, e io me ne vado.
+                ~ change_entity_place(FirstCharacter)
+    }        
       //Affrontiamo gli adulti in generale
     {name}: Hai detto che i grandi fanno schifo e che non ti fidi di loro. //Nonna, fratello, grandi come grossi bambini
     
@@ -1804,6 +1864,8 @@
 === second_character_opinions
 ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ change_entity_place(Mentor)
+
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
     {charNameTwo}: {~ Nonna dice che non si scappa dalla periferia. Che papà ce l'ha dentro e se l'è portata anche quando siamo andati a vivere in centro.|Non mi piacciono i cartoni per quelli della mia età. Dicono tutte cose che so già.|Se ci pensi bene dire una bugia o scrivere una storia sono la stessa cosa.|Ogni persona ha un animale dentro secondo me. Prendi{charNameFive}: sembra un gufo. Anzi anzi: un avvoltoio! No, dai. Un fagiano, quelli femmina, tutti grigi grigi.|Mio fratello dice che devo fidarmi di più degli adulti, ma secondo me lo dice perché è adulto.|Per me il veterinario è come il druido dei videogiochi, solo non deve tirare dei dadi per salvare gli animali.|Un po' mi piacerebbe dormire e basta, senza pensieri.|Forse non mi dispiace mica che sei qui.|Se vado via di qui vorrei tanto portare la rana con me.}
             -> main

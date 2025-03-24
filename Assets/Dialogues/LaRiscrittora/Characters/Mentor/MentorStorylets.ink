@@ -107,7 +107,7 @@
         
 
     //Dopo le presentazioni con due:
-    - knowing_second_character.one && not that_little_liar_storylet:
+    - knowing_second_character.one && (not that_little_liar_storylet) :
         -> that_little_liar_storylet
     
     //Se abbiamo visto che manca l'innaffiatoio e/o due ci ha detto che non parla con lei:
@@ -481,7 +481,8 @@
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     
         {charNameFive}: Hai concluso la tua prima riscrittura, {name}!
-        
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Mmm, sembra l'ora della pagella. Me ne vado.}
+            ~ change_entity_place(FirstCharacter)
         {
             - firstCharacterPossibleStates has Triangolo:
                 {charNameFive}: Hai aiutato {charNameOne} a riscoprire il suo lato più pratico, razionale.
@@ -516,7 +517,7 @@
                     {charNameFive}: A qualunque costo.
         }
         
-
+        
         {charNameFive}: Non ti conosco ancora abbastanza, ma ci tengo a dirtelo: sentiti {pronouns has him: soddisfatto|{pronouns has her: soddisfatta|soddisfattə}}!
         {charNameFive}: Questo è un lavoro complesso, ma vedrai che col tempo sarà tutto più facile.
         {charNameFive}: Comunque sia, direi che ti ho dato tutti gli strumenti per far sì che tu possa riscrivere storie in autonomia. 
@@ -534,6 +535,8 @@
     
    {charNameFive}: Hai finito il percorso con {charNameTwo}, {name}!
    {charNameFive}: Ed entrambi mi avete stupita: non pensavo davvero che un bambino avrebbe avuto bisogno di questo luogo.
+    {are_two_entities_together(SecondCharacter, PG): {charNameTwo}: Devi imparare tante cose sui bambini, tu. Vado a farmi due passi.}
+            ~ change_entity_place(SecondCharacter)
     {
             - secondCharacterPossibleStates has IlRiccio:
                 {charNameFive}: Mi spiace che non si sia liberato delle sue paure.
@@ -632,6 +635,7 @@
         {charNameFive}: Da quando sei qui, {name}, sono cambiate molte cose.
         {charNameFive}: Spero solo sia un segno positivo.
         {charNameFive}: Poi provo a dare un po' di concime a quel brutto albero.
+        {entity_location(PG) == Forest: <i>Noi preferiamo crescere senza concime. Chiederemo alle formiche di forare il sacco.</i>}
             ->->
     
 //Storylets sul secondo personaggio
@@ -641,6 +645,9 @@
         ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     
         {charNameFive}: {name}, sei {pronouns has him: riuscito|{pronouns has her: riuscita|riuscitə}} a rimandare quel bambino a casa?
+        {are_two_entities_together(SecondCharacter, PG):{charNameFive}: Da quanto vedo, no.}
+        {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Antipatica.}
+            ~ change_entity_place(SecondCharacter)
         {charNameFive}: Non è mai successo che qui arrivassero dei bambini.
         {charNameFive}: Non è un posto adatto a un bambino.
         {charNameFive}: E mi ha tirato un calcio!
@@ -665,6 +672,8 @@
         {charNameFive}: L'annaffiatoio!
         {charNameFive}: L'annaffiatoio è scomparso dalla serra.
         {charNameFive}: E sono sicura, sicura che è stato quel bambino dispettoso!
+        {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Dispettosa sarai tu, vecchia biscia!}
+            ~ change_entity_place(SecondCharacter)
         {charNameFive}: Giuro che sto cercando di essere paziente, {name}.
         {charNameFive}: Giuro!
         {charNameFive}: Ma senza l'annaffiatoio non si possono coltivare le piante della serra.

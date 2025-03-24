@@ -38,6 +38,8 @@ INCLUDE Characters\Stories\ThirdCharacter.ink
 INCLUDE Characters\Stories\FourthCharacter.ink
 INCLUDE Characters\Stories\FifthCharacter.ink
 
+INCLUDE Characters\Stories\CommonStorylets.ink
+
 //Gestione dell'inventario
 INCLUDE Inventory\Inventory.ink
 INCLUDE Inventory\InventoryManagement.ink
@@ -49,7 +51,7 @@ INCLUDE BusStop\BusStop.ink
 
 //Forest
 INCLUDE Forest\Forest.ink
-INCLUDE Forest/Fungus.ink
+INCLUDE Forest\Fungus.ink
 
 //Greenhouse
 INCLUDE Greenhouse\Greenhouse.ink
@@ -71,7 +73,9 @@ INCLUDE Library\ThirdStory.ink
 INCLUDE Library\FourthStory.ink
 INCLUDE Library\LibaryManagement.ink
 INCLUDE StartingRoomAndSaveButtons.ink
-INCLUDE Library/StoryNotes.ink
+INCLUDE Library\StoryNotes.ink
+
+
 
 
 

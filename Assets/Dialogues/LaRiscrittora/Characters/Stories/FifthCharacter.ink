@@ -111,7 +111,6 @@
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         ~ fifthStoryQuestCount ++
         //Amore per il giardinaggio e la possibilità, per la giocatrice, di esprimere qualcosa che poi si potrebbe avvicinare ai possibili finali.
-        
         {charNameFive}: Non è giusto avere delle preferenze, ma la serra è il mio posto preferito.
         {charNameFive}: C'è qualcosa nel vedere crescere piante, fiori, funghi che mi fa sentire appagata.
         {charNameFive}: Non è solo l'odore della terra, o l'umidità nell'aria nei giorni più caldi.
@@ -162,10 +161,13 @@
     = two
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-        ~ fifthStoryQuestCount ++
+    ~ change_entity_place(SecondCharacter)
+    ~ fifthStoryQuestCount ++
         
         //Partendo dalla prima personaggia, dipendenza dai rapporti (circa)
         {charNameFive}: La storia di {charNameOne} mi ha colpita.
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: E {charNameOne} di sicuro non vuole sentire le tue opinioni in merito.}
+            ~ change_entity_place(FirstCharacter)
         {charNameFive}: Non tanto il suo blocco, quello è una cosa comune a quell'età.
         {charNameFive}: Quanto invece fosse consapevole delle opinioni di tutte le persone care.
         {charNameFive}: Senza però perdere sé stessa.
@@ -272,6 +274,7 @@
     = four
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ change_entity_place(SecondCharacter)
         //Responsabilità
         ~ fifthStoryQuestCount ++
         {charNameFive}: Mi sto chiedendo se non sia stata troppo dura col piccolo {charNameTwo} appena arrivato qui.
