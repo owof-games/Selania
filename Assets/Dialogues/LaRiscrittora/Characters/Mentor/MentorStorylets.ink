@@ -515,7 +515,58 @@
     ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)   
     
-   second_character_feedback
+   {charNameFive}: Hai finito il percorso con {charNameTwo}, {name}!
+   {charNameFive}: Ed entrambi mi avete stupita: non pensavo davvero che un bambino avrebbe avuto bisogno di questo luogo.
+    {
+            - secondCharacterPossibleStates has IlRiccio:
+                {charNameFive}: Mi spiace che non si sia liberato delle sue paure.
+                {charNameFive}: E di quell'atteggiamento violento e fastidioso.
+                {charNameFive}: Forse avrei dovuto darti più aiuto.
+                {charNameFive}: O forse devi imparare meglio ad ascoltare gli altri?
+
+            - secondCharacterPossibleStates has IlGrizzly:
+                {charNameFive}: A quanto pare il nostro bambino ha abbracciato il suo lato rabbioso.
+                {charNameFive}: E invece di combatterlo, l'ha fatto proprio.
+                {charNameFive}: Personalmente, la rabbia non mi convince mai molto.
+                {charNameFive}: Porta solo disordine e dolore.
+                {charNameFive}: Ma immagino tu sappia quello che stai facendo, no?
+    
+            - secondCharacterPossibleStates has IlLupo:
+                {charNameFive}: La famiglia è qualcosa di importante, {name}.
+                {charNameFive}: E sono contenta che {charNameTwo} abbia scoperto in sé la voglia di prendersene cura.
+                {charNameFive}: E magari un giorno la sua nonna e suo fratello torneranno sotto il tetto dei genitori.
+                {charNameFive}: Per me sarebbe un finale davvero felice.
+
+
+            - secondCharacterPossibleStates has IlDelfino:
+                {charNameFive}: Sono perplessa: non pensavo l'avresti spinto ad abbracciare il suo lato più infantile.
+                {charNameFive}: Giocoso.
+                {charNameFive}: So che il tuo lavoro è fare uscire queste persone dal blocco.
+                {charNameFive}: Ma l'unica soluzione era quella di renderlo un giullare?
+                
+            - secondCharacterPossibleStates has IlCapibara:
+                {charNameFive}: A volte forse devo solo dirmi: non tutto il mondo può essere come vorrei.
+                {charNameFive}: Il fatto che il nostro piccolo amico ora si senta un {charNameTwo} mi lascia perplessa.
+                {charNameFive}: Non sono mai stata una grande fan de "l'unione fa la forza".
+                {charNameFive}: Ma forse tu hai visto qualcosa in quel bimbo che a me sfuggiva.
+                {charNameFive}: E un giorno diventerà un uomo responsabile.
+                {charNameFive}: Spero.
+            
+            - secondCharacterPossibleStates has IlCorvo:
+                {charNameFive}: Non credo avresti potuto ottenere un esito migliore.
+                {charNameFive}: La sua curiosità, la sua intelligenza indirizzate verso qualcosa di concreto, utile.
+                {charNameFive}: Ce lo vedo a studiare nuovi modi per curare le persone.
+                {charNameFive}: Per ridurre la fame nel mondo.
+                {charNameFive}: O anche solo per inventare una variante di begonia che sia completamente nera.
+                {charNameFive}: Ottimo lavoro, {name}!
+     
+        }
+        
+    {charNameFive}: Dopo la tua seconda riscrittura, spero di cuore che tu sia felice di quello che stai facendo.
+    {charNameFive}: A prescindere dal risultato.
+    {charNameFive}: E un giorno potrai fare questo lavoro da {pronouns has him: solo|{pronouns has her: sola|solə}}.
+    {charNameFive}: E a quel punto forse anche io potrò un poco riposare.
+   
    ->->
    
    === third_character_feedback
