@@ -201,7 +201,7 @@
                 {charNameTwo}: E perché papà la usa quando è arrabbiato.
                 {charNameTwo}: Mi ha detto che tantissime persone usano quella parola come scusa per fare del male ad altre persone.
                 {charNameTwo}: E lo fanno perché hanno paura.
-                {charNameTwo}: E poi mi ha portato in una associazione che serve per chi è come mio fratello e non vuole più avere paura.
+                {charNameTwo}: E poi mi ha portato in una associazione che serve per chi è come mio fratello o il suo amico e non vuole più avere paura.
                 {charNameTwo}: E io non avevo mai capito che si possono fare tutte queste cose assieme.
                 {charNameTwo}: Mi è dispiaciuto tantissimo aver fatto male al suo amico.
                 {charNameTwo}: Però sono anche contento che mi hanno detto le cose per bene dopo tutti questi anni.
@@ -210,7 +210,16 @@
                 
                 
             - secondCharacterPossibleStates has IlCorvo:
-                {charNameTwo}: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.    
+                {charNameTwo}: L'altro giorno ho detto a mamma e papà che voglio diventare un veterinario.
+                {charNameTwo}: Per studiare e salvare gli animali.
+                {charNameTwo}: Mamma ha detto che allora forse dovrei diventare un etologo (questo l'ho fatto scrivere a lei).
+                {charNameTwo}: Quando poi ne ho parlato con mio fratello, mi ha detto che questa estate se voglio mi fa conoscere una persona che fa una cosa bellissima: salva gli animali dai laboratori.
+                {charNameTwo}: Mio fratello dice che studiare è importante, ma che per cambiare le cose devo capire come lottare.
+                {charNameTwo}: Avevo capito che dovevo lasciarla via la rabbia, {name}.
+                {charNameTwo}: Ma lui mi dice che la rabbia serve.
+                {charNameTwo}: Va solo mandata nella giusta direzione.
+                {charNameTwo}: Ti scriverò appena scopro qual è quella giusta e quale è quella sbagliata.
+                {charNameTwo}: Ciao!
         }
         ~ secondWritingPause = secondWritingPauseDuration
             -> main
@@ -300,7 +309,20 @@
             
             
             - secondCharacterPossibleStates has IlCorvo:
-                {charNameTwo}: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.    
+                {charNameTwo}: Ultimamente parliamo di più.
+                {charNameTwo}: Gli piace parlare di politica.
+                {charNameTwo}: Secondo me dice cose stupide, ma forse nelle sue cose stupide c'è lui, le sue paure.
+                {charNameTwo}: Almeno così dice l'amico di mio fratello.
+                {charNameTwo}: Oggi siamo stati da nonna.
+                {charNameTwo}: Ho dovuto insistere perché avevano paura che ci rimanevo male.
+                {charNameTwo}: Si no boh.
+                {charNameTwo}: Mi è spiaciuto quando non mi ha riconosciuto.
+                {charNameTwo}: Però è sempre la nonna.
+                {charNameTwo}: Quando mamma ha parlato con l'infermiera ho preso un mazzo di carte.
+                {charNameTwo}: Era sporco e mancava l'asso di picche.
+                {charNameTwo}: Ma nonna ha ricordato tutti i trucchi e mi ha stracciato.
+                {charNameTwo}: Stammi bene!
+                {charNameTwo}: {charNameTwo}.
         }    
     ~ secondWritingPause = secondWritingPauseDuration
         -> main
@@ -347,6 +369,7 @@
                 {charNameTwo}: Mi mancate voi.
                 {charNameTwo}: Vorrei sapere cosa fare.
                 
+            
             - secondCharacterPossibleStates has IlLupo:
                 {charNameTwo}: Oggi sono triste, e non so perché.
                 {charNameTwo}: Ho dato un pugno a un ragazzo delle medie, ma non mi è mica piaciuto.
@@ -388,7 +411,7 @@
                 {charNameTwo}: Degli animali che spariscono, dei boschi che bruciano.
                 {charNameTwo}: Dei ghiacciai.
                 {charNameTwo}: Lei mi ha detto che possiamo raccogliere dei soldi ma sì no boh.
-                {charNameTwo}: Io pensavo all'associazione di mio fratello, e loro insegnano a non avere paura non a spendere soldi.
+                {charNameTwo}: Io pensavo all'associazione di mio fratello e del suo fidanzato, e loro insegnano a non avere paura non a spendere soldi.
                 {charNameTwo}: Allora mi ha fatto fare una lezione in classe su queste cose.
                 {charNameTwo}: Ho spiegato le paure.
                 {charNameTwo}: E poi ho detto che se ci mettiamo assieme ci sono anche le soluzioni.
@@ -401,7 +424,22 @@
                 {charNameTwo}: {charNameTwo}.
             
             - secondCharacterPossibleStates has IlCorvo:
-                {charNameTwo}: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.    
+                {charNameTwo}: Ieri è successa una cosa fighissima.
+                {charNameTwo}: Ti ricordi quell'amica di mio fratello, che dovevo conoscere al mare?
+                {charNameTwo}: Sta da tre giorni da lui perché dice che è stata buttata fuori di casa.
+                {charNameTwo}: E mi ha raccontato tante cose che mica sapevo.
+                {charNameTwo}: Cose brutte che vengono fatte agli animali.
+                {charNameTwo}: Ma, {name}: non aveva paura.
+                {charNameTwo}: Lei dice che sono sveglio, e che per questo non devo avere paura perché posso capire tutto.
+                {charNameTwo}: E che magari un giorno trovo un modo per salvare gli animali.
+                {charNameTwo}: Mi ha regalato un romanzo di Ursula LeGuin (ho dovuto guardare la copertina, è un nome difficile).
+                {charNameTwo}: Non sapevo di potere imparare cose dai romanzi.
+                {charNameTwo}: Oggi ho chiesto alla maestra di matematica di darmi dei libri sull'ambiente.
+                {charNameTwo}: Ci sono così tante cose da imparare, {name}, così tante!
+                {charNameTwo}: Spero ci vedremo presto.
+                {charNameTwo}: Salutami la rana!
+                {charNameTwo}: {charNameTwo}.
+                
         }
     ~ secondWritingPause = secondWritingPauseDuration
 
