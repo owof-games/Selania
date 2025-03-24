@@ -192,9 +192,23 @@
                 {charNameTwo}: Ci vediamo!
                 
                 
-                
             - secondCharacterPossibleStates has IlCapibara:
-                {charNameTwo}: Sembrerà assurdo, ma mi sono resa conto che forse, con la musica, possiamo parlare con gli animali.
+                {charNameTwo}: Ieri ho avuto una conversazione da grandi con mio fratello.
+                {charNameTwo}: Me l'ha fatta perché ho chiamato il suo amico "frocio" quando mi ha sgridato.
+                {charNameTwo}: E non avevo fatto nulla di male.
+                {charNameTwo}: A parte mettere della tempera nel suo frullatore.
+                {charNameTwo}: Mio fratello mi ha spiegato perché fa male quella parola.
+                {charNameTwo}: E perché papà la usa quando è arrabbiato.
+                {charNameTwo}: Mi ha detto che tantissime persone usano quella parola come scusa per fare del male ad altre persone.
+                {charNameTwo}: E lo fanno perché hanno paura.
+                {charNameTwo}: E poi mi ha portato in una associazione che serve per chi è come mio fratello e non vuole più avere paura.
+                {charNameTwo}: E io non avevo mai capito che si possono fare tutte queste cose assieme.
+                {charNameTwo}: Mi è dispiaciuto tantissimo aver fatto male al suo amico.
+                {charNameTwo}: Però sono anche contento che mi hanno detto le cose per bene dopo tutti questi anni.
+                {charNameTwo}: E tu hai paura di alcune persone?
+                {charNameTwo}: Ciao ciao!
+                
+                
             - secondCharacterPossibleStates has IlCorvo:
                 {charNameTwo}: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.    
         }
@@ -270,7 +284,21 @@
                 
                 
             - secondCharacterPossibleStates has IlCapibara:
-                {charNameTwo}: Sembrerà assurdo, ma mi sono resa conto che forse, con la musica, possiamo parlare con gli animali.
+                {charNameTwo}: Dopo che gli ho detto che lui usa quella parola con mio fratello perché ha paura, non mi parla più.
+                {charNameTwo}: Mamma dice che lui ha paura di tutte le cose, ma non lo sa dire.
+                {charNameTwo}: Le ho detto che ci sono delle associazioni.
+                {charNameTwo}: Lei ha sorriso e mi ha detto che sto davvero diventando grande.
+                {charNameTwo}: Però continuo a pensarci a questa cosa delle associazioni.
+                {charNameTwo}: Tu lo sai che io ho paura per gli animali.
+                {charNameTwo}: E mi hai insegnato che le cose si affrontano con gli amici.
+                {charNameTwo}: Magari non sono bravo a farmi degli amici, ma sono bravo a parlare degli animali.
+                {charNameTwo}: E forse ci riesco a fare qualcosa così, come mio fratello fa per i suoi amici.
+                {charNameTwo}: Devo solo capire cosa.
+                {charNameTwo}: Vorrei tanto chiederlo alla rana.
+                {charNameTwo}: Salutamela!
+            
+            
+            
             - secondCharacterPossibleStates has IlCorvo:
                 {charNameTwo}: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.    
         }    
@@ -355,7 +383,23 @@
                 
                 
             - secondCharacterPossibleStates has IlCapibara:
-                {charNameTwo}: Sembrerà assurdo, ma mi sono resa conto che forse, con la musica, possiamo parlare con gli animali.
+                {charNameTwo}: Questo cervellino (il mio cervellino) ha trovato una soluzione.
+                {charNameTwo}: Ho parlato con la prof di matematica, e le ho detto delle mie paure.
+                {charNameTwo}: Degli animali che spariscono, dei boschi che bruciano.
+                {charNameTwo}: Dei ghiacciai.
+                {charNameTwo}: Lei mi ha detto che possiamo raccogliere dei soldi ma sì no boh.
+                {charNameTwo}: Io pensavo all'associazione di mio fratello, e loro insegnano a non avere paura non a spendere soldi.
+                {charNameTwo}: Allora mi ha fatto fare una lezione in classe su queste cose.
+                {charNameTwo}: Ho spiegato le paure.
+                {charNameTwo}: E poi ho detto che se ci mettiamo assieme ci sono anche le soluzioni.
+                {charNameTwo}: Alcuni compagni hanno detto che ci possiamo trovare nel campetto il pomeriggio.
+                {charNameTwo}: E quindi forse qualcosa sta iniziando, {name}.
+                {charNameTwo}: Non so cosa faremo, però è bello non farlo da solo.
+                {charNameTwo}: E vorrei tanto tu fossi qui con me, ora.
+                {charNameTwo}: Secondo me ci diresti tantissime cose sagge.
+                {charNameTwo}: Salutami la rana.
+                {charNameTwo}: {charNameTwo}.
+            
             - secondCharacterPossibleStates has IlCorvo:
                 {charNameTwo}: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.    
         }
