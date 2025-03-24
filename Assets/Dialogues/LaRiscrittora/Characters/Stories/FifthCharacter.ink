@@ -337,27 +337,75 @@
     
         //Presentazione.
         ~ fifthStoryQuestCount ++
-        
-        {charNameFive}: Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+        {charNameFive}: Mi sento più stanca del solito.
+        {charNameFive}: E fa caldo.
+        {charNameFive}: Ma l'idea di stendermi sotto quell'albero non mi piace.
+        {charNameFive}: E c'è molto da fare.
+        {charNameFive}: Però quella panchina mi ricorda un'altra panchina, sai?
+        {charNameFive}: Dove in un'altra vita ho ricevuto il mio primo bacio.
+        {charNameFive}: Dall'uomo che poi ho sposato.
+        {charNameFive}: E a cui ho dedicato il resto dei miei giorni.
+        {charNameFive}: Fino a quando non sono arrivata qui.
+        {charNameFive}: Già.
+        {charNameFive}: Fino a quando non sono arrivata qui.
+        {charNameFive}: {name}: secondo te cosa vuol dire amare un'altra persona?
+
+            + [Progettare assieme, costruire fondamenta, accrescersi.]
+                {charNameFive}: Già.
+                {charNameFive}: Creare qualcosa che regga alla fine del desiderio.
+                {charNameFive}: Quando il corpo perde il suo splendore.
+                {charNameFive}: E il letto è il luogo della stanchezza e della malattia.
+                {charNameFive}: Quando invece di chiamarci "amore".
+                {charNameFive}: Ci chiediamo dove sono le chiavi della macchina.
                     ~ fifthBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [Un rifugio di stupore e gioia in un mondo grigio.]
+                {charNameFive}: Mi piace la tua ingenuità {name}.
+                {charNameFive}: Con questa logica ho amato solo una cosa:
+                {charNameFive}: il mio giardino.
+                {charNameFive}: Un posto sempre sorprendente, vivo.
+                {charNameFive}: Pieno di musica.
+                {charNameFive}: E forse è davvero così.
                     ~ fifthYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ fifthRed ++
+            + [Fondersi nella passione, a letto come in una protesta.]
+                {charNameFive}: La passione si spegne, {name}.
+                {charNameFive}: E a quel punto cosa rimane?
+                {charNameFive}: Noia?
+                {charNameFive}: Rancore?
+                {charNameFive}: Odio?
+                {charNameFive}: Passioni forti chiamano passioni ancora più forti.
+                    ~ fifthRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ fifthGreen ++
+            + [Cura, ascolto, affetto.]
+                {charNameFive}: Già, ho pensato la stessa cosa a lungo.
+                {charNameFive}: Ma a volte la cura diventa un lavoro.
+                {charNameFive}: L'ascolto un dovere.
+                {charNameFive}: L'affetto un'abitudine.
+                {charNameFive}: Eppure resti.
+                {charNameFive}: Vuol dire che è finito l'amore?
+                    ~ fifthGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ fifthPurple ++
+            + [Raggiungersi l'anima a vicenda, ricercando il divino che è noi.]
+                {charNameFive}: Una visione mistica.
+                {charNameFive}: Forse blasfema.
+                {charNameFive}: Qualcosa che non ho mai conosciuto, se non nei romanzi.
+                {charNameFive}: O nell'amicizia.
+                {charNameFive}: E a volte, se resto in silenzio e ferma a lungo, in questo luogo.
+                    ~ fifthPurple ++
  
             -
              ~ fifthPauseTalking = fifthCharPauseDurantion
+        
+        {charNameFive}: A volte sono solo una sciocca romantica.
+        {charNameFive}: E mi dimentico che l'amore è ovunque.
+        {charNameFive}: Anche qui.
+        {charNameFive}: Soprattutto qui.
+        {charNameFive}: Amore per noi.
+        {charNameFive}: Vado a recuperare del terriccio dal sottobosco, {name}.
+        {charNameFive}: A dopo.
             -> main
     
     
