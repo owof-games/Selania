@@ -554,36 +554,21 @@
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     
-    {charNameFive}: Dimmi che sei {pronouns has him: riuscito|{pronouns has her: riuscita|riuscitə}} a rimandare quella pest- quel bambino a casa.
-    {charNameFive}: Non è mai successo che qui arrivassero dei bambini!
+    {charNameFive}: {name}, sei {pronouns has him: riuscito|{pronouns has her: riuscita|riuscitə}} a rimandare quel bambino a casa?
+    {charNameFive}: Non è mai successo che qui arrivassero dei bambini.
+    {charNameFive}: Non è un posto adatto a un bambino.
     {charNameFive}: E mi ha tirato un calcio!
-    {name}: Lui dice che gli hai fatto male.
-    
-        + [Dammi dettagli più concreti.]
-                    ~ fifthBlue ++
-                
-        + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ fifthYellow ++
-                
-        + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ fifthRed ++
-
-                
-        + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ fifthGreen ++
-  
-                
-        + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ fifthPurple ++
-        -
-    {charNameFive}: Comunque è una piccola bestiola.
+    {knowing_second_character.not_talk: {name}: Lui dice che gli hai fatto male.}
+    {knowing_second_character.not_talk: {charNameFive}: L'ho solo fermato perché cercava di scappare.}    
+    {charNameFive}: Mi fa tenerezza, sai?
     {charNameFive}: Mi sembra un riccio.
     {charNameFive}: Così carino, tenero.
     {charNameFive}: Ma poi come ti avvicini ti fa male.
-    {charNameFive}: No, non è il caso di perdere la pazienza.
-    {charNameFive}: E sono sicura che troverai una soluzione.
-    {charNameFive}: Prenditi il tuo tempo per allontanarlo.
-    {charNameFive}: Ma non troppo, per favore.
+    {charNameFive}: Mi spiace aver perso la pazienza con lui.
+    {charNameFive}: Ma ci sono rimasta male per quel calcio.
+    {charNameFive}: Io non ho tempo ora, ma sono sicura che troverai una soluzione.
+    {charNameFive}: Trova un modo per allontanarlo.
+    {charNameFive}: Ma non metterci troppo, per favore.
         ~ secondPauseTalking = 0
     ->->
     
@@ -591,6 +576,18 @@
         ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    Mentore ci dice che è sicura che l'ha preso il ragazzino.
+    {charNameFive}: L'annaffiatoio!
+    {charNameFive}: L'annaffiatoio è scomparso dalla serra.
+    {charNameFive}: E sono sicura, sicura che è stato quel bambino dispettoso!
+    {charNameFive}: Giuro che sto cercando di essere paziente, {name}.
+    {charNameFive}: Giuro!
+    {charNameFive}: Ma senza l'annaffiatoio non si possono coltivare le piante della serra.
+    {charNameFive}: Senza piante della serra non ci sono molti doni per le persone che ne hanno bisogno.
+    {charNameFive}: E l'equilibrio delicato di questo posto verrà meno.
+    {charNameFive}: Ti prego, digli di ridarcelo!
+    {charNameFive}: E caricalo di peso sul prossimo treno.
+    {charNameFive}: No, non devo essere così severa.
+    {charNameFive}: Ma ti prego, tienimelo lontano.
+        ~ secondPauseTalking = 0
     ->->
 

@@ -233,7 +233,7 @@
         {charNameTwo}: Sapevi che gli uccelli vedono dieci colori?
         {charNameTwo}: DIECI! Mica solo tre come noi!
         {charNameTwo}: E che l'acso, atso, axotolot si fa ricrescere le braccia?
-            + [Gli chiedo perché ha picchiato {charNameFive}.]
+            + [Gli chiedo perché ha dato un calcio a {charNameFive}.]
                 -> top
             + [Lo lascio continuare.]
             -
@@ -242,7 +242,7 @@
         {charNameTwo}: Non sono mica tutti dei beeeeeeeeee uguali!
         {charNameTwo}: Solo i colibrì sanno volare all'indietro!
         {charNameTwo}: Tu sai camminare indietro? Secondo me no.
-            + [Gli chiedo perché ha picchiato {charNameFive}.]
+            + [Gli chiedo perché ha dato un calcio a {charNameFive}.]
                 -> top
             + [Lo lascio continuare.]
             -
@@ -257,7 +257,7 @@
         //Opzioni, varianti sulla violenza alla mentore, risposte diverse?
      
         - (top)
-        {name}: {charNameFive} dice che l'hai picchiata.
+        {name}: {charNameFive} dice che le hai dato un calcio.
             
             + (twoBlue) [Credevo tu fossi più disciplinato. Che delusione.]
                 {charNameTwo}: Ehi! Mica mi chiedi perché lo fatto!
