@@ -128,19 +128,113 @@
     
     = one
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    {charNameTwo}: Lettere random note da parte della personaggia
+    {charNameTwo}: Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {name};
+    {charNameTwo}: Cioè a te.
+    {charNameTwo}: Anche se non ho mica capito come te la mando la lettera.
+    {charNameTwo}: Ma come sta la rana?
+    {charNameTwo}: Hai scoperto poi se è elettrica?
+        {
+            - secondCharacterPossibleStates has IlRiccio:
+                {charNameTwo}: Qui le cose sono strane.
+                {charNameTwo}: Forse perché sono uguali a prima.
+                {charNameTwo}: Ora passo più tempo in camera.
+                {charNameTwo}: Papà è contento perché dice che non rompo.
+                {charNameTwo}: Mamma è preoccupata perché vuole che gioco con gli altri.
+                {charNameTwo}: A volte guardo fuori dalla finestra e basta.
+                {charNameTwo}: E vado a letto e non correggo più nulla.
+                {charNameTwo}: Mi addormento, e aspetto.
+                {charNameTwo}: A volte voglio tornare lì da voi.
+                {charNameTwo}: Ma non so cosa fare.
+                {charNameTwo}: La prof di matematica mi guarda male.
+                {charNameTwo}: Ci sentiamo {name}.
+                
+            - secondCharacterPossibleStates has IlGrizzly:
+                {charNameTwo}: Voglio creare un piccolo esercito di suonatori in difesa degli alberi.
+            - secondCharacterPossibleStates has IlLupo:
+                {charNameTwo}: Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
+            - secondCharacterPossibleStates has IlDelfino:
+                {charNameTwo}: Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
+            - secondCharacterPossibleStates has IlCapibara:
+                {charNameTwo}: Sembrerà assurdo, ma mi sono resa conto che forse, con la musica, possiamo parlare con gli animali.
+            - secondCharacterPossibleStates has IlCorvo:
+                {charNameTwo}: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.    
+        }
         ~ secondWritingPause = secondWritingPauseDuration
-        -> main
+            -> main
     
     = two
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    {charNameTwo}: seconda lettera
+    {charNameTwo}: Che strano.
+    {charNameTwo}: Ho lasciato l'altra lettera sul comodino di notte.
+    {charNameTwo}: E poi è sparita.
+    {charNameTwo}: Non so mica se ti è arrivata.
+    {charNameTwo}: O se papà l'ha buttata.
+        {
+            - secondCharacterPossibleStates has IlRiccio:
+                {charNameTwo}: Le cose a scuola vanno male.
+                {charNameTwo}: L'altro giorno ho picchiato un bambino perché mi ha chiamato "strano".
+                {charNameTwo}: E l'ho spinto dalle scale.
+                {charNameTwo}: Ora sono in sospensione, a casa.
+                {charNameTwo}: Papà è sparito da due giorni.
+                {charNameTwo}: Mamma piange in camera.
+                {charNameTwo}: Io non so come mi sento.
+                {charNameTwo}: Però ho ripreso a fare esperimenti.
+                {charNameTwo}: In un vecchio libro un bambino disegnava la porta sul muro, e andava in un altro mondo.
+                {charNameTwo}: Forse se trovo il modo posso tornare da voi.
+                {charNameTwo}: Mi mancate.
+                {charNameTwo}: Ciao.
+                
+                
+            - secondCharacterPossibleStates has IlGrizzly:
+                {charNameTwo}: Voglio creare un piccolo esercito di suonatori in difesa degli alberi.
+            - secondCharacterPossibleStates has IlLupo:
+                {charNameTwo}: Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
+            - secondCharacterPossibleStates has IlDelfino:
+                {charNameTwo}: Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
+            - secondCharacterPossibleStates has IlCapibara:
+                {charNameTwo}: Sembrerà assurdo, ma mi sono resa conto che forse, con la musica, possiamo parlare con gli animali.
+            - secondCharacterPossibleStates has IlCorvo:
+                {charNameTwo}: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.    
+        }    
     ~ secondWritingPause = secondWritingPauseDuration
         -> main
     
     = three
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    {charNameTwo}: terza lettera
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState) 
+    {charNameTwo}: Ciao {name}.
+            {
+            - secondCharacterPossibleStates has IlRiccio:
+                {charNameTwo}: Ti scrivo da casa di mio fratello.
+                {charNameTwo}: Novità: ora vivo qui!
+                {charNameTwo}: All'inizio il suo amico non era contento, ma ora mi insegna anche a fare i dolci!
+                {charNameTwo}: Fa anche delle caramelle superbuone.
+                {charNameTwo}: Papà non è più tornato.
+                {charNameTwo}: Mamma non ha nemmeno fatto storie quando me ne sono andato.
+                {charNameTwo}: Non mi sento mica felice.
+                {charNameTwo}: Sì no boh.
+                {charNameTwo}: Che cosa strana da scrivere.
+                {charNameTwo}: Però le cose sono diverse.
+                {charNameTwo}: A volte abbasso le spine.
+                {charNameTwo}: A volte mi addormento sul divano mentre guardo i telefilm con mio fratello.
+                {charNameTwo}: E non ho mica paura.
+                {charNameTwo}: Spero che tu non abbia paura.
+                {charNameTwo}: Salutami {charNameFive}.
+                {charNameTwo}: Ti voglio bene.
+                
+                
+                
+            - secondCharacterPossibleStates has IlGrizzly:
+                {charNameTwo}: Voglio creare un piccolo esercito di suonatori in difesa degli alberi.
+            - secondCharacterPossibleStates has IlLupo:
+                {charNameTwo}: Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
+            - secondCharacterPossibleStates has IlDelfino:
+                {charNameTwo}: Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
+            - secondCharacterPossibleStates has IlCapibara:
+                {charNameTwo}: Sembrerà assurdo, ma mi sono resa conto che forse, con la musica, possiamo parlare con gli animali.
+            - secondCharacterPossibleStates has IlCorvo:
+                {charNameTwo}: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.    
+        }
     ~ secondWritingPause = secondWritingPauseDuration
 
         -> main

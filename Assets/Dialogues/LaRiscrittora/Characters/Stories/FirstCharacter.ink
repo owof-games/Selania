@@ -1204,6 +1204,7 @@
         {firstCharacterPossibleStates hasnt Chitarra: {charNameOne}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
         {firstCharacterPossibleStates hasnt Chitarra: {charNameOne}: Grazie per quello che hai fatto, davvero.}
         {firstCharacterPossibleStates has Chitarra: {charNameOne}: Vedremo cosa mi accadrà.}
+            
             ~ move_entity(FirstCharacter, Safekeeping)
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             {

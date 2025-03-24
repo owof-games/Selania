@@ -1795,11 +1795,8 @@
         {secondCharacterPossibleStates has IlRiccio: {charNameTwo}: Spero papà non sarà arrabbiato.}        
         
             ~ move_entity(SecondCharacter, Safekeeping)
-            //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
-            {
-                - secondCharacterPossibleStates hasnt IlRiccio:
-                    ~ move_entity(SecondCharacterNotes, BusStop)
-            }    
+            ~ move_entity(SecondCharacterNotes, BusStop)
+  
             
         -> main
 
