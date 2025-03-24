@@ -1085,7 +1085,7 @@
 
     = ending
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-     Per questo ti dico...
+     Per questo ti dico:
         + {firstRed > 0} [Prendi una strada e se non ti piace cambiala!]
         
         + {firstPurple > 0} [Dai alla tua vita uno scopo più grande.]

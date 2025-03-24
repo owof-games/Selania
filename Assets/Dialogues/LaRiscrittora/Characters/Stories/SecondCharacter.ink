@@ -26,9 +26,9 @@
     //Altre opzioni        
         - else:
             {
-                - second_story_gift.ink_outcome: {charNameTwo}: {~ Mi sento triste, ti spiace tornare dopo?|Scusa {name} ma voglio stare solo.|In questo momento sono giù, torneresti dopo?}
+                - second_story_gift.ink_outcome: {charNameTwo}: {~ Mi sento triste, ti spiace tornare dopo?|Scusa {name} ma voglio stare solo.|In questo momento sono giù.}
                 
-                - else: {knowing_second_character.two:{charNameTwo}|???}: {~ Torna dopo.|Ora ho voglia di stare da solo.|Lasciami in pace.}
+                - else: {knowing_second_character.two:{charNameTwo}|???}: {~ Torna dopo.|Ora ho voglia di stare da solo.|Lasciami in pace.|Non ho voglia di parlare.}
             }
             
         -> main
@@ -37,7 +37,7 @@
 = hub
 ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
 
-    {knowing_second_character.two:{charNameTwo}|???}: {~ Ciao.|...}
+    {knowing_second_character.two:{charNameTwo}|???}: {~ Ciao {name}!|Ciao.|...}
     
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_second_character
@@ -128,7 +128,7 @@
         ???: Perché sei qui?
             
             + [Questo luogo non dovrebbe esistere e voglio capirlo.]
-                ???: Anche a me piace capire le cose.
+                ???: Anche a me mi piace capire le cose.
                 ???: I grandi si arrabbiano se faccio troppe domande.
                 ???: Tipo: perché c'è la neve ma non fa freddo?
                 ???: Perché c'è una stazione ma non passa nessun treno?
@@ -145,7 +145,8 @@
                     ~ secondYellow ++
                 
             + [Perché <b>tu</b> sei qui?]
-                ???: Ehi, era solo una domanda!
+                ???: Boh, che ne so? 
+                ???: Era solo una domanda!
                     ~ secondRed ++
 
                 
@@ -157,7 +158,7 @@
                 
             + [Per capire meglio chi sono.]
                 ???: Non sai chi sei?
-                ???: A me piacerebbe essere un'altra persona a volte.
+                ???: A me mi piacerebbe essere un'altra persona a volte.
                 ???: O un labrador, così se mi rotolo nel fango tutti ridono e non si arrabbiano.
                 ???: Ma non un gatto: sapevi che i gatti non sentono mica il sapore dolce?
                 ???: Che cosa triste!
@@ -168,7 +169,7 @@
         ???: Mamma mi ha promesso qualcosa di FIGHISSIMO!
         ???: L'anno scorso per Natale mi ha preso tutte le action figures dei miei videogiochi preferiti.
         ???: Ma poi papà me le ha rubate tutte.
-        ???: Ma lui qui mica ci può venire.
+        ???: Ma lui mica ci può venire qui.
         ???: Perché mamma ha detto che avrebbe dato solo a me qualcosa di bellissimo che papà non può rubare.
         ???: Ma dove trovo le caramelle?
         ???: Mamma dice sempre che non c'è compleanno senza caramelle!
@@ -186,11 +187,11 @@
                 ???: Non ho mai visto uno stagno!
                 ???: Però questa estate ho visto un mare gigantesco.
                 ???: Più grande anche del cielo!
-                ???: Questo qui non c'è di sicuro!
+                ???: Quello qui non c'è di sicuro!
                     ~ secondYellow ++
                 
             + (twoRed) [E come ti sei ripreso i giocattoli?]
-                ???: Non sono giocattoli.
+                ???: Non sono mica giocattoli.
                 ???: E non me li sono ripresi.
                 ???: Papà è buono, fino a quando non si arrabbia.
                 ???: E non voglio farlo arrabbiare.
@@ -198,19 +199,17 @@
 
                 
             + (twoGreen) [Vuoi molto bene alla tua mamma?]
+                ???: Sì sì sì.
                 ???: Lei è la mamma migliore del pianeta.
                 ???: Dell'universo.
-                ???: Più della tua!
                     ~ secondGreen ++
   
                 
             + (twoPurple) [Quindi, rubandoti i giochi, tuo papà ti ha fatto un favore.]
-                ???: In che senso?
-                ???: Perché mamma mi ha dato questo?
-                ???: Non funziona così, sai?
-                ???: Mi ha dato questo perché sono bravo.
-                ???: E le action figures anche.
-                ???: Papà non c'entra nulla!
+                ???: Sì no boh.
+                ???: Non ha senso quello che dici.
+                ???: Papà non mi deve prendere mica le mie cose.
+                ???: Detesto quando fa così.
                     ~ secondPurple ++
             -
             
@@ -261,7 +260,7 @@
         {name}: {charNameFive} dice che l'hai picchiata.
             
             + (twoBlue) [Credevo tu fossi più disciplinato. Che delusione.]
-                {charNameTwo}: Ehi! Chiedimi perché lo fatto!
+                {charNameTwo}: Ehi! Mica mi chiedi perché lo fatto!
                 {charNameTwo}: Vi odio.
                 {charNameTwo}: Tu e lei.
                 {charNameTwo}: Mi ha tirato il braccio.
@@ -275,8 +274,7 @@
                 
             + (twoYellow) [Perché non le hai fatto uno scherzo?]
                 {charNameTwo}: Perché ero arrabbiato.
-                {charNameTwo}: E non so fare gli scherzi.
-                {charNameTwo}: Ma lei continuava a dire che i bambini qui non ci possono stare.
+                {charNameTwo}: E lei continuava a dire che i bambini qui non ci possono stare.
                 {charNameTwo}: Che non potevo saltare nel fiume.
                 {charNameTwo}: E mi ha messo una mano sulla spalla.
                 {charNameTwo}: E a me
@@ -335,13 +333,14 @@
             
         - (top)
             * [Prima dimmi il tuo.]
+                {charNameTwo}: Sì no boh.
                 {charNameTwo}: No, prima mi dici il tuo.
                     -> top
             + {name_choice} [Mi chiamo {name}.]
     	    + [Il mio nome è...]
     	        -> name_choice ->
     	    -
-    	    {name}: E i miei pronomi sono...
+    	    {name}: E i miei pronomi sono:
     	        -> gender ->
     	        
     	 {
@@ -425,7 +424,6 @@
                 {charNameTwo}: Papà è bravo, non fa queste cose. 
                
             
-            
             + {her_liar} [Tua mamma si arrabbia spesso?]
                     ~ secondRed ++
                 {charNameTwo}: Un po'.
@@ -433,9 +431,8 @@
                 {charNameTwo}: E così perde la pazienza.
                 {charNameTwo}: Ma è colpa mia.
             
-            
             + {her_liar or they_liar} [Avevi detto che questo è il regalo di compleanno di tua mamma.]
-                {charNameTwo}: Sì.
+                {charNameTwo}: Sì no boh.
                 {charNameTwo}: Anche.
                 {charNameTwo}: Uffi, che noia che fai!
                     ~ secondBlue ++
@@ -449,7 +446,6 @@
                 {charNameTwo}: E poi mi prenderà un cane!
                    
                  
-                 
             + [Ci stai male, quando mamma dimentica il tuo compleanno?]
                 {charNameTwo}: Un po'.
                 {charNameTwo}: Ma solo perché fa tante promesse tutto l'anno.
@@ -462,12 +458,10 @@
             
 
             + [Però non mi hai detto il tuo nome. Sei una spia?]
-                {charNameTwo}: Sì!
-                {charNameTwo}: Anzi: no!
+                {charNameTwo}: Sì no boh.
                 {charNameTwo}: Una spia non direbbe mai che è una spia.
                 {charNameTwo}: Oppure ti confonde, così non capisci cosa è vero o cosa no.
-                {charNameTwo}: Così è più interessante.
-                {charNameTwo}: Però tu non puoi farlo!
+                {charNameTwo}: Però tu non puoi mica farlo!
                     ~ secondYellow ++
                 
                 
@@ -505,6 +499,7 @@
         {charNameTwo}: Quando papà è andato via nonna ha aiutato mamma a stare bene.
         {charNameTwo}: Anche se a mamma mica piace la nonna.
         {charNameTwo}: E quando papà è tornato ha ripreso a trattarla male.
+        {charNameTwo}: Che rabbia.
         {charNameTwo}: Ma nonna dice che succede.
         {charNameTwo}: Che i grandi fanno cose cattive senza saperlo.
         {charNameTwo}: Mi spiace essere scappato di casa.
@@ -538,16 +533,13 @@
 
                 
             + [Ti manca casa? Vorresti tornare?]
-                {charNameTwo}: No.
-                {charNameTwo}: Sì.
+                {charNameTwo}: Sì no boh.
                 {charNameTwo}: Voglio tornare.
-                {charNameTwo}: Ma non so come.
-                {charNameTwo}: E se poi mamma si arrabbia?
+                {charNameTwo}: Ma se poi mamma si arrabbia?
                 {charNameTwo}: O papà?
-                {charNameTwo}: Vorrei tornare a casa di mio fratello.
+                {charNameTwo}: Voglio andare da mio fratello.
                 {charNameTwo}: Lì mi piace.
                 {charNameTwo}: Ma non piaccio al suo amico.
-                {charNameTwo}: Dove devo andare?
                     ~ secondGreen ++
   
                 
@@ -569,7 +561,6 @@
         {charNameTwo}: E nessuno si arrabbia con me.
         {charNameTwo}: A parte {charNameFive}.
         {charNameTwo}: Ti prometto che non dirò più bugie.
-        {charNameTwo}: Ma tu la terrai lontano, vero?
         {charNameTwo}: Ora però lasciami solo.
         
             //Leviamo l'innaffiatoio
@@ -590,7 +581,8 @@
                 {charNameTwo}: Perché lei mi odia.
             
             + [Secondo me sei stato tu a prenderlo.]
-                {charNameTwo}: Perché date sempre la colpa a me?
+                {charNameTwo}: Ti odio!
+                {charNameTwo}: Perché date tutti sempre la colpa a me?
             
             + [Hai idea di dove sia?]
                 {charNameTwo}: Pensi che è colpa mia?
@@ -605,7 +597,7 @@
         {charNameTwo}: Ma non coi pugni.
         {charNameTwo}: E le ragazze della mia età sono strane.
         {charNameTwo}: E mi dicono che.
-        {charNameTwo}: No, non te lo dico.
+        {charNameTwo}: No, non te lo dico mica.
         {charNameTwo}: E le maestre mi mettono sempre in castigo.
         {charNameTwo}: Se mi nascondo nell'armadio perché ho sonno.
         {charNameTwo}: Se spingo gli altri per terra.
@@ -616,18 +608,17 @@
         {charNameTwo}: E non mi piace quando fa così.
             
         
-        
             + [Anche i maschi piangono, piangono anche gli orsi e gli elefanti.]
                 {charNameTwo}: Gli orsi mi piacciono.
                 {charNameTwo}: Sono forti.
                 {charNameTwo}: Ma comunque piangono.
                 {charNameTwo}: Questa è una cosa nuova.
                 {charNameTwo}: E mi piace.
-                {charNameTwo}: Ma non so se mi piace piangere comunque.
+                {charNameTwo}: Ma non so se mi piace piangere.
                     ~ secondBlue ++
                 
             + [La scuola è un posto terribile, non c'è spazio per la fantasia!]
-                {charNameTwo}: Già.
+                {charNameTwo}: Sì no boh.
                 {charNameTwo}: A me mi piace tanto raccontare le storie.
                 {charNameTwo}: Inventare cose nuove.
                 {charNameTwo}: Fare gli esperimenti.
@@ -646,7 +637,7 @@
 
                 
             + [A me spiace per te, sai?]
-                {charNameTwo}: Mmm.
+                {charNameTwo}: Sì no boh.
                 {charNameTwo}: Non dirlo.
                 {charNameTwo}: Non so cosa provo se lo dici.
                 {charNameTwo}: Mi viene da piangere.
@@ -668,9 +659,9 @@
             //Se fiducia bassa.
             {
                 - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
-                    {charNameTwo}: Non l'ho mica visto.
+                    {charNameTwo}: Comunque l'innaffiatoio non l'ho mica visto.
                     {charNameTwo}: Ma.
-                    {charNameTwo}: Sono sicuro che se cerchi bene lo trovi dove l'avete lasciato.  
+                    {charNameTwo}: Sono sicuro che se cerchi bene lo trovi dove l'avete lasciato.
                 - else:
                     {charNameTwo}: Non ho mai visto nessun innaffiacoso.
                     {charNameTwo}: Non bagno mica le piante, io.
@@ -730,7 +721,7 @@
 
                 
             + [Sembra una rana molto gentile.]
-                {charNameTwo}: A me sta simpatica.
+                {charNameTwo}: A me mi sta simpatica.
                 {charNameTwo}: E non credo sia tossica o velenosa.
                 {charNameTwo}: Però anche io vorrei un regalo.
                 {charNameTwo}: Se non ti piace mi dai quello che ti dà?
@@ -759,9 +750,9 @@
         ~ secondStoryQuestCount ++
         
         {charNameTwo}: La rana prima mi ha detto che tu scrivi storie.
-        {charNameTwo}: A me piacciono le storie.
+        {charNameTwo}: A me mi piacciono le storie.
         {charNameTwo}: C'è una cosa che non dico mai a nessuno.
-        {charNameTwo}: Mamma è felice perché vado a letto presto senza fare mica storie.
+        {charNameTwo}: Mamma è felice perché vado a letto presto.
         {charNameTwo}: Ma è perché mi piace stare al buio da solo.
         {charNameTwo}: Così posso pensare alle cose che ho fatto durante il giorno.
         {charNameTwo}: E correggere quelle che non mi piacciono.
@@ -797,14 +788,15 @@
             + [Se i grandi ti picchiano, devi fare squadra con gli altri!]
                 {charNameTwo}: Una volta ci ho provato.
                 {charNameTwo}: Ma io non piaccio molto agli altri.
-                {charNameTwo}: A volte mi dicono che sono scemo, per via degli animali.
-                {charNameTwo}: A volte che sono strano.
+                {charNameTwo}: Mi dicono che sono scemo, per via degli animali.
+                {charNameTwo}: O mi dicono che sono strano.
                 {charNameTwo}: E che non gli piace quando mi arrabbio.
                     ~ secondRed ++
 
                 
             + [Grazie per avermi raccontato questa cosa.]
-                {charNameTwo}: Non è una cosa così grossa comunque.
+                {charNameTwo}: Sì no boh.
+                {charNameTwo}: Non è mica una cosa così grossa comunque.
                 {charNameTwo}: Però mi piace.
                 {charNameTwo}: Non è poi che lo faccio proprio sempre.
                 {charNameTwo}: Solo con le cose brutte.
@@ -835,7 +827,7 @@
         
         {charNameTwo}: Sai che mio fratello è campione di Karate?
         {charNameTwo}: E ha una macchina enorme gialla che fa arrabbiare papà
-        {charNameTwo}: E...
+        {charNameTwo}: E hai i muscoli che...
         {charNameTwo}: Bugia.
         {charNameTwo}: Scusa.
         {charNameTwo}: Non è proprio campione in realtà.
@@ -846,7 +838,7 @@
         {charNameTwo}: Lavora in una officina e nel tempo libero fa delle statue col saldatore e i pezzi rotti delle macchine.
         {charNameTwo}: E vive in una casa piccola piccola assieme al suo amico.
         {charNameTwo}: Viene a trovarci quando non c'è papà perché non si piacciono.
-        {charNameTwo}: Ma se papà mi fa male allora viene apposta quando c'è e gli urla addosso tantissime cose.
+        {charNameTwo}: Ma se papà mi fa male allora lo cerca e gli urla addosso tantissime cose.
         {charNameTwo}: Mi ha promesso che mi porta a pescare una volta.
         {charNameTwo}: Senza dirlo a mamma perché lei ha paura perché non so nuotare.
         {charNameTwo}: Ma lui sa fare tutto.
@@ -860,7 +852,7 @@
                 {charNameTwo}: "E se cadi in acqua?"
                 {charNameTwo}: "E se un'onda ti investe?"
                 {charNameTwo}: "E se tuo fratello si distrae?"
-                {charNameTwo}: Mamma è davvero faticosa.
+                {charNameTwo}: Mamma è davvero pesante.
                     ~ secondBlue ++
                 
             + [Le statue di tuo fratello si muovono?]
@@ -883,18 +875,18 @@
 
                 
             + [Hai mai chiesto all'amico di tuo fratello cosa pensa di te?]
-                {charNameTwo}: Scherzi?
-                {charNameTwo}: Quella è una cosa davvero strana.
+                {charNameTwo}: Scherzi?!?
+                {charNameTwo}: Non sono mica così strano.
                 {charNameTwo}: Però una volta l'ho chiesto a mio fratello.
                 {charNameTwo}: E mi ha detto che gli piaccio molto.
-                {charNameTwo}: Ma non ci credo molto.
-                {charNameTwo}: Anche perché dice che non gli piacciono i bambini.
+                {charNameTwo}: Ma non ci credo.
+                {charNameTwo}: Anche perché a quello non gli piacciono i bambini proprio.
                 {charNameTwo}: Ed è una cosa che rende molto triste mio fratello.
                     ~ secondGreen ++
   
                 
             + [Grazie per aver corretto le tue bugie.]
-                {charNameTwo}: Già.
+                {charNameTwo}: Sì no boh.
                 {charNameTwo}: Non so ancora se mi piaci.
                 {charNameTwo}: Ma sei l'unica persona qui.
                 {charNameTwo}: A parte {charNameFive}, ma lei di sicuro non mi piace mica.
@@ -921,7 +913,7 @@
                 {charNameTwo}: Quindi non sono l'unico.
                 {charNameTwo}: Se chiedo qualcosa a {charNameFive} mi fa sentire stupido.
                 {charNameTwo}: "Bimbo, te le spiego lentamente le cose ora, vieni."
-                {charNameTwo}: Non mi deve spiegare le cose.
+                {charNameTwo}: Non mi deve spiegare lentamente le cose.
                 {charNameTwo}: Io so fare le frazioni!
                     ~ secondBlue ++
                 
@@ -945,7 +937,7 @@
                 {charNameTwo}: I grandi pensano sempre di sapere cosa fare.
                 {charNameTwo}: Cosa vogliono gli altri.
                 {charNameTwo}: Ma poi sbagliano.
-                {charNameTwo}: E invece di dire "Ho sbagliato", se la prendono con la persona che volevano aiutare.
+                {charNameTwo}: E se la prendono con la persona che volevano aiutare.
                 {charNameTwo}: Per questo si fa prima a fare da soli.
                 {charNameTwo}: Mica puoi litigare con te stesso, no?
                     ~ secondGreen ++
@@ -966,11 +958,10 @@
         {charNameTwo}: Calcio. Basket. Pallavolo.
         {charNameTwo}: Suonano il pianoforte o la chitarra o la batteria.
         {charNameTwo}: Oppure imparano il cinese e l'inglese.
-        {charNameTwo}: E vanno a cavallo.
-        {charNameTwo}: E sanno già cosa vogliono fare come lavoro.
-        {charNameTwo}: A me piacciono solo gli animali.
+        {charNameTwo}: Sanno già cosa vogliono fare come lavoro.
+        {charNameTwo}: A me mi piacciono solo gli animali.
         {charNameTwo}: Ma so anche le cose brutte degli animali.
-        {charNameTwo}: Che molti stanno sparendo per colpa dell'inquinamento.
+        {charNameTwo}: Che molti stanno sparendo per colpa degli uomini.
         {charNameTwo}: Che gli oceani sono sempre più vuoti.
         {charNameTwo}: Che gli incendi uccidono un sacco di animali ogni anno.
         {charNameTwo}: E che il futuro sarà sempre peggiore.
@@ -981,6 +972,7 @@
         {charNameTwo}: Ma non voglio essere grande.
             
             + [Sai che crescerai anche se non lo vuoi, vero?]
+                {charNameTwo}: Sì no boh.
                 {charNameTwo}: Non è detto.
                 {charNameTwo}: Magari resto qui e magari qui il tempo non passa mica.
                 {charNameTwo}: E magari riesco a fare venire qui anche mio fratello.
@@ -1021,6 +1013,7 @@
   
                 
             + [Potresti diventare uno storico degli animali.]
+                {charNameTwo}: Sì sì sì!
                 {charNameTwo}: Qualcuno che racconta le loro storie?
                 {charNameTwo}: Come un gioco forse.
                 {charNameTwo}: E anche gli animali giocano.
@@ -1150,20 +1143,21 @@
                     ~ secondYellow ++
                 
             + [Mi piaci, perché alla fine fai quello che ti va.]
-                {charNameTwo}: Già.
+                {charNameTwo}: Sì no boh.
                 {charNameTwo}: Questa cosa agli adulti non piace molto.
                 {charNameTwo}: Ma se non posso capire le cose, mi rimangono in testa.
                 {charNameTwo}: Mi danno davvero fastidio.
-                {charNameTwo}: A volte mi sveglio apposta presto e faccio tutte le cose che non dovrei fare.
+                {charNameTwo}: A volte mi sveglio presto e faccio tutte le cose che non dovrei fare.
                 {charNameTwo}: Come provare gli attrezzi di papà.
-                {charNameTwo}: O il respiratore di nonna.
+                {charNameTwo}: O il vecchio respiratore di nonna.
                 {charNameTwo}: Solo per capire.
                 {charNameTwo}: Poi li rimetto a posto prima che si svegliano tutti.
                     ~ secondRed ++
 
                 
             + [Promettimi che non mangerai nulla di strano, qui.]
-                {charNameTwo}: Troppo tardi.
+                {charNameTwo}: Non sei mia mamma.
+                {charNameTwo}: E poi è troppo tardi.
                 {charNameTwo}: Ho assaggiato un po' di cose della serra.
                 {charNameTwo}: Ma hanno tutte un sapore fastidioso.
                 {charNameTwo}: Però per un attimo una delle piante mi ha fatto vedere le cose con colori strani.
@@ -1192,8 +1186,7 @@
         ~ secondStoryQuestCount ++
         
         {charNameTwo}: Mi piace la biblioteca.
-        {charNameTwo}: Ma non mi piace leggere.
-        {charNameTwo}: Però mi ricorda la casa della nonna.
+        {charNameTwo}: Mi ricorda la casa della nonna.
         {charNameTwo}: L'altra nonna, quella che sta al mare.
         {charNameTwo}: Ci vado d'estate e mi diverto tantissimo e ci sono tantissimi libri.
         {charNameTwo}: Lei mi prepara tutte le cose buone.
@@ -1213,6 +1206,7 @@
         {charNameTwo}: Anche se non ci puoi mica giocare con loro.
             
             + [I libri ti insegnano tante cose.]
+                {charNameTwo}: Sì no boh.
                 {charNameTwo}: Anche guardare le cose.
                 {charNameTwo}: E toccarle.
                 {charNameTwo}: Ho imparato tantissime cose da quando sono qui.
@@ -1233,14 +1227,14 @@
             + [Andiamo a ruttare da {charNameFive} e la facciamo arrabbiare?]
                 {charNameTwo}: Ci sto!
                 {charNameTwo}: Però mi serve della roba frizzante sennò non mi vengono bene.
-                {charNameTwo}: Che poi ora ho capito che non ce l'ha mica con me.
+                {charNameTwo}: Che poi ora ho capito che {charNameFive} non ce l'ha mica con me.
                 {charNameTwo}: Forse mi inizia anche a piacere.
                 {charNameTwo}: Ma sì, un rutto se lo merita.
                     ~ secondRed ++
 
                 
             + [Vorresti che venissero anche mamma e papà?]
-                {charNameTwo}: Io...
+                {charNameTwo}: Sì no boh.
                 {charNameTwo}: Sono cattivo se dico di no?
                 {charNameTwo}: Mi piace un posto dove nessuno litiga.
                 {charNameTwo}: O si arrabbia con me.
@@ -1349,14 +1343,13 @@
             {charNameTwo}: Sembri un po' un gatto.
             {charNameTwo}: Ma mi fido.
             {charNameTwo}: C'è una cosa che devo dire a qualcuno, e voglio dirla a te.
-        
         <i>{charNameTwo} si trova bene con {name}.</i>
         
         //Outcome peggiore
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow < (secondStoryQuestCount/2):  {charNameTwo}: Secondo me mi tratti come un bambino.
             {charNameTwo}: Tutte le cose che dici cambiano, sono disordinate.
             {charNameTwo}: Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
-            {charNameTwo}: Non mi piace come cosa.
+            {charNameTwo}: Non mi piace mica come cosa.
             {charNameTwo}: C'è una cosa che devo dire a qualcuno.
             {charNameTwo}: E posso dirla solo a te.
             {charNameTwo}: Purtroppo.
@@ -1367,14 +1360,13 @@
             {charNameTwo}: C'è una cosa che devo dire a qualcuno.
             {charNameTwo}: E posso dirla solo a te.
             {charNameTwo}: Purtroppo.
-        
         <i>{charNameTwo} non riesce a capire che rapporto sta costruendo con {name}.</i>
         
         }
        
         {charNameTwo}: Da quando nonna è nella casa dei vecchi fa tutto schifo.
         {charNameTwo}: Papà è tornato ma litiga sempre con mamma.
-        {charNameTwo}: E mamma quando papà non c'è si arrabbia sempre con me.
+        {charNameTwo}: E quando papà non c'è mamma si arrabbia con me.
         {charNameTwo}: E l'unica cosa che mi dice è che devo smetterla di piangere e fare il grande.
         {charNameTwo}: Che anche se piango nonna non torna.
         {charNameTwo}: E a scuola le maestre sono fastidiose.
@@ -1412,7 +1404,7 @@
     = one
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
       //Affrontiamo gli adulti in generale
-    {name}: Hai detto che i grandi fanno schifo, che non ti fidi di loro. //Nonna, fratello, grandi come grossi bambini
+    {name}: Hai detto che i grandi fanno schifo e che non ti fidi di loro. //Nonna, fratello, grandi come grossi bambini
     
         
         + [Però tua nonna e tuo fratello spaccano.]
@@ -1472,7 +1464,7 @@
     
     = two
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    {name}: Hai paura che il mondo stia finendo, che spariranno tutti gli animali.
+    {name}: Hai paura che il mondo stia finendo e che spariranno tutti gli animali.
   
         + [Non puoi prevedere il futuro. Goditi quello che c'è senza rimpianti.]
             {name}: Se le cose sono incerte, prenditi le certezze.
@@ -1531,7 +1523,7 @@
     = three
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     //Affrontiamo il mondo. Rabbia, bugie, fantasia, violenza etc.
-    {name}: Tuo fratello dice che il mondo è orribile, che non si può più aggiustare.
+    {name}: Tuo fratello dice che il mondo è orribile e che non si può più aggiustare.
     
         + [Eppure crea arte.]
             {name}: E l'arte è respiro, futuro, è cambiamento.
@@ -1642,7 +1634,7 @@
 
     = ending
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-     Per questo ti dico...
+     Per questo ti dico:
      
         + {secondRed > 0} [Diventa il più forte, il più coraggioso.]
             {name}: Sei un testardo, bugiardo, dispettoso.
@@ -1689,12 +1681,14 @@
         
                 
         -     
-        
+    {charNameTwo}: Sì.
+    {charNameTwo}: No.
+    {charNameTwo}: Boh.
     {charNameTwo}: {name}.
-    {charNameTwo}: Ti ascolto e mi dico che c'è un animale.
+    {charNameTwo}: Tu mi dici queste cose e io mi dico che c'è un animale.
     {charNameTwo}: Un animale che mi piace.
     {charNameTwo}: Un animale che un po' è me.
-    {charNameTwo}: Il mio nome.
+    {charNameTwo}: E lo voglio come mio nuovo nome.
 
         {
             - secondCharacterPossibleStates has IlRiccio:
@@ -1702,32 +1696,39 @@
                 {charNameTwo}: Perché l'unico modo per sopravvivere è difendersi da tutto.
             
             - secondCharacterPossibleStates has IlGrizzly:
-                {charNameTwo}: Il mio vero nome è <b>Grizzly</b>: per combattere la paura diventerò il più forte di tutti, imbattibile!
+                {charNameTwo}: Il mio vero nome è <b>Grizzly</b>.
+                {charNameTwo}: Combatterò la mia paura e diventerò il più forte di tutti, imbattibile!
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += IlGrizzly
             
             - secondCharacterPossibleStates has IlLupo:
-                {charNameTwo}: Mi chiamerò <b>Lupo</b>, e proteggerò il mio branco.
+                {charNameTwo}: Mi chiamerò <b>Lupo</b>.
+                {charNameTwo}: E proteggerò il mio branco.
                 {charNameTwo}: Mamma, papà, e mio fratello.
-                {charNameTwo}: Nessuna delle persone a cui voglio bene deve avere paura.
+                {charNameTwo}: Nessuna delle persone a cui voglio bene deve più stare male.
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += IlLupo
             
             - secondCharacterPossibleStates has IlDelfino:
-                {charNameTwo}: E il mio nome è <b>Delfino</b>: tutto è un gioco.
+                {charNameTwo}: E il mio nome è <b>Delfino</b>.
+                {charNameTwo}: Se lo guardi bene tutto è un gioco.
                 {charNameTwo}: La mia fantasia e le mie bugie aiuteranno le altre persone ad avere meno paura.
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += IlDelfino                
             
             - secondCharacterPossibleStates has IlCapibara:
-                {charNameTwo}: Mi chiamerò <b>Capibara</b>: mi farò tantissimi amici.
-                {charNameTwo}: E ci sentiremo meno soli!
+                {charNameTwo}: Mi chiamerò <b>Capibara</b>.
+                {charNameTwo}: E imparerò ad avere tantissimi amici.
+                {charNameTwo}: Ci sentiremo meno soli!
+                {charNameTwo}: E così avremo meno paura.
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += IlCapibara
             
             - secondCharacterPossibleStates has IlCorvo:
-                {charNameTwo}: Io sono <b>Corvo</b>: sono sveglio e posso capire ciò che mi circonda!
+                {charNameTwo}: Io sono <b>Corvo</b>.
+                {charNameTwo}: Sono sveglio e posso capire ciò che mi circonda!
                 {charNameTwo}: E posso cambiare le cose che mi fanno paura.
+                {charNameTwo}: Aiutare gli altri.
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += IlCorvo
         }
@@ -1750,7 +1751,7 @@
         {charNameTwo}: A me non mi sembra mica felice.
         {charNameTwo}: Mi ricorda mamma quando gira per casa dando consigli e dicendo cose e sorridendo.
         {charNameTwo}: E poi si rinchiude in camera e resta in silenzio per ore.
-        {charNameTwo}: Non credo stia bene.
+        {charNameTwo}: Per me non sta mica bene.
             ~ secondStory = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(secondStory)
@@ -1758,7 +1759,7 @@
             
     = exit
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        {charNameTwo}: Voglio stare ancora un po' qui, prima di prendere il treno.
+        {charNameTwo}: Voglio stare ancora un po' qui prima di prendere il treno.
         {charNameTwo}: Mi mancherà la rana!
             ~ secondStory = Ended
             ~ movementsCounter = 0
@@ -1778,16 +1779,21 @@
     }
     
         - (top)
-        {charNameTwo}: {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me.|Sono sicura di aver visto un'altra persona alla fermata del bus, ma quando ho cercato di raggiungerla è scomparsa.|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
+        {charNameTwo}: {~ Stavo pensando che se divento grande posso andare via di casa.|Magari da grande posso anche portare nonna via dalla casa dei vecchi.|Quando torno a casa chiedo a mio fratello se mi prende un cane.|Mi piace l'idea di tornare a casa ora, ma non di non potere mica tornare qui.|Se vieni a trovarmi ti faccio vedere tutte le statue di mio fratello.|Sarà difficile spiegare questa cosa a papà.}
                 ~ secondCharEndingDialogue ++
         -> main
         
         = goodbye
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        {charNameTwo}: {name}, per me è arrivato il momento di tornare a casa.
-        {secondCharacterPossibleStates hasnt Chitarra: {charNameTwo}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
-        {secondCharacterPossibleStates hasnt Chitarra: {charNameTwo}: Grazie per quello che hai fatto, davvero.}
-        {secondCharacterPossibleStates has Chitarra: {charNameTwo}: Vedremo cosa mi accadrà.}
+        {charNameTwo}: {name}, mi sa che torno a casa.
+        {secondCharacterPossibleStates hasnt IlRiccio: {charNameTwo}: Sì no boh.}       
+        {secondCharacterPossibleStates hasnt IlRiccio: {charNameTwo}: Sai che mi è piaciuta alla fine tutta questa cosa?}
+        {secondCharacterPossibleStates hasnt IlRiccio: {charNameTwo}: Mi hai regalato il migliore compleanno del mondo.}
+        {secondCharacterPossibleStates hasnt IlRiccio: {charNameTwo}: Anche se non era mica davvero il mio compleanno.}
+        {secondCharacterPossibleStates hasnt IlRiccio: {charNameTwo}: Vieni a trovarmi una volta.}
+        {secondCharacterPossibleStates hasnt IlRiccio: {charNameTwo}: Mi mancherai.}  
+        {secondCharacterPossibleStates has IlRiccio: {charNameTwo}: Spero papà non sarà arrabbiato.}        
+        
             ~ move_entity(SecondCharacter, Safekeeping)
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             {
@@ -1802,7 +1808,7 @@
 ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
-    {charNameTwo}: {~ Nonna dice che non si scappa dalla periferia. Che papà ce l'ha dentro e se l'è portata anche quando siamo andati a vivere in centro.|Non mi piacciono i cartoni per quelli della mia età. Dicono tutte cose che so già.|Se ci pensi bene dire una bugia o scrivere una storia sono la stessa cosa. no?|Ogni persona ha un animale dentro secondo me. Prendi{charNameFive}: sembra un gufo. Anzi anzi: un avvoltoio! No, dai. Un fagiano, quelli femmina, tutti grigi grigi.|Mio fratello dice che devo fidarmi di più degli adulti, ma secondo me lo dice perché è adulto.|Per me il veterinario è come il druido dei videogiochi, solo non deve tirare dei dadi per salvare gli animali.|Un po' mi piacerebbe dormire e basta, senza pensieri.|Forse non mi dispiace così tanto che sei qui.|Se vado via di qui vorrei tanto portare la rana con me.}
+    {charNameTwo}: {~ Nonna dice che non si scappa dalla periferia. Che papà ce l'ha dentro e se l'è portata anche quando siamo andati a vivere in centro.|Non mi piacciono i cartoni per quelli della mia età. Dicono tutte cose che so già.|Se ci pensi bene dire una bugia o scrivere una storia sono la stessa cosa.|Ogni persona ha un animale dentro secondo me. Prendi{charNameFive}: sembra un gufo. Anzi anzi: un avvoltoio! No, dai. Un fagiano, quelli femmina, tutti grigi grigi.|Mio fratello dice che devo fidarmi di più degli adulti, ma secondo me lo dice perché è adulto.|Per me il veterinario è come il druido dei videogiochi, solo non deve tirare dei dadi per salvare gli animali.|Un po' mi piacerebbe dormire e basta, senza pensieri.|Forse non mi dispiace mica che sei qui.|Se vado via di qui vorrei tanto portare la rana con me.}
             -> main
 
 
