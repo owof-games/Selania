@@ -4,16 +4,14 @@
 * Scrittura nuove note peronaggia uno.
 
 
-Inoltre:
-* Check storia Bea
-* Check storia Yonah
-* Check storia Ilaria
-* Check storia Romi
-* Ping a chi non mi ha dato ancora le info necessarie (titolo, tag, trigger)
-
 Infine:
 * Rilettura ad alta voce, editing e correzione, dividendo per voce (mentore, fungo, personaggia uno, personaggio due, le cinque voci della giocatrice).
-
+* Inserimento racconti con tutto quello che serve.
+* Testing con coso Mattia per vedere se ci sono problemi ink.
+* Testing in unity per vedere se ci sono problemi con unity.
+* Relativi debug.
+* Creazione documento Google per testing + pagina itch per caricare la build.
+https://docs.google.com/forms/u/0/?tgif=d&ec=asw-forms-hero-goto&ftv=1
 
 
 are_two_entities_together(TheFrog, PG)
