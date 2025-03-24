@@ -432,7 +432,7 @@
     ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     
-        * (voices){pre_test && not voices}[C'è una voce che mi racconta cose.]
+        * (voices){pre_test}[C'è una voce che mi racconta cose.]
             {charNameFive}: Voce?
             {name}: Sì.
             {name}: Ad esempio mi descrive le piante della serra.
@@ -443,7 +443,7 @@
             {charNameFive}: Meglio della stanchezza dell'essere mentore, fidati.
                 ->->
                 
-        * (infoImpo){firstCharacterInkLevel has High && not infoImpo} [Cosa significa "la personaggia ti darà una informazione importante"?]
+        * (infoImpo){firstCharacterInkLevel has High} [Cosa significa "la personaggia ti darà una informazione importante"?]
             {charNameFive}: Dove l'hai sentita questa cosa, stellina?
             {name}: Quando stavo per fare le ultime domande a {charNameOne}, {voices: la|una} voce mi ha detto quanto inchiostro avevo e che avrei ricevuto una informazione importante.
             {not voices: {charNameFive}: Per la voce sarà la stanchezza, questo lavoro è faticoso.|{charNameFive}: Come ti dicevo, vedrai che è solo la tua empatia che parla.}
@@ -467,6 +467,9 @@
             {charNameFive}: E nemmeno rane e basta.
             {charNameFive}: Forse è il caso che ti riposi un poco, davvero.
             {charNameFive}: Lascia fare a me il resto.
+            ->->
+        
+        + [Ripensadoci, non ho nulla di nuovo da dire.]
             ->->
    
    //Feedback//

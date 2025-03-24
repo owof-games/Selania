@@ -29,7 +29,7 @@
         + [Avrei bisogno di una mano.]
             -> support
         
-        + {(pre_test && not little_storylets.voices) or (firstCharacterInkLevel has High && not little_storylets.infoImpo) or talking_fungus.first_story_ended_check && not little_storylets.talkingFungus}[Mi è successa una cosa strana.]
+        + {(pre_test && not little_storylets.voices) or (firstCharacterInkLevel has High && not little_storylets.infoImpo) or (talking_fungus.first_story_ended_check && not little_storylets.talkingFungus) or (the_frog.frog && not little_storylets.talkingFrog)}[Mi è successa una cosa strana.]
             -> little_storylets
             
         + {knowing_second_character}[Vorrei conoscerti meglio.]
@@ -1012,13 +1012,13 @@
             
     = three
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    {charNameFive}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
+    {charNameFive}: {~ xxx|yyy}
             ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
             
     = four
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    {charNameFive}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
+    {charNameFive}: {~ xxx|yyy}
             ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main        
 
