@@ -36,9 +36,10 @@
             {
                 - fifthPauseTalking == 0:
                     -> talk_with_fifth_character
+                
                 - else:
-            {charNameFive}: {~ Ora non mi va, ma non mi chiedi aiuto da un po', tutto ok?|Ho bisogno di una pausa, ma se serve aiuto sono qui.|Devo decidere cosa sistemare poi, ma se ti serve aiuto invece, chiedi pure.}
-                -> talk_with_mentor
+                    {charNameFive}: {~ Ora non mi va, ma non mi chiedi aiuto da un po', tutto ok?|Ho bisogno di una pausa, ma se serve aiuto sono qui.|Devo decidere cosa sistemare poi, ma se ti serve aiuto invece, chiedi pure.}
+                    -> talk_with_mentor
             }
             
         + [Ho cambiato idea.]
@@ -129,7 +130,7 @@
                 {charNameFive}: Non sembra pensare a nulla.
                 {charNameFive}: L'acqua è lì e lascia che tutto accada, senza pensare al domani.
                 
-            + (fiveRed) [La foresta domina tutto, è lotta, è potenza!]
+            + (fiveRed) [La foresta domina: è lotta, è potenza!]
                     ~ fifthRed ++
                 {charNameFive}: E disordinata, sporca.
                 {charNameFive}: Posso capirne il fascino, ma non è un luogo dove resto con piacere.
@@ -152,7 +153,7 @@
                     
  
             -
-        {charNameFive}: Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di libri che blocca il sentiero ad ovest della foresta.
+        {firstStory hasnt Ended: {charNameFive}: Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di libri che blocca il sentiero ad ovest della foresta.|{charNameFive}: Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}
         {charNameFive}: È arrivato il momento di capire dove possa portare.
         {charNameFive}: Grazie per la chiacchierata, {name}.
              ~ fifthPauseTalking = fifthCharPauseDurantion
@@ -270,27 +271,65 @@
     
     = four
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        //Responsabilità
         ~ fifthStoryQuestCount ++
+        {charNameFive}: Mi sto chiedendo se non sia stata troppo dura col piccolo {charNameTwo} appena arrivato qui.
+        {charNameFive}: Ero sinceramente spaventata, ma forse ho reagito con violenza.
+        {charNameFive}: Ma questo non è un luogo per un bimbo.
+        {charNameFive}: Ti immagini cosa significhi essere un genitore, e renderti conto che tuo figlio, così piccolo, ha già perso la strada?
+        {charNameFive}: Che già non sappia più cosa fare del suo futuro?
+        {charNameFive}: Che cosa terribile per entrambi.
+        {charNameFive}: E tutta quella responsabilità.
+        {charNameFive}: Quella paura per il futuro e per l'ambiente.
+        {charNameFive}: Non dovrebbe pensare al pallone, a giocare con gli amici, a studiare?
         
-        {charNameFive}: Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+            + [{charNameTwo} ama studiare, e infatti questo è il posto per lui.]
+                {charNameFive}: No!
+                {charNameFive}: Questo è un posto spirituale.
+                {charNameFive}: Di crescita, di esplorazione.
+                {charNameFive}: Non un laboratorio.
+                {charNameFive}: Non il piccolo chimico.
                     ~ fifthBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [Giocare è comunque un modo per capire il mondo, {charNameFive}.]
+                {charNameFive}: Ma un modo controllato, adatto per i bambini.
+                {charNameFive}: Con meno violenza possibile.
+                {charNameFive}: Senza le cose terribili che ci circondano.
+                {charNameFive}: Se non voglio vederle io a cinquant'anni, perché deve vederle un bimbo?
                     ~ fifthYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ fifthRed ++
+            + [Alla sua età avevo anche io idee e paure. Si è bambini, non idioti]
+                {charNameFive}: Non serve che usi quel linguaggio con me, {name}.
+                {charNameFive}: E non sono d'accordo.
+                {charNameFive}: Nemmeno a vent'anni puoi sapere davvero cosa vuoi.
+                {charNameFive}: Cosa conta a questo mondo.
+                {charNameFive}: Per questo i genitori ci sono.
+                {charNameFive}: Per proteggerti.
+                    ~ fifthRed ++
 
-                
-            + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ fifthGreen ++
+            + [Mi spiace che tu ti senta in colpa.]
+                {charNameFive}: Ma non hai detto che non ho sbagliato.
+                {charNameFive}: Scusa, non è quello il tuo ruolo.
+                {charNameFive}: Sennò non sarei io la mentore, ma tu.
+                {charNameFive}: Spero che almeno lui prima o poi mi perdoni.
+                    ~ fifthGreen ++
   
-                
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ fifthPurple ++
- 
+            + [Il genitore dovrebbe essere il lavoro di una comunità.]
+                {charNameFive}: Non dire castronerie, {name}.
+                {charNameFive}: Si fa così dai tempi dei tempi, due persone.
+                {charNameFive}: Una se manca.
+                {charNameFive}: Però dovrebbero avere il diritto di sbagliare.
+                    ~ fifthPurple ++
             -
+        
+        {charNameFive}: Forse mi sono concentrata sulla cosa sbagliata.
+        {charNameFive}: Il problema non è quello che è accaduto.
+        {charNameFive}: Il problema è che mi sono fatta coinvolgere.
+        {charNameFive}: Una mentore deve mantenere un certo distacco per guidarti.
+        {charNameFive}: Non può essere emotiva.
+        {charNameFive}: Vado a riordinare in ordine di data i libri in biblioteca.
+        
              ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
     = five
