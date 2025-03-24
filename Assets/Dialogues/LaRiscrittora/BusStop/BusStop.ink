@@ -179,7 +179,20 @@
                 
                 
             - secondCharacterPossibleStates has IlDelfino:
-                {charNameTwo}: Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
+                {charNameTwo}: A scuola sto finendo tantissimo nei guai.
+                {charNameTwo}: Ho iniziato a fare qualche dispetto ai bambini prepotenti.
+                {charNameTwo}: Secondo me hanno funzionato, ma le maestre si sono arrabbiate.
+                {charNameTwo}: Soprattutto per l'inchiostro sulle loro scarpe.
+                {charNameTwo}: Ma non è colpa mia se si sono messe in mezzo!
+                {charNameTwo}: Però mi sono fatto due nuovi amici, e l'altro giorno abbiamo passato mezz'ora in castigo assieme.
+                {charNameTwo}: Quando la maestra di matematica è tornata e ha trovato la stanza tutta legata con lo spago, ha detto una parolaccia grossa.
+                {charNameTwo}: Ma grossa grossa.
+                {charNameTwo}: Quando l'ho ridetta a mio fratello è scoppiato a ridere.
+                {charNameTwo}: Ma forse qui non te la scrivo, per ora.
+                {charNameTwo}: Ci vediamo!
+                
+                
+                
             - secondCharacterPossibleStates has IlCapibara:
                 {charNameTwo}: Sembrerà assurdo, ma mi sono resa conto che forse, con la musica, possiamo parlare con gli animali.
             - secondCharacterPossibleStates has IlCorvo:
@@ -243,7 +256,19 @@
                 
                 
             - secondCharacterPossibleStates has IlDelfino:
-                {charNameTwo}: Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
+                {charNameTwo}: In questi giorni ho ripreso a dire delle bugie.
+                {charNameTwo}: Ma invece di dirle piccole, le sto dicendo grandissime.
+                {charNameTwo}: E questa cosa fa divertire i miei nuovi amici.
+                {charNameTwo}: E anche qualche maestra.
+                {charNameTwo}: Mamma dice che da grande devo fare il comico.
+                {charNameTwo}: Papà è banale e dice che devo fare il politico.
+                {charNameTwo}: Mio fratello è preoccupato, perché teme che mi metto nei pasticci.
+                {charNameTwo}: Gioco: una di queste cose che ho detto non è vera.
+                {charNameTwo}: Tu lo capisci quale?
+                {charNameTwo}: Salutami la rana!
+                {charNameTwo}: {charNameTwo}.
+                
+                
             - secondCharacterPossibleStates has IlCapibara:
                 {charNameTwo}: Sembrerà assurdo, ma mi sono resa conto che forse, con la musica, possiamo parlare con gli animali.
             - secondCharacterPossibleStates has IlCorvo:
@@ -312,7 +337,23 @@
                 
                 
             - secondCharacterPossibleStates has IlDelfino:
-                {charNameTwo}: Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
+                {charNameTwo}: Se non l'hai capito nell'ultima lettera solo l'ultima frase non era vera: tutte le altre lo erano.
+                {charNameTwo}: Però è successa una cosa divertente, {name}!
+                {charNameTwo}: La prof di matematica mi ha detto che le mie bugie sono storie.
+                {charNameTwo}: E che le storie sono da conservare.
+                {charNameTwo}: E quindi abbiamo aperto assieme a altri bambini un giornale della scuola.
+                {charNameTwo}: Faremo uscire per tutto il resto dell'anno i nostri racconti e le notizie.
+                {charNameTwo}: Mi ha solo chiesto di non scrivere più quella parolaccia che lei ha detto.
+                {charNameTwo}: E di non dire niente sulla preside o si arrabbia.
+                {charNameTwo}: E allora ti saluto dicendoti quella parolaccia, perché poi non la potrò più scrivere.
+                {charNameTwo}: "Per il catarro del cammello!"
+                {charNameTwo}: Che schifo, {name}.
+                {charNameTwo}: Ma lì ci sono i cammelli?
+                {charNameTwo}: Un saluto.
+                {charNameTwo}: {charNameTwo}.
+                
+                
+                
             - secondCharacterPossibleStates has IlCapibara:
                 {charNameTwo}: Sembrerà assurdo, ma mi sono resa conto che forse, con la musica, possiamo parlare con gli animali.
             - secondCharacterPossibleStates has IlCorvo:
