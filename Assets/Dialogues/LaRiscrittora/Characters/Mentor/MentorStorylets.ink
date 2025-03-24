@@ -32,6 +32,11 @@
     - are_entities_together_in(PG, Mentor, BusStop) && not first_bus_stop_visit:
         -> first_bus_stop_visit
  
+ //Commentario random
+    - talking_fungus.first_story_ended_check && not growing_fungus_storylet:
+        -> growing_fungus_storylet
+    
+    
     - else:
         ->->
 
@@ -454,6 +459,15 @@
             {name}: Il tuo aiuto.
             {name}: Se senti ancora una volte delle voci, prenditi un po' di riposo.
                 ->->
+        
+        * (talkingFrog) {the_frog.frog} [Poco fa ho parlato con una rana blu.]
+            {charNameFive}: Una rana. E dove?
+            {are_entities_together_in(Mentor, PG, GreenhouseMiddlePath):{name}: Qui nello stagno.|{name}: Allo stagno.}
+            {charNameFive}: Da che sono qui non ho mai visto rane parlanti, {name}.
+            {charNameFive}: E nemmeno rane e basta.
+            {charNameFive}: Forse è il caso che ti riposi un poco, davvero.
+            {charNameFive}: Lascia fare a me il resto.
+            ->->
    
    //Feedback//
 === first_character_feedback
@@ -599,46 +613,64 @@
     fifth_character_feedback
     ->->
     
+//Storylets di commentario
+    === growing_fungus_storylet
+        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+        ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
+        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        
+        {charNameFive}: Quella pianta mezza morta.
+        {charNameFive}: Alla fine qualcosa è cambiato, ma non ho capito cosa.
+        {charNameFive}: Ma ora sta crescendo.
+        {charNameFive}: Sono comparse in un batter d'occhio queste radici solide, colorate.
+        {charNameFive}: Non pensavo che questo luogo mi avrebbe stupita.
+        {charNameFive}: Da quando sei qui, {name}, sono cambiate molte cose.
+        {charNameFive}: Spero solo sia un segno positivo.
+        {charNameFive}: Poi provo a dare un po' di concime a quel brutto albero.
+            ->->
+    
 //Storylets sul secondo personaggio
     === that_little_liar_storylet
         ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     
-    {charNameFive}: {name}, sei {pronouns has him: riuscito|{pronouns has her: riuscita|riuscitə}} a rimandare quel bambino a casa?
-    {charNameFive}: Non è mai successo che qui arrivassero dei bambini.
-    {charNameFive}: Non è un posto adatto a un bambino.
-    {charNameFive}: E mi ha tirato un calcio!
-    {knowing_second_character.not_talk: {name}: Lui dice che gli hai fatto male.}
-    {knowing_second_character.not_talk: {charNameFive}: L'ho solo fermato perché cercava di scappare.}    
-    {charNameFive}: Mi fa tenerezza, sai?
-    {charNameFive}: Mi sembra un riccio.
-    {charNameFive}: Così carino, tenero.
-    {charNameFive}: Ma poi come ti avvicini ti fa male.
-    {charNameFive}: Mi spiace aver perso la pazienza con lui.
-    {charNameFive}: Ma ci sono rimasta male per quel calcio.
-    {charNameFive}: Io non ho tempo ora, ma sono sicura che troverai una soluzione.
-    {charNameFive}: Trova un modo per allontanarlo.
-    {charNameFive}: Ma non metterci troppo, per favore.
-        ~ secondPauseTalking = 0
-    ->->
+        {charNameFive}: {name}, sei {pronouns has him: riuscito|{pronouns has her: riuscita|riuscitə}} a rimandare quel bambino a casa?
+        {charNameFive}: Non è mai successo che qui arrivassero dei bambini.
+        {charNameFive}: Non è un posto adatto a un bambino.
+        {charNameFive}: E mi ha tirato un calcio!
+        {knowing_second_character.not_talk: {name}: Lui dice che gli hai fatto male.}
+        {knowing_second_character.not_talk: {charNameFive}: L'ho solo fermato perché cercava di scappare.}    
+        {charNameFive}: Mi fa tenerezza, sai?
+        {charNameFive}: Mi sembra un riccio.
+        {charNameFive}: Così carino, tenero.
+        {charNameFive}: Ma poi come ti avvicini ti fa male.
+        {charNameFive}: Mi spiace aver perso la pazienza con lui.
+        {charNameFive}: Ma ci sono rimasta male per quel calcio.
+        {charNameFive}: Io non ho tempo ora, ma sono sicura che troverai una soluzione.
+        {charNameFive}: Trova un modo per allontanarlo.
+        {charNameFive}: Ma non metterci troppo, per favore.
+            ~ secondPauseTalking = 0
+        ->->
     
     === watering_can_storylet
         ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    {charNameFive}: L'annaffiatoio!
-    {charNameFive}: L'annaffiatoio è scomparso dalla serra.
-    {charNameFive}: E sono sicura, sicura che è stato quel bambino dispettoso!
-    {charNameFive}: Giuro che sto cercando di essere paziente, {name}.
-    {charNameFive}: Giuro!
-    {charNameFive}: Ma senza l'annaffiatoio non si possono coltivare le piante della serra.
-    {charNameFive}: Senza piante della serra non ci sono molti doni per le persone che ne hanno bisogno.
-    {charNameFive}: E l'equilibrio delicato di questo posto verrà meno.
-    {charNameFive}: Ti prego, digli di ridarcelo!
-    {charNameFive}: E caricalo di peso sul prossimo treno.
-    {charNameFive}: No, non devo essere così severa.
-    {charNameFive}: Ma ti prego, tienimelo lontano.
-        ~ secondPauseTalking = 0
-    ->->
+        {charNameFive}: L'annaffiatoio!
+        {charNameFive}: L'annaffiatoio è scomparso dalla serra.
+        {charNameFive}: E sono sicura, sicura che è stato quel bambino dispettoso!
+        {charNameFive}: Giuro che sto cercando di essere paziente, {name}.
+        {charNameFive}: Giuro!
+        {charNameFive}: Ma senza l'annaffiatoio non si possono coltivare le piante della serra.
+        {charNameFive}: Senza piante della serra non ci sono molti doni per le persone che ne hanno bisogno.
+        {charNameFive}: E l'equilibrio delicato di questo posto verrà meno.
+        {charNameFive}: Ti prego, digli di ridarcelo!
+        {charNameFive}: E caricalo di peso sul prossimo treno.
+        {charNameFive}: No, non devo essere così severa.
+        {charNameFive}: Ma ti prego, tienimelo lontano.
+            ~ secondPauseTalking = 0
+        ->->
 

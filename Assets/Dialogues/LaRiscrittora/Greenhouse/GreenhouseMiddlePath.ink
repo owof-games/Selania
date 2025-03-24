@@ -10,12 +10,12 @@
 
 === the_frog
 ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-+ {are_two_entities_together(TheFrog, PG)} [TheFrog]
++ {are_two_entities_together(TheFrog, PG) && (not are_two_entities_together(Mentor, PG))} [TheFrog]
     <i>Una rana bluastra ti osserva incuriosita.</i>
         La Rana Parlante: Cra Cra
         La Rana Parlante: Cra
         La Rana Parlante: Cra?
-            * * [{charNameTwo} dice che hai un regalo per me.]
+            * * (frog) [{charNameTwo} dice che hai un regalo per me.]
             <i>La rana si silenza per un istante.</i>
             La Rana Parlante: Cra?
             La Rana Parlante: Cra Cra Cra!
