@@ -164,7 +164,20 @@
                 {charNameTwo}: Salutami la rana!
                 
             - secondCharacterPossibleStates has IlLupo:
-                {charNameTwo}: Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
+                {charNameTwo}: L'altro giorno ho parlato col l'amico di mio fratello.
+                {charNameTwo}: Gli ho detto che per me siamo un branco ma che secondo me lui mica mi ci vede in questo branco.
+                {charNameTwo}: E lui mi ha detto una cosa strana.
+                {charNameTwo}: Che non ce l'ha con me.
+                {charNameTwo}: Ma che non sa parlare coi bambini.
+                {charNameTwo}: Allora gli ho detto di non parlarmi come un bambino.
+                {charNameTwo}: Che so cosa sono i lupi, le frazioni, l'elettricità.
+                {charNameTwo}: Lui ha riso e mi ha detto: "Ma sai creare un muffin?".
+                {charNameTwo}: E mi ha insegnato a fare i muffin.
+                {charNameTwo}: Mi sono divertito tanto.
+                {charNameTwo}: E voglio portartene uno.
+                {charNameTwo}: A presto!
+                
+                
             - secondCharacterPossibleStates has IlDelfino:
                 {charNameTwo}: Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
             - secondCharacterPossibleStates has IlCapibara:
@@ -215,7 +228,20 @@
                 
                 
             - secondCharacterPossibleStates has IlLupo:
-                {charNameTwo}: Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
+                {charNameTwo}: Ma non credo: le cose negli ultimi giorni vanno meglio.
+                {charNameTwo}: Con l'amico di mio fratello ho fatto dei muffin per lui e mamma.
+                {charNameTwo}: E poi gli ho detto che mi dispiace quando litigano.
+                {charNameTwo}: E che ho capito che essere grandi fa schifo, ma che ci sono anche cose belle.
+                {charNameTwo}: Come andare al mare.
+                {charNameTwo}: Mamma si è messa a piangere.
+                {charNameTwo}: Papà è stato in silenzio tantissimo.
+                {charNameTwo}: E ho iniziato a pensare che mi avrebbe picchiato.
+                {charNameTwo}: Invece ha detto: domani si fa vacanza e si va a nuotare tutti assieme.
+                {charNameTwo}: Mamma l'ha abbracciato, e si è mangiata un intero muffin.
+                {charNameTwo}: Ti dico poi come è andata!
+                {charNameTwo}: A presto.
+                
+                
             - secondCharacterPossibleStates has IlDelfino:
                 {charNameTwo}: Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
             - secondCharacterPossibleStates has IlCapibara:
@@ -269,7 +295,22 @@
                 {charNameTwo}: Vorrei sapere cosa fare.
                 
             - secondCharacterPossibleStates has IlLupo:
-                {charNameTwo}: Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
+                {charNameTwo}: Oggi sono triste, e non so perché.
+                {charNameTwo}: Ho dato un pugno a un ragazzo delle medie, ma non mi è mica piaciuto.
+                {charNameTwo}: A casa le cose vanno bene, ma.
+                {charNameTwo}: Sì no boh.
+                {charNameTwo}: Mica pensavo che è così faticoso.
+                {charNameTwo}: Mamma e papà sono tranquilli solo se siamo assieme.
+                {charNameTwo}: Mi sembra un lavoro.
+                {charNameTwo}: E se sono giù si preoccupano tantissimo.
+                {charNameTwo}: E se si preoccupano tornano a litigare.
+                {charNameTwo}: Non so mica cosa fare.
+                {charNameTwo}: Forse {charNameFive} li può aiutare?
+                {charNameTwo}: Mi mancate.
+                {charNameTwo}: {charNameTwo}.
+                
+                
+                
             - secondCharacterPossibleStates has IlDelfino:
                 {charNameTwo}: Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
             - secondCharacterPossibleStates has IlCapibara:
