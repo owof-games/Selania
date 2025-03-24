@@ -149,7 +149,20 @@
                 {charNameTwo}: Ci sentiamo {name}.
                 
             - secondCharacterPossibleStates has IlGrizzly:
-                {charNameTwo}: Voglio creare un piccolo esercito di suonatori in difesa degli alberi.
+                {charNameTwo}: Oggi per la prima volta ho litigato con papà.
+                {charNameTwo}: Nel senso che non è stato mica lui a cominciare ma io.
+                {charNameTwo}: Ha cercato di picchiarmi e gli ho urlato che è un bullo.
+                {charNameTwo}: E poi ho preso i miei libri e glieli ho tirati contro.
+                {charNameTwo}: Lui si è arrabbiato così tanto, {name}!
+                {charNameTwo}: E allora ho urlato.
+                {charNameTwo}: Urlato come un orso.
+                {charNameTwo}: Che si dice che ho bramito quindi.
+                {charNameTwo}: E lui se ne è andato sbattendo la porta, urlando a mamma che ha tirato su un deficiente.
+                {charNameTwo}: Però sono felice perché ho meno paura ora.
+                {charNameTwo}: Mamma mi guarda strano.
+                {charNameTwo}: Ma so che tu mica mi avresti guardato così.
+                {charNameTwo}: Salutami la rana!
+                
             - secondCharacterPossibleStates has IlLupo:
                 {charNameTwo}: Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
             - secondCharacterPossibleStates has IlDelfino:
@@ -184,9 +197,23 @@
                 {charNameTwo}: Mi mancate.
                 {charNameTwo}: Ciao.
                 
-                
+    
             - secondCharacterPossibleStates has IlGrizzly:
-                {charNameTwo}: Voglio creare un piccolo esercito di suonatori in difesa degli alberi.
+                {charNameTwo}: Se l'ha buttata urlo di nuovo, vediamo che mi dice poi.
+                {charNameTwo}: Però ti dovevo dire questa cosa: sono nella squadra di calcio.
+                {charNameTwo}: Non sono mica bravo, sinceramente.
+                {charNameTwo}: Questa roba delle forza e della velocità non è roba mia proprio.
+                {charNameTwo}: Però dice l'allenatore che ho strategia.
+                {charNameTwo}: Mamma me l'ha fatto fare perché dice che devo scaricare tutta questa "rabbia da ragazzino".
+                {charNameTwo}: E non mi chiama più bambino.
+                {charNameTwo}: Negli spogliatoi ci sono state delle risse.
+                {charNameTwo}: Ho dato un pugno straforte a uno più grande.
+                {charNameTwo}: E ora a scuola non mi rompono più le scatole.
+                {charNameTwo}: Se qualcuno ti rompe le scatole {name} chiamami.
+                {charNameTwo}: E ti aiuto io.
+                {charNameTwo}: Ciao!
+                
+                
             - secondCharacterPossibleStates has IlLupo:
                 {charNameTwo}: Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
             - secondCharacterPossibleStates has IlDelfino:
@@ -225,7 +252,22 @@
                 
                 
             - secondCharacterPossibleStates has IlGrizzly:
-                {charNameTwo}: Voglio creare un piccolo esercito di suonatori in difesa degli alberi.
+                {charNameTwo}: Sono SUPER ARRABBIATO.
+                {charNameTwo}: CON MIO FRATELLO.
+                {charNameTwo}: Non avevamo mai litigato, mai.
+                {charNameTwo}: Ma l'altro giorno è venuto a casa e mi ha detto che sto diventando come papà.
+                {charNameTwo}: Papà si è incazzato con lui e mi ha difeso.
+                {charNameTwo}: Mio fratello dice che sto diventando un bullo.
+                {charNameTwo}: Che un suo amico maestro a scuola gli ha detto che me la prendo coi più piccoli.
+                {charNameTwo}: Papà gli ha detto che mi faccio rispettare.
+                {charNameTwo}: E che non sono una checca come lui.
+                {charNameTwo}: Lui mio fratello.
+                {charNameTwo}: Non sono mica abituato a mio padre così.
+                {charNameTwo}: Ma poi in camera mi è preso male tutto.
+                {charNameTwo}: Mi manca mio fratello.
+                {charNameTwo}: Mi mancate voi.
+                {charNameTwo}: Vorrei sapere cosa fare.
+                
             - secondCharacterPossibleStates has IlLupo:
                 {charNameTwo}: Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
             - secondCharacterPossibleStates has IlDelfino:
