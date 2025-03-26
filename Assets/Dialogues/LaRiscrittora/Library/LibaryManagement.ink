@@ -1,17 +1,17 @@
 //Variabili per la gestione della biblioteca
-LIST story = CeciliaFormicola, SalvatoreCiaccio, AdriAllora, BeatriceSgravatto, ValFaustoLattanzio, MauraSacca, LetiziaVaccarella, QueerginiaWolf
+LIST story = AdriAllora, SalvatoreCiaccio, StenoArtico, CeciliaFormicola,  ValFaustoLattanzio, MauraSacca, BeatriceSgravatto, LetiziaVaccarella, QueerginiaWolf
 
 //Liste per distinguere storie lette e non
-    VAR unreadStories = (CeciliaFormicola, SalvatoreCiaccio, AdriAllora, BeatriceSgravatto, ValFaustoLattanzio, MauraSacca, LetiziaVaccarella, QueerginiaWolf)
+    VAR unreadStories = (AdriAllora, SalvatoreCiaccio, StenoArtico, CeciliaFormicola,  ValFaustoLattanzio, MauraSacca, BeatriceSgravatto, LetiziaVaccarella, QueerginiaWolf)
     VAR readStories = ()
 
 //Raggrupamento per lunghezza
     LIST storiesDuration = Short, Average, Long
     VAR readingDuration = ()
     
-    VAR shortStories = (MauraSacca, CeciliaFormicola, QueerginiaWolf)
-    VAR averageStories = (ValFaustoLattanzio, AdriAllora, LetiziaVaccarella)
-    VAR longStories = (SalvatoreCiaccio, BeatriceSgravatto)
+    VAR shortStories = (ValFaustoLattanzio, StenoArtico)
+    VAR averageStories = (CeciliaFormicola)
+    VAR longStories = (SalvatoreCiaccio)
     
 //Books about...
 VAR aboutLove = (CeciliaFormicola, SalvatoreCiaccio, BeatriceSgravatto, ValFaustoLattanzio)
@@ -58,10 +58,13 @@ VAR aboutSelfLove = (ValFaustoLattanzio)
 
     = step_one
         + {shortStories != ()} [Un racconto brevissimo.]
+        //(1500 battute max)
             ~ readingDuration += Short
         + {averageStories != ()} [Una storia più lunga.]
+        // (3000 battute max)
             ~ readingDuration += Average
         + {longStories != ()} [Qualcosa che richieda qualche minuto.]
+        // 6000 battute max 
             ~ readingDuration += Long
         -
         -> shuffle
@@ -184,18 +187,24 @@ VAR aboutSelfLove = (ValFaustoLattanzio)
 
 === from_list_to_books ===
 {book:
-    - BeatriceSgravatto:
-        -> beatrice_sgravatto
-    - CeciliaFormicola:
-        -> cecilia_formicola
-    - SalvatoreCiaccio:
-        -> salvatore_ciaccio
     - AdriAllora:
         -> adri_allora
+    - StenoArtico:
+        -> steno_artico        
+    - SalvatoreCiaccio:
+        -> salvatore_ciaccio
+        
+    - CeciliaFormicola:
+        -> cecilia_formicola   
+        
     - ValFaustoLattanzio:
-        -> val_fausto_lattanzio
+        -> val_fausto_lattanzio        
+
+
     - MauraSacca:
         -> maura_sacca
+    - BeatriceSgravatto:
+        -> beatrice_sgravatto        
     - LetiziaVaccarella:
         -> letizia_vaccarella
     - QueerginiaWolf:
@@ -212,31 +221,22 @@ VAR aboutSelfLove = (ValFaustoLattanzio)
 === reread ===
 
 {shuffle:
-    - {readStories has ValFaustoLattanzio: -> reread_val_lattanzio| ->reread}
-    - {readStories has BeatriceSgravatto: -> reread_beatrice_sgravatto| -> reread}
-    - {readStories has CeciliaFormicola: -> reread_cecilia_formicola| -> reread}
-    - {readStories has SalvatoreCiaccio: -> reread_salvatore_ciaccio| -> reread}
     - {readStories has AdriAllora: -> reread_adri_allora| -> reread}
+    - {readStories has SalvatoreCiaccio: -> reread_salvatore_ciaccio| -> reread}
+    - {readStories has StenoArtico: -> reread_steno_artico| -> reread}
+    
+    - {readStories has CeciliaFormicola: -> reread_cecilia_formicola| -> reread}    
+    
+    - {readStories has ValFaustoLattanzio: -> reread_val_lattanzio| ->reread}
+    
+    
     - {readStories has MauraSacca: -> reread_maura_sacca| -> reread}
+    - {readStories has BeatriceSgravatto: -> reread_beatrice_sgravatto| -> reread}
     - {readStories has LetiziaVaccarella: -> reread_letizia_vaccarella| -> reread}
     - {readStories has QueerginiaWolf: -> reread_queerginia_wolf| -> reread}
 }
 
-    = reread_val_lattanzio
-        + [Rileggo <i>Home</i> di Val Fausto Lattanzio (he/they).]
-                -> val_fausto_lattanzio
-        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
-                -> reread
-        + [Ho cambiato idea, voglio una storia nuova.]
-                -> book_test_intro        
-    
-    = reread_letizia_vaccarella
-        + [Rileggo <i>Dodici Stelle</i> di Letizia Vaccarella (she/her).]
-                -> letizia_vaccarella
-        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
-                -> reread
-        + [Ho cambiato idea, voglio una storia nuova.]
-                -> book_test_intro 
+
     
     = reread_adri_allora
         + [Rileggo <i>XXX</i>di Adri Allora(333/ddd).]
@@ -246,14 +246,14 @@ VAR aboutSelfLove = (ValFaustoLattanzio)
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
     
-    = reread_cecilia_formicola
-        + [Rileggo <i>Fuochino</i> di Cecilia Formicola (ee/yyy).]
-                -> cecilia_formicola
+     = reread_steno_artico
+        + [Rileggo <i> This anger</i> by StenoArtico (he/him, none).]
+                -> steno_artico
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
-    
+                
     = reread_salvatore_ciaccio
         + [Rileggo <i>Il cancello</i> di Salvatore Ciaccio (ee/yyy).]
                 -> salvatore_ciaccio
@@ -261,6 +261,40 @@ VAR aboutSelfLove = (ValFaustoLattanzio)
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
+
+
+
+                
+    = reread_cecilia_formicola
+        + [Rileggo <i>Getting warm</i> di Cecilia Formicola (she/her).]
+                -> cecilia_formicola
+        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+                -> reread
+        + [Ho cambiato idea, voglio una storia nuova.]
+                -> book_test_intro 
+ 
+ 
+ 
+ 
+    
+    = reread_val_lattanzio
+        + [Rileggo <i>Home</i> di Val Fausto Lattanzio (he/they).]
+                -> val_fausto_lattanzio
+        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+                -> reread
+        + [Ho cambiato idea, voglio una storia nuova.]
+                -> book_test_intro        
+ 
+ 
+ 
+ 
+     = reread_maura_sacca
+        + [Rileggo "XXX" di Maura Sacca (ee/yyy).]
+                -> maura_sacca
+        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+                -> reread
+        + [Ho cambiato idea, voglio una storia nuova.]
+                -> book_test_intro        
     
     = reread_beatrice_sgravatto
         + [Rileggo <i>TITOLO</i> di Beatrice Sgravatto (ee/yyy).]
@@ -269,15 +303,14 @@ VAR aboutSelfLove = (ValFaustoLattanzio)
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
-    
-    = reread_maura_sacca
-        + [Rileggo "XXX" di Maura Sacca (ee/yyy).]
-                -> maura_sacca
+
+    = reread_letizia_vaccarella
+        + [Rileggo <i>Dodici Stelle</i> di Letizia Vaccarella (she/her).]
+                -> letizia_vaccarella
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
-                -> book_test_intro 
-    
+                -> book_test_intro     
     
     = reread_queerginia_wolf
         + [Rileggo "XXX" di Queerginia Wolf/Marco Spelgatti (she/he/they).]
