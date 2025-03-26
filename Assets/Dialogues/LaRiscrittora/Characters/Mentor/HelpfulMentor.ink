@@ -188,11 +188,11 @@
         ~ mourning = false
             //Rimuovo coltivabile legato a lutto
         {    
-        - backupCultivable has NonTiScordarDiTe:
-            ~ pianteCiclicità -= NonTiScordarDiTe
-            ~ pianteIndipendenza -= NonTiScordarDiTe
-            ~ pianteRicordo -= NonTiScordarDiTe
-            ~ backupCultivable -= NonTiScordarDiTe
+            - backupCultivable has NonTiScordarDiTe:
+                ~ pianteCiclicità -= NonTiScordarDiTe
+                ~ pianteIndipendenza -= NonTiScordarDiTe
+                ~ pianteRicordo -= NonTiScordarDiTe
+                ~ backupCultivable -= NonTiScordarDiTe
             
         }    
             -> top
@@ -201,11 +201,11 @@
         {charNameFive}: Grandioso.
         ~ mourning = true
         {
-        - - backupCultivable hasnt NonTiScordarDiTe && not non_ti_scordar_di_te.step_zero:
-            ~ pianteCiclicità += NonTiScordarDiTe
-            ~ pianteIndipendenza += NonTiScordarDiTe
-            ~ pianteRicordo += NonTiScordarDiTe
-            ~ backupCultivable += NonTiScordarDiTe
+            - backupCultivable hasnt NonTiScordarDiTe && not non_ti_scordar_di_te.step_zero:
+                ~ pianteCiclicità += NonTiScordarDiTe
+                ~ pianteIndipendenza += NonTiScordarDiTe
+                ~ pianteRicordo += NonTiScordarDiTe
+                ~ backupCultivable += NonTiScordarDiTe
         }    
             -> top
         
