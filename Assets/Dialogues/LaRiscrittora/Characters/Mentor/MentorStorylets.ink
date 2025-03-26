@@ -41,6 +41,7 @@
         ->->
 
 }
+->->
 
 === mentor_and_first_char_storylets ===
 ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
@@ -61,6 +62,8 @@
             - talk_with_first_character:
                 {charNameFive}: Sembra che {charNameOne} ti abbia raccontato qualcosa di sè!
                 -> gifts_and_ink
+            - else:
+                ->->
         }
                 
         
@@ -92,6 +95,8 @@
         ->->    
 
 }
+
+->->
 
 === mentor_and_second_char_storylets ===
 ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
@@ -441,7 +446,7 @@
             {charNameFive}: Sicuramente quella voce è il tuo modo di capire questo luogo.
             {charNameFive}: Un intuito latente che ora è più forte.
             {charNameFive}: Meglio della stanchezza dell'essere mentore, fidati.
-                ->->
+                -> talk_with_mentor
                 
         * (infoImpo){firstCharacterInkLevel has High} [Cosa significa "la personaggia ti darà una informazione importante"?]
             {charNameFive}: Dove l'hai sentita questa cosa, stellina?
@@ -449,7 +454,7 @@
             {not voices: {charNameFive}: Per la voce sarà la stanchezza, questo lavoro è faticoso.|{charNameFive}: Come ti dicevo, vedrai che è solo la tua empatia che parla.}
             {charNameFive}: Comunque ogni cosa qui è importante, {name}.
             {charNameFive}: Soprattutto se ti aiuta a raggiungere il tuo obiettivo.
-                ->->
+                -> talk_with_mentor
         
         * (talkingFungus) {talking_fungus.first_story_ended_check} [Prima ho parlato con il tronco.]
             {name}: E mi ha chiesto come stavo dopo aver aiutato {charNameOne}.
@@ -458,7 +463,7 @@
             {name}: L'unica cosa che ha voce sono le persone che arrivano per chiedere il nostro aiuto.
             {name}: Il tuo aiuto.
             {name}: Se senti ancora una volte delle voci, prenditi un po' di riposo.
-                ->->
+                -> talk_with_mentor
         
         * (talkingFrog) {the_frog.frog} [Poco fa ho parlato con una rana blu.]
             {charNameFive}: Una rana. E dove?
@@ -467,10 +472,10 @@
             {charNameFive}: E nemmeno rane e basta.
             {charNameFive}: Forse è il caso che ti riposi un poco, davvero.
             {charNameFive}: Lascia fare a me il resto.
-            ->->
+            -> talk_with_mentor
         
         + [Ripensadoci, non ho nulla di nuovo da dire.]
-            ->->
+            -> talk_with_mentor
    
    //Feedback//
 === first_character_feedback
