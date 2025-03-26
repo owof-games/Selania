@@ -25,9 +25,11 @@ VAR movementsCounter = 0
 VAR alcoholism = true
 VAR abuses = true
 VAR mourning = true
-VAR loneliness = true
+VAR fisicalAbuses = true
 VAR dysphoria = true
 VAR sex = true
+VAR religion = true
+VAR depression = true
 
 /* ---------------------------------
 

@@ -63,6 +63,8 @@
 //Streets to Library
     + {are_two_entities_together(PG, FromForestToLibraryDesat) && secondTier == false} [FromForestToLibraryDesat]
         <i>Questa strada risulta bloccata, per ora.</i>
+        //~ move_entity(PG, Library)
+        //-> library
             -> main
             
     + {are_two_entities_together(PG, FromForestToLibrary) && secondTier == true} [FromForestToLibrary]

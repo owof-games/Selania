@@ -128,53 +128,118 @@
  ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
  
     {charNameFive}: Questi sono i principali temi delicati che potresti incontrare durante le tue chiacchierate.
-    {charNameFive}: Sarà mio compito evitare che tu possa incontrarli.
-    {charNameFive}: Non è detto che ci riesca al cento per cento: in questo posto devo fare tantissime cose, {name}.
+    {charNameFive}: I miei poteri si limitano all'ambiente: oggetti, storie e cose che incontrerai non parleranno di quello che vuoi evitare.
+    {charNameFive}: Non ho invece modo, per ora, di impedire alle persone giunte fino a qui di non toccare alcuni di questi temi.
+    {charNameFive}: Spesso quei temi sono il motivo per cui sono arrivate da, per chiedere il nostro aiuto.
+    {charNameFive}: In futuro le cose potranno comunque migliorare, promesso.
+
 
     - (top)
     {charNameFive}: Cosa vorresti evitare?
     + {alcoholism == true}[Non voglio che si parli di <b>dipendenza da sostanze</b>.]
         {charNameFive}: Perfetto.
         ~ alcoholism = false
+        {
+        - unreadStories has Aza: 
+            ~ unreadStories -= Aza
+        }
             -> top
     + {alcoholism == false}[Ho cambiato idea: lascia che il tema delle <b>dipendenze da sostanze</b> sia presente.]
         {charNameFive}: Ottimo.
         ~ alcoholism = true
+        {
+        - unreadStories hasnt Aza: 
+            ~ unreadStories += Aza
+        }
             -> top
         
   
-    + {abuses == true}[Evitiamo storie su <b>relazioni abusanti</b>.]
+    + {abuses == true}[Evitiamo storie su <b>violenza psicologica subita o autoinflitta</b>.]
         {charNameFive}: Hai il mio appoggio.
         ~ abuses = false
+        {
+        - unreadStories has StenoArtico: 
+            ~ unreadStories -= StenoArtico
+        - unreadStories has AdriAllora: 
+            ~ unreadStories -= AdriAllora
+        - unreadStories has Romi: 
+            ~ unreadStories -= Romi
+        - unreadStories has BeatriceYBottura: 
+            ~ unreadStories -= BeatriceYBottura             
+        }
             -> top
-    + {abuses == false}[Ora me la sento di sentire storie su <b>relazioni abusanti</b>.]
+    + {abuses == false}[Ora me la sento di sentire storie su <b>violenza psicologica subita, inflitta o autoinflitta</b>.]
         {charNameFive}: Perfetto.
         ~ abuses = true
+        {
+        - unreadStories hasnt StenoArtico: 
+            ~ unreadStories += StenoArtico
+        - unreadStories hasnt AdriAllora: 
+            ~ unreadStories += AdriAllora
+        - unreadStories hasnt Romi: 
+            ~ unreadStories += Romi
+        - unreadStories hasnt BeatriceYBottura: 
+            ~ unreadStories += BeatriceYBottura     
+        }        
             -> top
 
     + {mourning == true} [Tienimi {pronouns has him: lontano|{pronouns has her: lontana|lontanə}} da <b>morte e lutto</b>.]
         {charNameFive}: Non li incontrerai nel tuo viaggio.
         ~ mourning = false
             //Rimuovo coltivabile legato a lutto
+        {    
+        - backupCultivable has NonTiScordarDiTe:
             ~ pianteCiclicità -= NonTiScordarDiTe
             ~ pianteIndipendenza -= NonTiScordarDiTe
             ~ pianteRicordo -= NonTiScordarDiTe
             ~ backupCultivable -= NonTiScordarDiTe
+            
+        }    
             -> top
             
     + {mourning == false} [Ho cambiato idea: me la sento di parlare di lutto.]
         {charNameFive}: Grandioso.
         ~ mourning = true
-        
+        {
+        - - backupCultivable hasnt NonTiScordarDiTe && not non_ti_scordar_di_te.step_zero:
+            ~ pianteCiclicità += NonTiScordarDiTe
+            ~ pianteIndipendenza += NonTiScordarDiTe
+            ~ pianteRicordo += NonTiScordarDiTe
+            ~ backupCultivable += NonTiScordarDiTe
+        }    
             -> top
         
-    + {loneliness == true} [L'idea dell'<b>abbandono</b> per me è pesante.]
+    + {fisicalAbuses == true} [Non voglio sentire parlare di <b>abusi fisici subiti, inflitti o autoinflitti</b>.]
         {charNameFive}: Fatto.
-        ~ loneliness = false
+        ~ fisicalAbuses = false
+        {
+            - unreadStories has StenoArtico: 
+                ~ unreadStories -= StenoArtico
+            - unreadStories has Aza: 
+                ~ unreadStories -= Aza
+            - unreadStories has BeatriceYBottura: 
+                ~ unreadStories -= BeatriceYBottura
+            - unreadStories has Maura: 
+                ~ unreadStories -= Maura
+            - unreadStories has AdriAllora: 
+                ~ unreadStories -= AdriAllora                 
+        }     
             -> top
-    + {loneliness == false} [Sono {pronouns has him: pronto|{pronouns has her: pronta|prontə}} ad ascoltare storie di abbandono.]
+    + {fisicalAbuses == false} [Ora posso sentire parlare di <b>abusi fisici subiti o autoinflitti</b>.]
         {charNameFive}: Perfetto.
-        ~ loneliness = true
+        ~ fisicalAbuses = true
+        {
+            - unreadStories hasnt StenoArtico: 
+                ~ unreadStories += StenoArtico
+            - unreadStories hasnt Aza: 
+                ~ unreadStories += Aza
+            - unreadStories hasnt BeatriceYBottura: 
+                ~ unreadStories += BeatriceYBottura
+            - unreadStories hasnt Maura: 
+                ~ unreadStories += Maura
+            - unreadStories hasnt AdriAllora: 
+                ~ unreadStories += AdriAllora                   
+        }         
     
     + [I temi che voglio evitare sono altri.]
         -> top_due
@@ -183,18 +248,26 @@
 
     
     - (top_due)
-    + {dysphoria == true}[Non mi sento a mio agio a parlare di <b>disforia</b>.]
+    + {dysphoria == true}[Non mi sento a mio agio a parlare di <b>disforia e dismorfia</b>.]
         {charNameFive}: Capisco benissimo.
         ~ dysphoria = false
+        {
+            - unreadStories has ValFaustoLattanzio: 
+                ~ unreadStories -= ValFaustoLattanzio
+    
+        } 
             -> top_due
-    + {dysphoria == false}[Ho cambiato idea: affrontiamo storie legate alla disforia.]
+    + {dysphoria == false}[Ho cambiato idea: affrontiamo storie legate alla disforia e alla dismorfia.]
         {charNameFive}: Ottimo.
         ~ dysphoria = true
+        {
+            - unreadStories hasnt ValFaustoLattanzio: 
+                ~ unreadStories += ValFaustoLattanzio
+        }        
             -> top_due
             
-        {charNameFive}: Cosa vorresti evitare?
     
-    + {sex == true}[Non parliamo di <b>sesso</b>.]
+    + {sex == true}[Non parliamo di <b>sesso e sessualità</b>.]
         {charNameFive}: Fatto.
         ~ sex = false
             -> top_due
@@ -202,6 +275,45 @@
         {charNameFive}: Ottimo.
         ~ sex = true
             -> top_due
+    
+     + {depression == true}[Non voglio si parli di <b>depressione, ansia, pensieri intrusivi</b>.]
+        {charNameFive}: Fatto.
+        {
+            - unreadStories has StenoArtico: 
+                ~ unreadStories -= StenoArtico
+            - unreadStories has Beatrice: 
+                ~ unreadStories -= Beatrice    
+        }     
+        ~ depression = false
+            -> top_due
+    + {depression == false}[Introduci storie legate al malessere psicologico.]
+        {charNameFive}: Ottimo.
+        ~ depression = true
+        {
+            - unreadStories hasnt StenoArtico: 
+                ~ unreadStories += StenoArtico
+            - unreadStories hasnt Beatrice: 
+                ~ unreadStories += Beatrice    
+        }        
+            -> top_due
+            
+    + {religion == true}[Non parliamo di <b>educazione religiosa severa</b>.]
+        {charNameFive}: Fatto.
+        ~ religion = false
+        {
+            - unreadStories has Beatrice: 
+                ~ unreadStories -= Beatrice    
+        }        
+            -> top_due
+    + {religion == false}[Introduci anche storie sull'educazione religiosa severa.]
+        {charNameFive}: Ottimo.
+        ~ religion = true
+        {
+            - unreadStories hasnt Beatrice: 
+                ~ unreadStories += Beatrice    
+        }              
+            -> top_due            
+    
     
     + [Fammi rivedere i temi precedenti.]
         -> top

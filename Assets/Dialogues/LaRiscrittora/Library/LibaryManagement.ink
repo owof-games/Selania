@@ -2,7 +2,7 @@
 LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola,  Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, QueerginiaWolf
 
 //Liste per distinguere storie lette e non
-    VAR unreadStories = (AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola,  Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, QueerginiaWolf)
+    VAR unreadStories = (AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, QueerginiaWolf)
     VAR readStories = ()
 
 //Raggrupamento per lunghezza
@@ -14,14 +14,13 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     VAR longStories = (Aza, Beatrice, Salvo, LetiziaVaccarella)
     
 //Books about...
-VAR aboutLove = (CeciliaFormicola, Salvo, Beatrice, ValFaustoLattanzio)
-VAR aboutRage = (CeciliaFormicola, AdriAllora, Beatrice, Maura)
-VAR aboutBody = (Salvo, AdriAllora, ValFaustoLattanzio, LetiziaVaccarella)
-VAR aboutHome = (ValFaustoLattanzio, LetiziaVaccarella)
-VAR aboutSelf = (LetiziaVaccarella)
-VAR aboutForgiveness = ()
-VAR aboutDeath = (Maura)
-VAR aboutSelfLove = (ValFaustoLattanzio)
+    VAR aboutTransformation = (Aza, ValFaustoLattanzio, Salvo, BeatriceYBottura)
+    VAR aboutQuestions = (AdriAllora, Beatrice, ValFaustoLattanzio, StenoArtico, Romi)
+    VAR aboutUnprepared = (StenoArtico, Beatrice, Lamia)
+    VAR aboutMonsters = (AdriAllora, Aza, BeatriceYBottura, CeciliaFormicola)
+    VAR aboutFire= (Aza, CeciliaFormicola, BeatriceYBottura, Romi, Maura)
+    VAR aboutRebellion = (BeatriceYBottura, Lamia, Maura, Salvo)
+
     //Libro che verrà proposto
     VAR book = ()
     
@@ -57,13 +56,13 @@ VAR aboutSelfLove = (ValFaustoLattanzio)
 
 
     = step_one
-        + {shortStories != ()} [Un racconto brevissimo (max 1500 battute).]
+        + {shortStories != ()} [Qualcosa di brevissimo (max 1500 battute).]
         //(1500 battute max)
             ~ readingDuration += Short
-        + {averageStories != ()} [Una storia più lunga (max 3000 battute).]
+        + {averageStories != ()} [Una storia veloce (max 3000 battute).]
         // (3000 battute max)
             ~ readingDuration += Average
-        + {longStories != ()} [Qualcosa che richieda qualche minuto (max 8000 battute).]
+        + {longStories != ()} [Un racconto più lungo (max 8000 battute).]
         // 8000 battute max 
             ~ readingDuration += Long
         -
@@ -72,89 +71,168 @@ VAR aboutSelfLove = (ValFaustoLattanzio)
     
     = shuffle
         {shuffle:
-            - {aboutLove != (): -> about_love| -> shuffle}
-            - {aboutRage != (): -> about_rage| -> shuffle}
-            - {aboutBody != (): -> about_body| -> shuffle}
+            - {aboutTransformation != (): -> about_transformation| -> shuffle}
+            - {aboutQuestions != (): -> about_questions| -> shuffle}
+            - {aboutUnprepared != (): -> about_unprepared| -> shuffle}
+            - {aboutMonsters != (): -> about_monsters| -> shuffle}
+            - {aboutFire != (): -> about_fire| -> shuffle}
+            - {aboutRebellion != (): -> about_rebellion| -> shuffle}
         }
     
     
     
-    = about_love
-        + {readingDuration has Short && shortStories^ aboutLove != ()} [Che parli d'amore.]
-            ~ book = LIST_RANDOM(shortStories^ aboutLove)
+    = about_transformation
+        + {readingDuration has Short && shortStories^ aboutTransformation != ()} [Che racconti di qualcosa che si trasforma.]
+            ~ book = LIST_RANDOM(shortStories^ aboutTransformation)
             -> refresh_book_lists -> from_list_to_books
  
-        + {readingDuration has Average && averageStories^ aboutLove != ()} [Che parli d'amore.]
-            ~ book = LIST_RANDOM(averageStories ^ aboutLove)
+        + {readingDuration has Average && averageStories^ aboutTransformation != ()} [Che racconti di qualcosa che si trasforma.]
+            ~ book = LIST_RANDOM(averageStories ^ aboutTransformation)
             -> refresh_book_lists -> from_list_to_books           
             
-        + {readingDuration has Long && longStories^ aboutLove != ()} [Che parli d'amore.]
-            ~ book = LIST_RANDOM(longStories ^ aboutLove)
+        + {readingDuration has Long && longStories^ aboutTransformation != ()} [Che racconti di qualcosa che si trasforma.]
+            ~ book = LIST_RANDOM(longStories ^ aboutTransformation)
             -> refresh_book_lists -> from_list_to_books
         
         //Qui vale per ogni scelta: se effettivamente posso scegliere quel tema, posso decidere di andare comunque avanti. Se invece quel tema è vuoto nella intersezione con la lunghezza della storia selezionata, passo avanti.
         TODO: come fare in modo che non venga proposto questo tasto se non ci sono altri temi disponibili?
-        + {(readingDuration has Short && shortStories^ aboutLove != ()) or (readingDuration has Average && averageStories^ aboutLove != ()) or (readingDuration has Long && longStories^ aboutLove != ())} [No, vorrei un altro tema.]
+        //Questo tasto compare solo se questo tema non è vuoto. Ha senso? sennò non sarei qui, no?
+        + {(readingDuration has Short && shortStories^ aboutTransformation != ()) or (readingDuration has Average && averageStories^ aboutTransformation != ()) or (readingDuration has Long && longStories^ aboutTransformation != ())} [No, vorrei un altro tema.]
                 -> shuffle
         
-        + {(readingDuration has Short && shortStories^ aboutLove != ()) or (readingDuration has Average && averageStories^ aboutLove != ()) or (readingDuration has Long && longStories^ aboutLove != ())} [Non ho più voglia di leggere.]
+        + {(readingDuration has Short && shortStories^ aboutTransformation != ()) or (readingDuration has Average && averageStories^ aboutTransformation != ()) or (readingDuration has Long && longStories^ aboutTransformation != ())} [Non ho più voglia di leggere.]
                 ~ readingDuration = ()
                 -> book_test_intro      
         
-        + {(readingDuration has Short && shortStories^ aboutLove == ()) or (readingDuration has Average && averageStories^ aboutLove == ()) or (readingDuration has Long && longStories^ aboutLove == ())}
+        + {(readingDuration has Short && shortStories^ aboutTransformation == ()) or (readingDuration has Average && averageStories^ aboutTransformation == ()) or (readingDuration has Long && longStories^ aboutTransformation == ())}
             -> shuffle
         
-    = about_rage        
+    = about_questions       
             
-        + {readingDuration has Short && shortStories^ aboutRage != ()} [Che parli di rabbia.]
-            ~ book = LIST_RANDOM(shortStories^ aboutRage)
+        + {readingDuration has Short && shortStories^ aboutQuestions != ()} [Che parli di chi si pone domande.]
+            ~ book = LIST_RANDOM(shortStories^ aboutQuestions)
             -> refresh_book_lists -> from_list_to_books
         
-        + {readingDuration has Average && averageStories^ aboutRage != ()} [Che parli di rabbia.]
-            ~ book = LIST_RANDOM(averageStories ^ aboutRage)
+        + {readingDuration has Average && averageStories^ aboutQuestions != ()} [Che parli di chi si pone domande.]
+            ~ book = LIST_RANDOM(averageStories ^ aboutQuestions)
             -> refresh_book_lists -> from_list_to_books
 
-        + {readingDuration has Long && longStories^ aboutRage != ()} [Che parli di rabbia.]
-            ~ book = LIST_RANDOM(longStories ^ aboutRage)
+        + {readingDuration has Long && longStories^ aboutQuestions != ()} [Che parli di chi si pone domande.]
+            ~ book = LIST_RANDOM(longStories ^ aboutQuestions)
             -> refresh_book_lists -> from_list_to_books            
         
         
-        + {(readingDuration has Short && shortStories^ aboutRage != ()) or (readingDuration has Average && averageStories^ aboutRage != ()) or (readingDuration has Long && longStories^ aboutRage != ())}[No, vorrei un altro tema.]
+        + {(readingDuration has Short && shortStories^ aboutQuestions != ()) or (readingDuration has Average && averageStories^ aboutQuestions != ()) or (readingDuration has Long && longStories^ aboutQuestions != ())}[No, vorrei un altro tema.]
                 -> shuffle
                 
                 
-        + {(readingDuration has Short && shortStories^ aboutRage != ()) or (readingDuration has Average && averageStories^ aboutRage != ()) or (readingDuration has Long && longStories^ aboutRage != ())} [Non ho più voglia di leggere.]
+        + {(readingDuration has Short && shortStories^ aboutQuestions != ()) or (readingDuration has Average && averageStories^ aboutQuestions != ()) or (readingDuration has Long && longStories^ aboutQuestions != ())} [Non ho più voglia di leggere.]
                 ~ readingDuration = ()
                 -> book_test_intro           
         
-        + {(readingDuration has Short && shortStories^ aboutRage == ()) or (readingDuration has Average && averageStories^ aboutRage == ()) or (readingDuration has Long && longStories^ aboutRage == ())}
+        + {(readingDuration has Short && shortStories^ aboutQuestions == ()) or (readingDuration has Average && averageStories^ aboutQuestions == ()) or (readingDuration has Long && longStories^ aboutQuestions == ())}
                 -> shuffle          
             
             
-    = about_body     
-        + {readingDuration has Short && shortStories^ aboutBody != ()} [Che parli di corpi.]
-            ~ book = LIST_RANDOM(shortStories^ aboutBody)
+    = about_unprepared   
+        + {readingDuration has Short && shortStories^ aboutUnprepared != ()} [Che mi colga {pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}]
+            ~ book = LIST_RANDOM(shortStories^ aboutUnprepared)
             -> refresh_book_lists -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutBody != ()} [Che parli di corpi.]
-            ~ book = LIST_RANDOM(averageStories ^ aboutBody)
+        + {readingDuration has Average && averageStories^ aboutUnprepared != ()} [Che mi colga {pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}]
+            ~ book = LIST_RANDOM(averageStories ^ aboutUnprepared)
             -> refresh_book_lists -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutBody != ()} [Che parli di corpi.]
-            ~ book = LIST_RANDOM(longStories ^ aboutBody)
+        + {readingDuration has Long && longStories^ aboutUnprepared != ()} [Che mi colga {pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}]
+            ~ book = LIST_RANDOM(longStories ^ aboutUnprepared)
             -> refresh_book_lists -> from_list_to_books            
         
         //Scelte di uscita se ho rifiutato tutte le opzioni precedenti.
-        + {(readingDuration has Short && shortStories^ aboutBody != ()) or (readingDuration has Average && averageStories^ aboutBody != ()) or (readingDuration has Long && longStories^ aboutBody != ())}[No, vorrei un altro tema.]
+        + {(readingDuration has Short && shortStories^ aboutUnprepared != ()) or (readingDuration has Average && averageStories^ aboutUnprepared != ()) or (readingDuration has Long && longStories^ aboutUnprepared != ())}[No, vorrei un altro tema.]
                 -> shuffle
                 
                 
-        + {(readingDuration has Short && shortStories^ aboutBody != ()) or (readingDuration has Average && averageStories^ aboutBody != ()) or (readingDuration has Long && longStories^ aboutBody != ())} [Non ho più voglia di leggere.]
+        + {(readingDuration has Short && shortStories^ aboutUnprepared != ()) or (readingDuration has Average && averageStories^ aboutUnprepared != ()) or (readingDuration has Long && longStories^ aboutUnprepared != ())} [Non ho più voglia di leggere.]
                 ~ readingDuration = ()
                 -> book_test_intro           
         
-        + {(readingDuration has Short && shortStories^ aboutBody == ()) or (readingDuration has Average && averageStories^ aboutBody == ()) or (readingDuration has Long && longStories^ aboutBody == ())}
+        + {(readingDuration has Short && shortStories^ aboutUnprepared == ()) or (readingDuration has Average && averageStories^ aboutUnprepared == ()) or (readingDuration has Long && longStories^ aboutUnprepared == ())}
                 -> shuffle 
+
+    = about_monsters 
+        + {readingDuration has Short && shortStories^ aboutMonsters != ()} [Che parli di cose mostruose.]
+            ~ book = LIST_RANDOM(shortStories^ aboutMonsters)
+            -> refresh_book_lists -> from_list_to_books
+
+        + {readingDuration has Average && averageStories^ aboutMonsters != ()} [Che parli di cose mostruose.]
+            ~ book = LIST_RANDOM(averageStories ^ aboutMonsters)
+            -> refresh_book_lists -> from_list_to_books
+        
+        + {readingDuration has Long && longStories^ aboutMonsters != ()} [Che parli di cose mostruose.]
+            ~ book = LIST_RANDOM(longStories ^ aboutMonsters)
+            -> refresh_book_lists -> from_list_to_books            
+        
+        //Scelte di uscita se ho rifiutato tutte le opzioni precedenti.
+        + {(readingDuration has Short && shortStories^ aboutMonsters != ()) or (readingDuration has Average && averageStories^ aboutMonsters != ()) or (readingDuration has Long && longStories^ aboutMonsters != ())}[No, vorrei un altro tema.]
+                -> shuffle
+                
+                
+        + {(readingDuration has Short && shortStories^ aboutMonsters != ()) or (readingDuration has Average && averageStories^ aboutMonsters != ()) or (readingDuration has Long && longStories^ aboutMonsters != ())} [Non ho più voglia di leggere.]
+                ~ readingDuration = ()
+                -> book_test_intro           
+        
+        + {(readingDuration has Short && shortStories^ aboutMonsters == ()) or (readingDuration has Average && averageStories^ aboutMonsters == ()) or (readingDuration has Long && longStories^ aboutMonsters == ())}
+                -> shuffle
+
+    = about_fire  
+        + {readingDuration has Short && shortStories^ aboutFire != ()} [Che racconti di cose che bruciano.]
+            ~ book = LIST_RANDOM(shortStories^ aboutFire)
+            -> refresh_book_lists -> from_list_to_books
+
+        + {readingDuration has Average && averageStories^ aboutFire != ()} [Che racconti di cose che bruciano.]
+            ~ book = LIST_RANDOM(averageStories ^ aboutFire)
+            -> refresh_book_lists -> from_list_to_books
+        
+        + {readingDuration has Long && longStories^ aboutFire != ()} [Che racconti di cose che bruciano.]
+            ~ book = LIST_RANDOM(longStories ^ aboutFire)
+            -> refresh_book_lists -> from_list_to_books            
+        
+        //Scelte di uscita se ho rifiutato tutte le opzioni precedenti.
+        + {(readingDuration has Short && shortStories^ aboutFire != ()) or (readingDuration has Average && averageStories^ aboutFire != ()) or (readingDuration has Long && longStories^ aboutFire != ())}[No, vorrei un altro tema.]
+                -> shuffle
+                
+                
+        + {(readingDuration has Short && shortStories^ aboutFire != ()) or (readingDuration has Average && averageStories^ aboutFire != ()) or (readingDuration has Long && longStories^ aboutFire != ())} [Non ho più voglia di leggere.]
+                ~ readingDuration = ()
+                -> book_test_intro           
+        
+        + {(readingDuration has Short && shortStories^ aboutFire == ()) or (readingDuration has Average && averageStories^ aboutFire == ()) or (readingDuration has Long && longStories^ aboutFire == ())}
+                -> shuffle
+
+    = about_rebellion  
+        + {readingDuration has Short && shortStories^ aboutRebellion != ()} [Che urli di ribellioni.]
+            ~ book = LIST_RANDOM(shortStories^ aboutRebellion)
+            -> refresh_book_lists -> from_list_to_books
+
+        + {readingDuration has Average && averageStories^ aboutRebellion != ()} [Che urli di ribellioni.]
+            ~ book = LIST_RANDOM(averageStories ^ aboutRebellion)
+            -> refresh_book_lists -> from_list_to_books
+        
+        + {readingDuration has Long && longStories^ aboutRebellion != ()} [Che urli di ribellioni.]
+            ~ book = LIST_RANDOM(longStories ^ aboutRebellion)
+            -> refresh_book_lists -> from_list_to_books            
+        
+        //Scelte di uscita se ho rifiutato tutte le opzioni precedenti.
+        + {(readingDuration has Short && shortStories^ aboutRebellion != ()) or (readingDuration has Average && averageStories^ aboutRebellion != ()) or (readingDuration has Long && longStories^ aboutRebellion != ())}[No, vorrei un altro tema.]
+                -> shuffle
+                
+                
+        + {(readingDuration has Short && shortStories^ aboutRebellion != ()) or (readingDuration has Average && averageStories^ aboutRebellion != ()) or (readingDuration has Long && longStories^ aboutRebellion != ())} [Non ho più voglia di leggere.]
+                ~ readingDuration = ()
+                -> book_test_intro           
+        
+        + {(readingDuration has Short && shortStories^ aboutRebellion == ()) or (readingDuration has Average && averageStories^ aboutRebellion == ()) or (readingDuration has Long && longStories^ aboutRebellion == ())}
+                -> shuffle                 
         
 ->->
 
@@ -174,12 +252,12 @@ VAR aboutSelfLove = (ValFaustoLattanzio)
     - longStories has book:
         ~ longStories -= book
     
-    - aboutLove has book:
-        ~ aboutLove -= book
-    - aboutRage has book:
-        ~ aboutRage -= book
-    - aboutBody has book:
-        ~ aboutBody -= book         
+    - aboutTransformation has book:
+        ~ aboutTransformation -= book
+    - aboutQuestions has book:
+        ~ aboutQuestions -= book
+    - aboutUnprepared has book:
+        ~ aboutUnprepared -= book         
 
 }
 ->->
