@@ -669,8 +669,8 @@ QUESTIONS
         {pronouns has him: <i>Il riscrittore...|{pronouns has her:<i>La riscrittora...|<i>Lə riscrittorə...}}
         
             + [<i>{~Assapora sulla lingua il sapore del cambiamento|Sente sulle mani un accesso di futuro|Freme nel lanciarsi verso ciò che arriverà}.]
-                    ~ cropsType += novità   
-                    ~ firstAnswerTracker = pianteNovità 
+                    ~ cropsType += novità
+                    ~ firstAnswerTracker = pianteNovità
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             + [<i>{~Indugia su ciò che è stato|Trova conforto nel ricordo di ciò che era|Si chiede dove sia casa}.]
                     ~ cropsType += ricordo
@@ -704,6 +704,7 @@ QUESTIONS
 {debugCultivable: <i>Il valore di cropsType è {cropsType}.}
  
     {
+    
     - cropsType == (collaborazione, ciclicità):{
         - LIST_RANDOM(pianteCollaborazione ^ pianteCiclicità) == ():
             {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
@@ -728,8 +729,8 @@ QUESTIONS
         
     - cropsType == (collaborazione, novità): {
         - LIST_RANDOM(pianteCollaborazione ^ pianteNovità) == ():
-            {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}       
-            ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+            {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.} 
+                ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i> Il fungo proposto è {chosenCultivable}.}   
             -> remove_fungo_proposto
             
@@ -992,7 +993,9 @@ QUESTIONS
 {debugCultivable: <i>Gli elementi ancora coltivabili sono: {backupCultivable}.}
 {debugCultivable: <i>Svuoto lista tipo Coltivazioni. Il contenuto di tipo Coltivazioni ora è {cropsType}.}
 {debugCultivable: <i>Svuoto lista firstAnswerTracker. Il contenuto di tipo firstAnswerTracker ora è {firstAnswerTracker}.}
+    -> chosen_cultivable
 
+=chosen_cultivable
 {chosenCultivable:
     - LicheneDegliAbissi:
         -> lichene_degli_abissi
