@@ -1,4 +1,32 @@
 //Cognome/alias L - R
+=== lamia
+<i>Il sassolino</i> di Lamia (she/they).
+
+    È iniziato tutto in una giornata mediocre.
+    Il sole era coperto da nuvole scialbe, e nell’aria ancora si sentiva l’olezzo dei campi fertilizzati di fresco.
+    Tutto è iniziato in una giornata così, anzi, tutto è iniziato nella vasca delle aragoste del ristorante Da Sallustio, in Porta Genova, in una giornata così.
+    Di colpo, uno dei sassolini del fondo dell’acquario ha iniziato a saltare.
+    All’inizio se ne era accorta solo Agata, la cameriera del turno pranzo del mercoledì, e non ci aveva nemmeno dato troppa importanza – dopotutto era assolutamente convinta che quelle aragoste sapessero più di quanto millantavano – ma poco a poco anche i clienti avevano iniziato a notarlo.
+    Un insignificante, minuscolo, delicato sassolino, era riuscito a darsi abbastanza spinta da saltare fuori – forse aiutato dalle correnti del depuratore, dicono alcuni – e a uscire indisturbato dalla porta del locale.
+    Saltellando.
+    Tutto sarebbe stato dimenticato in fretta, se non fosse che, due giorni dopo, la signora Dorotea giurò di aver visto un sassolino uguale saltare contro il muretto che separava le sue mangrovie dai ciliegi dei Beschi, facendone crollare un angolo.
+    Poi – continuando a giurare – un sassolino alla volta, se ne erano andati via.
+    In Sindaco, allarmato da questo sconvolgimento dell’ordine naturale delle cose – “I sassolini a terra!
+    Sono fondamenta, non pin-up!” gridò sulla gazzetta -, aveva indetto un consiglio d’urgenza con il capo delle forze dell’Ordine, il Commissario Giracollo, l’ingegnere e autoproclamato consigliere all’ordine estetico Ing. Stoppa, il direttore del circolo di bocce “Età d’argento” prof. Severo Giunta, il geologo Malacarta, e il parroco monsignor Levi.
+    «Si tratta di un chiaro attacco all’organo di ordine estetico. Oggi crolla un muretto, domani qui si torna al comunismo!» 
+    «Stoppa non si agiti, dopotutto è solo un sassolino. Insomma, basta ignoralo e svanirà da sé.»
+    «Giunta, intanto si sta parlando di un aggregato calcareo-biogenico con segni di erosione meccanica artificiale e una patina superficiale dovuta a interazioni con composti ammoniacali presenti nei reflui delle aragoste e modifiche dovute alla sinteticità del mangime. Analizziamolo con dovuta cura!» 
+    «Basta! Ho bisogno di capire come poterci muovere. Non voglio che sotto il mio mandato scoppi una rivoluzione. Giracollo, te che dici?»
+    «Sindaco, l’unica opzione qui è incollarli a terra. Tutti. Ogni muretto, ogni sasso del viale, ogni minuscola briciola di calcestruzzo che esce dalle fughe delle piastrelle di ogni cucina.»
+    «Inutile incollare qualcosa di demoniaco! Qui, sindaco, propongo di torchiare quelle aragoste, capire come hanno fatto a mettere certe idee strane in mente a quel sasso! Via la testa, il corpo cade.»
+    Mentre discutevano sulle tipologie di colla vinilica in commercio, e vagliavano la possibilità di gambizzare qualcosa che non possiede arti, un rumore attirò la loro attenzione: toc, toc.
+    Dei sassolini avevano iniziato a colpire la finestra.
+
+    + Vorrei leggere ancora
+       -> book_test_intro
+    + Me ne vado  
+    -> main
+
 
 === val_fausto_lattanzio
 <i>Home</i>, di Val Fausto Lattanzio (he/they).
