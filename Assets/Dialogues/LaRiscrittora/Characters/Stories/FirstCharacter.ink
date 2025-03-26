@@ -29,11 +29,12 @@
                     {charNameOne}: {~ Ho bisogno di tempo da sola.|Torna tra un po'.|Mi serve un po' di silenzio ora.}
                 -> main    
             }
-
+        TODO: questo come zoomer funziona, yeah <3
 = hub
 ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
 
     {charNameOne}: {~ Qui le farfalle non smettono mai di giocare!|Sono sicura di aver visto due scoiattoli giocare a nascondino!|Questo luogo odora di cose vere e antiche.}
+    TODO: nel dubbio aggiungi "Madonna che cringe", "Che sfigata che sono", "Ma come cazzo parlo?" -> autocritica.
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_first_character
                 
@@ -103,7 +104,8 @@
         //Presentazione.
         ~ firstStoryQuestCount ++
         
-        ???: Non è che hai visto passare di qui una persona?
+        
+        ???: Hai visto passare qualcunə?
         ???: Altə all’incirca una balla di fieno e che si muove come un violino, probabilmente presə a stordire di domande quella tizia, la mentore.
         ???: Non posso essere arrivata qui da sola, vero? Qualsiasi cosa sia <i>qui</i>.
         ???: Come lə trovo?
@@ -117,10 +119,11 @@
                 
             + (oneYellow) [Sicuro che il violino ha bisogno di un tamburo per tornare.]
                     ~ firstYellow ++
+                ???: A beh, ci sta!
+                ???: Ci sta!
                 ???: Non ci avevo pensato!
                 ???: Ma il suo violino è più da pianoforte.
                 ???: Forse potrei cercare nella serra, e trovare qualcosa da suonare.
-                ???: Mi piace comunque il tuo modo di pensare!
                 
             + (oneRed) [Seguiamo le sue tracce! Fiutiamo il suo odore.]
                 ~ firstRed ++
@@ -131,20 +134,22 @@
             + (oneGreen) [Se ti senti sola, sono qui ad ascoltarti.]
                 ~ firstGreen ++
                 ???: È una cosa molto gentile, davvero.
+                TODO: parlare così è CRINGE! è difficile sentire parlare così una ventenne.
                 ???: Ma è come chiedermi di fare un concerto con una persona sconosciuta.
                 ???: Ci vuole tempo per capire come armonizzare.
-                
+
             + (onePurple) [Tu sei sempre con ləi, ləi è sempre con te.]
                 ~ firstPurple ++
                 ???: Grazie.
                 ???: Avevo bisogno di queste parole.
                 ???: Ora lə sento più vicinə, anche se ho comunque bisogno di un suo abbraccio.
             -
+            TODO: rendere meno teatrale. Visto che è in ansia, fare qualcosa di più secco, es "Talco, ci sei?"
         ???: Talco, dimmi che sei qui anche tu, ti prego, non so capire il mondo senza di te.
         ???: Sei l'unica persona con cui posso permettermi di litigare.
         ???: E l'unica che mi sopporta da quando ho finito il conservatorio.
         ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameOne}.
-        {charNameOne}: No, io sono <b>{charNameOne}</b>.
+        ???: No, io sono <b>{charNameOne}</b>.
         {charNameOne}: Ehi! Non è questo il mio nome.
         {charNameOne}: <i>{charNameOne}</i>.
         {charNameOne}: Forse se provo a dirlo al contrario?
@@ -196,7 +201,8 @@
     	        {charNameOne}: Per lo meno faresti felice mio padre.
                     ~ firstBlue ++         
             -
-            
+        TODO: tende a passare da linguaggio alto a linguaggio gergale. è una cosa voluta, si prevede un cambiamento?
+        TODO: intercalari: adoro. ah, ci sta! ama. top (= grande, fantastico. non in chiave ironica). [sono tutti intercalari per non dire di preciso cosa penso sul tema.] blastato/a. cringe. normie (basicone). triggerata/o. Amo noi. Bestie (singolare e plurale). Chillare, sto nel chill, me la chillo. Crush. Flexare. Ghostare. Hype. Mood. Shippare (non solo romantico). Slay. Snitchare (fare la spia).
        {charNameOne}: Comunque sì, ti si addice benissimo, hai proprio una faccia da {name}.
        {charNameOne}: Ma forse la mia faccia è cambiata? Ti sembro una che può chiamarsi {charNameOne}?
        {charNameOne}: Una che ha rinunciato ad essere un pianoforte? Una viola?
