@@ -975,7 +975,7 @@
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        {charNameOne}: Ho realizzato una cosa, una cosa su noi due.
+        {charNameOne}: Ho capito una cosa su di noi, ama.
         {
             -   are_two_entities_together(Mentor, PG):{charNameFive}: Sicuro è il caso che vi lasci il vostro spazio.
                     ~ change_entity_place(Mentor)
@@ -987,38 +987,41 @@
         
             -> firstAffinityCalc ->
         {
-        - firstPurple && firstYellow > firstBlue: {charNameOne}: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
+        - firstPurple && firstYellow > firstBlue: {charNameOne}: Talco continua a mancarmi, ma con te mi sento come se fossimo parte da sempre della stessa band.
         <i>{charNameOne} vede {name} come una persona amica e fidata.</i>
         
-        -firstPurple or firstYellow > firstBlue:{charNameOne}: Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
+        -firstPurple or firstYellow > firstBlue:{charNameOne}: Non sei mica male, sai? Mi sembra che cantiamo un po' la stessa canzone.
         
         <i>{charNameOne} si trova bene con {name}.</i>
         
-        - firstPurple && firstYellow < firstBlue: {charNameOne}: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
+        - firstPurple && firstYellow < firstBlue: {charNameOne}: Non è che ci capiamo molto noi due, sai? È come se io suonassi Chopin e tu la lambada. Una lambada noiosa.
         
         <i>{charNameOne} non si è sentita capita da {name}.</i>
         
         
-        - else: {charNameOne}: A volte siamo sullo stesso brano, altre no. E non ho ancora capito chi tra noi stia ignorando l'altra parte.
+        - else: {charNameOne}: Siamo un po' in modalità random, vero? A volte ci avviciniamo, a volte ciaone proprio, tutta una musica diversa.
         
         <i>{charNameOne} non riesce a capire che rapporto sta costruendo con {name}.</i>
         
         }
-        {charNameOne}: E credo di aver capito perché il mio nome qui è {charNameOne}.
+        
+        {charNameOne}: Comunque: credo di aver capito perché il mio nome qui è {charNameOne}.
         {charNameOne}: Penso al Ghiberti.
-        {charNameOne}: Penso ai miei amici.
+        {charNameOne}: Penso all3 am3.
         {charNameOne}: Penso alla mia famiglia.
-        {charNameOne}: E vivo tutto come una pressione.
-        {charNameOne}: Una spinta da parte loro a fare qualcosa, cambiare qualcosa.
+        {charNameOne}: Non so se l'hai visto, ma tutta questa roba mi fa pressione.
+        {charNameOne}: Tutte le persone che conoscono mi stanno chiedendo di fare una scelta, di decidere che cosa fare da grande.
         {charNameOne}: Ma sinceramente, {name}?
-        {charNameOne}: Ho il terrore di dover fare una scelta.
+        {charNameOne}: Mi cago addosso all'idea di fare una scelta.
         {charNameOne}: Perché una scelta chiude strade.
         {charNameOne}: Perché una scelta delude persone.
         {charNameOne}: Perché una scelta può portarti su strade sbagliate.
-        {charNameOne}: E a quel punto, non si può più tornare.
+        {charNameOne}: E a quel punto, non si può più tornare indeitro.
         {charNameOne}: E così l'unica cosa che rimane è rinunciare.
         {charNameOne}: Lasciare che le altre persone scelgano per te.
         {charNameOne}: O che lo faccia il mondo.
+        {charNameOne}: Ecco perché mi chiamo {charNameOne}: perché rimango nel medio, nella cosa più ovvia e cringe.
+        {charNameOne}: E lascio che le cose accadano.
             
             + [Credo di sapere come aiutarti.]
                 -> statement
@@ -1061,7 +1064,7 @@
 	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }            
         
-        + [Eppure hai deciso di costruire una famiglia con l3 tu3 amic3.]
+        + [Eppure hai deciso di costruire una famiglia con l3 tu3 am3.]
             {name}: Hai aperto il tuo cuore, e loro ti amano.
             {name}: Si preoccupano per te, cercano di aiutarti a trovare la tua strada.
             {name}: E questo amore è frutto di infinite piccole scelte fatte ogni giorno.
@@ -1167,7 +1170,7 @@
 	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
         
-        + [Ma ogni persona ha immaginato sorti diverse per Jonah, ma nessuna fine.]
+        + [Tutt3 hanno immaginato sorti diverse per Jonah, ma nessuna fine.]
             {name}: Ogni passo avanti prevede la possibilità di tornare indietro.
             {name}: A volte è più difficile, a volte meno, ma è sempre possibile.
                 {
@@ -1189,7 +1192,7 @@
                 }
             
         
-        + [La storia di Jonah è un successo.]
+        + [A suo modo, la storia di Jonah è un successo.]
             {name}: Ha deciso che non gli stava più bene quello che aveva, e si è mosso per cambiarlo.
             {name}: E il leggere negativamente le cose che forse gli sono capitate raccontano nulla di Jonah e molto di chi le racconta.
             {name}: C'è orgoglio anche dietro una cassa del supermercato, non solo su palco.
@@ -1282,13 +1285,13 @@
         -     
         
     {charNameOne}: Grazie, {name}.
-    {charNameOne}: Mentre parlavi mi è nata una nuova canzone in testa.
-    {charNameOne}: Qualcosa di fresco, di pronto a cambiare.
-    {charNameOne}: La canzone del mio vero nome.
+    {charNameOne}: Mentre ti ascoltavo mi è nata una nuova canzone in testa.
+    {charNameOne}: La canzone del mio nome.
         
         {
             - firstCharacterPossibleStates has Chitarra:
-                {charNameOne}: Che <b>resterà Chitarra</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
+                {charNameOne}: Non vorrei deluderti, ma <b>resterà Chitarra</b>, perché l'unica cosa che posso fare è non fare nulla e lasciare che le cose accadano.
+                {charNameOne}: Perdonami il cringe, ma non posso fare diversamente.
             
             - firstCharacterPossibleStates has Triangolo:
                 {charNameOne}: E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
@@ -1330,11 +1333,12 @@
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     
-        {charNameOne}: C'è una cosa che vorrei dirti, {name}.
+        {charNameOne}: C'è una cosa che devo dirti ama.
         {charNameOne}: Riguarda {charNameFive}.
-        {charNameOne}: Qual è il confine tra essere una brava persona ed essere una manipolatrice?
-        {charNameOne}: Me lo sto chiedendo da quando sono arrivata.
-        {charNameOne}: E se hai intenzione di restare qui a lungo, forse devi chiedertelo anche tu.
+        {charNameOne}: Non voglio semprare una snitch ma continuo a chiedermi: qual è il confine tra essere una brava persona ed essere una manipolatrice?
+        {charNameOne}: A me non la conta giusta quella.
+        {charNameOne}: Però tra un po' mi potrò levare di culo e non è più un mio problema.
+        {charNameOne}: Ma se hai intenzione di restare qui a lungo, forse devi chiedertelo anche tu.
             ~ firstStory = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(firstStory)
@@ -1342,7 +1346,7 @@
             
     = exit
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        {charNameOne}: Credo rimarrò ancora in giro per un poco, in attesa del prossimo treno.
+        {charNameOne}: E ora resterò qui a romperti le gonadi ancora per un po', in attesa del prossimo treno.
             ~ firstStory = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(firstStory)
@@ -1361,15 +1365,15 @@
     }
     
         - (top)
-        {charNameOne}: {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me.|Sono sicura di aver visto un'altra persona alla stazione, ma quando ho cercato di raggiungerla è scomparsa.|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
+        {charNameOne}: {~ Quanto mi prenderà per il culo Talco, quando lə racconterò tutta questa storia?.|Comunque in questo posto dovreste mettere almeno un piano bar.|Se lo dico all3 am3 del conservatorio mi fanno il culo, ma vado pazza per le k-pop night.|Ma tu l'hai vista quella strana rana nello stagno?}
                 ~ firstCharEndingDialogue ++
         -> main
         
         = goodbye
         ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        {charNameOne}: {name}, per me è arrivato il momento di tornare a casa.
-        {firstCharacterPossibleStates hasnt Chitarra: {charNameOne}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
-        {firstCharacterPossibleStates hasnt Chitarra: {charNameOne}: Grazie per quello che hai fatto, davvero.}
+        {charNameOne}: Ama: è il momento di tornare a casa.
+        {firstCharacterPossibleStates hasnt Chitarra: {charNameOne}: Non ho idea di che cosa accadrà, sinceramente, ma almeno ora mi sento pronta.}
+        {firstCharacterPossibleStates hasnt Chitarra: {charNameOne}: E non cringiare ma: grazie. Mi hai dato una mano enorme. Me lo ricoderò.}
         {firstCharacterPossibleStates has Chitarra: {charNameOne}: Vedremo cosa mi accadrà.}
             
             ~ move_entity(FirstCharacter, Safekeeping)
@@ -1387,7 +1391,7 @@
 === first_character_opinions
 ~ temp charNameOne = uppercaseTranslator(firstCharacterState) 
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
-    {charNameOne}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?|Secondo te potrei insegnare alle api a creare un quartetto? Con quelle codine sarebbero perfette con la viola. O forse qualcosa da suonare con le ali, che vibri. Potrebbero muoversi nella cassa di una chitarra e fare i loro suonini.|Durante le lezioni il prof Ghiberti aveva l’abitudine di tirarsi il colletto del maglioncino. Li aveva tutti rovinati, se li tirava così tanto che a volte ti chiedevi se gli mancava l’aria.|Al Conservatorio ci sono troppe cose che non c’entrano con la musica. C’è competitività, c’è senso di fretta, di perfezione. Però mi manca, sai? Tutto quello che sta tra una lezione e l’altra, tutto quel parlare di musica mi faceva sentire viva.|Quando ho solo la mia chitarrina, è come se uscisse un’altra me. Non conta più l’insieme ma il momento, la singola nota è come un tratto di pennello, e improvvisare diventa come dipingere. Non so improvvisare col pianoforte, ci sono troppe aspettative.|Litigo spesso con mio padre. È un brav’uomo, molto pratico. Si preoccupa per me perché nel suo mondo tutto fatto di numeri e linee uscire dalla via principale significa morire. E forse ha ragione ma per me è morire anche restare in quelle cose. Schiacciata tra quelle regole.}
+    {charNameOne}: {~ Talco dice sempre che bisogna sporcarsi le mani per capire il mondo.|Se proprio devo restare qui, tiro su una band con le api. Sono troppo chaddone loro.|Comunque il Ghiberti ha una moglie che è stra in gamba. Forse a volte ci si deve compensare. E visto che Talco è svegliə, io allora sono l'idiota della cumpa.|Resti tra noi, ma il Conservatorio è un posto del cazzo. C'è una competitività che non c'entra nulla con la musica.|Mi scoccia litigare con mio padre, ma io e il suo modo di fare NON. ANDIAMO. D'ACCORDO. Zero, ama. Zero.}
         ~ firstPauseTalking = firstCharPauseDurantion
             -> main
 
