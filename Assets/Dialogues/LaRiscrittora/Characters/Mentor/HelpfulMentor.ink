@@ -138,6 +138,7 @@
 
     - (top)
     {charNameFive}: Cosa vorresti evitare?
+    
     + {alcoholism == true}[Non voglio che si parli di <b>dipendenza da sostanze</b>.]
         {charNameFive}: Perfetto.
         ~ alcoholism = false
@@ -146,7 +147,7 @@
             ~ unreadStories -= Aza
         }
             -> top
-    + {alcoholism == false}[Ho cambiato idea: lascia che il tema delle <b>dipendenze da sostanze</b> sia presente.]
+    + {alcoholism == false}[Lascia che il tema della dipendenza da sostanze sia presente.]
         {charNameFive}: Ottimo.
         ~ alcoholism = true
         {
@@ -170,7 +171,7 @@
             ~ unreadStories -= BeatriceYBottura             
         }
             -> top
-    + {abuses == false}[Ora me la sento di sentire storie su <b>violenza psicologica subita, inflitta o autoinflitta</b>.]
+    + {abuses == false}[Vorrei sentire anche storie su violenza psicologica subita, inflitta o autoinflitta.]
         {charNameFive}: Perfetto.
         ~ abuses = true
         {
@@ -199,7 +200,7 @@
         }    
             -> top
             
-    + {mourning == false} [Ho cambiato idea: me la sento di parlare di lutto.]
+    + {mourning == false} [Ho cambiato idea: me la sento di parlare di lutto e morte.]
         {charNameFive}: Grandioso.
         ~ mourning = true
         {
@@ -227,7 +228,7 @@
                 ~ unreadStories -= AdriAllora                 
         }     
             -> top
-    + {fisicalAbuses == false} [Ora posso sentire parlare di <b>abusi fisici subiti o autoinflitti</b>.]
+    + {fisicalAbuses == false} [Ora posso sentire parlare di abusi fisici subiti o autoinflitti.]
         {charNameFive}: Perfetto.
         ~ fisicalAbuses = true
         {
@@ -261,7 +262,7 @@
         } 
             -> top_due
     + {dysphoria == false}[Ho cambiato idea: affrontiamo storie legate alla disforia e alla dismorfia.]
-        {charNameFive}: Ottimo.
+        {charNameFive}: Sarà fatto.
         ~ dysphoria = true
         {
             - unreadStories hasnt ValFaustoLattanzio: 
@@ -275,7 +276,7 @@
         ~ sex = false
             -> top_due
     + {sex == false}[Introduci anche storie legate al sesso.]
-        {charNameFive}: Ottimo.
+        {charNameFive}: Sarà fatto.
         ~ sex = true
             -> top_due
     
@@ -289,8 +290,8 @@
         }     
         ~ depression = false
             -> top_due
-    + {depression == false}[Introduci storie legate al malessere psicologico.]
-        {charNameFive}: Ottimo.
+    + {depression == false}[Introduci storie legate a depressione, ansia, pensieri intrusivi.]
+        {charNameFive}: Sarà fatto.
         ~ depression = true
         {
             - unreadStories hasnt StenoArtico: 
@@ -309,7 +310,7 @@
         }        
             -> top_due
     + {religion == false}[Introduci anche storie sull'educazione religiosa severa.]
-        {charNameFive}: Ottimo.
+        {charNameFive}: Sarà fatto.
         ~ religion = true
         {
             - unreadStories hasnt Beatrice: 
@@ -318,7 +319,58 @@
             -> top_due            
     
     
-    + [Fammi rivedere i temi precedenti.]
+    + [I temi che voglio cambiare sono altri.]
+        -> top_three
+    + [Sono a posto così.]
+        ->->
+    - 
+    
+    
+    - (top_three)
+    {charNameFive}: Cosa vorresti evitare?
+    
+    + {racism == true}[Non voglio storie che parlino di <b>razzismo</b>.]
+        {charNameFive}: Capisco benissimo.
+        ~ racism = false
+            -> top_three
+    + {racism == false}[Ho cambiato idea: introduci anche storie che parlino di razzismo.]
+        {charNameFive}: Subito.
+        ~ racism = true
+            -> top_three
+            
+    
+    + {misoginy == true}[Non parliamo di <b>misoginia</b>.]
+        {charNameFive}: Fatto.
+        ~ misoginy = false
+            -> top_three
+    + {misoginy == false}[Introduci anche storie che parlano di misoginia.]
+        {charNameFive}: Sarà fatto.
+        ~ misoginy = true
+            -> top_three
+    
+     + {abilism == true}[Non voglio si parli di <b>abilismo</b>.]
+        {charNameFive}: Fatto.
+        ~ abilism = false
+            -> top_three
+    + {abilism == false}[Introduci storie legate all'abilismo.]
+        {charNameFive}: Sarà fatto.
+        ~ abilism = true
+    
+            -> top_three
+            
+    + {LGBTQIA == true}[Non parliamo di <b>odio verso le persone LGBTQIA+</b>.]
+        {charNameFive}: Fatto.
+        ~ LGBTQIA = false
+      
+            -> top_three
+    + {LGBTQIA == false}[Introduci anche storie che trattano di odio verso le persone LGBTQIA+.]
+        {charNameFive}: Sarà fatto.
+        ~ LGBTQIA = true
+            
+            -> top_three            
+    
+    
+    + [Voglio rivedere i primi temi.]
         -> top
     + [Sono a posto così.]
         ->->

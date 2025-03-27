@@ -30,6 +30,10 @@ VAR dysphoria = true
 VAR sex = true
 VAR religion = true
 VAR depression = true
+VAR racism = true
+VAR misoginy = true
+VAR abilism = true
+VAR LGBTQIA = true
 
 /* ---------------------------------
 
