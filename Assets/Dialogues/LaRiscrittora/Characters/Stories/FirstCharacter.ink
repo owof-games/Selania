@@ -29,20 +29,18 @@
                     {charNameOne}: {~ Ho bisogno di tempo da sola.|Torna tra un po'.|Mi serve un po' di silenzio ora.}
                 -> main    
             }
-        TODO: questo come zoomer funziona, yeah <3
 = hub
 ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
 
-    {charNameOne}: {~ Qui le farfalle non smettono mai di giocare!|Sono sicura di aver visto due scoiattoli giocare a nascondino!|Questo luogo odora di cose vere e antiche.}
-    TODO: nel dubbio aggiungi "Madonna che cringe", "Che sfigata che sono", "Ma come cazzo parlo?" -> autocritica.
+    {charNameOne}: {~ Le farfalle qui giocano per ore. Adoro!|No dai. Ma hai visto quanto sono carini gli scoiattoli?!|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_first_character
                 
                 
             //Se non ho ancora fatto il dono e NON ho parlato col mentore e ho parlato abbastanza con lei
             + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
-                    {charNameOne}: Ti ringrazio, non hai ancora chiesto alla mentore a cosa servono.
-                    {charNameOne}: Forse conviene che prima parli con lei.
+                    {charNameOne}: Non voglio snitcahre, ma non hai ancora chiesto alla mentore a cosa servono.
+                    {charNameOne}: Se non parli con lei prima poi minimo ci rimane male.
                         -> main
             
             //Se non ho ancora fatto il dono e ho parlato con il mentore e ho parlato abbastanza con lei
@@ -51,7 +49,7 @@
         
             //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
             + {first_story_gift.ink_outcome && not main_story_first_character && not questions} [Vorrei aiutarti a guardare le cose in modo diverso.]
-                    {uppercaseTranslator(firstCharacterState)}: Non credo che il mentore ti abbia spiegato come si fa questa cosa. Vai da lei prima.
+                    {uppercaseTranslator(firstCharacterState)}: Ama, parla prima con la mentore così ti dice cosa fare e non le prende una sincope se facciamo casini.
                             -> main
                             
             + {first_story_gift.ink_outcome && not main_story_first_character &&  questions} [Ti va di riscrivere la tua storia con me?]
@@ -106,9 +104,12 @@
         
         
         ???: Hai visto passare qualcunə?
-        ???: Altə all’incirca una balla di fieno e che si muove come un violino, probabilmente presə a stordire di domande quella tizia, la mentore.
-        ???: Non posso essere arrivata qui da sola, vero? Qualsiasi cosa sia <i>qui</i>.
+        ???: Altə all’incirca una balla di fieno e che si muove come un violino.
+        ???: O almeno ləi si descriverebbe così.
+        ???: Lə adoro ma è sempre un po' edgy.
+        ???: E comunque non posso essere arrivata qui da sola, vero? Qualsiasi cosa sia <i>qui</i>.
         ???: Come lə trovo?
+        
             + (oneBlue) [Dammi dettagli più concreti.]
                     ~ firstBlue ++
                 ???: Concreti?
@@ -128,27 +129,28 @@
             + (oneRed) [Seguiamo le sue tracce! Fiutiamo il suo odore.]
                 ~ firstRed ++
                 ???: Ha senso, ma Talco non è persona da azione.
-                ???: Si trascina nello spazio come se fosse vento.
+                ???: Dice sempre che si trascina nello spazio come se fosse vento.
                 ???: E lascia alle sue spalle l'odore della primavera.
+                ???: Che è un modo carino per dire che è sempre piene di fango e terriccio.
                 
             + (oneGreen) [Se ti senti sola, sono qui ad ascoltarti.]
                 ~ firstGreen ++
-                ???: È una cosa molto gentile, davvero.
-                TODO: parlare così è CRINGE! è difficile sentire parlare così una ventenne.
+                ???: Grazie ama.
                 ???: Ma è come chiedermi di fare un concerto con una persona sconosciuta.
-                ???: Ci vuole tempo per capire come armonizzare.
+                ???: Non è che ci si piglia subito, no?
 
             + (onePurple) [Tu sei sempre con ləi, ləi è sempre con te.]
                 ~ firstPurple ++
-                ???: Grazie.
-                ???: Avevo bisogno di queste parole.
-                ???: Ora lə sento più vicinə, anche se ho comunque bisogno di un suo abbraccio.
+                ???: Mmm, ok, credo?
+                ???: Le parole mi vanno anche bene, ma chi ti conosce.
+                ???: No dai, non devo essere stronza.
+                ???: Però merda se mi manca.
             -
-            TODO: rendere meno teatrale. Visto che è in ansia, fare qualcosa di più secco, es "Talco, ci sei?"
-        ???: Talco, dimmi che sei qui anche tu, ti prego, non so capire il mondo senza di te.
-        ???: Sei l'unica persona con cui posso permettermi di litigare.
+        ???: Non faccio mai niente senza Talco.
+        ???: Quanto sono needy?
+        ???: Ma Talco è l'unica persona con cui posso permettermi di litigare.
         ???: E l'unica che mi sopporta da quando ho finito il conservatorio.
-        ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameOne}.
+        ???: Ma che normie che sono, non mi sono manco presentata: io sono {charNameOne}.
         ???: No, io sono <b>{charNameOne}</b>.
         {charNameOne}: Ehi! Non è questo il mio nome.
         {charNameOne}: <i>{charNameOne}</i>.
@@ -160,54 +162,64 @@
     	    + [Il mio nome è...]
     	        -> name_choice ->
     	    -
-    	{charNameOne}: E con che pronomi vuoi che ti chiami?
+    	{charNameOne}: E i tuoi pronomi?
     	        -> gender ->
-    	{charNameOne}: Grandioso, io uso i femminili.
-    	{charNameOne}: Comunque questa cosa del nome è strano.
+    	{charNameOne}: Top! Io uso i femminili.
+    	{charNameOne}: Comunque questa cosa del nome è cringe.
     	{charNameOne}: Non so.
     	{charNameOne}: Non è male la chitarra.
     	{charNameOne}: Ma per una del conservatorio è tipo rinunciare a tutto.
     	{charNameOne}: Alle ambizioni.
-    	{charNameOne}: Dove vado se sono solo una arresa chitarra?
-        {charNameOne}: Ma {name}, secondo te il nome di una persona è qualcosa di importante?
+    	{charNameOne}: La chitarra è un po' un arrendersi, e dove vado se mi arrendo?
+        {charNameOne}: {name}, secondo te il nome di una persona è importante?
     	    
             + [È uno strumento di controllo.]
-                {charNameOne}: O uno strumento d'amore.
+                {charNameOne}: Questa è una cosa basata.
+                {charNameOne}: Il nome è anche uno strumento d'amore.
                 {charNameOne}: Pensa a tutti i modi in cui qualcuno lo può gridare.
+                {charNameOne}: Sono sicura che te ne verranno in mente un paio molto piacevoli.
                     ~ firstRed ++
             
             + [Solo se possiamo continuamente cambiarlo.]
-                {charNameOne}: Ah ah ah!
-                {charNameOne}: Adoro.
+                {charNameOne}: Adoro!
                 {charNameOne}: Passo le giornate a cambiare melodie, e non avevo mai pensato di cambiare il mio nome!
+                {charNameOne}: Cosa normie proprio ora che ci penso, viste tutt3 l3 am3 non binari3 con cui esco.
+                {charNameOne}: Mi merito di essere una chitarra!
                     ~ firstYellow ++
                     
             + [Solo se sei tu a definirne il significato e non altri.]
+                {charNameOne}: Ah, ci sta!
                 {charNameOne}: Tu sì che sai guardare al cuore delle cose!
-                {charNameOne}: Eppure ora mi ritrovo con un nome nuovo.
+                {charNameOne}: Quindi: ora mi ritrovo con un nome nuovo.
                 {charNameOne}: E non so cosa significhi, cosa doverci fare.
+                {charNameOne}: Però posso farci quello che voglio, no?
                     ~ firstPurple ++
                     
             + [È un dono della tua famiglia che resterà sempre con te.]
+                {charNameOne}: A I U T O!
                 {charNameOne}: Non ci avevo mai pensato.
                 {charNameOne}: Ma non tutt3 ne sono felici.
-                {charNameOne}: E per alcune persone il nome è qualcosa che si sceglie.
-                {charNameOne}: Una liberazione.
+                {charNameOne}: E per alcune ame il nome è qualcosa che si sceglie.
+                {charNameOne}: Smollare quello vecchio è una liberazione.
                     ~ firstGreen ++
                     
             + [È utile, altrimenti come ci distinguiamo?]
-    	        {charNameOne}: Tu devi essere la persona più divertente della festa, vero?
+                {charNameOne}: Capiamoci: sei sempre così {pronouns has him: rigido|{pronouns has her: rigida|rigidə}}?
+    	        {charNameOne}: La persona più divertente della festa, vero?
     	        {charNameOne}: Anche se immagino che una visione pratica abbia dei vantaggi.
     	        {charNameOne}: Per lo meno faresti felice mio padre.
+    	        {charNameOne}: Madonna, che piagnona che sono.
                     ~ firstBlue ++         
             -
-        TODO: tende a passare da linguaggio alto a linguaggio gergale. è una cosa voluta, si prevede un cambiamento?
-        TODO: intercalari: adoro. ah, ci sta! ama. top (= grande, fantastico. non in chiave ironica). [sono tutti intercalari per non dire di preciso cosa penso sul tema.] blastato/a. cringe. normie (basicone). triggerata/o. Amo noi. Bestie (singolare e plurale). Chillare, sto nel chill, me la chillo. Crush. Flexare. Ghostare. Hype. Mood. Shippare (non solo romantico). Slay. Snitchare (fare la spia).
-       {charNameOne}: Comunque sì, ti si addice benissimo, hai proprio una faccia da {name}.
+
+       {charNameOne}: Comunque ama: il tuo nome ti si addice benissimo.
+       {charNameOne}: Hai proprio una faccia da {name}.
        {charNameOne}: Ma forse la mia faccia è cambiata? Ti sembro una che può chiamarsi {charNameOne}?
        {charNameOne}: Una che ha rinunciato ad essere un pianoforte? Una viola?
+       {charNameOne}: Certo {charNameOne} che sei basicona con queste domande.
+       
             + [Quindi per cambiare faccia basta cambiarci il nome?]
-                {firstYellow > 1: {charNameOne}: {name}, tu e io faremo amicizia presto!}
+                {firstYellow > 1: {charNameOne}: Ama, tu e io faremo amicizia presto!}
                 {charNameOne}: Cavolo, passerei le giornate a essere chiunque!
                 {charNameOne}: E forse ora potrei essere Talco.
                 {charNameOne}: Dove sei, Talco?
@@ -217,46 +229,40 @@
                 {firstBlue > 1: {charNameOne}: {name}, sai che ogni tanto puoi scendere da ovviolandia, vero? }
                 {charNameOne}: Forse dovrei chiamarti Linea.
                 {charNameOne}: Anzi, Quadrato.
-                {charNameOne}: Perché neanche a volerlo sai rotolare troppo lontano dalla superficie delle cose.
+                {charNameOne}: Perché neanche a volerlo sai rotolare lontano dalla superficie delle cose.
                     ~ firstBlue ++
                
             + [Rinunciare al superfluo ci avvicina alla natura delle cose.]
-                {firstPurple > 1: {charNameOne}: Le tue parole mi fanno sentire meno sola.}
+                {firstPurple > 1: {charNameOne}: {name}, continua così e ci shippo tantissimo!}
                 {charNameOne}: Ho pensato subito che {charNameOne} avesse un valore negativo.
                 {charNameOne}: Dimenticandomi che in ogni brano il silenzio è parte fondamentale.
-                {charNameOne}: Grazie, {name}. La tua saggezza è illuminante.
+                {charNameOne}: Grazie ama!
                     ~ firstPurple ++
             
             + [Cosa pensi direbbe Talco di questo nome?]
-                {firstGreen > 1: {charNameOne}: Ancora non ci conosciamo, ma ho l'impressione che tu sappia parlare molto col cuore.}
+                {firstGreen > 1: {charNameOne}: A te piace parlare di sentimenti e relazioni, vero?}
                 {charNameOne}: Questa è una domanda molto tenera.
-                {charNameOne}: Ma la risposta lo sarebbe meno.
+                {charNameOne}: Ma Talco mi blasterebbe, sicuro.
+                {charNameOne}: Mi direbbe che sono una frignona, e di andare a suonare qualcosa.
                 {charNameOne}: Talco è una persona che agisce, non resta ad aspettare.
                     ~ firstGreen ++
             
             + [A te va bene essere {charNameOne}? Perché non Lotta? Azione?]
-                {firstRed > 1: {charNameOne}: Ho l'impressione che tu prenda tutto di pancia, vero?}
-                {charNameOne}: {charNameOne} non è il mio vero nome, ma non trovo più il mio.
-                {charNameOne}: E poi, parlare con te non è già una forma di azione?
+                {firstRed > 1: {charNameOne}: Tu prendi tutto di pancia, vero? Saresti {pronouns has him: lo|{pronouns has her: la|lə}}} bestie di Talco.
+                {charNameOne}: Mi merito {charNameOne} perché ultimamente ho proprio smollato tutto.
+                {charNameOne}: Però ama, parlare con te non è già una forma di azione?
                     ~ firstRed ++
             -
        {charNameOne}: Come mi dovrei chiamare secondo te?
-    	    + {gifts_and_ink}[Secondo la mentore è qualcosa che capiremo col tempo, assieme.]
     	    + [<i>Qualsiasi cosa tu abbia pensato, non riesci a dirla.</i>]
-    	-
+    	    -
         {charNameOne}: Mmm.
         {charNameOne}: La tua bocca si muove ma non esce nulla.
         {charNameOne}: Interessante.
-        {charNameOne}: Forse quella mentore può aiutarci a capire qualcosa?
-        {charNameOne}: O forse va bene così.
-        {charNameOne}: Forse mi serve questa confusione.
-        {charNameOne}: Forse sto suonando da troppo tempo la solita canzone, ma non è più la mia.
-        {charNameOne}: Forse devo trovare nuove note, o un nuovo strumento.
-        {charNameOne}: O forse questo luogo ha bisogno della mia musica?
+        {charNameOne}: Forse quella tizia che gira quì può aiutarci a capire qualcosa?
+        {are_two_entities_together(Mentor, PG): ???: In effetti avrei un paio di informazioni utili da darti, nuova persona!}
         {charNameOne}: L’unica cosa certa è che ho bisogno di Talco.
-        {charNameOne}: Tu l’hai visto?
-        {charNameOne}: No, non dirmelo, sono sicura che lə troverò nel bosco.
-        {charNameOne}: A dopo!
+        {charNameOne}: Ci vediamo dopo, ama.
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main
         
@@ -266,47 +272,54 @@
         //Paura di deludere la famiglia scelta
         ~ firstStoryQuestCount ++
         
-        {charNameOne}: Alla fine niente Talco.
-        {charNameOne}: Non ricordo quando è stata l'ultima volta che sono andata da qualche parte senza di ləi.
-        {charNameOne}: Prima mi sono persa nel cercarlə.
+        {charNameOne}: Non riesco a trovare Talco.
+        {charNameOne}: Forse devo fare pace col cervello è accettare che non è qui.
+        {charNameOne}: Ma non ricordo quando è stata l'ultima volta che sono andata in giro senza di ləi.
+        {charNameOne}: Prima mi sono pure persa nel cercarlə.
         {charNameOne}: Ok, forse mi sono distratta cercando di raggiungere uno scoiattolo perché aveva la ghianda più bella che avessi mai visto.
         {charNameOne}: Volevo insegnargli a suonarla, e invece mi sono ritrovata tra gli alberi senza sapere dove andare.
         {charNameOne}: E c’erano otto sentieri diversi davanti a me.
         {charNameOne}: Otto!
-        {charNameOne}: Ma poi come fanno ad esserci otto sentieri in un posto dove ci siamo solo noi?
+        {charNameOne}: Otto sentieri per tre persone?
+        
             + [O forse il sentiero è unico, ma ci sono otto te.]
+                {charNameOne}: Ah, ci sta!
                 {charNameOne}: In effetti mi sento divisa, frammentata.
                 {charNameOne}: In questo periodo della mia vita ci sono troppe spinte.
                 {charNameOne}: E non so dove andare.
                     ~ firstPurple ++
             
             + [Ok l'amicizia con Talco, ma devi essere indipendente.]
-                {charNameOne}: Talco e io siamo due parti della stessa armonia.
-                {charNameOne}: Sappiamo essere indipendenti.
-                {charNameOne}: Ma in momenti come questo, so suonare solo se è con me.
+                {charNameOne}: Ama, prenditi meno spazi, grazie.
+                {charNameOne}: Talco e io siamo due parti della stessa armonia, ma sappiamo essere indipendenti.
+                {charNameOne}: È  che in momenti come questo so suonare solo se è con me.
                     ~ firstRed ++
             
             + [Esiste un numero definito di sentieri per persona?]
-                {charNameOne}: Credo dipenda dal tempo a disposizione.
-                {charNameOne}: Un po' come puoi suonare qualsiasi strumento, se hai del tempo.
-                {charNameOne}: Ma quanto tempo serve per creare otto sentieri da sola?
+                {charNameOne}: Non era quello il punto, ama.
+                {charNameOne}: Ma credo dipenda dal tempo a disposizione.
+                {charNameOne}: Alla fine puoi suonare qualsiasi strumento, se ne hai il tempo.
+                {charNameOne}: Ma quanti mesi servono per creare otto sentieri da sola?
                     ~ firstBlue ++
                     
             + [Vorresti suonare qualcosa per Talco?]
-                {charNameOne}: Sarebbe carino, sì.
-                {charNameOne}: Ma forse prima devo capire perché ho questo nuovo nome, cosa farmene.
+                {charNameOne}: Adoro.
+                {charNameOne}: Ma magari non ora.
+                {charNameOne}: Forse prima devo capire perché ho questo nuovo nome, cosa farmene.
                     ~ firstGreen ++
             
             + [Non so molto di scoiattoli, ma le falene suonano i girasoli!]
-                {charNameOne}: Cavoli! Scoiattoli e falene, sarebbe la miglior band possibile!
+                {charNameOne}: Toppissimo!
+                {charNameOne}: Scoiattoli e falene sarebbero la migliore band possibile!
+                {charNameOne}: Tipo gli Stray Kids della natura.
                 {charNameOne}: E credo di aver visto una lumaca prima, potrebbe tenere il tempo!
                 ~ firstYellow ++
     
             -    
-        {charNameOne}: Non è che saranno tutti i passi della mentore?
+        {charNameOne}: Che poi a pensarci bene, non è che saranno tutti i passi di quell'altra?
         {charNameOne}: Cammina così tanto, e per cosa poi?
-        {charNameOne}: Uh, forse devo imitarlo.
-        {charNameOne}: Credo farò due passi.
+        {charNameOne}: Ma troppe chiacchiere ora, troppe.
+        {charNameOne}: Fammi chillare un attimo, a dopo!
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main  
             
@@ -314,56 +327,65 @@
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     ~ firstStoryQuestCount ++
-    
+        
         {charNameOne}: Stavo pensando ad Anna.
-        {charNameOne}: Anna è una delle mie amiche del conservatorio.
-        {charNameOne}: Ha un anno meno di me e ora vuole che mi proponga come assistente del Ghiberti.
-        {charNameOne}: Dice che lui ha stima di me e questa è la mia occasione.
-        {charNameOne}: Anna è così sicura di sè da quando ha lasciato l'ex molesto.
-        {charNameOne}: Anna e Olga discutono spesso perché Olga pensa che con la classica io sia sprecata.
-        {charNameOne}: Che devo mettere su una band e invadere tutti i locali della città.
-        {charNameOne}: Olga crede che Talco la veda come lei, ma in realtà Talco vuole che punti sui reality show.
+        {charNameOne}: Anna è una mia bestie del conservatorio.
+        {charNameOne}: Insiste perché mi proponga come assistente del Ghiberti.
+        {charNameOne}: Dice che lui ha stima di me e questa è la mia GRANDE occasione.
+        {charNameOne}: E non per flexare, ma so che me la caverei bene.
+        {charNameOne}: Anna è così sicura di sè da quando ha lasciato l'ex redpillato! Adoro.
+        {charNameOne}: A volte Anna e Olga discutono perché Olga pensa che io con la classica sia buttata via.
+        {charNameOne}: Dice che devo mettere su una band e invadere tutti i locali della città.
+        {charNameOne}: Olga è sicura che Talco le dia ragione, ma Talco vuole che mi butti sui reality show.
         {charNameOne}: Dice che non importa vincere, importa fare casino così poi sui social se ne parla.
+        {charNameOne}: Che è una cosa un po' normie, ma ha il suo senso.
         {charNameOne}: E poi Ennio, no Ennio no.
         {charNameOne}: Ennio dice che ho sbagliato strada.
         
             
             + [La risposta è sempre dove c'è casino: ascolta Talco!]
-                {charNameOne}: Voi due andreste d'accordo tantissimo, cavolo.
-                {charNameOne}: Potrei portarvi sul palco e fare qualcosa di assurdo.
-                {charNameOne}: Tipo suonare con una papera in testa!
+                {charNameOne}: Voi due diventereste bestie in due secondo, cavolo.
+                {charNameOne}: E potrei portarvi sul palco e fare qualcosa di assurdo.
+                {charNameOne}: Tipo creare uno xilofono di papere!
+                {charNameOne}: Sarebbe toppissimo!
                     ~ firstYellow ++
             
             + [Anna ha ragione: bisogna essere pratiche nella vita.]
                 {charNameOne}: La praticità non è tutto.
-                {charNameOne}: A questo punto dovevo iscrivermi ad economia.
+                {charNameOne}: Sennò avrei dovuto iscrivermi a economia.
                 {charNameOne}: E inventare nuove supercazzole per fregare il prossimo.
+                {charNameOne}: O far finta di predire il futuro scazzando più di Nostradamus.
                     ~ firstBlue ++        
     
             + [Tutte le strade sono sbagliate se non sai dove stai andando.]
                 {charNameOne}: Mi ricordi il nonno.
                 {charNameOne}: Ignorava i piccoli fastidi per concentrarsi sul grande insieme delle cose.
+                {charNameOne}: A me non viene benissimo questa cosa però.
+                {charNameOne}: Quanto son cringe.
                     ~ firstPurple ++
             
             + [E cosa vuole {charNameOne}?]
                 {charNameOne}: Ora?
                 {charNameOne}: Un letto caldo, una copertina.
-                {charNameOne}: E non doversi porre questa domanda.
+                {charNameOne}: Chillare.
+                {charNameOne}: E non doversi fare questa domanda.
                     ~ firstGreen ++
             
             + [Ascolta Olga e invadi il mondo!]
-                {charNameOne}: Sono più dell'idea di ricrearlo assieme.
+                {charNameOne}: Tu sei un treno, {name}. Chi ti ferma?
+                {charNameOne}: Ma io sono più dell'idea di ricrearlo assieme questo maledetto mondo.
                 {charNameOne}: Ascoltarci a vicenda, entrare in armonia.
                 {charNameOne}: E ricostruire sulle macerie che ci circondano.
+                {charNameOne}: Ora datemi il Nobel per la pace, su!
                     ~ firstRed ++        
                     
 
             -    
-        {charNameOne}: Oh, tutti hanno una loro opinione su cosa dovrei fare.
-        {charNameOne}: Tutt3 loro sembra abbiano preso una strada precisa e definita, non ho idea di come facciano.
-        {charNameOne}: Ma la cosa che mi preoccupa di più è che possa deluderle.
+        {charNameOne}: Comunque sembra che tutt3 abbiano le idee chiare su cosa dovrei fare.
+        {charNameOne}: E dato che nessunə amə ha la stessa opinione delle altre, finirò per deluderne qualcunə.
         {charNameOne}: Sono la mia famiglia, loro.
         {charNameOne}: E nessuna di queste scelte può accontentare tutt3.
+        {charNameOne}: Che rottura di ovaie, {name}!
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
         
@@ -373,40 +395,50 @@
     //Silenzio
         ~ firstStoryQuestCount ++
         
-        {charNameOne}: Questo posto è carino, ma il silenzio è faticoso.
-        {charNameOne}: Come si può stare in un posto che non ha nemmeno un accenno di musica, di ritmo?
+        {charNameOne}: Questo posto è carino, ma il silenzio è pesante.
+        {charNameOne}: Non c'è nemmeno un accenno di musica, di ritmo.
+        {charNameOne}: Come ci si sta in un posto del genere senza sbroccare?
+        
             + [Studiandolo, cercando di capire come funziona.]
                 {charNameOne}: Dovrei vivisezionare una di quelle lumacone trovate dietro alla serra?
                 {charNameOne}: Testare gli arbusti della foresta?
-                {charNameOne}: No, scusa, non è quello che hai detto.
-                {charNameOne}: Ma studiare crea una divisione tra studiato e studiante, odio questa cosa.
+                {charNameOne}: Flexare a manetta e dire "Ora sono il dio di questo posto?!?"
+                {charNameOne}: Thank you, next!
                     ~ firstBlue ++
                     
             + [Più silenzio significa più spazio per fare rumore!]
-                {charNameOne}: Hai ragione, però mi sento un po' sciocca.
-                {charNameOne}: Un po' come quando fai le prove per un concerto in un'enorme sala vuota.
-                {charNameOne}: Non che mi sia mai capitato, ma immagino ci si senta così.
-                {charNameOne}: Esposte, spaesate.
-                {charNameOne}: Ridicole.
+                {charNameOne}: AAAAAAAAAAAAAAAAAAAAAAAAAAAA!
+                {charNameOne}: Forse dovevo avvisarti.
+                {charNameOne}: Ma non funziona, ama.
+                {charNameOne}: È come quando fai le prove per un concerto in un'enorme sala vuota.
+                {charNameOne}: Mi fa sentire esposta, e idiota.
                     ~ firstYellow ++
                     
             + [Se corri veloce il ritmo lo crei da sola.]
-                {charNameOne}: Ma poi serve qualcuno che suoni con te.
-                {charNameOne}: E una voce che dia un senso a quel ritmo.
+                {charNameOne}: O mi parte un polmone.
+                {charNameOne}: Non sono esattamente una gymbro, ama.
+                {charNameOne}: E poi serve qualcuno che suoni con te.
+                {charNameOne}: E qualcuno che canti.
                     ~ firstRed ++
                     
             + [Il silenzio ti offre la vulnerabilità necessaria per raccontarti.]
-                {charNameOne}: Ma non conosco bene le parole.
+                {charNameOne}: Non ti sono sembrata già abbastanza needy, ama?
+                {charNameOne}: E poi vorrei ricordarti che manco so perché mi chiamo così.
+                {charNameOne}: No dai, tu cerchi di essere gentile, scusa.
+                {charNameOne}: Ma non conosco bene le parole per "raccontarmi".
                 {charNameOne}: L'unica cosa che so fare è suonare.
                     ~ firstGreen ++
                     
             + [Il giardino tutto è musica, si tratta solo di ascoltare.]
-                {charNameOne}: Hai ragione, {name}.
-                {charNameOne}: Ma per ascoltare serve restare in silenzio.
-                {charNameOne}: E la mia testa ora è piena di domande.
+                {charNameOne}: Tu sei un mood tutto tuo.
+                {charNameOne}: Ma forse hai ragione, {name}.
+                {charNameOne}: È che per ascoltare serve restare in silenzio.
+                {charNameOne}: E a me viene solo da parlare a ruota e non pensare in questo momento.
                     ~ firstPurple ++
             -
+        {charNameOne}: Idea!
         {charNameOne}: Forse la mentore è abbastanza vecchia da avere una radio?
+        {charNameOne}: Devo assolutamente chiederglielo.
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main 
             
