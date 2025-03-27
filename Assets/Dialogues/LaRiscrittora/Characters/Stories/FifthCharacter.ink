@@ -20,10 +20,17 @@
 ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 
-    -> mentor_and_first_char_storylets ->
-    -> mentor_and_second_char_storylets ->
-    -> fifth_character_storylets ->
+    -> mentor_and_first_char_storylets
+    //-> mentor_and_second_char_storylets
+    //-> fifth_character_storylets
 
+    = talk
+    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    
     {charNameFive}: Come posso esserti utile, {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?
     
         + [Avrei bisogno di una mano.]

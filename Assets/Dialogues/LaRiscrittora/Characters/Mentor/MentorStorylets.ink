@@ -1,3 +1,86 @@
+=== mentor_and_first_char_storylets ===
+~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+
+{
+    - welcome == 0:
+        -> welcome
+    
+    - gifts_and_ink == 0:
+        {
+            - not talk_with_first_character:
+                {charNameFive}: Hai parlato con la nuova persona?
+                    -> mentor_and_second_char_storylets 
+            - talk_with_first_character:
+                {charNameFive}: Sembra che {charNameOne} ti abbia raccontato qualcosa di sè!
+                {charNameFive}: Ed è arrivato il momento di continuare con le spiegazioni!
+                -> gifts_and_ink
+            - else:
+                -> mentor_and_second_char_storylets 
+        }
+                
+        
+    - not questions:
+        {
+            - first_story_gift.ink_outcome:
+                -> questions
+            - else:
+            {
+                - firstStoryQuestCount >= minStoryQuesTCountFirstChar: {charNameFive}: Hai fatto il tuo dono a {charNameOne}?
+                        -> mentor_and_second_char_storylets 
+                - else:
+                    {charNameFive}: Continua a conoscere {charNameOne}, così potrai farle il dono.
+                        -> mentor_and_second_char_storylets 
+            }
+        }
+        
+//Feedback
+    - not first_character_feedback:
+        {
+            - firstStory == Ended:
+                -> first_character_feedback
+            - else:
+                {charNameFive}: Prenditi il tuo tempo, ma ricordati che presto o tardi dovrai aiutare {charNameOne} a trovare il suo nuovo nome.
+                    -> mentor_and_second_char_storylets 
+        }
+    
+    - else:
+        -> mentor_and_second_char_storylets 
+
+}
+
+
+=== mentor_and_second_char_storylets ===
+~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+
+{
+
+    - not second_character_feedback && secondStory == Ended:
+        -> second_character_feedback
+        
+
+    //Dopo le presentazioni con due:
+    - knowing_second_character.one && (not that_little_liar_storylet) :
+        -> that_little_liar_storylet
+    
+    //Se abbiamo visto che manca l'innaffiatoio e/o due ci ha detto che non parla con lei:
+    - stolen_watering_can or knowing_second_character.she_hates_me && not watering_can_storylet:
+        -> watering_can_storylet
+        
+        
+    - else:
+        -> fifth_character_storylets
+
+}
+
+
 === fifth_character_storylets ===
 ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
 ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
@@ -40,94 +123,13 @@
     
     
     - else:
-        ->->
-
-}
-->->
-
-=== mentor_and_first_char_storylets ===
-~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-
-{
-    - welcome == 0:
-        -> welcome
-    
-    - gifts_and_ink == 0:
-        {
-            - not talk_with_first_character:
-                {charNameFive}: Hai parlato con la nuova persona?
-                    ->->
-            - talk_with_first_character:
-                {charNameFive}: Sembra che {charNameOne} ti abbia raccontato qualcosa di sè!
-                {charNameFive}: Ed è arrivato il momento di continuare con le spiegazioni!
-                -> gifts_and_ink
-            - else:
-                ->->
-        }
-                
-        
-    - not questions:
-        {
-            - first_story_gift.ink_outcome:
-                -> questions
-            - else:
-            {
-                - firstStoryQuestCount >= minStoryQuesTCountFirstChar: {charNameFive}: Hai fatto il tuo dono a {charNameOne}?
-                        ->->
-                - else:
-                    {charNameFive}: Continua a conoscere {charNameOne}, così potrai farle il dono.
-                        ->->
-            }
-        }
-        
-//Feedback
-    - not first_character_feedback:
-        {
-            - firstStory == Ended:
-                -> first_character_feedback
-            - else:
-                {charNameFive}: Prenditi il tuo tempo, ma ricordati che presto o tardi dovrai aiutare {charNameOne} a trovare il suo nuovo nome.
-                    ->->
-        }
-    
-    - else:
-        ->->    
+        -> talk_with_mentor.talk
 
 }
 
-->->
 
-=== mentor_and_second_char_storylets ===
-~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 
-{
 
-    - not second_character_feedback && secondStory == Ended:
-        -> second_character_feedback
-        
-
-    //Dopo le presentazioni con due:
-    - knowing_second_character.one && (not that_little_liar_storylet) :
-        -> that_little_liar_storylet
-    
-    //Se abbiamo visto che manca l'innaffiatoio e/o due ci ha detto che non parla con lei:
-    - stolen_watering_can or knowing_second_character.she_hates_me && not watering_can_storylet:
-        -> watering_can_storylet
-        
-        
-    - else:
-        ->->
-
-}
-->->
 
 
 // STORYLETS PRESENTAZIONE DEI LUOGHI
@@ -596,7 +598,7 @@
     {charNameFive}: E un giorno potrai fare questo lavoro da {pronouns has him: solo|{pronouns has her: sola|solə}}.
     {charNameFive}: E a quel punto forse anche io potrò un poco riposare.
    
-   ->->
+   -> talk_with_mentor
    
    === third_character_feedback
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
@@ -606,7 +608,7 @@
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState) 
     
    third_character_feedback
-   ->->
+   -> talk_with_mentor
    
    === fourth_character_feedback
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
@@ -616,7 +618,7 @@
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     
     fourth_character_feedback
-    ->->
+    -> talk_with_mentor
     
     === fifth_character_feedback
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
@@ -626,7 +628,7 @@
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)    
     
     fifth_character_feedback
-    ->->
+    -> talk_with_mentor
     
 //Storylets di commentario
     === growing_fungus_storylet
@@ -645,7 +647,7 @@
         {charNameFive}: Spero solo sia un segno positivo.
         {charNameFive}: Poi provo a dare un po' di concime a quel brutto albero.
         {entity_location(PG) == Forest: <i>Noi preferiamo crescere senza concime. Chiederemo alle formiche di forare il sacco.</i>}
-            ->->
+            -> talk_with_mentor
     
 //Storylets sul secondo personaggio
     === that_little_liar_storylet
@@ -672,7 +674,7 @@
         {charNameFive}: Trova un modo per allontanarlo.
         {charNameFive}: Ma non metterci troppo, per favore.
             ~ secondPauseTalking = 0
-        ->->
+        -> talk_with_mentor
     
     === watering_can_storylet
         ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
@@ -693,7 +695,7 @@
         {charNameFive}: No, non devo essere così severa.
         {charNameFive}: Ma ti prego, tienimelo lontano.
             ~ secondPauseTalking = 0
-        ->->
+        -> talk_with_mentor
 //Fine della demo
 === ending_demo
 TODO: disattivare ending game a testing etc finiti
