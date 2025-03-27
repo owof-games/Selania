@@ -7,8 +7,9 @@
         -> bedroom_backgrounds_calculator ->
         ~ move_entity(PG, Bedroom)
         -> bedroom
-        
-    + {are_two_entities_together(PG, RoomExit)} [RoomExit]
+    
+    TODO: riattivare poi exit dopo i test
+    //+ {are_two_entities_together(PG, RoomExit)} [RoomExit]
         -> END
       
 

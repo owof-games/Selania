@@ -30,14 +30,15 @@
     
 === randomizer_png_location
 //Ho una lista di luoghi che svuoto e poi resetto, così che sia percepibile come effettivamente randomica
+// -> commentate cose per la demo
 
     //Check stato tier
     {   
-            - thirdStory == Ended:
-                    ~ fourthTier = true
+            // - thirdStory == Ended:
+                    //~ fourthTier = true
                     
-            - secondStory == Ended:
-                     ~ thirdTier = true
+            // - secondStory == Ended:
+                     //~ thirdTier = true
                      
             - firstStory == Ended:
                      ~ secondTier = true
@@ -58,11 +59,11 @@
         - secondStory == Active && talk_with_second_character:
             ~ randomizable_characters += SecondCharacter
         
-        - thirdStory == Active && talk_with_third_character:
-            ~ randomizable_characters += ThirdCharacter
+        // - thirdStory == Active && talk_with_third_character:
+            // ~ randomizable_characters += ThirdCharacter
         
-        - fourthStory == Active && dialogo_personaggia_quattro:
-            ~ randomizable_characters += FourthCharacter    
+        // - fourthStory == Active && dialogo_personaggia_quattro:
+            // ~ randomizable_characters += FourthCharacter    
             
     }
     
@@ -73,10 +74,10 @@
             {debug: <i> Il valore del Timer è {changeLocationTimer} e quindi randomizzo il luogo.}
             {   
                 
-                - fourthTier == true:
-                    -> randomizer_fourth_tier
-                - thirdTier == true:
-                    -> randomizer_third_tier
+                //- fourthTier == true:
+                    //-> randomizer_fourth_tier
+                //- thirdTier == true:
+                    //-> randomizer_third_tier
                 - secondTier == true:
                     -> randomizer_second_tier
                 - firstTier == true:
@@ -180,6 +181,7 @@ VAR delayFirstChar = 5
 VAR delayFourthChar = 20
     
 === story_time_management_for_PNG
+//Qui commentato a manetta per non fare partire cose che non dovrebbero partire.
 
 {
     - movementsCounter == delayFirstChar && firstStory == NotStarted:
@@ -192,19 +194,19 @@ VAR delayFourthChar = 20
             ~ secondStory = Active
 
 //A metà della storia della seconda personaggia e finita la prima (così la biblioteca è aperta), compare la terza
-    - knowing_second_character.four && firstStory == Ended && thirdStory == NotStarted:
-            ~ move_entity(ThirdCharacter, BusStop)    
-            ~ thirdStory = Active
+    //- knowing_second_character.four && firstStory == Ended && thirdStory == NotStarted:
+           // ~ move_entity(ThirdCharacter, BusStop)    
+            //~ thirdStory = Active
             
 //Dopo un po' da quando la terza storia è finita, compare una quarta personaggia
-    - movementsCounter == delayFourthChar && thirdStory == Ended:
+    //- movementsCounter == delayFourthChar && thirdStory == Ended:
         //Ma magari questo spettro vuole comparire altrove
-            ~ move_entity(FourthCharacter, BusStop)
-            ~ fourthStory = Active
+            //~ move_entity(FourthCharacter, BusStop)
+            //~ fourthStory = Active
             
 //E quando la storia della quarta è a metà, iniziamo a modo quella della mentore
-    - knowing_fourth_character.five && fifthStory == NotStarted:
-            ~ fifthStory = Active
+    //- knowing_fourth_character.five && fifthStory == NotStarted:
+            //~ fifthStory = Active
                 
 
 
@@ -217,17 +219,17 @@ VAR delayFourthChar = 20
         //~ move_entity(SecondCharacter, Safekeeping)
         //~ move_entity(SecondCharacterNotes, BusStop)
         
-    - thirdStory == Ended && movementsCounter > 10:
-        ~ move_entity(ThirdCharacter, Safekeeping)
-        ~ move_entity(ThirdCharacterNotes, BusStop)
+    //- thirdStory == Ended && movementsCounter > 10:
+        //~ move_entity(ThirdCharacter, Safekeeping)
+        //~ move_entity(ThirdCharacterNotes, BusStop)
         
-    - fourthStory == Ended && movementsCounter > 10:
-        ~ move_entity(FourthCharacter, Safekeeping)
-        ~ move_entity(FourthCharacterNotes, BusStop)
+    //- fourthStory == Ended && movementsCounter > 10:
+        //~ move_entity(FourthCharacter, Safekeeping)
+       // ~ move_entity(FourthCharacterNotes, BusStop)
         
-    - fifthStory == Ended && movementsCounter > 10:
-        ~ move_entity(Mentor, Safekeeping)
-        ~ move_entity(FifthCharacterNotes, BusStop)
+    //- fifthStory == Ended && movementsCounter > 10:
+        //~ move_entity(Mentor, Safekeeping)
+       // ~ move_entity(FifthCharacterNotes, BusStop)
 }
 
 ->->

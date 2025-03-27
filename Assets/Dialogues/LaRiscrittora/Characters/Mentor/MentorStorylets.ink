@@ -7,6 +7,8 @@
 
 {
 //Feedback
+    - not ending_demo && secondStory == Ended && firstStory == Ended:
+        -> ending_demo
     - not third_character_feedback && thirdStory == Ended:
         -> third_character_feedback        
 
@@ -692,4 +694,15 @@
         {charNameFive}: Ma ti prego, tienimelo lontano.
             ~ secondPauseTalking = 0
         ->->
-
+//Fine della demo
+=== ending_demo
+TODO: disattivare ending game a testing etc finiti
+~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+{charNameFive}: Sembra che la demo sia finita qui, {name}.
+{charNameFive}: Potrai girare ancora per gli spazi aperti.
+{charNameFive}: Continuare a leggere le storie della <b>biblioteca</b>.
+{charNameFive}: E coltivare cosa rimane da coltivare nella <b>serra</b>.
+{charNameFive}: Ma non compariranno nuove persone bisognose.
+{charNameFive}: In realtà poi per fase di testing il gioco si bloccherà qui.
+{charNameFive}: Spero poi di ricordarmi di sbloccare questa cosa.
+-> END
