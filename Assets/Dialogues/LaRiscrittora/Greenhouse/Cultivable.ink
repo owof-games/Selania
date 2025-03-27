@@ -120,13 +120,13 @@
     - chosenCultivable has MuschioDelleAmanti:
     {
         - statoMuschioDelleAmanti == stepZero:
-            -> muschio_delle_amanti.step_zero
+            -> edera_delle_amanti.step_zero
         - statoMuschioDelleAmanti == stepOne:
-            -> muschio_delle_amanti.step_uno
+            -> edera_delle_amanti.step_uno
         - statoMuschioDelleAmanti == stepTwo:
-            -> muschio_delle_amanti.step_due
+            -> edera_delle_amanti.step_due
         - statoMuschioDelleAmanti == stepThree:
-            -> muschio_delle_amanti.step_tre
+            -> edera_delle_amanti.step_tre
     }
 
     - chosenCultivable has CantoDelleCompagne:
@@ -197,7 +197,7 @@
     = step_zero
         ~ statoLicheneDegliAbissi = stepZero
         <i>Qualcosa vortica sopra al vaso.</i>
-        <i>La terra si è sollevata ai lati, lasciando un incavo nel terreno.</i>
+        <i>La terra si accumla ai lati, lasciando un incavo nel terreno.</i>
         -> main
     
     = step_uno
@@ -206,15 +206,15 @@
           -> main
           
     = step_due
-        <i>La punta ora più grande, rotea nell'aria a incredibile velocità, completamente silenziosa.</i>
+        <i>Le punte sono aumentate, e roteano nell'aria a incredibile velocità, senza alcun rumore.</i>
           -> main
           
     = step_tre
-        <i>L'odore ora è così forte da farti lacrimare gli occhi.</i>
+        <i>L'odore è così forte da farti lacrimare gli occhi.</i>
         <i>Davanti a te vortica un <b>Lichene degli abissi</b></i>
         <i>Il lichene degli abissi è una danza, un roteare incessante di fungo e alga.</i>
         <i>Si inseguono nel piacere, si inseguono nel dolore, senza mai afferrarsi.</i>
-        <i>Persi nella loro distruzione, estremamente fragili.</i>
+        <i>Forti nella loro distruzione, estremamente fragili.</i>
 
             + [Fermo il lichene.]
                 ~ statoLicheneDegliAbissi = stepZero
@@ -241,10 +241,9 @@
               
 
 
-=== muschio_delle_amanti
+=== edera_delle_amanti
 //Collaborazione, novità, ricordo
 //Outcome: datti piacere
-TODO: diventa Edera delle amanti
     = step_zero
     ~ statoMuschioDelleAmanti = stepZero
         <i>È solo una tua impressione, o il vaso ha iniziato a brillare?</i>
@@ -257,6 +256,7 @@ TODO: diventa Edera delle amanti
     = step_due
         <i>Il nettare si è intrecciato, arrotolato, cerca le venature del legno della serra.</i>
         <i>Lo saggia, si mischia, lo penetra.</i>
+        <i>Foglie rosastre nascono da questa unione.</i>
           -> main
     
     = step_tre
@@ -267,10 +267,10 @@ TODO: diventa Edera delle amanti
                 <i>Per un attimo perdi i tuoi confini.</i>
                 <i>Sei un bacio nella notte, dita desiderate tra le coscie.</i>
                 <i>Sei acqua sulle labbra, pelle nuda sulla terra umida.</i>
-                <i>Pienezza ti riempie, la forza del <b>Muschio delle amanti</b></i>.
+                <i>Pienezza ti riempie, la forza dell'<b>Edera delle amanti</b></i>.
                 <i>Il tuo corpo ha fame di piacere.</i>
-                <i>Perditi un attimo nel desiderio.</i>
-               // <i>Ti invita a fermare per un attimo tutto, a premiare come più ti piace il tuo corpo, dentro o fuori che sia.</i>
+                <i>Perditi nel desiderio.</i>
+ 
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     {
@@ -346,30 +346,31 @@ TODO: diventa Edera delle amanti
             -> main
          
     = step_uno
-         <i>La serra è vuota ma fatichi a respirare.</i>
-         <i>C'è qualcosa, qualcosa di fastidioso ma non sai come tu te ne possa sbarazzare.</i>
+         <i>Qualcosa sembra osservarti dagli angoli più scuri della serra.</i>
+         <i>L'aria ti manca, hai voglia di gridare.</i>
             -> main
     
     = step_due
-        <i>La luce sembra scomparsa.</i>
-        <i>Vedi, eppure ti senti {pronouns has him: accecato|{pronouns has her: accecata|accecatə}}.</i>
+        <i>C'è un forte vibrare.</i>
+        <i>Cose sottili riempiono i tuoi occhi di fastidio.</i>
+        <i>Della voglia di stringere, percuotere, sbattere qualcosa.</i>
             -> main
     
     = step_tre
         <i>Il tetto della serra scricchiola, le sue travi sembrano gemere dal dolore.</i>
         <i>La tua testa sembra pronta ad esplodere.</i>
-        <i>Sopra di te si contrae nervosa una grossa, esplosiva <b>Spazzata</b></i>.
+        <i>Sopra di te pulsa e si contrae nervosa una grossa, esplosiva <b>Spazzata</b></i>.
         <i>La Spazzata è e non è.</i>
         <i>Si abbuffa delle cose non dette.</i>
         <i>E quando non ce la fa più, travolge ogni cosa.</i>
 
         + [Sfioro i suoi rami.]
             <i>Una forte contrazione.</i>
-            <i>E poi si sgretola.</i>
+            <i>E poi si ferma, statua di ciò che un tempo era.</i>
             <i>Ti lascia in pancia un senso di vuoto.</i>
-            <i>La sensazione di quando hai condiviso qualcosa che pensi sia terribile.</i>
-            <i>Eppure il mondo non finisce.</i>
-            <i>Vedi lucidamente ora chi vorresti chiamare.</i>
+            <i>La sensazione di quando hai condiviso qualcosa che ritenevi terribile.</i>
+            <i>Per poi scoprire che il mondo non è finito quella volta, e non finirà oggi.</i>
+            <i>Sai già chi è la persona che ora vuoi chiamare.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     {
@@ -401,20 +402,18 @@ TODO: diventa Edera delle amanti
             -> main
     
     = step_due
-        <i>Le dita si sollevano ora in una mano.</i>
-        <i>Sulle punte brillano piccoli fiorellini bianchi. Ogni volta che espiri i petali svolazzano via.</i>
+        <i>Le dita ora sono sollevate in una mano nervosa.</i>
           -> main
           
     = step_tre
-        <i>Non più fiori.</i>
-        <i>Solo la mano, e una lucida pallina vermiglia.<i>
+        <i>La mano, ora tesa verso il cielo, sembra sguarciata da una resina rossastra.<i>
         <i>Hai trovato una <b>Bacca dell'addolorata</b>.</i>
-        <i>Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ad avanzare.</i>
+        <i>Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ancora ad avanzare.</i>
 
             + [Afferro la bacca.]
-            <i>La mano molla la sua presa, rivelandosi per quel che era dall'inizio: solo un insieme tenace di radici.</i>
+            <i>La mano molla la sua presa, rivelandosi per quel che era sin dall'inizio: solo un insieme tenace di radici.</i>
             <i>Senti le tue spalle sciogliersi, l'incertezza scivolare via.</i>
-            <i>Il cambiamento fa paura, ma tu sai come camminare.</i>
+            <i>Il cambiamento fa paura, ma ora ricordi come camminare.</i>
                 ~ growing = 0
                 ~ chosenCultivable = ()
                     {
@@ -436,20 +435,20 @@ TODO: diventa Edera delle amanti
 //Outcome: ricordo di chi non c'è più
     = step_zero
         ~ statoNonTiScordarDiTe = stepZero
-        <i>Su uno vecchio ramo è comparsa una sostanza gelatinosa.</i>
+        <i>Su uno vecchio ramo è comparsa una sostanza gelatinosa, una gomma che sembra un asparago.</i>
             -> main
     
     = step_uno
-        <i>La gelatina si tende verso l'alto, biancastra.</i>
-        <i>Non è invitante al tatto, ma l'aria ha un profumo sa di, di cosa? Sigaro, tabacco forse?</i>
+        <i>Il ramo sembra più leggero, vitreo.</i>
+        <i>La gelatina non è invitante al tatto, ma l'aria ha un profumo sa di, di cosa? Sigaro, tabacco forse?</i>
         <i>O è canfora? O addirittura torta, o rabarbaro, o caffè.
         <i>L'odore di un vecchio e fidato maglione.</i>
           -> main
           
     = step_due
-        <i>La gelatina ora sembra vetro, il ramo è in più punti sparito.</i>
-        <i>No, non sparito: è trasparente.</i>
-        <i>La luce della serra sembra più calda, accogliente.</i>
+        <i>Il ramo sembra sparire nella luce della serra.</i>
+        <i>No, non sparire: è trasparente.</i>
+        <i>Gioca con la luce, la rende calda e accogliente.</i>
           -> main
           
     = step_tre
@@ -507,7 +506,7 @@ TODO: diventa Edera delle amanti
             <i>Le linee del tuo palmo si fanno trasparenti, inconsistenti. Eppure puoi muovere le dita, e non provi alcun dolore.</i>
             <i>La <b>Brina dell'Impossibile</b> si raccoglie nel luogo di un trauma.</i>
             <i>Riempie le ferite per permetterci di vederle, ascoltarle.</i>
-            <i>Ti permette di vivere, e non dimenticare.</i>
+            <i>Ti ricorda che non serve dimenticare per poter riprendere a vivere.</i>
                 ~ growing = 0
                 ~ chosenCultivable = ()
                     {

@@ -1000,7 +1000,7 @@ QUESTIONS
     - LicheneDegliAbissi:
         -> lichene_degli_abissi
     - MuschioDelleAmanti:
-        -> muschio_delle_amanti
+        -> edera_delle_amanti
     - CantoDelleCompagne:
         -> canto_delle_compagne
     - LaSpazzata:

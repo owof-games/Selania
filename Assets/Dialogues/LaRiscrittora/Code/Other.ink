@@ -119,11 +119,11 @@
 
     
     {
-        - from_list_to_books && (lichene_degli_abissi.step_tre or muschio_delle_amanti.step_tre or canto_delle_compagne.step_tre or la_spazzata.step_tre or bacca_della_addolorata.step_tre or non_ti_scordar_di_te.step_tre or brina_dell_impossibile.step_tre):
+        - from_list_to_books && (lichene_degli_abissi.step_tre or edera_delle_amanti.step_tre or canto_delle_compagne.step_tre or la_spazzata.step_tre or bacca_della_addolorata.step_tre or non_ti_scordar_di_te.step_tre or brina_dell_impossibile.step_tre):
                 ~ bedroomBGStates += ()
                 ~ bedroomBGStates += bedroomBGThree
         
-        - (lichene_degli_abissi.step_tre or muschio_delle_amanti.step_tre or canto_delle_compagne.step_tre or la_spazzata.step_tre or bacca_della_addolorata.step_tre or non_ti_scordar_di_te.step_tre or brina_dell_impossibile.step_tre) && (welcome or talking_fungus):
+        - (lichene_degli_abissi.step_tre or edera_delle_amanti.step_tre or canto_delle_compagne.step_tre or la_spazzata.step_tre or bacca_della_addolorata.step_tre or non_ti_scordar_di_te.step_tre or brina_dell_impossibile.step_tre) && (welcome or talking_fungus):
                 ~ bedroomBGStates += ()
                 ~ bedroomBGStates += bedroomBGTwo
             
