@@ -1,3 +1,5 @@
+//Nota: i coltivabili ad ora crescono o entrando e uscendo dalla serra, o finendo un blocco narrativo di una personaggia (es: talking_with_char_two.one).
+
 === growing_check
 {
     - growing < 2:
@@ -227,7 +229,7 @@
                     {
                         - findedGifts hasnt LicheneDegliAbissi:
                         ~ findedGifts += LicheneDegliAbissi
-                        Hai ottenuto: <b>Lichene degli Abissi.</b>
+                        <i>Hai ottenuto: <b>Lichene degli Abissi.</b></i>
                     }
                     
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
@@ -276,7 +278,7 @@
                     {
                         - findedGifts hasnt MuschioDelleAmanti:
                         ~ findedGifts += MuschioDelleAmanti
-                        Hai ottenuto: <b>Muschio delle Amanti.</b>
+                        <i>Hai ottenuto: <b>Muschio delle Amanti.</b></i>
                     }
                 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
@@ -325,7 +327,7 @@
                     {
                         - findedGifts hasnt CantoDelleCompagne:
                         ~ findedGifts += CantoDelleCompagne
-                        Hai ottenuto: <b>Canto delle Compagne.</b>
+                        <i>Hai ottenuto: <b>Canto delle Compagne.</b></i>
                     }
                 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
@@ -376,7 +378,7 @@
                     {
                         - findedGifts hasnt LaSpazzata:
                         ~ findedGifts += LaSpazzata
-                        Hai ottenuto: <b>La Spazzata.</b>
+                        <i>Hai ottenuto: <b>La Spazzata.</b></i>
                     }
                 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
@@ -419,7 +421,7 @@
                     {
                         - findedGifts hasnt BaccaDellaAddolorata:
                         ~ findedGifts += BaccaDellaAddolorata
-                        Hai ottenuto: <b>Bacca della Addolorata</b>
+                        <i>Hai ottenuto: <b>Bacca della Addolorata</b></i>
                     }
             
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
@@ -468,7 +470,7 @@
                 {
                         - findedGifts hasnt NonTiScordarDiTe:
                         ~ findedGifts += NonTiScordarDiTe
-                        Hai ottenuto: <b>Non Ti Scordar di Te.</b>
+                        <i>Hai ottenuto: <b>Non Ti Scordar di Te.</b></i>
                     }
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
                     -> cultivable_test
@@ -512,7 +514,7 @@
                     {
                         - findedGifts hasnt BrinaDellImpossibile:
                         ~ findedGifts += BrinaDellImpossibile
-                        Hai ottenuto: <b>Brina dell'Impossibile</b>
+                       <i> Hai ottenuto: <b>Brina dell'Impossibile</b></i>
                     }
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
                     -> cultivable_test

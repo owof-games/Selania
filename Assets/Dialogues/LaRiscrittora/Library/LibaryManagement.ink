@@ -27,8 +27,9 @@ TODO: aggiungere negli about storia Leti, mia e di B.
     
 
 === book_test_intro ===
+<i>La biblioteca freme all'idea di offrirti una storia da leggere.</i>
         + {readStories != ()} [Voglio rileggere qualcosa.]
-        La tua libreria contiene {number_translator(readStories)} {libro_libri(readStories)}.
+        <i>La tua libreria contiene {number_translator(readStories)} {libro_libri(readStories)}.</i>
             -> reread
             
         + [Vorrei una nuova storia casuale.]
@@ -83,15 +84,16 @@ TODO: aggiungere negli about storia Leti, mia e di B.
     
     
     = about_transformation
-        + {readingDuration has Short && shortStories^ aboutTransformation != ()} [Che racconti di qualcosa che si trasforma.]
+    <i>La biblioteca ti offre una storia...</i>
+        + {readingDuration has Short && shortStories^ aboutTransformation != ()} [Che racconta di qualcosa che si trasforma.]
             ~ book = LIST_RANDOM(shortStories^ aboutTransformation)
             -> refresh_book_lists -> from_list_to_books
  
-        + {readingDuration has Average && averageStories^ aboutTransformation != ()} [Che racconti di qualcosa che si trasforma.]
+        + {readingDuration has Average && averageStories^ aboutTransformation != ()} [Che racconta di qualcosa che si trasforma.]
             ~ book = LIST_RANDOM(averageStories ^ aboutTransformation)
             -> refresh_book_lists -> from_list_to_books           
             
-        + {readingDuration has Long && longStories^ aboutTransformation != ()} [Che racconti di qualcosa che si trasforma.]
+        + {readingDuration has Long && longStories^ aboutTransformation != ()} [Che racconta di qualcosa che si trasforma.]
             ~ book = LIST_RANDOM(longStories ^ aboutTransformation)
             -> refresh_book_lists -> from_list_to_books
         
@@ -109,16 +111,17 @@ TODO: aggiungere negli about storia Leti, mia e di B.
             -> shuffle
         
     = about_questions       
-            
-        + {readingDuration has Short && shortStories^ aboutQuestions != ()} [Che parli di chi si pone domande.]
+    <i>La biblioteca ti offre una storia...</i> 
+    
+        + {readingDuration has Short && shortStories^ aboutQuestions != ()} [Che parla di chi si pone domande.]
             ~ book = LIST_RANDOM(shortStories^ aboutQuestions)
             -> refresh_book_lists -> from_list_to_books
         
-        + {readingDuration has Average && averageStories^ aboutQuestions != ()} [Che parli di chi si pone domande.]
+        + {readingDuration has Average && averageStories^ aboutQuestions != ()} [Che parla di chi si pone domande.]
             ~ book = LIST_RANDOM(averageStories ^ aboutQuestions)
             -> refresh_book_lists -> from_list_to_books
 
-        + {readingDuration has Long && longStories^ aboutQuestions != ()} [Che parli di chi si pone domande.]
+        + {readingDuration has Long && longStories^ aboutQuestions != ()} [Che parla di chi si pone domande.]
             ~ book = LIST_RANDOM(longStories ^ aboutQuestions)
             -> refresh_book_lists -> from_list_to_books            
         
@@ -135,7 +138,9 @@ TODO: aggiungere negli about storia Leti, mia e di B.
                 -> shuffle          
             
             
-    = about_unprepared   
+    = about_unprepared
+    <i>La biblioteca ti offre una storia...</i>
+    
         + {readingDuration has Short && shortStories^ aboutUnprepared != ()} [Che mi colga {pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}]
             ~ book = LIST_RANDOM(shortStories^ aboutUnprepared)
             -> refresh_book_lists -> from_list_to_books
@@ -160,16 +165,18 @@ TODO: aggiungere negli about storia Leti, mia e di B.
         + {(readingDuration has Short && shortStories^ aboutUnprepared == ()) or (readingDuration has Average && averageStories^ aboutUnprepared == ()) or (readingDuration has Long && longStories^ aboutUnprepared == ())}
                 -> shuffle 
 
-    = about_monsters 
-        + {readingDuration has Short && shortStories^ aboutMonsters != ()} [Che parli di cose mostruose.]
+    = about_monsters
+    <i>La biblioteca ti offre una storia...</i>
+    
+        + {readingDuration has Short && shortStories^ aboutMonsters != ()} [Che parla di cose mostruose.]
             ~ book = LIST_RANDOM(shortStories^ aboutMonsters)
             -> refresh_book_lists -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutMonsters != ()} [Che parli di cose mostruose.]
+        + {readingDuration has Average && averageStories^ aboutMonsters != ()} [Che parla di cose mostruose.]
             ~ book = LIST_RANDOM(averageStories ^ aboutMonsters)
             -> refresh_book_lists -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutMonsters != ()} [Che parli di cose mostruose.]
+        + {readingDuration has Long && longStories^ aboutMonsters != ()} [Che parla di cose mostruose.]
             ~ book = LIST_RANDOM(longStories ^ aboutMonsters)
             -> refresh_book_lists -> from_list_to_books            
         
@@ -186,15 +193,17 @@ TODO: aggiungere negli about storia Leti, mia e di B.
                 -> shuffle
 
     = about_fire  
-        + {readingDuration has Short && shortStories^ aboutFire != ()} [Che racconti di cose che bruciano.]
+    <i>La biblioteca ti offre una storia...</i>
+    
+        + {readingDuration has Short && shortStories^ aboutFire != ()} [Che racconta di cose che bruciano.]
             ~ book = LIST_RANDOM(shortStories^ aboutFire)
             -> refresh_book_lists -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutFire != ()} [Che racconti di cose che bruciano.]
+        + {readingDuration has Average && averageStories^ aboutFire != ()} [Che racconta di cose che bruciano.]
             ~ book = LIST_RANDOM(averageStories ^ aboutFire)
             -> refresh_book_lists -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutFire != ()} [Che racconti di cose che bruciano.]
+        + {readingDuration has Long && longStories^ aboutFire != ()} [Che racconta di cose che bruciano.]
             ~ book = LIST_RANDOM(longStories ^ aboutFire)
             -> refresh_book_lists -> from_list_to_books            
         
@@ -210,16 +219,18 @@ TODO: aggiungere negli about storia Leti, mia e di B.
         + {(readingDuration has Short && shortStories^ aboutFire == ()) or (readingDuration has Average && averageStories^ aboutFire == ()) or (readingDuration has Long && longStories^ aboutFire == ())}
                 -> shuffle
 
-    = about_rebellion  
-        + {readingDuration has Short && shortStories^ aboutRebellion != ()} [Che urli di ribellioni.]
+    = about_rebellion
+    <i>La biblioteca ti offre una storia...</i>
+    
+        + {readingDuration has Short && shortStories^ aboutRebellion != ()} [Che urla di sogni e ribellioni.]
             ~ book = LIST_RANDOM(shortStories^ aboutRebellion)
             -> refresh_book_lists -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutRebellion != ()} [Che urli di ribellioni.]
+        + {readingDuration has Average && averageStories^ aboutRebellion != ()} [Che urla di sogni e ribellioni.]
             ~ book = LIST_RANDOM(averageStories ^ aboutRebellion)
             -> refresh_book_lists -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutRebellion != ()} [Che urli di ribellioni.]
+        + {readingDuration has Long && longStories^ aboutRebellion != ()} [Che urla di sogni e ribellioni.]
             ~ book = LIST_RANDOM(longStories ^ aboutRebellion)
             -> refresh_book_lists -> from_list_to_books            
         
@@ -332,6 +343,8 @@ TODO: aggiungere negli about storia Leti, mia e di B.
 
     
     = reread_adri_allora
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>
+    
         + [Rileggo <i>Il mio bellissimo gatto</i>di Adri Allora(ləi).]
                 -> adri_allora
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
@@ -340,6 +353,8 @@ TODO: aggiungere negli about storia Leti, mia e di B.
                 -> book_test_intro
                 
     = reread_aza
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>
+    
         + [Rileggo <i>Luna vergine</i> di Aza (any).]
                 -> aza
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
@@ -348,6 +363,8 @@ TODO: aggiungere negli about storia Leti, mia e di B.
                 -> book_test_intro                 
     
     = reread_steno_artico
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>
+    
         + [Rileggo <i> This anger</i> by StenoArtico (he/him, none).]
                 -> steno_artico
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
@@ -356,6 +373,8 @@ TODO: aggiungere negli about storia Leti, mia e di B.
                 -> book_test_intro 
     
     = reread_b
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>
+    
         + [Rileggo <i>Lwwww</i> di B(she/her).]
                 -> b
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
@@ -364,6 +383,8 @@ TODO: aggiungere negli about storia Leti, mia e di B.
                 -> book_test_intro 
                 
     = reread_beatrice
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>
+    
         + [Rileggo <i>La rete non esiste</i> di Beatrice(she/her).]
                 -> beatrice
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
@@ -372,6 +393,8 @@ TODO: aggiungere negli about storia Leti, mia e di B.
                 -> book_test_intro 
                 
     = reread_beatrice_y_bottura
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>
+    
         + [Rileggo <i>Artigli Rosso Ruggine</i> di Beatrice Y. Bottura (she/it).]
                 -> beatrice_y_bottura
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
@@ -383,6 +406,8 @@ TODO: aggiungere negli about storia Leti, mia e di B.
 
                 
     = reread_cecilia_formicola
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>
+    
         + [Rileggo <i>Getting warm</i> di Cecilia Formicola (she/her).]
                 -> cecilia_formicola
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
@@ -393,6 +418,8 @@ TODO: aggiungere negli about storia Leti, mia e di B.
  
  
     = reread_lamia
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>
+    
         + [Rileggo <i>Il sassolino</i> di Lamia (she/they).]
                 -> lamia
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
@@ -401,6 +428,8 @@ TODO: aggiungere negli about storia Leti, mia e di B.
                 -> book_test_intro  
     
     = reread_val_lattanzio
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>
+    
         + [Rileggo <i>Home</i> di Val Fausto Lattanzio (he/they).]
                 -> val_fausto_lattanzio
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
@@ -409,6 +438,8 @@ TODO: aggiungere negli about storia Leti, mia e di B.
                 -> book_test_intro        
     
     = reread_romi
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>
+    
         + [Rileggo <i>Il principe sbagliato</i> di Romi (any).]
                 -> val_fausto_lattanzio
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
@@ -418,6 +449,8 @@ TODO: aggiungere negli about storia Leti, mia e di B.
  
  
     = reread_salvo
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>
+    
         + [Rileggo <i>Il cancello</i> di Salvo (he/him).]
                 -> salvo
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
@@ -426,6 +459,8 @@ TODO: aggiungere negli about storia Leti, mia e di B.
                 -> book_test_intro 
                 
     = reread_maura
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>
+    
         + [Rileggo <i>Polvere</i> di Maura (she/they).]
                 -> maura
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
@@ -435,6 +470,8 @@ TODO: aggiungere negli about storia Leti, mia e di B.
     
 
     = reread_letizia_vaccarella
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>
+    
         + [Rileggo <i>Dodici Stelle</i> di Letizia Vaccarella (she/her).]
                 -> letizia_vaccarella
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
@@ -443,6 +480,8 @@ TODO: aggiungere negli about storia Leti, mia e di B.
                 -> book_test_intro     
     
     = reread_queerginia_wolf
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>
+    
         + [Rileggo <i>Giallo</i> di Queerginia Wolf/Marco Spelgatti (she/he/they).]
                 -> queerginia_wolf
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]

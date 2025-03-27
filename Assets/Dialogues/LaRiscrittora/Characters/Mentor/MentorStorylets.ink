@@ -61,6 +61,7 @@
                     ->->
             - talk_with_first_character:
                 {charNameFive}: Sembra che {charNameOne} ti abbia raccontato qualcosa di sè!
+                {charNameFive}: Ed è arrivato il momento di continuare con le spiegazioni!
                 -> gifts_and_ink
             - else:
                 ->->
@@ -116,7 +117,7 @@
         -> that_little_liar_storylet
     
     //Se abbiamo visto che manca l'innaffiatoio e/o due ci ha detto che non parla con lei:
-    - stolen_watering_can or knowing_second_character.not_talk && not watering_can_storylet:
+    - stolen_watering_can or knowing_second_character.she_hates_me && not watering_can_storylet:
         -> watering_can_storylet
         
         
@@ -143,7 +144,7 @@
     {charNameFive}: Riscrivere è un lavoro faticoso, e per questo è importante che ogni {pronouns has him: riscrittore|{pronouns has her: riscrittora|riscrittorə}} abbia dei momenti per prendersi cura di sé.
     {charNameFive}: Tornaci spesso: momento dopo momento quello che hai piantato sarà sempre più rigoglioso.
     {charNameFive}: E non fare caso a me mentre lucido il legno dell'ingresso, è una cosa che mi rilassa.
-        -> main
+        -> talk_with_mentor
 
 === first_bus_stop_visit
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
@@ -151,7 +152,7 @@
     {charNameFive}: È un posto di passaggio: è da qui che arrivano e vanno le persone che cercano il tuo aiuto.
     {charNameFive}: Ed è da qui che potrai andare e tornare quando vorrai.
     {charNameFive}: Anche se spero non resterai via per molto: alla lunga qui mi sento sola.
-        -> main
+        -> talk_with_mentor
         
 === first_library_visit
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
@@ -165,13 +166,13 @@
     {charNameFive}: Bada, mi piacciono. Ma quando sono bloccat3, tendono ad essere molto molto molto irrazionali.
     {charNameFive}: E ingrat3.
     {charNameFive}: Per fortuna non tocca a me riscrivere le loro storie.
-        -> main
+        -> talk_with_mentor
 
 
 === first_nest_visit
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 
-    -> main
+    -> talk_with_mentor
 
 
 
@@ -179,7 +180,7 @@
 === first_laboratory_visit
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 
-    -> main
+    -> talk_with_mentor
 
 
 /* ---------------------------------
@@ -215,7 +216,7 @@
         
         * (vado) [Come me ne vado da qui?]
             {chiSei:{charNameFive}|???}: Vuoi già andartene?
-            {chiSei:{charNameFive}|???}: Cavolo, forse devo rivedere il mio benvenuto.
+            {chiSei:{charNameFive}|???}: Forse devo rivedere il mio benvenuto.
             {chiSei:{charNameFive}|???}: Forse sono stata troppo formale?
             {chiSei:{charNameFive}|???}: O dovrei essere più autorevole?
             {chiSei:{charNameFive}|???}: Ma non devo essere scortese ora.
@@ -335,7 +336,7 @@
             -
         {charNameFive}: Il dono è importante non solo per guadagnare fiducia.
         {charNameFive}: Il giusto dono può anche aumentare la tua quantità di <b>inchiostro</b>.
-        {charNameFive}: Perché tu {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}} sei <b>{pronouns has him: un riscrittore|{pronouns has her: una riscrittora|unə riscrittorə}}</b>!
+        {charNameFive}: Perché tu{pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}} sei<b>{pronouns has him: un riscrittore|{pronouns has her: una riscrittora|unə riscrittorə}}</b>!
         {charNameFive}: Aiuti queste persone bloccate a guardare la loro storia in modo diverso, e a scegliersi un nuovo nome.
         
             + [E tu hai bisogno di un nuovo nome?]
@@ -383,7 +384,7 @@
     ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     
-        {firstCharacterInkLevel == Empty or firstCharacterInkLevel == Low: {charNameFive}: Non hai ottenuto molto inchiostro. Ma come si dice: se {pronouns has him: l'alunno|{pronouns has her: la alunna|l'alunnə}}} sbaglia, la colpa è del maestro.
+        {firstCharacterInkLevel == Empty or firstCharacterInkLevel == Low: {charNameFive}: Non hai ottenuto molto inchiostro. Ma come si dice: se {pronouns has him: l'alunno|{pronouns has her: la alunna|l'alunnə}} sbaglia, la colpa è del maestro.}
         {firstCharacterInkLevel == Normal: {charNameFive}: Bel colpo! Ti sei {pronouns has him: guadagnato|{pronouns has her: guadagnata|guadagnatə}} subito una bella dose di inchiostro! Avessi fatto meglio il mio lavoro, sarebbe stato il massimo!}
         {firstCharacterInkLevel == High: {charNameFive}: {name}, hai dato alla persona il suo dono preferito! Riempi questo cuore di orgoglio!}
         {charNameFive}: E adesso, l'ultima lezione: a cosa serve l'inchiostro?
@@ -437,6 +438,7 @@
     ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     
+    {name}: Vorrei raccontarti una cosa strana.
         * (voices){pre_test}[C'è una voce che mi racconta cose.]
             {charNameFive}: Voce?
             {name}: Sì.
@@ -651,7 +653,7 @@
     
         {charNameFive}: {name}, sei {pronouns has him: riuscito|{pronouns has her: riuscita|riuscitə}} a rimandare quel bambino a casa?
         {are_two_entities_together(SecondCharacter, PG):{charNameFive}: Da quanto vedo, no.}
-        {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Antipatica.}
+        {are_two_entities_together(SecondCharacter, PG): {knowing_second_character.two: {charNameTwo}|???}: Antipatica.}
             ~ change_entity_place(SecondCharacter)
         {charNameFive}: Non è mai successo che qui arrivassero dei bambini.
         {charNameFive}: Non è un posto adatto a un bambino.

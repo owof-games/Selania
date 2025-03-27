@@ -5,8 +5,8 @@
  ----------------------------------*/
  === support
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    {charNameFive}: Come posso aiutarti?
     - (top)
+    {charNameFive}: Hai bisogno dei miei consigli?
         + {gifts_and_ink}[Mi ripeteresti cosa devo fare?]
             -> to_do
         + [Ho una domanda su un luogo.]
@@ -19,6 +19,8 @@
             -> top   
 
     = myself
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    {charNameFive}: C'è qualcosa che posso fare per aiutarti?
         + [Vorrei cambiare il mio nome.]
                 -> name_choice -> support
         + [Vorrei cambiare i miei pronomi.]
@@ -248,6 +250,7 @@
 
     
     - (top_due)
+    {charNameFive}: Cosa vorresti evitare?
     + {dysphoria == true}[Non mi sento a mio agio a parlare di <b>disforia e dismorfia</b>.]
         {charNameFive}: Capisco benissimo.
         ~ dysphoria = false

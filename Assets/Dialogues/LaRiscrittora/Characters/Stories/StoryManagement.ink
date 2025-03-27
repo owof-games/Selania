@@ -60,7 +60,7 @@
 
     //Variabili per mettere in pausa la conversazione
     VAR secondPauseTalking = 0
-    VAR secondCharPauseDurantion = 4
+    VAR secondCharPauseDurantion = 3
     
     //Variabile per il countdown per la sua uscita di scena
     VAR secondCharEndingDialogue = 0    
@@ -274,7 +274,7 @@
 
     //Personaggia Cinque        
         - IlMentore:
-            ~ return "La Mentore"
+            ~ return "Mentore"
 
     }
 

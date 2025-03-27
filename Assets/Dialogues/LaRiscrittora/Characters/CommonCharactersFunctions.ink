@@ -7,7 +7,7 @@
 
 //Gestione spostamenti: tempo
     VAR changeLocationTimer = 0
-    VAR changeLocationTrigger = 5
+    VAR changeLocationTrigger = 3
 
 //Settaggio luoghi attivi a seconda del tier
     VAR firstTierPlaces =(Forest, BusStop, GreenhouseMiddlePath)

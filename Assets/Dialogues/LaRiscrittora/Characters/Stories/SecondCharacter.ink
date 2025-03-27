@@ -90,18 +90,17 @@
                         -> five
                     //Altrimenti
                     - else:
-                        {charNameTwo}: {charNameFive} ce l'ha con me!
-                        {charNameTwo}: Fa qualcosa!
-                        -> main
+                        -> she_hates_me
                 }
                 
             - not six:
                 //Lo storylet non parte se siamo allo stagno.
                 {
-                    - not entity_location(PG) == GreenhouseMiddlePath:
-                        -> six
-                    - else: {knowing_second_character.two:{charNameTwo}|???}: {~ Torna dopo.|Ora ho voglia di stare da solo.|Lasciami in pace.}
+                    - entity_location(PG) == GreenhouseMiddlePath:
+                        {charNameTwo}: {~ Torna dopo.|Ora ho voglia di stare da solo.|Lasciami in pace.}
                         -> main
+                    - else: 
+                        -> six
                 }
 
             - not seven:
@@ -223,6 +222,7 @@
         ???: Cercali!
         ???: A dopo!
             -
+            ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
    
@@ -326,6 +326,7 @@
         {charNameTwo}: Lui è superforte.
         {charNameTwo}: Ora lasciami in pace.
         {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Dio che merda essere bambini.}        
+        ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
 
@@ -489,6 +490,7 @@
                     ~ secondPurple ++
  
             -
+            ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
     
@@ -581,6 +583,7 @@
         {charNameTwo}: Ora però lasciami solo.
         
             //Leviamo l'innaffiatoio
+            ~ growing ++
             ~ move_entity(WateringCan, Safekeeping)
             ~ secondPauseTalking = secondCharPauseDurantion
             -> main
@@ -692,6 +695,7 @@
 
             
             //Ricompare l'innaffiatoio
+            ~ growing ++
             ~ move_entity(WateringCan, Greenhouse)
             ~ secondPauseTalking = secondCharPauseDurantion
                 -> main
@@ -764,6 +768,7 @@
                     ~ secondPurple ++
  
             -
+            ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
              ~  move_entity(TheFrog, GreenhouseMiddlePath)
                 -> main
@@ -844,6 +849,7 @@
                     ~ secondPurple ++
  
             -
+            ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main        
             
@@ -928,6 +934,7 @@
                     ~ secondPurple ++
  
             -
+            ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main    
     
@@ -1064,7 +1071,7 @@
  
             -
         {charNameTwo}: Però mi piacerebbe fare il veterinario.
-        
+            ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main    
     
@@ -1143,6 +1150,7 @@
                     ~ secondPurple ++
  
             -
+            ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main    
     
@@ -1223,6 +1231,7 @@
                     ~ secondPurple ++
  
             -
+            ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main    
     
@@ -1309,6 +1318,7 @@
                     ~ secondPurple ++
  
             -
+            ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main            
             
@@ -1319,7 +1329,14 @@
     ???: Mi ha fatto male!
         -> main
                         
-
+    = she_hates_me
+    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    
+    {charNameTwo}: {charNameFive} ce l'ha con me!
+    {charNameTwo}: Fa qualcosa!
+    {are_two_entities_together(Mentor, PG): {charNameFive}: Non dire altre bugie, {charNameTwo}!}
+    -> main
         
 
 
@@ -1441,7 +1458,8 @@
         {charNameTwo}: Non è il mio compleanno.
         {charNameTwo}: Scusa per la bugia.
         {charNameTwo}: Ma se non mi invento un motivo per le cose nessuno mi ascolta.
-
+        ~ growing ++
+        
             + [Forse so come farti vedere le cose in modo diverso.]
                 -> statement
             + [Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.]
@@ -1796,7 +1814,7 @@
                     ~ secondCharacterState += IlCorvo
         }
         
-            
+         ~ growing ++   
         
         {
         - secondCharacterSpecialEvent == true:

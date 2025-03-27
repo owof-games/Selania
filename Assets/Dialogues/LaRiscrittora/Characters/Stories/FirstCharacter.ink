@@ -248,7 +248,7 @@
                     ~ firstGreen ++
             
             + [A te va bene essere {charNameOne}? Perché non Lotta? Azione?]
-                {firstRed > 1: {charNameOne}: Tu prendi tutto di pancia, vero? Saresti {pronouns has him: lo|{pronouns has her: la|lə}}} bestie di Talco.
+                {firstRed > 1: {charNameOne}: Tu prendi tutto di pancia, vero? Saresti {pronouns has him: lo|{pronouns has her: la|lə}} bestie di Talco.}
                 {charNameOne}: Mi merito {charNameOne} perché ultimamente ho proprio smollato tutto.
                 {charNameOne}: Però ama, parlare con te non è già una forma di azione?
                     ~ firstRed ++
@@ -260,9 +260,10 @@
         {charNameOne}: La tua bocca si muove ma non esce nulla.
         {charNameOne}: Interessante.
         {charNameOne}: Forse quella tizia che gira quì può aiutarci a capire qualcosa?
-        {are_two_entities_together(Mentor, PG): ???: In effetti avrei un paio di informazioni utili da darti, nuova persona!}
+        {are_two_entities_together(Mentor, PG): {welcome.your_name: {charNameFive}|???}: In effetti avrei un paio di informazioni utili da darti, nuova persona!}
         {charNameOne}: L’unica cosa certa è che ho bisogno di Talco.
         {charNameOne}: Ci vediamo dopo, ama.
+            ~ growing ++
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main
         
@@ -320,7 +321,8 @@
         {charNameOne}: Cammina così tanto, e per cosa poi?
         {charNameOne}: Ma troppe chiacchiere ora, troppe.
         {charNameOne}: Fammi chillare un attimo, a dopo!
-             ~ firstPauseTalking = firstCharPauseDurantion
+            ~ growing ++
+            ~ firstPauseTalking = firstCharPauseDurantion
             -> main  
             
     = three
@@ -386,6 +388,7 @@
         {charNameOne}: Sono la mia famiglia, loro.
         {charNameOne}: E nessuna di queste scelte può accontentare tutt3.
         {charNameOne}: Che rottura di ovaie, {name}!
+        ~ growing ++
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
         
@@ -439,6 +442,7 @@
         {charNameOne}: Idea!
         {charNameOne}: Forse la mentore è abbastanza vecchia da avere una radio?
         {charNameOne}: Devo assolutamente chiederglielo.
+        ~ growing ++
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main 
             
@@ -500,6 +504,7 @@
                 -
         {charNameOne}: Fammi rilassare un po' ama.
         {charNameOne}: A dopo!
+        ~ growing ++
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
         
@@ -564,6 +569,7 @@
             -
         {charNameOne}: A proposito di causa perse: vado a cercarmi uno spritz.
         {charNameOne}: Ho proprio bisogno di staccare.
+        ~ growing ++
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
         
@@ -616,7 +622,7 @@
                 {charNameOne}: Un po' come quel casino che è camera mia.
                     ~ firstRed ++
             -
-            
+            ~ growing ++
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main           
     = eight
@@ -677,6 +683,7 @@
         {charNameOne}: Comunque non sono di certo qui per il Ghiberti e le sue paranoie matematiche.
         {charNameOne}: Ma per capire perché sono in questo posto.
         {charNameOne}: A dopo, ama.
+        ~ growing ++
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
     
@@ -733,7 +740,7 @@
             -
         {charNameOne}: Vabbè.
         {charNameOne}: Credo me ne starò qui ad aspettare questo finto temporale.
-        
+            ~ growing ++
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main   
     = ten
@@ -795,6 +802,7 @@
         {charNameOne}: I poliziotti ci hanno trascinate e bastonate e schedate.
         {charNameOne}: E soprattutto hanno tagliato gli alberi.
         {charNameOne}: E sono tornata a sentirmi inutile.
+            ~ growing ++
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
     
@@ -853,7 +861,7 @@
             
         {charNameOne}: Lasciamo un po' solo ora, {name}.
         {charNameOne}: Perché sto entrando in fase lamentosa e non ho voglia di cringiarti.
-        
+            ~ growing ++
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
             
@@ -913,7 +921,7 @@
             
         {charNameOne}: E con questa, ho finito di sputtanare la mia famiglia.
          {charNameOne}: Vado a deprimermi da qualche parte.
-         
+            ~ growing ++
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
 
@@ -1022,6 +1030,7 @@
         {charNameOne}: O che lo faccia il mondo.
         {charNameOne}: Ecco perché mi chiamo {charNameOne}: perché rimango nel medio, nella cosa più ovvia e cringe.
         {charNameOne}: E lascio che le cose accadano.
+            ~ growing ++
             
             + [Credo di sapere come aiutarti.]
                 -> statement
@@ -1319,7 +1328,7 @@
                     ~ firstCharacterState += Violino
         }
         
-            
+        ~ growing ++    
         
         {
         - firstCharacterSpecialEvent == true:
@@ -1365,7 +1374,7 @@
     }
     
         - (top)
-        {charNameOne}: {~ Quanto mi prenderà per il culo Talco, quando lə racconterò tutta questa storia?.|Comunque in questo posto dovreste mettere almeno un piano bar.|Se lo dico all3 am3 del conservatorio mi fanno il culo, ma vado pazza per le k-pop night.|Ma tu l'hai vista quella strana rana nello stagno?}
+        {charNameOne}: {~ Quanto mi prenderà per il culo Talco, quando lə racconterò tutta questa storia?|Comunque in questo posto dovreste mettere almeno un piano bar.|Se lo dico all3 am3 del conservatorio mi fanno il culo, ma vado pazza per le k-pop night.|Ma tu l'hai vista quella strana rana nello stagno?}
                 ~ firstCharEndingDialogue ++
         -> main
         

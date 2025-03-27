@@ -49,6 +49,7 @@
 
 === talk_with_fifth_character ===
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+<i>C'è qualcosa che ti frulla nella testa.</i>
 
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_fifth_character
@@ -156,6 +157,7 @@
         {charNameFive}: È arrivato il momento di capire dove possa portare.
         {charNameFive}: Grazie per la chiacchierata, {name}.
              ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ growing ++
             -> main
     
     = two
@@ -213,6 +215,7 @@
         {charNameFive}: Ma ora è il momeno di svuotare lo stagno dalle sue cose più schifose.
         {charNameFive}: A dopo, {name}.
              ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ growing ++
                 -> main
 
 
@@ -266,6 +269,7 @@
             {charNameFive}: Mi sono appena ricordata che ci sono delle erbacce fastidiose sotto la poltrona della biblioteca,
             {charNameFive}: Devo inventarmi un modo per liberarmene!
                 ~ fifthPauseTalking = fifthCharPauseDurantion
+                ~ growing ++
                     -> main
     
     
@@ -334,6 +338,7 @@
         {charNameFive}: Vado a riordinare in ordine di data i libri in biblioteca.
         
              ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ growing ++
             -> main
     = five
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
@@ -397,6 +402,7 @@
                 {charNameFive}: Qualcosa che non ho mai conosciuto, se non nei romanzi.
                 {charNameFive}: O nell'amicizia.
                 {charNameFive}: E a volte, se resto in silenzio e ferma a lungo, in questo luogo.
+                
                     ~ fifthPurple ++
  
             -
@@ -409,6 +415,8 @@
         {charNameFive}: Amore per noi.
         {charNameFive}: Vado a recuperare del terriccio dal sottobosco, {name}.
         {charNameFive}: A dopo.
+        ~ fifthPauseTalking = fifthCharPauseDurantion
+        ~ growing ++
             -> main
     
     
