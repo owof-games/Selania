@@ -156,7 +156,7 @@
             -> top
         
   
-    + {abuses == true}[Evitiamo storie su <b>violenza psicologica subita o autoinflitta</b>.]
+    + {abuses == true}[Evitiamo storie su <b>violenza psicologica subita, inflitta o autoinflitta</b>.]
         {charNameFive}: Hai il mio appoggio.
         ~ abuses = false
         {

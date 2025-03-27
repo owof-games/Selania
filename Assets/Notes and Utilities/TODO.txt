@@ -1,6 +1,4 @@
 24 marzo 2025 e a seguire (in ordine di priorità)
-* Testing in unity per vedere se ci sono problemi con unity.
-* Relativi debug.
 * Creazione documento Google per testing + pagina itch per caricare la build.
 https://docs.google.com/forms/u/0/?tgif=d&ec=asw-forms-hero-goto&ftv=1 -> domande anche di bilanciamento (inchiostro etc)
 
