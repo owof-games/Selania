@@ -1,13 +1,14 @@
 24 marzo 2025 e a seguire (in ordine di prioritÃ )
-* Correzione coltivabili in base a nuovi nomi e forme/luoghi.
 * Correzione e alleggerimento personaggia uno.
 * Scrittura nuove note peronaggia uno.
+* Correzione coltivabili in base a nuovi nomi e forme/luoghi.
+* Check per valore dei doni in base alle due storie.
+
 
 
 Infine:
+* Due riflessioni al volo sul bilanciamento delle randomizzazione personagge e sui tempi di comparsa
 * Rilettura ad alta voce, editing e correzione, dividendo per voce (mentore, fungo, personaggia uno, personaggio due, le cinque voci della giocatrice).
-* Inserimento racconti con tutto quello che serve.
-* Testing con coso Mattia per vedere se ci sono problemi ink.
 * Testing in unity per vedere se ci sono problemi con unity.
 * Relativi debug.
 * Creazione documento Google per testing + pagina itch per caricare la build.
@@ -51,12 +52,12 @@ eh vabbÃ¨ non succede niente
 
 -> mica, boh, brutto, non lo so, si si si
 
----> quindi: frasi dubitative, sfida all'autorità, estremi.
+---> quindi: frasi dubitative, sfida all'autorit , estremi.
 ----------------------------------------------------------------------------
-Obiettivo della storia: abbiamo un bambino che vede il mondo adulto (e il futuro) come uno spazio ostile, e per questo reagisce a sua volta con ostilità. 
-Tutto è calcolo, sopravvivenza.
+Obiettivo della storia: abbiamo un bambino che vede il mondo adulto (e il futuro) come uno spazio ostile, e per questo reagisce a sua volta con ostilit . 
+Tutto   calcolo, sopravvivenza.
 Grida, si arrabbia, dice bugie. 
-Ma è anche inventivo e, col tempo, affettuoso.
+Ma   anche inventivo e, col tempo, affettuoso.
 Ma se qualcosa lo ferisce, si ritira.
 
 finale riccio: va a vivere dal fratello.
