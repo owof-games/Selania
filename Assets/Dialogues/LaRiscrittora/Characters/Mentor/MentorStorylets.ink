@@ -705,4 +705,9 @@ TODO: disattivare ending game a testing etc finiti
 {charNameFive}: Ma non compariranno nuove persone bisognose.
 {charNameFive}: In realtà poi per fase di testing il gioco si bloccherà qui.
 {charNameFive}: Spero poi di ricordarmi di sbloccare questa cosa.
+{charNameFive}: Ti chiedo anche un favore, {name}.
+{charNameFive}: Salvati questo codice, e inseriscilo poi nel documento del testing.
+{charNameFive}: O se non hai voglia di rispondere alle domande mandalo pure via mail: faresti molto felice sia me che Queerginia.
+{charNameFive}: Il codice è {playerPurple}{playerYellow}{playerBlue}{playerGreen}{playerRed}{playerFirstStory}{playerSecondStory}
+{charNameFive}: Grazie di cuore.
 -> END
