@@ -190,7 +190,7 @@
         - statoBrinaDellImpossibile == stepThree:
             -> brina_dell_impossibile.step_tre
     }    
-    ->->
+    -> main
 }
 
 === lichene_degli_abissi

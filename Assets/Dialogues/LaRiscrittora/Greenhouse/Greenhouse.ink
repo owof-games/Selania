@@ -6,7 +6,7 @@
 
 {
 	- chosenCultivable != ():
-        -> cure
+        -> plant_check
         
     - else:
     {
@@ -27,11 +27,11 @@
         -
             -> main
 
-=== cure
-        -> plant_check -> 
-    + [Mi guardo attorno.]
-    -
-        -> main
+//=== cure
+        //-> plant_check ->
+    //+ [Mi guardo attorno.]
+    //-
+        //-> main
     
 === call_test
     + {are_two_entities_together(WateringCan, PG)} [WateringCan]
@@ -39,7 +39,7 @@
     	- backupCultivable != ():
             {
                 - chosenCultivable != ():
-                        -> cure
+                        -> plant_check
                 - else:     
                         -> cultivable_test
             }
@@ -50,7 +50,7 @@
     
     {
 	- chosenCultivable != ():
-        -> cure
+        -> plant_check
         
     - else:
     {

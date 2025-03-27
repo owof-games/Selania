@@ -33,7 +33,7 @@
             <i>Ma ora ha fame.</i>
             La Rana Parlante: Crac!
                 -> main
-            * * -> main
+            + + -> main
 
    
    
