@@ -1,9 +1,4 @@
 24 marzo 2025 e a seguire (in ordine di priorità)
-
-
-Infine:
-* Due riflessioni al volo sul bilanciamento delle randomizzazione personagge e sui tempi di comparsa
-* Rilettura ad alta voce, editing e correzione, dividendo per voce (mentore, fungo, personaggia uno, personaggio due, le cinque voci della giocatrice).
 * Testing in unity per vedere se ci sono problemi con unity.
 * Relativi debug.
 * Creazione documento Google per testing + pagina itch per caricare la build.

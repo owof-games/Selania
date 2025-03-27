@@ -11,12 +11,14 @@
         
 === starting_note ===
     + {are_two_entities_together(StartingNote, PG)}[StartingNote]
-        ???: Grazie per quello che hai fatto, Mentore.
-        ???: Le cose qui ora hanno ripreso a funzionare.
-        ???: Spero un giorno di incontarti ancora.
+        ???: Ti scrivo perché volevo ringraziarti per quello che hai fatto.
+        ???: Le cose nella mia vita hanno ripreso a funzionare.
+        ???: Ci sono ancora molte giornate giornate no, ma molto più spesso anche delle giornate sni.
+        ???: E persino qualche giornata YEAH!
+        ???: Spero che un giorno potrai avere anche tu la tua giornata yeah.
+        ???: E magari di passarla assieme.
             -> main
 
--> main
 
 === first_character_notes ===
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)

@@ -130,7 +130,7 @@
         
         ???: Perché sei qui?
             
-            + [Questo luogo non dovrebbe esistere e voglio capirlo.]
+            + [Questo luogo è assurdo e voglio capirlo.]
                 ???: Anche a me mi piace capire le cose.
                 ???: I grandi si arrabbiano se faccio troppe domande.
                 ???: Tipo: perché c'è la neve ma non fa freddo?
@@ -180,7 +180,7 @@
         {are_two_entities_together(FirstCharacter, PG): {charNameOne}: O senza vinello.}
         
         
-            + (twoBlue) [Tecnicamente, il compleanno arriva a prescindere dalle caramelle.]
+            + (twoBlue) [Il compleanno arriva a prescindere dalle caramelle.]
                 ???: Forse la data.
                 ???: Quella sì.
                 ???: Ma il compleanno è un'altra cosa.
@@ -188,7 +188,7 @@
                 ???: E infatti lo puoi festeggiare in ritardo e comunque è il tuo compleanno!
                     ~ secondBlue ++
                 
-            + (twoYellow) [Non ho trovato le caramelle, ma c'è uno stagno dove nuotare!]
+            + (twoYellow) [Niente caramelle, ma c'è uno stagno dove nuotare!]
                 ???: FIGO!
                 ???: Non ho mai visto uno stagno!
                 ???: Però questa estate ho visto un mare gigantesco.
@@ -268,7 +268,7 @@
         - (top)
         {name}: {charNameFive} dice che le hai dato un calcio.
             
-            + (twoBlue) [Credevo tu fossi più disciplinato. Che delusione.]
+            + (twoBlue) [Credevo tu fossi disciplinato. Che delusione.]
                 {charNameTwo}: Ehi! Mica mi chiedi perché lo fatto!
                 {charNameTwo}: Vi odio.
                 {charNameTwo}: Tu e lei.
@@ -521,7 +521,7 @@
         {charNameTwo}: Mi spiace essere scappato di casa.
         {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Se Talco fosse qui, ti avrebbe già adottato.}        
         
-            + [Non parli mai del tuo nonno. Deduco che non ci sia più?]
+            + [Non parli mai di tuo nonno. Non c'è più?]
                 {charNameTwo}: Se ne è andato quando papà era molto piccolo.
                 {charNameTwo}: Più di me.
                 {charNameTwo}: Ogni tanto scriveva delle lettere che facevano arrabbiare mamma.
@@ -628,7 +628,7 @@
         {charNameTwo}: E non mi piace quando fa così.
             
         
-            + [Anche i maschi piangono, piangono anche gli orsi e gli elefanti.]
+            + [Anche i maschi piangono, e anche gli orsi e gli elefanti.]
                 {charNameTwo}: Gli orsi mi piacciono.
                 {charNameTwo}: Sono forti.
                 {charNameTwo}: Ma comunque piangono.
@@ -637,7 +637,7 @@
                 {charNameTwo}: Ma non so se mi piace piangere.
                     ~ secondBlue ++
                 
-            + [La scuola è un posto terribile, non c'è spazio per la fantasia!]
+            + [La scuola è un posto senza fantasia!]
                 {charNameTwo}: Sì no boh.
                 {charNameTwo}: A me mi piace tanto raccontare le storie.
                 {charNameTwo}: Inventare cose nuove.
@@ -648,7 +648,7 @@
                 {charNameTwo}: E se mi annoio comunque finisco in castigo.
                     ~ secondYellow ++
                 
-            + [Stringi i denti, lotta, e diventa più forte degli altri!]
+            + [Stringi i denti, lotta, diventa più forte degli altri!]
                 {charNameTwo}: Lo dice anche papà.
                 {charNameTwo}: Ma a me non mi interessa mica tanto.
                 {charNameTwo}: Voglio solo studiare gli animali.
@@ -722,7 +722,8 @@
         {charNameTwo}: E quella dello stagno mi ha parlato.
         {charNameTwo}: Ma mi ha detto che il regalo è per te invece.
         
-            + [Il fatto che di solito le rane non parlano, non esclude che lo possano fare.]
+            + [Se qualcosa non è mai accaduta, non è per forza impossibile.]
+                {charNameTwo}: Quindi mi credi?
                 {charNameTwo}: Quindi tutto è possibile?
                 {charNameTwo}: Anche che salto e volo?
                 {charNameTwo}: O che la serra diventa di cioccolato?
@@ -755,7 +756,7 @@
                     ~ secondGreen ++
   
                 
-            + [Se lo tocchi e stai male è velenoso, se lo senti e prudono le orecchie, è una bugia.]
+            + [E se lo senti e prudono le orecchie è una bugia.]
                 {charNameTwo}: Non è una bugia!
                 {charNameTwo}: Perché non mi credi?
                 {charNameTwo}: Non siamo amici?
@@ -803,7 +804,7 @@
                 {charNameTwo}: Così le giornate sono più facili.
                     ~ secondBlue ++
                 
-            + [Hai mai corretto una giornata mettendoci i vampiri? O gli zombie?]
+            + [Hai mai corretto una giornata mettendoci vampiri o zombie?]
                 {charNameTwo}: Sì!
                 {charNameTwo}: Una volta siamo andati in gita a vedere i Camuni.
                 {charNameTwo}: E la guida diceva tutte queste cose noiose.
@@ -878,7 +879,7 @@
         {charNameTwo}: E anche lui non sa nuotare.
         {charNameTwo}: Ma non mi sembra felice quando vado da loro e quindi ci vado poco.
             
-            + [A essere pratici, non devi sapere nuotare per pescare.]
+            + [Non devi sapere nuotare per pescare.]
                 {charNameTwo}: Esatto!
                 {charNameTwo}: Ma lei non lo vuole capire.
                 {charNameTwo}: "E se cadi in acqua?"
@@ -906,7 +907,7 @@
                     ~ secondRed ++
 
                 
-            + [Hai mai chiesto all'amico di tuo fratello cosa pensa di te?]
+            + [Hai chiesto all'amico di tuo fratello cosa pensa di te?]
                 {charNameTwo}: Scherzi?!?
                 {charNameTwo}: Non sono mica così strano.
                 {charNameTwo}: Però una volta l'ho chiesto a mio fratello.
@@ -978,8 +979,10 @@
                     ~ secondGreen ++
   
                 
-            + [Mi piace portare un cambiamento grande partendo dal piccolo.]
-                {charNameTwo}: Sembra una cosa faticosa.
+            + [Voglio portare un grande cambiamento partendo dal piccolo.]
+            
+                {charNameTwo}: E io sono piccolo.
+                {charNameTwo}: Mi sembra una cosa faticosa.
                 {charNameTwo}: Però la capisco.
                 {charNameTwo}: È come l'elettricità.
                 {charNameTwo}: È così piccola che non la vedi.
@@ -1131,7 +1134,7 @@
                     ~ secondGreen ++
   
                 
-            + [La tua rabbia fa male, ma la rabbia della ragazzina ha protetto il fratello.]
+            + [La rabbia della ragazzina ha protetto il fratello.]
                 {charNameTwo}: Ma chi protegge me?
                 {charNameTwo}: Uh, bugia, scusa.
                 {charNameTwo}: Qui sono stato io a fare il cattivo.
@@ -1169,7 +1172,7 @@
         {charNameTwo}: Ma qui non c'è.
         {charNameTwo}: Chissà se è la rana che fa accadere le cose.
         
-            + [Hai la mente da scienziato: se una cosa non la provi allora non è vera!]
+            + [Hai la mente da scienziato, e vuoi verificare tutto.]
                 {charNameTwo}: Lo dice anche mio fratello.
                 {charNameTwo}: Per questo mi lascia fare gli esperimenti.
                 {charNameTwo}: Ma senza elettricità, dopo l'incidente.
@@ -1187,7 +1190,7 @@
                 {charNameTwo}: Forse se prendo tutti i rami del bosco...
                     ~ secondYellow ++
                 
-            + [Mi piaci, perché alla fine fai quello che ti va.]
+            + [Sei tosto perché alla fine fai quello che ti va.]
                 {charNameTwo}: Sì no boh.
                 {charNameTwo}: Questa cosa agli adulti non piace molto.
                 {charNameTwo}: Ma se non posso capire le cose, mi rimangono in testa.
@@ -1264,7 +1267,7 @@
                 {charNameTwo}: Non dirlo a {charNameFive}, ti prego!
                     ~ secondBlue ++
                 
-            + [Secondo me dobbiamo solo capire la lingua dei pesci e allora ci possiamo giocare.]
+            + [Dobbiamo capire la lingua dei pesci così ci possiamo giocare.]
                 {charNameTwo}: Magari è come con le pecore che fanno tanti "bee" diversi.
                 {charNameTwo}: Magari hanno tutti i loro dialetti.
                 {charNameTwo}: Per me la sogliola parla come i milanesi.
@@ -1595,7 +1598,7 @@
                     ~ secondStatementVariation(purple)    
             
         
-        + [Eppure ama il suo amico.]
+        + [Eppure ama il suo ragazzo.]
             {name}: E ama te.
             {name}: E fa in modo che possiate passare tanto tempo assieme.
             {name}: Che tu possa avere uno spazio felice.
@@ -1660,7 +1663,7 @@
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)    
         
-        + [A volte abbiamo bisogno di raggomitolarci per superare le cose peggiori.]
+        + [A volte ci raggomitoliamo per superare il peggio.]
             {name}: Quello che conta è: cosa facciamo, dopo?
             {name}: Quando le cose sono superate?
             {name}: Restiamo ancora nel nostro posto sicuro?
@@ -1670,7 +1673,7 @@
                     ~ secondStatementVariation(purple)    
              
             
-        + [Ma anche se la schiena ha le spine, la loro pancia è tenera e gentile.]
+        + [Anche se la schiena ha le spine, la loro pancia è tenera e gentile.]
             {name}: E tu sei stato tenero molte volte da quando sei qui.
             {name}: Con me, con la rana.
             {name}: E con le cose che hai raccontato.
@@ -1679,7 +1682,7 @@
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)          
         
-        + [I ricci hanno un olfatto super, e possono trovare tutte le caramelle del mondo.]
+        + [I ricci hanno un olfatto super, possono trovare tutte le caramelle del mondo.]
             {name}: E dopo che hai trovato le caramelle, cambia animale.
             {name}: Diventa qualcosa che vede fino alla luna, e insegui le stelle.
             {name}: Oppure impara a nuotare fino all'altra parte del mondo.

@@ -13,6 +13,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     VAR averageStories = (AdriAllora, BeatriceYBottura, CeciliaFormicola, Lamia, Romi)
     VAR longStories = (Aza, Beatrice, Salvo, LetiziaVaccarella)
     
+TODO: aggiungere negli about storia Leti, mia e di B.    
 //Books about...
     VAR aboutTransformation = (Aza, ValFaustoLattanzio, Salvo, BeatriceYBottura)
     VAR aboutQuestions = (AdriAllora, Beatrice, ValFaustoLattanzio, StenoArtico, Romi)

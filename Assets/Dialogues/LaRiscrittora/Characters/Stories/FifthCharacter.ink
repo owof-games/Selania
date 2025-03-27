@@ -143,7 +143,7 @@
                 {charNameFive}: Le persone a volte fanno cose che non ci aspettiamo.
                 {charNameFive}: Un <i>Lichene degli abissi</i> con le giuste condizioni cresce sempre allo stesso modo.
   
-            + (fivePurple) [Per me è il contrario: sono felice che crescano a prescidere da me.]
+            + (fivePurple) [Invece sono felice che crescano a prescidere da me.]
                     ~ fifthPurple ++
                 {charNameFive}: Senza di te? Dobbiamo bagnare il terreno, prepararlo, seminare.
                 {charNameFive}: Non ci sarebbe nulla senza il nostro lavoro.
@@ -236,7 +236,7 @@
                 {charNameFive}: E la maggior parte delle volte non paghiamo in denaro.
                     ~ fifthBlue ++
                 
-            + [Forse hanno l'indirizzo sbagliato. O le volpi si mangiano le lettere!]
+            + [Forse le volpi si mangiano le lettere!]
                 {charNameFive}: La fantasia è un modo piacevole di affrontare la realtà, {name}.
                 {charNameFive}: Ma alla lunga rende difficile capire cosa sia vero e cosa no.
                     ~ fifthYellow ++
@@ -302,7 +302,7 @@
                 {charNameFive}: Se non voglio vederle io a cinquant'anni, perché deve vederle un bimbo?
                     ~ fifthYellow ++
                 
-            + [Alla sua età avevo anche io idee e paure. Si è bambini, non idioti]
+            + [Alla sua età avevo anche io idee e paure. Si è bambini, non idioti.]
                 {charNameFive}: Non serve che usi quel linguaggio con me, {name}.
                 {charNameFive}: E non sono d'accordo.
                 {charNameFive}: Nemmeno a vent'anni puoi sapere davvero cosa vuoi.

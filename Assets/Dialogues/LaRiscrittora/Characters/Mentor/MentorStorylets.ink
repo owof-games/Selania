@@ -133,7 +133,7 @@
 
     {charNameFive}: Hai trovato la serra!
     {charNameFive}: Qui puoi coltivare cose molto diverse tra loro.
-    {charNameFive}: Tutte quelle cose che tendiamo a ignorare ma che sono fondamentali per la vita.
+    {charNameFive}: Un po' tutte quelle creaturine che tendiamo a ignorare ma che sono fondamentali per la vita.
     {charNameFive}: Sapevi che i funghi sono il punto di contatto tra vita e morte?
     {charNameFive}: Trasformano la materia inorganica e in decomposizione in sostanze fondamentali per i viventi.
     {charNameFive}: Senza funghi la vita stessa sarebbe impensabile.
@@ -195,41 +195,41 @@
 ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 
-    Sconosciutə: Sapevo che sarebbe arrivata una nuova persona!
-    Sconosciutə: Immagino tu abbia un milione di domande, vero?
+    ???: Sapevo che sarebbe arrivata una nuova persona!
+    ???: Immagino tu abbia un milione di domande, vero?
     - (top)
         * (dove) [Dove sono?]
-            {chiSei:{charNameFive}|Sconosciutə}: Questo luogo non ha un nome.
-            {chiSei:{charNameFive}|Sconosciutə}: Per me è il giardino, ma vedrai anche tu che è anche molto altre cose.
-            {chiSei:{charNameFive}|Sconosciutə}: La cosa che posso dirti con certezza è che faccio di tutto per renderlo un posto sicuro.
-            {chiSei:{charNameFive}|Sconosciutə}: Un posto dove prenderti cura di te.
-            {chiSei:{charNameFive}|Sconosciutə}: Non male, no?
-            {chiSei:{charNameFive}|Sconosciutə}: Soprattutto quando fuori da qui è difficile trovare un senso.
+            {chiSei:{charNameFive}|???}: Questo luogo non ha un nome.
+            {chiSei:{charNameFive}|???}: Per me è il giardino, ma vedrai anche tu che è anche molto altre cose.
+            {chiSei:{charNameFive}|???}: La cosa che posso dirti con certezza è che faccio di tutto per renderlo un posto sicuro.
+            {chiSei:{charNameFive}|???}: Un posto dove prenderti cura di te.
+            {chiSei:{charNameFive}|???}: Non male, no?
+            {chiSei:{charNameFive}|???}: Soprattutto quando fuori da qui è difficile trovare un senso.
                 -> top
         
         * (chiSei) [Chi sei?]
-            Sconosciutə: La persona che tieni in piedi questo luogo.
-            Sconosciutə: Ma tu puoi chiamarmi <b>{lowercaseTranslator(fifthCharacterState)}</b>.
+            ???: La persona che tieni in piedi questo luogo.
+            ???: Ma tu puoi chiamarmi <b>{lowercaseTranslator(fifthCharacterState)}</b>.
             {charNameFive}: Così puoi ricordarti con facilità a cosa servo.
                 -> top
         
         * (vado) [Come me ne vado da qui?]
-            {chiSei:{charNameFive}|Sconosciutə}: Vuoi già andartene?
-            {chiSei:{charNameFive}|Sconosciutə}: Cavolo, forse devo rivedere il mio benvenuto.
-            {chiSei:{charNameFive}|Sconosciutə}: Forse sono stata troppo formale?
-            {chiSei:{charNameFive}|Sconosciutə}: O dovrei essere più autorevole?
-            {chiSei:{charNameFive}|Sconosciutə}: Ma non devo essere scortese ora.
-            {chiSei:{charNameFive}|Sconosciutə}: Mi hai fatto una domanda, e vedrò di rispondere.
-            {chiSei:{charNameFive}|Sconosciutə}: Ad est della stazione troverai un sentiero che ti riporterà a casa.
-            {chiSei:{charNameFive}|Sconosciutə}: E se deciderai di tornare, troverai tutto nello stato in cui l'hai lasciato.
+            {chiSei:{charNameFive}|???}: Vuoi già andartene?
+            {chiSei:{charNameFive}|???}: Cavolo, forse devo rivedere il mio benvenuto.
+            {chiSei:{charNameFive}|???}: Forse sono stata troppo formale?
+            {chiSei:{charNameFive}|???}: O dovrei essere più autorevole?
+            {chiSei:{charNameFive}|???}: Ma non devo essere scortese ora.
+            {chiSei:{charNameFive}|???}: Mi hai fatto una domanda, e vedrò di rispondere.
+            {chiSei:{charNameFive}|???}: Ad est della stazione troverai un sentiero che ti riporterà a casa.
+            {chiSei:{charNameFive}|???}: E se deciderai di tornare, troverai tutto nello stato in cui l'hai lasciato.
                 -> top
                 
         * {vado} [Non ho più voglia di parlare.]
-            {chiSei:{charNameFive}|Sconosciutə}: Lascia che ti rubi giusto un secondo!
+            {chiSei:{charNameFive}|???}: Lascia che ti rubi giusto un secondo!
             -> your_name
             
         * {vado or chiSei or dove} [Ma perché sono qui?]
-            {chiSei:{charNameFive}|Sconosciutə}: Ora tocca a me farti una domanda.
+            {chiSei:{charNameFive}|???}: Ora tocca a me farti una domanda.
             -> your_name
             
         * -> your_name
@@ -238,15 +238,15 @@
         ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
         ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         
-        {chiSei:{charNameFive}|Sconosciutə}: Come ti devo chiamare?
-        {chiSei:{charNameFive}|Sconosciutə}: Puoi usare un nome qualsiasi: prendi questa occasione come un nuovo inizio.
+        {chiSei:{charNameFive}|???}: Come ti devo chiamare?
+        {chiSei:{charNameFive}|???}: Puoi usare un nome qualsiasi: prendi questa occasione come un nuovo inizio.
             -> name_choice ->
-        {chiSei:{charNameFive}|Sconosciutə}: E quali sono i tuoi pronomi?
+        {chiSei:{charNameFive}|???}: E quali sono i tuoi pronomi?
             -> gender ->
-        {chiSei:{charNameFive}|Sconosciutə}: Piacere di conoscerti, {name}.
-        {chiSei:{charNameFive}|Sconosciutə}: E {pronouns has him: benvenuto|{pronouns has her: benvenuta|benvenutə}}.
-        {chiSei:{charNameFive}|Sconosciutə}: Con me usa pure i pronomi femminili.
-        {not chiSei: Sconosciutə: Ah, che sbadata. Mi chiamo <b>{charNameFive}</b>.|{charNameFive}: È mio dovere farti stare bene.}
+        {chiSei:{charNameFive}|???}: Piacere di conoscerti, {name}.
+        {chiSei:{charNameFive}|???}: E {pronouns has him: benvenuto|{pronouns has her: benvenuta|benvenutə}}.
+        {chiSei:{charNameFive}|???}: Con me usa pure i pronomi femminili.
+        {not chiSei: ???: Ah, che sbadata. Mi chiamo <b>{charNameFive}</b>.|{charNameFive}: È mio dovere farti stare bene.}
         {charNameFive}: Un'altra domanda importante, {name}.
         {charNameFive}: Nel tuo soggiorno in questo luogo potrebbe accadere che incontrerai qualche situazione complessa.
         {charNameFive}: Se ti va di dirmi quali sono le cose che ti creano disagio, farò il possibile per non fartele incontrare.
@@ -291,7 +291,7 @@
             {charNameFive}: Suggerire di cercare Talco con l'olfatto per esempio è stata un'idea originale, ma non ho percepito {charNameOne} particolarmente entusiasta. Forse dovevo darti più dritte.
             
             - knowing_first_character.one.oneBlue:
-            {charNameFive}: In questo senso, essere razionale con {charNameOne} non è un buon inizio, ma è colpa mia, è mio dovere darti le giuste indicazioni.
+            {charNameFive}: In questo senso, un atteggiamento concreto con {charNameOne} non è un buon inizio, ma è colpa mia, è mio dovere darti le giuste indicazioni.
             
             - knowing_first_character.one.oneGreen:
             {charNameFive}: La tua proposta di ascoltare {charNameOne} per esempio è stata molto tenera, ma non sono sicura che sia molto nelle sue corde.
@@ -313,17 +313,17 @@
                 {charNameFive}: Siamo sulla stessa lunghezza d'onda noi due!
                     ~ fifthBlue ++
                     
-            + [Come un videogioco: comprendi il loop, dai il meglio di te.]
-                {charNameFive}: Sono troppo vecchia per i videogiochi, ma credo tu abbia centrato il punto.
+            + [Come un gioco: comprendi il loop, dai il meglio di te.]
+                {charNameFive}: Sono troppo vecchia per giocare, ma credo tu abbia centrato il punto.
                     ~ fifthYellow ++
                     
-            + [Mi stai chiedendo di lavorare senza darmi un soldo.]
+            + [Quindi devo lavorare senza ricevere mezzo soldo.]
                 {charNameFive}: Non è un lavoro.
                 {charNameFive}: E qui non c'è denaro.
                 {charNameFive}: Ma è colpa mia, sto dando troppe cose per scontate.
                     ~ fifthRed ++
                     
-            + [Quindi devo creare una relazione con queste persone?]
+            + [Mi piace l'idea di creare una relazione con queste persone.]
                 {charNameFive}: Un po' di distacco è utile, per non farti ferire.
                 {charNameFive}: Vediti più come {pronouns has him: un amico|{pronouns has her: un'amica|unə amicə}}, che aiuta una persona a vedersi in modo diverso. 
                     ~ fifthGreen ++
@@ -338,7 +338,7 @@
         {charNameFive}: Perché tu {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}} sei <b>{pronouns has him: un riscrittore|{pronouns has her: una riscrittora|unə riscrittorə}}</b>!
         {charNameFive}: Aiuti queste persone bloccate a guardare la loro storia in modo diverso, e a scegliersi un nuovo nome.
         
-            + [E tu, hai bisogno di un nuovo nome?]
+            + [E tu hai bisogno di un nuovo nome?]
                 {charNameFive}: Io?
                 {charNameFive}: No!
                 {charNameFive}: Questo è stato, è e sarà sempre il mio nome.
@@ -400,7 +400,7 @@
                 {charNameFive}: E non chiedere all'altra persona di diventare qualcosa che non è.
                     ~ fifthGreen ++
                     
-            + [Ma non posso dirle: chiamati così, ciao, adios!?]
+            + [Ma non posso dirle: chiamati così e cosà, addio!?]
                 {charNameFive}: Un nuovo nome è una nuova esperienza.
                 {charNameFive}: E l'esperienza viene dal percorso.
                 {charNameFive}: Se non c'è percorso, non c'è cambiamento.
@@ -448,7 +448,7 @@
             {charNameFive}: Meglio della stanchezza dell'essere mentore, fidati.
                 -> talk_with_mentor
                 
-        * (infoImpo){firstCharacterInkLevel has High} [Cosa significa "la personaggia ti darà una informazione importante"?]
+        * (infoImpo){firstCharacterInkLevel has High} [Quali informazioni importanti hanno le personagge?]
             {charNameFive}: Dove l'hai sentita questa cosa, stellina?
             {name}: Quando stavo per fare le ultime domande a {charNameOne}, {voices: la|una} voce mi ha detto quanto inchiostro avevo e che avrei ricevuto una informazione importante.
             {not voices: {charNameFive}: Per la voce sarà la stanchezza, questo lavoro è faticoso.|{charNameFive}: Come ti dicevo, vedrai che è solo la tua empatia che parla.}
@@ -465,7 +465,7 @@
             {name}: Se senti ancora una volte delle voci, prenditi un po' di riposo.
                 -> talk_with_mentor
         
-        * (talkingFrog) {the_frog.frog} [Poco fa ho parlato con una rana blu.]
+        * (talkingFrog) {the_frog.frog} [C'è una rana blu parlante.]
             {charNameFive}: Una rana. E dove?
             {are_entities_together_in(Mentor, PG, GreenhouseMiddlePath):{name}: Qui nello stagno.|{name}: Allo stagno.}
             {charNameFive}: Da che sono qui non ho mai visto rane parlanti, {name}.

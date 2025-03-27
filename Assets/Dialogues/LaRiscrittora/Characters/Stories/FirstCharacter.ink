@@ -118,7 +118,7 @@
                 ???: E ha molta fantasia.
                 ???: Sempre che tu sappia cosa sia.
                 
-            + (oneYellow) [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + (oneYellow) [Con un tamburo di sicuro torna anche il violino.]
                     ~ firstYellow ++
                 ???: A beh, ci sta!
                 ???: Ci sta!
@@ -139,7 +139,7 @@
                 ???: Ma è come chiedermi di fare un concerto con una persona sconosciuta.
                 ???: Non è che ci si piglia subito, no?
 
-            + (onePurple) [Tu sei sempre con ləi, ləi è sempre con te.]
+            + (onePurple) [Tu sei sempre con ləi e ləi con te.]
                 ~ firstPurple ++
                 ???: Mmm, ok, credo?
                 ???: Le parole mi vanno anche bene, ma chi ti conosce.
@@ -187,7 +187,7 @@
                 {charNameOne}: Mi merito di essere una chitarra!
                     ~ firstYellow ++
                     
-            + [Solo se sei tu a definirne il significato e non altri.]
+            + [Solo se sei tu a definirne il significato.]
                 {charNameOne}: Ah, ci sta!
                 {charNameOne}: Tu sì che sai guardare al cuore delle cose!
                 {charNameOne}: Quindi: ora mi ritrovo con un nome nuovo.
@@ -357,7 +357,7 @@
                 {charNameOne}: O far finta di predire il futuro scazzando più di Nostradamus.
                     ~ firstBlue ++        
     
-            + [Tutte le strade sono sbagliate se non sai dove stai andando.]
+            + [Tutte le strade sono sbagliate se non sai dove andare.]
                 {charNameOne}: Mi ricordi il nonno.
                 {charNameOne}: Ignorava i piccoli fastidi per concentrarsi sul grande insieme delle cose.
                 {charNameOne}: A me non viene benissimo questa cosa però.
@@ -421,7 +421,7 @@
                 {charNameOne}: E qualcuno che canti.
                     ~ firstRed ++
                     
-            + [Il silenzio ti offre la vulnerabilità necessaria per raccontarti.]
+            + [Il silenzio offre la vulnerabilità necessaria per raccontarsi.]
                 {charNameOne}: Non ti sono sembrata già abbastanza needy, ama?
                 {charNameOne}: E poi vorrei ricordarti che manco so perché mi chiamo così.
                 {charNameOne}: No dai, tu cerchi di essere gentile, scusa.
@@ -429,7 +429,7 @@
                 {charNameOne}: L'unica cosa che so fare è suonare.
                     ~ firstGreen ++
                     
-            + [Il giardino tutto è musica, si tratta solo di ascoltare.]
+            + [Il giardino <b>è</b> musica, si tratta solo di ascoltare.]
                 {charNameOne}: Tu sei un mood tutto tuo.
                 {charNameOne}: Ma forse hai ragione, {name}.
                 {charNameOne}: È che per ascoltare serve restare in silenzio.
@@ -545,7 +545,7 @@
                 {charNameOne}: E a quel punto ogni decisione sarebbe la <i>mia</i> decisione.
                     ~ firstPurple ++
             
-            + [Dona la tua musica senza chiedere e qualcosa arriverà.]
+            + [Dona la tua musica senza chiedere e tutto arriverà.]
                 {charNameOne}: Forse in questo posto strano funziona così.
                 {charNameOne}: Ma nel mondo reale tutto prende e non dà nulla.
                 {charNameOne}: A parte l3 am3.
@@ -595,7 +595,7 @@
                 {charNameOne}: Non è togliersi la responsabilità verso le altre persone?
                     ~ firstPurple ++
                     
-            + [È un errore smettere di giocare, e il jazz è musica che gioca.]
+            + [È un errore non giocare, e il jazz è musica che gioca.]
                 {charNameOne}: Top!
                 {charNameOne}: Anche se sicuro che ora si è preso un infarto.
                 {charNameOne}: Per me tutta la musica è gioco.
@@ -639,7 +639,7 @@
         {charNameOne}: Sono roba morta.
         {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Essere adulti è orribile.}        
             
-            + [Una comunità sboccia da sè quando c'è affetto e fiducia.]
+            + [Una comunità sboccia quando c'è affetto e fiducia.]
                 {charNameOne}: Esatto!
                 {charNameOne}: Una casa in campagna con l3 am3.
                 {charNameOne}: Un giardino.
@@ -647,14 +647,14 @@
                 {charNameOne}: Ma non è che possiamo salvare il mondo, noi.
                     ~ firstGreen ++
                 
-            + [Una comunità non regge a lungo senza senso pratico.]
+            + [Una comunità non regge senza senso pratico.]
                 {charNameOne}: Giuro ama che a volte mi triggeri tantissimo.
                 {charNameOne}: Perché tutto è solo senso pratico per te?
                 {charNameOne}: Non è comunità la roba che hai in mente, ma una roba come una fabbrica.
                 {charNameOne}: E io non ci voglio vivere in una fabbrica.
                     ~ firstBlue ++
                     
-            + [Una comunità resiste solo seguendo un obiettivo superiore.]
+            + [Una comunità resiste se segue un obiettivo superiore.]
                 {charNameOne}: Mood totale.
                 {charNameOne}: Una comunità unita per rendere il mondo più giusto.
                 {charNameOne}: O trasformare qualcosa di terribile in un gioco.
@@ -694,13 +694,13 @@
         {charNameOne}: E ti senti viva.
         {charNameOne}: Merda, faccio davvero schifo a parlare.
             
-            + [È una ninna nanna. E l'imprevedibile è ciò che sognerai.]
+            + [È come una ninna nanna. Chissà cosa sognerai.]
                 {charNameOne}: La cosa preferita di Talco sono i pigiama party.
                 {charNameOne}: Chillare con l3 am3.
                 {charNameOne}: "Un sogno condiviso, sognando sognare."
                     ~ firstGreen ++
                     
-            + [Non tanto a parlare, quanto ad arrivare al punto.]
+            + [Non tanto a parlare ma ad arrivare al punto.]
                 {charNameOne}: Ama, mi ricordi perché continuo a raccontarti queste cose?
                 {charNameOne}: Ah, sì, perché siamo solo noi.
                 {charNameOne}: E la mentore.
@@ -756,7 +756,7 @@
         {charNameOne}: Giuro, ama!
         {charNameOne}: E quando ho iniziato a cantare con loro mi sono sentita viva.
         
-            + [Credo che gli alberi qui conoscano la storia della tua lotta.]
+            + [Forse gli alberi qui conoscono la storia della tua lotta.]
                 {charNameOne}: Non è per flexare, ma sarebbe bello.
                 {charNameOne}: Però allora gli chiedo anche come tornare a casa.
                 {charNameOne}: Non so più quanto voglio restare quì.
@@ -770,14 +770,14 @@
                 {charNameOne}: Muovermi a volte mi sembra che rompa le cose.
                     ~ firstYellow ++
                     
-            + [Sei tu che hai lottato per gli alberi, o gli alberi hanno lottato per te?]
+            + [Sei tu che hai lottato per gli alberi, o loro per te?]
                 {charNameOne}: Ti shippo totale.
                 {charNameOne}: Talco direbbe che ci siamo aiutate a vicenda. E non solo.
                 {charNameOne}: Che la separazione è solo una illusione, o roba del genere.
                 {charNameOne}: Che una melodia non esiste senza tutte le sue note.
                     ~ firstPurple ++
             
-            + [Gli alberi "cantano" per mettere in allarme altri alberi.]
+            + [Gli alberi "cantano" per allarmare altri alberi.]
                 {charNameOne}: Ama, tu sai uccidere il mood come poche persone al mondo.
                 {charNameOne}: Quindi secondo te ero immersa in un coro di disperazione?
                 {charNameOne}: Ora mi metto a urlare anche io.
@@ -816,7 +816,7 @@
         {charNameOne}: E rideva un sacco.
         {charNameOne}: Non il suo sport preferito.
         
-            + [C'è poco di divino in uno strumento condannato a non suonare.]
+            + [L'inferno è uno strumento che non può suonare.]
                 {charNameOne}: Adoro.
                 {charNameOne}: Non avrei saputo dirlo meglio.
                 {charNameOne}: Ogni tanto li rubavo e suonavo in camera.
@@ -873,7 +873,7 @@
         {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Moooooolto vecchia!}        
         {charNameOne}: Se quello è l'obiettivo, ho proprio preso la strada sbagliata.
         
-            + [Secondo te tua mamma vuole il tuo o il suo di bene?]
+            + [Tua mamma vuole il tuo o il suo di bene?]
                 {charNameOne}: A mia madre interessa solo il nome della famiglia.
                 {charNameOne}: Come se poi fosse prestigioso.
                 {charNameOne}: Un po' mi spiace perché mi rendo conto che lei ci tiene proprio a sembrare una di quelle fighe.
@@ -881,14 +881,14 @@
                 {charNameOne}: Povera.
                     ~ firstGreen ++
                     
-            + [Tutt3 e tre hanno fatto concerti prima della maggiore età.]
+            + [Loro hanno fatto concerti prima della maggiore età.]
                 {charNameOne}: Grazie per avermelo ricordato.
                 {charNameOne}: Ne avevo davvero bisogno.
                 {charNameOne}: Ora dimmi che sono fallita e così posso appendere il piano al muro.
                 {charNameOne}: E non dirmi che non si può appendere un pianoforte al muro o giuro che ti rompo i timpani urlando.
                     ~ firstBlue ++
                 
-            + [La strada sbagliata è sempre quella con più insegnamenti.]
+            + [La strada sbagliata è quella con più insegnamenti.]
                 {charNameOne}: {name}: non un nome ma un dispenser di aforismi.
                 {charNameOne}: Però in qualche modo ha senso.
                 {charNameOne}: Ma presto o tardi dovrò pure capire come mangiare, e a quel punto cosa me ne faccio di tutte le strade sbagliate del mondo?
@@ -903,7 +903,7 @@
                 {charNameOne}: Sto suonando e sono così rincoglionita da non averlo realizzato?
                     ~ firstYellow ++
                     
-            + [Cambiamo sempre, ma non possiamo diventare qualcun altro.]
+            + [Cambiamo sempre, ma non diventiamo mai chi non siamo.]
                 {charNameOne}: Un'altra frase così e mi crusho tantissimo per te.
                 {charNameOne}: Ma prima vallo a dire a mia madre.
                 {charNameOne}: Ama: mi fa male con queste cose ma non se ne rende nemmeno conto.
@@ -1064,7 +1064,7 @@
 	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }            
         
-        + [Eppure hai deciso di costruire una famiglia con l3 tu3 am3.]
+        + [Ma hai deciso di costruire una famiglia con l3 tu3 am3.]
             {name}: Hai aperto il tuo cuore, e loro ti amano.
             {name}: Si preoccupano per te, cercano di aiutarti a trovare la tua strada.
             {name}: E questo amore è frutto di infinite piccole scelte fatte ogni giorno.
@@ -1123,7 +1123,7 @@
                 }
     
             
-        + [Il tuo cuore si preoccupa molto di loro, e poco di te.]
+        + [Ti preoccupi molto di loro, e poco di te.]
             {name}: Non ti sei chiesta molto dove eri, ti sei messa solo a cercare Talco.
             {name}: Ti sei preoccupata per Jonah.
             {name}: Ma per te?
@@ -1137,7 +1137,7 @@
     		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
                 
-        + [Tradiamo la fiducia rompendo le regole a nostro vantaggio.]
+        + [Tradiamo la fiducia se rompiamo le regole a nostro vantaggio.]
             {name}: Hai deciso di giocare con loro e lasciar loro tutto il potere?
             {name}: O è una regola implicita, che non avete mai concordato ma che senti nell'aria?
             {name}: E a prescindere: abbiamo sempre il diritto di revocare un accordo, una regola.
@@ -1212,7 +1212,7 @@
     
     = four
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        {name} Questo posto ti ha assegnato un nome, e quel nome è Chitarra, e tu lo vedi come una rinuncia.
+        {name} Questo posto ti ha assegnato un nome, e quel nome è Chitarra. Ma tu lo vedi come una rinuncia.
 
         + [Giocare è bello perché puoi sempre rinunciare a farlo.]
             {name}: Quando una roba la devi fare anche quando non vuoi, quello è il lavoro.
@@ -1224,7 +1224,7 @@
                 }            
          
         
-        + [Quando Anna ha rinunciato all'ex, ha scoperto la sicurezza.]
+        + [Quando Anna ha rinunciato all'ex, è rinata.]
             {name}: Rinunciare vuol dire anche prendersi cura di sé.
             {name}: Un atto d'amore quando qualcosa non ci fa più bene.
         
