@@ -177,7 +177,7 @@
         ???: Perché mamma ha detto che avrebbe dato solo a me qualcosa di bellissimo che papà non può rubare.
         ???: Ma dove trovo le caramelle?
         ???: Mamma dice sempre che non c'è compleanno senza caramelle!
-        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Tua mamma e io potremmo andare d'accordo!}
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: O senza vinello.}
         
         
             + (twoBlue) [Tecnicamente, il compleanno arriva a prescindere dalle caramelle.]
@@ -325,7 +325,7 @@
         {charNameTwo}: Se {charNameFive} non mi lascia in pace chiamo mio fratello.
         {charNameTwo}: Lui è superforte.
         {charNameTwo}: Ora lasciami in pace.
-        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Mi ero dimenticata di quanto fosse terribile essere piccoli.}        
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Dio che merda essere bambini.}        
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
 
@@ -715,7 +715,7 @@
         {charNameTwo}: Nonna dice che se lo lecchi e stai male, è tossico.
         {charNameTwo}: Se lo tocchi e stai male, è velenoso.
         {charNameTwo}: E se ti guarda e stai male, è mamma.
-        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Questa cattiveria me la riciclo.}        
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Questo shade sicuro che me lo riciclo.}        
         {charNameTwo}: E so altre cose sulle rane.
         {charNameTwo}: Ma non ho mai visto una rana parlare.
         {charNameTwo}: O fare dei regali.

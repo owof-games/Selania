@@ -1,8 +1,6 @@
 24 marzo 2025 e a seguire (in ordine di priorità)
-* Correzione e alleggerimento personaggia uno.
-* Scrittura nuove note peronaggia uno.
 * Correzione coltivabili in base a nuovi nomi e forme/luoghi.
-* Check per valore dei doni in base alle due storie.
+
 
 
 
@@ -12,7 +10,7 @@ Infine:
 * Testing in unity per vedere se ci sono problemi con unity.
 * Relativi debug.
 * Creazione documento Google per testing + pagina itch per caricare la build.
-https://docs.google.com/forms/u/0/?tgif=d&ec=asw-forms-hero-goto&ftv=1
+https://docs.google.com/forms/u/0/?tgif=d&ec=asw-forms-hero-goto&ftv=1 -> domande anche di bilanciamento (inchiostro etc)
 
 
 are_two_entities_together(TheFrog, PG)
@@ -61,3 +59,28 @@ Ma   anche inventivo e, col tempo, affettuoso.
 Ma se qualcosa lo ferisce, si ritira.
 
 finale riccio: va a vivere dal fratello.
+--------------------------------------------------
+TODO: intercalari:
+adoro.
+
+ah, ci sta!
+ama.
+top (= grande, fantastico. non in chiave ironica). [sono tutti intercalari per non dire di preciso cosa penso sul tema.] 
+blastato/a. 
+cringe. 
+normie (basicone). 
+triggerata/o. 
+Amo noi. 
+Bestie (singolare e plurale). 
+Chillare, sto nel chill, me la chillo. 
+Crush. 
+Flexare. 
+Ghostare. 
+Hype. 
+Mood. 
+Shippare (non solo romantico). 
+Slay. 
+Snitchare (fare la spia).
+
+ə
+{pronouns has him: benvenuto|{pronouns has her: benvenuta|benvenutə}}
