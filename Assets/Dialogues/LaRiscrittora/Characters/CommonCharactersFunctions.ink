@@ -209,13 +209,13 @@ VAR delayFourthChar = 20
 
 
 //Check per l'allontanamento delle personagge
-    - firstStory == Ended && movementsCounter > 10:
-        ~ move_entity(FirstCharacter, Safekeeping)
-        ~ move_entity(FirstCharacterNotes, BusStop)
+    //- firstStory == Ended && movementsCounter > 10:
+        //~ move_entity(FirstCharacter, Safekeeping)
+        //~ move_entity(FirstCharacterNotes, BusStop)
         
-    - secondStory == Ended && movementsCounter > 10:
-        ~ move_entity(SecondCharacter, Safekeeping)
-        ~ move_entity(SecondCharacterNotes, BusStop)
+    //- secondStory == Ended && movementsCounter > 10:
+        //~ move_entity(SecondCharacter, Safekeeping)
+        //~ move_entity(SecondCharacterNotes, BusStop)
         
     - thirdStory == Ended && movementsCounter > 10:
         ~ move_entity(ThirdCharacter, Safekeeping)

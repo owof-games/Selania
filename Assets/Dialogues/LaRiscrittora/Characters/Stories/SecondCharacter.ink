@@ -1876,7 +1876,7 @@
         {secondCharacterPossibleStates has IlRiccio: {charNameTwo}: Spero papà non sarà arrabbiato.}        
         
             ~ move_entity(SecondCharacter, Safekeeping)
-            ~ move_entity(SecondCharacterNotes, BusStop)
+
   
             
         -> main

@@ -286,7 +286,9 @@
             - unreadStories has StenoArtico: 
                 ~ unreadStories -= StenoArtico
             - unreadStories has Beatrice: 
-                ~ unreadStories -= Beatrice    
+                ~ unreadStories -= Beatrice
+            - unreadStories has LetiziaVaccarella: 
+                ~ unreadStories -= LetiziaVaccarella                 
         }     
         ~ depression = false
             -> top_due
@@ -297,7 +299,9 @@
             - unreadStories hasnt StenoArtico: 
                 ~ unreadStories += StenoArtico
             - unreadStories hasnt Beatrice: 
-                ~ unreadStories += Beatrice    
+                ~ unreadStories += Beatrice
+            - unreadStories hasnt LetiziaVaccarella: 
+                ~ unreadStories += LetiziaVaccarella                 
         }        
             -> top_due
             

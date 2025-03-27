@@ -1387,10 +1387,8 @@
             
             ~ move_entity(FirstCharacter, Safekeeping)
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
-            {
-                - firstCharacterPossibleStates hasnt Chitarra:
-                    ~ move_entity(FirstCharacterNotes, BusStop)
-            }    
+            
+
             
         -> main
 

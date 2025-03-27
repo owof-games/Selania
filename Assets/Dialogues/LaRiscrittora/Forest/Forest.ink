@@ -11,7 +11,7 @@ VAR emptyVaseFound = false
                     - dice == 1:
                         <i>C'è un vaso vuoto.</i>
                         <i>In questo luogo anche la cosa più insolita può essere un tesoro.</i>
-                        Hai ottenuto: <b>vaso vuoto</b>
+                        <i>Hai ottenuto: <b>vaso vuoto</b>.</i>
                         ~ findedGifts += emptyvase
                         ~ emptyVaseFound = true
                         
@@ -35,7 +35,7 @@ VAR emptyVaseFound = false
             - dice == 1:
                 <i>C'è una coperta abbandonata sulla panchina.</i>
                 <i>Portala con te: qualcuno potrebbe avere freddo.</i>
-                Hai ottenuto: <b>coperta</b>
+                <i>Hai ottenuto: <b>coperta</b>.</i>
                 ~ findedGifts += blanket
                 -> main
             - dice == 2:

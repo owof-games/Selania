@@ -88,7 +88,14 @@
     
 //Aumento di contatori:
     ~ movementsCounter ++
-    
+
+//Comparsa lettere dopo fine delle storie (così non compaiono subito.
+    {
+        - firstCharacterPossibleStates hasnt Chitarra && first_char_story_ended.goodbye:
+            ~ move_entity(FirstCharacterNotes, BusStop)
+        - second_char_story_ended.goodbye:
+            ~ move_entity(SecondCharacterNotes, BusStop)
+    }    
     
 //Altre funzioni:
     -> characters_speaking ->

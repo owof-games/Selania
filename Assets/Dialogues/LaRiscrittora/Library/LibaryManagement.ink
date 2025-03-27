@@ -13,14 +13,14 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     VAR averageStories = (AdriAllora, BeatriceYBottura, CeciliaFormicola, Lamia, Romi)
     VAR longStories = (Aza, Beatrice, Salvo, LetiziaVaccarella)
     
-TODO: aggiungere negli about storia Leti, mia e di B.    
+TODO: aggiungere negli about e nei trigger la storia di B.    
 //Books about...
-    VAR aboutTransformation = (Aza, ValFaustoLattanzio, Salvo, BeatriceYBottura)
+    VAR aboutTransformation = (Aza, ValFaustoLattanzio, Salvo, BeatriceYBottura, LetiziaVaccarella)
     VAR aboutQuestions = (AdriAllora, Beatrice, ValFaustoLattanzio, StenoArtico, Romi)
     VAR aboutUnprepared = (StenoArtico, Beatrice, Lamia)
     VAR aboutMonsters = (AdriAllora, Aza, BeatriceYBottura, CeciliaFormicola)
-    VAR aboutFire= (Aza, CeciliaFormicola, BeatriceYBottura, Romi, Maura)
-    VAR aboutRebellion = (BeatriceYBottura, Lamia, Maura, Salvo)
+    VAR aboutFire= (Aza, CeciliaFormicola, BeatriceYBottura, Romi, Maura, LetiziaVaccarella, QueerginiaWolf)
+    VAR aboutRebellion = (BeatriceYBottura, Lamia, Maura, Salvo, QueerginiaWolf)
 
     //Libro che verrà proposto
     VAR book = ()
