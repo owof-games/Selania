@@ -1,7 +1,7 @@
 //Cognome/alias A-E
 
 === adri_allora
-<i>Il mio bellissimo gatto</i>di Adri Allora (ləi).
+<i>Il mio bellissimo gatto</i> di Adri Allora (ləi).
 
     Mi chiama.
     La mia rabbia è un gatto che insiste per essere nutrito in continuazione, mi chiama, mi chiama con quell'insistenza che ha costretto sir Isaac Newton a inventare la porticina per i gatti.

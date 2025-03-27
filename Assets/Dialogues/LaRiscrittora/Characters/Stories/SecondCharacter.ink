@@ -223,7 +223,7 @@
         ???: A dopo!
             -
             ~ growing ++
-             ~ secondPauseTalking = secondCharPauseDurantion
+            ~ secondPauseTalking = secondCharPauseDurantion
             -> main
    
     = two
