@@ -935,7 +935,7 @@
 <i> Stai per donare qualcosa a {charNameOne}.</i>
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += FirstCharacter
-            -> inventory_management -> ink_outcome 
+            -> inventory_management
         + {findedGifts == ()} <i> Il tuo inventario è vuoto.</i>
             ->main
         

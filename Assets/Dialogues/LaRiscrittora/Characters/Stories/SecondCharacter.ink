@@ -1345,12 +1345,12 @@
 <i> Stai per donare qualcosa a {charNameTwo}.</i>
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += SecondCharacter
-            -> inventory_management -> ink_outcome 
+            -> inventory_management
         + {findedGifts == ()} <i> Il tuo inventario è vuoto.</i>
             ->main
         
     
-        = ink_outcome    
+        = ink_outcome
             <i>Dopo il tuo dono {inkTranslator(secondCharacterInkLevel)}.
                  -> talk_with_second_character
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
