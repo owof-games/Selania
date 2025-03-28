@@ -46,6 +46,7 @@ TODO: aggiungere negli about e nei trigger la storia di B.
 
 === storyRandom ===
 //Questo è il più facile: recupero un titolo randomico tra i libri non letti.
+    ~ book = ()
     ~ book = LIST_RANDOM(unreadStories)
     -> refresh_book_lists ->from_list_to_books
 
@@ -55,7 +56,9 @@ TODO: aggiungere negli about e nei trigger la storia di B.
 
 
 === storyQuestions ===
-
+    //Svuoto il valore del libro
+    ~ book = ()
+    -> step_one
 
     = step_one
         + {shortStories != ()} [Qualcosa di brevissimo (max 1500 battute).]
