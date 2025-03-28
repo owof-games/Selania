@@ -32,11 +32,11 @@ TODO: aggiungere negli about e nei trigger la storia di B.
         <i>La tua libreria contiene {number_translator(readStories)} {libro_libri(readStories)}.</i>
             -> reread
             
-        + [Vorrei una nuova storia casuale.]
-            {unreadStories != (): -> storyRandom|<i>Non ci sono più nuove storie</i> ->book_test_intro}
+        + {unreadStories != ()} [Vorrei una nuova storia casuale.]
+            -> storyRandom
             
         + {unreadStories != ()}[Voglio scegliere la mia storia.]
-            {unreadStories != (): -> storyQuestions|<i>Non ci sono più nuove storie</i> ->book_test_intro}
+            -> storyQuestions
     
         + [Ho cambiato idea.]
             -> main

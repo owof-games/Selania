@@ -206,10 +206,23 @@
             - not one:
                 -> one
                 
-            - not two && secondWritingPause < 0:
-                -> two
+            - not two:
+                {  
+                    - secondWritingPause < 0:
+                        -> two
+                    - else:
+                        -> one
+                }
                 
-            - not three && secondWritingPause < 0:
+            - not three:
+                {  
+                    - secondWritingPause < 0:
+                        -> three
+                    - else:
+                        -> two
+                }
+            
+            - else:
                 -> three
             
         }
