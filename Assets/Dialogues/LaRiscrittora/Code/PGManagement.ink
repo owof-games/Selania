@@ -54,10 +54,13 @@ VAR fatphobia = true
     + ->
     - (top)
         + [Mi trovo a mio agio col maschile.]
+            ~ pronouns = ()
             ~ pronouns += him
         + [Preferisco i pronomi femminili.]
+            ~ pronouns = ()
             ~ pronouns += her
         + [Vai di neutro, ama.]
+            ~ pronouns = ()
             ~ pronouns += they
         -
 ->->
