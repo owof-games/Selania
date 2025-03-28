@@ -61,9 +61,11 @@ TODO: aggiungere negli about e nei trigger la storia di B.
         + {shortStories != ()} [Qualcosa di brevissimo (max 1500 battute).]
         //(1500 battute max)
             ~ readingDuration += Short
+        
         + {averageStories != ()} [Una storia veloce (max 3000 battute).]
         // (3000 battute max)
             ~ readingDuration += Average
+        
         + {longStories != ()} [Un racconto più lungo (max 8000 battute).]
         // 8000 battute max 
             ~ readingDuration += Long
@@ -269,7 +271,13 @@ TODO: aggiungere negli about e nei trigger la storia di B.
     - aboutQuestions has book:
         ~ aboutQuestions -= book
     - aboutUnprepared has book:
-        ~ aboutUnprepared -= book         
+        ~ aboutUnprepared -= book
+    - aboutMonsters has book:
+        ~ aboutMonsters -= book
+    - aboutFire has book:
+        ~ aboutFire -= book
+    - aboutRebellion has book:
+        ~ aboutRebellion -= book           
 
 }
 ->->

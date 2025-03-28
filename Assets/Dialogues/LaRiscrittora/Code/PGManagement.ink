@@ -22,8 +22,9 @@ VAR movementsCounter = 0
 
 
 //Variabili per tracciare i trigger warning. True = non è TW, posso mostrare quelle storie
-VAR alcoholism = true
+VAR ageism = true
 VAR abuses = true
+VAR alcoholism = true
 VAR mourning = true
 VAR fisicalAbuses = true
 VAR dysphoria = true
@@ -34,6 +35,8 @@ VAR racism = true
 VAR misoginy = true
 VAR abilism = true
 VAR LGBTQIA = true
+VAR fatphobia = true
+
 
 /* ---------------------------------
 
