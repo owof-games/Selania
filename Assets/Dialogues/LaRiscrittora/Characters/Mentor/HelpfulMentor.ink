@@ -149,10 +149,10 @@
     + {alcoholism == false}[Lascia che il tema della dipendenza da sostanze sia presente.]
         {charNameFive}: Ottimo.
         ~ alcoholism = true
-        {
-        - unreadStories hasnt Aza: 
-            ~ unreadStories += Aza
-        }
+        // {
+        // - unreadStories hasnt Aza: 
+        //     ~ unreadStories += Aza
+        // }
             -> top
         
   
@@ -173,16 +173,16 @@
     + {abuses == false}[Vorrei sentire anche storie su violenza psicologica subita, inflitta o autoinflitta.]
         {charNameFive}: Perfetto.
         ~ abuses = true
-        {
-        - unreadStories hasnt StenoArtico: 
-            ~ unreadStories += StenoArtico
-        - unreadStories hasnt AdriAllora: 
-            ~ unreadStories += AdriAllora
-        - unreadStories hasnt Romi: 
-            ~ unreadStories += Romi
-        - unreadStories hasnt BeatriceYBottura: 
-            ~ unreadStories += BeatriceYBottura     
-        }        
+        // {
+        // - unreadStories hasnt StenoArtico: 
+        //     ~ unreadStories += StenoArtico
+        // - unreadStories hasnt AdriAllora: 
+        //     ~ unreadStories += AdriAllora
+        // - unreadStories hasnt Romi: 
+        //     ~ unreadStories += Romi
+        // - unreadStories hasnt BeatriceYBottura: 
+        //     ~ unreadStories += BeatriceYBottura     
+        // }        
             -> top
 
     + {mourning == true} [Tienimi {pronouns has him: lontano|{pronouns has her: lontana|lontanə}} da <b>morte e lutto</b>.]
@@ -230,18 +230,18 @@
     + {fisicalAbuses == false} [Ora posso sentire parlare di abusi fisici subiti o autoinflitti.]
         {charNameFive}: Perfetto.
         ~ fisicalAbuses = true
-        {
-            - unreadStories hasnt StenoArtico: 
-                ~ unreadStories += StenoArtico
-            - unreadStories hasnt Aza: 
-                ~ unreadStories += Aza
-            - unreadStories hasnt BeatriceYBottura: 
-                ~ unreadStories += BeatriceYBottura
-            - unreadStories hasnt Maura: 
-                ~ unreadStories += Maura
-            - unreadStories hasnt AdriAllora: 
-                ~ unreadStories += AdriAllora                   
-        }         
+        // {
+        //     - unreadStories hasnt StenoArtico: 
+        //         ~ unreadStories += StenoArtico
+        //     - unreadStories hasnt Aza: 
+        //         ~ unreadStories += Aza
+        //     - unreadStories hasnt BeatriceYBottura: 
+        //         ~ unreadStories += BeatriceYBottura
+        //     - unreadStories hasnt Maura: 
+        //         ~ unreadStories += Maura
+        //     - unreadStories hasnt AdriAllora: 
+        //         ~ unreadStories += AdriAllora                   
+        // }         
     
     + [I temi che voglio evitare sono altri.]
         -> top_due
@@ -263,10 +263,10 @@
     + {dysphoria == false}[Ho cambiato idea: affrontiamo storie legate alla disforia e alla dismorfia.]
         {charNameFive}: Sarà fatto.
         ~ dysphoria = true
-        {
-            - unreadStories hasnt ValFaustoLattanzio: 
-                ~ unreadStories += ValFaustoLattanzio
-        }        
+        // {
+        //     - unreadStories hasnt ValFaustoLattanzio: 
+        //         ~ unreadStories += ValFaustoLattanzio
+        // }        
             -> top_due
             
     
@@ -294,14 +294,14 @@
     + {depression == false}[Introduci storie legate a depressione, ansia, pensieri intrusivi.]
         {charNameFive}: Sarà fatto.
         ~ depression = true
-        {
-            - unreadStories hasnt StenoArtico: 
-                ~ unreadStories += StenoArtico
-            - unreadStories hasnt Beatrice: 
-                ~ unreadStories += Beatrice
-            - unreadStories hasnt LetiziaVaccarella: 
-                ~ unreadStories += LetiziaVaccarella                 
-        }        
+        // {
+        //     - unreadStories hasnt StenoArtico: 
+        //         ~ unreadStories += StenoArtico
+        //     - unreadStories hasnt Beatrice: 
+        //         ~ unreadStories += Beatrice
+        //     - unreadStories hasnt LetiziaVaccarella: 
+        //         ~ unreadStories += LetiziaVaccarella                 
+        // }        
             -> top_due
             
     + {religion == true}[Non parliamo di <b>educazione religiosa severa</b>.]
@@ -315,10 +315,10 @@
     + {religion == false}[Introduci anche storie sull'educazione religiosa severa.]
         {charNameFive}: Sarà fatto.
         ~ religion = true
-        {
-            - unreadStories hasnt Beatrice: 
-                ~ unreadStories += Beatrice    
-        }              
+        // {
+        //     - unreadStories hasnt Beatrice: 
+        //         ~ unreadStories += Beatrice    
+        // }              
             -> top_due            
     
     
