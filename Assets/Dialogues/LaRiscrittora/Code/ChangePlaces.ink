@@ -8,8 +8,7 @@
         ~ move_entity(PG, Bedroom)
         -> bedroom
     
-    TODO: riattivare poi exit dopo i test
-    //+ {are_two_entities_together(PG, RoomExit)} [RoomExit]
+    + {are_two_entities_together(PG, RoomExit)} [RoomExit]
         -> END
       
 
