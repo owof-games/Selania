@@ -698,18 +698,15 @@
         -> talk_with_mentor
 //Fine della demo
 === ending_demo
-TODO: disattivare ending game a testing etc finiti
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 {charNameFive}: Sembra che la demo sia finita qui, {name}.
 {charNameFive}: Potrai girare ancora per gli spazi aperti.
 {charNameFive}: Continuare a leggere le storie della <b>biblioteca</b>.
 {charNameFive}: E coltivare cosa rimane da coltivare nella <b>serra</b>.
 {charNameFive}: Ma non compariranno nuove persone bisognose.
-{charNameFive}: In realtà poi per fase di testing il gioco si bloccherà qui.
-{charNameFive}: Spero poi di ricordarmi di sbloccare questa cosa.
-{charNameFive}: Ti chiedo anche un favore, {name}.
+{charNameFive}: Ti chiedo un favore prima di salutarci, {name}.
 {charNameFive}: Salvati questo codice, e inseriscilo poi nel documento del testing.
-{charNameFive}: O se non hai voglia di rispondere alle domande mandalo pure via mail: faresti molto felice sia me che Queerginia.
+{charNameFive}: O se non hai voglia di rispondere alle domande mandamelo attraverso Queerginia: faresti molto felice entrambe.
 {charNameFive}: Il codice è {playerPurple}{playerYellow}{playerBlue}{playerGreen}{playerRed}{playerFirstStory}{playerSecondStory}
 {charNameFive}: Grazie di cuore.
--> END
+-> talk_with_mentor
