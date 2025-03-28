@@ -233,7 +233,7 @@
                     }
                     
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
+                    {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can|-> cultivable_test}
                 + + [Mi aggiro per la serra.]    
                     -> main
                     
@@ -282,7 +282,7 @@
                     }
                 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
+                    {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can|-> cultivable_test}
                 + + [Mi aggiro per la serra.]    
                     -> main
                     
@@ -331,7 +331,7 @@
                     }
                 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
+                    {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can|-> cultivable_test}
                 + + [Mi aggiro per la serra.]    
                     -> main
                     
@@ -382,7 +382,7 @@
                     }
                 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
+                    {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can|-> cultivable_test}
                 + + [Mi aggiro per la serra.]    
                     -> main
                     
@@ -425,7 +425,7 @@
                     }
             
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
+                    {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can|-> cultivable_test}
                 + + [Mi aggiro per la serra.]    
                     -> main
                     
@@ -473,7 +473,7 @@
                         <i>Hai ottenuto: <b>Non Ti Scordar di Te.</b></i>
                     }
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
+                    {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can|-> cultivable_test}
                 + + [Mi aggiro per la serra.]    
                     -> main                    
        
@@ -517,7 +517,7 @@
                        <i> Hai ottenuto: <b>Brina dell'Impossibile</b></i>
                     }
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
+                    {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can|-> cultivable_test}
                 + + [Mi aggiro per la serra.]    
                     -> main
         + [Ora non me la sento.]

@@ -185,7 +185,7 @@
         // }        
             -> top
 
-    + {mourning == true} [Tienimi {pronouns has him: lontano|{pronouns has her: lontana|lontanə}} da <b>morte e lutto</b>.]
+    + {mourning == true} [Tienimi{pronouns has him: lontano|{pronouns has her: lontana|lontanə}} da <b>morte e lutto</b>.]
         {charNameFive}: Non li incontrerai nel tuo viaggio.
         ~ mourning = false
             //Rimuovo coltivabile legato a lutto
