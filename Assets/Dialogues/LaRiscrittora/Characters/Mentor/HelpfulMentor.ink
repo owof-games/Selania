@@ -134,8 +134,7 @@
     {charNameFive}: Non ho invece modo, per ora, di impedire alle persone giunte fino a qui di non toccare alcuni di questi temi.
     {charNameFive}: Spesso quei temi sono il motivo per cui sono arrivate da, per chiedere il nostro aiuto.
     {charNameFive}: In futuro le cose potranno comunque migliorare, promesso.
-
-
+    
     - (top)
     {charNameFive}: Cosa vorresti evitare?
     
@@ -374,12 +373,39 @@
             -> top_three            
     
     
+    + [I temi che voglio cambiare sono altri.]
+        -> top_four
+    + [Sono a posto così.]
+        ->->
+    -  
+    
+    - (top_four)
+    {charNameFive}: Cosa vorresti evitare?
+    
+    + {fatphobia == true}[Non voglio storie che parlino di <b>grassofobia</b>.]
+        {charNameFive}: Capisco benissimo.
+        ~ fatphobia = false
+            -> top_four
+    + {fatphobia == false}[Ho cambiato idea: introduci anche storie che parlano di grassofobia.]
+        {charNameFive}: Subito.
+        ~ fatphobia = true
+            -> top_four
+    
+    + {ageism == true}[Non voglio storie che parlino di <b>ageismo</b>.]
+        {charNameFive}: Capisco benissimo.
+        ~ ageism = false
+            -> top_four
+    + {ageism == false}[Ho cambiato idea: introduci anche storie che parlano di ageismo.]
+        {charNameFive}: Subito.
+        ~ ageism = true
+            -> top_four        
+    
     + [Voglio rivedere i primi temi.]
         -> top
     + [Sono a posto così.]
         ->->
     -  
- -> main
+    -> main
  
  
  
