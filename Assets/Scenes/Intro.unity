@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df24e914ee52ca3449fcfac3f8ef0a11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoDuration: 38
+  videoDuration: 60
 --- !u!4 &413692642
 Transform:
   m_ObjectHideFlags: 0
