@@ -32,8 +32,19 @@
                 - firstStoryQuestCount >= minStoryQuesTCountFirstChar: {charNameFive}: Hai fatto il tuo dono a {charNameOne}?
                         -> mentor_and_second_char_storylets 
                 - else:
-                    {charNameFive}: Continua a conoscere {charNameOne}, così potrai farle il dono.
-                        -> mentor_and_second_char_storylets 
+                    {
+                        - firstStoryQuestCount < 2:
+                            {charNameFive}: Hai bisogno di parlare ancora molto con {charNameOne}, prima di poterle fare il dono.
+                                -> mentor_and_second_char_storylets 
+                        - firstStoryQuestCount < 5:
+                            {charNameFive}: Secondo me sei circa a metà strada prima di poter convincere {charNameOne} a ricevere il tuo dono.
+                                -> mentor_and_second_char_storylets 
+                        - firstStoryQuestCount <7:
+                            {charNameFive}: Ormai ci sei: pochissimi scambi e sento che {charNameOne} sarà pronta ad aprirsi a te.
+                                -> mentor_and_second_char_storylets 
+
+                    }
+
             }
         }
         
