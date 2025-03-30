@@ -11,6 +11,7 @@ VAR playerRed = 0
 
 // Tracciamento esiti
 LIST playerStatus = emptyStatus, blueStatus, purpleStatus, greenStatus, yellowStatus, redStatus, mixedStatus
+LIST statusPGEndingStories = firstStoryPG, secondStoryPG, thirdStoryPG, fourthStoryPG, fifthStoryPG
 VAR playerFirstStory = emptyStatus
 VAR playerSecondStory = emptyStatus
 VAR playerThirdStory = emptyStatus
@@ -91,7 +92,7 @@ VAR yellow = ()
 VAR purple  = ()
 
 {
-    - char == firstStory:
+    - char == firstStoryPG:
         ~ red = firstRed
         ~ green = firstGreen
         ~ blue = firstBlue
@@ -99,7 +100,7 @@ VAR purple  = ()
         ~ purple = firstPurple
         ~ playerFirstStory = ()
 
-    - char == secondStory:
+    - char == secondStoryPG:
         ~ red = secondRed
         ~ green = secondGreen
         ~ blue = secondBlue
@@ -126,104 +127,116 @@ VAR purple  = ()
 {
     - (playerGreen > playerBlue) && (playerGreen > playerRed) && (playerGreen > playerYellow) && (playerGreen > playerPurple):
         {
-            - char == firstStory:
+            - char == firstStoryPG:
                ~ playerFirstStory += greenStatus
                {debug: Lo status di playerFirstStory è {playerFirstStory}}
             
-            - char == secondStory:
+            - char == secondStoryPG:
                 ~ playerSecondStory += greenStatus
             
-            - char == thirdStory:
-                ~ playerThirdStory += greenStatus
-            - char == fourthStory:
-                ~ playerFourthStory += greenStatus
-            - char == fifthStory:
-                ~ playerFifthStory += greenStatus
+            // - char == thirdStory:
+            //     ~ playerThirdStory += greenStatus
+            // - char == fourthStory:
+            //     ~ playerFourthStory += greenStatus
+            // - char == fifthStory:
+            //     ~ playerFifthStory += greenStatus
+                  - else:
+                    ERRORE
         }
     
     - (playerBlue > playerGreen) && (playerBlue > playerRed) && (playerBlue > playerYellow) && (playerBlue > playerPurple):
         {
-            - char == firstStory:
+            - char == firstStoryPG:
                 ~ playerFirstStory += blueStatus
                 {debug: Lo status di playerFirstStory è {playerFirstStory}}
             
-            - char == secondStory:
+            - char == secondStoryPG:
                 ~ playerSecondStory += blueStatus
             
-            - char == thirdStory:
-                ~ playerThirdStory += blueStatus
-            - char == fourthStory:
-                ~ playerFourthStory += blueStatus
-            - char == fifthStory:
-                ~ playerFifthStory += blueStatus
+            // - char == thirdStory:
+            //     ~ playerThirdStory += blueStatus
+            // - char == fourthStory:
+            //     ~ playerFourthStory += blueStatus
+            // - char == fifthStory:
+            //     ~ playerFifthStory += blueStatus
+                  - else:
+                    ERRORE
         }        
     
     - (playerRed > playerGreen) && (playerRed > playerBlue) && (playerRed > playerYellow) && (playerRed > playerPurple):
         {
-            - char == firstStory:
+            - char == firstStoryPG:
                 ~ playerFirstStory += redStatus
                 {debug: Lo status di playerFirstStory è {playerFirstStory}}
             
-            - char == secondStory:
+            - char == secondStoryPG:
                 ~ playerSecondStory += redStatus
             
-            - char == thirdStory:
-                ~ playerThirdStory += redStatus
-            - char == fourthStory:
-                ~ playerFourthStory += redStatus
-            - char == fifthStory:
-                ~ playerFifthStory += redStatus
+            // - char == thirdStory:
+            //     ~ playerThirdStory += redStatus
+            // - char == fourthStory:
+            //     ~ playerFourthStory += redStatus
+            // - char == fifthStory:
+            //     ~ playerFifthStory += redStatus
+                 - else:
+                    ERRORE
         }    
     
     - (playerYellow > playerGreen) && (playerYellow > playerBlue) && (playerYellow > playerRed) && (playerYellow > playerPurple):
         {
-            - char == firstStory:
+            - char == firstStoryPG:
                 ~ playerFirstStory += yellowStatus
                 {debug: Lo status di playerFirstStory è {playerFirstStory}}
             
-            - char == secondStory:
+            - char == secondStoryPG:
                 ~ playerSecondStory += yellowStatus
             
-            - char == thirdStory:
-                ~ playerThirdStory += yellowStatus
-            - char == fourthStory:
-                ~ playerFourthStory += yellowStatus
-            - char == fifthStory:
-                ~ playerFifthStory += yellowStatus
+            // - char == thirdStory:
+            //     ~ playerThirdStory += yellowStatus
+            // - char == fourthStory:
+            //     ~ playerFourthStory += yellowStatus
+            // - char == fifthStory:
+            //     ~ playerFifthStory += yellowStatus
+                 - else:
+                    ERRORE
         }    
     
     - (playerPurple > playerGreen) && (playerPurple > playerBlue) && (playerPurple > playerRed) && (playerPurple > playerYellow):
         {
-            - char == firstStory:
+            - char == firstStoryPG:
                 ~ playerFirstStory += purpleStatus
                 {debug: Lo status di playerFirstStory è {playerFirstStory}}
             
-            - char == secondStory:
+            - char == secondStoryPG:
                 ~ playerSecondStory += purpleStatus
             
-            - char == thirdStory:
-                ~ playerThirdStory += purpleStatus
-            - char == fourthStory:
-                ~ playerFourthStory += purpleStatus
-            - char == fifthStory:
-                ~ playerFifthStory += purpleStatus
+            // - char == thirdStory:
+            //     ~ playerThirdStory += purpleStatus
+            // - char == fourthStory:
+            //     ~ playerFourthStory += purpleStatus
+            // - char == fifthStory:
+            //     ~ playerFifthStory += purpleStatus
+                 - else:
+                    ERRORE
         }
     
     - else:
         {
-            - char == firstStory:
+            - char == firstStoryPG:
                 ~ playerFirstStory += mixedStatus
                 {debug: Lo status di playerFirstStory è {playerFirstStory}}
                 
-            - char == secondStory:
+            - char == secondStoryPG:
                 ~ playerSecondStory += mixedStatus
                 
-            - char == thirdStory:
-                ~ playerThirdStory += mixedStatus
-            - char == fourthStory:
-                ~ playerFourthStory += mixedStatus
-            - char == fifthStory:
-                ~ playerFifthStory += mixedStatus
+            // - char == thirdStory:
+            //     ~ playerThirdStory += mixedStatus
+            // - char == fourthStory:
+            //     ~ playerFourthStory += mixedStatus
+            // - char == fifthStory:
+            //     ~ playerFifthStory += mixedStatus
+                 - else:
+                    ERRORE
         }    
 
 }
