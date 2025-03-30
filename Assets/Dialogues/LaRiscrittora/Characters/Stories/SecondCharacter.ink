@@ -733,7 +733,7 @@
                 {charNameTwo}: Posso giocarci anche io?
                 {charNameTwo}: Ma dove lo attacchiamo?
                 {charNameTwo}: Qui non ci sono TV.
-                {charNameTwo}: Però lo stagno sberluccica.
+                {charNameTwo}: Però lo stagno sbrilluccica.
                 {charNameTwo}: Forse la rana lo trasforma in uno schermo!
                     ~ secondYellow ++
                 

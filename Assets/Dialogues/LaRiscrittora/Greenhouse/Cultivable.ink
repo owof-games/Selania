@@ -368,11 +368,11 @@
 
         + (colto)[Sfioro i suoi rami.]
             <i>Una forte contrazione.</i>
-            <i>E poi si ferma, statua di ciò che un tempo era.</i>
+            <i>E poi si ferma, immagine di ciò che un tempo era.</i>
             <i>Ti lascia in pancia un senso di vuoto.</i>
             <i>La sensazione di quando hai condiviso qualcosa che ritenevi terribile.</i>
             <i>Per poi scoprire che il mondo non è finito quella volta, e non finirà oggi.</i>
-            <i>Sai già chi è la persona che ora vuoi chiamare.</i>
+            <i>Ci sono conversazioni in sospeso che vuoi affrontare.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     {
