@@ -32,14 +32,14 @@
 = hub
 ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
 
-    {charNameOne}: {~ Le farfalle qui giocano per ore. Adoro!|No dai. Ma hai visto quanto sono carini gli scoiattoli?!|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}
+    {charNameOne}: {~ Le farfalle qui giocano per ore!|No dai. Ma hai visto quanto sono carini gli scoiattoli?!|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_first_character
                 
                 
             //Se non ho ancora fatto il dono e NON ho parlato col mentore e ho parlato abbastanza con lei
             + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
-                    {charNameOne}: Non voglio snitcahre, ma non hai ancora chiesto alla mentore a cosa servono.
+                    {charNameOne}: Non voglio snitchare, ma non hai ancora chiesto alla mentore a cosa servono.
                     {charNameOne}: Se non parli con lei prima poi minimo ci rimane male.
                         -> main
             
@@ -121,7 +121,6 @@
             + (oneYellow) [Suona il tamburo e vedrai che il violino torna!]
                     ~ firstYellow ++
                 ???: A beh, ci sta!
-                ???: Ci sta!
                 ???: Non ci avevo pensato!
                 ???: Ma il suo violino è più da pianoforte.
                 ???: Forse potrei cercare nella serra, e trovare qualcosa da suonare.
@@ -147,10 +146,9 @@
                 ???: Però merda se mi manca.
             -
         ???: Non faccio mai niente senza Talco.
-        ???: Quanto sono needy?
-        ???: Ma Talco è l'unica persona con cui posso permettermi di litigare.
+        ???: Talco è l'unica persona con cui posso permettermi di litigare.
         ???: E l'unica che mi sopporta da quando ho finito il conservatorio.
-        ???: Ma che normie che sono, non mi sono manco presentata: io sono {charNameOne}.
+        ???: Ma non mi sono manco presentata: io sono {charNameOne}.
         ???: No, io sono <b>{charNameOne}</b>.
         {charNameOne}: Ehi! Non è questo il mio nome.
         {charNameOne}: <i>{charNameOne}</i>.
@@ -164,8 +162,8 @@
     	    -
     	{charNameOne}: E i tuoi pronomi?
     	        -> gender ->
-    	{charNameOne}: Top! Io uso i femminili.
-    	{charNameOne}: Comunque questa cosa del nome è cringe.
+    	{charNameOne}: {pronouns has her: Anche io uso i pronomi femminili!|Invece io uso i femminili.}
+    	{charNameOne}: Comunque questa cosa del nome è strana.
     	{charNameOne}: Non so.
     	{charNameOne}: Non è male la chitarra.
     	{charNameOne}: Ma per una del conservatorio è tipo rinunciare a tutto.
@@ -174,7 +172,6 @@
         {charNameOne}: {name}, secondo te il nome di una persona è importante?
     	    
             + [È uno strumento di controllo.]
-                {charNameOne}: Questa è una cosa basata.
                 {charNameOne}: Il nome è anche uno strumento d'amore.
                 {charNameOne}: Pensa a tutti i modi in cui qualcuno lo può gridare.
                 {charNameOne}: Sono sicura che te ne verranno in mente un paio molto piacevoli.
@@ -262,7 +259,7 @@
         {charNameOne}: Forse quella tizia che gira quì può aiutarci a capire qualcosa?
         {are_two_entities_together(Mentor, PG): {welcome.your_name: {charNameFive}|???}: In effetti avrei un paio di informazioni utili da darti, nuova persona!}
         {charNameOne}: L’unica cosa certa è che ho bisogno di Talco.
-        {charNameOne}: Ci vediamo dopo, ama.
+        {charNameOne}: Ci vediamo dopo, {name}.
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main
         
@@ -292,7 +289,7 @@
             + [Ok l'amicizia con Talco, ma devi essere indipendente.]
                 {charNameOne}: Ama, prenditi meno spazi, grazie.
                 {charNameOne}: Talco e io siamo due parti della stessa armonia, ma sappiamo essere indipendenti.
-                {charNameOne}: È  che in momenti come questo so suonare solo se è con me.
+                {charNameOne}: È che in momenti come questo so suonare solo se è con me.
                     ~ firstRed ++
             
             + [Esiste un numero definito di sentieri per persona?]
@@ -330,16 +327,16 @@
     ~ firstStoryQuestCount ++
         
         {charNameOne}: Stavo pensando ad Anna.
-        {charNameOne}: Anna è una mia bestie del conservatorio.
+        {charNameOne}: Anna è una mia ama del conservatorio.
         {charNameOne}: Insiste perché mi proponga come assistente del Ghiberti.
         {charNameOne}: Dice che lui ha stima di me e questa è la mia GRANDE occasione.
         {charNameOne}: E non per flexare, ma so che me la caverei bene.
-        {charNameOne}: Anna è così sicura di sè da quando ha lasciato l'ex redpillato! Adoro.
+        {charNameOne}: Anna è così sicura di sè da quando ha lasciato l'ex tossico! Adoro.
         {charNameOne}: A volte Anna e Olga discutono perché Olga pensa che io con la classica sia buttata via.
         {charNameOne}: Dice che devo mettere su una band e invadere tutti i locali della città.
         {charNameOne}: Olga è sicura che Talco le dia ragione, ma Talco vuole che mi butti sui reality show.
         {charNameOne}: Dice che non importa vincere, importa fare casino così poi sui social se ne parla.
-        {charNameOne}: Che è una cosa un po' normie, ma ha il suo senso.
+        {charNameOne}: Ha il suo senso.
         {charNameOne}: E poi Ennio, no Ennio no.
         {charNameOne}: Ennio dice che ho sbagliato strada.
         
@@ -368,7 +365,6 @@
             + [E cosa vuole {charNameOne}?]
                 {charNameOne}: Ora?
                 {charNameOne}: Un letto caldo, una copertina.
-                {charNameOne}: Chillare.
                 {charNameOne}: E non doversi fare questa domanda.
                     ~ firstGreen ++
             
