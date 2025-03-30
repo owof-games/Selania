@@ -11,6 +11,8 @@
             -> to_do
         + [Ho una domanda su un luogo.]
             -> tutorial
+        + {bacca_della_addolorata.step_tre.colto or non_ti_scordar_di_te.step_tre.colto or brina_dell_impossibile.step_tre.colto or la_spazzata.step_tre.colto or edera_delle_amanti.step_tre.colto or lichene_degli_abissi.step_tre.colto or canto_delle_compagne.step_tre.colto} [Ho una domanda sulle piante della serra.]
+            -> elementi_serra
         + [C'è una cosa che mi riguarda.]
             -> myself
         + [Vorrei parlare d'altro.]
@@ -202,13 +204,13 @@
     + {mourning == false} [Ho cambiato idea: me la sento di parlare di lutto e morte.]
         {charNameFive}: Grandioso.
         ~ mourning = true
-        {
-            - backupCultivable hasnt NonTiScordarDiTe && not non_ti_scordar_di_te.step_zero:
-                ~ pianteCiclicità += NonTiScordarDiTe
-                ~ pianteIndipendenza += NonTiScordarDiTe
-                ~ pianteRicordo += NonTiScordarDiTe
-                ~ backupCultivable += NonTiScordarDiTe
-        }    
+        // {
+        //     - backupCultivable hasnt NonTiScordarDiTe && not non_ti_scordar_di_te.step_zero:
+        //         ~ pianteCiclicità += NonTiScordarDiTe
+        //         ~ pianteIndipendenza += NonTiScordarDiTe
+        //         ~ pianteRicordo += NonTiScordarDiTe
+        //         ~ backupCultivable += NonTiScordarDiTe
+        // }    
             -> top
         
     + {fisicalAbuses == true} [Non voglio sentire parlare di <b>abusi fisici subiti, inflitti o autoinflitti</b>.]
@@ -407,7 +409,90 @@
     -  
     -> main
  
- 
+
+
+ === elementi_serra
+  ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    {charNameFive}: Come posso aiutarti, {name}?
+    {
+        - la_spazzata.step_tre.colto or edera_delle_amanti.step_tre.colto or lichene_degli_abissi.step_tre.colto or canto_delle_compagne.step_tre.colto:
+            -> top
+        - else:
+            -> top_two    
+
+    }
+    - (top)
+        + {lichene_degli_abissi.step_tre.colto} [A cosa serve il <b>Lichene degli Abissi</b>?]
+            {charNameFive}: Il Lichene degli abissi parla di relazioni permeate di dolore.
+            {charNameFive}: Di cose o persone che si inseguono, che possono pure volersi bene.
+            {charNameFive}: Ma finiscono per farci del male.
+            {charNameFive}: Capaci solo di distruggersi.
+            {charNameFive}: Piene di fragilità.
+                -> top
+        + {edera_delle_amanti.step_tre.colto} [Quali proprietà ha l'<b>Edera delle Amanti</b>?]
+            {charNameFive}: Tradizionalmente è associata al piacere fisico.
+            {charNameFive}: Da queste parti si racconta che l'universo intero sia fatto d'edera.
+            {charNameFive}: E che l'edera rimarrà in vita fino a quando le amanti saranno capaci di darsi amore e piacere.
+            {charNameFive}: Io lo vedo invece come un invito al piacere.
+            {charNameFive}: A godere anche del cibo, di una camminata.
+            {charNameFive}: Di una giornata di sole.
+            {charNameFive}: Il mondo non esisterebbe senza piacere.
+            {charNameFive}: O non merita la nostra attenzione.
+                -> top
+
+        + {canto_delle_compagne.step_tre.colto} [Cos'è la <b>Canto delle Compagne</b>?]
+            {charNameFive}: Credo sia la pianta della festa.
+            {charNameFive}: Dello stare tutte assieme e ballare, cantare.
+            {charNameFive}: Accogliendo la forza liberatoria che viene dalla risata in compagnia.
+            {charNameFive}: Amo quella pianta, ma in passato veniva chiamata "Canto delle streghe".
+            {charNameFive}: Le donne unite fanno sempre paura.
+                -> top
+
+        + {la_spazzata.step_tre.colto} [Cosa sai dirmi de <b>La Spazzata</b>?]
+            {charNameFive}: Credo sia la cosa più spaventosa della serra, almeno per me.
+            {charNameFive}: Parla di quel momento in cui qualcosa è insostenibile.
+            {charNameFive}: E sei sul confine tra l'affrontarlo o meno.
+            {charNameFive}: Riempita da una paura terribile che tutto possa andare storto, puoi decidere di non fare alcun passo.
+            {charNameFive}: Col rischio di esplodere, e spazzare tutto.
+            {charNameFive}: Di contro spesso, se affronti queste situazioni, finiscono per essere meno gravi di quel che pensavi.
+                -> top
+
+        + {bacca_della_addolorata.step_tre.colto or non_ti_scordar_di_te.step_tre.colto or brina_dell_impossibile.step_tre.colto}[No, vorrei parlare di altre piante.]
+            -> top_two
+        + [Vorrei parlare d'altro.]
+            -> talk_with_mentor
+
+    -(top_two)
+        + {bacca_della_addolorata.step_tre.colto} [Non ricordo a cosa serva la <b>Bacca della Addolorata</b>.]
+            {charNameFive}: Tanto brutta quanto liberatoria, personalmente, è una pianta potente.
+            {charNameFive}: Donala a chi ha visto qual è la sua strada ma ha solo paura.
+            {charNameFive}: Paura di avanzare, di cambiare.
+            {charNameFive}: Sembra una cosa piccola, eppure è rivoluzionaria.
+                -> top_two
+
+        + {non_ti_scordar_di_te.step_tre.colto} [Sai dirmi chi apprezzerebbe il <b>Non ti scordar di te</b>?]
+            {charNameFive}: Una persona che ha perso qualcuno, e ne sente ancora la mancanza.
+            {charNameFive}: Quella pianticina delicata ti dice: "Ehi, chi ami è parte di te."
+            {charNameFive}: Quando la vedo, non mi sento mai sola.
+                -> top_two
+
+        + {brina_dell_impossibile.step_tre.colto} [A chi serve la <b>Brina dell'Impossibile?</b>]
+            {charNameFive}: Credo sia la pianta del trauma.
+            {charNameFive}: E chi non ha traumi?
+            {charNameFive}: Ma forse la Brina è più adatta a chi non fa pace col passato.
+            {charNameFive}: A chi ha una ferita così profonda, da sentirsi divisa in due.
+            {charNameFive}: A molte persone la Brina fa paura perché pensano che ti ferisca.
+            {charNameFive}: Ma in realtà quello che fa è mostrarti ferite che prima non vedevi.
+            {charNameFive}: E per questo è una pianta che aiuta a ripartire.
+            {charNameFive}: A fare pace col passato.
+                -> top_two
+
+        + {la_spazzata.step_tre.colto or edera_delle_amanti.step_tre.colto or lichene_degli_abissi.step_tre.colto or canto_delle_compagne.step_tre.colto}[Vorrei informazioni su altre piante.]
+            -> top
+        + [Vorrei parlare d'altro.]
+            -> talk_with_mentor
+
+
  
  === mindfulness
  //Randomizzo i contenuti e nel caso posso usare anche qui i trigger warning.

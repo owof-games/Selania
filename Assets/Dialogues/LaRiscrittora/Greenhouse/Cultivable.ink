@@ -218,7 +218,7 @@
         <i>Si inseguono nel piacere, si inseguono nel dolore, senza mai afferrarsi.</i>
         <i>Forti nella loro distruzione, estremamente fragili.</i>
 
-            + [Fermo il lichene.]
+            + (colto) [Fermo il lichene.]
                 ~ statoLicheneDegliAbissi = stepZero
                 <i>Un piccolo sbuffo, rimane solo un foro.</i>
                 <i>Le tue dita sanno di ricordo, sanno di mare.</i>
@@ -265,7 +265,7 @@
         <i>Calore nel ventre.</i>
         <i>Un pezzo di serra è ora coperto da un fitto tappeto del color dell'alba.</i>
         <i>Sembra la cosa più gustosa che tu abbia mai incontrato.</i>
-            + [Provo a leccarlo.]
+            + (colto) [Provo a leccarlo.]
                 <i>Per un attimo perdi i tuoi confini.</i>
                 <i>Sei un bacio nella notte, dita desiderate tra le coscie.</i>
                 <i>Sei acqua sulle labbra, pelle nuda sulla terra umida.</i>
@@ -278,7 +278,7 @@
                     {
                         - findedGifts hasnt MuschioDelleAmanti:
                         ~ findedGifts += MuschioDelleAmanti
-                        <i>Hai ottenuto: <b>Muschio delle Amanti.</b></i>
+                        <i>Hai ottenuto: <b>Edera delle Amanti.</b></i>
                     }
                 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
@@ -316,7 +316,7 @@
         <i>In un altro tempo questo fungo veniva chiamato "Canto delle streghe".</i>
         <i>L'euforia ti riempie i polmoni, senti la gioia di sapere che non sei mai stata davvero {pronouns has him: solo|{pronouns has her: sola|solə}}.</i>
 
-        + [È il momento di festeggiare.]
+        + (colto)[È il momento di festeggiare.]
                 <i>Il canto ti invita alla danza.</i>
                 <i>Spinge le tue gambe nella stanza.</i>
                 <i>O ad alzare la voce, cantare, e chiamare le compagne.</i>
@@ -366,7 +366,7 @@
         <i>Si abbuffa delle cose non dette.</i>
         <i>E quando non ce la fa più, travolge ogni cosa.</i>
 
-        + [Sfioro i suoi rami.]
+        + (colto)[Sfioro i suoi rami.]
             <i>Una forte contrazione.</i>
             <i>E poi si ferma, statua di ciò che un tempo era.</i>
             <i>Ti lascia in pancia un senso di vuoto.</i>
@@ -412,7 +412,7 @@
         <i>Hai trovato una <b>Bacca dell'addolorata</b>.</i>
         <i>Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ancora ad avanzare.</i>
 
-            + [Afferro la bacca.]
+            + (colto) [Afferro la bacca.]
             <i>La mano molla la sua presa, rivelandosi per quel che era sin dall'inizio: solo un insieme tenace di radici.</i>
             <i>Senti le tue spalle sciogliersi, l'incertezza scivolare via.</i>
             <i>Il cambiamento fa paura, ma ora ricordi come camminare.</i>
@@ -459,7 +459,7 @@
         <i>Trasforma ciò che è passato, che non c'è più, per renderlo vita nuova.</i>
         <i>Il nuovo nell'antico, il noi nel nostro passato.</i>
 
-        + [Intreccio le mie dita alle sue.]
+        + (colto) [Intreccio le mie dita alle sue.]
             <i>Ti metti a piangere.</i>
             <i>Sorridi e piangi.</i>
             <i>L'aria è riscaldata da un profumo familiare.</i>
@@ -503,7 +503,7 @@
         <i>Le spingi ma non si spostano.</i>
         <i>Api e petali attraversano le ferite, il cielo bluastro le riempie.</i>
 
-        + [Infilo la mano tra gli spazi vuoti.]
+        + (colto) [Infilo la mano tra gli spazi vuoti.]
             <i>Il vetro si rinsalda, spingendo via la tua mano.</i>
             <i>Le linee del tuo palmo si fanno trasparenti, inconsistenti. Eppure puoi muovere le dita, e non provi alcun dolore.</i>
             <i>La <b>Brina dell'Impossibile</b> si raccoglie nel luogo di un trauma.</i>
