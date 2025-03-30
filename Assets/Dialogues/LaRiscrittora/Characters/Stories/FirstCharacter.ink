@@ -320,7 +320,7 @@
         {charNameOne}: Cammina così tanto, e per cosa poi?
         {are_two_entities_together(Mentor, PG):{charNameFive}: Non hai idea di quanto lavoro ci sia da fare. Quindi sì, cammino MOLTO.}
         {charNameOne}: Ma troppe chiacchiere ora, troppe.
-        {charNameOne}: Fammi chillare un attimo, a dopo!
+        {charNameOne}: Fammi chillare un attimo.
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main  
             
@@ -501,7 +501,7 @@
                         ~ firstYellow ++        
                 -
         {charNameOne}: Fammi rilassare un po' ama.
-        {charNameOne}: A dopo!
+        {charNameOne}: E magari riposa anche tu.
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
         
@@ -677,7 +677,7 @@
             -
         {charNameOne}: Comunque non sono di certo qui per il Ghiberti e le sue paranoie matematiche.
         {charNameOne}: Ma per capire perché sono in questo posto.
-        {charNameOne}: A dopo, ama.
+        {charNameOne}: Mi prendo un po' di tempo per me, {name}.
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
     
@@ -1044,7 +1044,7 @@
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     {
-        -   are_two_entities_together(Mentor, PG):{charNameFive}: Vi lascio, a dopo.
+        -   are_two_entities_together(Mentor, PG):{charNameFive}: Bene, è il momento che mi allontani.
                 ~ change_entity_place(Mentor)
     }
     {

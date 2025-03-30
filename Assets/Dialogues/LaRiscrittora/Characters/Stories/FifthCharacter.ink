@@ -219,7 +219,7 @@
         {charNameFive}: Questo luogo continua a stupirmi.
         {charNameFive}: Sei qui per aiutare le altre persone, e finisci per scoprire cose di te.
         {charNameFive}: Ma ora è il momeno di svuotare lo stagno dalle sue cose più schifose.
-        {charNameFive}: A dopo, {name}.
+        {charNameFive}: Prega per me, {name}.
              ~ fifthPauseTalking = fifthCharPauseDurantion
                 -> main
 
@@ -417,7 +417,7 @@
         {charNameFive}: Soprattutto qui.
         {charNameFive}: Amore per noi.
         {charNameFive}: Vado a recuperare del terriccio dal sottobosco, {name}.
-        {charNameFive}: A dopo.
+        {charNameFive}: Parleremo più tardi.
         ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
     
