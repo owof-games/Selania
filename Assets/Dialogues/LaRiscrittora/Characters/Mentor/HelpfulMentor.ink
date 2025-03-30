@@ -162,14 +162,20 @@
         {charNameFive}: Hai il mio appoggio.
         ~ abuses = false
         {
-        - unreadStories has StenoArtico: 
+            - unreadStories has StenoArtico:
             ~ unreadStories -= StenoArtico
-        - unreadStories has AdriAllora: 
+        }
+        {
+            -unreadStories has AdriAllora: 
             ~ unreadStories -= AdriAllora
-        - unreadStories has Romi: 
+        }
+        {
+            -unreadStories has Romi: 
             ~ unreadStories -= Romi
-        - unreadStories has BeatriceYBottura: 
-            ~ unreadStories -= BeatriceYBottura             
+        }
+        {
+            -unreadStories has BeatriceYBottura: 
+            ~ unreadStories -= BeatriceYBottura
         }
             -> top
     + {abuses == false}[Vorrei sentire anche storie su violenza psicologica subita, inflitta o autoinflitta.]
@@ -219,12 +225,20 @@
         {
             - unreadStories has StenoArtico: 
                 ~ unreadStories -= StenoArtico
+                }
+        {
             - unreadStories has Aza: 
                 ~ unreadStories -= Aza
+                }
+        {
             - unreadStories has BeatriceYBottura: 
                 ~ unreadStories -= BeatriceYBottura
+                }
+        {
             - unreadStories has Maura: 
                 ~ unreadStories -= Maura
+                }
+        {
             - unreadStories has AdriAllora: 
                 ~ unreadStories -= AdriAllora                 
         }     
@@ -286,8 +300,12 @@
         {
             - unreadStories has StenoArtico: 
                 ~ unreadStories -= StenoArtico
+                }
+        {
             - unreadStories has Beatrice: 
                 ~ unreadStories -= Beatrice
+                }
+        {
             - unreadStories has LetiziaVaccarella: 
                 ~ unreadStories -= LetiziaVaccarella                 
         }     
