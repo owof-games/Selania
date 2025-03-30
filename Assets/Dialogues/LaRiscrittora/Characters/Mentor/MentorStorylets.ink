@@ -92,14 +92,14 @@
 //Feedback
     - not ending_demo && secondStory == Ended && firstStory == Ended:
         -> ending_demo
-    - not third_character_feedback && thirdStory == Ended:
-        -> third_character_feedback        
+    // - not third_character_feedback && thirdStory == Ended:
+    //     -> third_character_feedback        
 
-    - not fourth_character_feedback && fourthStory == Ended:
-        -> fourth_character_feedback        
+    // - not fourth_character_feedback && fourthStory == Ended:
+    //     -> fourth_character_feedback        
 
-    - not fifth_character_feedback && fifthStory == Ended:
-        -> fifth_character_feedback        
+    // - not fifth_character_feedback && fifthStory == Ended:
+    //     -> fifth_character_feedback        
     
 // //Presentazione dei luoghi
 //     - are_entities_together_in(PG, Mentor, Greenhouse) && not first_greenhouse_visit:
