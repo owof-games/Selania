@@ -17,25 +17,25 @@
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 
-    {charNameTwo}: Quindi non ricordi come sei arrivato qui?
-    {charNameOne}: Sì no boh.
-    {charNameOne}: No.
-    {charNameOne}: A un certo punto ero nella stazione.
-    {charNameTwo}: Pensi ci abbiano rapito?
-    {charNameOne}: Sarebbe DIVERTENTISSIMO!
-    {charNameTwo}: Bimbo, dobbiamo rivedere la tua idea di divertente!
-    {charNameOne}: Magari è stata {charNameFive}.
-    {charNameTwo}: Naa, mi sembra troppo grigia.
-    {charNameTwo}: E ligia ai doveri.
+    {charNameOne}: Quindi non ricordi come sei arrivato qui?
+    {charNameTwo}: Sì no boh.
+    {charNameTwo}: No.
+    {charNameTwo}: A un certo punto ero nella stazione.
+    {charNameOne}: Pensi ci abbiano rapito?
+    {charNameTwo}: Sarebbe DIVERTENTISSIMO!
+    {charNameOne}: Bimbo, dobbiamo rivedere la tua idea di divertente!
+    {charNameTwo}: Magari è stata {charNameFive}.
+    {charNameOne}: Naa, mi sembra troppo grigia.
+    {charNameOne}: E ligia ai doveri.
     {are_two_entities_together(Mentor, PG):{charNameFive}: Guardate che so anche divertirmi.}
     {are_two_entities_together(Mentor, PG):{charNameOne}: Come? E non dirmi col giardinaggio!}
     {are_two_entities_together(Mentor, PG):{charNameFive}: Io. Ehm. Io.}
-    {charNameTwo}: Comunque se fosse davvero un rapimento, credo dormirei tutto il tempo.
-    {charNameTwo}: Devo dormire!
-    {charNameOne}: No no no.
-    {charNameOne}: Che noia.
-    {charNameOne}: Io vorrei capire TUTTO di questo posto. Tutto!
-    {charNameTwo}: E tu che faresti, {name}?
+    {charNameOne}: Comunque se fosse davvero un rapimento, credo dormirei tutto il tempo.
+    {charNameOne}: Devo dormire!
+    {charNameTwo}: No no no.
+    {charNameTwo}: Che noia.
+    {charNameTwo}: Io vorrei capire TUTTO di questo posto. Tutto!
+    {charNameOne}: E tu che faresti, {name}?
     
             + [L'idea di dormirmela per qualche giorno non mi dispiace!]
                     ~ firstYellow ++

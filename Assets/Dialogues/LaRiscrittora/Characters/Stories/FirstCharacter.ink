@@ -118,7 +118,7 @@
                 ???: E ha molta fantasia.
                 ???: Sempre che tu sappia cosa sia.
                 
-            + (oneYellow) [Con un tamburo di sicuro torna anche il violino.]
+            + (oneYellow) [Suona il tamburo e vedrai che il violino torna!]
                     ~ firstYellow ++
                 ???: A beh, ci sta!
                 ???: Ci sta!
@@ -274,7 +274,7 @@
         ~ firstStoryQuestCount ++
         
         {charNameOne}: Non riesco a trovare Talco.
-        {charNameOne}: Forse devo fare pace col cervello è accettare che non è qui.
+        {charNameOne}: Forse devo fare pace col cervello e accettare che non è qui.
         {charNameOne}: Ma non ricordo quando è stata l'ultima volta che sono andata in giro senza di ləi.
         {charNameOne}: Prima mi sono pure persa nel cercarlə.
         {charNameOne}: Ok, forse mi sono distratta cercando di raggiungere uno scoiattolo perché aveva la ghianda più bella che avessi mai visto.
@@ -463,7 +463,7 @@
         {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Mi piacerebbe conoscere Talco!}        
         {charNameOne}: L'estate facciamo le feste sul tetto, cantiamo e improvvisiamo.
         {charNameOne}: "E vento e sudore si portano via le preoccupazioni, non c’è nulla a cui pensare.
-        {charNameOne}: Ti senti parte di tutto, priva di confini.
+        {charNameOne}: Ti senti parte di tutto, privə di confini.
         {charNameOne}: Sei la musica, sei l’umidità nell’aria, sei la gola del vicino che si lamenta del casino."
         {charNameOne}: Sono parole scritte da Talco, le adoro.
         {charNameOne}: Qui è tutto così calmo, posso sentire i pensieri dei miei pensieri e questa roba mi cringia così tanto che non hai idea.
@@ -641,7 +641,7 @@
         {charNameOne}: Che diavolo ci fai con una canzone fatta con la sola precisione?
         {charNameOne}: Tra ame sbagliamo sempre, e poi ci perdoniamo.
         {charNameOne}: Mentre il mondo del Ghiberti sembra come quella roba con l’AI, orecchiabile, prevedibile, dimenticabile.
-        {charNameOne}: C'è una sola cosa che mi triggera le ovaio: tutte le cosine pratichine e calcolabili e precise.
+        {charNameOne}: C'è una sola cosa che mi triggera le ovaie: tutte le cosine pratichine e calcolabili e precise.
         {charNameOne}: Sono roba morta.
         {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Essere adulti è orribile.}        
             
@@ -1024,7 +1024,7 @@
         {charNameOne}: Perché una scelta chiude strade.
         {charNameOne}: Perché una scelta delude persone.
         {charNameOne}: Perché una scelta può portarti su strade sbagliate.
-        {charNameOne}: E a quel punto, non si può più tornare indeitro.
+        {charNameOne}: E a quel punto, non si può più tornare indietro.
         {charNameOne}: E così l'unica cosa che rimane è rinunciare.
         {charNameOne}: Lasciare che le altre persone scelgano per te.
         {charNameOne}: O che lo faccia il mondo.
@@ -1040,7 +1040,7 @@
 
     = statement
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        <i>A seguito del rapporto che {name} ha creato con {charNameOne} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità.|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
+        <i>A seguito del rapporto che {name} ha creato con {charNameOne} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(firstCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]
@@ -1117,7 +1117,7 @@
 
         + [Con Talco puoi litigare, eppure siete legatissim3.]
             {name}: Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
-            {name}: Il Talco che hai raccontato si arrabbierebbe di più se tu facessi una scelta per te pensando a ləi.
+            {name}: Lə Talco che hai raccontato si arrabbierebbe di più se tu facessi una scelta per te pensando a ləi.
             
                     
         + [La paura di tradire è un'altra faccia dell'ego.]
@@ -1344,7 +1344,7 @@
     
         {charNameOne}: C'è una cosa che devo dirti ama.
         {charNameOne}: Riguarda {charNameFive}.
-        {charNameOne}: Non voglio semprare una snitch ma continuo a chiedermi: qual è il confine tra essere una brava persona ed essere una manipolatrice?
+        {charNameOne}: Non voglio sembrare una snitch ma continuo a chiedermi: qual è il confine tra essere una brava persona ed essere una manipolatrice?
         {charNameOne}: A me non la conta giusta quella.
         {charNameOne}: Però tra un po' mi potrò levare di culo e non è più un mio problema.
         {charNameOne}: Ma se hai intenzione di restare qui a lungo, forse devi chiedertelo anche tu.
@@ -1382,7 +1382,7 @@
         ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
         {charNameOne}: Ama: è il momento di tornare a casa.
         {firstCharacterPossibleStates hasnt Chitarra: {charNameOne}: Non ho idea di che cosa accadrà, sinceramente, ma almeno ora mi sento pronta.}
-        {firstCharacterPossibleStates hasnt Chitarra: {charNameOne}: E non cringiare ma: grazie. Mi hai dato una mano enorme. Me lo ricoderò.}
+        {firstCharacterPossibleStates hasnt Chitarra: {charNameOne}: E non cringiare ma: grazie. Mi hai dato una mano enorme. Me lo ricorderò.}
         {firstCharacterPossibleStates has Chitarra: {charNameOne}: Vedremo cosa mi accadrà.}
             
             ~ move_entity(FirstCharacter, Safekeeping)

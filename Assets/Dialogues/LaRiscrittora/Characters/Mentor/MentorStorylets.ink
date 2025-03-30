@@ -480,7 +480,7 @@
             {charNameFive}: Lascia fare a me il resto.
             -> talk_with_mentor
         
-        + [Ripensadoci, non ho nulla di nuovo da dire.]
+        + [Ripensadonci, non ho nulla di nuovo da dire.]
             -> talk_with_mentor
    
    //Feedback//

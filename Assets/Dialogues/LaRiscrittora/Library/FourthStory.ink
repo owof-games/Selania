@@ -103,7 +103,7 @@ Rileggo <i>Polvere</i> di Maura (she/they).
     Non ho una domanda precisa in testa, solo un vago sentire ma so che ormai io e loro ci capiamo anche senza parlare.
     Lo sento, quel brivido leggero e quel tremore nella pancia, le dita si bloccano su una carta, la giro, la Forza.
     La donna accarezza il leone, la sua mano sfiora le fauci aperte, ma non c’è paura nel suo volto.
-    Mi domando se anche lei abbia trattenuto la rabbia, per quanto tempo? avrà dovuto imparare a domarla? 
+    Mi domando se anche lei abbia trattenuto la rabbia, per quanto tempo? Avrà dovuto imparare a domarla? 
     Giro una carta, il Diavolo, la lancio via. Non voglio più domarla. Voglio lasciarla uscire.
     Un’altra carta, la Morte.
     Inizio a sperimentare un nuovo sintomo: il calore. Un fuoco che mi cresce dentro, che mi riempie il petto e le mani.

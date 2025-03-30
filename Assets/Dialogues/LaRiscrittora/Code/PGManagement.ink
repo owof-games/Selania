@@ -60,7 +60,7 @@ VAR fatphobia = true
         + [Preferisco i pronomi femminili.]
             ~ pronouns = ()
             ~ pronouns += her
-        + [Vai di neutro, ama.]
+        + [Vai di neutro.]
             ~ pronouns = ()
             ~ pronouns += they
         -
