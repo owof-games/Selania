@@ -232,10 +232,10 @@
                         <i>Hai ottenuto: <b>Lichene degli Abissi.</b></i>
                     }
                     
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can|-> cultivable_test}
+                + + {backupCultivable != () && {are_two_entities_together(WateringCan, PG)}}[Voglio coltivare qualcosa di nuovo.]
+                        -> cultivable_test
                 + + [Mi aggiro per la serra.]    
-                    -> main
+                        -> main
                     
             + [Lo lascio dov'è.]
             -
@@ -281,10 +281,10 @@
                         <i>Hai ottenuto: <b>Edera delle Amanti.</b></i>
                     }
                 
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can|-> cultivable_test}
+                + + {backupCultivable != () && {are_two_entities_together(WateringCan, PG)}}[Voglio coltivare qualcosa di nuovo.]
+                        -> cultivable_test
                 + + [Mi aggiro per la serra.]    
-                    -> main
+                        -> main
                     
             + [Ora non me la sento.]
             -
@@ -330,10 +330,10 @@
                         <i>Hai ottenuto: <b>Canto delle Compagne.</b></i>
                     }
                 
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can|-> cultivable_test}
+                + + {backupCultivable != () && {are_two_entities_together(WateringCan, PG)}}[Voglio coltivare qualcosa di nuovo.]
+                        -> cultivable_test
                 + + [Mi aggiro per la serra.]    
-                    -> main
+                        -> main
                     
         + [No, non ora.]
               -> main
@@ -381,10 +381,10 @@
                         <i>Hai ottenuto: <b>La Spazzata.</b></i>
                     }
                 
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can|-> cultivable_test}
+                + + {backupCultivable != () && {are_two_entities_together(WateringCan, PG)}}[Voglio coltivare qualcosa di nuovo.]
+                        -> cultivable_test
                 + + [Mi aggiro per la serra.]    
-                    -> main
+                        -> main
                     
         + [Non ora.]
             -> main
@@ -424,10 +424,10 @@
                         <i>Hai ottenuto: <b>Bacca della Addolorata</b></i>
                     }
             
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can|-> cultivable_test}
+                + + {backupCultivable != () && {are_two_entities_together(WateringCan, PG)}}[Voglio coltivare qualcosa di nuovo.]
+                        -> cultivable_test
                 + + [Mi aggiro per la serra.]    
-                    -> main
+                        -> main
                     
             + [Non è il momento.]
                 -> main
@@ -472,10 +472,10 @@
                         ~ findedGifts += NonTiScordarDiTe
                         <i>Hai ottenuto: <b>Non Ti Scordar di Te.</b></i>
                     }
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can|-> cultivable_test}
+                + + {backupCultivable != () && {are_two_entities_together(WateringCan, PG)}}[Voglio coltivare qualcosa di nuovo.]
+                        -> cultivable_test
                 + + [Mi aggiro per la serra.]    
-                    -> main                    
+                        -> main                    
        
         + [Non ora.]
               -> main
@@ -516,8 +516,8 @@
                         ~ findedGifts += BrinaDellImpossibile
                        <i> Hai ottenuto: <b>Brina dell'Impossibile</b></i>
                     }
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can|-> cultivable_test}
+                + + {backupCultivable != () && {are_two_entities_together(WateringCan, PG)}}[Voglio coltivare qualcosa di nuovo.]
+                        -> cultivable_test
                 + + [Mi aggiro per la serra.]    
                     -> main
         + [Ora non me la sento.]
