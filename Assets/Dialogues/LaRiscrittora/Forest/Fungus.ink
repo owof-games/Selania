@@ -274,31 +274,31 @@
 
 === descriptions
     {   
-        //Opinioni dopo la fine della terza storia
-        - fourthTier == true:
-            -> four
         //Opinioni dopo la fine della seconda storia    
-        - thirdTier == true:
+        - secondStory == Ended:
             -> three
         //Opinioni dopo la fine della prima storia      
-        - secondTier == true:
+        - firstStory == Ended:
             -> two
         //Opinioni presenti da inizio gioco    
-          - firstTier == true:
+        - else:
             -> one
     }
     
     = one
+    //Contenuti iniziali
         <i>{~ Il tronco persevera nella memoria.|La corteccia tenace resiste alla dimenticanza.|Formiche inquiete si nascondono nelle scalanature della corteccia.}</i>
             -> main
     
     = two
+    //Contenuti dopo la fine della prima storia
         <i>{~ Le radici hanno trovato vecchi tesori.|I bruchi solleticano le giovani radici.|Porcellini di terra si riparano tra le nostre radici.}</i>
-        -> main
+            -> main
 
     = three
+    //Contenuti dopo la fine della seconda storia
         <i>{~ I rami sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba osserva lontana dalla base della pianta.}</i>        
-        -> main
+            -> main
 
     = four
     
