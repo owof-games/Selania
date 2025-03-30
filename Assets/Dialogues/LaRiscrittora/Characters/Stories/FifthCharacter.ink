@@ -1007,7 +1007,7 @@
             - secondTier == true:
                 -> two
             //Opinioni presenti da inizio gioco    
-            - firstTier == true:
+            - else:
                 -> one
         }
 
