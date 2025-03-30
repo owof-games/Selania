@@ -189,7 +189,7 @@ VAR delayFourthChar = 20
             ~ firstStory = Active
             
 //A metà della storia della prima personaggia, compare la seconda      
-    - knowing_first_character.four && secondStory == NotStarted:
+    - knowing_first_character.three && secondStory == NotStarted:
             ~ move_entity(SecondCharacter, BusStop)    
             ~ secondStory = Active
 
