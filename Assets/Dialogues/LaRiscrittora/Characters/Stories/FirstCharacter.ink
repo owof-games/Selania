@@ -319,6 +319,7 @@
             -    
         {charNameOne}: Che poi a pensarci bene, non è che saranno tutti i passi di quell'altra?
         {charNameOne}: Cammina così tanto, e per cosa poi?
+        {are_two_entities_together(Mentor, PG):{charNameFive}: Non hai idea di quanto lavoro ci sia da fare. Quindi sì, cammino MOLTO.}
         {charNameOne}: Ma troppe chiacchiere ora, troppe.
         {charNameOne}: Fammi chillare un attimo, a dopo!
             ~ growing ++
@@ -441,7 +442,8 @@
             -
         {charNameOne}: Idea!
         {charNameOne}: Forse la mentore è abbastanza vecchia da avere una radio?
-        {charNameOne}: Devo assolutamente chiederglielo.
+        {are_two_entities_together(Mentor, PG):{charNameFive}: Non approfittare della mia gentilezza, ragazzina.}
+        {are_two_entities_together(Mentor, PG): {charNameOne}: Dai, si fa per il meme!|{charNameOne}: Devo assolutamente chiederglielo.}
         ~ growing ++
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main 
