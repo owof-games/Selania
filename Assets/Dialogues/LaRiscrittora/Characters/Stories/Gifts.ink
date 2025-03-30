@@ -44,7 +44,7 @@ VAR fifthCharacterInkLevel = Empty
     - Medium:
         <i>Dopo il dono consegnato e il rapporto creato, {name} ha tre goccie di inchiostro a disposizione. Potrà fare l'intervento garantito e altri tre interventi extra.</i>        
     - High:
-        <i>Dopo il dono consegnato e il rapporto creato, {name} ha tre goccie di inchiostro a disposizione. Potrà fare l'intervento garantito e altri tre interventi extra. E riceverà un'informazione importante.</i>
+        <i>Dopo il dono consegnato e il rapporto creato, {name} ha quattro goccie di inchiostro a disposizione. Potrà fare l'intervento garantito e altri tre interventi extra. E riceverà un'informazione importante.</i>
         {
             - InkLevel == firstCharacterInkLevel:
                 ~ firstCharacterSpecialEvent = true
