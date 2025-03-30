@@ -39,15 +39,15 @@
         + {(pre_test && not little_storylets.voices) or (firstCharacterInkLevel has High && not little_storylets.infoImpo) or (talking_fungus.first_story_ended_check && not little_storylets.talkingFungus) or (the_frog.frog && not little_storylets.talkingFrog)}[Mi è successa una cosa strana.]
             -> little_storylets
             
-        + {knowing_second_character}[Vorrei conoscerti meglio.]
-            {
-                - fifthPauseTalking == 0:
+        + {knowing_second_character && fifthPauseTalking == 0}[Vorrei conoscerti meglio.]
+            // {
+            //     - fifthPauseTalking == 0:
                     -> talk_with_fifth_character
                 
-                - else:
-                    {charNameFive}: {~ Ora non mi va, ma non mi chiedi aiuto da un po', tutto ok?|Ho bisogno di una pausa, ma se serve aiuto sono qui.|Devo decidere cosa sistemare poi, ma se ti serve aiuto invece, chiedi pure.}
-                    -> talk_with_mentor
-            }
+            //     - else:
+            //         {charNameFive}: {~ Ora non mi va, ma non mi chiedi aiuto da un po', tutto ok?|Ho bisogno di una pausa, ma se serve aiuto sono qui.|Devo decidere cosa sistemare poi, ma se ti serve aiuto invece, chiedi pure.}
+            //         -> talk_with_mentor
+            // }
             
         + [Ho cambiato idea.]
             -> main
