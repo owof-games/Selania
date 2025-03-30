@@ -29,7 +29,7 @@
                 -> questions
             - else:
             {
-                - firstStoryQuestCount >= minStoryQuesTCountFirstChar: {charNameFive}: Hai fatto il tuo dono a {charNameOne}?
+                - firstStoryQuestCount > minStoryQuesTCountFirstChar: {charNameFive}: Hai fatto il tuo dono a {charNameOne}?
                         -> mentor_and_second_char_storylets 
                 - else:
                     {
