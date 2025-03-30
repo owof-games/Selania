@@ -263,7 +263,6 @@
         {are_two_entities_together(Mentor, PG): {welcome.your_name: {charNameFive}|???}: In effetti avrei un paio di informazioni utili da darti, nuova persona!}
         {charNameOne}: L’unica cosa certa è che ho bisogno di Talco.
         {charNameOne}: Ci vediamo dopo, ama.
-            ~ growing ++
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main
         
@@ -322,7 +321,6 @@
         {are_two_entities_together(Mentor, PG):{charNameFive}: Non hai idea di quanto lavoro ci sia da fare. Quindi sì, cammino MOLTO.}
         {charNameOne}: Ma troppe chiacchiere ora, troppe.
         {charNameOne}: Fammi chillare un attimo, a dopo!
-            ~ growing ++
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main  
             
@@ -389,7 +387,6 @@
         {charNameOne}: Sono la mia famiglia, loro.
         {charNameOne}: E nessuna di queste scelte può accontentare tutt3.
         {charNameOne}: Che rottura di ovaie, {name}!
-        ~ growing ++
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
         
@@ -444,7 +441,6 @@
         {charNameOne}: Forse la mentore è abbastanza vecchia da avere una radio?
         {are_two_entities_together(Mentor, PG):{charNameFive}: Non approfittare della mia gentilezza, ragazzina.}
         {are_two_entities_together(Mentor, PG): {charNameOne}: Dai, si fa per il meme!|{charNameOne}: Devo assolutamente chiederglielo.}
-        ~ growing ++
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main 
             
@@ -506,7 +502,6 @@
                 -
         {charNameOne}: Fammi rilassare un po' ama.
         {charNameOne}: A dopo!
-        ~ growing ++
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
         
@@ -571,7 +566,6 @@
             -
         {charNameOne}: A proposito di causa perse: vado a cercarmi uno spritz.
         {charNameOne}: Ho proprio bisogno di staccare.
-        ~ growing ++
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
         
@@ -624,7 +618,6 @@
                 {charNameOne}: Un po' come quel casino che è camera mia.
                     ~ firstRed ++
             -
-            ~ growing ++
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main           
     = eight
@@ -685,7 +678,6 @@
         {charNameOne}: Comunque non sono di certo qui per il Ghiberti e le sue paranoie matematiche.
         {charNameOne}: Ma per capire perché sono in questo posto.
         {charNameOne}: A dopo, ama.
-        ~ growing ++
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
     
@@ -742,7 +734,6 @@
             -
         {charNameOne}: Vabbè.
         {charNameOne}: Credo me ne starò qui ad aspettare questo finto temporale.
-            ~ growing ++
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main   
     = ten
@@ -804,7 +795,6 @@
         {charNameOne}: I poliziotti ci hanno trascinate e bastonate e schedate.
         {charNameOne}: E soprattutto hanno tagliato gli alberi.
         {charNameOne}: E sono tornata a sentirmi inutile.
-            ~ growing ++
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
     
@@ -863,7 +853,6 @@
             
         {charNameOne}: Lasciamo un po' solo ora, {name}.
         {charNameOne}: Perché sto entrando in fase lamentosa e non ho voglia di cringiarti.
-            ~ growing ++
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
             
@@ -923,7 +912,6 @@
             
         {charNameOne}: E con questa, ho finito di sputtanare la mia famiglia.
          {charNameOne}: Vado a deprimermi da qualche parte.
-            ~ growing ++
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
 

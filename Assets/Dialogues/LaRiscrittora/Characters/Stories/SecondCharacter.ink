@@ -222,7 +222,6 @@
         ???: Cercali!
         ???: A dopo!
             -
-            ~ growing ++
             ~ secondPauseTalking = secondCharPauseDurantion
             -> main
    
@@ -326,7 +325,6 @@
         {charNameTwo}: Lui è superforte.
         {charNameTwo}: Ora lasciami in pace.
         {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Dio che merda essere bambini.}        
-        ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
 
@@ -490,7 +488,6 @@
                     ~ secondPurple ++
  
             -
-            ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
     
@@ -583,7 +580,6 @@
         {charNameTwo}: Ora però lasciami solo.
         
             //Leviamo l'innaffiatoio
-            ~ growing ++
             ~ move_entity(WateringCan, Safekeeping)
             ~ secondPauseTalking = secondCharPauseDurantion
             -> main
@@ -695,7 +691,6 @@
 
             
             //Ricompare l'innaffiatoio
-            ~ growing ++
             ~ move_entity(WateringCan, Greenhouse)
             ~ secondPauseTalking = secondCharPauseDurantion
                 -> main
@@ -768,7 +763,6 @@
                     ~ secondPurple ++
  
             - (theFrog)
-            ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
              
                 -> main
@@ -849,7 +843,6 @@
                     ~ secondPurple ++
  
             -
-            ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main        
             
@@ -934,7 +927,6 @@
                     ~ secondPurple ++
  
             -
-            ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main    
     
@@ -1071,7 +1063,6 @@
  
             -
         {charNameTwo}: Però mi piacerebbe fare il veterinario.
-            ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main    
     
@@ -1150,7 +1141,6 @@
                     ~ secondPurple ++
  
             -
-            ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main    
     
@@ -1231,7 +1221,6 @@
                     ~ secondPurple ++
  
             -
-            ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main    
     
@@ -1318,7 +1307,6 @@
                     ~ secondPurple ++
  
             -
-            ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main            
             
