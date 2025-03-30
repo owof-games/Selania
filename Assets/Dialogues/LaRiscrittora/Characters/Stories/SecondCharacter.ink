@@ -97,7 +97,7 @@
                 //Lo storylet non parte se siamo allo stagno.
                 {
                     - entity_location(PG) == GreenhouseMiddlePath:
-                        {charNameTwo}: {~ Torna dopo.|Ora ho voglia di stare da solo.|Lasciami in pace.}
+                        {charNameTwo}: {~ C'è una cosa che voglio dirti, ma te la dico quando non sarò allo stagno.}
                         -> main
                     - else: 
                         -> six
@@ -767,10 +767,10 @@
                 {charNameTwo}: Ti giuro che c'è una rana nello stagno!
                     ~ secondPurple ++
  
-            -
+            - (theFrog)
             ~ growing ++
              ~ secondPauseTalking = secondCharPauseDurantion
-             ~  move_entity(TheFrog, GreenhouseMiddlePath)
+             
                 -> main
     
     = seven
