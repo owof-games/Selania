@@ -101,21 +101,21 @@
     - not fifth_character_feedback && fifthStory == Ended:
         -> fifth_character_feedback        
     
-//Presentazione dei luoghi
-    - are_entities_together_in(PG, Mentor, Greenhouse) && not first_greenhouse_visit:
-        -> first_greenhouse_visit
+// //Presentazione dei luoghi
+//     - are_entities_together_in(PG, Mentor, Greenhouse) && not first_greenhouse_visit:
+//         -> first_greenhouse_visit
 
-    - are_entities_together_in(PG, Mentor, Library) && not first_library_visit:
-        -> first_library_visit
+//     - are_entities_together_in(PG, Mentor, Library) && not first_library_visit:
+//         -> first_library_visit
 
-    - are_entities_together_in(PG, Mentor, Nest) && not first_nest_visit:
-        -> first_nest_visit
+//     - are_entities_together_in(PG, Mentor, Nest) && not first_nest_visit:
+//         -> first_nest_visit
 
-    - are_entities_together_in(PG, Mentor, Laboratory) && not first_laboratory_visit:
-        -> first_laboratory_visit
+//     - are_entities_together_in(PG, Mentor, Laboratory) && not first_laboratory_visit:
+//         -> first_laboratory_visit
 
-    - are_entities_together_in(PG, Mentor, BusStop) && not first_bus_stop_visit:
-        -> first_bus_stop_visit
+//     - are_entities_together_in(PG, Mentor, BusStop) && not first_bus_stop_visit:
+//         -> first_bus_stop_visit
  
  //Commentario random
     - talking_fungus.first_story_ended_check && not growing_fungus_storylet:
@@ -133,44 +133,44 @@
 
 
 // STORYLETS PRESENTAZIONE DEI LUOGHI
-=== first_greenhouse_visit
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+// === first_greenhouse_visit
+// ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 
-    {charNameFive}: Hai trovato la serra!
-    {charNameFive}: Qui puoi coltivare cose molto diverse tra loro.
-    {charNameFive}: Un po' tutte quelle creaturine che tendiamo a ignorare ma che sono fondamentali per la vita.
-    {charNameFive}: Sapevi che i funghi sono il punto di contatto tra vita e morte?
-    {charNameFive}: Trasformano la materia inorganica e in decomposizione in sostanze fondamentali per i viventi.
-    {charNameFive}: Senza funghi la vita stessa sarebbe impensabile.
-    {charNameFive}: E senza la serra, ogni riscrittura sarebbe più difficile.
-    {charNameFive}: Lasciati coinvolgere dalle sue suggestioni, e quando quello che hai coltivato sarà cresciuto, potresti trovare qualcosa di utile per le altre persone.
-    {charNameFive}: E per te.
-    {charNameFive}: Riscrivere è un lavoro faticoso, e per questo è importante che ogni {pronouns has him: riscrittore|{pronouns has her: riscrittora|riscrittorə}} abbia dei momenti per prendersi cura di sé.
-    {charNameFive}: Tornaci spesso: momento dopo momento quello che hai piantato sarà sempre più rigoglioso.
-    {charNameFive}: E non fare caso a me mentre lucido il legno dell'ingresso, è una cosa che mi rilassa.
-        -> talk_with_mentor
+//     {charNameFive}: Hai trovato la serra!
+//     {charNameFive}: Qui puoi coltivare cose molto diverse tra loro.
+//     {charNameFive}: Un po' tutte quelle creaturine che tendiamo a ignorare ma che sono fondamentali per la vita.
+//     {charNameFive}: Sapevi che i funghi sono il punto di contatto tra vita e morte?
+//     {charNameFive}: Trasformano la materia inorganica e in decomposizione in sostanze fondamentali per i viventi.
+//     {charNameFive}: Senza funghi la vita stessa sarebbe impensabile.
+//     {charNameFive}: E senza la serra, ogni riscrittura sarebbe più difficile.
+//     {charNameFive}: Lasciati coinvolgere dalle sue suggestioni, e quando quello che hai coltivato sarà cresciuto, potresti trovare qualcosa di utile per le altre persone.
+//     {charNameFive}: E per te.
+//     {charNameFive}: Riscrivere è un lavoro faticoso, e per questo è importante che ogni {pronouns has him: riscrittore|{pronouns has her: riscrittora|riscrittorə}} abbia dei momenti per prendersi cura di sé.
+//     {charNameFive}: Tornaci spesso: momento dopo momento quello che hai piantato sarà sempre più rigoglioso.
+//     {charNameFive}: E non fare caso a me mentre lucido il legno dell'ingresso, è una cosa che mi rilassa.
+//         -> talk_with_mentor
 
-=== first_bus_stop_visit
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    {charNameFive}: Questa è la stazione del treno.
-    {charNameFive}: È un posto di passaggio: è da qui che arrivano e vanno le persone che cercano il tuo aiuto.
-    {charNameFive}: Ed è da qui che potrai andare e tornare quando vorrai.
-    {charNameFive}: Anche se spero non resterai via per molto: alla lunga qui mi sento sola.
-        -> talk_with_mentor
+// === first_bus_stop_visit
+// ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+//     {charNameFive}: Questa è la stazione del treno.
+//     {charNameFive}: È un posto di passaggio: è da qui che arrivano e vanno le persone che cercano il tuo aiuto.
+//     {charNameFive}: Ed è da qui che potrai andare e tornare quando vorrai.
+//     {charNameFive}: Anche se spero non resterai via per molto: alla lunga qui mi sento sola.
+//         -> talk_with_mentor
         
-=== first_library_visit
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    {charNameFive}: La biblioteca!
-    {charNameFive}: Sinceramente, è stata una fatica immensa sbloccarla.
-    {charNameFive}: Avrei voluto trovare qualcosa di più utile.
-    {charNameFive}: Un modo per ripulire lo stagno, ad esempio.
-    {charNameFive}: O capire cosa sia quel tronco in mezzo alla foresta.
-    {charNameFive}: O come parlare con unə adolescente.
-    {charNameFive}: Non amo ammetterlo, ma non so cosa farei se dovesse entrarne unə.
-    {charNameFive}: Bada, mi piacciono. Ma quando sono bloccat3, tendono ad essere molto molto molto irrazionali.
-    {charNameFive}: E ingrat3.
-    {charNameFive}: Per fortuna non tocca a me riscrivere le loro storie.
-        -> talk_with_mentor
+// === first_library_visit
+// ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+//     {charNameFive}: La biblioteca!
+//     {charNameFive}: Sinceramente, è stata una fatica immensa sbloccarla.
+//     {charNameFive}: Avrei voluto trovare qualcosa di più utile.
+//     {charNameFive}: Un modo per ripulire lo stagno, ad esempio.
+//     {charNameFive}: O capire cosa sia quel tronco in mezzo alla foresta.
+//     {charNameFive}: O come parlare con unə adolescente.
+//     {charNameFive}: Non amo ammetterlo, ma non so cosa farei se dovesse entrarne unə.
+//     {charNameFive}: Bada, mi piacciono. Ma quando sono bloccat3, tendono ad essere molto molto molto irrazionali.
+//     {charNameFive}: E ingrat3.
+//     {charNameFive}: Per fortuna non tocca a me riscrivere le loro storie.
+//         -> talk_with_mentor
 
 
 === first_nest_visit
@@ -260,7 +260,7 @@
             
             {
                 - not talk_with_first_character: 
-                    {charNameFive}: Facciamo così: prova a parlare con la persona che troverai alla <b>stazione del treno</b>.
+                    {charNameFive}: Facciamo così: prova a parlare con la persona{{entity_location(PG) == BusStop} al nostro fianco.| che troverai alla <b>stazione del treno</b>.}
                     {charNameFive}: E poi torna da me.
                     {charNameFive}: Nel frattempo raccolgo le foglie del giardino.
                          ~ firstPauseTalking = 0
