@@ -776,7 +776,7 @@
 
             ~ thirdStory = Ended
             ~ movementsCounter = 0
-            ~ PG_advace_management(thirdStory)
+            ~ PG_advace_management(thirdStoryPG)
                 -> main
             
     = exit
@@ -784,7 +784,7 @@
         {charNameThree}: Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
             ~ thirdStory = Ended
             ~ movementsCounter = 0
-            ~ PG_advace_management(thirdStory)
+            ~ PG_advace_management(thirdStoryPG)
         -> main  
     
 === third_char_story_ended

@@ -1350,7 +1350,7 @@
         {charNameOne}: Ma se hai intenzione di restare qui a lungo, forse devi chiedertelo anche tu.
             ~ firstStory = Ended
             ~ movementsCounter = 0
-            ~ PG_advace_management(firstStory)
+            ~ PG_advace_management(firstStoryPG)
                 -> main
             
     = exit
@@ -1358,7 +1358,7 @@
         {charNameOne}: E ora resterò qui a romperti le gonadi ancora per un po', in attesa del prossimo treno.
             ~ firstStory = Ended
             ~ movementsCounter = 0
-            ~ PG_advace_management(firstStory)
+            ~ PG_advace_management(firstStoryPG)
         -> main  
     
 === first_char_story_ended

@@ -1835,7 +1835,7 @@
         {charNameTwo}: Per me non sta mica bene.
             ~ secondStory = Ended
             ~ movementsCounter = 0
-            ~ PG_advace_management(secondStory)
+            ~ PG_advace_management(secondStoryPG)
                 -> main
             
     = exit
@@ -1844,7 +1844,7 @@
         {charNameTwo}: Mi mancherà la rana!
             ~ secondStory = Ended
             ~ movementsCounter = 0
-            ~ PG_advace_management(secondStory)
+            ~ PG_advace_management(secondStoryPG)
         -> main  
     
 === second_char_story_ended

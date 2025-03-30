@@ -953,7 +953,7 @@
 
             ~ fifthStory = Ended
             ~ movementsCounter = 0
-            ~ PG_advace_management(fifthStory)
+            ~ PG_advace_management(fifthStoryPG)
                 -> main
             
     = exit
@@ -961,7 +961,7 @@
         {charNameFive}: Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
             ~ fifthStory = Ended
             ~ movementsCounter = 0
-            ~ PG_advace_management(fifthStory)
+            ~ PG_advace_management(fifthStoryPG)
         -> main  
     
 === fifth_char_story_ended
