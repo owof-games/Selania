@@ -90,11 +90,11 @@
     ~ movementsCounter ++
 
 //Comparsa lettere dopo fine delle storie (così non compaiono subito.
-    {
-        - firstCharacterPossibleStates hasnt Chitarra && first_char_story_ended.goodbye:
+    {firstCharacterPossibleStates hasnt Chitarra && first_char_story_ended.goodbye:
             ~ move_entity(FirstCharacterNotes, BusStop)
             {debug: Ho messo la nota della prima personaggia alla fermata del bus.}
-        - second_char_story_ended.goodbye:
+    }
+    {second_char_story_ended.goodbye:
             ~ move_entity(SecondCharacterNotes, BusStop)
             {debug: Ho messo la nota del secondo personaggio alla fermata del bus.}
     }    
