@@ -236,7 +236,7 @@
             {chiSei:{charNameFive}|???}: O dovrei essere più autorevole?
             {chiSei:{charNameFive}|???}: Ma non devo essere scortese ora.
             {chiSei:{charNameFive}|???}: Mi hai fatto una domanda, e vedrò di rispondere.
-            {chiSei:{charNameFive}|???}: Ad est della stazione troverai un sentiero che ti riporterà a casa.
+            {chiSei:{charNameFive}|???}: A est della stazione troverai un sentiero che ti riporterà a casa.
             {chiSei:{charNameFive}|???}: E se deciderai di tornare, troverai tutto nello stato in cui l'hai lasciato.
                 -> top
                 

@@ -160,7 +160,7 @@
                     
  
             -
-        {firstStory hasnt Ended: {charNameFive}: Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di libri che blocca il sentiero ad ovest della foresta.|{charNameFive}: Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}
+        {firstStory hasnt Ended: {charNameFive}: Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di mobili rotti che blocca il sentiero a ovest della foresta.|{charNameFive}: Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}
         {charNameFive}: È arrivato il momento di capire dove possa portare.
         {charNameFive}: Grazie per la chiacchierata, {name}.
              ~ fifthPauseTalking = fifthCharPauseDurantion
