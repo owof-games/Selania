@@ -27,10 +27,6 @@
         - not fifth_story_ended_check && fifthStory == Ended:
             -> fifth_story_ended_check    
     
-    //Storylets
-    - fungusPauseTalking == 0 && firstStory == Ended:
-        -> fungus_storylets
-    
     - else:
         -> descriptions
 }
@@ -274,32 +270,7 @@
                 ~ playerPurple ++
         -        
             -> main
-        
-=== fungus_storylets
-    {   
-        //Qui tracciamo le condizioni per determinati storylets. Me lo immagino silenzioso comunque fino a quando non esplode la situa col terzo personaggio.
-        - firstTier == true:
-            -> one
-        
-        - else:
-            -> descriptions
-    }
-    
-    = one
-     <i>{~ I rami tozzi sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba osserva lontana dalla base della pianta.}</i>
-    -> main
-    
-    = two
-    
-    -> main
 
-    = three
-    
-    -> main
-
-    = four
-    
-    -> main
 
 === descriptions
     {   
@@ -327,7 +298,7 @@
 
     = three
         <i>{~ I rami sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba osserva lontana dalla base della pianta.}</i>        
-    -> main
+        -> main
 
     = four
     
