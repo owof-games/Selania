@@ -865,7 +865,7 @@
     ~ secondStoryQuestCount ++
         
         {charNameTwo}: Sai che mio fratello è campione di Karate?
-        {charNameTwo}: E ha una macchina enorme gialla che fa arrabbiare papà
+        {charNameTwo}: E ha una macchina enorme gialla che fa arrabbiare papà.
         {charNameTwo}: E hai i muscoli che...
         {charNameTwo}: Bugia.
         {charNameTwo}: Scusa.
@@ -1101,7 +1101,7 @@
         {charNameTwo}: Quando papà mi picchia dice che è colpa mia.
         {charNameTwo}: Ma a me non piace farmi picchiare.
         {charNameTwo}: O picchiare.
-        {charNameTwo}: Ma se sono arrabbiato e non so cosa fare.
+        {charNameTwo}: Ma se sono arrabbiato non so cosa fare.
         {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Mai provato a suonare la batteria?}
         {are_two_entities_together(FirstCharacter, PG): {charNameTwo}: Poi papà ha un altro motivo per arrabbiarsi.}
         
@@ -1468,7 +1468,7 @@
 
     = statement
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): l'inchiostro è aumentato di due unità.|{secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
+        <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): l'inchiostro è aumentato di due unità|{secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(secondCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]

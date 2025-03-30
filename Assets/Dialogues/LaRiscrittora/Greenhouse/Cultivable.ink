@@ -319,7 +319,7 @@
         + [È il momento di festeggiare.]
                 <i>Il canto ti invita alla danza.</i>
                 <i>Spinge le tue gambe nella stanza.</i>
-                <i>O ad alzare al voce, cantare, e chiamare le compagne.</i>
+                <i>O ad alzare la voce, cantare, e chiamare le compagne.</i>
                 <i>Lasciando che la musica vi unisca, rendendo il mondo intero il vostro palcoscenico.</i>
                 <i>Se qualcuno avrà paura, è solo perché non sa più come ballare.</i>
                     ~ growing = 0
@@ -408,7 +408,7 @@
           -> main
           
     = step_tre
-        <i>La mano, ora tesa verso il cielo, sembra sguarciata da una resina rossastra.<i>
+        <i>La mano, ora tesa verso il cielo, sembra squarciata da una resina rossastra.<i>
         <i>Hai trovato una <b>Bacca dell'addolorata</b>.</i>
         <i>Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ancora ad avanzare.</i>
 

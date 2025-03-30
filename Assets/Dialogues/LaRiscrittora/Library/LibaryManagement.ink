@@ -90,15 +90,15 @@ TODO: aggiungere negli about e nei trigger la storia di B.
     
     = about_transformation
     <i>La biblioteca ti offre una storia...</i>
-        + {readingDuration has Short && shortStories^ aboutTransformation != ()} [Che racconta di qualcosa che si trasforma.]
+        + {readingDuration has Short && shortStories^ aboutTransformation != ()} [Che racconta di qualcosa che si <b>trasforma</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutTransformation)
             -> refresh_book_lists -> from_list_to_books
  
-        + {readingDuration has Average && averageStories^ aboutTransformation != ()} [Che racconta di qualcosa che si trasforma.]
+        + {readingDuration has Average && averageStories^ aboutTransformation != ()} [Che racconta di qualcosa che si <b>trasforma</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutTransformation)
             -> refresh_book_lists -> from_list_to_books           
             
-        + {readingDuration has Long && longStories^ aboutTransformation != ()} [Che racconta di qualcosa che si trasforma.]
+        + {readingDuration has Long && longStories^ aboutTransformation != ()} [Che racconta di qualcosa che si <b>trasforma</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutTransformation)
             -> refresh_book_lists -> from_list_to_books
         
@@ -118,15 +118,15 @@ TODO: aggiungere negli about e nei trigger la storia di B.
     = about_questions       
     <i>La biblioteca ti offre una storia...</i> 
     
-        + {readingDuration has Short && shortStories^ aboutQuestions != ()} [Che parla di chi si pone domande.]
+        + {readingDuration has Short && shortStories^ aboutQuestions != ()} [Che parla di chi <b>si pone domande</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutQuestions)
             -> refresh_book_lists -> from_list_to_books
         
-        + {readingDuration has Average && averageStories^ aboutQuestions != ()} [Che parla di chi si pone domande.]
+        + {readingDuration has Average && averageStories^ aboutQuestions != ()} [Che parla di chi <b>si pone domande</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutQuestions)
             -> refresh_book_lists -> from_list_to_books
 
-        + {readingDuration has Long && longStories^ aboutQuestions != ()} [Che parla di chi si pone domande.]
+        + {readingDuration has Long && longStories^ aboutQuestions != ()} [Che parla di chi <b>si pone domande</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutQuestions)
             -> refresh_book_lists -> from_list_to_books            
         
@@ -146,15 +146,15 @@ TODO: aggiungere negli about e nei trigger la storia di B.
     = about_unprepared
     <i>La biblioteca ti offre una storia...</i>
     
-        + {readingDuration has Short && shortStories^ aboutUnprepared != ()} [Che mi colga {pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}]
+        + {readingDuration has Short && shortStories^ aboutUnprepared != ()} [Che mi colga<b>{pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}</b>]
             ~ book = LIST_RANDOM(shortStories^ aboutUnprepared)
             -> refresh_book_lists -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutUnprepared != ()} [Che mi colga {pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}]
+        + {readingDuration has Average && averageStories^ aboutUnprepared != ()} [Che mi colga<b>{pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}</b>]
             ~ book = LIST_RANDOM(averageStories ^ aboutUnprepared)
             -> refresh_book_lists -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutUnprepared != ()} [Che mi colga {pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}]
+        + {readingDuration has Long && longStories^ aboutUnprepared != ()} [Che mi colga<b>{pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}</b>]
             ~ book = LIST_RANDOM(longStories ^ aboutUnprepared)
             -> refresh_book_lists -> from_list_to_books            
         
@@ -173,15 +173,15 @@ TODO: aggiungere negli about e nei trigger la storia di B.
     = about_monsters
     <i>La biblioteca ti offre una storia...</i>
     
-        + {readingDuration has Short && shortStories^ aboutMonsters != ()} [Che parla di cose mostruose.]
+        + {readingDuration has Short && shortStories^ aboutMonsters != ()} [Che parla di <b>cose mostruose</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutMonsters)
             -> refresh_book_lists -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutMonsters != ()} [Che parla di cose mostruose.]
+        + {readingDuration has Average && averageStories^ aboutMonsters != ()} [Che parla di <b>cose mostruose</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutMonsters)
             -> refresh_book_lists -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutMonsters != ()} [Che parla di cose mostruose.]
+        + {readingDuration has Long && longStories^ aboutMonsters != ()} [Che parla di <b>cose mostruose</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutMonsters)
             -> refresh_book_lists -> from_list_to_books            
         
@@ -200,15 +200,15 @@ TODO: aggiungere negli about e nei trigger la storia di B.
     = about_fire  
     <i>La biblioteca ti offre una storia...</i>
     
-        + {readingDuration has Short && shortStories^ aboutFire != ()} [Che racconta di cose che bruciano.]
+        + {readingDuration has Short && shortStories^ aboutFire != ()} [Che racconta di <b>cose che bruciano</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutFire)
             -> refresh_book_lists -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutFire != ()} [Che racconta di cose che bruciano.]
+        + {readingDuration has Average && averageStories^ aboutFire != ()} [Che racconta di <b>cose che bruciano</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutFire)
             -> refresh_book_lists -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutFire != ()} [Che racconta di cose che bruciano.]
+        + {readingDuration has Long && longStories^ aboutFire != ()} [Che racconta di <b>cose che bruciano</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutFire)
             -> refresh_book_lists -> from_list_to_books            
         
@@ -227,15 +227,15 @@ TODO: aggiungere negli about e nei trigger la storia di B.
     = about_rebellion
     <i>La biblioteca ti offre una storia...</i>
     
-        + {readingDuration has Short && shortStories^ aboutRebellion != ()} [Che urla di sogni e ribellioni.]
+        + {readingDuration has Short && shortStories^ aboutRebellion != ()} [Che urla di <b>sogni e ribellioni</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutRebellion)
             -> refresh_book_lists -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutRebellion != ()} [Che urla di sogni e ribellioni.]
+        + {readingDuration has Average && averageStories^ aboutRebellion != ()} [Che urla di <b>sogni e ribellioni</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutRebellion)
             -> refresh_book_lists -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutRebellion != ()} [Che urla di sogni e ribellioni.]
+        + {readingDuration has Long && longStories^ aboutRebellion != ()} [Che urla di <b>sogni e ribellioni</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutRebellion)
             -> refresh_book_lists -> from_list_to_books            
         
