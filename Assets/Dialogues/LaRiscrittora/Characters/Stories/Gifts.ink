@@ -75,7 +75,7 @@ VAR fifthCharacterInkLevel = Empty
 
 {Ink:
     - Empty:
-        non hai guadagnato alcuna goccia di inchiostro.
+        non hai guadagnato alcuna goccia di inchiostro
     - Low:
         hai guadagnato una goccia di inchiostro
     - Normal:

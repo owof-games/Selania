@@ -22,9 +22,9 @@
     Mentre discutevano sulle tipologie di colla vinilica in commercio, e vagliavano la possibilità di gambizzare qualcosa che non possiede arti, un rumore attirò la loro attenzione: toc, toc.
     Dei sassolini avevano iniziato a colpire la finestra.
 
-    + Vorrei leggere ancora
+    + [Vorrei leggere ancora.]
        -> book_test_intro
-    + Me ne vado  
+    + [Me ne vado.]  
     -> main
 
 
@@ -33,7 +33,7 @@
 
     I have lived in this house forever, even though I never chose it—it's the house my mother chose for me.
     The pink walls of my room have witnessed my childhood, then my adolescence, all the way to this moment.
-    This is the right house for you, my mother says, and I lie down on the bed and stare at the ceiling while the man who says he loves me enters my body, pressing onto me dozens of blog posts and newspaper articles,
+    This is the right house for you, my mother says, and I lie down on the bed and stare at the ceiling while the man who says he loves me enters my body, pressing onto me dozens of blog posts and newspaper articles:
     How to Put a Woman in Her Place,
     Ten Steps to Drive Her Crazy,
     Why Men Are Good at Dominating —because that’s what men who love women do, they get on top, and they push, and they pant into their faces. 
@@ -52,9 +52,9 @@
     Its walls are drenched in colors I have never seen before, flung in strokes.
     My body is the home I have chosen for myself.
 
-    + Vorrei leggere ancora
+    + [Vorrei leggere ancora.]
        -> book_test_intro
-    + Me ne vado  
+    + [Me ne vado.]  
     -> main
 
 === romi
@@ -88,7 +88,7 @@
     ubbidiva poco, fino alle stanze reali, dove aveva sentito il Re dire alla Regina che si vergognava di lui.
     E con la spada in mano si riprese tutto ciò che gli apparteneva di diritto.
 
-    + Vorrei leggere ancora
+    + [Vorrei leggere ancora.]
        -> book_test_intro
-    + Me ne vado  
+    + [Me ne vado.]  
     -> main

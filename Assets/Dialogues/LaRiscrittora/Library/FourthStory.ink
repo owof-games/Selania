@@ -38,9 +38,9 @@
     
     Qualche giorno dopo Liliana andò al cimitero. Era una giornata di sole: in lontananza la casa sua e di Alfredo brillava sulle chiome degli ulivi. 
 
-    + Vorrei leggere ancora
+    + [Vorrei leggere ancora.]
        -> book_test_intro
-    + Me ne vado  
+    + [Me ne vado.]  
     -> main
 
 
@@ -71,9 +71,9 @@ Rileggo <i>Polvere</i> di Maura (she/they).
     Mi accorgo che anche la mia pazzia sta volando via.
     La riacciuffo immediatamente “Tu resti qua con me.
 
-    + Vorrei leggere ancora
+    + [Vorrei leggere ancora.]
        -> book_test_intro
-    + Me ne vado  
+    + [Me ne vado.]  
     -> main
 
 
@@ -119,9 +119,9 @@ Rileggo <i>Polvere</i> di Maura (she/they).
     Un salto nel vuoto, un atto di fede.
     Lo guardo e sorrido, per la prima volta da mesi, da anni o forse da sempre, è un sorriso che è tutto mio ed è solo per me.
 
-    + Vorrei leggere ancora
+    + [Vorrei leggere ancora.]
        -> book_test_intro
-    + Me ne vado  
+    + [Me ne vado.]  
     -> main
  
     
@@ -150,9 +150,9 @@ Rileggo <i>Polvere</i> di Maura (she/they).
     Ma tu, di notte in notte, riprenderai a lanciare i tuoi fiori nell'aria.
     A rendere gialla la strada verso casa.
 
-    + Vorrei leggere ancora
+    + [Vorrei leggere ancora.]
        -> book_test_intro
-    + Me ne vado  
+    + [Me ne vado.]  
     -> main
     
     

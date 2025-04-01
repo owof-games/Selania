@@ -224,7 +224,7 @@
                 -> top
         
         * (chiSei) [Chi sei?]
-            ???: La persona che tieni in piedi questo luogo.
+            ???: La persona che tiene in piedi questo luogo.
             ???: Ma tu puoi chiamarmi <b>{lowercaseTranslator(fifthCharacterState)}</b>.
             {charNameFive}: Così puoi ricordarti con facilità a cosa servo.
                 -> top
@@ -271,7 +271,7 @@
             
             {
                 - not talk_with_first_character: 
-                    {charNameFive}: Facciamo così: prova a parlare con la persona{{entity_location(PG) == BusStop} al nostro fianco.| che troverai alla <b>stazione del treno</b>.}
+                    {charNameFive}: Facciamo così: prova a parlare con la persona{entity_location(PG) == BusStop: al nostro fianco.| che troverai alla <b>stazione del treno</b>.}
                     {charNameFive}: E poi torna da me.
                     {charNameFive}: Nel frattempo raccolgo le foglie del giardino.
                          ~ firstPauseTalking = 0
@@ -336,7 +336,7 @@
             + [Quindi devo lavorare senza ricevere mezzo soldo.]
                 {charNameFive}: Non è un lavoro.
                 {charNameFive}: E qui non c'è denaro.
-                {charNameFive}: Ma è colpa mia, sto dando troppe cose per scontate.
+                {charNameFive}: Ma è colpa mia, sto dando troppe cose per scontato.
                     ~ fifthRed ++
                     
             + [Mi piace l'idea di creare una relazione con queste persone.]

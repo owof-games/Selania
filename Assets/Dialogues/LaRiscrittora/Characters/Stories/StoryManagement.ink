@@ -172,7 +172,7 @@
         - Triangolo:
             ~ return "Triangolo"
         - RagazzaOrchestra:
-            ~ return "Ragazza Orchestra"
+            ~ return "Orchestra"
         - FlautoDolce:
             ~ return "Flauto Dolce"
         - Ocarina:
@@ -230,7 +230,7 @@
         - Triangolo:
             ~ return "Triangolo"
         - RagazzaOrchestra:
-            ~ return "Ragazza Orchestra"
+            ~ return "Orchestra"
         - FlautoDolce:
             ~ return "Flauto Dolce"
         - Ocarina:

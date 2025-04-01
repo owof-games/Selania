@@ -257,7 +257,7 @@
         {charNameOne}: La tua bocca si muove ma non esce nulla.
         {charNameOne}: Interessante.
         {charNameOne}: Forse quella tizia che gira quì può aiutarci a capire qualcosa?
-        {are_two_entities_together(Mentor, PG): {welcome.your_name: {charNameFive}|???}: In effetti avrei un paio di informazioni utili da darti, nuova persona!}
+        {are_two_entities_together(Mentor, PG): {welcome.your_name: {charNameFive}|???}: In effetti avrei un paio di informazioni utili da darti!}
         {charNameOne}: L’unica cosa certa è che ho bisogno di Talco.
         {charNameOne}: Ci vediamo dopo, {name}.
              ~ firstPauseTalking = firstCharPauseDurantion
@@ -456,9 +456,9 @@
         {charNameOne}: Ti ho già detto che crea strumenti con qualsiasi cosa trova in giro?
         {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Mi piacerebbe conoscere Talco!}        
         {charNameOne}: L'estate facciamo le feste sul tetto, cantiamo e improvvisiamo.
-        {charNameOne}: "E vento e sudore si portano via le preoccupazioni, non c’è nulla a cui pensare.
-        {charNameOne}: Ti senti parte di tutto, privə di confini.
-        {charNameOne}: Sei la musica, sei l’umidità nell’aria, sei la gola del vicino che si lamenta del casino."
+        {charNameOne}: "E vento e sudore si portano via le preoccupazioni, non c’è nulla a cui pensare."
+        {charNameOne}: "Ti senti parte di tutto, privə di confini."
+        {charNameOne}: "Sei la musica, sei l’umidità nell’aria, sei la gola del vicino che si lamenta del casino."
         {charNameOne}: Sono parole scritte da Talco, le adoro.
         {charNameOne}: Qui è tutto così calmo, posso sentire i pensieri dei miei pensieri e questa roba mi cringia così tanto che non hai idea.
         
@@ -560,7 +560,7 @@
                     ~ firstRed ++       
             
             -
-        {charNameOne}: A proposito di causa perse: vado a cercarmi uno spritz.
+        {charNameOne}: A proposito di cause perse: vado a cercarmi uno spritz.
         {charNameOne}: Ho proprio bisogno di staccare.
             ~ firstPauseTalking = firstCharPauseDurantion
             -> main
@@ -1004,7 +1004,7 @@
         {charNameOne}: Penso all3 am3.
         {charNameOne}: Penso alla mia famiglia.
         {charNameOne}: Non so se l'hai visto, ma tutta questa roba mi fa pressione.
-        {charNameOne}: Tutte le persone che conoscono mi stanno chiedendo di fare una scelta, di decidere che cosa fare da grande.
+        {charNameOne}: Tutte le persone che conosco mi stanno chiedendo di fare una scelta, di decidere che cosa fare da grande.
         {charNameOne}: Ma sinceramente, {name}?
         {charNameOne}: Mi cago addosso all'idea di fare una scelta.
         {charNameOne}: Perché una scelta chiude strade.

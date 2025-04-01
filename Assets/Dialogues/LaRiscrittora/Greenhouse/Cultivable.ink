@@ -204,7 +204,7 @@
     
     = step_uno
         <i>Un odore salmastro si diffonde per la serra.</i>
-        <i>Una punticina bluastra emerge dal terreno.</i>
+        <i>Una punticina azzurrina emerge dal terreno.</i>
           -> main
           
     = step_due
@@ -507,7 +507,7 @@
             <i>Il vetro si rinsalda, spingendo via la tua mano.</i>
             <i>Le linee del tuo palmo si fanno trasparenti, inconsistenti. Eppure puoi muovere le dita, e non provi alcun dolore.</i>
             <i>La <b>Brina dell'Impossibile</b> si raccoglie nel luogo di un trauma.</i>
-            <i>Riempie le ferite per permetterci di vederle, ascoltarle.</i>
+            <i>Riempie le ferite per permetterti di vederle, ascoltarle.</i>
             <i>Ti ricorda che non serve dimenticare per poter riprendere a vivere.</i>
                 ~ growing = 0
                 ~ chosenCultivable = ()

@@ -134,7 +134,7 @@
     {charNameFive}: Questi sono i principali temi delicati che potresti incontrare durante le tue chiacchierate.
     {charNameFive}: I miei poteri si limitano all'ambiente: oggetti, storie e cose che incontrerai non parleranno di quello che vuoi evitare.
     {charNameFive}: Non ho invece modo, per ora, di impedire alle persone giunte fino a qui di non affrontarli.
-    {charNameFive}: Spesso quei temi sono il motivo per cui sono arrivate da, per chiedere il nostro aiuto.
+    {charNameFive}: Spesso quei temi sono il motivo per cui sono arrivate da noi, per chiedere il nostro aiuto.
     {charNameFive}: In futuro le cose potranno comunque migliorare, promesso.
     
     - (top)
@@ -193,7 +193,7 @@
         // }        
             -> top
 
-    + {mourning == true} [Tienimi{pronouns has him: lontano|{pronouns has her: lontana|lontanə}} da <b>morte e lutto</b>.]
+    + {mourning == true} [Tienimi {pronouns has him:lontano|{pronouns has her:lontana|lontanə}} da <b>morte e lutto</b>.]
         {charNameFive}: Non li incontrerai nel tuo viaggio.
         ~ mourning = false
             //Rimuovo coltivabile legato a lutto

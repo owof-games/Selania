@@ -28,13 +28,13 @@ VAR emptyVaseFound = false
 
 === bench
 + {are_two_entities_together(Bench, PG)} [Bench]
-    <i>La panchina vibra, attendendo la sua ricostruzione.</i>.
+    <i>La panchina vibra, attendendo la sua ricostruzione.</i>
     {firstTier && findedGifts hasnt blanket:
         ~ temp dice = RANDOM(1, 2)
         {
             - dice == 1:
                 <i>C'è una coperta abbandonata sulla panchina.</i>
-                <i>Portala con te: qualcuno potrebbe avere freddo.</i>
+                <i>Portala con te: qualcunə potrebbe avere freddo.</i>
                 <i>Hai ottenuto: <b>coperta</b>.</i>
                 ~ findedGifts += blanket
                 -> main

@@ -324,7 +324,7 @@
         {charNameTwo}: Se {charNameFive} non mi lascia in pace chiamo mio fratello.
         {charNameTwo}: Lui è superforte.
         {charNameTwo}: Ora lasciami in pace.
-        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Dio che merda essere bambini.}        
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Che merda essere bambini.}        
              ~ secondPauseTalking = secondCharPauseDurantion
             -> main
 
@@ -609,7 +609,7 @@
      
         {charNameTwo}: Anche a scuola danno sempre la colpa a me.
         {charNameTwo}: Non mi piace mica tanto la scuola.
-        {charNameTwo}: I ragazzi più grandi fanno male.
+        {charNameTwo}: I ragazzi più grandi mi fanno male.
         {charNameTwo}: Ma io non piango.
         {charNameTwo}: Non sono una femmina.
         {charNameTwo}: E sono più forte di loro.
@@ -1773,7 +1773,7 @@
             - secondCharacterPossibleStates has IlLupo:
                 {charNameTwo}: Mi chiamerò <b>Lupo</b>.
                 {charNameTwo}: E proteggerò il mio branco.
-                {charNameTwo}: Mamma, papà, e mio fratello.
+                {charNameTwo}: Mamma, papà, nonna e mio fratello.
                 {charNameTwo}: Nessuna delle persone a cui voglio bene deve più stare male.
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += IlLupo
@@ -1862,11 +1862,8 @@
         {secondCharacterPossibleStates hasnt IlRiccio: {charNameTwo}: Vieni a trovarmi una volta.}
         {secondCharacterPossibleStates hasnt IlRiccio: {charNameTwo}: Mi mancherai.}  
         {secondCharacterPossibleStates has IlRiccio: {charNameTwo}: Spero papà non sarà arrabbiato.}        
-        
-            ~ move_entity(SecondCharacter, Safekeeping)
-
-  
-            
+    
+        ~ move_entity(SecondCharacter, Safekeeping)
         -> main
 
 

@@ -34,9 +34,9 @@
     "Getting warm" answered Forsythia, giggling.
     The fire, which just before was roaring high and glowing, gently lapped at the wooden logs, warm and enveloping, illuminating them all with a sweet, enchanting golden light.
 
-    + Vorrei leggere ancora
+    + [Vorrei leggere ancora.]
        -> book_test_intro
-    + Me ne vado  
+    + [Me ne vado.]  
     -> main
 
 

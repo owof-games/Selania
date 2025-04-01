@@ -13,7 +13,7 @@
     + {are_two_entities_together(StartingNote, PG)}[StartingNote]
         ???: Ti scrivo perché volevo ringraziarti per quello che hai fatto.
         ???: Le cose nella mia vita hanno ripreso a funzionare.
-        ???: Ci sono ancora molte giornate giornate no, ma molto più spesso anche delle giornate sni.
+        ???: Ci sono ancora molte giornate no, ma sempre più  più spesso anche delle giornate sni.
         ???: E persino qualche giornata YEAH!
         ???: Spero che un giorno potrai avere anche tu la tua giornata yeah.
         ???: E magari di passarla assieme.
@@ -265,7 +265,7 @@
                 {charNameTwo}: Salutami la rana!
                 
             - secondCharacterPossibleStates has IlLupo:
-                {charNameTwo}: L'altro giorno ho parlato col l'amico di mio fratello.
+                {charNameTwo}: L'altro giorno ho parlato con l'amico di mio fratello.
                 {charNameTwo}: Gli ho detto che per me siamo un branco ma che secondo me lui mica mi ci vede in questo branco.
                 {charNameTwo}: E lui mi ha detto una cosa strana.
                 {charNameTwo}: Che non ce l'ha con me.

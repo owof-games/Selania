@@ -31,9 +31,9 @@
     Mi ha rivolto uno sguardo dorato, ha fatto le fusa.
     E niente: mi ha lasciato quattro buchi sulla coscia con i suoi artigli, 'sta scena m'ha ricordato Frankenstein Junior.
     
-        + Vorrei leggere ancora
+        + [Vorrei leggere ancora.]
            -> book_test_intro
-        + Me ne vado  
+        + [Me ne vado.] 
             -> main
 
 === aza
@@ -75,9 +75,9 @@
     
     L'ultima cosa che ricordo è la sensazione di sabbia fredda fra le dita dei piedi, i botti dei fuochi d'artificio e il suo ansimare sofferente, non saprò mai se mi ha riconosciuta o meno.
     
-        + Vorrei leggere ancora
+        + [Vorrei leggere ancora.]
            -> book_test_intro
-        + Me ne vado  
+        + [Me ne vado.]  
             -> main
 
 
@@ -127,9 +127,9 @@
     Which way, I don’t know yet.
     And I like it.
 
-    + Vorrei leggere ancora
+    + [Vorrei leggere ancora.]
        -> book_test_intro
-    + Me ne vado  
+    + [Me ne vado.]  
         -> main
 
 === b
@@ -153,9 +153,9 @@
     Learning to wield my anger for a good cause was one of the most rewarding achievements in my life as a person and as a woman.
     And I hope that every person out there is also living their life to their fullest, knowing how precious each emotion we feel is… anger too.
 
-    + Vorrei leggere ancora
+    + [Vorrei leggere ancora.]
        -> book_test_intro
-    + Me ne vado  
+    + [Me ne vado.]  
         -> main
 
 === beatrice
@@ -280,9 +280,9 @@
     Se esiste una rete è quella il cui collante sei tu, fatta di singole persone che tu scegli e che ti scelgono.
     E se qualcuno ti fa del male, semplicemente non ne fa parte.
 
-        + Vorrei leggere ancora
+        + [Vorrei leggere ancora.]
            -> book_test_intro
-        + Me ne vado  
+        + [Me ne vado.]  
             -> main
             
 === beatrice_y_bottura
@@ -313,7 +313,7 @@
     La paura smarrita dagli uomini torna in loro mentre vedono la gabbia che li teneva al sicuro distrutta dall’interno. Le urla riempiono la stanza e il loro prezioso intelletto umano viene tagliato come burro.
 
 
-    + Vorrei leggere ancora
+    + [Vorrei leggere ancora.]
        -> book_test_intro
-    + Me ne vado  
+    + [Me ne vado.]  
         -> main
