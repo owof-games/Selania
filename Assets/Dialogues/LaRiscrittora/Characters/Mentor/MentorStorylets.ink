@@ -718,6 +718,6 @@
 {charNameFive}: Ti chiedo un favore prima di salutarci, {name}.
 {charNameFive}: Salvati questo codice, e inseriscilo poi nel documento del testing.
 {charNameFive}: O se non hai voglia di rispondere alle domande mandamelo attraverso Queerginia: faresti molto felice entrambe.
-{charNameFive}: Il codice è {playerPurple}{playerYellow}{playerBlue}{playerGreen}{playerRed}{playerFirstStory}{playerSecondStory}
+{charNameFive}: Il codice è {playerPurple}{playerYellow}{playerBlue}{playerGreen}{playerRed}{playerFirstStory}{playerSecondStory}{firstCharacterState} {secondCharacterState}
 {charNameFive}: Grazie di cuore.
 -> talk_with_mentor

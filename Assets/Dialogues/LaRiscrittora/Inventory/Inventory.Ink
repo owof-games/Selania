@@ -26,7 +26,7 @@ Dono...
  ----------------------------------*/
 
 
-+ {findedGifts has MuschioDelleAmanti} [Dell'edera delle amanti.]
++ {findedGifts has MuschioDelleAmanti} [Del muschio delle amanti.]
     ~ findedGifts -= MuschioDelleAmanti
     {
         - currentReceiver has FirstCharacter:

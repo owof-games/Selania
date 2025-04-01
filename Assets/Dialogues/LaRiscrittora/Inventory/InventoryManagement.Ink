@@ -43,7 +43,7 @@
 - BaccaDellaAddolorata: 
     ~ return "una Bacca della Addolorata"
 - MuschioDelleAmanti:
-    ~ return "dell'Edera delle Amanti"
+    ~ return "del Muschio delle Amanti"
 - BrinaDellImpossibile:
     ~ return "della Brina dell'Impossibile"
 
