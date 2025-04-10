@@ -13,12 +13,11 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     VAR averageStories = (AdriAllora, BeatriceYBottura, CeciliaFormicola, Lamia, Romi)
     VAR longStories = (Aza, Beatrice, Salvo, LetiziaVaccarella)
     
-TODO: aggiungere negli about e nei trigger la storia di B.    
 //Books about...
-    VAR aboutTransformation = (Aza, ValFaustoLattanzio, Salvo, BeatriceYBottura, LetiziaVaccarella)
+    VAR aboutTransformation = (Aza, B, ValFaustoLattanzio, Salvo, BeatriceYBottura, LetiziaVaccarella)
     VAR aboutQuestions = (AdriAllora, Beatrice, ValFaustoLattanzio, StenoArtico, Romi)
     VAR aboutUnprepared = (StenoArtico, Beatrice, Lamia)
-    VAR aboutMonsters = (AdriAllora, Aza, BeatriceYBottura, CeciliaFormicola)
+    VAR aboutMonsters = (AdriAllora, Aza, B, BeatriceYBottura, CeciliaFormicola)
     VAR aboutFire= (Aza, CeciliaFormicola, BeatriceYBottura, Romi, Maura, LetiziaVaccarella, QueerginiaWolf)
     VAR aboutRebellion = (BeatriceYBottura, Lamia, Maura, Salvo, QueerginiaWolf)
 
@@ -386,7 +385,7 @@ TODO: aggiungere negli about e nei trigger la storia di B.
     = reread_b
     <i>La biblioteca si chiede cosa tu voglia rileggere.</i>
     
-        + [Rileggo <i>Lwwww</i> di B(she/her).]
+        + [Rileggo <i>The touch of anger</i> di K.(she/her).]
                 -> b
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread

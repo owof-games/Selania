@@ -133,7 +133,7 @@
         -> main
 
 === b
-<i>Lwwww</i> di B(she/her).
+<i>The touch of anger</i> di K.(she/her).
 
     I still remember vividly how anger was an emotion I deeply feared.
     As a child, I grew up suffering from my father’s sudden outbursts of rage, an expression of a generational trauma he never had the chance to overcome.

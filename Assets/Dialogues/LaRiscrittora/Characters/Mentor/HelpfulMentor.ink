@@ -235,6 +235,10 @@
                 ~ unreadStories -= BeatriceYBottura
                 }
         {
+            - unreadStories has B: 
+                ~ unreadStories -= B
+                }                
+        {
             - unreadStories has Maura: 
                 ~ unreadStories -= Maura
                 }
@@ -301,6 +305,10 @@
             - unreadStories has StenoArtico: 
                 ~ unreadStories -= StenoArtico
                 }
+        {
+            - unreadStories has B: 
+                ~ unreadStories -= B
+                }                   
         {
             - unreadStories has Beatrice: 
                 ~ unreadStories -= Beatrice
