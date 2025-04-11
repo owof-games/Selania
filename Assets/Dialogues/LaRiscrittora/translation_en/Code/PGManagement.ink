@@ -1,5 +1,5 @@
 //Nome giocatrice e pronouns
-VAR name = "Senza nome"
+VAR name = "NoName"
 LIST pronouns = him, her, they
 
 //Tracciamento colori personaggia
@@ -48,19 +48,19 @@ VAR fatphobia = true
 
 //Per assegnare/cambiare pronouns di riferimento
 === gender ===
-    + {gender> 1} Mi trovo a mio agio con i pronomi {pronouns has him: maschili|{pronouns has her: femminili|neutri}}.
+    + {gender> 1} I'm more comfortable with {pronouns has him: male |{pronouns has her: female |neutral}} pronouns.
         ->->
-    + {gender > 1} Qualcosa è cambiato, questi non sono più i miei pronomi.
+    + {gender > 1} Something has changed, these are no longer my pronouns.
         -> top
     + ->
     - (top)
-        + [Mi trovo a mio agio col maschile.]
+        + [I am at home with male pronouns.]
             ~ pronouns = ()
             ~ pronouns += him
-        + [Preferisco i pronomi femminili.]
+        + [I prefer feminine pronouns.]
             ~ pronouns = ()
             ~ pronouns += her
-        + [Vai di neutro.]
+        + [Let's go with neutral pronouns!]
             ~ pronouns = ()
             ~ pronouns += they
         -
@@ -68,14 +68,14 @@ VAR fatphobia = true
 
 //Per la scelta del nome
 === name_choice ===
-    <i>C'è qualcosa che vuoi dirci sul tuo nome?</i>
-    + {name_choice > 1} Il mio nome è {name}.
+    Is there something you want to share about your name?
+    + {name_choice > 1} My name is {name}.
         ->->
     + {name_choice > 1} No, this is not my name anymore.
         -> top
     + ->
     - (top)
-        Il mio nome è...
+        My name is...
         ~ name = "{~ Alessio|Gianni|Matteo|Alessandro|Lorenzo|Diego|Tommaso|Riccardo|Leonardo|Gabriele|Edoardo|Samuele|Liam|Nathan|Noah|Enea|Cesare|Ivo|Arturo|Nevio|Ettore|Roberto|Valerio|Pierluigi|Gianmaria|Gianmarco|Maurizio|Emanuele|Niccolò|Nicola|Filippo|Santiago|Alberto|Corrado|Ernesto|Giuliano|Ivan|Juri|Lupo|Tancredi|Jacob|Micahel|Ethan|Joshua|Daniel|Aurelio|Mario|Stefano|Cristian|Carmine|Ciro|Corrado|Carlo|Cesare|Carlo|Dante|Dario|Davide|Damiano|Diego|Domenico|Dino|Eugenio|Flavio|Filippo|Fabio|Francesco|Gaetano|Giordano|Giovanni|Alex|Alexander|Luca|Jacopo|Milo|Cristiano|Thomas|Lucas|Joele|Massimo|Giosuè|Oliver|William|James|Lucas|Henry|John|Ryan|Ethan|Gus|Logan|Nolan|Sean|Tyler|Ursula|Adowa|Amina|Fayola|Dara|Makena|Rashida|Zahra|Ashaki|Obioma|Terehasa|Zainabu|Busara|Dafina|Kamohelo|Mbhali|Aya|Mariam|Adama|Fatouma|Jeannette|Hong|Yu|Min|Xin|Bin|Cheng|Zhen|Eriko|Fujiko|Ikuyo|Keiko|Madoka|Natsumi|Rumiko|Ryo|Toyoko|Yumi|Yuki|Tamafune|Kaori|Chikako|Atsuko|Shaila|Ravi|Gita|Manju|Urmila|Sita|Nirmala|Savita|Kamal|Aadhya|Bimala|Chandra|Uma|Rita|Maura|Giulia|Francesca|Cecilia|Ilaria|Vittoria|Cinzia|Marisa|Antonia|Antonietta|Valeria|Maria|Olga|Tatyana|Natalya|Irina|Svetlana|Ekaterina|Cristina|Kristina|Emma|Jade|Louise|Chloé|Camille|Inès|Sarah|Ivy|Taylor|Sophia|Rosie|Poppy|Sienna|Karen|Ruby|Eva|Violet|Margot|Aurora|Elizabeth|Scarlett|Virginia|Atsushi|Dalai|Edoardo |Haoyu|Ming|Masao|Toshi|Song|Wei|Lang|Wei|Akio|Akihiro|Fumihiko|Bishamon|Chikayoshi|Daiichi|Fumihiro|Genjo|Hiromu|Mitsuo|Vyomesh|Vishwatma|Umachandra|Tarkesh|Sujan|Ranjeet|Mattia|Gabriele|Marco|Prajit|Nripendra|Kundan|Sergey|Aleksandr|Roman|Denis|Igor|Anton|Lev|Pavel|Kirill|Oleg|Stanislav|Antoine|Alexandre|Étienne|François|Henri|Louis|Olivier|Pierre|Vincent|Paul|Almira|Amalia|Charo|Carmen|Clarissa|Elena|Claudia|Estella|Zita|Zoe|Veronica|Fabio|Felix|Jago|Jose|Jorde|Rodrigo|Sergio|Andrea|Harper|Dakota|Blue|Elliot|Kraken|Charlie|Avery|Jordan |Felice|Noah|Celeste|Fiore|Diamante|Evan|Leslie|Lago|Fiume|Casey|Harper|Sidney|Gail|Syb|Max|Nicky|Sasha|Carmine|Beatrice|Asad|Danilo|Sissi|Javi|Salvo|Sven|Jacopo|Letizia|Ren|Pablo|Guido|Arianna|Simão|Nicolò|Ivana}"
         
         + (nome_scelto)[<b>{name}</b>]
