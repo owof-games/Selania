@@ -2,11 +2,11 @@
 
 === personaggia_quattro ===
         //opzione se c'è un'altra storia attiva
-        + {are_two_entities_together(FourthCharacter, PG) && fourthStory == Active} [FourthCharacter]
+        + {are_two_entities_together(FourthCharacter, PG) && fourthStory == Active} [Scelgo il dono.]
             -> storia_quattro
         
         //opzione se questa storia è attiva
-        + {are_two_entities_together(FourthCharacter, PG) && fourthStory == Ended} [FourthCharacter]
+        + {are_two_entities_together(FourthCharacter, PG) && fourthStory == Ended} [Scelgo il dono.]
             -> personaggia_quattro_storia_conclusa
         
         + ->
@@ -18,37 +18,37 @@
 === storia_quattro ===
     //la storia in corso viene attivata, e le altre non saranno accessibili fino alla sua conclusione
 
-        <i>Vuoi ascoltare la sua storia?</i>
-        + [Sì]
+        Scelgo il dono.
+        + [Scelgo il dono.]
         ~ fourthStory = Active            
             -> aiuto_storia_quattro
-        + [No]
+        + [Scelgo il dono.]
             -> main
     ->-> 
 
 
 
 === aiuto_storia_quattro ===
-    + {findedGifts != ()} Offro un dono.
+    + {findedGifts != ()} Scelgo il dono.
     -> inventory_management -> capitolo_uno
     + ->
-    {findedGifts == (): Non parlo senza un dono adeguato! ->main}
+    {findedGifts == (): Scelgo il dono. ->main}
     
     
     
     = capitolo_uno    
-        Dopo il tuo dono, la quantità di inchiostro a disposizione è {fourthCharacterInkLevel}.
+        Scelgo il dono.
              ~ inkLevel(fourthCharacterInkLevel)
         //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
-             + Ho risolto la quarta storia dando al quarto spettro un nuovo stato
+             + Scelgo il dono.
                 ~ fourthStory = Ended
                 ~ fourthCharacterState = NuovoStatoUnoQuattro
-             + Non ho risolto la storia
+             + Scelgo il dono.
              -
         -> main
 
 === dialogo_personaggia_quattro
-    sss
+    Scelgo il dono.
     -> main
 
         //Questa roba poi è da risistemare
@@ -59,8 +59,8 @@
         -> main    
 
 === personaggia_quattro_storia_conclusa        
-        + opzione
-        + opzione
-        + opzione
+        + Scelgo il dono.
+        + Scelgo il dono.
+        + Scelgo il dono.
         -
     -> main            
