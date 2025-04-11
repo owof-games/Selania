@@ -989,7 +989,7 @@ QUESTIONS
 
  
 {debugCultivable: <i>Entro in da_lista_a_coltivazioni. Il valore di counter è {counter}, il valore di growing è {growing}. firstQuest è {firstQuest}, secondQuest è {secondQuest}, thirdQuest è {thirdQuest}.}
-{debugCultivable: <i>Gli elementi ancora coltivabili sono: {backupCultivable}.}
+{debugCultivable: <i>Gli elementi ancora coltivabili sono: {backupCultivable}.<i>}
 {debugCultivable: <i>Svuoto lista tipo Coltivazioni. Il contenuto di tipo Coltivazioni ora è {cropsType}.}
 {debugCultivable: <i>Svuoto lista firstAnswerTracker. Il contenuto di tipo firstAnswerTracker ora è {firstAnswerTracker==(): vuota|piena}.}
     -> chosen_cultivable

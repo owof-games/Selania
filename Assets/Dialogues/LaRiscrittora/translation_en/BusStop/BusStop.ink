@@ -85,7 +85,7 @@
     {charNameOne}: Spero che lì vada tutto bene.
     {charNameOne}: E che {charNameFive} non sia sempre pesantona.
     {charNameOne}: Alla prossima lettera.
-    {charNameOne}: <i>{charNameOne}</i>
+    {charNameOne}: <i>{charNameOne}</i>.
             ~ firstWritingPause = firstWritingPauseDuration
         -> main
     
@@ -563,29 +563,29 @@
         
     = one
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-    {charNameThree}: Lettere random note da parte della personaggia
+    {charNameThree}ThirdCharacterNotes
         ~ thirdWritingPause = thirdWritingPauseDuration
         -> main
     
     = two
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-    {charNameThree}: seconda lettera
+    {charNameThree}ThirdCharacterNotes
         ~ thirdWritingPause = thirdWritingPauseDuration
         -> main
     
     = three
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-    {charNameThree}: terza lettera
+    {charNameThree}ThirdCharacterNotes
         ~ thirdWritingPause = thirdWritingPauseDuration
         -> main
     
 === fourth_character_notes ===
     + {are_two_entities_together(FourthCharacterNotes, PG)}[FourthCharacterNotes]
-    Lettere random note da parte della personaggia
+    FourthCharacterNotes
     -> main
 
 === fifth_character_notes ===
     + {are_two_entities_together(FifthCharacterNotes, PG)}[FifthCharacterNotes]
-    Lettere random note da parte della personaggia
+    FifthCharacterNotes
     -> main
 
