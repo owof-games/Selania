@@ -67,7 +67,7 @@
         //-> library
             -> main
             
-    + {are_two_entities_together(PG, FromForestToLibrary) && secondTier == true} [FromForestToLibrary]
+    + {are_two_entities_together(PG, FromForestToLibrary) && secondTier == true} [FromForestToLibraryDesat]
             ~ move_entity(PG, Library)
             -> on_movement_events ->
                 -> library

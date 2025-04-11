@@ -71,7 +71,7 @@
         - changeLocationTimer == changeLocationTrigger:
             ~ changeLocationTimer = 0
             ~ randomizable_characters += Mentor
-            {debug: <i> Il valore del Timer è {changeLocationTimer} e quindi randomizzo il luogo.}
+            {debug: <i> The value of the Timer is {changeLocationTimer} and so I randomize the location.}
             {   
                 
                 //- fourthTier == true:
@@ -85,7 +85,7 @@
             }
         //altrimenti, aumento il valore e skippo
         - else:
-        {debug: <i>il valore del Timer è {changeLocationTimer} e quindi lo aumento.}
+        {debug: <i>the value of the Timer is {changeLocationTimer} and so I increase it.}
             ~ changeLocationTimer ++
             ->->
 
@@ -98,7 +98,7 @@
         ~ move_entity(character, location)
         ~ randomizable_characters -= character
     
-        {debug: <i> {character} si trova in {location}.}
+        {debug: <i> {character} is located in {location}.}
         
         {
             - randomizable_characters != ():
@@ -107,7 +107,7 @@
                 ->->
         }
         
-    {debug:<i> {character} è stato spostato in {location}.}
+    {debug:<i> {character} was moved to {location}.}
 
 === randomizer_second_tier
     = top
@@ -116,7 +116,7 @@
         ~ move_entity(character, location)
         ~ randomizable_characters -= character    
         
-        {debug: <i>{character} si trova in {location}.}       
+        {debug: <i> {character} is located in {location}.}       
         
         {
             - randomizable_characters != ():
@@ -125,7 +125,7 @@
                 ->->
         }
 
-    {debug: <i>{character} è stato spostato in {location}.}
+    {debug: <i> {character} was moved to {location}.}
     ->->
 
 === randomizer_third_tier
@@ -135,7 +135,7 @@
         ~ move_entity(character, location)
         ~ randomizable_characters -= character
         
-        {debug: <i>{character} si trova in {location}.}
+        {debug: <i> {character} is located in {location}.}
         
         {
             - randomizable_characters != ():
@@ -144,7 +144,7 @@
                 ->->
         }
         
-        {debug: <i>{character} è stato spostato in {location}.}
+        {debug: <i> {character} was moved to {location}.}
     
 
         ->->
@@ -156,7 +156,7 @@
         ~ move_entity(character, location)
         ~ randomizable_characters -= character
         
-        {debug: <i> {character} si trova in {location}.}
+        {debug: <i> {character} is located in {location}.}
         
         {
             - randomizable_characters != ():
@@ -291,7 +291,7 @@ VAR delayFourthChar = 20
         ->-> 
 
 === secondColourCheck
-{debugChangeName: Passo per secondColourCheck.}
+{debugChangeName: I pass for secondColourCheck.}
 
 VAR secondRedMax = false
 VAR secondBlueMax = false
@@ -311,23 +311,23 @@ VAR secondPurpleMax = false
 //Potrebbe capitare un pareggio, e va bene così, così non è punitivo per la giocatrice.
     - secondRed >= secondBlue && secondRed >= secondYellow && secondRed >= secondGreen && secondRed >= secondPurple && secondRed >= secondGreen:
                 ~  secondRedMax = true
-    {debugChangeName: Il valore di secondRedMax è {secondRedMax}.}
+    {debugChangeName: The value of secondRedMax is {secondRedMax}.}
     
     - secondBlue >= secondRed && secondBlue >= secondYellow && secondBlue >= secondGreen && secondBlue >= secondPurple && secondBlue >= secondGreen:
                 ~  secondBlueMax = true
-     {debugChangeName: Il valore di secondBlueMax è {secondBlueMax}.}
+     {debugChangeName: The value of secondBlueMax is {secondBlueMax}.}
      
     - secondGreen >= secondBlue && secondGreen >= secondYellow && secondGreen >= secondGreen && secondGreen >= secondPurple && secondGreen >= secondRed:
                 ~  secondGreenMax = true
-        {debugChangeName: Il valore di secondGreenMax è {secondGreenMax}.}  
+        {debugChangeName: The value of secondGreenMax is {secondGreenMax}.}  
         
     - secondPurple >= secondBlue && secondPurple >= secondYellow && secondPurple >= secondGreen && secondPurple >= secondRed && secondPurple >= secondGreen:
                 ~  secondPurpleMax = true
-        {debugChangeName: Il valore di secondPurpleMax è {secondPurpleMax}.}  
+        {debugChangeName: The value of secondPurpleMax is {secondPurpleMax}.}  
         
     - secondYellow >= secondBlue && secondYellow >= secondRed && secondYellow >= secondGreen && secondYellow >= secondPurple && secondYellow >= secondGreen:
                 ~  secondYellowMax = true 
-    {debugChangeName: Il valore di secondGreenMax è {secondGreenMax}.}                  
+    {debugChangeName: The value of secondGreenMax is {secondGreenMax}.}                  
 
 
 }
@@ -337,7 +337,7 @@ VAR secondPurpleMax = false
 
 === function secondStatementVariation(color)
 ~ temp secondCheckColor = false
-{debugChangeName: Passo per function secondStatementVariation.}
+{debugChangeName: I step by function secondStatementVariation.}
 
     {
         - color == red:
@@ -353,20 +353,20 @@ VAR secondPurpleMax = false
             
     }
 
-    {debugChangeName: Il valore di secondCheckColor è {secondCheckColor}.}                    
+    {debugChangeName: The value of secondCheckColor is {secondCheckColor}.}                    
     {
     - secondCheckColor:
         {
          - secondCharacterPossibleStates hasnt IlCorvo:
             ~ secondCharacterPossibleStates ++
-            {debugChangeName: Aumento lo stato del secondo personaggio, che ora è {secondCharacterPossibleStates }}
+            {debugChangeName: I increase the status of the second character, which is now {secondCharacterPossibleStates }}
         }
     
     - else:
         {
          - secondCharacterPossibleStates hasnt IlRiccio:
         ~ secondCharacterPossibleStates --
-        {debugChangeName: Diminuisco lo stato del secondo personaggio, che ora è {secondCharacterPossibleStates }}
+        {debugChangeName: I decrease the status of the second character, which is now {secondCharacterPossibleStates }}
         }
     	            
     }  

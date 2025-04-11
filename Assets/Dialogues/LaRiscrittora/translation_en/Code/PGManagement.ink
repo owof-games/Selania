@@ -79,7 +79,7 @@ VAR fatphobia = true
         ~ name = "{~ Alessio|Gianni|Matteo|Alessandro|Lorenzo|Diego|Tommaso|Riccardo|Leonardo|Gabriele|Edoardo|Samuele|Liam|Nathan|Noah|Enea|Cesare|Ivo|Arturo|Nevio|Ettore|Roberto|Valerio|Pierluigi|Gianmaria|Gianmarco|Maurizio|Emanuele|Niccolò|Nicola|Filippo|Santiago|Alberto|Corrado|Ernesto|Giuliano|Ivan|Juri|Lupo|Tancredi|Jacob|Micahel|Ethan|Joshua|Daniel|Aurelio|Mario|Stefano|Cristian|Carmine|Ciro|Corrado|Carlo|Cesare|Carlo|Dante|Dario|Davide|Damiano|Diego|Domenico|Dino|Eugenio|Flavio|Filippo|Fabio|Francesco|Gaetano|Giordano|Giovanni|Alex|Alexander|Luca|Jacopo|Milo|Cristiano|Thomas|Lucas|Joele|Massimo|Giosuè|Oliver|William|James|Lucas|Henry|John|Ryan|Ethan|Gus|Logan|Nolan|Sean|Tyler|Ursula|Adowa|Amina|Fayola|Dara|Makena|Rashida|Zahra|Ashaki|Obioma|Terehasa|Zainabu|Busara|Dafina|Kamohelo|Mbhali|Aya|Mariam|Adama|Fatouma|Jeannette|Hong|Yu|Min|Xin|Bin|Cheng|Zhen|Eriko|Fujiko|Ikuyo|Keiko|Madoka|Natsumi|Rumiko|Ryo|Toyoko|Yumi|Yuki|Tamafune|Kaori|Chikako|Atsuko|Shaila|Ravi|Gita|Manju|Urmila|Sita|Nirmala|Savita|Kamal|Aadhya|Bimala|Chandra|Uma|Rita|Maura|Giulia|Francesca|Cecilia|Ilaria|Vittoria|Cinzia|Marisa|Antonia|Antonietta|Valeria|Maria|Olga|Tatyana|Natalya|Irina|Svetlana|Ekaterina|Cristina|Kristina|Emma|Jade|Louise|Chloé|Camille|Inès|Sarah|Ivy|Taylor|Sophia|Rosie|Poppy|Sienna|Karen|Ruby|Eva|Violet|Margot|Aurora|Elizabeth|Scarlett|Virginia|Atsushi|Dalai|Edoardo |Haoyu|Ming|Masao|Toshi|Song|Wei|Lang|Wei|Akio|Akihiro|Fumihiko|Bishamon|Chikayoshi|Daiichi|Fumihiro|Genjo|Hiromu|Mitsuo|Vyomesh|Vishwatma|Umachandra|Tarkesh|Sujan|Ranjeet|Mattia|Gabriele|Marco|Prajit|Nripendra|Kundan|Sergey|Aleksandr|Roman|Denis|Igor|Anton|Lev|Pavel|Kirill|Oleg|Stanislav|Antoine|Alexandre|Étienne|François|Henri|Louis|Olivier|Pierre|Vincent|Paul|Almira|Amalia|Charo|Carmen|Clarissa|Elena|Claudia|Estella|Zita|Zoe|Veronica|Fabio|Felix|Jago|Jose|Jorde|Rodrigo|Sergio|Andrea|Harper|Dakota|Blue|Elliot|Kraken|Charlie|Avery|Jordan |Felice|Noah|Celeste|Fiore|Diamante|Evan|Leslie|Lago|Fiume|Casey|Harper|Sidney|Gail|Syb|Max|Nicky|Sasha|Carmine|Beatrice|Asad|Danilo|Sissi|Javi|Salvo|Sven|Jacopo|Letizia|Ren|Pablo|Guido|Arianna|Simão|Nicolò|Ivana}"
         
         + (nome_scelto)[<b>{name}</b>]
-        + [No, non è questo il mio nome.]
+        + [No, this is not my name.]
             -> top
         - 
 ->->
@@ -112,15 +112,15 @@ VAR purple  = ()
 
     //Qui aggiorno i valori delle scelte della player
     ~ playerRed = playerRed + red
-        {debug: Il valore di PlayerRed è {playerRed}}
+        {debug: The value of playerRed is {playerRed}}
     ~ playerPurple = playerPurple + purple
-        {debug: Il valore di playerPurple è {playerPurple}}
+        {debug: The value of playerPurple is {playerPurple}}
     ~ playerGreen = playerGreen + green
-        {debug: Il valore di playerGreen è {playerGreen}}
+        {debug: The value of playerGreen is {playerGreen}}
     ~ playerYellow = playerYellow + yellow
-        {debug: Il valore di playerYellow è {playerYellow}}
+        {debug: The value of playerYellow is {playerYellow}}
     ~ playerBlue = playerBlue + blue
-        {debug: Il valore di playerBlue è {playerBlue}}
+        {debug: The value of playerBlue is {playerBlue}}
 
 
     //E poi confronto quella che è la storia della personaggia, la progressione delle sue scelte: di fatto per ora basta che non ci siano pareggi tra colori per evitare il marrone. A quel punto emerge il colore dominante.
@@ -129,7 +129,7 @@ VAR purple  = ()
         {
             - char == firstStoryPG:
                ~ playerFirstStory += greenStatus
-               {debug: Lo status di playerFirstStory è {playerFirstStory}}
+               {debug: The status of playerFirstStory is {playerFirstStory}}
             
             - char == secondStoryPG:
                 ~ playerSecondStory += greenStatus
@@ -141,14 +141,14 @@ VAR purple  = ()
             // - char == fifthStory:
             //     ~ playerFifthStory += greenStatus
                   - else:
-                    ERRORE
+                    ERROR
         }
     
     - (playerBlue > playerGreen) && (playerBlue > playerRed) && (playerBlue > playerYellow) && (playerBlue > playerPurple):
         {
             - char == firstStoryPG:
                 ~ playerFirstStory += blueStatus
-                {debug: Lo status di playerFirstStory è {playerFirstStory}}
+                {debug: The status of playerFirstStory is {playerFirstStory}}
             
             - char == secondStoryPG:
                 ~ playerSecondStory += blueStatus
@@ -160,14 +160,14 @@ VAR purple  = ()
             // - char == fifthStory:
             //     ~ playerFifthStory += blueStatus
                   - else:
-                    ERRORE
+                    ERROR
         }        
     
     - (playerRed > playerGreen) && (playerRed > playerBlue) && (playerRed > playerYellow) && (playerRed > playerPurple):
         {
             - char == firstStoryPG:
                 ~ playerFirstStory += redStatus
-                {debug: Lo status di playerFirstStory è {playerFirstStory}}
+                {debug: The status of playerFirstStory is {playerFirstStory}}
             
             - char == secondStoryPG:
                 ~ playerSecondStory += redStatus
@@ -179,14 +179,14 @@ VAR purple  = ()
             // - char == fifthStory:
             //     ~ playerFifthStory += redStatus
                  - else:
-                    ERRORE
+                    ERROR
         }    
     
     - (playerYellow > playerGreen) && (playerYellow > playerBlue) && (playerYellow > playerRed) && (playerYellow > playerPurple):
         {
             - char == firstStoryPG:
                 ~ playerFirstStory += yellowStatus
-                {debug: Lo status di playerFirstStory è {playerFirstStory}}
+                {debug: The status of playerFirstStory is {playerFirstStory}}
             
             - char == secondStoryPG:
                 ~ playerSecondStory += yellowStatus
@@ -198,14 +198,14 @@ VAR purple  = ()
             // - char == fifthStory:
             //     ~ playerFifthStory += yellowStatus
                  - else:
-                    ERRORE
+                    ERROR
         }    
     
     - (playerPurple > playerGreen) && (playerPurple > playerBlue) && (playerPurple > playerRed) && (playerPurple > playerYellow):
         {
             - char == firstStoryPG:
                 ~ playerFirstStory += purpleStatus
-                {debug: Lo status di playerFirstStory è {playerFirstStory}}
+                {debug: The status of playerFirstStory is {playerFirstStory}}
             
             - char == secondStoryPG:
                 ~ playerSecondStory += purpleStatus
@@ -217,14 +217,14 @@ VAR purple  = ()
             // - char == fifthStory:
             //     ~ playerFifthStory += purpleStatus
                  - else:
-                    ERRORE
+                    ERROR
         }
     
     - else:
         {
             - char == firstStoryPG:
                 ~ playerFirstStory += mixedStatus
-                {debug: Lo status di playerFirstStory è {playerFirstStory}}
+                {debug: The status of playerFirstStory is {playerFirstStory}}
                 
             - char == secondStoryPG:
                 ~ playerSecondStory += mixedStatus
@@ -236,7 +236,7 @@ VAR purple  = ()
             // - char == fifthStory:
             //     ~ playerFifthStory += mixedStatus
                  - else:
-                    ERRORE
+                    ERROR
         }    
 
 }

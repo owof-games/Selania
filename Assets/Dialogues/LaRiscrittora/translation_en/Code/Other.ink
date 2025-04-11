@@ -92,19 +92,19 @@
 //Comparsa lettere dopo fine delle storie (così non compaiono subito.
     {firstCharacterPossibleStates hasnt Chitarra && first_char_story_ended.goodbye:
             ~ move_entity(FirstCharacterNotes, BusStop)
-            {debug: Ho messo la nota della prima personaggia alla fermata del bus.}
+            {debug: I put the note of the first character at the bus stop.}
     }
     {second_char_story_ended.goodbye:
             ~ move_entity(SecondCharacterNotes, BusStop)
-            {debug: Ho messo la nota del secondo personaggio alla fermata del bus.}
+            {debug: I put the note of the second character at the bus stop.}
     }    
     {
         - knowing_second_character.six.theFrog && not are_two_entities_together(TheFrog, Mentor):
-            {debug: Ho spostato la rana allo stagno.}
+            {debug: I moved the frog to the pond.}
             ~  move_entity(TheFrog, GreenhouseMiddlePath)
         - else:
             ~  move_entity(TheFrog, Safekeeping)
-            {debug: Ho spostato la rana nel Safekeeping.}
+            {debug: I moved the frog to Safekeeping.}
     }
 //Altre funzioni:
     -> characters_speaking ->
@@ -117,7 +117,7 @@
     {
         - firstPauseTalking > 0:
             ~ firstPauseTalking --
-            {debug: Il valore di firstPauseTalking è {firstPauseTalking}}
+            {debug: The value of firstPauseTalking is {firstPauseTalking}}
         
         - secondPauseTalking > 0:
             ~ secondPauseTalking --
