@@ -168,13 +168,13 @@
 
     //Personaggia Uno
         - Chitarra:
-            ~ return "Chitarra"
+            ~ return "Guitar"
         - Triangolo:
-            ~ return "Triangolo"
+            ~ return "Triangle"
         - RagazzaOrchestra:
             ~ return "Orchestra"
         - FlautoDolce:
-            ~ return "Flauto Dolce"
+            ~ return "Vertical Flute"
         - Ocarina:
             ~ return "Ocarina"
         - Violino:
@@ -182,41 +182,41 @@
         
     //Personaggia Due       
         - IlRiccio:
-            ~ return "il Riccio"
+            ~ return "Hedgehog"
         - IlGrizzly:
-            ~ return "il Grizzly"
+            ~ return "Grizzly"
         - IlLupo:
-            ~ return "il Lupo"
+            ~ return "Wolf"
         - IlDelfino:
-            ~ return "il Delfino"
+            ~ return "Dolphin"
         - IlCapibara:
-            ~ return "il Capibara"
+            ~ return "Capybara"
         - IlCorvo:
-            ~ return "il Corvo"
+            ~ return "Crow"
             
     //Personaggia Tre
         - SpettroDelVuoto:
-            ~ return "il Empty"
+            ~ return "Placeholder"
         - IlConsapevole: 
-            ~ return "il Consapevole"
+            ~ return "Placeholder"
         - IlGuarente: 
-            ~ return "il Guarente"    
+            ~ return "Placeholder"    
         - IlSocievole: 
-            ~ return "il Socievole"
+            ~ return "Placeholder"
         - IlTerrorizzato: 
-            ~ return "il Terrorizzato"
+            ~ return "Placeholder"
         - LAbbandonato: 
-            ~ return "l'Abbandonato"    
+            ~ return "Placeholder"    
         - LArrabbiato: 
-            ~ return "l'Arrabbiato"
+            ~ return "Placeholder"
 
     //Personaggia Quattro             
         - LaMondatrice:
-            ~ return "la Mondatrice"
+            ~ return "Placeholder"
 
     //Personaggia Cinque        
         - IlMentore:
-            ~ return "la Mentore"
+            ~ return "Mentor"
 
     }
 
@@ -226,55 +226,55 @@
     
     //Personaggia Uno
         - Chitarra:
-            ~ return "Chitarra"
+            ~ return "Guitar"
         - Triangolo:
-            ~ return "Triangolo"
+            ~ return "Triangle"
         - RagazzaOrchestra:
             ~ return "Orchestra"
         - FlautoDolce:
-            ~ return "Flauto Dolce"
+            ~ return "Vertical Flute"
         - Ocarina:
             ~ return "Ocarina"
         - Violino:
-            ~ return "Violino"
+            ~ return "Violin"
 
     //Personaggia Due       
         - IlRiccio:
-            ~ return "Riccio"
+            ~ return "Hedgehog"
         - IlGrizzly:
             ~ return "Grizzly"
         - IlLupo:
-            ~ return "Lupo"
+            ~ return "Wolf"
         - IlDelfino:
-            ~ return "Delfino"
+            ~ return "Dolphin"
         - IlCapibara:
-            ~ return "Capibara"
+            ~ return "Capybara"
         - IlCorvo:
-            ~ return "Corvo"
+            ~ return "Placeholder"
 
     //Personaggia Tre
         - SpettroDelVuoto:
-            ~ return "Il Empty"
+            ~ return "Placeholder"
         - IlConsapevole: 
-            ~ return "Il Consapevole"
+            ~ return "Placeholder"
         - IlGuarente: 
-            ~ return "Il Guarente"    
+            ~ return "Placeholder"    
         - IlSocievole: 
-            ~ return "Il Socievole"
+            ~ return "Placeholder"
         - IlTerrorizzato: 
-            ~ return "Il Terrorizzato"
+            ~ return "Placeholder"
         - LAbbandonato: 
-            ~ return "L'Abbandonato"    
+            ~ return "Placeholder"    
         - LArrabbiato: 
-            ~ return "L'Arrabbiato"            
+            ~ return "Placeholder"            
     
     //Personaggia Quattro        
         - LaMondatrice:
-            ~ return "La Mondatrice"
+            ~ return "Placeholder"
 
     //Personaggia Cinque        
         - IlMentore:
-            ~ return "Mentore"
+            ~ return "Mentor"
 
     }
 

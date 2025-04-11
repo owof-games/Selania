@@ -429,22 +429,22 @@
 
         ~ fifthStoryQuestCount ++
         
-        {charNameFive}: Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+        {charNameFive}Placeholder
+            + [Placeholder]
                     ~ fifthBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [Placeholder]
                     ~ fifthYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + [Placeholder]
                 ~ fifthRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + [Placeholder]
                 ~ fifthGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + [Placeholder]
                 ~ fifthPurple ++
  
             -
@@ -458,22 +458,22 @@
         //Presentazione.
         ~ fifthStoryQuestCount ++
         
-        {charNameFive}: Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+        {charNameFive}Placeholder
+            + [Placeholder]
                     ~ fifthBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [Placeholder]
                     ~ fifthYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + [Placeholder]
                 ~ fifthRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + [Placeholder]
                 ~ fifthGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + [Placeholder]
                 ~ fifthPurple ++
  
             -
@@ -487,22 +487,22 @@
         //Presentazione.
         ~ fifthStoryQuestCount ++
         
-        {charNameFive}: Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+        {charNameFive}Placeholder
+            + [Placeholder]
                     ~ fifthBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [Placeholder]
                     ~ fifthYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + [Placeholder]
                 ~ fifthRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + [Placeholder]
                 ~ fifthGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + [Placeholder]
                 ~ fifthPurple ++
  
             -
@@ -516,22 +516,22 @@
         //Presentazione.
         ~ fifthStoryQuestCount ++
         
-        {charNameFive}: Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+        {charNameFive}Placeholder
+            + [Placeholder]
                     ~ fifthBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [Placeholder]
                     ~ fifthYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + [Placeholder]
                 ~ fifthRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + [Placeholder]
                 ~ fifthGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + [Placeholder]
                 ~ fifthPurple ++
  
             -
@@ -544,22 +544,22 @@
         //Presentazione.
         ~ fifthStoryQuestCount ++
         
-        {charNameFive}: Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+        {charNameFive}Placeholder
+            + [Placeholder]
                     ~ fifthBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [Placeholder]
                     ~ fifthYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + [Placeholder]
                 ~ fifthRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + [Placeholder]
                 ~ fifthGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + [Placeholder]
                 ~ fifthPurple ++
  
             -
@@ -572,22 +572,22 @@
         //Presentazione.
         ~ fifthStoryQuestCount ++
         
-        {charNameFive}: Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+        {charNameFive}Placeholder
+            + [Placeholder]
                     ~ fifthBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [Placeholder]
                     ~ fifthYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + [Placeholder]
                 ~ fifthRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + [Placeholder]
                 ~ fifthGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + [Placeholder]
                 ~ fifthPurple ++
  
             -
@@ -599,22 +599,22 @@
         //Presentazione.
         ~ fifthStoryQuestCount ++
         
-        {charNameFive}: Non è che hai visto passare di qui una persona?
-            + [Dammi dettagli più concreti.]
+        {charNameFive}Placeholder
+            + [Placeholder]
                     ~ fifthBlue ++
                 
-            + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
+            + [Placeholder]
                     ~ fifthYellow ++
                 
-            + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
+            + [Placeholder]
                 ~ fifthRed ++
 
                 
-            + [Se ti senti sola, sono qui ad ascoltarti.]
+            + [Placeholder]
                 ~ fifthGreen ++
   
                 
-            + [Tu sei sempre con ləi, ləi è sempre con te.]
+            + [Placeholder]
                 ~ fifthPurple ++
  
             -
@@ -630,16 +630,16 @@
 
 === fifth_story_gift ===
 ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-<i> Stai per donare qualcosa a {charNameFive}.</i>
-        + {findedGifts != ()} [Scelgo il dono.]
+Placeholder
+        + {findedGifts != ()} [Placeholder]
             ~ currentReceiver += Mentor
             -> inventory_management -> ink_outcome 
-        + {findedGifts == ()} <i> Il tuo inventario è vuoto.</i>
+        + {findedGifts == ()} Placeholder
             ->main
         
     
         = ink_outcome    
-            <i>Dopo il tuo dono {inkTranslator(secondCharacterInkLevel)}.
+            Placeholder
                  -> talk_with_fifth_character
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
@@ -656,10 +656,10 @@
             -> main_story_fifth_character
         
         = loneliness_trigger
-        Info
-            * [Voglio comunque approfondire la storia di questa personaggia.]
+        Placeholder
+            * [Placeholder]
                 -> main_story_fifth_character
-            * [Salto.]
+            * [Placeholder]
             //FUTURA SOLUZIONE A QUESTA SITUAZIONE
                 -> main
         -
@@ -678,75 +678,75 @@
     }
     = confession
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-        {charNameFive}: Ho realizzato una cosa, una cosa su noi due.
+        {charNameFive}Placeholder
             -> secondAffinityCalc ->
         {
-        - firstPurple && firstYellow > firstBlue: {charNameFive}: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
-        <i>{charNameFive} vede {name} come una persona amica e fidata.</i>
+        - firstPurple && firstYellow > firstBlue: {charNameFive}Placeholder
+        Placeholder
         
-        -firstPurple or firstYellow > firstBlue:{charNameFive}: Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
+        -firstPurple or firstYellow > firstBlue:{charNameFive}Placeholder
         
-        <i>{charNameFive} si trova bene con {name}.</i>
+        Placeholder
         
-        - firstPurple && firstYellow < firstBlue: {charNameFive}: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
+        - firstPurple && firstYellow < firstBlue: {charNameFive}Placeholder
         
-        <i>{charNameFive} non si è sentita capita da {name}.</i>
+        Placeholder
         
         
-        - else: A volte siamo sullo stesso brano, altre no. E non ho ancora capito chi tra noi stia ignorando l'altra parte.
+        - else: Placeholder
         
-        <i>{charNameFive} non riesce a capire che rapporto sta costruendo con {name}.</i>
+        Placeholder
         
         }
-        {charNameFive}: E credo di aver capito perché il mio nome
+        {charNameFive}Placeholder
             
-            + [Credo di sapere come aiutarti.]
+            + [Placeholder]
                 -> statement
-            + [Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.]
+            + [Placeholder]
                 -> main
 
 
     = statement
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-        <i>A seguito del rapporto che {name} ha creato con {charNameFive} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità.|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
+        Placeholder
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(secondCharacterInkLevel)
-        + [Voglio cominciare la riscrittura.]
+        + [Placeholder]
             -> secondNaming -> 
             -> one
-        + [Preferisco prendermi del tempo.]
+        + [Placeholder]
             -> main
 
     = one
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    {name}: Prima hai detto che hai il terrore di fare una scelta.
+    {name}Placeholder
         
-        + [Qui hai accettato il tuo nuovo nome.]
-            {name}: E ammettere una propria paura, una scelta enorme.
+        + [Placeholder]
+            {name}Placeholder
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                    {debugChangeName: Placeholder {firstCharacterPossibleStates }}
                 }            
         
-        + [Eppure hai deciso di costruire una famiglia con l3 tu3 amic3.]
+        + [Placeholder]
   
         
-        + [Dimenticando che per finire gli studi hai lottato per anni.]
+        + [Placeholder]
      
             
-        + [Ma hai più volte accettato il rischio di suonare sul]
+        + [Placeholder]
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                    {debugChangeName: Placeholder {firstCharacterPossibleStates }}
                 }
-        + [Però da che sei qui hai esplorato tutto questo luogo.]
+        + [Placeholder]
            
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+    		           {debugChangeName: Placeholder {firstCharacterPossibleStates }}
                 }
             
         -
@@ -761,36 +761,36 @@
     = two
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 
-        + [Con Talco puoi litigare, eppure siete legatissim3.]
-            {name}: Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
-            {name}: Il Talco che hai raccontato si arrabbierebbe di più se tu facessi una scelta per te pensando a ləi.
+        + [Placeholder]
+            {name}Placeholder
+            {name}Placeholder
             
                     
-        + [La paura di tradire è un'altra faccia dell'ego.]
+        + [Placeholder]
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                    {debugChangeName: Placeholder {firstCharacterPossibleStates }}
                 }
     
             
-        + [Il tuo cuore si preoccupa molto di loro, e poco di te.]
+        + [Placeholder]
    
             
-        + [Forse accadrà, ma non è un tuo problema.]
+        + [Placeholder]
  
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+    		           {debugChangeName: Placeholder {firstCharacterPossibleStates }}
                 }
                 
-        + [Tradiamo la fiducia rompendo le regole a nostro vantaggio.]
+        + [Placeholder]
  
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                    {debugChangeName: Placeholder {firstCharacterPossibleStates }}
                 }
                     
         -
@@ -804,34 +804,34 @@
     = three
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
             
-        + [Se non tiri nessun dado, non c'è storia da far avanzare.]
+        + [Placeholder]
          
                 {
 	                - fifthCharacterPossibleStates hasnt Violino:
 		                ~ fifthCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {fifthCharacterPossibleStates }}
+	                    {debugChangeName: Placeholder {fifthCharacterPossibleStates }}
                 }
         
-        + [Ma ogni persona ha immaginato sorti diverse per Jonah.]
+        + [Placeholder]
                 {
                 	- fifthCharacterPossibleStates hasnt Chitarra:
     		            ~ fifthCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {fifthCharacterPossibleStates }}
+    		           {debugChangeName: Placeholder {fifthCharacterPossibleStates }}
                 }
                 
-        + [Eppure la prima cosa che hai visto qui sono otto sentieri.]
+        + [Placeholder]
  
                 {
 	                - fifthCharacterPossibleStates hasnt Violino:
 		                ~ fifthCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {fifthCharacterPossibleStates }}
+	                    {debugChangeName: Placeholder {fifthCharacterPossibleStates }}
                 }
             
         
-        + [La storia di Jonah è un successo.]
+        + [Placeholder]
 
                 
-        + [Ragioni come se fossi sola se dovessi cadere.]
+        + [Placeholder]
      
         -
         {
@@ -844,35 +844,35 @@
     = four
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
 
-        + [Giocare è bello perché puoi sempre Chitarrare a farlo.]
+        + [Placeholder]
 
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                    {debugChangeName: Placeholder {firstCharacterPossibleStates }}
                 }            
          
         
-        + [Quando Anna ha Chitarrato all'ex, ha scoperto la sicurezza.]
+        + [Placeholder]
 
         
-        + [Un infinito più piccolo resta comunque infinito.]
+        + [Placeholder]
 
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                    {debugChangeName: Placeholder {firstCharacterPossibleStates }}
                 }    
             
-        + [Chitarrando a cercare Talco ti sei tutelata.]
+        + [Placeholder]
  
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+    		           {debugChangeName: Placeholder {firstCharacterPossibleStates }}
                 }            
         
-        + [C'è più coraggio nella Chitarra che nel compromesso.]
+        + [Placeholder]
  
             
         -
@@ -881,52 +881,52 @@
 
     = ending
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-     Per questo ti dico...
-        + {fifthRed > 0} [Prendi una strada e se non ti piace cambiala!]
+     Placeholder
+        + {fifthRed > 0} [Placeholder]
         
-        + {fifthPurple > 0} [Dai alla tua vita uno scopo più grande.]
+        + {fifthPurple > 0} [Placeholder]
         
-        + {fifthYellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
+        + {fifthYellow > 0} [Placeholder]
                 
-        + {fifthGreen > 0} [Non deluderai i tuoi amici: loro saranno sempre con te.]
+        + {fifthGreen > 0} [Placeholder]
                 
-        + {fifthBlue > 0} [Questa non è la tua strada. Succede. Ora puoi cambiare.]
+        + {fifthBlue > 0} [Placeholder]
                 
         
                 
         -     
         
-    {charNameFive}: Grazie, {name}.
-    {charNameFive}: Mentre parlavi mi è nata una nuova canzone in testa.
-    {charNameFive}: Qualcosa di fresco, di pronto a cambiare.
-    {charNameFive}: La canzone del mio vero nome.
+    {charNameFive}Placeholder
+    {charNameFive}Placeholder
+    {charNameFive}Placeholder
+    {charNameFive}Placeholder
 
         {
             - firstCharacterPossibleStates has Chitarra:
-                {charNameFive}: Che <b>resterà Chitarra</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
+                {charNameFive}Placeholder
             
             - firstCharacterPossibleStates has Triangolo:
-                {charNameFive}: E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
+                {charNameFive}Placeholder
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += Triangolo
             
             - firstCharacterPossibleStates has RagazzaOrchestra:
-                {charNameFive}: Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
+                {charNameFive}Placeholder
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += RagazzaOrchestra
             
             - firstCharacterPossibleStates has FlautoDolce:
-                {charNameFive}: Il mio nome è <b>Flauto Dolce</b>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
+                {charNameFive}Placeholder
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += FlautoDolce                
             
             - firstCharacterPossibleStates has Ocarina:
-                {charNameFive}: Mi chiamerò <b>Ocarina</b>: perché il suo suono è gioco e festa.
+                {charNameFive}Placeholder
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += Ocarina
             
             - firstCharacterPossibleStates has Violino:
-                {charNameFive}: Io sono <b>Violino</b>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
+                {charNameFive}Placeholder
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += Violino
         }
@@ -943,8 +943,8 @@
     
     = secret_ending
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-        {charNameFive}: C'è una cosa che vorrei dirti, {name}.
-        {charNameFive}: Riguarda Il mentore.
+        {charNameFive}Placeholder
+        {charNameFive}Placeholder
 
             ~ fifthStory = Ended
             ~ movementsCounter = 0
@@ -953,7 +953,7 @@
             
     = exit
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-        {charNameFive}: Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
+        {charNameFive}Placeholder
             ~ fifthStory = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(fifthStoryPG)
@@ -972,16 +972,16 @@
     }
     
         - (top)
-        {charNameFive}: {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me.|Sono sicura di aver visto un'altra persona alla fermata del bus, ma quando ho cercato di raggiungerla è scomparsa.|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
+        {charNameFive}Placeholder
                 ~ fifthCharEndingDialogue ++
         -> main
         
         = goodbye
         ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-        {charNameFive}: {name}, per me è arrivato il momento di tornare a casa.
-        {firstCharacterPossibleStates hasnt Chitarra: {charNameFive}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
-        {firstCharacterPossibleStates hasnt Chitarra: {charNameFive}: Grazie per quello che hai fatto, davvero.}
-        {firstCharacterPossibleStates has Chitarra: {charNameFive}: Vedremo cosa mi accadrà.}
+        {charNameFive}Placeholder
+        {firstCharacterPossibleStates hasnt Chitarra: {charNameFive}Placeholder}
+        {firstCharacterPossibleStates hasnt Chitarra: {charNameFive}Placeholder}
+        {firstCharacterPossibleStates has Chitarra: {charNameFive}Placeholder}
             ~ move_entity(Mentor, Safekeeping)
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             {
@@ -1013,25 +1013,25 @@
 
    = one
    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    {charNameFive}: {~ Sinceramente, non so che ne sarebbe di questo luogo senza tutta la manutenzione che devo fare.|Hai notato la bacheca alla stazione dei treni? Anche se è da molto che non arrivano lettere.|A volte vorrei che le cose in serra crescessero più velocemente, così da sapere subito se ho sbagliato qualcosa.|A ovest dello stagno c'è spesso un grande baccano, ma fiori e fieno sono troppo alti per poter vedere cosa ci sia da quelle parti.}
+    {charNameFive}Placeholder
             ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
     
     = two
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    {charNameFive}: {~ Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.|A volte ho questo timore: posso davvero essere una buona mentore, anche se sono poco istruita?|Sono contenta di aver aperto la biblioteca, ma quella poltrona mi invita troppo a riposare, quando invece ci sono mille cose da fare.}
+    {charNameFive}Placeholder
             ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
             
     = three
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    {charNameFive}: {~ xxx|yyy}
+    {charNameFive}Placeholder
             ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
             
     = four
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    {charNameFive}: {~ xxx|yyy}
+    {charNameFive}Placeholder
             ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main        
 
