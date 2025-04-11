@@ -29,7 +29,7 @@
 
 
 === val_fausto_lattanzio
-<i>Home</i>, di Val Fausto Lattanzio (he/they).
+<i>Home</i>, by Val Fausto Lattanzio (he/they).
 
     I have lived in this house forever, even though I never chose it—it's the house my mother chose for me.
     The pink walls of my room have witnessed my childhood, then my adolescence, all the way to this moment.

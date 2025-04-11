@@ -1,7 +1,7 @@
 //Cognome/alias F - K
 
 === cecilia_formicola
-<i>Getting warm</i> di Cecilia Formicola (she/her).
+<i>Getting warm</i> by Cecilia Formicola (she/her).
 
     "I hate them."
     "Who doesn't, Alchemilla."

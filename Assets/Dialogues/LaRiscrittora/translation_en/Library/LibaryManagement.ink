@@ -507,16 +507,16 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
 === function number_translator(list)
 {
     - LIST_COUNT(list) == 0: zero
-    - LIST_COUNT(list) == 1: un
-    - LIST_COUNT(list) == 2: due
-    - LIST_COUNT(list) == 3: tre
-    - LIST_COUNT(list) == 4: quattro
-    - LIST_COUNT(list) == 5: cinque
-    - LIST_COUNT(list) == 6: sei
-    - LIST_COUNT(list) == 7: sette
+    - LIST_COUNT(list) == 1: one
+    - LIST_COUNT(list) == 2: two
+    - LIST_COUNT(list) == 3: three
+    - LIST_COUNT(list) == 4: four
+    - LIST_COUNT(list) == 5: five
+    - LIST_COUNT(list) == 6: six
+    - LIST_COUNT(list) == 7: seven
     
 }
 
 
 === function libro_libri(list)
-    {LIST_COUNT(list) == 1:racconto|racconti}
+    {LIST_COUNT(list) == 1:story|stories}
