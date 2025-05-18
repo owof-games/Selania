@@ -16,6 +16,7 @@ LIST cropsType = collaborazione, ciclicità, novità, cancellazione, ricordo, in
 
 //QUESTE LISTE HANNO UN VALORE CATALOGATIVO E PER LA GESTIONE DELLE DOMANDE
     //Relazione: piante che parlano del rapporto con l'altra. Che per lo più è positiva, ma non sempre. Forse in questo senso la Brina ci azzecca poco.
+TODO: dove leggi il valore di queste variabili, interseca con backupCultivable; e.g.: pianteCollaborazione ==> pianteCollaborazione ^ backupCultivable. Togliere tutta la parte di scrittura di queste variabili (non vanno più aggiornate)
 VAR pianteCollaborazione = (LicheneDegliAbissi, MuschioDelleAmanti, CantoDelleCompagne, BrinaDellImpossibile)
     //Movimento: elementi che parlano di movimento fisico o emotivo
 VAR pianteCiclicità = (LicheneDegliAbissi, CantoDelleCompagne, NonTiScordarDiTe)
@@ -82,7 +83,7 @@ VAR growing = 0
 {debugCultivable: <i>Il dado ha valore: {dice}.}
 {
 
-    - randomCounter == maxRandomCounter:
+    - randomCounter >= maxRandomCounter:
         {debugCultivable: <i>randomCounter {randomCounter} ha raggiunto il livello massimo {maxRandomCounter}.}
         {
             - backupCultivable != ():
