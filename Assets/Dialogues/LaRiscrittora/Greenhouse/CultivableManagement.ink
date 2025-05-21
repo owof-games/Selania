@@ -1063,36 +1063,36 @@ QUESTIONS
 === remove_fungo_proposto
 //Questa azione mi permette di rimuovere il fungo selezionato da ogni lista che lo può contenere. E dato che col tempo le liste possono aumentare, devo solo mettere un remove qui e non OVUNQUE XD
 {debugCultivable: <i>Passo dalla funzione remove_fungo_proposto e rimuovo {chosenCultivable} da:}
-{
-    - pianteRicordo has chosenCultivable:
-        ~ pianteRicordo -= chosenCultivable
-        {debugCultivable: <i>piante ricordo.}
-}
-{
-    - pianteNovità has chosenCultivable:    
-        ~ pianteNovità -= chosenCultivable
-       {debugCultivable: <i>piante novità.}        
-}
-{
-    - pianteCollaborazione has chosenCultivable:
-        ~ pianteCollaborazione -= chosenCultivable
-    {debugCultivable: <i>piante collaborazione.}    
-}
-{
-    - pianteCiclicità has chosenCultivable:
-        ~ pianteCiclicità -= chosenCultivable
-    {debugCultivable: <i>piante ciclicità.}    
-}
-{
-    - pianteIndipendenza has chosenCultivable:
-        ~ pianteIndipendenza -= chosenCultivable
-    {debugCultivable: <i>piante indipendenza.}    
-}
-{
-    - pianteCancellazione has chosenCultivable:
-        ~ pianteCancellazione -= chosenCultivable
-    {debugCultivable: <i>piante cancellazione.}    
-}
+// {
+//     - pianteRicordo has chosenCultivable:
+//         ~ pianteRicordo -= chosenCultivable
+//         {debugCultivable: <i>piante ricordo.}
+// }
+// {
+//     - pianteNovità has chosenCultivable:    
+//         ~ pianteNovità -= chosenCultivable
+//        {debugCultivable: <i>piante novità.}        
+// }
+// {
+//     - pianteCollaborazione has chosenCultivable:
+//         ~ pianteCollaborazione -= chosenCultivable
+//     {debugCultivable: <i>piante collaborazione.}    
+// }
+// {
+//     - pianteCiclicità has chosenCultivable:
+//         ~ pianteCiclicità -= chosenCultivable
+//     {debugCultivable: <i>piante ciclicità.}    
+// }
+// {
+//     - pianteIndipendenza has chosenCultivable:
+//         ~ pianteIndipendenza -= chosenCultivable
+//     {debugCultivable: <i>piante indipendenza.}    
+// }
+// {
+//     - pianteCancellazione has chosenCultivable:
+//         ~ pianteCancellazione -= chosenCultivable
+//     {debugCultivable: <i>piante cancellazione.}    
+// }
 {
     - backupCultivable has chosenCultivable:
         ~ backupCultivable -= chosenCultivable
