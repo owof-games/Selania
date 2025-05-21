@@ -97,7 +97,7 @@ VAR growing = 0
         
         }
 
-    - dice == 1 && pianteCollaborazione != () && pianteIndipendenza != (): 
+    - dice == 1 && pianteCollaborazione ^ backupCultivable != () && pianteIndipendenza ^ backupCultivable != ():
         {
             - firstQuest == false:
             {debugCultivable: <i>Il valore di firstQuest è {firstQuest}. Piante Collaborazione contiene: {pianteCollaborazione}. Piante Indipendenza contiene: {pianteIndipendenza}.}
@@ -113,6 +113,7 @@ VAR growing = 0
                     {debugCultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {pianteCollaborazione^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {pianteIndipendenza^firstAnswerTracker}}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> first_question
+                    
                     - else:
                     {debugCultivable: <i>Non ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
                     {debugCultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {pianteCollaborazione^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {pianteIndipendenza^firstAnswerTracker}}
@@ -128,7 +129,7 @@ VAR growing = 0
         }
     
         
-    - dice == 2 && pianteCiclicità != () && pianteNovità != ():
+    - dice == 2 && pianteCiclicità ^ backupCultivable != () && pianteNovità ^ backupCultivable != ():
         {
             -secondQuest == false:
             {debugCultivable: <i>Il valore di secondQuest è {secondQuest}. Piante Ciclicità contiene: {pianteCiclicità}. Piante Novità contiene: {pianteNovità} e per questo vado alla domanda.}
@@ -160,7 +161,7 @@ VAR growing = 0
 
 
         
-    - dice == 3 && pianteRicordo != () && pianteCancellazione != ():
+    - dice == 3 && pianteRicordo ^ backupCultivable != () && pianteCancellazione ^ backupCultivable != ():
         {
             - thirdQuest == false:
                 {debugCultivable: <i>Il valore di thirdQuest è {thirdQuest}. Piante Ricordo contiene: {pianteRicordo}. Piante Cancellazione contiene: {pianteCancellazione} e per questo vado alla domanda.}    
@@ -192,7 +193,7 @@ VAR growing = 0
         }
 
 
-        - dice == 4 && pianteCollaborazione != () && pianteCiclicità != (): 
+        - dice == 4 && pianteCollaborazione ^ backupCultivable != () && pianteCiclicità ^ backupCultivable != (): 
         {
             - fourthQuest == false:
             {
@@ -215,7 +216,7 @@ VAR growing = 0
                     -> random
         }
         
-        - dice == 5 && pianteCollaborazione != () && pianteRicordo != (): 
+        - dice == 5 && pianteCollaborazione ^ backupCultivable!= () && pianteRicordo ^ backupCultivable != (): 
         {
             - fifthQuest == false:
             {
@@ -238,7 +239,7 @@ VAR growing = 0
                     -> random
         }        
         
-        - dice == 6 && pianteCollaborazione != () && pianteCancellazione != (): 
+        - dice == 6 && pianteCollaborazione ^ backupCultivable != () && pianteCancellazione ^ backupCultivable != (): 
         {
             - sixthQuest == false:
             {
@@ -261,7 +262,7 @@ VAR growing = 0
                     -> random
         }          
         
-        - dice == 7 && pianteCiclicità != () && pianteIndipendenza != (): 
+        - dice == 7 && pianteCiclicità ^ backupCultivable != () && pianteIndipendenza ^ backupCultivable != (): 
         {
             - seventhQuest == false:
             {
@@ -284,7 +285,7 @@ VAR growing = 0
                     -> random
         }         
         
-        - dice == 8 && pianteCiclicità != () && pianteRicordo != (): 
+        - dice == 8 && pianteCiclicità ^ backupCultivable != () && pianteRicordo ^ backupCultivable != (): 
         {
             - eighthQuest == false:
   
@@ -310,7 +311,7 @@ VAR growing = 0
                     -> random
         }        
 
-        - dice == 9 && pianteCiclicità != () && pianteCancellazione != (): 
+        - dice == 9 && pianteCiclicità ^ backupCultivable != () && pianteCancellazione ^ backupCultivable != (): 
         {
             - ninthQuest == false:
             {
@@ -332,7 +333,7 @@ VAR growing = 0
                 -> random        
         }
         
-        - dice == 10 && pianteIndipendenza != () && pianteNovità != (): 
+        - dice == 10 && pianteIndipendenza ^ backupCultivable != () && pianteNovità ^ backupCultivable != (): 
         {
             - tenthQuest == false:
             {
@@ -356,7 +357,7 @@ VAR growing = 0
                     -> random
         }         
 
-        - dice == 11 && pianteIndipendenza != () && pianteRicordo != (): 
+        - dice == 11 && pianteIndipendenza ^ backupCultivable != () && pianteRicordo ^ backupCultivable ^ backupCultivable != (): 
         {
             - eleventhQuest == false:
             {
@@ -378,7 +379,7 @@ VAR growing = 0
                 -> random
         }
         
-        - dice == 12 && pianteIndipendenza != () && pianteCancellazione != (): 
+        - dice == 12 && pianteIndipendenza ^ backupCultivable != () && pianteCancellazione ^ backupCultivable != (): 
         {
             - twelfthQuest == false:
             {
@@ -399,7 +400,7 @@ VAR growing = 0
                     -> random
         } 
         
-        - dice == 13 && pianteNovità != () && pianteRicordo != (): 
+        - dice == 13 && pianteNovità ^ backupCultivable != () && pianteRicordo ^ backupCultivable != (): 
         {
             - thirteenthQuest == false:
             {
@@ -421,7 +422,7 @@ VAR growing = 0
                     -> random
         } 
 
-        - dice == 14 && pianteNovità != () && pianteCancellazione != (): 
+        - dice == 14 && pianteNovità ^ backupCultivable != () && pianteCancellazione ^ backupCultivable != (): 
         {
             - fourteenthQuest == false:
             {
@@ -443,7 +444,7 @@ VAR growing = 0
                 -> random
             }    
         
-        - dice == 15 && pianteNovità != () && pianteCollaborazione != (): 
+        - dice == 15 && pianteNovità ^ backupCultivable != () && pianteCollaborazione ^ backupCultivable != (): 
         {
             - fifteenQuest == false:
             {
