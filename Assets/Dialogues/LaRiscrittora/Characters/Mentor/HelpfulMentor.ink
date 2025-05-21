@@ -199,9 +199,9 @@
             //Rimuovo coltivabile legato a lutto
         {    
             - backupCultivable has NonTiScordarDiTe:
-                ~ pianteCiclicità -= NonTiScordarDiTe
-                ~ pianteIndipendenza -= NonTiScordarDiTe
-                ~ pianteRicordo -= NonTiScordarDiTe
+                //~ pianteCiclicità -= NonTiScordarDiTe
+                //~ pianteIndipendenza -= NonTiScordarDiTe
+                //~ pianteRicordo -= NonTiScordarDiTe
                 ~ backupCultivable -= NonTiScordarDiTe
             
         }    
