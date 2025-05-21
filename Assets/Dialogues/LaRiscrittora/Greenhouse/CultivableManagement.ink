@@ -51,6 +51,7 @@ VAR eleventhQuest = false
 VAR twelfthQuest = false
 VAR thirteenthQuest = false
 VAR fourteenthQuest = false
+VAR fifteenQuest = false
 
 //Questa è una strategia (basic e temporanea) per evitare che il testing vada in loop se non ci sono combinazioni sensate di domande.
 VAR randomCounter = 0
@@ -440,10 +441,34 @@ VAR growing = 0
             - else:
              ~ randomCounter ++
                 -> random
+            }    
+        
+        - dice == 15 && pianteNovità != () && pianteCollaborazione != (): 
+        {
+            - fifteenQuest == false:
+            {
+                - cropsType == ():
+                    -> fifteen_question
+                
+                - else:
+                {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
+                {
+                    - LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && cropsType hasnt novità && cropsType hasnt collaborazione:
+                        -> fifteen_question
+                    - else:
+                        ~ randomCounter ++
+                        ->random
+                }
+            }
+            - else:
+             ~ randomCounter ++
+                -> random
+                
         }
         
     - else:
         {debugCultivable: <i>Il dado ha valore {dice} e non ci sono condizioni valide per proporre una delle domande e per questo ritiro.}
+            ~ randomCounter ++
                     -> random
 }
 
@@ -692,6 +717,23 @@ QUESTIONS
             + [<i>{~Scaccia cimici e cavallette|Acceca il corvo ingordo}.]
                     ~ cropsType += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
+                    {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
+            -   
+                ~ counter ++
+                    -> test
+    
+    = fifteen_question
+    ~ fifteenQuest = true
+    {debugCultivable: <i>Entro in fifteenQuest. {fifteenQuest: fifteenQuest ora = true|fifteenQuest = false}.}
+    
+        <i>La luna...
+            + [<i>{~ Accenna timida un nuovo ciclo|Invita la Bella di Notte a sbocciare|Suggerisci sogni di cambiamento}.]
+                    ~ cropsType += novità   
+                    ~ firstAnswerTracker = pianteNovità 
+                    {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
+            + [<i>{~ Solleva le maree per divertire i delfini|Indica la strada alle nuvole|Danza giocosa con la Terra}.]
+                    ~ cropsType += collaborazione
+                    ~ firstAnswerTracker = pianteCollaborazione
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             -   
                 ~ counter ++
