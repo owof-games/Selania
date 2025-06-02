@@ -169,7 +169,11 @@ jobs:
       buildTargets: ${{ inputs.buildTargets }}
       hasCombinedArtifacts: ${{ needs.unpack_inputs.outputs.requiresCombined }}
       artifactSource: build
-    secrets: inherit
+    secrets:
+      CICD_PAT: ${{ secrets.CICD_PAT }}
+      DEPLOY_API_KEY: ${{ secrets.DEPLOY_API_KEY }}
+      ITCH_USERNAME: ${{ secrets.ITCH_USERNAME }}
+      ITCH_PROJECT: ${{ secrets.ITCH_PROJECT }}
 
   # ─────────────────────────────────────────────────────────────────────────────
   # 5. Notify
