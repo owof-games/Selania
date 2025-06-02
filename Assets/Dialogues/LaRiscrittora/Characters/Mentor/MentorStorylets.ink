@@ -29,7 +29,7 @@
                 -> questions
             - else:
             {
-                - firstStoryQuestCount > minStoryQuesTCountFirstChar: {charNameFive}: Hai fatto il tuo dono a {charNameOne}?
+                - firstStoryQuestCount >= minStoryQuesTCountFirstChar: {charNameFive}: Hai fatto il tuo dono a {charNameOne}?
                         -> mentor_and_second_char_storylets 
                 - else:
                     {
@@ -39,7 +39,7 @@
                         - firstStoryQuestCount < 5:
                             {charNameFive}: Secondo me sei circa a metà strada prima di poter convincere {charNameOne} a ricevere il tuo dono.
                                 -> mentor_and_second_char_storylets 
-                        - firstStoryQuestCount <7:
+                        - else:
                             {charNameFive}: Ormai ci sei: pochissimi scambi e sento che {charNameOne} sarà pronta ad aprirsi a te.
                                 -> mentor_and_second_char_storylets 
 
