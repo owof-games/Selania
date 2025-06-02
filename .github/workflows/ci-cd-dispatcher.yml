@@ -25,12 +25,12 @@ on:
       deployTargets:
         description: "JSON array of deploy targets (e.g. [\"itch.io\",\"s3\"])"
         required: true
-        default: '["gh-pages"]'
+        default: '["itch.io"]'
         type: string
       buildTargets:
         description: "JSON array of build targets (e.g. [\"WebGL\",\"iOS\"])"
         required: true
-        default: '["WebGL"]'
+        default: '["WebGL","macOS","Windows","Linux"]'
         type: string
       buildVersion:
         description: Optional version override
