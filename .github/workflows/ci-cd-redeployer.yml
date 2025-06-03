@@ -11,7 +11,7 @@ on:
       deployTargets:
         description: "JSON array of deploy targets (e.g., [\"s3\", \"firebase\"])"
         required: true
-        default: '["gh-pages"]'
+        default: '["itch.io"]'
         type: string
       buildTargets:
         description: "JSON array of build targets (e.g. [\"WebGL\",\"iOS\"]) - Optional (leave empty)"
