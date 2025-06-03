@@ -159,7 +159,7 @@ jobs:
        needs.unpack_inputs.outputs.testsOnly != 'true' &&
        needs.release.result == 'success' &&
        inputs.validDeployTargets != '[]'
-    uses: ./.github/workflows/step-4-deploy.yml@v1
+    uses: ./.github/workflows/step-4-deploy.yml
     with:
       buildType: ${{ needs.unpack_inputs.outputs.buildType }}
       buildVersion: ${{ needs.unpack_inputs.outputs.buildVersion }}
