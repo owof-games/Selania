@@ -8,7 +8,7 @@
   "itch.io": {
     "os": "ubuntu-latest",
     "requiresCombinedArtifact": false,
-    "minimumBuildType": "release_candidate",
+    "minimumBuildType": "preview",
     "compatibleBuildTargets": ["WebGL", "StandaloneWindows", "StandaloneWindows64", "StandaloneLinux64-Client", "StandaloneOSX"]
   },
   "s3": {
