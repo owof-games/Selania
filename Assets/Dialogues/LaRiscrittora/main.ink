@@ -1,4 +1,6 @@
 === main
+//Main è il punto da cui passiamo costantemente per caricare i thread di tutto ciò che genera testo in ogni area del gioco.
+
 ~ temp my_location = entity_location(PG)
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
@@ -12,27 +14,12 @@
 //Inventario
 <- inventory_contents
 
-//Personagge da aiutare
-<-first_character
-<-second_character
-<-third_character
-<-personaggia_quattro
-<-fifth_character
-
-
-//Elementi della serra
-<- call_test
-
-
-//Elementi del giardino
-<- bench
-<- the_fungus
-
-//Elementi dello stagno
-<-the_frog
-
-//Elementi della libreria
-<- reading_place
+//Personagge
+<- first_character
+<- second_character
+<- third_character
+<- personaggia_quattro
+<- fifth_character
 
 //Elementi della fermata del bus
 <- starting_note
@@ -42,11 +29,19 @@
 <- fourth_character_notes
 <- fifth_character_notes
 
+//Elementi della foresta
+<- bench
+<- the_fungus
+
+//Elementi dello stagno
+<- the_frog
+
+//Elementi della serra
+<- call_test
 
 
-//Elementi gestione interfaccia
-// <- save
-// <- load
-// <- quit
+//Elementi della libreria
+<- reading_place
+
 
 + -> main
