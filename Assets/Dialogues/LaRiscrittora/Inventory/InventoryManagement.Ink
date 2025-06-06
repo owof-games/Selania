@@ -14,7 +14,7 @@
 	}
 
 === function _list_with_commas(list, n)
-	{traduttoreIngredienti(pop(list))}{ n > 1:{n == 2: e |, }{_list_with_commas(list, n-1)}}
+	{ingredientTranslator(pop(list))}{ n > 1:{n == 2: e |, }{_list_with_commas(list, n-1)}}
     
 === function oggettoOggetti(list)
 	{LIST_COUNT(list) == 1:oggetto|oggetti}
@@ -29,8 +29,8 @@ LIST gifts = blanket, emptyvase
 VAR findedGifts = ()
 
 
-=== function traduttoreIngredienti(ingrediente)
-    {ingrediente:
+=== function ingredientTranslator(ingredient)
+    {ingredient:
     
         - emptyvase:
             ~ return "un vaso vuoto"

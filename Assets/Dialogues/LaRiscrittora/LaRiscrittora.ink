@@ -11,15 +11,17 @@
     INCLUDE Notes\ToDo.ink
 
 //File dedicati alla gestione complessiva del progetto
-    INCLUDE Code\ListAndVariables.ink
+    INCLUDE Code\Debug.ink
+    INCLUDE Code\ObjectAndCharList.ink
     INCLUDE Code\PGManagement.ink
-    INCLUDE Code\Spaces.ink
     INCLUDE Code\ChangePlaces.ink
-    INCLUDE Code\Other.ink
+    INCLUDE Code\PlacesContentsAndFunctions.ink
+    INCLUDE Code\BackgroundsAndSounds.ink
+    
 
 //File dedicati alla gestione delle personagge
-    INCLUDE Characters\Functions\Movements.ink
     INCLUDE Characters\Functions\CommonFunctions.ink
+    INCLUDE Characters\Functions\Movements.ink
     INCLUDE Characters\Functions\Ink.ink
     
     INCLUDE Characters\Functions\FirstCharacterManagement.ink
@@ -83,6 +85,14 @@
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibaryManagement.ink
     INCLUDE Library\StoryNotes.ink
+
+
+
+
+
+
+
+
 
 
 

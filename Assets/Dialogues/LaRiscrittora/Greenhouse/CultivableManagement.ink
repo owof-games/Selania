@@ -1,63 +1,64 @@
-LIST growStep = notStarted, stepZero, stepOne, stepTwo, stepThree
+//Lista coltivabili e stati possibili    
+    LIST cultivable = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile
+
+    LIST growStep = notStarted, stepZero, stepOne, stepTwo, stepThree
 
 //QUESTA LISTA LA USO PER GESTIRE LA PESCATA O MENO DEI COLTIVABILI
-VAR backupCultivable = (LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
-
-VAR statoCantoDelleCompagne = notStarted
-VAR statoLicheneDegliAbissi = notStarted
-VAR statoMuschioDelleAmanti = notStarted
-VAR statoBrinaDellImpossibile = notStarted
-VAR statoLaSpazzata = notStarted
-VAR statoBaccaDellaAddolorata = notStarted
-VAR statoNonTiScordarDiTe = notStarted
+    VAR backupCultivable = (LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
+    
+    VAR statoCantoDelleCompagne = notStarted
+    VAR statoLicheneDegliAbissi = notStarted
+    VAR statoMuschioDelleAmanti = notStarted
+    VAR statoBrinaDellImpossibile = notStarted
+    VAR statoLaSpazzata = notStarted
+    VAR statoBaccaDellaAddolorata = notStarted
+    VAR statoNonTiScordarDiTe = notStarted
 
 //Variabili per la gestione della serra
-LIST cropsType = collaborazione, ciclicità, novità, cancellazione, ricordo, indipendenza
+    LIST cropsType = collaborazione, ciclicità, novità, cancellazione, ricordo, indipendenza
 
 //QUESTE LISTE HANNO UN VALORE CATALOGATIVO E PER LA GESTIONE DELLE DOMANDE
     //Relazione: piante che parlano del rapporto con l'altra. Che per lo più è positiva, ma non sempre. Forse in questo senso la Brina ci azzecca poco.
-VAR pianteCollaborazione = (LicheneDegliAbissi, MuschioDelleAmanti, CantoDelleCompagne, BrinaDellImpossibile)
+    VAR pianteCollaborazione = (LicheneDegliAbissi, MuschioDelleAmanti, CantoDelleCompagne, BrinaDellImpossibile)
     //Movimento: elementi che parlano di movimento fisico o emotivo
-VAR pianteCiclicità = (LicheneDegliAbissi, CantoDelleCompagne, NonTiScordarDiTe)
+    VAR pianteCiclicità = (LicheneDegliAbissi, CantoDelleCompagne, NonTiScordarDiTe)
     //Soglia: siamo a ridosso di qualcosa: lo accogliamo o lo rifiutiamo?
-VAR pianteIndipendenza = (LaSpazzata, BaccaDellaAddolorata, NonTiScordarDiTe)
+    VAR pianteIndipendenza = (LaSpazzata, BaccaDellaAddolorata, NonTiScordarDiTe)
     //Futuro: il cambiamento è inevitabile.
-VAR pianteNovità =(MuschioDelleAmanti,LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
+        VAR pianteNovità =(MuschioDelleAmanti,LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
     //Passato: rimaniamo nello spazio della memoria, del ricordo
 VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, BrinaDellImpossibile)
     //Esplosione: le cose cambiano di botto
-VAR pianteCancellazione =(LicheneDegliAbissi,LaSpazzata, BaccaDellaAddolorata)
+    VAR pianteCancellazione =(LicheneDegliAbissi,LaSpazzata, BaccaDellaAddolorata)
 
-
-
-    //Pianta che verrà proposta. La uso anche per tracking dello stato delle piante.
+//Pianta che verrà proposta. La uso anche per tracking dello stato delle piante.
     VAR chosenCultivable = ()
     
 //Variabili per la gestione del test
-VAR counter = 0
-VAR firstAnswerTracker = ()
-VAR firstQuest = false
-VAR secondQuest = false
-VAR thirdQuest = false
-VAR fourthQuest = false
-VAR fifthQuest = false
-VAR sixthQuest = false
-VAR seventhQuest = false
-VAR eighthQuest = false
-VAR ninthQuest = false
-VAR tenthQuest = false
-VAR eleventhQuest = false
-VAR twelfthQuest = false
-VAR thirteenthQuest = false
-VAR fourteenthQuest = false
-VAR fifteenQuest = false
+    VAR counter = 0
+    VAR firstAnswerTracker = ()
+    VAR firstQuest = false
+    VAR secondQuest = false
+    VAR thirdQuest = false
+    VAR fourthQuest = false
+    VAR fifthQuest = false
+    VAR sixthQuest = false
+    VAR seventhQuest = false
+    VAR eighthQuest = false
+    VAR ninthQuest = false
+    VAR tenthQuest = false
+    VAR eleventhQuest = false
+    VAR twelfthQuest = false
+    VAR thirteenthQuest = false
+    VAR fourteenthQuest = false
+    VAR fifteenQuest = false
 
 //Questa è una strategia (basic e temporanea) per evitare che il testing vada in loop se non ci sono combinazioni sensate di domande.
-VAR randomCounter = 0
-VAR maxRandomCounter = 100
+    VAR randomCounter = 0
+    VAR maxRandomCounter = 100
 
 //Variabili monitoraggio stato vegetali
-VAR growing = 0    
+    VAR growing = 0    
 
 === cultivable_test ===
 <i>La serra ha qualcosa da svelarti.

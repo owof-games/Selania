@@ -42,5 +42,5 @@ VAR emptyVaseFound = false
             -> main
         }
     }
-    -> main
+        -> main
 

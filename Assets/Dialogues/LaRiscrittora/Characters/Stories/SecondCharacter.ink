@@ -387,6 +387,7 @@
         	  
         	  = her_liar
         	  ~ temp charNameTwo = translator(secondCharacterState)
+        	  ~ temp charNameOne = translator(firstCharacterState)
         	  
             	  {charNameTwo}: Ah.
             	  {charNameTwo}: Sei una ragazza quindi.
@@ -1379,6 +1380,7 @@
     = confession
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
     ~ change_entity_place(Mentor)
     
     //Parole chiave legate alla fiducia.
@@ -1467,6 +1469,7 @@
 
     = one
     ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
     ~ change_entity_place(Mentor)
     {
         -   are_two_entities_together(FirstCharacter, PG):{charNameOne}: Qui le cose si fanno serie, e io me ne vado.

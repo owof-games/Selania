@@ -131,4 +131,59 @@
         - Mentore:
             ~ return "Mentore"
 
-    }        
+    }
+    
+=== on_movement_events
+//Qui metto tutte quelle funzioni e variazioni che sono richieste a ogni cambio stanza.
+
+//Riduzioni di contatori legati al tempo:
+    ~ firstWritingPause --
+    ~ secondWritingPause --
+    ~ thirdWritingPause --
+    ~ fifthWritingPause --
+    
+    ~ lastMindfulness --
+    
+//Aumento di contatori:
+    ~ movementsCounter ++
+
+//Comparsa lettere dopo fine delle storie (così non compaiono subito.
+    {firstCharacterPossibleStates hasnt Chitarra && first_char_story_ended.goodbye:
+            ~ move_entity(FirstCharacterNotes, BusStop)
+            {debug: Ho messo la nota della prima personaggia alla fermata del bus.}
+    }
+    {second_char_story_ended.goodbye:
+            ~ move_entity(SecondCharacterNotes, BusStop)
+            {debug: Ho messo la nota del secondo personaggio alla fermata del bus.}
+    }    
+    {
+        - knowing_second_character.six.theFrog && not are_two_entities_together(TheFrog, Mentor):
+            {debug: Ho spostato la rana allo stagno.}
+            ~  move_entity(TheFrog, GreenhouseMiddlePath)
+        - else:
+            ~  move_entity(TheFrog, Safekeeping)
+            {debug: Ho spostato la rana nel Safekeeping.}
+    }
+//Altre funzioni:
+    -> characters_speaking ->
+    -> randomizer_png_location ->
+    -> story_time_management_for_PNG->    
+->->
+
+//Riduzione del tempo di pausa del dialogo fino a quando non siamo a 0
+=== characters_speaking
+    {
+        - firstPauseTalking > 0:
+            ~ firstPauseTalking --
+            {debug: Il valore di firstPauseTalking è {firstPauseTalking}}
+        
+        - secondPauseTalking > 0:
+            ~ secondPauseTalking --
+        
+        - thirdPauseTalking > 0:
+            ~ thirdPauseTalking --
+        
+        - fifthPauseTalking > 0:
+            ~ fifthPauseTalking --    
+    }
+->->    

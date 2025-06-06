@@ -1,4 +1,3 @@
-~ temp charNameOne = translator(firstCharacterState)
 === first_character ===
     //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
             //Chiacchiera normale
@@ -15,57 +14,59 @@
 
 
 === talk_with_first_character
-~ temp charNameOne = translator(firstCharacterState)
--> common_storylets ->
-
-            {//Se prima chiacchierata
-                - not knowing_first_character.one:
-                    -> knowing_first_character.one
-            //Se prima chiacchierata fatta e passato abbastanza tempo dalla pausa prevista        
-                - firstPauseTalking == 0:
-                    -> hub
-            //Altre opzioni        
-                - else:
-                    {charNameOne}: {~ Ho bisogno di tempo da sola.|Torna tra un po'.|Mi serve un po' di silenzio ora.}
-                -> main    
-            }
-= hub
-~ temp charNameOne = translator(firstCharacterState)
-
-    {charNameOne}: {~ Le farfalle qui giocano per ore!|No dai. Ma hai visto quanto sono carini gli scoiattoli?!|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}
-            + [Ti va di raccontarmi qualcosa di te?]
-                -> knowing_first_character
+    ~ temp charNameOne = translator(firstCharacterState)
+        -> common_storylets ->
+    
+                {//Se prima chiacchierata
+                    - not knowing_first_character.one:
+                        -> knowing_first_character.one
                 
+                //Se prima chiacchierata fatta e passato abbastanza tempo dalla pausa prevista        
+                    - firstPauseTalking == 0:
+                        -> hub
                 
-            //Se non ho ancora fatto il dono e NON ho parlato col mentore e ho parlato abbastanza con lei
-            + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
-                    {charNameOne}: Non voglio snitchare, ma non hai ancora chiesto alla mentore a cosa servono.
-                    {charNameOne}: Se non parli con lei prima poi minimo ci rimane male.
-                        -> main
-            
-            //Se non ho ancora fatto il dono e ho parlato con il mentore e ho parlato abbastanza con lei
-            + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && gifts_and_ink && findedGifts != ()} [Ti vorrei donare questa cosa.]
-                    -> first_story_gift
-        
-            //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
-            + {first_story_gift.ink_outcome && not main_story_first_character && not questions} [Vorrei aiutarti a guardare le cose in modo diverso.]
-                    {translator(firstCharacterState)}: Ama, parla prima con la mentore così ti dice cosa fare e non le prende una sincope se facciamo casini.
+                //Altre opzioni        
+                    - else:
+                        {charNameOne}: {~ Ho bisogno di tempo da sola.|Torna tra un po'.|Mi serve un po' di silenzio ora.}
+                        -> main    
+                }
+    = hub
+    ~ temp charNameOne = translator(firstCharacterState)
+    
+        {charNameOne}: {~ Le farfalle qui giocano per ore!|No dai. Ma hai visto quanto sono carini gli scoiattoli?!|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}
+                + [Ti va di raccontarmi qualcosa di te?]
+                    -> knowing_first_character
+                    
+                    
+                //Se non ho ancora fatto il dono e NON ho parlato col mentore e ho parlato abbastanza con lei
+                + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
+                        {charNameOne}: Non voglio snitchare, ma non hai ancora chiesto alla mentore a cosa servono.
+                        {charNameOne}: Se non parli con lei prima poi minimo ci rimane male.
                             -> main
-                            
-            + {first_story_gift.ink_outcome && not main_story_first_character &&  questions} [Ti va di riscrivere la tua storia con me?]
-                    -> first_story_chech_trigger
-    
-            //SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
-            + {first_story_gift.ink_outcome && main_story_first_character} [Riprendiamo quella storia?]
-                -> main_story_first_character
+                
+                //Se non ho ancora fatto il dono e ho parlato con il mentore e ho parlato abbastanza con lei
+                + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && gifts_and_ink && findedGifts != ()} [Ti vorrei donare questa cosa.]
+                        -> first_story_gift
             
-            + [Lascio il dialogo.]
-                -> main
-            -
-                -> talk_with_first_character
-    
+                //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
+                + {first_story_gift.ink_outcome && not main_story_first_character && not questions} [Vorrei aiutarti a guardare le cose in modo diverso.]
+                        {translator(firstCharacterState)}: Ama, parla prima con la mentore così ti dice cosa fare e non le prende una sincope se facciamo casini.
+                                -> main
+                                
+                + {first_story_gift.ink_outcome && not main_story_first_character &&  questions} [Ti va di riscrivere la tua storia con me?]
+                        -> first_story_chech_trigger
+        
+                //SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
+                + {first_story_gift.ink_outcome && main_story_first_character} [Riprendiamo quella storia?]
+                    -> main_story_first_character
+                
+                + [Lascio il dialogo.]
+                    -> main
+                -
+                    -> talk_with_first_character
+        
 === knowing_first_character
-~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {
             - not one:
@@ -97,8 +98,9 @@
         }
 
     = one
-    ~ temp charNameOne = translator(firstCharacterState)
-    ~ temp charNameFive = translator(fifthCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
+        
         //Presentazione.
         ~ firstStoryQuestCount ++
         
@@ -145,6 +147,7 @@
                 ???: No dai, non devo essere stronza.
                 ???: Però merda se mi manca.
             -
+        
         ???: Non faccio mai niente senza Talco.
         ???: Talco è l'unica persona con cui posso permettermi di litigare.
         ???: E l'unica che mi sopporta da quando ho finito il conservatorio.
@@ -160,6 +163,7 @@
     	    + [Il mio nome è...]
     	        -> name_choice ->
     	    -
+    	
     	{charNameOne}: E i tuoi pronomi?
     	        -> gender ->
     	{charNameOne}: {pronouns has her: Anche io uso i pronomi femminili!|Invece io uso i femminili.}
@@ -250,6 +254,7 @@
                 {charNameOne}: Però ama, parlare con te non è già una forma di azione?
                     ~ firstRed ++
             -
+       
        {charNameOne}: Come mi dovrei chiamare secondo te?
     	    + [<i>Qualsiasi cosa tu abbia pensato, non riesci a dirla.</i>]
     	    -
@@ -264,8 +269,8 @@
             -> main
         
     = two
-    ~ temp charNameOne = translator(firstCharacterState)
-    ~ temp charNameFive = translator(fifthCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         //Paura di deludere la famiglia scelta
         ~ firstStoryQuestCount ++
         
@@ -313,6 +318,7 @@
                 ~ firstYellow ++
     
             -    
+        
         {charNameOne}: Che poi a pensarci bene, non è che saranno tutti i passi di quell'altra?
         {charNameOne}: Cammina così tanto, e per cosa poi?
         {are_two_entities_together(Mentor, PG):{charNameFive}: Non hai idea di quanto lavoro ci sia da fare. Quindi sì, cammino MOLTO.}
@@ -322,9 +328,9 @@
             -> main  
             
     = three
-    ~ temp charNameOne = translator(firstCharacterState)
-    ~ temp charNameFive = translator(fifthCharacterState)
-    ~ firstStoryQuestCount ++
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
+        ~ firstStoryQuestCount ++
         
         {charNameOne}: Stavo pensando ad Anna.
         {charNameOne}: Anna è una mia ama del conservatorio.
@@ -340,7 +346,6 @@
         {charNameOne}: E poi Ennio, no Ennio no.
         {charNameOne}: Ennio dice che ho sbagliato strada.
         
-            
             + [La risposta è sempre dove c'è casino: ascolta Talco!]
                 {charNameOne}: Voi due diventereste bestie in due secondo, cavolo.
                 {charNameOne}: E potrei portarvi sul palco e fare qualcosa di assurdo.
@@ -375,8 +380,7 @@
                 {charNameOne}: E ricostruire sulle macerie che ci circondano.
                 {charNameOne}: Ora datemi il Nobel per la pace, su!
                     ~ firstRed ++        
-                    
-
+            
             -    
         {charNameOne}: Comunque sembra che tutt3 abbiano le idee chiare su cosa dovrei fare.
         {charNameOne}: E dato che nessunə amə ha la stessa opinione delle altre, finirò per deluderne qualcunə.
