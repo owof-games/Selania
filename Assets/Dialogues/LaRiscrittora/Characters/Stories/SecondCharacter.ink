@@ -1760,46 +1760,46 @@
     {charNameTwo}: E lo voglio come mio nuovo nome.
 
         {
-            - secondCharacterPossibleStates has IlRiccio:
+            - secondCharacterPossibleStates has Riccio:
                 {charNameTwo}: Quell'animale è il <b>Riccio</b>.
                 {charNameTwo}: Perché l'unico modo per sopravvivere è difendersi da tutto.
             
-            - secondCharacterPossibleStates has IlGrizzly:
+            - secondCharacterPossibleStates has Grizzly:
                 {charNameTwo}: Il mio vero nome è <b>Grizzly</b>.
                 {charNameTwo}: Combatterò la mia paura e diventerò il più forte di tutti, imbattibile!
                     ~ secondCharacterState = ()
-                    ~ secondCharacterState += IlGrizzly
+                    ~ secondCharacterState += Grizzly
             
-            - secondCharacterPossibleStates has IlLupo:
+            - secondCharacterPossibleStates has Lupo:
                 {charNameTwo}: Mi chiamerò <b>Lupo</b>.
                 {charNameTwo}: E proteggerò il mio branco.
                 {charNameTwo}: Mamma, papà, nonna e mio fratello.
                 {charNameTwo}: Nessuna delle persone a cui voglio bene deve più stare male.
                     ~ secondCharacterState = ()
-                    ~ secondCharacterState += IlLupo
+                    ~ secondCharacterState += Lupo
             
-            - secondCharacterPossibleStates has IlDelfino:
+            - secondCharacterPossibleStates has Delfino:
                 {charNameTwo}: E il mio nome è <b>Delfino</b>.
                 {charNameTwo}: Se lo guardi bene tutto è un gioco.
                 {charNameTwo}: La mia fantasia e le mie bugie aiuteranno le altre persone ad avere meno paura.
                     ~ secondCharacterState = ()
-                    ~ secondCharacterState += IlDelfino                
+                    ~ secondCharacterState += Delfino                
             
-            - secondCharacterPossibleStates has IlCapibara:
+            - secondCharacterPossibleStates has Capibara:
                 {charNameTwo}: Mi chiamerò <b>Capibara</b>.
                 {charNameTwo}: E imparerò ad avere tantissimi amici.
                 {charNameTwo}: Ci sentiremo meno soli!
                 {charNameTwo}: E così avremo meno paura.
                     ~ secondCharacterState = ()
-                    ~ secondCharacterState += IlCapibara
+                    ~ secondCharacterState += Capibara
             
-            - secondCharacterPossibleStates has IlCorvo:
+            - secondCharacterPossibleStates has Corvo:
                 {charNameTwo}: Io sono <b>Corvo</b>.
                 {charNameTwo}: Sono sveglio e posso capire ciò che mi circonda!
                 {charNameTwo}: E posso cambiare le cose che mi fanno paura.
                 {charNameTwo}: Aiutare gli altri.
                     ~ secondCharacterState = ()
-                    ~ secondCharacterState += IlCorvo
+                    ~ secondCharacterState += Corvo
         }
         
          ~ growing ++   
@@ -1855,13 +1855,13 @@
         = goodbye
         ~ temp charNameTwo = translator(secondCharacterState)
         {charNameTwo}: {name}, mi sa che torno a casa.
-        {secondCharacterPossibleStates hasnt IlRiccio: {charNameTwo}: Sì no boh.}       
-        {secondCharacterPossibleStates hasnt IlRiccio: {charNameTwo}: Sai che mi è piaciuta alla fine tutta questa cosa?}
-        {secondCharacterPossibleStates hasnt IlRiccio: {charNameTwo}: Mi hai regalato il migliore compleanno del mondo.}
-        {secondCharacterPossibleStates hasnt IlRiccio: {charNameTwo}: Anche se non era mica davvero il mio compleanno.}
-        {secondCharacterPossibleStates hasnt IlRiccio: {charNameTwo}: Vieni a trovarmi una volta.}
-        {secondCharacterPossibleStates hasnt IlRiccio: {charNameTwo}: Mi mancherai.}  
-        {secondCharacterPossibleStates has IlRiccio: {charNameTwo}: Spero papà non sarà arrabbiato.}        
+        {secondCharacterPossibleStates hasnt Riccio: {charNameTwo}: Sì no boh.}       
+        {secondCharacterPossibleStates hasnt Riccio: {charNameTwo}: Sai che mi è piaciuta alla fine tutta questa cosa?}
+        {secondCharacterPossibleStates hasnt Riccio: {charNameTwo}: Mi hai regalato il migliore compleanno del mondo.}
+        {secondCharacterPossibleStates hasnt Riccio: {charNameTwo}: Anche se non era mica davvero il mio compleanno.}
+        {secondCharacterPossibleStates hasnt Riccio: {charNameTwo}: Vieni a trovarmi una volta.}
+        {secondCharacterPossibleStates hasnt Riccio: {charNameTwo}: Mi mancherai.}  
+        {secondCharacterPossibleStates has Riccio: {charNameTwo}: Spero papà non sarà arrabbiato.}        
     
         ~ move_entity(SecondCharacter, Safekeeping)
         -> main

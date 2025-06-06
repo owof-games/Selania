@@ -5,8 +5,8 @@
                      ----------------------------------*/
 
 //Possibili nomi:
-    LIST secondCharacterPossibleStates = IlRiccio, IlGrizzly, IlLupo, IlDelfino, IlCapibara, IlCorvo
-    VAR secondCharacterState = IlRiccio
+    LIST secondCharacterPossibleStates = Riccio, Grizzly, Lupo, Delfino, Capibara, Corvo
+    VAR secondCharacterState = Riccio
     
     VAR secondStory = NotStarted
 
@@ -143,14 +143,14 @@ VAR secondPurpleMax = false
     {
         - secondCheckColor:
             {
-             - secondCharacterPossibleStates hasnt IlCorvo:
+             - secondCharacterPossibleStates hasnt Corvo:
                 ~ secondCharacterPossibleStates ++
                 {debugChangeName: Aumento lo stato del secondo personaggio, che ora è {secondCharacterPossibleStates }}
             }
         
         - else:
             {
-             - secondCharacterPossibleStates hasnt IlRiccio:
+             - secondCharacterPossibleStates hasnt Riccio:
             ~ secondCharacterPossibleStates --
             {debugChangeName: Diminuisco lo stato del secondo personaggio, che ora è {secondCharacterPossibleStates }}
             }
@@ -161,27 +161,27 @@ VAR secondPurpleMax = false
     
     {
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
-            ~ secondCharacterPossibleStates += IlCorvo
+            ~ secondCharacterPossibleStates += Corvo
                 ->->
         
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2):
-            ~ secondCharacterPossibleStates += IlCapibara   
+            ~ secondCharacterPossibleStates += Capibara   
                 ->-> 
         
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 3):
-            ~ secondCharacterPossibleStates += IlDelfino    
+            ~ secondCharacterPossibleStates += Delfino    
                 ->->
         
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 4):
-            ~ secondCharacterPossibleStates += IlLupo
+            ~ secondCharacterPossibleStates += Lupo
                 ->->
         
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 5):
-            ~ secondCharacterPossibleStates += IlGrizzly
+            ~ secondCharacterPossibleStates += Grizzly
                 ->->
         
         - else:     
-            ~ secondCharacterPossibleStates += IlRiccio
+            ~ secondCharacterPossibleStates += Riccio
                 ->->
     }
     

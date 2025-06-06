@@ -560,33 +560,33 @@
     {are_two_entities_together(SecondCharacter, PG): {charNameTwo}: Devi imparare tante cose sui bambini, tu. Vado a farmi due passi.}
             ~ change_entity_place(SecondCharacter)
     {
-            - secondCharacterPossibleStates has IlRiccio:
+            - secondCharacterPossibleStates has Riccio:
                 {charNameFive}: Mi spiace che non si sia liberato delle sue paure.
                 {charNameFive}: E di quell'atteggiamento violento e fastidioso.
                 {charNameFive}: Forse avrei dovuto darti più aiuto.
                 {charNameFive}: O forse devi imparare meglio ad ascoltare gli altri?
 
-            - secondCharacterPossibleStates has IlGrizzly:
+            - secondCharacterPossibleStates has Grizzly:
                 {charNameFive}: A quanto pare il nostro bambino ha abbracciato il suo lato rabbioso.
                 {charNameFive}: E invece di combatterlo, l'ha fatto proprio.
                 {charNameFive}: Personalmente, la rabbia non mi convince mai molto.
                 {charNameFive}: Porta solo disordine e dolore.
                 {charNameFive}: Ma immagino tu sappia quello che stai facendo, no?
     
-            - secondCharacterPossibleStates has IlLupo:
+            - secondCharacterPossibleStates has Lupo:
                 {charNameFive}: La famiglia è qualcosa di importante, {name}.
                 {charNameFive}: E sono contenta che {charNameTwo} abbia scoperto in sé la voglia di prendersene cura.
                 {charNameFive}: E magari un giorno la sua nonna e suo fratello torneranno sotto il tetto dei genitori.
                 {charNameFive}: Per me sarebbe un finale davvero felice.
 
 
-            - secondCharacterPossibleStates has IlDelfino:
+            - secondCharacterPossibleStates has Delfino:
                 {charNameFive}: Sono perplessa: non pensavo l'avresti spinto ad abbracciare il suo lato più infantile.
                 {charNameFive}: Giocoso.
                 {charNameFive}: So che il tuo lavoro è fare uscire queste persone dal blocco.
                 {charNameFive}: Ma l'unica soluzione era quella di renderlo un giullare?
                 
-            - secondCharacterPossibleStates has IlCapibara:
+            - secondCharacterPossibleStates has Capibara:
                 {charNameFive}: A volte forse devo solo dirmi: non tutto il mondo può essere come vorrei.
                 {charNameFive}: Il fatto che il nostro piccolo amico ora si senta un {charNameTwo} mi lascia perplessa.
                 {charNameFive}: Non sono mai stata una grande fan de "l'unione fa la forza".
@@ -594,7 +594,7 @@
                 {charNameFive}: E un giorno diventerà un uomo responsabile.
                 {charNameFive}: Spero.
             
-            - secondCharacterPossibleStates has IlCorvo:
+            - secondCharacterPossibleStates has Corvo:
                 {charNameFive}: Non credo avresti potuto ottenere un esito migliore.
                 {charNameFive}: La sua curiosità, la sua intelligenza indirizzate verso qualcosa di concreto, utile.
                 {charNameFive}: Ce lo vedo a studiare nuovi modi per curare le persone.

@@ -96,41 +96,41 @@
             ~ return "Violino"
 
     //Personaggia Due       
-        - IlRiccio:
+        - Riccio:
             ~ return "Riccio"
-        - IlGrizzly:
+        - Grizzly:
             ~ return "Grizzly"
-        - IlLupo:
+        - Lupo:
             ~ return "Lupo"
-        - IlDelfino:
+        - Delfino:
             ~ return "Delfino"
-        - IlCapibara:
+        - Capibara:
             ~ return "Capibara"
-        - IlCorvo:
+        - Corvo:
             ~ return "Corvo"
 
     //Personaggia Tre
         - SpettroDelVuoto:
-            ~ return "Il Empty"
-        - IlConsapevole: 
-            ~ return "Il Consapevole"
-        - IlGuarente: 
-            ~ return "Il Guarente"    
-        - IlSocievole: 
-            ~ return "Il Socievole"
-        - IlTerrorizzato: 
-            ~ return "Il Terrorizzato"
-        - LAbbandonato: 
-            ~ return "L'Abbandonato"    
-        - LArrabbiato: 
-            ~ return "L'Arrabbiato"            
+            ~ return "Spettro del Vuoto"
+        - Consapevole: 
+            ~ return "Consapevole"
+        - Guarente: 
+            ~ return "Guarente"    
+        - Socievole: 
+            ~ return "Socievole"
+        - Terrorizzato: 
+            ~ return "Terrorizzato"
+        - Abbandonato: 
+            ~ return "Abbandonato"    
+        - Arrabbiato: 
+            ~ return "Arrabbiato"            
     
     //Personaggia Quattro        
-        - LaMondatrice:
-            ~ return "La Mondatrice"
+        - Mondatrice:
+            ~ return "Mondatrice"
 
     //Personaggia Cinque        
-        - IlMentore:
+        - Mentore:
             ~ return "Mentore"
 
     }        

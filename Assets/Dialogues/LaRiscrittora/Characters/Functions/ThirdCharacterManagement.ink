@@ -5,7 +5,7 @@
                      ----------------------------------*/
 
 //Possibili nomi
-    LIST thirdCharacterPossibleStates = SpettroDelVuoto, LArrabbiato, IlGuarente, IlTerrorizzato, LAbbandonato, IlSocievole, IlConsapevole
+    LIST thirdCharacterPossibleStates = SpettroDelVuoto, Arrabbiato, Guarente, Terrorizzato, Abbandonato, Socievole, Consapevole
     VAR thirdCharacterState = SpettroDelVuoto
     
     VAR thirdStory = NotStarted

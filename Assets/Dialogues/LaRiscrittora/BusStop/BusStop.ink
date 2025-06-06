@@ -249,7 +249,7 @@
         {charNameTwo}: Hai scoperto poi se è elettrica?
             
             {
-                - secondCharacterPossibleStates has IlRiccio:
+                - secondCharacterPossibleStates has Riccio:
                     
                     {charNameTwo}: Qui le cose sono strane.
                     {charNameTwo}: Forse perché sono uguali a prima.
@@ -264,7 +264,7 @@
                     {charNameTwo}: La prof di matematica mi guarda male.
                     {charNameTwo}: Ci sentiamo {name}.
                     
-                - secondCharacterPossibleStates has IlGrizzly:
+                - secondCharacterPossibleStates has Grizzly:
                     
                     {charNameTwo}: Oggi per la prima volta ho litigato con papà.
                     {charNameTwo}: Nel senso che non è stato mica lui a cominciare ma io.
@@ -280,7 +280,7 @@
                     {charNameTwo}: Ma so che tu mica mi avresti guardato così.
                     {charNameTwo}: Salutami la rana!
                     
-                - secondCharacterPossibleStates has IlLupo:
+                - secondCharacterPossibleStates has Lupo:
                     
                     {charNameTwo}: L'altro giorno ho parlato con l'amico di mio fratello.
                     {charNameTwo}: Gli ho detto che per me siamo un branco ma che secondo me lui mica mi ci vede in questo branco.
@@ -295,7 +295,7 @@
                     {charNameTwo}: E voglio portartene uno.
                     {charNameTwo}: A presto!
     
-                - secondCharacterPossibleStates has IlDelfino:
+                - secondCharacterPossibleStates has Delfino:
                     
                     {charNameTwo}: A scuola sto finendo tantissimo nei guai.
                     {charNameTwo}: Ho iniziato a fare qualche dispetto ai bambini prepotenti.
@@ -309,7 +309,7 @@
                     {charNameTwo}: Ma forse qui non te la scrivo, per ora.
                     {charNameTwo}: Ci vediamo!
                     
-                - secondCharacterPossibleStates has IlCapibara:
+                - secondCharacterPossibleStates has Capibara:
                     
                     {charNameTwo}: Ieri ho avuto una conversazione da grandi con mio fratello.
                     {charNameTwo}: Me l'ha fatta perché ho chiamato il suo amico "frocio" quando mi ha sgridato.
@@ -326,7 +326,7 @@
                     {charNameTwo}: E tu hai paura di alcune persone?
                     {charNameTwo}: Ciao ciao!
                     
-                - secondCharacterPossibleStates has IlCorvo:
+                - secondCharacterPossibleStates has Corvo:
                     
                     {charNameTwo}: L'altro giorno ho detto a mamma e papà che voglio diventare un veterinario.
                     {charNameTwo}: Per studiare e salvare gli animali.
@@ -354,7 +354,7 @@
         {charNameTwo}: O se papà l'ha buttata.
             
             {
-                - secondCharacterPossibleStates has IlRiccio:
+                - secondCharacterPossibleStates has Riccio:
                 
                     {charNameTwo}: Le cose a scuola vanno male.
                     {charNameTwo}: L'altro giorno ho picchiato un bambino perché mi ha chiamato "strano".
@@ -369,7 +369,7 @@
                     {charNameTwo}: Mi mancate.
                     {charNameTwo}: Ciao.
     
-                - secondCharacterPossibleStates has IlGrizzly:
+                - secondCharacterPossibleStates has Grizzly:
                 
                     {charNameTwo}: Se l'ha buttata urlo di nuovo, vediamo che mi dice poi.
                     {charNameTwo}: Però ti dovevo dire questa cosa: sono nella squadra di calcio.
@@ -385,7 +385,7 @@
                     {charNameTwo}: E ti aiuto io.
                     {charNameTwo}: Ciao!
     
-                - secondCharacterPossibleStates has IlLupo:
+                - secondCharacterPossibleStates has Lupo:
                 
                     {charNameTwo}: Ma non credo: le cose negli ultimi giorni vanno meglio.
                     {charNameTwo}: Con l'amico di mio fratello ho fatto dei muffin per lui e mamma.
@@ -400,7 +400,7 @@
                     {charNameTwo}: Ti dico poi come è andata!
                     {charNameTwo}: A presto.
                     
-                - secondCharacterPossibleStates has IlDelfino:
+                - secondCharacterPossibleStates has Delfino:
                 
                     {charNameTwo}: In questi giorni ho ripreso a dire delle bugie.
                     {charNameTwo}: Ma invece di dirle piccole, le sto dicendo grandissime.
@@ -414,7 +414,7 @@
                     {charNameTwo}: Salutami la rana!
                     {charNameTwo}: {charNameTwo}.
                     
-                - secondCharacterPossibleStates has IlCapibara:
+                - secondCharacterPossibleStates has Capibara:
                 
                     {charNameTwo}: Dopo che gli ho detto che lui usa quella parola con mio fratello perché ha paura, non mi parla più.
                     {charNameTwo}: Mamma dice che lui ha paura di tutte le cose, ma non lo sa dire.
@@ -429,7 +429,7 @@
                     {charNameTwo}: Vorrei tanto chiederlo alla rana.
                     {charNameTwo}: Salutamela!
                 
-                - secondCharacterPossibleStates has IlCorvo:
+                - secondCharacterPossibleStates has Corvo:
                 
                     {charNameTwo}: Ultimamente parliamo di più.
                     {charNameTwo}: Gli piace parlare di politica.
@@ -457,7 +457,7 @@
         {charNameTwo}: Ciao {name}.
                 
                 {
-                - secondCharacterPossibleStates has IlRiccio:
+                - secondCharacterPossibleStates has Riccio:
                     
                     {charNameTwo}: Ti scrivo da casa di mio fratello.
                     {charNameTwo}: Novità: ora vivo qui!
@@ -476,7 +476,7 @@
                     {charNameTwo}: Salutami {charNameFive}.
                     {charNameTwo}: Ti voglio bene.
                     
-                - secondCharacterPossibleStates has IlGrizzly:
+                - secondCharacterPossibleStates has Grizzly:
                     
                     {charNameTwo}: Sono SUPER ARRABBIATO.
                     {charNameTwo}: CON MIO FRATELLO.
@@ -494,7 +494,7 @@
                     {charNameTwo}: Mi mancate voi.
                     {charNameTwo}: Vorrei sapere cosa fare.
                     
-                - secondCharacterPossibleStates has IlLupo:
+                - secondCharacterPossibleStates has Lupo:
                     
                     {charNameTwo}: Oggi sono triste, e non so perché.
                     {charNameTwo}: Ho dato un pugno a un ragazzo delle medie, ma non mi è mica piaciuto.
@@ -510,7 +510,7 @@
                     {charNameTwo}: Mi mancate.
                     {charNameTwo}: {charNameTwo}.
                     
-                - secondCharacterPossibleStates has IlDelfino:
+                - secondCharacterPossibleStates has Delfino:
                     
                     {charNameTwo}: Se non l'hai capito nell'ultima lettera solo l'ultima frase non era vera: tutte le altre lo erano.
                     {charNameTwo}: Però è successa una cosa divertente, {name}!
@@ -527,7 +527,7 @@
                     {charNameTwo}: Un saluto.
                     {charNameTwo}: {charNameTwo}.
                     
-                - secondCharacterPossibleStates has IlCapibara:
+                - secondCharacterPossibleStates has Capibara:
         
                     {charNameTwo}: Questo cervellino (il mio cervellino) ha trovato una soluzione.
                     {charNameTwo}: Ho parlato con la prof di matematica, e le ho detto delle mie paure.
@@ -546,7 +546,7 @@
                     {charNameTwo}: Salutami la rana.
                     {charNameTwo}: {charNameTwo}.
                 
-                - secondCharacterPossibleStates has IlCorvo:
+                - secondCharacterPossibleStates has Corvo:
                 
                     {charNameTwo}: Ieri è successa una cosa fighissima.
                     {charNameTwo}: Ti ricordi quell'amica di mio fratello, che dovevo conoscere al mare?
@@ -593,9 +593,9 @@
         {charNameThree}: Lettere random note da parte della personaggia
         
         {
-            - thirdCharacterPossibleStates has IlRiccio: 
+            - thirdCharacterPossibleStates has Riccio: 
                 {charNameThree}: xy
-            - thirdCharacterPossibleStates has IlCapibara:
+            - thirdCharacterPossibleStates has Capibara:
                 {charNameThree}: zz
         }
         
@@ -609,9 +609,9 @@
         {charNameThree}: seconda lettera
         
         {
-            - thirdCharacterPossibleStates has IlRiccio: 
+            - thirdCharacterPossibleStates has Riccio: 
                 {charNameThree}: xy
-            - thirdCharacterPossibleStates has IlCapibara:
+            - thirdCharacterPossibleStates has Capibara:
                 {charNameThree}: zz
         }    
         
@@ -625,9 +625,9 @@
         {charNameThree}: terza lettera
         
         {
-            - thirdCharacterPossibleStates has IlRiccio: 
+            - thirdCharacterPossibleStates has Riccio: 
                 {charNameThree}: xy
-            - thirdCharacterPossibleStates has IlCapibara:
+            - thirdCharacterPossibleStates has Capibara:
                 {charNameThree}: zz
         }    
         
@@ -657,9 +657,9 @@
         {charNameFour}: Lettere random note da parte della personaggia
         
         {
-            - fourthCharacterPossibleStates has IlRiccio: 
+            - fourthCharacterPossibleStates has Riccio: 
                 {charNameFour}: xy
-            - fourthCharacterPossibleStates has IlCapibara:
+            - fourthCharacterPossibleStates has Capibara:
                 {charNameFour}: zz
         }    
         
@@ -673,9 +673,9 @@
         {charNameFour}: seconda lettera
         
         {
-            - fourthCharacterPossibleStates has IlRiccio: 
+            - fourthCharacterPossibleStates has Riccio: 
                 {charNameFour}: xy
-            - fourthCharacterPossibleStates has IlCapibara:
+            - fourthCharacterPossibleStates has Capibara:
                 {charNameFour}: zz
         }  
         
@@ -688,9 +688,9 @@
         {charNameFour}: terza lettera
     
         {
-            - fourthCharacterPossibleStates has IlRiccio: 
+            - fourthCharacterPossibleStates has Riccio: 
                 {charNameFour}: xy
-            - fourthCharacterPossibleStates has IlCapibara:
+            - fourthCharacterPossibleStates has Capibara:
                 {charNameFour}: zz
         }      
         
@@ -723,9 +723,9 @@
         {charNameFive}: Lettere random note da parte della personaggia
         
         {
-            - fifthCharacterPossibleStates has IlRiccio: 
+            - fifthCharacterPossibleStates has Riccio: 
                 {charNameFive}: xy
-            - fifthCharacterPossibleStates has IlCapibara:
+            - fifthCharacterPossibleStates has Capibara:
                 {charNameFive}: zz
         }
         
@@ -742,9 +742,9 @@
         {charNameFive}: seconda lettera
         
         {
-            - fifthCharacterPossibleStates has IlRiccio: 
+            - fifthCharacterPossibleStates has Riccio: 
                 {charNameFive}: xy
-            - fifthCharacterPossibleStates has IlCapibara:
+            - fifthCharacterPossibleStates has Capibara:
                 {charNameFive}: zz
         }
             
@@ -760,9 +760,9 @@
         {charNameFive}: terza lettera
         
         {
-            - fifthCharacterPossibleStates has IlRiccio: 
+            - fifthCharacterPossibleStates has Riccio: 
                 {charNameFive}: xy
-            - fifthCharacterPossibleStates has IlCapibara:
+            - fifthCharacterPossibleStates has Capibara:
                 {charNameFive}: zz
         }
             

@@ -5,8 +5,8 @@
                      ----------------------------------*/
  
  //Possibili nomi
-    LIST fifthCharacterPossibleStates= IlMentore, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
-    VAR fifthCharacterState= IlMentore
+    LIST fifthCharacterPossibleStates= Mentore, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
+    VAR fifthCharacterState= Mentore
     
     VAR fifthStory = NotStarted
 

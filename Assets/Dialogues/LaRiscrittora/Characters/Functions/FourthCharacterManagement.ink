@@ -5,8 +5,8 @@
                      ----------------------------------*/
 
 //Possibili nomi
-    LIST fourthCharacterPossibleStates = LaMondatrice, NuovoStatoUnoQuattro, NuovoStatoDueQuattro, NuovoStatoTreQuattro
-    VAR fourthCharacterState = LaMondatrice
+    LIST fourthCharacterPossibleStates = Mondatrice, NuovoStatoUnoQuattro, NuovoStatoDueQuattro, NuovoStatoTreQuattro
+    VAR fourthCharacterState = Mondatrice
     
     
     VAR fourthStory = NotStarted
