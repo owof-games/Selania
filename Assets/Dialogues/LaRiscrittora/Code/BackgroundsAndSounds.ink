@@ -45,7 +45,7 @@
         - entity_location(PG) == Forest:
             ~ return "backForest"
             
-        - entity_location(PG) == BusStop:
+        - entity_location(PG) == TrainStop:
             ~ return "backBusStop"
             
         - entity_location(PG) == GreenhouseMiddlePath:
@@ -74,7 +74,7 @@
         - entity_location(PG) == Forest:
             ~ return "forestSounds"
             
-        - entity_location(PG) == BusStop:
+        - entity_location(PG) == TrainStop:
             ~ return "busstopSounds"
             
         - entity_location(PG) == GreenhouseMiddlePath:

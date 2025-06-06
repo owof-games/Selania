@@ -58,8 +58,7 @@
     INCLUDE Bedroom\Bedroom.ink
 
 //Bus Stop
-    INCLUDE BusStop\BusStop.ink
-
+    INCLUDE TrainStop\TrainStop.ink
 
 //Forest
     INCLUDE Forest\Forest.ink
@@ -85,6 +84,8 @@
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibaryManagement.ink
     INCLUDE Library\StoryNotes.ink
+
+
 
 
 

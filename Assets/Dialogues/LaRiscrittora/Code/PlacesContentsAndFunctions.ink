@@ -1,9 +1,9 @@
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
     VAR bedroomContents = (RoomExit, RoomLoad, PG)
 
-    VAR busStopContents = (FromBusStopToForest, StartingNote, FromBusStopToBedroom, Inventory)
+    VAR trainStopContents = (FromTrainStopToForest, StartingNote, FromTrainStopToBedroom, Inventory)
 
-    VAR forestContents = (Mentor, Bench, TheFungus, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat, Inventory)
+    VAR forestContents = (Mentor, Bench, TheFungus, FromForestToTrainStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat, Inventory)
 
     VAR greenhouseMiddlePathContents = (FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, Inventory)
 
@@ -23,8 +23,8 @@
         - forestContents has entity:
             ~ return Forest
         
-        - busStopContents has entity:
-            ~ return BusStop
+        - trainStopContents has entity:
+            ~ return TrainStop
         
         - libraryContents has entity:
             ~ return Library
@@ -61,8 +61,8 @@
         - Forest:
             ~ forestContents -= entity
         
-        - BusStop:
-            ~ busStopContents -= entity
+        - TrainStop:
+            ~ trainStopContents -= entity
         
         - Library:
             ~ libraryContents -= entity
@@ -93,8 +93,8 @@
         - Forest:
             ~ forestContents += entity
         
-        - BusStop:
-            ~ busStopContents += entity
+        - TrainStop:
+            ~ trainStopContents += entity
         
         - Library:
             ~ libraryContents += entity
@@ -140,9 +140,9 @@
     {
         - are_two_entities_together(entity, PG):
             {
-                - entity_location(PG) == BusStop:
+                - entity_location(PG) == TrainStop:
                     ~ move_entity(entity, Forest)
                 - else:
-                    ~ move_entity(entity, BusStop)
+                    ~ move_entity(entity, TrainStop)
             }
     }      

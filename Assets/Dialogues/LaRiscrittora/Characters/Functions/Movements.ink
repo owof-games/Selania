@@ -10,10 +10,10 @@
     VAR changeLocationTrigger = 3
 
 //Settaggio luoghi attivi a seconda del tier
-    VAR firstTierPlaces =(Forest, BusStop, GreenhouseMiddlePath)
-    VAR secondTierPlaces =(Forest, BusStop, Library, GreenhouseMiddlePath)
-    VAR thirdTierPlaces = (Forest, BusStop, Library, Nest, GreenhouseMiddlePath)
-    VAR fourthTierPlaces = (Forest, BusStop, Library, Nest, Laboratory, GreenhouseMiddlePath)
+    VAR firstTierPlaces =(Forest, TrainStop, GreenhouseMiddlePath)
+    VAR secondTierPlaces =(Forest, TrainStop, Library, GreenhouseMiddlePath)
+    VAR thirdTierPlaces = (Forest, TrainStop, Library, Nest, GreenhouseMiddlePath)
+    VAR fourthTierPlaces = (Forest, TrainStop, Library, Nest, Laboratory, GreenhouseMiddlePath)
 
 //Gestione spostamenti: luoghi. I luoghi si aprono alla fine di ogni storia.
     //First tier: tier iniziale.
@@ -47,7 +47,7 @@
                      ~ move_entity(FromForestToLibrary, Forest)
                      
             - firstStory == Active or firstStory == NotStarted:
-                ~ move_entity(Mentor, BusStop)
+                ~ move_entity(Mentor, TrainStop)
                      ~ firstTier = true
     }
     

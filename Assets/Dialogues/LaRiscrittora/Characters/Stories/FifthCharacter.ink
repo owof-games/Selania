@@ -986,7 +986,7 @@
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             {
                 - fifthCharacterPossibleStates hasnt Chitarra:
-                    ~ move_entity(FifthCharacterNotes, BusStop)
+                    ~ move_entity(FifthCharacterNotes, TrainStop)
             }    
             
         -> main

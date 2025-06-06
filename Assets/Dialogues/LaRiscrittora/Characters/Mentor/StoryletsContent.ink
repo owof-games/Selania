@@ -71,7 +71,7 @@
             
             {
                 - not talk_with_first_character: 
-                    {charNameFive}: Facciamo così: prova a parlare con la persona{entity_location(PG) == BusStop: al nostro fianco.| che troverai alla <b>stazione del treno</b>.}
+                    {charNameFive}: Facciamo così: prova a parlare con la persona{entity_location(PG) == TrainStop: al nostro fianco.| che troverai alla <b>stazione del treno</b>.}
                     {charNameFive}: E poi torna da me.
                     {charNameFive}: Nel frattempo raccolgo le foglie del giardino.
                          ~ firstPauseTalking = 0

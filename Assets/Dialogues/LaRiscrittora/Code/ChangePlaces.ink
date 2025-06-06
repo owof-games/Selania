@@ -2,7 +2,7 @@
 
  === move_between_rooms(my_location)
 //Streets to and into the Bedroom
-    + {are_two_entities_together(PG, FromBusStopToBedroom)} [FromBusStopToBedroom]
+    + {are_two_entities_together(PG, FromTrainStopToBedroom)} [FromTrainStopToBedroom]
         //Calcolo del background
         -> bedroom_backgrounds_calculator ->
         ~ move_entity(PG, Bedroom)
@@ -14,16 +14,16 @@
 
 //Streets to Bus Stop
     + {are_two_entities_together(PG, RoomLoad)} [RoomLoad]
-        ~ move_entity(PG, BusStop)
-        -> bus_stop
+        ~ move_entity(PG, TrainStop)
+        -> train_stop
     
-    + {are_two_entities_together(PG, FromForestToBusStop)}  [FromForestToBusStop]
-            ~ move_entity(PG, BusStop)
+    + {are_two_entities_together(PG, FromForestToTrainStop)}  [FromForestToTrainStop]
+            ~ move_entity(PG, TrainStop)
             -> on_movement_events ->
-                -> bus_stop
+                -> train_stop
                 
 //Streets to Garden       
-    + {are_two_entities_together(PG, FromBusStopToForest)} [FromBusStopToForest]
+    + {are_two_entities_together(PG, FromTrainStopToForest)} [FromTrainStopToForest]
             ~ move_entity(PG, Forest)
             -> on_movement_events ->
                 -> forest

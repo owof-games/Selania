@@ -21,23 +21,23 @@
     
     {
         - movementsCounter == delayFirstChar && firstStory == NotStarted:
-                ~ move_entity(FirstCharacter, BusStop)
+                ~ move_entity(FirstCharacter, TrainStop)
                 ~ firstStory = Active
                 
     //A metà della storia della prima personaggia, compare la seconda      
         - knowing_first_character.three && secondStory == NotStarted:
-                ~ move_entity(SecondCharacter, BusStop)    
+                ~ move_entity(SecondCharacter, TrainStop)    
                 ~ secondStory = Active
     
     //A metà della storia della seconda personaggia e finita la prima (così la biblioteca è aperta), compare la terza
         //- knowing_second_character.four && firstStory == Ended && thirdStory == NotStarted:
-               // ~ move_entity(ThirdCharacter, BusStop)    
+               // ~ move_entity(ThirdCharacter, TrainStop)    
                 //~ thirdStory = Active
                 
     //Dopo un po' da quando la terza storia è finita, compare una quarta personaggia
         //- movementsCounter == delayFourthChar && thirdStory == Ended:
             //Ma magari questo spettro vuole comparire altrove
-                //~ move_entity(FourthCharacter, BusStop)
+                //~ move_entity(FourthCharacter, TrainStop)
                 //~ fourthStory = Active
                 
     //E quando la storia della quarta è a metà, iniziamo a modo quella della mentore
@@ -49,23 +49,23 @@
     //Check per l'allontanamento delle personagge
         //- firstStory == Ended && movementsCounter > 10:
             //~ move_entity(FirstCharacter, Safekeeping)
-            //~ move_entity(FirstCharacterNotes, BusStop)
+            //~ move_entity(FirstCharacterNotes, TrainStop)
             
         //- secondStory == Ended && movementsCounter > 10:
             //~ move_entity(SecondCharacter, Safekeeping)
-            //~ move_entity(SecondCharacterNotes, BusStop)
+            //~ move_entity(SecondCharacterNotes, TrainStop)
             
         //- thirdStory == Ended && movementsCounter > 10:
             //~ move_entity(ThirdCharacter, Safekeeping)
-            //~ move_entity(ThirdCharacterNotes, BusStop)
+            //~ move_entity(ThirdCharacterNotes, TrainStop)
             
         //- fourthStory == Ended && movementsCounter > 10:
             //~ move_entity(FourthCharacter, Safekeeping)
-           // ~ move_entity(FourthCharacterNotes, BusStop)
+           // ~ move_entity(FourthCharacterNotes, TrainStop)
             
         //- fifthStory == Ended && movementsCounter > 10:
             //~ move_entity(Mentor, Safekeeping)
-           // ~ move_entity(FifthCharacterNotes, BusStop)
+           // ~ move_entity(FifthCharacterNotes, TrainStop)
     }
     
         ->->
@@ -149,11 +149,11 @@
 
 //Comparsa lettere dopo fine delle storie (così non compaiono subito.
     {firstCharacterPossibleStates hasnt Chitarra && first_char_story_ended.goodbye:
-            ~ move_entity(FirstCharacterNotes, BusStop)
+            ~ move_entity(FirstCharacterNotes, TrainStop)
             {debug: Ho messo la nota della prima personaggia alla fermata del bus.}
     }
     {second_char_story_ended.goodbye:
-            ~ move_entity(SecondCharacterNotes, BusStop)
+            ~ move_entity(SecondCharacterNotes, TrainStop)
             {debug: Ho messo la nota del secondo personaggio alla fermata del bus.}
     }    
     {
