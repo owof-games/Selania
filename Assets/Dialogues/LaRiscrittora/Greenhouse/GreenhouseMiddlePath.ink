@@ -9,8 +9,8 @@
 
 
 === the_frog
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameOne = translator(firstCharacterState)
 + {are_two_entities_together(TheFrog, PG)} [TheFrog]
     <i>Una rana bluastra ti osserva incuriosita.</i>
         La Rana Parlante: Cra Cra

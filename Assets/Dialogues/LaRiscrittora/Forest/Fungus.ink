@@ -8,11 +8,11 @@
     
     
 === talking_fungus
-~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameOne = translator(firstCharacterState)
+~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameThree = translator(thirdCharacterState)
+~ temp charNameFour = translator(fourthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 
 {
     //Check post storie
@@ -32,11 +32,11 @@
 }
 
     = first_story_ended_check
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-        ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameThree = translator(thirdCharacterState)
+        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
     
     <i>Le nuove radici ci mettono in contatto con la terra che ci circonda.</i>
     <i><b>Ci.</b></i>
@@ -143,11 +143,11 @@
     
     
     = second_story_ended_check
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-        ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameThree = translator(thirdCharacterState)
+        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
     <i>I nostri rami saggiano il cielo.</i>
     <i>L'aria finalmente ci rinfresca.</i>
     <i>E gli uccelli ci raccontano cose su {name}.</i>
@@ -199,11 +199,11 @@
             -> main
         
     = third_story_ended_check
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-        ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameThree = translator(thirdCharacterState)
+        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         
         + [Mi chiedo se sono all'altezza di tutto questo.]
                 ~ playerGreen ++
@@ -223,11 +223,11 @@
             -> main  
         
     = fourth_story_ended_check
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-        ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameThree = translator(thirdCharacterState)
+        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         
         + [Mi chiedo se sono all'altezza di tutto questo.]
                 ~ playerGreen ++
@@ -248,11 +248,11 @@
             -> main 
     
     = fifth_story_ended_check
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-        ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameThree = translator(thirdCharacterState)
+        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         
         + [Mi chiedo se sono all'altezza di tutto questo.]
                 ~ playerGreen ++

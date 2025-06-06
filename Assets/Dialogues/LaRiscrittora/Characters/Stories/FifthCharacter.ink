@@ -1,5 +1,5 @@
 === fifth_character ===
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
@@ -14,22 +14,22 @@
         -> DONE
     
 === talk_with_mentor
-~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameOne = translator(firstCharacterState)
+~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameThree = translator(thirdCharacterState)
+~ temp charNameFour= translator(fourthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 
     -> mentor_and_first_char_storylets
     //-> mentor_and_second_char_storylets
     //-> fifth_character_storylets
 
     = talk
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-    ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
     {charNameFive}: Come posso esserti utile, {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?
     
@@ -55,7 +55,7 @@
 -> main
 
 === talk_with_fifth_character ===
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 <i>C'è qualcosa che ti frulla nella testa.</i>
 
             + [Ti va di raccontarmi qualcosa di te?]
@@ -82,7 +82,7 @@
 
 
 === knowing_fifth_character
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {
             - not one:
@@ -116,7 +116,7 @@
         }
 
     = one
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
         ~ fifthStoryQuestCount ++
         //Amore per il giardinaggio e la possibilità, per la giocatrice, di esprimere qualcosa che poi si potrebbe avvicinare ai possibili finali.
         {charNameFive}: Non è giusto avere delle preferenze, ma la serra è il mio posto preferito.
@@ -167,8 +167,8 @@
             -> main
     
     = two
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     ~ change_entity_place(SecondCharacter)
     ~ fifthStoryQuestCount ++
         
@@ -226,7 +226,7 @@
 
     
     = three
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
         //Questo è un riferimento indiretto anche ai figli che ora non la chiamano molto.
         ~ fifthStoryQuestCount ++
          
@@ -280,8 +280,8 @@
     
     
     = four
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
     ~ change_entity_place(SecondCharacter)
         //Responsabilità
         ~ fifthStoryQuestCount ++
@@ -344,7 +344,7 @@
              ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
     = five
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
         //Presentazione.
         ~ fifthStoryQuestCount ++
@@ -423,7 +423,7 @@
     
     
     = six
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
     // -> si parla esplicitamente di responsabilità personale (in antitesi anche con la visione del fungo)? Questa è una visione di RABBIA.
 
@@ -453,7 +453,7 @@
              ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
     = seven
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
         //Presentazione.
         ~ fifthStoryQuestCount ++
@@ -482,7 +482,7 @@
             
             
     = eight
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
         //Presentazione.
         ~ fifthStoryQuestCount ++
@@ -511,7 +511,7 @@
     
     
     = nine
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
         //Presentazione.
         ~ fifthStoryQuestCount ++
@@ -539,7 +539,7 @@
             -> main    
     
     = ten
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
         //Presentazione.
         ~ fifthStoryQuestCount ++
@@ -567,7 +567,7 @@
             -> main    
     
     = eleven
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
         //Presentazione.
         ~ fifthStoryQuestCount ++
@@ -594,7 +594,7 @@
              ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main    
     = twelve
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
         //Presentazione.
         ~ fifthStoryQuestCount ++
@@ -629,7 +629,7 @@
 
 
 === fifth_story_gift ===
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 <i> Stai per donare qualcosa a {charNameFive}.</i>
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += Mentor
@@ -644,7 +644,7 @@
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
 === fifth_story_chech_trigger
-      ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+      ~ temp charNameFive = translator(fifthCharacterState)
       //In questa storia non ci sono trigger, lascio la struttura perché non si sa mai.
       
         //{
@@ -666,7 +666,7 @@
         -> END
 
 === main_story_fifth_character
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
     {
         - not confession:
@@ -677,7 +677,7 @@
             -> one
     }
     = confession
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
         {charNameFive}: Ho realizzato una cosa, una cosa su noi due.
             -> secondAffinityCalc ->
         {
@@ -707,7 +707,7 @@
 
 
     = statement
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
         <i>A seguito del rapporto che {name} ha creato con {charNameFive} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità.|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(secondCharacterInkLevel)
@@ -718,7 +718,7 @@
             -> main
 
     = one
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     {name}: Prima hai detto che hai il terrore di fare una scelta.
         
         + [Qui hai accettato il tuo nuovo nome.]
@@ -759,7 +759,7 @@
         }        
         
     = two
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
 
         + [Con Talco puoi litigare, eppure siete legatissim3.]
             {name}: Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
@@ -802,7 +802,7 @@
         }
         
     = three
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
             
         + [Se non tiri nessun dado, non c'è storia da far avanzare.]
          
@@ -842,7 +842,7 @@
         }
     
     = four
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
 
         + [Giocare è bello perché puoi sempre Chitarrare a farlo.]
 
@@ -880,7 +880,7 @@
         -> ending
 
     = ending
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
      Per questo ti dico...
         + {fifthRed > 0} [Prendi una strada e se non ti piace cambiala!]
         
@@ -942,7 +942,7 @@
     
     
     = secret_ending
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
         {charNameFive}: C'è una cosa che vorrei dirti, {name}.
         {charNameFive}: Riguarda Il mentore.
 
@@ -952,7 +952,7 @@
                 -> main
             
     = exit
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
         {charNameFive}: Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
             ~ fifthStory = Ended
             ~ movementsCounter = 0
@@ -960,7 +960,7 @@
         -> main  
     
 === fifth_char_story_ended
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
 
@@ -977,7 +977,7 @@
         -> main
         
         = goodbye
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         {charNameFive}: {name}, per me è arrivato il momento di tornare a casa.
         {firstCharacterPossibleStates hasnt Chitarra: {charNameFive}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
         {firstCharacterPossibleStates hasnt Chitarra: {charNameFive}: Grazie per quello che hai fatto, davvero.}
@@ -995,7 +995,7 @@
 
 
 === fifth_character_opinions
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
         {   
             //Opinioni dopo la fine della terza storia
             - fourthTier == true:
@@ -1012,25 +1012,25 @@
         }
 
    = one
-   ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+   ~ temp charNameFive = translator(fifthCharacterState)
     {charNameFive}: {~ Sinceramente, non so che ne sarebbe di questo luogo senza tutta la manutenzione che devo fare.|Hai notato la bacheca alla stazione dei treni? Anche se è da molto che non arrivano lettere.|A volte vorrei che le cose in serra crescessero più velocemente, così da sapere subito se ho sbagliato qualcosa.|A ovest dello stagno c'è spesso un grande baccano, ma fiori e fieno sono troppo alti per poter vedere cosa ci sia da quelle parti.}
             ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
     
     = two
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     {charNameFive}: {~ Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.|A volte ho questo timore: posso davvero essere una buona mentore, anche se sono poco istruita?|Sono contenta di aver aperto la biblioteca, ma quella poltrona mi invita troppo a riposare, quando invece ci sono mille cose da fare.}
             ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
             
     = three
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     {charNameFive}: {~ xxx|yyy}
             ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main
             
     = four
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     {charNameFive}: {~ xxx|yyy}
             ~ fifthPauseTalking = fifthCharPauseDurantion
             -> main        

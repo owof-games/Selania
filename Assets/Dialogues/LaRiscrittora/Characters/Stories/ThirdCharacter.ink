@@ -1,5 +1,5 @@
 === third_character ===
-~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+~ temp charNameThree = translator(thirdCharacterState)
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
@@ -15,7 +15,7 @@
     
 
 === talk_with_third_character ===
-~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+~ temp charNameThree = translator(thirdCharacterState)
 
    {//Se prima chiacchierata
         - not knowing_third_character.one:
@@ -30,7 +30,7 @@
     }
 
 = hub
-~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+~ temp charNameThree = translator(thirdCharacterState)
 
     {charNameThree}: {~ Ero sicura di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicura di star capendo tutto di questo luogo.}
             + [Ti va di raccontarmi qualcosa di te?]
@@ -58,7 +58,7 @@
 
 
 === knowing_third_character
-~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+~ temp charNameThree = translator(thirdCharacterState)
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {
             - not one:
@@ -90,7 +90,7 @@
         }
 
     = one
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
     
         //Presentazione.
         ~ thirdStoryQuestCount ++
@@ -132,7 +132,7 @@
              ~ thirdPauseTalking = thirdCharPauseDurantion
             -> main
     = two
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
     
         //Presentazione.
         ~ thirdStoryQuestCount ++
@@ -162,7 +162,7 @@
 
     
     = three
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
     
         //Presentazione.
         ~ thirdStoryQuestCount ++
@@ -193,7 +193,7 @@
     
     
     = four
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
     
         //Presentazione.
         ~ thirdStoryQuestCount ++
@@ -220,7 +220,7 @@
              ~ thirdPauseTalking = thirdCharPauseDurantion
             -> main
     = five
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
     
         //Presentazione.
         ~ thirdStoryQuestCount ++
@@ -249,7 +249,7 @@
     
     
     = six
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
     
         //Presentazione.
         ~ thirdStoryQuestCount ++
@@ -276,7 +276,7 @@
              ~ thirdPauseTalking = thirdCharPauseDurantion
             -> main
     = seven
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
     
         //Presentazione.
         ~ thirdStoryQuestCount ++
@@ -305,7 +305,7 @@
             
             
     = eight
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
     
         //Presentazione.
         ~ thirdStoryQuestCount ++
@@ -334,7 +334,7 @@
     
     
     = nine
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
     
         //Presentazione.
         ~ thirdStoryQuestCount ++
@@ -362,7 +362,7 @@
             -> main    
     
     = ten
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
     
         //Presentazione.
         ~ thirdStoryQuestCount ++
@@ -390,7 +390,7 @@
             -> main    
     
     = eleven
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
     
         //Presentazione.
         ~ thirdStoryQuestCount ++
@@ -417,7 +417,7 @@
              ~ thirdPauseTalking = thirdCharPauseDurantion
             -> main    
     = twelve
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
     
         //Presentazione.
         ~ thirdStoryQuestCount ++
@@ -450,14 +450,14 @@
 
         
 === third_character_opinions
-~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+~ temp charNameThree = translator(thirdCharacterState)
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
     {charNameThree}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
             -> main
 
 
 === third_story_gift ===
-~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+~ temp charNameThree = translator(thirdCharacterState)
 <i> Stai per donare qualcosa a {charNameThree}.</i>
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += ThirdCharacter
@@ -472,7 +472,7 @@
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
 === third_story_chech_trigger
-      ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+      ~ temp charNameThree = translator(thirdCharacterState)
       //In questa storia non ci sono trigger, lascio la struttura perché non si sa mai.
       
         //{
@@ -494,7 +494,7 @@
         -> END
 
 === main_story_third_character
-~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+~ temp charNameThree = translator(thirdCharacterState)
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
     {
         - not confession:
@@ -505,7 +505,7 @@
             -> one
     }
     = confession
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
         {charNameThree}: Ho realizzato una cosa, una cosa su noi due.
             -> thirdAffinityCalc ->
         {
@@ -535,7 +535,7 @@
 
 
     = statement
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
         <i>A seguito del rapporto che {name} ha creato con {charNameThree} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità.|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(thirdCharacterInkLevel)
@@ -546,7 +546,7 @@
             -> main
 
     = one
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
     {name}: Prima hai detto che hai il terrore di fare una scelta.
         
         + [Qui hai accettato il tuo nuovo nome.]
@@ -587,7 +587,7 @@
         }        
         
     = two
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
 
         + [Con Talco puoi litigare, eppure siete legatissim3.]
             {name}: Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
@@ -630,7 +630,7 @@
         }
         
     = three
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
             
         + [Se non tiri nessun dado, non c'è storia da far avanzare.]
          
@@ -670,7 +670,7 @@
         }
     
     = four
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
 
         + [Giocare è bello perché puoi sempre Chitarrare a farlo.]
 
@@ -708,7 +708,7 @@
         -> ending
 
     = ending
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
      Per questo ti dico...
         + {thirdRed > 0} [Prendi una strada e se non ti piace cambiala!]
         
@@ -770,7 +770,7 @@
     
     
     = secret_ending
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
         {charNameThree}: C'è una cosa che vorrei dirti, {name}.
         {charNameThree}: Riguarda Il mentore.
 
@@ -780,7 +780,7 @@
                 -> main
             
     = exit
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
         {charNameThree}: Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
             ~ thirdStory = Ended
             ~ movementsCounter = 0
@@ -788,7 +788,7 @@
         -> main  
     
 === third_char_story_ended
-~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+~ temp charNameThree = translator(thirdCharacterState)
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
 
@@ -805,7 +805,7 @@
         -> main
         
         = goodbye
-        ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
+        ~ temp charNameThree = translator(thirdCharacterState)
         {charNameThree}: {name}, per me è arrivato il momento di tornare a casa.
         {firstCharacterPossibleStates hasnt Chitarra: {charNameThree}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
         {firstCharacterPossibleStates hasnt Chitarra: {charNameThree}: Grazie per quello che hai fatto, davvero.}

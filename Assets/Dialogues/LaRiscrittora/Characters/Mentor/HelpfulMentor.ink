@@ -4,7 +4,7 @@
        
  ----------------------------------*/
  === support
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     - (top)
     {charNameFive}: Hai bisogno dei miei consigli?
         + {gifts_and_ink}[Mi ripeteresti cosa devo fare?]
@@ -21,7 +21,7 @@
             -> top   
 
     = myself
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     {charNameFive}: C'è qualcosa che posso fare per aiutarti?
         + [Vorrei cambiare il mio nome.]
                 -> name_choice -> support
@@ -43,11 +43,11 @@
  ----------------------------------*/
 
 === tutorial
-~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameOne = translator(firstCharacterState)
+~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameThree = translator(thirdCharacterState)
+~ temp charNameFour= translator(fourthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 
 //Strutturare come wave sintetica?
     {charNameFive}: Ecco i luoghi che puoi visitare in questo momento.
@@ -113,7 +113,7 @@
     -> talk_with_mentor
 
 === to_do
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 
         {gifts_and_ink:{charNameFive}: La prima cosa da fare è: conquistare la <b>fiducia</b> della persona che devi aiutare.}
         {gifts_and_ink:{charNameFive}: Ci <b>parli</b>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.}
@@ -129,7 +129,7 @@
 
  
  === trigger_warning ===
- ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+ ~ temp charNameFive = translator(fifthCharacterState)
  
     {charNameFive}: Questi sono i principali temi delicati che potresti incontrare durante le tue chiacchierate.
     {charNameFive}: I miei poteri si limitano all'ambiente: oggetti, storie e cose che incontrerai non parleranno di quello che vuoi evitare.
@@ -438,7 +438,7 @@
 
 
  === elementi_serra
-  ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+  ~ temp charNameFive = translator(fifthCharacterState)
     {charNameFive}: Come posso aiutarti, {name}?
     {
         - la_spazzata.step_tre.colto or edera_delle_amanti.step_tre.colto or lichene_degli_abissi.step_tre.colto or canto_delle_compagne.step_tre.colto:
@@ -566,7 +566,7 @@
  }
  
     = one
-     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+     ~ temp charNameFive = translator(fifthCharacterState)
      
         {charNameFive}: Quando inizio a pensare molto, ma molto molto, una cosa che mi aiuta è concentrarmi su quello che mi circonda.
         {charNameFive}: Inizio ad osservare un oggetto e a dirmi dentro la testa cosa è.
@@ -580,7 +580,7 @@
             ->->
     
     = two
-     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+     ~ temp charNameFive = translator(fifthCharacterState)
      
         {charNameFive}: Ci sono volte in cui mi focalizzo solo sulle cose che non vanno.
         {charNameFive}: Una cosa che mi aiuta in queste situazioni è puntare una sveglia ogni due ore.
@@ -594,7 +594,7 @@
         ->->
     
     = three
-     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+     ~ temp charNameFive = translator(fifthCharacterState)
      
      {charNameFive}: Un tempo conoscevo una ragazza che soffriva di attacchi d'ansia e che mi ha dato una dritta che puoi applicare ovunque.
      {charNameFive}: Se il pensiero si inceppa su qualcosa, prova a stringere con forza degli oggetti che hai vicino.
@@ -606,7 +606,7 @@
         ->->
     
     = four
-     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+     ~ temp charNameFive = translator(fifthCharacterState)
      
     {charNameFive}: Il mio migliore amico è il body scan.
     {charNameFive}: Lo faccio al risveglio tra gli arbusti della foresta.
@@ -621,7 +621,7 @@
         ->->
         
     = five
-     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+     ~ temp charNameFive = translator(fifthCharacterState)
      
     {charNameFive}: Non so se ti capita di avere l'addome contratto.
     {charNameFive}: Per molte persone quell'area, e il diaframma in particolare, accumula un sacco di tensione e preoccupazione.

@@ -23,8 +23,8 @@
 
 
 === first_character_notes ===
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
     + {are_two_entities_together(FirstCharacterNotes, PG)}[FirstCharacterNotes]
     
@@ -54,8 +54,8 @@
         }
     
     = one
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         
         {charNameOne}: Ciao {name}, come stai?
         {charNameOne}: Alla fine Talco è sempre statə qui, me idiota.
@@ -100,8 +100,8 @@
             -> main
     
     = two
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
     {charNameOne}: Ciao {name}, qui è sempre {charNameOne} che ti scrive.
     {charNameOne}: Sono passate settimane dal mio ritorno, e finalmente ho avuto il coraggio di parlare con mio padre.
@@ -144,8 +144,8 @@
         -> main
         
     = three
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
     {charNameOne}: Ciao ama!
     {charNameOne}: Indovina chi ha fatto il suo primo concerto?
@@ -239,8 +239,8 @@
         }
     
     = one
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         
         {charNameTwo}: Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {name};
         {charNameTwo}: Cioè a te.
@@ -344,8 +344,8 @@
                 -> main
     
     = two
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         
         {charNameTwo}: Che strano.
         {charNameTwo}: Ho lasciato l'altra lettera sul comodino di notte.
@@ -451,8 +451,8 @@
                 -> main
     
     = three
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         
         {charNameTwo}: Ciao {name}.
                 
@@ -587,8 +587,8 @@
         }
         
     = one
-        ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameThree = translator(thirdCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         
         {charNameThree}: Lettere random note da parte della personaggia
         
@@ -603,8 +603,8 @@
             -> main
     
     = two
-        ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameThree = translator(thirdCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         
         {charNameThree}: seconda lettera
         
@@ -619,8 +619,8 @@
             -> main
     
     = three
-        ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameThree = translator(thirdCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         
         {charNameThree}: terza lettera
         
@@ -651,8 +651,8 @@
         }
         
     = one
-        ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         
         {charNameFour}: Lettere random note da parte della personaggia
         
@@ -667,8 +667,8 @@
             -> main
     
     = two
-        ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         
         {charNameFour}: seconda lettera
         
@@ -683,8 +683,8 @@
             -> main
     
     = three
-        ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         {charNameFour}: terza lettera
     
         {
@@ -714,11 +714,11 @@
         }
         
     = one
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-        ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameThree = translator(thirdCharacterState)
+        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         
         {charNameFive}: Lettere random note da parte della personaggia
         
@@ -733,11 +733,11 @@
             -> main
     
     = two
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-        ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameThree = translator(thirdCharacterState)
+        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         
         {charNameFive}: seconda lettera
         
@@ -752,11 +752,11 @@
             -> main
     
     = three
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-        ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameThree = translator(thirdCharacterState)
+        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         {charNameFive}: terza lettera
         
         {

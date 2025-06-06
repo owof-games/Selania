@@ -55,7 +55,7 @@
         ->->
 
 === secondAffinityCheckCalc ===
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+~ temp charNameTwo = translator(secondCharacterState)
     
     {
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):

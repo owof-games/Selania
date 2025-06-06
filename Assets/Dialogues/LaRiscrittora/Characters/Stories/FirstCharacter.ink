@@ -1,4 +1,4 @@
-~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+~ temp charNameOne = translator(firstCharacterState)
 === first_character ===
     //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
             //Chiacchiera normale
@@ -15,7 +15,7 @@
 
 
 === talk_with_first_character
-~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+~ temp charNameOne = translator(firstCharacterState)
 -> common_storylets ->
 
             {//Se prima chiacchierata
@@ -30,7 +30,7 @@
                 -> main    
             }
 = hub
-~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+~ temp charNameOne = translator(firstCharacterState)
 
     {charNameOne}: {~ Le farfalle qui giocano per ore!|No dai. Ma hai visto quanto sono carini gli scoiattoli?!|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}
             + [Ti va di raccontarmi qualcosa di te?]
@@ -49,7 +49,7 @@
         
             //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
             + {first_story_gift.ink_outcome && not main_story_first_character && not questions} [Vorrei aiutarti a guardare le cose in modo diverso.]
-                    {uppercaseTranslator(firstCharacterState)}: Ama, parla prima con la mentore così ti dice cosa fare e non le prende una sincope se facciamo casini.
+                    {translator(firstCharacterState)}: Ama, parla prima con la mentore così ti dice cosa fare e non le prende una sincope se facciamo casini.
                             -> main
                             
             + {first_story_gift.ink_outcome && not main_story_first_character &&  questions} [Ti va di riscrivere la tua storia con me?]
@@ -65,7 +65,7 @@
                 -> talk_with_first_character
     
 === knowing_first_character
-~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+~ temp charNameOne = translator(firstCharacterState)
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {
             - not one:
@@ -97,8 +97,8 @@
         }
 
     = one
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
         //Presentazione.
         ~ firstStoryQuestCount ++
         
@@ -264,8 +264,8 @@
             -> main
         
     = two
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
         //Paura di deludere la famiglia scelta
         ~ firstStoryQuestCount ++
         
@@ -322,8 +322,8 @@
             -> main  
             
     = three
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     ~ firstStoryQuestCount ++
         
         {charNameOne}: Stavo pensando ad Anna.
@@ -387,8 +387,8 @@
             -> main
         
     = four
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     //Silenzio
         ~ firstStoryQuestCount ++
         
@@ -441,9 +441,9 @@
             -> main 
             
     = five
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     ~ firstStoryQuestCount ++
     
         {charNameOne}: Hai presente quel meme del tizio che sta a una festa in un angolo.
@@ -502,9 +502,9 @@
             -> main
         
     = six
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
         //Paura delle conseguenze della scelta.
         ~ firstStoryQuestCount ++
         
@@ -566,9 +566,9 @@
             -> main
         
     = seven
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     //Razionalità
         ~ firstStoryQuestCount ++
         
@@ -617,9 +617,9 @@
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main           
     = eight
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     ~ firstStoryQuestCount ++
         
         {charNameOne}: Giuro che non shippo il Ghiberti, ma continuo a pensare a quello che ci siamo dette prima.
@@ -678,9 +678,9 @@
             -> main
     
     = nine
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
         //Voglia di fare qualcosa di utile, importante
         ~ firstStoryQuestCount ++
         
@@ -733,9 +733,9 @@
              ~ firstPauseTalking = firstCharPauseDurantion
             -> main   
     = ten
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     ~ firstStoryQuestCount ++
         
         {charNameOne}: Comunque non è che penso solo a me stessa ama, giuro.
@@ -795,9 +795,9 @@
             -> main
     
     = eleven
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
         //Famiglia d'origine
         ~ firstStoryQuestCount ++
         
@@ -853,9 +853,9 @@
             -> main
             
     = twelve
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     ~ firstStoryQuestCount ++
     
         {charNameOne}: Comunque in merito a quello che ti dicevo prima, ama: non è che papà sia un mostro, sia chiaro.
@@ -917,7 +917,7 @@
 
 
  === first_story_gift ===
-~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+~ temp charNameOne = translator(firstCharacterState)
 <i> Stai per donare qualcosa a {charNameOne}.</i>
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += FirstCharacter
@@ -932,7 +932,7 @@
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
     === first_story_chech_trigger
-      ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+      ~ temp charNameOne = translator(firstCharacterState)
       //In questa storia non ci sono trigger, lascio la struttura perché non si sa mai.
       
         //{
@@ -954,7 +954,7 @@
         -> END
 
 === main_story_first_character
-~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+~ temp charNameOne = translator(firstCharacterState)
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
     {
         - not confession:
@@ -966,9 +966,9 @@
     }
     = confession
     //Per il feedback, temi legati al rapporto, all'amicizia
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
         {charNameOne}: Ho capito una cosa su di noi, ama.
         {
             -   are_two_entities_together(Mentor, PG):{charNameFive}: Sicuro è il caso che vi lasci il vostro spazio.
@@ -1025,7 +1025,7 @@
 
 
     = statement
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
         <i>A seguito del rapporto che {name} ha creato con {charNameOne} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(firstCharacterInkLevel)
@@ -1036,9 +1036,9 @@
             -> main
 
     = one
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     {
         -   are_two_entities_together(Mentor, PG):{charNameFive}: Bene, è il momento che mi allontani.
                 ~ change_entity_place(Mentor)
@@ -1098,7 +1098,7 @@
         }        
         
     = two
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
     {name}: Temi che le persone a cui vuoi bene si sentano tradite dalla scelta che farai.
 
         + [Con Talco puoi litigare, eppure siete legatissim3.]
@@ -1151,7 +1151,7 @@
         }
         
     = three
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
     {name}: Vedi una scelta come una strada chiusa, qualcosa da cui non poter tornare indietro.
 
             
@@ -1206,7 +1206,7 @@
         }
     
     = four
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
         {name} Questo posto ti ha assegnato un nome, e quel nome è Chitarra. Ma tu lo vedi come una rinuncia.
 
         + [Giocare è bello perché puoi sempre rinunciare a farlo.]
@@ -1249,7 +1249,7 @@
         -> ending
 
     = ending
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
      Per questo ti dico:
         + {firstRed > 0} [Prendi una strada e se non ti piace cambiala!]
         
@@ -1325,8 +1325,8 @@
     
     
     = secret_ending
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
         {charNameOne}: C'è una cosa che devo dirti ama.
         {charNameOne}: Riguarda {charNameFive}.
@@ -1340,7 +1340,7 @@
                 -> main
             
     = exit
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
         {charNameOne}: E ora resterò qui a romperti le gonadi ancora per un po', in attesa del prossimo treno.
             ~ firstStory = Ended
             ~ movementsCounter = 0
@@ -1348,7 +1348,7 @@
         -> main  
     
 === first_char_story_ended
-~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+~ temp charNameOne = translator(firstCharacterState)
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
 
@@ -1365,7 +1365,7 @@
         -> main
         
         = goodbye
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
         {charNameOne}: Ama: è il momento di tornare a casa.
         {firstCharacterPossibleStates hasnt Chitarra: {charNameOne}: Non ho idea di che cosa accadrà, sinceramente, ma almeno ora mi sento pronta.}
         {firstCharacterPossibleStates hasnt Chitarra: {charNameOne}: E non cringiare ma: grazie. Mi hai dato una mano enorme. Me lo ricorderò.}
@@ -1382,7 +1382,7 @@
 
 
 === first_character_opinions
-~ temp charNameOne = uppercaseTranslator(firstCharacterState) 
+~ temp charNameOne = translator(firstCharacterState) 
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
     {charNameOne}: {~ Talco dice sempre che bisogna sporcarsi le mani per capire il mondo.|Se proprio devo restare qui, tiro su una band con le api. Sono troppo chaddone loro.|Comunque il Ghiberti ha una moglie che è stra in gamba. Forse a volte ci si deve compensare. E visto che Talco è svegliə, io allora sono l'idiota della cumpa.|Resti tra noi, ma il Conservatorio è un posto del cazzo. C'è una competitività che non c'entra nulla con la musica.|Mi scoccia litigare con mio padre, ma io e il suo modo di fare NON. ANDIAMO. D'ACCORDO. Zero, ama. Zero.}
         ~ firstPauseTalking = firstCharPauseDurantion

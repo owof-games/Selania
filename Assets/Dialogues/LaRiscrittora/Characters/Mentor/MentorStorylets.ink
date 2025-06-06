@@ -1,9 +1,9 @@
 === mentor_and_first_char_storylets ===
-~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameOne = translator(firstCharacterState)
+~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameThree = translator(thirdCharacterState)
+~ temp charNameFour= translator(fourthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 
 {
     - welcome == 0:
@@ -65,11 +65,11 @@
 
 
 === mentor_and_second_char_storylets ===
-~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameOne = translator(firstCharacterState)
+~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameThree = translator(thirdCharacterState)
+~ temp charNameFour= translator(fourthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 
 {
 
@@ -93,11 +93,11 @@
 
 
 === fifth_character_storylets ===
-~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameOne = translator(firstCharacterState)
+~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameThree = translator(thirdCharacterState)
+~ temp charNameFour= translator(fourthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 
 {
 //Feedback
@@ -145,7 +145,7 @@
 
 // STORYLETS PRESENTAZIONE DEI LUOGHI
 // === first_greenhouse_visit
-// ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+// ~ temp charNameFive = translator(fifthCharacterState)
 
 //     {charNameFive}: Hai trovato la serra!
 //     {charNameFive}: Qui puoi coltivare cose molto diverse tra loro.
@@ -162,7 +162,7 @@
 //         -> talk_with_mentor
 
 // === first_bus_stop_visit
-// ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+// ~ temp charNameFive = translator(fifthCharacterState)
 //     {charNameFive}: Questa è la stazione del treno.
 //     {charNameFive}: È un posto di passaggio: è da qui che arrivano e vanno le persone che cercano il tuo aiuto.
 //     {charNameFive}: Ed è da qui che potrai andare e tornare quando vorrai.
@@ -170,7 +170,7 @@
 //         -> talk_with_mentor
         
 // === first_library_visit
-// ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+// ~ temp charNameFive = translator(fifthCharacterState)
 //     {charNameFive}: La biblioteca!
 //     {charNameFive}: Sinceramente, è stata una fatica immensa sbloccarla.
 //     {charNameFive}: Avrei voluto trovare qualcosa di più utile.
@@ -185,7 +185,7 @@
 
 
 === first_nest_visit
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 
     -> talk_with_mentor
 
@@ -193,7 +193,7 @@
 
 
 === first_laboratory_visit
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 
     -> talk_with_mentor
 
@@ -205,11 +205,11 @@
  ----------------------------------*/
 
 === welcome ===
-~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameOne = translator(firstCharacterState)
+~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameThree = translator(thirdCharacterState)
+~ temp charNameFour= translator(fourthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 
     ???: Sapevo che sarebbe arrivata una nuova persona!
     ???: Immagino tu abbia un milione di domande, vero?
@@ -225,7 +225,7 @@
         
         * (chiSei) [Chi sei?]
             ???: La persona che tiene in piedi questo luogo.
-            ???: Ma tu puoi chiamarmi <b>{uppercaseTranslator(fifthCharacterState)}</b>.
+            ???: Ma tu puoi chiamarmi <b>{translator(fifthCharacterState)}</b>.
             {charNameFive}: Così puoi ricordarti con facilità a cosa servo.
                 -> top
         
@@ -251,8 +251,8 @@
         * -> your_name
     
     = your_name
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         
         {chiSei:{charNameFive}|???}: Come ti devo chiamare?
         {chiSei:{charNameFive}|???}: Puoi usare un nome qualsiasi: prendi questa occasione come un nuovo inizio.
@@ -286,11 +286,11 @@
 
             
     === gifts_and_ink
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-    ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
         
         {charNameFive}: Parliamo di doveri, {name}.
         {charNameFive}: Ogni tanto compariranno delle persone nuove.
@@ -393,11 +393,11 @@
 
     
     === questions
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-    ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
         {firstCharacterInkLevel == Empty or firstCharacterInkLevel == Low: {charNameFive}: Non hai ottenuto molto inchiostro. Ma come si dice: se {pronouns has him: l'alunno|{pronouns has her: la alunna|l'alunnə}} sbaglia, la colpa è del maestro.}
         {firstCharacterInkLevel == Normal: {charNameFive}: Bel colpo! Ti sei {pronouns has him: guadagnato|{pronouns has her: guadagnata|guadagnatə}} subito una bella dose di inchiostro! Avessi fatto meglio il mio lavoro, sarebbe stato il massimo!}
@@ -447,11 +447,11 @@
     
    
    === little_storylets
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-    ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
     {name}: Vorrei raccontarti una cosa strana.
         * (voices){pre_test}[C'è una voce che mi racconta cose.]
@@ -496,11 +496,11 @@
    
    //Feedback//
 === first_character_feedback
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-    ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
         {charNameFive}: Hai concluso la tua prima riscrittura, {name}!
         {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Mmm, sembra l'ora della pagella. Me ne vado.}
@@ -549,11 +549,11 @@
                 -> main
           
    === second_character_feedback
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-    ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)   
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)   
     
    {charNameFive}: Hai finito il percorso con {charNameTwo}, {name}!
    {charNameFive}: Ed entrambi mi avete stupita: non pensavo davvero che un bambino avrebbe avuto bisogno di questo luogo.
@@ -612,42 +612,42 @@
    -> talk_with_mentor
    
    === third_character_feedback
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-    ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState) 
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState) 
     
    third_character_feedback
    -> talk_with_mentor
    
    === fourth_character_feedback
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-    ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
     fourth_character_feedback
     -> talk_with_mentor
     
     === fifth_character_feedback
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-    ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)    
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)    
     
     fifth_character_feedback
     -> talk_with_mentor
     
 //Storylets di commentario
     === growing_fungus_storylet
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
-        ~ temp charNameFour= uppercaseTranslator(fourthCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameThree = translator(thirdCharacterState)
+        ~ temp charNameFour= translator(fourthCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         
         {charNameFive}: Quella pianta mezza morta.
         {charNameFive}: Alla fine qualcosa è cambiato, ma non ho capito cosa.
@@ -662,9 +662,9 @@
     
 //Storylets sul secondo personaggio
     === that_little_liar_storylet
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
     
         {charNameFive}: {name}, sei {pronouns has him: riuscito|{pronouns has her: riuscita|riuscitə}} a rimandare quel bambino a casa?
         {are_two_entities_together(SecondCharacter, PG):{charNameFive}: Da quanto vedo, no.}
@@ -688,9 +688,9 @@
         -> talk_with_mentor
     
     === watering_can_storylet
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         {charNameFive}: L'annaffiatoio!
         {charNameFive}: L'annaffiatoio è scomparso dalla serra.
         {charNameFive}: E sono sicura, sicura che è stato quel bambino dispettoso!
@@ -709,7 +709,7 @@
         -> talk_with_mentor
 //Fine della demo
 === ending_demo
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 {charNameFive}: Sembra che la demo sia finita qui, {name}.
 {charNameFive}: Potrai girare ancora per gli spazi aperti.
 {charNameFive}: Continuare a leggere le storie della <b>biblioteca</b>.

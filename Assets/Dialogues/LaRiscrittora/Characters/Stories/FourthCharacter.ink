@@ -1,4 +1,4 @@
-~ temp charNameQuattro = uppercaseTranslator(fourthCharacterState)
+~ temp charNameQuattro = translator(fourthCharacterState)
 
 === personaggia_quattro ===
         //opzione se c'è un'altra storia attiva

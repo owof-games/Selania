@@ -78,7 +78,7 @@
                 
                  ----------------------------------*/
 
-=== function uppercaseTranslator(characterState)
+=== function translator(characterState)
     {characterState:
     
     //Personaggia Uno

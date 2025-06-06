@@ -13,9 +13,9 @@
 
 
 === first_second_chit_chat
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
 
     {charNameOne}: Quindi non ricordi come sei arrivato qui?
     {knowing_second_character.two:{charNameTwo}|???}: Sì no boh.

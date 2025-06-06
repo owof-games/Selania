@@ -1,5 +1,5 @@
 === second_character ===
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+~ temp charNameTwo = translator(secondCharacterState)
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
@@ -15,7 +15,7 @@
     
 
 === talk_with_second_character ===
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+~ temp charNameTwo = translator(secondCharacterState)
 -> common_storylets ->
 
    {//Se prima chiacchierata
@@ -36,7 +36,7 @@
     }
 
 = hub
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+~ temp charNameTwo = translator(secondCharacterState)
 
     {knowing_second_character.two:{charNameTwo}|???}: {~ Ciao {name}!|Ciao.|...}
     
@@ -65,8 +65,8 @@
 
 
 === knowing_second_character
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {
             - not one:
@@ -122,9 +122,9 @@
     = one
     //Obiettivo: Presentare l’elemento delle bugie. Vengono dette cose sconfessate poi nella terza storia.
     //Contenuto: Compleanno, giochi
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         ~ secondStoryQuestCount ++
         
         ???: Perché sei qui?
@@ -228,9 +228,9 @@
     = two
     //Obiettivo: Messa in evidenza della rabbia, ma anche della sua curiosità (finale rosso o finale viola: vede la bellezza nelle cose brutte.)
     //Contenuto: Prima gioia per gli insetti, ecc, poi domande sulla sua violenza alla mentore.
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
     ~ change_entity_place(Mentor)
     ~ secondStoryQuestCount ++
       
@@ -333,9 +333,9 @@
     = three
     //Obiettivo: mostrare che ha mentito all'inizio
     //Contenuto: Ci chiede come ci chiamiamo, emerge una bugia diversa a seconda del genere -> Qui però scopriamo che ci mente, possiamo decidere di mettere in evidenza o meno questa bugia, solitudine.
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
     ~ change_entity_place(Mentor)
     ~ secondStoryQuestCount ++
 
@@ -365,8 +365,8 @@
     	        
     	        
         	  = him_liar
-            	  ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-            	  ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+            	  ~ temp charNameTwo = translator(secondCharacterState)
+            	  ~ temp charNameFive = translator(fifthCharacterState)
             	  
             	  {charNameTwo}: Sono contento che sei un maschio.
             	  {charNameTwo}: {charNameFive} è così noiosa.
@@ -386,7 +386,7 @@
         	    -> three_continue
         	  
         	  = her_liar
-        	  ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        	  ~ temp charNameTwo = translator(secondCharacterState)
         	  
             	  {charNameTwo}: Ah.
             	  {charNameTwo}: Sei una ragazza quindi.
@@ -404,7 +404,7 @@
         	    -> three_continue
         	  
         	  = they_liar
-        	  ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        	  ~ temp charNameTwo = translator(secondCharacterState)
         	        {charNameTwo}: Mmm.
         	        {charNameTwo}: Capito.
         	        {charNameTwo}: Anche io vorrei un pronome strano.
@@ -420,8 +420,8 @@
        
        
         = three_continue 
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
             //Definire meglio in base ai colori.
             
             + {him_liar} [Bugia: hai detto di esser pieno di action figures.]
@@ -497,9 +497,9 @@
     = four
     //Obiettivo: Far vedere che c'è qualcosa che non va a casa.
     //Contenuto: Momento di vulnerabilità, ci parla della nonna (ma non ci dice che è morta) e ci dice che è fuggito da casa.
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
     ~ change_entity_place(Mentor)
     
     ~ secondStoryQuestCount ++
@@ -588,9 +588,9 @@
     //Obiettivo: Mostrare sempre il carattere complicato ma anche la posizione complicata socialmente. La scuola è un posto in cui non è al sicuro.
     //Contenuto: Lo accusiamo del furto, da lì emergono alcune cose sulla scuola. A seconda del rapporto, mente per evitare le punizioni, o è sincero. Il discorso dei compagni parte a prescindere.
   
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
     ~ change_entity_place(Mentor)
     
     ~ secondStoryQuestCount ++
@@ -699,9 +699,9 @@
     = six
     //Obiettivo: Mostrare che sta iniziando a non mentire.
     //Contenuto: Ci racconta della rana, possiamo decidere di non credergli o meno.
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         ~ change_entity_place(Mentor)
         
         ~ secondStoryQuestCount ++
@@ -771,9 +771,9 @@
     //Obiettivo: raccontare il suo rapporto con la fantasia e le tensioni in famiglia (finale verde e finale viola)
     //Contenuto: Parla della fantasia, e del fatto che la sera si riscrive la giornata, capiamo che la famiglia litiga spesso. Tensione in casa anche per la morte della nonna
     
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         ~ change_entity_place(Mentor)
         
         ~ secondStoryQuestCount ++
@@ -850,9 +850,9 @@
     = eight
     //Obiettivo: presentare la relazione col fratello maggiore, che è una persona molto pragmatica (finale blu, finale giallo)
     //Contenuti: ci parla del fratello come mito, riferimento, modello. All'inizio mente, ma poi si ridimensiona da solo (sta iniziano a fidarsi).
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-    ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
     ~ change_entity_place(Mentor)
     
     ~ secondStoryQuestCount ++
@@ -934,9 +934,9 @@
     = nine
     //Obiettivo: mostrare tra le righe la paura per il futuro, anche dimostrazione di rabbia verso di sè? (finale rosso sicuro, finale blu?
     //Contenuti: tutti sanno cosa diventare da grandi, io voglio fare il veterinaio ma?
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
         ~ change_entity_place(Mentor)
         
         ~ secondStoryQuestCount ++
@@ -1069,9 +1069,9 @@
     = ten
     //Obiettivo: si fida di noi, mostriamo il suo rapporto con la violenza. Finale rosso, finale viola (aiutare gli altri).
     //Contenuti: capiamo che a scuola è un bullo, ma ci sono persone che protegge.
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         ~ change_entity_place(Mentor)
         
         ~ secondStoryQuestCount ++
@@ -1147,9 +1147,9 @@
     = eleven
     //Obiettivo: curiosità, sperimentazione. finale giallo, finale viola
     //Contenuti: esperimenti in casa (microscopio, muro bruciato col Meccano
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         ~ change_entity_place(Mentor)
         
         ~ secondStoryQuestCount ++
@@ -1227,9 +1227,9 @@
     = twelve
     //Obiettivo: narrativamente, lasciarcelo con una immagine positiva. Far vedere il peso dei genitori. Finale verde, finale giallo.
     //Contenuti. Momento tenero. L'altra nonna, la casa al mare, momenti di pace. I genitori non ci sono in queste occasioni
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-        ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
+        ~ temp charNameOne = translator(firstCharacterState)
         ~ change_entity_place(Mentor)
         
         ~ secondStoryQuestCount ++
@@ -1318,8 +1318,8 @@
         -> main
                         
     = she_hates_me
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     
     {charNameTwo}: {charNameFive} ce l'ha con me!
     {charNameTwo}: Fa qualcosa!
@@ -1329,7 +1329,7 @@
 
 
 === second_story_gift ===
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+~ temp charNameTwo = translator(secondCharacterState)
 <i> Stai per donare qualcosa a {charNameTwo}.</i>
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += SecondCharacter
@@ -1344,7 +1344,7 @@
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
 === second_story_chech_trigger
-      ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+      ~ temp charNameTwo = translator(secondCharacterState)
       //In questa storia non ci sono trigger, lascio la struttura perché non si sa mai.
       
         //{
@@ -1366,7 +1366,7 @@
         -> END
 
 === main_story_second_character
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+~ temp charNameTwo = translator(secondCharacterState)
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
     {
         - not confession:
@@ -1377,8 +1377,8 @@
             -> one
     }
     = confession
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     ~ change_entity_place(Mentor)
     
     //Parole chiave legate alla fiducia.
@@ -1455,7 +1455,7 @@
 
 
     = statement
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
         <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): l'inchiostro è aumentato di due unità|{secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(secondCharacterInkLevel)
@@ -1466,7 +1466,7 @@
             -> main
 
     = one
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
     ~ change_entity_place(Mentor)
     {
         -   are_two_entities_together(FirstCharacter, PG):{charNameOne}: Qui le cose si fanno serie, e io me ne vado.
@@ -1532,7 +1532,7 @@
         
     
     = two
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
     {name}: Hai paura che il mondo stia finendo e che spariranno tutti gli animali.
   
         + [Non puoi prevedere il futuro. Goditi quello che c'è senza rimpianti.]
@@ -1590,7 +1590,7 @@
         }
         
     = three
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
     //Affrontiamo il mondo. Rabbia, bugie, fantasia, violenza etc.
     {name}: Tuo fratello dice che il mondo è orribile e che non si può più aggiustare.
     
@@ -1646,8 +1646,8 @@
         }
     
     = four
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)    
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)    
     
     //Commento più personale
     {name}: {charNameFive} ti ha chiamato {charNameTwo}.
@@ -1702,7 +1702,7 @@
         -> ending
 
     = ending
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
      Per questo ti dico:
      
         + {secondRed > 0} [Diventa il più forte, il più coraggioso.]
@@ -1813,8 +1813,8 @@
     
     
     = secret_ending
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
         {charNameTwo}: Voglio dirti una cosa {name}.
         {charNameTwo}: Su {charNameFive}.
         {charNameTwo}: A me non mi sembra mica felice.
@@ -1827,7 +1827,7 @@
                 -> main
             
     = exit
-    ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
         {charNameTwo}: Voglio stare ancora un po' qui prima di prendere il treno.
         {charNameTwo}: Mi mancherà la rana!
             ~ secondStory = Ended
@@ -1836,7 +1836,7 @@
         -> main  
     
 === second_char_story_ended
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+~ temp charNameTwo = translator(secondCharacterState)
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
 
@@ -1853,7 +1853,7 @@
         -> main
         
         = goodbye
-        ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
         {charNameTwo}: {name}, mi sa che torno a casa.
         {secondCharacterPossibleStates hasnt IlRiccio: {charNameTwo}: Sì no boh.}       
         {secondCharacterPossibleStates hasnt IlRiccio: {charNameTwo}: Sai che mi è piaciuta alla fine tutta questa cosa?}
@@ -1868,8 +1868,8 @@
 
 
 === second_character_opinions
-~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 ~ change_entity_place(Mentor)
 
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
