@@ -18,7 +18,7 @@
 <- first_character
 <- second_character
 <- third_character
-<- personaggia_quattro
+<- fourth_character
 <- fifth_character
 
 //Elementi della fermata del bus

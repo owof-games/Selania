@@ -1,13 +1,13 @@
 ~ temp charNameQuattro = translator(fourthCharacterState)
 
-=== personaggia_quattro ===
+=== fourth_character ===
         //opzione se c'è un'altra storia attiva
         + {are_two_entities_together(FourthCharacter, PG) && fourthStory == Active} [FourthCharacter]
-            -> storia_quattro
+            -> talk_with_fourth_character
         
         //opzione se questa storia è attiva
         + {are_two_entities_together(FourthCharacter, PG) && fourthStory == Ended} [FourthCharacter]
-            -> personaggia_quattro_storia_conclusa
+            -> fourth_char_story_ended
         
         + ->
     
@@ -15,7 +15,7 @@
 
 
 
-=== storia_quattro ===
+=== talk_with_fourth_character ===
     //la storia in corso viene attivata, e le altre non saranno accessibili fino alla sua conclusione
 
         <i>Vuoi ascoltare la sua storia?</i>
@@ -58,7 +58,7 @@
         
         -> main    
 
-=== personaggia_quattro_storia_conclusa        
+=== fourth_char_story_ended       
         + opzione
         + opzione
         + opzione

@@ -1,6 +1,7 @@
 === train_stop ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
+TODO: eliminare Bus anche da Unity
 
 {train_stop == 1: <i>Questa è la stazione del treno.|<i>{~ La stazione profuma di partenze.|La panchina aspetta fremente una nuova conoscenza.|Sulle vette la luce brilla leggera.|Un vento fresco ti sospinge lungo la strada.|Le lettere ondeggiano sulla bacheca.|L'odore della foresta scalda il sentiero.}</i>}
 
