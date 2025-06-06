@@ -20,6 +20,8 @@
 //File dedicati alla gestione delle personagge
     INCLUDE Characters\Functions\Movements.ink
     INCLUDE Characters\Functions\CommonFunctions.ink
+    INCLUDE Characters\Functions\Ink.ink
+    
     INCLUDE Characters\Functions\FirstCharacterManagement.ink
     INCLUDE Characters\Functions\SecondCharacterManagement.ink
     INCLUDE Characters\Functions\ThirdCharacterManagement.ink
@@ -37,8 +39,6 @@
     INCLUDE Characters\Mentor\HelpfulMentor.ink
     INCLUDE Characters\Mentor\StoryletsManagement.ink
     INCLUDE Characters\Mentor\StoryletsContent.ink
-    
-    INCLUDE Characters\Stories\Gifts.ink
     
     INCLUDE Characters\Stories\FirstCharacter.ink
     INCLUDE Characters\Stories\SecondCharacter.ink
@@ -83,6 +83,8 @@
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibaryManagement.ink
     INCLUDE Library\StoryNotes.ink
+
+
 
 
 //Starting point
