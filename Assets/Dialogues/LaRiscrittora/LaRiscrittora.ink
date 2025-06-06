@@ -1,89 +1,87 @@
-/* ---------------------------------
-
-   ELEMENTI DI GESTIONE DEL GIOCO
-
- ----------------------------------*/
+                    /* ---------------------------------
+                    
+                       ELEMENTI DI GESTIONE DEL GIOCO
+                    
+                     ----------------------------------*/
+    INCLUDE main.ink
 
 //File con gli appunti di gestione del progetto, la formattazione etc.
-INCLUDE Notes\FileManagement.ink
-INCLUDE Notes\Contents.ink
-INCLUDE Notes\ToDo.ink
+    INCLUDE Notes\FileManagement.ink
+    INCLUDE Notes\Contents.ink
+    INCLUDE Notes\ToDo.ink
 
 //File dedicati alla gestione complessiva del progetto
-INCLUDE Code\ListAndVariables.ink
-INCLUDE Code\PGManagement.ink
-INCLUDE Code\Spaces.ink
-INCLUDE Code\ChangePlaces.ink
-INCLUDE Code\Other.ink
+    INCLUDE Code\ListAndVariables.ink
+    INCLUDE Code\PGManagement.ink
+    INCLUDE Code\Spaces.ink
+    INCLUDE Code\ChangePlaces.ink
+    INCLUDE Code\Other.ink
 
 //File dedicati alla gestione delle personagge
-INCLUDE Characters\Functions\Movements.ink
-INCLUDE Characters\Functions\CommonFunctions.ink
-INCLUDE Characters\Functions\FirstCharacterManagement.ink
-INCLUDE Characters\Functions\SecondCharacterManagement.ink
-INCLUDE Characters\Functions\ThirdCharacterManagement.ink
-INCLUDE Characters\Functions\FourthCharacterManagement.ink
-INCLUDE Characters\Functions\FifthCharacterManagement.ink
-/* ---------------------------------
+    INCLUDE Characters\Functions\Movements.ink
+    INCLUDE Characters\Functions\CommonFunctions.ink
+    INCLUDE Characters\Functions\FirstCharacterManagement.ink
+    INCLUDE Characters\Functions\SecondCharacterManagement.ink
+    INCLUDE Characters\Functions\ThirdCharacterManagement.ink
+    INCLUDE Characters\Functions\FourthCharacterManagement.ink
+    INCLUDE Characters\Functions\FifthCharacterManagement.ink
 
-   CONTENUTI
+                    /* ---------------------------------
+                    
+                                CONTENUTI
+                    
+                     ----------------------------------*/
 
- ----------------------------------*/
 //Personagge
-INCLUDE main.ink
-
-
-
-
-INCLUDE Characters\Mentor\MentorStorylets.ink
-INCLUDE Characters\Mentor\HelpfulMentor.ink
-
-INCLUDE Characters\Stories\Gifts.ink
-
-INCLUDE Characters\Stories\FirstCharacter.ink
-INCLUDE Characters\Stories\SecondCharacter.ink
-INCLUDE Characters\Stories\ThirdCharacter.ink
-INCLUDE Characters\Stories\FourthCharacter.ink
-INCLUDE Characters\Stories\FifthCharacter.ink
-
-INCLUDE Characters\Stories\CommonStorylets.ink
+    INCLUDE Characters\Mentor\MentorStorylets.ink
+    INCLUDE Characters\Mentor\HelpfulMentor.ink
+    
+    INCLUDE Characters\Stories\Gifts.ink
+    
+    INCLUDE Characters\Stories\FirstCharacter.ink
+    INCLUDE Characters\Stories\SecondCharacter.ink
+    INCLUDE Characters\Stories\ThirdCharacter.ink
+    INCLUDE Characters\Stories\FourthCharacter.ink
+    INCLUDE Characters\Stories\FifthCharacter.ink
+    
+    INCLUDE Characters\Stories\CommonStorylets.ink
 
 //Gestione dell'inventario
-INCLUDE Inventory\Inventory.ink
-INCLUDE Inventory\InventoryManagement.ink
+    INCLUDE Inventory\Inventory.ink
+    INCLUDE Inventory\InventoryManagement.ink
 
 //Bedroom
-INCLUDE Bedroom\Bedroom.ink
+    INCLUDE Bedroom\Bedroom.ink
 
 //Bus Stop
-INCLUDE BusStop\BusStop.ink
+    INCLUDE BusStop\BusStop.ink
 
 
 //Forest
-INCLUDE Forest\Forest.ink
-INCLUDE Forest\Fungus.ink
+    INCLUDE Forest\Forest.ink
+    INCLUDE Forest\Fungus.ink
 
 //Greenhouse
-INCLUDE Greenhouse\Greenhouse.ink
-INCLUDE Greenhouse\Cultivable.ink
-INCLUDE Greenhouse\CultivableManagement.ink
-INCLUDE Greenhouse\GreenhouseMiddlePath.ink
+    INCLUDE Greenhouse\Greenhouse.ink
+    INCLUDE Greenhouse\Cultivable.ink
+    INCLUDE Greenhouse\CultivableManagement.ink
+    INCLUDE Greenhouse\GreenhouseMiddlePath.ink
 
 //Nest
-INCLUDE Nest\Nest.ink
+    INCLUDE Nest\Nest.ink
 
 //Laboratory
-INCLUDE Laboratory\Laboratory.ink
+    INCLUDE Laboratory\Laboratory.ink
 
 //Library
-INCLUDE Library\Library.ink
-INCLUDE Library\FirstStory.ink
-INCLUDE Library\SecondStory.ink
-INCLUDE Library\ThirdStory.ink
-INCLUDE Library\FourthStory.ink
-INCLUDE Library\LibaryManagement.ink
-
-INCLUDE Library\StoryNotes.ink
+    INCLUDE Library\Library.ink
+    INCLUDE Library\FirstStory.ink
+    INCLUDE Library\SecondStory.ink
+    INCLUDE Library\ThirdStory.ink
+    INCLUDE Library\FourthStory.ink
+    INCLUDE Library\LibaryManagement.ink
+    
+    INCLUDE Library\StoryNotes.ink
 
 
 
