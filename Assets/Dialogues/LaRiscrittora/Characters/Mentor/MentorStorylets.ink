@@ -225,7 +225,7 @@
         
         * (chiSei) [Chi sei?]
             ???: La persona che tiene in piedi questo luogo.
-            ???: Ma tu puoi chiamarmi <b>{lowercaseTranslator(fifthCharacterState)}</b>.
+            ???: Ma tu puoi chiamarmi <b>{uppercaseTranslator(fifthCharacterState)}</b>.
             {charNameFive}: Così puoi ricordarti con facilità a cosa servo.
                 -> top
         

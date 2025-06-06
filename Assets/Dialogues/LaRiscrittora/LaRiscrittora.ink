@@ -16,6 +16,14 @@ INCLUDE Code\Spaces.ink
 INCLUDE Code\ChangePlaces.ink
 INCLUDE Code\Other.ink
 
+//File dedicati alla gestione delle personagge
+INCLUDE Characters\Functions\Movements.ink
+INCLUDE Characters\Functions\CommonFunctions.ink
+INCLUDE Characters\Functions\FirstCharacterManagement.ink
+INCLUDE Characters\Functions\SecondCharacterManagement.ink
+INCLUDE Characters\Functions\ThirdCharacterManagement.ink
+INCLUDE Characters\Functions\FourthCharacterManagement.ink
+INCLUDE Characters\Functions\FifthCharacterManagement.ink
 /* ---------------------------------
 
    CONTENUTI
@@ -24,12 +32,12 @@ INCLUDE Code\Other.ink
 //Personagge
 INCLUDE main.ink
 
-INCLUDE Characters\CommonCharactersFunctions.ink
+
+
 
 INCLUDE Characters\Mentor\MentorStorylets.ink
 INCLUDE Characters\Mentor\HelpfulMentor.ink
 
-INCLUDE Characters\Stories\StoryManagement.ink
 INCLUDE Characters\Stories\Gifts.ink
 
 INCLUDE Characters\Stories\FirstCharacter.ink
@@ -44,6 +52,8 @@ INCLUDE Characters\Stories\CommonStorylets.ink
 INCLUDE Inventory\Inventory.ink
 INCLUDE Inventory\InventoryManagement.ink
 
+//Bedroom
+INCLUDE Bedroom\Bedroom.ink
 
 //Bus Stop
 INCLUDE BusStop\BusStop.ink
@@ -72,8 +82,22 @@ INCLUDE Library\SecondStory.ink
 INCLUDE Library\ThirdStory.ink
 INCLUDE Library\FourthStory.ink
 INCLUDE Library\LibaryManagement.ink
-INCLUDE StartingRoomAndSaveButtons.ink
+
 INCLUDE Library\StoryNotes.ink
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
