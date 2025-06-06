@@ -17,7 +17,7 @@
     
 //Variabili per mettere in pausa la conversazione
     VAR fourthPauseTalking = 0
-    VAR fourthCharPauseDurantion = 4
+    VAR fourthCharPauseDuration = 4
     
 //Variabile per il countdown per la sua uscita di scena
     VAR fourthCharEndingDialogue = 0    

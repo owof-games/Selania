@@ -33,8 +33,10 @@
                      ----------------------------------*/
 
 //Personagge
-    INCLUDE Characters\Mentor\MentorStorylets.ink
+
     INCLUDE Characters\Mentor\HelpfulMentor.ink
+    INCLUDE Characters\Mentor\StoryletsManagement.ink
+    INCLUDE Characters\Mentor\StoryletsContent.ink
     
     INCLUDE Characters\Stories\Gifts.ink
     
@@ -80,34 +82,11 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibaryManagement.ink
-    
     INCLUDE Library\StoryNotes.ink
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Starting point
--> main
+    -> main
 
 
 

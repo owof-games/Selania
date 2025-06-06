@@ -260,7 +260,7 @@
         {are_two_entities_together(Mentor, PG): {welcome.your_name: {charNameFive}|???}: In effetti avrei un paio di informazioni utili da darti!}
         {charNameOne}: L’unica cosa certa è che ho bisogno di Talco.
         {charNameOne}: Ci vediamo dopo, {name}.
-             ~ firstPauseTalking = firstCharPauseDurantion
+             ~ firstPauseTalking = firstCharPauseDuration
             -> main
         
     = two
@@ -318,7 +318,7 @@
         {are_two_entities_together(Mentor, PG):{charNameFive}: Non hai idea di quanto lavoro ci sia da fare. Quindi sì, cammino MOLTO.}
         {charNameOne}: Ma troppe chiacchiere ora, troppe.
         {charNameOne}: Fammi chillare un attimo.
-            ~ firstPauseTalking = firstCharPauseDurantion
+            ~ firstPauseTalking = firstCharPauseDuration
             -> main  
             
     = three
@@ -383,7 +383,7 @@
         {charNameOne}: Sono la mia famiglia, loro.
         {charNameOne}: E nessuna di queste scelte può accontentare tutt3.
         {charNameOne}: Che rottura di ovaie, {name}!
-            ~ firstPauseTalking = firstCharPauseDurantion
+            ~ firstPauseTalking = firstCharPauseDuration
             -> main
         
     = four
@@ -437,7 +437,7 @@
         {charNameOne}: Forse la mentore è abbastanza vecchia da avere una radio?
         {are_two_entities_together(Mentor, PG):{charNameFive}: Non approfittare della mia gentilezza, ragazzina.}
         {are_two_entities_together(Mentor, PG): {charNameOne}: Dai, si fa per il meme!|{charNameOne}: Devo assolutamente chiederglielo.}
-             ~ firstPauseTalking = firstCharPauseDurantion
+             ~ firstPauseTalking = firstCharPauseDuration
             -> main 
             
     = five
@@ -498,7 +498,7 @@
                 -
         {charNameOne}: Fammi rilassare un po' ama.
         {charNameOne}: E magari riposa anche tu.
-            ~ firstPauseTalking = firstCharPauseDurantion
+            ~ firstPauseTalking = firstCharPauseDuration
             -> main
         
     = six
@@ -562,7 +562,7 @@
             -
         {charNameOne}: A proposito di cause perse: vado a cercarmi uno spritz.
         {charNameOne}: Ho proprio bisogno di staccare.
-            ~ firstPauseTalking = firstCharPauseDurantion
+            ~ firstPauseTalking = firstCharPauseDuration
             -> main
         
     = seven
@@ -614,7 +614,7 @@
                 {charNameOne}: Un po' come quel casino che è camera mia.
                     ~ firstRed ++
             -
-             ~ firstPauseTalking = firstCharPauseDurantion
+             ~ firstPauseTalking = firstCharPauseDuration
             -> main           
     = eight
     ~ temp charNameOne = translator(firstCharacterState)
@@ -674,7 +674,7 @@
         {charNameOne}: Comunque non sono di certo qui per il Ghiberti e le sue paranoie matematiche.
         {charNameOne}: Ma per capire perché sono in questo posto.
         {charNameOne}: Mi prendo un po' di tempo per me, {name}.
-            ~ firstPauseTalking = firstCharPauseDurantion
+            ~ firstPauseTalking = firstCharPauseDuration
             -> main
     
     = nine
@@ -730,7 +730,7 @@
             -
         {charNameOne}: Vabbè.
         {charNameOne}: Credo me ne starò qui ad aspettare questo finto temporale.
-             ~ firstPauseTalking = firstCharPauseDurantion
+             ~ firstPauseTalking = firstCharPauseDuration
             -> main   
     = ten
     ~ temp charNameOne = translator(firstCharacterState)
@@ -791,7 +791,7 @@
         {charNameOne}: I poliziotti ci hanno trascinate e bastonate e schedate.
         {charNameOne}: E soprattutto hanno tagliato gli alberi.
         {charNameOne}: E sono tornata a sentirmi inutile.
-            ~ firstPauseTalking = firstCharPauseDurantion
+            ~ firstPauseTalking = firstCharPauseDuration
             -> main
     
     = eleven
@@ -849,7 +849,7 @@
             
         {charNameOne}: Lasciamo un po' solo ora, {name}.
         {charNameOne}: Perché sto entrando in fase lamentosa e non ho voglia di cringiarti.
-            ~ firstPauseTalking = firstCharPauseDurantion
+            ~ firstPauseTalking = firstCharPauseDuration
             -> main
             
     = twelve
@@ -908,7 +908,7 @@
             
         {charNameOne}: E con questa, ho finito di sputtanare la mia famiglia.
          {charNameOne}: Vado a deprimermi da qualche parte.
-            ~ firstPauseTalking = firstCharPauseDurantion
+            ~ firstPauseTalking = firstCharPauseDuration
             -> main
 
   
@@ -1385,7 +1385,7 @@
 ~ temp charNameOne = translator(firstCharacterState) 
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
     {charNameOne}: {~ Talco dice sempre che bisogna sporcarsi le mani per capire il mondo.|Se proprio devo restare qui, tiro su una band con le api. Sono troppo chaddone loro.|Comunque il Ghiberti ha una moglie che è stra in gamba. Forse a volte ci si deve compensare. E visto che Talco è svegliə, io allora sono l'idiota della cumpa.|Resti tra noi, ma il Conservatorio è un posto del cazzo. C'è una competitività che non c'entra nulla con la musica.|Mi scoccia litigare con mio padre, ma io e il suo modo di fare NON. ANDIAMO. D'ACCORDO. Zero, ama. Zero.}
-        ~ firstPauseTalking = firstCharPauseDurantion
+        ~ firstPauseTalking = firstCharPauseDuration
             -> main
 
 

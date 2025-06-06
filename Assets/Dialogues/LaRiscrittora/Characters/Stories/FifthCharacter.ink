@@ -163,7 +163,7 @@
         {firstStory hasnt Ended: {charNameFive}: Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di mobili rotti che blocca il sentiero a ovest della foresta.|{charNameFive}: Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}
         {charNameFive}: È arrivato il momento di capire dove possa portare.
         {charNameFive}: Grazie per la chiacchierata, {name}.
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
     
     = two
@@ -220,7 +220,7 @@
         {charNameFive}: Sei qui per aiutare le altre persone, e finisci per scoprire cose di te.
         {charNameFive}: Ma ora è il momeno di svuotare lo stagno dalle sue cose più schifose.
         {charNameFive}: Prega per me, {name}.
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthPauseTalking = fifthCharPauseDuration
                 -> main
 
 
@@ -273,7 +273,7 @@
             {charNameFive}: Ma basta con questo spirito malinconico!
             {charNameFive}: Mi sono appena ricordata che ci sono delle erbacce fastidiose sotto la poltrona della biblioteca,
             {charNameFive}: Devo inventarmi un modo per liberarmene!
-                ~ fifthPauseTalking = fifthCharPauseDurantion
+                ~ fifthPauseTalking = fifthCharPauseDuration
                     -> main
     
     
@@ -341,7 +341,7 @@
         {charNameFive}: Non può essere emotiva.
         {charNameFive}: Vado a riordinare in ordine di data i libri in biblioteca.
         
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
     = five
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -409,7 +409,7 @@
                     ~ fifthPurple ++
  
             -
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthPauseTalking = fifthCharPauseDuration
         
         {charNameFive}: A volte sono solo una sciocca romantica.
         {charNameFive}: E mi dimentico che l'amore è ovunque.
@@ -418,7 +418,7 @@
         {charNameFive}: Amore per noi.
         {charNameFive}: Vado a recuperare del terriccio dal sottobosco, {name}.
         {charNameFive}: Parleremo più tardi.
-        ~ fifthPauseTalking = fifthCharPauseDurantion
+        ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
     
     
@@ -449,8 +449,8 @@
  
             -
             //Qui potrebbe aver senso ridurre i tempi di attesa tra un dialogo e l'altro.
-             ~  fifthCharPauseDurantion = 5
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~  fifthCharPauseDuration = 5
+             ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
     = seven
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -477,7 +477,7 @@
                 ~ fifthPurple ++
  
             -
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthPauseTalking = fifthCharPauseDuration
             -> main        
             
             
@@ -506,7 +506,7 @@
                 ~ fifthPurple ++
  
             -
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthPauseTalking = fifthCharPauseDuration
             -> main    
     
     
@@ -535,7 +535,7 @@
                 ~ fifthPurple ++
  
             -
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthPauseTalking = fifthCharPauseDuration
             -> main    
     
     = ten
@@ -563,7 +563,7 @@
                 ~ fifthPurple ++
  
             -
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthPauseTalking = fifthCharPauseDuration
             -> main    
     
     = eleven
@@ -591,7 +591,7 @@
                 ~ fifthPurple ++
  
             -
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthPauseTalking = fifthCharPauseDuration
             -> main    
     = twelve
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -618,7 +618,7 @@
                 ~ fifthPurple ++
  
             -
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthPauseTalking = fifthCharPauseDuration
             -> main            
             
             
@@ -1014,25 +1014,25 @@
    = one
    ~ temp charNameFive = translator(fifthCharacterState)
     {charNameFive}: {~ Sinceramente, non so che ne sarebbe di questo luogo senza tutta la manutenzione che devo fare.|Hai notato la bacheca alla stazione dei treni? Anche se è da molto che non arrivano lettere.|A volte vorrei che le cose in serra crescessero più velocemente, così da sapere subito se ho sbagliato qualcosa.|A ovest dello stagno c'è spesso un grande baccano, ma fiori e fieno sono troppo alti per poter vedere cosa ci sia da quelle parti.}
-            ~ fifthPauseTalking = fifthCharPauseDurantion
+            ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
     
     = two
     ~ temp charNameFive = translator(fifthCharacterState)
     {charNameFive}: {~ Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.|A volte ho questo timore: posso davvero essere una buona mentore, anche se sono poco istruita?|Sono contenta di aver aperto la biblioteca, ma quella poltrona mi invita troppo a riposare, quando invece ci sono mille cose da fare.}
-            ~ fifthPauseTalking = fifthCharPauseDurantion
+            ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
             
     = three
     ~ temp charNameFive = translator(fifthCharacterState)
     {charNameFive}: {~ xxx|yyy}
-            ~ fifthPauseTalking = fifthCharPauseDurantion
+            ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
             
     = four
     ~ temp charNameFive = translator(fifthCharacterState)
     {charNameFive}: {~ xxx|yyy}
-            ~ fifthPauseTalking = fifthCharPauseDurantion
+            ~ fifthPauseTalking = fifthCharPauseDuration
             -> main        
 
 

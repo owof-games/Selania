@@ -222,7 +222,7 @@
         ???: Cercali!
         ???: A dopo!
             -
-            ~ secondPauseTalking = secondCharPauseDurantion
+            ~ secondPauseTalking = secondCharPauseDuration
             -> main
    
     = two
@@ -325,7 +325,7 @@
         {charNameTwo}: Lui è superforte.
         {charNameTwo}: Ora lasciami in pace.
         {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Che merda essere bambini.}        
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondPauseTalking = secondCharPauseDuration
             -> main
 
 
@@ -488,7 +488,7 @@
                     ~ secondPurple ++
  
             -
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondPauseTalking = secondCharPauseDuration
             -> main
     
     
@@ -581,7 +581,7 @@
         
             //Leviamo l'innaffiatoio
             ~ move_entity(WateringCan, Safekeeping)
-            ~ secondPauseTalking = secondCharPauseDurantion
+            ~ secondPauseTalking = secondCharPauseDuration
             -> main
     
     = five
@@ -692,7 +692,7 @@
             
             //Ricompare l'innaffiatoio
             ~ move_entity(WateringCan, Greenhouse)
-            ~ secondPauseTalking = secondCharPauseDurantion
+            ~ secondPauseTalking = secondCharPauseDuration
                 -> main
     
     
@@ -763,7 +763,7 @@
                     ~ secondPurple ++
  
             - (theFrog)
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondPauseTalking = secondCharPauseDuration
              
                 -> main
     
@@ -843,7 +843,7 @@
                     ~ secondPurple ++
  
             -
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondPauseTalking = secondCharPauseDuration
             -> main        
             
             
@@ -927,7 +927,7 @@
                     ~ secondPurple ++
  
             -
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondPauseTalking = secondCharPauseDuration
             -> main    
     
     
@@ -1063,7 +1063,7 @@
  
             -
         {charNameTwo}: Però mi piacerebbe fare il veterinario.
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondPauseTalking = secondCharPauseDuration
             -> main    
     
     = ten
@@ -1141,7 +1141,7 @@
                     ~ secondPurple ++
  
             -
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondPauseTalking = secondCharPauseDuration
             -> main    
     
     = eleven
@@ -1221,7 +1221,7 @@
                     ~ secondPurple ++
  
             -
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondPauseTalking = secondCharPauseDuration
             -> main    
     
     = twelve
@@ -1307,7 +1307,7 @@
                     ~ secondPurple ++
  
             -
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondPauseTalking = secondCharPauseDuration
             -> main            
             
             

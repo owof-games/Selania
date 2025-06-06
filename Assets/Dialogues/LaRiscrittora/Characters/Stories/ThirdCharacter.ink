@@ -129,7 +129,7 @@
     	{charNameThree}: E con che pronomi vuoi che ti chiami?
     	        -> gender ->
     	{charNameThree}: Grandioso, io uso i femminili.      
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdPauseTalking = thirdCharPauseDuration
             -> main
     = two
     ~ temp charNameThree = translator(thirdCharacterState)
@@ -156,7 +156,7 @@
                 ~ thirdPurple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdPauseTalking = thirdCharPauseDuration
             -> main
 
 
@@ -186,7 +186,7 @@
                 ~ thirdPurple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdPauseTalking = thirdCharPauseDuration
             -> main
     
     
@@ -217,7 +217,7 @@
                 ~ thirdPurple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdPauseTalking = thirdCharPauseDuration
             -> main
     = five
     ~ temp charNameThree = translator(thirdCharacterState)
@@ -244,7 +244,7 @@
                 ~ thirdPurple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdPauseTalking = thirdCharPauseDuration
             -> main
     
     
@@ -273,7 +273,7 @@
                 ~ thirdPurple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdPauseTalking = thirdCharPauseDuration
             -> main
     = seven
     ~ temp charNameThree = translator(thirdCharacterState)
@@ -300,7 +300,7 @@
                 ~ thirdPurple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdPauseTalking = thirdCharPauseDuration
             -> main        
             
             
@@ -329,7 +329,7 @@
                 ~ thirdPurple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdPauseTalking = thirdCharPauseDuration
             -> main    
     
     
@@ -358,7 +358,7 @@
                 ~ thirdPurple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdPauseTalking = thirdCharPauseDuration
             -> main    
     
     = ten
@@ -386,7 +386,7 @@
                 ~ thirdPurple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdPauseTalking = thirdCharPauseDuration
             -> main    
     
     = eleven
@@ -414,7 +414,7 @@
                 ~ thirdPurple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdPauseTalking = thirdCharPauseDuration
             -> main    
     = twelve
     ~ temp charNameThree = translator(thirdCharacterState)
@@ -441,7 +441,7 @@
                 ~ thirdPurple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdPauseTalking = thirdCharPauseDuration
             -> main            
             
             

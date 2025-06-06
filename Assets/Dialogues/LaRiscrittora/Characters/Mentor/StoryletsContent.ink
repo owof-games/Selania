@@ -1,203 +1,3 @@
-=== mentor_and_first_char_storylets ===
-~ temp charNameOne = translator(firstCharacterState)
-~ temp charNameTwo = translator(secondCharacterState)
-~ temp charNameThree = translator(thirdCharacterState)
-~ temp charNameFour= translator(fourthCharacterState)
-~ temp charNameFive = translator(fifthCharacterState)
-
-{
-    - welcome == 0:
-        -> welcome
-    
-    - gifts_and_ink == 0:
-        {
-            - not talk_with_first_character:
-                {charNameFive}: Hai parlato con la nuova persona?
-                    -> mentor_and_second_char_storylets 
-            - talk_with_first_character:
-                {charNameFive}: Sembra che {charNameOne} ti abbia raccontato qualcosa di sè!
-                {charNameFive}: Ed è arrivato il momento di continuare con le spiegazioni!
-                -> gifts_and_ink
-            - else:
-                -> mentor_and_second_char_storylets 
-        }
-                
-        
-    - not questions:
-        {
-            - first_story_gift.ink_outcome:
-                -> questions
-            - else:
-            {
-                - firstStoryQuestCount >= minStoryQuesTCountFirstChar: {charNameFive}: Hai fatto il tuo dono a {charNameOne}?
-                        -> mentor_and_second_char_storylets 
-                - else:
-                    {
-                        - firstStoryQuestCount < 2:
-                            {charNameFive}: Hai bisogno di parlare ancora molto con {charNameOne}, prima di poterle fare il dono.
-                                -> mentor_and_second_char_storylets 
-                        - firstStoryQuestCount < 5:
-                            {charNameFive}: Secondo me sei circa a metà strada prima di poter convincere {charNameOne} a ricevere il tuo dono.
-                                -> mentor_and_second_char_storylets 
-                        - else:
-                            {charNameFive}: Ormai ci sei: pochissimi scambi e sento che {charNameOne} sarà pronta ad aprirsi a te.
-                                -> mentor_and_second_char_storylets 
-
-                    }
-
-            }
-        }
-        
-//Feedback
-    - not first_character_feedback:
-        {
-            - firstStory == Ended:
-                -> first_character_feedback
-            - else:
-                {charNameFive}: Prenditi il tuo tempo, ma ricordati che presto o tardi dovrai aiutare {charNameOne} a trovare il suo nuovo nome.
-                    -> mentor_and_second_char_storylets 
-        }
-    
-    - else:
-        -> mentor_and_second_char_storylets 
-
-}
-
-
-=== mentor_and_second_char_storylets ===
-~ temp charNameOne = translator(firstCharacterState)
-~ temp charNameTwo = translator(secondCharacterState)
-~ temp charNameThree = translator(thirdCharacterState)
-~ temp charNameFour= translator(fourthCharacterState)
-~ temp charNameFive = translator(fifthCharacterState)
-
-{
-
-    - not second_character_feedback && secondStory == Ended:
-        -> second_character_feedback
-        
-
-    //Dopo le presentazioni con due:
-    - knowing_second_character.one && (not that_little_liar_storylet) :
-        -> that_little_liar_storylet
-    
-    //Se abbiamo visto che manca l'innaffiatoio e/o due ci ha detto che non parla con lei:
-    - stolen_watering_can or knowing_second_character.she_hates_me && not watering_can_storylet:
-        -> watering_can_storylet
-        
-        
-    - else:
-        -> fifth_character_storylets
-
-}
-
-
-=== fifth_character_storylets ===
-~ temp charNameOne = translator(firstCharacterState)
-~ temp charNameTwo = translator(secondCharacterState)
-~ temp charNameThree = translator(thirdCharacterState)
-~ temp charNameFour= translator(fourthCharacterState)
-~ temp charNameFive = translator(fifthCharacterState)
-
-{
-//Feedback
-    - not ending_demo && secondStory == Ended && firstStory == Ended:
-        -> ending_demo
-    // - not third_character_feedback && thirdStory == Ended:
-    //     -> third_character_feedback        
-
-    // - not fourth_character_feedback && fourthStory == Ended:
-    //     -> fourth_character_feedback        
-
-    // - not fifth_character_feedback && fifthStory == Ended:
-    //     -> fifth_character_feedback        
-    
-// //Presentazione dei luoghi
-//     - are_entities_together_in(PG, Mentor, Greenhouse) && not first_greenhouse_visit:
-//         -> first_greenhouse_visit
-
-//     - are_entities_together_in(PG, Mentor, Library) && not first_library_visit:
-//         -> first_library_visit
-
-//     - are_entities_together_in(PG, Mentor, Nest) && not first_nest_visit:
-//         -> first_nest_visit
-
-//     - are_entities_together_in(PG, Mentor, Laboratory) && not first_laboratory_visit:
-//         -> first_laboratory_visit
-
-//     - are_entities_together_in(PG, Mentor, BusStop) && not first_bus_stop_visit:
-//         -> first_bus_stop_visit
- 
- //Commentario random
-    - talking_fungus.first_story_ended_check && not growing_fungus_storylet:
-        -> growing_fungus_storylet
-    
-    
-    - else:
-        -> talk_with_mentor.talk
-
-}
-
-
-
-
-
-
-// STORYLETS PRESENTAZIONE DEI LUOGHI
-// === first_greenhouse_visit
-// ~ temp charNameFive = translator(fifthCharacterState)
-
-//     {charNameFive}: Hai trovato la serra!
-//     {charNameFive}: Qui puoi coltivare cose molto diverse tra loro.
-//     {charNameFive}: Un po' tutte quelle creaturine che tendiamo a ignorare ma che sono fondamentali per la vita.
-//     {charNameFive}: Sapevi che i funghi sono il punto di contatto tra vita e morte?
-//     {charNameFive}: Trasformano la materia inorganica e in decomposizione in sostanze fondamentali per i viventi.
-//     {charNameFive}: Senza funghi la vita stessa sarebbe impensabile.
-//     {charNameFive}: E senza la serra, ogni riscrittura sarebbe più difficile.
-//     {charNameFive}: Lasciati coinvolgere dalle sue suggestioni, e quando quello che hai coltivato sarà cresciuto, potresti trovare qualcosa di utile per le altre persone.
-//     {charNameFive}: E per te.
-//     {charNameFive}: Riscrivere è un lavoro faticoso, e per questo è importante che ogni {pronouns has him: riscrittore|{pronouns has her: riscrittora|riscrittorə}} abbia dei momenti per prendersi cura di sé.
-//     {charNameFive}: Tornaci spesso: momento dopo momento quello che hai piantato sarà sempre più rigoglioso.
-//     {charNameFive}: E non fare caso a me mentre lucido il legno dell'ingresso, è una cosa che mi rilassa.
-//         -> talk_with_mentor
-
-// === first_bus_stop_visit
-// ~ temp charNameFive = translator(fifthCharacterState)
-//     {charNameFive}: Questa è la stazione del treno.
-//     {charNameFive}: È un posto di passaggio: è da qui che arrivano e vanno le persone che cercano il tuo aiuto.
-//     {charNameFive}: Ed è da qui che potrai andare e tornare quando vorrai.
-//     {charNameFive}: Anche se spero non resterai via per molto: alla lunga qui mi sento sola.
-//         -> talk_with_mentor
-        
-// === first_library_visit
-// ~ temp charNameFive = translator(fifthCharacterState)
-//     {charNameFive}: La biblioteca!
-//     {charNameFive}: Sinceramente, è stata una fatica immensa sbloccarla.
-//     {charNameFive}: Avrei voluto trovare qualcosa di più utile.
-//     {charNameFive}: Un modo per ripulire lo stagno, ad esempio.
-//     {charNameFive}: O capire cosa sia quel tronco in mezzo alla foresta.
-//     {charNameFive}: O come parlare con unə adolescente.
-//     {charNameFive}: Non amo ammetterlo, ma non so cosa farei se dovesse entrarne unə.
-//     {charNameFive}: Bada, mi piacciono. Ma quando sono bloccat3, tendono ad essere molto molto molto irrazionali.
-//     {charNameFive}: E ingrat3.
-//     {charNameFive}: Per fortuna non tocca a me riscrivere le loro storie.
-//         -> talk_with_mentor
-
-
-=== first_nest_visit
-~ temp charNameFive = translator(fifthCharacterState)
-
-    -> talk_with_mentor
-
-
-
-
-=== first_laboratory_visit
-~ temp charNameFive = translator(fifthCharacterState)
-
-    -> talk_with_mentor
-
-
 /* ---------------------------------
 
        Storylets tutorial
@@ -205,50 +5,50 @@
  ----------------------------------*/
 
 === welcome ===
-~ temp charNameOne = translator(firstCharacterState)
-~ temp charNameTwo = translator(secondCharacterState)
-~ temp charNameThree = translator(thirdCharacterState)
-~ temp charNameFour= translator(fourthCharacterState)
-~ temp charNameFive = translator(fifthCharacterState)
-
-    ???: Sapevo che sarebbe arrivata una nuova persona!
-    ???: Immagino tu abbia un milione di domande, vero?
-    - (top)
-        * (dove) [Dove sono?]
-            {chiSei:{charNameFive}|???}: Questo luogo non ha un nome.
-            {chiSei:{charNameFive}|???}: Per me è il giardino, ma vedrai anche tu che è anche molto altre cose.
-            {chiSei:{charNameFive}|???}: La cosa che posso dirti con certezza è che faccio di tutto per renderlo un posto sicuro.
-            {chiSei:{charNameFive}|???}: Un posto dove prenderti cura di te.
-            {chiSei:{charNameFive}|???}: Non male, no?
-            {chiSei:{charNameFive}|???}: Soprattutto quando fuori da qui è difficile trovare un senso.
-                -> top
-        
-        * (chiSei) [Chi sei?]
-            ???: La persona che tiene in piedi questo luogo.
-            ???: Ma tu puoi chiamarmi <b>{translator(fifthCharacterState)}</b>.
-            {charNameFive}: Così puoi ricordarti con facilità a cosa servo.
-                -> top
-        
-        * (vado) [Come me ne vado da qui?]
-            {chiSei:{charNameFive}|???}: Vuoi già andartene?
-            {chiSei:{charNameFive}|???}: Forse devo rivedere il mio benvenuto.
-            {chiSei:{charNameFive}|???}: Forse sono stata troppo formale?
-            {chiSei:{charNameFive}|???}: O dovrei essere più autorevole?
-            {chiSei:{charNameFive}|???}: Ma non devo essere scortese ora.
-            {chiSei:{charNameFive}|???}: Mi hai fatto una domanda, e vedrò di rispondere.
-            {chiSei:{charNameFive}|???}: A est della stazione troverai un sentiero che ti riporterà a casa.
-            {chiSei:{charNameFive}|???}: E se deciderai di tornare, troverai tutto nello stato in cui l'hai lasciato.
-                -> top
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    
+        ???: Sapevo che sarebbe arrivata una nuova persona!
+        ???: Immagino tu abbia un milione di domande, vero?
+        - (top)
+            * (dove) [Dove sono?]
+                {chiSei:{charNameFive}|???}: Questo luogo non ha un nome.
+                {chiSei:{charNameFive}|???}: Per me è il giardino, ma vedrai anche tu che è anche molto altre cose.
+                {chiSei:{charNameFive}|???}: La cosa che posso dirti con certezza è che faccio di tutto per renderlo un posto sicuro.
+                {chiSei:{charNameFive}|???}: Un posto dove prenderti cura di te.
+                {chiSei:{charNameFive}|???}: Non male, no?
+                {chiSei:{charNameFive}|???}: Soprattutto quando fuori da qui è difficile trovare un senso.
+                    -> top
+            
+            * (chiSei) [Chi sei?]
+                ???: La persona che tiene in piedi questo luogo.
+                ???: Ma tu puoi chiamarmi <b>{translator(fifthCharacterState)}</b>.
+                {charNameFive}: Così puoi ricordarti con facilità a cosa servo.
+                    -> top
+            
+            * (vado) [Come me ne vado da qui?]
+                {chiSei:{charNameFive}|???}: Vuoi già andartene?
+                {chiSei:{charNameFive}|???}: Forse devo rivedere il mio benvenuto.
+                {chiSei:{charNameFive}|???}: Forse sono stata troppo formale?
+                {chiSei:{charNameFive}|???}: O dovrei essere più autorevole?
+                {chiSei:{charNameFive}|???}: Ma non devo essere scortese ora.
+                {chiSei:{charNameFive}|???}: Mi hai fatto una domanda, e vedrò di rispondere.
+                {chiSei:{charNameFive}|???}: A est della stazione troverai un sentiero che ti riporterà a casa.
+                {chiSei:{charNameFive}|???}: E se deciderai di tornare, troverai tutto nello stato in cui l'hai lasciato.
+                    -> top
+                    
+            * {vado} [Non ho più voglia di parlare.]
+                {chiSei:{charNameFive}|???}: Lascia che ti rubi giusto un secondo!
+                    -> your_name
                 
-        * {vado} [Non ho più voglia di parlare.]
-            {chiSei:{charNameFive}|???}: Lascia che ti rubi giusto un secondo!
-            -> your_name
-            
-        * {vado or chiSei or dove} [Ma perché sono qui?]
-            {chiSei:{charNameFive}|???}: Ora tocca a me farti una domanda.
-            -> your_name
-            
-        * -> your_name
+            * {vado or chiSei or dove} [Ma perché sono qui?]
+                {chiSei:{charNameFive}|???}: Ora tocca a me farti una domanda.
+                    -> your_name
+                
+            * -> your_name
     
     = your_name
         ~ temp charNameOne = translator(firstCharacterState)
@@ -280,12 +80,12 @@
                 - talk_with_first_character:
                     {charNameFive}: Ma sei super sul pezzo! Sembra che {charNameOne} ti abbia già raccontato qualcosa di sè!
                     {charNameFive}: Cavolo, sei qui da pochissimo e già mi rendi orgogliosa di te!
-                            -> gifts_and_ink
+                        -> gifts_and_ink
     
             }
 
             
-    === gifts_and_ink
+=== gifts_and_ink
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
@@ -327,28 +127,29 @@
             + [Matematico: ascolto, analizzo, scelgo il dono.]
                 {charNameFive}: Esatto!
                 {charNameFive}: Siamo sulla stessa lunghezza d'onda noi due!
-                    ~ fifthBlue ++
+                ~ fifthBlue ++
                     
             + [Come un gioco: comprendi il loop, dai il meglio di te.]
                 {charNameFive}: Sono troppo vecchia per giocare, ma credo tu abbia centrato il punto.
-                    ~ fifthYellow ++
+                ~ fifthYellow ++
                     
             + [Quindi devo lavorare senza ricevere mezzo soldo.]
                 {charNameFive}: Non è un lavoro.
                 {charNameFive}: E qui non c'è denaro.
                 {charNameFive}: Ma è colpa mia, sto dando troppe cose per scontato.
-                    ~ fifthRed ++
+                ~ fifthRed ++
                     
             + [Mi piace l'idea di creare una relazione con queste persone.]
                 {charNameFive}: Un po' di distacco è utile, per non farti ferire.
                 {charNameFive}: Vediti più come {pronouns has him: un amico|{pronouns has her: un'amica|unə amicə}}, che aiuta una persona a vedersi in modo diverso. 
-                    ~ fifthGreen ++
+                ~ fifthGreen ++
                     
             + [La fiducia non si conquista, la fiducia è un dono.]
                 {charNameFive}: Ho usato delle parole frettolose, scusa.
                 {charNameFive}: Ma sì: tu doni loro tempo e ascolto, e loro ti donano la propria fiducia.
-                    ~ fifthPurple ++
+                ~ fifthPurple ++
             -
+        
         {charNameFive}: Il dono è importante non solo per guadagnare fiducia.
         {charNameFive}: Il giusto dono può anche aumentare la tua quantità di <b>inchiostro</b>.
         {charNameFive}: Perché tu{pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}} sei<b>{pronouns has him: un riscrittore|{pronouns has her: una riscrittora|unə riscrittorə}}</b>!
@@ -387,66 +188,68 @@
             {charNameFive}: Ora devo continuare a sbloccare un vecchio sentiero.
             {charNameFive}: Questo posto morirebbe senza me.
             {charNameFive}: Quando avrai conquistato la fiducia di {charNameOne} e le avrai donato qualcosa, torna da me per le ultime istruzioni.
-                    ~ firstPauseTalking = 0
-            -> main
+                
+            ~ firstPauseTalking = 0
+                -> main
              
 
     
-    === questions
-    ~ temp charNameOne = translator(firstCharacterState)
-    ~ temp charNameTwo = translator(secondCharacterState)
-    ~ temp charNameThree = translator(thirdCharacterState)
-    ~ temp charNameFour= translator(fourthCharacterState)
-    ~ temp charNameFive = translator(fifthCharacterState)
-    
-        {firstCharacterInkLevel == Empty or firstCharacterInkLevel == Low: {charNameFive}: Non hai ottenuto molto inchiostro. Ma come si dice: se {pronouns has him: l'alunno|{pronouns has her: la alunna|l'alunnə}} sbaglia, la colpa è del maestro.}
-        {firstCharacterInkLevel == Normal: {charNameFive}: Bel colpo! Ti sei {pronouns has him: guadagnato|{pronouns has her: guadagnata|guadagnatə}} subito una bella dose di inchiostro! Avessi fatto meglio il mio lavoro, sarebbe stato il massimo!}
-        {firstCharacterInkLevel == High: {charNameFive}: {name}, hai dato alla persona il suo dono preferito! Riempi questo cuore di orgoglio!}
-        {charNameFive}: E adesso, l'ultima lezione: a cosa serve l'inchiostro?
-        {charNameFive}: Sostanzialmente più alto è il suo valore, più <b>interventi</b> puoi fare.
-        {charNameFive}: Gli interventi sono domande o commenti che puoi fare su cose diverse che preoccupano la persona.
-        {charNameFive}: Un intervento ti è sempre garantito, per provare a cambiare le cose, ma gli altri te li dovrai meritare.
-        {charNameFive}: E più interventi hai a disposizione, più sarà facile convincere la persona a vedere le cose diversamente.
-        {charNameFive}: A raggiungere il tuo obiettivo:
-        {charNameFive}: riscrivere la sua storia.
+=== questions
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameThree = translator(thirdCharacterState)
+        ~ temp charNameFour= translator(fourthCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
         
-            + [Hai un consiglio da darmi Mentore?]
-                {charNameFive}: Sii chi sei.
-                {charNameFive}: Segui i miei consigli.
-                {charNameFive}: E non chiedere all'altra persona di diventare qualcosa che non è.
-                    ~ fifthGreen ++
-                    
-            + [Ma non posso dirle: chiamati così e cosà, addio!?]
-                {charNameFive}: Un nuovo nome è una nuova esperienza.
-                {charNameFive}: E l'esperienza viene dal percorso.
-                {charNameFive}: Se non c'è percorso, non c'è cambiamento.
-                    ~ fifthRed ++
+            {firstCharacterInkLevel == Empty or firstCharacterInkLevel == Low: {charNameFive}: Non hai ottenuto molto inchiostro. Ma come si dice: se {pronouns has him: l'alunno|{pronouns has her: la alunna|l'alunnə}} sbaglia, la colpa è del maestro.}
+            {firstCharacterInkLevel == Normal: {charNameFive}: Bel colpo! Ti sei {pronouns has him: guadagnato|{pronouns has her: guadagnata|guadagnatə}} subito una bella dose di inchiostro! Avessi fatto meglio il mio lavoro, sarebbe stato il massimo!}
+            {firstCharacterInkLevel == High: {charNameFive}: {name}, hai dato alla persona il suo dono preferito! Riempi questo cuore di orgoglio!}
+            {charNameFive}: E adesso, l'ultima lezione: a cosa serve l'inchiostro?
+            {charNameFive}: Sostanzialmente più alto è il suo valore, più <b>interventi</b> puoi fare.
+            {charNameFive}: Gli interventi sono domande o commenti che puoi fare su cose diverse che preoccupano la persona.
+            {charNameFive}: Un intervento ti è sempre garantito, per provare a cambiare le cose, ma gli altri te li dovrai meritare.
+            {charNameFive}: E più interventi hai a disposizione, più sarà facile convincere la persona a vedere le cose diversamente.
+            {charNameFive}: A raggiungere il tuo obiettivo:
+            {charNameFive}: riscrivere la sua storia.
             
-            + [Non è una persona razionale. Può farcela?]
-                {charNameFive}: {name}, capisco la tua perplessità, ma con la giusta guida, ce la può fare.
-                {charNameFive}: E assieme noi non possiamo di certo sbagliare!
-                    ~ fifthBlue ++
-                    
-            + [Gli scoiattoli non hanno bisogno di riscriverla, invece?]
-                {charNameFive}: {name}, apprezzo la tua creatività, ma mantieni l'attenzione sull'obiettivo.
-                {charNameFive}: E gli scoiattoli non si fanno queste domande.
-                {charNameFive}: Gli scoiattoli <i>sono</i> e basta.
-                    ~ fifthYellow ++
-                    
-            + [Non dovrei essere io a decidere il mio obiettivo?]
-                {charNameFive}: Il tuo obiettivo <i>qui</i>, perdonami.
-                {charNameFive}: Non avendo altri luoghi in cui andare, mi dimentico che possono esserci sono altre vite, altri obiettivi da raggiungere.
-                    ~ fifthPurple ++
-            -
-        {charNameFive}: Ricorda {name}: sei una guida, ma sta alla persona decidere alla fine chi è, e di cosa ha bisogno.
-        {charNameFive}: Quando te la senti, affronta questo ultimo passaggio e poi torna da me.
-                ~ firstPauseTalking = 0
-                    -> main
+                + [Hai un consiglio da darmi Mentore?]
+                    {charNameFive}: Sii chi sei.
+                    {charNameFive}: Segui i miei consigli.
+                    {charNameFive}: E non chiedere all'altra persona di diventare qualcosa che non è.
+                        ~ fifthGreen ++
+                        
+                + [Ma non posso dirle: chiamati così e cosà, addio!?]
+                    {charNameFive}: Un nuovo nome è una nuova esperienza.
+                    {charNameFive}: E l'esperienza viene dal percorso.
+                    {charNameFive}: Se non c'è percorso, non c'è cambiamento.
+                        ~ fifthRed ++
+                
+                + [Non è una persona razionale. Può farcela?]
+                    {charNameFive}: {name}, capisco la tua perplessità, ma con la giusta guida, ce la può fare.
+                    {charNameFive}: E assieme noi non possiamo di certo sbagliare!
+                        ~ fifthBlue ++
+                        
+                + [Gli scoiattoli non hanno bisogno di riscriverla, invece?]
+                    {charNameFive}: {name}, apprezzo la tua creatività, ma mantieni l'attenzione sull'obiettivo.
+                    {charNameFive}: E gli scoiattoli non si fanno queste domande.
+                    {charNameFive}: Gli scoiattoli <i>sono</i> e basta.
+                        ~ fifthYellow ++
+                        
+                + [Non dovrei essere io a decidere il mio obiettivo?]
+                    {charNameFive}: Il tuo obiettivo <i>qui</i>, perdonami.
+                    {charNameFive}: Non avendo altri luoghi in cui andare, mi dimentico che possono esserci sono altre vite, altri obiettivi da raggiungere.
+                        ~ fifthPurple ++
+                -
+            {charNameFive}: Ricorda {name}: sei una guida, ma sta alla persona decidere alla fine chi è, e di cosa ha bisogno.
+            {charNameFive}: Quando te la senti, affronta questo ultimo passaggio e poi torna da me.
+            
+            ~ firstPauseTalking = 0
+                -> main
         
         
     
    
-   === little_storylets
+=== little_storylets
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
@@ -494,7 +297,7 @@
         + [Ripensadonci, non ho nulla di nuovo da dire.]
             -> talk_with_mentor
    
-   //Feedback//
+//Feedback//
 === first_character_feedback
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
@@ -548,7 +351,7 @@
         {charNameFive}: Ora vado a sistemare quel disastro che è la biblioteca, che già ci ho messo ore per sbloccare la porta.
                 -> main
           
-   === second_character_feedback
+=== second_character_feedback
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
@@ -608,8 +411,7 @@
     {charNameFive}: A prescindere dal risultato.
     {charNameFive}: E un giorno potrai fare questo lavoro da {pronouns has him: solo|{pronouns has her: sola|solə}}.
     {charNameFive}: E a quel punto forse anche io potrò un poco riposare.
-   
-   -> talk_with_mentor
+        -> talk_with_mentor
    
    === third_character_feedback
     ~ temp charNameOne = translator(firstCharacterState)
@@ -619,9 +421,9 @@
     ~ temp charNameFive = translator(fifthCharacterState) 
     
    third_character_feedback
-   -> talk_with_mentor
+    -> talk_with_mentor
    
-   === fourth_character_feedback
+=== fourth_character_feedback
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
@@ -629,9 +431,9 @@
     ~ temp charNameFive = translator(fifthCharacterState)
     
     fourth_character_feedback
-    -> talk_with_mentor
+        -> talk_with_mentor
     
-    === fifth_character_feedback
+=== fifth_character_feedback
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
@@ -639,7 +441,7 @@
     ~ temp charNameFive = translator(fifthCharacterState)    
     
     fifth_character_feedback
-    -> talk_with_mentor
+        -> talk_with_mentor
     
 //Storylets di commentario
     === growing_fungus_storylet
@@ -684,8 +486,8 @@
         {charNameFive}: Io non ho tempo ora, ma sono sicura che troverai una soluzione.
         {charNameFive}: Trova un modo per allontanarlo.
         {charNameFive}: Ma non metterci troppo, per favore.
-            ~ secondPauseTalking = 0
-        -> talk_with_mentor
+        ~ secondPauseTalking = 0
+            -> talk_with_mentor
     
     === watering_can_storylet
         ~ temp charNameOne = translator(firstCharacterState)
@@ -705,19 +507,20 @@
         {charNameFive}: E caricalo di peso sul prossimo treno.
         {charNameFive}: No, non devo essere così severa.
         {charNameFive}: Ma ti prego, tienimelo lontano.
-            ~ secondPauseTalking = 0
-        -> talk_with_mentor
+        ~ secondPauseTalking = 0
+            -> talk_with_mentor
+
 //Fine della demo
-=== ending_demo
-~ temp charNameFive = translator(fifthCharacterState)
-{charNameFive}: Sembra che la demo sia finita qui, {name}.
-{charNameFive}: Potrai girare ancora per gli spazi aperti.
-{charNameFive}: Continuare a leggere le storie della <b>biblioteca</b>.
-{charNameFive}: E coltivare cosa rimane da coltivare nella <b>serra</b>.
-{charNameFive}: Ma non compariranno nuove persone bisognose.
-{charNameFive}: Ti chiedo un favore prima di salutarci, {name}.
-{charNameFive}: Salvati questo codice, e inseriscilo poi nel documento del testing.
-{charNameFive}: O se non hai voglia di rispondere alle domande mandamelo attraverso Queerginia: faresti molto felice entrambe.
-{charNameFive}: Il codice è {playerPurple}{playerYellow}{playerBlue}{playerGreen}{playerRed}{playerFirstStory}{playerSecondStory}{firstCharacterState} {secondCharacterState}
-{charNameFive}: Grazie di cuore.
--> talk_with_mentor
+    === ending_demo
+    ~ temp charNameFive = translator(fifthCharacterState)
+    {charNameFive}: Sembra che la demo sia finita qui, {name}.
+    {charNameFive}: Potrai girare ancora per gli spazi aperti.
+    {charNameFive}: Continuare a leggere le storie della <b>biblioteca</b>.
+    {charNameFive}: E coltivare cosa rimane da coltivare nella <b>serra</b>.
+    {charNameFive}: Ma non compariranno nuove persone bisognose.
+    {charNameFive}: Ti chiedo un favore prima di salutarci, {name}.
+    {charNameFive}: Salvati questo codice, e inseriscilo poi nel documento del testing.
+    {charNameFive}: O se non hai voglia di rispondere alle domande mandamelo attraverso Queerginia: faresti molto felice entrambe.
+    {charNameFive}: Il codice è {playerPurple}{playerYellow}{playerBlue}{playerGreen}{playerRed}{playerFirstStory}{playerSecondStory}{firstCharacterState} {secondCharacterState}
+    {charNameFive}: Grazie di cuore.
+        -> talk_with_mentor
