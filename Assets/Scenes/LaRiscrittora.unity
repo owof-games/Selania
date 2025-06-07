@@ -335,7 +335,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 62.35
+  m_fontSize: 72
   m_fontSizeBase: 77.9
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1066,7 +1066,7 @@ GameObject:
   - component: {fileID: 112976948}
   - component: {fileID: 112976947}
   m_Layer: 5
-  m_Name: FromForestToBusStop
+  m_Name: FromForestToTrainStop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1144,7 +1144,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FromForestToBusStop
+          m_StringArgument: FromForestToTrainStop
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &112976948
@@ -4124,7 +4124,7 @@ GameObject:
   - component: {fileID: 760274122}
   - component: {fileID: 760274121}
   m_Layer: 5
-  m_Name: FromBusStopToForest
+  m_Name: FromTrainStopToForest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4202,7 +4202,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FromBusStopToForest
+          m_StringArgument: FromTrainStopToForest
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &760274122
@@ -4392,7 +4392,7 @@ GameObject:
   - component: {fileID: 828939240}
   - component: {fileID: 828939239}
   m_Layer: 5
-  m_Name: FromBusStopToBedroom
+  m_Name: FromTrainStopToBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4470,7 +4470,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FromBusStopToBedroom
+          m_StringArgument: FromTrainStopToBedroom
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &828939240
@@ -9656,7 +9656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2066755941}
   m_Layer: 5
-  m_Name: === BUS STOP ===
+  m_Name: === TRAIN STOP ===
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

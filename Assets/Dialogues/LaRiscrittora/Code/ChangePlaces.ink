@@ -8,8 +8,8 @@
         ~ move_entity(PG, Bedroom)
         -> bedroom
     
-    //+ {are_two_entities_together(PG, RoomExit)} [RoomExit]
-        //-> END
+    + {are_two_entities_together(PG, RoomExit) && (not debugStochastic)} [RoomExit]
+        -> END
       
 
 //Streets to Bus Stop

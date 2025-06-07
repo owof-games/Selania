@@ -3,6 +3,7 @@
                        ELEMENTI DI GESTIONE DEL GIOCO
                     
                      ----------------------------------*/
+    
     INCLUDE main.ink
 
 //File con gli appunti di gestione del progetto, la formattazione etc.
