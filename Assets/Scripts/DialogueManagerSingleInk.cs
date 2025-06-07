@@ -318,8 +318,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
                         background.sprite = backForest;
                     }
 
-                    //TAG GESTIONE DEL BUSSTOP
-                    if (tagValue == "backBusStop")
+                    //TAG GESTIONE DEL TRAIN STOP
+                    if (tagValue == "backTrainStop")
                     {
                         background.sprite = backTrainStop;
                     }
@@ -374,8 +374,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
                         ambientSounds.clip = forestSounds;
                         ambientSounds.Play();
                     }
-                    //TAG MUSICA SOTTOFONDO BusStop
-                    if (tagValue == "busstopSounds")
+                    //TAG MUSICA SOTTOFONDO TrainStop
+                    if (tagValue == "trainstopSounds")
                     {
                         ambientSounds.clip = trainstopSounds;
                         ambientSounds.Play();

@@ -2,7 +2,7 @@ are_two_entities_together(TheFrog, PG)
 are_two_entities_together(Mentor, PG)
 are_two_entities_together(FirstCharacter, PG)
 are_two_entities_together(SecondCharacter, PG) (dopo quarta storia primo pg)
-entity_location(PG) == BusStop
+entity_location(PG) == TrainStop
 entity_location(PG) == Forest
 entity_location(PG) == GreenhouseMiddlePath
 entity_location(PG) == Library
