@@ -8364,7 +8364,7 @@ MonoBehaviour:
   continueButton: {fileID: 921273106}
   allPlaces:
   - bedroomContents
-  - busStopContents
+  - trainStopContents
   - forestContents
   - greenhouseMiddlePathContents
   - greenhouseContents
