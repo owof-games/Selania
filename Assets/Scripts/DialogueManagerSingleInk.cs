@@ -43,8 +43,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Forest Backgrounds")]
     [SerializeField] private Sprite backForest;
 
-    [Header("Bus Stop Backgrounds")]
-    [SerializeField] private Sprite backBusStop;
+    [Header("Train Stop Backgrounds")]
+    [SerializeField] private Sprite backTrainStop;
 
     [Header("Greenhouse Backgrounds")]
     [SerializeField] private Sprite backGreenhouse;
@@ -71,8 +71,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Forest Sounds")]
     [SerializeField] private AudioClip forestSounds;
 
-    [Header("Bus Stop Sounds")]
-    [SerializeField] private AudioClip busstopSounds;
+    [Header("Train Stop Sounds")]
+    [SerializeField] private AudioClip trainstopSounds;
 
     [Header("Greenhouse Sounds")]
     [SerializeField] private AudioClip greenhouseSounds;
@@ -321,7 +321,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     //TAG GESTIONE DEL BUSSTOP
                     if (tagValue == "backBusStop")
                     {
-                        background.sprite = backBusStop;
+                        background.sprite = backTrainStop;
                     }
 
                     //TAG GESTIONE DELLA SERRA
@@ -377,7 +377,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     //TAG MUSICA SOTTOFONDO BusStop
                     if (tagValue == "busstopSounds")
                     {
-                        ambientSounds.clip = busstopSounds;
+                        ambientSounds.clip = trainstopSounds;
                         ambientSounds.Play();
                     }
 
