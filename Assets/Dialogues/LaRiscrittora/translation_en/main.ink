@@ -13,11 +13,11 @@
 <- inventory_contents
 
 //Personagge da aiutare
-<-first_character
-<-second_character
-<-third_character
-<-personaggia_quattro
-<-fifth_character
+<- first_character
+<- second_character
+<- third_character
+<- fourth_character
+<- fifth_character
 
 
 //Elementi della serra
