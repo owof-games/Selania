@@ -8532,7 +8532,7 @@ MonoBehaviour:
   bedroomTwo: {fileID: 21300000, guid: ddf99c71b42c9c746877c1f72846f5b7, type: 3}
   bedroomThree: {fileID: 21300000, guid: 7896b8b0eb43225458521d0501e5713f, type: 3}
   backForest: {fileID: 21300000, guid: 0faabba094d971b4a9946617a3b5cd4f, type: 3}
-  backTrainStop: {fileID: 0}
+  backTrainStop: {fileID: 21300000, guid: b569490a602e2ed4093b74a772e7232d, type: 3}
   backGreenhouse: {fileID: 21300000, guid: 4e7db147f93ea6e4b851dd19572590df, type: 3}
   backGreenhouseMiddlePath: {fileID: 21300000, guid: d1755486176423b47a98bf0ace6e90f9, type: 3}
   backNest: {fileID: -3239163318168165702, guid: 16e88c7ff044338449f76e5a912abaef, type: 3}
