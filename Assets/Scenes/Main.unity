@@ -8371,7 +8371,7 @@ MonoBehaviour:
   - nestContents
   - libraryContents
   - laboratoryContents
-  inkAssetJSON: {fileID: 4900000, guid: 94c6ed980dce8dc4d93e1c6dec441382, type: 3}
+  inkAssetJSON: {fileID: 4900000, guid: bc00609c8f8ddae47b1b8cd2c864dabe, type: 3}
   entities:
   - {fileID: 2045264602}
   - {fileID: 1004496193}
