@@ -6,6 +6,7 @@ using System.Collections;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.Events;
 
 public class DialogueManagerSingleInk : MonoBehaviour
 {
@@ -119,13 +120,24 @@ public class DialogueManagerSingleInk : MonoBehaviour
         }
     }
 
+    [SerializeField] UnityEvent<string> startAnimation; 
+
     private void UpdateUI(string currentLine)
     {
         bool buttonsEnabled;
+        bool mustContinueStory = false;
         if (currentLine == "@interact")
         {
             dialoguePanel.SetActive(false);
             buttonsEnabled = true;
+        }
+        else if ( currentLine.StartsWith( "@animation:" ) )
+        {
+            var animationName = currentLine["@animation:".Length..];
+            startAnimation.Invoke( animationName );
+            buttonsEnabled = false;
+            // ContinueStory();
+            mustContinueStory = true;
         }
         else
         {
@@ -139,6 +151,11 @@ public class DialogueManagerSingleInk : MonoBehaviour
         CheckContinueButton();
 
         HandleTags(story.currentTags);
+
+        if ( mustContinueStory )
+        {
+            ContinueStory();
+        }
     }
 
     public void CheckContinueButton()
@@ -502,6 +519,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
         string path = Application.persistentDataPath + "/savefile.json";
         if (File.Exists(path))
         {
+            Debug.Log( $"Carico gioco da {path}" );
             string json = File.ReadAllText(path);
             SaveData saveData = JsonUtility.FromJson<SaveData>(json);
 

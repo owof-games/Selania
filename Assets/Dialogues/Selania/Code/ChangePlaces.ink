@@ -9,6 +9,7 @@
         -> bedroom
     
     + {are_two_entities_together(PG, RoomExit) && (not debugStochastic)} [RoomExit]
+        @animation:Cat
         -> END
       
 
