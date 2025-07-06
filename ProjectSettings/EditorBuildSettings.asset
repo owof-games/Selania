@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: e5ff027dfdc798345978d0476eea9ecd
   - enabled: 1
-    path: Assets/Scenes/LaRiscrittora.unity
+    path: Assets/Scenes/Main.unity
     guid: df51c74b5ef61d246af3a9fbb447ca0a
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2ea68e328b9896345b249167d5c7c22b, type: 2}

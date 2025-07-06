@@ -335,7 +335,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 48.2
   m_fontSizeBase: 77.9
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2678,7 +2678,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
+  m_fontSize: 13.1
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3432,7 +3432,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
+  m_fontSize: 14.75
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6092,7 +6092,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
+  m_fontSize: 14.75
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6436,7 +6436,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
+  m_fontSize: 14.75
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8371,7 +8371,7 @@ MonoBehaviour:
   - nestContents
   - libraryContents
   - laboratoryContents
-  inkAssetJSON: {fileID: 4900000, guid: 52a25747e603e6e4aacb94e87b22a990, type: 3}
+  inkAssetJSON: {fileID: 4900000, guid: 94c6ed980dce8dc4d93e1c6dec441382, type: 3}
   entities:
   - {fileID: 2045264602}
   - {fileID: 1004496193}
@@ -8419,7 +8419,7 @@ MonoBehaviour:
   bedroomTwo: {fileID: 21300000, guid: ddf99c71b42c9c746877c1f72846f5b7, type: 3}
   bedroomThree: {fileID: 21300000, guid: 7896b8b0eb43225458521d0501e5713f, type: 3}
   backForest: {fileID: 21300000, guid: 0faabba094d971b4a9946617a3b5cd4f, type: 3}
-  backBusStop: {fileID: 21300000, guid: b569490a602e2ed4093b74a772e7232d, type: 3}
+  backTrainStop: {fileID: 0}
   backGreenhouse: {fileID: 21300000, guid: 4e7db147f93ea6e4b851dd19572590df, type: 3}
   backGreenhouseMiddlePath: {fileID: 21300000, guid: d1755486176423b47a98bf0ace6e90f9, type: 3}
   backNest: {fileID: -3239163318168165702, guid: 16e88c7ff044338449f76e5a912abaef, type: 3}
@@ -8428,7 +8428,7 @@ MonoBehaviour:
   ambientSounds: {fileID: 1863324330}
   bedroomSounds: {fileID: 8300000, guid: 6de55e0d82384a44fa4eacd46aa0c0c5, type: 3}
   forestSounds: {fileID: 8300000, guid: 0610a4476c76fbf41a11b679f4b27c4f, type: 3}
-  busstopSounds: {fileID: 8300000, guid: 0edcaa325c84c2d47b9f70a7f219ed5d, type: 3}
+  trainstopSounds: {fileID: 0}
   greenhouseSounds: {fileID: 8300000, guid: f094a8aef5c73a149a1c89f989d24cdf, type: 3}
   greenhousemiddlepathSounds: {fileID: 8300000, guid: f094a8aef5c73a149a1c89f989d24cdf, type: 3}
   librarySounds: {fileID: 8300000, guid: 28204f36142ee70409f9c30708fe0690, type: 3}
@@ -9594,7 +9594,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
+  m_fontSize: 14.75
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9770,7 +9770,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
+  m_fontSize: 14.75
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
