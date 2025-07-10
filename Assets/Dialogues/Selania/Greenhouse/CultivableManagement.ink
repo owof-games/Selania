@@ -15,21 +15,22 @@
     VAR statoNonTiScordarDiTe = notStarted
 
 //Variabili per la gestione della serra
-    LIST cropsType = collaborazione, ciclicità, novità, cancellazione, ricordo, indipendenza
+    LIST cropsType = relationship, shift, understanding, selfdetermination, wonder, imagination
 
 //QUESTE LISTE HANNO UN VALORE CATALOGATIVO E PER LA GESTIONE DELLE DOMANDE
+
     //Relazione: piante che parlano del rapporto con l'altra. Che per lo più è positiva, ma non sempre. Forse in questo senso la Brina ci azzecca poco.
-    VAR pianteCollaborazione = (LicheneDegliAbissi, MuschioDelleAmanti, CantoDelleCompagne, BrinaDellImpossibile)
+    VAR relationshipCrops = (LicheneDegliAbissi, MuschioDelleAmanti, CantoDelleCompagne, BrinaDellImpossibile)
     //Movimento: elementi che parlano di movimento fisico o emotivo
-    VAR pianteCiclicità = (LicheneDegliAbissi, CantoDelleCompagne, NonTiScordarDiTe)
+    VAR shiftCrops = (LicheneDegliAbissi, CantoDelleCompagne, NonTiScordarDiTe)
     //Soglia: siamo a ridosso di qualcosa: lo accogliamo o lo rifiutiamo?
-    VAR pianteIndipendenza = (LaSpazzata, BaccaDellaAddolorata, NonTiScordarDiTe)
+    VAR understandingCrops = (LaSpazzata, BaccaDellaAddolorata, NonTiScordarDiTe)
     //Futuro: il cambiamento è inevitabile.
-        VAR pianteNovità =(MuschioDelleAmanti,LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
-    //Passato: rimaniamo nello spazio della memoria, del ricordo
-VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, BrinaDellImpossibile)
+    VAR selfdeterminationCrops =(MuschioDelleAmanti,LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
+    //Passato: rimaniamo nello spazio della memoria, del wonder
+    VAR wonderCrops =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, BrinaDellImpossibile)
     //Esplosione: le cose cambiano di botto
-    VAR pianteCancellazione =(LicheneDegliAbissi,LaSpazzata, BaccaDellaAddolorata)
+    VAR imaginationCrops =(LicheneDegliAbissi,LaSpazzata, BaccaDellaAddolorata)
 
 //Pianta che verrà proposta. La uso anche per tracking dello stato delle piante.
     VAR chosenCultivable = ()
@@ -97,10 +98,10 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
         
         }
 
-    - dice == 1 && pianteCollaborazione ^ backupCultivable != () && pianteIndipendenza ^ backupCultivable != ():
+    - dice == 1 && relationshipCrops ^ backupCultivable != () && understandingCrops ^ backupCultivable != ():
         {
             - firstQuest == false:
-            {debugCultivable: <i>Il valore di firstQuest è {firstQuest}. Piante Collaborazione contiene: {pianteCollaborazione}. Piante Indipendenza contiene: {pianteIndipendenza}.}
+            {debugCultivable: <i>Il valore di firstQuest è {firstQuest}. Piante Collaborazione contiene: {relationshipCrops}. Piante Indipendenza contiene: {understandingCrops}.}
             {
                 - cropsType == ():
                 {debugCultivable: <i>Questa è la prima domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi vado direttamente alla domanda.}
@@ -109,14 +110,14 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}
                 {
-                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && cropsType hasnt collaborazione && cropsType hasnt indipendenza:
-                    {debugCultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {pianteCollaborazione^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {pianteIndipendenza^firstAnswerTracker}}
+                    - LIST_RANDOM(relationshipCrops^firstAnswerTracker) != () && LIST_RANDOM(understandingCrops^firstAnswerTracker) != () && cropsType hasnt relationship && cropsType hasnt imagination:
+                    {debugCultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {relationshipCrops^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {understandingCrops^firstAnswerTracker}}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> first_question
                     
                     - else:
                     {debugCultivable: <i>Non ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
-                    {debugCultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {pianteCollaborazione^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {pianteIndipendenza^firstAnswerTracker}}
+                    {debugCultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {relationshipCrops^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {understandingCrops^firstAnswerTracker}}
                         ~ randomCounter ++
                         ->random
                 }
@@ -129,10 +130,10 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
         }
     
         
-    - dice == 2 && pianteCiclicità ^ backupCultivable != () && pianteNovità ^ backupCultivable != ():
+    - dice == 2 && shiftCrops ^ backupCultivable != () && selfdeterminationCrops ^ backupCultivable != ():
         {
             -secondQuest == false:
-            {debugCultivable: <i>Il valore di secondQuest è {secondQuest}. Piante Ciclicità contiene: {pianteCiclicità}. Piante Novità contiene: {pianteNovità} e per questo vado alla domanda.}
+            {debugCultivable: <i>Il valore di secondQuest è {secondQuest}. Piante Ciclicità contiene: {shiftCrops}. Piante Novità contiene: {selfdeterminationCrops} e per questo vado alla domanda.}
             {
                 - cropsType == ():
                 {debugCultivable: <i>Questa è la prima domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi vado direttamente alla domanda.}
@@ -141,13 +142,13 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}
                 {
-                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && cropsType hasnt ciclicità && cropsType hasnt novità:
-                    {debugCultivable: <i>L'intersezione tra prima scelta e piante ciclicità produce {pianteCiclicità^firstAnswerTracker}, quella tra prima scelta e piante novità produce {pianteNovità^firstAnswerTracker}.}
+                    - LIST_RANDOM(shiftCrops^firstAnswerTracker) != () && LIST_RANDOM(selfdeterminationCrops^firstAnswerTracker) != () && cropsType hasnt shift && cropsType hasnt understanding:
+                    {debugCultivable: <i>L'intersezione tra prima scelta e piante shift produce {shiftCrops^firstAnswerTracker}, quella tra prima scelta e piante understanding produce {selfdeterminationCrops^firstAnswerTracker}.}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> second_question
                     - else:
                     {debugCultivable: <i>Non ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
-                    {debugCultivable: <i>L'intersezione tra prima scelta e piante ciclicità produce {pianteCiclicità^firstAnswerTracker}, quella tra prima scelta e piante novità produce {pianteNovità^firstAnswerTracker}.}
+                    {debugCultivable: <i>L'intersezione tra prima scelta e piante shift produce {shiftCrops^firstAnswerTracker}, quella tra prima scelta e piante understanding produce {selfdeterminationCrops^firstAnswerTracker}.}
                             ~ randomCounter ++
                         ->random
                 }
@@ -161,10 +162,10 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
 
 
         
-    - dice == 3 && pianteRicordo ^ backupCultivable != () && pianteCancellazione ^ backupCultivable != ():
+    - dice == 3 && wonderCrops ^ backupCultivable != () && imaginationCrops ^ backupCultivable != ():
         {
             - thirdQuest == false:
-                {debugCultivable: <i>Il valore di thirdQuest è {thirdQuest}. Piante Ricordo contiene: {pianteRicordo}. Piante Cancellazione contiene: {pianteCancellazione} e per questo vado alla domanda.}    
+                {debugCultivable: <i>Il valore di thirdQuest è {thirdQuest}. Piante Ricordo contiene: {wonderCrops}. Piante Cancellazione contiene: {imaginationCrops} e per questo vado alla domanda.}    
                     {
                 - cropsType == ():
                 {debugCultivable: <i>Questa è la prima domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi vado direttamente alla domanda.}
@@ -173,13 +174,13 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && cropsType hasnt ricordo && cropsType hasnt cancellazione:
-                    {debugCultivable: <i>L'intersezione tra prima scelta e piante ricordo produce {pianteRicordo^firstAnswerTracker}, quella tra prima scelta e piante cancellazione produce {pianteCancellazione^firstAnswerTracker}.}
+                    - LIST_RANDOM(wonderCrops^firstAnswerTracker) != () && LIST_RANDOM(imaginationCrops^firstAnswerTracker) != () && cropsType hasnt wonder && cropsType hasnt selfdetermination:
+                    {debugCultivable: <i>L'intersezione tra prima scelta e piante wonder produce {wonderCrops^firstAnswerTracker}, quella tra prima scelta e piante selfdetermination produce {imaginationCrops^firstAnswerTracker}.}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> third_question
                     - else:
                     {debugCultivable: <i>Non ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
-                    {debugCultivable: <i>L'intersezione tra prima scelta e piante cancellazione produce {pianteRicordo^firstAnswerTracker}, quella tra prima scelta e piante novità produce {pianteCancellazione^firstAnswerTracker}.}
+                    {debugCultivable: <i>L'intersezione tra prima scelta e piante selfdetermination produce {wonderCrops^firstAnswerTracker}, quella tra prima scelta e piante understanding produce {imaginationCrops^firstAnswerTracker}.}
                             ~ randomCounter ++
                         ->random
                 }
@@ -193,7 +194,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
         }
 
 
-        - dice == 4 && pianteCollaborazione ^ backupCultivable != () && pianteCiclicità ^ backupCultivable != (): 
+        - dice == 4 && relationshipCrops ^ backupCultivable != () && shiftCrops ^ backupCultivable != (): 
         {
             - fourthQuest == false:
             {
@@ -203,7 +204,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}                 
                 {
-                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && cropsType hasnt collaborazione && cropsType hasnt ciclicità:
+                    - LIST_RANDOM(relationshipCrops^firstAnswerTracker) != () && LIST_RANDOM(shiftCrops^firstAnswerTracker) != () && cropsType hasnt relationship && cropsType hasnt shift:
                         -> fourth_question
                     - else:
                         ~ randomCounter ++
@@ -216,7 +217,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                     -> random
         }
         
-        - dice == 5 && pianteCollaborazione ^ backupCultivable!= () && pianteRicordo ^ backupCultivable != (): 
+        - dice == 5 && relationshipCrops ^ backupCultivable!= () && wonderCrops ^ backupCultivable != (): 
         {
             - fifthQuest == false:
             {
@@ -226,7 +227,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && cropsType hasnt collaborazione && cropsType hasnt ricordo:
+                    - LIST_RANDOM(relationshipCrops^firstAnswerTracker) != () && LIST_RANDOM(wonderCrops^firstAnswerTracker) != () && cropsType hasnt relationship && cropsType hasnt wonder:
                         -> fifth_question
                     - else:
                         ~ randomCounter ++
@@ -239,7 +240,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                     -> random
         }        
         
-        - dice == 6 && pianteCollaborazione ^ backupCultivable != () && pianteCancellazione ^ backupCultivable != (): 
+        - dice == 6 && relationshipCrops ^ backupCultivable != () && imaginationCrops ^ backupCultivable != (): 
         {
             - sixthQuest == false:
             {
@@ -249,7 +250,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && cropsType hasnt collaborazione && cropsType hasnt cancellazione:
+                    - LIST_RANDOM(relationshipCrops^firstAnswerTracker) != () && LIST_RANDOM(imaginationCrops^firstAnswerTracker) != () && cropsType hasnt relationship && cropsType hasnt selfdetermination:
                         -> sixth_question
                     - else:
                         ~ randomCounter ++
@@ -262,7 +263,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                     -> random
         }          
         
-        - dice == 7 && pianteCiclicità ^ backupCultivable != () && pianteIndipendenza ^ backupCultivable != (): 
+        - dice == 7 && shiftCrops ^ backupCultivable != () && understandingCrops ^ backupCultivable != (): 
         {
             - seventhQuest == false:
             {
@@ -272,7 +273,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && cropsType hasnt ciclicità && cropsType hasnt indipendenza:
+                    - LIST_RANDOM(shiftCrops^firstAnswerTracker) != () && LIST_RANDOM(understandingCrops^firstAnswerTracker) != () && cropsType hasnt shift && cropsType hasnt imagination:
                         -> seventh_question
                     - else:
                         ~ randomCounter ++
@@ -285,7 +286,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                     -> random
         }         
         
-        - dice == 8 && pianteCiclicità ^ backupCultivable != () && pianteRicordo ^ backupCultivable != (): 
+        - dice == 8 && shiftCrops ^ backupCultivable != () && wonderCrops ^ backupCultivable != (): 
         {
             - eighthQuest == false:
   
@@ -295,9 +296,9 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}
-                   {debugCultivable: <i>L'intersezione tra prima scelta e piante ricordo produce {pianteCiclicità^firstAnswerTracker}, quella tra prima scelta e piante cancellazione produce {pianteRicordo^firstAnswerTracker}.}                
+                   {debugCultivable: <i>L'intersezione tra prima scelta e piante wonder produce {shiftCrops^firstAnswerTracker}, quella tra prima scelta e piante selfdetermination produce {wonderCrops^firstAnswerTracker}.}                
                 {
-                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && cropsType hasnt ciclicità && cropsType hasnt ricordo:
+                    - LIST_RANDOM(shiftCrops^firstAnswerTracker) != () && LIST_RANDOM(wonderCrops^firstAnswerTracker) != () && cropsType hasnt shift && cropsType hasnt wonder:
                    
                         -> eighth_question
                     - else:
@@ -311,7 +312,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                     -> random
         }        
 
-        - dice == 9 && pianteCiclicità ^ backupCultivable != () && pianteCancellazione ^ backupCultivable != (): 
+        - dice == 9 && shiftCrops ^ backupCultivable != () && imaginationCrops ^ backupCultivable != (): 
         {
             - ninthQuest == false:
             {
@@ -321,7 +322,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && cropsType hasnt ciclicità && cropsType hasnt cancellazione:
+                    - LIST_RANDOM(shiftCrops^firstAnswerTracker) != () && LIST_RANDOM(imaginationCrops^firstAnswerTracker) != () && cropsType hasnt shift && cropsType hasnt selfdetermination:
                         -> ninth_question
                     - else:
                         ~ randomCounter ++
@@ -333,7 +334,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 -> random        
         }
         
-        - dice == 10 && pianteIndipendenza ^ backupCultivable != () && pianteNovità ^ backupCultivable != (): 
+        - dice == 10 && understandingCrops ^ backupCultivable != () && selfdeterminationCrops ^ backupCultivable != (): 
         {
             - tenthQuest == false:
             {
@@ -343,7 +344,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && cropsType hasnt indipendenza && cropsType hasnt novità:
+                    - LIST_RANDOM(understandingCrops^firstAnswerTracker) != () && LIST_RANDOM(selfdeterminationCrops^firstAnswerTracker) != () && cropsType hasnt imagination && cropsType hasnt understanding:
                         -> tenth_question
                     - else:
                         ~ randomCounter ++
@@ -357,7 +358,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                     -> random
         }         
 
-        - dice == 11 && pianteIndipendenza ^ backupCultivable != () && pianteRicordo ^ backupCultivable ^ backupCultivable != (): 
+        - dice == 11 && understandingCrops ^ backupCultivable != () && wonderCrops ^ backupCultivable ^ backupCultivable != (): 
         {
             - eleventhQuest == false:
             {
@@ -367,7 +368,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && cropsType hasnt indipendenza && cropsType hasnt ricordo:
+                    - LIST_RANDOM(understandingCrops^firstAnswerTracker) != () && LIST_RANDOM(wonderCrops^firstAnswerTracker) != () && cropsType hasnt imagination && cropsType hasnt wonder:
                         -> eleventh_question
                     - else:
                         ~ randomCounter ++
@@ -379,7 +380,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 -> random
         }
         
-        - dice == 12 && pianteIndipendenza ^ backupCultivable != () && pianteCancellazione ^ backupCultivable != (): 
+        - dice == 12 && understandingCrops ^ backupCultivable != () && imaginationCrops ^ backupCultivable != (): 
         {
             - twelfthQuest == false:
             {
@@ -388,7 +389,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 
                 - else:
                 {
-                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && cropsType hasnt indipendenza && cropsType hasnt cancellazione:
+                    - LIST_RANDOM(understandingCrops^firstAnswerTracker) != () && LIST_RANDOM(imaginationCrops^firstAnswerTracker) != () && cropsType hasnt imagination && cropsType hasnt selfdetermination:
                         -> twelfth_question
                     - else:
                         ~ randomCounter ++
@@ -400,7 +401,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                     -> random
         } 
         
-        - dice == 13 && pianteNovità ^ backupCultivable != () && pianteRicordo ^ backupCultivable != (): 
+        - dice == 13 && selfdeterminationCrops ^ backupCultivable != () && wonderCrops ^ backupCultivable != (): 
         {
             - thirteenthQuest == false:
             {
@@ -410,7 +411,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && cropsType hasnt novità && cropsType hasnt ricordo:
+                    - LIST_RANDOM(selfdeterminationCrops^firstAnswerTracker) != () && LIST_RANDOM(wonderCrops^firstAnswerTracker) != () && cropsType hasnt understanding && cropsType hasnt wonder:
                         -> thirteenth_question
                     - else:
                         ~ randomCounter ++
@@ -422,7 +423,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                     -> random
         } 
 
-        - dice == 14 && pianteNovità ^ backupCultivable != () && pianteCancellazione ^ backupCultivable != (): 
+        - dice == 14 && selfdeterminationCrops ^ backupCultivable != () && imaginationCrops ^ backupCultivable != (): 
         {
             - fourteenthQuest == false:
             {
@@ -432,7 +433,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && cropsType hasnt novità && cropsType hasnt cancellazione:
+                    - LIST_RANDOM(selfdeterminationCrops^firstAnswerTracker) != () && LIST_RANDOM(imaginationCrops^firstAnswerTracker) != () && cropsType hasnt understanding && cropsType hasnt selfdetermination:
                         -> fourteenth_question
                     - else:
                         ~ randomCounter ++
@@ -444,7 +445,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 -> random
             }    
         
-        - dice == 15 && pianteNovità ^ backupCultivable != () && pianteCollaborazione ^ backupCultivable != (): 
+        - dice == 15 && selfdeterminationCrops ^ backupCultivable != () && relationshipCrops ^ backupCultivable != (): 
         {
             - fifteenQuest == false:
             {
@@ -454,7 +455,7 @@ VAR pianteRicordo =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, Br
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && cropsType hasnt novità && cropsType hasnt collaborazione:
+                    - LIST_RANDOM(selfdeterminationCrops^firstAnswerTracker) != () && LIST_RANDOM(relationshipCrops^firstAnswerTracker) != () && cropsType hasnt understanding && cropsType hasnt relationship:
                         -> fifteen_question
                     - else:
                         ~ randomCounter ++
@@ -488,12 +489,12 @@ QUESTIONS
  
         <i>Le foglie...
             + [<i>{~ Si sfiorano|Si mescolano|Si proteggono le une con le altre}.]
-                    ~ cropsType += collaborazione
-                    ~ firstAnswerTracker = pianteCollaborazione
+                    ~ cropsType += relationship
+                    ~ firstAnswerTracker = relationshipCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}
             + [<i>{~ Si accumulano sulla soglia|Si dispongono in ordine attorno ai vasi|Resistono al vento}.]
-                    ~ cropsType += indipendenza
-                    ~ firstAnswerTracker = pianteIndipendenza
+                    ~ cropsType += imagination
+                    ~ firstAnswerTracker = understandingCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             -   
                 ~ counter ++
@@ -505,12 +506,12 @@ QUESTIONS
 
         <i>L'aria...
             + [<i>{~ Insegue sé stessa|Crea mulinelli di foglie|Ruota e ruzzola portando odori inaspettati}.]
-                    ~ cropsType += ciclicità
-                    ~ firstAnswerTracker = pianteCiclicità
+                    ~ cropsType += shift
+                    ~ firstAnswerTracker = shiftCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             + [<i>{~ È scoppiettante|Freme, carica di elettricità|Corre in avanti, sempre}.]
-                    ~ cropsType += novità
-                    ~ firstAnswerTracker = pianteNovità
+                    ~ cropsType += understanding
+                    ~ firstAnswerTracker = selfdeterminationCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             -   
                 ~ counter ++
@@ -523,12 +524,12 @@ QUESTIONS
     
         <i>L'acqua...
             + [<i>{~ È mossa solo sulla superficie|È torbida|È piena di foglie e petali}.]
-                    ~ cropsType += ricordo
-                    ~ firstAnswerTracker = pianteRicordo
+                    ~ cropsType += wonder
+                    ~ firstAnswerTracker = wonderCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             + [<i>{~ Scava, portando con sé ogni cosa|Schiaccia foglie e sassi|Rimbomba tra i vasi}.]
-                    ~ cropsType += cancellazione
-                    ~ firstAnswerTracker = pianteCancellazione
+                    ~ cropsType += selfdetermination
+                    ~ firstAnswerTracker = imaginationCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             -   
                 ~ counter ++
@@ -540,12 +541,12 @@ QUESTIONS
     
         <i>Le api...
             + [<i>{~Proteggono la regina|Si scambiano direzioni|Si puliscono a vicenda}.]
-                    ~ cropsType += collaborazione
-                    ~ firstAnswerTracker = pianteCollaborazione 
+                    ~ cropsType += relationship
+                    ~ firstAnswerTracker = relationshipCrops 
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             + [<i>{~Danzano in sintonia|Cercano il sole|Spargono polline tra i fiori}.]
-                    ~ cropsType += ciclicità
-                    ~ firstAnswerTracker = pianteCiclicità
+                    ~ cropsType += shift
+                    ~ firstAnswerTracker = shiftCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             -   
                 ~ counter ++
@@ -557,12 +558,12 @@ QUESTIONS
     
         <i>Le formiche...
             + [<i>{~Lasciano tracce per le compagne|Accumulano cibo per l'inverno|Creano ponti di foglie}.]
-                    ~ cropsType += collaborazione
-                    ~ firstAnswerTracker = pianteCollaborazione 
+                    ~ cropsType += relationship
+                    ~ firstAnswerTracker = relationshipCrops 
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             + [<i>{~Pensano alle amiche perse|Ricordano ciò che non sono più|Si aggrappano ai sogni}.]
-                    ~ cropsType += ricordo
-                    ~ firstAnswerTracker = pianteRicordo
+                    ~ cropsType += wonder
+                    ~ firstAnswerTracker = wonderCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             -   
                 ~ counter ++
@@ -574,12 +575,12 @@ QUESTIONS
     
         <i>I sassi...
             + [<i>{~Creano scale verso il cielo|Si fanno mura, protezione|Si scaldano fregandosi lentamente l'un l'altro}.]
-                    ~ cropsType += collaborazione
-                    ~ firstAnswerTracker = pianteCollaborazione 
+                    ~ cropsType += relationship
+                    ~ firstAnswerTracker = relationshipCrops 
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             + [<i>{~Lasciano pezzi di sè sul terreno|Si lanciano contro porte serrate|Schiacciano noci per gli scoiattoli}.]
-                    ~ cropsType += cancellazione
-                    ~ firstAnswerTracker = pianteCancellazione
+                    ~ cropsType += selfdetermination
+                    ~ firstAnswerTracker = imaginationCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             -   
                 ~ counter ++
@@ -591,12 +592,12 @@ QUESTIONS
     
         <i>La terra..
             + [<i>{~Avanza massaggiando le radici nodose delle quercie|Scivola, trascinando con sé i rospi|Asciutta, rotola a valle}.]
-                    ~ cropsType += ciclicità
-                    ~ firstAnswerTracker = pianteCiclicità 
+                    ~ cropsType += shift
+                    ~ firstAnswerTracker = shiftCrops 
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             + [<i>{~Tentenna sulla cima della collina|Si accumula inquieta lungo la strada|Si solleva dall'acqua, facendosi diga}.]
-                    ~ cropsType += indipendenza
-                    ~ firstAnswerTracker = pianteIndipendenza
+                    ~ cropsType += imagination
+                    ~ firstAnswerTracker = understandingCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             -   
                 ~ counter ++
@@ -608,12 +609,12 @@ QUESTIONS
     
         <i>I cardellini...
             + [<i>{~Svolazzano in stormi sopra alla foresta|Saltellano tra i rami del salice}.]
-                    ~ cropsType += ciclicità 
-                    ~ firstAnswerTracker = pianteCiclicità 
+                    ~ cropsType += shift 
+                    ~ firstAnswerTracker = shiftCrops 
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             + [<i>{~Cantano i nomi dei compagni persi|Ricostruiscono i nidi di chi non c'è più|Controllano le vecchie scorte dell'inverno}.]
-                    ~ cropsType += ricordo
-                    ~ firstAnswerTracker = pianteRicordo
+                    ~ cropsType += wonder
+                    ~ firstAnswerTracker = wonderCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             -   
                 ~ counter ++
@@ -625,13 +626,13 @@ QUESTIONS
     
         <i>Il cervo volante...
             + [<i>{~Insegue l'odore di frutta matura|Scava nel legno lunghe gallerie|Trascina pensieri dimenticati}.]
-                    ~ cropsType += ciclicità
-                    ~ firstAnswerTracker = pianteCiclicità
+                    ~ cropsType += shift
+                    ~ firstAnswerTracker = shiftCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}
                     
             + [<i>{~Lotta temibile e inquieto|Spacca la crisalide, asciugandosi al vento}.]
-                    ~ cropsType += cancellazione
-                    ~ firstAnswerTracker = pianteCancellazione
+                    ~ cropsType += selfdetermination
+                    ~ firstAnswerTracker = imaginationCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}
             -
                 ~ counter ++
@@ -643,12 +644,12 @@ QUESTIONS
     
         <i>Il sole...
             + [<i>{~Mostra il cammino|Offre coraggio alle lucertole|Solleva goccie dalla palude silente}. ]
-                    ~ cropsType += indipendenza  
-                    ~ firstAnswerTracker = pianteIndipendenza 
+                    ~ cropsType += imagination  
+                    ~ firstAnswerTracker = understandingCrops 
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             + [<i>{~Accresce gli steli delle lenticchie selvatiche|Scalda le uova del fagiano|Carezza le foglie verdi di primavera}.]
-                    ~ cropsType += novità
-                    ~ firstAnswerTracker = pianteNovità
+                    ~ cropsType += understanding
+                    ~ firstAnswerTracker = selfdeterminationCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             -   
                 ~ counter ++
@@ -660,12 +661,12 @@ QUESTIONS
     
         <i>La notte...
             + [<i>{~Nasconde i sotterfugi delle falene|Raccoglie i baci delle amanti|Accompagna i ghiri nello spazio del sogno}.]
-                    ~ cropsType += indipendenza  
-                    ~ firstAnswerTracker = pianteIndipendenza 
+                    ~ cropsType += imagination  
+                    ~ firstAnswerTracker = understandingCrops 
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             + [<i>{~Nasconde nomi amati tra le nuvole|Riempie di ricordi i sogni della lepre|Asciuga le lacrime tristi del riccio}.]
-                    ~ cropsType += ricordo
-                    ~ firstAnswerTracker = pianteRicordo
+                    ~ cropsType += wonder
+                    ~ firstAnswerTracker = wonderCrops
                 {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             -   
                 ~ counter ++
@@ -677,12 +678,12 @@ QUESTIONS
     
         <i>La neve...
             + [<i>{~Nasconde allo stambecco il burrone|Spinge ai confini del parco|Piega le punte degli abeti più alti}.]
-                    ~ cropsType += indipendenza  
-                    ~ firstAnswerTracker = pianteIndipendenza 
+                    ~ cropsType += imagination  
+                    ~ firstAnswerTracker = understandingCrops 
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             + [<i>{~Schiaccia i nidi delle tortore|Tradisce il passo della volpe}.]
-                    ~ cropsType += cancellazione
-                    ~ firstAnswerTracker = pianteCancellazione
+                    ~ cropsType += selfdetermination
+                    ~ firstAnswerTracker = imaginationCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             -   
                 ~ counter ++
@@ -695,12 +696,12 @@ QUESTIONS
         {pronouns has him: <i>Il riscrittore...|{pronouns has her:<i>La riscrittora...|<i>Lə riscrittorə...}}
         
             + [<i>{~Assapora sulla lingua il sapore del cambiamento|Sente sulle mani un accesso di futuro|Freme nel lanciarsi verso ciò che arriverà}.]
-                    ~ cropsType += novità
-                    ~ firstAnswerTracker = pianteNovità
+                    ~ cropsType += understanding
+                    ~ firstAnswerTracker = selfdeterminationCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
-            + [<i>{~Indugia su ciò che è stato|Trova conforto nel ricordo di ciò che era|Si chiede dove sia casa}.]
-                    ~ cropsType += ricordo
-                    ~ firstAnswerTracker = pianteRicordo
+            + [<i>{~Indugia su ciò che è stato|Trova conforto nel wonder di ciò che era|Si chiede dove sia casa}.]
+                    ~ cropsType += wonder
+                    ~ firstAnswerTracker = wonderCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             -   
                 ~ counter ++
@@ -712,12 +713,12 @@ QUESTIONS
     
         <i>La serra...
             + [<i>{~Brama la crescita di una nuova pianta|Gioisce per l'erbetta che cresce tra le travi|Spalanca le sue porte a nuove sementi}.]
-                    ~ cropsType += novità   
-                    ~ firstAnswerTracker = pianteNovità 
+                    ~ cropsType += understanding   
+                    ~ firstAnswerTracker = selfdeterminationCrops 
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             + [<i>{~Scaccia cimici e cavallette|Acceca il corvo ingordo}.]
-                    ~ cropsType += cancellazione
-                    ~ firstAnswerTracker = pianteCancellazione
+                    ~ cropsType += selfdetermination
+                    ~ firstAnswerTracker = imaginationCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             -   
                 ~ counter ++
@@ -729,12 +730,12 @@ QUESTIONS
     
         <i>La luna...
             + [<i>{~ Accenna timida un nuovo ciclo|Invita la Bella di Notte a sbocciare|Suggerisci sogni di cambiamento}.]
-                    ~ cropsType += novità   
-                    ~ firstAnswerTracker = pianteNovità 
+                    ~ cropsType += understanding   
+                    ~ firstAnswerTracker = selfdeterminationCrops 
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             + [<i>{~ Solleva le maree per divertire i delfini|Indica la strada alle nuvole|Danza giocosa con la Terra}.]
-                    ~ cropsType += collaborazione
-                    ~ firstAnswerTracker = pianteCollaborazione
+                    ~ cropsType += relationship
+                    ~ firstAnswerTracker = relationshipCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
             -   
                 ~ counter ++
@@ -748,8 +749,8 @@ QUESTIONS
  
     {
     
-    - cropsType == (collaborazione, ciclicità):{
-        - LIST_RANDOM(pianteCollaborazione ^ pianteCiclicità) == ():
+    - cropsType == (relationship, shift):{
+        - LIST_RANDOM(relationshipCrops ^ shiftCrops) == ():
             {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i>Il fungo proposto è {chosenCultivable}.}   
@@ -757,7 +758,7 @@ QUESTIONS
             
         - else: 
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
-                ~ chosenCultivable = LIST_RANDOM(pianteCollaborazione ^ pianteCiclicità)
+                ~ chosenCultivable = LIST_RANDOM(relationshipCrops ^ shiftCrops)
                 {
                     - backupCultivable has chosenCultivable:
                     {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
@@ -770,8 +771,8 @@ QUESTIONS
     }
         
         
-    - cropsType == (collaborazione, novità): {
-        - LIST_RANDOM(pianteCollaborazione ^ pianteNovità) == ():
+    - cropsType == (relationship, understanding): {
+        - LIST_RANDOM(relationshipCrops ^ selfdeterminationCrops) == ():
             {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.} 
                 ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i> Il fungo proposto è {chosenCultivable}.}   
@@ -779,7 +780,7 @@ QUESTIONS
             
         - else:
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
-                ~ chosenCultivable = LIST_RANDOM(pianteCollaborazione ^ pianteNovità)
+                ~ chosenCultivable = LIST_RANDOM(relationshipCrops ^ selfdeterminationCrops)
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
@@ -791,8 +792,8 @@ QUESTIONS
         }
         
         
-    - cropsType == (collaborazione, cancellazione):{
-        - LIST_RANDOM(pianteCollaborazione ^ pianteCancellazione) == ():
+    - cropsType == (relationship, selfdetermination):{
+        - LIST_RANDOM(relationshipCrops ^ imaginationCrops) == ():
         {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i>Il fungo proposto è {chosenCultivable}.}   
@@ -800,7 +801,7 @@ QUESTIONS
             
         - else:
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
-            ~ chosenCultivable = LIST_RANDOM(pianteCollaborazione ^ pianteCancellazione)
+            ~ chosenCultivable = LIST_RANDOM(relationshipCrops ^ imaginationCrops)
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i> backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
@@ -812,8 +813,8 @@ QUESTIONS
         }
         
         
-    - cropsType == (collaborazione, ricordo):{
-        - LIST_RANDOM(pianteCollaborazione ^ pianteRicordo) == ():
+    - cropsType == (relationship, wonder):{
+        - LIST_RANDOM(relationshipCrops ^ wonderCrops) == ():
         {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i>Il fungo proposto è {chosenCultivable}.}   
@@ -821,7 +822,7 @@ QUESTIONS
             
         - else:
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
-            ~ chosenCultivable = LIST_RANDOM(pianteCollaborazione ^ pianteRicordo)
+            ~ chosenCultivable = LIST_RANDOM(relationshipCrops ^ wonderCrops)
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
@@ -834,8 +835,8 @@ QUESTIONS
         
         
         
-    - cropsType == (indipendenza, ciclicità):{
-        - LIST_RANDOM(pianteIndipendenza ^ pianteCiclicità) == ():
+    - cropsType == (imagination, shift):{
+        - LIST_RANDOM(understandingCrops ^ shiftCrops) == ():
        {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i> Il fungo proposto è {chosenCultivable}.}   
@@ -843,7 +844,7 @@ QUESTIONS
             
         - else:
         {debugCultivable: <i> Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
-            ~ chosenCultivable = LIST_RANDOM(pianteIndipendenza ^ pianteCiclicità)
+            ~ chosenCultivable = LIST_RANDOM(understandingCrops ^ shiftCrops)
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i> backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
@@ -854,8 +855,8 @@ QUESTIONS
                 }
         }
                 
-    - cropsType == (indipendenza, novità):{
-        - LIST_RANDOM(pianteIndipendenza ^ pianteNovità) == ():
+    - cropsType == (imagination, understanding):{
+        - LIST_RANDOM(understandingCrops ^ selfdeterminationCrops) == ():
         {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i> Il fungo proposto è {chosenCultivable}.}   
@@ -863,7 +864,7 @@ QUESTIONS
             
         - else:
         {debugCultivable: <i> Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
-            ~ chosenCultivable = LIST_RANDOM(pianteIndipendenza ^ pianteNovità)
+            ~ chosenCultivable = LIST_RANDOM(understandingCrops ^ selfdeterminationCrops)
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i> backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
@@ -874,15 +875,15 @@ QUESTIONS
                 }
         }
         
-    - cropsType == (indipendenza, cancellazione): {
-        - LIST_RANDOM(pianteIndipendenza ^ pianteCancellazione) == ():
+    - cropsType == (imagination, selfdetermination): {
+        - LIST_RANDOM(understandingCrops ^ imaginationCrops) == ():
         {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i>Il fungo proposto è {chosenCultivable}.}   
             -> remove_fungo_proposto
         - else:
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
-            ~ chosenCultivable = LIST_RANDOM(pianteIndipendenza ^ pianteCancellazione)
+            ~ chosenCultivable = LIST_RANDOM(understandingCrops ^ imaginationCrops)
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
@@ -893,8 +894,8 @@ QUESTIONS
                 }
             }
         
-    - cropsType == (indipendenza, ricordo): {
-        - LIST_RANDOM(pianteIndipendenza ^ pianteRicordo) == ():
+    - cropsType == (imagination, wonder): {
+        - LIST_RANDOM(understandingCrops ^ wonderCrops) == ():
         {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i>Il fungo proposto è {chosenCultivable}.}   
@@ -902,7 +903,7 @@ QUESTIONS
             
         - else:
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
-            ~ chosenCultivable = LIST_RANDOM(pianteIndipendenza ^ pianteRicordo)
+            ~ chosenCultivable = LIST_RANDOM(understandingCrops ^ wonderCrops)
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
@@ -913,8 +914,8 @@ QUESTIONS
                 }
         }
         
-    - cropsType == (ciclicità, cancellazione):{
-        - LIST_RANDOM(pianteCiclicità ^ pianteCancellazione) == ():
+    - cropsType == (shift, selfdetermination):{
+        - LIST_RANDOM(shiftCrops ^ imaginationCrops) == ():
         {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i>Il fungo proposto è {chosenCultivable}.}   
@@ -922,7 +923,7 @@ QUESTIONS
             
         - else:
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
-            ~ chosenCultivable = LIST_RANDOM(pianteCiclicità ^ pianteCancellazione)
+            ~ chosenCultivable = LIST_RANDOM(shiftCrops ^ imaginationCrops)
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
@@ -933,8 +934,8 @@ QUESTIONS
                 }
         }
         
-    - cropsType == (ciclicità, ricordo):{
-        - LIST_RANDOM(pianteCiclicità ^ pianteRicordo) == ():
+    - cropsType == (shift, wonder):{
+        - LIST_RANDOM(shiftCrops ^ wonderCrops) == ():
         {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
          {debugCultivable: <i>Il fungo proposto è {chosenCultivable}.}   
@@ -942,7 +943,7 @@ QUESTIONS
             
         - else:
         {debugCultivable:<i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
-            ~ chosenCultivable = LIST_RANDOM(pianteCiclicità ^ pianteRicordo)
+            ~ chosenCultivable = LIST_RANDOM(shiftCrops ^ wonderCrops)
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
@@ -953,8 +954,8 @@ QUESTIONS
                 }
         }
         
-    - cropsType == (novità, cancellazione):{
-        - LIST_RANDOM(pianteCancellazione ^ pianteNovità) == ():
+    - cropsType == (understanding, selfdetermination):{
+        - LIST_RANDOM(imaginationCrops ^ selfdeterminationCrops) == ():
         {debugCultivable:<i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i>Il fungo proposto è {chosenCultivable}.}   
@@ -962,7 +963,7 @@ QUESTIONS
             
         - else:
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
-            ~ chosenCultivable = LIST_RANDOM(pianteNovità ^ pianteCancellazione)
+            ~ chosenCultivable = LIST_RANDOM(selfdeterminationCrops ^ imaginationCrops)
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
@@ -973,8 +974,8 @@ QUESTIONS
                 }
         }
         
-    - cropsType == (novità, ricordo): {
-        - LIST_RANDOM(pianteRicordo ^ pianteNovità) == ():
+    - cropsType == (understanding, wonder): {
+        - LIST_RANDOM(wonderCrops ^ selfdeterminationCrops) == ():
         {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i>il fungo proposto è {chosenCultivable}.}   
@@ -982,7 +983,7 @@ QUESTIONS
             
         - else:
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
-            ~ chosenCultivable = LIST_RANDOM(pianteNovità ^ pianteRicordo)
+            ~ chosenCultivable = LIST_RANDOM(selfdeterminationCrops ^ wonderCrops)
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
@@ -1064,34 +1065,34 @@ QUESTIONS
 //Questa azione mi permette di rimuovere il fungo selezionato da ogni lista che lo può contenere. E dato che col tempo le liste possono aumentare, devo solo mettere un remove qui e non OVUNQUE XD
 {debugCultivable: <i>Passo dalla funzione remove_fungo_proposto e rimuovo {chosenCultivable} da:}
 // {
-//     - pianteRicordo has chosenCultivable:
-//         ~ pianteRicordo -= chosenCultivable
-//         {debugCultivable: <i>piante ricordo.}
+//     - wonderCrops has chosenCultivable:
+//         ~ wonderCrops -= chosenCultivable
+//         {debugCultivable: <i>piante wonder.}
 // }
 // {
-//     - pianteNovità has chosenCultivable:    
-//         ~ pianteNovità -= chosenCultivable
-//        {debugCultivable: <i>piante novità.}        
+//     - selfdeterminationCrops has chosenCultivable:    
+//         ~ selfdeterminationCrops -= chosenCultivable
+//        {debugCultivable: <i>piante understanding.}        
 // }
 // {
-//     - pianteCollaborazione has chosenCultivable:
-//         ~ pianteCollaborazione -= chosenCultivable
-//     {debugCultivable: <i>piante collaborazione.}    
+//     - relationshipCrops has chosenCultivable:
+//         ~ relationshipCrops -= chosenCultivable
+//     {debugCultivable: <i>piante relationship.}    
 // }
 // {
-//     - pianteCiclicità has chosenCultivable:
-//         ~ pianteCiclicità -= chosenCultivable
-//     {debugCultivable: <i>piante ciclicità.}    
+//     - shiftCrops has chosenCultivable:
+//         ~ shiftCrops -= chosenCultivable
+//     {debugCultivable: <i>piante shift.}    
 // }
 // {
-//     - pianteIndipendenza has chosenCultivable:
-//         ~ pianteIndipendenza -= chosenCultivable
-//     {debugCultivable: <i>piante indipendenza.}    
+//     - understandingCrops has chosenCultivable:
+//         ~ understandingCrops -= chosenCultivable
+//     {debugCultivable: <i>piante imagination.}    
 // }
 // {
-//     - pianteCancellazione has chosenCultivable:
-//         ~ pianteCancellazione -= chosenCultivable
-//     {debugCultivable: <i>piante cancellazione.}    
+//     - imaginationCrops has chosenCultivable:
+//         ~ imaginationCrops -= chosenCultivable
+//     {debugCultivable: <i>piante selfdetermination.}    
 // }
 {
     - backupCultivable has chosenCultivable:
