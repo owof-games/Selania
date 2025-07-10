@@ -20,85 +20,85 @@
     - chosenCultivable has LicheneDegliAbissi:
     {
         - growStep has stepZero:
-            ~ statoLicheneDegliAbissi = stepZero
+            ~ growthLicheneDegliAbissi = stepZero
         - growStep has stepOne:
-            ~ statoLicheneDegliAbissi = stepOne
+            ~ growthLicheneDegliAbissi = stepOne
         - growStep has stepTwo:
-            ~ statoLicheneDegliAbissi = stepTwo
+            ~ growthLicheneDegliAbissi = stepTwo
         - growStep has stepThree:
-            ~ statoLicheneDegliAbissi = stepThree
+            ~ growthLicheneDegliAbissi = stepThree
     }
 
     - chosenCultivable has MuschioDelleAmanti:
     {
         - growStep has stepZero:
-            ~ statoMuschioDelleAmanti = stepZero
+            ~ growthMuschioDelleAmanti = stepZero
         - growStep has stepOne:
-            ~ statoMuschioDelleAmanti = stepOne
+            ~ growthMuschioDelleAmanti = stepOne
         - growStep has stepTwo:
-            ~ statoMuschioDelleAmanti = stepTwo
+            ~ growthMuschioDelleAmanti = stepTwo
         - growStep has stepThree:
-             ~ statoMuschioDelleAmanti = stepThree
+             ~ growthMuschioDelleAmanti = stepThree
     }
 
     - chosenCultivable has CantoDelleCompagne:
     {
         - growStep has stepZero:
-            ~ statoCantoDelleCompagne = stepZero
+            ~ growthCantoDelleCompagne = stepZero
         - growStep has stepOne:
-            ~ statoCantoDelleCompagne = stepOne
+            ~ growthCantoDelleCompagne = stepOne
         - growStep has stepTwo:
-            ~ statoCantoDelleCompagne = stepTwo
+            ~ growthCantoDelleCompagne = stepTwo
         - growStep has stepThree:
-             ~ statoCantoDelleCompagne = stepThree
+             ~ growthCantoDelleCompagne = stepThree
     }
 
     - chosenCultivable has LaSpazzata:
     {
         - growStep has stepZero:
-            ~ statoLaSpazzata = stepZero
+            ~ growthLaSpazzata = stepZero
         - growStep has stepOne:
-            ~ statoLaSpazzata = stepOne
+            ~ growthLaSpazzata = stepOne
         - growStep has stepTwo:
-            ~ statoLaSpazzata = stepTwo
+            ~ growthLaSpazzata = stepTwo
         - growStep has stepThree:
-            ~ statoLaSpazzata = stepThree
+            ~ growthLaSpazzata = stepThree
     }
 
     - chosenCultivable has BaccaDellaAddolorata:
     {
         - growStep has stepZero:
-            ~ statoBaccaDellaAddolorata = stepZero
+            ~ growthBaccaDellaAddolorata = stepZero
         - growStep has stepOne:
-            ~ statoBaccaDellaAddolorata = stepOne
+            ~ growthBaccaDellaAddolorata = stepOne
         - growStep has stepTwo:
-            ~ statoBaccaDellaAddolorata = stepTwo
+            ~ growthBaccaDellaAddolorata = stepTwo
         - growStep has stepThree:
-            ~ statoBaccaDellaAddolorata = stepThree
+            ~ growthBaccaDellaAddolorata = stepThree
     }
 
     - chosenCultivable has NonTiScordarDiTe:
     {
         - growStep has stepZero:
-            ~ statoNonTiScordarDiTe = stepZero
+            ~ growthNonTiScordarDiTe = stepZero
         - growStep has stepOne:
-            ~ statoNonTiScordarDiTe = stepOne
+            ~ growthNonTiScordarDiTe = stepOne
         - growStep has stepTwo:
-            ~ statoNonTiScordarDiTe = stepTwo
+            ~ growthNonTiScordarDiTe = stepTwo
         - growStep has stepThree:
-            ~ statoNonTiScordarDiTe = stepThree
+            ~ growthNonTiScordarDiTe = stepThree
     }
 
     - chosenCultivable has BrinaDellImpossibile:
     {
         - growStep has stepZero:
-            ~ statoBrinaDellImpossibile = stepZero
+            ~ growthBrinaDellImpossibile = stepZero
         - growStep has stepOne:
-            ~ statoBrinaDellImpossibile = stepOne
+            ~ growthBrinaDellImpossibile = stepOne
         - growStep has stepTwo:
-            ~ statoBrinaDellImpossibile = stepTwo
+            ~ growthBrinaDellImpossibile = stepTwo
         - growStep has stepThree:
-             ~ statoBrinaDellImpossibile = stepThree
+             ~ growthBrinaDellImpossibile = stepThree
     }    
     ->->
 }
@@ -109,85 +109,85 @@
 {
     - chosenCultivable has LicheneDegliAbissi:
     {
-        - statoLicheneDegliAbissi == stepZero:
+        - growthLicheneDegliAbissi == stepZero:
             -> lichene_degli_abissi.step_zero
-        - statoLicheneDegliAbissi == stepOne:
+        - growthLicheneDegliAbissi == stepOne:
             -> lichene_degli_abissi.step_uno
-        - statoLicheneDegliAbissi == stepTwo:
+        - growthLicheneDegliAbissi == stepTwo:
             -> lichene_degli_abissi.step_due
-        - statoLicheneDegliAbissi == stepThree:
+        - growthLicheneDegliAbissi == stepThree:
             -> lichene_degli_abissi.step_tre
     }
 
     - chosenCultivable has MuschioDelleAmanti:
     {
-        - statoMuschioDelleAmanti == stepZero:
+        - growthMuschioDelleAmanti == stepZero:
             -> edera_delle_amanti.step_zero
-        - statoMuschioDelleAmanti == stepOne:
+        - growthMuschioDelleAmanti == stepOne:
             -> edera_delle_amanti.step_uno
-        - statoMuschioDelleAmanti == stepTwo:
+        - growthMuschioDelleAmanti == stepTwo:
             -> edera_delle_amanti.step_due
-        - statoMuschioDelleAmanti == stepThree:
+        - growthMuschioDelleAmanti == stepThree:
             -> edera_delle_amanti.step_tre
     }
 
     - chosenCultivable has CantoDelleCompagne:
     {
-        - statoCantoDelleCompagne == stepZero:
+        - growthCantoDelleCompagne == stepZero:
             -> canto_delle_compagne.step_zero    
-        - statoCantoDelleCompagne == stepOne:
+        - growthCantoDelleCompagne == stepOne:
             -> canto_delle_compagne.step_uno
-        - statoCantoDelleCompagne == stepTwo:
+        - growthCantoDelleCompagne == stepTwo:
             -> canto_delle_compagne.step_due
-        - statoCantoDelleCompagne == stepThree:
+        - growthCantoDelleCompagne == stepThree:
             -> canto_delle_compagne.step_tre
     }
 
     - chosenCultivable has LaSpazzata:
     {
-        - statoLaSpazzata == stepZero:
+        - growthLaSpazzata == stepZero:
             -> la_spazzata.step_zero 
-        - statoLaSpazzata == stepOne:
+        - growthLaSpazzata == stepOne:
             -> la_spazzata.step_uno
-        - statoLaSpazzata == stepTwo:
+        - growthLaSpazzata == stepTwo:
             -> la_spazzata.step_due
-        - statoLaSpazzata == stepThree:
+        - growthLaSpazzata == stepThree:
             -> la_spazzata.step_tre
     }
 
     - chosenCultivable has BaccaDellaAddolorata:
     {
-        - statoBaccaDellaAddolorata == stepZero:
+        - growthBaccaDellaAddolorata == stepZero:
             -> bacca_della_addolorata.step_zero
-        - statoBaccaDellaAddolorata == stepOne:
+        - growthBaccaDellaAddolorata == stepOne:
             -> bacca_della_addolorata.step_uno
-        - statoBaccaDellaAddolorata == stepTwo:
+        - growthBaccaDellaAddolorata == stepTwo:
             -> bacca_della_addolorata.step_due
-        - statoBaccaDellaAddolorata == stepThree:
+        - growthBaccaDellaAddolorata == stepThree:
             -> bacca_della_addolorata.step_tre
     }
 
     - chosenCultivable has NonTiScordarDiTe:
     {
-        - statoNonTiScordarDiTe == stepZero:
+        - growthNonTiScordarDiTe == stepZero:
             -> non_ti_scordar_di_te.step_zero     
-        - statoNonTiScordarDiTe == stepOne:
+        - growthNonTiScordarDiTe == stepOne:
             -> non_ti_scordar_di_te.step_uno
-        - statoNonTiScordarDiTe == stepTwo:
+        - growthNonTiScordarDiTe == stepTwo:
             -> non_ti_scordar_di_te.step_due
-        - statoNonTiScordarDiTe == stepThree:
+        - growthNonTiScordarDiTe == stepThree:
             -> non_ti_scordar_di_te.step_tre
     }
 
     - chosenCultivable has BrinaDellImpossibile:
     {
-        - statoBrinaDellImpossibile == stepZero:
+        - growthBrinaDellImpossibile == stepZero:
             -> brina_dell_impossibile.step_zero     
-        - statoBrinaDellImpossibile == stepOne:
+        - growthBrinaDellImpossibile == stepOne:
             -> brina_dell_impossibile.step_uno
-        - statoBrinaDellImpossibile == stepTwo:
+        - growthBrinaDellImpossibile == stepTwo:
             -> brina_dell_impossibile.step_due
-        - statoBrinaDellImpossibile == stepThree:
+        - growthBrinaDellImpossibile == stepThree:
             -> brina_dell_impossibile.step_tre
     }    
     -> main
@@ -197,7 +197,7 @@
 //Collaborazione, ciclicità, cancellazione
 //Outcome: allontana qualcuno.
     = step_zero
-        ~ statoLicheneDegliAbissi = stepZero
+        ~ growthLicheneDegliAbissi = stepZero
         <i>Qualcosa vortica sopra al vaso.</i>
         <i>La terra si accumla ai lati, lasciando un incavo nel terreno.</i>
         -> main
@@ -219,7 +219,7 @@
         <i>Forti nella loro distruzione, estremamente fragili.</i>
 
             + (colto) [Fermo il lichene.]
-                ~ statoLicheneDegliAbissi = stepZero
+                ~ growthLicheneDegliAbissi = stepZero
                 <i>Un piccolo sbuffo, rimane solo un foro.</i>
                 <i>Le tue dita sanno di ricordo, sanno di mare.</i>
                 <i>Pensi a qualcuno.</i>
@@ -247,7 +247,7 @@
 //Collaborazione, novità, ricordo
 //Outcome: datti piacere
     = step_zero
-    ~ statoMuschioDelleAmanti = stepZero
+    ~ growthMuschioDelleAmanti = stepZero
         <i>È solo una tua impressione, o il vaso ha iniziato a brillare?</i>
         -> main
     
@@ -294,7 +294,7 @@
 //Collaborazione, ciclicità, ricordo
 //Outcome: danza, sola o con le compagne
     = step_zero
-        ~ statoCantoDelleCompagne = stepZero
+        ~ growthCantoDelleCompagne = stepZero
         <i>Qualcosa vibra e ti sveglia le gambe.<i>
         <i>Hai voglia di danzare.</i>
             -> main
@@ -342,7 +342,7 @@
 //Indipendenza, novità, cancellazione
 //Outcome: prometti di dire qualcosa che ti pesa sullo stomaco.
     = step_zero
-    ~ statoLaSpazzata = stepZero
+    ~ growthLaSpazzata = stepZero
         <i>Niente sembra cambiare.</i>
         <i>Eppure l'aria sembra più pesante.</i>
             -> main
@@ -395,7 +395,7 @@
 //Indipendenza, novità, cancellazione
 //Outcome: liberazione, invito ad avanzare
     = step_zero
-    ~ statoBaccaDellaAddolorata = stepZero
+    ~ growthBaccaDellaAddolorata = stepZero
         <i>Cinque punte scure emergono dal vaso.</i>
             -> main
     
@@ -436,7 +436,7 @@
 //Indipendenza, ciclicità, ricordo
 //Outcome: ricordo di chi non c'è più
     = step_zero
-        ~ statoNonTiScordarDiTe = stepZero
+        ~ growthNonTiScordarDiTe = stepZero
         <i>Su uno vecchio ramo è comparsa una sostanza gelatinosa, una gomma che sembra un asparago.</i>
             -> main
     
@@ -485,7 +485,7 @@
 //Ricordo, collaborazione, novità
 //Outcome: prova una strada nuova
     = step_zero
-        ~ statoBrinaDellImpossibile = stepZero
+        ~ growthBrinaDellImpossibile = stepZero
         <i>Qualcosa ha rotto un vetro della serra?</i>
             -> main
     
