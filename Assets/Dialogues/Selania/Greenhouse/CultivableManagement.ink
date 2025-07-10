@@ -1,10 +1,10 @@
 //Lista coltivabili e stati possibili    
-    LIST cultivable = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile
+    LIST cultivable = LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile
 
     LIST growStep = notStarted, stepZero, stepOne, stepTwo, stepThree
 
 //QUESTA LISTA LA USO PER GESTIRE LA PESCATA O MENO DEI COLTIVABILI
-    VAR backupCultivable = (LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
+    VAR backupCultivable = (LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
     
     VAR growthCantoDelleCompagne = notStarted
     VAR growthLicheneDegliAbissi = notStarted
@@ -20,17 +20,17 @@
 //QUESTE LISTE HANNO UN VALORE CATALOGATIVO E PER LA GESTIONE DELLE DOMANDE
 
     //Relazione: con sé e con gli altri, anche con l’ambiente.
-    VAR relationshipCrops = (LicheneDegliAbissi, MuschioDelleAmanti, CantoDelleCompagne, BrinaDellImpossibile)
+    VAR relationshipCrops = (LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti)
     //Mutamento: capacità di generare e accogliere il cambiamento.
-    VAR shiftCrops = (LicheneDegliAbissi, CantoDelleCompagne, NonTiScordarDiTe)
+    VAR shiftCrops = (LicheneDegliAbissi, LaSpazzata)
     //Comprensione: cercare il senso, capire il perché.
-    VAR understandingCrops = (LaSpazzata, BaccaDellaAddolorata, NonTiScordarDiTe)
+    VAR understandingCrops = (LaSpazzata, BaccaDellaAddolorata)
     //Autodeterminazione: definire la mia vita per come la voglio, o la vita della mia comunità.
-    VAR selfdeterminationCrops =(MuschioDelleAmanti,LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
+    VAR selfdeterminationCrops = (CantoDelleCompagne, BaccaDellaAddolorata, BrinaDellImpossibile)
     //Stupore, meraviglia: sorprendermi, scoprire cose nuove, scoprire cose inaspettate. Vedere la vita come qualcosa di non prevedibile e godere di questo.
-    VAR wonderCrops =(MuschioDelleAmanti, CantoDelleCompagne, NonTiScordarDiTe, BrinaDellImpossibile)
+    VAR wonderCrops = (EderaDelleAmanti, BrinaDellImpossibile)
     //Immaginazione e creazione: sono due parole legate ma non sinonimi, ma mi viene istintivo unirle. Da una parte abbiamo la possibilità di pensare a ciò che non c’è, dall’altra di generarlo. In parte immaginazione si collega a stupore (una nuova idea), in parte a comprensione (quando capisco qualcosa e provo ad applicarlo in realtà immaginate). Creatività invece è sia un processo di mutamento (creando porto cambiamento, con tutte le sue conseguenze) che di autodeterminazione (creo ciò che voglio, ciò che penso possa servire, portare piacere, ristorare la mia comunità).
-    VAR imaginationCrops =(LicheneDegliAbissi,LaSpazzata, BaccaDellaAddolorata)
+    VAR imaginationCrops = (NonTiScordarDiTe, CantoDelleCompagne)
 
 //Pianta che verrà proposta. La uso anche per tracking dello stato delle piante.
     VAR chosenCultivable = ()
@@ -1043,7 +1043,7 @@ QUESTIONS
 {chosenCultivable:
     - LicheneDegliAbissi:
         -> lichene_degli_abissi
-    - MuschioDelleAmanti:
+    - EderaDelleAmanti:
         -> edera_delle_amanti
     - CantoDelleCompagne:
         -> canto_delle_compagne

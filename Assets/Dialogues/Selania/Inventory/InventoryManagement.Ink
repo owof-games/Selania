@@ -36,7 +36,7 @@ VAR findedGifts = ()
         - BaccaDellaAddolorata: 
             ~ return "una Bacca della Addolorata"
             
-        - MuschioDelleAmanti:
+        - EderaDelleAmanti:
             ~ return "del Muschio delle Amanti"
             
         - BrinaDellImpossibile:

@@ -27,8 +27,8 @@ VAR currentReceiver = ()
  ----------------------------------*/
 
 
-+ {findedGifts has MuschioDelleAmanti} [Del muschio delle amanti.]
-    ~ findedGifts -= MuschioDelleAmanti
++ {findedGifts has EderaDelleAmanti} [Del muschio delle amanti.]
+    ~ findedGifts -= EderaDelleAmanti
     {
         - currentReceiver has FirstCharacter:
         <i>{translator(firstCharacterState)} è confusa dal dono.</i>

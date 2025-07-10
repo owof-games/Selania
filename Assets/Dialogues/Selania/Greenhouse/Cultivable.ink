@@ -29,7 +29,7 @@
             ~ growthLicheneDegliAbissi = stepThree
     }
 
-    - chosenCultivable has MuschioDelleAmanti:
+    - chosenCultivable has EderaDelleAmanti:
     {
         - growStep has stepZero:
             ~ growthMuschioDelleAmanti = stepZero
@@ -119,7 +119,7 @@
             -> lichene_degli_abissi.step_tre
     }
 
-    - chosenCultivable has MuschioDelleAmanti:
+    - chosenCultivable has EderaDelleAmanti:
     {
         - growthMuschioDelleAmanti == stepZero:
             -> edera_delle_amanti.step_zero
@@ -276,8 +276,8 @@
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     {
-                        - findedGifts hasnt MuschioDelleAmanti:
-                        ~ findedGifts += MuschioDelleAmanti
+                        - findedGifts hasnt EderaDelleAmanti:
+                        ~ findedGifts += EderaDelleAmanti
                         <i>Hai ottenuto: <b>Edera delle Amanti.</b></i>
                     }
                 
