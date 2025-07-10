@@ -451,33 +451,33 @@ public class DialogueManagerSingleInk : MonoBehaviour
     //Questo viene utilizzato dai coltivabili
     public InkList GetEffettivoStatoCantoDelleCompagne()
     {
-        return (InkList)story.variablesState["statoCantoDelleCompagne"];
+        return (InkList)story.variablesState["growthCantoDelleCompagne"];
     }
 
     public InkList GetEffettivoStatoLaSpazzata()
     {
-        return (InkList)story.variablesState["statoLaSpazzata"];
+        return (InkList)story.variablesState["growthLaSpazzata"];
     }
     public InkList GetEffettivoStatoLicheneDegliAbissi()
     {
-        return (InkList)story.variablesState["statoLicheneDegliAbissi"];
+        return (InkList)story.variablesState["growthLicheneDegliAbissi"];
     }
     public InkList GetEffettivoStatoBrinaDellImpossibile()
     {
-        return (InkList)story.variablesState["statoBrinaDellImpossibile"];
+        return (InkList)story.variablesState["growthBrinaDellImpossibile"];
     }
 
     public InkList GetEffettivoStatoBaccaDellaAddolorata()
     {
-        return (InkList)story.variablesState["statoBaccaDellaAddolorata"];
+        return (InkList)story.variablesState["growthBaccaDellaAddolorata"];
     }
     public InkList GetEffettivoStatoNonTiScordarDiTe()
     {
-        return (InkList)story.variablesState["statoNonTiScordarDiTe"];
+        return (InkList)story.variablesState["growthNonTiScordarDiTe"];
     }
     public InkList GetEffettivoStatoMuschioDelleAmanti()
     {
-        return (InkList)story.variablesState["statoMuschioDelleAmanti"];
+        return (InkList)story.variablesState["growthMuschioDelleAmanti"];
     }
     public void OnQuitButton()
     {
