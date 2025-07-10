@@ -177,57 +177,6 @@ VAR currentReceiver = ()
     }
         -> main
     
-/* ---------------------------------
-
-            Oggetti trovabili
-
- ----------------------------------*/    
-+ {findedGifts has blanket} [Una coperta.]
-    ~ findedGifts -= blanket
-    
-    {
-    - currentReceiver has FirstCharacter:
-        ~ firstCharacterInkLevel ++
-        <i>{translator(firstCharacterState)} la stende a terra e si rilassa.</i>
-        ~ currentReceiver = ()
-            -> first_story_gift.ink_outcome
-    
-    
-    - currentReceiver has SecondCharacter:
-        ~ secondCharacterInkLevel ++
-        <i>{translator(secondCharacterState)} si guarda in giro, cercando qualcosa da catturare.</i>
-        <i>O forse {charNameFive}.</i>
-        <i>Speriamo non <b>noi</b>.</i>
-            -> second_story_gift.ink_outcome
-
-    }
-
- 
-    
-+ {findedGifts has emptyvase} [Un vaso vuoto.]
-    ~ findedGifts -= emptyvase
-    //Questo è uno dei doni preferiti della mentore, da brava giardiniera.
-    
-    {
-    - currentReceiver has FirstCharacter:
-        <i>{translator(firstCharacterState)} ti guarda perplessa.</i>
-        <i>Prova a suonarlo, ma non esce nulla di buono.</i>
-        ~ currentReceiver = ()
-            -> first_story_gift.ink_outcome
-    
-    - currentReceiver has SecondCharacter:
-        ~ secondCharacterInkLevel ++
-        <i>Esaltato, {translator(secondCharacterState)} lo lancia in terra e inizia a giocare coi frammenti.</i>
-        <i>Glieli levi prima che si faccia male.</i>
-        ~ currentReceiver = ()
-            -> second_story_gift.ink_outcome
-    
-    }
-    
-    
-        -> main
-    
-    
 
     //Se la lista è vuota
     + {findedGifts == ()} [Non ho nulla da donare.]

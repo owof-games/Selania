@@ -25,19 +25,11 @@
             
              ----------------------------------*/
 //Lista dei doni che si possono trovare in gioco.
-LIST gifts = blanket, emptyvase 
 VAR findedGifts = ()
 
 
 === function ingredientTranslator(ingredient)
     {ingredient:
-    
-        - emptyvase:
-            ~ return "un vaso vuoto"
-            
-        - blanket:
-            ~ return "una coperta"
-            
         - LaSpazzata: 
             ~ return "un residuo della Spezzata"
             
