@@ -8785,7 +8785,7 @@ MonoBehaviour:
   forestSounds: {fileID: 8300000, guid: 2e20f3c92a2793f47b8a720ca1154c1b, type: 3}
   trainstopSounds: {fileID: 8300000, guid: 21b26a1623daa0d459a7bf3de778b430, type: 3}
   greenhouseSounds: {fileID: 8300000, guid: f094a8aef5c73a149a1c89f989d24cdf, type: 3}
-  greenhousemiddlepathSounds: {fileID: 8300000, guid: f094a8aef5c73a149a1c89f989d24cdf, type: 3}
+  greenhousemiddlepathSounds: {fileID: 8300000, guid: 8eeebc9009ad1d04198bd7f3e40ac91e, type: 3}
   librarySounds: {fileID: 8300000, guid: 28204f36142ee70409f9c30708fe0690, type: 3}
   startAnimation:
     m_PersistentCalls:
