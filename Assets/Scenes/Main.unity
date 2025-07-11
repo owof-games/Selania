@@ -8782,8 +8782,8 @@ MonoBehaviour:
   backLaboratory: {fileID: -3070273842284801829, guid: ed53d17256160094bb8745f874ba201d, type: 3}
   ambientSounds: {fileID: 1863324330}
   bedroomSounds: {fileID: 8300000, guid: 6de55e0d82384a44fa4eacd46aa0c0c5, type: 3}
-  forestSounds: {fileID: 8300000, guid: 0610a4476c76fbf41a11b679f4b27c4f, type: 3}
-  trainstopSounds: {fileID: 8300000, guid: f26a4d1efac2cd445b7b34b58f2dbe16, type: 3}
+  forestSounds: {fileID: 8300000, guid: 2e20f3c92a2793f47b8a720ca1154c1b, type: 3}
+  trainstopSounds: {fileID: 8300000, guid: 21b26a1623daa0d459a7bf3de778b430, type: 3}
   greenhouseSounds: {fileID: 8300000, guid: f094a8aef5c73a149a1c89f989d24cdf, type: 3}
   greenhousemiddlepathSounds: {fileID: 8300000, guid: f094a8aef5c73a149a1c89f989d24cdf, type: 3}
   librarySounds: {fileID: 8300000, guid: 28204f36142ee70409f9c30708fe0690, type: 3}
@@ -8815,7 +8815,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: f094a8aef5c73a149a1c89f989d24cdf, type: 3}
   m_Resource: {fileID: 8300000, guid: f094a8aef5c73a149a1c89f989d24cdf, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.459
+  m_Volume: 0.707
   m_Pitch: 1
   Loop: 1
   Mute: 0
