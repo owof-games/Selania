@@ -6,7 +6,7 @@
 
     LIST transitions = FromTrainStopToForest, FromForestToTrainStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat, FromForestToLibrary, FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, FromGreenhouseToGreenhouseMiddlePath, FromLibraryToForest, FromLibraryToLaboratory
 
-    LIST sceneObjects = Bench, WateringCan, TheFungus, ReadingPlace, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, StartingNote
+    LIST sceneObjects = Bench, WateringCan, TheFungus, ReadingPlace, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, StartingNote, Birds
 
 
 //Quit esce e salva, exit esce e basta (è l'uscita quando siamo in camera da letto. Menu Load non è nei piani perché sennò mi devo ricordare dove cavolo sono.

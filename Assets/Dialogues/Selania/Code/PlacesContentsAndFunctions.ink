@@ -1,7 +1,7 @@
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
     VAR bedroomContents = (RoomExit, RoomLoad, PG)
 
-    VAR trainStopContents = (FromTrainStopToForest, StartingNote, FromTrainStopToBedroom, Inventory)
+    VAR trainStopContents = (FromTrainStopToForest, StartingNote, FromTrainStopToBedroom, Birds, Inventory)
 
     VAR forestContents = (Mentor, Bench, TheFungus, FromForestToTrainStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat, Inventory)
 
