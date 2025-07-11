@@ -140,7 +140,7 @@ TextureImporter:
         width: 160
         height: 203
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -157,12 +157,12 @@ TextureImporter:
       name: Bees_1
       rect:
         serializedVersion: 2
-        x: 260
+        x: 262
         y: 79
-        width: 160
-        height: 90
+        width: 158
+        height: 107
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -184,7 +184,7 @@ TextureImporter:
         width: 160
         height: 136
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -201,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6eefb0aa4971fde4da781bfe57f29950
     internalID: 0
     vertices: []
     indices: 
@@ -210,7 +210,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bees_0: -2332983640317547041
+      Bees_1: -126367013384081014
+      Bees_2: -5474950934700313699
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
