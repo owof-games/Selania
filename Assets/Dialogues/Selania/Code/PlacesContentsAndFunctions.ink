@@ -5,7 +5,7 @@
 
     VAR forestContents = (Mentor, Bench, TheFungus, FromForestToTrainStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat, Inventory)
 
-    VAR greenhouseMiddlePathContents = (FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, Inventory)
+    VAR greenhouseMiddlePathContents = (FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, Inventory, CloudOne)
 
     VAR greenhouseContents = (FromGreenhouseToGreenhouseMiddlePath,  LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, Inventory, WateringCan, FirstBee)
 
