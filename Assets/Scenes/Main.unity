@@ -3661,10 +3661,10 @@ RectTransform:
   - {fileID: 2052478943}
   m_Father: {fileID: 828016518}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 65.018326}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 950.66675, y: -43.807495}
+  m_SizeDelta: {x: 364.2667, y: 65.018326}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &624280101
 MonoBehaviour:
@@ -4194,10 +4194,10 @@ RectTransform:
   - {fileID: 1925532121}
   m_Father: {fileID: 828016518}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 65.018326}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 566.4, y: -43.807495}
+  m_SizeDelta: {x: 364.2667, y: 65.018326}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &705044595
 MonoBehaviour:
@@ -5448,7 +5448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &826029213
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9753,10 +9753,10 @@ RectTransform:
   - {fileID: 1646688841}
   m_Father: {fileID: 828016518}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 65.018326}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 182.13335, y: -43.807495}
+  m_SizeDelta: {x: 364.2667, y: 65.018326}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1762232567
 MonoBehaviour:
@@ -10032,6 +10032,20 @@ MonoBehaviour:
   dialoguePanel: {fileID: 143527391}
   dialogueText: {fileID: 1625733884}
   continueButton: {fileID: 921273106}
+  dialoguePanelBig: {fileID: 826029212}
+  dialogueTextBig: {fileID: 717503609}
+  continueButtonBig: {fileID: 758839152}
+  choices:
+  - {fileID: 2144606741}
+  - {fileID: 231093295}
+  - {fileID: 1751463282}
+  - {fileID: 329967033}
+  - {fileID: 863804826}
+  - {fileID: 1924385861}
+  choicesBig:
+  - {fileID: 1762232565}
+  - {fileID: 705044593}
+  - {fileID: 624280099}
   allPlaces:
   - bedroomContents
   - trainStopContents
@@ -10041,6 +10055,7 @@ MonoBehaviour:
   - nestContents
   - libraryContents
   - laboratoryContents
+  bigDialogueInkBoolVariable: bigDialogue
   inkAssetJSON: {fileID: 4900000, guid: bc00609c8f8ddae47b1b8cd2c864dabe, type: 3}
   entities:
   - {fileID: 2045264602}
@@ -10079,13 +10094,6 @@ MonoBehaviour:
   - {fileID: 1569184872}
   - {fileID: 728340192}
   - {fileID: 420051643}
-  choices:
-  - {fileID: 2144606741}
-  - {fileID: 231093295}
-  - {fileID: 1751463282}
-  - {fileID: 329967033}
-  - {fileID: 863804826}
-  - {fileID: 1924385861}
   background: {fileID: 1753709286}
   bedroomZero: {fileID: 21300000, guid: c6b1100f4257c054aae7e3701c7e215c, type: 3}
   bedroomOne: {fileID: 21300000, guid: de8ec455e1d2d68488cc6cf82fa40252, type: 3}

@@ -18,7 +18,8 @@
     INCLUDE Code\ChangePlaces.ink
     INCLUDE Code\PlacesContentsAndFunctions.ink
     INCLUDE Code\BackgroundsAndSounds.ink
-    
+    INCLUDE Code\BigDialogue.ink
+
 
 //File dedicati alla gestione delle personagge
     INCLUDE Characters\Functions\CommonFunctions.ink
@@ -85,6 +86,7 @@
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibaryManagement.ink
     INCLUDE Library\StoryNotes.ink
+
 
 
 

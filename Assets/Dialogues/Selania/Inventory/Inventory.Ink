@@ -4,15 +4,18 @@ VAR currentReceiver = ()
 
 === inventory_contents ===
 + [Inventory]
-    {findedGifts != (): -> inventory|-> empty}
+    ~ enableBigDialogue()
+    {findedGifts != (): -> inventory ->|-> empty ->}
+    ~ disableBigDialogue()
+    -> main
 
     = inventory
         <i>Hai con te {list_with_commas(findedGifts)}.</i>
-            -> main
+        ->->
 
     = empty
         <i>L'inventario è vuoto.</i>
-            -> main
+        ->->
 
 
 === inventory_management ===

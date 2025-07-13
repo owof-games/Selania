@@ -16,19 +16,27 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private GameObject continueButton;
 
-    
-    private Story story;
-
-    [SerializeField] private string[] allPlaces;
-
-    [Header("Text elements")]
-    [SerializeField] private TextAsset inkAssetJSON;
-    [SerializeField] private GameObject[] entities;
+    [SerializeField] private GameObject dialoguePanelBig;
+    [SerializeField] private TextMeshProUGUI dialogueTextBig;
+    [SerializeField] private GameObject continueButtonBig;
 
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
+    [SerializeField] private GameObject[] choicesBig;
+    private TextMeshProUGUI[] choicesTextBig;
+
+
+    private Story story;
+
+    [Header("Ink")]
+    [SerializeField] private string[] allPlaces;
+    [SerializeField] private string bigDialogueInkBoolVariable = "bigDialogue";
+
+    [Header("Text elements")]
+    [SerializeField] private TextAsset inkAssetJSON;
+    [SerializeField] private GameObject[] entities;
 
 
     [Header("Background setting")]
@@ -88,23 +96,28 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     void Start()
     {
+        FillChoicesTextMeshPro(choices, ref choicesText);
+        FillChoicesTextMeshPro(choicesBig, ref choicesTextBig);
+
         story = new Story(inkAssetJSON.text);
         if (!LoadGame())
         {
             ContinueStory();
         }
-        dialoguePanel.SetActive(false);
-        choicesText = new TextMeshProUGUI[choices.Length];
-        int index = 0;
-        foreach (GameObject choice in choices)
-        {
-            choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
-            index++;
-        }
 
-
+        DisableDialoguePanel();
     }
 
+    private void FillChoicesTextMeshPro(GameObject[] choicesGameObjects, ref TextMeshProUGUI[] choicesTextMeshPros)
+    {
+        choicesTextMeshPros = new TextMeshProUGUI[choicesGameObjects.Length];
+        int index = 0;
+        foreach (GameObject choice in choicesGameObjects)
+        {
+            choicesTextMeshPros[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
+            index++;
+        }
+    }
 
     void ContinueStory()
     {
@@ -113,14 +126,15 @@ public class DialogueManagerSingleInk : MonoBehaviour
         {
 
             string currentLine;
-            do {
+            do
+            {
                 currentLine = story.Continue().Trim();
                 UpdateUI(currentLine);
-            } while(currentLine == "" && story.canContinue);
+            } while (currentLine == "" && story.canContinue);
         }
     }
 
-    [SerializeField] UnityEvent<string> startAnimation; 
+    [SerializeField] UnityEvent<string> startAnimation;
 
     private void UpdateUI(string currentLine)
     {
@@ -128,21 +142,23 @@ public class DialogueManagerSingleInk : MonoBehaviour
         bool mustContinueStory = false;
         if (currentLine == "@interact")
         {
-            dialoguePanel.SetActive(false);
+            DisableDialoguePanel();
             buttonsEnabled = true;
         }
-        else if ( currentLine.StartsWith( "@animation:" ) )
+        else if (currentLine.StartsWith("@animation:"))
         {
             var animationName = currentLine["@animation:".Length..];
-            startAnimation.Invoke( animationName );
+            startAnimation.Invoke(animationName);
             buttonsEnabled = false;
             // ContinueStory();
             mustContinueStory = true;
         }
         else
         {
-            dialoguePanel.SetActive(true);
+            // dialoguePanel.SetActive(true);
+            EnableDialoguePanel();
             dialogueText.text = currentLine;
+            dialogueTextBig.text = currentLine;
             DisplayChoices();
             buttonsEnabled = false;
         }
@@ -152,7 +168,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
         HandleTags(story.currentTags);
 
-        if ( mustContinueStory )
+        if (mustContinueStory)
         {
             ContinueStory();
         }
@@ -164,10 +180,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
         {
 
             continueButton.SetActive(true);
+            continueButtonBig.SetActive(true);
         }
         else
         {
             continueButton.SetActive(false);
+            continueButtonBig.SetActive(false);
         }
     }
 
@@ -223,7 +241,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
                 story.ChooseChoiceIndex(choiceIndex);
 
-                dialoguePanel.SetActive(true);
+                // dialoguePanel.SetActive(true);
+                EnableDialoguePanel();
 
                 ContinueStory();
                 break;
@@ -244,41 +263,49 @@ public class DialogueManagerSingleInk : MonoBehaviour
     private void DisplayChoices()
     {
         List<Choice> currentChoices = story.currentChoices;
+        var choiceGameObjects = GetChoiceGameObjects();
+        var choiceTextMeshPros = GetChoiceTextMeshPros();
 
-        if (currentChoices.Count > choices.Length)
+        if (currentChoices.Count > choiceGameObjects.Length)
         {
-            Debug.LogError("More choices were given than the UI che support. Number of choice given; " + currentChoices.Count);
+            Debug.LogError(
+                $"More choices were given than the UI che support. Number of choices given: {currentChoices.Count}. Number of button choices available: {choiceGameObjects.Length}");
         }
 
         int index = 0;
 
         foreach (Choice choice in currentChoices)
         {
-            choices[index].gameObject.SetActive(true);
-            choicesText[index].text = choice.text;
+            choiceGameObjects[index].SetActive(true);
+            choiceTextMeshPros[index].text = choice.text;
             index++;
         }
 
-        for (int i = index; i < choices.Length; i++)
+        for (int i = index; i < choiceGameObjects.Length; i++)
         {
-            choices[i].gameObject.SetActive(false);
+            choiceGameObjects[i].SetActive(false);
         }
+    }
 
+    private TextMeshProUGUI[] GetChoiceTextMeshPros()
+    {
+        return IsBigDialogueMode() ? choicesTextBig : choicesText;
+    }
 
-        //StartCoroutine(SelectFirstChoice());
-
+    private GameObject[] GetChoiceGameObjects()
+    {
+        return IsBigDialogueMode() ? choicesBig : choices;
     }
 
 
     //Nota: disabilitato per ora perché sennò non mi mette in evidenza la prima scelta.
     //Più avanti ci sarà la possibilità di risolvere questa cosa in modo complesso perché Unity merda
-    private IEnumerator SelectFirstChoice()
-    {
-        EventSystem.current.SetSelectedGameObject(null);
-        yield return new WaitForEndOfFrame();
-        EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
-
-    }
+    // private IEnumerator SelectFirstChoice()
+    // {
+    //     EventSystem.current.SetSelectedGameObject(null);
+    //     yield return new WaitForEndOfFrame();
+    //     EventSystem.current.SetSelectedGameObject(GetChoiceGameObjects()[0].gameObject);
+    // }
 
     public void MakeChoice(int choiceIndex)
     {
@@ -519,7 +546,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
         string path = Application.persistentDataPath + "/savefile.json";
         if (File.Exists(path))
         {
-            Debug.Log( $"Carico gioco da {path}" );
+            Debug.Log($"Carico gioco da {path}");
             string json = File.ReadAllText(path);
             SaveData saveData = JsonUtility.FromJson<SaveData>(json);
 
@@ -545,6 +572,33 @@ public class DialogueManagerSingleInk : MonoBehaviour
         var bedroomContents = (InkList)story.variablesState["bedroomContents"];
         return bedroomContents.ContainsItemNamed("PG");
 
+    }
+
+
+    private bool IsBigDialogueMode()
+    {
+        var isBigDialogueMode = (bool)story.variablesState[bigDialogueInkBoolVariable];
+        return isBigDialogueMode;
+    }
+
+    private void EnableDialoguePanel()
+    {
+        if (IsBigDialogueMode())
+        {
+            dialoguePanel.SetActive(false);
+            dialoguePanelBig.SetActive(true);
+        }
+        else
+        {
+            dialoguePanel.SetActive(true);
+            dialoguePanelBig.SetActive(false);
+        }
+    }
+
+    private void DisableDialoguePanel()
+    {
+        dialoguePanel.SetActive(false);
+        dialoguePanelBig.SetActive(false);
     }
 
 }
