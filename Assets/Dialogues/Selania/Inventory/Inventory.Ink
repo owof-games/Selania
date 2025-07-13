@@ -2,6 +2,7 @@
 
 VAR currentReceiver = ()
 
+
 === inventory_contents ===
 + [Inventory]
     ~ enableBigDialogue()
