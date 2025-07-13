@@ -14,9 +14,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
-
-
     [SerializeField] private GameObject continueButton;
+
+    
     private Story story;
 
     [SerializeField] private string[] allPlaces;
