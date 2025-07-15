@@ -889,7 +889,7 @@
                     ~ firstBlue ++
                 
             + [La strada sbagliata è quella con più insegnamenti.]
-                 {name}: non un nome ma un dispenser di aforismi.
+                 non un nome ma un dispenser di aforismi.
                  Però in qualche modo ha senso.
                  Ma presto o tardi dovrò pure capire come mangiare, e a quel punto cosa me ne faccio di tutte le strade sbagliate del mondo?
                         ~ firstRed ++
@@ -1054,12 +1054,12 @@
                 ~ change_entity_place(SecondCharacter)
     }
     
-    {name}: Prima hai detto che hai il terrore di fare una scelta.
+    Prima hai detto che hai il terrore di fare una scelta. #speaker:{PG_tag()}
         
         + [Qui hai accettato il tuo nuovo nome.]
-            {name}: Accettare è una scelta.
-            {name}: Cercare risposte è un'altra scelta ancora.
-            {name}: E ammettere una propria paura, una scelta enorme.
+            Accettare è una scelta.
+            Cercare risposte è un'altra scelta ancora.
+            E ammettere una propria paura, una scelta enorme.
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
@@ -1067,28 +1067,28 @@
                 }            
         
         + [Ma hai deciso di costruire una famiglia con l3 tu3 am3.]
-            {name}: Hai aperto il tuo cuore, e loro ti amano.
-            {name}: Si preoccupano per te, cercano di aiutarti a trovare la tua strada.
-            {name}: E questo amore è frutto di infinite piccole scelte fatte ogni giorno.
+            Hai aperto il tuo cuore, e loro ti amano.
+            Si preoccupano per te, cercano di aiutarti a trovare la tua strada.
+            E questo amore è frutto di infinite piccole scelte fatte ogni giorno.
         
         + [Dimenticando che per finire gli studi hai lottato per anni.]
-            {name}: Che ogni esame che hai dato è stata una scelta.
-            {name}: Che ogni lezione che hai seguito è stata una scelta.
-            {name}: E presto o tardi, hai trovato la volontà di continuare.
+            Che ogni esame che hai dato è stata una scelta.
+            Che ogni lezione che hai seguito è stata una scelta.
+            E presto o tardi, hai trovato la volontà di continuare.
             
         + [Ma hai più volte accettato il rischio di suonare sul tetto.]
-            {name}: Hai accettato di essere festa in un mondo severo.
-            {name}: Hai cercato il gioco quando tutto ti dice che devi lavorare.
-            {name}: Hai accolto falene, scoiattoli e altri animali suonanti.
+            Hai accettato di essere festa in un mondo severo.
+            Hai cercato il gioco quando tutto ti dice che devi lavorare.
+            Hai accolto falene, scoiattoli e altri animali suonanti.
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
 	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
         + [Però da che sei qui hai esplorato tutto questo luogo.]
-            {name}: Hai inseguito uno scoiattolo.
-            {name}: Hai cercato Talco.
-            {name}: Non ti sei fatta spaventare dalla novità.
+            Hai inseguito uno scoiattolo.
+            Hai cercato Talco.
+            Non ti sei fatta spaventare dalla novità.
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
@@ -1106,18 +1106,18 @@
         
     = two
     ~ temp charNameOne = translator(firstCharacterState)
-    {name}: Temi che le persone a cui vuoi bene si sentano tradite dalla scelta che farai.
+    Temi che le persone a cui vuoi bene si sentano tradite dalla scelta che farai.
 
         + [Con Talco puoi litigare, eppure siete legatissim3.]
-            {name}: Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
-            {name}: Lə Talco che hai raccontato si arrabbierebbe di più se tu facessi una scelta per te pensando a ləi.
+            Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
+            Lə Talco che hai raccontato si arrabbierebbe di più se tu facessi una scelta per te pensando a ləi.
             
                     
         + [La paura di tradire è un'altra faccia dell'ego.]
-            {name}: È la voglia di sembrare impeccabili.
-            {name}: Infallibili.
-            {name}: Inattaccabili.
-            {name}: Ma amore e crescita prosperano nell'errore e nella vulnerabilità.
+            È la voglia di sembrare impeccabili.
+            Infallibili.
+            Inattaccabili.
+            Ma amore e crescita prosperano nell'errore e nella vulnerabilità.
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
@@ -1126,13 +1126,13 @@
     
             
         + [Ti preoccupi molto di loro, e poco di te.]
-            {name}: Non ti sei chiesta molto dove eri, ti sei messa solo a cercare Talco.
-            {name}: Ti sei preoccupata per Jonah.
-            {name}: Ma per te?
+            Non ti sei chiesta molto dove eri, ti sei messa solo a cercare Talco.
+            Ti sei preoccupata per Jonah.
+            Ma per te?
             
         + [Forse accadrà, ma non è un tuo problema.]
-            {name}: Stai costruendo la tua vita, non la loro.
-            {name}: Se la pensano diversamente, non è amicizia, e ti sei salvata da qualcosa di peggiore.
+            Stai costruendo la tua vita, non la loro.
+            Se la pensano diversamente, non è amicizia, e ti sei salvata da qualcosa di peggiore.
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
@@ -1140,9 +1140,9 @@
                 }
                 
         + [Tradiamo la fiducia se rompiamo le regole a nostro vantaggio.]
-            {name}: Hai deciso di giocare con loro e lasciar loro tutto il potere?
-            {name}: O è una regola implicita, che non avete mai concordato ma che senti nell'aria?
-            {name}: E a prescindere: abbiamo sempre il diritto di revocare un accordo, una regola.
+            Hai deciso di giocare con loro e lasciar loro tutto il potere?
+            O è una regola implicita, che non avete mai concordato ma che senti nell'aria?
+            E a prescindere: abbiamo sempre il diritto di revocare un accordo, una regola.
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
@@ -1159,13 +1159,13 @@
         
     = three
     ~ temp charNameOne = translator(firstCharacterState)
-    {name}: Vedi una scelta come una strada chiusa, qualcosa da cui non poter tornare indietro.
+    Vedi una scelta come una strada chiusa, qualcosa da cui non poter tornare indietro.
 
             
         + [Se non tiri nessun dado, non c'è storia da far avanzare.]
-            {name}: Quando giochi non sempre le cose vanno come vuoi, ma comunque <i>vanno</i>.
-            {name}: E fintanto che le cose hanno di dove andare, c'è tempo per cambiare.
-            {name}: E a volte anche ritirare i dadi.
+            Quando giochi non sempre le cose vanno come vuoi, ma comunque <i>vanno</i>.
+            E fintanto che le cose hanno di dove andare, c'è tempo per cambiare.
+            E a volte anche ritirare i dadi.
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
@@ -1173,8 +1173,8 @@
                 }
         
         + [Tutt3 hanno immaginato sorti diverse per Jonah, ma nessuna fine.]
-            {name}: Ogni passo avanti prevede la possibilità di tornare indietro.
-            {name}: A volte è più difficile, a volte meno, ma è sempre possibile.
+            Ogni passo avanti prevede la possibilità di tornare indietro.
+            A volte è più difficile, a volte meno, ma è sempre possibile.
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
@@ -1182,11 +1182,11 @@
                 }
                 
         + [Eppure la prima cosa che hai visto qui sono otto sentieri.]
-            {name}: Otto luoghi dove andare.
-            {name}: E ogni sentiero ha una direzione in cui andare, e una da cui tornare.
-            {name}: A volte l'erba può essere cresciuta.
-            {name}: A volte l'acqua può averne cancellato un pezzo.
-            {name}: Ma il sentiero è sempre lì, ad aspettare.
+            Otto luoghi dove andare.
+            E ogni sentiero ha una direzione in cui andare, e una da cui tornare.
+            A volte l'erba può essere cresciuta.
+            A volte l'acqua può averne cancellato un pezzo.
+            Ma il sentiero è sempre lì, ad aspettare.
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
@@ -1195,15 +1195,15 @@
             
         
         + [A suo modo, la storia di Jonah è un successo.]
-            {name}: Ha deciso che non gli stava più bene quello che aveva, e si è mosso per cambiarlo.
-            {name}: E il leggere negativamente le cose che forse gli sono capitate raccontano nulla di Jonah e molto di chi le racconta.
-            {name}: C'è orgoglio anche dietro una cassa del supermercato, non solo su palco.
+            Ha deciso che non gli stava più bene quello che aveva, e si è mosso per cambiarlo.
+            E il leggere negativamente le cose che forse gli sono capitate raccontano nulla di Jonah e molto di chi le racconta.
+            C'è orgoglio anche dietro una cassa del supermercato, non solo su palco.
                 
         + [Ragioni come se fossi sola se dovessi cadere.]
-            {name}: Pensi che Talco ti abbandonerebbe?
-            {name}: Anna? Olga? Persino Ennio.
-            {name}: I tuoi genitori.
-            {name}: Anche se a volte i vostri cuori sono distanti, quando c'è un bisogno sappiamo sempre ritrovarci.            
+            Pensi che Talco ti abbandonerebbe?
+            Anna? Olga? Persino Ennio.
+            I tuoi genitori.
+            Anche se a volte i vostri cuori sono distanti, quando c'è un bisogno sappiamo sempre ritrovarci.            
         -
         {
         - firstCharacterInkLevel == Normal:
@@ -1217,8 +1217,8 @@
         {name} Questo posto ti ha assegnato un nome, e quel nome è Chitarra. Ma tu lo vedi come una rinuncia.
 
         + [Giocare è bello perché puoi sempre rinunciare a farlo.]
-            {name}: Quando una roba la devi fare anche quando non vuoi, quello è il lavoro.
-            {name}: Per questo fa schifo.
+            Quando una roba la devi fare anche quando non vuoi, quello è il lavoro.
+            Per questo fa schifo.
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
@@ -1227,13 +1227,13 @@
          
         
         + [Quando Anna ha rinunciato all'ex, è rinata.]
-            {name}: Rinunciare vuol dire anche prendersi cura di sé.
-            {name}: Un atto d'amore quando qualcosa non ci fa più bene.
+            Rinunciare vuol dire anche prendersi cura di sé.
+            Un atto d'amore quando qualcosa non ci fa più bene.
         
         + [Un infinito più piccolo resta comunque infinito.]
-            {name}: Rinuncia a una cosa e sarai comunque tutto.
-            {name}: Un nome è solo un nome.
-            {name}: Una persona è un universo intero.
+            Rinuncia a una cosa e sarai comunque tutto.
+            Un nome è solo un nome.
+            Una persona è un universo intero.
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
@@ -1241,7 +1241,7 @@
                 }    
             
         + [Rinunciando a cercare Talco ti sei tutelata.]
-            {name}: Se una cosa non ha senso, non ha senso anche se continuiamo ad insistere nel farla.
+            Se una cosa non ha senso, non ha senso anche se continuiamo ad insistere nel farla.
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
@@ -1249,7 +1249,7 @@
                 }            
         
         + [C'è più coraggio nella rinuncia che nel compromesso.]
-            {name}: Spesso è più costosa, ma la coerenza personale non ha prezzo.
+            Spesso è più costosa, ma la coerenza personale non ha prezzo.
             
         -
         
