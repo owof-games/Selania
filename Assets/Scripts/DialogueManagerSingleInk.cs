@@ -38,6 +38,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private TextAsset inkAssetJSON;
     [SerializeField] private GameObject[] entities;
     [SerializeField] private TextMeshProUGUI displayNameText;
+    [SerializeField] private Animator portraitAnimator;
 
 
     [Header("Background setting")]
@@ -462,6 +463,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     break;
 
                 case PORTRAIT_TAG:
+                    portraitAnimator.Play(tagValue);
                     Debug.Log("portrait" + tagValue);
                     break;
 
