@@ -37,6 +37,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Text elements")]
     [SerializeField] private TextAsset inkAssetJSON;
     [SerializeField] private GameObject[] entities;
+    [SerializeField] private TextMeshProUGUI displayNameText;
 
 
     [Header("Background setting")]
@@ -92,7 +93,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Library Path Sounds")]
     [SerializeField] private AudioClip librarySounds;
 
-
+    //TAGS UTILIZZATI PER NOME E RITRATTO
+    private const string FIRST_SPEAKER_TAG = "firstSpeaker";
+    private const string FIFTH_SPEAKER_TAG = "fifthSpeaker";
+    private const string PORTRAIT_TAG = "portrait";
 
     void Start()
     {
@@ -446,6 +450,19 @@ public class DialogueManagerSingleInk : MonoBehaviour
                         ambientSounds.Play();
                     }
 
+                    break;
+                case FIRST_SPEAKER_TAG:
+                    displayNameText.text = tagValue;
+                    Debug.Log("firstSpeaker" + tagValue);
+                    break;
+
+                case FIFTH_SPEAKER_TAG:
+                    displayNameText.text = tagValue;
+                    Debug.Log("fifthSpeaker" + tagValue);
+                    break;
+
+                case PORTRAIT_TAG:
+                    Debug.Log("portrait" + tagValue);
                     break;
 
                 default:
