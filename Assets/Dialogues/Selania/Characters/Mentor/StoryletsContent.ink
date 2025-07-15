@@ -11,7 +11,7 @@
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-        ???: Sapevo che sarebbe arrivata una nuova persona! #fifthSpeaker: Mentore #portrait: mentore_neutral
+        ???: Sapevo che sarebbe arrivata una nuova persona! #fifthSpeaker:{fifthChar_tag()} #portrait: mentore_neutral
         ???: Immagino tu abbia un milione di domande, vero?
         - (top)
             * (dove) [Dove sono?]
@@ -24,9 +24,9 @@
                     -> top
             
             * (chiSei) [Chi sei?]
-                ???: La persona che tiene in piedi questo luogo.
-                ???: Ma tu puoi chiamarmi <b>{translator(fifthCharacterState)}</b>. #portrait: mentore_happy
-                {charNameFive}: Così puoi ricordarti con facilità a cosa servo.
+                ???: La persona che tiene in piedi questo luogo
+                ???: Ma tu puoi chiamarmi <b>{translator(fifthCharacterState)}</b>. #portrait: mentore_happy 
+                {charNameFive}: Così puoi ricordarti con facilità a cosa servo.#fifthSpeaker:{fifthChar_tag()}
                     -> top
             
             * (vado) [Come me ne vado da qui?]
@@ -63,7 +63,8 @@
         {chiSei:{charNameFive}|???}: E {pronouns has him: benvenuto|{pronouns has her: benvenuta|benvenutə}}.
         {chiSei:{charNameFive}|???}: Con me usa pure i pronomi femminili.
         {not chiSei: ???: Ah, che sbadata. Mi chiamo <b>{charNameFive}</b>.|{charNameFive}: È mio dovere farti stare bene.}
-        {charNameFive}: Un'altra domanda importante, {name}.
+        - (selfName)
+        {charNameFive}: Un'altra domanda importante, {name}.#fifthSpeaker:{fifthChar_tag()}
         {charNameFive}: Nel tuo soggiorno in questo luogo potrebbe accadere che incontrerai qualche situazione complessa.
         {charNameFive}: Se ti va di dirmi quali sono le cose che ti creano disagio, farò il possibile per non fartele incontrare.
                 -> trigger_warning ->

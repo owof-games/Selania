@@ -19,6 +19,7 @@
     INCLUDE Code\PlacesContentsAndFunctions.ink
     INCLUDE Code\BackgroundsAndSounds.ink
     INCLUDE Code\BigDialogue.ink
+    INCLUDE Code\SpeakerTagManagers.ink
 
 
 //File dedicati alla gestione delle personagge
@@ -86,6 +87,8 @@
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibaryManagement.ink
     INCLUDE Library\StoryNotes.ink
+
+
 
 
 
