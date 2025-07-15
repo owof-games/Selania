@@ -13,41 +13,41 @@
     ~ temp charNameOne = translator(firstCharacterState)
     + {are_two_entities_together(TheFrog, PG)} [TheFrog]
         <i>Una rana bluastra ti osserva incuriosita.</i> #speaker:{fungus_tag()}
-            La Rana Parlante: Cra Cra #firstSpeaker:{frog_tag()}
-            La Rana Parlante: Cra
-            La Rana Parlante: Cra?
+            Cra Cra #firstSpeaker:{frog_tag()}
+            Cra
+            Cra?
             - (top)
             
                 * * (frog) [{charNameTwo} dice che hai un regalo per me.]
                     <i>La rana si silenza per un istante.</i> #speaker:{fungus_tag()}
-                    La Rana Parlante: Cra?
-                    La Rana Parlante: Cra Cra Cra!
-                    La Rana Parlante: Crrrrrrrrrrra!
+                    Cra?#firstSpeaker:{frog_tag()}
+                    Cra Cra Cra!
+                    Crrrrrrrrrrra!
                     <i>La rana sta dicendo che spesso il ragazzino viene sulle sponde dello stagno e chiacchiera.</i> #speaker:{fungus_tag()}
                     <i>E mentre chiacchiera si lamenta degli adulti.</i>
-                    La Rana Parlante: Craac!
+                    Craac!#firstSpeaker:{frog_tag()}
                     <i>Tranne della nonna e del fratello.</i> #speaker:{fungus_tag()}
-                    La Rana Parlante: Cra!
+                    Cra!#firstSpeaker:{frog_tag()}
                     <i>Al bambino non piacciono gli adulti perché non sono coerenti.</i> #speaker:{fungus_tag()}
                     <i>Secondo la rana il modo migliore per conquistarlo non è per forza dargli ragione: è avere una direzione nelle cose che gli dici.</i>
-                    La Rana Parlante: Cracak Craac Cra.
+                    Cracak Craac Cra.#firstSpeaker:{frog_tag()}
                     <i>Ma che sta anche a te decidere che fare alla fine.</i> #speaker:{fungus_tag()}
                     <i>E che se serve può aiutarti ancora, in futuro.</i>
                     <i>Ma ora ha fame.</i>
-                    La Rana Parlante: Crac!
+                    Crac!#firstSpeaker:{frog_tag()}
                         -> top
                         
                 * * {frog && firstStory == Active} [Puoi aiutarmi anche per {charNameOne}?]
                     <i>La rana sembra rifletterci.</i> #speaker:{fungus_tag()}
-                    La Rana Parlante: Cra.
+                    Cra.#firstSpeaker:{frog_tag()}
                     <i>La rana accetta, ma non promette di essere così disponibile in futuro.</i> #speaker:{fungus_tag()}
-                    La Rana Parlante: CRRRRRRACC. Crac. Cra?
+                    CRRRRRRACC. Crac. Cra?#firstSpeaker:{frog_tag()}
                     <i>L'unica cosa certa è che {charNameOne} DETESTA le persone troppo razionali.</i> #speaker:{fungus_tag()}
                     <i>Non ce l'ha con la scienza in sé, quanto con l'idea che tutto possa essere ridotto a calcolo e numero.</i>
-                    La Rana Parlante: Craaaaaac. Cra cra. Cra cra.
+                    Craaaaaac. Cra cra. Cra cra.#firstSpeaker:{frog_tag()}
                     La Rana Parlate: Cra.
                     <i>E che quando si siede qui sullo stagno, parla molto di spiritualità.</i> #speaker:{fungus_tag()}
-                    La Rana Parlante: Crac crac crac Craac crac cracccc.
+                    Crac crac crac Craac crac cracccc.#firstSpeaker:{frog_tag()}
                     <i>E chiede se la prossima volta le porti uno stuzzichino, perché ha molta fame.</i> #speaker:{fungus_tag()}
                         -> top
                         
