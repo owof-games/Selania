@@ -10460,6 +10460,7 @@ MonoBehaviour:
   - {fileID: 1569184872}
   - {fileID: 728340192}
   - {fileID: 420051643}
+  displayNameText: {fileID: 1171737394}
   background: {fileID: 1753709286}
   bedroomZero: {fileID: 21300000, guid: c6b1100f4257c054aae7e3701c7e215c, type: 3}
   bedroomOne: {fileID: 21300000, guid: de8ec455e1d2d68488cc6cf82fa40252, type: 3}
