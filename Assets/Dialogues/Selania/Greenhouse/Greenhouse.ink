@@ -2,7 +2,7 @@
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
 {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can}
-{greenhouse == 1:<i>Eccoti nella serra.</i>|{~ <i>La serra pulsa nell'aria tiepida.|<i>C'è odore di terra e tranquillità.|<i>I vasi chiedono di essere ascoltati.|<i>Le ragnatele raccolgono risposte.|<i>Le venature del legno propongono domande.}</i>}
+{greenhouse == 1:<i>Eccoti nella serra.</i>|{~ <i>La serra pulsa nell'aria tiepida.|<i>C'è odore di terra e tranquillità.|<i>I vasi chiedono di essere ascoltati.|<i>Le ragnatele raccolgono risposte.|<i>Le venature del legno propongono domande.}</i>} #speaker:{fungus_tag()}
 
 {
 	- chosenCultivable != ():
@@ -13,7 +13,7 @@
         - backupCultivable != ():
             -> pre_test
         - else:
-            <i>Al momento non è possibile coltivare nulla</i>.
+            <i>Al momento non è possibile coltivare nulla</i>. #speaker:{fungus_tag()}
 	    -> main
         
     }
@@ -22,7 +22,7 @@
 
 
 === pre_test
-    <i>{~ In questo momento non c'è nulla in crescita.|La serra attende le tue visioni.}</i>
+    <i>{~ In questo momento non c'è nulla in crescita.|La serra attende le tue visioni.}</i> #speaker:{fungus_tag()}
         + [Mi guardo attorno.]
         -
             -> main
@@ -38,7 +38,7 @@
                         -> cultivable_test
             }
             	- else:
-    	    <i>Al momento non è possibile coltivare nulla.</i>
+    	    <i>Al momento non è possibile coltivare nulla.</i> #speaker:{fungus_tag()}
     	    -> main
     }
     
@@ -51,14 +51,14 @@
         - backupCultivable != ():
             -> pre_test
         - else:
-            <i>Al momento non è possibile coltivare nulla.</i>
+            <i>Al momento non è possibile coltivare nulla.</i> #speaker:{fungus_tag()}
 	    -> main
         
     }
 }
 
 === stolen_watering_can
-<i>La serra è smarrita, non si trova più il suo innaffiatoio, e ora non sa più cosa cantare.</i>
+<i>La serra è smarrita, non si trova più il suo innaffiatoio, e ora non sa più cosa cantare.</i> #speaker:{fungus_tag()}
 -> main
 
     

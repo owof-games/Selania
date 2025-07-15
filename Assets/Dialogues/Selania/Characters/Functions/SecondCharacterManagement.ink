@@ -60,7 +60,7 @@
     {
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
         
-            {charNameTwo}: Sai? Mi sembri una persona che dice sempre le cose giuste.
+            {charNameTwo}: Sai? Mi sembri una persona che dice sempre le cose giuste.  #speaker:{secondChar_tag()}
             {charNameTwo}: Non giuste giuste tipo per me.
             {charNameTwo}: Ma che si assomigliano tutte.
             {charNameTwo}: Non mi dici mica prima mele e poi pere come fanno gli altri adulti.
@@ -68,7 +68,7 @@
                 ->->
         - else:
         
-            {charNameTwo}: Non sono scemo.
+            {charNameTwo}: Non sono scemo.  #speaker:{secondChar_tag()}
             {charNameTwo}: Ho visto che cambi sempre idea.
             {charNameTwo}: Mi rispondi sempre cose diverse.
             {charNameTwo}: Non mi piace.

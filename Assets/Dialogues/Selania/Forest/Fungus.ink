@@ -38,7 +38,7 @@
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
     
-        <i>Le nuove radici ci mettono in contatto con la terra che ci circonda.</i>
+        <i>Le nuove radici ci mettono in contatto con la terra che ci circonda.</i> #speaker:{fungus_tag()}
         <i><b>Ci.</b></i>
         <i>La cicatrice rimane, ma da essa esplode la vita.</i>
         <i>Torniamo a percepirci, questa è gioia.</i>
@@ -87,7 +87,7 @@
             
         <i>Noi sussurriamo nella tua testa, ma ascoltiamo anche.</i>
         - (nameFungus)
-        <i>Le nostre radici cercano di imparare le voci del terreno.</i>
+        <i>Le nostre radici cercano di imparare le voci del terreno.</i> #speaker:{fungus_tag()}
         <i>Il terreno ci racconta che {name} ha appena compiuto qualcosa di importante.</i>
         <i>Osserviamo {name} e ci chiediamo cosa provi dopo aver aiutato {charNameOne}.</i>
         
@@ -150,7 +150,7 @@
         ~ temp charNameThree = translator(thirdCharacterState)
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
-        <i>I nostri rami saggiano il cielo.</i>
+        <i>I nostri rami saggiano il cielo.</i> #speaker:{fungus_tag()}
         <i>L'aria finalmente ci rinfresca.</i>
         <i>E gli uccelli ci raccontano cose su {name}.</i>
         <i>E su quello che ha fatto per {charNameTwo}.</i>
@@ -191,7 +191,7 @@
                     ~ playerYellow ++
             -
         
-        <i>L'acqua ci ha portato le lacrime di {charNameFive}.</i>
+        <i>L'acqua ci ha portato le lacrime di {charNameFive}.</i> #speaker:{fungus_tag()}
         <i>Questa storia per lei è stata faticosa.</i>
         <i>Le sue radici sembrano solide, ma il tronco ondeggia al primo accenno di burrasca.</i>
         <i>Forse {name} può essere il suo sostegno.</i>
@@ -289,17 +289,17 @@
     
     = one
     //Contenuti iniziali
-        <i>{~ Il tronco persevera nella memoria.|La corteccia tenace resiste alla dimenticanza.|Formiche inquiete si nascondono nelle scalanature della corteccia.}</i>
+        <i>{~ Il tronco persevera nella memoria.|La corteccia tenace resiste alla dimenticanza.|Formiche inquiete si nascondono nelle scalanature della corteccia.}</i> #speaker:{fungus_tag()}
             -> main
     
     = two
     //Contenuti dopo la fine della prima storia
-        <i>{~ Le radici hanno trovato vecchi tesori.|I bruchi solleticano le giovani radici.|Porcellini di terra si riparano tra le nostre radici.}</i>
+        <i>{~ Le radici hanno trovato vecchi tesori.|I bruchi solleticano le giovani radici.|Porcellini di terra si riparano tra le nostre radici.}</i> #speaker:{fungus_tag()}
             -> main
 
     = three
     //Contenuti dopo la fine della seconda storia
-        <i>{~ I rami sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba osserva lontana dalla base della pianta.}</i>        
+        <i>{~ I rami sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba osserva lontana dalla base della pianta.}</i>  #speaker:{fungus_tag()}      
             -> main
 
     = four

@@ -35,13 +35,13 @@ VAR currentReceiver = ()
     ~ findedGifts -= EderaDelleAmanti
     {
         - currentReceiver has FirstCharacter:
-        <i>{translator(firstCharacterState)} è confusa dal dono.</i>
+        <i>{translator(firstCharacterState)} è confusa dal dono.</i> #speaker:{fungus_tag()}
             ~ currentReceiver = ()
                 -> first_story_gift.ink_outcome
         
         
         - currentReceiver has SecondCharacter:
-            {translator(secondCharacterState)} ti guarda disgustato.
+            {translator(secondCharacterState)} ti guarda disgustato. #speaker:{fungus_tag()}
             ~ currentReceiver = ()
                 -> second_story_gift.ink_outcome
         
@@ -55,7 +55,7 @@ VAR currentReceiver = ()
 
     {
         - currentReceiver has FirstCharacter:
-            <i>{translator(firstCharacterState)} ti sorride.</i>
+            <i>{translator(firstCharacterState)} ti sorride.</i> #speaker:{fungus_tag()}
             <i>Si rigira la bacca tra la mani, sembra più serena.</i>
             ~ firstCharacterInkLevel ++
             ~ currentReceiver = ()
@@ -63,7 +63,7 @@ VAR currentReceiver = ()
             
         
         - currentReceiver has SecondCharacter:
-            <i>Hai regalato a {translator(secondCharacterState)} qualcosa che proprio non gli interessa.</i>
+            <i>Hai regalato a {translator(secondCharacterState)} qualcosa che proprio non gli interessa.</i> #speaker:{fungus_tag()}
             ~ currentReceiver = ()
                 -> second_story_gift.ink_outcome
     
@@ -78,12 +78,12 @@ VAR currentReceiver = ()
     
     {
         - currentReceiver has FirstCharacter:
-            <i>{translator(firstCharacterState)} è infastidita dalla tensione che viene dal frammento, e se lo getta alle spalle.</i>
+            <i>{translator(firstCharacterState)} è infastidita dalla tensione che viene dal frammento, e se lo getta alle spalle.</i> #speaker:{fungus_tag()}
                 -> first_story_gift.ink_outcome
     
         - currentReceiver has SecondCharacter:
             ~ secondCharacterInkLevel ++
-            <i> Hai regalato a {translator(secondCharacterState)} qualcosa che lo esalta.</i>
+            <i> Hai regalato a {translator(secondCharacterState)} qualcosa che lo esalta.</i> #speaker:{fungus_tag()}
             <i>Continua a rigirarsi il frammento tra le dita, pieno di gioia rabbiosa.</i>
                 -> second_story_gift.ink_outcome
     
@@ -97,7 +97,7 @@ VAR currentReceiver = ()
 
     {
         - currentReceiver has FirstCharacter:
-            <i>{translator(firstCharacterState)} getta a terra il tuo dono, disgustata.</i>
+            <i>{translator(firstCharacterState)} getta a terra il tuo dono, disgustata.</i> #speaker:{fungus_tag()}
             <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
              ~ currentReceiver = ()
                 -> first_story_gift.ink_outcome
@@ -106,7 +106,7 @@ VAR currentReceiver = ()
         - currentReceiver has SecondCharacter:
             ~ secondCharacterInkLevel ++
             ~ secondCharacterInkLevel ++
-            <i>Sorprendentemente {translator(secondCharacterState)} inizia a tremare.</i>
+            <i>Sorprendentemente {translator(secondCharacterState)} inizia a tremare.</i> #speaker:{fungus_tag()}
             <i>Cerca di trattenere le lacrime, ma alcune gli scappano a fatica dagli occhi.</i>
             <i>Le linee della tua mano ricompaiono, i pezzi si rinsaldano.</i>
             ~ currentReceiver = ()
@@ -123,14 +123,14 @@ VAR currentReceiver = ()
     - currentReceiver has FirstCharacter:
         ~ firstCharacterInkLevel ++
         ~ firstCharacterInkLevel ++
-        <i>{translator(firstCharacterState)} inizia a saltellare di gioia.</i>
+        <i>{translator(firstCharacterState)} inizia a saltellare di gioia.</i> #speaker:{fungus_tag()}
          ~ currentReceiver = ()
             -> first_story_gift.ink_outcome
 
 
 
     - currentReceiver has SecondCharacter:
-        <i>{translator(secondCharacterState)} ti guarda disgustato.</i>
+        <i>{translator(secondCharacterState)} ti guarda disgustato.</i> #speaker:{fungus_tag()}
         <i>Finge persino di vomitare.</i>
         ~ currentReceiver = ()
             -> second_story_gift.ink_outcome
@@ -143,13 +143,13 @@ VAR currentReceiver = ()
 
     {
     - currentReceiver has FirstCharacter:
-        <i>{translator(firstCharacterState)} ti guarda delusa.</i>
+        <i>{translator(firstCharacterState)} ti guarda delusa.</i> #speaker:{fungus_tag()}
          ~ currentReceiver = ()
             -> first_story_gift.ink_outcome
     
 
     - currentReceiver has SecondCharacter:
-        <i>{translator(secondCharacterState)} sembra ferito.</i>
+        <i>{translator(secondCharacterState)} sembra ferito.</i> #speaker:{fungus_tag()}
         <i>Ti guarda, fa per dire qualcosa, e poi si zittisce.</i>
         ~ currentReceiver = ()
             -> second_story_gift.ink_outcome
@@ -164,7 +164,7 @@ VAR currentReceiver = ()
     - currentReceiver has FirstCharacter:
         ~ firstCharacterInkLevel ++
         ~ firstCharacterInkLevel ++
-        <i>{translator(firstCharacterState)} sussurra "nonno".</i>
+        <i>{translator(firstCharacterState)} sussurra "nonno".</i> #speaker:{fungus_tag()}
         <i>Le lacrime le rigano il viso.</i>
          ~ currentReceiver = ()
             -> first_story_gift.ink_outcome
@@ -173,7 +173,7 @@ VAR currentReceiver = ()
     - currentReceiver has SecondCharacter:
         ~ secondCharacterInkLevel ++
         ~ secondCharacterInkLevel ++
-        <i>{translator(secondCharacterState)} fa qualcosa di inaspettato: ti abbraccia.</i>
+        <i>{translator(secondCharacterState)} fa qualcosa di inaspettato: ti abbraccia.</i> #speaker:{fungus_tag()}
         <i>Poi si allontana imbarazzato.</i>
         ~ currentReceiver = ()
             -> second_story_gift.ink_outcome

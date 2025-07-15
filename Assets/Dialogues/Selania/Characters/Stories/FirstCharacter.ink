@@ -257,9 +257,9 @@
             -
        
         Come mi dovrei chiamare secondo te?
-    	    + [<i>Qualsiasi cosa tu abbia pensato, non riesci a dirla.</i>]
+    	<i>Qualsiasi cosa tu abbia pensato, non riesci a dirla.</i>  #speaker:{fungus_tag()}
     	    -
-         Mmm.
+         Mmm.  #speaker:{firstChar_tag()}
          La tua bocca si muove ma non esce nulla.
          Interessante.
          Forse quella tizia che gira quì può aiutarci a capire qualcosa?
@@ -923,7 +923,7 @@
 
  === first_story_gift ===
 ~ temp charNameOne = translator(firstCharacterState)
-<i> Stai per donare qualcosa a {charNameOne}.</i>
+<i> Stai per donare qualcosa a {charNameOne}.</i> #speaker:{fungus_tag()}
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += FirstCharacter
             -> inventory_management
@@ -988,20 +988,20 @@
         {
         - firstPurple && firstYellow > firstBlue:  Talco continua a mancarmi, ma con te mi sento come se fossimo parte da sempre della stessa band.#speaker:{firstChar_tag()}
         
-        <i>{charNameOne} vede {name} come una persona amica e fidata.</i>
+        <i>{charNameOne} vede {name} come una persona amica e fidata.</i> #speaker:{fungus_tag()}
         
         -firstPurple or firstYellow > firstBlue: Non sei mica male, sai? Mi sembra che cantiamo un po' la stessa canzone.#speaker:{firstChar_tag()}
         
-        <i>{charNameOne} si trova bene con {name}.</i>
+        <i>{charNameOne} si trova bene con {name}.</i> #speaker:{fungus_tag()}
         
         - firstPurple && firstYellow < firstBlue:  Non è che ci capiamo molto noi due, sai? È come se io suonassi Chopin e tu la lambada. Una lambada noiosa.#speaker:{firstChar_tag()}
         
-        <i>{charNameOne} non si è sentita capita da {name}.</i>
+        <i>{charNameOne} non si è sentita capita da {name}.</i> #speaker:{fungus_tag()}
         
         
         - else:  Siamo un po' in modalità random, vero? A volte ci avviciniamo, a volte ciaone proprio, tutta una musica diversa.#speaker:{firstChar_tag()}
         
-        <i>{charNameOne} non riesce a capire che rapporto sta costruendo con {name}.</i>
+        <i>{charNameOne} non riesce a capire che rapporto sta costruendo con {name}.</i> #speaker:{fungus_tag()}
         
         }
         

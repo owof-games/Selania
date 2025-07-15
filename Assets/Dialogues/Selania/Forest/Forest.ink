@@ -3,7 +3,7 @@ VAR emptyVaseFound = false
 === forest ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-{forest == 1:<i>La foresta ti accoglie con le sue ombre.</i>|<i>{~La foresta è una distesa di fresca ombra.|La foresta è canto sospeso.|La foresta cresce lentamente.|La resina raccoglie il tempo.|I rami si scaldano al vento.|Il sottobosco condivide pettegolezzi.|Sulla panchina scivolano ricordi.}</i>}
+{forest == 1:<i>La foresta ti accoglie con le sue ombre.</i>|<i>{~La foresta è una distesa di fresca ombra.|La foresta è canto sospeso.|La foresta cresce lentamente.|La resina raccoglie il tempo.|I rami si scaldano al vento.|Il sottobosco condivide pettegolezzi.|Sulla panchina scivolano ricordi.}</i>} #speaker:{fungus_tag()}
     
 
         + [Mi guardo attorno.]
@@ -13,6 +13,6 @@ VAR emptyVaseFound = false
 
 === bench
 + {are_two_entities_together(Bench, PG)} [Bench]
-    <i>La panchina vibra, attendendo la sua ricostruzione.</i>
+    <i>La panchina vibra, attendendo la sua ricostruzione.</i> #speaker:{fungus_tag()}
         -> main
 

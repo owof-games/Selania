@@ -1,7 +1,7 @@
 === laboratory ===
 #background: {tag_background()}
 //In quest'angolo possiamo assaporarci una bella tisana creata da noi, e vedere i quadri delle ame.
-<i>Ecco: è il momento di una bella tisana</i>
+<i>Ecco: è il momento di una bella tisana</i> #speaker:{fungus_tag()}
 
     + [Inizio a preparare una tisana]
     -

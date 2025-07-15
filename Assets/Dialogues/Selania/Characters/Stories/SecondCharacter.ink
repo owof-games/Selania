@@ -1331,7 +1331,7 @@
 
 === second_story_gift ===
 ~ temp charNameTwo = translator(secondCharacterState)
-<i> Stai per donare qualcosa a {charNameTwo}.</i>
+<i> Stai per donare qualcosa a {charNameTwo}.</i> #speaker:{fungus_tag()}
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += SecondCharacter
             -> inventory_management
@@ -1400,7 +1400,7 @@
             Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
             E questo mi fa stare al sicuro.
             C'è una cosa che devo dire a qualcuno, e voglio dirla a te.
-        <i>{charNameTwo} vede {name} come una persona amica e fidata.</i>
+        <i>{charNameTwo} vede {name} come una persona amica e fidata.</i> #speaker:{fungus_tag()}
         
         //Secondo migliore outcome
         -secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): Un po' mi fido.#speaker:{secondChar_tag()}
@@ -1408,7 +1408,7 @@
             Sembri un po' un gatto.
             Ma mi fido.
             C'è una cosa che devo dire a qualcuno, e voglio dirla a te.
-        <i>{charNameTwo} si trova bene con {name}.</i>
+        <i>{charNameTwo} si trova bene con {name}.</i> #speaker:{fungus_tag()}
         
         //Outcome peggiore
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow < (secondStoryQuestCount/2):  Secondo me mi tratti come un bambino.#speaker:{secondChar_tag()}
@@ -1425,7 +1425,7 @@
             C'è una cosa che devo dire a qualcuno.
             E posso dirla solo a te.
             Purtroppo.
-        <i>{charNameTwo} non riesce a capire che rapporto sta costruendo con {name}.</i>
+        <i>{charNameTwo} non riesce a capire che rapporto sta costruendo con {name}.</i> #speaker:{fungus_tag()}
         
         }
        
@@ -1458,7 +1458,7 @@
 
     = statement
     ~ temp charNameTwo = translator(secondCharacterState)
-        <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): l'inchiostro è aumentato di due unità|{secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
+        <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): l'inchiostro è aumentato di due unità|{secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i> #speaker:{fungus_tag()}
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(secondCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]
