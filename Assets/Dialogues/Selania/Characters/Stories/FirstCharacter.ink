@@ -105,10 +105,10 @@
         ~ firstStoryQuestCount ++
         
         
-        ???: Hai visto passare qualcunə?
+        ???: Hai visto passare qualcunə? #firstSpeaker: Chitarra #portrait: chitarra_sad
         ???: Altə all’incirca una balla di fieno e che si muove come un violino.
         ???: O almeno ləi si descriverebbe così.
-        ???: Lə adoro ma è sempre un po' edgy.
+        ???: Lə adoro ma è sempre un po' edgy. #portrait: chitarra_neutral
         ???: E comunque non posso essere arrivata qui da sola, vero? Qualsiasi cosa sia <i>qui</i>.
         ???: Come lə trovo?
         

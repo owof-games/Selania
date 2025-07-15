@@ -11,7 +11,7 @@
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-        ???: Sapevo che sarebbe arrivata una nuova persona!
+        ???: Sapevo che sarebbe arrivata una nuova persona! #fifthSpeaker: Mentore #portrait: mentore_neutral
         ???: Immagino tu abbia un milione di domande, vero?
         - (top)
             * (dove) [Dove sono?]
@@ -25,7 +25,7 @@
             
             * (chiSei) [Chi sei?]
                 ???: La persona che tiene in piedi questo luogo.
-                ???: Ma tu puoi chiamarmi <b>{translator(fifthCharacterState)}</b>.
+                ???: Ma tu puoi chiamarmi <b>{translator(fifthCharacterState)}</b>. #portrait: mentore_happy
                 {charNameFive}: Così puoi ricordarti con facilità a cosa servo.
                     -> top
             
