@@ -3,7 +3,7 @@
 #ambientSounds: {tag_ambientSounds()}
 TODO: eliminare Bus anche da Unity
 
-{train_stop == 1: <i>Questa è la stazione del treno.|<i>{~ La stazione profuma di partenze.|La panchina aspetta fremente una nuova conoscenza.|Sulle vette la luce brilla leggera.|Un vento fresco ti sospinge lungo la strada.|Le lettere ondeggiano sulla bacheca.|L'odore della foresta scalda il sentiero.}</i>}
+{train_stop == 1: <i>Questa è la stazione del treno.|<i>{~ La stazione profuma di partenze.|La panchina aspetta fremente una nuova conoscenza.|Sulle vette la luce brilla leggera.|Un vento fresco ti sospinge lungo la strada.|Le lettere ondeggiano sulla bacheca.|L'odore della foresta scalda il sentiero.}</i>}#speaker:{fungus_tag()}
 
     + [Mi guardo attorno.]
     -
@@ -13,12 +13,12 @@ TODO: eliminare Bus anche da Unity
 === starting_note ===
     + {are_two_entities_together(StartingNote, PG)}[StartingNote]
     
-        ???: Ti scrivo perché volevo ringraziarti per quello che hai fatto.
-        ???: Le cose nella mia vita hanno ripreso a funzionare.
-        ???: Ci sono ancora molte giornate no, ma sempre più  più spesso anche delle giornate sni.
-        ???: E persino qualche giornata YEAH!
-        ???: Spero che un giorno potrai avere anche tu la tua giornata yeah.
-        ???: E magari di passarla assieme.
+    Ti scrivo perché volevo ringraziarti per quello che hai fatto.#speaker: Sconosciutə
+        Le cose nella mia vita hanno ripreso a funzionare. 
+    Ci sono ancora molte giornate no, ma sempre più  più spesso anche delle giornate sni.
+    E persino qualche giornata YEAH!
+        Spero che un giorno potrai avere anche tu la tua giornata yeah.
+    E magari di passarla assieme.
         
             -> main
 
@@ -58,44 +58,44 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameOne}: Ciao {name}, come stai?
-        {charNameOne}: Alla fine Talco è sempre statə qui, me idiota.
-        {charNameOne}: E ha creduto alla mia storia!
-        {charNameOne}: Ora si è messə in testa di insegnare agli scoiattoli a suonare le noci.
+        Ciao {name}, come stai? #speaker:{firstChar_tag()}
+        Alla fine Talco è sempre statə qui, me idiota.
+        E ha creduto alla mia storia!
+        Ora si è messə in testa di insegnare agli scoiattoli a suonare le noci.
            
            {
                 - firstCharacterPossibleStates has Triangolo:
                     
-                    {charNameOne}: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
+                    Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
                     
                 - firstCharacterPossibleStates has RagazzaOrchestra:
                     
-                    {charNameOne}: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
+                    Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
                     
                 - firstCharacterPossibleStates has FlautoDolce:
                     
-                    {charNameOne}: Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
-                    {charNameOne}: E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
-                    {charNameOne}: Tu e quel posto mi avete reso una mollacciona.
-                    {charNameOne}: Ma non è così male, alla fine.
+                    Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
+                    E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
+                    Tu e quel posto mi avete reso una mollacciona.
+                    Ma non è così male, alla fine.
                     
                 - firstCharacterPossibleStates has Ocarina:
                     
-                    {charNameOne}: Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
-                    {charNameOne}: Se lo dico a mio padre mi fa ricoverare subito, ma amen.
-                    {charNameOne}: Sono felice ama, davvero felice.
+                    Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
+                    Se lo dico a mio padre mi fa ricoverare subito, ma amen.
+                    Sono felice ama, davvero felice.
                     
                 - firstCharacterPossibleStates has Violino:
                     
-                    {charNameOne}: Io invece mi sono resa conto che forse, con la musica, possiamo parlare con gli animali.
-                    {charNameOne}: No, non ho esagerato col vinello.
-                    {charNameOne}: Ma pensaci, ama: se così fosse, potrei dimostrare che siamo tutt3 collegat3, che potremmo parlarci e comunicare tra noi!
+                    Io invece mi sono resa conto che forse, con la musica, possiamo parlare con gli animali.
+                    No, non ho esagerato col vinello.
+                    Ma pensaci, ama: se così fosse, potrei dimostrare che siamo tutt3 collegat3, che potremmo parlarci e comunicare tra noi!
             }
         
-        {charNameOne}: Spero che lì vada tutto bene.
-        {charNameOne}: E che {charNameFive} non sia sempre pesantona.
-        {charNameOne}: Alla prossima lettera.
-        {charNameOne}: <i>{charNameOne}</i>
+        Spero che lì vada tutto bene.
+        E che {charNameFive} non sia sempre pesantona.
+        Alla prossima lettera.
+        <i>{charNameOne}</i>
         
         ~ firstWritingPause = firstWritingPauseDuration
             -> main
@@ -104,43 +104,43 @@ TODO: eliminare Bus anche da Unity
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    {charNameOne}: Ciao {name}, qui è sempre {charNameOne} che ti scrive.
-    {charNameOne}: Sono passate settimane dal mio ritorno, e finalmente ho avuto il coraggio di parlare con mio padre.
+    Ciao {name}, qui è sempre {charNameOne} che ti scrive.  #speaker:{firstChar_tag()}
+    Sono passate settimane dal mio ritorno, e finalmente ho avuto il coraggio di parlare con mio padre.
        
        {
             - firstCharacterPossibleStates has Triangolo:
-                {charNameOne}: Non è che avete un traduttore padre/figlia da quelle parti?
-                {charNameOne}: Quando gli ho detto che seguirò il suo consiglio e mi cercherò un lavoro vero, è sembrato deluso.
-                {charNameOne}: Nei prossimi giorni farò un colloquio nella agenzia dove lavora.
-                {charNameOne}: Forse smistare merci è un altro modo di suonare musica.
+                Non è che avete un traduttore padre/figlia da quelle parti?
+                Quando gli ho detto che seguirò il suo consiglio e mi cercherò un lavoro vero, è sembrato deluso.
+                Nei prossimi giorni farò un colloquio nella agenzia dove lavora.
+                Forse smistare merci è un altro modo di suonare musica.
                 
             - firstCharacterPossibleStates has RagazzaOrchestra:
-                {charNameOne}: Le cose non sono andate bene, abbiamo litigato per tutto il tempo.
-                {charNameOne}: A volte la mia rabbia mi triggera, non è qualcosa che pensavo nemmeno di possedere.
-                {charNameOne}: Per assurdo però da quando gli ho detto che è la mia vita e ho il diritto di fare i miei errori, ci sentiamo più spesso.
-                {charNameOne}: Non so se voglio rivederlo subito, ma forse le cose stanno cambiando per il meglio.
+                Le cose non sono andate bene, abbiamo litigato per tutto il tempo.
+                A volte la mia rabbia mi triggera, non è qualcosa che pensavo nemmeno di possedere.
+                Per assurdo però da quando gli ho detto che è la mia vita e ho il diritto di fare i miei errori, ci sentiamo più spesso.
+                Non so se voglio rivederlo subito, ma forse le cose stanno cambiando per il meglio.
                 
             - firstCharacterPossibleStates has FlautoDolce:
-                {charNameOne}: Gli ho parlato di nonno, e gli ho detto che voglio seguire le sue tracce.
-                {charNameOne}: Sul momento è rimasto interdetto, ma poi si è messo a piangere.
-                {charNameOne}: Mi ha chiesto del tempo per decidere se e cosa potrebbe fare per aiutarmi.
+                Gli ho parlato di nonno, e gli ho detto che voglio seguire le sue tracce.
+                Sul momento è rimasto interdetto, ma poi si è messo a piangere.
+                Mi ha chiesto del tempo per decidere se e cosa potrebbe fare per aiutarmi.
                 
             - firstCharacterPossibleStates has Ocarina:
-                {charNameOne}: Ha passato il tempo a dirmi che non prendo nulla sul serio.
-                {charNameOne}: Parlargli dell'orchestra di topolini e scoiattoli non ha aiutato, ama.
-                {charNameOne}: Forse cambierà idea quando avrò finito di addestrare le falene.
-                {charNameOne}: O più plausibilmente mi taglierà tutti i fondi.
+                Ha passato il tempo a dirmi che non prendo nulla sul serio.
+                Parlargli dell'orchestra di topolini e scoiattoli non ha aiutato, ama.
+                Forse cambierà idea quando avrò finito di addestrare le falene.
+                O più plausibilmente mi taglierà tutti i fondi.
                 
             - firstCharacterPossibleStates has Violino:
-                {charNameOne}: Per la prima volta credo di averlo capito.
-                {charNameOne}: Non ci siamo trovate, non riesce a comprendere perché per me sia importante fare qualcosa di utile per l'umanità e blah blah blah.
-                {charNameOne}: Ma ho visto nella sua preoccupazione la paura sincera che possa avere una vita difficile.
-                {charNameOne}: Mi ha fatto insieme tenerezza e dispiacere.
+                Per la prima volta credo di averlo capito.
+                Non ci siamo trovate, non riesce a comprendere perché per me sia importante fare qualcosa di utile per l'umanità e blah blah blah.
+                Ma ho visto nella sua preoccupazione la paura sincera che possa avere una vita difficile.
+                Mi ha fatto insieme tenerezza e dispiacere.
         }
-    {charNameOne}: E lì invece? Come stanno le tue piante?
-    {charNameOne}: Sono arrivate nuove persone interessanti?
-    {charNameOne}: Sicuro, mai quanto me!
-    {charNameOne}: A presto, <i>{charNameOne}</i>.
+    E lì invece? Come stanno le tue piante?
+    Sono arrivate nuove persone interessanti?
+    Sicuro, mai quanto me!
+    A presto, <i>{charNameOne}</i>.
         ~ firstWritingPause = firstWritingPauseDuration
         -> main
         
@@ -148,66 +148,66 @@ TODO: eliminare Bus anche da Unity
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    {charNameOne}: Ciao ama!
-    {charNameOne}: Indovina chi ha fatto il suo primo concerto?
+    Ciao ama!  #speaker:{firstChar_tag()}
+    Indovina chi ha fatto il suo primo concerto?
     
      {
             - firstCharacterPossibleStates has Triangolo:
-                {charNameOne}: Non io ovviamente.
-                {charNameOne}: Il lavoro di smistamento si mangia le giornate.
-                {charNameOne}: Per Talco ha spaccato!
-                {charNameOne}: Quando ha finito sono scoppiata a piangere.
-                {charNameOne}: L3 am3 pensavano fosse gioia.
-                {charNameOne}: Non ho avuto il coraggio di dire loro che temo di aver fatto la scelta peggiore della mia vita.
-                {charNameOne}: La peggiore.
+                Non io ovviamente.
+                Il lavoro di smistamento si mangia le giornate.
+                Per Talco ha spaccato!
+                Quando ha finito sono scoppiata a piangere.
+                L3 am3 pensavano fosse gioia.
+                Non ho avuto il coraggio di dire loro che temo di aver fatto la scelta peggiore della mia vita.
+                La peggiore.
 
                 
             - firstCharacterPossibleStates has RagazzaOrchestra:
-                {charNameOne}: Il collettivo!
-                {charNameOne}: Ci chiamiamo EDERE, che è un acronimo di cui non ricordo manco più il significato ma è tipo: ci attacchiamo agli alberi e non ci leviamo più.
-                {charNameOne}: E a questo giro la pula non ci ha levate, perché c'era troppa gente ed è stato un casino assurdo.
-                {charNameOne}: Alcune compagne sono critiche perché temono che abbiamo spaventato la fauna.
-                {charNameOne}: Credo che abbiano ragione.
-                {charNameOne}: Anche se questa cosa mi rompe le ovaie.
-                {charNameOne}: Ma vedremo di trovare una soluzione.
+                Il collettivo!
+                Ci chiamiamo EDERE, che è un acronimo di cui non ricordo manco più il significato ma è tipo: ci attacchiamo agli alberi e non ci leviamo più.
+                E a questo giro la pula non ci ha levate, perché c'era troppa gente ed è stato un casino assurdo.
+                Alcune compagne sono critiche perché temono che abbiamo spaventato la fauna.
+                Credo che abbiano ragione.
+                Anche se questa cosa mi rompe le ovaie.
+                Ma vedremo di trovare una soluzione.
 
                 
             - firstCharacterPossibleStates has FlautoDolce:
-                {charNameOne}: Il nonno!
-                {charNameOne}: O meglio, una cover band che abbiamo tirato su con l3 am3.
-                {charNameOne}: Abbiamo anche un suo cartonato che portiamo in giro.
-                {charNameOne}: Ho incontrato vecchie che l'hanno conosciuto.
-                {charNameOne}: E ho scoperto cose nuove su di lui.
-                {charNameOne}: Anche cose che non avrei voluto sapere.
-                {charNameOne}: Il nonno era un chillone totale comunque, e ora voglio imparare da lui.
+                Il nonno!
+                O meglio, una cover band che abbiamo tirato su con l3 am3.
+                Abbiamo anche un suo cartonato che portiamo in giro.
+                Ho incontrato vecchie che l'hanno conosciuto.
+                E ho scoperto cose nuove su di lui.
+                Anche cose che non avrei voluto sapere.
+                Il nonno era un chillone totale comunque, e ora voglio imparare da lui.
     
                 
             - firstCharacterPossibleStates has Ocarina:
-                {charNameOne}: I topolini!
-                {charNameOne}: In teoria dovevano esserci anche gli scoiattoli, ma le luci li hanno spaventati.
-                {charNameOne}: O forse quei bambini del cazzo.
-                {charNameOne}: Che in teoria erano vietati.
-                {charNameOne}: Però è stata una roba toppissima ama.
-                {charNameOne}: Non so se lì prende ma nel caso cercaci su internet perché abbiamo spaccato.
+                I topolini!
+                In teoria dovevano esserci anche gli scoiattoli, ma le luci li hanno spaventati.
+                O forse quei bambini del cazzo.
+                Che in teoria erano vietati.
+                Però è stata una roba toppissima ama.
+                Non so se lì prende ma nel caso cercaci su internet perché abbiamo spaccato.
       
                 
             - firstCharacterPossibleStates has Violino:
-                {charNameOne}: Madre natura!
-                {charNameOne}: No dai, non il primo.
-                {charNameOne}: Il primo che abbiamo registrato.
-                {charNameOne}: La prima collaborazione tra umani, funghi e piante.
-                {charNameOne}: E sembra che ora parte delle nostre note stiano vibrano nel terreno.
-                {charNameOne}: Un gruppo di scienziati ha trovato frequenze simili alle nostre in un bosco a cento chilometri e passa di distanza!
-                {charNameOne}: Chi l'avrebbe detto che mi sarebbero piaciuti gli scienziati?
-                {charNameOne}: Ora però dobbiamo anche imparare ad ascoltare.
-                {charNameOne}: Perché facile che ci siano altre canzoni in giro da eoni.
-                {charNameOne}: E questa sarà la parte difficile.
-                {charNameOne}: Non vedo l'ora!
+                Madre natura!
+                No dai, non il primo.
+                Il primo che abbiamo registrato.
+                La prima collaborazione tra umani, funghi e piante.
+                E sembra che ora parte delle nostre note stiano vibrano nel terreno.
+                Un gruppo di scienziati ha trovato frequenze simili alle nostre in un bosco a cento chilometri e passa di distanza!
+                Chi l'avrebbe detto che mi sarebbero piaciuti gli scienziati?
+                Ora però dobbiamo anche imparare ad ascoltare.
+                Perché facile che ci siano altre canzoni in giro da eoni.
+                E questa sarà la parte difficile.
+                Non vedo l'ora!
         }
-    {charNameOne}: Comunque un giorno mi piacerebbe che la musica, questa musica arrivasse anche dalle vostre parti.
-    {charNameOne}: O che, quando te ne andrai da lì, verrai ad ascoltarla con me.
-    {charNameOne}: Un saluto.
-    {charNameOne}: {charNameOne}.
+    Comunque un giorno mi piacerebbe che la musica, questa musica arrivasse anche dalle vostre parti.
+    O che, quando te ne andrai da lì, verrai ad ascoltarla con me.
+    Un saluto.
+    {charNameOne}.
     -> main
     
 === second_character_notes ===
@@ -243,7 +243,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameTwo}: Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {name};
+        {charNameTwo}: Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {name}.  #speaker:{secondChar_tag()}
         {charNameTwo}: Cioè a te.
         {charNameTwo}: Anche se non ho mica capito come te la mando la lettera.
         {charNameTwo}: Ma come sta la rana?
@@ -348,7 +348,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameTwo}: Che strano.
+        {charNameTwo}: Che strano. #speaker:{secondChar_tag()}
         {charNameTwo}: Ho lasciato l'altra lettera sul comodino di notte.
         {charNameTwo}: E poi è sparita.
         {charNameTwo}: Non so mica se ti è arrivata.
@@ -455,7 +455,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameTwo}: Ciao {name}.
+        {charNameTwo}: Ciao {name}. #speaker:{secondChar_tag()}
                 
                 {
                 - secondCharacterPossibleStates has Riccio:
@@ -591,7 +591,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameThree = translator(thirdCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameThree}: Lettere random note da parte della personaggia
+        {charNameThree}: Lettere random note da parte della personaggia #speaker:{thirdChar_tag()}
         
         {
             - thirdCharacterPossibleStates has Riccio: 
@@ -655,7 +655,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameFour}: Lettere random note da parte della personaggia
+        {charNameFour}: Lettere random note da parte della personaggia #speaker:{fourthChar_tag()}
         
         {
             - fourthCharacterPossibleStates has Riccio: 
@@ -721,7 +721,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameFive}: Lettere random note da parte della personaggia
+        {charNameFive}: Lettere random note da parte della personaggia #speaker:{fifthChar_tag()}
         
         {
             - fifthCharacterPossibleStates has Riccio: 

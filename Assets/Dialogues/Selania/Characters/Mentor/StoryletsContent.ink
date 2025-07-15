@@ -59,12 +59,12 @@
             -> name_choice ->
          E quali sono i tuoi pronomi?
             -> gender ->
-         Piacere di conoscerti, {name}.
+         Piacere di conoscerti, {name}. #speaker:{fifthChar_tag()} 
          E {pronouns has him: benvenuto|{pronouns has her: benvenuta|benvenutə}}.
          Con me usa pure i pronomi femminili.
-        {not chiSei: ???: Ah, che sbadata. Mi chiamo <b>{charNameFive}</b>.|È mio dovere farti stare bene.}
+        {not chiSei: ???: Ah, che sbadata. Mi chiamo <b>{charNameFive}</b>.|È mio dovere farti stare bene.} #speaker:{fifthChar_tag()} 
         - (selfName)
-        Un'altra domanda importante, {name}.#speaker:{firstChar_tag()}
+        Un'altra domanda importante, {name}. #speaker:{fifthChar_tag()} 
         Nel tuo soggiorno in questo luogo potrebbe accadere che incontrerai qualche situazione complessa.
         Se ti va di dirmi quali sono le cose che ti creano disagio, farò il possibile per non fartele incontrare.
                 -> trigger_warning ->

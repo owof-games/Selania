@@ -1,3 +1,5 @@
+TODO: se necessario, creare sistema reattivo per ritratto del fungo (es: chiamo la funzione e cambia l'asset a seconda di alcune condizioni).
+
 === function firstChar_tag
 {
     - !knowing_first_character.one.firstPresentation:
@@ -48,6 +50,25 @@
     - secondCharacterState == Corvo:
 	    ~ return "Corvo"
 	
+}
+
+=== function thirdChar_tag
+{
+
+    - !welcome.chiSei && !welcome.your_name.selfName:
+	    ~ return "???"
+    - thirdCharacterState == Mentore:
+	    ~ return "Mentore"
+}
+
+
+=== function fourthChar_tag
+{
+
+    - !welcome.chiSei && !welcome.your_name.selfName:
+	    ~ return "???"
+    - fourthCharacterState == Mentore:
+	    ~ return "Mentore"
 }
 
 
