@@ -84,7 +84,9 @@
                 <i>{charNameOne} è {charNameFive}.</i>
                 <i>E {charNameFive} è {name}.</i>
             -
-    
+            
+        <i>Noi sussurriamo nella tua testa, ma ascoltiamo anche.</i>
+        - (nameFungus)
         <i>Le nostre radici cercano di imparare le voci del terreno.</i>
         <i>Il terreno ci racconta che {name} ha appena compiuto qualcosa di importante.</i>
         <i>Osserviamo {name} e ci chiediamo cosa provi dopo aver aiutato {charNameOne}.</i>

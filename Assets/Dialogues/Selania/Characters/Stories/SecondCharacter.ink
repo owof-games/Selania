@@ -221,7 +221,7 @@
         ???: Ma dove saranno i miei compagni di scuola?
         ???: Cercali!
         ???: A dopo!
-            -
+            - (nameSecond)
             ~ secondPauseTalking = secondCharPauseDuration
             -> main
    

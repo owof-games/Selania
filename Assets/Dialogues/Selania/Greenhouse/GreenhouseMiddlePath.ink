@@ -13,7 +13,7 @@
     ~ temp charNameOne = translator(firstCharacterState)
     + {are_two_entities_together(TheFrog, PG)} [TheFrog]
         <i>Una rana bluastra ti osserva incuriosita.</i>
-            La Rana Parlante: Cra Cra
+            La Rana Parlante: Cra Cra #firstSpeaker:{frog_tag()}
             La Rana Parlante: Cra
             La Rana Parlante: Cra?
             - (top)

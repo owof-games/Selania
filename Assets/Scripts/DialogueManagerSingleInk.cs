@@ -95,13 +95,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private AudioClip librarySounds;
 
     //TAGS UTILIZZATI PER NOME
-    private const string FIRST_SPEAKER_TAG = "firstSpeaker";
-    private const string SECOND_SPEAKER_TAG = "secondSpeaker";
-    private const string THIRD_SPEAKER_TAG = "thirdSpeaker";
-    private const string FOURTH_SPEAKER_TAG = "fourthSpeaker";
-    private const string FIFTH_SPEAKER_TAG = "fifthSpeaker";
-    private const string FUNGUS_SPEAKER_TAG = "fungusSpeaker";
-    private const string FROG_SPEAKER_TAG = "frogSpeaker";
+    private const string SPEAKER_TAG = "speaker";
 
     //TAG USATO PER RITRATTO
     private const string PORTRAIT_TAG = "portrait";
@@ -461,40 +455,11 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     break;
 
 
-                case FIRST_SPEAKER_TAG:
+                case SPEAKER_TAG:
                     displayNameText.text = tagValue;
-                    Debug.Log("firstSpeaker" + tagValue);
+                    Debug.Log("speaker" + tagValue);
                     break;
-
-                case SECOND_SPEAKER_TAG:
-                    displayNameText.text = tagValue;
-                    Debug.Log("secondSpeaker" + tagValue);
-                    break;
-
-                case THIRD_SPEAKER_TAG:
-                    displayNameText.text = tagValue;
-                    Debug.Log("thirdSpeaker" + tagValue);
-                    break;
-
-                case FOURTH_SPEAKER_TAG:
-                    displayNameText.text = tagValue;
-                    Debug.Log("fourthSpeaker" + tagValue);
-                    break;
-
-                case FIFTH_SPEAKER_TAG:
-                    displayNameText.text = tagValue;
-                    Debug.Log("fifthSpeaker" + tagValue);
-                    break;
-
-                case FUNGUS_SPEAKER_TAG:
-                    displayNameText.text = tagValue;
-                    Debug.Log("fungusSpeaker" + tagValue);
-                    break;
-
-                case FROG_SPEAKER_TAG:
-                    displayNameText.text = tagValue;
-                    Debug.Log("frogSpeaker" + tagValue);
-                    break;                                       
+                                   
 
                 case PORTRAIT_TAG:
                     portraitAnimator.Play(tagValue);

@@ -105,7 +105,7 @@
         ~ firstStoryQuestCount ++
         
         
-        ???: Hai visto passare qualcunə? #firstSpeaker:{firstChar_tag()} #portrait: chitarra_sad
+        ???: Hai visto passare qualcunə? #speaker:{firstChar_tag()} #portrait: chitarra_sad
         ???: Altə all’incirca una balla di fieno e che si muove come un violino.
         ???: O almeno ləi si descriverebbe così.
         ???: Lə adoro ma è sempre un po' edgy. #portrait: chitarra_neutral
@@ -114,7 +114,7 @@
         
             + (oneBlue) [Dammi dettagli più concreti.]
                     ~ firstBlue ++
-                ???: Concreti? #firstSpeaker:{firstChar_tag()}
+                ???: Concreti? #speaker:{firstChar_tag()}
                 ???: Si muove. Respira. Mangia. Saltella. Canta.
                 ???: A volte tutte queste cose assieme.
                 ???: E ha molta fantasia.
@@ -122,38 +122,38 @@
                 
             + (oneYellow) [Suona il tamburo e vedrai che il violino torna!]
                     ~ firstYellow ++
-                ???: A beh, ci sta! #firstSpeaker:{firstChar_tag()}
+                ???: A beh, ci sta! #speaker:{firstChar_tag()}
                 ???: Non ci avevo pensato!
                 ???: Ma il suo violino è più da pianoforte.
                 ???: Forse potrei cercare nella serra, e trovare qualcosa da suonare.
                 
             + (oneRed) [Seguiamo le sue tracce! Fiutiamo il suo odore.]
                 ~ firstRed ++
-                ???: Ha senso, ma Talco non è persona da azione. #firstSpeaker:{firstChar_tag()}
+                ???: Ha senso, ma Talco non è persona da azione. #speaker:{firstChar_tag()}
                 ???: Dice sempre che si trascina nello spazio come se fosse vento.
                 ???: E lascia alle sue spalle l'odore della primavera.
                 ???: Che è un modo carino per dire che è sempre piene di fango e terriccio.
                 
             + (oneGreen) [Se ti senti sola, sono qui ad ascoltarti.]
                 ~ firstGreen ++
-                ???: Grazie ama. #firstSpeaker:{firstChar_tag()}
+                ???: Grazie ama. #speaker:{firstChar_tag()}
                 ???: Ma è come chiedermi di fare un concerto con una persona sconosciuta.
                 ???: Non è che ci si piglia subito, no?
 
             + (onePurple) [Tu sei sempre con ləi e ləi con te.]
                 ~ firstPurple ++
-                ???: Mmm, ok, credo? #firstSpeaker:{firstChar_tag()}
+                ???: Mmm, ok, credo? #speaker:{firstChar_tag()}
                 ???: Le parole mi vanno anche bene, ma chi ti conosce.
                 ???: No dai, non devo essere stronza.
                 ???: Però merda se mi manca.
             -
         
-        ???: Non faccio mai niente senza Talco. #firstSpeaker:{firstChar_tag()}
+        ???: Non faccio mai niente senza Talco. #speaker:{firstChar_tag()}
         ???: Talco è l'unica persona con cui posso permettermi di litigare.
         ???: E l'unica che mi sopporta da quando ho finito il conservatorio.
-        ???: Ma non mi sono manco presentata: io sono {charNameOne}. #firstSpeaker:{firstChar_tag()}
+        ???: Ma non mi sono manco presentata: io sono {charNameOne}. #speaker:{firstChar_tag()}
         - (firstPresentation)
-        ???: No, io sono <b>{charNameOne}</b>. #firstSpeaker:{firstChar_tag()}
+        ???: No, io sono <b>{charNameOne}</b>. #speaker:{firstChar_tag()}
         {charNameOne}: Ehi! Non è questo il mio nome.
         {charNameOne}: <i>{charNameOne}</i>.
         {charNameOne}: Forse se provo a dirlo al contrario?
