@@ -31,7 +31,7 @@
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    {charNameFive}: Come posso esserti utile, {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?
+    Come posso esserti utile, {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?#speaker:{fifthChar_tag()} 
     
         + [Avrei bisogno di una mano.]
             -> support
@@ -45,7 +45,7 @@
                     -> talk_with_fifth_character
                 
             //     - else:
-            //         {charNameFive}: {~ Ora non mi va, ma non mi chiedi aiuto da un po', tutto ok?|Ho bisogno di una pausa, ma se serve aiuto sono qui.|Devo decidere cosa sistemare poi, ma se ti serve aiuto invece, chiedi pure.}
+            //         {~ Ora non mi va, ma non mi chiedi aiuto da un po', tutto ok?|Ho bisogno di una pausa, ma se serve aiuto sono qui.|Devo decidere cosa sistemare poi, ma se ti serve aiuto invece, chiedi pure.}
             //         -> talk_with_mentor
             // }
             
@@ -119,50 +119,50 @@
     ~ temp charNameFive = translator(fifthCharacterState)
         ~ fifthStoryQuestCount ++
         //Amore per il giardinaggio e la possibilità, per la giocatrice, di esprimere qualcosa che poi si potrebbe avvicinare ai possibili finali.
-        {charNameFive}: Non è giusto avere delle preferenze, ma la serra è il mio posto preferito.
-        {charNameFive}: C'è qualcosa nel vedere crescere piante, fiori, funghi che mi fa sentire appagata.
-        {charNameFive}: Non è solo l'odore della terra, o l'umidità nell'aria nei giorni più caldi.
-        {charNameFive}: Ma quella sensazione che con le tue mani puoi permettere a un altro corpo di crescere al meglio.
+        Non è giusto avere delle preferenze, ma la serra è il mio posto preferito.#speaker:{fifthChar_tag()} 
+        C'è qualcosa nel vedere crescere piante, fiori, funghi che mi fa sentire appagata.
+        Non è solo l'odore della terra, o l'umidità nell'aria nei giorni più caldi.
+        Ma quella sensazione che con le tue mani puoi permettere a un altro corpo di crescere al meglio.
 
             + (fiveBlue) [Preferisco la stazione dei treni, è ordinata, precisa.]
                     ~ fifthBlue ++
-                {charNameFive}: Sì, ne capisco il fascino.
-                {charNameFive}: A volte mi siedo lì e mi godo per qualche istante l'attesa.
-                {charNameFive}: Il nulla che accade.
-                {charNameFive}: Ma poi le mani fremono, mi supplicano di sistemare qualcosa fuori posto.
+                Sì, ne capisco il fascino.
+                A volte mi siedo lì e mi godo per qualche istante l'attesa.
+                Il nulla che accade.
+                Ma poi le mani fremono, mi supplicano di sistemare qualcosa fuori posto.
                 
             + (fiveYellow) [Lo stagno è divertente, succede di tutto.]
                     ~ fifthYellow ++
-                {charNameFive}: Forse succede <i>di troppo</i>.
-                {charNameFive}: Non sembra pensare a nulla.
-                {charNameFive}: L'acqua è lì e lascia che tutto accada, senza pensare al domani.
+                Forse succede <i>di troppo</i>.
+                Non sembra pensare a nulla.
+                L'acqua è lì e lascia che tutto accada, senza pensare al domani.
                 
             + (fiveRed) [La foresta domina: è lotta, è potenza!]
                     ~ fifthRed ++
-                {charNameFive}: E disordinata, sporca.
-                {charNameFive}: Posso capirne il fascino, ma non è un luogo dove resto con piacere.
-                {charNameFive}: E quel tronco al centro non vuole saperne né di crescere né di morire.
-                {charNameFive}: Una cosa davvero fastidiosa.
+                E disordinata, sporca.
+                Posso capirne il fascino, ma non è un luogo dove resto con piacere.
+                E quel tronco al centro non vuole saperne né di crescere né di morire.
+                Una cosa davvero fastidiosa.
                     
                 
             + (fiveGreen) [Un po' come prendersi cura delle persone, qui.]
                     ~ fifthGreen ++
-                {charNameFive}: Sì, anche se con meno aspettative.
-                {charNameFive}: Le persone a volte fanno cose che non ci aspettiamo.
-                {charNameFive}: Un <i>Lichene degli abissi</i> con le giuste condizioni cresce sempre allo stesso modo.
+                Sì, anche se con meno aspettative.
+                Le persone a volte fanno cose che non ci aspettiamo.
+                Un <i>Lichene degli abissi</i> con le giuste condizioni cresce sempre allo stesso modo.
   
             + (fivePurple) [Invece sono felice che crescano a prescidere da me.]
                     ~ fifthPurple ++
-                {charNameFive}: Senza di te? Dobbiamo bagnare il terreno, prepararlo, seminare.
-                {charNameFive}: Non ci sarebbe nulla senza il nostro lavoro.
-                {charNameFive}: Non saprebbero resistere alle erbacce, al freddo.
-                {charNameFive}: No, non sono d'accordo, scusa.
+                Senza di te? Dobbiamo bagnare il terreno, prepararlo, seminare.
+                Non ci sarebbe nulla senza il nostro lavoro.
+                Non saprebbero resistere alle erbacce, al freddo.
+                No, non sono d'accordo, scusa.
                     
  
             -
-        {firstStory hasnt Ended: {charNameFive}: Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di mobili rotti che blocca il sentiero a ovest della foresta.|{charNameFive}: Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}
-        {charNameFive}: È arrivato il momento di capire dove possa portare.
-        {charNameFive}: Grazie per la chiacchierata, {name}.
+        {firstStory hasnt Ended: Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di mobili rotti che blocca il sentiero a ovest della foresta.|Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}
+        È arrivato il momento di capire dove possa portare.
+        Grazie per la chiacchierata, {name}.
              ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
     
@@ -173,53 +173,53 @@
     ~ fifthStoryQuestCount ++
         
         //Partendo dalla prima personaggia, dipendenza dai rapporti (circa)
-        {charNameFive}: La storia di {charNameOne} mi ha colpita.
+        La storia di {charNameOne} mi ha colpita.#speaker:{fifthChar_tag()} 
         {are_two_entities_together(FirstCharacter, PG): {charNameOne}: E {charNameOne} di sicuro non vuole sentire le tue opinioni in merito.}
             ~ change_entity_place(FirstCharacter)
-        {charNameFive}: Non tanto il suo blocco, quello è una cosa comune a quell'età.
-        {charNameFive}: Quanto invece fosse consapevole delle opinioni di tutte le persone care.
-        {charNameFive}: Senza però perdere sé stessa.
-        {charNameFive}: Questa è una cosa difficile anche alla mia età.
+        Non tanto il suo blocco, quello è una cosa comune a quell'età.#speaker:{fifthChar_tag()} 
+        Quanto invece fosse consapevole delle opinioni di tutte le persone care.
+        Senza però perdere sé stessa.
+        Questa è una cosa difficile anche alla mia età.
         
             + [I numeri sono indicatori, non fatti assoluti.]
                     ~ fifthBlue ++
-                {charNameFive}: Su questo hai ragione, {name}.
-                {charNameFive}: Eppure posso assicurarti che i miei cinquanta e rotti anni si portano addosso anche un bel po' di fatti scricchiolanti e ricordi.
+                Su questo hai ragione, {name}.
+                Eppure posso assicurarti che i miei cinquanta e rotti anni si portano addosso anche un bel po' di fatti scricchiolanti e ricordi.
                    
                 
             + [{charNameOne} sapeva ridere, giocare, e questo l'ha resa libera.]
                     ~ fifthYellow ++
-                {charNameFive}: E la libertà può farti perdere ancora di più.
-                {charNameFive}: A volte non c'è maggiore libertà di essere stabili e felici nel proprio ruolo.
+                E la libertà può farti perdere ancora di più.
+                A volte non c'è maggiore libertà di essere stabili e felici nel proprio ruolo.
                 
                 
             + [Non c'è vera azione senza consapevolezza.]
                     ~ fifthRed ++
-                {charNameFive}: Allora la maggior parte di noi non agisce mai veramente.
-                {charNameFive}: Eppure riusciamo a farci del male, e a farci del bene.
-                {charNameFive}: Qualcosa deve sempre cambiare.
+                Allora la maggior parte di noi non agisce mai veramente.
+                Eppure riusciamo a farci del male, e a farci del bene.
+                Qualcosa deve sempre cambiare.
 
                 
             + [E tu sei molto ricettiva verso le altre persone.]
                     ~ fifthGreen ++
-                {charNameFive}: Forse non <i>molto</i>.
-                {charNameFive}: Ma indubbiamente quello che hanno da dire e quello che provano, conta.
-                {charNameFive}: Una mentore è una guida, ma per imparare a guidare deve capire chi ha dall'altra parte.
-                {charNameFive}: Di cosa abbia bisogno.
-                {charNameFive}: Dove voglia andare.
+                Forse non <i>molto</i>.
+                Ma indubbiamente quello che hanno da dire e quello che provano, conta.
+                Una mentore è una guida, ma per imparare a guidare deve capire chi ha dall'altra parte.
+                Di cosa abbia bisogno.
+                Dove voglia andare.
                 
                 
             + [Ci sono momenti in cui è necessario anche perdersi.]
                     ~ fifthPurple ++
-                {charNameFive}: E in questo luogo in fondo arrivano solo persone che si sono perse.
-                {charNameFive}: E che se ne vanno più serene.
-                {charNameFive}: Avrebbero scoperto quella serenità, senza un po' di smarrimento?
+                E in questo luogo in fondo arrivano solo persone che si sono perse.
+                E che se ne vanno più serene.
+                Avrebbero scoperto quella serenità, senza un po' di smarrimento?
                 
             -
-        {charNameFive}: Questo luogo continua a stupirmi.
-        {charNameFive}: Sei qui per aiutare le altre persone, e finisci per scoprire cose di te.
-        {charNameFive}: Ma ora è il momeno di svuotare lo stagno dalle sue cose più schifose.
-        {charNameFive}: Prega per me, {name}.
+        Questo luogo continua a stupirmi.
+        Sei qui per aiutare le altre persone, e finisci per scoprire cose di te.
+        Ma ora è il momeno di svuotare lo stagno dalle sue cose più schifose.
+        Prega per me, {name}.
              ~ fifthPauseTalking = fifthCharPauseDuration
                 -> main
 
@@ -230,49 +230,49 @@
         //Questo è un riferimento indiretto anche ai figli che ora non la chiamano molto.
         ~ fifthStoryQuestCount ++
          
-        {charNameFive}: A volte un po' mi pesa, tutto questo via vai.
-        {charNameFive}: Ci sono persone a cui mi sono affezionata, che non rivedrò più.
-        {charNameFive}: Persone che ho aiutato e ora vorrei sentire più spesso.
-        {charNameFive}: Ma poi le loro lettere non arrivano, o arrivano sempre meno.
-        {charNameFive}: E allora mi chiedo se ho sbagliato qualcosa.
-        {charNameFive}: Non mi fraintendere: sono felice di quello che faccio, di quello che ho fatto.
-        {charNameFive}: E per me è una gioia tenere tutto questo in piedi, giorno per giorno.
+        A volte un po' mi pesa, tutto questo via vai.#speaker:{fifthChar_tag()} 
+        Ci sono persone a cui mi sono affezionata, che non rivedrò più.
+        Persone che ho aiutato e ora vorrei sentire più spesso.
+        Ma poi le loro lettere non arrivano, o arrivano sempre meno.
+        E allora mi chiedo se ho sbagliato qualcosa.
+        Non mi fraintendere: sono felice di quello che faccio, di quello che ho fatto.
+        E per me è una gioia tenere tutto questo in piedi, giorno per giorno.
 
             + [Ogni lavoro ha la sua quota di sacrificio.]
-                {charNameFive}: Vero.
-                {charNameFive}: Il valore di qualcosa viene da quanto ci è costata.
-                {charNameFive}: E la maggior parte delle volte non paghiamo in denaro.
+                Vero.
+                Il valore di qualcosa viene da quanto ci è costata.
+                E la maggior parte delle volte non paghiamo in denaro.
                     ~ fifthBlue ++
                 
             + [Forse le volpi si mangiano le lettere!]
-                {charNameFive}: La fantasia è un modo piacevole di affrontare la realtà, {name}.
-                {charNameFive}: Ma alla lunga rende difficile capire cosa sia vero e cosa no.
+                La fantasia è un modo piacevole di affrontare la realtà, {name}.
+                Ma alla lunga rende difficile capire cosa sia vero e cosa no.
                     ~ fifthYellow ++
                 
             + [Il mondo è pieno di ingrati.]
-                {charNameFive}: No.
-                {charNameFive}: Direi che il mondo è pieno di persone distratte.
-                {charNameFive}: Le cose da fare sono infinite, e finiamo per dimenticarci di chi non vediamo tutti i giorni.
-                {charNameFive}: Non è ingratitudine, è una vita che scorre troppo veloce.
+                No.
+                Direi che il mondo è pieno di persone distratte.
+                Le cose da fare sono infinite, e finiamo per dimenticarci di chi non vediamo tutti i giorni.
+                Non è ingratitudine, è una vita che scorre troppo veloce.
                     ~ fifthRed ++
 
                 
             + [Ti prometto che ti scriverò ogni giorno.]
-                {charNameFive}: Oh, {pronouns has him: caro|{pronouns has her: cara|carə}}, è una bella promessa.
-                {charNameFive}: Una promessa che ho sentito decine di volte.
+                Oh, {pronouns has him: caro|{pronouns has her: cara|carə}}, è una bella promessa.
+                Una promessa che ho sentito decine di volte.
                     ~ fifthGreen ++
   
                 
             + [Esiste un confine tra {charNameFive} e questo luogo?]
-                {charNameFive}: A volte mi sento <i>solo</i> questo luogo.
-                {charNameFive}: Non mi chiedo spesso se andarmene o meno.
-                {charNameFive}: O dove.
+                A volte mi sento <i>solo</i> questo luogo.
+                Non mi chiedo spesso se andarmene o meno.
+                O dove.
                     ~ fifthPurple ++
  
             -
-            {charNameFive}: Ma basta con questo spirito malinconico!
-            {charNameFive}: Mi sono appena ricordata che ci sono delle erbacce fastidiose sotto la poltrona della biblioteca,
-            {charNameFive}: Devo inventarmi un modo per liberarmene!
+            Ma basta con questo spirito malinconico!
+            Mi sono appena ricordata che ci sono delle erbacce fastidiose sotto la poltrona della biblioteca,
+            Devo inventarmi un modo per liberarmene!
                 ~ fifthPauseTalking = fifthCharPauseDuration
                     -> main
     
@@ -285,61 +285,61 @@
     ~ change_entity_place(SecondCharacter)
         //Responsabilità
         ~ fifthStoryQuestCount ++
-        {charNameFive}: Mi sto chiedendo se non sia stata troppo dura col piccolo {charNameTwo} appena arrivato qui.
-        {charNameFive}: Ero sinceramente spaventata, ma forse ho reagito con violenza.
-        {charNameFive}: Ma questo non è un luogo per un bimbo.
-        {charNameFive}: Ti immagini cosa significhi essere un genitore, e renderti conto che tuo figlio, così piccolo, ha già perso la strada?
-        {charNameFive}: Che già non sappia più cosa fare del suo futuro?
-        {charNameFive}: Che cosa terribile per entrambi.
-        {charNameFive}: E tutta quella responsabilità.
-        {charNameFive}: Quella paura per il futuro e per l'ambiente.
-        {charNameFive}: Non dovrebbe pensare al pallone, a giocare con gli amici, a studiare?
+        Mi sto chiedendo se non sia stata troppo dura col piccolo {charNameTwo} appena arrivato qui.#speaker:{fifthChar_tag()} 
+        Ero sinceramente spaventata, ma forse ho reagito con violenza.
+        Ma questo non è un luogo per un bimbo.
+        Ti immagini cosa significhi essere un genitore, e renderti conto che tuo figlio, così piccolo, ha già perso la strada?
+        Che già non sappia più cosa fare del suo futuro?
+        Che cosa terribile per entrambi.
+        E tutta quella responsabilità.
+        Quella paura per il futuro e per l'ambiente.
+        Non dovrebbe pensare al pallone, a giocare con gli amici, a studiare?
         
             + [{charNameTwo} ama studiare, e infatti questo è il posto per lui.]
-                {charNameFive}: No!
-                {charNameFive}: Questo è un posto spirituale.
-                {charNameFive}: Di crescita, di esplorazione.
-                {charNameFive}: Non un laboratorio.
-                {charNameFive}: Non il piccolo chimico.
+                No!
+                Questo è un posto spirituale.
+                Di crescita, di esplorazione.
+                Non un laboratorio.
+                Non il piccolo chimico.
                     ~ fifthBlue ++
                 
             + [Giocare è comunque un modo per capire il mondo, {charNameFive}.]
-                {charNameFive}: Ma un modo controllato, adatto per i bambini.
-                {charNameFive}: Con meno violenza possibile.
-                {charNameFive}: Senza le cose terribili che ci circondano.
-                {charNameFive}: Se non voglio vederle io a cinquant'anni, perché deve vederle un bimbo?
+                Ma un modo controllato, adatto per i bambini.
+                Con meno violenza possibile.
+                Senza le cose terribili che ci circondano.
+                Se non voglio vederle io a cinquant'anni, perché deve vederle un bimbo?
                     ~ fifthYellow ++
                 
             + [Alla sua età avevo anche io idee e paure. Si è bambini, non idioti.]
-                {charNameFive}: Non serve che usi quel linguaggio con me, {name}.
-                {charNameFive}: E non sono d'accordo.
-                {charNameFive}: Nemmeno a vent'anni puoi sapere davvero cosa vuoi.
-                {charNameFive}: Cosa conta a questo mondo.
-                {charNameFive}: Per questo i genitori ci sono.
-                {charNameFive}: Per proteggerti.
+                Non serve che usi quel linguaggio con me, {name}.
+                E non sono d'accordo.
+                Nemmeno a vent'anni puoi sapere davvero cosa vuoi.
+                Cosa conta a questo mondo.
+                Per questo i genitori ci sono.
+                Per proteggerti.
                     ~ fifthRed ++
 
             + [Mi spiace che tu ti senta in colpa.]
-                {charNameFive}: Ma non hai detto che non ho sbagliato.
-                {charNameFive}: Scusa, non è quello il tuo ruolo.
-                {charNameFive}: Sennò non sarei io la mentore, ma tu.
-                {charNameFive}: Spero che almeno lui prima o poi mi perdoni.
+                Ma non hai detto che non ho sbagliato.
+                Scusa, non è quello il tuo ruolo.
+                Sennò non sarei io la mentore, ma tu.
+                Spero che almeno lui prima o poi mi perdoni.
                     ~ fifthGreen ++
   
             + [Il genitore dovrebbe essere il lavoro di una comunità.]
-                {charNameFive}: Non dire castronerie, {name}.
-                {charNameFive}: Si fa così dai tempi dei tempi, due persone.
-                {charNameFive}: Una se manca.
-                {charNameFive}: Però dovrebbero avere il diritto di sbagliare.
+                Non dire castronerie, {name}.
+                Si fa così dai tempi dei tempi, due persone.
+                Una se manca.
+                Però dovrebbero avere il diritto di sbagliare.
                     ~ fifthPurple ++
             -
         
-        {charNameFive}: Forse mi sono concentrata sulla cosa sbagliata.
-        {charNameFive}: Il problema non è quello che è accaduto.
-        {charNameFive}: Il problema è che mi sono fatta coinvolgere.
-        {charNameFive}: Una mentore deve mantenere un certo distacco per guidarti.
-        {charNameFive}: Non può essere emotiva.
-        {charNameFive}: Vado a riordinare in ordine di data i libri in biblioteca.
+        Forse mi sono concentrata sulla cosa sbagliata.
+        Il problema non è quello che è accaduto.
+        Il problema è che mi sono fatta coinvolgere.
+        Una mentore deve mantenere un certo distacco per guidarti.
+        Non può essere emotiva.
+        Vado a riordinare in ordine di data i libri in biblioteca.
         
              ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
@@ -348,76 +348,76 @@
     
         //Presentazione.
         ~ fifthStoryQuestCount ++
-        {charNameFive}: Mi sento più stanca del solito.
-        {charNameFive}: E fa caldo.
-        {charNameFive}: Ma l'idea di stendermi sotto quell'albero non mi piace.
-        {charNameFive}: E c'è molto da fare.
-        {charNameFive}: Però quella panchina mi ricorda un'altra panchina, sai?
-        {charNameFive}: Dove in un'altra vita ho ricevuto il mio primo bacio.
-        {charNameFive}: Dall'uomo che poi ho sposato.
-        {charNameFive}: E a cui ho dedicato il resto dei miei giorni.
-        {charNameFive}: Fino a quando non sono arrivata qui.
-        {charNameFive}: Già.
-        {charNameFive}: Fino a quando non sono arrivata qui.
-        {charNameFive}: {name}: secondo te cosa vuol dire amare un'altra persona?
+        Mi sento più stanca del solito.#speaker:{fifthChar_tag()} 
+        E fa caldo.
+        Ma l'idea di stendermi sotto quell'albero non mi piace.
+        E c'è molto da fare.
+        Però quella panchina mi ricorda un'altra panchina, sai?
+        Dove in un'altra vita ho ricevuto il mio primo bacio.
+        Dall'uomo che poi ho sposato.
+        E a cui ho dedicato il resto dei miei giorni.
+        Fino a quando non sono arrivata qui.
+        Già.
+        Fino a quando non sono arrivata qui.
+        {name}: secondo te cosa vuol dire amare un'altra persona?
 
             + [Progettare assieme, costruire fondamenta, accrescersi.]
-                {charNameFive}: Già.
-                {charNameFive}: Creare qualcosa che regga alla fine del desiderio.
-                {charNameFive}: Quando il corpo perde il suo splendore.
-                {charNameFive}: E il letto è il luogo della stanchezza e della malattia.
-                {charNameFive}: Quando invece di chiamarci "amore".
-                {charNameFive}: Ci chiediamo dove sono le chiavi della macchina.
+                Già.
+                Creare qualcosa che regga alla fine del desiderio.
+                Quando il corpo perde il suo splendore.
+                E il letto è il luogo della stanchezza e della malattia.
+                Quando invece di chiamarci "amore".
+                Ci chiediamo dove sono le chiavi della macchina.
                     ~ fifthBlue ++
                 
             + [Un rifugio di stupore e gioia in un mondo grigio.]
-                {charNameFive}: Mi piace la tua ingenuità {name}.
-                {charNameFive}: Con questa logica ho amato solo una cosa:
-                {charNameFive}: il mio giardino.
-                {charNameFive}: Un posto sempre sorprendente, vivo.
-                {charNameFive}: Pieno di musica.
-                {charNameFive}: E forse è davvero così.
+                Mi piace la tua ingenuità {name}.
+                Con questa logica ho amato solo una cosa:
+                il mio giardino.
+                Un posto sempre sorprendente, vivo.
+                Pieno di musica.
+                E forse è davvero così.
                     ~ fifthYellow ++
                 
             + [Fondersi nella passione, a letto come in una protesta.]
-                {charNameFive}: La passione si spegne, {name}.
-                {charNameFive}: E a quel punto cosa rimane?
-                {charNameFive}: Noia?
-                {charNameFive}: Rancore?
-                {charNameFive}: Odio?
-                {charNameFive}: Passioni forti chiamano passioni ancora più forti.
+                La passione si spegne, {name}.
+                E a quel punto cosa rimane?
+                Noia?
+                Rancore?
+                Odio?
+                Passioni forti chiamano passioni ancora più forti.
                     ~ fifthRed ++
 
                 
             + [Cura, ascolto, affetto.]
-                {charNameFive}: Già, ho pensato la stessa cosa a lungo.
-                {charNameFive}: Ma a volte la cura diventa un lavoro.
-                {charNameFive}: L'ascolto un dovere.
-                {charNameFive}: L'affetto un'abitudine.
-                {charNameFive}: Eppure resti.
-                {charNameFive}: Vuol dire che è finito l'amore?
+                Già, ho pensato la stessa cosa a lungo.
+                Ma a volte la cura diventa un lavoro.
+                L'ascolto un dovere.
+                L'affetto un'abitudine.
+                Eppure resti.
+                Vuol dire che è finito l'amore?
                     ~ fifthGreen ++
   
                 
             + [Raggiungersi l'anima a vicenda, ricercando il divino che è noi.]
-                {charNameFive}: Una visione mistica.
-                {charNameFive}: Forse blasfema.
-                {charNameFive}: Qualcosa che non ho mai conosciuto, se non nei romanzi.
-                {charNameFive}: O nell'amicizia.
-                {charNameFive}: E a volte, se resto in silenzio e ferma a lungo, in questo luogo.
+                Una visione mistica.
+                Forse blasfema.
+                Qualcosa che non ho mai conosciuto, se non nei romanzi.
+                O nell'amicizia.
+                E a volte, se resto in silenzio e ferma a lungo, in questo luogo.
                 
                     ~ fifthPurple ++
  
             -
              ~ fifthPauseTalking = fifthCharPauseDuration
         
-        {charNameFive}: A volte sono solo una sciocca romantica.
-        {charNameFive}: E mi dimentico che l'amore è ovunque.
-        {charNameFive}: Anche qui.
-        {charNameFive}: Soprattutto qui.
-        {charNameFive}: Amore per noi.
-        {charNameFive}: Vado a recuperare del terriccio dal sottobosco, {name}.
-        {charNameFive}: Parleremo più tardi.
+        A volte sono solo una sciocca romantica.
+        E mi dimentico che l'amore è ovunque.
+        Anche qui.
+        Soprattutto qui.
+        Amore per noi.
+        Vado a recuperare del terriccio dal sottobosco, {name}.
+        Parleremo più tardi.
         ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
     
@@ -429,7 +429,7 @@
 
         ~ fifthStoryQuestCount ++
         
-        {charNameFive}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ fifthBlue ++
                 
@@ -458,7 +458,7 @@
         //Presentazione.
         ~ fifthStoryQuestCount ++
         
-        {charNameFive}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ fifthBlue ++
                 
@@ -487,7 +487,7 @@
         //Presentazione.
         ~ fifthStoryQuestCount ++
         
-        {charNameFive}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ fifthBlue ++
                 
@@ -516,7 +516,7 @@
         //Presentazione.
         ~ fifthStoryQuestCount ++
         
-        {charNameFive}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ fifthBlue ++
                 
@@ -544,7 +544,7 @@
         //Presentazione.
         ~ fifthStoryQuestCount ++
         
-        {charNameFive}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ fifthBlue ++
                 
@@ -572,7 +572,7 @@
         //Presentazione.
         ~ fifthStoryQuestCount ++
         
-        {charNameFive}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ fifthBlue ++
                 
@@ -599,7 +599,7 @@
         //Presentazione.
         ~ fifthStoryQuestCount ++
         
-        {charNameFive}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ fifthBlue ++
                 
@@ -678,17 +678,17 @@
     }
     = confession
     ~ temp charNameFive = translator(fifthCharacterState)
-        {charNameFive}: Ho realizzato una cosa, una cosa su noi due.
+        Ho realizzato una cosa, una cosa su noi due.
             -> secondAffinityCalc ->
         {
-        - firstPurple && firstYellow > firstBlue: {charNameFive}: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
+        - firstPurple && firstYellow > firstBlue: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
         <i>{charNameFive} vede {name} come una persona amica e fidata.</i>
         
-        -firstPurple or firstYellow > firstBlue:{charNameFive}: Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
+        -firstPurple or firstYellow > firstBlue:Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
         
         <i>{charNameFive} si trova bene con {name}.</i>
         
-        - firstPurple && firstYellow < firstBlue: {charNameFive}: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
+        - firstPurple && firstYellow < firstBlue: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
         
         <i>{charNameFive} non si è sentita capita da {name}.</i>
         
@@ -698,7 +698,7 @@
         <i>{charNameFive} non riesce a capire che rapporto sta costruendo con {name}.</i>
         
         }
-        {charNameFive}: E credo di aver capito perché il mio nome
+        E credo di aver capito perché il mio nome
             
             + [Credo di sapere come aiutarti.]
                 -> statement
@@ -896,37 +896,37 @@
                 
         -     
         
-    {charNameFive}: Grazie, {name}.
-    {charNameFive}: Mentre parlavi mi è nata una nuova canzone in testa.
-    {charNameFive}: Qualcosa di fresco, di pronto a cambiare.
-    {charNameFive}: La canzone del mio vero nome.
+    Grazie, {name}.
+    Mentre parlavi mi è nata una nuova canzone in testa.
+    Qualcosa di fresco, di pronto a cambiare.
+    La canzone del mio vero nome.
 
         {
             - firstCharacterPossibleStates has Chitarra:
-                {charNameFive}: Che <b>resterà Chitarra</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
+                Che <b>resterà Chitarra</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
             
             - firstCharacterPossibleStates has Triangolo:
-                {charNameFive}: E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
+                E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += Triangolo
             
             - firstCharacterPossibleStates has RagazzaOrchestra:
-                {charNameFive}: Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
+                Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += RagazzaOrchestra
             
             - firstCharacterPossibleStates has FlautoDolce:
-                {charNameFive}: Il mio nome è <b>Flauto Dolce</b>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
+                Il mio nome è <b>Flauto Dolce</b>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += FlautoDolce                
             
             - firstCharacterPossibleStates has Ocarina:
-                {charNameFive}: Mi chiamerò <b>Ocarina</b>: perché il suo suono è gioco e festa.
+                Mi chiamerò <b>Ocarina</b>: perché il suo suono è gioco e festa.
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += Ocarina
             
             - firstCharacterPossibleStates has Violino:
-                {charNameFive}: Io sono <b>Violino</b>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
+                Io sono <b>Violino</b>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += Violino
         }
@@ -943,8 +943,8 @@
     
     = secret_ending
     ~ temp charNameFive = translator(fifthCharacterState)
-        {charNameFive}: C'è una cosa che vorrei dirti, {name}.
-        {charNameFive}: Riguarda Il mentore.
+        C'è una cosa che vorrei dirti, {name}.
+        Riguarda Il mentore.
 
             ~ fifthStory = Ended
             ~ movementsCounter = 0
@@ -953,7 +953,7 @@
             
     = exit
     ~ temp charNameFive = translator(fifthCharacterState)
-        {charNameFive}: Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
+        Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
             ~ fifthStory = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(fifthStoryPG)
@@ -972,16 +972,16 @@
     }
     
         - (top)
-        {charNameFive}: {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me.|Sono sicura di aver visto un'altra persona alla fermata del bus, ma quando ho cercato di raggiungerla è scomparsa.|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
+        {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me.|Sono sicura di aver visto un'altra persona alla fermata del bus, ma quando ho cercato di raggiungerla è scomparsa.|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
                 ~ fifthCharEndingDialogue ++
         -> main
         
         = goodbye
         ~ temp charNameFive = translator(fifthCharacterState)
-        {charNameFive}: {name}, per me è arrivato il momento di tornare a casa.
-        {firstCharacterPossibleStates hasnt Chitarra: {charNameFive}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
-        {firstCharacterPossibleStates hasnt Chitarra: {charNameFive}: Grazie per quello che hai fatto, davvero.}
-        {firstCharacterPossibleStates has Chitarra: {charNameFive}: Vedremo cosa mi accadrà.}
+        {name}, per me è arrivato il momento di tornare a casa.
+        {firstCharacterPossibleStates hasnt Chitarra: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
+        {firstCharacterPossibleStates hasnt Chitarra: Grazie per quello che hai fatto, davvero.}
+        {firstCharacterPossibleStates has Chitarra: Vedremo cosa mi accadrà.}
             ~ move_entity(Mentor, Safekeeping)
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             {
@@ -1013,25 +1013,25 @@
 
    = one
    ~ temp charNameFive = translator(fifthCharacterState)
-    {charNameFive}: {~ Sinceramente, non so che ne sarebbe di questo luogo senza tutta la manutenzione che devo fare.|Hai notato la bacheca alla stazione dei treni? Anche se è da molto che non arrivano lettere.|A volte vorrei che le cose in serra crescessero più velocemente, così da sapere subito se ho sbagliato qualcosa.|A ovest dello stagno c'è spesso un grande baccano, ma fiori e fieno sono troppo alti per poter vedere cosa ci sia da quelle parti.}
+    {~ Sinceramente, non so che ne sarebbe di questo luogo senza tutta la manutenzione che devo fare.|Hai notato la bacheca alla stazione dei treni? Anche se è da molto che non arrivano lettere.|A volte vorrei che le cose in serra crescessero più velocemente, così da sapere subito se ho sbagliato qualcosa.|A ovest dello stagno c'è spesso un grande baccano, ma fiori e fieno sono troppo alti per poter vedere cosa ci sia da quelle parti.}
             ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
     
     = two
     ~ temp charNameFive = translator(fifthCharacterState)
-    {charNameFive}: {~ Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.|A volte ho questo timore: posso davvero essere una buona mentore, anche se sono poco istruita?|Sono contenta di aver aperto la biblioteca, ma quella poltrona mi invita troppo a riposare, quando invece ci sono mille cose da fare.}
+    {~ Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.|A volte ho questo timore: posso davvero essere una buona mentore, anche se sono poco istruita?|Sono contenta di aver aperto la biblioteca, ma quella poltrona mi invita troppo a riposare, quando invece ci sono mille cose da fare.}
             ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
             
     = three
     ~ temp charNameFive = translator(fifthCharacterState)
-    {charNameFive}: {~ xxx|yyy}
+    {~ xxx|yyy}
             ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
             
     = four
     ~ temp charNameFive = translator(fifthCharacterState)
-    {charNameFive}: {~ xxx|yyy}
+    {~ xxx|yyy}
             ~ fifthPauseTalking = fifthCharPauseDuration
             -> main        
 

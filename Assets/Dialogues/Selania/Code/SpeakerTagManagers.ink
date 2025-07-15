@@ -37,3 +37,6 @@
 
 === function frog_tag
     ~ return "La Rana Parlante"
+    
+=== function PG_tag
+    ~ return "{name}"    

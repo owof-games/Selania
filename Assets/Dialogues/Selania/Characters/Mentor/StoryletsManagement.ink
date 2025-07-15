@@ -12,12 +12,12 @@
         - gifts_and_ink == 0:
             {
                 - not talk_with_first_character:
-                    {charNameFive}: Hai parlato con la nuova persona?
+                    Hai parlato con la nuova persona? #speaker:{fifthChar_tag()} 
                         -> mentor_and_second_char_storylets 
                 
                 - talk_with_first_character:
-                    {charNameFive}: Sembra che {charNameOne} ti abbia raccontato qualcosa di sè!
-                    {charNameFive}: Ed è arrivato il momento di continuare con le spiegazioni!
+                    Sembra che {charNameOne} ti abbia raccontato qualcosa di sè!#speaker:{fifthChar_tag()} 
+                    Ed è arrivato il momento di continuare con le spiegazioni!
                     -> gifts_and_ink
                 
                 - else:
@@ -32,21 +32,21 @@
                 - else:
                 
                 {
-                    - firstStoryQuestCount >= minStoryQuesTCountFirstChar: {charNameFive}: Hai fatto il tuo dono a {charNameOne}?
+                    - firstStoryQuestCount >= minStoryQuesTCountFirstChar: Hai fatto il tuo dono a {charNameOne}?#speaker:{fifthChar_tag()} 
                             -> mentor_and_second_char_storylets 
                     - else:
                         
                         {
                             - firstStoryQuestCount < 2:
-                                {charNameFive}: Hai bisogno di parlare ancora molto con {charNameOne}, prima di poterle fare il dono.
+                                Hai bisogno di parlare ancora molto con#speaker:{fifthChar_tag()}  {charNameOne}, prima di poterle fare il dono.
                                     -> mentor_and_second_char_storylets 
                             
                             - firstStoryQuestCount < 5:
-                                {charNameFive}: Secondo me sei circa a metà strada prima di poter convincere {charNameOne} a ricevere il tuo dono.
+                                Secondo me sei circa a metà strada prima di poter convincere {charNameOne} a ricevere il tuo dono.#speaker:{fifthChar_tag()} 
                                     -> mentor_and_second_char_storylets 
                             
                             - else:
-                                {charNameFive}: Ormai ci sei: pochissimi scambi e sento che {charNameOne} sarà pronta ad aprirsi a te.
+                                Ormai ci sei: pochissimi scambi e sento che {charNameOne} sarà pronta ad aprirsi a te.#speaker:{fifthChar_tag()} 
                                     -> mentor_and_second_char_storylets 
     
                         }
@@ -60,7 +60,7 @@
                     -> first_character_feedback
                 
                 - else:
-                    {charNameFive}: Prenditi il tuo tempo, ma ricordati che presto o tardi dovrai aiutare {charNameOne} a trovare il suo nuovo nome.
+                    Prenditi il tuo tempo, ma ricordati che presto o tardi dovrai aiutare {charNameOne} a trovare il suo nuovo nome.#speaker:{fifthChar_tag()} 
                         -> mentor_and_second_char_storylets 
             }
         
