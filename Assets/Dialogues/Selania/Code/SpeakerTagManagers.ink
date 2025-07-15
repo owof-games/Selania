@@ -2,17 +2,52 @@
 {
     - !knowing_first_character.one.firstPresentation:
         ~ return "???"
+        
     - firstCharacterState == Chitarra:
 	    ~ return "Chitarra"
+	    
+    - firstCharacterState == Triangolo:
+	    ~ return "Triangolo"
+	    
+	- firstCharacterState == RagazzaOrchestra:
+	    ~ return "Ragazza Orchestra"
+	    
+	- firstCharacterState == FlautoDolce:
+	    ~ return "Flauto Dolce"
+	    
+	- firstCharacterState == Ocarina:
+	    ~ return "Ocarina"
+	    
+	- firstCharacterState == Violino:
+	    ~ return "Chitarra"
+	    
 }
+
 
 
 === function secondChar_tag
 {
     - !knowing_second_character.one.nameSecond:
         ~ return "???"
+        
     - secondCharacterState == Riccio:
 	    ~ return "Riccio"
+	
+	- secondCharacterState == Grizzly:
+	    ~ return "Grizzly"
+	    
+    - secondCharacterState == Lupo:
+	    ~ return "Lupo"
+	    
+    - secondCharacterState == Delfino:
+	    ~ return "Delfino"
+	    
+    - secondCharacterState == Capibara:
+	    ~ return "Capibara"
+	    
+    - secondCharacterState == Corvo:
+	    ~ return "Corvo"
+	
 }
 
 
