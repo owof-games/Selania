@@ -33,15 +33,15 @@
 
     {Ink:
         - Empty:
-            <i>Dopo il dono consegnato e il rapporto creato, {name} si ritrova senza inchiostro. Potrà fare solo l'intervento garantito.</i> #speaker:{fungus_tag()}
+            <i>Dopo il dono consegnato e il rapporto creato, {name} si ritrova senza inchiostro. Potrà fare solo l'intervento garantito.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
         - Low:
-            <i>Dopo il dono consegnato e il rapporto creato, {name} ha una goccia di inchiostro a disposizione. Potrà fare l'intervento garantito e un intervento extra.</i> #speaker:{fungus_tag()}
+            <i>Dopo il dono consegnato e il rapporto creato, {name} ha una goccia di inchiostro a disposizione. Potrà fare l'intervento garantito e un intervento extra.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
         - Normal:
-            <i>Dopo il dono consegnato e il rapporto creato, {name} ha due goccie di inchiostro a disposizione. Potrà fare l'intervento garantito e altri due interventi extra.</i> #speaker:{fungus_tag()}
+            <i>Dopo il dono consegnato e il rapporto creato, {name} ha due goccie di inchiostro a disposizione. Potrà fare l'intervento garantito e altri due interventi extra.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
         - Medium:
-            <i>Dopo il dono consegnato e il rapporto creato, {name} ha tre goccie di inchiostro a disposizione. Potrà fare l'intervento garantito e altri tre interventi extra.</i>  #speaker:{fungus_tag()}       
+            <i>Dopo il dono consegnato e il rapporto creato, {name} ha tre goccie di inchiostro a disposizione. Potrà fare l'intervento garantito e altri tre interventi extra.</i>  #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral       
         - High:
-            <i>Dopo il dono consegnato e il rapporto creato, {name} ha quattro goccie di inchiostro a disposizione. Potrà fare l'intervento garantito e altri tre interventi extra. E riceverà un'informazione importante.</i> #speaker:{fungus_tag()}
+            <i>Dopo il dono consegnato e il rapporto creato, {name} ha quattro goccie di inchiostro a disposizione. Potrà fare l'intervento garantito e altri tre interventi extra. E riceverà un'informazione importante.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
             {
                 - InkLevel == firstCharacterInkLevel:
                     ~ firstCharacterSpecialEvent = true
@@ -86,19 +86,19 @@
     
     {Ink:
         - Empty:
-            non hai guadagnato alcuna goccia di inchiostro #speaker:{fungus_tag()}
+            non hai guadagnato alcuna goccia di inchiostro #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
         
         - Low:
-            hai guadagnato una goccia di inchiostro #speaker:{fungus_tag()}
+            hai guadagnato una goccia di inchiostro #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
         
         - Normal:
-            hai guadagnato due goccie di inchiostro #speaker:{fungus_tag()}
+            hai guadagnato due goccie di inchiostro #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
         
         - Medium:
-            hai guadagnato tre goccie di inchiostro a disposizione #speaker:{fungus_tag()}     
+            hai guadagnato tre goccie di inchiostro a disposizione #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral     
         
         - High:
-            hai guadagnato tre goccie di inchiostro a disposizione, e la personaggia ti darà una informazione importante #speaker:{fungus_tag()}
+            hai guadagnato tre goccie di inchiostro a disposizione, e la personaggia ti darà una informazione importante #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
         - else:
             <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>
             {debug: <i>Il livello di inchiostro per la prima personaggia è {firstCharacterInkLevel}}

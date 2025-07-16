@@ -3,7 +3,7 @@
 #ambientSounds: {tag_ambientSounds()}
 TODO: eliminare Bus anche da Unity
 
-{train_stop == 1: <i>Questa è la stazione del treno.|<i>{~ La stazione profuma di partenze.|La panchina aspetta fremente una nuova conoscenza.|Sulle vette la luce brilla leggera.|Un vento fresco ti sospinge lungo la strada.|Le lettere ondeggiano sulla bacheca.|L'odore della foresta scalda il sentiero.}</i>}#speaker:{fungus_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+{train_stop == 1: <i>Questa è la stazione del treno.|<i>{~ La stazione profuma di partenze.|La panchina aspetta fremente una nuova conoscenza.|Sulle vette la luce brilla leggera.|Un vento fresco ti sospinge lungo la strada.|Le lettere ondeggiano sulla bacheca.|L'odore della foresta scalda il sentiero.}</i>}#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
 
     + [Mi guardo attorno.]
     -
@@ -13,7 +13,7 @@ TODO: eliminare Bus anche da Unity
 === starting_note ===
     + {are_two_entities_together(StartingNote, PG)}[StartingNote]
     
-    Ti scrivo perché volevo ringraziarti per quello che hai fatto.#speaker: Sconosciutə#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+    Ti scrivo perché volevo ringraziarti per quello che hai fatto. #speaker:Sconosciutə #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait:unknown
         Le cose nella mia vita hanno ripreso a funzionare. 
     Ci sono ancora molte giornate no, ma sempre più  più spesso anche delle giornate sni.
     E persino qualche giornata YEAH!
@@ -58,7 +58,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        Ciao {name}, come stai? #speaker:{firstChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+        Ciao {name}, come stai?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
         Alla fine Talco è sempre statə qui, me idiota.
         E ha creduto alla mia storia!
         Ora si è messə in testa di insegnare agli scoiattoli a suonare le noci.
@@ -104,7 +104,7 @@ TODO: eliminare Bus anche da Unity
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    Ciao {name}, qui è sempre {charNameOne} che ti scrive.  #speaker:{firstChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+    Ciao {name}, qui è sempre {charNameOne} che ti scrive.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
     Sono passate settimane dal mio ritorno, e finalmente ho avuto il coraggio di parlare con mio padre.
        
        {
@@ -148,7 +148,7 @@ TODO: eliminare Bus anche da Unity
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    Ciao ama!  #speaker:{firstChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+    Ciao ama!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
     Indovina chi ha fatto il suo primo concerto?
     
      {
@@ -243,102 +243,102 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameTwo}: Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {name}.  #speaker:{secondChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
-        {charNameTwo}: Cioè a te.
-        {charNameTwo}: Anche se non ho mica capito come te la mando la lettera.
-        {charNameTwo}: Ma come sta la rana?
-        {charNameTwo}: Hai scoperto poi se è elettrica?
+        Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+        Cioè a te.
+        Anche se non ho mica capito come te la mando la lettera.
+        Ma come sta la rana?
+        Hai scoperto poi se è elettrica?
             
             {
                 - secondCharacterPossibleStates has Riccio:
                     
-                    {charNameTwo}: Qui le cose sono strane.
-                    {charNameTwo}: Forse perché sono uguali a prima.
-                    {charNameTwo}: Ora passo più tempo in camera.
-                    {charNameTwo}: Papà è contento perché dice che non rompo.
-                    {charNameTwo}: Mamma è preoccupata perché vuole che gioco con gli altri.
-                    {charNameTwo}: A volte guardo fuori dalla finestra e basta.
-                    {charNameTwo}: E vado a letto e non correggo più nulla.
-                    {charNameTwo}: Mi addormento, e aspetto.
-                    {charNameTwo}: A volte voglio tornare lì da voi.
-                    {charNameTwo}: Ma non so cosa fare.
-                    {charNameTwo}: La prof di matematica mi guarda male.
-                    {charNameTwo}: Ci sentiamo {name}.
+                    Qui le cose sono strane.
+                    Forse perché sono uguali a prima.
+                    Ora passo più tempo in camera.
+                    Papà è contento perché dice che non rompo.
+                    Mamma è preoccupata perché vuole che gioco con gli altri.
+                    A volte guardo fuori dalla finestra e basta.
+                    E vado a letto e non correggo più nulla.
+                    Mi addormento, e aspetto.
+                    A volte voglio tornare lì da voi.
+                    Ma non so cosa fare.
+                    La prof di matematica mi guarda male.
+                    Ci sentiamo {name}.
                     
                 - secondCharacterPossibleStates has Grizzly:
                     
-                    {charNameTwo}: Oggi per la prima volta ho litigato con papà.
-                    {charNameTwo}: Nel senso che non è stato mica lui a cominciare ma io.
-                    {charNameTwo}: Ha cercato di picchiarmi e gli ho urlato che è un bullo.
-                    {charNameTwo}: E poi ho preso i miei libri e glieli ho tirati contro.
-                    {charNameTwo}: Lui si è arrabbiato così tanto, {name}!
-                    {charNameTwo}: E allora ho urlato.
-                    {charNameTwo}: Urlato come un orso.
-                    {charNameTwo}: Che si dice che ho bramito quindi.
-                    {charNameTwo}: E lui se ne è andato sbattendo la porta, urlando a mamma che ha tirato su un deficiente.
-                    {charNameTwo}: Però sono felice perché ho meno paura ora.
-                    {charNameTwo}: Mamma mi guarda strano.
-                    {charNameTwo}: Ma so che tu mica mi avresti guardato così.
-                    {charNameTwo}: Salutami la rana!
+                    Oggi per la prima volta ho litigato con papà.
+                    Nel senso che non è stato mica lui a cominciare ma io.
+                    Ha cercato di picchiarmi e gli ho urlato che è un bullo.
+                    E poi ho preso i miei libri e glieli ho tirati contro.
+                    Lui si è arrabbiato così tanto, {name}!
+                    E allora ho urlato.
+                    Urlato come un orso.
+                    Che si dice che ho bramito quindi.
+                    E lui se ne è andato sbattendo la porta, urlando a mamma che ha tirato su un deficiente.
+                    Però sono felice perché ho meno paura ora.
+                    Mamma mi guarda strano.
+                    Ma so che tu mica mi avresti guardato così.
+                    Salutami la rana!
                     
                 - secondCharacterPossibleStates has Lupo:
                     
-                    {charNameTwo}: L'altro giorno ho parlato con l'amico di mio fratello.
-                    {charNameTwo}: Gli ho detto che per me siamo un branco ma che secondo me lui mica mi ci vede in questo branco.
-                    {charNameTwo}: E lui mi ha detto una cosa strana.
-                    {charNameTwo}: Che non ce l'ha con me.
-                    {charNameTwo}: Ma che non sa parlare coi bambini.
-                    {charNameTwo}: Allora gli ho detto di non parlarmi come un bambino.
-                    {charNameTwo}: Che so cosa sono i lupi, le frazioni, l'elettricità.
-                    {charNameTwo}: Lui ha riso e mi ha detto: "Ma sai creare un muffin?".
-                    {charNameTwo}: E mi ha insegnato a fare i muffin.
-                    {charNameTwo}: Mi sono divertito tanto.
-                    {charNameTwo}: E voglio portartene uno.
-                    {charNameTwo}: A presto!
+                    L'altro giorno ho parlato con l'amico di mio fratello.
+                    Gli ho detto che per me siamo un branco ma che secondo me lui mica mi ci vede in questo branco.
+                    E lui mi ha detto una cosa strana.
+                    Che non ce l'ha con me.
+                    Ma che non sa parlare coi bambini.
+                    Allora gli ho detto di non parlarmi come un bambino.
+                    Che so cosa sono i lupi, le frazioni, l'elettricità.
+                    Lui ha riso e mi ha detto: "Ma sai creare un muffin?".
+                    E mi ha insegnato a fare i muffin.
+                    Mi sono divertito tanto.
+                    E voglio portartene uno.
+                    A presto!
     
                 - secondCharacterPossibleStates has Delfino:
                     
-                    {charNameTwo}: A scuola sto finendo tantissimo nei guai.
-                    {charNameTwo}: Ho iniziato a fare qualche dispetto ai bambini prepotenti.
-                    {charNameTwo}: Secondo me hanno funzionato, ma le maestre si sono arrabbiate.
-                    {charNameTwo}: Soprattutto per l'inchiostro sulle loro scarpe.
-                    {charNameTwo}: Ma non è colpa mia se si sono messe in mezzo!
-                    {charNameTwo}: Però mi sono fatto due nuovi amici, e l'altro giorno abbiamo passato mezz'ora in castigo assieme.
-                    {charNameTwo}: Quando la maestra di matematica è tornata e ha trovato la stanza tutta legata con lo spago, ha detto una parolaccia grossa.
-                    {charNameTwo}: Ma grossa grossa.
-                    {charNameTwo}: Quando l'ho ridetta a mio fratello è scoppiato a ridere.
-                    {charNameTwo}: Ma forse qui non te la scrivo, per ora.
-                    {charNameTwo}: Ci vediamo!
+                    A scuola sto finendo tantissimo nei guai.
+                    Ho iniziato a fare qualche dispetto ai bambini prepotenti.
+                    Secondo me hanno funzionato, ma le maestre si sono arrabbiate.
+                    Soprattutto per l'inchiostro sulle loro scarpe.
+                    Ma non è colpa mia se si sono messe in mezzo!
+                    Però mi sono fatto due nuovi amici, e l'altro giorno abbiamo passato mezz'ora in castigo assieme.
+                    Quando la maestra di matematica è tornata e ha trovato la stanza tutta legata con lo spago, ha detto una parolaccia grossa.
+                    Ma grossa grossa.
+                    Quando l'ho ridetta a mio fratello è scoppiato a ridere.
+                    Ma forse qui non te la scrivo, per ora.
+                    Ci vediamo!
                     
                 - secondCharacterPossibleStates has Capibara:
                     
-                    {charNameTwo}: Ieri ho avuto una conversazione da grandi con mio fratello.
-                    {charNameTwo}: Me l'ha fatta perché ho chiamato il suo amico "frocio" quando mi ha sgridato.
-                    {charNameTwo}: E non avevo fatto nulla di male.
-                    {charNameTwo}: A parte mettere della tempera nel suo frullatore.
-                    {charNameTwo}: Mio fratello mi ha spiegato perché fa male quella parola.
-                    {charNameTwo}: E perché papà la usa quando è arrabbiato.
-                    {charNameTwo}: Mi ha detto che tantissime persone usano quella parola come scusa per fare del male ad altre persone.
-                    {charNameTwo}: E lo fanno perché hanno paura.
-                    {charNameTwo}: E poi mi ha portato in una associazione che serve per chi è come mio fratello o il suo amico e non vuole più avere paura.
-                    {charNameTwo}: E io non avevo mai capito che si possono fare tutte queste cose assieme.
-                    {charNameTwo}: Mi è dispiaciuto tantissimo aver fatto male al suo amico.
-                    {charNameTwo}: Però sono anche contento che mi hanno detto le cose per bene dopo tutti questi anni.
-                    {charNameTwo}: E tu hai paura di alcune persone?
-                    {charNameTwo}: Ciao ciao!
+                    Ieri ho avuto una conversazione da grandi con mio fratello.
+                    Me l'ha fatta perché ho chiamato il suo amico "frocio" quando mi ha sgridato.
+                    E non avevo fatto nulla di male.
+                    A parte mettere della tempera nel suo frullatore.
+                    Mio fratello mi ha spiegato perché fa male quella parola.
+                    E perché papà la usa quando è arrabbiato.
+                    Mi ha detto che tantissime persone usano quella parola come scusa per fare del male ad altre persone.
+                    E lo fanno perché hanno paura.
+                    E poi mi ha portato in una associazione che serve per chi è come mio fratello o il suo amico e non vuole più avere paura.
+                    E io non avevo mai capito che si possono fare tutte queste cose assieme.
+                    Mi è dispiaciuto tantissimo aver fatto male al suo amico.
+                    Però sono anche contento che mi hanno detto le cose per bene dopo tutti questi anni.
+                    E tu hai paura di alcune persone?
+                    Ciao ciao!
                     
                 - secondCharacterPossibleStates has Corvo:
                     
-                    {charNameTwo}: L'altro giorno ho detto a mamma e papà che voglio diventare un veterinario.
-                    {charNameTwo}: Per studiare e salvare gli animali.
-                    {charNameTwo}: Mamma ha detto che allora forse dovrei diventare un etologo (questo l'ho fatto scrivere a lei).
-                    {charNameTwo}: Quando poi ne ho parlato con mio fratello, mi ha detto che questa estate se voglio mi fa conoscere una persona che fa una cosa bellissima: salva gli animali dai laboratori.
-                    {charNameTwo}: Mio fratello dice che studiare è importante, ma che per cambiare le cose devo capire come lottare.
-                    {charNameTwo}: Avevo capito che dovevo lasciarla via la rabbia, {name}.
-                    {charNameTwo}: Ma lui mi dice che la rabbia serve.
-                    {charNameTwo}: Va solo mandata nella giusta direzione.
-                    {charNameTwo}: Ti scriverò appena scopro qual è quella giusta e quale è quella sbagliata.
-                    {charNameTwo}: Ciao!
+                    L'altro giorno ho detto a mamma e papà che voglio diventare un veterinario.
+                    Per studiare e salvare gli animali.
+                    Mamma ha detto che allora forse dovrei diventare un etologo (questo l'ho fatto scrivere a lei).
+                    Quando poi ne ho parlato con mio fratello, mi ha detto che questa estate se voglio mi fa conoscere una persona che fa una cosa bellissima: salva gli animali dai laboratori.
+                    Mio fratello dice che studiare è importante, ma che per cambiare le cose devo capire come lottare.
+                    Avevo capito che dovevo lasciarla via la rabbia, {name}.
+                    Ma lui mi dice che la rabbia serve.
+                    Va solo mandata nella giusta direzione.
+                    Ti scriverò appena scopro qual è quella giusta e quale è quella sbagliata.
+                    Ciao!
             }
                 
             ~ secondWritingPause = secondWritingPauseDuration
@@ -348,104 +348,104 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameTwo}: Che strano. #speaker:{secondChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
-        {charNameTwo}: Ho lasciato l'altra lettera sul comodino di notte.
-        {charNameTwo}: E poi è sparita.
-        {charNameTwo}: Non so mica se ti è arrivata.
-        {charNameTwo}: O se papà l'ha buttata.
+        Che strano.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+        Ho lasciato l'altra lettera sul comodino di notte.
+        E poi è sparita.
+        Non so mica se ti è arrivata.
+        O se papà l'ha buttata.
             
             {
                 - secondCharacterPossibleStates has Riccio:
                 
-                    {charNameTwo}: Le cose a scuola vanno male.
-                    {charNameTwo}: L'altro giorno ho picchiato un bambino perché mi ha chiamato "strano".
-                    {charNameTwo}: E l'ho spinto dalle scale.
-                    {charNameTwo}: Ora sono in sospensione, a casa.
-                    {charNameTwo}: Papà è sparito da due giorni.
-                    {charNameTwo}: Mamma piange in camera.
-                    {charNameTwo}: Io non so come mi sento.
-                    {charNameTwo}: Però ho ripreso a fare esperimenti.
-                    {charNameTwo}: In un vecchio libro un bambino disegnava la porta sul muro, e andava in un altro mondo.
-                    {charNameTwo}: Forse se trovo il modo posso tornare da voi.
-                    {charNameTwo}: Mi mancate.
-                    {charNameTwo}: Ciao.
+                    Le cose a scuola vanno male.
+                    L'altro giorno ho picchiato un bambino perché mi ha chiamato "strano".
+                    E l'ho spinto dalle scale.
+                    Ora sono in sospensione, a casa.
+                    Papà è sparito da due giorni.
+                    Mamma piange in camera.
+                    Io non so come mi sento.
+                    Però ho ripreso a fare esperimenti.
+                    In un vecchio libro un bambino disegnava la porta sul muro, e andava in un altro mondo.
+                    Forse se trovo il modo posso tornare da voi.
+                    Mi mancate.
+                    Ciao.
     
                 - secondCharacterPossibleStates has Grizzly:
                 
-                    {charNameTwo}: Se l'ha buttata urlo di nuovo, vediamo che mi dice poi.
-                    {charNameTwo}: Però ti dovevo dire questa cosa: sono nella squadra di calcio.
-                    {charNameTwo}: Non sono mica bravo, sinceramente.
-                    {charNameTwo}: Questa roba delle forza e della velocità non è roba mia proprio.
-                    {charNameTwo}: Però dice l'allenatore che ho strategia.
-                    {charNameTwo}: Mamma me l'ha fatto fare perché dice che devo scaricare tutta questa "rabbia da ragazzino".
-                    {charNameTwo}: E non mi chiama più bambino.
-                    {charNameTwo}: Negli spogliatoi ci sono state delle risse.
-                    {charNameTwo}: Ho dato un pugno straforte a uno più grande.
-                    {charNameTwo}: E ora a scuola non mi rompono più le scatole.
-                    {charNameTwo}: Se qualcuno ti rompe le scatole {name} chiamami.
-                    {charNameTwo}: E ti aiuto io.
-                    {charNameTwo}: Ciao!
+                    Se l'ha buttata urlo di nuovo, vediamo che mi dice poi.
+                    Però ti dovevo dire questa cosa: sono nella squadra di calcio.
+                    Non sono mica bravo, sinceramente.
+                    Questa roba delle forza e della velocità non è roba mia proprio.
+                    Però dice l'allenatore che ho strategia.
+                    Mamma me l'ha fatto fare perché dice che devo scaricare tutta questa "rabbia da ragazzino".
+                    E non mi chiama più bambino.
+                    Negli spogliatoi ci sono state delle risse.
+                    Ho dato un pugno straforte a uno più grande.
+                    E ora a scuola non mi rompono più le scatole.
+                    Se qualcuno ti rompe le scatole {name} chiamami.
+                    E ti aiuto io.
+                    Ciao!
     
                 - secondCharacterPossibleStates has Lupo:
                 
-                    {charNameTwo}: Ma non credo: le cose negli ultimi giorni vanno meglio.
-                    {charNameTwo}: Con l'amico di mio fratello ho fatto dei muffin per lui e mamma.
-                    {charNameTwo}: E poi gli ho detto che mi dispiace quando litigano.
-                    {charNameTwo}: E che ho capito che essere grandi fa schifo, ma che ci sono anche cose belle.
-                    {charNameTwo}: Come andare al mare.
-                    {charNameTwo}: Mamma si è messa a piangere.
-                    {charNameTwo}: Papà è stato in silenzio tantissimo.
-                    {charNameTwo}: E ho iniziato a pensare che mi avrebbe picchiato.
-                    {charNameTwo}: Invece ha detto: domani si fa vacanza e si va a nuotare tutti assieme.
-                    {charNameTwo}: Mamma l'ha abbracciato, e si è mangiata un intero muffin.
-                    {charNameTwo}: Ti dico poi come è andata!
-                    {charNameTwo}: A presto.
+                    Ma non credo: le cose negli ultimi giorni vanno meglio.
+                    Con l'amico di mio fratello ho fatto dei muffin per lui e mamma.
+                    E poi gli ho detto che mi dispiace quando litigano.
+                    E che ho capito che essere grandi fa schifo, ma che ci sono anche cose belle.
+                    Come andare al mare.
+                    Mamma si è messa a piangere.
+                    Papà è stato in silenzio tantissimo.
+                    E ho iniziato a pensare che mi avrebbe picchiato.
+                    Invece ha detto: domani si fa vacanza e si va a nuotare tutti assieme.
+                    Mamma l'ha abbracciato, e si è mangiata un intero muffin.
+                    Ti dico poi come è andata!
+                    A presto.
                     
                 - secondCharacterPossibleStates has Delfino:
                 
-                    {charNameTwo}: In questi giorni ho ripreso a dire delle bugie.
-                    {charNameTwo}: Ma invece di dirle piccole, le sto dicendo grandissime.
-                    {charNameTwo}: E questa cosa fa divertire i miei nuovi amici.
-                    {charNameTwo}: E anche qualche maestra.
-                    {charNameTwo}: Mamma dice che da grande devo fare il comico.
-                    {charNameTwo}: Papà è banale e dice che devo fare il politico.
-                    {charNameTwo}: Mio fratello è preoccupato, perché teme che mi metto nei pasticci.
-                    {charNameTwo}: Gioco: una di queste cose che ho detto non è vera.
-                    {charNameTwo}: Tu lo capisci quale?
-                    {charNameTwo}: Salutami la rana!
-                    {charNameTwo}: {charNameTwo}.
+                    In questi giorni ho ripreso a dire delle bugie.
+                    Ma invece di dirle piccole, le sto dicendo grandissime.
+                    E questa cosa fa divertire i miei nuovi amici.
+                    E anche qualche maestra.
+                    Mamma dice che da grande devo fare il comico.
+                    Papà è banale e dice che devo fare il politico.
+                    Mio fratello è preoccupato, perché teme che mi metto nei pasticci.
+                    Gioco: una di queste cose che ho detto non è vera.
+                    Tu lo capisci quale?
+                    Salutami la rana!
+                    {charNameTwo}.
                     
                 - secondCharacterPossibleStates has Capibara:
                 
-                    {charNameTwo}: Dopo che gli ho detto che lui usa quella parola con mio fratello perché ha paura, non mi parla più.
-                    {charNameTwo}: Mamma dice che lui ha paura di tutte le cose, ma non lo sa dire.
-                    {charNameTwo}: Le ho detto che ci sono delle associazioni.
-                    {charNameTwo}: Lei ha sorriso e mi ha detto che sto davvero diventando grande.
-                    {charNameTwo}: Però continuo a pensarci a questa cosa delle associazioni.
-                    {charNameTwo}: Tu lo sai che io ho paura per gli animali.
-                    {charNameTwo}: E mi hai insegnato che le cose si affrontano con gli amici.
-                    {charNameTwo}: Magari non sono bravo a farmi degli amici, ma sono bravo a parlare degli animali.
-                    {charNameTwo}: E forse ci riesco a fare qualcosa così, come mio fratello fa per i suoi amici.
-                    {charNameTwo}: Devo solo capire cosa.
-                    {charNameTwo}: Vorrei tanto chiederlo alla rana.
-                    {charNameTwo}: Salutamela!
+                    Dopo che gli ho detto che lui usa quella parola con mio fratello perché ha paura, non mi parla più.
+                    Mamma dice che lui ha paura di tutte le cose, ma non lo sa dire.
+                    Le ho detto che ci sono delle associazioni.
+                    Lei ha sorriso e mi ha detto che sto davvero diventando grande.
+                    Però continuo a pensarci a questa cosa delle associazioni.
+                    Tu lo sai che io ho paura per gli animali.
+                    E mi hai insegnato che le cose si affrontano con gli amici.
+                    Magari non sono bravo a farmi degli amici, ma sono bravo a parlare degli animali.
+                    E forse ci riesco a fare qualcosa così, come mio fratello fa per i suoi amici.
+                    Devo solo capire cosa.
+                    Vorrei tanto chiederlo alla rana.
+                    Salutamela!
                 
                 - secondCharacterPossibleStates has Corvo:
                 
-                    {charNameTwo}: Ultimamente parliamo di più.
-                    {charNameTwo}: Gli piace parlare di politica.
-                    {charNameTwo}: Secondo me dice cose stupide, ma forse nelle sue cose stupide c'è lui, le sue paure.
-                    {charNameTwo}: Almeno così dice l'amico di mio fratello.
-                    {charNameTwo}: Oggi siamo stati da nonna.
-                    {charNameTwo}: Ho dovuto insistere perché avevano paura che ci rimanevo male.
-                    {charNameTwo}: Si no boh.
-                    {charNameTwo}: Mi è spiaciuto quando non mi ha riconosciuto.
-                    {charNameTwo}: Però è sempre la nonna.
-                    {charNameTwo}: Quando mamma ha parlato con l'infermiera ho preso un mazzo di carte.
-                    {charNameTwo}: Era sporco e mancava l'asso di picche.
-                    {charNameTwo}: Ma nonna ha ricordato tutti i trucchi e mi ha stracciato.
-                    {charNameTwo}: Stammi bene!
-                    {charNameTwo}: {charNameTwo}.
+                    Ultimamente parliamo di più.
+                    Gli piace parlare di politica.
+                    Secondo me dice cose stupide, ma forse nelle sue cose stupide c'è lui, le sue paure.
+                    Almeno così dice l'amico di mio fratello.
+                    Oggi siamo stati da nonna.
+                    Ho dovuto insistere perché avevano paura che ci rimanevo male.
+                    Si no boh.
+                    Mi è spiaciuto quando non mi ha riconosciuto.
+                    Però è sempre la nonna.
+                    Quando mamma ha parlato con l'infermiera ho preso un mazzo di carte.
+                    Era sporco e mancava l'asso di picche.
+                    Ma nonna ha ricordato tutti i trucchi e mi ha stracciato.
+                    Stammi bene!
+                    {charNameTwo}.
             }    
             
             ~ secondWritingPause = secondWritingPauseDuration
@@ -455,115 +455,115 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameTwo}: Ciao {name}. #speaker:{secondChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+        Ciao {name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
                 
                 {
                 - secondCharacterPossibleStates has Riccio:
                     
-                    {charNameTwo}: Ti scrivo da casa di mio fratello.
-                    {charNameTwo}: Novità: ora vivo qui!
-                    {charNameTwo}: All'inizio il suo amico non era contento, ma ora mi insegna anche a fare i dolci!
-                    {charNameTwo}: Fa anche delle caramelle superbuone.
-                    {charNameTwo}: Papà non è più tornato.
-                    {charNameTwo}: Mamma non ha nemmeno fatto storie quando me ne sono andato.
-                    {charNameTwo}: Non mi sento mica felice.
-                    {charNameTwo}: Sì no boh.
-                    {charNameTwo}: Che cosa strana da scrivere.
-                    {charNameTwo}: Però le cose sono diverse.
-                    {charNameTwo}: A volte abbasso le spine.
-                    {charNameTwo}: A volte mi addormento sul divano mentre guardo i telefilm con mio fratello.
-                    {charNameTwo}: E non ho mica paura.
-                    {charNameTwo}: Spero che tu non abbia paura.
-                    {charNameTwo}: Salutami {charNameFive}.
-                    {charNameTwo}: Ti voglio bene.
+                    Ti scrivo da casa di mio fratello.
+                    Novità: ora vivo qui!
+                    All'inizio il suo amico non era contento, ma ora mi insegna anche a fare i dolci!
+                    Fa anche delle caramelle superbuone.
+                    Papà non è più tornato.
+                    Mamma non ha nemmeno fatto storie quando me ne sono andato.
+                    Non mi sento mica felice.
+                    Sì no boh.
+                    Che cosa strana da scrivere.
+                    Però le cose sono diverse.
+                    A volte abbasso le spine.
+                    A volte mi addormento sul divano mentre guardo i telefilm con mio fratello.
+                    E non ho mica paura.
+                    Spero che tu non abbia paura.
+                    Salutami {charNameFive}.
+                    Ti voglio bene.
                     
                 - secondCharacterPossibleStates has Grizzly:
                     
-                    {charNameTwo}: Sono SUPER ARRABBIATO.
-                    {charNameTwo}: CON MIO FRATELLO.
-                    {charNameTwo}: Non avevamo mai litigato, mai.
-                    {charNameTwo}: Ma l'altro giorno è venuto a casa e mi ha detto che sto diventando come papà.
-                    {charNameTwo}: Papà si è incazzato con lui e mi ha difeso.
-                    {charNameTwo}: Mio fratello dice che sto diventando un bullo.
-                    {charNameTwo}: Che un suo amico maestro a scuola gli ha detto che me la prendo coi più piccoli.
-                    {charNameTwo}: Papà gli ha detto che mi faccio rispettare.
-                    {charNameTwo}: E che non sono una checca come lui.
-                    {charNameTwo}: Lui mio fratello.
-                    {charNameTwo}: Non sono mica abituato a mio padre così.
-                    {charNameTwo}: Ma poi in camera mi è preso male tutto.
-                    {charNameTwo}: Mi manca mio fratello.
-                    {charNameTwo}: Mi mancate voi.
-                    {charNameTwo}: Vorrei sapere cosa fare.
+                    Sono SUPER ARRABBIATO.
+                    CON MIO FRATELLO.
+                    Non avevamo mai litigato, mai.
+                    Ma l'altro giorno è venuto a casa e mi ha detto che sto diventando come papà.
+                    Papà si è incazzato con lui e mi ha difeso.
+                    Mio fratello dice che sto diventando un bullo.
+                    Che un suo amico maestro a scuola gli ha detto che me la prendo coi più piccoli.
+                    Papà gli ha detto che mi faccio rispettare.
+                    E che non sono una checca come lui.
+                    Lui mio fratello.
+                    Non sono mica abituato a mio padre così.
+                    Ma poi in camera mi è preso male tutto.
+                    Mi manca mio fratello.
+                    Mi mancate voi.
+                    Vorrei sapere cosa fare.
                     
                 - secondCharacterPossibleStates has Lupo:
                     
-                    {charNameTwo}: Oggi sono triste, e non so perché.
-                    {charNameTwo}: Ho dato un pugno a un ragazzo delle medie, ma non mi è mica piaciuto.
-                    {charNameTwo}: A casa le cose vanno bene, ma.
-                    {charNameTwo}: Sì no boh.
-                    {charNameTwo}: Mica pensavo che è così faticoso.
-                    {charNameTwo}: Mamma e papà sono tranquilli solo se siamo assieme.
-                    {charNameTwo}: Mi sembra un lavoro.
-                    {charNameTwo}: E se sono giù si preoccupano tantissimo.
-                    {charNameTwo}: E se si preoccupano tornano a litigare.
-                    {charNameTwo}: Non so mica cosa fare.
-                    {charNameTwo}: Forse {charNameFive} li può aiutare?
-                    {charNameTwo}: Mi mancate.
-                    {charNameTwo}: {charNameTwo}.
+                    Oggi sono triste, e non so perché.
+                    Ho dato un pugno a un ragazzo delle medie, ma non mi è mica piaciuto.
+                    A casa le cose vanno bene, ma.
+                    Sì no boh.
+                    Mica pensavo che è così faticoso.
+                    Mamma e papà sono tranquilli solo se siamo assieme.
+                    Mi sembra un lavoro.
+                    E se sono giù si preoccupano tantissimo.
+                    E se si preoccupano tornano a litigare.
+                    Non so mica cosa fare.
+                    Forse {charNameFive} li può aiutare?
+                    Mi mancate.
+                    {charNameTwo}.
                     
                 - secondCharacterPossibleStates has Delfino:
                     
-                    {charNameTwo}: Se non l'hai capito nell'ultima lettera solo l'ultima frase non era vera: tutte le altre lo erano.
-                    {charNameTwo}: Però è successa una cosa divertente, {name}!
-                    {charNameTwo}: La prof di matematica mi ha detto che le mie bugie sono storie.
-                    {charNameTwo}: E che le storie sono da conservare.
-                    {charNameTwo}: E quindi abbiamo aperto assieme a altri bambini un giornale della scuola.
-                    {charNameTwo}: Faremo uscire per tutto il resto dell'anno i nostri racconti e le notizie.
-                    {charNameTwo}: Mi ha solo chiesto di non scrivere più quella parolaccia che lei ha detto.
-                    {charNameTwo}: E di non dire niente sulla preside o si arrabbia.
-                    {charNameTwo}: E allora ti saluto dicendoti quella parolaccia, perché poi non la potrò più scrivere.
-                    {charNameTwo}: "Per il catarro del cammello!"
-                    {charNameTwo}: Che schifo, {name}.
-                    {charNameTwo}: Ma lì ci sono i cammelli?
-                    {charNameTwo}: Un saluto.
-                    {charNameTwo}: {charNameTwo}.
+                    Se non l'hai capito nell'ultima lettera solo l'ultima frase non era vera: tutte le altre lo erano.
+                    Però è successa una cosa divertente, {name}!
+                    La prof di matematica mi ha detto che le mie bugie sono storie.
+                    E che le storie sono da conservare.
+                    E quindi abbiamo aperto assieme a altri bambini un giornale della scuola.
+                    Faremo uscire per tutto il resto dell'anno i nostri racconti e le notizie.
+                    Mi ha solo chiesto di non scrivere più quella parolaccia che lei ha detto.
+                    E di non dire niente sulla preside o si arrabbia.
+                    E allora ti saluto dicendoti quella parolaccia, perché poi non la potrò più scrivere.
+                    "Per il catarro del cammello!"
+                    Che schifo, {name}.
+                    Ma lì ci sono i cammelli?
+                    Un saluto.
+                    {charNameTwo}.
                     
                 - secondCharacterPossibleStates has Capibara:
         
-                    {charNameTwo}: Questo cervellino (il mio cervellino) ha trovato una soluzione.
-                    {charNameTwo}: Ho parlato con la prof di matematica, e le ho detto delle mie paure.
-                    {charNameTwo}: Degli animali che spariscono, dei boschi che bruciano.
-                    {charNameTwo}: Dei ghiacciai.
-                    {charNameTwo}: Lei mi ha detto che possiamo raccogliere dei soldi ma sì no boh.
-                    {charNameTwo}: Io pensavo all'associazione di mio fratello e del suo fidanzato, e loro insegnano a non avere paura non a spendere soldi.
-                    {charNameTwo}: Allora mi ha fatto fare una lezione in classe su queste cose.
-                    {charNameTwo}: Ho spiegato le paure.
-                    {charNameTwo}: E poi ho detto che se ci mettiamo assieme ci sono anche le soluzioni.
-                    {charNameTwo}: Alcuni compagni hanno detto che ci possiamo trovare nel campetto il pomeriggio.
-                    {charNameTwo}: E quindi forse qualcosa sta iniziando, {name}.
-                    {charNameTwo}: Non so cosa faremo, però è bello non farlo da solo.
-                    {charNameTwo}: E vorrei tanto tu fossi qui con me, ora.
-                    {charNameTwo}: Secondo me ci diresti tantissime cose sagge.
-                    {charNameTwo}: Salutami la rana.
-                    {charNameTwo}: {charNameTwo}.
+                    Questo cervellino (il mio cervellino) ha trovato una soluzione.
+                    Ho parlato con la prof di matematica, e le ho detto delle mie paure.
+                    Degli animali che spariscono, dei boschi che bruciano.
+                    Dei ghiacciai.
+                    Lei mi ha detto che possiamo raccogliere dei soldi ma sì no boh.
+                    Io pensavo all'associazione di mio fratello e del suo fidanzato, e loro insegnano a non avere paura non a spendere soldi.
+                    Allora mi ha fatto fare una lezione in classe su queste cose.
+                    Ho spiegato le paure.
+                    E poi ho detto che se ci mettiamo assieme ci sono anche le soluzioni.
+                    Alcuni compagni hanno detto che ci possiamo trovare nel campetto il pomeriggio.
+                    E quindi forse qualcosa sta iniziando, {name}.
+                    Non so cosa faremo, però è bello non farlo da solo.
+                    E vorrei tanto tu fossi qui con me, ora.
+                    Secondo me ci diresti tantissime cose sagge.
+                    Salutami la rana.
+                    {charNameTwo}.
                 
                 - secondCharacterPossibleStates has Corvo:
                 
-                    {charNameTwo}: Ieri è successa una cosa fighissima.
-                    {charNameTwo}: Ti ricordi quell'amica di mio fratello, che dovevo conoscere al mare?
-                    {charNameTwo}: Sta da tre giorni da lui perché dice che è stata buttata fuori di casa.
-                    {charNameTwo}: E mi ha raccontato tante cose che mica sapevo.
-                    {charNameTwo}: Cose brutte che vengono fatte agli animali.
-                    {charNameTwo}: Ma, {name}: non aveva paura.
-                    {charNameTwo}: Lei dice che sono sveglio, e che per questo non devo avere paura perché posso capire tutto.
-                    {charNameTwo}: E che magari un giorno trovo un modo per salvare gli animali.
-                    {charNameTwo}: Mi ha regalato un romanzo di Ursula LeGuin (ho dovuto guardare la copertina, è un nome difficile).
-                    {charNameTwo}: Non sapevo di potere imparare cose dai romanzi.
-                    {charNameTwo}: Oggi ho chiesto alla maestra di matematica di darmi dei libri sull'ambiente.
-                    {charNameTwo}: Ci sono così tante cose da imparare, {name}, così tante!
-                    {charNameTwo}: Spero ci vedremo presto.
-                    {charNameTwo}: Salutami la rana!
-                    {charNameTwo}: {charNameTwo}.
+                    Ieri è successa una cosa fighissima.
+                    Ti ricordi quell'amica di mio fratello, che dovevo conoscere al mare?
+                    Sta da tre giorni da lui perché dice che è stata buttata fuori di casa.
+                    E mi ha raccontato tante cose che mica sapevo.
+                    Cose brutte che vengono fatte agli animali.
+                    Ma, {name}: non aveva paura.
+                    Lei dice che sono sveglio, e che per questo non devo avere paura perché posso capire tutto.
+                    E che magari un giorno trovo un modo per salvare gli animali.
+                    Mi ha regalato un romanzo di Ursula LeGuin (ho dovuto guardare la copertina, è un nome difficile).
+                    Non sapevo di potere imparare cose dai romanzi.
+                    Oggi ho chiesto alla maestra di matematica di darmi dei libri sull'ambiente.
+                    Ci sono così tante cose da imparare, {name}, così tante!
+                    Spero ci vedremo presto.
+                    Salutami la rana!
+                    {charNameTwo}.
                     
             }
         
@@ -591,7 +591,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameThree = translator(thirdCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameThree}: Lettere random note da parte della personaggia #speaker:{thirdChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+        {charNameThree}: Lettere random note da parte della personaggia #speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdCharacterInkLevel)} #inkB{ink_tag_b(thirdCharacterInkLevel)} #inkC:{ink_tag_c(thirdCharacterInkLevel)}  #inkD:{ink_tag_d(thirdCharacterInkLevel)} #portrait:third_neutral
         
         {
             - thirdCharacterPossibleStates has Riccio: 
@@ -655,7 +655,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameFour}: Lettere random note da parte della personaggia #speaker:{fourthChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+        {charNameFour}: Lettere random note da parte della personaggia#speaker:{fourthChar_tag()} #inkA:{ink_tag_a(fourthCharacterInkLevel)} #inkB{ink_tag_b(fourthCharacterInkLevel)} #inkC:{ink_tag_c(fourthCharacterInkLevel)}  #inkD:{ink_tag_d(fourthCharacterInkLevel)} #portrait:fourth_neutral
         
         {
             - fourthCharacterPossibleStates has Riccio: 
@@ -721,7 +721,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameFive}: Lettere random note da parte della personaggia #speaker:{fifthChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+        {charNameFive}: Lettere random note da parte della personaggia#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         
         {
             - fifthCharacterPossibleStates has Riccio: 

@@ -26,9 +26,9 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     
 
 === book_test_intro ===
-<i>La biblioteca freme all'idea di offrirti una storia da leggere.</i> #speaker:{fungus_tag()}
+<i>La biblioteca freme all'idea di offrirti una storia da leggere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
         + {readStories != ()} [Voglio rileggere qualcosa.]
-        <i>La tua libreria contiene {number_translator(readStories)} {libro_libri(readStories)}.</i> #speaker:{fungus_tag()}
+        <i>La tua libreria contiene {number_translator(readStories)} {libro_libri(readStories)}.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
             -> reread
             
         + {unreadStories != ()} [Vorrei una nuova storia casuale.]
@@ -88,7 +88,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     
     
     = about_transformation
-    <i>La biblioteca ti offre una storia...</i> #speaker:{fungus_tag()}
+    <i>La biblioteca ti offre una storia...</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
         + {readingDuration has Short && shortStories^ aboutTransformation != ()} [Che racconta di qualcosa che si <b>trasforma</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutTransformation)
             -> refresh_book_lists -> from_list_to_books
@@ -115,7 +115,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
             -> shuffle
         
     = about_questions       
-    <i>La biblioteca ti offre una storia...</i>  #speaker:{fungus_tag()}
+    <i>La biblioteca ti offre una storia...</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + {readingDuration has Short && shortStories^ aboutQuestions != ()} [Che parla di chi <b>si pone domande</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutQuestions)
@@ -143,7 +143,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
             
             
     = about_unprepared
-    <i>La biblioteca ti offre una storia...</i> #speaker:{fungus_tag()}
+    <i>La biblioteca ti offre una storia...</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + {readingDuration has Short && shortStories^ aboutUnprepared != ()} [Che mi colga<b>{pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}</b>]
             ~ book = LIST_RANDOM(shortStories^ aboutUnprepared)
@@ -170,7 +170,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
                 -> shuffle 
 
     = about_monsters
-    <i>La biblioteca ti offre una storia...</i> #speaker:{fungus_tag()}
+    <i>La biblioteca ti offre una storia...</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + {readingDuration has Short && shortStories^ aboutMonsters != ()} [Che parla di <b>cose mostruose</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutMonsters)
@@ -197,7 +197,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
                 -> shuffle
 
     = about_fire  
-    <i>La biblioteca ti offre una storia...</i> #speaker:{fungus_tag()}
+    <i>La biblioteca ti offre una storia...</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + {readingDuration has Short && shortStories^ aboutFire != ()} [Che racconta di <b>cose che bruciano</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutFire)
@@ -224,7 +224,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
                 -> shuffle
 
     = about_rebellion
-    <i>La biblioteca ti offre una storia...</i> #speaker:{fungus_tag()}
+    <i>La biblioteca ti offre una storia...</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + {readingDuration has Short && shortStories^ aboutRebellion != ()} [Che urla di <b>sogni e ribellioni</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutRebellion)
@@ -353,7 +353,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
 
     
     = reread_adri_allora
-    <i>La biblioteca si chiede cosa tu voglia rileggere.</i> #speaker:{fungus_tag()}
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + [Rileggo <i>Il mio bellissimo gatto</i>di Adri Allora(ləi).]
                 -> adri_allora
@@ -363,8 +363,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
                 -> book_test_intro
                 
     = reread_aza
-    <i>La biblioteca si chiede cosa tu voglia rileggere.</i> #speaker:{fungus_tag()}
-    
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
         + [Rileggo <i>Luna vergine</i> di Aza (any).]
                 -> aza
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
@@ -373,7 +372,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
                 -> book_test_intro                 
     
     = reread_steno_artico
-    <i>La biblioteca si chiede cosa tu voglia rileggere.</i> #speaker:{fungus_tag()}
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + [Rileggo <i> This anger</i> by StenoArtico (he/him, none).]
                 -> steno_artico
@@ -383,7 +382,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
                 -> book_test_intro 
     
     = reread_b
-    <i>La biblioteca si chiede cosa tu voglia rileggere.</i> #speaker:{fungus_tag()}
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + [Rileggo <i>The touch of anger</i> di K.(she/her).]
                 -> b
@@ -393,7 +392,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
                 -> book_test_intro 
                 
     = reread_beatrice
-    <i>La biblioteca si chiede cosa tu voglia rileggere.</i> #speaker:{fungus_tag()}
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + [Rileggo <i>La rete non esiste</i> di Beatrice(she/her).]
                 -> beatrice
@@ -403,7 +402,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
                 -> book_test_intro 
                 
     = reread_beatrice_y_bottura
-    <i>La biblioteca si chiede cosa tu voglia rileggere.</i> #speaker:{fungus_tag()}
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + [Rileggo <i>Artigli Rosso Ruggine</i> di Beatrice Y. Bottura (she/it).]
                 -> beatrice_y_bottura
@@ -416,7 +415,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
 
                 
     = reread_cecilia_formicola
-    <i>La biblioteca si chiede cosa tu voglia rileggere.</i> #speaker:{fungus_tag()}
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + [Rileggo <i>Getting warm</i> di Cecilia Formicola (she/her).]
                 -> cecilia_formicola
@@ -428,7 +427,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
  
  
     = reread_lamia
-    <i>La biblioteca si chiede cosa tu voglia rileggere.</i> #speaker:{fungus_tag()}
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + [Rileggo <i>Il sassolino</i> di Lamia (she/they).]
                 -> lamia
@@ -438,7 +437,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
                 -> book_test_intro  
     
     = reread_val_lattanzio
-    <i>La biblioteca si chiede cosa tu voglia rileggere.</i> #speaker:{fungus_tag()}
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + [Rileggo <i>Home</i> di Val Fausto Lattanzio (he/they).]
                 -> val_fausto_lattanzio
@@ -448,7 +447,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
                 -> book_test_intro        
     
     = reread_romi
-    <i>La biblioteca si chiede cosa tu voglia rileggere.</i> #speaker:{fungus_tag()}
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + [Rileggo <i>Il principe sbagliato</i> di Romi (any).]
                 -> val_fausto_lattanzio
@@ -459,7 +458,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
  
  
     = reread_salvo
-    <i>La biblioteca si chiede cosa tu voglia rileggere.</i> #speaker:{fungus_tag()}
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + [Rileggo <i>Il cancello</i> di Salvo (he/him).]
                 -> salvo
@@ -469,7 +468,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
                 -> book_test_intro 
                 
     = reread_maura
-    <i>La biblioteca si chiede cosa tu voglia rileggere.</i> #speaker:{fungus_tag()}
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + [Rileggo <i>Polvere</i> di Maura (she/they).]
                 -> maura
@@ -480,7 +479,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     
 
     = reread_letizia_vaccarella
-    <i>La biblioteca si chiede cosa tu voglia rileggere.</i> #speaker:{fungus_tag()}
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + [Rileggo <i>Dodici Stelle</i> di Letizia Vaccarella (she/her).]
                 -> letizia_vaccarella
@@ -490,7 +489,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
                 -> book_test_intro     
     
     = reread_queerginia_wolf
-    <i>La biblioteca si chiede cosa tu voglia rileggere.</i> #speaker:{fungus_tag()}
+    <i>La biblioteca si chiede cosa tu voglia rileggere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     
         + [Rileggo <i>Giallo</i> di Queerginia Wolf/Marco Spelgatti (she/he/they).]
                 -> queerginia_wolf
