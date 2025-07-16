@@ -447,7 +447,7 @@
          Idea!
          Forse la mentore è abbastanza vecchia da avere una radio?
         {are_two_entities_together(Mentor, PG):{charNameFive}: Non approfittare della mia gentilezza, ragazzina.}#speaker:{fifthChar_tag()}
-        {are_two_entities_together(Mentor, PG):  Dai, si fa per il meme!| Devo assolutamente chiederglielo.}#speaker:{firstChar_tag()}
+        {are_two_entities_together(Mentor, PG): Dai, si fa per il meme!| Devo assolutamente chiederglielo.}#speaker:{firstChar_tag()}
              ~ firstPauseTalking = firstCharPauseDuration
             -> main 
             
@@ -1107,6 +1107,7 @@
         - firstCharacterInkLevel == Empty:
             -> ending
         - else: 
+            ~ numberQuestion ++
             -> two
         }        
         
@@ -1159,7 +1160,8 @@
         {
         - firstCharacterInkLevel == Low:
             -> ending
-        - else: 
+        - else:
+            ~ numberQuestion ++
             -> three
         }
         
@@ -1214,7 +1216,8 @@
         {
         - firstCharacterInkLevel == Normal:
             -> ending
-        - else: 
+        - else:
+            ~ numberQuestion ++
             -> four
         }
     
@@ -1263,6 +1266,8 @@
 
     = ending
     ~ temp charNameOne = translator(firstCharacterState)
+    ~ numberQuestion = 1
+    
      Per questo ti dico:
         + {firstRed > 0} [Prendi una strada e se non ti piace cambiala!]
         

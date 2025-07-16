@@ -111,7 +111,7 @@
  
 /* ---------------------------------
 
-   Funzioni per la gestione del tag dell'inchiostro 
+   Funzioni per la gestione del tag dell'inchiostro: incremento 
 
 ----------------------------------*/
 LIST imagesStates = offState, onState, emptyState
@@ -254,4 +254,196 @@ LIST imagesStates = offState, onState, emptyState
                 ~ return onState
         - else:
             error
-    }     
+    }
+
+/* ---------------------------------
+
+   Funzioni per la gestione del tag dell'inchiostro: decremento 
+
+----------------------------------*/
+VAR numberQuestion = 1
+
+=== function ink_tag_a_rewrite (charInkCheck)
+
+    {
+        - charInkCheck == firstCharacterInkLevel:
+            ~ Ink = firstCharacterInkLevel
+        
+        - charInkCheck == secondCharacterInkLevel:
+            ~ Ink = secondCharacterInkLevel
+        
+        - charInkCheck == thirdCharacterInkLevel:
+            ~ Ink = thirdCharacterInkLevel
+            
+        - charInkCheck == fourthCharacterInkLevel:
+            ~ Ink = fourthCharacterInkLevel
+        
+        - charInkCheck == fifthCharacterInkLevel:
+            ~ Ink = fifthCharacterInkLevel    
+            
+    }
+    
+    {Ink:
+                
+        - Low:
+                ~ return "emptyState"
+        
+        - Normal:
+            {
+                - numberQuestion == 1:
+                    ~ return "onState"
+                - numberQuestion == 2:
+                    ~ return "emptyState"
+            }    
+            
+                
+        - Medium:
+            {
+                - numberQuestion == 1:
+                    ~ return "onState"
+                - numberQuestion == 2:
+                    ~ return "onState"
+                - numberQuestion == 3:
+                    ~ return "emptyState"    
+            }
+            
+        - High:
+            {
+                - numberQuestion == 1:
+                    ~ return "onState"
+                - numberQuestion == 2:
+                    ~ return "onState"
+                - numberQuestion == 3:
+                    ~ return "onState"
+                - numberQuestion == 4:
+                    ~ return "emptyState"                    
+            }
+            
+        - else:
+            ~ return "offState"
+    }
+
+
+
+=== function ink_tag_b_rewrite (charInkCheck)
+
+    {
+        - charInkCheck == firstCharacterInkLevel:
+            ~ Ink = firstCharacterInkLevel
+        
+        - charInkCheck == secondCharacterInkLevel:
+            ~ Ink = secondCharacterInkLevel
+        
+        - charInkCheck == thirdCharacterInkLevel:
+            ~ Ink = thirdCharacterInkLevel
+            
+        - charInkCheck == fourthCharacterInkLevel:
+            ~ Ink = fourthCharacterInkLevel
+        
+        - charInkCheck == fifthCharacterInkLevel:
+            ~ Ink = fifthCharacterInkLevel    
+            
+    }
+    
+    {Ink:
+    
+        - Normal:
+            {
+                - numberQuestion == 1:
+                    ~ return "emptyState"
+            }    
+            
+                
+        - Medium:
+            {
+                - numberQuestion == 1:
+                    ~ return "onState"
+                - numberQuestion == 2:
+                    ~ return "emptyState"    
+            }
+            
+        - High:
+            {
+                - numberQuestion == 1:
+                    ~ return "onState"
+                - numberQuestion == 2:
+                    ~ return "onState"
+                - numberQuestion == 3:
+                    ~ return "emptyState"                  
+            }
+            
+        - else:
+            ~ return "offState"
+    }
+
+=== function ink_tag_c_rewrite (charInkCheck)
+
+    {
+        - charInkCheck == firstCharacterInkLevel:
+            ~ Ink = firstCharacterInkLevel
+        
+        - charInkCheck == secondCharacterInkLevel:
+            ~ Ink = secondCharacterInkLevel
+        
+        - charInkCheck == thirdCharacterInkLevel:
+            ~ Ink = thirdCharacterInkLevel
+            
+        - charInkCheck == fourthCharacterInkLevel:
+            ~ Ink = fourthCharacterInkLevel
+        
+        - charInkCheck == fifthCharacterInkLevel:
+            ~ Ink = fifthCharacterInkLevel    
+            
+    }
+    
+    {Ink:
+    
+        - Medium:
+            {
+                - numberQuestion == 1:
+                    ~ return "emptyState"    
+            }
+            
+        - High:
+            {
+                - numberQuestion == 1:
+                    ~ return "onState"
+                - numberQuestion == 2:
+                    ~ return "emptyState"                  
+            }
+            
+        - else:
+            ~ return "offState"
+    }    
+
+=== function ink_tag_d_rewrite (charInkCheck)
+
+    {
+        - charInkCheck == firstCharacterInkLevel:
+            ~ Ink = firstCharacterInkLevel
+        
+        - charInkCheck == secondCharacterInkLevel:
+            ~ Ink = secondCharacterInkLevel
+        
+        - charInkCheck == thirdCharacterInkLevel:
+            ~ Ink = thirdCharacterInkLevel
+            
+        - charInkCheck == fourthCharacterInkLevel:
+            ~ Ink = fourthCharacterInkLevel
+        
+        - charInkCheck == fifthCharacterInkLevel:
+            ~ Ink = fifthCharacterInkLevel    
+            
+    }
+    
+    {Ink:
+    
+        - High:
+            {
+                - numberQuestion == 1:
+                    ~ return "emptyState"                 
+            }
+            
+        - else:
+            ~ return "offState"
+    }    
