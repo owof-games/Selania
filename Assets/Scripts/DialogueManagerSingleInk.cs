@@ -39,6 +39,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private GameObject[] entities;
     [SerializeField] private TextMeshProUGUI displayNameText;
     [SerializeField] private Animator portraitAnimator;
+    [SerializeField] private Animator inkAnimator;
 
 
     [Header("Background setting")]
@@ -94,11 +95,14 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Library Path Sounds")]
     [SerializeField] private AudioClip librarySounds;
 
-    //TAGS UTILIZZATI PER NOME
+    //TAG UTILIZZATO PER NOME
     private const string SPEAKER_TAG = "speaker";
 
     //TAG USATO PER RITRATTO
     private const string PORTRAIT_TAG = "portrait";
+
+    //TAG USATO PER INCHIOSTRO
+    private const string INK_TAG = "ink";
 
     void Start()
     {
@@ -465,6 +469,11 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     portraitAnimator.Play(tagValue);
                     Debug.Log("portrait" + tagValue);
                     break;
+
+                case INK_TAG:
+                    inkAnimator.Play(tagValue);
+                    Debug.Log("ink" + tagValue);
+                    break;                    
 
                 default:
                     Debug.LogWarning("Tag came in but is not currently handled: " + tag);
