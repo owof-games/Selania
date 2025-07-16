@@ -58,7 +58,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        Ciao {name}, come stai?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        Ciao {name}, come stai?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
         Alla fine Talco è sempre statə qui, me idiota.
         E ha creduto alla mia storia!
         Ora si è messə in testa di insegnare agli scoiattoli a suonare le noci.
@@ -104,7 +104,7 @@ TODO: eliminare Bus anche da Unity
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    Ciao {name}, qui è sempre {charNameOne} che ti scrive.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+    Ciao {name}, qui è sempre {charNameOne} che ti scrive.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
     Sono passate settimane dal mio ritorno, e finalmente ho avuto il coraggio di parlare con mio padre.
        
        {
@@ -148,7 +148,7 @@ TODO: eliminare Bus anche da Unity
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    Ciao ama!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+    Ciao ama!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
     Indovina chi ha fatto il suo primo concerto?
     
      {
@@ -243,7 +243,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+        Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         Cioè a te.
         Anche se non ho mica capito come te la mando la lettera.
         Ma come sta la rana?
@@ -348,7 +348,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        Che strano.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+        Che strano.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         Ho lasciato l'altra lettera sul comodino di notte.
         E poi è sparita.
         Non so mica se ti è arrivata.
@@ -455,7 +455,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        Ciao {name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+        Ciao {name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
                 
                 {
                 - secondCharacterPossibleStates has Riccio:
@@ -591,7 +591,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameThree = translator(thirdCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameThree}: Lettere random note da parte della personaggia #speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdCharacterInkLevel)} #inkB{ink_tag_b(thirdCharacterInkLevel)} #inkC:{ink_tag_c(thirdCharacterInkLevel)}  #inkD:{ink_tag_d(thirdCharacterInkLevel)} #portrait:third_neutral
+        {charNameThree}: Lettere random note da parte della personaggia #speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdCharacterInkLevel)} #inkB:{ink_tag_b(thirdCharacterInkLevel)} #inkC:{ink_tag_c(thirdCharacterInkLevel)}  #inkD:{ink_tag_d(thirdCharacterInkLevel)} #portrait:third_neutral
         
         {
             - thirdCharacterPossibleStates has Riccio: 
@@ -655,7 +655,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameFour}: Lettere random note da parte della personaggia#speaker:{fourthChar_tag()} #inkA:{ink_tag_a(fourthCharacterInkLevel)} #inkB{ink_tag_b(fourthCharacterInkLevel)} #inkC:{ink_tag_c(fourthCharacterInkLevel)}  #inkD:{ink_tag_d(fourthCharacterInkLevel)} #portrait:fourth_neutral
+        {charNameFour}: Lettere random note da parte della personaggia#speaker:{fourthChar_tag()} #inkA:{ink_tag_a(fourthCharacterInkLevel)} #inkB:{ink_tag_b(fourthCharacterInkLevel)} #inkC:{ink_tag_c(fourthCharacterInkLevel)}  #inkD:{ink_tag_d(fourthCharacterInkLevel)} #portrait:fourth_neutral
         
         {
             - fourthCharacterPossibleStates has Riccio: 
@@ -721,7 +721,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameFive}: Lettere random note da parte della personaggia#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+        {charNameFive}: Lettere random note da parte della personaggia#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         
         {
             - fifthCharacterPossibleStates has Riccio: 
