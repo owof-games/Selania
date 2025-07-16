@@ -27,20 +27,20 @@
                 
                 //Altre opzioni        
                     - else:
-                         {~ Ho bisogno di tempo da sola.|Torna tra un po'.|Mi serve un po' di silenzio ora.} #speaker:{firstChar_tag()}
+                         {~ Ho bisogno di tempo da sola.|Torna tra un po'.|Mi serve un po' di silenzio ora.} #speaker:{firstChar_tag()} #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
                         -> main    
                 }
     = hub
     ~ temp charNameOne = translator(firstCharacterState)
     
-         {~ Le farfalle qui giocano per ore!|No dai. Ma hai visto quanto sono carini gli scoiattoli?!|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.} #speaker:{firstChar_tag()}
+         {~ Le farfalle qui giocano per ore!|No dai. Ma hai visto quanto sono carini gli scoiattoli?!|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.} #speaker:{firstChar_tag()} #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
                 + [Ti va di raccontarmi qualcosa di te?]
                     -> knowing_first_character
                     
                     
                 //Se non ho ancora fatto il dono e NON ho parlato col mentore e ho parlato abbastanza con lei
                 + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
-                         Non voglio snitchare, ma non hai ancora chiesto alla mentore a cosa servono. #speaker:{firstChar_tag()}
+                         Non voglio snitchare, ma non hai ancora chiesto alla mentore a cosa servono. #speaker:{firstChar_tag()} #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
                          Se non parli con lei prima poi minimo ci rimane male.
                             -> main
                 
@@ -50,7 +50,7 @@
             
                 //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
                 + {first_story_gift.ink_outcome && not main_story_first_character && not questions} [Vorrei aiutarti a guardare le cose in modo diverso.]
-                        {translator(firstCharacterState)}: Ama, parla prima con la mentore così ti dice cosa fare e non le prende una sincope se facciamo casini. #speaker:{firstChar_tag()}
+                        {translator(firstCharacterState)}: Ama, parla prima con la mentore così ti dice cosa fare e non le prende una sincope se facciamo casini. #speaker:{firstChar_tag()} #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
                                 -> main
                                 
                 + {first_story_gift.ink_outcome && not main_story_first_character &&  questions} [Ti va di riscrivere la tua storia con me?]
@@ -105,7 +105,7 @@
         ~ firstStoryQuestCount ++
         
         
-        Hai visto passare qualcunə? #speaker:{firstChar_tag()} #portrait: chitarra_sad #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
+        Hai visto passare qualcunə? #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)} #speaker:{firstChar_tag()} #portrait: chitarra_sad
         Altə all’incirca una balla di fieno e che si muove come un violino.
         O almeno ləi si descriverebbe così.
         Lə adoro ma è sempre un po' edgy. #portrait: chitarra_neutral
@@ -148,8 +148,7 @@
                 Però merda se mi manca.
             -
         
-        ~ firstCharacterInkLevel ++
-        Non faccio mai niente senza Talco. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
+        Non faccio mai niente senza Talco. #speaker:{firstChar_tag()}
         Talco è l'unica persona con cui posso permettermi di litigare.
         E l'unica che mi sopporta da quando ho finito il conservatorio.
         Ma non mi sono manco presentata: io sono {charNameOne}. #speaker:{firstChar_tag()}
@@ -170,9 +169,7 @@
     	        -> gender ->
     	 {pronouns has her: Anche io uso i pronomi femminili!|Invece io uso i femminili.}
     	 Comunque questa cosa del nome è strana.
-    	 ~ firstCharacterInkLevel ++
-    	 
-    	 Non so. #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
+    	 Non so.
     	 Non è male la chitarra.
     	 Ma per una del conservatorio è tipo rinunciare a tutto.
     	 Alle ambizioni.
@@ -218,8 +215,6 @@
             -
 
         Comunque ama: il tuo nome ti si addice benissimo.
-        ~ firstCharacterInkLevel ++
-        #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
         Hai proprio una faccia da {name}.
         Ma forse la mia faccia è cambiata? Ti sembro una che può chiamarsi {charNameOne}?
         Una che ha rinunciato ad essere un pianoforte? Una viola?
@@ -264,13 +259,11 @@
         Come mi dovrei chiamare secondo te?
     	<i>Qualsiasi cosa tu abbia pensato, non riesci a dirla.</i>  #speaker:{fungus_tag()}
     	    -
-         Mmm.  #speaker:{firstChar_tag()}
+         Mmm.  #speaker:{firstChar_tag()} #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
          La tua bocca si muove ma non esce nulla.
-         ~ firstCharacterInkLevel ++
-         Interessante. #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
          Forse quella tizia che gira quì può aiutarci a capire qualcosa?
         {are_two_entities_together(Mentor, PG): {welcome.your_name: {charNameFive}|???}: In effetti avrei un paio di informazioni utili da darti!} #speaker:{fifthChar_tag()}
-         L’unica cosa certa è che ho bisogno di Talco.#speaker:{firstChar_tag()}
+         L’unica cosa certa è che ho bisogno di Talco.#speaker:{firstChar_tag()} #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
          Ci vediamo dopo, {name}.
              ~ firstPauseTalking = firstCharPauseDuration
             -> main
@@ -281,7 +274,7 @@
         //Paura di deludere la famiglia scelta
         ~ firstStoryQuestCount ++
         
-         Non riesco a trovare Talco. #speaker:{firstChar_tag()}
+         Non riesco a trovare Talco. #speaker:{firstChar_tag()} #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
          Forse devo fare pace col cervello e accettare che non è qui.
          Ma non ricordo quando è stata l'ultima volta che sono andata in giro senza di ləi.
          Prima mi sono pure persa nel cercarlə.
@@ -329,7 +322,7 @@
          Che poi a pensarci bene, non è che saranno tutti i passi di quell'altra?
          Cammina così tanto, e per cosa poi?
         {are_two_entities_together(Mentor, PG):{charNameFive}: Non hai idea di quanto lavoro ci sia da fare. Quindi sì, cammino MOLTO.} #speaker:{fifthChar_tag()}
-         Ma troppe chiacchiere ora, troppe.#speaker:{firstChar_tag()}
+         Ma troppe chiacchiere ora, troppe.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
          Fammi chillare un attimo.
             ~ firstPauseTalking = firstCharPauseDuration
             -> main  
@@ -339,7 +332,7 @@
         ~ temp charNameFive = translator(fifthCharacterState)
         ~ firstStoryQuestCount ++
         
-         Stavo pensando ad Anna.#speaker:{firstChar_tag()}
+         Stavo pensando ad Anna.#speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
          Anna è una mia ama del conservatorio.
          Insiste perché mi proponga come assistente del Ghiberti.
          Dice che lui ha stima di me e questa è la mia GRANDE occasione.
@@ -403,7 +396,7 @@
     //Silenzio
         ~ firstStoryQuestCount ++
         
-         Questo posto è carino, ma il silenzio è pesante.#speaker:{firstChar_tag()}
+         Questo posto è carino, ma il silenzio è pesante. #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
          Non c'è nemmeno un accenno di musica, di ritmo.
          Come ci si sta in un posto del genere senza sbroccare?
         
@@ -447,7 +440,7 @@
          Idea!
          Forse la mentore è abbastanza vecchia da avere una radio?
         {are_two_entities_together(Mentor, PG):{charNameFive}: Non approfittare della mia gentilezza, ragazzina.}#speaker:{fifthChar_tag()}
-        {are_two_entities_together(Mentor, PG): Dai, si fa per il meme!| Devo assolutamente chiederglielo.}#speaker:{firstChar_tag()}
+        {are_two_entities_together(Mentor, PG): Dai, si fa per il meme!| Devo assolutamente chiederglielo.} #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
              ~ firstPauseTalking = firstCharPauseDuration
             -> main 
             
@@ -457,7 +450,7 @@
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ firstStoryQuestCount ++
     
-         Hai presente quel meme del tizio che sta a una festa in un angolo.#speaker:{firstChar_tag()}
+         Hai presente quel meme del tizio che sta a una festa in un angolo. #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
          E giudica tutti?
          Ecco: io sono quella che balla e ignora il basicone.
          Passo le giornate circondata dall3 am3, mi vivo la festa.
@@ -466,7 +459,7 @@
          Ovviamente la meglio ama è Talco.
          Ti ho già detto che crea strumenti con qualsiasi cosa trova in giro?
         {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Mi piacerebbe conoscere Talco!}#speaker:{secondChar_tag()}        
-         L'estate facciamo le feste sul tetto, cantiamo e improvvisiamo.#speaker:{firstChar_tag()}
+         L'estate facciamo le feste sul tetto, cantiamo e improvvisiamo. #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
          "E vento e sudore si portano via le preoccupazioni, non c’è nulla a cui pensare."
          "Ti senti parte di tutto, privə di confini."
          "Sei la musica, sei l’umidità nell’aria, sei la gola del vicino che si lamenta del casino."
@@ -519,7 +512,7 @@
         //Paura delle conseguenze della scelta.
         ~ firstStoryQuestCount ++
         
-         Trigger warning: pesantezza, ama.#speaker:{firstChar_tag()}
+         Trigger warning: pesantezza, ama. #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
          Ma questo posto mi fa pensare a troppe cose.
          Conoscevo questo ragazzo, Jonah, un arpista e un genio.
          Per due anni ha fatto da spalla a un tizio di Beijing, una rockstar della musica classica.
@@ -583,7 +576,7 @@
     //Razionalità
         ~ firstStoryQuestCount ++
         
-         Stavo ripensando al prof Ghiberti.#speaker:{firstChar_tag()}
+         Stavo ripensando al prof Ghiberti.#speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
          E prometto che non è un pippone a questo giro.
          Forse.
          Comunque: il Ghiberti vede tutta la musica come una cosa matematica.
@@ -633,7 +626,7 @@
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ firstStoryQuestCount ++
         
-         Giuro che non shippo il Ghiberti, ma continuo a pensare a quello che ci siamo dette prima.#speaker:{firstChar_tag()}
+         Giuro che non shippo il Ghiberti, ma continuo a pensare a quello che ci siamo dette prima.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
          E il Ghiberti sembra un uomo felice, sorride molto.
          Ma poi se lo guardi bene sembra il sorriso di un robot.
          O di uno che ha una Tesla.
@@ -644,11 +637,11 @@
          Tra ame sbagliamo sempre, e poi ci perdoniamo.
          Mentre il mondo del Ghiberti sembra come quella roba con l’AI, orecchiabile, prevedibile, dimenticabile.
          C'è una sola cosa che mi triggera le ovaie: tutte le cosine pratichine e calcolabili e precise.
-         Sono roba morta.#speaker:{firstChar_tag()}
+        Sono roba morta.#speaker:{firstChar_tag()}
         {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Essere adulti è orribile.}  #speaker:{secondChar_tag()}     
-            
+        Morta. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}    
             + [Una comunità sboccia quando c'è affetto e fiducia.]
-                 Esatto!#speaker:{firstChar_tag()}
+                 Esatto!
                  Una casa in campagna con l3 am3.
                  Un giardino.
                  Anna dice che è come fuggire dalle responsabilità.
@@ -656,28 +649,28 @@
                     ~ firstGreen ++
                 
             + [Una comunità non regge senza senso pratico.]
-                 Giuro ama che a volte mi triggeri tantissimo.#speaker:{firstChar_tag()}
+                 Giuro ama che a volte mi triggeri tantissimo.
                  Perché tutto è solo senso pratico per te?
                  Non è comunità la roba che hai in mente, ma una roba come una fabbrica.
                  E io non ci voglio vivere in una fabbrica.
                     ~ firstBlue ++
                     
             + [Una comunità resiste se segue un obiettivo superiore.]
-                 Mood totale.#speaker:{firstChar_tag()}
+                 Mood totale.
                  Una comunità unita per rendere il mondo più giusto.
                  O trasformare qualcosa di terribile in un gioco.
                  E farlo esplodere.
                     ~ firstPurple ++
         
             + [Ciò che ci tiene unite è il giocare.]
-                 Ah, ci sta!#speaker:{firstChar_tag()}
+                 Ah, ci sta!
                  È  liberatorio ridere tutt3 assieme.
                  Forse dovrei solo far ridere il Ghiberti, e magari quel sorrisino finto si rompe.
                  Oppure mi schiatta sul posto.
                     ~ firstYellow ++
                     
             + [Ci si accresce nel dissenso e nella discussione.]
-                 Amo noi.#speaker:{firstChar_tag()}
+                 Amo noi.
                  Ma non è manco male sedersi assieme al sole e chillare, ogni tanto, no?
                     ~ firstRed ++
      
@@ -695,7 +688,7 @@
         //Voglia di fare qualcosa di utile, importante
         ~ firstStoryQuestCount ++
         
-         Non lo dire alla mentore, ma mi ci sto abituando a stare qui.#speaker:{firstChar_tag()}
+         Non lo dire alla mentore, ma mi ci sto abituando a stare qui.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)} 
          Anche se non sarebbe male avere almeno un pianoforte e del vinello.
          Però mi sembra che questo posto non cambia molto.
          Sembra il momento prima del temporale, quando l'aria frizza e sai che sta per arrivare ma non sai quanto sarà forte.
@@ -749,11 +742,11 @@
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ firstStoryQuestCount ++
         
-         Comunque non è che penso solo a me stessa ama, giuro.#speaker:{firstChar_tag()}
+         Comunque non è che penso solo a me stessa ama, giuro.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)} 
          L'anno scorso abbiamo occupato un parco per una settimana.
          Il comune voleva distruggere gli alberi, e volevamo fare qualcosa di decente per una buona volta.
         {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: La prossima volta voglio aiutarvi!}#speaker:{secondChar_tag()}
-        {are_two_entities_together(SecondCharacter, PG): Sarai il primo a venire chiamato, promesso!} #speaker:{firstChar_tag()}        
+        {are_two_entities_together(SecondCharacter, PG): Sarai il primo a venire chiamato, promesso!} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}         
          La prima notte non abbiamo manco sentito il freddo da quanto eravamo prese bene.
          Però poi il mood si è spento.
          Diverse se ne sono andate, e chi è rimasta non aveva più la spinta. Zero.
@@ -812,7 +805,7 @@
         //Famiglia d'origine
         ~ firstStoryQuestCount ++
         
-         Ti racconto una cosa idiota. La passione per la musica l'ho presa da mio papà.#speaker:{firstChar_tag()}
+         Ti racconto una cosa idiota. La passione per la musica l'ho presa da mio papà.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)} 
          Lo stesso uomo che ora vorrebbe cercassi un "lavoro vero".
          Casa è piena di vecchi strumenti che nessuno tocca da anni.
          Sono del nonno paterno.
@@ -869,15 +862,15 @@
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ firstStoryQuestCount ++
     
-         Comunque in merito a quello che ti dicevo prima, ama: non è che papà sia un mostro, sia chiaro.#speaker:{firstChar_tag()}
+         Comunque in merito a quello che ti dicevo prima, ama: non è che papà sia un mostro, sia chiaro.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
          Mamma è più cinica di papà.
          Le sono grata, quello sicuro: è lei che ha convinto papà a farmi fare il conservatorio.
          Ma per farmi diventare una Lang Lang, Mitsuko Uchida, Alfred Brendel.
          Prestigio, onoreficienze e denaro.
          Lib totale lei, totale.
          Ma chi glielo dice che a ventitrè anni per queste cose sono già vecchia?
-        {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Moooooolto vecchia!}#speaker:{secondChar_tag()}       
-         Se quello è l'obiettivo, ho proprio preso la strada sbagliata.#speaker:{firstChar_tag()}
+        {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Moooooolto vecchia!}#speaker:{secondChar_tag()}
+         Se quello è l'obiettivo, ho proprio preso la strada sbagliata.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)} 
         
             + [Tua mamma vuole il tuo o il suo di bene?]
                  A mia madre interessa solo il nome della famiglia.
@@ -938,7 +931,7 @@
         
     
         = ink_outcome    
-            <i>Dopo il tuo dono {inkTranslator(firstCharacterInkLevel)}.
+            <i>Dopo il tuo dono {inkTranslator(firstCharacterInkLevel)}. #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)} 
                  -> talk_with_first_character
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
@@ -980,7 +973,7 @@
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
-         Ho capito una cosa su di noi, ama.#speaker:{firstChar_tag()}
+         Ho capito una cosa su di noi, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)} 
         {
             -   are_two_entities_together(Mentor, PG):{charNameFive}: Sicuro è il caso che vi lasci il vostro spazio.#speaker:{fifthChar_tag()}
                     ~ change_entity_place(Mentor)
@@ -992,7 +985,7 @@
         
             -> firstAffinityCalc ->
         {
-        - firstPurple && firstYellow > firstBlue:  Talco continua a mancarmi, ma con te mi sento come se fossimo parte da sempre della stessa band.#speaker:{firstChar_tag()}
+        - firstPurple && firstYellow > firstBlue:  Talco continua a mancarmi, ma con te mi sento come se fossimo parte da sempre della stessa band.#speaker:{firstChar_tag()} 
         
         <i>{charNameOne} vede {name} come una persona amica e fidata.</i> #speaker:{fungus_tag()}
         
@@ -1011,7 +1004,7 @@
         
         }
         
-         Comunque: credo di aver capito perché il mio nome qui è {charNameOne}.#speaker:{firstChar_tag()}
+         Comunque: credo di aver capito perché il mio nome qui è {charNameOne}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
          Penso al Ghiberti.
          Penso all3 am3.
          Penso alla mia famiglia.
@@ -1038,7 +1031,7 @@
 
     = statement
     ~ temp charNameOne = translator(firstCharacterState)
-        <i>A seguito del rapporto che {name} ha creato con {charNameOne} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
+        <i>A seguito del rapporto che {name} ha creato con {charNameOne} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i> #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)} 
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(firstCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]
@@ -1051,6 +1044,8 @@
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
+    ~ numberQuestion ++
+    
     {
         -   are_two_entities_together(Mentor, PG):{charNameFive}: Bene, è il momento che mi allontani.#speaker:{fifthChar_tag()}
                 ~ change_entity_place(Mentor)
@@ -1059,6 +1054,7 @@
         -   are_two_entities_together(SecondCharacter, PG): {charNameTwo}, avremmo bisogno di privacy, puoi andare a fare due passi?#speaker:{firstChar_tag()}
                 ~ change_entity_place(SecondCharacter)
     }
+    Sono pronta #speaker: {firstChar_tag()}#inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
     
     Prima hai detto che hai il terrore di fare una scelta. #speaker:{PG_tag()}
         
@@ -1102,17 +1098,19 @@
                 }
             
         -
- 
+    Continua #speaker: {firstChar_tag()}#inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
+    
         {
         - firstCharacterInkLevel == Empty:
             -> ending
         - else: 
-            ~ numberQuestion ++
             -> two
         }        
         
     = two
+    ~ numberQuestion ++
     ~ temp charNameOne = translator(firstCharacterState)
+    
     Temi che le persone a cui vuoi bene si sentano tradite dalla scelta che farai.
 
         + [Con Talco puoi litigare, eppure siete legatissim3.]
@@ -1157,15 +1155,16 @@
                 }
                     
         -
+        Ti ascolto.  #speaker: {firstChar_tag()}#inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
         {
         - firstCharacterInkLevel == Low:
             -> ending
         - else:
-            ~ numberQuestion ++
             -> three
         }
         
     = three
+    ~ numberQuestion ++    
     ~ temp charNameOne = translator(firstCharacterState)
     Vedi una scelta come una strada chiusa, qualcosa da cui non poter tornare indietro.
 
@@ -1213,15 +1212,17 @@
             I tuoi genitori.
             Anche se a volte i vostri cuori sono distanti, quando c'è un bisogno sappiamo sempre ritrovarci.            
         -
+        Mmm. #speaker: {firstChar_tag()}#inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
+        
         {
         - firstCharacterInkLevel == Normal:
             -> ending
         - else:
-            ~ numberQuestion ++
             -> four
         }
     
     = four
+     ~ numberQuestion ++
     ~ temp charNameOne = translator(firstCharacterState)
         {name} Questo posto ti ha assegnato un nome, e quel nome è Chitarra. Ma tu lo vedi come una rinuncia.
 
@@ -1261,12 +1262,13 @@
             Spesso è più costosa, ma la coerenza personale non ha prezzo.
             
         -
+        Va bene. #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
         
         -> ending
 
     = ending
     ~ temp charNameOne = translator(firstCharacterState)
-    ~ numberQuestion = 1
+    ~ numberQuestion = 0
     
      Per questo ti dico:
         + {firstRed > 0} [Prendi una strada e se non ti piace cambiala!]
@@ -1296,8 +1298,9 @@
         
                 
         -     
-        
-     Grazie, {name}.#speaker:{firstChar_tag()}
+    ~ firstCharacterInkLevel = Empty
+    
+     Grazie, {name}. #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
      Mentre ti ascoltavo mi è nata una nuova canzone in testa.
      La canzone del mio nome.
         
@@ -1346,7 +1349,7 @@
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-        C'è una cosa che devo dirti ama.#speaker:{firstChar_tag()}
+        C'è una cosa che devo dirti ama.#speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
         Riguarda {charNameFive}.
         Non voglio sembrare una snitch ma continuo a chiedermi: qual è il confine tra essere una brava persona ed essere una manipolatrice?
         A me non la conta giusta quella.
@@ -1359,7 +1362,7 @@
             
     = exit
     ~ temp charNameOne = translator(firstCharacterState)
-        E ora resterò qui a romperti le gonadi ancora per un po', in attesa del prossimo treno.#speaker:{firstChar_tag()}
+        E ora resterò qui a romperti le gonadi ancora per un po', in attesa del prossimo treno. #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
             ~ firstStory = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(firstStoryPG)
@@ -1378,13 +1381,13 @@
     }
     
         - (top)
-        {~ Quanto mi prenderà per il culo Talco, quando lə racconterò tutta questa storia?|Comunque in questo posto dovreste mettere almeno un piano bar.|Se lo dico all3 am3 del conservatorio mi fanno il culo, ma vado pazza per le k-pop night.|Ma tu l'hai vista quella strana rana nello stagno?}#speaker:{firstChar_tag()}
+        {~ Quanto mi prenderà per il culo Talco, quando lə racconterò tutta questa storia?|Comunque in questo posto dovreste mettere almeno un piano bar.|Se lo dico all3 am3 del conservatorio mi fanno il culo, ma vado pazza per le k-pop night.|Ma tu l'hai vista quella strana rana nello stagno?} #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
                 ~ firstCharEndingDialogue ++
         -> main
         
         = goodbye
         ~ temp charNameOne = translator(firstCharacterState)
-        Ama: è il momento di tornare a casa.#speaker:{firstChar_tag()}
+        Ama: è il momento di tornare a casa. #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
         {firstCharacterPossibleStates hasnt Chitarra: Non ho idea di che cosa accadrà, sinceramente, ma almeno ora mi sento pronta.}
         {firstCharacterPossibleStates hasnt Chitarra: E non cringiare ma: grazie. Mi hai dato una mano enorme. Me lo ricorderò.}
         {firstCharacterPossibleStates has Chitarra:Vedremo cosa mi accadrà.}
@@ -1402,17 +1405,6 @@
 === first_character_opinions
 ~ temp charNameOne = translator(firstCharacterState) 
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
-    {~ Talco dice sempre che bisogna sporcarsi le mani per capire il mondo.|Se proprio devo restare qui, tiro su una band con le api. Sono troppo chaddone loro.|Comunque il Ghiberti ha una moglie che è stra in gamba. Forse a volte ci si deve compensare. E visto che Talco è svegliə, io allora sono l'idiota della cumpa.|Resti tra noi, ma il Conservatorio è un posto del cazzo. C'è una competitività che non c'entra nulla con la musica.|Mi scoccia litigare con mio padre, ma io e il suo modo di fare NON. ANDIAMO. D'ACCORDO. Zero, ama. Zero.}#speaker:{firstChar_tag()}
+    {~ Talco dice sempre che bisogna sporcarsi le mani per capire il mondo.|Se proprio devo restare qui, tiro su una band con le api. Sono troppo chaddone loro.|Comunque il Ghiberti ha una moglie che è stra in gamba. Forse a volte ci si deve compensare. E visto che Talco è svegliə, io allora sono l'idiota della cumpa.|Resti tra noi, ma il Conservatorio è un posto del cazzo. C'è una competitività che non c'entra nulla con la musica.|Mi scoccia litigare con mio padre, ma io e il suo modo di fare NON. ANDIAMO. D'ACCORDO. Zero, ama. Zero.} #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
         ~ firstPauseTalking = firstCharPauseDuration
             -> main
-
-
-
-
-
-
-
-
-
-
-
