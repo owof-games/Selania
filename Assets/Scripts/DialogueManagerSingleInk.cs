@@ -477,22 +477,22 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     break;
 
                 case INK_TAG_A:
-                    //inkAnimatorA.Play(tagValue);
+                    inkAnimatorA.Play(tagValue);
                     Debug.Log("inkA" + tagValue);
                     break;
 
                 case INK_TAG_B:
-                    //inkAnimatorB.Play(tagValue);
+                    inkAnimatorB.Play(tagValue);
                     Debug.Log("inkB" + tagValue);
                     break;     
 
                 case INK_TAG_C:
-                    //inkAnimatorC.Play(tagValue);
+                    inkAnimatorC.Play(tagValue);
                     Debug.Log("inkC" + tagValue);
                     break; 
 
                 case INK_TAG_D:
-                    //inkAnimatorD.Play(tagValue);
+                    inkAnimatorD.Play(tagValue);
                     Debug.Log("inkD" + tagValue);
                     break;
 
