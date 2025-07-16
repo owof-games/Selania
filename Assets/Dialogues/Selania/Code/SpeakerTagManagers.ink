@@ -114,3 +114,144 @@
    Funzioni per la gestione del tag dell'inchiostro 
 
 ----------------------------------*/
+LIST imagesStates = offState, onState, emptyState
+
+=== function ink_tag_a (charInkCheck)
+
+    {
+        - charInkCheck == firstCharacterInkLevel:
+            ~ Ink = firstCharacterInkLevel
+        
+        - charInkCheck == secondCharacterInkLevel:
+            ~ Ink = secondCharacterInkLevel
+        
+        - charInkCheck == thirdCharacterInkLevel:
+            ~ Ink = thirdCharacterInkLevel
+            
+        - charInkCheck == fourthCharacterInkLevel:
+            ~ Ink = fourthCharacterInkLevel
+        
+        - charInkCheck == fifthCharacterInkLevel:
+            ~ Ink = fifthCharacterInkLevel    
+            
+    }
+    
+    {Ink:
+        - Empty:
+                ~ return "offState"
+        - Low:
+                ~ return "onState"
+        - Normal:
+                ~ return "onState"
+        - Medium:
+                ~ return "onState"
+        - High:
+                ~ return "onState"
+        - else:
+            error
+    }
+    
+=== function ink_tag_b (charInkCheck)
+
+    {
+        - charInkCheck == firstCharacterInkLevel:
+            ~ Ink = firstCharacterInkLevel
+        
+        - charInkCheck == secondCharacterInkLevel:
+            ~ Ink = secondCharacterInkLevel
+        
+        - charInkCheck == thirdCharacterInkLevel:
+            ~ Ink = thirdCharacterInkLevel
+            
+        - charInkCheck == fourthCharacterInkLevel:
+            ~ Ink = fourthCharacterInkLevel
+        
+        - charInkCheck == fifthCharacterInkLevel:
+            ~ Ink = fifthCharacterInkLevel    
+            
+    }
+    
+    {Ink:
+        - Empty:
+                ~ return offState
+        - Low:
+                ~ return offState
+        - Normal:
+                ~ return onState
+        - Medium:
+                ~ return onState
+        - High:
+                ~ return onState
+        - else:
+            error
+    }    
+
+=== function ink_tag_c (charInkCheck)
+
+    {
+        - charInkCheck == firstCharacterInkLevel:
+            ~ Ink = firstCharacterInkLevel
+        
+        - charInkCheck == secondCharacterInkLevel:
+            ~ Ink = secondCharacterInkLevel
+        
+        - charInkCheck == thirdCharacterInkLevel:
+            ~ Ink = thirdCharacterInkLevel
+            
+        - charInkCheck == fourthCharacterInkLevel:
+            ~ Ink = fourthCharacterInkLevel
+        
+        - charInkCheck == fifthCharacterInkLevel:
+            ~ Ink = fifthCharacterInkLevel    
+            
+    }
+    
+    {Ink:
+        - Empty:
+                ~ return offState
+        - Low:
+                ~ return offState
+        - Normal:
+                ~ return offState
+        - Medium:
+                ~ return onState
+        - High:
+                ~ return onState
+        - else:
+            error
+    }
+
+=== function ink_tag_d (charInkCheck)
+
+    {
+        - charInkCheck == firstCharacterInkLevel:
+            ~ Ink = firstCharacterInkLevel
+        
+        - charInkCheck == secondCharacterInkLevel:
+            ~ Ink = secondCharacterInkLevel
+        
+        - charInkCheck == thirdCharacterInkLevel:
+            ~ Ink = thirdCharacterInkLevel
+            
+        - charInkCheck == fourthCharacterInkLevel:
+            ~ Ink = fourthCharacterInkLevel
+        
+        - charInkCheck == fifthCharacterInkLevel:
+            ~ Ink = fifthCharacterInkLevel    
+            
+    }
+    
+    {Ink:
+        - Empty:
+                ~ return offState
+        - Low:
+                ~ return offState
+        - Normal:
+                ~ return offState
+        - Medium:
+                ~ return offState
+        - High:
+                ~ return onState
+        - else:
+            error
+    }     

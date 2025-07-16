@@ -105,7 +105,7 @@
         ~ firstStoryQuestCount ++
         
         
-        Hai visto passare qualcunə? #speaker:{firstChar_tag()} #portrait: chitarra_sad #ink:none
+        Hai visto passare qualcunə? #speaker:{firstChar_tag()} #portrait: chitarra_sad #inkA{ink_tag_a(firstCharacterInkLevel)} #inkB{ink_tag_b(firstCharacterInkLevel)}  #inkC{ink_tag_c(firstCharacterInkLevel)}  #inkD{ink_tag_d(firstCharacterInkLevel)}
         Altə all’incirca una balla di fieno e che si muove come un violino.
         O almeno ləi si descriverebbe così.
         Lə adoro ma è sempre un po' edgy. #portrait: chitarra_neutral
@@ -148,7 +148,8 @@
                 Però merda se mi manca.
             -
         
-        Non faccio mai niente senza Talco. #speaker:{firstChar_tag()} #ink:one
+        ~ firstCharacterInkLevel ++
+        Non faccio mai niente senza Talco. #speaker:{firstChar_tag()} #inkA{ink_tag_a(firstCharacterInkLevel)} #inkB{ink_tag_b(firstCharacterInkLevel)}  #inkC{ink_tag_c(firstCharacterInkLevel)}  #inkD{ink_tag_d(firstCharacterInkLevel)}
         Talco è l'unica persona con cui posso permettermi di litigare.
         E l'unica che mi sopporta da quando ho finito il conservatorio.
         Ma non mi sono manco presentata: io sono {charNameOne}. #speaker:{firstChar_tag()}
@@ -169,7 +170,9 @@
     	        -> gender ->
     	 {pronouns has her: Anche io uso i pronomi femminili!|Invece io uso i femminili.}
     	 Comunque questa cosa del nome è strana.
-    	 Non so. #ink:two
+    	 ~ firstCharacterInkLevel ++
+    	 
+    	 Non so. #inkA{ink_tag_a(firstCharacterInkLevel)} #inkB{ink_tag_b(firstCharacterInkLevel)}  #inkC{ink_tag_c(firstCharacterInkLevel)}  #inkD{ink_tag_d(firstCharacterInkLevel)}
     	 Non è male la chitarra.
     	 Ma per una del conservatorio è tipo rinunciare a tutto.
     	 Alle ambizioni.
@@ -214,7 +217,9 @@
                     ~ firstBlue ++         
             -
 
-        Comunque ama: il tuo nome ti si addice benissimo. #ink:three
+        Comunque ama: il tuo nome ti si addice benissimo.
+        ~ firstCharacterInkLevel ++
+        #inkA{ink_tag_a(firstCharacterInkLevel)} #inkB{ink_tag_b(firstCharacterInkLevel)}  #inkC{ink_tag_c(firstCharacterInkLevel)}  #inkD{ink_tag_d(firstCharacterInkLevel)}
         Hai proprio una faccia da {name}.
         Ma forse la mia faccia è cambiata? Ti sembro una che può chiamarsi {charNameOne}?
         Una che ha rinunciato ad essere un pianoforte? Una viola?
@@ -261,7 +266,8 @@
     	    -
          Mmm.  #speaker:{firstChar_tag()}
          La tua bocca si muove ma non esce nulla.
-         Interessante. #ink:four
+         ~ firstCharacterInkLevel ++
+         Interessante. #inkA{ink_tag_a(firstCharacterInkLevel)} #inkB{ink_tag_b(firstCharacterInkLevel)}  #inkC{ink_tag_c(firstCharacterInkLevel)}  #inkD{ink_tag_d(firstCharacterInkLevel)}
          Forse quella tizia che gira quì può aiutarci a capire qualcosa?
         {are_two_entities_together(Mentor, PG): {welcome.your_name: {charNameFive}|???}: In effetti avrei un paio di informazioni utili da darti!} #speaker:{fifthChar_tag()}
          L’unica cosa certa è che ho bisogno di Talco.#speaker:{firstChar_tag()}

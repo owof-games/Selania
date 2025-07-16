@@ -39,7 +39,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private GameObject[] entities;
     [SerializeField] private TextMeshProUGUI displayNameText;
     [SerializeField] private Animator portraitAnimator;
-    [SerializeField] private Animator inkAnimator;
+    [SerializeField] private Animator inkAnimatorA;
+    [SerializeField] private Animator inkAnimatorB;
+    [SerializeField] private Animator inkAnimatorC;
+    [SerializeField] private Animator inkAnimatorD;
 
 
     [Header("Background setting")]
@@ -101,8 +104,11 @@ public class DialogueManagerSingleInk : MonoBehaviour
     //TAG USATO PER RITRATTO
     private const string PORTRAIT_TAG = "portrait";
 
-    //TAG USATO PER INCHIOSTRO
-    private const string INK_TAG = "ink";
+    //TAGS USATI PER INCHIOSTRO
+    private const string INK_TAG_A = "inkA";
+    private const string INK_TAG_B = "inkB";
+    private const string INK_TAG_C = "inkC";
+    private const string INK_TAG_D = "inkD";
 
     void Start()
     {
@@ -470,10 +476,25 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     Debug.Log("portrait" + tagValue);
                     break;
 
-                case INK_TAG:
-                    inkAnimator.Play(tagValue);
-                    Debug.Log("ink" + tagValue);
-                    break;                    
+                case INK_TAG_A:
+                    //inkAnimatorA.Play(tagValue);
+                    Debug.Log("inkA" + tagValue);
+                    break;
+
+                case INK_TAG_B:
+                    //inkAnimatorB.Play(tagValue);
+                    Debug.Log("inkB" + tagValue);
+                    break;     
+
+                case INK_TAG_C:
+                    //inkAnimatorC.Play(tagValue);
+                    Debug.Log("inkC" + tagValue);
+                    break; 
+
+                case INK_TAG_D:
+                    //inkAnimatorD.Play(tagValue);
+                    Debug.Log("inkD" + tagValue);
+                    break;
 
                 default:
                     Debug.LogWarning("Tag came in but is not currently handled: " + tag);
