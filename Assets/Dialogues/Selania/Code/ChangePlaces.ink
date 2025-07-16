@@ -63,7 +63,7 @@
 
 //Streets to Library
     + {are_two_entities_together(PG, FromForestToLibraryDesat) && secondTier == false} [FromForestToLibraryDesat]
-        <i>Questa strada risulta bloccata, per ora.</i>
+        <i>Questa strada risulta bloccata, per ora.</i> #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
         //~ move_entity(PG, Library)
         //-> library
             -> main
@@ -76,7 +76,7 @@
 //Streets to Nest
     
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToNest)} [FromGreenhouseMiddlePathToNest]
-            <i>Questa strada risulta bloccata.</i>
+            <i>Questa strada risulta bloccata.</i> #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
             -> main
     
     //{
@@ -95,7 +95,7 @@
     + {are_two_entities_together(PG, FromLibraryToLaboratory)} [FromLibraryToLaboratory]
     
     {
-        - not fourthTier: <i>Questa strada risulta bloccata.</i>
+        - not fourthTier: <i>Questa strada risulta bloccata.</i> #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
             -> main
         - else:
             ~ move_entity(PG, Laboratory)
