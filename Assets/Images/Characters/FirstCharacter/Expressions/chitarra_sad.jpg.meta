@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      chitarra_sad_0: 8555336330505364567
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
