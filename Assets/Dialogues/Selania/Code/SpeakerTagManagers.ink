@@ -1,4 +1,8 @@
-TODO: se necessario, creare sistema reattivo per ritratto del fungo (es: chiamo la funzione e cambia l'asset a seconda di alcune condizioni).
+/* ---------------------------------
+
+   Funzioni per la gestione del tag del nome 
+
+ ----------------------------------*/
 
 === function firstChar_tag
 {
@@ -95,4 +99,18 @@ TODO: se necessario, creare sistema reattivo per ritratto del fungo (es: chiamo 
     ~ return "La Rana Parlante"
     
 === function PG_tag
-    ~ return "{name}"    
+    ~ return "{name}"
+    
+/* ---------------------------------
+
+   Funzioni per la gestione del tag del ritratto 
+
+ ----------------------------------*/
+ TODO: se necessario, creare sistema reattivo per ritratto del fungo (es: chiamo la funzione e cambia l'asset a seconda di alcune condizioni).
+
+ 
+/* ---------------------------------
+
+   Funzioni per la gestione del tag dell'inchiostro 
+
+----------------------------------*/
