@@ -3,7 +3,7 @@
 #ambientSounds: {tag_ambientSounds()}
 TODO: eliminare Bus anche da Unity
 
-{train_stop == 1: <i>Questa è la stazione del treno.|<i>{~ La stazione profuma di partenze.|La panchina aspetta fremente una nuova conoscenza.|Sulle vette la luce brilla leggera.|Un vento fresco ti sospinge lungo la strada.|Le lettere ondeggiano sulla bacheca.|L'odore della foresta scalda il sentiero.}</i>}#speaker:{fungus_tag()}
+{train_stop == 1: <i>Questa è la stazione del treno.|<i>{~ La stazione profuma di partenze.|La panchina aspetta fremente una nuova conoscenza.|Sulle vette la luce brilla leggera.|Un vento fresco ti sospinge lungo la strada.|Le lettere ondeggiano sulla bacheca.|L'odore della foresta scalda il sentiero.}</i>}#speaker:{fungus_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
 
     + [Mi guardo attorno.]
     -
@@ -13,7 +13,7 @@ TODO: eliminare Bus anche da Unity
 === starting_note ===
     + {are_two_entities_together(StartingNote, PG)}[StartingNote]
     
-    Ti scrivo perché volevo ringraziarti per quello che hai fatto.#speaker: Sconosciutə
+    Ti scrivo perché volevo ringraziarti per quello che hai fatto.#speaker: Sconosciutə#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         Le cose nella mia vita hanno ripreso a funzionare. 
     Ci sono ancora molte giornate no, ma sempre più  più spesso anche delle giornate sni.
     E persino qualche giornata YEAH!
@@ -58,7 +58,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        Ciao {name}, come stai? #speaker:{firstChar_tag()}
+        Ciao {name}, come stai? #speaker:{firstChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         Alla fine Talco è sempre statə qui, me idiota.
         E ha creduto alla mia storia!
         Ora si è messə in testa di insegnare agli scoiattoli a suonare le noci.
@@ -104,7 +104,7 @@ TODO: eliminare Bus anche da Unity
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    Ciao {name}, qui è sempre {charNameOne} che ti scrive.  #speaker:{firstChar_tag()}
+    Ciao {name}, qui è sempre {charNameOne} che ti scrive.  #speaker:{firstChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
     Sono passate settimane dal mio ritorno, e finalmente ho avuto il coraggio di parlare con mio padre.
        
        {
@@ -148,7 +148,7 @@ TODO: eliminare Bus anche da Unity
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    Ciao ama!  #speaker:{firstChar_tag()}
+    Ciao ama!  #speaker:{firstChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
     Indovina chi ha fatto il suo primo concerto?
     
      {
@@ -243,7 +243,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameTwo}: Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {name}.  #speaker:{secondChar_tag()}
+        {charNameTwo}: Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {name}.  #speaker:{secondChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         {charNameTwo}: Cioè a te.
         {charNameTwo}: Anche se non ho mica capito come te la mando la lettera.
         {charNameTwo}: Ma come sta la rana?
@@ -348,7 +348,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameTwo}: Che strano. #speaker:{secondChar_tag()}
+        {charNameTwo}: Che strano. #speaker:{secondChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         {charNameTwo}: Ho lasciato l'altra lettera sul comodino di notte.
         {charNameTwo}: E poi è sparita.
         {charNameTwo}: Non so mica se ti è arrivata.
@@ -455,7 +455,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameTwo}: Ciao {name}. #speaker:{secondChar_tag()}
+        {charNameTwo}: Ciao {name}. #speaker:{secondChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
                 
                 {
                 - secondCharacterPossibleStates has Riccio:
@@ -591,7 +591,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameThree = translator(thirdCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameThree}: Lettere random note da parte della personaggia #speaker:{thirdChar_tag()}
+        {charNameThree}: Lettere random note da parte della personaggia #speaker:{thirdChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         
         {
             - thirdCharacterPossibleStates has Riccio: 
@@ -655,7 +655,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameFour}: Lettere random note da parte della personaggia #speaker:{fourthChar_tag()}
+        {charNameFour}: Lettere random note da parte della personaggia #speaker:{fourthChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         
         {
             - fourthCharacterPossibleStates has Riccio: 
@@ -721,7 +721,7 @@ TODO: eliminare Bus anche da Unity
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {charNameFive}: Lettere random note da parte della personaggia #speaker:{fifthChar_tag()}
+        {charNameFive}: Lettere random note da parte della personaggia #speaker:{fifthChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         
         {
             - fifthCharacterPossibleStates has Riccio: 

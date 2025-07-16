@@ -1,7 +1,7 @@
 === greenhouse_middle_path ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-{greenhouse_middle_path== 1: <i>Spazi aperti, insetti, e ninfee galleggianti</i>|<i>{~Il cammino è ricco dell'odore dei funghi|Il cammino è luce|Lontana, la serra si rinfresca all'ombra dei monti|Lo stagno brulica di vita}</i>}. #speaker:{fungus_tag()}
+{greenhouse_middle_path== 1: <i>Spazi aperti, insetti, e ninfee galleggianti</i>|<i>{~Il cammino è ricco dell'odore dei funghi|Il cammino è luce|Lontana, la serra si rinfresca all'ombra dei monti|Lo stagno brulica di vita}</i>}. #speaker:{fungus_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
     + [Mi guardo attorno.]
     -
     
@@ -12,7 +12,7 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameOne = translator(firstCharacterState)
     + {are_two_entities_together(TheFrog, PG)} [TheFrog]
-        <i>Una rana bluastra ti osserva incuriosita.</i> #speaker:{fungus_tag()}
+        <i>Una rana bluastra ti osserva incuriosita.</i> #speaker:{fungus_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
             Cra Cra #firstSpeaker:{frog_tag()}
             Cra
             Cra?

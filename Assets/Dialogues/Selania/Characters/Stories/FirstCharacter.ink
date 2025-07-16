@@ -257,12 +257,12 @@
             -
        
         Come mi dovrei chiamare secondo te?
-    	<i>Qualsiasi cosa tu abbia pensato, non riesci a dirla.</i>  #speaker:{fungus_tag()}
+    	<i>Qualsiasi cosa tu abbia pensato, non riesci a dirla.</i>  #speaker:{fungus_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
     	    -
          Mmm.  #speaker:{firstChar_tag()} #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
          La tua bocca si muove ma non esce nulla.
          Forse quella tizia che gira quì può aiutarci a capire qualcosa?
-        {are_two_entities_together(Mentor, PG): {welcome.your_name: {charNameFive}|???}: In effetti avrei un paio di informazioni utili da darti!} #speaker:{fifthChar_tag()}
+        {are_two_entities_together(Mentor, PG): {welcome.your_name: {charNameFive}|???}: In effetti avrei un paio di informazioni utili da darti!} #speaker:{fifthChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
          L’unica cosa certa è che ho bisogno di Talco.#speaker:{firstChar_tag()} #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
          Ci vediamo dopo, {name}.
              ~ firstPauseTalking = firstCharPauseDuration
@@ -321,7 +321,7 @@
         
          Che poi a pensarci bene, non è che saranno tutti i passi di quell'altra?
          Cammina così tanto, e per cosa poi?
-        {are_two_entities_together(Mentor, PG):{charNameFive}: Non hai idea di quanto lavoro ci sia da fare. Quindi sì, cammino MOLTO.} #speaker:{fifthChar_tag()}
+        {are_two_entities_together(Mentor, PG):{charNameFive}: Non hai idea di quanto lavoro ci sia da fare. Quindi sì, cammino MOLTO.} #speaker:{fifthChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
          Ma troppe chiacchiere ora, troppe.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
          Fammi chillare un attimo.
             ~ firstPauseTalking = firstCharPauseDuration
@@ -439,7 +439,7 @@
             -
          Idea!
          Forse la mentore è abbastanza vecchia da avere una radio?
-        {are_two_entities_together(Mentor, PG):{charNameFive}: Non approfittare della mia gentilezza, ragazzina.}#speaker:{fifthChar_tag()}
+        {are_two_entities_together(Mentor, PG):{charNameFive}: Non approfittare della mia gentilezza, ragazzina.}#speaker:{fifthChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         {are_two_entities_together(Mentor, PG): Dai, si fa per il meme!| Devo assolutamente chiederglielo.} #speaker: {firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
              ~ firstPauseTalking = firstCharPauseDuration
             -> main 
@@ -922,7 +922,7 @@
 
  === first_story_gift ===
 ~ temp charNameOne = translator(firstCharacterState)
-<i> Stai per donare qualcosa a {charNameOne}.</i> #speaker:{fungus_tag()}
+<i> Stai per donare qualcosa a {charNameOne}.</i> #speaker:{fungus_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += FirstCharacter
             -> inventory_management
@@ -975,7 +975,7 @@
     ~ temp charNameTwo = translator(secondCharacterState)
          Ho capito una cosa su di noi, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)} 
         {
-            -   are_two_entities_together(Mentor, PG):{charNameFive}: Sicuro è il caso che vi lasci il vostro spazio.#speaker:{fifthChar_tag()}
+            -   are_two_entities_together(Mentor, PG):{charNameFive}: Sicuro è il caso che vi lasci il vostro spazio.#speaker:{fifthChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
                     ~ change_entity_place(Mentor)
         }
         {
@@ -987,20 +987,20 @@
         {
         - firstPurple && firstYellow > firstBlue:  Talco continua a mancarmi, ma con te mi sento come se fossimo parte da sempre della stessa band.#speaker:{firstChar_tag()} 
         
-        <i>{charNameOne} vede {name} come una persona amica e fidata.</i> #speaker:{fungus_tag()}
+        <i>{charNameOne} vede {name} come una persona amica e fidata.</i> #speaker:{fungus_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         
         -firstPurple or firstYellow > firstBlue: Non sei mica male, sai? Mi sembra che cantiamo un po' la stessa canzone.#speaker:{firstChar_tag()}
         
-        <i>{charNameOne} si trova bene con {name}.</i> #speaker:{fungus_tag()}
+        <i>{charNameOne} si trova bene con {name}.</i> #speaker:{fungus_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         
         - firstPurple && firstYellow < firstBlue:  Non è che ci capiamo molto noi due, sai? È come se io suonassi Chopin e tu la lambada. Una lambada noiosa.#speaker:{firstChar_tag()}
         
-        <i>{charNameOne} non si è sentita capita da {name}.</i> #speaker:{fungus_tag()}
+        <i>{charNameOne} non si è sentita capita da {name}.</i> #speaker:{fungus_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         
         
         - else:  Siamo un po' in modalità random, vero? A volte ci avviciniamo, a volte ciaone proprio, tutta una musica diversa.#speaker:{firstChar_tag()}
         
-        <i>{charNameOne} non riesce a capire che rapporto sta costruendo con {name}.</i> #speaker:{fungus_tag()}
+        <i>{charNameOne} non riesce a capire che rapporto sta costruendo con {name}.</i> #speaker:{fungus_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         
         }
         
@@ -1047,7 +1047,7 @@
     ~ numberQuestion ++
     
     {
-        -   are_two_entities_together(Mentor, PG):{charNameFive}: Bene, è il momento che mi allontani.#speaker:{fifthChar_tag()}
+        -   are_two_entities_together(Mentor, PG):{charNameFive}: Bene, è il momento che mi allontani.#speaker:{fifthChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
                 ~ change_entity_place(Mentor)
     }
     {
@@ -1224,7 +1224,7 @@
     = four
      ~ numberQuestion ++
     ~ temp charNameOne = translator(firstCharacterState)
-        {name} Questo posto ti ha assegnato un nome, e quel nome è Chitarra. Ma tu lo vedi come una rinuncia.
+        {name} Questo posto ti ha assegnato un nome, e quel nome è Chitarra. Ma tu lo vedi come una rinuncia.#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
 
         + [Giocare è bello perché puoi sempre rinunciare a farlo.]
             Quando una roba la devi fare anche quando non vuoi, quello è il lavoro.

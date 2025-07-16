@@ -38,7 +38,7 @@
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
     
-        <i>Le nuove radici ci mettono in contatto con la terra che ci circonda.</i> #speaker:{fungus_tag()}
+        <i>Le nuove radici ci mettono in contatto con la terra che ci circonda.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         <i><b>Ci.</b></i>
         <i>La cicatrice rimane, ma da essa esplode la vita.</i>
         <i>Torniamo a percepirci, questa è gioia.</i>
@@ -150,7 +150,7 @@
         ~ temp charNameThree = translator(thirdCharacterState)
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
-        <i>I nostri rami saggiano il cielo.</i> #speaker:{fungus_tag()}
+        <i>I nostri rami saggiano il cielo.</i> #speaker:{fungus_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         <i>L'aria finalmente ci rinfresca.</i>
         <i>E gli uccelli ci raccontano cose su {name}.</i>
         <i>E su quello che ha fatto per {charNameTwo}.</i>

@@ -1331,7 +1331,7 @@
 
 === second_story_gift ===
 ~ temp charNameTwo = translator(secondCharacterState)
-<i> Stai per donare qualcosa a {charNameTwo}.</i> #speaker:{fungus_tag()}
+<i> Stai per donare qualcosa a {charNameTwo}.</i> #speaker:{fungus_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += SecondCharacter
             -> inventory_management
@@ -1340,7 +1340,7 @@
         
     
         = ink_outcome
-            <i>Dopo il tuo dono {inkTranslator(secondCharacterInkLevel)}.
+            <i>Dopo il tuo dono {inkTranslator(secondCharacterInkLevel)}.#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
                  -> talk_with_second_character
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
@@ -1400,7 +1400,7 @@
             Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
             E questo mi fa stare al sicuro.
             C'è una cosa che devo dire a qualcuno, e voglio dirla a te.
-        <i>{charNameTwo} vede {name} come una persona amica e fidata.</i> #speaker:{fungus_tag()}
+        <i>{charNameTwo} vede {name} come una persona amica e fidata.</i> #speaker:{fungus_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         
         //Secondo migliore outcome
         -secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): Un po' mi fido.#speaker:{secondChar_tag()}
@@ -1408,7 +1408,7 @@
             Sembri un po' un gatto.
             Ma mi fido.
             C'è una cosa che devo dire a qualcuno, e voglio dirla a te.
-        <i>{charNameTwo} si trova bene con {name}.</i> #speaker:{fungus_tag()}
+        <i>{charNameTwo} si trova bene con {name}.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         
         //Outcome peggiore
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow < (secondStoryQuestCount/2):  Secondo me mi tratti come un bambino.#speaker:{secondChar_tag()}
@@ -1418,14 +1418,14 @@
             C'è una cosa che devo dire a qualcuno.
             E posso dirla solo a te.
             Purtroppo.
-        <i>{charNameTwo} non si è sentito capito da {name}.</i>
+        <i>{charNameTwo} non si è sentito capito da {name}.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         
         //Outcome neutro
         - else: Che non ho capito cosa pensi. Sei come quando guardo nel terrario e non capisco se c'è l'insetto stecco o sono solo rami.#speaker:{secondChar_tag()}
             C'è una cosa che devo dire a qualcuno.
             E posso dirla solo a te.
             Purtroppo.
-        <i>{charNameTwo} non riesce a capire che rapporto sta costruendo con {name}.</i> #speaker:{fungus_tag()}
+        <i>{charNameTwo} non riesce a capire che rapporto sta costruendo con {name}.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         
         }
        
@@ -1458,7 +1458,7 @@
 
     = statement
     ~ temp charNameTwo = translator(secondCharacterState)
-        <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): l'inchiostro è aumentato di due unità|{secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i> #speaker:{fungus_tag()}
+        <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): l'inchiostro è aumentato di due unità|{secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(secondCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]

@@ -11,7 +11,7 @@
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-        Sapevo che sarebbe arrivata una nuova persona! #speaker:{fifthChar_tag()} #portrait: mentore_neutral
+        Sapevo che sarebbe arrivata una nuova persona! #speaker:{fifthChar_tag()} #portrait: mentore_neutral #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         Immagino tu abbia un milione di domande, vero?
         - (top)
             * (dove) [Dove sono?]
@@ -54,7 +54,7 @@
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-         Come ti devo chiamare?#speaker:{fifthChar_tag()} 
+         Come ti devo chiamare?#speaker:{fifthChar_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
          Puoi usare un nome qualsiasi: prendi questa occasione come un nuovo inizio.
             -> name_choice ->
          E quali sono i tuoi pronomi?
@@ -93,7 +93,7 @@
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
         
-        Parliamo di doveri, {name}.#speaker:{fifthChar_tag()} 
+        Parliamo di doveri, {name}.#speaker:{fifthChar_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         Ogni tanto compariranno delle persone nuove.
         Sono persone rimaste bloccate in qualcosa: rimpianti, rimorsi, traumi.
         E qui arrivi tu, {name}.
@@ -202,9 +202,9 @@
         ~ temp charNameFour= translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-            {firstCharacterInkLevel == Empty or firstCharacterInkLevel == Low: Non hai ottenuto molto inchiostro. Ma come si dice: se {pronouns has him: l'alunno|{pronouns has her: la alunna|l'alunnə}} sbaglia, la colpa è della maestra.}#speaker:{fifthChar_tag()} 
-            {firstCharacterInkLevel == Normal: Bel colpo! Ti sei {pronouns has him: guadagnato|{pronouns has her: guadagnata|guadagnatə}} subito una bella dose di inchiostro! Avessi fatto meglio il mio lavoro, sarebbe stato il massimo!}#speaker:{fifthChar_tag()} 
-            {firstCharacterInkLevel == High: {name}, hai dato alla persona il suo dono preferito! Riempi questo cuore di orgoglio!}#speaker:{fifthChar_tag()} 
+            {firstCharacterInkLevel == Empty or firstCharacterInkLevel == Low: Non hai ottenuto molto inchiostro. Ma come si dice: se {pronouns has him: l'alunno|{pronouns has her: la alunna|l'alunnə}} sbaglia, la colpa è della maestra.}#speaker:{fifthChar_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+            {firstCharacterInkLevel == Normal: Bel colpo! Ti sei {pronouns has him: guadagnato|{pronouns has her: guadagnata|guadagnatə}} subito una bella dose di inchiostro! Avessi fatto meglio il mio lavoro, sarebbe stato il massimo!}#speaker:{fifthChar_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+            {firstCharacterInkLevel == High: {name}, hai dato alla persona il suo dono preferito! Riempi questo cuore di orgoglio!}#speaker:{fifthChar_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
             E adesso, l'ultima lezione: a cosa serve l'inchiostro?
             Sostanzialmente più alto è il suo valore, più <b>interventi</b> puoi fare.
             Gli interventi sono domande o commenti che puoi fare su cose diverse che preoccupano la persona.
@@ -257,10 +257,10 @@
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    {name}: Vorrei raccontarti una cosa strana.
+    {name}: Vorrei raccontarti una cosa strana.#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         * (voices){pre_test}[C'è una voce che mi racconta cose.]
             Voce?#speaker:{fifthChar_tag()} 
-            {name}: Sì.#speaker:{PG_tag()} 
+            {name}: Sì.#speaker:{PG_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
             {name}: Ad esempio mi descrive le piante della serra.
             {name}: O i luoghi in cui entro.
             Riscrivere la storie di altre persone richiede una forte empatia.#speaker:{fifthChar_tag()} 
@@ -271,14 +271,14 @@
                 
         * (infoImpo){firstCharacterInkLevel has High} [Quali informazioni importanti hanno le personagge?]
             Dove l'hai sentita questa cosa, stellina?#speaker:{fifthChar_tag()} 
-            {name}: Quando stavo per fare le ultime domande a {charNameOne}, {voices: la|una} voce mi ha detto quanto inchiostro avevo e che avrei ricevuto una informazione importante. #speaker:{PG_tag()} 
+            {name}: Quando stavo per fare le ultime domande a {charNameOne}, {voices: la|una} voce mi ha detto quanto inchiostro avevo e che avrei ricevuto una informazione importante. #speaker:{PG_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
             {not voices: Per la voce sarà la stanchezza, questo lavoro è faticoso.|Come ti dicevo, vedrai che è solo la tua empatia che parla.}
             Comunque ogni cosa qui è importante, {name}.
             Soprattutto se ti aiuta a raggiungere il tuo obiettivo.
                 -> talk_with_mentor
         
         * (talkingFungus) {talking_fungus.first_story_ended_check} [Prima ho parlato con il tronco.]
-            {name}: E mi ha chiesto come stavo dopo aver aiutato {charNameOne}. #speaker:{PG_tag()} 
+            {name}: E mi ha chiesto come stavo dopo aver aiutato {charNameOne}. #speaker:{PG_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
             {infoImpo or voices: Stellina, di nuovo con questa voce?|Senti le voci, stellina?}#speaker:{fifthChar_tag()} 
             {name}: Sono in questo posto da non so quanto e non ho mai parlato con tronchi o rami o radici.
             {name}: L'unica cosa che ha voce sono le persone che arrivano per chiedere il nostro aiuto.
@@ -288,7 +288,7 @@
         
         * (talkingFrog) {the_frog.frog} [C'è una rana blu parlante.]
             Una rana. E dove? #speaker:{fifthChar_tag()} 
-            {are_entities_together_in(Mentor, PG, GreenhouseMiddlePath):{name}: Qui nello stagno.|{name}: Allo stagno.} #speaker:{PG_tag()} 
+            {are_entities_together_in(Mentor, PG, GreenhouseMiddlePath):{name}: Qui nello stagno.|{name}: Allo stagno.} #speaker:{PG_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
             Da che sono qui non ho mai visto rane parlanti, {name}. #speaker:{fifthChar_tag()} 
             E nemmeno rane e basta.
             Forse è il caso che ti riposi un poco, davvero.
@@ -306,7 +306,7 @@
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-        Hai concluso la tua prima riscrittura, {name}!#speaker:{fifthChar_tag()} 
+        Hai concluso la tua prima riscrittura, {name}!#speaker:{fifthChar_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Mmm, sembra l'ora della pagella. Me ne vado.}#speaker:{firstChar_tag()} 
             ~ change_entity_place(FirstCharacter)
         {
@@ -344,7 +344,7 @@
         }
         
         
-        Non ti conosco ancora abbastanza, ma ci tengo a dirtelo: sentiti {pronouns has him: soddisfatto|{pronouns has her: soddisfatta|soddisfattə}}!#speaker:{fifthChar_tag()} 
+        Non ti conosco ancora abbastanza, ma ci tengo a dirtelo: sentiti {pronouns has him: soddisfatto|{pronouns has her: soddisfatta|soddisfattə}}!#speaker:{fifthChar_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         Questo è un lavoro complesso, ma vedrai che col tempo sarà tutto più facile.
         Comunque sia, direi che ti ho dato tutti gli strumenti per far sì che tu possa riscrivere storie in autonomia. 
         Ma se avrai bisogno di aiuto per i luoghi del giardino, o un po' di supporto personale, sono qui.
@@ -359,7 +359,7 @@
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)   
     
-   Hai finito il percorso con {charNameTwo}, {name}!#speaker:{fifthChar_tag()} 
+   Hai finito il percorso con {charNameTwo}, {name}!#speaker:{fifthChar_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
    Ed entrambi mi avete stupita: non pensavo davvero che un bambino avrebbe avuto bisogno di questo luogo.
     {are_two_entities_together(SecondCharacter, PG): {charNameTwo}: Devi imparare tante cose sui bambini, tu. Vado a farmi due passi.}#speaker:{secondChar_tag()} 
             ~ change_entity_place(SecondCharacter)
@@ -469,16 +469,16 @@
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
     
-        {name}, sei {pronouns has him: riuscito|{pronouns has her: riuscita|riuscitə}} a rimandare quel bambino a casa?#speaker:{fifthChar_tag()} 
+        {name}, sei {pronouns has him: riuscito|{pronouns has her: riuscita|riuscitə}} a rimandare quel bambino a casa?#speaker:{fifthChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState 
         {are_two_entities_together(SecondCharacter, PG):Da quanto vedo, no.}
         {are_two_entities_together(SecondCharacter, PG): {knowing_second_character.two: {charNameTwo}|???}: Antipatica.} #speaker:{secondChar_tag()} 
             ~ change_entity_place(SecondCharacter)
-        Non è mai successo che qui arrivassero dei bambini.#speaker:{fifthChar_tag()} 
+        Non è mai successo che qui arrivassero dei bambini.#speaker:{fifthChar_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         Non è un posto adatto a un bambino.
         E mi ha tirato un calcio!
-        {knowing_second_character.not_talk: {name}: Lui dice che gli hai fatto male.}#speaker:{PG_tag()} 
+        {knowing_second_character.not_talk: {name}: Lui dice che gli hai fatto male.}#speaker:{PG_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         {knowing_second_character.not_talk: L'ho solo fermato perché cercava di scappare.}#speaker:{fifthChar_tag()}     
-        Mi fa tenerezza, sai?#speaker:{fifthChar_tag()} 
+        Mi fa tenerezza, sai?#speaker:{fifthChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState 
         Mi sembra un riccio.
         Così carino, tenero.
         Ma poi come ti avvicini ti fa male.
@@ -494,12 +494,12 @@
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
-        L'annaffiatoio!#speaker:{fifthChar_tag()} 
+        L'annaffiatoio!#speaker:{fifthChar_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         L'annaffiatoio è scomparso dalla serra.
         E sono sicura, sicura che è stato quel bambino dispettoso!
         {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Dispettosa sarai tu, vecchia biscia!}#speaker:{secondChar_tag()} 
             ~ change_entity_place(SecondCharacter)
-        Giuro che sto cercando di essere paziente, {name}.#speaker:{fifthChar_tag()} 
+        Giuro che sto cercando di essere paziente, {name}.#speaker:{fifthChar_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         Giuro!
         Ma senza l'annaffiatoio non si possono coltivare le piante della serra.
         Senza piante della serra non ci sono molti doni per le persone che ne hanno bisogno.
