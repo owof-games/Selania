@@ -27,9 +27,9 @@
     //Altre opzioni        
         - else:
             {
-                - second_story_gift.ink_outcome: {~ Mi sento triste, ti spiace tornare dopo?|Scusa {name} ma voglio stare solo.|In questo momento sono giù.} #speaker:{secondChar_tag()}
+                - second_story_gift.ink_outcome: {~ Mi sento triste, ti spiace tornare dopo?|Scusa {name} ma voglio stare solo.|In questo momento sono giù.} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
                 
-                - else: {~ Torna dopo.|Ora ho voglia di stare da solo.|Lasciami in pace.|Non ho voglia di parlare.}#speaker:{secondChar_tag()}
+                - else: {~ Torna dopo.|Ora ho voglia di stare da solo.|Lasciami in pace.|Non ho voglia di parlare.}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
             }
             
         -> main
@@ -38,7 +38,7 @@
 = hub
 ~ temp charNameTwo = translator(secondCharacterState)
 
-    {~ Ciao {name}!|Ciao.|...} #speaker:{secondChar_tag()}
+    {~ Ciao {name}!|Ciao.|...} #speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
     
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_second_character
@@ -127,7 +127,7 @@
         ~ temp charNameFive = translator(fifthCharacterState)
         ~ secondStoryQuestCount ++
         
-        Perché sei qui?#speaker:{secondChar_tag()}
+        Perché sei qui?#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
             
             + [Questo luogo è assurdo e voglio capirlo.]
                 Anche a me mi piace capire le cose.
@@ -171,16 +171,17 @@
         Mamma mi ha promesso qualcosa di FIGHISSIMO!
         L'anno scorso per Natale mi ha preso tutte le action figures dei miei videogiochi preferiti.
         Ma poi papà me le ha rubate tutte.
-        {are_two_entities_together(SecondCharacter, PG): {charNameFive}: Povera anima!}#speaker:{fifthChar_tag()}
-        Ma lui mica ci può venire qui.#speaker:{secondChar_tag()}
+        {are_two_entities_together(SecondCharacter, PG): {charNameFive}: Povera anima!}#speaker:{fifthChar_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+        Ma lui mica ci può venire qui.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
         Perché mamma ha detto che avrebbe dato solo a me qualcosa di bellissimo che papà non può rubare.
         Ma dove trovo le caramelle?
         Mamma dice sempre che non c'è compleanno senza caramelle!
-        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: O senza vinello.}#speaker:{firstChar_tag()}
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: O senza vinello.}#speaker:{firstChar_tag()}#inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
         
         
             + (twoBlue) [Il compleanno arriva a prescindere dalle caramelle.]
-                Forse la data.#speaker:{secondChar_tag()}
+                Forse la data.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Quella sì.
                 Ma il compleanno è un'altra cosa.
                 È un momento tutto tuo.
@@ -188,7 +189,8 @@
                     ~ secondBlue ++
                 
             + (twoYellow) [Niente caramelle, ma c'è uno stagno dove nuotare!]
-                FIGO!#speaker:{secondChar_tag()}
+                FIGO!#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Non ho mai visto uno stagno!
                 Però questa estate ho visto un mare gigantesco.
                 Più grande anche del cielo!
@@ -196,7 +198,8 @@
                     ~ secondYellow ++
                 
             + (twoRed) [E come ti sei ripreso i giocattoli?]
-                Non sono mica giocattoli.#speaker:{secondChar_tag()}
+                Non sono mica giocattoli.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 E non me li sono ripresi.
                 Papà è buono, fino a quando non si arrabbia.
                 E non voglio farlo arrabbiare.
@@ -204,21 +207,24 @@
 
                 
             + (twoGreen) [Vuoi molto bene alla tua mamma?]
-                Sì sì sì.#speaker:{secondChar_tag()}
+                Sì sì sì.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Lei è la mamma migliore del pianeta.
                 Dell'universo.
                     ~ secondGreen ++
   
                 
             + (twoPurple) [Quindi, rubandoti i giochi, tuo papà ti ha fatto un favore.]
-                Sì no boh.#speaker:{secondChar_tag()}
+                Sì no boh.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Non ha senso quello che dici.
                 Papà non mi deve prendere mica le mie cose.
                 Detesto quando fa così.
                     ~ secondPurple ++
             -
             
-        Ma dove saranno i miei compagni di scuola?#speaker:{secondChar_tag()}
+        Ma dove saranno i miei compagni di scuola?#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         Cercali!
         A dopo!
             - (nameSecond)
@@ -235,7 +241,8 @@
     ~ secondStoryQuestCount ++
       
         
-        Questo posto è PIENO di animali!#speaker:{secondChar_tag()}
+        Questo posto è PIENO di animali!#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         Ma ho lasciato a casa il tablet.
         Come faccio a capire cosa fanno?
         Sapevi che gli uccelli vedono dieci colori?
@@ -265,7 +272,8 @@
         //Opzioni, varianti sulla violenza alla mentore, risposte diverse?
      
         - (top)
-        {charNameFive} dice che le hai dato un calcio. #speaker:{PG_tag()}
+        {charNameFive} dice che le hai dato un calcio. #speaker:{PG_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+
             
             + (twoBlue) [Credevo tu fossi disciplinato. Che delusione.]
                 Ehi! Mica mi chiedi perché lo fatto!
@@ -340,7 +348,8 @@
     ~ secondStoryQuestCount ++
 
         
-        Mica mi hai detto come ti chiami.#speaker:{secondChar_tag()}
+        Mica mi hai detto come ti chiami.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
             
         - (top)
             * [Prima dimmi il tuo.]
@@ -392,8 +401,10 @@
             	  Ah.
             	  Sei una ragazza quindi.
             	  Non ci parlo mica molto con le ragazze, siete strane.
-                {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Disse quello che passa le ore a studiarsi le caccole.}#speaker:{firstChar_tag()}
-            	  Devo ancora capire se sei strana anche tu.#speaker:{secondChar_tag()}
+                {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Disse quello che passa le ore a studiarsi le caccole.}#speaker:{firstChar_tag()}#inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
+
+            	  Devo ancora capire se sei strana anche tu.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
             	  Anche mamma è strana.
             	  Ma le voglio bene.
             	  Anche se a volte si dimentica le cose.
@@ -506,7 +517,8 @@
     ~ secondStoryQuestCount ++
         -> secondAffinityCheckCalc ->
         
-        Nonna non mi tratta mai come un bambino.#speaker:{secondChar_tag()}
+        Nonna non mi tratta mai come un bambino.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         Mi ha anche insegnato come barare a carte.
         E come aprire il cassetto dei dolci di mamma.
         Quando mamma e papà ci lasciavano a casa da soli mangiavamo sempre cose buone.
@@ -519,10 +531,12 @@
         Ma nonna dice che succede.
         Che i grandi fanno cose cattive senza saperlo.
         Mi spiace essere scappato di casa.
-        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Se Talco fosse qui, ti avrebbe già adottato.} #speaker:{firstChar_tag()}
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Se Talco fosse qui, ti avrebbe già adottato.} #speaker:{firstChar_tag()}#inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
+
         
             + [Non parli mai di tuo nonno. Non c'è più?]
-                Se ne è andato quando papà era molto piccolo.#speaker:{secondChar_tag()}
+                Se ne è andato quando papà era molto piccolo.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Più di me.
                 Ogni tanto scriveva delle lettere che facevano arrabbiare mamma.
                 Poi ha smesso.
@@ -531,7 +545,8 @@
                     ~ secondBlue ++
                 
             + [Insegni a barare anche a me?]
-                Ho una idea!#speaker:{secondChar_tag()}
+                Ho una idea!#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Troviamo delle carte.
                 Ti insegno come si bara.
                 E poi stracciamo {charNameFive}.
@@ -539,7 +554,8 @@
                     ~ secondYellow ++
                 
             + [Tua nonna sembra una tipa forte!]
-                "Forte"?#speaker:{secondChar_tag()}
+                "Forte"?#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Quanto sei {pronouns has him: vecchio|{pronouns has her: vecchia|vecchiə}}?
                 Però sì, lei spacca proprio.
                 Una volta ha lanciato una ciabatta in faccia a papà perché l'ha chiamata strega.
@@ -550,7 +566,8 @@
 
                 
             + [Ti manca casa? Vorresti tornare?]
-                Sì no boh.#speaker:{secondChar_tag()}
+                Sì no boh.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Voglio tornare.
                 Ma se poi mamma si arrabbia?
                 O papà?
@@ -561,7 +578,8 @@
   
                 
             + [Quando i grandi hanno paura, fanno cose cattive.]
-                Papà dice che i grandi non hanno paura.#speaker:{secondChar_tag()}
+                Papà dice che i grandi non hanno paura.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Ma non gli credo.
                 Mio fratello a volte ha paura che l'amico lo lascia.
                 Mamma delle bollette.
@@ -570,7 +588,8 @@
                     ~ secondPurple ++
  
             -
-        Mi spiace, {name}.    #speaker:{secondChar_tag()}
+        Mi spiace, {name}. #speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         Prima ho detto delle bugie.
         Non è vero che mamma mi ha mandato qui.
         Ma volevo così tanto avere un bel compleanno.
@@ -596,19 +615,24 @@
     
     ~ secondStoryQuestCount ++
         
-        Dalla serra è scomparso l'innaffiatoio. #speaker:{PG_tag()}
+        Dalla serra è scomparso l'innaffiatoio. #speaker:{PG_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+
             + [Secondo {charNameFive} sei stato tu a prenderlo.]
-                Perché lei mi odia.#speaker:{secondChar_tag()}
+                Perché lei mi odia.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
             
             + [Secondo me sei stato tu a prenderlo.]
-                Ti odio! #speaker:{secondChar_tag()}
+                Ti odio! #speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Perché date tutti sempre la colpa a me?
             
             + [Hai idea di dove sia?]
-                Pensi che è colpa mia? #speaker:{secondChar_tag()}
+                Pensi che è colpa mia? #speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
             -
      
-        Anche a scuola danno sempre la colpa a me. #speaker:{secondChar_tag()}
+        Anche a scuola danno sempre la colpa a me. #speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         Non mi piace mica tanto la scuola.
         I ragazzi più grandi mi fanno male.
         Ma io non piango.
@@ -707,7 +731,8 @@
         
         ~ secondStoryQuestCount ++
         
-        Prima ho visto una rana allo stagno.#speaker:{secondChar_tag()}
+        Prima ho visto una rana allo stagno.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         E so tutto sulle rane.
         Che mica chiudono gli occhi per dormire.
         E che alcune sono velenose.
@@ -715,8 +740,10 @@
         Nonna dice che se lo lecchi e stai male, è tossico.
         Se lo tocchi e stai male, è velenoso.
         E se ti guarda e stai male, è mamma.
-        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Questo shade sicuro che me lo riciclo.} #speaker:{firstChar_tag()}        
-        E so altre cose sulle rane.#speaker:{secondChar_tag()}
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Questo shade sicuro che me lo riciclo.} #speaker:{firstChar_tag()}#inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
+        
+        E so altre cose sulle rane.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         Ma non ho mai visto una rana parlare.
         O fare dei regali.
         E quella dello stagno mi ha parlato.
@@ -779,7 +806,8 @@
         
         ~ secondStoryQuestCount ++
         
-        La rana prima mi ha detto che tu scrivi storie.#speaker:{secondChar_tag()}
+        La rana prima mi ha detto che tu scrivi storie.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         A me mi piacciono le storie.
         C'è una cosa che non dico mai a nessuno.
         Mamma è felice perché vado a letto presto.
@@ -858,7 +886,8 @@
     
     ~ secondStoryQuestCount ++
         
-        Sai che mio fratello è campione di Karate?#speaker:{secondChar_tag()}
+        Sai che mio fratello è campione di Karate?#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         E ha una macchina enorme gialla che fa arrabbiare papà.
         E hai i muscoli che...
         Bugia.
@@ -942,7 +971,8 @@
         
         ~ secondStoryQuestCount ++
         
-        Tu hai sempre voluto fare {pronouns has him: il riscrittore|{pronouns has her: la riscrittora|lə riscrittorə}} come lavoro?#speaker:{secondChar_tag()}
+        Tu hai sempre voluto fare {pronouns has him: il riscrittore|{pronouns has her: la riscrittora|lə riscrittorə}} come lavoro?#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         
             + [Fino a poco fa nemmeno sapevo esistesse questo posto.]
                 Figo!
@@ -1008,10 +1038,12 @@
         E questa cosa mi fa arrabbiare.
         Non voglio essere un bambino per sempre.
         Ma non voglio essere grande.
-        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Bimbo, mi stai facendo sentire una piagnona egoista così.}#speaker:{firstChar_tag()}        
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Bimbo, mi stai facendo sentire una piagnona egoista così.}#speaker:{firstChar_tag()}#inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
+        
             
             + [Sai che crescerai anche se non lo vuoi, vero?]
-                Sì no boh.#speaker:{secondChar_tag()}
+                Sì no boh.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Non è detto.
                 Magari resto qui e magari qui il tempo non passa mica.
                 E magari riesco a fare venire qui anche mio fratello.
@@ -1020,7 +1052,8 @@
                     ~ secondBlue ++
                 
             + [E se invece rimanessi sia bambino che adulto?]
-                Nonna dice che è il problema di mamma.#speaker:{secondChar_tag()}
+                Nonna dice che è il problema di mamma.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Che non si prende le sue responsabilità.
                 A me mica mi dispiacciono le responsabilità.
                 Ma tutto il resto mi spaventa.
@@ -1030,7 +1063,8 @@
                     ~ secondYellow ++
                 
             + [Puoi fare il ribelle e salvare gli animali!]
-                Tipo Greta!#speaker:{secondChar_tag()}
+                Tipo Greta!#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 A mio fratello piace tanto.
                 Però mio fratello dice che bisogna picchiare "quelli". Farli fuori.
                 Non ho capito chi sono "quelli".
@@ -1041,7 +1075,8 @@
 
                 
             + [Non ti preoccupare: hai moltissimo tempo per decidere che fare.]
-                Sarà.#speaker:{secondChar_tag()}
+                Sarà.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Ma Lara sa già parlare due lingue.
                 E Jin è appena entrato nella giovanile della Fiorentina.
                 Tommaso legge così tanto che sicuro sicuro diventa un genio.
@@ -1052,7 +1087,8 @@
   
                 
             + [Potresti diventare uno storico degli animali.]
-                Sì sì sì!#speaker:{secondChar_tag()}
+                Sì sì sì!#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Qualcuno che racconta le loro storie?
                 Come un gioco forse.
                 E anche gli animali giocano.
@@ -1077,7 +1113,8 @@
         
         ~ secondStoryQuestCount ++
         
-        Stavo ripensando a un bambino.#speaker:{secondChar_tag()}
+        Stavo ripensando a un bambino.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         Uno di seconda.
         L'ho picchiato perché mi andava.
         Ero DAVVERO arrabbiato quel giorno.
@@ -1094,11 +1131,14 @@
         Ma a me non piace farmi picchiare.
         O picchiare.
         Ma se sono arrabbiato non so cosa fare.
-        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Mai provato a suonare la batteria?}#speaker:{firstChar_tag()}
-        {are_two_entities_together(FirstCharacter, PG): Poi papà ha un altro motivo per arrabbiarsi.}#speaker:{secondChar_tag()}
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Mai provato a suonare la batteria?}#speaker:{firstChar_tag()}#inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
+
+        {are_two_entities_together(FirstCharacter, PG): Poi papà ha un altro motivo per arrabbiarsi.}#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         
             + [Solo gli animali non sanno controllarsi.]
-                Allora sono un lupo.#speaker:{secondChar_tag()}
+                Allora sono un lupo.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Una giraffa.
                 Un coccodrillo.
                 Un serpente.
@@ -1107,7 +1147,8 @@
                     ~ secondBlue ++
                 
             + [Immagina di picchiare i mostri invece dei compagni!]
-                I mostri mi piacciono.#speaker:{secondChar_tag()}
+                I mostri mi piacciono.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Ma anche i miei compagni.
                 Però non faccio male a qualcosa che non esiste, no?
                 Ma anche questo posto non doveva esistere, credo.
@@ -1116,7 +1157,8 @@
                     ~ secondYellow ++
                 
             + [Tuo padre ti picchia, e tu hai imparato da lui a picchiare.]
-                NO!#speaker:{secondChar_tag()}
+                NO!#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 No.
                 Non lo so.
                 Mi sembra una cosa difficile.
@@ -1126,7 +1168,8 @@
 
                 
             + [Nessuno merita di essere picchiato, né tu né quel bambino.]
-                Però se papà mi picchia c'è un motivo.#speaker:{secondChar_tag()}
+                Però se papà mi picchia c'è un motivo.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Mamma dice che papà non lascia mai nulla al caso.
                 E per questo è il più bravo a lavoro.
                 E quel bambino è davvero fastidioso.
@@ -1134,7 +1177,8 @@
   
                 
             + [La rabbia della ragazzina ha protetto il fratello.]
-                Ma chi protegge me?#speaker:{secondChar_tag()}
+                Ma chi protegge me?#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 Uh, bugia, scusa.
                 Qui sono stato io a fare il cattivo.
                 Forse potrei chiedere a lei come fa?
@@ -1155,7 +1199,8 @@
         
         ~ secondStoryQuestCount ++
         
-        Quando vado da mio fratello e non c'è il suo amico, mi lascia sperimentare con le sue cose.#speaker:{secondChar_tag()}
+        Quando vado da mio fratello e non c'è il suo amico, mi lascia sperimentare con le sue cose.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         Il suo amico fa il pasticciere.
         E ha tantissime cose strane in cucina.
         Mi piace provare le cose, capire.
@@ -1235,7 +1280,8 @@
         
         ~ secondStoryQuestCount ++
         
-        Mi piace la biblioteca.#speaker:{secondChar_tag()}
+        Mi piace la biblioteca.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         Mi ricorda la casa della nonna.
         L'altra nonna, quella che sta al mare.
         Ci vado d'estate e mi diverto tantissimo e ci sono tantissimi libri.
@@ -1248,8 +1294,10 @@
         E hanno riso tutti quando ho ruttato fortissimo.
         Da nonna mi addormento subito.
         Non devo correggere le giornate.
-        {are_two_entities_together(FirstCharacter, PG): Vedi tu se dovevo iniziare a provare affetto per un bimbo, mannaggia.}#speaker:{firstChar_tag()}
-        Quando finiscono le vacanze però mi sento triste.#speaker:{secondChar_tag()}
+        {are_two_entities_together(FirstCharacter, PG): Vedi tu se dovevo iniziare a provare affetto per un bimbo, mannaggia.}#speaker:{firstChar_tag()}#inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
+
+        Quando finiscono le vacanze però mi sento triste.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         E arrabbiato.
         Ora che nonna è nella casa dei vecchi, vorrei vivere sempre con l'altra nonna.
         Tanto so studiare da solo.
@@ -1314,7 +1362,8 @@
             
 
     = not_talk
-    Non ci parlo con chi parla con quella là! #speaker:{secondChar_tag()}
+    Non ci parlo con chi parla con quella là! #speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
     Mi ha fatto male!
         -> main
                         
@@ -1322,20 +1371,23 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    {charNameFive} ce l'ha con me!#speaker:{secondChar_tag()}
+    {charNameFive} ce l'ha con me!#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
     Fa qualcosa!
-    {are_two_entities_together(Mentor, PG): {charNameFive}: Non dire altre bugie, {charNameTwo}!}#speaker:{fifthChar_tag()}
+    {are_two_entities_together(Mentor, PG): {charNameFive}: Non dire altre bugie, {charNameTwo}!}#speaker:{fifthChar_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+
+
     -> main
         
 
 
 === second_story_gift ===
 ~ temp charNameTwo = translator(secondCharacterState)
-<i> Stai per donare qualcosa a {charNameTwo}.</i> #speaker:{fungus_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+<i> Stai per donare qualcosa a {charNameTwo}.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += SecondCharacter
             -> inventory_management
-        + {findedGifts == ()} <i> Il tuo inventario è vuoto.</i>
+        + {findedGifts == ()} <i> Il tuo inventario è vuoto.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
             ->main
         
     
@@ -1384,18 +1436,21 @@
     ~ change_entity_place(Mentor)
     
     //Parole chiave legate alla fiducia.
-        Abbiamo parlato tantissimo.#speaker:{secondChar_tag()}
+        Abbiamo parlato tantissimo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         Ma davvero TANTISSSSSSIMO!
         Sai cosa penso di te?
     {
-        -   are_two_entities_together(FirstCharacter, PG):{charNameOne}: E questo è il momento per me di levarmi da qui e lasciarvi in pace.#speaker:{firstChar_tag()}
+        -   are_two_entities_together(FirstCharacter, PG):{charNameOne}: E questo è il momento per me di levarmi da qui e lasciarvi in pace. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC: {ink_tag_c(firstCharacterInkLevel)}  #inkD: {ink_tag_d(firstCharacterInkLevel)}
+
                 ~ change_entity_place(FirstCharacter)
     }          
             -> secondAffinityCalc ->
         {
         
         //Migliore outcome
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): Non sei male, per essere grande.#speaker:{secondChar_tag()}
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): Non sei male, per essere grande.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
             Dici sempre le cose allo stesso modo.
             Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
             E questo mi fa stare al sicuro.
@@ -1403,7 +1458,8 @@
         <i>{charNameTwo} vede {name} come una persona amica e fidata.</i> #speaker:{fungus_tag()}#inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         
         //Secondo migliore outcome
-        -secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): Un po' mi fido.#speaker:{secondChar_tag()}
+        -secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): Un po' mi fido.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
             Secondo me non dici <i>sempre</i> le cose in modo preciso.
             Sembri un po' un gatto.
             Ma mi fido.
@@ -1411,7 +1467,8 @@
         <i>{charNameTwo} si trova bene con {name}.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         
         //Outcome peggiore
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow < (secondStoryQuestCount/2):  Secondo me mi tratti come un bambino.#speaker:{secondChar_tag()}
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow < (secondStoryQuestCount/2):  Secondo me mi tratti come un bambino.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
             Tutte le cose che dici cambiano, sono disordinate.
             Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
             Non mi piace mica come cosa.
@@ -1421,7 +1478,8 @@
         <i>{charNameTwo} non si è sentito capito da {name}.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
         
         //Outcome neutro
-        - else: Che non ho capito cosa pensi. Sei come quando guardo nel terrario e non capisco se c'è l'insetto stecco o sono solo rami.#speaker:{secondChar_tag()}
+        - else: Che non ho capito cosa pensi. Sei come quando guardo nel terrario e non capisco se c'è l'insetto stecco o sono solo rami.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
             C'è una cosa che devo dire a qualcuno.
             E posso dirla solo a te.
             Purtroppo.
@@ -1429,7 +1487,8 @@
         
         }
        
-        Da quando nonna è nella casa dei vecchi fa tutto schifo.#speaker:{secondChar_tag()}
+        Da quando nonna è nella casa dei vecchi fa tutto schifo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         Papà è tornato ma litiga sempre con mamma.
         E quando papà non c'è mamma si arrabbia con me.
         E l'unica cosa che mi dice è che devo smetterla di piangere e fare il grande.
@@ -1476,9 +1535,9 @@
                 ~ change_entity_place(FirstCharacter)
     }        
       //Affrontiamo gli adulti in generale
-    Hai detto che i grandi fanno schifo e che non ti fidi di loro. #speaker:{PG_tag()}
-    
-        
+    Hai detto che i grandi fanno schifo e che non ti fidi di loro. #speaker:{PG_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+
+
         + [Però tua nonna e tuo fratello spaccano.]
             Tua nonna ti ha insegnato a barare!
             Tuo fratello crea cose e ti protegge.
@@ -1525,7 +1584,8 @@
                     ~ secondStatementVariation(purple)    
             
         -
- 
+    Dico cose #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         {
         - secondCharacterInkLevel == Empty:
             -> ending
@@ -1585,6 +1645,8 @@
             
                     
         -
+    Dico cose #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+    
         {
         - secondCharacterInkLevel == Low:
             -> ending
@@ -1641,6 +1703,7 @@
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)         
         -
+    Dico cose #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}        
         {
         - secondCharacterInkLevel == Normal:
             -> ending
@@ -1701,7 +1764,7 @@
                     ~ secondStatementVariation(yellow)    
             
         -
-        
+    Dico cose #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}        
         -> ending
 
     = ending
@@ -1753,7 +1816,8 @@
         
                 
         -     
-    Sì.#speaker:{secondChar_tag()}
+    Sì.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
     No.
     Boh.
     {name}.
@@ -1818,7 +1882,8 @@
     = secret_ending
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
-        Voglio dirti una cosa {name}.#speaker:{secondChar_tag()}
+        Voglio dirti una cosa {name}.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         Su {charNameFive}.
         A me non mi sembra mica felice.
         Mi ricorda mamma quando gira per casa dando consigli e dicendo cose e sorridendo.
@@ -1831,7 +1896,8 @@
             
     = exit
     ~ temp charNameTwo = translator(secondCharacterState)
-        Voglio stare ancora un po' qui prima di prendere il treno.#speaker:{secondChar_tag()}
+        Voglio stare ancora un po' qui prima di prendere il treno.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         Mi mancherà la rana!
             ~ secondStory = Ended
             ~ movementsCounter = 0
@@ -1851,13 +1917,15 @@
     }
     
         - (top)
-        {~ Stavo pensando che se divento grande posso andare via di casa.|Magari da grande posso anche portare nonna via dalla casa dei vecchi.|Quando torno a casa chiedo a mio fratello se mi prende un cane.|Mi piace l'idea di tornare a casa ora, ma non di non potere mica tornare qui.|Se vieni a trovarmi ti faccio vedere tutte le statue di mio fratello.|Sarà difficile spiegare questa cosa a papà.}#speaker:{secondChar_tag()}
+        {~ Stavo pensando che se divento grande posso andare via di casa.|Magari da grande posso anche portare nonna via dalla casa dei vecchi.|Quando torno a casa chiedo a mio fratello se mi prende un cane.|Mi piace l'idea di tornare a casa ora, ma non di non potere mica tornare qui.|Se vieni a trovarmi ti faccio vedere tutte le statue di mio fratello.|Sarà difficile spiegare questa cosa a papà.}#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
                 ~ secondCharEndingDialogue ++
         -> main
         
         = goodbye
         ~ temp charNameTwo = translator(secondCharacterState)
-        {name}, mi sa che torno a casa.#speaker:{secondChar_tag()}
+        {name}, mi sa che torno a casa.#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
         {secondCharacterPossibleStates hasnt Riccio: Sì no boh.}       
         {secondCharacterPossibleStates hasnt Riccio: Sai che mi è piaciuta alla fine tutta questa cosa?}
         {secondCharacterPossibleStates hasnt Riccio: Mi hai regalato il migliore compleanno del mondo.}
@@ -1876,7 +1944,8 @@
 ~ change_entity_place(Mentor)
 
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
-    {~ Nonna dice che non si scappa dalla periferia. Che papà ce l'ha dentro e se l'è portata anche quando siamo andati a vivere in centro.|Non mi piacciono i cartoni per quelli della mia età. Dicono tutte cose che so già.|Se ci pensi bene dire una bugia o scrivere una storia sono la stessa cosa.|Ogni persona ha un animale dentro secondo me. Prendi {charNameFive}: sembra un gufo. Anzi anzi: un avvoltoio! No, dai. Un fagiano, quelli femmina, tutti grigi grigi.|Mio fratello dice che devo fidarmi di più degli adulti, ma secondo me lo dice perché è adulto.|Per me il veterinario è come il druido dei videogiochi, solo non deve tirare dei dadi per salvare gli animali.|Un po' mi piacerebbe dormire e basta, senza pensieri.|Forse non mi dispiace mica che sei qui.|Se vado via di qui vorrei tanto portare la rana con me.}#speaker:{secondChar_tag()}
+    {~ Nonna dice che non si scappa dalla periferia. Che papà ce l'ha dentro e se l'è portata anche quando siamo andati a vivere in centro.|Non mi piacciono i cartoni per quelli della mia età. Dicono tutte cose che so già.|Se ci pensi bene dire una bugia o scrivere una storia sono la stessa cosa.|Ogni persona ha un animale dentro secondo me. Prendi {charNameFive}: sembra un gufo. Anzi anzi: un avvoltoio! No, dai. Un fagiano, quelli femmina, tutti grigi grigi.|Mio fratello dice che devo fidarmi di più degli adulti, ma secondo me lo dice perché è adulto.|Per me il veterinario è come il druido dei videogiochi, solo non deve tirare dei dadi per salvare gli animali.|Un po' mi piacerebbe dormire e basta, senza pensieri.|Forse non mi dispiace mica che sei qui.|Se vado via di qui vorrei tanto portare la rana con me.}#speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+
             -> main
 
 
