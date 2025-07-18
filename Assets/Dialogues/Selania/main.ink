@@ -43,5 +43,7 @@
 //Elementi della libreria
 <- reading_place
 
+//Elementi del libro della riscrittora
+<- book_exit_node
 
 + -> main

@@ -9,7 +9,9 @@ TODO: eliminare Bus anche da Unity
     + [Mi guardo attorno.]
     -
         -> main
-        
+  
+  
+  
         
 === starting_note ===
     + {are_two_entities_together(StartingNote, PG)}[StartingNote]
