@@ -15,9 +15,9 @@
 
     VAR laboratoryContents = (Inventory)
 
-    VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, MenuSave, MenuQuit, TheFrog, FromForestToLibrary, RewriterBook)
+    VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, MenuSave, MenuQuit, TheFrog, FromForestToLibrary, RewriterBook, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FrogRecap, DogRecap, FungusRecap, GreenhouseRecap, LaboratoryRecap, NestRecap)
     
-    VAR bookContents = (BookExit)
+    VAR bookContents = (BookExit, FifthRecap, RulesRecap)
    
 
 //Funzione per tracciare se una data entità si trova o meno in un determinato luogo

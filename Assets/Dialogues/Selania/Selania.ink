@@ -60,6 +60,8 @@
 //Gestione del libro
     INCLUDE Book\MainBook.ink
     INCLUDE Book\BookFunctions.ink
+    INCLUDE Book\CharactersRecap.ink
+    INCLUDE Book\PlacesElements.ink
 
 //Bedroom
     INCLUDE Bedroom\Bedroom.ink
@@ -91,6 +93,9 @@
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibaryManagement.ink
     INCLUDE Library\StoryNotes.ink
+
+
+
 
 
 
