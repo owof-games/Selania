@@ -9,7 +9,5 @@
 
 
 === book_exit_node ===
-//Soluzione temporanea per poter uscire dal libro, poi creo funzione
 + {are_two_entities_together(PG, BookExit)} [BookExit]
-    ~ move_entity(PG, Forest)
-    -> forest
+    -> book_tracking_arrive
