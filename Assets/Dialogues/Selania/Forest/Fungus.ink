@@ -16,16 +16,19 @@
     
     {
         //Check post storie
-            - not first_story_ended_check && firstStory == Ended:
-                -> first_story_ended_check
-            - not second_story_ended_check && secondStory == Ended:
-                -> second_story_ended_check
-            - not third_story_ended_check && thirdStory == Ended:
-                -> third_story_ended_check
-            - not fourth_story_ended_check && fourthStory == Ended:
-                -> fourth_story_ended_check
-            - not fifth_story_ended_check && fifthStory == Ended:
-                -> fifth_story_ended_check    
+        - not first_story_ended_check && firstStory == Ended:
+            -> first_story_ended_check
+        - not second_story_ended_check && secondStory == Ended:
+            -> second_story_ended_check
+        - not third_story_ended_check && thirdStory == Ended:
+            -> third_story_ended_check
+        - not fourth_story_ended_check && fourthStory == Ended:
+            -> fourth_story_ended_check
+        - not fifth_story_ended_check && fifthStory == Ended:
+            -> fifth_story_ended_check    
+        
+        - not foundLibro:
+            -> foundLibro
         
         - else:
             -> descriptions
@@ -305,3 +308,9 @@
     = four
     
     -> main
+    
+=== foundLibro
+<i>C'è un libro ai piedi del tronco, con scritto il tuo nome.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+    ~ move_entity(RewriterBook, Forest)
+
+-> main
