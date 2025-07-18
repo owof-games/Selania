@@ -223,6 +223,7 @@
         A dopo!
             - (nameSecond)
             ~ secondPauseTalking = secondCharPauseDuration
+            ~ move_entity(SecondRecap, BookPlace)
             -> main
    
     = two

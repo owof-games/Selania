@@ -104,7 +104,6 @@ TODO: check tag sbagliati per volto in giro
         //Presentazione.
         ~ firstStoryQuestCount ++
         
-        
         Hai visto passare qualcunə?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
         Altə all’incirca una balla di fieno e che si muove come un violino.
         O almeno ləi si descriverebbe così.
@@ -265,9 +264,8 @@ TODO: check tag sbagliati per volto in giro
         {are_two_entities_together(Mentor, PG): {welcome.your_name: {charNameFive}|???}: In effetti avrei un paio di informazioni utili da darti!} #speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
          L’unica cosa certa è che ho bisogno di Talco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
          Ci vediamo dopo, {name}.
-             ~ firstPauseTalking = firstCharPauseDuration
-            
-            TODO: inserire FirstRecap nel libro  ~ move_entity(FirstRecap, BookPlace)
+            ~ firstPauseTalking = firstCharPauseDuration
+            ~ move_entity(FirstRecap, BookPlace)
              
             -> main
         

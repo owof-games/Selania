@@ -130,6 +130,7 @@
     	        -> gender ->
     	{charNameThree}: Grandioso, io uso i femminili.      
              ~ thirdPauseTalking = thirdCharPauseDuration
+             ~ move_entity(ThirdRecap, BookPlace)
             -> main
     = two
     ~ temp charNameThree = translator(thirdCharacterState)

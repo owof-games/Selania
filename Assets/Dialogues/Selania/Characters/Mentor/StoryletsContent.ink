@@ -75,17 +75,16 @@
                     Facciamo così: prova a parlare con la persona{entity_location(PG) == TrainStop: al nostro fianco.| che troverai alla <b>stazione del treno</b>.}
                     E poi torna da me.
                     Nel frattempo raccolgo le foglie del giardino.
-                         ~ firstPauseTalking = 0
-                        TODO: inserire FifthRecap nel libro ~ move_entity(FifthRecap, BookPlace)
- 
-                         TODO: inserire RulesRecap nel libro ~ move_entity(RulesRecap, BookPlace)
-                         
-                        TODO: localizzare altre situazioni in cui compaiano gradualmente gli elementi del libro 
-                            -> main
+                        ~ firstPauseTalking = 0
+                        ~ move_entity(FifthRecap, BookPlace)
+                        ~ move_entity(RulesRecap, BookPlace)
+                    -> main
                 
                 - talk_with_first_character:
                     Ma sei super sul pezzo! Sembra che {charNameOne} ti abbia già raccontato qualcosa di sè!
                     Cavolo, sei qui da pochissimo e già mi rendi orgogliosa di te!
+                        ~ move_entity(FifthRecap, BookPlace)
+                        ~ move_entity(RulesRecap, BookPlace)    
                         -> gifts_and_ink
     
             }

@@ -27,6 +27,8 @@
     ->-> 
 
 
+//per sblocco slot: ~ move_entity(FourthRecap, BookPlace) e ~ move_entity(DogRecap, BookPlace) (o accadrà più avanti?)
+
 
 === aiuto_storia_quattro ===
     + {findedGifts != ()} Offro un dono.
