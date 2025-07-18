@@ -63,6 +63,8 @@
 //Funzione per spostare un'entità da un luogo a un altro
 === function move_entity(entity, destination)
     ~ temp CurrentLocation = entity_location(entity)
+{debug: moving {entity} to {destination}.}
+
     {CurrentLocation:
         - Forest:
             ~ forestContents -= entity
