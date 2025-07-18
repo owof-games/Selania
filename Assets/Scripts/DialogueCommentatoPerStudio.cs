@@ -54,9 +54,12 @@ public class DialogueCommentatoPerStudio : MonoBehaviour
     [SerializeField] private Sprite backSirene;
     [Header("Library Backgrounds")]
     [SerializeField] private Sprite backBiblioteca;
+
     [Header("Tea Backgrounds")]
     [SerializeField] private Sprite backTisane;
 
+    [Header("Book Backgrounds")]
+    [SerializeField] private Sprite backBook;
 
     [Header("Sounds")]
     [SerializeField] private AudioSource ambientSounds;
@@ -68,6 +71,8 @@ public class DialogueCommentatoPerStudio : MonoBehaviour
     [Header("Greenhouse Sounds")]
     [SerializeField] private AudioClip greenhouseSounds;
 
+    [Header("Book Sounds")]
+    [SerializeField] private AudioClip bookSounds;
 
 
 
@@ -387,11 +392,17 @@ public class DialogueCommentatoPerStudio : MonoBehaviour
                         background.sprite = backBiblioteca;
                     }
 
-                    //TAG GESTIONE DEL TISANE
+                    //TAG GESTIONE DELLA TISANERIA
                     if (tagValue == "backTisane")
                     {
                         background.sprite = backTisane;
                     }
+
+                    //TAG GESTIONE DEL LIBRO
+                    if (tagValue == "backBook")
+                    {
+                        background.sprite = backBook;
+                    }                    
 
                     break;
 
@@ -403,6 +414,7 @@ public class DialogueCommentatoPerStudio : MonoBehaviour
                         ambientSounds.clip = gardenSounds;
                         ambientSounds.Play();
                     }
+                    
                     //TAG MUSICA SOTTOFONDO BusStop
                     if (tagValue == "busstopSounds")
                     {
@@ -416,6 +428,13 @@ public class DialogueCommentatoPerStudio : MonoBehaviour
                         ambientSounds.clip = greenhouseSounds;
                         ambientSounds.Play();
                     }
+
+                    //TAG MUSICA SOTTOFONDO LIBRO
+                    if (tagValue == "bookSounds")
+                    {
+                        ambientSounds.clip = bookSounds;
+                        ambientSounds.Play();
+                    }                    
 
                     break;
 

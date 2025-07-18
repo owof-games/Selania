@@ -76,6 +76,11 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Laboratory Backgrounds")]
     [SerializeField] private Sprite backLaboratory;
 
+    [Header("Book Backgrounds")]
+    [SerializeField] private Sprite backBook;
+    
+
+
 
     [Header("Sounds")]
     [SerializeField] private AudioSource ambientSounds;
@@ -95,8 +100,11 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Greenhouse Middle Path Sounds")]
     [SerializeField] private AudioClip greenhousemiddlepathSounds;
 
-    [Header("Library Path Sounds")]
+    [Header("Library Sounds")]
     [SerializeField] private AudioClip librarySounds;
+
+    [Header("Book Sounds")]
+    [SerializeField] private AudioClip bookSounds;
 
     //TAG UTILIZZATO PER NOME
     private const string SPEAKER_TAG = "speaker";
@@ -414,6 +422,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
                         background.sprite = backLaboratory;
                     }
 
+                    //TAG GESTIONE DEL LIBRO
+                    if (tagValue == "backBook")
+                    {
+                        background.sprite = backBook;
+                    }                      
+
                     // Salviamo solo quando entriamo in una nuova "scena"
                     SaveGame();
 
@@ -461,7 +475,13 @@ public class DialogueManagerSingleInk : MonoBehaviour
                         ambientSounds.clip = librarySounds;
                         ambientSounds.Play();
                     }
-
+                    
+                    //TAG MUSICA SOTTOFONDO LIBRO
+                    if (tagValue == "bookSounds")
+                    {
+                        ambientSounds.clip = bookSounds;
+                        ambientSounds.Play();
+                    }  
                     break;
 
 
