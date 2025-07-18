@@ -1,10 +1,7 @@
 === library ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-{
-    - library == 1:
-    ~ move_entity(LaboratoryRecap, BookPlace)
-}
+
 
 //Qui avremo qualche info generica e poi la possibilità di leggerci qualcosa
 {debug: <i>La lista degli oggetti nella stanza è: {libraryContents}.}

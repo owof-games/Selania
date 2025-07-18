@@ -3,8 +3,6 @@
 #ambientSounds: {tag_ambientSounds()}
 {debug: <i>La lista degli oggetti nella stanza è: {bookContents}.}
 {debug: <i>Mi trovo in {entity_location(PG)}.}
-    + [Qualcosa]
-    //{entity_location(FrogRecap)}
     -> main
 
 

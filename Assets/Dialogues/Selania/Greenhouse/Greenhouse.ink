@@ -1,10 +1,7 @@
 === greenhouse ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-{
-    - greenhouse == 1:
-    ~ move_entity(GreenhouseRecap, BookPlace)
-}
+
 
 {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can}
 {greenhouse == 1:<i>Eccoti nella serra.</i>|{~ <i>La serra pulsa nell'aria tiepida.|<i>C'è odore di terra e tranquillità.|<i>I vasi chiedono di essere ascoltati.|<i>Le ragnatele raccolgono risposte.|<i>Le venature del legno propongono domande.}</i>} #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
@@ -29,6 +26,10 @@
 === pre_test
     <i>{~ In questo momento non c'è nulla in crescita.|La serra attende le tue visioni.}</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
         + [Mi guardo attorno.]
+        {
+            - greenhouse == 1:
+            ~ move_entity(GreenhouseRecap, BookPlace)
+        }
         -
             -> main
     
