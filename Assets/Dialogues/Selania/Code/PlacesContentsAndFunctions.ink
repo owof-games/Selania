@@ -1,21 +1,21 @@
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
     VAR bedroomContents = (RoomExit, RoomLoad, PG)
 
-    VAR trainStopContents = (Inventory, FromTrainStopToForest, StartingNote, FromTrainStopToBedroom)
+    VAR trainStopContents = (FromTrainStopToForest, StartingNote, FromTrainStopToBedroom)
 
-    VAR forestContents = (Inventory, Mentor, Bench, TheFungus, FromForestToTrainStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat)
+    VAR forestContents = (Mentor, Bench, TheFungus, FromForestToTrainStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat)
 
-    VAR greenhouseMiddlePathContents = (Inventory, FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, CloudOne)
+    VAR greenhouseMiddlePathContents = ( FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, CloudOne)
 
-    VAR greenhouseContents = (Inventory, FromGreenhouseToGreenhouseMiddlePath,  LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, WateringCan, FirstBee)
+    VAR greenhouseContents = ( FromGreenhouseToGreenhouseMiddlePath,  LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, WateringCan, FirstBee)
 
-    VAR libraryContents = (Inventory, FromLibraryToForest, FromLibraryToLaboratory, ReadingPlace)
+    VAR libraryContents = (FromLibraryToForest, FromLibraryToLaboratory, ReadingPlace)
 
-    VAR nestContents = (Inventory)
+    VAR nestContents = ()
 
-    VAR laboratoryContents = (Inventory)
+    VAR laboratoryContents = ()
 
-    VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, MenuSave, MenuQuit, TheFrog, FromForestToLibrary, RewriterBook, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FrogRecap, DogRecap, FungusRecap, GreenhouseRecap, LaboratoryRecap, NestRecap, FifthRecap, RulesRecap)
+    VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, MenuSave, MenuQuit, TheFrog, FromForestToLibrary, RewriterBook, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FrogRecap, DogRecap, FungusRecap, GreenhouseRecap, LaboratoryRecap, NestRecap, FifthRecap, RulesRecap, Inventory)
     
     VAR bookContents = (BookExit)
    

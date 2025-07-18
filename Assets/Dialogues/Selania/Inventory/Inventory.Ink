@@ -4,7 +4,7 @@ VAR currentReceiver = ()
 
 
 === inventory_contents ===
-+ {gifts_and_ink.sbadata or cultivable_test.zainetto}[Inventory]
++ {gifts_and_ink.sbadata or cultivable_test}[Inventory]
     ~ enableBigDialogue()
     {findedGifts != (): -> inventory ->|-> empty ->}
     ~ disableBigDialogue()

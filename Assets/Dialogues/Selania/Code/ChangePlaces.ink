@@ -27,6 +27,10 @@
             - foundLibro:
                 ~ move_entity(RewriterBook, TrainStop)
         }
+        {
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, TrainStop)
+        }
         -> train_stop
     
     + {are_two_entities_together(PG, FromForestToTrainStop)}  [FromForestToTrainStop]
@@ -34,7 +38,11 @@
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, TrainStop)
-        }    
+        }
+        {
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, TrainStop)
+        }        
             -> on_movement_events ->
                 -> train_stop
                 
@@ -44,7 +52,11 @@
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, Forest)
-        }            
+        }
+        {
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, Forest)
+        }        
             -> on_movement_events ->
                 -> forest
         
@@ -54,7 +66,11 @@
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, Forest)
-        }            
+        }
+        {
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, Forest)
+        }         
             
             -> on_movement_events ->
                 -> forest
@@ -64,7 +80,11 @@
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, Forest)
-        }  
+        }
+        {
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, Forest)
+        }         
             -> on_movement_events ->
                 -> forest
     
@@ -75,7 +95,11 @@
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, GreenhouseMiddlePath)
-        }  
+        }
+        {
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, GreenhouseMiddlePath)
+        }     
             -> on_movement_events ->
                 -> greenhouse_middle_path
         
@@ -84,7 +108,11 @@
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, GreenhouseMiddlePath)
-        }  
+        }
+        {
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, GreenhouseMiddlePath)
+        }         
             -> on_movement_events ->
                 -> greenhouse_middle_path
         
@@ -95,7 +123,11 @@
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, Greenhouse)
-        }  
+        }
+        {
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, Greenhouse)
+        }         
             ~ growing ++
             -> growing_check ->
             -> on_movement_events ->
@@ -113,7 +145,11 @@
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, Library)
-        }  
+        }
+        {
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, Library)
+        }         
             -> on_movement_events ->
                 -> library
         
@@ -146,7 +182,11 @@
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, Laboratory)
-        }  
+        }
+        {
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, Laboratory)
+        }        
             -> on_movement_events ->
                 -> laboratory
     }
