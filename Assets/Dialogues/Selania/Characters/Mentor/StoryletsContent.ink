@@ -76,6 +76,11 @@
                     E poi torna da me.
                     Nel frattempo raccolgo le foglie del giardino.
                          ~ firstPauseTalking = 0
+                        TODO: inserire FifthRecap nel libro ~ move_entity(FifthRecap, BookPlace)
+ 
+                         TODO: inserire RulesRecap nel libro ~ move_entity(RulesRecap, BookPlace)
+                         
+                        TODO: localizzare altre situazioni in cui compaiano gradualmente gli elementi del libro 
                             -> main
                 
                 - talk_with_first_character:

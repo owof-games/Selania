@@ -266,6 +266,9 @@ TODO: check tag sbagliati per volto in giro
          L’unica cosa certa è che ho bisogno di Talco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
          Ci vediamo dopo, {name}.
              ~ firstPauseTalking = firstCharPauseDuration
+            
+            TODO: inserire FirstRecap nel libro  ~ move_entity(FirstRecap, BookPlace)
+             
             -> main
         
     = two
