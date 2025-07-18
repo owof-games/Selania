@@ -9,12 +9,14 @@ TODO: codice per cambio background libro
 
 === book_tracking_arrive ===
 //Questa funzione serve per tracciare da quale luogo arriviamo nel libro
+
 {
     - arrivingFrom == Forest:
         ~ move_entity(PG, Forest)
         ~ move_entity(RewriterBook, Forest)
         ~ move_entity(Inventory, Forest)
         ~ arrivingFrom = ()
+        ~ disableBigDialogue()
         -> forest
     
     - arrivingFrom == Greenhouse:
@@ -22,6 +24,7 @@ TODO: codice per cambio background libro
         ~ move_entity(RewriterBook, Greenhouse)
         ~ move_entity(Inventory, Greenhouse)
         ~ arrivingFrom = ()
+        ~ disableBigDialogue()
         -> greenhouse
     
     - arrivingFrom == GreenhouseMiddlePath:
@@ -29,6 +32,7 @@ TODO: codice per cambio background libro
         ~ move_entity(RewriterBook, GreenhouseMiddlePath)
         ~ move_entity(Inventory, GreenhouseMiddlePath)
         ~ arrivingFrom = ()
+        ~ disableBigDialogue()
         -> greenhouse_middle_path
         
     - arrivingFrom == Laboratory:
@@ -36,6 +40,7 @@ TODO: codice per cambio background libro
         ~ move_entity(RewriterBook, Laboratory)
         ~ move_entity(Inventory, Laboratory)
         ~ arrivingFrom = ()
+        ~ disableBigDialogue()
         -> laboratory
 
     - arrivingFrom == Library:
@@ -43,6 +48,7 @@ TODO: codice per cambio background libro
         ~ move_entity(RewriterBook, Library)
         ~ move_entity(Inventory, Library)
         ~ arrivingFrom = ()
+        ~ disableBigDialogue()
         -> library
         
     - arrivingFrom == Nest:
@@ -50,6 +56,7 @@ TODO: codice per cambio background libro
         ~ move_entity(RewriterBook, Nest)
         ~ move_entity(Inventory, Nest)
         ~ arrivingFrom = ()
+        ~ disableBigDialogue()
         -> nest
         
     - arrivingFrom == TrainStop:
@@ -57,6 +64,7 @@ TODO: codice per cambio background libro
         ~ move_entity(RewriterBook, TrainStop)
         ~ move_entity(Inventory, TrainStop)
         ~ arrivingFrom = ()
+        ~ disableBigDialogue()
         -> train_stop
     
 
