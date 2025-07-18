@@ -61,7 +61,10 @@
            ~ return "backLibrary"
     
         - entity_location(PG) == Laboratory:
-           ~ return "backLaboratory"       
+           ~ return "backLaboratory"
+           
+        - entity_location(PG) == BookPlace:
+            ~ return "backBook"           
                                 
     }
 
@@ -90,6 +93,9 @@
            ~ return "librarySounds"
     
         - entity_location(PG) == Laboratory:
-           ~ return "laboratorySounds"       
+           ~ return "laboratorySounds"
+           
+        - entity_location(PG) == BookPlace:
+            ~ return "backSounds"           
                                 
     }

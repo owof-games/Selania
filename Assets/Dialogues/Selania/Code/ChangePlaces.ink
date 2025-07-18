@@ -1,6 +1,12 @@
 //Funzione per spostarsi da un luogo all'altro a seconda di dove mi trovo
 
  === move_between_rooms(my_location)
+ //Book management (the book will be treated as a place)
+    + {are_two_entities_together(PG, Book)} [Book]
+        -> book_backgrounds_calculator ->
+            ~ move_entity(PG, BookPlace)
+        -> main_book
+ 
 //Streets to and into the Bedroom
     + {are_two_entities_together(PG, FromTrainStopToBedroom)} [FromTrainStopToBedroom]
         //Calcolo del background
