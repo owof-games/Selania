@@ -1,9 +1,31 @@
 VAR arrivingFrom = ()
+LIST bookBGStates = (bookBGZero), bookBGOne, bookBGTwo, bookBGThree
 
 
 === book_backgrounds_calculator ===
 TODO: codice per cambio background libro
+TODO: tracciare e definire motivazioni del cambiamento
+TODO: mettere corrispettivo su C#
     //passaggio book calculator backgrounds
+        {
+        - from_list_to_books && (lichene_degli_abissi.step_tre or edera_delle_amanti.step_tre or canto_delle_compagne.step_tre or la_spazzata.step_tre or bacca_della_addolorata.step_tre or non_ti_scordar_di_te.step_tre or brina_dell_impossibile.step_tre):
+                ~ bookBGStates += ()
+                ~ bookBGStates += bookBGThree
+        
+        - (lichene_degli_abissi.step_tre or edera_delle_amanti.step_tre or canto_delle_compagne.step_tre or la_spazzata.step_tre or bacca_della_addolorata.step_tre or non_ti_scordar_di_te.step_tre or brina_dell_impossibile.step_tre) && (welcome or talking_fungus):
+                ~ bookBGStates += ()
+                ~ bookBGStates += bookBGTwo
+            
+        - welcome or talking_fungus:
+                ~ bookBGStates += ()
+                ~ bookBGStates += bookBGOne
+            
+        - else:
+                ~ bookBGStates += ()
+                ~ bookBGStates += bookBGZero
+
+    } 
+        ->->
 ->->
 
 
