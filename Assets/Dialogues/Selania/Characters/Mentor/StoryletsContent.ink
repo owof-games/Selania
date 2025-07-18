@@ -189,6 +189,9 @@
             Ora devo continuare a sbloccare un vecchio sentiero.
             Questo posto morirebbe senza me.
             Quando avrai conquistato la fiducia di {charNameOne} e le avrai donato qualcosa, torna da me per le ultime istruzioni.
+            {not cultivable_test.zainetto: Uh, che sbadata! Ti servirà di sicuro qualcosa per raccogliere gli oggetti!|E vevo che hai già trovato uno zainetto con cui raccogliere doni.}
+            {not cultivable_test.zainetto: Ecco, prendi!| Interessante.}
+                - (sbadata)
                 
             ~ firstPauseTalking = 0
                 -> main
