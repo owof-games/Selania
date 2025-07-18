@@ -1,24 +1,24 @@
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
     VAR bedroomContents = (RoomExit, RoomLoad, PG)
 
-    VAR trainStopContents = (Book, Inventory, FromTrainStopToForest, StartingNote, FromTrainStopToBedroom)
+    VAR trainStopContents = (RewriterBook, Inventory, FromTrainStopToForest, StartingNote, FromTrainStopToBedroom)
 
-    VAR forestContents = (Book, Inventory, Mentor, Bench, TheFungus, FromForestToTrainStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat)
+    VAR forestContents = (RewriterBook, Inventory, Mentor, Bench, TheFungus, FromForestToTrainStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat)
 
-    VAR greenhouseMiddlePathContents = (Book, Inventory, FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, CloudOne)
+    VAR greenhouseMiddlePathContents = (RewriterBook, Inventory, FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, CloudOne)
 
-    VAR greenhouseContents = (Book, Inventory, FromGreenhouseToGreenhouseMiddlePath,  LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, WateringCan, FirstBee)
+    VAR greenhouseContents = (RewriterBook, Inventory, FromGreenhouseToGreenhouseMiddlePath,  LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, WateringCan, FirstBee)
 
-    VAR libraryContents = (Book, Inventory, FromLibraryToForest, FromLibraryToLaboratory, ReadingPlace)
+    VAR libraryContents = (RewriterBook, Inventory, FromLibraryToForest, FromLibraryToLaboratory, ReadingPlace)
 
-    VAR nestContents = (Book, Inventory)
+    VAR nestContents = (RewriterBook, Inventory)
 
-    VAR laboratoryContents = (Book, Inventory)
+    VAR laboratoryContents = (RewriterBook, Inventory)
 
     VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, MenuSave, MenuQuit, TheFrog, FromForestToLibrary)
     
-    VAR bookContents = ()
-    
+    VAR bookContents = (FromForestToTrainStop)
+    TODO: contenuto messo solo per poter uscire dal libro per ora
 
 //Funzione per tracciare se una data entità si trova o meno in un determinato luogo
 === function entity_location(entity)
@@ -84,7 +84,6 @@
         
         - GreenhouseMiddlePath:
             ~ greenhouseMiddlePathContents -= entity        
-        
         - Safekeeping:
             ~ safekeepingContents -= entity
         

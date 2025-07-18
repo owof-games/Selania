@@ -82,7 +82,6 @@
             
         - entity_location(PG) == GreenhouseMiddlePath:
            ~ return "greenhouseMiddlePathSounds"        
-            
         - entity_location(PG) == Greenhouse:
            ~ return "greenhouseSounds"
     
@@ -96,6 +95,6 @@
            ~ return "laboratorySounds"
            
         - entity_location(PG) == BookPlace:
-            ~ return "backSounds"           
+            ~ return "bookSounds"           
                                 
     }
