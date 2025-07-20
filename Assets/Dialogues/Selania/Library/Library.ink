@@ -1,7 +1,8 @@
 === library ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-
+            ~ arrivingFrom = ()
+            ~ arrivingFrom = Library
 
 //Qui avremo qualche info generica e poi la possibilità di leggerci qualcosa
 {debug: <i>La lista degli oggetti nella stanza è: {libraryContents}.}

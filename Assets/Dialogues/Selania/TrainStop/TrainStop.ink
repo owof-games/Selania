@@ -1,6 +1,8 @@
 === train_stop ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
+        ~ arrivingFrom = ()
+        ~ arrivingFrom = TrainStop
 TODO: eliminare Bus anche da Unity
 {debug: <i>La lista degli oggetti nella stanza è: {trainStopContents}.}
 

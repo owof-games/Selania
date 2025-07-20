@@ -33,7 +33,10 @@ LIST bookBGStates = (bookBGZero), bookBGOne, bookBGTwo, bookBGThree
     - arrivingFrom == Forest:
         ~ move_entity(PG, Forest)
         ~ move_entity(RewriterBook, Forest)
-        ~ move_entity(Inventory, Forest)
+        {
+            - foundLibro:
+            ~ move_entity(Inventory, Forest)
+        }
         ~ arrivingFrom = ()
         ~ disableBigDialogue()
         -> forest
@@ -41,7 +44,10 @@ LIST bookBGStates = (bookBGZero), bookBGOne, bookBGTwo, bookBGThree
     - arrivingFrom == Greenhouse:
         ~ move_entity(PG, Greenhouse)
         ~ move_entity(RewriterBook, Greenhouse)
-        ~ move_entity(Inventory, Greenhouse)
+        {
+            - foundLibro:
+            ~ move_entity(Inventory, Greenhouse)
+        }
         ~ arrivingFrom = ()
         ~ disableBigDialogue()
         -> greenhouse
@@ -49,7 +55,10 @@ LIST bookBGStates = (bookBGZero), bookBGOne, bookBGTwo, bookBGThree
     - arrivingFrom == GreenhouseMiddlePath:
         ~ move_entity(PG, GreenhouseMiddlePath)
         ~ move_entity(RewriterBook, GreenhouseMiddlePath)
-        ~ move_entity(Inventory, GreenhouseMiddlePath)
+        {
+            - foundLibro:
+            ~ move_entity(Inventory, GreenhouseMiddlePath)
+        }
         ~ arrivingFrom = ()
         ~ disableBigDialogue()
         -> greenhouse_middle_path
@@ -57,7 +66,10 @@ LIST bookBGStates = (bookBGZero), bookBGOne, bookBGTwo, bookBGThree
     - arrivingFrom == Laboratory:
         ~ move_entity(PG, Laboratory)
         ~ move_entity(RewriterBook, Laboratory)
-        ~ move_entity(Inventory, Laboratory)
+        {
+            - foundLibro:
+            ~ move_entity(Inventory, Laboratory)
+        }
         ~ arrivingFrom = ()
         ~ disableBigDialogue()
         -> laboratory
@@ -65,7 +77,10 @@ LIST bookBGStates = (bookBGZero), bookBGOne, bookBGTwo, bookBGThree
     - arrivingFrom == Library:
         ~ move_entity(PG, Library)
         ~ move_entity(RewriterBook, Library)
-        ~ move_entity(Inventory, Library)
+        {
+            - foundLibro:
+            ~ move_entity(Inventory, Library)
+        }
         ~ arrivingFrom = ()
         ~ disableBigDialogue()
         -> library
@@ -73,7 +88,10 @@ LIST bookBGStates = (bookBGZero), bookBGOne, bookBGTwo, bookBGThree
     - arrivingFrom == Nest:
         ~ move_entity(PG, Nest)
         ~ move_entity(RewriterBook, Nest)
-        ~ move_entity(Inventory, Nest)
+        {
+            - foundLibro:
+            ~ move_entity(Inventory, Nest)
+        }    
         ~ arrivingFrom = ()
         ~ disableBigDialogue()
         -> nest
@@ -81,7 +99,10 @@ LIST bookBGStates = (bookBGZero), bookBGOne, bookBGTwo, bookBGThree
     - arrivingFrom == TrainStop:
         ~ move_entity(PG, TrainStop)
         ~ move_entity(RewriterBook, TrainStop)
-        ~ move_entity(Inventory, TrainStop)
+        {
+            - foundLibro:
+            ~ move_entity(Inventory, TrainStop)
+        }
         ~ arrivingFrom = ()
         ~ disableBigDialogue()
         -> train_stop
