@@ -64,9 +64,29 @@
            ~ return "backLaboratory"
            
         - entity_location(PG) == BookPlace:
-            ~ return "backBook"           
-                                
-    }
+        
+                {
+                    - bookBGVariations ==  4:
+                        ~ return "bookBGFour"
+                        
+                    - bookBGVariations ==  3:
+                        ~ return "bookBGThree"
+                
+                    - bookBGVariations ==  2:
+                        ~ return "bookBGTwo"    
+                        
+                    - bookBGVariations ==  1:
+                        ~ return "bookBGOne"          
+                    
+                    - bookBGVariations ==  0:
+                        ~ return "bookBGZero"
+                    
+                    - else:
+                        errore
+                } 
+
+        }
+        
 
 //Funzioni di gestione sottofondo audio
 === function tag_ambientSounds()

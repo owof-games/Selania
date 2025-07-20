@@ -5,39 +5,17 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour
 === book_backgrounds_calculator ===
     //cresce a metà storia pg, tranne pg5 che cresce a fine storia, completamento coltivabili e via di seguito.
     {
-        - cultivable == () && not plus_cultivable:
+        - backupCultivable == () && not plus_cultivable:
             -> plus_cultivable
     }
-    
-        {
-        - bookBGVariations ==  4:
-                ~ bookBGStates += ()
-                ~ bookBGStates += bookBGFour
-                
-        - bookBGVariations ==  3:
-                ~ bookBGStates += ()
-                ~ bookBGStates += bookBGThree
-        
-        - bookBGVariations ==  2:
-                ~ bookBGStates += ()
-                ~ bookBGStates += bookBGTwo    
-                
-        - bookBGVariations ==  1:
-                ~ bookBGStates += ()
-                ~ bookBGStates += bookBGOne          
-        - else:
-                ~ bookBGStates += ()
-                ~ bookBGStates += bookBGZero
 
-    } 
-        ->->
 ->->
 
-= plus_cultivable
-//Se ho finito i coltivabili, si accresce il valore
-{debug: la lista dei coltivabili è vuota, perché = {cultivable}, il numero di passaggi da plus_cultivable è {plus_cultivable} e per questo incremento di uno bookBGVariations.}
-    ~ bookBGVariations ++
-->->
+    = plus_cultivable
+    //Se ho finito i coltivabili, si accresce il valore
+    {debug: la lista dei coltivabili è vuota, perché = {cultivable}, il numero di passaggi da plus_cultivable è {plus_cultivable} e per questo incremento di uno bookBGVariations.}
+        ~ bookBGVariations ++
+    ->->
 
 === book_tracking_arrive ===
 //Questa funzione serve per tracciare da quale luogo arriviamo nel libro
