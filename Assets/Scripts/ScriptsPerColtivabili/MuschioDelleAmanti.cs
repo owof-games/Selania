@@ -26,7 +26,7 @@ public class MuschioDelleAmanti : MonoBehaviour
     //Chiamo poi in ogni update
     {
         //Chiamare il dialogue manager e fargli eseguire questa riga di codice
-        var step = dialogueManager.GetEffettivoStatoMuschioDelleAmanti();
+        var step = dialogueManager.GetEffettivoStatoEderaDelleAmanti();
         if (step.ContainsItemNamed("notStarted"))
         {
             image.sprite = NotStarted;

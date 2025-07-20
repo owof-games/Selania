@@ -31,7 +31,7 @@ VAR currentReceiver = ()
  ----------------------------------*/
 
 
-+ {findedGifts has EderaDelleAmanti} [Del muschio delle amanti.]
++ {findedGifts has EderaDelleAmanti} [Edera delle amanti.]
     ~ findedGifts -= EderaDelleAmanti
     {
         - currentReceiver has FirstCharacter:

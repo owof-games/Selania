@@ -595,9 +595,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
     {
         return (InkList)story.variablesState["growthNonTiScordarDiTe"];
     }
-    public InkList GetEffettivoStatoMuschioDelleAmanti()
+    public InkList GetEffettivoStatoEderaDelleAmanti()
     {
-        return (InkList)story.variablesState["growthMuschioDelleAmanti"];
+        return (InkList)story.variablesState["growthEderaDelleAmanti"];
     }
     public void OnQuitButton()
     {

@@ -8,7 +8,7 @@
     
     VAR growthCantoDelleCompagne = notStarted
     VAR growthLicheneDegliAbissi = notStarted
-    VAR growthMuschioDelleAmanti = notStarted
+    VAR growthEderaDelleAmanti = notStarted
     VAR growthBrinaDellImpossibile = notStarted
     VAR growthLaSpazzata = notStarted
     VAR growthBaccaDellaAddolorata = notStarted

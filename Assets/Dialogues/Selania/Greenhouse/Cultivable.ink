@@ -32,13 +32,13 @@
     - chosenCultivable has EderaDelleAmanti:
     {
         - growStep has stepZero:
-            ~ growthMuschioDelleAmanti = stepZero
+            ~ growthEderaDelleAmanti = stepZero
         - growStep has stepOne:
-            ~ growthMuschioDelleAmanti = stepOne
+            ~ growthEderaDelleAmanti = stepOne
         - growStep has stepTwo:
-            ~ growthMuschioDelleAmanti = stepTwo
+            ~ growthEderaDelleAmanti = stepTwo
         - growStep has stepThree:
-             ~ growthMuschioDelleAmanti = stepThree
+             ~ growthEderaDelleAmanti = stepThree
     }
 
     - chosenCultivable has CantoDelleCompagne:
@@ -121,13 +121,13 @@
 
     - chosenCultivable has EderaDelleAmanti:
     {
-        - growthMuschioDelleAmanti == stepZero:
+        - growthEderaDelleAmanti == stepZero:
             -> edera_delle_amanti.step_zero
-        - growthMuschioDelleAmanti == stepOne:
+        - growthEderaDelleAmanti == stepOne:
             -> edera_delle_amanti.step_uno
-        - growthMuschioDelleAmanti == stepTwo:
+        - growthEderaDelleAmanti == stepTwo:
             -> edera_delle_amanti.step_due
-        - growthMuschioDelleAmanti == stepThree:
+        - growthEderaDelleAmanti == stepThree:
             -> edera_delle_amanti.step_tre
     }
 
@@ -247,7 +247,7 @@
 //Collaborazione, novità, ricordo
 //Outcome: datti piacere
     = step_zero
-    ~ growthMuschioDelleAmanti = stepZero
+    ~ growthEderaDelleAmanti = stepZero
         <i>È solo una tua impressione, o il vaso ha iniziato a brillare?</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
         -> main
     
