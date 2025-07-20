@@ -12365,7 +12365,11 @@ MonoBehaviour:
   backNest: {fileID: -3239163318168165702, guid: 16e88c7ff044338449f76e5a912abaef, type: 3}
   backLibrary: {fileID: 21300000, guid: 96006235423b21540ae3a23fb73408c9, type: 3}
   backLaboratory: {fileID: -3070273842284801829, guid: ed53d17256160094bb8745f874ba201d, type: 3}
-  backBook: {fileID: -1286121558790084754, guid: 14e93a155f8369d48bf4fc1f97abffcd, type: 3}
+  bookBGZero: {fileID: 21300000, guid: e4c866669c0c438479efc3a5b911527e, type: 3}
+  bookBGOne: {fileID: 21300000, guid: 53c52568ad612b14a8441f0dc7fcf626, type: 3}
+  bookBGTwo: {fileID: 21300000, guid: 7de31b9d65ff56742b16d43f7356f8c4, type: 3}
+  bookBGThree: {fileID: 21300000, guid: 1cb300eaface73e49b1dc2527e9f3d80, type: 3}
+  bookBGFour: {fileID: 21300000, guid: f383587f6c94ed54eb01050a1c36a2ee, type: 3}
   ambientSounds: {fileID: 1863324330}
   bedroomSounds: {fileID: 8300000, guid: 6de55e0d82384a44fa4eacd46aa0c0c5, type: 3}
   forestSounds: {fileID: 8300000, guid: 2e20f3c92a2793f47b8a720ca1154c1b, type: 3}
@@ -13057,7 +13061,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.36375734, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.1009064, y: 0}
+  m_AnchoredPosition: {x: 2.100891, y: 0}
   m_SizeDelta: {x: 1.3131, y: 0}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &2001457187
