@@ -17,6 +17,10 @@
 
 {main_story_first_character: confessione.}
 
+//Eventuale commento della rana.
+TODO: Inserire dono fatto.
+
+
 {main_story_first_character.ending: Dopo la nostra conversazione, ha scelto un nuovo nome: {firstCharacterState}.}
 
 {first_character_feedback: Dopo aver aiutato {firstCharacterState}, {fifthCharacterState} mi ha detto che<>}
@@ -112,6 +116,11 @@
 
 {main_story_second_character: confessione.}
 
+
+//Eventuale commento della rana.
+
+
+
 {main_story_second_character.ending: Dopo la nostra conversazione, ha scelto un nuovo nome: {secondCharacterState}.}
 
 {second_character_feedback: Dopo aver aiutato {secondCharacterState}, {fifthCharacterState} mi ha detto che<>}
@@ -205,6 +214,9 @@
 {knowing_third_character.eleven: undicesima informazione.}
 {knowing_third_character.twelve: dodicesiam informazione.}
 {main_story_third_character: confessione.}
+
+//Eventuale commento della rana.
+
 
 {main_story_third_character.ending: Dopo la nostra conversazione, ha scelto un nuovo nome: {thirdCharacterState}.}
 
@@ -300,6 +312,9 @@
 //{knowing_fourth_character.twelve: dodicesiam informazione.}
 //{main_story_fourth_character: confessione.}
 //{main_story_fourth_character.ending: Dopo la nostra conversazione, ha scelto un nuovo nome: {fourthCharacterState}.}
+
+//Eventuale commento della rana.
+
 {fourth_character_feedback: Dopo aver aiutato {fourthCharacterState}, {fifthCharacterState} mi ha detto che<>}
 {
     - fourthCharacterPossibleStates has Grizzly: feedback Mentore
@@ -398,6 +413,9 @@
 {knowing_fifth_character.ten: decima informazione.}
 {knowing_fifth_character.eleven: undicesima informazione.}
 {knowing_fifth_character.twelve: dodicesiam informazione.}
+
+
+//Eventuale commento della rana.
 
 {main_story_fifth_character: confessione.}
 
