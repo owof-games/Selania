@@ -322,7 +322,7 @@ TODO: check tag sbagliati per volto in giro
         
          Che poi a pensarci bene, non è che saranno tutti i passi di quell'altra?
          Cammina così tanto, e per cosa poi?
-        {are_two_entities_together(Mentor, PG):{charNameFive}: Non hai idea di quanto lavoro ci sia da fare. Quindi sì, cammino MOLTO.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+        {are_two_entities_together(Mentor, PG): Non hai idea di quanto lavoro ci sia da fare. Quindi sì, cammino MOLTO.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
          Ma troppe chiacchiere ora, troppe.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
          Fammi chillare un attimo.
             ~ firstPauseTalking = firstCharPauseDuration
