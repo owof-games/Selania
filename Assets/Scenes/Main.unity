@@ -7719,6 +7719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1063796607}
   - component: {fileID: 1063796608}
+  - component: {fileID: 1063796609}
   m_Layer: 0
   m_Name: AnalyticsManager
   m_TagString: Untagged
@@ -7753,6 +7754,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5861bf9d0adc3e740a00b69685ee6025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 1863324329}
+  colorVariables:
+  - variableName: firstPurple
+    color: purple
+  - variableName: secondPurple
+    color: purple
+  - variableName: thirdPurple
+    color: purple
+  - variableName: fourthPurple
+    color: purple
+  - variableName: fifthPurple
+    color: purple
+  - variableName: firstYellow
+    color: yellow
+  - variableName: secondYellow
+    color: yellow
+  - variableName: thirdYellow
+    color: yellow
+  - variableName: fourthYellow
+    color: yellow
+  - variableName: fifthYellow
+    color: yellow
+  - variableName: firstBlue
+    color: blue
+  - variableName: secondBlue
+    color: blue
+  - variableName: thirdBlue
+    color: blue
+  - variableName: fourthBlue
+    color: blue
+  - variableName: fifthBlue
+    color: blue
+  - variableName: firstGreen
+    color: green
+  - variableName: secondGreen
+    color: green
+  - variableName: thirdGreen
+    color: green
+  - variableName: fourthGreen
+    color: green
+  - variableName: fifthGreen
+    color: green
+  - variableName: firstRed
+    color: red
+  - variableName: secondRed
+    color: red
+  - variableName: thirdRed
+    color: red
+  - variableName: fourthRed
+    color: red
+  - variableName: fifthRed
+    color: red
+--- !u!114 &1063796609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063796606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5362dc11cda3c4eab9049f0c5164cdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 0}
 --- !u!1 &1065807753
 GameObject:
   m_ObjectHideFlags: 0
@@ -12393,6 +12459,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onInkStoryLoaded:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!82 &1863324330
 AudioSource:
   m_ObjectHideFlags: 0

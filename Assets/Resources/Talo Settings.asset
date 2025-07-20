@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49b9c417269f7cf408803966b024d3b8, type: 3}
   m_Name: Talo Settings
   m_EditorClassIdentifier: 
-  accessKey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ2NywiYXBpIjp0cnVlLCJpYXQiOjE3NTMwMTg4MjJ9.lnyolbSN1dv5VHUQQouswj4BObzCc4pCGFpr1wRAdIE
+  accessKey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ2OCwiYXBpIjp0cnVlLCJpYXQiOjE3NTMwMjQxNDd9.IgIqHrqQ7qfvWF2QHbqi3-xt4WutbLXJhSvzLM6ywIs
   apiUrl: https://api.trytalo.com
   socketUrl: wss://api.trytalo.com
   webGLEventFlushRate: 30

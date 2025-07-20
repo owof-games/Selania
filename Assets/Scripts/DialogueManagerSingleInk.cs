@@ -134,6 +134,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
         }
 
         DisableDialoguePanel();
+        
+        InkStoryLoaded();
     }
 
     private void FillChoicesTextMeshPro(GameObject[] choicesGameObjects, ref TextMeshProUGUI[] choicesTextMeshPros)
@@ -693,7 +695,47 @@ public class DialogueManagerSingleInk : MonoBehaviour
         dialoguePanel.SetActive(false);
         dialoguePanelBig.SetActive(false);
     }
+    
+    /*
+     * Sezione per aggancio verso Talo
+     */
 
+    [Tooltip("Invoked whenever the Ink story has been loaded (if a save game has been found, otherwise straight after the story has been created and the first step has been entered)")]
+    public UnityEvent onInkStoryLoaded = new();
+
+    /// <summary>
+    /// Whether the Ink story has been loaded
+    /// </summary>
+    public bool IsInkStoryLoaded { get; private set; }
+
+    void InkStoryLoaded()
+    {
+        onInkStoryLoaded.Invoke();
+        IsInkStoryLoaded = true;
+    }
+
+    /// <summary>
+    /// Register a variable observer. Whenever the variable with given name changes, the variable observer gets
+    /// called.
+    /// </summary>
+    /// <param name="variableName">Name of the variable to observe.</param>
+    /// <param name="variableObserver">Callback method that is called whenever the variable changes.</param>
+    /// <returns>A method that de-register the observer.</returns>
+    public System.Action RegisterVariableObserver(string variableName, Story.VariableObserver variableObserver)
+    {
+        story.ObserveVariable( variableName, variableObserver );
+        return () => story.RemoveVariableObserver( variableObserver );
+    }
+
+    /// <summary>
+    /// Get the value of a variable.
+    /// </summary>
+    /// <param name="variableName">Name of the variable to get the value of.</param>
+    /// <returns>The value of the variable.</returns>
+    public object GetVariableValue(string variableName)
+    {
+        return story.variablesState[variableName];
+    }
 }
 
 
