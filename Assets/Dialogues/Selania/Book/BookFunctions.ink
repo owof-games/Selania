@@ -1,22 +1,30 @@
 VAR arrivingFrom = ()
-LIST bookBGStates = (bookBGZero), bookBGOne, bookBGTwo, bookBGThree
-
+VAR bookBGVariations = 0
+LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour
 
 === book_backgrounds_calculator ===
-    //passaggio book calculator backgrounds
+    //cresce a metà storia pg, tranne pg5 che cresce a fine storia, completamento coltivabili e via di seguito.
+    {
+        - cultivable == () && not plus_cultivable:
+            -> plus_cultivable
+    }
+    
         {
-        - from_list_to_books && (lichene_degli_abissi.step_tre or edera_delle_amanti.step_tre or canto_delle_compagne.step_tre or la_spazzata.step_tre or bacca_della_addolorata.step_tre or non_ti_scordar_di_te.step_tre or brina_dell_impossibile.step_tre):
+        - bookBGVariations ==  4:
+                ~ bookBGStates += ()
+                ~ bookBGStates += bookBGFour
+                
+        - bookBGVariations ==  3:
                 ~ bookBGStates += ()
                 ~ bookBGStates += bookBGThree
         
-        - (lichene_degli_abissi.step_tre or edera_delle_amanti.step_tre or canto_delle_compagne.step_tre or la_spazzata.step_tre or bacca_della_addolorata.step_tre or non_ti_scordar_di_te.step_tre or brina_dell_impossibile.step_tre) && (welcome or talking_fungus):
+        - bookBGVariations ==  2:
                 ~ bookBGStates += ()
-                ~ bookBGStates += bookBGTwo
-            
-        - welcome or talking_fungus:
+                ~ bookBGStates += bookBGTwo    
+                
+        - bookBGVariations ==  1:
                 ~ bookBGStates += ()
-                ~ bookBGStates += bookBGOne
-            
+                ~ bookBGStates += bookBGOne          
         - else:
                 ~ bookBGStates += ()
                 ~ bookBGStates += bookBGZero
@@ -25,6 +33,11 @@ LIST bookBGStates = (bookBGZero), bookBGOne, bookBGTwo, bookBGThree
         ->->
 ->->
 
+= plus_cultivable
+//Se ho finito i coltivabili, si accresce il valore
+{debug: la lista dei coltivabili è vuota, perché = {cultivable}, il numero di passaggi da plus_cultivable è {plus_cultivable} e per questo incremento di uno bookBGVariations.}
+    ~ bookBGVariations ++
+->->
 
 === book_tracking_arrive ===
 //Questa funzione serve per tracciare da quale luogo arriviamo nel libro

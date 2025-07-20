@@ -77,7 +77,11 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private Sprite backLaboratory;
 
     [Header("Book Backgrounds")]
-    [SerializeField] private Sprite backBook;
+    [SerializeField] private Sprite bookBGZero;
+    [SerializeField] private Sprite bookBGOne;
+    [SerializeField] private Sprite bookBGTwo;
+    [SerializeField] private Sprite bookBGThree;
+    [SerializeField] private Sprite bookBGFour;
     
 
 
@@ -423,10 +427,31 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     }
 
                     //TAG GESTIONE DEL LIBRO
-                    if (tagValue == "backBook")
+                    if (tagValue == "bookBGZero")
                     {
-                        background.sprite = backBook;
-                    }                      
+                        background.sprite = bookBGZero;
+                    }
+
+                    if (tagValue == "bookBGOne")
+                    {
+                        background.sprite = bookBGOne;
+                    }
+
+                    if (tagValue == "bookBGTwo")
+                    {
+                        background.sprite = bookBGTwo;
+                    }
+
+                    if (tagValue == "bookBGThree")
+                    {
+                        background.sprite = bookBGThree;
+                    }
+
+                    if (tagValue == "bookBGFour")
+                    {
+                        background.sprite = bookBGFour;
+                    }
+
 
                     // Salviamo solo quando entriamo in una nuova "scena"
                     SaveGame();

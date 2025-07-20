@@ -680,6 +680,7 @@ TODO: check tag sbagliati per volto in giro
          Ma per capire perché sono in questo posto.
          Mi prendo un po' di tempo per me, {name}.
             ~ firstPauseTalking = firstCharPauseDuration
+            ~ bookBGVariations ++
             -> main
     
     = nine

@@ -937,7 +937,8 @@
                     ~ secondPurple ++
  
             -
-             ~ secondPauseTalking = secondCharPauseDuration
+            ~ bookBGVariations ++
+            ~ secondPauseTalking = secondCharPauseDuration
             -> main    
     
     
