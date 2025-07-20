@@ -9,7 +9,7 @@
     "os": "ubuntu-latest",
     "requiresCombinedArtifact": false,
     "minimumBuildType": "preview",
-    "compatibleBuildTargets": ["WebGL"]
+    "compatibleBuildTargets": ["StandaloneWindows64"]
   },
   "s3": {
     "os": "ubuntu-latest",

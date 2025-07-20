@@ -30,7 +30,7 @@ on:
       buildTargets:
         description: "JSON array of build targets (e.g. [\"WebGL\",\"iOS\"])"
         required: true
-        default: '["WebGL"]'
+        default: '["StandaloneWindows64"]'
         type: string
       buildVersion:
         description: Optional version override
