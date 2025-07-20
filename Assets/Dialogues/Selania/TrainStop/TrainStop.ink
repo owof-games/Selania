@@ -158,7 +158,7 @@ TODO: eliminare Bus anche da Unity
             - firstCharacterPossibleStates has Triangolo:
                 Non io ovviamente.
                 Il lavoro di smistamento si mangia le giornate.
-                Per Talco ha spaccato!
+                Però Talco ha spaccato!
                 Quando ha finito sono scoppiata a piangere.
                 L3 am3 pensavano fosse gioia.
                 Non ho avuto il coraggio di dire loro che temo di aver fatto la scelta peggiore della mia vita.
