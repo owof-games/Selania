@@ -1,6 +1,9 @@
 === rules_recap
 + {are_two_entities_together(RulesRecap, PG)} [RulesRecap]
 ~ enableBigDialogue()
+cosa
+
+
         {gifts_and_ink:La prima cosa da fare è: conquistare la <b>fiducia</b> della persona che devi aiutare.}
         {gifts_and_ink:Ci <b>parli</b>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.}
         {gifts_and_ink:Poi, le fai un <b>dono</b>.}
@@ -15,7 +18,9 @@
 === greenhouse_recap
 + {are_two_entities_together(GreenhouseRecap, PG)} [GreenhouseRecap]
 ~ enableBigDialogue()
- 
+
+ cosa
+
     {lichene_degli_abissi.step_tre.colto: Il Lichene degli abissi parla di relazioni permeate di dolore. Di cose o persone che si inseguono, che possono pure volersi bene. Ma finiscono per farci del male. Capaci solo di distruggersi. Piene di fragilità. }
                 
     {edera_delle_amanti.step_tre.colto: Tradizionalmente è associata al piacere fisico. Da queste parti si racconta che l'universo intero sia fatto d'edera. E che l'edera rimarrà in vita fino a quando le amanti saranno capaci di darsi amore e piacere. Io lo vedo invece come un invito al piacere. A godere anche del cibo, di una camminata. Di una giornata di sole. Il mondo non esisterebbe senza piacere. O non merita la nostra attenzione.}

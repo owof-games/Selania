@@ -23,8 +23,6 @@
 //Streets to Bus Stop
     + {are_two_entities_together(PG, RoomLoad)} [RoomLoad]
         ~ move_entity(PG, TrainStop)
-        // ~ arrivingFrom = ()
-        //~ arrivingFrom = TrainStop
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, TrainStop)
@@ -37,8 +35,6 @@
     
     + {are_two_entities_together(PG, FromForestToTrainStop)}  [FromForestToTrainStop]
             ~ move_entity(PG, TrainStop)
-            //~ arrivingFrom = ()
-            //~ arrivingFrom = TrainStop
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, TrainStop)
@@ -53,8 +49,6 @@
 //Streets to Garden       
     + {are_two_entities_together(PG, FromTrainStopToForest)} [FromTrainStopToForest]
             ~ move_entity(PG, Forest)
-            //~ arrivingFrom = ()
-            //~ arrivingFrom = Forest
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, Forest)
@@ -69,8 +63,6 @@
         
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToForest)} [FromGreenhouseMiddlePathToForest]
             ~ move_entity(PG, Forest)
-            //~ arrivingFrom = ()
-            //~ arrivingFrom = Forest            
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, Forest)
@@ -85,8 +77,7 @@
     
     + {are_two_entities_together(PG, FromLibraryToForest)} [FromLibraryToForest]
             ~ move_entity(PG, Forest)
-            //~ arrivingFrom = ()
-            //~ arrivingFrom = Forest            
+           
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, Forest)
@@ -102,8 +93,6 @@
  //Streets to GreenhouseMiddlePath   
     + {are_two_entities_together(PG, FromGreenhouseToGreenhouseMiddlePath)} [FromGreenhouseToGreenhouseMiddlePath]
             ~ move_entity(PG, GreenhouseMiddlePath)
-            //~ arrivingFrom = ()
-            //~ arrivingFrom = GreenhouseMiddlePath            
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, GreenhouseMiddlePath)
@@ -117,8 +106,6 @@
         
     + {are_two_entities_together(PG, FromForestToGreenhouseMiddlePath)} [FromForestToGreenhouseMiddlePath]
             ~ move_entity(PG, GreenhouseMiddlePath)
-            //~ arrivingFrom = ()
-            //~ arrivingFrom = GreenhouseMiddlePath             
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, GreenhouseMiddlePath)
@@ -134,8 +121,6 @@
 //Streets to Greenhouse
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToGreenhouse)}  [FromGreenhouseMiddlePathToGreenhouse]
             ~ move_entity(PG, Greenhouse)
-            //~ arrivingFrom = ()
-            //~ arrivingFrom = Greenhouse            
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, Greenhouse)
@@ -158,8 +143,6 @@
             
     + {are_two_entities_together(PG, FromForestToLibrary) && secondTier == true} [FromForestToLibrary]
             ~ move_entity(PG, Library)
-            //~ arrivingFrom = ()
-            //~ arrivingFrom = Library             
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, Library)
@@ -197,8 +180,6 @@
             -> main
         - else:
             ~ move_entity(PG, Laboratory)
-            //~ arrivingFrom = ()
-            //~ arrivingFrom = Laboratory             
         {
             - foundLibro:
                 ~ move_entity(RewriterBook, Laboratory)

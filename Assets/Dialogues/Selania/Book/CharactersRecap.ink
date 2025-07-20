@@ -2,6 +2,7 @@
 + {are_two_entities_together(FirstRecap, PG)} [FirstRecap]
 ~ enableBigDialogue()
 
+
 {knowing_first_character.one: prima informazione.}
 {knowing_first_character.two: seconda informazione.}
 {knowing_first_character.three: terza informazione.}
@@ -392,6 +393,8 @@ TODO: Inserire dono fatto.
 === fifth_character_recap
 + {are_two_entities_together(FifthRecap, PG)} [FifthRecap]
 ~ enableBigDialogue()
+
+cosa
 
 {that_little_liar_storylet: a {fifthCharacterState} non piacciono i bambini?}
 {watering_can_storylet: non è più un dubbio.}

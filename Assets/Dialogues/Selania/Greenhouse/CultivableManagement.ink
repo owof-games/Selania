@@ -64,6 +64,7 @@
 === cultivable_test ===
 <i>La serra ha qualcosa da svelarti.#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
 <i>Sussurri serpeggiano tra i vasi, ponendoti domande.
+
 {
     - not gifts_and_ink.sbadata: <i>Qualcosa ti lascia un dono: uno zainetto per raccogliere tutto ciò che coltiverai.</i>
         ~ move_entity(Inventory, Greenhouse)

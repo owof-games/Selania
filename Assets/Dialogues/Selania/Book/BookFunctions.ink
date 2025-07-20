@@ -34,8 +34,8 @@ LIST bookBGStates = (bookBGZero), bookBGOne, bookBGTwo, bookBGThree
         ~ move_entity(PG, Forest)
         ~ move_entity(RewriterBook, Forest)
         {
-            - foundLibro:
-            ~ move_entity(Inventory, Forest)
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, Forest)
         }
         ~ arrivingFrom = ()
         ~ disableBigDialogue()
@@ -45,8 +45,8 @@ LIST bookBGStates = (bookBGZero), bookBGOne, bookBGTwo, bookBGThree
         ~ move_entity(PG, Greenhouse)
         ~ move_entity(RewriterBook, Greenhouse)
         {
-            - foundLibro:
-            ~ move_entity(Inventory, Greenhouse)
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, Greenhouse)
         }
         ~ arrivingFrom = ()
         ~ disableBigDialogue()
@@ -56,8 +56,8 @@ LIST bookBGStates = (bookBGZero), bookBGOne, bookBGTwo, bookBGThree
         ~ move_entity(PG, GreenhouseMiddlePath)
         ~ move_entity(RewriterBook, GreenhouseMiddlePath)
         {
-            - foundLibro:
-            ~ move_entity(Inventory, GreenhouseMiddlePath)
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, GreenhouseMiddlePath)
         }
         ~ arrivingFrom = ()
         ~ disableBigDialogue()
@@ -67,8 +67,8 @@ LIST bookBGStates = (bookBGZero), bookBGOne, bookBGTwo, bookBGThree
         ~ move_entity(PG, Laboratory)
         ~ move_entity(RewriterBook, Laboratory)
         {
-            - foundLibro:
-            ~ move_entity(Inventory, Laboratory)
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, Laboratory)
         }
         ~ arrivingFrom = ()
         ~ disableBigDialogue()
@@ -78,8 +78,8 @@ LIST bookBGStates = (bookBGZero), bookBGOne, bookBGTwo, bookBGThree
         ~ move_entity(PG, Library)
         ~ move_entity(RewriterBook, Library)
         {
-            - foundLibro:
-            ~ move_entity(Inventory, Library)
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, Library)
         }
         ~ arrivingFrom = ()
         ~ disableBigDialogue()
@@ -89,8 +89,8 @@ LIST bookBGStates = (bookBGZero), bookBGOne, bookBGTwo, bookBGThree
         ~ move_entity(PG, Nest)
         ~ move_entity(RewriterBook, Nest)
         {
-            - foundLibro:
-            ~ move_entity(Inventory, Nest)
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, Nest)
         }    
         ~ arrivingFrom = ()
         ~ disableBigDialogue()
@@ -100,8 +100,8 @@ LIST bookBGStates = (bookBGZero), bookBGOne, bookBGTwo, bookBGThree
         ~ move_entity(PG, TrainStop)
         ~ move_entity(RewriterBook, TrainStop)
         {
-            - foundLibro:
-            ~ move_entity(Inventory, TrainStop)
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, TrainStop)
         }
         ~ arrivingFrom = ()
         ~ disableBigDialogue()
