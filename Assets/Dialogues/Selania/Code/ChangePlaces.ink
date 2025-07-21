@@ -10,8 +10,6 @@
  
 //Streets to and into the Bedroom
     + {are_two_entities_together(PG, FromTrainStopToBedroom)} [FromTrainStopToBedroom]
-        //Calcolo del background
-        -> bedroom_backgrounds_calculator ->
             ~ move_entity(PG, Bedroom)
         -> bedroom
     
