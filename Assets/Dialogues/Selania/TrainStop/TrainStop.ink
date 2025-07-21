@@ -3,7 +3,6 @@
 #ambientSounds: {tag_ambientSounds()}
         ~ arrivingFrom = ()
         ~ arrivingFrom = TrainStop
-TODO: eliminare Bus anche da Unity
 {debug: <i>La lista degli oggetti nella stanza è: {trainStopContents}.}
 
 {train_stop == 1: <i>Questa è la stazione del treno.|<i>{~ La stazione profuma di partenze.|La panchina aspetta fremente una nuova conoscenza.|Sulle vette la luce brilla leggera.|Un vento fresco ti sospinge lungo la strada.|Le lettere ondeggiano sulla bacheca.|L'odore della foresta scalda il sentiero.}</i>}#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral

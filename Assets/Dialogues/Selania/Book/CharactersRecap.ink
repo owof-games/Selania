@@ -19,8 +19,6 @@
 {main_story_first_character: confessione.}
 
 //Eventuale commento della rana.
-TODO: Inserire dono fatto.
-
 
 {main_story_first_character.ending: Dopo la nostra conversazione, ha scelto un nuovo nome: {firstCharacterState}.}
 

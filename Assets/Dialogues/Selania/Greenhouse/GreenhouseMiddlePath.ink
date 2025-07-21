@@ -45,7 +45,6 @@
                     <i>E che se serve può aiutarti ancora, in futuro.</i>
                     <i>Ma ora ha fame.</i>
                     Crac!:#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:frog_neutral
-                    TODO: questo da posizionare poi in un luogo sensato quando rifatto design rana
                     ~ bookBGVariations ++
                         -> top
                         

@@ -11,7 +11,6 @@
         
             -> DONE
 
-TODO: check tag sbagliati per volto in giro
 
 === talk_with_first_character
     ~ temp charNameOne = translator(firstCharacterState)
