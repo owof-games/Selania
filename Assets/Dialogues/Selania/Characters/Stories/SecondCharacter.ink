@@ -38,7 +38,7 @@
 = hub
 ~ temp charNameTwo = translator(secondCharacterState)
 
-    {~ Ciao {name}!|Ciao.|...}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+    {~ Ciao!|Ciao.|...}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
     
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_second_character
@@ -177,6 +177,7 @@
         Ma dove trovo le caramelle?
         Mamma dice sempre che non c'è compleanno senza caramelle!
         {are_two_entities_together(FirstCharacter, PG): {charNameOne}: O senza vinello.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        
         Cose per pareggiare #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         
             + (twoBlue) [Il compleanno arriva a prescindere dalle caramelle.]
@@ -396,6 +397,7 @@
             	  Sei una ragazza quindi.
             	  Non ci parlo mica molto con le ragazze, siete strane.
                 {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Disse quello che passa le ore a studiarsi le caccole.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+                {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Tutto è scienza!} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
             	  Devo ancora capire se sei strana anche tu. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
             	  Anche mamma è strana.
             	  Ma le voglio bene.
@@ -523,6 +525,7 @@
         Che i grandi fanno cose cattive senza saperlo.
         Mi spiace essere scappato di casa.
         {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Se Talco fosse qui, ti avrebbe già adottato.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Magari vuole conoscere mio fratello!}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         Commentino per i tag. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         
             + [Non parli mai di tuo nonno. Non c'è più?]
@@ -725,6 +728,7 @@
         Se lo tocchi e stai male, è velenoso.
         E se ti guarda e stai male, è mamma.
         {are_two_entities_together(FirstCharacter, PG): Questo shade sicuro che me lo riciclo.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        {are_two_entities_together(FirstCharacter, PG): Povera mamma.}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         E so altre cose sulle rane. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         Ma non ho mai visto una rana parlare.
         O fare dei regali.
@@ -1018,7 +1022,8 @@
         E questa cosa mi fa arrabbiare.
         Non voglio essere un bambino per sempre.
         Ma non voglio essere grande.
-        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Bimbo, mi stai facendo sentire una piagnona egoista così.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        {are_two_entities_together(FirstCharacter, PG): Bimbo, mi stai facendo sentire una piagnona egoista così.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        {are_two_entities_together(FirstCharacter, PG): Risposta.}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         Commento per i tag. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
             
             + [Sai che crescerai anche se non lo vuoi, vero?]

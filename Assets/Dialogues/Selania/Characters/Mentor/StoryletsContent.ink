@@ -370,8 +370,9 @@
     
    Hai finito il percorso con {charNameTwo}, {name}!#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
    Ed entrambi mi avete stupita: non pensavo davvero che un bambino avrebbe avuto bisogno di questo luogo.
-    {are_two_entities_together(SecondCharacter, PG): {charNameTwo}: Devi imparare tante cose sui bambini, tu. Vado a farmi due passi.}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+    {are_two_entities_together(SecondCharacter, PG): Devi imparare tante cose sui bambini, tu. Vado a farmi due passi.}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
             ~ change_entity_place(SecondCharacter)
+    {are_two_entities_together(SecondCharacter, PG): Mi mancherà. Buffo, vero?} #speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral   
     Eccoti il mio modesto pensiero: #speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral        
     {
             - secondCharacterPossibleStates has Riccio:
@@ -431,7 +432,7 @@
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState) 
     
-   third_character_feedback #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+   third_character_feedback #speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral 
     -> talk_with_mentor
    
 === fourth_character_feedback
@@ -441,7 +442,7 @@
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    fourth_character_feedback #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+    fourth_character_feedback #speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral 
         -> talk_with_mentor
     
 === fifth_character_feedback
@@ -451,7 +452,7 @@
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)    
     
-    fifth_character_feedback#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+    fifth_character_feedback#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral 
         -> talk_with_mentor
     
 //Storylets di commentario
@@ -462,7 +463,7 @@
         ~ temp charNameFour= translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        Quella pianta mezza morta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        Quella pianta mezza morta.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral 
         Alla fine qualcosa è cambiato, ma non ho capito cosa.
         Ma ora sta crescendo.
         Sono comparse in un batter d'occhio queste radici solide, colorate.
@@ -471,6 +472,7 @@
         Spero solo sia un segno positivo.
         Poi provo a dare un po' di concime a quel brutto albero.
         {entity_location(PG) == Forest: <i>Noi preferiamo crescere senza concime. Chiederemo alle formiche di forare il sacco.</i>} #speaker:{fungus_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait:fungus_neutral
+        {entity_location(PG) != Forest: Commento.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral 
             -> talk_with_mentor
     
 //Storylets sul secondo personaggio
@@ -481,7 +483,7 @@
     
         {name}, sei {pronouns has him: riuscito|{pronouns has her: riuscita|riuscitə}} a rimandare quel bambino a casa?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         {are_two_entities_together(SecondCharacter, PG):Da quanto vedo, no.}
-        {are_two_entities_together(SecondCharacter, PG): {knowing_second_character.two: {charNameTwo}|???}: Antipatica.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral 
+        {are_two_entities_together(SecondCharacter, PG): Antipatica.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral 
             ~ change_entity_place(SecondCharacter)
         Non è mai successo che qui arrivassero dei bambini.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         Non è un posto adatto a un bambino.
@@ -509,6 +511,7 @@
         E sono sicura, sicura che è stato quel bambino dispettoso!
         {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Dispettosa sarai tu, vecchia biscia!}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:riccio_neutral
             ~ change_entity_place(SecondCharacter)
+        {are_two_entities_together(SecondCharacter, PG): Oh, dovrebbero lavarti la bocca col sapone!} #speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         Giuro che sto cercando di essere paziente, {name}.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         Giuro!
         Ma senza l'annaffiatoio non si possono coltivare le piante della serra.

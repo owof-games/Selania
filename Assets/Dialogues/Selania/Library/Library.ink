@@ -17,7 +17,7 @@
 === reading_place
     + {are_two_entities_together(ReadingPlace, PG)} [ReadingPlace]
     {
-        - library == 1:
+        - reading_place == 1:
         ~ saturationVar ++
         ~ move_entity(littleLibrary, Bedroom)
     }

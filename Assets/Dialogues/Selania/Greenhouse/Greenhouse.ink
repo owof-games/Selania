@@ -35,7 +35,7 @@
 === call_test
     + {are_two_entities_together(WateringCan, PG)} [WateringCan]
     {
-        - greenhouse == 1:
+        - call_test == 1:
         ~ saturationVar ++
         ~ move_entity(cultivationKit, Bedroom)
     }
