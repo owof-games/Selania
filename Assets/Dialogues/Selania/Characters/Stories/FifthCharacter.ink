@@ -931,7 +931,8 @@
                     ~ fifthCharacterState += Violino
         }
         
-            
+        
+        ~ saturationVar ++    
         
         {
         - fifthCharacterSpecialEvent == true:

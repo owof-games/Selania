@@ -663,6 +663,8 @@
         + [Ragioni come se fossi sola se dovessi cadere.]
      
         -
+        ~ saturationVar ++
+        
         {
         - firstCharacterInkLevel == Normal:
             -> ending

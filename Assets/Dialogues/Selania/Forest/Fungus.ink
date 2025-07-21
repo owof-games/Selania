@@ -40,7 +40,9 @@
         ~ temp charNameThree = translator(thirdCharacterState)
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
-    
+        
+        ~ saturationVar ++
+        
         <i>Le nuove radici ci mettono in contatto con la terra che ci circonda.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
         <i><b>Ci.</b></i>
         <i>La cicatrice rimane, ma da essa esplode la vita.</i>

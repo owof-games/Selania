@@ -1343,6 +1343,7 @@ TODO: check tag sbagliati per volto in giro
         }
         
         ~ growing ++    
+        ~ saturationVar ++
         
         {
         - firstCharacterSpecialEvent == true:

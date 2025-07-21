@@ -9,6 +9,10 @@
     + [Coccoli le falene]
     + [Mi guardo attorno]
         ~ move_entity(NestRecap, BookPlace)
+        {
+            - nest == 1:
+            ~ saturationVar ++
+        }
 
 
     -

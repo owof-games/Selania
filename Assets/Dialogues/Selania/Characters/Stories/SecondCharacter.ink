@@ -1832,6 +1832,7 @@
         }
         
          ~ growing ++   
+        ~ saturationVar ++
         
         {
         - secondCharacterSpecialEvent == true:

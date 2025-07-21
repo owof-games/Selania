@@ -10,7 +10,8 @@
 
     LIST animations = FirstBee, Birds, CloudOne
 
-//Quit esce e salva, exit esce e basta (è l'uscita quando siamo in camera da letto. Menu Load non è nei piani perché sennò mi devo ricordare dove cavolo sono.
     LIST buttons = MenuSave, MenuQuit, RoomExit, RoomLoad, Inventory, FromTrainStopToBedroom
     
     LIST bookElements = RewriterBook, BookExit, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FifthRecap, FrogRecap, DogRecap, FungusRecap, GreenhouseRecap, LaboratoryRecap, NestRecap, RulesRecap
+    
+    LIST roomElements = cultivationKit, firstCharPaint, teaKit, littleLibrary, bowl, secondCharPaint, vase

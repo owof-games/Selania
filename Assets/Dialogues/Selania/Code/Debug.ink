@@ -1,7 +1,7 @@
 //~ SEED_RANDOM(266)
 
 //Per abilitare o meno i debug
-    VAR debug = false
+    VAR debug = true
     VAR debugCultivable = false
     VAR debugChangeName = false
     

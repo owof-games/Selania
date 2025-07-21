@@ -5,8 +5,14 @@
 {debug: <i>La lista degli oggetti nella stanza è: {laboratoryContents}.}
 <i>Ecco: è il momento di una bella tisana</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
 
+
     + [Inizio a preparare una tisana]
         ~ move_entity(LaboratoryRecap, BookPlace)
+        {
+            - laboratory == 1:
+            ~ saturationVar ++
+        }
+
 
     -
     
