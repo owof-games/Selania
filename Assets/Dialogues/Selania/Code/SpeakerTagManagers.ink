@@ -219,6 +219,8 @@ VAR numberQuestion = 0
                     ~ return "onState"            
                 - numberQuestion == 1:
                     ~ return "emptyState"
+                - numberQuestion == 2:
+                    ~ return "emptyState"                    
             }    
             
                 
@@ -229,7 +231,9 @@ VAR numberQuestion = 0
                 - numberQuestion == 1:
                     ~ return "onState"
                 - numberQuestion == 2:
-                    ~ return "emptyState"    
+                    ~ return "emptyState"
+                - numberQuestion == 3:
+                    ~ return "emptyState"                      
             }
             
         - High:
@@ -241,7 +245,9 @@ VAR numberQuestion = 0
                 - numberQuestion == 2:
                     ~ return "onState"
                 - numberQuestion == 3:
-                    ~ return "emptyState"                  
+                    ~ return "emptyState"
+                - numberQuestion == 4:
+                    ~ return "emptyState"                     
             }
             
         - else:
@@ -275,7 +281,11 @@ VAR numberQuestion = 0
                 - numberQuestion == 0:
                     ~ return "onState"            
                 - numberQuestion == 1:
-                    ~ return "emptyState"    
+                    ~ return "emptyState"
+                - numberQuestion == 2:
+                    ~ return "emptyState"
+                - numberQuestion == 3:
+                    ~ return "emptyState"                     
             }
             
         - High:
@@ -285,7 +295,11 @@ VAR numberQuestion = 0
                 - numberQuestion == 1:
                     ~ return "onState"
                 - numberQuestion == 2:
-                    ~ return "emptyState"                  
+                    ~ return "emptyState"
+                - numberQuestion == 3:
+                    ~ return "emptyState"
+                - numberQuestion == 4:
+                    ~ return "emptyState"                    
             }
             
         - else:
@@ -319,7 +333,13 @@ VAR numberQuestion = 0
                 - numberQuestion == 0:
                     ~ return "onState"            
                 - numberQuestion == 1:
-                    ~ return "emptyState"                 
+                    ~ return "emptyState"
+                - numberQuestion == 2:
+                    ~ return "emptyState"
+                - numberQuestion == 3:
+                    ~ return "emptyState"
+                - numberQuestion == 4:
+                    ~ return "emptyState"                    
             }
             
         - else:

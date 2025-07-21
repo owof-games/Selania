@@ -1484,7 +1484,12 @@
             ~ inkLevel(secondCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]
             -> secondNaming -> 
-            -> one
+            {
+                - secondCharacterInkLevel == Empty:
+                    -> ending
+                - else: 
+                    -> one
+            } 
         + [Preferisco prendermi del tempo.]
             -> main
 
@@ -1547,10 +1552,10 @@
             
         -
         ~ numberQuestion ++  
-    Dico cose #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+        Dico cose #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
 
         {
-        - secondCharacterInkLevel == Empty:
+        - secondCharacterInkLevel == Low:
             -> ending
         - else: 
             -> two
@@ -1609,10 +1614,10 @@
                     
         -
         ~ numberQuestion ++  
-    Dico cose #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+        Dico cose #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
     
         {
-        - secondCharacterInkLevel == Low:
+        - secondCharacterInkLevel == Normal:
             -> ending
         - else: 
             -> three
@@ -1668,9 +1673,9 @@
                     ~ secondStatementVariation(blue)         
         -
         ~ numberQuestion ++  
-    Dico cose #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral       
+        Dico cose #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral       
         {
-        - secondCharacterInkLevel == Normal:
+        - secondCharacterInkLevel == Medium:
             -> ending
         - else: 
             -> four
@@ -1730,7 +1735,7 @@
             
         -
         ~ numberQuestion ++  
-    Riccio dice cose #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral       
+        Riccio dice cose #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral       
         -> ending
 
     = ending
@@ -1783,7 +1788,7 @@
         
                 
         - 
-    ~ secondCharacterInkLevel = Empty    
+     
     Sì. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
     No.
     Boh.
@@ -1836,7 +1841,7 @@
                     ~ secondCharacterState += Corvo
         }
         
-         ~ growing ++   
+        ~ growing ++   
         ~ saturationVar ++
         ~ move_entity(secondCharPaint, Bedroom)
         
@@ -1857,6 +1862,8 @@
         Mi ricorda mamma quando gira per casa dando consigli e dicendo cose e sorridendo.
         E poi si rinchiude in camera e resta in silenzio per ore.
         Per me non sta mica bene.
+            ~ secondCharacterInkLevel = Empty
+            ~ numberQuestion = 0
             ~ secondStory = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(secondStoryPG)
@@ -1866,6 +1873,8 @@
     ~ temp charNameTwo = translator(secondCharacterState)
         Voglio stare ancora un po' qui prima di prendere il treno. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         Mi mancherà la rana!
+            ~ secondCharacterInkLevel = Empty
+            ~ numberQuestion = 0
             ~ secondStory = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(secondStoryPG)

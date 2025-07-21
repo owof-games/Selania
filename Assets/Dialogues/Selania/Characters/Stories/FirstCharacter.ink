@@ -640,7 +640,9 @@
          C'è una sola cosa che mi triggera le ovaie: tutte le cosine pratichine e calcolabili e precise.
         Sono roba morta.
         {are_two_entities_together(SecondCharacter, PG): Essere adulti è orribile.} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+        
         {are_two_entities_together(SecondCharacter, PG): Totale, amico.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        
         Morta. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral  
             + [Una comunità sboccia quando c'è affetto e fiducia.]
                  Esatto!
@@ -1039,7 +1041,12 @@
             ~ inkLevel(firstCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]
             -> firstNaming ->
-            -> one
+        {
+            - firstCharacterInkLevel == Empty:
+                -> ending
+            - else: 
+                -> one
+        } 
         + [Preferisco prendermi del tempo.]
             -> main
 
@@ -1057,6 +1064,7 @@
                 ~ change_entity_place(SecondCharacter)
     }
     Sono pronta #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+    
     
     Prima hai detto che hai il terrore di fare una scelta. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
         
@@ -1100,13 +1108,13 @@
                 }
             
         -
+    
+        ~ numberQuestion ++   
+        Continua #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
         
-        ~ numberQuestion ++    
-    Continua #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-        ~ numberQuestion ++
     
         {
-        - firstCharacterInkLevel == Empty:
+        - firstCharacterInkLevel == Low:
             -> ending
         - else: 
             -> two
@@ -1163,7 +1171,7 @@
         ~ numberQuestion ++
         Ti ascolto. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
         {
-        - firstCharacterInkLevel == Low:
+        - firstCharacterInkLevel == Normal:
             -> ending
         - else:
             -> three
@@ -1222,7 +1230,7 @@
         Mmm. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
         
         {
-        - firstCharacterInkLevel == Normal:
+        - firstCharacterInkLevel == Medium:
             -> ending
         - else:
             -> four
@@ -1276,9 +1284,14 @@
 
     = ending
     ~ temp charNameOne = translator(firstCharacterState)
-    ~ numberQuestion = 0
     
-     Per questo ti dico:  #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
+        {
+            - firstCharacterInkLevel == Empty:
+                Mi rendo conto di non aver legato molto con te, e hai tutto il diritto di non ascoltarmi. Ma dopo tutta la tua storia, vorrei darti un consiglio: #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
+            - else: Per questo ti dico:  #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
+        } 
+    
+
         + {firstRed > 0} [Prendi una strada e se non ti piace cambiala!]
         
         + {firstPurple > 0} [Dai alla tua vita uno scopo più grande.]
@@ -1306,7 +1319,7 @@
         
                 
         -     
-    ~ firstCharacterInkLevel = Empty
+    
     
      Grazie, {name}. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
      Mentre ti ascoltavo mi è nata una nuova canzone in testa.
@@ -1345,6 +1358,7 @@
         
         ~ growing ++    
         ~ saturationVar ++
+        
         ~ move_entity(firstCharPaint, Bedroom)
         
         {
@@ -1368,6 +1382,8 @@
             ~ firstStory = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(firstStoryPG)
+            ~ numberQuestion = 0
+            ~ firstCharacterInkLevel = Empty
                 -> main
             
     = exit
@@ -1376,6 +1392,8 @@
             ~ firstStory = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(firstStoryPG)
+            ~ numberQuestion = 0
+            ~ firstCharacterInkLevel = Empty
         -> main  
     
 === first_char_story_ended
