@@ -44,7 +44,7 @@
         ~ saturationVar ++
         ~ move_entity(vase, Bedroom)
         
-        <i>Le nuove radici ci mettono in contatto con la terra che ci circonda.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Le nuove radici ci mettono in contatto con la terra che ci circonda.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {fungus_state()}
         <i><b>Ci.</b></i>
         <i>La cicatrice rimane, ma da essa esplode la vita.</i>
         <i>Torniamo a percepirci, questa è gioia.</i>
@@ -296,17 +296,17 @@
     
     = one
     //Contenuti iniziali
-        <i>{~ Il tronco persevera nella memoria.|La corteccia tenace resiste alla dimenticanza.|Formiche inquiete si nascondono nelle scalanature della corteccia.}</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>{~ Il tronco persevera nella memoria.|La corteccia tenace resiste alla dimenticanza.|Formiche inquiete si nascondono nelle scalanature della corteccia.}</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
             -> main
     
     = two
     //Contenuti dopo la fine della prima storia
-        <i>{~ Le radici hanno trovato vecchi tesori.|I bruchi solleticano le giovani radici.|Porcellini di terra si riparano tra le nostre radici.}</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>{~ Le radici hanno trovato vecchi tesori.|I bruchi solleticano le giovani radici.|Porcellini di terra si riparano tra le nostre radici.}</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
             -> main
 
     = three
     //Contenuti dopo la fine della seconda storia
-        <i>{~ I rami sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba osserva lontana dalla base della pianta.}</i>  #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral      
+        <i>{~ I rami sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba osserva lontana dalla base della pianta.}</i>  #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
             -> main
 
     = four

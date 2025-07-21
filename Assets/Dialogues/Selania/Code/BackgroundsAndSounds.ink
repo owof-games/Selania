@@ -88,3 +88,13 @@ VAR saturationVar = 0
             ~ return "bookSounds"           
                                 
     }
+    
+    
+    
+=== function fungus_state()
+{
+    - talking_fungus.first_story_ended_check.nameFungus:
+        ~ return "fungus_anonimo"
+    - else:
+        ~ return "fungus_neutral"
+}

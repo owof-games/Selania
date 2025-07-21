@@ -198,21 +198,21 @@
 //Outcome: allontana qualcuno.
     = step_zero
         ~ growthLicheneDegliAbissi = stepZero
-        <i>Qualcosa vortica sopra al vaso.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Qualcosa vortica sopra al vaso.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>La terra si accumla ai lati, lasciando un incavo nel terreno.</i>
         -> main
     
     = step_uno
-        <i>Un odore salmastro si diffonde per la serra.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Un odore salmastro si diffonde per la serra.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>Una punticina azzurrina emerge dal terreno.</i>
           -> main
           
     = step_due
-        <i>Le punte sono aumentate, e roteano nell'aria a incredibile velocità, senza alcun rumore.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Le punte sono aumentate, e roteano nell'aria a incredibile velocità, senza alcun rumore.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
           -> main
           
     = step_tre
-        <i>L'odore è così forte da farti lacrimare gli occhi.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>L'odore è così forte da farti lacrimare gli occhi.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>Davanti a te vortica un <b>Lichene degli abissi</b></i>
         <i>Il lichene degli abissi è una danza, un roteare incessante di fungo e alga.</i>
         <i>Si inseguono nel piacere, si inseguono nel dolore, senza mai afferrarsi.</i>
@@ -220,7 +220,7 @@
 
             + (colto) [Fermo il lichene.]
                 ~ growthLicheneDegliAbissi = stepZero
-                <i>Un piccolo sbuffo, rimane solo un foro.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+                <i>Un piccolo sbuffo, rimane solo un foro.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
                 <i>Le tue dita sanno di ricordo, sanno di mare.</i>
                 <i>Pensi a qualcuno.</i>
                 <i>A volte c'è pace solo nell'allontanare.</i>
@@ -249,21 +249,21 @@
 //Outcome: datti piacere
     = step_zero
     ~ growthEderaDelleAmanti = stepZero
-        <i>È solo una tua impressione, o il vaso ha iniziato a brillare?</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>È solo una tua impressione, o il vaso ha iniziato a brillare?</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         -> main
     
     = step_uno
-        <i>Nettare color rame sale lungo le corde che reggono il vaso.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Nettare color rame sale lungo le corde che reggono il vaso.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
           -> main
           
     = step_due
-        <i>Il nettare si è intrecciato, arrotolato, cerca le venature del legno della serra.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Il nettare si è intrecciato, arrotolato, cerca le venature del legno della serra.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>Lo saggia, si mischia, lo penetra.</i>
         <i>Foglie rosastre nascono da questa unione.</i>
           -> main
     
     = step_tre
-        <i>Calore nel ventre.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Calore nel ventre.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>Un pezzo di serra è ora coperto da un fitto tappeto del color dell'alba.</i>
         <i>Sembra la cosa più gustosa che tu abbia mai incontrato.</i>
             + (colto) [Provo a leccarlo.]
@@ -297,29 +297,29 @@
 //Outcome: danza, sola o con le compagne
     = step_zero
         ~ growthCantoDelleCompagne = stepZero
-        <i>Qualcosa vibra e ti sveglia le gambe.<i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Qualcosa vibra e ti sveglia le gambe.<i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>Hai voglia di danzare.</i>
             -> main
         
     = step_uno
-        <i>Il vaso è caldo al tocco.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Il vaso è caldo al tocco.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>L'umidità del terreno evapora creando una nebbiolina rossastra.</i>
           -> main
           
     = step_due
-        <i>La nebbia si è fatta ora goccia, goccie rosse che vibrano.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>La nebbia si è fatta ora goccia, goccie rosse che vibrano.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>Che si rincorrono e si tuffano nel vaso.</i>
         <i>E quando si scontrano, la serra riecheggia di una festosa risata.</i>
             -> main
           
     = step_tre
-        <i>La serra vibra e si scuote, persino le travi sembrano voler danzare.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>La serra vibra e si scuote, persino le travi sembrano voler danzare.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>Ilare, <b>Canto delle compagne</b> turbina e gioca sospesa sul vaso.</i>
         <i>In un altro tempo questo fungo veniva chiamato "Canto delle streghe".</i>
         <i>L'euforia ti riempie i polmoni, senti la gioia di sapere che non sei mai stata davvero {pronouns has him: solo|{pronouns has her: sola|solə}}.</i>
 
         + (colto)[È il momento di festeggiare.]
-                <i>Il canto ti invita alla danza.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+                <i>Il canto ti invita alla danza.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
                 <i>Spinge le tue gambe nella stanza.</i>
                 <i>O ad alzare la voce, cantare, e chiamare le compagne.</i>
                 <i>Lasciando che la musica vi unisca, rendendo il mondo intero il vostro palcoscenico.</i>
@@ -346,23 +346,23 @@
 //Outcome: prometti di dire qualcosa che ti pesa sullo stomaco.
     = step_zero
     ~ growthLaSpazzata = stepZero
-        <i>Niente sembra cambiare.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Niente sembra cambiare.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>Eppure l'aria sembra più pesante.</i>
             -> main
          
     = step_uno
-         <i>Qualcosa sembra osservarti dagli angoli più scuri della serra.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+         <i>Qualcosa sembra osservarti dagli angoli più scuri della serra.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
          <i>L'aria ti manca, hai voglia di gridare.</i>
             -> main
     
     = step_due
-        <i>C'è un forte vibrare.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>C'è un forte vibrare.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>Cose sottili riempiono i tuoi occhi di fastidio.</i>
         <i>Della voglia di stringere, percuotere, sbattere qualcosa.</i>
             -> main
     
     = step_tre
-        <i>Il tetto della serra scricchiola, le sue travi sembrano gemere dal dolore.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Il tetto della serra scricchiola, le sue travi sembrano gemere dal dolore.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>La tua testa sembra pronta ad esplodere.</i>
         <i>Sopra di te pulsa e si contrae nervosa una grossa, esplosiva <b>Spazzata</b></i>.
         <i>La Spazzata è e non è.</i>
@@ -370,7 +370,7 @@
         <i>E quando non ce la fa più, travolge ogni cosa.</i>
 
         + (colto)[Sfioro i suoi rami.]
-            <i>Una forte contrazione.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+            <i>Una forte contrazione.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
             <i>E poi si ferma, immagine di ciò che un tempo era.</i>
             <i>Ti lascia in pancia un senso di vuoto.</i>
             <i>La sensazione di quando hai condiviso qualcosa che ritenevi terribile.</i>
@@ -400,19 +400,19 @@
 //Outcome: liberazione, invito ad avanzare
     = step_zero
     ~ growthBaccaDellaAddolorata = stepZero
-        <i>Cinque punte scure emergono dal vaso.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Cinque punte scure emergono dal vaso.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
             -> main
     
     = step_uno
-        <i>Rami come dita rattrappite sembrano artigliare l'aria.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Rami come dita rattrappite sembrano artigliare l'aria.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
             -> main
     
     = step_due
-        <i>Le dita ora sono sollevate in una mano nervosa.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Le dita ora sono sollevate in una mano nervosa.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
           -> main
           
     = step_tre
-        <i>La mano, ora tesa verso il cielo, sembra squarciata da una resina rossastra.<i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>La mano, ora tesa verso il cielo, sembra squarciata da una resina rossastra.<i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>Hai trovato una <b>Bacca dell'addolorata</b>.</i>
         <i>Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ancora ad avanzare.</i>
 
@@ -442,30 +442,30 @@
 //Outcome: ricordo di chi non c'è più
     = step_zero
         ~ growthNonTiScordarDiTe = stepZero
-        <i>Su uno vecchio ramo è comparsa una sostanza gelatinosa, una gomma che sembra un asparago.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Su uno vecchio ramo è comparsa una sostanza gelatinosa, una gomma che sembra un asparago.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
             -> main
     
     = step_uno
-        <i>Il ramo sembra più leggero, vitreo.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Il ramo sembra più leggero, vitreo.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>La gelatina non è invitante al tatto, ma l'aria ha un profumo sa di, di cosa? Sigaro, tabacco forse?</i>
         <i>O è canfora? O addirittura torta, o rabarbaro, o caffè.
         <i>L'odore di un vecchio e fidato maglione.</i>
           -> main
           
     = step_due
-        <i>Il ramo sembra sparire nella luce della serra.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Il ramo sembra sparire nella luce della serra.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>No, non sparire: è trasparente.</i>
         <i>Gioca con la luce, la rende calda e accogliente.</i>
           -> main
           
     = step_tre
-        <i>Ramo e sostanza sono una cosa sola: un fungo di vetro, dita che si sfiorano e intrecciano lanciate verso il cielo.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Ramo e sostanza sono una cosa sola: un fungo di vetro, dita che si sfiorano e intrecciano lanciate verso il cielo.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>Hai trovato un <b>Non ti scordar di te</b>.</i>
         <i>Trasforma ciò che è passato, che non c'è più, per renderlo vita nuova.</i>
         <i>Il nuovo nell'antico, il noi nel nostro passato.</i>
 
         + (colto) [Intreccio le mie dita alle sue.]
-            <i>Ti metti a piangere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+            <i>Ti metti a piangere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
             <i>Sorridi e piangi.</i>
             <i>L'aria è riscaldata da un profumo familiare.</i>
             <i>Una carezza sul viso: un saluto di chi non c'è più, ma vive in te.</i>
@@ -493,25 +493,25 @@
 //Outcome: prova una strada nuova
     = step_zero
         ~ growthBrinaDellImpossibile = stepZero
-        <i>Qualcosa ha rotto un vetro della serra?</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Qualcosa ha rotto un vetro della serra?</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
             -> main
     
     = step_uno
-        <i>Le crepe si sono fatte ora più fitte, investendo anche il vaso.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Le crepe si sono fatte ora più fitte, investendo anche il vaso.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
           -> main
           
     = step_due
-        <i>Vaso, vetro e mobile: linee nette mostrano il cielo fuori dalla serra.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Vaso, vetro e mobile: linee nette mostrano il cielo fuori dalla serra.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>Eppure non sembrano cadere, non sembrano tentennare.</i>
           -> main
     
     = step_tre
-        <i>Isole di vetro, terracotta e legno galleggiano nell'aria.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+        <i>Isole di vetro, terracotta e legno galleggiano nell'aria.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>Le spingi ma non si spostano.</i>
         <i>Api e petali attraversano le ferite, il cielo bluastro le riempie.</i>
 
         + (colto) [Infilo la mano tra gli spazi vuoti.]
-            <i>Il vetro si rinsalda, spingendo via la tua mano.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+            <i>Il vetro si rinsalda, spingendo via la tua mano.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
             <i>Le linee del tuo palmo si fanno trasparenti, inconsistenti. Eppure puoi muovere le dita, e non provi alcun dolore.</i>
             <i>La <b>Brina dell'Impossibile</b> si raccoglie nel luogo di un trauma.</i>
             <i>Riempie le ferite per permetterti di vederle, ascoltarle.</i>

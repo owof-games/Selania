@@ -471,7 +471,7 @@
         Da quando sei qui, {name}, sono cambiate molte cose.
         Spero solo sia un segno positivo.
         Poi provo a dare un po' di concime a quel brutto albero.
-        {entity_location(PG) == Forest: <i>Noi preferiamo crescere senza concime. Chiederemo alle formiche di forare il sacco.</i>} #speaker:{fungus_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait:fungus_neutral
+        {entity_location(PG) == Forest: <i>Noi preferiamo crescere senza concime. Chiederemo alle formiche di forare il sacco.</i>} #speaker:{fungus_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         {entity_location(PG) != Forest: Commento.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral 
             -> main
     
