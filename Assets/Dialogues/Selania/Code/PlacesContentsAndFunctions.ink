@@ -1,5 +1,5 @@
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
-    VAR bedroomContents = (RoomExit, RoomLoad, PG)
+    VAR bedroomContents = ( RoomLoad, PG)
 
     VAR trainStopContents = (FromTrainStopToForest, StartingNote, FromTrainStopToBedroom)
 
@@ -15,7 +15,7 @@
 
     VAR laboratoryContents = ()
 
-    VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, MenuSave, MenuQuit, TheFrog, FromForestToLibrary, RewriterBook, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FrogRecap, DogRecap, FungusRecap, GreenhouseRecap, LaboratoryRecap, NestRecap, FifthRecap, RulesRecap, Inventory, cultivationKit, firstCharPaint, teaKit, littleLibrary, bowl, secondCharPaint, vase)
+    VAR safekeepingContents = (RoomExit, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, MenuSave, MenuQuit, TheFrog, FromForestToLibrary, RewriterBook, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FrogRecap, DogRecap, FungusRecap, GreenhouseRecap, LaboratoryRecap, NestRecap, FifthRecap, RulesRecap, Inventory, cultivationKit, firstCharPaint, teaKit, littleLibrary, bowl, secondCharPaint, vase)
     
     VAR bookContents = (BookExit)
    
