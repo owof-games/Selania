@@ -314,7 +314,7 @@
     -> main
     
 === foundLibro
-<i>C'è un libro ai piedi del tronco, con scritto il tuo nome.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
+<i>C'è un libro ai piedi del tronco, con scritto il tuo nome.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {fungus_state()}
     ~ move_entity(RewriterBook, Forest)
     ~ move_entity(FungusRecap, BookPlace)
 
