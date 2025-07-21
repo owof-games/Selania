@@ -459,6 +459,7 @@
          Ovviamente la meglio ama è Talco.
          Ti ho già detto che crea strumenti con qualsiasi cosa trova in giro?
         {are_two_entities_together(SecondCharacter, PG): Mi piacerebbe conoscere Talco!} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+        {are_two_entities_together(SecondCharacter, PG): Ti adorerebbe!} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
          L'estate facciamo le feste sul tetto, cantiamo e improvvisiamo. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
          "E vento e sudore si portano via le preoccupazioni, non c’è nulla a cui pensare."
          "Ti senti parte di tutto, privə di confini."
