@@ -520,10 +520,12 @@ dog
 + {are_two_entities_together(FungusRecap, PG)} [FungusRecap]
 ~ enableBigDialogue()
 
-{talking_fungus.first_story_ended_check: cose che scopro sul fungo a fine della prima storia}.
-{talking_fungus.second_story_ended_check: cose che scopro sul fungo a fine della second storia}.
-{talking_fungus.third_story_ended_check: cose che scopro sul fungo a fine della third storia}.
-{talking_fungus.fourth_story_ended_check: cose che scopro sul fungo a fine della fourth storia}.
-{talking_fungus.fifth_story_ended_check: cose che scopro sul fungo a fine della fifth storia}.
+Un vecchio tronco, dove hai trovato il libro col tuo nome.
+
+{talking_fungus.first_story_ended_check: cose che scopro sul fungo a fine della prima storia.}
+{talking_fungus.second_story_ended_check: cose che scopro sul fungo a fine della second storia.}
+{talking_fungus.third_story_ended_check: cose che scopro sul fungo a fine della third storia.}
+{talking_fungus.fourth_story_ended_check: cose che scopro sul fungo a fine della fourth storia.}
+{talking_fungus.fifth_story_ended_check: cose che scopro sul fungo a fine della fifth storia.}
 
 -> main

@@ -144,7 +144,7 @@
         <i>Ma altri funghi solleticano e distraggono le nostre nuove radici.</i>
         <i>Ringraziandoti ancora {name} per ora ti congediamo.</i>
         <i>Ma anche dall'altra parte del mondo sai già che non saremo mai lontani.</i>
-            ~ move_entity(FungusRecap, BookPlace)
+            
                 -> main
     
     
@@ -313,5 +313,6 @@
 === foundLibro
 <i>C'è un libro ai piedi del tronco, con scritto il tuo nome.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
     ~ move_entity(RewriterBook, Forest)
+    ~ move_entity(FungusRecap, BookPlace)
 
 -> main
