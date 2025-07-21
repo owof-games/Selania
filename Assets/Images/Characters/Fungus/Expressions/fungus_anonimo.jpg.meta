@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fungus_anonimo_0: -7123667347010343826
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
