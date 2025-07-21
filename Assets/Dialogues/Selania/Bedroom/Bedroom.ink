@@ -5,6 +5,6 @@
 
     
     <i>A presto!</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
-        + [chiudi]
+        // + [chiudi]
             -> main
 
