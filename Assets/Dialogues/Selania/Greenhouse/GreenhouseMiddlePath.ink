@@ -22,6 +22,7 @@
             {
                 - the_frog == 1:
                 ~ saturationVar ++
+                ~ move_entity(bowl, Bedroom)
             }
 
             ~ move_entity(FrogRecap, BookPlace)

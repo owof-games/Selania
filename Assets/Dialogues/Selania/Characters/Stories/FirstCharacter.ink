@@ -1344,6 +1344,7 @@ TODO: check tag sbagliati per volto in giro
         
         ~ growing ++    
         ~ saturationVar ++
+        ~ move_entity(firstCharPaint, Bedroom)
         
         {
         - firstCharacterSpecialEvent == true:

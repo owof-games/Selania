@@ -1833,6 +1833,7 @@
         
          ~ growing ++   
         ~ saturationVar ++
+        ~ move_entity(secondCharPaint, Bedroom)
         
         {
         - secondCharacterSpecialEvent == true:

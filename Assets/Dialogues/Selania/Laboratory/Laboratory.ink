@@ -11,6 +11,7 @@
         {
             - laboratory == 1:
             ~ saturationVar ++
+            ~ move_entity(teaKit, Bedroom)
         }
 
 

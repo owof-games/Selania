@@ -42,6 +42,7 @@
         ~ temp charNameFive = translator(fifthCharacterState)
         
         ~ saturationVar ++
+        ~ move_entity(vase, Bedroom)
         
         <i>Le nuove radici ci mettono in contatto con la terra che ci circonda.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_neutral
         <i><b>Ci.</b></i>

@@ -37,6 +37,7 @@
     {
         - greenhouse == 1:
         ~ saturationVar ++
+        ~ move_entity(cultivationKit, Bedroom)
     }
 
 

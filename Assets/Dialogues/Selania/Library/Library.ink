@@ -19,5 +19,6 @@
     {
         - library == 1:
         ~ saturationVar ++
+        ~ move_entity(littleLibrary, Bedroom)
     }
         -> book_test_intro
