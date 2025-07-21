@@ -423,7 +423,7 @@
     A prescindere dal risultato.
     E un giorno potrai fare questo lavoro da {pronouns has him: solo|{pronouns has her: sola|solə}}.
     E a quel punto forse anche io potrò un poco riposare.
-        -> talk_with_mentor
+        -> main
    
    === third_character_feedback
     ~ temp charNameOne = translator(firstCharacterState)
@@ -433,7 +433,7 @@
     ~ temp charNameFive = translator(fifthCharacterState) 
     
    third_character_feedback #speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral 
-    -> talk_with_mentor
+    -> main
    
 === fourth_character_feedback
     ~ temp charNameOne = translator(firstCharacterState)
@@ -443,7 +443,7 @@
     ~ temp charNameFive = translator(fifthCharacterState)
     
     fourth_character_feedback #speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral 
-        -> talk_with_mentor
+        -> main
     
 === fifth_character_feedback
     ~ temp charNameOne = translator(firstCharacterState)
@@ -453,7 +453,7 @@
     ~ temp charNameFive = translator(fifthCharacterState)    
     
     fifth_character_feedback#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral 
-        -> talk_with_mentor
+        -> main
     
 //Storylets di commentario
     === growing_fungus_storylet
@@ -473,7 +473,7 @@
         Poi provo a dare un po' di concime a quel brutto albero.
         {entity_location(PG) == Forest: <i>Noi preferiamo crescere senza concime. Chiederemo alle formiche di forare il sacco.</i>} #speaker:{fungus_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait:fungus_neutral
         {entity_location(PG) != Forest: Commento.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral 
-            -> talk_with_mentor
+            -> main
     
 //Storylets sul secondo personaggio
     === that_little_liar_storylet
@@ -500,7 +500,7 @@
         Trova un modo per allontanarlo.
         Ma non metterci troppo, per favore.
         ~ secondPauseTalking = 0
-            -> talk_with_mentor
+            -> main
     
     === watering_can_storylet
         ~ temp charNameOne = translator(firstCharacterState)
@@ -522,7 +522,7 @@
         No, non devo essere così severa.
         Ma ti prego, tienimelo lontano.
         ~ secondPauseTalking = 0
-            -> talk_with_mentor
+            -> main
 
 //Fine della demo
     === ending_demo
