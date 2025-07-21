@@ -231,6 +231,7 @@
                         ~ findedGifts += LicheneDegliAbissi
                         <i>Hai ottenuto: <b>Lichene degli Abissi.</b></i>
                     }
+                    ~ move_entity(GreenhouseRecap, BookPlace)
                     
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
@@ -280,7 +281,8 @@
                         ~ findedGifts += EderaDelleAmanti
                         <i>Hai ottenuto: <b>Edera delle Amanti.</b></i>
                     }
-                
+                    ~ move_entity(GreenhouseRecap, BookPlace)
+                    
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
@@ -329,6 +331,7 @@
                         ~ findedGifts += CantoDelleCompagne
                         <i>Hai ottenuto: <b>Canto delle Compagne.</b></i>
                     }
+                    ~ move_entity(GreenhouseRecap, BookPlace)
                 
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
@@ -380,6 +383,7 @@
                         ~ findedGifts += LaSpazzata
                         <i>Hai ottenuto: <b>La Spazzata.</b></i>
                     }
+                    ~ move_entity(GreenhouseRecap, BookPlace)
                 
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
@@ -423,7 +427,8 @@
                         ~ findedGifts += BaccaDellaAddolorata
                         <i>Hai ottenuto: <b>Bacca della Addolorata</b></i>
                     }
-            
+                    ~ move_entity(GreenhouseRecap, BookPlace)
+                    
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
@@ -472,6 +477,8 @@
                         ~ findedGifts += NonTiScordarDiTe
                         <i>Hai ottenuto: <b>Non Ti Scordar di Te.</b></i>
                     }
+                    ~ move_entity(GreenhouseRecap, BookPlace)
+                    
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
@@ -516,6 +523,8 @@
                         ~ findedGifts += BrinaDellImpossibile
                        <i> Hai ottenuto: <b>Brina dell'Impossibile</b></i>
                     }
+                    ~ move_entity(GreenhouseRecap, BookPlace)
+                    
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    

@@ -1,8 +1,6 @@
 === rules_recap
 + {are_two_entities_together(RulesRecap, PG)} [RulesRecap]
 ~ enableBigDialogue()
-cosa
-
 
         {gifts_and_ink:La prima cosa da fare è: conquistare la <b>fiducia</b> della persona che devi aiutare.}
         {gifts_and_ink:Ci <b>parli</b>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.}
@@ -19,7 +17,6 @@ cosa
 + {are_two_entities_together(GreenhouseRecap, PG)} [GreenhouseRecap]
 ~ enableBigDialogue()
 
- cosa
 
     {lichene_degli_abissi.step_tre.colto: Il Lichene degli abissi parla di relazioni permeate di dolore. Di cose o persone che si inseguono, che possono pure volersi bene. Ma finiscono per farci del male. Capaci solo di distruggersi. Piene di fragilità. }
                 

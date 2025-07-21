@@ -394,7 +394,7 @@ TODO: Inserire dono fatto.
 + {are_two_entities_together(FifthRecap, PG)} [FifthRecap]
 ~ enableBigDialogue()
 
-cosa
+Una persona che si fa chiamare {fifthCharacterState} ti ha detto di parlare in giro con le persone che incontrerai.
 
 {that_little_liar_storylet: a {fifthCharacterState} non piacciono i bambini?}
 {watering_can_storylet: non è più un dubbio.}

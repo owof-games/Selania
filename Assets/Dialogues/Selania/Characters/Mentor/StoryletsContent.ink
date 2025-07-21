@@ -84,7 +84,7 @@
                     Ma sei super sul pezzo! Sembra che {charNameOne} ti abbia già raccontato qualcosa di sè!
                     Cavolo, sei qui da pochissimo e già mi rendi orgogliosa di te!
                         ~ move_entity(FifthRecap, BookPlace)
-                        ~ move_entity(RulesRecap, BookPlace)    
+  
                         -> gifts_and_ink
     
             }
@@ -196,7 +196,8 @@
             {not cultivable_test: Uh, che sbadata! Ti servirà di sicuro qualcosa per raccogliere gli oggetti!|E vevo che hai già trovato uno zainetto con cui raccogliere doni.}
             {not cultivable_test: Ecco, prendi!| Interessante.}
                 - (sbadata)
-                
+            
+            ~ move_entity(RulesRecap, BookPlace)      
             ~ firstPauseTalking = 0
                 -> main
              
