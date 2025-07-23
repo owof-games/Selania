@@ -193,8 +193,8 @@
             Ora devo continuare a sbloccare un vecchio sentiero.
             Questo posto morirebbe senza me.
             Quando avrai conquistato la fiducia di {charNameOne} e le avrai donato qualcosa, torna da me per le ultime istruzioni.
-            {not cultivable_test: Uh, che sbadata! Ti servirà di sicuro qualcosa per raccogliere gli oggetti!|E vevo che hai già trovato uno zainetto con cui raccogliere doni.}
-            {not cultivable_test: Ecco, prendi!| Interessante.}
+            {not cultivable_test: Uh, che sbadata! Ti servirà di sicuro qualcosa per raccogliere gli oggetti!|Noto che hai già uno zainetto con te.}
+            {not cultivable_test: Ecco, prendi!| Spero non sia qualcosa che hai trovato in giro: questo posto è delicato.}
                 - (sbadata)
             
             ~ move_entity(RulesRecap, BookPlace)      
