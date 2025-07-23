@@ -7,12 +7,13 @@
 
 //Gestione spostamenti: tempo
     VAR changeLocationTimer = 0
-    VAR changeLocationTrigger = 3
+    VAR changeLocationTrigger = 10
 
 //Settaggio luoghi attivi a seconda del tier
+//Nota: fino a quando il gioco non sarà completo, la biblioteca si aprirà per ultima, sostituendo il primo dei luoghi mancanti.
     VAR firstTierPlaces =(Forest, TrainStop, GreenhouseMiddlePath)
     VAR secondTierPlaces =(Forest, TrainStop, Library, GreenhouseMiddlePath)
-    VAR thirdTierPlaces = (Forest, TrainStop, Library, Nest, GreenhouseMiddlePath)
+    VAR thirdTierPlaces = (Forest, TrainStop, Library, Laboratory, GreenhouseMiddlePath)
     VAR fourthTierPlaces = (Forest, TrainStop, Library, Nest, Laboratory, GreenhouseMiddlePath)
 
 //Gestione spostamenti: luoghi. I luoghi si aprono alla fine di ogni storia.
@@ -30,7 +31,6 @@
     
 === randomizer_png_location
 //Ho una lista di luoghi che svuoto e poi resetto, così che sia percepibile come effettivamente randomica
-// -> commentate cose per la demo
 
     //Check stato tier
     {   
@@ -46,17 +46,17 @@
                      ~ move_entity(FromForestToLibraryDesat, Safekeeping)
                      ~ move_entity(FromForestToLibrary, Forest)
                      
-            - firstStory == Active or firstStory == NotStarted:
-                ~ move_entity(Mentor, TrainStop)
-                     ~ firstTier = true
+            - firstStory == NotStarted:
+                    ~ move_entity(Mentor, TrainStop)
+                    ~ firstTier = true
     }
     
     //Aggiunta delle personagge randomizzabili quando la loro storia è attiva. Non serve la mentore perché va per la sua
     {
-        - firstStory == Active && talk_with_first_character:
+        - talk_with_first_character:
             ~ randomizable_characters += FirstCharacter
         
-        - secondStory == Active && talk_with_second_character:
+        - talk_with_second_character:
             ~ randomizable_characters += SecondCharacter
         
         // - thirdStory == Active && talk_with_third_character:
