@@ -2,6 +2,11 @@
 
 === growing_check
 {
+    - not growing_check:
+        ~ somethingStrange ++
+}
+
+{
     - growing < 2:
         ~ growStep = ()
         ~ growStep += stepZero

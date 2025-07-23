@@ -147,7 +147,7 @@
         <i>Ma altri funghi solleticano e distraggono le nostre nuove radici.</i>
         <i>Ringraziandoti ancora {name} per ora ti congediamo.</i>
         <i>Ma anche dall'altra parte del mondo sai già che non saremo mai lontani.</i>
-            
+            ~ somethingStrange ++
                 -> main
     
     
@@ -318,5 +318,5 @@
     ~ move_entity(RewriterBook, Forest)
     ~ move_entity(FungusRecap, BookPlace)
     ~ move_entity(miniBook, Bedroom)
-
+    ~ somethingStrange ++
 -> main

@@ -3,7 +3,7 @@
         - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(SecondCharacter, PG) && not first_second_chit_chat:
             -> first_second_chit_chat
         
-        - not foundLibro && (knowing_first_character ==true) && firstPauseTalking == 0:
+        - not foundLibro && (knowing_first_character ==true) && firstPauseTalking == 0 && not take_this_book:
             -> take_this_book
 
         - else:
@@ -105,13 +105,14 @@
         
         ~ move_entity(FungusRecap, BookPlace)
         ~ move_entity(miniBook, Bedroom)
-    {
-        - forestContents has PG:
-            ~ move_entity(RewriterBook, Forest)
-        - trainStopContents has PG:
-            ~ move_entity(RewriterBook, TrainStop)
-        - greenhouseMiddlePathContents has PG:
-            ~ move_entity(RewriterBook, GreenhouseMiddlePath)        
-    }
-
+        ~ somethingStrange ++
+            {
+                - forestContents has PG:
+                    ~ move_entity(RewriterBook, Forest)
+                - trainStopContents has PG:
+                    ~ move_entity(RewriterBook, TrainStop)
+                - greenhouseMiddlePathContents has PG:
+                    ~ move_entity(RewriterBook, GreenhouseMiddlePath)        
+            }
+    
 -> main

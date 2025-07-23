@@ -27,6 +27,7 @@
 
 
 === pre_test
+
     <i>{~ In questo momento non c'è nulla in crescita.|La serra attende le tue visioni.}</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {fungus_state()}
         // + [Mi guardo attorno.]
 

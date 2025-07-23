@@ -2,6 +2,9 @@
     VAR name = "Senza nome"
     LIST pronouns = him, her, they
 
+//Gestione "cose strane" di cui parlare con mentore
+    VAR somethingStrange = 0
+
 //Tracciamento colori giocatrice
     VAR playerPurple = 0
     VAR playerYellow = 0

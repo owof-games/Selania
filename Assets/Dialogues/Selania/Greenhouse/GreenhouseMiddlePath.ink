@@ -13,7 +13,11 @@
 === the_frog
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameOne = translator(firstCharacterState)
-
+    {
+        - the_frog == 1:
+        ~ somethingStrange ++
+    
+    }
     + (talkFrog) {are_two_entities_together(TheFrog, PG)} [TheFrog]
         <i>Una rana bluastra ti osserva incuriosita.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
             Cra Cra #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:frog_neutral
@@ -45,7 +49,8 @@
                     <i>E che se serve può aiutarti ancora, in futuro.</i>
                     <i>Ma ora ha fame.</i>
                     Crac!:#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:frog_neutral
-                    ~ bookBGVariations ++
+                        ~ bookBGVariations ++
+
                         -> top
                         
                 * * {frog && firstStory == Active} [Puoi aiutarmi anche per {charNameOne}?]

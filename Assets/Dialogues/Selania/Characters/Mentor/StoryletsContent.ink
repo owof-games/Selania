@@ -266,7 +266,7 @@
     ~ temp charNameFive = translator(fifthCharacterState)
     
     Vorrei raccontarti una cosa strana. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
-        * (voices){pre_test}[C'è una voce che mi racconta cose.]
+        * (voices){growing_check}[C'è una voce che mi racconta cose.]
             Voce? #speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             Sì. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
             Ad esempio mi descrive le piante della serra.
@@ -275,6 +275,7 @@
             Sicuramente quella voce è il tuo modo di capire questo luogo.
             Un intuito latente che ora è più forte.
             Meglio della stanchezza dell'essere mentore, fidati.
+                ~ somethingStrange --
                 -> talk_with_mentor
                 
         * (infoImpo){firstCharacterInkLevel has High} [Quali informazioni importanti hanno le personagge?]
@@ -283,6 +284,7 @@
             {not voices: Per la voce sarà la stanchezza, questo lavoro è faticoso.|Come ti dicevo, vedrai che è solo la tua empatia che parla.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             Comunque ogni cosa qui è importante, {name}.
             Soprattutto se ti aiuta a raggiungere il tuo obiettivo.
+                ~ somethingStrange --
                 -> talk_with_mentor
         
         * (talkingFungus) {talking_fungus.first_story_ended_check} [Prima ho parlato con il tronco.]
@@ -292,6 +294,7 @@
             L'unica cosa che ha voce sono le persone che arrivano per chiedere il nostro aiuto.
             Il tuo aiuto.
             Se senti ancora una volte delle voci, prenditi un po' di riposo.
+                ~ somethingStrange --
                 -> talk_with_mentor
         
         * (talkingFrog) {the_frog.frog} [C'è una rana blu parlante.]
@@ -301,8 +304,17 @@
             E nemmeno rane e basta.
             Forse è il caso che ti riposi un poco, davvero.
             Lascia fare a me il resto.
+                ~ somethingStrange --
             -> talk_with_mentor
-        
+        * {foundLibro or take_this_book} [Ho trovato questo libro col mio nome.]
+            E raccoglie informazioni su questo posto.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
+            E dove l'hai trovato?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+            {foundLibro: Sotto quel vecchio tronco alla foresta.|Me l'ha dato {charNameOne}.} #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
+            Interessante.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+            Forse è scappato dalla biblioteca?
+            Immagino sia comunque utile per il tuo lavoro.
+            Spero solo non parli male di me!
+                -> talk_with_mentor
         + [Ripensadonci, non ho nulla di nuovo da dire.]
             -> talk_with_mentor
    
