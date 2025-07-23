@@ -7,6 +7,11 @@
         -> book_backgrounds_calculator ->
             ~ move_entity(PG, BookPlace)
         -> main_book
+        
+    + {are_two_entities_together(PG, miniBook)} [miniBook]
+        -> book_backgrounds_calculator ->
+            ~ move_entity(PG, BookPlace)
+        -> main_book      
  
 //Streets to and into the Bedroom
     + {are_two_entities_together(PG, FromTrainStopToBedroom)} [FromTrainStopToBedroom]

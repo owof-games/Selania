@@ -97,7 +97,13 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour
         ~ arrivingFrom = ()
         ~ disableBigDialogue()
         -> train_stop
-    
 
+    - arrivingFrom == Bedroom:
+        ~ move_entity(PG, Bedroom)
+        ~ arrivingFrom = ()
+        ~ disableBigDialogue()
+        -> bedroom   
+    
+    -else: ERROR: non riesco a trovare il luogo di provenienza
 }
 ->->
