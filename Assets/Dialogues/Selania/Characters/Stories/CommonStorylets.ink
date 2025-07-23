@@ -3,12 +3,12 @@
         - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(SecondCharacter, PG) && not first_second_chit_chat:
             -> first_second_chit_chat
         
+        - not foundLibro && (knowing_first_character ==true) && firstPauseTalking == 0:
+            -> take_this_book
+
         - else:
             ->->
     }
-
-
-
 ->->
 
 
@@ -92,5 +92,26 @@
     Bene, direi che abbiamo tutte qualcosa a cui pensare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
 
     Tipo, a dove farmi un pisolino.
+
+-> main
+
+
+=== take_this_book
+    Ehi, {name}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+    Prima ai piedi di quel vecchio tronco ho trovato questo libro.
+    E ha il tuo nome.
+    Hai un ammiratore segreto?
+    Comunque ho pensato fosse il caso di dartelo.
+        
+        ~ move_entity(FungusRecap, BookPlace)
+        ~ move_entity(miniBook, Bedroom)
+    {
+        - forestContents has PG:
+            ~ move_entity(RewriterBook, Forest)
+        - trainStopContents has PG:
+            ~ move_entity(RewriterBook, TrainStop)
+        - greenhouseMiddlePathContents has PG:
+            ~ move_entity(RewriterBook, GreenhouseMiddlePath)        
+    }
 
 -> main

@@ -27,7 +27,7 @@
         - not fifth_story_ended_check && fifthStory == Ended:
             -> fifth_story_ended_check    
         
-        - not foundLibro:
+        - not foundLibro && not take_this_book:
             -> foundLibro
         
         - else:
