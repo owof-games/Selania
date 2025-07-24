@@ -157,7 +157,7 @@
             {debug: Ho messo la nota del secondo personaggio alla fermata del bus.}
     }    
     {
-        - knowing_second_character.six.theFrog && not are_two_entities_together(TheFrog, Mentor):
+        - knowing_second_character.three.theFrog && not are_two_entities_together(TheFrog, Mentor):
             {debug: Ho spostato la rana allo stagno.}
             ~  move_entity(TheFrog, GreenhouseMiddlePath)
         - else:
