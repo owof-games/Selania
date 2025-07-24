@@ -28,6 +28,10 @@
 
 
 === settings_management
-    + {are_two_entities_together(PG, settings)}[settings]
+    + {are_two_entities_together(PG, settings)} [settings]
         <i>Accesso alle impostazioni</i>  #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
-    -> main
+            -> main
+            
+    + {are_two_entities_together(PG, SettingsBookVersion)} [SettingsBookVersion]
+    <i>Accesso alle impostazioni</i>  #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+            -> main
