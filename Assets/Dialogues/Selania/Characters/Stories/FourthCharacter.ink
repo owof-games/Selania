@@ -61,6 +61,12 @@
         = five
         
         -> main    
+        
+==== fourth_story_gift
+
+= ink_outcome        
+
+-> main
 
 === fourth_char_story_ended       
         + opzione
