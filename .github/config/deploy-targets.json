@@ -9,7 +9,7 @@
     "os": "ubuntu-latest",
     "requiresCombinedArtifact": false,
     "minimumBuildType": "preview",
-    "compatibleBuildTargets": ["StandaloneWindows64"]
+    "compatibleBuildTargets": ["StandaloneWindows64", "StandaloneLinux64-Client", "StandaloneOSX"]
   },
   "s3": {
     "os": "ubuntu-latest",
