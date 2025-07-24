@@ -932,7 +932,9 @@
         }
         
         
-        ~ saturationVar ++    
+        ~ saturationVar ++
+        ~ growing ++   
+        ~ move_entity(fifthCharPaint, Bedroom)
         
         {
         - fifthCharacterSpecialEvent == true:
@@ -941,7 +943,7 @@
             -> exit
         }
     
-    
+        
     = secret_ending
     ~ temp charNameFive = translator(fifthCharacterState)
         C'è una cosa che vorrei dirti, {name}.

@@ -3,6 +3,9 @@
 #ambientSounds: {tag_ambientSounds()}
             ~ arrivingFrom = ()
             ~ arrivingFrom = Greenhouse
+{debug: <i>La lista degli oggetti nella stanza è: {greenhouseContents}.}
+{debug: <i>La lista degli oggetti nel deposito è: {safekeepingContents}.}
+
 
 {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can}
 
@@ -34,11 +37,12 @@
             -> main
     
 === call_test
-    + {are_two_entities_together(WateringCan, PG)} [WateringCan]
+    + (click) {are_two_entities_together(WateringCan, PG)} [WateringCan]
     {
-        - call_test == 1:
+        - click == 1:
         ~ saturationVar ++
         ~ move_entity(cultivationKit, Bedroom)
+        
     }
 
 

@@ -15,9 +15,9 @@
 
 
 === reading_place
-    + {are_two_entities_together(ReadingPlace, PG)} [ReadingPlace]
+    + (click) {are_two_entities_together(ReadingPlace, PG)} [ReadingPlace]
     {
-        - reading_place == 1:
+        - click == 1:
         ~ saturationVar ++
         ~ move_entity(littleLibrary, Bedroom)
     }

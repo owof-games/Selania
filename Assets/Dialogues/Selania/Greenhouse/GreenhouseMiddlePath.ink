@@ -24,7 +24,7 @@
             Cra
             Cra?
             {
-                - the_frog == 1:
+                - talkFrog == 1:
                 ~ saturationVar ++
                 ~ move_entity(bowl, Bedroom)
             }

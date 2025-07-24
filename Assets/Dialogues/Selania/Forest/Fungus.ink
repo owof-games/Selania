@@ -320,3 +320,11 @@
     ~ move_entity(miniBook, Bedroom)
     ~ somethingStrange ++
 -> main
+
+
+
+=== final ===
+    Hai donato la Selanìa, il gioco è finito.
+    Compare lo sfondo stellato.
+    ~ move_entity(vase, Bedroom)
+-> main

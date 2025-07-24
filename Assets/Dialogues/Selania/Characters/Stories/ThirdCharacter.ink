@@ -770,7 +770,10 @@
         - else:
             -> exit
         }
-    
+        
+        ~ growing ++   
+        ~ saturationVar ++
+        ~ move_entity(thirdCharPaint, Bedroom)
     
     = secret_ending
     ~ temp charNameThree = translator(thirdCharacterState)

@@ -65,4 +65,7 @@
         + opzione
         + opzione
         -
+        ~ growing ++   
+        ~ saturationVar ++
+        ~ move_entity(fourthCharPaint, Bedroom)
     -> main            
