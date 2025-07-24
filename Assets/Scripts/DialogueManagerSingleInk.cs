@@ -79,7 +79,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private Sprite bookBGTwo;
     [SerializeField] private Sprite bookBGThree;
     [SerializeField] private Sprite bookBGFour;
-    
+    [SerializeField] private Sprite bookBGFive;    
 
 
 
@@ -434,6 +434,11 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     if (tagValue == "bookBGFour")
                     {
                         background.sprite = bookBGFour;
+                    }
+
+                    if (tagValue == "bookBGFive")
+                    {
+                        background.sprite = bookBGFive;
                     }
 
 

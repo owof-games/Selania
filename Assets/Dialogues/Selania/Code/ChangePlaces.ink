@@ -6,12 +6,10 @@
  
  //Book management (the book will be treated as a place)
     + {are_two_entities_together(PG, RewriterBook)}[RewriterBook]
-        -> book_backgrounds_calculator ->
             ~ move_entity(PG, BookPlace)
         -> main_book
         
     + {are_two_entities_together(PG, miniBook)} [miniBook]
-        -> book_backgrounds_calculator ->
             ~ move_entity(PG, BookPlace)
         -> main_book      
  

@@ -640,6 +640,8 @@
     
         = ink_outcome    
             <i>Dopo il tuo dono {inkTranslator(secondCharacterInkLevel)}.
+            ~ move_entity(fifthCharPaint, Bedroom)
+            ~ saturationVar ++
                  -> talk_with_fifth_character
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
@@ -932,9 +934,8 @@
         }
         
         
-        ~ saturationVar ++
+        ~ bookBGVariations ++
         ~ growing ++   
-        ~ move_entity(fifthCharPaint, Bedroom)
         
         {
         - fifthCharacterSpecialEvent == true:

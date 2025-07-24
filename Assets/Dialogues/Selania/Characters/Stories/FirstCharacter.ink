@@ -937,6 +937,8 @@
     
         = ink_outcome    
             <i>Dopo il tuo dono {inkTranslator(firstCharacterInkLevel)}.#speaker:{fungus_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+                ~ move_entity(firstCharPaint, Bedroom)
+                ~ saturationVar ++
                  -> talk_with_first_character
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
@@ -1357,10 +1359,9 @@
         }
         
         ~ growing ++    
-        ~ saturationVar ++
-        
-        ~ move_entity(firstCharPaint, Bedroom)
-        
+
+        ~ bookBGVariations ++
+
         {
         - firstCharacterSpecialEvent == true:
             -> secret_ending

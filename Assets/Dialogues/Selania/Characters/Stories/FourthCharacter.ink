@@ -35,7 +35,9 @@
     -> inventory_management -> capitolo_uno
     + ->
     {findedGifts == (): Non parlo senza un dono adeguato! ->main}
-    
+    Mettere dopo check inchiostro
+    ~ move_entity(fourthCharPaint, Bedroom)
+    ~ saturationVar ++
     
     
     = capitolo_uno    
@@ -66,6 +68,6 @@
         + opzione
         -
         ~ growing ++   
-        ~ saturationVar ++
-        ~ move_entity(fourthCharPaint, Bedroom)
+        ~ bookBGVariations ++
+        
     -> main            

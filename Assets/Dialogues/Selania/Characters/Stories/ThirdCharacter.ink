@@ -469,6 +469,8 @@
     
         = ink_outcome    
             <i>Dopo il tuo dono {inkTranslator(thirdCharacterInkLevel)}.
+                ~ move_entity(thirdCharPaint, Bedroom)
+                ~ saturationVar ++
                  -> talk_with_third_character
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
@@ -663,8 +665,7 @@
         + [Ragioni come se fossi sola se dovessi cadere.]
      
         -
-        ~ saturationVar ++
-        
+
         {
         - firstCharacterInkLevel == Normal:
             -> ending
@@ -772,8 +773,8 @@
         }
         
         ~ growing ++   
-        ~ saturationVar ++
-        ~ move_entity(thirdCharPaint, Bedroom)
+        ~ bookBGVariations ++
+        
     
     = secret_ending
     ~ temp charNameThree = translator(thirdCharacterState)
