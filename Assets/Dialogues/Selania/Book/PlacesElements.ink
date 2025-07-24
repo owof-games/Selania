@@ -1,6 +1,7 @@
 === rules_recap
 + {are_two_entities_together(RulesRecap, PG)} [RulesRecap]
 ~ enableBigDialogue()
+Qui ci sono le regole.
 
         {gifts_and_ink:La prima cosa da fare è: conquistare la <b>fiducia</b> della persona che devi aiutare.}
         {gifts_and_ink:Ci <b>parli</b>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.}
