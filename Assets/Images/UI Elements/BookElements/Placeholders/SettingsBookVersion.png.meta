@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 21b911f6f46c75f48ac9000f7e32b548
+guid: d449e8dab7c39594d80cdf77a9e9a58f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 644574514478011665
-    second: GreenhouseRecap_0
+      213: 8273602062064709602
+    second: SettingsBookVersion_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GreenhouseRecap_0
+      name: SettingsBookVersion_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3600
-        height: 2400
+        x: 21
+        y: 19
+        width: 95
+        height: 250
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1155bb61b1df1f800800000000000000
-      internalID: 644574514478011665
+      spriteID: 2ef6e427d3db1d270800000000000000
+      internalID: 8273602062064709602
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GreenhouseRecap_0: 644574514478011665
+      SettingsBookVersion_0: 8273602062064709602
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
