@@ -40,6 +40,9 @@
 <- call_test
 
 
+
+<- settings_management
+
 //Elementi della libreria
 <- reading_place
 

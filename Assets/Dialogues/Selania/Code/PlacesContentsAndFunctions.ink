@@ -1,5 +1,5 @@
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
-    VAR bedroomContents = (RoomLoad, PG)
+    VAR bedroomContents = (RoomLoad, PG, settings)
 
     VAR trainStopContents = (FromTrainStopToForest, StartingNote, FromTrainStopToBedroom)
 

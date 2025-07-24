@@ -26,3 +26,8 @@
 }    
     -> main
 
+
+=== settings_management
+    + {are_two_entities_together(PG, settings)}[settings]
+        <i>Accesso alle impostazioni</i>  #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+    -> main
