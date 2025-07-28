@@ -36,7 +36,7 @@
         + [Avrei bisogno di una mano.]
             -> support
         
-        + {somethingStrange > 0 or (firstCharacterInkLevel has High && not little_storylets.infoImpo)}[Mi è successa una cosa strana.]
+        + {somethingStrange > 0 or (firstCharacterInkLevel has High && not little_storylets.infoImpo) && gifts_and_ink} [Mi è successa una cosa strana.]
             -> little_storylets
             
         + {knowing_second_character && fifthPauseTalking == 0}[Vorrei conoscerti meglio.]
