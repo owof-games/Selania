@@ -32,14 +32,14 @@
     = hub
     ~ temp charNameOne = translator(firstCharacterState)
     
-         {~ Le farfalle qui giocano per ore!|No dai. Ma hai visto quanto sono carini gli scoiattoli?!|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+         {~ Le farfalle qui giocano per ore!|No dai. Ma hai visto quanto sono carini gli scoiattoli?!|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
                 + [Ti va di raccontarmi qualcosa di te?]
                     -> knowing_first_character
                     
                     
                 //Se non ho ancora fatto il dono e NON ho parlato col mentore e ho parlato abbastanza con lei
                 + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
-                         Non voglio snitchare, ma non hai ancora chiesto alla mentore a cosa servono.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+                         Non voglio snitchare, ma non hai ancora chiesto alla mentore a cosa servono. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                          Se non parli con lei prima poi minimo ci rimane male.
                             -> main
                 
@@ -49,7 +49,7 @@
             
                 //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
                 + {first_story_gift.ink_outcome && not main_story_first_character && not questions} [Vorrei aiutarti a guardare le cose in modo diverso.]
-                        Ama, parla prima con la mentore così ti dice cosa fare e non le prende una sincope se facciamo casini.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+                        Ama, parla prima con la mentore così ti dice cosa fare e non le prende una sincope se facciamo casini. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                                 -> main
                                 
                 + {first_story_gift.ink_outcome && not main_story_first_character &&  questions} [Ti va di riscrivere la tua storia con me?]
@@ -103,16 +103,16 @@
         //Presentazione.
         ~ firstStoryQuestCount ++
         
-        Hai visto passare qualcunə?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
+        Hai visto passare qualcunə? #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
         Altə all’incirca una balla di fieno e che si muove come un violino.
         O almeno ləi si descriverebbe così.
-        Lə adoro ma è sempre un po' edgy. #portrait: chitarra_neutral
-        E comunque non posso essere arrivata qui da sola, vero? Qualsiasi cosa sia <i>qui</i>.
+        Lə adoro ma è sempre un po' edgy. #portrait:chitarra_affectionate
+        E comunque non posso essere arrivata qui da sola, vero? Qualsiasi cosa sia <i>qui</i>. #portrait:chitarra_neutral
         Come lə trovo?
         
             + (oneBlue) [Dammi dettagli più concreti.]
                     ~ firstBlue ++
-                Concreti?
+                Concreti? #portrait:chitarra_annoyed
                 Si muove. Respira. Mangia. Saltella. Canta.
                 A volte tutte queste cose assieme.
                 E ha molta fantasia.
@@ -120,7 +120,7 @@
                 
             + (oneYellow) [Suona il tamburo e vedrai che il violino torna!]
                     ~ firstYellow ++
-                A beh, ci sta!
+                A beh, ci sta! #portrait:chitarra_curious
                 Non ci avevo pensato!
                 Ma il suo violino è più da pianoforte.
                 Forse potrei cercare nella serra, e trovare qualcosa da suonare.
@@ -136,27 +136,27 @@
                 ~ firstGreen ++
                 Grazie ama.
                 Ma è come chiedermi di fare un concerto con una persona sconosciuta.
-                Non è che ci si piglia subito, no?
+                Non è che ci si piglia subito, no? #portrait:chitarra_sad
 
             + (onePurple) [Tu sei sempre con ləi e ləi con te.]
                 ~ firstPurple ++
                 Mmm, ok, credo?
-                Le parole mi vanno anche bene, ma chi ti conosce.
-                No dai, non devo essere stronza.
-                Però merda se mi manca.
+                Le parole mi vanno anche bene, ma chi ti conosce. #portrait:chitarra_annoyed
+                No dai, non devo essere stronza. #portrait:chitarra_neutral
+                Però merda se mi manca. #portrait:chitarra_sad
             -
         
-        Non faccio mai niente senza Talco.
+        Non faccio mai niente senza Talco. #portrait:chitarra_neutral
         Talco è l'unica persona con cui posso permettermi di litigare.
         E l'unica che mi sopporta da quando ho finito il conservatorio.
         Ma non mi sono manco presentata: io sono {charNameOne}.
         - (firstPresentation)
-        No, io sono <b>{charNameOne}</b>.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        No, io sono <b>{charNameOne}</b>. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
          Ehi! Non è questo il mio nome.
          <i>{charNameOne}</i>.
-         Forse se provo a dirlo al contrario?
+         Forse se provo a dirlo al contrario? #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
          Arratihc.
-         Uh.
+         Uh. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
          Prova tu. Come ti chiami?
     	    + {name_choice} [Mi chiamo {name}.]
     	    + [Il mio nome è...]
@@ -165,26 +165,26 @@
     	
     	 E i tuoi pronomi?
     	        -> gender ->
-    	 {pronouns has her: Anche io uso i pronomi femminili!|Invece io uso i femminili.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+    	 {pronouns has her: Anche io uso i pronomi femminili!|Invece io uso i femminili.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
     	 Comunque questa cosa del nome è strana.
     	 Non so.
     	 Non è male la chitarra.
     	 Ma per una del conservatorio è tipo rinunciare a tutto.
     	 Alle ambizioni.
-    	 La chitarra è un po' un arrendersi, e dove vado se mi arrendo?
-         {name}, secondo te il nome di una persona è importante?
+    	 La chitarra è un po' un arrendersi, e dove vado se mi arrendo? #portrait:chitarra_sad
+         {name}, secondo te il nome di una persona è importante? #portrait:chitarra_neutral
     	    
             + [È uno strumento di controllo.]
                  Il nome è anche uno strumento d'amore.
                  Pensa a tutti i modi in cui qualcuno lo può gridare.
-                 Sono sicura che te ne verranno in mente un paio molto piacevoli.
+                 Sono sicura che te ne verranno in mente un paio molto piacevoli. #portrait:chitarra_curious
                     ~ firstRed ++
             
             + [Solo se possiamo continuamente cambiarlo.]
-                 Adoro!
+                 Adoro! #portrait:chitarra_curious
                  Passo le giornate a cambiare melodie, e non avevo mai pensato di cambiare il mio nome!
                  Cosa normie proprio ora che ci penso, viste tutt3 l3 am3 non binari3 con cui esco.
-                 Mi merito di essere una chitarra!
+                 Mi merito di essere una chitarra! #portrait:chitarra_annoyed
                     ~ firstYellow ++
                     
             + [Solo se sei tu a definirne il significato.]
@@ -196,15 +196,15 @@
                     ~ firstPurple ++
                     
             + [È un dono della tua famiglia che resterà sempre con te.]
-                 A I U T O!
+                 A I U T O! #portrait:chitarra_annoyed
                  Non ci avevo mai pensato.
                  Ma non tutt3 ne sono felici.
-                 E per alcune ame il nome è qualcosa che si sceglie.
+                 E per alcune ame il nome è qualcosa che si sceglie. #portrait:chitarra_affectionate
                  Smollare quello vecchio è una liberazione.
                     ~ firstGreen ++
                     
             + [È utile, altrimenti come ci distinguiamo?]
-                 Capiamoci: sei sempre così {pronouns has him: rigido|{pronouns has her: rigida|rigidə}}?
+                 Capiamoci: sei sempre così {pronouns has him: rigido|{pronouns has her: rigida|rigidə}}? #portrait:chitarra_annoyed
     	         La persona più divertente della festa, vero?
     	         Anche se immagino che una visione pratica abbia dei vantaggi.
     	         Per lo meno faresti felice mio padre.
@@ -212,7 +212,7 @@
                     ~ firstBlue ++         
             -
 
-        Comunque ama: il tuo nome ti si addice benissimo.
+        Comunque ama: il tuo nome ti si addice benissimo. #portrait:chitarra_neutral
         Hai proprio una faccia da {name}.
         Ma forse la mia faccia è cambiata? Ti sembro una che può chiamarsi {charNameOne}?
         Una che ha rinunciato ad essere un pianoforte? Una viola?
@@ -220,29 +220,29 @@
        
             + [Quindi per cambiare faccia basta cambiarci il nome?]
                 {firstYellow > 1:  Ama, tu e io faremo amicizia presto!}
-                 Cavolo, passerei le giornate a essere chiunque!
+                 Cavolo, passerei le giornate a essere chiunque! #portrait:chitarra_curious
                  E forse ora potrei essere Talco.
                  Dove sei, Talco?
                     ~ firstYellow ++
             
             + [No, la faccia è una cosa che hai anche se non hai un nome.]
                 {firstBlue > 1:  {name}, sai che ogni tanto puoi scendere da ovviolandia, vero? }
-                 Forse dovrei chiamarti Linea.
+                 Forse dovrei chiamarti Linea. #portrait:chitarra_annoyed
                  Anzi, Quadrato.
                  Perché neanche a volerlo sai rotolare lontano dalla superficie delle cose.
                     ~ firstBlue ++
                
             + [Rinunciare al superfluo ci avvicina alla natura delle cose.]
-                {firstPurple > 1:  {name}, continua così e ci shippo tantissimo!}
-                 Ho pensato subito che {charNameOne} avesse un valore negativo.
+                {firstPurple > 1:  {name}, continua così e ci shippo tantissimo!} #portrait:chitarra_affectionate
+                 Ho pensato subito che {charNameOne} avesse un valore negativo. 
                  Dimenticandomi che in ogni brano il silenzio è parte fondamentale.
                  Grazie ama!
                     ~ firstPurple ++
             
             + [Cosa pensi direbbe Talco di questo nome?]
-                {firstGreen > 1:  A te piace parlare di sentimenti e relazioni, vero?}
+                {firstGreen > 1:  A te piace parlare di sentimenti e relazioni, vero?} #portrait:chitarra_affectionate
                  Questa è una domanda molto tenera.
-                 Ma Talco mi blasterebbe, sicuro.
+                 Ma Talco mi blasterebbe, sicuro. #portrait:chitarra_curious
                  Mi direbbe che sono una frignona, e di andare a suonare qualcosa.
                  Talco è una persona che agisce, non resta ad aspettare.
                     ~ firstGreen ++
@@ -250,14 +250,14 @@
             + [A te va bene essere {charNameOne}? Perché non Lotta? Azione?]
                 {firstRed > 1:  Tu prendi tutto di pancia, vero? Saresti {pronouns has him: lo|{pronouns has her: la|lə}} bestie di Talco.}
                  Mi merito {charNameOne} perché ultimamente ho proprio smollato tutto.
-                 Però ama, parlare con te non è già una forma di azione?
+                 Però ama, parlare con te non è già una forma di azione? #portrait:chitarra_curious
                     ~ firstRed ++
             -
        
-        Come mi dovrei chiamare secondo te?
+        Come mi dovrei chiamare secondo te? #portrait:chitarra_neutral
     	<i>Qualsiasi cosa tu abbia pensato, non riesci a dirla.</i>  #speaker:{fungus_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
     	    -
-         Mmm.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+         Mmm.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
          La tua bocca si muove ma non esce nulla.
          Forse quella tizia che gira quì può aiutarci a capire qualcosa?
         {are_two_entities_together(Mentor, PG): {welcome.your_name: {charNameFive}|???}: In effetti avrei un paio di informazioni utili da darti!} #speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
@@ -274,9 +274,9 @@
         //Paura di deludere la famiglia scelta
         ~ firstStoryQuestCount ++
         
-         Non riesco a trovare Talco. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+         Non riesco a trovare Talco. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
          Forse devo fare pace col cervello e accettare che non è qui.
-         Ma non ricordo quando è stata l'ultima volta che sono andata in giro senza di ləi.
+         Ma non ricordo quando è stata l'ultima volta che sono andata in giro senza di ləi. #portrait:chitarra_neutral
          Prima mi sono pure persa nel cercarlə.
          Ok, forse mi sono distratta cercando di raggiungere uno scoiattolo perché aveva la ghianda più bella che avessi mai visto.
          Volevo insegnargli a suonarla, e invece mi sono ritrovata tra gli alberi senza sapere dove andare.
