@@ -15,7 +15,7 @@
 
     VAR laboratoryContents = ()
 
-    VAR safekeepingContents = (RoomExit, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, MenuSave, MenuQuit, TheFrog, FromForestToLibrary, RewriterBook, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FrogRecap, DogRecap, FungusRecap, GreenhouseRecap, LaboratoryRecap, NestRecap, FifthRecap, RulesRecap, Inventory, cultivationKit, firstCharPaint, teaKit, littleLibrary, bowl, secondCharPaint, vase, miniBook)
+    VAR safekeepingContents = (RoomExit, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, MenuSave, MenuQuit, TheFrog, FromForestToLibrary, RewriterBook, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FrogRecap, DogRecap, FungusRecap, GreenhouseRecap, LaboratoryRecap, NestRecap, FifthRecap, RulesRecap, Inventory, cultivationKit, firstCharPaint, teaKit, littleLibrary, bowl, secondCharPaint, vase, miniBook, FromLibraryToLaboratoryNight)
     
     VAR bookContents = (BookExit, SettingsBookVersion)
    

@@ -4,7 +4,7 @@
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
     LIST characters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, TheFrog
 
-    LIST transitions = FromTrainStopToForest, FromForestToTrainStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat, FromForestToLibrary, FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, FromGreenhouseToGreenhouseMiddlePath, FromLibraryToForest, FromLibraryToLaboratory
+    LIST transitions = FromTrainStopToForest, FromForestToTrainStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat, FromForestToLibrary, FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, FromGreenhouseToGreenhouseMiddlePath, FromLibraryToForest, FromLibraryToLaboratory, FromLibraryToLaboratoryNight
 
     LIST sceneObjects = Bench, WateringCan, TheFungus, ReadingPlace, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, StartingNote
 
