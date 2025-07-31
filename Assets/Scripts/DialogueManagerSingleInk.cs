@@ -69,6 +69,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     [Header("Library Backgrounds")]
     [SerializeField] private Sprite backLibrary;
+    [SerializeField] private Sprite backNightLibrary;
 
     [Header("Laboratory Backgrounds")]
     [SerializeField] private Sprite backLaboratory;
@@ -403,6 +404,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     {
                         background.sprite = backLibrary;
                     }
+
+                    if (tagValue == "backNightLibrary")
+                    {
+                        background.sprite = backNightLibrary;
+                    }
+
 
                     //TAG GESTIONE DEL LABORATORIO
                     if (tagValue == "backLaboratory")
