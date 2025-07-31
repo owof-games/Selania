@@ -19,12 +19,11 @@
     + {are_two_entities_together(StartingNote, PG)}[StartingNote]
     
     Ti scrivo perché volevo ringraziarti per quello che hai fatto. #speaker:Sconosciutə #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait:unknown
-        Le cose nella mia vita hanno ripreso a funzionare. 
-    Ci sono ancora molte giornate no, ma sempre più  più spesso anche delle giornate sni.
-    E persino qualche giornata YEAH!
-        Spero che un giorno potrai avere anche tu la tua giornata yeah.
-    E magari di passarla assieme.
-        
+        Che abbiamo fatto.
+        A volte il quotidiano mi fa dimenticare tutto, e pensare che sia stata tutta una mia invenzione, roba nella testa.
+        Ma poi la notte e i sogni mi ricordano che è stato tutto vero.
+        E allora, vorrei soltanto tornare.
+        K.
             -> main
 
 
