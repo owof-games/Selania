@@ -540,3 +540,54 @@
           
 
 -> main
+
+
+=== cardo_aspinato
+//Ricordo, collaborazione, novità
+//Outcome: prova una strada nuova
+    = step_zero
+        //~ growthCardoAspinato = stepZero
+        <i>Odore di buio, di cielo senza stelle. Di bosco e nebbia e nessuna strada da imboccare.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>Una palla soffice emerge dal terreno.</i>
+            -> main
+    
+    = step_uno
+        <i>Rumore di passi, qualcosa che corre, che fugge, che non arriva mai.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>I peli del fusto vibrano, si sollevano quando ti avvicini, ti tengono distante.</i>
+          -> main
+    
+    = step_due
+       <i>È comparsa una gemma sulla cima dello stelo.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>E dalla gemma emergono filamenti disgustosi, il loro puzzo ti chiede di provare paura, di allontanarti, di arrenderti, di evitare ogni contatto.</i>
+        -> main
+    
+    = step_tre
+        <i>La piante cede, si stende tra le tue gambe.</i>.#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        + [Allungo le dita.]
+            <i>Allunghi le dita, ne carezzi il pelo, e al contatto, senti.</i>
+            <i>Senti la luna, le stelle, le foglie nel vento, l'erba umida.</i>
+            <i>Senti abbracci e sorrisi e mani che vi sorreggono.
+            <i>La pianta sboccia.
+    
+            <i>Il <b>Cardo aspinato</b> doveva scoprire di non essere solo.</i>
+            <i>Che lasciarsi aiutare è aiutare l'altrx.</i>
+            <i>Che aiutare è aiutarsi.</i>
+                ~ growing = 0
+                ~ chosenCultivable = ()
+                    {
+                        - findedGifts hasnt BrinaDellImpossibile:
+                        ~ findedGifts += BrinaDellImpossibile
+                       <i> Hai ottenuto: <b>Brina dell'Impossibile</b></i>
+                    }
+                    ~ move_entity(GreenhouseRecap, BookPlace)
+                    
+                + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
+                        -> cultivable_test
+                + + [Mi aggiro per la serra.]    
+                    -> main
+        + [Ora non me la sento.]
+              -> main
+ 
+          
+
+-> main
