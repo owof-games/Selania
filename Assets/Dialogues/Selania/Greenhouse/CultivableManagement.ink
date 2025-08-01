@@ -1,10 +1,10 @@
 //Lista coltivabili e stati possibili    
-    LIST cultivable = LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile
+    LIST cultivable = LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, CardoAspinato
 
     LIST growStep = notStarted, stepZero, stepOne, stepTwo, stepThree
 
 //QUESTA LISTA LA USO PER GESTIRE LA PESCATA O MENO DEI COLTIVABILI
-    VAR backupCultivable = (LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
+    VAR backupCultivable = (LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, CardoAspinato)
     
     VAR growthCantoDelleCompagne = notStarted
     VAR growthLicheneDegliAbissi = notStarted
@@ -13,6 +13,7 @@
     VAR growthLaSpazzata = notStarted
     VAR growthBaccaDellaAddolorata = notStarted
     VAR growthNonTiScordarDiTe = notStarted
+    VAR growthCardoAspinato = notStarted
 
 //Variabili per la gestione della serra
     LIST cropsType = relationship, shift, understanding, selfdetermination, wonder, imagination
@@ -20,11 +21,11 @@
 //QUESTE LISTE HANNO UN VALORE CATALOGATIVO E PER LA GESTIONE DELLE DOMANDE
 
     //Relazione: con sé e con gli altri, anche con l’ambiente.
-    VAR relationshipCrops = (LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti)
+    VAR relationshipCrops = (LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CardoAspinato)
     //Mutamento: capacità di generare e accogliere il cambiamento.
     VAR shiftCrops = (LicheneDegliAbissi, LaSpazzata)
     //Comprensione: cercare il senso, capire il perché.
-    VAR understandingCrops = (LaSpazzata, BaccaDellaAddolorata)
+    VAR understandingCrops = (LaSpazzata, BaccaDellaAddolorata, CardoAspinato)
     //Autodeterminazione: definire la mia vita per come la voglio, o la vita della mia comunità.
     VAR selfdeterminationCrops = (CantoDelleCompagne, BaccaDellaAddolorata, BrinaDellImpossibile)
     //Stupore, meraviglia: sorprendermi, scoprire cose nuove, scoprire cose inaspettate. Vedere la vita come qualcosa di non prevedibile e godere di questo.

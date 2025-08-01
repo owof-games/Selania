@@ -104,7 +104,20 @@
             ~ growthBrinaDellImpossibile = stepTwo
         - growStep has stepThree:
              ~ growthBrinaDellImpossibile = stepThree
+    }
+
+    - chosenCultivable has CardoAspinato:
+    {
+        - growStep has stepZero:
+            ~ growthCardoAspinato = stepZero
+        - growStep has stepOne:
+            ~ growthCardoAspinato = stepOne
+        - growStep has stepTwo:
+            ~ growthCardoAspinato = stepTwo
+        - growStep has stepThree:
+             ~ growthCardoAspinato = stepThree
     }    
+    
     ->->
 }
 
@@ -194,7 +207,19 @@
             -> brina_dell_impossibile.step_due
         - growthBrinaDellImpossibile == stepThree:
             -> brina_dell_impossibile.step_tre
-    }    
+    }
+    
+    - chosenCultivable has CardoAspinato:
+    {
+        - growthCardoAspinato == stepZero:
+            -> cardo_aspinato.step_zero     
+        - growthCardoAspinato == stepOne:
+            -> cardo_aspinato.step_uno
+        - growthCardoAspinato == stepTwo:
+            -> cardo_aspinato.step_due
+        - growthCardoAspinato == stepThree:
+            -> cardo_aspinato.step_tre
+    }     
     -> main
 }
 
