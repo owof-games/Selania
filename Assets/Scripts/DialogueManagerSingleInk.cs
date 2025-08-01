@@ -595,6 +595,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
     {
         return (InkList)story.variablesState["growthEderaDelleAmanti"];
     }
+    public InkList GetEffettivoStatoCardoAspinato()
+    {
+        return (InkList)story.variablesState["growthCardoAspinato"];
+    }    
     public void OnQuitButton()
     {
         Application.Quit();
