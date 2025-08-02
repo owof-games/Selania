@@ -335,7 +335,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34.5
+  m_fontSize: 37.3
   m_fontSizeBase: 77.9
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -13996,6 +13996,7 @@ MonoBehaviour:
   - {fileID: 2104620172}
   - {fileID: 709785635}
   - {fileID: 1093899972}
+  - {fileID: 438082116}
   displayNameText: {fileID: 1171737394}
   portraitAnimator: {fileID: 1021419974}
   inkAnimatorA: {fileID: 53077552}
