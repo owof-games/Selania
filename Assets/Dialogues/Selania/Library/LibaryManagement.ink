@@ -26,10 +26,6 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     
 
 === book_test_intro ===
-#background: backNightLibrary
-    ~ move_entity(FromLibraryToLaboratoryNight, Library)
-    ~ move_entity(FromLibraryToLaboratory, Safekeeping)
-    
 <i>La biblioteca freme all'idea di offrirti una storia da leggere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         + {readStories != ()} [Voglio rileggere qualcosa.]
         <i>La tua libreria contiene {number_translator(readStories)} {libro_libri(readStories)}.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
@@ -42,6 +38,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
             -> storyQuestions
     
         + [Ho cambiato idea.]
+            -> DarkLibraryModeOff ->
             -> main
 
 ->->

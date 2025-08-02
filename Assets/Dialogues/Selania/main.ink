@@ -5,8 +5,8 @@
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
     //Questa cosa mi serve perché sennò rimane sempre la versione "night"
-    ~ move_entity(FromLibraryToLaboratoryNight, Safekeeping)
-    ~ move_entity(FromLibraryToLaboratory, Library)
+    // ~ move_entity(FromLibraryToLaboratoryNight, Safekeeping)
+    //~ move_entity(FromLibraryToLaboratory, Library)
 @interact 
 
 

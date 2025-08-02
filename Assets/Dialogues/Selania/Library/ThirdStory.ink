@@ -1,5 +1,6 @@
 //Cognome/alias L - R
 === lamia
+    -> DarkLibraryModeOn ->
 <i>Il sassolino</i> di Lamia (she/they).
 
     È iniziato tutto in una giornata mediocre.
@@ -24,11 +25,13 @@
 
     + [Vorrei leggere ancora.]
        -> book_test_intro
-    + [Me ne vado.]  
-    -> main
+    + [Me ne vado.]
+        -> DarkLibraryModeOff ->
+        -> main
 
 
 === val_fausto_lattanzio
+    -> DarkLibraryModeOn ->
 <i>Home</i>, di Val Fausto Lattanzio (he/they).
 
     I have lived in this house forever, even though I never chose it—it's the house my mother chose for me.
@@ -54,10 +57,12 @@
 
     + [Vorrei leggere ancora.]
        -> book_test_intro
-    + [Me ne vado.]  
-    -> main
+    + [Me ne vado.] 
+        -> DarkLibraryModeOff ->
+        -> main
 
 === romi
+    -> DarkLibraryModeOn ->
 <i>Il principe sbagliato</i> di Sofia Abatangelo alias Romi alias Romi Sofia Abatangelo(any).
 
     C’era una volta un principe che non ne faceva mai un giusta.
@@ -91,4 +96,5 @@
     + [Vorrei leggere ancora.]
        -> book_test_intro
     + [Me ne vado.]  
-    -> main
+        -> DarkLibraryModeOff ->
+        -> main

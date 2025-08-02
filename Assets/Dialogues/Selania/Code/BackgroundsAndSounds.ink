@@ -101,3 +101,15 @@ VAR saturationVar = 0
      - else:
        ~ return "fungus_anonimo"
 }
+
+=== DarkLibraryModeOn
+    #background: backNightLibrary
+    ~ move_entity(FromLibraryToLaboratoryNight, Library)
+    ~ move_entity(FromLibraryToLaboratory, Safekeeping)
+    ->->
+    
+=== DarkLibraryModeOff    
+    #background: backLibrary
+    ~ move_entity(FromLibraryToLaboratoryNight, Safekeeping)
+    ~ move_entity(FromLibraryToLaboratory, Library)
+    ->->

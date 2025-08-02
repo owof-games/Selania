@@ -1,6 +1,7 @@
 //Cognome/alias A-E
 
 === adri_allora
+    -> DarkLibraryModeOn ->
 <i>Il mio bellissimo gatto</i> di Adri Allora (ləi).
 
     Mi chiama.
@@ -33,10 +34,12 @@
     
         + [Vorrei leggere ancora.]
            -> book_test_intro
-        + [Me ne vado.] 
+        + [Me ne vado.]
+            -> DarkLibraryModeOff ->
             -> main
 
 === aza
+    -> DarkLibraryModeOn ->
 <i>Luna vergine</i> di Aza (any).
 
     Le caviglie tentennano quando provo a sedermi nella hall dell'hotel, ma in piedi continuerei a fare avanti e indietro col ticchettio dei tacchi che rimbomba, non voglio attirare ulteriormente l'attenzione degli ospiti.
@@ -77,11 +80,13 @@
     
         + [Vorrei leggere ancora.]
            -> book_test_intro
-        + [Me ne vado.]  
+        + [Me ne vado.]
+            -> DarkLibraryModeOff ->
             -> main
 
 
 === steno_artico
+    -> DarkLibraryModeOn ->
 <i> This anger, which has been stolen from me</i> by StenoArtico (he/him, none).
 
     It always comes
@@ -129,10 +134,12 @@
 
     + [Vorrei leggere ancora.]
        -> book_test_intro
-    + [Me ne vado.]  
+    + [Me ne vado.]
+        -> DarkLibraryModeOff ->
         -> main
 
 === b
+    -> DarkLibraryModeOn ->
 <i>The touch of anger</i> di K.(she/her).
 
     I still remember vividly how anger was an emotion I deeply feared.
@@ -155,10 +162,12 @@
 
     + [Vorrei leggere ancora.]
        -> book_test_intro
-    + [Me ne vado.]  
+    + [Me ne vado.]
+        -> DarkLibraryModeOff ->
         -> main
 
 === beatrice
+    -> DarkLibraryModeOn ->
 <i>La rete non esiste</i> di Beatrice(she/her).
 
     Ciao.
@@ -282,10 +291,12 @@
 
         + [Vorrei leggere ancora.]
            -> book_test_intro
-        + [Me ne vado.]  
+        + [Me ne vado.]
+            -> DarkLibraryModeOff ->
             -> main
             
 === beatrice_y_bottura
+    -> DarkLibraryModeOn ->
 <i>Artigli Rosso Ruggine</i> di Beatrice Y. Bottura (she/it).
 
     Da qualche parte esiste un pozzo artificiale profondo centinaia di metri, una scala a spirale in metallo porta alle sue interiora. 
@@ -315,5 +326,6 @@
 
     + [Vorrei leggere ancora.]
        -> book_test_intro
-    + [Me ne vado.]  
+    + [Me ne vado.]
+        -> DarkLibraryModeOff ->
         -> main

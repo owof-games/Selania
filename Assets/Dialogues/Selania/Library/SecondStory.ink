@@ -1,6 +1,7 @@
 //Cognome/alias F - K
 
 === cecilia_formicola
+    -> DarkLibraryModeOn ->
 <i>Getting warm</i> di Cecilia Formicola (she/her).
 
     "I hate them."
@@ -36,8 +37,9 @@
 
     + [Vorrei leggere ancora.]
        -> book_test_intro
-    + [Me ne vado.]  
-    -> main
+    + [Me ne vado.] 
+        -> DarkLibraryModeOff ->
+        -> main
 
 
 

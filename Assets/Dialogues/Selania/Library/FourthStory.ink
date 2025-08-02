@@ -1,6 +1,7 @@
 //Cognome/alias S - Z
 
 === salvo
+    -> DarkLibraryModeOn ->
 <i>Il cancello</i> di Salvo (he/him).
 
     Il sole stava tramontando ad occidente e illuminava con i suoi raggi obliqui le chiome degli ulivi.
@@ -40,11 +41,13 @@
 
     + [Vorrei leggere ancora.]
        -> book_test_intro
-    + [Me ne vado.]  
-    -> main
+    + [Me ne vado.]
+        -> DarkLibraryModeOff ->
+        -> main
 
 
 === maura
+    -> DarkLibraryModeOn ->
 Rileggo <i>Polvere</i> di Maura (she/they).
 
     Me lo chiede per l'ennesima volta, dopo i miei già innumerevoli no.
@@ -73,11 +76,13 @@ Rileggo <i>Polvere</i> di Maura (she/they).
 
     + [Vorrei leggere ancora.]
        -> book_test_intro
-    + [Me ne vado.]  
-    -> main
+    + [Me ne vado.] 
+        -> DarkLibraryModeOff ->
+        -> main
 
 
 === letizia_vaccarella
+    -> DarkLibraryModeOn ->
 <i>Dodici stelle</i> di Letizia Vaccarella (she/her).
 
     Jodorowsky diceva che qualsiasi guarigione richiede la disobbedienza perché alla base di ogni malattia c'è un divieto.
@@ -121,12 +126,14 @@ Rileggo <i>Polvere</i> di Maura (she/they).
 
     + [Vorrei leggere ancora.]
        -> book_test_intro
-    + [Me ne vado.]  
-    -> main
+    + [Me ne vado.]
+        -> DarkLibraryModeOff ->
+        -> main
  
     
 
 === queerginia_wolf
+    -> DarkLibraryModeOn ->
 <i>Giallo</i> di Queerginia Wolf/Marco Spelgatti (she/he/they).
 
     Non hai fatto nulla di male.
@@ -152,7 +159,8 @@ Rileggo <i>Polvere</i> di Maura (she/they).
 
     + [Vorrei leggere ancora.]
        -> book_test_intro
-    + [Me ne vado.]  
-    -> main
+    + [Me ne vado.] 
+        -> DarkLibraryModeOff ->
+        -> main
     
     
