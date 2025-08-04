@@ -4,16 +4,13 @@
 <i>Il mio bellissimo gatto</i> di Adri Allora (ləi).
     Trigger warning: violenza psicologica, abusi fisici.
         + [Inizio la lettura.]
-            ~ unreadStories -= AdriAllora
-            ~ readStories += AdriAllora
+            ~ unreadStories -= book
+            ~ readStories += book
             -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
-            ~ unreadStories -= AdriAllora
-            ~ temporaryTW += AdriAllora
-                -> refresh_book_lists -> book_test_intro
+            -> tempTW -> refresh_book_lists -> book_test_intro
         + [Non presentarmi più questo racconto.]
-            ~ unreadStories -= AdriAllora
-                -> refresh_book_lists -> book_test_intro
+            -> permamentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
     
@@ -53,23 +50,19 @@
             -> main
 
 === aza
-
 <i>Luna vergine</i> di Aza (any).
 Trigger warning: alcolismo, violenza fisica.
         + [Inizio la lettura.]
-            ~ unreadStories -= Aza
-            ~ readStories += Aza
-                -> refresh_book_lists ->
+            ~ unreadStories -= book
+            ~ readStories += book
+            -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
-            ~ unreadStories -= Aza
-            ~ temporaryTW += Aza
-                -> refresh_book_lists -> book_test_intro
+            -> tempTW -> refresh_book_lists -> book_test_intro
         + [Non presentarmi più questo racconto.]
-            ~ unreadStories -= Aza
-                -> refresh_book_lists -> book_test_intro
+            -> permamentTW -> refresh_book_lists -> book_test_intro
         -
-        
     -> DarkLibraryModeOn ->
+        
     Le caviglie tentennano quando provo a sedermi nella hall dell'hotel, ma in piedi continuerei a fare avanti e indietro col ticchettio dei tacchi che rimbomba, non voglio attirare ulteriormente l'attenzione degli ospiti.
     La brezza di mare si scaglia dalla porta girevole fino agli ascensori, anche di notte non cede. Un vento medio, di quelli che alza la sabbia ma non gli aquiloni, così da 4 giorni, da quando sono arrivata.
     Il piano è semplice, ho capito la sua routine, gli ho chiesto se avesse da accendere e abbiamo fatto due chiacchiere, non si è sicuramente accorto di chi sono, non si ricorda di me, la trasformazione ha avuto successo.
@@ -118,16 +111,13 @@ Trigger warning: alcolismo, violenza fisica.
 <i> This anger, which has been stolen from me</i> by StenoArtico (he/him, none).
     Trigger warning: violenza psicologica, abusi fisici, depressione.
         + [Inizio la lettura.]
-            ~ unreadStories -= StenoArtico
-            ~ readStories += StenoArtico
-                -> refresh_book_lists ->
+            ~ unreadStories -= book
+            ~ readStories += book
+            -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
-            ~ unreadStories -= StenoArtico
-            ~ temporaryTW += StenoArtico
-                -> refresh_book_lists -> book_test_intro
+            -> tempTW -> refresh_book_lists -> book_test_intro
         + [Non presentarmi più questo racconto.]
-            ~ unreadStories -= StenoArtico
-                -> refresh_book_lists -> book_test_intro
+            -> permamentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
     
@@ -186,18 +176,15 @@ Trigger warning: alcolismo, violenza fisica.
 
     Trigger warning: violenza fisica, depressione.
         + [Inizio la lettura.]
-            ~ unreadStories -= B
-            ~ readStories += B
-                -> refresh_book_lists ->
+            ~ unreadStories -= book
+            ~ readStories += book
+            -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
-            ~ unreadStories -= B
-            ~ temporaryTW += B
-                -> refresh_book_lists -> book_test_intro
+            -> tempTW -> refresh_book_lists -> book_test_intro
         + [Non presentarmi più questo racconto.]
-            ~ unreadStories -= B
-                -> refresh_book_lists -> book_test_intro
+            -> permamentTW -> refresh_book_lists -> book_test_intro
         -
-        -> DarkLibraryModeOn ->
+    -> DarkLibraryModeOn ->
     
     I still remember vividly how anger was an emotion I deeply feared.
     As a child, I grew up suffering from my father’s sudden outbursts of rage, an expression of a generational trauma he never had the chance to overcome.
@@ -229,16 +216,13 @@ Trigger warning: alcolismo, violenza fisica.
 
     Trigger warning: depressione, religione.
         + [Inizio la lettura.]
-            ~ unreadStories -= Beatrice
-            ~ readStories += Beatrice
-                -> refresh_book_lists ->
+            ~ unreadStories -= book
+            ~ readStories += book
+            -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
-            ~ unreadStories -= Beatrice
-            ~ temporaryTW += Beatrice
-                -> refresh_book_lists -> book_test_intro
+            -> tempTW -> refresh_book_lists -> book_test_intro
         + [Non presentarmi più questo racconto.]
-            ~ unreadStories -= Beatrice
-                -> refresh_book_lists -> book_test_intro
+            -> permamentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
     
@@ -373,18 +357,15 @@ Trigger warning: alcolismo, violenza fisica.
 
     Trigger warning: violenza psicologica, abusi fisici.
         + [Inizio la lettura.]
-            ~ unreadStories -= BeatriceYBottura
-            ~ readStories += BeatriceYBottura
-                -> refresh_book_lists ->
+            ~ unreadStories -= book
+            ~ readStories += book
+            -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
-            ~ unreadStories -= BeatriceYBottura
-            ~ temporaryTW += BeatriceYBottura
-                -> refresh_book_lists -> book_test_intro
+            -> tempTW -> refresh_book_lists -> book_test_intro
         + [Non presentarmi più questo racconto.]
-            ~ unreadStories -= BeatriceYBottura
-                -> refresh_book_lists -> book_test_intro
+            -> permamentTW -> refresh_book_lists -> book_test_intro
         -
-        -> DarkLibraryModeOn ->
+    -> DarkLibraryModeOn ->
     
     Da qualche parte esiste un pozzo artificiale profondo centinaia di metri, una scala a spirale in metallo porta alle sue interiora. 
     Sul suo buio fondo si trova un’enorme gabbia, sterile e opprimente.

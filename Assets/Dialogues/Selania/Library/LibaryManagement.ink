@@ -5,6 +5,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     VAR unreadStories = (AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, QueerginiaWolf)
     VAR readStories = ()
     VAR temporaryTW = ()
+    VAR temporaryReadTW = ()
     
 //Raggrupamento per lunghezza
     LIST storiesDuration = Short, Average, Long
@@ -254,14 +255,43 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
 ->->
 
 
-//Chiamo questa funzione per i trigger warning temporanei, quando voglio evitare una storia solo in una occasione
-=== empty_tempTW
-{debug: passo per empty_tempTW. Prima di operare la funzione, la lista di storie non lette contiene {unreadStories} e la lista delle storie evitate contiene {temporaryTW}.}
-    ~ unreadStories += temporaryTW
-    ~ temporaryTW = ()
-{debug: dopo aver applicato empty_tempTW, la lista di storie non lette contiene {unreadStories} e la lista delle storie evitate contiene {temporaryTW}.}
+//Gestione TW temporanei
+=== tempTW
+{debug: <i>Entro in tempTW. Prima di operare la funzione, il valore di book è {book}. Unreadstories ha questi libri: {unreadStories}, mentre readstories ha questi {readStories}.}
+    {
+    - unreadStories has book:
+    	~ unreadStories -= book
+    	~ temporaryTW += book
+    - readStories has book:
+    	~ readStories -= book
+    	~ temporaryReadTW +=book
+    }
+{debug: <i>Dopo aver operato la funzione, il valore di book è {book}. Unreadstories ha questi libri: {unreadStories}, mentre readstories ha questi {readStories}.}    
 ->->
 
+
+//Chiamo questa funzione per i trigger warning temporanei, quando voglio evitare una storia solo in una occasione
+=== empty_tempTW
+{debug: passo per empty_tempTW. Prima di operare la funzione, la lista di storie non lette contiene {unreadStories} e la lista delle storie non lette ed evitate contiene {temporaryTW}. La lista delle storie da rileggere è {readStories} e le storie da rileggere evitate sono {temporaryReadTW}.}
+    ~ unreadStories += temporaryTW
+    ~ temporaryTW = ()
+    ~ readStories += temporaryReadTW
+    ~ temporaryReadTW = ()
+{debug: dopo aver applicato empty_tempTW, la lista di storie non lette contiene {unreadStories} e la lista delle storie evitate contiene {temporaryTW}.La lista delle storie da rileggere è {readStories} e i trigger sono attivi per {temporaryReadTW}.}
+
+->->
+
+//Funzione di rimozione permanente di un racconto
+=== permamentTW
+{debug: <i>Entro in permanentTW. Prima di operare la funzione, il valore di book è {book}. Unreadstories ha questi libri: {unreadStories}, mentre readstories ha questi {readStories}.}
+{
+    - unreadStories has book:
+    	~ unreadStories -= book
+    - readStories has book:
+    	~ readStories -= book
+}
+{debug: <i>Dopo aver operato la funzione, il valore di book è {book}. Unreadstories ha questi libri: {unreadStories}, mentre readstories ha questi {readStories}.}   
+->->
     
 === refresh_book_lists
 //A prescindere prima di tutto levo il libro dalle storie non lette e lo metto tra le storie lette.
