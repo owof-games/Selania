@@ -39,17 +39,26 @@
     
     Qualche giorno dopo Liliana andò al cimitero. Era una giornata di sole: in lontananza la casa sua e di Alfredo brillava sulle chiome degli ulivi. 
 
-    + [Vorrei leggere ancora.]
-       -> book_test_intro
-    + [Me ne vado.]
-        -> DarkLibraryModeOff ->
-        -> main
+        + [Vorrei leggere ancora.]
+           -> book_test_intro
+        + [Me ne vado.]
+            -> DarkLibraryModeOff ->
+            -> empty_tempTW ->            
+            -> main
 
 
 === maura
-    -> DarkLibraryModeOn ->
-Rileggo <i>Polvere</i> di Maura (she/they).
+<i>Polvere</i> di Maura (she/they).
 
+    Trigger warning: violenza fisica.
+        + [Inizio la lettura.]
+        + [Per ora non me la sento di affrontare questo tema.]
+            ~ unreadStories -= Maura
+            ~ temporaryTW += Maura
+        + [Non presentarmi più questo racconto.]
+            ~ unreadStories -= Maura
+        -
+    -> DarkLibraryModeOn ->
     Me lo chiede per l'ennesima volta, dopo i miei già innumerevoli no.
     A questo punto faccio uscire tutta la mia rabbia urlando fino a perdere il respiro.
     Tirando fuori tutte le cose che mi ero tenuta dentro.
@@ -74,17 +83,27 @@ Rileggo <i>Polvere</i> di Maura (she/they).
     Mi accorgo che anche la mia pazzia sta volando via.
     La riacciuffo immediatamente “Tu resti qua con me.
 
-    + [Vorrei leggere ancora.]
-       -> book_test_intro
-    + [Me ne vado.] 
-        -> DarkLibraryModeOff ->
-        -> main
+        + [Vorrei leggere ancora.]
+           -> book_test_intro
+        + [Me ne vado.]
+            -> DarkLibraryModeOff ->
+            -> empty_tempTW ->            
+            -> main
 
 
 === letizia_vaccarella
-    -> DarkLibraryModeOn ->
 <i>Dodici stelle</i> di Letizia Vaccarella (she/her).
 
+    Trigger warning: depressione.
+        + [Inizio la lettura.]
+        + [Per ora non me la sento di affrontare questo tema.]
+            ~ unreadStories -= LetiziaVaccarella
+            ~ temporaryTW += LetiziaVaccarella
+        + [Non presentarmi più questo racconto.]
+            ~ unreadStories -= LetiziaVaccarella
+        -
+    -> DarkLibraryModeOn ->
+    
     Jodorowsky diceva che qualsiasi guarigione richiede la disobbedienza perché alla base di ogni malattia c'è un divieto.
     E se da un lato mi dico ma che cazzo ne sa Jodorowsky, lui leggeva i tarocchi di Marsiglia, io sono da Rider-Waite anzi da Waite-Smith; dall'altra, mentre conto le stelle disegnate sulla corona dell'imperatrice, inizio a pensare alla mia malattia. 
     Credo di averla da sempre, o comunque non mi ricordo di non averla avuta.
@@ -124,11 +143,12 @@ Rileggo <i>Polvere</i> di Maura (she/they).
     Un salto nel vuoto, un atto di fede.
     Lo guardo e sorrido, per la prima volta da mesi, da anni o forse da sempre, è un sorriso che è tutto mio ed è solo per me.
 
-    + [Vorrei leggere ancora.]
-       -> book_test_intro
-    + [Me ne vado.]
-        -> DarkLibraryModeOff ->
-        -> main
+        + [Vorrei leggere ancora.]
+           -> book_test_intro
+        + [Me ne vado.]
+            -> DarkLibraryModeOff ->
+            -> empty_tempTW ->            
+            -> main
  
     
 
@@ -157,10 +177,11 @@ Rileggo <i>Polvere</i> di Maura (she/they).
     Ma tu, di notte in notte, riprenderai a lanciare i tuoi fiori nell'aria.
     A rendere gialla la strada verso casa.
 
-    + [Vorrei leggere ancora.]
-       -> book_test_intro
-    + [Me ne vado.] 
-        -> DarkLibraryModeOff ->
-        -> main
+        + [Vorrei leggere ancora.]
+           -> book_test_intro
+        + [Me ne vado.]
+            -> DarkLibraryModeOff ->
+            -> empty_tempTW ->            
+            -> main
     
     

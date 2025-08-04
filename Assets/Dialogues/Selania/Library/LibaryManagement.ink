@@ -4,7 +4,8 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
 //Liste per distinguere storie lette e non
     VAR unreadStories = (AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, QueerginiaWolf)
     VAR readStories = ()
-
+    VAR temporaryTW = ()
+    
 //Raggrupamento per lunghezza
     LIST storiesDuration = Short, Average, Long
     VAR readingDuration = ()
@@ -253,6 +254,14 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
 ->->
 
 
+//Chiamo questa funzione per i trigger warning temporanei, quando voglio evitare una storia solo in una occasione
+=== empty_tempTW
+{debug: passo per empty_tempTW. Prima di operare la funzione, la lista di storie non lette contiene {unreadStories} e la lista delle storie evitate contiene {temporaryTW}.}
+    ~ unreadStories += temporaryTW
+    ~ temporaryTW = ()
+{debug: dopo aver applicato empty_tempTW, la lista di storie non lette contiene {unreadStories} e la lista delle storie evitate contiene {temporaryTW}.}
+->->
+
     
 === refresh_book_lists
 //A prescindere prima di tutto levo il libro dalle storie non lette e lo metto tra le storie lette.
@@ -267,7 +276,6 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
         ~ averageStories -= book
     - longStories has book:
         ~ longStories -= book
-    
     - aboutTransformation has book:
         ~ aboutTransformation -= book
     - aboutQuestions has book:

@@ -23,17 +23,26 @@
     Mentre discutevano sulle tipologie di colla vinilica in commercio, e vagliavano la possibilità di gambizzare qualcosa che non possiede arti, un rumore attirò la loro attenzione: toc, toc.
     Dei sassolini avevano iniziato a colpire la finestra.
 
-    + [Vorrei leggere ancora.]
-       -> book_test_intro
-    + [Me ne vado.]
-        -> DarkLibraryModeOff ->
-        -> main
-
+        + [Vorrei leggere ancora.]
+           -> book_test_intro
+        + [Me ne vado.]
+            -> DarkLibraryModeOff ->
+            -> empty_tempTW ->            
+            -> main
 
 === val_fausto_lattanzio
-    -> DarkLibraryModeOn ->
 <i>Home</i>, di Val Fausto Lattanzio (he/they).
 
+    Trigger warning: disforia, dismorfia.
+        + [Inizio la lettura.]
+        + [Per ora non me la sento di affrontare questo tema.]
+            ~ unreadStories -= ValFaustoLattanzio
+            ~ temporaryTW += ValFaustoLattanzio
+        + [Non presentarmi più questo racconto.]
+            ~ unreadStories -= ValFaustoLattanzio
+        -
+    -> DarkLibraryModeOn ->
+    
     I have lived in this house forever, even though I never chose it—it's the house my mother chose for me.
     The pink walls of my room have witnessed my childhood, then my adolescence, all the way to this moment.
     This is the right house for you, my mother says, and I lie down on the bed and stare at the ceiling while the man who says he loves me enters my body, pressing onto me dozens of blog posts and newspaper articles:
@@ -55,15 +64,25 @@
     Its walls are drenched in colors I have never seen before, flung in strokes.
     My body is the home I have chosen for myself.
 
-    + [Vorrei leggere ancora.]
-       -> book_test_intro
-    + [Me ne vado.] 
-        -> DarkLibraryModeOff ->
-        -> main
+        + [Vorrei leggere ancora.]
+           -> book_test_intro
+        + [Me ne vado.]
+            -> DarkLibraryModeOff ->
+            -> empty_tempTW ->            
+            -> main
 
 === romi
-    -> DarkLibraryModeOn ->
 <i>Il principe sbagliato</i> di Sofia Abatangelo alias Romi alias Romi Sofia Abatangelo(any).
+
+    Trigger warning: violenza psicologica
+        + [Inizio la lettura.]
+        + [Per ora non me la sento di affrontare questo tema.]
+            ~ unreadStories -= Romi
+            ~ temporaryTW += Romi
+        + [Non presentarmi più questo racconto.]
+            ~ unreadStories -= Romi
+        -
+    -> DarkLibraryModeOn ->
 
     C’era una volta un principe che non ne faceva mai un giusta.
     Il suo modo di muoversi era sbagliato, il suo modo di vestirsi era sbagliato, il suo modo di parlare era sbagliato.
@@ -93,8 +112,9 @@
     ubbidiva poco, fino alle stanze reali, dove aveva sentito il Re dire alla Regina che si vergognava di lui.
     E con la spada in mano si riprese tutto ciò che gli apparteneva di diritto.
 
-    + [Vorrei leggere ancora.]
-       -> book_test_intro
-    + [Me ne vado.]  
-        -> DarkLibraryModeOff ->
-        -> main
+        + [Vorrei leggere ancora.]
+           -> book_test_intro
+        + [Me ne vado.]
+            -> DarkLibraryModeOff ->
+            -> empty_tempTW ->            
+            -> main

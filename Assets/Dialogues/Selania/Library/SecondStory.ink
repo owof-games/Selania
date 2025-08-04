@@ -1,9 +1,10 @@
 //Cognome/alias F - K
 
 === cecilia_formicola
-    -> DarkLibraryModeOn ->
+
 <i>Getting warm</i> di Cecilia Formicola (she/her).
 
+    -> DarkLibraryModeOn ->
     "I hate them."
     "Who doesn't, Alchemilla."
     "I can't stand them. I want to see them suffer, agonise, burn...."
@@ -35,11 +36,12 @@
     "Getting warm" answered Forsythia, giggling.
     The fire, which just before was roaring high and glowing, gently lapped at the wooden logs, warm and enveloping, illuminating them all with a sweet, enchanting golden light.
 
-    + [Vorrei leggere ancora.]
-       -> book_test_intro
-    + [Me ne vado.] 
-        -> DarkLibraryModeOff ->
-        -> main
+        + [Vorrei leggere ancora.]
+           -> book_test_intro
+        + [Me ne vado.]
+            -> DarkLibraryModeOff ->
+            -> empty_tempTW ->            
+            -> main
 
 
 

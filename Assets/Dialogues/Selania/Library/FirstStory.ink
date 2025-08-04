@@ -1,9 +1,17 @@
 //Cognome/alias A-E
 
 === adri_allora
-    -> DarkLibraryModeOn ->
 <i>Il mio bellissimo gatto</i> di Adri Allora (ləi).
-
+    Trigger warning: violenza psicologica, abusi fisici.
+        + [Inizio la lettura.]
+        + [Per ora non me la sento di affrontare questo tema.]
+            ~ unreadStories -= AdriAllora
+            ~ temporaryTW += AdriAllora
+        + [Non presentarmi più questo racconto.]
+            ~ unreadStories -= AdriAllora
+        -
+    -> DarkLibraryModeOn ->
+    
     Mi chiama.
     La mia rabbia è un gatto che insiste per essere nutrito in continuazione, mi chiama, mi chiama con quell'insistenza che ha costretto sir Isaac Newton a inventare la porticina per i gatti.
     Ma il mio mi chiama, mi chiama, mi chiama e poi mi ricorda che condivide il novantacinque virgola sei percento del suo DNA con le tigri sopraffacendomi: bevo, disegno, mi drogo, scrivo, mi picchio, dipingo, spacco cose.
@@ -36,12 +44,22 @@
            -> book_test_intro
         + [Me ne vado.]
             -> DarkLibraryModeOff ->
+            -> empty_tempTW ->
             -> main
 
 === aza
-    -> DarkLibraryModeOn ->
-<i>Luna vergine</i> di Aza (any).
 
+<i>Luna vergine</i> di Aza (any).
+Trigger warning: alcolismo, violenza fisica.
+        + [Inizio la lettura.]
+        + [Per ora non me la sento di affrontare questo tema.]
+            ~ unreadStories -= Aza
+            ~ temporaryTW += Aza
+        + [Non presentarmi più questo racconto.]
+            ~ unreadStories -= Aza
+        -
+        
+    -> DarkLibraryModeOn ->
     Le caviglie tentennano quando provo a sedermi nella hall dell'hotel, ma in piedi continuerei a fare avanti e indietro col ticchettio dei tacchi che rimbomba, non voglio attirare ulteriormente l'attenzione degli ospiti.
     La brezza di mare si scaglia dalla porta girevole fino agli ascensori, anche di notte non cede. Un vento medio, di quelli che alza la sabbia ma non gli aquiloni, così da 4 giorni, da quando sono arrivata.
     Il piano è semplice, ho capito la sua routine, gli ho chiesto se avesse da accendere e abbiamo fatto due chiacchiere, non si è sicuramente accorto di chi sono, non si ricorda di me, la trasformazione ha avuto successo.
@@ -82,13 +100,22 @@
            -> book_test_intro
         + [Me ne vado.]
             -> DarkLibraryModeOff ->
+            -> empty_tempTW ->            
             -> main
 
 
 === steno_artico
-    -> DarkLibraryModeOn ->
 <i> This anger, which has been stolen from me</i> by StenoArtico (he/him, none).
-
+    Trigger warning: violenza psicologica, abusi fisici, depressione.
+        + [Inizio la lettura.]
+        + [Per ora non me la sento di affrontare questo tema.]
+            ~ unreadStories -= StenoArtico
+            ~ temporaryTW += StenoArtico
+        + [Non presentarmi più questo racconto.]
+            ~ unreadStories -= StenoArtico
+        -
+    -> DarkLibraryModeOn ->
+    
     It always comes
     to kick me in the stomach
     when I’m already on the ground.
@@ -132,16 +159,26 @@
     Which way, I don’t know yet.
     And I like it.
 
-    + [Vorrei leggere ancora.]
-       -> book_test_intro
-    + [Me ne vado.]
-        -> DarkLibraryModeOff ->
-        -> main
+        + [Vorrei leggere ancora.]
+           -> book_test_intro
+        + [Me ne vado.]
+            -> DarkLibraryModeOff ->
+            -> empty_tempTW ->            
+            -> main
 
 === b
-    -> DarkLibraryModeOn ->
 <i>The touch of anger</i> di K.(she/her).
 
+    Trigger warning: violenza fisica, depressione.
+        + [Inizio la lettura.]
+        + [Per ora non me la sento di affrontare questo tema.]
+            ~ unreadStories -= B
+            ~ temporaryTW += B
+        + [Non presentarmi più questo racconto.]
+            ~ unreadStories -= B
+        -
+        -> DarkLibraryModeOn ->
+    
     I still remember vividly how anger was an emotion I deeply feared.
     As a child, I grew up suffering from my father’s sudden outbursts of rage, an expression of a generational trauma he never had the chance to overcome.
     Naturally, anger became something I feared, and I shaped my life to avoid being its target.
@@ -160,16 +197,26 @@
     Learning to wield my anger for a good cause was one of the most rewarding achievements in my life as a person and as a woman.
     And I hope that every person out there is also living their life to their fullest, knowing how precious each emotion we feel is… anger too.
 
-    + [Vorrei leggere ancora.]
-       -> book_test_intro
-    + [Me ne vado.]
-        -> DarkLibraryModeOff ->
-        -> main
+        + [Vorrei leggere ancora.]
+           -> book_test_intro
+        + [Me ne vado.]
+            -> DarkLibraryModeOff ->
+            -> empty_tempTW ->            
+            -> main
 
 === beatrice
-    -> DarkLibraryModeOn ->
 <i>La rete non esiste</i> di Beatrice(she/her).
 
+    Trigger warning: depressione, religione.
+        + [Inizio la lettura.]
+        + [Per ora non me la sento di affrontare questo tema.]
+            ~ unreadStories -= Beatrice
+            ~ temporaryTW += Beatrice
+        + [Non presentarmi più questo racconto.]
+            ~ unreadStories -= Beatrice
+        -
+    -> DarkLibraryModeOn ->
+    
     Ciao.
     Ho molte cose che mi frullano dentro ed è molto faticoso mettere ordine. 
     Ma vorrei raccontarti alcune cose che vorrei che tu sapessi.
@@ -293,12 +340,22 @@
            -> book_test_intro
         + [Me ne vado.]
             -> DarkLibraryModeOff ->
+            -> empty_tempTW ->            
             -> main
             
 === beatrice_y_bottura
-    -> DarkLibraryModeOn ->
 <i>Artigli Rosso Ruggine</i> di Beatrice Y. Bottura (she/it).
 
+    Trigger warning: violenza psicologica, abusi fisici.
+        + [Inizio la lettura.]
+        + [Per ora non me la sento di affrontare questo tema.]
+            ~ unreadStories -= BeatriceYBottura
+            ~ temporaryTW += BeatriceYBottura
+        + [Non presentarmi più questo racconto.]
+            ~ unreadStories -= BeatriceYBottura
+        -
+        -> DarkLibraryModeOn ->
+    
     Da qualche parte esiste un pozzo artificiale profondo centinaia di metri, una scala a spirale in metallo porta alle sue interiora. 
     Sul suo buio fondo si trova un’enorme gabbia, sterile e opprimente.
     La gabbia è costruita coi materiali più resistenti conosciuti all’uomo: leghe in metalli esotici, violentemente piegate su se stesse infinite volte per creare strati su strati di resistenza.
@@ -324,8 +381,9 @@
     La paura smarrita dagli uomini torna in loro mentre vedono la gabbia che li teneva al sicuro distrutta dall’interno. Le urla riempiono la stanza e il loro prezioso intelletto umano viene tagliato come burro.
 
 
-    + [Vorrei leggere ancora.]
-       -> book_test_intro
-    + [Me ne vado.]
-        -> DarkLibraryModeOff ->
-        -> main
+        + [Vorrei leggere ancora.]
+           -> book_test_intro
+        + [Me ne vado.]
+            -> DarkLibraryModeOff ->
+            -> empty_tempTW ->            
+            -> main
