@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Selania.sln"
+    "dotnet.defaultSolution": "Selania.sln",
+    "dotnet.preferCSharpExtension": true
 }
