@@ -1,7 +1,10 @@
 //Cognome/alias S - Z
 
 === salvo
+        ~ unreadStories -= Salvo
+        ~ readStories += Salvo
     -> DarkLibraryModeOn ->
+    -> refresh_book_lists ->
 <i>Il cancello</i> di Salvo (he/him).
 
     Il sole stava tramontando ad occidente e illuminava con i suoi raggi obliqui le chiome degli ulivi.
@@ -43,7 +46,7 @@
            -> book_test_intro
         + [Me ne vado.]
             -> DarkLibraryModeOff ->
-            -> empty_tempTW ->            
+                     
             -> main
 
 
@@ -52,11 +55,16 @@
 
     Trigger warning: violenza fisica.
         + [Inizio la lettura.]
+            ~ unreadStories -= Maura
+            ~ readStories += Maura
+                -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
             ~ unreadStories -= Maura
             ~ temporaryTW += Maura
+                -> refresh_book_lists -> book_test_intro
         + [Non presentarmi più questo racconto.]
             ~ unreadStories -= Maura
+                -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
     Me lo chiede per l'ennesima volta, dopo i miei già innumerevoli no.
@@ -87,7 +95,7 @@
            -> book_test_intro
         + [Me ne vado.]
             -> DarkLibraryModeOff ->
-            -> empty_tempTW ->            
+                     
             -> main
 
 
@@ -96,11 +104,16 @@
 
     Trigger warning: depressione.
         + [Inizio la lettura.]
+            ~ unreadStories -= LetiziaVaccarella
+            ~ readStories += LetiziaVaccarella
+                -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
             ~ unreadStories -= LetiziaVaccarella
             ~ temporaryTW += LetiziaVaccarella
+                -> refresh_book_lists -> book_test_intro
         + [Non presentarmi più questo racconto.]
             ~ unreadStories -= LetiziaVaccarella
+                -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
     
@@ -147,13 +160,16 @@
            -> book_test_intro
         + [Me ne vado.]
             -> DarkLibraryModeOff ->
-            -> empty_tempTW ->            
+                     
             -> main
  
     
 
 === queerginia_wolf
+        ~ unreadStories -= QueerginiaWolf
+        ~ readStories += QueerginiaWolf
     -> DarkLibraryModeOn ->
+    -> refresh_book_lists ->
 <i>Giallo</i> di Queerginia Wolf/Marco Spelgatti (she/he/they).
 
     Non hai fatto nulla di male.
@@ -181,7 +197,7 @@
            -> book_test_intro
         + [Me ne vado.]
             -> DarkLibraryModeOff ->
-            -> empty_tempTW ->            
+                     
             -> main
     
     

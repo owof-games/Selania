@@ -90,6 +90,7 @@
                 ~ move_entity(Inventory, Forest)
         }         
             -> on_movement_events ->
+            -> empty_tempTW ->  
                 -> forest
     
     
@@ -138,6 +139,10 @@
                 -> greenhouse
 
 //Streets to Library
+    + {debug_test_library} [LibraryTest]
+            ~ move_entity(PG, Library)
+                -> library
+                
     + {are_two_entities_together(PG, FromForestToLibraryDesat) && secondTier == false} [FromForestToLibraryDesat]
         <i>Questa strada risulta bloccata, per ora.</i> #speaker:{fungus_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
             -> main
@@ -190,6 +195,7 @@
                 ~ move_entity(Inventory, Laboratory)
         }        
             -> on_movement_events ->
+            -> empty_tempTW ->  
                 -> laboratory
     }
             

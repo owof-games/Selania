@@ -1,8 +1,10 @@
 //Cognome/alias L - R
 === lamia
+        ~ unreadStories -= Lamia
+        ~ readStories += Lamia
     -> DarkLibraryModeOn ->
-<i>Il sassolino</i> di Lamia (she/they).
-
+    -> refresh_book_lists ->
+    <i>Il sassolino</i> di Lamia (she/they).
     È iniziato tutto in una giornata mediocre.
     Il sole era coperto da nuvole scialbe, e nell’aria ancora si sentiva l’olezzo dei campi fertilizzati di fresco.
     Tutto è iniziato in una giornata così, anzi, tutto è iniziato nella vasca delle aragoste del ristorante Da Sallustio, in Porta Genova, in una giornata così.
@@ -27,7 +29,7 @@
            -> book_test_intro
         + [Me ne vado.]
             -> DarkLibraryModeOff ->
-            -> empty_tempTW ->            
+                     
             -> main
 
 === val_fausto_lattanzio
@@ -35,11 +37,16 @@
 
     Trigger warning: disforia, dismorfia.
         + [Inizio la lettura.]
+            ~ unreadStories -= ValFaustoLattanzio
+            ~ readStories += ValFaustoLattanzio
+                -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
             ~ unreadStories -= ValFaustoLattanzio
             ~ temporaryTW += ValFaustoLattanzio
+                -> refresh_book_lists -> book_test_intro
         + [Non presentarmi più questo racconto.]
             ~ unreadStories -= ValFaustoLattanzio
+                -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
     
@@ -68,7 +75,7 @@
            -> book_test_intro
         + [Me ne vado.]
             -> DarkLibraryModeOff ->
-            -> empty_tempTW ->            
+                     
             -> main
 
 === romi
@@ -76,11 +83,16 @@
 
     Trigger warning: violenza psicologica
         + [Inizio la lettura.]
+            ~ unreadStories -= Romi
+            ~ readStories += Romi
+                -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
             ~ unreadStories -= Romi
             ~ temporaryTW += Romi
+                -> refresh_book_lists -> book_test_intro
         + [Non presentarmi più questo racconto.]
             ~ unreadStories -= Romi
+                -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
 
@@ -116,5 +128,5 @@
            -> book_test_intro
         + [Me ne vado.]
             -> DarkLibraryModeOff ->
-            -> empty_tempTW ->            
+                     
             -> main

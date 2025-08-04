@@ -3,7 +3,9 @@
 === cecilia_formicola
 
 <i>Getting warm</i> di Cecilia Formicola (she/her).
-
+        ~ unreadStories -= CeciliaFormicola
+        ~ readStories += CeciliaFormicola
+    -> refresh_book_lists ->
     -> DarkLibraryModeOn ->
     "I hate them."
     "Who doesn't, Alchemilla."
@@ -40,7 +42,7 @@
            -> book_test_intro
         + [Me ne vado.]
             -> DarkLibraryModeOff ->
-            -> empty_tempTW ->            
+                     
             -> main
 
 

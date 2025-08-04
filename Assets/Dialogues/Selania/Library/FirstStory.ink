@@ -4,11 +4,16 @@
 <i>Il mio bellissimo gatto</i> di Adri Allora (ləi).
     Trigger warning: violenza psicologica, abusi fisici.
         + [Inizio la lettura.]
+            ~ unreadStories -= AdriAllora
+            ~ readStories += AdriAllora
+            -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
             ~ unreadStories -= AdriAllora
             ~ temporaryTW += AdriAllora
+                -> refresh_book_lists -> book_test_intro
         + [Non presentarmi più questo racconto.]
             ~ unreadStories -= AdriAllora
+                -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
     
@@ -52,11 +57,16 @@
 <i>Luna vergine</i> di Aza (any).
 Trigger warning: alcolismo, violenza fisica.
         + [Inizio la lettura.]
+            ~ unreadStories -= Aza
+            ~ readStories += Aza
+                -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
             ~ unreadStories -= Aza
             ~ temporaryTW += Aza
+                -> refresh_book_lists -> book_test_intro
         + [Non presentarmi più questo racconto.]
             ~ unreadStories -= Aza
+                -> refresh_book_lists -> book_test_intro
         -
         
     -> DarkLibraryModeOn ->
@@ -100,7 +110,7 @@ Trigger warning: alcolismo, violenza fisica.
            -> book_test_intro
         + [Me ne vado.]
             -> DarkLibraryModeOff ->
-            -> empty_tempTW ->            
+                     
             -> main
 
 
@@ -108,11 +118,16 @@ Trigger warning: alcolismo, violenza fisica.
 <i> This anger, which has been stolen from me</i> by StenoArtico (he/him, none).
     Trigger warning: violenza psicologica, abusi fisici, depressione.
         + [Inizio la lettura.]
+            ~ unreadStories -= StenoArtico
+            ~ readStories += StenoArtico
+                -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
             ~ unreadStories -= StenoArtico
             ~ temporaryTW += StenoArtico
+                -> refresh_book_lists -> book_test_intro
         + [Non presentarmi più questo racconto.]
             ~ unreadStories -= StenoArtico
+                -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
     
@@ -163,7 +178,7 @@ Trigger warning: alcolismo, violenza fisica.
            -> book_test_intro
         + [Me ne vado.]
             -> DarkLibraryModeOff ->
-            -> empty_tempTW ->            
+                     
             -> main
 
 === b
@@ -171,11 +186,16 @@ Trigger warning: alcolismo, violenza fisica.
 
     Trigger warning: violenza fisica, depressione.
         + [Inizio la lettura.]
+            ~ unreadStories -= B
+            ~ readStories += B
+                -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
             ~ unreadStories -= B
             ~ temporaryTW += B
+                -> refresh_book_lists -> book_test_intro
         + [Non presentarmi più questo racconto.]
             ~ unreadStories -= B
+                -> refresh_book_lists -> book_test_intro
         -
         -> DarkLibraryModeOn ->
     
@@ -201,19 +221,24 @@ Trigger warning: alcolismo, violenza fisica.
            -> book_test_intro
         + [Me ne vado.]
             -> DarkLibraryModeOff ->
-            -> empty_tempTW ->            
+                     
             -> main
 
 === beatrice
-<i>La rete non esiste</i> di Beatrice(she/her).
+<i>La rete non esiste</i> di Beatrice (she/her).
 
     Trigger warning: depressione, religione.
         + [Inizio la lettura.]
+            ~ unreadStories -= Beatrice
+            ~ readStories += Beatrice
+                -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
             ~ unreadStories -= Beatrice
             ~ temporaryTW += Beatrice
+                -> refresh_book_lists -> book_test_intro
         + [Non presentarmi più questo racconto.]
             ~ unreadStories -= Beatrice
+                -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
     
@@ -340,7 +365,7 @@ Trigger warning: alcolismo, violenza fisica.
            -> book_test_intro
         + [Me ne vado.]
             -> DarkLibraryModeOff ->
-            -> empty_tempTW ->            
+                     
             -> main
             
 === beatrice_y_bottura
@@ -348,11 +373,16 @@ Trigger warning: alcolismo, violenza fisica.
 
     Trigger warning: violenza psicologica, abusi fisici.
         + [Inizio la lettura.]
+            ~ unreadStories -= BeatriceYBottura
+            ~ readStories += BeatriceYBottura
+                -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
             ~ unreadStories -= BeatriceYBottura
             ~ temporaryTW += BeatriceYBottura
+                -> refresh_book_lists -> book_test_intro
         + [Non presentarmi più questo racconto.]
             ~ unreadStories -= BeatriceYBottura
+                -> refresh_book_lists -> book_test_intro
         -
         -> DarkLibraryModeOn ->
     
@@ -385,5 +415,5 @@ Trigger warning: alcolismo, violenza fisica.
            -> book_test_intro
         + [Me ne vado.]
             -> DarkLibraryModeOff ->
-            -> empty_tempTW ->            
+                     
             -> main

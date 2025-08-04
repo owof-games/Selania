@@ -38,7 +38,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
         + {unreadStories != ()}[Voglio scegliere la mia storia.]
             -> storyQuestions
     
-        + [Ho cambiato idea.]
+        + [Non voglio più leggere.]
             -> DarkLibraryModeOff ->
             -> main
 
@@ -49,7 +49,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
 //Questo è il più facile: recupero un titolo randomico tra i libri non letti.
     ~ book = ()
     ~ book = LIST_RANDOM(unreadStories)
-    -> refresh_book_lists ->from_list_to_books
+    ->from_list_to_books
 
 
 
@@ -93,15 +93,15 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     <i>La biblioteca ti offre una storia...</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         + {readingDuration has Short && shortStories^ aboutTransformation != ()} [Che racconta di qualcosa che si <b>trasforma</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutTransformation)
-            -> refresh_book_lists -> from_list_to_books
+             -> from_list_to_books
  
         + {readingDuration has Average && averageStories^ aboutTransformation != ()} [Che racconta di qualcosa che si <b>trasforma</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutTransformation)
-            -> refresh_book_lists -> from_list_to_books           
+             -> from_list_to_books           
             
         + {readingDuration has Long && longStories^ aboutTransformation != ()} [Che racconta di qualcosa che si <b>trasforma</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutTransformation)
-            -> refresh_book_lists -> from_list_to_books
+            -> from_list_to_books
         
         //Qui vale per ogni scelta: se effettivamente posso scegliere quel tema, posso decidere di andare comunque avanti. Se invece quel tema è vuoto nella intersezione con la lunghezza della storia selezionata, passo avanti.
         //Questo tasto compare solo se questo tema non è vuoto. Ha senso? sennò non sarei qui, no?
@@ -120,15 +120,15 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     
         + {readingDuration has Short && shortStories^ aboutQuestions != ()} [Che parla di chi <b>si pone domande</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutQuestions)
-            -> refresh_book_lists -> from_list_to_books
+             -> from_list_to_books
         
         + {readingDuration has Average && averageStories^ aboutQuestions != ()} [Che parla di chi <b>si pone domande</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutQuestions)
-            -> refresh_book_lists -> from_list_to_books
+         -> from_list_to_books
 
         + {readingDuration has Long && longStories^ aboutQuestions != ()} [Che parla di chi <b>si pone domande</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutQuestions)
-            -> refresh_book_lists -> from_list_to_books            
+         -> from_list_to_books            
         
         
         + {(readingDuration has Short && shortStories^ aboutQuestions != ()) or (readingDuration has Average && averageStories^ aboutQuestions != ()) or (readingDuration has Long && longStories^ aboutQuestions != ())}[No, vorrei un altro tema.]
@@ -146,17 +146,17 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     = about_unprepared
     <i>La biblioteca ti offre una storia...</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
     
-        + {readingDuration has Short && shortStories^ aboutUnprepared != ()} [Che mi colga<b>{pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}</b>]
+        + {readingDuration has Short && shortStories^ aboutUnprepared != ()} [Che mi colga<b> {pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}</b>]
             ~ book = LIST_RANDOM(shortStories^ aboutUnprepared)
-            -> refresh_book_lists -> from_list_to_books
+         -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutUnprepared != ()} [Che mi colga<b>{pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}</b>]
+        + {readingDuration has Average && averageStories^ aboutUnprepared != ()} [Che mi colga<b> {pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}</b>]
             ~ book = LIST_RANDOM(averageStories ^ aboutUnprepared)
-            -> refresh_book_lists -> from_list_to_books
+        -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutUnprepared != ()} [Che mi colga<b>{pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}</b>]
+        + {readingDuration has Long && longStories^ aboutUnprepared != ()} [Che mi colga<b> {pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}</b>]
             ~ book = LIST_RANDOM(longStories ^ aboutUnprepared)
-            -> refresh_book_lists -> from_list_to_books            
+        -> from_list_to_books            
         
         //Scelte di uscita se ho rifiutato tutte le opzioni precedenti.
         + {(readingDuration has Short && shortStories^ aboutUnprepared != ()) or (readingDuration has Average && averageStories^ aboutUnprepared != ()) or (readingDuration has Long && longStories^ aboutUnprepared != ())}[No, vorrei un altro tema.]
@@ -175,15 +175,15 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     
         + {readingDuration has Short && shortStories^ aboutMonsters != ()} [Che parla di <b>cose mostruose</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutMonsters)
-            -> refresh_book_lists -> from_list_to_books
+        -> from_list_to_books
 
         + {readingDuration has Average && averageStories^ aboutMonsters != ()} [Che parla di <b>cose mostruose</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutMonsters)
-            -> refresh_book_lists -> from_list_to_books
+        -> from_list_to_books
         
         + {readingDuration has Long && longStories^ aboutMonsters != ()} [Che parla di <b>cose mostruose</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutMonsters)
-            -> refresh_book_lists -> from_list_to_books            
+        -> from_list_to_books            
         
         //Scelte di uscita se ho rifiutato tutte le opzioni precedenti.
         + {(readingDuration has Short && shortStories^ aboutMonsters != ()) or (readingDuration has Average && averageStories^ aboutMonsters != ()) or (readingDuration has Long && longStories^ aboutMonsters != ())}[No, vorrei un altro tema.]
@@ -202,15 +202,15 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     
         + {readingDuration has Short && shortStories^ aboutFire != ()} [Che racconta di <b>cose che bruciano</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutFire)
-            -> refresh_book_lists -> from_list_to_books
+        -> from_list_to_books
 
         + {readingDuration has Average && averageStories^ aboutFire != ()} [Che racconta di <b>cose che bruciano</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutFire)
-            -> refresh_book_lists -> from_list_to_books
+         -> from_list_to_books
         
         + {readingDuration has Long && longStories^ aboutFire != ()} [Che racconta di <b>cose che bruciano</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutFire)
-            -> refresh_book_lists -> from_list_to_books            
+         -> from_list_to_books            
         
         //Scelte di uscita se ho rifiutato tutte le opzioni precedenti.
         + {(readingDuration has Short && shortStories^ aboutFire != ()) or (readingDuration has Average && averageStories^ aboutFire != ()) or (readingDuration has Long && longStories^ aboutFire != ())}[No, vorrei un altro tema.]
@@ -229,15 +229,15 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     
         + {readingDuration has Short && shortStories^ aboutRebellion != ()} [Che urla di <b>sogni e ribellioni</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutRebellion)
-            -> refresh_book_lists -> from_list_to_books
+         -> from_list_to_books
 
         + {readingDuration has Average && averageStories^ aboutRebellion != ()} [Che urla di <b>sogni e ribellioni</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutRebellion)
-            -> refresh_book_lists -> from_list_to_books
+        -> from_list_to_books
         
         + {readingDuration has Long && longStories^ aboutRebellion != ()} [Che urla di <b>sogni e ribellioni</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutRebellion)
-            -> refresh_book_lists -> from_list_to_books            
+             -> from_list_to_books            
         
         //Scelte di uscita se ho rifiutato tutte le opzioni precedenti.
         + {(readingDuration has Short && shortStories^ aboutRebellion != ()) or (readingDuration has Average && averageStories^ aboutRebellion != ()) or (readingDuration has Long && longStories^ aboutRebellion != ())}[No, vorrei un altro tema.]
@@ -265,8 +265,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     
 === refresh_book_lists
 //A prescindere prima di tutto levo il libro dalle storie non lette e lo metto tra le storie lette.
-    ~ unreadStories -= book
-    ~ readStories += book
+
     ~ readingDuration =()
 {
     
