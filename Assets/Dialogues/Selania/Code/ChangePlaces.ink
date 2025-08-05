@@ -104,9 +104,11 @@
         {
             - gifts_and_ink.sbadata or cultivable_test:
                 ~ move_entity(Inventory, GreenhouseMiddlePath)
-        }     
+        }    
+            //Uscendo dalla serra svuotiamo la lista dei TW temporanei dei coltivabili
+            -> empty_tempCultTW ->
             -> on_movement_events ->
-                -> greenhouse_middle_path
+            -> greenhouse_middle_path
         
     + {are_two_entities_together(PG, FromForestToGreenhouseMiddlePath)} [FromForestToGreenhouseMiddlePath]
             ~ move_entity(PG, GreenhouseMiddlePath)

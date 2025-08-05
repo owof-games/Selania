@@ -227,6 +227,17 @@
 //Collaborazione, ciclicità, cancellazione
 //Outcome: allontana qualcuno.
     = step_zero
+    <i>{chosenCultivable} affronta questo tema delicato: XYZ.
+    <i>Te la senti di farla crescere, o preferisci cambiare?
+        + [Voglio andare avanti.]
+            -> remove_proposed_cultivable ->
+        + [Voglio rimuoverla, ma solo per ora.]
+            -> tempCultTW_formula -> cultivable_test
+        + [Voglio rimuoverla, per sempre.]
+            -> remove_proposed_cultivable -> cultivable_test
+        -    
+    
+    
         ~ growthLicheneDegliAbissi = stepZero
         <i>Qualcosa vortica sopra al vaso.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>La terra si accumla ai lati, lasciando un incavo nel terreno.</i>
@@ -278,6 +289,15 @@
 //Collaborazione, novità, ricordo
 //Outcome: datti piacere
     = step_zero
+        <i>{chosenCultivable} affronta questo tema delicato: XYZ.
+        <i>Te la senti di farla crescere, o preferisci cambiare?
+        + [Voglio andare avanti.]
+            -> remove_proposed_cultivable ->
+        + [Voglio rimuoverla, ma solo per ora.]
+            -> tempCultTW_formula -> cultivable_test
+        + [Voglio rimuoverla, per sempre.]
+            -> remove_proposed_cultivable -> cultivable_test
+        -    
     ~ growthEderaDelleAmanti = stepZero
         <i>È solo una tua impressione, o il vaso ha iniziato a brillare?</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         -> main
@@ -326,6 +346,16 @@
 //Collaborazione, ciclicità, ricordo
 //Outcome: danza, sola o con le compagne
     = step_zero
+        <i>{chosenCultivable} affronta questo tema delicato: XYZ.
+        <i>Te la senti di farla crescere, o preferisci cambiare?
+        + [Voglio andare avanti.]
+            -> remove_proposed_cultivable ->
+        + [Voglio rimuoverla, ma solo per ora.]
+            -> tempCultTW_formula -> cultivable_test
+        + [Voglio rimuoverla, per sempre.]
+            -> remove_proposed_cultivable -> cultivable_test
+            -
+            
         ~ growthCantoDelleCompagne = stepZero
         <i>Qualcosa vibra e ti sveglia le gambe.<i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>Hai voglia di danzare.</i>
@@ -375,6 +405,16 @@
 //Indipendenza, novità, cancellazione
 //Outcome: prometti di dire qualcosa che ti pesa sullo stomaco.
     = step_zero
+        <i>{chosenCultivable} affronta questo tema delicato: XYZ.
+        <i>Te la senti di farla crescere, o preferisci cambiare?
+        + [Voglio andare avanti.]
+            -> remove_proposed_cultivable ->
+        + [Voglio rimuoverla, ma solo per ora.]
+            -> tempCultTW_formula -> cultivable_test
+        + [Voglio rimuoverla, per sempre.]
+            -> remove_proposed_cultivable -> cultivable_test
+        -    
+    
     ~ growthLaSpazzata = stepZero
         <i>Niente sembra cambiare.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>Eppure l'aria sembra più pesante.</i>
@@ -429,6 +469,16 @@
 //Indipendenza, novità, cancellazione
 //Outcome: liberazione, invito ad avanzare
     = step_zero
+        <i>{chosenCultivable} affronta questo tema delicato: XYZ.
+        <i>Te la senti di farla crescere, o preferisci cambiare?
+        + [Voglio andare avanti.]
+            -> remove_proposed_cultivable ->
+        + [Voglio rimuoverla, ma solo per ora.]
+            -> tempCultTW_formula -> cultivable_test
+        + [Voglio rimuoverla, per sempre.]
+            -> remove_proposed_cultivable -> cultivable_test
+        -    
+    
     ~ growthBaccaDellaAddolorata = stepZero
         <i>Cinque punte scure emergono dal vaso.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
             -> main
@@ -471,6 +521,16 @@
 //Indipendenza, ciclicità, ricordo
 //Outcome: ricordo di chi non c'è più
     = step_zero
+        <i>{chosenCultivable} affronta questo tema delicato: XYZ.
+        <i>Te la senti di farla crescere, o preferisci cambiare?
+        + [Voglio andare avanti.]
+            -> remove_proposed_cultivable ->
+        + [Voglio rimuoverla, ma solo per ora.]
+            -> tempCultTW_formula -> cultivable_test
+        + [Voglio rimuoverla, per sempre.]
+            -> remove_proposed_cultivable -> cultivable_test
+        -    
+        
         ~ growthNonTiScordarDiTe = stepZero
         <i>Su uno vecchio ramo è comparsa una sostanza gelatinosa, una gomma che sembra un asparago.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
             -> main
@@ -522,6 +582,16 @@
 //Ricordo, collaborazione, novità
 //Outcome: prova una strada nuova
     = step_zero
+        <i>{chosenCultivable} affronta questo tema delicato: XYZ.
+        <i>Te la senti di farla crescere, o preferisci cambiare?
+        + [Voglio andare avanti.]
+            -> remove_proposed_cultivable ->
+        + [Voglio rimuoverla, ma solo per ora.]
+            -> tempCultTW_formula -> cultivable_test
+        + [Voglio rimuoverla, per sempre.]
+            -> remove_proposed_cultivable -> cultivable_test
+        -   
+        
         ~ growthBrinaDellImpossibile = stepZero
         <i>Qualcosa ha rotto un vetro della serra?</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
             -> main
@@ -571,7 +641,17 @@
 //Ricordo, collaborazione, novità
 //Outcome: prova una strada nuova
     = step_zero
-        //~ growthCardoAspinato = stepZero
+        <i>{chosenCultivable} affronta questo tema delicato: XYZ.
+        <i>Te la senti di farla crescere, o preferisci cambiare?
+        + [Voglio andare avanti.]
+            -> remove_proposed_cultivable ->
+        + [Voglio rimuoverla, ma solo per ora.]
+            -> tempCultTW_formula -> cultivable_test
+        + [Voglio rimuoverla, per sempre.]
+            -> remove_proposed_cultivable -> cultivable_test
+        -
+
+        ~ growthCardoAspinato = stepZero
         <i>Odore di buio, di cielo senza stelle. Di bosco e nebbia e nessuna strada da imboccare.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>Una palla soffice emerge dal terreno.</i>
             -> main

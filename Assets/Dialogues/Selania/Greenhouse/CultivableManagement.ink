@@ -36,6 +36,9 @@
 //Pianta che verrà proposta. La uso anche per tracking dello stato delle piante.
     VAR chosenCultivable = ()
     
+//Gestione dei temporanei TW
+    VAR tempCultTW = ()
+    
 //Variabili per la gestione del test
     VAR counter = 0
     VAR firstAnswerTracker = ()
@@ -97,7 +100,7 @@
             - backupCultivable != ():
                 ~ chosenCultivable = LIST_RANDOM(backupCultivable)
                 {debugCultivable: <i>Erano presenti ancora coltivabili in backupCultivable e ho estratto {chosenCultivable}.}
-                -> remove_proposed_cultivable
+                -> list_to_crops
             - else:
             <i>In questo momento non è possibile coltivare altro. #speaker:{fungus_tag()}
                 -> main
@@ -760,7 +763,7 @@ QUESTIONS
             {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i>Il fungo proposto è {chosenCultivable}.}   
-                -> remove_proposed_cultivable
+                -> list_to_crops
             
         - else: 
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
@@ -768,7 +771,7 @@ QUESTIONS
                 {
                     - backupCultivable has chosenCultivable:
                     {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
-                        -> remove_proposed_cultivable
+                        -> list_to_crops
                     //Questo è un check extra: non dovrebbe mai accadere, ma non si sa mai.    
                     - backupCultivable hasnt chosenCultivable:
                     {debugCultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
@@ -782,7 +785,7 @@ QUESTIONS
             {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.} 
                 ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i> Il fungo proposto è {chosenCultivable}.}   
-            -> remove_proposed_cultivable
+            -> list_to_crops
             
         - else:
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
@@ -790,7 +793,7 @@ QUESTIONS
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
-                    -> remove_proposed_cultivable
+                    -> list_to_crops
                 - backupCultivable hasnt chosenCultivable:
                 {debugCultivable: <i> backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
@@ -803,7 +806,7 @@ QUESTIONS
         {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i>Il fungo proposto è {chosenCultivable}.}   
-            -> remove_proposed_cultivable
+            -> list_to_crops
             
         - else:
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
@@ -811,7 +814,7 @@ QUESTIONS
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i> backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
-                    -> remove_proposed_cultivable
+                    -> list_to_crops
                 - backupCultivable hasnt chosenCultivable:
                 {debugCultivable: <i> backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
@@ -824,7 +827,7 @@ QUESTIONS
         {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i>Il fungo proposto è {chosenCultivable}.}   
-            -> remove_proposed_cultivable
+            -> list_to_crops
             
         - else:
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
@@ -832,7 +835,7 @@ QUESTIONS
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
-                    -> remove_proposed_cultivable
+                    -> list_to_crops
                 - backupCultivable hasnt chosenCultivable:
                 {debugCultivable:<i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
@@ -846,7 +849,7 @@ QUESTIONS
        {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i> Il fungo proposto è {chosenCultivable}.}   
-            -> remove_proposed_cultivable
+            -> list_to_crops
             
         - else:
         {debugCultivable: <i> Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
@@ -854,7 +857,7 @@ QUESTIONS
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i> backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
-                    -> remove_proposed_cultivable
+                    -> list_to_crops
                 - backupCultivable hasnt chosenCultivable:
                 {debugCultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
@@ -866,7 +869,7 @@ QUESTIONS
         {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i> Il fungo proposto è {chosenCultivable}.}   
-            -> remove_proposed_cultivable
+            -> list_to_crops
             
         - else:
         {debugCultivable: <i> Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
@@ -874,7 +877,7 @@ QUESTIONS
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i> backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
-                    -> remove_proposed_cultivable
+                    -> list_to_crops
                 - backupCultivable hasnt chosenCultivable:
                 {debugCultivable: <i> backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
@@ -886,14 +889,14 @@ QUESTIONS
         {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i>Il fungo proposto è {chosenCultivable}.}   
-            -> remove_proposed_cultivable
+            -> list_to_crops
         - else:
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ chosenCultivable = LIST_RANDOM(understandingCrops ^ imaginationCrops)
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
-                    -> remove_proposed_cultivable
+                    -> list_to_crops
                 - backupCultivable hasnt chosenCultivable:
                 {debugCultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
@@ -905,7 +908,7 @@ QUESTIONS
         {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i>Il fungo proposto è {chosenCultivable}.}   
-            -> remove_proposed_cultivable
+            -> list_to_crops
             
         - else:
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
@@ -913,7 +916,7 @@ QUESTIONS
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
-                    -> remove_proposed_cultivable
+                    -> list_to_crops
                 - backupCultivable hasnt chosenCultivable:
                 {debugCultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
@@ -925,7 +928,7 @@ QUESTIONS
         {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i>Il fungo proposto è {chosenCultivable}.}   
-            -> remove_proposed_cultivable
+            -> list_to_crops
             
         - else:
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
@@ -933,7 +936,7 @@ QUESTIONS
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
-                    -> remove_proposed_cultivable
+                    -> list_to_crops
                 - backupCultivable hasnt chosenCultivable:
                 {debugCultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
@@ -945,7 +948,7 @@ QUESTIONS
         {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
          {debugCultivable: <i>Il fungo proposto è {chosenCultivable}.}   
-            -> remove_proposed_cultivable
+            -> list_to_crops
             
         - else:
         {debugCultivable:<i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
@@ -953,7 +956,7 @@ QUESTIONS
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
-                    -> remove_proposed_cultivable
+                    -> list_to_crops
                 - backupCultivable hasnt chosenCultivable:
                 {debugCultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
@@ -965,7 +968,7 @@ QUESTIONS
         {debugCultivable:<i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i>Il fungo proposto è {chosenCultivable}.}   
-            -> remove_proposed_cultivable
+            -> list_to_crops
             
         - else:
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
@@ -973,7 +976,7 @@ QUESTIONS
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
-                    -> remove_proposed_cultivable
+                    -> list_to_crops
                 - backupCultivable hasnt chosenCultivable:
                 {debugCultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
@@ -985,7 +988,7 @@ QUESTIONS
         {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(backupCultivable)
             {debugCultivable: <i>il fungo proposto è {chosenCultivable}.}   
-            -> remove_proposed_cultivable
+            -> list_to_crops
             
         - else:
         {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
@@ -993,7 +996,7 @@ QUESTIONS
                 {
                 - backupCultivable has chosenCultivable:
                 {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
-                    -> remove_proposed_cultivable
+                    -> list_to_crops
                 - backupCultivable hasnt chosenCultivable:
                 {debugCultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
@@ -1006,7 +1009,7 @@ QUESTIONS
          ~ chosenCultivable = LIST_RANDOM(backupCultivable)
          ~ backupCultivable -= chosenCultivable
     {debugCultivable: Il fungo proposto è {chosenCultivable}.}      
-        -> remove_proposed_cultivable
+        -> list_to_crops
     
     }
     
@@ -1059,8 +1062,10 @@ QUESTIONS
         -> bacca_della_addolorata
     - NonTiScordarDiTe:
         -> non_ti_scordar_di_te
-
-        
+    - BrinaDellImpossibile:
+        -> brina_dell_impossibile
+    - CardoAspinato:
+        -> cardo_aspinato
 }
 
 
@@ -1069,10 +1074,33 @@ QUESTIONS
 
 === remove_proposed_cultivable
 //Questa azione mi permette di rimuovere il fungo selezionato da ogni lista che lo può contenere. E dato che col tempo le liste possono aumentare, devo solo mettere un remove qui e non OVUNQUE XD
-{debugCultivable: <i>Passo dalla funzione remove_proposed_cultivable e rimuovo {chosenCultivable} da:}
+{debugCultivable: <i>Passo dalla funzione remove_proposed_cultivable e rimuovo {chosenCultivable} da backupColtivabile che ora contiene {backupCultivable}:}
 {
     - backupCultivable has chosenCultivable:
         ~ backupCultivable -= chosenCultivable
     {debugCultivable: <i>backup Coltivabili.}    
 }
--> list_to_crops
+->->
+
+//Formule per la gestione dei TW della serra.
+//Per inserire dei coltivabili temporaneamente in TW
+=== tempCultTW_formula
+{debugCultivable: <i>Passo dalla funzione tempCultTW_formula. Il coltivabile selezionato è {chosenCultivable} e prima dell'operazione la lista dei coltivabili include {backupCultivable}.}
+
+	~ backupCultivable -= chosenCultivable
+	~ tempCultTW += chosenCultivable
+	
+{debugCultivable: <i>Dopo l'operazione la lista dei coltivabili include {backupCultivable}.}	
+->->
+
+//Per renderli disponibili la volta successiva
+=== empty_tempCultTW
+{debugCultivable: <i>Passo dalla funzione empty_tempCultTW. Prima dell'operazione la lista dei coltivabili include {backupCultivable}, mentre dei TW temporanei include {tempCultTW}.}
+
+	~ backupCultivable +=  tempCultTW
+	~  tempCultTW = ()
+	
+{debugCultivable: <i>Dopo l'operazione la lista dei coltivabili include {backupCultivable}, mentre dei TW temporanei include {tempCultTW}.}	
+->->
+
+	
