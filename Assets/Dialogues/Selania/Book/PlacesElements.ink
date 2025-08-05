@@ -33,6 +33,8 @@ Qui ci sono le regole.
     
     {brina_dell_impossibile.step_tre.colto: Credo sia la pianta del trauma. E chi non ha traumi? Ma forse la Brina è più adatta a chi non fa pace col passato. A chi ha una ferita così profonda, da sentirsi divisa in due. A molte persone la Brina fa paura perché pensano che ti ferisca. Ma in realtà quello che fa è mostrarti ferite che prima non vedevi. E per questo è una pianta che aiuta a ripartire. A fare pace col passato.}
 
+    {cardo_aspinato.step_tre.colto: Descrizione cardo spinato.}    
+
 -> main
 
 === laboratory_recap

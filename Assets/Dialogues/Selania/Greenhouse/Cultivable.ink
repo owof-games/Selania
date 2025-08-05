@@ -228,15 +228,17 @@
 //Outcome: allontana qualcuno.
     
     = TW
-        <i>{chosenCultivable} affronta questo tema delicato: XYZ.
-        <i>Te la senti di farla crescere, o preferisci cambiare?
-        + [Voglio andare avanti.]
-            -> step_zero
-        + [Voglio rimuoverla, ma solo per ora.]
-            -> tempCultTW_formula -> cultivable_test
-        + [Voglio rimuoverla, per sempre.]
-            -> remove_proposed_cultivable -> cultivable_test
-    
+        //<i>{chosenCultivable} affronta questo tema delicato: XYZ.
+        //<i>Te la senti di farla crescere, o preferisci cambiare?
+        //+ [Voglio andare avanti.]
+        //    -> step_zero
+        //+ [Voglio rimuoverla, ma solo per ora.]
+        //    -> tempCultTW_formula -> cultivable_test
+        //+ [Voglio rimuoverla, per sempre.]
+        //    -> remove_proposed_cultivable -> cultivable_test
+        //-
+        -> step_zero
+        
     = step_zero
     -> remove_proposed_cultivable ->
         ~ growthLicheneDegliAbissi = stepZero
@@ -279,10 +281,7 @@
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
                         -> main
-                    
-            + [Lo lascio dov'è.]
-            -
-              -> main
+
               
 
 
@@ -290,14 +289,16 @@
 //Collaborazione, novità, ricordo
 //Outcome: datti piacere
     = TW
-        <i>{chosenCultivable} affronta questo tema delicato: XYZ.
-        <i>Te la senti di farla crescere, o preferisci cambiare?
-        + [Voglio andare avanti.]
-            -> step_zero
-        + [Voglio rimuoverla, ma solo per ora.]
-            -> tempCultTW_formula -> cultivable_test
-        + [Voglio rimuoverla, per sempre.]
-            -> remove_proposed_cultivable -> cultivable_test
+        //<i>{chosenCultivable} affronta questo tema delicato: XYZ.
+        //<i>Te la senti di farla crescere, o preferisci cambiare?
+        //+ [Voglio andare avanti.]
+        //    -> step_zero
+        //+ [Voglio rimuoverla, ma solo per ora.]
+        //    -> tempCultTW_formula -> cultivable_test
+        //+ [Voglio rimuoverla, per sempre.]
+        //    -> remove_proposed_cultivable -> cultivable_test
+        //-
+        -> step_zero
 
     
         = step_zero
@@ -341,23 +342,22 @@
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
                         -> main
-                    
-            + [Ora non me la sento.]
-            -
-             -> main
+
 
 === canto_delle_compagne
 //Collaborazione, ciclicità, ricordo
 //Outcome: danza, sola o con le compagne
     = TW
-        <i>{chosenCultivable} affronta questo tema delicato: XYZ.
-        <i>Te la senti di farla crescere, o preferisci cambiare?
-        + [Voglio andare avanti.]
-            -> step_zero
-        + [Voglio rimuoverla, ma solo per ora.]
-            -> tempCultTW_formula -> cultivable_test
-        + [Voglio rimuoverla, per sempre.]
-            -> remove_proposed_cultivable -> cultivable_test
+        //<i>{chosenCultivable} affronta questo tema delicato: XYZ.
+        //<i>Te la senti di farla crescere, o preferisci cambiare?
+        //+ [Voglio andare avanti.]
+        //    -> step_zero
+        //+ [Voglio rimuoverla, ma solo per ora.]
+        //    -> tempCultTW_formula -> cultivable_test
+        //+ [Voglio rimuoverla, per sempre.]
+        //    -> remove_proposed_cultivable -> cultivable_test
+        //-
+        -> step_zero
 
         
     = step_zero
@@ -403,22 +403,22 @@
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
                         -> main
-                    
-        + [No, non ora.]
-              -> main
+
               
 === la_spazzata
 //Indipendenza, novità, cancellazione
 //Outcome: prometti di dire qualcosa che ti pesa sullo stomaco.
     = TW
-        <i>{chosenCultivable} affronta questo tema delicato: XYZ.
-        <i>Te la senti di farla crescere, o preferisci cambiare?
-        + [Voglio andare avanti.]
-            -> step_zero
-        + [Voglio rimuoverla, ma solo per ora.]
-            -> tempCultTW_formula -> cultivable_test
-        + [Voglio rimuoverla, per sempre.]
-            -> remove_proposed_cultivable -> cultivable_test
+        //<i>{chosenCultivable} affronta questo tema delicato: XYZ.
+        //<i>Te la senti di farla crescere, o preferisci cambiare?
+        //+ [Voglio andare avanti.]
+        //    -> step_zero
+        //+ [Voglio rimuoverla, ma solo per ora.]
+        //    -> tempCultTW_formula -> cultivable_test
+        //+ [Voglio rimuoverla, per sempre.]
+        //    -> remove_proposed_cultivable -> cultivable_test
+        //-
+        -> step_zero
 
         
     = step_zero
@@ -467,9 +467,7 @@
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
                         -> main
-                    
-        + [Non ora.]
-            -> main
+
 
 
 
@@ -524,23 +522,21 @@
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
                         -> main
-                    
-            + [Non è il momento.]
-                -> main
+
               
 === non_ti_scordar_di_te
 //Indipendenza, ciclicità, ricordo
 //Outcome: ricordo di chi non c'è più
     = TW
-        //<i>{chosenCultivable} affronta questo tema delicato: XYZ.
-        //<i>Te la senti di farla crescere, o preferisci cambiare?
-        //        + [Voglio andare avanti.]
-        //    -> step_zero
-        //+ [Voglio rimuoverla, ma solo per ora.]
-        //    -> tempCultTW_formula -> cultivable_test
-        //+ [Voglio rimuoverla, per sempre.]
-        //    -> remove_proposed_cultivable -> cultivable_test
-        // -
+        <i>Questa pianta ti vuole raccontare qualcosa sul lutto e la sua elaborazione.
+        <i>Te la senti di farla crescere, {name} o preferisci provare con un'altra pianta?
+        + [Me la sento, iniziamo.]
+            -> step_zero
+        + [Vorrei evitarla, ora, ma riproponimela in futuro.]
+            -> tempCultTW_formula -> cultivable_test
+        + [Non propormi mai più questa pianta.]
+            -> remove_proposed_cultivable -> cultivable_test
+        -
         -> step_zero
         
     = step_zero
@@ -587,10 +583,6 @@
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
                         -> main                    
-       
-        + [Non ora.]
-              -> main
-              
 
 === brina_dell_impossibile
 //Ricordo, collaborazione, novità
@@ -646,12 +638,6 @@
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
                     -> main
-        + [Ora non me la sento.]
-              -> main
- 
-          
-
--> main
 
 
 === cardo_aspinato
@@ -688,7 +674,7 @@
     
     = step_tre
         <i>La piante cede, si stende tra le tue gambe.</i>.#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
-        + [Allungo le dita.]
+        + (colto)[Allungo le dita.]
             <i>Allunghi le dita, ne carezzi il pelo, e al contatto, senti.</i>
             <i>Senti la luna, le stelle, le foglie nel vento, l'erba umida.</i>
             <i>Senti abbracci e sorrisi e mani che vi sorreggono.
