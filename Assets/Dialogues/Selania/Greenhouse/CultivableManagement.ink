@@ -1048,24 +1048,24 @@ QUESTIONS
 {debugCultivable: <i>Svuoto lista firstAnswerTracker. Il contenuto di tipo firstAnswerTracker ora è {firstAnswerTracker==(): vuota|piena}.}
     -> chosen_cultivable
 
-=chosen_cultivable
+= chosen_cultivable
 {chosenCultivable:
     - LicheneDegliAbissi:
-        -> lichene_degli_abissi
+        -> lichene_degli_abissi.TW
     - EderaDelleAmanti:
-        -> edera_delle_amanti
+        -> edera_delle_amanti.TW
     - CantoDelleCompagne:
-        -> canto_delle_compagne
+        -> canto_delle_compagne.TW
     - LaSpazzata:
-        -> la_spazzata
+        -> la_spazzata.TW
     - BaccaDellaAddolorata:
-        -> bacca_della_addolorata
+        -> bacca_della_addolorata.TW
     - NonTiScordarDiTe:
-        -> non_ti_scordar_di_te
+        -> non_ti_scordar_di_te.TW
     - BrinaDellImpossibile:
-        -> brina_dell_impossibile
+        -> brina_dell_impossibile.TW
     - CardoAspinato:
-        -> cardo_aspinato
+        -> cardo_aspinato.TW
 }
 
 
@@ -1074,12 +1074,39 @@ QUESTIONS
 
 === remove_proposed_cultivable
 //Questa azione mi permette di rimuovere il fungo selezionato da ogni lista che lo può contenere. E dato che col tempo le liste possono aumentare, devo solo mettere un remove qui e non OVUNQUE XD
-{debugCultivable: <i>Passo dalla funzione remove_proposed_cultivable e rimuovo {chosenCultivable} da backupColtivabile che ora contiene {backupCultivable}:}
+{debugCultivable: <i>Passo da remove_proposed_cultivable. Prima della rimozione backupColtivabile contiene {backupCultivable}, e il coltivabile selezionato è {chosenCultivable}.}
+{debugCultivable: <i>relationshipCrops contiene {relationshipCrops}, shiftCrops contiene {shiftCrops}, understandingCrops contiene {understandingCrops}, selfdeterminationCrops contiene {selfdeterminationCrops}, wonderCrops contiene {wonderCrops} e imaginationCrops contiene {imaginationCrops}.}
 {
     - backupCultivable has chosenCultivable:
         ~ backupCultivable -= chosenCultivable
-    {debugCultivable: <i>backup Coltivabili.}    
 }
+{
+    - relationshipCrops has chosenCultivable:
+        ~ relationshipCrops -= chosenCultivable
+ }
+ {
+    - shiftCrops has chosenCultivable:
+        ~ shiftCrops -= chosenCultivable        
+  }
+  {
+    - understandingCrops has chosenCultivable:
+        ~ understandingCrops -= chosenCultivable   
+  }
+  {
+    - selfdeterminationCrops has chosenCultivable:
+        ~ selfdeterminationCrops -= chosenCultivable
+ }
+ {
+    - wonderCrops has chosenCultivable:
+        ~ wonderCrops -= chosenCultivable
+}
+{
+    - imaginationCrops has chosenCultivable:
+        ~ imaginationCrops -= chosenCultivable        
+}
+
+{debugCultivable: <i>Dopo la rimozione backupColtivabile contiene {backupCultivable}.}
+{debugCultivable: <i>relationshipCrops contiene {relationshipCrops}, shiftCrops contiene {shiftCrops}, understandingCrops contiene {understandingCrops}, selfdeterminationCrops contiene {selfdeterminationCrops}, wonderCrops contiene {wonderCrops} e imaginationCrops contiene {imaginationCrops}.}
 ->->
 
 //Formule per la gestione dei TW della serra.

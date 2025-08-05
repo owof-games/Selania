@@ -2,7 +2,7 @@
 
 //Per abilitare o meno i debug
     VAR debug = false
-    VAR debugCultivable = true
+    VAR debugCultivable = false
     VAR debugChangeName = false
     //per testare libreria tranquillamente
     VAR debug_test_library = false
