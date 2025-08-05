@@ -25,14 +25,14 @@
             -> hub
     //Altre opzioni        
         - else:
-            {charNameThree}: {~ Ho bisogno di tempo per me.|Ti spiace tornare tra un po'?|Credo di aver bisogno di silenzio, torna più tardi.}
+            {~ Ho bisogno di tempo per me.|Ti spiace tornare tra un po'?|Credo di aver bisogno di silenzio, torna più tardi.}
         -> main
     }
 
 = hub
 ~ temp charNameThree = translator(thirdCharacterState)
 
-    {charNameThree}: {~ Ero sicura di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicura di star capendo tutto di questo luogo.}
+    {~ Ero sicura di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicura di star capendo tutto di questo luogo.} #speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdCharacterInkLevel)} #inkB:{ink_tag_b(thirdCharacterInkLevel)}  #inkC:{ink_tag_c(thirdCharacterInkLevel)}  #inkD:{ink_tag_d(thirdCharacterInkLevel)} #portrait:third_neutral
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_third_character
                 
@@ -115,30 +115,25 @@
  
             -
         ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameThree}.
-        {charNameThree}: No, io sono <b>{charNameThree}</b>.
-        {charNameThree}: Ehi! Non è questo il mio nome.
-        {charNameThree}: <i>{charNameThree}</i>.
-        {charNameThree}: Forse se provo a dirlo al contrario?
-        {charNameThree}: Aicnunir.
-        {charNameThree}: Uh.
-        {charNameThree}: Prova tu. Come ti chiami?
+        No, io sono <b>{charNameThree}</b>.
     	    + {name_choice} [Mi chiamo {name}.]
     	    + [Il mio nome è...]
     	        -> name_choice ->
     	    -
-    	{charNameThree}: E con che pronomi vuoi che ti chiami?
+    	E con che pronomi vuoi che ti chiami?
     	        -> gender ->
-    	{charNameThree}: Grandioso, io uso i femminili.      
+    	Grandioso, io uso i femminili.      
              ~ thirdPauseTalking = thirdCharPauseDuration
              ~ move_entity(ThirdRecap, BookPlace)
             -> main
+    
     = two
     ~ temp charNameThree = translator(thirdCharacterState)
     //Non mettere cose TW qui
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
-        {charNameThree}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ thirdBlue ++
                 
@@ -168,7 +163,7 @@
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
-        {charNameThree}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ thirdBlue ++
                 
@@ -189,9 +184,7 @@
             -
              ~ thirdPauseTalking = thirdCharPauseDuration
             -> main
-    
-    
-    
+
     
     = four
     ~ temp charNameThree = translator(thirdCharacterState)
@@ -199,7 +192,7 @@
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
-        {charNameThree}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ thirdBlue ++
                 
@@ -226,7 +219,7 @@
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
-        {charNameThree}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ thirdBlue ++
                 
@@ -255,7 +248,7 @@
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
-        {charNameThree}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ thirdBlue ++
                 
@@ -282,7 +275,7 @@
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
-        {charNameThree}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ thirdBlue ++
                 
@@ -312,7 +305,7 @@
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
-        {charNameThree}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ thirdBlue ++
                 
@@ -341,7 +334,7 @@
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
-        {charNameThree}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ thirdBlue ++
                 
@@ -369,7 +362,7 @@
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
-        {charNameThree}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ thirdBlue ++
                 
@@ -397,7 +390,7 @@
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
-        {charNameThree}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ thirdBlue ++
                 
@@ -424,7 +417,7 @@
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
-        {charNameThree}: Non è che hai visto passare di qui una persona?
+        Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
                     ~ thirdBlue ++
                 
@@ -454,7 +447,7 @@
 === third_character_opinions
 ~ temp charNameThree = translator(thirdCharacterState)
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
-    {charNameThree}: {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
+    {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
             -> main
 
 
@@ -510,17 +503,17 @@
     }
     = confession
     ~ temp charNameThree = translator(thirdCharacterState)
-        {charNameThree}: Ho realizzato una cosa, una cosa su noi due.
+        Ho realizzato una cosa, una cosa su noi due.
             -> thirdAffinityCalc ->
         {
-        - firstPurple && firstYellow > firstBlue: {charNameThree}: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
+        - firstPurple && firstYellow > firstBlue: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
         <i>{charNameThree} vede {name} come una persona amica e fidata.</i>
         
-        -firstPurple or firstYellow > firstBlue:{charNameThree}: Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
+        -firstPurple or firstYellow > firstBlue:Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
         
         <i>{charNameThree} si trova bene con {name}.</i>
         
-        - firstPurple && firstYellow < firstBlue: {charNameThree}: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
+        - firstPurple && firstYellow < firstBlue: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
         
         <i>{charNameThree} non si è sentita capita da {name}.</i>
         
@@ -530,7 +523,7 @@
         <i>{charNameThree} non riesce a capire che rapporto sta costruendo con {name}.</i>
         
         }
-        {charNameThree}: E credo di aver capito perché il mio nome
+        E credo di aver capito perché il mio nome
             
             + [Credo di sapere come aiutarti.]
                 -> statement
@@ -729,37 +722,37 @@
                 
         -     
         
-    {charNameThree}: Grazie, {name}.
-    {charNameThree}: Mentre parlavi mi è nata una nuova canzone in testa.
-    {charNameThree}: Qualcosa di fresco, di pronto a cambiare.
-    {charNameThree}: La canzone del mio vero nome.
+    Grazie, {name}.
+    Mentre parlavi mi è nata una nuova canzone in testa.
+    Qualcosa di fresco, di pronto a cambiare.
+    La canzone del mio vero nome.
 
         {
             - firstCharacterPossibleStates has Chitarra:
-                {charNameThree}: Che <b>resterà Chitarra</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
+                Che <b>resterà Chitarra</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
             
             - firstCharacterPossibleStates has Triangolo:
-                {charNameThree}: E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
+                E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
                     ~ thirdCharacterState = ()
                     ~ thirdCharacterState += Triangolo
             
             - firstCharacterPossibleStates has RagazzaOrchestra:
-                {charNameThree}: Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
+                Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
                     ~ thirdCharacterState = ()
                     ~ thirdCharacterState += RagazzaOrchestra
             
             - firstCharacterPossibleStates has FlautoDolce:
-                {charNameThree}: Il mio nome è <b>Flauto Dolce</b>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
+                Il mio nome è <b>Flauto Dolce</b>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
                     ~ thirdCharacterState = ()
                     ~ thirdCharacterState += FlautoDolce                
             
             - firstCharacterPossibleStates has Ocarina:
-                {charNameThree}: Mi chiamerò <b>Ocarina</b>: perché il suo suono è gioco e festa.
+                Mi chiamerò <b>Ocarina</b>: perché il suo suono è gioco e festa.
                     ~ thirdCharacterState = ()
                     ~ thirdCharacterState += Ocarina
             
             - firstCharacterPossibleStates has Violino:
-                {charNameThree}: Io sono <b>Violino</b>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
+                Io sono <b>Violino</b>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
                     ~ thirdCharacterState = ()
                     ~ thirdCharacterState += Violino
         }
@@ -779,8 +772,8 @@
     
     = secret_ending
     ~ temp charNameThree = translator(thirdCharacterState)
-        {charNameThree}: C'è una cosa che vorrei dirti, {name}.
-        {charNameThree}: Riguarda Il mentore.
+        C'è una cosa che vorrei dirti, {name}.
+        Riguarda Il mentore.
 
             ~ thirdStory = Ended
             ~ movementsCounter = 0
@@ -789,7 +782,7 @@
             
     = exit
     ~ temp charNameThree = translator(thirdCharacterState)
-        {charNameThree}: Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
+        Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
             ~ thirdStory = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(thirdStoryPG)
@@ -808,16 +801,16 @@
     }
     
         - (top)
-        {charNameThree}: {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me.|Sono sicura di aver visto un'altra persona alla fermata del bus, ma quando ho cercato di raggiungerla è scomparsa.|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
+        {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me.|Sono sicura di aver visto un'altra persona alla fermata del bus, ma quando ho cercato di raggiungerla è scomparsa.|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
                 ~ thirdCharEndingDialogue ++
         -> main
         
         = goodbye
         ~ temp charNameThree = translator(thirdCharacterState)
-        {charNameThree}: {name}, per me è arrivato il momento di tornare a casa.
-        {firstCharacterPossibleStates hasnt Chitarra: {charNameThree}: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
-        {firstCharacterPossibleStates hasnt Chitarra: {charNameThree}: Grazie per quello che hai fatto, davvero.}
-        {firstCharacterPossibleStates has Chitarra: {charNameThree}: Vedremo cosa mi accadrà.}
+        {name}, per me è arrivato il momento di tornare a casa.
+        {firstCharacterPossibleStates hasnt Chitarra: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
+        {firstCharacterPossibleStates hasnt Chitarra: Grazie per quello che hai fatto, davvero.}
+        {firstCharacterPossibleStates has Chitarra: Vedremo cosa mi accadrà.}
             ~ move_entity(ThirdCharacter, Safekeeping)
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             {
