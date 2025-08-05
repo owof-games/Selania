@@ -118,6 +118,7 @@
     = one
     ~ temp charNameFive = translator(fifthCharacterState)
         ~ fifthStoryQuestCount ++
+        //Non mettere cose TW qui
         //Amore per il giardinaggio e la possibilità, per la giocatrice, di esprimere qualcosa che poi si potrebbe avvicinare ai possibili finali.
         Non è giusto avere delle preferenze, ma la serra è il mio posto preferito.#speaker:{fifthChar_tag()} 
         C'è qualcosa nel vedere crescere piante, fiori, funghi che mi fa sentire appagata.
@@ -172,6 +173,7 @@
     ~ change_entity_place(SecondCharacter)
     ~ fifthStoryQuestCount ++
         
+        //Non mettere cose TW qui
         //Partendo dalla prima personaggia, dipendenza dai rapporti (circa)
         La storia di {charNameOne} mi ha colpita.#speaker:{fifthChar_tag()} 
         {are_two_entities_together(FirstCharacter, PG): {charNameOne}: E {charNameOne} di sicuro non vuole sentire le tue opinioni in merito.}
@@ -227,6 +229,7 @@
     
     = three
     ~ temp charNameFive = translator(fifthCharacterState)
+        //Non mettere cose TW qui
         //Questo è un riferimento indiretto anche ai figli che ora non la chiamano molto.
         ~ fifthStoryQuestCount ++
          
@@ -283,6 +286,7 @@
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ change_entity_place(SecondCharacter)
+        //Non mettere cose TW qui
         //Responsabilità
         ~ fifthStoryQuestCount ++
         Mi sto chiedendo se non sia stata troppo dura col piccolo {charNameTwo} appena arrivato qui.#speaker:{fifthChar_tag()} 
@@ -346,6 +350,7 @@
     = five
     ~ temp charNameFive = translator(fifthCharacterState)
     
+        //Non mettere cose TW qui
         //Presentazione.
         ~ fifthStoryQuestCount ++
         Mi sento più stanca del solito.#speaker:{fifthChar_tag()} 
@@ -424,6 +429,7 @@
     
     = six
     ~ temp charNameFive = translator(fifthCharacterState)
+    //Non mettere cose TW qui
     
     // -> si parla esplicitamente di responsabilità personale (in antitesi anche con la visione del fungo)? Questa è una visione di RABBIA.
 
@@ -454,6 +460,7 @@
             -> main
     = seven
     ~ temp charNameFive = translator(fifthCharacterState)
+    //Non mettere cose TW qui
     
         //Presentazione.
         ~ fifthStoryQuestCount ++

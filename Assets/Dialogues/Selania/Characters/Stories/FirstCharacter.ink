@@ -99,7 +99,7 @@
     = one
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
-        
+        //Non mettere cose TW qui
         //Presentazione.
         ~ firstStoryQuestCount ++
         
@@ -269,6 +269,7 @@
             -> main
         
     = two
+        //Non mettere cose TW qui
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         //Paura di deludere la famiglia scelta
@@ -328,6 +329,7 @@
             -> main  
             
     = three
+    //Non mettere cose TW qui
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         ~ firstStoryQuestCount ++
@@ -391,6 +393,7 @@
             -> main
         
     = four
+    //Non mettere cose TW qui
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     //Silenzio
@@ -445,6 +448,7 @@
             -> main 
             
     = five
+    //Non mettere cose TW qui
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -507,6 +511,7 @@
             -> main
         
     = six
+    //Non mettere cose TW qui
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -571,6 +576,7 @@
             -> main
         
     = seven
+    //Non mettere cose TW qui
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -622,6 +628,7 @@
              ~ firstPauseTalking = firstCharPauseDuration
             -> main           
     = eight
+    //Non mettere cose TW qui
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -687,6 +694,7 @@
             -> main
     
     = nine
+    //Da qui, no problem con contenuti TW. Si mette Chitarra che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -742,6 +750,7 @@
              ~ firstPauseTalking = firstCharPauseDuration
             -> main   
     = ten
+        //Da qui, no problem con contenuti TW. Si mette Chitarra che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -804,6 +813,7 @@
             -> main
     
     = eleven
+        //Da qui, no problem con contenuti TW. Si mette Chitarra che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -862,6 +872,7 @@
             -> main
             
     = twelve
+        //Da qui, no problem con contenuti TW. Si mette Chitarra che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)

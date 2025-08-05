@@ -91,7 +91,7 @@
 
     = one
     ~ temp charNameThree = translator(thirdCharacterState)
-    
+    //Non mettere cose TW qui
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
@@ -134,7 +134,7 @@
             -> main
     = two
     ~ temp charNameThree = translator(thirdCharacterState)
-    
+    //Non mettere cose TW qui
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
@@ -164,7 +164,7 @@
     
     = three
     ~ temp charNameThree = translator(thirdCharacterState)
-    
+    //Non mettere cose TW qui
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
@@ -195,7 +195,7 @@
     
     = four
     ~ temp charNameThree = translator(thirdCharacterState)
-    
+    //Non mettere cose TW qui
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
@@ -222,7 +222,7 @@
             -> main
     = five
     ~ temp charNameThree = translator(thirdCharacterState)
-    
+    //Non mettere cose TW qui
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
@@ -251,7 +251,7 @@
     
     = six
     ~ temp charNameThree = translator(thirdCharacterState)
-    
+    //Non mettere cose TW qui
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
@@ -278,7 +278,7 @@
             -> main
     = seven
     ~ temp charNameThree = translator(thirdCharacterState)
-    
+    //Non mettere cose TW qui
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
@@ -306,6 +306,7 @@
             
             
     = eight
+        //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
     ~ temp charNameThree = translator(thirdCharacterState)
     
         //Presentazione.
@@ -336,7 +337,7 @@
     
     = nine
     ~ temp charNameThree = translator(thirdCharacterState)
-    
+    //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
@@ -364,7 +365,7 @@
     
     = ten
     ~ temp charNameThree = translator(thirdCharacterState)
-    
+    //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
@@ -392,7 +393,7 @@
     
     = eleven
     ~ temp charNameThree = translator(thirdCharacterState)
-    
+    //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
         //Presentazione.
         ~ thirdStoryQuestCount ++
         
@@ -419,7 +420,7 @@
             -> main    
     = twelve
     ~ temp charNameThree = translator(thirdCharacterState)
-    
+    //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
         //Presentazione.
         ~ thirdStoryQuestCount ++
         

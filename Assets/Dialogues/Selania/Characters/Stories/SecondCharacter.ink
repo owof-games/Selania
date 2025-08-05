@@ -120,6 +120,7 @@
         }
 
     = one
+    //Non mettere cose TW qui
     //Obiettivo: Presentare l’elemento delle bugie. Vengono dette cose sconfessate poi nella terza storia.
     //Contenuto: Compleanno, giochi
         ~ temp charNameTwo = translator(secondCharacterState)
@@ -232,6 +233,7 @@
             -> main
    
     = two
+    //Non mettere cose TW qui
     //Obiettivo: Messa in evidenza della rabbia, ma anche della sua curiosità (finale rosso o finale viola: vede la bellezza nelle cose brutte.)
     //Contenuto: Prima gioia per gli insetti, ecc, poi domande sulla sua violenza alla mentore.
     ~ temp charNameTwo = translator(secondCharacterState)
@@ -336,6 +338,7 @@
             -> main
 
     = three
+    //Non mettere cose TW qui
     //Obiettivo: Mostrare che sta iniziando a non mentire.
     //Contenuto: Ci racconta della rana, possiamo decidere di non credergli o meno.
         ~ temp charNameTwo = translator(secondCharacterState)
@@ -408,6 +411,7 @@
                 -> main
     
     = four
+    //Non mettere cose TW qui
     //Obiettivo: mostrare che ha mentito all'inizio
     //Contenuto: Ci chiede come ci chiamiamo, emerge una bugia diversa a seconda del genere -> Qui però scopriamo che ci mente, possiamo decidere di mettere in evidenza o meno questa bugia, solitudine.
     ~ temp charNameTwo = translator(secondCharacterState)
@@ -575,6 +579,7 @@
     
     
     = five
+    //Non mettere cose TW qui
     //Obiettivo: Far vedere che c'è qualcosa che non va a casa.
     //Contenuto: Momento di vulnerabilità, ci parla della nonna (ma non ci dice che è morta) e ci dice che è fuggito da casa.
     ~ temp charNameTwo = translator(secondCharacterState)
@@ -667,6 +672,7 @@
             -> main
     
     = six
+    //Non mettere cose TW qui
     //Obiettivo: Mostrare sempre il carattere complicato ma anche la posizione complicata socialmente. La scuola è un posto in cui non è al sicuro.
     //Contenuto: Lo accusiamo del furto, da lì emergono alcune cose sulla scuola. A seconda del rapporto, mente per evitare le punizioni, o è sincero. Il discorso dei compagni parte a prescindere.
   
@@ -786,6 +792,7 @@
 
     
     = seven
+    //Non mettere cose TW qui
     //Obiettivo: raccontare il suo rapporto con la fantasia e le tensioni in famiglia (finale verde e finale viola)
     //Contenuto: Parla della fantasia, e del fatto che la sera si riscrive la giornata, capiamo che la famiglia litiga spesso. Tensione in casa anche per la morte della nonna
     
@@ -866,6 +873,7 @@
             
             
     = eight
+    //Non mettere cose TW qui
     //Obiettivo: presentare la relazione col fratello maggiore, che è una persona molto pragmatica (finale blu, finale giallo)
     //Contenuti: ci parla del fratello come mito, riferimento, modello. All'inizio mente, ma poi si ridimensiona da solo (sta iniziano a fidarsi).
     ~ temp charNameTwo = translator(secondCharacterState)
@@ -953,6 +961,7 @@
     = nine
     //Obiettivo: mostrare tra le righe la paura per il futuro, anche dimostrazione di rabbia verso di sè? (finale rosso sicuro, finale blu?
     //Contenuti: tutti sanno cosa diventare da grandi, io voglio fare il veterinaio ma?
+     //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         ~ temp charNameOne = translator(firstCharacterState)
@@ -1089,7 +1098,8 @@
     
     = ten
     //Obiettivo: si fida di noi, mostriamo il suo rapporto con la violenza. Finale rosso, finale viola (aiutare gli altri).
-    //Contenuti: capiamo che a scuola è un bullo, ma ci sono persone che protegge.
+    //Contenuti: capiamo che a scuola è un bullo, ma ci sono persone che protegge. 
+    //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
@@ -1168,7 +1178,7 @@
     
     = eleven
     //Obiettivo: curiosità, sperimentazione. finale giallo, finale viola
-    //Contenuti: esperimenti in casa (microscopio, muro bruciato col Meccano
+    //Contenuti: esperimenti in casa (microscopio, muro bruciato col Meccano //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
@@ -1248,7 +1258,8 @@
     
     = twelve
     //Obiettivo: narrativamente, lasciarcelo con una immagine positiva. Far vedere il peso dei genitori. Finale verde, finale giallo.
-    //Contenuti. Momento tenero. L'altra nonna, la casa al mare, momenti di pace. I genitori non ci sono in queste occasioni
+    //Contenuti. Momento tenero. L'altra nonna, la casa al mare, momenti di pace. I genitori non ci sono in queste occasioni 
+    //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         ~ temp charNameOne = translator(firstCharacterState)
