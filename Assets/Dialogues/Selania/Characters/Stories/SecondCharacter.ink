@@ -1882,7 +1882,7 @@
             ~ numberQuestion = 0
             ~ secondStory = Ended
             ~ movementsCounter = 0
-            ~ PG_advace_management(secondStoryPG)
+            ~ PG_advance_management(secondStoryPG)
                 -> main
             
     = exit
@@ -1893,7 +1893,7 @@
             ~ numberQuestion = 0
             ~ secondStory = Ended
             ~ movementsCounter = 0
-            ~ PG_advace_management(secondStoryPG)
+            ~ PG_advance_management(secondStoryPG)
         -> main  
     
 === second_char_story_ended

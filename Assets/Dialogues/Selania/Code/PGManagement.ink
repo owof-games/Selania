@@ -94,7 +94,7 @@
         - 
             ->->
 
-=== function PG_advace_management(char)
+=== function PG_advance_management(char)
 VAR red = ()
 VAR green = ()
 VAR blue = ()

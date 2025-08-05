@@ -1393,7 +1393,7 @@
         Ma se hai intenzione di restare qui a lungo, forse devi chiedertelo anche tu.
             ~ firstStory = Ended
             ~ movementsCounter = 0
-            ~ PG_advace_management(firstStoryPG)
+            ~ PG_advance_management(firstStoryPG)
             ~ numberQuestion = 0
             ~ firstCharacterInkLevel = Empty
                 -> main
@@ -1403,7 +1403,7 @@
         E ora resterò qui a romperti le gonadi ancora per un po', in attesa del prossimo treno. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
             ~ firstStory = Ended
             ~ movementsCounter = 0
-            ~ PG_advace_management(firstStoryPG)
+            ~ PG_advance_management(firstStoryPG)
             ~ numberQuestion = 0
             ~ firstCharacterInkLevel = Empty
         -> main  
