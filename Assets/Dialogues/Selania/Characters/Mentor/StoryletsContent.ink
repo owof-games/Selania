@@ -64,10 +64,11 @@
          Con me usa pure i pronomi femminili.
         {not chiSei: ???: Ah, che sbadata. Mi chiamo <b>{charNameFive}</b>.|È mio dovere farti stare bene.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         - (selfName)
-        Un'altra domanda importante, {name}.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-        Nel tuo soggiorno in questo luogo potrebbe accadere che incontrerai qualche situazione complessa.
-        Se ti va di dirmi quali sono le cose che ti creano disagio, farò il possibile per non fartele incontrare.
-                -> trigger_warning ->
+        Ultima cosa importante prima di passare al lavoro, {name}.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+        Qui come ovunque potresti incontrare tematiche e storie che non ti va di affrontare.
+        Ma non preoccuparti: ogni luogo e ogni persona ha il suo modo di avvisarti.
+        E se decidi di saltare qualcosa perché non è nelle tue corde, non ti perderai nulla di questa esperienza.
+        Come dico sempre: sicuro è bello!
         Ma in tutto questo non ti ho detto cosa devi fare!
             
             {
