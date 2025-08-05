@@ -38,6 +38,49 @@
                        Gestione relazione e nomi
                     
                      ----------------------------------*/
- === fourthNaming ===
+=== fourthAffinityCalc ===
+//Per la prima personaggia l'importante è che il blu sia bassissimo
+
+    {
+        - fourthPurple && fourthYellow > fourthBlue:
+            ~ fourthCharacterInkLevel ++
+            ~ fourthCharacterInkLevel ++
+                ->->
+        - fourthPurple or fourthYellow > fourthBlue:
+            ~ fourthCharacterInkLevel ++
+                ->->
+    }
 
 ->->
+    
+    
+//Settaggio nome quando partiamo con la discussione
+=== fourthNaming ===
+    {
+        - (fourthBlue > fourthGreen) && (fourthBlue > fourthRed) && (fourthBlue > fourthYellow) && (fourthBlue > fourthPurple):
+            ~ fourthCharacterPossibleStates += Triangolo
+                ->->
+                
+        - (fourthRed > fourthGreen) && (fourthRed > fourthBlue) && (fourthRed > fourthYellow) && (fourthRed > fourthPurple):
+            ~ fourthCharacterPossibleStates += RagazzaOrchestra
+                ->->
+                
+        - (fourthGreen > fourthBlue) && (fourthGreen > fourthRed) && (fourthGreen > fourthYellow) && (fourthGreen > fourthPurple):
+            ~ fourthCharacterPossibleStates += FlautoDolce    
+                ->->
+                
+        - (fourthYellow > fourthGreen) && (fourthYellow > fourthRed) && (fourthYellow > fourthBlue) && (fourthYellow > fourthPurple):
+            ~ fourthCharacterPossibleStates += Ocarina   
+                ->->
+                
+        - (fourthPurple > fourthGreen) && (fourthPurple > fourthRed) && (fourthPurple > fourthYellow) && (fourthPurple > fourthBlue):
+            ~ fourthCharacterPossibleStates += Violino    
+                ->->
+                
+        - else:
+            ~ fourthCharacterPossibleStates += Chitarra 
+            ->->
+                
+    }
+
+->->   
