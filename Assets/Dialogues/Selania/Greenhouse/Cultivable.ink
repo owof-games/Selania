@@ -700,9 +700,9 @@
                 ~ growing = 0
                 ~ chosenCultivable = ()
                     {
-                        - findedGifts hasnt BrinaDellImpossibile:
-                        ~ findedGifts += BrinaDellImpossibile
-                       <i> Hai ottenuto: <b>Brina dell'Impossibile</b></i>
+                        - findedGifts hasnt CardoAspinato:
+                        ~ findedGifts += CardoAspinato
+                       <i> Hai ottenuto: <b>CardoAspinato</b></i>
                     }
                     ~ move_entity(GreenhouseRecap, BookPlace)
                     

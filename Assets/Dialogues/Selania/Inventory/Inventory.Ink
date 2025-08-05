@@ -180,7 +180,30 @@ VAR currentReceiver = ()
         
     }
         -> main
-    
+
+
++ {findedGifts has CardoAspinato} [Un ciuffo di peli di Cardo Aspinato.]
+    ~ findedGifts -= CardoAspinato
+
+    {
+    - currentReceiver has FirstCharacter:
+        ~ firstCharacterInkLevel ++
+        <i>{translator(firstCharacterState)} sembra prima disgustata, poi divertita.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>E poi comprensione compare sul suo volto.</i>
+         ~ currentReceiver = ()
+            -> first_story_gift.ink_outcome
+
+
+    - currentReceiver has SecondCharacter:
+        ~ secondCharacterInkLevel ++
+        <i>{translator(secondCharacterState)} inizia a ridere.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>Poi sorride imbarazzato.</i>
+        Grazie, {name}. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+        ~ currentReceiver = ()
+            -> second_story_gift.ink_outcome
+        
+    }
+        -> main    
 
     //Se la lista è vuota
     + {findedGifts == ()} [Non ho nulla da donare.]
