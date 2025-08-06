@@ -38,7 +38,7 @@
 = hub
 ~ temp charNameTwo = translator(secondCharacterState)
 
-    {~ Ciao!|Ciao.|...}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+    {~ Ciao!|Ciao.|...} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
     
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_second_character
@@ -173,7 +173,7 @@
         L'anno scorso per Natale mi ha preso tutte le action figures dei miei videogiochi preferiti.
         Ma poi papà me le ha rubate tutte. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
         {
-            - are_two_entities_together(SecondCharacter, PG): {charNameFive}: Povera anima!#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+            - are_two_entities_together(SecondCharacter, PG): Povera anima!#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         }
         
         Ma lui mica ci può venire qui.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
@@ -333,7 +333,7 @@
         Se {charNameFive} non mi lascia in pace chiamo mio fratello.
         Lui è superforte.
         Ora lasciami in pace.
-        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Che merda essere bambini.}        
+        {are_two_entities_together(FirstCharacter, PG): Che merda essere bambini.}        
              ~ secondPauseTalking = secondCharPauseDuration
             -> main
 
@@ -474,8 +474,8 @@
             	  Ah.
             	  Sei una ragazza quindi.
             	  Non ci parlo mica molto con le ragazze, siete strane.
-                {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Disse quello che passa le ore a studiarsi le caccole.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-                {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Tutto è scienza!} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+                {are_two_entities_together(FirstCharacter, PG): Disse quello che passa le ore a studiarsi le caccole.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+                {are_two_entities_together(FirstCharacter, PG): Tutto è scienza!} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
             	  Devo ancora capire se sei strana anche tu. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
             	  Anche mamma è strana.
             	  Ma le voglio bene.
@@ -603,8 +603,8 @@
         Ma nonna dice che succede.
         Che i grandi fanno cose cattive senza saperlo.
         Mi spiace essere scappato di casa.
-        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Se Talco fosse qui, ti avrebbe già adottato.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-        {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Magari vuole conoscere mio fratello!}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+        {are_two_entities_together(FirstCharacter, PG): Se Talco fosse qui, ti avrebbe già adottato.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        {are_two_entities_together(FirstCharacter, PG): Magari vuole conoscere mio fratello!}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         Commentino per i tag. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         
             + [Non parli mai di tuo nonno. Non c'è più?]
@@ -1513,7 +1513,7 @@
     ~ temp charNameOne = translator(firstCharacterState)
     ~ change_entity_place(Mentor)
     {
-        -   are_two_entities_together(FirstCharacter, PG):{charNameOne}: Qui le cose si fanno serie, e io me ne vado. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        -   are_two_entities_together(FirstCharacter, PG): Qui le cose si fanno serie, e io me ne vado. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                 ~ change_entity_place(FirstCharacter)
     }        
       //Affrontiamo gli adulti in generale

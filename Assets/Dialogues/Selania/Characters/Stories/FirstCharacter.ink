@@ -759,7 +759,7 @@
          Comunque non è che penso solo a me stessa ama, giuro. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
          L'anno scorso abbiamo occupato un parco per una settimana.
          Il comune voleva distruggere gli alberi, e volevamo fare qualcosa di decente per una buona volta.
-        {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: La prossima volta voglio aiutarvi!} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+        {are_two_entities_together(SecondCharacter, PG): La prossima volta voglio aiutarvi!} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         {are_two_entities_together(SecondCharacter, PG): Sarai il primo a venire chiamato, promesso!} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral         
          La prima notte non abbiamo manco sentito il freddo da quanto eravamo prese bene.
          Però poi il mood si è spento.
@@ -885,7 +885,7 @@
          Prestigio, onoreficienze e denaro.
          Lib totale lei, totale.
          Ma chi glielo dice che a ventitrè anni per queste cose sono già vecchia?
-        {are_two_entities_together(SecondCharacter, PG):{charNameTwo}: Moooooolto vecchia!} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+        {are_two_entities_together(SecondCharacter, PG): Moooooolto vecchia!} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
          Se quello è l'obiettivo, ho proprio preso la strada sbagliata #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
         
             + [Tua mamma vuole il tuo o il suo di bene?]
@@ -1069,7 +1069,7 @@
     ~ temp charNameFive = translator(fifthCharacterState)
 
     {
-        -   are_two_entities_together(Mentor, PG):{charNameFive}: Bene, è il momento che mi allontani.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+        -   are_two_entities_together(Mentor, PG): Bene, è il momento che mi allontani.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 ~ change_entity_place(Mentor)
     }
     {
