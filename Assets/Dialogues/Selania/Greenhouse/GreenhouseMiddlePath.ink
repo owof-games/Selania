@@ -3,6 +3,9 @@
 #ambientSounds: {tag_ambientSounds()}
             ~ arrivingFrom = ()
             ~ arrivingFrom = GreenhouseMiddlePath
+    
+    //{greenhouseMiddlePathContents}   
+            
 {greenhouse_middle_path== 1: <i>Spazi aperti, insetti, e ninfee galleggianti</i>|<i>{~Il cammino è ricco dell'odore dei funghi|Il cammino è luce|Lontana, la serra si rinfresca all'ombra dei monti|Lo stagno brulica di vita}</i>}. #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
     //+ [Mi guardo attorno.]
     //-
