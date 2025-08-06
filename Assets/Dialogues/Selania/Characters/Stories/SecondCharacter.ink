@@ -135,7 +135,7 @@
                 I grandi si arrabbiano se faccio troppe domande.
                 Tipo: perché c'è la neve ma non fa freddo?
                 Perché c'è una stazione ma non passa nessun treno?
-                Perché c'è vicino alla stazione ma non ci posso entrare?
+                Perché c'è una porta vicino alla stazione ma non ci posso entrare?
                     ~ secondBlue ++
                 
             + [Perché è pieno di cose buffe!]
@@ -700,7 +700,6 @@
             -
      
         Anche a scuola danno sempre la colpa a me. 
-
         Non mi piace mica tanto la scuola.
         I ragazzi più grandi mi fanno male.
         Ma io non piango.
@@ -718,7 +717,6 @@
         Ora sono un po' più gentili.
         Ma quella di matematica dice sempre che le dispiace per me.
         E non mi piace quando fa così.
-            
         
             + [Anche i maschi piangono, e anche gli orsi e gli elefanti.]
                 Gli orsi mi piacciono.
