@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8be4aa9512599414dbfabbecbf74c0ea
+guid: 482635269fc450d40bab49e713a4bcbb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3108210765128861691
-    second: riccio_high_energy_0
+      213: -4624952517820292543
+    second: riccio_energy_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: riccio_high_energy_0
+      name: riccio_energy_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 508f271f6ca6dd4d0800000000000000
-      internalID: -3108210765128861691
+      spriteID: 142e548603ed0dfb0800000000000000
+      internalID: -4624952517820292543
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      riccio_high_energy_0: -3108210765128861691
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
