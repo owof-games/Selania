@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: edb39ce090ec9f447a1ddfca01f86de5
+guid: b51817d2598c5a5479b4c72a85fab2ce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8667275531435809574
-    second: riccio_neutral_0
+      213: -6679338157658411855
+    second: riccio_emotional_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: riccio_neutral_0
+      name: riccio_emotional_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1024
+        width: 1280
+        height: 1280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad4655a43d6a7b780800000000000000
-      internalID: -8667275531435809574
+      spriteID: 1bcee0295593e43a0800000000000000
+      internalID: -6679338157658411855
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      riccio_neutral_0: -8667275531435809574
+      riccio_emotional_0: -6679338157658411855
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
