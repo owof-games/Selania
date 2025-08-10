@@ -321,6 +321,7 @@
         <i>Calore nel ventre.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
         <i>Un pezzo di serra è ora coperto da un fitto tappeto del color dell'alba.</i>
         <i>Sembra la cosa più gustosa che tu abbia mai incontrato.</i>
+        ~ move_entity(GoldenBee, Greenhouse)
             + (colto) [Provo a leccarlo.]
                 <i>Per un attimo perdi i tuoi confini.</i>
                 <i>Sei un bacio nella notte, dita desiderate tra le coscie.</i>
@@ -386,6 +387,7 @@
 
         + (colto)[È il momento di festeggiare.]
                 <i>Il canto ti invita alla danza.</i>#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+                ~ move_entity(RedBee, Greenhouse)
                 <i>Spinge le tue gambe nella stanza.</i>
                 <i>O ad alzare la voce, cantare, e chiamare le compagne.</i>
                 <i>Lasciando che la musica vi unisca, rendendo il mondo intero il vostro palcoscenico.</i>
@@ -679,7 +681,7 @@
             <i>Senti la luna, le stelle, le foglie nel vento, l'erba umida.</i>
             <i>Senti abbracci e sorrisi e mani che vi sorreggono.
             <i>La pianta sboccia.
-    
+            ~ move_entity(BrownBee, Greenhouse)
             <i>Il <b>Cardo aspinato</b> doveva scoprire di non essere solo.</i>
             <i>Che lasciarsi aiutare è aiutare l'altrx.</i>
             <i>Che aiutare è aiutarsi.</i>
