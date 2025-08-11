@@ -33,7 +33,7 @@
 
 === function secondChar_tag
 {
-    - !knowing_second_character.one.nameSecond:
+    - ! that_little_liar_storylet.nameSecond:
         ~ return "???"
         
     - secondCharacterState == Riccio:

@@ -513,6 +513,7 @@
         Trova un modo per allontanarlo.
         Ma non metterci troppo, per favore.
         ~ secondPauseTalking = 0
+            - (nameSecond)
             -> main
     
     === watering_can_storylet
