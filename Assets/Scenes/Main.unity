@@ -448,7 +448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30570273}
   m_Layer: 5
-  m_Name: === GREENHOUSE MIDDLE PATH===
+  m_Name: === POND ===
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2721,7 +2721,7 @@ GameObject:
   - component: {fileID: 246737549}
   - component: {fileID: 246737548}
   m_Layer: 5
-  m_Name: FromGreenhouseMiddlePathToGreenhouse
+  m_Name: FromPondToGreenhouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2799,7 +2799,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FromGreenhouseMiddlePathToGreenhouse
+          m_StringArgument: FromPondToGreenhouse
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &246737549
@@ -2853,7 +2853,7 @@ GameObject:
   - component: {fileID: 267910713}
   - component: {fileID: 267910712}
   m_Layer: 5
-  m_Name: FromGreenhouseMiddlePathToNest
+  m_Name: FromPondToNest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2931,7 +2931,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FromGreenhouseMiddlePathToNest
+          m_StringArgument: FromPondToNest
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &267910713
@@ -4837,7 +4837,7 @@ GameObject:
   - component: {fileID: 600094919}
   - component: {fileID: 600094918}
   m_Layer: 5
-  m_Name: FromGreenhouseMiddlePathToForest
+  m_Name: FromPondToForest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4915,7 +4915,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FromGreenhouseMiddlePathToForest
+          m_StringArgument: FromPondToForest
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &600094919
@@ -5454,7 +5454,7 @@ GameObject:
   - component: {fileID: 629166473}
   - component: {fileID: 629166472}
   m_Layer: 5
-  m_Name: FromForestToGreenhouseMiddlePath
+  m_Name: FromForestToPond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5513,7 +5513,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FromForestToGreenhouseMiddlePath
+          m_StringArgument: FromForestToPond
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &629166473
@@ -8649,7 +8649,7 @@ GameObject:
   - component: {fileID: 945020906}
   - component: {fileID: 945020905}
   m_Layer: 5
-  m_Name: FromGreenhouseToGreenhouseMiddlePath
+  m_Name: FromGreenhouseToPond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8708,7 +8708,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FromGreenhouseToGreenhouseMiddlePath
+          m_StringArgument: FromGreenhouseToPond
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &945020906
@@ -14732,7 +14732,7 @@ MonoBehaviour:
   backForest: {fileID: 21300000, guid: 0faabba094d971b4a9946617a3b5cd4f, type: 3}
   backTrainStop: {fileID: 21300000, guid: b569490a602e2ed4093b74a772e7232d, type: 3}
   backGreenhouse: {fileID: 21300000, guid: 4e7db147f93ea6e4b851dd19572590df, type: 3}
-  backGreenhouseMiddlePath: {fileID: 21300000, guid: d1755486176423b47a98bf0ace6e90f9, type: 3}
+  backPond: {fileID: 21300000, guid: d1755486176423b47a98bf0ace6e90f9, type: 3}
   backNest: {fileID: -3239163318168165702, guid: 16e88c7ff044338449f76e5a912abaef, type: 3}
   backLibrary: {fileID: 21300000, guid: 96006235423b21540ae3a23fb73408c9, type: 3}
   backNightLibrary: {fileID: 21300000, guid: 871a74912e0f22a4f9e02245e5d280da, type: 3}
@@ -14742,13 +14742,13 @@ MonoBehaviour:
   bookBGTwo: {fileID: 21300000, guid: 7de31b9d65ff56742b16d43f7356f8c4, type: 3}
   bookBGThree: {fileID: 21300000, guid: 1cb300eaface73e49b1dc2527e9f3d80, type: 3}
   bookBGFour: {fileID: 21300000, guid: f383587f6c94ed54eb01050a1c36a2ee, type: 3}
-  bookBGFive: {fileID: 0}
+  bookBGFive: {fileID: 21300000, guid: f383587f6c94ed54eb01050a1c36a2ee, type: 3}
   ambientSounds: {fileID: 1863324330}
   bedroomSounds: {fileID: 8300000, guid: 6de55e0d82384a44fa4eacd46aa0c0c5, type: 3}
   forestSounds: {fileID: 8300000, guid: 2e20f3c92a2793f47b8a720ca1154c1b, type: 3}
   trainstopSounds: {fileID: 8300000, guid: 21b26a1623daa0d459a7bf3de778b430, type: 3}
   greenhouseSounds: {fileID: 8300000, guid: f094a8aef5c73a149a1c89f989d24cdf, type: 3}
-  greenhousemiddlepathSounds: {fileID: 8300000, guid: 8eeebc9009ad1d04198bd7f3e40ac91e, type: 3}
+  pondSounds: {fileID: 8300000, guid: 8eeebc9009ad1d04198bd7f3e40ac91e, type: 3}
   librarySounds: {fileID: 8300000, guid: 28204f36142ee70409f9c30708fe0690, type: 3}
   bookSounds: {fileID: 0}
   startAnimation:
