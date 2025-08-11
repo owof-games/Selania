@@ -8,8 +8,6 @@
 
 //File con gli appunti di gestione del progetto, la formattazione etc.
     INCLUDE Notes\FileManagement.ink
-    INCLUDE Notes\Contents.ink
-    INCLUDE Notes\ToDo.ink
 
 //File dedicati alla gestione complessiva del progetto
     INCLUDE Code\Debug.ink
@@ -95,28 +93,6 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibaryManagement.ink
-    INCLUDE Library\StoryNotes.ink
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
