@@ -1,12 +1,10 @@
-=== greenhouse_middle_path ===
+=== pond ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
             ~ arrivingFrom = ()
-            ~ arrivingFrom = GreenhouseMiddlePath
+            ~ arrivingFrom = Pond
     
-    //{greenhouseMiddlePathContents}   
-            
-{greenhouse_middle_path== 1: <i>Spazi aperti, insetti, e ninfee galleggianti</i>|<i>{~Il cammino è ricco dell'odore dei funghi|Il cammino è luce|Lontana, la serra si rinfresca all'ombra dei monti|Lo stagno brulica di vita}</i>}. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+{pond  == 1: <i>Spazi aperti, insetti, e ninfee galleggianti</i>|<i>{~Il cammino è ricco dell'odore dei funghi|Il cammino è luce|Lontana, la serra si rinfresca all'ombra dei monti|Lo stagno brulica di vita}</i>}. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
     //+ [Mi guardo attorno.]
     //-
     

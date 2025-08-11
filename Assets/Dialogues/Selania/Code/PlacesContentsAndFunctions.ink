@@ -3,11 +3,11 @@
 
     VAR trainStopContents = (FromTrainStopToForest, StartingNote, FromTrainStopToBedroom, Birds)
 
-    VAR forestContents = (Mentor, Bench, TheWitch, FromForestToTrainStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat)
+    VAR forestContents = (Mentor, Bench, TheWitch, FromForestToTrainStop, FromForestToPond, FromForestToLibraryDesat)
 
-    VAR greenhouseMiddlePathContents = (FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, CloudOne, CloudTwo, CloudThree)
+    VAR pondContents = (FromPondToForest, FromPondToGreenhouse, FromPondToNest, CloudOne, CloudTwo, CloudThree)
 
-    VAR greenhouseContents = ( FromGreenhouseToGreenhouseMiddlePath,  LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, CardoAspinato, WateringCan)
+    VAR greenhouseContents = (FromGreenhouseToPond, WateringCan, LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, CardoAspinato)
 
     VAR libraryContents = (FromLibraryToForest, FromLibraryToLaboratory, ReadingPlace)
 
@@ -41,8 +41,8 @@
         - laboratoryContents has entity:
             ~ return Laboratory
         
-        - greenhouseMiddlePathContents has entity:
-            ~ return GreenhouseMiddlePath         
+        - pondContents has entity:
+            ~ return Pond         
         
         - safekeepingContents has entity:
             ~ return Safekeeping
@@ -84,8 +84,9 @@
         - Laboratory:
             ~ laboratoryContents -= entity
         
-        - GreenhouseMiddlePath:
-            ~ greenhouseMiddlePathContents -= entity        
+        - Pond:
+            ~ pondContents -= entity
+            
         - Safekeeping:
             ~ safekeepingContents -= entity
         
@@ -118,8 +119,9 @@
         - Laboratory:
             ~ laboratoryContents += entity
         
-        - GreenhouseMiddlePath:
-            ~ greenhouseMiddlePathContents += entity         
+        - Pond:
+            ~ pondContents += entity
+            
         - Safekeeping:
             ~ safekeepingContents += entity
         

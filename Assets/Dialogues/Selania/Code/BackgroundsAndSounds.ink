@@ -18,8 +18,8 @@ VAR saturationVar = 0
         - entity_location(PG) == TrainStop:
             ~ return "backTrainStop"
             
-        - entity_location(PG) == GreenhouseMiddlePath:
-           ~ return "backGreenhouseMiddlePath"
+        - entity_location(PG) == Pond:
+           ~ return "backPond"
            
         - entity_location(PG) == Greenhouse:
            ~ return "backGreenhouse"       
@@ -86,8 +86,9 @@ VAR saturationVar = 0
         - entity_location(PG) == TrainStop:
             ~ return "trainstopSounds"
             
-        - entity_location(PG) == GreenhouseMiddlePath:
-           ~ return "greenhouseMiddlePathSounds"        
+        - entity_location(PG) == Pond:
+           ~ return "pondSounds"
+           
         - entity_location(PG) == Greenhouse:
            ~ return "greenhouseSounds"
     

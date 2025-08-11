@@ -64,7 +64,7 @@
                 -> forest
         
         
-    + {are_two_entities_together(PG, FromGreenhouseMiddlePathToForest)} [FromGreenhouseMiddlePathToForest]
+    + {are_two_entities_together(PG, FromPondToForest)} [FromPondToForest]
             ~ move_entity(PG, Forest)
         {
             - foundLibro or take_this_book:
@@ -94,38 +94,38 @@
                 -> forest
     
     
- //Streets to GreenhouseMiddlePath   
-    + {are_two_entities_together(PG, FromGreenhouseToGreenhouseMiddlePath)} [FromGreenhouseToGreenhouseMiddlePath]
-            ~ move_entity(PG, GreenhouseMiddlePath)
+ //Streets to Pond   
+    + {are_two_entities_together(PG, FromGreenhouseToPond)} [FromGreenhouseToPond]
+            ~ move_entity(PG, Pond)
         {
             - foundLibro or take_this_book:
-                ~ move_entity(RewriterBook, GreenhouseMiddlePath)
+                ~ move_entity(RewriterBook, Pond)
         }
         {
             - gifts_and_ink.sbadata or cultivable_test:
-                ~ move_entity(Inventory, GreenhouseMiddlePath)
+                ~ move_entity(Inventory, Pond)
         }    
             //Uscendo dalla serra svuotiamo la lista dei TW temporanei dei coltivabili
             -> empty_tempCultTW ->
             -> on_movement_events ->
-            -> greenhouse_middle_path
+            -> pond
         
-    + {are_two_entities_together(PG, FromForestToGreenhouseMiddlePath)} [FromForestToGreenhouseMiddlePath]
-            ~ move_entity(PG, GreenhouseMiddlePath)
+    + {are_two_entities_together(PG, FromForestToPond)} [FromForestToPond]
+            ~ move_entity(PG, Pond)
         {
             - foundLibro or take_this_book:
-                ~ move_entity(RewriterBook, GreenhouseMiddlePath)
+                ~ move_entity(RewriterBook, Pond)
         }
         {
             - gifts_and_ink.sbadata or cultivable_test:
-                ~ move_entity(Inventory, GreenhouseMiddlePath)
+                ~ move_entity(Inventory, Pond)
         }         
             -> on_movement_events ->
-                -> greenhouse_middle_path
+                -> pond
         
         
 //Streets to Greenhouse
-    + {are_two_entities_together(PG, FromGreenhouseMiddlePathToGreenhouse)}  [FromGreenhouseMiddlePathToGreenhouse]
+    + {are_two_entities_together(PG, FromPondToGreenhouse)}  [FromPondToGreenhouse]
             ~ move_entity(PG, Greenhouse)
         {
             - foundLibro or take_this_book:
@@ -164,7 +164,7 @@
         
 //Streets to Nest
     
-    + {are_two_entities_together(PG, FromGreenhouseMiddlePathToNest)} [FromGreenhouseMiddlePathToNest]
+    + {are_two_entities_together(PG, FromPondToNest)} [FromPondToNest]
             <i>Questa strada risulta bloccata.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     

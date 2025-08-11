@@ -111,8 +111,8 @@
                     ~ move_entity(RewriterBook, Forest)
                 - trainStopContents has PG:
                     ~ move_entity(RewriterBook, TrainStop)
-                - greenhouseMiddlePathContents has PG:
-                    ~ move_entity(RewriterBook, GreenhouseMiddlePath)        
+                - pondContents has PG:
+                    ~ move_entity(RewriterBook, Pond)        
             }
     
 -> main

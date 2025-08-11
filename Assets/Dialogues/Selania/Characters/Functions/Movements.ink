@@ -11,10 +11,10 @@
 
 //Settaggio luoghi attivi a seconda del tier
 //Nota: fino a quando il gioco non sarà completo, la biblioteca si aprirà per ultima, sostituendo il primo dei luoghi mancanti.
-    VAR firstTierPlaces =(Forest, TrainStop, GreenhouseMiddlePath)
-    VAR secondTierPlaces =(Forest, TrainStop, Library, GreenhouseMiddlePath)
-    VAR thirdTierPlaces = (Forest, TrainStop, Library, Laboratory, GreenhouseMiddlePath)
-    VAR fourthTierPlaces = (Forest, TrainStop, Library, Nest, Laboratory, GreenhouseMiddlePath)
+    VAR firstTierPlaces =(Forest, TrainStop, Pond)
+    VAR secondTierPlaces =(Forest, TrainStop, Library, Pond)
+    VAR thirdTierPlaces = (Forest, TrainStop, Library, Laboratory, Pond)
+    VAR fourthTierPlaces = (Forest, TrainStop, Library, Nest, Laboratory, Pond)
 
 //Gestione spostamenti: luoghi. I luoghi si aprono alla fine di ogni storia.
     //First tier: tier iniziale.

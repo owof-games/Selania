@@ -96,7 +96,7 @@
             - not six:
                 //Lo storylet non parte se siamo allo stagno.
                 {
-                    - entity_location(PG) == GreenhouseMiddlePath:
+                    - entity_location(PG) == Pond:
                         {~ C'è una cosa che voglio dirti, ma te la dico quando non sarò allo stagno.}
                         -> main
                     - else: 

@@ -159,7 +159,7 @@
     {
         - knowing_second_character.three.theFrog && not are_two_entities_together(TheFrog, Mentor):
             {debug: Ho spostato la rana allo stagno.}
-            ~  move_entity(TheFrog, GreenhouseMiddlePath)
+            ~  move_entity(TheFrog, Pond)
         - else:
             ~  move_entity(TheFrog, Safekeeping)
             {debug: Ho spostato la rana nel Safekeeping.}

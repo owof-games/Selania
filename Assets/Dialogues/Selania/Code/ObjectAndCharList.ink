@@ -1,10 +1,10 @@
 //Lista di tutti i luoghi del gioco
-    LIST places = Forest, TrainStop, Greenhouse, Library, Nest, Laboratory, Safekeeping, GreenhouseMiddlePath, Bedroom, BookPlace
+    LIST places = Forest, TrainStop, Greenhouse, Library, Nest, Laboratory, Safekeeping, Pond, Bedroom, BookPlace
 
 //Lista delle personagge del gioco (quelle che hanno elementi di variabilità
     LIST characters = Mentor, PG, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, TheFrog
 
-    LIST transitions = FromTrainStopToForest, FromForestToTrainStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat, FromForestToLibrary, FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, FromGreenhouseToGreenhouseMiddlePath, FromLibraryToForest, FromLibraryToLaboratory, FromLibraryToLaboratoryNight
+    LIST transitions = FromTrainStopToForest, FromForestToTrainStop, FromForestToPond, FromForestToLibraryDesat, FromForestToLibrary, FromPondToForest, FromPondToGreenhouse, FromPondToNest, FromGreenhouseToPond, FromLibraryToForest, FromLibraryToLaboratory, FromLibraryToLaboratoryNight
 
     LIST sceneObjects = Bench, WateringCan, TheWitch, ReadingPlace, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, StartingNote
 

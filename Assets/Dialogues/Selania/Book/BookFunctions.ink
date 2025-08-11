@@ -30,16 +30,16 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         ~ disableBigDialogue()
         -> greenhouse
     
-    - arrivingFrom == GreenhouseMiddlePath:
-        ~ move_entity(PG, GreenhouseMiddlePath)
-        ~ move_entity(RewriterBook, GreenhouseMiddlePath)
+    - arrivingFrom == Pond:
+        ~ move_entity(PG, Pond)
+        ~ move_entity(RewriterBook, Pond)
         {
             - gifts_and_ink.sbadata or cultivable_test:
-                ~ move_entity(Inventory, GreenhouseMiddlePath)
+                ~ move_entity(Inventory, Pond)
         }
         ~ arrivingFrom = ()
         ~ disableBigDialogue()
-        -> greenhouse_middle_path
+        -> pond
         
     - arrivingFrom == Laboratory:
         ~ move_entity(PG, Laboratory)
