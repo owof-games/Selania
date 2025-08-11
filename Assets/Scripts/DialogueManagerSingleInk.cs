@@ -61,8 +61,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Greenhouse Backgrounds")]
     [SerializeField] private Sprite backGreenhouse;
 
-    [Header("Greenhouse Middle Path Backgrounds")]
-    [SerializeField] private Sprite backGreenhouseMiddlePath;
+    [Header("Pond Backgrounds")]
+    [SerializeField] private Sprite backPond;
 
     [Header("Nest Backgrounds")]
     [SerializeField] private Sprite backNest;
@@ -99,8 +99,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Greenhouse Sounds")]
     [SerializeField] private AudioClip greenhouseSounds;
 
-    [Header("Greenhouse Middle Path Sounds")]
-    [SerializeField] private AudioClip greenhousemiddlepathSounds;
+    [Header("Pond Sounds")]
+    [SerializeField] private AudioClip pondSounds;
 
     [Header("Library Sounds")]
     [SerializeField] private AudioClip librarySounds;
@@ -387,10 +387,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
                         background.sprite = backGreenhouse;
                     }
 
-                    //BACKGROUND TAG FOR GREENHOUSE MIDDLE PATH
-                    if (tagValue == "backGreenhouseMiddlePath")
+                    //BACKGROUND TAG FOR POND
+                    if (tagValue == "backPond")
                     {
-                        background.sprite = backGreenhouseMiddlePath;
+                        background.sprite = backPond;
                     }
 
                     //TAG GESTIONE DEL NIDO
@@ -409,7 +409,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     {
                         background.sprite = backNightLibrary;
                     }
-
 
                     //TAG GESTIONE DEL LABORATORIO
                     if (tagValue == "backLaboratory")
@@ -483,10 +482,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
                         ambientSounds.Play();
                     }
 
-                    //MUSIC TAG FOR GREENHOUSE MIDDLE PATH
-                    if (tagValue == "greenhouseMiddlePathSounds")
+                    //MUSIC TAG FOR POND
+                    if (tagValue == "pondSounds")
                     {
-                        ambientSounds.clip = greenhousemiddlepathSounds;
+                        ambientSounds.clip = pondSounds;
                         ambientSounds.Play();
                     }
 
