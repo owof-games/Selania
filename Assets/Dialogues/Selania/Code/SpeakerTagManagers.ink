@@ -103,11 +103,19 @@
     
 /* ---------------------------------
 
-   Funzioni per la gestione del tag del ritratto 
+   Funzioni per la gestione del ritratto 
 
  ----------------------------------*/
 
- 
+ === function witch_state()
+{
+    - talking_witch.first_story_ended_check.nameWitch:
+       ~ return "witch_neutral"
+     - else:
+       ~ return "witch_unknown"
+}
+
+
 /* ---------------------------------
 
    Funzioni per la gestione del tag dell'inchiostro: incremento 

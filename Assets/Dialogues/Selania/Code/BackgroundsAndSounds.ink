@@ -59,7 +59,20 @@ VAR saturationVar = 0
                 } 
 
         }
-        
+
+=== DarkLibraryModeOn
+    #background: backNightLibrary
+    ~ move_entity(FromLibraryToLaboratoryNight, Library)
+    ~ move_entity(FromLibraryToLaboratory, Safekeeping)
+    ->->
+    
+=== DarkLibraryModeOff    
+    #background: backLibrary
+    ~ move_entity(FromLibraryToLaboratoryNight, Safekeeping)
+    ~ move_entity(FromLibraryToLaboratory, Library)
+    ->->
+    
+    
 
 //Funzioni di gestione sottofondo audio
 === function tag_ambientSounds()
@@ -94,22 +107,5 @@ VAR saturationVar = 0
     
     
     
-=== function witch_state()
-{
-    - talking_witch.first_story_ended_check.nameWitch:
-       ~ return "witch_neutral"
-     - else:
-       ~ return "witch_unknown"
-}
 
-=== DarkLibraryModeOn
-    #background: backNightLibrary
-    ~ move_entity(FromLibraryToLaboratoryNight, Library)
-    ~ move_entity(FromLibraryToLaboratory, Safekeeping)
-    ->->
-    
-=== DarkLibraryModeOff    
-    #background: backLibrary
-    ~ move_entity(FromLibraryToLaboratoryNight, Safekeeping)
-    ~ move_entity(FromLibraryToLaboratory, Library)
-    ->->
+
