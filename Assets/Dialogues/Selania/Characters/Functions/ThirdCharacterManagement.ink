@@ -10,6 +10,9 @@
     
     VAR thirdStory = NotStarted
     
+//Tracciamento del dono
+    VAR thirdGift = ()   
+    
 //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
     VAR thirdStoryQuestCount = 0
     VAR thirdCharacterSpecialEvent = false

@@ -16,6 +16,34 @@
 {knowing_first_character.eleven: undicesima informazione.}
 {knowing_first_character.twelve: dodicesiam informazione.}
 
+//Appunto sul dono fatto
+{
+    - first_story_gift.ink_outcome:
+    {
+    
+        - firstGift == EderaDelleAmanti:
+            Ho donato dell'Edera delle Amanti e la reazione è stata:
+        - firstGift == BaccaDellaAddolorata:
+            Ho donato della Bacca dell'Addolorata e la reazione è stata:
+        - firstGift == LaSpazzata:
+            Ho donato della Spazzata e la reazione è stata:
+        - firstGift == BrinaDellImpossibile: 
+            Ho donato della Brina dell'Impossibile e la reazione è stata:
+        - firstGift == CantoDelleCompagne: 
+            Ho donato del Canto delle Compagne e la reazione è stata:
+        - firstGift == LicheneDegliAbissi: 
+            Ho donato del Lichene degli Abissi e la reazione è stata:
+        - firstGift == NonTiScordarDiTe: 
+            Ho donato del Non Ti Scordar Di Te e la reazione è stata:
+        - firstGift == CardoAspinato: 
+            Ho donato del Cardo Aspinato e la reazione è stata:
+    
+    }    
+
+}
+
+
+
 {main_story_first_character: confessione.}
 
 //Eventuale commento della rana.
@@ -112,6 +140,33 @@
 {knowing_second_character.ten: decima informazione.}
 {knowing_second_character.eleven: undicesima informazione.}
 {knowing_second_character.twelve: dodicesiam informazione.}
+
+
+//Appunto sul dono fatto
+{
+    - second_story_gift.ink_outcome:
+    {
+    
+        - secondGift == EderaDelleAmanti:
+            Ho donato dell'Edera delle Amanti e la reazione è stata:
+        - secondGift == BaccaDellaAddolorata:
+            Ho donato della Bacca dell'Addolorata e la reazione è stata:
+        - secondGift == LaSpazzata:
+            Ho donato della Spazzata e la reazione è stata:
+        - secondGift == BrinaDellImpossibile: 
+            Ho donato della Brina dell'Impossibile e la reazione è stata:
+        - secondGift == CantoDelleCompagne: 
+            Ho donato del Canto delle Compagne e la reazione è stata:
+        - secondGift == LicheneDegliAbissi: 
+            Ho donato del Lichene degli Abissi e la reazione è stata:
+        - secondGift == NonTiScordarDiTe: 
+            Ho donato del Non Ti Scordar Di Te e la reazione è stata:
+        - secondGift == CardoAspinato: 
+            Ho donato del Cardo Aspinato e la reazione è stata:
+    }    
+
+}
+
 
 {main_story_second_character: confessione.}
 
@@ -212,6 +267,35 @@
 {knowing_third_character.ten: decima informazione.}
 {knowing_third_character.eleven: undicesima informazione.}
 {knowing_third_character.twelve: dodicesiam informazione.}
+
+//Appunto sul dono fatto
+{
+    - third_story_gift.ink_outcome:
+    {
+    
+        - thirdGift == EderaDelleAmanti:
+            Ho donato dell'Edera delle Amanti e la reazione è stata:
+        - thirdGift == BaccaDellaAddolorata:
+            Ho donato della Bacca dell'Addolorata e la reazione è stata:
+        - thirdGift == LaSpazzata:
+            Ho donato della Spazzata e la reazione è stata:
+        - thirdGift == BrinaDellImpossibile: 
+            Ho donato della Brina dell'Impossibile e la reazione è stata:
+        - thirdGift == CantoDelleCompagne: 
+            Ho donato del Canto delle Compagne e la reazione è stata:
+        - thirdGift == LicheneDegliAbissi: 
+            Ho donato del Lichene degli Abissi e la reazione è stata:
+        - thirdGift == NonTiScordarDiTe: 
+            Ho donato del Non Ti Scordar Di Te e la reazione è stata:
+        - thirdGift == CardoAspinato: 
+            Ho donato del Cardo Aspinato e la reazione è stata:
+    
+    }    
+
+}
+
+
+
 {main_story_third_character: confessione.}
 
 //Eventuale commento della rana.
@@ -297,20 +381,48 @@
 + {are_two_entities_together(FourthRecap, PG)} [FourthRecap]
 ~ enableBigDialogue()
 
-//{knowing_fourth_character.one: prima informazione.}
-//{knowing_fourth_character.two: seconda informazione.}
-//{knowing_fourth_character.three: terza informazione.}
-//{knowing_fourth_character.four: quarta informazione.}
-//{knowing_fourth_character.five: quinta informazione.}
-//{knowing_fourth_character.six: sesta informazione.}
-//{knowing_fourth_character.seven: settima informazione.}
-//{knowing_fourth_character.eight: ottava informazione.}
-//{knowing_fourth_character.nine: nona informazione.}
-//{knowing_fourth_character.ten: decima informazione.}
-//{knowing_fourth_character.eleven: undicesima informazione.}
-//{knowing_fourth_character.twelve: dodicesiam informazione.}
-//{main_story_fourth_character: confessione.}
-//{main_story_fourth_character.ending: Dopo la nostra conversazione, ha scelto un nuovo nome: {fourthCharacterState}.}
+{knowing_fourth_character.one: prima informazione.}
+{knowing_fourth_character.two: seconda informazione.}
+{knowing_fourth_character.three: terza informazione.}
+{knowing_fourth_character.four: quarta informazione.}
+{knowing_fourth_character.five: quinta informazione.}
+{knowing_fourth_character.six: sesta informazione.}
+{knowing_fourth_character.seven: settima informazione.}
+{knowing_fourth_character.eight: ottava informazione.}
+{knowing_fourth_character.nine: nona informazione.}
+{knowing_fourth_character.ten: decima informazione.}
+{knowing_fourth_character.eleven: undicesima informazione.}
+{knowing_fourth_character.twelve: dodicesiam informazione.}
+
+//Appunto sul dono fatto
+{
+    - fourth_story_gift.ink_outcome:
+    {
+    
+        - fourthGift == EderaDelleAmanti:
+            Ho donato dell'Edera delle Amanti e la reazione è stata:
+        - fourthGift == BaccaDellaAddolorata:
+            Ho donato della Bacca dell'Addolorata e la reazione è stata:
+        - fourthGift == LaSpazzata:
+            Ho donato della Spazzata e la reazione è stata:
+        - fourthGift == BrinaDellImpossibile: 
+            Ho donato della Brina dell'Impossibile e la reazione è stata:
+        - fourthGift == CantoDelleCompagne: 
+            Ho donato del Canto delle Compagne e la reazione è stata:
+        - fourthGift == LicheneDegliAbissi: 
+            Ho donato del Lichene degli Abissi e la reazione è stata:
+        - fourthGift == NonTiScordarDiTe: 
+            Ho donato del Non Ti Scordar Di Te e la reazione è stata:
+        - fourthGift == CardoAspinato: 
+            Ho donato del Cardo Aspinato e la reazione è stata:
+    
+    }    
+
+}
+
+
+{main_story_fourth_character: confessione.}
+{main_story_fourth_character.ending: Dopo la nostra conversazione, ha scelto un nuovo nome: {fourthCharacterState}.}
 
 //Eventuale commento della rana.
 
@@ -414,6 +526,32 @@ Una persona che si fa chiamare {fifthCharacterState} ti ha detto di parlare in g
 {knowing_fifth_character.ten: decima informazione.}
 {knowing_fifth_character.eleven: undicesima informazione.}
 {knowing_fifth_character.twelve: dodicesiam informazione.}
+
+//Appunto sul dono fatto
+{
+    - fifth_story_gift.ink_outcome:
+    {
+    
+        - fifthGift == EderaDelleAmanti:
+            Ho donato dell'Edera delle Amanti e la reazione è stata:
+        - fifthGift == BaccaDellaAddolorata:
+            Ho donato della Bacca dell'Addolorata e la reazione è stata:
+        - fifthGift == LaSpazzata:
+            Ho donato della Spazzata e la reazione è stata:
+        - fifthGift == BrinaDellImpossibile: 
+            Ho donato della Brina dell'Impossibile e la reazione è stata:
+        - fifthGift == CantoDelleCompagne: 
+            Ho donato del Canto delle Compagne e la reazione è stata:
+        - fifthGift == LicheneDegliAbissi: 
+            Ho donato del Lichene degli Abissi e la reazione è stata:
+        - fifthGift == NonTiScordarDiTe: 
+            Ho donato del Non Ti Scordar Di Te e la reazione è stata:
+        - fifthGift == CardoAspinato: 
+            Ho donato del Cardo Aspinato e la reazione è stata:
+    
+    }    
+
+}
 
 
 //Eventuale commento della rana.

@@ -10,7 +10,11 @@
     
     
     VAR fourthStory = NotStarted
-
+    
+//Tracciamento del dono
+    VAR fourthGift = ()
+    
+    
 //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
     VAR fourthStoryQuestCount = 0
     VAR fourthCharacterSpecialEvent = false

@@ -10,6 +10,9 @@
     
     VAR firstStory = NotStarted
 
+//Tracciamento del dono
+    VAR firstGift = ()
+
 //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
     VAR firstStoryQuestCount = 0
     VAR firstCharacterSpecialEvent = false
