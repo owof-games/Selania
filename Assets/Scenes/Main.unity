@@ -14750,7 +14750,7 @@ MonoBehaviour:
   greenhouseSounds: {fileID: 8300000, guid: f094a8aef5c73a149a1c89f989d24cdf, type: 3}
   pondSounds: {fileID: 8300000, guid: 8eeebc9009ad1d04198bd7f3e40ac91e, type: 3}
   librarySounds: {fileID: 8300000, guid: 28204f36142ee70409f9c30708fe0690, type: 3}
-  bookSounds: {fileID: 0}
+  bookSounds: {fileID: 8300000, guid: 7eb8d000cd6114d42bd31eaf75c6c871, type: 3}
   startAnimation:
     m_PersistentCalls:
       m_Calls:
