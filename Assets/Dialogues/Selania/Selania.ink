@@ -77,8 +77,10 @@
     INCLUDE Greenhouse\Greenhouse.ink
     INCLUDE Greenhouse\Cultivable.ink
     INCLUDE Greenhouse\CultivableManagement.ink
-    INCLUDE Greenhouse\GreenhouseMiddlePath.ink
-    INCLUDE Greenhouse\TheFrog.ink
+    
+//Pond    
+    INCLUDE Pond\Pond.ink
+    INCLUDE Pond\TheFrog.ink
 
 //Nest
     INCLUDE Nest\Nest.ink
