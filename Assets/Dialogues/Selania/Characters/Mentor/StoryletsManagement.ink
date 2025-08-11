@@ -120,8 +120,8 @@
         
      
      //Commentario random
-        - talking_fungus.first_story_ended_check && not growing_fungus_storylet:
-            -> growing_fungus_storylet
+        - talking_witch.first_story_ended_check && not growing_witch_storylet:
+            -> growing_witch_storylet
         
         
         - else:

@@ -66,7 +66,7 @@
     VAR growing = 0    
 
 === cultivable_test ===
-<i>La serra ha qualcosa da svelarti.#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+<i>La serra ha qualcosa da svelarti.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
 <i>Sussurri serpeggiano tra i vasi, ponendoti domande.
 
 {
@@ -102,7 +102,7 @@
                 {debugCultivable: <i>Erano presenti ancora coltivabili in backupCultivable e ho estratto {chosenCultivable}.}
                 -> list_to_crops
             - else:
-            <i>In questo momento non è possibile coltivare altro. #speaker:{fungus_tag()}
+            <i>In questo momento non è possibile coltivare altro. #speaker:{witch_tag()}
                 -> main
         
         }
@@ -496,7 +496,7 @@ QUESTIONS
      ~ firstQuest = true
          {debugCultivable: <i>Entro in first_question. {firstQuest: firstQuest ora = true|firstQuest = false}}
  
-        <i>Le foglie...#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>Le foglie...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             + [<i>{~ Si sfiorano|Si mescolano|Si proteggono le une con le altre}.]
                     ~ cropsType += relationship
                     ~ firstAnswerTracker = relationshipCrops
@@ -513,7 +513,7 @@ QUESTIONS
     ~ secondQuest = true
         {debugCultivable: <i>Entro in second_question. {secondQuest: SecondQuest ora = true|SecondQuest = false}}
 
-        <i>L'aria... #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>L'aria... #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             + [<i>{~ Insegue sé stessa|Crea mulinelli di foglie|Ruota e ruzzola portando odori inaspettati}.]
                     ~ cropsType += shift
                     ~ firstAnswerTracker = shiftCrops
@@ -531,7 +531,7 @@ QUESTIONS
      ~ thirdQuest = true
     {debugCultivable:<i>Entro in third_question. {thirdQuest: thirdQuest ora = true|thirdQuest = false}.}
     
-        <i>L'acqua...#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>L'acqua...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             + [<i>{~ È mossa solo sulla superficie|È torbida|È piena di foglie e petali}.]
                     ~ cropsType += wonder
                     ~ firstAnswerTracker = wonderCrops
@@ -548,7 +548,7 @@ QUESTIONS
      ~ fourthQuest = true
     {debugCultivable: <i>Entro in fourthQuest. {fourthQuest: fourthQuest ora = true|fourthQuest = false}.}
     
-        <i>Le api...#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>Le api...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             + [<i>{~Proteggono la regina|Si scambiano direzioni|Si puliscono a vicenda}.]
                     ~ cropsType += relationship
                     ~ firstAnswerTracker = relationshipCrops 
@@ -565,7 +565,7 @@ QUESTIONS
      ~ fifthQuest = true
     {debugCultivable: <i>Entro in fifthQuest. {fifthQuest: fifthQuest ora = true|fifthQuest = false}.}
     
-        <i>Le formiche...#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>Le formiche...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             + [<i>{~Lasciano tracce per le compagne|Accumulano cibo per l'inverno|Creano ponti di foglie}.]
                     ~ cropsType += relationship
                     ~ firstAnswerTracker = relationshipCrops 
@@ -582,7 +582,7 @@ QUESTIONS
      ~ sixthQuest = true
     {debugCultivable: Entro in sixfthQuest. {sixthQuest: <i>sixfthQuest ora = true|sixfthQuest = false}.}
     
-        <i>I sassi... #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>I sassi... #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             + [<i>{~Creano scale verso il cielo|Si fanno mura, protezione|Si scaldano fregandosi lentamente l'un l'altro}.]
                     ~ cropsType += relationship
                     ~ firstAnswerTracker = relationshipCrops 
@@ -599,7 +599,7 @@ QUESTIONS
      ~ seventhQuest = true
     {debugCultivable: <i>Entro in seventhQuest. {seventhQuest: seventhQuest ora = true|seventhQuest = false}.}
     
-        <i>La terra...#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>La terra...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             + [<i>{~Avanza massaggiando le radici nodose delle quercie|Scivola, trascinando con sé i rospi|Asciutta, rotola a valle}.]
                     ~ cropsType += shift
                     ~ firstAnswerTracker = shiftCrops 
@@ -616,7 +616,7 @@ QUESTIONS
      ~ eighthQuest = true
     {debugCultivable: <i>Entro in eighthQuest. {eighthQuest: eighthQuest ora = true|eighthQuest = false}.}
     
-        <i>I cardellini...#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>I cardellini...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             + [<i>{~Svolazzano in stormi sopra alla foresta|Saltellano tra i rami del salice}.]
                     ~ cropsType += shift 
                     ~ firstAnswerTracker = shiftCrops 
@@ -633,7 +633,7 @@ QUESTIONS
      ~ ninthQuest = true
     {debugCultivable: <i>Entro in ninthQuest. {ninthQuest: ninthQuest ora = true|ninthQuest = false}.}
     
-        <i>Il cervo volante... #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>Il cervo volante... #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             + [<i>{~Insegue l'odore di frutta matura|Scava nel legno lunghe gallerie|Trascina pensieri dimenticati}.]
                     ~ cropsType += shift
                     ~ firstAnswerTracker = shiftCrops
@@ -651,7 +651,7 @@ QUESTIONS
      ~ tenthQuest = true
     {debugCultivable: <i>Entro in tenthQuest. {tenthQuest: tenthQuest ora = true|tenthQuest = false}.}
     
-        <i>Il sole... #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>Il sole... #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             + [<i>{~Mostra il cammino|Offre coraggio alle lucertole|Solleva goccie dalla palude silente}. ]
                     ~ cropsType += imagination  
                     ~ firstAnswerTracker = understandingCrops 
@@ -668,7 +668,7 @@ QUESTIONS
      ~ eleventhQuest = true
     {debugCultivable: <i>Entro in eleventhQuest. {eleventhQuest: eleventhQuest ora = true|eleventhQuest = false}.}
     
-        <i>La notte...#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>La notte...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             + [<i>{~Nasconde i sotterfugi delle falene|Raccoglie i baci delle amanti|Accompagna i ghiri nello spazio del sogno}.]
                     ~ cropsType += imagination  
                     ~ firstAnswerTracker = understandingCrops 
@@ -685,7 +685,7 @@ QUESTIONS
      ~ twelfthQuest = true
     {debugCultivable: <i>Entro in twelfthQuest. {twelfthQuest: twelfthQuest ora = true|twelfthQuest = false}.}
     
-        <i>La neve...#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>La neve...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             + [<i>{~Nasconde allo stambecco il burrone|Spinge ai confini del parco|Piega le punte degli abeti più alti}.]
                     ~ cropsType += imagination  
                     ~ firstAnswerTracker = understandingCrops 
@@ -702,7 +702,7 @@ QUESTIONS
      ~ thirteenthQuest = true
     {debugCultivable: <i>Entro in thirteenthQuest. {thirteenthQuest: thirteenthQuest ora = true|thirteenthQuest = false}.}
     
-        {pronouns has him: <i>Il riscrittore...|{pronouns has her:<i>La riscrittora...|<i>Lə riscrittorə...}}#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        {pronouns has him: <i>Il riscrittore...|{pronouns has her:<i>La riscrittora...|<i>Lə riscrittorə...}}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
             + [<i>{~Assapora sulla lingua il sapore del cambiamento|Sente sulle mani un accesso di futuro|Freme nel lanciarsi verso ciò che arriverà}.]
                     ~ cropsType += understanding
@@ -720,7 +720,7 @@ QUESTIONS
      ~ fourteenthQuest = true
     {debugCultivable: <i>Entro in fourteenthQuest. {fourteenthQuest: fourteenthQuest ora = true|fourteenthQuest = false}.}
     
-        <i>La serra...#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>La serra...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             + [<i>{~Brama la crescita di una nuova pianta|Gioisce per l'erbetta che cresce tra le travi|Spalanca le sue porte a nuove sementi}.]
                     ~ cropsType += understanding   
                     ~ firstAnswerTracker = selfdeterminationCrops 
@@ -737,7 +737,7 @@ QUESTIONS
     ~ fifteenQuest = true
     {debugCultivable: <i>Entro in fifteenQuest. {fifteenQuest: fifteenQuest ora = true|fifteenQuest = false}.}
     
-        <i>La luna... #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>La luna... #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             + [<i>{~ Accenna timida un nuovo ciclo|Invita la Bella di Notte a sbocciare|Suggerisci sogni di cambiamento}.]
                     ~ cropsType += understanding   
                     ~ firstAnswerTracker = selfdeterminationCrops 

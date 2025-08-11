@@ -94,12 +94,12 @@ VAR saturationVar = 0
     
     
     
-=== function fungus_state()
+=== function witch_state()
 {
-    - talking_fungus.first_story_ended_check.nameFungus:
-       ~ return "moon_neutral"
+    - talking_witch.first_story_ended_check.nameWitch:
+       ~ return "witch_neutral"
      - else:
-       ~ return "fungus_anonimo"
+       ~ return "witch_unknown"
 }
 
 === DarkLibraryModeOn

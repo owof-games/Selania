@@ -146,7 +146,7 @@
                 -> library
                 
     + {are_two_entities_together(PG, FromForestToLibraryDesat) && secondTier == false} [FromForestToLibraryDesat]
-        <i>Questa strada risulta bloccata, per ora.</i> #speaker:{fungus_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>Questa strada risulta bloccata, per ora.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
             
     + {are_two_entities_together(PG, FromForestToLibrary) && secondTier == true} [FromForestToLibrary]
@@ -165,7 +165,7 @@
 //Streets to Nest
     
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToNest)} [FromGreenhouseMiddlePathToNest]
-            <i>Questa strada risulta bloccata.</i> #speaker:{fungus_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+            <i>Questa strada risulta bloccata.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     
     //{
@@ -184,7 +184,7 @@
     + {are_two_entities_together(PG, FromLibraryToLaboratory)} [FromLibraryToLaboratory]
     
     {
-        - not fourthTier: <i>Questa strada risulta bloccata.</i> #speaker:{fungus_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        - not fourthTier: <i>Questa strada risulta bloccata.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
         - else:
             ~ move_entity(PG, Laboratory)

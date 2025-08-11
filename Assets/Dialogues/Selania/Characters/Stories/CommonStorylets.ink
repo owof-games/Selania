@@ -103,7 +103,7 @@
     Hai un ammiratore segreto?
     Comunque ho pensato fosse il caso di dartelo.
         
-        ~ move_entity(FungusRecap, BookPlace)
+        ~ move_entity(WitchRecap, BookPlace)
         ~ move_entity(miniBook, Bedroom)
         ~ somethingStrange ++
             {

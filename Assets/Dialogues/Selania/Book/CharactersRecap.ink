@@ -652,16 +652,16 @@ dog
 
 
 
-=== fungus_character_recap
-+ {are_two_entities_together(FungusRecap, PG)} [FungusRecap]
+=== witch_character_recap
++ {are_two_entities_together(WitchRecap, PG)} [WitchRecap]
 ~ enableBigDialogue()
 
 Un vecchio tronco, dove hai trovato il libro col tuo nome.
 
-{talking_fungus.first_story_ended_check: cose che scopro sul fungo a fine della prima storia.}
-{talking_fungus.second_story_ended_check: cose che scopro sul fungo a fine della second storia.}
-{talking_fungus.third_story_ended_check: cose che scopro sul fungo a fine della third storia.}
-{talking_fungus.fourth_story_ended_check: cose che scopro sul fungo a fine della fourth storia.}
-{talking_fungus.fifth_story_ended_check: cose che scopro sul fungo a fine della fifth storia.}
+{talking_witch.first_story_ended_check: cose che scopro sul fungo a fine della prima storia.}
+{talking_witch.second_story_ended_check: cose che scopro sul fungo a fine della second storia.}
+{talking_witch.third_story_ended_check: cose che scopro sul fungo a fine della third storia.}
+{talking_witch.fourth_story_ended_check: cose che scopro sul fungo a fine della fourth storia.}
+{talking_witch.fifth_story_ended_check: cose che scopro sul fungo a fine della fifth storia.}
 
 -> main

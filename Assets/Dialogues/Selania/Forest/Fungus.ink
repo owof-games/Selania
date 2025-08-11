@@ -1,13 +1,13 @@
 //Variabili per mettere in pausa la conversazione
-    VAR fungusPauseTalking = 0
-    VAR fungusCharPauseDuration = 6
+    VAR witchPauseTalking = 0
+    VAR witchCharPauseDuration = 6
     
-=== the_fungus
-+ {are_two_entities_together(TheFungus, PG)} [TheFungus]
-   ->talking_fungus
+=== the_witch
++ {are_two_entities_together(TheWitch, PG)} [TheWitch]
+   ->talking_witch
     
     
-=== talking_fungus
+=== talking_witch
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
@@ -44,7 +44,7 @@
         ~ saturationVar ++
         ~ move_entity(vase, Bedroom)
         
-        <i>Le nuove radici ci mettono in contatto con la terra che ci circonda.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {fungus_state()}
+        <i>Le nuove radici ci mettono in contatto con la terra che ci circonda.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
         <i><b>Ci.</b></i>
         <i>La cicatrice rimane, ma da essa esplode la vita.</i>
         <i>Torniamo a percepirci, questa è gioia.</i>
@@ -92,8 +92,8 @@
             -
             
         <i>Noi sussurriamo nella tua testa, ma ascoltiamo anche.</i>
-        - (nameFungus)
-        <i>Le nostre radici cercano di imparare le voci del terreno.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: moon_neutral
+        - (nameWitch)
+        <i>Le nostre radici cercano di imparare le voci del terreno.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: moon_neutral
         <i>Il terreno ci racconta che {name} ha appena compiuto qualcosa di importante.</i>
         <i>Osserviamo {name} e ci chiediamo cosa provi dopo aver aiutato {charNameOne}.</i>
         
@@ -157,7 +157,7 @@
         ~ temp charNameThree = translator(thirdCharacterState)
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
-        <i>I nostri rami saggiano il cielo.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: moon_neutral
+        <i>I nostri rami saggiano il cielo.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: moon_neutral
         <i>L'aria finalmente ci rinfresca.</i>
         <i>E gli uccelli ci raccontano cose su {name}.</i>
         <i>E su quello che ha fatto per {charNameTwo}.</i>
@@ -198,7 +198,7 @@
                     ~ playerYellow ++
             -
         
-        <i>L'acqua ci ha portato le lacrime di {charNameFive}.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: moon_neutral
+        <i>L'acqua ci ha portato le lacrime di {charNameFive}.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: moon_neutral
         <i>Questa storia per lei è stata faticosa.</i>
         <i>Le sue radici sembrano solide, ma il tronco ondeggia al primo accenno di burrasca.</i>
         <i>Forse {name} può essere il suo sostegno.</i>
@@ -296,17 +296,17 @@
     
     = one
     //Contenuti iniziali
-        <i>{~ Il tronco persevera nella memoria.|La corteccia tenace resiste alla dimenticanza.|Formiche inquiete si nascondono nelle scalanature della corteccia.}</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>{~ Il tronco persevera nella memoria.|La corteccia tenace resiste alla dimenticanza.|Formiche inquiete si nascondono nelle scalanature della corteccia.}</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     
     = two
     //Contenuti dopo la fine della prima storia
-        <i>{~ Le radici hanno trovato vecchi tesori.|I bruchi solleticano le giovani radici.|Porcellini di terra si riparano tra le nostre radici.}</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>{~ Le radici hanno trovato vecchi tesori.|I bruchi solleticano le giovani radici.|Porcellini di terra si riparano tra le nostre radici.}</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
 
     = three
     //Contenuti dopo la fine della seconda storia
-        <i>{~ I rami sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba osserva lontana dalla base della pianta.}</i>  #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+        <i>{~ I rami sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba osserva lontana dalla base della pianta.}</i>  #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
 
     = four
@@ -314,9 +314,9 @@
     -> main
     
 === foundLibro
-<i>C'è un libro ai piedi del tronco, con scritto il tuo nome.</i> #speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {fungus_state()}
+<i>C'è un libro ai piedi del tronco, con scritto il tuo nome.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
     ~ move_entity(RewriterBook, Forest)
-    ~ move_entity(FungusRecap, BookPlace)
+    ~ move_entity(WitchRecap, BookPlace)
     ~ move_entity(miniBook, Bedroom)
     ~ somethingStrange ++
 -> main

@@ -87,9 +87,9 @@
 }
 
 
-=== function fungus_tag
+=== function witch_tag
 {
-    - !talking_fungus.first_story_ended_check.nameFungus:
+    - !talking_witch.first_story_ended_check.nameWitch:
         ~ return "..."
     - else:
         ~ return "^_^"

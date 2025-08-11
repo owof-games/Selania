@@ -34,7 +34,7 @@
 
 //Elementi della foresta
 <- bench
-<- the_fungus
+<- the_witch
 
 //Elementi dello stagno
 <- the_frog
@@ -58,7 +58,7 @@
 <- fifth_character_recap
 <- frog_character_recap
 <- dog_character_recap
-<- fungus_character_recap
+<- witch_character_recap
 <- greenhouse_recap
 <- laboratory_recap
 <- nest_recap

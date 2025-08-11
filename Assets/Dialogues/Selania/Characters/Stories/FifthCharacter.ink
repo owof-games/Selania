@@ -637,7 +637,7 @@
 
 === fifth_story_gift ===
 ~ temp charNameFive = translator(fifthCharacterState)
-<i> Stai per donare qualcosa a {charNameFive}.</i> #speaker:{fungus_tag()}
+<i> Stai per donare qualcosa a {charNameFive}.</i> #speaker:{witch_tag()}
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += Mentor
             -> inventory_management -> ink_outcome 

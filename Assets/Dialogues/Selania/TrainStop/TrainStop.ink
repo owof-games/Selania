@@ -5,7 +5,7 @@
         ~ arrivingFrom = TrainStop
 {debug: <i>La lista degli oggetti nella stanza è: {trainStopContents}.}
 
-{train_stop == 1: <i>Questa è la stazione del treno.|<i>{~ La stazione profuma di partenze.|La panchina aspetta fremente una nuova conoscenza.|Sulle vette la luce brilla leggera.|Un vento fresco ti sospinge lungo la strada.|Le lettere ondeggiano sulla bacheca.|L'odore della foresta scalda il sentiero.}</i>}#speaker:{fungus_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {fungus_state()}
+{train_stop == 1: <i>Questa è la stazione del treno.|<i>{~ La stazione profuma di partenze.|La panchina aspetta fremente una nuova conoscenza.|Sulle vette la luce brilla leggera.|Un vento fresco ti sospinge lungo la strada.|Le lettere ondeggiano sulla bacheca.|L'odore della foresta scalda il sentiero.}</i>}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
 
     // + [Mi guardo attorno.]
 
@@ -18,7 +18,7 @@
 === starting_note ===
     + {are_two_entities_together(StartingNote, PG)}[StartingNote]
     
-    Ti scrivo perché volevo ringraziarti per quello che hai fatto. #speaker:Sconosciutə #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: fungus_anonimo 
+    Ti scrivo perché volevo ringraziarti per quello che hai fatto. #speaker:Sconosciutə #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: witch_anonimo 
         Che abbiamo fatto.
         A volte il quotidiano mi fa dimenticare tutto, e pensare che sia stata tutta una mia invenzione, roba nella testa.
         Ma poi la notte e i sogni mi ricordano che è stato tutto vero.

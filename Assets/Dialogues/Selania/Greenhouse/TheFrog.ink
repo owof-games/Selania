@@ -1,7 +1,7 @@
 VAR maxValueDice = 3
 VAR randomDice = 3
 VAR diceFrog = 0
-LIST quests = mindQuest, fungusTalk
+LIST quests = mindQuest, witchTalk
 VAR questActive = ()
 
 === new_frog ===
@@ -163,10 +163,10 @@ Hai bisogno di una mano?
         ~ questActive += mindQuest
             -> mind_quest
             
-    - not talking_fungus.first_story_ended_check && firstStory == Ended:
+    - not talking_witch.first_story_ended_check && firstStory == Ended:
         ~ questActive = ()
-        ~ questActive += fungusTalk
-            -> fungus_talk_quest
+        ~ questActive += witchTalk
+            -> witch_talk_quest
 }
 
 
@@ -202,6 +202,6 @@ Hai bisogno di una mano?
 -> main
 
 
-=== fungus_talk_quest
+=== witch_talk_quest
 
 -> main
