@@ -8,7 +8,7 @@
 
     LIST sceneObjects = Bench, WateringCan, TheWitch, ReadingPlace, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, StartingNote
 
-    LIST animations = Birds, CloudOne, CloudTwo, CloudThree, RedBee, GoldenBee, BrownBee
+    LIST animations = Birds, CloudOne, CloudTwo, CloudThree, RedBee, GoldenBee, BrownBee, LeafOneSin, LeafTwoSin, LeafThreeSin, LeafFourSin, LeafFiveSin, LeafOneDx, LeafTwoDx, LeafThreeDx
 
     LIST buttons = MenuSave, MenuQuit,  Inventory, FromTrainStopToBedroom
     

@@ -3,7 +3,7 @@
 
     VAR trainStopContents = (FromTrainStopToForest, StartingNote, FromTrainStopToBedroom, Birds)
 
-    VAR forestContents = (Mentor, Bench, TheWitch, FromForestToTrainStop, FromForestToPond, FromForestToLibraryDesat)
+    VAR forestContents = (Mentor, Bench, TheWitch, LeafOneSin, LeafTwoSin, LeafThreeSin, LeafFourSin, LeafFiveSin, LeafOneDx, LeafTwoDx, LeafThreeDx, FromForestToTrainStop, FromForestToPond, FromForestToLibraryDesat)
 
     VAR pondContents = (FromPondToForest, FromPondToGreenhouse, FromPondToNest, CloudOne, CloudTwo, CloudThree)
 
