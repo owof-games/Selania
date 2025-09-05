@@ -12,7 +12,7 @@
     ~ temp charNameFive = translator(fifthCharacterState)
     
         Sapevo che sarebbe arrivata una nuova persona! #speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-        Immagino tu abbia un milione di domande, vero?
+        Immagino tu abbia un milione di domande, vero? #speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
         - (top)
             * (dove) [Dove sono?]
                  Questo luogo non ha un nome.
@@ -54,15 +54,15 @@
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-         Come ti devo chiamare?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+         Come ti devo chiamare?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
          Puoi usare un nome qualsiasi: prendi questa occasione come un nuovo inizio.
             -> name_choice ->
          E quali sono i tuoi pronomi?
             -> gender ->
-         Piacere di conoscerti, {name}.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+         Piacere di conoscerti, {name}.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
          E {pronouns has him: benvenuto|{pronouns has her: benvenuta|benvenutə}}.
          Con me usa pure i pronomi femminili.
-        {not chiSei: ???: Ah, che sbadata. Mi chiamo <b>{charNameFive}</b>.|È mio dovere farti stare bene.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+        {not chiSei: ???: Ah, che sbadata. Mi chiamo <b>{charNameFive}</b>.|È mio dovere farti stare bene.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sorry
         - (selfName)
         Ultima cosa importante prima di passare al lavoro, {name}.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         Qui come ovunque potresti incontrare tematiche e storie che non ti va di affrontare.
