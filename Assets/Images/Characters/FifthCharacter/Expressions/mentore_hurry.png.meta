@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f720b637d00fb0f49b90d5a0ebbfe6a2
+guid: c58f78fbc8f00454fac1cda84b4f658e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4250198055344279763
-    second: mentore_neutral_0
+      213: -7166712411523661796
+    second: mentore_hurry_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mentore_neutral_0
+      name: mentore_hurry_0
       rect:
         serializedVersion: 2
-        x: 319
-        y: 319
-        width: 1282
-        height: 1282
+        x: 0
+        y: 0
+        width: 1280
+        height: 1280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d2fe52e13634405c0800000000000000
-      internalID: -4250198055344279763
+      spriteID: c10cfb75809ba8c90800000000000000
+      internalID: -7166712411523661796
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      mentore_neutral_0: -4250198055344279763
+      mentore_hurry_0: -7166712411523661796
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
