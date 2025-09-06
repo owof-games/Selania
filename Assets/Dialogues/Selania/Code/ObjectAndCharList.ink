@@ -6,9 +6,9 @@
 
     LIST transitions = FromTrainStopToForest, FromForestToTrainStop, FromForestToPond, FromForestToLibraryDesat, FromForestToLibrary, FromPondToForest, FromPondToGreenhouse, FromPondToNest, FromGreenhouseToPond, FromLibraryToForest, FromLibraryToLaboratory, FromLibraryToLaboratoryNight
 
-    LIST sceneObjects = Bench, WateringCan, TheWitch, ReadingPlace, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, StartingNote, Arbustini
+    LIST sceneObjects = Bench, WateringCan, TheWitch, ReadingPlace, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, StartingNote, Arbustini, MoonTrees
 
-    LIST animations = Birds, CloudOne, CloudTwo, CloudThree, RedBee, GoldenBee, BrownBee, LeafOneSin, LeafTwoSin, LeafThreeSin, LeafFourSin, LeafFiveSin, LeafOneDx, LeafTwoDx, LeafThreeDx
+    LIST animations = Birds, CloudOne, CloudTwo, CloudThree, RedBee, GoldenBee, BrownBee, LeafOneSin, LeafTwoSin, LeafThreeSin, LeafFourSin, LeafFiveSin, LeafOneDx, LeafTwoDx, LeafThreeDx, Moon
 
     LIST buttons = MenuSave, MenuQuit,  Inventory, FromTrainStopToBedroom
     
