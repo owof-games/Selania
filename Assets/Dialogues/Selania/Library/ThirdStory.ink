@@ -3,7 +3,9 @@
         ~ unreadStories -= Lamia
         ~ readStories += Lamia
     -> DarkLibraryModeOn ->
+    ~ enableBigDialogue()
     -> refresh_book_lists ->
+    
     <i>Il sassolino</i> di Lamia (she/they).
     È iniziato tutto in una giornata mediocre.
     Il sole era coperto da nuvole scialbe, e nell’aria ancora si sentiva l’olezzo dei campi fertilizzati di fresco.
@@ -26,8 +28,10 @@
     Dei sassolini avevano iniziato a colpire la finestra.
 
         + [Vorrei leggere ancora.]
+        ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
+        ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
             -> main
@@ -49,6 +53,7 @@
                 -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
+    ~ enableBigDialogue()
     
     I have lived in this house forever, even though I never chose it—it's the house my mother chose for me.
     The pink walls of my room have witnessed my childhood, then my adolescence, all the way to this moment.
@@ -72,8 +77,10 @@
     My body is the home I have chosen for myself.
 
         + [Vorrei leggere ancora.]
+        ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
+        ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
             -> main
@@ -95,6 +102,7 @@
                 -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
+    ~ enableBigDialogue()
 
     C’era una volta un principe che non ne faceva mai un giusta.
     Il suo modo di muoversi era sbagliato, il suo modo di vestirsi era sbagliato, il suo modo di parlare era sbagliato.
@@ -125,8 +133,10 @@
     E con la spada in mano si riprese tutto ciò che gli apparteneva di diritto.
 
         + [Vorrei leggere ancora.]
+        ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
+        ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
             -> main

@@ -6272,7 +6272,7 @@ GameObject:
   - component: {fileID: 639035780}
   - component: {fileID: 639035779}
   m_Layer: 5
-  m_Name: MoonTree
+  m_Name: MoonTrees
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

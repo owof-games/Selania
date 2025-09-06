@@ -13,6 +13,7 @@
             -> permamentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
+    ~ enableBigDialogue()
     
     Mi chiama.
     La mia rabbia è un gatto che insiste per essere nutrito in continuazione, mi chiama, mi chiama con quell'insistenza che ha costretto sir Isaac Newton a inventare la porticina per i gatti.
@@ -43,10 +44,11 @@
     E niente: mi ha lasciato quattro buchi sulla coscia con i suoi artigli, 'sta scena m'ha ricordato Frankenstein Junior.
     
         + [Vorrei leggere ancora.]
+        ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
+        ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
-            -> empty_tempTW ->
             -> main
 
 === aza
@@ -62,6 +64,7 @@ Trigger warning: alcolismo, violenza fisica.
             -> permamentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
+    ~ enableBigDialogue()
         
     Le caviglie tentennano quando provo a sedermi nella hall dell'hotel, ma in piedi continuerei a fare avanti e indietro col ticchettio dei tacchi che rimbomba, non voglio attirare ulteriormente l'attenzione degli ospiti.
     La brezza di mare si scaglia dalla porta girevole fino agli ascensori, anche di notte non cede. Un vento medio, di quelli che alza la sabbia ma non gli aquiloni, così da 4 giorni, da quando sono arrivata.
@@ -100,8 +103,10 @@ Trigger warning: alcolismo, violenza fisica.
     L'ultima cosa che ricordo è la sensazione di sabbia fredda fra le dita dei piedi, i botti dei fuochi d'artificio e il suo ansimare sofferente, non saprò mai se mi ha riconosciuta o meno.
     
         + [Vorrei leggere ancora.]
+        ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
+        ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
             -> main
@@ -120,6 +125,7 @@ Trigger warning: alcolismo, violenza fisica.
             -> permamentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
+    ~ enableBigDialogue()
     
     It always comes
     to kick me in the stomach
@@ -165,8 +171,10 @@ Trigger warning: alcolismo, violenza fisica.
     And I like it.
 
         + [Vorrei leggere ancora.]
+        ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
+        ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
             -> main
@@ -185,6 +193,7 @@ Trigger warning: alcolismo, violenza fisica.
             -> permamentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
+    ~ enableBigDialogue()
     
     I still remember vividly how anger was an emotion I deeply feared.
     As a child, I grew up suffering from my father’s sudden outbursts of rage, an expression of a generational trauma he never had the chance to overcome.
@@ -205,8 +214,10 @@ Trigger warning: alcolismo, violenza fisica.
     And I hope that every person out there is also living their life to their fullest, knowing how precious each emotion we feel is… anger too.
 
         + [Vorrei leggere ancora.]
+        ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
+        ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
             -> main
@@ -225,6 +236,7 @@ Trigger warning: alcolismo, violenza fisica.
             -> permamentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
+    ~ enableBigDialogue()
     
     Ciao.
     Ho molte cose che mi frullano dentro ed è molto faticoso mettere ordine. 
@@ -346,8 +358,10 @@ Trigger warning: alcolismo, violenza fisica.
     E se qualcuno ti fa del male, semplicemente non ne fa parte.
 
         + [Vorrei leggere ancora.]
+            ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
+            ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
             -> main
@@ -366,6 +380,7 @@ Trigger warning: alcolismo, violenza fisica.
             -> permamentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
+    ~ enableBigDialogue()
     
     Da qualche parte esiste un pozzo artificiale profondo centinaia di metri, una scala a spirale in metallo porta alle sue interiora. 
     Sul suo buio fondo si trova un’enorme gabbia, sterile e opprimente.
@@ -393,8 +408,10 @@ Trigger warning: alcolismo, violenza fisica.
 
 
         + [Vorrei leggere ancora.]
+        ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
+        ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
             -> main

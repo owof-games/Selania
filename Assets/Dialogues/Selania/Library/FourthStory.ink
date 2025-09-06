@@ -4,6 +4,7 @@
         ~ unreadStories -= Salvo
         ~ readStories += Salvo
     -> DarkLibraryModeOn ->
+    ~ enableBigDialogue()
     -> refresh_book_lists ->
 <i>Il cancello</i> di Salvo (he/him).
 
@@ -43,10 +44,11 @@
     Qualche giorno dopo Liliana andò al cimitero. Era una giornata di sole: in lontananza la casa sua e di Alfredo brillava sulle chiome degli ulivi. 
 
         + [Vorrei leggere ancora.]
+        ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
+        ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
-                     
             -> main
 
 
@@ -67,6 +69,7 @@
                 -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
+    ~ enableBigDialogue()
     Me lo chiede per l'ennesima volta, dopo i miei già innumerevoli no.
     A questo punto faccio uscire tutta la mia rabbia urlando fino a perdere il respiro.
     Tirando fuori tutte le cose che mi ero tenuta dentro.
@@ -92,8 +95,10 @@
     La riacciuffo immediatamente “Tu resti qua con me.
 
         + [Vorrei leggere ancora.]
+        ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
+        ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
             -> main
@@ -116,6 +121,7 @@
                 -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
+    ~ enableBigDialogue()
     
     Jodorowsky diceva che qualsiasi guarigione richiede la disobbedienza perché alla base di ogni malattia c'è un divieto.
     E se da un lato mi dico ma che cazzo ne sa Jodorowsky, lui leggeva i tarocchi di Marsiglia, io sono da Rider-Waite anzi da Waite-Smith; dall'altra, mentre conto le stelle disegnate sulla corona dell'imperatrice, inizio a pensare alla mia malattia. 
@@ -157,18 +163,20 @@
     Lo guardo e sorrido, per la prima volta da mesi, da anni o forse da sempre, è un sorriso che è tutto mio ed è solo per me.
 
         + [Vorrei leggere ancora.]
+            ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
+            ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
-                     
             -> main
- 
+            
     
 
 === queerginia_wolf
         ~ unreadStories -= QueerginiaWolf
         ~ readStories += QueerginiaWolf
     -> DarkLibraryModeOn ->
+    ~ enableBigDialogue()
     -> refresh_book_lists ->
 <i>Giallo</i> di Queerginia Wolf/Marco Spelgatti (she/he/they).
 
@@ -194,10 +202,11 @@
     A rendere gialla la strada verso casa.
 
         + [Vorrei leggere ancora.]
+            ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
+            ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
-                     
             -> main
     
     

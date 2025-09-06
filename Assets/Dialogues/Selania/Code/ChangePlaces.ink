@@ -49,7 +49,7 @@
             -> on_movement_events ->
                 -> train_stop
                 
-//Streets to Garden       
+//Streets to Forest      
     + {are_two_entities_together(PG, FromTrainStopToForest)} [FromTrainStopToForest]
             ~ move_entity(PG, Forest)
         {
