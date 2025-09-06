@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: f2927e2c59b038b4782a5f831ece4307
+guid: 14a84bae697ef554e812d62bd0d26854
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 379343987788501898
-    second: FromGardenToGreenhouse_0
-  - first:
-      213: 241131437474703322
-    second: FromGardenToGreenhouse_1
-  - first:
-      213: 6754152845500108791
-    second: FromGardenToGreenhouse_2
-  - first:
-      213: 3431791733096424523
-    second: FromGardenToGreenhouse_3
-  - first:
-      213: -2852673018732335693
-    second: FromGardenToGreenhouse_4
+      213: 8466583733819502532
+    second: playerFirstStoryPurple_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -108,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FromGardenToGreenhouse_0
+      name: playerFirstStoryPurple_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 46
-        width: 47
-        height: 90
+        x: 47
+        y: 7
+        width: 209
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,96 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8350d7d853b34500800000000000000
-      internalID: 379343987788501898
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FromGardenToGreenhouse_1
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 134
-        width: 35
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ad7ebdac3cba85300800000000000000
-      internalID: 241131437474703322
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FromGardenToGreenhouse_2
-      rect:
-        serializedVersion: 2
-        x: 118
-        y: 117
-        width: 35
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7ff4aba5a329bbd50800000000000000
-      internalID: 6754152845500108791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FromGardenToGreenhouse_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 11
-        width: 43
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b44a55a166c20af20800000000000000
-      internalID: 3431791733096424523
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FromGardenToGreenhouse_4
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 60
-        width: 48
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3bd2e1ae0054968d0800000000000000
-      internalID: -2852673018732335693
+      spriteID: 4cf696b4c095f7570800000000000000
+      internalID: 8466583733819502532
       vertices: []
       indices: 
       edges: []
@@ -235,11 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FromGardenToGreenhouse_0: 379343987788501898
-      FromGardenToGreenhouse_1: 241131437474703322
-      FromGardenToGreenhouse_2: 6754152845500108791
-      FromGardenToGreenhouse_3: 3431791733096424523
-      FromGardenToGreenhouse_4: -2852673018732335693
+      playerFirstStoryPurple_0: 8466583733819502532
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

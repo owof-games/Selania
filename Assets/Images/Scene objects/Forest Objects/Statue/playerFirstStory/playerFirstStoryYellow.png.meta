@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bc14c7e60dfbcd14c98aea4715d0b642
+guid: 0fc56b21cca80f94b92894fc0dab0940
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3274102204730255873
-    second: FromGardenToBusStop_0
+      213: -1915934123552763649
+    second: playerFirstStoryYellow_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FromGardenToBusStop_0
+      name: playerFirstStoryYellow_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 9
-        width: 136
-        height: 398
+        x: 47
+        y: 7
+        width: 209
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 10a2547bb92ff6d20800000000000000
-      internalID: 3274102204730255873
+      spriteID: ff09690d01c3965e0800000000000000
+      internalID: -1915934123552763649
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FromGardenToBusStop_0: 3274102204730255873
+      playerFirstStoryYellow_0: -1915934123552763649
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
