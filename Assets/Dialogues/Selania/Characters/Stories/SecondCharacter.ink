@@ -227,6 +227,7 @@
         Ma dove saranno i miei compagni di scuola? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
         Cercali!
         A dopo!
+            @animation:Book
             ~ secondPauseTalking = secondCharPauseDuration
             ~ move_entity(SecondRecap, BookPlace)
             -> main

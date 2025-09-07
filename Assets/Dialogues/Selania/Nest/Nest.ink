@@ -8,6 +8,7 @@
     
     + [Coccoli le falene]
     + [Mi guardo attorno]
+        @animation:Book
         ~ move_entity(NestRecap, BookPlace)
         {
             - nest == 1:

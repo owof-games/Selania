@@ -77,6 +77,7 @@
                     E poi torna da me.
                     Nel frattempo raccolgo le foglie del giardino.
                         ~ firstPauseTalking = 0
+                        @animation:Book
                         ~ move_entity(FifthRecap, BookPlace)
                         ~ move_entity(RulesRecap, BookPlace)
                     -> main
@@ -84,6 +85,7 @@
                 - talk_with_first_character:
                     Ma sei super sul pezzo! Sembra che {charNameOne} ti abbia già raccontato qualcosa di sè!
                     Cavolo, sei qui da pochissimo e già mi rendi orgogliosa di te!
+                    @animation:Book
                         ~ move_entity(FifthRecap, BookPlace)
   
                         -> gifts_and_ink
@@ -198,6 +200,7 @@
             {not cultivable_test: Ecco, prendi!| Spero non sia qualcosa che hai trovato in giro: questo posto è delicato.}
                 - (sbadata)
             
+            @animation:Book
             ~ move_entity(RulesRecap, BookPlace)      
             ~ firstPauseTalking = 0
                 -> main

@@ -122,7 +122,8 @@
     	    -
     	E con che pronomi vuoi che ti chiami?
     	        -> gender ->
-    	Grandioso, io uso i femminili.      
+    	Grandioso, io uso i femminili.   
+                @animation:Book   
              ~ thirdPauseTalking = thirdCharPauseDuration
              ~ move_entity(ThirdRecap, BookPlace)
             -> main

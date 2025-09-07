@@ -270,12 +270,14 @@
                 <i>A volte c'è pace solo nell'allontanare.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
+                    @animation:Inventory
+                    @animation:Book 
                     {
                         - findedGifts hasnt LicheneDegliAbissi:
                         ~ findedGifts += LicheneDegliAbissi
                         <i>Hai ottenuto: <b>Lichene degli Abissi.</b></i>
                     }
-                    @animation:Inventory
+
                     ~ move_entity(GreenhouseRecap, BookPlace)
                     
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
@@ -334,7 +336,7 @@
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     @animation:Inventory
-                    TODO: mettere prima animazione per tutte
+                    @animation:Book
                     {
                         - findedGifts hasnt EderaDelleAmanti:
                         ~ findedGifts += EderaDelleAmanti
@@ -398,12 +400,14 @@
                 <i>Se qualcuno avrà paura, è solo perché non sa più come ballare.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
+                    @animation:Inventory
+                    @animation:Book
                     {
                         - findedGifts hasnt CantoDelleCompagne:
                         ~ findedGifts += CantoDelleCompagne
                         <i>Hai ottenuto: <b>Canto delle Compagne.</b></i>
                     }
-                    @animation:Inventory
+
                     ~ move_entity(GreenhouseRecap, BookPlace)
                 
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
@@ -463,12 +467,13 @@
             <i>Ci sono conversazioni in sospeso che vuoi affrontare.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
+                    @animation:Inventory
+                    @animation:Book
                     {
                         - findedGifts hasnt LaSpazzata:
                         ~ findedGifts += LaSpazzata
                         <i>Hai ottenuto: <b>La Spazzata.</b></i>
                     }
-                    @animation:Inventory
                     ~ move_entity(GreenhouseRecap, BookPlace)
                 
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
@@ -519,12 +524,13 @@
             <i>Il cambiamento fa paura, ma ora ricordi come camminare.</i>
                 ~ growing = 0
                 ~ chosenCultivable = ()
+                @animation:Inventory
+                @animation:Book
                     {
                         - findedGifts hasnt BaccaDellaAddolorata:
                         ~ findedGifts += BaccaDellaAddolorata
                         <i>Hai ottenuto: <b>Bacca della Addolorata</b></i>
                     }
-                    @animation:Inventory
                     ~ move_entity(GreenhouseRecap, BookPlace)
                     
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
@@ -581,12 +587,13 @@
             <i>Siete parte della stessa storia.</i>
                 ~ growing = 0
                 ~ chosenCultivable = ()
+                    @animation:Inventory
+                    @animation:Book
                     {
                         - findedGifts hasnt NonTiScordarDiTe:
                         ~ findedGifts += NonTiScordarDiTe
                         <i>Hai ottenuto: <b>Non Ti Scordar di Te.</b></i>
                     }
-                    @animation:Inventory
                     ~ move_entity(GreenhouseRecap, BookPlace)
                     
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
@@ -637,12 +644,14 @@
             <i>Ti ricorda che non serve dimenticare per poter riprendere a vivere.</i>
                 ~ growing = 0
                 ~ chosenCultivable = ()
+                @animation:Inventory
+                @animation:Book
                     {
                         - findedGifts hasnt BrinaDellImpossibile:
                         ~ findedGifts += BrinaDellImpossibile
                        <i> Hai ottenuto: <b>Brina dell'Impossibile</b></i>
                     }
-                    @animation:Inventory
+
                     ~ move_entity(GreenhouseRecap, BookPlace)
                     
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
@@ -696,12 +705,14 @@
             <i>Che aiutare è aiutarsi.</i>
                 ~ growing = 0
                 ~ chosenCultivable = ()
+                @animation:Inventory
+                @animation:Book
                     {
                         - findedGifts hasnt CardoAspinato:
                         ~ findedGifts += CardoAspinato
                        <i> Hai ottenuto: <b>CardoAspinato</b></i>
                     }
-                    @animation:Inventory
+
                     ~ move_entity(GreenhouseRecap, BookPlace)
                     
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
