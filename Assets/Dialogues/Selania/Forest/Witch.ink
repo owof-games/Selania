@@ -315,7 +315,7 @@
     
 === foundLibro
 <i>C'è un libro ai piedi del tronco, con scritto il tuo nome.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
-    @animation:Book
+    @animation:RewriterBook
     ~ move_entity(RewriterBook, Forest)
     ~ move_entity(WitchRecap, BookPlace)
     ~ move_entity(miniBook, Bedroom)

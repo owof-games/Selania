@@ -7,7 +7,7 @@
 
 
     + [Inizio a preparare una tisana]
-        @animation:Book
+        @animation:RewriterBook
         ~ move_entity(LaboratoryRecap, BookPlace)
         {
             - laboratory == 1:

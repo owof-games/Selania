@@ -29,7 +29,7 @@
                 ~ saturationVar ++
                 ~ move_entity(bowl, Bedroom)
             }
-            @animation:Book
+            @animation:RewriterBook
             ~ move_entity(FrogRecap, BookPlace)
             - (top)
             

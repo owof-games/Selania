@@ -271,7 +271,7 @@
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     @animation:Inventory
-                    @animation:Book 
+                    @animation:RewriterBook 
                     {
                         - findedGifts hasnt LicheneDegliAbissi:
                         ~ findedGifts += LicheneDegliAbissi
@@ -336,7 +336,7 @@
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     @animation:Inventory
-                    @animation:Book
+                    @animation:RewriterBook
                     {
                         - findedGifts hasnt EderaDelleAmanti:
                         ~ findedGifts += EderaDelleAmanti
@@ -401,7 +401,7 @@
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     @animation:Inventory
-                    @animation:Book
+                    @animation:RewriterBook
                     {
                         - findedGifts hasnt CantoDelleCompagne:
                         ~ findedGifts += CantoDelleCompagne
@@ -468,7 +468,7 @@
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     @animation:Inventory
-                    @animation:Book
+                    @animation:RewriterBook
                     {
                         - findedGifts hasnt LaSpazzata:
                         ~ findedGifts += LaSpazzata
@@ -525,7 +525,7 @@
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 @animation:Inventory
-                @animation:Book
+                @animation:RewriterBook
                     {
                         - findedGifts hasnt BaccaDellaAddolorata:
                         ~ findedGifts += BaccaDellaAddolorata
@@ -588,7 +588,7 @@
                 ~ growing = 0
                 ~ chosenCultivable = ()
                     @animation:Inventory
-                    @animation:Book
+                    @animation:RewriterBook
                     {
                         - findedGifts hasnt NonTiScordarDiTe:
                         ~ findedGifts += NonTiScordarDiTe
@@ -645,7 +645,7 @@
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 @animation:Inventory
-                @animation:Book
+                @animation:RewriterBook
                     {
                         - findedGifts hasnt BrinaDellImpossibile:
                         ~ findedGifts += BrinaDellImpossibile
@@ -706,7 +706,7 @@
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 @animation:Inventory
-                @animation:Book
+                @animation:RewriterBook
                     {
                         - findedGifts hasnt CardoAspinato:
                         ~ findedGifts += CardoAspinato

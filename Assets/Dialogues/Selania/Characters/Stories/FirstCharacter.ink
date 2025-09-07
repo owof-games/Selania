@@ -264,7 +264,7 @@
          L’unica cosa certa è che ho bisogno di Talco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
          Ci vediamo dopo, {name}.
             ~ firstPauseTalking = firstCharPauseDuration
-            @animation:Book
+            @animation:RewriterBook
             ~ move_entity(FirstRecap, BookPlace)
              
             -> main

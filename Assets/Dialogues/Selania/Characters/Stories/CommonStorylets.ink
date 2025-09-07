@@ -103,7 +103,7 @@
     Hai un ammiratore segreto?
     Comunque ho pensato fosse il caso di dartelo.
         
-        @animation:Book
+        @animation:RewriterBook
         ~ move_entity(WitchRecap, BookPlace)
         ~ move_entity(miniBook, Bedroom)
         ~ somethingStrange ++
