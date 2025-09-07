@@ -333,12 +333,14 @@
  
                     ~ growing = 0
                     ~ chosenCultivable = ()
+                    @animation:Inventory
+                    TODO: mettere prima animazione per tutte
                     {
                         - findedGifts hasnt EderaDelleAmanti:
                         ~ findedGifts += EderaDelleAmanti
                         <i>Hai ottenuto: <b>Edera delle Amanti.</b></i>
                     }
-                    @animation:Inventory
+                    
                     ~ move_entity(GreenhouseRecap, BookPlace)
                     
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
