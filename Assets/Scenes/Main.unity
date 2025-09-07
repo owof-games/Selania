@@ -335,7 +335,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.35
+  m_fontSize: 37.3
   m_fontSizeBase: 77.9
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1664,10 +1664,10 @@ RectTransform:
   - {fileID: 360006131}
   m_Father: {fileID: 813662543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &103367850
 GameObject:
@@ -2204,8 +2204,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2216054, y: 0.8190365}
   m_AnchorMax: {x: 0.2507677, y: 0.8772019}
-  m_AnchoredPosition: {x: -367.73938, y: 257.7265}
-  m_SizeDelta: {x: 40.65042, y: 43.06212}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.000030517578, y: -0.000015258789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &155854271
 Animator:
@@ -3396,8 +3396,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.05987123, y: 0.8430746}
   m_AnchorMax: {x: 0.1027102, y: 0.9182601}
-  m_AnchoredPosition: {x: -583.6544, y: 281.82312}
-  m_SizeDelta: {x: 59.71488, y: 55.66279}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -0.000015258789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &286581334
 Animator:
@@ -3947,8 +3947,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.6263609, y: 0.8704979}
   m_AnchorMax: {x: 0.6528872, y: 0.9190998}
-  m_AnchoredPosition: {x: 194.62721, y: 292.2853}
-  m_SizeDelta: {x: 36.976032, y: 35.98191}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -0.000030517578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &360006132
 Animator:
@@ -5403,8 +5403,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.422337, y: 0.8394152}
   m_AnchorMax: {x: 0.4562861, y: 0.8939334}
-  m_AnchoredPosition: {x: -84.595894, y: 266.96368}
-  m_SizeDelta: {x: 47.322926, y: 40.362022}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.0000038146973, y: 0}
   m_Pivot: {x: 0.5, y: 0.38851246}
 --- !u!95 &532709478
 Animator:
@@ -12327,8 +12327,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5137929, y: 0.8561476}
   m_AnchorMax: {x: 0.5429552, y: 0.914313}
-  m_AnchoredPosition: {x: 39.55164, y: 285.20132}
-  m_SizeDelta: {x: 40.65048, y: 43.06218}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1375257391
 Animator:
@@ -14901,8 +14901,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2642462, y: 0.8190367}
   m_AnchorMax: {x: 0.3070852, y: 0.8942221}
-  m_AnchoredPosition: {x: -298.7686, y: 264.0269}
-  m_SizeDelta: {x: 59.71485, y: 55.662674}
+  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_SizeDelta: {x: 0, y: 0.000015258789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1667509274
 Animator:
@@ -15501,8 +15501,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.9057046, y: 0.7642302}
   m_AnchorMax: {x: 0.9485435, y: 0.8394157}
-  m_AnchoredPosition: {x: 595.38403, y: 223.45157}
-  m_SizeDelta: {x: 59.714653, y: 55.66284}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.000061035156, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1740103069
 Animator:
@@ -15798,7 +15798,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7ddf096d137178249b79c18eb80172d5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0faabba094d971b4a9946617a3b5cd4f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18296,8 +18296,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.737228, y: 0.8073959}
   m_AnchorMax: {x: 0.7732701, y: 0.870498}
-  m_AnchoredPosition: {x: 355.80112, y: 250.93585}
-  m_SizeDelta: {x: 50.240402, y: 46.71701}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -0.000015258789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2038264600
 Animator:
