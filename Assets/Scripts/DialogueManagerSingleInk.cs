@@ -120,12 +120,16 @@ public class DialogueManagerSingleInk : MonoBehaviour
     private const string INK_TAG_C = "inkC";
     private const string INK_TAG_D = "inkD";
 
+    void Awake()
+    {
+        story = new Story(inkAssetJSON.text);
+    }
+
     void Start()
     {
         FillChoicesTextMeshPro(choices, ref choicesText);
         FillChoicesTextMeshPro(choicesBig, ref choicesTextBig);
 
-        story = new Story(inkAssetJSON.text);
         if (!LoadGame())
         {
             ContinueStory();
@@ -342,6 +346,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     }
 
 
+    public UnityEvent<string> OnBackgroundChanged;
 
 
     private void HandleTags(List<string> currentTags)
@@ -451,6 +456,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     // Salviamo solo quando entriamo in una nuova "scena"
                     SaveGame();
 
+                    // Avvertiamo gli altri script che il background è cambiato (e.g.: gestione saturazione)
+                    OnBackgroundChanged?.Invoke(tagValue);
+
                     break;
 
                 case AMBIENTSOUNDS_TAG:
@@ -495,13 +503,13 @@ public class DialogueManagerSingleInk : MonoBehaviour
                         ambientSounds.clip = librarySounds;
                         ambientSounds.Play();
                     }
-                    
+
                     //TAG MUSICA SOTTOFONDO LIBRO
                     if (tagValue == "bookSounds")
                     {
                         ambientSounds.clip = bookSounds;
                         ambientSounds.Play();
-                    }  
+                    }
                     break;
 
 
@@ -509,7 +517,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     displayNameText.text = tagValue;
                     Debug.Log("speaker" + tagValue);
                     break;
-                                   
+
 
                 case PORTRAIT_TAG:
                     portraitAnimator.Play(tagValue);
@@ -524,12 +532,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 case INK_TAG_B:
                     inkAnimatorB.Play(tagValue);
                     Debug.Log("inkB" + tagValue);
-                    break;     
+                    break;
 
                 case INK_TAG_C:
                     inkAnimatorC.Play(tagValue);
                     Debug.Log("inkC" + tagValue);
-                    break; 
+                    break;
 
                 case INK_TAG_D:
                     inkAnimatorD.Play(tagValue);
