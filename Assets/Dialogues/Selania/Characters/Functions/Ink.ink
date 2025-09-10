@@ -86,19 +86,19 @@
     
     {Ink:
         - Empty:
-            non hai guadagnato alcuna goccia di inchiostro #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            non hai guadagnato alcuna goccia di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         - Low:
-            hai guadagnato una goccia di inchiostro #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            hai guadagnato una goccia di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         - Normal:
-            hai guadagnato due goccie di inchiostro #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            hai guadagnato due goccie di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         - Medium:
-            hai guadagnato tre goccie di inchiostro a disposizione #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}     
+            hai guadagnato tre goccie di inchiostro a disposizione#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}     
         
         - High:
-            hai guadagnato tre goccie di inchiostro a disposizione, e la personaggia ti darà una informazione importante #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            hai guadagnato tre goccie di inchiostro a disposizione, e la personaggia ti darà una informazione importante#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         - else:
             <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>
             {debug: <i>Il livello di inchiostro per la prima personaggia è {firstCharacterInkLevel}}

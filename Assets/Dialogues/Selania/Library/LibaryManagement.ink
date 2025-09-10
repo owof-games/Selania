@@ -411,7 +411,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     = reread_steno_artico
     <i>La biblioteca si chiede cosa tu voglia rileggere.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
     
-        + [Rileggo <i> This anger</i> by StenoArtico (he/him, none).]
+        + [Rileggo <i>This anger</i> by StenoArtico (he/him, none).]
                 -> steno_artico
         + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread

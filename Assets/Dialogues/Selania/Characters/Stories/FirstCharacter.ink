@@ -939,11 +939,11 @@
 
  === first_story_gift ===
 ~ temp charNameOne = translator(firstCharacterState)
-<i> Stai per donare qualcosa a {charNameOne}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+<i>Stai per donare qualcosa a {charNameOne}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += FirstCharacter
             -> inventory_management
-        + {findedGifts == ()} <i> Il tuo inventario è vuoto.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        + {findedGifts == ()} <i>Il tuo inventario è vuoto.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             ->main
         
     
@@ -1337,8 +1337,6 @@
         
                 
         -     
-    
-    
      Grazie, {name}. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
      Mentre ti ascoltavo mi è nata una nuova canzone in testa.
      La canzone del mio nome.
@@ -1407,8 +1405,8 @@
             ~ firstStory = Ended
             ~ movementsCounter = 0
             ~ PG_advance_management(firstStoryPG)
-            ~ numberQuestion = 0
-            ~ firstCharacterInkLevel = Empty
+            //~ numberQuestion = 0
+            //~ firstCharacterInkLevel = Empty
         -> main  
         
     

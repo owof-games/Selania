@@ -89,7 +89,7 @@ VAR currentReceiver = ()
     
         - currentReceiver has SecondCharacter:
             ~ secondCharacterInkLevel ++
-            <i> Hai regalato a {translator(secondCharacterState)} qualcosa che lo esalta.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>Hai regalato a {translator(secondCharacterState)} qualcosa che lo esalta.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             <i>Continua a rigirarsi il frammento tra le dita, pieno di gioia rabbiosa.</i>
                 ~ secondGift += LaSpazzata
                 ~ currentReceiver = ()

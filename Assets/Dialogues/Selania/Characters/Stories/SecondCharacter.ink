@@ -1364,11 +1364,11 @@
 
 === second_story_gift ===
 ~ temp charNameTwo = translator(secondCharacterState)
-<i> Stai per donare qualcosa a {charNameTwo}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+<i>Stai per donare qualcosa a {charNameTwo}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += SecondCharacter
             -> inventory_management
-        + {findedGifts == ()} <i> Il tuo inventario è vuoto.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        + {findedGifts == ()} <i>Il tuo inventario è vuoto.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             ->main
         
     
@@ -1436,7 +1436,6 @@
             Dici sempre le cose allo stesso modo.
             Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
             E questo mi fa stare al sicuro.
-            C'è una cosa che devo dire a qualcuno, e voglio dirla a te.
         <i>{charNameTwo} vede {name} come una persona amica e fidata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         //Secondo migliore outcome
@@ -1444,29 +1443,40 @@
             Secondo me non dici <i>sempre</i> le cose in modo preciso.
             Sembri un po' un gatto.
             Ma mi fido.
-            C'è una cosa che devo dire a qualcuno, e voglio dirla a te.
         <i>{charNameTwo} si trova bene con {name}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         //Outcome peggiore
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow < (secondStoryQuestCount/2):  Secondo me mi tratti come un bambino. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
             Tutte le cose che dici cambiano, sono disordinate.
             Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
             Non mi piace mica come cosa.
-            C'è una cosa che devo dire a qualcuno.
-            E posso dirla solo a te.
-            Purtroppo.
         <i>{charNameTwo} non si è sentito capito da {name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         //Outcome neutro
         - else: Che non ho capito cosa pensi. Sei come quando guardo nel terrario e non capisco se c'è l'insetto stecco o sono solo rami. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
-            C'è una cosa che devo dire a qualcuno.
-            E posso dirla solo a te.
-            Purtroppo.
         <i>{charNameTwo} non riesce a capire che rapporto sta costruendo con {name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         }
                 -> secondAffinityCalc ->
                 
         <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): l'inchiostro è aumentato di due unità|{secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+       
+        {
+        
+        //Migliore outcome
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):C'è una cosa che devo dire a qualcuno, e voglio dirla a te. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+
+        //Secondo migliore outcome
+        -secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2):C'è una cosa che devo dire a qualcuno, e voglio dirla a te. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+        //Outcome peggiore
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow < (secondStoryQuestCount/2):C'è una cosa che devo dire a qualcuno. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+            E posso dirla solo a te.
+            Purtroppo.
+        
+        //Outcome neutro
+        - else:C'è una cosa che devo dire a qualcuno. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+            E posso dirla solo a te.
+            Purtroppo.
+        }
        
         Da quando nonna è nella casa dei vecchi fa tutto schifo. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         Papà è tornato ma litiga sempre con mamma.
@@ -1889,8 +1899,8 @@
         -> close  
     
     = close
-            ~ secondCharacterInkLevel = Empty
-            ~ numberQuestion = 0
+            //~ secondCharacterInkLevel = Empty
+            //~ numberQuestion = 0
             ~ secondStory = Ended
             ~ movementsCounter = 0
             ~ PG_advance_management(secondStoryPG)

@@ -31,7 +31,7 @@
 
 === pre_test
 
-    <i>{~ In questo momento non c'è nulla in crescita.|La serra attende le tue visioni.}</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    <i>{~In questo momento non c'è nulla in crescita.|La serra attende le tue visioni.}</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
         // + [Mi guardo attorno.]
 
             -> main

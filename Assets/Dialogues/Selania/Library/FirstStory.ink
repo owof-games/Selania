@@ -113,7 +113,7 @@ Trigger warning: alcolismo, violenza fisica.
 
 
 === steno_artico
-<i> This anger, which has been stolen from me</i> by StenoArtico (he/him, none).
+<i>This anger, which has been stolen from me</i> by StenoArtico (he/him, none).
     Trigger warning: violenza psicologica, abusi fisici, depressione.
         + [Inizio la lettura.]
             ~ unreadStories -= book

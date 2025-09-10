@@ -454,11 +454,11 @@
 
 === third_story_gift ===
 ~ temp charNameThree = translator(thirdCharacterState)
-<i> Stai per donare qualcosa a {charNameThree}.</i>
+<i>Stai per donare qualcosa a {charNameThree}.</i>
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += ThirdCharacter
             -> inventory_management -> ink_outcome 
-        + {findedGifts == ()} <i> Il tuo inventario è vuoto.</i>
+        + {findedGifts == ()} <i>Il tuo inventario è vuoto.</i>
             ->main
         
     
