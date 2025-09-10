@@ -497,11 +497,11 @@ QUESTIONS
          {debugCultivable: <i>Entro in first_question. {firstQuest: firstQuest ora = true|firstQuest = false}}
  
         <i>Le foglie...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            + [<i>{~ Si sfiorano|Si mescolano|Si proteggono le une con le altre}.]
+            + [<i>{~Si sfiorano|Si mescolano|Si proteggono le une con le altre}.]
                     ~ cropsType += relationship
                     ~ firstAnswerTracker = relationshipCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}
-            + [<i>{~ Si accumulano sulla soglia|Si dispongono in ordine attorno ai vasi|Resistono al vento}.]
+            + [<i>{~Si accumulano sulla soglia|Si dispongono in ordine attorno ai vasi|Resistono al vento}.]
                     ~ cropsType += imagination
                     ~ firstAnswerTracker = understandingCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
@@ -514,11 +514,11 @@ QUESTIONS
         {debugCultivable: <i>Entro in second_question. {secondQuest: SecondQuest ora = true|SecondQuest = false}}
 
         <i>L'aria... #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            + [<i>{~ Insegue sé stessa|Crea mulinelli di foglie|Ruota e ruzzola portando odori inaspettati}.]
+            + [<i>{~Insegue sé stessa|Crea mulinelli di foglie|Ruota e ruzzola portando odori inaspettati}.]
                     ~ cropsType += shift
                     ~ firstAnswerTracker = shiftCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
-            + [<i>{~ È scoppiettante|Freme, carica di elettricità|Corre in avanti, sempre}.]
+            + [<i>{~È scoppiettante|Freme, carica di elettricità|Corre in avanti, sempre}.]
                     ~ cropsType += understanding
                     ~ firstAnswerTracker = selfdeterminationCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
@@ -532,11 +532,11 @@ QUESTIONS
     {debugCultivable:<i>Entro in third_question. {thirdQuest: thirdQuest ora = true|thirdQuest = false}.}
     
         <i>L'acqua...#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            + [<i>{~ È mossa solo sulla superficie|È torbida|È piena di foglie e petali}.]
+            + [<i>{~È mossa solo sulla superficie|È torbida|È piena di foglie e petali}.]
                     ~ cropsType += wonder
                     ~ firstAnswerTracker = wonderCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
-            + [<i>{~ Scava, portando con sé ogni cosa|Schiaccia foglie e sassi|Rimbomba tra i vasi}.]
+            + [<i>{~Scava, portando con sé ogni cosa|Schiaccia foglie e sassi|Rimbomba tra i vasi}.]
                     ~ cropsType += selfdetermination
                     ~ firstAnswerTracker = imaginationCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
@@ -738,11 +738,11 @@ QUESTIONS
     {debugCultivable: <i>Entro in fifteenQuest. {fifteenQuest: fifteenQuest ora = true|fifteenQuest = false}.}
     
         <i>La luna... #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            + [<i>{~ Accenna timida un nuovo ciclo|Invita la Bella di Notte a sbocciare|Suggerisci sogni di cambiamento}.]
+            + [<i>{~Accenna timida un nuovo ciclo|Invita la Bella di Notte a sbocciare|Suggerisci sogni di cambiamento}.]
                     ~ cropsType += understanding   
                     ~ firstAnswerTracker = selfdeterminationCrops 
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
-            + [<i>{~ Solleva le maree per divertire i delfini|Indica la strada alle nuvole|Danza giocosa con la Terra}.]
+            + [<i>{~Solleva le maree per divertire i delfini|Indica la strada alle nuvole|Danza giocosa con la Terra}.]
                     ~ cropsType += relationship
                     ~ firstAnswerTracker = relationshipCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
