@@ -75,7 +75,7 @@
 
 //Per la scelta del nome
 === name_choice ===
-    <i>C'è qualcosa che vuoi dirci sul tuo nome?</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait:witch_neutral
+    <i>C'è qualcosa che vuoi dirci sul tuo nome?</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
     + {name_choice > 1} Il mio nome è {name}.
         ->->
     
