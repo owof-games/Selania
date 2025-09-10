@@ -37,6 +37,7 @@
 
 = hub
 ~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
 
     {~Ciao!|Ciao.|...} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
     
@@ -46,11 +47,32 @@
     
             //Se non ho ancora fatto e ho parlato abbastanza con lui
             + {secondStoryQuestCount > minStoryQuesTCountSecondChar && not second_story_gift.ink_outcome} [Voglio regalarti una cosa.]
-                    -> second_story_gift
+                {
+                
+                    - not gifts_and_ink && findedGifts != ():
+                        Forse prima ti conviene vedere cosa vuole dirti {charNameFive}!
+                        -> main
+                    
+                    - else:
+                        -> second_story_gift
+                        
+                }
+                    
         
             //Dono fatto ma non ho avviato la main story
             + {second_story_gift.ink_outcome && not main_story_second_character} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
+            {
+            
+                - not questions:
+                    Parla prima con {charNameFive}, che già mi brontola tantissimo!
+                        ~ secondTutorial = true
+                        -> main
+                - else:
                     -> second_story_chech_trigger
+            
+            }
+            
+            
     
             //SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
             + {second_story_gift.ink_outcome && main_story_second_character} [Riprendiamo quella storia?]

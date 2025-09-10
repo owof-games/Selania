@@ -214,10 +214,8 @@
         ~ temp charNameFour= translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-            {firstCharacterInkLevel == Empty or firstCharacterInkLevel == Low: Non hai ottenuto molto inchiostro. Ma come si dice: se {pronouns has him: l'alunno|{pronouns has her: la alunna|l'alunnə}} sbaglia, la colpa è della maestra.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-            {firstCharacterInkLevel == Normal: Bel colpo! Ti sei {pronouns has him: guadagnato|{pronouns has her: guadagnata|guadagnatə}} subito una bella dose di inchiostro! Avessi fatto meglio il mio lavoro, sarebbe stato il massimo!}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-            {firstCharacterInkLevel == High: {name}, hai dato alla persona il suo dono preferito! Riempi questo cuore di orgoglio!}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-            E adesso, l'ultima lezione: a cosa serve l'inchiostro?
+
+            L'ultima lezione: a cosa serve l'inchiostro?
             Sostanzialmente più alto è il suo valore, più <b>interventi</b> puoi fare.
             Gli interventi sono domande o commenti che puoi fare su cose diverse che preoccupano la persona.
             Un intervento ti è sempre garantito, per provare a cambiare le cose, ma gli altri te li dovrai meritare.

@@ -13,6 +13,9 @@
 //Tracciamento del dono
     VAR secondGift = ()
     
+//Tracciamento attivazione secondo elemento tutorial
+    VAR secondTutorial = true
+    
 //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
     VAR secondStoryQuestCount = 0
     VAR secondCharacterSpecialEvent = false

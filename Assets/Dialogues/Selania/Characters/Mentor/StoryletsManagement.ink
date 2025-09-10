@@ -27,8 +27,9 @@
             
         - not questions:
             {
-                - first_story_gift.ink_outcome:
+                - first_story_gift.ink_outcome or secondTutorial == true:
                     -> questions
+                
                 - else:
                 
                 {
