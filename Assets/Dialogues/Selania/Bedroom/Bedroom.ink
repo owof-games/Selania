@@ -7,21 +7,21 @@
     
 {
     - fourthTier && fifthStory ==Ended:
-        <i>Frasi legate al finale del gioco</i>.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: moon_neutral
+        <i>Frasi legate al finale del gioco</i>.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
     
     -fourthTier:
-        <i>Frasi legate al quarto tier</i>.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: moon_neutral
+        <i>Frasi legate al quarto tier</i>.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
     
     -thirdTier:
-        <i>Frasi legate al terzo tier</i>.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: moon_neutral
+        <i>Frasi legate al terzo tier</i>.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
 
     -secondTier:
-        <i>Frasi legate al secondo tier</i>.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: moon_neutral
+        <i>Frasi legate al secondo tier</i>.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
 
     -firstTier:
-        <i>Frasi legate al primo tier</i>.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: moon_neutral
+        <i>Frasi legate al primo tier</i>.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
     - else:
-        <i>Commenti iniziali</i>.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: moon_neutral
+        <i>Commenti iniziali</i>.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
 
 }    
     -> main

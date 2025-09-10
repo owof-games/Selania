@@ -93,7 +93,7 @@
             
         <i>Noi sussurriamo nella tua testa, ma ascoltiamo anche.</i>
         - (nameWitch)
-        <i>Le nostre radici cercano di imparare le voci del terreno.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: moon_neutral
+        <i>Le nostre radici cercano di imparare le voci del terreno.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>Il terreno ci racconta che {name} ha appena compiuto qualcosa di importante.</i>
         <i>Osserviamo {name} e ci chiediamo cosa provi dopo aver aiutato {charNameOne}.</i>
         
@@ -157,7 +157,7 @@
         ~ temp charNameThree = translator(thirdCharacterState)
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
-        <i>I nostri rami saggiano il cielo.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: moon_neutral
+        <i>I nostri rami saggiano il cielo.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>L'aria finalmente ci rinfresca.</i>
         <i>E gli uccelli ci raccontano cose su {name}.</i>
         <i>E su quello che ha fatto per {charNameTwo}.</i>
@@ -198,7 +198,7 @@
                     ~ playerYellow ++
             -
         
-        <i>L'acqua ci ha portato le lacrime di {charNameFive}.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: moon_neutral
+        <i>L'acqua ci ha portato le lacrime di {charNameFive}.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>Questa storia per lei è stata faticosa.</i>
         <i>Le sue radici sembrano solide, ma il tronco ondeggia al primo accenno di burrasca.</i>
         <i>Forse {name} può essere il suo sostegno.</i>
