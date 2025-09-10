@@ -23,7 +23,7 @@
         <i>Una rana bluastra ti osserva incuriosita.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             Cra Cra #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:frog_neutral
             Cra
-            Cra?
+
             {
                 - talkFrog == 1:
                 ~ saturationVar ++
@@ -31,9 +31,10 @@
             }
             @animation:RewriterBook
             ~ move_entity(FrogRecap, BookPlace)
-            - (top)
             
-                * * (frog) [{charNameTwo} dice che hai un regalo per me.]
+            - (top)
+            Cra?
+                * (frog) [{charNameTwo} dice che hai un regalo per me.]
                     <i>La rana si silenza per un istante.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                     Cra?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:frog_neutral
                     Cra Cra Cra!
@@ -51,10 +52,9 @@
                     <i>Ma ora ha fame.</i>
                     Crac!:#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:frog_neutral
                         ~ bookBGVariations ++
-
                         -> top
-                        
-                * * {frog && firstStory == Active} [Puoi aiutarmi anche per {charNameOne}?]
+                    
+                * {frog && firstStory == Active} [Puoi aiutarmi anche per {charNameOne}?]
                     <i>La rana sembra rifletterci.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                     Cra.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:frog_neutral
                     <i>La rana accetta, ma non promette di essere così disponibile in futuro.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
@@ -68,7 +68,8 @@
                     <i>E chiede se la prossima volta le porti uno stuzzichino, perché ha molta fame.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                         -> top
                         
-                + + -> main
+                + [Mi allontano.]
+                    -> main
 
    
    

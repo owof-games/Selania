@@ -1428,7 +1428,7 @@
 
                 ~ change_entity_place(FirstCharacter)
     }          
-            -> secondAffinityCalc ->
+
         {
         
         //Migliore outcome
@@ -1464,6 +1464,9 @@
         <i>{charNameTwo} non riesce a capire che rapporto sta costruendo con {name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         }
+                -> secondAffinityCalc ->
+                
+        <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): l'inchiostro è aumentato di due unità|{secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
        
         Da quando nonna è nella casa dei vecchi fa tutto schifo. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         Papà è tornato ma litiga sempre con mamma.
@@ -1494,7 +1497,7 @@
 
     = statement
     ~ temp charNameTwo = translator(secondCharacterState)
-        <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): l'inchiostro è aumentato di due unità|{secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(secondCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]
@@ -1886,7 +1889,7 @@
         -> close  
     
     = close
-            ~ secondCharacterInkLevel = Empty
+            //~ secondCharacterInkLevel = Empty
             ~ numberQuestion = 0
             ~ secondStory = Ended
             ~ movementsCounter = 0

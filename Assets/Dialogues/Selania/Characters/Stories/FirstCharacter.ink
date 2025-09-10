@@ -1002,7 +1002,7 @@
                     ~ change_entity_place(SecondCharacter)
         }        
         
-            -> firstAffinityCalc ->
+
         {
         - firstPurple && firstYellow > firstBlue:  Talco continua a mancarmi, ma con te mi sento come se fossimo parte da sempre della stessa band. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
         
@@ -1022,6 +1022,10 @@
         <i>{charNameOne} non riesce a capire che rapporto sta costruendo con {name}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         }
+        
+        -> firstAffinityCalc ->
+        
+        <i>A seguito del rapporto che {name} ha creato con {charNameOne} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
          Comunque: credo di aver capito perché il mio nome qui è {charNameOne}. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
          Penso al Ghiberti.
@@ -1050,7 +1054,7 @@
 
     = statement
     ~ temp charNameOne = translator(firstCharacterState)
-        <i>A seguito del rapporto che {name} ha creato con {charNameOne} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(firstCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]
@@ -1404,7 +1408,7 @@
             ~ movementsCounter = 0
             ~ PG_advance_management(firstStoryPG)
             ~ numberQuestion = 0
-            ~ firstCharacterInkLevel = Empty
+            //~ firstCharacterInkLevel = Empty
         -> main  
         
     
