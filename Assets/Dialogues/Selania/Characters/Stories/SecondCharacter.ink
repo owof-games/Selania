@@ -1766,10 +1766,10 @@
         Riccio dice cose #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral       
         -> ending
 
+    
     = ending
     ~ temp charNameTwo = translator(secondCharacterState)
-    ~ numberQuestion = 0
-     Per questo ti dico:  #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
+     Per questo ti dico:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
      
         + {secondRed > 0} [Diventa il più forte, il più coraggioso.]
             Sei un testardo, bugiardo, dispettoso.
@@ -1789,7 +1789,6 @@
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
                     
-        
         + {secondYellow > 0} [L'opposto della paura è la curiosità.]
             E tu sei il ritratto della curiosità.
             Guarda le cose che arriveranno chiedendoti "Chissà se..." o "E se invece..." o "Perché accade questo?".
@@ -1812,9 +1811,6 @@
                    ~ secondBlue ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)            
-                
-        
-                
         - 
      
     Sì. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
