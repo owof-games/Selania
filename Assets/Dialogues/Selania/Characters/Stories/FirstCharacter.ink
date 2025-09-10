@@ -1343,33 +1343,39 @@
         
         {
             - firstCharacterPossibleStates has Chitarra:
-                 Non vorrei deluderti, ma <b>resterà Chitarra</b>, perché l'unica cosa che posso fare è non fare nulla e lasciare che le cose accadano.
+                 Non vorrei deluderti, ma resterà <b>Chitarra</b>, perché l'unica cosa che posso fare è non fare nulla e lasciare che le cose accadano.
                  Perdonami il cringe, ma non posso fare diversamente.
             
             - firstCharacterPossibleStates has Triangolo:
-                 E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
                     ~ firstCharacterState = ()
                     ~ firstCharacterState += Triangolo
+                 E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
+                    
             
             - firstCharacterPossibleStates has RagazzaOrchestra:
-                 Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper rinunciare sono diventata l'ornitorinco della musica.
                     ~ firstCharacterState = ()
                     ~ firstCharacterState += RagazzaOrchestra
+                 Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper rinunciare sono diventata l'ornitorinco della musica.
+                    
             
             - firstCharacterPossibleStates has FlautoDolce:
-                 Il mio nome è <b>Flauto Dolce</b>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
                     ~ firstCharacterState = ()
-                    ~ firstCharacterState += FlautoDolce                
+                    ~ firstCharacterState += FlautoDolce
+                 Il mio nome è <b>Flauto Dolce</b>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
+                             
             
             - firstCharacterPossibleStates has Ocarina:
+                    ~ firstCharacterState = ()
+                    ~ firstCharacterState += Ocarina
                  Mi chiamerò <b>Ocarina</b>: perché il suo suono è gioco e festa.
                     ~ firstCharacterState = ()
                     ~ firstCharacterState += Ocarina
             
             - firstCharacterPossibleStates has Violino:
-                 Io sono <b>Violino</b>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
                     ~ firstCharacterState = ()
                     ~ firstCharacterState += Violino
+                 Io sono <b>Violino</b>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
+                    
         }
         
         ~ growing ++    
@@ -1405,8 +1411,8 @@
             ~ firstStory = Ended
             ~ movementsCounter = 0
             ~ PG_advance_management(firstStoryPG)
-            //~ numberQuestion = 0
-            //~ firstCharacterInkLevel = Empty
+            ~ numberQuestion = 0
+            ~ firstCharacterInkLevel = Empty
         -> main  
         
     
@@ -1445,5 +1451,5 @@
 ~ temp charNameOne = translator(firstCharacterState) 
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
     {~ Talco dice sempre che bisogna sporcarsi le mani per capire il mondo.|Se proprio devo restare qui, tiro su una band con le api. Sono troppo chaddone loro.|Comunque il Ghiberti ha una moglie che è stra in gamba. Forse a volte ci si deve compensare. E visto che Talco è svegliə, io allora sono l'idiota della cumpa.|Resti tra noi, ma il Conservatorio è un posto del cazzo. C'è una competitività che non c'entra nulla con la musica.|Mi scoccia litigare con mio padre, ma io e il suo modo di fare NON. ANDIAMO. D'ACCORDO. Zero, ama. Zero.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-        ~ firstPauseTalking = firstCharPauseDuration
+            ~ firstPauseTalking = firstCharPauseDuration
             -> main

@@ -54,10 +54,26 @@
     //Aggiunta delle personagge randomizzabili quando la loro storia è attiva. Non serve la mentore perché va per la sua
     {
         - talk_with_first_character:
-            ~ randomizable_characters += FirstCharacter
+            {
+                - firstStory == Ended:  
+                    ~ randomizable_characters -= FirstCharacter 
+                
+                - else:
+                    ~ randomizable_characters += FirstCharacter
+            
+            }
+        
         
         - talk_with_second_character:
-            ~ randomizable_characters += SecondCharacter
+            {
+                - secondStory == Ended:  
+                    ~ randomizable_characters -= SecondCharacter 
+                
+                - else:
+                    ~ randomizable_characters += SecondCharacter
+            
+            }
+  
         
         // - thirdStory == Active && talk_with_third_character:
             // ~ randomizable_characters += ThirdCharacter
