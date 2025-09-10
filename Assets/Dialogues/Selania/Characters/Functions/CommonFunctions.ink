@@ -147,6 +147,19 @@
 //Aumento di contatori:
     ~ movementsCounter ++
 
+//Avvio dialoghi di chiusura
+    {
+        - firstStory == Ended:
+	        ~ firstCharEndingDialogue ++
+	}
+	
+	{
+	    - secondStory == Ended:
+	        ~ secondCharEndingDialogue ++     
+    }
+
+
+
 //Comparsa lettere dopo fine delle storie (così non compaiono subito.
     {firstCharacterPossibleStates hasnt Chitarra && first_char_story_ended.goodbye:
             ~ move_entity(FirstCharacterNotes, TrainStop)
