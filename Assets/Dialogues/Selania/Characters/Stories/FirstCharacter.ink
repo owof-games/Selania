@@ -1392,22 +1392,21 @@
         A me non la conta giusta quella.
         Però tra un po' mi potrò levare di culo e non è più un mio problema.
         Ma se hai intenzione di restare qui a lungo, forse devi chiedertelo anche tu.
-            ~ firstStory = Ended
-            ~ movementsCounter = 0
-            ~ PG_advance_management(firstStoryPG)
-            ~ numberQuestion = 0
-            ~ firstCharacterInkLevel = Empty
-                -> main
+                -> close
             
     = exit
     ~ temp charNameOne = translator(firstCharacterState)
         E ora resterò qui a romperti le gonadi ancora per un po', in attesa del prossimo treno. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+            -> close
+        
+    = close    
             ~ firstStory = Ended
             ~ movementsCounter = 0
             ~ PG_advance_management(firstStoryPG)
             ~ numberQuestion = 0
             ~ firstCharacterInkLevel = Empty
         -> main  
+        
     
 === first_char_story_ended
 ~ temp charNameOne = translator(firstCharacterState)

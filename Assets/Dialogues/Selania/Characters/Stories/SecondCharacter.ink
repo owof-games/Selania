@@ -1876,23 +1876,23 @@
         Mi ricorda mamma quando gira per casa dando consigli e dicendo cose e sorridendo.
         E poi si rinchiude in camera e resta in silenzio per ore.
         Per me non sta mica bene.
-            ~ secondCharacterInkLevel = Empty
-            ~ numberQuestion = 0
-            ~ secondStory = Ended
-            ~ movementsCounter = 0
-            ~ PG_advance_management(secondStoryPG)
-                -> main
+        -> close
             
     = exit
     ~ temp charNameTwo = translator(secondCharacterState)
         Voglio stare ancora un po' qui prima di prendere il treno. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         Mi mancherà la rana!
+
+        -> close  
+    
+    = close
             ~ secondCharacterInkLevel = Empty
             ~ numberQuestion = 0
             ~ secondStory = Ended
             ~ movementsCounter = 0
             ~ PG_advance_management(secondStoryPG)
-        -> main  
+    -> main
+    
     
 === second_char_story_ended
 ~ temp charNameTwo = translator(secondCharacterState)

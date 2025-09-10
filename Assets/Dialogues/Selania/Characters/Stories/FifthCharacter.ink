@@ -956,19 +956,20 @@
     ~ temp charNameFive = translator(fifthCharacterState)
         C'è una cosa che vorrei dirti, {name}.
         Riguarda Il mentore.
-
-            ~ fifthStory = Ended
-            ~ movementsCounter = 0
-            ~ PG_advance_management(fifthStoryPG)
-                -> main
+        -> close
             
     = exit
     ~ temp charNameFive = translator(fifthCharacterState)
         Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
+        -> close
+    
+    = close
             ~ fifthStory = Ended
+            ~ fifthCharacterInkLevel = Empty
             ~ movementsCounter = 0
+            ~ numberQuestion = 0
             ~ PG_advance_management(fifthStoryPG)
-        -> main  
+        -> main
     
 === fifth_char_story_ended
 ~ temp charNameFive = translator(fifthCharacterState)

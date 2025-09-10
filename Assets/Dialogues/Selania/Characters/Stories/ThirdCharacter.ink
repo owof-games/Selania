@@ -775,19 +775,20 @@
     ~ temp charNameThree = translator(thirdCharacterState)
         C'è una cosa che vorrei dirti, {name}.
         Riguarda Il mentore.
-
-            ~ thirdStory = Ended
-            ~ movementsCounter = 0
-            ~ PG_advance_management(thirdStoryPG)
-                -> main
+            -> close
             
     = exit
     ~ temp charNameThree = translator(thirdCharacterState)
         Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
+            -> close  
+        
+    = close
             ~ thirdStory = Ended
+            ~ thirdCharacterInkLevel = Empty
             ~ movementsCounter = 0
+            ~ numberQuestion = 0
             ~ PG_advance_management(thirdStoryPG)
-        -> main  
+            -> main
     
 === third_char_story_ended
 ~ temp charNameThree = translator(thirdCharacterState)
