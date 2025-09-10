@@ -108,15 +108,14 @@ VAR purple  = ()
             ~ blue = firstBlue
             ~ yellow = firstYellow
             ~ purple = firstPurple
-            ~ playerFirstStory = ()
-    
+            
         - char == secondStoryPG:
             ~ red = secondRed
             ~ green = secondGreen
             ~ blue = secondBlue
             ~ yellow = secondYellow
             ~ purple = secondPurple
-            ~ playerSecondStory = ()
+            
     
     }
 
@@ -139,10 +138,12 @@ VAR purple  = ()
             
             {
                 - char == firstStoryPG:
-                   ~ playerFirstStory += greenStatus
+                    ~ playerFirstStory = ()
+                    ~ playerFirstStory += greenStatus
                    {debug: Lo status di playerFirstStory è {playerFirstStory}}
                 
                 - char == secondStoryPG:
+                    ~ playerSecondStory = ()
                     ~ playerSecondStory += greenStatus
                 // - char == thirdStory:
                 //     ~ playerThirdStory += greenStatus
@@ -157,10 +158,12 @@ VAR purple  = ()
         - (playerBlue > playerGreen) && (playerBlue > playerRed) && (playerBlue > playerYellow) && (playerBlue > playerPurple):
             {
                 - char == firstStoryPG:
+                    ~ playerFirstStory = ()
                     ~ playerFirstStory += blueStatus
                     {debug: Lo status di playerFirstStory è {playerFirstStory}}
                 
                 - char == secondStoryPG:
+                    ~ playerSecondStory = ()
                     ~ playerSecondStory += blueStatus
                 
                 // - char == thirdStory:
@@ -176,10 +179,12 @@ VAR purple  = ()
         - (playerRed > playerGreen) && (playerRed > playerBlue) && (playerRed > playerYellow) && (playerRed > playerPurple):
             {
                 - char == firstStoryPG:
+                    ~ playerFirstStory = ()
                     ~ playerFirstStory += redStatus
                     {debug: Lo status di playerFirstStory è {playerFirstStory}}
                 
                 - char == secondStoryPG:
+                    ~ playerSecondStory = ()
                     ~ playerSecondStory += redStatus
                 
                 // - char == thirdStory:
@@ -195,10 +200,12 @@ VAR purple  = ()
         - (playerYellow > playerGreen) && (playerYellow > playerBlue) && (playerYellow > playerRed) && (playerYellow > playerPurple):
             {
                 - char == firstStoryPG:
+                    ~ playerFirstStory = ()
                     ~ playerFirstStory += yellowStatus
                     {debug: Lo status di playerFirstStory è {playerFirstStory}}
                 
                 - char == secondStoryPG:
+                    ~ playerSecondStory = ()
                     ~ playerSecondStory += yellowStatus
                 
                 // - char == thirdStory:
@@ -214,10 +221,12 @@ VAR purple  = ()
         - (playerPurple > playerGreen) && (playerPurple > playerBlue) && (playerPurple > playerRed) && (playerPurple > playerYellow):
             {
                 - char == firstStoryPG:
+                    ~ playerFirstStory = ()
                     ~ playerFirstStory += purpleStatus
                     {debug: Lo status di playerFirstStory è {playerFirstStory}}
                 
                 - char == secondStoryPG:
+                    ~ playerSecondStory = ()
                     ~ playerSecondStory += purpleStatus
                 
                 // - char == thirdStory:
@@ -233,10 +242,12 @@ VAR purple  = ()
         - else:
             {
                 - char == firstStoryPG:
+                    ~ playerFirstStory = ()
                     ~ playerFirstStory += mixedStatus
                     {debug: Lo status di playerFirstStory è {playerFirstStory}}
                     
                 - char == secondStoryPG:
+                    ~ playerSecondStory = ()
                     ~ playerSecondStory += mixedStatus
                     
                 // - char == thirdStory:
