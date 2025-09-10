@@ -1408,7 +1408,7 @@
             ~ movementsCounter = 0
             ~ PG_advance_management(firstStoryPG)
             ~ numberQuestion = 0
-            //~ firstCharacterInkLevel = Empty
+            ~ firstCharacterInkLevel = Empty
         -> main  
         
     
@@ -1430,16 +1430,13 @@
         -> main
         
         = goodbye
-        ~ temp charNameOne = translator(firstCharacterState)
-        Ama: è il momento di tornare a casa. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-        {firstCharacterPossibleStates hasnt Chitarra: Non ho idea di che cosa accadrà, sinceramente, ma almeno ora mi sento pronta.}
-        {firstCharacterPossibleStates hasnt Chitarra: E non cringiare ma: grazie. Mi hai dato una mano enorme. Me lo ricorderò.}
-        {firstCharacterPossibleStates has Chitarra:Vedremo cosa mi accadrà.}
-            
-            ~ move_entity(FirstCharacter, Safekeeping)
-            //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
-            
-
+            ~ temp charNameOne = translator(firstCharacterState)
+            Ama: è il momento di tornare a casa. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+            {firstCharacterPossibleStates hasnt Chitarra: Non ho idea di che cosa accadrà, sinceramente, ma almeno ora mi sento pronta.}
+            {firstCharacterPossibleStates hasnt Chitarra: E non cringiare ma: grazie. Mi hai dato una mano enorme. Me lo ricorderò.}
+            {firstCharacterPossibleStates has Chitarra:Vedremo cosa mi accadrà.}
+                ~ move_entity(FirstCharacter, Safekeeping)
+                //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             
         -> main
 

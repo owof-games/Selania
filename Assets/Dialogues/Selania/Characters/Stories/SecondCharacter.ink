@@ -1889,7 +1889,7 @@
         -> close  
     
     = close
-            //~ secondCharacterInkLevel = Empty
+            ~ secondCharacterInkLevel = Empty
             ~ numberQuestion = 0
             ~ secondStory = Ended
             ~ movementsCounter = 0
