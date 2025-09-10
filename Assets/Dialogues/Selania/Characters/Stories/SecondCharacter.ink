@@ -104,27 +104,28 @@
                 
             - not three:
                 -> three
+                
             - not four:
                 -> four
+
             - not five:
-                {   //Se passo dallo storylet dedicato della mentore
-                    - watering_can_storylet:
-                        -> five
-                    //Altrimenti
-                    - else:
-                        -> she_hates_me
-                }
-                
-            - not six:
-                //Lo storylet non parte se siamo allo stagno.
                 {
                     - entity_location(PG) == Pond:
                         {~ C'è una cosa che voglio dirti, ma te la dico quando non sarò allo stagno.}
                         -> main
                     - else: 
+                        -> five
+                }                
+            
+            - not six:
+                {   //Se passo dallo storylet dedicato della mentore
+                    - watering_can_storylet:
                         -> six
+                    //Altrimenti
+                    - else:
+                        -> she_hates_me
                 }
-
+                
             - not seven:
                 -> seven
             - not eight:
@@ -367,81 +368,7 @@
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         ~ change_entity_place(Mentor)
-        
         ~ secondStoryQuestCount ++
-        
-        Prima ho visto una rana allo stagno. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
-        E so tutto sulle rane.
-        Che mica chiudono gli occhi per dormire.
-        E che alcune sono velenose.
-        E velenoso e tossico non sono la stessa cosa.
-        Nonna dice che se lo lecchi e stai male, è tossico.
-        Se lo tocchi e stai male, è velenoso.
-        E se ti guarda e stai male, è mamma.
-        {are_two_entities_together(FirstCharacter, PG): Questo shade sicuro che me lo riciclo.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-        {are_two_entities_together(FirstCharacter, PG): Povera mamma.}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
-        E so altre cose sulle rane. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
-        Ma non ho mai visto una rana parlare.
-        O fare dei regali.
-        E quella dello stagno mi ha parlato.
-        Ma mi ha detto che il regalo è per te invece.
-        
-            + [Se qualcosa non è mai accaduta, non è per forza impossibile.]
-                Quindi mi credi?
-                Quindi tutto è possibile?
-                Anche che salto e volo?
-                O che la serra diventa di cioccolato?
-                O che la mentore faccia una battuta carina?
-                    ~ secondBlue ++
-                
-            + [Speriamo sia il nuovo Super Wario!]
-                Posso giocarci anche io?
-                Ma dove lo attacchiamo?
-                Qui non ci sono TV.
-                Però lo stagno sbrilluccica.
-                Forse la rana lo trasforma in uno schermo!
-                    ~ secondYellow ++
-                
-            + [{charNameTwo}, se continui con le balle non mi fido più di te!]
-                Non sono balle!
-                Mi piacciono gli animali.
-                Non mi serve inventare altri animali perché quelli che ci sono mi piacciono già.
-                La rana c'è, vai a vedere!
-                    ~ secondRed ++
-
-                
-            + [Sembra una rana molto gentile.]
-                A me mi sta simpatica.
-                E non credo sia tossica o velenosa.
-                Però anche io vorrei un regalo.
-                Se non ti piace mi dai quello che ti dà?
-                Spero tanto sia un cucciolo.
-                O la Play!
-                    ~ secondGreen ++
-  
-                
-            + [E se lo senti e prudono le orecchie è una bugia.]
-                Non è una bugia!
-                Perché non mi credi?
-                Non siamo amici?
-                Ti giuro che c'è una rana nello stagno!
-                    ~ secondPurple ++
- 
-            - (theFrog)
-             ~ secondPauseTalking = secondCharPauseDuration
-             
-                -> main
-    
-    = four
-    //Non mettere cose TW qui
-    //Obiettivo: mostrare che ha mentito all'inizio
-    //Contenuto: Ci chiede come ci chiamiamo, emerge una bugia diversa a seconda del genere -> Qui però scopriamo che ci mente, possiamo decidere di mettere in evidenza o meno questa bugia, solitudine.
-    ~ temp charNameTwo = translator(secondCharacterState)
-    ~ temp charNameFive = translator(fifthCharacterState)
-    ~ temp charNameOne = translator(firstCharacterState)
-    ~ change_entity_place(Mentor)
-    ~ secondStoryQuestCount ++
-
         
         Mica mi hai detto come ti chiami.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
             
@@ -487,7 +414,7 @@
             	  E così l'ho regalata a mio fratello.
             	  E quando vado a trovarlo posso vederla.
             	  E posso giocare con la Switch.
-        	    -> four_continue
+        	    -> three_continue
         	  
         	  = her_liar
         	  ~ temp charNameTwo = translator(secondCharacterState)
@@ -507,7 +434,7 @@
             	  Pensava che non le voglio bene.
             	  Ma poi lei oggi si è dimenticata il mio compleanno.
             	  Non so nemmeno se sa che sono qui.
-        	    -> four_continue
+        	    -> three_continue
         	  
         	  = they_liar
         	  ~ temp charNameTwo = translator(secondCharacterState)
@@ -522,10 +449,10 @@
         	        Ma preferisco le tartarughe ninja.
         	        Così poi vedo i coccodrilli delle fogne.
                     Non ho mai visto un coccodrillo.
-                -> four_continue
+                -> three_continue
        
        
-        = four_continue 
+        = three_continue 
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameOne = translator(firstCharacterState)
             //Definire meglio in base ai colori.
@@ -596,22 +523,21 @@
             -
              ~ secondPauseTalking = secondCharPauseDuration
             -> main
+        
+        
+
     
-    
-    
-    
-    = five
+    = four
     //Non mettere cose TW qui
-    //Obiettivo: Far vedere che c'è qualcosa che non va a casa.
-    //Contenuto: Momento di vulnerabilità, ci parla della nonna (ma non ci dice che è morta) e ci dice che è fuggito da casa.
+    //Obiettivo: mostrare che ha mentito all'inizio
+    //Contenuto: Ci chiede come ci chiamiamo, emerge una bugia diversa a seconda del genere -> Qui però scopriamo che ci mente, possiamo decidere di mettere in evidenza o meno questa bugia, solitudine.
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ temp charNameOne = translator(firstCharacterState)
     ~ change_entity_place(Mentor)
-    
     ~ secondStoryQuestCount ++
-        -> secondAffinityCheckCalc ->
-        
+    
+            -> secondAffinityCheckCalc ->
         Nonna non mi tratta mai come un bambino.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         Mi ha anche insegnato come barare a carte.
         E come aprire il cassetto dei dolci di mamma.
@@ -687,11 +613,92 @@
         A parte {charNameFive}.
         Ti prometto che non dirò più bugie.
         Ora però lasciami solo.
+
+            -> main
         
+        
+    
+    
+    
+    
+    = five
+    //Non mettere cose TW qui
+    //Obiettivo: Far vedere che c'è qualcosa che non va a casa.
+    //Contenuto: Momento di vulnerabilità, ci parla della nonna (ma non ci dice che è morta) e ci dice che è fuggito da casa.
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ change_entity_place(Mentor)
+    
+    ~ secondStoryQuestCount ++
+
+    Prima ho visto una rana allo stagno. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+        E so tutto sulle rane.
+        Che mica chiudono gli occhi per dormire.
+        E che alcune sono velenose.
+        E velenoso e tossico non sono la stessa cosa.
+        Nonna dice che se lo lecchi e stai male, è tossico.
+        Se lo tocchi e stai male, è velenoso.
+        E se ti guarda e stai male, è mamma.
+        {are_two_entities_together(FirstCharacter, PG): Questo shade sicuro che me lo riciclo.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        {are_two_entities_together(FirstCharacter, PG): Povera mamma.}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+        E so altre cose sulle rane. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+        Ma non ho mai visto una rana parlare.
+        O fare dei regali.
+        E quella dello stagno mi ha parlato.
+        Ma mi ha detto che il regalo è per te invece.
+        
+            + [Se qualcosa non è mai accaduta, non è per forza impossibile.]
+                Quindi mi credi?
+                Quindi tutto è possibile?
+                Anche che salto e volo?
+                O che la serra diventa di cioccolato?
+                O che la mentore faccia una battuta carina?
+                    ~ secondBlue ++
+                
+            + [Speriamo sia il nuovo Super Wario!]
+                Posso giocarci anche io?
+                Ma dove lo attacchiamo?
+                Qui non ci sono TV.
+                Però lo stagno sbrilluccica.
+                Forse la rana lo trasforma in uno schermo!
+                    ~ secondYellow ++
+                
+            + [{charNameTwo}, se continui con le balle non mi fido più di te!]
+                Non sono balle!
+                Mi piacciono gli animali.
+                Non mi serve inventare altri animali perché quelli che ci sono mi piacciono già.
+                La rana c'è, vai a vedere!
+                    ~ secondRed ++
+
+                
+            + [Sembra una rana molto gentile.]
+                A me mi sta simpatica.
+                E non credo sia tossica o velenosa.
+                Però anche io vorrei un regalo.
+                Se non ti piace mi dai quello che ti dà?
+                Spero tanto sia un cucciolo.
+                O la Play!
+                    ~ secondGreen ++
+  
+                
+            + [E se lo senti e prudono le orecchie è una bugia.]
+                Non è una bugia!
+                Perché non mi credi?
+                Non siamo amici?
+                Ti giuro che c'è una rana nello stagno!
+                    ~ secondPurple ++
+ 
+            - (theFrog)
+                         
             //Leviamo l'innaffiatoio
             ~ move_entity(WateringCan, Safekeeping)
             ~ secondPauseTalking = secondCharPauseDuration
-            -> main
+            
+                -> main
+    
+
+    
     
     = six
     //Non mettere cose TW qui
