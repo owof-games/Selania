@@ -8,7 +8,7 @@
     LIST firstCharacterPossibleStates = Chitarra, Triangolo, RagazzaOrchestra, FlautoDolce, Ocarina, Violino
     VAR firstCharacterState = Chitarra
     
-    VAR minStoryQuesTCountFirstChar = 3
+    VAR minStoryQuesTCountFirstChar = 7
     
     
     VAR firstStory = NotStarted
@@ -23,7 +23,7 @@
     
 //Variabili per mettere in pausa la conversazione
     VAR firstPauseTalking = 0
-    VAR firstCharPauseDuration = 3
+    VAR firstCharPauseDuration = 1
     
 //Variabile per il countdown per la sua uscita di scena
     VAR firstCharEndingDialogue = 0
