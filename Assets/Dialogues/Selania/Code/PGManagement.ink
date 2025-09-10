@@ -12,6 +12,14 @@
     VAR playerGreen = 0
     VAR playerRed = 0
 
+//Per funzione aggiornamento colore
+    VAR red = ()
+    VAR green = ()
+    VAR blue = ()
+    VAR yellow = ()
+    VAR purple  = ()    
+    
+
 // Tracciamento esiti
     LIST playerStatus = emptyStatus, blueStatus, purpleStatus, greenStatus, yellowStatus, redStatus, mixedStatus
     LIST statusPGEndingStories = firstStoryPG, secondStoryPG, thirdStoryPG, fourthStoryPG, fifthStoryPG
@@ -94,12 +102,63 @@
         - 
             ->->
 
-=== function PG_advance_management(char)
-VAR red = ()
-VAR green = ()
-VAR blue = ()
-VAR yellow = ()
-VAR purple  = ()
+=== function PG_advance_management(charES)
+{debug: <i>Passo per PG_advance_managemente. Il valore di charES è {charES}.}
+
+{
+	- LIST_COUNT(endedStories) == 1:
+	   {debug: <i>L'elenco di oggetti nella lista endendStories è {endedStories}, pari a 1. Per questo vado ad assegnare il valore di prima storia finita a {charES}.}
+		~ char = firstStoryPG
+		{
+			- charES == firstStoryPG:
+				~ charOneEnding = firstEnd
+			{debug: <i>Dato che charES coincide con {charES}. Il valore di charOneEnding è {charOneEnding}.}
+			
+			- charES == secondStoryPG:
+				~ charTwoEnding = firstEnd
+			{debug: <i>Dato che charES coincide con {charES}. Il valore di charTwoEnding è {charTwoEnding}.}
+						
+			- charES == thirdStoryPG:
+				~ charThreeEnding = firstEnd
+			{debug: <i>Dato che charES coincide con {charES} Il valore di charThreeEnding è {charThreeEnding}.}	
+		}
+		
+	- LIST_COUNT(endedStories) == 2:
+		~ char = secondStoryPG
+		{
+			- charES == firstStoryPG:
+				~ charOneEnding = secondEnd
+			{debug: <i>Dato che charES coincide con {charES}. Il valore di charOneEnding è {charOneEnding}.}	
+			
+			- charES == secondStoryPG:
+				~ charTwoEnding = secondEnd
+			{debug: <i>Dato che charES coincide con {charES}. Il valore di charTwoEnding è {charTwoEnding}.}	
+			
+			- charES == thirdStoryPG:
+				~ charThreeEnding = secondEnd
+			{debug: <i>Dato che charES coincide con {charES} Il valore di charThreeEnding è {charThreeEnding}.}	
+		}		
+		
+		
+	 - LIST_COUNT(endedStories) == 3:
+		 ~char = thirdStoryPG
+		{
+			- charES == firstStoryPG:
+				~ charOneEnding = thirdEnd
+			
+			- charES == secondStoryPG:
+				~ charTwoEnding = thirdEnd
+			
+			- charES == thirdStoryPG:
+				~ charThreeEnding = thirdEnd	
+		}		 
+		 
+		 
+		 
+}
+
+
+{debug: <i>Ho finito di assegnare l'ordine di conclusione delle storie, e passo ad aggiornare i colori.}
 
     {
         - char == firstStoryPG:
@@ -145,6 +204,7 @@ VAR purple  = ()
                 - char == secondStoryPG:
                     ~ playerSecondStory = ()
                     ~ playerSecondStory += greenStatus
+                    {debug: Lo status di playerSecondStory è {playerSecondStory}}    
                 // - char == thirdStory:
                 //     ~ playerThirdStory += greenStatus
                 // - char == fourthStory:
@@ -165,6 +225,7 @@ VAR purple  = ()
                 - char == secondStoryPG:
                     ~ playerSecondStory = ()
                     ~ playerSecondStory += blueStatus
+                    {debug: Lo status di playerSecondStory è {playerSecondStory}}  
                 
                 // - char == thirdStory:
                 //     ~ playerThirdStory += blueStatus
@@ -186,6 +247,7 @@ VAR purple  = ()
                 - char == secondStoryPG:
                     ~ playerSecondStory = ()
                     ~ playerSecondStory += redStatus
+                    {debug: Lo status di playerSecondStory è {playerSecondStory}}  
                 
                 // - char == thirdStory:
                 //     ~ playerThirdStory += redStatus
@@ -207,6 +269,7 @@ VAR purple  = ()
                 - char == secondStoryPG:
                     ~ playerSecondStory = ()
                     ~ playerSecondStory += yellowStatus
+                    {debug: Lo status di playerSecondStory è {playerSecondStory}}  
                 
                 // - char == thirdStory:
                 //     ~ playerThirdStory += yellowStatus
@@ -228,6 +291,7 @@ VAR purple  = ()
                 - char == secondStoryPG:
                     ~ playerSecondStory = ()
                     ~ playerSecondStory += purpleStatus
+                    {debug: Lo status di playerSecondStory è {playerSecondStory}}  
                 
                 // - char == thirdStory:
                 //     ~ playerThirdStory += purpleStatus
@@ -249,6 +313,7 @@ VAR purple  = ()
                 - char == secondStoryPG:
                     ~ playerSecondStory = ()
                     ~ playerSecondStory += mixedStatus
+                    {debug: Lo status di playerSecondStory è {playerSecondStory}}  
                     
                 // - char == thirdStory:
                 //     ~ playerThirdStory += mixedStatus

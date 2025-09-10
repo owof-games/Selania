@@ -1936,7 +1936,9 @@
             ~ numberQuestion = 0
             ~ secondStory = Ended
             ~ movementsCounter = 0
+            ~ endedStories += secondES
             ~ PG_advance_management(secondStoryPG)
+            
     -> main
     
     

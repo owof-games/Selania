@@ -965,6 +965,7 @@
     
     = close
             ~ fifthStory = Ended
+            ~ endedStories += fifthES
             ~ fifthCharacterInkLevel = Empty
             ~ movementsCounter = 0
             ~ numberQuestion = 0

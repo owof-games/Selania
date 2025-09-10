@@ -8,7 +8,11 @@
     LIST firstCharacterPossibleStates = Chitarra, Triangolo, RagazzaOrchestra, FlautoDolce, Ocarina, Violino
     VAR firstCharacterState = Chitarra
     
+    VAR minStoryQuesTCountFirstChar = 3
+    
+    
     VAR firstStory = NotStarted
+    VAR charOneEnding = ()
 
 //Tracciamento del dono
     VAR firstGift = ()

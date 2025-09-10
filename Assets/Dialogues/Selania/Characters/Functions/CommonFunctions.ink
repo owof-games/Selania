@@ -4,9 +4,13 @@
 
  ----------------------------------*/
     LIST storyStates = NotStarted, Active, Ended
-    VAR minStoryQuesTCountFirstChar = 7
-    VAR minStoryQuesTCountSecondChar = 8
+
     
+    //Gestione parte dell'albero collegata e recap finale
+    LIST endedStories = firstES, secondES, thirdES, fourthES, fifthES
+    LIST endingOrders = firstEnd, secondEnd, thirdEnd, fourthEnd, fifthEnd
+    VAR char = ()
+
 //COME PROMEMORIA. LISTA DI TIPI DI TONO CHE POSSIAMO TENERE IN UNA CONVERSAZIONE: ROSSO (RABBIA, PASSIONE, AZIONE, OPPOSIZIONE). VIOLA (SPIRITUALITA', VISIONE DEL GRANDE SCHEMA DELLE COSE, SGUARDO POETICO, TESA VERSO UNA MISSIONE). GIALLO (GIOCOSITA', RISATA, DIVERTIMENTO, FANCIULLEZZA). VERDE (CUORE, AFFETTI, CURA DELLE PERSONE CARE, RIFLESSIONE EMOTIVA). BLU (RAZIONALITA', CALCOLO, VISIONE PRATICA, DISCIPLINA).
 
 //Attesa comparsa prima personaggia

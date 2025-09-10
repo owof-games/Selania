@@ -10,7 +10,8 @@
     
     
     VAR fourthStory = NotStarted
-    
+    VAR charFourEnding = ()
+   
 //Tracciamento del dono
     VAR fourthGift = ()
     

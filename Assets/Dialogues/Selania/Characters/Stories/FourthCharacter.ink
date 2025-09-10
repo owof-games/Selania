@@ -783,6 +783,7 @@
     
     = close
             ~ fourthStory = Ended
+            ~ endedStories += fourthES
             ~ fourthCharacterInkLevel = Empty
             ~ movementsCounter = 0
             ~ numberQuestion = 0

@@ -9,7 +9,8 @@
     VAR thirdCharacterState = SpettroDelVuoto
     
     VAR thirdStory = NotStarted
-    
+    VAR charThreeEnding = ()
+   
 //Tracciamento del dono
     VAR thirdGift = ()   
     

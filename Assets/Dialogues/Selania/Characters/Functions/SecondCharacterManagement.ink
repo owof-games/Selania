@@ -8,8 +8,11 @@
     LIST secondCharacterPossibleStates = Riccio, Grizzly, Lupo, Delfino, Capibara, Corvo
     VAR secondCharacterState = Riccio
     
-    VAR secondStory = NotStarted
+    VAR minStoryQuesTCountSecondChar = 8
     
+    VAR secondStory = NotStarted
+    VAR charTwoEnding = ()
+
 //Tracciamento del dono
     VAR secondGift = ()
     

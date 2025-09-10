@@ -1407,12 +1407,15 @@
         E ora resterò qui a romperti le gonadi ancora per un po', in attesa del prossimo treno. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
             -> close
         
-    = close    
+    = close   
+            ~ endedStories += firstES
             ~ firstStory = Ended
             ~ movementsCounter = 0
             ~ PG_advance_management(firstStoryPG)
             ~ numberQuestion = 0
             ~ firstCharacterInkLevel = Empty
+            
+        
         -> main  
         
     
