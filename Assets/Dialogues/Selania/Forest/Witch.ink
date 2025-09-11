@@ -16,17 +16,17 @@
     
     {
         //Check per intro
-        - not intro && (firstStory == Ended) or (secondStory == Ended) or (thirdStory == Ended):
+        - not intro && ((firstStory == Ended) or (secondStory == Ended) or (thirdStory == Ended)):
             -> intro
     }
     
     {
         //Check post storie dopo l'intro
-        - intro && firstStory == Ended:
+        - intro && firstStory == Ended && not first_story_ended_check:
             -> first_story_ended_check
-        - intro && secondStory == Ended:
+        - intro && secondStory == Ended && not second_story_ended_check:
             -> second_story_ended_check
-        - intro && thirdStory == Ended:
+        - intro && thirdStory == Ended && not third_story_ended_check:
             -> third_story_ended_check
         - intro && fourthStory == Ended:
             -> fourth_story_ended_check
@@ -123,7 +123,7 @@
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {came_from(->intro): <i>Che ha compiuto qualcosa per la prima volta.</i>|<i>Riaccogliamo con piacere {name}, per quanto non si sia mai davvero {pronouns has him: allontanato|{pronouns has her: allontanata|allontanatə}}.}
+        {came_from(->intro):<i>Che ha compiuto qualcosa per la prima volta.</i>|<i>Riaccogliamo con piacere {name}, per quanto non si sia mai davvero {pronouns has him: allontanato|{pronouns has her: allontanata|allontanatə}}.}
         
         
         <i>Osserviamo {name} e ci chiediamo cosa provi dopo aver aiutato {charNameOne}.</i>
@@ -188,7 +188,8 @@
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        {came_from(->intro): <i>Che ha compiuto qualcosa per la prima volta.</i>|<i>Riaccogliamo con piacere {name}, per quanto non si sia mai davvero {pronouns has him: allontanato|{pronouns has her: allontanata|allontanatə}}.}
+        {came_from(->intro):<i>Che ha compiuto qualcosa per la prima volta.</i>}
+        {not came_from(->intro):<i>Riaccogliamo con piacere {name}, per quanto non si sia mai davvero {pronouns has him: allontanato|{pronouns has her: allontanata|allontanatə}}.}
         
         <i>I nostri rami saggiano il cielo.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>L'aria finalmente ci rinfresca.</i>
@@ -329,17 +330,17 @@
     
     = one
     //Contenuti iniziali
-        <i>{~ Il tronco persevera nella memoria.|La corteccia tenace resiste alla dimenticanza.|Formiche inquiete si nascondono nelle scalanature della corteccia.}</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>{~Il tronco persevera nella memoria.|La corteccia tenace resiste alla dimenticanza.|Formiche inquiete si nascondono nelle scalanature della corteccia.}</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     
     = two
     //Contenuti dopo la fine della prima storia
-        <i>{~ Le radici hanno trovato vecchi tesori.|I bruchi solleticano le giovani radici.|Porcellini di terra si riparano tra le nostre radici.}</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>{~Le radici hanno trovato vecchi tesori.|I bruchi solleticano le giovani radici.|Porcellini di terra si riparano tra le nostre radici.}</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
 
     = three
     //Contenuti dopo la fine della seconda storia
-        <i>{~ I rami sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba osserva lontana dalla base della pianta.}</i>  #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>{~I rami sono spine verso il cielo.|Non si vedono radici.|Il tronco si torce inquieto.|L'erba osserva lontana dalla base della pianta.}</i>  #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
 
     = four

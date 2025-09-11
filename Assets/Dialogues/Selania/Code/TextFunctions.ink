@@ -1,6 +1,6 @@
 //Per cambiare il testo a seconda della provenienza
 === function came_from(-> x)
-	~ return TURNS_SINCE(x) == 0
+	~ return TURNS_SINCE(x) == 1
 	
 	
                     /* ---------------------------------
