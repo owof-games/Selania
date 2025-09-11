@@ -307,12 +307,12 @@
             {
                 - char == firstStoryPG:
                     ~ playerFirstStory = ()
-                    ~ playerFirstStory += mixedStatus
+                    ~ playerFirstStory += yellowStatus
                     {debug: Lo status di playerFirstStory è {playerFirstStory}}
                     
                 - char == secondStoryPG:
                     ~ playerSecondStory = ()
-                    ~ playerSecondStory += mixedStatus
+                    ~ playerSecondStory += yellowStatus
                     {debug: Lo status di playerSecondStory è {playerSecondStory}}  
                     
                 // - char == thirdStory:
