@@ -99,8 +99,9 @@
         Spero che lì vada tutto bene.
         E che {charNameFive} non sia sempre pesantona.
         Alla prossima lettera.
+         @animation:RewriterBook
         <i>{charNameOne}</i>
-        @animation:RewriterBook
+       
         ~ firstWritingPause = firstWritingPauseDuration
             -> main
     
@@ -144,9 +145,10 @@
     E lì invece? Come stanno le tue piante?
     Sono arrivate nuove persone interessanti?
     Sicuro, mai quanto me!
+     @animation:RewriterBook
     A presto, <i>{charNameOne}</i>.
         ~ firstWritingPause = firstWritingPauseDuration
-    @animation:RewriterBook    
+       
         -> main
         
     = three
@@ -211,8 +213,9 @@
         }
     Comunque un giorno mi piacerebbe che la musica, questa musica arrivasse anche dalle vostre parti.
     O che, quando te ne andrai da lì, verrai ad ascoltarla con me.
+     @animation:RewriterBook
     Un saluto.
-    @animation:RewriterBook
+
     {charNameOne}.
     -> main
     
@@ -300,7 +303,7 @@
                     E mi ha insegnato a fare i muffin.
                     Mi sono divertito tanto.
                     E voglio portartene uno.
-                    A presto!
+                  
     
                 - secondCharacterPossibleStates has Delfino:
                     
@@ -314,7 +317,7 @@
                     Ma grossa grossa.
                     Quando l'ho ridetta a mio fratello è scoppiato a ridere.
                     Ma forse qui non te la scrivo, per ora.
-                    Ci vediamo!
+                   
                     
                 - secondCharacterPossibleStates has Capibara:
                     
@@ -331,7 +334,7 @@
                     Mi è dispiaciuto tantissimo aver fatto male al suo amico.
                     Però sono anche contento che mi hanno detto le cose per bene dopo tutti questi anni.
                     E tu hai paura di alcune persone?
-                    Ciao ciao!
+                    
                     
                 - secondCharacterPossibleStates has Corvo:
                     
@@ -344,8 +347,9 @@
                     Ma lui mi dice che la rabbia serve.
                     Va solo mandata nella giusta direzione.
                     Ti scriverò appena scopro qual è quella giusta e quale è quella sbagliata.
-                    Ciao!
+                
             }
+            Ciao ciao!
             @animation:RewriterBook    
             ~ secondWritingPause = secondWritingPauseDuration
                 -> main
@@ -454,6 +458,8 @@
                     {charNameTwo}.
             }    
             @animation:RewriterBook
+            Frase che separa animation da testo.
+            
             ~ secondWritingPause = secondWritingPauseDuration
                 -> main
     
@@ -573,6 +579,7 @@
                     
             }
         @animation:RewriterBook
+        Frase che separa animation da testo.
         ~ secondWritingPause = secondWritingPauseDuration
     
             -> main

@@ -719,8 +719,7 @@
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
                     -> main
-        + [Ora non me la sento.]
-              -> main
+
  
           
 

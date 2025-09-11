@@ -79,17 +79,17 @@
                 - not talk_with_first_character: 
                     Facciamo così: prova a parlare con la persona{entity_location(PG) == TrainStop: al nostro fianco.| che troverai alla <b>stazione del treno</b>.}
                     E poi torna da me.
+                    @animation:RewriterBook
                     Nel frattempo raccolgo le foglie del giardino.
                         ~ firstPauseTalking = 0
-                        @animation:RewriterBook
                         ~ move_entity(FifthRecap, BookPlace)
                         ~ move_entity(RulesRecap, BookPlace)
                     -> main
                 
                 - talk_with_first_character:
                     Ma sei super sul pezzo! Sembra che {charNameOne} ti abbia già raccontato qualcosa di sè!
-                    Cavolo, sei qui da pochissimo e già mi rendi orgogliosa di te!
                     @animation:RewriterBook
+                    Cavolo, sei qui da pochissimo e già mi rendi orgogliosa di te!
                         ~ move_entity(FifthRecap, BookPlace)
   
                         -> gifts_and_ink
@@ -199,6 +199,7 @@
         
             Ora devo continuare a sbloccare un vecchio sentiero.
             Questo posto morirebbe senza me.
+            @animation:RewriterBook
             Quando avrai conquistato la fiducia di {charNameOne} e le avrai donato qualcosa, torna da me per le ultime istruzioni.
                 {
                 - not cultivable_test: Uh, che sbadata! Ti servirà di sicuro qualcosa per raccogliere gli oggetti!
@@ -218,7 +219,6 @@
             {not cultivable_test: Ecco, prendi!| Spero non sia qualcosa che hai trovato in giro: questo posto è delicato.}
                 - (sbadata)
             
-            @animation:RewriterBook
             ~ move_entity(RulesRecap, BookPlace)      
             ~ firstPauseTalking = 0
                 -> main

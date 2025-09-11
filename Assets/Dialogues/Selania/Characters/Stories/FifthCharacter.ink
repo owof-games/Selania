@@ -163,9 +163,8 @@
             -
         {firstStory hasnt Ended: Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di mobili rotti che blocca il sentiero a ovest della foresta.|Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}
         È arrivato il momento di capire dove possa portare.
-        Grazie per la chiacchierata, {name}.
-        
         @animation:RewriterBook
+        Grazie per la chiacchierata, {name}.
         
              ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
@@ -224,10 +223,9 @@
         Questo luogo continua a stupirmi.
         Sei qui per aiutare le altre persone, e finisci per scoprire cose di te.
         Ma ora è il momeno di svuotare lo stagno dalle sue cose più schifose.
-        Prega per me, {name}.
-        
         @animation:RewriterBook
-        
+        Prega per me, {name}.
+                
              ~ fifthPauseTalking = fifthCharPauseDuration
                 -> main
 
@@ -280,10 +278,9 @@
  
             -
             Ma basta con questo spirito malinconico!
-            Mi sono appena ricordata che ci sono delle erbacce fastidiose sotto la poltrona della biblioteca,
-            Devo inventarmi un modo per liberarmene!
-            
+            Mi sono appena ricordata che ci sono delle erbacce fastidiose sotto la poltrona della biblioteca.
             @animation:RewriterBook
+            Devo inventarmi un modo per liberarmene!
             
                 ~ fifthPauseTalking = fifthCharPauseDuration
                     -> main
@@ -352,9 +349,9 @@
         Il problema è che mi sono fatta coinvolgere.
         Una mentore deve mantenere un certo distacco per guidarti.
         Non può essere emotiva.
-        Vado a riordinare in ordine di data i libri in biblioteca.
-        
         @animation:RewriterBook
+        Vado a riordinare in ordine di data i libri in biblioteca.
+    
         
              ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
@@ -433,9 +430,8 @@
         Soprattutto qui.
         Amore per noi.
         Vado a recuperare del terriccio dal sottobosco, {name}.
-        Parleremo più tardi.
-        
         @animation:RewriterBook
+        Parleremo più tardi.
         
         ~ fifthPauseTalking = fifthCharPauseDuration
             -> main

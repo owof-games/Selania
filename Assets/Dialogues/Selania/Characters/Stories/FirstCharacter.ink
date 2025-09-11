@@ -325,10 +325,9 @@
          Cammina così tanto, e per cosa poi?
         {are_two_entities_together(Mentor, PG): Non hai idea di quanto lavoro ci sia da fare. Quindi sì, cammino MOLTO.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
          Ma troppe chiacchiere ora, troppe.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-         Fammi chillare un attimo.
-         
-         @animation:RewriterBook
-         
+        @animation:RewriterBook
+        Fammi chillare un attimo.
+                  
             ~ firstPauseTalking = firstCharPauseDuration
             -> main  
             
@@ -392,10 +391,9 @@
          E dato che nessunə amə ha la stessa opinione delle altre, finirò per deluderne qualcunə.
          Sono la mia famiglia, loro.
          E nessuna di queste scelte può accontentare tutt3.
-         Che rottura di ovaie, {name}!
-         
          @animation:RewriterBook
-         
+         Che rottura di ovaie, {name}!
+
             ~ firstPauseTalking = firstCharPauseDuration
             -> main
         
@@ -449,10 +447,11 @@
             -
          Idea!
          Forse la mentore è abbastanza vecchia da avere una radio?
+
+         @animation:RewriterBook
+
         {are_two_entities_together(Mentor, PG): Non approfittare della mia gentilezza, ragazzina.} #speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         {are_two_entities_together(Mentor, PG): Dai, si fa per il meme!| Devo assolutamente chiederglielo.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-        
-        @animation:RewriterBook
         
              ~ firstPauseTalking = firstCharPauseDuration
             -> main 
@@ -516,10 +515,10 @@
                         ~ firstYellow ++        
                 -
          Fammi rilassare un po' ama.
+         @animation:RewriterBook
          E magari riposa anche tu.
          
-         @animation:RewriterBook
-         
+    
             ~ firstPauseTalking = firstCharPauseDuration
             -> main
         
@@ -584,9 +583,9 @@
             
             -
          A proposito di cause perse: vado a cercarmi uno spritz.
-         Ho proprio bisogno di staccare.
-         
          @animation:RewriterBook
+         Ho proprio bisogno di staccare.
+        
          
             ~ firstPauseTalking = firstCharPauseDuration
             -> main
@@ -642,6 +641,8 @@
                     ~ firstRed ++
             -
             @animation:RewriterBook
+            Cosa scritta per non attaccare animation a altro
+
              ~ firstPauseTalking = firstCharPauseDuration
             -> main           
     = eight
@@ -705,9 +706,9 @@
             -
          Comunque non sono di certo qui per il Ghiberti e le sue paranoie matematiche.
          Ma per capire perché sono in questo posto.
-         Mi prendo un po' di tempo per me, {name}.
-         
          @animation:RewriterBook
+         Mi prendo un po' di tempo per me, {name}.
+
             ~ firstPauseTalking = firstCharPauseDuration
             ~ bookBGVariations ++
             -> main
@@ -765,9 +766,9 @@
     
             -
          Vabbè.
-         Credo me ne starò qui ad aspettare questo finto temporale.
-         
          @animation:RewriterBook
+         Credo me ne starò qui ad aspettare questo finto temporale.
+
              ~ firstPauseTalking = firstCharPauseDuration
             -> main   
     = ten
@@ -829,10 +830,9 @@
          Comunque la storia poi è finita male, ovvio.
          I poliziotti ci hanno trascinate e bastonate e schedate.
          E soprattutto hanno tagliato gli alberi.
-         E sono tornata a sentirmi inutile.
-         
          @animation:RewriterBook
-         
+         E sono tornata a sentirmi inutile.
+     
             ~ firstPauseTalking = firstCharPauseDuration
             -> main
     
@@ -891,9 +891,8 @@
             -
             
          Lasciamo un po' solo ora, {name}.
-         Perché sto entrando in fase lamentosa e non ho voglia di cringiarti.
-         
          @animation:RewriterBook
+         Perché sto entrando in fase lamentosa e non ho voglia di cringiarti.
          
             ~ firstPauseTalking = firstCharPauseDuration
             -> main
@@ -954,9 +953,9 @@
             -    
             
          E con questa, ho finito di sputtanare la mia famiglia.
+         @animation:RewriterBook
           Vado a deprimermi da qualche parte.
-          
-          @animation:RewriterBook
+    
           
             ~ firstPauseTalking = firstCharPauseDuration
             -> main
@@ -1072,9 +1071,10 @@
          Lasciare che le altre persone scelgano per te.
          O che lo faccia il mondo.
          Ecco perché mi chiamo {charNameOne}: perché rimango nel medio, nella cosa più ovvia e cringe.
+         @animation:RewriterBook
          E lascio che le cose accadano.
             ~ growing ++
-            @animation:RewriterBook
+            
             
             + [Credo di sapere come aiutarti.]
                 -> statement
@@ -1434,7 +1434,7 @@
             
     = exit
     ~ temp charNameOne = translator(firstCharacterState)
-        E ora resterò qui a romperti le gonadi ancora per un po', in attesa del prossimo treno. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        E ora resterò qui a disturbarti ancora per un po', in attesa del prossimo treno. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
             -> close
         
     = close   
@@ -1444,6 +1444,7 @@
             ~ PG_advance_management(firstStoryPG)
             ~ numberQuestion = 0
             ~ firstCharacterInkLevel = Empty
+         A dopo {name}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral   
             @animation:RewriterBook
         
         -> main  

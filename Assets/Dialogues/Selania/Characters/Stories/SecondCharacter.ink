@@ -249,8 +249,9 @@
             
         Ma dove saranno i miei compagni di scuola? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
         Cercali!
+         @animation:RewriterBook
         A dopo!
-            @animation:RewriterBook
+           
             ~ secondPauseTalking = secondCharPauseDuration
             ~ move_entity(SecondRecap, BookPlace)
             -> main
@@ -356,9 +357,10 @@
         Se {charNameFive} non mi lascia in pace chiamo mio fratello.
         Lui è superforte.
         Ora lasciami in pace.
+         @animation:RewriterBook
         {are_two_entities_together(FirstCharacter, PG): Che merda essere bambini.}
         
-        @animation:RewriterBook
+       
         
              ~ secondPauseTalking = secondCharPauseDuration
             -> main
@@ -524,7 +526,9 @@
                     ~ secondPurple ++
  
             -
+
             @animation:RewriterBook
+            Separare animation da scritta
              ~ secondPauseTalking = secondCharPauseDuration
             -> main
         
@@ -616,9 +620,9 @@
         E nessuno si arrabbia con me.
         A parte {charNameFive}.
         Ti prometto che non dirò più bugie.
+         @animation:RewriterBook
         Ora però lasciami solo.
         
-        @animation:RewriterBook
         ~ secondPauseTalking = secondCharPauseDuration
             -> main
         
@@ -699,6 +703,7 @@
                          
             //Leviamo l'innaffiatoio
             @animation:RewriterBook
+            Frase che separa animaition e scritta
             ~ move_entity(WateringCan, Safekeeping)
             ~ secondPauseTalking = secondCharPauseDuration
             
@@ -819,6 +824,7 @@
             
             //Ricompare l'innaffiatoio
             @animation:RewriterBook
+            Frase che separa animaition e scritta
             ~ move_entity(WateringCan, Greenhouse)
             ~ secondPauseTalking = secondCharPauseDuration
                 -> main
@@ -904,6 +910,7 @@
  
             -
             @animation:RewriterBook
+            Frase che separa animaition e scritta
              ~ secondPauseTalking = secondCharPauseDuration
             -> main        
             
@@ -990,6 +997,7 @@
  
             -
             @animation:RewriterBook
+            Frase che separa animaition e scritta
             ~ bookBGVariations ++
             ~ secondPauseTalking = secondCharPauseDuration
             -> main    
@@ -1129,8 +1137,9 @@
                     ~ secondPurple ++
  
             -
-        Però mi piacerebbe fare il veterinario.
         @animation:RewriterBook
+        Però mi piacerebbe fare il veterinario.
+        
              ~ secondPauseTalking = secondCharPauseDuration
             -> main    
     
@@ -1212,6 +1221,7 @@
  
             -
             @animation:RewriterBook
+            Frase che separa animaition e scritta
              ~ secondPauseTalking = secondCharPauseDuration
             -> main    
     
@@ -1293,6 +1303,7 @@
  
             -
             @animation:RewriterBook
+            Frase che separa animaition e scritta
              ~ secondPauseTalking = secondCharPauseDuration
             -> main    
     
@@ -1381,6 +1392,7 @@
  
             -
             @animation:RewriterBook
+            Frase che separa animaition e scritta
              ~ secondPauseTalking = secondCharPauseDuration
             -> main            
             
@@ -1539,8 +1551,9 @@
         Per stare con gli animali.
         Non è il mio compleanno.
         Scusa per la bugia.
-        Ma se non mi invento un motivo per le cose nessuno mi ascolta.
         @animation:RewriterBook
+        Ma se non mi invento un motivo per le cose nessuno mi ascolta.
+       
         ~ growing ++
         
             + [Forse so come farti vedere le cose in modo diverso.]
@@ -1937,6 +1950,7 @@
         A me non mi sembra mica felice.
         Mi ricorda mamma quando gira per casa dando consigli e dicendo cose e sorridendo.
         E poi si rinchiude in camera e resta in silenzio per ore.
+        @animation:RewriterBook
         Per me non sta mica bene.
         -> close
             

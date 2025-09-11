@@ -101,9 +101,9 @@
     Prima ai piedi di quel vecchio tronco ho trovato questo libro.
     E ha il tuo nome.
     Hai un ammiratore segreto?
+    @animation:RewriterBook
     Comunque ho pensato fosse il caso di dartelo.
-        
-        @animation:RewriterBook
+   
         ~ move_entity(WitchRecap, BookPlace)
         ~ move_entity(miniBook, Bedroom)
         ~ somethingStrange ++
