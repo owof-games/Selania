@@ -206,6 +206,7 @@
         - dice == 4 && relationshipCrops ^ backupCultivable != () && shiftCrops ^ backupCultivable != (): 
         {
             - fourthQuest == false:
+            {debugCultivable: <i>Il valore di fourthQuest è {fourthQuest}. Piante Collaborazione contiene: {relationshipCrops}. Piante Cambiamento contiene: {shiftCrops}.}
             {
                 - cropsType == ():
                     -> fourth_question
@@ -229,6 +230,7 @@
         - dice == 5 && relationshipCrops ^ backupCultivable!= () && wonderCrops ^ backupCultivable != (): 
         {
             - fifthQuest == false:
+            {debugCultivable: <i>Il valore di fifthQuest è {fifthQuest}. Piante Collaborazione contiene: {relationshipCrops}. Piante Wonder contiene: {wonderCrops}.}
             {
                 - cropsType == ():
                     -> fifth_question
@@ -252,6 +254,7 @@
         - dice == 6 && relationshipCrops ^ backupCultivable != () && imaginationCrops ^ backupCultivable != (): 
         {
             - sixthQuest == false:
+            {debugCultivable: <i>Il valore di sixthQuest è {sixthQuest}. Piante Collaborazione contiene: {relationshipCrops}. Piante imagination contiene: {imaginationCrops}.}            
             {
                 - cropsType == ():
                     -> sixth_question
@@ -272,7 +275,8 @@
                     -> random
         }          
         
-        - dice == 7 && shiftCrops ^ backupCultivable != () && understandingCrops ^ backupCultivable != (): 
+        - dice == 7 && shiftCrops ^ backupCultivable != () && understandingCrops ^ backupCultivable != ():
+            {debugCultivable: <i>Il valore di seventhQuest è {seventhQuest}. Piante shift contiene: {shiftCrops}. Piante understanding contiene: {understandingCrops}.}        
         {
             - seventhQuest == false:
             {
@@ -295,7 +299,8 @@
                     -> random
         }         
         
-        - dice == 8 && shiftCrops ^ backupCultivable != () && wonderCrops ^ backupCultivable != (): 
+        - dice == 8 && shiftCrops ^ backupCultivable != () && wonderCrops ^ backupCultivable != ():
+            {debugCultivable: <i>Il valore di eighthQuest è {eighthQuest}. Piante shift contiene: {shiftCrops}. Piante Wonder contiene: {wonderCrops}.}        
         {
             - eighthQuest == false:
   
@@ -321,7 +326,8 @@
                     -> random
         }        
 
-        - dice == 9 && shiftCrops ^ backupCultivable != () && imaginationCrops ^ backupCultivable != (): 
+        - dice == 9 && shiftCrops ^ backupCultivable != () && imaginationCrops ^ backupCultivable != ():
+            {debugCultivable: <i>Il valore di ninthQuest è {ninthQuest}. Piante shift contiene: {shiftCrops}. Piante imagination contiene: {imaginationCrops}.}        
         {
             - ninthQuest == false:
             {
@@ -343,7 +349,8 @@
                 -> random        
         }
         
-        - dice == 10 && understandingCrops ^ backupCultivable != () && selfdeterminationCrops ^ backupCultivable != (): 
+        - dice == 10 && understandingCrops ^ backupCultivable != () && selfdeterminationCrops ^ backupCultivable != ():
+        {debugCultivable: <i>Il valore di tenthQuest è {tenthQuest}. Piante understanding contiene: {understandingCrops}. Piante selfdetermination contiene: {selfdeterminationCrops}.}          
         {
             - tenthQuest == false:
             {
@@ -367,7 +374,8 @@
                     -> random
         }         
 
-        - dice == 11 && understandingCrops ^ backupCultivable != () && wonderCrops ^ backupCultivable ^ backupCultivable != (): 
+        - dice == 11 && understandingCrops ^ backupCultivable != () && wonderCrops ^ backupCultivable ^ backupCultivable != ():
+        {debugCultivable: <i>Il valore di eleventhQuest è {eleventhQuest}. Piante understanding contiene: {understandingCrops}. Piante wonder contiene: {wonderCrops}.}         
         {
             - eleventhQuest == false:
             {
@@ -389,7 +397,8 @@
                 -> random
         }
         
-        - dice == 12 && understandingCrops ^ backupCultivable != () && imaginationCrops ^ backupCultivable != (): 
+        - dice == 12 && understandingCrops ^ backupCultivable != () && imaginationCrops ^ backupCultivable != ():
+        {debugCultivable: <i>Il valore di twelfthQuest è {twelfthQuest}. Piante understanding contiene: {understandingCrops}. Piante imagination contiene: {imaginationCrops}.}          
         {
             - twelfthQuest == false:
             {
@@ -410,7 +419,8 @@
                     -> random
         } 
         
-        - dice == 13 && selfdeterminationCrops ^ backupCultivable != () && wonderCrops ^ backupCultivable != (): 
+        - dice == 13 && selfdeterminationCrops ^ backupCultivable != () && wonderCrops ^ backupCultivable != ():
+        {debugCultivable: <i>Il valore di thirteenthQuest è {thirteenthQuest}. Piante selfdetermination contiene: {selfdeterminationCrops}. Piante wonder contiene: {wonderCrops}.}          
         {
             - thirteenthQuest == false:
             {
@@ -432,7 +442,9 @@
                     -> random
         } 
 
-        - dice == 14 && selfdeterminationCrops ^ backupCultivable != () && imaginationCrops ^ backupCultivable != (): 
+        - dice == 14 && selfdeterminationCrops ^ backupCultivable != () && imaginationCrops ^ backupCultivable != ():
+        {debugCultivable: <i>Il valore di fourteenthQuest è {fourteenthQuest}. Piante selfdetermination contiene: {selfdeterminationCrops}. Piante imagination contiene: {imaginationCrops}.}
+        
         {
             - fourteenthQuest == false:
             {
@@ -454,7 +466,9 @@
                 -> random
             }    
         
-        - dice == 15 && selfdeterminationCrops ^ backupCultivable != () && relationshipCrops ^ backupCultivable != (): 
+        - dice == 15 && selfdeterminationCrops ^ backupCultivable != () && relationshipCrops ^ backupCultivable != ():
+        {debugCultivable: <i>Il valore di fifteenQuest è {fifteenQuest}. Piante selfdetermination contiene: {selfdeterminationCrops}. Piante relationship contiene: {relationshipCrops}.}
+        
         {
             - fifteenQuest == false:
             {
