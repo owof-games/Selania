@@ -89,7 +89,7 @@
 
 === function witch_tag
 {
-    - !talking_witch.first_story_ended_check.nameWitch:
+    - !talking_witch.intro.nameWitch:
         ~ return "..."
     - else:
         ~ return "^_^"
@@ -109,7 +109,7 @@
 
  === function witch_state()
 {
-    - talking_witch.first_story_ended_check.nameWitch:
+    - talking_witch.intro.nameWitch:
        ~ return "witch_neutral"
      - else:
        ~ return "witch_unknown"

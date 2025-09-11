@@ -15,18 +15,26 @@
     ~ temp charNameFive = translator(fifthCharacterState)
     
     {
-        //Check post storie
-        - not first_story_ended_check && firstStory == Ended:
+        //Check per intro
+        - not intro && (firstStory == Ended) or (secondStory == Ended) or (thirdStory == Ended):
+            -> intro
+    }
+    
+    {
+        //Check post storie dopo l'intro
+        - intro && firstStory == Ended:
             -> first_story_ended_check
-        - not second_story_ended_check && secondStory == Ended:
+        - intro && secondStory == Ended:
             -> second_story_ended_check
-        - not third_story_ended_check && thirdStory == Ended:
+        - intro && thirdStory == Ended:
             -> third_story_ended_check
-        - not fourth_story_ended_check && fourthStory == Ended:
+        - intro && fourthStory == Ended:
             -> fourth_story_ended_check
-        - not fifth_story_ended_check && fifthStory == Ended:
+        - intro && fifthStory == Ended:
             -> fifth_story_ended_check    
         
+        
+        //Altre storie
         - not foundLibro && not take_this_book:
             -> foundLibro
         
@@ -34,7 +42,7 @@
             -> descriptions
     }
 
-    = first_story_ended_check
+    = intro
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameThree = translator(thirdCharacterState)
@@ -92,9 +100,32 @@
             -
             
         <i>Noi sussurriamo nella tua testa, ma ascoltiamo anche.</i>
+        <i>Noi puoi non chiamarci, ma sorriderci, e noi sorrideremo.</i>
         - (nameWitch)
         <i>Le nostre radici cercano di imparare le voci del terreno.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>Il terreno ci racconta che {name} ha appena compiuto qualcosa di importante.</i>
+            ~ somethingStrange ++
+                {
+                    - not first_story_ended_check && firstStory == Ended:
+                        -> first_story_ended_check
+                    - not second_story_ended_check && secondStory == Ended:
+                        -> second_story_ended_check
+                    - not third_story_ended_check && thirdStory == Ended:
+                        -> third_story_ended_check
+                }
+
+
+
+    = first_story_ended_check
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameThree = translator(thirdCharacterState)
+        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
+        
+        {came_from(->intro): <i>Che ha compiuto qualcosa per la prima volta.</i>|<i>Riaccogliamo con piacere {name}, per quanto non si sia mai davvero {pronouns has him: allontanato|{pronouns has her: allontanata|allontanatə}}.}
+        
+        
         <i>Osserviamo {name} e ci chiediamo cosa provi dopo aver aiutato {charNameOne}.</i>
         
             + [Mi chiedo se sono all'altezza di tutto questo.]
@@ -147,7 +178,6 @@
         <i>Ma altri funghi solleticano e distraggono le nostre nuove radici.</i>
         <i>Ringraziandoti ancora {name} per ora ti congediamo.</i>
         <i>Ma anche dall'altra parte del mondo sai già che non saremo mai lontani.</i>
-            ~ somethingStrange ++
                 -> main
     
     
@@ -157,6 +187,9 @@
         ~ temp charNameThree = translator(thirdCharacterState)
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
+        
+        {came_from(->intro): <i>Che ha compiuto qualcosa per la prima volta.</i>|<i>Riaccogliamo con piacere {name}, per quanto non si sia mai davvero {pronouns has him: allontanato|{pronouns has her: allontanata|allontanatə}}.}
+        
         <i>I nostri rami saggiano il cielo.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>L'aria finalmente ci rinfresca.</i>
         <i>E gli uccelli ci raccontano cose su {name}.</i>

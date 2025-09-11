@@ -303,7 +303,7 @@
                 ~ somethingStrange --
                 -> talk_with_mentor
         
-        * (talkingWitch) {talking_witch.first_story_ended_check} [Prima ho parlato con il tronco.]
+        * (talkingWitch) {talking_witch.intro} [Prima ho parlato con il tronco.]
             E mi ha chiesto come stavo dopo aver aiutato {charNameOne}. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
             {infoImpo or voices: Stellina, di nuovo con questa voce?|Senti le voci, stellina?}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             Sono in questo posto da non so quanto e non ho mai parlato con tronchi o rami o radici. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
