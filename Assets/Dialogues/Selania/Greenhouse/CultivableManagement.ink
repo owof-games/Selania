@@ -127,7 +127,7 @@
                         -> first_question
                     
                     - else:
-                    {debugCultivable: <i>Non ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
+                    {debugCultivable: <i><b>Non</b> ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
                     {debugCultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {relationshipCrops^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {understandingCrops^firstAnswerTracker}}
                         ~ randomCounter ++
                         ->random
@@ -160,7 +160,7 @@
                         -> second_question
                         
                     - else:
-                    {debugCultivable: <i>Non ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
+                    {debugCultivable: <i><b>Non</b> ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
                     {debugCultivable: <i>L'intersezione tra prima scelta e piante shift produce {shiftCrops^firstAnswerTracker}, quella tra prima scelta e piante understanding produce {selfdeterminationCrops^firstAnswerTracker}.}
                             ~ randomCounter ++
                         ->random
@@ -195,7 +195,7 @@
                         -> third_question
                         
                     - else:
-                    {debugCultivable: <i>Non ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
+                    {debugCultivable: <i><b>Non</b> ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
                     {debugCultivable: <i>L'intersezione tra prima scelta e piante selfdetermination produce {wonderCrops^firstAnswerTracker}, quella tra prima scelta e piante understanding produce {imaginationCrops^firstAnswerTracker}.}
                             ~ randomCounter ++
                         ->random
@@ -229,12 +229,17 @@
                     
                         -> fourth_question
                     - else:
+                    
+                    {debugCultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {relationshipCrops^firstAnswerTracker}, quella tra prima scelta e piante shift produce {shiftCrops^firstAnswerTracker}}
+                    {debugCultivable: <i><b>Non</b> ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
+                    
                         ~ randomCounter ++
                         ->random
                 }
             }
                     
             - else:
+            {debugCultivable: <i>Il valore di fourthQuest è {fourthQuest} e per questo torno a random.}
                     ~ randomCounter ++
                     -> random
         }
@@ -256,12 +261,16 @@
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}                    
                         -> fifth_question
                     - else:
+                    {debugCultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {relationshipCrops^firstAnswerTracker}, quella tra prima scelta e piante wonderC produce {wonderCrops^firstAnswerTracker}}
+                    {debugCultivable: <i><b>Non</b> ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
+                    
                         ~ randomCounter ++
                         ->random
                 }
             }
                     
             - else:
+            {debugCultivable: <i>Il valore di fifthQuest è {fifthQuest} e per questo torno a random.}
                     ~ randomCounter ++
                     -> random
         }        
@@ -284,12 +293,15 @@
                     
                         -> sixth_question
                     - else:
+                    {debugCultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {relationshipCrops^firstAnswerTracker}, quella tra prima scelta e piante selfdetermination produce {selfdeterminationCrops^firstAnswerTracker}}
+                    {debugCultivable: <i><b>Non</b> ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
                         ~ randomCounter ++
                         ->random
                 }
             }
                     
             - else:
+            {debugCultivable: <i>Il valore di sixthQuest è {sixthQuest} e per questo torno a random.}
                     ~ randomCounter ++
                     -> random
         }          
@@ -312,12 +324,15 @@
                     
                         -> seventh_question
                     - else:
+                    {debugCultivable: <i>L'intersezione tra prima scelta e shiftCrops produce {shiftCrops^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {understandingCrops^firstAnswerTracker}}
+                    {debugCultivable: <i><b>Non</b> ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
                         ~ randomCounter ++
                         ->random
                 }
             }
                     
             - else:
+            {debugCultivable: <i>Il valore di seventhQuest è {seventhQuest} e per questo torno a random.}
                     ~ randomCounter ++
                     -> random
         }         
@@ -342,12 +357,15 @@
                    
                         -> eighth_question
                     - else:
+                    {debugCultivable: <i>L'intersezione tra prima scelta e shiftCrops produce {shiftCrops^firstAnswerTracker}, quella tra prima scelta e wonderCrops produce {wonderCrops^firstAnswerTracker}}
+                    {debugCultivable: <i><b>Non</b> ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
                         ~ randomCounter ++
                         ->random
                 }
             }
                     
             - else:
+            {debugCultivable: <i>Il valore di eightQuest è {eightQuest} e per questo torno a random.}
                     ~ randomCounter ++
                     -> random
         }        
@@ -368,11 +386,14 @@
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> ninth_question
                     - else:
+                    {debugCultivable: <i>L'intersezione tra prima scelta e shiftCrops produce {shiftCrops^firstAnswerTracker}, quella tra prima scelta e imaginationCrops produce {imaginationCrops^firstAnswerTracker}}
+                    {debugCultivable: <i><b>Non</b> ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
                         ~ randomCounter ++
                         ->random
                 }
             }
             - else:
+            {debugCultivable: <i>Il valore di nineQuest è {nineQuest} e per questo torno a random.}
                 ~ randomCounter ++
                 -> random        
         }
@@ -393,6 +414,8 @@
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> tenth_question
                     - else:
+                    {debugCultivable: <i>L'intersezione tra prima scelta e understandingCrops produce {understandingCrops^firstAnswerTracker}, quella tra prima scelta e selfdeterminationCrops produce {selfdeterminationCrops^firstAnswerTracker}}
+                    {debugCultivable: <i><b>Non</b> ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
                         ~ randomCounter ++
                         ->random
                 }
@@ -400,6 +423,7 @@
  
             
             - else:
+            {debugCultivable: <i>Il valore di tenthQuest è {tenthQuest} e per questo torno a random.}
                     ~ randomCounter ++
                     -> random
         }         
@@ -420,11 +444,14 @@
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> eleventh_question
                     - else:
+                    {debugCultivable: <i>L'intersezione tra prima scelta e understandingCrops produce {understandingCrops^firstAnswerTracker}, quella tra prima scelta e wonderCrops produce {wonderCrops^firstAnswerTracker}}
+                    {debugCultivable: <i><b>Non</b> ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
                         ~ randomCounter ++
                         ->random
                 }
             }
             - else:
+            {debugCultivable: <i>Il valore di eleventhQuest è {eleventhQuest} e per questo torno a random.}
                 ~ randomCounter ++
                 -> random
         }
@@ -444,11 +471,14 @@
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> twelfth_question
                     - else:
+                    {debugCultivable: <i>L'intersezione tra prima scelta e understandingCrops produce {understandingCrops^firstAnswerTracker}, quella tra prima scelta e imaginationCrops produce {imaginationCrops^firstAnswerTracker}}
+                    {debugCultivable: <i><b>Non</b> ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
                         ~ randomCounter ++
                         ->random
                 }
             }
                     - else:
+                    {debugCultivable: <i>Il valore di twelfthQuest è {twelfthQuest} e per questo torno a random.}
                     ~ randomCounter ++
                     -> random
         } 
@@ -469,11 +499,14 @@
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> thirteenth_question
                     - else:
+                    {debugCultivable: <i>L'intersezione tra prima scelta e selfdeterminationCrops produce {selfdeterminationCrops^firstAnswerTracker}, quella tra prima scelta e wonderCrops produce {wonderCrops^firstAnswerTracker}}
+                    {debugCultivable: <i><b>Non</b> ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
                         ~ randomCounter ++
                         ->random
                 }
             }
                     - else:
+                    {debugCultivable: <i>Il valore di thirteenthQuest è {thirteenthQuest} e per questo torno a random.}
                     ~ randomCounter ++
                     -> random
         } 
@@ -495,11 +528,14 @@
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> fourteenth_question
                     - else:
+                    {debugCultivable: <i>L'intersezione tra prima scelta e selfdeterminationCrops produce {selfdeterminationCrops^firstAnswerTracker}, quella tra prima scelta e imaginationCrops produce {imaginationCrops^firstAnswerTracker}}
+                    {debugCultivable: <i><b>Non</b> ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
                         ~ randomCounter ++
                         ->random
                 }
             }
             - else:
+            {debugCultivable: <i>Il valore di fourteenthQuest è {fourteenthQuest} e per questo torno a random.}
              ~ randomCounter ++
                 -> random
             }    
@@ -521,11 +557,14 @@
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> fifteen_question
                     - else:
+                    {debugCultivable: <i>L'intersezione tra prima scelta e selfdeterminationCrops produce {selfdeterminationCrops^firstAnswerTracker}, quella tra prima scelta e relationshipCrops produce {relationshipCrops^firstAnswerTracker}}
+                    {debugCultivable: <i><b>Non</b> ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
                         ~ randomCounter ++
                         ->random
                 }
             }
             - else:
+            {debugCultivable: <i>Il valore di fifteenQuest è {fifteenQuest} e per questo torno a random.}
              ~ randomCounter ++
                 -> random
                 
