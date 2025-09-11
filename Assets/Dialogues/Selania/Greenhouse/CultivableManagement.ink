@@ -223,14 +223,14 @@
                 {
                     - LIST_RANDOM(relationshipCrops^firstAnswerTracker) != () && LIST_RANDOM(shiftCrops^firstAnswerTracker) != () && cropsType hasnt relationship && cropsType hasnt shift:
                     
-                    {debugCultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {relationshipCrops^firstAnswerTracker}, quella tra prima scelta e piante shift produce {shiftCrops^firstAnswerTracker}}
+                    {debugCultivable: <i>L'intersezione tra prima scelta e relationshipCrops produce {relationshipCrops^firstAnswerTracker}, quella tra prima scelta e piante shift produce {shiftCrops^firstAnswerTracker}}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                     
                     
                         -> fourth_question
                     - else:
                     
-                    {debugCultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {relationshipCrops^firstAnswerTracker}, quella tra prima scelta e piante shift produce {shiftCrops^firstAnswerTracker}}
+                    {debugCultivable: <i>L'intersezione tra prima scelta e relationshipCrops produce {relationshipCrops^firstAnswerTracker}, quella tra prima scelta e piante shift produce {shiftCrops^firstAnswerTracker}}
                     {debugCultivable: <i><b>Non</b> ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
                     
                         ~ randomCounter ++
@@ -365,7 +365,7 @@
             }
                     
             - else:
-            {debugCultivable: <i>Il valore di eightQuest è {eightQuest} e per questo torno a random.}
+            {debugCultivable: <i>Il valore di eightQuest è {eighthQuest} e per questo torno a random.}
                     ~ randomCounter ++
                     -> random
         }        
@@ -393,7 +393,7 @@
                 }
             }
             - else:
-            {debugCultivable: <i>Il valore di nineQuest è {nineQuest} e per questo torno a random.}
+            {debugCultivable: <i>Il valore di nineQuest è {ninthQuest} e per questo torno a random.}
                 ~ randomCounter ++
                 -> random        
         }
@@ -1095,7 +1095,68 @@ QUESTIONS
                     -> results
                 }
         }
+    
+    - cropsType == (relationship, imagination): {
+        - LIST_RANDOM(relationshipCrops ^ imaginationCrops) == ():
+        {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
+            ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+            {debugCultivable: <i>il fungo proposto è {chosenCultivable}.}   
+            -> list_to_crops
+            
+        - else:
+        {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
+            ~ chosenCultivable = LIST_RANDOM(relationshipCrops ^ imaginationCrops)
+                {
+                - backupCultivable has chosenCultivable:
+                {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
+                    -> list_to_crops
+                - backupCultivable hasnt chosenCultivable:
+                {debugCultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
+                    -> results
+                }
+        }
         
+        
+      - cropsType == (shift, understanding): {
+        - LIST_RANDOM(shiftCrops ^ understandingCrops) == ():
+        {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
+            ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+            {debugCultivable: <i>il fungo proposto è {chosenCultivable}.}   
+            -> list_to_crops
+            
+        - else:
+        {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
+            ~ chosenCultivable = LIST_RANDOM(shiftCrops ^ understandingCrops)
+                {
+                - backupCultivable has chosenCultivable:
+                {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
+                    -> list_to_crops
+                - backupCultivable hasnt chosenCultivable:
+                {debugCultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
+                    -> results
+                }
+        }
+    
+    
+    - cropsType == (selfdetermination, wonder): {
+        - LIST_RANDOM(selfdeterminationCrops ^ wonderCrops) == ():
+        {debugCultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
+            ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+            {debugCultivable: <i>il fungo proposto è {chosenCultivable}.}   
+            -> list_to_crops
+            
+        - else:
+        {debugCultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
+            ~ chosenCultivable = LIST_RANDOM(selfdeterminationCrops ^ wonderCrops)
+                {
+                - backupCultivable has chosenCultivable:
+                {debugCultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
+                    -> list_to_crops
+                - backupCultivable hasnt chosenCultivable:
+                {debugCultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
+                    -> results
+                }
+        }
     
     - else:
     {debugCultivable: <i>Passo da else nella lista cropsType perché non c'è un fungo adatto.}
