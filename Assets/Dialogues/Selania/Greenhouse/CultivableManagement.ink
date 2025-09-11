@@ -23,15 +23,15 @@
     //Relazione: con sé e con gli altri, anche con l’ambiente.
     VAR relationshipCrops = (LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CardoAspinato)
     //Mutamento: capacità di generare e accogliere il cambiamento.
-    VAR shiftCrops = (LicheneDegliAbissi, LaSpazzata)
+    VAR shiftCrops = (LicheneDegliAbissi, LaSpazzata, EderaDelleAmanti, BaccaDellaAddolorata)
     //Comprensione: cercare il senso, capire il perché.
-    VAR understandingCrops = (LaSpazzata, BaccaDellaAddolorata, CardoAspinato)
+    VAR understandingCrops = (LaSpazzata, BaccaDellaAddolorata, CardoAspinato, LicheneDegliAbissi)
     //Autodeterminazione: definire la mia vita per come la voglio, o la vita della mia comunità.
-    VAR selfdeterminationCrops = (CantoDelleCompagne, BaccaDellaAddolorata, BrinaDellImpossibile)
+    VAR selfdeterminationCrops = (CantoDelleCompagne, BaccaDellaAddolorata, BrinaDellImpossibile, LaSpazzata)
     //Stupore, meraviglia: sorprendermi, scoprire cose nuove, scoprire cose inaspettate. Vedere la vita come qualcosa di non prevedibile e godere di questo.
-    VAR wonderCrops = (EderaDelleAmanti, BrinaDellImpossibile)
+    VAR wonderCrops = (EderaDelleAmanti, BrinaDellImpossibile, NonTiScordarDiTe, CantoDelleCompagne)
     //Immaginazione e creazione: sono due parole legate ma non sinonimi, ma mi viene istintivo unirle. Da una parte abbiamo la possibilità di pensare a ciò che non c’è, dall’altra di generarlo. In parte immaginazione si collega a stupore (una nuova idea), in parte a comprensione (quando capisco qualcosa e provo ad applicarlo in realtà immaginate). Creatività invece è sia un processo di mutamento (creando porto cambiamento, con tutte le sue conseguenze) che di autodeterminazione (creo ciò che voglio, ciò che penso possa servire, portare piacere, ristorare la mia comunità).
-    VAR imaginationCrops = (NonTiScordarDiTe, CantoDelleCompagne)
+    VAR imaginationCrops = (NonTiScordarDiTe, CantoDelleCompagne, CardoAspinato, BrinaDellImpossibile)
 
 //Pianta che verrà proposta. La uso anche per tracking dello stato delle piante.
     VAR chosenCultivable = ()
@@ -119,7 +119,7 @@
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}
                 {
-                    - LIST_RANDOM(relationshipCrops^firstAnswerTracker) != () && LIST_RANDOM(understandingCrops^firstAnswerTracker) != () && cropsType hasnt relationship && cropsType hasnt imagination:
+                    - LIST_RANDOM(relationshipCrops^firstAnswerTracker) != () && LIST_RANDOM(understandingCrops^firstAnswerTracker) != () && cropsType hasnt relationship && cropsType hasnt understanding:
                     
                     {debugCultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {relationshipCrops^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {understandingCrops^firstAnswerTracker}}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
@@ -153,7 +153,7 @@
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}
                 {
-                    - LIST_RANDOM(shiftCrops^firstAnswerTracker) != () && LIST_RANDOM(selfdeterminationCrops^firstAnswerTracker) != () && cropsType hasnt shift && cropsType hasnt understanding:
+                    - LIST_RANDOM(shiftCrops^firstAnswerTracker) != () && LIST_RANDOM(selfdeterminationCrops^firstAnswerTracker) != () && cropsType hasnt shift && cropsType hasnt selfdetermination:
                     
                     {debugCultivable: <i>L'intersezione tra prima scelta e piante shift produce {shiftCrops^firstAnswerTracker}, quella tra prima scelta e piante understanding produce {selfdeterminationCrops^firstAnswerTracker}.}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
@@ -187,7 +187,7 @@
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(wonderCrops^firstAnswerTracker) != () && LIST_RANDOM(imaginationCrops^firstAnswerTracker) != () && cropsType hasnt wonder && cropsType hasnt selfdetermination:
+                    - LIST_RANDOM(wonderCrops^firstAnswerTracker) != () && LIST_RANDOM(imaginationCrops^firstAnswerTracker) != () && cropsType hasnt wonder && cropsType hasnt imagination:
                     
                     {debugCultivable: <i>L'intersezione tra prima scelta e piante wonder produce {wonderCrops^firstAnswerTracker}, quella tra prima scelta e piante selfdetermination produce {imaginationCrops^firstAnswerTracker}.}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
@@ -286,7 +286,7 @@
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(relationshipCrops^firstAnswerTracker) != () && LIST_RANDOM(imaginationCrops^firstAnswerTracker) != () && cropsType hasnt relationship && cropsType hasnt selfdetermination:
+                    - LIST_RANDOM(relationshipCrops^firstAnswerTracker) != () && LIST_RANDOM(imaginationCrops^firstAnswerTracker) != () && cropsType hasnt relationship && cropsType hasnt imagination:
                     
                     {debugCultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {relationshipCrops^firstAnswerTracker}, quella tra prima scelta e piante selfdetermination produce {selfdeterminationCrops^firstAnswerTracker}}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
@@ -317,7 +317,7 @@
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(shiftCrops^firstAnswerTracker) != () && LIST_RANDOM(understandingCrops^firstAnswerTracker) != () && cropsType hasnt shift && cropsType hasnt imagination:
+                    - LIST_RANDOM(shiftCrops^firstAnswerTracker) != () && LIST_RANDOM(understandingCrops^firstAnswerTracker) != () && cropsType hasnt shift && cropsType hasnt understanding:
                     
                     {debugCultivable: <i>L'intersezione tra prima scelta e shiftCrops produce {shiftCrops^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {understandingCrops^firstAnswerTracker}}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
@@ -381,7 +381,7 @@
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(shiftCrops^firstAnswerTracker) != () && LIST_RANDOM(imaginationCrops^firstAnswerTracker) != () && cropsType hasnt shift && cropsType hasnt selfdetermination:
+                    - LIST_RANDOM(shiftCrops^firstAnswerTracker) != () && LIST_RANDOM(imaginationCrops^firstAnswerTracker) != () && cropsType hasnt shift && cropsType hasnt imagination:
                     {debugCultivable: <i>L'intersezione tra prima scelta e shiftCrops produce {shiftCrops^firstAnswerTracker}, quella tra prima scelta e imaginationCrops produce {imaginationCrops^firstAnswerTracker}}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> ninth_question
@@ -409,7 +409,7 @@
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(understandingCrops^firstAnswerTracker) != () && LIST_RANDOM(selfdeterminationCrops^firstAnswerTracker) != () && cropsType hasnt imagination && cropsType hasnt understanding:
+                    - LIST_RANDOM(understandingCrops^firstAnswerTracker) != () && LIST_RANDOM(selfdeterminationCrops^firstAnswerTracker) != () && cropsType hasnt understanding && cropsType hasnt selfdetermination:
                     {debugCultivable: <i>L'intersezione tra prima scelta e understandingCrops produce {understandingCrops^firstAnswerTracker}, quella tra prima scelta e selfdeterminationCrops produce {selfdeterminationCrops^firstAnswerTracker}}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> tenth_question
@@ -439,10 +439,12 @@
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(understandingCrops^firstAnswerTracker) != () && LIST_RANDOM(wonderCrops^firstAnswerTracker) != () && cropsType hasnt imagination && cropsType hasnt wonder:
+                    - LIST_RANDOM(understandingCrops^firstAnswerTracker) != () && LIST_RANDOM(wonderCrops^firstAnswerTracker) != () && cropsType hasnt understanding && cropsType hasnt wonder:
+                    
                     {debugCultivable: <i>L'intersezione tra prima scelta e understandingCrops produce {understandingCrops^firstAnswerTracker}, quella tra prima scelta e wonderCrops produce {wonderCrops^firstAnswerTracker}}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> eleventh_question
+                    
                     - else:
                     {debugCultivable: <i>L'intersezione tra prima scelta e understandingCrops produce {understandingCrops^firstAnswerTracker}, quella tra prima scelta e wonderCrops produce {wonderCrops^firstAnswerTracker}}
                     {debugCultivable: <i><b>Non</b> ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e entrambi gli altri due di questa, per cui provo a randomizzare di nuovo.}
@@ -466,7 +468,7 @@
                 
                 - else:
                 {
-                    - LIST_RANDOM(understandingCrops^firstAnswerTracker) != () && LIST_RANDOM(imaginationCrops^firstAnswerTracker) != () && cropsType hasnt imagination && cropsType hasnt selfdetermination:
+                    - LIST_RANDOM(understandingCrops^firstAnswerTracker) != () && LIST_RANDOM(imaginationCrops^firstAnswerTracker) != () && cropsType hasnt understanding && cropsType hasnt imagination:
                     {debugCultivable: <i>L'intersezione tra prima scelta e understandingCrops produce {understandingCrops^firstAnswerTracker}, quella tra prima scelta e imaginationCrops produce {imaginationCrops^firstAnswerTracker}}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> twelfth_question
@@ -494,7 +496,7 @@
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(selfdeterminationCrops^firstAnswerTracker) != () && LIST_RANDOM(wonderCrops^firstAnswerTracker) != () && cropsType hasnt understanding && cropsType hasnt wonder:
+                    - LIST_RANDOM(selfdeterminationCrops^firstAnswerTracker) != () && LIST_RANDOM(wonderCrops^firstAnswerTracker) != () && cropsType hasnt selfdetermination && cropsType hasnt wonder:
                     {debugCultivable: <i>L'intersezione tra prima scelta e selfdeterminationCrops produce {selfdeterminationCrops^firstAnswerTracker}, quella tra prima scelta e wonderCrops produce {wonderCrops^firstAnswerTracker}}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> thirteenth_question
@@ -523,7 +525,7 @@
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(selfdeterminationCrops^firstAnswerTracker) != () && LIST_RANDOM(imaginationCrops^firstAnswerTracker) != () && cropsType hasnt understanding && cropsType hasnt selfdetermination:
+                    - LIST_RANDOM(selfdeterminationCrops^firstAnswerTracker) != () && LIST_RANDOM(imaginationCrops^firstAnswerTracker) != () && cropsType hasnt selfdetermination && cropsType hasnt imagination:
                     {debugCultivable: <i>L'intersezione tra prima scelta e selfdeterminationCrops produce {selfdeterminationCrops^firstAnswerTracker}, quella tra prima scelta e imaginationCrops produce {imaginationCrops^firstAnswerTracker}}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> fourteenth_question
@@ -552,7 +554,7 @@
                 - else:
                 {debugCultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(selfdeterminationCrops^firstAnswerTracker) != () && LIST_RANDOM(relationshipCrops^firstAnswerTracker) != () && cropsType hasnt understanding && cropsType hasnt relationship:
+                    - LIST_RANDOM(selfdeterminationCrops^firstAnswerTracker) != () && LIST_RANDOM(relationshipCrops^firstAnswerTracker) != () && cropsType hasnt selfdetermination && cropsType hasnt relationship:
                     {debugCultivable: <i>L'intersezione tra prima scelta e selfdeterminationCrops produce {selfdeterminationCrops^firstAnswerTracker}, quella tra prima scelta e relationshipCrops produce {relationshipCrops^firstAnswerTracker}}
                     {debugCultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> fifteen_question
