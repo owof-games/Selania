@@ -178,6 +178,9 @@
         <i>Ma altri funghi solleticano e distraggono le nostre nuove radici.</i>
         <i>Ringraziandoti ancora {name} per ora ti congediamo.</i>
         <i>Ma anche dall'altra parte del mondo sai già che non saremo mai lontani.</i>
+        
+        @animation:RewriterBook
+        
                 -> main
     
     
@@ -239,6 +242,9 @@
         <i>O forse {name} può lasciarla cadere, e ricominciare.</i>
         <i>Ora noi ci godiamo la brezza e il sole.</i>
         <i>Ma più tardi tornaci a trovare.</i>
+        
+        @animation:RewriterBook
+        
                 -> main
         
     = third_story_ended_check

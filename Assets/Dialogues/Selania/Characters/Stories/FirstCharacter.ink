@@ -326,6 +326,9 @@
         {are_two_entities_together(Mentor, PG): Non hai idea di quanto lavoro ci sia da fare. Quindi sì, cammino MOLTO.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
          Ma troppe chiacchiere ora, troppe.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
          Fammi chillare un attimo.
+         
+         @animation:RewriterBook
+         
             ~ firstPauseTalking = firstCharPauseDuration
             -> main  
             
@@ -390,6 +393,9 @@
          Sono la mia famiglia, loro.
          E nessuna di queste scelte può accontentare tutt3.
          Che rottura di ovaie, {name}!
+         
+         @animation:RewriterBook
+         
             ~ firstPauseTalking = firstCharPauseDuration
             -> main
         
@@ -445,6 +451,9 @@
          Forse la mentore è abbastanza vecchia da avere una radio?
         {are_two_entities_together(Mentor, PG): Non approfittare della mia gentilezza, ragazzina.} #speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         {are_two_entities_together(Mentor, PG): Dai, si fa per il meme!| Devo assolutamente chiederglielo.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        
+        @animation:RewriterBook
+        
              ~ firstPauseTalking = firstCharPauseDuration
             -> main 
             
@@ -508,6 +517,9 @@
                 -
          Fammi rilassare un po' ama.
          E magari riposa anche tu.
+         
+         @animation:RewriterBook
+         
             ~ firstPauseTalking = firstCharPauseDuration
             -> main
         
@@ -573,6 +585,9 @@
             -
          A proposito di cause perse: vado a cercarmi uno spritz.
          Ho proprio bisogno di staccare.
+         
+         @animation:RewriterBook
+         
             ~ firstPauseTalking = firstCharPauseDuration
             -> main
         
@@ -626,6 +641,7 @@
                  Un po' come quel casino che è camera mia.
                     ~ firstRed ++
             -
+            @animation:RewriterBook
              ~ firstPauseTalking = firstCharPauseDuration
             -> main           
     = eight
@@ -690,6 +706,8 @@
          Comunque non sono di certo qui per il Ghiberti e le sue paranoie matematiche.
          Ma per capire perché sono in questo posto.
          Mi prendo un po' di tempo per me, {name}.
+         
+         @animation:RewriterBook
             ~ firstPauseTalking = firstCharPauseDuration
             ~ bookBGVariations ++
             -> main
@@ -748,6 +766,8 @@
             -
          Vabbè.
          Credo me ne starò qui ad aspettare questo finto temporale.
+         
+         @animation:RewriterBook
              ~ firstPauseTalking = firstCharPauseDuration
             -> main   
     = ten
@@ -810,6 +830,9 @@
          I poliziotti ci hanno trascinate e bastonate e schedate.
          E soprattutto hanno tagliato gli alberi.
          E sono tornata a sentirmi inutile.
+         
+         @animation:RewriterBook
+         
             ~ firstPauseTalking = firstCharPauseDuration
             -> main
     
@@ -869,6 +892,9 @@
             
          Lasciamo un po' solo ora, {name}.
          Perché sto entrando in fase lamentosa e non ho voglia di cringiarti.
+         
+         @animation:RewriterBook
+         
             ~ firstPauseTalking = firstCharPauseDuration
             -> main
             
@@ -929,6 +955,9 @@
             
          E con questa, ho finito di sputtanare la mia famiglia.
           Vado a deprimermi da qualche parte.
+          
+          @animation:RewriterBook
+          
             ~ firstPauseTalking = firstCharPauseDuration
             -> main
 
@@ -1045,6 +1074,7 @@
          Ecco perché mi chiamo {charNameOne}: perché rimango nel medio, nella cosa più ovvia e cringe.
          E lascio che le cose accadano.
             ~ growing ++
+            @animation:RewriterBook
             
             + [Credo di sapere come aiutarti.]
                 -> statement
@@ -1414,7 +1444,7 @@
             ~ PG_advance_management(firstStoryPG)
             ~ numberQuestion = 0
             ~ firstCharacterInkLevel = Empty
-            
+            @animation:RewriterBook
         
         -> main  
         

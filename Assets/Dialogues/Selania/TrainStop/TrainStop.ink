@@ -100,7 +100,7 @@
         E che {charNameFive} non sia sempre pesantona.
         Alla prossima lettera.
         <i>{charNameOne}</i>
-        
+        @animation:RewriterBook
         ~ firstWritingPause = firstWritingPauseDuration
             -> main
     
@@ -146,6 +146,7 @@
     Sicuro, mai quanto me!
     A presto, <i>{charNameOne}</i>.
         ~ firstWritingPause = firstWritingPauseDuration
+    @animation:RewriterBook    
         -> main
         
     = three
@@ -211,6 +212,7 @@
     Comunque un giorno mi piacerebbe che la musica, questa musica arrivasse anche dalle vostre parti.
     O che, quando te ne andrai da lì, verrai ad ascoltarla con me.
     Un saluto.
+    @animation:RewriterBook
     {charNameOne}.
     -> main
     
@@ -344,7 +346,7 @@
                     Ti scriverò appena scopro qual è quella giusta e quale è quella sbagliata.
                     Ciao!
             }
-                
+            @animation:RewriterBook    
             ~ secondWritingPause = secondWritingPauseDuration
                 -> main
     
@@ -451,7 +453,7 @@
                     Stammi bene!
                     {charNameTwo}.
             }    
-            
+            @animation:RewriterBook
             ~ secondWritingPause = secondWritingPauseDuration
                 -> main
     
@@ -570,7 +572,7 @@
                     {charNameTwo}.
                     
             }
-        
+        @animation:RewriterBook
         ~ secondWritingPause = secondWritingPauseDuration
     
             -> main

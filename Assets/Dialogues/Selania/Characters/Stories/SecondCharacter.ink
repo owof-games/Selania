@@ -356,7 +356,10 @@
         Se {charNameFive} non mi lascia in pace chiamo mio fratello.
         Lui è superforte.
         Ora lasciami in pace.
-        {are_two_entities_together(FirstCharacter, PG): Che merda essere bambini.}        
+        {are_two_entities_together(FirstCharacter, PG): Che merda essere bambini.}
+        
+        @animation:RewriterBook
+        
              ~ secondPauseTalking = secondCharPauseDuration
             -> main
 
@@ -521,6 +524,7 @@
                     ~ secondPurple ++
  
             -
+            @animation:RewriterBook
              ~ secondPauseTalking = secondCharPauseDuration
             -> main
         
@@ -613,7 +617,9 @@
         A parte {charNameFive}.
         Ti prometto che non dirò più bugie.
         Ora però lasciami solo.
-
+        
+        @animation:RewriterBook
+        ~ secondPauseTalking = secondCharPauseDuration
             -> main
         
         
@@ -692,6 +698,7 @@
             - (theFrog)
                          
             //Leviamo l'innaffiatoio
+            @animation:RewriterBook
             ~ move_entity(WateringCan, Safekeeping)
             ~ secondPauseTalking = secondCharPauseDuration
             
@@ -811,6 +818,7 @@
 
             
             //Ricompare l'innaffiatoio
+            @animation:RewriterBook
             ~ move_entity(WateringCan, Greenhouse)
             ~ secondPauseTalking = secondCharPauseDuration
                 -> main
@@ -895,6 +903,7 @@
                     ~ secondPurple ++
  
             -
+            @animation:RewriterBook
              ~ secondPauseTalking = secondCharPauseDuration
             -> main        
             
@@ -980,6 +989,7 @@
                     ~ secondPurple ++
  
             -
+            @animation:RewriterBook
             ~ bookBGVariations ++
             ~ secondPauseTalking = secondCharPauseDuration
             -> main    
@@ -1120,6 +1130,7 @@
  
             -
         Però mi piacerebbe fare il veterinario.
+        @animation:RewriterBook
              ~ secondPauseTalking = secondCharPauseDuration
             -> main    
     
@@ -1200,6 +1211,7 @@
                     ~ secondPurple ++
  
             -
+            @animation:RewriterBook
              ~ secondPauseTalking = secondCharPauseDuration
             -> main    
     
@@ -1280,6 +1292,7 @@
                     ~ secondPurple ++
  
             -
+            @animation:RewriterBook
              ~ secondPauseTalking = secondCharPauseDuration
             -> main    
     
@@ -1367,6 +1380,7 @@
                     ~ secondPurple ++
  
             -
+            @animation:RewriterBook
              ~ secondPauseTalking = secondCharPauseDuration
             -> main            
             
@@ -1526,6 +1540,7 @@
         Non è il mio compleanno.
         Scusa per la bugia.
         Ma se non mi invento un motivo per le cose nessuno mi ascolta.
+        @animation:RewriterBook
         ~ growing ++
         
             + [Forse so come farti vedere le cose in modo diverso.]
@@ -1902,6 +1917,7 @@
                     
         }
         
+        
         ~ growing ++   
         ~ bookBGVariations ++
         
@@ -1932,6 +1948,8 @@
         -> close  
     
     = close
+    @animation:RewriterBook
+    
             ~ secondCharacterInkLevel = Empty
             ~ numberQuestion = 0
             ~ secondStory = Ended
