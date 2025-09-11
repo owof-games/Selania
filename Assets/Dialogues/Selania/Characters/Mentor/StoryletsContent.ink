@@ -69,6 +69,10 @@
         Ma non preoccuparti: ogni luogo e ogni persona ha il suo modo di avvisarti.
         E se decidi di saltare qualcosa perché non è nelle tue corde, non ti perderai nulla di questa esperienza.
         Come dico sempre: sicuro è bello!
+        E a proposito di sicurezza: non c'è nulla di più sicuro del riposo.
+        Almeno per voi.
+        Se hai bisogno di staccare, basta che torni in camera e ti stendi sul letto.
+        Al risveglio, troverai tutto come l'hai lasciato.
         Ma in tutto questo non ti ho detto cosa devi fare!
             
             {

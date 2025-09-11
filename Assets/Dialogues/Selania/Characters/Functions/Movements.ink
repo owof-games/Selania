@@ -7,7 +7,7 @@
 
 //Gestione spostamenti: tempo
     VAR changeLocationTimer = 0
-    VAR changeLocationTrigger = 10
+    VAR changeLocationTrigger = 9
 
 //Settaggio luoghi attivi a seconda del tier
 //Nota: fino a quando il gioco non sarà completo, la biblioteca si aprirà per ultima, sostituendo il primo dei luoghi mancanti.
@@ -51,28 +51,23 @@
                     ~ firstTier = true
     }
     
-    //Aggiunta delle personagge randomizzabili quando la loro storia è attiva. Non serve la mentore perché va per la sua
+    //Aggiunta delle personagge randomizzabili quando la loro storia è attiva. Non serve la mentore perché va per la sua.
+
     {
-        - talk_with_first_character:
-            {
-                - firstStory == Ended:  
-                    ~ randomizable_characters -= FirstCharacter 
-                
-                - else:
-                    ~ randomizable_characters += FirstCharacter
+            - firstStory == Active:
+                ~ randomizable_characters += FirstCharacter
             
-            }
-        
-        
-        - talk_with_second_character:
-            {
-                - secondStory == Ended:  
-                    ~ randomizable_characters -= SecondCharacter 
-                
-                - else:
-                    ~ randomizable_characters += SecondCharacter
-            
-            }
+            - firstStory == Ended:  
+                ~ randomizable_characters -= FirstCharacter 
+    }
+
+    {
+        - secondStory == Active:
+                ~ randomizable_characters += SecondCharacter
+                    
+        - secondStory == Ended:
+                ~ randomizable_characters -= SecondCharacter 
+    }
   
         
         // - thirdStory == Active && talk_with_third_character:
@@ -81,7 +76,6 @@
         // - fourthStory == Active && dialogo_personaggia_quattro:
             // ~ randomizable_characters += FourthCharacter    
             
-    }
     
     {//se ho raggiunto il tempo trigger, resetto il valore, metto la mentore tra le randomizzabili, e poi vado avanti.
         - changeLocationTimer == changeLocationTrigger:

@@ -11,6 +11,8 @@ Qui ci sono le regole.
         {questions: Più inchiostro hai, più interventi puoi fare.}
         {questions: Infine: in base alle cose che avrai detto, la persona sceglierà il suo <b>nuovo nome</b>.}
         {questions: E poi si ricomincia.}
+        {questions: E ricorda: se devi riposare, basta che torni in camera e ti stendi sul letto.}
+        
 
 -> main
 
