@@ -94,18 +94,18 @@
 {debugCultivable: <i>Il dado ha valore: {dice}.}
 {
 
-    // - randomCounter >= maxRandomCounter:
-    //    {debugCultivable: <i>randomCounter {randomCounter} ha raggiunto il livello massimo {maxRandomCounter}.}
-    //    {
-    //        - backupCultivable != ():
-    //            ~ chosenCultivable = LIST_RANDOM(backupCultivable)
-    //            {debugCultivable: <i>Erano presenti ancora coltivabili in backupCultivable e ho estratto {chosenCultivable}.}
-    //            -> list_to_crops
-    //        - else:
-    //        <i>In questo momento non è possibile coltivare altro. #speaker:{witch_tag()}
-    //            -> main
+    - randomCounter >= maxRandomCounter:
+        {debugCultivable: <i>randomCounter {randomCounter} ha raggiunto il livello massimo {maxRandomCounter}.}
+        {
+            - backupCultivable != ():
+                ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+                {debugCultivable: <i>Erano presenti ancora coltivabili in backupCultivable e ho estratto {chosenCultivable}.}
+                -> list_to_crops
+            - else:
+            <i>In questo momento non è possibile coltivare altro. #speaker:{witch_tag()}
+                -> main
         
-    //    }
+      }
 
     - dice == 1 && relationshipCrops ^ backupCultivable != () && understandingCrops ^ backupCultivable != ():
         {
