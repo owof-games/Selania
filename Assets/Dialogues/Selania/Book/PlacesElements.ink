@@ -7,8 +7,8 @@ Qui ci sono le regole.
         {gifts_and_ink:Ci <b>parli</b>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.}
         {gifts_and_ink:Poi, le fai un <b>dono</b>.}
         {gifts_and_ink:Più il dono è qualcosa che le dimostra che l'hai ascoltata, più avrai <b>inchiostro</b> per aiutarla a riscrivere la sua storia.}
-        {questions: A quel punto inizi i tuoi <b>interventi</b>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.}
-        {questions: Più inchiostro hai, più interventi puoi fare.}
+        {questions: A quel punto inizi i tuoi <b>riscritture</b>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.}
+        {questions: Più inchiostro hai, più riscritture puoi fare.}
         {questions: Infine: in base alle cose che avrai detto, la persona sceglierà il suo <b>nuovo nome</b>.}
         {questions: E poi si ricomincia.}
         {questions: E ricorda: se devi riposare, basta che torni in camera e ti stendi sul letto.}
