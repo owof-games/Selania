@@ -248,8 +248,9 @@
             Magari una persona si definisce così insicura da chiamarsi <i>Pasticcio</i>, ma lə riscrittorə ha colto nella sua storia che non c'è alcun pasticcio, ma il coraggio di buttarsi in situazioni scomode.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
             Oppure si definirà <i>La Temibile</i>, ma invece di far paura, ha solo il terrore di mostrare le sue vulnerabilità, e per questo si sente sola.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
             Grazie all'inchiostro, lə riscrittorə aiuterà a riscrivere quella parte della vita della persona.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-            Ogni riscrittorə ha già in sé il potere di effettuare una riscrittura, a prescindere dal rapporto. Ma più inchiostro significa più possibilità di aiutare quella persona a vedersi in un modo nuovo.
-            E potrà sempre chiudere una riscrittura con un <b>epilogo</b>: una dichiarazione che permetta alla persona di mettere un punto sul presente, e iniziare a guardare al futuro in modo diverso.
+            Più inchiostro significa più possibilità di aiutare quella persona a vedersi in un modo nuovo.
+            Ma a prescindere dalla quantità di inchiostro, ogni riscrittorə ha in sé il dono dell'<b>epilogo</b>.
+            L'<b>epilogo</b> è una dichiarazione che permette alla persona di mettere un punto sul presente, e iniziare a guardare al futuro in modo diverso.
             Così persona e riscrittorə raggiungeranno il loro obiettivo: un nuovo nome, simbolo di un nuovo inizio.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
             
                 + [Hai un consiglio da darmi Mentore?]
