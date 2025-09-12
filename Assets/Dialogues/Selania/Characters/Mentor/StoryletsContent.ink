@@ -538,6 +538,8 @@
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
     
+    TODO: fare in modo che se vengo direttamente da not_talk del secondo personaggio, l'intro cambi
+    
         {name}, sei {pronouns has him:riuscito|{pronouns has her:riuscita|riuscitə}} a rimandare quel bambino a casa?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
             {
                 - are_two_entities_together(SecondCharacter, PG): A quanto vedo, no.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
