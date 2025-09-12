@@ -200,38 +200,38 @@
     = three
      ~ temp charNameFive = translator(fifthCharacterState)
      
-     Un tempo conoscevo una ragazza che soffriva di attacchi d'ansia e che mi ha dato una dritta che puoi applicare ovunque.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral 
-     Se il pensiero si inceppa su qualcosa, prova a stringere con forza degli oggetti che hai vicino.
-     Può essere il bracciolo di una sedia.
-     Il tavolo.
-     Il palo sull'autobus.
-     Stringi e concentrati sulla sensazione.
-     Questo ti permette di tornare in contatto col tuo corpo.
-        ->->
+         Un tempo conoscevo una ragazza che soffriva di attacchi d'ansia e che mi ha dato una dritta che puoi applicare ovunque.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral 
+         Se il pensiero si inceppa su qualcosa, prova a stringere con forza degli oggetti che hai vicino.
+         Può essere il bracciolo di una sedia.
+         Il tavolo.
+         Il palo sull'autobus.
+         Stringi e concentrati sulla sensazione.
+         Questo ti permette di tornare in contatto col tuo corpo.
+            ->->
     
     = four
      ~ temp charNameFive = translator(fifthCharacterState)
      
-    Il mio migliore amico è il body scan.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-    Lo faccio al risveglio tra gli arbusti della foresta.
-    Prima di tutto mi stendo, comoda, e faccio qualche respiro profondo.
-    Poi inizio a concentrarmi sulla punta di uno dei piedi, e da lì sposto la concentrazione lungo tutto il piede, la caviglia, il polpaccio, il ginocchio, il quadricipite.
-    Poi faccio la stessa cosa con l'altra gamba.
-    E a quel punto mi sposto sul ventre, i glutei, i muscoli lombari, i dorsali, le spalle e via di seguito fino alla testa.
-    Anche se conosco persone che preferiscono partire dalla testa e arrivare ai piedi.
-    L'importante è che per tutto il processo ascolti quella parte del corpo senza giudicare, senza cercare di cambiarla.
-    Respiri, accogli dolori e morbidezze, e quando te la senti, cambi area.
-    Anche solo a parlarne mi sento già più rilassata.
-        ->->
+        Il mio migliore amico è il body scan.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+        Lo faccio al risveglio tra gli arbusti della foresta.
+        Prima di tutto mi stendo, comoda, e faccio qualche respiro profondo.
+        Poi inizio a concentrarmi sulla punta di uno dei piedi, e da lì sposto la concentrazione lungo tutto il piede, la caviglia, il polpaccio, il ginocchio, il quadricipite.
+        Poi faccio la stessa cosa con l'altra gamba.
+        E a quel punto mi sposto sul ventre, i glutei, i muscoli lombari, i dorsali, le spalle e via di seguito fino alla testa.
+        Anche se conosco persone che preferiscono partire dalla testa e arrivare ai piedi.
+        L'importante è che per tutto il processo ascolti quella parte del corpo senza giudicare, senza cercare di cambiarla.
+        Respiri, accogli dolori e morbidezze, e quando te la senti, cambi area.
+        Anche solo a parlarne mi sento già più rilassata.
+            ->->
         
     = five
      ~ temp charNameFive = translator(fifthCharacterState)
      
-    Non so se ti capita di avere l'addome contratto.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-    Per molte persone quell'area, e il diaframma in particolare, accumula un sacco di tensione e preoccupazione.
-    Un modo per allentarla è prendere un suono che ti piace, una vocale, un <i>Aum</i>, tutte le vocali, e iniziare a ripeterle, con calma.
-    Lasciando che quel suono scenda e scenda e scenda dalla gola al petto, dal petto al diaframma.
-    Aiutandoti così a rilassare l'area.
-    E a respirare meglio.
-        ->->     
+        Non so se ti capita di avere l'addome contratto.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+        Per molte persone quell'area, e il diaframma in particolare, accumula un sacco di tensione e preoccupazione.
+        Un modo per allentarla è prendere un suono che ti piace, una vocale, un <i>Aum</i>, tutte le vocali, e iniziare a ripeterle, con calma.
+        Lasciando che quel suono scenda e scenda e scenda dalla gola al petto, dal petto al diaframma.
+        Aiutandoti così a rilassare l'area.
+        E a respirare meglio.
+            ->->     
 

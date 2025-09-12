@@ -16,7 +16,7 @@
             {~<i>Qualcosa cambia in {name}, qualcosa cambia nella stanza.|<i>L'aria sa di possibilità.|<i>Quale canzone {name} vorrebbe cantare prima di andarsene?}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
     
         -secondTier:
-            <i>Frasi legate al secondo tier</i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+            <i>Le radici ci dicono che {name} ha concluso la sua prima esperienza in questo luogo. Ma può sempre ricominciarne una nuova, o tornare per rilassarsi con i racconti, le piante, e la nostra voce.</i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
     
         -firstTier:
             {
