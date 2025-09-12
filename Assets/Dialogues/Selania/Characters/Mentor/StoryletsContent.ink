@@ -606,6 +606,8 @@
     Ti chiedo un favore prima di salutarci, {name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sorry
     Salvati questo codice, e inseriscilo poi nel documento del testing.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
     O se non hai voglia di rispondere alle domande mandamelo attraverso Queerginia: faresti molto felice entrambe.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
+    - (repeat)
     Il codice è {playerPurple}{playerYellow}{playerBlue}{playerGreen}{playerRed}{playerFirstStory}{playerSecondStory}{firstCharacterState} {secondCharacterState}
+    E se non te lo sei {pronouns has him:segnato|{pronouns has her:segnata|segnatə}} puoi sempre richiedermelo.
     Grazie di cuore.
         -> talk_with_mentor

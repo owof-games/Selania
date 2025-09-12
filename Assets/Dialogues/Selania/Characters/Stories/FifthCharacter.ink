@@ -31,7 +31,7 @@
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    Come posso esserti utile, {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?#speaker:{fifthChar_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState
+    Come posso esserti utile, {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
     
         + [Avrei bisogno di una mano.]
             -> support
@@ -56,7 +56,7 @@
 
 === talk_with_fifth_character ===
 ~ temp charNameFive = translator(fifthCharacterState)
-<i>C'è qualcosa che ti frulla nella testa.</i>
+<i>C'è qualcosa che ti frulla nella testa.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_fifth_character
