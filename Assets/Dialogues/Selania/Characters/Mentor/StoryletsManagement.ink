@@ -12,16 +12,16 @@
         - gifts_and_ink == 0:
             {
                 - not talk_with_first_character:
-                    Hai parlato con la nuova persona?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+                    Hai parlato con la nuova arrivata?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                         -> mentor_and_second_char_storylets 
                 
                 - talk_with_first_character:
-                    Sembra che {charNameOne} ti abbia raccontato qualcosa di sè!#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+                    Sembra che {charNameOne} ti abbia raccontato qualcosa di sè!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                     Ed è arrivato il momento di continuare con le spiegazioni!
-                    -> gifts_and_ink
+                        -> gifts_and_ink
                 
                 - else:
-                    -> mentor_and_second_char_storylets 
+                        -> mentor_and_second_char_storylets 
             }
                     
             
@@ -33,21 +33,21 @@
                 - else:
                 
                 {
-                    - firstStoryQuestCount >= minStoryQuesTCountFirstChar: Hai fatto il tuo dono a {charNameOne}?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+                    - firstStoryQuestCount >= minStoryQuesTCountFirstChar: Hai fatto il tuo dono a {charNameOne}?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                             -> mentor_and_second_char_storylets 
                     - else:
                         
                         {
                             - firstStoryQuestCount < 2:
-                                Hai bisogno di parlare ancora molto con  {charNameOne}, prima di poterle fare il dono.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+                                Hai bisogno di parlare ancora molto con {charNameOne} prima di poterle fare il dono.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
                                     -> mentor_and_second_char_storylets 
                             
                             - firstStoryQuestCount < 5:
-                                Secondo me sei circa a metà strada prima di poter convincere {charNameOne} a ricevere il tuo dono.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+                                Secondo me sei circa a metà strada prima di poter convincere {charNameOne} a ricevere il tuo dono.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                                     -> mentor_and_second_char_storylets 
                             
                             - else:
-                                Ormai ci sei: pochissimi scambi e sento che {charNameOne} sarà pronta ad aprirsi a te.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+                                Ormai ci sei: pochissimi scambi e sento che {charNameOne} sarà pronta ad aprirsi a te.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                                     -> mentor_and_second_char_storylets 
     
                         }
@@ -61,7 +61,7 @@
                     -> first_character_feedback
                 
                 - else:
-                    Prenditi il tuo tempo, ma ricordati che presto o tardi dovrai aiutare {charNameOne} a trovare il suo nuovo nome.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+                    Prenditi il tuo tempo, ma ricordati che presto o tardi dovrai aiutare {charNameOne} a trovare il suo nuovo nome.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                         -> mentor_and_second_char_storylets 
             }
         
@@ -84,7 +84,7 @@
             -> second_character_feedback
             
     
-        //Dopo le presentazioni con due:
+        //Dopo le presentazioni con due, scena in cui hanno litigato:
         - knowing_second_character.one && (not that_little_liar_storylet) :
             -> that_little_liar_storylet
         
@@ -120,7 +120,7 @@
         //     -> fifth_character_feedback        
         
      
-     //Commentario random
+     //Commenti a situazioni, eventi o altro.
         - talking_witch.first_story_ended_check && not growing_witch_storylet:
             -> growing_witch_storylet
         

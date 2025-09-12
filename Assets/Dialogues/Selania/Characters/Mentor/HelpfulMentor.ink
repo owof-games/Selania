@@ -6,13 +6,17 @@
  === support
     ~ temp charNameFive = translator(fifthCharacterState)
     - (top)
-    Hai bisogno dei miei consigli?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+    Hai bisogno dei miei consigli?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
         + {gifts_and_ink}[Mi ripeteresti cosa devo fare?]
             -> to_do
         + [Ho una domanda su un luogo.]
             -> tutorial
         + [C'è una cosa che mi riguarda.]
             -> myself
+        + [Vorrei consigli su come stare meglio.]
+            -> mindfulness -> support
+        + {secondStory == StoryEnded && firstStory == StoryEnded} [Mi ripeti quella cosa della fine della demo?]
+            -> ending_demo
         + [Vorrei parlare d'altro.]
             -> talk_with_mentor
         -
@@ -25,8 +29,6 @@
                 -> name_choice -> support
         + [Vorrei cambiare i miei pronomi.]
                 -> gender -> support
-        + [Vorrei consigli su come stare meglio.]
-                -> mindfulness -> support
         + [Sono a posto così, grazie.]
                 -> talk_with_mentor
  
@@ -51,27 +53,27 @@
 
 - (top)
     + [Sulla stazione.]
-            Intendi il luogo dove passo ore a spalare neve?
+            Intendi il luogo dove passo ore a spalare neve?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
             La stazione, ad est del Giardino, è il posto dove approdano le nuove persone.
             È anche il luogo attraverso cui potrai raggiungerci.
-            O da cui andartene, quando vorrai.
+            O da cui andartene, quando vorrai.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sorry
                 -> top
 
     + [Sulla serra.]
-            La serra è il mio posto preferito: ho sempre amato coltivare fiori e piante!
-            Anche se lì dentro cresce della roba molto strana.
-            La serra è un piccolo posto di meditazione.
+            La serra è il mio posto preferito: ho sempre amato coltivare fiori e piante!#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
+            Anche se lì dentro cresce della roba molto strana.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sorry
+            La serra è un piccolo posto di meditazione.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             Se non sta crescendo nulla, puoi provare a seguire le sue suggestioni.
             Col tempo qualcosa crescerà, e a quel punto forse avrai anche una risposta a una domanda che non sapevi di doverti fare.
-            Tipo: come fa {charNameFive} a tenere i vetri sempre così puliti?
+            Tipo: come fa {charNameFive} a tenere i vetri sempre così puliti?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                 -> top
 
     + [Sulla foresta.]
-            La foresta è un po' il nostro posto di passaggio.
+            La foresta è un po' il nostro posto di passaggio.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             Non ho idea di chi abbia messo la panchina, sinceramente.
             E tenerla pulita tutti i giorni è una gran fatica.
-            E quella pianta, fungo, quella cosa che è nel mezzo, non ho ancora capito come farla rifiorire.
-            E questo mi lascia molto frustrata.
+            E quella pianta, quella cosa che è nel mezzo, non ho ancora capito come farla rifiorire.
+            E questo mi lascia molto frustrata.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
             -> top
             
     + {secondTier or thirdTier or fourthTier}[Sono altri i luoghi di cui vorrei parlare.]
@@ -83,10 +85,10 @@
     
 - (second_top)    
     + {secondTier}[Sulla biblioteca.]
-            La biblioteca è un posto... un posto.
-            Ci sono molti racconti, ma chi ha il tempo di leggerli?
-            Con tutta quella polvere che raccolgono, poi.
-            Però un paio di volte ho usato la poltrona per fare del body scan, e non è stato male.
+            La biblioteca è un posto... un posto.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+            Ci sono molti racconti, ma chi ha il tempo di leggerli?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
+            Con tutta quella polvere che raccolgono, poi.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
+            Però un paio di volte ho usato la poltrona per fare del body scan, e non è stato male.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             Mi sono quasi addormentata.
             Quasi.
             -> second_top
@@ -204,7 +206,7 @@
      Il tavolo.
      Il palo sull'autobus.
      Stringi e concentrati sulla sensazione.
-     Ti aiuta a tornare coi piedi per terra.
+     Questo ti permette di tornare in contatto col tuo corpo.
         ->->
     
     = four
