@@ -16,10 +16,10 @@
 //Streets to and into the Bedroom
     + {are_two_entities_together(PG, FromTrainStopToBedroom)} [FromTrainStopToBedroom]
             ~ move_entity(PG, Bedroom)
+        -> on_movement_events ->
         -> bedroom
     
     + {are_two_entities_together(PG, RoomExit) && (not debugStochastic)} [RoomExit]
-        @animation:Cat
         -> END
       
 
