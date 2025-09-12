@@ -10,24 +10,27 @@ VAR findedGifts = ()
 === function ingredientTranslator(ingredient)
     {ingredient:
         - LaSpazzata: 
-            ~ return "un residuo della Spezzata"
+            ~ return "un rametto della Spezzata"
             
         - BaccaDellaAddolorata: 
             ~ return "una Bacca della Addolorata"
             
         - EderaDelleAmanti:
-            ~ return "dell'Edera delle Amanti"
+            ~ return "una foglia di Edera delle Amanti"
             
         - BrinaDellImpossibile:
-            ~ return "della Brina dell'Impossibile"
+            ~ return "un frammento di Brina dell'Impossibile"
 
         - CantoDelleCompagne: 
-            ~ return "del Canto delle Compagne"
+            ~ return "una goccia di Canto delle Compagne"
             
         - LicheneDegliAbissi:
-            ~ return "del Lichene degli Abissi"
+            ~ return "una traccia dell'odore del Lichene degli Abissi"
             
         - NonTiScordarDiTe:
-            ~ return "del Non Ti Scordar di Te"     
+            ~ return "l'impronta del Non Ti Scordar di Te"
+        
+        - Cardo Aspinato:
+            ~ return "un ciuffo di Cardo Aspinato"             
     
     }
