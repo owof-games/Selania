@@ -146,7 +146,7 @@
                 -> library
                 
     + {are_two_entities_together(PG, FromForestToLibraryDesat) && secondTier == false} [FromForestToLibraryDesat]
-        <i>Un cumulo di carta e colonne di legno blocca la strada.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Un cumulo di carta e colonne di legno blocca la strada.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
             
     + {are_two_entities_together(PG, FromForestToLibrary) && secondTier == true} [FromForestToLibrary]
@@ -165,7 +165,7 @@
 //Streets to Nest
     
     + {are_two_entities_together(PG, FromPondToNest)} [FromPondToNest]
-            <i>Nonostante i radi fiori, non riesci ad avanzare.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>Nonostante i radi fiori, non riesci ad avanzare.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     
     //{
@@ -184,7 +184,7 @@
     + {are_two_entities_together(PG, FromLibraryToLaboratory)} [FromLibraryToLaboratory]
     
     {
-        - not fourthTier: <i>Questa strada risulta bloccata.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        - not fourthTier: <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
         - else:
             ~ move_entity(PG, Laboratory)
