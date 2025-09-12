@@ -22,7 +22,6 @@
 
 //File dedicati alla gestione delle personagge
     INCLUDE Characters\Functions\CommonFunctions.ink
-    INCLUDE Characters\Functions\Movements.ink
     INCLUDE Characters\Functions\Ink.ink
     
     INCLUDE Characters\Functions\FirstCharacterManagement.ink
@@ -92,7 +91,7 @@
     INCLUDE Library\SecondStory.ink
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
-    INCLUDE Library\LibaryManagement.ink
+    INCLUDE Library\LibraryManagement.ink
 
 
 
