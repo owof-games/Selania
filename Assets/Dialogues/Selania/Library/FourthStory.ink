@@ -55,7 +55,7 @@
 === maura
 <i>Polvere</i> di Maura (she/they).
 
-    Trigger warning: violenza fisica.
+    Trigger warning: violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
             ~ unreadStories -= Maura
             ~ readStories += Maura
@@ -107,7 +107,7 @@
 === letizia_vaccarella
 <i>Dodici stelle</i> di Letizia Vaccarella (she/her).
 
-    Trigger warning: depressione.
+    Trigger warning: depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
             ~ unreadStories -= LetiziaVaccarella
             ~ readStories += LetiziaVaccarella

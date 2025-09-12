@@ -39,7 +39,7 @@
 === val_fausto_lattanzio
 <i>Home</i>, di Val Fausto Lattanzio (he/they).
 
-    Trigger warning: disforia, dismorfia.
+    Trigger warning: disforia, dismorfia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
             ~ unreadStories -= ValFaustoLattanzio
             ~ readStories += ValFaustoLattanzio
@@ -88,7 +88,7 @@
 === romi
 <i>Il principe sbagliato</i> di Sofia Abatangelo alias Romi alias Romi Sofia Abatangelo(any).
 
-    Trigger warning: violenza psicologica
+    Trigger warning: violenza psicologica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
             ~ unreadStories -= Romi
             ~ readStories += Romi
