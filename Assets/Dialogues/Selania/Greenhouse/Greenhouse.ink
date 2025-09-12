@@ -9,7 +9,7 @@
 
 {not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can}
 
-{greenhouse == 1:<i>Eccoti nella serra.</i>|{~<i>La serra pulsa nell'aria tiepida.|<i>C'è odore di terra e tranquillità.|<i>I vasi chiedono di essere ascoltati.|<i>Le ragnatele raccolgono risposte.|<i>Le venature del legno propongono domande.}</i>} #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+{greenhouse == 1:<i>Eccoti nella serra.</i>|{~<i>La serra pulsa nell'aria tiepida.|<i>C'è odore di terra e tranquillità.|<i>I vasi chiedono di essere ascoltati.|<i>Le ragnatele raccolgono risposte.|<i>Le venature del legno propongono domande.}</i>}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
 
 {
@@ -21,7 +21,7 @@
         - backupCultivable != ():
             -> pre_test
         - else:
-            <i>Al momento non è possibile coltivare nulla</i>. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>Al momento la serra non ha domande da porti</i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 	    -> main
         
     }
@@ -31,9 +31,7 @@
 
 === pre_test
 
-    <i>{~In questo momento non c'è nulla in crescita.|La serra attende le tue visioni.}</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
-        // + [Mi guardo attorno.]
-
+    <i>{~In questo momento non c'è nulla in crescita.|La serra attende le tue visioni.|Di quali domande hai bisogno?}</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
             -> main
     
 === call_test
@@ -55,7 +53,7 @@
                         -> cultivable_test
             }
             	- else:
-    	    <i>Al momento non è possibile coltivare nulla.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    	    <i>Il terreno chiede riposo, e nulla per ora può crescere.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
     	    -> main
     }
     
@@ -68,14 +66,14 @@
         - backupCultivable != ():
             -> pre_test
         - else:
-            <i>Al momento non è possibile coltivare nulla.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+            <i>L'acqua stanca chiede riposo, e nulla può crescere.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 	    -> main
         
     }
 }
 
 === stolen_watering_can
-<i>La serra è smarrita, non si trova più il suo innaffiatoio, e ora non sa più cosa cantare.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+<i>La serra è smarrita, non trova più il suo innaffiatoio, e ora non sa domandare.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 -> main
 
     

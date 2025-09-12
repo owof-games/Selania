@@ -66,11 +66,9 @@
     VAR growing = 0    
 
 === cultivable_test ===
-<i>La serra ha qualcosa da svelarti.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-<i>Sussurri serpeggiano tra i vasi, ponendoti domande.
-
+{~<i>La serra ha qualcosa da svelarti.|<i>I vasi hanno nuove domande.|<i>La terra è fertile di risposte.|<i>L'aria scompiglia ragnatele e capelli.|<i>Sussurri serpeggiano tra i vasi, ponendoti domande.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 {
-    - not gifts_and_ink.sbadata: <i>Qualcosa ti lascia un dono: uno zainetto per raccogliere tutto ciò che coltiverai.</i>
+    - not gifts_and_ink.sbadata: <i>Qualcosa ti lascia un dono: uno zainetto per raccogliere tutto ciò che coltiverai.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         ~ move_entity(Inventory, Greenhouse)
 }
     -> test
