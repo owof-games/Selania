@@ -117,10 +117,10 @@
             // - thirdStory == StoryEnded:
                     //~ fourthTier = true
                     
-            // - secondStory == StoryEnded:
+            // - (firstStory == StoryEnded) && (secondStory == StoryEnded):
                      //~ thirdTier = true
                      
-            - firstStory == StoryEnded:
+            - (firstStory == StoryEnded) or (secondStory == StoryEnded):
                      ~ secondTier = true
                      //Abilito l'accesso alla library
                      ~ move_entity(FromForestToLibraryDesat, Safekeeping)
