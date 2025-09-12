@@ -57,7 +57,7 @@
     //Feedback
         - not first_character_feedback:
             {
-                - firstStory == Ended:
+                - firstStory == StoryEnded:
                     -> first_character_feedback
                 
                 - else:
@@ -80,7 +80,7 @@
     
     {
     
-        - not second_character_feedback && secondStory == Ended:
+        - not second_character_feedback && secondStory == StoryEnded:
             -> second_character_feedback
             
     
@@ -108,15 +108,15 @@
     
     {
     //Feedback
-        - not ending_demo && secondStory == Ended && firstStory == Ended:
+        - not ending_demo && secondStory == StoryEnded && firstStory == StoryEnded:
             -> ending_demo
-        // - not third_character_feedback && thirdStory == Ended:
+        // - not third_character_feedback && thirdStory == StoryEnded:
         //     -> third_character_feedback        
     
-        // - not fourth_character_feedback && fourthStory == Ended:
+        // - not fourth_character_feedback && fourthStory == StoryEnded:
         //     -> fourth_character_feedback        
     
-        // - not fifth_character_feedback && fifthStory == Ended:
+        // - not fifth_character_feedback && fifthStory == StoryEnded:
         //     -> fifth_character_feedback        
         
      

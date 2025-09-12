@@ -3,11 +3,11 @@
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
-        + {are_two_entities_together(FourthCharacter, PG) && fourthStory == Active}[FourthCharacter]
+        + {are_two_entities_together(FourthCharacter, PG) && fourthStory == StoryStarted}[FourthCharacter]
             -> talk_with_fourth_character
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(FourthCharacter, PG) && fourthStory == Ended} [FourthCharacter]
+        + {are_two_entities_together(FourthCharacter, PG) && fourthStory == StoryEnded} [FourthCharacter]
             -> fourth_char_story_ended
         + ->
     
@@ -782,7 +782,7 @@
         -> close  
     
     = close
-            ~ fourthStory = Ended
+            ~ fourthStory = StoryEnded
             ~ endedStories += fourthES
             ~ fourthCharacterInkLevel = Empty
             ~ movementsCounter = 0

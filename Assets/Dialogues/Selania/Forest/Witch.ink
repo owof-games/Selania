@@ -16,21 +16,21 @@
     
     {
         //Check per intro
-        - not intro && ((firstStory == Ended) or (secondStory == Ended) or (thirdStory == Ended)):
+        - not intro && ((firstStory == StoryEnded) or (secondStory == StoryEnded) or (thirdStory == StoryEnded)):
             -> intro
     }
     
     {
         //Check post storie dopo l'intro
-        - intro && firstStory == Ended && not first_story_ended_check:
+        - intro && firstStory == StoryEnded && not first_story_ended_check:
             -> first_story_ended_check
-        - intro && secondStory == Ended && not second_story_ended_check:
+        - intro && secondStory == StoryEnded && not second_story_ended_check:
             -> second_story_ended_check
-        - intro && thirdStory == Ended && not third_story_ended_check:
+        - intro && thirdStory == StoryEnded && not third_story_ended_check:
             -> third_story_ended_check
-        - intro && fourthStory == Ended:
+        - intro && fourthStory == StoryEnded:
             -> fourth_story_ended_check
-        - intro && fifthStory == Ended:
+        - intro && fifthStory == StoryEnded:
             -> fifth_story_ended_check    
         
         
@@ -106,11 +106,11 @@
         <i>Il terreno ci racconta che {name} ha appena compiuto qualcosa di importante.</i>
             ~ somethingStrange ++
                 {
-                    - not first_story_ended_check && firstStory == Ended:
+                    - not first_story_ended_check && firstStory == StoryEnded:
                         -> first_story_ended_check
-                    - not second_story_ended_check && secondStory == Ended:
+                    - not second_story_ended_check && secondStory == StoryEnded:
                         -> second_story_ended_check
-                    - not third_story_ended_check && thirdStory == Ended:
+                    - not third_story_ended_check && thirdStory == StoryEnded:
                         -> third_story_ended_check
                 }
 
@@ -325,10 +325,10 @@
 === descriptions
     {   
         //Opinioni dopo la fine della seconda storia    
-        - secondStory == Ended:
+        - secondStory == StoryEnded:
             -> three
         //Opinioni dopo la fine della prima storia      
-        - firstStory == Ended:
+        - firstStory == StoryEnded:
             -> two
         //Opinioni presenti da inizio gioco    
         - else:

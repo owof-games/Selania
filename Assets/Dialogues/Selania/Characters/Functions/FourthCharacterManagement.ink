@@ -9,7 +9,7 @@
     VAR fourthCharacterState = Mondatrice
     
     
-    VAR fourthStory = NotStarted
+    VAR fourthStory = StoryNotStarted
     VAR charFourEnding = ()
    
 //Tracciamento del dono

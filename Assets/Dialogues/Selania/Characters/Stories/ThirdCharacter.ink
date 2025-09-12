@@ -3,11 +3,11 @@
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
-        + {are_two_entities_together(ThirdCharacter, PG) && thirdStory == Active}[ThirdCharacter]
+        + {are_two_entities_together(ThirdCharacter, PG) && thirdStory == StoryStarted}[ThirdCharacter]
             -> talk_with_third_character
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(ThirdCharacter, PG) && thirdStory == Ended} [ThirdCharacter]
+        + {are_two_entities_together(ThirdCharacter, PG) && thirdStory == StoryEnded} [ThirdCharacter]
             -> third_char_story_ended
         + ->
     
@@ -783,7 +783,7 @@
             -> close  
         
     = close
-            ~ thirdStory = Ended
+            ~ thirdStory = StoryEnded
             ~ endedStories += thirdES
             ~ thirdCharacterInkLevel = Empty
             ~ movementsCounter = 0
@@ -847,7 +847,7 @@
 
 
 //         = intro
-//             ~ storiaUno = Active
+//             ~ storiaUno = StoryStarted
 //             {charNameUno}: Vigilia di Natale.
 //             {charNameUno}: Per la prima volta da mesi ho tempo libero: non sto lavorando, non sto correndo da nessuna parte.
 //             {charNameUno}: Cammino lentamente col cane, andando a una cena con amici.
@@ -1299,7 +1299,7 @@
 //                 -> evento_speciale
 //             - else:
 //                 {charNameUno}: E ora posso andarmene in pace.
-//                 ~ storiaUno = Ended
+//                 ~ storiaUno = StoryEnded
 //                 ~ movementsCounter = 0
 //                     -> main
 //         }
@@ -1312,7 +1312,7 @@
 //         {charNameUno}: Fuori da qui.
 //         {charNameUno}: Dal mondo da cui provieni.
 //         {charNameUno}: Addio.                              
-//             ~ storiaUno = Ended
+//             ~ storiaUno = StoryEnded
 //                 -> main
 
 // === scelta_nome_uno
@@ -1324,7 +1324,7 @@
 //          ~ effettivoStatoPersonaggiaUno = IlGuarente
 //     -
 //         ~ movementsCounter = 0
-//         ~ storiaUno = Ended
+//         ~ storiaUno = StoryEnded
 //         -> main
         
      

@@ -7,7 +7,7 @@
             -> talk_with_mentor
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(Mentor, PG) && fifthStory == Ended} [Mentor]
+        + {are_two_entities_together(Mentor, PG) && fifthStory == StoryEnded} [Mentor]
             -> fifth_char_story_ended
         + ->
     
@@ -62,7 +62,7 @@
                 -> knowing_fifth_character
                 
             //Per la mentore: dono solo dopo la fine della quarta storia, per questo metto un knot come differenziatore.
-            + {knowing_fifth_character.seven && findedGifts != () && fourthStory == Ended} [Ti vorrei donare questa cosa.]
+            + {knowing_fifth_character.seven && findedGifts != () && fourthStory == StoryEnded} [Ti vorrei donare questa cosa.]
                     -> second_story_gift
         
             //Dono fatto ma non ho avviato la main story
@@ -87,29 +87,29 @@
         {
             - not one:
                 -> one
-            - not two && firstStory == Ended:
+            - not two && firstStory == StoryEnded:
                 -> two
-            - not three && firstStory == Ended:
+            - not three && firstStory == StoryEnded:
                 -> three
-            - not four && secondStory == Ended:
+            - not four && secondStory == StoryEnded:
                 -> four
-            - not five && secondStory == Ended:
+            - not five && secondStory == StoryEnded:
                 -> five
             //Forse solo una di queste, perché con la terza storia avremo degli storylets ad hoc.    
-            - not six && thirdStory == Ended:
+            - not six && thirdStory == StoryEnded:
                 -> six
             //Metà delle storie della mentore sono disponibili sostanzialmente da subito, le altre dopo che le condizioni per attivare la storia a tutti gli effetti sono state raggiunte.      
-            - not seven && fifthStory == Active:
+            - not seven && fifthStory == StoryStarted:
                 -> seven
-            - not eight && fifthStory == Active:
+            - not eight && fifthStory == StoryStarted:
                 -> eight
-            - not nine && fifthStory == Active:
+            - not nine && fifthStory == StoryStarted:
                 -> nine
-            - not ten && fifthStory == Active:
+            - not ten && fifthStory == StoryStarted:
                 -> ten
-            - not eleven && fifthStory == Active:
+            - not eleven && fifthStory == StoryStarted:
                 -> eleven
-            - not twelve && fifthStory == Active:
+            - not twelve && fifthStory == StoryStarted:
                 -> twelve
             - else:
                 -> fifth_character_opinions
@@ -161,7 +161,7 @@
                     
  
             -
-        {firstStory hasnt Ended: Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di mobili rotti che blocca il sentiero a ovest della foresta.|Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}
+        {firstStory hasnt StoryEnded: Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di mobili rotti che blocca il sentiero a ovest della foresta.|Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}
         È arrivato il momento di capire dove possa portare.
         @animation:RewriterBook
         Grazie per la chiacchierata, {name}.
@@ -974,7 +974,7 @@
         -> close
     
     = close
-            ~ fifthStory = Ended
+            ~ fifthStory = StoryEnded
             ~ endedStories += fifthES
             ~ fifthCharacterInkLevel = Empty
             ~ movementsCounter = 0

@@ -10,7 +10,7 @@
     
     VAR minStoryQuesTCountSecondChar = 8
     
-    VAR secondStory = NotStarted
+    VAR secondStory = StoryNotStarted
     VAR charTwoEnding = ()
 
 //Tracciamento del dono

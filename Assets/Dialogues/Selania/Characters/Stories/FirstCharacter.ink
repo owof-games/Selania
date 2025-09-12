@@ -1,11 +1,11 @@
 === first_character ===
     //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
             //Chiacchiera normale
-            + {are_two_entities_together(FirstCharacter, PG) && firstStory == Active}[FirstCharacter]
+            + {are_two_entities_together(FirstCharacter, PG) && firstStory == StoryStarted}[FirstCharacter]
                 -> talk_with_first_character
             
             //Chiacchiera a fine storia
-            + {are_two_entities_together(FirstCharacter, PG) && firstStory == Ended} [FirstCharacter]
+            + {are_two_entities_together(FirstCharacter, PG) && firstStory == StoryEnded} [FirstCharacter]
                 -> first_char_story_ended
             + ->
         
@@ -1439,7 +1439,7 @@
         
     = close   
             ~ endedStories += firstES
-            ~ firstStory = Ended
+            ~ firstStory = StoryEnded
             ~ movementsCounter = 0
             ~ PG_advance_management(firstStoryPG)
             ~ numberQuestion = 0

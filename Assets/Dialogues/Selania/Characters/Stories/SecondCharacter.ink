@@ -3,11 +3,11 @@
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
-        + {are_two_entities_together(SecondCharacter, PG) && secondStory == Active}[SecondCharacter]
+        + {are_two_entities_together(SecondCharacter, PG) && secondStory == StoryStarted}[SecondCharacter]
             -> talk_with_second_character
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(SecondCharacter, PG) && secondStory == Ended} [SecondCharacter]
+        + {are_two_entities_together(SecondCharacter, PG) && secondStory == StoryEnded} [SecondCharacter]
             -> second_char_story_ended
         + ->
     
@@ -1966,7 +1966,7 @@
     
             ~ secondCharacterInkLevel = Empty
             ~ numberQuestion = 0
-            ~ secondStory = Ended
+            ~ secondStory = StoryEnded
             ~ movementsCounter = 0
             ~ endedStories += secondES
             ~ PG_advance_management(secondStoryPG)

@@ -54,7 +54,7 @@
                         ~ bookBGVariations ++
                         -> top
                     
-                * {frog && firstStory == Active} [Puoi aiutarmi anche per {charNameOne}?]
+                * {frog && firstStory == StoryStarted} [Puoi aiutarmi anche per {charNameOne}?]
                     <i>La rana sembra rifletterci.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                     Cra.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:frog_neutral
                     <i>La rana accetta, ma non promette di essere così disponibile in futuro.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}

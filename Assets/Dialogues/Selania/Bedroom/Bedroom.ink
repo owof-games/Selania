@@ -6,7 +6,7 @@
             ~ arrivingFrom = Bedroom
     
     {
-        - fourthTier && fifthStory ==Ended:
+        - fourthTier && fifthStory ==StoryEnded:
             <i>Frasi legate al finale del gioco</i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
         -fourthTier:

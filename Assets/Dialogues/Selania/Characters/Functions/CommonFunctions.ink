@@ -3,7 +3,7 @@
    Gestione avvio e chiusura storie personagge 
 
  ----------------------------------*/
-    LIST storyStates = NotStarted, Active, Ended
+    LIST storyStates = StoryNotStarted, StoryStarted, StoryEnded
 
     
     //Gestione parte dell'albero collegata e recap finale
@@ -24,50 +24,50 @@
     //Qui commentato a manetta per non fare partire cose che non dovrebbero partire.
     
     {
-        - movementsCounter == delayFirstChar && firstStory == NotStarted:
+        - movementsCounter == delayFirstChar && firstStory == StoryNotStarted:
                 ~ move_entity(FirstCharacter, TrainStop)
-                ~ firstStory = Active
+                ~ firstStory = StoryStarted
                 
     //A metà della storia della prima personaggia, compare la seconda      
-        - knowing_first_character.three && secondStory == NotStarted:
+        - knowing_first_character.three && secondStory == StoryNotStarted:
                 ~ move_entity(SecondCharacter, TrainStop)    
-                ~ secondStory = Active
+                ~ secondStory = StoryStarted
     
     //A metà della storia della seconda personaggia e finita la prima (così la biblioteca è aperta), compare la terza
-        //- knowing_second_character.four && firstStory == Ended && thirdStory == NotStarted:
+        //- knowing_second_character.four && firstStory == StoryEnded && thirdStory == StoryNotStarted:
                // ~ move_entity(ThirdCharacter, TrainStop)    
-                //~ thirdStory = Active
+                //~ thirdStory = StoryStarted
                 
     //Dopo un po' da quando la terza storia è finita, compare una quarta personaggia
-        //- movementsCounter == delayFourthChar && thirdStory == Ended:
+        //- movementsCounter == delayFourthChar && thirdStory == StoryEnded:
             //Ma magari questo spettro vuole comparire altrove
                 //~ move_entity(FourthCharacter, TrainStop)
-                //~ fourthStory = Active
+                //~ fourthStory = StoryStarted
                 
     //E quando la storia della quarta è a metà, iniziamo a modo quella della mentore
-        //- knowing_fourth_character.five && fifthStory == NotStarted:
-                //~ fifthStory = Active
+        //- knowing_fourth_character.five && fifthStory == StoryNotStarted:
+                //~ fifthStory = StoryStarted
                     
     
     
     //Check per l'allontanamento delle personagge
-        //- firstStory == Ended && movementsCounter > 10:
+        //- firstStory == StoryEnded && movementsCounter > 10:
             //~ move_entity(FirstCharacter, Safekeeping)
             //~ move_entity(FirstCharacterNotes, TrainStop)
             
-        //- secondStory == Ended && movementsCounter > 10:
+        //- secondStory == StoryEnded && movementsCounter > 10:
             //~ move_entity(SecondCharacter, Safekeeping)
             //~ move_entity(SecondCharacterNotes, TrainStop)
             
-        //- thirdStory == Ended && movementsCounter > 10:
+        //- thirdStory == StoryEnded && movementsCounter > 10:
             //~ move_entity(ThirdCharacter, Safekeeping)
             //~ move_entity(ThirdCharacterNotes, TrainStop)
             
-        //- fourthStory == Ended && movementsCounter > 10:
+        //- fourthStory == StoryEnded && movementsCounter > 10:
             //~ move_entity(FourthCharacter, Safekeeping)
            // ~ move_entity(FourthCharacterNotes, TrainStop)
             
-        //- fifthStory == Ended && movementsCounter > 10:
+        //- fifthStory == StoryEnded && movementsCounter > 10:
             //~ move_entity(Mentor, Safekeeping)
            // ~ move_entity(FifthCharacterNotes, TrainStop)
     }
@@ -153,12 +153,12 @@
 
 //Avvio dialoghi di chiusura
     {
-        - firstStory == Ended:
+        - firstStory == StoryEnded:
 	        ~ firstCharEndingDialogue ++
 	}
 	
 	{
-	    - secondStory == Ended:
+	    - secondStory == StoryEnded:
 	        ~ secondCharEndingDialogue ++     
     }
 

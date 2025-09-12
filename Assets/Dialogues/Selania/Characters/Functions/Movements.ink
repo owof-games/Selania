@@ -34,19 +34,19 @@
 
     //Check stato tier
     {   
-            // - thirdStory == Ended:
+            // - thirdStory == StoryEnded:
                     //~ fourthTier = true
                     
-            // - secondStory == Ended:
+            // - secondStory == StoryEnded:
                      //~ thirdTier = true
                      
-            - firstStory == Ended:
+            - firstStory == StoryEnded:
                      ~ secondTier = true
                      //Abilito l'accesso alla library
                      ~ move_entity(FromForestToLibraryDesat, Safekeeping)
                      ~ move_entity(FromForestToLibrary, Forest)
                      
-            - firstStory == NotStarted:
+            - firstStory == StoryNotStarted:
                     ~ move_entity(Mentor, TrainStop)
                     ~ firstTier = true
     }
@@ -54,26 +54,26 @@
     //Aggiunta delle personagge randomizzabili quando la loro storia è attiva. Non serve la mentore perché va per la sua.
 
     {
-            - firstStory == Active:
+            - firstStory == StoryStarted:
                 ~ randomizable_characters += FirstCharacter
             
-            - firstStory == Ended:  
+            - firstStory == StoryEnded:  
                 ~ randomizable_characters -= FirstCharacter 
     }
 
     {
-        - secondStory == Active:
+        - secondStory == StoryStarted:
                 ~ randomizable_characters += SecondCharacter
                     
-        - secondStory == Ended:
+        - secondStory == StoryEnded:
                 ~ randomizable_characters -= SecondCharacter 
     }
   
         
-        // - thirdStory == Active && talk_with_third_character:
+        // - thirdStory == StoryStarted && talk_with_third_character:
             // ~ randomizable_characters += ThirdCharacter
         
-        // - fourthStory == Active && dialogo_personaggia_quattro:
+        // - fourthStory == StoryStarted && dialogo_personaggia_quattro:
             // ~ randomizable_characters += FourthCharacter    
             
     

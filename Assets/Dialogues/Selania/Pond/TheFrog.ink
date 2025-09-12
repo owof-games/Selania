@@ -19,8 +19,8 @@ VAR questActive = ()
 - (top)
 Hai bisogno di una mano?
     
-    + {firstStory == Active}{charNameOne}
-        * * {firstStory == Active && !first_story_gift.ink_outcome} Dono
+    + {firstStory == StoryStarted}{charNameOne}
+        * * {firstStory == StoryStarted && !first_story_gift.ink_outcome} Dono
             -> first_gift_frog_advice
         * * Dialogo
             -> first_dialogue_frog_advice
@@ -28,8 +28,8 @@ Hai bisogno di una mano?
             Non ho molto da dirti su {charNameOne}
             ->->
     
-    + {secondStory == Active} {charNameTwo}
-        * * {secondStory == Active && !second_story_gift.ink_outcome}Dono
+    + {secondStory == StoryStarted} {charNameTwo}
+        * * {secondStory == StoryStarted && !second_story_gift.ink_outcome}Dono
             -> second_gift_frog_advice
         * * Dialogo
             -> second_dialogue_frog_advice
@@ -37,8 +37,8 @@ Hai bisogno di una mano?
             Non ho molto da dirti su {charNameTwo}
             ->->
             
-    + {thirdStory == Active} {charNameThree}
-        * * {thirdStory == Active && !third_story_gift.ink_outcome}Dono
+    + {thirdStory == StoryStarted} {charNameThree}
+        * * {thirdStory == StoryStarted && !third_story_gift.ink_outcome}Dono
             -> third_gift_frog_advice
         * * Dialogo
             -> third_dialogue_frog_advice
@@ -46,8 +46,8 @@ Hai bisogno di una mano?
             Non ho molto da dirti su {charNameThree}
             ->->
             
-    + {fourthStory == Active} {charNameFour}
-        * * {fourthStory == Active && !fourth_story_gift.ink_outcome}Dono
+    + {fourthStory == StoryStarted} {charNameFour}
+        * * {fourthStory == StoryStarted && !fourth_story_gift.ink_outcome}Dono
             -> fourth_gift_frog_advice
         * * Dialogo
             -> fourth_dialogue_frog_advice 
@@ -55,8 +55,8 @@ Hai bisogno di una mano?
             Non ho molto da dirti su {charNameFour}
             ->->
             
-    + {fifthStory == Active} {charNameFive}
-        * * {fifthStory == Active && !fifth_story_gift.ink_outcome}Dono
+    + {fifthStory == StoryStarted} {charNameFive}
+        * * {fifthStory == StoryStarted && !fifth_story_gift.ink_outcome}Dono
             -> first_gift_frog_advice
         * * Dialogo
             -> first_dialogue_frog_advice
@@ -163,7 +163,7 @@ Hai bisogno di una mano?
         ~ questActive += mindQuest
             -> mind_quest
             
-    - not talking_witch.first_story_ended_check && firstStory == Ended:
+    - not talking_witch.first_story_ended_check && firstStory == StoryEnded:
         ~ questActive = ()
         ~ questActive += witchTalk
             -> witch_talk_quest
