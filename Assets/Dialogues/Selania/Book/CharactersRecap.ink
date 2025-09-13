@@ -100,7 +100,11 @@
 
 
 
-{main_story_first_character: confessione.}
+{
+    - main_story_first_character:
+        Dopo il dono, Chitarra mi ha detto di aver capito perché si sia ritrovata con questo nome. Crede che la Chitarra sia il segno del rimanere nel medio, nella cosa più ovvia, e questo perché mentre tutte le persone care le fanno pressioni su cosa scegliere o meno per il suo futuro, lei ha solo paura. Crede che una scelta chiuda strade, deluda persone, o possa portarti in luoghi sbagliati. E a quel punto non ci sia modo di tornare indietro. Forse, allora, è meglio che siano le altre persone a scegliere per te.
+    
+}
 
 //Eventuale commento della rana.
 

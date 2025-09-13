@@ -1099,8 +1099,8 @@
          Mi cago addosso all'idea di fare una scelta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
          Perché una scelta chiude strade.
          Perché una scelta delude persone.
-         Perché una scelta può portarti su strade sbagliate.
-         E a quel punto, non si può più tornare indietro.
+         Perché una scelta può portarti in luoghi che non sono per te.
+         Ma a quel punto, non si può più tornare indietro.
          E così l'unica cosa che rimane è rinunciare.
          Lasciare che le altre persone scelgano per te.
          O che lo faccia il mondo.
