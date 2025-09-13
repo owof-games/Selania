@@ -94,8 +94,15 @@
         Spero che lì vada tutto bene.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
         E che {charNameFive} non sia sempre pesantona.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
         Alla prossima lettera.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-         @animation:RewriterBook
+         
         <i>{charNameOne}</i>
+        
+            {
+                - one == 1:
+                @animation:RewriterBook
+            
+            }
+            
        
             ~ firstWritingPause = firstWritingPauseDuration
                 -> main
@@ -141,9 +148,15 @@
     E lì invece? Come stanno le tue piante?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
     Sono arrivate nuove persone interessanti?
     Sicuro, nessunə più interessante di me!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
-     @animation:RewriterBook
     A presto, <i>{charNameOne}</i>.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
         ~ firstWritingPause = firstWritingPauseDuration
+        
+        {
+            - two == 1:
+            @animation:RewriterBook
+            
+        }
+    
        
         -> main
         
@@ -209,9 +222,16 @@
         }
     Comunque un giorno mi piacerebbe che la musica, questa musica arrivasse anche dalle vostre parti.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
     O che, quando te ne andrai da lì, verrai ad ascoltarla con me.
-     @animation:RewriterBook
     Un saluto.
     {charNameOne}.
+    
+        {
+            - three == 1:
+            @animation:RewriterBook
+            
+        }
+    
+    
             -> main
     
 === second_character_notes ===
@@ -346,9 +366,15 @@
             }
             
             PS: come sta {charNameFive}? Mi spiace per come l'ho trattata mentre ero lì, sai?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-                @animation:RewriterBook 
             Ma non dirglielo. Per ora per lo meno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
             Ciao!
+
+        {
+            - one == 1:
+            @animation:RewriterBook
+            
+        }
+        
             ~ secondWritingPause = secondWritingPauseDuration
                 -> main
     
@@ -456,8 +482,13 @@
                     {charNameTwo}.
             }
             PS: mi piace mettere i PS, su internet non ci sono.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
-                @animation:RewriterBook
             PPS: ma sono arrivate persone nuove poi? Qualcuna con dei dolci magari?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
+        
+        {
+            - two == 1:
+            @animation:RewriterBook
+            
+        }
         
                 ~ secondWritingPause = secondWritingPauseDuration
                     -> main
@@ -579,8 +610,13 @@
             }
         
         PS: Ma poi hai scoperto cos'è quella statua nella foresta?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy   
+        PPS: Ho un segreto che riguarda la serra, ma te lo dirò con la prossima lettera! Ciao ciao!
+        
+        {
+            - three == 1:
             @animation:RewriterBook
-        PPS: Ho un segreto che riguarda la serra, ma te lo dirò con la prossima lettera! Ciao ciao!  
+            
+        }        
             ~ secondWritingPause = secondWritingPauseDuration
                 -> main
     
