@@ -2,19 +2,68 @@
 + {are_two_entities_together(FirstRecap, PG)} [FirstRecap]
 ~ enableBigDialogue()
 
+{
+    - knowing_first_character.one: prima informazione.
+    
+}
 
-{knowing_first_character.one: prima informazione.}
-{knowing_first_character.two: seconda informazione.}
-{knowing_first_character.three: terza informazione.}
-{knowing_first_character.four: quarta informazione.}
-{knowing_first_character.five: quinta informazione.}
-{knowing_first_character.six: sesta informazione.}
-{knowing_first_character.seven: settima informazione.}
-{knowing_first_character.eight: ottava informazione.}
-{knowing_first_character.nine: nona informazione.}
-{knowing_first_character.ten: decima informazione.}
-{knowing_first_character.eleven: undicesima informazione.}
-{knowing_first_character.twelve: dodicesiam informazione.}
+{
+    - knowing_first_character.two: prima informazione.
+    
+}
+
+{
+    - knowing_first_character.three: prima informazione.
+    
+}
+
+{
+    - knowing_first_character.four: prima informazione.
+    
+}
+
+{
+    - knowing_first_character.five: prima informazione.
+    
+}
+
+{
+    - knowing_first_character.six: prima informazione.
+    
+}
+
+{
+    - knowing_first_character.seven: prima informazione.
+    
+}
+
+{
+    - knowing_first_character.eight: prima informazione.
+    
+}
+
+{
+    - knowing_first_character.nine: prima informazione.
+    
+}
+
+{
+    - knowing_first_character.ten: prima informazione.
+    
+}
+
+{
+    - knowing_first_character.eleven: prima informazione.
+    
+}
+
+{
+    - knowing_first_character.twelve: prima informazione.
+    
+}
+
+
+
 
 //Appunto sul dono fatto
 {
@@ -51,6 +100,7 @@
 {main_story_first_character.ending: Dopo la nostra conversazione, ha scelto un nuovo nome: {firstCharacterState}.}
 
 {first_character_feedback: Dopo aver aiutato {firstCharacterState}, {fifthCharacterState} mi ha detto che<>}
+
 {
     - firstCharacterPossibleStates has Grizzly: feedback Mentore
         
@@ -128,18 +178,65 @@
 + {are_two_entities_together(SecondRecap, PG)} [SecondRecap]
 ~ enableBigDialogue()
 
-{knowing_second_character.one: prima informazione.}
-{knowing_second_character.two: seconda informazione.}
-{knowing_second_character.three: terza informazione.}
-{knowing_second_character.four: quarta informazione.}
-{knowing_second_character.five: quinta informazione.}
-{knowing_second_character.six: sesta informazione.}
-{knowing_second_character.seven: settima informazione.}
-{knowing_second_character.eight: ottava informazione.}
-{knowing_second_character.nine: nona informazione.}
-{knowing_second_character.ten: decima informazione.}
-{knowing_second_character.eleven: undicesima informazione.}
-{knowing_second_character.twelve: dodicesiam informazione.}
+{
+    - knowing_second_character.one: prima informazione.
+    
+}
+
+{
+    - knowing_second_character.two: prima informazione.
+    
+}
+
+{
+    - knowing_second_character.three: prima informazione.
+    
+}
+
+{
+    - knowing_second_character.four: prima informazione.
+    
+}
+
+{
+    - knowing_second_character.five: prima informazione.
+    
+}
+
+{
+    - knowing_second_character.six: prima informazione.
+    
+}
+
+{
+    - knowing_second_character.seven: prima informazione.
+    
+}
+
+{
+    - knowing_second_character.eight: prima informazione.
+    
+}
+
+{
+    - knowing_second_character.nine: prima informazione.
+    
+}
+
+{
+    - knowing_second_character.ten: prima informazione.
+    
+}
+
+{
+    - knowing_second_character.eleven: prima informazione.
+    
+}
+
+{
+    - knowing_second_character.twelve: prima informazione.
+    
+}
 
 
 //Appunto sul dono fatto
@@ -255,18 +352,65 @@
 + {are_two_entities_together(ThirdRecap, PG)} [ThirdRecap]
 ~ enableBigDialogue()
 
-{knowing_third_character.one: prima informazione.}
-{knowing_third_character.two: seconda informazione.}
-{knowing_third_character.three: terza informazione.}
-{knowing_third_character.four: quarta informazione.}
-{knowing_third_character.five: quinta informazione.}
-{knowing_third_character.six: sesta informazione.}
-{knowing_third_character.seven: settima informazione.}
-{knowing_third_character.eight: ottava informazione.}
-{knowing_third_character.nine: nona informazione.}
-{knowing_third_character.ten: decima informazione.}
-{knowing_third_character.eleven: undicesima informazione.}
-{knowing_third_character.twelve: dodicesiam informazione.}
+{
+    - knowing_third_character.one: prima informazione.
+    
+}
+
+{
+    - knowing_third_character.two: prima informazione.
+    
+}
+
+{
+    - knowing_third_character.three: prima informazione.
+    
+}
+
+{
+    - knowing_third_character.four: prima informazione.
+    
+}
+
+{
+    - knowing_third_character.five: prima informazione.
+    
+}
+
+{
+    - knowing_third_character.six: prima informazione.
+    
+}
+
+{
+    - knowing_third_character.seven: prima informazione.
+    
+}
+
+{
+    - knowing_third_character.eight: prima informazione.
+    
+}
+
+{
+    - knowing_third_character.nine: prima informazione.
+    
+}
+
+{
+    - knowing_third_character.ten: prima informazione.
+    
+}
+
+{
+    - knowing_third_character.eleven: prima informazione.
+    
+}
+
+{
+    - knowing_third_character.twelve: prima informazione.
+    
+}
 
 //Appunto sul dono fatto
 {
@@ -513,19 +657,65 @@ Una persona che si fa chiamare {fifthCharacterState} ti ha detto di parlare in g
 {main_story_second_character.secret_ending: secondo {secondCharacterState}, {secondCharacterState} è xyz.}
 
 
+{
+    - knowing_fifth_character.one: prima informazione.
+    
+}
 
-{knowing_fifth_character.one: prima informazione.}
-{knowing_fifth_character.two: seconda informazione.}
-{knowing_fifth_character.three: terza informazione.}
-{knowing_fifth_character.four: quarta informazione.}
-{knowing_fifth_character.five: quinta informazione.}
-{knowing_fifth_character.six: sesta informazione.}
-{knowing_fifth_character.seven: settima informazione.}
-{knowing_fifth_character.eight: ottava informazione.}
-{knowing_fifth_character.nine: nona informazione.}
-{knowing_fifth_character.ten: decima informazione.}
-{knowing_fifth_character.eleven: undicesima informazione.}
-{knowing_fifth_character.twelve: dodicesiam informazione.}
+{
+    - knowing_fifth_character.two: prima informazione.
+    
+}
+
+{
+    - knowing_fifth_character.three: prima informazione.
+    
+}
+
+{
+    - knowing_fifth_character.four: prima informazione.
+    
+}
+
+{
+    - knowing_fifth_character.five: prima informazione.
+    
+}
+
+{
+    - knowing_fifth_character.six: prima informazione.
+    
+}
+
+{
+    - knowing_fifth_character.seven: prima informazione.
+    
+}
+
+{
+    - knowing_fifth_character.eight: prima informazione.
+    
+}
+
+{
+    - knowing_fifth_character.nine: prima informazione.
+    
+}
+
+{
+    - knowing_fifth_character.ten: prima informazione.
+    
+}
+
+{
+    - knowing_fifth_character.eleven: prima informazione.
+    
+}
+
+{
+    - knowing_fifth_character.twelve: prima informazione.
+    
+}
 
 //Appunto sul dono fatto
 {
