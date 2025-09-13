@@ -246,7 +246,7 @@
         
         <i>L'acqua ci ha portato le lacrime di {charNameFive}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         <i>Questa storia per lei è stata faticosa.</i>
-        <i>Le sue radici sembrano solide, ma il tronco ondeggia al primo accenno di burrasca.</i>
+        <i>Le sue radici sembrano solide, ma il tronco ondeggia a ogni accenno di burrasca.</i>
         <i>Forse {name} può essere il suo sostegno.</i>
         <i>O forse {name} può lasciarla cadere, e ricominciare.</i>
         <i>Ora noi ci godiamo la brezza e il sole.</i>

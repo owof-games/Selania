@@ -1,17 +1,17 @@
 === rules_recap
 + {are_two_entities_together(RulesRecap, PG)} [RulesRecap]
 ~ enableBigDialogue()
-Qui ci sono le regole.
+    Ho appuntato qui le cose che mi ha detto Mentore sulla Riscrittura.
+    {
+        - gifts_and_ink:
+            La prima cosa da fare è: conquistare la <b>fiducia</b> della persona che devo aiutare. Ci parlo, cercando di capire di cosa ha bisogno e quali sono le risposte che le piacciono. Poi, le faccio un <b>dono</b>, qualcosa che ho creato con fatica, come qualcosa coltivato in serra. Il dono aumenta anche l'<b>inchiostro</b> che avrò a disposizione.
+    }
+    {
+    
+        - questions:
+            Più sono in confidenza con la persona e più le avrò dato un dono gradito, più avrò inchiostro a disposizione per aiutarla a riscrivere la sua storia. Tra mentori definiscono le azioni che l'inchiostro permette di compiere <b>riscritture</b>, un po' come quando riscriviamo un testo. E quello che ogni riscrittorə andrà a revisionare è il modo in cui la persona legge determinati temi della sua vita. Magari una persona si definisce così insicura da chiamarsi <i>Pasticcio</i>, ma lə Riscrittorə ha colto nella sua storia che non c'è alcun pasticcio, ma il coraggio di buttarsi in situazioni scomode. Oppure si definirà <i>La Temibile</i>, ma invece di far paura, ha solo il terrore di mostrare le sue vulnerabilità, e per questo si sente sola. Grazie all'inchiostro, lə Riscrittorə aiuterà a riscrivere quella parte della vita della persona. Più inchiostro significa più possibilità di aiutare quella persona a vedersi in un modo nuovo. Ma a prescindere dalla quantità di inchiostro, ogni Riscrittorə ha in sé il dono dell'<b>epilogo</b>. L'<b>epilogo</b> è una dichiarazione che permette alla persona di mettere un punto sul presente, e iniziare a guardare al futuro in modo diverso. Così persona e Riscrittorə raggiungeranno il loro obiettivo: un nuovo nome, simbolo di un nuovo inizio.
+    }
 
-        {gifts_and_ink:La prima cosa da fare è: conquistare la <b>fiducia</b> della persona che devi aiutare.}
-        {gifts_and_ink:Ci <b>parli</b>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.}
-        {gifts_and_ink:Poi, le fai un <b>dono</b>.}
-        {gifts_and_ink:Più il dono è qualcosa che le dimostra che l'hai ascoltata, più avrai <b>inchiostro</b> per aiutarla a riscrivere la sua storia.}
-        {questions: A quel punto inizi i tuoi <b>riscritture</b>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.}
-        {questions: Più inchiostro hai, più riscritture puoi fare.}
-        {questions: Infine: in base alle cose che avrai detto, la persona sceglierà il suo <b>nuovo nome</b>.}
-        {questions: E poi si ricomincia.}
-        {questions: E ricorda: se devi riposare, basta che torni in camera e ti stendi sul letto.}
         
 
 -> main
