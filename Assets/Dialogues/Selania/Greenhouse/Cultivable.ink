@@ -257,7 +257,7 @@
             -> main
           
     = step_tre
-        <i>L'odore è così forte da farti lacrimare gli occhi.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>L'odore è così forte da far lacrimare gli occhi di {name}.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>L'odore del <b>Lichene degli abissi.</b></i>
         <i>Roteare incessante tra fungo e alga.</i>
         <i>Si respingono nel piacere, si inseguono nel dolore, senza mai afferrarsi.</i>
@@ -266,7 +266,7 @@
             + (colto) [Sfioro il lichene.]
                 ~ growthLicheneDegliAbissi = stepZero
                 <i>Un piccolo sbuffo, rumore di vetro.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-                <i>Le tue dita sanno di ricordo, sanno di mare.</i>
+                <i>Le dita di {name} sanno di ricordo, sanno di mare.</i>
                 <i>Di persone allontanate.</i>
                 <i>Di addii dolorosi, e ferite risanate.</i>
                     ~ growing = 0
@@ -307,13 +307,13 @@
         = step_zero
     -> remove_proposed_cultivable ->  
     ~ growthEderaDelleAmanti = stepZero
-        <i>I tuoi occhi si riempiono di miele luminoso.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Gli occhi di {name} si riempiono di miele luminoso.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>I polpastrelli hanno fame.</i>
             -> main
     
     = step_uno
         <i>Rami morbidi si sollevano lungo le pareti della serra.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Le tue labbra vibrano.</i> 
+        <i>Le labbra di {name} vibrano.</i> 
             -> main
           
     = step_due
@@ -328,14 +328,14 @@
         <i>Un pezzo di serra è ora coperto di fiori e abbracci.</i>
         <i>Faticoso è resistere all'idea di tuffarvisi.</i>
         
-            + (colto) [Cedo al desiderio.]
-                <i>Per un attimo perdi i tuoi confini.</i>
-                <i>Sei un bacio nella notte, dita desiderate tra le coscie.</i>
-                <i>Sei acqua sulle labbra, pelle nuda sulla terra umida.</i>
-                <i>Pienezza ti riempie, la forza dell'<b>Edera delle amanti</b></i>.
-                <i>Il tuo corpo ha fame di piacere.</i>
+            + (colto) [Prendo una foglia.]
+                <i>Per un attimo {name} perde i suoi confini.</i>
+                <i>Diventa un bacio nella notte, dita desiderate tra le coscie.</i>
+                <i>Acqua sulle labbra, pelle nuda sulla terra umida.</i>
+                <i>Pienezza che riempie, la forza dell'<b>Edera delle amanti</b></i>.
+                <i>Il corpo colmo di piacere.</i>
                 <i>Di fusione.</i>
-                <i>Ti perdi nel desiderio.</i>
+                <i>Vivo.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     @animation:Inventory
@@ -373,8 +373,8 @@
     = step_zero
         -> remove_proposed_cultivable ->
         ~ growthCantoDelleCompagne = stepZero
-        <i>Qualcosa vibra e ti sveglia le gambe.<i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Hai voglia di danzare.</i>
+        <i>Qualcosa vibra e sveglia le gambe di {name}.<i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Ha voglia di danzare.</i>
             -> main
         
     = step_uno
@@ -393,14 +393,14 @@
         <i>La serra si muove e si scuote, le travi cigolano nel voler danzare.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>Ilare, <b>Canto delle compagne</b> turbina e balla riversandosi dal vaso.</i>
         <i>In un altro tempo questo cespuglio veniva chiamato "Canto delle streghe".</i>
-        <i>L'euforia ti riempie i polmoni, senti la gioia di sapere che non sei mai stata davvero {pronouns has him: solo|{pronouns has her: sola|solə}}.</i>
+        <i>L'euforia riempie i polmoni di {name}, sente la gioia di sapere che non è mai stata davvero {pronouns has him:solo|{pronouns has her:sola|solə}}.</i>
         
-        + (colto)[È il momento di festeggiare.]
-                <i>Le tue gambe iniziano a ballare.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-                <i>Spingono il tuo corpo nella stanza.</i>
-                <i>La tua voce si alza e canta, chiamare l3 compagn3.</i>
-                <i>Vi unite in una festa, un sabba, rendendo il mondo intero il vostro palcoscenico.</i>
-                <i>Ridendo di chi ha paura di voi.</i>
+        + (colto)[Ne raccolgo una goccia.]
+                <i>Le gambe di {name} iniziano a ballare.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                <i>Spingono il suo corpo nella stanza.</i>
+                <i>La sua voce si alza e canta, chiama l3 compagn3.</i>
+                <i>Si uniscono in una festa, un sabba, rendendo il mondo intero il loro palcoscenico.</i>
+                <i>Ridendo feroci di chi l3 teme.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     @animation:Inventory
@@ -439,35 +439,36 @@
     -> remove_proposed_cultivable ->
     ~ growthLaSpazzata = stepZero
         <i>Niente sembra cambiare.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Eppure l'aria sembra più pesante.</i>
+        <i>Eppure l'aria è più pesante.</i>
             -> main
          
     = step_uno
-         <i>Qualcosa sembra osservarti dagli angoli più scuri della serra.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-         <i>L'aria ti manca, hai voglia di gridare.</i>
+         <i>Qualcosa osserva {name} dagli angoli più scuri della serra.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+         <i>L'aria manca, ha voglia di gridare.</i>
             -> main
     
     = step_due
-        <i>C'è un forte vibrare.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Cose sottili riempiono i tuoi occhi di fastidio.</i>
-        <i>Della voglia di stringere, percuotere, sbattere qualcosa.</i>
+        <i>Tremore nell'aria.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Spine sottili irritano gli occhi di {name}.</i>
+        <i>I piedi fremono dalla voglia di calpestare, percuotere, schiacciare.</i>
             -> main
     
     = step_tre
-        <i>Il tetto della serra scricchiola, le sue travi sembrano gemere dal dolore.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>La tua testa sembra pronta ad esplodere.</i>
-        <i>Sopra di te pulsa e si contrae nervosa una grossa, esplosiva <b>Spazzata</b></i>.
+        <i>Il tetto della serra scricchiola, le sue travi gemono dal dolore.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>La testa di {name} è pronta ad esplodere.</i>
+        <i>Sopra di {pronouns has him:lui|{pronouns has her:lei|ləi}} pulsa e si contrae nervosa una nascente <b>Spazzata</b></i>.
         <i>La Spazzata è e non è.</i>
         <i>Si abbuffa delle cose non dette.</i>
-        <i>E quando non ce la fa più, travolge ogni cosa.</i>
+        <i>E quando è sazia, travolge ogni cosa.</i>
 
-        + (colto)[Sfioro i suoi rami.]
+        + (colto)[Colpisco i suoi rami.]
             <i>Una forte contrazione.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             <i>E poi si ferma, immagine di ciò che un tempo era.</i>
-            <i>Ti lascia in pancia un senso di vuoto.</i>
-            <i>La sensazione di quando hai condiviso qualcosa che ritenevi terribile.</i>
+            <i>La pancia di {name} colma di un senso di vuoto.</i>
+            <i>La sensazione di quando ha condiviso qualcosa che riteneva terribile.</i>
             <i>Per poi scoprire che il mondo non è finito quella volta, e non finirà oggi.</i>
-            <i>Ci sono conversazioni in sospeso che vuoi affrontare.</i>
+            <i>Le cose son sempre peggiori nella propria testa.</i>
+            <i>La Spazzata è innocua se riesce a parlare.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     @animation:Inventory
