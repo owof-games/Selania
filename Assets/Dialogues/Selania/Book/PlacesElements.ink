@@ -21,7 +21,7 @@ Qui ci sono le regole.
 ~ enableBigDialogue()
 
 
-    {lichene_degli_abissi.step_tre.colto: Il Lichene degli abissi parla di relazioni permeate di dolore. Di cose o persone che si inseguono, che possono pure volersi bene. Ma finiscono per farci del male. Capaci solo di distruggersi. Piene di fragilità. }
+    {lichene_degli_abissi.step_tre.colto: Il <b>Lichene degli abissi</b> cresce dove l'affetto genera dolore. Raccoglie sentimenti morbidi e rabbie taglienti, e nel cercare un modo per far convivere le due cose genera un vortice di distanze e inseguimenti. In passato il Lichene veniva chiamato <i>Dolore della vedova</i> perché nelle notti silenziose il suo roteare ricorda un pianto sommesso. Tutta l'energia richiesta al Lichene per mantenere un equilibrio è sfiancante, e anche nei terreni migliori non può vivere a lungo.}
                 
     {edera_delle_amanti.step_tre.colto: Tradizionalmente è associata al piacere fisico. Da queste parti si racconta che l'universo intero sia fatto d'edera. E che l'edera rimarrà in vita fino a quando le amanti saranno capaci di darsi amore e piacere. Io lo vedo invece come un invito al piacere. A godere anche del cibo, di una camminata. Di una giornata di sole. Il mondo non esisterebbe senza piacere. O non merita la nostra attenzione.}
                 

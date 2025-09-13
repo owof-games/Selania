@@ -242,44 +242,43 @@
     = step_zero
     -> remove_proposed_cultivable ->
         ~ growthLicheneDegliAbissi = stepZero
-        <i>Qualcosa vortica sopra al vaso.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>La terra si accumla ai lati, lasciando un incavo nel terreno.</i>
-        -> main
+        <i>Un odore salmastro si diffonde per la serra.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>La terra si solleva ai lati del vaso.</i>
+                -> main
     
     = step_uno
-        <i>Un odore salmastro si diffonde per la serra.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Una punticina azzurrina emerge dal terreno.</i>
-          -> main
+        <i>Affilata e trasparente, una foglia vortica al centro del vaso, catturando a fatica il tuo volto.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>L'aria si fa di sale, brucia gli occhi.</i>
+            -> main
           
     = step_due
-        <i>Le punte sono aumentate, e roteano nell'aria a incredibile velocità, senza alcun rumore.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-          -> main
+        <i>In silenzio nuove foglie si inseguono nell'aria.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Più si avvicinano, più l'odore si fa violento.</i>
+            -> main
           
     = step_tre
         <i>L'odore è così forte da farti lacrimare gli occhi.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Davanti a te vortica un <b>Lichene degli abissi</b></i>
-        <i>Il lichene degli abissi è una danza, un roteare incessante di fungo e alga.</i>
-        <i>Si inseguono nel piacere, si inseguono nel dolore, senza mai afferrarsi.</i>
+        <i>L'odore del <b>Lichene degli abissi.</b></i>
+        <i>Roteare incessante tra fungo e alga.</i>
+        <i>Si respingono nel piacere, si inseguono nel dolore, senza mai afferrarsi.</i>
         <i>Forti nella loro distruzione, estremamente fragili.</i>
 
-            + (colto) [Fermo il lichene.]
+            + (colto) [Sfioro il lichene.]
                 ~ growthLicheneDegliAbissi = stepZero
-                <i>Un piccolo sbuffo, rimane solo un foro.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                <i>Un piccolo sbuffo, rumore di vetro.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 <i>Le tue dita sanno di ricordo, sanno di mare.</i>
-                <i>Pensi a qualcuno.</i>
-                <i>A volte c'è pace solo nell'allontanare.</i>
+                <i>Di persone allontanate.</i>
+                <i>Di addii dolorosi, e ferite risanate.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     @animation:Inventory
                     @animation:RewriterBook 
-                    {
-                        - findedGifts hasnt LicheneDegliAbissi:
-                        ~ findedGifts += LicheneDegliAbissi
-                        <i>Hai ottenuto: <b>Lichene degli Abissi.</b></i>
-                    }
-
+                        {
+                            - findedGifts hasnt LicheneDegliAbissi:
+                            ~ findedGifts += LicheneDegliAbissi
+                            <i>Hai ottenuto: <b>Lichene degli Abissi.</b></i>
+                        }
                     ~ move_entity(GreenhouseRecap, BookPlace)
-                    
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
