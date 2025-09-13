@@ -629,7 +629,7 @@
     = step_zero
         -> remove_proposed_cultivable ->
         ~ growthBrinaDellImpossibile = stepZero
-        <i>Qualcosa ha rotto un vetro della serra?</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Cosa ha rotto un vetro della serra?</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     
     = step_uno
@@ -643,15 +643,17 @@
     
     = step_tre
         <i>Isole di vetro, terracotta e legno galleggiano nell'aria.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Le spingi ma non si spostano.</i>
-        <i>Api e petali attraversano le ferite, il cielo bluastro le riempie.</i>
+        <i>Se {name} le spinge, non si spostano.</i>
+        <i>Insetti e petali attraversano le ferite, il cielo bluastro le riempie.</i>
 
         + (colto) [Infilo la mano tra gli spazi vuoti.]
-            <i>Il vetro si rinsalda, spingendo via la tua mano.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            <i>Le linee del tuo palmo si fanno trasparenti, inconsistenti. Eppure puoi muovere le dita, e non provi alcun dolore.</i>
+            <i>Il vetro si rinsalda, spingendo via la mano di {name}.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>Le linee del suo palmo si fanno trasparenti, inconsistenti. Eppure può muovere le dita, e non prova dolore.</i>
             <i>La <b>Brina dell'Impossibile</b> si raccoglie nel luogo di un trauma.</i>
-            <i>Riempie le ferite per permetterti di vederle, ascoltarle.</i>
-            <i>Ti ricorda che non serve dimenticare per poter riprendere a vivere.</i>
+            <i>Riempie le ferite così che siano visibili.</i>
+            <i>Ci aiuta a guardare, nominare, capire.</i>
+            <i>Vederci unit3 quando pensavamo di essere spezzat3.</i>
+
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 @animation:Inventory
@@ -690,29 +692,31 @@
         ~ growthCardoAspinato = stepZero
         <i>Odore di buio, di cielo senza stelle. Di bosco e nebbia e nessuna strada da imboccare.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>Una palla soffice emerge dal terreno.</i>
-            -> main
+                -> main
     
     = step_uno
         <i>Rumore di passi, qualcosa che corre, che fugge, che non arriva mai.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>I peli del fusto vibrano, si sollevano quando ti avvicini, ti tengono distante.</i>
-          -> main
+        <i>I peli del fusto vibrano, si sollevano quando {name} si avvicina,{pronouns has him:lo|{pronouns has her:la|lə}} tengono distante.</i>
+                -> main
     
     = step_due
        <i>È comparsa una gemma sulla cima dello stelo.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>E dalla gemma emergono filamenti disgustosi, il loro puzzo ti chiede di provare paura, di allontanarti, di arrenderti, di evitare ogni contatto.</i>
-        -> main
+        <i>E dalla gemma emergono filamenti disgustosi, il loro puzzo chiede di provare paura, di allontanarsi, di arrendersi, di evitare ogni contatto.</i>
+                -> main
     
     = step_tre
-        <i>La piante cede, si stende tra le tue gambe.</i>.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        ~ move_entity(BrownBee, Greenhouse)
+        <i>La piante cede, si stende tra le gambe di {name}.</i>.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        
         + (colto)[Allungo le dita.]
-            <i>Allunghi le dita, ne carezzi il pelo, e al contatto, senti.</i>
-            <i>Senti la luna, le stelle, le foglie nel vento, l'erba umida.</i>
-            <i>Senti abbracci e sorrisi e mani che vi sorreggono.
+            <i>{name} allunga le dita, ne carezza il pelo, e al contatto, sente.</i>
+            <i>Sente la luna, le stelle, le foglie nel vento, l'erba umida.</i>
+            <i>Sente abbracci e sorrisi e mani che sorreggono.
             <i>La pianta sboccia.
-            ~ move_entity(BrownBee, Greenhouse)
-            <i>Il <b>Cardo aspinato</b> doveva scoprire di non essere solo.</i>
-            <i>Che lasciarsi aiutare è aiutare l'altrx.</i>
-            <i>Che aiutare è aiutarsi.</i>
+            
+            <i>Il <b>Cardo aspinato</b> sboccia nel supporto.</i>
+            <i>Nel capire che lasciarsi aiutare è aiutare l'altrə.</i>
+            <i>Nell'accettare che aiutare è aiutarsi.</i>
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 @animation:Inventory
