@@ -1,9 +1,9 @@
 === rules_recap
 + {are_two_entities_together(RulesRecap, PG)} [RulesRecap]
 ~ enableBigDialogue()
-    Ho appuntato qui le cose che mi ha detto Mentore sulla <b>riscrittura</b>.
     {
         - gifts_and_ink:
+            Ho appuntato qui le cose che mi ha detto Mentore sulla <b>riscrittura</b>.
             La prima cosa da fare è: conquistare la <b>fiducia</b> della persona che devo aiutare. Ci parlo, cercando di capire di cosa ha bisogno e quali sono le risposte che le piacciono. Poi, le faccio un <b>dono</b>, qualcosa che ho creato con fatica, come qualcosa coltivato in serra. Il dono aumenta anche l'<b>inchiostro</b> che avrò a disposizione.
     }
     {
