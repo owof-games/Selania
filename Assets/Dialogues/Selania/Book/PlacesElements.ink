@@ -23,7 +23,8 @@ Qui ci sono le regole.
 
     {lichene_degli_abissi.step_tre.colto: Il <b>Lichene degli abissi</b> cresce dove l'affetto genera dolore. Raccoglie sentimenti morbidi e rabbie taglienti, e nel cercare un modo per far convivere le due cose genera un vortice di distanze e inseguimenti. In passato il Lichene veniva chiamato <i>Dolore della vedova</i> perché nelle notti silenziose il suo roteare ricorda un pianto sommesso. Tutta l'energia richiesta al Lichene per mantenere un equilibrio è sfiancante, e anche nei terreni migliori non può vivere a lungo.}
                 
-    {edera_delle_amanti.step_tre.colto: Tradizionalmente è associata al piacere fisico. Da queste parti si racconta che l'universo intero sia fatto d'edera. E che l'edera rimarrà in vita fino a quando le amanti saranno capaci di darsi amore e piacere. Io lo vedo invece come un invito al piacere. A godere anche del cibo, di una camminata. Di una giornata di sole. Il mondo non esisterebbe senza piacere. O non merita la nostra attenzione.}
+    {edera_delle_amanti.step_tre.colto: Quanto potere c'è in corpi che si giocano a vicenda, nel desiderio e nel piacere? L'<b>Edera delle amanti</b> tradizionalmente è associata al piacere fisico. Da queste parti si racconta che l'universo intero sia fatto d'edera. E che l'edera rimarrà in vita fino a quando le amanti saranno capaci di darsi amore e piacere. Ma il piacere è un motore semplice, se sappiamo ascoltarci. E l'Edera allora può invitarci a godere del cibo, del cielo, di una camminata. Di un momento da solə. Del non fare niente per il piacere di non fare niente. Quanto potere c'è nel fermarsi?}
+
                 
     {canto_delle_compagne.step_tre.colto: Credo sia la pianta della festa. Dello stare tutte assieme e ballare, cantare. Accogliendo la forza liberatoria che viene dalla risata in compagnia. Amo quella pianta, ma in passato veniva chiamata "Canto delle streghe". Le donne unite fanno sempre paura.}
     

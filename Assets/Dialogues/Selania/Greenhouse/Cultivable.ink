@@ -273,12 +273,13 @@
                     ~ chosenCultivable = ()
                     @animation:Inventory
                     @animation:RewriterBook 
-                        {
-                            - findedGifts hasnt LicheneDegliAbissi:
-                            ~ findedGifts += LicheneDegliAbissi
-                            <i>Hai ottenuto: <b>Lichene degli Abissi.</b></i>
-                        }
+                            {
+                                - findedGifts hasnt LicheneDegliAbissi:
+                                ~ findedGifts += LicheneDegliAbissi
+                                <i>Hai ottenuto: <b>Lichene degli Abissi.</b></i>
+                            }
                     ~ move_entity(GreenhouseRecap, BookPlace)
+                
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
@@ -306,42 +307,45 @@
         = step_zero
     -> remove_proposed_cultivable ->  
     ~ growthEderaDelleAmanti = stepZero
-        <i>È solo una tua impressione, o il vaso ha iniziato a brillare?</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        -> main
+        <i>I tuoi occhi si riempiono di miele luminoso.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>I polpastrelli hanno fame.</i>
+            -> main
     
     = step_uno
-        <i>Nettare color rame sale lungo le corde che reggono il vaso.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-          -> main
+        <i>Rami morbidi si sollevano lungo le pareti della serra.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Le tue labbra vibrano.</i> 
+            -> main
           
     = step_due
-        <i>Il nettare si è intrecciato, arrotolato, cerca le venature del legno della serra.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Lo saggia, si mischia, lo penetra.</i>
-        <i>Foglie rosastre nascono da questa unione.</i>
-          -> main
+        <i>I rami sono intrecciati, abbracciati, uniti, arrotolati. Si avviluppano giocosi.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Radici gentili saggiano il legno della serra, lo sfiorano, lo penetrano.</i>
+        <i>Foglie giovani maturano, nutrendosi di questo gioco.</i>
+            -> main
     
     = step_tre
-        <i>Calore nel ventre.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Un pezzo di serra è ora coperto da un fitto tappeto del color dell'alba.</i>
-        <i>Sembra la cosa più gustosa che tu abbia mai incontrato.</i>
         ~ move_entity(GoldenBee, Greenhouse)
-            + (colto) [Provo a leccarlo.]
+        <i>Calore nel ventre.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Un pezzo di serra è ora coperto di fiori e abbracci.</i>
+        <i>Faticoso è resistere all'idea di tuffarvisi.</i>
+        
+            + (colto) [Cedo al desiderio.]
                 <i>Per un attimo perdi i tuoi confini.</i>
                 <i>Sei un bacio nella notte, dita desiderate tra le coscie.</i>
                 <i>Sei acqua sulle labbra, pelle nuda sulla terra umida.</i>
                 <i>Pienezza ti riempie, la forza dell'<b>Edera delle amanti</b></i>.
                 <i>Il tuo corpo ha fame di piacere.</i>
-                <i>Perditi nel desiderio.</i>
- 
+                <i>Di fusione.</i>
+                <i>Ti perdi nel desiderio.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     @animation:Inventory
                     @animation:RewriterBook
-                    {
-                        - findedGifts hasnt EderaDelleAmanti:
-                        ~ findedGifts += EderaDelleAmanti
-                        <i>Hai ottenuto: <b>Edera delle Amanti.</b></i>
-                    }
-                    
+                        {
+                            - findedGifts hasnt EderaDelleAmanti:
+                            ~ findedGifts += EderaDelleAmanti
+                            <i>Hai ottenuto: <b>Edera delle Amanti.</b></i>
+                        }
+                        
                     ~ move_entity(GreenhouseRecap, BookPlace)
                     
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
