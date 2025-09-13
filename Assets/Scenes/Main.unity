@@ -2024,7 +2024,7 @@ MonoBehaviour:
   StepZero: {fileID: 21300000, guid: 300cd282e60c0e741a18bb92ca49a1d9, type: 3}
   StepOne: {fileID: 21300000, guid: ced79d2aae6b8eb44aac48969a898164, type: 3}
   StepTwo: {fileID: 21300000, guid: e0472a571b0e3f24386afc68725cf129, type: 3}
-  StepThree: {fileID: 21300000, guid: 674bca27cf1f7214faee63c902ff374a, type: 3}
+  StepThree: {fileID: 21300000, guid: 0aa4880a3769be141bb572fc2247b727, type: 3}
 --- !u!114 &141645127
 MonoBehaviour:
   m_ObjectHideFlags: 0
