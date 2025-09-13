@@ -39,10 +39,10 @@
         + {somethingStrange > 0 or (firstCharacterInkLevel has High && not little_storylets.infoImpo) && gifts_and_ink} [Mi è successa una cosa strana.]
             -> little_storylets
             
-        + {knowing_second_character && fifthPauseTalking == 0}[Vorrei conoscerti meglio.]
+        //+ {knowing_second_character && fifthPauseTalking == 0}[Vorrei conoscerti meglio.]
             // {
             //     - fifthPauseTalking == 0:
-                    -> talk_with_fifth_character
+                    //-> talk_with_fifth_character
                 
             //     - else:
             //         {~ Ora non mi va, ma non mi chiedi aiuto da un po', tutto ok?|Ho bisogno di una pausa, ma se serve aiuto sono qui.|Devo decidere cosa sistemare poi, ma se ti serve aiuto invece, chiedi pure.}
@@ -112,7 +112,7 @@
             - not twelve && fifthStory == StoryStarted:
                 -> twelve
             - else:
-                -> fifth_character_opinions
+                -> talk_with_mentor.talk
         }
 
     = one

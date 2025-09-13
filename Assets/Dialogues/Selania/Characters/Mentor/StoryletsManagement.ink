@@ -126,7 +126,7 @@
         
         
         - else:
-            -> talk_with_mentor.talk
+            -> knowing_fifth_character
     
     }
 
