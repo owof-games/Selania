@@ -666,7 +666,7 @@
                  Un po' come quel casino che è camera mia.
                     ~ firstRed ++
             -
-            Comunque non mi piace l'idea che esista errore e verità.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
+            Comunque non mi piace l'idea che esistano errore e verità.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                 @animation:RewriterBook
             Anche perché quelli pieni di verità hanno sempre finito per ammazzare quell3 come me e Talco.
                 ~ firstPauseTalking = firstCharPauseDuration
