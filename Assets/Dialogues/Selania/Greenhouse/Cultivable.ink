@@ -379,28 +379,28 @@
         
     = step_uno
         <i>Il vaso è caldo al tocco.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>L'umidità del terreno evapora creando una nebbiolina rossastra.</i>
+        <i>L'aria attorno vibra di una nebbiolina rossastra.</i>
           -> main
           
     = step_due
-        <i>La nebbia si è fatta ora goccia, goccie rosse che vibrano.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Che si rincorrono e si tuffano nel vaso.</i>
+        <i>La nebbia si è fatta fiume, goccie rosse che vibrano.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Che danzano.</i>
         <i>E quando si scontrano, la serra riecheggia di una festosa risata.</i>
             -> main
           
     = step_tre
-        <i>La serra vibra e si scuote, persino le travi sembrano voler danzare.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Ilare, <b>Canto delle compagne</b> turbina e gioca sospesa sul vaso.</i>
-        <i>In un altro tempo questo fungo veniva chiamato "Canto delle streghe".</i>
+        ~ move_entity(RedBee, Greenhouse)
+        <i>La serra si muove e si scuote, le travi cigolano nel voler danzare.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Ilare, <b>Canto delle compagne</b> turbina e balla riversandosi dal vaso.</i>
+        <i>In un altro tempo questo cespuglio veniva chiamato "Canto delle streghe".</i>
         <i>L'euforia ti riempie i polmoni, senti la gioia di sapere che non sei mai stata davvero {pronouns has him: solo|{pronouns has her: sola|solə}}.</i>
-
+        
         + (colto)[È il momento di festeggiare.]
-                <i>Il canto ti invita alla danza.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-                ~ move_entity(RedBee, Greenhouse)
-                <i>Spinge le tue gambe nella stanza.</i>
-                <i>O ad alzare la voce, cantare, e chiamare le compagne.</i>
-                <i>Lasciando che la musica vi unisca, rendendo il mondo intero il vostro palcoscenico.</i>
-                <i>Se qualcuno avrà paura, è solo perché non sa più come ballare.</i>
+                <i>Le tue gambe iniziano a ballare.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                <i>Spingono il tuo corpo nella stanza.</i>
+                <i>La tua voce si alza e canta, chiamare l3 compagn3.</i>
+                <i>Vi unite in una festa, un sabba, rendendo il mondo intero il vostro palcoscenico.</i>
+                <i>Ridendo di chi ha paura di voi.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     @animation:Inventory
