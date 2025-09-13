@@ -1045,13 +1045,17 @@ dog
         ~ temp charNameFour = translator(fourthCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
 ~ enableBigDialogue()
-{
-    - take_this_book:
-        Un vecchio tronco. <> ->update
-    - else:
-        Un vecchio tronco, sotto le cui radici ho trovato questo diario. <> ->update
 
-}
+{take_this_book:Un vecchio tronco|Un vecchio tronco, sotto le cui radici ho trovato questo diario.}
+
+//{
+//    - (firstStory == StoryEnded) or (firstStory == StoryEnded): E che si ritrova con un paio di gambe.
+//    
+//}
+//{
+//    - (firstStory == StoryEnded && firstStory == StoryEnded): E che ora ha anche un busto.
+//}
+
 
 
 {
@@ -1071,15 +1075,5 @@ dog
 {talking_witch.third_story_ended_check: cose che scopro sul fungo a fine della third storia.}
 {talking_witch.fourth_story_ended_check: cose che scopro sul fungo a fine della fourth storia.}
 {talking_witch.fifth_story_ended_check: cose che scopro sul fungo a fine della fifth storia.}
-
-
-= update
-    {
-        - (firstStory == StoryEnded) && (firstStory == StoryEnded): E che ora ha anche un busto. <>
-    }
-    {
-        - (firstStory == StoryEnded) or (firstStory == StoryEnded): E che si ritrova con un paio di gambe. <>
-    
-    }
 
 -> main
