@@ -3,64 +3,74 @@
 ~ enableBigDialogue()
         
     {
-        - knowing_first_character.one: 
-        <b>Storia di {translator(firstCharacterState)}.</b>
-        Ho conosciuto una persona nuova, si chiama Chitarra. Quando l'ho incontrata era preoccupata perché non riuscita a trovare lə sua migliore amicə, Talco. Non le piace molto il suo nome, ha l'impressione che essere una Chitarra per una come lei, che ha fatto il conservatorio, significhi arrendersi. Quando mi ha chiesto che nome dovrebbe avere secondo me, non sono {pronouns has him:stato|{pronouns has her:stata|statə}} capace di darle una risposta.
+        - knowing_first_character.one:
+            Ho conosciuto una persona nuova, si chiama Chitarra. Quando l'ho incontrata era preoccupata perché non riuscita a trovare lə sua migliore amicə, Talco. Non le piace molto il suo nome, ha l'impressione che essere una Chitarra per una come lei, che ha fatto il conservatorio, significhi arrendersi. Quando mi ha chiesto che nome dovrebbe avere secondo me, non sono {pronouns has him:stato|{pronouns has her:stata|statə}} capace di darle una risposta.
         
     }
     
     {
-        - knowing_first_character.two: Chitarra sembra davvero persa senza Talco. Da tanto non andava in giro senza di ləi. Di sicuro, sembra non avere in simpatia Mentore.
+        - knowing_first_character.two:
+            Chitarra sembra davvero persa senza Talco. Da tanto non andava in giro senza di ləi. Di sicuro, sembra non avere in simpatia Mentore.
         
     }
     
     {
-        - knowing_first_character.three: Ogni persona vicina a Chitarra sembra avere un'idea su come lei dovrebbe vivere la sua vita. Anna, una delle sue amiche, insiste perché divenga assistete di un suo professore, tal Ghiberti. Olga vuole che metta su una band e sfondi per locali. Talco vuole che partecipi a qualche reality musicale. Ed Ennio pensa che abbia completamente sbagliato strada. Tutte queste persone sono famiglia per Chitarra, ed è frustrata perché qualsiasi scelta prenderà, delulderà qualcunə.
+        - knowing_first_character.three:
+            Ogni persona vicina a Chitarra sembra avere un'idea su come lei dovrebbe vivere la sua vita. Anna, una delle sue amiche, insiste perché divenga assistete di un suo professore, tal Ghiberti. Olga vuole che metta su una band e sfondi per locali. Talco vuole che partecipi a qualche reality musicale. Ed Ennio pensa che abbia completamente sbagliato strada. Tutte queste persone sono famiglia per Chitarra, ed è frustrata perché qualsiasi scelta prenderà, delulderà qualcunə.
         
     }
     
     {
-        - knowing_first_character.four: A Chitarra il silenzio pesa, e molto. Senza musica teme di sbroccare.
+        - knowing_first_character.four:
+            A Chitarra il silenzio pesa, e molto. Senza musica teme di sbroccare.
         
     }
     
     {
-        - knowing_first_character.five: Chitarra ama fare festa, ed è abituata ad essere circondata da persone. Vive con cinque amich3, e poi ci sono l3 ospiti. D'estate fanno le feste sul tetto dove suonano e cantano. Il silenzio di questo posto la fa star male, perché può sentire i propri pensieri.
+        - knowing_first_character.five:
+            Chitarra ama fare festa, ed è abituata ad essere circondata da persone. Vive con cinque amich3, e poi ci sono l3 ospiti. D'estate fanno le feste sul tetto dove suonano e cantano. Il silenzio di questo posto la fa star male, perché può sentire i propri pensieri.
         
     }
     
     {
-        - knowing_first_character.six: Chitarra mi ha raccontato la storia di questo ragazzo, Jonah. Un prodigio che dopo una carriera sfolgorante in Cina ha deciso di tornare in Italia, e le cose gli sono andate di merda. Non si capisce se ora mendichi, suoni per i ricchi, o lavori in un supermercato. Ma la storia di Jonah lascia una domanda a Chitarra: cosa fare quando si sa fare bene solo una cosa ma il mondo non permette di farla? Si accettano compromessi o si muore di fame? O si aspetta fino a quando non è il mondo a decidere per te?
+        - knowing_first_character.six:
+            Chitarra mi ha raccontato la storia di questo ragazzo, Jonah. Un prodigio che dopo una carriera sfolgorante in Cina ha deciso di tornare in Italia, e le cose gli sono andate di merda. Non si capisce se ora mendichi, suoni per i ricchi, o lavori in un supermercato. Ma la storia di Jonah lascia una domanda a Chitarra: cosa fare quando si sa fare bene solo una cosa ma il mondo non permette di farla? Si accettano compromessi o si muore di fame? O si aspetta fino a quando non è il mondo a decidere per te?
         
     }
     
     {
-        - knowing_first_character.seven: Chitarra ha ritirato fuori quel professore, il Ghiberti. E gli sta sulle scatole perché vede la musica come qualcosa di matematico. È una cosa che non le piace, perché rende l'idea che esistano errore e verità, e cito: "anche perché quelli pieni di verità hanno sempre finito per ammazzare quell3 come me e Talco."
+        - knowing_first_character.seven:
+            Chitarra ha ritirato fuori quel professore, il Ghiberti. E gli sta sulle scatole perché vede la musica come qualcosa di matematico. È una cosa che non le piace, perché rende l'idea che esistano errore e verità, e cito: "anche perché quelli pieni di verità hanno sempre finito per ammazzare quell3 come me e Talco."
         
     }
     
     {
-        - knowing_first_character.eight: È tornata a parlare del Ghiberti. Dice che sembra felice ma in realtà sorride come un robot. Ed è tornata sul discorso dell'errore. Secondo Chitarra l'errore serve per fare esperienza e comunità. Se non si sbaglia non si cresce. Se non si sbaglia non c'è occasione per il perdono. Nei numerini del Ghiberti per Chitarra c'è la morte.
+        - knowing_first_character.eight:
+            È tornata a parlare del Ghiberti. Dice che sembra felice ma in realtà sorride come un robot. Ed è tornata sul discorso dell'errore. Secondo Chitarra l'errore serve per fare esperienza e comunità. Se non si sbaglia non si cresce. Se non si sbaglia non c'è occasione per il perdono. Nei numerini del Ghiberti per Chitarra c'è la morte.
         
     }
     
     {
-        - knowing_first_character.nine: Chitarra pensa di non far schifo a parlare.
+        - knowing_first_character.nine:
+            Chitarra pensa di non far schifo a parlare.
         
     }
     
     {
-        - knowing_first_character.ten: Chitarra mi ha raccontato qualcosa di diverso. L'anno scorso assieme ad altr3 attivist3 ha protetto gli alberi di un parco per una settimana, alberi che il Comune voleva abbattere. E quando ha sentito gli alberi cantare nel silenzio, si è sentita viva. Poi sono arrivati i poliziotti, hanno arrestato tutt3, gli alberi son stati abbattuti, e Chitarra è tornata a sentirsi inutile.
+        - knowing_first_character.ten:
+            Chitarra mi ha raccontato qualcosa di diverso. L'anno scorso assieme ad altr3 attivist3 ha protetto gli alberi di un parco per una settimana, alberi che il Comune voleva abbattere. E quando ha sentito gli alberi cantare nel silenzio, si è sentita viva. Poi sono arrivati i poliziotti, hanno arrestato tutt3, gli alberi son stati abbattuti, e Chitarra è tornata a sentirsi inutile.
         
     }
     
     {
-        - knowing_first_character.eleven: Per la prima volta Chitarra mi ha parlato della sua famiglia d'origine. La passione per la musica l'ha presa dal padre, ma era il nonno paterno ad essere musicista. Da piccola poteva sentire le vecchie registrazioni del nonno, giocare coi suoi strumenti. Ma ora che è grande suo padre tiene queste cose come delle reliquie. E se prima rideva molto, ora ha smesso. E vuole che la figlia si trovi "un lavoro vero".
+        - knowing_first_character.eleven:
+            Per la prima volta Chitarra mi ha parlato della sua famiglia d'origine. La passione per la musica l'ha presa dal padre, ma era il nonno paterno ad essere musicista. Da piccola poteva sentire le vecchie registrazioni del nonno, giocare coi suoi strumenti. Ma ora che è grande suo padre tiene queste cose come delle reliquie. E se prima rideva molto, ora ha smesso. E vuole che la figlia si trovi "un lavoro vero".
         
     }
     
     {
-        - knowing_first_character.twelve: Chitarra mi ha parlato di sua madre. È stata la madre a permetterle di frequentare il conservatorio, ma con l'obiettivo di portare prestigio alla famiglia. Chitarra sa che non è possibile, che per il mondo della classica è già vecchia, ma la madre non è pronta a capirlo.
+        - knowing_first_character.twelve:
+            Chitarra mi ha parlato di sua madre. È stata la madre a permetterle di frequentare il conservatorio, ma con l'obiettivo di portare prestigio alla famiglia. Chitarra sa che non è possibile, che per il mondo della classica è già vecchia, ma la madre non è pronta a capirlo.
         
     }
 
@@ -70,7 +80,6 @@
 //Appunto sul dono fatto
 {
     - first_story_gift.ink_outcome:
-    <b>Il dono.</b>
         {
             - firstGift == EderaDelleAmanti:
                 Le ho donato una foglia di <b>Edera delle Amanti</b>, ma non ha compreso il significato del mio dono.
@@ -108,7 +117,7 @@
 
 //Eventuale commento della rana.
 
-{main_story_first_character.ending: Dopo la Riscrittura, ha scelto un nuovo nome: {translator(firstCharacterState)}.}
+{main_story_first_character.ending: Dopo la Riscrittura, ha scelto un nuovo nome: <b>{translator(firstCharacterState)}.</b>}
 
 {
     - first_character_feedback: Mentore dice che<>
@@ -116,77 +125,84 @@
         {
             - firstCharacterPossibleStates has Triangolo: ho aiutato {translator(firstCharacterState)} a trovare il suo lato più pratico e razionale, ma che forse non era quello di cui aveva bisogno.
                 
-            - firstCharacterPossibleStates has RagazzaOrchestra: {translator(firstCharacterState)} ora ha accolto un'indole più oppositiva e attiva, forse però non qualcosa che sia nella sua natura.
+            - firstCharacterPossibleStates has RagazzaOrchestra: ora {translator(firstCharacterState)} ha accolto un'indole più oppositiva e attiva, forse però non qualcosa che sia nella sua natura.
                             
-            - firstCharacterPossibleStates has FlautoDolce: {translator(firstCharacterState)} sapeva già che gli affetti sono una cosa fondamentale per lei. Si chiede se è il massimo che potevamo fare.
+            - firstCharacterPossibleStates has FlautoDolce: probabilmente {translator(firstCharacterState)} sapeva già che gli affetti sono una cosa fondamentale per lei. Si chiede se è il massimo che potevamo fare.
                             
-            - firstCharacterPossibleStates has Ocarina: {translator(firstCharacterState)} ora che ha accolto gioco e creatività è più felice. Ma Mentore non sembra convinta di questa scelta.
+            - firstCharacterPossibleStates has Ocarina: ora {translator(firstCharacterState)} che ha accolto gioco e creatività è più felice. Ma Mentore non sembra convinta di questa scelta.
             
             - firstCharacterPossibleStates has Violino: abbiamo fatto un gran lavoro assieme, perché {translator(firstCharacterState)} aveva bisogno di riconoscere che per lei la vita ha senso solo con uno scopo più grande.
             
-            - firstCharacterPossibleStates has Chitarra:non tutte le persone sono disposte a cambiare, e se Chitarra è rimasta {translator(firstCharacterState)}, non è una mia colpa.
+            - firstCharacterPossibleStates has Chitarra: non tutte le persone sono disposte a cambiare, e se Chitarra è rimasta {translator(firstCharacterState)}, non è una mia colpa.
         
         }
 }
 
 
 
-{first_character_notes.one: Dopo la sua partenza, {firstCharacterState} mi ha scritto una lettera, dove mi ha raccontato che<>}
 {
-    - firstCharacterPossibleStates has Triangolo: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
-        
-    - firstCharacterPossibleStates has RagazzaOrchestra: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
-                    
-    - firstCharacterPossibleStates has FlautoDolce:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
-        E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
-        Tu e quel posto mi avete reso una mollacciona.
-        Ma non è così male, alla fine.
-                    
-    - firstCharacterPossibleStates has Ocarina:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
-        Se lo dico a mio padre mi fa ricoverare subito, ma amen.
-        Sono felice ama, davvero felice.
-                    
-    - firstCharacterPossibleStates has Violino:
-        sddd
+    - first_character_notes.one: Dopo la sua partenza, {firstCharacterState} mi ha scritto una lettera, dove mi ha raccontato che<>
+        {
+            - firstCharacterPossibleStates has Triangolo: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
+                
+            - firstCharacterPossibleStates has RagazzaOrchestra: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
+                            
+            - firstCharacterPossibleStates has FlautoDolce:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
+                E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
+                Tu e quel posto mi avete reso una mollacciona.
+                Ma non è così male, alla fine.
+                            
+            - firstCharacterPossibleStates has Ocarina:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
+                Se lo dico a mio padre mi fa ricoverare subito, ma amen.
+                Sono felice ama, davvero felice.
+                            
+            - firstCharacterPossibleStates has Violino:
+                sddd
+        }
 }
 
-{first_character_notes.two: Nella sua seconda lettera {firstCharacterState} mi ha scritto una lettera, dove mi ha raccontato che<>}
 {
-    - firstCharacterPossibleStates has Triangolo: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
-        
-    - firstCharacterPossibleStates has RagazzaOrchestra: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
-                    
-    - firstCharacterPossibleStates has FlautoDolce:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
-        E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
-        Tu e quel posto mi avete reso una mollacciona.
-        Ma non è così male, alla fine.
-                    
-    - firstCharacterPossibleStates has Ocarina:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
-        Se lo dico a mio padre mi fa ricoverare subito, ma amen.
-        Sono felice ama, davvero felice.
-                    
-    - firstCharacterPossibleStates has Violino:
-        sddd
+    - first_character_notes.two: Nella sua seconda lettera {firstCharacterState} mi ha scritto una lettera, dove mi ha raccontato che<>
+        {
+            - firstCharacterPossibleStates has Triangolo: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
+                
+            - firstCharacterPossibleStates has RagazzaOrchestra: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
+                            
+            - firstCharacterPossibleStates has FlautoDolce:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
+                E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
+                Tu e quel posto mi avete reso una mollacciona.
+                Ma non è così male, alla fine.
+                            
+            - firstCharacterPossibleStates has Ocarina:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
+                Se lo dico a mio padre mi fa ricoverare subito, ma amen.
+                Sono felice ama, davvero felice.
+                            
+            - firstCharacterPossibleStates has Violino:
+                sddd
+        }
+
 }
 
-
-{first_character_notes.three: Nella sua terza lettera {firstCharacterState} mi ha scritto una lettera, dove mi ha raccontato che<>}
 {
-    - firstCharacterPossibleStates has Triangolo: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
-        
-    - firstCharacterPossibleStates has RagazzaOrchestra: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
-                    
-    - firstCharacterPossibleStates has FlautoDolce:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
-        E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
-        Tu e quel posto mi avete reso una mollacciona.
-        Ma non è così male, alla fine.
-                    
-    - firstCharacterPossibleStates has Ocarina:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
-        Se lo dico a mio padre mi fa ricoverare subito, ma amen.
-        Sono felice ama, davvero felice.
-                    
-    - firstCharacterPossibleStates has Violino:
-        sddd
+    - first_character_notes.three: Nella sua terza lettera {firstCharacterState} mi ha scritto una lettera, dove mi ha raccontato che<>
+        {
+            - firstCharacterPossibleStates has Triangolo: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
+                
+            - firstCharacterPossibleStates has RagazzaOrchestra: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
+                            
+            - firstCharacterPossibleStates has FlautoDolce:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
+                E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
+                Tu e quel posto mi avete reso una mollacciona.
+                Ma non è così male, alla fine.
+                            
+            - firstCharacterPossibleStates has Ocarina:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
+                Se lo dico a mio padre mi fa ricoverare subito, ma amen.
+                Sono felice ama, davvero felice.
+                            
+            - firstCharacterPossibleStates has Violino:
+                sddd
+        }
+
 }
 
 -> main
