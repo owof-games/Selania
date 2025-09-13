@@ -785,38 +785,40 @@
 === fifth_character_recap
 + {are_two_entities_together(FifthRecap, PG)} [FifthRecap]
 ~ enableBigDialogue()
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
+Ho incontrato una persona che mi ha detto di chiamarla Mentore, perché mi farà da guida in questo luogo. E dopo avermi chiesto nomi e pronomi, mi ha {pronouns has him:invitato|{pronouns has her:invitata|invitatə}} a parlare con le persone che trovo in giro. {gifts_and_ink: Per poi dirmi che sono {pronouns has him:un Riscrittore|{pronouns has her:una Riscrittora|unə Riscrittorə}}, e darmi un po' di indicazioni su cosa dovrei fare.}
 
-Una persona che si fa chiamare {fifthCharacterState} ti ha detto di parlare in giro con le persone che incontrerai.
+{that_little_liar_storylet: Dopo l'arrivo del bimbo, la prima cosa che mi ha chiesto è se son {pronouns has him:riuscito|{pronouns has her:riuscita|riuscitə}} a mandarlo a casa. Dice che qui non è sicuro per i bambini, che lui le ha tirato un calcio. Ma che le fa tenerezza, e per questo gli sembra un Riccio.}
+{watering_can_storylet: Con la scomparsa dell'annaffiatoio, ha sbroccato un poco contro Riccio, e poi mi ha detto di caricarlo di peso sul prossimo treno, perché questo posto non è sicuro per lui.}
 
-{that_little_liar_storylet: a {fifthCharacterState} non piacciono i bambini?}
-{watering_can_storylet: non è più un dubbio.}
-
-{main_story_first_character.secret_ending: secondo {firstCharacterState}, {fifthCharacterState} è xyz.}
-{main_story_second_character.secret_ending: secondo {secondCharacterState}, {secondCharacterState} è xyz.}
 
 
 {
-    - knowing_fifth_character.one: prima informazione.
+    - knowing_fifth_character.one:
+        Durante una chiacchierata, Mentore mi ha raccontato che il suo posto preferito è la serra, perché vedere crescere le cose la fa sentire appagata, la sensazione di permettere con le proprie mani a un altro corpo di crescere al meglio.
+}
+
+{
+    - knowing_fifth_character.two:
+        Mentore è rimasta colpita da come {charNameOne} sia stata insieme consapevole delle opinioni delle persone care, eppure capace di non perdere sé stessa. E poi mi ha chiesto di pregare per lei.
+}
+
+{
+    - knowing_fifth_character.three:
+        Mentore mi ha raccontato che a volte ci sono persone, persone passate da qui, che vorrebbe sentire più spesso. Ma le loro lettere non arrivano, o arrivano sempre più di rado E allora si chiede se ha sbagliato qualcosa.
     
 }
 
 {
-    - knowing_fifth_character.two: prima informazione.
-    
+    - knowing_fifth_character.four:
+        Ora che {charNameTwo} ha trovato il suo nome, Mentore si chiede se non sia stata troppo severa con lui. Dice che era spaventata, e forse ha reagito con violenza. Si è chiesta cosa possa significare essere un genitore che si rende conto che suo figlio, così piccolo, ha già perso la sua strada. E perché non pensa al pallone, o allo studio, invece che al futuro e all'ambiente.
 }
 
 {
-    - knowing_fifth_character.three: prima informazione.
-    
-}
-
-{
-    - knowing_fifth_character.four: prima informazione.
-    
-}
-
-{
-    - knowing_fifth_character.five: prima informazione.
+    - knowing_fifth_character.five:
+        Da quando sono qui, per la prima volta Mentore ha ammesso di essere stanca. E di sentire caldo. E poi si è lasciata andare ai ricordi: il suo primo bacio, l'uomo che ha sposato. A cui ha dedicato il resto dei suoi giorni, fino a quando non è arrivata qui. E mi ha chiesto cosa significhi per me amare un'altra persona. Per poi definirsi una "sciocca romantica", e dirmi che l'amore è ovunque, anche qui. Amore per noi.
     
 }
 
@@ -853,6 +855,18 @@ Una persona che si fa chiamare {fifthCharacterState} ti ha detto di parlare in g
 {
     - knowing_fifth_character.twelve: prima informazione.
     
+}
+
+
+
+{
+    - main_story_first_character.secret_ending: 
+    Dopo aver concluso la sua riscrittura, {charNameOne} mi ha chiesto qual è secondo me il confine tra essere una brava persona ed essere una manipolatrice, riferendosi a {charNameFive}.
+}
+
+{
+    - main_story_second_character.secret_ending: 
+    Dopo aver scelto il suo nome, {charNameTwo} mi ha detto che {charNameFive} non gli sembra felice. Che gli ricorda mamma quando gira per casa dando cosnigli e dicendo cose sorridendo, per poi rinchiudersi in camera e restare in silenzio per ore.
 }
 
 //Appunto sul dono fatto
@@ -904,8 +918,6 @@ Una persona che si fa chiamare {fifthCharacterState} ti ha detto di parlare in g
 
 {
     - first_character_notes.one:
-        ~ temp charNameOne = translator(firstCharacterState)
-        ~ temp charNameFive = translator(fifthCharacterState)
         <b>Lettere di {charNameOne}.</b>
     
     

@@ -161,7 +161,7 @@
                     
  
             -
-        {firstStory hasnt StoryEnded: Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di mobili rotti che blocca il sentiero a ovest della foresta.|Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}
+        {((firstStory hasnt StoryEnded) && (secondStory hasnt StoryEnded)): Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di mobili rotti che blocca il sentiero a ovest della foresta.|Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}
         È arrivato il momento di capire dove possa portare.
         @animation:RewriterBook
         Grazie per la chiacchierata, {name}.
