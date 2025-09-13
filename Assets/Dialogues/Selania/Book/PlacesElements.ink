@@ -30,9 +30,9 @@ Qui ci sono le regole.
     {la_spazzata.step_tre.colto:Ci sono pensieri che feriscono. Che alimentano sé stessi fino a diventare massi, torri, montagne. E quando qualcosa li fa tremare, iniziano a rotolare travolgendo tutto ciò che incontrano, senza distinzione. <b>Spezzata</b> è dolorosa, ma come ogni dolore ci invita a prestare attenzione. A capire cosa liberare, prima che una piccola goccia non si trasformi in valanga.} 
     
     {bacca_della_addolorata.step_tre.colto: Il cambiamento a volte è come ghiaccio nelle vene. Si infila nelle spalle, nelle gambe, non permette di avanzare. La strada è lì eppure non riusciamo a fare il primo passo. La <b>Bacca dell'Addolorata</b> ci invita ad avere coraggio, a fare il primo passo. È facile trovarle all'incrocio fra più strade. In passato venivano piantate dalle madri quando l3 figli3 diventavano grandi, così che non avessero paura di iniziare il loro cammino. Il nome è frutto di una falsa credenza: si dice che la bacca cresca solo se la madre piange di dolore per la perdita dellə figliə. Ma anche la gioia di una madre che accoglie una nuova vita per sé rende la pianta rigogliosa.}    
-    
-    {non_ti_scordar_di_te.step_tre.colto: Una persona che ha perso qualcuno, e ne sente ancora la mancanza. Quella pianticina delicata ti dice: "Ehi, chi ami è parte di te." Quando la vedo, non mi sento mai sola.}
-    
+
+    {non_ti_scordar_di_te.step_tre.colto:Anche se al giorno d'oggi viene considerata una decorazione adatta ai cimiteri, <b>Non ti scordar di te</b> dovrebbe trovare più spesso spazio nelle nostre case. È un fungo delicato che cresce a meraviglia dove persistono i ricordi. Ne esistono ancora esemplari centenari, splendenti e cangianti come vetrate, floridi nella piazza principale di alcune piccole comunità che celebrano il ricordo di chi se ne è andatə. <b>Non ti scordar di te</b> ci aiuta non solo a non dimenticare, ma anche a chiederci: quale ricordo vorrò lasciare, quando non ci sarò più?}   
+     
     {brina_dell_impossibile.step_tre.colto: Credo sia la pianta del trauma. E chi non ha traumi? Ma forse la Brina è più adatta a chi non fa pace col passato. A chi ha una ferita così profonda, da sentirsi divisa in due. A molte persone la Brina fa paura perché pensano che ti ferisca. Ma in realtà quello che fa è mostrarti ferite che prima non vedevi. E per questo è una pianta che aiuta a ripartire. A fare pace col passato.}
 
     {cardo_aspinato.step_tre.colto: Descrizione cardo spinato.}    

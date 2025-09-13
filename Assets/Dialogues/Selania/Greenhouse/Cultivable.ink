@@ -292,7 +292,7 @@
 //Collaborazione, novità, ricordo
 //Outcome: datti piacere
     = TW
-        <i>Trigger Warning: questa pianta allude a contenuti erotici.
+        <i>Attenzione: questa pianta allude a contenuti erotici.
         <i>{name} vuole farla crescere, o preferisce cambiare?
         + [Voglio andare avanti.]
             -> step_zero
@@ -552,48 +552,49 @@
 //Indipendenza, ciclicità, ricordo
 //Outcome: ricordo di chi non c'è più
     = TW
-        <i>Questa pianta ti vuole raccontare qualcosa sul lutto e la sua elaborazione.
-        <i>Te la senti di farla crescere, {name} o preferisci provare con un'altra pianta?
+        <i>Attenzione: questa pianta parla di lutto e della sua elaborazione.
+        <i>Se la sente {name} di falra crescere, o preferisce cercare qualcosa di diverso?
         + [Me la sento, iniziamo.]
             -> step_zero
-        + [Vorrei evitarla, ora, ma riproponimela in futuro.]
+        + [Vorrei evitarla ora, ma riproponimela in futuro.]
             -> tempCultTW_formula -> cultivable_test
         + [Non propormi mai più questa pianta.]
             -> remove_proposed_cultivable -> cultivable_test
         -
-        -> step_zero
+            -> step_zero
         
     = step_zero
     -> remove_proposed_cultivable ->
         ~ growthNonTiScordarDiTe = stepZero
-        <i>Su uno vecchio ramo è comparsa una sostanza gelatinosa, una gomma che sembra un asparago.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Affusolata come un asparago una gelatina cristallina spunta da un ramo.</b>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     
     = step_uno
         <i>Il ramo sembra più leggero, vitreo.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>La gelatina non è invitante al tatto, ma l'aria ha un profumo sa di, di cosa? Sigaro, tabacco forse?</i>
-        <i>O è canfora? O addirittura torta, o rabarbaro, o caffè.
-        <i>L'odore di un vecchio e fidato maglione.</i>
+        <i>La gelatina non è invitante al tatto, ma l'aria ha un profumo sa di, di cosa? Tabacco?</i>
+        <i>O è canfora? O forse torta e caffè?
+        <i>O l'odore di un vecchio e fidato maglione.</i>
           -> main
           
     = step_due
         <i>Il ramo sembra sparire nella luce della serra.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>No, non sparire: è trasparente.</i>
-        <i>Gioca con la luce, la rende calda e accogliente.</i>
+        <i>Trasparente, gioca con la luce, la rende calda e accogliente.</i>
           -> main
           
     = step_tre
-        <i>Ramo e sostanza sono una cosa sola: un fungo di vetro, dita che si sfiorano e intrecciano lanciate verso il cielo.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Ramo e sostanza sono una cosa sola: un fungo di vetro, dita che si sfiorano e intrecciano tese verso il cielo.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>Hai trovato un <b>Non ti scordar di te</b>.</i>
-        <i>Trasforma ciò che è passato, che non c'è più, per renderlo vita nuova.</i>
-        <i>Il nuovo nell'antico, il noi nel nostro passato.</i>
+        <i>Trasforma ciò che è era per renderlo vita nuova.</i>
+        <i>Il nuovo nell'antico, il presente nel futuro.</i>
 
         + (colto) [Intreccio le mie dita alle sue.]
-            <i>Ti metti a piangere.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            <i>Sorridi e piangi.</i>
+            <i>{name} ha il volto rigato di lacrime.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>E sorride.</i>
             <i>L'aria è riscaldata da un profumo familiare.</i>
-            <i>Una carezza sul viso: un saluto di chi non c'è più, ma vive in te.</i>
-            <i>Siete parte della stessa storia.</i>
+            <i>Una carezza sul viso, un saluto.</i>
+            <i>Un nome che continua a pronunciare, anche se nessun arriva più.</i>
+            <i>Ma quel nome e {name} si intrecciano, come ramo e fungo.
+            <i>Due capitoli della stessa storia.</i>
                 ~ growing = 0
                 ~ chosenCultivable = ()
                     @animation:Inventory
