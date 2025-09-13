@@ -292,15 +292,15 @@
 //Collaborazione, novità, ricordo
 //Outcome: datti piacere
     = TW
-        //<i>{chosenCultivable} affronta questo tema delicato: XYZ.
-        //<i>Te la senti di farla crescere, o preferisci cambiare?
-        //+ [Voglio andare avanti.]
-        //    -> step_zero
-        //+ [Voglio rimuoverla, ma solo per ora.]
-        //    -> tempCultTW_formula -> cultivable_test
-        //+ [Voglio rimuoverla, per sempre.]
-        //    -> remove_proposed_cultivable -> cultivable_test
-        //-
+        <i>Trigger Warning: questa pianta allude a contenuti erotici.
+        <i>{name} vuole farla crescere, o preferisce cambiare?
+        + [Voglio andare avanti.]
+            -> step_zero
+        + [Voglio rimuoverla, ma solo per ora.]
+            -> tempCultTW_formula -> cultivable_test
+        + [Voglio rimuoverla per sempre.]
+            -> remove_proposed_cultivable -> cultivable_test
+        -
         -> step_zero
 
     
@@ -506,26 +506,31 @@
     = step_zero
     -> remove_proposed_cultivable ->
     ~ growthBaccaDellaAddolorata = stepZero
-        <i>Cinque punte scure emergono dal vaso.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Cinque punte titubanti emergono dal vaso.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Saggiano l'aria con timore, pronte a ritirarsi.</i>
             -> main
     
     = step_uno
-        <i>Rami come dita rattrappite sembrano artigliare l'aria.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Rami secchi graffiano l'aria.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Cercano invano di tornare nella terra.</i>
             -> main
     
     = step_due
-        <i>Le dita ora sono sollevate in una mano nervosa.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Rami come dita riempiono il vaso.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Slanciati verso l'alto, feriti.</i>
           -> main
           
     = step_tre
-        <i>La mano, ora tesa verso il cielo, sembra squarciata da una resina rossastra.<i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Hai trovato una <b>Bacca dell'addolorata</b>.</i>
+        <i>Le dita ora una mano tesa verso il cielo, una vecchia ferita al centro brilla di resina rossastra.<i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Coraggiosa, la <b>Bacca dell'Addolorata</b> espone le sue ferite al mondo.</b>
         <i>Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ancora ad avanzare.</i>
 
             + (colto) [Afferro la bacca.]
-            <i>La mano molla la sua presa, rivelandosi per quel che era sin dall'inizio: solo un insieme tenace di radici.</i>
-            <i>Senti le tue spalle sciogliersi, l'incertezza scivolare via.</i>
-            <i>Il cambiamento fa paura, ma ora ricordi come camminare.</i>
+            <i>La mano cede la sua presa rilassandosi.
+            <i>Si rilassano le spalle di {name}.
+            <i>L'incertezza scivola via.
+            <i>Compiere il primo passo è faticoso.
+            <i>Ma ora {name} ricorda come camminare.
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 @animation:Inventory

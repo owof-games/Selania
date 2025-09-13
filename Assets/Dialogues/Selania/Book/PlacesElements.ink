@@ -29,7 +29,7 @@ Qui ci sono le regole.
 
     {la_spazzata.step_tre.colto:Ci sono pensieri che feriscono. Che alimentano sé stessi fino a diventare massi, torri, montagne. E quando qualcosa li fa tremare, iniziano a rotolare travolgendo tutto ciò che incontrano, senza distinzione. <b>Spezzata</b> è dolorosa, ma come ogni dolore ci invita a prestare attenzione. A capire cosa liberare, prima che una piccola goccia non si trasformi in valanga.} 
     
-    {bacca_della_addolorata.step_tre.colto: Tanto brutta quanto liberatoria, personalmente, è una pianta potente. Donala a chi ha visto qual è la sua strada ma ha solo paura. Paura di avanzare, di cambiare. Sembra una cosa piccola, eppure è rivoluzionaria.}
+    {bacca_della_addolorata.step_tre.colto: Il cambiamento a volte è come ghiaccio nelle vene. Si infila nelle spalle, nelle gambe, non permette di avanzare. La strada è lì eppure non riusciamo a fare il primo passo. La <b>Bacca dell'Addolorata</b> ci invita ad avere coraggio, a fare il primo passo. È facile trovarle all'incrocio fra più strade. In passato venivano piantate dalle madri quando l3 figli3 diventavano grandi, così che non avessero paura di iniziare il loro cammino. Il nome è frutto di una falsa credenza: si dice che la bacca cresca solo se la madre piange di dolore per la perdita dellə figliə. Ma anche la gioia di una madre che accoglie una nuova vita per sé rende la pianta rigogliosa.}    
     
     {non_ti_scordar_di_te.step_tre.colto: Una persona che ha perso qualcuno, e ne sente ancora la mancanza. Quella pianticina delicata ti dice: "Ehi, chi ami è parte di te." Quando la vedo, non mi sento mai sola.}
     
