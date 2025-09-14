@@ -553,7 +553,7 @@
 //Outcome: ricordo di chi non c'è più
     = TW
         <i>Attenzione: questa pianta parla di lutto e della sua elaborazione.
-        <i>Se la sente {name} di falra crescere, o preferisce cercare qualcosa di diverso?
+        <i>Se la sente {name} di farla crescere, o preferisce cercare qualcosa di diverso?
         + [Me la sento, iniziamo.]
             -> step_zero
         + [Vorrei evitarla ora, ma riproponimela in futuro.]
