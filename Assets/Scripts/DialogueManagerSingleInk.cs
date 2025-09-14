@@ -1,3 +1,4 @@
+using System;
 using Ink.Runtime;
 using UnityEngine;
 using TMPro;
@@ -6,13 +7,14 @@ using System.Collections;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.IO;
+using System.Linq;
 using UnityEngine.Events;
 
 public class DialogueManagerSingleInk : MonoBehaviour
 {
+    [Header("Dialogue UI")] [SerializeField]
+    private GameObject dialoguePanel;
 
-    [Header("Dialogue UI")]
-    [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private GameObject continueButton;
 
@@ -21,8 +23,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private GameObject continueButtonBig;
 
 
-    [Header("Choices UI")]
-    [SerializeField] private GameObject[] choices;
+    [Header("Choices UI")] [SerializeField]
+    private GameObject[] choices;
+
     private TextMeshProUGUI[] choicesText;
     [SerializeField] private GameObject[] choicesBig;
     private TextMeshProUGUI[] choicesTextBig;
@@ -30,12 +33,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     private Story story;
 
-    [Header("Ink")]
-    [SerializeField] private string[] allPlaces;
+    [Header("Ink")] [SerializeField] private string[] allPlaces;
     [SerializeField] private string bigDialogueInkBoolVariable = "bigDialogue";
 
-    [Header("Text elements")]
-    [SerializeField] private TextAsset inkAssetJSON;
+    [Header("Text elements")] [SerializeField]
+    private TextAsset inkAssetJSON;
+
     [SerializeField] private GameObject[] entities;
     [SerializeField] private TextMeshProUGUI displayNameText;
     [SerializeField] private Animator portraitAnimator;
@@ -45,68 +48,70 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private Animator inkAnimatorD;
 
 
-    [Header("Background setting")]
-    [SerializeField] private Image background;
+    [Header("Background setting")] [SerializeField]
+    private Image background;
+
     private const string BACKGROUND_TAG = "background";
 
-    [Header("Bedroom Backgrounds")]
-    [SerializeField] private Sprite backBedroom;
+    [Header("Bedroom Backgrounds")] [SerializeField]
+    private Sprite backBedroom;
 
-    [Header("Forest Backgrounds")]
-    [SerializeField] private Sprite backForest;
+    [Header("Forest Backgrounds")] [SerializeField]
+    private Sprite backForest;
 
-    [Header("Train Stop Backgrounds")]
-    [SerializeField] private Sprite backTrainStop;
+    [Header("Train Stop Backgrounds")] [SerializeField]
+    private Sprite backTrainStop;
 
-    [Header("Greenhouse Backgrounds")]
-    [SerializeField] private Sprite backGreenhouse;
+    [Header("Greenhouse Backgrounds")] [SerializeField]
+    private Sprite backGreenhouse;
 
-    [Header("Pond Backgrounds")]
-    [SerializeField] private Sprite backPond;
+    [Header("Pond Backgrounds")] [SerializeField]
+    private Sprite backPond;
 
-    [Header("Nest Backgrounds")]
-    [SerializeField] private Sprite backNest;
+    [Header("Nest Backgrounds")] [SerializeField]
+    private Sprite backNest;
 
-    [Header("Library Backgrounds")]
-    [SerializeField] private Sprite backLibrary;
+    [Header("Library Backgrounds")] [SerializeField]
+    private Sprite backLibrary;
+
     [SerializeField] private Sprite backNightLibrary;
 
-    [Header("Laboratory Backgrounds")]
-    [SerializeField] private Sprite backLaboratory;
+    [Header("Laboratory Backgrounds")] [SerializeField]
+    private Sprite backLaboratory;
 
-    [Header("Book Backgrounds")]
-    [SerializeField] private Sprite bookBGZero;
+    [Header("Book Backgrounds")] [SerializeField]
+    private Sprite bookBGZero;
+
     [SerializeField] private Sprite bookBGOne;
     [SerializeField] private Sprite bookBGTwo;
     [SerializeField] private Sprite bookBGThree;
     [SerializeField] private Sprite bookBGFour;
-    [SerializeField] private Sprite bookBGFive;    
+    [SerializeField] private Sprite bookBGFive;
 
 
-
-    [Header("Sounds")]
-    [SerializeField] private AudioSource ambientSounds;
+    [Header("Sounds")] [SerializeField] private AudioSource ambientSounds;
     private const string AMBIENTSOUNDS_TAG = "ambientSounds";
-    [Header("Bedroom Sounds")]
-    [SerializeField] private AudioClip bedroomSounds;
 
-    [Header("Forest Sounds")]
-    [SerializeField] private AudioClip forestSounds;
+    [Header("Bedroom Sounds")] [SerializeField]
+    private AudioClip bedroomSounds;
 
-    [Header("Train Stop Sounds")]
-    [SerializeField] private AudioClip trainstopSounds;
+    [Header("Forest Sounds")] [SerializeField]
+    private AudioClip forestSounds;
 
-    [Header("Greenhouse Sounds")]
-    [SerializeField] private AudioClip greenhouseSounds;
+    [Header("Train Stop Sounds")] [SerializeField]
+    private AudioClip trainstopSounds;
 
-    [Header("Pond Sounds")]
-    [SerializeField] private AudioClip pondSounds;
+    [Header("Greenhouse Sounds")] [SerializeField]
+    private AudioClip greenhouseSounds;
 
-    [Header("Library Sounds")]
-    [SerializeField] private AudioClip librarySounds;
+    [Header("Pond Sounds")] [SerializeField]
+    private AudioClip pondSounds;
 
-    [Header("Book Sounds")]
-    [SerializeField] private AudioClip bookSounds;
+    [Header("Library Sounds")] [SerializeField]
+    private AudioClip librarySounds;
+
+    [Header("Book Sounds")] [SerializeField]
+    private AudioClip bookSounds;
 
     //TAG UTILIZZATO PER NOME
     private const string SPEAKER_TAG = "speaker";
@@ -126,13 +131,24 @@ public class DialogueManagerSingleInk : MonoBehaviour
         FillChoicesTextMeshPro(choicesBig, ref choicesTextBig);
 
         story = new Story(inkAssetJSON.text);
+        
         if (!LoadGame())
         {
             ContinueStory();
         }
 
+        // imposta tutte le variabili di debug a false per sicurezza
+        var debugVariableNames = (
+            from variableName in story.variablesState
+            where variableName.IndexOf("debug", StringComparison.Ordinal) == 0
+            select variableName).ToList();
+        foreach (var debugVariableName in debugVariableNames)
+        {
+            story.variablesState[debugVariableName] = false;
+        }
+
         DisableDialoguePanel();
-        
+
         InkStoryLoaded();
     }
 
@@ -149,10 +165,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     void ContinueStory()
     {
-
         if (story.canContinue)
         {
-
             string currentLine;
             do
             {
@@ -206,7 +220,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
     {
         if (story.canContinue)
         {
-
             continueButton.SetActive(true);
             continueButtonBig.SetActive(true);
         }
@@ -220,8 +233,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     public void OnOffObject(bool buttonsEnabled)
     {
-
-
         foreach (var placeVariableName in allPlaces)
         {
             var charactersInThePlace = (InkList)story.variablesState[placeVariableName];
@@ -232,7 +243,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
             Debug.Log(charactersInThePlace);
             if (charactersInThePlace.ContainsItemNamed("PG"))
             {
-
                 foreach (var entity in entities)
                 {
                     bool found = false;
@@ -243,20 +253,15 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     }
 
 
-
                     entity.SetActive(found);
 
                     entity.GetComponent<Button>().interactable = buttonsEnabled;
-
                 }
+
                 break;
             }
-
         }
-
-
     }
-
 
 
     public void OnClick(string entity)
@@ -274,18 +279,13 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
                 ContinueStory();
                 break;
-
             }
         }
     }
 
     public void OnClickContinue()
     {
-
         ContinueStory();
-
-
-
     }
 
     private void DisplayChoices()
@@ -340,8 +340,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
         story.ChooseChoiceIndex(choiceIndex);
         ContinueStory();
     }
-
-
 
 
     private void HandleTags(List<string> currentTags)
@@ -468,6 +466,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                         ambientSounds.clip = forestSounds;
                         ambientSounds.Play();
                     }
+
                     //TAG MUSICA SOTTOFONDO TrainStop
                     if (tagValue == "trainstopSounds")
                     {
@@ -495,13 +494,14 @@ public class DialogueManagerSingleInk : MonoBehaviour
                         ambientSounds.clip = librarySounds;
                         ambientSounds.Play();
                     }
-                    
+
                     //TAG MUSICA SOTTOFONDO LIBRO
                     if (tagValue == "bookSounds")
                     {
                         ambientSounds.clip = bookSounds;
                         ambientSounds.Play();
-                    }  
+                    }
+
                     break;
 
 
@@ -509,7 +509,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     displayNameText.text = tagValue;
                     Debug.Log("speaker" + tagValue);
                     break;
-                                   
+
 
                 case PORTRAIT_TAG:
                     portraitAnimator.Play(tagValue);
@@ -524,12 +524,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 case INK_TAG_B:
                     inkAnimatorB.Play(tagValue);
                     Debug.Log("inkB" + tagValue);
-                    break;     
+                    break;
 
                 case INK_TAG_C:
                     inkAnimatorC.Play(tagValue);
                     Debug.Log("inkC" + tagValue);
-                    break; 
+                    break;
 
                 case INK_TAG_D:
                     inkAnimatorD.Play(tagValue);
@@ -539,17 +539,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 default:
                     Debug.LogWarning("Tag came in but is not currently handled: " + tag);
                     break;
-
-
             }
-
-
-
-
-
         }
     }
-
 
 
     //Questo viene utilizzato dai BranchManager
@@ -573,10 +565,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
     {
         return (InkList)story.variablesState["growthLaSpazzata"];
     }
+
     public InkList GetEffettivoStatoLicheneDegliAbissi()
     {
         return (InkList)story.variablesState["growthLicheneDegliAbissi"];
     }
+
     public InkList GetEffettivoStatoBrinaDellImpossibile()
     {
         return (InkList)story.variablesState["growthBrinaDellImpossibile"];
@@ -586,22 +580,25 @@ public class DialogueManagerSingleInk : MonoBehaviour
     {
         return (InkList)story.variablesState["growthBaccaDellaAddolorata"];
     }
+
     public InkList GetEffettivoStatoNonTiScordarDiTe()
     {
         return (InkList)story.variablesState["growthNonTiScordarDiTe"];
     }
+
     public InkList GetEffettivoStatoEderaDelleAmanti()
     {
         return (InkList)story.variablesState["growthEderaDelleAmanti"];
     }
+
     public InkList GetEffettivoStatoCardoAspinato()
     {
         return (InkList)story.variablesState["growthCardoAspinato"];
-    }    
+    }
+
     public void OnQuitButton()
     {
         Application.Quit();
-
     }
 
     public void OnExitGame()
@@ -613,8 +610,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
     public class SaveData
     {
         public string inkState;
-
     }
+
     public void SaveGame()
     {
         //Se PG è nella stanza, mando return e non faccio nulla, altrimenti salvo
@@ -654,7 +651,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
             Debug.LogWarning("Nessun salvataggio trovato!");
             //OnClick("RoomLoad");
             return false;
-
         }
     }
 
@@ -663,7 +659,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
     {
         var bedroomContents = (InkList)story.variablesState["bedroomContents"];
         return bedroomContents.ContainsItemNamed("PG");
-
     }
 
 
@@ -692,12 +687,13 @@ public class DialogueManagerSingleInk : MonoBehaviour
         dialoguePanel.SetActive(false);
         dialoguePanelBig.SetActive(false);
     }
-    
+
     /*
      * Sezione per aggancio verso Talo
      */
 
-    [Tooltip("Invoked whenever the Ink story has been loaded (if a save game has been found, otherwise straight after the story has been created and the first step has been entered)")]
+    [Tooltip(
+        "Invoked whenever the Ink story has been loaded (if a save game has been found, otherwise straight after the story has been created and the first step has been entered)")]
     public UnityEvent onInkStoryLoaded = new();
 
     /// <summary>
@@ -720,8 +716,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
     /// <returns>A method that de-register the observer.</returns>
     public System.Action RegisterVariableObserver(string variableName, Story.VariableObserver variableObserver)
     {
-        story.ObserveVariable( variableName, variableObserver );
-        return () => story.RemoveVariableObserver( variableObserver );
+        story.ObserveVariable(variableName, variableObserver);
+        return () => story.RemoveVariableObserver(variableObserver);
     }
 
     /// <summary>
@@ -734,5 +730,3 @@ public class DialogueManagerSingleInk : MonoBehaviour
         return story.variablesState[variableName];
     }
 }
-
-
