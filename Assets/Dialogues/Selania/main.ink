@@ -1,5 +1,9 @@
 === main
 //Main è il punto da cui passiamo costantemente per caricare i thread di tutto ciò che genera testo in ogni area del gioco.
+{debug and (shortStories + averageStories + longStories) != unreadStories:
+    Errore nella biblioteca!
+    -> DONE
+}
 
 ~ temp my_location = entity_location(PG)
 #background: {tag_background()}
@@ -8,7 +12,6 @@
     // ~ move_entity(FromLibraryToLaboratoryNight, Safekeeping)
     //~ move_entity(FromLibraryToLaboratory, Library)
 @interact 
-
 
 
 //Spostamenti

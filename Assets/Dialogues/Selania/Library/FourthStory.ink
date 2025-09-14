@@ -61,9 +61,7 @@
             ~ readStories += Maura
                 -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
-            ~ unreadStories -= Maura
-            ~ temporaryTW += Maura
-                -> refresh_book_lists -> book_test_intro
+                -> tempTW -> book_test_intro
         + [Non presentarmi più questo racconto.]
             ~ unreadStories -= Maura
                 -> refresh_book_lists -> book_test_intro
@@ -113,9 +111,7 @@
             ~ readStories += LetiziaVaccarella
                 -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
-            ~ unreadStories -= LetiziaVaccarella
-            ~ temporaryTW += LetiziaVaccarella
-                -> refresh_book_lists -> book_test_intro
+            -> tempTW -> book_test_intro
         + [Non presentarmi più questo racconto.]
             ~ unreadStories -= LetiziaVaccarella
                 -> refresh_book_lists -> book_test_intro

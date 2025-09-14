@@ -6,6 +6,15 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     VAR readStories = ()
     VAR temporaryTW = ()
     VAR temporaryReadTW = ()
+    VAR temporaryShortTW = ()
+    VAR temporaryAverageTW = ()
+    VAR temporaryLongTW = ()
+    VAR temporaryTransformationTW = ()
+    VAR temporaryQuestionsTW = ()
+    VAR temporaryUnpreparedTW = ()
+    VAR temporaryMonstersTW = ()
+    VAR temporaryFireTW = ()
+    VAR temporaryRebellionTW = ()
     
 //Raggrupamento per lunghezza
     LIST storiesDuration = Short, Average, Long
@@ -266,6 +275,50 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     	~ readStories -= book
     	~ temporaryReadTW +=book
     }
+    
+    {
+    - shortStories has book:
+        ~ shortStories -= book
+        ~ temporaryShortTW += book
+    - averageStories has book:
+        ~ averageStories -= book
+        ~ temporaryAverageTW += book
+    - longStories has book:
+        ~ longStories -= book
+        ~ temporaryLongTW += book
+    }
+
+    {
+    - aboutTransformation has book:
+        ~ aboutTransformation -= book
+        ~ temporaryTransformationTW += book
+    }
+    {
+    - aboutQuestions has book:
+        ~ aboutQuestions -= book
+        ~ temporaryQuestionsTW += book
+    }
+    {
+    - aboutUnprepared has book:
+        ~ aboutUnprepared -= book
+        ~ temporaryUnpreparedTW += book
+    }
+    {
+    - aboutMonsters has book:
+        ~ aboutMonsters -= book
+        ~ temporaryMonstersTW += book
+    }
+    {
+    - aboutFire has book:
+        ~ aboutFire -= book
+        ~ temporaryFireTW += book
+    }
+    {
+    - aboutRebellion has book:
+        ~ aboutRebellion -= book
+        ~ temporaryRebellionTW += book
+    }
+
 {debug: <i>Dopo aver operato la funzione, il valore di book è {book}. Unreadstories ha questi libri: {unreadStories}, mentre readstories ha questi {readStories}.}    
 ->->
 
@@ -277,12 +330,33 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     ~ temporaryTW = ()
     ~ readStories += temporaryReadTW
     ~ temporaryReadTW = ()
+
+    ~ shortStories += temporaryShortTW
+    ~ temporaryShortTW = ()
+    ~ averageStories += temporaryAverageTW
+    ~ temporaryAverageTW = ()
+    ~ longStories += temporaryLongTW
+    ~ temporaryLongTW = ()
+
+    ~ aboutTransformation += temporaryTransformationTW
+    ~ temporaryTransformationTW = ()
+    ~ aboutQuestions += temporaryQuestionsTW
+    ~ temporaryQuestionsTW = ()
+    ~ aboutUnprepared += temporaryUnpreparedTW
+    ~ temporaryUnpreparedTW = ()
+    ~ aboutMonsters += temporaryMonstersTW
+    ~ temporaryMonstersTW = ()
+    ~ aboutFire += temporaryFireTW
+    ~ temporaryFireTW = ()
+    ~ aboutRebellion += temporaryRebellionTW
+    ~ temporaryRebellionTW = ()
+
 {debug: dopo aver applicato empty_tempTW, la lista di storie non lette contiene {unreadStories} e la lista delle storie evitate contiene {temporaryTW}.La lista delle storie da rileggere è {readStories} e i trigger sono attivi per {temporaryReadTW}.}
 
 ->->
 
 //Funzione di rimozione permanente di un racconto
-=== permamentTW
+=== permanentTW
 {debug: <i>Entro in permanentTW. Prima di operare la funzione, il valore di book è {book}. Unreadstories ha questi libri: {unreadStories}, mentre readstories ha questi {readStories}.}
 {
     - unreadStories has book:
@@ -305,18 +379,30 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
         ~ averageStories -= book
     - longStories has book:
         ~ longStories -= book
+}
+{
     - aboutTransformation has book:
         ~ aboutTransformation -= book
+}
+{
     - aboutQuestions has book:
         ~ aboutQuestions -= book
+}
+{
     - aboutUnprepared has book:
         ~ aboutUnprepared -= book
+}
+{
     - aboutMonsters has book:
         ~ aboutMonsters -= book
+}
+{
     - aboutFire has book:
         ~ aboutFire -= book
+}
+{
     - aboutRebellion has book:
-        ~ aboutRebellion -= book           
+        ~ aboutRebellion -= book
 
 }
 ->->

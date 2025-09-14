@@ -8,9 +8,9 @@
             ~ readStories += book
             -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
-            -> tempTW -> refresh_book_lists -> book_test_intro
+            -> tempTW -> book_test_intro
         + [Non presentarmi più questo racconto.]
-            -> permamentTW -> refresh_book_lists -> book_test_intro
+            -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
@@ -59,9 +59,9 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
             ~ readStories += book
             -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
-            -> tempTW -> refresh_book_lists -> book_test_intro
+            -> tempTW -> book_test_intro
         + [Non presentarmi più questo racconto.]
-            -> permamentTW -> refresh_book_lists -> book_test_intro
+            -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
@@ -120,9 +120,9 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
             ~ readStories += book
             -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
-            -> tempTW -> refresh_book_lists -> book_test_intro
+            -> tempTW -> book_test_intro
         + [Non presentarmi più questo racconto.]
-            -> permamentTW -> refresh_book_lists -> book_test_intro
+            -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
@@ -188,9 +188,9 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
             ~ readStories += book
             -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
-            -> tempTW -> refresh_book_lists -> book_test_intro
+            -> tempTW -> book_test_intro
         + [Non presentarmi più questo racconto.]
-            -> permamentTW -> refresh_book_lists -> book_test_intro
+            -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
@@ -231,9 +231,9 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
             ~ readStories += book
             -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
-            -> tempTW -> refresh_book_lists -> book_test_intro
+            -> tempTW -> book_test_intro
         + [Non presentarmi più questo racconto.]
-            -> permamentTW -> refresh_book_lists -> book_test_intro
+            -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
@@ -375,9 +375,9 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
             ~ readStories += book
             -> refresh_book_lists ->
         + [Per ora non me la sento di affrontare questo tema.]
-            -> tempTW -> refresh_book_lists -> book_test_intro
+            -> tempTW -> book_test_intro
         + [Non presentarmi più questo racconto.]
-            -> permamentTW -> refresh_book_lists -> book_test_intro
+            -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
