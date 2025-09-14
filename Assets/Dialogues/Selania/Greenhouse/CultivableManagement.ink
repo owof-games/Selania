@@ -1190,6 +1190,7 @@ QUESTIONS
     ~ twelfthQuest = false
     ~ thirteenthQuest = false
     ~ fourteenthQuest = false
+    ~ fifteenQuest = false
     ~ counter = 0
     ~ growing = 1
     ~ firstAnswerTracker = ()
