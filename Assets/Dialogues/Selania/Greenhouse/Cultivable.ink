@@ -309,7 +309,7 @@
         = step_zero
     -> remove_proposed_cultivable ->  
     ~ growthEderaDelleAmanti = stepZero
-        <i>Gli occhi di {name} si riempiono di miele luminoso.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Il vaso gronda miele luminoso, calore riempie gli occhi di {name}.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>I polpastrelli hanno fame.</i>
             -> main
     
@@ -319,7 +319,7 @@
             -> main
           
     = step_due
-        <i>I rami sono intrecciati, abbracciati, uniti, arrotolati. Si avviluppano giocosi.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>I rami si sfiorano desideranti, colmi, sinuosi. Si avviluppano giocosi.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>Radici gentili saggiano il legno della serra, lo sfiorano, lo penetrano.</i>
         <i>Foglie giovani maturano, nutrendosi di questo gioco.</i>
             -> main
