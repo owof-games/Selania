@@ -385,7 +385,7 @@
           -> main
           
     = step_due
-        <i>La nebbia si è fatta fiume, goccie rosse che vibrano.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>La nebbia si è fatta fiume, goccie che vibrano.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>Che danzano.</i>
         <i>E quando si scontrano, la serra riecheggia di una festosa risata.</i>
             -> main
