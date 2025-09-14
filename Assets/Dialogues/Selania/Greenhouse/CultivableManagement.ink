@@ -1259,6 +1259,7 @@ QUESTIONS
     - imaginationCrops has chosenCultivable:
         ~ imaginationCrops -= chosenCultivable        
 }
+~ chosenCultivable = ()
 
 {debugCultivable: <i>Dopo la rimozione backupColtivabile contiene {backupCultivable}.}
 {debugCultivable: <i>relationshipCrops contiene {relationshipCrops}, shiftCrops contiene {shiftCrops}, understandingCrops contiene {understandingCrops}, selfdeterminationCrops contiene {selfdeterminationCrops}, wonderCrops contiene {wonderCrops} e imaginationCrops contiene {imaginationCrops}.}
@@ -1271,6 +1272,7 @@ QUESTIONS
 
 	~ backupCultivable -= chosenCultivable
 	~ tempCultTW += chosenCultivable
+    ~ chosenCultivable = ()
 	
 {debugCultivable: <i>Dopo l'operazione la lista dei coltivabili include {backupCultivable}.}	
 ->->
