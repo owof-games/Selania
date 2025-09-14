@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 50b9b329985463d49b51052f0e66ce8e
+guid: 429e6620e4acd844abae7dc6096980c1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2900851399100676133
-    second: CdCVuoto_0
+      213: -6353183053357864227
+    second: CdCStepTre_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,6 +84,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -113,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CdCVuoto_0
+      name: CdCStepTre_0
       rect:
         serializedVersion: 2
-        x: 139
-        y: 25
-        width: 121
-        height: 35
+        x: 26
+        y: 14
+        width: 196
+        height: 316
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd7c86a950b1eb7d0800000000000000
-      internalID: -2900851399100676133
+      spriteID: ddaa29f6ca5f4d7a0800000000000000
+      internalID: -6353183053357864227
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CdCVuoto_0: -2900851399100676133
+      CdCStepTre_0: -6353183053357864227
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
