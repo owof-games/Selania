@@ -801,7 +801,7 @@ QUESTIONS
                     ~ cropsType += understanding
                     ~ firstAnswerTracker = selfdeterminationCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
-            + [<i>{~Indugia su ciò che è stato|Trova conforto nel wonder di ciò che era|Si chiede dove sia casa}.]
+            + [<i>{~Indugia su ciò che è stato|Trova conforto nel ricordo di ciò che era|Si chiede dove sia casa}.]
                     ~ cropsType += wonder
                     ~ firstAnswerTracker = wonderCrops
                     {debugCultivable: <i>cropsType contiene ora {cropsType}.}                    
@@ -1259,7 +1259,6 @@ QUESTIONS
     - imaginationCrops has chosenCultivable:
         ~ imaginationCrops -= chosenCultivable        
 }
-~ chosenCultivable = ()
 
 {debugCultivable: <i>Dopo la rimozione backupColtivabile contiene {backupCultivable}.}
 {debugCultivable: <i>relationshipCrops contiene {relationshipCrops}, shiftCrops contiene {shiftCrops}, understandingCrops contiene {understandingCrops}, selfdeterminationCrops contiene {selfdeterminationCrops}, wonderCrops contiene {wonderCrops} e imaginationCrops contiene {imaginationCrops}.}

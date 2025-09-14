@@ -299,7 +299,9 @@
         + [Voglio rimuoverla, ma solo per ora.]
             -> tempCultTW_formula -> cultivable_test
         + [Voglio rimuoverla per sempre.]
-            -> remove_proposed_cultivable -> cultivable_test
+            -> remove_proposed_cultivable ->
+            ~ chosenCultivable = ()
+            -> cultivable_test
         -
         -> step_zero
 
@@ -559,7 +561,9 @@
         + [Vorrei evitarla ora, ma riproponimela in futuro.]
             -> tempCultTW_formula -> cultivable_test
         + [Non propormi mai più questa pianta.]
-            -> remove_proposed_cultivable -> cultivable_test
+            -> remove_proposed_cultivable ->
+            ~ chosenCultivable = ()
+            -> cultivable_test
         -
             -> step_zero
         
