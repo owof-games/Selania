@@ -72,6 +72,7 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     -> step_one
 
     = step_one
+    <i>{name} desidera una storia veloce come una pulce o lenta come la notte?</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + {shortStories != ()} [Qualcosa di brevissimo (max 1500 battute).]
         //(1500 battute max)
             ~ readingDuration += Short
@@ -101,15 +102,15 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     
     = about_transformation
     <i>La biblioteca ti offre una storia...</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-        + {readingDuration has Short && shortStories^ aboutTransformation != ()} [Che racconta di qualcosa che si <b><i>trasforma</b>.]
+        + {readingDuration has Short && shortStories^ aboutTransformation != ()} [Che racconti di qualcosa che si <b><i>trasforma</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutTransformation)
              -> from_list_to_books
  
-        + {readingDuration has Average && averageStories^ aboutTransformation != ()} [Che racconta di qualcosa che si <b><i>trasforma</b>.]
+        + {readingDuration has Average && averageStories^ aboutTransformation != ()} [Che racconti di qualcosa che si <b><i>trasforma</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutTransformation)
              -> from_list_to_books           
             
-        + {readingDuration has Long && longStories^ aboutTransformation != ()} [Che racconta di qualcosa che si <b><i>trasforma</b>.]
+        + {readingDuration has Long && longStories^ aboutTransformation != ()} [Che racconti di qualcosa che si <b><i>trasforma</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutTransformation)
             -> from_list_to_books
         
@@ -128,15 +129,15 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     = about_questions       
     <i>La biblioteca ti offre una storia...</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
     
-        + {readingDuration has Short && shortStories^ aboutQuestions != ()} [Che parla di chi <b><i>si pone domande</b>.]
+        + {readingDuration has Short && shortStories^ aboutQuestions != ()} [Che parli di chi <b><i>si pone domande</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutQuestions)
              -> from_list_to_books
         
-        + {readingDuration has Average && averageStories^ aboutQuestions != ()} [Che parla di chi <b><i>si pone domande</b>.]
+        + {readingDuration has Average && averageStories^ aboutQuestions != ()} [Che parli di chi <b><i>si pone domande</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutQuestions)
          -> from_list_to_books
 
-        + {readingDuration has Long && longStories^ aboutQuestions != ()} [Che parla di chi <b><i>si pone domande</b>.]
+        + {readingDuration has Long && longStories^ aboutQuestions != ()} [Che parli di chi <b><i>si pone domande</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutQuestions)
          -> from_list_to_books            
         
@@ -183,15 +184,15 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     = about_monsters
     <i>La biblioteca ti offre una storia...</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
     
-        + {readingDuration has Short && shortStories^ aboutMonsters != ()} [Che parla di <b><i>cose mostruose</b>.]
+        + {readingDuration has Short && shortStories^ aboutMonsters != ()} [Che parli di <b><i>cose mostruose</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutMonsters)
         -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutMonsters != ()} [Che parla di <b><i>cose mostruose</b>.]
+        + {readingDuration has Average && averageStories^ aboutMonsters != ()} [Che parli di <b><i>cose mostruose</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutMonsters)
         -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutMonsters != ()} [Che parla di <b><i>cose mostruose</b>.]
+        + {readingDuration has Long && longStories^ aboutMonsters != ()} [Che parli di <b><i>cose mostruose</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutMonsters)
         -> from_list_to_books            
         
@@ -210,15 +211,15 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     = about_fire  
     <i>La biblioteca ti offre una storia...</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
     
-        + {readingDuration has Short && shortStories^ aboutFire != ()} [Che racconta di <b><i>cose che bruciano</b>.]
+        + {readingDuration has Short && shortStories^ aboutFire != ()} [Che racconti di <b><i>cose che bruciano</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutFire)
         -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutFire != ()} [Che racconta di <b><i>cose che bruciano</b>.]
+        + {readingDuration has Average && averageStories^ aboutFire != ()} [Che racconti di <b><i>cose che bruciano</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutFire)
          -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutFire != ()} [Che racconta di <b><i>cose che bruciano</b>.]
+        + {readingDuration has Long && longStories^ aboutFire != ()} [Che racconti di <b><i>cose che bruciano</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutFire)
          -> from_list_to_books            
         
@@ -237,15 +238,15 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     = about_rebellion
     <i>La biblioteca ti offre una storia...</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
     
-        + {readingDuration has Short && shortStories^ aboutRebellion != ()} [Che urla di <b><i>sogni e ribellioni</b>.]
+        + {readingDuration has Short && shortStories^ aboutRebellion != ()} [Che urli di <b><i>sogni e ribellioni</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutRebellion)
          -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutRebellion != ()} [Che urla di <b><i>sogni e ribellioni</b>.]
+        + {readingDuration has Average && averageStories^ aboutRebellion != ()} [Che urli di <b><i>sogni e ribellioni</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutRebellion)
         -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutRebellion != ()} [Che urla di <b><i>sogni e ribellioni</b>.]
+        + {readingDuration has Long && longStories^ aboutRebellion != ()} [Che urli di <b><i>sogni e ribellioni</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutRebellion)
              -> from_list_to_books            
         
