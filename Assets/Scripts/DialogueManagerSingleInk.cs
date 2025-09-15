@@ -131,7 +131,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
         FillChoicesTextMeshPro(choicesBig, ref choicesTextBig);
 
         story = new Story(inkAssetJSON.text);
-        
+
         if (!LoadGame())
         {
             ContinueStory();
@@ -453,53 +453,39 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
                 case AMBIENTSOUNDS_TAG:
 
-                    //TAG MUSICA SOTTOFONDO CAMERDA DA LETTO
-                    if (tagValue == "bedroomSounds")
+                    switch (tagValue)
                     {
-                        ambientSounds.clip = bedroomSounds;
-                        ambientSounds.Play();
-                    }
-
-                    //TAG MUSICA SOTTOFONDO GIARDINO
-                    if (tagValue == "forestSounds")
-                    {
-                        ambientSounds.clip = forestSounds;
-                        ambientSounds.Play();
-                    }
-
-                    //TAG MUSICA SOTTOFONDO TrainStop
-                    if (tagValue == "trainstopSounds")
-                    {
-                        ambientSounds.clip = trainstopSounds;
-                        ambientSounds.Play();
-                    }
-
-                    //TAG MUSICA SOTTOFONDO SERRA
-                    if (tagValue == "greenhouseSounds")
-                    {
-                        ambientSounds.clip = greenhouseSounds;
-                        ambientSounds.Play();
-                    }
-
-                    //MUSIC TAG FOR POND
-                    if (tagValue == "pondSounds")
-                    {
-                        ambientSounds.clip = pondSounds;
-                        ambientSounds.Play();
-                    }
-
-                    //MUSIC TAG FOR LIBRARY
-                    if (tagValue == "librarySounds")
-                    {
-                        ambientSounds.clip = librarySounds;
-                        ambientSounds.Play();
-                    }
-
-                    //TAG MUSICA SOTTOFONDO LIBRO
-                    if (tagValue == "bookSounds")
-                    {
-                        ambientSounds.clip = bookSounds;
-                        ambientSounds.Play();
+                        //TAG MUSICA SOTTOFONDO CAMERA DA LETTO
+                        case "bedroomSounds":
+                            UpdateAmbientSounds(bedroomSounds);
+                            break;
+                        //TAG MUSICA SOTTOFONDO GIARDINO
+                        case "forestSounds":
+                            UpdateAmbientSounds(forestSounds);
+                            break;
+                        //TAG MUSICA SOTTOFONDO TrainStop
+                        case "trainstopSounds":
+                            UpdateAmbientSounds(trainstopSounds);
+                            break;
+                        //MUSIC TAG FOR GREENHOUSE
+                        case "greenhouseSounds":
+                            UpdateAmbientSounds(greenhouseSounds);
+                            break;
+                        //MUSIC TAG FOR POND
+                        case "pondSounds":
+                            UpdateAmbientSounds(pondSounds);
+                            break;
+                        //MUSIC TAG FOR LIBRARY
+                        case "librarySounds":
+                            UpdateAmbientSounds(librarySounds);
+                            break;
+                        //TAG MUSICA SOTTOFONDO LIBRO
+                        case "bookSounds":
+                            UpdateAmbientSounds(bookSounds);
+                            break;
+                        default:
+                            Debug.LogWarning($"Cannot find audio erp {tagValue}");
+                            break;
                     }
 
                     break;
@@ -540,6 +526,15 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     Debug.LogWarning("Tag came in but is not currently handled: " + tag);
                     break;
             }
+        }
+    }
+
+    private void UpdateAmbientSounds(AudioClip clip)
+    {
+        ambientSounds.clip = clip;
+        if (!ambientSounds.isPlaying)
+        {
+            ambientSounds.Play();
         }
     }
 
