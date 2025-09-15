@@ -16,7 +16,7 @@
         - (top)
             * (dove) [Dove sono?]
                  Questo luogo non ha un nome.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-                 Per me è <b>Il giardino</b>, ma vedrai anche tu che è anche molte molte altre cose.
+                 Per me è <b><i>Il giardino</b></i>, ma vedrai anche tu che è anche molte molte altre cose.
                  E probabilmente prenderai a chiamarlo con un nome tutto tuo.
                  La cosa che posso dirti con certezza è che faccio di tutto per renderlo un posto sicuro.
                  Un posto dove prenderti cura di te.
@@ -26,7 +26,7 @@
             
             * (chiSei) [Chi sei?]
                 La persona che tiene in piedi questo luogo!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
-                Ma tu puoi chiamarmi <b>{translator(fifthCharacterState)}</b>.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral 
+                Ma tu puoi chiamarmi <b><i>{translator(fifthCharacterState)}</b></i>.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral 
                 Così puoi ricordarti con facilità qual è il mio scopo.
                     -> top
             
@@ -63,7 +63,7 @@
         Piacere di conoscerti, {name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
         E {pronouns has him:benvenuto|{pronouns has her:benvenuta|benvenutə}}.
         Con me usa pure i pronomi femminili.
-        {not chiSei:Ah, che sbadata. Mi chiamo <b>{charNameFive}</b>, e il mio obiettivo è farti stare bene.|Come Mentore, il mio unico obiettivo è farti stare bene.}#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+        {not chiSei:Ah, che sbadata. Mi chiamo <b><i>{charNameFive}</b></i>, e il mio obiettivo è farti stare bene.|Come Mentore, il mio unico obiettivo è farti stare bene.}#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             - (selfName)
         Tra poco ti spiegherò anche il tuo lavoro, {name}.
         Ma prima: una cosa im-por-tant-tis-si-ma!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
@@ -137,10 +137,10 @@
         }
         
         Ma perché vogliamo la loro fiducia?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-        Perché quando queste persone si saranno aperte con te, ti verrà offerta l'occasione di dare loro un </b>dono<b>.
+        Perché quando queste persone si saranno aperte con te, ti verrà offerta l'occasione di dare loro un </b></i>dono<b><i>.
         Il dono è una cosa che puoi fare una sola volta, ed è il tuo modo di dimostrare a una persona che l'hai capita.
         E per aver qualcosa da donare dovrai faticare, {name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
-        Ad esempio, coltivando qualcosa <b>alla serra</b>.
+        Ad esempio, coltivando qualcosa <b><i>alla serra</b></i>.
         Tutto chiaro fino a qui?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
 
             + [Matematico: ascolto, analizzo, scelgo il dono.]
@@ -170,8 +170,8 @@
             -
         
         E qui arriviamo alla parte più importante di tutte: il dono è importante non solo per guadagnare fiducia.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-        Il giusto dono può anche aumentare la tua quantità di <b>inchiostro</b>.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
-        Perché tu {pronouns has him:amico mio|{pronouns has her:amica mia|amicə miə}} sei <b>{pronouns has him:un riscrittore|{pronouns has her:una riscrittora|unə riscrittorə}}</b>!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
+        Il giusto dono può anche aumentare la tua quantità di <b><i>inchiostro</b></i>.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
+        Perché tu {pronouns has him:amico mio|{pronouns has her:amica mia|amicə miə}} sei <b><i>{pronouns has him:un riscrittore|{pronouns has her:una riscrittora|unə riscrittorə}}</b></i>!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
         Aiuti queste persone bloccate a riscrivere la propria storia in modo diverso, a scegliersi un nuovo nome.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         
             + [E tu hai bisogno di un nuovo nome?]
@@ -242,14 +242,14 @@
 
             {name}, ci siamo: sto per darti le ultime istruzioni per renderti {pronouns has him:un perfetto Riscrittore|{pronouns has her:una perfetta Riscrittora|unə perfettə Riscrittorə}}!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
             Più sei in confidenza con la persona e più le hai dato un dono gradito, più avrai inchiostro a disposizione per aiutarla a riscrivere la sua storia.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-            Tra mentori definiamo le azioni che l'inchiostro permette di compiere <b>riscritture</b>, un po' come quando riscriviamo un testo.
+            Tra mentori definiamo le azioni che l'inchiostro permette di compiere <b><i>riscritture</b></i>, un po' come quando riscriviamo un testo.
             E quello che ogni Riscrittorə andrà a revisionare è il modo in cui la persona legge determinati temi della sua vita.
             Magari una persona si definisce così insicura da chiamarsi <i>Pasticcio</i>, ma lə Riscrittorə ha colto nella sua storia che non c'è alcun pasticcio, ma il coraggio di buttarsi in situazioni scomode.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
             Oppure si definirà <i>La Temibile</i>, ma invece di far paura, ha solo il terrore di mostrare le sue vulnerabilità, e per questo si sente sola.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
             Grazie all'inchiostro, lə Riscrittorə aiuterà a riscrivere quella parte della vita della persona.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             Più inchiostro significa più possibilità di aiutare quella persona a vedersi in un modo nuovo.
-            Ma a prescindere dalla quantità di inchiostro, ogni Riscrittorə ha in sé il dono dell'<b>epilogo</b>.
-            L'<b>epilogo</b> è una dichiarazione finale dellə Riscrittorə che permette alla persona di mettere un punto sul presente, e iniziare a guardare al futuro in modo diverso.
+            Ma a prescindere dalla quantità di inchiostro, ogni Riscrittorə ha in sé il dono dell'<b><i>epilogo</b></i>.
+            L'<b><i>epilogo</b></i> è una dichiarazione finale dellə Riscrittorə che permette alla persona di mettere un punto sul presente, e iniziare a guardare al futuro in modo diverso.
             Così persona e Riscrittorə raggiungeranno il loro obiettivo: un nuovo nome, simbolo di un nuovo inizio.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
             
                 + [Hai un consiglio da darmi Mentore?]
@@ -600,8 +600,8 @@
     ~ temp charNameFive = translator(fifthCharacterState)
     Sembra che la demo sia finita qui, {name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
     Potrai girare ancora per gli spazi aperti.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-    Continuare a leggere le storie della <b>biblioteca</b>.
-    E coltivare cosa rimane da coltivare nella <b>serra</b>.
+    Continuare a leggere le storie della <b><i>biblioteca</b></i>.
+    E coltivare cosa rimane da coltivare nella <b><i>serra</b></i>.
     Ma non compariranno nuove persone bisognose.
     Ti chiedo un favore prima di salutarci, {name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sorry
     Salvati questo codice, e inseriscilo poi nel documento del testing.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral

@@ -258,7 +258,7 @@
           
     = step_tre
         <i>L'odore è così forte da far lacrimare gli occhi di {name}.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>L'odore del <b>Lichene degli abissi.</b></i>
+        <i>L'odore del <b><i>Lichene degli abissi.</b></i>
         <i>Roteare incessante tra fungo e alga.</i>
         <i>Si respingono nel piacere, si inseguono nel dolore, senza mai afferrarsi.</i>
         <i>Forti nella loro distruzione, estremamente fragili.</i>
@@ -276,7 +276,7 @@
                             {
                                 - findedGifts hasnt LicheneDegliAbissi:
                                 ~ findedGifts += LicheneDegliAbissi
-                                <i>Hai ottenuto: <b>Lichene degli Abissi.</b></i>
+                                <i>Hai ottenuto: <b><i>Lichene degli Abissi.</b></i>
                             }
                     ~ move_entity(GreenhouseRecap, BookPlace)
                 
@@ -334,7 +334,7 @@
                 <i>Per un attimo {name} perde i suoi confini.</i>
                 <i>Diventa un bacio nella notte, dita desiderate tra le coscie.</i>
                 <i>Acqua sulle labbra, pelle nuda sulla terra umida.</i>
-                <i>Pienezza che riempie, la forza dell'<b>Edera delle amanti</b></i>.
+                <i>Pienezza che riempie, la forza dell'<b><i>Edera delle amanti</b></i>.
                 <i>Il corpo colmo di piacere.</i>
                 <i>Di fusione.</i>
                 <i>Vivo.</i>
@@ -345,7 +345,7 @@
                         {
                             - findedGifts hasnt EderaDelleAmanti:
                             ~ findedGifts += EderaDelleAmanti
-                            <i>Hai ottenuto: <b>Edera delle Amanti.</b></i>
+                            <i>Hai ottenuto: <b><i>Edera delle Amanti.</b></i>
                         }
                         
                     ~ move_entity(GreenhouseRecap, BookPlace)
@@ -393,7 +393,7 @@
     = step_tre
         ~ move_entity(RedBee, Greenhouse)
         <i>La serra si muove e si scuote, le travi cigolano nel voler danzare.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Ilare, <b>Canto delle compagne</b> turbina e balla riversandosi dal vaso.</i>
+        <i>Ilare, <b><i>Canto delle compagne</b></i> turbina e balla riversandosi dal vaso.</i>
         <i>In un altro tempo questo cespuglio veniva chiamato "Canto delle streghe".</i>
         <i>L'euforia riempie i polmoni di {name}, sente la gioia di sapere che non è mai stata davvero {pronouns has him:solo|{pronouns has her:sola|solə}}.</i>
         
@@ -410,7 +410,7 @@
                     {
                         - findedGifts hasnt CantoDelleCompagne:
                         ~ findedGifts += CantoDelleCompagne
-                        <i>Hai ottenuto: <b>Canto delle Compagne.</b></i>
+                        <i>Hai ottenuto: <b><i>Canto delle Compagne.</b></i>
                     }
 
                     ~ move_entity(GreenhouseRecap, BookPlace)
@@ -458,7 +458,7 @@
     = step_tre
         <i>Il tetto della serra scricchiola, le sue travi gemono dal dolore.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>La testa di {name} è pronta ad esplodere.</i>
-        <i>Sopra di {pronouns has him:lui|{pronouns has her:lei|ləi}} pulsa e si contrae nervosa una nascente <b>Spazzata</b></i>.
+        <i>Sopra di {pronouns has him:lui|{pronouns has her:lei|ləi}} pulsa e si contrae nervosa una nascente <b><i>Spazzata</b></i>.
         <i>La Spazzata è e non è.</i>
         <i>Si abbuffa delle cose non dette.</i>
         <i>E quando è sazia, travolge ogni cosa.</i>
@@ -478,7 +478,7 @@
                     {
                         - findedGifts hasnt LaSpazzata:
                         ~ findedGifts += LaSpazzata
-                        <i>Hai ottenuto: <b>La Spazzata.</b></i>
+                        <i>Hai ottenuto: <b><i>La Spazzata.</b></i>
                     }
                     ~ move_entity(GreenhouseRecap, BookPlace)
                 
@@ -524,7 +524,7 @@
           
     = step_tre
         <i>Le dita ora una mano tesa verso il cielo, una vecchia ferita al centro brilla di resina rossastra.<i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Coraggiosa, la <b>Bacca dell'Addolorata</b> espone le sue ferite al mondo.</b>
+        <i>Coraggiosa, la <b><i>Bacca dell'Addolorata</b></i> espone le sue ferite al mondo.</b></i>
         <i>Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ancora ad avanzare.</i>
 
             + (colto) [Afferro la bacca.]
@@ -540,7 +540,7 @@
                     {
                         - findedGifts hasnt BaccaDellaAddolorata:
                         ~ findedGifts += BaccaDellaAddolorata
-                        <i>Hai ottenuto: <b>Bacca della Addolorata</b></i>
+                        <i>Hai ottenuto: <b><i>Bacca della Addolorata</b></i>
                     }
                     ~ move_entity(GreenhouseRecap, BookPlace)
                     
@@ -570,7 +570,7 @@
     = step_zero
     -> remove_proposed_cultivable ->
         ~ growthNonTiScordarDiTe = stepZero
-        <i>Affusolata come un asparago una gelatina cristallina spunta da un ramo.</b>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Affusolata come un asparago una gelatina cristallina spunta da un ramo.</b></i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     
     = step_uno
@@ -587,7 +587,7 @@
           
     = step_tre
         <i>Ramo e sostanza sono una cosa sola: un fungo di vetro, dita che si sfiorano e intrecciano tese verso il cielo.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Hai trovato un <b>Non ti scordar di te</b>.</i>
+        <i>Hai trovato un <b><i>Non ti scordar di te</b></i>.</i>
         <i>Trasforma ciò che è era per renderlo vita nuova.</i>
         <i>Il nuovo nell'antico, il presente nel futuro.</i>
 
@@ -606,7 +606,7 @@
                     {
                         - findedGifts hasnt NonTiScordarDiTe:
                         ~ findedGifts += NonTiScordarDiTe
-                        <i>Hai ottenuto: <b>Non Ti Scordar di Te.</b></i>
+                        <i>Hai ottenuto: <b><i>Non Ti Scordar di Te.</b></i>
                     }
                     ~ move_entity(GreenhouseRecap, BookPlace)
                     
@@ -653,7 +653,7 @@
         + (colto) [Infilo la mano tra gli spazi vuoti.]
             <i>Il vetro si rinsalda, spingendo via la mano di {name}.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             <i>Le linee del suo palmo si fanno trasparenti, inconsistenti. Eppure può muovere le dita, e non prova dolore.</i>
-            <i>La <b>Brina dell'Impossibile</b> si raccoglie nel luogo di un trauma.</i>
+            <i>La <b><i>Brina dell'Impossibile</b></i> si raccoglie nel luogo di un trauma.</i>
             <i>Riempie le ferite così che siano visibili.</i>
             <i>Ci aiuta a guardare, nominare, capire.</i>
             <i>Vederci unit3 quando pensavamo di essere spezzat3.</i>
@@ -665,7 +665,7 @@
                     {
                         - findedGifts hasnt BrinaDellImpossibile:
                         ~ findedGifts += BrinaDellImpossibile
-                       <i>Hai ottenuto: <b>Brina dell'Impossibile</b></i>
+                       <i>Hai ottenuto: <b><i>Brina dell'Impossibile</b></i>
                     }
 
                     ~ move_entity(GreenhouseRecap, BookPlace)
@@ -718,7 +718,7 @@
             <i>Sente abbracci e sorrisi e mani che sorreggono.
             <i>La pianta sboccia.
             
-            <i>Il <b>Cardo aspinato</b> sboccia nel supporto.</i>
+            <i>Il <b><i>Cardo aspinato</b></i> sboccia nel supporto.</i>
             <i>Nel capire che lasciarsi aiutare è aiutare l'altrə.</i>
             <i>Nell'accettare che aiutare è aiutarsi.</i>
                 ~ growing = 0
@@ -728,7 +728,7 @@
                     {
                         - findedGifts hasnt CardoAspinato:
                         ~ findedGifts += CardoAspinato
-                       <i>Hai ottenuto: <b>CardoAspinato</b></i>
+                       <i>Hai ottenuto: <b><i>CardoAspinato</b></i>
                     }
 
                     ~ move_entity(GreenhouseRecap, BookPlace)

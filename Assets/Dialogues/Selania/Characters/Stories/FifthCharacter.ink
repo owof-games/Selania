@@ -925,30 +925,30 @@
 
         {
             - firstCharacterPossibleStates has Chitarra:
-                Che <b>resterà Chitarra</b>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
+                Che <b><i>resterà Chitarra</b></i>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
             
             - firstCharacterPossibleStates has Triangolo:
-                E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
+                E il mio vero nome è <b><i>Triangolo</b></i>, perché pensavo di essere uno strumento, e invece ho solo fallito.
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += Triangolo
             
             - firstCharacterPossibleStates has RagazzaOrchestra:
-                Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
+                Mi chiamerò <b><i>Ragazza Orchestra</b></i>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += RagazzaOrchestra
             
             - firstCharacterPossibleStates has FlautoDolce:
-                Il mio nome è <b>Flauto Dolce</b>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
+                Il mio nome è <b><i>Flauto Dolce</b></i>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += FlautoDolce                
             
             - firstCharacterPossibleStates has Ocarina:
-                Mi chiamerò <b>Ocarina</b>: perché il suo suono è gioco e festa.
+                Mi chiamerò <b><i>Ocarina</b></i>: perché il suo suono è gioco e festa.
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += Ocarina
             
             - firstCharacterPossibleStates has Violino:
-                Io sono <b>Violino</b>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
+                Io sono <b><i>Violino</b></i>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += Violino
         }

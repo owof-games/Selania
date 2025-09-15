@@ -60,7 +60,7 @@
     - first_character_notes.one:
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
-        <b>Lettere di {charNameOne}.</b>
+        <b><i>Lettere di {charNameOne}.</b></i>
     
     
         Ciao {name}, come stai? Alla fine Talco è sempre statə qui, me idiota. E ha creduto alla mia storia! Ora si è messə in testa di insegnare agli scoiattoli a suonare le noci. <>
@@ -111,7 +111,7 @@
         }
 }
 
-{main_story_first_character.ending: Dopo la Riscrittura, ha scelto un nuovo nome: <b>{translator(firstCharacterState)}.</b>}
+{main_story_first_character.ending: Dopo la Riscrittura, ha scelto un nuovo nome: <b><i>{translator(firstCharacterState)}.</b></i>}
 
 
 {
@@ -126,28 +126,28 @@
     - first_story_gift.ink_outcome:
         {
             - firstGift == EderaDelleAmanti:
-                Le ho donato una foglia di <b>Edera delle Amanti</b>, ma non ha compreso il significato del mio dono.
+                Le ho donato una foglia di <b><i>Edera delle Amanti</b></i>, ma non ha compreso il significato del mio dono.
                 
             - firstGift == BaccaDellaAddolorata:
-                Le ho donato una <b>Bacca dell'Addolorata</b> e ha sorriso, si è rasserenata.
+                Le ho donato una <b><i>Bacca dell'Addolorata</b></i> e ha sorriso, si è rasserenata.
                 
             - firstGift == LaSpazzata:
-                Le ho donato un rametto della <b>Spazzata</b> e, infastidita, l'ha lanciato via.
+                Le ho donato un rametto della <b><i>Spazzata</b></i> e, infastidita, l'ha lanciato via.
                 
             - firstGift == BrinaDellImpossibile: 
-                Le ho donato un frammento di <b>Brina dell'Impossibile</b> e l'ha gettato a terra, spaventata. Almeno sono ricomparse le linee della mia mano.
+                Le ho donato un frammento di <b><i>Brina dell'Impossibile</b></i> e l'ha gettato a terra, spaventata. Almeno sono ricomparse le linee della mia mano.
                 
             - firstGift == CantoDelleCompagne: 
-                Le ho donato una goccia di <b>Canto delle Compagne</b> e si è messa a cantare il nome delle persone amate.
+                Le ho donato una goccia di <b><i>Canto delle Compagne</b></i> e si è messa a cantare il nome delle persone amate.
                 
             - firstGift == LicheneDegliAbissi: 
-                Le ho donato una traccia dell'odore del <b>Lichene degli Abissi</b> ed era palesemente delusa.
+                Le ho donato una traccia dell'odore del <b><i>Lichene degli Abissi</b></i> ed era palesemente delusa.
                 
             - firstGift == NonTiScordarDiTe: 
-                Le ho donato l'impronta del <b>Non Ti Scordar Di Te</b>: ha sussurrato "nonno" e ha inizito a piangere.
+                Le ho donato l'impronta del <b><i>Non Ti Scordar Di Te</b></i>: ha sussurrato "nonno" e ha inizito a piangere.
                 
             - firstGift == CardoAspinato: 
-                Le ho donato un ciuffo di peli di <b>Cardo Aspinato</b> e sul momento sembra disgustata, ma poi si è messa a ridere.
+                Le ho donato un ciuffo di peli di <b><i>Cardo Aspinato</b></i> e sul momento sembra disgustata, ma poi si è messa a ridere.
         
         }    
 
@@ -306,7 +306,7 @@
 
 {
     - second_character_notes.one:
-        <b>Lettere di {charNameTwo}.</b>
+        <b><i>Lettere di {charNameTwo}.</b></i>
     
         Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {name}. Cioè a te. Anche se non ho mica capito come te la mando la lettera. Ma come sta la rana? Hai scoperto poi se è elettrica? <>
 
@@ -359,7 +359,7 @@
 
 }
 
-{main_story_second_character.ending: Dopo la nostra conversazione, Riccio ha scelto un nuovo nome: {charNameTwo}.}
+{main_story_second_character.ending: Dopo la nostra conversazione, Riccio ha scelto un nuovo nome: <b><i>{charNameTwo}.}
 
 
 {
@@ -373,28 +373,28 @@
     - second_story_gift.ink_outcome:
         {
             - secondGift == EderaDelleAmanti:
-                Gli ho donato una foglia di <b>Edera delle Amanti</b>, e mi ha guardato imbarazzato.
+                Gli ho donato una foglia di <b><i>Edera delle Amanti</b></i>, e mi ha guardato imbarazzato.
                 
             - secondGift == BaccaDellaAddolorata:
-                Gli ho donato una <b>Bacca dell'Addolorata</b> ma non gli è interessata.
+                Gli ho donato una <b><i>Bacca dell'Addolorata</b></i> ma non gli è interessata.
                 
             - secondGift == LaSpazzata:
-                Gli ho donato un rametto della <b>Spazzata</b> e si è esaltato, ha continuato a rigirarsi il frammento tra le dita, pieno di gioia rabbiosa.
+                Gli ho donato un rametto della <b><i>Spazzata</b></i> e si è esaltato, ha continuato a rigirarsi il frammento tra le dita, pieno di gioia rabbiosa.
                 
             - secondGift == BrinaDellImpossibile: 
-                Gli ho donato un frammento di <b>Brina dell'Impossibile</b> e ha iniziato a tremare e piangere. Le linee della mia mano sono ricomparse.
+                Gli ho donato un frammento di <b><i>Brina dell'Impossibile</b></i> e ha iniziato a tremare e piangere. Le linee della mia mano sono ricomparse.
                 
             - secondGift == CantoDelleCompagne: 
-                Gli ho donato una goccia di <b>Canto delle Compagne</b>: ha provato ad assaggiarla e ha vomitato.
+                Gli ho donato una goccia di <b><i>Canto delle Compagne</b></i>: ha provato ad assaggiarla e ha vomitato.
                 
             - secondGift == LicheneDegliAbissi: 
-                Gli ho donato una traccia dell'odore del <b>Lichene degli Abissi</b>, ha provato a dire qualcosa ma poi si è zittito.
+                Gli ho donato una traccia dell'odore del <b><i>Lichene degli Abissi</b></i>, ha provato a dire qualcosa ma poi si è zittito.
                 
             - secondGift == NonTiScordarDiTe: 
-                Gli ho donato l'impronta del <b>Non Ti Scordar Di Te</b>: mi ha abbracciato, per poi allontanarsi imbarazzato.
+                Gli ho donato l'impronta del <b><i>Non Ti Scordar Di Te</b></i>: mi ha abbracciato, per poi allontanarsi imbarazzato.
                 
             - secondGift == CardoAspinato: 
-                Gli ho donato un ciuffo di peli di <b>Cardo Aspinato</b> e si è messo a ridere, poi mi ha ringraziato.
+                Gli ho donato un ciuffo di peli di <b><i>Cardo Aspinato</b></i> e si è messo a ridere, poi mi ha ringraziato.
         
         }    
 
@@ -807,6 +807,8 @@
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
+        
+        
 Ho incontrato una persona che mi ha detto di chiamarla Mentore, perché mi farà da guida in questo luogo. E dopo avermi chiesto nomi e pronomi, mi ha {pronouns has him:invitato|{pronouns has her:invitata|invitatə}} a parlare con le persone che trovo in giro. {gifts_and_ink: Per poi dirmi che sono {pronouns has him:un Riscrittore|{pronouns has her:una Riscrittora|unə Riscrittorə}}, e darmi un po' di indicazioni su cosa dovrei fare.}
 
 {that_little_liar_storylet: Dopo l'arrivo del bimbo, la prima cosa che mi ha chiesto è se son {pronouns has him:riuscito|{pronouns has her:riuscita|riuscitə}} a mandarlo a casa. Dice che qui non è sicuro per i bambini, che lui le ha tirato un calcio. Ma che le fa tenerezza, e per questo gli sembra un Riccio.}
@@ -946,7 +948,7 @@ Ho incontrato una persona che mi ha detto di chiamarla Mentore, perché mi farà
 
 {
     - first_character_notes.one:
-        <b>Lettere di {charNameOne}.</b>
+        <b>Lettere di {charNameOne}.</b></i>
     
     
         Ciao {name}, come stai? Alla fine Talco è sempre statə qui, me idiota. E ha creduto alla mia storia! Ora si è messə in testa di insegnare agli scoiattoli a suonare le noci. <>

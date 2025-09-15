@@ -113,13 +113,13 @@
 === to_do
 ~ temp charNameFive = translator(fifthCharacterState)
 
-        {gifts_and_ink:La prima cosa da fare è: conquistare la <b>fiducia</b> della persona che devi aiutare.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-        {gifts_and_ink:Ci <b>parli</b>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.}
-        {gifts_and_ink:Poi, le fai un <b>dono</b>.}
-        {gifts_and_ink:Più il dono è qualcosa che le dimostra che l'hai ascoltata, più avrai <b>inchiostro</b> per aiutarla a riscrivere la sua storia.}
-        {questions: A quel punto inizi i tuoi <b>revisioni</b>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.}
+        {gifts_and_ink:La prima cosa da fare è: conquistare la <b><i>fiducia</b></i> della persona che devi aiutare.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+        {gifts_and_ink:Ci <b><i>parli</b></i>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.}
+        {gifts_and_ink:Poi, le fai un <b><i>dono</b></i>.}
+        {gifts_and_ink:Più il dono è qualcosa che le dimostra che l'hai ascoltata, più avrai <b><i>inchiostro</b></i> per aiutarla a riscrivere la sua storia.}
+        {questions: A quel punto inizi i tuoi <b><i>revisioni</b></i>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.}
         {questions: Più inchiostro hai, più revisioni puoi fare.}
-        {questions: Infine: in base alle cose che avrai detto, la persona sceglierà il suo <b>nuovo nome</b>.}
+        {questions: Infine: in base alle cose che avrai detto, la persona sceglierà il suo <b><i>nuovo nome</b></i>.}
         {questions: E poi si ricomincia.}
            -> talk_with_mentor
 

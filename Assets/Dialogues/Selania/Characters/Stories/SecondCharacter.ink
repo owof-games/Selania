@@ -41,7 +41,7 @@
     {
         - not knowing_second_character: Ciao!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         
-        - else:{~Ciao!|Pensavo avrei visto più animali.|Ma almeno <b>una</b> cosa della serra deve essere dolce, no?|Se riuscissi a trovare una batteria di quelle davvero grosse...|Eppure prima non mi aveva morso.|Con quelle foglie spinose potrei fare uno scherzo a...ehi, ciao {name}!}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
+        - else:{~Ciao!|Pensavo avrei visto più animali.|Ma almeno <b><i>una</b></i> cosa della serra deve essere dolce, no?|Se riuscissi a trovare una batteria di quelle davvero grosse...|Eppure prima non mi aveva morso.|Con quelle foglie spinose potrei fare uno scherzo a...ehi, ciao {name}!}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
     
     }
 
@@ -175,7 +175,7 @@
                 Mica le appende così!
                     ~ secondYellow ++
                 
-            + [Perché <b>tu</b> sei qui?]
+            + [Perché <b><i>tu</b></i> sei qui?]
                 Boh, che ne so? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
                 Era solo una domanda!
                     ~ secondRed ++
@@ -994,7 +994,7 @@
                 
             + [Hai chiesto all'amico di tuo fratello cosa pensa di te?]
                 Scherzi?!?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
-                Non sono mica <b>così</b> strano.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
+                Non sono mica <b><i>così</b></i> strano.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
                 Però una volta l'ho chiesto a mio fratello.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 E mi ha detto che gli piaccio molto.
                 Ma non ci credo.
@@ -1582,7 +1582,7 @@
         E l'unica cosa che mi dice è che devo smetterla di piangere e fare il grande.
         Che anche se piango nonna non torna.
         E a scuola le maestre sono fastidiose.
-        <b>Stronze</b>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
+        <b><i>Stronze</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
         Scusa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
         Mio fratello dice che il mondo è un posto orribile e che non si può più aggiustare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
         Gli animali spariranno tutti ed è colpa nostra.
@@ -1887,7 +1887,7 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     
             {
-                - firstStory!=StoryEnded:<i>{name} sta per utilizzare il potere dell'<b>epilogo</b>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                - firstStory!=StoryEnded:<i>{name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
             }   
             
      Per questo ti dico:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
@@ -1945,19 +1945,19 @@
 
         {
             - secondCharacterPossibleStates has Riccio:
-                Quell'animale è il <b>Riccio</b>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
+                Quell'animale è il <b><i>Riccio</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 Perché l'unico modo per sopravvivere è difendersi da tutto.
             
             - secondCharacterPossibleStates has Grizzly:
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += Grizzly
-                Il mio vero nome è <b>Grizzly</b>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
+                Il mio vero nome è <b><i>Grizzly</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
                 Combatterò la mia paura e diventerò il più forte di tutti, imbattibile!
             
             - secondCharacterPossibleStates has Lupo:
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += Lupo
-                Mi chiamerò <b>Lupo</b>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
+                Mi chiamerò <b><i>Lupo</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
                 E proteggerò il mio branco.
                 Mamma, papà, nonna e mio fratello.
                 Nessuna delle persone a cui voglio bene deve più stare male.
@@ -1966,7 +1966,7 @@
             - secondCharacterPossibleStates has Delfino:
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += Delfino 
-                E il mio nome è <b>Delfino</b>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
+                E il mio nome è <b><i>Delfino</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                 Se lo guardi bene tutto è un gioco.
                 La mia fantasia e le mie bugie aiuteranno le altre persone ad avere meno paura.
                                
@@ -1974,7 +1974,7 @@
             - secondCharacterPossibleStates has Capibara:
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += Capibara
-                Mi chiamerò <b>Capibara</b>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
+                Mi chiamerò <b><i>Capibara</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
                 E imparerò ad avere tantissimi amici.
                 Ci sentiremo meno soli!
                 E così avremo meno paura.
@@ -1983,7 +1983,7 @@
             - secondCharacterPossibleStates has Corvo:
                     ~ secondCharacterState = ()
                     ~ secondCharacterState += Corvo
-                Io sono <b>Corvo</b>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
+                Io sono <b><i>Corvo</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                 Sono sveglio e posso capire ciò che mi circonda!
                 E posso cambiare le cose che mi fanno paura.
                 Aiutare gli altri.
