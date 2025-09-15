@@ -16,7 +16,7 @@
 	    ~ return "Triangolo"
 	    
 	- firstCharacterState == RagazzaOrchestra:
-	    ~ return "Ragazza Orchestra"
+	    ~ return "Orchestra"
 	    
 	- firstCharacterState == FlautoDolce:
 	    ~ return "Flauto Dolce"
@@ -25,7 +25,7 @@
 	    ~ return "Ocarina"
 	    
 	- firstCharacterState == Violino:
-	    ~ return "Chitarra"
+	    ~ return "Violino"
 	    
 }
 
