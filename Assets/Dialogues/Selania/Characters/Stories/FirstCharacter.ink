@@ -265,6 +265,20 @@
             -
        
         Come mi dovrei chiamare secondo te?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        
+        
+            + [Un nome che inciti alla lotta.]
+                ~ firstRed ++
+            + [Un nome che inviti al gioco.]
+                ~ firstYellow ++
+            + [Un nome che ricordi casa.]
+                ~ firstGreen ++
+            + [Un nome che illumini.]
+                ~ firstPurple ++
+            + [Un nome che ponga domande.]
+                ~ firstBlue ++
+            -    
+        
     	<i>Qualsiasi cosa tu abbia pensato, non riesci a dirla.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
     	    -
         Mmm.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
