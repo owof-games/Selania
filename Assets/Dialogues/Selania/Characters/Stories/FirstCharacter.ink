@@ -1140,12 +1140,11 @@
          Lasciare che le altre persone scelgano per te.
          O che lo faccia il mondo.
          Ecco perché mi chiamo {charNameOne}: perché rimango nel medio, nella cosa più ovvia e cringe.
+         @animation:RewriterBook
          E lascio che le cose accadano.
             ~ growing ++
 
-        
-            @animation:RewriterBook
-
+    
             + [Credo di sapere come aiutarti.]
                 -> statement
             + [Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.]
