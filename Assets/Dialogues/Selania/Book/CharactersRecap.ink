@@ -11,6 +11,8 @@
 
 {
     - first_character_notes.three:
+        <b><i>Terza lettera di {charNameOne}.</b></i>: <>
+        
             Ciao ama! Indovina chi ha fatto il suo primo concerto? <>
 
            {
@@ -35,6 +37,8 @@
 
 {
     - first_character_notes.two:
+        <b><i>Seconda lettera di {charNameOne}.</b></i>: <>
+        
         Ciao {name}, qui è sempre {charNameOne} che ti scrive. Sono passate settimane dal mio ritorno, e finalmente ho avuto il coraggio di parlare con mio padre. <>
 
            {
@@ -60,7 +64,7 @@
     - first_character_notes.one:
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
-        <b><i>Lettere di {charNameOne}.</b></i>
+        <b><i>Prima lettera di {charNameOne}.</b></i>: <>
     
     
         Ciao {name}, come stai? Alla fine Talco è sempre statə qui, me idiota. E ha creduto alla mia storia! Ora si è messə in testa di insegnare agli scoiattoli a suonare le noci. <>
@@ -91,6 +95,10 @@
         Spero che lì vada tutto bene. E che {charNameFive} non sia sempre pesantona. Alla prossima lettera. <i>{charNameOne}</i>
 }
 
+
+{
+    - first_story_gift.ink_outcome: <b><i>Appunti su dono e riscrittura.</b></i>
+}
 
 {
     - first_character_feedback: Mentore dice che <>
@@ -152,6 +160,11 @@
         }    
 
 }
+
+    {
+        - knowing_first_character.one:
+            <b><i>Appunti dalle conversazioni.</b></i>
+    }
 
     {
         - knowing_first_character.twelve:
@@ -250,6 +263,7 @@
 
 {
     - second_character_notes.three:
+    <b><i>Terza lettera di {charNameTwo}.</b></i>: <>
         Ciao {name}. <>
 
            {
@@ -278,6 +292,7 @@
 
 {
     - second_character_notes.two:
+        <b><i>Seconda lettera di {charNameTwo}.</b></i>: <>
         Che strano. Ho lasciato l'altra lettera sul comodino di notte. E poi è sparita. Non so mica se ti è arrivata. O se papà l'ha buttata. <>
 
            {
@@ -306,7 +321,7 @@
 
 {
     - second_character_notes.one:
-        <b><i>Lettere di {charNameTwo}.</b></i>
+        <b><i>Prima lettera di {charNameTwo}.</b></i>: <>
     
         Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {name}. Cioè a te. Anche se non ho mica capito come te la mando la lettera. Ma come sta la rana? Hai scoperto poi se è elettrica? <>
 
@@ -335,6 +350,10 @@
           PS: come sta {charNameFive}? Mi spiace per come l'ho trattata mentre ero lì, sai? Ma non dirglielo. Per ora per lo meno. Ciao!
 }
 //Appunto sul dono fatto
+
+{
+    - second_story_gift.ink_outcome: <b><i>Appunti su dono e riscrittura.</b></i>
+}
 
 {
 
@@ -400,6 +419,10 @@
 
 }
 
+{
+    - knowing_second_character.one:
+           <b><i>Appunti dalle conversazioni.</b></i>
+}
 
 {
     - knowing_second_character.twelve:
@@ -808,6 +831,9 @@
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
+
+<b><i>Appunti dalle conversazioni.</b></i>
+
         
 Ho incontrato una persona che mi ha detto di chiamarla Mentore, perché mi farà da guida in questo luogo. E dopo avermi chiesto nomi e pronomi, mi ha {pronouns has him:invitato|{pronouns has her:invitata|invitatə}} a parlare con le persone che trovo in giro. {gifts_and_ink: Per poi dirmi che sono {pronouns has him:un Riscrittore|{pronouns has her:una Riscrittora|unə Riscrittorə}}, e darmi un po' di indicazioni su cosa dovrei fare.}
 
