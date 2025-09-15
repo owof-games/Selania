@@ -1,5 +1,5 @@
 //Nome giocatrice e pronouns
-    VAR name = "Senza nome"
+    VAR name = "sconosciutə"
     LIST pronouns = him, her, they
 
 //Gestione "cose strane" di cui parlare con mentore
