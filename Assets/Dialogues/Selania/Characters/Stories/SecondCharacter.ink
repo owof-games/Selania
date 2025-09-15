@@ -1448,36 +1448,42 @@
             
         
     = not_talk
-    Non ci parlo con chi parla con quella là!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
-    Mi ha fatto male!
-         {
-            - are_two_entities_together(Mentor, PG) && knowing_second_character.one && (not that_little_liar_storylet):
-                -> that_little_liar_storylet       
-            
-        }
+        ~ temp charNameFive = translator(fifthCharacterState)
         
-        -> main
+        Io ODIO {charNameFive}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
+        E non ci parlerò
+        mai
+        MAI
+        PIU'!
+        Mi ha fatto male!
+             {
+                - are_two_entities_together(Mentor, PG) && knowing_second_character.one && (not that_little_liar_storylet):
+                    -> that_little_liar_storylet       
+                
+            }
+            
+            -> main
                         
     = she_hates_me
-    ~ temp charNameTwo = translator(secondCharacterState)
-    ~ temp charNameFive = translator(fifthCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
+        
+        {charNameFive} ce l'ha con me!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
+        Fa qualcosa!
+            {
+                - are_two_entities_together(Mentor, PG):Non ce l'ho con te! Ma ti metti costantemente in pericolo!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
+                
+                        //Se non abbiamo ancora parlato dell'innaffiatoio, parte subito lo storylet. Da vedere se funzona.
+                            {
+                                - stolen_watering_can or knowing_second_character.she_hates_me && not watering_can_storylet:
+                                        -> watering_can_storylet          
+                        
+                            }
+                
+        
+            }
     
-    {charNameFive} ce l'ha con me!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-    Fa qualcosa!
-        {
-            - are_two_entities_together(Mentor, PG):Non ce l'ho con te! Ma ti metti costantemente in pericolo!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
-            
-                    //Se non abbiamo ancora parlato dell'innaffiatoio, parte subito lo storylet. Da vedere se funzona.
-                        {
-                            - stolen_watering_can or knowing_second_character.she_hates_me && not watering_can_storylet:
-                                    -> watering_can_storylet          
-                    
-                        }
-            
-    
-        }
-
-                -> main
+                    -> main
         
 
 
