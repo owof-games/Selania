@@ -30,7 +30,7 @@ VAR findedGifts = ()
         - NonTiScordarDiTe:
             ~ return "l'impronta del Non Ti Scordar di Te"
         
-        - Cardo Aspinato:
+        - CardoAspinato:
             ~ return "un ciuffo di Cardo Aspinato"             
     
     }

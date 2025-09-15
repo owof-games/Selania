@@ -747,7 +747,7 @@
                     {
                         - findedGifts hasnt CardoAspinato:
                         ~ findedGifts += CardoAspinato
-                       <i>Hai ottenuto: <b><i>CardoAspinato</b></i>
+                       <i>Hai ottenuto: <b><i>Cardo Aspinato</b></i>
                     }
 
                     ~ move_entity(GreenhouseRecap, BookPlace)
