@@ -450,37 +450,41 @@
     = step_zero
     -> remove_proposed_cultivable ->
     ~ growthLaSpazzata = stepZero
-        <i>Niente sembra cambiare.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Eppure l'aria è più pesante.</i>
+        <i>Il pavimento della serra si è spezzato, riempiendosi dell'acqua che viene dallo stagno.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Una singola piccola fogliolina galleggia morbidamente.</i>
+        <i>Un singolo piccolo pensiero stuzzica {name}.</i>
             -> main
          
     = step_uno
-         <i>Qualcosa osserva {name} dagli angoli più scuri della serra.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-         <i>L'aria manca, ha voglia di gridare.</i>
+         <i>Molte più foglie riempiono ora la fossa.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+         <i>Molti più pensieri riempiono la testa di {name}.</i>
+         <i>Cos'era quella cosa che avresti voluto dire a, sì, sai a chi.</i>
+         <i>Ma non è il caso, alla fine.</i>
+         <i>Non è mai il caso.</i>
             -> main
     
     = step_due
-        <i>Tremore nell'aria.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Spine sottili irritano gli occhi di {name}.</i>
-        <i>I piedi fremono dalla voglia di calpestare, percuotere, schiacciare.</i>
+        <i>La serra è invasa di foglie, l'acqua si infila sotto vasi e mobili.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>E pensieri come spilli invadono la testa di {name}.</i>
+        <i>L'ansia si infila sotto ricordi e sicurezze, e tutto trema.</i>
             -> main
     
     = step_tre
-        <i>Il tetto della serra scricchiola, le sue travi gemono dal dolore.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>La testa di {name} è pronta ad esplodere.</i>
-        <i>Sopra di {pronouns has him:lui|{pronouns has her:lei|ləi}} pulsa e si contrae nervosa una nascente <b><i>Spazzata</b></i>.
+        <i>Il pavimento vuoto scricchiola.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Tutto sembra in ordine, eppure la testa di {name} è pronta ad esplodere.</i>
+        <i>Ai suoi piedi resta il foro della <b><i>Spazzata</b></i>.
         <i>La Spazzata è e non è.</i>
         <i>Si abbuffa delle cose non dette.</i>
         <i>E quando è sazia, travolge ogni cosa.</i>
 
-        + (colto)[Colpisco i suoi rami.]
-            <i>Una forte contrazione.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            <i>E poi si ferma, immagine di ciò che un tempo era.</i>
+        + (colto)[Infilo una mano nel foro.]
+            <i>Odore di autunno, di foglie umide.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             <i>La pancia di {name} colma di un senso di vuoto.</i>
             <i>La sensazione di quando ha condiviso qualcosa che riteneva terribile.</i>
             <i>Per poi scoprire che il mondo non è finito quella volta, e non finirà oggi.</i>
-            <i>Le cose son sempre peggiori nella propria testa.</i>
-            <i>La Spazzata è innocua se riesce a parlare.</i>
+            <i>Le cose sono sempre peggiori nella propria testa.</i>
+            <i>Ma reali, lasciano segni e ferite.</i>
+            
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     @animation:Inventory
