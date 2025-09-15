@@ -633,7 +633,7 @@
     = step_zero
         -> remove_proposed_cultivable ->
         ~ growthBrinaDellImpossibile = stepZero
-        <i>Cosa ha rotto un vetro della serra?</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Qualcosa ha incrinato un vetro della serra.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     
     = step_uno

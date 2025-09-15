@@ -11,7 +11,8 @@
         - questions:
             Più sono in confidenza con la persona e più le avrò dato un dono gradito, più avrò inchiostro a disposizione per aiutarla a riscrivere la sua storia. Tra mentori definiscono le azioni che l'inchiostro permette di compiere <b>riscritture</b>, un po' come quando riscriviamo un testo. E quello che ogni riscrittorə andrà a revisionare è il modo in cui la persona legge determinati temi della sua vita.
             Magari una persona si definisce così insicura da chiamarsi <i>Pasticcio</i>, ma lə Riscrittorə ha colto nella sua storia che non c'è alcun pasticcio, ma il coraggio di buttarsi in situazioni scomode. Oppure si definirà <i>La Temibile</i>, ma invece di far paura, ha solo il terrore di mostrare le sue vulnerabilità, e per questo si sente sola.
-            Grazie all'inchiostro, lə Riscrittorə aiuterà a riscrivere quella parte della vita della persona. Più inchiostro significa più possibilità di aiutare quella persona a vedersi in un modo nuovo. Ma a prescindere dalla quantità di inchiostro, ogni Riscrittorə ha in sé il dono dell'<b>epilogo</b>. L'<b>epilogo</b> è una dichiarazione che permette alla persona di mettere un punto sul presente, e iniziare a guardare al futuro in modo diverso. Così persona e Riscrittorə raggiungeranno il loro obiettivo: un nuovo nome, simbolo di un nuovo inizio.
+            Grazie all'inchiostro, lə Riscrittorə aiuterà a riscrivere quella parte della vita della persona. Più inchiostro significa più possibilità di aiutare quella persona a vedersi in un modo nuovo. Ma a prescindere dalla quantità di inchiostro, ogni Riscrittorə ha in sé il dono dell'<b>epilogo</b>. L'<b>epilogo</b> è una dichiarazione finale dellə Riscrittorə che permette alla persona di mettere un punto sul presente, e iniziare a guardare al futuro in modo diverso. Così persona e Riscrittorə raggiungeranno il loro obiettivo: un nuovo nome, simbolo di un nuovo inizio.
+            
     }
 
         

@@ -255,7 +255,7 @@
                  Talco è una persona che agisce, non resta ad aspettare.
                     ~ firstGreen ++
             
-            + [A te va bene essere {charNameOne}? Perché non Lotta? Azione?]
+            + [A te va bene essere {charNameOne}? Perché non Tamburo? Corno da guerra?]
                 {
                     - firstRed > 1: Tu prendi tutto di pancia, vero? Saresti {pronouns has him:lo|{pronouns has her:la|lə}} bestie di Talco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                 }

@@ -221,7 +221,7 @@
     
     {
         - knowing_first_character.one:
-            Ho conosciuto una persona nuova, si chiama Chitarra. Quando l'ho incontrata era preoccupata perché non riuscita a trovare lə sua migliore amicə, Talco. Non le piace molto il suo nome, ha l'impressione che essere una Chitarra per una come lei, che ha fatto il conservatorio, significhi arrendersi. Quando mi ha chiesto che nome dovrebbe avere secondo me, non sono {pronouns has him:stato|{pronouns has her:stata|statə}} capace di darle una risposta.
+            Ho conosciuto una persona nuova, si chiama Chitarra. Quando l'ho incontrata era preoccupata perché non riesce a trovare lə sua migliore amicə, Talco. Non le piace molto il suo nome, ha l'impressione che essere una Chitarra per una come lei, che ha fatto il conservatorio, significhi arrendersi. Quando mi ha chiesto che nome dovrebbe avere secondo me, non sono {pronouns has him:stato|{pronouns has her:stata|statə}} capace di darle una risposta.
         
     }
     
@@ -815,7 +815,7 @@ Ho incontrato una persona che mi ha detto di chiamarla Mentore, perché mi farà
 
 {
     - knowing_fifth_character.five:
-        Da quando sono qui, per la prima volta Mentore ha ammesso di essere stanca. E di sentire caldo. E poi si è lasciata andare ai ricordi: il suo primo bacio, l'uomo che ha sposato. A cui ha dedicato il resto dei suoi giorni, fino a quando non è arrivata qui. E mi ha chiesto cosa significhi per me amare un'altra persona. Per poi definirsi una "sciocca romantica", e dirmi che l'amore è ovunque, anche qui. Amore per noi.
+        Da quando sono qui, per la prima volta Mentore ha ammesso di essere stanca. E di sentire caldo. E poi si è lasciata andare ai ricordi: il suo primo bacio, l'uomo che ha sposato. A cui ha dedicato il resto dei suoi giorni, fino a quando non è arrivata qui. E mi ha chiesto cosa significa per me amare un'altra persona. Per poi definirsi una "sciocca romantica", e dirmi che l'amore è ovunque, anche qui. Amore per noi.
     
 }
 
