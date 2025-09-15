@@ -3,9 +3,13 @@
 === cecilia_formicola
 
 <i>Getting warm</i> di Cecilia Formicola (she/her).
-        ~ unreadStories -= CeciliaFormicola
-        ~ readStories += CeciliaFormicola
-    -> refresh_book_lists ->
+        //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+            {
+                - unreadStories has CeciliaFormicola:
+                    ~ unreadStories -= CeciliaFormicola
+                    ~ readStories += CeciliaFormicola
+                     -> refresh_book_lists ->
+            }  
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
     "I hate them."

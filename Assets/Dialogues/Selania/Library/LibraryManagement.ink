@@ -452,6 +452,8 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
 -> DONE
 
 === reread ===
+//Per sicurezza svuoto book
+~ book = ()
 
 {shuffle:
     - {readStories has AdriAllora: -> reread_adri_allora| -> reread}

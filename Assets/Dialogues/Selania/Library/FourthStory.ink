@@ -1,11 +1,16 @@
 //Cognome/alias S - Z
 
 === salvo
-        ~ unreadStories -= Salvo
-        ~ readStories += Salvo
+//Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+            {
+                - unreadStories has Salvo:
+                    ~ unreadStories -= Salvo
+                    ~ readStories += Salvo
+                     -> refresh_book_lists ->
+            }  
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
-    -> refresh_book_lists ->
+    
 <i>Il cancello</i> di Salvo (he/him).
 
     Il sole stava tramontando ad occidente e illuminava con i suoi raggi obliqui le chiome degli ulivi.
@@ -57,12 +62,16 @@
 
     Trigger warning: violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
-            ~ unreadStories -= Maura
-            ~ readStories += Maura
-                -> refresh_book_lists ->
-        + [Per ora non me la sento di affrontare questo tema.]
+//Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+            {
+                - unreadStories has Maura:
+                    ~ unreadStories -= Maura
+                    ~ readStories += Maura
+                     -> refresh_book_lists ->
+            }  
+        + {unreadStories has Maura}[Per ora non me la sento di affrontare questo tema.]
                 -> tempTW -> book_test_intro
-        + [Non presentarmi più questo racconto.]
+        + {unreadStories has Maura}[Non presentarmi più questo racconto.]
             ~ unreadStories -= Maura
                 -> refresh_book_lists -> book_test_intro
         -
@@ -107,12 +116,16 @@
 
     Trigger warning: depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
-            ~ unreadStories -= LetiziaVaccarella
-            ~ readStories += LetiziaVaccarella
-                -> refresh_book_lists ->
-        + [Per ora non me la sento di affrontare questo tema.]
+//Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+            {
+                - unreadStories has LetiziaVaccarella:
+                    ~ unreadStories -= LetiziaVaccarella
+                    ~ readStories += LetiziaVaccarella
+                     -> refresh_book_lists ->
+            }        
+        + {unreadStories has LetiziaVaccarella}[Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + [Non presentarmi più questo racconto.]
+        + {unreadStories has LetiziaVaccarella}[Non presentarmi più questo racconto.]
             ~ unreadStories -= LetiziaVaccarella
                 -> refresh_book_lists -> book_test_intro
         -
@@ -169,11 +182,17 @@
     
 
 === queerginia_wolf
-        ~ unreadStories -= QueerginiaWolf
-        ~ readStories += QueerginiaWolf
-    -> DarkLibraryModeOn ->
-    ~ enableBigDialogue()
-    -> refresh_book_lists ->
+
+        -> DarkLibraryModeOn ->
+        ~ enableBigDialogue()
+        //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+        {
+            - unreadStories has QueerginiaWolf:
+                ~ unreadStories -= QueerginiaWolf
+                ~ readStories += QueerginiaWolf
+                 -> refresh_book_lists ->
+        }
+        
 <i>Giallo</i> di Queerginia Wolf/Marco Spelgatti (she/he/they).
 
     Non hai fatto nulla di male.

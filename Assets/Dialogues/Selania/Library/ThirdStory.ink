@@ -1,11 +1,17 @@
 //Cognome/alias L - R
 === lamia
-        ~ unreadStories -= Lamia
-        ~ readStories += Lamia
+//Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+            {
+                - unreadStories has Lamia:
+                    ~ unreadStories -= Lamia
+                    ~ readStories += Lamia
+                     -> refresh_book_lists ->
+            }  
+            
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
-    -> refresh_book_lists ->
-    
+
+
     <i>Il sassolino</i> di Lamia (she/they).
     È iniziato tutto in una giornata mediocre.
     Il sole era coperto da nuvole scialbe, e nell’aria ancora si sentiva l’olezzo dei campi fertilizzati di fresco.
@@ -41,12 +47,16 @@
 
     Trigger warning: disforia, dismorfia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
-            ~ unreadStories -= ValFaustoLattanzio
-            ~ readStories += ValFaustoLattanzio
-                -> refresh_book_lists ->
-        + [Per ora non me la sento di affrontare questo tema.]
+        //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+            {
+                - unreadStories has ValFaustoLattanzio:
+                    ~ unreadStories -= ValFaustoLattanzio
+                    ~ readStories += ValFaustoLattanzio
+                     -> refresh_book_lists ->
+            }  
+        + {unreadStories has ValFaustoLattanzio}[Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + [Non presentarmi più questo racconto.]
+        + {unreadStories has ValFaustoLattanzio}[Non presentarmi più questo racconto.]
             ~ unreadStories -= ValFaustoLattanzio
                 -> refresh_book_lists -> book_test_intro
         -
@@ -88,12 +98,16 @@
 
     Trigger warning: violenza psicologica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
-            ~ unreadStories -= Romi
-            ~ readStories += Romi
-                -> refresh_book_lists ->
-        + [Per ora non me la sento di affrontare questo tema.]
+        //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+            {
+                - unreadStories has Romi:
+                    ~ unreadStories -= Romi
+                    ~ readStories += Romi
+                     -> refresh_book_lists ->
+            }  
+        + {unreadStories has Romi}[Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + [Non presentarmi più questo racconto.]
+        + {unreadStories has Romi}[Non presentarmi più questo racconto.]
             ~ unreadStories -= Romi
                 -> refresh_book_lists -> book_test_intro
         -

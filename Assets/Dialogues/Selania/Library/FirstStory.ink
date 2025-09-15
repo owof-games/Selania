@@ -4,12 +4,16 @@
 <i>Il mio bellissimo gatto</i> di Adri Allora (ləi).
     Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
-            ~ unreadStories -= book
-            ~ readStories += book
-            -> refresh_book_lists ->
-        + [Per ora non me la sento di affrontare questo tema.]
+        //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+            {
+                - unreadStories has AdriAllora:
+                    ~ unreadStories -= AdriAllora
+                    ~ readStories += AdriAllora
+                     -> refresh_book_lists ->
+            }  
+        + {unreadStories has AdriAllora}[Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + [Non presentarmi più questo racconto.]
+        + {unreadStories has AdriAllora} [Non presentarmi più questo racconto.]
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -55,12 +59,16 @@
 <i>Luna vergine</i> di Aza (any).
 Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
-            ~ unreadStories -= book
-            ~ readStories += book
-            -> refresh_book_lists ->
-        + [Per ora non me la sento di affrontare questo tema.]
+        //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+            {
+                - unreadStories has Aza:
+                    ~ unreadStories -= Aza
+                    ~ readStories += Aza
+                     -> refresh_book_lists ->
+            }  
+        + {unreadStories has Aza}[Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + [Non presentarmi più questo racconto.]
+        + {unreadStories has Aza}[Non presentarmi più questo racconto.]
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -116,12 +124,17 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
 <i>This anger, which has been stolen from me</i> by StenoArtico (he/him, none).
     Trigger warning: violenza psicologica, abusi fisici, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
-            ~ unreadStories -= book
-            ~ readStories += book
+        //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+            {
+                - unreadStories has StenoArtico:
+                    ~ unreadStories -= StenoArtico
+                    ~ readStories += StenoArtico
+                     -> refresh_book_lists ->
+            }  
             -> refresh_book_lists ->
-        + [Per ora non me la sento di affrontare questo tema.]
+        + {unreadStories has StenoArtico}[Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + [Non presentarmi più questo racconto.]
+        + {unreadStories has StenoArtico}[Non presentarmi più questo racconto.]
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -184,12 +197,16 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
 
     Trigger warning: violenza fisica, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
-            ~ unreadStories -= book
-            ~ readStories += book
-            -> refresh_book_lists ->
-        + [Per ora non me la sento di affrontare questo tema.]
+        //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+            {
+                - unreadStories has B:
+                    ~ unreadStories -= B
+                    ~ readStories += B
+                     -> refresh_book_lists ->
+            }  
+        + {unreadStories has B}[Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + [Non presentarmi più questo racconto.]
+        + {unreadStories has B}[Non presentarmi più questo racconto.]
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -227,12 +244,16 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
 
     Trigger warning: depressione, religione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
-            ~ unreadStories -= book
-            ~ readStories += book
-            -> refresh_book_lists ->
-        + [Per ora non me la sento di affrontare questo tema.]
+        //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+            {
+                - unreadStories has Beatrice:
+                    ~ unreadStories -= Beatrice
+                    ~ readStories += Beatrice
+                     -> refresh_book_lists ->
+            }  
+        + {unreadStories has Beatrice}[Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + [Non presentarmi più questo racconto.]
+        + {unreadStories has Beatrice}[Non presentarmi più questo racconto.]
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -371,12 +392,16 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
 
     Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
-            ~ unreadStories -= book
-            ~ readStories += book
-            -> refresh_book_lists ->
-        + [Per ora non me la sento di affrontare questo tema.]
+        //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+            {
+                - unreadStories has BeatriceYBottura:
+                    ~ unreadStories -= BeatriceYBottura
+                    ~ readStories += BeatriceYBottura
+                     -> refresh_book_lists ->
+            }  
+        + {unreadStories has BeatriceYBottura}[Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + [Non presentarmi più questo racconto.]
+        + {unreadStories has BeatriceYBottura}[Non presentarmi più questo racconto.]
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
