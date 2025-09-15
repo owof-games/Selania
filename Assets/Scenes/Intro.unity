@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 5881335}
-  webGlURL: https://github.com/owof-games/LaRiscrittora/raw/refs/heads/main/Assets/Images/Video/Intro%20Riscrittora.webm
+  webGlURL: https://raw.githubusercontent.com/owof-games/Selania/refs/heads/main/Assets/Images/Video/Intro%20Riscrittora.webm
 --- !u!1 &413692640
 GameObject:
   m_ObjectHideFlags: 0
