@@ -185,8 +185,10 @@
         <i>Nessuna persona è uguale, nessuna persona vuole lo stesso trattamento.</i>
         <i>Ma funghi solleticano e distraggono le nostre rinascenti radici.</i>
         <i>Ringraziandoti ancora {name} per ora ci congediamo.</i>
-        @animation:RewriterBook
         <i>Ma anche dall'altra parte del mondo sai già che non saremo mai lontani.</i>
+        
+        @animation:RewriterBook
+
                 -> main
     
     
@@ -250,8 +252,10 @@
         <i>Forse {name} può essere il suo sostegno.</i>
         <i>O forse {name} può lasciarla cadere, e ricominciare.</i>
         <i>Ora noi ci godiamo la brezza e il sole.</i>
-        @animation:RewriterBook
         <i>Ma più tardi tornaci a trovare.</i>
+        
+        @animation:RewriterBook
+
                 -> main
         
     = third_story_ended_check
@@ -361,8 +365,8 @@
     -> main
     
 === foundLibro
-@animation:RewriterBook
 <i>C'è un libro ai piedi del tronco, e porta il tuo nome.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+
     ~ move_entity(RewriterBook, Forest)
     ~ move_entity(WitchRecap, BookPlace)
     ~ move_entity(miniBook, Bedroom)

@@ -84,17 +84,19 @@
                 - not talk_with_first_character: 
                     Facciamo così: inizia parlando con l'altra persona {are_two_entities_together(PG,FirstCharacter):al nostro fianco.|che troverai qui in giro.}#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                     E poi torna da me.
-                        @animation:RewriterBook
+                       
                     Io devo raccogliere le foglie dalla foresta.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                         ~ firstPauseTalking = 0
                         ~ move_entity(FifthRecap, BookPlace)
+                    
+                     @animation:RewriterBook
+
                     -> main
                 
                 - talk_with_first_character:
                     Eh. Uh, wow {name}! Hai già fatto il primo compito ancora prima che te lo dicessi!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                     Sicuro sicuro mi riempirai di soddisfazioni!
                     Sono contenta che {charNameOne} ti abbia già raccontato qualcosa di sè!
-                        @animation:RewriterBook
                     Cavolo, sei qui da pochissimo e già mi rendi orgogliosa di te!
                     Quindi: passiamo allo step successivo!
                         ~ move_entity(FifthRecap, BookPlace)
@@ -206,8 +208,7 @@
             
             Non voglio stordirti di informazioni, per cui ti lascio un po' di suspence, e ti spiegherò più avanti a cosa serve l'inchiostro, e cosa significa essere {pronouns has him:un riscrittore|{pronouns has her:una riscrittora|unə riscrittorə}}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             Ora devo trovare un modo per levare {entity_location(PG) == Forest:queste travi che bloccano il sentiero|le travi che bloccano il sentiero a ovest della foresta}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
-            Questo posto morirebbe senza me.
-            @animation:RewriterBook
+            Questo posto collasserebbe senza me.
             Quando avrai conquistato la fiducia di una persona e le avrai donato qualcosa, torna da me per le ultime istruzioni.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 {
                 - not cultivable_test: Uh, che sbadata! Ti servirà di sicuro qualcosa per raccogliere gli oggetti!
@@ -229,6 +230,9 @@
             
             ~ move_entity(RulesRecap, BookPlace)      
             ~ firstPauseTalking = 0
+
+            @animation:RewriterBook
+            
                 -> main
              
 
@@ -281,10 +285,12 @@
                         ~ fifthPurple ++
                 -
             Ricorda {name}: sei una guida, ma sta alla persona decidere alla fine chi è, e di cosa ha bisogno.
-            @animation:RewriterBook
             Quando te la senti, affronta questo ultimo passaggio e poi torna da me.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             
             ~ firstPauseTalking = 0
+
+            @animation:RewriterBook
+            
                 -> main
         
         

@@ -273,13 +273,16 @@
                     ~ chosenCultivable = ()
                     @animation:Inventory
                     @animation:RewriterBook 
+
+
                             {
                                 - findedGifts hasnt LicheneDegliAbissi:
                                 ~ findedGifts += LicheneDegliAbissi
                                 <i>Hai ottenuto: <b><i>Lichene degli Abissi.</b></i>
                             }
                     ~ move_entity(GreenhouseRecap, BookPlace)
-                
+                    
+                                    
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
@@ -325,7 +328,7 @@
             -> main
     
     = step_tre
-        ~ move_entity(GoldenBee, Greenhouse)
+        
         <i>Calore nel ventre.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>Un pezzo di serra è ora coperto di fiori e abbracci.</i>
         <i>Faticoso è resistere all'idea di tuffarvisi.</i>
@@ -340,8 +343,10 @@
                 <i>Vivo.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
+                    
                     @animation:Inventory
                     @animation:RewriterBook
+                    
                         {
                             - findedGifts hasnt EderaDelleAmanti:
                             ~ findedGifts += EderaDelleAmanti
@@ -349,7 +354,9 @@
                         }
                         
                     ~ move_entity(GreenhouseRecap, BookPlace)
-                    
+                    ~ move_entity(GoldenBee, Greenhouse)
+
+
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
@@ -391,7 +398,7 @@
             -> main
           
     = step_tre
-        ~ move_entity(RedBee, Greenhouse)
+        
         <i>La serra si muove e si scuote, le travi cigolano nel voler danzare.</i> #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         <i>Ilare, <b><i>Canto delle compagne</b></i> turbina e balla riversandosi dal vaso.</i>
         <i>In un altro tempo questo cespuglio veniva chiamato "Canto delle streghe".</i>
@@ -405,8 +412,10 @@
                 <i>Ridendo feroci di chi l3 teme.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
+                    
                     @animation:Inventory
                     @animation:RewriterBook
+                    
                     {
                         - findedGifts hasnt CantoDelleCompagne:
                         ~ findedGifts += CantoDelleCompagne
@@ -414,7 +423,8 @@
                     }
 
                     ~ move_entity(GreenhouseRecap, BookPlace)
-                
+                    ~ move_entity(RedBee, Greenhouse)
+
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
@@ -475,13 +485,14 @@
                     ~ chosenCultivable = ()
                     @animation:Inventory
                     @animation:RewriterBook
+                    
                     {
                         - findedGifts hasnt LaSpazzata:
                         ~ findedGifts += LaSpazzata
                         <i>Hai ottenuto: <b><i>La Spazzata.</b></i>
                     }
                     ~ move_entity(GreenhouseRecap, BookPlace)
-                
+
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
@@ -537,13 +548,14 @@
                 ~ chosenCultivable = ()
                 @animation:Inventory
                 @animation:RewriterBook
+                
                     {
                         - findedGifts hasnt BaccaDellaAddolorata:
                         ~ findedGifts += BaccaDellaAddolorata
                         <i>Hai ottenuto: <b><i>Bacca della Addolorata</b></i>
                     }
                     ~ move_entity(GreenhouseRecap, BookPlace)
-                    
+
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
@@ -603,13 +615,16 @@
                 ~ chosenCultivable = ()
                     @animation:Inventory
                     @animation:RewriterBook
+                     
                     {
                         - findedGifts hasnt NonTiScordarDiTe:
                         ~ findedGifts += NonTiScordarDiTe
                         <i>Hai ottenuto: <b><i>Non Ti Scordar di Te.</b></i>
                     }
                     ~ move_entity(GreenhouseRecap, BookPlace)
-                    
+
+                                       
+
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
@@ -662,6 +677,7 @@
                 ~ chosenCultivable = ()
                 @animation:Inventory
                 @animation:RewriterBook
+                
                     {
                         - findedGifts hasnt BrinaDellImpossibile:
                         ~ findedGifts += BrinaDellImpossibile
@@ -669,7 +685,9 @@
                     }
 
                     ~ move_entity(GreenhouseRecap, BookPlace)
-                    
+
+                                    
+
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
@@ -709,7 +727,6 @@
                 -> main
     
     = step_tre
-        ~ move_entity(BrownBee, Greenhouse)
         <i>La piante cede, si stende tra le gambe di {name}.</i>.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         + (colto)[Allungo le dita.]
@@ -723,8 +740,10 @@
             <i>Nell'accettare che aiutare è aiutarsi.</i>
                 ~ growing = 0
                 ~ chosenCultivable = ()
+                
                 @animation:Inventory
                 @animation:RewriterBook
+                
                     {
                         - findedGifts hasnt CardoAspinato:
                         ~ findedGifts += CardoAspinato
@@ -732,7 +751,10 @@
                     }
 
                     ~ move_entity(GreenhouseRecap, BookPlace)
+                    ~ move_entity(BrownBee, Greenhouse)
                     
+                                    
+
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    

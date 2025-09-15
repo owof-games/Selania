@@ -29,7 +29,6 @@
                 ~ saturationVar ++
                 ~ move_entity(bowl, Bedroom)
             }
-            @animation:RewriterBook
             ~ move_entity(FrogRecap, BookPlace)
             
             - (top)
@@ -53,6 +52,9 @@
                     <i>Ma ora ha fame.</i>
                     Crac!:#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:frog_neutral
                         ~ bookBGVariations ++
+
+                    @animation:RewriterBook
+
                         -> top
                     
                 * (second) {frog && firstStory == StoryStarted} [Puoi aiutarmi con {charNameOne}?]
@@ -67,6 +69,9 @@
                     <i>E che quando si siede qui sullo stagno, parla molto di spiritualità.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
                     Crac crac crac Craac crac cracccc.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:frog_neutral
                     <i>E chiede se la prossima volta le porti uno stuzzichino, perché ha DAVVERO molta fame.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                        
+                     @animation:RewriterBook
+
                         -> top
                         
                 + [Mi allontano.]

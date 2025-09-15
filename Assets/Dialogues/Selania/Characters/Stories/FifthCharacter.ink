@@ -163,10 +163,12 @@
  
             -
         {((firstStory hasnt StoryEnded) && (secondStory hasnt StoryEnded)): Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di mobili rotti che blocca il sentiero a ovest della foresta.|Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
-        @animation:RewriterBook
         Grazie per la chiacchierata, {name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         
              ~ fifthPauseTalking = fifthCharPauseDuration
+
+            @animation:RewriterBook
+ 
             -> main
     
     = two
@@ -226,10 +228,12 @@
         Questo luogo continua a stupirmi.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         Sei qui per aiutare le altre persone, e finisci per scoprire cose di te.
         Ma ora è il momeno di svuotare lo stagno dalle sue cose più schifose.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
-            @animation:RewriterBook
         Prega per me, {name}.
                 
              ~ fifthPauseTalking = fifthCharPauseDuration
+
+             @animation:RewriterBook
+             
                 -> main
 
 
@@ -282,10 +286,12 @@
             -
             Ma basta con questo spirito malinconico!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             Mi sono appena ricordata che ci sono delle erbacce fastidiose sotto la poltrona della biblioteca.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-                @animation:RewriterBook
             Devo inventarmi un modo per liberarmene!
             
                 ~ fifthPauseTalking = fifthCharPauseDuration
+
+                            @animation:RewriterBook   
+                            
                     -> main
     
     
@@ -352,11 +358,12 @@
         Il problema è che mi sono fatta coinvolgere.
         Una mentore deve mantenere un certo distacco per guidarti.
         Non può essere emotiva.
-            @animation:RewriterBook
         Vado a riordinare in ordine di data i libri in biblioteca.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
     
-        
              ~ fifthPauseTalking = fifthCharPauseDuration
+
+             @animation:RewriterBook
+             
             -> main
     = five
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -433,10 +440,12 @@
         Soprattutto qui.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
         Amore per noi.
         Vado a recuperare del terriccio dal sottobosco, {name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-            @animation:RewriterBook
         Parleremo più tardi.
         
         ~ fifthPauseTalking = fifthCharPauseDuration
+
+        @animation:RewriterBook
+        
             -> main
     
     
