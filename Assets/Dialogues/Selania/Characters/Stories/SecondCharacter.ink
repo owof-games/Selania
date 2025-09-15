@@ -1458,6 +1458,7 @@
         Mi ha fatto male!
              {
                 - are_two_entities_together(Mentor, PG) && knowing_second_character.one && (not that_little_liar_storylet):
+                    ~ riccioMentoreViciniColpo = true
                     -> that_little_liar_storylet       
                 
             }
@@ -1476,6 +1477,7 @@
                         //Se non abbiamo ancora parlato dell'innaffiatoio, parte subito lo storylet. Da vedere se funzona.
                             {
                                 - stolen_watering_can or knowing_second_character.she_hates_me && not watering_can_storylet:
+                                ~ riccioMentoreViciniInnaffiatoio = true
                                         -> watering_can_storylet          
                         
                             }

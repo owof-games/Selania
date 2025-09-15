@@ -60,7 +60,7 @@
 
 //Per assegnare/cambiare pronouns di riferimento
 === gender ===
-    <i>Quali pronomi ti fanno sentire <i>te</i>?</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+    <i>Quali pronomi ti fanno sentire <b>te</b>?</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
     
     + {gender> 1} Mi trovo a mio agio con i pronomi {pronouns has him:maschili|{pronouns has her:femminili|neutri}}.
         ->->

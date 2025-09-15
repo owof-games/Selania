@@ -40,6 +40,11 @@
     VAR fifthGreen = 0
     VAR fifthRed = 0                    
                      
+                     
+//VARIABILI NARRATIVI
+VAR riccioMentoreViciniColpo = false
+VAR riccioMentoreViciniInnaffiatoio = false
+                     
                     /* ---------------------------------
                     
                        Gestione relazione e nomi
