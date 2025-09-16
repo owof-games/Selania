@@ -9,7 +9,7 @@
             - safekeepingContents has RoomExit:
                 ~ move_entity (RoomExit, Bedroom)
         }
-
+        
 {train_stop == 1: <i>Questa è la stazione del treno.|<i>{~La stazione profuma di partenze.|La panchina aspetta fremente una nuova conoscenza.|Sulle vette la luce brilla leggera.|Un vento fresco ti sospinge lungo la strada.|Le lettere ondeggiano sulla bacheca.|L'odore della foresta scalda il sentiero.}</i>}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
     // + [Mi guardo attorno.]
