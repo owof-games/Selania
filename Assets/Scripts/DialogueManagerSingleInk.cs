@@ -195,6 +195,11 @@ public class DialogueManagerSingleInk : MonoBehaviour
             // ContinueStory();
             mustContinueStory = true;
         }
+        else if (currentLine == "@quit")
+        {
+            buttonsEnabled = false;
+            Application.Quit();
+        }
         else
         {
             // dialoguePanel.SetActive(true);
@@ -589,16 +594,6 @@ public class DialogueManagerSingleInk : MonoBehaviour
     public InkList GetEffettivoStatoCardoAspinato()
     {
         return (InkList)story.variablesState["growthCardoAspinato"];
-    }
-
-    public void OnQuitButton()
-    {
-        Application.Quit();
-    }
-
-    public void OnExitGame()
-    {
-        Application.Quit();
     }
 
     [System.Serializable]
