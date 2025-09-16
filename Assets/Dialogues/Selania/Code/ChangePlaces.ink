@@ -20,7 +20,15 @@
         -> bedroom
     
     + {are_two_entities_together(PG, RoomExit) && (not debugStochastic)} [RoomExit]
-        -> END
+            <i>Salutiamo {name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()} 
+            <i>Se {name} sta per lasciare il prototipo, {pronouns has him:lo|{pronouns has her:la|lə}} invitiamo a segnarsi questo codice, da riportare sul documento di testing.
+            <i>Il codice è {playerPurple} - {playerYellow} - {playerBlue} - {playerGreen}- {playerRed}; {playerFirstStory}; {playerSecondStory}; {firstCharacterState}; {secondCharacterState}.
+            <i>Grazie di cuore.
+                + + [Voglio chiudere <i>Selanìa</i>.]
+                <i>A presto, {name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                    -> END
+                + + [Voglio restare ancora un po'.]
+                    -> main
       
 
 //Streets to Bus Stop
