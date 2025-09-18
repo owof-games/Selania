@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 5881335}
-  webGlURL: 'https://raw.githubusercontent.com/owof-games/Selania/blob/main/Assets/Images/Avvio%20e%20menu/2025.09.16%20Intro.mp4 '
+  webGlURL: https://github.com/owof-games/Selania/raw/refs/heads/main/Assets/Images/Avvio%20e%20menu/2025.09.16%20Intro.mp4
 --- !u!1 &413692640
 GameObject:
   m_ObjectHideFlags: 0
