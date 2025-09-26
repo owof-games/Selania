@@ -27,7 +27,7 @@ public class BastoneDellOzio : MonoBehaviour
     //Chiamo poi in ogni update
     {
         //Chiamare il dialogue manager e fargli eseguire questa riga di codice
-        var step = dialogueManager.GetEffettivoStatoBastoneDellOzio();
+        var step = dialogueManager.GetEffettivoStatoBastoneDellOzioso();
         if (step.ContainsItemNamed("notStarted"))
         {
             image.sprite = NotStarted;

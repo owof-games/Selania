@@ -596,9 +596,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
         return (InkList)story.variablesState["growthCardoAspinato"];
     }
 
-    public InkList GetEffettivoStatoBastoneDellOzio()
+    public InkList GetEffettivoStatoBastoneDellOzioso()
     {
-        return (InkList)story.variablesState["growthBastoneDellOzio"];
+        return (InkList)story.variablesState["growthBastoneDellOzioso"];
     }   
 
     [System.Serializable]
