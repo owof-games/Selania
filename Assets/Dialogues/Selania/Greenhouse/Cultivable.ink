@@ -117,6 +117,18 @@
         - growStep has stepThree:
              ~ growthCardoAspinato = stepThree
     }    
+
+    - chosenCultivable has BastoneDellOzioso:
+    {
+        - growStep has stepZero:
+            ~ growthBastoneDellOzioso = stepZero
+        - growStep has stepOne:
+            ~ growthBastoneDellOzioso = stepOne
+        - growStep has stepTwo:
+            ~ growthBastoneDellOzioso = stepTwo
+        - growStep has stepThree:
+             ~ growthBastoneDellOzioso = stepThree
+    } 
     
     ->->
 }
@@ -219,7 +231,19 @@
             -> cardo_aspinato.step_due
         - growthCardoAspinato == stepThree:
             -> cardo_aspinato.step_tre
-    }     
+    }
+    
+    - chosenCultivable has BastoneDellOzioso:
+    {
+        - growthBastoneDellOzioso == stepZero:
+            -> bastone_dell_ozioso.step_zero     
+        - growthBastoneDellOzioso == stepOne:
+            -> bastone_dell_ozioso.step_uno
+        - growthBastoneDellOzioso == stepTwo:
+            -> bastone_dell_ozioso.step_due
+        - growthBastoneDellOzioso == stepThree:
+            -> bastone_dell_ozioso.step_tre
+    }      
     -> main
 }
 
@@ -764,7 +788,74 @@
                 + + [Mi aggiro per la serra.]    
                     -> main
 
- 
+
+=== bastone_dell_ozioso
+//Ricordo, collaborazione, novità
+//Outcome: prova una strada nuova
+    = TW
+        ////<i>{chosenCultivable} affronta questo tema delicato: XYZ.
+        //<i>Te la senti di farla crescere, o preferisci cambiare?
+        //        + [Voglio andare avanti.]
+        //    -> step_zero
+        //+ [Voglio rimuoverla, ma solo per ora.]
+        //    -> tempCultTW_formula -> cultivable_test
+        //+ [Voglio rimuoverla, per sempre.]
+        //    -> remove_proposed_cultivable -> cultivable_test
+        //-
+        -> step_zero
+    
+    = step_zero
+    -> remove_proposed_cultivable ->
+        ~ growthBastoneDellOzioso = stepZero
+        <i>{name} sente un prurito, la voglia di provare qualcosa.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Un gesto, una nota, un passo, quella cosa che non ha mai fatto.</i>
+                -> main
+    
+    = step_uno
+        <i>Il prurito ora si fa un grattare dietro alla testa.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>{name} forse si dice che non si fanno le cose che non si sanno fare.</i>
+        <i>Ma {name} si dice anche che a volte serve un solo passo per iniziare a ballare.</i>
+                -> main
+    
+    = step_due
+       <i>Il grattare si è fatto gioia, si è fatto movimento.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Le mani di {name} quasi applaudono da sole quando arriva il momento.</i>
+        <i>E anche se non lo sa davvero fare, a chi importa?</i>
+        <i>Qualcuno forse decide come è giusto camminare?</i>
+                -> main
+    
+    = step_tre
+        <i>Rami come braccia lanciati in aria.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Il vento tra le canne vuote canta.</i>
+        
+        + (colto)[Canto anche io.]
+            <i>La stanza esplode in una festa.</i>
+            <i>I rami del <b>Bastone dell'Ozioso</b> vibrano di note chiassose.
+            <i>La musica è stonata, i rami sgrazziati eppure.
+            <i>Non c'è gioia più grande del fare per il solo piacere di fare.
+            <i>Senza luoghi dove andare.
+            <i>Senza classifiche da scalare.
+                ~ growing = 0
+                ~ chosenCultivable = ()
+                
+                @animation:Inventory
+                @animation:RewriterBook
+                
+                    {
+                        - findedGifts hasnt BastoneDellOzioso:
+                            ~ findedGifts += BastoneDellOzioso
+                       <i>Hai ottenuto: <b><i>Bastone dell'Ozioso</b></i>
+                    }
+
+                    ~ move_entity(GreenhouseRecap, BookPlace)
+                    ~ move_entity(BrownBee, Greenhouse)
+                    
+                                    
+
+                + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
+                        -> cultivable_test
+                + + [Mi aggiro per la serra.]    
+                    -> main 
           
 
 -> main

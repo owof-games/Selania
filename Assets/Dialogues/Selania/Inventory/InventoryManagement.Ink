@@ -31,6 +31,9 @@ VAR findedGifts = ()
             ~ return "l'impronta del Non Ti Scordar di Te"
         
         - CardoAspinato:
-            ~ return "un ciuffo di Cardo Aspinato"             
+            ~ return "un ciuffo di Cardo Aspinato"
+        
+        - BastoneDellOzioso:
+            ~ return "un nodo di Bastone dell'Ozioso"
     
     }

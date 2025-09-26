@@ -229,7 +229,32 @@ VAR currentReceiver = ()
     
     + [Ho bisogno di ragionarci ancora un poco.]
         ~ currentReceiver = ()
-        -> main 
+        -> main
+        
+
++ {findedGifts has BastoneDellOzioso} [Un nodo di Bastone dell'Ozioso.]
+    ~ findedGifts -= BastoneDellOzioso
+    {
+        - currentReceiver has FirstCharacter:
+            <i>{translator(firstCharacterState)} inizia a girarselo tra le dita cantando divertita.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ firstCharacterInkLevel ++
+                ~ firstGift += BastoneDellOzioso
+                ~ currentReceiver = ()
+                    -> first_story_gift.ink_outcome
+        
+        
+        - currentReceiver has SecondCharacter:
+            <i>{translator(secondCharacterState)} è entusiasta: inizia a lanciarlo a terra, inseguirlo, riprenderselo ridendo a crepapelle.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ secondCharacterInkLevel ++
+                ~ secondCharacterInkLevel ++
+                ~ secondGift += BastoneDellOzioso
+                ~ currentReceiver = ()
+                    -> second_story_gift.ink_outcome
+        
+    }
+        -> main        
+        
+        
     + ->
     - 
 -> main
