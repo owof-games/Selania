@@ -866,7 +866,7 @@
                     }
 
                     ~ move_entity(GreenhouseRecap, BookPlace)
-                    ~ move_entity(BrownBee, Greenhouse)
+
 
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
@@ -931,12 +931,11 @@
                     }
 
                     ~ move_entity(GreenhouseRecap, BookPlace)
-                    ~ move_entity(BrownBee, Greenhouse)
-                    
-                                    
+                    ~ move_entity(Snail, Greenhouse)
 
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
+                        
                 + + [Mi aggiro per la serra.]    
                     -> main 
 
