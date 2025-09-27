@@ -4688,7 +4688,7 @@ GameObject:
   - component: {fileID: 444882128}
   - component: {fileID: 444882131}
   - component: {fileID: 444882130}
-  - component: {fileID: 444882129}
+  - component: {fileID: 444882132}
   m_Layer: 5
   m_Name: Gestione Immagine
   m_TagString: Untagged
@@ -4710,30 +4710,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1579660435}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.49913445, y: 0.49475944}
-  m_AnchorMax: {x: 0.5872664, y: 0.6683314}
-  m_AnchoredPosition: {x: 32.2, y: -24.678}
-  m_SizeDelta: {x: -51.8093, y: -49.3553}
+  m_AnchorMin: {x: 0.5293973, y: 0.4947591}
+  m_AnchorMax: {x: 0.59054524, y: 0.6226317}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -0.0000038146973, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &444882129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 444882127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1569cf45581a09945a4292d9e2261aaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueManager: {fileID: 1863324329}
-  image: {fileID: 444882130}
-  NotStarted: {fileID: 21300000, guid: de85512f093c7c04b82e8968de2b3d7f, type: 3}
-  StepZero: {fileID: 21300000, guid: f13626e9ed1b10a469e24a63b510a411, type: 3}
-  StepOne: {fileID: 21300000, guid: 724a4689b6554814aa176cb95001068d, type: 3}
-  StepTwo: {fileID: 21300000, guid: d001a39b9fa02db45bf558ae33ff6399, type: 3}
-  StepThree: {fileID: 21300000, guid: 0b8d27c5cb94b9941b53c7e38976aad5, type: 3}
 --- !u!114 &444882130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4754,7 +4735,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0b8d27c5cb94b9941b53c7e38976aad5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: de85512f093c7c04b82e8968de2b3d7f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4772,6 +4753,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444882127}
   m_CullTransparentMesh: 1
+--- !u!114 &444882132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444882127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bd5c55f0611f54a8371fbe7f6619ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 1863324329}
+  image: {fileID: 444882130}
+  NotStarted: {fileID: 21300000, guid: de85512f093c7c04b82e8968de2b3d7f, type: 3}
+  StepZero: {fileID: 21300000, guid: f13626e9ed1b10a469e24a63b510a411, type: 3}
+  StepOne: {fileID: 21300000, guid: 724a4689b6554814aa176cb95001068d, type: 3}
+  StepTwo: {fileID: 21300000, guid: d001a39b9fa02db45bf558ae33ff6399, type: 3}
+  StepThree: {fileID: 21300000, guid: 0b8d27c5cb94b9941b53c7e38976aad5, type: 3}
 --- !u!1 &447568854
 GameObject:
   m_ObjectHideFlags: 0
@@ -12630,7 +12630,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 987adabe55ea23b4aac068843405b0ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8edd16e172cd6144287cd8bad6f42e82, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -17144,6 +17144,7 @@ MonoBehaviour:
   - {fileID: 932746841}
   - {fileID: 639035777}
   - {fileID: 23374232}
+  - {fileID: 1579660434}
   displayNameText: {fileID: 1171737394}
   portraitAnimator: {fileID: 1021419974}
   inkAnimatorA: {fileID: 53077552}
@@ -18716,8 +18717,8 @@ RectTransform:
   - {fileID: 498498418}
   - {fileID: 747005575}
   - {fileID: 438082117}
-  - {fileID: 1579660435}
   - {fileID: 23374236}
+  - {fileID: 1579660435}
   m_Father: {fileID: 2126219299}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

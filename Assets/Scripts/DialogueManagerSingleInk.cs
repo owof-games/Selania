@@ -600,6 +600,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
     {
         return (InkList)story.variablesState["growthBastoneDellOzioso"];
     }   
+    public InkList GetEffettivoStatoBarbaDellInciampo()
+    {
+        return (InkList)story.variablesState["growthBarbaDellInciampo"];
+    }   
 
     [System.Serializable]
     public class SaveData
