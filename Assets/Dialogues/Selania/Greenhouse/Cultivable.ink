@@ -676,30 +676,30 @@
     = step_zero
         -> remove_proposed_cultivable ->
         ~ growthBrinaDellImpossibile = stepZero
-        <i>Qualcosa ha incrinato un vetro della serra.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Sulla finestra è comparsa una crepa.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     
     = step_uno
-        <i>Le crepe si sono fatte ora più fitte, investendo anche il vaso.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>La crepa si è estesa.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>La stanza si riempie dell'odore dello stagno.
           -> main
           
     = step_due
-        <i>Vaso, vetro e mobile: linee nette mostrano il cielo fuori dalla serra.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Eppure non sembrano cadere, non sembrano tentennare.</i>
+        <i>Impossibile, eppure il vetro resiste imperturbato mentre le linee si allargano.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Forse invece {name} si sente tentennare?</i>
           -> main
     
     = step_tre
-        <i>Isole di vetro, terracotta e legno galleggiano nell'aria.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Se {name} le spinge, non si spostano.</i>
-        <i>Insetti e petali attraversano le ferite, il cielo bluastro le riempie.</i>
+        <i>Isole di vetro galleggiano nell'aria.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>E baccelli crescono tra le ferite, come navi colme di semi.
 
-        + (colto) [Infilo la mano tra gli spazi vuoti.]
-            <i>Il vetro si rinsalda, spingendo via la mano di {name}.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            <i>Le linee del suo palmo si fanno trasparenti, inconsistenti. Eppure può muovere le dita, e non prova dolore.</i>
+        + (colto) [Colgo uno dei baccelli.]
+            <i>{name} vede e dà un nome a qualcosa del suo passato.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>A qualcosa che è sempre stato lì, eppure non vedeva.
             <i>La <b><i>Brina dell'Impossibile</b></i> si raccoglie nel luogo di un trauma.</i>
             <i>Riempie le ferite così che siano visibili.</i>
-            <i>Ci aiuta a guardare, nominare, capire.</i>
-            <i>Vederci unit3 quando pensavamo di essere spezzat3.</i>
+            <i>Anche se fa male, aiuta a guardare, nominare, affrontare.</i>
+            <i>Offre con ogni suo baccello semi vivi di speranza.</i>
 
                 ~ growing = 0
                 ~ chosenCultivable = ()
