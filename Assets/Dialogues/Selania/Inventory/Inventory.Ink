@@ -223,14 +223,7 @@ VAR currentReceiver = ()
     }
         -> main    
 
-    //Se la lista è vuota
-    + {findedGifts == ()} [Non ho nulla da donare.]
-        -> main
-    
-    + [Ho bisogno di ragionarci ancora un poco.]
-        ~ currentReceiver = ()
-        -> main
-        
+
 
 + {findedGifts has BastoneDellOzioso} [Un nodo di Bastone dell'Ozioso.]
     ~ findedGifts -= BastoneDellOzioso
@@ -253,8 +246,35 @@ VAR currentReceiver = ()
         
     }
         -> main        
+    
+
++ {findedGifts has BarbaDellInciampo} [Una spina di Barba dell'Inciampo.]
+    ~ findedGifts -= BarbaDellInciampo
+    {
+        - currentReceiver has FirstCharacter:
+            <i>{translator(firstCharacterState)} si punge, infastidita.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ firstGift += BarbaDellInciampo
+                ~ currentReceiver = ()
+                    -> first_story_gift.ink_outcome
         
         
+        - currentReceiver has SecondCharacter:
+            <i>{translator(secondCharacterState)} si distrae rapidamente, ignorando il dono.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ secondGift += BarbaDellInciampo
+                ~ currentReceiver = ()
+                    -> second_story_gift.ink_outcome
+        
+    }
+        -> main     
+    
+    //Se la lista è vuota
+    + {findedGifts == ()} [Non ho nulla da donare.]
+        -> main
+    
+    + [Ho bisogno di ragionarci ancora un poco.]
+        ~ currentReceiver = ()
+        -> main
+            
     + ->
     - 
--> main
+    -> main

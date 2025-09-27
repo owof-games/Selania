@@ -35,5 +35,8 @@ VAR findedGifts = ()
         
         - BastoneDellOzioso:
             ~ return "un nodo di Bastone dell'Ozioso"
+        
+        - BarbaDellInciampo:
+            ~ return "una spina di Barba dell'Inciampo"
     
     }

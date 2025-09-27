@@ -130,6 +130,19 @@
              ~ growthBastoneDellOzioso = stepThree
     } 
     
+    - chosenCultivable has BarbaDellInciampo:
+    {
+        - growStep has stepZero:
+            ~ growthBarbaDellInciampo = stepZero
+        - growStep has stepOne:
+            ~ growthBarbaDellInciampo = stepOne
+        - growStep has stepTwo:
+            ~ growthBarbaDellInciampo = stepTwo
+        - growStep has stepThree:
+             ~ growthBarbaDellInciampo = stepThree
+    }     
+    
+    
     ->->
 }
 
@@ -243,13 +256,24 @@
             -> bastone_dell_ozioso.step_due
         - growthBastoneDellOzioso == stepThree:
             -> bastone_dell_ozioso.step_tre
-    }      
+    }
+    
+    - chosenCultivable has BarbaDellInciampo:
+    {
+        - growthBarbaDellInciampo == stepZero:
+            -> barba_dell_inciampo.step_zero     
+        - growthBarbaDellInciampo == stepOne:
+            -> barba_dell_inciampo.step_uno
+        - growthBarbaDellInciampo == stepTwo:
+            -> barba_dell_inciampo.step_due
+        - growthBarbaDellInciampo == stepThree:
+            -> barba_dell_inciampo.step_tre
+    }    
+    
     -> main
 }
 
 === lichene_degli_abissi
-//Collaborazione, ciclicità, cancellazione
-//Outcome: allontana qualcuno.
     
     = TW
         //<i>{chosenCultivable} affronta questo tema delicato: XYZ.
@@ -316,8 +340,7 @@
 
 
 === edera_delle_amanti
-//Collaborazione, novità, ricordo
-//Outcome: datti piacere
+
     = TW
         <i>Attenzione: questa pianta allude a contenuti erotici.
         <i>{name} vuole farla crescere, o preferisce cambiare?
@@ -388,8 +411,7 @@
 
 
 === canto_delle_compagne
-//Collaborazione, ciclicità, ricordo
-//Outcome: danza, sola o con le compagne
+
     = TW
         //<i>{chosenCultivable} affronta questo tema delicato: XYZ.
         //<i>Te la senti di farla crescere, o preferisci cambiare?
@@ -456,8 +478,7 @@
 
               
 === la_spazzata
-//Indipendenza, novità, cancellazione
-//Outcome: prometti di dire qualcosa che ti pesa sullo stomaco.
+
     = TW
         //<i>{chosenCultivable} affronta questo tema delicato: XYZ.
         //<i>Te la senti di farla crescere, o preferisci cambiare?
@@ -530,8 +551,7 @@
 
 
 === bacca_della_addolorata
-//Indipendenza, novità, cancellazione
-//Outcome: liberazione, invito ad avanzare
+
     = TW
         //<i>{chosenCultivable} affronta questo tema delicato: XYZ.
         //<i>Te la senti di farla crescere, o preferisci cambiare?
@@ -591,8 +611,7 @@
 
               
 === non_ti_scordar_di_te
-//Indipendenza, ciclicità, ricordo
-//Outcome: ricordo di chi non c'è più
+
     = TW
         <i>Attenzione: questa pianta parla di lutto e della sua elaborazione.
         <i>Se la sente {name} di farla crescere, o preferisce cercare qualcosa di diverso?
@@ -659,8 +678,7 @@
                         -> main                    
 
 === brina_dell_impossibile
-//Ricordo, collaborazione, novità
-//Outcome: prova una strada nuova
+
     = TW
         //<i>{chosenCultivable} affronta questo tema delicato: XYZ.
         //<i>Te la senti di farla crescere, o preferisci cambiare?
@@ -723,8 +741,7 @@
 
 
 === cardo_aspinato
-//Ricordo, collaborazione, novità
-//Outcome: prova una strada nuova
+
     = TW
         ////<i>{chosenCultivable} affronta questo tema delicato: XYZ.
         //<i>Te la senti di farla crescere, o preferisci cambiare?
@@ -746,7 +763,7 @@
     
     = step_uno
         <i>Rumore di passi, qualcosa che corre, che fugge, che non arriva mai.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>I peli del fusto vibrano, si sollevano quando {name} si avvicina,{pronouns has him:lo|{pronouns has her:la|lə}} tengono distante.</i>
+        <i>I peli del fusto vibrano, si sollevano quando {name} si avvicina, {pronouns has him:lo|{pronouns has her:la|lə}} tengono distante.</i>
                 -> main
     
     = step_due
@@ -789,9 +806,10 @@
                     -> main
 
 
+
+          
 === bastone_dell_ozioso
-//Ricordo, collaborazione, novità
-//Outcome: prova una strada nuova
+
     = TW
         ////<i>{chosenCultivable} affronta questo tema delicato: XYZ.
         //<i>Te la senti di farla crescere, o preferisci cambiare?
@@ -856,6 +874,72 @@
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
                     -> main 
-          
+
+=== barba_dell_inciampo
+
+    = TW
+        ////<i>{chosenCultivable} affronta questo tema delicato: XYZ.
+        //<i>Te la senti di farla crescere, o preferisci cambiare?
+        //        + [Voglio andare avanti.]
+        //    -> step_zero
+        //+ [Voglio rimuoverla, ma solo per ora.]
+        //    -> tempCultTW_formula -> cultivable_test
+        //+ [Voglio rimuoverla, per sempre.]
+        //    -> remove_proposed_cultivable -> cultivable_test
+        //-
+        -> step_zero
+    
+    = step_zero
+    -> remove_proposed_cultivable ->
+        ~ growthBarbaDellInciampo = stepZero
+        <i>{name} ha commesso un errore.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Un errore che è come una lancia.
+                -> main
+    
+    = step_uno
+        <i>La colpa attanaglia {name}.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Se qualcunə critica, aggredisce.</i>
+        <i>Parole come lame, pronte a ferire.</i>
+                -> main
+    
+    = step_due
+       <i>Le lame si fanno muro.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+       <i>Nascondono l'errore dal mondo.</i>
+       <i>Nascondono l'errore da {name}.
+       <i>La colpa è come veleno.
+                -> main
+    
+    = step_tre
+        <i>Quando {name} abbassa le difese, vede con occhi diversi.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>E la pianta con {pronouns has him:lui|{pronouns has her:lei|ləi}}.</i>
+        
+        + (colto)[Afferro l'ultima spina.]
+            <i>C'è pace in {name}, pace nella serra.</i>
+            <i>E il calice della <b>Barba dell'inciampo</b> ora è tana.
+            <i>C'è differenza tra colpa e reponsabilità.
+            <i>Tra punizione ed elaborazione.
+            <i>La lancia della pianta è ora tana per qualcosa di delicato.
+            <i>L'errore di {name} è ora guida per cambiare.
+                ~ growing = 0
+                ~ chosenCultivable = ()
+                
+                @animation:Inventory
+                @animation:RewriterBook
+                
+                    {
+                        - findedGifts hasnt BastoneDellOzioso:
+                            ~ findedGifts += BastoneDellOzioso
+                       <i>Hai ottenuto: <b><i>Bastone dell'Ozioso</b></i>
+                    }
+
+                    ~ move_entity(GreenhouseRecap, BookPlace)
+                    ~ move_entity(BrownBee, Greenhouse)
+                    
+                                    
+
+                + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
+                        -> cultivable_test
+                + + [Mi aggiro per la serra.]    
+                    -> main 
 
 -> main
