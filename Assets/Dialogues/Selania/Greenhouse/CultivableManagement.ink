@@ -4,7 +4,7 @@
     LIST growStep = notStarted, stepZero, stepOne, stepTwo, stepThree
 
 //QUESTA LISTA LA USO PER GESTIRE LA PESCATA O MENO DEI COLTIVABILI
-    VAR backupCultivable = (LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, CardoAspinato, BastoneDellOzioso)
+    VAR backupCultivable = (LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, CardoAspinato, BastoneDellOzioso, BarbaDellInciampo)
     
     VAR growthCantoDelleCompagne = notStarted
     VAR growthLicheneDegliAbissi = notStarted
