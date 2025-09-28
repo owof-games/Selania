@@ -1024,6 +1024,8 @@
 
                     ~ move_entity(GreenhouseRecap, BookPlace)
                     ~ move_entity(Snail, Greenhouse)
+                    ~ move_entity(FromPondToGreenhouseBlooming, Pond)
+                    ~ move_entity(FromPondToGreenhouse, Safekeeping)
 
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test

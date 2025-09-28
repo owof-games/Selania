@@ -152,6 +152,25 @@
             -> on_movement_events ->
                 -> greenhouse
 
+
+    + {are_two_entities_together(PG, FromPondToGreenhouseBlooming)} [FromPondToGreenhouseBlooming]
+            ~ move_entity(PG, Greenhouse)
+        {
+            - foundLibro or take_this_book:
+                ~ move_entity(RewriterBook, Greenhouse)
+        }
+        {
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, Greenhouse)
+        }         
+            ~ growing ++
+            -> growing_check ->
+            -> on_movement_events ->
+                -> greenhouse
+
+
+
+
 //Streets to Library
     + {debug_test_library} [LibraryTest]
             ~ move_entity(PG, Library)
