@@ -17,7 +17,7 @@
 
         
 
--> main
+-> rewriter_book_with_flow
 
 === greenhouse_recap
 + {are_two_entities_together(GreenhouseRecap, PG)} [GreenhouseRecap]
@@ -47,20 +47,20 @@
     {barba_dell_inciampo.step_tre.colto: È difficile resistere al richiamo della colpa. La colpa ci offre punizioni facili, la colpa ci rende vittime ammirabili. Il pianto dellə penitente porta alla redenzione. E a nessun cambiamento. La <b><i>Barba dell'Inciampo</b></i> è velenosa, tossica, tagliente. Almeno fino a quando non fruttifica. Fino a quando i processi interni, lentamente, non trasformano le sue foglie pericolose in un calice, il suo fiore appuntito in profumo e morbidezza. Ogni persona che intraprende il cammino ha bisogno di impararlo: la colpa non porta cambiamento, la responsabilità, sì. Riconoscere ciò che si è fatto, affrontarlo, chiedere scusa: non c'è riscrittura più potente.}
     
 
--> main
+-> rewriter_book_with_flow
 
 === laboratory_recap
 + {are_two_entities_together(LaboratoryRecap, PG)} [LaboratoryRecap]
 ~ enableBigDialogue()
 lab
 
--> main
+-> rewriter_book_with_flow
 
 === nest_recap
 + {are_two_entities_together(NestRecap, PG)} [NestRecap]
 ~ enableBigDialogue()
 nest
 
--> main
+-> rewriter_book_with_flow
 
 

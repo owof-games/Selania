@@ -1,7 +1,6 @@
 === greenhouse ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-            ~ arrivingFrom = ()
             ~ arrivingFrom = Greenhouse
 {debug: <i>La lista degli oggetti nella stanza è: {greenhouseContents}.}
 {debug: <i>La lista degli oggetti nel deposito è: {safekeepingContents}.}

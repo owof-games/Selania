@@ -1,7 +1,6 @@
 === library ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-            ~ arrivingFrom = ()
             ~ arrivingFrom = Library
 
 

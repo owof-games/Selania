@@ -8,6 +8,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.IO;
 using System.Linq;
+using System.Text;
 using UnityEngine.Events;
 
 public class DialogueManagerSingleInk : MonoBehaviour
@@ -171,15 +172,30 @@ public class DialogueManagerSingleInk : MonoBehaviour
             do
             {
                 currentLine = story.Continue().Trim();
-                UpdateUI(currentLine);
+                UpdateUI(currentLine, story.currentChoices);
             } while (currentLine == "" && story.canContinue);
         }
     }
 
     [SerializeField] UnityEvent<string> startAnimation;
 
-    private void UpdateUI(string currentLine)
+    private string lastCurrentLine;
+    private List<Choice> lastCurrentChoices;
+
+    private void UpdateUI(string currentLine, List<Choice> currentChoices)
     {
+        lastCurrentLine = currentLine;
+        lastCurrentChoices = currentChoices;
+
+        var sb = new StringBuilder();
+        sb.AppendLine($"Current line: {currentLine}");
+        sb.AppendLine($"Current choices:");
+        foreach (var choice in currentChoices)
+        {
+            sb.AppendLine($"  {choice.text}");
+        }
+        Debug.Log(sb.ToString());
+        
         bool buttonsEnabled;
         bool mustContinueStory = false;
         if (currentLine == "@interact")
@@ -200,13 +216,30 @@ public class DialogueManagerSingleInk : MonoBehaviour
             buttonsEnabled = false;
             Application.Quit();
         }
+        else if (currentLine == "@exit_from_rewriter_book")
+        {
+            // di fronte all'istruzione speciale @exit_from_rewriter_book:
+            // torna su flow normale
+            story.SwitchToDefaultFlow();
+            
+            // ri-abilita background e ambientSounds salvati prima
+            UpdateBackground(rewriterBookSavedBackground);
+            UpdateMusic(rewriterBookSavedMusic);
+            
+            // re-imposta lo stato di big dialogue
+            story.variablesState[bigDialogueInkBoolVariable] = rewriterBookSavedIsBigDialogue;
+            
+            // simulo l'ultima riga, richiamando questo stesso metodo
+            UpdateUI(rewriterBookSavedCurrentLine, rewriterBookSavedCurrentChoices);
+            return;
+        }
         else
         {
             // dialoguePanel.SetActive(true);
             EnableDialoguePanel();
             dialogueText.text = currentLine;
             dialogueTextBig.text = currentLine;
-            DisplayChoices();
+            DisplayChoices(currentChoices);
             buttonsEnabled = false;
         }
 
@@ -235,6 +268,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
         }
     }
 
+    [SerializeField] private Button rewriterBookButton;
+
 
     public void OnOffObject(bool buttonsEnabled)
     {
@@ -260,7 +295,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
                     entity.SetActive(found);
 
-                    entity.GetComponent<Button>().interactable = buttonsEnabled;
+                    var button = entity.GetComponent<Button>();
+                    if(button != null) {
+                        button.interactable = button == rewriterBookButton || buttonsEnabled;
+                    }
                 }
 
                 break;
@@ -288,14 +326,43 @@ public class DialogueManagerSingleInk : MonoBehaviour
         }
     }
 
+    private string rewriterBookSavedBackground;
+    private string rewriterBookSavedMusic;
+    private bool rewriterBookSavedIsBigDialogue;
+    private string rewriterBookSavedCurrentLine;
+    private List<Choice> rewriterBookSavedCurrentChoices;
+
+    private const string RewriterBookFlowName = "RewriterBook";
+    private const string RewriterBookKnotName = "rewriter_book_with_flow";
+
+    public void OnRewriterBook()
+    {
+        // salvare background e ambientSounds correnti, da ripristinare quando si esce
+        rewriterBookSavedBackground = lastBackgroundValue;
+        rewriterBookSavedMusic = lastMusicValue;
+
+        // salvare anche dialog corrente + suo stato + scelte, nel caso sia attivo
+        rewriterBookSavedIsBigDialogue = (bool)story.variablesState[bigDialogueInkBoolVariable];
+        rewriterBookSavedCurrentLine = lastCurrentLine;
+        rewriterBookSavedCurrentChoices = lastCurrentChoices;
+        
+        // passa a flow RewriterBook
+        story.SwitchFlow(RewriterBookFlowName);
+        
+        // salta a nodo rewriter_book_with_flow
+        story.ChoosePathString(RewriterBookKnotName);
+        
+        // continue story
+        ContinueStory();
+    }
+
     public void OnClickContinue()
     {
         ContinueStory();
     }
 
-    private void DisplayChoices()
+    private void DisplayChoices(List<Choice> currentChoices)
     {
-        List<Choice> currentChoices = story.currentChoices;
         var choiceGameObjects = GetChoiceGameObjects();
         var choiceTextMeshPros = GetChoiceTextMeshPros();
 
@@ -366,132 +433,21 @@ public class DialogueManagerSingleInk : MonoBehaviour
             {
                 case BACKGROUND_TAG:
 
-                    //TAG GESTIONE DELLA CAMERA DA LETTO
-                    if (tagValue == "backBedroom")
+                    UpdateBackground(tagValue);
+
+
+                    // Salviamo solo quando entriamo in una nuova "scena", e solo se siamo sul flow di default
+                    // (e.g.: non nel diario)
+                    if (story.currentFlowIsDefaultFlow)
                     {
-                        background.sprite = backBedroom;
+                        SaveGame();
                     }
-
-                    //TAG GESTIONE DELLA FORESTA
-                    if (tagValue == "backForest")
-                    {
-                        background.sprite = backForest;
-                    }
-
-                    //TAG GESTIONE DEL TRAIN STOP
-                    if (tagValue == "backTrainStop")
-                    {
-                        background.sprite = backTrainStop;
-                    }
-
-                    //TAG GESTIONE DELLA SERRA
-                    if (tagValue == "backGreenhouse")
-                    {
-                        background.sprite = backGreenhouse;
-                    }
-
-                    //BACKGROUND TAG FOR POND
-                    if (tagValue == "backPond")
-                    {
-                        background.sprite = backPond;
-                    }
-
-                    //TAG GESTIONE DEL NIDO
-                    if (tagValue == "backNest")
-                    {
-                        background.sprite = backNest;
-                    }
-
-                    //TAG GESTIONE DELLA BIBLIOTECA
-                    if (tagValue == "backLibrary")
-                    {
-                        background.sprite = backLibrary;
-                    }
-
-                    if (tagValue == "backNightLibrary")
-                    {
-                        background.sprite = backNightLibrary;
-                    }
-
-                    //TAG GESTIONE DEL LABORATORIO
-                    if (tagValue == "backLaboratory")
-                    {
-                        background.sprite = backLaboratory;
-                    }
-
-                    //TAG GESTIONE DEL LIBRO
-                    if (tagValue == "bookBGZero")
-                    {
-                        background.sprite = bookBGZero;
-                    }
-
-                    if (tagValue == "bookBGOne")
-                    {
-                        background.sprite = bookBGOne;
-                    }
-
-                    if (tagValue == "bookBGTwo")
-                    {
-                        background.sprite = bookBGTwo;
-                    }
-
-                    if (tagValue == "bookBGThree")
-                    {
-                        background.sprite = bookBGThree;
-                    }
-
-                    if (tagValue == "bookBGFour")
-                    {
-                        background.sprite = bookBGFour;
-                    }
-
-                    if (tagValue == "bookBGFive")
-                    {
-                        background.sprite = bookBGFive;
-                    }
-
-
-                    // Salviamo solo quando entriamo in una nuova "scena"
-                    SaveGame();
 
                     break;
 
                 case AMBIENTSOUNDS_TAG:
 
-                    switch (tagValue)
-                    {
-                        //TAG MUSICA SOTTOFONDO CAMERA DA LETTO
-                        case "bedroomSounds":
-                            UpdateAmbientSounds(bedroomSounds);
-                            break;
-                        //TAG MUSICA SOTTOFONDO GIARDINO
-                        case "forestSounds":
-                            UpdateAmbientSounds(forestSounds);
-                            break;
-                        //TAG MUSICA SOTTOFONDO TrainStop
-                        case "trainstopSounds":
-                            UpdateAmbientSounds(trainstopSounds);
-                            break;
-                        //MUSIC TAG FOR GREENHOUSE
-                        case "greenhouseSounds":
-                            UpdateAmbientSounds(greenhouseSounds);
-                            break;
-                        //MUSIC TAG FOR POND
-                        case "pondSounds":
-                            UpdateAmbientSounds(pondSounds);
-                            break;
-                        //MUSIC TAG FOR LIBRARY
-                        case "librarySounds":
-                            UpdateAmbientSounds(librarySounds);
-                            break;
-                        //TAG MUSICA SOTTOFONDO LIBRO
-                        case "bookSounds":
-                            UpdateAmbientSounds(bookSounds);
-                            break;
-                        default:
-                            Debug.LogWarning($"Cannot find audio erp {tagValue}");
-                            break;
-                    }
+                    UpdateMusic(tagValue);
 
                     break;
 
@@ -531,6 +487,139 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     Debug.LogWarning("Tag came in but is not currently handled: " + tag);
                     break;
             }
+        }
+    }
+
+    private string lastMusicValue;
+
+    private void UpdateMusic(string tagValue)
+    {
+        lastMusicValue = tagValue;
+        
+        switch (tagValue)
+        {
+            //TAG MUSICA SOTTOFONDO CAMERA DA LETTO
+            case "bedroomSounds":
+                UpdateAmbientSounds(bedroomSounds);
+                break;
+            //TAG MUSICA SOTTOFONDO GIARDINO
+            case "forestSounds":
+                UpdateAmbientSounds(forestSounds);
+                break;
+            //TAG MUSICA SOTTOFONDO TrainStop
+            case "trainstopSounds":
+                UpdateAmbientSounds(trainstopSounds);
+                break;
+            //MUSIC TAG FOR GREENHOUSE
+            case "greenhouseSounds":
+                UpdateAmbientSounds(greenhouseSounds);
+                break;
+            //MUSIC TAG FOR POND
+            case "pondSounds":
+                UpdateAmbientSounds(pondSounds);
+                break;
+            //MUSIC TAG FOR LIBRARY
+            case "librarySounds":
+                UpdateAmbientSounds(librarySounds);
+                break;
+            //TAG MUSICA SOTTOFONDO LIBRO
+            case "bookSounds":
+                UpdateAmbientSounds(bookSounds);
+                break;
+            default:
+                Debug.LogWarning($"Cannot find audio erp {tagValue}");
+                break;
+        }
+    }
+
+    private string lastBackgroundValue;
+
+    private void UpdateBackground(string tagValue)
+    {
+        lastBackgroundValue = tagValue;
+        
+        //TAG GESTIONE DELLA CAMERA DA LETTO
+        if (tagValue == "backBedroom")
+        {
+            background.sprite = backBedroom;
+        }
+
+        //TAG GESTIONE DELLA FORESTA
+        if (tagValue == "backForest")
+        {
+            background.sprite = backForest;
+        }
+
+        //TAG GESTIONE DEL TRAIN STOP
+        if (tagValue == "backTrainStop")
+        {
+            background.sprite = backTrainStop;
+        }
+
+        //TAG GESTIONE DELLA SERRA
+        if (tagValue == "backGreenhouse")
+        {
+            background.sprite = backGreenhouse;
+        }
+
+        //BACKGROUND TAG FOR POND
+        if (tagValue == "backPond")
+        {
+            background.sprite = backPond;
+        }
+
+        //TAG GESTIONE DEL NIDO
+        if (tagValue == "backNest")
+        {
+            background.sprite = backNest;
+        }
+
+        //TAG GESTIONE DELLA BIBLIOTECA
+        if (tagValue == "backLibrary")
+        {
+            background.sprite = backLibrary;
+        }
+
+        if (tagValue == "backNightLibrary")
+        {
+            background.sprite = backNightLibrary;
+        }
+
+        //TAG GESTIONE DEL LABORATORIO
+        if (tagValue == "backLaboratory")
+        {
+            background.sprite = backLaboratory;
+        }
+
+        //TAG GESTIONE DEL LIBRO
+        if (tagValue == "bookBGZero")
+        {
+            background.sprite = bookBGZero;
+        }
+
+        if (tagValue == "bookBGOne")
+        {
+            background.sprite = bookBGOne;
+        }
+
+        if (tagValue == "bookBGTwo")
+        {
+            background.sprite = bookBGTwo;
+        }
+
+        if (tagValue == "bookBGThree")
+        {
+            background.sprite = bookBGThree;
+        }
+
+        if (tagValue == "bookBGFour")
+        {
+            background.sprite = bookBGFour;
+        }
+
+        if (tagValue == "bookBGFive")
+        {
+            background.sprite = bookBGFive;
         }
     }
 
@@ -642,7 +731,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
             story.state.LoadJson(saveData.inkState);
             Debug.Log("Gioco caricato!");
             ContinueStory();
-            UpdateUI(story.currentText.Trim());
+            UpdateUI(story.currentText.Trim(), story.currentChoices);
             return true;
         }
         else

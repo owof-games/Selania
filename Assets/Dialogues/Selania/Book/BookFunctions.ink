@@ -6,6 +6,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
 
 === book_tracking_arrive ===
 //Questa funzione serve per tracciare da quale luogo arriviamo nel libro
+// in tutti i casi in cui c'è @exit_from_rewriter_book, non andrà più avanti: in UpdateUI di DialogueManagerSingleInk viene fatto switch al flow di default, e quindi smette di eseguire questo flow
 
 {
     - arrivingFrom == Forest:
@@ -15,9 +16,9 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
             - gifts_and_ink.sbadata or cultivable_test:
                 ~ move_entity(Inventory, Forest)
         }
-        ~ arrivingFrom = ()
         ~ disableBigDialogue()
-        -> forest
+        @exit_from_rewriter_book
+        // -> forest
     
     - arrivingFrom == Greenhouse:
         ~ move_entity(PG, Greenhouse)
@@ -26,9 +27,9 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
             - gifts_and_ink.sbadata or cultivable_test:
                 ~ move_entity(Inventory, Greenhouse)
         }
-        ~ arrivingFrom = ()
         ~ disableBigDialogue()
-        -> greenhouse
+        @exit_from_rewriter_book
+        // -> greenhouse
     
     - arrivingFrom == Pond:
         ~ move_entity(PG, Pond)
@@ -37,9 +38,9 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
             - gifts_and_ink.sbadata or cultivable_test:
                 ~ move_entity(Inventory, Pond)
         }
-        ~ arrivingFrom = ()
         ~ disableBigDialogue()
-        -> pond
+        @exit_from_rewriter_book
+        // -> pond
         
     - arrivingFrom == Laboratory:
         ~ move_entity(PG, Laboratory)
@@ -48,9 +49,9 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
             - gifts_and_ink.sbadata or cultivable_test:
                 ~ move_entity(Inventory, Laboratory)
         }
-        ~ arrivingFrom = ()
         ~ disableBigDialogue()
-        -> laboratory
+        @exit_from_rewriter_book
+        // -> laboratory
 
     - arrivingFrom == Library:
         ~ move_entity(PG, Library)
@@ -59,9 +60,9 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
             - gifts_and_ink.sbadata or cultivable_test:
                 ~ move_entity(Inventory, Library)
         }
-        ~ arrivingFrom = ()
         ~ disableBigDialogue()
-        -> library
+        @exit_from_rewriter_book
+        // -> library
         
     - arrivingFrom == Nest:
         ~ move_entity(PG, Nest)
@@ -70,9 +71,9 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
             - gifts_and_ink.sbadata or cultivable_test:
                 ~ move_entity(Inventory, Nest)
         }    
-        ~ arrivingFrom = ()
         ~ disableBigDialogue()
-        -> nest
+        @exit_from_rewriter_book
+        // -> nest
         
     - arrivingFrom == TrainStop:
         ~ move_entity(PG, TrainStop)
@@ -81,16 +82,16 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
             - gifts_and_ink.sbadata or cultivable_test:
                 ~ move_entity(Inventory, TrainStop)
         }
-        ~ arrivingFrom = ()
         ~ disableBigDialogue()
-        -> train_stop
+        @exit_from_rewriter_book
+        // -> train_stop
 
     - arrivingFrom == Bedroom:
         ~ move_entity(PG, Bedroom)
-        ~ arrivingFrom = ()
         ~ disableBigDialogue()
-        -> bedroom   
+        @exit_from_rewriter_book
+        // -> bedroom   
     
-    -else: ERROR: non riesco a trovare il luogo di provenienza
+    -else: ERROR: non riesco a trovare il luogo di provenienza; arrivingFrom = {arrivingFrom}
 }
 ->->
