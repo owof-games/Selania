@@ -693,7 +693,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
     {
         return (InkList)story.variablesState["growthBarbaDellInciampo"];
     }   
-
+    public InkList GetEffettivoStatoOlobino()
+    {
+        return (InkList)story.variablesState["growthOlobino"];
+    }   
     [System.Serializable]
     public class SaveData
     {
