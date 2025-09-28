@@ -38,5 +38,8 @@ VAR findedGifts = ()
         
         - BarbaDellInciampo:
             ~ return "una spina di Barba dell'Inciampo"
+        
+        - Olobino:
+            ~ return "un cappello di Olobino"
     
     }

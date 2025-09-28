@@ -265,6 +265,30 @@ VAR currentReceiver = ()
                     -> second_story_gift.ink_outcome
         
     }
+    
+ + {findedGifts has Olobino} [Una cappello di Olobino.]
+    ~ findedGifts -= Olobino
+    {
+        - currentReceiver has FirstCharacter:
+            ~ firstCharacterInkLevel ++
+            <i>{translator(firstCharacterState)} è estatica.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+            Grazie {name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
+            Credo mi prenderò un po' di tempo per me con questo dono.
+                ~ firstGift += Olobino
+                ~ currentReceiver = ()
+                    -> first_story_gift.ink_outcome
+        
+        
+        - currentReceiver has SecondCharacter:
+            <i>{translator(secondCharacterState)} lo annusa e lo lascia cadere a terra, annoiato.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ secondGift += Olobino
+                ~ currentReceiver = ()
+                    -> second_story_gift.ink_outcome
+        
+    }   
+    
+    
+    
         -> main     
     
     //Se la lista è vuota

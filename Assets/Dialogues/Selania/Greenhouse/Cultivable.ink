@@ -142,6 +142,17 @@
              ~ growthBarbaDellInciampo = stepThree
     }     
     
+    - chosenCultivable has Olobino:
+    {
+        - growStep has stepZero:
+            ~ growthOlobino = stepZero
+        - growStep has stepOne:
+            ~ growthOlobino = stepOne
+        - growStep has stepTwo:
+            ~ growthOlobino = stepTwo
+        - growStep has stepThree:
+             ~ growthOlobino = stepThree
+    }
     
     ->->
 }
@@ -268,6 +279,18 @@
             -> barba_dell_inciampo.step_due
         - growthBarbaDellInciampo == stepThree:
             -> barba_dell_inciampo.step_tre
+    }
+    
+    - chosenCultivable has Olobino:
+    {
+        - growStep has stepZero:
+            -> olobino.step_zero 
+        - growStep has stepOne:
+            -> olobino.step_uno 
+        - growStep has stepTwo:
+            -> olobino.step_due 
+        - growStep has stepThree:
+            -> olobino.step_tre 
     }    
     
     -> main
@@ -939,4 +962,69 @@
                 + + [Mi aggiro per la serra.]    
                     -> main 
 
+=== olobino
+
+    = TW
+        ////<i>{chosenCultivable} affronta questo tema delicato: XYZ.
+        //<i>Te la senti di farla crescere, o preferisci cambiare?
+        //        + [Voglio andare avanti.]
+        //    -> step_zero
+        //+ [Voglio rimuoverla, ma solo per ora.]
+        //    -> tempCultTW_formula -> cultivable_test
+        //+ [Voglio rimuoverla, per sempre.]
+        //    -> remove_proposed_cultivable -> cultivable_test
+        //-
+        -> step_zero
+    
+    = step_zero
+    -> remove_proposed_cultivable ->
+        ~ growthOlobino = stepZero
+        <i>{name} ha commesso un errore.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Un errore che è come una lancia.
+                -> main
+    
+    = step_uno
+        <i>La colpa attanaglia {name}.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Se qualcunə critica, aggredisce.</i>
+        <i>Parole come lame, pronte a ferire.</i>
+                -> main
+    
+    = step_due
+       <i>Le lame si fanno muro.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+       <i>Nascondono l'errore dal mondo.</i>
+       <i>Nascondono l'errore da {name}.
+       <i>La colpa è come veleno.
+                -> main
+    
+    = step_tre
+        <i>Quando {name} abbassa le difese, vede con occhi diversi.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>E la pianta con {pronouns has him:lui|{pronouns has her:lei|ləi}}.</i>
+        
+        + (colto)[Afferro l'ultima spina.]
+            <i>C'è pace in {name}, pace nella serra.</i>
+            <i>E il calice della <b>Barba dell'inciampo</b> ora è tana.
+            <i>C'è differenza tra colpa e reponsabilità.
+            <i>Tra punizione ed elaborazione.
+            <i>La lancia della pianta è ora tana per qualcosa di delicato.
+            <i>L'errore di {name} è ora guida per cambiare.
+                ~ growing = 0
+                ~ chosenCultivable = ()
+                
+                @animation:Inventory
+                @animation:RewriterBook
+                
+                    {
+                        - findedGifts hasnt Olobino:
+                            ~ findedGifts += Olobino
+                       <i>Hai ottenuto: <b><i>Bastone dell'Ozioso</b></i>
+                    }
+
+                    ~ move_entity(GreenhouseRecap, BookPlace)
+                    ~ move_entity(Snail, Greenhouse)
+
+                + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
+                        -> cultivable_test
+                        
+                + + [Mi aggiro per la serra.]    
+                    -> main 
 -> main
