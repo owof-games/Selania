@@ -948,9 +948,9 @@
                 @animation:RewriterBook
                 
                     {
-                        - findedGifts hasnt BastoneDellOzioso:
-                            ~ findedGifts += BastoneDellOzioso
-                       <i>Hai ottenuto: <b><i>Bastone dell'Ozioso</b></i>
+                        - findedGifts hasnt BarbaDellInciampo:
+                            ~ findedGifts += BarbaDellInciampo
+                       <i>Hai ottenuto: <b><i>Barba dell'Inciampo</b></i>
                     }
 
                     ~ move_entity(GreenhouseRecap, BookPlace)
@@ -979,34 +979,37 @@
     = step_zero
     -> remove_proposed_cultivable ->
         ~ growthOlobino = stepZero
-        <i>{name} ha commesso un errore.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Un errore che è come una lancia.
+        
+        <i>Piccoli bottoni luccicanti osservano la serra.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Le mani di {name} sembrano più calde.
                 -> main
     
     = step_uno
-        <i>La colpa attanaglia {name}.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Se qualcunə critica, aggredisce.</i>
-        <i>Parole come lame, pronte a ferire.</i>
+        <i>I muscoli di {name} si distendono.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>La mente si fa limpida.</i>
                 -> main
     
     = step_due
-       <i>Le lame si fanno muro.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-       <i>Nascondono l'errore dal mondo.</i>
-       <i>Nascondono l'errore da {name}.
-       <i>La colpa è come veleno.
+       <i>Ogni morbido fungo sembra sparire nell'altro.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+       <i>Il sottile micelio si mescola alle venature del legno.</i>
+       <i>E {name}...
+       <i>Perché dovrebbe limitarsi ad essere {name}?
                 -> main
     
     = step_tre
-        <i>Quando {name} abbassa le difese, vede con occhi diversi.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>E la pianta con {pronouns has him:lui|{pronouns has her:lei|ləi}}.</i>
+        <i>Il tempo si mescola, ieri è oggidomanimai.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>I confini si sciolgono e un corpo è stanzapiantalucerespiro.</i>
         
-        + (colto)[Afferro l'ultima spina.]
-            <i>C'è pace in {name}, pace nella serra.</i>
-            <i>E il calice della <b>Barba dell'inciampo</b> ora è tana.
-            <i>C'è differenza tra colpa e reponsabilità.
-            <i>Tra punizione ed elaborazione.
-            <i>La lancia della pianta è ora tana per qualcosa di delicato.
-            <i>L'errore di {name} è ora guida per cambiare.
+        + (colto)[{name} si mescola col fungo.]
+            <i>C'è solo amore.
+            <i>Per le persone care e per quelle mai conosciute, per quelle perse e quelle che verranno.
+            <i>Per l'insetto nel giardino e l'uccello nel cielo.
+            <i>Per l'acqua sulla fronte e la plastica sotto le dita.
+            <i>C'è completezza, non separazione.
+            <i>C'è e non c'è e ci sarà ed è stato ed è qui, ora.
+            <i>L'<i><b>Olobino</i></b> è un fungo semplice pieno di potere.
+            <i>Il potere che c'è nel perdere il sé.
+            <i>L'eternità nella collettività.
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 
@@ -1016,7 +1019,7 @@
                     {
                         - findedGifts hasnt Olobino:
                             ~ findedGifts += Olobino
-                       <i>Hai ottenuto: <b><i>Bastone dell'Ozioso</b></i>
+                       <i>Hai ottenuto: <b><i>Olobino</b></i>
                     }
 
                     ~ move_entity(GreenhouseRecap, BookPlace)
