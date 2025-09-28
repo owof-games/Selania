@@ -5,7 +5,7 @@
 
     VAR forestContents = (Mentor, Bench, TheWitch, LeafOneSin, LeafTwoSin, LeafThreeSin, LeafFourSin, LeafFiveSin, LeafOneDx, LeafTwoDx, LeafThreeDx, FromForestToTrainStop, FromForestToPond, FromForestToLibraryDesat, Arbustini)
 
-    VAR pondContents = ( FromPondToForest, FromPondToGreenhouse, FromPondToNest, CloudOne, CloudTwo, CloudThree)
+    VAR pondContents = (FromPondToForest, FromPondToGreenhouse, FromPondToNest, CloudOne, CloudTwo, CloudThree)
 
     VAR greenhouseContents = (FromGreenhouseToPond, WateringCan, LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, CardoAspinato, BastoneDellOzioso, BarbaDellInciampo)
 
