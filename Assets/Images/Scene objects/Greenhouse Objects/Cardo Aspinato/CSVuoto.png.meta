@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 90c1e7db76a10e043ad56cf8a33f36e9
+guid: d9b1a922cfb55ab4f9bfac293d842392
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5259266608487890882
-    second: CS Due_0
+      213: -3738500018112843432
+    second: CSVuoto_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CS Due_0
+      name: CSVuoto_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 57
-        width: 324
-        height: 423
+        x: 12
+        y: 7
+        width: 382
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2cf7ef99d1bacf840800000000000000
-      internalID: 5259266608487890882
+      spriteID: 851b79b7a0e2e1cc0800000000000000
+      internalID: -3738500018112843432
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      CS Due_0: 5259266608487890882
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
