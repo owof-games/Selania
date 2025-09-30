@@ -696,7 +696,11 @@ public class DialogueManagerSingleInk : MonoBehaviour
     public InkList GetEffettivoStatoOlobino()
     {
         return (InkList)story.variablesState["growthOlobino"];
-    }   
+    }
+     public InkList GetEffettivoStatoFalsaPalude()
+    {
+        return (InkList)story.variablesState["growthFalsaPalude"];
+    }      
     [System.Serializable]
     public class SaveData
     {
