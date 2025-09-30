@@ -10,10 +10,10 @@ VAR findedGifts = ()
 === function ingredientTranslator(ingredient)
     {ingredient:
         - LaSpazzata: 
-            ~ return "un rametto della Spezzata"
+            ~ return "una foglia della Spezzata"
             
         - BaccaDellaAddolorata: 
-            ~ return "una Bacca della Addolorata"
+            ~ return "un seme di Bacca della Addolorata"
             
         - EderaDelleAmanti:
             ~ return "una foglia di Edera delle Amanti"

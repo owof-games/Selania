@@ -590,29 +590,30 @@
     = step_zero
     -> remove_proposed_cultivable ->
     ~ growthBaccaDellaAddolorata = stepZero
-        <i>Cinque punte titubanti emergono dal vaso.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Saggiano l'aria con timore, pronte a ritirarsi.</i>
+        <i>Nulla cambia.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     
     = step_uno
-        <i>Rami secchi graffiano l'aria.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Cercano invano di tornare nella terra.</i>
+        <i>Un vaso inizia a deformarsi.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>{name} sente un poco di freddo.</i>
             -> main
     
     = step_due
-        <i>Rami come dita riempiono il vaso.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Slanciati verso l'alto, feriti.</i>
+        <i>Un ramo rompe il vaso.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Insicuro eppure diritto punta verso {name}.</i>
           -> main
           
     = step_tre
-        <i>Le dita ora una mano tesa verso il cielo, una vecchia ferita al centro brilla di resina rossastra.<i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Rami verso il cielo sostengono un frutto.<i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Semi rossastri e foglie sottili.
         <i>Coraggiosa, la <b><i>Bacca dell'Addolorata</b></i> espone le sue ferite al mondo.</b></i>
         <i>Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ancora ad avanzare.</i>
 
-            + (colto) [Afferro la bacca.]
-            <i>La mano cede la sua presa rilassandosi.
+            + (colto) [Afferro uno dei semi.]
+            <i>Il frutto si rivela tenace, deciso.
             <i>Si rilassano le spalle di {name}.
             <i>L'incertezza scivola via.
+            <i>L'avanzare di un ramo timido ha permesso alla <b>Bacca</b> di fruttare.
             <i>Compiere il primo passo è faticoso.
             <i>Ma ora {name} ricorda come camminare.
                 ~ growing = 0
