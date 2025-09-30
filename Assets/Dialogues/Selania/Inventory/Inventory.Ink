@@ -287,7 +287,23 @@ VAR currentReceiver = ()
         
     }   
     
-    
+ + {findedGifts has FalsaPalude} [Un petalo di Falsa Palude.]
+    ~ findedGifts -= FalsaPalude
+    {
+        - currentReceiver has FirstCharacter:
+            <i>{translator(firstCharacterState)} non sembra colpita.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ firstGift += FalsaPalude
+                ~ currentReceiver = ()
+                    -> first_story_gift.ink_outcome
+        
+        
+        - currentReceiver has SecondCharacter:
+            <i>{translator(secondCharacterState)} continua a mordicchiarsi le unghie sporche.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ secondGift += FalsaPalude
+                ~ currentReceiver = ()
+                    -> second_story_gift.ink_outcome
+        
+    }       
     
         -> main     
     

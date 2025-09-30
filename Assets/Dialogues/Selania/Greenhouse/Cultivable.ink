@@ -1033,4 +1033,75 @@
                         
                 + + [Mi aggiro per la serra.]    
                     -> main 
+
+=== falsa_palude
+
+    = TW
+        ////<i>{chosenCultivable} affronta questo tema delicato: XYZ.
+        //<i>Te la senti di farla crescere, o preferisci cambiare?
+        //        + [Voglio andare avanti.]
+        //    -> step_zero
+        //+ [Voglio rimuoverla, ma solo per ora.]
+        //    -> tempCultTW_formula -> cultivable_test
+        //+ [Voglio rimuoverla, per sempre.]
+        //    -> remove_proposed_cultivable -> cultivable_test
+        //-
+        -> step_zero
+    
+    = step_zero
+    -> remove_proposed_cultivable ->
+        ~ growthFalsaPalude = stepZero
+        
+        <i>Piccoli bottoni luccicanti osservano la serra.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Le mani di {name} sembrano più calde.
+                -> main
+    
+    = step_uno
+        <i>I muscoli di {name} si distendono.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>La mente si fa limpida.</i>
+                -> main
+    
+    = step_due
+       <i>Ogni morbido fungo sembra sparire nell'altro.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+       <i>Il sottile micelio si mescola alle venature del legno.</i>
+       <i>E {name}...
+       <i>Perché dovrebbe limitarsi ad essere {name}?
+                -> main
+    
+    = step_tre
+        <i>Il tempo si mescola, ieri è oggidomanimai.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>I confini si sciolgono e un corpo è stanzapiantalucerespiro.</i>
+        
+        + (colto)[{name} si mescola col fungo.]
+            <i>C'è solo amore.
+            <i>Per le persone care e per quelle mai conosciute, per quelle perse e quelle che verranno.
+            <i>Per l'insetto nel giardino e l'uccello nel cielo.
+            <i>Per l'acqua sulla fronte e la plastica sotto le dita.
+            <i>C'è completezza, non separazione.
+            <i>C'è e non c'è e ci sarà ed è stato ed è qui, ora.
+            <i>L'<i><b>Olobino</i></b> è un fungo semplice pieno di potere.
+            <i>Il potere che c'è nel perdere il sé.
+            <i>L'eternità nella collettività.
+                ~ growing = 0
+                ~ chosenCultivable = ()
+                
+                @animation:Inventory
+                @animation:RewriterBook
+                
+                    {
+                        - findedGifts hasnt FalsaPalude:
+                            ~ findedGifts += FalsaPalude
+                       <i>Hai ottenuto: <b><i>Falsa Palude</b></i>
+                    }
+
+                    ~ move_entity(GreenhouseRecap, BookPlace)
+                    ~ move_entity(Snail, Greenhouse)
+
+                + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
+                        -> cultivable_test
+                        
+                + + [Mi aggiro per la serra.]    
+                    -> main 
+
+
 -> main

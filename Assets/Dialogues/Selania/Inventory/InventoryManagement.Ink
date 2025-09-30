@@ -41,5 +41,8 @@ VAR findedGifts = ()
         
         - Olobino:
             ~ return "un cappello di Olobino"
+            
+        - FalsaPalude:
+            ~ return "un petalo di Falsa Palude"
     
     }
