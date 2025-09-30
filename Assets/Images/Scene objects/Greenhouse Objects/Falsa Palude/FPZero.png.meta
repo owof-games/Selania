@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: dfec0bfa9734ffd43a1e173bd61c55ee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3181441265942237261
+    second: FPZero_0
+  - first:
+      213: -6252816142016209731
+    second: FPZero_1
+  - first:
+      213: 8359237691903889394
+    second: FPZero_2
+  - first:
+      213: 4411310489922253031
+    second: FPZero_3
+  - first:
+      213: -6733643642189956158
+    second: FPZero_4
+  - first:
+      213: 2690046301618060200
+    second: FPZero_5
+  - first:
+      213: 570695759477419044
+    second: FPZero_6
+  - first:
+      213: -8764397179188771171
+    second: FPZero_7
+  - first:
+      213: 4857292938224309180
+    second: FPZero_8
+  - first:
+      213: 4402009605577484865
+    second: FPZero_9
+  - first:
+      213: 8346370067670808022
+    second: FPZero_10
+  - first:
+      213: -4387512004855603149
+    second: FPZero_11
+  - first:
+      213: -8745884689396912904
+    second: FPZero_12
+  - first:
+      213: -6897749438639491529
+    second: FPZero_13
+  - first:
+      213: 1681859859857996419
+    second: FPZero_14
+  - first:
+      213: 5965318961052792011
+    second: FPZero_15
+  - first:
+      213: 8100939833446105892
+    second: FPZero_16
+  - first:
+      213: -4533746025707901819
+    second: FPZero_17
+  - first:
+      213: -3754055972134260564
+    second: FPZero_18
+  - first:
+      213: -9190102282588496625
+    second: FPZero_19
+  - first:
+      213: 1945976554508873840
+    second: FPZero_20
+  - first:
+      213: 4774580549930727694
+    second: FPZero_21
+  - first:
+      213: 2402427587397329989
+    second: FPZero_22
+  - first:
+      213: -1379338817980383079
+    second: FPZero_23
+  - first:
+      213: 8121766394791862649
+    second: FPZero_24
+  - first:
+      213: 96169178263124638
+    second: FPZero_25
+  - first:
+      213: -13254463191293421
+    second: FPZero_26
+  - first:
+      213: -80514602203290289
+    second: FPZero_27
+  - first:
+      213: -5210857770003715675
+    second: FPZero_28
+  - first:
+      213: -8474115004437441169
+    second: FPZero_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FPZero_0
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 157
+        width: 64
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bf6ebd460049d3d0800000000000000
+      internalID: -3181441265942237261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_1
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 193
+        width: 85
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbc9b4109d88939a0800000000000000
+      internalID: -6252816142016209731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_2
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 190
+        width: 68
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ffccf2446af10470800000000000000
+      internalID: 8359237691903889394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_3
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 210
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e035c9b48f183d30800000000000000
+      internalID: 4411310489922253031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_4
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 241
+        width: 13
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb3337a8ca4d82a0800000000000000
+      internalID: -6733643642189956158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_5
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 143
+        width: 82
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ab3c4ddbd6f45520800000000000000
+      internalID: 2690046301618060200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_6
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 131
+        width: 19
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42c297205c48be700800000000000000
+      internalID: 570695759477419044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_7
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 86
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d968408833b9e5680800000000000000
+      internalID: -8764397179188771171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_8
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 67
+        width: 35
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb39fd83132986340800000000000000
+      internalID: 4857292938224309180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_9
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 67
+        width: 67
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14aad46d964171d30800000000000000
+      internalID: 4402009605577484865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_10
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 90
+        width: 47
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d5b8770b5344d370800000000000000
+      internalID: 8346370067670808022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_11
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 94
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 330e1ded31d6c13c0800000000000000
+      internalID: -4387512004855603149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_12
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 58
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc28f1763060a680800000000000000
+      internalID: -8745884689396912904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_13
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 40
+        width: 13
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7363e307e654640a0800000000000000
+      internalID: -6897749438639491529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_14
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 30
+        width: 8
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38af2d4b1aa275710800000000000000
+      internalID: 1681859859857996419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_15
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 32
+        width: 29
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc4347d4df119c250800000000000000
+      internalID: 5965318961052792011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_16
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 16
+        width: 72
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4230e5f9bd15c6070800000000000000
+      internalID: 8100939833446105892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_17
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 25
+        width: 57
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c67dba206e411c0800000000000000
+      internalID: -4533746025707901819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_18
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 51
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca0f002bbf9e6ebc0800000000000000
+      internalID: -3754055972134260564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_19
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 45
+        width: 31
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0d5ecc4aa2367080800000000000000
+      internalID: -9190102282588496625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_20
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 34
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0707db8bd5f710b10800000000000000
+      internalID: 1945976554508873840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_21
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 57
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e093c1e96b7b24240800000000000000
+      internalID: 4774580549930727694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_22
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 42
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544aa618923275120800000000000000
+      internalID: 2402427587397329989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_23
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 25
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9904f5137aa9bdce0800000000000000
+      internalID: -1379338817980383079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_24
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 49
+        width: 27
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 971264e418f46b070800000000000000
+      internalID: 8121766394791862649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_25
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 38
+        width: 41
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9af6bcab59a55100800000000000000
+      internalID: 96169178263124638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_26
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 27
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3126bcdc229e0dff0800000000000000
+      internalID: -13254463191293421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_27
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 22
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f45e0785564f1eef0800000000000000
+      internalID: -80514602203290289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_28
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 32
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a928db67705fa7b0800000000000000
+      internalID: -5210857770003715675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FPZero_29
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 29
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f65d2be1d45e56a80800000000000000
+      internalID: -8474115004437441169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FPZero_0: -3181441265942237261
+      FPZero_1: -6252816142016209731
+      FPZero_10: 8346370067670808022
+      FPZero_11: -4387512004855603149
+      FPZero_12: -8745884689396912904
+      FPZero_13: -6897749438639491529
+      FPZero_14: 1681859859857996419
+      FPZero_15: 5965318961052792011
+      FPZero_16: 8100939833446105892
+      FPZero_17: -4533746025707901819
+      FPZero_18: -3754055972134260564
+      FPZero_19: -9190102282588496625
+      FPZero_2: 8359237691903889394
+      FPZero_20: 1945976554508873840
+      FPZero_21: 4774580549930727694
+      FPZero_22: 2402427587397329989
+      FPZero_23: -1379338817980383079
+      FPZero_24: 8121766394791862649
+      FPZero_25: 96169178263124638
+      FPZero_26: -13254463191293421
+      FPZero_27: -80514602203290289
+      FPZero_28: -5210857770003715675
+      FPZero_29: -8474115004437441169
+      FPZero_3: 4411310489922253031
+      FPZero_4: -6733643642189956158
+      FPZero_5: 2690046301618060200
+      FPZero_6: 570695759477419044
+      FPZero_7: -8764397179188771171
+      FPZero_8: 4857292938224309180
+      FPZero_9: 4402009605577484865
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
