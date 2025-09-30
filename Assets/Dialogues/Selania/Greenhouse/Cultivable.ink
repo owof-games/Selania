@@ -153,7 +153,19 @@
         - growStep has stepThree:
              ~ growthOlobino = stepThree
     }
-    
+
+    - chosenCultivable has FalsaPalude:
+    {
+        - growStep has stepZero:
+            ~ growthFalsaPalude = stepZero
+        - growStep has stepOne:
+            ~ growthFalsaPalude = stepOne
+        - growStep has stepTwo:
+            ~ growthFalsaPalude = stepTwo
+        - growStep has stepThree:
+             ~ growthFalsaPalude = stepThree
+    }
+        
     ->->
 }
 
@@ -292,7 +304,19 @@
         - growStep has stepThree:
             -> olobino.step_tre 
     }    
-    
+
+    - chosenCultivable has FalsaPalude:
+    {
+        - growStep has stepZero:
+            -> falsa_palude.step_zero 
+        - growStep has stepOne:
+            -> falsa_palude.step_uno 
+        - growStep has stepTwo:
+            -> falsa_palude.step_due 
+        - growStep has stepThree:
+            -> falsa_palude.step_tre 
+    }    
+        
     -> main
 }
 
@@ -1024,7 +1048,6 @@
                     }
 
                     ~ move_entity(GreenhouseRecap, BookPlace)
-                    ~ move_entity(Snail, Greenhouse)
                     ~ move_entity(FromPondToGreenhouseBlooming, Pond)
                     ~ move_entity(FromPondToGreenhouse, Safekeeping)
 
@@ -1093,7 +1116,6 @@
                     }
 
                     ~ move_entity(GreenhouseRecap, BookPlace)
-                    ~ move_entity(Snail, Greenhouse)
 
                 + + {backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
