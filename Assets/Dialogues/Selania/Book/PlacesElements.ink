@@ -48,6 +48,7 @@
     
     {olobino.step_tre.colto: (Nota: chiedere alla editor se sia legale condividere consigli di coltivazione). L'<i><b>Olobino</i></b> non andrebbe spiegato, ma provato. Questo fungo grigiastro, anonimo, è forse il miglior compagno per un risveglio spirituale. I suoi infiniti nomi popolari raccontano quanto sia stato centrale nelle nostre culture: Guida d'Oro, Occhio del Saggio, Lingua della Dea, Amorino, Pacificatore, Terrore del Prete. Personalmente, chiunque dovrebbe provarlo almeno una volta per vedersi con un amore incondizionato, per amare il mondo incondizionatamente. Per comprendere cosa si intende per "dissoluzione dell'ego".}
     
+    {falsa_palude.step_tre.colto: La <b><i>Falsa Palude</i></b> è un piccolo miracolo della natura. Unico corallo di terra a noi conosciuto, è il risultato di una collaborazione senza verticalità, senza distruzione. Dalla sua scoperta tutto sommato recente è diventato il simbolo di numerose congreghe femministe e queer: tanto per una congrega quanto per una colonia di polipi, l'esperienza personale emerge in qualcosa di trasformativo solo quando vengono riconosciute le dinamiche e le oppressioni strutturali. Inoltre la <b><i>Falsa Palude</i></b> è capace di portare vita nei luoghi più desolati: ex centrali nucleari, vecchie miniere, i convegni del Movimento per la Rinascita Maschile.}    
 
 -> rewriter_book_with_flow
 

@@ -1051,37 +1051,35 @@
     = step_zero
     -> remove_proposed_cultivable ->
         ~ growthFalsaPalude = stepZero
-        
-        <i>Piccoli bottoni luccicanti osservano la serra.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Le mani di {name} sembrano più calde.
+        <i>Il vento spinge lo sporco sul pavimento, avvicinandolo ai piedi di {name}.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 -> main
     
     = step_uno
-        <i>I muscoli di {name} si distendono.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>La mente si fa limpida.</i>
+        <i>Lo sporco si è accresciuto.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>E ogni sua parte bisbiglia parole.</i>
+        <i>Il nome di {name} sembra lontano.</i>
+        <i>Ma riconosce sentimenti che ha già vissuto.</i>
                 -> main
     
     = step_due
-       <i>Ogni morbido fungo sembra sparire nell'altro.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-       <i>Il sottile micelio si mescola alle venature del legno.</i>
-       <i>E {name}...
-       <i>Perché dovrebbe limitarsi ad essere {name}?
+       <i>Nella calma della serra il pavimento sembra vivo.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+       <i>Foglie e fiori e pistilli avanzano l3 un3 verso l3 altr3.</i>
+       <i>Il sentimento si è fatto movimento.
+       <i>Forse {name} non è {pronouns has him:solo|{pronouns has her:sola|solə}} nel vivere certe emozioni?
                 -> main
     
     = step_tre
-        <i>Il tempo si mescola, ieri è oggidomanimai.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>I confini si sciolgono e un corpo è stanzapiantalucerespiro.</i>
+        <i>Il movimento si è fatto unione, si è fatto gruppo.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>E un cespuglio fitto e odoroso illumina il pavimento della serra.</i>
         
-        + (colto)[{name} si mescola col fungo.]
-            <i>C'è solo amore.
-            <i>Per le persone care e per quelle mai conosciute, per quelle perse e quelle che verranno.
-            <i>Per l'insetto nel giardino e l'uccello nel cielo.
-            <i>Per l'acqua sulla fronte e la plastica sotto le dita.
-            <i>C'è completezza, non separazione.
-            <i>C'è e non c'è e ci sarà ed è stato ed è qui, ora.
-            <i>L'<i><b>Olobino</i></b> è un fungo semplice pieno di potere.
-            <i>Il potere che c'è nel perdere il sé.
-            <i>L'eternità nella collettività.
+        + (colto)[Raccolgo un petalo.]
+            <i>E tutta la <b>Falsa Palude</b> sospira.
+            <i>Esule dell'acqua, eppure capace di germogliare.
+            <i>La <b>Falsa Palude</b> è corallo di terra, colonia.
+            <i>Vibrazione vicina e ascolto.
+            <i>Ciò che accade quando il dolore si fa terreno comune.
+            <i>Quando storie diverse riconoscono la propria voce.
+            <i>E ciò che sembrava un ostacolo personale, si dimostra un problema strutturale.
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 
