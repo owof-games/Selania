@@ -661,51 +661,50 @@
 === non_ti_scordar_di_te
 
     = TW
-        <i>Attenzione: questa pianta parla di lutto e della sua elaborazione.
-        <i>Se la sente {name} di farla crescere, o preferisce cercare qualcosa di diverso?
-        + [Me la sento, iniziamo.]
-            -> step_zero
-        + [Vorrei evitarla ora, ma riproponimela in futuro.]
-            -> tempCultTW_formula -> cultivable_test
-        + [Non propormi mai più questa pianta.]
-            -> remove_proposed_cultivable ->
-            ~ chosenCultivable = ()
-            -> cultivable_test
-        -
+        //<i>Attenzione: questa pianta parla di lutto e della sua elaborazione.
+        //<i>Se la sente {name} di farla crescere, o preferisce cercare qualcosa di diverso?
+        //+ [Me la sento, iniziamo.]
+        //    -> step_zero
+        //+ [Vorrei evitarla ora, ma riproponimela in futuro.]
+        //    -> tempCultTW_formula -> cultivable_test
+        //+ [Non propormi mai più questa pianta.]
+        //    -> remove_proposed_cultivable ->
+        //    ~ chosenCultivable = ()
+        //    -> cultivable_test
+        //-
             -> step_zero
         
     = step_zero
     -> remove_proposed_cultivable ->
         ~ growthNonTiScordarDiTe = stepZero
-        <i>Affusolata come un asparago una gelatina cristallina spunta da un ramo.</b></i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Radici cromate si raccolgono in piccoli mucchi.</b></i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>L'aria odora di terra e ricordi.
             -> main
     
     = step_uno
-        <i>Il ramo sembra più leggero, vitreo.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>La gelatina non è invitante al tatto, ma l'aria ha un profumo sa di, di cosa? Tabacco?</i>
-        <i>O è canfora? O forse torta e caffè?
-        <i>O l'odore di un vecchio e fidato maglione.</i>
+        <i>L'unione ha portato a una fioritura.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Le radici cespugliose sono sbocciate in qualcosa di nuovo.</i>
+        <i>{name} pensa a chi da tempo cammina con {pronouns has him:lui|{pronouns has her:lei|ləi}}.
           -> main
           
     = step_due
-        <i>Il ramo sembra sparire nella luce della serra.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Trasparente, gioca con la luce, la rende calda e accogliente.</i>
+        <i>Nuove congiunzioni si accrescono tra i cespugli radicali.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Ciò che era separato genera nuove storie.</i>
           -> main
           
     = step_tre
-        <i>Ramo e sostanza sono una cosa sola: un fungo di vetro, dita che si sfiorano e intrecciano tese verso il cielo.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        <i>Hai trovato un <b><i>Non ti scordar di te</b></i>.</i>
-        <i>Trasforma ciò che è era per renderlo vita nuova.</i>
-        <i>Il nuovo nell'antico, il presente nel futuro.</i>
+        <i>Ciò che è nato fiorisce e genera a sua volta.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Trasforma un collegamento in una nuova vittoria.</i>
 
-        + (colto) [Intreccio le mie dita alle sue.]
-            <i>{name} ha il volto rigato di lacrime.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            <i>E sorride.</i>
-            <i>L'aria è riscaldata da un profumo familiare.</i>
-            <i>Una carezza sul viso, un saluto.</i>
-            <i>Un nome che continua a pronunciare, anche se nessun arriva più.</i>
-            <i>Ma quel nome e {name} si intrecciano, come ramo e fungo.
-            <i>Due capitoli della stessa storia.</i>
+        + (colto) [Colgo uno dei fiori.]
+            <i>{name} si sente ramo, si sente radice.</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>Si sente le persone che è {pronouns has him:stato|{pronouns has her:stata|statə}} e quelle che sarà.</i>
+            <i>Le persone che l'hanno {pronouns has him:accompagnato|{pronouns has her:accompagnata|accompagnatə}} nella sua vita.
+            <i><b>Non ti scordar di te</b> è la pianta del ricordo.
+            <i>E del costruire.
+            <i>Del celebrare le parti di chi abbiamo incontrato, che continuano a vivere in noi.
+            <i>Del sentirci eredi e messagger3, parte di un percorso intessuto di nomi.
+            <i>A quali nomi {name} name ripensa?
                 ~ growing = 0
                 ~ chosenCultivable = ()
                     @animation:Inventory
