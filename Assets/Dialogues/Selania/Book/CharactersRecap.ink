@@ -97,7 +97,7 @@
 
 
 {
-    - first_story_gift.ink_outcome: <b><i>Appunti su dono e riscrittura.</b></i>
+    - first_story_gift.ink_outcome: <b><i>Appunti su dono e riscrittura:</b></i> <>
 }
 
 {
@@ -122,48 +122,49 @@
 {main_story_first_character.ending: Dopo la Riscrittura, ha scelto un nuovo nome: <b><i>{translator(firstCharacterState)}.</b></i>}
 
 
-{
-    - main_story_first_character:
-        Dopo il dono, Chitarra mi ha detto di aver capito perché si sia ritrovata con questo nome. Crede che la Chitarra sia il segno del rimanere nel medio, nella cosa più ovvia, e questo perché mentre tutte le persone care le fanno pressioni su cosa scegliere o meno per il suo futuro, lei ha solo paura. Crede che una scelta chiuda strade, deluda persone, o possa portarti in luoghi sbagliati. E a quel punto non ci sia modo di tornare indietro. Forse, allora, è meglio che siano le altre persone a scegliere per te.
-    
-}
-
 
 //Appunto sul dono fatto
 {
     - first_story_gift.ink_outcome:
         {
             - firstGift == EderaDelleAmanti:
-                Le ho donato una foglia di <b><i>Edera delle Amanti</b></i>, ma non ha compreso il significato del mio dono.
+                Le ho donato una foglia di <b><i>Edera delle Amanti</b></i>, ma non ha compreso il significato del mio dono. <>
                 
             - firstGift == BaccaDellaAddolorata:
-                Le ho donato una <b><i>Bacca dell'Addolorata</b></i> e ha sorriso, si è rasserenata.
+                Le ho donato una <b><i>Bacca dell'Addolorata</b></i> e ha sorriso, si è rasserenata. <>
                 
             - firstGift == LaSpazzata:
-                Le ho donato un rametto della <b><i>Spazzata</b></i> e, infastidita, l'ha lanciato via.
+                Le ho donato un rametto della <b><i>Spazzata</b></i> e, infastidita, l'ha lanciato via. <>
                 
             - firstGift == BrinaDellImpossibile: 
-                Le ho donato un frammento di <b><i>Brina dell'Impossibile</b></i> e l'ha gettato a terra, spaventata. Almeno sono ricomparse le linee della mia mano.
+                Le ho donato un frammento di <b><i>Brina dell'Impossibile</b></i> e l'ha gettato a terra, spaventata. Almeno sono ricomparse le linee della mia mano. <>
                 
             - firstGift == CantoDelleCompagne: 
-                Le ho donato una goccia di <b><i>Canto delle Compagne</b></i> e si è messa a cantare il nome delle persone amate.
+                Le ho donato una goccia di <b><i>Canto delle Compagne</b></i> e si è messa a cantare il nome delle persone amate. <>
                 
             - firstGift == LicheneDegliAbissi: 
-                Le ho donato una traccia dell'odore del <b><i>Lichene degli Abissi</b></i> ed era palesemente delusa.
+                Le ho donato una traccia dell'odore del <b><i>Lichene degli Abissi</b></i> ed era palesemente delusa. <>
                 
             - firstGift == NonTiScordarDiTe: 
-                Le ho donato l'impronta del <b><i>Non Ti Scordar Di Te</b></i>: ha sussurrato "nonno" e ha inizito a piangere.
+                Le ho donato l'impronta del <b><i>Non Ti Scordar Di Te</b></i>: ha sussurrato "nonno" e ha inizito a piangere. <>
                 
             - firstGift == CardoAspinato: 
-                Le ho donato un ciuffo di peli di <b><i>Cardo Aspinato</b></i> e sul momento sembra disgustata, ma poi si è messa a ridere.
+                Le ho donato un ciuffo di peli di <b><i>Cardo Aspinato</b></i> e sul momento sembra disgustata, ma poi si è messa a ridere. <>
         
-        }    
+        }
+
+
+{
+    - main_story_first_character:
+        Dopo il dono, Chitarra mi ha detto di aver capito perché si sia ritrovata con questo nome. Crede che la Chitarra sia il segno del rimanere nel medio, nella cosa più ovvia, e questo perché mentre tutte le persone care le fanno pressioni su cosa scegliere o meno per il suo futuro, lei ha solo paura. Crede che una scelta chiuda strade, deluda persone, o possa portarti in luoghi sbagliati. E a quel punto non ci sia modo di tornare indietro. Forse, allora, è meglio che siano le altre persone a scegliere per te.
+    
+}        
 
 }
 
     {
         - knowing_first_character.one:
-            <b><i>Appunti dalle conversazioni.</b></i>
+            <b><i>Appunti dalle conversazioni.</b></i> <>
     }
 
     {
@@ -342,17 +343,17 @@
                     Ieri ho avuto una conversazione da grandi con mio fratello. Me l'ha fatta perché ho chiamato il suo amico "frocio" quando mi ha sgridato. E non avevo fatto nulla di male. A parte mettere della tempera nel suo frullatore. Mio fratello mi ha spiegato perché fa male quella parola. E perché papà la usa quando è arrabbiato. Mi ha detto che tantissime persone usano quella parola come scusa per fare del male ad altre persone. E lo fanno perché hanno paura. E poi mi ha portato in una associazione che serve per chi è come mio fratello o il suo amico e non vuole più avere paura. E io non avevo mai capito che si possono fare tutte queste cose assieme. Mi è dispiaciuto tantissimo aver fatto male al suo amico. Però sono anche contento che mi hanno detto le cose per bene dopo tutti questi anni. E tu hai paura di alcune persone? <>
                     
                 - secondCharacterPossibleStates has Corvo:
-                
-                L'altro giorno ho detto a mamma e papà che voglio diventare un veterinario. Per studiare e salvare gli animali. Mamma ha detto che allora forse dovrei diventare un etologo (questo l'ho fatto scrivere a lei, che però vuole sapere chi sei, è preoccupata). Quando poi ne ho parlato con mio fratello, mi ha detto che questa estate se voglio mi fa conoscere una persona che fa una cosa bellissima: salva gli animali dai laboratori. Mio fratello dice che studiare è importante, ma che per cambiare le cose devo capire come lottare. Avevo capito che dovevo lasciarla via la rabbia, {name}. Ma lui mi dice che la rabbia serve. Va solo mandata nella giusta direzione. Ti scriverò appena scopro qual è quella giusta e quale è quella sbagliata. <>
+                    L'altro giorno ho detto a mamma e papà che voglio diventare un veterinario. Per studiare e salvare gli animali. Mamma ha detto che allora forse dovrei diventare un etologo (questo l'ho fatto scrivere a lei, che però vuole sapere chi sei, è preoccupata). Quando poi ne ho parlato con mio fratello, mi ha detto che questa estate se voglio mi fa conoscere una persona che fa una cosa bellissima: salva gli animali dai laboratori. Mio fratello dice che studiare è importante, ma che per cambiare le cose devo capire come lottare. Avevo capito che dovevo lasciarla via la rabbia, {name}. Ma lui mi dice che la rabbia serve. Va solo mandata nella giusta direzione. Ti scriverò appena scopro qual è quella giusta e quale è quella sbagliata. <>
                 
      
             }
           PS: come sta {charNameFive}? Mi spiace per come l'ho trattata mentre ero lì, sai? Ma non dirglielo. Per ora per lo meno. Ciao!
 }
+
 //Appunto sul dono fatto
 
 {
-    - second_story_gift.ink_outcome: <b><i>Appunti su dono e riscrittura.</b></i>
+    - second_story_gift.ink_outcome: <b><i>Appunti su dono e riscrittura:</b></i> <>
 }
 
 {
@@ -382,46 +383,46 @@
 
 
 {
-- main_story_second_character: 
-        Dopo il dono, Riccio mi ha detto che da quando la nonna è nella casa dei vecchi, tutto fa schifo. Suo padre è tornato e litiga sempre con sua madre. Se il padre non c'è, la madre si incazza con lui, e gli dice di smetterla di piangere e di fare il grande. Le maestre sono "fastidiose". Il fratello dice che il mondo è un posto orribile e irreparabile. Gli animali spariranno tutti per colpa nostra. I grandi fanno schifo e per questo non vuole crescere. E ha inventato la storia del compleanno perché se non inventa motivi, nessuno lo ascolta.
-}
-
-
-
-{
     - second_story_gift.ink_outcome:
         {
             - secondGift == EderaDelleAmanti:
-                Gli ho donato una foglia di <b><i>Edera delle Amanti</b></i>, e mi ha guardato imbarazzato.
+                Gli ho donato una foglia di <b><i>Edera delle Amanti</b></i>, e mi ha guardato imbarazzato. <>
                 
             - secondGift == BaccaDellaAddolorata:
-                Gli ho donato una <b><i>Bacca dell'Addolorata</b></i> ma non gli è interessata.
+                Gli ho donato una <b><i>Bacca dell'Addolorata</b></i> ma non gli è interessata. <>
                 
             - secondGift == LaSpazzata:
-                Gli ho donato un rametto della <b><i>Spazzata</b></i> e si è esaltato, ha continuato a rigirarsi il frammento tra le dita, pieno di gioia rabbiosa.
+                Gli ho donato un rametto della <b><i>Spazzata</b></i> e si è esaltato, ha continuato a rigirarsi il frammento tra le dita, pieno di gioia rabbiosa. <>
                 
             - secondGift == BrinaDellImpossibile: 
-                Gli ho donato un frammento di <b><i>Brina dell'Impossibile</b></i> e ha iniziato a tremare e piangere. Le linee della mia mano sono ricomparse.
+                Gli ho donato un frammento di <b><i>Brina dell'Impossibile</b></i> e ha iniziato a tremare e piangere. Le linee della mia mano sono ricomparse. <>
                 
             - secondGift == CantoDelleCompagne: 
-                Gli ho donato una goccia di <b><i>Canto delle Compagne</b></i>: ha provato ad assaggiarla e ha vomitato.
+                Gli ho donato una goccia di <b><i>Canto delle Compagne</b></i>: ha provato ad assaggiarla e ha vomitato. <>
                 
             - secondGift == LicheneDegliAbissi: 
-                Gli ho donato una traccia dell'odore del <b><i>Lichene degli Abissi</b></i>, ha provato a dire qualcosa ma poi si è zittito.
+                Gli ho donato una traccia dell'odore del <b><i>Lichene degli Abissi</b></i>, ha provato a dire qualcosa ma poi si è zittito. <>
                 
             - secondGift == NonTiScordarDiTe: 
-                Gli ho donato l'impronta del <b><i>Non Ti Scordar Di Te</b></i>: mi ha abbracciato, per poi allontanarsi imbarazzato.
+                Gli ho donato l'impronta del <b><i>Non Ti Scordar Di Te</b></i>: mi ha abbracciato, per poi allontanarsi imbarazzato. <>
                 
             - secondGift == CardoAspinato: 
-                Gli ho donato un ciuffo di peli di <b><i>Cardo Aspinato</b></i> e si è messo a ridere, poi mi ha ringraziato.
+                Gli ho donato un ciuffo di peli di <b><i>Cardo Aspinato</b></i> e si è messo a ridere, poi mi ha ringraziato. <>
         
         }    
 
 }
 
+
+{
+- main_story_second_character: 
+        Dopo il dono, Riccio mi ha detto che da quando la nonna è nella casa dei vecchi, tutto fa schifo. Suo padre è tornato e litiga sempre con sua madre. Se il padre non c'è, la madre si incazza con lui, e gli dice di smetterla di piangere e di fare il grande. Le maestre sono "fastidiose". Il fratello dice che il mondo è un posto orribile e irreparabile. Gli animali spariranno tutti per colpa nostra. I grandi fanno schifo e per questo non vuole crescere. E ha inventato la storia del compleanno perché se non inventa motivi, nessuno lo ascolta.
+}
+
+
 {
     - knowing_second_character.one:
-           <b><i>Appunti dalle conversazioni.</b></i>
+           <b><i>Appunti dalle conversazioni.</b></i> <>
 }
 
 {
@@ -832,10 +833,7 @@
         ~ temp charNameFive = translator(fifthCharacterState)
         
 
-<b><i>Appunti dalle conversazioni.</b></i>
-
-        
-Ho incontrato una persona che mi ha detto di chiamarla Mentore, perché mi farà da guida in questo luogo. E dopo avermi chiesto nomi e pronomi, mi ha {pronouns has him:invitato|{pronouns has her:invitata|invitatə}} a parlare con le persone che trovo in giro. {gifts_and_ink: Per poi dirmi che sono {pronouns has him:un Riscrittore|{pronouns has her:una Riscrittora|unə Riscrittorə}}, e darmi un po' di indicazioni su cosa dovrei fare.}
+<b><i>Appunti dalle conversazioni.</b></i> Ho incontrato una persona che mi ha detto di chiamarla Mentore, perché mi farà da guida in questo luogo. E dopo avermi chiesto nomi e pronomi, mi ha {pronouns has him:invitato|{pronouns has her:invitata|invitatə}} a parlare con le persone che trovo in giro. {gifts_and_ink: Per poi dirmi che sono {pronouns has him:un Riscrittore|{pronouns has her:una Riscrittora|unə Riscrittorə}}, e darmi un po' di indicazioni su cosa dovrei fare.}
 
 {that_little_liar_storylet: Dopo l'arrivo del bimbo, la prima cosa che mi ha chiesto è se son {pronouns has him:riuscito|{pronouns has her:riuscita|riuscitə}} a mandarlo a casa. Dice che qui non è sicuro per i bambini, che lui le ha tirato un calcio. Ma che le fa tenerezza, e per questo gli sembra un Riccio.}
 {watering_can_storylet: Con la scomparsa dell'annaffiatoio, ha sbroccato un poco contro Riccio, e poi mi ha detto di caricarlo di peso sul prossimo treno, perché questo posto non è sicuro per lui.}

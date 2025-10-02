@@ -3,8 +3,7 @@
 ~ enableBigDialogue()
     {
         - gifts_and_ink:
-            Ho appuntato qui le cose che mi ha detto Mentore sulla <b><i>riscrittura</b></i>.
-            La prima cosa da fare è: conquistare la <b><i>fiducia</b></i> della persona che devo aiutare. Ci parlo, cercando di capire di cosa ha bisogno e quali sono le risposte che le piacciono. Poi, le faccio un <b><i>dono</b></i>, qualcosa che ho creato con fatica, come qualcosa coltivato in serra. Il dono aumenta anche l'<b><i>inchiostro</b></i> che avrò a disposizione.
+            Ho appuntato qui le cose che mi ha detto Mentore sulla <b><i>riscrittura</b></i>. La prima cosa da fare è: conquistare la <b><i>fiducia</b></i> della persona che devo aiutare. Ci parlo, cercando di capire di cosa ha bisogno e quali sono le risposte che le piacciono. Poi, le faccio un <b><i>dono</b></i>, qualcosa che ho creato con fatica, come qualcosa coltivato in serra. Il dono aumenta anche l'<b><i>inchiostro</b></i> che avrò a disposizione.
     }
     {
     
