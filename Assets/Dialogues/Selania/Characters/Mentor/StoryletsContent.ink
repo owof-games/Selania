@@ -88,8 +88,7 @@
                     Io devo raccogliere le foglie dalla foresta.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                         ~ firstPauseTalking = 0
                         ~ move_entity(FifthRecap, BookPlace)
-                    
-                     @animation:RewriterBook
+                        @animation:RewriterBook
 
                     -> main
                 
@@ -230,7 +229,6 @@
             
             ~ move_entity(RulesRecap, BookPlace)      
             ~ firstPauseTalking = 0
-
             @animation:RewriterBook
             
                 -> main
@@ -288,7 +286,6 @@
             Quando te la senti, affronta questo ultimo passaggio e poi torna da me.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             
             ~ firstPauseTalking = 0
-
             @animation:RewriterBook
             
                 -> main

@@ -104,6 +104,7 @@
     Comunque ho pensato fosse il caso di dartelo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
         ~ move_entity(WitchRecap, BookPlace)
         ~ move_entity(miniBook, Bedroom)
+        @animation:RewriterBook
         ~ somethingStrange ++
             {
                 - forestContents has PG:
@@ -114,6 +115,6 @@
                     ~ move_entity(RewriterBook, Pond)        
             }
             
-        @animation:RewriterBook
+
 
 -> main

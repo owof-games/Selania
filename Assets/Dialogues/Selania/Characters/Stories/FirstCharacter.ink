@@ -293,8 +293,8 @@
         Ci vediamo dopo, {name}. Stammi bene.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
             ~ firstPauseTalking = firstCharPauseDuration
             ~ move_entity(FirstRecap, BookPlace)
-
-            @animation:RewriterBook
+           
+           @animation:RewriterBook
              
             -> main
         
@@ -355,12 +355,12 @@
             - are_two_entities_together(Mentor, PG): Non hai idea di quanto lavoro ci sia da fare. Quindi sì, cammino MOLTO.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
         } 
          
-         Ma troppe chiacchiere ora, troppe.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
+        Ma troppe chiacchiere ora, troppe.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
         Fammi chillare un attimo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
             ~ firstPauseTalking = firstCharPauseDuration
-
-            @animation:RewriterBook
             
+            @animation:RewriterBook
+
                 -> main  
             
     = three
@@ -424,11 +424,10 @@
          Sono la mia famiglia, loro.
          E nessuna di queste scelte può accontentare tutt3.
          Che rottura di ovaie, {name}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
-
             ~ firstPauseTalking = firstCharPauseDuration
 
             @animation:RewriterBook
-            
+
                 -> main
         
     = four
@@ -487,7 +486,6 @@
                 - else:Devo assolutamente chiederglielo!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
             }
                 ~ firstPauseTalking = firstCharPauseDuration
-
             @animation:RewriterBook
 
                     -> main 
@@ -567,7 +565,6 @@
         Ma ora ho bisogno di rilassarmi un po' ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
         E magari riposa anche tu.
             ~ firstPauseTalking = firstCharPauseDuration
-
             @animation:RewriterBook
             
                 -> main
@@ -634,7 +631,6 @@
         A proposito di cause perse: vado a cercarmi uno spritz.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
         Ho proprio bisogno di staccare.
             ~ firstPauseTalking = firstCharPauseDuration
-
             @animation:RewriterBook
             
                 -> main
@@ -692,7 +688,6 @@
             Comunque non mi piace l'idea che esistano errore e verità.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
             Anche perché quelli pieni di verità hanno sempre finito per ammazzare quell3 come me e Talco.
                 ~ firstPauseTalking = firstCharPauseDuration
-                
                 @animation:RewriterBook
                 
                     -> main           
@@ -761,7 +756,6 @@
          Mi prendo un po' di tempo per me, {name}.
             ~ firstPauseTalking = firstCharPauseDuration
             ~ bookBGVariations ++
-            
             @animation:RewriterBook
                         
                 -> main
@@ -822,7 +816,6 @@
          Credo me ne starò qui ad aspettare questo finto temporale.
 
              ~ firstPauseTalking = firstCharPauseDuration
-
             @animation:RewriterBook
             
             -> main   
@@ -894,7 +887,6 @@
                     E non povera {charNameTwo}?!?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
             } 
             ~ firstPauseTalking = firstCharPauseDuration
-            
             @animation:RewriterBook
             
             -> main
@@ -955,8 +947,7 @@
             
         Lasciami un po' sola ora, {name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
         Perché sto entrando in fase lamentosa e non ho voglia di cringiarti.
-                ~ firstPauseTalking = firstCharPauseDuration
-                
+             ~ firstPauseTalking = firstCharPauseDuration
             @animation:RewriterBook
             
                     -> main
@@ -1023,8 +1014,7 @@
         Woah.    
         Vado a deprimermi da qualche parte.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
 
-                ~ firstPauseTalking = firstCharPauseDuration
-
+            ~ firstPauseTalking = firstCharPauseDuration
             @animation:RewriterBook
             
                     -> main
@@ -1527,7 +1517,6 @@
             ~ firstCharacterInkLevel = Empty
             A dopo {name}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral 
             E prenditi un po' di riposo, non mi schiodare!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
-              
             @animation:RewriterBook
             
         -> main  
