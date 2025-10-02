@@ -5,11 +5,11 @@
 
  
  //Book management (the book will be treated as a place)
-    + {are_two_entities_together(PG, RewriterBook)}[RewriterBook]
+    + {are_two_entities_together(PG, RewriterBook) && !debugStochastic}[RewriterBook]
             ~ move_entity(PG, BookPlace)
         -> main_book
         
-    + {are_two_entities_together(PG, miniBook)} [miniBook]
+    + {are_two_entities_together(PG, miniBook) && !debugStochastic} [miniBook]
             ~ move_entity(PG, BookPlace)
         -> main_book      
  
