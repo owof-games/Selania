@@ -157,15 +157,15 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     = about_unprepared
     <i>La biblioteca ti offre una storia...</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
     
-        + {readingDuration has Short && shortStories^ aboutUnprepared != ()} [Che mi colga<b><i> {pronouns has him:impreparato|{pronouns has her:impreparata|impreparatə}}</b>]
+        + {readingDuration has Short && shortStories^ aboutUnprepared != ()} [Che mi colga<b><i> {pronouns has him:impreparato|{pronouns has her:impreparata|impreparatə}}</b>].
             ~ book = LIST_RANDOM(shortStories^ aboutUnprepared)
          -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutUnprepared != ()} [Che mi colga<b><i> {pronouns has him:impreparato|{pronouns has her:impreparata|impreparatə}}</b>]
+        + {readingDuration has Average && averageStories^ aboutUnprepared != ()} [Che mi colga<b><i> {pronouns has him:impreparato|{pronouns has her:impreparata|impreparatə}}</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutUnprepared)
         -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutUnprepared != ()} [Che mi colga<b><i> {pronouns has him:impreparato|{pronouns has her:impreparata|impreparatə}}</b>]
+        + {readingDuration has Long && longStories^ aboutUnprepared != ()} [Che mi colga<b><i> {pronouns has him:impreparato|{pronouns has her:impreparata|impreparatə}}</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutUnprepared)
         -> from_list_to_books            
         

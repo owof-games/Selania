@@ -145,15 +145,15 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
     = about_unprepared
     <i>La biblioteca ti offre una storia...</i>
     
-        + {readingDuration has Short && shortStories^ aboutUnprepared != ()} [Che mi colga<b>{pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}</b>]
+        + {readingDuration has Short && shortStories^ aboutUnprepared != ()} [Che mi colga<b>{pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}</b>.]
             ~ book = LIST_RANDOM(shortStories^ aboutUnprepared)
             -> refresh_book_lists -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutUnprepared != ()} [Che mi colga<b>{pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}</b>]
+        + {readingDuration has Average && averageStories^ aboutUnprepared != ()} [Che mi colga<b>{pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutUnprepared)
             -> refresh_book_lists -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutUnprepared != ()} [Che mi colga<b>{pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}</b>]
+        + {readingDuration has Long && longStories^ aboutUnprepared != ()} [Che mi colga<b>{pronouns has him: impreparato|{pronouns has her: impreparata|impreparatə}}</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutUnprepared)
             -> refresh_book_lists -> from_list_to_books            
         
