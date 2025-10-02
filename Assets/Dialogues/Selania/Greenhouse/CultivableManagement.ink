@@ -71,10 +71,10 @@
 
 === cultivable_test ===
 {~<i>La serra ha qualcosa da svelarti.|<i>I vasi hanno nuove domande.|<i>La terra è fertile di risposte.|<i>L'aria scompiglia ragnatele e capelli.|<i>Sussurri serpeggiano tra i vasi, ponendoti domande.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-{
-    - not gifts_and_ink.sbadata: <i>Hai trovato un dono: uno zainetto per raccogliere tutto ciò che coltiverai.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-        ~ move_entity(Inventory, Greenhouse)
-}
+    {
+        - not are_two_entities_together(Inventory, PG): <i>Hai trovato un dono: uno zainetto per raccogliere tutto ciò che coltiverai.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ move_entity(Inventory, Greenhouse)
+    }
     -> test
 
 === test
