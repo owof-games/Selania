@@ -12,7 +12,7 @@
         - not gifts_and_ink:
         //Parte solo quando c'è in giro anche Riccio.
             {
-                - not secondStory == StoryStarted:
+                - secondStory == StoryNotStarted:
                     Hai parlato con la nuova arrivata?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                             -> mentor_and_second_char_storylets 
                 
