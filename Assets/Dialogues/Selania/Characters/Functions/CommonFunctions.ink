@@ -4,7 +4,6 @@
 
  ----------------------------------*/
     LIST storyStates = StoryNotStarted, StoryStarted, StoryEnded
-
     
     //Gestione parte dell'albero collegata e recap finale
     LIST endedStories = firstES, secondES, thirdES, fourthES, fifthES
@@ -14,7 +13,7 @@
 //COME PROMEMORIA. LISTA DI TIPI DI TONO CHE POSSIAMO TENERE IN UNA CONVERSAZIONE: ROSSO (RABBIA, PASSIONE, AZIONE, OPPOSIZIONE). VIOLA (SPIRITUALITA', VISIONE DEL GRANDE SCHEMA DELLE COSE, SGUARDO POETICO, TESA VERSO UNA MISSIONE). GIALLO (GIOCOSITA', RISATA, DIVERTIMENTO, FANCIULLEZZA). VERDE (CUORE, AFFETTI, CURA DELLE PERSONE CARE, RIFLESSIONE EMOTIVA). BLU (RAZIONALITA', CALCOLO, VISIONE PRATICA, DISCIPLINA).
 
 //Attesa comparsa prima personaggia
-    VAR delayFirstChar = 5
+    VAR delayFirstChar = 2
 
 //Attesa comparsa quarta personaggia
     VAR delayFourthChar = 20
