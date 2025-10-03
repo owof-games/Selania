@@ -82,7 +82,7 @@
             
             {
                 
-                - talk_with_first_character.hub.gift or talk_with_second_character.hub.gift:
+                - options_first_character or talk_with_second_character.hub.gift:
                     E visto che hai già provato ad offrire un dono a qualcuno, è il caso di darti subito tutte le informazioni necessarie.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                 
                 - not talk_with_first_character: 

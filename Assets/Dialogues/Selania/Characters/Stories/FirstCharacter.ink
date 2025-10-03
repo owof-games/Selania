@@ -2,70 +2,87 @@
     //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
             //Chiacchiera normale
             + {are_two_entities_together(FirstCharacter, PG) && firstStory == StoryStarted}[FirstCharacter]
-                -> talk_with_first_character
-            
+                // -> talk_with_first_character
+                    -> talk_with_first_character
+
             //Chiacchiera a fine storia
             + {are_two_entities_together(FirstCharacter, PG) && firstStory == StoryEnded} [FirstCharacter]
                 -> first_char_story_ended
             + ->
-        
-            -> DONE
+                -> DONE
 
 
 === talk_with_first_character
     ~ temp charNameOne = translator(firstCharacterState)
+    //Se ho storylets in comune disponibili, passo subito a quelli.
         -> common_storylets ->
     
-                {//Se prima chiacchierata
-                    - not knowing_first_character.one:
-                        -> knowing_first_character.one
-                
-                //Se prima chiacchierata fatta e passato abbastanza tempo dalla pausa prevista        
-                    - firstPauseTalking == 0:
-                        -> hub
-                
-                //Altre opzioni        
-                    - else:
-                         {~Ho bisogno di tempo da sola.|Torna tra un po'.|Mi serve un po' di silenzio ora.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-                        -> main    
-                }
-    = hub
-    ~ temp charNameOne = translator(firstCharacterState)
-    
-         {~Le farfalle qui giocano per ore!|No dai. Ma hai visto quanto sono carini gli scoiattoli?!|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
-                + [Ti va di raccontarmi qualcosa di te?]
-                    -> knowing_first_character
+    //Se ho storylets disponibili di Chitarra e non sono in pausa, passo a quelli.
+        {
+
+            - firstPauseTalking == 0:
+                -> knowing_first_character
+
+            - else:
+                -> options_first_character
+        }
+
                     
-                    
-                //Se non ho ancora fatto il dono e NON ho parlato col mentore e ho parlato abbastanza con lei
-                + (gift) {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
-                         Non voglio snitchare, ma non hai ancora chiesto alla mentore a cosa servono.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
-                         Se non parli con lei prima poi minimo ci rimane male.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-                        ~ tutorialPauses = false 
-                            -> main
-                
-                //Se non ho ancora fatto il dono e ho parlato con il mentore e ho parlato abbastanza con lei
-                + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && gifts_and_ink && findedGifts != ()} [Ti vorrei donare questa cosa.]
-                        -> first_story_gift
+=== options_first_character
+    //Se arrivo a options da un dialogo, non mostro commenti da parte della PNG, altrimenti sì.
+        {
+
+            - came_from(->talk_with_first_character):   
+                {~Le farfalle qui giocano per ore!|No dai. Ma hai visto quanto sono carini gli scoiattoli?!|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
+
+        }
+
+    Ma hai la faccia di una persona con delle domande. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious   
+    //Se propongo regalo ma non ho parlato con Mentore:
+        + (gift) {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
+                        Non voglio snitchare, ma non hai ancora chiesto alla mentore a cosa servono.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
+                        Se non parli con lei prima poi minimo ci rimane male.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+                    ~ tutorialPauses = false 
+                        -> main
             
-                //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
-                + {first_story_gift.ink_outcome && not main_story_first_character && not questions} [Vorrei aiutarti a guardare le cose in modo diverso.]
-                        Ama, parla prima con la mentore così ti dice cosa fare e non le prende una sincope se facciamo casini.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
-                            ~ tutorialPauses = false
-                                -> main
-                                
-                + {first_story_gift.ink_outcome && not main_story_first_character &&  questions} [Ti va di riscrivere la tua storia con me?]
-                        -> first_story_chech_trigger
+    //Se non ho ancora fatto il dono e ho parlato con il mentore e ho parlato abbastanza con lei
+        + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && gifts_and_ink && findedGifts != ()} [Ti vorrei donare questa cosa.]
+                    -> first_story_gift
         
-                //SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
-                + {first_story_gift.ink_outcome && main_story_first_character} [Riprendiamo quella storia?]
-                    -> main_story_first_character
-                
-                + [Lascio il dialogo.]
+    //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
+        + {first_story_gift.ink_outcome && not main_story_first_character && not questions} [Vorrei aiutarti a guardare le cose in modo diverso.]
+            Ama, parla prima con la mentore così ti dice cosa fare e non le prende una sincope se facciamo casini.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
+                ~ tutorialPauses = false
                     -> main
-                -
-                    -> talk_with_first_character
-        
+                            
+        + {first_story_gift.ink_outcome && not main_story_first_character &&  questions} [Ti va di riscrivere la tua storia con me?]
+                    -> first_story_chech_trigger
+    
+    //SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
+        + {first_story_gift.ink_outcome && main_story_first_character} [Riprendiamo quella storia?]
+                -> main_story_first_character
+            
+        + [Lascio il dialogo.]
+                -> main
+        -
+            -> talk_with_first_character
+
+//Vecchia struttura:
+                // {//Se prima chiacchierata
+                //     // - not knowing_first_character.one:
+                //     //     -> knowing_first_character.one
+                
+                // //Se prima chiacchierata fatta e passato abbastanza tempo dalla pausa prevista        
+                //     // - firstPauseTalking == 0:
+                //     //     -> hub
+                
+                // //Altre opzioni        
+                //     - else:
+                //          {~Ho bisogno di tempo da sola.|Torna tra un po'.|Mi serve un po' di silenzio ora.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+                //         -> main    
+                // }  
+
+
 === knowing_first_character
     ~ temp charNameOne = translator(firstCharacterState)
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
@@ -293,12 +310,11 @@
             }
         L’unica cosa certa è che ho bisogno di Talco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
         Ci vediamo dopo, {name}. Stammi bene.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+            @animation:RewriterBook
             ~ firstPauseTalking = firstCharPauseDuration
             ~ move_entity(FirstRecap, BookPlace)
-           
-           @animation:RewriterBook
-             
-            -> main
+
+            -> options_first_character
         
     = two
         //Non mettere cose TW qui
