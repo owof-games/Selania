@@ -536,6 +536,7 @@
 
             -> main
     
+    
 //Storylets sul secondo personaggio
     === that_little_liar_storylet
         ~ temp charNameOne = translator(firstCharacterState)
@@ -567,7 +568,7 @@
         E mi ha tirato un calcio!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
         
             {
-                - knowing_second_character.not_talk:Lui dice che gli hai fatto male.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
+                - knowing_second_character.not_talk:Gli hai fatto male, {charNameFive}? Perché lui ne è convinto.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
                 - else: L'ho solo fermato perché cercava di scappare.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sorry
             } 
 
@@ -583,6 +584,26 @@
         ~ secondPauseTalking = 0
             - (nameSecond)
             -> main
+    
+    
+    === addressing_violence
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
+    //Creare uno storylet che si attiva con mentore dopo knowing_second_character.two (tenendo conto che potrebbe esserci già stato o meno uno scambio su questa cosa a seconda che riccio e mentore siano stati vicini dopo "not_talk", e che questa condizione è tracciata da riccioMentoreViciniColpo) e che ci permetta di interagire con lei in merito allo strattone che ha dato a Riccio
+    
+    {riccioMentoreViciniColpo: Dopo la discussione di prima ho riparlato con {charNameTwo}|Ho parlato con {charNameTwo}}, e dice che gli hai dato uno strattone, {charNameFive}.
+    Mentore dice cose
+    Noi esprimiamo la nostra opinione, con una variazione dei parametri con Mentore, e qualche commento di Chitarra se è in zona, e magari anche di Riccio. Può essere uno storylet molto intenso.
+        
+        + Opzioni varie
+             ~ fifthBlue ++
+        -
+    
+        -> main
+    
+    
+    
     
     === watering_can_storylet
         ~ temp charNameOne = translator(firstCharacterState)

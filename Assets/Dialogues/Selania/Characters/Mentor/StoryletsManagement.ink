@@ -83,6 +83,11 @@
         - knowing_second_character.one && (not that_little_liar_storylet) :
             -> that_little_liar_storylet
         
+        //Storylet dopo lo scambio con Riccio e il fatto che l'ha afferrato
+        - knowing_second_character.two && (not addressing_violence):
+            -> addressing_violence
+        
+        
         //Se abbiamo visto che manca l'innaffiatoio e/o due ci ha detto che non parla con lei:
         - (stolen_watering_can or knowing_second_character.she_hates_me) && not watering_can_storylet:
             -> watering_can_storylet

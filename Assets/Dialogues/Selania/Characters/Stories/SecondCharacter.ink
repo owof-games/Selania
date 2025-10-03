@@ -1457,13 +1457,12 @@
         PIU'!
         Mi ha fatto male!
              {
-                - are_two_entities_together(Mentor, PG) && knowing_second_character.one && (not that_little_liar_storylet):
+                - are_two_entities_together(Mentor, PG) && (not that_little_liar_storylet):
                     ~ riccioMentoreViciniColpo = true
                     -> that_little_liar_storylet       
                 
             }
-            
-            -> main
+                -> main
                         
     = she_hates_me
         ~ temp charNameTwo = translator(secondCharacterState)
