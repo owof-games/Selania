@@ -10,14 +10,15 @@
             -> welcome
         
         - not gifts_and_ink:
+        //Parte solo quando c'è in giro anche Riccio.
             {
-                - not talk_with_first_character:
+                - not secondStory == StoryStarted:
                     Hai parlato con la nuova arrivata?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                             -> mentor_and_second_char_storylets 
                 
-                - talk_with_first_character:
-                    Sembra che {charNameOne} ti abbia raccontato qualcosa di sè!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-                    Ed è arrivato il momento di continuare con le spiegazioni!
+                - secondStory == StoryStarted && tutorialPauses == 0:
+                    Sembra che qualcunə stia iniziando a confidarsi con te, {name}!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+                    Ed è quindi arrivato il momento di continuare con le spiegazioni!
                         -> gifts_and_ink
                 
                 - else:
@@ -27,7 +28,7 @@
             
         - not questions:
             {
-                - first_story_gift.ink_outcome or secondTutorial == true:
+                - (first_story_gift.ink_outcome or secondTutorial == true) && tutorialPauses == 0:
                     -> questions
                 
                 - else:

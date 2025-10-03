@@ -281,6 +281,15 @@
     
 //Aumento di contatori:
     ~ movementsCounter ++
+    
+//Pause speciali tra un dialogo e l'altro
+    {
+    
+        - tutorialPauses == 1:
+            ~ tutorialPauses --
+        
+    }
+    
 
 //Avvio dialoghi di chiusura
     {
@@ -314,10 +323,12 @@
            ~  move_entity(TheFrog, Safekeeping)
            {debug: Ho spostato la rana nel Safekeeping.}
     }
+
 //Altre funzioni:
     -> characters_speaking ->
     -> randomizer_png_location ->
     -> story_time_management_for_PNG->    
+
 ->->
 
 //Riduzione del tempo di pausa del dialogo fino a quando non siamo a 0

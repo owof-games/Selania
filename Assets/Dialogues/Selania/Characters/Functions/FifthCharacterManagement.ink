@@ -20,6 +20,9 @@
     VAR fifthStoryQuestCount = 0
     VAR fifthCharacterSpecialEvent = false
     
+    //Questa variabile mi serve solo per evitare che Mentore mi dia subito lo storylet questions dopo gifts_and_inks
+    VAR tutorialPauses = 0
+    
 
 //Variabili per mettere in pausa la conversazione. Plausibilmente per mentore sarà molto alta all'inizio.
     VAR fifthPauseTalking = 0
