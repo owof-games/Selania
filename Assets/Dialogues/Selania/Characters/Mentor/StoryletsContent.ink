@@ -81,6 +81,10 @@
         Perché se sei qui, è per uno scopo, uno scopo davvero importante, {name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
             
             {
+                
+                - talk_with_first_character.hub.gift or talk_with_second_character.hub.gift:
+                    E visto che hai già provato ad offrire un dono a qualcuno, è il caso di darti subito tutte le informazioni necessarie.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
+                
                 - not talk_with_first_character: 
                     Facciamo così: inizia parlando con qualcunə tra le persone che incontrerai qui in giro.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                     E poi torna da me.
@@ -97,7 +101,7 @@
                 @animation:RewriterBook    
         
         //Con questa voce evito che "gifts_and_ink" compaia subito dopo se le condizioni sono sensate.
-                ~ tutorialPauses = false   
+                ~ tutorialPauses = true   
             
             -> main
                 

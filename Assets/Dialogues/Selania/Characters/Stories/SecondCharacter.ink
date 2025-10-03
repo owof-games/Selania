@@ -65,7 +65,7 @@
                     
         
             //Dono fatto ma non ho avviato la main story
-            + {second_story_gift.ink_outcome && not main_story_second_character} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
+            + (gift) {second_story_gift.ink_outcome && not main_story_second_character} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
             {
             
                 - not questions:
