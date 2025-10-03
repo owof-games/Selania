@@ -4,7 +4,7 @@
            
 {debug: <i>La lista degli oggetti nella stanza è: {pondContents}.}
 
-{pond  == 1:<i>La serra è calda, Il cammino ricco dell'odore dei funghi.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+{pond  == 1:<i>Lo stagno è caldo, il cammino ricco dell'odore dei funghi.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
 ~ arrivingFrom = Pond
 

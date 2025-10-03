@@ -7,7 +7,7 @@
 
     VAR pondContents = (FromPondToForest, FromPondToGreenhouse, FromPondToNest, CloudOne, CloudTwo, CloudThree)
 
-    VAR greenhouseContents = (FromGreenhouseToPond, WateringCan, BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti, FalsaPalude, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata)
+    VAR greenhouseContents = (FromGreenhouseToPond,  BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti, FalsaPalude, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata)
 
     VAR libraryContents = (FromLibraryToForest, FromLibraryToLaboratory, ReadingPlace)
 
@@ -15,7 +15,7 @@
 
     VAR laboratoryContents = ()
 
-    VAR safekeepingContents = (RoomExit, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, TheFrog, FifthCharacterNotes, MenuSave, MenuQuit,  RewriterBook, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FrogRecap, DogRecap, WitchRecap, GreenhouseRecap, LaboratoryRecap, NestRecap, FifthRecap, RulesRecap, Inventory, cultivationKit, firstCharPaint, teaKit, littleLibrary, bowl, secondCharPaint, vase, miniBook, FromLibraryToLaboratoryNight, FromForestToLibrary, RedBee, GoldenBee, BrownBee, Moon, MoonTrees, Snail, FromPondToGreenhouseBlooming)
+    VAR safekeepingContents = (RoomExit, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, TheFrog, FifthCharacterNotes, MenuSave, MenuQuit,  RewriterBook, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FrogRecap, DogRecap, WitchRecap, GreenhouseRecap, LaboratoryRecap, NestRecap, FifthRecap, RulesRecap, Inventory, cultivationKit, firstCharPaint, teaKit, littleLibrary, bowl, secondCharPaint, vase, miniBook, FromLibraryToLaboratoryNight, FromForestToLibrary, RedBee, GoldenBee, BrownBee, Moon, MoonTrees, Snail, FromPondToGreenhouseBlooming, WateringCan)
     
     VAR bookContents = (BookExit, SettingsBookVersion)
    
