@@ -97,7 +97,7 @@
                 @animation:RewriterBook    
         
         //Con questa voce evito che "gifts_and_ink" compaia subito dopo se le condizioni sono sensate.
-                ~ tutorialPauses = 1    
+                ~ tutorialPauses = false   
             
             -> main
                 
@@ -227,7 +227,7 @@
             ~ move_entity(RulesRecap, BookPlace)      
             ~ firstPauseTalking = 0
             //Con questa voce evito che "questions" compaia subito dopo se le condizioni sono sensate.
-                ~ tutorialPauses = 1
+                ~ tutorialPauses = true
             
             @animation:RewriterBook
             

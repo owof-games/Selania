@@ -285,8 +285,8 @@
 //Pause speciali tra un dialogo e l'altro
     {
     
-        - tutorialPauses == 1:
-            ~ tutorialPauses --
+        - tutorialPauses == true:
+            ~ tutorialPauses = false
         
     }
     

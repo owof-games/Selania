@@ -16,20 +16,23 @@
                     Hai parlato con la nuova arrivata?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                             -> mentor_and_second_char_storylets 
                 
-                - secondStory == StoryStarted && tutorialPauses == 0:
-                    Sembra che qualcunə stia iniziando a confidarsi con te, {name}!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-                    Ed è quindi arrivato il momento di continuare con le spiegazioni!
-                        -> gifts_and_ink
-                
-                - else:
-                        -> mentor_and_second_char_storylets
+                - secondStory == StoryStarted:
+                    {
+                        - tutorialPauses == false:
+                            Sembra che qualcunə stia iniziando a confidarsi con te, {name}!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+                            Ed è quindi arrivato il momento di continuare con le spiegazioni!
+                                -> gifts_and_ink
+                        - else:
+                            -> mentor_and_second_char_storylets
+                    }  
             }
                     
             
         - not questions:
             {
-                - (first_story_gift.ink_outcome or secondTutorial == true) && tutorialPauses == 0:
-                    -> questions
+                - (first_story_gift.ink_outcome or secondTutorial == true) && tutorialPauses == false:
+                        -> questions
+        
                 
                 - else:
                     {
