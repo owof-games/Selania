@@ -1,19 +1,21 @@
 === train_stop ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-        ~ arrivingFrom = TrainStop
 
-        {
-            - safekeepingContents has RoomExit:
-                ~ move_entity (RoomExit, Bedroom)
-        }
+    {debug: <i>La lista degli oggetti nella stanza è: {trainStopContents}.}
 
-{debug: <i>La lista degli oggetti nella stanza è: {trainStopContents}.}       
-{train_stop == 1: <i>Questa è la stazione del treno.|<i>{~La stazione profuma di partenze.|La panchina aspetta fremente una nuova conoscenza.|Sulle vette la luce brilla leggera.|Un vento fresco ti sospinge lungo la strada.|Le lettere ondeggiano sulla bacheca.|L'odore della foresta scalda il sentiero.}</i>}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+    {train_stop == 1: <i>La panchina aspetta fremente una nuova conoscenza.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+    
+    {
+        - safekeepingContents has RoomExit:
+            ~ move_entity (RoomExit, Bedroom)
+    }
+    
+    ~ arrivingFrom = TrainStop
 
-    // + [Mi guardo attorno.]
+// {train_stop == 1: <i>Questa è la stazione del treno.|<i>{~La stazione profuma di partenze.|La panchina aspetta fremente una nuova conoscenza.|Sulle vette la luce brilla leggera.|Un vento fresco ti sospinge lungo la strada.|Le lettere ondeggiano sulla bacheca.|L'odore della foresta scalda il sentiero.}</i>}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
-    //-
+
         -> main
   
   

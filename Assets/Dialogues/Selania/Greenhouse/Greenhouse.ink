@@ -1,15 +1,17 @@
 === greenhouse ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-            ~ arrivingFrom = Greenhouse
-{debug: <i>La lista degli oggetti nella stanza è: {greenhouseContents}.}
-{debug: <i>La lista degli oggetti nel deposito è: {safekeepingContents}.}
+            
+    {debug: <i>La lista degli oggetti nella stanza è: {greenhouseContents}.}
+    {debug: <i>La lista degli oggetti nel deposito è: {safekeepingContents}.}
 
+    {not are_two_entities_together(WateringCan, PG): -> stolen_watering_can}
 
-//{not are_two_entities_together(WateringCan, PG) && (not stolen_watering_can): -> stolen_watering_can}
-{not are_two_entities_together(WateringCan, PG): -> stolen_watering_can}
+    {greenhouse == 1: Nella serra a lungo dimenticata i vasi attendono sussurri e confidenze.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
-{greenhouse == 1:<i>Eccoti nella serra.</i>|{~<i>La serra pulsa nell'aria tiepida.|<i>C'è odore di terra e tranquillità.|<i>I vasi chiedono di essere ascoltati.|<i>Le ragnatele raccolgono risposte.|<i>Le venature del legno propongono domande.}</i>}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+    ~ arrivingFrom = Greenhouse
+
+// {greenhouse == 1:<i>Eccoti nella serra.</i>|{~<i>La serra pulsa nell'aria tiepida.|<i>C'è odore di terra e tranquillità.|<i>I vasi chiedono di essere ascoltati.|<i>Le ragnatele raccolgono risposte.|<i>Le venature del legno propongono domande.}</i>}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
 {
 

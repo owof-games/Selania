@@ -1,13 +1,16 @@
 === pond ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-            ~ arrivingFrom = Pond
-    
-{pond  == 1: <i>Spazi aperti, insetti, e ninfee galleggianti</i>|<i>{~Il cammino è ricco dell'odore dei funghi|Il cammino è luce|Lontana, la serra si rinfresca all'ombra dei monti|Lo stagno brulica di vita}</i>}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-    //+ [Mi guardo attorno.]
-    //-
-    
--> main
+           
+{debug: <i>La lista degli oggetti nella stanza è: {pondContents}.}
+
+{pond  == 1:<i>La serra è calda, Il cammino ricco dell'odore dei funghi.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+
+~ arrivingFrom = Pond
+
+// {pond  == 1: <i>Spazi aperti, insetti, e ninfee galleggianti</i>|<i>{~Il cammino è ricco dell'odore dei funghi|Il cammino è luce|Lontana, la serra si rinfresca all'ombra dei monti|Lo stagno brulica di vita}</i>}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+
+    -> main
 
 
 === the_frog

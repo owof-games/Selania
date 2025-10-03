@@ -3,19 +3,20 @@
 #ambientSounds: {tag_ambientSounds()}
 //Questo è il posto degli animaletti amici che fanno cose carine. Da pensare se creare una attività specifica (es: disegnare) o se fanno solo cose buffe. Potrei pensare a fale con caratteri diversi.
 
+// {debug: <i>La lista degli oggetti nella stanza è: {trainStopContents}.}
 
-<i>Sei dalle falene</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-    
-    + [Coccoli le falene]
-    + [Mi guardo attorno]
-        @animation:RewriterBook
+
+
+
+{nest == 1:<i><i>Sei dalle falene.</i>}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+
         ~ move_entity(NestRecap, BookPlace)
         {
             - nest == 1:
             ~ saturationVar ++
         }
 
+// ~ arrivingFrom = TrainStop
 
-    -
     
 -> main
