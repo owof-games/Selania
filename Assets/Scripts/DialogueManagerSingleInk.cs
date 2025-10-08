@@ -214,21 +214,22 @@ public class DialogueManagerSingleInk : MonoBehaviour
         else if (currentLine == "@quit")
         {
             buttonsEnabled = false;
-            Application.Quit();
+            // Application.Quit();
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
         }
         else if (currentLine == "@exit_from_rewriter_book")
         {
             // di fronte all'istruzione speciale @exit_from_rewriter_book:
             // torna su flow normale
             story.SwitchToDefaultFlow();
-            
+
             // ri-abilita background e ambientSounds salvati prima
             UpdateBackground(rewriterBookSavedBackground);
             UpdateMusic(rewriterBookSavedMusic);
-            
+
             // re-imposta lo stato di big dialogue
             story.variablesState[bigDialogueInkBoolVariable] = rewriterBookSavedIsBigDialogue;
-            
+
             // simulo l'ultima riga, richiamando questo stesso metodo
             UpdateUI(rewriterBookSavedCurrentLine, rewriterBookSavedCurrentChoices);
             return;
