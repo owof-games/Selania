@@ -383,7 +383,7 @@
             ~ justTalkedFirstChar = true
             @animation:RewriterBook
 
-                -> main  
+                -> options_first_character 
             
     = three
     //Non mettere cose TW qui
@@ -450,7 +450,7 @@
             ~ justTalkedFirstChar = true
             @animation:RewriterBook
 
-                -> main
+                -> options_first_character
         
     = four
     //Non mettere cose TW qui
@@ -511,7 +511,7 @@
                 ~ justTalkedFirstChar = true
             @animation:RewriterBook
 
-                    -> main 
+                    -> options_first_character
             
     = five
     //Non mettere cose TW qui
@@ -591,7 +591,7 @@
             ~ justTalkedFirstChar = true
             @animation:RewriterBook
             
-                -> main
+                -> options_first_character
         
     = six
     //Non mettere cose TW qui
@@ -658,7 +658,7 @@
             ~ justTalkedFirstChar = true
             @animation:RewriterBook
             
-                -> main
+                -> options_first_character
         
     = seven
     //Non mettere cose TW qui
@@ -715,7 +715,7 @@
                 ~ firstPauseTalking = firstCharPauseDuration
                 @animation:RewriterBook
                 
-                    -> main           
+                    -> options_first_character          
     
     = eight
     //Non mettere cose TW qui
@@ -784,7 +784,7 @@
             ~ justTalkedFirstChar = true
             @animation:RewriterBook
                         
-                -> main
+                -> options_first_character
     
     = nine
     //Da qui, no problem con contenuti TW. Si mette Chitarra che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
@@ -845,7 +845,7 @@
              ~ justTalkedFirstChar = true
             @animation:RewriterBook
             
-            -> main   
+            -> options_first_character 
     = ten
         //Da qui, no problem con contenuti TW. Si mette Chitarra che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
     ~ temp charNameOne = translator(firstCharacterState)
@@ -917,7 +917,7 @@
             ~ justTalkedFirstChar = true
             @animation:RewriterBook
             
-            -> main
+            -> options_first_character
     
     = eleven
         //Da qui, no problem con contenuti TW. Si mette Chitarra che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
@@ -979,7 +979,7 @@
              ~ justTalkedFirstChar = true
             @animation:RewriterBook
             
-                    -> main
+                    -> options_first_character
             
     = twelve
         //Da qui, no problem con contenuti TW. Si mette Chitarra che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
@@ -1047,11 +1047,7 @@
             ~ justTalkedFirstChar = true
             @animation:RewriterBook
             
-                    -> main
-
-  
-        
-
+                    -> options_first_character
 
 
  === first_story_gift ===

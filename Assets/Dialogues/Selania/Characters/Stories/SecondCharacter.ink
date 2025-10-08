@@ -16,79 +16,71 @@
 
 === talk_with_second_character ===
 ~ temp charNameTwo = translator(secondCharacterState)
--> common_storylets ->
+    -> common_storylets ->
+    //Se ho storylets disponibili di Riccio e non sono in pausa, passo a quelli.
+        {
 
-   {//Se prima chiacchierata
-        - not knowing_second_character.one:
-            -> knowing_second_character.one
-    //Se prima chiacchierata fatta e passato abbastanza tempo dalla pausa prevista        
-        - secondPauseTalking == 0:
-            -> hub
-    //Altre opzioni        
-        - else:
-            {
-                - second_story_gift.ink_outcome:{~Mi sento triste, ti spiace tornare dopo?|Scusa {name} ma voglio stare solo.|In questo momento sono giù.}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-                
-                - else: {~Torna dopo.|Ora ho voglia di stare da solo.|Lasciami in pace.|Non ho voglia di parlare.}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
-            }
-            
-        -> main
-    }
+            - secondPauseTalking == 0:
+                -> knowing_second_character
 
-= hub
+            - else:
+                -> options_second_character
+        }
+
+=== options_second_character
 ~ temp charNameTwo = translator(secondCharacterState)
 ~ temp charNameFive = translator(fifthCharacterState)
-    {
-        - not knowing_second_character: Ciao!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
-        
-        - else:{~Ciao!|Pensavo avrei visto più animali.|Ma almeno <b><i>una</b></i> cosa della serra deve essere dolce, no?|Se riuscissi a trovare una batteria di quelle davvero grosse...|Eppure prima non mi aveva morso.|Con quelle foglie spinose potrei fare uno scherzo a...ehi, ciao {name}!}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
-    
-    }
-
-    
-            + [Ti va di raccontarmi qualcosa di te?]
-                -> knowing_second_character
-                
-    
-            //Se non ho ancora fatto e ho parlato abbastanza con lui
-            + {secondStoryQuestCount > minStoryQuesTCountSecondChar && not second_story_gift.ink_outcome} [Voglio regalarti una cosa.]
-                {
-                
-                    - not gifts_and_ink && findedGifts != ():
-                        Forse prima ti conviene vedere cosa vuole dirti {charNameFive}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
-                        -> main
-                    
-                    - else:
-                        -> second_story_gift
+        {
+            - justTalkedSecondChar == false:   
+                  {
+                        - second_story_gift.ink_outcome:{~Mi sento triste, ti spiace tornare dopo?|Scusa {name} ma voglio stare solo.|In questo momento sono giù.}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
                         
-                }
-                    
-        
-            //Dono fatto ma non ho avviato la main story
-            + (gift) {second_story_gift.ink_outcome && not main_story_second_character} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
-            {
-            
-                - not questions:
-                    Parla prima con {charNameFive}, che già mi brontola tantissimo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
-                        ~ secondTutorial = true
-                        -> main
-                - else:
-                    -> second_story_chech_trigger
-            
-            }
-            
-            
+                        - else: {~Torna dopo.|Ora ho voglia di stare da solo.|Lasciami in pace.|Non ho voglia di parlare.}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+                    }
+                        
+            - else:
+                Vorresti chiedermi qualcosa? #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
+                
+                ~ justTalkedSecondChar = false
+        }
+                
     
-            //SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
-            + {second_story_gift.ink_outcome && main_story_second_character}[Riprendiamo quella storia?]
-                -> main_story_second_character
+//Se non ho ancora fatto e ho parlato abbastanza con lui
++ {secondStoryQuestCount > minStoryQuesTCountSecondChar && not second_story_gift.ink_outcome} [Voglio regalarti una cosa.]
+    {
+    
+        - not gifts_and_ink && findedGifts != ():
+            Forse prima ti conviene vedere cosa vuole dirti {charNameFive}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
+            -> main
+        
+        - else:
+            -> second_story_gift
             
-            + [Lascio il dialogo.]
-                -> main
-            -
-                -> talk_with_second_character
+    }
+        
+
+//Dono fatto ma non ho avviato la main story
++ (gift) {second_story_gift.ink_outcome && not main_story_second_character} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
+{
+
+    - not questions:
+        Parla prima con {charNameFive}, che già mi brontola tantissimo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
+            ~ secondTutorial = true
+            -> main
+    - else:
+        -> second_story_chech_trigger
+
+}
 
 
+//SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
++ {second_story_gift.ink_outcome && main_story_second_character}[Riprendiamo quella storia?]
+    -> main_story_second_character
+
++ [Lascio il dialogo.]
+    -> main
+-
+    -> talk_with_second_character
 
 
 === knowing_second_character
@@ -263,8 +255,8 @@
                 ~ move_entity(SecondRecap, BookPlace)
                          
         @animation:RewriterBook
-        
-                    -> main
+        ~ justTalkedSecondChar = true
+        -> options_second_character
    
     = two
     //Non mettere cose TW qui
@@ -375,8 +367,8 @@
             ~ secondPauseTalking = secondCharPauseDuration
             
             @animation:RewriterBook
-            
-                -> main
+            ~ justTalkedSecondChar = true
+            -> options_second_character
 
     = three
     //Non mettere cose TW qui
@@ -548,7 +540,8 @@
                  
                 @animation:RewriterBook
                 
-                    -> main
+        ~ justTalkedSecondChar = true
+        -> options_second_character
         
         
 
@@ -649,13 +642,10 @@
                 
             @animation:RewriterBook
             
-                    -> main
+        ~ justTalkedSecondChar = true
+        -> options_second_character
         
-        
-    
-    
-    
-    
+
     = five
     //Non mettere cose TW qui
     //Obiettivo: Far vedere che c'è qualcosa che non va a casa.
@@ -736,11 +726,10 @@
                     
                 @animation:RewriterBook
                     
-                        -> main
+        ~ justTalkedSecondChar = true
+        -> options_second_character
     
 
-    
-    
     = six
     //Non mettere cose TW qui
     //Obiettivo: Mostrare sempre il carattere complicato ma anche la posizione complicata socialmente. La scuola è un posto in cui non è al sicuro.
@@ -855,11 +844,10 @@
                     
                 @animation:RewriterBook
                 
-                        -> main
-    
+        ~ justTalkedSecondChar = true
+        -> options_second_character
     
 
-    
     = seven
     //Non mettere cose TW qui
     //Obiettivo: raccontare il suo rapporto con la fantasia e le tensioni in famiglia (finale verde e finale viola)
@@ -942,7 +930,8 @@
                 
                 @animation:RewriterBook
                 
-                    -> main        
+        ~ justTalkedSecondChar = true
+        -> options_second_character     
             
             
     = eight
@@ -1039,7 +1028,8 @@
                 
             @animation:RewriterBook
             
-                    -> main    
+        ~ justTalkedSecondChar = true
+        -> options_second_character 
     
     
     = nine
@@ -1181,7 +1171,8 @@
              
                 @animation:RewriterBook
                 
-                -> main    
+        ~ justTalkedSecondChar = true
+        -> options_second_character
     
     = ten
     //Obiettivo: si fida di noi, mostriamo il suo rapporto con la violenza. Finale rosso, finale viola (aiutare gli altri).
@@ -1265,7 +1256,8 @@
                 
                 @animation:RewriterBook
                 
-            -> main    
+        ~ justTalkedSecondChar = true
+        -> options_second_character 
     
     = eleven
     //Obiettivo: curiosità, sperimentazione. finale giallo, finale viola
@@ -1349,7 +1341,8 @@
                 
             @animation:RewriterBook
             
-                    -> main    
+        ~ justTalkedSecondChar = true
+        -> options_second_character 
     
     = twelve
     //Obiettivo: narrativamente, lasciarcelo con una immagine positiva. Far vedere il peso dei genitori. Finale verde, finale giallo.
@@ -1444,9 +1437,12 @@
                     
                 @animation:RewriterBook
                 
-                        -> main            
+        ~ justTalkedSecondChar = true
+        -> options_second_character          
             
-        
+
+
+//Questi storylets speciali non tornano sulle opzioni di dialogo, ma sul main        
     = not_talk
         ~ temp charNameFive = translator(fifthCharacterState)
         

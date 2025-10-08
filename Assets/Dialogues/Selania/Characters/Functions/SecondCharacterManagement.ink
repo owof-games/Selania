@@ -22,6 +22,7 @@
 //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
     VAR secondStoryQuestCount = 0
     VAR secondCharacterSpecialEvent = false
+    VAR justTalkedSecondChar = false
 
 //Variabili per mettere in pausa la conversazione
     VAR secondPauseTalking = 0
