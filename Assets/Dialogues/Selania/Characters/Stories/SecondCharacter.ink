@@ -30,6 +30,34 @@
 === options_second_character
 ~ temp charNameTwo = translator(secondCharacterState)
 ~ temp charNameFive = translator(fifthCharacterState)
+{
+    - secondStoryQuestCount > minStoryQuesTCountSecondChar && not second_story_gift.ink_outcome:
+            -> ask
+    - else:
+        {
+            - justTalkedSecondChar == false:   
+                  {
+                        - second_story_gift.ink_outcome:{~Mi sento triste, ti spiace tornare dopo?|Scusa {name} ma voglio stare solo.|In questo momento sono giù.}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
+                            -> main
+                        
+                        - else: {~Torna dopo.|Ora ho voglia di stare da solo.|Lasciami in pace.|Non ho voglia di parlare.}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+                            -> main
+                    }
+                        
+            - else:
+                ~ justTalkedSecondChar = false
+                -> main
+        }
+
+}
+
+
+
+                
+= ask
+~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameFive = translator(fifthCharacterState)
+
         {
             - justTalkedSecondChar == false:   
                   {
@@ -43,8 +71,7 @@
                 
                 ~ justTalkedSecondChar = false
         }
-                
-    
+
 //Se non ho ancora fatto e ho parlato abbastanza con lui
 + {secondStoryQuestCount > minStoryQuesTCountSecondChar && not second_story_gift.ink_outcome} [Voglio regalarti una cosa.]
     {
