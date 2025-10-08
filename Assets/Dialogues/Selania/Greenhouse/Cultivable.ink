@@ -366,7 +366,10 @@
                 <i>Di addii dolorosi, e ferite risanate.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
-                    ~ move_entity(GreenhouseRecap, BookPlace)
+                    {
+                        - bookContents hasnt GreenhouseRecap:
+                            ~ move_entity(GreenhouseRecap, BookPlace)
+                    }
                     @animation:Inventory
                     @animation:RewriterBook
                     
@@ -430,8 +433,11 @@
                 <i>Vivo.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
-                    ~ move_entity(GreenhouseRecap, BookPlace)
                     ~ move_entity(GoldenBee, Greenhouse)
+                    {
+                        - bookContents hasnt GreenhouseRecap:
+                            ~ move_entity(GreenhouseRecap, BookPlace)
+                    }
                     @animation:Inventory
                     @animation:RewriterBook
 
@@ -489,8 +495,11 @@
                 <i>Ridendo feroci di chi l3 teme.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
-                    ~ move_entity(GreenhouseRecap, BookPlace)
                     ~ move_entity(RedBee, Greenhouse)
+                    {
+                        - bookContents hasnt GreenhouseRecap:
+                            ~ move_entity(GreenhouseRecap, BookPlace)
+                    }                    
                     @animation:Inventory
                     @animation:RewriterBook
 
@@ -555,7 +564,10 @@
             
                     ~ growing = 0
                     ~ chosenCultivable = ()
-                    ~ move_entity(GreenhouseRecap, BookPlace)
+                    {
+                        - bookContents hasnt GreenhouseRecap:
+                            ~ move_entity(GreenhouseRecap, BookPlace)
+                    }
                     @animation:Inventory
                     @animation:RewriterBook
 
@@ -612,7 +624,10 @@
             <i>Ma ora {name} ricorda come camminare.
                 ~ growing = 0
                 ~ chosenCultivable = ()
-                ~ move_entity(GreenhouseRecap, BookPlace)
+                    {
+                        - bookContents hasnt GreenhouseRecap:
+                            ~ move_entity(GreenhouseRecap, BookPlace)
+                    }
                 @animation:Inventory
                 @animation:RewriterBook
 
@@ -671,7 +686,10 @@
             <i>A quali nomi {name} name ripensa?
                 ~ growing = 0
                 ~ chosenCultivable = ()
-                ~ move_entity(GreenhouseRecap, BookPlace)
+                    {
+                        - bookContents hasnt GreenhouseRecap:
+                            ~ move_entity(GreenhouseRecap, BookPlace)
+                    }
                     @animation:Inventory
                     @animation:RewriterBook
             
@@ -724,7 +742,10 @@
 
                 ~ growing = 0
                 ~ chosenCultivable = ()
-                ~ move_entity(GreenhouseRecap, BookPlace)
+                    {
+                        - bookContents hasnt GreenhouseRecap:
+                            ~ move_entity(GreenhouseRecap, BookPlace)
+                    }
                 @animation:Inventory
                 @animation:RewriterBook
 
@@ -779,8 +800,11 @@
             <i>Nell'accettare che aiutare è aiutarsi.</i>
                 ~ growing = 0
                 ~ chosenCultivable = ()
-                ~ move_entity(GreenhouseRecap, BookPlace)
-                ~ move_entity(BrownBee, Greenhouse)
+                ~ move_entity(BrownBee, Greenhouse)                
+                    {
+                        - bookContents hasnt GreenhouseRecap:
+                            ~ move_entity(GreenhouseRecap, BookPlace)
+                    }
                 @animation:Inventory
                 @animation:RewriterBook
 
@@ -839,7 +863,10 @@
             <i>Senza classifiche da scalare.
                 ~ growing = 0
                 ~ chosenCultivable = ()
-                ~ move_entity(GreenhouseRecap, BookPlace)
+                    {
+                        - bookContents hasnt GreenhouseRecap:
+                            ~ move_entity(GreenhouseRecap, BookPlace)
+                    }
                 @animation:Inventory
                 @animation:RewriterBook
 
@@ -895,9 +922,11 @@
             <i>L'errore di {name} è ora guida per cambiare.
                 ~ growing = 0
                 ~ chosenCultivable = ()
-                ~ move_entity(GreenhouseRecap, BookPlace)
-                ~ move_entity(Snail, Greenhouse)
-                
+                ~ move_entity(Snail, Greenhouse)                
+                    {
+                        - bookContents hasnt GreenhouseRecap:
+                            ~ move_entity(GreenhouseRecap, BookPlace)
+                    }
                 @animation:Inventory
                 @animation:RewriterBook
 
@@ -957,9 +986,13 @@
             <i>L'eternità nella collettività.
                 ~ growing = 0
                 ~ chosenCultivable = ()
-                ~ move_entity(GreenhouseRecap, BookPlace)
                 ~ move_entity(FromPondToGreenhouseBlooming, Pond)
-                ~ move_entity(FromPondToGreenhouse, Safekeeping)
+                ~ move_entity(FromPondToGreenhouse, Safekeeping)                
+                    {
+                        - bookContents hasnt GreenhouseRecap:
+                            ~ move_entity(GreenhouseRecap, BookPlace)
+                    }
+
                 @animation:Inventory
                 @animation:RewriterBook
                 
@@ -1017,7 +1050,10 @@
             <i>E ciò che sembrava un ostacolo personale, si dimostra un problema strutturale.
                 ~ growing = 0
                 ~ chosenCultivable = ()
-                ~ move_entity(GreenhouseRecap, BookPlace)
+                    {
+                        - bookContents hasnt GreenhouseRecap:
+                            ~ move_entity(GreenhouseRecap, BookPlace)
+                    }
                 @animation:Inventory
                 @animation:RewriterBook
 
