@@ -366,16 +366,9 @@
                 <i>Di addii dolorosi, e ferite risanate.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
-                    @animation:Inventory
-                    @animation:RewriterBook 
-
-
-                            {
-                                - findedGifts hasnt LicheneDegliAbissi:
-                                ~ findedGifts += LicheneDegliAbissi
-                                <i>Hai ottenuto: <b><i>Lichene degli Abissi.</b></i>
-                            }
                     ~ move_entity(GreenhouseRecap, BookPlace)
+                    @animation:Inventory
+                    @animation:RewriterBook
                     
                                     
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
@@ -437,19 +430,10 @@
                 <i>Vivo.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
-                    
-                    @animation:Inventory
-                    @animation:RewriterBook
-                    
-                        {
-                            - findedGifts hasnt EderaDelleAmanti:
-                            ~ findedGifts += EderaDelleAmanti
-                            <i>Hai ottenuto: <b><i>Edera delle Amanti.</b></i>
-                        }
-                        
                     ~ move_entity(GreenhouseRecap, BookPlace)
                     ~ move_entity(GoldenBee, Greenhouse)
-
+                    @animation:Inventory
+                    @animation:RewriterBook
 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
@@ -505,18 +489,10 @@
                 <i>Ridendo feroci di chi l3 teme.</i>
                     ~ growing = 0
                     ~ chosenCultivable = ()
-                    
-                    @animation:Inventory
-                    @animation:RewriterBook
-                    
-                    {
-                        - findedGifts hasnt CantoDelleCompagne:
-                        ~ findedGifts += CantoDelleCompagne
-                        <i>Hai ottenuto: <b><i>Canto delle Compagne.</b></i>
-                    }
-
                     ~ move_entity(GreenhouseRecap, BookPlace)
                     ~ move_entity(RedBee, Greenhouse)
+                    @animation:Inventory
+                    @animation:RewriterBook
 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
@@ -579,15 +555,9 @@
             
                     ~ growing = 0
                     ~ chosenCultivable = ()
+                    ~ move_entity(GreenhouseRecap, BookPlace)
                     @animation:Inventory
                     @animation:RewriterBook
-                    
-                    {
-                        - findedGifts hasnt LaSpazzata:
-                        ~ findedGifts += LaSpazzata
-                        <i>Hai ottenuto: <b><i>La Spazzata.</b></i>
-                    }
-                    ~ move_entity(GreenhouseRecap, BookPlace)
 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
@@ -642,15 +612,9 @@
             <i>Ma ora {name} ricorda come camminare.
                 ~ growing = 0
                 ~ chosenCultivable = ()
+                ~ move_entity(GreenhouseRecap, BookPlace)
                 @animation:Inventory
                 @animation:RewriterBook
-                
-                    {
-                        - findedGifts hasnt BaccaDellaAddolorata:
-                        ~ findedGifts += BaccaDellaAddolorata
-                        <i>Hai ottenuto: <b><i>Bacca della Addolorata</b></i>
-                    }
-                    ~ move_entity(GreenhouseRecap, BookPlace)
 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
@@ -707,18 +671,10 @@
             <i>A quali nomi {name} name ripensa?
                 ~ growing = 0
                 ~ chosenCultivable = ()
+                ~ move_entity(GreenhouseRecap, BookPlace)
                     @animation:Inventory
                     @animation:RewriterBook
-                     
-                    {
-                        - findedGifts hasnt NonTiScordarDiTe:
-                        ~ findedGifts += NonTiScordarDiTe
-                        <i>Hai ottenuto: <b><i>Non Ti Scordar di Te.</b></i>
-                    }
-                    ~ move_entity(GreenhouseRecap, BookPlace)
-
-                                       
-
+            
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
                 + + [Mi aggiro per la serra.]    
@@ -768,18 +724,9 @@
 
                 ~ growing = 0
                 ~ chosenCultivable = ()
+                ~ move_entity(GreenhouseRecap, BookPlace)
                 @animation:Inventory
                 @animation:RewriterBook
-                
-                    {
-                        - findedGifts hasnt BrinaDellImpossibile:
-                        ~ findedGifts += BrinaDellImpossibile
-                       <i>Hai ottenuto: <b><i>Brina dell'Impossibile</b></i>
-                    }
-
-                    ~ move_entity(GreenhouseRecap, BookPlace)
-
-                                    
 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
@@ -832,20 +779,10 @@
             <i>Nell'accettare che aiutare è aiutarsi.</i>
                 ~ growing = 0
                 ~ chosenCultivable = ()
-                
+                ~ move_entity(GreenhouseRecap, BookPlace)
+                ~ move_entity(BrownBee, Greenhouse)
                 @animation:Inventory
                 @animation:RewriterBook
-                
-                    {
-                        - findedGifts hasnt CardoAspinato:
-                        ~ findedGifts += CardoAspinato
-                       <i>Hai ottenuto: <b><i>Cardo Aspinato</b></i>
-                    }
-
-                    ~ move_entity(GreenhouseRecap, BookPlace)
-                    ~ move_entity(BrownBee, Greenhouse)
-                    
-                                    
 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
@@ -902,18 +839,9 @@
             <i>Senza classifiche da scalare.
                 ~ growing = 0
                 ~ chosenCultivable = ()
-                
+                ~ move_entity(GreenhouseRecap, BookPlace)
                 @animation:Inventory
                 @animation:RewriterBook
-                
-                    {
-                        - findedGifts hasnt BastoneDellOzioso:
-                            ~ findedGifts += BastoneDellOzioso
-                       <i>Hai ottenuto: <b><i>Bastone dell'Ozioso</b></i>
-                    }
-
-                    ~ move_entity(GreenhouseRecap, BookPlace)
-
 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
@@ -967,18 +895,11 @@
             <i>L'errore di {name} è ora guida per cambiare.
                 ~ growing = 0
                 ~ chosenCultivable = ()
+                ~ move_entity(GreenhouseRecap, BookPlace)
+                ~ move_entity(Snail, Greenhouse)
                 
                 @animation:Inventory
                 @animation:RewriterBook
-                
-                    {
-                        - findedGifts hasnt BarbaDellInciampo:
-                            ~ findedGifts += BarbaDellInciampo
-                       <i>Hai ottenuto: <b><i>Barba dell'Inciampo</b></i>
-                    }
-
-                    ~ move_entity(GreenhouseRecap, BookPlace)
-                    ~ move_entity(Snail, Greenhouse)
 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
@@ -1036,20 +957,12 @@
             <i>L'eternità nella collettività.
                 ~ growing = 0
                 ~ chosenCultivable = ()
-                
+                ~ move_entity(GreenhouseRecap, BookPlace)
+                ~ move_entity(FromPondToGreenhouseBlooming, Pond)
+                ~ move_entity(FromPondToGreenhouse, Safekeeping)
                 @animation:Inventory
                 @animation:RewriterBook
                 
-                    {
-                        - findedGifts hasnt Olobino:
-                            ~ findedGifts += Olobino
-                       <i>Hai ottenuto: <b><i>Olobino</b></i>
-                    }
-
-                    ~ move_entity(GreenhouseRecap, BookPlace)
-                    ~ move_entity(FromPondToGreenhouseBlooming, Pond)
-                    ~ move_entity(FromPondToGreenhouse, Safekeeping)
-
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test
                         
@@ -1104,17 +1017,9 @@
             <i>E ciò che sembrava un ostacolo personale, si dimostra un problema strutturale.
                 ~ growing = 0
                 ~ chosenCultivable = ()
-                
+                ~ move_entity(GreenhouseRecap, BookPlace)
                 @animation:Inventory
                 @animation:RewriterBook
-                
-                    {
-                        - findedGifts hasnt FalsaPalude:
-                            ~ findedGifts += FalsaPalude
-                       <i>Hai ottenuto: <b><i>Falsa Palude</b></i>
-                    }
-
-                    ~ move_entity(GreenhouseRecap, BookPlace)
 
                 + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
                         -> cultivable_test

@@ -287,7 +287,7 @@
             Devo inventarmi un modo per liberarmene!
             
                 ~ fifthPauseTalking = fifthCharPauseDuration
-                @animation:RewriterBook   
+                @animation:RewriterBook
                             
                     -> main
     
