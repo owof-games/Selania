@@ -12,7 +12,7 @@
     ~ enableBigDialogue()
 
 
-    <i>Il sassolino</i> di Lamia (she/they).
+    <b>Il sassolino</b> di Lamia (she/they).
     È iniziato tutto in una giornata mediocre.
     Il sole era coperto da nuvole scialbe, e nell’aria ancora si sentiva l’olezzo dei campi fertilizzati di fresco.
     Tutto è iniziato in una giornata così, anzi, tutto è iniziato nella vasca delle aragoste del ristorante Da Sallustio, in Porta Genova, in una giornata così.
@@ -43,7 +43,7 @@
             -> main
 
 === val_fausto_lattanzio
-<i>Home</i>, di Val Fausto Lattanzio (he/they).
+<b>Home</b>, di Val Fausto Lattanzio (he/they).
 
     Trigger warning: disforia, dismorfia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
@@ -94,7 +94,7 @@
             -> main
 
 === romi
-<i>Il principe sbagliato</i> di Sofia Abatangelo alias Romi alias Romi Sofia Abatangelo(any).
+<b>Il principe sbagliato</b> di Sofia Abatangelo alias Romi alias Romi Sofia Abatangelo(any).
 
     Trigger warning: violenza psicologica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]

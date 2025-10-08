@@ -1,7 +1,7 @@
 //Cognome/alias A-E
 
 === adri_allora
-<i>Il mio bellissimo gatto</i> di Adri Allora (ləi).
+<b>Il mio bellissimo gatto</b> di Adri Allora (ləi).
     Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -56,7 +56,7 @@
             -> main
 
 === aza
-<i>Luna vergine</i> di Aza (any).
+<b>Luna vergine</b> di Aza (any).
 Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -121,7 +121,7 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
 
 
 === steno_artico
-<i>This anger, which has been stolen from me</i> by StenoArtico (he/him, none).
+<b>This anger, which has been stolen from me</b> by StenoArtico (he/him, none).
     Trigger warning: violenza psicologica, abusi fisici, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -193,7 +193,7 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
             -> main
 
 === b
-<i>The touch of anger</i> di K.(she/her).
+<b>The touch of anger</b> di K.(she/her).
 
     Trigger warning: violenza fisica, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
@@ -240,7 +240,7 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
             -> main
 
 === beatrice
-<i>La rete non esiste</i> di Beatrice (she/her).
+<b>La rete non esiste</b> di Beatrice (she/her).
 
     Trigger warning: depressione, religione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
@@ -388,7 +388,7 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
             -> main
             
 === beatrice_y_bottura
-<i>Artigli Rosso Ruggine</i> di Beatrice Y. Bottura (she/it).
+<b>Artigli Rosso Ruggine</b> di Beatrice Y. Bottura (she/it).
 
     Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]

@@ -21,13 +21,13 @@
     
     + {are_two_entities_together(PG, RoomExit) && (not debugStochastic)} [RoomExit]
     
-            <i>Salutiamo {name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()} 
-            <i>Se {name} sta per lasciare il prototipo, {pronouns has him:lo|{pronouns has her:la|lə}} invitiamo a segnarsi questo codice, da riportare sul documento di testing.
-            <i>Il codice è {playerPurple} - {playerYellow} - {playerBlue} - {playerGreen}- {playerRed}; {playerFirstStory}; {playerSecondStory}; {firstCharacterState}; {secondCharacterState}.
-            <i>Grazie di cuore.
+            Salutiamo {name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()} 
+            Se {name} sta per lasciare il prototipo, {pronouns has him:lo|{pronouns has her:la|lə}} invitiamo a segnarsi questo codice, da riportare sul documento di testing.
+            Il codice è {playerPurple} - {playerYellow} - {playerBlue} - {playerGreen}- {playerRed}; {playerFirstStory}; {playerSecondStory}; {firstCharacterState}; {secondCharacterState}.
+            Grazie di cuore.
             
                 + + [Voglio chiudere <i>Selanìa</i>.]
-                    <i>A presto, {name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                    A presto, {name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
                     @quit
                     -> END
                     
@@ -177,7 +177,7 @@
                 -> library
                 
     + {are_two_entities_together(PG, FromForestToLibraryDesat) && secondTier == false} [FromForestToLibraryDesat]
-        <i>Un cumulo di carta e colonne di legno blocca la strada.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        Un cumulo di carta e colonne di legno blocca la strada.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
             
     + {are_two_entities_together(PG, FromForestToLibrary) && secondTier == true} [FromForestToLibrary]
@@ -196,7 +196,7 @@
 //Streets to Nest
     
     + {are_two_entities_together(PG, FromPondToNest)} [FromPondToNest]
-            <i>Nonostante i radi fiori, non riesci ad avanzare.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            Nonostante i radi fiori, non riesci ad avanzare.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     
     //{

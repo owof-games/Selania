@@ -453,16 +453,16 @@
 
 === fourth_story_gift ===
 ~ temp charNameThree = translator(fourthCharacterState)
-<i>Stai per donare qualcosa a {charNameThree}.</i>
+Stai per donare qualcosa a {charNameThree}.
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += FourthCharacter
             -> inventory_management -> ink_outcome 
-        + {findedGifts == ()} <i>Il tuo inventario è vuoto.</i>
+        + {findedGifts == ()} Il tuo inventario è vuoto.
             ->main
         
     
         = ink_outcome    
-            <i>Dopo il tuo dono {inkTranslator(fourthCharacterInkLevel)}.
+            Dopo il tuo dono {inkTranslator(fourthCharacterInkLevel)}.
                 ~ move_entity(fourthCharPaint, Bedroom)
                 ~ saturationVar ++
                  -> talk_with_fourth_character
@@ -507,20 +507,20 @@
             -> fourthAffinityCalc ->
         {
         - firstPurple && firstYellow > firstBlue: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
-        <i>{charNameThree} vede {name} come una persona amica e fidata.</i>
+        {charNameThree} vede {name} come una persona amica e fidata.
         
         -firstPurple or firstYellow > firstBlue:Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
         
-        <i>{charNameThree} si trova bene con {name}.</i>
+        {charNameThree} si trova bene con {name}.
         
         - firstPurple && firstYellow < firstBlue: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
         
-        <i>{charNameThree} non si è sentita capita da {name}.</i>
+        {charNameThree} non si è sentita capita da {name}.
         
         
         - else: A volte siamo sullo stesso brano, altre no. E non ho ancora capito chi tra noi stia ignorando l'altra parte.
         
-        <i>{charNameThree} non riesce a capire che rapporto sta costruendo con {name}.</i>
+        {charNameThree} non riesce a capire che rapporto sta costruendo con {name}.
         
         }
         E credo di aver capito perché il mio nome

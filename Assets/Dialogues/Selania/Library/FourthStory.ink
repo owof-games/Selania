@@ -11,7 +11,7 @@
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
     
-<i>Il cancello</i> di Salvo (he/him).
+<b>Il cancello</b> di Salvo (he/him).
 
     Il sole stava tramontando ad occidente e illuminava con i suoi raggi obliqui le chiome degli ulivi.
     Liliana osservava il viale, dritto, che separava la casa dal cancello; al di là la strada era deserta.
@@ -58,7 +58,7 @@
 
 
 === maura
-<i>Polvere</i> di Maura (she/they).
+<b>Polvere</b> di Maura (she/they).
 
     Trigger warning: violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
@@ -112,7 +112,7 @@
 
 
 === letizia_vaccarella
-<i>Dodici stelle</i> di Letizia Vaccarella (she/her).
+<b>Dodici stelle</b> di Letizia Vaccarella (she/her).
 
     Trigger warning: depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
@@ -193,7 +193,7 @@
                  -> refresh_book_lists ->
         }
         
-<i>Giallo</i> di Queerginia Wolf/Marco Spelgatti (she/he/they).
+<b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).
 
     Non hai fatto nulla di male.
     Lanciavi i tuoi fiori nell'aria, il polline rendeva il sentiero giallo per settimane.

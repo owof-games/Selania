@@ -2,9 +2,9 @@
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
 
-    {debug: <i>La lista degli oggetti nella stanza è: {trainStopContents}.}
+    {debug: La lista degli oggetti nella stanza è: {trainStopContents}.}
 
-    {train_stop == 1: <i>La panchina aspetta fremente una nuova conoscenza.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+    {train_stop == 1: La panchina aspetta fremente una nuova conoscenza.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
     
     {
         - safekeepingContents has RoomExit:
@@ -13,7 +13,7 @@
     
     ~ arrivingFrom = TrainStop
 
-// {train_stop == 1: <i>Questa è la stazione del treno.|<i>{~La stazione profuma di partenze.|La panchina aspetta fremente una nuova conoscenza.|Sulle vette la luce brilla leggera.|Un vento fresco ti sospinge lungo la strada.|Le lettere ondeggiano sulla bacheca.|L'odore della foresta scalda il sentiero.}</i>}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+// {train_stop == 1: Questa è la stazione del treno.|{~La stazione profuma di partenze.|La panchina aspetta fremente una nuova conoscenza.|Sulle vette la luce brilla leggera.|Un vento fresco ti sospinge lungo la strada.|Le lettere ondeggiano sulla bacheca.|L'odore della foresta scalda il sentiero.}}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
 
         -> main
@@ -29,7 +29,7 @@
         A volte il quotidiano mi fa dimenticare tutto, e pensare che sia stata tutta una mia invenzione, roba nella testa.
         Ma poi la notte e i sogni mi ricordano che è stato tutto vero.
         E allora, vorrei soltanto tornare.
-        K.
+        <b>K</b>.
             -> main
 
 
@@ -101,7 +101,7 @@
         E che {charNameFive} non sia sempre pesantona.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
         Alla prossima lettera.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
          
-        <i>{charNameOne}</i>
+        <b>{charNameOne}</b>
         
             {
                 - one == 1:
@@ -154,7 +154,7 @@
     E lì invece? Come stanno le tue piante?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
     Sono arrivate nuove persone interessanti?
     Sicuro, nessunə più interessante di me!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
-    A presto, <i>{charNameOne}</i>.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+    A presto, <b>{charNameOne}</b>.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
         ~ firstWritingPause = firstWritingPauseDuration
         
         {
@@ -229,7 +229,7 @@
     Comunque un giorno mi piacerebbe che la musica, questa musica arrivasse anche dalle vostre parti.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
     O che, quando te ne andrai da lì, verrai ad ascoltarla con me.
     Un saluto.
-    {charNameOne}.
+    <b>{charNameOne}</b>.
     
         {
             - three == 1:
@@ -453,7 +453,7 @@
                     Gioco: una di queste cose che ho detto non è vera.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                     Tu lo capisci quale?
                     Salutami la rana!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
-                    {charNameTwo}.
+                    <b>{charNameTwo}</b>.
                     
                 - secondCharacterPossibleStates has Capibara:
                 
@@ -485,7 +485,7 @@
                     Era sporco e mancava l'asso di picche.
                     Ma nonna ha ricordato tutti i trucchi e mi ha stracciato.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                     Stammi bene!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
-                    {charNameTwo}.
+                    <b>{charNameTwo}</b>.
             }
             PS: mi piace mettere i PS, su internet non ci sono.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
             PPS: ma sono arrivate persone nuove poi? Qualcuna con dei dolci magari?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
@@ -557,7 +557,7 @@
                     Non so mica cosa fare.
                     Forse {charNameFive} li può aiutare?
                     Mi mancate.
-                    {charNameTwo}.
+                    <b>{charNameTwo}</b>.
                     
                 - secondCharacterPossibleStates has Delfino:
                     
@@ -574,7 +574,7 @@
                     Che schifo, {name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                     Ma lì ci sono i cammelli?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                     Un saluto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
-                    {charNameTwo}.
+                    <b>{charNameTwo}</b>.
                     
                 - secondCharacterPossibleStates has Capibara:
         
@@ -593,7 +593,7 @@
                     E vorrei tanto tu fossi qui con me, ora.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                     Secondo me ci diresti tantissime cose sagge.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
                     Salutami la rana.
-                    {charNameTwo}.
+                    <b>{charNameTwo}</b>.
                 
                 - secondCharacterPossibleStates has Corvo:
                 
@@ -611,7 +611,7 @@
                     Ci sono così tante cose da imparare, {name}, così tante!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
                     Spero ci vedremo presto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                     Salutami la rana!
-                    {charNameTwo}.
+                    <b>{charNameTwo}</b>.
                     
             }
         

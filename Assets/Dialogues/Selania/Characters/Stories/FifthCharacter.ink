@@ -83,7 +83,7 @@
 
 === talk_with_fifth_character ===
 ~ temp charNameFive = translator(fifthCharacterState)
-<i>C'è qualcosa che ti frulla nella testa.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_fifth_character
@@ -100,7 +100,7 @@
             + {fifth_story_gift.ink_outcome && main_story_fifth_character} [Riprendiamo quella storia?]
                 -> main_story_fifth_character
             
-            + [Lascio il dialogo.]
+            + [<i>Lascio il dialogo.]
                 -> main
             -
                 -> talk_with_fifth_character
@@ -681,16 +681,16 @@
 
 === fifth_story_gift ===
 ~ temp charNameFive = translator(fifthCharacterState)
-<i>Stai per donare qualcosa a {charNameFive}.</i> #speaker:{witch_tag()}
+Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += Mentor
             -> inventory_management -> ink_outcome 
-        + {findedGifts == ()} <i>Il tuo inventario è vuoto.</i>
+        + {findedGifts == ()} Il tuo inventario è vuoto.
             ->main
         
     
         = ink_outcome    
-            <i>Dopo il tuo dono {inkTranslator(secondCharacterInkLevel)}.
+            Dopo il tuo dono {inkTranslator(secondCharacterInkLevel)}.
             ~ move_entity(fifthCharPaint, Bedroom)
             ~ saturationVar ++
                  -> talk_with_fifth_character
@@ -735,20 +735,20 @@
             -> secondAffinityCalc ->
         {
         - firstPurple && firstYellow > firstBlue: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
-        <i>{charNameFive} vede {name} come una persona amica e fidata.</i>
+        {charNameFive} vede {name} come una persona amica e fidata.
         
         -firstPurple or firstYellow > firstBlue:Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
         
-        <i>{charNameFive} si trova bene con {name}.</i>
+        {charNameFive} si trova bene con {name}.
         
         - firstPurple && firstYellow < firstBlue: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
         
-        <i>{charNameFive} non si è sentita capita da {name}.</i>
+        {charNameFive} non si è sentita capita da {name}.
         
         
         - else: A volte siamo sullo stesso brano, altre no. E non ho ancora capito chi tra noi stia ignorando l'altra parte.
         
-        <i>{charNameFive} non riesce a capire che rapporto sta costruendo con {name}.</i>
+        {charNameFive} non riesce a capire che rapporto sta costruendo con {name}.
         
         }
         E credo di aver capito perché il mio nome
@@ -761,7 +761,7 @@
 
     = statement
     ~ temp charNameFive = translator(fifthCharacterState)
-        <i>A seguito del rapporto che {name} ha creato con {charNameFive} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità.|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
+        A seguito del rapporto che {name} ha creato con {charNameFive} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità.|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(secondCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]

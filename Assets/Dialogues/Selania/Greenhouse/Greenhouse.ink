@@ -7,7 +7,7 @@
 
     // {not are_two_entities_together(WateringCan, PG): -> stolen_watering_can}
 
-    {greenhouse == 1:<i>Nella serra a lungo dimenticata i vasi attendono sussurri e confidenze.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+    {greenhouse == 1:Nella serra a lungo dimenticata i vasi attendono sussurri e confidenze.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
     ~ arrivingFrom = Greenhouse
 
@@ -30,7 +30,7 @@
         - backupCultivable != ():
             -> greenhouse_entry_check
         - else:
-            <i>Al momento la serra non ha domande da porti</i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+            Al momento la serra non ha domande da porti.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 	    -> main
         
     }
@@ -38,7 +38,7 @@
 
 
 === greenhouse_entry_check
-    <i>La serra attende le tue visioni.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+    La serra attende le tue visioni.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         +  {backupCultivable != ()}[Voglio coltivare qualcosa.]
                 -> cultivable_test
         +  [Mi aggiro per la serra.] 

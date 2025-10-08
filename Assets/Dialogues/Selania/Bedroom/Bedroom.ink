@@ -39,9 +39,9 @@
 
 === settings_management
     + {are_two_entities_together(PG, settings)} [settings]
-        <i>In futuro qui troverai le impostazioni.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+        In futuro qui troverai le impostazioni.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
             -> main
             
     + {are_two_entities_together(PG, SettingsBookVersion)} [SettingsBookVersion]
-    <i>In futuro qui troverai le impostazioni.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+    In futuro qui troverai le impostazioni.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
             -> rewriter_book_with_flow

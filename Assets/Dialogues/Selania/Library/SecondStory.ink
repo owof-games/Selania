@@ -2,7 +2,7 @@
 
 === cecilia_formicola
 
-<i>Getting warm</i> di Cecilia Formicola (she/her).
+<b>Getting warm</b> di Cecilia Formicola (she/her).
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - unreadStories has CeciliaFormicola:

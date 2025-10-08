@@ -2,8 +2,8 @@
 #background: {tag_background()}
 //In quest'angolo possiamo assaporarci una bella tisana creata da noi, e vedere i quadri delle ame.
 
-{debug: <i>La lista degli oggetti nella stanza è: {laboratoryContents}.}
-<i>Ecco: è il momento di una bella tisana</i>#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+{debug: La lista degli oggetti nella stanza è: {laboratoryContents}.}
+Ecco: è il momento di una bella tisana#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
 
 
     + [Inizio a preparare una tisana]
