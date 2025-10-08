@@ -29,15 +29,18 @@
 
                     
 === options_first_character
+    ~ temp charNameOne = translator(firstCharacterState)
     //Se arrivo a options da un dialogo, non mostro commenti da parte della PNG, altrimenti sì.
         {
-
-            - came_from(->talk_with_first_character):   
+            - justTalkedFirstChar == false:   
                 {~Le farfalle qui giocano per ore!|No dai. Ma hai visto quanto sono carini gli scoiattoli?!|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
-
+                
+            - else:
+                Vorresti chiedermi qualcosa? #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
+                
+                ~ justTalkedFirstChar = false
         }
 
-    Ma hai la faccia di una persona con delle domande. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious   
     //Se propongo regalo ma non ho parlato con Mentore:
         + (gift) {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
                         Non voglio snitchare, ma non hai ancora chiesto alla mentore a cosa servono.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
@@ -313,7 +316,8 @@
             @animation:RewriterBook
             ~ firstPauseTalking = firstCharPauseDuration
             ~ move_entity(FirstRecap, BookPlace)
-
+            ~ justTalkedFirstChar = true
+            
             -> options_first_character
         
     = two
@@ -376,7 +380,7 @@
         Ma troppe chiacchiere ora, troppe.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
         Fammi chillare un attimo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
             ~ firstPauseTalking = firstCharPauseDuration
-            
+            ~ justTalkedFirstChar = true
             @animation:RewriterBook
 
                 -> main  
@@ -443,7 +447,7 @@
          E nessuna di queste scelte può accontentare tutt3.
          Che rottura di ovaie, {name}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
             ~ firstPauseTalking = firstCharPauseDuration
-
+            ~ justTalkedFirstChar = true
             @animation:RewriterBook
 
                 -> main
@@ -504,6 +508,7 @@
                 - else:Devo assolutamente chiederglielo!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
             }
                 ~ firstPauseTalking = firstCharPauseDuration
+                ~ justTalkedFirstChar = true
             @animation:RewriterBook
 
                     -> main 
@@ -583,6 +588,7 @@
         Ma ora ho bisogno di rilassarmi un po' ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
         E magari riposa anche tu.
             ~ firstPauseTalking = firstCharPauseDuration
+            ~ justTalkedFirstChar = true
             @animation:RewriterBook
             
                 -> main
@@ -649,6 +655,7 @@
         A proposito di cause perse: vado a cercarmi uno spritz.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
         Ho proprio bisogno di staccare.
             ~ firstPauseTalking = firstCharPauseDuration
+            ~ justTalkedFirstChar = true
             @animation:RewriterBook
             
                 -> main
@@ -774,6 +781,7 @@
          Mi prendo un po' di tempo per me, {name}.
             ~ firstPauseTalking = firstCharPauseDuration
             ~ bookBGVariations ++
+            ~ justTalkedFirstChar = true
             @animation:RewriterBook
                         
                 -> main
@@ -834,6 +842,7 @@
          Credo me ne starò qui ad aspettare questo finto temporale.
 
              ~ firstPauseTalking = firstCharPauseDuration
+             ~ justTalkedFirstChar = true
             @animation:RewriterBook
             
             -> main   
@@ -905,6 +914,7 @@
                     E non povera {charNameTwo}?!?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
             } 
             ~ firstPauseTalking = firstCharPauseDuration
+            ~ justTalkedFirstChar = true
             @animation:RewriterBook
             
             -> main
@@ -966,6 +976,7 @@
         Lasciami un po' sola ora, {name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
         Perché sto entrando in fase lamentosa e non ho voglia di cringiarti.
              ~ firstPauseTalking = firstCharPauseDuration
+             ~ justTalkedFirstChar = true
             @animation:RewriterBook
             
                     -> main
@@ -1033,6 +1044,7 @@
         Vado a deprimermi da qualche parte.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
 
             ~ firstPauseTalking = firstCharPauseDuration
+            ~ justTalkedFirstChar = true
             @animation:RewriterBook
             
                     -> main
