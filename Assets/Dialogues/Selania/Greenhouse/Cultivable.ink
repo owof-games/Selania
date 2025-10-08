@@ -364,12 +364,16 @@
                 <i>Le dita di {name} sanno di ricordo, sanno di mare.</i>
                 <i>Di persone allontanate.</i>
                 <i>Di addii dolorosi, e ferite risanate.</i>
-                    @animation:Inventory
-                    @animation:RewriterBook
-                    {
-                        - bookContents hasnt GreenhouseRecap:
-                            ~ move_entity(GreenhouseRecap, BookPlace)
-                    }                    
+                // @animation:Inventory
+                // {
+                //     - are_two_entities_together(PG,RewriterBook):
+                //         @animation:RewriterBook
+                // }
+                    // {
+                    //     - bookContents hasnt GreenhouseRecap:
+                    //         ~ move_entity(GreenhouseRecap, BookPlace)
+                    // }
+                    ~ findedGifts += LicheneDegliAbissi
                     ~ growing = 0
                     ~ chosenCultivable = ()
                 -
@@ -430,12 +434,16 @@
                 <i>Il corpo colmo di piacere.</i>
                 <i>Di fusione.</i>
                 <i>Vivo.</i>
-                    @animation:Inventory
-                    @animation:RewriterBook
-                    {
-                        - bookContents hasnt GreenhouseRecap:
-                            ~ move_entity(GreenhouseRecap, BookPlace)
-                    }
+                // @animation:Inventory
+                // {
+                //     - are_two_entities_together(PG,RewriterBook):
+                //         @animation:RewriterBook
+                // }
+                    // {
+                    //     - bookContents hasnt GreenhouseRecap:
+                    //         ~ move_entity(GreenhouseRecap, BookPlace)
+                    // }
+                    ~ findedGifts += EderaDelleAmanti
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     ~ move_entity(GoldenBee, Greenhouse)
@@ -492,12 +500,16 @@
                 <i>La sua voce si alza e canta, chiama l3 compagn3.</i>
                 <i>Si uniscono in una festa, un sabba, rendendo il mondo intero il loro palcoscenico.</i>
                 <i>Ridendo feroci di chi l3 teme.</i>
-                    @animation:Inventory
-                    @animation:RewriterBook
-                    {
-                        - bookContents hasnt GreenhouseRecap:
-                            ~ move_entity(GreenhouseRecap, BookPlace)
-                    }  
+                // @animation:Inventory
+                // {
+                //     - are_two_entities_together(PG,RewriterBook):
+                //         @animation:RewriterBook
+                // }
+                    // {
+                    //     - bookContents hasnt GreenhouseRecap:
+                    //         ~ move_entity(GreenhouseRecap, BookPlace)
+                    // }
+                    ~ findedGifts += CantoDelleCompagne
                     ~ growing = 0
                     ~ chosenCultivable = ()
                     ~ move_entity(RedBee, Greenhouse)
@@ -560,13 +572,16 @@
             <i>Per poi scoprire che il mondo non è finito quella volta, e non finirà oggi.</i>
             <i>Le cose sono sempre peggiori nella propria testa.</i>
             <i>Ma reali, lasciano segni e ferite.</i>
-                    @animation:Inventory
-                    @animation:RewriterBook
-                    {
-                        - bookContents hasnt GreenhouseRecap:
-                            ~ move_entity(GreenhouseRecap, BookPlace)
-                    }
-
+                // @animation:Inventory
+                // {
+                //     - are_two_entities_together(PG,RewriterBook):
+                //         @animation:RewriterBook
+                // }
+                    // {
+                    //     - bookContents hasnt GreenhouseRecap:
+                    //         ~ move_entity(GreenhouseRecap, BookPlace)
+                    // }
+                    ~ findedGifts += LaSpazzata
                     ~ growing = 0
                     ~ chosenCultivable = ()
                 -
@@ -621,13 +636,16 @@
             <i>L'avanzare di un ramo timido ha permesso alla <b>Bacca</b> di fruttare.
             <i>Compiere il primo passo è faticoso.
             <i>Ma ora {name} ricorda come camminare.
-                @animation:Inventory
-                @animation:RewriterBook
-                    {
-                        - bookContents hasnt GreenhouseRecap:
-                            ~ move_entity(GreenhouseRecap, BookPlace)
-                    }
-
+                // @animation:Inventory
+                // {
+                //     - are_two_entities_together(PG,RewriterBook):
+                //         @animation:RewriterBook
+                // }
+                    // {
+                    //     - bookContents hasnt GreenhouseRecap:
+                    //         ~ move_entity(GreenhouseRecap, BookPlace)
+                    // }
+                ~ findedGifts += BaccaDellaAddolorata
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 -
@@ -684,13 +702,16 @@
             <i>Del celebrare le parti di chi abbiamo incontrato, che continuano a vivere in noi.
             <i>Del sentirci eredi e messagger3, parte di un percorso intessuto di nomi.
             <i>A quali nomi {name} name ripensa?
-                    @animation:Inventory
-                    @animation:RewriterBook
-                    {
-                        - bookContents hasnt GreenhouseRecap:
-                            ~ move_entity(GreenhouseRecap, BookPlace)
-                    }
-
+                // @animation:Inventory
+                // {
+                //     - are_two_entities_together(PG,RewriterBook):
+                //         @animation:RewriterBook
+                // }
+                    // {
+                    //     - bookContents hasnt GreenhouseRecap:
+                    //         ~ move_entity(GreenhouseRecap, BookPlace)
+                    // }
+                ~ findedGifts += NonTiScordarDiTe 
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 -
@@ -740,13 +761,16 @@
             <i>Riempie le ferite così che siano visibili.</i>
             <i>Anche se fa male, aiuta a guardare, nominare, affrontare.</i>
             <i>Offre con ogni suo baccello semi vivi di speranza.</i>
-                @animation:Inventory
-                @animation:RewriterBook
-                    {
-                        - bookContents hasnt GreenhouseRecap:
-                            ~ move_entity(GreenhouseRecap, BookPlace)
-                    }
- 
+                // @animation:Inventory
+                // {
+                //     - are_two_entities_together(PG,RewriterBook):
+                //         @animation:RewriterBook
+                //  }
+                //     {
+                //         - bookContents hasnt GreenhouseRecap:
+                //             ~ move_entity(GreenhouseRecap, BookPlace)
+                //     }
+                ~ findedGifts += BrinaDellImpossibile
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 -
@@ -799,13 +823,16 @@
             <i>Il <b><i>Cardo aspinato</b></i> sboccia nel supporto.</i>
             <i>Nel capire che lasciarsi aiutare è aiutare l'altrə.</i>
             <i>Nell'accettare che aiutare è aiutarsi.</i>
-                @animation:Inventory
-                @animation:RewriterBook
-                    {
-                        - bookContents hasnt GreenhouseRecap:
-                            ~ move_entity(GreenhouseRecap, BookPlace)
-                    }
-
+                // @animation:Inventory
+                // {
+                //     - are_two_entities_together(PG,RewriterBook):
+                //         @animation:RewriterBook
+                // }
+                    // {
+                    //     - bookContents hasnt GreenhouseRecap:
+                    //         ~ move_entity(GreenhouseRecap, BookPlace)
+                    // }
+                ~ findedGifts += CardoAspinato
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 ~ move_entity(BrownBee, Greenhouse)                
@@ -863,12 +890,16 @@
             <i>Non c'è gioia più grande del fare per il solo piacere di fare.
             <i>Senza luoghi dove andare.
             <i>Senza classifiche da scalare.
-                @animation:Inventory
-                @animation:RewriterBook
-                    {
-                        - bookContents hasnt GreenhouseRecap:
-                            ~ move_entity(GreenhouseRecap, BookPlace)
-                    }                
+                // @animation:Inventory
+                // {
+                //     - are_two_entities_together(PG,RewriterBook):
+                //         @animation:RewriterBook
+                // }
+                    // {
+                    //     - bookContents hasnt GreenhouseRecap:
+                    //         ~ move_entity(GreenhouseRecap, BookPlace)
+                    // }
+                ~ findedGifts += BastoneDellOzioso    
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 -
@@ -922,13 +953,16 @@
             <i>Tra punizione ed elaborazione.
             <i>La lancia della pianta è ora tana per qualcosa di delicato.
             <i>L'errore di {name} è ora guida per cambiare.
-                @animation:Inventory
-                @animation:RewriterBook
-                    {
-                        - bookContents hasnt GreenhouseRecap:
-                            ~ move_entity(GreenhouseRecap, BookPlace)
-                    }
-                
+                // @animation:Inventory
+                // {
+                //     - are_two_entities_together(PG,RewriterBook):
+                //         @animation:RewriterBook
+                // }
+                    // {
+                    //     - bookContents hasnt GreenhouseRecap:
+                    //         ~ move_entity(GreenhouseRecap, BookPlace)
+                    // }
+                ~ findedGifts += BarbaDellInciampo
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 ~ move_entity(Snail, Greenhouse)                
@@ -985,13 +1019,16 @@
             <i>L'<i><b>Olobino</i></b> è un fungo semplice pieno di potere.
             <i>Il potere che c'è nel perdere il sé.
             <i>L'eternità nella collettività.
-                @animation:Inventory
-                @animation:RewriterBook 
-                    {
-                        - bookContents hasnt GreenhouseRecap:
-                            ~ move_entity(GreenhouseRecap, BookPlace)
-                    }
-                
+                // @animation:Inventory
+                // {
+                //     - are_two_entities_together(PG,RewriterBook):
+                //         @animation:RewriterBook
+                // }
+                    // {
+                    //     - bookContents hasnt GreenhouseRecap:
+                    //         ~ move_entity(GreenhouseRecap, BookPlace)
+                    // }
+                ~ findedGifts += Olobino
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 ~ move_entity(FromPondToGreenhouseBlooming, Pond)
@@ -1047,12 +1084,16 @@
             <i>Ciò che accade quando il dolore si fa terreno comune.
             <i>Quando storie diverse riconoscono la propria voce.
             <i>E ciò che sembrava un ostacolo personale, si dimostra un problema strutturale.
-                @animation:Inventory
-                @animation:RewriterBook
-                {
-                    - bookContents hasnt GreenhouseRecap:
-                        ~ move_entity(GreenhouseRecap, BookPlace)
-                }
+                // @animation:Inventory
+                // {
+                //     - are_two_entities_together(PG,RewriterBook):
+                //         @animation:RewriterBook
+                // }
+                // {
+                //     - bookContents hasnt GreenhouseRecap:
+                //         ~ move_entity(GreenhouseRecap, BookPlace)
+                // }
+                ~ findedGifts += FalsaPalude
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 -
