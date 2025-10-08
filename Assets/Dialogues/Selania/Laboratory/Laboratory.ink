@@ -6,7 +6,7 @@
 Ecco: è il momento di una bella tisana#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
 
 
-    + [Inizio a preparare una tisana]
+    + [<i>Inizio a preparare una tisana]
         @animation:RewriterBook
         ~ move_entity(LaboratoryRecap, BookPlace)
         {

@@ -31,7 +31,7 @@
                 - firstCharacterPossibleStates has Violino:
                     Madre natura! No dai, non il primo. Il primo che abbiamo registrato. La prima collaborazione tra umani, funghi e piante. E sembra che ora parte delle nostre note stiano vibrano nel terreno. Un gruppo di scienziati ha trovato frequenze simili alle nostre in un bosco a cento chilometri e passa di distanza! Chi l'avrebbe detto che mi sarebbero piaciuti gli scienziati? Ora però dobbiamo anche imparare ad ascoltare. Perché facile che ci siano altre canzoni in giro da eoni. E questa sarà la parte difficile. Non vedo l'ora! <>
             }
-            Comunque un giorno mi piacerebbe che la musica, questa musica arrivasse anche dalle vostre parti. O che, quando te ne andrai da lì, verrai ad ascoltarla con me. Un saluto. {charNameOne}.
+            Comunque un giorno mi piacerebbe che la musica, questa musica arrivasse anche dalle vostre parti. O che, quando te ne andrai da lì, verrai ad ascoltarla con me. Un saluto. <b>{charNameOne}</b>.
 }
 
 
@@ -57,7 +57,7 @@
                 - firstCharacterPossibleStates has Violino:
                     Per la prima volta credo di averlo capito. Non ci siamo trovate, non riesce a comprendere perché per me sia importante fare qualcosa di utile per l'umanità e blah blah blah. Ma ho visto nella sua preoccupazione la paura sincera che possa avere una vita difficile. Mi ha fatto insieme tenerezza e dispiacere. <>
             }
-        E lì invece? Come stanno le tue piante? Sono arrivate nuove persone interessanti? Sicuro, nessunə più interessante di me! A presto, <i>{charNameOne}</i>.
+        E lì invece? Come stanno le tue piante? Sono arrivate nuove persone interessanti? Sicuro, nessunə più interessante di me! A presto, <b>{charNameOne}</b>.
 }
 
 {
@@ -92,7 +92,7 @@
                     No, non ho esagerato col vinello.
                     Ma pensaci, ama: se così fosse, potrei dimostrare che siamo tutt3 collegat3, che potremmo parlarci e comunicare tra noi! <>
             }
-        Spero che lì vada tutto bene. E che {charNameFive} non sia sempre pesantona. Alla prossima lettera. <i>{charNameOne}</i>
+        Spero che lì vada tutto bene. E che {charNameFive} non sia sempre pesantona. Alla prossima lettera. <b>{charNameOne}</b>
 }
 
 
@@ -275,7 +275,7 @@
                     Sono SUPER ARRABBIATO. CON MIO FRATELLO. Non avevamo mai litigato, mai. Ma l'altro giorno è venuto a casa e mi ha detto che sto diventando come papà. Papà si è incazzato con lui e mi ha difeso. Mio fratello dice che sto diventando un bullo. Che un suo amico maestro a scuola gli ha detto che me la prendo coi più piccoli. Papà gli ha detto che mi faccio rispettare. E che non sono una checca come lui. Lui mio fratello. Non sono mica abituato a mio padre così. Ma poi in camera mi è preso male tutto. Mi manca mio fratello. Mi mancate voi. Vorrei sapere cosa fare. <>
                     
                 - secondCharacterPossibleStates has Lupo:
-                    Oggi sono triste, e non so perché. Ho dato un pugno a un ragazzo delle medie, ma non mi è mica piaciuto. A casa le cose vanno bene, ma. Sì no boh. Mica pensavo che è così faticoso. Mamma e papà sono tranquilli solo se siamo assieme. Mi sembra un lavoro. E se sono giù si preoccupano tantissimo. E se si preoccupano tornano a litigare. Non so mica cosa fare. Forse {charNameFive} li può aiutare? Mi mancate. {charNameTwo}. <>
+                    Oggi sono triste, e non so perché. Ho dato un pugno a un ragazzo delle medie, ma non mi è mica piaciuto. A casa le cose vanno bene, ma. Sì no boh. Mica pensavo che è così faticoso. Mamma e papà sono tranquilli solo se siamo assieme. Mi sembra un lavoro. E se sono giù si preoccupano tantissimo. E se si preoccupano tornano a litigare. Non so mica cosa fare. Forse {charNameFive} li può aiutare? Mi mancate. <b>{charNameTwo}</b>. <>
 
                     
                 - secondCharacterPossibleStates has Delfino:
@@ -285,7 +285,7 @@
                     Questo cervellino (il mio cervellino) ha trovato una soluzione. Ho parlato con la prof di matematica, e le ho detto delle mie paure. Degli animali che spariscono, dei boschi che bruciano. Dei ghiacciai. Lei mi ha detto che possiamo raccogliere dei soldi ma sì no boh. Io pensavo all'associazione di mio fratello e del suo fidanzato, e loro insegnano a non avere paura non a spendere soldi. Allora mi ha fatto fare una lezione in classe su queste cose. Ho spiegato le paure. E poi ho detto che se ci mettiamo assieme ci sono anche le soluzioni. Alcuni compagni hanno detto che ci possiamo trovare nel campetto il pomeriggio. E quindi forse qualcosa sta iniziando, {name}. Non so cosa faremo, però è bello non farlo da solo. E vorrei tanto tu fossi qui con me, ora. Secondo me ci diresti tantissime cose sagge. Salutami la rana. {charNameTwo}. <>
                     
                 - secondCharacterPossibleStates has Corvo:
-                    Ieri è successa una cosa fighissima. Ti ricordi quell'amica di mio fratello, che dovevo conoscere al mare? Sta da tre giorni da lui perché dice che è stata buttata fuori di casa. E mi ha raccontato tante cose che mica sapevo. Cose brutte che vengono fatte agli animali. Ma, {name}: non aveva paura. Lei dice che sono sveglio, e che per questo non devo avere paura perché posso capire tutto. E che magari un giorno trovo un modo per salvare gli animali. Mi ha regalato un romanzo di Ursula LeGuin (ho dovuto guardare la copertina, è un nome difficile). Non sapevo di potere imparare cose dai romanzi. Oggi ho chiesto alla maestra di matematica di darmi dei libri sull'ambiente. Ci sono così tante cose da imparare, {name}, così tante! Spero ci vedremo presto. Salutami la rana! {charNameTwo}. <>
+                    Ieri è successa una cosa fighissima. Ti ricordi quell'amica di mio fratello, che dovevo conoscere al mare? Sta da tre giorni da lui perché dice che è stata buttata fuori di casa. E mi ha raccontato tante cose che mica sapevo. Cose brutte che vengono fatte agli animali. Ma, {name}: non aveva paura. Lei dice che sono sveglio, e che per questo non devo avere paura perché posso capire tutto. E che magari un giorno trovo un modo per salvare gli animali. Mi ha regalato un romanzo di Ursula LeGuin (ho dovuto guardare la copertina, è un nome difficile). Non sapevo di potere imparare cose dai romanzi. Oggi ho chiesto alla maestra di matematica di darmi dei libri sull'ambiente. Ci sono così tante cose da imparare, {name}, così tante! Spero ci vedremo presto. Salutami la rana! <b>{charNameTwo}</b>. <>
             }
         PS: Ma poi hai scoperto cos'è quella statua nella foresta? PPS: Ho un segreto che riguarda la serra, ma te lo dirò con la prossima lettera! Ciao ciao!
 }
@@ -307,13 +307,13 @@
                     Ma non credo: le cose negli ultimi giorni vanno meglio. Con l'amico di mio fratello ho fatto dei muffin per lui e mamma. E poi gli ho detto che mi dispiace quando litigano. E che ho capito che essere grandi fa schifo, ma che ci sono anche cose belle. Come andare al mare. Mamma si è messa a piangere. Papà è stato in silenzio tantissimo. E ho iniziato a pensare che mi avrebbe picchiato. Invece ha detto: domani si fa vacanza e si va a nuotare tutti assieme. Mamma l'ha abbracciato, e si è mangiata un intero muffin. Ti dico poi come è andata! A presto. <>
                     
                 - secondCharacterPossibleStates has Delfino:
-                    In questi giorni ho ripreso a dire delle bugie. Ma invece di dirle piccole, le sto dicendo grandissime. E questa cosa fa divertire i miei nuovi amici. E anche qualche maestra. Mamma dice che da grande devo fare il comico. Papà è banale e dice che devo fare il politico. Mio fratello è preoccupato, perché teme che mi metto nei pasticci. Gioco: una di queste cose che ho detto non è vera. Tu lo capisci quale? Salutami la rana! {charNameTwo}. <>
+                    In questi giorni ho ripreso a dire delle bugie. Ma invece di dirle piccole, le sto dicendo grandissime. E questa cosa fa divertire i miei nuovi amici. E anche qualche maestra. Mamma dice che da grande devo fare il comico. Papà è banale e dice che devo fare il politico. Mio fratello è preoccupato, perché teme che mi metto nei pasticci. Gioco: una di queste cose che ho detto non è vera. Tu lo capisci quale? Salutami la rana! <b>{charNameTwo}</b>. <>
                     
                 - secondCharacterPossibleStates has Capibara:
                     Dopo che gli ho detto che lui usa quella parola con mio fratello perché ha paura, non mi parla più. Mamma dice che lui ha paura di tutte le cose, ma non lo sa dire. Le ho detto che ci sono delle associazioni. Lei ha sorriso e mi ha detto che sto davvero diventando grande. Però continuo a pensarci a questa cosa delle associazioni. Tu lo sai che io ho paura per gli animali. E mi hai insegnato che le cose si affrontano con gli amici. Magari non sono bravo a farmi degli amici, ma sono bravo a parlare degli animali. E forse ci riesco a fare qualcosa così, come mio fratello fa per i suoi amici. Devo solo capire cosa. Vorrei tanto chiederlo alla rana. Salutamela! <>
                     
                 - secondCharacterPossibleStates has Corvo:
-                    Ultimamente parliamo di più. Gli piace parlare di politica. Secondo me dice cose stupide, ma forse nelle sue cose stupide c'è lui, le sue paure. Almeno così dice l'amico di mio fratello. Oggi siamo stati da nonna. Ho dovuto insistere perché avevano paura che ci rimanevo male. Si no boh. Mi è spiaciuto quando non mi ha riconosciuto. Però è sempre la nonna. Quando mamma ha parlato con l'infermiera ho preso un mazzo di carte. Era sporco e mancava l'asso di picche. Ma nonna ha ricordato tutti i trucchi e mi ha stracciato. Stammi bene! {charNameTwo}. <>
+                    Ultimamente parliamo di più. Gli piace parlare di politica. Secondo me dice cose stupide, ma forse nelle sue cose stupide c'è lui, le sue paure. Almeno così dice l'amico di mio fratello. Oggi siamo stati da nonna. Ho dovuto insistere perché avevano paura che ci rimanevo male. Si no boh. Mi è spiaciuto quando non mi ha riconosciuto. Però è sempre la nonna. Quando mamma ha parlato con l'infermiera ho preso un mazzo di carte. Era sporco e mancava l'asso di picche. Ma nonna ha ricordato tutti i trucchi e mi ha stracciato. Stammi bene! <b>{charNameTwo}</b>. <>
      
             }
         PS: mi piace mettere i PS, su internet non ci sono. PPS: ma sono arrivate persone nuove poi? Qualcuna con dei dolci magari?

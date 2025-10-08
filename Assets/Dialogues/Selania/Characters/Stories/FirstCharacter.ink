@@ -1196,7 +1196,7 @@
 
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(firstCharacterInkLevel)
-        + [Voglio cominciare la riscrittura.]
+        + [<i>Voglio cominciare la riscrittura.]
             -> firstNaming ->
         {
             - firstCharacterInkLevel == Empty:
@@ -1204,7 +1204,7 @@
             - else: 
                 -> one
         } 
-        + [Preferisco prendermi del tempo.]
+        + [<i>Mi prendo un po' di tempo per pensare.]
             -> main
 
     = one

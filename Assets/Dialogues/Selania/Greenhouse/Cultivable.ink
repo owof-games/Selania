@@ -358,7 +358,7 @@
         Si respingono nel piacere, si inseguono nel dolore, senza mai afferrarsi.
         Forti nella loro distruzione, estremamente fragili.
 
-            + (colto) [Sfioro il lichene.]
+            + (colto) [<i>Sfioro il lichene.]
                 ~ growthLicheneDegliAbissi = stepZero
                 Un piccolo sbuffo, rumore di vetro. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 Le dita di {name} sanno di ricordo, sanno di mare.
@@ -379,7 +379,7 @@
                 -
             + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
                     -> cultivable_test
-            + [Mi aggiro per la serra.]    
+            + <i>[Mi aggiro per la serra.]    
                     -> main
 
               
@@ -390,11 +390,11 @@
     = TW
         Attenzione: questa pianta allude a contenuti erotici.
         {name} vuole farla crescere, o preferisce cambiare?
-        + [Voglio andare avanti.]
+        + [<i>Voglio andare avanti.]
             -> step_zero
-        + [Voglio rimuoverla, ma solo per ora.]
+        + [<i>Voglio rimuoverla, ma solo per ora.]
             -> tempCultTW_formula -> cultivable_test
-        + [Voglio rimuoverla per sempre.]
+        + [<i>Voglio rimuoverla per sempre.]
             -> remove_proposed_cultivable ->
             ~ chosenCultivable = ()
             -> cultivable_test
@@ -426,7 +426,7 @@
         Un pezzo di serra è ora coperto di fiori e abbracci.
         Faticoso è resistere all'idea di tuffarvisi.
         
-            + (colto) [Prendo una foglia.]
+            + (colto) [<i>Prendo una foglia.]
                 Per un attimo {name} perde i suoi confini.
                 Diventa un bacio nella notte, dita desiderate tra le coscie.
                 Acqua sulle labbra, pelle nuda sulla terra umida.
@@ -448,9 +448,9 @@
                     ~ chosenCultivable = ()
                     ~ move_entity(GoldenBee, Greenhouse)
                 -
-            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
                     -> cultivable_test
-            + [Mi aggiro per la serra.]    
+            + [<i>Mi aggiro per la serra.]    
                     -> main
 
 
@@ -494,7 +494,7 @@
         In un altro tempo questo cespuglio veniva chiamato "Canto delle streghe".
         L'euforia riempie i polmoni di {name}, sente la gioia di sapere che non è mai stata davvero {pronouns has him:solo|{pronouns has her:sola|solə}}.
         
-        + (colto)[Ne raccolgo una goccia.]
+        + (colto)[<i>Ne raccolgo una goccia.]
                 Le gambe di {name} iniziano a ballare.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 Spingono il suo corpo nella stanza.
                 La sua voce si alza e canta, chiama l3 compagn3.
@@ -514,9 +514,9 @@
                     ~ chosenCultivable = ()
                     ~ move_entity(RedBee, Greenhouse)
                 -
-            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
                     -> cultivable_test
-            + [Mi aggiro per la serra.]    
+            + [<i>Mi aggiro per la serra.]    
                     -> main
 
               
@@ -565,7 +565,7 @@
         Si abbuffa delle cose non dette.
         E quando è sazia, travolge ogni cosa.
 
-        + (colto)[Infilo una mano nel foro.]
+        + (colto)[<i>Infilo una mano nel foro.]
             Odore di autunno, di foglie umide.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             La pancia di {name} colma di un senso di vuoto.
             La sensazione di quando ha condiviso qualcosa che riteneva terribile.
@@ -585,7 +585,7 @@
                     ~ growing = 0
                     ~ chosenCultivable = ()
                 -
-            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
                     -> cultivable_test
             + [Mi aggiro per la serra.]    
                     -> main
@@ -629,7 +629,7 @@
         Coraggiosa, la <b>Bacca dell'Addolorata</b> espone le sue ferite al mondo.</b>
         Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ancora ad avanzare.
 
-            + (colto) [Afferro uno dei semi.]
+            + (colto) [<i>Afferro uno dei semi.]
             Il frutto si rivela tenace, deciso.
             Si rilassano le spalle di {name}.
             L'incertezza scivola via.
@@ -649,9 +649,9 @@
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 -
-            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
                     -> cultivable_test
-            + [Mi aggiro per la serra.]    
+            + [<i>Mi aggiro per la serra.]    
                     -> main
 
               
@@ -715,9 +715,9 @@
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 -
-            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
                     -> cultivable_test
-            + [Mi aggiro per la serra.]    
+            + [<i>Mi aggiro per la serra.]    
                     -> main                
 
 === brina_dell_impossibile
@@ -754,7 +754,7 @@
         Isole di vetro galleggiano nell'aria.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         E baccelli crescono tra le ferite, come navi colme di semi.
 
-        + (colto) [Colgo uno dei baccelli.]
+        + (colto) [<i>Colgo uno dei baccelli.]
             {name} vede e dà un nome a qualcosa del suo passato.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             A qualcosa che è sempre stato lì, eppure non vedeva.
             La <b>Brina dell'Impossibile</b> si raccoglie nel luogo di un trauma.
@@ -774,9 +774,9 @@
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 -
-            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
                     -> cultivable_test
-            + [Mi aggiro per la serra.]    
+            + [<i>Mi aggiro per la serra.]    
                     -> main
 
 
@@ -837,9 +837,9 @@
                 ~ chosenCultivable = ()
                 ~ move_entity(BrownBee, Greenhouse)                
                 -
-            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
                     -> cultivable_test
-            + [Mi aggiro per la serra.]    
+            + [<i>Mi aggiro per la serra.]    
                     -> main
 
 
@@ -903,9 +903,9 @@
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 -
-            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
                     -> cultivable_test
-            + [Mi aggiro per la serra.]    
+            + [<i>Mi aggiro per la serra.]    
                     -> main
 
 === barba_dell_inciampo
@@ -946,7 +946,7 @@
         Quando {name} abbassa le difese, vede con occhi diversi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         E la pianta con {pronouns has him:lui|{pronouns has her:lei|ləi}}.
         
-        + (colto)[Afferro l'ultima spina.]
+        + (colto)[<i>Afferro l'ultima spina.]
             C'è pace in {name}, pace nella serra.
             E il calice della <b>Barba dell'inciampo</b> ora è tana.
             C'è differenza tra colpa e reponsabilità.
@@ -967,9 +967,9 @@
                 ~ chosenCultivable = ()
                 ~ move_entity(Snail, Greenhouse)                
                 -
-            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
                     -> cultivable_test
-            + [Mi aggiro per la serra.]    
+            + [<i>Mi aggiro per la serra.]    
                     -> main
 === olobino
 
@@ -1034,9 +1034,9 @@
                 ~ move_entity(FromPondToGreenhouseBlooming, Pond)
                 ~ move_entity(FromPondToGreenhouse, Safekeeping)                
                 -
-            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
                     -> cultivable_test
-            + [Mi aggiro per la serra.]    
+            + [<i>Mi aggiro per la serra.]    
                     -> main
 === falsa_palude
 
@@ -1097,9 +1097,9 @@
                 ~ growing = 0
                 ~ chosenCultivable = ()
                 -
-            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
                     -> cultivable_test
-            + [Mi aggiro per la serra.]    
+            + [<i>Mi aggiro per la serra.]    
                     -> main
 
 
