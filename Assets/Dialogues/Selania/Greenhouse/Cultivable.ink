@@ -364,20 +364,19 @@
                 <i>Le dita di {name} sanno di ricordo, sanno di mare.</i>
                 <i>Di persone allontanate.</i>
                 <i>Di addii dolorosi, e ferite risanate.</i>
-                    ~ growing = 0
-                    ~ chosenCultivable = ()
+                    @animation:Inventory
+                    @animation:RewriterBook
                     {
                         - bookContents hasnt GreenhouseRecap:
                             ~ move_entity(GreenhouseRecap, BookPlace)
-                    }
-                    @animation:Inventory
-                    @animation:RewriterBook
-                    
-                                    
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                        -> cultivable_test
-                + + [Mi aggiro per la serra.]    
-                        -> main
+                    }                    
+                    ~ growing = 0
+                    ~ chosenCultivable = ()
+                -
+            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> cultivable_test
+            + [Mi aggiro per la serra.]    
+                    -> main
 
               
 
@@ -431,20 +430,20 @@
                 <i>Il corpo colmo di piacere.</i>
                 <i>Di fusione.</i>
                 <i>Vivo.</i>
-                    ~ growing = 0
-                    ~ chosenCultivable = ()
-                    ~ move_entity(GoldenBee, Greenhouse)
+                    @animation:Inventory
+                    @animation:RewriterBook
                     {
                         - bookContents hasnt GreenhouseRecap:
                             ~ move_entity(GreenhouseRecap, BookPlace)
                     }
-                    @animation:Inventory
-                    @animation:RewriterBook
-
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                        -> cultivable_test
-                + + [Mi aggiro per la serra.]    
-                        -> main
+                    ~ growing = 0
+                    ~ chosenCultivable = ()
+                    ~ move_entity(GoldenBee, Greenhouse)
+                -
+            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> cultivable_test
+            + [Mi aggiro per la serra.]    
+                    -> main
 
 
 === canto_delle_compagne
@@ -493,20 +492,20 @@
                 <i>La sua voce si alza e canta, chiama l3 compagn3.</i>
                 <i>Si uniscono in una festa, un sabba, rendendo il mondo intero il loro palcoscenico.</i>
                 <i>Ridendo feroci di chi l3 teme.</i>
-                    ~ growing = 0
-                    ~ chosenCultivable = ()
-                    ~ move_entity(RedBee, Greenhouse)
+                    @animation:Inventory
+                    @animation:RewriterBook
                     {
                         - bookContents hasnt GreenhouseRecap:
                             ~ move_entity(GreenhouseRecap, BookPlace)
-                    }                    
-                    @animation:Inventory
-                    @animation:RewriterBook
-
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                        -> cultivable_test
-                + + [Mi aggiro per la serra.]    
-                        -> main
+                    }  
+                    ~ growing = 0
+                    ~ chosenCultivable = ()
+                    ~ move_entity(RedBee, Greenhouse)
+                -
+            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> cultivable_test
+            + [Mi aggiro per la serra.]    
+                    -> main
 
               
 === la_spazzata
@@ -561,20 +560,20 @@
             <i>Per poi scoprire che il mondo non è finito quella volta, e non finirà oggi.</i>
             <i>Le cose sono sempre peggiori nella propria testa.</i>
             <i>Ma reali, lasciano segni e ferite.</i>
-            
-                    ~ growing = 0
-                    ~ chosenCultivable = ()
+                    @animation:Inventory
+                    @animation:RewriterBook
                     {
                         - bookContents hasnt GreenhouseRecap:
                             ~ move_entity(GreenhouseRecap, BookPlace)
                     }
-                    @animation:Inventory
-                    @animation:RewriterBook
 
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                        -> cultivable_test
-                + + [Mi aggiro per la serra.]    
-                        -> main
+                    ~ growing = 0
+                    ~ chosenCultivable = ()
+                -
+            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> cultivable_test
+            + [Mi aggiro per la serra.]    
+                    -> main
 
 
 
@@ -622,19 +621,20 @@
             <i>L'avanzare di un ramo timido ha permesso alla <b>Bacca</b> di fruttare.
             <i>Compiere il primo passo è faticoso.
             <i>Ma ora {name} ricorda come camminare.
-                ~ growing = 0
-                ~ chosenCultivable = ()
+                @animation:Inventory
+                @animation:RewriterBook
                     {
                         - bookContents hasnt GreenhouseRecap:
                             ~ move_entity(GreenhouseRecap, BookPlace)
                     }
-                @animation:Inventory
-                @animation:RewriterBook
 
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                        -> cultivable_test
-                + + [Mi aggiro per la serra.]    
-                        -> main
+                ~ growing = 0
+                ~ chosenCultivable = ()
+                -
+            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> cultivable_test
+            + [Mi aggiro per la serra.]    
+                    -> main
 
               
 === non_ti_scordar_di_te
@@ -684,19 +684,20 @@
             <i>Del celebrare le parti di chi abbiamo incontrato, che continuano a vivere in noi.
             <i>Del sentirci eredi e messagger3, parte di un percorso intessuto di nomi.
             <i>A quali nomi {name} name ripensa?
-                ~ growing = 0
-                ~ chosenCultivable = ()
+                    @animation:Inventory
+                    @animation:RewriterBook
                     {
                         - bookContents hasnt GreenhouseRecap:
                             ~ move_entity(GreenhouseRecap, BookPlace)
                     }
-                    @animation:Inventory
-                    @animation:RewriterBook
-            
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                        -> cultivable_test
-                + + [Mi aggiro per la serra.]    
-                        -> main                    
+
+                ~ growing = 0
+                ~ chosenCultivable = ()
+                -
+            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> cultivable_test
+            + [Mi aggiro per la serra.]    
+                    -> main                
 
 === brina_dell_impossibile
 
@@ -739,19 +740,19 @@
             <i>Riempie le ferite così che siano visibili.</i>
             <i>Anche se fa male, aiuta a guardare, nominare, affrontare.</i>
             <i>Offre con ogni suo baccello semi vivi di speranza.</i>
-
-                ~ growing = 0
-                ~ chosenCultivable = ()
+                @animation:Inventory
+                @animation:RewriterBook
                     {
                         - bookContents hasnt GreenhouseRecap:
                             ~ move_entity(GreenhouseRecap, BookPlace)
                     }
-                @animation:Inventory
-                @animation:RewriterBook
-
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                        -> cultivable_test
-                + + [Mi aggiro per la serra.]    
+ 
+                ~ growing = 0
+                ~ chosenCultivable = ()
+                -
+            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> cultivable_test
+            + [Mi aggiro per la serra.]    
                     -> main
 
 
@@ -798,19 +799,20 @@
             <i>Il <b><i>Cardo aspinato</b></i> sboccia nel supporto.</i>
             <i>Nel capire che lasciarsi aiutare è aiutare l'altrə.</i>
             <i>Nell'accettare che aiutare è aiutarsi.</i>
-                ~ growing = 0
-                ~ chosenCultivable = ()
-                ~ move_entity(BrownBee, Greenhouse)                
+                @animation:Inventory
+                @animation:RewriterBook
                     {
                         - bookContents hasnt GreenhouseRecap:
                             ~ move_entity(GreenhouseRecap, BookPlace)
                     }
-                @animation:Inventory
-                @animation:RewriterBook
 
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                        -> cultivable_test
-                + + [Mi aggiro per la serra.]    
+                ~ growing = 0
+                ~ chosenCultivable = ()
+                ~ move_entity(BrownBee, Greenhouse)                
+                -
+            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> cultivable_test
+            + [Mi aggiro per la serra.]    
                     -> main
 
 
@@ -861,19 +863,19 @@
             <i>Non c'è gioia più grande del fare per il solo piacere di fare.
             <i>Senza luoghi dove andare.
             <i>Senza classifiche da scalare.
-                ~ growing = 0
-                ~ chosenCultivable = ()
+                @animation:Inventory
+                @animation:RewriterBook
                     {
                         - bookContents hasnt GreenhouseRecap:
                             ~ move_entity(GreenhouseRecap, BookPlace)
-                    }
-                @animation:Inventory
-                @animation:RewriterBook
-
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                        -> cultivable_test
-                + + [Mi aggiro per la serra.]    
-                    -> main 
+                    }                
+                ~ growing = 0
+                ~ chosenCultivable = ()
+                -
+            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> cultivable_test
+            + [Mi aggiro per la serra.]    
+                    -> main
 
 === barba_dell_inciampo
 
@@ -920,22 +922,21 @@
             <i>Tra punizione ed elaborazione.
             <i>La lancia della pianta è ora tana per qualcosa di delicato.
             <i>L'errore di {name} è ora guida per cambiare.
-                ~ growing = 0
-                ~ chosenCultivable = ()
-                ~ move_entity(Snail, Greenhouse)                
+                @animation:Inventory
+                @animation:RewriterBook
                     {
                         - bookContents hasnt GreenhouseRecap:
                             ~ move_entity(GreenhouseRecap, BookPlace)
                     }
-                @animation:Inventory
-                @animation:RewriterBook
-
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                        -> cultivable_test
-                        
-                + + [Mi aggiro per la serra.]    
-                    -> main 
-
+                
+                ~ growing = 0
+                ~ chosenCultivable = ()
+                ~ move_entity(Snail, Greenhouse)                
+                -
+            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> cultivable_test
+            + [Mi aggiro per la serra.]    
+                    -> main
 === olobino
 
     = TW
@@ -984,24 +985,22 @@
             <i>L'<i><b>Olobino</i></b> è un fungo semplice pieno di potere.
             <i>Il potere che c'è nel perdere il sé.
             <i>L'eternità nella collettività.
-                ~ growing = 0
-                ~ chosenCultivable = ()
-                ~ move_entity(FromPondToGreenhouseBlooming, Pond)
-                ~ move_entity(FromPondToGreenhouse, Safekeeping)                
+                @animation:Inventory
+                @animation:RewriterBook 
                     {
                         - bookContents hasnt GreenhouseRecap:
                             ~ move_entity(GreenhouseRecap, BookPlace)
                     }
-
-                @animation:Inventory
-                @animation:RewriterBook
                 
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                        -> cultivable_test
-                        
-                + + [Mi aggiro per la serra.]    
-                    -> main 
-
+                ~ growing = 0
+                ~ chosenCultivable = ()
+                ~ move_entity(FromPondToGreenhouseBlooming, Pond)
+                ~ move_entity(FromPondToGreenhouse, Safekeeping)                
+                -
+            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> cultivable_test
+            + [Mi aggiro per la serra.]    
+                    -> main
 === falsa_palude
 
     = TW
@@ -1048,20 +1047,19 @@
             <i>Ciò che accade quando il dolore si fa terreno comune.
             <i>Quando storie diverse riconoscono la propria voce.
             <i>E ciò che sembrava un ostacolo personale, si dimostra un problema strutturale.
-                ~ growing = 0
-                ~ chosenCultivable = ()
-                    {
-                        - bookContents hasnt GreenhouseRecap:
-                            ~ move_entity(GreenhouseRecap, BookPlace)
-                    }
                 @animation:Inventory
                 @animation:RewriterBook
-
-                + + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                        -> cultivable_test
-                        
-                + + [Mi aggiro per la serra.]    
-                    -> main 
+                {
+                    - bookContents hasnt GreenhouseRecap:
+                        ~ move_entity(GreenhouseRecap, BookPlace)
+                }
+                ~ growing = 0
+                ~ chosenCultivable = ()
+                -
+            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
+                    -> cultivable_test
+            + [Mi aggiro per la serra.]    
+                    -> main
 
 
 -> main
