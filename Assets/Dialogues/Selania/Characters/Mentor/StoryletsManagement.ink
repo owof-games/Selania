@@ -1,4 +1,7 @@
 === mentor_tutorial_storylets
+{debug: passo da mentor_tutorial_storylets}
+{debug: valore di welcome == {welcome}}
+{debug: valore di questions == {questions}}
 ~ temp charNameOne = translator(firstCharacterState)
 //Ogni volta che parlo con Mentore, il primo check è sulla presenza o meno di tutorial. Se ci sono elementi di tutorial da condividere e le condizioni sono rispettate, a questo punto scattano per primi, ma senza darmi feedback, che verranno dati solo se non ci sono storylets di altro tipo da condividere.
     {
@@ -16,7 +19,9 @@
                                 -> gifts_and_ink
                         - else:
                             -> mentor_and_first_char_storylets
-                    }  
+                    }
+                - else:
+                    -> mentor_and_first_char_storylets    
             }
                     
         - not questions && (first_story_gift.ink_outcome or secondTutorial == true) && tutorialPauses == false:
@@ -29,6 +34,7 @@
 
 
 === mentor_and_first_char_storylets ===
+{debug: passo da mentor_and_first_char_storylets}
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
@@ -53,6 +59,7 @@
     
 
 === mentor_and_second_char_storylets ===
+{debug: passo da mentor_and_second_char_storylets}
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
@@ -82,6 +89,7 @@
 
 
 === fifth_character_storylets ===
+{debug: passo da fifth_character_storylets}
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)

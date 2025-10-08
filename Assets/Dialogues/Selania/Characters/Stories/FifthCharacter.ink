@@ -14,6 +14,7 @@
         -> DONE
     
 === talk_with_mentor
+{debug: passo da talk_with_mentor}
 ~ temp charNameOne = translator(firstCharacterState)
 ~ temp charNameTwo = translator(secondCharacterState)
 ~ temp charNameThree = translator(thirdCharacterState)
@@ -25,6 +26,7 @@
     //-> fifth_character_storylets
 
     = talk
+    {debug: passo da talk_with_mentor.talk}
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
