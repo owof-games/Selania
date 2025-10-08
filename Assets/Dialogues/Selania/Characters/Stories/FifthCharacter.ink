@@ -20,7 +20,7 @@
 ~ temp charNameFour= translator(fourthCharacterState)
 ~ temp charNameFive = translator(fifthCharacterState)
 
-    -> mentor_and_first_char_storylets
+    -> mentor_tutorial_storylets
     //-> mentor_and_second_char_storylets
     //-> fifth_character_storylets
 
@@ -31,8 +31,33 @@
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    Come posso esserti utile, {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+    {
+        - not gifts_and_ink && secondStory == StoryNotStarted:
+            Hai parlato con la nuova arrivata?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
+        
+        - not questions && not(first_story_gift.ink_outcome or secondTutorial == true):
+            {
+                - firstStoryQuestCount >= minStoryQuesTCountFirstChar: Hai fatto il tuo dono a {charNameOne}?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
+                        
+                - else:
+                    {
+                        - firstStoryQuestCount < 2:
+                            Hai bisogno di parlare ancora molto con {charNameOne} prima di poterle fare il dono.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
+                        
+                        - firstStoryQuestCount < 5:
+                            Secondo me sei circa a metà strada prima di poter convincere {charNameOne} a ricevere il tuo dono.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+                        
+                        - else:
+                            Ormai ci sei: pochissimi scambi e sento che {charNameOne} sarà pronta ad aprirsi a te.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
+
+                    }
+            }
+        
+        - else:
+                Come posso esserti utile, {pronouns has him: amico mio|{pronouns has her: amica mia|amicə miə}}?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
     
+}
+
         + [Avrei bisogno di una mano.]
             -> support
         

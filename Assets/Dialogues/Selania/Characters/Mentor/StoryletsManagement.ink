@@ -1,10 +1,6 @@
-=== mentor_and_first_char_storylets ===
-    ~ temp charNameOne = translator(firstCharacterState)
-    ~ temp charNameTwo = translator(secondCharacterState)
-    ~ temp charNameThree = translator(thirdCharacterState)
-    ~ temp charNameFour= translator(fourthCharacterState)
-    ~ temp charNameFive = translator(fifthCharacterState)
-    
+=== mentor_tutorial_storylets
+~ temp charNameOne = translator(firstCharacterState)
+//Ogni volta che parlo con Mentore, il primo check è sulla presenza o meno di tutorial. Se ci sono elementi di tutorial da condividere e le condizioni sono rispettate, a questo punto scattano per primi, ma senza darmi feedback, che verranno dati solo se non ci sono storylets di altro tipo da condividere.
     {
         - not welcome:
             -> welcome
@@ -12,10 +8,6 @@
         - not gifts_and_ink:
         //Parte solo quando c'è in giro anche Riccio.
             {
-                - secondStory == StoryNotStarted:
-                    Hai parlato con la nuova arrivata?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
-                            -> mentor_and_second_char_storylets 
-                
                 - secondStory == StoryStarted:
                     {
                         - tutorialPauses == false:
@@ -23,56 +15,42 @@
                             Ed è quindi arrivato il momento di continuare con le spiegazioni!
                                 -> gifts_and_ink
                         - else:
-                            -> mentor_and_second_char_storylets
+                            -> mentor_and_first_char_storylets
                     }  
             }
                     
+        - not questions && (first_story_gift.ink_outcome or secondTutorial == true) && tutorialPauses == false:
+            -> questions
             
-        - not questions:
-            {
-                - (first_story_gift.ink_outcome or secondTutorial == true) && tutorialPauses == false:
-                        -> questions
-        
-                
-                - else:
-                    {
-                        - firstStoryQuestCount >= minStoryQuesTCountFirstChar: Hai fatto il tuo dono a {charNameOne}?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
-                                -> mentor_and_second_char_storylets
-                                
-                        - else:
-                            
-                            {
-                                - firstStoryQuestCount < 2:
-                                    Hai bisogno di parlare ancora molto con {charNameOne} prima di poterle fare il dono.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
-                                        -> mentor_and_second_char_storylets 
-                                
-                                - firstStoryQuestCount < 5:
-                                    Secondo me sei circa a metà strada prima di poter convincere {charNameOne} a ricevere il tuo dono.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-                                        -> mentor_and_second_char_storylets 
-                                
-                                - else:
-                                    Ormai ci sei: pochissimi scambi e sento che {charNameOne} sarà pronta ad aprirsi a te.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
-                                        -> mentor_and_second_char_storylets 
-                            }
-                    }
-            }
+        - else:
+            -> mentor_and_first_char_storylets    
+    
+    }
+
+
+=== mentor_and_first_char_storylets ===
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    
+{    
             
     //Feedback
         - not first_character_feedback:
             {
                 - firstStory == StoryEnded:
                     -> first_character_feedback
-                
                 - else:
-                    Prenditi il tuo tempo, ma ricordati che presto o tardi dovrai aiutare {charNameOne} a trovare il suo nuovo nome.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
-                        -> mentor_and_second_char_storylets 
+                    -> mentor_and_second_char_storylets     
             }
         
         - else:
             -> mentor_and_second_char_storylets 
     
-    }
-
+ }  
+    
 
 === mentor_and_second_char_storylets ===
     ~ temp charNameOne = translator(firstCharacterState)
@@ -91,7 +69,6 @@
         - knowing_second_character.two && (not addressing_violence):
             -> addressing_violence
         
-        
         //Se abbiamo visto che manca l'innaffiatoio e/o due ci ha detto che non parla con lei:
         - (stolen_watering_can or knowing_second_character.she_hates_me) && not watering_can_storylet:
             -> watering_can_storylet
@@ -101,7 +78,6 @@
             
         - else:
             -> fifth_character_storylets
-    
     }
 
 
@@ -129,8 +105,7 @@
      //Commenti a situazioni, eventi o altro.
         - talking_witch.first_story_ended_check && not growing_witch_storylet:
             -> growing_witch_storylet
-        
-        
+            
         - else:
             -> knowing_fifth_character
     
