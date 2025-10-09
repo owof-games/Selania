@@ -1499,10 +1499,6 @@
      La canzone del mio nome.
         
         {
-            - firstCharacterPossibleStates has Chitarra:
-                 Non vorrei deluderti, ma resterà <b><i>Chitarra</b></i>, perché l'unica cosa che posso fare è non fare nulla e lasciare che le cose accadano.
-                 Perdonami il cringe, ma non posso fare diversamente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
-            
             - firstCharacterPossibleStates has Triangolo:
                     ~ firstCharacterState = ()
                     ~ firstCharacterState += Triangolo

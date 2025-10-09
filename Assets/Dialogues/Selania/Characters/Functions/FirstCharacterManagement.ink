@@ -66,7 +66,7 @@
 ->->
     
     
-//Settaggio nome quando partiamo con la discussione
+//Settaggio nome quando partiamo con la discussione (non finale quindi)
 === firstNaming ===
 //Se ho un pareggio quindi c'è differenza se blu batte sia giallo che viola (Triangolo)
 //Se batte solo giallo (Orchestra)
