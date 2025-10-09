@@ -20,17 +20,20 @@
     
     
 === story_time_management_for_PNG
+~ temp CurrentLocation = entity_location(PG)
     //Qui commentato a manetta per non fare partire cose che non dovrebbero partire.
     {
     
     //Dopo il delay previsto, compare Chitarra.
         - movementsCounter == delayFirstChar && firstStory == StoryNotStarted:
                 ~ move_entity(FirstCharacter, TrainStop)
+                ~ move_entity(TrainNoise, CurrentLocation)
                 ~ firstStory = StoryStarted
                 
     //Dopo due steps della storia della prima personaggia, compare la seconda      
         - knowing_first_character.two && secondStory == StoryNotStarted:
-                ~ move_entity(SecondCharacter, TrainStop)    
+                ~ move_entity(SecondCharacter, TrainStop)
+                ~ move_entity(TrainNoise, CurrentLocation)
                 ~ secondStory = StoryStarted
     
     //Al primo dono fatto, compare il terzo png
@@ -317,6 +320,12 @@
 	        ~ secondCharEndingDialogue ++     
     }
 
+//Gestione suoni
+    {
+    
+           - safekeepingContents hasnt TrainNoise:
+               ~ move_entity(TrainNoise, Safekeeping)
+    }
 
 
 //Comparsa lettere dopo fine delle storie (così non compaiono subito.
