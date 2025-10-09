@@ -1,9 +1,9 @@
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
     VAR bedroomContents = (RoomLoad, PG, settings)
 
-    VAR trainStopContents = (FromTrainStopToForest, StartingNote, FromTrainStopToBedroom, Birds)
+    VAR trainStopContents = (FromTrainStopToForest, StartingNote, FromTrainStopToBedroom, Birds, Mentor)
 
-    VAR forestContents = (Mentor, Bench, TheWitch, LeafOneSin, LeafTwoSin, LeafThreeSin, LeafFourSin, LeafFiveSin, LeafOneDx, LeafTwoDx, LeafThreeDx, FromForestToTrainStop, FromForestToPond, FromForestToLibraryDesat, Arbustini)
+    VAR forestContents = (Bench, TheWitch, LeafOneSin, LeafTwoSin, LeafThreeSin, LeafFourSin, LeafFiveSin, LeafOneDx, LeafTwoDx, LeafThreeDx, FromForestToTrainStop, FromForestToPond, FromForestToLibraryDesat, Arbustini)
 
     VAR pondContents = (FromPondToForest, FromPondToGreenhouse, FromPondToNest, CloudOne, CloudTwo, CloudThree)
 
