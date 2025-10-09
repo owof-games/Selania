@@ -364,24 +364,10 @@
                 Le dita di {name} sanno di ricordo, sanno di mare.
                 Di persone allontanate.
                 Di addii dolorosi, e ferite risanate.
-                // @animation:Inventory
-                // {
-                //     - are_two_entities_together(PG,RewriterBook):
-                //         @animation:RewriterBook
-                // }
-                    // {
-                    //     - bookContents hasnt GreenhouseRecap:
-                    //         ~ move_entity(GreenhouseRecap, BookPlace)
-                    // }
-                    ~ findedGifts += LicheneDegliAbissi
-                    ~ growing = 0
-                    ~ chosenCultivable = ()
-                -
-            + {backupCultivable != ()}[Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
-            + <i>[Mi aggiro per la serra.]    
-                    -> main
 
+                    //~ findedGifts += LicheneDegliAbissi
+                  
+                    -> ending_cultivation
               
 
 
@@ -434,25 +420,11 @@
                 Il corpo colmo di piacere.
                 Di fusione.
                 Vivo.
-                // @animation:Inventory
-                // {
-                //     - are_two_entities_together(PG,RewriterBook):
-                //         @animation:RewriterBook
-                // }
-                    // {
-                    //     - bookContents hasnt GreenhouseRecap:
-                    //         ~ move_entity(GreenhouseRecap, BookPlace)
-                    // }
-                    ~ findedGifts += EderaDelleAmanti
-                    ~ growing = 0
-                    ~ chosenCultivable = ()
+                
+                    //~ findedGifts += EderaDelleAmanti
                     ~ move_entity(GoldenBee, Greenhouse)
-                -
-            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
-            + [<i>Mi aggiro per la serra.]    
-                    -> main
-
+            
+                    -> ending_cultivation
 
 === canto_delle_compagne
 
@@ -500,24 +472,11 @@
                 La sua voce si alza e canta, chiama l3 compagn3.
                 Si uniscono in una festa, un sabba, rendendo il mondo intero il loro palcoscenico.
                 Ridendo feroci di chi l3 teme.
-                // @animation:Inventory
-                // {
-                //     - are_two_entities_together(PG,RewriterBook):
-                //         @animation:RewriterBook
-                // }
-                    // {
-                    //     - bookContents hasnt GreenhouseRecap:
-                    //         ~ move_entity(GreenhouseRecap, BookPlace)
-                    // }
+
                     ~ findedGifts += CantoDelleCompagne
-                    ~ growing = 0
-                    ~ chosenCultivable = ()
                     ~ move_entity(RedBee, Greenhouse)
-                -
-            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
-            + [<i>Mi aggiro per la serra.]    
-                    -> main
+                      
+                    -> ending_cultivation
 
               
 === la_spazzata
@@ -572,23 +531,10 @@
             Per poi scoprire che il mondo non è finito quella volta, e non finirà oggi.
             Le cose sono sempre peggiori nella propria testa.
             Ma reali, lasciano segni e ferite.
-                // @animation:Inventory
-                // {
-                //     - are_two_entities_together(PG,RewriterBook):
-                //         @animation:RewriterBook
-                // }
-                    // {
-                    //     - bookContents hasnt GreenhouseRecap:
-                    //         ~ move_entity(GreenhouseRecap, BookPlace)
-                    // }
-                    ~ findedGifts += LaSpazzata
-                    ~ growing = 0
-                    ~ chosenCultivable = ()
-                -
-            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
-            + [Mi aggiro per la serra.]    
-                    -> main
+
+                    //~ findedGifts += LaSpazzata
+                 
+                    -> ending_cultivation
 
 
 
@@ -636,23 +582,10 @@
             L'avanzare di un ramo timido ha permesso alla <b>Bacca</b> di fruttare.
             Compiere il primo passo è faticoso.
             Ma ora {name} ricorda come camminare.
-                // @animation:Inventory
-                // {
-                //     - are_two_entities_together(PG,RewriterBook):
-                //         @animation:RewriterBook
-                // }
-                    // {
-                    //     - bookContents hasnt GreenhouseRecap:
-                    //         ~ move_entity(GreenhouseRecap, BookPlace)
-                    // }
-                ~ findedGifts += BaccaDellaAddolorata
-                ~ growing = 0
-                ~ chosenCultivable = ()
-                -
-            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
-            + [<i>Mi aggiro per la serra.]    
-                    -> main
+
+                //~ findedGifts += BaccaDellaAddolorata
+                
+                    -> ending_cultivation
 
               
 === non_ti_scordar_di_te
@@ -702,24 +635,12 @@
             Del celebrare le parti di chi abbiamo incontrato, che continuano a vivere in noi.
             Del sentirci eredi e messagger3, parte di un percorso intessuto di nomi.
             A quali nomi {name} name ripensa?
-                // @animation:Inventory
-                // {
-                //     - are_two_entities_together(PG,RewriterBook):
-                //         @animation:RewriterBook
-                // }
-                    // {
-                    //     - bookContents hasnt GreenhouseRecap:
-                    //         ~ move_entity(GreenhouseRecap, BookPlace)
-                    // }
-                ~ findedGifts += NonTiScordarDiTe 
-                ~ growing = 0
-                ~ chosenCultivable = ()
-                -
-            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
-            + [<i>Mi aggiro per la serra.]    
-                    -> main                
 
+                //~ findedGifts += NonTiScordarDiTe 
+                
+                    -> ending_cultivation
+                    
+                    
 === brina_dell_impossibile
 
     = TW
@@ -761,23 +682,10 @@
             Riempie le ferite così che siano visibili.
             Anche se fa male, aiuta a guardare, nominare, affrontare.
             Offre con ogni suo baccello semi vivi di speranza.
-                // @animation:Inventory
-                // {
-                //     - are_two_entities_together(PG,RewriterBook):
-                //         @animation:RewriterBook
-                //  }
-                //     {
-                //         - bookContents hasnt GreenhouseRecap:
-                //             ~ move_entity(GreenhouseRecap, BookPlace)
-                //     }
-                ~ findedGifts += BrinaDellImpossibile
-                ~ growing = 0
-                ~ chosenCultivable = ()
-                -
-            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
-            + [<i>Mi aggiro per la serra.]    
-                    -> main
+
+                //~ findedGifts += BrinaDellImpossibile
+                
+                    -> ending_cultivation
 
 
 === cardo_aspinato
@@ -823,25 +731,9 @@
             Il <b>Cardo aspinato</b> sboccia nel supporto.
             Nel capire che lasciarsi aiutare è aiutare l'altrə.
             Nell'accettare che aiutare è aiutarsi.
-                // @animation:Inventory
-                // {
-                //     - are_two_entities_together(PG,RewriterBook):
-                //         @animation:RewriterBook
-                // }
-                    // {
-                    //     - bookContents hasnt GreenhouseRecap:
-                    //         ~ move_entity(GreenhouseRecap, BookPlace)
-                    // }
-                ~ findedGifts += CardoAspinato
-                ~ growing = 0
-                ~ chosenCultivable = ()
+                //~ findedGifts += CardoAspinato
                 ~ move_entity(BrownBee, Greenhouse)                
-                -
-            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
-            + [<i>Mi aggiro per la serra.]    
-                    -> main
-
+                    -> ending_cultivation
 
 
           
@@ -890,23 +782,10 @@
             Non c'è gioia più grande del fare per il solo piacere di fare.
             Senza luoghi dove andare.
             Senza classifiche da scalare.
-                // @animation:Inventory
-                // {
-                //     - are_two_entities_together(PG,RewriterBook):
-                //         @animation:RewriterBook
-                // }
-                    // {
-                    //     - bookContents hasnt GreenhouseRecap:
-                    //         ~ move_entity(GreenhouseRecap, BookPlace)
-                    // }
-                ~ findedGifts += BastoneDellOzioso    
-                ~ growing = 0
-                ~ chosenCultivable = ()
-                -
-            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
-            + [<i>Mi aggiro per la serra.]    
-                    -> main
+
+                //~ findedGifts += BastoneDellOzioso    
+                
+                    -> ending_cultivation
 
 === barba_dell_inciampo
 
@@ -953,24 +832,12 @@
             Tra punizione ed elaborazione.
             La lancia della pianta è ora tana per qualcosa di delicato.
             L'errore di {name} è ora guida per cambiare.
-                // @animation:Inventory
-                // {
-                //     - are_two_entities_together(PG,RewriterBook):
-                //         @animation:RewriterBook
-                // }
-                    // {
-                    //     - bookContents hasnt GreenhouseRecap:
-                    //         ~ move_entity(GreenhouseRecap, BookPlace)
-                    // }
-                ~ findedGifts += BarbaDellInciampo
-                ~ growing = 0
-                ~ chosenCultivable = ()
+
+                //~ findedGifts += BarbaDellInciampo
                 ~ move_entity(Snail, Greenhouse)                
-                -
-            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
-            + [<i>Mi aggiro per la serra.]    
-                    -> main
+                
+                    -> ending_cultivation
+
 === olobino
 
     = TW
@@ -1019,25 +886,11 @@
             L'<b>Olobino</b> è un fungo semplice pieno di potere.
             Il potere che c'è nel perdere il sé.
             L'eternità nella collettività.
-                // @animation:Inventory
-                // {
-                //     - are_two_entities_together(PG,RewriterBook):
-                //         @animation:RewriterBook
-                // }
-                    // {
-                    //     - bookContents hasnt GreenhouseRecap:
-                    //         ~ move_entity(GreenhouseRecap, BookPlace)
-                    // }
-                ~ findedGifts += Olobino
-                ~ growing = 0
-                ~ chosenCultivable = ()
-                ~ move_entity(FromPondToGreenhouseBlooming, Pond)
-                ~ move_entity(FromPondToGreenhouse, Safekeeping)                
-                -
-            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
-            + [<i>Mi aggiro per la serra.]    
-                    -> main
+                //~ findedGifts += Olobino
+                 
+                    -> ending_cultivation
+                    
+                    
 === falsa_palude
 
     = TW
@@ -1084,23 +937,32 @@
             Ciò che accade quando il dolore si fa terreno comune.
             Quando storie diverse riconoscono la propria voce.
             E ciò che sembrava un ostacolo personale, si dimostra un problema strutturale.
-                // @animation:Inventory
-                // {
-                //     - are_two_entities_together(PG,RewriterBook):
-                //         @animation:RewriterBook
-                // }
-                // {
-                //     - bookContents hasnt GreenhouseRecap:
-                //         ~ move_entity(GreenhouseRecap, BookPlace)
-                // }
-                ~ findedGifts += FalsaPalude
-                ~ growing = 0
-                ~ chosenCultivable = ()
-                -
-            + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
-                    -> cultivable_test
-            + [<i>Mi aggiro per la serra.]    
-                    -> main
+                //~ findedGifts += FalsaPalude
+                
+                    -> ending_cultivation
 
 
--> main
+
+
+
+
+
+=== ending_cultivation
+    {
+        - are_two_entities_together(PG,RewriterBook):
+            @animation:RewriterBook
+    }
+    {
+        - bookContents hasnt GreenhouseRecap:
+        ~ move_entity(GreenhouseRecap, BookPlace)
+    }
+    @animation:Inventory
+    ~ findedGifts += chosenCultivable
+    ~ growing = 0
+    ~ chosenCultivable = ()
+    
+    + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
+            -> cultivable_test
+    
+    + [<i>Mi aggiro per la serra.]    
+            -> main    
