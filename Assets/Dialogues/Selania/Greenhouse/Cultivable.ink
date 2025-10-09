@@ -948,6 +948,12 @@
 
 
 === ending_cultivation
+     {
+       - ending_cultivation == 1:
+           ~ saturationVar ++
+           ~ move_entity(cultivationKit, Bedroom)
+     }
+    
     //{
     //    - are_two_entities_together(PG,RewriterBook):
     //       @animation:RewriterBook

@@ -5,7 +5,44 @@
         
         - not foundLibro && (knowing_first_character ==true) && firstPauseTalking == 0 && not take_this_book:
             -> take_this_book
-
+            
+        
+        // - are_two_entities_together(FirstCharacter, PG) && (knowing_first_character.four or knowing_second_character.two) and not open_the_kitchen:
+        //        {
+        //            - forestContents has PG:
+        //                -> open_the_kitchen
+        //            
+        //            - else:
+        //                Ehi {name}! Vediamoci alla foresta. Ho una cosa da mostrarti!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
+        //        }
+        
+        
+        // - are_two_entities_together(SecondCharacter, PG) && (knowing_first_character.six or knowing_second_character.seven) and not open_the_third_place:
+        //        {
+        //            - pondContents has PG:
+        //                -> open_the_third_place
+        //            
+        //            - else:
+        //                Ehi {name}! Vediamoci allo stagno. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:riccio_neutral
+        //        }
+        
+        // - are_two_entities_together(ThirdCharacter, PG) && ((firstStory == StoryEnded) or (secondStory == StoryEnded)) and not open_the_library:
+        //        {
+        //            - nestContents has PG or thirdPlaceContents has PG:
+        //                -> open_the_library
+        //            
+        //            - else:
+        //                Ehi {name}! Troviamoci in cucina. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:thirdPNG_neutral
+        //        }        
+        
+        
+        // - are_two_entities_together(Mentor, PG) && thirdStory == StoryEnded and not mentor_rage:
+        //                -> mentor_rage
+             
+    
+        
+        
+        
         - else:
             ->->
     }
@@ -115,6 +152,21 @@
                     ~ move_entity(RewriterBook, Pond)        
             }
             
-
-
 -> main
+
+=== open_the_kitchen
+Apriamo la cucina
+    -> main
+
+
+=== open_the_third_place
+Apriamo il terzo luogo
+    -> main
+    
+=== open_the_library
+Apriamo la biblioteca
+    -> main
+    
+=== mentor_rage
+Mentore sbrocca
+    -> main

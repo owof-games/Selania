@@ -52,12 +52,7 @@
     
 // === call_test
 //     + (click) {are_two_entities_together(WateringCan, PG)} [WateringCan]
-//     {
-//         - click == 1:
-//         ~ saturationVar ++
-//         ~ move_entity(cultivationKit, Bedroom)
-        
-//     }
+/
 
 
 //     {

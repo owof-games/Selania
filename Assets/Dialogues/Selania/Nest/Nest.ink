@@ -14,6 +14,7 @@
         {
             - nest == 1:
             ~ saturationVar ++
+            //~ move_entity(quelchesaràKit, Bedroom)
         }
 
 // ~ arrivingFrom = TrainStop

@@ -16,7 +16,12 @@ VAR saturationVar = 0
             ~ return "backForest"
             
         - entity_location(PG) == TrainStop:
-            ~ return "backTrainStop"
+            {
+                - not mentor_rage:
+                    ~ return "backTrainStop"
+                - else:
+                    ~ return "backTrainStopBroken"
+            }
             
         - entity_location(PG) == Pond:
            ~ return "backPond"

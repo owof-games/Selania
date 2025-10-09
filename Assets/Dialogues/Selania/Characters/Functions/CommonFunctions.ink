@@ -16,37 +16,43 @@
     VAR delayFirstChar = 2
 
 //Attesa comparsa quarta personaggia
-    VAR delayFourthChar = 20
+    VAR delayFourthChar = 4
     
     
 === story_time_management_for_PNG
     //Qui commentato a manetta per non fare partire cose che non dovrebbero partire.
-    
     {
+    
+    //Dopo il delay previsto, compare Chitarra.
         - movementsCounter == delayFirstChar && firstStory == StoryNotStarted:
                 ~ move_entity(FirstCharacter, TrainStop)
                 ~ firstStory = StoryStarted
                 
-    //Dopo tre steps della storia della prima personaggia, compare la seconda      
-        - knowing_first_character.three && secondStory == StoryNotStarted:
+    //Dopo due steps della storia della prima personaggia, compare la seconda      
+        - knowing_first_character.two && secondStory == StoryNotStarted:
                 ~ move_entity(SecondCharacter, TrainStop)    
                 ~ secondStory = StoryStarted
     
-    //A metà della storia della seconda personaggia (così la biblioteca è aperta), compare la terza
-        //- knowing_second_character.five && thirdStory == StoryNotStarted:
+    //Al primo dono fatto, compare il terzo png
+        //- first_story_gift.ink_outcome or second_story_gift.ink_outcome:
                // ~ move_entity(ThirdCharacter, TrainStop)    
                 //~ thirdStory = StoryStarted
                 
-    //Dopo un po' da quando la terza storia è finita, compare una quarta personaggia
-        //- movementsCounter == delayFourthChar && thirdStory == StoryEnded:
-            //Ma magari questo spettro vuole comparire altrove
-                //~ move_entity(FourthCharacter, TrainStop)
+    //Due movimenti dopo la furia della mentore, compare la quarta png
+        //- movementsCounter == delayFourthChar && mentor_rage:
+                //~ move_entity(FourthCharacter, Forest)
                 //~ fourthStory = StoryStarted
+                //qualcosa per panchina sistemata
                 
-    //E quando la storia della quarta è a metà, iniziamo a modo quella della mentore
-        //- knowing_fourth_character.five && fifthStory == StoryNotStarted:
-                //~ fifthStory = StoryStarted
+    //E quando la storia della quarta è a tre, si presenta la mentore come uovo
+        //- knowing_fourth_character.three && fifthStory == StoryNotStarted:
+                //~ qualcosa per trasformare mentore in uovo
                     
+    //E quando la storia della quarta è a cinque steps, parte la storia della mentore
+        //- knowing_fourth_character.five && fifthStory == StoryNotStarted && qualcosa per cui abbiamo tocca l'uovo almeno una volta:
+                //~ fifthStory == StoryStarted:
+                //cambiamento asset per mentore, che passa a mostrone
+    
     
     
     //Check per l'allontanamento delle personagge
@@ -110,13 +116,14 @@
     
 === randomizer_png_location
 //Ho una lista di luoghi che svuoto e poi resetto, così che sia percepibile come effettivamente randomica
+//Questa parte sarà da sistemare una volta che avrò completato tutti gli spazi.
 
     //Check stato tier
     {   
-            // - thirdStory == StoryEnded:
+            // - open_the_third_place:
                     //~ fourthTier = true
                     
-            // - (firstStory == StoryEnded) && (secondStory == StoryEnded):
+            // - open_the_kitchen:
                      //~ thirdTier = true
                      
             - (firstStory == StoryEnded) or (secondStory == StoryEnded):
@@ -148,13 +155,21 @@
                 ~ randomizable_characters -= SecondCharacter 
     }
   
-        
-        // - thirdStory == StoryStarted && talk_with_third_character:
+    //{    
+        //- thirdStory == StoryStarted:
             // ~ randomizable_characters += ThirdCharacter
         
-        // - fourthStory == StoryStarted && dialogo_personaggia_quattro:
+        // - thirdStory == StoryEnded:
+            // ~ randomizable_characters -= ThirdCharacter
+    //}
+    
+    //{
+        // - fourthStory == StoryStarted:
             // ~ randomizable_characters += FourthCharacter    
-            
+        
+        // - fourthStory == StoryEnded:
+            // ~ randomizable_characters -= FourthCharacter 
+    //}
     
     {//se ho raggiunto il tempo trigger, resetto il valore, metto la mentore tra le randomizzabili, e poi vado avanti.
         - changeLocationTimer == changeLocationTrigger:
