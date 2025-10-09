@@ -68,31 +68,55 @@
     
 //Settaggio nome quando partiamo con la discussione
 === firstNaming ===
+//Se ho un pareggio quindi c'è differenza se blu batte sia giallo che viola (Triangolo)
+//Se batte solo giallo (Orchestra)
+//Se batte solo viola (FlautoDolce)
+//Se blu non batte nessuno dei due (Ocarina)
+//((Queste tre ultime scelte son create con la logica di dire che è sempre meno grave se il blu si avvicina a una delle soluzioni più adatte a Chitarra)
+//Lascio un "else" nel caso in cui tutti e tre i colori fossero pari, e quindi è nella media.
+
     {
+        //Blu colore più usato
         - (firstBlue > firstGreen) && (firstBlue > firstRed) && (firstBlue > firstYellow) && (firstBlue > firstPurple):
             ~ firstCharacterPossibleStates += Triangolo
                 ->->
-                
+        //Rosso colore più usato        
         - (firstRed > firstGreen) && (firstRed > firstBlue) && (firstRed > firstYellow) && (firstRed > firstPurple):
             ~ firstCharacterPossibleStates += RagazzaOrchestra
                 ->->
-                
+        
+        //Verde colore più usato        
         - (firstGreen > firstBlue) && (firstGreen > firstRed) && (firstGreen > firstYellow) && (firstGreen > firstPurple):
             ~ firstCharacterPossibleStates += FlautoDolce    
                 ->->
-                
+        
+        //Giallo colore più usato        
         - (firstYellow > firstGreen) && (firstYellow > firstRed) && (firstYellow > firstBlue) && (firstYellow > firstPurple):
             ~ firstCharacterPossibleStates += Ocarina   
                 ->->
-                
+        
+        //Viola colore più usato        
         - (firstPurple > firstGreen) && (firstPurple > firstRed) && (firstPurple > firstYellow) && (firstPurple > firstBlue):
             ~ firstCharacterPossibleStates += Violino    
                 ->->
                 
         - else:
-            ~ firstCharacterPossibleStates += Chitarra 
-            ->->
-                
-    }
-
-->->    
+            {
+                - (firstPurple < firstBlue) && (firstYellow < firstBlue):
+                        ~ firstCharacterPossibleStates += Triangolo
+                        ->->
+                - firstPurple && firstYellow > firstBlue:
+                        ~ firstCharacterPossibleStates += Ocarina   
+                        ->->
+                - (firstYellow > firstBlue) && (not firstPurple > firstBlue):
+                        ~ firstCharacterPossibleStates += RagazzaOrchestra
+                            ->->
+                - (firstPurple > firstBlue) && (not firstYellow > firstBlue):
+                        ~ firstCharacterPossibleStates += FlautoDolce 
+                            ->->
+                - else:
+                        ~ firstCharacterPossibleStates += RagazzaOrchestra
+                            ->->
+            }
+        }
+        ->->    
