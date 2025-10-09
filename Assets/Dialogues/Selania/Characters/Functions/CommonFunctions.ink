@@ -322,7 +322,6 @@
 
 //Gestione suoni
     {
-    
            - safekeepingContents hasnt TrainNoise:
                ~ move_entity(TrainNoise, Safekeeping)
     }

@@ -16,4 +16,4 @@
     
     LIST roomElements = RoomExit, RoomLoad, cultivationKit,  teaKit, littleLibrary, bowl, vase, miniBook, settings, firstCharPaint, secondCharPaint, thirdCharPaint, fourthCharPaint, fifthCharPaint
     
-    LIST noises = TrainNoise
+    LIST noises = TrainNoise, BastonSound

@@ -782,8 +782,8 @@
             Non c'è gioia più grande del fare per il solo piacere di fare.
             Senza luoghi dove andare.
             Senza classifiche da scalare.
-
-                //~ findedGifts += BastoneDellOzioso    
+                
+                ~ move_entity(BastonSound, Greenhouse)
                 
                     -> ending_cultivation
 
