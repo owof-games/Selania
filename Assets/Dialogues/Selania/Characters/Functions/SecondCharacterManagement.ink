@@ -131,42 +131,8 @@ VAR secondPurpleMax = false
         ->->
     
 
-=== function secondStatementVariation(color)
-~ temp secondCheckColor = false
-{debugChangeName: Passo per function secondStatementVariation.}
-
-    {
-        - color == red:
-           ~ secondCheckColor = secondRedMax
-        - color == blue:
-            ~ secondCheckColor = secondBlueMax
-        - color == yellow:
-            ~ secondCheckColor = secondYellowMax
-        - color == green:
-            ~ secondCheckColor = secondGreenMax
-        - color == purple:
-            ~ secondCheckColor = secondPurpleMax
-            
-    }
-
-    {debugChangeName: Il valore di secondCheckColor è {secondCheckColor}.}                    
-    {
-        - secondCheckColor:
-            {
-             - secondCharacterPossibleStates hasnt Corvo:
-                ~ secondCharacterPossibleStates ++
-                {debugChangeName: Aumento lo stato del secondo personaggio, che ora è {secondCharacterPossibleStates }}
-            }
-        
-        - else:
-            {
-             - secondCharacterPossibleStates hasnt Riccio:
-            ~ secondCharacterPossibleStates --
-            {debugChangeName: Diminuisco lo stato del secondo personaggio, che ora è {secondCharacterPossibleStates }}
-            }
-    	            
-    }
-
+//Selezione nome prima della riscrittura
+//Grizzly è il livello "più basso" per Riccio
 === secondNaming ==
     
     {
@@ -186,13 +152,48 @@ VAR secondPurpleMax = false
             ~ secondCharacterPossibleStates += Lupo
                 ->->
         
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 5):
+        - else:
             ~ secondCharacterPossibleStates += Grizzly
-                ->->
-        
-        - else:     
-            ~ secondCharacterPossibleStates += Riccio
                 ->->
     }
     
-        ->->    
+        ->-> 
+ 
+//Variazione nome durante la riscrittura        
+=== function secondStatementVariation(color)
+~ temp secondCheckColor = false
+{debugChangeName: Passo per function secondStatementVariation.}
+
+    {
+        - color == red:
+           ~ secondCheckColor = secondRedMax
+        - color == blue:
+            ~ secondCheckColor = secondBlueMax
+        - color == yellow:
+            ~ secondCheckColor = secondYellowMax
+        - color == green:
+            ~ secondCheckColor = secondGreenMax
+        - color == purple:
+            ~ secondCheckColor = secondPurpleMax
+            
+    }
+
+    {debugChangeName: Il valore di secondCheckColor è {secondCheckColor}.}
+    
+    //Questi sono check di sicurezza per evitare che vengano prodotti valori fuori dalla lista (non dovrebbe accadere ma non si sa mai)
+    {
+        - secondCheckColor:
+            {
+             - secondCharacterPossibleStates hasnt Corvo:
+                ~ secondCharacterPossibleStates ++
+                {debugChangeName: Aumento lo stato del secondo personaggio, che ora è {secondCharacterPossibleStates }}
+            }
+        
+        - else:
+            {
+             - secondCharacterPossibleStates hasnt Grizzly:
+                ~ secondCharacterPossibleStates --
+            {debugChangeName: Diminuisco lo stato del secondo personaggio, che ora è {secondCharacterPossibleStates }}
+            }
+    	            
+    }        
