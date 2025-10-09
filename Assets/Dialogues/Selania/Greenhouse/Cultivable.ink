@@ -948,15 +948,15 @@
 
 
 === ending_cultivation
-    {
-        - are_two_entities_together(PG,RewriterBook):
-            @animation:RewriterBook
-    }
+    //{
+    //    - are_two_entities_together(PG,RewriterBook):
+    //       @animation:RewriterBook
+    //}
     {
         - bookContents hasnt GreenhouseRecap:
         ~ move_entity(GreenhouseRecap, BookPlace)
     }
-    @animation:Inventory
+    //@animation:Inventory
     ~ findedGifts += chosenCultivable
     ~ growing = 0
     ~ chosenCultivable = ()
