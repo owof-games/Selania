@@ -108,10 +108,10 @@
  ----------------------------------*/
 
  === function witch_state()
-{
-    - not talking_witch.intro.nameWitch:
-       ~ return "witch_new_moon"
-    - else:
+//{
+    //- not talking_witch.intro.nameWitch:
+    //   ~ return "witch_new_moon"
+    //- else:
        {
         - moonState == NewMoon:
             ~ return "witch_new_moon"
@@ -125,35 +125,47 @@
             ~ return "witch_red_moon"
        
        }
-}
+//}
 
 
 //Modifica della variabile moonState
 === moon_state_management
 ~ temp dice_roll = RANDOM(1, 18)
-{debug: passo per moon_state management. Prima di agire, il valore di moonState è {moonState}.}
+{debug: passo per moon_state management. Prima di agire, il valore di moonState è {moonState}. Il valore di moonTime è {moonTime}.}
 
+        ~ moonTime ++
+//Non passando più per l'uscita, devo farlo crescere in altri modi, ma con lentezza. Il passaggio 1 spostamento = 1 giorno rischia di essere troppo veloce. Possiamo provare a fare 3 spostamenti = 1 giorno?
 {
-    - moonState == FirstQuarter:
+
+    - moonTime == changeMoonFase:
+        ~ moonTime = 0
         {
-            - dice_roll == 1:
+            //- not talking_witch.intro.nameWitch:
+            //    ->->
+            - moonState == FirstQuarter:
+                {
+                    - dice_roll == 1:
+                        ~ moonState = ()
+                        ~ moonState = RedMoon
+                    - else:
+                        ~ moonState = ()
+                        ~ moonState = FullMoon
+                }
+            
+            - moonState == ThirdQuarter:
                 ~ moonState = ()
-                ~ moonState = RedMoon
+                ~ moonState = NewMoon
+            
+            - moonState == RedMoon:
+                ~ moonState = ()
+                ~ moonState = ThirdQuarter
+            
             - else:
-                ~ moonState = ()
-                ~ moonState = FullMoon
+                ~ moonState ++    
         }
     
-    - moonState == ThirdQuarter:
-        ~ moonState = ()
-        ~ moonState = NewMoon
-    
-    - moonState == RedMoon:
-        ~ moonState = ()
-        ~ moonState = ThirdQuarter
-    
     - else:
-        ~ moonState ++    
+        ->->
 }
 
 {debug: Dopo il passaggio, il valore di dice_random è {dice_roll}, e il valore di moonState è {moonState}.}

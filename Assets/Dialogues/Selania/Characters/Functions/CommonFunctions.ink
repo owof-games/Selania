@@ -350,7 +350,8 @@
 //Altre funzioni:
     -> characters_speaking ->
     -> randomizer_png_location ->
-    -> story_time_management_for_PNG->    
+    -> story_time_management_for_PNG->
+    -> moon_state_management ->
 
 ->->
 

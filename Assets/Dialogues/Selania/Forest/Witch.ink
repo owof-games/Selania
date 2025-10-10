@@ -5,6 +5,9 @@
 //Variabili per la gestione del ritratto
     LIST moonPhases = NewMoon, FirstQuarter, FullMoon, ThirdQuarter, RedMoon
     VAR moonState = NewMoon
+    VAR moonTime = 0
+    //l'idea è che ogni tre passaggi sia un giorno, e che cambi ogni sette giorni.
+    VAR changeMoonFase = 21
     
 === the_witch
 + {are_two_entities_together(TheWitch, PG)} [TheWitch]

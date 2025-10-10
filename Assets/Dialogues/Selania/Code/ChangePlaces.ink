@@ -29,7 +29,6 @@
                 + + [Voglio chiudere <i>Selanìa</i>.]
                     A presto, {name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
                     @quit
-                    -> moon_state_management ->
                     -> END
                     
                 + + [Voglio restare ancora un po'.]
@@ -58,7 +57,7 @@
         {
             - gifts_and_ink.sbadata or cultivable_test:
                 ~ move_entity(Inventory, TrainStop)
-        }        
+        }   
             -> on_movement_events ->
                 -> train_stop
                 
@@ -73,6 +72,7 @@
             - gifts_and_ink.sbadata or cultivable_test:
                 ~ move_entity(Inventory, Forest)
         }        
+        
             -> on_movement_events ->
                 -> forest
         
@@ -87,7 +87,7 @@
             - gifts_and_ink.sbadata or cultivable_test:
                 ~ move_entity(Inventory, Forest)
         }         
-            
+
             -> on_movement_events ->
                 -> forest
     
