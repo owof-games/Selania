@@ -120,7 +120,7 @@
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
         
-        In questo luogo ogni tanto compariranno delle persone nuove.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+        In questo luogo possono comparire delle persone nuove.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         Sono persone rimaste bloccate in qualcosa: rimpianti, rimorsi, traumi.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
         Ma per loro fortuna ci sarai qui tu, {name}, ad aiutarle!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
         Il modo più semplice è ascoltarle.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
@@ -145,8 +145,7 @@
         
         }
         
-        Ma perché vogliamo la loro fiducia?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-        Perché quando queste persone si saranno aperte con te, ti verrà offerta l'occasione di dare loro un </b></i>dono<b><i>.
+        Quando avrai conquistato la loro fiducia, ti verrà offerta l'occasione di fare un </b></i>dono<b><i>.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         Il dono è una cosa che puoi fare una sola volta, ed è il tuo modo di dimostrare a una persona che l'hai capita.
         E per aver qualcosa da donare dovrai faticare, {name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
         Ad esempio, coltivando qualcosa <b><i>alla serra</b></i>.
@@ -213,7 +212,7 @@
                     ~ fifthBlue ++
             -
             
-            Non voglio stordirti di informazioni, per cui ti lascio un po' di suspence, e ti spiegherò più avanti a cosa serve l'inchiostro, e cosa significa essere {pronouns has him:un riscrittore|{pronouns has her:una riscrittora|unə riscrittorə}}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+            Non voglio stordirti di informazioni, per cui ti lascio un po' di suspence, e ti spiegherò più avanti a cosa serve l'inchiostro.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             Ora devo trovare un modo per levare {entity_location(PG) == Forest:queste travi che bloccano il sentiero|le travi che bloccano il sentiero a ovest della foresta}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
             Questo posto collasserebbe senza me.
             Quando avrai conquistato la fiducia di una persona e le avrai donato qualcosa, torna da me per le ultime istruzioni.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
@@ -255,11 +254,8 @@
 
             {name}, ci siamo: sto per darti le ultime istruzioni per renderti {pronouns has him:un perfetto Riscrittore|{pronouns has her:una perfetta Riscrittora|unə perfettə Riscrittorə}}!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
             Più sei in confidenza con la persona e più le hai dato un dono gradito, più avrai inchiostro a disposizione per aiutarla a riscrivere la sua storia.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-            Tra mentori definiamo le azioni che l'inchiostro permette di compiere <b><i>riscritture</b></i>, un po' come quando riscriviamo un testo.
-            E quello che ogni Riscrittorə andrà a revisionare è il modo in cui la persona legge determinati temi della sua vita.
-            Magari una persona si definisce così insicura da chiamarsi <i>Pasticcio</i>, ma lə Riscrittorə ha colto nella sua storia che non c'è alcun pasticcio, ma il coraggio di buttarsi in situazioni scomode.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
-            Oppure si definirà <i>La Temibile</i>, ma invece di far paura, ha solo il terrore di mostrare le sue vulnerabilità, e per questo si sente sola.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
-            Grazie all'inchiostro, lə Riscrittorə aiuterà a riscrivere quella parte della vita della persona.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+            Tra mentori definiamo le azioni che l'inchiostro permette di compiere <b><i>riscritture</b></i>.
+            Un po' come quando riscriviamo un testo.
             Più inchiostro significa più possibilità di aiutare quella persona a vedersi in un modo nuovo.
             Ma a prescindere dalla quantità di inchiostro, ogni Riscrittorə ha in sé il dono dell'<b><i>epilogo</b></i>.
             L'<b><i>epilogo</b></i> è una dichiarazione finale dellə Riscrittorə che permette alla persona di mettere un punto sul presente, e iniziare a guardare al futuro in modo diverso.
