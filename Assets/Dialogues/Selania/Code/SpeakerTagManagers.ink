@@ -99,7 +99,15 @@
     ~ return "La Rana Parlante"
     
 === function PG_tag
-    ~ return "{name}"
+    {
+        - nameChosen == false:
+            ~ return "???"
+            
+        - else:
+            ~ return "{name}"
+    
+    }
+    
     
 /* ---------------------------------
 
