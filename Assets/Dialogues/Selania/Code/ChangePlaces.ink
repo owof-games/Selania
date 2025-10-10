@@ -29,6 +29,7 @@
                 + + [Voglio chiudere <i>Selanìa</i>.]
                     A presto, {name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
                     @quit
+                    -> moon_state_management ->
                     -> END
                     
                 + + [Voglio restare ancora un po'.]

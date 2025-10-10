@@ -109,12 +109,56 @@
 
  === function witch_state()
 {
-    - talking_witch.intro.nameWitch:
-       ~ return "witch_neutral"
-     - else:
-       ~ return "witch_unknown"
+    - not talking_witch.intro.nameWitch:
+       ~ return "witch_new_moon"
+    - else:
+       {
+        - moonState == NewMoon:
+            ~ return "witch_new_moon"
+        - moonState == FirstQuarter:
+            ~ return "witch_first_quarter"
+        - moonState == FullMoon:
+            ~ return "witch_full_moon"
+        - moonState == ThirdQuarter:
+            ~ return "witch_third_quarter"
+        - moonState == RedMoon:
+            ~ return "witch_red_moon"
+       
+       }
 }
 
+
+//Modifica della variabile moonState
+=== moon_state_management
+~ temp dice_roll = RANDOM(1, 18)
+{debug: passo per moon_state management. Prima di agire, il valore di moonState è {moonState}.}
+
+{
+    - moonState == FirstQuarter:
+        {
+            - dice_roll == 1:
+                ~ moonState = ()
+                ~ moonState = RedMoon
+            - else:
+                ~ moonState = ()
+                ~ moonState = FullMoon
+        }
+    
+    - moonState == ThirdQuarter:
+        ~ moonState = ()
+        ~ moonState = NewMoon
+    
+    - moonState == RedMoon:
+        ~ moonState = ()
+        ~ moonState = ThirdQuarter
+    
+    - else:
+        ~ moonState ++    
+}
+
+{debug: Dopo il passaggio, il valore di dice_random è {dice_roll}, e il valore di moonState è {moonState}.}
+
+->->
 
 /* ---------------------------------
 

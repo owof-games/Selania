@@ -69,16 +69,51 @@ VAR saturationVar = 0
     #background: backNightLibrary
     ~ move_entity(FromLibraryToLaboratoryNight, Library)
     ~ move_entity(FromLibraryToLaboratory, Safekeeping)
-    ~ move_entity(Moon, Library)
+    
     ~ move_entity(MoonTrees, Library)
+    
+{
+    - not talking_witch.intro.nameWitch:
+       ~ move_entity(NewMoonAnim, Library)
+    
+    - else:
+       {
+        - moonState == NewMoon:
+           ~ move_entity(NewMoonAnim, Library)
+        - moonState == FirstQuarter:
+            ~ move_entity(FirstQuarterAnim, Library)
+        - moonState == FullMoon:
+            ~ move_entity(FullMoonAnim, Library)
+        - moonState == ThirdQuarter:
+            ~ move_entity(ThirdQuarterAnim, Library)
+        - moonState == RedMoon:
+            ~ move_entity(RedMoonAnim, Library)
+       
+       }
+}
     ->->
     
 === DarkLibraryModeOff    
     #background: backLibrary
     ~ move_entity(FromLibraryToLaboratoryNight, Safekeeping)
     ~ move_entity(FromLibraryToLaboratory, Library)
-    ~ move_entity(Moon, Safekeeping)
     ~ move_entity(MoonTrees, Safekeeping)
+    
+    {
+        - libraryContents has NewMoonAnim:
+           ~ move_entity(NewMoonAnim, Safekeeping)
+        - libraryContents has FirstQuarter:
+            ~ move_entity(FirstQuarterAnim, Safekeeping)
+        - libraryContents has FullMoon:
+            ~ move_entity(FullMoonAnim, Safekeeping)
+        - libraryContents has ThirdQuarter:
+            ~ move_entity(ThirdQuarterAnim, Safekeeping)
+        - libraryContents has RedMoon:
+            ~ move_entity(RedMoonAnim, Safekeeping)
+       
+          
+    }    
+    
     ->->
     
     

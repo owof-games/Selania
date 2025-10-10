@@ -1,6 +1,10 @@
 //Variabili per mettere in pausa la conversazione
     VAR witchPauseTalking = 0
     VAR witchCharPauseDuration = 6
+
+//Variabili per la gestione del ritratto
+    LIST moonPhases = NewMoon, FirstQuarter, FullMoon, ThirdQuarter, RedMoon
+    VAR moonState = NewMoon
     
 === the_witch
 + {are_two_entities_together(TheWitch, PG)} [TheWitch]
