@@ -76,9 +76,6 @@
         - knowing_second_character.two && (not addressing_violence):
             -> addressing_violence
         
-        //Se abbiamo visto che manca l'innaffiatoio e/o due ci ha detto che non parla con lei:
-        - (stolen_watering_can or knowing_second_character.she_hates_me) && not watering_can_storylet:
-            -> watering_can_storylet
 
         - not second_character_feedback && secondStory == StoryEnded:
             -> second_character_feedback            

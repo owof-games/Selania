@@ -142,14 +142,8 @@
                 }                
             
             - not six:
-                {   //Se passo dallo storylet dedicato della mentore
-                    - watering_can_storylet:
-                        -> six
-                    //Altrimenti
-                    - else:
-                        -> she_hates_me
-                }
-                
+                -> six
+            
             - not seven:
                 -> seven
             - not eight:
@@ -1487,30 +1481,8 @@
             }
                 -> main
                         
-    = she_hates_me
-        ~ temp charNameTwo = translator(secondCharacterState)
-        ~ temp charNameFive = translator(fifthCharacterState)
+  
         
-        {charNameFive} ce l'ha con me!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-        Fa qualcosa!
-            {
-                - are_two_entities_together(Mentor, PG):Non ce l'ho con te! Ma ti metti costantemente in pericolo!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
-                
-                        //Se non abbiamo ancora parlato dell'innaffiatoio, parte subito lo storylet. Da vedere se funzona.
-                            {
-                                - stolen_watering_can or knowing_second_character.she_hates_me && not watering_can_storylet:
-                                ~ riccioMentoreViciniInnaffiatoio = true
-                                        -> watering_can_storylet          
-                        
-                            }
-                
-        
-            }
-    
-                    -> main
-        
-
-
 === second_story_gift ===
 ~ temp charNameTwo = translator(secondCharacterState)
 Stai per donare qualcosa a {charNameTwo}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
