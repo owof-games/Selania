@@ -364,7 +364,7 @@
                 Le dita di {name} sanno di ricordo, sanno di mare.
                 Di persone allontanate.
                 Di addii dolorosi, e ferite risanate.
-
+                
                     //~ findedGifts += LicheneDegliAbissi
                   
                     -> ending_cultivation
@@ -466,7 +466,7 @@
         In un altro tempo questo cespuglio veniva chiamato "Canto delle streghe".
         L'euforia riempie i polmoni di {name}, sente la gioia di sapere che non è mai stata davvero {pronouns has him:solo|{pronouns has her:sola|solə}}.
         
-        + (colto)[<i>Ne raccolgo una goccia.]
+        + (colto)[<i>Penso a chi amo.]
                 Le gambe di {name} iniziano a ballare.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 Spingono il suo corpo nella stanza.
                 La sua voce si alza e canta, chiama l3 compagn3.
@@ -524,7 +524,7 @@
         Si abbuffa delle cose non dette.
         E quando è sazia, travolge ogni cosa.
 
-        + (colto)[<i>Infilo una mano nel foro.]
+        + (colto)[<i>Condivido qualcosa che mi pesa da tempo.]
             Odore di autunno, di foglie umide.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             La pancia di {name} colma di un senso di vuoto.
             La sensazione di quando ha condiviso qualcosa che riteneva terribile.
@@ -575,7 +575,7 @@
         Coraggiosa, la <b>Bacca dell'Addolorata</b> espone le sue ferite al mondo.</b>
         Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ancora ad avanzare.
 
-            + (colto) [<i>Afferro uno dei semi.]
+            + (colto) [<i>Espongo le mie ferite.]
             Il frutto si rivela tenace, deciso.
             Si rilassano le spalle di {name}.
             L'incertezza scivola via.
@@ -626,7 +626,7 @@
         Ciò che è nato fiorisce e genera a sua volta.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         Trasforma un collegamento in una nuova vittoria.
 
-        + (colto) [Colgo uno dei fiori.]
+        + (colto) [<i>Penso alle persone che mi compongono.]
             {name} si sente ramo, si sente radice.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             Si sente le persone che è {pronouns has him:stato|{pronouns has her:stata|statə}} e quelle che sarà.
             Le persone che l'hanno {pronouns has him:accompagnato|{pronouns has her:accompagnata|accompagnatə}} nella sua vita.
@@ -722,7 +722,7 @@
     = step_tre
         La piante cede, si stende tra le gambe di {name}..#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
-        + (colto)[Allungo le dita.]
+        + (colto)[<i>Allungo le dita.]
             {name} allunga le dita, ne carezza il pelo, e al contatto, sente.
             Sente la luna, le stelle, le foglie nel vento, l'erba umida.
             Sente abbracci e sorrisi e mani che sorreggono.
@@ -775,7 +775,7 @@
         Rami come braccia lanciati in aria.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         Il vento tra le canne vuote canta.
         
-        + (colto)[Canto anche io.]
+        + (colto)[<i>Canto anche io.]
             La stanza esplode in una festa.
             I rami del <b>Bastone dell'Ozioso</b> vibrano di note chiassose.
             La musica è stonata, i rami sgrazziati eppure.
@@ -822,10 +822,11 @@
                 -> main
     
     = step_tre
-        Quando {name} abbassa le difese, vede con occhi diversi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        E la pianta con {pronouns has him:lui|{pronouns has her:lei|ləi}}.
+        Il muro si è fatto calice.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
-        + (colto)[<i>Afferro l'ultima spina.]
+        + (colto)[<i>Abbasso le mie difese.]
+            Quando {name} abbassa le difese, vede con occhi diversi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            E la pianta con {pronouns has him:lui|{pronouns has her:lei|ləi}}.
             C'è pace in {name}, pace nella serra.
             E il calice della <b>Barba dell'inciampo</b> ora è tana.
             C'è differenza tra colpa e reponsabilità.
@@ -876,7 +877,7 @@
         Il tempo si mescola, ieri è oggidomanimai.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         I confini si sciolgono e un corpo è stanzapiantalucerespiro.
         
-        + (colto)[{name} si mescola col fungo.]
+        + (colto)[<i>Mi perdo nel fungo.]
             C'è solo amore.
             Per le persone care e per quelle mai conosciute, per quelle perse e quelle che verranno.
             Per l'insetto nel giardino e l'uccello nel cielo.
@@ -929,7 +930,7 @@
         Il movimento si è fatto unione, si è fatto gruppo.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         E un cespuglio fitto e odoroso illumina il pavimento della serra.
         
-        + (colto)[Raccolgo un petalo.]
+        + (colto)[<i>Racconto ciò che mi spaventa.]
             E tutta la <b>Falsa Palude</b> sospira.
             Esule dell'acqua, eppure capace di germogliare.
             La <b>Falsa Palude</b> è corallo di terra, colonia.
@@ -963,6 +964,9 @@
         ~ move_entity(GreenhouseRecap, BookPlace)
     }
     //@animation:Inventory
+    
+    {~ Hai raccolto|Hai ricevuto in dono|Tra le dita ti ritrovi|Nello zaino ora hai|Eccoti in dono|Eccoti} {ingredientTranslator(chosenCultivable)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+    
     ~ findedGifts += chosenCultivable
     ~ growing = 0
     ~ chosenCultivable = ()
@@ -970,5 +974,5 @@
     + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
             -> cultivable_test
     
-    + [<i>Mi aggiro per la serra.]    
+    + [{~ Mi aggiro per la serra.|Osservo ciò che è in crescita.|Ascolto i rumori della serra.|Mi rilasso un attimo.|Mi perdo nei colori dei vasi.}]  
             -> main    

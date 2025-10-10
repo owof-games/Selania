@@ -37,7 +37,7 @@
     La serra attende le tue visioni.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         +  {backupCultivable != ()}[Voglio coltivare qualcosa.]
                 -> cultivable_test
-        +  [Mi aggiro per la serra.] 
+        +  [{~ Mi aggiro per la serra.|Osservo ciò che è in crescita.|Ascolto i rumori della serra.|Mi rilasso un attimo.|Mi perdo nei colori dei vasi.}] 
                 -> main
 
 
