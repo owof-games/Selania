@@ -286,8 +286,12 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ temp charNameOne = translator(firstCharacterState)
-    ~ change_entity_place(Mentor)
     ~ secondStoryQuestCount ++
+    
+    {
+        - not about_violence_and_peace:
+        ~ change_entity_place(Mentor)
+    }
       
         Mi sono ricordato ora che non ho invitato nessun amico.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
         Mamma vuole che la festa sia solo per me.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
@@ -398,8 +402,11 @@
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
-        ~ change_entity_place(Mentor)
         ~ secondStoryQuestCount ++
+            {
+                - not about_violence_and_peace:
+                ~ change_entity_place(Mentor)
+            }        
         
         Mica mi hai detto come ti chiami.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
             
@@ -574,8 +581,11 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ temp charNameOne = translator(firstCharacterState)
-    ~ change_entity_place(Mentor)
     ~ secondStoryQuestCount ++
+            {
+                - not about_violence_and_peace:
+                ~ change_entity_place(Mentor)
+            }         
     
             -> secondAffinityCheckCalc ->
         Nonna non mi tratta mai come un bambino.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
@@ -674,7 +684,10 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ temp charNameOne = translator(firstCharacterState)
-    ~ change_entity_place(Mentor)
+            {
+                - not about_violence_and_peace:
+                ~ change_entity_place(Mentor)
+            }     
     
     ~ secondStoryQuestCount ++
 
@@ -742,7 +755,6 @@
             //Leviamo l'innaffiatoio
             Valla a vedere, ora!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
             Che poi se scappa pensi che me lo sono inventato.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-                    ~ move_entity(WateringCan, Safekeeping)
                     ~ secondPauseTalking = secondCharPauseDuration
                     
                 @animation:RewriterBook
@@ -759,7 +771,10 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ temp charNameOne = translator(firstCharacterState)
-    ~ change_entity_place(Mentor)
+            {
+                - not about_violence_and_peace:
+                ~ change_entity_place(Mentor)
+            }     
     
     ~ secondStoryQuestCount ++
         
@@ -877,8 +892,10 @@
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
-        ~ change_entity_place(Mentor)
-        
+            {
+                - not about_violence_and_peace:
+                ~ change_entity_place(Mentor)
+            }     
         ~ secondStoryQuestCount ++
         
         La rana prima mi ha detto che tu scrivi storie.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
@@ -962,7 +979,10 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ temp charNameOne = translator(firstCharacterState)
-    ~ change_entity_place(Mentor)
+            {
+                - not about_violence_and_peace:
+                ~ change_entity_place(Mentor)
+            }     
     
     ~ secondStoryQuestCount ++
         
@@ -1060,7 +1080,10 @@
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         ~ temp charNameOne = translator(firstCharacterState)
-        ~ change_entity_place(Mentor)
+            {
+                - not about_violence_and_peace:
+                ~ change_entity_place(Mentor)
+            }     
         
         ~ secondStoryQuestCount ++
         
@@ -1202,7 +1225,10 @@
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
-        ~ change_entity_place(Mentor)
+            {
+                - not about_violence_and_peace:
+                ~ change_entity_place(Mentor)
+            }     
         
         ~ secondStoryQuestCount ++
         
@@ -1286,7 +1312,10 @@
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
-        ~ change_entity_place(Mentor)
+            {
+                - not about_violence_and_peace:
+                ~ change_entity_place(Mentor)
+            }     
         
         ~ secondStoryQuestCount ++
         
@@ -1372,7 +1401,10 @@
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         ~ temp charNameOne = translator(firstCharacterState)
-        ~ change_entity_place(Mentor)
+            {
+                - not about_violence_and_peace:
+                ~ change_entity_place(Mentor)
+            }     
         
         ~ secondStoryQuestCount ++
         
