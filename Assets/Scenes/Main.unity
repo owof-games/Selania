@@ -18833,6 +18833,10 @@ MonoBehaviour:
   - {fileID: 639035777}
   - {fileID: 607475365}
   - {fileID: 1669796273}
+  - {fileID: 1474730947}
+  - {fileID: 1192850177}
+  - {fileID: 1754712750}
+  - {fileID: 718601295}
   displayNameText: {fileID: 1171737394}
   portraitAnimator: {fileID: 1021419974}
   inkAnimatorA: {fileID: 53077552}
