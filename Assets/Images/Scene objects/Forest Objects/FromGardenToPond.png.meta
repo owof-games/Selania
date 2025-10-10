@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: f2927e2c59b038b4782a5f831ece4307
+guid: 28aa3e115d8934241b5cacad4297bcc0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 379343987788501898
-    second: FromGardenToGreenhouse_0
+      213: 347550935450351236
+    second: FromGardenToPond_0
   - first:
-      213: 241131437474703322
-    second: FromGardenToGreenhouse_1
+      213: -8075429443471168517
+    second: FromGardenToPond_1
   - first:
-      213: 6754152845500108791
-    second: FromGardenToGreenhouse_2
+      213: 7745654664377995627
+    second: FromGardenToPond_2
   - first:
-      213: 3431791733096424523
-    second: FromGardenToGreenhouse_3
+      213: -3059128136406616707
+    second: FromGardenToPond_3
   - first:
-      213: -2852673018732335693
-    second: FromGardenToGreenhouse_4
+      213: -1993305220685639304
+    second: FromGardenToPond_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,28 +108,15 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FromGardenToGreenhouse_0
+      name: FromGardenToPond_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 46
+        x: 17
+        y: 44
         width: 47
         height: 90
       alignment: 0
@@ -140,18 +127,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8350d7d853b34500800000000000000
-      internalID: 379343987788501898
+      spriteID: 4867fd00cbfb2d400800000000000000
+      internalID: 347550935450351236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FromGardenToGreenhouse_1
+      name: FromGardenToPond_1
       rect:
         serializedVersion: 2
-        x: 31
-        y: 134
+        x: 33
+        y: 132
         width: 35
         height: 38
       alignment: 0
@@ -162,18 +149,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad7ebdac3cba85300800000000000000
-      internalID: 241131437474703322
+      spriteID: bfbab25e4bf4eef80800000000000000
+      internalID: -8075429443471168517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FromGardenToGreenhouse_2
+      name: FromGardenToPond_2
       rect:
         serializedVersion: 2
-        x: 118
-        y: 117
+        x: 120
+        y: 115
         width: 35
         height: 34
       alignment: 0
@@ -184,18 +171,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ff4aba5a329bbd50800000000000000
-      internalID: 6754152845500108791
+      spriteID: b61191701e71e7b60800000000000000
+      internalID: 7745654664377995627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FromGardenToGreenhouse_3
+      name: FromGardenToPond_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 11
+        x: 98
+        y: 9
         width: 43
         height: 64
       alignment: 0
@@ -206,18 +193,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b44a55a166c20af20800000000000000
-      internalID: 3431791733096424523
+      spriteID: d75b41bfa2bcb85d0800000000000000
+      internalID: -3059128136406616707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FromGardenToGreenhouse_4
+      name: FromGardenToPond_4
       rect:
         serializedVersion: 2
-        x: 111
-        y: 60
+        x: 113
+        y: 58
         width: 48
         height: 59
       alignment: 0
@@ -228,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3bd2e1ae0054968d0800000000000000
-      internalID: -2852673018732335693
+      spriteID: 871d918767b5654e0800000000000000
+      internalID: -1993305220685639304
       vertices: []
       indices: 
       edges: []
@@ -238,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FromGardenToGreenhouse_0: 379343987788501898
-      FromGardenToGreenhouse_1: 241131437474703322
-      FromGardenToGreenhouse_2: 6754152845500108791
-      FromGardenToGreenhouse_3: 3431791733096424523
-      FromGardenToGreenhouse_4: -2852673018732335693
+      FromGardenToPond_0: 347550935450351236
+      FromGardenToPond_1: -8075429443471168517
+      FromGardenToPond_2: 7745654664377995627
+      FromGardenToPond_3: -3059128136406616707
+      FromGardenToPond_4: -1993305220685639304
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
