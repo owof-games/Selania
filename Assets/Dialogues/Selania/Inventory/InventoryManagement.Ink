@@ -44,5 +44,8 @@ VAR findedGifts = ()
             
         - FalsaPalude:
             ~ return "un petalo di Falsa Palude"
+            
+        - LanaNotturna:
+            ~ return "scrivere qualcosa su Lana Notturna"            
     
     }

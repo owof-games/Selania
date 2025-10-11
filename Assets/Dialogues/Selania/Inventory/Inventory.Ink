@@ -305,7 +305,25 @@ VAR currentReceiver = ()
         
     }       
     
-        -> main     
+  + {findedGifts has LanaNotturna} [Scrivere qualcosa su Lana Notturna.]
+        ~ findedGifts -= LanaNotturna
+    {
+        - currentReceiver has FirstCharacter:
+            ~ firstCharacterInkLevel ++
+            ~ firstCharacterInkLevel ++
+            
+            {translator(firstCharacterState)} Scrivere qualcosa su Lana Notturna.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ firstGift += LanaNotturna
+                ~ currentReceiver = ()
+                    -> first_story_gift.ink_outcome
+        
+        
+        - currentReceiver has SecondCharacter:Scrivere qualcosa su Lana Notturna. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ secondGift += LanaNotturna
+                ~ currentReceiver = ()
+                    -> second_story_gift.ink_outcome
+        
+    }        -> main     
     
     //Se la lista è vuota
     + {findedGifts == ()} [Non ho nulla da donare.]

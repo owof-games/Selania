@@ -103,7 +103,7 @@
         - growStep has stepTwo:
             ~ growthBrinaDellImpossibile = stepTwo
         - growStep has stepThree:
-             ~ growthBrinaDellImpossibile = stepThree
+            ~ growthBrinaDellImpossibile = stepThree
     }
 
     - chosenCultivable has CardoAspinato:
@@ -115,7 +115,7 @@
         - growStep has stepTwo:
             ~ growthCardoAspinato = stepTwo
         - growStep has stepThree:
-             ~ growthCardoAspinato = stepThree
+            ~ growthCardoAspinato = stepThree
     }    
 
     - chosenCultivable has BastoneDellOzioso:
@@ -127,7 +127,7 @@
         - growStep has stepTwo:
             ~ growthBastoneDellOzioso = stepTwo
         - growStep has stepThree:
-             ~ growthBastoneDellOzioso = stepThree
+            ~ growthBastoneDellOzioso = stepThree
     } 
     
     - chosenCultivable has BarbaDellInciampo:
@@ -139,7 +139,7 @@
         - growStep has stepTwo:
             ~ growthBarbaDellInciampo = stepTwo
         - growStep has stepThree:
-             ~ growthBarbaDellInciampo = stepThree
+            ~ growthBarbaDellInciampo = stepThree
     }     
     
     - chosenCultivable has Olobino:
@@ -151,7 +151,7 @@
         - growStep has stepTwo:
             ~ growthOlobino = stepTwo
         - growStep has stepThree:
-             ~ growthOlobino = stepThree
+            ~ growthOlobino = stepThree
     }
 
     - chosenCultivable has FalsaPalude:
@@ -163,9 +163,20 @@
         - growStep has stepTwo:
             ~ growthFalsaPalude = stepTwo
         - growStep has stepThree:
-             ~ growthFalsaPalude = stepThree
+            ~ growthFalsaPalude = stepThree
     }
-        
+
+    - chosenCultivable has LanaNotturna:
+    {
+        - growStep has stepZero:
+            ~ growthLanaNotturna = stepZero
+        - growStep has stepOne:
+            ~ growthLanaNotturna = stepOne
+        - growStep has stepTwo:
+            ~ growthLanaNotturna = stepTwo
+        - growStep has stepThree:
+            ~ growthLanaNotturna = stepThree
+    }        
     ->->
 }
 
@@ -316,7 +327,18 @@
         - growStep has stepThree:
             -> falsa_palude.step_tre 
     }    
-        
+
+    - chosenCultivable has LanaNotturna:
+    {
+        - growStep has stepZero:
+            -> lana_notturna.step_zero 
+        - growStep has stepOne:
+            -> lana_notturna.step_uno 
+        - growStep has stepTwo:
+            -> lana_notturna.step_due 
+        - growStep has stepThree:
+            -> lana_notturna.step_tre 
+    }           
     -> main
 }
 
@@ -364,8 +386,6 @@
                 Le dita di {name} sanno di ricordo, sanno di mare.
                 Di persone allontanate.
                 Di addii dolorosi, e ferite risanate.
-                
-                    //~ findedGifts += LicheneDegliAbissi
                   
                     -> ending_cultivation
               
@@ -421,7 +441,6 @@
                 Di fusione.
                 Vivo.
                 
-                    //~ findedGifts += EderaDelleAmanti
                     ~ move_entity(GoldenBee, Greenhouse)
             
                     -> ending_cultivation
@@ -532,8 +551,6 @@
             Le cose sono sempre peggiori nella propria testa.
             Ma reali, lasciano segni e ferite.
 
-                    //~ findedGifts += LaSpazzata
-                 
                     -> ending_cultivation
 
 
@@ -583,8 +600,6 @@
             Compiere il primo passo è faticoso.
             Ma ora {name} ricorda come camminare.
 
-                //~ findedGifts += BaccaDellaAddolorata
-                
                     -> ending_cultivation
 
               
@@ -635,8 +650,6 @@
             Del celebrare le parti di chi abbiamo incontrato, che continuano a vivere in noi.
             Del sentirci eredi e messagger3, parte di un percorso intessuto di nomi.
             A quali nomi {name} name ripensa?
-
-                //~ findedGifts += NonTiScordarDiTe 
                 
                     -> ending_cultivation
                     
@@ -682,8 +695,6 @@
             Riempie le ferite così che siano visibili.
             Anche se fa male, aiuta a guardare, nominare, affrontare.
             Offre con ogni suo baccello semi vivi di speranza.
-
-                //~ findedGifts += BrinaDellImpossibile
                 
                     -> ending_cultivation
 
@@ -731,7 +742,7 @@
             Il <b>Cardo aspinato</b> sboccia nel supporto.
             Nel capire che lasciarsi aiutare è aiutare l'altrə.
             Nell'accettare che aiutare è aiutarsi.
-                //~ findedGifts += CardoAspinato
+            
                 ~ move_entity(BrownBee, Greenhouse)                
                     -> ending_cultivation
 
@@ -834,7 +845,6 @@
             La lancia della pianta è ora tana per qualcosa di delicato.
             L'errore di {name} è ora guida per cambiare.
 
-                //~ findedGifts += BarbaDellInciampo
                 ~ move_entity(Snail, Greenhouse)                
                 
                     -> ending_cultivation
@@ -887,7 +897,6 @@
             L'<b>Olobino</b> è un fungo semplice pieno di potere.
             Il potere che c'è nel perdere il sé.
             L'eternità nella collettività.
-                //~ findedGifts += Olobino
                  
                     -> ending_cultivation
                     
@@ -938,11 +947,58 @@
             Ciò che accade quando il dolore si fa terreno comune.
             Quando storie diverse riconoscono la propria voce.
             E ciò che sembrava un ostacolo personale, si dimostra un problema strutturale.
-                //~ findedGifts += FalsaPalude
                 
                     -> ending_cultivation
 
 
+=== lana_notturna
+
+    = TW
+        ////{chosenCultivable} affronta questo tema delicato: XYZ.
+        //Te la senti di farla crescere, o preferisci cambiare?
+        //        + [Voglio andare avanti.]
+        //    -> step_zero
+        //+ [Voglio rimuoverla, ma solo per ora.]
+        //    -> tempCultTW_formula -> cultivable_test
+        //+ [Voglio rimuoverla, per sempre.]
+        //    -> remove_proposed_cultivable -> cultivable_test
+        //-
+        -> step_zero
+    
+    = step_zero
+    -> remove_proposed_cultivable ->
+        ~ growthLanaNotturna = stepZero
+        Il vento spinge lo sporco sul pavimento, avvicinandolo ai piedi di {name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                -> main
+    
+    = step_uno
+        Lo sporco si è accresciuto.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        E ogni sua parte bisbiglia parole.
+        Il nome di {name} sembra lontano.
+        Ma riconosce sentimenti che ha già vissuto.
+                -> main
+    
+    = step_due
+       Nella calma della serra il pavimento sembra vivo.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+       Foglie e fiori e pistilli avanzano l3 un3 verso l3 altr3.
+       Il sentimento si è fatto movimento.
+       Forse {name} non è {pronouns has him:solo|{pronouns has her:sola|solə}} nel vivere certe emozioni?
+                -> main
+    
+    = step_tre
+        Il movimento si è fatto unione, si è fatto gruppo.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        E un cespuglio fitto e odoroso illumina il pavimento della serra.
+        
+        + (colto)[<i>Racconto ciò che mi spaventa.]
+            E tutta la <b>Falsa Palude</b> sospira.
+            Esule dell'acqua, eppure capace di germogliare.
+            La <b>Falsa Palude</b> è corallo di terra, colonia.
+            Vibrazione vicina e ascolto.
+            Ciò che accade quando il dolore si fa terreno comune.
+            Quando storie diverse riconoscono la propria voce.
+            E ciò che sembrava un ostacolo personale, si dimostra un problema strutturale.
+                
+                    -> ending_cultivation
 
 
 

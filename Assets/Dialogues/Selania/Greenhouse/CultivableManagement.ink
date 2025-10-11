@@ -1,10 +1,10 @@
 //Lista coltivabili e stati possibili    
-    LIST cultivable = BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti, FalsaPalude, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata, NuovoSette, NuovoOtto
+    LIST cultivable = BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti, FalsaPalude, LanaNotturna, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata,  NuovoOtto
 
     LIST growStep = notStarted, stepZero, stepOne, stepTwo, stepThree
 
 //QUESTA LISTA LA USO PER GESTIRE LA PESCATA O MENO DEI COLTIVABILI
-    VAR backupCultivable = (BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti, FalsaPalude, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata, NuovoSette, NuovoOtto)
+    VAR backupCultivable = (BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti, FalsaPalude, LanaNotturna, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata,  NuovoOtto)
     
     VAR growthCantoDelleCompagne = notStarted
     VAR growthLicheneDegliAbissi = notStarted
@@ -18,6 +18,7 @@
     VAR growthBarbaDellInciampo = notStarted
     VAR growthOlobino = notStarted
     VAR growthFalsaPalude = notStarted
+    VAR growthLanaNotturna = notStarted
 
 //Variabili per la gestione della serra
     LIST cropsType = relationship, shift, understanding, selfdetermination, wonder, imagination
@@ -25,17 +26,17 @@
 //QUESTE LISTE HANNO UN VALORE CATALOGATIVO E PER LA GESTIONE DELLE DOMANDE
 
     //Relazione: con sé e con gli altri, anche con l’ambiente.
-    VAR relationshipCrops = (LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CardoAspinato, NuovoSette, NuovoOtto, BastoneDellOzioso, CantoDelleCompagne)
+    VAR relationshipCrops = (LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CardoAspinato, LanaNotturna, NuovoOtto, BastoneDellOzioso, CantoDelleCompagne)
     //Mutamento: capacità di generare e accogliere il cambiamento.
     VAR shiftCrops = (LicheneDegliAbissi, LaSpazzata, EderaDelleAmanti, FalsaPalude, BaccaDellaAddolorata, BastoneDellOzioso, BarbaDellInciampo)
     //Comprensione: cercare il senso, capire il perché.
     VAR understandingCrops = (LaSpazzata, BaccaDellaAddolorata, CardoAspinato, FalsaPalude, LicheneDegliAbissi, Olobino, NuovoOtto)
     //Autodeterminazione: definire la mia vita per come la voglio, o la vita della mia comunità.
-    VAR selfdeterminationCrops = (CantoDelleCompagne, BaccaDellaAddolorata, BrinaDellImpossibile, LaSpazzata, BastoneDellOzioso, BarbaDellInciampo, NuovoSette)
+    VAR selfdeterminationCrops = (CantoDelleCompagne, BaccaDellaAddolorata, BrinaDellImpossibile, LaSpazzata, BastoneDellOzioso, BarbaDellInciampo, LanaNotturna)
     //Stupore, meraviglia: sorprendermi, scoprire cose nuove, scoprire cose inaspettate. Vedere la vita come qualcosa di non prevedibile e godere di questo.
     VAR wonderCrops = (EderaDelleAmanti, BrinaDellImpossibile, FalsaPalude, NonTiScordarDiTe, CantoDelleCompagne, BarbaDellInciampo, Olobino)
     //Immaginazione e creazione: sono due parole legate ma non sinonimi, ma mi viene istintivo unirle. Da una parte abbiamo la possibilità di pensare a ciò che non c’è, dall’altra di generarlo. In parte immaginazione si collega a stupore (una nuova idea), in parte a comprensione (quando capisco qualcosa e provo ad applicarlo in realtà immaginate). Creatività invece è sia un processo di mutamento (creando porto cambiamento, con tutte le sue conseguenze) che di autodeterminazione (creo ciò che voglio, ciò che penso possa servire, portare piacere, ristorare la mia comunità).
-    VAR imaginationCrops = (NonTiScordarDiTe, CantoDelleCompagne, CardoAspinato, BrinaDellImpossibile, BastoneDellOzioso, Olobino, NuovoSette, NuovoOtto)
+    VAR imaginationCrops = (NonTiScordarDiTe, CantoDelleCompagne, CardoAspinato, BrinaDellImpossibile, BastoneDellOzioso, Olobino, LanaNotturna, NuovoOtto)
 
 
 //Pianta che verrà proposta. La uso anche per tracking dello stato delle piante.
@@ -1234,6 +1235,8 @@ QUESTIONS
         -> olobino.TW
     - FalsaPalude:    
         -> falsa_palude.TW
+    - LanaNotturna:
+        -> lana_notturna.TW
 }       
 
 
