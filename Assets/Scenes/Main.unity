@@ -14092,7 +14092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 1863324329}
   image: {fileID: 1377626964}
-  NotStarted: {fileID: 21300000, guid: 8c96ecc09bd932e499eb3c9bd3f41985, type: 3}
+  NotStarted: {fileID: 21300000, guid: d919682095412ff4db29e2e2c75caa5f, type: 3}
   StepZero: {fileID: 21300000, guid: 04c31c9511dd6e7479d92a3b017089fd, type: 3}
   StepOne: {fileID: 21300000, guid: 99e45f625c497844998dc1bc8368e446, type: 3}
   StepTwo: {fileID: 21300000, guid: 2247a2faabe023940b19c812fb66e36c, type: 3}

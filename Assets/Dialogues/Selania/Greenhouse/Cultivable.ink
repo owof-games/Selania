@@ -731,7 +731,7 @@
                 -> main
     
     = step_tre
-        La piante cede, si stende tra le gambe di {name}..#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        La piante cede, si stende tra le gambe di {name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         + (colto)[<i>Allungo le dita.]
             {name} allunga le dita, ne carezza il pelo, e al contatto, sente.
