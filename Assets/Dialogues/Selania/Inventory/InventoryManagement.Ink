@@ -47,5 +47,6 @@ VAR findedGifts = ()
             
         - LanaNotturna:
             ~ return "scrivere qualcosa su Lana Notturna"            
-    
+         - ErbaLiccia:
+            ~ return "scrivere qualcosa su Erba Liccia"    
     }

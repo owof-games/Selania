@@ -176,7 +176,19 @@
             ~ growthLanaNotturna = stepTwo
         - growStep has stepThree:
             ~ growthLanaNotturna = stepThree
-    }        
+    }
+    
+    - chosenCultivable has ErbaLiccia:
+    {
+        - growStep has stepZero:
+            ~ growthErbaLiccia = stepZero
+        - growStep has stepOne:
+            ~ growthErbaLiccia = stepOne
+        - growStep has stepTwo:
+            ~ growthErbaLiccia = stepTwo
+        - growStep has stepThree:
+            ~ growthErbaLiccia = stepThree
+    }      
     ->->
 }
 
@@ -338,7 +350,20 @@
             -> lana_notturna.step_due 
         - growStep has stepThree:
             -> lana_notturna.step_tre 
-    }           
+    }
+    
+    - chosenCultivable has ErbaLiccia:
+    {
+        - growStep has stepZero:
+            -> erba_liccia.step_zero 
+        - growStep has stepOne:
+            -> erba_liccia.step_uno 
+        - growStep has stepTwo:
+            -> erba_liccia.step_due 
+        - growStep has stepThree:
+            -> erba_liccia.step_tre 
+    }    
+    
     -> main
 }
 
@@ -1000,7 +1025,54 @@
                 
                     -> ending_cultivation
 
+=== erba_liccia
 
+    = TW
+        ////{chosenCultivable} affronta questo tema delicato: XYZ.
+        //Te la senti di farla crescere, o preferisci cambiare?
+        //        + [Voglio andare avanti.]
+        //    -> step_zero
+        //+ [Voglio rimuoverla, ma solo per ora.]
+        //    -> tempCultTW_formula -> cultivable_test
+        //+ [Voglio rimuoverla, per sempre.]
+        //    -> remove_proposed_cultivable -> cultivable_test
+        //-
+        -> step_zero
+    
+    = step_zero
+    -> remove_proposed_cultivable ->
+        ~ growthErbaLiccia = stepZero
+        Il vento spinge lo sporco sul pavimento, avvicinandolo ai piedi di {name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                -> main
+    
+    = step_uno
+        Lo sporco si è accresciuto.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        E ogni sua parte bisbiglia parole.
+        Il nome di {name} sembra lontano.
+        Ma riconosce sentimenti che ha già vissuto.
+                -> main
+    
+    = step_due
+       Nella calma della serra il pavimento sembra vivo.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+       Foglie e fiori e pistilli avanzano l3 un3 verso l3 altr3.
+       Il sentimento si è fatto movimento.
+       Forse {name} non è {pronouns has him:solo|{pronouns has her:sola|solə}} nel vivere certe emozioni?
+                -> main
+    
+    = step_tre
+        Il movimento si è fatto unione, si è fatto gruppo.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        E un cespuglio fitto e odoroso illumina il pavimento della serra.
+        
+        + (colto)[<i>Racconto ciò che mi spaventa.]
+            E tutta la <b>Falsa Palude</b> sospira.
+            Esule dell'acqua, eppure capace di germogliare.
+            La <b>Falsa Palude</b> è corallo di terra, colonia.
+            Vibrazione vicina e ascolto.
+            Ciò che accade quando il dolore si fa terreno comune.
+            Quando storie diverse riconoscono la propria voce.
+            E ciò che sembrava un ostacolo personale, si dimostra un problema strutturale.
+                
+                    -> ending_cultivation
 
 
 

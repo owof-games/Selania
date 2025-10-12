@@ -7,7 +7,7 @@
 
     VAR pondContents = (FromPondToForest, FromPondToGreenhouse, FromPondToNest, CloudOne, CloudTwo, CloudThree)
 
-    VAR greenhouseContents = (FromGreenhouseToPond,  BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti, FalsaPalude, LanaNotturna, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata)
+    VAR greenhouseContents = (FromGreenhouseToPond,  BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti, ErbaLiccia, FalsaPalude, LanaNotturna, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata)
 
     VAR libraryContents = (FromLibraryToForest, FromLibraryToLaboratory, ReadingPlace)
 
