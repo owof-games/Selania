@@ -586,7 +586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &30570273
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4255,7 +4255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &404206532
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5357,7 +5357,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &501585171
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6823,7 +6823,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &639035778
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9453,7 +9453,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &853397227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11312,7 +11312,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1007691251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13229,12 +13229,12 @@ GameObject:
   - component: {fileID: 1285562688}
   - component: {fileID: 1285562687}
   m_Layer: 5
-  m_Name: EderaDelleAmanti (1)
+  m_Name: ErbaLiccia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1285562686
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13308,7 +13308,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: EderaDelleAmanti
+          m_StringArgument: ErbaLiccia
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1285562688
@@ -13503,7 +13503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1340143609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14155,7 +14155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1433514090
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14319,7 +14319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1435138156
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14600,7 +14600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1456382445
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15256,9 +15256,9 @@ RectTransform:
   m_Father: {fileID: 1007691254}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -353.3451, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1498889632
 MonoBehaviour:
@@ -15637,7 +15637,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.017652808, y: 0.05464146}
   m_AnchorMax: {x: 0.123686746, y: 0.16412726}
-  m_AnchoredPosition: {x: 580, y: -5.3456116}
+  m_AnchoredPosition: {x: 580, y: -5.345581}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1562548040
@@ -17515,9 +17515,9 @@ RectTransform:
   m_Father: {fileID: 853397230}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -433.03906, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1721355027
 MonoBehaviour:
@@ -18348,7 +18348,7 @@ GameObject:
   - component: {fileID: 1783374375}
   - component: {fileID: 1783374378}
   - component: {fileID: 1783374377}
-  - component: {fileID: 1783374376}
+  - component: {fileID: 1783374379}
   m_Layer: 5
   m_Name: Gestione Immagine
   m_TagString: Untagged
@@ -18363,37 +18363,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1783374374}
-  m_LocalRotation: {x: -0, y: -0, z: 0.9999989, w: 0.0014862077}
+  m_LocalRotation: {x: -0, y: -0, z: -0.00072711555, w: 0.99999976}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1285562686}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180.17}
-  m_AnchorMin: {x: 0.4328228, y: 0.52081496}
-  m_AnchorMax: {x: 0.5138273, y: 0.6508842}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -360.083}
+  m_AnchorMin: {x: 0.4228254, y: 0.5247919}
+  m_AnchorMax: {x: 0.51934564, y: 0.6604257}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.000030517578, y: 0}
+  m_SizeDelta: {x: 0.0000076293945, y: -0.0000014305115}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1783374376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783374374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01dc0df174b2a0c48b5907408b9987e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueManager: {fileID: 1863324329}
-  image: {fileID: 1783374377}
-  NotStarted: {fileID: 21300000, guid: 74eeecd27587bb544a2e9521a9c201b3, type: 3}
-  StepZero: {fileID: 21300000, guid: 10c80d9218a688e4d98d3ee2f12c9114, type: 3}
-  StepOne: {fileID: 21300000, guid: c843a2882ef052340858c26fbf836265, type: 3}
-  StepTwo: {fileID: 21300000, guid: 3abac5c2a9841d2499c7e34eeefd314f, type: 3}
-  StepThree: {fileID: 21300000, guid: 796e93b0399982a4da5773796b30c74f, type: 3}
 --- !u!114 &1783374377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18414,7 +18395,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 796e93b0399982a4da5773796b30c74f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62f65d1ebcfb59b4c945d8c85c149f8c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -18432,6 +18413,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1783374374}
   m_CullTransparentMesh: 1
+--- !u!114 &1783374379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783374374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b892fb9db96994c882a5743a3bd2fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ErbaLiccia
+  dialogueManager: {fileID: 1863324329}
+  image: {fileID: 1783374377}
+  NotStarted: {fileID: 21300000, guid: 6f26e872b06965d4d925be83f8ee8295, type: 3}
+  StepZero: {fileID: 21300000, guid: 33a8918342ba15a4da926e1f89033a4e, type: 3}
+  StepOne: {fileID: 21300000, guid: 52d11e6d4b5b91442bfb12d9986d91a2, type: 3}
+  StepTwo: {fileID: 21300000, guid: 212dbb30e172f4648b73eb4064e9c5a7, type: 3}
+  StepThree: {fileID: 21300000, guid: 62f65d1ebcfb59b4c945d8c85c149f8c, type: 3}
 --- !u!1 &1789259514
 GameObject:
   m_ObjectHideFlags: 0
@@ -19084,6 +19084,7 @@ MonoBehaviour:
   - {fileID: 1579660434}
   - {fileID: 744886583}
   - {fileID: 417627462}
+  - {fileID: 1285562685}
   - {fileID: 984685593}
   - {fileID: 222152846}
   - {fileID: 57571664}
@@ -19936,9 +19937,9 @@ RectTransform:
   m_Father: {fileID: 1340143612}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -353.3451, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1941430952
 MonoBehaviour:
@@ -19969,7 +19970,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1997135463
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21550,7 +21551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2066755941
 RectTransform:
   m_ObjectHideFlags: 0
