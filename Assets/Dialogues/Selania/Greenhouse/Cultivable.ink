@@ -406,7 +406,6 @@
         Forti nella loro distruzione, estremamente fragili.
 
             + (colto) [<i>Sfioro il lichene.]
-                ~ growthLicheneDegliAbissi = stepZero
                 Un piccolo sbuffo, rumore di vetro. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 Le dita di {name} sanno di ricordo, sanno di mare.
                 Di persone allontanate.
@@ -922,6 +921,9 @@
             L'<b>Olobino</b> è un fungo semplice pieno di potere.
             Il potere che c'è nel perdere il sé.
             L'eternità nella collettività.
+            
+                 ~ move_entity(FromPondToGreenhouse, Safekeeping)
+                 ~ move_entity(FromPondToGreenhouseBlooming, Pond)
                  
                     -> ending_cultivation
                     
