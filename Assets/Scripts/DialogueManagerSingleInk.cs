@@ -706,7 +706,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
     {
         return (InkList)story.variablesState["growthLanaNotturna"];
     }      
-
+    public InkList GetEffettivoStatoErbaLiccia()
+    {
+        return (InkList)story.variablesState["growthErbaLiccia"];
+    }    
     [System.Serializable]
     public class SaveData
     {
