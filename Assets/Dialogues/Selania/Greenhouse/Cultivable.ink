@@ -995,35 +995,33 @@
     = step_zero
     -> remove_proposed_cultivable ->
         ~ growthLanaNotturna = stepZero
-        Il vento spinge lo sporco sul pavimento, avvicinandolo ai piedi di {name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        Ha quella sensazione, {name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        Quella di quando la notte {pronouns has him:lo|{pronouns has her:la|lə}} afferra nel letto, svegliandola, ributtandola in incubi e pensieri quotidiani soffocanti.
+        Di quando si agita tra le coperte, in trappola.
                 -> main
     
     = step_uno
-        Lo sporco si è accresciuto.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        E ogni sua parte bisbiglia parole.
-        Il nome di {name} sembra lontano.
-        Ma riconosce sentimenti che ha già vissuto.
+        Le cose che non può cambiare si affastellano sulla pelle di {name}, le cose che non vanno.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        Si appesantiscono sulle mani, schiacciano lo stomaco.
+        L'aria è sabbia, le scarse ombre minaccia.
+
                 -> main
     
     = step_due
-       Nella calma della serra il pavimento sembra vivo.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-       Foglie e fiori e pistilli avanzano l3 un3 verso l3 altr3.
-       Il sentimento si è fatto movimento.
-       Forse {name} non è {pronouns has him:solo|{pronouns has her:sola|solə}} nel vivere certe emozioni?
+        Far un passo fuori dal letto è come una corsa.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        Aprire la porta, accendere una luce.
+        Il mondo fuori dorme, ma {name} è {pronouns has him:sveglio|{pronouns has her:sveglia|svegliə}}.
+        Qualcosa si appoggia sulle sue labbra, sulla sua coscienza.
+
                 -> main
     
     = step_tre
-        Il movimento si è fatto unione, si è fatto gruppo.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        E un cespuglio fitto e odoroso illumina il pavimento della serra.
-        
-        + (colto)[<i>Racconto ciò che mi spaventa.]
-            E tutta la <b>Falsa Palude</b> sospira.
-            Esule dell'acqua, eppure capace di germogliare.
-            La <b>Falsa Palude</b> è corallo di terra, colonia.
-            Vibrazione vicina e ascolto.
-            Ciò che accade quando il dolore si fa terreno comune.
-            Quando storie diverse riconoscono la propria voce.
-            E ciò che sembrava un ostacolo personale, si dimostra un problema strutturale.
+        Perché il fiore sbocci, la gemma deve spaccarsi, ferirsi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        Ma serve attendere il tempo giusto, lasciare che le cose possano maturare.
+        + (colto)[Ho imparato ad attendere.]
+            Un unico grande e morbido fiore, i petali soffici si spalancano nella serra.
+            <b>Lana Notturna</b> è una coperta nella notte, una tisana nei giorni bui.
+            Sboccia nelle terre dimenticate, per ricordare che anche quando tutto sembra perduto, da qualche parte cresce il seme del cambiamento.
                 
                     -> ending_cultivation
 
