@@ -32,7 +32,7 @@ VAR findedGifts = ()
             ~ return "una foglia di Edera delle Amanti"
     
         - ErbaLiccia:
-            ~ return "scrivere qualcosa su Erba Liccia"
+            ~ return "un ricordo di Erba Liccia"
             
         - FalsaPalude:
             ~ return "un petalo di Falsa Palude"

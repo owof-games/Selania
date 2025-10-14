@@ -1042,35 +1042,33 @@
     = step_zero
     -> remove_proposed_cultivable ->
         ~ growthErbaLiccia = stepZero
-        Il vento spinge lo sporco sul pavimento, avvicinandolo ai piedi di {name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        Dal vaso due cespuglietti erbosi.
+        Da {name} due pensieri spinosi: quando ho smesso di essere ciò che ero, e sono diventat{pronouns has him:o|{pronouns has her:a|ə}} ciò che sono?#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 -> main
     
     = step_uno
-        Lo sporco si è accresciuto.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        E ogni sua parte bisbiglia parole.
-        Il nome di {name} sembra lontano.
-        Ma riconosce sentimenti che ha già vissuto.
+        L'erba cresce e i pensieri di {name} con lei.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        Sono la persona che avrei voluto essere?
+        Od ho tradito le promesse del mio passato?
                 -> main
     
     = step_due
-       Nella calma della serra il pavimento sembra vivo.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-       Foglie e fiori e pistilli avanzano l3 un3 verso l3 altr3.
-       Il sentimento si è fatto movimento.
-       Forse {name} non è {pronouns has him:solo|{pronouns has her:sola|solə}} nel vivere certe emozioni?
+        I due cespuglietti si sfiorano, si sfiorano i pensieri di {name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        Le parti di sé che non ci sono più.
+        Quelle nuove.
+        E quelle che si sono trasformate nel tempo.
+        Cosa significa cambiare?
                 -> main
     
     = step_tre
-        Il movimento si è fatto unione, si è fatto gruppo.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        E un cespuglio fitto e odoroso illumina il pavimento della serra.
+        Il passato è una terra spinosa.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        Il ricordo si modella sul bisogno del presente.
+        E il vaso brulica di erba verde e fresca
         
-        + (colto)[<i>Racconto ciò che mi spaventa.]
-            E tutta la <b>Falsa Palude</b> sospira.
-            Esule dell'acqua, eppure capace di germogliare.
-            La <b>Falsa Palude</b> è corallo di terra, colonia.
-            Vibrazione vicina e ascolto.
-            Ciò che accade quando il dolore si fa terreno comune.
-            Quando storie diverse riconoscono la propria voce.
-            E ciò che sembrava un ostacolo personale, si dimostra un problema strutturale.
+        + (colto)[E io con lui.]
+            L'<b><i>Erba Liccia</b></i> matura quando le sue radici aeree sanno ritrovarsi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            Quando nel cambiamento sanno ritrovarsi.
+            Quando sanno vedere ciò che erano, accogliere ciò che sono, curiosare su ciò che saranno.
                 
                     -> ending_cultivation
 

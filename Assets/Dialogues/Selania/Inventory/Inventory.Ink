@@ -324,24 +324,24 @@ VAR currentReceiver = ()
         
     }       
     
-+ {findedGifts has ErbaLiccia} [Scrivere qualcosa su Lana Notturna.]
++ {findedGifts has ErbaLiccia} [Un ricordo di Erba Liccia.]
         ~ findedGifts -= ErbaLiccia
     {
         - currentReceiver has FirstCharacter:
             ~ firstCharacterInkLevel ++
             
-            {translator(firstCharacterState)} Scrivere qualcosa su Erba Liccia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+            {translator(firstCharacterState)} si mette a canticchiare.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
                 ~ firstGift += ErbaLiccia
                 ~ currentReceiver = ()
                     -> first_story_gift.ink_outcome
         
         - currentReceiver has SecondCharacter:
             ~ secondCharacterInkLevel ++
-            
-        Scrivere qualcosa su Erba Liccia. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-                ~ secondGift += ErbaLiccia
-                ~ currentReceiver = ()
-                    -> second_story_gift.ink_outcome
+        
+            {translator(secondCharacterState)} intreccia le foglie per farne un cappello. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                    ~ secondGift += ErbaLiccia
+                    ~ currentReceiver = ()
+                        -> second_story_gift.ink_outcome
         
     }      
     -> main     
