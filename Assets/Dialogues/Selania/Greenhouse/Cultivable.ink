@@ -21,6 +21,7 @@
         ~ growStep += stepThree
 
 }
+
 {
     - chosenCultivable has LicheneDegliAbissi:
     {
@@ -74,132 +75,176 @@
     {
         - growStep has stepZero:
             ~ growthLaSpazzata = stepZero
+            ~ narrativeGrowthLaSpazzata = stepZero
         - growStep has stepOne:
             ~ growthLaSpazzata = stepOne
+            ~ narrativeGrowthLaSpazzata = stepOne
         - growStep has stepTwo:
             ~ growthLaSpazzata = stepTwo
+            ~ narrativeGrowthLaSpazzata = stepTwo
         - growStep has stepThree:
-            ~ growthLaSpazzata = stepThree
+             ~ growthLaSpazzata = stepTwo
+             ~ narrativeGrowthLaSpazzata = stepThree
     }
 
     - chosenCultivable has BaccaDellaAddolorata:
     {
         - growStep has stepZero:
             ~ growthBaccaDellaAddolorata = stepZero
+            ~ narrativeGrowthBaccaDellaAddolorata = stepZero
         - growStep has stepOne:
             ~ growthBaccaDellaAddolorata = stepOne
+            ~ narrativeGrowthBaccaDellaAddolorata = stepOne
         - growStep has stepTwo:
             ~ growthBaccaDellaAddolorata = stepTwo
+            ~ narrativeGrowthBaccaDellaAddolorata = stepTwo
         - growStep has stepThree:
-            ~ growthBaccaDellaAddolorata = stepThree
+             ~ growthBaccaDellaAddolorata = stepTwo
+             ~ narrativeGrowthBaccaDellaAddolorata = stepThree
     }
 
     - chosenCultivable has NonTiScordarDiTe:
     {
         - growStep has stepZero:
             ~ growthNonTiScordarDiTe = stepZero
+            ~ narrativeGrowthNonTiScordarDiTe = stepZero
         - growStep has stepOne:
             ~ growthNonTiScordarDiTe = stepOne
+            ~ narrativeGrowthNonTiScordarDiTe = stepOne
         - growStep has stepTwo:
             ~ growthNonTiScordarDiTe = stepTwo
+            ~ narrativeGrowthNonTiScordarDiTe = stepTwo
         - growStep has stepThree:
-            ~ growthNonTiScordarDiTe = stepThree
+             ~ growthNonTiScordarDiTe = stepTwo
+             ~ narrativeGrowthNonTiScordarDiTe = stepThree
     }
 
     - chosenCultivable has BrinaDellImpossibile:
     {
         - growStep has stepZero:
             ~ growthBrinaDellImpossibile = stepZero
+            ~ narrativeGrowthBrinaDellImpossibile = stepZero
         - growStep has stepOne:
             ~ growthBrinaDellImpossibile = stepOne
+            ~ narrativeGrowthBrinaDellImpossibile = stepOne
         - growStep has stepTwo:
             ~ growthBrinaDellImpossibile = stepTwo
+            ~ narrativeGrowthBrinaDellImpossibile = stepTwo
         - growStep has stepThree:
-            ~ growthBrinaDellImpossibile = stepThree
+             ~ growthBrinaDellImpossibile = stepTwo
+             ~ narrativeGrowthBrinaDellImpossibile = stepThree
     }
 
     - chosenCultivable has CardoAspinato:
     {
         - growStep has stepZero:
             ~ growthCardoAspinato = stepZero
+            ~ narrativeGrowthCardoAspinato = stepZero
         - growStep has stepOne:
             ~ growthCardoAspinato = stepOne
+            ~ narrativeGrowthCardoAspinato = stepOne
         - growStep has stepTwo:
             ~ growthCardoAspinato = stepTwo
+            ~ narrativeGrowthCardoAspinato = stepTwo
         - growStep has stepThree:
-            ~ growthCardoAspinato = stepThree
+             ~ growthCardoAspinato = stepTwo
+             ~ narrativeGrowthCardoAspinato = stepThree
     }    
 
     - chosenCultivable has BastoneDellOzioso:
     {
         - growStep has stepZero:
             ~ growthBastoneDellOzioso = stepZero
+            ~ narrativeGrowthBastoneDellOzioso = stepZero
         - growStep has stepOne:
             ~ growthBastoneDellOzioso = stepOne
+            ~ narrativeGrowthBastoneDellOzioso = stepOne
         - growStep has stepTwo:
             ~ growthBastoneDellOzioso = stepTwo
+            ~ narrativeGrowthBastoneDellOzioso = stepTwo
         - growStep has stepThree:
-            ~ growthBastoneDellOzioso = stepThree
+             ~ growthBastoneDellOzioso = stepTwo
+             ~ narrativeGrowthBastoneDellOzioso = stepThree
     } 
     
     - chosenCultivable has BarbaDellInciampo:
     {
         - growStep has stepZero:
             ~ growthBarbaDellInciampo = stepZero
+            ~ narrativeGrowthBarbaDellInciampo = stepZero
         - growStep has stepOne:
             ~ growthBarbaDellInciampo = stepOne
+            ~ narrativeGrowthBarbaDellInciampo = stepOne
         - growStep has stepTwo:
             ~ growthBarbaDellInciampo = stepTwo
+            ~ narrativeGrowthBarbaDellInciampo = stepTwo
         - growStep has stepThree:
-            ~ growthBarbaDellInciampo = stepThree
+             ~ growthBarbaDellInciampo = stepTwo
+             ~ narrativeGrowthBarbaDellInciampo = stepThree
     }     
     
     - chosenCultivable has Olobino:
     {
         - growStep has stepZero:
             ~ growthOlobino = stepZero
+            ~ narrativeGrowthOlobino = stepZero
         - growStep has stepOne:
             ~ growthOlobino = stepOne
+            ~ narrativeGrowthOlobino = stepOne
         - growStep has stepTwo:
             ~ growthOlobino = stepTwo
+            ~ narrativeGrowthOlobino = stepTwo
         - growStep has stepThree:
-            ~ growthOlobino = stepThree
+             ~ growthOlobino = stepTwo
+             ~ narrativeGrowthOlobino = stepThree
     }
 
     - chosenCultivable has FalsaPalude:
     {
         - growStep has stepZero:
             ~ growthFalsaPalude = stepZero
+            ~ narrativeGrowthFalsaPalude = stepZero
         - growStep has stepOne:
             ~ growthFalsaPalude = stepOne
+            ~ narrativeGrowthFalsaPalude = stepOne
         - growStep has stepTwo:
             ~ growthFalsaPalude = stepTwo
+            ~ narrativeGrowthFalsaPalude = stepTwo
         - growStep has stepThree:
-            ~ growthFalsaPalude = stepThree
+             ~ growthFalsaPalude = stepTwo
+             ~ narrativeGrowthFalsaPalude = stepThree
     }
 
     - chosenCultivable has LanaNotturna:
     {
         - growStep has stepZero:
             ~ growthLanaNotturna = stepZero
+            ~ narrativeGrowthLanaNotturna = stepZero
         - growStep has stepOne:
             ~ growthLanaNotturna = stepOne
+            ~ narrativeGrowthLanaNotturna = stepOne
         - growStep has stepTwo:
             ~ growthLanaNotturna = stepTwo
+            ~ narrativeGrowthLanaNotturna = stepTwo
         - growStep has stepThree:
-            ~ growthLanaNotturna = stepThree
-    }
+             ~ growthLanaNotturna = stepTwo
+             ~ narrativeGrowthLanaNotturna = stepThree
+    }         
     
     - chosenCultivable has ErbaLiccia:
     {
         - growStep has stepZero:
             ~ growthErbaLiccia = stepZero
+            ~ narrativeGrowthErbaLiccia = stepZero
         - growStep has stepOne:
             ~ growthErbaLiccia = stepOne
+            ~ narrativeGrowthErbaLiccia = stepOne
         - growStep has stepTwo:
             ~ growthErbaLiccia = stepTwo
+            ~ narrativeGrowthErbaLiccia = stepTwo
         - growStep has stepThree:
-            ~ growthErbaLiccia = stepThree
+             ~ growthErbaLiccia = stepTwo
+             ~ narrativeGrowthErbaLiccia = stepThree
     }      
     ->->
 }
@@ -246,133 +291,133 @@
 
     - chosenCultivable has LaSpazzata:
     {
-        - growthLaSpazzata == stepZero:
+        - narrativeGrowthLaSpazzata == stepZero:
             -> la_spazzata.step_zero 
-        - growthLaSpazzata == stepOne:
+        - narrativeGrowthLaSpazzata == stepOne:
             -> la_spazzata.step_uno
-        - growthLaSpazzata == stepTwo:
+        - narrativeGrowthLaSpazzata == stepTwo:
             -> la_spazzata.step_due
-        - growthLaSpazzata == stepThree:
+        - narrativeGrowthLaSpazzata == stepThree:
             -> la_spazzata.step_tre
     }
 
     - chosenCultivable has BaccaDellaAddolorata:
     {
-        - growthBaccaDellaAddolorata == stepZero:
+        - narrativeGrowthBaccaDellaAddolorata == stepZero:
             -> bacca_della_addolorata.step_zero
-        - growthBaccaDellaAddolorata == stepOne:
+        - narrativeGrowthBaccaDellaAddolorata == stepOne:
             -> bacca_della_addolorata.step_uno
-        - growthBaccaDellaAddolorata == stepTwo:
+        - narrativeGrowthBaccaDellaAddolorata == stepTwo:
             -> bacca_della_addolorata.step_due
-        - growthBaccaDellaAddolorata == stepThree:
+        - narrativeGrowthBaccaDellaAddolorata == stepThree:
             -> bacca_della_addolorata.step_tre
     }
 
     - chosenCultivable has NonTiScordarDiTe:
     {
-        - growthNonTiScordarDiTe == stepZero:
+        - narrativeGrowthNonTiScordarDiTe == stepZero:
             -> non_ti_scordar_di_te.step_zero     
-        - growthNonTiScordarDiTe == stepOne:
+        - narrativeGrowthNonTiScordarDiTe == stepOne:
             -> non_ti_scordar_di_te.step_uno
-        - growthNonTiScordarDiTe == stepTwo:
+        - narrativeGrowthNonTiScordarDiTe == stepTwo:
             -> non_ti_scordar_di_te.step_due
-        - growthNonTiScordarDiTe == stepThree:
+        - narrativeGrowthNonTiScordarDiTe == stepThree:
             -> non_ti_scordar_di_te.step_tre
     }
 
     - chosenCultivable has BrinaDellImpossibile:
     {
-        - growthBrinaDellImpossibile == stepZero:
+        - narrativeGrowthBrinaDellImpossibile == stepZero:
             -> brina_dell_impossibile.step_zero     
-        - growthBrinaDellImpossibile == stepOne:
+        - narrativeGrowthBrinaDellImpossibile == stepOne:
             -> brina_dell_impossibile.step_uno
-        - growthBrinaDellImpossibile == stepTwo:
+        - narrativeGrowthBrinaDellImpossibile == stepTwo:
             -> brina_dell_impossibile.step_due
-        - growthBrinaDellImpossibile == stepThree:
+        - narrativeGrowthBrinaDellImpossibile == stepThree:
             -> brina_dell_impossibile.step_tre
     }
     
     - chosenCultivable has CardoAspinato:
     {
-        - growthCardoAspinato == stepZero:
+        - narrativeGrowthCardoAspinato == stepZero:
             -> cardo_aspinato.step_zero     
-        - growthCardoAspinato == stepOne:
+        - narrativeGrowthCardoAspinato == stepOne:
             -> cardo_aspinato.step_uno
-        - growthCardoAspinato == stepTwo:
+        - narrativeGrowthCardoAspinato == stepTwo:
             -> cardo_aspinato.step_due
-        - growthCardoAspinato == stepThree:
+        - narrativeGrowthCardoAspinato == stepThree:
             -> cardo_aspinato.step_tre
     }
     
     - chosenCultivable has BastoneDellOzioso:
     {
-        - growthBastoneDellOzioso == stepZero:
+        - narrativeGrowthBastoneDellOzioso == stepZero:
             -> bastone_dell_ozioso.step_zero     
-        - growthBastoneDellOzioso == stepOne:
+        - narrativeGrowthBastoneDellOzioso == stepOne:
             -> bastone_dell_ozioso.step_uno
-        - growthBastoneDellOzioso == stepTwo:
+        - narrativeGrowthBastoneDellOzioso == stepTwo:
             -> bastone_dell_ozioso.step_due
-        - growthBastoneDellOzioso == stepThree:
+        - narrativeGrowthBastoneDellOzioso == stepThree:
             -> bastone_dell_ozioso.step_tre
     }
     
     - chosenCultivable has BarbaDellInciampo:
     {
-        - growthBarbaDellInciampo == stepZero:
+        - narrativeGrowthBarbaDellInciampo == stepZero:
             -> barba_dell_inciampo.step_zero     
-        - growthBarbaDellInciampo == stepOne:
+        - narrativeGrowthBarbaDellInciampo == stepOne:
             -> barba_dell_inciampo.step_uno
-        - growthBarbaDellInciampo == stepTwo:
+        - narrativeGrowthBarbaDellInciampo == stepTwo:
             -> barba_dell_inciampo.step_due
-        - growthBarbaDellInciampo == stepThree:
+        - narrativeGrowthBarbaDellInciampo == stepThree:
             -> barba_dell_inciampo.step_tre
     }
     
     - chosenCultivable has Olobino:
     {
-        - growStep has stepZero:
+        - narrativeGrowthOlobino has stepZero:
             -> olobino.step_zero 
-        - growStep has stepOne:
+        - narrativeGrowthOlobino has stepOne:
             -> olobino.step_uno 
-        - growStep has stepTwo:
+        - narrativeGrowthOlobino has stepTwo:
             -> olobino.step_due 
-        - growStep has stepThree:
+        - narrativeGrowthOlobino has stepThree:
             -> olobino.step_tre 
     }    
 
     - chosenCultivable has FalsaPalude:
     {
-        - growStep has stepZero:
+        - narrativeGrowthFalsaPalude has stepZero:
             -> falsa_palude.step_zero 
-        - growStep has stepOne:
+        - narrativeGrowthFalsaPalude has stepOne:
             -> falsa_palude.step_uno 
-        - growStep has stepTwo:
+        - narrativeGrowthFalsaPalude has stepTwo:
             -> falsa_palude.step_due 
-        - growStep has stepThree:
+        - narrativeGrowthFalsaPalude has stepThree:
             -> falsa_palude.step_tre 
     }    
 
     - chosenCultivable has LanaNotturna:
     {
-        - growStep has stepZero:
+        - narrativeGrowthLanaNotturna has stepZero:
             -> lana_notturna.step_zero 
-        - growStep has stepOne:
+        - narrativeGrowthLanaNotturna has stepOne:
             -> lana_notturna.step_uno 
-        - growStep has stepTwo:
+        - narrativeGrowthLanaNotturna has stepTwo:
             -> lana_notturna.step_due 
-        - growStep has stepThree:
+        - narrativeGrowthLanaNotturna has stepThree:
             -> lana_notturna.step_tre 
     }
     
     - chosenCultivable has ErbaLiccia:
     {
-        - growStep has stepZero:
+        - narrativeGrowthErbaLiccia has stepZero:
             -> erba_liccia.step_zero 
-        - growStep has stepOne:
+        - narrativeGrowthErbaLiccia has stepOne:
             -> erba_liccia.step_uno 
-        - growStep has stepTwo:
+        - narrativeGrowthErbaLiccia has stepTwo:
             -> erba_liccia.step_due 
-        - growStep has stepThree:
+        - narrativeGrowthErbaLiccia has stepThree:
             -> erba_liccia.step_tre 
     }    
     
@@ -583,6 +628,7 @@
         E quando è sazia, travolge ogni cosa.
 
         + (colto)[<i>Condivido qualcosa che mi pesa da tempo.]
+            ~ growthLaSpazzata = stepThree
             Odore di autunno, di foglie umide.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             La pancia di {name} colma di un senso di vuoto.
             La sensazione di quando ha condiviso qualcosa che riteneva terribile.
@@ -632,6 +678,7 @@
         Una pianta cara a chi ha finalmente trovato la sua strada, ma non riesce ancora ad avanzare.
 
             + (colto) [<i>Espongo le mie ferite.]
+            ~ growthBaccaDellaAddolorata = stepThree
             Il frutto si rivela tenace, deciso.
             Si rilassano le spalle di {name}.
             L'incertezza scivola via.
@@ -681,6 +728,7 @@
         Trasforma un collegamento in una nuova vittoria.
 
         + (colto) [<i>Penso alle persone che mi compongono.]
+            ~ growthNonTiScordarDiTe = stepThree
             {name} si sente ramo, si sente radice.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             Si sente le persone che è {pronouns has him:stato|{pronouns has her:stata|statə}} e quelle che sarà.
             Le persone che l'hanno {pronouns has him:accompagnato|{pronouns has her:accompagnata|accompagnatə}} nella sua vita.
@@ -728,6 +776,7 @@
         E baccelli crescono tra le ferite, come navi colme di semi.
 
         + (colto) [<i>Colgo uno dei baccelli.]
+             ~ growthBrinaDellImpossibile = stepThree
             {name} vede e dà un nome a qualcosa del suo passato.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             A qualcosa che è sempre stato lì, eppure non vedeva.
             La <b>Brina dell'Impossibile</b> si raccoglie nel luogo di un trauma.
@@ -773,6 +822,7 @@
         La piante cede, si stende tra le gambe di {name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         + (colto)[<i>Allungo le dita.]
+            ~ growthCardoAspinato = stepThree
             {name} allunga le dita, ne carezza il pelo, e al contatto, sente.
             Sente la luna, le stelle, le foglie nel vento, l'erba umida.
             Sente abbracci e sorrisi e mani che sorreggono.
@@ -826,6 +876,7 @@
         Il vento tra le canne vuote canta.
         
         + (colto)[<i>Canto anche io.]
+            ~ growthBastoneDellOzioso = stepThree
             La stanza esplode in una festa.
             I rami del <b>Bastone dell'Ozioso</b> vibrano di note chiassose.
             La musica è stonata, i rami sgrazziati eppure.
@@ -875,6 +926,7 @@
         Il muro si è fatto calice.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         + (colto)[<i>Abbasso le mie difese.]
+            ~ growthBarbaDellInciampo = stepThree
             Quando {name} abbassa le difese, vede con occhi diversi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             E la pianta con {pronouns has him:lui|{pronouns has her:lei|ləi}}.
             C'è pace in {name}, pace nella serra.
@@ -927,6 +979,7 @@
         I confini si sciolgono e un corpo è stanzapiantalucerespiro.
         
         + (colto)[<i>Mi perdo nel fungo.]
+            ~ growthOlobino = stepThree
             C'è solo amore.
             Per le persone care e per quelle mai conosciute, per quelle perse e quelle che verranno.
             Per l'insetto nel giardino e l'uccello nel cielo.
@@ -982,6 +1035,7 @@
         E un cespuglio fitto e odoroso illumina il pavimento della serra.
         
         + (colto)[<i>Racconto ciò che mi spaventa.]
+            ~ growthFalsaPalude = stepThree
             E tutta la <b>Falsa Palude</b> sospira.
             Esule dell'acqua, eppure capace di germogliare.
             La <b>Falsa Palude</b> è corallo di terra, colonia.
@@ -1033,7 +1087,9 @@
     = step_tre
         Perché il fiore sbocci, la gemma deve spaccarsi, ferirsi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         Ma serve attendere il tempo giusto, lasciare che le cose possano maturare.
+        
         + (colto)[Ho imparato ad attendere.]
+            ~ growthLanaNotturna = stepThree
             Un unico grande e morbido fiore, i petali soffici si spalancano nella serra.
             <b>Lana Notturna</b> è una coperta nella notte, una tisana nei giorni bui.
             Sboccia nelle terre dimenticate, per ricordare che anche quando tutto sembra perduto, da qualche parte cresce il seme del cambiamento.
@@ -1081,6 +1137,7 @@
         E il vaso brulica di erba verde e fresca
         
         + (colto)[E io con lui.]
+            ~ growthErbaLiccia = stepThree
             L'<b><i>Erba Liccia</b></i> matura quando le sue radici aeree sanno ritrovarsi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             Quando nel cambiamento sanno ritrovarsi.
             Quando sanno vedere ciò che erano, accogliere ciò che sono, curiosare su ciò che saranno.

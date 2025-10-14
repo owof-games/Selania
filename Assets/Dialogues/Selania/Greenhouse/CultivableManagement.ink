@@ -26,6 +26,17 @@
     VAR narrativeGrowthCantoDelleCompagne = notStarted
     VAR narrativeGrowthLicheneDegliAbissi = notStarted
     VAR narrativeGrowthEderaDelleAmanti = notStarted
+    VAR narrativeGrowthBrinaDellImpossibile = notStarted
+    VAR narrativeGrowthLaSpazzata = notStarted
+    VAR narrativeGrowthBaccaDellaAddolorata = notStarted
+    VAR narrativeGrowthNonTiScordarDiTe = notStarted
+    VAR narrativeGrowthCardoAspinato = notStarted
+    VAR narrativeGrowthBastoneDellOzioso = notStarted
+    VAR narrativeGrowthBarbaDellInciampo = notStarted
+    VAR narrativeGrowthOlobino = notStarted
+    VAR narrativeGrowthFalsaPalude = notStarted
+    VAR narrativeGrowthLanaNotturna = notStarted
+    VAR narrativeGrowthErbaLiccia = notStarted
 
 //Variabili per la gestione della serra
     LIST cropsType = relationship, shift, understanding, selfdetermination, wonder, imagination
