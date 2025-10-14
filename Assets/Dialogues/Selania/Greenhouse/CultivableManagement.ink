@@ -27,17 +27,17 @@
 //QUESTE LISTE HANNO UN VALORE CATALOGATIVO E PER LA GESTIONE DELLE DOMANDE
 
     //Relazione: con sé e con gli altri, anche con l’ambiente.
-    VAR relationshipCrops = (LicheneDegliAbissi, NonTiScordarDiTe, EderaDelleAmanti, CardoAspinato, LanaNotturna, ErbaLiccia, BastoneDellOzioso, CantoDelleCompagne)
+    VAR relationshipCrops = (BaccaDellaAddolorata, CantoDelleCompagne, EderaDelleAmanti, FalsaPalude, LicheneDegliAbissi, Olobino, LaSpazzata)
     //Mutamento: capacità di generare e accogliere il cambiamento.
-    VAR shiftCrops = (LicheneDegliAbissi, LaSpazzata, EderaDelleAmanti, FalsaPalude, BaccaDellaAddolorata, BastoneDellOzioso, BarbaDellInciampo)
+    VAR shiftCrops = (BaccaDellaAddolorata, BarbaDellInciampo, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, ErbaLiccia, FalsaPalude, LanaNotturna, LaSpazzata)
     //Comprensione: cercare il senso, capire il perché.
-    VAR understandingCrops = (LaSpazzata, BaccaDellaAddolorata, CardoAspinato, FalsaPalude, LicheneDegliAbissi, Olobino, ErbaLiccia)
+    VAR understandingCrops = (BarbaDellInciampo, BrinaDellImpossibile, CardoAspinato, ErbaLiccia, LicheneDegliAbissi, NonTiScordarDiTe, Olobino)
     //Autodeterminazione: definire la mia vita per come la voglio, o la vita della mia comunità.
-    VAR selfdeterminationCrops = (CantoDelleCompagne, BaccaDellaAddolorata, BrinaDellImpossibile, LaSpazzata, BastoneDellOzioso, BarbaDellInciampo, LanaNotturna)
+    VAR selfdeterminationCrops = (BarbaDellInciampo, BastoneDellOzioso, ErbaLiccia, LanaNotturna, LicheneDegliAbissi, LaSpazzata)
     //Stupore, meraviglia: sorprendermi, scoprire cose nuove, scoprire cose inaspettate. Vedere la vita come qualcosa di non prevedibile e godere di questo.
-    VAR wonderCrops = (EderaDelleAmanti, BrinaDellImpossibile, FalsaPalude, NonTiScordarDiTe, CantoDelleCompagne, BarbaDellInciampo, Olobino)
+    VAR wonderCrops = (BaccaDellaAddolorata, BastoneDellOzioso, CardoAspinato, EderaDelleAmanti, NonTiScordarDiTe, Olobino)
     //Immaginazione e creazione: sono due parole legate ma non sinonimi, ma mi viene istintivo unirle. Da una parte abbiamo la possibilità di pensare a ciò che non c’è, dall’altra di generarlo. In parte immaginazione si collega a stupore (una nuova idea), in parte a comprensione (quando capisco qualcosa e provo ad applicarlo in realtà immaginate). Creatività invece è sia un processo di mutamento (creando porto cambiamento, con tutte le sue conseguenze) che di autodeterminazione (creo ciò che voglio, ciò che penso possa servire, portare piacere, ristorare la mia comunità).
-    VAR imaginationCrops = (NonTiScordarDiTe, CantoDelleCompagne, CardoAspinato, BrinaDellImpossibile, BastoneDellOzioso, Olobino, LanaNotturna, ErbaLiccia)
+    VAR imaginationCrops = (BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, EderaDelleAmanti, FalsaPalude, LanaNotturna, NonTiScordarDiTe)
 
 
 //Pianta che verrà proposta. La uso anche per tracking dello stato delle piante.

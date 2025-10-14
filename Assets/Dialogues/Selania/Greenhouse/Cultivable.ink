@@ -384,32 +384,33 @@
     = step_zero
     -> remove_proposed_cultivable ->
         ~ growthLicheneDegliAbissi = stepZero
-        Un odore salmastro si diffonde per la serra. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        La terra si solleva ai lati del vaso.
+        Due mondi si incontrano.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        Foglie nuove si accrescono.
+        L'aria è piena di novità.
                 -> main
     
     = step_uno
-        Affilata e trasparente, una foglia vortica al centro del vaso, catturando a fatica il tuo volto. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        L'aria si fa di sale, brucia gli occhi.
-            -> main
+        Le foglie ora riempiono ogni cosa, vedono solo sé stesse.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                -> main
           
     = step_due
-        In silenzio nuove foglie si inseguono nell'aria. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Più si avvicinano, più l'odore si fa violento.
+        Fiori come cuori, e un susseguirsi di bisbigli amorosi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        Le radici interconnesse, indistricate.
+        L'incapacità di trovare una separazione.
             -> main
           
     = step_tre
-        L'odore è così forte da far lacrimare gli occhi di {name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        L'odore del <b>Lichene degli abissi.</b>
-        Roteare incessante tra fungo e alga.
-        Si respingono nel piacere, si inseguono nel dolore, senza mai afferrarsi.
-        Forti nella loro distruzione, estremamente fragili.
+        Dubbi e non detti esplodono come lame.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        Ciò che prima era amorevolmente interconnesso ora è imprigionato.
+        Ci sono forze da rilasciare
 
-            + (colto) [<i>Sfioro il lichene.]
-                Un piccolo sbuffo, rumore di vetro. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-                Le dita di {name} sanno di ricordo, sanno di mare.
-                Di persone allontanate.
-                Di addii dolorosi, e ferite risanate.
+            + (colto) [So dove guardare.]
+                <b>Lichene degli abissi</b> offre frutti taglienti.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                Cresce dove ci sono relazioni che non sanno maturare.
+                Storie da lasciare.
+                L'odore delle sue foglie sa di persone allontanate.
+                Di addii dolorosi.
+                E ferite da risanare.
                   
                     -> ending_cultivation
               
