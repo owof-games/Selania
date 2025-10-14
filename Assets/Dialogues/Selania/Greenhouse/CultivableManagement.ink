@@ -5,7 +5,8 @@
 
 //QUESTA LISTA LA USO PER GESTIRE LA PESCATA O MENO DEI COLTIVABILI
     VAR backupCultivable = (BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti, ErbaLiccia, FalsaPalude, LanaNotturna, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata)
-    
+
+//LISTA PER FAR AVANZARE GLI ELEMENTI GRAFICI
     VAR growthCantoDelleCompagne = notStarted
     VAR growthLicheneDegliAbissi = notStarted
     VAR growthEderaDelleAmanti = notStarted
@@ -20,6 +21,11 @@
     VAR growthFalsaPalude = notStarted
     VAR growthLanaNotturna = notStarted
     VAR growthErbaLiccia = notStarted
+
+//LISTA PER FAR AVANZARE GLI ELEMENTI TESTUALI
+    VAR narrativeGrowthCantoDelleCompagne = notStarted
+    VAR narrativeGrowthLicheneDegliAbissi = notStarted
+    VAR narrativeGrowthEderaDelleAmanti = notStarted
 
 //Variabili per la gestione della serra
     LIST cropsType = relationship, shift, understanding, selfdetermination, wonder, imagination

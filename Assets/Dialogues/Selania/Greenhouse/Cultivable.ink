@@ -26,36 +26,48 @@
     {
         - growStep has stepZero:
             ~ growthLicheneDegliAbissi = stepZero
+            ~ narrativeGrowthLicheneDegliAbissi = stepZero
         - growStep has stepOne:
             ~ growthLicheneDegliAbissi = stepOne
+            ~ narrativeGrowthLicheneDegliAbissi = stepOne
         - growStep has stepTwo:
             ~ growthLicheneDegliAbissi = stepTwo
+            ~ narrativeGrowthLicheneDegliAbissi = stepTwo
         - growStep has stepThree:
-            ~ growthLicheneDegliAbissi = stepThree
+            ~ growthLicheneDegliAbissi = stepTwo
+            ~ narrativeGrowthLicheneDegliAbissi = stepThree
     }
 
     - chosenCultivable has EderaDelleAmanti:
     {
         - growStep has stepZero:
             ~ growthEderaDelleAmanti = stepZero
+            ~ narrativeGrowthEderaDelleAmanti= stepZero
         - growStep has stepOne:
             ~ growthEderaDelleAmanti = stepOne
+            ~ narrativeGrowthEderaDelleAmanti= stepOne
         - growStep has stepTwo:
             ~ growthEderaDelleAmanti = stepTwo
+            ~ narrativeGrowthEderaDelleAmanti= stepTwo
         - growStep has stepThree:
-             ~ growthEderaDelleAmanti = stepThree
+             ~ growthEderaDelleAmanti = stepTwo
+             ~ narrativeGrowthEderaDelleAmanti= stepThree
     }
 
     - chosenCultivable has CantoDelleCompagne:
     {
         - growStep has stepZero:
             ~ growthCantoDelleCompagne = stepZero
+            ~ narrativeGrowthCantoDelleCompagne = stepZero
         - growStep has stepOne:
             ~ growthCantoDelleCompagne = stepOne
+            ~ narrativeGrowthCantoDelleCompagne = stepOne
         - growStep has stepTwo:
             ~ growthCantoDelleCompagne = stepTwo
+            ~ narrativeGrowthCantoDelleCompagne = stepTwo
         - growStep has stepThree:
-             ~ growthCantoDelleCompagne = stepThree
+             ~ growthCantoDelleCompagne = stepTwo
+             ~ narrativeGrowthCantoDelleCompagne = stepThree
     }
 
     - chosenCultivable has LaSpazzata:
@@ -198,37 +210,37 @@
 {
     - chosenCultivable has LicheneDegliAbissi:
     {
-        - growthLicheneDegliAbissi == stepZero:
+        - narrativeGrowthLicheneDegliAbissi == stepZero:
             -> lichene_degli_abissi.step_zero
-        - growthLicheneDegliAbissi == stepOne:
+        - narrativeGrowthLicheneDegliAbissi == stepOne:
             -> lichene_degli_abissi.step_uno
-        - growthLicheneDegliAbissi == stepTwo:
+        - narrativeGrowthLicheneDegliAbissi == stepTwo:
             -> lichene_degli_abissi.step_due
-        - growthLicheneDegliAbissi == stepThree:
+        - narrativeGrowthLicheneDegliAbissi == stepThree:
             -> lichene_degli_abissi.step_tre
     }
 
     - chosenCultivable has EderaDelleAmanti:
     {
-        - growthEderaDelleAmanti == stepZero:
+        - narrativeGrowthEderaDelleAmanti == stepZero:
             -> edera_delle_amanti.step_zero
-        - growthEderaDelleAmanti == stepOne:
+        - narrativeGrowthEderaDelleAmanti == stepOne:
             -> edera_delle_amanti.step_uno
-        - growthEderaDelleAmanti == stepTwo:
+        - narrativeGrowthEderaDelleAmanti == stepTwo:
             -> edera_delle_amanti.step_due
-        - growthEderaDelleAmanti == stepThree:
+        - narrativeGrowthEderaDelleAmanti == stepThree:
             -> edera_delle_amanti.step_tre
     }
 
     - chosenCultivable has CantoDelleCompagne:
     {
-        - growthCantoDelleCompagne == stepZero:
+        - narrativeGrowthCantoDelleCompagne == stepZero:
             -> canto_delle_compagne.step_zero    
-        - growthCantoDelleCompagne == stepOne:
+        - narrativeGrowthCantoDelleCompagne == stepOne:
             -> canto_delle_compagne.step_uno
-        - growthCantoDelleCompagne == stepTwo:
+        - narrativeGrowthCantoDelleCompagne == stepTwo:
             -> canto_delle_compagne.step_due
-        - growthCantoDelleCompagne == stepThree:
+        - narrativeGrowthCantoDelleCompagne == stepThree:
             -> canto_delle_compagne.step_tre
     }
 
@@ -405,6 +417,7 @@
         Ci sono forze da rilasciare
 
             + (colto) [So dove guardare.]
+                ~ growthLicheneDegliAbissi = stepThree
                 <b>Lichene degli abissi</b> offre frutti taglienti.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 Cresce dove ci sono relazioni che non sanno maturare.
                 Storie da lasciare.
@@ -458,6 +471,7 @@
         Faticoso è resistere all'idea di tuffarvisi.
         
             + (colto) [<i>Prendo una foglia.]
+                ~ growthEderaDelleAmanti = stepThree
                 Per un attimo {name} perde i suoi confini.
                 Diventa un bacio nella notte, dita desiderate tra le coscie.
                 Acqua sulle labbra, pelle nuda sulla terra umida.
@@ -504,13 +518,13 @@
             -> main
           
     = step_tre
-        
         La serra si muove e si scuote, le travi cigolano nel voler danzare. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         Ilare, <b>Canto delle compagne</b> turbina e balla riversandosi dal vaso.
         In un altro tempo questo cespuglio veniva chiamato "Canto delle streghe".
         L'euforia riempie i polmoni di {name}, sente la gioia di sapere che non è mai stata davvero {pronouns has him:solo|{pronouns has her:sola|solə}}.
         
         + (colto)[<i>Penso a chi amo.]
+            ~ growthCantoDelleCompagne = stepThree
                 Le gambe di {name} iniziano a ballare.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 Spingono il suo corpo nella stanza.
                 La sua voce si alza e canta, chiama l3 compagn3.
