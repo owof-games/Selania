@@ -70,7 +70,7 @@
     {
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
         
-            Sai? Mi sembri una persona che dice sempre le cose giuste.  #speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+            Sai? Mi sembri una persona che dice sempre le cose giuste. #speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
             Non giuste giuste tipo per me.
             Ma che si assomigliano tutte.
             Non mi dici mica prima mele e poi pere come fanno gli altri adulti.
@@ -78,7 +78,7 @@
                 ->->
         - else:
         
-            Non sono scemo.  #speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}
+            Non sono scemo.  #speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_angry
             Ho visto che cambi sempre idea.
             Mi rispondi sempre cose diverse.
             Non mi piace.

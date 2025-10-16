@@ -135,7 +135,8 @@
             - not five:
                 {
                     - entity_location(PG) == Pond:
-                        {~ C'è una cosa che voglio dirti, ma te la dico quando non sarò allo stagno.}
+                        {~ C'è una cosa che voglio dirti, ma te la dico quando non sarò allo stagno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral}
+                        ~ move_entity(SecondCharacter, TrainStop)
                         -> main
                     - else: 
                         -> five
