@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7162d10e76ea2264892c8c02370138bf
+guid: cd9a90d3683230f4f8010eeab3842e15
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7303293266307200835
-    second: nightTable_0
+      213: -7615887143515501814
+    second: WaterLily_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: nightTable_0
+      name: WaterLily_0
       rect:
         serializedVersion: 2
-        x: 21
+        x: 7
         y: 18
-        width: 180
-        height: 210
+        width: 129
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3473ebcf7828a5560800000000000000
-      internalID: 7303293266307200835
+      spriteID: a0b4b416efeee4690800000000000000
+      internalID: -7615887143515501814
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      nightTable_0: 7303293266307200835
+      WaterLily_0: -7615887143515501814
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
