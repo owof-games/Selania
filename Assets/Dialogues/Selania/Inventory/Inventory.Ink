@@ -29,29 +29,6 @@ VAR currentReceiver = ()
             Coltivabili
 
  ----------------------------------*/
-
-
-+ {findedGifts has EderaDelleAmanti} [Una foglia di Edera delle amanti.]
-    ~ findedGifts -= EderaDelleAmanti
-    {
-        - currentReceiver has FirstCharacter:
-            {translator(firstCharacterState)} non comprende il significato del tuo dono.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-                ~ firstGift += EderaDelleAmanti
-                ~ currentReceiver = ()
-                    -> first_story_gift.ink_outcome
-        
-        
-        - currentReceiver has SecondCharacter:
-            {translator(secondCharacterState)} ti guarda imbarazzato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-                ~ secondGift += EderaDelleAmanti
-                ~ currentReceiver = ()
-                    -> second_story_gift.ink_outcome
-        
-    }
-        -> main
-
-
-
 + {findedGifts has BaccaDellaAddolorata} [Una bacca della Addolorata.]
     ~ findedGifts -= BaccaDellaAddolorata
 
@@ -72,34 +49,49 @@ VAR currentReceiver = ()
                     -> second_story_gift.ink_outcome
     
     }
-        -> main    
+        -> main
 
-
-
-
-+ {findedGifts has LaSpazzata} [Un rametto della Spezzata.]
-    ~ findedGifts -= LaSpazzata
-    
++ {findedGifts has BarbaDellInciampo} [Una spina di Barba dell'Inciampo.]
+    ~ findedGifts -= BarbaDellInciampo
     {
         - currentReceiver has FirstCharacter:
-            {translator(firstCharacterState)} è infastidita dalla tensione che viene dal frammento, lo lancia lontano.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-                ~ firstGift += LaSpazzata
-                ~ currentReceiver = ()            
+            {translator(firstCharacterState)} si punge, infastidita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ firstGift += BarbaDellInciampo
+                ~ currentReceiver = ()
                     -> first_story_gift.ink_outcome
-    
+        
+        
         - currentReceiver has SecondCharacter:
-            ~ secondCharacterInkLevel ++
-            Hai regalato a {translator(secondCharacterState)} qualcosa che lo esalta.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-            Continua a rigirarsi il frammento tra le dita, pieno di gioia rabbiosa.
-                ~ secondGift += LaSpazzata
+            {translator(secondCharacterState)} si distrae rapidamente, ignorando il dono.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ secondGift += BarbaDellInciampo
                 ~ currentReceiver = ()
                     -> second_story_gift.ink_outcome
-    
+        
+    }        
+    -> main    
+        
++ {findedGifts has BastoneDellOzioso} [Un nodo di Bastone dell'Ozioso.]
+    ~ findedGifts -= BastoneDellOzioso
+    {
+        - currentReceiver has FirstCharacter:
+            {translator(firstCharacterState)} inizia a girarselo tra le dita cantando divertita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ firstCharacterInkLevel ++
+                ~ firstGift += BastoneDellOzioso
+                ~ currentReceiver = ()
+                    -> first_story_gift.ink_outcome
+        
+        
+        - currentReceiver has SecondCharacter:
+            {translator(secondCharacterState)} è entusiasta: inizia a lanciarlo a terra, inseguirlo, riprenderselo ridendo a crepapelle.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ secondCharacterInkLevel ++
+                ~ secondCharacterInkLevel ++
+                ~ secondGift += BastoneDellOzioso
+                ~ currentReceiver = ()
+                    -> second_story_gift.ink_outcome
+        
     }
-    -> main
-
-
-
+        -> main        
+    
 + {findedGifts has BrinaDellImpossibile} [Un frammento di Brina dell'Impossibile.]
     ~ findedGifts -= BrinaDellImpossibile
 
@@ -124,8 +116,7 @@ VAR currentReceiver = ()
 
     }
         -> main
-    
-    
+
 + {findedGifts has CantoDelleCompagne} [Una goccia di Canto delle Compagne.]
     ~ findedGifts -= CantoDelleCompagne
 
@@ -150,6 +141,110 @@ VAR currentReceiver = ()
     }
         -> main
 
++ {findedGifts has CardoAspinato} [Un ciuffo di peli di Cardo Aspinato.]
+    ~ findedGifts -= CardoAspinato
+
+    {
+    - currentReceiver has FirstCharacter:
+        ~ firstCharacterInkLevel ++
+        {translator(firstCharacterState)} sembra prima disgustata, poi divertita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+        E poi comprensione compare sul suo volto.
+                ~ firstGift += CardoAspinato
+                ~ currentReceiver = ()
+                    -> first_story_gift.ink_outcome
+
+
+    - currentReceiver has SecondCharacter:
+        ~ secondCharacterInkLevel ++
+        {translator(secondCharacterState)} inizia a ridere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+        Poi sorride imbarazzato.
+        Grazie, {name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
+            ~ secondGift += CardoAspinato
+            ~ currentReceiver = ()
+            -> second_story_gift.ink_outcome
+        
+    }
+        -> main   
+        
++ {findedGifts has EderaDelleAmanti} [Una foglia di Edera delle amanti.]
+    ~ findedGifts -= EderaDelleAmanti
+    {
+        - currentReceiver has FirstCharacter:
+            {translator(firstCharacterState)} non comprende il significato del tuo dono.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ firstGift += EderaDelleAmanti
+                ~ currentReceiver = ()
+                    -> first_story_gift.ink_outcome
+        
+        
+        - currentReceiver has SecondCharacter:
+            {translator(secondCharacterState)} ti guarda imbarazzato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ secondGift += EderaDelleAmanti
+                ~ currentReceiver = ()
+                    -> second_story_gift.ink_outcome
+        
+    }
+        -> main   
+        
++ {findedGifts has ErbaLiccia} [Un ricordo di Erba Liccia.]
+        ~ findedGifts -= ErbaLiccia
+    {
+        - currentReceiver has FirstCharacter:
+            ~ firstCharacterInkLevel ++
+            
+            {translator(firstCharacterState)} si mette a canticchiare.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ firstGift += ErbaLiccia
+                ~ currentReceiver = ()
+                    -> first_story_gift.ink_outcome
+        
+        - currentReceiver has SecondCharacter:
+            ~ secondCharacterInkLevel ++
+        
+            {translator(secondCharacterState)} intreccia le foglie per farne un cappello. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                    ~ secondGift += ErbaLiccia
+                    ~ currentReceiver = ()
+                        -> second_story_gift.ink_outcome
+        
+    }
+    
+ + {findedGifts has FalsaPalude} [Un petalo di Falsa Palude.]
+    ~ findedGifts -= FalsaPalude
+    {
+        - currentReceiver has FirstCharacter:
+            {translator(firstCharacterState)} non sembra colpita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ firstGift += FalsaPalude
+                ~ currentReceiver = ()
+                    -> first_story_gift.ink_outcome
+        
+        
+        - currentReceiver has SecondCharacter:
+            {translator(secondCharacterState)} continua a mordicchiarsi le unghie sporche.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ secondGift += FalsaPalude
+                ~ currentReceiver = ()
+                    -> second_story_gift.ink_outcome
+        
+    }
+    
+  + {findedGifts has LanaNotturna} [Il calore della Lana Notturna.]
+        ~ findedGifts -= LanaNotturna
+    {
+        - currentReceiver has FirstCharacter:
+            ~ firstCharacterInkLevel ++
+            ~ firstCharacterInkLevel ++
+            {translator(firstCharacterState)} se lo stringe tra le mani, ringraziandoti.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ firstGift += LanaNotturna
+                ~ currentReceiver = ()
+                    -> first_story_gift.ink_outcome
+        
+        - currentReceiver has SecondCharacter:
+        {translator(secondCharacterState)} prova a leccarlo, poi lo lascia cadere a terra. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ secondGift += LanaNotturna
+                ~ currentReceiver = ()
+                    -> second_story_gift.ink_outcome
+        
+    }       
+    
+    -> main 
+    
 + {findedGifts has LicheneDegliAbissi} [Una traccia dell'odore del Lichene degli Abissi.]
     ~ findedGifts -= LicheneDegliAbissi
 
@@ -195,78 +290,9 @@ VAR currentReceiver = ()
                     -> second_story_gift.ink_outcome
         
     }
-        -> main
-
-
-+ {findedGifts has CardoAspinato} [Un ciuffo di peli di Cardo Aspinato.]
-    ~ findedGifts -= CardoAspinato
-
-    {
-    - currentReceiver has FirstCharacter:
-        ~ firstCharacterInkLevel ++
-        {translator(firstCharacterState)} sembra prima disgustata, poi divertita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-        E poi comprensione compare sul suo volto.
-                ~ firstGift += CardoAspinato
-                ~ currentReceiver = ()
-                    -> first_story_gift.ink_outcome
-
-
-    - currentReceiver has SecondCharacter:
-        ~ secondCharacterInkLevel ++
-        {translator(secondCharacterState)} inizia a ridere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-        Poi sorride imbarazzato.
-        Grazie, {name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
-            ~ secondGift += CardoAspinato
-            ~ currentReceiver = ()
-            -> second_story_gift.ink_outcome
-        
-    }
-        -> main    
-
-
-
-+ {findedGifts has BastoneDellOzioso} [Un nodo di Bastone dell'Ozioso.]
-    ~ findedGifts -= BastoneDellOzioso
-    {
-        - currentReceiver has FirstCharacter:
-            {translator(firstCharacterState)} inizia a girarselo tra le dita cantando divertita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-                ~ firstCharacterInkLevel ++
-                ~ firstGift += BastoneDellOzioso
-                ~ currentReceiver = ()
-                    -> first_story_gift.ink_outcome
-        
-        
-        - currentReceiver has SecondCharacter:
-            {translator(secondCharacterState)} è entusiasta: inizia a lanciarlo a terra, inseguirlo, riprenderselo ridendo a crepapelle.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-                ~ secondCharacterInkLevel ++
-                ~ secondCharacterInkLevel ++
-                ~ secondGift += BastoneDellOzioso
-                ~ currentReceiver = ()
-                    -> second_story_gift.ink_outcome
-        
-    }
         -> main        
-    
 
-+ {findedGifts has BarbaDellInciampo} [Una spina di Barba dell'Inciampo.]
-    ~ findedGifts -= BarbaDellInciampo
-    {
-        - currentReceiver has FirstCharacter:
-            {translator(firstCharacterState)} si punge, infastidita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-                ~ firstGift += BarbaDellInciampo
-                ~ currentReceiver = ()
-                    -> first_story_gift.ink_outcome
-        
-        
-        - currentReceiver has SecondCharacter:
-            {translator(secondCharacterState)} si distrae rapidamente, ignorando il dono.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-                ~ secondGift += BarbaDellInciampo
-                ~ currentReceiver = ()
-                    -> second_story_gift.ink_outcome
-        
-    }
-    
- + {findedGifts has Olobino} [Una cappello di Olobino.]
++ {findedGifts has Olobino} [Una cappello di Olobino.]
     ~ findedGifts -= Olobino
     {
         - currentReceiver has FirstCharacter:
@@ -285,67 +311,31 @@ VAR currentReceiver = ()
                 ~ currentReceiver = ()
                     -> second_story_gift.ink_outcome
         
-    }   
+    }
+    -> main
     
- + {findedGifts has FalsaPalude} [Un petalo di Falsa Palude.]
-    ~ findedGifts -= FalsaPalude
++ {findedGifts has LaSpazzata} [Un rametto della Spezzata.]
+    ~ findedGifts -= LaSpazzata
+    
     {
         - currentReceiver has FirstCharacter:
-            {translator(firstCharacterState)} non sembra colpita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-                ~ firstGift += FalsaPalude
-                ~ currentReceiver = ()
+            {translator(firstCharacterState)} è infastidita dalla tensione che viene dal frammento, lo lancia lontano.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                ~ firstGift += LaSpazzata
+                ~ currentReceiver = ()            
                     -> first_story_gift.ink_outcome
-        
-        
-        - currentReceiver has SecondCharacter:
-            {translator(secondCharacterState)} continua a mordicchiarsi le unghie sporche.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-                ~ secondGift += FalsaPalude
-                ~ currentReceiver = ()
-                    -> second_story_gift.ink_outcome
-        
-    }       
     
-  + {findedGifts has LanaNotturna} [Il calore della Lana Notturna.]
-        ~ findedGifts -= LanaNotturna
-    {
-        - currentReceiver has FirstCharacter:
-            ~ firstCharacterInkLevel ++
-            ~ firstCharacterInkLevel ++
-            {translator(firstCharacterState)} se lo stringe tra le mani, ringraziandoti.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-                ~ firstGift += LanaNotturna
-                ~ currentReceiver = ()
-                    -> first_story_gift.ink_outcome
-        
-        - currentReceiver has SecondCharacter:
-        {translator(secondCharacterState)} prova a leccarlo, poi lo lascia cadere a terra. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-                ~ secondGift += LanaNotturna
-                ~ currentReceiver = ()
-                    -> second_story_gift.ink_outcome
-        
-    }       
-    
-+ {findedGifts has ErbaLiccia} [Un ricordo di Erba Liccia.]
-        ~ findedGifts -= ErbaLiccia
-    {
-        - currentReceiver has FirstCharacter:
-            ~ firstCharacterInkLevel ++
-            
-            {translator(firstCharacterState)} si mette a canticchiare.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-                ~ firstGift += ErbaLiccia
-                ~ currentReceiver = ()
-                    -> first_story_gift.ink_outcome
-        
         - currentReceiver has SecondCharacter:
             ~ secondCharacterInkLevel ++
-        
-            {translator(secondCharacterState)} intreccia le foglie per farne un cappello. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-                    ~ secondGift += ErbaLiccia
-                    ~ currentReceiver = ()
-                        -> second_story_gift.ink_outcome
-        
-    }      
-    -> main     
+            Hai regalato a {translator(secondCharacterState)} qualcosa che lo esalta.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+            Continua a rigirarsi il frammento tra le dita, pieno di gioia rabbiosa.
+                ~ secondGift += LaSpazzata
+                ~ currentReceiver = ()
+                    -> second_story_gift.ink_outcome
     
+    }
+        -> main
+
+
     //Se la lista è vuota
     + {findedGifts == ()} [Non ho nulla da donare.]
         -> main

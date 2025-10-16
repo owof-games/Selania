@@ -7,36 +7,38 @@
     VAR backupCultivable = (BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti, ErbaLiccia, FalsaPalude, LanaNotturna, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata)
 
 //LISTA PER FAR AVANZARE GLI ELEMENTI GRAFICI
-    VAR growthCantoDelleCompagne = notStarted
-    VAR growthLicheneDegliAbissi = notStarted
-    VAR growthEderaDelleAmanti = notStarted
-    VAR growthBrinaDellImpossibile = notStarted
-    VAR growthLaSpazzata = notStarted
     VAR growthBaccaDellaAddolorata = notStarted
-    VAR growthNonTiScordarDiTe = notStarted
-    VAR growthCardoAspinato = notStarted
-    VAR growthBastoneDellOzioso = notStarted
     VAR growthBarbaDellInciampo = notStarted
-    VAR growthOlobino = notStarted
+    VAR growthBastoneDellOzioso = notStarted
+    VAR growthBrinaDellImpossibile = notStarted
+    VAR growthCantoDelleCompagne = notStarted
+    VAR growthCardoAspinato = notStarted
+    VAR growthEderaDelleAmanti = notStarted
+    VAR growthErbaLiccia = notStarted
     VAR growthFalsaPalude = notStarted
     VAR growthLanaNotturna = notStarted
-    VAR growthErbaLiccia = notStarted
+    VAR growthLicheneDegliAbissi = notStarted
+    VAR growthNonTiScordarDiTe = notStarted
+    VAR growthOlobino = notStarted
+    VAR growthLaSpazzata = notStarted
 
+
+    
 //LISTA PER FAR AVANZARE GLI ELEMENTI TESTUALI
-    VAR narrativeGrowthCantoDelleCompagne = notStarted
-    VAR narrativeGrowthLicheneDegliAbissi = notStarted
-    VAR narrativeGrowthEderaDelleAmanti = notStarted
-    VAR narrativeGrowthBrinaDellImpossibile = notStarted
-    VAR narrativeGrowthLaSpazzata = notStarted
     VAR narrativeGrowthBaccaDellaAddolorata = notStarted
-    VAR narrativeGrowthNonTiScordarDiTe = notStarted
-    VAR narrativeGrowthCardoAspinato = notStarted
-    VAR narrativeGrowthBastoneDellOzioso = notStarted
     VAR narrativeGrowthBarbaDellInciampo = notStarted
-    VAR narrativeGrowthOlobino = notStarted
+    VAR narrativeGrowthBastoneDellOzioso = notStarted
+    VAR narrativeGrowthBrinaDellImpossibile = notStarted
+    VAR narrativeGrowthCantoDelleCompagne = notStarted
+    VAR narrativeGrowthCardoAspinato = notStarted
+    VAR narrativeGrowthEderaDelleAmanti = notStarted
+    VAR narrativeGrowthErbaLiccia = notStarted
     VAR narrativeGrowthFalsaPalude = notStarted
     VAR narrativeGrowthLanaNotturna = notStarted
-    VAR narrativeGrowthErbaLiccia = notStarted
+    VAR narrativeGrowthLicheneDegliAbissi = notStarted
+    VAR narrativeGrowthNonTiScordarDiTe = notStarted
+    VAR narrativeGrowthOlobino = notStarted
+    VAR narrativeGrowthLaSpazzata = notStarted
 
 //Variabili per la gestione della serra
     LIST cropsType = relationship, shift, understanding, selfdetermination, wonder, imagination
@@ -1229,34 +1231,35 @@ QUESTIONS
 
 = chosen_cultivable
 {chosenCultivable:
-    - LicheneDegliAbissi:
-        -> lichene_degli_abissi.TW
-    - EderaDelleAmanti:
-        -> edera_delle_amanti.TW
-    - CantoDelleCompagne:
-        -> canto_delle_compagne.TW
-    - LaSpazzata:
-        -> la_spazzata.TW
     - BaccaDellaAddolorata:
         -> bacca_della_addolorata.TW
-    - NonTiScordarDiTe:
-        -> non_ti_scordar_di_te.TW
-    - BrinaDellImpossibile:
-        -> brina_dell_impossibile.TW
-    - CardoAspinato:
-        -> cardo_aspinato.TW
     - BastoneDellOzioso:
         -> bastone_dell_ozioso.TW
     - BarbaDellInciampo:
         -> barba_dell_inciampo.TW
-    - Olobino:
-        -> olobino.TW
+    - BrinaDellImpossibile:
+        -> brina_dell_impossibile.TW
+    - CantoDelleCompagne:
+        -> canto_delle_compagne.TW
+    - CardoAspinato:
+        -> cardo_aspinato.TW        
+    - EderaDelleAmanti:
+        -> edera_delle_amanti.TW
+    - ErbaLiccia:
+        -> erba_liccia.TW        
     - FalsaPalude:    
         -> falsa_palude.TW
     - LanaNotturna:
         -> lana_notturna.TW
-    - ErbaLiccia:
-        -> erba_liccia.TW
+    - LicheneDegliAbissi:
+        -> lichene_degli_abissi.TW
+    - NonTiScordarDiTe:
+        -> non_ti_scordar_di_te.TW
+    - Olobino:
+        -> olobino.TW                        
+    - LaSpazzata:
+        -> la_spazzata.TW  
+
 }       
 
 
