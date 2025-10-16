@@ -15410,7 +15410,7 @@ GameObject:
   - component: {fileID: 1502455884}
   - component: {fileID: 1502455883}
   m_Layer: 5
-  m_Name: WaterLily
+  m_Name: waterLily
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
