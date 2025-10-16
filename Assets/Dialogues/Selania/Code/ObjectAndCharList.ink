@@ -14,6 +14,6 @@
     
     LIST bookElements = RewriterBook, BookExit, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FifthRecap, FrogRecap, DogRecap, WitchRecap, GreenhouseRecap, LaboratoryRecap, NestRecap, RulesRecap, SettingsBookVersion
     
-    LIST roomElements = RoomExit, RoomLoad, cultivationKit,  teaKit, littleLibrary, bowl, vase, miniBook, settings, firstCharPaint, secondCharPaint, thirdCharPaint, fourthCharPaint, fifthCharPaint
+    LIST roomElements = RoomExit, RoomLoad, cultivationKit,  teaKit, littleLibrary, bowl, vase, miniBook, nightTable, settings, firstCharPaint, secondCharPaint, thirdCharPaint, fourthCharPaint, fifthCharPaint
     
     LIST noises = TrainNoise, BastonSound

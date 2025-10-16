@@ -377,6 +377,7 @@ C'è un libro ai piedi del tronco, e porta il tuo nome.#speaker:{witch_tag()} #i
     ~ move_entity(RewriterBook, Forest)
     ~ move_entity(WitchRecap, BookPlace)
     ~ move_entity(miniBook, Bedroom)
+    ~ move_entity(nightTable, Bedroom)
     ~ somethingStrange ++
     -> main
 
