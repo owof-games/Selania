@@ -1212,15 +1212,15 @@
            ~ move_entity(cultivationKit, Bedroom)
      }
     
-    //{
-    //    - are_two_entities_together(PG,RewriterBook):
-    //       @animation:RewriterBook
-    //}
+    {
+       - are_two_entities_together(PG,RewriterBook):
+           @animation:RewriterBook
+    }
     {
         - bookContents hasnt GreenhouseRecap:
         ~ move_entity(GreenhouseRecap, BookPlace)
     }
-    //@animation:Inventory
+    @animation:Inventory
     
     {~ Hai raccolto|Hai ricevuto in dono|Tra le dita ti ritrovi|Nello zaino ora hai|Eccoti in dono|Eccoti} {ingredientTranslator(chosenCultivable)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
     
