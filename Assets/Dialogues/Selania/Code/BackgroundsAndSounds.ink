@@ -36,7 +36,7 @@ VAR saturationVar = 0
            ~ return "backLibrary"
     
         - entity_location(PG) == Kitchen:
-           ~ return "backLaboratory"
+           ~ return "backKitchen"
            
         - entity_location(PG) == BookPlace:
         

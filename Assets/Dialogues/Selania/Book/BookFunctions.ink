@@ -18,7 +18,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         }
         ~ disableBigDialogue()
         @exit_from_rewriter_book
-        // -> forest
+  
     
     - arrivingFrom == Greenhouse:
         ~ move_entity(PG, Greenhouse)
@@ -29,7 +29,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         }
         ~ disableBigDialogue()
         @exit_from_rewriter_book
-        // -> greenhouse
+
     
     - arrivingFrom == Pond:
         ~ move_entity(PG, Pond)
@@ -40,8 +40,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         }
         ~ disableBigDialogue()
         @exit_from_rewriter_book
-        // -> pond
-        
+    
     - arrivingFrom == Kitchen:
         ~ move_entity(PG, Kitchen)
         ~ move_entity(RewriterBook, Kitchen)
@@ -51,7 +50,6 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         }
         ~ disableBigDialogue()
         @exit_from_rewriter_book
-        // -> laboratory
 
     - arrivingFrom == Library:
         ~ move_entity(PG, Library)
@@ -62,7 +60,6 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         }
         ~ disableBigDialogue()
         @exit_from_rewriter_book
-        // -> library
         
     - arrivingFrom == Nest:
         ~ move_entity(PG, Nest)
@@ -73,7 +70,6 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         }    
         ~ disableBigDialogue()
         @exit_from_rewriter_book
-        // -> nest
         
     - arrivingFrom == TrainStop:
         ~ move_entity(PG, TrainStop)
@@ -84,13 +80,12 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         }
         ~ disableBigDialogue()
         @exit_from_rewriter_book
-        // -> train_stop
 
     - arrivingFrom == Bedroom:
         ~ move_entity(PG, Bedroom)
         ~ disableBigDialogue()
         @exit_from_rewriter_book
-        // -> bedroom   
+
     
     -else: ERROR: non riesco a trovare il luogo di provenienza; arrivingFrom = {arrivingFrom}
 }

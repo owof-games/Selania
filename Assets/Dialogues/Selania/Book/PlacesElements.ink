@@ -65,10 +65,10 @@
 -> rewriter_book_with_flow
 
 
-=== laboratory_recap
+=== kitchen_recap
 + {are_two_entities_together(KitchenRecap, PG)} [KitchenRecap]
 ~ enableBigDialogue()
-lab
+kitch
 
 -> rewriter_book_with_flow
 

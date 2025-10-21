@@ -8,9 +8,6 @@
 ~ temp my_location = entity_location(PG)
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-    //Questa cosa mi serve perché sennò rimane sempre la versione "night"
-    // ~ move_entity(FromLibraryToLaboratoryNight, Safekeeping)
-    //~ move_entity(FromLibraryToLaboratory, Library)
 @interact 
 
 
@@ -52,20 +49,6 @@
 //Elementi della libreria
 <- reading_place
 
-//Elementi del libro della riscrittora
-// <- book_exit_node
-// <- first_character_recap
-// <- second_character_recap
-// <- third_character_recap
-// <- fourth_character_recap
-// <- fifth_character_recap
-// <- frog_character_recap
-// <- dog_character_recap
-// <- witch_character_recap
-// <- greenhouse_recap
-// <- laboratory_recap
-// <- nest_recap
-// <- rules_recap
 
 
 + -> main
