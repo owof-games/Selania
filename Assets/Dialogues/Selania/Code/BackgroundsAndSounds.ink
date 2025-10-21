@@ -110,7 +110,6 @@ VAR saturationVar = 0
             ~ move_entity(ThirdQuarterAnim, Safekeeping)
         - libraryContents has RedMoon:
             ~ move_entity(RedMoonAnim, Safekeeping)
-       
           
     }    
     

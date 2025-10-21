@@ -186,8 +186,14 @@
             ~ randomizable_characters += Mentor
         
         -   fifthStory == StoryEnded:  
-            ~ randomizable_characters -= Mentor 
-    }    
+            ~ randomizable_characters -= Mentor
+    }
+    
+    //Comparsa della rana
+    {knowing_second_character.five.theFrog && (not are_two_entities_together(TheFrog, Mentor)) && entity_location(TheFrog)!=Pond:
+            {debug: Ho spostato la rana allo stagno.}
+           ~  move_entity(TheFrog, Pond)
+    }
     
     -> opening_places
     
@@ -196,31 +202,34 @@
 === opening_places
 {debug: passo da opening_places.}
     {
-    
         - welcome.your_name && (entity_location(FromPondToGreenhouse) == Safekeeping):
             ~ randomablePlaces += Greenhouse
             ~ playerAccessiblePlaces += Greenhouse
             ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
             ~ move_entity(FromPondToGreenhouse, Pond)
+    }
     
-
+    {
         - open_the_kitchen && (entity_location(FromPondToKitchen) == Safekeeping):
             ~ playerAccessiblePlaces += Kitchen
             ~ move_entity(FromPondToKitchenBlocked, Safekeeping)
             ~ move_entity(FromPondToKitchen, Pond)
-        
+    }
+    
+    {
         - open_the_third_place && (entity_location(FromLibraryToThirdPlace) == Safekeeping):
             ~ playerAccessiblePlaces += Nest
             ~ move_entity(FromLibraryToThirdPlaceBlocked, Safekeeping)
             ~ move_entity(FromLibraryToThirdPlace, Pond)
-        
+    }
+    
+    {
         - open_the_library && (entity_location(FromForestToLibrary) == Safekeeping):
         
             ~ move_entity(FromForestToLibraryBlocked, Safekeeping)
             ~ move_entity(FromForestToLibrary, Forest)
             ~ randomablePlaces += Library
             ~ playerAccessiblePlaces += Library
-    
     }
 
 -> randomize_png_location
@@ -437,14 +446,8 @@
             {debug: Ho messo la nota del secondo personaggio alla fermata del bus.}
     }
     
-    {
-       - knowing_second_character.five.theFrog && not are_two_entities_together(TheFrog, Mentor):
-            {debug: Ho spostato la rana allo stagno.}
-           ~  move_entity(TheFrog, Pond)
-       - else:
-           ~  move_entity(TheFrog, Safekeeping)
-           {debug: Ho spostato la rana nel Safekeeping.}
-    }
+    
+
 
 //Altre funzioni:
     -> characters_speaking ->
