@@ -223,6 +223,11 @@
         
 
 //Streets to Kitchen
+    + {debug_test_kitchen} [KitchenTest]
+            ~ move_entity(PG, Library)
+                -> kitchen
+
+
     + {are_two_entities_together(PG, FromPondToKitchen)} [FromPondToKitchen]
 
             ~ move_entity(PG, Kitchen)
@@ -244,7 +249,11 @@
             -> main
 
 
-//Streets to ThirdPlace
+//Streets to Nest
+    + {debug_test_nest} [NestTest]
+            ~ move_entity(PG, Library)
+                -> nest
+
     + {are_two_entities_together(PG, FromLibraryToNest)} [FromLibraryToNest]
             ~ move_entity(PG, Nest)
             

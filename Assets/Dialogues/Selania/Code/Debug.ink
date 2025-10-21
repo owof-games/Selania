@@ -4,8 +4,11 @@
     VAR debug = true
     VAR debugCultivable = false
     VAR debugChangeName = false
-    //per testare libreria tranquillamente
+    
+    //per testare i luoghi non subito aperti con calma
     VAR debug_test_library = false
+    VAR debug_test_kitchen = false
+    VAR debug_test_nest = false
     
 //Per disabilitare uscite e cose varie in caso di testing con il sistema stocastico    
     VAR debugStochastic = false
