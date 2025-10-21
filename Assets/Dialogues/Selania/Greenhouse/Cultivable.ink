@@ -1136,8 +1136,7 @@
             L'<b>Olobino</b> è un fungo semplice pieno di potere.
             Il potere che c'è nel perdere il sé.
             L'eternità nella collettività.
-                 ~ move_entity(FromPondToGreenhouse, Safekeeping)
-                 ~ move_entity(FromPondToGreenhouseBlooming, Pond)
+
                     -> ending_cultivation
             
             + [Preferisco aspettare.]

@@ -428,28 +428,9 @@
 	        ~ secondCharEndingDialogue ++     
     }
 
-//Gestione suoni
-    {
-           - safekeepingContents hasnt TrainNoise:
-               ~ move_entity(TrainNoise, Safekeeping)
-    }
-
-
-//Comparsa lettere dopo fine delle storie (così non compaiono subito.
-    {firstCharacterPossibleStates hasnt Chitarra && first_char_story_ended.goodbye:
-            ~ move_entity(FirstCharacterNotes, TrainStop)
-            {debug: Ho messo la nota della prima personaggia alla fermata del bus.}
-    }
-    
-    {second_char_story_ended.goodbye:
-            ~ move_entity(SecondCharacterNotes, TrainStop)
-            {debug: Ho messo la nota del secondo personaggio alla fermata del bus.}
-    }
-    
-    
-
 
 //Altre funzioni:
+    -> special_events_tracking ->
     -> characters_speaking ->
     -> check_png_randomizable_status ->
     -> story_time_management_for_PNG->
@@ -476,6 +457,35 @@
 ->-> 
 
 
+=== special_events_tracking
+//Qui traccio tutti gli eventi eccezionali, così li ho in un unico posto: animazioni, cambi assets e via di seguito
+
+//Gestione suoni
+    {
+           - safekeepingContents hasnt TrainNoise:
+               ~ move_entity(TrainNoise, Safekeeping)
+    }
+
+
+//Comparsa lettere dopo fine delle storie (così non compaiono subito.
+    {firstCharacterPossibleStates hasnt Chitarra && first_char_story_ended.goodbye:
+            ~ move_entity(FirstCharacterNotes, TrainStop)
+            {debug: Ho messo la nota della prima personaggia alla fermata del bus.}
+    }
+    
+    {second_char_story_ended.goodbye:
+            ~ move_entity(SecondCharacterNotes, TrainStop)
+            {debug: Ho messo la nota del secondo personaggio alla fermata del bus.}
+    }
+    
+//Eventi legati alla serra    
+    {
+        - olobino.step_tre.colto && (entity_location(FromPondToGreenhouseBlooming) == Safekeeping):
+            ~ move_entity(FromPondToGreenhouse, Safekeeping)
+            ~ move_entity(FromPondToGreenhouseBlooming, Pond)
+    }
+
+->->
                 
                 
 /* ---------------------------------
