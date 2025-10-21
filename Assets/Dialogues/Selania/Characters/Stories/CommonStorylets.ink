@@ -41,9 +41,7 @@
         // - are_two_entities_together(Mentor, PG) && thirdStory == StoryEnded and not mentor_rage:
         //                -> mentor_rage
              
-    
-        
-        
+
         
         - else:
             ->->
@@ -189,16 +187,21 @@
 
 
 === open_the_kitchen
+Dialogo allo stagno
 Apriamo la cucina
     -> main
 
 
 === open_the_third_place
+Dialogo in biblioteca
 Apriamo il terzo luogo
+    
     -> main
     
 === open_the_library
+Dialogo nella foresta
 Apriamo la biblioteca
+    
     -> main
     
 === mentor_rage

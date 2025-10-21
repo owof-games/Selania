@@ -172,16 +172,19 @@
 
 
 
+
+
+
 //Streets to Library
     + {debug_test_library} [LibraryTest]
             ~ move_entity(PG, Library)
                 -> library
                 
-    + {are_two_entities_together(PG, FromForestToLibraryDesat) && secondTier == false} [FromForestToLibraryDesat]
+    + {are_two_entities_together(PG, FromForestToLibraryBlocked)} [FromForestToLibraryBlocked]
         Un cumulo di carta e colonne di legno blocca la strada.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
             
-    + {are_two_entities_together(PG, FromForestToLibrary) && secondTier == true} [FromForestToLibrary]
+    + {are_two_entities_together(PG, FromForestToLibrary)} [FromForestToLibrary]
             ~ move_entity(PG, Library)
         {
             - foundLibro or take_this_book:
@@ -194,47 +197,67 @@
             -> on_movement_events ->
                 -> library
         
-//Streets to Nest
-    
-    + {are_two_entities_together(PG, FromPondToNest)} [FromPondToNest]
-            Nonostante i radi fiori, non riesci ad avanzare.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            -> main
-    
-    //{
-    //    - not thirdTier: <i>Questa strada risulta bloccata.</i>
-    //        -> main
-    //    - else:
-    //        ~ move_entity(PG, Nest)
-    //        -> on_movement_events ->
-    //            -> nest
-    //}    
-    
-
-
-//Streets to Laboratory
-        
-    + {are_two_entities_together(PG, FromLibraryToLaboratory)} [FromLibraryToLaboratory]
-    
-    {
-        - not fourthTier: <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            -> main
-        - else:
-            ~ move_entity(PG, Laboratory)
+    + {are_two_entities_together(PG, FromThirdPlaceToLibrary)} [FromThirdPlaceToLibrary]
+            ~ move_entity(PG, Library)
         {
             - foundLibro or take_this_book:
-                ~ move_entity(RewriterBook, Laboratory)
+                ~ move_entity(RewriterBook, Library)
         }
         {
             - gifts_and_ink.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Laboratory)
-        }        
+                ~ move_entity(Inventory, Library)
+        }         
             -> on_movement_events ->
-            -> empty_tempTW ->  
+                -> library
+        
+
+//Streets to Kitchen
+    + {are_two_entities_together(PG, FromPondToKitchen)} [FromPondToKitchen]
+    
+    {
+        - playerAccessiblePlaces hasnt Laboratory: <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            -> main
+        
+        - else:
+            ~ move_entity(PG, Laboratory)
+            {
+                - foundLibro or take_this_book:
+                    ~ move_entity(RewriterBook, Laboratory)
+            }
+            {
+                - gifts_and_ink.sbadata or cultivable_test:
+                    ~ move_entity(Inventory, Laboratory)
+            }        
+                -> on_movement_events ->
+                -> empty_tempTW ->  
                 -> laboratory
     }
             
-        
+-    
+-> main
 
+//Streets to ThirdPlace
+    + {are_two_entities_together(PG, FromLibraryToThirdPlace)} [FromLibraryToThirdPlace]
+    
+    {
+        - playerAccessiblePlaces hasnt Nest: <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            -> main
+        
+        - else:
+            ~ move_entity(PG, Nest)
+            {
+                - foundLibro or take_this_book:
+                    ~ move_entity(RewriterBook, Nest)
+            }
+            {
+                - gifts_and_ink.sbadata or cultivable_test:
+                    ~ move_entity(Inventory, Nest)
+            }        
+                -> on_movement_events ->
+                -> empty_tempTW ->  
+                -> nest
+    }
+            
 -    
 -> main
 

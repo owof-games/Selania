@@ -1055,13 +1055,13 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
 ~ temp charNameFive = translator(fifthCharacterState)
         {   
             //Opinioni dopo la fine della terza storia
-            - fourthTier == true:
+            - playerAccessiblePlaces has Laboratory:
                 -> four
             //Opinioni dopo la fine della seconda storia    
-            - thirdTier == true:
+            - playerAccessiblePlaces has Nest:
                 -> three
             //Opinioni dopo la fine della prima storia      
-            - secondTier == true:
+            - playerAccessiblePlaces has Library:
                 -> two
             //Opinioni presenti da inizio gioco    
             - else:

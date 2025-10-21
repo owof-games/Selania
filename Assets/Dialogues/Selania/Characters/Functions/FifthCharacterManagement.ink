@@ -8,6 +8,8 @@
     LIST fifthCharacterPossibleStates= Mentore, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
     VAR fifthCharacterState= Mentore
     
+    //Per mentore, fifthStory sarà la parte di riscrittura, mentorStory tutta la parte di interazione come Mentore
+    VAR mentorStory = StoryNotStarted
     VAR fifthStory = StoryNotStarted
     VAR charFiveEnding = () 
     

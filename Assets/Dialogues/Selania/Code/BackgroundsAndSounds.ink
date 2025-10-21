@@ -67,8 +67,8 @@ VAR saturationVar = 0
 
 === DarkLibraryModeOn
     #background: backNightLibrary
-    ~ move_entity(FromLibraryToLaboratoryNight, Library)
-    ~ move_entity(FromLibraryToLaboratory, Safekeeping)
+    ~ move_entity(FromLibraryToThirdPlaceNight, Library)
+    ~ move_entity(FromLibraryToThirdPlace, Safekeeping)
     
     ~ move_entity(MoonTrees, Library)
     
@@ -95,8 +95,8 @@ VAR saturationVar = 0
     
 === DarkLibraryModeOff    
     #background: backLibrary
-    ~ move_entity(FromLibraryToLaboratoryNight, Safekeeping)
-    ~ move_entity(FromLibraryToLaboratory, Library)
+    ~ move_entity(FromLibraryToThirdPlaceNight, Safekeeping)
+    ~ move_entity(FromLibraryToThirdPlace, Library)
     ~ move_entity(MoonTrees, Safekeeping)
     
     {

@@ -76,15 +76,15 @@
             E questo mi lascia molto frustrata.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
             -> top
             
-    + {secondTier or thirdTier or fourthTier}[Sono altri i luoghi di cui vorrei parlare.]
+    + {(playerAccessiblePlaces has Library) or (playerAccessiblePlaces has Laboratory) or (playerAccessiblePlaces has Nest)}[Sono altri i luoghi di cui vorrei parlare.]
         -> second_top
     
-    + {not secondTier or thirdTier or fourthTier}[Voglio parlare d'altro.]
+    + [Voglio parlare d'altro.]
         -> talk_with_mentor  
 
     
 - (second_top)    
-    + {secondTier}[Sulla biblioteca.]
+    + {playerAccessiblePlaces has Library}[Sulla biblioteca.]
             La biblioteca è un posto... un posto.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             Ci sono molti racconti, ma chi ha il tempo di leggerli?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
             Con tutta quella polvere che raccolgono, poi.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
@@ -93,15 +93,15 @@
             Quasi.
             -> second_top
             
-    + {thirdTier}[Sul laboratorio.]
+    + {playerAccessiblePlaces has Laboratory}[Sulla cucina.]
         Informazioni
             -> second_top
 
-    + {fourthTier}[Sul nido.]
+    + {playerAccessiblePlaces has Nest}[Sulla terza area]
         Informazioni
             -> second_top
     
-    + {secondTier} [Vorrei parlare di un altro luogo.]
+    + [Vorrei parlare di un altro luogo.]
             -> top
     
     + [Vorrei parlare di qualcosa di diverso.]

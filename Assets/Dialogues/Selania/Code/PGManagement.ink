@@ -5,6 +5,9 @@
     
 //Gestione "cose strane" di cui parlare con mentore
     VAR somethingStrange = 0
+    
+//Tracciamento dei luoghi accessibili alla giocatrice
+    VAR playerAccessiblePlaces = (Bedroom, TrainStop, Forest, Pond)
 
 //Tracciamento colori giocatrice
     VAR playerPurple = 0
