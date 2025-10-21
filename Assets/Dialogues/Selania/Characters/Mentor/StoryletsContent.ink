@@ -104,7 +104,7 @@
         
         Ah, ti ho aperto la serra!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
         
-            
+            -> opening_places ->
         
         Io devo raccogliere le foglie dalla foresta.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                 ~ firstPauseTalking = 0
@@ -112,8 +112,7 @@
                 @animation:RewriterBook 
         
         //Con questa voce evito che "gifts_and_ink" compaia subito dopo se le condizioni sono sensate.
-                ~ tutorialPauses = true   
-            
+                ~ tutorialPauses = true
             -> main
                 
             

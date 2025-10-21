@@ -112,6 +112,9 @@
     VAR changeLocationTimer = 0
     VAR changeLocationTrigger = 9
 
+//Attivo questa opzione se mi serve che per un certo periodo le cose non vengano randomizzate    
+    VAR randomPause = false
+
 //Settaggio luoghi attivi a seconda del tier
 //Nota: fino a quando il gioco non sarà completo, la biblioteca si aprirà per ultima, sostituendo il primo dei luoghi mancanti.
     //VAR firstTierPlaces =(Forest, TrainStop, Pond)
@@ -134,7 +137,43 @@
 
 //Gestione spostamenti: personagge
     VAR randomizable_characters = ()
+
+
+//Qui apriamo i luoghi cambiando gli assets di riferimento
+=== opening_places
+{debug: passo da opening_places.}
+    {
+        - welcome.your_name && (entity_location(FromPondToGreenhouse) == Safekeeping):
+            ~ randomablePlaces += Greenhouse
+            ~ playerAccessiblePlaces += Greenhouse
+            ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
+            ~ move_entity(FromPondToGreenhouse, Pond)
+    }
     
+    {
+        - open_the_kitchen && (entity_location(FromPondToKitchen) == Safekeeping):
+            ~ playerAccessiblePlaces += Kitchen
+            ~ move_entity(FromPondToKitchenBlocked, Safekeeping)
+            ~ move_entity(FromPondToKitchen, Pond)
+    }
+    
+    {
+        - open_the_third_place && (entity_location(FromLibraryToNest) == Safekeeping):
+            ~ playerAccessiblePlaces += Nest
+            ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
+            ~ move_entity(FromLibraryToNest, Pond)
+    }
+    
+    {
+        - open_the_library && (entity_location(FromForestToLibrary) == Safekeeping):
+        
+            ~ move_entity(FromForestToLibraryBlocked, Safekeeping)
+            ~ move_entity(FromForestToLibrary, Forest)
+            ~ randomablePlaces += Library
+            ~ playerAccessiblePlaces += Library
+    }
+
+-> main   
 
 === check_png_randomizable_status
 //Prima cosa: se una storia è iniziata, aggiungo la personaggia alla lista dei randomizzabili, altrimenti la levo
@@ -195,51 +234,22 @@
            ~  move_entity(TheFrog, Pond)
     }
     
-    -> opening_places
+    -> randomize_png_location
     
 
-//Qui apriamo i luoghi cambiando gli assets di riferimento
-=== opening_places
-{debug: passo da opening_places.}
-    {
-        - welcome.your_name && (entity_location(FromPondToGreenhouse) == Safekeeping):
-            ~ randomablePlaces += Greenhouse
-            ~ playerAccessiblePlaces += Greenhouse
-            ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
-            ~ move_entity(FromPondToGreenhouse, Pond)
-    }
-    
-    {
-        - open_the_kitchen && (entity_location(FromPondToKitchen) == Safekeeping):
-            ~ playerAccessiblePlaces += Kitchen
-            ~ move_entity(FromPondToKitchenBlocked, Safekeeping)
-            ~ move_entity(FromPondToKitchen, Pond)
-    }
-    
-    {
-        - open_the_third_place && (entity_location(FromLibraryToNest) == Safekeeping):
-            ~ playerAccessiblePlaces += Nest
-            ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
-            ~ move_entity(FromLibraryToNest, Pond)
-    }
-    
-    {
-        - open_the_library && (entity_location(FromForestToLibrary) == Safekeeping):
-        
-            ~ move_entity(FromForestToLibraryBlocked, Safekeeping)
-            ~ move_entity(FromForestToLibrary, Forest)
-            ~ randomablePlaces += Library
-            ~ playerAccessiblePlaces += Library
-    }
 
--> randomize_png_location
     
     
 === randomize_png_location    
 {debug: randomize_png_location.}
+    {
+        - randomPause == true:
+            {debug: randomPause è uguale a vero {randomPause} per cui skippo}
+            ->->
+    }
 
     {//se ho raggiunto il tempo trigger, resetto il valore, e poi vado avanti.
-        - changeLocationTimer == changeLocationTrigger:
+        - changeLocationTimer >= changeLocationTrigger:
         {debug: <i> Il valore del Timer è {changeLocationTimer} e quindi randomizzo il luogo.}
             -> top
 

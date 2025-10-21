@@ -9,40 +9,50 @@
         - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && addressing_violence:
             -> about_violence_and_peace
         
-        // - are_two_entities_together(FirstCharacter, PG) && (knowing_first_character.four or knowing_second_character.two) and not open_the_kitchen:
-        //        {
-        //            - forestContents has PG:
-        //                -> open_the_kitchen
-        //            
-        //            - else:
-        //                Ehi {name}! Vediamoci alla foresta. Ho una cosa da mostrarti!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
-        //        }
         
+        //Storylets per aperture luoghi
+        - are_two_entities_together(FirstCharacter, PG) && (knowing_first_character.three or knowing_second_character.one) and not open_the_kitchen:
+               {
+                   - pondContents has PG:
+                       -> open_the_kitchen
+                    
+                    - else:
+                        Ehi {name}! Vediamoci allo stagno. Ho una cosa da mostrarti!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
+                            
+                            ~ move_entity(FirstCharacter, Pond)
+                            ~ randomPause = true
+                }
         
-        // - are_two_entities_together(SecondCharacter, PG) && (knowing_first_character.six or knowing_second_character.seven) and not open_the_third_place:
-        //        {
-        //            - pondContents has PG:
-        //                -> open_the_third_place
-        //            
-        //            - else:
-        //                Ehi {name}! Vediamoci allo stagno. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:riccio_neutral
-        //        }
+         - are_two_entities_together(SecondCharacter, PG) && (knowing_first_character.five or knowing_second_character.three) && not open_the_library:
+               {
+                   - forestContents has PG:
+                        -> open_the_library
+                    
+                    - else:
+                        Ehi {name}! Troviamoci alla foresta. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:thirdPNG_neutral
+                            
+                            ~ move_entity(SecondCharacter, Pond)
+                            ~ randomPause = true
+               }    
         
-        // - are_two_entities_together(ThirdCharacter, PG) && ((firstStory == StoryEnded) or (secondStory == StoryEnded)) and not open_the_library:
-        //        {
-        //            - nestContents has PG or thirdPlaceContents has PG:
-        //                -> open_the_library
-        //            
-        //            - else:
-        //                Ehi {name}! Troviamoci in cucina. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:thirdPNG_neutral
-        //        }        
+        - are_two_entities_together(SecondCharacter, PG) && (knowing_first_character.six or knowing_second_character.six) and not open_the_third_place:
+                {
+                   - libraryContents has PG:
+                        -> open_the_third_place
+                    
+                    - else:
+                        Ehi {name}! Vediamoci in biblioteca. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:riccio_neutral
+                            
+                            ~ move_entity(SecondCharacter, Library)
+                            ~ randomPause = true
+              }  
         
-        
+    
+    
         // - are_two_entities_together(Mentor, PG) && thirdStory == StoryEnded and not mentor_rage:
         //                -> mentor_rage
              
 
-        
         - else:
             ->->
     }
@@ -189,19 +199,29 @@
 === open_the_kitchen
 Dialogo allo stagno
 Apriamo la cucina
+    -> opening_places ->
+    
+    //Ora è possibile di nuovo randomizzare i luoghi
+        ~ randomPause = false
     -> main
 
 
 === open_the_third_place
 Dialogo in biblioteca
 Apriamo il terzo luogo
+    -> opening_places ->
     
+    //Ora è possibile di nuovo randomizzare i luoghi
+        ~ randomPause = false
     -> main
     
 === open_the_library
 Dialogo nella foresta
 Apriamo la biblioteca
+    -> opening_places ->
     
+    //Ora è possibile di nuovo randomizzare i luoghi
+        ~ randomPause = false
     -> main
     
 === mentor_rage
