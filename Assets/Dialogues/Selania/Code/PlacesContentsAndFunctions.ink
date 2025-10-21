@@ -5,7 +5,7 @@
 
     VAR forestContents = (Bench, TheWitch, LeafOneSin, LeafTwoSin, LeafThreeSin, LeafFourSin, LeafFiveSin, LeafOneDx, LeafTwoDx, LeafThreeDx, FromForestToTrainStop, FromForestToPond, FromForestToLibraryBlocked, Arbustini)
 
-    VAR pondContents = (FromPondToForest, FromPondToGreenhouse, FromPondToNest, FromPondToKitchenBlocked, CloudOne, CloudTwo, CloudThree)
+    VAR pondContents = (FromPondToForest, FromPondToGreenhouseBlocked, FromPondToNest, FromPondToKitchenBlocked, CloudOne, CloudTwo, CloudThree)
 
     VAR greenhouseContents = (FromGreenhouseToPond,  BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti, ErbaLiccia, FalsaPalude, LanaNotturna, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata)
 
@@ -13,9 +13,9 @@
 
     VAR nestContents = (FromThirdPlaceToLibrary)
 
-    VAR laboratoryContents = (FromKitchenToPond)
+    VAR kitchenContents = (FromKitchenToPond)
 
-    VAR safekeepingContents = (RoomExit, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, TheFrog, FifthCharacterNotes, MenuSave, MenuQuit,  RewriterBook, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FrogRecap, DogRecap, WitchRecap, GreenhouseRecap, LaboratoryRecap, NestRecap, FifthRecap, RulesRecap, Inventory, cultivationKit, firstCharPaint, teaKit, littleLibrary, bowl, secondCharPaint, vase, miniBook, FromLibraryToThirdPlaceNight, FromLibraryToThirdPlace, FromForestToLibrary, RedBee, GoldenBee, BrownBee, MoonTrees, Snail, FromPondToGreenhouseBlooming, WateringCan, TrainNoise, BastonSound, NewMoonAnim, FirstQuarterAnim, FullMoonAnim, ThirdQuarterAnim, RedMoonAnim, nightTable, waterLily, Mentor, FromPondToKitchen)
+    VAR safekeepingContents = (RoomExit, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, TheFrog, FifthCharacterNotes, MenuSave, MenuQuit,  RewriterBook, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FrogRecap, DogRecap, WitchRecap, GreenhouseRecap, KitchenRecap, NestRecap, FifthRecap, RulesRecap, Inventory, cultivationKit, firstCharPaint, teaKit, littleLibrary, bowl, secondCharPaint, vase, miniBook, FromLibraryToThirdPlaceNight, FromLibraryToThirdPlace, FromForestToLibrary, RedBee, GoldenBee, BrownBee, MoonTrees, Snail, FromPondToGreenhouseBlooming, WateringCan, TrainNoise, BastonSound, NewMoonAnim, FirstQuarterAnim, FullMoonAnim, ThirdQuarterAnim, RedMoonAnim, nightTable, waterLily, Mentor, FromPondToKitchen, FromPondToGreenhouse)
     
     VAR bookContents = (BookExit, SettingsBookVersion)
    
@@ -38,8 +38,8 @@
         - greenhouseContents has entity:
             ~ return Greenhouse
         
-        - laboratoryContents has entity:
-            ~ return Laboratory
+        - kitchenContents has entity:
+            ~ return Kitchen
         
         - pondContents has entity:
             ~ return Pond         
@@ -81,8 +81,8 @@
         - Greenhouse:
             ~ greenhouseContents -= entity
         
-        - Laboratory:
-            ~ laboratoryContents -= entity
+        - Kitchen:
+            ~ kitchenContents -= entity
         
         - Pond:
             ~ pondContents -= entity
@@ -116,8 +116,8 @@
         - Greenhouse:
             ~ greenhouseContents += entity
         
-        - Laboratory:
-            ~ laboratoryContents += entity
+        - Kitchen:
+            ~ kitchenContents += entity
         
         - Pond:
             ~ pondContents += entity

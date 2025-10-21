@@ -42,12 +42,12 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         @exit_from_rewriter_book
         // -> pond
         
-    - arrivingFrom == Laboratory:
-        ~ move_entity(PG, Laboratory)
-        ~ move_entity(RewriterBook, Laboratory)
+    - arrivingFrom == Kitchen:
+        ~ move_entity(PG, Kitchen)
+        ~ move_entity(RewriterBook, Kitchen)
         {
             - gifts_and_ink.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Laboratory)
+                ~ move_entity(Inventory, Kitchen)
         }
         ~ disableBigDialogue()
         @exit_from_rewriter_book

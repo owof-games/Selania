@@ -137,6 +137,11 @@
                 -> pond
         
         
+
+
+
+
+
 //Streets to Greenhouse
     + {are_two_entities_together(PG, FromPondToGreenhouse)}  [FromPondToGreenhouse]
             ~ move_entity(PG, Greenhouse)
@@ -169,11 +174,10 @@
             -> on_movement_events ->
                 -> greenhouse
 
-
-
-
-
-
+    + {are_two_entities_together(PG, FromPondToGreenhouseBlocked)} [FromPondToGreenhouseBlocked]
+        <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()} 
+        -> main
+        
 
 //Streets to Library
     + {debug_test_library} [LibraryTest]
@@ -213,37 +217,28 @@
 
 //Streets to Kitchen
     + {are_two_entities_together(PG, FromPondToKitchen)} [FromPondToKitchen]
-    
-    {
-        - playerAccessiblePlaces hasnt Laboratory: <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            -> main
-        
-        - else:
-            ~ move_entity(PG, Laboratory)
+
+            ~ move_entity(PG, Kitchen)
             {
                 - foundLibro or take_this_book:
-                    ~ move_entity(RewriterBook, Laboratory)
+                    ~ move_entity(RewriterBook, Kitchen)
             }
             {
                 - gifts_and_ink.sbadata or cultivable_test:
-                    ~ move_entity(Inventory, Laboratory)
+                    ~ move_entity(Inventory, Kitchen)
             }        
                 -> on_movement_events ->
                 -> empty_tempTW ->  
-                -> laboratory
-    }
-            
--    
--> main
+                -> kitchen
+
+    
+    + {are_two_entities_together(PG, FromPondToKitchenBlocked)} [FromPondToKitchenBlocked]
+    <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            -> main
 
 //Streets to ThirdPlace
     + {are_two_entities_together(PG, FromLibraryToThirdPlace)} [FromLibraryToThirdPlace]
-    
-    {
-        - playerAccessiblePlaces hasnt Nest: <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            -> main
-        
-        - else:
+
             ~ move_entity(PG, Nest)
             {
                 - foundLibro or take_this_book:
@@ -256,11 +251,11 @@
                 -> on_movement_events ->
                 -> empty_tempTW ->  
                 -> nest
-    }
-            
--    
--> main
 
+
+    + {are_two_entities_together(PG, FromLibraryToThirdPlaceBlocked)} [FromLibraryToThirdPlaceBlocked]
+        <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            -> main
 
 
 

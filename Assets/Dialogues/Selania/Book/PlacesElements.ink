@@ -66,7 +66,7 @@
 
 
 === laboratory_recap
-+ {are_two_entities_together(LaboratoryRecap, PG)} [LaboratoryRecap]
++ {are_two_entities_together(KitchenRecap, PG)} [KitchenRecap]
 ~ enableBigDialogue()
 lab
 

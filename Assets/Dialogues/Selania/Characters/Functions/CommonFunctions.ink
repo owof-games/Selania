@@ -196,9 +196,16 @@
 === opening_places
 {debug: passo da opening_places.}
     {
+    
+        - welcome.your_name && (entity_location(FromPondToGreenhouse) == Safekeeping):
+            ~ randomablePlaces += Greenhouse
+            ~ playerAccessiblePlaces += Greenhouse
+            ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
+            ~ move_entity(FromPondToGreenhouse, Pond)
+    
 
         - open_the_kitchen && (entity_location(FromPondToKitchen) == Safekeeping):
-            ~ playerAccessiblePlaces += Laboratory
+            ~ playerAccessiblePlaces += Kitchen
             ~ move_entity(FromPondToKitchenBlocked, Safekeeping)
             ~ move_entity(FromPondToKitchen, Pond)
         

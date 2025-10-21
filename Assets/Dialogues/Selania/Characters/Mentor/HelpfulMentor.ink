@@ -76,7 +76,7 @@
             E questo mi lascia molto frustrata.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
             -> top
             
-    + {(playerAccessiblePlaces has Library) or (playerAccessiblePlaces has Laboratory) or (playerAccessiblePlaces has Nest)}[Sono altri i luoghi di cui vorrei parlare.]
+    + {(playerAccessiblePlaces has Library) or (playerAccessiblePlaces has Kitchen) or (playerAccessiblePlaces has Nest)}[Sono altri i luoghi di cui vorrei parlare.]
         -> second_top
     
     + [Voglio parlare d'altro.]
@@ -93,7 +93,7 @@
             Quasi.
             -> second_top
             
-    + {playerAccessiblePlaces has Laboratory}[Sulla cucina.]
+    + {playerAccessiblePlaces has Kitchen}[Sulla cucina.]
         Informazioni
             -> second_top
 
