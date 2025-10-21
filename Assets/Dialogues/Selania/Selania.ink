@@ -82,8 +82,8 @@
 //Nest
     INCLUDE Nest\Nest.ink
 
-//Laboratory
-    INCLUDE Laboratory\Laboratory.ink
+//Kitchen
+    INCLUDE Kitchen\Kitchen.ink
 
 //Library
     INCLUDE Library\Library.ink
