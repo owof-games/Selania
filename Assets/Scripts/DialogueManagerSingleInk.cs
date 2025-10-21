@@ -77,8 +77,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     [SerializeField] private Sprite backNightLibrary;
 
-    [Header("Laboratory Backgrounds")] [SerializeField]
-    private Sprite backLaboratory;
+    [Header("Kitchen Backgrounds")] [SerializeField]
+    private Sprite backKitchen;
 
     [Header("Book Backgrounds")] [SerializeField]
     private Sprite bookBGZero;
@@ -108,8 +108,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [Header("Pond Sounds")] [SerializeField]
     private AudioClip pondSounds;
 
-    [Header("Library Sounds")] [SerializeField]
+    [Header("Library Sounds")]
+    [SerializeField]
     private AudioClip librarySounds;
+    
+    [Header("Kitchen Sounds")] [SerializeField]
+    private AudioClip kitchenSounds;
 
     [Header("Book Sounds")] [SerializeField]
     private AudioClip bookSounds;
@@ -523,6 +527,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
             case "librarySounds":
                 UpdateAmbientSounds(librarySounds);
                 break;
+            //TAG MUSICA CUCINA
+            case "kitchenSounds":
+                UpdateAmbientSounds(kitchenSounds);
+                break;    
             //TAG MUSICA SOTTOFONDO LIBRO
             case "bookSounds":
                 UpdateAmbientSounds(bookSounds);
@@ -586,10 +594,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
             background.sprite = backNightLibrary;
         }
 
-        //TAG GESTIONE DEL LABORATORIO
-        if (tagValue == "backLaboratory")
+        //TAG GESTIONE DELLA CUCINA
+        if (tagValue == "backKitchen")
         {
-            background.sprite = backLaboratory;
+            background.sprite = backKitchen;
         }
 
         //TAG GESTIONE DEL LIBRO
