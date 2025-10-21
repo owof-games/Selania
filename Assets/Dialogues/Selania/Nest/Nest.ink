@@ -8,7 +8,7 @@
 
 
 
-{nest == 1:Sei dalle falene.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+{nest == 1: Sei al nido}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
         ~ move_entity(NestRecap, BookPlace)
         {

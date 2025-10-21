@@ -217,10 +217,10 @@
     }
     
     {
-        - open_the_third_place && (entity_location(FromLibraryToThirdPlace) == Safekeeping):
+        - open_the_third_place && (entity_location(FromLibraryToNest) == Safekeeping):
             ~ playerAccessiblePlaces += Nest
-            ~ move_entity(FromLibraryToThirdPlaceBlocked, Safekeeping)
-            ~ move_entity(FromLibraryToThirdPlace, Pond)
+            ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
+            ~ move_entity(FromLibraryToNest, Pond)
     }
     
     {

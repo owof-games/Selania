@@ -136,11 +136,18 @@
             -> on_movement_events ->
                 -> pond
         
-        
-
-
-
-
+    + {are_two_entities_together(PG, FromKitchenToPond)} [FromKitchenToPond]
+            ~ move_entity(PG, Pond)
+        {
+            - foundLibro or take_this_book:
+                ~ move_entity(RewriterBook, Pond)
+        }
+        {
+            - gifts_and_ink.sbadata or cultivable_test:
+                ~ move_entity(Inventory, Pond)
+        }         
+            -> on_movement_events ->
+                -> pond
 
 //Streets to Greenhouse
     + {are_two_entities_together(PG, FromPondToGreenhouse)}  [FromPondToGreenhouse]
@@ -201,7 +208,7 @@
             -> on_movement_events ->
                 -> library
         
-    + {are_two_entities_together(PG, FromThirdPlaceToLibrary)} [FromThirdPlaceToLibrary]
+    + {are_two_entities_together(PG, FromNestToLibrary)} [FromTNestToLibrary]
             ~ move_entity(PG, Library)
         {
             - foundLibro or take_this_book:
@@ -236,10 +243,11 @@
     <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
 
-//Streets to ThirdPlace
-    + {are_two_entities_together(PG, FromLibraryToThirdPlace)} [FromLibraryToThirdPlace]
 
+//Streets to ThirdPlace
+    + {are_two_entities_together(PG, FromLibraryToNest)} [FromLibraryToNest]
             ~ move_entity(PG, Nest)
+            
             {
                 - foundLibro or take_this_book:
                     ~ move_entity(RewriterBook, Nest)
@@ -253,7 +261,7 @@
                 -> nest
 
 
-    + {are_two_entities_together(PG, FromLibraryToThirdPlaceBlocked)} [FromLibraryToThirdPlaceBlocked]
+    + {are_two_entities_together(PG, FromLibraryToNestBlocked)} [FromLibraryToNestBlocked]
         <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
 
