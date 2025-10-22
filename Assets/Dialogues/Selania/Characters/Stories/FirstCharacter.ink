@@ -41,6 +41,8 @@
             -> ask
         - first_story_gift.ink_outcome && main_story_first_character:
             -> ask
+        - open_the_kitchen && not cooking_with_first_char:
+            -> ask
         -else:
             {
             - justTalkedFirstChar == false:   
@@ -90,23 +92,23 @@
             
         + [<i>Lascio il dialogo.]
                 -> main
+        + (kitchenInvite){open_the_kitchen && not cooking_with_first_char}[Ti va di cucinare qualcosa assieme?]
+            ~ changeLocationTimer = 0
+            
+            {
+                - kitchenInvite: {Spero non mi farai aspettare come prima! Ho atteso un sacco!|Siamo a due volte che me lo chiedi e non ti presenti, sai?|E mi darai buca una terza volta? Vabbè.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+                    ~ move_entity(FirstCharacter, Kitchen)
+                    
+                - else: Volentieri! Ci vediamo in cucina! #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+                    ~ move_entity(FirstCharacter, Kitchen)
+            
+            }
+            
+            
+            
         -
             -> talk_with_first_character
 
-//Vecchia struttura:
-                // {//Se prima chiacchierata
-                //     // - not knowing_first_character.one:
-                //     //     -> knowing_first_character.one
-                
-                // //Se prima chiacchierata fatta e passato abbastanza tempo dalla pausa prevista        
-                //     // - firstPauseTalking == 0:
-                //     //     -> hub
-                
-                // //Altre opzioni        
-                //     - else:
-                //          {~Ho bisogno di tempo da sola.|Torna tra un po'.|Mi serve un po' di silenzio ora.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-                //         -> main    
-                // }  
 
 
 === knowing_first_character

@@ -11,6 +11,7 @@
         
         
         //Storylets per aperture luoghi
+        //Apertura cucina
         - are_two_entities_together(FirstCharacter, PG) && (knowing_first_character.three or knowing_second_character.one) and not open_the_kitchen:
                {
                    - pondContents has PG:
@@ -20,9 +21,10 @@
                         Ehi {name}! Vediamoci allo stagno. Ho una cosa da mostrarti!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
                             
                             ~ move_entity(FirstCharacter, Pond)
-                            ~ randomPause = true
+                            ~ changeLocationTimer = 0
                 }
         
+        //Apertura biblioteca
          - are_two_entities_together(SecondCharacter, PG) && (knowing_first_character.five or knowing_second_character.three) && not open_the_library:
                {
                    - forestContents has PG:
@@ -32,19 +34,20 @@
                         Ehi {name}! Troviamoci alla foresta. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:thirdPNG_neutral
                             
                             ~ move_entity(SecondCharacter, Pond)
-                            ~ randomPause = true
-               }    
-        
-        - are_two_entities_together(SecondCharacter, PG) && (knowing_first_character.six or knowing_second_character.six) and not open_the_third_place:
+                            ~ changeLocationTimer = 0
+               } 
+               
+        //Apertura nido
+        - are_two_entities_together(SecondCharacter, PG) && (knowing_first_character.six or knowing_second_character.six) and not open_nest:
                 {
                    - libraryContents has PG:
-                        -> open_the_third_place
+                        -> open_nest
                     
                     - else:
                         Ehi {name}! Vediamoci in biblioteca. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:riccio_neutral
                             
                             ~ move_entity(SecondCharacter, Library)
-                            ~ randomPause = true
+                            ~ changeLocationTimer = 0
               }  
         
     
@@ -199,29 +202,23 @@
 === open_the_kitchen
 Dialogo allo stagno
 Apriamo la cucina
+
     -> opening_places ->
-    
-    //Ora è possibile di nuovo randomizzare i luoghi
-        ~ randomPause = false
     -> main
 
 
-=== open_the_third_place
+=== open_nest
 Dialogo in biblioteca
 Apriamo il terzo luogo
+
     -> opening_places ->
-    
-    //Ora è possibile di nuovo randomizzare i luoghi
-        ~ randomPause = false
     -> main
     
 === open_the_library
 Dialogo nella foresta
 Apriamo la biblioteca
+
     -> opening_places ->
-    
-    //Ora è possibile di nuovo randomizzare i luoghi
-        ~ randomPause = false
     -> main
     
 === mentor_rage

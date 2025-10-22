@@ -84,6 +84,8 @@
 
 //Kitchen
     INCLUDE Kitchen\Kitchen.ink
+    INCLUDE Kitchen\FirstCharDialogues.ink
+    INCLUDE Kitchen\SecondCharDialogues.ink
 
 //Library
     INCLUDE Library\Library.ink
@@ -92,6 +94,9 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
+
+
+
 
 
 

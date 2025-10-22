@@ -33,6 +33,9 @@
 {
     - secondStoryQuestCount > minStoryQuesTCountSecondChar && not second_story_gift.ink_outcome:
             -> ask
+    
+    - open_the_kitchen && not cooking_with_second_char:
+            -> ask
     - else:
         {
             - justTalkedSecondChar == false:   
@@ -104,6 +107,18 @@
 + {second_story_gift.ink_outcome && main_story_second_character}[Riprendiamo quella storia?]
     -> main_story_second_character
 
++ (kitchenInvite){open_the_kitchen && not cooking_with_second_char}[Ti va di cucinare qualcosa assieme?]
+        ~ changeLocationTimer = 0
+        
+    {
+        - kitchenInvite: {Spero non mi farai aspettare come prima! Ho atteso un sacco!|Siamo a due volte che me lo chiedi e non ti presenti, sai?|E mi darai buca una terza volta? Vabbè.} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:riccio_neutral
+                ~ move_entity(SecondCharacter, Kitchen)
+        
+        - else: Volentieri! Ci vediamo in cucina! #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:riccio_neutral
+                ~ move_entity(SecondCharacter, Kitchen)
+    }
+        
+    
 + [<i>Lascio il dialogo.]
     -> main
 -

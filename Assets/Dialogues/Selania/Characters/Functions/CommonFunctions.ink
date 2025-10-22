@@ -113,7 +113,7 @@
     VAR changeLocationTrigger = 9
 
 //Attivo questa opzione se mi serve che per un certo periodo le cose non vengano randomizzate    
-    VAR randomPause = false
+    //VAR randomPause = false
 
 //Settaggio luoghi attivi a seconda del tier
 //Nota: fino a quando il gioco non sarà completo, la biblioteca si aprirà per ultima, sostituendo il primo dei luoghi mancanti.
@@ -158,7 +158,7 @@
     }
     
     {
-        - open_the_third_place && (entity_location(FromLibraryToNest) == Safekeeping):
+        - open_nest && (entity_location(FromLibraryToNest) == Safekeeping):
             ~ playerAccessiblePlaces += Nest
             ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
             ~ move_entity(FromLibraryToNest, Pond)
@@ -242,11 +242,11 @@
     
 === randomize_png_location    
 {debug: randomize_png_location.}
-    {
-        - randomPause == true:
-            {debug: randomPause è uguale a vero {randomPause} per cui skippo}
-            ->->
-    }
+    // {
+    //     - randomPause == true:
+    //        {debug: randomPause è uguale a vero {randomPause} per cui skippo}
+    //         ->->
+    //}
 
     {//se ho raggiunto il tempo trigger, resetto il valore, e poi vado avanti.
         - changeLocationTimer >= changeLocationTrigger:
