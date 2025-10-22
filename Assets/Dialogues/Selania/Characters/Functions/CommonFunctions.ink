@@ -173,7 +173,7 @@
             ~ playerAccessiblePlaces += Library
     }
 
--> main   
+->->   
 
 === check_png_randomizable_status
 //Prima cosa: se una storia è iniziata, aggiungo la personaggia alla lista dei randomizzabili, altrimenti la levo
@@ -414,7 +414,7 @@
     
 === on_movement_events
 //Qui metto tutte quelle funzioni e variazioni che sono richieste a ogni cambio stanza.
-
+{debug: passo per on_movement_events}
 //Riduzioni di contatori legati al tempo:
     ~ firstWritingPause --
     ~ secondWritingPause --
@@ -428,47 +428,64 @@
     //Contatore spostamenti PG
     ~ movementsCounter ++
     
-    //Gestione della pausa dell3 PNG mentre cucinano
-    //Chitarra
-        {
-            - firstIsCooking == true:
-            
-            {
-                - firstCookingTime < firstCookingMaxTime:
-                    ~ secondCookingTime ++
-                    ->->
-                
-                - else:
-                   ~ firstIsCooking = false
-                    ->->
-            }
-            
-            - else:
-                    ->->
-        }
+    //Gestione della cucina delle PNG
+        //Chitarra
         
-    //Riccio
-        {
-            - secondIsCooking == true:
-            
+        //Chitarra inizia a cucinare se abbiamo cucinato almeno una volta.
             {
-                - secondCookingTime < secondCookingMaxTime:
-                    ~ secondCookingTime ++
-                    ->->
-                
-                - else:
-                   ~ secondIsCooking = false
-                    ->->
+                - (cooking_with_first_char or cooking_with_second_char) && (not first_char_cooking_tracker):
+                        ~ firstIsCooking = true
+                        ~ move_entity(FirstCharacter, Kitchen)
+                            -> first_char_cooking_tracker 
             }
             
-            - else:
-                    ->->
-        }
+
+            {debug: il valore di firstCookingTime è {firstCookingTime}}
+            {debug: il valore di firstIsCooking è {firstIsCooking}}
+            {
+                - firstIsCooking == true:
+                
+                    {
+                    
+                        - firstCookingTime < firstCookingMaxTime:
+                            ~ firstCookingTime ++
+                        
+                        - else:
+                           ~ firstIsCooking = false
+                           ~ move_entity(FirstCharacter, Pond)
+                    }
     
+            }
+            
+        //Riccio
+        
+            //Riccio inizia a cucinare. Accade dopo aver fatto pace con Mentore.
+            {
+                - about_violence_and_peace && not second_char_cooking_tracker:
+                    ~ secondIsCooking = true
+                    ~ move_entity(SecondCharacter, Kitchen)
+                        -> second_char_cooking_tracker
+            }            
+            
+                
+            {debug: il valore di secondCookingTime è {secondCookingTime}}
+            {debug: il valore disecondtIsCooking è {secondIsCooking}}
+            {
+                - secondIsCooking == true:
+                
+                {
+                    - secondCookingTime < secondCookingMaxTime:
+                        ~ secondCookingTime ++
+                    
+                    - else:
+                       ~ secondIsCooking = false
+                       ~ move_entity(SecondCharacter, Pond)
     
+                }
     
+            }
     
-    
+
     
 //Pause speciali tra un dialogo e l'altro
     {
@@ -492,11 +509,11 @@
 
 
 //Altre funzioni:
-    -> special_events_tracking ->
-    -> characters_speaking ->
-    -> check_png_randomizable_status ->
     -> story_time_management_for_PNG->
+    -> check_png_randomizable_status ->
+    -> characters_speaking ->
     -> moon_state_management ->
+    -> special_events_tracking ->
 
 ->->
 

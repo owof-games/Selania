@@ -1,12 +1,7 @@
 === cooking_with_first_char
 Cucino con Chitarra
 
-
-
-
-
-
-
+    ~ move_entity(FirstCharacter, Pond)
 -> main
 
 

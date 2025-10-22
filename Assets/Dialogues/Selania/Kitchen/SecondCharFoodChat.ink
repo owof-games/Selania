@@ -4,9 +4,7 @@ Cucino con Riccio.
 
 
 
-
-
-
+    ~ move_entity(SecondCharacter, Pond)
 -> main
 
 
@@ -30,8 +28,6 @@ Riccio cucina da solo.
 
 === food_gift_second_char
 Riccio attiva il suo storylet dopo aver cucinato.
-
-
 
 
 
