@@ -283,19 +283,19 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
         Chitarra mi chiede una cosa, e rispondo con un ingrediente.
         Qui per ora ragiono solo per la parte cucina, non per la parte libro
         Step uno: sostantivi
-            + [Sostantivo A]
+            + (SostantivoA)[Sostantivo A]
                 ~ recipeNoun = "Sostantivo A"
                
-            + [Sostantivo B]
+            + (SostantivoB)[Sostantivo B]
                 ~ recipeNoun = "Sostantivo B"
              
-            + [Sostantivo C]
+            + (SostantivoC)[Sostantivo C]
                ~ recipeNoun = "Sostantivo C"
         
-            + [Sostantivo D]
+            + (SostantivoD)[Sostantivo D]
                 ~ recipeNoun = "Sostantivo D"
     
-            + [Sostantivo E]
+            + (SostantivoE)[Sostantivo E]
                 ~ recipeNoun = "Sostantivo E"
             -  
         Chitarra commenta.
@@ -390,14 +390,65 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
 
 
 
-== at_table_with_first_char
-Passo alla scena al tavolo con Chitarra
-
-
--> ending_cooking_with_first_char
-
-
-
+=== at_table_with_first_char
+    Passo alla scena al tavolo con Chitarra
+    Buono questo {tempRecipeName}!
+    //Commento ricetta
+    Quando prima hai aggiunto {recipeNoun} mi hai ricordato una cosa.
+    E con {recipeAdjective} un'altra, e con {recipeComplement} un'altra ancora.
+            {
+                - recipePP != "":
+                    -> extra_ing_feedback
+            }
+        
+    Comunque, ottimo piatto!
+        -> relationship_feedback
+    
+        
+        
+        = extra_ing_feedback
+        // Qui verranno fatti commenti diversi a seconda che l'ingrediente sarà apprezzato o meno.
+            {
+                - recipePP == "AAA" or recipePP == "YYY":
+                    -> good_feedback
+                
+                - recipePP == "XXX" or recipePP == "CCC":
+                    -> bad_feedback
+                
+                - else:
+                    -> meh_feedback
+            }
+        
+        
+                = good_feedback
+                Questo mi piace, questo lo odio.
+                Paragoni tra cibo e desiderio suo.
+                
+                    -> relationship_feedback
+                
+                = bad_feedback
+                Tentativo coraggioso, non rifarlo mai più!
+                Paragoni tra cibo e desiderio suo.
+                
+                    -> relationship_feedback
+            
+                
+                = meh_feedback
+                Discutibile, {name}!
+                Paragoni tra cibo e desiderio suo.
+                
+                    -> relationship_feedback
+            
+    
+        
+    = relationship_feedback
+    Qui abbiamo un feedback sulla relazione.
+    Codice qui da settare con la nuova versione
+        -> firstAffinityCalc ->
+    Commento della strega.
+        -> ending_cooking_with_first_char
+            
+        
 === ending_cooking_with_first_char
 Passo alla chiusura del pasto con Chitarra
 
