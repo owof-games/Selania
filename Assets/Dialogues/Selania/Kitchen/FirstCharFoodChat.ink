@@ -5,6 +5,8 @@
  ----------------------------------*/
 
 === cooking_with_first_char
+    -> storage_colors(FirstCharacter)->
+    
 Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di 
 
     + {knowing_first_character.one}[Tema Uno]
@@ -401,6 +403,7 @@ Passo alla chiusura del pasto con Chitarra
 
 
    ~ move_entity(FirstCharacter, Pond)
+    -> update_colors(FirstCharacter) ->
     -> check_kitchen_recap -> 
 
 -> main
