@@ -206,63 +206,63 @@
 === storage_colors(cookingCompanion)
 {kitchenDebug: storage_colors.}
 
-{
-    - cookingCompanion == FirstCharacter:
-       ~ storagePurple = firstPurple
-            ~ firstPurple = 0
-       ~ storageYellow = firstYellow
-            ~ firstYellow = 0
-       ~ storageBlue = firstBlue
-            ~ firstBlue = 0
-       ~ storageGreen = firstGreen
-            ~ firstGreen = 0
-       ~ storageRed = firstRed
-            ~ firstRed = 0
-
-    - cookingCompanion == SecondCharacter:
-       ~ storagePurple = secondPurple
-            ~ secondPurple = 0
-       ~ storageYellow = secondYellow
-            ~ secondYellow = 0
-       ~ storageBlue = secondBlue
-            ~ secondBlue = 0
-       ~ storageGreen = secondGreen
-            ~ secondGreen = 0
-       ~ storageRed = secondRed
-            ~ secondRed = 0
-
-}
+    {
+        - cookingCompanion == FirstCharacter:
+           ~ storagePurple = firstPurple
+                ~ firstPurple = 0
+           ~ storageYellow = firstYellow
+                ~ firstYellow = 0
+           ~ storageBlue = firstBlue
+                ~ firstBlue = 0
+           ~ storageGreen = firstGreen
+                ~ firstGreen = 0
+           ~ storageRed = firstRed
+                ~ firstRed = 0
+    
+        - cookingCompanion == SecondCharacter:
+           ~ storagePurple = secondPurple
+                ~ secondPurple = 0
+           ~ storageYellow = secondYellow
+                ~ secondYellow = 0
+           ~ storageBlue = secondBlue
+                ~ secondBlue = 0
+           ~ storageGreen = secondGreen
+                ~ secondGreen = 0
+           ~ storageRed = secondRed
+                ~ secondRed = 0
+    
+    }
 ->->
 
 
 === update_colors(cookingCompanion)
 {kitchenDebug: update_colors.}
 
-{
-    - cookingCompanion == FirstCharacter:
-       ~ firstPurple = firstPurple + storagePurple
-            ~ storagePurple = 0
-       ~ storageYellow = firstYellow + storageYellow
-            ~ storageYellow = 0
-       ~ storageBlue = firstBlue + storageBlue
-            ~ storageBlue = 0
-       ~ storageGreen = firstGreen + storageGreen
-            ~ storageGreen = 0
-       ~ storageRed = firstRed + storageRed
-            ~ storageRed = 0
-
-- cookingCompanion == SecondCharacter:
-       ~ secondPurple = secondPurple + storagePurple
-            ~ storagePurple = 0
-       ~ secondYellow = secondYellow + storageYellow
-            ~ storageYellow = 0
-       ~ secondBlue = secondBlue + storageBlue
-            ~ storageBlue = 0
-       ~ secondGreen = secondGreen + storageGreen
-            ~ storageGreen = 0
-       ~ secondRed = secondRed + storageRed
-            ~ storageRed = 0
-
-}
+    {
+        - cookingCompanion == FirstCharacter:
+           ~ firstPurple = firstPurple + storagePurple
+                ~ storagePurple = 0
+           ~ storageYellow = firstYellow + storageYellow
+                ~ storageYellow = 0
+           ~ storageBlue = firstBlue + storageBlue
+                ~ storageBlue = 0
+           ~ storageGreen = firstGreen + storageGreen
+                ~ storageGreen = 0
+           ~ storageRed = firstRed + storageRed
+                ~ storageRed = 0
+    
+    - cookingCompanion == SecondCharacter:
+           ~ secondPurple = secondPurple + storagePurple
+                ~ storagePurple = 0
+           ~ secondYellow = secondYellow + storageYellow
+                ~ storageYellow = 0
+           ~ secondBlue = secondBlue + storageBlue
+                ~ storageBlue = 0
+           ~ secondGreen = secondGreen + storageGreen
+                ~ storageGreen = 0
+           ~ secondRed = secondRed + storageRed
+                ~ storageRed = 0
+    
+    }
 ->->
 
