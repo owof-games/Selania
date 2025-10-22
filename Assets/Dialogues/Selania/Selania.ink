@@ -48,6 +48,7 @@
     INCLUDE Characters\Stories\FourthCharacter.ink
     INCLUDE Characters\Stories\FifthCharacter.ink
     
+    INCLUDE Characters\Stories\CommonStoryletsManager.ink
     INCLUDE Characters\Stories\CommonStorylets.ink
 
 //Gestione dell'inventario
@@ -84,8 +85,8 @@
 
 //Kitchen
     INCLUDE Kitchen\Kitchen.ink
-    INCLUDE Kitchen\FirstCharDialogues.ink
-    INCLUDE Kitchen\SecondCharDialogues.ink
+    INCLUDE Kitchen\FirstCharFoodChat.ink
+    INCLUDE Kitchen\SecondCharFoodChat.ink
 
 //Library
     INCLUDE Library\Library.ink
@@ -94,6 +95,8 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
+
+
 
 
 

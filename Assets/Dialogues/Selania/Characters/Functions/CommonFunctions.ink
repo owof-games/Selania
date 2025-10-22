@@ -198,8 +198,16 @@
 
     {
         - secondStory == StoryStarted:
+        
+        //Evitiamo che venga tolto dalla cucina se sta cucinando
+        {
+            - secondIsCooking == true:
+                ~ randomizable_characters -= SecondCharacter
+            - else:
                 ~ randomizable_characters += SecondCharacter
-                    
+                
+        }
+        
         - secondStory == StoryEnded:
                 ~ randomizable_characters -= SecondCharacter 
     }
@@ -416,7 +424,32 @@
     ~ lastMindfulness --
     
 //Aumento di contatori:
+
+    //Contatore spostamenti PG
     ~ movementsCounter ++
+    
+    //Gestione della pausa dell3 PNG mentre cucinano
+    {
+        - secondIsCooking == true:
+        
+        {
+            - secondCookingTime < secondCookingMaxTime:
+                ~ secondCookingTime ++
+                ->->
+            
+            - else:
+               ~ secondIsCooking = false
+                ->->
+        }
+        
+        - else:
+                ->->
+    }
+    
+    
+    
+    
+    
     
 //Pause speciali tra un dialogo e l'altro
     {
