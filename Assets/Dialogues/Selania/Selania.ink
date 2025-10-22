@@ -85,6 +85,8 @@
 
 //Kitchen
     INCLUDE Kitchen\Kitchen.ink
+    INCLUDE Kitchen\KitchenCode.ink
+    
     INCLUDE Kitchen\FirstCharFoodChat.ink
     INCLUDE Kitchen\SecondCharFoodChat.ink
 
@@ -95,6 +97,8 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
+
+
 
 
 

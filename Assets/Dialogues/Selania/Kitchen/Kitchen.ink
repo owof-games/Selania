@@ -1,21 +1,20 @@
 === kitchen ===
 #background: {tag_background()}
-//In quest'angolo possiamo assaporarci una bella tisana creata da noi, e vedere i quadri delle ame.
+#ambientSounds: {tag_ambientSounds()}
+//Qui Oven avrà solo una funzione di animazione, non serve che ci interagiamo
 
-{debug: La lista degli oggetti nella stanza è: {kitchenContents}.}
-Ecco: è il momento di una bella tisana#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+    {debug: <i>La lista degli oggetti nella stanza è: {kitchenContents}.}
+    {debug: <i>La lista degli oggetti nel deposito è: {safekeepingContents}.}
 
+    {kitchen == 1:La vecchia cucina non vede l'ora di riempirsi di profumi e chiacchiere.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
-    + [<i>Inizio a preparare una tisana]
-        @animation:RewriterBook
-        ~ move_entity(KitchenRecap, BookPlace)
-        {
-            - kitchen == 1:
-            ~ saturationVar ++
-            ~ move_entity(teaKit, Bedroom)
-        }
+    ~ arrivingFrom = Kitchen
+
+            -> main
 
 
-    -
-    
--> main
+
+
+
+
+

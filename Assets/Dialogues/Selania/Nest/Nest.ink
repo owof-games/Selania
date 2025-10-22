@@ -1,23 +1,13 @@
 === nest ===
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
-//Questo è il posto degli animaletti amici che fanno cose carine. Da pensare se creare una attività specifica (es: disegnare) o se fanno solo cose buffe. Potrei pensare a fale con caratteri diversi.
+//Qui Oven avrà solo una funzione di animazione, non serve che ci interagiamo
 
-// {debug: <i>La lista degli oggetti nella stanza è: {trainStopContents}.}
+    {debug: <i>La lista degli oggetti nella stanza è: {nestContents}.}
+    {debug: <i>La lista degli oggetti nel deposito è: {safekeepingContents}.}
 
+    {nest == 1:Frase sul nido.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
+    ~ arrivingFrom = Nest
 
-
-{nest == 1: Sei al nido}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-
-        ~ move_entity(NestRecap, BookPlace)
-        {
-            - nest == 1:
-            ~ saturationVar ++
-            //~ move_entity(quelchesaràKit, Bedroom)
-        }
-
-// ~ arrivingFrom = TrainStop
-
-    
--> main
+            -> main

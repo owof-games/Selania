@@ -4,6 +4,7 @@
     VAR debug = false
     VAR debugCultivable = false
     VAR debugChangeName = false
+    VAR kitchenDebug = false
     
     //per testare i luoghi non subito aperti con calma
     VAR debug_test_library = false
