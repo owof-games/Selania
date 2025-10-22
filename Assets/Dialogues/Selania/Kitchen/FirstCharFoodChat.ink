@@ -137,9 +137,6 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
                 -> extra_ingredient_management->
                 -> close 
             
-          
-
-    
     
     = second_theme
             Chitarra parla.
@@ -386,13 +383,13 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
     
             //La chiusura è comune, sempre per ridurre il rischio di errori
             = close   
-                    -> recipe_name_creator ->
-                    -> at_table_with_first_char
+                -> recipe_name_creator ->
+                -> at_table_with_first_char
 
 
 
 == at_table_with_first_char
-
+Passo alla scena al tavolo con Chitarra
 
 
 -> ending_cooking_with_first_char
@@ -400,7 +397,7 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
 
 
 === ending_cooking_with_first_char
-
+Passo alla chiusura del pasto con Chitarra
 
 
    ~ move_entity(FirstCharacter, Pond)

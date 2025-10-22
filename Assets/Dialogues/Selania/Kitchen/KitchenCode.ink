@@ -97,8 +97,93 @@
 
 === extra_ingredient_management
 //Qui gestiremo la parte di ingredienti che possiamo aggiungere, coi relativi effetti
+    ~ temp charNameFive = translator(fifthCharacterState)
+    {debug: I doni trovati sono {findedGifts}.}
+    Aggiungo....
+    
+/* ---------------------------------
+
+            Coltivabili
+
+ ----------------------------------*/
+    + {findedGifts has BaccaDellaAddolorata} [Una bacca della Addolorata.]
+        ~ findedGifts -= BaccaDellaAddolorata
+        ~ recipePP = "aggiungere descrizzione participio passato"
+            ->->
+    
+    + {findedGifts has BarbaDellInciampo} [Una spina di Barba dell'Inciampo.]
+        ~ findedGifts -= BarbaDellInciampo
+        ~ recipePP = "aggiungere descrizzione participio passato"
+            ->->    
+            
+    + {findedGifts has BastoneDellOzioso} [Un nodo di Bastone dell'Ozioso.]
+        ~ findedGifts -= BastoneDellOzioso
+        ~ recipePP = "aggiungere descrizzione participio passato"
+            ->->      
+        
+    + {findedGifts has BrinaDellImpossibile} [Un frammento di Brina dell'Impossibile.]
+        ~ findedGifts -= BrinaDellImpossibile
+        ~ recipePP = "aggiungere descrizzione participio passato"
+            ->->
+    
+    + {findedGifts has CantoDelleCompagne} [Una goccia di Canto delle Compagne.]
+        ~ findedGifts -= CantoDelleCompagne
+        ~ recipePP = "aggiungere descrizzione participio passato"
+            ->->
+    
+    + {findedGifts has CardoAspinato} [Un ciuffo di peli di Cardo Aspinato.]
+        ~ findedGifts -= CardoAspinato
+        ~ recipePP = "aggiungere descrizzione participio passato"
+            ->-> 
+            
+    + {findedGifts has EderaDelleAmanti} [Una foglia di Edera delle amanti.]
+        ~ findedGifts -= EderaDelleAmanti
+        ~ recipePP = "aggiungere descrizzione participio passato"
+            ->->
+            
+    + {findedGifts has ErbaLiccia} [Un ricordo di Erba Liccia.]
+        ~ findedGifts -= ErbaLiccia
+        ~ recipePP = "aggiungere descrizzione participio passato"
+            ->->
+        
+     + {findedGifts has FalsaPalude} [Un petalo di Falsa Palude.]
+        ~ findedGifts -= FalsaPalude
+        ~ recipePP = "aggiungere descrizzione participio passato"
+            ->->
+        
+      + {findedGifts has LanaNotturna} [Il calore della Lana Notturna.]
+        ~ findedGifts -= LanaNotturna
+        ~ recipePP = "aggiungere descrizzione participio passato"
+            ->->
+        
+    + {findedGifts has LicheneDegliAbissi} [Una traccia dell'odore del Lichene degli Abissi.]
+        ~ findedGifts -= LicheneDegliAbissi
+        ~ recipePP = "aggiungere descrizzione participio passato"
+            ->->
+    
+    + {findedGifts has NonTiScordarDiTe} [L'impronta del Non Ti Scordar di Te.]
+        ~ findedGifts -= NonTiScordarDiTe
+        ~ recipePP = "aggiungere descrizzione participio passato"
+            ->->      
+    
+    + {findedGifts has Olobino} [Una cappello di Olobino.]
+        ~ findedGifts -= Olobino
+        ~ recipePP = "aggiungere descrizzione participio passato"
+            ->->
+        
+    + {findedGifts has LaSpazzata} [Un rametto della Spezzata.]
+        ~ findedGifts -= LaSpazzata
+        ~ recipePP = "aggiungere descrizzione participio passato"
+            ->->
 
 
-
-
+    //Se la lista è vuota
+    + {findedGifts == ()} [Non ho nulla da aggiungere.]
+        ~ recipePP = "distratta"
+        ->->
+    
+    + [Ho cambiato idea.]
+        ~ recipePP = "indecisa"
+        ->->
+    - 
 ->->
