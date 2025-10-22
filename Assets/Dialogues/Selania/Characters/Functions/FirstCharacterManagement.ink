@@ -14,6 +14,17 @@
     VAR firstStory = StoryNotStarted
     VAR charOneEnding = ()
 
+
+//Tracciamento cucina
+    //Autonoma
+        VAR firstIsCooking = false
+        VAR firstCookingTime = 0
+        //Tempo che ci impiega a fare la sua ricetta
+        VAR firstCookingMaxTime = 8
+    //Nostro invito
+        VAR FirstKitchenInvite = false
+    
+
 //Tracciamento del dono
     VAR firstGift = ()
 

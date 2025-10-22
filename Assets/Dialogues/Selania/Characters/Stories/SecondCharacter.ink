@@ -34,7 +34,7 @@
     - secondStoryQuestCount > minStoryQuesTCountSecondChar && not second_story_gift.ink_outcome:
             -> ask
     
-    - open_the_kitchen && not cooking_with_second_char:
+    - open_the_kitchen && not cooking_with_second_char && secondIsCooking==false:
             -> ask
     - else:
         {
@@ -55,9 +55,9 @@
 }
 
 
-
                 
 = ask
+~ temp charNameOne = translator(firstCharacterState)
 ~ temp charNameTwo = translator(secondCharacterState)
 ~ temp charNameFive = translator(fifthCharacterState)
 
@@ -75,54 +75,60 @@
                 ~ justTalkedSecondChar = false
         }
 
-//Se non ho ancora fatto e ho parlato abbastanza con lui
-+ {secondStoryQuestCount > minStoryQuesTCountSecondChar && not second_story_gift.ink_outcome} [Voglio regalarti una cosa.]
-    {
-    
-        - not gifts_and_ink && findedGifts != ():
-            Forse prima ti conviene vedere cosa vuole dirti {charNameFive}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
-            -> main
+    //Se non ho ancora fatto e ho parlato abbastanza con lui
+    + {secondStoryQuestCount > minStoryQuesTCountSecondChar && not second_story_gift.ink_outcome} [Voglio regalarti una cosa.]
+        {
         
-        - else:
-            -> second_story_gift
+            - not gifts_and_ink && findedGifts != ():
+                Forse prima ti conviene vedere cosa vuole dirti {charNameFive}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
+                -> main
             
-    }
-        
-
-//Dono fatto ma non ho avviato la main story
-+ (gift) {second_story_gift.ink_outcome && not main_story_second_character} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
-{
-
-    - not questions:
-        Parla prima con {charNameFive}, che già mi brontola tantissimo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
-            ~ secondTutorial = true
-            -> main
-    - else:
-        -> second_story_chech_trigger
-
-}
-
-
-//SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
-+ {second_story_gift.ink_outcome && main_story_second_character}[Riprendiamo quella storia?]
-    -> main_story_second_character
-
-+ (kitchenInvite){open_the_kitchen && not cooking_with_second_char}[Ti va di cucinare qualcosa assieme?]
-        ~ changeLocationTimer = 0
-        
-    {
-        - kitchenInvite: {Spero non mi farai aspettare come prima! Ho atteso un sacco!|Siamo a due volte che me lo chiedi e non ti presenti, sai?|E mi darai buca una terza volta? Vabbè.} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:riccio_neutral
-                ~ move_entity(SecondCharacter, Kitchen)
-        
-        - else: Volentieri! Ci vediamo in cucina! #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:riccio_neutral
-                ~ move_entity(SecondCharacter, Kitchen)
-    }
-        
+            - else:
+                -> second_story_gift
+                
+        }
+            
     
-+ [<i>Lascio il dialogo.]
-    -> main
--
-    -> talk_with_second_character
+    //Dono fatto ma non ho avviato la main story
+    + (gift) {second_story_gift.ink_outcome && not main_story_second_character} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
+            {
+            
+                - not questions:
+                    Parla prima con {charNameFive}, che già mi brontola tantissimo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
+                        ~ secondTutorial = true
+                        -> main
+                - else:
+                    -> second_story_chech_trigger
+            
+            }
+    
+    
+    //SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
+    + {second_story_gift.ink_outcome && main_story_second_character}[Riprendiamo quella storia?]
+        -> main_story_second_character
+    
+    + {open_the_kitchen && not cooking_with_second_char && secondIsCooking==false}[Ti va di cucinare qualcosa assieme?]
+            ~ changeLocationTimer = 0
+            
+        {
+            - firstIsCooking==true: Uh, mi sa che la cucina è occupata da {charNameOne}, sta cucinando qualcosa di strano.
+                    ->main
+            
+            - SecondKitchenInvite: {Spero non mi farai aspettare come prima! Ho atteso un sacco!|Siamo a due volte che me lo chiedi e non ti presenti, sai?|E mi darai buca una terza volta? Vabbè.} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:riccio_neutral
+                    ~ move_entity(SecondCharacter, Kitchen)
+                        ->main
+            
+            - else: Volentieri! Ci vediamo in cucina! #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:riccio_neutral
+                    ~ move_entity(SecondCharacter, Kitchen)
+                    ~ SecondKitchenInvite = true
+                        ->main    
+        }
+            
+        
+    + [<i>Lascio il dialogo.]
+        -> main
+    -
+        -> talk_with_second_character
 
 
 === knowing_second_character

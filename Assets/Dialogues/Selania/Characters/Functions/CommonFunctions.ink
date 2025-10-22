@@ -429,22 +429,41 @@
     ~ movementsCounter ++
     
     //Gestione della pausa dell3 PNG mentre cucinano
-    {
-        - secondIsCooking == true:
-        
+    //Chitarra
         {
-            - secondCookingTime < secondCookingMaxTime:
-                ~ secondCookingTime ++
-                ->->
+            - firstIsCooking == true:
+            
+            {
+                - firstCookingTime < firstCookingMaxTime:
+                    ~ secondCookingTime ++
+                    ->->
+                
+                - else:
+                   ~ firstIsCooking = false
+                    ->->
+            }
             
             - else:
-               ~ secondIsCooking = false
-                ->->
+                    ->->
         }
         
-        - else:
-                ->->
-    }
+    //Riccio
+        {
+            - secondIsCooking == true:
+            
+            {
+                - secondCookingTime < secondCookingMaxTime:
+                    ~ secondCookingTime ++
+                    ->->
+                
+                - else:
+                   ~ secondIsCooking = false
+                    ->->
+            }
+            
+            - else:
+                    ->->
+        }
     
     
     

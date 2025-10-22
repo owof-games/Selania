@@ -41,22 +41,36 @@
                   }  
         
         //Storylets legati alla cucina
-            //Chitarra sta cucinando ed entriamo in cucina
+            //Chitarra
+                //Chitarra inizia a cucinare se abbiamo cucinato almeno una volta. NOTA: non attiva uno storylet, ma solo uno stato. Lo metto qui per tenere tutto nello stesso punto.
+                - (cooking_with_first_char or cooking_with_second_char) && not first_char_cooking_tracker:
+                    ~ firstIsCooking = true
+                    ~ move_entity(FirstCharacter, Kitchen)
+                        -> first_char_cooking_tracker
+                
+                //Chitarra sta cucinando ed entriamo in cucina
+                - are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && not first_char_cooking_alone && firstIsCooking == true:
+                        -> first_char_cooking_alone
+            
+                //Chitarra ha cucinato, e vediamo la scena del dono (a sé stessa)
+                - are_two_entities_together(FirstCharacter, PG) && first_char_cooking_tracker && firstIsCooking == false && not food_gift_first_char:
+                        -> food_gift_first_char
             
             
-            //Riccio inizia a cucinare. Accade dopo aver fatto pace con Mentore. NOTA: non attiva uno storylet, ma solo uno stato. Lo metto qui per tenere tutto nello stesso punto.
-            - about_violence_and_peace && not second_char_cooking_tracker:
-                ~ secondIsCooking = true
-                ~ move_entity(SecondCharacter, Kitchen)
-                    -> second_char_cooking_tracker
+            //Riccio
+                //Riccio inizia a cucinare. Accade dopo aver fatto pace con Mentore. NOTA: non attiva uno storylet, ma solo uno stato. Lo metto qui per tenere tutto nello stesso punto.
+                - about_violence_and_peace && not second_char_cooking_tracker:
+                    ~ secondIsCooking = true
+                    ~ move_entity(SecondCharacter, Kitchen)
+                        -> second_char_cooking_tracker
+                
+                //Riccio sta cucinando ed entriamo in cucina
+                - are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && not second_char_cooking_alone && secondIsCooking == true:
+                        -> second_char_cooking_alone
             
-            //Riccio sta cucinando ed entriamo in cucina
-            - are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && not second_char_cooking_alone && secondIsCooking == true:
-                    -> second_char_cooking_alone
-        
-            //Riccio ha cucinato, e vediamo la scena del dono
-            - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Mentor, PG) && second_char_cooking_tracker && secondIsCooking == false && not food_gift_second_char:
-                    -> food_gift_second_char
+                //Riccio ha cucinato, e vediamo la scena del dono
+                - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Mentor, PG) && second_char_cooking_tracker && secondIsCooking == false && not food_gift_second_char:
+                        -> food_gift_second_char
     
     
         //Storylets vari

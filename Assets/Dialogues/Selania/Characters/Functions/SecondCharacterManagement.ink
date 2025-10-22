@@ -19,11 +19,14 @@
 //Tracciamento attivazione secondo elemento tutorial
     VAR secondTutorial = true
     
-//Tracciamento cucina autonoma
-    VAR secondIsCooking = false
-    VAR secondCookingTime = 0
-    //Tempo che ci impiega a fare la sua ricetta
-    VAR secondCookingMaxTime = 5
+//Tracciamento cucina
+    //autonoma
+        VAR secondIsCooking = false
+        VAR secondCookingTime = 0
+        //Tempo che ci impiega a fare la sua ricetta
+        VAR secondCookingMaxTime = 5
+    //Nostro invito
+        VAR SecondKitchenInvite = false    
     
 //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
     VAR secondStoryQuestCount = 0
