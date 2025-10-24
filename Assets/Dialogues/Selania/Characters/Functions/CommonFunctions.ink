@@ -374,14 +374,14 @@
     }
 
 //Spostamento di libro e inventario se scoperti
-//    {
-//        - foundLibro or take_this_book:
-//            ~ move_entity(RewriterBook, currentPlace)
-//    }
-//    {
-//        - gifts_and_ink.sbadata or cultivable_test:
-//           ~ move_entity(Inventory, currentPlace)
-//    }
+    {
+        - foundLibro or take_this_book:
+            ~ move_entity(RewriterBook, currentPlace)
+    }
+    {
+        - gifts_and_ink.sbadata or cultivable_test:
+           ~ move_entity(Inventory, currentPlace)
+    }
 
 
 

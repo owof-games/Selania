@@ -38,70 +38,27 @@
 //Streets to Bus Stop
     + {are_two_entities_together(PG, RoomLoad)} [RoomLoad]
         ~ move_entity(PG, TrainStop)
-        {
-            - foundLibro or take_this_book:
-                ~ move_entity(RewriterBook, TrainStop)
-        }
-        {
-            - gifts_and_ink.sbadata or cultivable_test:
-                ~ move_entity(Inventory, TrainStop)
-        }
-        -> train_stop
+            -> train_stop
     
     + {are_two_entities_together(PG, FromForestToTrainStop)}  [FromForestToTrainStop]
             ~ move_entity(PG, TrainStop)
-        {
-            - foundLibro or take_this_book:
-                ~ move_entity(RewriterBook, TrainStop)
-        }
-        {
-           - gifts_and_ink.sbadata or cultivable_test:
-                ~ move_entity(Inventory, TrainStop)
-        }   
             -> on_movement_events ->
                 -> train_stop
                 
 //Streets to Forest      
     + {are_two_entities_together(PG, FromTrainStopToForest)} [FromTrainStopToForest]
             ~ move_entity(PG, Forest)
-        {
-            - foundLibro or take_this_book:
-                ~ move_entity(RewriterBook, Forest)
-        }
-        {
-           - gifts_and_ink.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Forest)
-        }        
-        
             -> on_movement_events ->
                 -> forest
         
         
     + {are_two_entities_together(PG, FromPondToForest)} [FromPondToForest]
             ~ move_entity(PG, Forest)
-        {
-            - foundLibro or take_this_book:
-                ~ move_entity(RewriterBook, Forest)
-        }
-        {
-            - gifts_and_ink.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Forest)
-        }         
-
             -> on_movement_events ->
                 -> forest
     
     + {are_two_entities_together(PG, FromLibraryToForest)} [FromLibraryToForest]
             ~ move_entity(PG, Forest)
-           
-        {
-            - foundLibro or take_this_book:
-                ~ move_entity(RewriterBook, Forest)
-        }
-        {
-            - gifts_and_ink.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Forest)
-        }         
             -> on_movement_events ->
             -> empty_tempTW ->  
                 -> forest
@@ -110,14 +67,6 @@
  //Streets to Pond   
     + {are_two_entities_together(PG, FromGreenhouseToPond)} [FromGreenhouseToPond]
             ~ move_entity(PG, Pond)
-        {
-            - foundLibro or take_this_book:
-                ~ move_entity(RewriterBook, Pond)
-        }
-        {
-            - gifts_and_ink.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Pond)
-        }    
             //Uscendo dalla serra svuotiamo la lista dei TW temporanei dei coltivabili
             -> empty_tempCultTW ->
             -> on_movement_events ->
@@ -125,41 +74,18 @@
         
     + {are_two_entities_together(PG, FromForestToPond)} [FromForestToPond]
             ~ move_entity(PG, Pond)
-        {
-            - foundLibro or take_this_book:
-                ~ move_entity(RewriterBook, Pond)
-        }
-        {
-            - gifts_and_ink.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Pond)
-        }         
             -> on_movement_events ->
                 -> pond
         
     + {are_two_entities_together(PG, FromKitchenToPond)} [FromKitchenToPond]
             ~ move_entity(PG, Pond)
-        {
-            - foundLibro or take_this_book:
-                ~ move_entity(RewriterBook, Pond)
-        }
-        {
-            - gifts_and_ink.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Pond)
-        }         
             -> on_movement_events ->
                 -> pond
 
 //Streets to Greenhouse
     + {are_two_entities_together(PG, FromPondToGreenhouse)}  [FromPondToGreenhouse]
             ~ move_entity(PG, Greenhouse)
-        {
-            - foundLibro or take_this_book:
-                ~ move_entity(RewriterBook, Greenhouse)
-        }
-        {
-            - gifts_and_ink.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Greenhouse)
-        }         
+            //Entrando in serra aumentiamo il valore di crescita dei coltivabili
             ~ growing ++
             -> growing_check ->
             -> on_movement_events ->
@@ -168,18 +94,11 @@
 
     + {are_two_entities_together(PG, FromPondToGreenhouseBlooming)} [FromPondToGreenhouseBlooming]
             ~ move_entity(PG, Greenhouse)
-        {
-            - foundLibro or take_this_book:
-               ~ move_entity(RewriterBook, Greenhouse)
-        }
-        {
-            - gifts_and_ink.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Greenhouse)
-        }         
+            //Entrando in serra aumentiamo il valore di crescita dei coltivabili
             ~ growing ++
             -> growing_check ->
             -> on_movement_events ->
-                -> greenhouse
+            -> greenhouse
 
     + {are_two_entities_together(PG, FromPondToGreenhouseBlocked)} [FromPondToGreenhouseBlocked]
         <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()} 
@@ -197,27 +116,11 @@
             
     + {are_two_entities_together(PG, FromForestToLibrary)} [FromForestToLibrary]
             ~ move_entity(PG, Library)
-        {
-            - foundLibro or take_this_book:
-                ~ move_entity(RewriterBook, Library)
-        }
-        {
-            - gifts_and_ink.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Library)
-        }         
             -> on_movement_events ->
                 -> library
         
     + {are_two_entities_together(PG, FromNestToLibrary)} [FromNestToLibrary]
             ~ move_entity(PG, Library)
-        {
-            - foundLibro or take_this_book:
-                ~ move_entity(RewriterBook, Library)
-        }
-        {
-            - gifts_and_ink.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Library)
-        }         
             -> on_movement_events ->
                 -> library
         
@@ -229,16 +132,7 @@
 
 
     + {are_two_entities_together(PG, FromPondToKitchen)} [FromPondToKitchen]
-
             ~ move_entity(PG, Kitchen)
-            {
-                - foundLibro or take_this_book:
-                    ~ move_entity(RewriterBook, Kitchen)
-            }
-            {
-                - gifts_and_ink.sbadata or cultivable_test:
-                    ~ move_entity(Inventory, Kitchen)
-            }        
                 -> on_movement_events ->
                 -> empty_tempTW ->  
                 -> kitchen
@@ -256,19 +150,9 @@
 
     + {are_two_entities_together(PG, FromLibraryToNest)} [FromLibraryToNest]
             ~ move_entity(PG, Nest)
-            
-            {
-                - foundLibro or take_this_book:
-                    ~ move_entity(RewriterBook, Nest)
-            }
-            {
-                - gifts_and_ink.sbadata or cultivable_test:
-                    ~ move_entity(Inventory, Nest)
-            }        
                 -> on_movement_events ->
                 -> empty_tempTW ->  
                 -> nest
-
 
     + {are_two_entities_together(PG, FromLibraryToNestBlocked)} [FromLibraryToNestBlocked]
         <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
