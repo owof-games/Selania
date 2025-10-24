@@ -39,22 +39,20 @@
     
         - Relationship == 0:
             {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {Relationship}, {Ink}.}
-            ->->
             
         - Relationship == 1:
             ~ Ink ++
             {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {Relationship}, {Ink}.}
-            ->->
             
         - Relationship == 2:
             ~ Ink ++
             ~ Ink ++
             {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {Relationship}, {Ink}.}
-            ->->    
+               
     }
 
 
-->->
+
 
 
 
