@@ -1613,19 +1613,6 @@ Stai per donare qualcosa a {charNameTwo}. #speaker:{witch_tag()} #inkA:offState 
                             ~ change_entity_place(Mentor)
             }
             
-        
-        //Aggiorno per l'ultima volta lo stato relazionale
-            -> secondAffinityCalc ->
-            
-        //"Trasformo" la relazione in inchiostro.
-            ~ fromRelationshipToInk(secondCharStateRelationship)
- 
-        //Ci viene detto cosa pensa della relazione con noi
-            -> secondAffinityFeedback ->  
-        
-        //Arriva il feedback della strega
-            ~ inkLevel(secondCharacterInkLevel)       
-            
        
         {
         
@@ -1668,8 +1655,6 @@ Stai per donare qualcosa a {charNameTwo}. #speaker:{witch_tag()} #inkA:offState 
         Ma se non mi invento un motivo per le cose nessuno mi ascolta.
        
         ~ growing ++
-
-            
             
             + [Forse so come farti vedere le cose in modo diverso.]
                 -> statement
@@ -1680,8 +1665,11 @@ Stai per donare qualcosa a {charNameTwo}. #speaker:{witch_tag()} #inkA:offState 
     = statement
     ~ temp charNameTwo = translator(secondCharacterState)
 
-        + [Voglio cominciare la riscrittura.]
-            -> secondNaming -> 
+        + (rewriting)[Voglio cominciare la riscrittura.]
+            //Avvio aggiornamento relazione + commento PNG + commento strega
+                -> secondAffinityCalc ->
+            ////Vado ad aggiornare temporaneamente il nome prima di cominciare    
+                -> secondNaming -> 
                 {
                     - secondCharacterInkLevel == Empty:
                         -> ending

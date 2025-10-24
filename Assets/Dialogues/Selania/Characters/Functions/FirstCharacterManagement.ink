@@ -67,6 +67,7 @@
 
 === firstAffinityCalc ===
 //Questo mi serve per aggiornare il valore di affinità.
+//Ad ora è chiamata solo in cucina e prima della riscrittura, e solo in riscrittura stampa una informazione.
 //Per la prima personaggia l'importante è che il blu sia bassissimo
 
     //In questa prima fase di testing, punterò su una soluzione di difficoltà media: basta che o giallo o viola siano maggiori del blu.
@@ -88,6 +89,7 @@
     {
         //Se vengo dalla preriscrittura:
         - main_story_first_character.statement.rewriting:
+            {debug: ho cliccato rewriting e quindi faccio gli ultimi passaggi e attivo il feedback.} 
             //"Trasformo" la relazione in inchiostro
                 ~ fromRelationshipToInk(firstCharStateRelationship)
             // Mando ai feedback
