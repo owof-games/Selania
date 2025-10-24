@@ -37,7 +37,7 @@
             -> ask
         - first_story_gift.ink_outcome && not main_story_first_character && not questions:
             -> ask
-        - first_story_gift.ink_outcome && not main_story_first_character &&  questions:
+        - first_story_gift.ink_outcome && not main_story_first_character && questions:
             -> ask
         - first_story_gift.ink_outcome && main_story_first_character:
             -> ask

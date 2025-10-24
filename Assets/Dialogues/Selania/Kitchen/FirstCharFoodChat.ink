@@ -439,14 +439,13 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
     
         
     = relationship_feedback
-    Qui abbiamo un feedback sulla relazione.
-    Codice qui da settare con la nuova versione
+    Qui abbiamo un feedback sulla relazione. Per sopravvivenza personale, ignorerei il dono, e ci concentriamo sulla comunicazione.
         -> firstAffinityCalc ->
     {
-        - firstCharStateRelationship == 0: Non ci stiamo pigliando {first_story_gift.ink_outcome: manco col regalo|ma magari è solo questione di tempo}.
-        - firstCharStateRelationship == 1 && not first_story_gift.ink_outcome:
+        - firstCharStateRelationship == 0: Non ci stiamo pigliando 
+        - firstCharStateRelationship == 1: Ci piacciamo
+        - firstCharStateRelationship == 2: Ci piacciamo tantissimo
 
-    
     
     }
     
