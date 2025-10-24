@@ -50,9 +50,7 @@
             {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {Relationship}, {Ink}.}
                
     }
-
-
-
+    
 
 
 

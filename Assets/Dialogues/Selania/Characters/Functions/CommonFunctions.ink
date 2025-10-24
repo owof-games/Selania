@@ -122,7 +122,7 @@
 === opening_places
 {debug: passo da opening_places.}
     {
-        - welcome.your_name && (entity_location(FromPondToGreenhouse) == Safekeeping):
+        - welcome.your_name && (entity_location(FromPondToGreenhouse) == Safekeeping) && not olobino.step_tre.colto:
             ~ randomablePlaces += Greenhouse
             ~ playerAccessiblePlaces += Greenhouse
             ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
@@ -278,6 +278,8 @@
     
 === on_movement_events
 //Qui metto tutte quelle funzioni e variazioni che sono richieste a ogni cambio stanza.
+~ temp currentPlace = entity_location(PG)
+
 {debug: passo per on_movement_events}
 //Riduzioni di contatori legati al tempo:
     ~ firstWritingPause --
@@ -370,6 +372,17 @@
 	    - secondStory == StoryEnded:
 	        ~ secondCharEndingDialogue ++     
     }
+
+//Spostamento di libro e inventario se scoperti
+//    {
+//        - foundLibro or take_this_book:
+//            ~ move_entity(RewriterBook, currentPlace)
+//    }
+//    {
+//        - gifts_and_ink.sbadata or cultivable_test:
+//           ~ move_entity(Inventory, currentPlace)
+//    }
+
 
 
 //Altre funzioni:

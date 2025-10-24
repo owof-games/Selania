@@ -55,7 +55,7 @@
                 ~ move_entity(RewriterBook, TrainStop)
         }
         {
-            - gifts_and_ink.sbadata or cultivable_test:
+           - gifts_and_ink.sbadata or cultivable_test:
                 ~ move_entity(Inventory, TrainStop)
         }   
             -> on_movement_events ->
@@ -69,7 +69,7 @@
                 ~ move_entity(RewriterBook, Forest)
         }
         {
-            - gifts_and_ink.sbadata or cultivable_test:
+           - gifts_and_ink.sbadata or cultivable_test:
                 ~ move_entity(Inventory, Forest)
         }        
         
@@ -170,7 +170,7 @@
             ~ move_entity(PG, Greenhouse)
         {
             - foundLibro or take_this_book:
-                ~ move_entity(RewriterBook, Greenhouse)
+               ~ move_entity(RewriterBook, Greenhouse)
         }
         {
             - gifts_and_ink.sbadata or cultivable_test:
@@ -208,7 +208,7 @@
             -> on_movement_events ->
                 -> library
         
-    + {are_two_entities_together(PG, FromNestToLibrary)} [FromTNestToLibrary]
+    + {are_two_entities_together(PG, FromNestToLibrary)} [FromNestToLibrary]
             ~ move_entity(PG, Library)
         {
             - foundLibro or take_this_book:
