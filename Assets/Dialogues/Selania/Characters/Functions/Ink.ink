@@ -11,8 +11,58 @@
     VAR fifthCharacterInkLevel = Empty
 
 
+
+
+
+=== function fromRelationshipToInk(Relationship)
+{debug: passo da fromRelationshipToInk.}
+
+    {
+        - Relationship == firstCharStateRelationship:
+            ~ Ink = firstCharacterInkLevel
+        
+        - Relationship == secondCharStateRelationship:
+            ~ Ink = secondCharacterInkLevel
+        
+        - Relationship == thirdCharStateRelationship:
+            ~ Ink = thirdCharacterInkLevel
+            
+        - Relationship == fourthCharStateRelationship:
+            ~ Ink = fourthCharacterInkLevel
+        
+        - Relationship == fifthCharStateRelationship:
+            ~ Ink = fifthCharacterInkLevel    
+            
+    }
+    
+    {
+    
+        - Relationship == 0:
+            {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {Relationship}, {Ink}.}
+            ->->
+            
+        - Relationship == 1:
+            ~ Ink ++
+            {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {Relationship}, {Ink}.}
+            ->->
+            
+        - Relationship == 2:
+            ~ Ink ++
+            ~ Ink ++
+            {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {Relationship}, {Ink}.}
+            ->->    
+    }
+
+
+->->
+
+
+
+
 //Formula chiamata prima dello statement, per tenere conto del rapporto effettivo.
 === function inkLevel(InkLevel)
+{debug: passo da inkLevel.}
+
     {
         - InkLevel == firstCharacterInkLevel:
             ~ Ink = firstCharacterInkLevel

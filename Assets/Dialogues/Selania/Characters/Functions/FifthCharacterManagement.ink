@@ -13,6 +13,9 @@
     VAR fifthStory = StoryNotStarted
     VAR charFiveEnding = () 
     
+//Tracciamento della relazione
+    VAR fifthCharStateRelationship = 0 
+ 
     
 //Tracciamento del dono
     VAR fifthGift = ()

@@ -13,6 +13,10 @@
     VAR secondStory = StoryNotStarted
     VAR charTwoEnding = ()
 
+//Tracciamento della relazione
+    VAR secondCharStateRelationship = 0
+
+
 //Tracciamento del dono
     VAR secondGift = ()
     
@@ -57,47 +61,88 @@
                        Gestione relazione e nomi
                     
                      ----------------------------------*/
+
+//Aggiorniamo lo stato relazionale                     
 === secondAffinityCalc ===
+{debug: passo da secondAffinityCalc}
 //Per il secondo personaggio la cosa che conta è coerenza. Ha bisogno di stabilità. A manoni la logica sarà: tengo conto di un counter delle domande a cui ha risposto la giocatrice e se un determinato valore è >= di counter - x allora ++, se >= counter -x-1 allora +. Probabilmente da bilanciare.
 
+    //In questa prima fase di testing, punterò su una soluzione di difficoltà media.
     {
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
-            ~ secondCharacterInkLevel ++
-            ~ secondCharacterInkLevel ++
-                ->->
-        
+
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2):
-            ~ secondCharacterInkLevel ++
-                ->->     
+            ~ secondCharStateRelationship ++
+        {debug: aumento l'inchiostro del secondo personaggio di un livello. Ora è a {~ secondCharStateRelationship}}    
     }
+    
+    //La soluzione più tosta potrebbe essere questa invece.
+    //{
+    //    - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - //1):
+    //        ~ secondCharStateRelationship ++
+    //            ->->     
+    //}
+    
+    
+    //Questo è solo come remind di come gestivo prima il tutto.
+    //{
+    //    - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - //1):
+    //        ~ secondCharStateRelationship ++
+    //         ~ secondCharStateRelationship ++
+    //            ->->
+    //    
+    //    - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2//):
+    //        ~ secondCharStateRelationship ++
+    //            ->->     
+    //}
 
         ->->
 
-=== secondAffinityCheckCalc ===
-~ temp charNameTwo = translator(secondCharacterState)
+
+
+
+//Abbiamo un feedback da parte della PNG sul suo stato prima di confessare (che brutta parola)        
+=== secondAffinityFeedback
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+{debug: passo per secondAffinityFeedback. Lo stato di inchiostro è {secondCharacterInkLevel}.}
     
     {
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
+        - secondCharacterInkLevel == Empty:
+             Secondo me mi tratti come un bambino.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
+                Tutte le cose che dici cambiano, sono disordinate.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
+                Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
+                Non mi piace mica come cosa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
+                    <i>{charNameTwo} non si è sentito capito da {name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
-            Sai? Mi sembri una persona che dice sempre le cose giuste. #speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
-            Non giuste giuste tipo per me.
-            Ma che si assomigliano tutte.
-            Non mi dici mica prima mele e poi pere come fanno gli altri adulti.
-            Questo mi piace.
-                ->->
-        - else:
         
-            Non sono scemo.  #speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_angry
-            Ho visto che cambi sempre idea.
-            Mi rispondi sempre cose diverse.
-            Non mi piace.
-            Gli adulti fanno così quando voglio avere ragione.
-            E io mica sono un bambino.
-                ->->     
+        - secondCharacterInkLevel == Low:
+            Che non ho capito cosa pensi. Sei come quando guardo nel terrario e non capisco se c'è l'insetto stecco o sono solo rami.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
+        
+        - secondCharacterInkLevel == Normal:
+            Si vede che sei grande. Che a volte non è male, a volte però mi agita.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
+        
+        
+        - secondCharacterInkLevel == Medium:
+                Un po' mi fido#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
+                Secondo me non dici <i>sempre</i> le cose in modo preciso.
+                Sembri un po' un gatto.
+                Ma mi fido.
+        
+        - secondCharacterInkLevel == High:
+                Non sei male, per essere grande.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
+                Dici sempre le cose allo stesso modo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
+                Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
+                E questo mi fa stare al sicuro.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
     }
+    
 
-        ->-> 
 
+->->        
+        
+  
+        
+//Funzione per la gestione della riscrittura
 === secondColourCheck
 {debugChangeName: Passo per secondColourCheck.}
 
@@ -140,9 +185,10 @@ VAR secondPurpleMax = false
         ->->
     
 
+
+=== secondNaming ==
 //Selezione nome prima della riscrittura
 //Grizzly è il livello "più basso" per Riccio
-=== secondNaming ==
     
     {
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
@@ -168,8 +214,9 @@ VAR secondPurpleMax = false
     
         ->-> 
  
-//Variazione nome durante la riscrittura        
+     
 === function secondStatementVariation(color)
+//Variazione nome durante la riscrittura   
 ~ temp secondCheckColor = false
 {debugChangeName: Passo per function secondStatementVariation.}
 
@@ -206,3 +253,31 @@ VAR secondPurpleMax = false
             }
     	            
     }        
+    
+
+
+//Questa la commento e me la tengo come remind, ma mi servirà più o con la rana o con altri feedback, non serve più averne di diretti.    
+//=== secondAffinityCheckCalc ===
+//~ temp charNameTwo = translator(secondCharacterState)
+    
+//    {
+//        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
+//        
+//            Sai? Mi sembri una persona che dice sempre le cose giuste. #speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
+//            Non giuste giuste tipo per me.
+//            Ma che si assomigliano tutte.
+//            Non mi dici mica prima mele e poi pere come fanno gli altri adulti.
+//            Questo mi piace.
+//                ->->
+//        - else:
+//        
+//            Non sono scemo.  #speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_angry
+//            Ho visto che cambi sempre idea.
+//            Mi rispondi sempre cose diverse.
+//            Non mi piace.
+//            Gli adulti fanno così quando voglio avere ragione.
+//           E io mica sono un bambino.
+//                ->->     
+//    }
+//
+//        ->-> 

@@ -10,6 +10,10 @@
     
     VAR thirdStory = StoryNotStarted
     VAR charThreeEnding = ()
+  
+//Tracciamento della relazione
+    VAR thirdCharStateRelationship = 0  
+  
    
 //Tracciamento del dono
     VAR thirdGift = ()   

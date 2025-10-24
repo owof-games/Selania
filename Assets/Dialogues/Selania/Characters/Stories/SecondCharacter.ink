@@ -107,6 +107,7 @@
     + {second_story_gift.ink_outcome && main_story_second_character}[Riprendiamo quella storia?]
         -> main_story_second_character
     
+    //Opzioni gestione cucina
     + {open_the_kitchen && not cooking_with_second_char && secondIsCooking==false}[Ti va di cucinare qualcosa assieme?]
             ~ changeLocationTimer = 0
             
@@ -609,7 +610,7 @@
                 ~ change_entity_place(Mentor)
             }         
     
-            -> secondAffinityCheckCalc ->
+        //-> secondAffinityCheckCalc ->
         Nonna non mi tratta mai come un bambino.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
         Mi ha anche insegnato come barare a carte.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
         E come aprire il cassetto dei dolci di mamma.
@@ -1587,6 +1588,8 @@ Stai per donare qualcosa a {charNameTwo}. #speaker:{witch_tag()} #inkA:offState 
         - else:
             -> one
     }
+    
+    
     = confession
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -1602,50 +1605,38 @@ Stai per donare qualcosa a {charNameTwo}. #speaker:{witch_tag()} #inkA:offState 
                 -   are_two_entities_together(FirstCharacter, PG): E questo è il momento per me di levarmi da qui e lasciarvi in pace. Anche se sono stracuriosa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
                     Non ditemi che questo non è un atto d'amore!
                             ~ change_entity_place(FirstCharacter)
-            }          
-
-        {
+            }
+            
+            {
+                -   are_two_entities_together(Mentor, PG): Vi lascio la vostra privacy.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:mentor_neutral
+                    
+                            ~ change_entity_place(Mentor)
+            }
+            
         
-            //Migliore outcome
-            - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): Non sei male, per essere grande.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
-                Dici sempre le cose allo stesso modo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
-                Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
-                E questo mi fa stare al sicuro.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
-                    {charNameTwo} vede {name} come una persona amica e fidata.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        //Aggiorno per l'ultima volta lo stato relazionale
+            -> secondAffinityCalc ->
             
-            //Secondo migliore outcome
-            -secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): Un po' mi fido#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
-                Secondo me non dici <i>sempre</i> le cose in modo preciso.
-                Sembri un po' un gatto.
-                Ma mi fido.
-                    {charNameTwo} si trova bene con {name}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        //"Trasformo" la relazione in inchiostro.
+            ~ fromRelationshipToInk(secondCharStateRelationship)
+ 
+        //Ci viene detto cosa pensa della relazione con noi
+            -> secondAffinityFeedback ->  
+        
+        //Arriva il feedback della strega
+            ~ inkLevel(secondCharacterInkLevel)       
             
-            //Outcome peggiore
-            - secondPurple or secondGreen or secondRed or secondBlue or secondYellow < (secondStoryQuestCount/2):  Secondo me mi tratti come un bambino.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
-                Tutte le cose che dici cambiano, sono disordinate.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
-                Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
-                Non mi piace mica come cosa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-                    <i>{charNameTwo} non si è sentito capito da {name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            
-            //Outcome neutro
-            - else: Che non ho capito cosa pensi. Sei come quando guardo nel terrario e non capisco se c'è l'insetto stecco o sono solo rami.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-                    {charNameTwo} non riesce a capire che rapporto sta costruendo con {name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            
-        }
-                -> secondAffinityCalc ->
-                
-        A seguito del rapporto che {name} ha creato con {charNameTwo} {secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): l'inchiostro è aumentato di due unità|{secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
        
         {
         
             //Migliore outcome
-            - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):C'è una cosa che devo dire a qualcuno, e voglio dirla a te.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
+            - secondCharacterInkLevel >= Medium:C'è una cosa che devo dire a qualcuno, e voglio dirla a te.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
     
             //Secondo migliore outcome
-            -secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2):C'è una cosa che devo dire a qualcuno, e voglio dirla a te.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
+            - secondCharacterInkLevel >= Normal: C'è una cosa che devo dire a qualcuno, e voglio dirla a te.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
             
             //Outcome peggiore
-            - secondPurple or secondGreen or secondRed or secondBlue or secondYellow < (secondStoryQuestCount/2):C'è una cosa che devo dire a qualcuno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
+            - secondCharacterInkLevel == Empty: C'è una cosa che devo dire a qualcuno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
                 E posso dirla solo a te.
                 Purtroppo.
             
@@ -1689,16 +1680,14 @@ Stai per donare qualcosa a {charNameTwo}. #speaker:{witch_tag()} #inkA:offState 
     = statement
     ~ temp charNameTwo = translator(secondCharacterState)
 
-        //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
-            ~ inkLevel(secondCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]
             -> secondNaming -> 
-            {
-                - secondCharacterInkLevel == Empty:
-                    -> ending
-                - else: 
-                    -> one
-            } 
+                {
+                    - secondCharacterInkLevel == Empty:
+                        -> ending
+                    - else: 
+                        -> one
+                } 
         + [Preferisco prendermi del tempo.]
             -> main
 

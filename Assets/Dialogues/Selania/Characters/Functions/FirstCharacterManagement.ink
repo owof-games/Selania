@@ -15,6 +15,9 @@
     VAR charOneEnding = ()
 
 
+//Tracciamento della relazione
+    VAR firstCharStateRelationship = 0
+
 //Tracciamento cucina
     //Autonoma
         VAR firstIsCooking = false
@@ -65,20 +68,66 @@
 === firstAffinityCalc ===
 //Per la prima personaggia l'importante è che il blu sia bassissimo
 
+    //In questa prima fase di testing, punterò su una soluzione di difficoltà media: basta che o giallo o viola siano maggiori del blu.
     {
-        - firstPurple && firstYellow > firstBlue:
-            ~ firstCharacterInkLevel ++
-            ~ firstCharacterInkLevel ++
-                ->->
         - firstPurple or firstYellow > firstBlue:
-            ~ firstCharacterInkLevel ++
-                ->->
+            ~ firstCharStateRelationship ++
+            {debug: aumento l'inchiostro della prima personaggia di un livello. Ora è a {~ firstCharStateRelationship}}  
     }
+    
+    
+    //La soluzione più tosta potrebbe essere questa invece.
+    
+    //{
+    //    - firstPurple && firstYellow > firstBlue:
+    //        ~ firstCharStateRelationship ++
+    //            ->->
+    //}
+
+
+    //Questo è solo come remind di come gestivo prima il tutto.
+    
+    //{
+    //    - firstPurple && firstYellow > firstBlue:
+    //        ~ firstCharStateRelationship ++
+    //        ~ firstCharStateRelationship ++
+    //            ->->
+    //    - firstPurple or firstYellow > firstBlue:
+    //        ~ firstCharStateRelationship ++
+    //            ->->
+    //}
 
 ->->
+
+=== firstAffinityFeedback
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+{debug: passo per firstAffinityFeedback. Lo stato di inchiostro è {firstCharacterInkLevel}.}
     
-    
+    {
+        - firstCharacterInkLevel == Empty:  Non è che possa dirmi di esser capita da te, sai?
+        #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
+        
+        
+        - firstCharacterInkLevel == Low: Non è che ci capiamo molto noi due, sai? È come se io suonassi Chopin e tu la lambada. Una lambada noiosa. Una lamboring.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
+        
+        - firstCharacterInkLevel == Normal: Siamo un po' in modalità random, vero? A volte ci avviciniamo, a volte ciaone proprio, tutta una musica diversa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        
+        
+        - firstCharacterInkLevel == Medium: Non pensavo avrei trovato una persona amica, qui. Grazie, {name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
+        
+        
+        - firstCharacterInkLevel == High: Talco continua a mancarmi, ma con te mi sento come se fossimo parte da sempre della stessa band.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
+
+    }
+
+
+->->
+
+
 //Settaggio nome quando partiamo con la discussione (non finale quindi)
+
 === firstNaming ===
 //Se ho un pareggio quindi c'è differenza se blu batte sia giallo che viola (Triangolo)
 //Se batte solo giallo (Orchestra)

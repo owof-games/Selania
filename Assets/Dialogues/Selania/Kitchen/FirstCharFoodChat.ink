@@ -19,8 +19,6 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
     -> main
 
     
-
-
     = first_theme
         Chitarra parla.
         Io dico una di queste cinque cose.
@@ -257,10 +255,8 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
             + Voglio aggiungere un ingrediente extra.
                 -> extra_ingredient_management->
                 -> close 
-    
-    
-    
-
+                
+                
     
     = third_theme
             Chitarra parla.
@@ -384,7 +380,8 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
     
     
             //La chiusura è comune, sempre per ridurre il rischio di errori
-            = close   
+            = close
+            Vengono dette cose.
                 -> recipe_name_creator ->
                 -> at_table_with_first_char
 
@@ -445,7 +442,17 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
     Qui abbiamo un feedback sulla relazione.
     Codice qui da settare con la nuova versione
         -> firstAffinityCalc ->
-    Commento della strega.
+    {
+        - firstCharStateRelationship == 0: Non ci stiamo pigliando {first_story_gift.ink_outcome: manco col regalo|ma magari è solo questione di tempo}.
+        - firstCharStateRelationship == 1 && not first_story_gift.ink_outcome:
+
+    
+    
+    }
+    
+    
+    
+    
         -> ending_cooking_with_first_char
             
         

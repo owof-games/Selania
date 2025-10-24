@@ -11,6 +11,9 @@
     
     VAR fourthStory = StoryNotStarted
     VAR charFourEnding = ()
+
+//Tracciamento della relazione
+    VAR fourthCharStateRelationship = 0
    
 //Tracciamento del dono
     VAR fourthGift = ()
