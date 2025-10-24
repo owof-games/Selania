@@ -21,6 +21,9 @@
     VAR storageGreen = 0
     VAR storageRed = 0
 
+//Storage temporaneo di altre informazioni
+    VAR storageSecondStoryQuestCount = 0
+
 === check_kitchen_recap
     
     @animation:RewriterBook
@@ -208,29 +211,30 @@
 
     {
         - cookingCompanion == FirstCharacter:
-           ~ storagePurple = firstPurple
+            ~ storagePurple = firstPurple
                 ~ firstPurple = 0
-           ~ storageYellow = firstYellow
+            ~ storageYellow = firstYellow
                 ~ firstYellow = 0
-           ~ storageBlue = firstBlue
+            ~ storageBlue = firstBlue
                 ~ firstBlue = 0
-           ~ storageGreen = firstGreen
+            ~ storageGreen = firstGreen
                 ~ firstGreen = 0
-           ~ storageRed = firstRed
+            ~ storageRed = firstRed
                 ~ firstRed = 0
     
         - cookingCompanion == SecondCharacter:
-           ~ storagePurple = secondPurple
+            ~ storagePurple = secondPurple
                 ~ secondPurple = 0
-           ~ storageYellow = secondYellow
+            ~ storageYellow = secondYellow
                 ~ secondYellow = 0
-           ~ storageBlue = secondBlue
+            ~ storageBlue = secondBlue
                 ~ secondBlue = 0
-           ~ storageGreen = secondGreen
+            ~ storageGreen = secondGreen
                 ~ secondGreen = 0
-           ~ storageRed = secondRed
+            ~ storageRed = secondRed
                 ~ secondRed = 0
-    
+            ~ storageSecondStoryQuestCount = secondStoryQuestCount 
+                ~ secondStoryQuestCount = 0
     }
 ->->
 
@@ -240,29 +244,33 @@
 
     {
         - cookingCompanion == FirstCharacter:
-           ~ firstPurple = firstPurple + storagePurple
+            ~ firstPurple = firstPurple + storagePurple
                 ~ storagePurple = 0
-           ~ storageYellow = firstYellow + storageYellow
+            ~ storageYellow = firstYellow + storageYellow
                 ~ storageYellow = 0
-           ~ storageBlue = firstBlue + storageBlue
+            ~ storageBlue = firstBlue + storageBlue
                 ~ storageBlue = 0
-           ~ storageGreen = firstGreen + storageGreen
+            ~ storageGreen = firstGreen + storageGreen
                 ~ storageGreen = 0
-           ~ storageRed = firstRed + storageRed
+            ~ storageRed = firstRed + storageRed
                 ~ storageRed = 0
     
     - cookingCompanion == SecondCharacter:
-           ~ secondPurple = secondPurple + storagePurple
+            ~ secondPurple = secondPurple + storagePurple
                 ~ storagePurple = 0
-           ~ secondYellow = secondYellow + storageYellow
+            ~ secondYellow = secondYellow + storageYellow
                 ~ storageYellow = 0
-           ~ secondBlue = secondBlue + storageBlue
+            ~ secondBlue = secondBlue + storageBlue
                 ~ storageBlue = 0
-           ~ secondGreen = secondGreen + storageGreen
+            ~ secondGreen = secondGreen + storageGreen
                 ~ storageGreen = 0
-           ~ secondRed = secondRed + storageRed
+            ~ secondRed = secondRed + storageRed
                 ~ storageRed = 0
+            //Non aggiungiamo le tre domande perché complica solo il conteggio finale
+            ~ secondStoryQuestCount = storageSecondStoryQuestCount
+                ~ storageSecondStoryQuestCount = 0        
     
     }
+    
 ->->
 

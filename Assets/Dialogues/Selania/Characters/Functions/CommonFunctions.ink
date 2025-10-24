@@ -106,34 +106,13 @@
 
  ----------------------------------*/
 
-//REMIND: metà storia personaggia -> compare nuova personaggia. Fine storia personaggia -> si attiva un nuovo luogo.
-
 //Gestione spostamenti: tempo
     VAR changeLocationTimer = 0
     VAR changeLocationTrigger = 9
 
-//Attivo questa opzione se mi serve che per un certo periodo le cose non vengano randomizzate    
-    //VAR randomPause = false
-
-//Settaggio luoghi attivi a seconda del tier
-//Nota: fino a quando il gioco non sarà completo, la biblioteca si aprirà per ultima, sostituendo il primo dei luoghi mancanti.
-    //VAR firstTierPlaces =(Forest, TrainStop, Pond)
-    //VAR secondTierPlaces =(Forest, TrainStop, Library, Pond)
-    //VAR thirdTierPlaces = (Forest, TrainStop, Library, Laboratory, Pond)
-    //VAR fourthTierPlaces = (Forest, TrainStop, Library, Nest, Laboratory, Pond)
-    
     VAR randomablePlaces = (Forest, TrainStop, Pond)
     // Laboratory, Library, Nest, Greenhouse
 
-//Gestione spostamenti: luoghi. I luoghi si aprono alla fine di ogni storia.
-    //First tier: tier iniziale.
-    //VAR firstTier = false
-    //Second tier. Con la fine della prima storia.
-    //VAR secondTier = false
-    //Third Tier. Con la fine della seconda storia.
-    //VAR thirdTier = false
-    //Fourth Tier. Con la fine della terza storia.
-    //VAR fourthTier = false
 
 //Gestione spostamenti: personagge
     VAR randomizable_characters = ()
@@ -250,11 +229,6 @@
     
 === randomize_png_location    
 {debug: randomize_png_location.}
-    // {
-    //     - randomPause == true:
-    //        {debug: randomPause è uguale a vero {randomPause} per cui skippo}
-    //         ->->
-    //}
 
     {//se ho raggiunto il tempo trigger, resetto il valore, e poi vado avanti.
         - changeLocationTimer >= changeLocationTrigger:
@@ -294,117 +268,7 @@
     
     ->->
     
-    
-    
-
-    
-//Vecchia versione commentata    
-    
-    //{//se ho raggiunto il tempo trigger, resetto il valore, metto la mentore tra le randomizzabili, e poi vado avanti.
-        //- changeLocationTimer == changeLocationTrigger:
-           //~ changeLocationTimer = 0
-           // ~ randomizable_characters += Mentor
-            //{debug: <i> Il valore del Timer è {changeLocationTimer} e quindi randomizzo il luogo.}
-            //{   
-                
-                //- fourthTier == true:
-                    //-> randomizer_fourth_tier
-                //- thirdTier == true:
-                    //-> randomizer_third_tier
-                //- secondTier == true:
-                    //-> randomizer_second_tier
-                //- firstTier == true:
-                    //-> randomizer_first_tier
-            //}
-        //altrimenti, aumento il valore e skippo
-        //- else:
-        //{debug: <i>il valore del Timer è {changeLocationTimer} e quindi lo aumento.}
-            //~ changeLocationTimer ++
-            //->->
-
-    //}
-
-//=== randomizer_first_tier
-    //= top
-        //~ temp character = LIST_RANDOM(randomizable_characters)
-        //~ temp location = LIST_RANDOM(firstTierPlaces)
-        //~ move_entity(character, location)
-        //~ randomizable_characters -= character
-    
-        //{debug: <i> {character} si trova in {location}.}
-        
-        //{
-        //    - randomizable_characters != ():
-        //        -> top
-       //     - else:
-        //        ->->
-        //}
-        
-    //{debug:<i> {character} è stato spostato in {location}.}
-
-//=== randomizer_second_tier
-    //= top
-       // ~ temp character = LIST_RANDOM(randomizable_characters)
-       // ~ temp location = LIST_RANDOM(secondTierPlaces)
-        //~ move_entity(character, location)
-        //~ randomizable_characters -= character    
-        //
-        //{debug: <i>{character} si trova in {location}.}       
-        //
-        //{
-        //    - randomizable_characters != ():
-        //        -> top
-        //    - else:
-        //        ->->
-        //}
-
-    //{debug: <i>{character} è stato spostato in {location}.}
-    //->->
-
-//=== randomizer_third_tier
-   // = top
-       // ~ temp character = LIST_RANDOM(randomizable_characters)
-       // ~ temp location = LIST_RANDOM(thirdTierPlaces)
-       // ~ move_entity(character, location)
-       // ~ randomizable_characters -= character
-       // 
-       // {debug: <i>{character} si trova in {location}.}
-       // 
-       // {
-      //      - randomizable_characters != ():
-      //          -> top
-      //      - else:
-       //         ->->
-      //  }
-      //  
-     //   {debug: <i>{character} è stato spostato in {location}.}
-    //
-
-      //  ->->
-    
-//=== randomizer_fourth_tier
-        //= top
-        //~ temp character = LIST_RANDOM(randomizable_characters)
-       // ~ temp location = LIST_RANDOM(firstTierPlaces)
-       // ~ move_entity(character, location)
-       // ~ randomizable_characters -= character
-      //  
-      //  {debug: <i> {character} si trova in {location}.}
-      //  
-       // {
-      //      - randomizable_characters != ():
-      //          -> top
-       //     - else:
-      //          ->->
-      //  }
-     //   
-       // {debug:<i> {character} è stato spostato in {location}.}
-//
-      // ->->
-
-
-
-
+ 
 /* ---------------------------------
 
    Aggiornamenti di stato durante gli spostamenti 
@@ -431,7 +295,7 @@
     //Gestione della cucina delle PNG
         //Chitarra
         
-        //Chitarra inizia a cucinare se abbiamo cucinato almeno una volta.
+            //Chitarra inizia a cucinare se abbiamo cucinato almeno una volta.
             {
                 - (cooking_with_first_char or cooking_with_second_char) && (not first_char_cooking_tracker):
                         ~ firstIsCooking = true

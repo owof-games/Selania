@@ -15,7 +15,7 @@
 
 //Tracciamento della relazione
     VAR secondCharStateRelationship = 0
-
+    VAR goodPercentageForRelationship = 66
 
 //Tracciamento del dono
     VAR secondGift = ()
@@ -33,7 +33,7 @@
         VAR SecondKitchenInvite = false    
     
 //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
-    VAR secondStoryQuestCount = 0
+    VAR secondStoryQuestCount = 0.00
     VAR secondCharacterSpecialEvent = false
     VAR justTalkedSecondChar = false
 
@@ -68,39 +68,39 @@
 //Per il secondo personaggio la cosa che conta è coerenza. Ha bisogno di stabilità. A manoni la logica sarà: tengo conto di un counter delle domande a cui ha risposto la giocatrice e se un determinato valore è >= di counter - x allora ++, se >= counter -x-1 allora +. Probabilmente da bilanciare.
 
     //In questa prima fase di testing, punterò su una soluzione di difficoltà media.
-    {
-
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2):
-            ~ secondCharStateRelationship ++
-        {debug: aumento l'inchiostro del secondo personaggio di un livello. Ora è a {~ secondCharStateRelationship}}    
-    }
+    //L'obbiettivo è: beccare almeno il 66% delle risposte.
+    //Invece di complicarmi la vita posso usare la matematica.
     
-    //La soluzione più tosta potrebbe essere questa invece.
-    //{
-    //    - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - //1):
-    //        ~ secondCharStateRelationship ++
-    //            ->->     
-    //}
+    ~ temp 66percentValue = ((secondStoryQuestCount/100)*goodPercentageForRelationship)
     
-    
-    {
-        //Se vengo dalla preriscrittura:
-        - main_story_second_character.statement.rewriting:
-            {debug: ho cliccato rewriting e quindi faccio gli ultimi passaggi e attivo il feedback.} 
-            //"Trasformo" la relazione in inchiostro
-                ~ fromRelationshipToInk(secondCharStateRelationship)
-            // Mando ai feedback
-                -> secondAffinityFeedback ->
-            //Arriva il commento della strega
-                ~ inkLevel(secondCharacterInkLevel)
-                ->-> 
+        {debug: La percentuale di risposte coerenti per una buona relazione è di {goodPercentageForRelationship }. Il {goodPercentageForRelationship}% di {secondStoryQuestCount} è {66percentValue}.}
         
-        // altrimenti, mando avanti
-        - else:
-            ->->
-    }
+        {
+            - secondPurple or secondGreen or secondRed or secondBlue or secondYellow > 66percentValue:
+                    ~ secondCharStateRelationship ++
+                {debug: aumento l'inchiostro del secondo personaggio di un livello. Ora è a {~ secondCharStateRelationship}}
+        }    
 
-        ->->
+    
+    
+        {
+            //Se vengo dalla preriscrittura:
+            - main_story_second_character.statement.rewriting:
+                {debug: ho cliccato rewriting e quindi faccio gli ultimi passaggi e attivo il feedback.} 
+                //"Trasformo" la relazione in inchiostro
+                    ~ fromRelationshipToInk(secondCharStateRelationship)
+                // Mando ai feedback
+                    -> secondAffinityFeedback ->
+                //Arriva il commento della strega
+                    ~ inkLevel(secondCharacterInkLevel)
+                    ->-> 
+            
+            // altrimenti, mando avanti
+            - else:
+                ->->
+        }
+    
+            ->->
 
 
 

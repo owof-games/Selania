@@ -379,7 +379,11 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
 
     
             //La chiusura è comune, sempre per ridurre il rischio di errori
-            = close   
+            = close
+                //Per riccio devo aumentare il valore di tre, perché ho compiuto tre scelte, e mi serve per il calcolo dell'affinità
+                    ~ secondStoryQuestCount ++
+                    ~ secondStoryQuestCount ++
+                    ~ secondStoryQuestCount ++
                 -> recipe_name_creator ->
                 -> at_table_with_second_char
 
@@ -388,7 +392,7 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
 Passo alla scena al tavolo con Riccio
 
 
--> ending_cooking_with_second_char
+    -> ending_cooking_with_second_char
 
 
 
