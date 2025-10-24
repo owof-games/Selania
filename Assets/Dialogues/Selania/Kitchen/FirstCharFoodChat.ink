@@ -439,20 +439,25 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
     
         
     = relationship_feedback
-    Qui abbiamo un feedback sulla relazione. Per sopravvivenza personale, ignorerei il dono, e ci concentriamo sulla comunicazione.
-        -> firstAffinityCalc ->
-    {
-        - firstCharStateRelationship == 0: Non ci stiamo pigliando 
-        - firstCharStateRelationship == 1: Ci piacciamo
-        - firstCharStateRelationship == 2: Ci piacciamo tantissimo
-
-    
-    }
-    
-    
-    
-    
-        -> ending_cooking_with_first_char
+        Qui abbiamo un feedback sulla relazione. Per sopravvivenza personale, ignorerei il dono, e ci concentriamo sulla comunicazione.
+            -> firstAffinityCalc ->
+            {
+                - firstAffinityCalc == 1:
+                    {
+                        - firstCharStateRelationship == 0: Non ci stiamo pigliando 
+                        - firstCharStateRelationship == 1: Ci piacciamo
+                    }
+                    
+                - firstAffinityCalc == 2:
+                    {
+                        - firstCharStateRelationship == 0: Mi stai sul culo
+                        - firstCharStateRelationship == 1: Non male but
+                        - firstCharStateRelationship == 2: Ci piacciamo tantissimo
+                    }    
+        
+            }
+            
+            -> ending_cooking_with_first_char
             
         
 === ending_cooking_with_first_char

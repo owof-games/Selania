@@ -1144,72 +1144,59 @@
         
         
     
-    Ho capito una cosa su di noi, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+    C'è una cosa che voglio dirti, {name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
 
-        {
-            -   are_two_entities_together(Mentor, PG):Sicuro è il caso che vi lasci il vostro spazio.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurryl
-                    ~ change_entity_place(Mentor)
-        }
-        {
-            -   are_two_entities_together(SecondCharacter, PG):Nanetto, ci lasceresti un po' da sole?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
-                    ~ change_entity_place(SecondCharacter)
-        }  
+            {
+                -   are_two_entities_together(Mentor, PG):Sicuro è il caso che vi lasci il vostro spazio.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurryl
+                        ~ change_entity_place(Mentor)
+            }
+            {
+                -   are_two_entities_together(SecondCharacter, PG):Nanetto, ci lasceresti un po' da sole?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
+                        ~ change_entity_place(SecondCharacter)
+            }  
         
-        //Aggiorno per l'ultima volta lo stato relazionale
-            -> firstAffinityCalc ->
-            
-        //"Trasformo" la relazione in inchiostro
-            ~ fromRelationshipToInk(firstCharStateRelationship)
-  
-        //Ci viene detto cosa pensa della relazione con noi
-            -> firstAffinityFeedback ->
-            
-        //Arriva il commento della strega
-             ~ inkLevel(firstCharacterInkLevel)  
-            
+    Credo di aver capito perché il mio nome qui è {charNameOne}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+    Penso al Ghiberti.
+    Penso all3 am3.
+    Penso alla mia famiglia.
+    Non so se l'hai visto, ma tutta questa roba mi fa pressione.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
+    Tutte le persone che conosco mi stanno chiedendo di fare una scelta, di decidere che cosa fare da grande.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
+    Ma sinceramente, {name}?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+    Mi cago addosso all'idea di fare una scelta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
+     Perché una scelta chiude strade.
+     Perché una scelta delude persone.
+     Perché una scelta può portarti in luoghi che non sono per te.
+     Ma a quel punto, non si può più tornare indietro.
+     E così l'unica cosa che rimane è rinunciare.
+     Lasciare che le altre persone scelgano per te.
+     O che lo faccia il mondo.
+     Ecco perché mi chiamo {charNameOne}: perché rimango nel medio, nella cosa più ovvia e cringe.
+     @animation:RewriterBook
+     E lascio che le cose accadano.
+        ~ growing ++
 
-        
 
-        Comunque: credo di aver capito perché il mio nome qui è {charNameOne}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-        Penso al Ghiberti.
-        Penso all3 am3.
-        Penso alla mia famiglia.
-        Non so se l'hai visto, ma tutta questa roba mi fa pressione.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
-        Tutte le persone che conosco mi stanno chiedendo di fare una scelta, di decidere che cosa fare da grande.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
-        Ma sinceramente, {name}?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-        Mi cago addosso all'idea di fare una scelta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
-         Perché una scelta chiude strade.
-         Perché una scelta delude persone.
-         Perché una scelta può portarti in luoghi che non sono per te.
-         Ma a quel punto, non si può più tornare indietro.
-         E così l'unica cosa che rimane è rinunciare.
-         Lasciare che le altre persone scelgano per te.
-         O che lo faccia il mondo.
-         Ecco perché mi chiamo {charNameOne}: perché rimango nel medio, nella cosa più ovvia e cringe.
-         @animation:RewriterBook
-         E lascio che le cose accadano.
-            ~ growing ++
-
-    
-            + [Credo di sapere come aiutarti.]
-                -> statement
-            + [Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.]
-                -> main
+        + [Credo di sapere come aiutarti.]
+            -> statement
+        + [Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.]
+            -> main
 
 
     = statement
     ~ temp charNameOne = translator(firstCharacterState)
-
- 
-        + [<i>Voglio cominciare la riscrittura.]
+    
+        + (rewriting)[<i>Voglio cominciare la riscrittura.]
+            //Avvio aggiornamento relazione + commento PNG + commento strega
+                -> firstAffinityCalc ->
             //Vado ad aggiornare temporaneamente il nome prima di cominciare
-            -> firstNaming ->
-            {
-                - firstCharacterInkLevel == Empty:
-                    -> ending
-                - else: 
-                    -> one
-            } 
+                -> firstNaming ->
+                {
+                    - firstCharacterInkLevel == Empty:
+                        -> ending
+                    - else: 
+                        -> one
+                } 
+        
         + [<i>Mi prendo un po' di tempo per pensare.]
             -> main
 
