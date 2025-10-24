@@ -1186,8 +1186,14 @@
     ~ temp charNameOne = translator(firstCharacterState)
     
         + (rewriting)[<i>Voglio cominciare la riscrittura.]
-            //Avvio aggiornamento relazione + commento PNG + commento strega
+            //Valuto lo stato della relazione 
                 -> firstAffinityCalc ->
+            //"Trasformo" la relazione in inchiostro
+                ~ fromRelationshipToInk(firstCharStateRelationship)
+            // Mando ai feedback
+                -> firstAffinityFeedback ->
+            //Arriva il commento della strega
+                ~ inkLevel(firstCharacterInkLevel)
             //Vado ad aggiornare temporaneamente il nome prima di cominciare
                 -> firstNaming ->
                 {
