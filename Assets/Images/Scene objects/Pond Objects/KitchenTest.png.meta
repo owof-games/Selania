@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 7fe9050b481c47f4c8f19fb4a5c72372
+guid: a39a439d14b8824418b02e6810d6a158
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2554838801408216344
-    second: FromGreenhouseMiddlePathToNothing_0
+      213: -661313782125179058
+    second: KitchenTest_0
+  - first:
+      213: 6628049520842823524
+    second: KitchenTest_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FromGreenhouseMiddlePathToNothing_0
+      name: KitchenTest_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 15
-        width: 97
-        height: 155
+        x: 4
+        y: 19
+        width: 90
+        height: 97
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81d42509a5c947320800000000000000
-      internalID: 2554838801408216344
+      spriteID: e4fcb537e9a82d6f0800000000000000
+      internalID: -661313782125179058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KitchenTest_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 4
+        width: 104
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 467d88b1cef8bfb50800000000000000
+      internalID: 6628049520842823524
       vertices: []
       indices: 
       edges: []
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FromGreenhouseMiddlePathToNothing_0: 2554838801408216344
+      KitchenTest_0: -661313782125179058
+      KitchenTest_1: 6628049520842823524
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
