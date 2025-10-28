@@ -7,7 +7,8 @@
 === cooking_with_first_char
     -> storage_colors(FirstCharacter)->
     
-Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di 
+Iniziamo proponendo a Chitarra di parlare di un tema.
+Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le condizioni saranno valide (sostanzialmente: se almeno una volta abbiamo parlato di quel tema).
 
     + {knowing_first_character.one}[Tema Uno]
         -> first_theme
@@ -20,8 +21,9 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
 
     
     = first_theme
+        Il tema scelto è il numero uno.
         Chitarra parla.
-        Io dico una di queste cinque cose.
+        Possiamo fare una di queste cinque scelte.
             + [Scelta blu]
                 ~ firstBlue ++
                
@@ -37,9 +39,8 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
             + [Scelta viola]
                 ~ firstPurple ++
             -    
-        Chitarra mi chiede una cosa, e rispondo con un ingrediente.
-        Qui per ora ragiono solo per la parte cucina, non per la parte libro
-        Step uno: sostantivi
+        A questo punto è chitarra a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.
+        Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).
             + [Sostantivo A]
                 ~ recipeNoun = "Sostantivo A"
                
@@ -56,8 +57,8 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
                 ~ recipeNoun = "Sostantivo E"
             -  
         Chitarra commenta.
-        Chitarra dice un'altra cosa sul suo tema.
-        Io dico una di queste cinque cose.
+        Chitarra dice un'altra cosa sul tema che stiamo esplorando.
+        Noi rispondiamo una di queste cinque cose.
             + [Scelta blu]
                 ~ firstBlue ++
                
@@ -73,9 +74,8 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
             + [Scelta viola]
                 ~ firstPurple ++
             -
-        
-        Chitarra mi chiede un'altra cosa, e rispondo con un ingrediente.
-        Step due: aggettivi
+        Chitarra allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.
+        Step due: aggettivi (es: saporito, triste, colorato).
             + [Aggettivo A]
                 ~ recipeAdjective = "Aggettivo A"
                
@@ -93,8 +93,8 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
             -      
     
         Chitarra commenta.
-        Chitarra dice un'altra cosa sul suo tema.
-        Io dico una di queste cinque cose.
+        Chitarra condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.
+        Noi diciamo per la terza volta qualcosa legato a quel tema.
             + [Scelta blu]
                 ~ firstBlue ++
                
@@ -111,8 +111,8 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
                 ~ firstPurple ++
             -
         
-        Chitarra mi chiede un'altra cosa, e rispondo con un ingrediente.
-        Step tre: complementi
+        Chitarra ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.
+        Step tre: complementi (es: del campo, per rimbecco, di coriandolo)
             + [Complemento A]
                 ~ recipeComplement = "Complemento A"
                
@@ -128,14 +128,14 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
             + [Complemento E]
                 ~ recipeComplement = "Complemento E"
             -  
-        Chitarra commenta.
-        Chitarra mi dice se il piatto è pronto.
+        Chitarra lascia un ultimo commento, e poi ci dice che il piatto è pronto
             -> fourth_ingredient_dispatcher
             
     
     = second_theme
-            Chitarra parla.
-        Io dico una di queste cinque cose.
+        Il tema scelto è il numero due.
+        Chitarra parla.
+        Possiamo fare una di queste cinque scelte.
             + [Scelta blu]
                 ~ firstBlue ++
                
@@ -151,9 +151,8 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
             + [Scelta viola]
                 ~ firstPurple ++
             -    
-        Chitarra mi chiede una cosa, e rispondo con un ingrediente.
-        Qui per ora ragiono solo per la parte cucina, non per la parte libro
-        Step uno: sostantivi
+        A questo punto è chitarra a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.
+        Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).
             + [Sostantivo A]
                 ~ recipeNoun = "Sostantivo A"
                
@@ -170,8 +169,8 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
                 ~ recipeNoun = "Sostantivo E"
             -  
         Chitarra commenta.
-        Chitarra dice un'altra cosa sul suo tema.
-        Io dico una di queste cinque cose.
+        Chitarra dice un'altra cosa sul tema che stiamo esplorando.
+        Noi rispondiamo una di queste cinque cose.
             + [Scelta blu]
                 ~ firstBlue ++
                
@@ -187,9 +186,8 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
             + [Scelta viola]
                 ~ firstPurple ++
             -
-        
-        Chitarra mi chiede un'altra cosa, e rispondo con un ingrediente.
-        Step due: aggettivi
+        Chitarra allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.
+        Step due: aggettivi (es: saporito, triste, colorato).
             + [Aggettivo A]
                 ~ recipeAdjective = "Aggettivo A"
                
@@ -207,8 +205,8 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
             -      
     
         Chitarra commenta.
-        Chitarra dice un'altra cosa sul suo tema.
-        Io dico una di queste cinque cose.
+        Chitarra condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.
+        Noi diciamo per la terza volta qualcosa legato a quel tema.
             + [Scelta blu]
                 ~ firstBlue ++
                
@@ -225,8 +223,8 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
                 ~ firstPurple ++
             -
         
-        Chitarra mi chiede un'altra cosa, e rispondo con un ingrediente.
-        Step tre: complementi
+        Chitarra ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.
+        Step tre: complementi (es: del campo, per rimbecco, di coriandolo)
             + [Complemento A]
                 ~ recipeComplement = "Complemento A"
                
@@ -242,15 +240,15 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
             + [Complemento E]
                 ~ recipeComplement = "Complemento E"
             -  
-        Chitarra commenta.
-        Chitarra mi dice se il piatto è pronto.
+        Chitarra lascia un ultimo commento, e poi ci dice che il piatto è pronto
             -> fourth_ingredient_dispatcher
                 
                 
     
     = third_theme
-            Chitarra parla.
-        Io dico una di queste cinque cose.
+        Il tema scelto è il numero tre.
+        Chitarra parla.
+        Possiamo fare una di queste cinque scelte.
             + [Scelta blu]
                 ~ firstBlue ++
                
@@ -266,27 +264,26 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
             + [Scelta viola]
                 ~ firstPurple ++
             -    
-        Chitarra mi chiede una cosa, e rispondo con un ingrediente.
-        Qui per ora ragiono solo per la parte cucina, non per la parte libro
-        Step uno: sostantivi
-            + (SostantivoA)[Sostantivo A]
+        A questo punto è chitarra a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.
+        Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).
+            + [Sostantivo A]
                 ~ recipeNoun = "Sostantivo A"
                
-            + (SostantivoB)[Sostantivo B]
+            + [Sostantivo B]
                 ~ recipeNoun = "Sostantivo B"
              
-            + (SostantivoC)[Sostantivo C]
+            + [Sostantivo C]
                ~ recipeNoun = "Sostantivo C"
         
-            + (SostantivoD)[Sostantivo D]
+            + [Sostantivo D]
                 ~ recipeNoun = "Sostantivo D"
     
-            + (SostantivoE)[Sostantivo E]
+            + [Sostantivo E]
                 ~ recipeNoun = "Sostantivo E"
             -  
         Chitarra commenta.
-        Chitarra dice un'altra cosa sul suo tema.
-        Io dico una di queste cinque cose.
+        Chitarra dice un'altra cosa sul tema che stiamo esplorando.
+        Noi rispondiamo una di queste cinque cose.
             + [Scelta blu]
                 ~ firstBlue ++
                
@@ -302,9 +299,8 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
             + [Scelta viola]
                 ~ firstPurple ++
             -
-        
-        Chitarra mi chiede un'altra cosa, e rispondo con un ingrediente.
-        Step due: aggettivi
+        Chitarra allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.
+        Step due: aggettivi (es: saporito, triste, colorato).
             + [Aggettivo A]
                 ~ recipeAdjective = "Aggettivo A"
                
@@ -322,8 +318,8 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
             -      
     
         Chitarra commenta.
-        Chitarra dice un'altra cosa sul suo tema.
-        Io dico una di queste cinque cose.
+        Chitarra condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.
+        Noi diciamo per la terza volta qualcosa legato a quel tema.
             + [Scelta blu]
                 ~ firstBlue ++
                
@@ -340,8 +336,8 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
                 ~ firstPurple ++
             -
         
-        Chitarra mi chiede un'altra cosa, e rispondo con un ingrediente.
-        Step tre: complementi
+        Chitarra ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.
+        Step tre: complementi (es: del campo, per rimbecco, di coriandolo)
             + [Complemento A]
                 ~ recipeComplement = "Complemento A"
                
@@ -357,10 +353,8 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
             + [Complemento E]
                 ~ recipeComplement = "Complemento E"
             -  
-        Chitarra commenta.
-        Chitarra mi dice se il piatto è pronto.
-        
-                -> fourth_ingredient_dispatcher
+        Chitarra lascia un ultimo commento, e poi ci dice che il piatto è pronto
+            -> fourth_ingredient_dispatcher
     
     
             //La chiusura è comune, sempre per ridurre il rischio di errori
@@ -375,23 +369,23 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
                 }
             
                 = add_ingredient
-                Vuoi aggiungere un ingrediente extra?
-                
-                    + Non voglio aggiungere un ingrediente extra.
-                        ~ recipePP = "semplice"
-                        
-                    + Voglio aggiungere un ingrediente extra.
-                        -> extra_ingredient_management(FirstCharacter)->
-                    -
+                    Dato che il nostro inventario contiene degli oggetti, possiamo inserirne uno nel piatto.
                     
-            Chitarra ci dice di andare a tavola
-                -> recipe_name_creator ->
-                -> at_table_with_first_char
+                        + Non voglio aggiungere un ingrediente extra.
+                            ~ recipePP = "semplice"
+                            
+                        + Voglio aggiungere un ingrediente extra.
+                            -> extra_ingredient_management(FirstCharacter)->
+                        -
+                        
+                    Chitarra ci dice che possiamo mangiare.
+                        -> recipe_name_creator ->
+                        -> at_table_with_first_char
 
 
 
 === at_table_with_first_char
-    Passo alla scena al tavolo con Chitarra
+    Passiamo alla scena al tavolo con Chitarra#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
     Buono questo {tempRecipeName}!
     //Commento ricetta
     Quando prima hai aggiunto {recipeNoun} mi hai ricordato una cosa.
@@ -400,8 +394,8 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
                 - fourthIngredientReactionFirstCharacter != notReaction:
                     -> extra_ing_feedback
             }
-        
-    Comunque, ottimo piatto!
+    
+    Non abbiamo aggiunto un ingrediente extra, per cui Chitarra ci dice: "Comunque, ottimo piatto!"#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         -> relationship_feedback
     
         
@@ -424,45 +418,46 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
         
         
                 = good_reaction
-                Aggiungere {ingredientTranslator(fourthIngredientNameFirstCharacter)} è stata una scelta.
-                Questo mi piace, questo lo odio.
-                Paragoni tra cibo e desiderio suo.
+                Abbiamo aggiunto un ingrediente extra apprezzato da Chitarra, per cui lei commenta:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                Aggiungere {ingredientTranslator(fourthIngredientNameFirstCharacter)} è stata una scelta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+                E poi ci dà un'informazione utile per capire come gestire le conversazioni in futuro:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                Non prendermi per terrapiattista o che, ma non sono una grande fan delle conversazioni eccessivamente razionali. Mi tarpano la creatività, il piacere.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                 
                     -> relationship_feedback
                 
                 = bad_reaction
-                Aggiungere {ingredientTranslator(fourthIngredientNameFirstCharacter)} è stata una scelta.
-                Tentativo coraggioso, non rifarlo mai più!
-                Paragoni tra cibo e desiderio suo.
-                
+                Abbiamo aggiunto un ingrediente extra detestato da Chitarra, per cui lei commenta:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                Aggiungere {ingredientTranslator(fourthIngredientNameFirstCharacter)} è stata una scelta terrificante, non farlo mai più!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+                E poiché ha odiato l'ingrediente, non ci dirà niente di utile su come gestire le conversazioni future.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+               
                     -> relationship_feedback
             
                 
                 = meh_reaction
-                Aggiungere {ingredientTranslator(fourthIngredientNameFirstCharacter)} è stata una scelta.
-                Discutibile, {name}!
-                Paragoni tra cibo e desiderio suo.
-                meh non negativa comunque, magari meno puntuale di good
+                Abbiamo aggiunto un ingrediente extra che Chitarra percepisce come neutro, né buono né cattivo, per cui lei commenta:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                Aggiungere {ingredientTranslator(fourthIngredientNameFirstCharacter)} è stata una scelta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+                E poi ci dà un'informazione enigmatica per capire come gestire le conversazioni in futuro:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                Informazione enigmatica per dire che non le piacciono le conversazioni razionali.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                 
                     -> relationship_feedback
             
     
         
     = relationship_feedback
-        Qui abbiamo un feedback sulla relazione. Per sopravvivenza personale, ignorerei il dono, e ci concentriamo sulla comunicazione.
+        A prescindere che sia stato aggiunto o meno il quarto ingrediente, Chitarra ci dirà anche finalmente dove sta andando la relazione con lei.
             -> firstAffinityCalc ->
             {
                 - firstAffinityCalc == 1:
                     {
-                        - firstCharStateRelationship == 0: Non ci stiamo pigliando 
-                        - firstCharStateRelationship == 1: Ci piacciamo
+                        - firstCharStateRelationship == 0: Non ci stiamo pigliando.
+                        - firstCharStateRelationship == 1: Ci piacciamo.
                     }
                     
                 - firstAffinityCalc == 2:
                     {
-                        - firstCharStateRelationship == 0: Mi stai sul culo
-                        - firstCharStateRelationship == 1: Non male but
-                        - firstCharStateRelationship == 2: Ci piacciamo tantissimo
+                        - firstCharStateRelationship == 0: Mi stai sul culo.
+                        - firstCharStateRelationship == 1: Non male ma potrebbe migliorare.
+                        - firstCharStateRelationship == 2: Ci piacciamo tantissimo.
                     }    
         
             }
@@ -471,7 +466,7 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
             
         
 === ending_cooking_with_first_char
-Passo alla chiusura del pasto con Chitarra
+E poi ci saluta e se ne va allo stagno.
 
 
    ~ move_entity(FirstCharacter, Pond)
@@ -492,13 +487,14 @@ Passo alla chiusura del pasto con Chitarra
 
 === first_char_cooking_tracker
 //Lo lascio come knot e non come variabile perché potrebbe essermi utile (es: per attivare un suono che faccia sapere che c'è qualcunx in cucina)
-    {debug: passo per first_char_cooking_tracker. }
+    {debug: passo per first_char_cooking_tracker.}
     
     ->->
 
 
 === first_char_cooking_alone
-chitarra cucina da sola
+{debug: passo per first_char_cooking_alone.}
+Chitarra sta cucinando da sola e ci chiede di lasciarla in pace fino a quando non ha finito.
 
 
 
@@ -509,7 +505,8 @@ chitarra cucina da sola
 
 
 === food_gift_first_char
-chitarra attiva il suo storylet dopo aver cucinato
+{debug: passo per food_gift_first_char.}
+Chitarra attiva il suo storylet speciale dopo aver cucinato da sola.
 
 
 

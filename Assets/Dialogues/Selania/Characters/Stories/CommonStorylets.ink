@@ -138,27 +138,27 @@
 
 
 === open_the_kitchen
-Dialogo allo stagno
-Apriamo la cucina
-
-    -> opening_places ->
-    -> main
+    Dialogo allo stagno.
+    Chitarra ci apre la cucina.
+    
+        -> opening_places ->
+        -> main
 
 
 === open_nest
-Dialogo in biblioteca
-Apriamo il terzo luogo
-
-    -> opening_places ->
-    -> main
+    Dialogo in biblioteca.
+    Ci viene aperto il nido.
+    
+        -> opening_places ->
+        -> main
     
 === open_the_library
-Dialogo nella foresta
-Apriamo la biblioteca
-
-    -> opening_places ->
-    -> main
+    Dialogo nella foresta.
+    Ci viene aperta la biblioteca.
     
+        -> opening_places ->
+        -> main
+        
 === mentor_rage
 Mentore sbrocca
     -> main

@@ -7,7 +7,8 @@
 === cooking_with_second_char
     -> storage_colors(SecondCharacter)->
     
-Ehi Riccio, che ne dici se mentre cuciniamo parliamo di 
+Iniziamo proponendo a Riccio di parlare di un tema.
+Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le condizioni saranno valide (sostanzialmente: se almeno una volta abbiamo parlato di quel tema).
 
     + {knowing_second_character.one}[Tema Uno]
         -> first_theme
@@ -20,8 +21,9 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
 
     
     = first_theme
+        Il tema scelto è il numero uno.
         Riccio parla.
-        Io dico una di queste cinque cose.
+        Possiamo fare una di queste cinque scelte.
             + [Scelta blu]
                 ~ secondBlue ++
                
@@ -37,9 +39,8 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
             + [Scelta viola]
                 ~ secondPurple ++
             -    
-        Riccio mi chiede una cosa, e rispondo con un ingrediente.
-        Qui per ora ragiono solo per la parte cucina, non per la parte libro
-        Step uno: sostantivi
+        A questo punto è Riccio a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.
+        Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).
             + [Sostantivo A]
                 ~ recipeNoun = "Sostantivo A"
                
@@ -56,8 +57,8 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
                 ~ recipeNoun = "Sostantivo E"
             -  
         Riccio commenta.
-        Riccio dice un'altra cosa sul suo tema.
-        Io dico una di queste cinque cose.
+        Riccio dice un'altra cosa sul tema che stiamo esplorando.
+        Noi rispondiamo una di queste cinque cose.
             + [Scelta blu]
                 ~ secondBlue ++
                
@@ -73,9 +74,8 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
             + [Scelta viola]
                 ~ secondPurple ++
             -
-        
-        Riccio mi chiede un'altra cosa, e rispondo con un ingrediente.
-        Step due: aggettivi
+        Riccio allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.
+        Step due: aggettivi (es: saporito, triste, colorato).
             + [Aggettivo A]
                 ~ recipeAdjective = "Aggettivo A"
                
@@ -93,8 +93,8 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
             -      
     
         Riccio commenta.
-        Riccio dice un'altra cosa sul suo tema.
-        Io dico una di queste cinque cose.
+        Riccio condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.
+        Noi diciamo per la terza volta qualcosa legato a quel tema.
             + [Scelta blu]
                 ~ secondBlue ++
                
@@ -111,8 +111,8 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
                 ~ secondPurple ++
             -
         
-        Riccio mi chiede un'altra cosa, e rispondo con un ingrediente.
-        Step tre: complementi
+        Riccio ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.
+        Step tre: complementi (es: del campo, per rimbecco, di coriandolo)
             + [Complemento A]
                 ~ recipeComplement = "Complemento A"
                
@@ -128,13 +128,13 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
             + [Complemento E]
                 ~ recipeComplement = "Complemento E"
             -  
-        Riccio commenta.
-        Riccio mi dice se il piatto è pronto.
+        Riccio lascia un ultimo commento, e poi ci dice che il piatto è pronto
             -> fourth_ingredient_dispatcher
     
     = second_theme
+         Il tema scelto è il numero uno.
         Riccio parla.
-        Io dico una di queste cinque cose.
+        Possiamo fare una di queste cinque scelte.
             + [Scelta blu]
                 ~ secondBlue ++
                
@@ -150,9 +150,8 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
             + [Scelta viola]
                 ~ secondPurple ++
             -    
-        Riccio mi chiede una cosa, e rispondo con un ingrediente.
-        Qui per ora ragiono solo per la parte cucina, non per la parte libro
-        Step uno: sostantivi
+        A questo punto è Riccio a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.
+        Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).
             + [Sostantivo A]
                 ~ recipeNoun = "Sostantivo A"
                
@@ -169,8 +168,8 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
                 ~ recipeNoun = "Sostantivo E"
             -  
         Riccio commenta.
-        Riccio dice un'altra cosa sul suo tema.
-        Io dico una di queste cinque cose.
+        Riccio dice un'altra cosa sul tema che stiamo esplorando.
+        Noi rispondiamo una di queste cinque cose.
             + [Scelta blu]
                 ~ secondBlue ++
                
@@ -186,9 +185,8 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
             + [Scelta viola]
                 ~ secondPurple ++
             -
-        
-        Riccio mi chiede un'altra cosa, e rispondo con un ingrediente.
-        Step due: aggettivi
+        Riccio allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.
+        Step due: aggettivi (es: saporito, triste, colorato).
             + [Aggettivo A]
                 ~ recipeAdjective = "Aggettivo A"
                
@@ -206,8 +204,8 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
             -      
     
         Riccio commenta.
-        Riccio dice un'altra cosa sul suo tema.
-        Io dico una di queste cinque cose.
+        Riccio condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.
+        Noi diciamo per la terza volta qualcosa legato a quel tema.
             + [Scelta blu]
                 ~ secondBlue ++
                
@@ -224,8 +222,8 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
                 ~ secondPurple ++
             -
         
-        Riccio mi chiede un'altra cosa, e rispondo con un ingrediente.
-        Step tre: complementi
+        Riccio ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.
+        Step tre: complementi (es: del campo, per rimbecco, di coriandolo)
             + [Complemento A]
                 ~ recipeComplement = "Complemento A"
                
@@ -241,14 +239,14 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
             + [Complemento E]
                 ~ recipeComplement = "Complemento E"
             -  
-        Riccio commenta.
-        Riccio mi dice se il piatto è pronto.
+        Riccio lascia un ultimo commento, e poi ci dice che il piatto è pronto
             -> fourth_ingredient_dispatcher
     
     
     = third_theme
+         Il tema scelto è il numero uno.
         Riccio parla.
-        Io dico una di queste cinque cose.
+        Possiamo fare una di queste cinque scelte.
             + [Scelta blu]
                 ~ secondBlue ++
                
@@ -264,9 +262,8 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
             + [Scelta viola]
                 ~ secondPurple ++
             -    
-        Riccio mi chiede una cosa, e rispondo con un ingrediente.
-        Qui per ora ragiono solo per la parte cucina, non per la parte libro
-        Step uno: sostantivi
+        A questo punto è Riccio a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.
+        Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).
             + [Sostantivo A]
                 ~ recipeNoun = "Sostantivo A"
                
@@ -283,8 +280,8 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
                 ~ recipeNoun = "Sostantivo E"
             -  
         Riccio commenta.
-        Riccio dice un'altra cosa sul suo tema.
-        Io dico una di queste cinque cose.
+        Riccio dice un'altra cosa sul tema che stiamo esplorando.
+        Noi rispondiamo una di queste cinque cose.
             + [Scelta blu]
                 ~ secondBlue ++
                
@@ -300,9 +297,8 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
             + [Scelta viola]
                 ~ secondPurple ++
             -
-        
-        Riccio mi chiede un'altra cosa, e rispondo con un ingrediente.
-        Step due: aggettivi
+        Riccio allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.
+        Step due: aggettivi (es: saporito, triste, colorato).
             + [Aggettivo A]
                 ~ recipeAdjective = "Aggettivo A"
                
@@ -320,8 +316,8 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
             -      
     
         Riccio commenta.
-        Riccio dice un'altra cosa sul suo tema.
-        Io dico una di queste cinque cose.
+        Riccio condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.
+        Noi diciamo per la terza volta qualcosa legato a quel tema.
             + [Scelta blu]
                 ~ secondBlue ++
                
@@ -338,8 +334,8 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
                 ~ secondPurple ++
             -
         
-        Riccio mi chiede un'altra cosa, e rispondo con un ingrediente.
-        Step tre: complementi
+        Riccio ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.
+        Step tre: complementi (es: del campo, per rimbecco, di coriandolo)
             + [Complemento A]
                 ~ recipeComplement = "Complemento A"
                
@@ -355,8 +351,7 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
             + [Complemento E]
                 ~ recipeComplement = "Complemento E"
             -  
-        Riccio commenta.
-        Riccio mi dice se il piatto è pronto.
+        Riccio lascia un ultimo commento, e poi ci dice che il piatto è pronto
             -> fourth_ingredient_dispatcher
     
 
@@ -374,7 +369,7 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
                 }
             
                 = add_ingredient
-                Vuoi aggiungere un ingrediente extra?
+                Dato che il nostro inventario contiene degli oggetti, possiamo inserirne uno nel piatto.
                 
                     + Non voglio aggiungere un ingrediente extra.
                         ~ recipePP = "semplice"
@@ -395,7 +390,7 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
 
 
 == at_table_with_second_char
-    Passo alla scena al tavolo con Riccio
+    Passiamo alla scena al tavolo con Riccio#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
     Buono questo {tempRecipeName}!
     //Commento ricetta
     Quando prima hai aggiunto {recipeNoun} mi hai ricordato una cosa.
@@ -405,7 +400,7 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
                     -> extra_ing_feedback
             }
         
-    Comunque, ottimo piatto!
+    Non abbiamo aggiunto un ingrediente extra, per cui Riccio ci dice: "Comunque, ottimo piatto!"#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         -> relationship_feedback
     
         
@@ -428,32 +423,33 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
         
         
                 = good_reaction
-                Visto che hai aggiunto {ingredientTranslator(fourthIngredientNameSecondCharacter)} è stata una scelta.
-                Questo mi piace, questo lo odio.
-                Paragoni tra cibo e desiderio suo.
+                Abbiamo aggiunto un ingrediente extra apprezzato da Riccio, per cui lei commenta:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                Aggiungere {ingredientTranslator(fourthIngredientNameSecondCharacter)} è stata una scelta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
+                E poi ci dà un'informazione utile per capire come gestire le conversazioni in futuro:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                Non mi piace quando gli adulti non sono coerenti, quando mi dicono le cose secondo quello che gli serve..#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
                 
                     -> relationship_feedback
                 
                 = bad_reaction
-                Visto che hai aggiunto {ingredientTranslator(fourthIngredientNameSecondCharacter)} è stata una scelta.
-                Tentativo coraggioso, non rifarlo mai più!
-                Paragoni tra cibo e desiderio suo.
-                
+                Abbiamo aggiunto un ingrediente extra detestato da Riccio, per cui lei commenta:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                Aggiungere {ingredientTranslator(fourthIngredientNameSecondCharacter)} è stata una scelta terrificante, non farlo mai più!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)} #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
+                E poiché ha odiato l'ingrediente, non ci dirà niente di utile su come gestire le conversazioni future.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+               
                     -> relationship_feedback
             
                 
                 = meh_reaction
-                Visto che hai aggiunto {ingredientTranslator(fourthIngredientNameSecondCharacter)} è stata una scelta.
-                Discutibile, {name}!
-                Paragoni tra cibo e desiderio suo.
-                meh non negativa comunque, magari meno puntuale di good
+                Abbiamo aggiunto un ingrediente extra che Riccio percepisce come neutro, né buono né cattivo, per cui lei commenta:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                Aggiungere {ingredientTranslator(fourthIngredientNameSecondCharacter)} è stata una scelta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
+                E poi ci dà un'informazione enigmatica per capire come gestire le conversazioni in futuro:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                Informazione enigmatica per dire che non gli piacciono le conversazioni incoerenti.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
                 
                     -> relationship_feedback
             
     
         
     = relationship_feedback
-        Qui abbiamo un feedback sulla relazione. Per sopravvivenza personale, ignorerei il dono, e ci concentriamo sulla comunicazione.
+        A prescindere che sia stato aggiunto o meno il quarto ingrediente, Riccio ci dirà anche finalmente dove sta andando la relazione con lui.
             -> secondAffinityCalc ->
             {
                 - secondAffinityCalc == 1:
@@ -465,7 +461,7 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
                 - secondAffinityCalc == 2:
                     {
                         - secondCharStateRelationship == 0: Mi stai sul culo
-                        - secondCharStateRelationship == 1: Non male but
+                        - secondCharStateRelationship == 1: Non male ma potrebbe migliorare.
                         - secondCharStateRelationship == 2: Ci piacciamo tantissimo
                     }    
         
@@ -477,7 +473,7 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
 
 
 === ending_cooking_with_second_char
-Passo alla chiusura del pasto con Riccio
+E poi ci saluta e se ne va allo stagno.
 
 
    ~ move_entity(SecondCharacter, Pond)
@@ -502,7 +498,8 @@ Passo alla chiusura del pasto con Riccio
 
 
 === second_char_cooking_alone
-Riccio cucina da solo.
+{debug: passo per second_char_cooking_alone.}
+Riccio cucina da solo e ci chiede di lasciarlo da solo.
 
 
 
@@ -513,7 +510,8 @@ Riccio cucina da solo.
 
 
 === food_gift_second_char
-Riccio attiva il suo storylet dopo aver cucinato.
+{debug: passo per food_gift_second_char.}
+Riccio attiva il suo storylet speciale dopo aver cucinato da solo.
 
 
 

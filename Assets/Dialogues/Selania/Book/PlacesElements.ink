@@ -81,7 +81,7 @@
 === kitchen_recap
 + {are_two_entities_together(KitchenRecap, PG)} [KitchenRecap]
 ~ enableBigDialogue()
-kitch
+Qui finiranno le ricette una volta compilate (se faccio in tempo per la demo).
 
 -> rewriter_book_with_flow
 
