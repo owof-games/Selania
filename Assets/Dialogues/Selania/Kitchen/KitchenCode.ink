@@ -23,6 +23,10 @@
 
 //Storage temporaneo di altre informazioni
     VAR storageSecondStoryQuestCount = 0
+    
+//Reazioni possibili al quarto ingrediente
+    //Nota: notReaction = non dato
+    LIST fourthIngredientReactions = notReaction, badReaction, mehReaction, goodReaction
 
 === check_kitchen_recap
     
@@ -66,13 +70,13 @@
     {
         - firstRecipe == "":
             {kitchenDebug: il valore di firstRecipe è {firstRecipe} e quindi lo aggiorno.}
-            ~ firstRecipe = tempRecipeName
+                ~ firstRecipe = tempRecipeName
             {kitchenDebug: il valore di firstRecipe ora è {firstRecipe}.}
                 ->->
         - secondRecipe == "":
             {kitchenDebug: il valore di firstRecipe è {firstRecipe} e quindi non lo aggiorno.}
             {kitchenDebug: il valore di secondRecipe è {secondRecipe} e quindi lo aggiorno.}
-            ~ secondRecipe = tempRecipeName
+                ~ secondRecipe = tempRecipeName
             {kitchenDebug: il valore di secondRecipe ora è {secondRecipe}.}
                 ->->
         
@@ -103,11 +107,11 @@
 ->->    
 
 
-=== extra_ingredient_management
+=== extra_ingredient_management(PNG)
 {kitchenDebug: passo per extra_ingredient_management.}
 //Qui gestiremo la parte di ingredienti che possiamo aggiungere, coi relativi effetti
     ~ temp charNameFive = translator(fifthCharacterState)
-    {debug: I doni trovati sono {findedGifts}.}
+    {kitchenDebug: I doni trovati sono {findedGifts}.}
     Aggiungo....
     
 /* ---------------------------------
@@ -115,74 +119,257 @@
             Coltivabili
 
  ----------------------------------*/
+ //badReaction, mehReaction, goodReaction
     + {findedGifts has BaccaDellaAddolorata} [Una bacca della Addolorata.]
         ~ findedGifts -= BaccaDellaAddolorata
-        ~ recipePP = "aggiungere descrizzione participio passato"
+        ~ recipePP = "aggiungere descrizione participio passato"
+            {
+                - PNG == FirstCharacter:
+                    ~ fourthIngredientReactionFirstCharacter = mehReaction
+                    ~ fourthIngredientNameFirstCharacter = BaccaDellaAddolorata
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionFirstCharacter in {fourthIngredientReactionFirstCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameFirstCharacter in {fourthIngredientNameFirstCharacter}.}
+                    
+                - PNG == SecondCharacter:
+                    ~ fourthIngredientReactionSecondCharacter = badReaction
+                    ~ fourthIngredientNameSecondCharacter = BaccaDellaAddolorata
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+            }
             ->->
     
     + {findedGifts has BarbaDellInciampo} [Una spina di Barba dell'Inciampo.]
         ~ findedGifts -= BarbaDellInciampo
-        ~ recipePP = "aggiungere descrizzione participio passato"
+        ~ recipePP = "aggiungere descrizione participio passato"
+            {
+                - PNG == FirstCharacter:
+                    ~ fourthIngredientReactionFirstCharacter = badReaction
+                    ~ fourthIngredientNameFirstCharacter = BarbaDellInciampo
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionFirstCharacter in {fourthIngredientReactionFirstCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameFirstCharacter in {fourthIngredientNameFirstCharacter}.}
+                    
+                - PNG == SecondCharacter:
+                    ~ fourthIngredientReactionSecondCharacter = badReaction
+                    ~ fourthIngredientNameSecondCharacter = BarbaDellInciampo
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+            }
             ->->    
             
     + {findedGifts has BastoneDellOzioso} [Un nodo di Bastone dell'Ozioso.]
         ~ findedGifts -= BastoneDellOzioso
-        ~ recipePP = "aggiungere descrizzione participio passato"
+        ~ recipePP = "aggiungere descrizione participio passato"
+            {
+                - PNG == FirstCharacter:
+                    ~ fourthIngredientReactionFirstCharacter = mehReaction
+                    ~ fourthIngredientNameFirstCharacter = BastoneDellOzioso
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionFirstCharacter in {fourthIngredientReactionFirstCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameFirstCharacter in {fourthIngredientNameFirstCharacter}.}
+                    
+                - PNG == SecondCharacter:
+                    ~ fourthIngredientReactionSecondCharacter = goodReaction
+                    ~ fourthIngredientNameSecondCharacter = BastoneDellOzioso
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+            }
             ->->      
         
     + {findedGifts has BrinaDellImpossibile} [Un frammento di Brina dell'Impossibile.]
         ~ findedGifts -= BrinaDellImpossibile
-        ~ recipePP = "aggiungere descrizzione participio passato"
+        ~ recipePP = "aggiungere descrizione participio passato"
+            {
+                - PNG == FirstCharacter:
+                    ~ fourthIngredientReactionFirstCharacter = badReaction
+                    ~ fourthIngredientNameFirstCharacter = BrinaDellImpossibile
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionFirstCharacter in {fourthIngredientReactionFirstCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameFirstCharacter in {fourthIngredientNameFirstCharacter}.}
+                    
+                - PNG == SecondCharacter:
+                    ~ fourthIngredientReactionSecondCharacter = goodReaction
+                    ~ fourthIngredientNameSecondCharacter = BrinaDellImpossibile
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+            }        
             ->->
     
     + {findedGifts has CantoDelleCompagne} [Una goccia di Canto delle Compagne.]
         ~ findedGifts -= CantoDelleCompagne
-        ~ recipePP = "aggiungere descrizzione participio passato"
+        ~ recipePP = "aggiungere descrizione participio passato"
+            {
+                - PNG == FirstCharacter:
+                    ~ fourthIngredientReactionFirstCharacter = goodReaction
+                    ~ fourthIngredientNameFirstCharacter = CantoDelleCompagne
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionFirstCharacter in {fourthIngredientReactionFirstCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameFirstCharacter in {fourthIngredientNameFirstCharacter}.}
+                    
+                - PNG == SecondCharacter:
+                    ~ fourthIngredientReactionSecondCharacter = badReaction
+                    ~ fourthIngredientNameSecondCharacter = CantoDelleCompagne
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+            }        
             ->->
     
     + {findedGifts has CardoAspinato} [Un ciuffo di peli di Cardo Aspinato.]
         ~ findedGifts -= CardoAspinato
-        ~ recipePP = "aggiungere descrizzione participio passato"
+        ~ recipePP = "aggiungere descrizione participio passato"
+            {
+                - PNG == FirstCharacter:
+                    ~ fourthIngredientReactionFirstCharacter = mehReaction
+                    ~ fourthIngredientNameFirstCharacter = CardoAspinato
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionFirstCharacter in {fourthIngredientReactionFirstCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameFirstCharacter in {fourthIngredientNameFirstCharacter}.}
+                    
+                - PNG == SecondCharacter:
+                    ~ fourthIngredientReactionSecondCharacter = mehReaction
+                    ~ fourthIngredientNameSecondCharacter = CardoAspinato
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+            }        
             ->-> 
             
     + {findedGifts has EderaDelleAmanti} [Una foglia di Edera delle amanti.]
         ~ findedGifts -= EderaDelleAmanti
-        ~ recipePP = "aggiungere descrizzione participio passato"
+        ~ recipePP = "aggiungere descrizione participio passato"
+            {
+                - PNG == FirstCharacter:
+                    ~ fourthIngredientReactionFirstCharacter = badReaction
+                    ~ fourthIngredientNameFirstCharacter = EderaDelleAmanti
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionFirstCharacter in {fourthIngredientReactionFirstCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameFirstCharacter in {fourthIngredientNameFirstCharacter}.}
+                    
+                - PNG == SecondCharacter:
+                    ~ fourthIngredientReactionSecondCharacter = badReaction
+                    ~ fourthIngredientNameSecondCharacter = EderaDelleAmanti
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+            }        
             ->->
             
     + {findedGifts has ErbaLiccia} [Un ricordo di Erba Liccia.]
         ~ findedGifts -= ErbaLiccia
-        ~ recipePP = "aggiungere descrizzione participio passato"
+        ~ recipePP = "aggiungere descrizione participio passato"
+            {
+                - PNG == FirstCharacter:
+                    ~ fourthIngredientReactionFirstCharacter = mehReaction
+                    ~ fourthIngredientNameFirstCharacter = ErbaLiccia
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionFirstCharacter in {fourthIngredientReactionFirstCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameFirstCharacter in {fourthIngredientNameFirstCharacter}.}
+                    
+                - PNG == SecondCharacter:
+                    ~ fourthIngredientReactionSecondCharacter = mehReaction
+                    ~ fourthIngredientNameSecondCharacter = ErbaLiccia
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+            }        
             ->->
         
      + {findedGifts has FalsaPalude} [Un petalo di Falsa Palude.]
         ~ findedGifts -= FalsaPalude
-        ~ recipePP = "aggiungere descrizzione participio passato"
+        ~ recipePP = "aggiungere descrizione participio passato"
+            {
+                - PNG == FirstCharacter:
+                    ~ fourthIngredientReactionFirstCharacter = badReaction
+                    ~ fourthIngredientNameFirstCharacter = FalsaPalude
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionFirstCharacter in {fourthIngredientReactionFirstCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameFirstCharacter in {fourthIngredientNameFirstCharacter}.}
+                    
+                - PNG == SecondCharacter:
+                    ~ fourthIngredientReactionSecondCharacter = badReaction
+                    ~ fourthIngredientNameSecondCharacter = FalsaPalude
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+            }        
             ->->
         
       + {findedGifts has LanaNotturna} [Il calore della Lana Notturna.]
         ~ findedGifts -= LanaNotturna
-        ~ recipePP = "aggiungere descrizzione participio passato"
+        ~ recipePP = "aggiungere descrizione participio passato"
+            {
+                - PNG == FirstCharacter:
+                    ~ fourthIngredientReactionFirstCharacter = goodReaction
+                    ~ fourthIngredientNameFirstCharacter = LanaNotturna
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionFirstCharacter in {fourthIngredientReactionFirstCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameFirstCharacter in {fourthIngredientNameFirstCharacter}.}
+                    
+                - PNG == SecondCharacter:
+                    ~ fourthIngredientReactionSecondCharacter = badReaction
+                    ~ fourthIngredientNameSecondCharacter = LanaNotturna
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+            }        
             ->->
         
     + {findedGifts has LicheneDegliAbissi} [Una traccia dell'odore del Lichene degli Abissi.]
         ~ findedGifts -= LicheneDegliAbissi
-        ~ recipePP = "aggiungere descrizzione participio passato"
+        ~ recipePP = "aggiungere descrizione participio passato"
+            {
+                - PNG == FirstCharacter:
+                    ~ fourthIngredientReactionFirstCharacter = badReaction
+                    ~ fourthIngredientNameFirstCharacter = LicheneDegliAbissi
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionFirstCharacter in {fourthIngredientReactionFirstCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameFirstCharacter in {fourthIngredientNameFirstCharacter}.}
+                    
+                - PNG == SecondCharacter:
+                    ~ fourthIngredientReactionSecondCharacter = badReaction
+                    ~ fourthIngredientNameSecondCharacter = LicheneDegliAbissi
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+            }        
             ->->
     
     + {findedGifts has NonTiScordarDiTe} [L'impronta del Non Ti Scordar di Te.]
         ~ findedGifts -= NonTiScordarDiTe
-        ~ recipePP = "aggiungere descrizzione participio passato"
+        ~ recipePP = "aggiungere descrizione participio passato"
+            {
+                - PNG == FirstCharacter:
+                    ~ fourthIngredientReactionFirstCharacter = goodReaction
+                    ~ fourthIngredientNameFirstCharacter = NonTiScordarDiTe
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionFirstCharacter in {fourthIngredientReactionFirstCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameFirstCharacter in {fourthIngredientNameFirstCharacter}.}
+                    
+                - PNG == SecondCharacter:
+                    ~ fourthIngredientReactionSecondCharacter = goodReaction
+                    ~ fourthIngredientNameSecondCharacter = NonTiScordarDiTe
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+            }        
             ->->      
     
     + {findedGifts has Olobino} [Una cappello di Olobino.]
         ~ findedGifts -= Olobino
-        ~ recipePP = "aggiungere descrizzione participio passato"
+        ~ recipePP = "aggiungere descrizione participio passato"
+            {
+                - PNG == FirstCharacter:
+                    ~ fourthIngredientReactionFirstCharacter = mehReaction
+                    ~ fourthIngredientNameFirstCharacter = Olobino
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionFirstCharacter in {fourthIngredientReactionFirstCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameFirstCharacter in {fourthIngredientNameFirstCharacter}.}
+                    
+                - PNG == SecondCharacter:
+                    ~ fourthIngredientReactionSecondCharacter = badReaction
+                    ~ fourthIngredientNameSecondCharacter = Olobino
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+            }        
             ->->
         
     + {findedGifts has LaSpazzata} [Un rametto della Spezzata.]
         ~ findedGifts -= LaSpazzata
-        ~ recipePP = "aggiungere descrizzione participio passato"
+        ~ recipePP = "aggiungere descrizione participio passato"
+            {
+                - PNG == FirstCharacter:
+                    ~ fourthIngredientReactionFirstCharacter = badReaction
+                    ~ fourthIngredientNameFirstCharacter = LaSpazzata
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionFirstCharacter in {fourthIngredientReactionFirstCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameFirstCharacter in {fourthIngredientNameFirstCharacter}.}
+                    
+                - PNG == SecondCharacter:
+                    ~ fourthIngredientReactionSecondCharacter = mehReaction
+                    ~ fourthIngredientNameSecondCharacter = LaSpazzata
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+            }        
             ->->
 
 

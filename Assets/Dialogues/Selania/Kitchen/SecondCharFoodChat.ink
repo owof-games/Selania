@@ -134,7 +134,7 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
                 ~ recipePP = "semplice"
                 -> close 
             + Voglio aggiungere un ingrediente extra.
-                -> extra_ingredient_management->
+                -> extra_ingredient_management(SecondCharacter)->
                 -> close 
             
     
@@ -253,7 +253,7 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
                 ~ recipePP = "semplice"
                 -> close 
             + Voglio aggiungere un ingrediente extra.
-                -> extra_ingredient_management->
+                -> extra_ingredient_management(SecondCharacter)->
                 -> close 
     
     
@@ -373,7 +373,7 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
                 ~ recipePP = "semplice"
                 -> close 
             + Voglio aggiungere un ingrediente extra.
-                -> extra_ingredient_management->
+                -> extra_ingredient_management(SecondCharacter)->
                 -> close 
     
 
@@ -389,9 +389,83 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
 
 
 == at_table_with_second_char
-Passo alla scena al tavolo con Riccio
-
-
+    Passo alla scena al tavolo con Riccio
+    Buono questo {tempRecipeName}!
+    //Commento ricetta
+    Quando prima hai aggiunto {recipeNoun} mi hai ricordato una cosa.
+    E con {recipeAdjective} un'altra, e con {recipeComplement} un'altra ancora.
+            {
+                - fourthIngredientReactionSecondCharacter != notReaction:
+                    -> extra_ing_feedback
+            }
+        
+    Comunque, ottimo piatto!
+        -> relationship_feedback
+    
+        
+        
+        = extra_ing_feedback
+        // Qui verranno fatti commenti diversi a seconda che l'ingrediente sarà apprezzato o meno.
+            {
+                - fourthIngredientReactionSecondCharacter == goodReaction:
+                    -> good_reaction
+                
+                - fourthIngredientReactionSecondCharacter == badReaction:
+                    -> bad_reaction
+                
+                - fourthIngredientReactionSecondCharacter == mehReaction:
+                    -> meh_reaction
+                
+                - else:
+                    ERROR: non abbiamo un valore valido di fourthIngredientReactionSecondCharacter, che è uguale a {fourthIngredientReactionSecondCharacter}.
+            }
+        
+        
+                = good_reaction
+                Visto che hai aggiunto {ingredientTranslator(fourthIngredientNameSecondCharacter)} è stata una scelta.
+                Questo mi piace, questo lo odio.
+                Paragoni tra cibo e desiderio suo.
+                
+                    -> relationship_feedback
+                
+                = bad_reaction
+                Visto che hai aggiunto {ingredientTranslator(fourthIngredientNameSecondCharacter)} è stata una scelta.
+                Tentativo coraggioso, non rifarlo mai più!
+                Paragoni tra cibo e desiderio suo.
+                
+                    -> relationship_feedback
+            
+                
+                = meh_reaction
+                Visto che hai aggiunto {ingredientTranslator(fourthIngredientNameSecondCharacter)} è stata una scelta.
+                Discutibile, {name}!
+                Paragoni tra cibo e desiderio suo.
+                meh non negativa comunque, magari meno puntuale di good
+                
+                    -> relationship_feedback
+            
+    
+        
+    = relationship_feedback
+        Qui abbiamo un feedback sulla relazione. Per sopravvivenza personale, ignorerei il dono, e ci concentriamo sulla comunicazione.
+            -> secondAffinityCalc ->
+            {
+                - secondAffinityCalc == 1:
+                    {
+                        - secondCharStateRelationship == 0: Non ci stiamo pigliando 
+                        - secondCharStateRelationship == 1: Ci piacciamo
+                    }
+                    
+                - secondAffinityCalc == 2:
+                    {
+                        - secondCharStateRelationship == 0: Mi stai sul culo
+                        - secondCharStateRelationship == 1: Non male but
+                        - secondCharStateRelationship == 2: Ci piacciamo tantissimo
+                    }    
+        
+            }
+            
+            
     -> ending_cooking_with_second_char
 
 

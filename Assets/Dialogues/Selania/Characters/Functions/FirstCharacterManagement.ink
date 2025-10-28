@@ -26,6 +26,9 @@
         VAR firstCookingMaxTime = 8
     //Nostro invito
         VAR FirstKitchenInvite = false
+    //Valore quarto ingrediente
+        VAR fourthIngredientNameFirstCharacter = ()
+        VAR fourthIngredientReactionFirstCharacter = notReaction
     
 
 //Tracciamento del dono

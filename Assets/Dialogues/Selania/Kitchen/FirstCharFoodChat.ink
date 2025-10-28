@@ -134,7 +134,7 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
                 ~ recipePP = "semplice"
                 -> close 
             + Voglio aggiungere un ingrediente extra.
-                -> extra_ingredient_management->
+                -> extra_ingredient_management(FirstCharacter)->
                 -> close 
             
     
@@ -253,7 +253,7 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
                 ~ recipePP = "semplice"
                 -> close 
             + Voglio aggiungere un ingrediente extra.
-                -> extra_ingredient_management->
+                -> extra_ingredient_management(FirstCharacter)->
                 -> close 
                 
                 
@@ -373,7 +373,7 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
                 ~ recipePP = "semplice"
                 -> close 
             + Voglio aggiungere un ingrediente extra.
-                -> extra_ingredient_management->
+                -> extra_ingredient_management(FirstCharacter)->
                 -> close 
     
 
@@ -394,7 +394,7 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
     Quando prima hai aggiunto {recipeNoun} mi hai ricordato una cosa.
     E con {recipeAdjective} un'altra, e con {recipeComplement} un'altra ancora.
             {
-                - recipePP != "":
+                - fourthIngredientReactionFirstCharacter != notReaction:
                     -> extra_ing_feedback
             }
         
@@ -406,33 +406,40 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
         = extra_ing_feedback
         // Qui verranno fatti commenti diversi a seconda che l'ingrediente sarà apprezzato o meno.
             {
-                - recipePP == "AAA" or recipePP == "YYY":
-                    -> good_feedback
+                - fourthIngredientReactionFirstCharacter == goodReaction:
+                    -> good_reaction
                 
-                - recipePP == "XXX" or recipePP == "CCC":
-                    -> bad_feedback
+                - fourthIngredientReactionFirstCharacter == badReaction:
+                    -> bad_reaction
+                
+                - fourthIngredientReactionFirstCharacter == mehReaction:
+                    -> meh_reaction
                 
                 - else:
-                    -> meh_feedback
+                    ERROR: non abbiamo un valore valido di fourthIngredientReactionFirstCharacter, che è uguale a {fourthIngredientReactionFirstCharacter}.
             }
         
         
-                = good_feedback
+                = good_reaction
+                Aggiungere {ingredientTranslator(fourthIngredientNameFirstCharacter)} è stata una scelta.
                 Questo mi piace, questo lo odio.
                 Paragoni tra cibo e desiderio suo.
                 
                     -> relationship_feedback
                 
-                = bad_feedback
+                = bad_reaction
+                Aggiungere {ingredientTranslator(fourthIngredientNameFirstCharacter)} è stata una scelta.
                 Tentativo coraggioso, non rifarlo mai più!
                 Paragoni tra cibo e desiderio suo.
                 
                     -> relationship_feedback
             
                 
-                = meh_feedback
+                = meh_reaction
+                Aggiungere {ingredientTranslator(fourthIngredientNameFirstCharacter)} è stata una scelta.
                 Discutibile, {name}!
                 Paragoni tra cibo e desiderio suo.
+                meh non negativa comunque, magari meno puntuale di good
                 
                     -> relationship_feedback
             

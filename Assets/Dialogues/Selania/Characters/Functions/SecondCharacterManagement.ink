@@ -30,7 +30,10 @@
         //Tempo che ci impiega a fare la sua ricetta
         VAR secondCookingMaxTime = 5
     //Nostro invito
-        VAR SecondKitchenInvite = false    
+        VAR SecondKitchenInvite = false
+    //Valore quarto ingrediente
+        VAR fourthIngredientNameSecondCharacter = ()
+        VAR fourthIngredientReactionSecondCharacter = notReaction    
     
 //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
     VAR secondStoryQuestCount = 0.00
