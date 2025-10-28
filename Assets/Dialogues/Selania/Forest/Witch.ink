@@ -25,6 +25,10 @@
         //Check per intro
         - not intro && ((firstStory == StoryEnded) or (secondStory == StoryEnded) or (thirdStory == StoryEnded)):
             -> intro
+        
+        //Spiegazione del nido
+        - intro && about_nest:
+            -> trully_about_nest
     }
     
     {
@@ -371,6 +375,16 @@
     
     -> main
     
+//Altri storylets
+=== trully_about_nest
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour = translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+        Dove ci viene detto a cosa serve il nido in modo sereno.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+    -> main
+
 === foundLibro
 C'è un libro ai piedi del tronco, e porta il tuo nome.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
