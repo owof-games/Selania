@@ -88,7 +88,7 @@
     
         {
             //Se vengo dalla preriscrittura:
-            - main_story_second_character.statement.rewriting:
+            - rewriting_proposal_second_character.rewriting:
                 {debug: ho cliccato rewriting e quindi faccio gli ultimi passaggi e attivo il feedback.} 
                 //"Trasformo" la relazione in inchiostro
                     ~ fromRelationshipToInk(secondCharStateRelationship)

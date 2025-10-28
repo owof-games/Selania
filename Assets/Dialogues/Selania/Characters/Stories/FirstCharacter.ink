@@ -30,24 +30,30 @@
                     
 === options_first_character
     ~ temp charNameOne = translator(firstCharacterState)
-    {
-        -firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ():
-            -> ask
-        - firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && gifts_and_ink && findedGifts != ():
-            -> ask
-        - first_story_gift.ink_outcome && not main_story_first_character && not questions:
-            -> ask
-        - first_story_gift.ink_outcome && not main_story_first_character && questions:
-            -> ask
-        - first_story_gift.ink_outcome && main_story_first_character:
-            -> ask
+    {   
+        //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
+        - firstStoryQuestCount > minStoryQuesTCountFirstChar && not rewriting_proposal_first_character && not questions:
+                -> ask
+        //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona                    
+        - firstStoryQuestCount > minStoryQuesTCountFirstChar && not rewriting_proposal_first_character && questions:
+                -> ask
+        //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo         
+        - firstStoryQuestCount > minStoryQuesTCountFirstChar && rewriting_proposal_first_character:
+                -> ask
+        //Vogliamo offrire un dono            
+        - not first_story_gift.ink_outcome && findedGifts != ():
+                -> ask
+        //Vogliamo cucinare assieme          
         - open_the_kitchen && not cooking_with_first_char && firstIsCooking==false:
             -> ask
+        
         -else:
             {
+            //Stiamo parlando con la PNG, ma non dopo uno storylet, per cui mettiamo del testo
             - justTalkedFirstChar == false:   
                 {~Le farfalle qui giocano per ore!|No dai. Ma hai visto quanto sono carini gli scoiattoli?!|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
                     -> main
+            //Stiamo parlando con la PNG ma dopo uno storylet, per cui non mettiamo del testo        
             - else:
                 ~ justTalkedFirstChar = false
                     -> main
@@ -69,53 +75,55 @@
                 ~ justTalkedFirstChar = false
         }
 
-    //Se propongo regalo ma non ho parlato con Mentore:
-        + (gift) {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
-                        Non voglio snitchare, ma non hai ancora chiesto {{not welcome:alla tipa fissata coi lavori}|alla mentore} a cosa servono questi doni.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
-                        Se non parli con lei prima poi minimo ci rimane male.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-                    ~ tutorialPauses = false 
+    //Azioni legate alla riscrittura
+ 
+        //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
+            + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not rewriting_proposal_first_character && not questions} [Vorrei aiutarti a guardare le cose in modo diverso.]
+                Ama, parla prima con la mentore così ti dice cosa fare e non le prende una sincope se facciamo casini.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
+                    ~ tutorialPauses = false
                         -> main
-            
-    //Se non ho ancora fatto il dono e ho parlato con il mentore e ho parlato abbastanza con lei
-        + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && gifts_and_ink && findedGifts != ()} [Ti vorrei donare questa cosa.]
-                    -> first_story_gift
         
-    //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
-        + {first_story_gift.ink_outcome && not main_story_first_character && not questions} [Vorrei aiutarti a guardare le cose in modo diverso.]
-            Ama, parla prima con la mentore così ti dice cosa fare e non le prende una sincope se facciamo casini.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
-                ~ tutorialPauses = false
-                    -> main
-                            
-        + {first_story_gift.ink_outcome && not main_story_first_character &&  questions} [Ti va di riscrivere la tua storia con me?]
-                    -> first_story_chech_trigger
+        //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona                    
+            + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not rewriting_proposal_first_character && questions} [Ti va di riscrivere la tua storia con me?]
+                    -> rewriting_proposal_first_character
     
-    //SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
-        + {first_story_gift.ink_outcome && main_story_first_character} [Riprendiamo quella storia?]
-                -> main_story_first_character
+        //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo          
+            + {firstStoryQuestCount > minStoryQuesTCountFirstChar && rewriting_proposal_first_character} [Iniziamo la riscrittura?]
+                    -> rewriting_proposal_first_character
             
+
+        
+        
+    //Azioni legate alla costruzione della relazione
+    
+        //Offrire un dono
+            + {not first_story_gift.ink_outcome && findedGifts != ()} [Ti vorrei donare questa cosa.]
+                        -> first_story_gift
+            
+        
+        //Cucinare assieme    
+            + {open_the_kitchen && not cooking_with_first_char && firstIsCooking==false}[Ti va di cucinare qualcosa assieme?]
+                ~ changeLocationTimer = 0
+                
+                {
+                
+                    - secondIsCooking==true: Uh, mi sa che la cucina è occupata da {charNameTwo}, sta cucinando qualcosa di strano.
+                            ->main
+                
+                    - FirstKitchenInvite: {Spero non mi farai aspettare come prima! Ho atteso un sacco!|Siamo a due volte che me lo chiedi e non ti presenti, sai?|E mi darai buca una terza volta? Vabbè.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+                        ~ move_entity(FirstCharacter, Kitchen)
+                            ->main
+                        
+                    - else: Volentieri! Ci vediamo in cucina! #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+                        ~ FirstKitchenInvite = true
+                        ~ move_entity(FirstCharacter, Kitchen)
+                            ->main
+                
+                }
+    
+    //Uscita dalla conversazione
         + [<i>Lascio il dialogo.]
                 -> main
-        + {open_the_kitchen && not cooking_with_first_char && firstIsCooking==false}[Ti va di cucinare qualcosa assieme?]
-            ~ changeLocationTimer = 0
-            
-            {
-            
-                - secondIsCooking==true: Uh, mi sa che la cucina è occupata da {charNameTwo}, sta cucinando qualcosa di strano.
-                        ->main
-            
-                - FirstKitchenInvite: {Spero non mi farai aspettare come prima! Ho atteso un sacco!|Siamo a due volte che me lo chiedi e non ti presenti, sai?|E mi darai buca una terza volta? Vabbè.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-                    ~ move_entity(FirstCharacter, Kitchen)
-                        ->main
-                    
-                - else: Volentieri! Ci vediamo in cucina! #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-                    ~ FirstKitchenInvite = true
-                    ~ move_entity(FirstCharacter, Kitchen)
-                        ->main
-            
-            }
-            
-            
-            
         -
             -> talk_with_first_character
 
@@ -1086,114 +1094,87 @@
 
 
  === first_story_gift ===
-~ temp charNameOne = translator(firstCharacterState)
-<i>Stai per donare qualcosa a {charNameOne}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        + {findedGifts != ()} [Scelgo il dono.]
-            ~ currentReceiver += FirstCharacter
-            -> inventory_management
-        + {findedGifts == ()} Il tuo inventario è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            ->main
+    ~ temp charNameOne = translator(firstCharacterState)
+    <i>Stai per donare qualcosa a {charNameOne}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            
+            + {findedGifts != ()} [Scelgo il dono.]
+                ~ currentReceiver += FirstCharacter
+                    -> inventory_management
+            
+            + {findedGifts == ()} Il tuo inventario è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                    ->main
+            
         
-    
-        = ink_outcome    
-            Dopo il tuo dono {inkTranslator(firstCharacterInkLevel)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-                ~ move_entity(firstCharPaint, Bedroom)
-                ~ saturationVar ++
-                ~ tutorialPauses = false
-                 -> talk_with_first_character
-            //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
+            = ink_outcome    
+                Dopo il tuo dono {inkTranslator(firstCharacterInkLevel)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                    ~ move_entity(firstCharPaint, Bedroom)
+                    ~ saturationVar ++
+                    ~ tutorialPauses = false
+                        -> talk_with_first_character
+                
 
-    === first_story_chech_trigger
-      ~ temp charNameOne = translator(firstCharacterState)
-      //In questa storia non ci sono trigger, lascio la struttura perché non si sa mai.
-      
-        //{
-        //- loneliness == false:
-        //    -> loneliness_trigger
-        //- else:
-        //    -> main_story_first_character
-        //}
-            -> main_story_first_character
-        
-        = loneliness_trigger
-        Info
-            * [Voglio comunque approfondire la storia di questa personaggia.]
-                -> main_story_first_character
-            * [Salto.]
-            //FUTURA SOLUZIONE A QUESTA SITUAZIONE
-                -> main
-        -
-        -> END
 
-=== main_story_first_character
+=== rewriting_proposal_first_character
 ~ temp charNameOne = translator(firstCharacterState)
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
     {
         - not confession:
             -> confession
-        - not one:
-            -> statement
+            
         - else:
-            -> one
+            -> rewriting
+            
     }
+    
     = confession
-    //Per il feedback, temi legati al rapporto, all'amicizia
-    ~ temp charNameOne = translator(firstCharacterState)
-    ~ temp charNameFive = translator(fifthCharacterState)
-    ~ temp charNameTwo = translator(secondCharacterState)
-        
-        
+        //Per il feedback, temi legati al rapporto, all'amicizia
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+            
+        C'è una cosa che voglio dirti, {name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
     
-    C'è una cosa che voglio dirti, {name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-
-            {
-                -   are_two_entities_together(Mentor, PG):Sicuro è il caso che vi lasci il vostro spazio.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurryl
-                        ~ change_entity_place(Mentor)
-            }
-            {
-                -   are_two_entities_together(SecondCharacter, PG):Nanetto, ci lasceresti un po' da sole?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
-                        ~ change_entity_place(SecondCharacter)
-            }  
-        
-    Credo di aver capito perché il mio nome qui è {charNameOne}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-    Penso al Ghiberti.
-    Penso all3 am3.
-    Penso alla mia famiglia.
-    Non so se l'hai visto, ma tutta questa roba mi fa pressione.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
-    Tutte le persone che conosco mi stanno chiedendo di fare una scelta, di decidere che cosa fare da grande.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
-    Ma sinceramente, {name}?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-    Mi cago addosso all'idea di fare una scelta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
-     Perché una scelta chiude strade.
-     Perché una scelta delude persone.
-     Perché una scelta può portarti in luoghi che non sono per te.
-     Ma a quel punto, non si può più tornare indietro.
-     E così l'unica cosa che rimane è rinunciare.
-     Lasciare che le altre persone scelgano per te.
-     O che lo faccia il mondo.
-     Ecco perché mi chiamo {charNameOne}: perché rimango nel medio, nella cosa più ovvia e cringe.
-     @animation:RewriterBook
-     E lascio che le cose accadano.
-        ~ growing ++
-
-
-        + [Credo di sapere come aiutarti.]
-            -> statement
-        + [Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.]
-            -> main
-
-
-    = statement
-    ~ temp charNameOne = translator(firstCharacterState)
+                {
+                    -   are_two_entities_together(Mentor, PG):Sicuro è il caso che vi lasci il vostro spazio.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurryl
+                            ~ change_entity_place(Mentor)
+                }
+                {
+                    -   are_two_entities_together(SecondCharacter, PG):Nanetto, ci lasceresti un po' da sole?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
+                            ~ change_entity_place(SecondCharacter)
+                }  
+            
+        Credo di aver capito perché il mio nome qui è {charNameOne}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        Penso al Ghiberti.
+        Penso all3 am3.
+        Penso alla mia famiglia.
+        Non so se l'hai visto, ma tutta questa roba mi fa pressione.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
+        Tutte le persone che conosco mi stanno chiedendo di fare una scelta, di decidere che cosa fare da grande.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
+        Ma sinceramente, {name}?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+        Mi cago addosso all'idea di fare una scelta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
+         Perché una scelta chiude strade.
+         Perché una scelta delude persone.
+         Perché una scelta può portarti in luoghi che non sono per te.
+         Ma a quel punto, non si può più tornare indietro.
+         E così l'unica cosa che rimane è rinunciare.
+         Lasciare che le altre persone scelgano per te.
+         O che lo faccia il mondo.
+         Ecco perché mi chiamo {charNameOne}: perché rimango nel medio, nella cosa più ovvia e cringe.
+         @animation:RewriterBook
+         E lascio che le cose accadano.
+            ~ growing ++
     
-        + (rewriting)[<i>Voglio cominciare la riscrittura.]
+            + [<i>Voglio cominciare la riscrittura.]
+                -> rewriting
+            
+            + [Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.]
+                -> main
+
+
+    = rewriting
+    ~ temp charNameOne = translator(firstCharacterState)
             //Valuto lo stato della relazione 
                 -> firstAffinityCalc ->
-            //"Trasformo" la relazione in inchiostro
-                ~ fromRelationshipToInk(firstCharStateRelationship)
-            // Mando ai feedback
-                -> firstAffinityFeedback ->
-            //Arriva il commento della strega
-                ~ inkLevel(firstCharacterInkLevel)
+
             //Vado ad aggiornare temporaneamente il nome prima di cominciare
                 -> firstNaming ->
                 {
@@ -1202,341 +1183,339 @@
                     - else: 
                         -> one
                 } 
-        
-        + [<i>Mi prendo un po' di tempo per pensare.]
-            -> main
 
-    = one
-    ~ temp charNameOne = translator(firstCharacterState)
-    ~ temp charNameTwo = translator(secondCharacterState)
-    ~ temp charNameFive = translator(fifthCharacterState)
 
-    {
-        -   are_two_entities_together(Mentor, PG): Bene, è il momento che mi allontani.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-                ~ change_entity_place(Mentor)
-    }
-    {
-        -   are_two_entities_together(SecondCharacter, PG): {charNameTwo}, avremmo bisogno di privacy, puoi andare a fare due passi?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
-                ~ change_entity_place(SecondCharacter)
-    }
+        = one
+        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameFive = translator(fifthCharacterState)
     
-    Sono pronta, {name}. Iniziamo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-    
-    
-    Prima hai detto che hai il terrore di fare una scelta.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
-        
-        + [Qui hai accettato il tuo nuovo nome.]
-            Accettare è una scelta.
-            Cercare risposte è un'altra scelta ancora.
-            E ammettere una propria paura, una scelta enorme.
-                {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }            
-        
-        + [Ma hai deciso di costruire una famiglia con l3 tu3 am3.]
-            Hai aperto il tuo cuore, e loro ti amano.
-            Si preoccupano per te, cercano di aiutarti a trovare la tua strada.
-            E questo amore è frutto di infinite piccole scelte fatte ogni giorno.
-        
-        + [Dimenticando che per finire gli studi hai lottato per anni.]
-            Che ogni esame che hai dato è stata una scelta.
-            Che ogni lezione che hai seguito è stata una scelta.
-            E presto o tardi, hai trovato la volontà di continuare.
-            
-        + [Ma hai più volte accettato il rischio di suonare sul tetto.]
-            Hai accettato di essere festa in un mondo severo.
-            Hai cercato il gioco quando tutto ti dice che devi lavorare.
-            Hai accolto falene, scoiattoli e altri animali suonanti.
-                {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }
-        + [Però da che sei qui hai esplorato tutto questo luogo.]
-            Hai inseguito uno scoiattolo.
-            Hai cercato Talco.
-            Non ti sei fatta spaventare dalla novità.
-                {
-                	- firstCharacterPossibleStates hasnt Chitarra:
-    		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }
-            
-        -
-            ~ numberQuestion ++   
-        
-        Capito. Continua.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-        
         {
-            - secondStory!=StoryEnded:{name} ha utilizzato la sua prima unità di inchiostro per compiere una riscrittura. L'inchiostro ora si è consumato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+            -   are_two_entities_together(Mentor, PG): Bene, è il momento che mi allontani.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+                    ~ change_entity_place(Mentor)
+        }
+        {
+            -   are_two_entities_together(SecondCharacter, PG): {charNameTwo}, avremmo bisogno di privacy, puoi andare a fare due passi?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
+                    ~ change_entity_place(SecondCharacter)
         }
         
+        Sono pronta, {name}. Iniziamo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
         
-                {
-                - firstCharacterInkLevel == Low:
-                    -> ending
-                - else: 
-                    -> two
-                }        
         
-    = two
-    ~ temp charNameOne = translator(firstCharacterState)
-    
-    Temi che le persone a cui vuoi bene si sentano tradite dalla scelta che farai.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
-
-        + [Con Talco puoi litigare, eppure siete legatissim3.]
-            Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
-            Lə Talco che hai raccontato si arrabbierebbe di più se tu facessi una scelta per te pensando a ləi.
+        Prima hai detto che hai il terrore di fare una scelta.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
             
-        + [La paura di tradire è un'altra faccia dell'ego.]
-            È la voglia di sembrare impeccabili.
-            Infallibili.
-            Inattaccabili.
-            Ma amore e crescita prosperano nell'errore e nella vulnerabilità.
-                {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }
-    
+            + [Qui hai accettato il tuo nuovo nome.]
+                Accettare è una scelta.
+                Cercare risposte è un'altra scelta ancora.
+                E ammettere una propria paura, una scelta enorme.
+                    {
+    	                - firstCharacterPossibleStates hasnt Violino:
+    		                ~ firstCharacterPossibleStates ++
+    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                    }            
             
-        + [Ti preoccupi molto di loro, e poco di te.]
-            Non ti sei chiesta molto dove eri, ti sei messa solo a cercare Talco.
-            Ti sei preoccupata per Jonah.
-            Ma per te?
+            + [Ma hai deciso di costruire una famiglia con l3 tu3 am3.]
+                Hai aperto il tuo cuore, e loro ti amano.
+                Si preoccupano per te, cercano di aiutarti a trovare la tua strada.
+                E questo amore è frutto di infinite piccole scelte fatte ogni giorno.
             
-        + [Forse accadrà, ma non è un tuo problema.]
-            Stai costruendo la tua vita, non la loro.
-            Se la pensano diversamente, non è amicizia, e ti sei salvata da qualcosa di peggiore.
-                {
-                	- firstCharacterPossibleStates hasnt Chitarra:
-    		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }
+            + [Dimenticando che per finire gli studi hai lottato per anni.]
+                Che ogni esame che hai dato è stata una scelta.
+                Che ogni lezione che hai seguito è stata una scelta.
+                E presto o tardi, hai trovato la volontà di continuare.
                 
-        + [Tradiamo la fiducia se rompiamo le regole a nostro vantaggio.]
-            Hai deciso di giocare con loro e lasciar loro tutto il potere?
-            O è una regola implicita, che non avete mai concordato ma che senti nell'aria?
-            E a prescindere: abbiamo sempre il diritto di revocare un accordo, una regola.
-                {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }
+            + [Ma hai più volte accettato il rischio di suonare sul tetto.]
+                Hai accettato di essere festa in un mondo severo.
+                Hai cercato il gioco quando tutto ti dice che devi lavorare.
+                Hai accolto falene, scoiattoli e altri animali suonanti.
+                    {
+    	                - firstCharacterPossibleStates hasnt Violino:
+    		                ~ firstCharacterPossibleStates ++
+    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                    }
+            + [Però da che sei qui hai esplorato tutto questo luogo.]
+                Hai inseguito uno scoiattolo.
+                Hai cercato Talco.
+                Non ti sei fatta spaventare dalla novità.
+                    {
+                    	- firstCharacterPossibleStates hasnt Chitarra:
+        		            ~ firstCharacterPossibleStates --
+        		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                    }
+                
+            -
+                ~ numberQuestion ++   
+            
+            Capito. Continua.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+            
+            {
+                - secondStory!=StoryEnded:{name} ha utilizzato la sua prima unità di inchiostro per compiere una riscrittura. L'inchiostro ora si è consumato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+            }
+            
+            
+                    {
+                    - firstCharacterInkLevel == Low:
+                        -> ending
+                    - else: 
+                        -> two
+                    }        
+            
+        = two
+        ~ temp charNameOne = translator(firstCharacterState)
+        
+        Temi che le persone a cui vuoi bene si sentano tradite dalla scelta che farai.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
+    
+            + [Con Talco puoi litigare, eppure siete legatissim3.]
+                Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
+                Lə Talco che hai raccontato si arrabbierebbe di più se tu facessi una scelta per te pensando a ləi.
+                
+            + [La paura di tradire è un'altra faccia dell'ego.]
+                È la voglia di sembrare impeccabili.
+                Infallibili.
+                Inattaccabili.
+                Ma amore e crescita prosperano nell'errore e nella vulnerabilità.
+                    {
+    	                - firstCharacterPossibleStates hasnt Violino:
+    		                ~ firstCharacterPossibleStates ++
+    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                    }
+        
+                
+            + [Ti preoccupi molto di loro, e poco di te.]
+                Non ti sei chiesta molto dove eri, ti sei messa solo a cercare Talco.
+                Ti sei preoccupata per Jonah.
+                Ma per te?
+                
+            + [Forse accadrà, ma non è un tuo problema.]
+                Stai costruendo la tua vita, non la loro.
+                Se la pensano diversamente, non è amicizia, e ti sei salvata da qualcosa di peggiore.
+                    {
+                    	- firstCharacterPossibleStates hasnt Chitarra:
+        		            ~ firstCharacterPossibleStates --
+        		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                    }
                     
-        -
-            ~ numberQuestion ++
-        Ti ascolto. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+            + [Tradiamo la fiducia se rompiamo le regole a nostro vantaggio.]
+                Hai deciso di giocare con loro e lasciar loro tutto il potere?
+                O è una regola implicita, che non avete mai concordato ma che senti nell'aria?
+                E a prescindere: abbiamo sempre il diritto di revocare un accordo, una regola.
+                    {
+    	                - firstCharacterPossibleStates hasnt Violino:
+    		                ~ firstCharacterPossibleStates ++
+    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                    }
+                        
+            -
+                ~ numberQuestion ++
+            Ti ascolto. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+            
+            {
+                - secondStory!=StoryEnded:{name} ha utilizzato la sua seconda unità di inchiostro per procedere con la riscrittura. Il boccetto ora è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+            }        
+            
+            {
+            - firstCharacterInkLevel == Normal:
+                -> ending
+            - else:
+                -> three
+            }
+            
         
-        {
-            - secondStory!=StoryEnded:{name} ha utilizzato la sua seconda unità di inchiostro per procedere con la riscrittura. Il boccetto ora è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-        }        
+        = three
+        ~ temp charNameOne = translator(firstCharacterState)
+        Vedi una scelta come una strada chiusa, qualcosa da cui non poter tornare indietro.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
+                
+            + [Se non tiri nessun dado, non c'è storia da far avanzare.]
+                Quando giochi non sempre le cose vanno come vuoi, ma comunque <i>vanno</i>.
+                E fintanto che le cose hanno di dove andare, c'è tempo per cambiare.
+                E a volte anche ritirare i dadi.
+                    {
+    	                - firstCharacterPossibleStates hasnt Violino:
+    		                ~ firstCharacterPossibleStates ++
+    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                    }
+            
+            + [Tutt3 hanno immaginato sorti diverse per Jonah, ma nessuna fine.]
+                Ogni passo avanti prevede la possibilità di tornare indietro.
+                A volte è più difficile, a volte meno, ma è sempre possibile.
+                    {
+                    	- firstCharacterPossibleStates hasnt Chitarra:
+        		            ~ firstCharacterPossibleStates --
+        		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                    }
+                    
+            + [Eppure la prima cosa che hai visto qui sono otto sentieri.]
+                Otto luoghi dove andare.
+                E ogni sentiero ha una direzione in cui andare, e una da cui tornare.
+                A volte l'erba può essere cresciuta.
+                A volte l'acqua può averne cancellato un pezzo.
+                Ma il sentiero è sempre lì, ad aspettare.
+                    {
+    	                - firstCharacterPossibleStates hasnt Violino:
+    		                ~ firstCharacterPossibleStates ++
+    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                    }
+                
+            
+            + [A suo modo, la storia di Jonah è un successo.]
+                Ha deciso che non gli stava più bene quello che aveva, e si è mosso per cambiarlo.
+                E il leggere negativamente le cose che forse gli sono capitate raccontano nulla di Jonah e molto di chi le racconta.
+                C'è orgoglio anche dietro una cassa del supermercato, non solo su palco.
+                    
+            + [Ragioni come se fossi sola se dovessi cadere.]
+                Pensi che Talco ti abbandonerebbe?
+                Anna? Olga? Persino Ennio.
+                I tuoi genitori.
+                Anche se a volte i vostri cuori sono distanti, quando c'è un bisogno sappiamo sempre ritrovarci.            
+            -
+                ~ numberQuestion ++
+            Mmm.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+            
+            
+            {
+                - secondStory!=StoryEnded:{name} ha utilizzato la terza unità di inchiostro, proponendo una riscruttura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+            }        
+            
+            {
+            - firstCharacterInkLevel == Medium:
+                -> ending
+            - else:
+                -> four
+            }
         
-        {
-        - firstCharacterInkLevel == Normal:
+        = four
+        ~ temp charNameOne = translator(firstCharacterState)
+            Questo posto ti ha assegnato un nome, e quel nome è Chitarra. Ma tu lo vedi come una rinuncia.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
+    
+            + [Giocare è bello perché puoi sempre rinunciare a farlo.]
+                Quando una roba la devi fare anche quando non vuoi, quello è il lavoro.
+                Per questo fa schifo.
+                    {
+    	                - firstCharacterPossibleStates hasnt Violino:
+    		                ~ firstCharacterPossibleStates ++
+    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                    }            
+             
+            
+            + [Quando Anna ha rinunciato all'ex, è rinata.]
+                Rinunciare vuol dire anche prendersi cura di sé.
+                Un atto d'amore quando qualcosa non ci fa più bene.
+            
+            + [Un infinito più piccolo resta comunque infinito.]
+                Rinuncia a una cosa e sarai comunque tutto.
+                Un nome è solo un nome.
+                Una persona è un universo intero.
+                    {
+    	                - firstCharacterPossibleStates hasnt Violino:
+    		                ~ firstCharacterPossibleStates ++
+    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                    }    
+                
+            + [Rinunciando a cercare Talco ti sei tutelata.]
+                Se una cosa non ha senso, non ha senso anche se continuiamo ad insistere nel farla.
+                    {
+                    	- firstCharacterPossibleStates hasnt Chitarra:
+        		            ~ firstCharacterPossibleStates --
+        		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                    }            
+            
+            + [C'è più coraggio nella rinuncia che nel compromesso.]
+                Spesso è più costosa, ma la coerenza personale non ha prezzo.
+                
+            -
+                ~ numberQuestion ++
+            Ok. E quindi... #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+            
+            {
+                - secondStory!=StoryEnded:{name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+            }   
+            
             -> ending
-        - else:
-            -> three
-        }
-        
     
-    = three
-    ~ temp charNameOne = translator(firstCharacterState)
-    Vedi una scelta come una strada chiusa, qualcosa da cui non poter tornare indietro.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
-            
-        + [Se non tiri nessun dado, non c'è storia da far avanzare.]
-            Quando giochi non sempre le cose vanno come vuoi, ma comunque <i>vanno</i>.
-            E fintanto che le cose hanno di dove andare, c'è tempo per cambiare.
-            E a volte anche ritirare i dadi.
-                {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }
+        = ending
+        ~ temp charNameOne = translator(firstCharacterState)
         
-        + [Tutt3 hanno immaginato sorti diverse per Jonah, ma nessuna fine.]
-            Ogni passo avanti prevede la possibilità di tornare indietro.
-            A volte è più difficile, a volte meno, ma è sempre possibile.
-                {
-                	- firstCharacterPossibleStates hasnt Chitarra:
-    		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }
-                
-        + [Eppure la prima cosa che hai visto qui sono otto sentieri.]
-            Otto luoghi dove andare.
-            E ogni sentiero ha una direzione in cui andare, e una da cui tornare.
-            A volte l'erba può essere cresciuta.
-            A volte l'acqua può averne cancellato un pezzo.
-            Ma il sentiero è sempre lì, ad aspettare.
-                {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }
-            
+            {
+                - firstCharacterInkLevel == Empty:
+                    Mi rendo conto di non aver legato molto con te, e hai tutto il diritto di non ascoltarmi. Ma dopo tutta la tua storia, vorrei darti un consiglio:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
+                - else: Per questo ti dico: #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
+            } 
         
-        + [A suo modo, la storia di Jonah è un successo.]
-            Ha deciso che non gli stava più bene quello che aveva, e si è mosso per cambiarlo.
-            E il leggere negativamente le cose che forse gli sono capitate raccontano nulla di Jonah e molto di chi le racconta.
-            C'è orgoglio anche dietro una cassa del supermercato, non solo su palco.
-                
-        + [Ragioni come se fossi sola se dovessi cadere.]
-            Pensi che Talco ti abbandonerebbe?
-            Anna? Olga? Persino Ennio.
-            I tuoi genitori.
-            Anche se a volte i vostri cuori sono distanti, quando c'è un bisogno sappiamo sempre ritrovarci.            
-        -
-            ~ numberQuestion ++
-        Mmm.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-        
-        
-        {
-            - secondStory!=StoryEnded:{name} ha utilizzato la terza unità di inchiostro, proponendo una riscruttura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-        }        
-        
-        {
-        - firstCharacterInkLevel == Medium:
-            -> ending
-        - else:
-            -> four
-        }
+            {
+                - secondStory!=StoryEnded:{name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+            }   
     
-    = four
-    ~ temp charNameOne = translator(firstCharacterState)
-        Questo posto ti ha assegnato un nome, e quel nome è Chitarra. Ma tu lo vedi come una rinuncia.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
-
-        + [Giocare è bello perché puoi sempre rinunciare a farlo.]
-            Quando una roba la devi fare anche quando non vuoi, quello è il lavoro.
-            Per questo fa schifo.
-                {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }            
-         
-        
-        + [Quando Anna ha rinunciato all'ex, è rinata.]
-            Rinunciare vuol dire anche prendersi cura di sé.
-            Un atto d'amore quando qualcosa non ci fa più bene.
-        
-        + [Un infinito più piccolo resta comunque infinito.]
-            Rinuncia a una cosa e sarai comunque tutto.
-            Un nome è solo un nome.
-            Una persona è un universo intero.
-                {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }    
+            + {firstRed > 0} [Prendi una strada e se non ti piace cambiala!]
             
-        + [Rinunciando a cercare Talco ti sei tutelata.]
-            Se una cosa non ha senso, non ha senso anche se continuiamo ad insistere nel farla.
-                {
-                	- firstCharacterPossibleStates hasnt Chitarra:
-    		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }            
-        
-        + [C'è più coraggio nella rinuncia che nel compromesso.]
-            Spesso è più costosa, ma la coerenza personale non ha prezzo.
+            + {firstPurple > 0} [Dai alla tua vita uno scopo più grande.]
+                    {
+    	                - firstCharacterPossibleStates hasnt Violino:
+    		                ~ firstCharacterPossibleStates ++
+    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                    }           
             
-        -
-            ~ numberQuestion ++
-        Ok. E quindi... #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-        
-        {
-            - secondStory!=StoryEnded:{name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-        }   
-        
-        -> ending
-
-    = ending
-    ~ temp charNameOne = translator(firstCharacterState)
-    
-        {
-            - firstCharacterInkLevel == Empty:
-                Mi rendo conto di non aver legato molto con te, e hai tutto il diritto di non ascoltarmi. Ma dopo tutta la tua storia, vorrei darti un consiglio:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
-            - else: Per questo ti dico: #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
-        } 
-    
-        {
-            - secondStory!=StoryEnded:{name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-        }   
-
-        + {firstRed > 0} [Prendi una strada e se non ti piace cambiala!]
-        
-        + {firstPurple > 0} [Dai alla tua vita uno scopo più grande.]
-                {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }           
-        
-        + {firstYellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
-                                {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }   
-        + {firstGreen > 0} [Non deluderai i tuoi amici: loro saranno sempre con te.]
-                
-        + {firstBlue > 0} [Questa non è la tua strada. Succede. Ora puoi cambiare.]
-                {
-                	- firstCharacterPossibleStates hasnt Chitarra:
-    		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                }           
-                
-        
-                
-        -     
-     Grazie, {name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-     Mentre ti ascoltavo mi è nata una nuova canzone in testa.
-     La canzone del mio nome.
-        
-        {
-            - firstCharacterPossibleStates has Triangolo:
-                    ~ firstCharacterState = ()
-                    ~ firstCharacterState += Triangolo
-                 E il mio vero nome è <b><i>Triangolo</b></i>, perché pensavo di essere uno strumento, e invece ho solo fallito.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
+            + {firstYellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
+                                    {
+    	                - firstCharacterPossibleStates hasnt Violino:
+    		                ~ firstCharacterPossibleStates ++
+    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                    }   
+            + {firstGreen > 0} [Non deluderai i tuoi amici: loro saranno sempre con te.]
                     
-            - firstCharacterPossibleStates has RagazzaOrchestra:
-                    ~ firstCharacterState = ()
-                    ~ firstCharacterState += RagazzaOrchestra
-                 Mi chiamerò <b><i>Ragazza Orchestra</b></i>: nel non saper rinunciare sono diventata l'ornitorinco della musica.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+            + {firstBlue > 0} [Questa non è la tua strada. Succede. Ora puoi cambiare.]
+                    {
+                    	- firstCharacterPossibleStates hasnt Chitarra:
+        		            ~ firstCharacterPossibleStates --
+        		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                    }           
                     
-            - firstCharacterPossibleStates has FlautoDolce:
-                    ~ firstCharacterState = ()
-                    ~ firstCharacterState += FlautoDolce
-                 Il mio nome è <b><i>Flauto Dolce</b></i>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
-                  
-            - firstCharacterPossibleStates has Ocarina:
-                    ~ firstCharacterState = ()
-                    ~ firstCharacterState += Ocarina
-                 Mi chiamerò <b><i>Ocarina</b></i>: perché il suo suono è gioco e festa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
-    
-            - firstCharacterPossibleStates has Violino:
-                    ~ firstCharacterState = ()
-                    ~ firstCharacterState += Violino
-                 Io sono <b><i>Violino</b></i>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
+            
                     
-        }
+            -     
+         Grazie, {name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+         Mentre ti ascoltavo mi è nata una nuova canzone in testa.
+         La canzone del mio nome.
+            
+            {
+                - firstCharacterPossibleStates has Triangolo:
+                        ~ firstCharacterState = ()
+                        ~ firstCharacterState += Triangolo
+                     E il mio vero nome è <b><i>Triangolo</b></i>, perché pensavo di essere uno strumento, e invece ho solo fallito.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
+                        
+                - firstCharacterPossibleStates has RagazzaOrchestra:
+                        ~ firstCharacterState = ()
+                        ~ firstCharacterState += RagazzaOrchestra
+                     Mi chiamerò <b><i>Ragazza Orchestra</b></i>: nel non saper rinunciare sono diventata l'ornitorinco della musica.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
+                        
+                - firstCharacterPossibleStates has FlautoDolce:
+                        ~ firstCharacterState = ()
+                        ~ firstCharacterState += FlautoDolce
+                     Il mio nome è <b><i>Flauto Dolce</b></i>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
+                      
+                - firstCharacterPossibleStates has Ocarina:
+                        ~ firstCharacterState = ()
+                        ~ firstCharacterState += Ocarina
+                     Mi chiamerò <b><i>Ocarina</b></i>: perché il suo suono è gioco e festa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
         
-            ~ growing ++    
-
-            ~ bookBGVariations ++
-
-                {
-                - firstCharacterSpecialEvent == true:
-                    -> secret_ending
-                - else:
-                    -> exit
-                }
+                - firstCharacterPossibleStates has Violino:
+                        ~ firstCharacterState = ()
+                        ~ firstCharacterState += Violino
+                     Io sono <b><i>Violino</b></i>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
+                        
+            }
+            
+                ~ growing ++    
     
+                ~ bookBGVariations ++
     
+                    {
+                    - firstCharacterSpecialEvent == true:
+                        -> secret_ending
+                    - else:
+                        -> exit
+                    }
+        
+        
     = secret_ending
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)

@@ -80,6 +80,26 @@
             {debug: aumento l'inchiostro della prima personaggia di un livello. Ora è a {~ firstCharStateRelationship}}  
     }
     
+    {
+    
+            //Se vengo dalla preriscrittura:
+            - rewriting_proposal_first_character.rewriting:
+                {debug: ho cliccato rewriting e quindi faccio gli ultimi passaggi e attivo il feedback.} 
+                //"Trasformo" la relazione in inchiostro
+                    ~ fromRelationshipToInk(firstCharStateRelationship)
+                // Mando ai feedback
+                    -> firstAffinityFeedback ->
+                //Arriva il commento della strega
+                    ~ inkLevel(firstCharacterInkLevel)
+                        ->-> 
+            
+            // altrimenti, mando avanti
+            - else:
+                ->->    
+    
+    }
+    
+
     
     //La soluzione più tosta potrebbe essere questa invece.
     

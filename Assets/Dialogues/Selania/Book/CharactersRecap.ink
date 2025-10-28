@@ -119,7 +119,7 @@
         }
 }
 
-{main_story_first_character.ending: Dopo la Riscrittura, ha scelto un nuovo nome: <b><i>{translator(firstCharacterState)}.</b></i>}
+{rewriting_proposal_first_character.ending: Dopo la Riscrittura, ha scelto un nuovo nome: <b><i>{translator(firstCharacterState)}.</b></i>}
 
 
 
@@ -155,7 +155,7 @@
 
 
 {
-    - main_story_first_character:
+    - rewriting_proposal_first_character:
         Dopo il dono, Chitarra mi ha detto di aver capito perché si sia ritrovata con questo nome. Crede che la Chitarra sia il segno del rimanere nel medio, nella cosa più ovvia, e questo perché mentre tutte le persone care le fanno pressioni su cosa scegliere o meno per il suo futuro, lei ha solo paura. Crede che una scelta chiuda strade, deluda persone, o possa portarti in luoghi sbagliati. E a quel punto non ci sia modo di tornare indietro. Forse, allora, è meglio che siano le altre persone a scegliere per te.
     
 }        
@@ -379,7 +379,7 @@
 
 }
 
-{main_story_second_character.ending: Dopo la nostra conversazione, Riccio ha scelto un nuovo nome: <b><i>{charNameTwo}.}
+{rewriting_proposal_second_character.ending: Dopo la nostra conversazione, Riccio ha scelto un nuovo nome: <b><i>{charNameTwo}.}
 
 
 {
@@ -415,7 +415,7 @@
 
 
 {
-- main_story_second_character: 
+- rewriting_proposal_second_character: 
         Dopo il dono, Riccio mi ha detto che da quando la nonna è nella casa dei vecchi, tutto fa schifo. Suo padre è tornato e litiga sempre con sua madre. Se il padre non c'è, la madre si incazza con lui, e gli dice di smetterla di piangere e di fare il grande. Le maestre sono "fastidiose". Il fratello dice che il mondo è un posto orribile e irreparabile. Gli animali spariranno tutti per colpa nostra. I grandi fanno schifo e per questo non vuole crescere. E ha inventato la storia del compleanno perché se non inventa motivi, nessuno lo ascolta.
 }
 
@@ -913,12 +913,12 @@
 
 
 {
-    - main_story_first_character.secret_ending: 
+    - rewriting_proposal_first_character.secret_ending: 
     Dopo aver concluso la sua riscrittura, {charNameOne} mi ha chiesto qual è secondo me il confine tra essere una brava persona ed essere una manipolatrice, riferendosi a {charNameFive}.
 }
 
 {
-    - main_story_second_character.secret_ending: 
+    - rewriting_proposal_second_character.secret_ending: 
     Dopo aver scelto il suo nome, {charNameTwo} mi ha detto che {charNameFive} non gli sembra felice. Che gli ricorda mamma quando gira per casa dando cosnigli e dicendo cose sorridendo, per poi rinchiudersi in camera e restare in silenzio per ore.
 }
 

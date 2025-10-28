@@ -30,12 +30,28 @@
 === options_second_character
 ~ temp charNameTwo = translator(secondCharacterState)
 ~ temp charNameFive = translator(fifthCharacterState)
-{
-    - secondStoryQuestCount > minStoryQuesTCountSecondChar && not second_story_gift.ink_outcome:
-            -> ask
+{  
+    //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
+        - secondStoryQuestCount > minStoryQuesTCountSecondChar && not rewriting_proposal_second_character && not questions:
+                -> ask
+            
+    //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
+        - secondStoryQuestCount > minStoryQuesTCountSecondChar && not rewriting_proposal_second_character && questions:
+                -> ask
     
-    - open_the_kitchen && not cooking_with_second_char && secondIsCooking==false:
-            -> ask
+    //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo         
+        - secondStoryQuestCount > minStoryQuesTCountSecondChar && rewriting_proposal_second_character:
+                -> ask
+
+    //Vogliamo offrire un dono            
+        - not second_story_gift.ink_outcome && findedGifts != ():
+                -> ask
+    
+    //Vogliamo cucinare assieme          
+        - open_the_kitchen && not cooking_with_second_char && secondIsCooking==false:
+                -> ask
+    
+    
     - else:
         {
             - justTalkedSecondChar == false:   
@@ -75,61 +91,54 @@
                 ~ justTalkedSecondChar = false
         }
 
-    //Se non ho ancora fatto e ho parlato abbastanza con lui
-    + {secondStoryQuestCount > minStoryQuesTCountSecondChar && not second_story_gift.ink_outcome} [Voglio regalarti una cosa.]
-        {
+
+    //Azioni legate alla riscrittura
+        //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
+            + {secondStoryQuestCount > minStoryQuesTCountSecondChar && not rewriting_proposal_second_character && not questions} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
+                            Parla prima con {charNameFive}, che già mi brontola tantissimo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
+                                    ~ secondTutorial = true
+                                -> main
         
-            - not gifts_and_ink && findedGifts != ():
-                Forse prima ti conviene vedere cosa vuole dirti {charNameFive}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
-                -> main
+        //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
+            + {secondStoryQuestCount > minStoryQuesTCountSecondChar && not rewriting_proposal_second_character && questions} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
+                            -> rewriting_proposal_second_character
+                            
+        //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo             
+            + {secondStoryQuestCount > minStoryQuesTCountSecondChar && rewriting_proposal_second_character}[Iniziamo la riscrittura?]
+                    -> rewriting_proposal_second_character
+    
+    
+    //Azioni legate alla costruzione della relazione
             
-            - else:
-                -> second_story_gift
+        //Offrire un dono
+            + {not second_story_gift.ink_outcome && findedGifts != ()} [Ti vorrei donare questa cosa.]
+                        -> second_story_gift
+
+    
+        
+        //Cucinare assieme
+        + {open_the_kitchen && not cooking_with_second_char && secondIsCooking==false}[Ti va di cucinare qualcosa assieme?]
+                ~ changeLocationTimer = 0
                 
-        }
-            
-    
-    //Dono fatto ma non ho avviato la main story
-    + (gift) {second_story_gift.ink_outcome && not main_story_second_character} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
             {
-            
-                - not questions:
-                    Parla prima con {charNameFive}, che già mi brontola tantissimo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
-                        ~ secondTutorial = true
-                        -> main
-                - else:
-                    -> second_story_chech_trigger
-            
+                - firstIsCooking==true: Uh, mi sa che la cucina è occupata da {charNameOne}, sta cucinando qualcosa di strano.
+                            ->main
+                
+                - SecondKitchenInvite: {Spero non mi farai aspettare come prima! Ho atteso un sacco!|Siamo a due volte che me lo chiedi e non ti presenti, sai?|E mi darai buca una terza volta? Vabbè.} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:riccio_neutral
+                        ~ move_entity(SecondCharacter, Kitchen)
+                            ->main
+                
+                - else: Volentieri! Ci vediamo in cucina! #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:riccio_neutral
+                        ~ move_entity(SecondCharacter, Kitchen)
+                        ~ SecondKitchenInvite = true
+                            ->main    
             }
-    
-    
-    //SE ESCO DALLA MAIN STORY E VOGLIO TORNARCI CLICCO QUI. POI Lì DENTRO IN BASE AGLI STEP IN CUI SIAMO, MI MANDERà AL POSTO GIUSTO            
-    + {second_story_gift.ink_outcome && main_story_second_character}[Riprendiamo quella storia?]
-        -> main_story_second_character
-    
-    //Opzioni gestione cucina
-    + {open_the_kitchen && not cooking_with_second_char && secondIsCooking==false}[Ti va di cucinare qualcosa assieme?]
-            ~ changeLocationTimer = 0
-            
-        {
-            - firstIsCooking==true: Uh, mi sa che la cucina è occupata da {charNameOne}, sta cucinando qualcosa di strano.
-                        ->main
-            
-            - SecondKitchenInvite: {Spero non mi farai aspettare come prima! Ho atteso un sacco!|Siamo a due volte che me lo chiedi e non ti presenti, sai?|E mi darai buca una terza volta? Vabbè.} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:riccio_neutral
-                    ~ move_entity(SecondCharacter, Kitchen)
-                        ->main
-            
-            - else: Volentieri! Ci vediamo in cucina! #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:riccio_neutral
-                    ~ move_entity(SecondCharacter, Kitchen)
-                    ~ SecondKitchenInvite = true
-                        ->main    
-        }
-            
-        
-    + [<i>Lascio il dialogo.]
-        -> main
-    -
-        -> talk_with_second_character
+                
+    //Uscita dalla conversazione        
+        + [<i>Lascio il dialogo.]
+            -> main
+        -
+            -> talk_with_second_character
 
 
 === knowing_second_character
@@ -1547,56 +1556,33 @@
   
         
 === second_story_gift ===
-~ temp charNameTwo = translator(secondCharacterState)
-Stai per donare qualcosa a {charNameTwo}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        + {findedGifts != ()} [Scelgo il dono.]
-            ~ currentReceiver += SecondCharacter
-            -> inventory_management
-        + {findedGifts == ()} Il tuo inventario è vuoto. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            ->main
+    ~ temp charNameTwo = translator(secondCharacterState)
+    Stai per donare qualcosa a {charNameTwo}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            + {findedGifts != ()} [Scelgo il dono.]
+                ~ currentReceiver += SecondCharacter
+                -> inventory_management
+            + {findedGifts == ()} Il tuo inventario è vuoto. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                ->main
+            
         
-    
-        = ink_outcome
-            Dopo il tuo dono {inkTranslator(secondCharacterInkLevel)}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-                ~ move_entity(secondCharPaint, Bedroom)
-                ~ saturationVar ++
-                 -> talk_with_second_character
-            //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
+            = ink_outcome
+                Dopo il tuo dono {inkTranslator(secondCharacterInkLevel)}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                    ~ move_entity(secondCharPaint, Bedroom)
+                    ~ saturationVar ++
+                     -> talk_with_second_character
 
-=== second_story_chech_trigger
-      ~ temp charNameTwo = translator(secondCharacterState)
-      //In questa storia non ci sono trigger, lascio la struttura perché non si sa mai.
-      
-        //{
-        //- loneliness == false:
-        //    -> loneliness_trigger
-        //- else:
-        //    -> main_story_first_character
-        //}
-            -> main_story_second_character
-        
-        = loneliness_trigger
-        Info
-            + [Voglio comunque approfondire la storia di questa personaggia.]
-                -> main_story_second_character
-            + [Salto.]
-            //FUTURA SOLUZIONE A QUESTA SITUAZIONE
-                -> main
-        -
-        -> END
 
-=== main_story_second_character
+=== rewriting_proposal_second_character
 ~ temp charNameTwo = translator(secondCharacterState)
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
     {
         - not confession:
             -> confession
-        - not one:
-            -> statement
+            
         - else:
-            -> one
+            -> rewriting
+
     }
-    
     
     = confession
     ~ temp charNameTwo = translator(secondCharacterState)
@@ -1664,28 +1650,29 @@ Stai per donare qualcosa a {charNameTwo}. #speaker:{witch_tag()} #inkA:offState 
        
         ~ growing ++
             
-            + [Forse so come farti vedere le cose in modo diverso.]
-                -> statement
+            + [<i>Voglio cominciare la riscrittura.]
+                -> rewriting
+            
             + [Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.]
                 -> main
 
 
-    = statement
+    = rewriting
     ~ temp charNameTwo = translator(secondCharacterState)
 
-        + (rewriting)[Voglio cominciare la riscrittura.]
             //Avvio aggiornamento relazione + commento PNG + commento strega
                 -> secondAffinityCalc ->
+                
             ////Vado ad aggiornare temporaneamente il nome prima di cominciare    
-                -> secondNaming -> 
+                -> secondNaming ->
+                
                 {
                     - secondCharacterInkLevel == Empty:
                         -> ending
                     - else: 
                         -> one
                 } 
-        + [Preferisco prendermi del tempo.]
-            -> main
+
 
     = one
     ~ temp charNameTwo = translator(secondCharacterState)
