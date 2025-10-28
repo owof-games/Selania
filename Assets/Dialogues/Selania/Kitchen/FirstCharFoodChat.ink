@@ -130,12 +130,7 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
             -  
         Chitarra commenta.
         Chitarra mi dice se il piatto è pronto.
-            + Non voglio aggiungere un ingrediente extra.
-                ~ recipePP = "semplice"
-                -> close 
-            + Voglio aggiungere un ingrediente extra.
-                -> extra_ingredient_management(FirstCharacter)->
-                -> close 
+            -> fourth_ingredient_dispatcher
             
     
     = second_theme
@@ -249,12 +244,7 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
             -  
         Chitarra commenta.
         Chitarra mi dice se il piatto è pronto.
-            + Non voglio aggiungere un ingrediente extra.
-                ~ recipePP = "semplice"
-                -> close 
-            + Voglio aggiungere un ingrediente extra.
-                -> extra_ingredient_management(FirstCharacter)->
-                -> close 
+            -> fourth_ingredient_dispatcher
                 
                 
     
@@ -369,19 +359,32 @@ Ehi Chitarra, che ne dici se mentre cuciniamo parliamo di
             -  
         Chitarra commenta.
         Chitarra mi dice se il piatto è pronto.
-            + Non voglio aggiungere un ingrediente extra.
-                ~ recipePP = "semplice"
-                -> close 
-            + Voglio aggiungere un ingrediente extra.
-                -> extra_ingredient_management(FirstCharacter)->
-                -> close 
-    
-
+        
+                -> fourth_ingredient_dispatcher
     
     
             //La chiusura è comune, sempre per ridurre il rischio di errori
-            = close
-            Vengono dette cose.
+            = fourth_ingredient_dispatcher
+                {
+                    - findedGifts == (): Il tuo inventario è vuoto, e quindi non puoi aggiungere un ingrediente extra.
+                        -> at_table_with_first_char
+                        
+                    - else:
+                        -> add_ingredient
+                
+                }
+            
+                = add_ingredient
+                Vuoi aggiungere un ingrediente extra?
+                
+                    + Non voglio aggiungere un ingrediente extra.
+                        ~ recipePP = "semplice"
+                        
+                    + Voglio aggiungere un ingrediente extra.
+                        -> extra_ingredient_management(FirstCharacter)->
+                    -
+                    
+            Chitarra ci dice di andare a tavola
                 -> recipe_name_creator ->
                 -> at_table_with_first_char
 

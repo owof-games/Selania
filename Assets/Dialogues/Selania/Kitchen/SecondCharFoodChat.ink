@@ -130,13 +130,7 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
             -  
         Riccio commenta.
         Riccio mi dice se il piatto è pronto.
-            + Non voglio aggiungere un ingrediente extra.
-                ~ recipePP = "semplice"
-                -> close 
-            + Voglio aggiungere un ingrediente extra.
-                -> extra_ingredient_management(SecondCharacter)->
-                -> close 
-            
+            -> fourth_ingredient_dispatcher
     
     = second_theme
         Riccio parla.
@@ -249,13 +243,7 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
             -  
         Riccio commenta.
         Riccio mi dice se il piatto è pronto.
-            + Non voglio aggiungere un ingrediente extra.
-                ~ recipePP = "semplice"
-                -> close 
-            + Voglio aggiungere un ingrediente extra.
-                -> extra_ingredient_management(SecondCharacter)->
-                -> close 
-    
+            -> fourth_ingredient_dispatcher
     
     
     = third_theme
@@ -369,23 +357,41 @@ Ehi Riccio, che ne dici se mentre cuciniamo parliamo di
             -  
         Riccio commenta.
         Riccio mi dice se il piatto è pronto.
-            + Non voglio aggiungere un ingrediente extra.
-                ~ recipePP = "semplice"
-                -> close 
-            + Voglio aggiungere un ingrediente extra.
-                -> extra_ingredient_management(SecondCharacter)->
-                -> close 
+            -> fourth_ingredient_dispatcher
     
 
+
     
-            //La chiusura è comune, sempre per ridurre il rischio di errori
-            = close
+                //La chiusura è comune, sempre per ridurre il rischio di errori
+            = fourth_ingredient_dispatcher
+                {
+                    - findedGifts == (): Il tuo inventario è vuoto, e quindi non puoi aggiungere un ingrediente extra.
+                        -> at_table_with_second_char
+                    
+                    - else:
+                        -> add_ingredient
+                
+                }
+            
+                = add_ingredient
+                Vuoi aggiungere un ingrediente extra?
+                
+                    + Non voglio aggiungere un ingrediente extra.
+                        ~ recipePP = "semplice"
+                        
+                    + Voglio aggiungere un ingrediente extra.
+                        -> extra_ingredient_management(SecondCharacter)->
+                    -
+            
                 //Per riccio devo aumentare il valore di tre, perché ho compiuto tre scelte, e mi serve per il calcolo dell'affinità
                     ~ secondStoryQuestCount ++
                     ~ secondStoryQuestCount ++
                     ~ secondStoryQuestCount ++
-                -> recipe_name_creator ->
-                -> at_table_with_second_char
+                    
+                Riccio ci dice di andare a tavola
+                    -> recipe_name_creator ->
+                    -> at_table_with_second_char
+    
 
 
 == at_table_with_second_char
