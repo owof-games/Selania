@@ -4,7 +4,7 @@ VAR currentReceiver = ()
 
 
 === inventory_contents ===
-+ {gifts_and_ink.sbadata or cultivable_test && !debugStochastic}[Inventory]
++ {are_two_entities_together(Inventory, PG) && !debugStochastic}[Inventory]
     ~ enableBigDialogue()
     {findedGifts != (): -> inventory ->|-> empty ->}
     ~ disableBigDialogue()

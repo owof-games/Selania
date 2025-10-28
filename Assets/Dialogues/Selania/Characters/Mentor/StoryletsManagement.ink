@@ -5,27 +5,30 @@
 ~ temp charNameOne = translator(firstCharacterState)
 //Ogni volta che parlo con Mentore, il primo check è sulla presenza o meno di tutorial. Se ci sono elementi di tutorial da condividere e le condizioni sono rispettate, a questo punto scattano per primi, ma senza darmi feedback, che verranno dati solo se non ci sono storylets di altro tipo da condividere.
     {
+        //Presentazione generale
         - not welcome:
             -> welcome
         
-        - not gifts_and_ink:
-        //Parte solo quando c'è in giro anche Riccio.
-            {
-                - secondStory == StoryStarted:
-                    {
-                        - tutorialPauses == false:
-                            Sembra che qualcunə stia iniziando a confidarsi con te, {name}!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-                            Ed è quindi arrivato il momento di continuare con le spiegazioni!
-                                -> gifts_and_ink
-                        - else:
-                            -> mentor_and_first_char_storylets
-                    }
-                - else:
-                    -> mentor_and_first_char_storylets    
-            }
-                    
-        - not questions && (first_story_gift.ink_outcome or secondTutorial == true) && tutorialPauses == false:
+        //Relazioni e inchiostro
+        - not about_ink_usage && tutorialPauses == false:
+            -> about_ink_usage
+        
+        //Sulla riscrittura    
+        - not questions && tutorialPauses == false:
             -> questions
+            
+        //Sulla funzione della serra
+        - playerAccessiblePlaces has Greenhouse && not about_greenhouse && tutorialPauses == false:
+            -> about_greenhouse
+            
+        //Sulla funzione della cucina
+        - playerAccessiblePlaces has Kitchen &&not about_kitchen && tutorialPauses == false:
+            -> about_kitchen
+        
+        //Sulla funzione del nido    
+        - playerAccessiblePlaces has Nest && not about_nest && tutorialPauses == false:
+            -> about_nest    
+            
             
         - else:
             -> mentor_and_first_char_storylets    

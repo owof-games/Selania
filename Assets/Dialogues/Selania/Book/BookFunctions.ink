@@ -13,7 +13,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         ~ move_entity(PG, Forest)
         ~ move_entity(RewriterBook, Forest)
         {
-            - gifts_and_ink.sbadata or cultivable_test:
+            - about_ink_usage.sbadata or cultivable_test:
                 ~ move_entity(Inventory, Forest)
         }
         ~ disableBigDialogue()
@@ -24,7 +24,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         ~ move_entity(PG, Greenhouse)
         ~ move_entity(RewriterBook, Greenhouse)
         {
-            - gifts_and_ink.sbadata or cultivable_test:
+            - about_ink_usage.sbadata or cultivable_test:
                 ~ move_entity(Inventory, Greenhouse)
         }
         ~ disableBigDialogue()
@@ -35,7 +35,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         ~ move_entity(PG, Pond)
         ~ move_entity(RewriterBook, Pond)
         {
-            - gifts_and_ink.sbadata or cultivable_test:
+            - about_ink_usage.sbadata or cultivable_test:
                 ~ move_entity(Inventory, Pond)
         }
         ~ disableBigDialogue()
@@ -45,7 +45,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         ~ move_entity(PG, Kitchen)
         ~ move_entity(RewriterBook, Kitchen)
         {
-            - gifts_and_ink.sbadata or cultivable_test:
+            - about_ink_usage.sbadata or cultivable_test:
                 ~ move_entity(Inventory, Kitchen)
         }
         ~ disableBigDialogue()
@@ -55,7 +55,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         ~ move_entity(PG, Library)
         ~ move_entity(RewriterBook, Library)
         {
-            - gifts_and_ink.sbadata or cultivable_test:
+            - about_ink_usage.sbadata or cultivable_test:
                 ~ move_entity(Inventory, Library)
         }
         ~ disableBigDialogue()
@@ -65,7 +65,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         ~ move_entity(PG, Nest)
         ~ move_entity(RewriterBook, Nest)
         {
-            - gifts_and_ink.sbadata or cultivable_test:
+            - about_ink_usage.sbadata or cultivable_test:
                 ~ move_entity(Inventory, Nest)
         }    
         ~ disableBigDialogue()
@@ -75,7 +75,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         ~ move_entity(PG, TrainStop)
         ~ move_entity(RewriterBook, TrainStop)
         {
-            - gifts_and_ink.sbadata or cultivable_test:
+            - about_ink_usage.sbadata or cultivable_test:
                 ~ move_entity(Inventory, TrainStop)
         }
         ~ disableBigDialogue()

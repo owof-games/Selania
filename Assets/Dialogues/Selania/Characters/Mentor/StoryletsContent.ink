@@ -111,12 +111,12 @@
                 ~ move_entity(FifthRecap, BookPlace)
                 @animation:RewriterBook 
         
-        //Con questa voce evito che "gifts_and_ink" compaia subito dopo se le condizioni sono sensate.
+        //Con questa voce evito che "about_ink_usage" compaia subito dopo se le condizioni sono sensate.
                 ~ tutorialPauses = true
             -> main
                 
             
-=== gifts_and_ink
+=== about_ink_usage
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
@@ -220,7 +220,7 @@
             Questo posto collasserebbe senza me.
             Quando avrai conquistato la fiducia di una persona e le avrai donato qualcosa, torna da me per le ultime istruzioni.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 {
-                - not cultivable_test: Uh, che sbadata! Ti servirà di sicuro qualcosa per raccogliere gli oggetti!
+                - not are_two_entities_together(Inventory, PG): Uh, che sbadata! Ti servirà di sicuro qualcosa per raccogliere gli oggetti!
                     {
                         - forestContents has PG:
                             ~ move_entity(Inventory, Forest)
@@ -234,7 +234,7 @@
                     }
                 - else: Noto che hai già uno zainetto con te.
                 }
-            {not cultivable_test: Ecco, prendi!| Spero non sia qualcosa che hai trovato in giro: questo posto è delicato.}
+            {not are_two_entities_together(Inventory, PG): Ecco, prendi!| Spero non sia qualcosa che hai trovato in giro: questo posto è delicato.}
                 - (sbadata)
             
             ~ move_entity(RulesRecap, BookPlace)      
@@ -301,7 +301,30 @@
                 -> main
         
         
-    
+//Minitutorial sui minigame
+=== about_greenhouse
+
+
+
+-> main
+
+
+=== about_kitchen
+
+
+
+-> main
+
+
+
+
+=== about_nest
+
+
+
+-> main
+
+        
    
 === little_storylets
     ~ temp charNameOne = translator(firstCharacterState)

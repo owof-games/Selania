@@ -2,7 +2,7 @@
 + {are_two_entities_together(RulesRecap, PG)} [RulesRecap]
 ~ enableBigDialogue()
     {
-        - gifts_and_ink:
+        - about_ink_usage:
         <b>Sulla riscrittura: appunti apocrifi del collettivo P.K.</b> <>
         Il processo di riscrittura è un processo che si basa principalmente su una cosa: la <b><i>fiducia</b></i>. E qui l'attitudine dellə Riscrittorə fa tutto.
         Se U.O.J. è stata famosa per assecondare al massimo l'interlocutorə, A.S. viene ancora ricordatə per la sua natura prettamente oppositiva, mentre gli schemi logici di B.M., pieni di formule e statistiche, sono quelli che ci hanno permesso di arrivare a questo volume. Molt3 Riscrittor3 portano avanti la visione di chi ha fatto loro da mentore, ma l'indipendenza di pensiero è sempre un'ottima qualità per unə Riscrittorə.
@@ -23,8 +23,25 @@
         Quel nome, quel nuovo nome, è l'inizio di un percorso che la persona affronterà da sé. Come è capitato a tutt3 noi del Collettivo P.K.
             
     }
+    
+    {
+        - about_greenhouse:
+        Info sulla serra
+    
+    }
 
-        
+    {
+        - about_kitchen:
+        Info sulla cucina
+    
+    
+    }
+    {
+        - about_nest:
+        Info sul nido
+    
+    }
+       
 
 -> rewriter_book_with_flow
 

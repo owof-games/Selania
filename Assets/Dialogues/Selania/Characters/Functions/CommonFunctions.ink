@@ -379,7 +379,7 @@
             ~ move_entity(RewriterBook, currentPlace)
     }
     {
-        - gifts_and_ink.sbadata or cultivable_test:
+        - about_ink_usage.sbadata or cultivable_test:
            ~ move_entity(Inventory, currentPlace)
     }
 
