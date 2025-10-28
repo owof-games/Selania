@@ -54,7 +54,7 @@
 - (top)
     + [Sulla stazione.]
             Intendi il luogo dove passo ore a spalare neve?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
-            La stazione, ad est del Giardino, è il posto dove approdano le nuove persone.
+            La stazione, ad est della foresta, è il posto dove approdano le nuove persone.
             È anche il luogo attraverso cui potrai raggiungerci.
             O da cui andartene, quando vorrai.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sorry
                 -> top
@@ -91,15 +91,22 @@
             Però un paio di volte ho usato la poltrona per fare del body scan, e non è stato male.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             Mi sono quasi addormentata.
             Quasi.
-            -> second_top
+                -> second_top
             
     + {playerAccessiblePlaces has Kitchen}[Sulla cucina.]
-        Informazioni
-            -> second_top
+            La cucina è un posto poco igienico.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
+            No, ricominciamo.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sorry
+            La cucina è un posto dove condividere un po' di intimità con una persona.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
+            Provare a conoscerla meglio, provare a farti conoscere meglio, mentre cucinate qualcosa.
+            E, magari, scoprire cosa stai sbagliando a dirle, e riuscire a conquistare prima la sua fiducia.
+                -> second_top
 
-    + {playerAccessiblePlaces has Nest}[Sulla terza area]
-        Informazioni
-            -> second_top
+    + {playerAccessiblePlaces has Nest}[Sul nido.]
+            Il nido non mi piace.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
+            Quello che accade lì è manipolazione, comunque tu la voglia mettere.
+            E quindi è qualcosa di sbagliato.
+            Non è un caso che sia l'unico luogo senza istruzioni, no?
+                -> second_top
     
     + [Vorrei parlare di un altro luogo.]
             -> top
@@ -115,11 +122,12 @@
 
         {about_ink_usage:La prima cosa da fare è: conquistare la <b><i>fiducia</b></i> della persona che devi aiutare.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         {about_ink_usage:Ci <b><i>parli</b></i>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.}
-        {about_ink_usage:Poi, le fai un <b><i>dono</b></i>.}
-        {about_ink_usage:Più il dono è qualcosa che le dimostra che l'hai ascoltata, più avrai <b><i>inchiostro</b></i> per aiutarla a riscrivere la sua storia.}
-        {questions: A quel punto inizi i tuoi <b><i>revisioni</b></i>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.}
-        {questions: Più inchiostro hai, più revisioni puoi fare.}
-        {questions: Infine: in base alle cose che avrai detto, la persona sceglierà il suo <b><i>nuovo nome</b></i>.}
+        {questions: Fino a quando non è pronta per una <b><i>riscrittura</b></i>}
+        {questions: A quel punto inizi i tuoi <b><i>riscritture</b></i>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.}
+        {questions: Più inchiostro hai, più riscritture puoi fare.}
+        {about_greenhouse: Per aumentare l'inchiostro puoi fare cose diverse. Come il giusto dono.}
+        {about_kitchen: E se mangiate qualcosa assieme, magari riesci anche a capire se stai o meno conquistando la fiducia di quella persona.}
+        {questions: Così, a fine riscrittura, in base alle cose che avrai detto, la persona sceglierà il suo <b><i>nuovo nome</b></i>.}
         {questions: E poi si ricomincia.}
            -> talk_with_mentor
 

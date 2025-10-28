@@ -383,6 +383,7 @@
     ~ temp charNameFour = translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
         Dove ci viene detto a cosa serve il nido in modo sereno.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+        E ci spiega che la manipolazione è un intento, non qualcosa di inerente all'oggetto, o al nido.
     -> main
 
 === foundLibro
