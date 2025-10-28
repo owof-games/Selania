@@ -15,7 +15,7 @@
 
 //Tracciamento della relazione
     VAR secondCharStateRelationship = 0
-    VAR goodPercentageForRelationship = 66
+    VAR goodPercentageForRelationship = 66.00
 
 //Tracciamento del dono
     VAR secondGift = ()
@@ -53,11 +53,11 @@
     
 //UP: coerenza.
 //DOWN: incoerenza, cose random
-    VAR secondPurple = 0
-    VAR secondYellow = 0
-    VAR secondBlue = 0
-    VAR secondGreen = 0
-    VAR secondRed = 0                     
+    VAR secondPurple = 0.00
+    VAR secondYellow = 0.00
+    VAR secondBlue = 0.00
+    VAR secondGreen = 0.00
+    VAR secondRed = 0.00                   
                      
                     /* ---------------------------------
                     
@@ -74,14 +74,24 @@
     //L'obbiettivo è: beccare almeno il 66% delle risposte.
     //Invece di complicarmi la vita posso usare la matematica.
     
-    ~ temp 66percentValue = ((secondStoryQuestCount/100)*goodPercentageForRelationship)
+    ~ temp allColorsValue = secondRed + secondBlue + secondGreen + secondYellow + secondPurple
+    ~ temp minimumPercentValue = ((allColorsValue/100.00)*goodPercentageForRelationship)
     
-        {debug: La percentuale di risposte coerenti per una buona relazione è di {goodPercentageForRelationship }. Il {goodPercentageForRelationship}% di {secondStoryQuestCount} è {66percentValue}.}
+        {debug: La percentuale di risposte coerenti per una buona relazione è di {goodPercentageForRelationship}. Il {goodPercentageForRelationship}% di tutta la somma dei colori di Riccio (che è {allColorsValue}) è {minimumPercentValue}.}
+        {debug: Il valore di viola è: {FLOAT(secondPurple)}, di verde è: {FLOAT(secondGreen)}, di rosso è: {FLOAT(secondRed)}, di blu è: {FLOAT(secondBlue)}, di giallo è: {FLOAT(secondYellow)}}
         
         {
-            - secondPurple or secondGreen or secondRed or secondBlue or secondYellow > 66percentValue:
+            - secondPurple > minimumPercentValue:
                     ~ secondCharStateRelationship ++
-                {debug: aumento l'inchiostro del secondo personaggio di un livello. Ora è a {~ secondCharStateRelationship}}
+            - secondGreen > minimumPercentValue:
+                    ~ secondCharStateRelationship ++        
+            - secondRed > minimumPercentValue:
+                    ~ secondCharStateRelationship ++        
+            - secondBlue > minimumPercentValue:
+                    ~ secondCharStateRelationship ++
+            - secondYellow > minimumPercentValue:
+                    ~ secondCharStateRelationship ++
+            {debug: Una risposta supera il 66 per cento delle scelte e quindi aumento l'inchiostro del secondo personaggio di un livello. Ora è a {secondCharStateRelationship}}
         }    
 
     

@@ -22,7 +22,7 @@
                         
                         - else:
                             Ehi {name}! Troviamoci alla foresta. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:thirdPNG_neutral
-                                ~ move_entity(SecondCharacter, Pond)
+                                ~ move_entity(SecondCharacter, Forest)
                                 ~ changeLocationTimer = 0
                                     -> main    
                    } 
