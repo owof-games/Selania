@@ -77,8 +77,13 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
         //Variazioni di un solo colore
             - Rosso:
                 ~ temporaryRed ++
-            - RossoRosso:    
+            - RossoRosso:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
             - RossoRossoRosso:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
             
             - Giallo:
             - GialloGiallo:
@@ -98,23 +103,116 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 
         //Variazioni di due colori
             - RossoRossoBlu:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                ~ temporaryBlue --
+                
             - RossoRossoVerde:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                ~ temporaryGreen --
+                
             - RossoRossoViola:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                ~ temporaryPurple --
+                
             - RossoRossoGiallo:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                ~ temporaryYellow --
+                
             - RossoGiallo:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryYellow --
+                
             - RossoGialloRosso:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+            
             - RossoGialloGiallo:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+            
             - RossoBlu:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryBlue --
+                
             - RossoBluBlu:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+            
             - RossoBluRosso:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+            
             - RossoVerde: 
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryGreen --
+            
             - RossoVerdeVerde:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+            
             - RossoVerdeRosso:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+            
             - RossoViola:
-            - RossoViolaBlu:
-            - RossoViolaVerde:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryPurple --
+                
             - RossoViolaViola:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+            
             - RossoViolaRosso:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
             
             - GialloRosso:
             - GialloRossoGiallo:
@@ -185,15 +283,101 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
         
         //Varizioni di tre colori
             - RossoGialloBlu: 
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                ~ temporaryBlue --
+            
             - RossoGialloVerde: 
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                ~ temporaryGreen --
+            
             - RossoGialloViola: 
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                ~ temporaryPurple --
+            
             - RossoBluVerde: 
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                ~ temporaryGreen --
+            
             - RossoBluViola: 
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                ~ temporaryPurple --
+            
             - RossoBluGiallo: 
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                ~ temporaryYellow --
+            
             - RossoVerdeBlu: 
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                ~ temporaryBlue --
+            
             - RossoVerdeViola: 
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                ~ temporaryPurple --
+            
             - RossoVerdeGiallo: 
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                ~ temporaryYellow --
+            
             - RossoViolaGiallo:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                ~ temporaryYellow --
+                
+            - RossoViolaVerde:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                ~ temporaryGreen --
+                
+            - RossoViolaBlu:
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++ 
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                ~ temporaryBlue --
+                
             
             - GialloRossoVerde:
             - GialloRossoViola:
@@ -249,7 +433,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
             - ViolaVerdeGiallo:
             - ViolaVerdeRosso:
             
-    
+            -else: Valore colore parola {activeEmotionalWord} non trovato!
     }
 
 
