@@ -86,6 +86,7 @@
     INCLUDE Nest\NestCode.ink
     INCLUDE Nest\NestDispatcher.ink
     INCLUDE Nest\NestEWM.ink
+    INCLUDE Nest/ColorManager.ink
 
 //Kitchen
     INCLUDE Kitchen\Kitchen.ink
@@ -101,6 +102,8 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
+
+
 
 
 

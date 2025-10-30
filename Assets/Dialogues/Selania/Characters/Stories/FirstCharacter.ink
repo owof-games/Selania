@@ -176,7 +176,7 @@
         Come lə trovo?
         
             + (oneBlue) [Dammi dettagli più concreti.]
-                    ~ firstBlue ++
+                    -> color_variation_management(FirstCharacter, blueC)->
                 Concreti?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                 Si muove. Respira. Mangia. Saltella. Canta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                 A volte tutte queste cose assieme.
@@ -184,27 +184,27 @@
                 Sempre che tu sappia cosa sia.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                 
             + (oneYellow) [Suona il tamburo e vedrai che il violino torna!]
-                    ~ firstYellow ++
+                    -> color_variation_management(FirstCharacter, yellowC)->
                 A beh, ci sta!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
                 Non ci avevo pensato!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                 Ma il suo violino è più da pianoforte.
                 Forse potrei cercare nella serra, e trovare qualcosa da suonare.
                 
             + (oneRed) [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ firstRed ++
+                    -> color_variation_management(FirstCharacter, redC)->
                 Ha senso, ma Talco non è persona da azione.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                 Dice sempre che si trascina nello spazio come se fosse vento.
                 E lascia alle sue spalle l'odore della primavera.
                 Che è un modo carino per dire che è sempre piene di fango e terriccio.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
                 
             + (oneGreen) [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ firstGreen ++
+                    -> color_variation_management(FirstCharacter, greenC)->
                 Grazie ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                 Ma è come chiedermi di fare un concerto con una persona sconosciuta.
                 Non è che ci si piglia subito, no?
 
             + (onePurple) [Tu sei sempre con ləi e ləi con te.]
-                ~ firstPurple ++
+                   -> color_variation_management(FirstCharacter, purpleC)->
                 Mmm, ok, credo?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                 Le parole mi vanno anche bene, ma chi ti conosce.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                 No dai, non devo essere stronza.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
@@ -240,41 +240,46 @@
          {name}, secondo te il nome di una persona è importante?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
     	    
             + [È uno strumento di controllo.]
+                -> color_variation_management(FirstCharacter, redC)->
                  Il nome è anche uno strumento d'amore.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                  Pensa a tutti i modi in cui qualcuno lo può gridare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Sono sicura che te ne verranno in mente un paio molto piacevoli.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
-                    ~ firstRed ++
+                    
             
             + [Solo se possiamo continuamente cambiarlo.]
+                -> color_variation_management(FirstCharacter, yellowC)->
                  Adoro!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
                  Passo le giornate a cambiare melodie, e non avevo mai pensato di cambiare il mio nome!
                  Cosa normie proprio ora che ci penso, viste tutt3 l3 am3 non binari3 con cui esco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Mi merito di essere una chitarra!
-                    ~ firstYellow ++
+                    
                     
             + [Solo se sei tu a definirne il significato.]
+                -> color_variation_management(FirstCharacter, purpleC)->
                  Ah, ci sta!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Tu sì che sai guardare al cuore delle cose!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                  Quindi: ora mi ritrovo con un nome nuovo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  E non so cosa significhi, cosa doverci fare.
                  Però posso farci quello che voglio, no?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
-                    ~ firstPurple ++
+                    
                     
             + [È un dono della tua famiglia che resterà sempre con te.]
+                -> color_variation_management(FirstCharacter, greenC)->
                  A I U T O!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                  Non ci avevo mai pensato.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Ma non tutt3 ne sono felici.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
                  E per alcune ame il nome è qualcosa che si sceglie.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                  Smollare quello vecchio è una liberazione.
-                    ~ firstGreen ++
+                    
                     
             + [È utile, altrimenti come ci distinguiamo?]
+                    -> color_variation_management(FirstCharacter, blueC)->
                  Capiamoci: sei sempre così {pronouns has him:rigido|{pronouns has her:rigida|rigidə}}?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
     	         La persona più divertente della festa, vero?
     	         Anche se immagino che una visione pratica abbia dei vantaggi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
     	         Per lo meno faresti felice mio padre.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
     	         Madonna, che piagnona che sono.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-                    ~ firstBlue ++         
+                        
             -
 
         Comunque ama: il tuo nome ti si addice benissimo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
@@ -284,33 +289,37 @@
         Certo {charNameOne} che sei basicona con queste domande.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
        
             + [Quindi per cambiare faccia basta cambiarci il nome?]
+                -> color_variation_management(FirstCharacter, yellowC)->
                 {
                     -firstYellow > 1:  Ama, tu e io faremo amicizia presto!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                 }
                  Cavolo, passerei le giornate a essere chiunque!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
                  E forse ora potrei essere Talco.
                  Dove sei, Talco?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
-                    ~ firstYellow ++
+                 
             
             + [No, la faccia è una cosa che hai anche se non hai un nome.]
+                -> color_variation_management(FirstCharacter, blueC)->
                 {
                     - firstBlue > 1:  {name}, sai che ogni tanto puoi scendere da ovviolandia, vero?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                 }
                  Forse dovrei chiamarti Linea.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                  Anzi, Quadrato.
                  Perché neanche a volerlo sai rotolare lontano dalla superficie delle cose.
-                    ~ firstBlue ++
+                   
                
             + [Rinunciare al superfluo ci avvicina alla natura delle cose.]
+                -> color_variation_management(FirstCharacter, purpleC)->
                 {
                     - firstPurple > 1: {name}, continua così e ci shippo tantissimo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                 } 
                  Ho pensato subito che {charNameOne} avesse un valore negativo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Dimenticandomi che in ogni brano il silenzio è parte fondamentale.
                  Grazie ama!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
-                    ~ firstPurple ++
+                    
             
             + [Cosa pensi direbbe Talco di questo nome?]
+                -> color_variation_management(FirstCharacter, greenC)->
                 {
                     -firstGreen > 1:  A te piace parlare di sentimenti e relazioni, vero?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                 }
@@ -318,30 +327,31 @@
                  Ma Talco mi blasterebbe, sicuro.
                  Mi direbbe che sono una frignona, e di andare a suonare qualcosa.
                  Talco è una persona che agisce, non resta ad aspettare.
-                    ~ firstGreen ++
+                   
             
             + [A te va bene essere {charNameOne}? Perché non Tamburo? Corno da guerra?]
+                -> color_variation_management(FirstCharacter, redC)->
                 {
                     - firstRed > 1: Tu prendi tutto di pancia, vero? Saresti {pronouns has him:lo|{pronouns has her:la|lə}} bestie di Talco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                 }
                  Mi merito {charNameOne} perché ultimamente ho proprio smollato tutto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
                  Però ama, parlare con te non è già una forma di azione?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
-                    ~ firstRed ++
+    
             -
        
         Come mi dovrei chiamare secondo te?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
         
         
             + [Un nome che inciti alla lotta.]
-                ~ firstRed ++
+                -> color_variation_management(FirstCharacter, redC)->
             + [Un nome che inviti al gioco.]
-                ~ firstYellow ++
+                -> color_variation_management(FirstCharacter, yellowC)->
             + [Un nome che ricordi casa.]
-                ~ firstGreen ++
+                -> color_variation_management(FirstCharacter, greenC)->
             + [Un nome che illumini.]
-                ~ firstPurple ++
+                -> color_variation_management(FirstCharacter, purpleC)->
             + [Un nome che ponga domande.]
-                ~ firstBlue ++
+                -> color_variation_management(FirstCharacter, blueC)->
             -    
         
     	Qualsiasi cosa tu abbia pensato, non riesci a dirla.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}

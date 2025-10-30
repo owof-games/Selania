@@ -1,11 +1,11 @@
-//~ SEED_RANDOM(266)
+~ SEED_RANDOM(266)
 
 //Per abilitare o meno i debug
     VAR debug = false
     VAR debugCultivable = false
     VAR debugChangeName = false
     VAR kitchenDebug = false
-    VAR nestDebug = false
+    VAR nestDebug = true
     
     //per testare i luoghi non subito aperti con calma
     VAR debug_test_library = false
