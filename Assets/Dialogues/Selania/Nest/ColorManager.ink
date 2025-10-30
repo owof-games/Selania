@@ -214,71 +214,440 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple --
                 ~ temporaryPurple --
             
-            - GialloRosso:
-            - GialloRossoGiallo:
-            - GialloRossoRosso:
-            - GialloGialloVerde:
-            - GialloGialloViola:
-            - GialloGialloBlu:
-            - GialloGialloRosso:
-            - GialloBlu:
-            - GialloBluBlu:
-            - GialloBluGiallo:
+            
+            
+            
+            
             - GialloVerde:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryGreen --
+        
             - GialloViola:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryPurple --
+            
+            - GialloRosso:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryRed --
+            
+            - GialloBlu:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryBlue --
+                
+                
+            - GialloRossoGiallo:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
+            - GialloRossoRosso:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
+            - GialloGialloVerde:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
+            - GialloGialloViola:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
+            - GialloGialloBlu:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
+            - GialloGialloRosso:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
+            
+            - GialloBluBlu:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
+            - GialloBluGiallo:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
+                
             - GialloVerdeVerde:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
             - GialloVerdeGiallo:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
             - GialloViolaViola:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
             - GialloViolaGiallo:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
+            
+            
+            
+            
+            
+            
             
             - BluRosso:
-            - BluRossoBlu:
-            - BluRossoRosso:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryRed --
+                
             - BluGiallo:
-            - BluGialloBlu:
-            - BluGialloGiallo:
-            - BluBluVerde:
-            - BluBluViola:
-            - BluBluGiallo:
-            - BluBluRosso:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryYellow --
+                
             - BluVerde:
-            - BluVerdeVerde:
-            - BluVerdeBlu:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryGreen --
+                
             - BluViola:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryPurple --
+                
+            - BluRossoBlu:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
+            - BluRossoRosso:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
+            - BluGialloBlu:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
+            - BluGialloGiallo:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
+            - BluBluVerde:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
+            - BluBluViola:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
+            - BluBluGiallo:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
+            - BluBluRosso:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
+            - BluVerdeVerde:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
+            - BluVerdeBlu:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
             - BluViolaViola:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
+            
+            
+            
+            
+            
+            
             
             - VerdeRosso:
-            - VerdeRossoVerde:
-            - VerdeRossoRosso:
-            - VerdeGiallo:
-            - VerdeGialloVerde:
-            - VerdeGialloGiallo:
-            - VerdeBlu:
-            - VerdeBluVerde:
-            - VerdeBluBlu:
-            - VerdeVerdeViola:
-            - VerdeVerdeBlu:
-            - VerdeVerdeGiallo:
-            - VerdeVerdeRosso:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryRed --
+                
             - VerdeViola:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryPurple --
+                
+            - VerdeGiallo:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryYellow --
+                
+            - VerdeBlu:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryBlue --
+                
+            - VerdeRossoVerde:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
+            - VerdeRossoRosso:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
+            - VerdeGialloVerde:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
+            - VerdeGialloGiallo:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
+            - VerdeBluVerde:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
+            - VerdeBluBlu:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
+            - VerdeVerdeViola:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
+            - VerdeVerdeBlu:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
+            - VerdeVerdeGiallo:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
+            - VerdeVerdeRosso:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
             - VerdeViolaVerde:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
             - VerdeViolaViola:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
+            
+            
+            
             
             - ViolaRosso:
-            - ViolaRossoViola:
-            - ViolaRossoRosso:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryRed --
+                
             - ViolaGiallo:
-            - ViolaGialloViola:
-            - ViolaGialloGiallo:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryYellow --
+                
             - ViolaBlu:
-            - ViolaBluViola:
-            - ViolaBluBlu:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryBlue --
+                
             - ViolaVerde:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryGreen --
+                
+            - ViolaRossoViola:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
+            - ViolaRossoRosso:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
+            - ViolaGialloViola:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
+            - ViolaGialloGiallo:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
+            - ViolaBluViola:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
+            - ViolaBluBlu:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
             - ViolaVerdeVerde:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
+            - ViolaVerdeViola:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
             - ViolaViolaVerde:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
             - ViolaViolaBlu:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
             - ViolaViolaGiallo:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
             - ViolaViolaRosso:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
         
         
         //Varizioni di tre colori
@@ -378,60 +747,365 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple --
                 ~ temporaryBlue --
                 
-            
+        
+        
+        
+        
             - GialloRossoVerde:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
             - GialloRossoViola:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
             - GialloRossoBlu:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
             - GialloBluVerde:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
             - GialloBluViola:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
             - GialloBluRosso:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
             - GialloVerdeViola:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
             - GialloVerdeBlu:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
             - GialloVerdeRosso:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
             - GialloViolaVerde:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
             - GialloViolaBlu:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
             - GialloViolaRosso:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
+                
+                
+                
+                
             
             - BluRossoVerde:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryRed ++
+                ~ temporaryRed ++
+                
             - BluRossoViola:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
             - BluRossoGiallo:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
             - BluGialloVerde:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
             - BluGialloViola:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
             - BluGialloRosso:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
             - BluVerdeViola:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
             - BluVerdeGiallo:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
             - BluVerdeRosso:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
             - BluViolaVerde:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                
             - BluViolaBlu:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
             - BluViolaGiallo:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
             - BluViolaRosso:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
             
             - VerdeRossoViola:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
             - VerdeRossoBlu:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
             - VerdeRossoGiallo:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
             - VerdeGialloViola:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
             - VerdeGialloBlu:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
             - VerdeBluViola:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
             - VerdeBluGiallo:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
             - VerdeBluRosso:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
             - VerdeGialloRosso:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
             - VerdeViolaBlu:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
             - VerdeViolaGiallo:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
             - VerdeViolaRosso:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                
+            
+            
+            
+            
+            
+            
             
             - ViolaRossoVerde:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
             - ViolaRossoBlu:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
             - ViolaRossoGiallo:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryRed --
+                ~ temporaryRed --
+                
             - ViolaGialloVerde:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
             - ViolaGialloBlu:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
             - ViolaGialloRosso:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryYellow --
+                ~ temporaryYellow --
+                
             - ViolaBluVerde:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
             - ViolaBluGiallo:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
             - ViolaBluRosso:
-            - ViolaVerdeViola:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryBlue --
+                ~ temporaryBlue --
+                
+            
             - ViolaVerdeBlu:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
             - ViolaVerdeGiallo:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
             - ViolaVerdeRosso:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryGreen --
+                ~ temporaryGreen --
+                
             
             -else: Valore colore parola {activeEmotionalWord} non trovato!
     }
