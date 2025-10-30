@@ -45,20 +45,20 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
     //Altrimenti aumentiamo di uno come sempre
 
     - else:
-        {
-            - Color == redC:
+        {Color:
+            -redC:
                 ~ temporaryRed ++
      
-            - Color == yellowC:
+            -yellowC:
                 ~ temporaryYellow ++
             
-            - Color == blueC:
+            -blueC:
                 ~ temporaryBlue ++
             
-            - Color == greenC:
+            -greenC:
                 ~ temporaryGreen ++   
             
-            - Color == purpleC:
+            -purpleC:
                 ~ temporaryPurple ++
         }
         {nestDebug: non è attiva alcuna parola magica, per cui mi aumento di uno i valori e basta.}
@@ -73,10 +73,182 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
 
 = emotional_words
 //Qui tracciamo gli effetti generici delle parole
-    {
-    
-        - activeEmotionalWord == Rosso:
-            ~ temporaryRed ++
+    {activeEmotionalWord:
+        //Variazioni di un solo colore
+            - Rosso:
+                ~ temporaryRed ++
+            - RossoRosso:    
+            - RossoRossoRosso:
+            
+            - Giallo:
+            - GialloGiallo:
+            - GialloGialloGiallo:
+            
+            - Blu:
+            - BluBlu:
+            - BluBluBlu:
+            
+            - Verde:
+            - VerdeVerde:
+            - VerdeVerdeVerde:
+            
+            - Viola:
+            - ViolaViola:
+            - ViolaViolaViola:
+                
+        //Variazioni di due colori
+            - RossoRossoBlu:
+            - RossoRossoVerde:
+            - RossoRossoViola:
+            - RossoRossoGiallo:
+            - RossoGiallo:
+            - RossoGialloRosso:
+            - RossoGialloGiallo:
+            - RossoBlu:
+            - RossoBluBlu:
+            - RossoBluRosso:
+            - RossoVerde: 
+            - RossoVerdeVerde:
+            - RossoVerdeRosso:
+            - RossoViola:
+            - RossoViolaBlu:
+            - RossoViolaVerde:
+            - RossoViolaViola:
+            - RossoViolaRosso:
+            
+            - GialloRosso:
+            - GialloRossoGiallo:
+            - GialloRossoRosso:
+            - GialloGialloVerde:
+            - GialloGialloViola:
+            - GialloGialloBlu:
+            - GialloGialloRosso:
+            - GialloBlu:
+            - GialloBluBlu:
+            - GialloBluGiallo:
+            - GialloVerde:
+            - GialloViola:
+            - GialloVerdeVerde:
+            - GialloVerdeGiallo:
+            - GialloViolaViola:
+            - GialloViolaGiallo:
+            
+            - BluRosso:
+            - BluRossoBlu:
+            - BluRossoRosso:
+            - BluGiallo:
+            - BluGialloBlu:
+            - BluGialloGiallo:
+            - BluBluVerde:
+            - BluBluViola:
+            - BluBluGiallo:
+            - BluBluRosso:
+            - BluVerde:
+            - BluVerdeVerde:
+            - BluVerdeBlu:
+            - BluViola:
+            - BluViolaViola:
+            
+            - VerdeRosso:
+            - VerdeRossoVerde:
+            - VerdeRossoRosso:
+            - VerdeGiallo:
+            - VerdeGialloVerde:
+            - VerdeGialloGiallo:
+            - VerdeBlu:
+            - VerdeBluVerde:
+            - VerdeBluBlu:
+            - VerdeVerdeViola:
+            - VerdeVerdeBlu:
+            - VerdeVerdeGiallo:
+            - VerdeVerdeRosso:
+            - VerdeViola:
+            - VerdeViolaVerde:
+            - VerdeViolaViola:
+            
+            - ViolaRosso:
+            - ViolaRossoViola:
+            - ViolaRossoRosso:
+            - ViolaGiallo:
+            - ViolaGialloViola:
+            - ViolaGialloGiallo:
+            - ViolaBlu:
+            - ViolaBluViola:
+            - ViolaBluBlu:
+            - ViolaVerde:
+            - ViolaVerdeVerde:
+            - ViolaViolaVerde:
+            - ViolaViolaBlu:
+            - ViolaViolaGiallo:
+            - ViolaViolaRosso:
+        
+        
+        //Varizioni di tre colori
+            - RossoGialloBlu: 
+            - RossoGialloVerde: 
+            - RossoGialloViola: 
+            - RossoBluVerde: 
+            - RossoBluViola: 
+            - RossoBluGiallo: 
+            - RossoVerdeBlu: 
+            - RossoVerdeViola: 
+            - RossoVerdeGiallo: 
+            - RossoViolaGiallo:
+            
+            - GialloRossoVerde:
+            - GialloRossoViola:
+            - GialloRossoBlu:
+            - GialloBluVerde:
+            - GialloBluViola:
+            - GialloBluRosso:
+            - GialloVerdeViola:
+            - GialloVerdeBlu:
+            - GialloVerdeRosso:
+            - GialloViolaVerde:
+            - GialloViolaBlu:
+            - GialloViolaRosso:
+            
+            - BluRossoVerde:
+            - BluRossoViola:
+            - BluRossoGiallo:
+            - BluGialloVerde:
+            - BluGialloViola:
+            - BluGialloRosso:
+            - BluVerdeViola:
+            - BluVerdeGiallo:
+            - BluVerdeRosso:
+            - BluViolaVerde:
+            - BluViolaBlu:
+            - BluViolaGiallo:
+            - BluViolaRosso:
+            
+            - VerdeRossoViola:
+            - VerdeRossoBlu:
+            - VerdeRossoGiallo:
+            - VerdeGialloViola:
+            - VerdeGialloBlu:
+            - VerdeBluViola:
+            - VerdeBluGiallo:
+            - VerdeBluRosso:
+            - VerdeGialloRosso:
+            - VerdeViolaBlu:
+            - VerdeViolaGiallo:
+            - VerdeViolaRosso:
+            
+            - ViolaRossoVerde:
+            - ViolaRossoBlu:
+            - ViolaRossoGiallo:
+            - ViolaGialloVerde:
+            - ViolaGialloBlu:
+            - ViolaGialloRosso:
+            - ViolaBluVerde:
+            - ViolaBluGiallo:
+            - ViolaBluRosso:
+            - ViolaVerdeViola:
+            - ViolaVerdeBlu:
+            - ViolaVerdeGiallo:
+            - ViolaVerdeRosso:
+            
     
     }
 

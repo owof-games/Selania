@@ -1,9 +1,6 @@
 //Funzione per spostarsi da un luogo all'altro a seconda di dove mi trovo
 
  === move_between_rooms(my_location)
- 
-
- 
  //Book management (the book will be treated as a place)
     + {are_two_entities_together(PG, RewriterBook) && !debugStochastic}[RewriterBook]
             ~ move_entity(PG, BookPlace)
