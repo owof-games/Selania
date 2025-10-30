@@ -1,5 +1,4 @@
 === emotional_words_management(action)
-TODO: Completare
 //Questa è la funzione che usiamo sia per rimuovere che per attivare una parola posseduta.
 {nestDebug: emotional_words_management(action). Il valore di action è {action}.}
 
@@ -1823,11 +1822,409 @@ TODO: Completare
             {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
         }
  
+ 
+ 
+ 
+ 
  //Varianti a dominante viola
     //Due note
+    + {ownedEmotionalWords has ViolaRosso}[ViolaRosso]
+        {
+            - action == Activate: ViolaRosso è stata attivata.
+                ~ activeEmotionalWord = ViolaRosso
+                ~ ownedEmotionalWords -= ViolaRosso
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaRosso è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaRosso
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaRosso dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.}  
+        }
+        
+    + {ownedEmotionalWords has ViolaGiallo}[ViolaGiallo]
+        {
+            - action == Activate: ViolaGiallo è stata attivata.
+                ~ activeEmotionalWord = ViolaGiallo
+                ~ ownedEmotionalWords -= ViolaGiallo
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaGiallo è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaGiallo
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaGiallo dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.}  
+        }  
+        
+    + {ownedEmotionalWords has ViolaBlu}[ViolaBlu]
+        {
+            - action == Activate:  ViolaBlu è stata attivata.
+                ~ activeEmotionalWord = ViolaBlu
+                ~ ownedEmotionalWords -= ViolaBlu
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete:  ViolaBlu è stata cancellata.
+                ~ ownedEmotionalWords -=  ViolaBlu
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso  ViolaBlu dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.}  
+        }        
+
     
+    + {ownedEmotionalWords has ViolaVerde}[ViolaVerde]
+        {
+            - action == Activate: ViolaVerde è stata attivata.
+                ~ activeEmotionalWord = ViolaVerde
+                ~ ownedEmotionalWords -= ViolaVerde
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+
+            - action == Delete: ViolaVerde è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaVerde
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaVerde dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.} 
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }
+        
     
     //Tre note
+    + {ownedEmotionalWords has ViolaRossoVerde}[ViolaRossoVerde]
+        {
+            - action == Activate: ViolaRossoVerde è stata attivata.
+                ~ activeEmotionalWord = ViolaRossoVerde
+                ~ ownedEmotionalWords -= ViolaRossoVerde
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaRossoVerde è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaRossoVerde
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaRossoVerde dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.} 
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }
+    
+    + {ownedEmotionalWords has ViolaRossoViola}[ViolaRossoViola]
+        {
+            - action == Activate: ViolaRossoViola è stata attivata.
+                ~ activeEmotionalWord = ViolaRossoViola
+                ~ ownedEmotionalWords -= ViolaRossoViola
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaRossoViola è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaRossoViola
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaRossoViola dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.} 
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }    
+    
+    + {ownedEmotionalWords has ViolaRossoBlu}[ViolaRossoBlu]
+        {
+            - action == Activate: ViolaRossoBlu è stata attivata.
+                ~ activeEmotionalWord = ViolaRossoBlu
+                ~ ownedEmotionalWords -= ViolaRossoBlu
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+
+           - action == Delete: ViolaRossoBlu è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaRossoBlu
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaRossoBlu dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}  
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }
+    
+    + {ownedEmotionalWords has ViolaRossoGiallo}[ViolaRossoGiallo]
+        {
+            - action == Activate: ViolaRossoGiallo è stata attivata.
+                ~ activeEmotionalWord = ViolaRossoGiallo
+                ~ ownedEmotionalWords -= ViolaRossoGiallo
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+
+            - action == Delete: ViolaRossoGiallo è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaRossoGiallo
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaRossoGiallo dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}  
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }
+    
+    + {ownedEmotionalWords has ViolaRossoRosso}[ViolaRossoRosso]
+        {
+            - action == Activate: ViolaRossoRosso è stata attivata.
+                ~ activeEmotionalWord = ViolaRossoRosso
+                ~ ownedEmotionalWords -= ViolaRossoRosso
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaRossoRosso è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaRossoRosso
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaRossoRosso dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}  
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }    
+    
+    + {ownedEmotionalWords has ViolaGialloVerde}[ViolaGialloVerde]
+        {
+            - action == Activate: ViolaGialloVerde è stata attivata.
+                ~ activeEmotionalWord = ViolaGialloVerde
+                ~ ownedEmotionalWords -= ViolaGialloVerde
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaGialloVerde è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaGialloVerde
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaGialloVerde dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}  
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }
+        
+    + {ownedEmotionalWords has ViolaGialloViola}[ViolaGialloViola]
+        {
+            - action == Activate: ViolaGialloViola è stata attivata.
+                ~ activeEmotionalWord = ViolaGialloViola
+                ~ ownedEmotionalWords -= ViolaGialloViola
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaGialloViola è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaGialloViola
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaGialloViola dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}  
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }
+    
+    + {ownedEmotionalWords has ViolaGialloBlu}[ViolaGialloBlu]
+        {
+            - action == Activate: ViolaGialloBlu è stata attivata.
+                ~ activeEmotionalWord = ViolaGialloBlu
+                ~ ownedEmotionalWords -= GialloGialloBlu
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaGialloBlu è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaGialloBlu
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaGialloBlu dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}  
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }    
+    
+    + {ownedEmotionalWords has ViolaGialloGiallo}[ViolaGialloGiallo]
+        {
+            - action == Activate: ViolaGialloGiallo è stata attivata.
+                ~ activeEmotionalWord = ViolaGialloGiallo
+                ~ ownedEmotionalWords -= ViolaGialloGiallo
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaGialloGiallo è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaGialloGiallo
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaGialloGiallo dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }    
+    
+    + {ownedEmotionalWords has ViolaGialloRosso}[ViolaGialloRosso]
+        {
+            - action == Activate: ViolaGialloRosso è stata attivata.
+                ~ activeEmotionalWord = ViolaGialloRosso
+                ~ ownedEmotionalWords -= ViolaGialloRosso
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaGialloRosso è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaGialloRosso
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaGialloRosso dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        } 
+    
+    + {ownedEmotionalWords has ViolaBluVerde}[ViolaBluVerde]
+        {
+            - action == Activate: ViolaBluVerde è stata attivata.
+                ~ activeEmotionalWord = ViolaBluVerde
+                ~ ownedEmotionalWords -= ViolaBluVerde
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaBluVerde è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaBluVerde
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaBluVerde dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }
+    
+    + {ownedEmotionalWords has ViolaBluViola}[ViolaBluViola]
+        {
+            - action == Activate: ViolaBluViola è stata attivata.
+                ~ activeEmotionalWord = ViolaBluViola
+                ~ ownedEmotionalWords -= ViolaBluViola
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaBluViola è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaBluViola
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaBluViola dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.}  
+        }
+        
+    + {ownedEmotionalWords has ViolaBluBlu}[ViolaBluBlu]
+        {
+            - action == Activate: ViolaBluBlu è stata attivata.
+                ~ activeEmotionalWord = ViolaBluBlu
+                ~ ownedEmotionalWords -= ViolaBluBlu
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaBluBlu è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaBluBlu
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaBluBlu dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.}  
+        }  
+        
+    + {ownedEmotionalWords has ViolaBluGiallo}[ViolaBluGiallo]
+        {
+            - action == Activate: ViolaBluGiallo è stata attivata.
+                ~ activeEmotionalWord = ViolaBluGiallo
+                ~ ownedEmotionalWords -= ViolaBluGiallo
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaBluGiallo è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaBluGiallo
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaBluGiallo dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.}  
+        }        
+
+    
+    + {ownedEmotionalWords has ViolaBluRosso}[ViolaBluRosso]
+        {
+            - action == Activate: ViolaBluRosso è stata attivata.
+                ~ activeEmotionalWord = ViolaBluRosso
+                ~ ownedEmotionalWords -= ViolaBluRosso
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaBluRosso è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaBluRosso
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaBluRosso dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.} 
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }
+        
+    + {ownedEmotionalWords has ViolaVerdeVerde}[ViolaVerdeVerde]
+        {
+            - action == Activate: ViolaVerdeVerde è stata attivata.
+                ~ activeEmotionalWord = ViolaVerdeVerde
+                ~ ownedEmotionalWords -= ViolaVerdeVerde
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaVerdeVerde è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaVerdeVerde
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaVerdeVerde dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.} 
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }
+    
+    + {ownedEmotionalWords has ViolaVerdeViola}[ViolaVerdeViola]
+        {
+            - action == Activate: ViolaVerdeViola è stata attivata.
+                ~ activeEmotionalWord = ViolaVerdeViola
+                ~ ownedEmotionalWords -= ViolaVerdeViola
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaVerdeViola è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaVerdeViola
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaVerdeViola dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.} 
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }    
+    
+    + {ownedEmotionalWords has ViolaVerdeBlu}[ViolaVerdeBlu]
+        {
+            - action == Activate: ViolaVerdeBlu è stata attivata.
+                ~ activeEmotionalWord = ViolaVerdeBlu
+                ~ ownedEmotionalWords -= ViolaVerdeBlu
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaVerdeBlu è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaVerdeBlu
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaVerdeBlu dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}  
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }
+    
+    + {ownedEmotionalWords has ViolaVerdeGiallo}[ViolaVerdeGiallo]
+        {
+            - action == Activate: ViolaVerdeGiallo è stata attivata.
+                ~ activeEmotionalWord = ViolaVerdeGiallo
+                ~ ownedEmotionalWords -= ViolaVerdeGiallo
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaVerdeGiallo è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaVerdeGiallo
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaVerdeGiallo dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}  
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }
+    
+    + {ownedEmotionalWords has ViolaVerdeRosso}[ViolaVerdeRosso]
+        {
+            - action == Activate: ViolaVerdeRosso è stata attivata.
+                ~ activeEmotionalWord = ViolaVerdeRosso
+                ~ ownedEmotionalWords -= ViolaVerdeRosso
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaVerdeRosso è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaVerdeRosso
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaVerdeRosso dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}  
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }    
+    
+    + {ownedEmotionalWords has ViolaViolaVerde}[ViolaViolaVerde]
+        {
+            - action == Activate: ViolaViolaVerde è stata attivata.
+                ~ activeEmotionalWord = ViolaViolaVerde
+                ~ ownedEmotionalWords -= ViolaViolaVerde
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaViolaVerde è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaViolaVerde
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaViolaVerde dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}  
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }
+        
+    + {ownedEmotionalWords has ViolaViolaBlu}[ViolaViolaBlu]
+        {
+            - action == Activate: ViolaViolaBlu è stata attivata.
+                ~ activeEmotionalWord = ViolaViolaBlu
+                ~ ownedEmotionalWords -= ViolaViolaBlu
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaViolaBlu è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaViolaBlu
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaViolaBlu dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}  
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }
+    
+    + {ownedEmotionalWords has ViolaViolaGiallo}[ViolaViolaGiallo]
+        {
+            - action == Activate: ViolaViolaGiallo è stata attivata.
+                ~ activeEmotionalWord = ViolaViolaGiallo
+                ~ ownedEmotionalWords -= ViolaViolaGiallo
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaViolaGiallo è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaViolaGiallo
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaViolaGiallo dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}  
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }    
+    
+    + {ownedEmotionalWords has ViolaViolaRosso}[ViolaViolaRosso]
+        {
+            - action == Activate: ViolaViolaRosso è stata attivata.
+                ~ activeEmotionalWord = ViolaViolaRosso
+                ~ ownedEmotionalWords -= ViolaViolaRosso
+            {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            
+            - action == Delete: ViolaViolaRosso è stata cancellata.
+                ~ ownedEmotionalWords -= ViolaViolaRosso
+                ~ takenEmotionalWords --
+            {nestDebug: ho rimosso ViolaViolaRosso dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
+            {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
+        }
+ 
+ 
     
     
     + [Ho cambiato idea]
