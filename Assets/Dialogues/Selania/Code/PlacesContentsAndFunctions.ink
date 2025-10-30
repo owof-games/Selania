@@ -11,7 +11,7 @@
 
     VAR libraryContents = (FromLibraryToForest, FromLibraryToNestBlocked, ReadingPlace)
 
-    VAR nestContents = (FromNestToLibrary)
+    VAR nestContents = (FromNestToLibrary, ELManagement)
 
     VAR kitchenContents = (FromKitchenToPond)
 

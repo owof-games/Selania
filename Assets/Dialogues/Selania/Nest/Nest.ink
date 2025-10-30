@@ -9,5 +9,45 @@
     {nest == 1:Frase sul nido.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
     ~ arrivingFrom = Nest
+    -> main
 
-            -> main
+
+
+
+
+
+
+
+=== emotional_library_management
+    + {are_two_entities_together(ELManagement, PG)}[ELManagement]
+    -
+
+    + [Voglio scoprire una nuova parola.]
+    
+        {
+            //Se una parola è già attiva
+            - activeEmotionalWord != ():
+                Hai attiva una parola, torna quando si sarà esaurita.
+                    -> main
+            
+            //Se non è attiva
+            - else:
+                     {
+                        //Ma ho esaurito tutte le parola da trovare
+                        - (discoveredEmotionalWords - 155) == 0:
+                            Ma non hai più parole da scoprire!
+                                -> main
+                        
+                        //Se ho altre parole da trovare
+                        - else:
+                            Ti mando al sistema per scoprire nuove parole.
+                    
+                    }
+        
+        }
+    
+    
+   
+    
+    + {ownedEmotionalWords > 0} [Voglio gestire il mio vocabolario emozionale.]
+            -> emotional_inventory_management
