@@ -1,6 +1,11 @@
 LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
 
 VAR currentTalker = ()
+VAR temporaryRed = 0
+VAR temporaryYellow = 0
+VAR temporaryBlue = 0
+VAR temporaryGreen = 0
+VAR temporaryPurple = 0
 
 
 === color_variation_management(PNG, Color)
@@ -99,44 +104,105 @@ VAR currentTalker = ()
 
 
 = emotional_words
-//Qui prima procediamo con le variazioni, poi coi feedback ad hoc
-{
+//Qui tracciamo gli effetti generici delle parole
+    {
+    
+        - activeEmotionalWord == Rosso:
+            ~ temporaryRed ++
+    
+    }
 
-    - activeEmotionalWord == Rosso:
-        Cose
-
-}
-
-{
-    - currentTalker == FirstCharacter:
-        -> firstCharEmotionalActions
-
-
-}
-
-
-= firstCharEmotionalActions
-
-{
-    - activeEmotionalWord == Rosso:
-        Cose
-
-
-}
-
-
-
-
-->->
+//Poi andiamo ad aggiornare i valori delle parlanti
+    {
+        - currentTalker == FirstCharacter:
+            ~ firstRed += temporaryRed
+            ~ firstYellow += temporaryYellow
+            ~ firstBlue += temporaryBlue
+            ~ firstGreen += temporaryGreen
+            ~ firstPurple += temporaryPurple
+        
+        - currentTalker == SecondCharacter:
+            ~ secondRed += temporaryRed
+            ~ secondYellow += temporaryYellow
+            ~ secondBlue += temporaryBlue
+            ~ secondGreen += temporaryGreen
+            ~ secondPurple += temporaryPurple
+        
+        - currentTalker == Mentor:
+            ~ fifthRed += temporaryRed
+            ~ fifthYellow += temporaryYellow
+            ~ fifthBlue += temporaryBlue
+            ~ fifthGreen += temporaryGreen
+            ~ fifthPurple += temporaryPurple
+    }
 
 
 
+
+//E poi andiamo alle reazioni
+    {
+        - currentTalker == FirstCharacter:
+            -> firstCharEmotionalActions
+        
+        - currentTalker == SecondCharacter:
+            -> secondCharEmotionalActions
+        
+        - currentTalker == Mentor:
+            -> fifthCharEmotionalActions
+    
+    }
+
+
+
+        
+        = firstCharEmotionalActions
+            
+            {
+                - activeEmotionalWord == Rosso:
+                    Reazione Chitarra
+            }
+        
+        
+            -> word_state_manager
+        
+        
+        = secondCharEmotionalActions
+            {
+                - activeEmotionalWord == Rosso:
+                    Reazione Riccio
+            }
+        
+        
+            -> word_state_manager
+        
+        
+        = fifthCharEmotionalActions
+            {
+                - activeEmotionalWord == Rosso:
+                    Reazione Mentore
+            }
+            
+            
+            -> word_state_manager
+        
+        
+        = word_state_manager
+        TODO: dopo la pausa, capiamo come gestire questo, carichiamo qualche altro modello di parola, e vediamo cosa accade.
+        
+        
+        
+        -> empty_variables
 
 
 = empty_variables
     {nestDebug: entro in empty_variables.}
     {nestDebug: prima dell'operazione il parlante attuale è {currentTalker}.} 
         ~ currentTalker = ()
+        ~ temporaryRed = 0
+        ~ temporaryYellow = 0
+        ~ temporaryBlue = 0
+        ~ temporaryGreen = 0
+        ~ temporaryPurple = 0
     {nestDebug: dopo l'operazione il parlante attuale {currentTalker}.}
 
 ->->
