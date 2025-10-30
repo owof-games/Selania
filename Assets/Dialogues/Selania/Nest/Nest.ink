@@ -14,16 +14,66 @@
 
 
 
-
-
-
-
-=== emotional_library_management
-{nestDebug: emotional_library_management.}
+=== nest_object
+{nestDebug: passo per emotional_inventory_management.}
     + {are_two_entities_together(ELManagement, PG)}[ELManagement]
-    -
+    -> emotional_inventory_management
 
-    + [Voglio scoprire una nuova parola.]
+
+
+
+=== emotional_inventory_management
+//Ogni volta che scopriamo una nuova parola, possiamo ignorarla, aggiungerla all'inventario, sostituire una parola dell'inventario con questa
+//Qui è dove aggiungiamo, togliamo, limitiamo l'uso delle parole emozionali. Avremo:
+    Cosa desidera fare {name}?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+    
+
+
+    //Se ho appena scoperto una nuova parola e voglio aggiungerla:
+    + {newlyDiscoveredEmotionalWord != ()} [Aggiungo {newlyDiscoveredEmotionalWord} all'inventario.]
+        
+        {
+            - takenEmotionalWords < maximumEmotionalWordsForRun: 
+                {newlyDiscoveredEmotionalWord} è stata aggiunta all'inventario.
+                    ~  ownedEmotionalWords += newlyDiscoveredEmotionalWord
+                {nestDebug: aggiungo {newlyDiscoveredEmotionalWord} alla lista ownedEmotionalWords che ora contiene {ownedEmotionalWords}.}
+                
+                    ~ newlyDiscoveredEmotionalWord = ()
+                {nestDebug: svuoto il valore di discoveredEmotionalWords che ora è {newlyDiscoveredEmotionalWord}.}  
+                
+                    ~ takenEmotionalWords ++
+                {nestDebug: aumento il valore di takenEmotionalWords che ora è {takenEmotionalWords}.}
+                
+                -> emotional_inventory_management
+            
+            - else:
+                Hai raggiunto il massimo delle parole disponibili in questa partita, devi prima rimuovere un'altra parola.
+                -> emotional_inventory_management
+        }
+    
+
+    //Se ho appena scoperto una nuova parola ma voglio ignorarla:        
+    + {newlyDiscoveredEmotionalWord != ()} [Non aggiungo questa parola all'inventario]
+        Sicura? Non potrai più aggiungerla!
+        
+        + + [Sì, ignoriamola.]
+                ~ discoveredEmotionalWords = ()
+            {nestDebug: svuoto il valore di discoveredEmotionalWords che ora è {discoveredEmotionalWords}.} 
+                -> emotional_inventory_management
+            
+        + + [Ci ho ripensato.]
+            -> emotional_inventory_management
+   
+   
+    //Se voglio rimuovere una parola dall'inventario (opzione sempre disponibile)
+    + {ownedEmotionalWords != ()} [Rimuovo una parola dall'inventario.]
+            -> emotional_words_management(Delete) ->
+   
+    //Se non ho nuove parole da aggiornare o attive, posso attivarne
+    + {ownedEmotionalWords != () && (newlyDiscoveredEmotionalWord == ()) && (activeEmotionalWord == ())} [Attivo una parola dell'inventario.]
+            -> emotional_words_management(Activate) ->
+    
+    + {newlyDiscoveredEmotionalWord == ()} [Voglio scoprire una nuova parola.]
     
         {
             //Se una parola è già attiva
@@ -46,10 +96,11 @@
                     
                     }
         
-        }
+        }        
     
+    + {newlyDiscoveredEmotionalWord == ()} [Mi guardo in giro.]
+        -> main
     
-   
-    
-    + {ownedEmotionalWords != ()} [Voglio gestire il mio vocabolario emozionale.]
-            -> emotional_inventory_management
+    -
+
+-> emotional_inventory_management

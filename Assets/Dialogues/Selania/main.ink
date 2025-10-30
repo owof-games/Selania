@@ -47,7 +47,7 @@
 <- reading_place
 
 //Elementi del nido
-<- emotional_library_management
+<- nest_object
 
 //Impostazioni
 <- settings_management
