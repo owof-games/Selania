@@ -86,20 +86,44 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryRed ++
             
             - Giallo:
+                ~ temporaryYellow ++
             - GialloGiallo:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
             - GialloGialloGiallo:
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
+                ~ temporaryYellow ++
             
             - Blu:
+                ~ temporaryBlue ++
             - BluBlu:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
             - BluBluBlu:
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
+                ~ temporaryBlue ++
             
             - Verde:
+                ~ temporaryGreen ++
             - VerdeVerde:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
             - VerdeVerdeVerde:
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
+                ~ temporaryGreen ++
             
             - Viola:
+                ~ temporaryPurple ++
             - ViolaViola:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
             - ViolaViolaViola:
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
+                ~ temporaryPurple ++
                 
         //Variazioni di due colori
             - RossoRossoBlu:
