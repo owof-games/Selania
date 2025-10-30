@@ -1,3 +1,58 @@
+=== emotional_words_creator
+//Qui è dove la giocatrice compie delle scelte e genera nuove parole
+{nestDebug: passo per emotional_words_creator.}
+        -> first_note
+
+        = first_note
+        Primo giro di scelte
+            + [Do]
+            + [Re]
+            + [Mi]
+            + [Fa]
+            + [Sol]
+            -
+            + [Continuo Sì]
+                -> second_note
+            + [Continuo No]
+                -> emotional_words_generator
+    
+        = second_note
+        Secondo giro di scelte
+            + [Do]
+            + [Re]
+            + [Mi]
+            + [Fa]
+            + [Sol]
+            -
+            + [Continuo Sì]
+                -> third_note
+            + [Continuo No]
+                -> emotional_words_generator
+
+        = third_note
+        Terzo giro di scelte
+            + [Do]
+            + [Re]
+            + [Mi]
+            + [Fa]
+            + [Sol]
+            -
+            + [Risultato]
+                -> emotional_words_generator
+
+
+
+=== emotional_words_generator
+//Qui è dove le scelte vengono combinate
+{nestDebug: passo per emotional_words_generator.}
+
+->->
+
+
+
+
+
+
 === emotional_inventory_management
 {nestDebug: passo per emotional_inventory.}
 //Ogni volta che scopriamo una nuova parola, possiamo ignorarla, aggiungerla all'inventario, sostituire una parola dell'inventario con questa

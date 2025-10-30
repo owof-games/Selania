@@ -19,6 +19,7 @@
 
 
 === emotional_library_management
+{nestDebug: emotional_library_management.}
     + {are_two_entities_together(ELManagement, PG)}[ELManagement]
     -
 
@@ -41,7 +42,7 @@
                         //Se ho altre parole da trovare
                         - else:
                             Ti mando al sistema per scoprire nuove parole.
-                            -> main
+                            -> emotional_words_creator
                     
                     }
         
