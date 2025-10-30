@@ -10,7 +10,8 @@ VAR temporaryPurple = 0
 
 === color_variation_management(PNG, Color)
 {nestDebug: passo per color_variation_management. Il valore di PNG è {PNG}, il valore di colore è {Color}.}
-//Primo step: capiamo di chi si parla, e si associano i valori generici di colore (red etc) a quelli specifici della PNG
+//Primo step: capiamo di chi si parla.
+
     {
     	- PNG == FirstCharacter:
     	        ~ currentTalker = FirstCharacter
@@ -30,74 +31,36 @@ VAR temporaryPurple = 0
 
 //Secondo step: se activeEmotionalWord, andiamo a un nodo di verifica ad hoc per le parole magiche, altrimenti proseguiamo regolarmente.
 {
-    
     //Se una parola magica è attiva, andiamo al nodo di analisi dedicato
     - activeEmotionalWord != ():
         {nestDebug: è attiva la parola magica {activeEmotionalWord}, per cui mi sposto al settore dedicato.}
             -> emotional_words
     
+    
     //Altrimenti aumentiamo di uno come sempre
-        {nestDebug: non è attiva alcuna parola magica, per cui mi aumento di uno i valori e basta.}
+    {nestDebug: non è attiva alcuna parola magica, per cui mi aumento di uno i valori e basta.}
     
     - else:
         {
-            
             - Color == redC:
-                {
-                    - currentTalker == FirstCharacter:
-                        ~ firstRed ++
-                    - currentTalker == SecondCharacter:
-                        ~ secondRed ++
-                    - currentTalker == Mentor:
-                        ~ fifthRed ++    
-                }
+                ~ temporaryRed ++
      
             - Color == yellowC:
-                {
-                    - currentTalker == FirstCharacter:
-                        ~ firstYellow ++
-                    - currentTalker == SecondCharacter:
-                        ~ secondYellow ++
-                    - currentTalker == Mentor:
-                        ~ fifthYellow ++    
-                }
+                ~ temporaryYellow ++
             
             - Color == blueC:
-                {
-                    - currentTalker == FirstCharacter:
-                        ~ firstBlue ++
-                    - currentTalker == SecondCharacter:
-                        ~ secondBlue ++
-                    - currentTalker == Mentor:
-                        ~ fifthBlue ++    
-                }
+                ~ temporaryBlue ++
             
             - Color == greenC:
-                {
-                    - currentTalker == FirstCharacter:
-                        ~ firstGreen ++
-                    - currentTalker == SecondCharacter:
-                        ~ secondGreen ++
-                    - currentTalker == Mentor:
-                        ~ fifthGreen ++    
-                }   
+                ~ temporaryGreen ++   
             
             - Color == purpleC:
-                {
-                    - currentTalker == FirstCharacter:
-                        ~ firstPurple ++
-                    - currentTalker == SecondCharacter:
-                        ~ secondPurple ++
-                    - currentTalker == Mentor:
-                        ~ fifthPurple ++    
-                }
+                ~ temporaryPurple ++
         }
-          //E poi svuotiamo
-                -> empty_variables
+          //E poi aggiorniamo i dettagli
+                -> update_PNG_color_values
     
 }
-
-
 
 
 
@@ -110,30 +73,6 @@ VAR temporaryPurple = 0
         - activeEmotionalWord == Rosso:
             ~ temporaryRed ++
     
-    }
-
-//Poi andiamo ad aggiornare i valori delle parlanti
-    {
-        - currentTalker == FirstCharacter:
-            ~ firstRed += temporaryRed
-            ~ firstYellow += temporaryYellow
-            ~ firstBlue += temporaryBlue
-            ~ firstGreen += temporaryGreen
-            ~ firstPurple += temporaryPurple
-        
-        - currentTalker == SecondCharacter:
-            ~ secondRed += temporaryRed
-            ~ secondYellow += temporaryYellow
-            ~ secondBlue += temporaryBlue
-            ~ secondGreen += temporaryGreen
-            ~ secondPurple += temporaryPurple
-        
-        - currentTalker == Mentor:
-            ~ fifthRed += temporaryRed
-            ~ fifthYellow += temporaryYellow
-            ~ fifthBlue += temporaryBlue
-            ~ fifthGreen += temporaryGreen
-            ~ fifthPurple += temporaryPurple
     }
 
 
@@ -191,12 +130,37 @@ VAR temporaryPurple = 0
         
         
         
-        -> empty_variables
+        -> update_PNG_color_values
 
 
-= empty_variables
-    {nestDebug: entro in empty_variables.}
-    {nestDebug: prima dell'operazione il parlante attuale è {currentTalker}.} 
+= update_PNG_color_values
+    {nestDebug: entro in update_PNG_color_values.}
+    {nestDebug: prima dell'operazione il parlante attuale è {currentTalker}.}
+    //Prima aggiorniamo i dati a seconda dei parlanti
+    {
+        - currentTalker == FirstCharacter:
+            ~ firstRed += temporaryRed
+            ~ firstYellow += temporaryYellow
+            ~ firstBlue += temporaryBlue
+            ~ firstGreen += temporaryGreen
+            ~ firstPurple += temporaryPurple
+        
+        - currentTalker == SecondCharacter:
+            ~ secondRed += temporaryRed
+            ~ secondYellow += temporaryYellow
+            ~ secondBlue += temporaryBlue
+            ~ secondGreen += temporaryGreen
+            ~ secondPurple += temporaryPurple
+        
+        - currentTalker == Mentor:
+            ~ fifthRed += temporaryRed
+            ~ fifthYellow += temporaryYellow
+            ~ fifthBlue += temporaryBlue
+            ~ fifthGreen += temporaryGreen
+            ~ fifthPurple += temporaryPurple
+    }
+
+    //Poi azzeriamo i valori temporanei
         ~ currentTalker = ()
         ~ temporaryRed = 0
         ~ temporaryYellow = 0
