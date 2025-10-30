@@ -173,6 +173,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryRed ++
                 ~ temporaryBlue --
                 ~ temporaryBlue --
+                ~ temporaryRed --
             
             - RossoVerde: 
                 ~ temporaryRed ++
@@ -193,6 +194,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryRed ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryRed --
             
             - RossoViola:
                 ~ temporaryRed ++
@@ -213,6 +215,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryRed ++
                 ~ temporaryPurple --
                 ~ temporaryPurple --
+                ~ temporaryRed --
             
             
             
@@ -245,11 +248,13 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryRed --
                 ~ temporaryRed --
+                ~ temporaryYellow --
                 
             - GialloRossoRosso:
                 ~ temporaryYellow ++
                 ~ temporaryYellow ++
                 ~ temporaryYellow ++
+                ~ temporaryRed --
                 ~ temporaryRed --
                 ~ temporaryRed --
                 
@@ -259,6 +264,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryYellow --
                 ~ temporaryYellow --
+                ~ temporaryGreen --
                 
             - GialloGialloViola:
                 ~ temporaryYellow ++
@@ -266,6 +272,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryYellow --
                 ~ temporaryYellow --
+                ~ temporaryPurple --
                 
             - GialloGialloBlu:
                 ~ temporaryYellow ++
@@ -273,6 +280,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryYellow --
                 ~ temporaryYellow --
+                ~ temporaryBlue --
                 
             - GialloGialloRosso:
                 ~ temporaryYellow ++
@@ -280,12 +288,14 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryYellow --
                 ~ temporaryYellow --
+                ~ temporaryRed --
                 
             
             - GialloBluBlu:
                 ~ temporaryYellow ++
                 ~ temporaryYellow ++
                 ~ temporaryYellow ++
+                ~ temporaryBlue --
                 ~ temporaryBlue --
                 ~ temporaryBlue --
                 
@@ -295,12 +305,14 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryBlue --
                 ~ temporaryBlue --
+                ~ temporaryYellow --
                 
                 
             - GialloVerdeVerde:
                 ~ temporaryYellow ++
                 ~ temporaryYellow ++
                 ~ temporaryYellow ++
+                ~ temporaryGreen --
                 ~ temporaryGreen --
                 ~ temporaryGreen --
                 
@@ -310,11 +322,13 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryYellow --
                 
             - GialloViolaViola:
                 ~ temporaryYellow ++
                 ~ temporaryYellow ++
                 ~ temporaryYellow ++
+                ~ temporaryPurple --
                 ~ temporaryPurple --
                 ~ temporaryPurple --
                 
@@ -324,6 +338,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryPurple --
                 ~ temporaryPurple --
+                ~ temporaryYellow --
                 
             
             
@@ -358,11 +373,13 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryRed --
                 ~ temporaryRed --
+                ~ temporaryBlue --
                 
             - BluRossoRosso:
                 ~ temporaryBlue ++
                 ~ temporaryBlue ++
                 ~ temporaryBlue ++
+                ~ temporaryRed --
                 ~ temporaryRed --
                 ~ temporaryRed --
                 
@@ -372,11 +389,13 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryYellow --
                 ~ temporaryYellow --
+                ~ temporaryBlue --
                 
             - BluGialloGiallo:
                 ~ temporaryBlue ++
                 ~ temporaryBlue ++
                 ~ temporaryBlue ++
+                ~ temporaryYellow --
                 ~ temporaryYellow --
                 ~ temporaryYellow --
                 
@@ -386,6 +405,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryBlue --
                 ~ temporaryBlue --
+                ~ temporaryGreen --
                 
             - BluBluViola:
                 ~ temporaryBlue ++
@@ -393,6 +413,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryBlue --
                 ~ temporaryBlue --
+                ~ temporaryPurple --
                 
             - BluBluGiallo:
                 ~ temporaryBlue ++
@@ -400,6 +421,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryBlue --
                 ~ temporaryBlue --
+                ~ temporaryYellow --
                 
             - BluBluRosso:
                 ~ temporaryBlue ++
@@ -407,11 +429,13 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryBlue --
                 ~ temporaryBlue --
+                ~ temporaryRed --
                 
             - BluVerdeVerde:
                 ~ temporaryBlue ++
                 ~ temporaryBlue ++
                 ~ temporaryBlue ++
+                ~ temporaryGreen --
                 ~ temporaryGreen --
                 ~ temporaryGreen --
                 
@@ -421,11 +445,13 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryBlue --
                 
             - BluViolaViola:
                 ~ temporaryBlue ++
                 ~ temporaryBlue ++
                 ~ temporaryBlue ++
+                ~ temporaryPurple --
                 ~ temporaryPurple --
                 ~ temporaryPurple --
                 
@@ -462,11 +488,13 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryRed --
                 ~ temporaryRed --
+                ~ temporaryGreen --
                 
             - VerdeRossoRosso:
                 ~ temporaryGreen ++
                 ~ temporaryGreen ++
                 ~ temporaryGreen ++
+                ~ temporaryRed --
                 ~ temporaryRed --
                 ~ temporaryRed --
                 
@@ -476,11 +504,13 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryYellow --
                 ~ temporaryYellow --
+                ~ temporaryGreen --
                 
             - VerdeGialloGiallo:
                 ~ temporaryGreen ++
                 ~ temporaryGreen ++
                 ~ temporaryGreen ++
+                ~ temporaryYellow --
                 ~ temporaryYellow --
                 ~ temporaryYellow --
                 
@@ -490,11 +520,13 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryBlue --
                 ~ temporaryBlue --
+                ~ temporaryGreen --
                 
             - VerdeBluBlu:
                 ~ temporaryGreen ++
                 ~ temporaryGreen ++
                 ~ temporaryGreen ++
+                ~ temporaryBlue --
                 ~ temporaryBlue --
                 ~ temporaryBlue --
                 
@@ -504,6 +536,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryPurple --
                 
             - VerdeVerdeBlu:
                 ~ temporaryGreen ++
@@ -511,6 +544,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryBlue --
                 
             - VerdeVerdeGiallo:
                 ~ temporaryGreen ++
@@ -518,6 +552,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryYellow --
                 
             - VerdeVerdeRosso:
                 ~ temporaryGreen ++
@@ -525,6 +560,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryRed --
                 
             - VerdeViolaVerde:
                 ~ temporaryGreen ++
@@ -532,11 +568,13 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryPurple --
                 ~ temporaryPurple --
+                ~ temporaryGreen --
                 
             - VerdeViolaViola:
                 ~ temporaryGreen ++
                 ~ temporaryGreen ++
                 ~ temporaryGreen ++
+                ~ temporaryPurple --
                 ~ temporaryPurple --
                 ~ temporaryPurple --
                 
@@ -570,11 +608,13 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryRed --
                 ~ temporaryRed --
+                ~ temporaryPurple --
                 
             - ViolaRossoRosso:
                 ~ temporaryPurple ++
                 ~ temporaryPurple ++
                 ~ temporaryPurple ++
+                ~ temporaryRed --
                 ~ temporaryRed --
                 ~ temporaryRed --
                 
@@ -584,11 +624,13 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryYellow --
                 ~ temporaryYellow --
+                ~ temporaryPurple --
                 
             - ViolaGialloGiallo:
                 ~ temporaryPurple ++
                 ~ temporaryPurple ++
                 ~ temporaryPurple ++
+                ~ temporaryYellow --
                 ~ temporaryYellow --
                 ~ temporaryYellow --
                 
@@ -598,11 +640,13 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryBlue --
                 ~ temporaryBlue --
+                ~ temporaryPurple --
                 
             - ViolaBluBlu:
                 ~ temporaryPurple ++
                 ~ temporaryPurple ++
                 ~ temporaryPurple ++
+                ~ temporaryBlue --
                 ~ temporaryBlue --
                 ~ temporaryBlue --
                 
@@ -612,6 +656,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryGreen --
                 
             - ViolaVerdeViola:
                 ~ temporaryPurple ++
@@ -619,6 +664,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryPurple --
                 
             - ViolaViolaVerde:
                 ~ temporaryPurple ++
@@ -626,6 +672,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryPurple --
                 ~ temporaryPurple --
+                ~ temporaryGreen --
                 
             - ViolaViolaBlu:
                 ~ temporaryPurple ++
@@ -633,6 +680,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryPurple --
                 ~ temporaryPurple --
+                ~ temporaryBlue --
                 
             - ViolaViolaGiallo:
                 ~ temporaryPurple ++
@@ -640,6 +688,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryPurple --
                 ~ temporaryPurple --
+                ~ temporaryYellow --
                 
             - ViolaViolaRosso:
                 ~ temporaryPurple ++
@@ -647,6 +696,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryPurple --
                 ~ temporaryPurple --
+                ~ temporaryRed --
                 
         
         
@@ -757,6 +807,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryRed --
                 ~ temporaryRed --
+                ~ temporaryGreen --
                 
             - GialloRossoViola:
                 ~ temporaryYellow ++
@@ -764,6 +815,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryRed --
                 ~ temporaryRed --
+                ~ temporaryPurple --
                 
             - GialloRossoBlu:
                 ~ temporaryYellow ++
@@ -771,6 +823,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryRed --
                 ~ temporaryRed --
+                ~ temporaryBlue --
                 
             - GialloBluVerde:
                 ~ temporaryYellow ++
@@ -778,6 +831,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryBlue --
                 ~ temporaryBlue --
+                ~ temporaryGreen --
                 
             - GialloBluViola:
                 ~ temporaryYellow ++
@@ -785,6 +839,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryBlue --
                 ~ temporaryBlue --
+                ~ temporaryPurple --
                 
             - GialloBluRosso:
                 ~ temporaryYellow ++
@@ -792,6 +847,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryBlue --
                 ~ temporaryBlue --
+                ~ temporaryRed --
                 
             - GialloVerdeViola:
                 ~ temporaryYellow ++
@@ -799,6 +855,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryPurple --
                 
             - GialloVerdeBlu:
                 ~ temporaryYellow ++
@@ -806,6 +863,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryBlue --
                 
             - GialloVerdeRosso:
                 ~ temporaryYellow ++
@@ -813,6 +871,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryRed --
                 
             - GialloViolaVerde:
                 ~ temporaryYellow ++
@@ -820,6 +879,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryPurple --
                 ~ temporaryPurple --
+                ~ temporaryGreen --
                 
             - GialloViolaBlu:
                 ~ temporaryYellow ++
@@ -827,6 +887,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryPurple --
                 ~ temporaryPurple --
+                ~ temporaryBlue --
                 
             - GialloViolaRosso:
                 ~ temporaryYellow ++
@@ -834,6 +895,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryYellow ++
                 ~ temporaryPurple --
                 ~ temporaryPurple --
+                ~ temporaryRed --
                 
                 
                 
@@ -853,6 +915,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryRed --
                 ~ temporaryRed --
+                ~ temporaryPurple --
                 
             - BluRossoGiallo:
                 ~ temporaryBlue ++
@@ -860,6 +923,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryRed --
                 ~ temporaryRed --
+                ~ temporaryYellow --
                 
             - BluGialloVerde:
                 ~ temporaryBlue ++
@@ -867,6 +931,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryYellow --
                 ~ temporaryYellow --
+                ~ temporaryGreen --
                 
             - BluGialloViola:
                 ~ temporaryBlue ++
@@ -874,6 +939,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryYellow --
                 ~ temporaryYellow --
+                ~ temporaryPurple --
                 
             - BluGialloRosso:
                 ~ temporaryBlue ++
@@ -881,6 +947,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryYellow --
                 ~ temporaryYellow --
+                ~ temporaryRed --
                 
             - BluVerdeViola:
                 ~ temporaryBlue ++
@@ -888,6 +955,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryPurple --
                 
             - BluVerdeGiallo:
                 ~ temporaryBlue ++
@@ -895,6 +963,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryYellow --
                 
             - BluVerdeRosso:
                 ~ temporaryBlue ++
@@ -902,11 +971,15 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryRed --
                 
             - BluViolaVerde:
                 ~ temporaryBlue ++
                 ~ temporaryBlue ++
                 ~ temporaryBlue ++
+                ~ temporaryPurple --
+                ~ temporaryPurple --
+                ~ temporaryGreen --
                 
             - BluViolaBlu:
                 ~ temporaryBlue ++
@@ -914,6 +987,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryPurple --
                 ~ temporaryPurple --
+                ~ temporaryBlue --
                 
             - BluViolaGiallo:
                 ~ temporaryBlue ++
@@ -921,6 +995,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryPurple --
                 ~ temporaryPurple --
+                ~ temporaryYellow --
                 
             - BluViolaRosso:
                 ~ temporaryBlue ++
@@ -928,6 +1003,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryBlue ++
                 ~ temporaryPurple --
                 ~ temporaryPurple --
+                ~ temporaryRed --
                 
             
             - VerdeRossoViola:
@@ -936,6 +1012,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryRed --
                 ~ temporaryRed --
+                ~ temporaryPurple --
                 
             - VerdeRossoBlu:
                 ~ temporaryGreen ++
@@ -943,6 +1020,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryRed --
                 ~ temporaryRed --
+                ~ temporaryBlue --
                 
             - VerdeRossoGiallo:
                 ~ temporaryGreen ++
@@ -950,6 +1028,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryRed --
                 ~ temporaryRed --
+                ~ temporaryYellow --
                 
             - VerdeGialloViola:
                 ~ temporaryGreen ++
@@ -957,6 +1036,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryYellow --
                 ~ temporaryYellow --
+                ~ temporaryPurple --
                 
             - VerdeGialloBlu:
                 ~ temporaryGreen ++
@@ -964,6 +1044,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryYellow --
                 ~ temporaryYellow --
+                ~ temporaryBlue --
                 
             - VerdeBluViola:
                 ~ temporaryGreen ++
@@ -971,6 +1052,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryBlue --
                 ~ temporaryBlue --
+                ~ temporaryPurple --
                 
             - VerdeBluGiallo:
                 ~ temporaryGreen ++
@@ -978,6 +1060,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryBlue --
                 ~ temporaryBlue --
+                ~ temporaryYellow --
                 
             - VerdeBluRosso:
                 ~ temporaryGreen ++
@@ -985,6 +1068,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryBlue --
                 ~ temporaryBlue --
+                ~ temporaryRed --
                 
             - VerdeGialloRosso:
                 ~ temporaryGreen ++
@@ -992,6 +1076,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryYellow --
                 ~ temporaryYellow --
+                ~ temporaryRed --
                 
             - VerdeViolaBlu:
                 ~ temporaryGreen ++
@@ -999,6 +1084,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryPurple --
                 ~ temporaryPurple --
+                ~ temporaryBlue --
                 
             - VerdeViolaGiallo:
                 ~ temporaryGreen ++
@@ -1006,6 +1092,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryPurple --
                 ~ temporaryPurple --
+                ~ temporaryYellow --
                 
             - VerdeViolaRosso:
                 ~ temporaryGreen ++
@@ -1013,6 +1100,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryGreen ++
                 ~ temporaryPurple --
                 ~ temporaryPurple --
+                ~ temporaryRed --
                 
             
             
@@ -1027,6 +1115,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryRed --
                 ~ temporaryRed --
+                ~ temporaryGreen --
                 
             - ViolaRossoBlu:
                 ~ temporaryPurple ++
@@ -1034,6 +1123,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryRed --
                 ~ temporaryRed --
+                ~ temporaryBlue --
                 
             - ViolaRossoGiallo:
                 ~ temporaryPurple ++
@@ -1041,6 +1131,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryRed --
                 ~ temporaryRed --
+                ~ temporaryYellow --
                 
             - ViolaGialloVerde:
                 ~ temporaryPurple ++
@@ -1048,6 +1139,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryYellow --
                 ~ temporaryYellow --
+                ~ temporaryGreen --
                 
             - ViolaGialloBlu:
                 ~ temporaryPurple ++
@@ -1055,6 +1147,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryYellow --
                 ~ temporaryYellow --
+                ~ temporaryBlue --
                 
             - ViolaGialloRosso:
                 ~ temporaryPurple ++
@@ -1062,6 +1155,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryYellow --
                 ~ temporaryYellow --
+                ~ temporaryRed --
                 
             - ViolaBluVerde:
                 ~ temporaryPurple ++
@@ -1069,6 +1163,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryBlue --
                 ~ temporaryBlue --
+                ~ temporaryGreen --
                 
             - ViolaBluGiallo:
                 ~ temporaryPurple ++
@@ -1076,6 +1171,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryBlue --
                 ~ temporaryBlue --
+                ~ temporaryYellow --
                 
             - ViolaBluRosso:
                 ~ temporaryPurple ++
@@ -1083,6 +1179,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryBlue --
                 ~ temporaryBlue --
+                ~ temporaryRed --
                 
             
             - ViolaVerdeBlu:
@@ -1091,6 +1188,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryBlue --
                 
             - ViolaVerdeGiallo:
                 ~ temporaryPurple ++
@@ -1098,6 +1196,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryYellow --
                 
             - ViolaVerdeRosso:
                 ~ temporaryPurple ++
@@ -1105,6 +1204,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 ~ temporaryPurple ++
                 ~ temporaryGreen --
                 ~ temporaryGreen --
+                ~ temporaryRed --
                 
             
             -else: Valore colore parola {activeEmotionalWord} non trovato!
