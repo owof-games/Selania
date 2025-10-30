@@ -56,6 +56,35 @@
                 -> emotional_words_dispatcher
 
 
+=== emotional_words_feedback
+{nestDebug: passo per emotional_words_feedback.}
+//Passo da qui dopo aver creato la parola, per vedere se l'ho già scoperta o meno. Nel secondo caso aggiorno il libro della riscrittora e passo a emotional_inventory_management
+    {
+    
+        - discoveredEmotionalWords has newlyDiscoveredEmotionalWord:
+            {nestDebug: discoveredEmotionalWords ha già {newlyDiscoveredEmotionalWord}.}
+            -> not_a_new_word
+            
+        - else:
+            -> emotional_inventory_management
+    
+    }
+
+
+    = not_a_new_word
+    {name} ha trovato {newlyDiscoveredEmotionalWord}, che già conosceva. Cosa vorrebbe fare? #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+        
+        + [Voglio cercare una nuova parola.]
+            ~ newlyDiscoveredEmotionalWord = ()
+                {nestDebug: svuoto il valore di discoveredEmotionalWords che ora è {newlyDiscoveredEmotionalWord}.}
+            -> emotional_words_creator
+            
+        + [Mi fermo.]
+            ~ newlyDiscoveredEmotionalWord = ()
+                {nestDebug: svuoto il valore di discoveredEmotionalWords che ora è {newlyDiscoveredEmotionalWord}.}
+            -> main
+
+
 
 === emotional_inventory_management
 {nestDebug: passo per emotional_inventory.}
@@ -67,10 +96,20 @@
         - newlyDiscoveredEmotionalWord != ():
             ~  discoveredEmotionalWords += newlyDiscoveredEmotionalWord
                 {nestDebug: aggiungo {newlyDiscoveredEmotionalWord} alla lista discoveredEmotionalWords che ora contiene {discoveredEmotionalWords}.}
+            //segnalo che c'è un aggiornametno    
+            @animation:RewriterBook    
     }    
 
 
 - (top)
+
+    {
+        - newlyDiscoveredEmotionalWord != ():
+                {name} ha appena scoperto {newlyDiscoveredEmotionalWord}: cosa vorrebbe fare?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+        - else:
+                Cosa desidera fare {name}?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+    }
+
 
     //Se ho appena scoperto una nuova parola e voglio aggiungerla:
     + {newlyDiscoveredEmotionalWord != ()}[Aggiungo {newlyDiscoveredEmotionalWord} all'inventario.]
@@ -81,8 +120,9 @@
                     ~  ownedEmotionalWords += newlyDiscoveredEmotionalWord
                 {nestDebug: aggiungo {newlyDiscoveredEmotionalWord} alla lista ownedEmotionalWords che ora contiene {ownedEmotionalWords}.}
                 
-                    ~ discoveredEmotionalWords = ()
-                {nestDebug: svuoto il valore di discoveredEmotionalWords che ora è {discoveredEmotionalWords}.}  
+                    ~ newlyDiscoveredEmotionalWord = ()
+                {nestDebug: svuoto il valore di discoveredEmotionalWords che ora è {newlyDiscoveredEmotionalWord}.}  
+                
                     ~ takenEmotionalWords ++
                 {nestDebug: aumento il valore di takenEmotionalWords che ora è {takenEmotionalWords}.}
                 

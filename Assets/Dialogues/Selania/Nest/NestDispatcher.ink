@@ -107,7 +107,7 @@
             - else:
                 ~ newlyDiscoveredEmotionalWord = Rosso
         }
-        ->->
+            -> emotional_words_feedback
 
     = yellowDispatcher
     {nestDebug: il primo colore è {firstKeyColour} passo per emotional_words_generator.yellowDispatcher.}
@@ -196,7 +196,7 @@
             - else:
                 ~ newlyDiscoveredEmotionalWord = Giallo
         }
-        ->->
+            -> emotional_words_feedback
     
     = blueDispatcher
     {nestDebug: il primo colore è {firstKeyColour} passo per emotional_words_generator.blueDispatcher.}
@@ -285,7 +285,7 @@
             - else:
                 ~ newlyDiscoveredEmotionalWord = Blu
         }
-        ->->
+            -> emotional_words_feedback
     
     = greenDispatcher
     {nestDebug: il primo colore è {firstKeyColour} passo per emotional_words_generator.greenDispatcher.}
@@ -374,7 +374,7 @@
             - else:
                 ~ newlyDiscoveredEmotionalWord = Verde
         }
-        ->->
+           -> emotional_words_feedback
     
     = purpleDispatcher
     {nestDebug: il primo colore è {firstKeyColour} passo per emotional_words_generator.purpleDispatcher.}
@@ -464,4 +464,4 @@
                 ~ newlyDiscoveredEmotionalWord = Viola
         }  
     
-        ->->
+            -> emotional_words_feedback
