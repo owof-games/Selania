@@ -145,7 +145,7 @@
 
 //Streets to Nest
     + {debug_test_nest} [NestTest]
-            ~ move_entity(PG, Library)
+            ~ move_entity(PG, Nest)
                 -> nest
 
     + {are_two_entities_together(PG, FromLibraryToNest)} [FromLibraryToNest]

@@ -40,15 +40,17 @@
 <- the_frog
 
 //Elementi della serra
-// <- call_test
 
-
-
-<- settings_management
+//Elementi della cucina
 
 //Elementi della libreria
 <- reading_place
 
+//Elementi del nido
+<- emotional_library_management
+
+//Impostazioni
+<- settings_management
 
 
 + -> main

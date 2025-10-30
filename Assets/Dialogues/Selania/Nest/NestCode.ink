@@ -49,17 +49,17 @@
    
    
     //Se voglio rimuovere una parola dall'inventario (opzione sempre disponibile)
-    + {ownedEmotionalWords > 0} [Rimuovo una parola dall'inventario.]
+    + {ownedEmotionalWords != ()} [Rimuovo una parola dall'inventario.]
             -> emotional_words_management(Delete) ->
    
     //Se non ho nuove parole da aggiornare o attive, posso attivarne
-    + {ownedEmotionalWords > 0 && (newlyDiscoveredEmotionalWord == ()) && (activeEmotionalWord == ())} [Attivo una parola dell'inventario.]
+    + {ownedEmotionalWords != () && (newlyDiscoveredEmotionalWord == ()) && (activeEmotionalWord == ())} [Attivo una parola dell'inventario.]
             -> emotional_words_management(Activate) ->
     
-    + [Ho finito].
+    + [Ho finito.]
         -> main
     
     -
 
-->->
+-> top
 

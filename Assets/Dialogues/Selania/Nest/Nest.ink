@@ -34,13 +34,14 @@
             - else:
                      {
                         //Ma ho esaurito tutte le parola da trovare
-                        - (discoveredEmotionalWords - 155) == 0:
+                        - (LIST_COUNT(discoveredEmotionalWords) - 155) == 0:
                             Ma non hai più parole da scoprire!
                                 -> main
                         
                         //Se ho altre parole da trovare
                         - else:
                             Ti mando al sistema per scoprire nuove parole.
+                            -> main
                     
                     }
         
@@ -49,5 +50,5 @@
     
    
     
-    + {ownedEmotionalWords > 0} [Voglio gestire il mio vocabolario emozionale.]
+    + {ownedEmotionalWords != ()} [Voglio gestire il mio vocabolario emozionale.]
             -> emotional_inventory_management

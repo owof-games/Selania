@@ -71,7 +71,7 @@ TODO: Completare
         }
     
     
-    + {ownedEmotionalWords has Rossa}[Blu]
+    + {ownedEmotionalWords has Blu}[Blu]
         {
             - action == Activate: Blu è stata attivata.
                 ~ activeEmotionalWord = Blu
