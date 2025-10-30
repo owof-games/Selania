@@ -57,7 +57,7 @@
         Sicura? Non potrai più aggiungerla!
         
         + + [Sì, ignoriamola.]
-                ~ discoveredEmotionalWords = ()
+                ~ newlyDiscoveredEmotionalWord = ()
             {nestDebug: svuoto il valore di discoveredEmotionalWords che ora è {discoveredEmotionalWords}.} 
                 -> emotional_inventory_management
             
