@@ -101,6 +101,30 @@ TODO: Completare
     
     + [Ho cambiato idea]
     -
-
-//Vediamo se ha senso far sempre tornare indietro, o se ha senso mandare a main e bona
+    {
+        - activeEmotionalWord != ():
+            -> word_usage_counter ->
+    }
 ->->
+
+//Utilizzato per capire quante volte posso usare una parola
+=== word_usage_counter
+{nestDebug: passo per word_usage_counter.}
+{nestDebug: prima dell'aggiornamento il valore di temporaryWordUsageCounter è {temporaryWordUsageCounter}.}
+    
+    {
+        - oneUsageWords has activeEmotionalWord:
+            ~ temporaryWordUsageCounter = 1
+        
+        - twoUsageWords has activeEmotionalWord:
+            ~ temporaryWordUsageCounter = 2
+        
+        - threeUsageWords has activeEmotionalWord:
+            ~ temporaryWordUsageCounter = 3
+        
+        - else: ERROR, non riesco a trovare {activeEmotionalWord} in nessuna delle tre liste, per cui non riesco ad assegnare un valore a temporaryWordUsageCounter, che ora è a {temporaryWordUsageCounter}.
+    }
+    
+{nestDebug: dopo l'aggiornamento il valore di temporaryWordUsageCounter è {temporaryWordUsageCounter}.}  
+        
+        ->->

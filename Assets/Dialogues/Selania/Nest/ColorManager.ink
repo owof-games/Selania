@@ -1,15 +1,20 @@
 LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
 
-VAR currentTalker = ()
-VAR temporaryRed = 0
-VAR temporaryYellow = 0
-VAR temporaryBlue = 0
-VAR temporaryGreen = 0
-VAR temporaryPurple = 0
+//Persona a cui stiamo parlando quando compiamo la scelta
+    VAR currentTalker = ()
+//Creazione di parametri generici per semplificarmi la vita legati ai colori che poi verranno riportati sullx PNG    
+    VAR temporaryRed = 0
+    VAR temporaryYellow = 0
+    VAR temporaryBlue = 0
+    VAR temporaryGreen = 0
+    VAR temporaryPurple = 0
+
+//Contatore d'uso della parola    
+    VAR temporaryWordUsageCounter = 0
 
 
 === color_variation_management(PNG, Color)
-{nestDebug: passo per color_variation_management. Il valore di PNG è {PNG}, il valore di colore è {Color}.}
+{nestDebug: passo per color_variation_management. Il valore di PNG è {PNG}, il valore di colore è {Color}. Lo stato della parola attiva è {activeEmotionalWord}.}
 //Primo step: capiamo di chi si parla.
 
     {
@@ -17,11 +22,11 @@ VAR temporaryPurple = 0
     	        ~ currentTalker = FirstCharacter
     	        {nestDebug: dopo l'operazione il parlante attuale {currentTalker}.} 
     	 
-    	 - PNG == SecondCharacter:
+    	- PNG == SecondCharacter:
     	        ~ currentTalker = SecondCharacter
     	        {nestDebug: dopo l'operazione il parlante attuale {currentTalker}.} 
     	 
-    	 - PNG == Mentor:
+    	- PNG == Mentor:
     	        ~ currentTalker = Mentor
     	        {nestDebug: dopo l'operazione il parlante attuale {currentTalker}.}       
     	    
@@ -38,8 +43,7 @@ VAR temporaryPurple = 0
     
     
     //Altrimenti aumentiamo di uno come sempre
-    {nestDebug: non è attiva alcuna parola magica, per cui mi aumento di uno i valori e basta.}
-    
+
     - else:
         {
             - Color == redC:
@@ -57,6 +61,7 @@ VAR temporaryPurple = 0
             - Color == purpleC:
                 ~ temporaryPurple ++
         }
+        {nestDebug: non è attiva alcuna parola magica, per cui mi aumento di uno i valori e basta.}
           //E poi aggiorniamo i dettagli
                 -> update_PNG_color_values
     
@@ -95,6 +100,7 @@ VAR temporaryPurple = 0
 
         
         = firstCharEmotionalActions
+            {nestDebug: entro in firstCharEmotionalActions.}
             
             {
                 - activeEmotionalWord == Rosso:
@@ -106,6 +112,7 @@ VAR temporaryPurple = 0
         
         
         = secondCharEmotionalActions
+            {nestDebug: entro in secondCharEmotionalActions.}
             {
                 - activeEmotionalWord == Rosso:
                     Reazione Riccio
@@ -116,6 +123,7 @@ VAR temporaryPurple = 0
         
         
         = fifthCharEmotionalActions
+            {nestDebug: entro in fifthCharEmotionalActions.}
             {
                 - activeEmotionalWord == Rosso:
                     Reazione Mentore
@@ -126,9 +134,17 @@ VAR temporaryPurple = 0
         
         
         = word_state_manager
-        TODO: dopo la pausa, capiamo come gestire questo, carichiamo qualche altro modello di parola, e vediamo cosa accade.
-        
-        
+            {nestDebug: entro in word_state_manager.}
+        //Qui abbasso l'uso della parola, e se il suo uso è esaurito, la disattivo    
+            {nestDebug: prima di modificare temporaryWordUsageCounter il suo valore è {temporaryWordUsageCounter}.}
+                ~ temporaryWordUsageCounter --
+            {nestDebug: dopo aver ridotto temporaryWordUsageCounter il suo valore è {temporaryWordUsageCounter}.}
+            
+                {
+                    - temporaryWordUsageCounter == 0:
+                    L'effetto di {activeEmotionalWord} si è esaurito.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                        ~ activeEmotionalWord = ()
+                }
         
         -> update_PNG_color_values
 

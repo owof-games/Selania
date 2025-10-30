@@ -35,6 +35,17 @@
         ViolaVerde, ViolaVerdeVerde, ViolaVerdeViola, ViolaVerdeBlu, ViolaVerdeGiallo, ViolaVerdeRosso,
         ViolaViola, ViolaViolaVerde, ViolaViolaViola, ViolaViolaBlu, ViolaViolaGiallo, ViolaViolaRosso
 
+//Qui raggruppo le emotional variations per utilizzi:
+    //Remind: una sola nota = un solo utilizzo. Due note diverse: due utilizzi. Tre note diverse: tre utilizzi.
+    VAR oneUsageWords = (RossoRossoRosso, GialloGialloGiallo, BluBluBlu, VerdeVerdeVerde, ViolaViolaViola, RossoRosso, GialloGiallo, BluBlu, VerdeVerde, ViolaViola, Rosso, Giallo, Blu, Verde, Viola)
+    
+    VAR twoUsageWords = (RossoRossoBlu, RossoRossoVerde, RossoRossoViola, RossoRossoGiallo,RossoGiallo, RossoGialloRosso, RossoGialloGiallo,RossoBlu, RossoBluBlu, RossoBluRosso, RossoVerde, RossoVerdeVerde,  RossoVerdeRosso, RossoViola,  RossoViolaViola, RossoViolaRosso, GialloRosso, GialloRossoGiallo, GialloRossoRosso, GialloGialloVerde, GialloGialloViola, GialloGialloBlu, GialloGialloRosso, GialloBlu, GialloBluBlu, GialloBluGiallo, GialloVerde, GialloVerdeVerde, GialloVerdeGiallo, GialloViolaGiallo,GialloViola, GialloViolaViola, BluRosso, BluRossoBlu, BluRossoRosso,BluGiallo, BluGialloBlu, BluGialloGiallo,BluBluVerde, BluBluViola, BluBluGiallo, BluBluRosso,BluVerde, BluVerdeVerde, BluViola, BluViolaViola, BluVerdeBlu, BluViolaBlu, VerdeRosso, VerdeRossoVerde, VerdeRossoRosso,VerdeGiallo, VerdeGialloVerde, VerdeGialloGiallo, VerdeBlu, VerdeBluVerde,  VerdeBluBlu, VerdeVerdeViola, VerdeVerdeBlu, VerdeVerdeGiallo, VerdeVerdeRosso,VerdeViola, VerdeViolaVerde, VerdeViolaViola, ViolaRosso, ViolaRossoViola,  ViolaRossoRosso,ViolaGiallo,  ViolaGialloViola, ViolaGialloGiallo, ViolaBlu,ViolaBluViola, ViolaBluBlu, ViolaVerde, ViolaVerdeVerde, ViolaVerdeViola, ViolaViolaVerde, ViolaViolaBlu, ViolaViolaGiallo, ViolaViolaRosso)
+    
+    VAR threeUsageWords = (RossoGialloBlu, RossoGialloVerde, RossoGialloViola, RossoBluVerde, RossoBluViola, RossoBluGiallo, RossoVerdeViola, RossoVerdeBlu, RossoVerdeGiallo, RossoViolaBlu, RossoViolaVerde, RossoViolaGiallo, GialloRossoVerde, GialloRossoViola, GialloRossoBlu,  GialloBluVerde, GialloBluViola, GialloBluRosso, GialloVerdeViola, GialloVerdeBlu, GialloVerdeRosso,  GialloViolaVerde, GialloViolaBlu, GialloViolaRosso, BluRossoVerde, BluRossoViola, BluRossoGiallo, BluGialloVerde, BluGialloViola, BluGialloRosso, BluVerdeViola, BluVerdeGiallo, BluVerdeRosso, BluViolaVerde,  BluViolaGiallo, BluViolaRosso, VerdeRossoViola, VerdeRossoBlu, VerdeRossoGiallo, VerdeBluGiallo, VerdeBluRosso, VerdeGialloViola, VerdeGialloBlu, VerdeGialloRosso, VerdeBluViola, VerdeViolaBlu, VerdeViolaGiallo, VerdeViolaRosso, ViolaRossoVerde, ViolaRossoBlu, ViolaRossoGiallo, ViolaGialloVerde, ViolaGialloBlu, ViolaGialloRosso, ViolaBluVerde, ViolaBluGiallo, ViolaBluRosso, ViolaVerdeBlu, ViolaVerdeGiallo, ViolaVerdeRosso)
+
+
+
+
 //Qui invece raggruppo le emotional variations in emotional words:
     //Varianti monocolore
     VAR redWords = (Rosso, RossoRosso, RossoRossoRosso)
