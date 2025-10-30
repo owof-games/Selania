@@ -1,77 +1,77 @@
 //Una lista di tutte le parole possibili
     LIST emotionalVariationsList = 
-        Rossa,
-        RossoRossa, RossoRossoBlu, RossoRossoVerde, RossoRossoViola, RossoRossoRossa, RossoRossoGialla,
-        RossoGialla, RossoGiallaBlu, RossoGiallaVerde, RossoGiallaViola, RossoGiallaRossa, RossoGiallaGialla,
-        RossoBlu, RossoBluBlu, RossoBluVerde, RossoBluViola, RossoBluRossa, RossoBluGialla,
-        RossoVerde, RossoVerdeBlu, RossoVerdeVerde, RossoVerdeViola, RossoVerdeRossa, RossoVerdeGialla,
-        RossoViola, RossoViolaBlu, RossoViolaVerde, RossoViolaViola, RossoViolaRossa, RossoViolaGialla,
+        Rosso,
+        RossoRosso, RossoRossoBlu, RossoRossoVerde, RossoRossoViola, RossoRossoRosso, RossoRossoGiallo,
+        RossoGiallo, RossoGialloBlu, RossoGialloVerde, RossoGialloViola, RossoGialloRosso, RossoGialloGiallo,
+        RossoBlu, RossoBluBlu, RossoBluVerde, RossoBluViola, RossoBluRosso, RossoBluGiallo,
+        RossoVerde, RossoVerdeBlu, RossoVerdeVerde, RossoVerdeViola, RossoVerdeRosso, RossoVerdeGiallo,
+        RossoViola, RossoViolaBlu, RossoViolaVerde, RossoViolaViola, RossoViolaRosso, RossoViolaGiallo,
         
-        Gialla,
-        GialloRossa, GialloRossaVerde, GialloRossaViola, GialloRossaBlu, GialloRossaGialla, GialloRossaRossa,
-        GialloGialla, GialloGiallaVerde, GialloGiallaViola, GialloGiallaBlu, GialloGiallaGialla, GialloGiallaRossa,
-        GialloBlu, GialloBluVerde, GialloBluViola, GialloBluBlu, GialloBluGialla, GialloBluRossa,
-        GialloVerde, GialloVerdeVerde, GialloVerdeViola, GialloVerdeBlu, GialloVerdeGialla, GialloVerdeRossa,
-        GialloViola, GialloViolaVerde, GialloViolaViola, GialloViolaBlu, GialloViolaGialla, GialloViolaRossa,
+        Giallo,
+        GialloRosso, GialloRossoVerde, GialloRossoViola, GialloRossoBlu, GialloRossoGiallo, GialloRossoRosso,
+        GialloGiallo, GialloGialloVerde, GialloGialloViola, GialloGialloBlu, GialloGialloGiallo, GialloGialloRosso,
+        GialloBlu, GialloBluVerde, GialloBluViola, GialloBluBlu, GialloBluGiallo, GialloBluRosso,
+        GialloVerde, GialloVerdeVerde, GialloVerdeViola, GialloVerdeBlu, GialloVerdeGiallo, GialloVerdeRosso,
+        GialloViola, GialloViolaVerde, GialloViolaViola, GialloViolaBlu, GialloViolaGiallo, GialloViolaRosso,
         
         Blu,
-        BluRossa, BluRossaVerde, BluRossaViola, BluRossaBlu, BluRossaGialla, BluRossaRossa,
-        BluGialla, BluGialloVerde, BluGialloViola, BluGialloBlu, BluGialloGialla, BluGialloRossa,
-        BluBlu, BluBluVerde, BluBluViola, BluBluBlu, BluBluGialla, BluBluRossa,
-        BluVerde, BluVerdeVerde, BluVerdeViola, BluVerdeBlu, BluVerdeGialla, BluVerdeRossa,
-        BluViola, BluViolaVerde, BluViolaViola, BluViolaBlu, BluViolaGialla, BluViolaRossa,
+        BluRosso, BluRossoVerde, BluRossoViola, BluRossoBlu, BluRossoGiallo, BluRossoRosso,
+        BluGiallo, BluGialloVerde, BluGialloViola, BluGialloBlu, BluGialloGiallo, BluGialloRosso,
+        BluBlu, BluBluVerde, BluBluViola, BluBluBlu, BluBluGiallo, BluBluRosso,
+        BluVerde, BluVerdeVerde, BluVerdeViola, BluVerdeBlu, BluVerdeGiallo, BluVerdeRosso,
+        BluViola, BluViolaVerde, BluViolaViola, BluViolaBlu, BluViolaGiallo, BluViolaRosso,
         
         Verde,
-        VerdeRossa, VerdeRossaVerde, VerdeRossaViola, VerdeRossaBlu, VerdeRossaGialla, VerdeRossaRossa,
-        VerdeGialla, VerdeGiallaVerde, VerdeGiallaViola, VerdeGiallaBlu, VerdeGiallaGialla, VerdeGiallaRossa,
-        VerdeBlu, VerdeBluVerde, VerdeBluViola, VerdeBluBlu, VerdeBluGialla, VerdeBluRossa,
-        VerdeVerde, VerdeVerdeVerde, VerdeVerdeViola, VerdeVerdeBlu, VerdeVerdeGialla, VerdeVerdeRossa,
-        VerdeViola, VerdeViolaVerde, VerdeViolaViola, VerdeViolaBlu, VerdeViolaGialla, VerdeViolaRossa,
+        VerdeRosso, VerdeRossoVerde, VerdeRossoViola, VerdeRossoBlu, VerdeRossoGiallo, VerdeRossoRosso,
+        VerdeGiallo, VerdeGialloVerde, VerdeGialloViola, VerdeGialloBlu, VerdeGialloGiallo, VerdeGialloRosso,
+        VerdeBlu, VerdeBluVerde, VerdeBluViola, VerdeBluBlu, VerdeBluGiallo, VerdeBluRosso,
+        VerdeVerde, VerdeVerdeVerde, VerdeVerdeViola, VerdeVerdeBlu, VerdeVerdeGiallo, VerdeVerdeRosso,
+        VerdeViola, VerdeViolaVerde, VerdeViolaViola, VerdeViolaBlu, VerdeViolaGiallo, VerdeViolaRosso,
         
         Viola,
-        ViolaRossa, ViolaRossaVerde, ViolaRossaViola, ViolaRossaBlu, ViolaRossaGialla, ViolaRossaRossa,
-        ViolaGialla, ViolaGiallaVerde, ViolaGiallaViola, ViolaGiallaBlu, ViolaGiallaGialla, ViolaGiallaRossa,
-        ViolaBlu, ViolaBluVerde, ViolaBluViola, ViolaBluBlu, ViolaBluGialla, ViolaBluRossa,
-        ViolaVerde, ViolaVerdeVerde, ViolaVerdeViola, ViolaVerdeBlu, ViolaVerdeGialla, ViolaVerdeRossa,
-        ViolaViola, ViolaViolaVerde, ViolaViolaViola, ViolaViolaBlu, ViolaViolaGialla, ViolaViolaRossa
+        ViolaRosso, ViolaRossoVerde, ViolaRossoViola, ViolaRossoBlu, ViolaRossoGiallo, ViolaRossoRosso,
+        ViolaGiallo, ViolaGialloVerde, ViolaGialloViola, ViolaGialloBlu, ViolaGialloGiallo, ViolaGialloRosso,
+        ViolaBlu, ViolaBluVerde, ViolaBluViola, ViolaBluBlu, ViolaBluGiallo, ViolaBluRosso,
+        ViolaVerde, ViolaVerdeVerde, ViolaVerdeViola, ViolaVerdeBlu, ViolaVerdeGiallo, ViolaVerdeRosso,
+        ViolaViola, ViolaViolaVerde, ViolaViolaViola, ViolaViolaBlu, ViolaViolaGiallo, ViolaViolaRosso
 
 //Qui invece raggruppo le emotional variations in emotional words:
     //Varianti monocolore
-    VAR redWords = (Rossa, RossoRossa, RossoRossoRossa)
-    VAR yellowWords = (Gialla, GialloGialla, GialloGiallaGialla)
+    VAR redWords = (Rosso, RossoRosso, RossoRossoRosso)
+    VAR yellowWords = (Giallo, GialloGiallo, GialloGialloGiallo)
     VAR bluWords = (Blu, BluBlu, BluBluBlu)    
     VAR greenWords = (Verde, VerdeVerde, VerdeVerdeVerde)
     VAR purpleWords = (Viola, ViolaViola, ViolaViolaViola)
     
-    //Varianti a dominante rossa
-    VAR redYellowWords = (RossoGialla, RossoRossoGialla, RossoGiallaGialla, RossoGiallaBlu, RossoGiallaVerde, RossoGiallaViola, RossoGiallaRossa)
-    VAR redBlueWords = (RossoBlu, RossoRossoBlu, RossoBluBlu, RossoBluVerde, RossoBluViola, RossoBluRossa, RossoBluGialla)
-    VAR redGreenWords = (RossoVerde, RossoRossoVerde, RossoVerdeBlu, RossoVerdeVerde, RossoVerdeViola, RossoVerdeRossa, RossoVerdeGialla)
-    VAR redPurpleWords = (RossoViola, RossoRossoViola, RossoViolaBlu, RossoViolaVerde, RossoViolaViola, RossoViolaRossa, RossoViolaGialla)
+    //Varianti a dominante Rosso
+    VAR redYellowWords = (RossoGiallo, RossoRossoGiallo, RossoGialloGiallo, RossoGialloBlu, RossoGialloVerde, RossoGialloViola, RossoGialloRosso)
+    VAR redBlueWords = (RossoBlu, RossoRossoBlu, RossoBluBlu, RossoBluVerde, RossoBluViola, RossoBluRosso, RossoBluGiallo)
+    VAR redGreenWords = (RossoVerde, RossoRossoVerde, RossoVerdeBlu, RossoVerdeVerde, RossoVerdeViola, RossoVerdeRosso, RossoVerdeGiallo)
+    VAR redPurpleWords = (RossoViola, RossoRossoViola, RossoViolaBlu, RossoViolaVerde, RossoViolaViola, RossoViolaRosso, RossoViolaGiallo)
     
-    //Varianti a dominante gialla
-    VAR yellowRedWords = (GialloRossa, GialloGiallaRossa, GialloRossaRossa, GialloRossaVerde, GialloRossaViola, GialloRossaBlu, GialloRossaGialla)
-    VAR yellowBlueWords = (GialloBlu, GialloGiallaBlu, GialloBluVerde, GialloBluViola, GialloBluBlu, GialloBluGialla, GialloBluRossa)
-    VAR yellowGreenWords = (GialloVerde, GialloGiallaVerde, GialloVerdeVerde, GialloVerdeViola, GialloVerdeBlu, GialloVerdeGialla, GialloVerdeRossa)
-    VAR yellowPurpleWords = (GialloViola, GialloGiallaViola, GialloViolaVerde, GialloViolaViola, GialloViolaBlu, GialloViolaGialla, GialloViolaRossa)
+    //Varianti a dominante Giallo
+    VAR yellowRedWords = (GialloRosso, GialloGialloRosso, GialloRossoRosso, GialloRossoVerde, GialloRossoViola, GialloRossoBlu, GialloRossoGiallo)
+    VAR yellowBlueWords = (GialloBlu, GialloGialloBlu, GialloBluVerde, GialloBluViola, GialloBluBlu, GialloBluGiallo, GialloBluRosso)
+    VAR yellowGreenWords = (GialloVerde, GialloGialloVerde, GialloVerdeVerde, GialloVerdeViola, GialloVerdeBlu, GialloVerdeGiallo, GialloVerdeRosso)
+    VAR yellowPurpleWords = (GialloViola, GialloGialloViola, GialloViolaVerde, GialloViolaViola, GialloViolaBlu, GialloViolaGiallo, GialloViolaRosso)
     
     //Varianti a dominate blu
-    VAR blueRedWords = (BluRossa, BluBluRossa, BluRossaVerde, BluRossaViola, BluRossaBlu, BluRossaGialla, BluRossaRossa)
-    VAR blueYellowWords = (BluGialla, BluBluGialla, BluGialloVerde, BluGialloViola, BluGialloBlu, BluGialloGialla, BluGialloRossa)
-    VAR blueGreenWords = (BluVerde, BluBluVerde, BluVerdeVerde, BluVerdeViola, BluVerdeBlu, BluVerdeGialla, BluVerdeRossa)
-    VAR bluePurpleWords = (BluViola, BluBluViola, BluViolaVerde, BluViolaViola, BluViolaBlu, BluViolaGialla, BluViolaRossa)
+    VAR blueRedWords = (BluRosso, BluBluRosso, BluRossoVerde, BluRossoViola, BluRossoBlu, BluRossoGiallo, BluRossoRosso)
+    VAR blueYellowWords = (BluGiallo, BluBluGiallo, BluGialloVerde, BluGialloViola, BluGialloBlu, BluGialloGiallo, BluGialloRosso)
+    VAR blueGreenWords = (BluVerde, BluBluVerde, BluVerdeVerde, BluVerdeViola, BluVerdeBlu, BluVerdeGiallo, BluVerdeRosso)
+    VAR bluePurpleWords = (BluViola, BluBluViola, BluViolaVerde, BluViolaViola, BluViolaBlu, BluViolaGiallo, BluViolaRosso)
     
     //Varianti a dominante verde
-    VAR greenRedWords = (VerdeRossa, VerdeVerdeRossa, VerdeRossaVerde, VerdeRossaViola, VerdeRossaBlu, VerdeRossaGialla, VerdeRossaRossa)
-    VAR greenYellowWords = (VerdeGialla, VerdeVerdeGialla, VerdeGiallaVerde, VerdeGiallaViola, VerdeGiallaBlu, VerdeGiallaGialla, VerdeGiallaRossa)
-    VAR greenBlueWords = (VerdeBlu, VerdeVerdeBlu, VerdeBluVerde, VerdeBluViola, VerdeBluBlu, VerdeBluGialla, VerdeBluRossa)
-    VAR greenPurpleWords = (VerdeViola, VerdeVerdeViola, VerdeViolaVerde, VerdeViolaViola, VerdeViolaBlu, VerdeViolaGialla, VerdeViolaRossa)
+    VAR greenRedWords = (VerdeRosso, VerdeVerdeRosso, VerdeRossoVerde, VerdeRossoViola, VerdeRossoBlu, VerdeRossoGiallo, VerdeRossoRosso)
+    VAR greenYellowWords = (VerdeGiallo, VerdeVerdeGiallo, VerdeGialloVerde, VerdeGialloViola, VerdeGialloBlu, VerdeGialloGiallo, VerdeGialloRosso)
+    VAR greenBlueWords = (VerdeBlu, VerdeVerdeBlu, VerdeBluVerde, VerdeBluViola, VerdeBluBlu, VerdeBluGiallo, VerdeBluRosso)
+    VAR greenPurpleWords = (VerdeViola, VerdeVerdeViola, VerdeViolaVerde, VerdeViolaViola, VerdeViolaBlu, VerdeViolaGiallo, VerdeViolaRosso)
     
     //Varianti a dominante viola
-    VAR purpleRedWords = (ViolaRossa, ViolaViolaRossa, ViolaRossaVerde, ViolaRossaViola, ViolaRossaBlu, ViolaRossaGialla, ViolaRossaRossa)
-    VAR purpleYellowWords = (ViolaGialla, ViolaViolaGialla, ViolaGiallaVerde, ViolaGiallaViola, ViolaGiallaBlu, ViolaGiallaGialla, ViolaGiallaRossa)
-    VAR purpleBlueWords = (ViolaBlu, ViolaViolaBlu, ViolaBluVerde, ViolaBluViola, ViolaBluBlu, ViolaBluGialla, ViolaBluRossa)
-    VAR purpleGreenWords = (ViolaVerde, ViolaViolaVerde, ViolaVerdeVerde, ViolaVerdeViola, ViolaVerdeBlu, ViolaVerdeGialla, ViolaVerdeRossa)
+    VAR purpleRedWords = (ViolaRosso, ViolaViolaRosso, ViolaRossoVerde, ViolaRossoViola, ViolaRossoBlu, ViolaRossoGiallo, ViolaRossoRosso)
+    VAR purpleYellowWords = (ViolaGiallo, ViolaViolaGiallo, ViolaGialloVerde, ViolaGialloViola, ViolaGialloBlu, ViolaGialloGiallo, ViolaGialloRosso)
+    VAR purpleBlueWords = (ViolaBlu, ViolaViolaBlu, ViolaBluVerde, ViolaBluViola, ViolaBluBlu, ViolaBluGiallo, ViolaBluRosso)
+    VAR purpleGreenWords = (ViolaVerde, ViolaViolaVerde, ViolaVerdeVerde, ViolaVerdeViola, ViolaVerdeBlu, ViolaVerdeGiallo, ViolaVerdeRosso)
     
 //Una lista degli usi possibili di emotional_words_management
     LIST emotionalWordsManagementStatus = Activate, Delete
@@ -81,6 +81,12 @@
 
 //L'inventario effettivo
     VAR ownedEmotionalWords = ()
+
+//Tracciamento delle scelte fatte durante la composizione
+    LIST keysColour = redKey, yellowKey, blueKey, greenKey, purpleKey
+    VAR firstKeyColour = ()
+    VAR secondKeyColour = ()
+    VAR thirdKeyColour = ()
 
 //Il tracciamento della parola appena scoperta
     VAR newlyDiscoveredEmotionalWord = ()

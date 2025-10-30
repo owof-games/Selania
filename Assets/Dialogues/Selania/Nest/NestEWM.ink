@@ -11,32 +11,32 @@ TODO: Completare
 
 
 //Varianti monocolore
-    + {ownedEmotionalWords has Rossa}[Rossa]
+    + {ownedEmotionalWords has Rosso}[Rosso]
         {
-            - action == Activate: Rossa è stata attivata.
-                ~ activeEmotionalWord = Rossa
-                ~ ownedEmotionalWords -= Rossa
+            - action == Activate: Rosso è stata attivata.
+                ~ activeEmotionalWord = Rosso
+                ~ ownedEmotionalWords -= Rosso
             {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
             
-            - action == Delete: Rossa è stata cancellata.
-                ~ ownedEmotionalWords -= Rossa
+            - action == Delete: Rosso è stata cancellata.
+                ~ ownedEmotionalWords -= Rosso
                 ~ takenEmotionalWords --
-            {nestDebug: ho rimosso Rossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}
+            {nestDebug: ho rimosso Rosso dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}
             {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.}  
         }
 
     
-    + {ownedEmotionalWords has Gialla}[Gialla]
+    + {ownedEmotionalWords has Giallo}[Giallo]
         {
-            - action == Activate: Gialla è stata attivata.
-                ~ activeEmotionalWord = Gialla
-                ~ ownedEmotionalWords -= Gialla
+            - action == Activate: Giallo è stata attivata.
+                ~ activeEmotionalWord = Giallo
+                ~ ownedEmotionalWords -= Giallo
             {nestDebug: ho attivato una parola, che è {activeEmotionalWord}, e l'ho rimossa dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.}    
             
-            - action == Delete: Gialla è stata cancellata.
-                ~ ownedEmotionalWords -= Gialla
+            - action == Delete: Giallo è stata cancellata.
+                ~ ownedEmotionalWords -= Giallo
                 ~ takenEmotionalWords --
-            {nestDebug: ho rimosso Gialla dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.} 
+            {nestDebug: ho rimosso Giallo dalle parole possedute. La lista delle parole possedute ora contiene {ownedEmotionalWords}.} 
             {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
         }
     
@@ -85,10 +85,10 @@ TODO: Completare
             {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
         }    
     
- //Varianti a dominante rossa
+ //Varianti a dominante Rosso
  
  
- //Varianti a dominante gialla
+ //Varianti a dominante Giallo
  
  
  //Varianti a dominante blu
