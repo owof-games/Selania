@@ -1,4 +1,4 @@
-
+TODO: capire come gestire variazioni miste come qui sotto
 
 === first_second_chit_chat
     ~ temp charNameOne = translator(firstCharacterState)

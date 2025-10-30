@@ -395,33 +395,33 @@
                  In effetti mi sento divisa, frammentata.
                  In questo periodo della mia vita ci sono troppe spinte.
                  E non so dove andare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
-                    ~ firstPurple ++
+                    -> color_variation_management(FirstCharacter, purpleC)->
             
             + [Ok l'amicizia con Talco, ma devi essere indipendente.]
                  Ama, prenditi meno spazi, grazie.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                  Talco e io siamo due parti della stessa armonia, ma sappiamo essere indipendenti.
                  È che in momenti come questo so suonare solo se è con me.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
-                    ~ firstRed ++
+                    -> color_variation_management(FirstCharacter, redC)->
             
             + [Esiste un numero definito di sentieri per persona?]
                  Non era quello il punto, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Ma credo dipenda dal tempo a disposizione.
                  Alla fine puoi suonare qualsiasi strumento, se ne hai il tempo.
                  Ma quanti mesi servono per creare otto sentieri da sola?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
-                    ~ firstBlue ++
+                    -> color_variation_management(FirstCharacter, blueC)->
                     
             + [Vorresti suonare qualcosa per Talco?]
                  Adoro.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                  Ma magari non ora.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Forse prima devo capire perché ho questo nuovo nome, cosa farmene.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
-                    ~ firstGreen ++
+                    -> color_variation_management(FirstCharacter, greenC)->
             
             + [Non so molto di scoiattoli, ma le falene suonano i girasoli!]
                  Toppissimo!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                  Scoiattoli e falene sarebbero la migliore band possibile!
                  Tipo gli Stray Kids della natura.
                  E credo di aver visto una lumaca prima, potrebbe tenere il tempo!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
-                ~ firstYellow ++
+                -> color_variation_management(FirstCharacter, yellowC)->
     
             -    
          Che poi a pensarci bene, non è che saranno tutti i passi di quell'altra?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
@@ -463,27 +463,27 @@
                  E potrei portarvi sul palco e fare qualcosa di assurdo.
                  Tipo creare uno xilofono di papere!
                  Sarebbe toppissimo!
-                    ~ firstYellow ++
+                    -> color_variation_management(FirstCharacter, yellowC)->
             
             + [Anna ha ragione: bisogna essere pratiche nella vita.]
                  La praticità non è tutto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                  Sennò avrei dovuto iscrivermi a economia.
                  E inventare nuove supercazzole per fregare il prossimo.
                  O far finta di predire il futuro scazzando più di Nostradamus.
-                    ~ firstBlue ++        
+                    -> color_variation_management(FirstCharacter, blueC)->        
     
             + [Tutte le strade sono sbagliate se non sai dove andare.]
                  Mi ricordi il nonno.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                  Ignorava i piccoli fastidi per concentrarsi sul grande insieme delle cose.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  A me non viene benissimo questa cosa però.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
                  Quanto son cringe.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
-                    ~ firstPurple ++
+                    -> color_variation_management(FirstCharacter, purpleC)->
             
             + [E cosa vuole {charNameOne}?]
                  Ora?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Un letto caldo, una copertina.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                  E non doversi fare questa domanda.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
-                    ~ firstGreen ++
+                    -> color_variation_management(FirstCharacter, greenC)->
             
             + [Ascolta Olga e invadi il mondo!]
                  Tu sei un treno, {name}. Chi ti ferma?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
@@ -491,7 +491,7 @@
                  Ascoltarci a vicenda, entrare in armonia.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                  E ricostruire sulle macerie che ci circondano.
                  Ora datemi il Nobel per la pace, su!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-                    ~ firstRed ++        
+                    -> color_variation_management(FirstCharacter, redC)->        
             
             -    
          Comunque sembra che tutt3 abbiano le idee chiare su cosa dovrei fare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
@@ -521,7 +521,7 @@
                  Testare gli arbusti della foresta?
                  Flexare a manetta e dire "Ora sono il dio di questo posto?!?"
                  Thank you, next!
-                    ~ firstBlue ++
+                    -> color_variation_management(FirstCharacter, blueC)->
                     
             + [Più silenzio significa più spazio per fare rumore!]
                  AAAAAAAAAAAAAAAAAAAAAAAAAAAA!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
@@ -529,14 +529,14 @@
                  Ma non funziona, ama.
                  È come quando fai le prove per un concerto in un'enorme sala vuota.
                  Mi fa sentire esposta, e idiota.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
-                    ~ firstYellow ++
+                    -> color_variation_management(FirstCharacter, yellowC)->
                     
             + [Se corri veloce il ritmo lo crei da sola.]
                  O mi parte un polmone.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                  Non sono esattamente una gymbro, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  E poi serve qualcuno che suoni con te.
                  E qualcuno che canti.
-                    ~ firstRed ++
+                    -> color_variation_management(FirstCharacter, redC)->
                     
             + [Il silenzio offre la vulnerabilità necessaria per raccontarsi.]
                  Non ti sono sembrata già abbastanza needy, ama?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
@@ -544,14 +544,14 @@
                  No dai, tu cerchi di essere gentile, scusa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Ma non conosco bene le parole per "raccontarmi".#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
                  L'unica cosa che so fare è suonare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
-                    ~ firstGreen ++
+                    -> color_variation_management(FirstCharacter, greenC)->
                     
             + [Il giardino <b><i>è</b></i> musica, si tratta solo di ascoltare.]
                  Tu sei un mood tutto tuo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                  Ma forse hai ragione, {name}.
                  È che per ascoltare serve restare in silenzio.
                  E a me viene solo da parlare a ruota e non pensare in questo momento.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
-                    ~ firstPurple ++
+                    -> color_variation_management(FirstCharacter, purpleC)->
             -
          Idea!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
          Forse la mentore è abbastanza vecchia da avere una radio?
@@ -603,7 +603,7 @@
                     Quindi dovrei riprendere a stordirmi di cose?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
                     Può essere un'idea.
                     Ma non so quanto sia utile per capire perché ho questo maledetto nome.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
-                        ~ firstRed ++
+                        -> color_variation_management(FirstCharacter, redC)->
                         
                 + [Il pensiero è specchio: rompilo per distinguere reale e riflesso.]
                     Ti shippo, ama, ma parla come mangi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
@@ -615,12 +615,12 @@
                         {
                             - are_two_entities_together(Mentor, PG):Posso insergnarvi un po' di mindfulness.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                         }
-                        ~ firstPurple ++
+                        -> color_variation_management(FirstCharacter, purpleC)->
                 
                 + [La disciplina può aiutare a spegnere i pensieri.]
                      Ma l'alcool lo fa prima, e meglio.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                      E costa meno della terapia.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
-                        ~ firstBlue ++
+                        -> color_variation_management(FirstCharacter, blueC)->
                         
                 + [Forse non è la festa, ma è il senso di unione che ti manca.]
                      Ma con chi, qui?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
@@ -630,13 +630,13 @@
                         {
                             - are_two_entities_together(Mentor, PG):Non capisco perché tanto astio.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
                         }                     
-                        ~ firstGreen ++
+                        -> color_variation_management(FirstCharacter, greenC)->
                         
                 + [La serra ha un tetto! E io so sudare!]
                      Questo è un piano, ama!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                      Forse il vetro non ci reggerebbe a lungo ma che cambia?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
                      E almeno una di quelle strane piante saprà cantare!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
-                        ~ firstYellow ++        
+                        -> color_variation_management(FirstCharacter, yellowC)->        
                 -
         Ma ora ho bisogno di rilassarmi un po' ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
         E magari riposa anche tu.
@@ -676,18 +676,18 @@
                  Non che non aprezzi, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Ma per me è da molto ormai che è <i>domani</i>.
                  Il conservatorio è finito da mesi, e io suono, ballo, ma non so ancora che cosa fare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
-                    ~ firstYellow ++
+                    -> color_variation_management(FirstCharacter, yellowC)->
                     
             + [È imperativo sopravvivere, troviamo sempre una soluzione.]
                  "Imperativo" rimettilo nel vocabolario, ora.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                  E voglio qualcosa di più che sopravvivere.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Lo voglio per tutte le persone!
-                ~ firstBlue ++
+                -> color_variation_management(FirstCharacter, blueC)->
                     
             + [Restati fedele e non ci sarà compromesso ma cambiamento.]
                  Ah, ci sta!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  E a quel punto ogni decisione sarebbe la <i>mia</i> decisione.
-                    ~ firstPurple ++
+                    -> color_variation_management(FirstCharacter, purpleC)->
             
             + [Dona la tua musica senza chiedere e tutto arriverà.]
                  Forse in questo posto strano funziona così.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
@@ -696,13 +696,13 @@
                  O dici che devo darli a loro i miei doni?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
                  Mmm.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Ci devo pensare.
-                    ~ firstGreen ++
+                    -> color_variation_management(FirstCharacter, greenC)->
            
             + [Mezzo compromesso è già una completa sconfitta.]
                 Eppure Jonah ha perso del tutto, comunque.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                 Con o senza compromessi.
                 Questa è l'unica soluzione?
-                    ~ firstRed ++       
+                    -> color_variation_management(FirstCharacter, redC)->       
             
             -
         A proposito di cause perse: vado a cercarmi uno spritz.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
@@ -734,34 +734,34 @@
             + [La prevedibilità <b><i>è</b></i> poetica. La cosa più rara al mondo.]
                  Allora non sono una persona poetica.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                  Se non c'è caos, imprevedibilità, mi annoio.
-                    ~ firstBlue ++
+                    -> color_variation_management(FirstCharacter, blueC)->
                     
             + [Ognuna ha il suo modo di raggiungere la verità.]
                  Ci sta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Ma non è troppo facile così?
                  Non è togliersi la responsabilità verso le altre persone?
-                    ~ firstPurple ++
+                    -> color_variation_management(FirstCharacter, purpleC)->
                     
             + [È un errore non giocare, e il jazz è musica che gioca.]
                  Top!
                  Anche se sicuro che ora si è preso un infarto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                  Per me tutta la musica è gioco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)} #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
                  Basta smetterla di sentirsi stocazzo e perdersi con band e pubblico.
-                ~ firstYellow ++
+                -> color_variation_management(FirstCharacter, yellowC)->
                 
             + [Sembrano le parole di una persona ferita.]
                  Lo dice anche Talco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Metti che voglio pure aiutarlo con questa ferita, cosa dovrei fare?
                  Rispettare la sua ossessione per le regole?
                  O sorprenderlo con del caos creativo?
-                ~ firstGreen ++
+                -> color_variation_management(FirstCharacter, greenC)->
                 
             + [Ha paura di accogliere la potenza del disordine.]
                  Ci sta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Anche se poi credo che il disordine sia solo una questione di prospettiva.
                  Alla lunga ci si abiuta e diventa difficile cambiare.
                  Un po' come quel casino che è camera mia.
-                    ~ firstRed ++
+                    -> color_variation_management(FirstCharacter, redC)->
             -
             Comunque non mi piace l'idea che esistano errore e verità.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
             Anche perché quelli pieni di verità hanno sempre finito per ammazzare quell3 come me e Talco.
@@ -800,33 +800,33 @@
                  Un giardino.
                  Anna dice che è come fuggire dalle responsabilità.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                  Ma non è che possiamo salvare il mondo, noi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
-                    ~ firstGreen ++
+                    -> color_variation_management(FirstCharacter, greenC)->
                 
             + [Una comunità non regge senza senso pratico.]
                  Giuro ama che a volte mi triggeri tantissimo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                  Perché tutto è solo senso pratico per te?
                  Non è comunità la roba che hai in mente, ma una roba come una fabbrica.
                  E io non ci voglio vivere in una fabbrica.
-                    ~ firstBlue ++
+                    -> color_variation_management(FirstCharacter, blueC)->
                     
             + [Una comunità resiste se segue un obiettivo superiore.]
                  Mood totale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Una comunità unita per rendere il mondo più giusto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                  O trasformare qualcosa di terribile in un gioco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
                  E farlo esplodere.
-                    ~ firstPurple ++
+                    -> color_variation_management(FirstCharacter, purpleC)->
         
             + [Ciò che ci tiene unite è il giocare.]
                  Ah, ci sta!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  È  liberatorio ridere tutt3 assieme.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                  Forse dovrei solo far ridere il Ghiberti, e magari quel sorrisino finto si rompe.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Oppure mi schiatta sul posto.
-                    ~ firstYellow ++
+                    -> color_variation_management(FirstCharacter, yellowC)->
                     
             + [Ci si accresce nel dissenso e nella discussione.]
                  Amo noi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Ma non è manco male sedersi assieme al sole e chillare, ogni tanto, no?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
-                    ~ firstRed ++
+                    -> color_variation_management(FirstCharacter, redC)->
      
             -
          Comunque non sono di certo qui per il Ghiberti e le sue paranoie matematiche.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
@@ -858,21 +858,21 @@
                  La cosa preferita di Talco sono i pigiama party.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Chillare con l3 am3.
                  "Un sogno condiviso, sognando sognare."
-                    ~ firstGreen ++
+                    -> color_variation_management(FirstCharacter, greenC)->
                     
             + [Non tanto a parlare ma ad arrivare al punto.]
                  Ama, mi ricordi perché continuo a raccontarti queste cose?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                  Ah, sì, perché siamo solo noi.
                  E la mentore.
                  E la mia noia.
-                    ~ firstBlue ++
+                    -> color_variation_management(FirstCharacter, blueC)->
                     
             + [Ogni temporale toglie a qualcuna e dà a qualcun altro.]
                  Ah, ci sta!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Come le piante nella serra.
                  Che mi sembra crescono con la terra e le nostre paturnie.
                  Per poi darci in cambio forme assurde e idee.
-                    ~ firstPurple ++
+                    -> color_variation_management(FirstCharacter, purpleC)->
                     
             + [O come il momento prima di una battaglia.]
                  A te piace menare le mani, {name}?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
@@ -881,14 +881,14 @@
                  Mi sembra solo un modo idiota per vedere chi ce l'ha più grosso.
                  E manco tra la gente che poi muore.
                  Cringe.
-                    ~ firstRed ++
+                    -> color_variation_management(FirstCharacter, redC)->
                     
             + [Qui l'aria sa di mare e zucchero filato!]
                  Vero? Che è assurdo, perché non ho visto il mare da nessuna parte.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
                  Né dello zucchero filato.
                  Ma ora ho fame.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  E voglia di farmi un giro sull'ottovolante.
-                    ~ firstYellow ++         
+                    -> color_variation_management(FirstCharacter, yellowC)->         
     
             -
          Vabbè.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
@@ -928,27 +928,27 @@
                  Però allora gli chiedo anche come tornare a casa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Non so più quanto voglio restare quì.
                  Senza offesa, ama.
-                    ~ firstGreen ++
+                    -> color_variation_management(FirstCharacter, greenC)->
                 
             + [Hai anche danzato con gli alberi?]
                  Non avevo preso i funghetti, no.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                  Ma avrei apprezzato molto, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Anzi no, forse non l'avrei fatto.
                  Muovermi a volte mi sembra che rompa le cose.
-                    ~ firstYellow ++
+                    -> color_variation_management(FirstCharacter, yellowC)->
                     
             + [Sei tu che hai lottato per gli alberi, o loro per te?]
                  Ti shippo totale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Talco direbbe che ci siamo aiutate a vicenda. E non solo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                  Che la separazione è solo una illusione, o roba del genere.
                  Che una melodia non esiste senza tutte le sue note.
-                    ~ firstPurple ++
+                    -> color_variation_management(FirstCharacter, purpleC)->
             
             + [Gli alberi "cantano" per allarmare altri alberi.]
                  Ama, tu sai uccidere il mood come poche persone al mondo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                  Quindi secondo te ero immersa in un coro di disperazione?
                  Ora mi metto a urlare anche io.
-                    ~ firstBlue ++
+                    -> color_variation_management(FirstCharacter, blueC)->
                 
             + [Come ti sei sentita a combattere per qualcun altro?]
                  Motivata.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
@@ -956,7 +956,7 @@
                  L'avrai notato, faccio un po' cagare a spiegare le cose.
                  Ma in quel momento sapevo che stavo facendo qualcosa che aveva un senso.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                  Qualcosa di importante non solo per me.
-                    ~ firstRed ++
+                    -> color_variation_management(FirstCharacter, redC)->
             -    
          Comunque la storia poi è finita male, ovvio.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
          I poliziotti ci hanno trascinate e bastonate e schedate.
@@ -997,13 +997,13 @@
                  Ogni tanto li rubavo e suonavo in camera.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Alcuni avevano un suono storto, forse per colpa delle tarme.
                  Però ho sempre amato le cose un po' rotte perché hanno una storia tutta loro.
-                    ~ firstPurple ++
+                    -> color_variation_management(FirstCharacter, purpleC)->
                     
             + [E ora accresci l'albero della tua famiglia.]
                  Più o meno.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Per nonno la musica era fatta per unire, salvare il mondo forse.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                  Quando ci viene da ballare e cantare ci passa la voglia di litigare, no?
-                    ~ firstGreen ++
+                    -> color_variation_management(FirstCharacter, greenC)->
                     
             + [Credi che tuo padre si sia arreso?]
                  Merda, ci vai giù piano {name}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
@@ -1011,19 +1011,19 @@
                  Lui è davvero felice di ciò che fa.
                  Il problema è che pensa che visto che le cose che fa lo fanno felice, allora tutti devono essere felici facendo le cose che fa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                  Non ci avevo pensato, ma ora ho capito da dove gli vengono certe idee politiche di merda.
-                    ~ firstRed ++
+                    -> color_variation_management(FirstCharacter, redC)->
                     
             + [Ti va di ballare con me?]
                  Sì ama!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                  Forse non ora però.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Questa cosa della chitarra inizia a pesarmi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
-                    ~ firstYellow ++
+                    -> color_variation_management(FirstCharacter, yellowC)->
                     
             + [Esistono lavori veri e lavori non veri?]
                  Sei tu la persona seria, no?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                  Se la vedi come mio padre la risposta è <i>sì</i>.
                  E non casualmente i lavori non veri sono tutti quelli che mi piacciono.
-                    ~ firstBlue ++
+                    -> color_variation_management(FirstCharacter, blueC)->
             -
             
         Lasciami un po' sola ora, {name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
@@ -1060,20 +1060,20 @@
                  Un po' mi spiace perché mi rendo conto che lei ci tiene proprio a sembrare una di quelle fighe.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                  Ed è l'unica a non accorgersi che può fare tutte le cose più assurde del mondo, ma tanto nessuno la considererà una al top.
                  Povera.
-                    ~ firstGreen ++
+                    -> color_variation_management(FirstCharacter, greenC)->
                     
             + [Loro hanno fatto concerti prima della maggiore età.]
                  Grazie per avermelo ricordato.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                  Ne avevo davvero bisogno.
                  Ora dimmi che sono fallita e così posso appendere il piano al muro.
                  E non dirmi che non si può appendere un pianoforte al muro o giuro che ti rompo i timpani urlando.
-                    ~ firstBlue ++
+                    -> color_variation_management(FirstCharacter, blueC)->
                 
             + [La strada sbagliata è quella con più insegnamenti.]
                 {name}: non un nome ma un dispenser di aforismi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                 Però in qualche modo ha senso.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                 Ma presto o tardi dovrò pure capire come mangiare, e a quel punto cosa me ne faccio di tutte le strade sbagliate del mondo?
-                        ~ firstRed ++
+                        -> color_variation_management(FirstCharacter, redC)->
                         
             + [Ma loro si divertono, quando suonano?]
                  Tanto, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
@@ -1082,14 +1082,14 @@
                  Se ne va in un altro luogo, un mondo che non ho ancora trovato.
                  Forse è questo qui?
                  Sto suonando e sono così fatta da non averlo realizzato?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
-                    ~ firstYellow ++
+                    -> color_variation_management(FirstCharacter, yellowC)->
                     
             + [Cambiamo sempre, ma non diventiamo mai chi non siamo.]
                  Un'altra frase così e mi crusho tantissimo per te.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
                  Ma prima vallo a dire a mia madre.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
                  Ama: mi fa male con queste cose ma non se ne rende nemmeno conto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_sad
                  È come se mi dicesse sempre che sono sbagliata.
-                    ~ firstPurple ++
+                    -> color_variation_management(FirstCharacter, purpleC)->
             -    
             
         Comunque: direi che ho finito di sputtanare la mia famiglia.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate

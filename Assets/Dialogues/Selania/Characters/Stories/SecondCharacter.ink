@@ -215,7 +215,7 @@
                 Tipo: perché c'è la neve ma non fa freddo? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                 Perché c'è una stazione ma non passa nessun treno?
                 Perché c'è una porta vicino alla stazione ma non ci posso entrare?
-                    ~ secondBlue ++
+                    -> color_variation_management(SecondCharacter, blueC)->
                 
             + [Perché è pieno di cose buffe!]
                 Uh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
@@ -224,21 +224,22 @@
                 Le lettere non si danno al postino?
                 E il postino non le porta alle persone?
                 Mica le appende così!
-                    ~ secondYellow ++
+                    -> color_variation_management(SecondCharacter, yellowC)->
                 
             + [Perché <b><i>tu</b></i> sei qui?]
                 Boh, che ne so? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
                 Era solo una domanda!
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
 
                 
             + [Per aiutare chi è in difficoltà.]
                 Come il veterinario?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
                 O come la maestra di ginnastica, che dice di aiutarmi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 Ma poi mi sgrida se sbaglio?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
-                    ~ secondGreen ++
+                    -> color_variation_management(SecondCharacter, greenC)->
                 
             + [Per capire meglio chi sono.]
+                -> color_variation_management(SecondCharacter, purpleC)->
                 Non sai chi sei?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                 A me mi piacerebbe essere un'altra persona a volte.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
                 O un labrador, così se mi rotolo nel fango tutti ridono e non si arrabbiano.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
@@ -267,7 +268,7 @@
                 Ma il compleanno è un'altra cosa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                 È un momento tutto tuo.
                 E infatti lo puoi festeggiare in ritardo e comunque è il tuo compleanno!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
-                    ~ secondBlue ++
+                    -> color_variation_management(SecondCharacter, blueC)->
                 
             + (twoYellow) [Niente caramelle, ma c'è uno stagno dove nuotare!]
                 FIGO!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
@@ -275,7 +276,7 @@
                 Però questa estate ho visto un mare gigantesco.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
                 Più grande anche del cielo!
                 Quello qui non c'è di sicuro!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
-                    ~ secondYellow ++
+                    -> color_variation_management(SecondCharacter, yellowC)->
                 
             + (twoRed) [E come ti sei ripreso i giocattoli?]
                 Non sono mica giocattoli.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
@@ -283,14 +284,14 @@
                 E non me le sono riprese.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
                 Papà è buono, fino a quando non si arrabbia.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 E non voglio farlo arrabbiare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
 
                 
             + (twoGreen) [Vuoi molto bene alla tua mamma?]
                 Sì sì sì. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
                 Lei è la mamma migliore del pianeta.
                 Dell'universo.
-                    ~ secondGreen ++
+                    -> color_variation_management(SecondCharacter, greenC)->
   
                 
             + (twoPurple) [Quindi, rubandoti i giochi, tuo papà ti ha fatto un favore.]
@@ -298,7 +299,7 @@
                 Non ha senso quello che dici.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
                 Papà non mi deve prendere mica le mie cose.
                 Detesto quando fa così.
-                    ~ secondPurple ++
+                    -> color_variation_management(SecondCharacter, purpleC)->
             -
         Ma dove saranno i miei compagni di scuola?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
         Devi assolutamente trovarli!
@@ -378,7 +379,7 @@
                 devono
                 stare!
                 Mi ha fatto arrabbiare.
-                    ~ secondBlue ++
+                    -> color_variation_management(SecondCharacter, blueC)->
                 
             + (twoYellow) [Perché non le hai fatto uno scherzo?]
                 Perché ero arrabbiato.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
@@ -391,7 +392,7 @@
                 quando
                 i grandi
                 mi toccano.
-                    ~ secondYellow ++
+                    -> color_variation_management(SecondCharacter, yellowC)->
                 
             + (twoRed) [Picchiare una così è un po' da sfigati.]
                 Mi aveva preso il braccio!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
@@ -400,7 +401,7 @@
                 Non volevo picchiarla.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
                 Volevo solo spingerla via.
                 Ma mi sono arrabbiato troppo.
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
 
                 
             + (twoGreen) [C'è rimasta male, sai?]
@@ -409,7 +410,7 @@
                 E poi mi ha detto che i bambini qui non ci devono stare.
                 E mi ha preso per la spalla.
                 Non mi piace quando mi toccano.
-                    ~ secondGreen ++
+                    -> color_variation_management(SecondCharacter, greenC)->
   
                 
             + (twoPurple) [Hai ottenuto quello che volevi?]
@@ -418,7 +419,7 @@
                 E ha mollato la mia spalla.
                 Non le volevo fare mica male.
                 Ma non mi piace quando i grandi mi toccano.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
-                    ~ secondPurple ++
+                    -> color_variation_management(SecondCharacter, purpleC)->
 
             -
         Se {charNameFive} non mi lascia in pace chiamo mio fratello.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
@@ -536,20 +537,20 @@
             //Definire meglio in base ai colori.
             
             + {him_liar} [Bugia: hai detto di esser pieno di action figures.]
-                    ~ secondBlue ++
+                    -> color_variation_management(SecondCharacter, blueC)->
                 "Pieno" è un modo di dire.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
                 Come "Furbo come una volpe".#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 O "Simpatico come {name}".
             
             + {him_liar} [Prima hai detto che tutte le action te le ha rubate tuo padre.]
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
                 No.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
                 Ricordi male.
                 Papà è bravo, non fa queste cose. 
                
             
             + {her_liar} [Tua mamma si arrabbia spesso?]
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
                 Un po'.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
                 Non è cattiva, è che sono cattivo io.
                 E così perde la pazienza.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
@@ -559,11 +560,11 @@
                 Sì no boh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 Anche.
                 Uffi, che noia che fai!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
-                    ~ secondBlue ++
+                    -> color_variation_management(SecondCharacter, blueC)->
             
                   
             + {they_liar} [Ma non era il suo regalo di compleanno questo?]
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
                 Sì, certo che sì.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 Si è dimenticata il compleanno, ma poi ha deciso di farmi questo.
                 Per scusarsi.
@@ -578,7 +579,7 @@
                 Ma poi papà si arrabbia.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
                 E così non facciamo mai nulla.
                 E allora vado a letto prestissimo e correggo tutta la giornata.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
-                    ~ secondGreen ++          
+                    -> color_variation_management(SecondCharacter, greenC)->          
             
 
             + [Però non mi hai detto il tuo nome. Sei una spia?]
@@ -586,7 +587,7 @@
                 Una spia non direbbe mai che è una spia.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                 Oppure ti confonde, così non capisci cosa è vero o cosa no.
                 Però tu non puoi mica farlo!
-                    ~ secondYellow ++
+                    -> color_variation_management(SecondCharacter, yellowC)->
                 
                 
             + [Sembra che tua mamma sia piena di preoccupazioni.]
@@ -596,7 +597,7 @@
                 E anche io ci provo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 Lei dice che farsi aiutare è barare.
                 Nonna dice che a volte bisogna barare per andare avanti.
-                    ~ secondPurple ++
+                    -> color_variation_management(SecondCharacter, purpleC)->
  
             -
             Forse dietro tutti quei fiori vicino allo stagno trovo qualche regalo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
@@ -649,7 +650,7 @@
                 Anche che salto e volo?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                 O che la serra diventa di cioccolato?
                 O che la mentore fa una battuta carina?
-                    ~ secondBlue ++
+                    -> color_variation_management(SecondCharacter, blueC)->
                 
             + [Speriamo sia il nuovo Super Wario!]
                 Posso giocarci anche io?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
@@ -657,14 +658,14 @@
                 Qui non ci sono TV.
                 Però lo stagno sbrilluccica.
                 Forse la rana lo trasforma in uno schermo!
-                    ~ secondYellow ++
+                    -> color_variation_management(SecondCharacter, yellowC)->
                 
             + [{charNameTwo}, se continui con le balle non mi fido più di te!]
                 Non sono balle!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
                 Mi piacciono gli animali.
                 Non mi serve inventare altri animali perché quelli che ci sono mi piacciono già.
                 La rana c'è, vai a vedere!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
 
                 
             + [Sembra una rana molto gentile.]
@@ -674,7 +675,7 @@
                 Se non ti piace mi dai quello che ti dà?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                 Spero tanto sia un cucciolo.
                 O la Play!
-                    ~ secondGreen ++
+                    -> color_variation_management(SecondCharacter, greenC)->
   
                 
             + [E se lo senti e prudono le orecchie è una bugia.]
@@ -682,7 +683,7 @@
                 Perché non mi credi?
                 Non siamo amici?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
                 Ti giuro che c'è una rana nello stagno!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
-                    ~ secondPurple ++
+                    -> color_variation_management(SecondCharacter, purpleC)->
  
             - (theFrog)
                          
@@ -744,7 +745,7 @@
                 Poi ha smesso.
                 Mamma dice che spera sia anneggato in mare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 Papà invece ha ancora tutte le sue lettere nascoste nel garage.
-                    ~ secondBlue ++
+                    -> color_variation_management(SecondCharacter, blueC)->
                 
             + [Insegni a barare anche a me?]
                 Ho una idea!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
@@ -752,7 +753,7 @@
                 Ti insegno come si bara.
                 E poi stracciamo {charNameFive}.
                 Così la smette di dirmi cosa non devo fare.
-                    ~ secondYellow ++
+                    -> color_variation_management(SecondCharacter, yellowC)->
                 
             + [Tua nonna sembra una tipa forte!]
                 "Forte"?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
@@ -762,7 +763,7 @@
                 E poi gli ha sputato di nascosto nel caffé.
                 E lui si è arrabbiato perché io ridevo mentre lo beveva.
                 Abbiamo tantissimi segreti lei e io!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
 
                 
             + [Ti manca casa? Vorresti tornare?]
@@ -773,7 +774,7 @@
                 Voglio andare da mio fratello.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
                 Lì mi piace.
                 Ma non piaccio al suo amico.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-                    ~ secondGreen ++
+                    -> color_variation_management(SecondCharacter, greenC)->
   
                 
             + [Quando i grandi hanno paura, fanno cose cattive.]
@@ -783,7 +784,7 @@
                 Mamma delle bollette.
                 Nonna però non ha paura di nulla.
                 Però si arrabbia tanto quando gioca a briscola.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
-                    ~ secondPurple ++
+                    -> color_variation_management(SecondCharacter, purpleC)->
  
             -
         Mi spiace, {name}. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
@@ -859,7 +860,7 @@
                 Questa è una cosa nuova.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                 E mi piace.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 Ma non so se mi piace piangere.
-                    ~ secondBlue ++
+                    -> color_variation_management(SecondCharacter, blueC)->
                 
             + [La scuola è un posto senza fantasia!]
                 Sì no boh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
@@ -870,14 +871,14 @@
                 Ma ogni cosa che faccio fa arrabbiare qualcuno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
                 Ma se non faccio cose mi annoio.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 E se mi annoio comunque finisco in castigo.
-                    ~ secondYellow ++
+                    -> color_variation_management(SecondCharacter, yellowC)->
                 
             + [Stringi i denti, lotta, diventa più forte degli altri!]
                 Lo dice anche papà.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 Ma a me non mi interessa mica tanto.
                 Voglio solo studiare gli animali.
                 E che mi lascino in pace.
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
 
                 
             + [A me spiace per te, sai?]
@@ -887,7 +888,7 @@
                 Mi viene da piangere.
                 Ma non voglio piangere.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
                 Quindi non dirlo più.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
-                    ~ secondGreen ++
+                    -> color_variation_management(SecondCharacter, greenC)->
   
                 
             + [I castighi sono inutili. Hai mai imparato qualcosa dai castighi?]
@@ -897,7 +898,7 @@
                 E tu non puoi fare nulla.
                 Ti viene solo più rabbia.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
                 Sono ingiusti.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-                    ~ secondPurple ++
+                    -> color_variation_management(SecondCharacter, purpleC)->
  
             -
             //Se fiducia bassa.
@@ -961,7 +962,7 @@
                 Ma non mi servono le cose pratiche.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 Mi serve immaginare cose più belle.
                 Così le giornate sono più facili.
-                    ~ secondBlue ++
+                    -> color_variation_management(SecondCharacter, blueC)->
                 
             + [Hai mai corretto una giornata mettendoci vampiri o zombie?]
                 Sì!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
@@ -972,7 +973,7 @@
                 E lottavamo contro i cervombie.
                 Cervi zombie.
                 Ho riso tantissimo quella sera!
-                        ~ secondYellow ++
+                        -> color_variation_management(SecondCharacter, yellowC)->
                         
             + [Se i grandi ti picchiano, devi fare squadra con gli altri!]
                 Una volta ci ho provato.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
@@ -980,7 +981,7 @@
                 Mi dicono che sono scemo, per via degli animali.
                 O mi dicono che sono strano.
                 E che non gli piace quando mi arrabbio.
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
 
                 
             + [Grazie per avermi raccontato questa cosa.]
@@ -992,7 +993,7 @@
                 O quando non succede niente.
                 A volte è peggio.
                 Non mi piace annoiarmi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-                    ~ secondGreen ++
+                    -> color_variation_management(SecondCharacter, greenC)->
   
                 
             + [Come mai se qualcuno ti chiama non rispondi?]
@@ -1000,7 +1001,7 @@
                 O mi chiede di fare qualcosa.
                 Non succede mai che è per una bella sorpresa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
                 O per guardare i cartoni assieme.
-                    ~ secondPurple ++
+                    -> color_variation_management(SecondCharacter, purpleC)->
             -
             Da quando sono qui però non ho riscritto nulla.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
             Però ho provato a leccare la rana, ma si è allontanata.
@@ -1054,7 +1055,7 @@
                 "E se un'onda ti investe?"
                 "E se tuo fratello si distrae?"
                 Mamma è davvero pesante.
-                    ~ secondBlue ++
+                    -> color_variation_management(SecondCharacter, blueC)->
                 
             + [Le statue di tuo fratello si muovono?]
                 Forse quando non ci siamo?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
@@ -1063,7 +1064,7 @@
                 Però gli serve l'elettricità.
                 Voglio costruirne una anche io.
                 Forse in biblioteca c'è una guida!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
-                    ~ secondYellow ++
+                    -> color_variation_management(SecondCharacter, yellowC)->
                 
             + [{charNameTwo}, non devi sempre dare ragione agli adulti.]
                 Non è mica facile!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
@@ -1072,7 +1073,7 @@
                 Credo che lui sia buono.
                 Ma se poi si arrabbia con me e non mi vuole più lì?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
                 Poi non ci posso più stare con mio fratello!
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
 
                 
             + [Hai chiesto all'amico di tuo fratello cosa pensa di te?]
@@ -1083,7 +1084,7 @@
                 Ma non ci credo.
                 Anche perché a quello non gli piacciono i bambini proprio.
                 Ed è una cosa che rende molto triste mio fratello.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-                    ~ secondGreen ++
+                    -> color_variation_management(SecondCharacter, greenC)->
   
                 
             + [Grazie per aver corretto le tue bugie.]
@@ -1099,7 +1100,7 @@
                 }
                 Lecose qui sono belle.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
                 Le bugie sono meno interessanti.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
-                    ~ secondPurple ++
+                    -> color_variation_management(SecondCharacter, purpleC)->
  
             -
             Forse nello stagno posso imparare a nuotare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
@@ -1136,21 +1137,21 @@
                 "Bimbo, te le spiego lentamente le cose ora, vieni."
                 Non mi deve spiegare lentamente le cose.
                 Io so fare le frazioni!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
-                    ~ secondBlue ++
+                    -> color_variation_management(SecondCharacter, blueC)->
                 
             + [Questo non è il mio lavoro. I lavori sono noiosi.]
                 Però ai grandi piace parlare di lavoro.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 E le maestre parlano sempre del futuro.
                 E dicono che ci devo lavorare con le cose in cui sono bravo.
                 Ma io voglio solo imparare cose nuove!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
-                    ~ secondYellow ++
+                    -> color_variation_management(SecondCharacter, yellowC)->
                 
             + [In realtà non l'ho scelto. Manco mi pagano.]
                 Che fregatura.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 Nemmeno mamma mi paga per i lavoretti a casa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
                 Dice che è una cosa che devono fare tutti, grandi e piccoli, maschi e femmine.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 Forse {charNameFive} è come mia mamma.
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
                 
             + [Mi è sempre piaciuto far stare bene le persone.]
                 Questa è una cosa bella.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
@@ -1161,7 +1162,7 @@
                 E se la prendono con la persona che volevano aiutare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
                 Per questo si fa prima a fare da soli.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 Mica puoi litigare con te stesso, no?
-                    ~ secondGreen ++
+                    -> color_variation_management(SecondCharacter, greenC)->
   
                 
             + [Voglio portare un grande cambiamento partendo dal piccolo.]
@@ -1172,7 +1173,7 @@
                 È così piccola che non la vedi.
                 Ma fa muovere le cose grandi!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                 O bruciare i muri.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-                    ~ secondPurple ++
+                    -> color_variation_management(SecondCharacter, purpleC)->
  
             -
             
@@ -1203,7 +1204,7 @@
                 E magari riesco a fare venire qui anche mio fratello.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
                 E la nonna.
                 Così siamo tutti felici.
-                    ~ secondBlue ++
+                    -> color_variation_management(SecondCharacter, blueC)->
                 
             + [E se invece rimanessi sia bambino che adulto?]
                 Nonna dice che è il problema di mamma.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
@@ -1213,7 +1214,7 @@
                 Tutti i litigi.
                 La rabbia.
                 A me non mi piace la mia rabbia.
-                    ~ secondYellow ++
+                    -> color_variation_management(SecondCharacter, yellowC)->
                 
             + [Puoi fare il ribelle e salvare gli animali!]
                 Tipo Greta!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
@@ -1223,7 +1224,7 @@
                 Magari posso programmare le statue di mio fratello.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
                 E ci pensano loro a far fuori "quelli".
                 Non ho capito mica nemmeno cosa sia "fare fuori".
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
 
                 
             + [Non ti preoccupare: hai moltissimo tempo per decidere che fare.]
@@ -1234,7 +1235,7 @@
                 Io l'unica cosa che so fare è dire cose stupide sugli animali.
                 E trovare nascondigli in ogni posto.
                 E dire bugie.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-                    ~ secondGreen ++
+                    -> color_variation_management(SecondCharacter, greenC)->
   
                 
             + [Potresti diventare uno storico degli animali.]
@@ -1246,7 +1247,7 @@
                 Lo fanno perché gli va.
                 E io vorrei sempre fare quello che mi va.
                 Il resto è una rottura.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
-                    ~ secondPurple ++
+                    -> color_variation_management(SecondCharacter, purpleC)->
  
             -
         Ho tanto da pensare ora. Però una cosa è sicura.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
@@ -1301,7 +1302,7 @@
                 Un serpente.
                 Un riccio.
                 E ora ti spino!
-                    ~ secondBlue ++
+                    -> color_variation_management(SecondCharacter, blueC)->
                 
             + [Immagina di picchiare i mostri invece dei compagni!]
                 I mostri mi piacciono.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
@@ -1310,7 +1311,7 @@
                 Ma anche questo posto non doveva esistere, credo.
                 E invece è qui.
                 Chi lo dice che non faccio male ai mostri?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-                    ~ secondYellow ++
+                    -> color_variation_management(SecondCharacter, yellowC)->
                 
             + [Tuo padre ti picchia, e tu hai imparato da lui a picchiare.]
                 NO!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
@@ -1319,14 +1320,14 @@
                 Mi sembra una cosa difficile.
                 Ma voglio tanto che non mi picchi più.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
                 Non mi piace avere paura di lui.
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
 
             + [Nessuno merita di essere picchiato, né tu né quel bambino.]
                 Però se papà mi picchia c'è un motivo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 Mamma dice che papà non lascia mai nulla al caso.
                 E per questo è il più bravo a lavoro.
                 E quel bambino è davvero fastidioso.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
-                    ~ secondGreen ++
+                    -> color_variation_management(SecondCharacter, greenC)->
   
             + [La rabbia della ragazzina ha protetto il fratello.]
                 Ma chi protegge me?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
@@ -1334,7 +1335,7 @@
                 Qui sono stato io a fare il cattivo.
                 Forse potrei chiedere a lei come fa?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                 Ma sarebbe stupido.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-                    ~ secondPurple ++
+                    -> color_variation_management(SecondCharacter, purpleC)->
  
             -
         Essere adulti è terribile.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic 
@@ -1381,7 +1382,7 @@
                 Ma senza elettricità, dopo l'incidente.
                 Però posso usare le batterie.
                 Voglio fargli un regalo con le cose della serra, sai?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
-                    ~ secondBlue ++
+                    -> color_variation_management(SecondCharacter, blueC)->
                 
             + [Proviamo con la lampada della biblioteca!]
                 Sì!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
@@ -1391,7 +1392,7 @@
                 Oppure ci mettiamo un faro!
                 Ma ci serve qualcosa di alto.
                 Forse se prendo tutti i rami del bosco...
-                    ~ secondYellow ++
+                    -> color_variation_management(SecondCharacter, yellowC)->
                 
             + [Sei tosto perché alla fine fai quello che ti va.]
                 Sì no boh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
@@ -1403,7 +1404,7 @@
                 O il vecchio respiratore di nonna.
                 Solo per capire.
                 Poi li rimetto a posto prima che si svegliano tutti.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
 
             + [Promettimi che non mangerai nulla di strano, qui.]
                 Non sei mia mamma.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
@@ -1412,7 +1413,7 @@
                 Ma hanno tutte un sapore fastidioso.
                 Però per un attimo una delle piante mi ha fatto vedere le cose con colori strani.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                 Ma è durato pochissimo e poi avevo solo tanta sete.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
-                        ~ secondGreen ++
+                        -> color_variation_management(SecondCharacter, greenC)->
   
                 
             + [Tuo fratello ti lascia essere te stesso.]
@@ -1422,7 +1423,7 @@
                 E se non sono d'accordo e glielo dico, mi ascolta.
                 Per questo mi piace stare con lui.
                 Non mi fa sentire stupido.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
-                    ~ secondPurple ++
+                    -> color_variation_management(SecondCharacter, purpleC)->
  
             -
         Questo posto è pieno di cose di cui non vi fate domande, voi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
@@ -1480,7 +1481,7 @@
                 Senza usare un libro.
                 A parte quando ne ho impilati alcuni per raggiungere i vasi alti della serra.
                 Non dirlo a {charNameFive}, ti prego!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-                    ~ secondBlue ++
+                    -> color_variation_management(SecondCharacter, blueC)->
                 
             + [Dobbiamo capire la lingua dei pesci così ci possiamo giocare.]
                 Magari è come con le pecore che fanno tanti "bee" diversi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
@@ -1489,7 +1490,7 @@
                 Ma la carpa ha la faccia da toscana.
                 E il pesce spada sicuro che è romano!
                 Posso creare un traduttore pescese/umano!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
-                    ~ secondYellow ++
+                    -> color_variation_management(SecondCharacter, yellowC)->
                 
             + [Andiamo a ruttare da {charNameFive} e la facciamo arrabbiare?]
                 Ci sto!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
@@ -1497,7 +1498,7 @@
                 Che poi ora ho capito che {charNameFive} non ce l'ha mica con me.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 Forse mi inizia anche a piacere.
                 Ma sì, un rutto se lo merita.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
 
                 
             + [Vorresti che venissero anche mamma e papà?]
@@ -1509,7 +1510,7 @@
                 Nemmeno quando ho versato tutto il caffè sul divano.
                 O quando le ho rubato la grappa.
                 Che brutto essere ubriaco!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
-                    ~ secondGreen ++
+                    -> color_variation_management(SecondCharacter, greenC)->
   
                 
             + [Ti piace insegnare le cose all'altra nonna.]
@@ -1521,7 +1522,7 @@
                 Anche per questo a volte dico bugie.
                 Perché le parole sono sbagliate, ma il contenuto è quello che so o sento.
                 Non so se mi sono spiegato.
-                    ~ secondPurple ++
+                    -> color_variation_management(SecondCharacter, purpleC)->
  
             -
             Da grande comunque avrò una biblioteca con tutti i libri, tutti.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
@@ -1689,7 +1690,7 @@
             Tua nonna ti ha insegnato a barare!
             Tuo fratello crea cose e ti protegge.
             Anche loro sono adulti.
-                   ~ secondRed ++
+                   -> color_variation_management(SecondCharacter, redC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)
         
@@ -1698,7 +1699,7 @@
             Diventiamo grandi, abbiamo un sacco di doveri, e non sappiamo cosa fare.
             Per questo i grandi fanno cose brutte.
             Ma questo non li rende schifosi.
-                   ~ secondGreen ++
+                   -> color_variation_management(SecondCharacter, greenC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)  
         
@@ -1708,7 +1709,7 @@
             Tu puoi essere un grande che gioca.
             E che gioca con gli animali per vivere.
             Ed essere felice.
-                   ~ secondYellow ++
+                   -> color_variation_management(SecondCharacter, yellowC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)          
      
@@ -1718,7 +1719,7 @@
             Gli studi sugli animali.
             Le caramelle.
             Le action figures.
-                   ~ secondBlue ++
+                   -> color_variation_management(SecondCharacter, blueC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)    
         
@@ -1726,7 +1727,7 @@
             Un adulto che sa correggere le giornate.
             Anche per le altre persone.
             Che può tornare a fidarsi delle altre persone.
-                   ~ secondPurple ++
+                   -> color_variation_management(SecondCharacter, purpleC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
             
@@ -1755,7 +1756,7 @@
             E la cosa certa è che gli animali ci sono ancora.
             Che tuo fratello ti vuole bene.
             E le caramelle sono buone.
-                   ~ secondYellow ++
+                   -> color_variation_management(SecondCharacter, yellowC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)            
   
@@ -1764,7 +1765,7 @@
             Si ha paura solo se non si conosce una cosa.
             Impara a conoscere quello di cui hai paura.
             E a quel punto saprai anche come cambiare le cose.
-                   ~ secondBlue ++
+                   -> color_variation_management(SecondCharacter, blueC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)    
     
@@ -1774,7 +1775,7 @@
             A scuola fai quello che vuoi.
             Fallo anche fuori.
             Per salvare il mondo.
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)            
             
@@ -1782,7 +1783,7 @@
             Un po' come la bugia del compleanno.
             Ma per far sì che ogni bosco abbia migliaia di compleanni.
             Usa il tuo dono per convincere le persone a cambiare.
-                   ~ secondGreen ++
+                   -> color_variation_management(SecondCharacter, greenC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)  
                 
@@ -1791,7 +1792,7 @@
             Se hai paura, non agisci.
             Se agisci non cambi nulla.
             Davvero vuoi restare per sempre bloccato dalla paura?
-                   ~ secondPurple ++
+                   -> color_variation_management(SecondCharacter, purpleC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
 
@@ -1820,7 +1821,7 @@
             L'arte è credere che le cose possano migliorare.
             Definisce un presente, per lanciarci altrove.
             E rende il mondo un posto meno orribile.
-                   ~ secondPurple ++
+                   -> color_variation_management(SecondCharacter, purpleC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
             
@@ -1830,7 +1831,7 @@
             E fa in modo che possiate passare tanto tempo assieme.
             Che tu possa avere uno spazio felice.
             E così rende il mondo un po' meno orribile.
-                   ~ secondGreen ++
+                   -> color_variation_management(SecondCharacter, greenC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)  
                 
@@ -1838,7 +1839,7 @@
             Si è creato una nuova casa.
             Non si è fatto mettere i piedi in testa da nessuno.
             E questo lo fai se pensi ci sia un futuro dove andare.
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)
             
@@ -1846,7 +1847,7 @@
         + [Eppure gioca con te.]
             Si diverte, lascia che le cose belle accadano.
             In un mondo orribile, esisterebbe davvero il piacere?
-                   ~ secondYellow ++
+                   -> color_variation_management(SecondCharacter, yellowC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)            
 
@@ -1855,7 +1856,7 @@
             Vede le cose rotte e le ripara.
             Quindi ci sono cose che si possono aggiustare.
             Serve solo un meccanico per le cose che lo spaventano.
-                   ~ secondBlue ++
+                   -> color_variation_management(SecondCharacter, blueC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)         
         -
@@ -1884,7 +1885,7 @@
             Non ti piace da quando sei arrivato qui.
             Ti ha fatto arrabbiare dal primo momento.
             Vuoi davvero che sia lei a decidere come ti chiami?
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)
         
@@ -1893,7 +1894,7 @@
             Puoi studiare e diventare un superanimale.
             O divertirti a cambiare quando vuoi.
             E tornare riccio, quando le cose si fanno velenose.
-                   ~ secondBlue ++
+                   -> color_variation_management(SecondCharacter, blueC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)    
         
@@ -1902,7 +1903,7 @@
             Quando le cose sono superate?
             Restiamo ancora nel nostro posto sicuro?
             O decidiamo di guardare le cose da una prospettiva diversa, e cambiarle?
-                   ~ secondPurple ++
+                   -> color_variation_management(SecondCharacter, purpleC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
              
@@ -1912,7 +1913,7 @@
             Con me, con la rana.
             E con le cose che hai raccontato.
             Ti servono ancora quelle spine?
-                   ~ secondGreen ++
+                   -> color_variation_management(SecondCharacter, greenC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)          
         
@@ -1921,7 +1922,7 @@
             Diventa qualcosa che vede fino alla luna, e insegui le stelle.
             Oppure impara a nuotare fino all'altra parte del mondo.
             Continua a cambiare.
-                    ~ secondYellow ++
+                    -> color_variation_management(SecondCharacter, yellowC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)    
             
@@ -1949,7 +1950,7 @@
             Sei un testardo, bugiardo, dispettoso.
             Queste cose unite possono renderti indistruttibile.
             E di cosa avrà mai paura un ragazzo indistruttibile?
-                    ~ secondRed ++
+                    -> color_variation_management(SecondCharacter, redC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)        
         
@@ -1959,7 +1960,7 @@
             A quel punto saranno pronte a fare il passo.
             A cambiare le cose a loro volta.
             Assieme.
-                   ~ secondPurple ++
+                   -> color_variation_management(SecondCharacter, purpleC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
                     
@@ -1967,14 +1968,14 @@
             E tu sei il ritratto della curiosità.
             Guarda le cose che arriveranno chiedendoti "Chissà se..." o "E se invece..." o "Perché accade questo?".
             E a quel punto ogni paura diventerà solo un problema da risolvere.
-                   ~ secondYellow ++
+                   -> color_variation_management(SecondCharacter, yellowC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)            
                 
         + {secondGreen > 0} [I tuoi genitori sono spaventati, aiutatevi a vicenda.]
             Nessuna persona può cambiare il mondo da sola.
             Ma possiamo partire dal cambiare le cose che ci circondano, un pezzo alla volta.
-                   ~ secondGreen ++
+                   -> color_variation_management(SecondCharacter, greenC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)          
                 
@@ -1982,7 +1983,7 @@
             Puoi aiutare gli adulti a essere meno tristi.
             E gli animali a non morire.
             E tua nonna a uscire dalla casa dei vecchi.
-                   ~ secondBlue ++
+                   -> color_variation_management(SecondCharacter, blueC)->
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)            
         - 

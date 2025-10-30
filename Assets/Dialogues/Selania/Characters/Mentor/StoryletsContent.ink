@@ -23,14 +23,14 @@
                  Un posto dove prenderti cura di te.
                  Non male, no?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                  Soprattutto quando fuori da qui è difficile trovare un senso.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sorry
-                 ~ fifthBlue ++
+                 -> color_variation_management(Mentor, blueC)->
                     -> your_name
             
             * (chiSei) [Chi sei? (opzione verde)]
                 La persona che tiene in piedi questo luogo!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                 Ma tu puoi chiamarmi <b><i>{translator(fifthCharacterState)}</b></i>.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral 
                 Così puoi ricordarti con facilità qual è il mio scopo.
-                ~ fifthGreen ++
+                -> color_variation_management(Mentor, greenC)->
                     -> your_name
 
             * [Come me ne vado da qui? (opzione gialla)]
@@ -42,17 +42,17 @@
                  Mi hai fatto una domanda, e vedrò di rispondere.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                  A est della stazione troverai un sentiero che ti riporterà a casa.
                  E se deciderai di tornare, troverai tutto nello stato in cui l'hai lasciato.
-                 ~ fifthYellow ++
+                 -> color_variation_management(Mentor, yellowC)->
                     -> your_name
                     
             * [Non ho più voglia di parlare. (opzione rossa)]
                  Lascia che ti rubi giusto un secondo!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
-                 ~ fifthRed ++
+                 -> color_variation_management(Mentor, redC)->
                     -> your_name
                 
             * [Ma perché sono qui? (opzione viola)]
                  Cose viola#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
-                 ~ fifthPurple ++
+                 -> color_variation_management(Mentor, purpleC)->
                     -> your_name
             -
             Ora tocca a me farti una domanda.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry        
@@ -145,30 +145,30 @@
                 Io?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 No!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
                 Questo è stato, è e sarà sempre il mio nome.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-                    ~ fifthPurple ++
+                    -> color_variation_management(Mentor, purpleC)->
                     
             + [Con l'inchiostro ci posso disegnare?]
                 Apprezzo la tua creatività, {name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 Ma tu sei {pronouns has him:un riscrittore|{pronouns has her:una riscrittora|unə riscrittorə}}, non {pronouns has him:un disegnatore|{pronouns has her:una disegnatrice|unə disegnatricə}}.
-                    ~ fifthYellow ++
+                    -> color_variation_management(Mentor, yellowC)->
                     
             + [Solo le persone care ci fanno vedere in modo diverso.]
                 A volte è più facile aprirsi a chi non si conosce.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 E mentre noi riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
-                        ~ fifthGreen ++
+                        -> color_variation_management(Mentor, greenC)->
                         
             + [Tipo gaslighting?]
                 No no no assolutamente no.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
                 Cavolo, devo essere più chiara.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sorry
                 Ma se una persona si sente presa in giro, non si fiderà mai di te.
-                        ~ fifthRed ++
+                        -> color_variation_management(Mentor, redC)->
             
             + [Un nome è un nome. Che se ne fanno di uno nuovo?]
                 Un nome è come una magia.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 Lo carichiamo di volta in volta di significato.
                 E quando lo usiamo, ci dice chi siamo.
                 A volte quella magia non va più bene, e dobbiamo cercare una nuova formula. Un nuovo nome.
-                    ~ fifthBlue ++
+                    -> color_variation_management(Mentor, blueC)->
             -
             
             Non voglio stordirti di informazioni, per cui ti lascio un po' di suspence, e ti spiegherò più avanti a cosa serve l'inchiostro.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
@@ -225,29 +225,29 @@
                     Ascolta a cuore aperto.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                     Segui i miei consigli.
                     E non chiedere all'altra persona di diventare qualcosa che non è.
-                        ~ fifthGreen ++
+                        -> color_variation_management(Mentor, greenC)->
                         
                 + [Ma non posso dirle: chiamati così e cosà, addio!?]
                     Un nuovo nome è una nuova esperienza.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                     E l'esperienza viene dal percorso.
                     Se non c'è percorso, non c'è cambiamento.
-                        ~ fifthRed ++
+                        -> color_variation_management(Mentor, redC)->
                 
                 + [{charNameOne}: non è una persona razionale. Può farcela?]
                     {name}, capisco la tua perplessità, ma con la giusta guida, ce la può fare.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                     E assieme noi non possiamo di certo sbagliare!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
-                        ~ fifthBlue ++
+                        -> color_variation_management(Mentor, blueC)->
                         
                 + [Gli scoiattoli non hanno bisogno di riscriverla, invece?]
                     {name}, apprezzo la tua creatività, ma mantieni l'attenzione sull'obiettivo.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                     E gli scoiattoli non si fanno queste domande.
                     Gli scoiattoli <i>sono</i>, e basta.
-                        ~ fifthYellow ++
+                        -> color_variation_management(Mentor, yellowC)->
                         
                 + [Non dovrei essere io a decidere il mio obiettivo?]
                     Il tuo obiettivo <i>qui</i>, perdonami.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                     Non avendo altri luoghi in cui andare, mi dimentico che possono esserci sono altre vite, altri obiettivi da raggiungere.
-                        ~ fifthPurple ++
+                        -> color_variation_management(Mentor, purpleC)->
                 -
             Ricorda {name}: sei una guida, ma sta alla persona decidere alla fine chi è, e di cosa ha bisogno.
             Quando te la senti, affronta questo ultimo passaggio e poi torna da me.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
@@ -629,7 +629,7 @@
     Non me la sento.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sorry
         
         + [Che provi piacere?]
-            ~ fifthBlue ++
+            -> color_variation_management(Mentor, blueC)->
             Mi sento potente.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             Forte.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
             Ascoltabile.
@@ -640,7 +640,7 @@
                     Vedere il problema è il passo più grande, {charNameFive}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                 }
         + [Che non riesci comunque a trattenerti?]
-            ~ fifthRed ++
+            -> color_variation_management(Mentor, redC)->
             Peggio.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sorry
             Faccio volontariamente il salto dal "non alzare le mani" a "dai uno schiaffo".
             Sento il bisogno di.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
@@ -653,7 +653,7 @@
                 }
             
         + [Arrabbiarsi è umano, il problema è la violenza.]
-            ~ fifthGreen ++
+            -> color_variation_management(Mentor, greenC)->
             Arrabbiarsi è da deboli.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
             Lo fai quando non comprendi le tue emozioni.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             E quando non provi empatia per le altre persone.
@@ -667,13 +667,13 @@
                 }
             
         + [Hai fatto qualcosa di crudele, non serve dire altro.]
-            ~ fifthYellow ++
+            -> color_variation_management(Mentor, yellowC)->
             Essere {pronouns has him:riscrittore|{pronouns has her:riscrittora|riscrittorə}} chiede empatia, {name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             Ma sì.
             Sono stata crudele, punto.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sorry
             
         + [<i>Resto in silenzio.</i>]
-            ~ fifthPurple ++
+            -> color_variation_management(Mentor, purpleC)->
             La cosa peggiore è che non mi piace arrabbiarmi, ma mi fa sentire potente.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             Visibile.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
             Per pochi secondi mi sembra di potermi far rispettare.
