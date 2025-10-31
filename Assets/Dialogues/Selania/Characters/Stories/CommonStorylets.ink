@@ -1,5 +1,3 @@
-TODO: capire come gestire variazioni miste come qui sotto
-
 === first_second_chit_chat
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
@@ -31,31 +29,29 @@ TODO: capire come gestire variazioni miste come qui sotto
     E tu che faresti, {name}?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
     
             + [L'idea di dormirmela per qualche giorno non mi dispiace!]
-                    ~ firstYellow ++
-                    ~ secondBlue --
-                    ~ playerYellow ++
+                 -> color_variation_management(FirstCharacter, yellowC)->
+                 -> color_variation_management(SecondCharacter, redC)->
+     
                  Voi persone vecchie siete noiose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                 Nemmeno la nonna pensa così tanto a dormire!
                 Perché tua nonna è in pensione, e non deve pensare costantemente a PRODURRE!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
 
             + [Sicuramente sono team: capiamo tutto!]
-                    ~ firstYellow ++
-                    ~ secondBlue --
-                    ~ playerBlue ++
+                -> color_variation_management(FirstCharacter, purpleC)->
+                -> color_variation_management(SecondCharacter, yellowC)->
+                 
                  Sìì! E il nostro team batte il team SIAMO NOIOSI E DORMIAMO DI {charNameOne}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                 Sarò noiosa, ma tu arriverai ai quindici anni più ansioso di un coniglio, nanetto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_annoyed
 
             + [Credo rimarrei a piangere terrorizzata in un angolino.]
-                    ~ firstPurple ++
-                    ~ secondRed --
-                    ~ playerGreen ++
+                    -> color_variation_management(FirstCharacter, greenC)->
+                    -> color_variation_management(SecondCharacter, redC)->
                  Come i bambini piccoli. No no no.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_melanchonic
                 Mi ci riconosco, totale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_affectionate
 
             + [Spero per loro che non mi leggano nella mente.]
-                    ~ firstPurple --
-                    ~ secondYellow ++
-                    ~ playerRed ++
+                -> color_variation_management(FirstCharacter, yellowC)->
+                -> color_variation_management(SecondCharacter, yellowC)->
                 Sarebbe divertentissimo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                 Ora provo a pensare tantissimo alla cacca!
                     {
@@ -65,9 +61,8 @@ TODO: capire come gestire variazioni miste come qui sotto
                 Non posso certo dire come quella di un bambino, ascoltando le cose che dice il nanerottolo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
                 
             + [Magari chiedo loro quale sia il senso della vita.]
-                    ~ firstPurple ++
-                    ~ playerPurple ++
-                    ~ secondYellow --
+                -> color_variation_management(FirstCharacter, purpleC)->
+                -> color_variation_management(SecondCharacter, redC)->
                  Fai sembrare {charNameFive} interessante così.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
                         {
                             - are_two_entities_together(Mentor, PG):Il tuo obiettivo segreto è farmi arrabbiare, vero?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
