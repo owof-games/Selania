@@ -1,10 +1,12 @@
 === nest_recap
+TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Gialla) chiamerò direttamente il traduttore (emotional_words_translator(Gialla)).
+
 + {are_two_entities_together(NestRecap, PG)} [NestRecap]
     ~ enableBigDialogue()
 
 //Varianti monocolore
     {
-        - redWords ^ usedEmotionaWords == ():
+        - redWords ^ discoveredEmotionalWords == ():
             <i>Questa parola non è stata ancora scoperta</>
             
         - else:
@@ -21,16 +23,16 @@
             }
             
             {
-                - redWords ^ usedEmotionaWords has Rosso: <> caratteristiche variante uno.
-                - redWords ^ usedEmotionaWords hasnt Rosso: <> variante non scoperta.
+                - redWords ^ discoveredEmotionalWords has Rosso: <> caratteristiche variante uno.
+                - redWords ^ discoveredEmotionalWords hasnt Rosso: <> variante non scoperta.
             }
             {
-                - redWords ^ usedEmotionaWords has RossoRosso: <> caratteristiche variante due.
-                - redWords ^ usedEmotionaWords hasnt RossoRosso: <> variante non scoperta.
+                - redWords ^ discoveredEmotionalWords has RossoRosso: <> caratteristiche variante due.
+                - redWords ^ discoveredEmotionalWords hasnt RossoRosso: <> variante non scoperta.
             }
             {
-                - redWords ^ usedEmotionaWords has RossoRossoRosso: <> caratteristiche variante tre.
-                - redWords ^ usedEmotionaWords hasnt RossoRossoRosso: <> variante non scoperta..
+                - redWords ^ discoveredEmotionalWords has RossoRossoRosso: <> caratteristiche variante tre.
+                - redWords ^ discoveredEmotionalWords hasnt RossoRossoRosso: <> variante non scoperta.
             
             }
     
@@ -38,7 +40,7 @@
     }
     
     {
-        - yellowWords ^ usedEmotionaWords == ():
+        - yellowWords ^ discoveredEmotionalWords == ():
             <i>Questa parola non è stata ancora scoperta</>
             
         - else:
@@ -55,16 +57,16 @@
             }
             
             {
-                - yellowWords ^ usedEmotionaWords has Giallo: <> caratteristiche variante uno.
-                - yellowWords ^ usedEmotionaWords hasnt Giallo: <> variante non scoperta.
+                - yellowWords ^ discoveredEmotionalWords has Giallo: <> caratteristiche variante uno.
+                - yellowWords ^ discoveredEmotionalWords hasnt Giallo: <> variante non scoperta.
             }
             {
-                - yellowWords ^ usedEmotionaWords has GialloGiallo: <> caratteristiche variante due.
-                - yellowWords ^ usedEmotionaWords hasnt GialloGiallo: <> variante non scoperta.
+                - yellowWords ^ discoveredEmotionalWords has GialloGiallo: <> caratteristiche variante due.
+                - yellowWords ^ discoveredEmotionalWords hasnt GialloGiallo: <> variante non scoperta.
             }
             {
-                - yellowWords ^ usedEmotionaWords has GialloGialloGiallo: <> caratteristiche variante tre.
-                - yellowWords ^ usedEmotionaWords hasnt GialloGialloGiallo: <> variante non scoperta..
+                - yellowWords ^ discoveredEmotionalWords has GialloGialloGiallo: <> caratteristiche variante tre.
+                - yellowWords ^ discoveredEmotionalWords hasnt GialloGialloGiallo: <> variante non scoperta.
             
             }
     
@@ -72,7 +74,7 @@
     }
     
     {
-        - bluWords ^ usedEmotionaWords == ():
+        - bluWords ^ discoveredEmotionalWords == ():
             <i>Questa parola non è stata ancora scoperta</>
             
         - else:
@@ -89,16 +91,16 @@
             }
             
             {
-                - bluWords ^ usedEmotionaWords has Blu: <> caratteristiche variante uno.
-                - bluWords ^ usedEmotionaWords hasnt Blu: <> variante non scoperta.
+                - bluWords ^ discoveredEmotionalWords has Blu: <> caratteristiche variante uno.
+                - bluWords ^ discoveredEmotionalWords hasnt Blu: <> variante non scoperta.
             }
             {
-                - bluWords ^ usedEmotionaWords has BluBlu: <> caratteristiche variante due.
-                - bluWords ^ usedEmotionaWords hasnt BluBlu: <> variante non scoperta.
+                - bluWords ^ discoveredEmotionalWords has BluBlu: <> caratteristiche variante due.
+                - bluWords ^ discoveredEmotionalWords hasnt BluBlu: <> variante non scoperta.
             }
             {
-                - bluWords ^ usedEmotionaWords has BluBluBlu: <> caratteristiche variante tre.
-                - bluWords ^ usedEmotionaWords hasnt BluBluBlu: <> variante non scoperta..
+                - bluWords ^ discoveredEmotionalWords has BluBluBlu: <> caratteristiche variante tre.
+                - bluWords ^ discoveredEmotionalWords hasnt BluBluBlu: <> variante non scoperta.
             
             }
     
@@ -106,7 +108,7 @@
     }
     
     {
-        - greenWords ^ usedEmotionaWords == ():
+        - greenWords ^ discoveredEmotionalWords == ():
             <i>Questa parola non è stata ancora scoperta</>
             
         - else:
@@ -123,16 +125,16 @@
             }
             
             {
-                - greenWords ^ usedEmotionaWords has Verde: <> caratteristiche variante uno.
-                - greenWords ^ usedEmotionaWords hasnt Verde: <> variante non scoperta.
+                - greenWords ^ discoveredEmotionalWords has Verde: <> caratteristiche variante uno.
+                - greenWords ^ discoveredEmotionalWords hasnt Verde: <> variante non scoperta.
             }
             {
-                - greenWords ^ usedEmotionaWords has VerdeVerde: <> caratteristiche variante due.
-                - greenWords ^ usedEmotionaWords hasnt VerdeVerde: <> variante non scoperta.
+                - greenWords ^ discoveredEmotionalWords has VerdeVerde: <> caratteristiche variante due.
+                - greenWords ^ discoveredEmotionalWords hasnt VerdeVerde: <> variante non scoperta.
             }
             {
-                - greenWords ^ usedEmotionaWords has VerdeVerdeVerde: <> caratteristiche variante tre.
-                - greenWords ^ usedEmotionaWords hasnt VerdeVerdeVerde: <> variante non scoperta..
+                - greenWords ^ discoveredEmotionalWords has VerdeVerdeVerde: <> caratteristiche variante tre.
+                - greenWords ^ discoveredEmotionalWords hasnt VerdeVerdeVerde: <> variante non scoperta.
             
             }
     
@@ -140,7 +142,7 @@
     }
 
     {
-        - purpleWords ^ usedEmotionaWords == ():
+        - purpleWords ^ discoveredEmotionalWords == ():
             <i>Questa parola non è stata ancora scoperta</>
             
         - else:
@@ -157,16 +159,16 @@
             }
             
             {
-                - purpleWords ^ usedEmotionaWords has Viola: <> caratteristiche variante uno.
-                - purpleWords ^ usedEmotionaWords hasnt Viola: <> variante non scoperta.
+                - purpleWords ^ discoveredEmotionalWords has Viola: <> caratteristiche variante uno.
+                - purpleWords ^ discoveredEmotionalWords hasnt Viola: <> variante non scoperta.
             }
             {
-                - purpleWords ^ usedEmotionaWords has ViolaViola: <> caratteristiche variante due.
-                - purpleWords ^ usedEmotionaWords hasnt ViolaViola: <> variante non scoperta.
+                - purpleWords ^ discoveredEmotionalWords has ViolaViola: <> caratteristiche variante due.
+                - purpleWords ^ discoveredEmotionalWords hasnt ViolaViola: <> variante non scoperta.
             }
             {
-                - purpleWords ^ usedEmotionaWords has ViolaViolaViola: <> caratteristiche variante tre.
-                - purpleWords ^ usedEmotionaWords hasnt ViolaViolaViola: <> variante non scoperta..
+                - purpleWords ^ discoveredEmotionalWords has ViolaViolaViola: <> caratteristiche variante tre.
+                - purpleWords ^ discoveredEmotionalWords hasnt ViolaViolaViola: <> variante non scoperta.
             
             }
     
@@ -175,7 +177,7 @@
 
 //Varianti a dominante Rosso
     {
-        - redYellowWords ^ usedEmotionaWords == ():
+        - redYellowWords ^ discoveredEmotionalWords == ():
             <i>Questa parola non è stata ancora scoperta</>
             
         - else:
@@ -192,32 +194,32 @@
             }
             
             {
-                - redYellowWords ^ usedEmotionaWords has RossoGiallo: <> caratteristiche variante uno.
-                - redYellowWords ^ usedEmotionaWords hasnt RossoGiallo: <> variante non scoperta.
+                - redYellowWords ^ discoveredEmotionalWords has RossoGiallo: <> caratteristiche variante uno.
+                - redYellowWords ^ discoveredEmotionalWords hasnt RossoGiallo: <> variante non scoperta.
             }
             {    
-                - redYellowWords ^ usedEmotionaWords has RossoRossoGiallo:<> caratteristiche variante due.
-                - redYellowWords ^ usedEmotionaWords hasnt RossoRossoGiallo:<> variante non scoperta.
+                - redYellowWords ^ discoveredEmotionalWords has RossoRossoGiallo:<> caratteristiche variante due.
+                - redYellowWords ^ discoveredEmotionalWords hasnt RossoRossoGiallo:<> variante non scoperta.
             }
             {    
-                - redYellowWords ^ usedEmotionaWords has RossoGialloGiallo:<> caratteristiche variante tre.
-                - redYellowWords ^ usedEmotionaWords hasnt RossoGialloGiallo:<> variante non scoperta.
+                - redYellowWords ^ discoveredEmotionalWords has RossoGialloGiallo:<> caratteristiche variante tre.
+                - redYellowWords ^ discoveredEmotionalWords hasnt RossoGialloGiallo:<> variante non scoperta.
             }
             {    
-                - redYellowWords ^ usedEmotionaWords has RossoGialloBlu: <> caratteristiche variante quattro.
-                - redYellowWords ^ usedEmotionaWords hasnt RossoGialloBlu: <> variante non scoperta.
+                - redYellowWords ^ discoveredEmotionalWords has RossoGialloBlu: <> caratteristiche variante quattro.
+                - redYellowWords ^ discoveredEmotionalWords hasnt RossoGialloBlu: <> variante non scoperta.
             }
             {    
-                - redYellowWords ^ usedEmotionaWords has RossoGialloVerde:<> caratteristiche variante cinque.
-                - redYellowWords ^ usedEmotionaWords hasnt RossoGialloVerde:<> variante non scoperta.
+                - redYellowWords ^ discoveredEmotionalWords has RossoGialloVerde:<> caratteristiche variante cinque.
+                - redYellowWords ^ discoveredEmotionalWords hasnt RossoGialloVerde:<> variante non scoperta.
             }
             {    
-                - redYellowWords ^ usedEmotionaWords has RossoGialloViola:<> caratteristiche variante sei.
-                - redYellowWords ^ usedEmotionaWords hasnt RossoGialloViola:<> variante non scoperta.
+                - redYellowWords ^ discoveredEmotionalWords has RossoGialloViola:<> caratteristiche variante sei.
+                - redYellowWords ^ discoveredEmotionalWords hasnt RossoGialloViola:<> variante non scoperta.
             }
             {     
-                - redYellowWords ^ usedEmotionaWords has RossoGialloRosso:<> caratteristiche variante sette.
-                - redYellowWords ^ usedEmotionaWords hasnt RossoGialloRosso:<> variante non scoperta.
+                - redYellowWords ^ discoveredEmotionalWords has RossoGialloRosso:<> caratteristiche variante sette.
+                - redYellowWords ^ discoveredEmotionalWords hasnt RossoGialloRosso:<> variante non scoperta.
             
             }
     

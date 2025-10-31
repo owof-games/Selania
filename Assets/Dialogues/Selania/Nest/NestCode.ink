@@ -59,6 +59,12 @@
 === emotional_words_feedback
 {nestDebug: passo per emotional_words_feedback.}
 //Passo da qui dopo aver creato la parola, per vedere se l'ho già scoperta o meno. Nel secondo caso aggiorno il libro della riscrittora e passo a emotional_inventory_management
+//Per prima cosa, resetto i valori delle scelte durante la creazione della parola
+    ~ firstKeyColour = ()
+    ~ secondKeyColour = ()
+    ~ thirdKeyColour = ()
+    {nestDebug: dopo il reset, i valori delle tre note sono {firstKeyColour} {secondKeyColour} {thirdKeyColour}.}
+
     {
     
         - discoveredEmotionalWords has newlyDiscoveredEmotionalWord:
@@ -86,12 +92,12 @@
         
         + [Voglio cercare una nuova parola.]
             ~ newlyDiscoveredEmotionalWord = ()
-                {nestDebug: svuoto il valore di discoveredEmotionalWords che ora è {newlyDiscoveredEmotionalWord}.}
+                {nestDebug: svuoto il valore di newlyDiscoveredEmotionalWord che ora è {newlyDiscoveredEmotionalWord}.}
             -> emotional_words_creator
             
         + [Mi fermo.]
             ~ newlyDiscoveredEmotionalWord = ()
-                {nestDebug: svuoto il valore di discoveredEmotionalWords che ora è {newlyDiscoveredEmotionalWord}.}
+                {nestDebug: svuoto il valore di newlyDiscoveredEmotionalWord che ora è {newlyDiscoveredEmotionalWord}.}
             -> main
 
 

@@ -105,6 +105,7 @@
 //Streets to Library
     + {debug_test_library} [LibraryTest]
             ~ move_entity(PG, Library)
+            -> on_movement_events ->
                 -> library
                 
     + {are_two_entities_together(PG, FromForestToLibraryBlocked)} [FromForestToLibraryBlocked]
@@ -125,6 +126,7 @@
 //Streets to Kitchen
     + {debug_test_kitchen} [KitchenTest]
             ~ move_entity(PG, Library)
+            -> on_movement_events ->
                 -> kitchen
 
 
@@ -143,6 +145,7 @@
 //Streets to Nest
     + {debug_test_nest} [NestTest]
             ~ move_entity(PG, Nest)
+            -> on_movement_events ->
                 -> nest
 
     + {are_two_entities_together(PG, FromLibraryToNest)} [FromLibraryToNest]
