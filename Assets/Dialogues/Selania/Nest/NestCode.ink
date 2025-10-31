@@ -98,8 +98,4 @@
 
 
 
-=== emotional_words_translator
-//Da fare quando son sicura del tutto
-{nestDebug: emotional_words_translator.}
 
-->->
