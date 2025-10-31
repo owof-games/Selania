@@ -80,6 +80,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
             - RossoRosso:
                 ~ temporaryRed ++
                 ~ temporaryRed ++
+                
             - RossoRossoRosso:
                 ~ temporaryRed ++
                 ~ temporaryRed ++
@@ -1250,15 +1251,75 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
     
     }
 
-
+    //Le reazioni le creiamo e gestiamo per gruppi di parole, non per singola parola.
 
         
         = firstCharEmotionalActions
             {nestDebug: entro in firstCharEmotionalActions.}
             
             {
-                - activeEmotionalWord == Rosso:
-                    Reazione Chitarra
+ 
+                //Varianti monocolore
+                    - redWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - yellowWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - bluWords  has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - greenWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - purpleWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                
+                //Varianti a dominante Rosso
+                    - redYellowWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - redBlueWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - redGreenWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - redPurpleWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                
+                //Varianti a dominante Giallo
+                    - yellowRedWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - yellowBlueWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - yellowGreenWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - yellowPurpleWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                
+                //Varianti a dominate blu
+                    - blueRedWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - blueYellowWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - blueGreenWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - bluePurpleWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                
+                //Varianti a dominante verde
+                    - greenRedWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - greenYellowWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - greenBlueWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - greenPurpleWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                
+                //Varianti a dominante viola
+                    - purpleRedWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - purpleYellowWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - purpleBlueWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                    - purpleGreenWords has activeEmotionalWord:
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
             }
         
         
@@ -1268,8 +1329,68 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
         = secondCharEmotionalActions
             {nestDebug: entro in secondCharEmotionalActions.}
             {
-                - activeEmotionalWord == Rosso:
-                    Reazione Riccio
+ 
+                //Varianti monocolore
+                    - redWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - yellowWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - bluWords  has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - greenWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - purpleWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                
+                //Varianti a dominante Rosso
+                    - redYellowWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - redBlueWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - redGreenWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - redPurpleWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                
+                //Varianti a dominante Giallo
+                    - yellowRedWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - yellowBlueWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - yellowGreenWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - yellowPurpleWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                
+                //Varianti a dominate blu
+                    - blueRedWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - blueYellowWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - blueGreenWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - bluePurpleWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                
+                //Varianti a dominante verde
+                    - greenRedWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - greenYellowWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - greenBlueWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - greenPurpleWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                
+                //Varianti a dominante viola
+                    - purpleRedWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - purpleYellowWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - purpleBlueWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                    - purpleGreenWords has activeEmotionalWord:
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.
             }
         
         
@@ -1279,10 +1400,70 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
         = fifthCharEmotionalActions
             {nestDebug: entro in fifthCharEmotionalActions.}
             {
-                - activeEmotionalWord == Rosso:
-                    Reazione Mentore
+ 
+                //Varianti monocolore
+                    - redWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - yellowWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - bluWords  has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - greenWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - purpleWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                
+                //Varianti a dominante Rosso
+                    - redYellowWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - redBlueWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - redGreenWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - redPurpleWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                
+                //Varianti a dominante Giallo
+                    - yellowRedWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - yellowBlueWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - yellowGreenWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - yellowPurpleWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                
+                //Varianti a dominate blu
+                    - blueRedWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - blueYellowWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - blueGreenWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - bluePurpleWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                
+                //Varianti a dominante verde
+                    - greenRedWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - greenYellowWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - greenBlueWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - greenPurpleWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                
+                //Varianti a dominante viola
+                    - purpleRedWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - purpleYellowWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - purpleBlueWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                    - purpleGreenWords has activeEmotionalWord:
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.
             }
-            
+        
             
             -> word_state_manager
         
