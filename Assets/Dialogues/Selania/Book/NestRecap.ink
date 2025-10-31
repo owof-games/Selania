@@ -1,6 +1,6 @@
 === nest_recap
 + {are_two_entities_together(NestRecap, PG)} [NestRecap]
-~ enableBigDialogue()
+    ~ enableBigDialogue()
 
 //Varianti monocolore
     {
@@ -133,13 +133,13 @@
             }
             
             {
-                - redYellowWords ^ discoveredEmotionalWords has Viola: caratteristiche variante uno.<>
-                - redYellowWords ^ discoveredEmotionalWords has ViolaViola:caratteristiche variante due.<>
-                - redYellowWords ^ discoveredEmotionalWords has ViolaViolaViola:caratteristiche variante tre.<>
-                - redYellowWords ^ discoveredEmotionalWords has Viola: caratteristiche variante quattro.<>
-                - redYellowWords ^ discoveredEmotionalWords has ViolaViola:caratteristiche variante cinque.<>
-                - redYellowWords ^ discoveredEmotionalWords has ViolaViolaViola:caratteristiche variante sei.<>
-                - redYellowWords ^ discoveredEmotionalWords has ViolaViolaViola:caratteristiche variante sette.
+                - redYellowWords ^ discoveredEmotionalWords has RossoGiallo: caratteristiche variante uno.<>
+                - redYellowWords ^ discoveredEmotionalWords has RossoRossoGiallo:caratteristiche variante due.<>
+                - redYellowWords ^ discoveredEmotionalWords has RossoGialloGiallo:caratteristiche variante tre.<>
+                - redYellowWords ^ discoveredEmotionalWords has RossoGialloBlu: caratteristiche variante quattro.<>
+                - redYellowWords ^ discoveredEmotionalWords has RossoGialloVerde:caratteristiche variante cinque.<>
+                - redYellowWords ^ discoveredEmotionalWords has RossoGialloViola:caratteristiche variante sei.<>
+                - redYellowWords ^ discoveredEmotionalWords has RossoGialloRosso:caratteristiche variante sette.
             
             }
     

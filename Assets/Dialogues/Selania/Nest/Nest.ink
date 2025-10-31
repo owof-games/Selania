@@ -5,6 +5,11 @@
 
     {debug: <i>La lista degli oggetti nella stanza è: {nestContents}.}
     {debug: <i>La lista degli oggetti nel deposito è: {safekeepingContents}.}
+    
+        {
+            - bookContents hasnt NestRecap:
+            ~ move_entity(NestRecap, BookPlace)
+        }
 
     {nest == 1:Frase sul nido.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
