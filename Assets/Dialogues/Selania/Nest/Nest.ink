@@ -32,7 +32,11 @@
 //Qui è dove aggiungiamo, togliamo, limitiamo l'uso delle parole emozionali. Avremo:
     Cosa desidera fare {name}?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
     
-
+    
+    //Se ho almeno una parola
+    + {ownedEmotionalWords != ()} [Cosa ho nell'inventario?]
+            Hai con te {ownedEmotionalWords}.
+            -> emotional_inventory_management
 
     //Se ho appena scoperto una nuova parola e voglio aggiungerla:
     + {newlyDiscoveredEmotionalWord != ()} [Aggiungo {newlyDiscoveredEmotionalWord} all'inventario.]

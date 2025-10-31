@@ -23,6 +23,7 @@
     
 === function oggettoOggetti(list)
 	{LIST_COUNT(list) == 1:oggetto|oggetti}
+	
     	
             /* ---------------------------------	
 	

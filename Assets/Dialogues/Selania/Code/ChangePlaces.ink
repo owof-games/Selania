@@ -2,9 +2,15 @@
 
  === move_between_rooms(my_location)
  //Book management (the book will be treated as a place)
-    + {are_two_entities_together(PG, RewriterBook) && !debugStochastic}[RewriterBook]
+ 
+    // Ho separato la versione blocca amico stocastico da una che non lo blocca perché così se devo testare elementi del libro non ci sono problemi
+    //+ {are_two_entities_together(PG, RewriterBook) && !debugStochastic}[RewriterBook]
+    //        ~ move_entity(PG, BookPlace)
+    //    -> main_book
+    
+    + {are_two_entities_together(PG, RewriterBook)}[RewriterBook]
             ~ move_entity(PG, BookPlace)
-        -> main_book
+        -> main_book    
         
     + {are_two_entities_together(PG, miniBook) && !debugStochastic} [miniBook]
             ~ move_entity(PG, BookPlace)
