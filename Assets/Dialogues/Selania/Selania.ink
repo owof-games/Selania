@@ -37,7 +37,6 @@
                      ----------------------------------*/
 
 //Personagge
-
     INCLUDE Characters\Mentor\HelpfulMentor.ink
     INCLUDE Characters\Mentor\StoryletsManagement.ink
     INCLUDE Characters\Mentor\StoryletsContent.ink
@@ -58,13 +57,23 @@
 //Gestione del libro
     INCLUDE Book\MainBook.ink
     INCLUDE Book\BookFunctions.ink
-    INCLUDE Book\CharactersRecap.ink
-    INCLUDE Book\PlacesElements.ink
-
+    INCLUDE Book\RulesRecap.ink
+    //Characters recap
+    INCLUDE Book\FirstCharRecap.ink
+    INCLUDE Book\SecondCharRecap.ink
+    INCLUDE Book\ThirdCharRecap.ink
+    INCLUDE Book\FourthCharRecap.ink
+    INCLUDE Book\FifthCharRecap.ink
+    INCLUDE Book\OtherCharsRecap.ink
+    //Minigames informations
+    INCLUDE Book\GreenhouseRecap.ink
+    INCLUDE Book\KitchenRecap.ink
+    INCLUDE Book\NestRecap.ink
+    
 //Bedroom
     INCLUDE Bedroom\Bedroom.ink
 
-//Bus Stop
+//Train Stop
     INCLUDE TrainStop\TrainStop.ink
 
 //Forest
@@ -103,6 +112,17 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
+
+
+
+
+
+
+
+
+
+
+
 
 
 
