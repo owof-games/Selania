@@ -95,7 +95,19 @@
             -> main
 
 
+=== used_emotional_words_updater
+{nestDebug: passo per used_emotional_words_updater.}
+{nestDebug: il valore della parola attiva è {activeEmotionalWord}.}
+{nestDebug: prima di intervenire, usedEmotionaWords contiene {usedEmotionaWords}.}
+    {
+        //Dato che posso passare da questo nodo anche per cancellare una parola ne ho una attiva, faccio questo check per evitare che venga aggiunta due volte (non dovrebbe, but)
+        - activeEmotionalWord !=() && (usedEmotionaWords hasnt activeEmotionalWord):
+            ~ usedEmotionaWords += activeEmotionalWord
+    
+    }
 
+{nestDebug: dopo l'aggiornamento, usedEmotionaWords contiene {usedEmotionaWords}.}
+->->
 
 
 

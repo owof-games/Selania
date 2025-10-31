@@ -90,8 +90,8 @@
 //Una lista delle parole trovate. Se una parola è qui dentro, una volta "suonata" non passerò da emotional_inventory_management
     VAR discoveredEmotionalWords = ()
 
-//L'inventario effettivo
-    VAR ownedEmotionalWords = ()
+//Il tracciamento della parola appena scoperta
+    VAR newlyDiscoveredEmotionalWord = ()
 
 //Tracciamento delle scelte fatte durante la composizione
     LIST keysColour = redKey, yellowKey, blueKey, greenKey, purpleKey
@@ -99,11 +99,15 @@
     VAR secondKeyColour = ()
     VAR thirdKeyColour = ()
 
-//Il tracciamento della parola appena scoperta
-    VAR newlyDiscoveredEmotionalWord = ()
 
+//L'inventario effettivo
+    VAR ownedEmotionalWords = ()
+    
 //Una variabile che tiene conto di quale sia la parola attiva ora
     VAR activeEmotionalWord = ()
+
+//Una lista delle parole effettivamente utilizzate
+    VAR usedEmotionaWords = ()
     
 //Qualcosa che limiti il numero di parole aggiungibili.
 //Remind: ogni volta che aggiungo una parola, il limite si aggiorna.

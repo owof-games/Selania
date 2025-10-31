@@ -2233,6 +2233,8 @@
         - activeEmotionalWord != ():
             -> word_usage_counter ->
     }
+    
+    -> used_emotional_words_updater ->
 ->->
 
 //Utilizzato per capire quante volte posso usare una parola
