@@ -1256,6 +1256,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
         
         = firstCharEmotionalActions
             {nestDebug: entro in firstCharEmotionalActions.}
+            TODO: posso fare una lista graduel di reazioni sempre più cariche (+ di tre però visto che una parola può essere usata tanterrimo)
             
             {
  

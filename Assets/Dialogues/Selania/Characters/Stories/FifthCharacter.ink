@@ -172,7 +172,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
                 Un <i>Lichene degli abissi</i> con le giuste condizioni cresce sempre allo stesso modo.
   
             + (fivePurple) [Invece sono felice che crescano a prescidere da me.]
-                    ~ fifthPurple ++
+                    -> color_variation_management(Mentor, purpleC)->
                 Senza di te?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sorry
                 Dobbiamo bagnare il terreno, prepararlo, seminare.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                 Non ci sarebbe nulla senza il nostro lavoro.
@@ -237,7 +237,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
                 
                 
             + [Ci sono momenti in cui è necessario anche perdersi.]
-                    ~ fifthPurple ++
+                    -> color_variation_management(Mentor, purpleC)->
                 E in questo luogo in fondo arrivano solo persone che si sono perse.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 E che se ne vanno più serene.
                 Avrebbero scoperto quella serenità, senza un po' di smarrimento?
@@ -270,35 +270,40 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
         E per me è una gioia tenere tutto questo in piedi, giorno per giorno.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
 
             + [Ogni lavoro ha la sua quota di sacrificio.]
+                -> color_variation_management(Mentor, blueC)->
                 Vero.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 Il valore di qualcosa viene da quanto ci è costata.
                 E la maggior parte delle volte non paghiamo in denaro.
-                    -> color_variation_management(Mentor, blueC)->
+                    
                 
             + [Forse le volpi si mangiano le lettere!]
+                -> color_variation_management(Mentor, yellowC)->
                 La fantasia è un modo piacevole di affrontare la realtà, {name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 Ma alla lunga rende difficile capire cosa sia vero e cosa no.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
-                    -> color_variation_management(Mentor, yellowC)->
+                    
                 
             + [Il mondo è pieno di ingrati.]
+                -> color_variation_management(Mentor, redC)->
                 No.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sorry
                 Direi che il mondo è pieno di persone distratte.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 Le cose da fare sono infinite, e finiamo per dimenticarci di chi non vediamo tutti i giorni.
                 Non è ingratitudine, è una vita che scorre troppo veloce.
-                    -> color_variation_management(Mentor, redC)->
+                    
 
                 
             + [Ti prometto che ti scriverò ogni giorno.]
+                -> color_variation_management(Mentor, greenC)->
                 Oh, {pronouns has him: caro|{pronouns has her: cara|carə}}, è una bella promessa.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 Una promessa che ho sentito decine di volte.
-                    -> color_variation_management(Mentor, greenC)->
+                    
   
                 
             + [Esiste un confine tra {charNameFive} e questo luogo?]
+                -> color_variation_management(Mentor, purpleC)->
                 A volte mi sento <i>solo</i> questo luogo.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 Non mi chiedo spesso se andarmene o meno.
                 O dove.
-                    ~ fifthPurple ++
+
  
             -
             Ma basta con questo spirito malinconico!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
@@ -331,42 +336,47 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
         Non dovrebbe pensare al pallone, a giocare con gli amici, a studiare?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
         
             + [{charNameTwo} ama studiare, e infatti questo è il posto per lui.]
+                -> color_variation_management(Mentor, blueC)->
                 No!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
                 Questo è un posto spirituale.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 Di crescita, di esplorazione.
                 Non un laboratorio.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
                 Non il piccolo chimico.
-                    -> color_variation_management(Mentor, blueC)->
+                    
                 
             + [Giocare è comunque un modo per capire il mondo, {charNameFive}.]
+                    -> color_variation_management(Mentor, yellowC)->
                 Ma un modo controllato, adatto per i bambini.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 Con meno violenza possibile.
                 Senza le cose terribili che ci circondano.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
                 Se non voglio vederle io a cinquant'anni, perché deve vederle un bimbo?
-                    -> color_variation_management(Mentor, yellowC)->
+                    
                 
             + [Alla sua età avevo anche io idee e paure. Si è bambini, non idioti.]
+                    -> color_variation_management(Mentor, redC)->
                 Non serve che usi quel linguaggio con me, {name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
                 E non sono d'accordo.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 Nemmeno a vent'anni puoi sapere davvero cosa vuoi.
                 Cosa conta a questo mondo.
                 Per questo i genitori ci sono.
                 Per proteggerti.
-                    -> color_variation_management(Mentor, redC)->
+                    
 
             + [Mi spiace che tu ti senta in colpa.]
+                -> color_variation_management(Mentor, greenC)->
                 Ma non hai detto che non ho sbagliato.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
                 Scusa, non è quello il tuo ruolo.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sorry
                 Sennò non sarei io la mentore, ma tu.
                 Spero che almeno lui prima o poi mi perdoni.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-                    -> color_variation_management(Mentor, greenC)->
+                    
   
             + [Il genitore dovrebbe essere il lavoro di una comunità.]
+                -> color_variation_management(Mentor, purpleC)->
                 Non dire castronerie, {name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
                 Si fa così dai tempi dei tempi, due persone.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 Una se manca.
                 Però dovrebbero avere il diritto di sbagliare.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
-                    ~ fifthPurple ++
+
             -
         
         Forse mi sono concentrata sulla cosa sbagliata.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
@@ -400,51 +410,56 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
         {name}: secondo te cosa vuol dire amare un'altra persona?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
 
             + [Progettare assieme, costruire fondamenta, accrescersi.]
+                -> color_variation_management(Mentor, blueC)->
                 Già.
                 Creare qualcosa che regga alla fine del desiderio.
                 Quando il corpo perde il suo splendore.
                 E il letto è il luogo della stanchezza e della malattia.
                 Quando invece di chiamarci "amore".
                 Ci chiediamo dove sono le chiavi della macchina.
-                    -> color_variation_management(Mentor, blueC)->
+                    
                 
             + [Un rifugio di stupore e gioia in un mondo grigio.]
+                -> color_variation_management(Mentor, yellowC)->
                 Mi piace la tua ingenuità {name}.
                 Con questa logica ho amato solo una cosa:
                 il mio giardino.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
                 Un posto sempre sorprendente, vivo.
                 Pieno di musica.
                 E forse è davvero così.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-                    -> color_variation_management(Mentor, yellowC)->
+                    
                 
             + [Fondersi nella passione, a letto come in una protesta.]
+                -> color_variation_management(Mentor, redC)->
                 La passione si spegne, {name}.
                 E a quel punto cosa rimane?
                 Noia?
                 Rancore?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
                 Odio?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
                 Passioni forti chiamano passioni ancora più forti.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
-                    -> color_variation_management(Mentor, redC)->
+                    
 
                 
             + [Cura, ascolto, affetto.]
+                -> color_variation_management(Mentor, greenC)->
                 Già, ho pensato la stessa cosa a lungo.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 Ma a volte la cura diventa un lavoro.
                 L'ascolto un dovere.
                 L'affetto un'abitudine.
                 Eppure resti.
                 Vuol dire che è finito l'amore?
-                    -> color_variation_management(Mentor, greenC)->
+                    
   
                 
             + [Raggiungersi l'anima a vicenda, ricercando il divino che è noi.]
+                -> color_variation_management(Mentor, purpleC)->
                 Una visione mistica.
                 Forse blasfema.
                 Qualcosa che non ho mai conosciuto, se non nei romanzi.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
                 O nell'amicizia.
                 E a volte, se resto in silenzio e ferma a lungo, in questo luogo.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
                 
-                    ~ fifthPurple ++
+
  
             -
              ~ fifthPauseTalking = fifthCharPauseDuration
