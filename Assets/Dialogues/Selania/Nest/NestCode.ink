@@ -5,15 +5,15 @@
 
         = first_note
         Primo giro di scelte
-            + [Nota Rosso]
+            + {are_two_entities_together(PG, redShell)}[redShell]
                 ~ firstKeyColour = redKey
-            + [Nota Giallo]
+            + {are_two_entities_together(PG, yellowShell)}[yellowShell]
                 ~ firstKeyColour = yellowKey
-            + [Nota Blu]
+            + {are_two_entities_together(PG, blueShell)}[blueShell]
                 ~ firstKeyColour = blueKey
-            + [Nota Verde]
+            + {are_two_entities_together(PG, greenShell)}[greenShell]
                 ~ firstKeyColour = greenKey
-            + [Nota Viola]
+            + {are_two_entities_together(PG, purpleShell)}[purpleShell]
                 ~ firstKeyColour = purpleKey
             -
             + [Continuo Sì]
@@ -23,15 +23,15 @@
     
         = second_note
         Secondo giro di scelte
-            + [Nota Rosso]
+            + {are_two_entities_together(PG, redShell)}[redShell]
                 ~ secondKeyColour = redKey
-            + [Nota Giallo]
+            + {are_two_entities_together(PG, yellowShell)}[yellowShell]
                 ~ secondKeyColour = yellowKey
-            + [Nota Blu]
+            + {are_two_entities_together(PG, blueShell)}[blueShell]
                 ~ secondKeyColour = blueKey
-            + [Nota Verde]
+            + {are_two_entities_together(PG, greenShell)}[greenShell]
                 ~ secondKeyColour = greenKey
-            + [Nota Viola]
+            + {are_two_entities_together(PG, purpleShell)}[purpleShell]
                 ~ secondKeyColour = purpleKey
             -
             + [Continuo Sì]
@@ -41,15 +41,15 @@
 
         = third_note
         Terzo giro di scelte
-            + [Nota Rosso]
+            + {are_two_entities_together(PG, redShell)}[redShell]
                 ~ thirdKeyColour = redKey
-            + [Nota Giallo]
+            + {are_two_entities_together(PG, yellowShell)}[yellowShell]
                 ~ thirdKeyColour = yellowKey
-            + [Nota Blu]
+            + {are_two_entities_together(PG, blueShell)}[blueShell]
                 ~ thirdKeyColour = blueKey
-            + [Nota Verde]
+            + {are_two_entities_together(PG, greenShell)}[greenShell]
                 ~ thirdKeyColour = greenKey
-            + [Nota Viola]
+            + {are_two_entities_together(PG, purpleShell)}[purpleShell]
                 ~ thirdKeyColour = purpleKey
             -
             + [Risultato]

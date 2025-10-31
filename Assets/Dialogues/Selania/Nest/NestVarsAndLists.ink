@@ -113,4 +113,4 @@
     //Un parametro che indichi il massimo delle parole previste
     VAR maximumEmotionalWordsForRun = 25
 
-    
+

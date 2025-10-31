@@ -13,7 +13,7 @@
     VAR debug_test_nest = false
     
 //Per disabilitare uscite e cose varie in caso di testing con il sistema stocastico    
-    VAR debugStochastic = true
+    VAR debugStochastic = false
     
     
     
