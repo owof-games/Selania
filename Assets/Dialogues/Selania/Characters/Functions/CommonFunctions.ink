@@ -443,6 +443,32 @@
 
 ->->
                 
+
+=== color_modifier(partner, number)
+//funzione utile per modificare botte di colori
+{debug: passo per color_modifier. Il valore di partner è {partner}, quello di number è {number}.}
+
+    {
+        - partner == FirstCharacter:
+            ~ firstPurple = firstPurple * number
+            ~ firstYellow = firstYellow * number
+            ~ firstBlue = firstBlue * number
+            ~ firstGreen = firstGreen * number
+            ~ firstRed = firstRed * number
+            
+    
+        - partner == SecondCharacter:
+            ~ secondPurple = secondPurple * number
+            ~ secondYellow = secondYellow * number
+            ~ secondBlue = secondBlue * number
+            ~ secondGreen = secondGreen * number
+            ~ secondRed = secondRed * number
+
+    }
+->->
+  
+  
+  
                 
 /* ---------------------------------
                 

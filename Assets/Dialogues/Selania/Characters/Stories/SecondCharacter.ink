@@ -1732,9 +1732,10 @@
             //Avvio aggiornamento relazione + commento PNG + commento strega
                 -> secondAffinityCalc ->
                 
-            ////Vado ad aggiornare temporaneamente il nome prima di cominciare    
-                -> secondNaming ->
-                
+            //Vado a svuotare i contatori di colore, così son tranquilla.
+                -> storage_colors(SecondCharacter) ->
+            
+            //E poi a seconda dello stato di inchiostro, mi sposto sulla domanda prevista      
                 {
                     - secondCharacterInkLevel == Empty:
                         -> ending
@@ -1759,8 +1760,7 @@
             Tuo fratello crea cose e ti protegge.
             Anche loro sono adulti.
                    -> color_variation_management(SecondCharacter, redC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(red)
+
         
         + [I tuoi genitori sono infelici, essere adulti è difficile.]
             Tutti i litigi, la fuga di tuo padre.
@@ -1768,8 +1768,7 @@
             Per questo i grandi fanno cose brutte.
             Ma questo non li rende schifosi.
                    -> color_variation_management(SecondCharacter, greenC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(green)  
+                   
         
         + [Il problema è che agli adulti non è permesso giocare.]
             Tua nonna gioca, bara, e infatti è super.
@@ -1778,9 +1777,8 @@
             E che gioca con gli animali per vivere.
             Ed essere felice.
                    -> color_variation_management(SecondCharacter, yellowC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(yellow)          
-     
+                            
+
             
         + [Però gli adulti hanno anche scoperto le cose che ti piacciono.]
             L'elettricità.
@@ -1788,16 +1786,12 @@
             Le caramelle.
             Le action figures.
                    -> color_variation_management(SecondCharacter, blueC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(blue)    
-        
+ 
         + [Hai ragione. Ma tu puoi essere un altro tipo di adulto.]
             Un adulto che sa correggere le giornate.
             Anche per le altre persone.
             Che può tornare a fidarsi delle altre persone.
                    -> color_variation_management(SecondCharacter, purpleC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(purple)    
             
         -
         ~ numberQuestion ++  
@@ -1825,45 +1819,33 @@
             Che tuo fratello ti vuole bene.
             E le caramelle sono buone.
                    -> color_variation_management(SecondCharacter, yellowC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(yellow)            
-  
-                    
+ 
         + [Sei giovane ma sai già un sacco di cose. Studia e salvali.]
             Si ha paura solo se non si conosce una cosa.
             Impara a conoscere quello di cui hai paura.
             E a quel punto saprai anche come cambiare le cose.
                    -> color_variation_management(SecondCharacter, blueC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(blue)    
-    
-            
+
         + [E allora lotta. Unisciti ad altri e protesta!]
             Sei abituato a stare in castigo, di cosa hai paura?
             A scuola fai quello che vuoi.
             Fallo anche fuori.
             Per salvare il mondo.
                     -> color_variation_management(SecondCharacter, redC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(red)            
-            
+
         + [Inventa storie, bugie che creino compassione, che cambino le persone.]
             Un po' come la bugia del compleanno.
             Ma per far sì che ogni bosco abbia migliaia di compleanni.
             Usa il tuo dono per convincere le persone a cambiare.
                    -> color_variation_management(SecondCharacter, greenC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(green)  
-                
+  
         + [La paura blocca, la paura è una scusa comoda.]
             La paura è un rifugio.
             Se hai paura, non agisci.
             Se agisci non cambi nulla.
             Davvero vuoi restare per sempre bloccato dalla paura?
                    -> color_variation_management(SecondCharacter, purpleC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(purple)    
-
+                   
         -
         ~ numberQuestion ++  
         Mmm, posso pensarci.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
@@ -1890,43 +1872,31 @@
             Definisce un presente, per lanciarci altrove.
             E rende il mondo un posto meno orribile.
                    -> color_variation_management(SecondCharacter, purpleC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(purple)    
-            
-        
+   
         + [Eppure ama il suo ragazzo.]
             E ama te.
             E fa in modo che possiate passare tanto tempo assieme.
             Che tu possa avere uno spazio felice.
             E così rende il mondo un po' meno orribile.
                    -> color_variation_management(SecondCharacter, greenC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(green)  
-                
+ 
         + [Eppure lotta contro tuo padre perché tu stia meglio.]
             Si è creato una nuova casa.
             Non si è fatto mettere i piedi in testa da nessuno.
             E questo lo fai se pensi ci sia un futuro dove andare.
                     -> color_variation_management(SecondCharacter, redC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(red)
-            
-        
+  
         + [Eppure gioca con te.]
             Si diverte, lascia che le cose belle accadano.
             In un mondo orribile, esisterebbe davvero il piacere?
                    -> color_variation_management(SecondCharacter, yellowC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(yellow)            
 
-                
         + [Eppure per lavoro aggiusta le cose.]
             Vede le cose rotte e le ripara.
             Quindi ci sono cose che si possono aggiustare.
             Serve solo un meccanico per le cose che lo spaventano.
                    -> color_variation_management(SecondCharacter, blueC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(blue)         
+  
         -
         ~ numberQuestion ++  
         Ok...#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
@@ -1954,17 +1924,13 @@
             Ti ha fatto arrabbiare dal primo momento.
             Vuoi davvero che sia lei a decidere come ti chiami?
                     -> color_variation_management(SecondCharacter, redC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(red)
-        
+     
         + [I ricci resistono a tantissimi veleni.]
             Ogni animale ha la sua dote, il suo modo di superare le paure.
             Puoi studiare e diventare un superanimale.
             O divertirti a cambiare quando vuoi.
             E tornare riccio, quando le cose si fanno velenose.
                    -> color_variation_management(SecondCharacter, blueC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(blue)    
         
         + [A volte ci raggomitoliamo per superare il peggio.]
             Quello che conta è: cosa facciamo, dopo?
@@ -1972,9 +1938,7 @@
             Restiamo ancora nel nostro posto sicuro?
             O decidiamo di guardare le cose da una prospettiva diversa, e cambiarle?
                    -> color_variation_management(SecondCharacter, purpleC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(purple)    
-             
+
             
         + [Anche se la schiena ha le spine, la loro pancia è tenera e gentile.]
             E tu sei stato tenero molte volte da quando sei qui.
@@ -1982,18 +1946,14 @@
             E con le cose che hai raccontato.
             Ti servono ancora quelle spine?
                    -> color_variation_management(SecondCharacter, greenC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(green)          
-        
+
         + [I ricci hanno un olfatto super, possono trovare tutte le caramelle del mondo.]
             E dopo che hai trovato le caramelle, cambia animale.
             Diventa qualcosa che vede fino alla luna, e insegui le stelle.
             Oppure impara a nuotare fino all'altra parte del mondo.
             Continua a cambiare.
                     -> color_variation_management(SecondCharacter, yellowC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(yellow)    
-            
+
         -
         ~ numberQuestion ++  
         ...#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
@@ -2019,9 +1979,7 @@
             Queste cose unite possono renderti indistruttibile.
             E di cosa avrà mai paura un ragazzo indistruttibile?
                     -> color_variation_management(SecondCharacter, redC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(red)        
-        
+    
         + {secondPurple > 0} [Tutti abbiamo paura. Condividi questa paura con le altre persone.]
             Falle sentire meno sole.
             Meno sbagliate.
@@ -2029,33 +1987,36 @@
             A cambiare le cose a loro volta.
             Assieme.
                    -> color_variation_management(SecondCharacter, purpleC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(purple)    
-                    
+
         + {secondYellow > 0} [L'opposto della paura è la curiosità.]
             E tu sei il ritratto della curiosità.
             Guarda le cose che arriveranno chiedendoti "Chissà se..." o "E se invece..." o "Perché accade questo?".
             E a quel punto ogni paura diventerà solo un problema da risolvere.
                    -> color_variation_management(SecondCharacter, yellowC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(yellow)            
                 
         + {secondGreen > 0} [I tuoi genitori sono spaventati, aiutatevi a vicenda.]
             Nessuna persona può cambiare il mondo da sola.
             Ma possiamo partire dal cambiare le cose che ci circondano, un pezzo alla volta.
                    -> color_variation_management(SecondCharacter, greenC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(green)          
-                
+      
         + {secondBlue > 0} [Con la tua intelligenza puoi rendere il mondo migliore.]
             Puoi aiutare gli adulti a essere meno tristi.
             E gli animali a non morire.
             E tua nonna a uscire dalla casa dei vecchi.
                    -> color_variation_management(SecondCharacter, blueC)->
-                    -> secondColourCheck ->
-                    ~ secondStatementVariation(blue)            
+    
         - 
+            //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
+                -> color_modifier(SecondCharacter, SecondCharacterColorMultiplier) ->
+            
+            //Poi aggiorniamo i colori, così il valore complessivo conta per la scelta del nome
+                -> update_colors(SecondCharacter) ->     
      
+            //E infine genero il nome
+                -> secondNaming ->
+            
+
+            
     Sì. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
     No.
     Boh.

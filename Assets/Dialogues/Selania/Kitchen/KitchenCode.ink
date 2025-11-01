@@ -388,13 +388,13 @@
 
 /* ---------------------------------
 
-   Gestione colori durante la cucina (reset e ripristino) 
+   Gestione colori durante la cucina e la riscrittura (reset e ripristino) 
 
  ----------------------------------*/
 
 
 === storage_colors(cookingCompanion)
-{kitchenDebug: storage_colors.}
+{kitchenDebug or debug: storage_colors.}
 
     {
         - cookingCompanion == FirstCharacter:
@@ -427,7 +427,7 @@
 
 
 === update_colors(cookingCompanion)
-{kitchenDebug: update_colors.}
+{kitchenDebug or debug: update_colors.}
 
     {
         - cookingCompanion == FirstCharacter:

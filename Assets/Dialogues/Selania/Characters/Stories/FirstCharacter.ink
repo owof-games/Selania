@@ -1240,8 +1240,10 @@
             //Valuto lo stato della relazione 
                 -> firstAffinityCalc ->
 
-            //Vado ad aggiornare temporaneamente il nome prima di cominciare
-                -> firstNaming ->
+            //Vado a svuotare i contatori di colore, così son tranquilla.
+                -> storage_colors(FirstCharacter) ->
+            
+            //E poi a seconda dello stato di inchiostro, mi sposto sulla domanda prevista    
                 {
                     - firstCharacterInkLevel == Empty:
                         -> ending
@@ -1270,44 +1272,36 @@
         Prima hai detto che hai il terrore di fare una scelta.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
             
             + [Qui hai accettato il tuo nuovo nome.]
+                -> color_variation_management(FirstCharacter, blueC)->
                 Accettare è una scelta.
                 Cercare risposte è un'altra scelta ancora.
                 E ammettere una propria paura, una scelta enorme.
-                    {
-    	                - firstCharacterPossibleStates hasnt Violino:
-    		                ~ firstCharacterPossibleStates ++
-    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                    }            
-            
+                  
             + [Ma hai deciso di costruire una famiglia con l3 tu3 am3.]
+                -> color_variation_management(FirstCharacter, greenC)->
                 Hai aperto il tuo cuore, e loro ti amano.
                 Si preoccupano per te, cercano di aiutarti a trovare la tua strada.
                 E questo amore è frutto di infinite piccole scelte fatte ogni giorno.
             
             + [Dimenticando che per finire gli studi hai lottato per anni.]
+                -> color_variation_management(FirstCharacter, redC)->
                 Che ogni esame che hai dato è stata una scelta.
                 Che ogni lezione che hai seguito è stata una scelta.
                 E presto o tardi, hai trovato la volontà di continuare.
                 
             + [Ma hai più volte accettato il rischio di suonare sul tetto.]
+                -> color_variation_management(FirstCharacter, yellowC)->
                 Hai accettato di essere festa in un mondo severo.
                 Hai cercato il gioco quando tutto ti dice che devi lavorare.
                 Hai accolto falene, scoiattoli e altri animali suonanti.
-                    {
-    	                - firstCharacterPossibleStates hasnt Violino:
-    		                ~ firstCharacterPossibleStates ++
-    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                    }
+        
+            
             + [Però da che sei qui hai esplorato tutto questo luogo.]
+                -> color_variation_management(FirstCharacter, purpleC)->
                 Hai inseguito uno scoiattolo.
                 Hai cercato Talco.
                 Non ti sei fatta spaventare dalla novità.
-                    {
-                    	- firstCharacterPossibleStates hasnt Chitarra:
-        		            ~ firstCharacterPossibleStates --
-        		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                    }
-                
+    
             -
                 ~ numberQuestion ++   
             
@@ -1331,44 +1325,34 @@
         Temi che le persone a cui vuoi bene si sentano tradite dalla scelta che farai.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
     
             + [Con Talco puoi litigare, eppure siete legatissim3.]
+                -> color_variation_management(FirstCharacter, redC)->
                 Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
                 Lə Talco che hai raccontato si arrabbierebbe di più se tu facessi una scelta per te pensando a ləi.
                 
             + [La paura di tradire è un'altra faccia dell'ego.]
+                -> color_variation_management(FirstCharacter, purpleC)->
                 È la voglia di sembrare impeccabili.
                 Infallibili.
                 Inattaccabili.
                 Ma amore e crescita prosperano nell'errore e nella vulnerabilità.
-                    {
-    	                - firstCharacterPossibleStates hasnt Violino:
-    		                ~ firstCharacterPossibleStates ++
-    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                    }
         
-                
             + [Ti preoccupi molto di loro, e poco di te.]
+                -> color_variation_management(FirstCharacter, greenC)->
                 Non ti sei chiesta molto dove eri, ti sei messa solo a cercare Talco.
                 Ti sei preoccupata per Jonah.
                 Ma per te?
                 
             + [Forse accadrà, ma non è un tuo problema.]
+                -> color_variation_management(FirstCharacter, blueC)->
                 Stai costruendo la tua vita, non la loro.
                 Se la pensano diversamente, non è amicizia, e ti sei salvata da qualcosa di peggiore.
-                    {
-                    	- firstCharacterPossibleStates hasnt Chitarra:
-        		            ~ firstCharacterPossibleStates --
-        		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                    }
+     
                     
             + [Tradiamo la fiducia se rompiamo le regole a nostro vantaggio.]
+                -> color_variation_management(FirstCharacter, yellowC)->
                 Hai deciso di giocare con loro e lasciar loro tutto il potere?
                 O è una regola implicita, che non avete mai concordato ma che senti nell'aria?
                 E a prescindere: abbiamo sempre il diritto di revocare un accordo, una regola.
-                    {
-    	                - firstCharacterPossibleStates hasnt Violino:
-    		                ~ firstCharacterPossibleStates ++
-    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                    }
                         
             -
                 ~ numberQuestion ++
@@ -1391,43 +1375,32 @@
         Vedi una scelta come una strada chiusa, qualcosa da cui non poter tornare indietro.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
                 
             + [Se non tiri nessun dado, non c'è storia da far avanzare.]
+                -> color_variation_management(FirstCharacter, yellowC)->
                 Quando giochi non sempre le cose vanno come vuoi, ma comunque <i>vanno</i>.
                 E fintanto che le cose hanno di dove andare, c'è tempo per cambiare.
                 E a volte anche ritirare i dadi.
-                    {
-    	                - firstCharacterPossibleStates hasnt Violino:
-    		                ~ firstCharacterPossibleStates ++
-    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                    }
             
             + [Tutt3 hanno immaginato sorti diverse per Jonah, ma nessuna fine.]
+                -> color_variation_management(FirstCharacter, blueC)->
                 Ogni passo avanti prevede la possibilità di tornare indietro.
                 A volte è più difficile, a volte meno, ma è sempre possibile.
-                    {
-                    	- firstCharacterPossibleStates hasnt Chitarra:
-        		            ~ firstCharacterPossibleStates --
-        		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                    }
                     
             + [Eppure la prima cosa che hai visto qui sono otto sentieri.]
+                -> color_variation_management(FirstCharacter, purpleC)->
                 Otto luoghi dove andare.
                 E ogni sentiero ha una direzione in cui andare, e una da cui tornare.
                 A volte l'erba può essere cresciuta.
                 A volte l'acqua può averne cancellato un pezzo.
                 Ma il sentiero è sempre lì, ad aspettare.
-                    {
-    	                - firstCharacterPossibleStates hasnt Violino:
-    		                ~ firstCharacterPossibleStates ++
-    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                    }
-                
-            
+  
             + [A suo modo, la storia di Jonah è un successo.]
+                -> color_variation_management(FirstCharacter, redC)->
                 Ha deciso che non gli stava più bene quello che aveva, e si è mosso per cambiarlo.
                 E il leggere negativamente le cose che forse gli sono capitate raccontano nulla di Jonah e molto di chi le racconta.
                 C'è orgoglio anche dietro una cassa del supermercato, non solo su palco.
                     
             + [Ragioni come se fossi sola se dovessi cadere.]
+                -> color_variation_management(FirstCharacter, greenC)->
                 Pensi che Talco ti abbandonerebbe?
                 Anna? Olga? Persino Ennio.
                 I tuoi genitori.
@@ -1453,30 +1426,23 @@
             Questo posto ti ha assegnato un nome, e quel nome è Chitarra. Ma tu lo vedi come una rinuncia.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
     
             + [Giocare è bello perché puoi sempre rinunciare a farlo.]
+                -> color_variation_management(FirstCharacter, yellowC)->
                 Quando una roba la devi fare anche quando non vuoi, quello è il lavoro.
                 Per questo fa schifo.
-                    {
-    	                - firstCharacterPossibleStates hasnt Violino:
-    		                ~ firstCharacterPossibleStates ++
-    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                    }            
-             
             
             + [Quando Anna ha rinunciato all'ex, è rinata.]
+                -> color_variation_management(FirstCharacter, greenC)->
                 Rinunciare vuol dire anche prendersi cura di sé.
                 Un atto d'amore quando qualcosa non ci fa più bene.
             
             + [Un infinito più piccolo resta comunque infinito.]
+                -> color_variation_management(FirstCharacter, purpleC)->
                 Rinuncia a una cosa e sarai comunque tutto.
                 Un nome è solo un nome.
                 Una persona è un universo intero.
-                    {
-    	                - firstCharacterPossibleStates hasnt Violino:
-    		                ~ firstCharacterPossibleStates ++
-    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                    }    
                 
             + [Rinunciando a cercare Talco ti sei tutelata.]
+                -> color_variation_management(FirstCharacter, blueC)->
                 Se una cosa non ha senso, non ha senso anche se continuiamo ad insistere nel farla.
                     {
                     	- firstCharacterPossibleStates hasnt Chitarra:
@@ -1485,6 +1451,7 @@
                     }            
             
             + [C'è più coraggio nella rinuncia che nel compromesso.]
+                -> color_variation_management(FirstCharacter, redC)->
                 Spesso è più costosa, ma la coerenza personale non ha prezzo.
                 
             -
@@ -1511,35 +1478,31 @@
             }   
     
             + {firstRed > 0} [Prendi una strada e se non ti piace cambiala!]
+                -> color_variation_management(FirstCharacter, redC)->
             
             + {firstPurple > 0} [Dai alla tua vita uno scopo più grande.]
-                    {
-    	                - firstCharacterPossibleStates hasnt Violino:
-    		                ~ firstCharacterPossibleStates ++
-    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                    }           
+                 -> color_variation_management(FirstCharacter, purpleC)->         
             
             + {firstYellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
-                                    {
-    	                - firstCharacterPossibleStates hasnt Violino:
-    		                ~ firstCharacterPossibleStates ++
-    	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                    }   
+                -> color_variation_management(FirstCharacter, yellowC)->
+                
             + {firstGreen > 0} [Non deluderai i tuoi amici: loro saranno sempre con te.]
+                -> color_variation_management(FirstCharacter, greenC)->
                     
             + {firstBlue > 0} [Questa non è la tua strada. Succede. Ora puoi cambiare.]
-                    {
-                    	- firstCharacterPossibleStates hasnt Chitarra:
-        		            ~ firstCharacterPossibleStates --
-        		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
-                    }           
-                    
+                -> color_variation_management(FirstCharacter, blueC)->
             
                     
             -     
          Grazie, {name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_neutral
          Mentre ti ascoltavo mi è nata una nuova canzone in testa.
          La canzone del mio nome.
+            
+            //Prima chiamo l'aggiornamento nome, che così terrà conto SOLO delle scelte fatte in riscrittura
+            -> firstNaming ->
+            
+            //Poi aggiorniamo i colori, per la parte di passaggio da colori PNG a colori PG
+            -> update_colors(FirstCharacter) ->
             
             {
                 - firstCharacterPossibleStates has Triangolo:

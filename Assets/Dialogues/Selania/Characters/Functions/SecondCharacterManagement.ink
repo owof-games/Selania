@@ -17,6 +17,14 @@
     VAR secondCharStateRelationship = 0
     VAR goodPercentageForRelationship = 66.00
 
+//Valori per definire l'esito del nome
+    VAR crowPercentage = 90.00
+    VAR capibaraPercentage = 70.00
+    VAR dolphinePercentage = 60.00
+    VAR wolfPercentage = 40.00
+
+    
+
 //Tracciamento del dono
     VAR secondGift = ()
     
@@ -50,6 +58,9 @@
 //Variabile per il tempo di attesa tra una lettera e l'altra
     VAR secondWritingPause = 0
     VAR secondWritingPauseDuration = 5
+    
+//Moltiplicatore del colore per il personaggio
+    VAR SecondCharacterColorMultiplier = 3.0
     
 //UP: coerenza.
 //DOWN: incoerenza, cose random
@@ -175,67 +186,74 @@
   
         
 //Funzione per la gestione della riscrittura
-=== secondColourCheck
-{debugChangeName: Passo per secondColourCheck.}
+//=== secondColourCheck
+//{debugChangeName: Passo per secondColourCheck.}
 
-VAR secondRedMax = false
-VAR secondBlueMax = false
-VAR secondYellowMax = false
-VAR secondGreenMax = false
-VAR secondPurpleMax = false
+//VAR secondRedMax = false
+//VAR secondBlueMax = false
+//VAR secondYellowMax = false
+//VAR secondGreenMax = false
+//VAR secondPurpleMax = false
 
 //Resettiamo, così che per ogni scelta sia tutto su falso per sicurezza.
-~  secondYellowMax = false
-~  secondGreenMax = false
-~  secondBlueMax = false
-~  secondPurpleMax = false
-~  secondRedMax = false
+//~  secondYellowMax = false
+//~  secondGreenMax = false
+//~  secondBlueMax = false
+//~  secondPurpleMax = false
+// ~  secondRedMax = false
 
 
-    {
+//    {
     //Potrebbe capitare un pareggio, e va bene così, così non è punitivo per la giocatrice.
-        - secondRed >= secondBlue && secondRed >= secondYellow && secondRed >= secondGreen && secondRed >= secondPurple && secondRed >= secondGreen:
-                    ~  secondRedMax = true
-        {debugChangeName: Il valore di secondRedMax è {secondRedMax}.}
+//        - secondRed >= secondBlue && secondRed >= secondYellow && secondRed >= secondGreen && secondRed >= //secondPurple && secondRed >= secondGreen:
+                   // ~  secondRedMax = true
+//        {debugChangeName: Il valore di secondRedMax è {secondRedMax}.}
         
-        - secondBlue >= secondRed && secondBlue >= secondYellow && secondBlue >= secondGreen && secondBlue >= secondPurple && secondBlue >= secondGreen:
-                    ~  secondBlueMax = true
-         {debugChangeName: Il valore di secondBlueMax è {secondBlueMax}.}
-         
-        - secondGreen >= secondBlue && secondGreen >= secondYellow && secondGreen >= secondGreen && secondGreen >= secondPurple && secondGreen >= secondRed:
-                    ~  secondGreenMax = true
-            {debugChangeName: Il valore di secondGreenMax è {secondGreenMax}.}  
-            
-        - secondPurple >= secondBlue && secondPurple >= secondYellow && secondPurple >= secondGreen && secondPurple >= secondRed && secondPurple >= secondGreen:
-                    ~  secondPurpleMax = true
-            {debugChangeName: Il valore di secondPurpleMax è {secondPurpleMax}.}  
-            
-        - secondYellow >= secondBlue && secondYellow >= secondRed && secondYellow >= secondGreen && secondYellow >= secondPurple && secondYellow >= secondGreen:
-                    ~  secondYellowMax = true 
-        {debugChangeName: Il valore di secondGreenMax è {secondGreenMax}.}                  
-    }
-        ->->
+ //       - secondBlue >= secondRed && secondBlue >= secondYellow && secondBlue >= secondGreen && secondBlue >= //secondPurple && secondBlue >= secondGreen:
+   //                 ~  secondBlueMax = true
+   //      {debugChangeName: Il valore di secondBlueMax è {secondBlueMax}.}
+ //        
+  //      - secondGreen >= secondBlue && secondGreen >= secondYellow && secondGreen >= secondGreen && secondGreen //>= secondPurple && secondGreen >= secondRed:
+  //                  ~  secondGreenMax = true
+  //          {debugChangeName: Il valore di secondGreenMax è {secondGreenMax}.}  
+   //         
+  //      - secondPurple >= secondBlue && secondPurple >= secondYellow && secondPurple >= secondGreen && //secondPurple >= secondRed && secondPurple >= secondGreen:
+ //                   ~  secondPurpleMax = true
+    //        {debugChangeName: Il valore di secondPurpleMax è {secondPurpleMax}.}  
+    //        
+//        - secondYellow >= secondBlue && secondYellow >= secondRed && secondYellow >= secondGreen && //secondYellow >= secondPurple && secondYellow >= secondGreen:
+             //       ~  secondYellowMax = true 
+    //    {debugChangeName: Il valore di secondGreenMax è {secondGreenMax}.}                  
+  //  }
+//        ->->
     
 
 
 === secondNaming ==
 //Selezione nome prima della riscrittura
 //Grizzly è il livello "più basso" per Riccio
+//Riutilizziamo la stessa logica prodotta dall'affinity calculator, ma con impatti diversi: > 90, >70, >60, > 40
+{debug: passo per secondNaming.}
+
+    ~ temp allColorsValue = secondRed + secondBlue + secondGreen + secondYellow + secondPurple
+    ~ temp minimumPercentValue = (allColorsValue/100.00)
+
+{debug: la somma di tutti i colori è {allColorsValue}. Il valore di minimumPercentValue è {minimumPercentValue}.}    
     
     {
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * crowPercentage):
             ~ secondCharacterPossibleStates += Corvo
                 ->->
         
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2):
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * capibaraPercentage):
             ~ secondCharacterPossibleStates += Capibara   
                 ->-> 
         
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 3):
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * dolphinePercentage):
             ~ secondCharacterPossibleStates += Delfino    
                 ->->
         
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 4):
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * wolfPercentage):
             ~ secondCharacterPossibleStates += Lupo
                 ->->
         
@@ -247,69 +265,43 @@ VAR secondPurpleMax = false
         ->-> 
  
      
-=== function secondStatementVariation(color)
-//Variazione nome durante la riscrittura   
-~ temp secondCheckColor = false
-{debugChangeName: Passo per function secondStatementVariation.}
-
-    {
-        - color == red:
-           ~ secondCheckColor = secondRedMax
-        - color == blue:
-            ~ secondCheckColor = secondBlueMax
-        - color == yellow:
-            ~ secondCheckColor = secondYellowMax
-        - color == green:
-            ~ secondCheckColor = secondGreenMax
-        - color == purple:
-            ~ secondCheckColor = secondPurpleMax
-            
-    }
-
-    {debugChangeName: Il valore di secondCheckColor è {secondCheckColor}.}
-    
-    //Questi sono check di sicurezza per evitare che vengano prodotti valori fuori dalla lista (non dovrebbe accadere ma non si sa mai)
-    {
-        - secondCheckColor:
-            {
-             - secondCharacterPossibleStates hasnt Corvo:
-                ~ secondCharacterPossibleStates ++
-                {debugChangeName: Aumento lo stato del secondo personaggio, che ora è {secondCharacterPossibleStates }}
-            }
-        
-        - else:
-            {
-             - secondCharacterPossibleStates hasnt Grizzly:
-                ~ secondCharacterPossibleStates --
-            {debugChangeName: Diminuisco lo stato del secondo personaggio, che ora è {secondCharacterPossibleStates }}
-            }
-    	            
-    }        
-    
-
-
-//Questa la commento e me la tengo come remind, ma mi servirà più o con la rana o con altri feedback, non serve più averne di diretti.    
-//=== secondAffinityCheckCalc ===
-//~ temp charNameTwo = translator(secondCharacterState)
-    
+//=== function secondStatementVariation(color)
+////Variazione nome durante la riscrittura   
+//~ temp secondCheckColor = false
+//{debugChangeName: Passo per function secondStatementVariation.}
+//
 //    {
-//        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
-//        
-//            Sai? Mi sembri una persona che dice sempre le cose giuste. #speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
-//            Non giuste giuste tipo per me.
-//            Ma che si assomigliano tutte.
-//            Non mi dici mica prima mele e poi pere come fanno gli altri adulti.
-//            Questo mi piace.
-//                ->->
-//        - else:
-//        
-//            Non sono scemo.  #speaker:{secondChar_tag()}#inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC: {ink_tag_c(secondCharacterInkLevel)}  #inkD: {ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_angry
-//            Ho visto che cambi sempre idea.
-//            Mi rispondi sempre cose diverse.
-//            Non mi piace.
-//            Gli adulti fanno così quando voglio avere ragione.
-//           E io mica sono un bambino.
-//                ->->     
+//        - color == red:
+//           ~ secondCheckColor = secondRedMax
+//        - color == blue:
+//            ~ secondCheckColor = secondBlueMax
+//        - color == yellow:
+//            ~ secondCheckColor = secondYellowMax
+//        - color == green:
+//            ~ secondCheckColor = secondGreenMax
+//        - color == purple:
+//            ~ secondCheckColor = secondPurpleMax
+//            
 //    }
 //
-//        ->-> 
+//    {debugChangeName: Il valore di secondCheckColor è {secondCheckColor}.}
+//    
+//    //Questi sono check di sicurezza per evitare che vengano prodotti valori fuori dalla lista (non dovrebbe //accadere ma non si sa mai)
+//    {
+//        - secondCheckColor:
+//            {
+//             - secondCharacterPossibleStates hasnt Corvo:
+//                ~ secondCharacterPossibleStates ++
+//                {debugChangeName: Aumento lo stato del secondo personaggio, che ora è {secondCharacterPossibleStates }}
+//            }
+//        
+//        - else:
+//            {
+//             - secondCharacterPossibleStates hasnt Grizzly:
+//                ~ secondCharacterPossibleStates --
+//            {debugChangeName: Diminuisco lo stato del secondo personaggio, che ora è //{secondCharacterPossibleStates }}
+//            }
+//    	            
+//    }        
+    
+

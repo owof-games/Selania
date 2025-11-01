@@ -154,6 +154,7 @@
 //Settaggio nome quando partiamo con la discussione (non finale quindi)
 
 === firstNaming ===
+TODO: passare da firstCharacterPossibleStates a firstCharacterState (ormai non abbiamo bisogno di passaggi intermedi) e cancella la parte di aggiornamento quando la personaggia ci dice che nome ha scelto.
 //Se ho un pareggio quindi c'è differenza se blu batte sia giallo che viola (Triangolo)
 //Se batte solo giallo (Orchestra)
 //Se batte solo viola (FlautoDolce)
