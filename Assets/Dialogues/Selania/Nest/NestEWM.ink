@@ -11,6 +11,8 @@
     
     } 
 
+    //Ho cambiato idea è all'inizio così (dovrebbe) comparire sempre come ultima scelta su unity, e quindi centrata in basso
+    + [Ho cambiato idea]
 
 //Varianti monocolore
     + {ownedEmotionalWords has Rosso}[Rosso]
@@ -2227,9 +2229,7 @@
             {nestDebug: ho ridotto il numero di parole prese. takenEmotionalWords ora ha il valore di {takenEmotionalWords}.} 
         }
  
- 
 
-    + [Ho cambiato idea]
     -
     
     {
