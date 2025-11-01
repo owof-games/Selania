@@ -17,6 +17,7 @@
     INCLUDE Code\PlacesContentsAndFunctions.ink
     INCLUDE Code\BackgroundsAndSounds.ink
     INCLUDE Code\BigDialogue.ink
+    INCLUDE Code\NestDialogue.ink
     INCLUDE Code\SpeakerTagManagers.ink
     INCLUDE Code\TextFunctions.ink
 
@@ -112,6 +113,8 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
+
+
 
 
 
