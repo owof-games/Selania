@@ -1492,7 +1492,7 @@
             + {firstGreen > 0} [Non deluderai i tuoi amici: loro saranno sempre con te.]
                 -> color_variation_management(FirstCharacter, greenC)->
                     
-            + {firstBlue > 0} [Questa non è la tua strada. Succede. Ora puoi cambiare.]
+            + [Questa non è la tua strada. Succede. Ora puoi cambiare.]
                 -> color_variation_management(FirstCharacter, blueC)->
             
                     

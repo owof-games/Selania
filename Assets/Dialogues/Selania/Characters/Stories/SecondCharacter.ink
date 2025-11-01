@@ -1974,13 +1974,13 @@
             
      Per questo ti dico:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #portrait:PG_neutral
      
-        + {secondRed > 0} [Diventa il più forte, il più coraggioso.]
+        + [Diventa il più forte, il più coraggioso.]
             Sei un testardo, bugiardo, dispettoso.
             Queste cose unite possono renderti indistruttibile.
             E di cosa avrà mai paura un ragazzo indistruttibile?
                     -> color_variation_management(SecondCharacter, redC)->
     
-        + {secondPurple > 0} [Tutti abbiamo paura. Condividi questa paura con le altre persone.]
+        + [Tutti abbiamo paura. Condividi questa paura con le altre persone.]
             Falle sentire meno sole.
             Meno sbagliate.
             A quel punto saranno pronte a fare il passo.
@@ -1988,18 +1988,18 @@
             Assieme.
                    -> color_variation_management(SecondCharacter, purpleC)->
 
-        + {secondYellow > 0} [L'opposto della paura è la curiosità.]
+        + [L'opposto della paura è la curiosità.]
             E tu sei il ritratto della curiosità.
             Guarda le cose che arriveranno chiedendoti "Chissà se..." o "E se invece..." o "Perché accade questo?".
             E a quel punto ogni paura diventerà solo un problema da risolvere.
                    -> color_variation_management(SecondCharacter, yellowC)->
                 
-        + {secondGreen > 0} [I tuoi genitori sono spaventati, aiutatevi a vicenda.]
+        + [I tuoi genitori sono spaventati, aiutatevi a vicenda.]
             Nessuna persona può cambiare il mondo da sola.
             Ma possiamo partire dal cambiare le cose che ci circondano, un pezzo alla volta.
                    -> color_variation_management(SecondCharacter, greenC)->
       
-        + {secondBlue > 0} [Con la tua intelligenza puoi rendere il mondo migliore.]
+        + [Con la tua intelligenza puoi rendere il mondo migliore.]
             Puoi aiutare gli adulti a essere meno tristi.
             E gli animali a non morire.
             E tua nonna a uscire dalla casa dei vecchi.
