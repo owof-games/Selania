@@ -3,7 +3,6 @@
                       Gestione timing e valori della storia
                     
                      ----------------------------------*/
-
 //Possibili nomi:
     LIST secondCharacterPossibleStates = Riccio, Grizzly, Lupo, Delfino, Capibara, Corvo
     VAR secondCharacterState = Riccio
@@ -238,27 +237,30 @@
     ~ temp allColorsValue = secondRed + secondBlue + secondGreen + secondYellow + secondPurple
     ~ temp minimumPercentValue = (allColorsValue/100.00)
 
-{debug: la somma di tutti i colori è {allColorsValue}. Il valore di minimumPercentValue è {minimumPercentValue}.}    
+{debug: la somma di tutti i colori è {allColorsValue}. Il valore di minimumPercentValue è {minimumPercentValue}.}
+
+//Resetto il valore del nome di Riccio
+    ~ secondCharacterState = ()
     
     {
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * crowPercentage):
-            ~ secondCharacterPossibleStates += Corvo
+            ~ secondCharacterState += Corvo
                 ->->
         
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * capibaraPercentage):
-            ~ secondCharacterPossibleStates += Capibara   
+            ~ secondCharacterState += Capibara   
                 ->-> 
         
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * dolphinePercentage):
-            ~ secondCharacterPossibleStates += Delfino    
+            ~ secondCharacterState += Delfino    
                 ->->
         
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * wolfPercentage):
-            ~ secondCharacterPossibleStates += Lupo
+            ~ secondCharacterState += Lupo
                 ->->
         
         - else:
-            ~ secondCharacterPossibleStates += Grizzly
+            ~ secondCharacterState += Grizzly
                 ->->
     }
     

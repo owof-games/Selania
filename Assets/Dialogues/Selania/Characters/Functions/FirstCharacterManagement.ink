@@ -154,55 +154,56 @@
 //Settaggio nome quando partiamo con la discussione (non finale quindi)
 
 === firstNaming ===
-TODO: passare da firstCharacterPossibleStates a firstCharacterState (ormai non abbiamo bisogno di passaggi intermedi) e cancella la parte di aggiornamento quando la personaggia ci dice che nome ha scelto.
 //Se ho un pareggio quindi c'è differenza se blu batte sia giallo che viola (Triangolo)
 //Se batte solo giallo (Orchestra)
 //Se batte solo viola (FlautoDolce)
 //Se blu non batte nessuno dei due (Ocarina)
 //((Queste tre ultime scelte son create con la logica di dire che è sempre meno grave se il blu si avvicina a una delle soluzioni più adatte a Chitarra)
-//Lascio un "else" nel caso in cui tutti e tre i colori fossero pari, e quindi è nella media.
 
+ //Svuoto il valore per sicurezza
+ ~ firstCharacterState = ()
+ 
     {
         //Blu colore più usato
         - (firstBlue > firstGreen) && (firstBlue > firstRed) && (firstBlue > firstYellow) && (firstBlue > firstPurple):
-            ~ firstCharacterPossibleStates += Triangolo
+            ~ firstCharacterState += Triangolo
                 ->->
         //Rosso colore più usato        
         - (firstRed > firstGreen) && (firstRed > firstBlue) && (firstRed > firstYellow) && (firstRed > firstPurple):
-            ~ firstCharacterPossibleStates += RagazzaOrchestra
+            ~ firstCharacterState += RagazzaOrchestra
                 ->->
         
         //Verde colore più usato        
         - (firstGreen > firstBlue) && (firstGreen > firstRed) && (firstGreen > firstYellow) && (firstGreen > firstPurple):
-            ~ firstCharacterPossibleStates += FlautoDolce    
+            ~ firstCharacterState += FlautoDolce    
                 ->->
         
         //Giallo colore più usato        
         - (firstYellow > firstGreen) && (firstYellow > firstRed) && (firstYellow > firstBlue) && (firstYellow > firstPurple):
-            ~ firstCharacterPossibleStates += Ocarina   
+            ~ firstCharacterState += Ocarina   
                 ->->
         
         //Viola colore più usato        
         - (firstPurple > firstGreen) && (firstPurple > firstRed) && (firstPurple > firstYellow) && (firstPurple > firstBlue):
-            ~ firstCharacterPossibleStates += Violino    
+            ~ firstCharacterState += Violino    
                 ->->
                 
         - else:
             {
                 - (firstPurple < firstBlue) && (firstYellow < firstBlue):
-                        ~ firstCharacterPossibleStates += Triangolo
+                        ~ firstCharacterState += Triangolo
                         ->->
                 - firstPurple && firstYellow > firstBlue:
-                        ~ firstCharacterPossibleStates += Ocarina   
+                        ~ firstCharacterState += Ocarina   
                         ->->
                 - (firstYellow > firstBlue) && (not firstPurple > firstBlue):
-                        ~ firstCharacterPossibleStates += RagazzaOrchestra
+                        ~ firstCharacterState += RagazzaOrchestra
                             ->->
                 - (firstPurple > firstBlue) && (not firstYellow > firstBlue):
-                        ~ firstCharacterPossibleStates += FlautoDolce 
+                        ~ firstCharacterState += FlautoDolce 
                             ->->
                 - else:
-                        ~ firstCharacterPossibleStates += RagazzaOrchestra
+                        ~ firstCharacterState += RagazzaOrchestra
                             ->->
             }
         }

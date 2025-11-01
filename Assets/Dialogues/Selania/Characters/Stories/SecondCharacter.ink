@@ -2027,46 +2027,33 @@
     E lo voglio come mio nuovo nome.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
 
         {
-            - secondCharacterPossibleStates has Riccio:
-                Quell'animale è il <b><i>Riccio</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#portrait:riccio_neutral
-                Perché l'unico modo per sopravvivere è difendersi da tutto.
-            
-            - secondCharacterPossibleStates has Grizzly:
-                    ~ secondCharacterState = ()
-                    ~ secondCharacterState += Grizzly
-                Il mio vero nome è <b><i>Grizzly</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
+
+            - secondCharacterState has Grizzly:
+                Il mio vero nome è <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
                 Combatterò la mia paura e diventerò il più forte di tutti, imbattibile!
             
-            - secondCharacterPossibleStates has Lupo:
-                    ~ secondCharacterState = ()
-                    ~ secondCharacterState += Lupo
-                Mi chiamerò <b><i>Lupo</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
+            - secondCharacterState has Lupo:
+                Mi chiamerò <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_angry
                 E proteggerò il mio branco.
                 Mamma, papà, nonna e mio fratello.
                 Nessuna delle persone a cui voglio bene deve più stare male.
               
             
-            - secondCharacterPossibleStates has Delfino:
-                    ~ secondCharacterState = ()
-                    ~ secondCharacterState += Delfino 
-                E il mio nome è <b><i>Delfino</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
+            - secondCharacterState has Delfino:
+                E il mio nome è <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                 Se lo guardi bene tutto è un gioco.
                 La mia fantasia e le mie bugie aiuteranno le altre persone ad avere meno paura.
                                
             
-            - secondCharacterPossibleStates has Capibara:
-                    ~ secondCharacterState = ()
-                    ~ secondCharacterState += Capibara
-                Mi chiamerò <b><i>Capibara</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
+            - secondCharacterState has Capibara:
+                Mi chiamerò <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_emotional
                 E imparerò ad avere tantissimi amici.
                 Ci sentiremo meno soli!
                 E così avremo meno paura.
                     
             
-            - secondCharacterPossibleStates has Corvo:
-                    ~ secondCharacterState = ()
-                    ~ secondCharacterState += Corvo
-                Io sono <b><i>Corvo</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
+            - secondCharacterState has Corvo:
+                Io sono <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_energy
                 Sono sveglio e posso capire ciò che mi circonda!
                 E posso cambiare le cose che mi fanno paura.
                 Aiutare gli altri.
