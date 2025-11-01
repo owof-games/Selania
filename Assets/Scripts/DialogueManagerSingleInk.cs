@@ -421,15 +421,15 @@ public class DialogueManagerSingleInk : MonoBehaviour
     private TextMeshProUGUI[] GetChoiceTextMeshPros()
     {
         //Marco: copiatura elementi gestione bigDialogueMode per nestDialogueMode
-        return IsBigDialogueMode() ? choicesTextBig : choicesText;
-        return IsNestDialogueMode() ? choicesTextNest : choicesText;
+        //uguale a ink con |: se la prima condizione è vera la eseguo/stampo sennò passo alla successiva.
+        return IsBigDialogueMode() ? choicesTextBig : IsNestDialogueMode() ? choicesTextNest : choicesText;
+ 
     }
 
     private GameObject[] GetChoiceGameObjects()
     {
         //Marco: copiatura elementi gestione bigDialogueMode per nestDialogueMode
-        return IsBigDialogueMode() ? choicesBig : choices;
-        return IsNestDialogueMode() ? choicesNest : choices;
+        return IsBigDialogueMode() ? choicesBig : IsNestDialogueMode() ? choicesNest : choices;
     }
 
 
