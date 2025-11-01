@@ -1,4 +1,7 @@
 === emotional_words_management(action)
+    //Abilito il box di dialogo ad hoc per il Nest
+        ~ enableNestDialogue()
+
 //Questa è la funzione che usiamo sia per rimuovere che per attivare una parola posseduta.
 {nestDebug: emotional_words_management(action). Il valore di action è {action}.}
 
@@ -2225,16 +2228,20 @@
         }
  
  
-    
-    
+
     + [Ho cambiato idea]
     -
+    
     {
         - activeEmotionalWord != ():
             -> word_usage_counter ->
     }
     
+    //Disabilito il box di dialogo ad hoc per il Nest
+        ~ disableNestDialogue()
+    
     -> used_emotional_words_updater ->
+
 ->->
 
 //Utilizzato per capire quante volte posso usare una parola

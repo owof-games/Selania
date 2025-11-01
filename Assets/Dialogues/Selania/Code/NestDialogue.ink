@@ -5,3 +5,5 @@ VAR nestDialogue = false
 
 === function disableNestDialogue()
 ~ nestDialogue = false
+
+
