@@ -157,12 +157,6 @@
 //Settaggio nome quando partiamo con la discussione (non finale quindi)
 
 === firstNaming ===
-//Se ho un pareggio quindi c'è differenza se blu batte sia giallo che viola (Triangolo)
-//Se batte solo giallo (Orchestra)
-//Se batte solo viola (FlautoDolce)
-//Se blu non batte nessuno dei due (Ocarina)
-//((Queste tre ultime scelte son create con la logica di dire che è sempre meno grave se il blu si avvicina a una delle soluzioni più adatte a Chitarra)
-
  //Svuoto il valore per sicurezza
  ~ firstCharacterState = ()
  
