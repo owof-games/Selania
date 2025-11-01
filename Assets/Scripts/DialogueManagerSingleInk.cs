@@ -23,6 +23,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueTextBig;
     [SerializeField] private GameObject continueButtonBig;
 
+    //Marco: copiatura elementi gestione bigDialogueMode per nestDialogueMode
+    [SerializeField] private GameObject dialoguePanelNest;
+    [SerializeField] private TextMeshProUGUI dialogueTextNest;
+    [SerializeField] private GameObject continueButtonNest;
 
     [Header("Choices UI")] [SerializeField]
     private GameObject[] choices;
@@ -31,11 +35,17 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private GameObject[] choicesBig;
     private TextMeshProUGUI[] choicesTextBig;
 
+    //Marco: copiatura elementi gestione bigDialogueMode per nestDialogueMode
+    [SerializeField] private GameObject[] choicesNest;
+    private TextMeshProUGUI[] choicesTextNest;
 
     private Story story;
 
     [Header("Ink")] [SerializeField] private string[] allPlaces;
     [SerializeField] private string bigDialogueInkBoolVariable = "bigDialogue";
+
+    //Marco: copiatura elementi gestione bigDialogueMode per nestDialogueMode
+    [SerializeField] private string nestDialogueInkBoolVariable = "nestDialogue";
 
     [Header("Text elements")] [SerializeField]
     private TextAsset inkAssetJSON;
@@ -138,6 +148,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     {
         FillChoicesTextMeshPro(choices, ref choicesText);
         FillChoicesTextMeshPro(choicesBig, ref choicesTextBig);
+        FillChoicesTextMeshPro(choicesNest, ref choicesTextNest);
 
         story = new Story(inkAssetJSON.text);
 
@@ -238,6 +249,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
             // re-imposta lo stato di big dialogue
             story.variablesState[bigDialogueInkBoolVariable] = rewriterBookSavedIsBigDialogue;
 
+            //Marco: copiatura elementi gestione bigDialogueMode per nestDialogueMode
+            // re-imposta lo stato di nest dialogue
+            story.variablesState[nestDialogueInkBoolVariable] = rewriterBookSavedIsNestDialogue;
+            
             // simulo l'ultima riga, richiamando questo stesso metodo
             UpdateUI(rewriterBookSavedCurrentLine, rewriterBookSavedCurrentChoices);
             return;
@@ -248,6 +263,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
             EnableDialoguePanel();
             dialogueText.text = currentLine;
             dialogueTextBig.text = currentLine;
+            dialogueTextNest.text = currentLine;
             DisplayChoices(currentChoices);
             buttonsEnabled = false;
         }
@@ -269,11 +285,13 @@ public class DialogueManagerSingleInk : MonoBehaviour
         {
             continueButton.SetActive(true);
             continueButtonBig.SetActive(true);
+            continueButtonNest.SetActive(true);
         }
         else
         {
             continueButton.SetActive(false);
             continueButtonBig.SetActive(false);
+            continueButtonNest.SetActive(false);
         }
     }
 
@@ -338,6 +356,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
     private string rewriterBookSavedBackground;
     private string rewriterBookSavedMusic;
     private bool rewriterBookSavedIsBigDialogue;
+    //Marco: copiatura elementi gestione bigDialogueMode per nestDialogueMode
+    private bool rewriterBookSavedIsNestDialogue;
     private string rewriterBookSavedCurrentLine;
     private List<Choice> rewriterBookSavedCurrentChoices;
 
@@ -351,7 +371,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
         rewriterBookSavedMusic = lastMusicValue;
 
         // salvare anche dialog corrente + suo stato + scelte, nel caso sia attivo
+        //Marco: copiatura elementi gestione bigDialogueMode per nestDialogueMode
         rewriterBookSavedIsBigDialogue = (bool)story.variablesState[bigDialogueInkBoolVariable];
+        rewriterBookSavedIsNestDialogue = (bool)story.variablesState[nestDialogueInkBoolVariable];
         rewriterBookSavedCurrentLine = lastCurrentLine;
         rewriterBookSavedCurrentChoices = lastCurrentChoices;
         
@@ -398,14 +420,20 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     private TextMeshProUGUI[] GetChoiceTextMeshPros()
     {
+        //Marco: copiatura elementi gestione bigDialogueMode per nestDialogueMode
         return IsBigDialogueMode() ? choicesTextBig : choicesText;
+        return IsNestDialogueMode() ? choicesTextNest : choicesText;
     }
 
     private GameObject[] GetChoiceGameObjects()
     {
+        //Marco: copiatura elementi gestione bigDialogueMode per nestDialogueMode
         return IsBigDialogueMode() ? choicesBig : choices;
+        return IsNestDialogueMode() ? choicesNest : choices;
     }
 
+
+    
 
     //Nota: disabilitato per ora perché sennò non mi mette in evidenza la prima scelta.
     //Più avanti ci sarà la possibilità di risolvere questa cosa in modo complesso perché Unity merda
@@ -788,17 +816,34 @@ public class DialogueManagerSingleInk : MonoBehaviour
         return isBigDialogueMode;
     }
 
+//Marco: copiatura elementi gestione bigDialogueMode per nestDialogueMode
+    private bool IsNestDialogueMode()
+    {
+        var IsNestDialogueMode = (bool)story.variablesState[nestDialogueInkBoolVariable];
+        return IsNestDialogueMode;
+    }
+    
+
     private void EnableDialoguePanel()
     {
-        if (IsBigDialogueMode())
+        //Marco: copiatura elementi gestione bigDialogueMode per nestDialogueMode
+        if (IsNestDialogueMode())
+        {
+            dialoguePanel.SetActive(false);
+            dialoguePanelBig.SetActive(false);
+            dialoguePanelNest.SetActive(true);
+        }
+        else if (IsBigDialogueMode())
         {
             dialoguePanel.SetActive(false);
             dialoguePanelBig.SetActive(true);
+            dialoguePanelNest.SetActive(false);
         }
         else
         {
             dialoguePanel.SetActive(true);
             dialoguePanelBig.SetActive(false);
+            dialoguePanelNest.SetActive(false);
         }
     }
 
@@ -806,6 +851,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     {
         dialoguePanel.SetActive(false);
         dialoguePanelBig.SetActive(false);
+        dialoguePanelNest.SetActive(false);
     }
 
     /*
