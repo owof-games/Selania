@@ -50,6 +50,9 @@
     VAR firstWritingPause = 0
     VAR firstWritingPauseDuration = 5
     
+//Moltiplicatore del colore per il personaggio
+    VAR FirstCharacterColorMultiplier = 3.0    
+    
 //STATI UP: Viola e Giallo.
 //STATI DOWN: Blu.
     VAR firstPurple = 0

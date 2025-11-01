@@ -1501,11 +1501,14 @@
          Mentre ti ascoltavo mi è nata una nuova canzone in testa.
          La canzone del mio nome.
             
-            //Prima chiamo l'aggiornamento nome, che così terrà conto SOLO delle scelte fatte in riscrittura
-            -> firstNaming ->
+            //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
+                -> color_modifier(FirstCharacter, FirstCharacterColorMultiplier) ->
             
-            //Poi aggiorniamo i colori, per la parte di passaggio da colori PNG a colori PG
-            -> update_colors(FirstCharacter) ->
+            //Poi aggiorniamo i colori, così il valore complessivo conta per la scelta del nome
+                -> update_colors(FirstCharacter) ->     
+     
+            //E infine genero il nome
+                -> firstNaming ->
             
             {
                 - firstCharacterState has Triangolo:
