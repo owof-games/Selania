@@ -1,58 +1,95 @@
 === emotional_words_creator
 //Qui è dove la giocatrice compie delle scelte e genera nuove parole
 {nestDebug: passo per emotional_words_creator.}
-        -> first_note
+        -> first_key
 
-        = first_note
+        = first_key
         Primo giro di scelte
+        
             + {are_two_entities_together(PG, redShell)}[redShell]
+            
+                @animation:RedShell
                 ~ firstKeyColour = redKey
+            
             + {are_two_entities_together(PG, yellowShell)}[yellowShell]
+            
+                @animation:YellowShell
                 ~ firstKeyColour = yellowKey
+            
             + {are_two_entities_together(PG, blueShell)}[blueShell]
+            
+                @animation:BlueShell
                 ~ firstKeyColour = blueKey
+            
             + {are_two_entities_together(PG, greenShell)}[greenShell]
+            
+                @animation:GreenShell
                 ~ firstKeyColour = greenKey
+            
             + {are_two_entities_together(PG, purpleShell)}[purpleShell]
+                
+                @animation:PurpleShell
                 ~ firstKeyColour = purpleKey
+            
             -
-            + [Continuo Sì]
-                -> second_note
-            + [Continuo No]
+        Vuoi suonare un'altra conchiglia?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}  
+            + [Sì]
+                -> second_key
+            + [No]
                 -> emotional_words_dispatcher
     
-        = second_note
+        = second_key
         Secondo giro di scelte
             + {are_two_entities_together(PG, redShell)}[redShell]
+            
+                @animation:RedShell
                 ~ secondKeyColour = redKey
             + {are_two_entities_together(PG, yellowShell)}[yellowShell]
+            
+                @animation:YellowShell
                 ~ secondKeyColour = yellowKey
             + {are_two_entities_together(PG, blueShell)}[blueShell]
+            
+                @animation:BlueShell
                 ~ secondKeyColour = blueKey
             + {are_two_entities_together(PG, greenShell)}[greenShell]
+            
+                @animation:GreenShell
                 ~ secondKeyColour = greenKey
             + {are_two_entities_together(PG, purpleShell)}[purpleShell]
+            
+                @animation:PurpleShell
                 ~ secondKeyColour = purpleKey
             -
-            + [Continuo Sì]
-                -> third_note
-            + [Continuo No]
+        Vuoi suonare un'altra conchiglia?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}   
+            + [Sì]
+                -> third_key
+            + [No]
                 -> emotional_words_dispatcher
 
-        = third_note
+        = third_key
         Terzo giro di scelte
             + {are_two_entities_together(PG, redShell)}[redShell]
+            
+                @animation:RedShell
                 ~ thirdKeyColour = redKey
             + {are_two_entities_together(PG, yellowShell)}[yellowShell]
+            
+                @animation:YellowShell
                 ~ thirdKeyColour = yellowKey
             + {are_two_entities_together(PG, blueShell)}[blueShell]
+            
+                @animation:BlueShell
                 ~ thirdKeyColour = blueKey
             + {are_two_entities_together(PG, greenShell)}[greenShell]
+            
+                @animation:GreenShell
                 ~ thirdKeyColour = greenKey
             + {are_two_entities_together(PG, purpleShell)}[purpleShell]
+            
+                @animation:PurpleShell
                 ~ thirdKeyColour = purpleKey
             -
-            + [Risultato]
                 -> emotional_words_dispatcher
 
 
@@ -63,7 +100,7 @@
     ~ firstKeyColour = ()
     ~ secondKeyColour = ()
     ~ thirdKeyColour = ()
-    {nestDebug: dopo il reset, i valori delle tre note sono {firstKeyColour} {secondKeyColour} {thirdKeyColour}.}
+    {nestDebug: dopo il reset, i valori delle tre key sono {firstKeyColour} {secondKeyColour} {thirdKeyColour}.}
 
     {
     
