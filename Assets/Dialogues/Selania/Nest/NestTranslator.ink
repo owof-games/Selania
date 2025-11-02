@@ -317,7 +317,7 @@
                 ~ return "nome parola"
                 
             - RossoBluGiallo: 
-                ~ return "nome parola"
+                ~ return "rosso-blu-giallo"
 
             - RossoVerdeBlu: 
                 ~ return "nome parola"

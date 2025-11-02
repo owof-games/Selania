@@ -24,6 +24,10 @@
 === function oggettoOggetti(list)
 	{LIST_COUNT(list) == 1:oggetto|oggetti}
 	
-    	
-            /* ---------------------------------	
-	
+=== function generic_list_with_commas(generic_list, -> element_translator)
+	{ generic_list:
+		{_generic_list_with_commas(generic_list, LIST_COUNT(generic_list), element_translator)}
+	}
+
+=== function _generic_list_with_commas(generic_list, n, -> element_translator)
+	{element_translator(pop(generic_list))}{ n > 1:{n == 2: e |, }{_generic_list_with_commas(generic_list, n-1, element_translator)}}

@@ -35,7 +35,7 @@
     
     //Se ho almeno una parola
     + {ownedEmotionalWords != ()} [Cosa ho nell'inventario?]
-            Hai con te {ownedEmotionalWords}.
+            Hai con te {generic_list_with_commas(ownedEmotionalWords, -> emotional_words_translator)}.
             -> emotional_inventory_management
 
     //Se ho appena scoperto una nuova parola e voglio aggiungerla:
