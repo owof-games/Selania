@@ -94,7 +94,7 @@ Arriviamo qui solo se non ci sono quest attive.
     
     }
     //Ripeto con le altre png
-
+    //E poi ci sono le cose autonome, tipo: ho già parlato di mindfulness con la mentore, per cui levo la missione associata (es: MissionOne) e aumento l'autonomyTracker
 
 ->->
 

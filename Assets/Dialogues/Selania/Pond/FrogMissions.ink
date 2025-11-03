@@ -64,14 +64,14 @@
 
 
 === special_mission_one
-    missione speciale uno
+    missione speciale uno: le special creano storylets ad hoc anche con le altre personagge, magari con un blocco di scelte
         
         ~ activeMissions += specialMissionOne
     -> main
     
     
 === special_mission_two
-    missione speciale due
+    missione speciale due: le special creano storylets ad hoc anche con le altre personagge, magari con un blocco di scelte
         
         ~ activeMissions += specialMissionTwo
     -> main
