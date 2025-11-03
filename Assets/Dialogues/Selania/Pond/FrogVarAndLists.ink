@@ -40,3 +40,12 @@
     //Devo poi tracciare la quantità di cose che rana mi può dare su una persona, e che sono per lo più legate a nodi, perché sono il dono giusto, le scelte giuste da dire, al max una formula utile per parlare con quella persona.
     VAR charOneGifts = ()
     VAR charTwoGifts = ()
+    
+                                    /* ---------------------------------
+                                    
+                                                Gestione riposo rana 
+                                    
+                                     ----------------------------------*/
+                                     
+    VAR tiredFrog = 0
+    VAR maxTiredFrog = 3

@@ -5,6 +5,8 @@
     //Altrimenti aggiorno la lista delle cose fatte in autonomia e poi procedo.
     -> discovered_things_updater ->
 
+
+- (top)
 Qui la rana ci saluta.
 Arriviamo qui solo se non ci sono quest attive.
 
@@ -96,7 +98,7 @@ Arriviamo qui solo se non ci sono quest attive.
     //Ripeto con le altre png
     //E poi ci sono le cose autonome, tipo: ho già parlato di mindfulness con la mentore, per cui levo la missione associata (es: MissionOne) e aumento l'autonomyTracker
 
-->->
+-> welcoming_frog.top
 
 
 === autonomy_mission_verify ===
@@ -133,27 +135,6 @@ Arriviamo qui solo se non ci sono quest attive.
     }
 
 ->->
-
-
-=== closed_mission_verify
-    {activeMissions:
-        //Qui la logica da implementare sarà: se le condizione è stata risolta (es: nodo attraversato) allora svuoto activeMissions (~ activeMissions == ()) e tolgo la missione da availableMissions, e invio la giocatrice alla parte del dono, altrimenti ho un reminder che mi ricorda di fare la missione.
-        - missionOne:
-        - missionTwo:
-        - missionThree:
-        - missionFour:
-        - missionFive:
-        - missionSix:
-        - missionSeven:
-        - specialMissionOne:
-        - specialMissionTwo:
-        - else:
-            //Vuol dire che non ci sono missioni attive
-            ->->
-
-    }
-->->
-
 
 
 
@@ -222,6 +203,43 @@ Arriviamo qui solo se non ci sono quest attive.
                 
         }
     
-    
-    
 ->->
+
+
+
+=== closed_mission_verify
+{frogDebug: passo da closed_mission_verify.}
+    {activeMissions:
+        //Qui la logica da implementare sarà: se le condizione è stata risolta (es: nodo attraversato) allora svuoto activeMissions (~ activeMissions == ()) e tolgo la missione da availableMissions, e invio la giocatrice alla parte del dono, altrimenti ho un reminder che mi ricorda di fare la missione.
+        - missionOne:
+        - missionTwo:
+        - missionThree:
+        - missionFour:
+        - missionFive:
+        - missionSix:
+        - missionSeven:
+        - specialMissionOne:
+        - specialMissionTwo:
+        - else:
+            //Vuol dire che non ci sono missioni attive e posso proporne di nuove, se la rana non risulterà stanca
+                -> tired_frog 
+    }
+->->
+
+=== tired_frog
+{frogDebug: passo da tired_frog.}
+ ~ temp dice = RANDOM(1,6)
+
+{
+    - dice == 6:
+        ~ tiredFrog = maxTiredFrog
+        -> top
+    
+    - else:
+        -> discovered_things_updater
+}
+    
+- (top)
+Frasi random di una rana affaticata
+
+-> main

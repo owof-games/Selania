@@ -289,6 +289,8 @@
     
     ~ lastMindfulness --
     
+    ~ tiredFrog --
+    
 //Aumento di contatori:
 
     //Contatore spostamenti PG
