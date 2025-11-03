@@ -229,6 +229,7 @@ Arriviamo qui solo se non ci sono quest attive.
 === tired_frog
 {frogDebug: passo da tired_frog.}
  ~ temp dice = RANDOM(1,6)
+ TODO: evitare questo step se è la prima volta che parliamo con la rana
 
 {
     - dice == 6:
