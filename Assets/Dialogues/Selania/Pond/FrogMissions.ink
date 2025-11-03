@@ -61,3 +61,24 @@
         
         ~ activeMissions += missionSeven
     -> main
+
+
+=== special_mission_one
+    missione speciale uno
+        
+        ~ activeMissions += specialMissionOne
+    -> main
+    
+    
+=== special_mission_two
+    missione speciale due
+        
+        ~ activeMissions += specialMissionTwo
+    -> main
+    
+=== purple_shell_quest
+Ci verrà data la nota viola
+~ move_entity(purpleShell, Nest)
+
+-> main
+    

@@ -5,13 +5,13 @@
                                      ----------------------------------*/
 
     //Lista di tutto ciò che può generare una missione
-    LIST missionAboutChar = missionCharOne, missionCharTwo, missionCharThree, missionCharFour, missionCharFive, missionObjects
+    LIST missionAboutChar = missionCharOne, missionCharTwo, missionCharThree, missionCharFour, missionCharFive, missionObjects, specialDelivery
     
     //Lista di tutte le missioni che la rana può offrire, e quelle completate. Nota: missionOne etc son nomi temporanei, che verranno aggiornati man mano che le creo
-    LIST allMissions = missionOne, missionTwo, missionThree, missionFour, missionFive, missionSix, missionSeven
+    LIST allMissions = missionOne, missionTwo, missionThree, missionFour, missionFive, missionSix, missionSeven, specialMissionOne, specialMissionTwo
         //Separo la lista totale da quelle disponibili anche per un discorso di TW
     VAR availableMissions = (missionOne, missionTwo, missionThree, missionFour, missionFive, missionSix, missionSeven)
-    
+    VAR availableSpecialMissions = (specialMissionOne, specialMissionTwo)
     
     VAR currentMissionAboutChar = ()
     VAR activeMissions = ()
@@ -23,6 +23,7 @@
     
     VAR diceFrog = 0
     VAR maxValueDice = ()
+    VAR maxSpecialValueDice = ()
 
 
 

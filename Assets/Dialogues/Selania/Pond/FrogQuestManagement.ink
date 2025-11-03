@@ -46,6 +46,11 @@ Arriviamo qui solo se non ci sono quest attive.
     + [Oggetti]
          ~  currentMissionAboutChar = missionObjects
             -> autonomy_mission_verify
+    
+    + [Sorprendimi]
+        ~  currentMissionAboutChar = specialDelivery
+            //Per queste non passiamo mai dalla verifica dell'autonomia.
+            -> missions_dispatcher ->
     -
 
 3. A quest finita pesco da una lista di cose legate alla persona.
@@ -140,6 +145,8 @@ Arriviamo qui solo se non ci sono quest attive.
         - missionFive:
         - missionSix:
         - missionSeven:
+        - specialMissionOne:
+        - specialMissionTwo:
         - else:
             //Vuol dire che non ci sono missioni attive
             ->->
@@ -153,6 +160,7 @@ Arriviamo qui solo se non ci sono quest attive.
 
 === missions_dispatcher ===
 {frogDebug: passo da missions_dispatcher.}
+{frogDebug: currentMissionAboutChar == {currentMissionAboutChar}.}
 //Alla fine le missioni sono scollegate dai doni, e sono letteralmente scritte secondo bisogno.
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
@@ -160,33 +168,60 @@ Arriviamo qui solo se non ci sono quest attive.
     ~ temp charNameFour = translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
 
-    //Dato che no mi fa fare questa cosa direttamente nella variabile, provo così.
-    ~ maxValueDice = (LIST_COUNT(allMissions))
-
-    - (top)
-    //Tiro il dado
-    ~ diceFrog = RANDOM(1,maxValueDice)
-    
-    {diceFrog:
-    
-        - 1 && not mission_one:
-            -> mission_one
-        - 2 && not mission_two:
-            -> mission_two
-        - 3 && not mission_three:
-            -> mission_three
-        - 4 && not mission_four:
-            -> mission_four
-        - 5 && not mission_five:
-            -> mission_five
-        - 6 && not mission_six:
-            -> mission_six
-        - 7 && not mission_seven:
-            -> mission_seven
+    {currentMissionAboutChar:
+        - specialDelivery:
+            -> specialTop
         - else:
-            {frogDebug: il valore di diceFrog è {diceFrog}, e la missione associata è già stata fatta. Ritiro il dado.}
             -> top
-            
+    
     }
+
+
+        - (top)
+        //Dato che no mi fa fare questa cosa direttamente nella variabile, provo così.
+        ~ maxValueDice = (LIST_COUNT(allMissions))
+        
+        //Tiro il dado
+        ~ diceFrog = RANDOM(1,maxValueDice)
+        
+        {diceFrog:
+        
+            - 1 && not mission_one:
+                -> mission_one
+            - 2 && not mission_two:
+                -> mission_two
+            - 3 && not mission_three:
+                -> mission_three
+            - 4 && not mission_four:
+                -> mission_four
+            - 5 && not mission_five:
+                -> mission_five
+            - 6 && not mission_six:
+                -> mission_six
+            - 7 && not mission_seven:
+                -> mission_seven
+            - else:
+                {frogDebug: il valore di diceFrog è {diceFrog}, e la missione associata è già stata fatta. Ritiro il dado.}
+                -> top
+                
+        }
+    
+    - (specialTop)
+    ~ maxSpecialValueDice = (LIST_COUNT(availableSpecialMissions))
+    ~ diceFrog = RANDOM(1,maxSpecialValueDice)
+         
+         {diceFrog:
+        
+            - 1 && not special_mission_one:
+                -> special_mission_one
+            - 2 && not special_mission_two:
+                -> special_mission_two
+            - else:
+                {frogDebug: il valore di diceFrog è {diceFrog}, e la missione associata è già stata fatta. Ritiro il dado.}
+                -> top
+                
+        }
+    
+    
     
 ->->
