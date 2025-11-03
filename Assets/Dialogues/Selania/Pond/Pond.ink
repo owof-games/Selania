@@ -12,6 +12,10 @@
 
     -> main
 
+//Debug della rana
+    + {debug_test_frog} [FrogDebug]
+        -> welcoming_frog
+
 
 === the_frog
     ~ temp charNameTwo = translator(secondCharacterState)

@@ -5,8 +5,7 @@ LIST quests = mindQuest, witchTalk
 VAR questActive = ()
 
 === new_frog ===
- -> check_quest-> helping_frog
- 
+->->
     
 
 === helping_frog
@@ -72,16 +71,6 @@ Hai bisogno di una mano?
 
 
 
-=== check_quest ===
-{
-
-    - questActive != ():
-        -> quest_remind
-        
-    - else:
-        -> random_quest
-
-}
 
 === random_quest ===
 
