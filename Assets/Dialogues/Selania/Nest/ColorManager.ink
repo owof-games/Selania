@@ -1262,65 +1262,65 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
  
                 //Varianti monocolore
                     - redWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - yellowWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - bluWords  has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - greenWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - purpleWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 
                 //Varianti a dominante Rosso
                     - redYellowWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - redBlueWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - redGreenWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - redPurpleWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 
                 //Varianti a dominante Giallo
                     - yellowRedWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - yellowBlueWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - yellowGreenWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - yellowPurpleWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 
                 //Varianti a dominate blu
                     - blueRedWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - blueYellowWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - blueGreenWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - bluePurpleWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 
                 //Varianti a dominante verde
                     - greenRedWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - greenYellowWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - greenBlueWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - greenPurpleWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                 
                 //Varianti a dominante viola
                     - purpleRedWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - purpleYellowWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - purpleBlueWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
                     - purpleGreenWords has activeEmotionalWord:
-                        Reazione Chitarra alla presenza di {activeEmotionalWord}.
+                        Reazione Chitarra alla presenza di {activeEmotionalWord}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
             }
         
         
@@ -1333,65 +1333,65 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
  
                 //Varianti monocolore
                     - redWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - yellowWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - bluWords  has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - greenWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - purpleWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 
                 //Varianti a dominante Rosso
                     - redYellowWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - redBlueWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - redGreenWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - redPurpleWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 
                 //Varianti a dominante Giallo
                     - yellowRedWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - yellowBlueWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - yellowGreenWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - yellowPurpleWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 
                 //Varianti a dominate blu
                     - blueRedWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - blueYellowWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - blueGreenWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - bluePurpleWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 
                 //Varianti a dominante verde
                     - greenRedWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - greenYellowWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - greenBlueWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - greenPurpleWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 
                 //Varianti a dominante viola
                     - purpleRedWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - purpleYellowWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - purpleBlueWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     - purpleGreenWords has activeEmotionalWord:
-                        Reazione Riccio alla presenza di {activeEmotionalWord}.
+                        Reazione Riccio alla presenza di {activeEmotionalWord}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             }
         
         
@@ -1404,65 +1404,65 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
  
                 //Varianti monocolore
                     - redWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - yellowWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - bluWords  has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - greenWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - purpleWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 
                 //Varianti a dominante Rosso
                     - redYellowWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - redBlueWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - redGreenWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - redPurpleWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 
                 //Varianti a dominante Giallo
                     - yellowRedWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - yellowBlueWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - yellowGreenWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - yellowPurpleWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 
                 //Varianti a dominate blu
                     - blueRedWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - blueYellowWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - blueGreenWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - bluePurpleWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 
                 //Varianti a dominante verde
                     - greenRedWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - greenYellowWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - greenBlueWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - greenPurpleWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 
                 //Varianti a dominante viola
                     - purpleRedWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - purpleYellowWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - purpleBlueWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                     - purpleGreenWords has activeEmotionalWord:
-                        Reazione Mentore alla presenza di {activeEmotionalWord}.
+                        Reazione Mentore alla presenza di {activeEmotionalWord}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
             }
         
             
