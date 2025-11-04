@@ -1,3 +1,5 @@
+LIST speakersForEwWordTag = Influenced, Other
+
 /* ---------------------------------
 
    Funzioni per la gestione del tag del nome 
@@ -109,24 +111,32 @@
     }
   
   
-=== function em_state
-    {
-        //Se c'è una parola attiva
-        - activeEmotionalWord != ():
-            {
-                //E ci sono utilizzi multipli a disposizione
-                - temporaryWordUsageCounter > 1:
-                    ~ return "{emotional_words_translator(activeEmotionalWord)}: {temporaryWordUsageCounter} usi disponibili."
-                
-                //Altrimenti:
-                - temporaryWordUsageCounter == 1:
-                    ~ return "{emotional_words_translator(activeEmotionalWord)}: {temporaryWordUsageCounter} uso disponibile."  
-            }
+=== function em_state(speaker)
+//Creare esclusione per: strega, PNG, Rana, Mentore non in dialogo personale
+{speaker:
+    - Influenced:
+        {
+            //Se c'è una parola attiva
+            - activeEmotionalWord != ():
+                {
+                    //E ci sono utilizzi multipli a disposizione
+                    - temporaryWordUsageCounter > 1:
+                        ~ return "{emotional_words_translator(activeEmotionalWord)}, {temporaryWordUsageCounter} usi disponibili."
+                    
+                    //Altrimenti:
+                    - temporaryWordUsageCounter == 1:
+                        ~ return "{emotional_words_translator(activeEmotionalWord)}, {temporaryWordUsageCounter} uso disponibile."  
+                }
+            
+            - else:
+                ~ return ""
         
-        - else:
-            ~ return ""
+        }
     
-    } 
+    - Other:
+        ~ return ""
+    
+}    
     
 /* ---------------------------------
 

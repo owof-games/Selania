@@ -25,13 +25,13 @@
     
     + {are_two_entities_together(PG, RoomExit) && (not debugStochastic)} [RoomExit]
     
-            Salutiamo {name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()} 
+            Salutiamo {name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()} 
             Se {name} sta per lasciare il prototipo, {pronouns has him:lo|{pronouns has her:la|lə}} invitiamo a segnarsi questo codice, da riportare sul documento di testing.
             Il codice è {playerPurple} - {playerYellow} - {playerBlue} - {playerGreen}- {playerRed}; {playerFirstStory}; {playerSecondStory}; {firstCharacterState}; {secondCharacterState}.
             Grazie di cuore.
             
                 + + [Voglio chiudere <i>Selanìa</i>.]
-                    A presto, {name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                    A presto, {name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                     @quit
                     -> END
                     

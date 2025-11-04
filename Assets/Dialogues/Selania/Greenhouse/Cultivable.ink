@@ -1221,7 +1221,7 @@
     }
     @animation:Inventory
     
-    {~ Hai raccolto|Hai ricevuto in dono|Tra le dita ti ritrovi|Nello zaino ora hai|Eccoti in dono|Eccoti} {ingredientTranslator(chosenCultivable)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+    {~ Hai raccolto|Hai ricevuto in dono|Tra le dita ti ritrovi|Nello zaino ora hai|Eccoti in dono|Eccoti} {ingredientTranslator(chosenCultivable)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
     ~ findedGifts += chosenCultivable
     ~ growing = 0

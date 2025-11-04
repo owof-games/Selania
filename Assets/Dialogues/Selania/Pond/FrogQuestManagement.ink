@@ -7,18 +7,18 @@
 
 
 - (top)
-Qui la rana ci saluta.
-Arriviamo qui solo se non ci sono quest attive.
+Qui la rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+Arriviamo qui solo se non ci sono quest attive.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 
 
     + {firstStory == StoryStarted} [Chitarra]
         ~  currentMissionAboutChar = missionCharOne
         {
             - LIST_COUNT(allCharOneGifts - charOneGifts) >0:
-                Ho ancora qualcosa da donare.
-                Vado alla gestione missione
+                Ho ancora qualcosa da donare.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Vado alla gestione missione#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             - else:
-                Temo tu sappia già tutto su questo personaggio
+                Temo tu sappia già tutto su questo personaggio#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         }
             -> autonomy_mission_verify
         
@@ -26,10 +26,10 @@ Arriviamo qui solo se non ci sono quest attive.
         ~  currentMissionAboutChar = missionCharTwo
         {
             - LIST_COUNT(allCharTwoGifts - charTwoGifts) >0:
-                Ho ancora qualcosa da donare.
-                Vado alla gestione missione
+                Ho ancora qualcosa da donare.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Vado alla gestione missione#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             - else:
-                Temo tu sappia già tutto su questo personaggio
+                Temo tu sappia già tutto su questo personaggio#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         }
             -> autonomy_mission_verify
         
@@ -54,11 +54,6 @@ Arriviamo qui solo se non ci sono quest attive.
             //Per queste non passiamo mai dalla verifica dell'autonomia.
             -> missions_dispatcher ->
     -
-
-3. A quest finita pesco da una lista di cose legate alla persona.
-4. Per cui mi conviene tenere traccia su chi è stato manifestato l'interesse.
-    
-
 
 ->->
 
@@ -108,8 +103,8 @@ Arriviamo qui solo se non ci sono quest attive.
 
     {
         - autonomyMissionsTracker >= autonomyMissionsGifter:
-            Woah, stai facendo un sacco di cose in autonomia!
-            Per cui ti aiuto senza chiederti di fare cose.
+            Woah, stai facendo un sacco di cose in autonomia!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+            Per cui ti aiuto senza chiederti di fare cose.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             {
                 - missionCharOne:
                 - missionCharTwo:
@@ -120,7 +115,7 @@ Arriviamo qui solo se non ci sono quest attive.
             }
         
         - availableMissions == ():
-            Non ho più missioni da offrirti, ma hai bisogno di me, per cui ti aiuterò!
+            Non ho più missioni da offrirti, ma hai bisogno di me, per cui ti aiuterò!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             {
                 - missionCharOne:
                 - missionCharTwo:
@@ -241,6 +236,6 @@ Arriviamo qui solo se non ci sono quest attive.
 }
     
 - (top)
-Frasi random di una rana affaticata
+Frasi random di una rana affaticata#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 
 -> main

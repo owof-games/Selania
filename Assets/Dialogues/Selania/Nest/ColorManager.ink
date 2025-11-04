@@ -1478,7 +1478,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
             
                 {
                     - temporaryWordUsageCounter == 0:
-                    L'effetto di {activeEmotionalWord} si è esaurito.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+                    L'effetto di {activeEmotionalWord} si è esaurito.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                         ~ activeEmotionalWord = ()
                 }
         

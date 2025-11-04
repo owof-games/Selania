@@ -6,7 +6,7 @@
 
     {
         - bedroom == 1:
-            Un letto è comparso, e attende chi ha bisogno di riposare.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+            Un letto è comparso, e attende chi ha bisogno di riposare.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 -> main
 
     }        
@@ -16,9 +16,9 @@
 
 === settings_management
     + {are_two_entities_together(PG, settings)} [settings]
-        In futuro qui troverai le impostazioni.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+        In futuro qui troverai le impostazioni.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             -> main
             
     + {are_two_entities_together(PG, SettingsBookVersion)} [SettingsBookVersion]
-    In futuro qui troverai le impostazioni.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+    In futuro qui troverai le impostazioni.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             -> rewriter_book_with_flow

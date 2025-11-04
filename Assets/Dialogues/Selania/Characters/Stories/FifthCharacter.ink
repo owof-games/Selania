@@ -60,7 +60,7 @@
 
 === talk_with_fifth_character ===
 ~ temp charNameFive = translator(fifthCharacterState)
-C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
 
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_fifth_character

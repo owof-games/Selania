@@ -51,7 +51,7 @@
 
 ~  tempRecipeName = "{recipeNoun} {recipeAdjective} {recipeComplement} {recipePP}"
 
-{name} ha cucinato {tempRecipeName}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+{name} ha cucinato {tempRecipeName}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     -> recipe_name_storage ->
 
 //Svuoto i nomi

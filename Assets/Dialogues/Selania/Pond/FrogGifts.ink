@@ -20,19 +20,19 @@
     = char_one_gifts
     //Chitarra
         + {firstGift == ()} Coltivabile adatto:
+            Se non lo hai già: viene messo in priorità di crescita in serra#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+            Se lo hai già e non lo hai usato: ti viene data una dritta#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+            Se lo hai già e lo hai usato altrove: te ne viene dato un altro (ma solo uno per gioco)
+            
+        + {!ending_cooking_with_first_char} Suggerimento per ultimo ingrediente:#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             Se non lo hai già: viene messo in priorità di crescita in serra
             Se lo hai già e non lo hai usato: ti viene data una dritta
             Se lo hai già e lo hai usato altrove: te ne viene dato un altro (ma solo uno per gioco)
             
-        + {!ending_cooking_with_first_char} Suggerimento per ultimo ingrediente:
-            Se non lo hai già: viene messo in priorità di crescita in serra
-            Se lo hai già e non lo hai usato: ti viene data una dritta
-            Se lo hai già e lo hai usato altrove: te ne viene dato un altro (ma solo uno per gioco)
-            
-        + {playerAccessiblePlaces has Nest} Parola magica adatta
+        + {playerAccessiblePlaces has Nest} Parola magica adatta#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             A prescindere: ti viene suggerito un secondo o terzo colore (mai il primo). Cambia il testo in base a se non la hai già, se lo hai già e non lo hai usato, se lo hai già e lo hai usato altrove: te ne viene dato un altro (ma solo uno per gioco).
         
-        + Conversazioni speciali es: storylet che avviene se due png sono vicine, o un racconto da leggere per poterne parlare con una PNG (Ti viene consigliato di continuare ad esplorare un certo tipo di tema.). Non sono mai info dirette.
+        + Conversazioni speciali es: storylet che avviene se due png sono vicine, o un racconto da leggere per poterne parlare con una PNG (Ti viene consigliato di continuare ad esplorare un certo tipo di tema.). Non sono mai info dirette.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         -   
         -> main
     
@@ -40,19 +40,19 @@
     = char_two_gifts
     //Riccio
         + {secondGift == ()} Coltivabile adatto:
-            Se non lo hai già: viene messo in priorità di crescita in serra
+            Se non lo hai già: viene messo in priorità di crescita in serra#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             Se lo hai già e non lo hai usato: ti viene data una dritta
             Se lo hai già e lo hai usato altrove: te ne viene dato un altro (ma solo uno per gioco)
             
         + {!ending_cooking_with_second_char} Suggerimento per ultimo ingrediente:
-            Se non lo hai già: viene messo in priorità di crescita in serra
+            Se non lo hai già: viene messo in priorità di crescita in serra#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             Se lo hai già e non lo hai usato: ti viene data una dritta
             Se lo hai già e lo hai usato altrove: te ne viene dato un altro (ma solo uno per gioco)
             
         + {playerAccessiblePlaces has Nest} Parola magica adatta
-            A prescindere: ti viene suggerito un secondo o terzo colore (mai il primo). Cambia il testo in base a se non la hai già, se lo hai già e non lo hai usato, se lo hai già e lo hai usato altrove: te ne viene dato un altro (ma solo uno per gioco).
+            A prescindere: ti viene suggerito un secondo o terzo colore (mai il primo). Cambia il testo in base a se non la hai già, se lo hai già e non lo hai usato, se lo hai già e lo hai usato altrove: te ne viene dato un altro (ma solo uno per gioco).#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         
-        + Conversazioni speciali es: storylet che avviene se due png sono vicine, o un racconto da leggere per poterne parlare con una PNG (Ti viene consigliato di continuare ad esplorare un certo tipo di tema.). Non sono mai info dirette.
+        + Conversazioni speciali es: storylet che avviene se due png sono vicine, o un racconto da leggere per poterne parlare con una PNG (Ti viene consigliato di continuare ad esplorare un certo tipo di tema.). Non sono mai info dirette.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             
         - 
         -> main
