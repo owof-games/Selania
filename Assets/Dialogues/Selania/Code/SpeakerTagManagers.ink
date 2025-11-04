@@ -107,7 +107,26 @@
             ~ return "{name}"
     
     }
+  
+  
+=== function em_state
+    {
+        //Se c'è una parola attiva
+        - activeEmotionalWord != ():
+            {
+                //E ci sono utilizzi multipli a disposizione
+                - temporaryWordUsageCounter > 1:
+                    ~ return "{emotional_words_translator(activeEmotionalWord)}: {temporaryWordUsageCounter} usi disponibili."
+                
+                //Altrimenti:
+                - temporaryWordUsageCounter == 1:
+                    ~ return "{emotional_words_translator(activeEmotionalWord)}: {temporaryWordUsageCounter} uso disponibile."  
+            }
+        
+        - else:
+            ~ return ""
     
+    } 
     
 /* ---------------------------------
 

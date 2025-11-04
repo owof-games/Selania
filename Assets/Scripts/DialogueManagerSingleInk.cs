@@ -58,6 +58,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private Animator inkAnimatorC;
     [SerializeField] private Animator inkAnimatorD;
 
+    //Elementi per la gestione delle parole emozionali
+    [SerializeField] private TextMeshProUGUI displayEWText;
 
     [Header("Background setting")] [SerializeField]
     private Image background;
@@ -143,6 +145,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
     private const string INK_TAG_B = "inkB";
     private const string INK_TAG_C = "inkC";
     private const string INK_TAG_D = "inkD";
+
+    //TAG USATO PER EMOTIONA WORD
+    private const string EW_TAG = "ewWord";
 
     void Start()
     {
@@ -493,8 +498,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     displayNameText.text = tagValue;
                     Debug.Log("speaker" + tagValue);
                     break;
-
-
+                
                 case PORTRAIT_TAG:
                     portraitAnimator.Play(tagValue);
                     Debug.Log("portrait" + tagValue);
@@ -519,6 +523,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     inkAnimatorD.Play(tagValue);
                     Debug.Log("inkD" + tagValue);
                     break;
+
+                case EW_TAG:
+                    displayEWText.text = tagValue;
+                    Debug.Log("ewWord" + tagValue);
+                    break;
+                    
 
                 default:
                     Debug.LogWarning("Tag came in but is not currently handled: " + tag);
