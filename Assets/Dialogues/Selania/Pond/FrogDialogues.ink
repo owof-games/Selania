@@ -64,9 +64,9 @@ Arriviamo qui solo se non ci sono quest attive.#speaker:{frog_tag()} #inkA:offSt
             -> autonomy_mission_verify
         
     
-    + [Ho bisogno di recuperare un oggetto che ho consumato]
-         ~  currentMissionAboutChar = missionObjects
-            -> autonomy_mission_verify
+    + {firstGift !=() or secondGift !=() or fourthIngredientNameFirstCharacter !=() or fourthIngredientNameSecondCharacter != ()}[Ho bisogno di recuperare una pianta che ho utilizzato.]
+        //Nota: per ora sono quattro massimi gli utilizzi di un coltivabile, per cui non serve un menu ad hoc. Poi capire come fare.
+            -> cultivable_recovery
     
     
     + {availableSpecialMissions != ()}[Sorprendimi]

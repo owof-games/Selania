@@ -415,3 +415,84 @@
 Frasi random di una rana affaticata#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 
 -> main
+
+
+=== cultivable_recovery
+{frogDebug: passo da cultivable_recovery.}
+Vorrei recuperare...
+
+    + {growthBaccaDellaAddolorata == stepThree && findedGifts hasnt BaccaDellaAddolorata} [{ingredientTranslator(BaccaDellaAddolorata)}]
+            ~  currentMissionAboutChar = missionObjects
+            ~  searchedCultivableRecovery = BaccaDellaAddolorata
+            -> autonomy_mission_verify
+            
+    + {growthBarbaDellInciampo == stepThree && findedGifts hasnt BarbaDellInciampo} [{ingredientTranslator(BarbaDellInciampo)}]
+            ~  currentMissionAboutChar = missionObjects
+            ~  searchedCultivableRecovery = BarbaDellInciampo
+            -> autonomy_mission_verify
+            
+    + {growthBastoneDellOzioso == stepThree && findedGifts hasnt BastoneDellOzioso}[{ingredientTranslator(BastoneDellOzioso)}]
+            ~  currentMissionAboutChar = missionObjects
+            ~  searchedCultivableRecovery = BastoneDellOzioso
+            -> autonomy_mission_verify
+            
+    + {growthBrinaDellImpossibile == stepThree && findedGifts hasnt BrinaDellImpossibile}[{ingredientTranslator(BrinaDellImpossibile)}]
+            ~  currentMissionAboutChar = missionObjects
+            ~  searchedCultivableRecovery = BrinaDellImpossibile
+            -> autonomy_mission_verify
+            
+    + {growthCantoDelleCompagne == stepThree && findedGifts hasnt CantoDelleCompagne} [{ingredientTranslator(CantoDelleCompagne)}]
+            ~  currentMissionAboutChar = missionObjects
+            ~  searchedCultivableRecovery = CantoDelleCompagne
+            -> autonomy_mission_verify
+            
+    + {growthCardoAspinato == stepThree && findedGifts hasnt CardoAspinato} [{ingredientTranslator(CardoAspinato)}]
+            ~  currentMissionAboutChar = missionObjects
+            ~  searchedCultivableRecovery = CardoAspinato
+            -> autonomy_mission_verify
+            
+    + {growthEderaDelleAmanti == stepThree && findedGifts hasnt EderaDelleAmanti} [{ingredientTranslator(EderaDelleAmanti)}]
+            ~  currentMissionAboutChar = missionObjects
+            ~  searchedCultivableRecovery = EderaDelleAmanti
+            -> autonomy_mission_verify
+            
+    + {growthErbaLiccia == stepThree && findedGifts hasnt ErbaLiccia} [{ingredientTranslator(ErbaLiccia)}]
+            ~  currentMissionAboutChar = missionObjects
+            ~  searchedCultivableRecovery = BaccaDellaAddolorata
+            -> autonomy_mission_verify
+            
+    + {growthFalsaPalude == stepThree && findedGifts hasnt FalsaPalude} [{ingredientTranslator(FalsaPalude)}]
+            ~  currentMissionAboutChar = missionObjects
+            ~  searchedCultivableRecovery = FalsaPalude
+            -> autonomy_mission_verify
+            
+    + {growthLanaNotturna == stepThree && findedGifts hasnt LanaNotturna} [{ingredientTranslator(LanaNotturna)}]
+            ~  currentMissionAboutChar = missionObjects
+            ~  searchedCultivableRecovery = LanaNotturna
+            -> autonomy_mission_verify
+            
+    + {growthLicheneDegliAbissi == stepThree && findedGifts hasnt LicheneDegliAbissi} [{ingredientTranslator(LicheneDegliAbissi)}]
+            ~  currentMissionAboutChar = missionObjects
+            ~  searchedCultivableRecovery = LicheneDegliAbissi
+            -> autonomy_mission_verify
+            
+    + {growthNonTiScordarDiTe == stepThree && findedGifts hasnt NonTiScordarDiTe} [{ingredientTranslator(NonTiScordarDiTe)}]
+            ~  currentMissionAboutChar = missionObjects
+            ~  searchedCultivableRecovery = NonTiScordarDiTe
+            -> autonomy_mission_verify
+            
+    + {growthOlobino == stepThree && findedGifts hasnt Olobino} [{ingredientTranslator(Olobino)}]
+            ~  currentMissionAboutChar = missionObjects
+            ~  searchedCultivableRecovery = Olobino
+            -> autonomy_mission_verify
+            
+    + {growthLaSpazzata == stepThree && findedGifts hasnt LaSpazzata} [{ingredientTranslator(LaSpazzata)}]
+            ~  currentMissionAboutChar = missionObjects
+            ~  searchedCultivableRecovery = LaSpazzata
+            -> autonomy_mission_verify
+            
+    
+    + [Ho cambiato idea.]
+        -> welcoming_frog.top
+    
+           

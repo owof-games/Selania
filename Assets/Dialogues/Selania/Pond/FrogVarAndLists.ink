@@ -39,6 +39,8 @@
     VAR charOneGifts = ()
     VAR charTwoGifts = ()
     
+    VAR searchedCultivableRecovery = ()
+    
                                     /* ---------------------------------
                                     
                                                 Gestione riposo rana 
