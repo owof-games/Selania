@@ -89,9 +89,34 @@
     VAR maxRandomCounter = 100
 
 //Variabili monitoraggio stato vegetali
-    VAR growing = 0    
+    VAR growing = 0 
+    
+//Gestione priorità coltivabili
+    VAR nextCultivable = ()
 
 === cultivable_test ===
+    {
+        - nextCultivable != ():
+            Sembra che la rana abbia messo qui le sue zampine.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            Ecco qualcosa che crescerà su sua richiesta.
+                ~ chosenCultivable = nextCultivable
+                
+            {debugCultivable or frogDebug: il valore di nextCultivable è {nextCultivable} e per questo skippo le domande. Ora chosenCultivable è = a {chosenCultivable}.}
+            
+                ~ nextCultivable = ()
+            {debugCultivable or frogDebug: svuoto nextCultivable, e il suo valore è {nextCultivable}.}
+            
+                -> list_to_crops
+        
+        - else:
+            {debugCultivable or frogDebug: il valore di nextCultivable è {nextCultivable} e per questo passo alle domande.}
+            
+            -> top
+    
+    }
+
+
+- (top)
 {~La serra ha qualcosa da svelarti.|I vasi hanno nuove domande.|La terra è fertile di risposte.|L'aria scompiglia ragnatele e capelli.|Sussurri serpeggiano tra i vasi, ponendoti domande.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     {
         - not are_two_entities_together(Inventory, PG): Hai trovato un dono: uno zainetto per raccogliere tutto ciò che coltiverai.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
