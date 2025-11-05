@@ -19,8 +19,9 @@
     = char_one_gifts
     //Chitarra
         {frogDebug: passo char_one_gifts.}
-        
-        + {firstGift == ()} [Vorrei sapere cosa donare a Chitarra.]
+        ~ charOneGifts += charOneCultivable
+       
+        * {firstGift == ()} [Vorrei sapere cosa donare a Chitarra.]
             {
                 - (findedGifts hasnt CantoDelleCompagne) && (findedGifts hasnt LanaNotturna) && (findedGifts hasnt NonTiScordarDiTe) && (growthCantoDelleCompagne != stepThree or growthLanaNotturna != stepThree or  growthNonTiScordarDiTe != stepThree):
                     Ancora non possiedi niente di adatto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -55,7 +56,9 @@
                 
             }
             
-        + {!ending_cooking_with_first_char} [Vorrei sapere cosa mettere come quarto ingrediente in cucina.]
+        * {!ending_cooking_with_first_char} [Vorrei sapere cosa mettere come quarto ingrediente in cucina.]
+        ~ charOneGifts += charOneCooking
+        
             {
                 - (findedGifts hasnt CantoDelleCompagne) && (findedGifts hasnt LanaNotturna) && (findedGifts hasnt NonTiScordarDiTe) && (growthCantoDelleCompagne != stepThree or growthLanaNotturna != stepThree or  growthNonTiScordarDiTe != stepThree):
                     Ancora non possiedi niente di adatto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -90,10 +93,16 @@
                 
             }
             
-        + {playerAccessiblePlaces has Nest} Parola magica adatta#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            A prescindere: ti viene suggerito un secondo o terzo colore (mai il primo). Cambia il testo in base a se non la hai già, se lo hai già e non lo hai usato, se lo hai già e lo hai usato altrove: te ne viene dato un altro (ma solo uno per gioco).
+        * {playerAccessiblePlaces has Nest} [Quali colori usare al nido.]
+            ~ charOneGifts += charOneEmotionalWord
+                Chitarra è una persona con idee molto sicure su tante cose.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Ma una cosa è certa: odia i discorsi troppo blu.
+                Hai già capito come far diminuire un colore?
+                Perché in questo modo potresti già avere la soluzione.
         
-        + Conversazioni speciali es: storylet che avviene se due png sono vicine, o un racconto da leggere per poterne parlare con una PNG (Ti viene consigliato di continuare ad esplorare un certo tipo di tema.). Non sono mai info dirette.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        * Conversazioni speciali 
+            ~ charTwoGifts += charTwoLibrary
+        es: storylet che avviene se due png sono vicine, o un racconto da leggere per poterne parlare con una PNG (Ti viene consigliato di continuare ad esplorare un certo tipo di tema.). Non sono mai info dirette.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         -   
         -> closed_exchange
     
@@ -103,7 +112,9 @@
     {frogDebug: passo char_two_gifts.}
     
     
-        + {secondGift == ()} [Vorrei sapere cosa donare a Riccio.]
+        * {secondGift == ()} [Vorrei sapere cosa donare a Riccio.]
+        ~ charTwoGifts += charTwoCultivable
+        
              {
                 - (findedGifts hasnt BastoneDellOzioso) && (findedGifts hasnt BrinaDellImpossibile) && (growthBastoneDellOzioso != stepThree or growthBrinaDellImpossibile != stepThree):
                     Ancora non possiedi niente di adatto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -135,7 +146,8 @@
                 
             }
             
-        + {!ending_cooking_with_second_char} [Vorrei sapere cosa mettere come quarto ingrediente in cucina.]
+        * {!ending_cooking_with_second_char} [Vorrei sapere cosa mettere come quarto ingrediente in cucina.]
+        ~ charTwoGifts += charTwoCooking
             {
                 - (findedGifts hasnt BastoneDellOzioso) && (findedGifts hasnt BrinaDellImpossibile) && (growthBastoneDellOzioso != stepThree or growthBrinaDellImpossibile != stepThree):
                     Ancora non possiedi niente di adatto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -167,10 +179,17 @@
                 
             }
             
-        + {playerAccessiblePlaces has Nest} Parola magica adatta
-            A prescindere: ti viene suggerito un secondo o terzo colore (mai il primo). Cambia il testo in base a se non la hai già, se lo hai già e non lo hai usato, se lo hai già e lo hai usato altrove: te ne viene dato un altro (ma solo uno per gioco).#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        
-        + Conversazioni speciali es: storylet che avviene se due png sono vicine, o un racconto da leggere per poterne parlare con una PNG (Ti viene consigliato di continuare ad esplorare un certo tipo di tema.). Non sono mai info dirette.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        * {playerAccessiblePlaces has Nest} [Quali colori usare al nido.]
+            ~ charTwoGifts += charTwoEmotionalWord
+                Riccio è una bella testolina.
+                E quello che posso dirti con certezza, è che apprezza la coerenza.
+                Lo fa sentire al sicuro.
+                Se hai capito come funziona l'alchimia del nido, sono sicuro che avrai già capito cosa fare.
+            
+            
+        * Conversazioni biblioteca 
+        ~ charTwoGifts += charTwoLibrary
+        es: storylet che avviene se due png sono vicine, o un racconto da leggere per poterne parlare con una PNG (Ti viene consigliato di continuare ad esplorare un certo tipo di tema.). Non sono mai info dirette.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             
         - 
         -> closed_exchange
