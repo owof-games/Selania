@@ -1,5 +1,5 @@
 === rules_recap
-+ {are_two_entities_together(RulesRecap, PG)} [RulesRecap]
++ (check){are_two_entities_together(RulesRecap, PG)} [RulesRecap]
 ~ enableBigDialogue()
     {
         - about_ink_usage:

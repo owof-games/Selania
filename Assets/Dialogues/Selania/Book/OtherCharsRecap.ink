@@ -1,5 +1,5 @@
 === frog_character_recap
-+ {are_two_entities_together(FrogRecap, PG)} [FrogRecap]
++ (check){are_two_entities_together(FrogRecap, PG)} [FrogRecap]
 ~ enableBigDialogue()
 C'è una rana bluastra dalle parti dello stagno, e sembra propensa a darmi consigli.
 {
@@ -21,7 +21,7 @@ dog
 
 
 === witch_character_recap
-+ {are_two_entities_together(WitchRecap, PG)} [WitchRecap]
++ (check){are_two_entities_together(WitchRecap, PG)} [WitchRecap]
 ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameThree = translator(thirdCharacterState)

@@ -5,7 +5,7 @@
  ----------------------------------*/
 
 === first_character_recap
-+ {are_two_entities_together(FirstRecap, PG)} [FirstRecap]
++ (check) {are_two_entities_together(FirstRecap, PG)} [FirstRecap]
 ~ enableBigDialogue()
 
 

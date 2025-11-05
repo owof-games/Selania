@@ -1,5 +1,5 @@
 === greenhouse_recap
-+ {are_two_entities_together(GreenhouseRecap, PG)} [GreenhouseRecap]
++ (check){are_two_entities_together(GreenhouseRecap, PG)} [GreenhouseRecap]
     ~ enableBigDialogue()
 
 {growing_check > 3: <b>Estratti da <i>"Funghi, licheni, muschi: fitomanzia ed erboristeria esoterica."</i> di M.M. - Bozza per la editor.</b> }

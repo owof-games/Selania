@@ -65,7 +65,7 @@
                     Ma posso fare una cosa: la prossima volta che inizierai a coltivare qualcosa in serra, crescerà un ingrediente adatto.
                     Fanne tesoro.
                         ~ nextCultivable = ()
-                        ~ nextCultivable = CantoDelleCompagne
+                        ~ nextCultivable = LanaNotturna
                         
                 -  findedGifts has CantoDelleCompagne or findedGifts hasnt LanaNotturna or findedGifts hasnt NonTiScordarDiTe:
                     Già lo possiedi: ti do un indizio.
@@ -174,7 +174,7 @@
                     Ma posso fare una cosa: la prossima volta che inizierai a coltivare qualcosa in serra, crescerà un dono adatto.
                     Fanne tesoro.
                         ~ nextCultivable = ()
-                        ~ nextCultivable = BastoneDellOzioso
+                        ~ nextCultivable = BrinaDellImpossibile
                         
                 -  findedGifts has BastoneDellOzioso or findedGifts hasnt BrinaDellImpossibile:
                     Già lo possiedi: ti do un indizio.

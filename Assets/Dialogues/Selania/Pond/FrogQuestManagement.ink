@@ -42,7 +42,7 @@
 
     //Missione uno: utilizzo del libro della riscrittora.
         {
-            - first_character_recap && second_character_recap && greenhouse_recap && rules_recap:
+            - first_character_recap.check && second_character_recap.check && greenhouse_recap.check && availableMissions has missionOne:
                 ~ availableMissions -= missionOne
                 
                 Stavo per chiederti di consultare in profondità il libro che ti è stato donato, ma ho visto che hai già fatto senza di me! Per cui: ecco il tuo dono!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -51,7 +51,7 @@
         
     //Missione due: coltivare almeno tre piante in serra.
         {
-            - LIST_COUNT(backupCultivable) < 12:
+            - LIST_COUNT(backupCultivable) < 12 && availableMissions has missionTwo:
                 ~ availableMissions -= missionTwo
                 
                 Stavo per chiederti di coltivare almeno tre piante in serra, ma ho visto che hai già fatto senza di me! Per cui: ecco il tuo dono!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -60,7 +60,7 @@
         
     //Missione tre: mindfulness
         {
-            - mindfulness:
+            - mindfulness && availableMissions has missionThree:
                 ~ availableMissions -= missionThree
                 Stavo per chiederti di parlare di benessere con Mentore, ma ho visto che hai già fatto senza di me! Per cui: ecco il tuo dono!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 -> frog_gift_dispatcher                      
@@ -68,7 +68,7 @@
         
     //Missione quattro: gossips 
         {
-            - little_storylets:
+            - little_storylets && availableMissions has missionFour:
                 ~ availableMissions -= missionFour
                 Stavo per chiederti di raccontare a Mentore le stranezze che hai incontrato in questo luogo, ma ho visto che hai già fatto in autonomia!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
@@ -78,7 +78,7 @@
         
     //Missione cinque: chiacchiere tra PNG 
         {
-            - first_second_chit_chat:
+            - first_second_chit_chat && availableMissions has missionFive:
                 ~ availableMissions -= missionFive
                 Stavo per dirti di provare a vedere cosa succede quando due persone sono vicine.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 E invece mi hai battuto, assistendo alla conversazione tra Chitarra e Riccio.
@@ -89,7 +89,7 @@
         
     //Missione sei: conoscere la strega
         {
-            - talking_witch.intro:
+            - talking_witch.intro && availableMissions has missionSix:
                 ~ availableMissions -= missionSix
                 Stavo per invitarti a parlare con l'albero della foresta, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
@@ -98,7 +98,7 @@
         
     //Missione sette: leggere una lettera
         {
-            - first_character_notes or second_character_notes:
+            - first_character_notes.check or second_character_notes.check && availableMissions has missionSeven:
                 ~ availableMissions -= missionSeven
                 Stavo per chiederti di leggere una delle lettere che hai ricevuto sulla bacheca, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
@@ -107,7 +107,7 @@
         
     //Missione otto: leggere un libro della biblioteca
         {
-            - readStories != ():
+            - readStories != () && availableMissions has missionEight:
                 ~ availableMissions -= missionEight
                 Stavo per chiederti di leggere una delle storie della biblioteca, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
@@ -149,10 +149,10 @@
 
         - (top)
         //Dato che no mi fa fare questa cosa direttamente nella variabile, provo così.
-        ~ maxValueDice = (LIST_COUNT(allMissions))
+        //~ maxValueDice = LIST_COUNT(allMissions)
         
         //Tiro il dado
-        ~ diceFrog = RANDOM(1,maxValueDice)
+        ~ diceFrog = RANDOM(1,8)
         
         {diceFrog:
         
@@ -179,8 +179,8 @@
         }
     
     - (specialTop)
-    ~ maxSpecialValueDice = (LIST_COUNT(availableSpecialMissions))
-    ~ diceFrog = RANDOM(1,maxSpecialValueDice)
+    //~ maxSpecialValueDice = (LIST_COUNT(availableSpecialMissions))
+    ~ diceFrog = RANDOM(1,2)
          
          {diceFrog:
         
@@ -208,7 +208,7 @@
         //Qui la logica da implementare sarà: se le condizione è stata risolta (es: nodo attraversato) allora svuoto activeMissions (~ activeMissions = ()) e tolgo la missione da availableMissions, e invio la giocatrice alla parte del dono, altrimenti ho un reminder che mi ricorda di fare la missione.
         - missionOne:
             {
-                - first_character_recap && second_character_recap && greenhouse_recap && rules_recap:
+                - first_character_recap.check && second_character_recap.check && greenhouse_recap.check:
                     Hai letto le pagine del libro, grande {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ activeMissions = ()
@@ -300,7 +300,7 @@
         
         - missionSeven:
             {
-                - first_character_notes or second_character_notes:
+                - first_character_notes.check or second_character_notes.check:
                     Hai letto la lettera che ti è stata inviata, {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Ricordati di darci un'occhiata ogni tanto, così da sapere come avanza la storia delle persone che hai aiutato.
                     

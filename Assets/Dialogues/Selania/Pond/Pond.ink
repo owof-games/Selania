@@ -12,9 +12,6 @@
 
     -> main
 
-//Debug della rana
-    + {debug_test_frog} [FrogDebug]
-        -> welcoming_frog
 
 
 

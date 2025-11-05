@@ -1,5 +1,5 @@
 === third_character_recap
-+ {are_two_entities_together(ThirdRecap, PG)} [ThirdRecap]
++ (check){are_two_entities_together(ThirdRecap, PG)} [ThirdRecap]
 ~ enableBigDialogue()
 
 {

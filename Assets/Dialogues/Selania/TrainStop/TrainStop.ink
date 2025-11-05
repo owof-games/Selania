@@ -37,7 +37,7 @@
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    + {are_two_entities_together(FirstCharacterNotes, PG)}[FirstCharacterNotes]
+    + (check){are_two_entities_together(FirstCharacterNotes, PG)}[FirstCharacterNotes]
     
         {
             - not one:
@@ -242,7 +242,7 @@
     
 === second_character_notes ===
 //Mettere cose sul rapporto con nonna, papà. mamma, fratello, animali, futuro.
-    + {are_two_entities_together(SecondCharacterNotes, PG)}[SecondCharacterNotes]
+    + (check){are_two_entities_together(SecondCharacterNotes, PG)}[SecondCharacterNotes]
     
     {
             - not one:

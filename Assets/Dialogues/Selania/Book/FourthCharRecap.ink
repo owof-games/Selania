@@ -1,5 +1,5 @@
 === fourth_character_recap
-+ {are_two_entities_together(FourthRecap, PG)} [FourthRecap]
++ (check){are_two_entities_together(FourthRecap, PG)} [FourthRecap]
 ~ enableBigDialogue()
 
 {knowing_fourth_character.one: prima informazione.}

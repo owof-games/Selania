@@ -1,7 +1,7 @@
 === nest_recap
 TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Gialla) chiamerò direttamente il traduttore (emotional_words_translator(Gialla)).
 
-+ {are_two_entities_together(NestRecap, PG)} [NestRecap]
++ (check){are_two_entities_together(NestRecap, PG)} [NestRecap]
     ~ enableBigDialogue()
 
 //Varianti monocolore

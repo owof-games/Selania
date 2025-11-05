@@ -5,7 +5,7 @@
  ----------------------------------*/
 
 === second_character_recap
-+ {are_two_entities_together(SecondRecap, PG)} [SecondRecap]
++ (check){are_two_entities_together(SecondRecap, PG)} [SecondRecap]
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
 ~ enableBigDialogue()

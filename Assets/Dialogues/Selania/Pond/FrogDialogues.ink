@@ -3,7 +3,7 @@
 ~ temp charNameTwo = translator(secondCharacterState)
 ~ temp charNameOne = translator(firstCharacterState)
     
-    + {are_two_entities_together(TheFrog, PG)} [TheFrog]
++ {are_two_entities_together(TheFrog, PG) or (debug_test_frog == true)} [TheFrog]
 
                 {
                     - welcoming_frog == 1:
@@ -27,10 +27,11 @@ Qui la rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:
 Arriviamo qui solo se non ci sono quest attive.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 
 
-    + {firstStory == StoryStarted} [Chitarra]
+    + {firstStory == StoryStarted} [Ho bisogno di una mano con Chitarra.]
         ~  currentMissionAboutChar = missionCharOne
+  
         {
-            - LIST_COUNT(allCharOneGifts - charOneGifts) >0:
+            - LIST_COUNT(charOneGifts) < 5:
                 Ho ancora qualcosa da donare.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Vado alla gestione missione#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             - else:
@@ -39,10 +40,10 @@ Arriviamo qui solo se non ci sono quest attive.#speaker:{frog_tag()} #inkA:offSt
             -> autonomy_mission_verify
         
     
-    + {secondStory == StoryStarted} [Riccio]
+    + {secondStory == StoryStarted} [Ho bisogno di una mano con Riccio.]
         ~  currentMissionAboutChar = missionCharTwo
         {
-            - LIST_COUNT(allCharTwoGifts - charTwoGifts) >0:
+            - LIST_COUNT(charTwoGifts) < 5::
                 Ho ancora qualcosa da donare.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Vado alla gestione missione#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             - else:
@@ -69,10 +70,13 @@ Arriviamo qui solo se non ci sono quest attive.#speaker:{frog_tag()} #inkA:offSt
             -> cultivable_recovery
     
     
-    + {availableSpecialMissions != ()}[Sorprendimi]
+    + {availableSpecialMissions != ()}[Sorprendimi.]
         ~  currentMissionAboutChar = specialDelivery
             //Per queste non passiamo mai dalla verifica dell'autonomia.
             -> missions_dispatcher ->
+    
+    + [Ho cambiato idea.]
+        -> main
     -
 
 ->->
