@@ -138,8 +138,8 @@
     ~ temp charNameFour = translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
 
-    {currentMissionAboutChar:
-        - specialDelivery:
+    {
+        - currentMissionAboutChar has specialDelivery:
             -> specialTop
         - else:
             -> top

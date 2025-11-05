@@ -251,5 +251,7 @@
 Salutino della rana
     //Svuoto il destinatario della missione attuale per sicurezza
     ~ currentMissionAboutChar = ()
+    ~ activeMissions = ()
+ 
      @animation:RewriterBook
 -> main
