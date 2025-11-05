@@ -371,7 +371,25 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
             }        
             ->->
-
+//Doni insoliti
+    + {findedGifts has universalIngredient} [L'ingrediente universale della Rana.]
+        ~ findedGifts -= universalIngredient
+        ~ recipePP = "aggiungere descrizione participio passato"
+        
+            {
+                - PNG == FirstCharacter:
+                    ~ fourthIngredientReactionFirstCharacter = badReaction
+                    ~ fourthIngredientNameFirstCharacter = universalIngredient
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionFirstCharacter in {fourthIngredientReactionFirstCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameFirstCharacter in {fourthIngredientNameFirstCharacter}.}
+                    
+                - PNG == SecondCharacter:
+                    ~ fourthIngredientReactionSecondCharacter = goodReaction
+                    ~ fourthIngredientNameSecondCharacter = universalIngredient
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
+                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+            }  
+        -> main
 
     //Se la lista è vuota
     + {findedGifts == ()} [Non ho nulla da aggiungere.]

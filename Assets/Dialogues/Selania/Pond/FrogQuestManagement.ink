@@ -109,7 +109,7 @@
                 -> frog_gift_dispatcher                        
         }
         
-        //Missione sette: leggere un libro della biblioteca
+        //Missione otto: leggere un libro della biblioteca
         {
             - readStories != ():
                 ~  autonomyMissionsTracker ++
@@ -118,7 +118,8 @@
                 Per cui: ecco il tuo dono!
                 -> frog_gift_dispatcher                        
         } 
-
+        
+        //Nota: non ci sono check per le missioni speciali, perché non sono completabili autonomamente
 -> welcoming_frog.top
 
 
@@ -218,10 +219,14 @@ TODO: Ho visto che hai fatto XXXYY = tracciamento delle quest
          
          {diceFrog:
         
-            - 1 && availableSpecialMissions has specialMissionOne:
+            - 1 && availableSpecialMissions has specialMissionOne && playerAccessiblePlaces has Nest:
                 -> special_mission_one
-            - 2 && availableSpecialMissions has specialMissionTwo:
+            - 2 && availableSpecialMissions has specialMissionTwo && playerAccessiblePlaces has Kitchen:
                 -> special_mission_two
+            - 3 && availableSpecialMissions has specialMissionThree && playerAccessiblePlaces has Nest:
+                -> special_mission_three
+            - 4 && availableSpecialMissions has specialMissionFour:
+                -> special_mission_four  
             - else:
                 {frogDebug: il valore di diceFrog è {diceFrog}, e la missione associata è già stata fatta. Ritiro il dado.}
                 -> top
@@ -362,7 +367,54 @@ TODO: Ho visto che hai fatto XXXYY = tracciamento delle quest
             }
         
         - specialMissionOne:
+            {
+                - special_mission_one_dialogue:
+                    Hai assistito alla discussione tra Riccio e Mentore, {name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    {
+                        - special_mission_one_dialogue.not_intervention:
+                            E hai deciso di non intervenire.
+                        
+                        - special_mission_one_dialogue.pro_mentor:
+                            E hai deciso di appoggiare Mentore.
+                        
+                        - special_mission_one_dialogue.pro_riccio:
+                            E hai deciso di appoggiare Riccio.
+                        
+                        - special_mission_one_dialogue.disagree:
+                            E hai detto qualcosa contro entrMbi.
+                        
+                        - special_mission_one_dialogue.paracula:
+                            E hai detto qualcosa a favore di entrambi.
+                    }
+                L'armonia è importante.
+                Per questo ti dono una nota, che troverai al Nido.
+                    ~ move_entity(purpleShell, Nest)
+                    ~ availableSpecialMissions -= specialMissionOne
+                    ~ activeMissions = ()
+                    -> main
+                    
+                - else:
+                Ricorda {name}: ascolta la discussione tra Mentore e Riccio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    E poi torna da me.
+            }
+            
         - specialMissionTwo:
+            {
+                - cooking_alone :
+                    Hai cucinato in autonomia, {name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Per questo ti dono una ingrediente universale, che potrai utilizzare per cucinare con le altre persone, e apprezzeranno sempre.
+                    
+                    ~ findedGifts += universalIngredient
+                    ~ availableSpecialMissions -= specialMissionTwo
+                    ~ activeMissions = ()
+                    -> main
+                    
+                - else:
+                Ricorda {name}: ascolta la discussione tra Mentore e Riccio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    E poi torna da me.
+            }
+        - specialMissionThree:
+        - specialMissionFour:
         - else:
             //Vuol dire che non ci sono missioni attive e posso proporne di nuove, se la rana non risulterà stanca
                 -> tired_frog 

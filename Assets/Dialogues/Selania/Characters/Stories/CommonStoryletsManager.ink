@@ -82,8 +82,12 @@
                 -> take_this_book
             
             //Mentore e Riccio parlano dopo il litigio
-            - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && addressing_violence:
+            - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && addressing_violence && not about_violence_and_peace:
                 -> about_violence_and_peace
+            
+            //Discussione Mentore e Riccio legata a Rana
+            - are_two_entities_together(Mentor, PG) && activeMissions has specialMissionOne && not special_mission_one_dialogue:
+                -> special_mission_one_dialogue
             
             //Mentore esplode
             - are_two_entities_together(Mentor, PG) && thirdStory == StoryEnded and not mentor_rage:

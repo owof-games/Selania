@@ -157,3 +157,36 @@
 === mentor_rage
 Mentore sbrocca
     -> main
+    
+=== special_mission_one_dialogue
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    Questa conversazione è generata dalla missione della rana. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    Mentore e Riccio stanno litigando per qualcosa.
+    
+        + (not_intervention)[Decidi di non intervenire]
+             -> color_variation_management(Mentor, blueC)->
+             -> color_variation_management(SecondCharacter, blueC)->
+    
+        + (pro_mentor) [Intervieni a favore di Mentore]
+            -> color_variation_management(Mentor, blueC)->
+            -> color_variation_management(SecondCharacter, redC)->
+     
+        + (pro_riccio) [Intervieni a favore di Riccio]
+                -> color_variation_management(Mentor, yellowC)->
+                -> color_variation_management(SecondCharacter, blueC)->
+    
+        + (disagree)[Dai torto ad entrambi]
+            -> color_variation_management(Mentor, redC)->
+            -> color_variation_management(SecondCharacter, redC)->
+    
+            
+        + (paracula)[Dai ragione ad entrambi]
+            -> color_variation_management(Mentor, greenC)->
+            -> color_variation_management(SecondCharacter, greenC)->
+                -    
+    Finisce la scena. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    -> main
+    
+    

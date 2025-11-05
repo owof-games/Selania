@@ -335,7 +335,30 @@ VAR currentReceiver = ()
     }
         -> main
 
-
+//Doni insoliti
++ {findedGifts has universalIngredient} [L'ingrediente universale della Rana.]
+    ~ findedGifts -= universalIngredient
+    
+    {
+        - currentReceiver has FirstCharacter:
+            {translator(firstCharacterState)} è infastidita dal sapore.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                ~ firstGift += universalIngredient
+                ~ currentReceiver = ()            
+                    -> first_story_gift.ink_outcome
+    
+        - currentReceiver has SecondCharacter:
+            ~ secondCharacterInkLevel ++
+            ~ secondCharacterInkLevel ++
+            Hai regalato a {translator(secondCharacterState)} qualcosa che lo esalta.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            Se la ride tantissimo.
+                ~ secondGift += universalIngredient
+                ~ currentReceiver = ()
+                    -> second_story_gift.ink_outcome
+    
+    }
+        -> main
+        
+        
     //Se la lista è vuota
     + {findedGifts == ()} [Non ho nulla da donare.]
         -> main

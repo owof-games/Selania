@@ -7,6 +7,8 @@
     {debug: <i>La lista degli oggetti nel deposito è: {safekeepingContents}.}
 
     {kitchen == 1:La vecchia cucina non vede l'ora di riempirsi di profumi e chiacchiere.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    
+    {special_mission_two && not cooking_alone: ->cooking_alone}
 
     ~ arrivingFrom = Kitchen
 

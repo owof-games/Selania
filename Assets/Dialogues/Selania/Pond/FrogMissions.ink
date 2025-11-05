@@ -115,9 +115,10 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    missione speciale uno: le special creano storylets ad hoc anche con le altre personagge, magari con un blocco di scelte#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        
+    Sembra che ci sia della tensione tra Riccio e Mentore.
+    Perché non vedi cosa accade? #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         ~ activeMissions += specialMissionOne
+        
     -> main
     
     
@@ -125,19 +126,39 @@
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
-    
-    missione speciale due: le special creano storylets ad hoc anche con le altre personagge, magari con un blocco di scelte#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+
+    Ti chiedo di cucinare da sola. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         
         ~ activeMissions += specialMissionTwo
     -> main
     
-=== purple_shell_quest
+
+    
+=== special_mission_three
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-Ci verrà data la nota viola#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-~ move_entity(purpleShell, Nest)
+    //* Missione tre: liberare uno slot parola
+	//    * Porta questa cosa a qualcuné 
 
--> main
+
+    missione speciale due: le special creano storylets ad hoc anche con le altre personagge, magari con un blocco di scelte#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        
+        ~ activeMissions += specialMissionThree
+    -> main    
+ 
+=== special_mission_four
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    
+    //* Missione quattro: informazioni preziose
+	//* Dona un coltivabile a una delle persone non riscrivibili, e ti dirò qualcosa di importante su di lei.
+    missione speciale due: le special creano storylets ad hoc anche con le altre personagge, magari con un blocco di scelte#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        
+        ~ activeMissions += specialMissionFour
+    -> main   
+    
+
     
