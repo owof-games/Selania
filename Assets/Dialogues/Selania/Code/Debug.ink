@@ -15,7 +15,7 @@
     VAR debug_test_frog = false
     
 //Per disabilitare uscite e cose varie in caso di testing con il sistema stocastico    
-    VAR debugStochastic = false
+    VAR debugStochastic = true
     
     
     
