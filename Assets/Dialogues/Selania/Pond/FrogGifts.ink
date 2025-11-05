@@ -1,4 +1,5 @@
 === frog_gift_dispatcher ===
+{frogDebug: passo frog_gift_dispatcher.}
 //Qui è dove distribuiamo i doni a seconda della situazione
 {currentMissionAboutChar:
     - missionCharOne:
@@ -19,6 +20,8 @@
     
     = char_one_gifts
     //Chitarra
+        {frogDebug: passo char_one_gifts.}
+        
         + {firstGift == ()} Coltivabile adatto:
             Se non lo hai già: viene messo in priorità di crescita in serra#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             Se lo hai già e non lo hai usato: ti viene data una dritta#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -39,6 +42,9 @@
     
     = char_two_gifts
     //Riccio
+    {frogDebug: passo char_two_gifts.}
+    
+    
         + {secondGift == ()} Coltivabile adatto:
             Se non lo hai già: viene messo in priorità di crescita in serra#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             Se lo hai già e non lo hai usato: ti viene data una dritta
@@ -59,11 +65,18 @@
     
     = mission_objects
     //Oggetti
-
-    -> closed_exchange
+    {frogDebug: passo mission_objects.}
+    {frogDebug: searchedCultivableRecovery è uguale a {searchedCultivableRecovery}. Prima dell'intervento, findedGifts contiene {findedGifts}.}
+        
+        Come concordato, eccoti {ingredientTranslator(searchedCultivableRecovery)}
+            ~ findedGifts += searchedCultivableRecovery
+            ~ searchedCultivableRecovery = ()
+        {frogDebug: Dopo l'intervento, searchedCultivableRecovery è uguale a {searchedCultivableRecovery} e findedGifts contiene {findedGifts}.}
+                -> closed_exchange
     
     = special_delivery
-//Cose speciali
+    {frogDebug: passo special_delivery.}
+        //Cose speciali
         + Ingrediente universale: uno solo per gioco.
         + Nota viola: una sola per gioco MA se la usi come ingrediente o dono la puoi recuperare? questa si apre con la missione in cui si cucina da sola.
         + Parola scartata: posso aiutarti a recuperare una parola che hai scartato durante il gioco, ma in cambio dovrai donarne un'altra: da qui parte la quest ad hoc.
@@ -73,7 +86,9 @@
 
 
 === closed_exchange
+{frogDebug: passo closed_exchange.}
 Salutino della rana
-
+    //Svuoto la missione attuale per sicurezza
+    ~ currentMissionAboutChar = ()
      @animation:RewriterBook
--> closed_exchange
+-> main
