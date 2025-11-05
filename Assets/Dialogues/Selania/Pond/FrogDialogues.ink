@@ -61,7 +61,7 @@ Arriviamo qui solo se non ci sono quest attive.#speaker:{frog_tag()} #inkA:offSt
         ~  currentMissionAboutChar = missionCharFive
             -> autonomy_mission_verify
         
-    + [Oggetti]
+    + [Ho bisogno di recuperare un oggetto che ho consumato]
          ~  currentMissionAboutChar = missionObjects
             -> autonomy_mission_verify
     

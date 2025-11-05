@@ -1,19 +1,21 @@
 
 === discovered_things_updater ===
+//Questo nodo mi permette di aggiornare sempre come prima cosa lo stato delle missioni autonome, e di eliminare le eventuali quest fatte di già senza dover tracciare le condizioni mille volte.
 {frogDebug: passo da discovered_things_updater.}
 {frogDebug: charOneGifts è uguale a {charOneGifts}.}
 {frogDebug: charTwoGifts è uguale a {charTwoGifts}.}
+
+//Step uno: aggiornare lo stato delle cose che posso donare o meno alla PG
 
     {
         //Ho già fatto il dono (ed è il primo check)
         - firstGift != () && charOneGifts hasnt charOneCultivable:
                 ~ charOneGifts += charOneCultivable
-                ~  autonomyMissionsTracker ++
+
         
         //Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crush del gioco
         - ending_cooking_with_first_char && charOneGifts hasnt charOneCooking:
-                ~ charOneGifts += charOneCultivable
-                ~  autonomyMissionsTracker ++        
+                ~ charOneGifts += charOneCooking
     
     }
     
@@ -22,21 +24,82 @@
         //Ho già fatto il dono (ed è il primo check)
         - secondGift != () && charTwoGifts hasnt charTwoCultivable:
                 ~ charTwoGifts += charTwoCultivable
-                ~  autonomyMissionsTracker ++
+
         
         //Ho già cucinato (ed è il primo check). Traccio il nodo più vicino alla fine per prevenire problemi con eventuali crush del gioco
         - ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking:
-                ~ charTwoGifts += charTwoCultivable
-                ~  autonomyMissionsTracker ++        
+                ~ charTwoGifts += charTwoCooking
     
     }
     //Ripeto con le altre png
-    //E poi ci sono le cose autonome, tipo: ho già parlato di mindfulness con la mentore, per cui levo la missione associata (es: MissionOne) e aumento l'autonomyTracker
+    
+
+    //Step due: aggiornare lo stato delle missioni che potrebbero esser state svolte autonomamente, e aumento l'autonomy tracker    
+
+    
+        //Missione uno: utilizzo del libro della riscrittora.
+        {
+            - first_character_recap && second_character_recap && greenhouse_recap && rules_recap:
+                ~  autonomyMissionsTracker ++
+                ~ availableMissions -= missionOne
+                
+                Stavo per chiederti di consultare in profondità il libro che ti è stato donato, ma ho visto che hai già fatto senza di me! Per cui: ecco il tuo dono!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    -> frog_gift_dispatcher
+        }
+        
+        //Missione due: coltivare almeno tre piante in serra.
+        {
+            - LIST_COUNT(backupCultivable) < 12:
+                ~  autonomyMissionsTracker ++
+                ~ availableMissions -= missionTwo
+                
+                Stavo per chiederti di coltivare almeno tre piante in serra, ma ho visto che hai già fatto senza di me! Per cui: ecco il tuo dono!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                -> frog_gift_dispatcher
+        }
+        
+        //Missione tre: mindfulness
+        {
+            - mindfulness:
+                ~  autonomyMissionsTracker ++
+                ~ availableMissions -= missionThree
+                Stavo per chiederti di parlare di benessere con Mentore, ma ho visto che hai già fatto senza di me! Per cui: ecco il tuo dono!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                -> frog_gift_dispatcher                        
+            
+        
+        }
+        
+        //Missione quattro: gossips 
+        {
+            - little_storylets:
+                ~  autonomyMissionsTracker ++
+                ~ availableMissions -= missionFour
+                Stavo per chiederti di raccontare a Mentore le stranezze che hai incontrato in questo luogo, ma ho visto che hai già fatto in autonomia!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Per cui: ecco il tuo dono!
+                -> frog_gift_dispatcher                        
+            
+        
+        }
+        
+        
+        //Missione cinque: chiacchiere tra PNG 
+        {
+            - first_second_chit_chat:
+                ~  autonomyMissionsTracker ++
+                ~ availableMissions -= missionFive
+                Stavo per dirti di provare a vedere cosa succede quando due persone sono vicine.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                E invece mi hai battuto, assistendo alla conversazione tra Chitarra e Riccio.
+                Questa cosa accadrà altre volte, per cui: se vedi due personagge nello stesso luogo, prova a vedere se hanno qualcosa da dirsi.
+                Nel mentre: ecco il tuo dono!
+                -> frog_gift_dispatcher                        
+            
+        
+        }
 
 -> welcoming_frog.top
 
 
 === autonomy_mission_verify ===
+TODO: Ho visto che hai fatto XXXYY = tracciamento delle quest
 //Verifico quante missioni autonome ha fatto la giocatrice.
 {frogDebug: passo da autonomy_mission_verify.}
 
@@ -44,6 +107,7 @@
     {
         - autonomyMissionsTracker >= autonomyMissionsGifter:
             Woah, stai facendo un sacco di cose in autonomia!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+            
             Per cui ti aiuto senza chiederti di fare cose.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             {
                 - missionCharOne:
@@ -102,19 +166,19 @@
         
         {diceFrog:
         
-            - 1 && not mission_one:
+            - 1 && availableMissions has missionOne:
                 -> mission_one
-            - 2 && not mission_two:
+            - 2 && availableMissions has missionTwo:
                 -> mission_two
-            - 3 && not mission_three:
+            - 3 && availableMissions has missionThree:
                 -> mission_three
-            - 4 && not mission_four:
+            - 4 && availableMissions has missionFour:
                 -> mission_four
-            - 5 && not mission_five:
+            - 5 && availableMissions has missionFive:
                 -> mission_five
-            - 6 && not mission_six:
+            - 6 && availableMissions has missionSix:
                 -> mission_six
-            - 7 && not mission_seven:
+            - 7 && availableMissions has missionSeven:
                 -> mission_seven
             - else:
                 {frogDebug: il valore di diceFrog è {diceFrog}, e la missione associata è già stata fatta. Ritiro il dado.}
@@ -128,9 +192,9 @@
          
          {diceFrog:
         
-            - 1 && not special_mission_one:
+            - 1 && availableSpecialMissions has specialMissionOne:
                 -> special_mission_one
-            - 2 && not special_mission_two:
+            - 2 && availableSpecialMissions has specialMissionTwo:
                 -> special_mission_two
             - else:
                 {frogDebug: il valore di diceFrog è {diceFrog}, e la missione associata è già stata fatta. Ritiro il dado.}
@@ -145,12 +209,80 @@
 === closed_mission_verify
 {frogDebug: passo da closed_mission_verify.}
     {activeMissions:
-        //Qui la logica da implementare sarà: se le condizione è stata risolta (es: nodo attraversato) allora svuoto activeMissions (~ activeMissions == ()) e tolgo la missione da availableMissions, e invio la giocatrice alla parte del dono, altrimenti ho un reminder che mi ricorda di fare la missione.
+        //Qui la logica da implementare sarà: se le condizione è stata risolta (es: nodo attraversato) allora svuoto activeMissions (~ activeMissions = ()) e tolgo la missione da availableMissions, e invio la giocatrice alla parte del dono, altrimenti ho un reminder che mi ricorda di fare la missione.
         - missionOne:
+            {
+                - first_character_recap && second_character_recap && greenhouse_recap && rules_recap:
+                    Hai letto le pagine del libro, grande {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
+                        ~ activeMissions = ()
+                        ~ availableMissions -= missionOne
+                            -> frog_gift_dispatcher
+                
+                - else:
+                    Ricorda {name}: leggere è importante!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Torna da me quando avrai esplorato il tuo libro.
+                        -> main
+            
+            }
         - missionTwo:
+            {
+                - LIST_COUNT(backupCultivable) < 12:
+                    La serra sta crescendo grazie a te, {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
+                        ~ availableMissions -= missionTwo
+                        ~ activeMissions = ()
+                            -> frog_gift_dispatcher
+                - else:
+                    Ricorda {name}: la serra ha bisogno di te.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Torna da me quando avrai almeno tre piante fiorite.
+                        -> main            
+            }
+            
         - missionThree:
+            {
+                - mindfulness:
+                    Grazie per aver parlato con Mentore, {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Son sicuro che si sente più utile ora.
+                    Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
+                        ~ availableMissions -= missionThree
+                        ~ activeMissions = ()
+                            -> frog_gift_dispatcher
+                - else:
+                    Ricorda {name}: Mentore vuole condividere con te i suoi consigli per farti sentire meglio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Torna da me quando le avrai parlato del tuo benessere.
+                        -> main  
+            }
+            
         - missionFour:
+            {
+                - little_storylets:
+                    Grazie per aver condiviso le cose che hai scoperto con Mentore, {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
+                        ~ availableMissions -= missionThree
+                        ~ activeMissions = ()
+                            -> frog_gift_dispatcher
+                - else:
+                    Ricorda {name}: Mentore ci tiene a sentire le cose che hai scoperto su questo luogo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Torna da me quando avrai condiviso con lei qualcosa di insolito.
+                        -> main  
+            }        
         - missionFive:
+            {
+                - first_second_chit_chat:
+                    Hai ascoltato la conversazione tra Chitarra e Riccio, e ne sono felice {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Anche se è difficile come posizione per unx Riscrittora: spesso una scelta in queste condizioni può far felice una persona, e scontentare l'altra.
+                    Questa cosa accadrà altre volte, per cui: se vedi due personagge nello stesso luogo, prova a vedere se hanno qualcosa da dirsi.
+                    
+                    Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
+                        ~ availableMissions -= missionThree
+                        ~ activeMissions = ()
+                            -> frog_gift_dispatcher
+                - else:
+                    Ricorda {name}: prova a parlare con Riccio e Chitarra quando sono assieme.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Torna da me quando avrai sentito cosa hanno da dirsi.
+                        -> main  
+            }         
         - missionSix:
         - missionSeven:
         - specialMissionOne:
