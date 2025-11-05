@@ -1480,16 +1480,16 @@
                     Cosa dirà {name} come <b><i>epilogo</b></i>?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}   
             }   
     
-            + {firstRed > 0} [Prendi una strada e se non ti piace cambiala!]
+            + [Prendi una strada e se non ti piace cambiala!]
                 -> color_variation_management(FirstCharacter, redC)->
             
-            + {firstPurple > 0} [Dai alla tua vita uno scopo più grande.]
+            + [Dai alla tua vita uno scopo più grande.]
                  -> color_variation_management(FirstCharacter, purpleC)->         
             
-            + {firstYellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
+            + [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
                 -> color_variation_management(FirstCharacter, yellowC)->
                 
-            + {firstGreen > 0} [Non deluderai i tuoi amici: loro saranno sempre con te.]
+            + [Non deluderai i tuoi amici: loro saranno sempre con te.]
                 -> color_variation_management(FirstCharacter, greenC)->
                     
             + [Questa non è la tua strada. Succede. Ora puoi cambiare.]
@@ -1508,7 +1508,10 @@
                 -> update_colors(FirstCharacter) ->     
      
             //E infine genero il nome
-                -> firstNaming ->
+                -> firstNaming -> naming
+                
+            = naming
+            ~ temp charNameOne = translator(firstCharacterState)
             
             {
                 - firstCharacterState has Triangolo:

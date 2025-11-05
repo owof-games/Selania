@@ -157,31 +157,39 @@
 //Settaggio nome quando partiamo con la discussione (non finale quindi)
 
 === firstNaming ===
+{debug: passo per firstNaming.}
+{debug: prima di operare,il valore del nome è: {firstCharacterState}.}
  //Svuoto il valore per sicurezza
  ~ firstCharacterState = ()
+ {debug: svuoto firstCharacterState : {firstCharacterState}.}
  
     {
         //Blu colore più usato
         - (firstBlue > firstGreen) && (firstBlue > firstRed) && (firstBlue > firstYellow) && (firstBlue > firstPurple):
             ~ firstCharacterState += Triangolo
+            {debug: passo per Triangolo e il nome è : {firstCharacterState}.}
                 ->->
         //Rosso colore più usato        
         - (firstRed > firstGreen) && (firstRed > firstBlue) && (firstRed > firstYellow) && (firstRed > firstPurple):
             ~ firstCharacterState += RagazzaOrchestra
+            {debug: passo per Orchestra e il nome è : {firstCharacterState}.}
                 ->->
         
         //Verde colore più usato        
         - (firstGreen > firstBlue) && (firstGreen > firstRed) && (firstGreen > firstYellow) && (firstGreen > firstPurple):
-            ~ firstCharacterState += FlautoDolce    
+            ~ firstCharacterState += FlautoDolce
+            {debug: passo per FlautoDolce e il nome è : {firstCharacterState}.}
                 ->->
         
         //Giallo colore più usato        
         - (firstYellow > firstGreen) && (firstYellow > firstRed) && (firstYellow > firstBlue) && (firstYellow > firstPurple):
-            ~ firstCharacterState += Ocarina   
+            ~ firstCharacterState += Ocarina
+            {debug: passo per Ocarina e il nome è : {firstCharacterState}.}
                 ->->
         
         //Viola colore più usato        
         - (firstPurple > firstGreen) && (firstPurple > firstRed) && (firstPurple > firstYellow) && (firstPurple > firstBlue):
+        {debug: passo per Violino e il nome è : {firstCharacterState}.}
             ~ firstCharacterState += Violino    
                 ->->
                 
@@ -189,18 +197,23 @@
             {
                 - (firstPurple < firstBlue) && (firstYellow < firstBlue):
                         ~ firstCharacterState += Triangolo
+                        {debug: passo per Triangolo e il nome è : {firstCharacterState}.}
                         ->->
                 - firstPurple && firstYellow > firstBlue:
                         ~ firstCharacterState += Ocarina   
+                            {debug: passo per Ocarina e il nome è : {firstCharacterState}.}
                         ->->
                 - (firstYellow > firstBlue) && (not firstPurple > firstBlue):
                         ~ firstCharacterState += RagazzaOrchestra
+                        {debug: passo per Orchestra e il nome è : {firstCharacterState}.}
                             ->->
                 - (firstPurple > firstBlue) && (not firstYellow > firstBlue):
+                    {debug: passo per FlautoDolce e il nome è : {firstCharacterState}.}
                         ~ firstCharacterState += FlautoDolce 
                             ->->
                 - else:
                         ~ firstCharacterState += RagazzaOrchestra
+                            {debug: passo per Orchestra e il nome è : {firstCharacterState}.}
                             ->->
             }
         }

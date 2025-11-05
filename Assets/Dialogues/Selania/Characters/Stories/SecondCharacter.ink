@@ -2013,7 +2013,10 @@
                 -> update_colors(SecondCharacter) ->     
      
             //E infine genero il nome
-                -> secondNaming ->
+                -> secondNaming ->naming
+                
+            = naming
+            ~ temp charNameTwo = translator(secondCharacterState)
             
 
             

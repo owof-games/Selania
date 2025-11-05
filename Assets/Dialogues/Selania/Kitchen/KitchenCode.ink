@@ -446,18 +446,18 @@
 
 === update_colors(cookingCompanion)
 {kitchenDebug or debug: update_colors.}
-
+{kitchenDebug: prima di aggiornare i valori, il valore di storagePurple è {storagePurple}, di storageYellow {storageYellow}, storageBlue è {storageBlue}, di storageGreen {storageGreen}, di storageRed {storageRed}. cookingCompanion è {cookingCompanion}.}
     {
         - cookingCompanion == FirstCharacter:
             ~ firstPurple = firstPurple + storagePurple
                 ~ storagePurple = 0
-            ~ storageYellow = firstYellow + storageYellow
+            ~ firstYellow = firstYellow + storageYellow
                 ~ storageYellow = 0
-            ~ storageBlue = firstBlue + storageBlue
+            ~ firstBlue = firstBlue + storageBlue
                 ~ storageBlue = 0
-            ~ storageGreen = firstGreen + storageGreen
+            ~ firstGreen = firstGreen + storageGreen
                 ~ storageGreen = 0
-            ~ storageRed = firstRed + storageRed
+            ~ firstRed = firstRed + storageRed
                 ~ storageRed = 0
     
     - cookingCompanion == SecondCharacter:
@@ -476,6 +476,7 @@
                 ~ storageSecondStoryQuestCount = 0        
     
     }
-    
+
+{kitchenDebug: dopo aver aggiornato i valori, il valore di storagePurple è {storagePurple}, di storageYellow {storageYellow}, storageBlue è {storageBlue}, di storageGreen {storageGreen}, di storageRed {storageRed}. cookingCompanion è {cookingCompanion}.} 
 ->->
 
