@@ -20,6 +20,7 @@
     //Chitarra
         {frogDebug: passo char_one_gifts.}
         ~ charOneGifts += charOneCultivable
+       Cosa vorresti ottenere?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
        
         * {firstGift == ()} [Vorrei sapere cosa donare a Chitarra.]
             {
@@ -131,7 +132,7 @@
     = char_two_gifts
     //Riccio
     {frogDebug: passo char_two_gifts.}
-    
+    Cosa vorresti ottenere?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     
         * {secondGift == ()} [Vorrei sapere cosa donare a Riccio.]
         ~ charTwoGifts += charTwoCultivable

@@ -43,7 +43,7 @@ Arriviamo qui solo se non ci sono quest attive.#speaker:{frog_tag()} #inkA:offSt
     + {secondStory == StoryStarted} [Ho bisogno di una mano con Riccio.]
         ~  currentMissionAboutChar = missionCharTwo
         {
-            - LIST_COUNT(charTwoGifts) < 5::
+            - LIST_COUNT(charTwoGifts) < 5:
                 Ho ancora qualcosa da donare.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Vado alla gestione missione#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             - else:
