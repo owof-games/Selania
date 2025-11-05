@@ -89,6 +89,7 @@
 //Pond    
     INCLUDE Pond\Pond.ink
     INCLUDE Pond\FrogVarAndLists.ink
+    INCLUDE Pond\FrogDialogues.ink
     INCLUDE Pond\FrogQuestManagement.ink
     INCLUDE Pond\FrogMissions.ink
     INCLUDE Pond\FrogGifts.ink
@@ -117,6 +118,8 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
+
+
 
 
 

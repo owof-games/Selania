@@ -3,15 +3,10 @@
 ~ enableBigDialogue()
 C'è una rana bluastra dalle parti dello stagno, e sembra propensa a darmi consigli.
 {
-    - the_frog.frog:
+    - welcoming_frog:
         Mi ha detto che Riccio si lamenta molto degli adulti, esclusi nonna e fratello. E che la cosa che gli piace meno degli adulti è che non sono coerenti. Per questo, secondo la rana, per conquistarlo non devo dargli ragione: devo mostrare coerenza. Ma sta a me comunque decidere che fare.
 }
-{
 
-    - the_frog.second:
-        Secondo la rana, Chitarra detesta le persone troppo razionali. E quando si siede allo stagno, parla molto di spiritualità. E poi, ha bisogno di uno stuzzichino (la rana, non Chitarra).
-
-}
 
 -> rewriter_book_with_flow
 

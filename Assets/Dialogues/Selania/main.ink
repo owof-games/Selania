@@ -37,7 +37,7 @@
 <- the_witch
 
 //Elementi dello stagno
-<- the_frog
+<- welcoming_frog
 
 //Elementi della serra
 

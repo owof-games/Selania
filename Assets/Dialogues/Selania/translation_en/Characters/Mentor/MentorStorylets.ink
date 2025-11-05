@@ -482,7 +482,7 @@
             {name}: Se senti ancora una volte delle voci, prenditi un po' di riposo.
                 -> talk_with_mentor
         
-        * (talkingFrog) {the_frog.frog} [C'è una rana blu parlante.]
+        * (talkingFrog) {welcoming_frog} [C'è una rana blu parlante.]
             {charNameFive}: Una rana. E dove?
             {are_entities_together_in(Mentor, PG, GreenhouseMiddlePath):{name}: Qui nello stagno.|{name}: Allo stagno.}
             {charNameFive}: Da che sono qui non ho mai visto rane parlanti, {name}.
