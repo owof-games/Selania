@@ -70,7 +70,7 @@ Arriviamo qui solo se non ci sono quest attive.#speaker:{frog_tag()} #inkA:offSt
             -> cultivable_recovery
     
     
-    + {availableSpecialMissions != ()}[Sorprendimi.]
+    + {availableSpecialMissions != () && playerAccessiblePlaces has Kitchen && playerAccessiblePlaces has Nest}[Sorprendimi.]
         ~  currentMissionAboutChar = specialDelivery
             //Per queste non passiamo mai dalla verifica dell'autonomia.
             -> missions_dispatcher ->

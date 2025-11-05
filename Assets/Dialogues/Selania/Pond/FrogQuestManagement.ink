@@ -188,10 +188,6 @@
                 -> special_mission_one
             - 2 && availableSpecialMissions has specialMissionTwo && playerAccessiblePlaces has Kitchen:
                 -> special_mission_two
-            - 3 && availableSpecialMissions has specialMissionThree && playerAccessiblePlaces has Nest:
-                -> special_mission_three
-            - 4 && availableSpecialMissions has specialMissionFour:
-                -> special_mission_four  
             - else:
                 {frogDebug: il valore di diceFrog è {diceFrog}, e la missione associata è già stata fatta. Ritiro il dado.}
                 -> specialTop
@@ -381,8 +377,6 @@
                     -> main
             }
             
-        - specialMissionThree:
-        - specialMissionFour:
         
         - else:
             //Vuol dire che non ci sono missioni attive e posso proporne di nuove, se la rana non risulterà stanca
