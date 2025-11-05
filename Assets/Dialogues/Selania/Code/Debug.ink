@@ -2,11 +2,11 @@
 
 //Per abilitare o meno i debug
     VAR debug = true
-    VAR debugCultivable = false
-    VAR debugChangeName = false
+    VAR debugCultivable = true
+    VAR debugChangeName = true
     VAR kitchenDebug = true
-    VAR nestDebug = false
-    VAR frogDebug = false
+    VAR nestDebug = true
+    VAR frogDebug = true
     
     //per testare i luoghi non subito aperti con calma
     VAR debug_test_library = false

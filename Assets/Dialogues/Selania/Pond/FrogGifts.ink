@@ -22,7 +22,7 @@
         
        Cosa vorresti ottenere?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
        
-        + {firstGift == ()} [Vorrei sapere cosa donare a Chitarra.]
+        + {firstGift == () && charOneGifts hasnt charOneCultivable} [Vorrei sapere cosa donare a Chitarra.]
         ~ charOneGifts += charOneCultivable
         
             {
@@ -59,7 +59,7 @@
                 
             }
             
-        + {!ending_cooking_with_first_char} [Vorrei sapere cosa mettere come quarto ingrediente in cucina.]
+        + {!ending_cooking_with_first_char && charOneGifts hasnt charOneCooking} [Vorrei sapere cosa mettere come quarto ingrediente in cucina.]
         ~ charOneGifts += charOneCooking
         
             {
@@ -96,15 +96,15 @@
                 
             }
             
-        + {playerAccessiblePlaces has Nest} [Quali colori usare al nido.]
+        + {playerAccessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord} [Quali colori usare al nido.]
             ~ charOneGifts += charOneEmotionalWord
                 Chitarra è una persona con idee molto sicure su tante cose.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Ma una cosa è certa: odia i discorsi troppo blu.
                 Hai già capito come far diminuire un colore?
                 Perché in questo modo potresti già avere la soluzione.
         
-        + {playerAccessiblePlaces has Library} [Quale racconto in biblioteca può essere d'aiuto?]
-            ~ charTwoGifts += charTwoLibrary
+        + {playerAccessiblePlaces has Library && charOneGifts hasnt charOneLibrary} [Quale racconto in biblioteca può essere d'aiuto?]
+            ~ charOneGifts += charOneLibrary
                 {
                     - readStories has Salvo:
                         Uh, vedo che hai già letto <b>Il cancello</b>.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -125,9 +125,10 @@
                         E troverai la risposta che ti serve.
 
                 }
-                
+        + -> 
+            Qui passiamo per una fallback option per Chitarra, e me la tengo come tracciamento.
         - 
-        + Le opzioni sono finite e questa cosa non dovrebbe succedere.
+        
         -> closed_exchange
     
     
@@ -136,7 +137,7 @@
     {frogDebug: passo char_two_gifts.}
     Cosa vorresti ottenere?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     
-        + {secondGift == ()} [Vorrei sapere cosa donare a Riccio.]
+        + {secondGift == () && charTwoGifts hasnt charTwoCultivable} [Vorrei sapere cosa donare a Riccio.]
         ~ charTwoGifts += charTwoCultivable
         
              {
@@ -170,7 +171,7 @@
                 
             }
             
-        + {!ending_cooking_with_second_char} [Vorrei sapere cosa mettere come quarto ingrediente in cucina.]
+        + {!ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking} [Vorrei sapere cosa mettere come quarto ingrediente in cucina.]
             ~ charTwoGifts += charTwoCooking
             {
                 - (findedGifts hasnt BastoneDellOzioso) && (findedGifts hasnt BrinaDellImpossibile) && (growthBastoneDellOzioso != stepThree or growthBrinaDellImpossibile != stepThree):
@@ -203,7 +204,7 @@
                 
             }
             
-        + {playerAccessiblePlaces has Nest} [Quali colori usare al nido.]
+        + {playerAccessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord} [Quali colori usare al nido.]
             ~ charTwoGifts += charTwoEmotionalWord
                 Riccio è una bella testolina.
                 E quello che posso dirti con certezza, è che apprezza la coerenza.
@@ -211,7 +212,7 @@
                 Se hai capito come funziona l'alchimia del nido, sono sicuro che avrai già capito cosa fare.
             
             
-        + Conversazioni biblioteca 
+        + {playerAccessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary} [Quale racconto in biblioteca può essere d'aiuto?] 
             ~ charTwoGifts += charTwoLibrary
         {
                     - readStories has Lamia:
@@ -234,8 +235,9 @@
 
                 }
             
+        + -> 
+            Qui passiamo per una fallback option per Riccio, e me la tengo come tracciamento.
         - 
-        + Le opzioni sono finite e questa cosa non dovrebbe succedere.
         -> closed_exchange
     
     = mission_objects
