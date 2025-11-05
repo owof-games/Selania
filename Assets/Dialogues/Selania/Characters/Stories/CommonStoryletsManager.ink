@@ -71,7 +71,14 @@
                 -  are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && not cooking_with_second_char && secondIsCooking == false:
                         -> cooking_with_second_char        
     
-    
+        
+        //Storylets gestiti anche dalla rana
+            //Lettura Chitarra
+                - are_two_entities_together(FirstCharacter, PG) && readStories has Salvo:
+                    -> a_story_of_transformation
+        
+        
+        
         //Storylets vari
             //Chiacchiere tra Riccio e Chitarra
             - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(SecondCharacter, PG) && not first_second_chit_chat:

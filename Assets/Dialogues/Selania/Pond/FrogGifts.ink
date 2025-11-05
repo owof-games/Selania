@@ -100,9 +100,29 @@
                 Hai già capito come far diminuire un colore?
                 Perché in questo modo potresti già avere la soluzione.
         
-        * Conversazioni speciali 
+        * {playerAccessiblePlaces has Library} [Quale racconto in biblioteca può essere d'aiuto?]
             ~ charTwoGifts += charTwoLibrary
-        es: storylet che avviene se due png sono vicine, o un racconto da leggere per poterne parlare con una PNG (Ti viene consigliato di continuare ad esplorare un certo tipo di tema.). Non sono mai info dirette.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                {
+                    - readStories has Salvo:
+                        Uh, vedo che hai già letto <b>Il cancello</b>.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                            {
+                                - a_story_of_transformation:
+                                    E che ne avete già parlato.
+                                    Perché non scegli un altro dono?
+                                    -> char_one_gifts
+                                
+                                
+                                - else:
+                                    Prova a parlare con lei e vedrai che avrà sicuramente qualcosa da dirti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                            
+                            }
+        
+                    - else:
+                        Prova a leggere qualcosa che abbia a che fare con la trasformazione.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        E troverai la risposta che ti serve.
+
+                }
+                
         -   
         -> closed_exchange
     
@@ -147,7 +167,7 @@
             }
             
         * {!ending_cooking_with_second_char} [Vorrei sapere cosa mettere come quarto ingrediente in cucina.]
-        ~ charTwoGifts += charTwoCooking
+            ~ charTwoGifts += charTwoCooking
             {
                 - (findedGifts hasnt BastoneDellOzioso) && (findedGifts hasnt BrinaDellImpossibile) && (growthBastoneDellOzioso != stepThree or growthBrinaDellImpossibile != stepThree):
                     Ancora non possiedi niente di adatto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -188,8 +208,27 @@
             
             
         * Conversazioni biblioteca 
-        ~ charTwoGifts += charTwoLibrary
-        es: storylet che avviene se due png sono vicine, o un racconto da leggere per poterne parlare con una PNG (Ti viene consigliato di continuare ad esplorare un certo tipo di tema.). Non sono mai info dirette.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+            ~ charTwoGifts += charTwoLibrary
+        {
+                    - readStories has Lamia:
+                        Uh, vedo che hai già letto <b>Il sassolino</b>.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                            {
+                                - a_story_of_transformation:
+                                    E che ne avete già parlato.
+                                    Perché non scegli un altro dono?
+                                    -> char_two_gifts
+                                
+                                
+                                - else:
+                                    Prova a parlare con lui e vedrai che avrà sicuramente qualcosa da dirti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                            
+                            }
+        
+                    - else:
+                        Prova a leggere qualcosa che abbia a che fare con la ribellione.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        E troverai la risposta che ti serve.
+
+                }
             
         - 
         -> closed_exchange

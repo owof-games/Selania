@@ -189,4 +189,45 @@ Mentore sbrocca
     Finisce la scena. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     -> main
     
+
+=== a_story_of_transformation
+Qui Chitarra ci dice che ha letto <b>Il cancello</b> e ci chiede cosa ne pensiamo.
+        
+        + [Scelta blu.]
+             -> color_variation_management(FirstCharacter, blueC)->
     
+        + [Scelta rossa.]
+            -> color_variation_management(FirstCharacter, redC)->
+     
+        + [Scelta viola.]
+                -> color_variation_management(FirstCharacter, purpleC)->
+    
+        + [Scelta gialla.]
+            -> color_variation_management(FirstCharacter, yellowC)->
+            
+        + [Scelta verde.]
+            -> color_variation_management(FirstCharacter, greenC)->
+        -    
+
+-> main
+
+=== a_story_of_rebellion
+Qui Riccio ci dice che ha letto <b>Il sassolino</b> e ci chiede cosa ne pensiamo.
+        
+        + [Scelta blu.]
+             -> color_variation_management(SecondCharacter, blueC)->
+    
+        + [Scelta rossa.]
+            -> color_variation_management(SecondCharacter, redC)->
+     
+        + [Scelta viola.]
+                -> color_variation_management(SecondCharacter, purpleC)->
+    
+        + [Scelta gialla.]
+            -> color_variation_management(SecondCharacter, yellowC)->
+            
+        + [Scelta verde.]
+            -> color_variation_management(SecondCharacter, greenC)->
+        -    
+
+-> main
