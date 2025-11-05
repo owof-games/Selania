@@ -194,12 +194,11 @@
                 -> special_mission_four  
             - else:
                 {frogDebug: il valore di diceFrog è {diceFrog}, e la missione associata è già stata fatta. Ritiro il dado.}
-                -> top
+                -> specialTop
                 
         }
     
 ->->
-
 
 
 === closed_mission_verify

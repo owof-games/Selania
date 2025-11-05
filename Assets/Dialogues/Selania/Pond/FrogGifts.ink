@@ -123,7 +123,8 @@
 
                 }
                 
-        -   
+        - 
+        + Le opzioni sono finite e questa cosa non dovrebbe succedere.
         -> closed_exchange
     
     
@@ -231,6 +232,7 @@
                 }
             
         - 
+        + Le opzioni sono finite e questa cosa non dovrebbe succedere.
         -> closed_exchange
     
     = mission_objects
