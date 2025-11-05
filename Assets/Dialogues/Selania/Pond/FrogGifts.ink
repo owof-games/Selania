@@ -22,7 +22,7 @@
         ~ charOneGifts += charOneCultivable
        Cosa vorresti ottenere?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
        
-        * {firstGift == ()} [Vorrei sapere cosa donare a Chitarra.]
+        + {firstGift == ()} [Vorrei sapere cosa donare a Chitarra.]
             {
                 - (findedGifts hasnt CantoDelleCompagne) && (findedGifts hasnt LanaNotturna) && (findedGifts hasnt NonTiScordarDiTe) && (growthCantoDelleCompagne != stepThree or growthLanaNotturna != stepThree or  growthNonTiScordarDiTe != stepThree):
                     Ancora non possiedi niente di adatto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -57,7 +57,7 @@
                 
             }
             
-        * {!ending_cooking_with_first_char} [Vorrei sapere cosa mettere come quarto ingrediente in cucina.]
+        + {!ending_cooking_with_first_char} [Vorrei sapere cosa mettere come quarto ingrediente in cucina.]
         ~ charOneGifts += charOneCooking
         
             {
@@ -94,14 +94,14 @@
                 
             }
             
-        * {playerAccessiblePlaces has Nest} [Quali colori usare al nido.]
+        + {playerAccessiblePlaces has Nest} [Quali colori usare al nido.]
             ~ charOneGifts += charOneEmotionalWord
                 Chitarra è una persona con idee molto sicure su tante cose.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Ma una cosa è certa: odia i discorsi troppo blu.
                 Hai già capito come far diminuire un colore?
                 Perché in questo modo potresti già avere la soluzione.
         
-        * {playerAccessiblePlaces has Library} [Quale racconto in biblioteca può essere d'aiuto?]
+        + {playerAccessiblePlaces has Library} [Quale racconto in biblioteca può essere d'aiuto?]
             ~ charTwoGifts += charTwoLibrary
                 {
                     - readStories has Salvo:
@@ -134,7 +134,7 @@
     {frogDebug: passo char_two_gifts.}
     Cosa vorresti ottenere?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     
-        * {secondGift == ()} [Vorrei sapere cosa donare a Riccio.]
+        + {secondGift == ()} [Vorrei sapere cosa donare a Riccio.]
         ~ charTwoGifts += charTwoCultivable
         
              {
@@ -168,7 +168,7 @@
                 
             }
             
-        * {!ending_cooking_with_second_char} [Vorrei sapere cosa mettere come quarto ingrediente in cucina.]
+        + {!ending_cooking_with_second_char} [Vorrei sapere cosa mettere come quarto ingrediente in cucina.]
             ~ charTwoGifts += charTwoCooking
             {
                 - (findedGifts hasnt BastoneDellOzioso) && (findedGifts hasnt BrinaDellImpossibile) && (growthBastoneDellOzioso != stepThree or growthBrinaDellImpossibile != stepThree):
@@ -201,7 +201,7 @@
                 
             }
             
-        * {playerAccessiblePlaces has Nest} [Quali colori usare al nido.]
+        + {playerAccessiblePlaces has Nest} [Quali colori usare al nido.]
             ~ charTwoGifts += charTwoEmotionalWord
                 Riccio è una bella testolina.
                 E quello che posso dirti con certezza, è che apprezza la coerenza.
@@ -209,7 +209,7 @@
                 Se hai capito come funziona l'alchimia del nido, sono sicuro che avrai già capito cosa fare.
             
             
-        * Conversazioni biblioteca 
+        + Conversazioni biblioteca 
             ~ charTwoGifts += charTwoLibrary
         {
                     - readStories has Lamia:
