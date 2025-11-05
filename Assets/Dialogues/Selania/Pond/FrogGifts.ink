@@ -19,10 +19,12 @@
     = char_one_gifts
     //Chitarra
         {frogDebug: passo char_one_gifts.}
-        ~ charOneGifts += charOneCultivable
+        
        Cosa vorresti ottenere?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
        
         + {firstGift == ()} [Vorrei sapere cosa donare a Chitarra.]
+        ~ charOneGifts += charOneCultivable
+        
             {
                 - (findedGifts hasnt CantoDelleCompagne) && (findedGifts hasnt LanaNotturna) && (findedGifts hasnt NonTiScordarDiTe) && (growthCantoDelleCompagne != stepThree or growthLanaNotturna != stepThree or  growthNonTiScordarDiTe != stepThree):
                     Ancora non possiedi niente di adatto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
