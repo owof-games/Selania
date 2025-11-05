@@ -38,6 +38,7 @@ Arriviamo qui solo se non ci sono quest attive.#speaker:{frog_tag()} #inkA:offSt
         }
             -> autonomy_mission_verify
         
+    
     + {secondStory == StoryStarted} [Riccio]
         ~  currentMissionAboutChar = missionCharTwo
         {
@@ -49,6 +50,7 @@ Arriviamo qui solo se non ci sono quest attive.#speaker:{frog_tag()} #inkA:offSt
         }
             -> autonomy_mission_verify
         
+    
     + {thirdStory == StoryStarted} [PNG 3]
         ~  currentMissionAboutChar = missionCharThree
             -> autonomy_mission_verify
@@ -61,11 +63,13 @@ Arriviamo qui solo se non ci sono quest attive.#speaker:{frog_tag()} #inkA:offSt
         ~  currentMissionAboutChar = missionCharFive
             -> autonomy_mission_verify
         
+    
     + [Ho bisogno di recuperare un oggetto che ho consumato]
          ~  currentMissionAboutChar = missionObjects
             -> autonomy_mission_verify
     
-    + [Sorprendimi]
+    
+    + {availableSpecialMissions != ()}[Sorprendimi]
         ~  currentMissionAboutChar = specialDelivery
             //Per queste non passiamo mai dalla verifica dell'autonomia.
             -> missions_dispatcher ->

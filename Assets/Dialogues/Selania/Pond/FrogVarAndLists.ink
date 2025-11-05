@@ -18,10 +18,6 @@
     VAR activeMissions = ()
     
 
-    //E il tracciamento dell'autonomia
-    VAR autonomyMissionsGifter = 3
-    VAR autonomyMissionsTracker = 0
-    
     VAR diceFrog = 0
     VAR maxValueDice = ()
     VAR maxSpecialValueDice = ()
