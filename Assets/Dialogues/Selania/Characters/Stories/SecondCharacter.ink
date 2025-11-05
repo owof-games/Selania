@@ -121,7 +121,7 @@
                 ~ changeLocationTimer = 0
                 
             {
-                - firstIsCooking==true: Uh, mi sa che la cucina è occupata da {charNameOne}, sta cucinando qualcosa di strano.
+                - kitchenContents has FirstCharacter: Uh, mi sa che la cucina è occupata da {charNameOne}, sta cucinando qualcosa di strano.
                             ->main
                 
                 - SecondKitchenInvite: {Spero non mi farai aspettare come prima! Ho atteso un sacco!|Siamo a due volte che me lo chiedi e non ti presenti, sai?|E mi darai buca una terza volta? Vabbè.} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:riccio_neutral
