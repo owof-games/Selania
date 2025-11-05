@@ -8,9 +8,9 @@
     LIST missionAboutChar = missionCharOne, missionCharTwo, missionCharThree, missionCharFour, missionCharFive, missionObjects, specialDelivery
     
     //Lista di tutte le missioni che la rana può offrire, e quelle completate. Nota: missionOne etc son nomi temporanei, che verranno aggiornati man mano che le creo
-    LIST allMissions = missionOne, missionTwo, missionThree, missionFour, missionFive, missionSix, missionSeven, specialMissionOne, specialMissionTwo
+    LIST allMissions = missionOne, missionTwo, missionThree, missionFour, missionFive, missionSix, missionSeven, missionEight, specialMissionOne, specialMissionTwo
         //Separo la lista totale da quelle disponibili anche per un discorso di TW
-    VAR availableMissions = (missionOne, missionTwo, missionThree, missionFour, missionFive, missionSix, missionSeven)
+    VAR availableMissions = (missionOne, missionTwo, missionThree, missionFour, missionFive, missionSix, missionSeven, missionEight)
     VAR availableSpecialMissions = (specialMissionOne, specialMissionTwo)
     
     VAR currentMissionAboutChar = ()

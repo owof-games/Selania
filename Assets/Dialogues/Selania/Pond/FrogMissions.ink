@@ -78,12 +78,11 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-     missione sei#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-         
+     Sembra che qualcosa sia cambiato in quell'albero al centro della foresta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+     Perché non provia a parlarci?
          ~ activeMissions += missionSix
+         
     -> main
-
-
 
 
 === mission_seven
@@ -91,9 +90,23 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    missione sette#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        
+    Qualcunx ti ha scritto, {name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    Perché non vai a vedere cosa ha da condividere con te?
+    Trovi le lettere attaccate alla bacheca vicino alla fermata del treno.
+    E il loro contenuto si aggiorna man mano che la loro vita continua.
         ~ activeMissions += missionSeven
+        
+    -> main
+
+=== mission_eight
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    
+    La biblioteca è piena di racconti, {name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    Perché non vai a prenderti un po' di tempo e leggerti qualcosa?
+        ~ activeMissions += missionEight
+        
     -> main
 
 

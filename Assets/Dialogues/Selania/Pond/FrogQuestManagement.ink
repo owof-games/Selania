@@ -63,9 +63,7 @@
                 ~  autonomyMissionsTracker ++
                 ~ availableMissions -= missionThree
                 Stavo per chiederti di parlare di benessere con Mentore, ma ho visto che hai già fatto senza di me! Per cui: ecco il tuo dono!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                -> frog_gift_dispatcher                        
-            
-        
+                -> frog_gift_dispatcher                      
         }
         
         //Missione quattro: gossips 
@@ -76,8 +74,6 @@
                 Stavo per chiederti di raccontare a Mentore le stranezze che hai incontrato in questo luogo, ma ho visto che hai già fatto in autonomia!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
                 -> frog_gift_dispatcher                        
-            
-        
         }
         
         
@@ -91,9 +87,37 @@
                 Questa cosa accadrà altre volte, per cui: se vedi due personagge nello stesso luogo, prova a vedere se hanno qualcosa da dirsi.
                 Nel mentre: ecco il tuo dono!
                 -> frog_gift_dispatcher                        
-            
-        
         }
+        
+        //Missione sei: conoscere la strega
+        {
+            - talking_witch.intro:
+                ~  autonomyMissionsTracker ++
+                ~ availableMissions -= missionSix
+                Stavo per invitarti a parlare con l'albero della foresta, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Per cui: ecco il tuo dono!
+                -> frog_gift_dispatcher                        
+        }
+        
+        //Missione sette: leggere una lettera
+        {
+            - first_character_notes or second_character_notes:
+                ~  autonomyMissionsTracker ++
+                ~ availableMissions -= missionSeven
+                Stavo per chiederti di leggere una delle lettere che hai ricevuto sulla bacheca, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Per cui: ecco il tuo dono!
+                -> frog_gift_dispatcher                        
+        }
+        
+        //Missione sette: leggere un libro della biblioteca
+        {
+            - readStories != ():
+                ~  autonomyMissionsTracker ++
+                ~ availableMissions -= missionEight
+                Stavo per chiederti di leggere una delle storie della biblioteca, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Per cui: ecco il tuo dono!
+                -> frog_gift_dispatcher                        
+        } 
 
 -> welcoming_frog.top
 
@@ -176,10 +200,12 @@ TODO: Ho visto che hai fatto XXXYY = tracciamento delle quest
                 -> mission_four
             - 5 && availableMissions has missionFive:
                 -> mission_five
-            - 6 && availableMissions has missionSix:
+            - 6 && availableMissions has missionSix && ((firstStory == StoryEnded) or (secondStory == StoryEnded) or (thirdStory == StoryEnded)):
                 -> mission_six
-            - 7 && availableMissions has missionSeven:
+            - 7 && availableMissions has missionSeven && (trainStopContents has FirstCharacterNotes) or (trainStopContents has SecondCharacterNotes):
                 -> mission_seven
+            - 8 && playerAccessiblePlaces has Library:
+                -> mission_eight
             - else:
                 {frogDebug: il valore di diceFrog è {diceFrog}, e la missione associata è già stata fatta. Ritiro il dado.}
                 -> top
@@ -259,7 +285,7 @@ TODO: Ho visto che hai fatto XXXYY = tracciamento delle quest
                 - little_storylets:
                     Grazie per aver condiviso le cose che hai scoperto con Mentore, {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ availableMissions -= missionThree
+                        ~ availableMissions -= missionFour
                         ~ activeMissions = ()
                             -> frog_gift_dispatcher
                 - else:
@@ -267,6 +293,7 @@ TODO: Ho visto che hai fatto XXXYY = tracciamento delle quest
                     Torna da me quando avrai condiviso con lei qualcosa di insolito.
                         -> main  
             }        
+        
         - missionFive:
             {
                 - first_second_chit_chat:
@@ -275,7 +302,7 @@ TODO: Ho visto che hai fatto XXXYY = tracciamento delle quest
                     Questa cosa accadrà altre volte, per cui: se vedi due personagge nello stesso luogo, prova a vedere se hanno qualcosa da dirsi.
                     
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ availableMissions -= missionThree
+                        ~ availableMissions -= missionFive
                         ~ activeMissions = ()
                             -> frog_gift_dispatcher
                 - else:
@@ -283,8 +310,57 @@ TODO: Ho visto che hai fatto XXXYY = tracciamento delle quest
                     Torna da me quando avrai sentito cosa hanno da dirsi.
                         -> main  
             }         
+        
         - missionSix:
+            {
+                - talking_witch.intro:
+                    Hai parlato con l'albero, {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    E non sta a me chiederti cosa vi siete dett3, ma spero tu possa aver trovato un'alleata in questo percorso.
+                    
+                    Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
+                        ~ availableMissions -= missionSix
+                        ~ activeMissions = ()
+                            -> frog_gift_dispatcher
+                - else:
+                    Ricorda {name}: prova a parlare con l'albero della foresta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    E poi torna da me.
+                        -> main  
+            } 
+        
         - missionSeven:
+            {
+                - first_character_notes or second_character_notes:
+                    Hai letto la lettera che ti è stata inviata, {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Ricordati di darci un'occhiata ogni tanto, così da sapere come avanza la storia delle persone che hai aiutato.
+                    
+                    Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
+                        ~ availableMissions -= missionSeven
+                        ~ activeMissions = ()
+                            -> frog_gift_dispatcher
+                - else:
+                    Ricorda {name}: leggi la lettera che hai ricevuto alla fermata del treno.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    E poi torna da me.
+                        -> main  
+            }
+        
+        - missionEight:
+            {
+                - readStories != ():
+                    Hai letto una della storie della biblioteca, {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    La biblioteca è un posto di riposo, ma non solo.
+                    Anche alle persone che popolano questo posto piace leggere.
+                    E a volte, se avete avuto una lettura in comune, potresti scoprire qualcosa di più su di loro.
+                    
+                    Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
+                        ~ availableMissions -= missionEight
+                        ~ activeMissions = ()
+                            -> frog_gift_dispatcher
+                - else:
+                    Ricorda {name}: leggi una delle storie della biblioteca.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    E poi torna da me.
+                        -> main  
+            }
+        
         - specialMissionOne:
         - specialMissionTwo:
         - else:
