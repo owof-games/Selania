@@ -1,6 +1,11 @@
 === third_character_recap
 + (check){are_two_entities_together(ThirdRecap, PG)} [ThirdRecap]
-~ enableBigDialogue()
+    ~ enableBigDialogue()   
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
 
 {
     - knowing_third_character.one: prima informazione.

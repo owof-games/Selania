@@ -39,6 +39,11 @@
 === autonomy_mission_verify ===
 //Verifico quante missioni autonome ha fatto la giocatrice.
 {frogDebug: passo da autonomy_mission_verify.}
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
 
     //Missione uno: utilizzo del libro della riscrittora.
         {
@@ -199,6 +204,12 @@
 
 === closed_mission_verify
 {frogDebug: passo da closed_mission_verify.}
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    
     {activeMissions:
         //Qui la logica da implementare sarà: se le condizione è stata risolta (es: nodo attraversato) allora svuoto activeMissions (~ activeMissions = ()) e tolgo la missione da availableMissions, e invio la giocatrice alla parte del dono, altrimenti ho un reminder che mi ricorda di fare la missione.
         - missionOne:

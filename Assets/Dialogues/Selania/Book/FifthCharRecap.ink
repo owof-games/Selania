@@ -1,9 +1,12 @@
 === fifth_character_recap
 + (check){are_two_entities_together(FifthRecap, PG)} [FifthRecap]
-~ enableBigDialogue()
-        ~ temp charNameOne = translator(firstCharacterState)
-        ~ temp charNameTwo = translator(secondCharacterState)
-        ~ temp charNameFive = translator(fifthCharacterState)
+
+    ~ enableBigDialogue()
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
         
 
 <b><i>Appunti dalle conversazioni.</b></i> Ho incontrato una persona che mi ha detto di chiamarla Mentore, perché mi farà da guida in questo luogo. E dopo avermi chiesto nomi e pronomi, mi ha {pronouns has him:invitato|{pronouns has her:invitata|invitatə}} a parlare con le persone che trovo in giro. {about_ink_usage: Per poi dirmi che sono {pronouns has him:un Riscrittore|{pronouns has her:una Riscrittora|unə Riscrittorə}}, e darmi un po' di indicazioni su cosa dovrei fare.}

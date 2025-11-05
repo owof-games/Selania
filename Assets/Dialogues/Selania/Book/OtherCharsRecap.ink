@@ -1,6 +1,12 @@
 === frog_character_recap
 + (check){are_two_entities_together(FrogRecap, PG)} [FrogRecap]
-~ enableBigDialogue()
+    ~ enableBigDialogue()
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    
 C'è una rana bluastra dalle parti dello stagno, e sembra propensa a darmi consigli.
 {
     - welcoming_frog:
@@ -22,12 +28,12 @@ dog
 
 === witch_character_recap
 + (check){are_two_entities_together(WitchRecap, PG)} [WitchRecap]
-~ temp charNameOne = translator(firstCharacterState)
-        ~ temp charNameTwo = translator(secondCharacterState)
-        ~ temp charNameThree = translator(thirdCharacterState)
-        ~ temp charNameFour = translator(fourthCharacterState)
-        ~ temp charNameFive = translator(fifthCharacterState)
-~ enableBigDialogue()
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ enableBigDialogue()
 
 {take_this_book:Un vecchio tronco|Un vecchio tronco, sotto le cui radici ho trovato questo diario.}
 

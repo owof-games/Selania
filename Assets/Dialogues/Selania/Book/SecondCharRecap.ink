@@ -6,8 +6,11 @@
 
 === second_character_recap
 + (check){are_two_entities_together(SecondRecap, PG)} [SecondRecap]
-        ~ temp charNameTwo = translator(secondCharacterState)
-        ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
 ~ enableBigDialogue()
 
 

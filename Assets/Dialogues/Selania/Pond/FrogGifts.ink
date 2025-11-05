@@ -1,5 +1,11 @@
 === frog_gift_dispatcher ===
 {frogDebug: passo frog_gift_dispatcher.}
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    
 //Qui è dove distribuiamo i doni a seconda della situazione
     {currentMissionAboutChar:
         - missionCharOne:

@@ -1,7 +1,12 @@
 === greenhouse_recap
 + (check){are_two_entities_together(GreenhouseRecap, PG)} [GreenhouseRecap]
     ~ enableBigDialogue()
-
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    
 {growing_check > 3: <b>Estratti da <i>"Funghi, licheni, muschi: fitomanzia ed erboristeria esoterica."</i> di M.M. - Bozza per la editor.</b> }
 
     {bacca_della_addolorata.step_tre.colto:Il cambiamento a volte è come ghiaccio nelle vene. Si infila nelle spalle, nelle gambe, non permette di avanzare. La strada è lì, eppure non riusciamo a fare il primo passo. La <b><i>Bacca dell'Addolorata</b></i> ci invita a fare prendere un respiro, e iniziare. È facile trovarla all'incrocio fra più strade. In passato veniva piantata dalle madri quando l3 figli3 diventavano grandi, così che non avessero paura di iniziare il loro cammino. Il nome è frutto di una falsa credenza: si dice che la bacca al suo centro cresca solo se la madre piange di dolore per la perdita dellə figliə. Ma anche la gioia di una madre che accoglie una nuova vita per sé rende la pianta rigogliosa.}

@@ -1,6 +1,11 @@
 === rules_recap
 + (check){are_two_entities_together(RulesRecap, PG)} [RulesRecap]
 ~ enableBigDialogue()
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     {
         - about_ink_usage:
         <b>Sulla riscrittura: appunti apocrifi del collettivo P.K.</b> <>

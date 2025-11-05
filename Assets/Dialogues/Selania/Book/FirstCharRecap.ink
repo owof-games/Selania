@@ -7,7 +7,11 @@
 === first_character_recap
 + (check) {are_two_entities_together(FirstRecap, PG)} [FirstRecap]
 ~ enableBigDialogue()
-
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
 
 {
     - first_character_notes.three:
@@ -62,8 +66,6 @@
 
 {
     - first_character_notes.one:
-        ~ temp charNameOne = translator(firstCharacterState)
-        ~ temp charNameFive = translator(fifthCharacterState)
         <b><i>Prima lettera di {charNameOne}.</b></i>: <>
     
     
