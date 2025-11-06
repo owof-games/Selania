@@ -35,7 +35,7 @@
     
     //Se ho almeno una parola
     + {ownedEmotionalWords != ()} [Cosa ho nell'inventario?]
-            Hai con te {generic_list_with_commas(ownedEmotionalWords, -> emotional_words_translator)}.
+            Hai con te {generic_list_with_commas(ownedEmotionalWords, -> emotional_words_translator)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             -> emotional_inventory_management
 
     //Se ho appena scoperto una nuova parola e voglio aggiungerla:
@@ -43,7 +43,7 @@
         
         {
             - takenEmotionalWords < maximumEmotionalWordsForRun: 
-                {newlyDiscoveredEmotionalWord} è stata aggiunta all'inventario.
+                {newlyDiscoveredEmotionalWord} è stata aggiunta all'inventario.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                     ~  ownedEmotionalWords += newlyDiscoveredEmotionalWord
                 {nestDebug: aggiungo {newlyDiscoveredEmotionalWord} alla lista ownedEmotionalWords che ora contiene {ownedEmotionalWords}.}
                 
@@ -56,14 +56,14 @@
                 -> emotional_inventory_management
             
             - else:
-                Hai raggiunto il massimo delle parole disponibili in questa partita, devi prima rimuovere un'altra parola.
+                Hai raggiunto il massimo delle parole disponibili in questa partita, devi prima rimuovere un'altra parola.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 -> emotional_inventory_management
         }
     
 
     //Se ho appena scoperto una nuova parola ma voglio ignorarla:        
     + {newlyDiscoveredEmotionalWord != ()} [Non aggiungo questa parola all'inventario]
-        Sicura? Non potrai più aggiungerla!
+        Ricordati che non potrai più aggiungerla!#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
         + + [Sì, ignoriamola.]
                 ~ newlyDiscoveredEmotionalWord = ()
@@ -87,7 +87,7 @@
         {
             //Se una parola è già attiva
             - activeEmotionalWord != ():
-                Hai attiva una parola, torna quando si sarà esaurita.
+                Hai attiva una parola, torna quando si sarà esaurita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                     -> main
             
             //Se non è attiva

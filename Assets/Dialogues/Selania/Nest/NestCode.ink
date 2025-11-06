@@ -4,7 +4,7 @@
         -> first_key
 
         = first_key
-        Primo giro di scelte
+        Suona la prima nota.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
             + {are_two_entities_together(PG, redShell)}[redShell]
             
@@ -39,7 +39,7 @@
                 -> emotional_words_dispatcher
     
         = second_key
-        Secondo giro di scelte
+        Suona la seconda nota. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             + {are_two_entities_together(PG, redShell)}[redShell]
             
                 @animation:RedShell
@@ -68,7 +68,7 @@
                 -> emotional_words_dispatcher
 
         = third_key
-        Terzo giro di scelte
+        Suona l'ultima nota.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             + {are_two_entities_together(PG, redShell)}[redShell]
             
                 @animation:RedShell
