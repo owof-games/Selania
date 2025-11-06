@@ -305,7 +305,7 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameFirstCharacter in {fourthIngredientNameFirstCharacter}.}
                     
                 - PNG == SecondCharacter:
-                    ~ fourthIngredientReactionSecondCharacter = badReaction
+                    ~ fourthIngredientReactionSecondCharacter = goodReaction
                     ~ fourthIngredientNameSecondCharacter = LicheneDegliAbissi
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
@@ -323,7 +323,7 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameFirstCharacter in {fourthIngredientNameFirstCharacter}.}
                     
                 - PNG == SecondCharacter:
-                    ~ fourthIngredientReactionSecondCharacter = goodReaction
+                    ~ fourthIngredientReactionSecondCharacter = mehReaction
                     ~ fourthIngredientNameSecondCharacter = NonTiScordarDiTe
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}

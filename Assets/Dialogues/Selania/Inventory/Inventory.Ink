@@ -257,8 +257,11 @@ VAR currentReceiver = ()
     
 
     - currentReceiver has SecondCharacter:
+        ~ secondCharacterInkLevel ++
+        ~ secondCharacterInkLevel ++
         {translator(secondCharacterState)} è ferito.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         Ti guarda, fa per dire qualcosa, e poi si zittisce.
+        E ti abbraccia forte.
             ~ secondGift += LicheneDegliAbissi
             ~ currentReceiver = ()
             -> second_story_gift.ink_outcome
@@ -281,7 +284,6 @@ VAR currentReceiver = ()
 
 
     - currentReceiver has SecondCharacter:
-        ~ secondCharacterInkLevel ++
         ~ secondCharacterInkLevel ++
         {translator(secondCharacterState)} ti abbraccia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         E poi si allontana imbarazzato.
