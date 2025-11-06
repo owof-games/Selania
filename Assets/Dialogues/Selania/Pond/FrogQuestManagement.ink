@@ -340,7 +340,9 @@
                     E poi torna da me.
                         -> main  
             }
+        }
         
+    {availableSpecialMissions:
         - specialMissionOne:
             {
                 - special_mission_one_dialogue:
