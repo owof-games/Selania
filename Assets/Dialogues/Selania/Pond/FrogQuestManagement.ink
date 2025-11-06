@@ -526,50 +526,64 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    {witchNotification == false:
-
-        - activeMissions has missionOne:
+    {
+        - witchNotification == false:
             {
-                - first_character_recap.check && second_character_recap.check && greenhouse_recap.check:
+                - activeMissions has missionOne:
+                    {
+                        - first_character_recap.check && second_character_recap.check && greenhouse_recap.check:
+                            -> notification
+                        
+                        - else:
+                            ->->
+                    }
+                    
+                - activeMissions has missionTwo:
+                    {
+                        - LIST_COUNT(backupCultivable) < 12:
+                            -> notification
+                        
+                        - else:
+                            ->->    
+                    }
+                    
+                - activeMissions has missionThree && mindfulness:
                     -> notification
-            }
-            
-        - activeMissions has missionTwo:
-            {
-                - LIST_COUNT(backupCultivable) < 12:
-                    -> notification
-            }
-            
-        - activeMissions has missionThree && mindfulness:
-            -> notification
+                       
+                - activeMissions has missionFour && little_storylets:
+                    -> notification       
+        
+                - activeMissions has missionFive && first_second_chit_chat:
+                    -> notification 
                
-        - activeMissions has missionFour && little_storylets:
-            -> notification       
-
-        - activeMissions has missionFive && first_second_chit_chat:
-            -> notification 
-       
-        
-        - activeMissions has missionSix && talking_witch.intro:
-            -> notification
-    
-        - activeMissions has missionSeven:
-            {
-                - first_character_notes.check or second_character_notes.check:
+                
+                - activeMissions has missionSix && talking_witch.intro:
                     -> notification
+            
+                - activeMissions has missionSeven:
+                    {
+                        - first_character_notes.check or second_character_notes.check:
+                            -> notification
+                        
+                        - else:
+                            ->->    
+                    }
+                
+                - activeMissions has missionEight && readStories != ():
+                    -> notification
+                    
+                - activeMissions has specialMissionOne && special_mission_one_dialogue:
+                    -> notification
+                    
+                - activeMissions has specialMissionTwo && cooking_alone :
+                    -> notification
+                    
+                - else:
+                    ->->
             }
         
-        - activeMissions has missionEight && readStories != ():
-            -> notification
-            
-        - activeMissions has specialMissionOne && special_mission_one_dialogue:
-            -> notification
-            
-        - activeMissions has specialMissionTwo && cooking_alone :
-            -> notification
-            
         - else:
-            -> main
+            ->->    
 }
 
 
