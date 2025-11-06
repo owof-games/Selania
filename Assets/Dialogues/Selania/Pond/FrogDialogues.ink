@@ -8,15 +8,16 @@
     
 + {are_two_entities_together(TheFrog, PG) or (debug_test_frog == true)} [TheFrog]
 
-                {
-                    - welcoming_frog == 1:
-                        ~ somethingStrange ++
-                        ~ saturationVar ++
-                        ~ bookBGVariations ++
-                        ~ move_entity(bowl, Bedroom)
-                        ~ move_entity(waterLily, Bedroom)
-                        ~ move_entity(FrogRecap, BookPlace)
-                }
+    {
+        - welcoming_frog == 1:
+            ~ somethingStrange ++
+            ~ saturationVar ++
+            ~ bookBGVariations ++
+            ~ move_entity(bowl, Bedroom)
+            ~ move_entity(waterLily, Bedroom)
+            ~ move_entity(FrogRecap, BookPlace)
+            La rana si presenta per la prima volta, e ci dice che è qui per aiutarci e aiutare questo posto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    }
                 
                 
                 //Prima verifico se ci sono missioni attive e nel caso offro il reminder.
