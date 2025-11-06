@@ -67,6 +67,7 @@
     INCLUDE Book\FifthCharRecap.ink
     INCLUDE Book\OtherCharsRecap.ink
     //Minigames informations
+    INCLUDE Book\FrogRecap.ink
     INCLUDE Book\GreenhouseRecap.ink
     INCLUDE Book\KitchenRecap.ink
     INCLUDE Book\NestRecap.ink
@@ -119,6 +120,8 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
+
+
 
 
 

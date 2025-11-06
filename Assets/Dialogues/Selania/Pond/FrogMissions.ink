@@ -8,7 +8,7 @@
     Nel tuo lavoro, la conoscenza è potere.
     Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += missionOne
-    
+    @animation:RewriterBook
     -> main
     
     
@@ -24,7 +24,7 @@
     La serra cresce grazie alle cose che puoi elaborare su di te.
     Per cui ti chiedo di tornare da me quando nella serra ci saranno almeno tre piante fiorite.
         ~ activeMissions += missionTwo
-
+    @animation:RewriterBook
     -> main
     
     
@@ -40,6 +40,7 @@
     Perché non provi a chiederle qualche consiglio su come star meglio?
     Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += missionThree
+    @animation:RewriterBook    
     -> main
 
 
@@ -55,6 +56,7 @@
     E conoscendola, credo le farebbe piacere se le parlassi delle cose strane che hai trovato in questo luogo.
     Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += missionFour
+    @animation:RewriterBook
     -> main
 
 
@@ -70,6 +72,7 @@
     Per questo ti offro un suggerimento: prova a vedere cosa succede se {charNameOne} e {charNameTwo} sono assieme.
     E poi torna da me.
         ~ activeMissions += missionFive
+    @animation:RewriterBook    
     -> main
 
        
@@ -85,7 +88,7 @@
      Perché non provia a parlarci?
      Poi torna da me, e ti darò quello che ti serve.
          ~ activeMissions += missionSix
-         
+    @animation:RewriterBook     
     -> main
 
 
@@ -100,7 +103,7 @@
     E il loro contenuto si aggiorna man mano che la loro vita continua.
     Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += missionSeven
-        
+    @animation:RewriterBook    
     -> main
 
 === mission_eight
@@ -112,7 +115,7 @@
     Perché non vai a prenderti un po' di tempo e leggerti qualcosa?
     Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += missionEight
-        
+    @animation:RewriterBook    
     -> main
 
 
@@ -125,7 +128,7 @@
     Perché non vedi cosa accade? #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += specialMissionOne
-        
+    @animation:RewriterBook    
     -> main
     
     
@@ -137,6 +140,7 @@
     Ti chiedo di cucinare da sola. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += specialMissionTwo
+    @animation:RewriterBook    
     -> main
     
 
@@ -151,7 +155,7 @@
 
 
     missione speciale tre: le special creano storylets ad hoc anche con le altre personagge, magari con un blocco di scelte#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        
+    @animation:RewriterBook    
         ~ activeMissions += specialMissionThree
     -> main    
  
@@ -163,7 +167,7 @@
     //* Missione quattro: informazioni preziose
 	//* Dona un coltivabile a una delle persone non riscrivibili, e ti dirò qualcosa di importante su di lei.
     missione speciale quattro: le special creano storylets ad hoc anche con le altre personagge, magari con un blocco di scelte#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        
+    @animation:RewriterBook    
         ~ activeMissions += specialMissionFour
     -> main   
     

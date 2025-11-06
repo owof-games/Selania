@@ -1,20 +1,3 @@
-=== frog_character_recap
-+ (check){are_two_entities_together(FrogRecap, PG)} [FrogRecap]
-    ~ enableBigDialogue()
-    ~ temp charNameOne = translator(firstCharacterState)
-    ~ temp charNameTwo = translator(secondCharacterState)
-    ~ temp charNameThree = translator(thirdCharacterState)
-    ~ temp charNameFour= translator(fourthCharacterState)
-    ~ temp charNameFive = translator(fifthCharacterState)
-    
-C'è una rana bluastra dalle parti dello stagno, e sembra propensa a darmi consigli.
-{
-    - welcoming_frog:
-        Mi ha detto che Riccio si lamenta molto degli adulti, esclusi nonna e fratello. E che la cosa che gli piace meno degli adulti è che non sono coerenti. Per questo, secondo la rana, per conquistarlo non devo dargli ragione: devo mostrare coerenza. Ma sta a me comunque decidere che fare.
-}
-
-
--> rewriter_book_with_flow
 
 
 === dog_character_recap
