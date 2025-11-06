@@ -147,7 +147,7 @@
     ~ temp charNameFive = translator(fifthCharacterState)
 
     {
-        - currentMissionAboutChar has specialDelivery:
+        - currentMissionAboutChar == specialDelivery:
             -> specialTop
         - else:
             -> top
@@ -342,7 +342,7 @@
             }
         }
         
-    {availableSpecialMissions:
+    {activeMissions:
         - specialMissionOne:
             {
                 - special_mission_one_dialogue:
