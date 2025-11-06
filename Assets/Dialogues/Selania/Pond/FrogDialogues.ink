@@ -70,7 +70,6 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
                 {
                     - (firstGift == () && charOneGifts hasnt charOneCultivable) or (!ending_cooking_with_first_char && charOneGifts hasnt charOneCooking) or (playerAccessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord) or (playerAccessiblePlaces has Library && charOneGifts hasnt charOneLibrary):
                         La rana ha qualcosa di utile da donarti#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                        Andiamo alla gestione della missione.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         -> frog_gift_dispatcher
                     
                     - else:
@@ -93,7 +92,6 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
                 {
                     - (secondGift == () && charTwoGifts hasnt charTwoCultivable) or (!ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking) or (playerAccessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord) or (playerAccessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary):
                         La rana ha qualcosa di utile da donarti#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                        Andiamo alla gestione della missione.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         -> frog_gift_dispatcher
                     
                     - else:

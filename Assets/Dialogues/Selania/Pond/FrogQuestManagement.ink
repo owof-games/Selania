@@ -51,7 +51,7 @@
                 ~ availableMissions -= missionOne
                 
                 Stavo per chiederti di consultare in profondità il libro che ti è stato donato, ma ho visto che hai già fatto senza di me! Per cui: ecco il tuo dono!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    -> frog_gift_dispatcher
+                    -> frog_about_who_questions
         }
         
     //Missione due: coltivare almeno tre piante in serra.
@@ -60,7 +60,7 @@
                 ~ availableMissions -= missionTwo
                 
                 Stavo per chiederti di coltivare almeno tre piante in serra, ma ho visto che hai già fatto senza di me! Per cui: ecco il tuo dono!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                -> frog_gift_dispatcher
+                -> frog_about_who_questions
         }
         
     //Missione tre: mindfulness
@@ -68,7 +68,7 @@
             - mindfulness && availableMissions has missionThree:
                 ~ availableMissions -= missionThree
                 Stavo per chiederti di parlare di benessere con Mentore, ma ho visto che hai già fatto senza di me! Per cui: ecco il tuo dono!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                -> frog_gift_dispatcher                      
+                -> frog_about_who_questions                      
         }
         
     //Missione quattro: gossips 
@@ -77,7 +77,7 @@
                 ~ availableMissions -= missionFour
                 Stavo per chiederti di raccontare a Mentore le stranezze che hai incontrato in questo luogo, ma ho visto che hai già fatto in autonomia!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
-                -> frog_gift_dispatcher                        
+                -> frog_about_who_questions                        
         }
         
         
@@ -89,7 +89,7 @@
                 E invece mi hai battuto, assistendo alla conversazione tra Chitarra e Riccio.
                 Questa cosa accadrà altre volte, per cui: se vedi due personagge nello stesso luogo, prova a vedere se hanno qualcosa da dirsi.
                 Nel mentre: ecco il tuo dono!
-                -> frog_gift_dispatcher                        
+                -> frog_about_who_questions                        
         }
         
     //Missione sei: conoscere la strega
@@ -98,7 +98,7 @@
                 ~ availableMissions -= missionSix
                 Stavo per invitarti a parlare con l'albero della foresta, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
-                -> frog_gift_dispatcher                        
+                -> frog_about_who_questions                        
         }
         
     //Missione sette: leggere una lettera
@@ -107,7 +107,7 @@
                 ~ availableMissions -= missionSeven
                 Stavo per chiederti di leggere una delle lettere che hai ricevuto sulla bacheca, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
-                -> frog_gift_dispatcher                        
+                -> frog_about_who_questions                        
         }
         
     //Missione otto: leggere un libro della biblioteca
@@ -116,13 +116,13 @@
                 ~ availableMissions -= missionEight
                 Stavo per chiederti di leggere una delle storie della biblioteca, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
-                -> frog_gift_dispatcher                        
+                -> frog_about_who_questions                        
         } 
 
         {
             - availableMissions == ():
                 Non ho più missioni da offrirti, ma hai bisogno di me, per cui ti aiuterò!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    -> frog_gift_dispatcher  
+                    -> frog_about_who_questions 
                 
             - else:
                 ~ temp dice = RANDOM(1,4)   
