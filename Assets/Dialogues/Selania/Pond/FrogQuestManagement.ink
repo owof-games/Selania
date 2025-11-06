@@ -526,46 +526,46 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    {activeMissions && witchNotification == false:
+    {witchNotification == false:
 
-        - missionOne:
+        - activeMissions has missionOne:
             {
                 - first_character_recap.check && second_character_recap.check && greenhouse_recap.check:
                     -> notification
             }
             
-        - missionTwo:
+        - activeMissions has missionTwo:
             {
                 - LIST_COUNT(backupCultivable) < 12:
                     -> notification
             }
             
-        - missionThree && mindfulness:
+        - activeMissions has missionThree && mindfulness:
             -> notification
                
-        - missionFour && little_storylets:
+        - activeMissions has missionFour && little_storylets:
             -> notification       
 
-        - missionFive && first_second_chit_chat:
+        - activeMissions has missionFive && first_second_chit_chat:
             -> notification 
        
         
-        - missionSix && talking_witch.intro:
+        - activeMissions has missionSix && talking_witch.intro:
             -> notification
     
-        - missionSeven:
+        - activeMissions has missionSeven:
             {
                 - first_character_notes.check or second_character_notes.check:
                     -> notification
             }
         
-        - missionEight && readStories != ():
+        - activeMissions has missionEight && readStories != ():
             -> notification
             
-        - specialMissionOne && special_mission_one_dialogue:
+        - activeMissions has specialMissionOne && special_mission_one_dialogue:
             -> notification
             
-        - specialMissionTwo && cooking_alone :
+        - activeMissions has specialMissionTwo && cooking_alone :
             -> notification
             
         - else:
