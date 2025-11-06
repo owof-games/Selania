@@ -27,9 +27,37 @@
 
 - (top)
 Qui la rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-Arriviamo qui solo se non ci sono quest attive.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+      
+      + Vorrei chiederti un aiuto.
+        -
+
+    {
+        -  (firstStory == StoryStarted && ((firstGift == () && charOneGifts hasnt charOneCultivable) or (!ending_cooking_with_first_char && charOneGifts hasnt charOneCooking) or (playerAccessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord) or (playerAccessiblePlaces has Library && charOneGifts hasnt charOneLibrary))) or (secondStory == StoryStarted && ((secondGift == () && charTwoGifts hasnt charTwoCultivable) or (!ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking) or (playerAccessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord) or (playerAccessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary)) or (firstGift !=() or secondGift !=() or fourthIngredientNameFirstCharacter !=() or fourthIngredientNameSecondCharacter != ()) or (availableSpecialMissions != () && playerAccessiblePlaces has Kitchen && playerAccessiblePlaces has Nest)):
+            Certo!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                -> autonomy_mission_verify
+        
+        - LIST_COUNT(charOneGifts) == 4 && LIST_COUNT(charTwoGifts) == 4 && availableSpecialMissions == ():
+            Ti ho aiutato come potevo, {name}. Ora è tutto nelle tue mani#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                -> main
+        
+        - else:
+            Per ora non ho niente da darti, ma torna più avanti!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                -> main
+    }
 
 
+
+
+=== frog_about_who_questions
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+
+- (top)
+    
     + {firstStory == StoryStarted} [Ho bisogno di una mano con Chitarra.]
         ~  currentMissionAboutChar = missionCharOne
   
@@ -43,7 +71,7 @@ Arriviamo qui solo se non ci sono quest attive.#speaker:{frog_tag()} #inkA:offSt
                     - (firstGift == () && charOneGifts hasnt charOneCultivable) or (!ending_cooking_with_first_char && charOneGifts hasnt charOneCooking) or (playerAccessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord) or (playerAccessiblePlaces has Library && charOneGifts hasnt charOneLibrary):
                         La rana ha qualcosa di utile da donarti#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         Andiamo alla gestione della missione.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                        -> autonomy_mission_verify
+                        -> frog_gift_dispatcher
                     
                     - else:
                         Per ora la rana non può aiutarti con {charNameOne}, ma ti consiglia di tornare più avanti.
@@ -66,7 +94,7 @@ Arriviamo qui solo se non ci sono quest attive.#speaker:{frog_tag()} #inkA:offSt
                     - (secondGift == () && charTwoGifts hasnt charTwoCultivable) or (!ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking) or (playerAccessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord) or (playerAccessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary):
                         La rana ha qualcosa di utile da donarti#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         Andiamo alla gestione della missione.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                        -> autonomy_mission_verify
+                        -> frog_gift_dispatcher
                     
                     - else:
                         Per ora la rana non può aiutarti con {charNameTwo}, ma ti consiglia di tornare più avanti.
@@ -78,32 +106,23 @@ Arriviamo qui solo se non ci sono quest attive.#speaker:{frog_tag()} #inkA:offSt
     
     + {thirdStory == StoryStarted} [PNG 3]
         ~  currentMissionAboutChar = missionCharThree
-            -> autonomy_mission_verify
+            -> frog_gift_dispatcher
         
     + {fourthStory == StoryStarted} [PNG 4]
         ~  currentMissionAboutChar = missionCharFour
-            -> autonomy_mission_verify
+            -> frog_gift_dispatcher
         
     + {fifthStory == StoryStarted} [PNG 5 (non come mentore)]
         ~  currentMissionAboutChar = missionCharFive
-            -> autonomy_mission_verify
+            -> frog_gift_dispatcher
         
     
     + {firstGift !=() or secondGift !=() or fourthIngredientNameFirstCharacter !=() or fourthIngredientNameSecondCharacter != ()}[Ho bisogno di recuperare una pianta che ho utilizzato.]
         //Nota: per ora sono quattro massimi gli utilizzi di un coltivabile, per cui non serve un menu ad hoc. Poi capire come fare.
             -> cultivable_recovery
     
-    
-    + {availableSpecialMissions != () && playerAccessiblePlaces has Kitchen && playerAccessiblePlaces has Nest}[Sorprendimi.]
-        ~  currentMissionAboutChar = specialDelivery
-            //Per queste non passiamo mai dalla verifica dell'autonomia.
-            -> missions_dispatcher ->
-    
     + [Ho cambiato idea.]
         -> main
     -
 
 ->->
-
-//Questa funzione ci permette di levare gli elementi inutili perché scoperti autonomamente (es: ho già fatto un dono).
-//Ed è questa la funzione che fa salire il contatore di autonomia.

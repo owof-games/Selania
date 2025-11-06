@@ -46,12 +46,14 @@
                         - else:
                             ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
                     }
+                        -> closed_exchange
                         
                         
                 -  findedGifts has CantoDelleCompagne or findedGifts hasnt LanaNotturna or findedGifts hasnt NonTiScordarDiTe:
                     Già lo possiedi: ti do un indizio.
                     {findedGifts has CantoDelleCompagne: Pensa a quanto piacere a Chitarra lo stare con persone amiche, e chiediti cosa ricordi una festa.|{findedGifts has LanaNotturna: Pensa al bisogno di Chitarra di sapere che non tutto è perduto, che c'è ancora la possibilità di sbocciare. Quale pianta racconta questa cosa?|Chitarra ama suo nonno. Quale pianta può ricordarglielo?}}
-            
+                        -> closed_exchange
+                        
                 - (findedGifts hasnt CantoDelleCompagne) && (findedGifts hasnt LanaNotturna) && (findedGifts hasnt NonTiScordarDiTe) && (growthCantoDelleCompagne == stepThree or growthLanaNotturna == stepThree or  growthNonTiScordarDiTe == stepThree):
                     Hai posseduto qualcosa di perfetto, ma l'hai utilizzato altrove.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Credo però di averne un poco nella mia scorta.
@@ -71,7 +73,7 @@
                     Sicuro, adorerà!
                     Te l'ho messo nell'inventario.
                     @animation: Inventory
-                
+                    -> closed_exchange
             }
             
         + {!ending_cooking_with_first_char && charOneGifts hasnt charOneCooking} [Vorrei sapere cosa mettere come quarto ingrediente in cucina.]
@@ -92,10 +94,12 @@
                         - else:
                             ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
                     }
+                        -> closed_exchange
                         
                 -  findedGifts has CantoDelleCompagne or findedGifts hasnt LanaNotturna or findedGifts hasnt NonTiScordarDiTe:
                     Già lo possiedi: ti do un indizio.
                     {findedGifts has CantoDelleCompagne: Pensa a quanto piacere a Chitarra lo stare con persone amiche, e chiediti cosa ricordi una festa.|{findedGifts has LanaNotturna: Pensa al bisogno di Chitarra di sapere che non tutto è perduto, che c'è ancora la possibilità di sbocciare. Quale pianta racconta questa cosa?|Chitarra ama suo nonno. Quale pianta può ricordarglielo?}}
+                        -> closed_exchange
             
                 - (findedGifts hasnt CantoDelleCompagne) && (findedGifts hasnt LanaNotturna) && (findedGifts hasnt NonTiScordarDiTe) && (growthCantoDelleCompagne == stepThree or growthLanaNotturna == stepThree or  growthNonTiScordarDiTe == stepThree):
                     Hai posseduto qualcosa di perfetto, ma l'hai utilizzato altrove.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -116,6 +120,7 @@
                     Sicuro, insaporirà alla perfezione il tuo piatto!
                     Te l'ho messo nell'inventario.
                     @animation: Inventory
+                    -> closed_exchange
                 
             }
             
@@ -125,6 +130,7 @@
                 Ma una cosa è certa: odia i discorsi troppo blu.
                 Hai già capito come far diminuire un colore?
                 Perché in questo modo potresti già avere la soluzione.
+                -> closed_exchange
         
         + {playerAccessiblePlaces has Library && charOneGifts hasnt charOneLibrary} [Quale racconto in biblioteca può essere d'aiuto?]
             ~ charOneGifts += charOneLibrary
@@ -135,24 +141,29 @@
                                 - a_story_of_transformation:
                                     E che ne avete già parlato.
                                     Perché non scegli un altro dono?
-                                    -> char_one_gifts
+                                    ~  currentMissionAboutChar = ()
+                                    -> frog_about_who_questions
                                 
                                 
                                 - else:
                                     Prova a parlare con lei e vedrai che avrà sicuramente qualcosa da dirti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                                    -> closed_exchange
                             
                             }
         
                     - else:
                         Prova a leggere qualcosa che abbia a che fare con la trasformazione.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         E troverai la risposta che ti serve.
+                        -> closed_exchange
 
                 }
-        + -> 
-            Qui passiamo per una fallback option per Chitarra, e me la tengo come tracciamento.
-        - 
+        + [No, preferisco qualcosa di diverso.]
+            ~  currentMissionAboutChar = ()
+            -> frog_about_who_questions
+        + [Mi prendo del tempo e torno poi.]
+            ~  currentMissionAboutChar = ()
+            -> main
         
-        -> closed_exchange
     
     
     = char_two_gifts
@@ -178,11 +189,13 @@
                         - else:
                             ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
                         }
+                        -> closed_exchange
                         
                 -  findedGifts has BastoneDellOzioso or findedGifts hasnt BrinaDellImpossibile:
                     Già lo possiedi: ti do un indizio.
                     {findedGifts has BastoneDellOzioso: Pensa a quanto piacere a Chitarra lo stare con persone amiche, e chiediti cosa ricordi una festa.|{findedGifts has BrinaDellImpossibile: Pensa al bisogno di Chitarra di sapere che non tutto è perduto, che c'è ancora la possibilità di sbocciare. Quale pianta racconta questa cosa?|Chitarra ama suo nonno. Quale pianta può ricordarglielo?}}
-            
+                        -> closed_exchange
+                        
                 - (findedGifts hasnt BastoneDellOzioso) && (findedGifts hasnt BrinaDellImpossibile) && (growthBastoneDellOzioso == stepThree or growthBrinaDellImpossibile == stepThree):
                     Hai posseduto qualcosa di perfetto, ma l'hai utilizzato altrove.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Credo però di averne un poco nella mia scorta.
@@ -199,7 +212,7 @@
                     Sicuro, adorerà!
                     Te l'ho messo nell'inventario.
                     @animation: Inventory
-                
+                    -> closed_exchange
             }
             
         + {!ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking} [Vorrei sapere cosa mettere come quarto ingrediente in cucina.]
@@ -219,11 +232,13 @@
                         - else:
                             ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
                         }
+                        -> closed_exchange
                     
                 -  findedGifts has BastoneDellOzioso or findedGifts hasnt BrinaDellImpossibile:
                     Già lo possiedi: ti do un indizio.
                     {findedGifts has BastoneDellOzioso: Pensa a quanto piacere a Chitarra lo stare con persone amiche, e chiediti cosa ricordi una festa.|{findedGifts has BrinaDellImpossibile: Pensa al bisogno di Chitarra di sapere che non tutto è perduto, che c'è ancora la possibilità di sbocciare. Quale pianta racconta questa cosa?|Chitarra ama suo nonno. Quale pianta può ricordarglielo?}}
-            
+                        -> closed_exchange
+                        
                 - (findedGifts hasnt BastoneDellOzioso) && (findedGifts hasnt BrinaDellImpossibile) && (growthBastoneDellOzioso == stepThree or growthBrinaDellImpossibile == stepThree):
                     Hai posseduto qualcosa di perfetto, ma l'hai utilizzato altrove.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Credo però di averne un poco nella mia scorta.
@@ -242,15 +257,16 @@
                     @animation: Inventory
                 
             }
-            
+                    -> closed_exchange
+                    
         + {playerAccessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord} [Quali colori usare al nido.]
             ~ charTwoGifts += charTwoEmotionalWord
                 Riccio è una bella testolina.
                 E quello che posso dirti con certezza, è che apprezza la coerenza.
                 Lo fa sentire al sicuro.
                 Se hai capito come funziona l'alchimia del nido, sono sicuro che avrai già capito cosa fare.
-            
-            
+                        -> closed_exchange
+                
         + {playerAccessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary} [Quale racconto in biblioteca può essere d'aiuto?] 
             ~ charTwoGifts += charTwoLibrary
         {
@@ -260,24 +276,27 @@
                                 - a_story_of_transformation:
                                     E che ne avete già parlato.
                                     Perché non scegli un altro dono?
-                                    -> char_two_gifts
+                                    ~  currentMissionAboutChar = ()
+                                    -> frog_about_who_questions
                                 
                                 
                                 - else:
                                     Prova a parlare con lui e vedrai che avrà sicuramente qualcosa da dirti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                            
+                                    -> closed_exchange
                             }
         
                     - else:
                         Prova a leggere qualcosa che abbia a che fare con la ribellione.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         E troverai la risposta che ti serve.
-
+                                -> closed_exchange
                 }
             
-        + -> 
-            Qui passiamo per una fallback option per Riccio, e me la tengo come tracciamento.
-        - 
-        -> closed_exchange
+        + [No, preferisco qualcosa di diverso.]
+            ~  currentMissionAboutChar = ()
+            -> frog_about_who_questions
+        + [Mi prendo del tempo e torno poi.]
+            ~  currentMissionAboutChar = ()
+            -> main
     
     = mission_objects
     //Oggetti

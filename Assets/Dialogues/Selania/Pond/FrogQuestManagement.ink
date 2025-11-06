@@ -125,7 +125,17 @@
                     -> frog_gift_dispatcher  
                 
             - else:
-                -> missions_dispatcher
+                ~ temp dice = RANDOM(1,4)   
+                {
+                     
+                    - dice == 4 && availableSpecialMissions != () && playerAccessiblePlaces has Kitchen && playerAccessiblePlaces has Nest:
+                        ~  currentMissionAboutChar = specialDelivery
+                        -> missions_dispatcher
+                    
+                    - else:
+                        -> missions_dispatcher
+                }
+                
         }
 
 ->->
@@ -219,7 +229,7 @@
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ activeMissions = ()
                         ~ availableMissions -= missionOne
-                            -> frog_gift_dispatcher
+                            -> frog_about_who_questions
                 
                 - else:
                     Ricorda {name}: leggere è importante!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -235,7 +245,7 @@
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ availableMissions -= missionTwo
                         ~ activeMissions = ()
-                            -> frog_gift_dispatcher
+                            -> frog_about_who_questions
                 - else:
                     Ricorda {name}: la serra ha bisogno di te.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Torna da me quando avrai almeno tre piante fiorite.
@@ -250,7 +260,7 @@
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ availableMissions -= missionThree
                         ~ activeMissions = ()
-                            -> frog_gift_dispatcher
+                            -> frog_about_who_questions
                 - else:
                     Ricorda {name}: Mentore vuole condividere con te i suoi consigli per farti sentire meglio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Torna da me quando le avrai parlato del tuo benessere.
@@ -264,7 +274,7 @@
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ availableMissions -= missionFour
                         ~ activeMissions = ()
-                            -> frog_gift_dispatcher
+                            -> frog_about_who_questions
                 - else:
                     Ricorda {name}: Mentore ci tiene a sentire le cose che hai scoperto su questo luogo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Torna da me quando avrai condiviso con lei qualcosa di insolito.
@@ -281,7 +291,7 @@
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ availableMissions -= missionFive
                         ~ activeMissions = ()
-                            -> frog_gift_dispatcher
+                            -> frog_about_who_questions
                 - else:
                     Ricorda {name}: prova a parlare con Riccio e Chitarra quando sono assieme.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Torna da me quando avrai sentito cosa hanno da dirsi.
@@ -297,7 +307,7 @@
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ availableMissions -= missionSix
                         ~ activeMissions = ()
-                            -> frog_gift_dispatcher
+                            -> frog_about_who_questions
                 - else:
                     Ricorda {name}: prova a parlare con l'albero della foresta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     E poi torna da me.
@@ -313,7 +323,7 @@
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ availableMissions -= missionSeven
                         ~ activeMissions = ()
-                            -> frog_gift_dispatcher
+                            -> frog_about_who_questions
                 - else:
                     Ricorda {name}: leggi la lettera che hai ricevuto alla fermata del treno.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     E poi torna da me.
@@ -331,7 +341,7 @@
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ availableMissions -= missionEight
                         ~ activeMissions = ()
-                            -> frog_gift_dispatcher
+                            -> frog_about_who_questions
                 - else:
                     Ricorda {name}: leggi una delle storie della biblioteca.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     E poi torna da me.
@@ -363,6 +373,7 @@
                     ~ move_entity(purpleShell, Nest)
                     ~ availableSpecialMissions -= specialMissionOne
                     ~ activeMissions = ()
+                    ~  currentMissionAboutChar = ()
                     -> main
                     
                 - else:
@@ -380,6 +391,7 @@
                     ~ findedGifts += universalIngredient
                     ~ availableSpecialMissions -= specialMissionTwo
                     ~ activeMissions = ()
+                    ~  currentMissionAboutChar = ()
                     -> main
                     
                 - else:
@@ -428,72 +440,72 @@ Vorrei recuperare...
     + {growthBaccaDellaAddolorata == stepThree && findedGifts hasnt BaccaDellaAddolorata} [{ingredientTranslator(BaccaDellaAddolorata)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = BaccaDellaAddolorata
-            -> autonomy_mission_verify
+            -> frog_gift_dispatcher
             
     + {growthBarbaDellInciampo == stepThree && findedGifts hasnt BarbaDellInciampo} [{ingredientTranslator(BarbaDellInciampo)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = BarbaDellInciampo
-            -> autonomy_mission_verify
+            -> frog_gift_dispatcher
             
     + {growthBastoneDellOzioso == stepThree && findedGifts hasnt BastoneDellOzioso}[{ingredientTranslator(BastoneDellOzioso)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = BastoneDellOzioso
-            -> autonomy_mission_verify
+            -> frog_gift_dispatcher
             
     + {growthBrinaDellImpossibile == stepThree && findedGifts hasnt BrinaDellImpossibile}[{ingredientTranslator(BrinaDellImpossibile)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = BrinaDellImpossibile
-            -> autonomy_mission_verify
+            -> frog_gift_dispatcher
             
     + {growthCantoDelleCompagne == stepThree && findedGifts hasnt CantoDelleCompagne} [{ingredientTranslator(CantoDelleCompagne)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = CantoDelleCompagne
-            -> autonomy_mission_verify
+            -> frog_gift_dispatcher
             
     + {growthCardoAspinato == stepThree && findedGifts hasnt CardoAspinato} [{ingredientTranslator(CardoAspinato)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = CardoAspinato
-            -> autonomy_mission_verify
+            -> frog_gift_dispatcher
             
     + {growthEderaDelleAmanti == stepThree && findedGifts hasnt EderaDelleAmanti} [{ingredientTranslator(EderaDelleAmanti)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = EderaDelleAmanti
-            -> autonomy_mission_verify
+            -> frog_gift_dispatcher
             
     + {growthErbaLiccia == stepThree && findedGifts hasnt ErbaLiccia} [{ingredientTranslator(ErbaLiccia)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = BaccaDellaAddolorata
-            -> autonomy_mission_verify
+            -> frog_gift_dispatcher
             
     + {growthFalsaPalude == stepThree && findedGifts hasnt FalsaPalude} [{ingredientTranslator(FalsaPalude)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = FalsaPalude
-            -> autonomy_mission_verify
+            -> frog_gift_dispatcher
             
     + {growthLanaNotturna == stepThree && findedGifts hasnt LanaNotturna} [{ingredientTranslator(LanaNotturna)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = LanaNotturna
-            -> autonomy_mission_verify
+            -> frog_gift_dispatcher
             
     + {growthLicheneDegliAbissi == stepThree && findedGifts hasnt LicheneDegliAbissi} [{ingredientTranslator(LicheneDegliAbissi)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = LicheneDegliAbissi
-            -> autonomy_mission_verify
+            -> frog_gift_dispatcher
             
     + {growthNonTiScordarDiTe == stepThree && findedGifts hasnt NonTiScordarDiTe} [{ingredientTranslator(NonTiScordarDiTe)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = NonTiScordarDiTe
-            -> autonomy_mission_verify
+            -> frog_gift_dispatcher
             
     + {growthOlobino == stepThree && findedGifts hasnt Olobino} [{ingredientTranslator(Olobino)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = Olobino
-            -> autonomy_mission_verify
+            -> frog_gift_dispatcher
             
     + {growthLaSpazzata == stepThree && findedGifts hasnt LaSpazzata} [{ingredientTranslator(LaSpazzata)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = LaSpazzata
-            -> autonomy_mission_verify
+            -> frog_gift_dispatcher
             
     
     + [Ho cambiato idea.]
