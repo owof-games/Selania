@@ -6,6 +6,7 @@
     
     {name}, ti invito a leggere il libro che ti è stato dato. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Nel tuo lavoro, la conoscenza è potere.
+    Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += missionOne
     
     -> main
@@ -36,7 +37,8 @@
     ~ temp charNameFive = translator(fifthCharacterState)
     
     Sai {name}, Mentore sente spesso il bisogno di sentirsi utile.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-    Perché non provi a chiederle qualche consiglio su come star meglio?    
+    Perché non provi a chiederle qualche consiglio su come star meglio?
+    Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += missionThree
     -> main
 
@@ -50,7 +52,8 @@
     ~ temp charNameFive = translator(fifthCharacterState)
     
     Stavo pensando: ci sono un po' di cose che hai scoperto su questo luogo, ma che non hai condiviso con Mentore.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-    E conoscendola, credo le farebbe piacere se le parlassi delle cose strane che hai trovato in questo luogo.  
+    E conoscendola, credo le farebbe piacere se le parlassi delle cose strane che hai trovato in questo luogo.
+    Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += missionFour
     -> main
 
@@ -80,6 +83,7 @@
     
      Sembra che qualcosa sia cambiato in quell'albero al centro della foresta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
      Perché non provia a parlarci?
+     Poi torna da me, e ti darò quello che ti serve.
          ~ activeMissions += missionSix
          
     -> main
@@ -94,6 +98,7 @@
     Perché non vai a vedere cosa ha da condividere con te?
     Trovi le lettere attaccate alla bacheca vicino alla fermata del treno.
     E il loro contenuto si aggiorna man mano che la loro vita continua.
+    Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += missionSeven
         
     -> main
@@ -105,6 +110,7 @@
     
     La biblioteca è piena di racconti, {name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Perché non vai a prenderti un po' di tempo e leggerti qualcosa?
+    Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += missionEight
         
     -> main
@@ -117,6 +123,7 @@
     
     Sembra che ci sia della tensione tra Riccio e Mentore.
     Perché non vedi cosa accade? #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += specialMissionOne
         
     -> main
@@ -128,7 +135,7 @@
     ~ temp charNameFive = translator(fifthCharacterState)
 
     Ti chiedo di cucinare da sola. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-        
+    Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += specialMissionTwo
     -> main
     
@@ -143,7 +150,7 @@
 	//    * Porta questa cosa a qualcuné 
 
 
-    missione speciale due: le special creano storylets ad hoc anche con le altre personagge, magari con un blocco di scelte#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    missione speciale tre: le special creano storylets ad hoc anche con le altre personagge, magari con un blocco di scelte#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         
         ~ activeMissions += specialMissionThree
     -> main    
@@ -155,7 +162,7 @@
     
     //* Missione quattro: informazioni preziose
 	//* Dona un coltivabile a una delle persone non riscrivibili, e ti dirò qualcosa di importante su di lei.
-    missione speciale due: le special creano storylets ad hoc anche con le altre personagge, magari con un blocco di scelte#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    missione speciale quattro: le special creano storylets ad hoc anche con le altre personagge, magari con un blocco di scelte#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         
         ~ activeMissions += specialMissionFour
     -> main   

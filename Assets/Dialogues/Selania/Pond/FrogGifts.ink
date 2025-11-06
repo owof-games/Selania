@@ -36,8 +36,17 @@
                     Ancora non possiedi niente di adatto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Ma posso fare una cosa: la prossima volta che inizierai a coltivare qualcosa in serra, crescerà un dono adatto.
                     Fanne tesoro.
-                        ~ nextCultivable = ()
-                        ~ nextCultivable = CantoDelleCompagne
+                    {
+                        - nextCultivableOne == ():
+                            ~ nextCultivableOne = CantoDelleCompagne
+                        - nextCultivableTwo == () && nextCultivableOne != ():
+                            ~ nextCultivableTwo = CantoDelleCompagne
+                        - nextCultivableThree == () && nextCultivableTwo != ():
+                            ~ nextCultivableThree = CantoDelleCompagne
+                        - else:
+                            ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
+                    }
+                        
                         
                 -  findedGifts has CantoDelleCompagne or findedGifts hasnt LanaNotturna or findedGifts hasnt NonTiScordarDiTe:
                     Già lo possiedi: ti do un indizio.
@@ -73,8 +82,16 @@
                     Ancora non possiedi niente di adatto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Ma posso fare una cosa: la prossima volta che inizierai a coltivare qualcosa in serra, crescerà un ingrediente adatto.
                     Fanne tesoro.
-                        ~ nextCultivable = ()
-                        ~ nextCultivable = LanaNotturna
+                    {
+                        - nextCultivableOne == ():
+                            ~ nextCultivableOne = LanaNotturna
+                        - nextCultivableTwo == () && nextCultivableOne != ():
+                            ~ nextCultivableTwo = LanaNotturna
+                        - nextCultivableThree == () && nextCultivableTwo != ():
+                            ~ nextCultivableThree = LanaNotturna
+                        - else:
+                            ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
+                    }
                         
                 -  findedGifts has CantoDelleCompagne or findedGifts hasnt LanaNotturna or findedGifts hasnt NonTiScordarDiTe:
                     Già lo possiedi: ti do un indizio.
@@ -151,8 +168,16 @@
                     Ancora non possiedi niente di adatto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Ma posso fare una cosa: la prossima volta che inizierai a coltivare qualcosa in serra, crescerà un dono adatto.
                     Fanne tesoro.
-                        ~ nextCultivable = ()
-                        ~ nextCultivable = BastoneDellOzioso
+                        {
+                        - nextCultivableOne == ():
+                            ~ nextCultivableOne = BastoneDellOzioso
+                        - nextCultivableTwo == () && nextCultivableOne != ():
+                            ~ nextCultivableTwo = BastoneDellOzioso
+                        - nextCultivableThree == () && nextCultivableTwo != ():
+                            ~ nextCultivableThree = BastoneDellOzioso
+                        - else:
+                            ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
+                        }
                         
                 -  findedGifts has BastoneDellOzioso or findedGifts hasnt BrinaDellImpossibile:
                     Già lo possiedi: ti do un indizio.
@@ -184,9 +209,17 @@
                     Ancora non possiedi niente di adatto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Ma posso fare una cosa: la prossima volta che inizierai a coltivare qualcosa in serra, crescerà un dono adatto.
                     Fanne tesoro.
-                        ~ nextCultivable = ()
-                        ~ nextCultivable = BrinaDellImpossibile
-                        
+                        {
+                        - nextCultivableOne == ():
+                            ~ nextCultivableOne = BrinaDellImpossibile
+                        - nextCultivableTwo == () && nextCultivableOne != ():
+                            ~ nextCultivableTwo = BrinaDellImpossibile
+                        - nextCultivableThree == () && nextCultivableTwo != ():
+                            ~ nextCultivableThree = BrinaDellImpossibile
+                        - else:
+                            ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
+                        }
+                    
                 -  findedGifts has BastoneDellOzioso or findedGifts hasnt BrinaDellImpossibile:
                     Già lo possiedi: ti do un indizio.
                     {findedGifts has BastoneDellOzioso: Pensa a quanto piacere a Chitarra lo stare con persone amiche, e chiediti cosa ricordi una festa.|{findedGifts has BrinaDellImpossibile: Pensa al bisogno di Chitarra di sapere che non tutto è perduto, che c'è ancora la possibilità di sbocciare. Quale pianta racconta questa cosa?|Chitarra ama suo nonno. Quale pianta può ricordarglielo?}}

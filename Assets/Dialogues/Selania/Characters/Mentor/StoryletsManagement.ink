@@ -1,3 +1,13 @@
+/* ---------------------------------
+
+   Ordine priorità storylets:
+   * Con/su Riccio
+   * Tutorial
+   * Con/su Chitarra
+   * Personali
+ ----------------------------------*/
+
+
 === mentor_tutorial_storylets
 {debug: passo da mentor_tutorial_storylets}
 {debug: valore di welcome == {welcome}}
@@ -52,11 +62,11 @@
                 - firstStory == StoryEnded:
                     -> first_character_feedback
                 - else:
-                    -> mentor_and_second_char_storylets     
+                    -> fifth_character_storylets    
             }
         
         - else:
-            -> mentor_and_second_char_storylets 
+            -> fifth_character_storylets
     
  }  
     
@@ -84,7 +94,7 @@
             -> second_character_feedback            
             
         - else:
-            -> fifth_character_storylets
+            -> mentor_tutorial_storylets
     }
 
 

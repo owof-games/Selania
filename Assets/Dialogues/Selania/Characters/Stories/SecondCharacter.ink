@@ -1608,12 +1608,16 @@
     = not_talk
         ~ temp charNameFive = translator(fifthCharacterState)
         
-        Io ODIO {not welcome:quella strega coi petali| {charNameFive}}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-        E non ci parlerò
-        mai
-        MAI
-        PIU'!
-        Mi ha fatto male!
+        {not_talk: 
+        
+            - 1: Io ODIO {not welcome:quella strega coi petali| {charNameFive}}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+                E non ci parlerò
+                mai
+                MAI
+                PIU'!
+                Mi ha fatto male!
+            - else: {~ Non ci parlo con chi è in combutta con quella!|Hai risolto le cose con quella?|Mi ha fatto male, e tu sei qui a non fare nulla?}    
+        }
              {
                 - are_two_entities_together(Mentor, PG) && (not that_little_liar_storylet):
                     ~ riccioMentoreViciniColpo = true

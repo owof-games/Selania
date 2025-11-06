@@ -92,31 +92,56 @@
     VAR growing = 0 
     
 //Gestione priorità coltivabili
-    VAR nextCultivable = ()
+    VAR nextCultivableOne = ()
+    VAR nextCultivableTwo = ()
+    VAR nextCultivableThree = ()
+    
+    
+    
+=== next_cultivable_management
+{debug: passo per next_cultivable_management.}
+{debug: prima di procedere, il valore di nextCultivableThree è {nextCultivableThree}, di nextCultivableTwo è {nextCultivableTwo} e di nextCultivableThree è {nextCultivableThree}.}
+//Qui gestiamo la priorità di crescita dettata dalla rana. Se c'è qualcosa in coda, facciamo salire tutto e poi attiviamo il next cultivable iniziale.
 
-=== cultivable_test ===
-    {
-        - nextCultivable != ():
+//Step uno: riordino delle richieste
+{
+    - nextCultivableThree != () && nextCultivableTwo == ():
+        ~ nextCultivableTwo = nextCultivableThree
+        ~ nextCultivableThree = ()
+}
+
+{
+    - nextCultivableTwo != () && nextCultivableOne == ():
+        ~ nextCultivableOne = nextCultivableTwo
+        ~ nextCultivableTwo = ()
+}
+
+{debug: dopo l'aggiornamento, il valore di nextCultivableThree è {nextCultivableThree}, di nextCultivableTwo è {nextCultivableTwo} e di nextCultivableThree è {nextCultivableThree}.}
+
+//Step due: attivazione o meno (parte solo se chosenCultivable è vuoto)
+ {
+        - nextCultivableOne != () && chosenCultivable == ():
             Sembra che la rana abbia messo qui le sue zampine.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             Ecco qualcosa che crescerà su sua richiesta.
-                ~ chosenCultivable = nextCultivable
+                ~ chosenCultivable = nextCultivableOne
                 
-            {debugCultivable or frogDebug: il valore di nextCultivable è {nextCultivable} e per questo skippo le domande. Ora chosenCultivable è = a {chosenCultivable}.}
+            {debugCultivable or frogDebug: il valore di nextCultivable è {nextCultivableOne} e per questo skippo le domande. Ora chosenCultivable è = a {chosenCultivable}.}
             
-                ~ nextCultivable = ()
-            {debugCultivable or frogDebug: svuoto nextCultivable, e il suo valore è {nextCultivable}.}
+                ~ nextCultivableOne = ()
+            {debugCultivable or frogDebug: svuoto nextCultivable, e il suo valore è {nextCultivableOne}.}
             
                 -> list_to_crops
         
         - else:
-            {debugCultivable or frogDebug: il valore di nextCultivable è {nextCultivable} e per questo passo alle domande.}
-            
-            -> top
+            {debugCultivable or frogDebug: il valore di nextCultivable è {nextCultivableOne}, quello di chosenCultivable {chosenCultivable} e per questo passo alle domande o avanzo, a seconda dello stato di chosenCultivable {chosenCultivable}.}
+            -> cultivable_test
     
     }
 
 
-- (top)
+
+=== cultivable_test ===
+-> next_cultivable_management ->   
 {~La serra ha qualcosa da svelarti.|I vasi hanno nuove domande.|La terra è fertile di risposte.|L'aria scompiglia ragnatele e capelli.|Sussurri serpeggiano tra i vasi, ponendoti domande.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     {
         - not are_two_entities_together(Inventory, PG): Hai trovato un dono: uno zainetto per raccogliere tutto ciò che coltiverai.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}

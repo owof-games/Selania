@@ -21,7 +21,7 @@
 ~ temp charNameFour= translator(fourthCharacterState)
 ~ temp charNameFive = translator(fifthCharacterState)
 
-    -> mentor_tutorial_storylets
+    -> mentor_and_second_char_storylets
     //-> mentor_and_second_char_storylets
     //-> fifth_character_storylets
 
@@ -89,31 +89,31 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
 ~ temp charNameFive = translator(fifthCharacterState)
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {
-            - not one:
+            - not one && tutorialPauses == false:
                 -> one
-            - not two && firstStory == StoryEnded:
+            - not two && firstStory == StoryEnded && tutorialPauses == false:
                 -> two
-            - not three && firstStory == StoryEnded:
+            - not three && firstStory == StoryEnded && tutorialPauses == false:
                 -> three
-            - not four && secondStory == StoryEnded:
+            - not four && secondStory == StoryEnded && tutorialPauses == false:
                 -> four
-            - not five && secondStory == StoryEnded:
+            - not five && secondStory == StoryEnded && tutorialPauses == false:
                 -> five
             //Forse solo una di queste, perché con la terza storia avremo degli storylets ad hoc.    
-            - not six && thirdStory == StoryStarted:
+            - not six && thirdStory == StoryStarted && tutorialPauses == false:
                 -> six
             //Questo è lo storylet dove Mentore sbrocca, e che poi trasformo in quinta personaggia    
-            - not seven && thirdStory == StoryEnded:
+            - not seven && thirdStory == StoryEnded && tutorialPauses == false:
                 -> seven
-            - not eight && fifthStory == StoryStarted:
+            - not eight && fifthStory == StoryStarted && tutorialPauses == false:
                 -> eight
-            - not nine && fifthStory == StoryStarted:
+            - not nine && fifthStory == StoryStarted && tutorialPauses == false:
                 -> nine
-            - not ten && fifthStory == StoryStarted:
+            - not ten && fifthStory == StoryStarted && tutorialPauses == false:
                 -> ten
-            - not eleven && fifthStory == StoryStarted:
+            - not eleven && fifthStory == StoryStarted && tutorialPauses == false:
                 -> eleven
-            - not twelve && fifthStory == StoryStarted:
+            - not twelve && fifthStory == StoryStarted && tutorialPauses == false:
                 -> twelve
             - else:
                 -> talk_with_mentor.talk
