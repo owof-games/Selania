@@ -428,14 +428,16 @@
 }
     
 - (top)
-Frasi random di una rana affaticata#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    Sono affaticato, {name}. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    Torna più tardi.
+    E ricordati di riposare anche tu.
 
 -> main
 
 
 === cultivable_recovery
 {frogDebug: passo da cultivable_recovery.}
-Vorrei recuperare...
+Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
 
     + {growthBaccaDellaAddolorata == stepThree && findedGifts hasnt BaccaDellaAddolorata} [{ingredientTranslator(BaccaDellaAddolorata)}]
             ~  currentMissionAboutChar = missionObjects

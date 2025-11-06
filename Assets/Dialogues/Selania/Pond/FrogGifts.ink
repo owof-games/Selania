@@ -4,26 +4,26 @@
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
-Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+Quindi, come posso aiutarti {name}? #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 
 - (top)
     
-    + {firstStory == StoryStarted} [Ho bisogno di una mano con Chitarra.]
+    + {firstStory == StoryStarted} [Ho bisogno di una mano con {charNameOne}.]
         ~  currentMissionAboutChar = missionCharOne
   
         {
             - LIST_COUNT(charOneGifts) == 4:
-                Temo tu sappia già tutto su questo personaggio#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Temo tu sappia già tutto su di lei, perché non proviamo qualcos'altro?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 {debug: la quantità di doni di PNGUno è {LIST_COUNT(charOneGifts)},}
                         -> top
             - else:
                 {
                     - (firstGift == () && charOneGifts hasnt charOneCultivable) or (!ending_cooking_with_first_char && charOneGifts hasnt charOneCooking) or (playerAccessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord) or (playerAccessiblePlaces has Library && charOneGifts hasnt charOneLibrary):
-                        La rana ha qualcosa di utile da donarti#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        Credo proprio di poterti aiutare. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         -> frog_gift_dispatcher
                     
                     - else:
-                        Per ora la rana non può aiutarti con {charNameOne}, ma ti consiglia di tornare più avanti.
+                        Per ora non ho altro per aiutarti con {charNameOne}, ma prova più avanti e son sicuro che qualcosina di utile lo trovo! #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                             -> top
                 }
                 
@@ -31,21 +31,21 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
             
         
     
-    + {secondStory == StoryStarted} [Ho bisogno di una mano con Riccio.]
+    + {secondStory == StoryStarted} [Ho bisogno di una mano con {charNameTwo}.]
         ~  currentMissionAboutChar = missionCharTwo
         {
             - LIST_COUNT(charTwoGifts) == 4:
-                Temo tu sappia già tutto su questo personaggio#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Temo tu sappia già tutto su di lui, perché non proviamo qualcos'altro?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 {debug: la quantità di doni di PNGDue è {LIST_COUNT(charTwoGifts)},}
                         -> top
             - else:
                 {
                     - (secondGift == () && charTwoGifts hasnt charTwoCultivable) or (!ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking) or (playerAccessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord) or (playerAccessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary):
-                        La rana ha qualcosa di utile da donarti#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        Credo proprio di poterti aiutare. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         -> frog_gift_dispatcher
                     
                     - else:
-                        Per ora la rana non può aiutarti con {charNameTwo}, ma ti consiglia di tornare più avanti.
+                       Per ora non ho altro per aiutarti con {charNameTwo}, ma prova più avanti e son sicuro che qualcosina di utile lo trovo! #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                             -> top
                 }
                 
@@ -109,10 +109,10 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
     //Chitarra
         {frogDebug: passo char_one_gifts.}
         
-       Cosa vorresti ottenere?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+       Come posso aiutarti con {charNameOne}?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
        
         + {firstGift == () && charOneGifts hasnt charOneCultivable} [Vorrei sapere cosa donare a Chitarra.]
-        ~ charOneGifts += charOneCultivable
+            ~ charOneGifts += charOneCultivable
         
             {
                 - (findedGifts hasnt CantoDelleCompagne) && (findedGifts hasnt LanaNotturna) && (findedGifts hasnt NonTiScordarDiTe) && (growthCantoDelleCompagne != stepThree or growthLanaNotturna != stepThree or  growthNonTiScordarDiTe != stepThree):
@@ -133,7 +133,7 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
                         
                         
                 -  findedGifts has CantoDelleCompagne or findedGifts hasnt LanaNotturna or findedGifts hasnt NonTiScordarDiTe:
-                    Già lo possiedi: ti do un indizio.
+                    Già lo possiedi: ti do un indizio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     {findedGifts has CantoDelleCompagne: Pensa a quanto piacere a Chitarra lo stare con persone amiche, e chiediti cosa ricordi una festa.|{findedGifts has LanaNotturna: Pensa al bisogno di Chitarra di sapere che non tutto è perduto, che c'è ancora la possibilità di sbocciare. Quale pianta racconta questa cosa?|Chitarra ama suo nonno. Quale pianta può ricordarglielo?}}
                         -> closed_exchange
                         
@@ -142,14 +142,11 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
                     Credo però di averne un poco nella mia scorta.
                     Ecco qui un po' di <>
                         {
-                            - growthCantoDelleCompagne == stepThree:
-                                Canto delle Compagne.
+                            - growthCantoDelleCompagne == stepThree:Canto delle Compagne.
                                     ~ findedGifts += CantoDelleCompagne
-                            - growthLanaNotturna == stepThree:
-                                Lana Notturna.
+                            - growthLanaNotturna == stepThree:Lana Notturna.
                                     ~ findedGifts += LanaNotturna
-                            - growthNonTiScordarDiTe == stepThree:
-                                Non Ti Scordar di Te.
+                            - growthNonTiScordarDiTe == stepThree:Non Ti Scordar di Te.
                                     ~ findedGifts += NonTiScordarDiTe 
                         }
                     
@@ -159,7 +156,7 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
                     -> closed_exchange
             }
             
-        + {!ending_cooking_with_first_char && charOneGifts hasnt charOneCooking} [Vorrei sapere cosa mettere come quarto ingrediente in cucina.]
+        + {!ending_cooking_with_first_char && charOneGifts hasnt charOneCooking} [C'è qualcosa che posso usare cucinando con {charNameOne}?]
         ~ charOneGifts += charOneCooking
         
             {
@@ -180,7 +177,7 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
                         -> closed_exchange
                         
                 -  findedGifts has CantoDelleCompagne or findedGifts hasnt LanaNotturna or findedGifts hasnt NonTiScordarDiTe:
-                    Già lo possiedi: ti do un indizio.
+                    Già lo possiedi: ti do un indizio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     {findedGifts has CantoDelleCompagne: Pensa a quanto piacere a Chitarra lo stare con persone amiche, e chiediti cosa ricordi una festa.|{findedGifts has LanaNotturna: Pensa al bisogno di Chitarra di sapere che non tutto è perduto, che c'è ancora la possibilità di sbocciare. Quale pianta racconta questa cosa?|Chitarra ama suo nonno. Quale pianta può ricordarglielo?}}
                         -> closed_exchange
             
@@ -189,14 +186,11 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
                     Credo però di averne un poco nella mia scorta.
                     Ecco qui un po' di <>
                         {
-                            - growthCantoDelleCompagne == stepThree:
-                                Canto delle Compagne.
+                            - growthCantoDelleCompagne == stepThree:Canto delle Compagne.
                                     ~ findedGifts += CantoDelleCompagne
-                            - growthLanaNotturna == stepThree:
-                                Lana Notturna.
+                            - growthLanaNotturna == stepThree:Lana Notturna.
                                     ~ findedGifts += LanaNotturna 
-                            - growthNonTiScordarDiTe == stepThree:
-                                Non Ti Scordar di Te.
+                            - growthNonTiScordarDiTe == stepThree:Non Ti Scordar di Te.
                                     ~ findedGifts += NonTiScordarDiTe
                         }
                     
@@ -207,15 +201,15 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
                 
             }
             
-        + {playerAccessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord} [Quali colori usare al nido.]
-            ~ charOneGifts += charOneEmotionalWord
-                Chitarra è una persona con idee molto sicure su tante cose.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        + {playerAccessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord} [Che tipo di parole colorate apprezza?]
+                ~ charOneGifts += charOneEmotionalWord
+                {charNameOne} è una persona con idee molto sicure su tante cose.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Ma una cosa è certa: odia i discorsi troppo blu.
                 Hai già capito come far diminuire un colore?
                 Perché in questo modo potresti già avere la soluzione.
                 -> closed_exchange
         
-        + {playerAccessiblePlaces has Library && charOneGifts hasnt charOneLibrary} [Quale racconto in biblioteca può essere d'aiuto?]
+        + {playerAccessiblePlaces has Library && charOneGifts hasnt charOneLibrary} [C'è un racconto della biblioteca che ha nel cuore?]
             ~ charOneGifts += charOneLibrary
                 {
                     - readStories has Salvo:
@@ -223,7 +217,7 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
                             {
                                 - a_story_of_transformation:
                                     E che ne avete già parlato.
-                                    Perché non scegli un altro dono?
+                                    Perché non scegli un altro    dono?
                                     ~  currentMissionAboutChar = ()
                                     -> frog_about_who_questions
                                 
@@ -247,7 +241,7 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
             ~  currentMissionAboutChar = ()
             -> main
         + -> 
-        Ad ora non ci sono doni utili per {charNameOne}.
+        Ad ora non ho doni utili per {charNameOne}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             ~  currentMissionAboutChar = ()
             -> frog_about_who_questions
     
@@ -260,9 +254,10 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
     ~ temp charNameFive = translator(fifthCharacterState)
     //Riccio
     {frogDebug: passo char_two_gifts.}
-    Cosa vorresti ottenere?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     
-        + {secondGift == () && charTwoGifts hasnt charTwoCultivable} [Vorrei sapere cosa donare a Riccio.]
+    Come posso aiutarti con {charNameTwo}?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    
+        + {secondGift == () && charTwoGifts hasnt charTwoCultivable} [Vorrei sapere cosa donare a {charNameTwo}.]
         ~ charTwoGifts += charTwoCultivable
         
              {
@@ -283,7 +278,7 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
                         -> closed_exchange
                         
                 -  findedGifts has BastoneDellOzioso or findedGifts hasnt BrinaDellImpossibile:
-                    Già lo possiedi: ti do un indizio.
+                    Già lo possiedi: ti do un indizio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     {findedGifts has BastoneDellOzioso: Pensa a quanto piacere a Chitarra lo stare con persone amiche, e chiediti cosa ricordi una festa.|{findedGifts has BrinaDellImpossibile: Pensa al bisogno di Chitarra di sapere che non tutto è perduto, che c'è ancora la possibilità di sbocciare. Quale pianta racconta questa cosa?|Chitarra ama suo nonno. Quale pianta può ricordarglielo?}}
                         -> closed_exchange
                         
@@ -292,11 +287,9 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
                     Credo però di averne un poco nella mia scorta.
                     Ecco qui un po' di <>
                         {
-                            - growthBastoneDellOzioso == stepThree:
-                                Bastone dell'Ozioso.
+                            - growthBastoneDellOzioso == stepThree:Bastone dell'Ozioso.
                                     ~ findedGifts += BastoneDellOzioso
-                            - growthBrinaDellImpossibile == stepThree:
-                                Brina dell'Impossibile.
+                            - growthBrinaDellImpossibile == stepThree:Brina dell'Impossibile.
                                     ~ findedGifts += BrinaDellImpossibile
                         }
                     
@@ -306,7 +299,7 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
                     -> closed_exchange
             }
             
-        + {!ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking} [Vorrei sapere cosa mettere come quarto ingrediente in cucina.]
+        + {!ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking} [C'è qualcosa che posso usare cucinando con {charNameTwo}?]
             ~ charTwoGifts += charTwoCooking
             {
                 - (findedGifts hasnt BastoneDellOzioso) && (findedGifts hasnt BrinaDellImpossibile) && (growthBastoneDellOzioso != stepThree or growthBrinaDellImpossibile != stepThree):
@@ -350,15 +343,15 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
             }
                     -> closed_exchange
                     
-        + {playerAccessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord} [Quali colori usare al nido.]
+        + {playerAccessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord} [Che tipo di parole colorate apprezza?]
             ~ charTwoGifts += charTwoEmotionalWord
-                Riccio è una bella testolina.
+                {charNameTwo} è una bella testolina.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 E quello che posso dirti con certezza, è che apprezza la coerenza.
                 Lo fa sentire al sicuro.
                 Se hai capito come funziona l'alchimia del nido, sono sicuro che avrai già capito cosa fare.
                         -> closed_exchange
                 
-        + {playerAccessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary} [Quale racconto in biblioteca può essere d'aiuto?] 
+        + {playerAccessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary} [C'è un racconto della biblioteca che ha nel cuore?] 
             ~ charTwoGifts += charTwoLibrary
         {
                     - readStories has Lamia:
@@ -389,7 +382,7 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
             ~  currentMissionAboutChar = ()
             -> main
         + -> 
-        Ad ora non ci sono doni utili per {charNameTwo}.
+        Ad ora non ho doni utili per {charNameTwo}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             ~  currentMissionAboutChar = ()
             -> frog_about_who_questions
             
@@ -398,7 +391,7 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
     {frogDebug: passo mission_objects.}
     {frogDebug: searchedCultivableRecovery è uguale a {searchedCultivableRecovery}. Prima dell'intervento, findedGifts contiene {findedGifts}.}
         
-        Come concordato, eccoti {ingredientTranslator(searchedCultivableRecovery)}
+        Come concordato, eccoti {ingredientTranslator(searchedCultivableRecovery)}. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             ~ findedGifts += searchedCultivableRecovery
             ~ searchedCultivableRecovery = ()
         {frogDebug: Dopo l'intervento, searchedCultivableRecovery è uguale a {searchedCultivableRecovery} e findedGifts contiene {findedGifts}.}
@@ -408,7 +401,8 @@ Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState
 
 === closed_exchange
 {frogDebug: passo closed_exchange.}
-Salutino della rana
+E con questo è tutto! #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+A dopo {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     //Svuoto il destinatario della missione attuale per sicurezza
     ~ currentMissionAboutChar = ()
     ~ activeMissions = ()
