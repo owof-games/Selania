@@ -418,8 +418,8 @@
     
     - else:
             {
-            //Per attivare le missioni speciali
-                - dice == 1 && availableSpecialMissions != () && playerAccessiblePlaces has Kitchen && playerAccessiblePlaces has Nest:
+            //Per attivare le missioni speciali. Il tiro è alto perché soprattutto quella nest è fondamentale
+                - availableSpecialMissions != () && playerAccessiblePlaces has Kitchen && playerAccessiblePlaces has Nest:
                 {name}, ti devo chiedere un favore personale.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     ~  currentMissionAboutChar = specialDelivery
                     -> missions_dispatcher
