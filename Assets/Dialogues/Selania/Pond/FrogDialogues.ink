@@ -34,25 +34,46 @@ Arriviamo qui solo se non ci sono quest attive.#speaker:{frog_tag()} #inkA:offSt
         ~  currentMissionAboutChar = missionCharOne
   
         {
-            - LIST_COUNT(charOneGifts) < 5:
-                La rana ha qualcosa di utile da donarti#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                Andiamo alla gestione della missione.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            - else:
+            - LIST_COUNT(charOneGifts) == 4:
                 Temo tu sappia già tutto su questo personaggio#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                {debug: la quantità di doni di PNGUno è {LIST_COUNT(charOneGifts)},}
+                        -> top
+            - else:
+                {
+                    - (firstGift == () && charOneGifts hasnt charOneCultivable) or (!ending_cooking_with_first_char && charOneGifts hasnt charOneCooking) or (playerAccessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord) or (playerAccessiblePlaces has Library && charOneGifts hasnt charOneLibrary):
+                        La rana ha qualcosa di utile da donarti#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        Andiamo alla gestione della missione.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        -> autonomy_mission_verify
+                    
+                    - else:
+                        Per ora la rana non può aiutarti con {charNameOne}, ma ti consiglia di tornare più avanti.
+                            -> top
+                }
+                
         }
-            -> autonomy_mission_verify
+            
         
     
     + {secondStory == StoryStarted} [Ho bisogno di una mano con Riccio.]
         ~  currentMissionAboutChar = missionCharTwo
         {
-            - LIST_COUNT(charTwoGifts) < 5:
-                La rana ha qualcosa di utile da donarti#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                Andiamo alla gestione della missione.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            - else:
+            - LIST_COUNT(charTwoGifts) == 4:
                 Temo tu sappia già tutto su questo personaggio#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                {debug: la quantità di doni di PNGDue è {LIST_COUNT(charTwoGifts)},}
+                        -> top
+            - else:
+                {
+                    - (secondGift == () && charTwoGifts hasnt charTwoCultivable) or (!ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking) or (playerAccessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord) or (playerAccessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary):
+                        La rana ha qualcosa di utile da donarti#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        Andiamo alla gestione della missione.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        -> autonomy_mission_verify
+                    
+                    - else:
+                        Per ora la rana non può aiutarti con {charNameTwo}, ma ti consiglia di tornare più avanti.
+                            -> top
+                }
+                
         }
-            -> autonomy_mission_verify
         
     
     + {thirdStory == StoryStarted} [PNG 3]

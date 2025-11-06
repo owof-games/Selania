@@ -1,7 +1,7 @@
-~ SEED_RANDOM(266)
+//~ SEED_RANDOM(266)
 
 //Per abilitare o meno i debug
-    VAR debug = true
+    VAR debug = false
     VAR debugCultivable = false
     VAR debugChangeName = false
     VAR kitchenDebug = false
@@ -15,7 +15,7 @@
     VAR debug_test_frog = false
     
 //Per disabilitare uscite e cose varie in caso di testing con il sistema stocastico    
-    VAR debugStochastic = false
+    VAR debugStochastic = true
     
     
     
