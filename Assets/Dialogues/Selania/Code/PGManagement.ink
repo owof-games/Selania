@@ -155,14 +155,14 @@
 {debug: <i>Ho finito di assegnare l'ordine di conclusione delle storie, e passo ad aggiornare i colori.}
 
     {
-        - char == firstStoryPG:
+        - charES == firstStoryPG:
             ~ red = firstRed
             ~ green = firstGreen
             ~ blue = firstBlue
             ~ yellow = firstYellow
             ~ purple = firstPurple
             
-        - char == secondStoryPG:
+        - charES == secondStoryPG:
             ~ red = secondRed
             ~ green = secondGreen
             ~ blue = secondBlue

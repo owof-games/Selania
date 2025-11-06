@@ -21,7 +21,7 @@ VAR currentReceiver = ()
 
 === inventory_management ===
     ~ temp charNameFive = translator(fifthCharacterState)
-    {debug: I doni trovati sono {findedGifts}.}
+    {debug: I doni trovati sono {list_with_commas(findedGifts)}.}
     Dono...
     
 /* ---------------------------------

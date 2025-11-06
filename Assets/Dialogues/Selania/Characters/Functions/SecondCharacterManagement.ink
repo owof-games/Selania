@@ -237,7 +237,7 @@
     ~ temp allColorsValue = secondRed + secondBlue + secondGreen + secondYellow + secondPurple
     ~ temp minimumPercentValue = (allColorsValue/100.00)
 
-{debug: la somma di tutti i colori è {allColorsValue}. Il valore di minimumPercentValue è {minimumPercentValue}.}
+{debug: Il valore di secondRed è {secondRed} , di secondBlue è {secondBlue}, di secondGreen è {secondGreen}, di secondYellow è {secondYellow} e di secondPurple è {secondPurple}. La somma di tutti i colori è {allColorsValue}. Il valore di minimumPercentValue è {minimumPercentValue}.}
 
 //Resetto il valore del nome di Riccio
     ~ secondCharacterState = ()

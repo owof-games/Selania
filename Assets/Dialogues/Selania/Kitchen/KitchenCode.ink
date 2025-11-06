@@ -54,12 +54,6 @@
 {name} ha cucinato {tempRecipeName}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     -> recipe_name_storage ->
 
-//Svuoto i nomi
-    ~ recipeNoun = ""
-    ~ recipeAdjective = ""
-    ~ recipeComplement = ""
-    ~ recipePP = ""
-    ~ tempRecipeName = ""
 
     ->->
 
@@ -476,6 +470,15 @@
                 ~ storageSecondStoryQuestCount = 0        
     
     }
+    
+//Ne approfitto per svuotare i nomi
+//Svuoto i nomi
+    ~ recipeNoun = ""
+    ~ recipeAdjective = ""
+    ~ recipeComplement = ""
+    ~ recipePP = ""
+    ~ tempRecipeName = ""
+
 
 {kitchenDebug: dopo aver aggiornato i valori, il valore di storagePurple è {storagePurple}, di storageYellow {storageYellow}, storageBlue è {storageBlue}, di storageGreen {storageGreen}, di storageRed {storageRed}. cookingCompanion è {cookingCompanion}.} 
 ->->
