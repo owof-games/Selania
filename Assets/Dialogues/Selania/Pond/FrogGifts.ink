@@ -1,3 +1,81 @@
+=== frog_about_who_questions
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+Quindi, come posso aiutarti? #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+
+- (top)
+    
+    + {firstStory == StoryStarted} [Ho bisogno di una mano con Chitarra.]
+        ~  currentMissionAboutChar = missionCharOne
+  
+        {
+            - LIST_COUNT(charOneGifts) == 4:
+                Temo tu sappia già tutto su questo personaggio#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                {debug: la quantità di doni di PNGUno è {LIST_COUNT(charOneGifts)},}
+                        -> top
+            - else:
+                {
+                    - (firstGift == () && charOneGifts hasnt charOneCultivable) or (!ending_cooking_with_first_char && charOneGifts hasnt charOneCooking) or (playerAccessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord) or (playerAccessiblePlaces has Library && charOneGifts hasnt charOneLibrary):
+                        La rana ha qualcosa di utile da donarti#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        -> frog_gift_dispatcher
+                    
+                    - else:
+                        Per ora la rana non può aiutarti con {charNameOne}, ma ti consiglia di tornare più avanti.
+                            -> top
+                }
+                
+        }
+            
+        
+    
+    + {secondStory == StoryStarted} [Ho bisogno di una mano con Riccio.]
+        ~  currentMissionAboutChar = missionCharTwo
+        {
+            - LIST_COUNT(charTwoGifts) == 4:
+                Temo tu sappia già tutto su questo personaggio#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                {debug: la quantità di doni di PNGDue è {LIST_COUNT(charTwoGifts)},}
+                        -> top
+            - else:
+                {
+                    - (secondGift == () && charTwoGifts hasnt charTwoCultivable) or (!ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking) or (playerAccessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord) or (playerAccessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary):
+                        La rana ha qualcosa di utile da donarti#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        -> frog_gift_dispatcher
+                    
+                    - else:
+                        Per ora la rana non può aiutarti con {charNameTwo}, ma ti consiglia di tornare più avanti.
+                            -> top
+                }
+                
+        }
+        
+    
+    + {thirdStory == StoryStarted} [PNG 3]
+        ~  currentMissionAboutChar = missionCharThree
+            -> frog_gift_dispatcher
+        
+    + {fourthStory == StoryStarted} [PNG 4]
+        ~  currentMissionAboutChar = missionCharFour
+            -> frog_gift_dispatcher
+        
+    + {fifthStory == StoryStarted} [PNG 5 (non come mentore)]
+        ~  currentMissionAboutChar = missionCharFive
+            -> frog_gift_dispatcher
+        
+    
+    + {firstGift !=() or secondGift !=() or fourthIngredientNameFirstCharacter !=() or fourthIngredientNameSecondCharacter != ()}[Ho bisogno di recuperare una pianta che ho utilizzato.]
+        //Nota: per ora sono quattro massimi gli utilizzi di un coltivabile, per cui non serve un menu ad hoc. Poi capire come fare.
+            -> cultivable_recovery
+    
+    + [Ho cambiato idea.]
+        -> main
+    -
+
+->->
+
+
 === frog_gift_dispatcher ===
 {frogDebug: passo frog_gift_dispatcher.}
     ~ temp charNameOne = translator(firstCharacterState)
@@ -23,6 +101,11 @@
 
 //Doni generici
     = char_one_gifts
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     //Chitarra
         {frogDebug: passo char_one_gifts.}
         
@@ -163,10 +246,18 @@
         + [Mi prendo del tempo e torno poi.]
             ~  currentMissionAboutChar = ()
             -> main
-        
+        + -> 
+        Ad ora non ci sono doni utili per {charNameOne}.
+            ~  currentMissionAboutChar = ()
+            -> frog_about_who_questions
     
     
     = char_two_gifts
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
     //Riccio
     {frogDebug: passo char_two_gifts.}
     Cosa vorresti ottenere?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -297,7 +388,11 @@
         + [Mi prendo del tempo e torno poi.]
             ~  currentMissionAboutChar = ()
             -> main
-    
+        + -> 
+        Ad ora non ci sono doni utili per {charNameTwo}.
+            ~  currentMissionAboutChar = ()
+            -> frog_about_who_questions
+            
     = mission_objects
     //Oggetti
     {frogDebug: passo mission_objects.}
