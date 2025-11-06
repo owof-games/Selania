@@ -445,6 +445,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         
     = relationship_feedback
         A prescindere che sia stato aggiunto o meno il quarto ingrediente, Chitarra ci dirà anche finalmente dove sta andando la relazione con lei.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        Il feedback fa riferimento a come è andata la conversazione in cucina, e non in generale.
             -> firstAffinityCalc ->
             {
                 - firstAffinityCalc == 1:

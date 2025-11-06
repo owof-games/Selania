@@ -1175,7 +1175,7 @@
                     ~ move_entity(firstCharPaint, Bedroom)
                     ~ saturationVar ++
                     ~ tutorialPauses = false
-                        -> talk_with_first_character
+                        -> main
                 
 
 

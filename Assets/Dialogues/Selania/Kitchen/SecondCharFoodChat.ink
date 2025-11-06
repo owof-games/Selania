@@ -449,7 +449,8 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
     
         
     = relationship_feedback
-        A prescindere che sia stato aggiunto o meno il quarto ingrediente, Riccio ci dirà anche finalmente dove sta andando la relazione con lui.
+        A prescindere che sia stato aggiunto o meno il quarto ingrediente, Riccio ci dirà anche finalmente dove sta andando la relazione con lui.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        Il feedback fa riferimento a come è andata la conversazione in cucina, e non in generale.
             -> secondAffinityCalc ->
             {
                 - secondAffinityCalc == 1:

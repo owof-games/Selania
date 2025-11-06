@@ -1642,7 +1642,7 @@
                 Dopo il tuo dono {inkTranslator(secondCharacterInkLevel)}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                     ~ move_entity(secondCharPaint, Bedroom)
                     ~ saturationVar ++
-                     -> talk_with_second_character
+                     -> main
 
 
 === rewriting_proposal_second_character
