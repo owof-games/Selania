@@ -393,6 +393,7 @@
     -> characters_speaking ->
     -> moon_state_management ->
     -> special_events_tracking ->
+    -> witch_frog_mission_notifier ->
 
 ->->
 

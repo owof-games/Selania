@@ -412,6 +412,7 @@ Salutino della rana
     //Svuoto il destinatario della missione attuale per sicurezza
     ~ currentMissionAboutChar = ()
     ~ activeMissions = ()
+    ~ witchNotification = false
  
      @animation:RewriterBook
 -> main

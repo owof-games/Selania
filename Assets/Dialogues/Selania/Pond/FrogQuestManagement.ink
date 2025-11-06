@@ -512,3 +512,67 @@ Vorrei recuperare...
         -> welcoming_frog.top
     
            
+
+
+
+=== witch_frog_mission_notifier
+//Questa è la notifica della "strega" se chiudiamo una missione
+{frogDebug: passo da witch_frog_mission_notifier.}
+    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameFive = translator(fifthCharacterState)
+    
+    {activeMissions && witchNotification == false:
+
+        - missionOne:
+            {
+                - first_character_recap.check && second_character_recap.check && greenhouse_recap.check:
+                    -> notification
+            }
+            
+        - missionTwo:
+            {
+                - LIST_COUNT(backupCultivable) < 12:
+                    -> notification
+            }
+            
+        - missionThree && mindfulness:
+            -> notification
+               
+        - missionFour && little_storylets:
+            -> notification       
+
+        - missionFive && first_second_chit_chat:
+            -> notification 
+       
+        
+        - missionSix && talking_witch.intro:
+            -> notification
+    
+        - missionSeven:
+            {
+                - first_character_notes.check or second_character_notes.check:
+                    -> notification
+            }
+        
+        - missionEight && readStories != ():
+            -> notification
+            
+        - specialMissionOne && special_mission_one_dialogue:
+            -> notification
+            
+        - specialMissionTwo && cooking_alone :
+            -> notification
+            
+        - else:
+            -> main
+}
+
+
+
+= notification
+Le condizioni per la missione data dalla rana sono state raggiunte.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+        ~ witchNotification = true
+-> main

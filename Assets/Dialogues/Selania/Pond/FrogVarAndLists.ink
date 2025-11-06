@@ -17,6 +17,7 @@
     VAR currentMissionAboutChar = ()
     VAR activeMissions = ()
     
+    VAR witchNotification = false
 
     VAR diceFrog = 0
     VAR maxValueDice = ()
