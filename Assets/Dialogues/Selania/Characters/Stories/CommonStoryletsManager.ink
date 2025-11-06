@@ -76,7 +76,10 @@
             //Lettura Chitarra
                 - are_two_entities_together(FirstCharacter, PG) && readStories has Salvo:
                     -> a_story_of_transformation
-        
+            
+            //Lettura Riccio
+                - are_two_entities_together(SecondCharacter, PG) && readStories has Lamia:
+                    -> a_story_of_rebellion
         
         
         //Storylets vari

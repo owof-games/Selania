@@ -13,7 +13,7 @@
             }  
         + {unreadStories has AdriAllora}[Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + {unreadStories has AdriAllora} [Non presentarmi più questo racconto.]
+        + (rimuovi) {unreadStories has AdriAllora} [Non presentarmi più questo racconto.]
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -68,7 +68,7 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
             }  
         + {unreadStories has Aza}[Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + {unreadStories has Aza}[Non presentarmi più questo racconto.]
+        + (rimuovi) {unreadStories has Aza}[Non presentarmi più questo racconto.]
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -134,7 +134,7 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
             -> refresh_book_lists ->
         + {unreadStories has StenoArtico}[Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + {unreadStories has StenoArtico}[Non presentarmi più questo racconto.]
+        + (rimuovi) {unreadStories has StenoArtico}[Non presentarmi più questo racconto.]
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -206,7 +206,7 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
             }  
         + {unreadStories has B}[Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + {unreadStories has B}[Non presentarmi più questo racconto.]
+        + (rimuovi) {unreadStories has B}[Non presentarmi più questo racconto.]
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -253,7 +253,7 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
             }  
         + {unreadStories has Beatrice}[Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + {unreadStories has Beatrice}[Non presentarmi più questo racconto.]
+        + (rimuovi) {unreadStories has Beatrice}[Non presentarmi più questo racconto.]
             -> permanentTW -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->

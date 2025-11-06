@@ -757,8 +757,6 @@
                     -> main          
 
 
-                        
-
 === edera_delle_amanti
 
     = TW
@@ -768,7 +766,7 @@
             -> step_zero
         + [Voglio rimuoverla, ma solo per ora.]
             -> tempCultTW_formula -> cultivable_test
-        + [Voglio rimuoverla per sempre.]
+        + (rimuovi) [Voglio rimuoverla per sempre.]
             -> remove_proposed_cultivable ->
                 ~ chosenCultivable = ()
             -> cultivable_test

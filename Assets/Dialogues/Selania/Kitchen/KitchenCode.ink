@@ -104,6 +104,7 @@
 === extra_ingredient_management(PNG)
 {kitchenDebug: passo per extra_ingredient_management.}
 //Qui gestiremo la parte di ingredienti che possiamo aggiungere, coi relativi effetti
+    ~ enableNestDialogue()
     ~ temp charNameFive = translator(fifthCharacterState)
     {kitchenDebug: I doni trovati sono {findedGifts}.}
     Aggiungo....
@@ -382,16 +383,20 @@
                     ~ fourthIngredientNameSecondCharacter = universalIngredient
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
-            }  
+            }
+        
+        ~ disableNestDialogue()    
         -> main
 
     //Se la lista è vuota
     + {findedGifts == ()} [Non ho nulla da aggiungere.]
         ~ recipePP = "distratta"
+        ~ disableNestDialogue()
         ->->
     
     + [Ho cambiato idea.]
         ~ recipePP = "indecisa"
+        ~ disableNestDialogue()
         ->->
     - 
 ->->

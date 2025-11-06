@@ -2,7 +2,7 @@
 
  === move_between_rooms(my_location)
  //Book management (the book will be treated as a place)
- 
+
     // Ho separato la versione blocca amico stocastico da una che non lo blocca perché così se devo testare elementi del libro non ci sono problemi
     + {are_two_entities_together(PG, RewriterBook)}[RewriterBook]
             ~ move_entity(PG, BookPlace)
@@ -30,7 +30,7 @@
             Il codice è {playerPurple} - {playerYellow} - {playerBlue} - {playerGreen}- {playerRed}; {playerFirstStory}; {playerSecondStory}; {firstCharacterState}; {secondCharacterState}.
             Grazie di cuore.
             
-                + + [Voglio chiudere <i>Selanìa</i>.]
+                + + (close)[Voglio chiudere <i>Selanìa</i>.]
                     A presto, {name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                     @quit
                     -> END

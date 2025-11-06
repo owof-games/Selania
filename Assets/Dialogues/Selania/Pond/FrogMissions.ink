@@ -137,7 +137,7 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
 
-    Ti chiedo di cucinare da sola. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    Mi serve che ti prepari qualcosa in cucina senza nessuna persona attorno. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += specialMissionTwo
     @animation:RewriterBook    

@@ -125,17 +125,10 @@
                     -> frog_about_who_questions 
                 
             - else:
-                ~ temp dice = RANDOM(1,4)   
-                {
-                     
-                    - dice == 4 && availableSpecialMissions != () && playerAccessiblePlaces has Kitchen && playerAccessiblePlaces has Nest:
-                        ~  currentMissionAboutChar = specialDelivery
-                        -> missions_dispatcher
-                    
-                    - else:
-                        -> missions_dispatcher
-                }
+            
+                -> missions_dispatcher
                 
+    
         }
 
 ->->
@@ -424,7 +417,16 @@
             -> top
     
     - else:
-        -> discovered_things_updater
+            {
+            //Per attivare le missioni speciali
+                - dice == 1 && availableSpecialMissions != () && playerAccessiblePlaces has Kitchen && playerAccessiblePlaces has Nest:
+                {name}, ti devo chiedere un favore personale.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    ~  currentMissionAboutChar = specialDelivery
+                    -> missions_dispatcher
+                
+                - else:
+                -> discovered_things_updater
+            }    
 }
     
 - (top)
