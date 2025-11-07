@@ -338,7 +338,8 @@
                     E poi torna da me.
                         -> main  
             }
-
+    
+        //Le missioni speciali risolvono il dono direttamente, senza andare a frog_about_who_questions
         - specialMissionOne:
             {
                 - special_mission_one_dialogue:

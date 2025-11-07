@@ -5,6 +5,14 @@
     -> DONE
 }
 
+{
+//disabilito missione rana con passaggio da libro riscrittora, così da non doverlo attivare durante testing stocastico
+    - debugStochastic && availableMissions has missionOne:
+        ~ availableMissions -= missionOne
+        {debug: rimuovo missionOne da availableMissions perché in debug stocastico. availableMissions == {availableMissions}.}
+}
+
+
 ~ temp my_location = entity_location(PG)
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
