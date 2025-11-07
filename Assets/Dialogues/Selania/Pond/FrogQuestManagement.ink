@@ -146,14 +146,6 @@
     ~ temp charNameFour = translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
 
-    {
-        - currentMissionAboutChar == specialDelivery:
-            -> specialTop
-        - else:
-            -> top
-    
-    }
-
 
         - (top)
         //Dato che no mi fa fare questa cosa direttamente nella variabile, provo così.
@@ -186,27 +178,33 @@
                 
         }
     
-    - (specialTop)
-    //~ maxSpecialValueDice = (LIST_COUNT(availableSpecialMissions))
-    ~ diceFrog = RANDOM(1,2)
+->->
+
+
+=== special_missions_dispatcher
+{frogDebug: passo da special_missions_dispatcher.}
+- (specialTop)
+
          
-         {diceFrog:
+    {
+        - availableSpecialMissions has specialMissionOne:
+            -> special_mission_one
         
-            - 1 && availableSpecialMissions has specialMissionOne && playerAccessiblePlaces has Nest:
-                -> special_mission_one
-            - 2 && availableSpecialMissions has specialMissionTwo && playerAccessiblePlaces has Kitchen:
-                -> special_mission_two
-            - else:
-                {frogDebug: il valore di diceFrog è {diceFrog}, e la missione associata è già stata fatta. Ritiro il dado.}
-                -> specialTop
-                
-        }
-    
+        - availableSpecialMissions has specialMissionTwo:
+            -> special_mission_two
+        
+        - else:
+            {frogDebug: il valore di availableSpecialMissions è {availableSpecialMissions} per cui non ci sono altre missioni speciali, vado a missions_dispatcher.}
+                -> missions_dispatcher
+            
+    }
+
+
 ->->
 
 
 === closed_mission_verify
-{frogDebug: passo da closed_mission_verify.}
+{frogDebug: passo da closed_mission_verify. Il valore di activeMissions è {activeMissions}.}
     ~ temp charNameOne = translator(firstCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
@@ -340,9 +338,7 @@
                     E poi torna da me.
                         -> main  
             }
-        }
-        
-    {activeMissions:
+
         - specialMissionOne:
             {
                 - special_mission_one_dialogue:
@@ -368,7 +364,7 @@
                     ~ move_entity(purpleShell, Nest)
                     ~ availableSpecialMissions -= specialMissionOne
                     ~ activeMissions = ()
-                    ~  currentMissionAboutChar = ()
+                    ~ currentMissionAboutChar = ()
                     -> main
                     
                 - else:
