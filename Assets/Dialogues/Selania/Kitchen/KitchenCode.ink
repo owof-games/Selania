@@ -118,13 +118,9 @@
         //Se la lista è vuota
     + {findedGifts == ()} [Non ho nulla da aggiungere.]
         ~ recipePP = "distratta"
-        ~ disableNestDialogue()
-        ->->
     
     + [Ho cambiato idea.]
         ~ recipePP = "indecisa"
-        ~ disableNestDialogue()
-        ->->
         
     + {findedGifts has BaccaDellaAddolorata} [Una bacca della Addolorata.]
         ~ findedGifts -= BaccaDellaAddolorata
@@ -142,7 +138,6 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
             }
-            ->->
     
     + {findedGifts has BarbaDellInciampo} [Una spina di Barba dell'Inciampo.]
         ~ findedGifts -= BarbaDellInciampo
@@ -160,7 +155,6 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
             }
-            ->->    
             
     + {findedGifts has BastoneDellOzioso} [Un nodo di Bastone dell'Ozioso.]
         ~ findedGifts -= BastoneDellOzioso
@@ -178,7 +172,6 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
             }
-            ->->      
         
     + {findedGifts has BrinaDellImpossibile} [Un frammento di Brina dell'Impossibile.]
         ~ findedGifts -= BrinaDellImpossibile
@@ -196,7 +189,6 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
             }        
-            ->->
     
     + {findedGifts has CantoDelleCompagne} [Una goccia di Canto delle Compagne.]
         ~ findedGifts -= CantoDelleCompagne
@@ -214,7 +206,6 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
             }        
-            ->->
     
     + {findedGifts has CardoAspinato} [Un ciuffo di peli di Cardo Aspinato.]
         ~ findedGifts -= CardoAspinato
@@ -232,7 +223,6 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
             }        
-            ->-> 
             
     + {findedGifts has EderaDelleAmanti} [Una foglia di Edera delle amanti.]
         ~ findedGifts -= EderaDelleAmanti
@@ -250,8 +240,7 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
             }        
-            ->->
-            
+
     + {findedGifts has ErbaLiccia} [Un ricordo di Erba Liccia.]
         ~ findedGifts -= ErbaLiccia
         ~ recipePP = "aggiungere descrizione participio passato"
@@ -268,7 +257,6 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
             }        
-            ->->
         
      + {findedGifts has FalsaPalude} [Un petalo di Falsa Palude.]
         ~ findedGifts -= FalsaPalude
@@ -286,7 +274,6 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
             }        
-            ->->
         
       + {findedGifts has LanaNotturna} [Il calore della Lana Notturna.]
         ~ findedGifts -= LanaNotturna
@@ -304,7 +291,6 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
             }        
-            ->->
         
     + {findedGifts has LicheneDegliAbissi} [Una traccia dell'odore del Lichene degli Abissi.]
         ~ findedGifts -= LicheneDegliAbissi
@@ -322,7 +308,6 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
             }        
-            ->->
     
     + {findedGifts has NonTiScordarDiTe} [L'impronta del Non Ti Scordar di Te.]
         ~ findedGifts -= NonTiScordarDiTe
@@ -340,7 +325,6 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
             }        
-            ->->      
     
     + {findedGifts has Olobino} [Una cappello di Olobino.]
         ~ findedGifts -= Olobino
@@ -358,7 +342,6 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
             }        
-            ->->
         
     + {findedGifts has LaSpazzata} [Un rametto della Spezzata.]
         ~ findedGifts -= LaSpazzata
@@ -376,7 +359,6 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
             }        
-            ->->
 //Doni insoliti
     + {findedGifts has universalIngredient} [L'ingrediente universale della Rana.]
         ~ findedGifts -= universalIngredient
@@ -395,12 +377,11 @@
                     {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
                     {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
             }
-        
+    
+    -
         ~ disableNestDialogue()    
         ->->
 
-
-->->
 
 
 

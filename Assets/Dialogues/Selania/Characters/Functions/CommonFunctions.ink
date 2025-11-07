@@ -357,6 +357,15 @@
             }
     
 
+//Check di sicurezza per conchiglia
+    {
+        - availableSpecialMissions hasnt specialMissionOne and nestContents hasnt purpleShell:
+                    ~ move_entity(purpleShell, Nest)
+    }
+
+
+                 
+
     
 //Pause speciali tra un dialogo e l'altro
     {

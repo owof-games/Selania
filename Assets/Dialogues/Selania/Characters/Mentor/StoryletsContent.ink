@@ -444,6 +444,7 @@
         O anche solo per due chiacchiere.
         A dopo.
             ~ fifthPauseTalking = fifthCharPauseDuration
+            ~ tutorialPauses = true
                 -> main
           
 === second_character_feedback
@@ -516,6 +517,7 @@
     E un giorno potrai fare questo lavoro da {pronouns has him:solo|{pronouns has her:sola|solə}}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
     E a quel punto forse anche io potrò un poco riposare.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
         ~ fifthPauseTalking = fifthCharPauseDuration
+        ~ tutorialPauses = true
             -> main
    
    === third_character_feedback
@@ -613,6 +615,7 @@
         Ma non metterci troppo, per favore.
         ~ secondPauseTalking = 0
         ~ fifthPauseTalking = fifthCharPauseDuration
+        ~ tutorialPauses = true
             - (nameSecond)
             -> main
     
@@ -706,6 +709,8 @@
         Grazie per l'ascolto, {name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         Sono sicura che diventerai {pronouns has him:un ottimo riscrittore|{pronouns has her:un'ottima riscrittora| unə ottimə riscrittorə}}.
             ~ change_entity_place(Mentor)
+            ~ fifthPauseTalking = fifthCharPauseDuration
+            ~ tutorialPauses = true
             -> main
     
     

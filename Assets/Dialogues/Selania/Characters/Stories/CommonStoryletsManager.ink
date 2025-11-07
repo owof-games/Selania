@@ -2,7 +2,7 @@
     {
         //Storylets prioritari
             //Storylet dopo lo scambio con Riccio e il fatto che l'ha afferrato
-                - knowing_second_character.two && (not addressing_violence):
+                - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && knowing_second_character.two && (not addressing_violence):
                 -> addressing_violence
         
             

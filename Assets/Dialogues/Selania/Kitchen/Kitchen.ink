@@ -10,7 +10,7 @@
     
         -> witch_frog_mission_notifier ->
     
-    {special_mission_two && not cooking_alone: ->cooking_alone}
+    {special_mission_two && not cooking_alone && (not are_two_entities_together(FirstCharacter, PG)) && (not are_two_entities_together(SecondCharacter, PG)): ->cooking_alone}
 
     ~ arrivingFrom = Kitchen
 
