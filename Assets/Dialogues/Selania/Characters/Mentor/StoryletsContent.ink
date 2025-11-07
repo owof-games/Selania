@@ -568,7 +568,7 @@
         ~ temp charNameOne = translator(firstCharacterState)
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
-    
+        
         {
         
             - riccioMentoreViciniColpo == true:

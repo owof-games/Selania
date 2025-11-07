@@ -44,12 +44,7 @@
             //Mentore e Riccio parlano dopo il litigio
                 - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && addressing_violence && not about_violence_and_peace:
                         -> about_violence_and_peace
-            
-            //Discussione Mentore e Riccio legata a Rana
-            TODO: quando apro il terzo PNG, questo storylet si sposta su di lui.
-                - are_two_entities_together(Mentor, PG) && activeMissions has specialMissionOne && not special_mission_one_dialogue:
-                        -> special_mission_one_dialogue
-            
+
         
         //Storylets legati alla cucina
             //Chitarra

@@ -211,26 +211,26 @@ Mentore sbrocca
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     Questa conversazione è generata dalla missione della rana. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-    Mentore e Riccio stanno litigando per qualcosa.
+    Mentore e Riccio stanno discutendo se è meglio Wicked  o Attack of Titan. Mentore tifa per il primo, Riccio per il secondo.
     
         + (not_intervention)[Decidi di non intervenire]
              -> color_variation_management(Mentor, blueC)->
              -> color_variation_management(SecondCharacter, blueC)->
     
-        + (pro_mentor) [Intervieni a favore di Mentore]
+        + (pro_mentor) [Wicked!]
             -> color_variation_management(Mentor, blueC)->
             -> color_variation_management(SecondCharacter, redC)->
      
-        + (pro_riccio) [Intervieni a favore di Riccio]
+        + (pro_riccio) [Attack of Titan, ovvio!]
                 -> color_variation_management(Mentor, yellowC)->
                 -> color_variation_management(SecondCharacter, blueC)->
     
-        + (disagree)[Dai torto ad entrambi]
+        + (disagree)[The Lady, mi spiace.]
             -> color_variation_management(Mentor, redC)->
             -> color_variation_management(SecondCharacter, redC)->
     
             
-        + (paracula)[Dai ragione ad entrambi]
+        + (paracula)[Attack of the Wicked, che ne dite?]
             -> color_variation_management(Mentor, greenC)->
             -> color_variation_management(SecondCharacter, greenC)->
                 -    

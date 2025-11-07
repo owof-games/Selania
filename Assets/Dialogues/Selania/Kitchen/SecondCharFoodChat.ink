@@ -25,19 +25,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Riccio parla.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Possiamo fare una di queste cinque scelte.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Scelta blu]
-                ~ secondBlue ++
+                -> color_variation_management(SecondCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ secondYellow ++
+                -> color_variation_management(SecondCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ secondRed ++
+                -> color_variation_management(SecondCharacter, redC)->
         
             + [Scelta verde]
-                ~ secondGreen ++
+                -> color_variation_management(SecondCharacter, greenC)->
     
             + [Scelta viola]
-                ~ secondPurple ++
+               -> color_variation_management(SecondCharacter, purpleC)->
             -    
         A questo punto è Riccio a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.
         Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -60,19 +60,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Riccio dice un'altra cosa sul tema che stiamo esplorando.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Noi rispondiamo una di queste cinque cose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Scelta blu]
-                ~ secondBlue ++
+                -> color_variation_management(SecondCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ secondYellow ++
+                -> color_variation_management(SecondCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ secondRed ++
+                -> color_variation_management(SecondCharacter, redC)->
         
             + [Scelta verde]
-                ~ secondGreen ++
+                -> color_variation_management(SecondCharacter, greenC)->
     
             + [Scelta viola]
-                ~ secondPurple ++
+               -> color_variation_management(SecondCharacter, purpleC)->
             -
         Riccio allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Step due: aggettivi (es: saporito, triste, colorato).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -96,19 +96,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Riccio condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Noi diciamo per la terza volta qualcosa legato a quel tema.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Scelta blu]
-                ~ secondBlue ++
+                -> color_variation_management(SecondCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ secondYellow ++
+                -> color_variation_management(SecondCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ secondRed ++
+                -> color_variation_management(SecondCharacter, redC)->
         
             + [Scelta verde]
-                ~ secondGreen ++
+                -> color_variation_management(SecondCharacter, greenC)->
     
             + [Scelta viola]
-                ~ secondPurple ++
+               -> color_variation_management(SecondCharacter, purpleC)->
             -
         
         Riccio ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -136,19 +136,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Riccio parla.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Possiamo fare una di queste cinque scelte.
             + [Scelta blu]#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                ~ secondBlue ++
+                -> color_variation_management(SecondCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ secondYellow ++
+                -> color_variation_management(SecondCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ secondRed ++
+                -> color_variation_management(SecondCharacter, redC)->
         
             + [Scelta verde]
-                ~ secondGreen ++
+                -> color_variation_management(SecondCharacter, greenC)->
     
             + [Scelta viola]
-                ~ secondPurple ++
+               -> color_variation_management(SecondCharacter, purpleC)->
             -    
         A questo punto è Riccio a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -171,19 +171,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Riccio dice un'altra cosa sul tema che stiamo esplorando.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Noi rispondiamo una di queste cinque cose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Scelta blu]
-                ~ secondBlue ++
+                -> color_variation_management(SecondCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ secondYellow ++
+                -> color_variation_management(SecondCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ secondRed ++
+                -> color_variation_management(SecondCharacter, redC)->
         
             + [Scelta verde]
-                ~ secondGreen ++
+                -> color_variation_management(SecondCharacter, greenC)->
     
             + [Scelta viola]
-                ~ secondPurple ++
+               -> color_variation_management(SecondCharacter, purpleC)->
             -
         Riccio allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Step due: aggettivi (es: saporito, triste, colorato).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -207,19 +207,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Riccio condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Noi diciamo per la terza volta qualcosa legato a quel tema.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Scelta blu]
-                ~ secondBlue ++
+                -> color_variation_management(SecondCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ secondYellow ++
+                -> color_variation_management(SecondCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ secondRed ++
+                -> color_variation_management(SecondCharacter, redC)->
         
             + [Scelta verde]
-                ~ secondGreen ++
+                -> color_variation_management(SecondCharacter, greenC)->
     
             + [Scelta viola]
-                ~ secondPurple ++
+               -> color_variation_management(SecondCharacter, purpleC)->
             -
         
         Riccio ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -248,19 +248,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Riccio parla.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Possiamo fare una di queste cinque scelte.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Scelta blu]
-                ~ secondBlue ++
+                -> color_variation_management(SecondCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ secondYellow ++
+                -> color_variation_management(SecondCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ secondRed ++
+                -> color_variation_management(SecondCharacter, redC)->
         
             + [Scelta verde]
-                ~ secondGreen ++
+                -> color_variation_management(SecondCharacter, greenC)->
     
             + [Scelta viola]
-                ~ secondPurple ++
+               -> color_variation_management(SecondCharacter, purpleC)->
             -    
         A questo punto è Riccio a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -283,19 +283,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Riccio dice un'altra cosa sul tema che stiamo esplorando.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Noi rispondiamo una di queste cinque cose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Scelta blu]
-                ~ secondBlue ++
+                -> color_variation_management(SecondCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ secondYellow ++
+                -> color_variation_management(SecondCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ secondRed ++
+                -> color_variation_management(SecondCharacter, redC)->
         
             + [Scelta verde]
-                ~ secondGreen ++
+                -> color_variation_management(SecondCharacter, greenC)->
     
             + [Scelta viola]
-                ~ secondPurple ++
+               -> color_variation_management(SecondCharacter, purpleC)->
             -
         Riccio allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Step due: aggettivi (es: saporito, triste, colorato).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -319,19 +319,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Riccio condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Noi diciamo per la terza volta qualcosa legato a quel tema.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Scelta blu]
-                ~ secondBlue ++
+                -> color_variation_management(SecondCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ secondYellow ++
+                -> color_variation_management(SecondCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ secondRed ++
+                -> color_variation_management(SecondCharacter, redC)->
         
             + [Scelta verde]
-                ~ secondGreen ++
+                -> color_variation_management(SecondCharacter, greenC)->
     
             + [Scelta viola]
-                ~ secondPurple ++
+               -> color_variation_management(SecondCharacter, purpleC)->
             -
         
         Riccio ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -513,7 +513,25 @@ Riccio cucina da solo e ci chiede di lasciarlo da solo.#speaker:{secondChar_tag(
 === food_gift_second_char
 {debug: passo per food_gift_second_char.}
 Riccio attiva il suo storylet speciale dopo aver cucinato da solo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-
+            + [Scelta blu]
+                -> color_variation_management(SecondCharacter, blueC)->
+               
+            + [Scelta gialla]
+                -> color_variation_management(SecondCharacter, yellowC)->
+             
+            + [Scelta rossa]
+                -> color_variation_management(SecondCharacter, redC)->
+        
+            + [Scelta verde]
+                -> color_variation_management(SecondCharacter, greenC)->
+    
+            + [Scelta viola]
+               -> color_variation_management(SecondCharacter, purpleC)->
+            -
+    
+    
+    ~ secondPauseTalking = secondCharPauseDuration
+    ~ justTalkedSecondChar = true
 
 
 -> main

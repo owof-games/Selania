@@ -79,8 +79,14 @@
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    {
+        TODO: quando apro il terzo PNG, lo storylet della rana si sposta su di lui.
 
+    {
+                    
+        //Discussione Mentore e Riccio legata a Rana
+        - are_two_entities_together(Mentor, PG) && activeMissions has specialMissionOne && not special_mission_one_dialogue:
+                        -> special_mission_one_dialogue
+            
         //Dopo le presentazioni con due, scena in cui hanno litigato:
         - knowing_second_character.one && (not that_little_liar_storylet) :
             -> that_little_liar_storylet
@@ -89,7 +95,6 @@
         - knowing_second_character.two && (not addressing_violence):
             -> addressing_violence
         
-
         - not second_character_feedback && secondStory == StoryEnded:
             -> second_character_feedback            
             

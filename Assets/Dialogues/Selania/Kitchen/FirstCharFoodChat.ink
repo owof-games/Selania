@@ -25,19 +25,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Chitarra parla.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Possiamo fare una di queste cinque scelte.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             + [Scelta blu]
-                ~ firstBlue ++
+                -> color_variation_management(FirstCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ firstYellow ++
+                -> color_variation_management(FirstCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ firstRed ++
+                -> color_variation_management(FirstCharacter, redC)->
         
             + [Scelta verde]
-                ~ firstGreen ++
+                -> color_variation_management(FirstCharacter, greenC)->
     
             + [Scelta viola]
-                ~ firstPurple ++
+                -> color_variation_management(FirstCharacter, purpleC)->
             -    
         A questo punto è chitarra a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -60,19 +60,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Chitarra dice un'altra cosa sul tema che stiamo esplorando.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Noi rispondiamo una di queste cinque cose.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             + [Scelta blu]
-                ~ firstBlue ++
+                -> color_variation_management(FirstCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ firstYellow ++
+                -> color_variation_management(FirstCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ firstRed ++
+                -> color_variation_management(FirstCharacter, redC)->
         
             + [Scelta verde]
-                ~ firstGreen ++
+                -> color_variation_management(FirstCharacter, greenC)->
     
             + [Scelta viola]
-                ~ firstPurple ++
+                -> color_variation_management(FirstCharacter, purpleC)->
             -
         Chitarra allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Step due: aggettivi (es: saporito, triste, colorato).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -96,19 +96,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Chitarra condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Noi diciamo per la terza volta qualcosa legato a quel tema.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             + [Scelta blu]
-                ~ firstBlue ++
+                -> color_variation_management(FirstCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ firstYellow ++
+                -> color_variation_management(FirstCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ firstRed ++
+                -> color_variation_management(FirstCharacter, redC)->
         
             + [Scelta verde]
-                ~ firstGreen ++
+                -> color_variation_management(FirstCharacter, greenC)->
     
             + [Scelta viola]
-                ~ firstPurple ++
+                -> color_variation_management(FirstCharacter, purpleC)->
             -
         
         Chitarra ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -137,19 +137,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Chitarra parla.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Possiamo fare una di queste cinque scelte.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             + [Scelta blu]
-                ~ firstBlue ++
+                -> color_variation_management(FirstCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ firstYellow ++
+                -> color_variation_management(FirstCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ firstRed ++
+                -> color_variation_management(FirstCharacter, redC)->
         
             + [Scelta verde]
-                ~ firstGreen ++
+                -> color_variation_management(FirstCharacter, greenC)->
     
             + [Scelta viola]
-                ~ firstPurple ++
+                -> color_variation_management(FirstCharacter, purpleC)->
             -    
         A questo punto è chitarra a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -172,19 +172,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Chitarra dice un'altra cosa sul tema che stiamo esplorando.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Noi rispondiamo una di queste cinque cose.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             + [Scelta blu]
-                ~ firstBlue ++
+                -> color_variation_management(FirstCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ firstYellow ++
+                -> color_variation_management(FirstCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ firstRed ++
+                -> color_variation_management(FirstCharacter, redC)->
         
             + [Scelta verde]
-                ~ firstGreen ++
+                -> color_variation_management(FirstCharacter, greenC)->
     
             + [Scelta viola]
-                ~ firstPurple ++
+                -> color_variation_management(FirstCharacter, purpleC)->
             -
         Chitarra allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Step due: aggettivi (es: saporito, triste, colorato).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -208,19 +208,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Chitarra condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Noi diciamo per la terza volta qualcosa legato a quel tema.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             + [Scelta blu]
-                ~ firstBlue ++
+                -> color_variation_management(FirstCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ firstYellow ++
+                -> color_variation_management(FirstCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ firstRed ++
+                -> color_variation_management(FirstCharacter, redC)->
         
             + [Scelta verde]
-                ~ firstGreen ++
+                -> color_variation_management(FirstCharacter, greenC)->
     
             + [Scelta viola]
-                ~ firstPurple ++
+                -> color_variation_management(FirstCharacter, purpleC)->
             -
         
         Chitarra ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -250,19 +250,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Chitarra parla.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Possiamo fare una di queste cinque scelte.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             + [Scelta blu]
-                ~ firstBlue ++
+                -> color_variation_management(FirstCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ firstYellow ++
+                -> color_variation_management(FirstCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ firstRed ++
+                -> color_variation_management(FirstCharacter, redC)->
         
             + [Scelta verde]
-                ~ firstGreen ++
+                -> color_variation_management(FirstCharacter, greenC)->
     
             + [Scelta viola]
-                ~ firstPurple ++
+                -> color_variation_management(FirstCharacter, purpleC)->
             -    
         A questo punto è chitarra a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -285,19 +285,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Chitarra dice un'altra cosa sul tema che stiamo esplorando.
         Noi rispondiamo una di queste cinque cose.
             + [Scelta blu]
-                ~ firstBlue ++
+                -> color_variation_management(FirstCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ firstYellow ++
+                -> color_variation_management(FirstCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ firstRed ++
+                -> color_variation_management(FirstCharacter, redC)->
         
             + [Scelta verde]
-                ~ firstGreen ++
+                -> color_variation_management(FirstCharacter, greenC)->
     
             + [Scelta viola]
-                ~ firstPurple ++
+                -> color_variation_management(FirstCharacter, purpleC)->
             -
         Chitarra allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Step due: aggettivi (es: saporito, triste, colorato).
@@ -321,19 +321,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Chitarra condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.
         Noi diciamo per la terza volta qualcosa legato a quel tema.
             + [Scelta blu]
-                ~ firstBlue ++
+                -> color_variation_management(FirstCharacter, blueC)->
                
             + [Scelta gialla]
-                ~ firstYellow ++
+                -> color_variation_management(FirstCharacter, yellowC)->
              
             + [Scelta rossa]
-                ~ firstRed ++
+                -> color_variation_management(FirstCharacter, redC)->
         
             + [Scelta verde]
-                ~ firstGreen ++
+                -> color_variation_management(FirstCharacter, greenC)->
     
             + [Scelta viola]
-                ~ firstPurple ++
+                -> color_variation_management(FirstCharacter, purpleC)->
             -
         
         Chitarra ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -509,7 +509,24 @@ Chitarra sta cucinando da sola e ci chiede di lasciarla in pace fino a quando no
 {debug: passo per food_gift_first_char.}
 Chitarra attiva il suo storylet speciale dopo aver cucinato da sola.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
 
-
+            + [Scelta blu]
+                -> color_variation_management(FirstCharacter, blueC)->
+               
+            + [Scelta gialla]
+                -> color_variation_management(FirstCharacter, yellowC)->
+             
+            + [Scelta rossa]
+                -> color_variation_management(FirstCharacter, redC)->
+        
+            + [Scelta verde]
+                -> color_variation_management(FirstCharacter, greenC)->
+    
+            + [Scelta viola]
+                -> color_variation_management(FirstCharacter, purpleC)->
+            -
+            
+    ~ firstPauseTalking = firstCharPauseDuration
+        ~ justTalkedFirstChar = true
 
 
 
