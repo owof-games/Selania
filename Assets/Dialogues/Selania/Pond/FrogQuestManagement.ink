@@ -328,16 +328,16 @@
                             E hai deciso di non intervenire.
                         
                         - special_mission_one_dialogue.pro_mentor:
-                            E hai deciso di appoggiare Mentore.
+                            E scelto Wicked: dillo a Fabio!
                         
                         - special_mission_one_dialogue.pro_riccio:
-                            E hai deciso di appoggiare Riccio.
+                            E scelto Attack of Titan, lovvo.
                         
                         - special_mission_one_dialogue.disagree:
-                            E hai detto qualcosa contro entrMbi.
+                            E hai optato per The Lady: tu si che capisci il mondo.
                         
                         - special_mission_one_dialogue.paracula:
-                            E hai detto qualcosa a favore di entrambi.
+                            E hai proposto Attack of The Wicked: discutibile.
                     }
                 L'armonia è importante.
                 Per questo ti dono una nota, che troverai al Nido.

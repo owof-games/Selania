@@ -92,11 +92,11 @@
         
         //Storylets gestiti anche dalla rana
             //Lettura Chitarra
-                - are_two_entities_together(FirstCharacter, PG) && readStories has Salvo:
+                - are_two_entities_together(FirstCharacter, PG) && readStories has Salvo && not a_story_of_transformation:
                     -> a_story_of_transformation
             
             //Lettura Riccio
-                - are_two_entities_together(SecondCharacter, PG) && readStories has Lamia:
+                - are_two_entities_together(SecondCharacter, PG) && readStories has Lamia && not a_story_of_rebellion:
                     -> a_story_of_rebellion
         
         
