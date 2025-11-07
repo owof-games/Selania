@@ -361,6 +361,8 @@
                     Hai cucinato in autonomia, {name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Per questo ti dono una ingrediente universale, che potrai utilizzare per cucinare con le altre persone, e apprezzeranno sempre.
                     
+                    @animation:Inventory
+                    
                     ~ findedGifts += universalIngredient
                     ~ availableSpecialMissions -= specialMissionTwo
                     ~ activeMissions = ()
@@ -399,16 +401,8 @@
             -> top
     
     - else:
-            {
-            //Per attivare le missioni speciali. Il tiro è alto perché soprattutto quella nest è fondamentale
-                - availableSpecialMissions != () && playerAccessiblePlaces has Kitchen && playerAccessiblePlaces has Nest:
-                {name}, ti devo chiedere un favore personale.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    ~  currentMissionAboutChar = specialDelivery
-                    -> missions_dispatcher
-                
-                - else:
-                -> discovered_things_updater
-            }    
+        -> discovered_things_updater
+              
 }
     
 - (top)

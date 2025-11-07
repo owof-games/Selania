@@ -1,5 +1,21 @@
 === common_storylets
     {
+        //Storylets prioritari
+            //Storylet dopo lo scambio con Riccio e il fatto che l'ha afferrato
+                - knowing_second_character.two && (not addressing_violence):
+                -> addressing_violence
+        
+            
+            
+            //Mentore e Riccio parlano dopo il litigio
+                - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && addressing_violence && not about_violence_and_peace:
+                        -> about_violence_and_peace
+            
+            //Discorso sbloccato da rana            
+            - are_two_entities_together(Mentor, PG) && activeMissions has specialMissionOne && not special_mission_one_dialogue:
+                        -> special_mission_one_dialogue
+            
+    
         //Storylets per aperture luoghi
             //Apertura cucina
             - are_two_entities_together(FirstCharacter, PG) && (knowing_first_character.three or knowing_second_character.one) and not open_the_kitchen:
@@ -8,7 +24,7 @@
                            -> open_the_kitchen
                         
                         - else:
-                            Ehi {name}! Vediamoci allo stagno. Ho una cosa da mostrarti!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:chitarra_curious
+                            Ehi {name}! Vediamoci allo stagno. Ho una cosa da mostrarti!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                                 ~ move_entity(FirstCharacter, Pond)
                                 ~ changeLocationTimer = 0
                                     -> main    
@@ -21,7 +37,7 @@
                             -> open_the_library
                         
                         - else:
-                            Ehi {name}! Troviamoci alla foresta. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:thirdPNG_neutral
+                            Ehi {name}! Troviamoci alla foresta. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                                 ~ move_entity(SecondCharacter, Forest)
                                 ~ changeLocationTimer = 0
                                     -> main    
@@ -34,18 +50,14 @@
                             -> open_nest
                         
                         - else:
-                            Ehi {name}! Vediamoci in biblioteca. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #portrait:riccio_neutral
+                            Ehi {name}! Vediamoci in biblioteca. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                                 ~ move_entity(SecondCharacter, Library)
                                 ~ changeLocationTimer = 0
                                     -> main    
                   }
         
-        //Storylets prioritari
-            //Mentore e Riccio parlano dopo il litigio
-                - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && addressing_violence && not about_violence_and_peace:
-                        -> about_violence_and_peace
-
         
+                        
         //Storylets legati alla cucina
             //Chitarra
                 

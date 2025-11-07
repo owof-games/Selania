@@ -371,11 +371,11 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
                 = add_ingredient
                 Dato che il nostro inventario contiene degli oggetti, possiamo inserirne uno nel piatto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 
-                    + Non voglio aggiungere un ingrediente extra.
-                        ~ recipePP = "semplice"
-                        
                     + Voglio aggiungere un ingrediente extra.
                         -> extra_ingredient_management(SecondCharacter)->
+                    
+                    + Preferisco evitare.
+                        ~ recipePP = "semplice"
                     -
             
                 //Per riccio devo aumentare il valore di tre, perché ho compiuto tre scelte, e mi serve per il calcolo dell'affinità

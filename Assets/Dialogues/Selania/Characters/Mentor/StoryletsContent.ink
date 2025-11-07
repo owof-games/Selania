@@ -113,7 +113,7 @@
             }
             
         Io devo raccogliere le foglie dalla foresta.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                ~ firstPauseTalking = 0
+                ~ fifthPauseTalking = fifthCharPauseDuration
                 ~ move_entity(FifthRecap, BookPlace)
                 @animation:RewriterBook 
         
@@ -199,7 +199,7 @@
             A dopo!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry    
             
             ~ move_entity(RulesRecap, BookPlace)      
-            ~ firstPauseTalking = 0
+            ~ fifthPauseTalking = fifthCharPauseDuration
             //Con questa voce evito che "questions" compaia subito dopo se le condizioni sono sensate.
                 ~ tutorialPauses = true
             
@@ -262,7 +262,7 @@
             Ricorda {name}: sei una guida, ma sta alla persona decidere alla fine chi è, e di cosa ha bisogno.
             Quando te la senti, affronta questo ultimo passaggio e poi torna da me.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             
-            ~ firstPauseTalking = 0
+            ~ fifthPauseTalking = fifthCharPauseDuration
             @animation:RewriterBook
                 ~ tutorialPauses = true
                 
@@ -289,6 +289,7 @@
     Ed è per questo che ogni Riscrittorə può darne solo uno a persona.
     Qualcosa di così forte non può certo essere usato senza coscienza. #speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
             ~ tutorialPauses = true
+            ~ fifthPauseTalking = fifthCharPauseDuration
     -> main
 
 
@@ -301,6 +302,7 @@
     Passar del tempo in cucina con qualcunə può essere un bel modo per conoscervi meglio.
     E per capire che piega stia prendendo la vostra relazione.
         ~ tutorialPauses = true
+        ~ fifthPauseTalking = fifthCharPauseDuration
     -> main
 
 
@@ -313,7 +315,7 @@
     Non mi piacciono i posti malmessi.
     E non mi piace quello che ti permette di fare. #speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
     Sto per tradire il mio ruolo di Mentore, ma non sarò io a dirti cosa farne.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
-
+    ~ fifthPauseTalking = fifthCharPauseDuration
     ~ tutorialPauses = true
     -> main
 
@@ -441,6 +443,7 @@
         Ma se avrai bisogno di aiuto per i luoghi del giardino, o un po' di supporto personale, sono qui.
         O anche solo per due chiacchiere.
         A dopo.
+            ~ fifthPauseTalking = fifthCharPauseDuration
                 -> main
           
 === second_character_feedback
@@ -512,6 +515,7 @@
     A prescindere dal risultato.
     E un giorno potrai fare questo lavoro da {pronouns has him:solo|{pronouns has her:sola|solə}}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
     E a quel punto forse anche io potrò un poco riposare.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
+        ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
    
    === third_character_feedback
@@ -559,7 +563,7 @@
         Spero solo sia un segno positivo.
         Io provo a concimarla comunque, male non le farà.
         <i>Noi preferiamo crescere senza concime. Chiederemo alle formiche di forare il sacco.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait: {witch_state()}
-
+        
             -> main
     
     
@@ -608,6 +612,7 @@
         Trova un modo per allontanarlo.
         Ma non metterci troppo, per favore.
         ~ secondPauseTalking = 0
+        ~ fifthPauseTalking = fifthCharPauseDuration
             - (nameSecond)
             -> main
     

@@ -74,6 +74,11 @@
     Bene, direi che abbiamo tutte qualcosa a cui pensare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     Tipo, a dove farmi un pisolino.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             -> main
+            
+            ~ firstPauseTalking = firstCharPauseDuration
+            ~ justTalkedFirstChar = true
+            ~ secondPauseTalking = secondCharPauseDuration
+            ~ justTalkedSecondChar = true
 
 
 === take_this_book
@@ -127,13 +132,16 @@
     Ok.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     Però va bene così.
     Ora ho voglia solo di cercare qualcosa da mangiare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        ~ change_entity_place(SecondCharacter)
+            ~ change_entity_place(SecondCharacter)
+            ~ fifthPauseTalking = fifthCharPauseDuration
+            ~ secondPauseTalking = secondCharPauseDuration
+            ~ justTalkedSecondChar = true
 -> main
 
 
 
 === open_the_kitchen
-    Dialogo allo stagno.
+    Dialogo allo stagno.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         + [Scelta blu.]
              -> color_variation_management(FirstCharacter, blueC)->
     
@@ -149,7 +157,8 @@
         + [Scelta verde.]
             -> color_variation_management(FirstCharacter, greenC)->
         -    
-    Chitarra ci apre la cucina.
+    Chitarra ci apre la cucina.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+    Ricordati di invitare una persona, se vuoi cucinarci assieme!
         ~ firstPauseTalking = firstCharPauseDuration
         ~ justTalkedFirstChar = true
         -> opening_places ->
@@ -157,7 +166,7 @@
 
 
 === open_nest
-    Dialogo in biblioteca.
+    Dialogo in biblioteca.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         + [Scelta blu.]
              -> color_variation_management(SecondCharacter, blueC)->
     
@@ -173,14 +182,14 @@
         + [Scelta verde.]
             -> color_variation_management(SecondCharacter, greenC)->
         -    
-    Ci viene aperto il nido.
+    Ci viene aperto il nido.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         ~ secondPauseTalking = secondCharPauseDuration
         ~ justTalkedSecondChar = true
         -> opening_places ->
         -> main
     
 === open_the_library
-    Dialogo nella foresta.
+    Dialogo nella foresta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         + [Scelta blu.]
             -> color_variation_management(SecondCharacter, blueC)->
     
@@ -196,7 +205,7 @@
         + [Scelta verde.]
             -> color_variation_management(SecondCharacter, greenC)->
         -    
-    Ci viene aperta la biblioteca.
+    Ci viene aperta la biblioteca.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         ~ secondPauseTalking = secondCharPauseDuration
         ~ justTalkedSecondChar = true
         -> opening_places ->
@@ -204,6 +213,7 @@
         
 === mentor_rage
 Mentore sbrocca
+    ~ fifthPauseTalking = fifthCharPauseDuration
     -> main
     
 === special_mission_one_dialogue
@@ -211,7 +221,7 @@ Mentore sbrocca
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     Questa conversazione è generata dalla missione della rana. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-    Mentore e Riccio stanno discutendo se è meglio Wicked  o Attack of Titan. Mentore tifa per il primo, Riccio per il secondo.
+    Mentore e Riccio stanno discutendo se è meglio Wicked  o Attack of Titan. Mentore tifa per il primo, Riccio per il secondo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     
         + (not_intervention)[Decidi di non intervenire]
              -> color_variation_management(Mentor, blueC)->
@@ -237,11 +247,12 @@ Mentore sbrocca
     Finisce la scena. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         ~ secondPauseTalking = secondCharPauseDuration
         ~ justTalkedSecondChar = true
+        ~ fifthPauseTalking = fifthCharPauseDuration
     -> main
     
 
 === a_story_of_transformation
-Qui Chitarra ci dice che ha letto <b>Il cancello</b> e ci chiede cosa ne pensiamo.
+Qui Chitarra ci dice che ha letto <b>Il cancello</b> e ci chiede cosa ne pensiamo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         
         + [Scelta blu.]
              -> color_variation_management(FirstCharacter, blueC)->
@@ -263,7 +274,7 @@ Qui Chitarra ci dice che ha letto <b>Il cancello</b> e ci chiede cosa ne pensiam
 -> main
 
 === a_story_of_rebellion
-Qui Riccio ci dice che ha letto <b>Il sassolino</b> e ci chiede cosa ne pensiamo.
+Qui Riccio ci dice che ha letto <b>Il sassolino</b> e ci chiede cosa ne pensiamo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         
         + [Scelta blu.]
              -> color_variation_management(SecondCharacter, blueC)->

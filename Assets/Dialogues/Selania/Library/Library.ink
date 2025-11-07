@@ -5,6 +5,8 @@
     {debug: La lista degli oggetti nella stanza è: {libraryContents}.}
     
     {library == 1:Nella biblioteca storie non lette cercano occhi accoglienti.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        
+        -> witch_frog_mission_notifier ->
     
     ~ arrivingFrom = Library
     

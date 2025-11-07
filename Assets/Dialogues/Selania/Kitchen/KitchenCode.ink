@@ -115,6 +115,17 @@
 
  ----------------------------------*/
  //badReaction, mehReaction, goodReaction
+        //Se la lista è vuota
+    + {findedGifts == ()} [Non ho nulla da aggiungere.]
+        ~ recipePP = "distratta"
+        ~ disableNestDialogue()
+        ->->
+    
+    + [Ho cambiato idea.]
+        ~ recipePP = "indecisa"
+        ~ disableNestDialogue()
+        ->->
+        
     + {findedGifts has BaccaDellaAddolorata} [Una bacca della Addolorata.]
         ~ findedGifts -= BaccaDellaAddolorata
         ~ recipePP = "aggiungere descrizione participio passato"
@@ -386,19 +397,9 @@
             }
         
         ~ disableNestDialogue()    
-        -> main
+        ->->
 
-    //Se la lista è vuota
-    + {findedGifts == ()} [Non ho nulla da aggiungere.]
-        ~ recipePP = "distratta"
-        ~ disableNestDialogue()
-        ->->
-    
-    + [Ho cambiato idea.]
-        ~ recipePP = "indecisa"
-        ~ disableNestDialogue()
-        ->->
-    - 
+
 ->->
 
 
