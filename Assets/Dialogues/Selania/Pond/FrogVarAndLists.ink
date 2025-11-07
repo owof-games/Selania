@@ -25,7 +25,7 @@
         
         //Pausa tra una missione speciale e l'altra
     VAR pauseSpecialMission = 0
-    VAR pauseSpecialMissionMax = 10
+    VAR pauseSpecialMissionMax = 1
 
 
 

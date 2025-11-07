@@ -37,12 +37,13 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
       {frogDebug: il valore di availableSpecialMissions è {availableSpecialMissions}.}
       {frogDebug: playerAccessiblePlaces contiene {playerAccessiblePlaces}.}
 
-    {   
-        - pauseSpecialMission == 0 && availableSpecialMissions has specialMissionOne && playerAccessiblePlaces ? Kitchen:
+    {       //Special mission one offre la nota
+        - pauseSpecialMission == 0 && availableSpecialMissions has specialMissionOne && playerAccessiblePlaces ? Nest:
             {frogDebug: condizioni rispettate per poter offrire la prima missione speciale.}
                 -> special_mission_one
-        
-        - pauseSpecialMission == 0 && availableSpecialMissions has specialMissionTwo && playerAccessiblePlaces ? Nest:
+            
+            //Special mission two offre l'ingrediente universale
+        - pauseSpecialMission == 0 && availableSpecialMissions has specialMissionTwo && playerAccessiblePlaces ? Kitchen:
             {frogDebug: condizioni rispettate per poter offrire la seconda missione speciale.}
                 -> special_mission_two      
         

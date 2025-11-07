@@ -576,3 +576,13 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
 Le condizioni per la missione data dalla rana sono state raggiunte.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
         ~ witchNotification = true
 -> main
+
+=== special_mission_pause_check
+{frogDebug: passo da special_mission_pause_check.}    
+{frogDebug: il valore di pauseSpecialMission è {pauseSpecialMission}.}    
+    {
+        - pauseSpecialMission > 0:
+            ~ pauseSpecialMission --
+        {frogDebug: il valore di pauseSpecialMission è {pauseSpecialMission}.}    
+    }
+->->

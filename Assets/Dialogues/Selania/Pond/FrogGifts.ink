@@ -403,6 +403,7 @@ Quindi, come posso aiutarti {name}? #speaker:{frog_tag()} #inkA:offState #inkB:o
 {frogDebug: passo closed_exchange.}
 E con questo è tutto! #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 A dopo {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    -> special_mission_pause_check ->
     //Svuoto il destinatario della missione attuale per sicurezza
     ~ currentMissionAboutChar = ()
     ~ activeMissions = ()

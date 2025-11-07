@@ -291,11 +291,7 @@
     
     ~ tiredFrog --
     
-    {
-        - pauseSpecialMission > 0:
-            ~ pauseSpecialMission --
-        {frogDebug: il valore di pauseSpecialMission è {pauseSpecialMission}.}    
-    }
+
     
     
 //Aumento di contatori:
