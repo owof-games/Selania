@@ -35,6 +35,7 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
         
       + [Chiedo un aiuto alla rana.]
       {frogDebug: il valore di availableSpecialMissions è {availableSpecialMissions}.}
+      {frogDebug: playerAccessiblePlaces contiene {playerAccessiblePlaces}.}
 
     {   
         - (availableSpecialMissions != ()) && playerAccessiblePlaces ? (Kitchen, Nest):
