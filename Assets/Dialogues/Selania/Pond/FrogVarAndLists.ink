@@ -22,6 +22,10 @@
     VAR diceFrog = 0
     VAR maxValueDice = ()
     VAR maxSpecialValueDice = ()
+        
+        //Pausa tra una missione speciale e l'altra
+    VAR pauseSpecialMission = 0
+    VAR pauseSpecialMissionMax = 10
 
 
 

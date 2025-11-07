@@ -38,9 +38,13 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
       {frogDebug: playerAccessiblePlaces contiene {playerAccessiblePlaces}.}
 
     {   
-        - (availableSpecialMissions != ()) && playerAccessiblePlaces ? (Kitchen, Nest):
-            {frogDebug: condizioni rispettate per poter offrire missioni speciali.}
-                -> special_missions_dispatcher
+        - pauseSpecialMission == 0 && availableSpecialMissions has specialMissionOne && playerAccessiblePlaces ? Kitchen:
+            {frogDebug: condizioni rispettate per poter offrire la prima missione speciale.}
+                -> special_mission_one
+        
+        - pauseSpecialMission == 0 && availableSpecialMissions has specialMissionTwo && playerAccessiblePlaces ? Nest:
+            {frogDebug: condizioni rispettate per poter offrire la seconda missione speciale.}
+                -> special_mission_two      
         
         - firstStory == StoryStarted && firstGift == () && charOneGifts hasnt charOneCultivable:
             {frogDebug: condizioni rispettate per poter offrire info sul dono per Chitarra.}

@@ -134,23 +134,71 @@
 
 === open_the_kitchen
     Dialogo allo stagno.
-    Chitarra ci apre la cucina.
+        + [Scelta blu.]
+             -> color_variation_management(FirstCharacter, blueC)->
     
+        + [Scelta rossa.]
+            -> color_variation_management(FirstCharacter, redC)->
+     
+        + [Scelta viola.]
+                -> color_variation_management(FirstCharacter, purpleC)->
+    
+        + [Scelta gialla.]
+            -> color_variation_management(FirstCharacter, yellowC)->
+            
+        + [Scelta verde.]
+            -> color_variation_management(FirstCharacter, greenC)->
+        -    
+    Chitarra ci apre la cucina.
+        ~ firstPauseTalking = firstCharPauseDuration
+        ~ justTalkedFirstChar = true
         -> opening_places ->
         -> main
 
 
 === open_nest
     Dialogo in biblioteca.
-    Ci viene aperto il nido.
+        + [Scelta blu.]
+             -> color_variation_management(SecondCharacter, blueC)->
     
+        + [Scelta rossa.]
+            -> color_variation_management(SecondCharacter, redC)->
+     
+        + [Scelta viola.]
+                -> color_variation_management(SecondCharacter, purpleC)->
+    
+        + [Scelta gialla.]
+            -> color_variation_management(SecondCharacter, yellowC)->
+            
+        + [Scelta verde.]
+            -> color_variation_management(SecondCharacter, greenC)->
+        -    
+    Ci viene aperto il nido.
+        ~ secondPauseTalking = secondCharPauseDuration
+        ~ justTalkedSecondChar = true
         -> opening_places ->
         -> main
     
 === open_the_library
     Dialogo nella foresta.
-    Ci viene aperta la biblioteca.
+        + [Scelta blu.]
+            -> color_variation_management(SecondCharacter, blueC)->
     
+        + [Scelta rossa.]
+            -> color_variation_management(SecondCharacter, redC)->
+     
+        + [Scelta viola.]
+                -> color_variation_management(SecondCharacter, purpleC)->
+    
+        + [Scelta gialla.]
+            -> color_variation_management(SecondCharacter, yellowC)->
+            
+        + [Scelta verde.]
+            -> color_variation_management(SecondCharacter, greenC)->
+        -    
+    Ci viene aperta la biblioteca.
+        ~ secondPauseTalking = secondCharPauseDuration
+        ~ justTalkedSecondChar = true
         -> opening_places ->
         -> main
         
@@ -187,6 +235,8 @@ Mentore sbrocca
             -> color_variation_management(SecondCharacter, greenC)->
                 -    
     Finisce la scena. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        ~ secondPauseTalking = secondCharPauseDuration
+        ~ justTalkedSecondChar = true
     -> main
     
 
@@ -208,7 +258,8 @@ Qui Chitarra ci dice che ha letto <b>Il cancello</b> e ci chiede cosa ne pensiam
         + [Scelta verde.]
             -> color_variation_management(FirstCharacter, greenC)->
         -    
-
+        ~ firstPauseTalking = firstCharPauseDuration
+        ~ justTalkedFirstChar = true
 -> main
 
 === a_story_of_rebellion
@@ -229,5 +280,6 @@ Qui Riccio ci dice che ha letto <b>Il sassolino</b> e ci chiede cosa ne pensiamo
         + [Scelta verde.]
             -> color_variation_management(SecondCharacter, greenC)->
         -    
-
+        ~ secondPauseTalking = secondCharPauseDuration
+        ~ justTalkedSecondChar = true
 -> main

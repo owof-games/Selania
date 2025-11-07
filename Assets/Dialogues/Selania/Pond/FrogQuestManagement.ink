@@ -181,27 +181,6 @@
 ->->
 
 
-=== special_missions_dispatcher
-{frogDebug: passo da special_missions_dispatcher.}
-- (specialTop)
-
-         
-    {
-        - availableSpecialMissions has specialMissionOne:
-            -> special_mission_one
-        
-        - availableSpecialMissions has specialMissionTwo:
-            -> special_mission_two
-        
-        - else:
-            {frogDebug: il valore di availableSpecialMissions è {availableSpecialMissions} per cui non ci sono altre missioni speciali, vado a missions_dispatcher.}
-                -> missions_dispatcher
-            
-    }
-
-
-->->
-
 
 === closed_mission_verify
 {frogDebug: passo da closed_mission_verify. Il valore di activeMissions è {activeMissions}.}
@@ -366,6 +345,8 @@
                     ~ availableSpecialMissions -= specialMissionOne
                     ~ activeMissions = ()
                     ~ currentMissionAboutChar = ()
+                    //Metto in pausa le missioni speciali
+                    ~ pauseSpecialMission = pauseSpecialMissionMax
                     -> main
                     
                 - else:
@@ -383,7 +364,9 @@
                     ~ findedGifts += universalIngredient
                     ~ availableSpecialMissions -= specialMissionTwo
                     ~ activeMissions = ()
-                    ~  currentMissionAboutChar = ()
+                    ~ currentMissionAboutChar = ()
+                    //Metto in pausa le missioni speciali
+                    ~ pauseSpecialMission = pauseSpecialMissionMax
                     -> main
                     
                 - else:

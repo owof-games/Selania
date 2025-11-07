@@ -128,6 +128,9 @@
     Perché non vedi cosa accade? #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += specialMissionOne
+        ~ move_entity(SecondCharacter, Forest)
+        ~ move_entity(Mentor, Forest)
+        ~ changeLocationTimer = 0
     @animation:RewriterBook    
     -> main
     
