@@ -164,7 +164,7 @@
                 -> mission_three
             - 4 && availableMissions has missionFour:
                 -> mission_four
-            - 5 && availableMissions has missionFive:
+            - 5 && availableMissions has missionFive && (firstStory == StoryStarted) && (secondStory == StoryStarted):
                 -> mission_five
             - 6 && availableMissions has missionSix && ((firstStory == StoryEnded) or (secondStory == StoryEnded) or (thirdStory == StoryEnded)):
                 -> mission_six
