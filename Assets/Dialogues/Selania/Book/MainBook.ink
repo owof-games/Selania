@@ -3,6 +3,13 @@
 #ambientSounds: {tag_ambientSounds()}
 {debug: <i>La lista degli oggetti nella stanza è: {bookContents}.}
 {debug: <i>Mi trovo in {entity_location(PG)}.}
+
+//Gestione suoni (per evitare che mi parta il suono del treno quando si è attivato e apro e chiudo il libro e non ho cambiato luogo)
+    {
+        - safekeepingContents hasnt TrainNoise:
+            ~ move_entity(TrainNoise, Safekeeping)
+    }
+
     -> main
 
 

@@ -167,7 +167,7 @@ LIST speakersForEwWordTag = Influenced, Other
 
 //Modifica della variabile moonState
 === moon_state_management
-~ temp dice_roll = RANDOM(1, 18)
+~ temp dice_roll = RANDOM(1, 3)
 {debug: passo per moon_state management. Prima di agire, il valore di moonState è {moonState}. Il valore di moonTime è {moonTime}.}
 
         ~ moonTime ++
