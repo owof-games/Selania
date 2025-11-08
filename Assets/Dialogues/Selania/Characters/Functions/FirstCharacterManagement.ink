@@ -29,6 +29,11 @@
     //Valore quarto ingrediente
         VAR fourthIngredientNameFirstCharacter = ()
         VAR fourthIngredientReactionFirstCharacter = notReaction
+
+//Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
+    VAR firstGiftsFavourites = (NonTiScordarDiTe, BaccaDellaAddolorata, CantoDelleCompagne)
+    VAR firstGiftsGood = (ErbaLiccia, Olobino, BastoneDellOzioso, LanaNotturna)
+    
     
 
 //Tracciamento del dono

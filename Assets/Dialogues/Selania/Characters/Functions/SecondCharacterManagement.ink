@@ -22,7 +22,10 @@
     VAR dolphinePercentage = 60.00
     VAR wolfPercentage = 40.00
 
-    
+//Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
+    VAR secondGiftsFavourites = (BrinaDellImpossibile, BastoneDellOzioso, LicheneDegliAbissi)
+    VAR secondGiftsGood = (CantoDelleCompagne, LanaNotturna, LaSpazzata, NonTiScordarDiTe)
+       
 
 //Tracciamento del dono
     VAR secondGift = ()
