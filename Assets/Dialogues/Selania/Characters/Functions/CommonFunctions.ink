@@ -358,10 +358,10 @@
     
 
 //Check di sicurezza per conchiglia
-    {
-        - availableSpecialMissions hasnt specialMissionOne and nestContents hasnt purpleShell:
-                    ~ move_entity(purpleShell, Nest)
-    }
+//    {
+//        - availableSpecialMissions hasnt specialMissionOne and nestContents hasnt purpleShell:
+//                    ~ move_entity(purpleShell, Nest)
+//    }
 
 //Gestione suoni
     {
