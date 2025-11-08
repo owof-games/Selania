@@ -65,7 +65,7 @@ Quindi, come posso aiutarti {name}? #speaker:{frog_tag()} #inkA:offState #inkB:o
             -> frog_gift_dispatcher
         
     
-    + {firstGift !=() or secondGift !=() or fourthIngredientNameFirstCharacter !=() or fourthIngredientNameSecondCharacter != ()}[Ho bisogno di recuperare una pianta che ho utilizzato.]
+    + {recoverableCultivables != ()}[Ho bisogno di recuperare una pianta che ho utilizzato.]
         //Nota: per ora sono quattro massimi gli utilizzi di un coltivabile, per cui non serve un menu ad hoc. Poi capire come fare.
             -> cultivable_recovery
     
@@ -392,8 +392,11 @@ Quindi, come posso aiutarti {name}? #speaker:{frog_tag()} #inkA:offState #inkB:o
     {frogDebug: searchedCultivableRecovery è uguale a {searchedCultivableRecovery}. Prima dell'intervento, findedGifts contiene {findedGifts}.}
         
         Come concordato, eccoti {ingredientTranslator(searchedCultivableRecovery)}. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        
             ~ findedGifts += searchedCultivableRecovery
+            ~ recoverableCultivables -= searchedCultivableRecovery
             ~ searchedCultivableRecovery = ()
+            
         {frogDebug: Dopo l'intervento, searchedCultivableRecovery è uguale a {searchedCultivableRecovery} e findedGifts contiene {findedGifts}.}
                 -> closed_exchange
 

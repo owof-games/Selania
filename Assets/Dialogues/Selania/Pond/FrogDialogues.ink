@@ -81,7 +81,7 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
             {frogDebug: condizioni rispettate per poter offrire info su parola per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - (firstGift !=()) or (secondGift !=()) or (fourthIngredientNameFirstCharacter !=()) or (fourthIngredientNameSecondCharacter != ()):
+        - (recoverableCultivables!= ()):
             {frogDebug: condizioni rispettate per poter offrire info su racconto per Chitarra.}
                 -> autonomy_mission_verify
                 

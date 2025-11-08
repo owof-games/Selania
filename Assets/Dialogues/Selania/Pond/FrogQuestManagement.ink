@@ -420,72 +420,72 @@
 {frogDebug: passo da cultivable_recovery.}
 Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
 
-    + {growthBaccaDellaAddolorata == stepThree && findedGifts hasnt BaccaDellaAddolorata} [{ingredientTranslator(BaccaDellaAddolorata)}]
+    + {recoverableCultivables has BaccaDellaAddolorata} [{ingredientTranslator(BaccaDellaAddolorata)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = BaccaDellaAddolorata
             -> frog_gift_dispatcher
             
-    + {growthBarbaDellInciampo == stepThree && findedGifts hasnt BarbaDellInciampo} [{ingredientTranslator(BarbaDellInciampo)}]
+    + {recoverableCultivables has BarbaDellInciampo} [{ingredientTranslator(BarbaDellInciampo)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = BarbaDellInciampo
             -> frog_gift_dispatcher
             
-    + {growthBastoneDellOzioso == stepThree && findedGifts hasnt BastoneDellOzioso}[{ingredientTranslator(BastoneDellOzioso)}]
+    + {recoverableCultivables has BastoneDellOzioso}[{ingredientTranslator(BastoneDellOzioso)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = BastoneDellOzioso
             -> frog_gift_dispatcher
             
-    + {growthBrinaDellImpossibile == stepThree && findedGifts hasnt BrinaDellImpossibile}[{ingredientTranslator(BrinaDellImpossibile)}]
+    + {recoverableCultivables has BrinaDellImpossibile}[{ingredientTranslator(BrinaDellImpossibile)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = BrinaDellImpossibile
             -> frog_gift_dispatcher
             
-    + {growthCantoDelleCompagne == stepThree && findedGifts hasnt CantoDelleCompagne} [{ingredientTranslator(CantoDelleCompagne)}]
+    + {recoverableCultivables has CantoDelleCompagne} [{ingredientTranslator(CantoDelleCompagne)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = CantoDelleCompagne
             -> frog_gift_dispatcher
             
-    + {growthCardoAspinato == stepThree && findedGifts hasnt CardoAspinato} [{ingredientTranslator(CardoAspinato)}]
+    + {recoverableCultivables has CardoAspinato} [{ingredientTranslator(CardoAspinato)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = CardoAspinato
             -> frog_gift_dispatcher
             
-    + {growthEderaDelleAmanti == stepThree && findedGifts hasnt EderaDelleAmanti} [{ingredientTranslator(EderaDelleAmanti)}]
+    + {recoverableCultivables has EderaDelleAmanti} [{ingredientTranslator(EderaDelleAmanti)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = EderaDelleAmanti
             -> frog_gift_dispatcher
             
-    + {growthErbaLiccia == stepThree && findedGifts hasnt ErbaLiccia} [{ingredientTranslator(ErbaLiccia)}]
+    + {recoverableCultivables has ErbaLiccia} [{ingredientTranslator(ErbaLiccia)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = BaccaDellaAddolorata
             -> frog_gift_dispatcher
             
-    + {growthFalsaPalude == stepThree && findedGifts hasnt FalsaPalude} [{ingredientTranslator(FalsaPalude)}]
+    + {recoverableCultivables has FalsaPalude} [{ingredientTranslator(FalsaPalude)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = FalsaPalude
             -> frog_gift_dispatcher
             
-    + {growthLanaNotturna == stepThree && findedGifts hasnt LanaNotturna} [{ingredientTranslator(LanaNotturna)}]
+    + {recoverableCultivables has LanaNotturna} [{ingredientTranslator(LanaNotturna)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = LanaNotturna
             -> frog_gift_dispatcher
             
-    + {growthLicheneDegliAbissi == stepThree && findedGifts hasnt LicheneDegliAbissi} [{ingredientTranslator(LicheneDegliAbissi)}]
+    + {recoverableCultivables has LicheneDegliAbissi} [{ingredientTranslator(LicheneDegliAbissi)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = LicheneDegliAbissi
             -> frog_gift_dispatcher
             
-    + {growthNonTiScordarDiTe == stepThree && findedGifts hasnt NonTiScordarDiTe} [{ingredientTranslator(NonTiScordarDiTe)}]
+    + {recoverableCultivables has NonTiScordarDiTe} [{ingredientTranslator(NonTiScordarDiTe)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = NonTiScordarDiTe
             -> frog_gift_dispatcher
             
-    + {growthOlobino == stepThree && findedGifts hasnt Olobino} [{ingredientTranslator(Olobino)}]
+    + {recoverableCultivables has Olobino} [{ingredientTranslator(Olobino)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = Olobino
             -> frog_gift_dispatcher
             
-    + {growthLaSpazzata == stepThree && findedGifts hasnt LaSpazzata} [{ingredientTranslator(LaSpazzata)}]
+    + {recoverableCultivables has LaSpazzata} [{ingredientTranslator(LaSpazzata)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = LaSpazzata
             -> frog_gift_dispatcher
