@@ -132,6 +132,46 @@
 === knowing_first_character
     ~ temp charNameOne = translator(firstCharacterState)
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
+        
+        //Storylets speciali    
+        {   
+            //Apertura cucina
+                - are_two_entities_together(FirstCharacter, PG) && (knowing_first_character.three or knowing_second_character.one) and not open_the_kitchen:
+                       {
+                           - pondContents has PG:
+                               -> open_the_kitchen
+                            
+                            - else:
+                                Ehi {name}! Vediamoci allo stagno. Ho una cosa da mostrarti!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                                    ~ move_entity(FirstCharacter, Pond)
+                                    ~ changeLocationTimer = 0
+                                        -> main    
+                        }
+            
+            //Chitarra dona il libro a PG
+            - not foundLibro && (knowing_first_character ==true) && firstPauseTalking == 0 && not take_this_book:
+                -> take_this_book        
+            
+            //Storylets legati alla cucina        
+                //Chitarra sta cucinando ed entriamo in cucina
+                - are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && firstIsCooking == true:
+                        -> first_char_cooking_alone
+            
+                //Chitarra ha cucinato, e vediamo la scena del dono (a sé stessa)
+                - are_two_entities_together(FirstCharacter, PG) && first_char_cooking_tracker && firstIsCooking == false && not food_gift_first_char:
+                        -> food_gift_first_char
+                
+                //Chitarra cucina con noi
+                -  are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && not cooking_with_first_char && firstIsCooking == false:
+                        -> cooking_with_first_char
+                
+                //Lettura Chitarra
+                - are_two_entities_together(FirstCharacter, PG) && readStories has Salvo && not a_story_of_transformation:
+                    -> a_story_of_transformation
+                    
+        }
+        
+        //Storylets di avanzamento trama
         {
             - not one:
                 -> one

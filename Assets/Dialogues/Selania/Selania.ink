@@ -48,6 +48,10 @@
     INCLUDE Characters\Stories\FourthCharacter.ink
     INCLUDE Characters\Stories\FifthCharacter.ink
     
+    INCLUDE Characters\Stories\FirstCharSpecialStorylets.ink
+    INCLUDE Characters\Stories\SecondCharSpecialStorylets.ink
+    INCLUDE Characters\Stories\ThirdCharSpecialStorylets.ink
+    
     INCLUDE Characters\Stories\CommonStoryletsManager.ink
     INCLUDE Characters\Stories\CommonStorylets.ink
 
@@ -120,6 +124,11 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
+
+
+
+
+
 
 
 

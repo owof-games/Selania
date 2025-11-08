@@ -89,6 +89,12 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
 ~ temp charNameFive = translator(fifthCharacterState)
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {
+            //Mentore esplode
+            - are_two_entities_together(Mentor, PG) && thirdStory == StoryEnded and not mentor_rage:
+                -> mentor_rage
+        }
+        
+        {
             - not one && tutorialPauses == false:
                 -> one
             - not two && firstStory == StoryEnded && tutorialPauses == false:

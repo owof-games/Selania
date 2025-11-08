@@ -713,7 +713,11 @@
             ~ tutorialPauses = true
             -> main
     
-    
+=== mentor_rage
+Mentore sbrocca
+    ~ fifthPauseTalking = fifthCharPauseDuration
+    -> main
+        
     
  
 //Fine della demo

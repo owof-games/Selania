@@ -144,6 +144,52 @@
 === knowing_second_character
 ~ temp charNameTwo = translator(secondCharacterState)
 ~ temp charNameFive = translator(fifthCharacterState)
+
+    //Storylets speciali
+        {
+        //Apertura biblioteca
+         - are_two_entities_together(SecondCharacter, PG) && (knowing_first_character.five or knowing_second_character.three) && kitchenContents hasnt PG && not open_the_library:
+               {
+                   - forestContents has PG:
+                        -> open_the_library
+                    
+                    - else:
+                        Ehi {name}! Troviamoci alla foresta. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                            ~ move_entity(SecondCharacter, Forest)
+                            ~ changeLocationTimer = 0
+                                -> main    
+               } 
+               
+        //Apertura nido
+        - are_two_entities_together(SecondCharacter, PG) && (knowing_first_character.six or knowing_second_character.six) && kitchenContents hasnt PG && not open_nest:
+                {
+                   - libraryContents has PG:
+                        -> open_nest
+                    
+                    - else:
+                        Ehi {name}! Vediamoci in biblioteca. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                            ~ move_entity(SecondCharacter, Library)
+                            ~ changeLocationTimer = 0
+                                -> main    
+              }
+                    
+        //Cucina
+            //Riccio sta cucinando ed entriamo in cucina
+            - are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && secondIsCooking == true:
+                    -> second_char_cooking_alone
+        
+            
+            //Riccio cucina con noi
+            -  are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && not cooking_with_second_char && secondIsCooking == false:
+                    -> cooking_with_second_char        
+
+            //Lettura Riccio
+                - are_two_entities_together(SecondCharacter, PG) && readStories has Lamia && not a_story_of_rebellion:
+                    -> a_story_of_rebellion
+
+        }
+            
+
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {
             - not one:
