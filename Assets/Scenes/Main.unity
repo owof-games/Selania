@@ -14268,7 +14268,7 @@ GameObject:
   - component: {fileID: 901339684}
   - component: {fileID: 901339685}
   m_Layer: 5
-  m_Name: 'purpleShell '
+  m_Name: purpleShell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14399,7 +14399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7658d42ddfc7c845a8f9ceb40257cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ImageAnimation
-  myAnimationName: 'PurpleShell '
+  myAnimationName: PurpleShell
 --- !u!95 &901339684
 Animator:
   serializedVersion: 7
