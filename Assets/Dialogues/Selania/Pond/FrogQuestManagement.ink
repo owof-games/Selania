@@ -396,6 +396,9 @@
  ~ temp dice = RANDOM(1,5)
  
 {
+    - tiredFrog != 0:
+        -> top
+        
     - dice == 5:
         ~ tiredFrog = maxTiredFrog
             -> top
@@ -489,7 +492,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
             
     
     + [Ho cambiato idea.]
-        -> welcoming_frog.top
+        -> frog_about_who_questions
     
            
 

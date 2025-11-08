@@ -358,10 +358,10 @@
     
 
 //Check di sicurezza per conchiglia
-    {
-        - availableSpecialMissions hasnt specialMissionOne and nestContents hasnt purpleShell:
-                    ~ move_entity(purpleShell, Nest)
-    }
+//    {
+//        - availableSpecialMissions hasnt specialMissionOne and nestContents hasnt purpleShell:
+//                   ~ move_entity(purpleShell, Nest)
+//    }
 
 //Gestione suoni
     {
@@ -371,7 +371,6 @@
 
                  
 
-    
 //Pause speciali tra un dialogo e l'altro
     {
     
@@ -394,11 +393,11 @@
 
 //Spostamento di libro e inventario se scoperti
     {
-        - foundLibro or take_this_book:
+        - safekeepingContents hasnt RewriterBook && currentPlace != Bedroom:
             ~ move_entity(RewriterBook, currentPlace)
     }
     {
-        - about_ink_usage.sbadata or cultivable_test:
+        - safekeepingContents hasnt Inventory && currentPlace != Bedroom:
            ~ move_entity(Inventory, currentPlace)
     }
 
