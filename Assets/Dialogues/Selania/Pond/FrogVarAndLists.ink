@@ -46,9 +46,11 @@
         
         //Questa lista traccia i coltivabili che sono stati utilizzati in giro per il gioco. La rana pescherà i disponibili da qui.
     VAR recoverableCultivables = ()
+    VAR recoveredCultivables = ()
     
         //Serve o serviva per tracciare il coltivabile "prenotato" dalla giocatrice prima di concludere la missione.
     VAR searchedCultivableRecovery = ()
+    
     
                                     /* ---------------------------------
                                     

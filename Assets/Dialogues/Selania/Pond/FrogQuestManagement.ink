@@ -423,71 +423,85 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
     + {recoverableCultivables has BaccaDellaAddolorata} [{ingredientTranslator(BaccaDellaAddolorata)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = BaccaDellaAddolorata
+            ~  recoveredCultivables += BaccaDellaAddolorata
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has BarbaDellInciampo} [{ingredientTranslator(BarbaDellInciampo)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = BarbaDellInciampo
+            ~  recoveredCultivables += BarbaDellInciampo
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has BastoneDellOzioso}[{ingredientTranslator(BastoneDellOzioso)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = BastoneDellOzioso
+            ~  recoveredCultivables += BastoneDellOzioso
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has BrinaDellImpossibile}[{ingredientTranslator(BrinaDellImpossibile)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = BrinaDellImpossibile
+            ~  recoveredCultivables += BrinaDellImpossibile
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has CantoDelleCompagne} [{ingredientTranslator(CantoDelleCompagne)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = CantoDelleCompagne
+            ~  recoveredCultivables += CantoDelleCompagne
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has CardoAspinato} [{ingredientTranslator(CardoAspinato)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = CardoAspinato
+            ~  recoveredCultivables += CardoAspinato
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has EderaDelleAmanti} [{ingredientTranslator(EderaDelleAmanti)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = EderaDelleAmanti
+            ~  recoveredCultivables += EderaDelleAmanti
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has ErbaLiccia} [{ingredientTranslator(ErbaLiccia)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = BaccaDellaAddolorata
+            ~  recoveredCultivables += BaccaDellaAddolorata
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has FalsaPalude} [{ingredientTranslator(FalsaPalude)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = FalsaPalude
+            ~  recoveredCultivables += FalsaPalude
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has LanaNotturna} [{ingredientTranslator(LanaNotturna)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = LanaNotturna
+            ~  recoveredCultivables += LanaNotturna
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has LicheneDegliAbissi} [{ingredientTranslator(LicheneDegliAbissi)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = LicheneDegliAbissi
+            ~  recoveredCultivables += LicheneDegliAbissi
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has NonTiScordarDiTe} [{ingredientTranslator(NonTiScordarDiTe)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = NonTiScordarDiTe
+            ~  recoveredCultivables += NonTiScordarDiTe
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has Olobino} [{ingredientTranslator(Olobino)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = Olobino
+            ~  recoveredCultivables += Olobino
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has LaSpazzata} [{ingredientTranslator(LaSpazzata)}]
             ~  currentMissionAboutChar = missionObjects
             ~  searchedCultivableRecovery = LaSpazzata
+            ~  recoveredCultivables += LaSpazzata
             -> frog_gift_dispatcher
             
     

@@ -31,7 +31,10 @@ VAR currentReceiver = ()
  ----------------------------------*/
 + {findedGifts has BaccaDellaAddolorata} [Una bacca della Addolorata.]
     ~ findedGifts -= BaccaDellaAddolorata
-    ~ recoverableCultivables += BaccaDellaAddolorata
+    {
+        - recoveredCultivables hasnt BaccaDellaAddolorata:
+        ~ recoverableCultivables += BaccaDellaAddolorata
+    }    
 
     {
         - currentReceiver has FirstCharacter:
@@ -54,7 +57,10 @@ VAR currentReceiver = ()
 
 + {findedGifts has BarbaDellInciampo} [Una spina di Barba dell'Inciampo.]
     ~ findedGifts -= BarbaDellInciampo
-    ~ recoverableCultivables += BarbaDellInciampo
+    {
+        - recoveredCultivables hasnt BarbaDellInciampo:
+        ~ recoverableCultivables += BarbaDellInciampo
+    } 
     {
         - currentReceiver has FirstCharacter:
             {translator(firstCharacterState)} si punge, infastidita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -74,7 +80,10 @@ VAR currentReceiver = ()
         
 + {findedGifts has BastoneDellOzioso} [Un nodo di Bastone dell'Ozioso.]
     ~ findedGifts -= BastoneDellOzioso
-    ~ recoverableCultivables += BastoneDellOzioso
+    {
+        - recoveredCultivables hasnt BastoneDellOzioso:
+        ~ recoverableCultivables += BastoneDellOzioso
+    } 
     {
         - currentReceiver has FirstCharacter:
             {translator(firstCharacterState)} inizia a girarselo tra le dita cantando divertita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -97,7 +106,10 @@ VAR currentReceiver = ()
     
 + {findedGifts has BrinaDellImpossibile} [Un frammento di Brina dell'Impossibile.]
     ~ findedGifts -= BrinaDellImpossibile
-    ~ recoverableCultivables += BrinaDellImpossibile
+    {
+        - recoveredCultivables hasnt BrinaDellImpossibile:
+        ~ recoverableCultivables += BrinaDellImpossibile
+    } 
 
     {
         - currentReceiver has FirstCharacter:
@@ -123,7 +135,10 @@ VAR currentReceiver = ()
 
 + {findedGifts has CantoDelleCompagne} [Una goccia di Canto delle Compagne.]
     ~ findedGifts -= CantoDelleCompagne
-    ~ recoverableCultivables += CantoDelleCompagne
+    {
+        - recoveredCultivables hasnt CantoDelleCompagne:
+        ~ recoverableCultivables += CantoDelleCompagne
+    } 
 
     {
     - currentReceiver has FirstCharacter:
@@ -148,7 +163,10 @@ VAR currentReceiver = ()
 
 + {findedGifts has CardoAspinato} [Un ciuffo di peli di Cardo Aspinato.]
     ~ findedGifts -= CardoAspinato
-    ~ recoverableCultivables += CardoAspinato
+    {
+        - recoveredCultivables hasnt CardoAspinato:
+        ~ recoverableCultivables += CardoAspinato
+    } 
 
     {
     - currentReceiver has FirstCharacter:
@@ -174,7 +192,10 @@ VAR currentReceiver = ()
         
 + {findedGifts has EderaDelleAmanti} [Una foglia di Edera delle amanti.]
     ~ findedGifts -= EderaDelleAmanti
-    ~ recoverableCultivables += EderaDelleAmanti
+    {
+        - recoveredCultivables hasnt EderaDelleAmanti:
+        ~ recoverableCultivables += EderaDelleAmanti
+    } 
     {
         - currentReceiver has FirstCharacter:
             {translator(firstCharacterState)} non comprende il significato del tuo dono.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -194,7 +215,10 @@ VAR currentReceiver = ()
         
 + {findedGifts has ErbaLiccia} [Un ricordo di Erba Liccia.]
         ~ findedGifts -= ErbaLiccia
+        {
+        - recoveredCultivables hasnt ErbaLiccia:
         ~ recoverableCultivables += ErbaLiccia
+    } 
     {
         - currentReceiver has FirstCharacter:
             ~ firstCharacterInkLevel ++
@@ -216,7 +240,10 @@ VAR currentReceiver = ()
     
  + {findedGifts has FalsaPalude} [Un petalo di Falsa Palude.]
     ~ findedGifts -= FalsaPalude
-    ~ recoverableCultivables += FalsaPalude
+    {
+        - recoveredCultivables hasnt FalsaPalude:
+        ~ recoverableCultivables += FalsaPalude
+    } 
     {
         - currentReceiver has FirstCharacter:
             {translator(firstCharacterState)} non sembra colpita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -235,7 +262,10 @@ VAR currentReceiver = ()
     
   + {findedGifts has LanaNotturna} [Il calore della Lana Notturna.]
         ~ findedGifts -= LanaNotturna
+        {
+        - recoveredCultivables hasnt LanaNotturna:
         ~ recoverableCultivables += LanaNotturna
+    } 
     {
         - currentReceiver has FirstCharacter:
             ~ firstCharacterInkLevel ++
@@ -257,7 +287,10 @@ VAR currentReceiver = ()
     
 + {findedGifts has LicheneDegliAbissi} [Una traccia dell'odore del Lichene degli Abissi.]
     ~ findedGifts -= LicheneDegliAbissi
-    ~ recoverableCultivables += LicheneDegliAbissi
+    {
+        - recoveredCultivables hasnt LicheneDegliAbissi:
+        ~ recoverableCultivables += LicheneDegliAbissi
+    } 
 
     {
     - currentReceiver has FirstCharacter:
@@ -282,7 +315,10 @@ VAR currentReceiver = ()
 
 + {findedGifts has NonTiScordarDiTe} [L'impronta del Non Ti Scordar di Te.]
     ~ findedGifts -= NonTiScordarDiTe
-    ~ recoverableCultivables += NonTiScordarDiTe
+    {
+        - recoveredCultivables hasnt NonTiScordarDiTe:
+        ~ recoverableCultivables += NonTiScordarDiTe
+    } 
 
     {
     - currentReceiver has FirstCharacter:
@@ -308,7 +344,10 @@ VAR currentReceiver = ()
 
 + {findedGifts has Olobino} [Una cappello di Olobino.]
     ~ findedGifts -= Olobino
-    ~ recoverableCultivables += Olobino
+    {
+        - recoveredCultivables hasnt Olobino:
+        ~ recoverableCultivables += Olobino
+    } 
     {
         - currentReceiver has FirstCharacter:
             ~ firstCharacterInkLevel ++
@@ -331,7 +370,10 @@ VAR currentReceiver = ()
     
 + {findedGifts has LaSpazzata} [Un rametto della Spezzata.]
     ~ findedGifts -= LaSpazzata
-    ~ recoverableCultivables += LaSpazzata
+    {
+        - recoveredCultivables hasnt LaSpazzata:
+        ~ recoverableCultivables += LaSpazzata
+    } 
     
     {
         - currentReceiver has FirstCharacter:
