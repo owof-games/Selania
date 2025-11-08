@@ -363,6 +363,11 @@
                     ~ move_entity(purpleShell, Nest)
     }
 
+//Gestione suoni
+    {
+        - safekeepingContents hasnt TrainNoise:
+            ~ move_entity(TrainNoise, Safekeeping)
+    }
 
                  
 
@@ -430,13 +435,6 @@
 
 === special_events_tracking
 //Qui traccio tutti gli eventi eccezionali, così li ho in un unico posto: animazioni, cambi assets e via di seguito
-
-//Gestione suoni
-    {
-           - safekeepingContents hasnt TrainNoise:
-               ~ move_entity(TrainNoise, Safekeeping)
-    }
-
 
 //Comparsa lettere dopo fine delle storie (così non compaiono subito.
     {firstCharacterPossibleStates hasnt Chitarra && first_char_story_ended.goodbye:
