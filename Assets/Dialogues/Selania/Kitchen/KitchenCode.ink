@@ -125,6 +125,7 @@
     + {findedGifts has BaccaDellaAddolorata} [Una bacca della Addolorata.]
         ~ findedGifts -= BaccaDellaAddolorata
         ~ recipePP = "aggiungere descrizione participio passato"
+        ~ recoverableCultivables += BaccaDellaAddolorata
             {
                 - PNG == FirstCharacter:
                     ~ fourthIngredientReactionFirstCharacter = mehReaction
@@ -142,6 +143,7 @@
     + {findedGifts has BarbaDellInciampo} [Una spina di Barba dell'Inciampo.]
         ~ findedGifts -= BarbaDellInciampo
         ~ recipePP = "aggiungere descrizione participio passato"
+        ~ recoverableCultivables += BarbaDellInciampo
             {
                 - PNG == FirstCharacter:
                     ~ fourthIngredientReactionFirstCharacter = badReaction
@@ -158,6 +160,7 @@
             
     + {findedGifts has BastoneDellOzioso} [Un nodo di Bastone dell'Ozioso.]
         ~ findedGifts -= BastoneDellOzioso
+        ~ recoverableCultivables += BastoneDellOzioso
         ~ recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
@@ -175,6 +178,7 @@
         
     + {findedGifts has BrinaDellImpossibile} [Un frammento di Brina dell'Impossibile.]
         ~ findedGifts -= BrinaDellImpossibile
+        ~ recoverableCultivables += BrinaDellImpossibile
         ~ recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
@@ -192,6 +196,7 @@
     
     + {findedGifts has CantoDelleCompagne} [Una goccia di Canto delle Compagne.]
         ~ findedGifts -= CantoDelleCompagne
+        ~ recoverableCultivables += CantoDelleCompagne
         ~ recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
@@ -209,6 +214,7 @@
     
     + {findedGifts has CardoAspinato} [Un ciuffo di peli di Cardo Aspinato.]
         ~ findedGifts -= CardoAspinato
+        ~ recoverableCultivables += CardoAspinato
         ~ recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
@@ -226,6 +232,7 @@
             
     + {findedGifts has EderaDelleAmanti} [Una foglia di Edera delle amanti.]
         ~ findedGifts -= EderaDelleAmanti
+        ~ recoverableCultivables += EderaDelleAmanti
         ~ recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
@@ -243,6 +250,7 @@
 
     + {findedGifts has ErbaLiccia} [Un ricordo di Erba Liccia.]
         ~ findedGifts -= ErbaLiccia
+        ~ recoverableCultivables += ErbaLiccia
         ~ recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
@@ -260,6 +268,7 @@
         
      + {findedGifts has FalsaPalude} [Un petalo di Falsa Palude.]
         ~ findedGifts -= FalsaPalude
+        ~ recoverableCultivables += FalsaPalude
         ~ recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
@@ -277,6 +286,7 @@
         
       + {findedGifts has LanaNotturna} [Il calore della Lana Notturna.]
         ~ findedGifts -= LanaNotturna
+        ~ recoverableCultivables += LanaNotturna
         ~ recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
@@ -294,6 +304,7 @@
         
     + {findedGifts has LicheneDegliAbissi} [Una traccia dell'odore del Lichene degli Abissi.]
         ~ findedGifts -= LicheneDegliAbissi
+        ~ recoverableCultivables += LicheneDegliAbissi
         ~ recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
@@ -311,6 +322,7 @@
     
     + {findedGifts has NonTiScordarDiTe} [L'impronta del Non Ti Scordar di Te.]
         ~ findedGifts -= NonTiScordarDiTe
+        ~ recoverableCultivables += NonTiScordarDiTe
         ~ recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
@@ -328,6 +340,7 @@
     
     + {findedGifts has Olobino} [Una cappello di Olobino.]
         ~ findedGifts -= Olobino
+        ~ recoverableCultivables += Olobino
         ~ recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
@@ -345,6 +358,7 @@
         
     + {findedGifts has LaSpazzata} [Un rametto della Spezzata.]
         ~ findedGifts -= LaSpazzata
+        ~ recoverableCultivables += LaSpazzata
         ~ recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
