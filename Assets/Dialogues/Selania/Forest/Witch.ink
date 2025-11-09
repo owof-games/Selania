@@ -213,7 +213,7 @@
         {
             - came_from(->intro):Che ha compiuto qualcosa per la prima volta.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             
-            - else: Siamo così felici di riavere {name} qui con noi, per quanto non l'abbiamo mai {pronouns has him:lasciato solo|{pronouns has her:lasciata sola|lasciatə solə}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}}.
+            - else: Siamo così felici di riavere {name} qui con noi, per quanto non l'abbiamo mai {pronouns has him:lasciato solo|{pronouns has her:lasciata sola|lasciatə solə}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         }
         
         Un nuovo pezzo di statua saggia il cielo.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}

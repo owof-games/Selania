@@ -12,7 +12,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
 //Varianti monocolore
     {
         - redWords ^ discoveredEmotionalWords == ():
-            <i>La prima parola non è stata ancora scoperta.</>
+            <i>La prima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola Rossa.</b>
@@ -46,7 +46,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     
     {
         - yellowWords ^ discoveredEmotionalWords == ():
-            <i>La seconda parola non è stata ancora scoperta.</>
+            <i>La seconda parola non è stata ancora scoperta.
             
         - else:
             <b>Parola Gialla.</b>
@@ -80,7 +80,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     
     {
         - bluWords ^ discoveredEmotionalWords == ():
-            <i>La terza parola non è stata ancora scoperta.</>
+            <i>La terza parola non è stata ancora scoperta.
             
         - else:
             <b>Parola Blu.</b>
@@ -114,7 +114,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     
     {
         - greenWords ^ discoveredEmotionalWords == ():
-            <i>La quarta parola non è stata ancora scoperta.</>
+            <i>La quarta parola non è stata ancora scoperta.
             
         - else:
             <b>Parola Verde.</b>
@@ -148,7 +148,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
 
     {
         - purpleWords ^ discoveredEmotionalWords == ():
-            <i>La quinta parola non è stata ancora scoperta.</>
+            <i>La quinta parola non è stata ancora scoperta.
             
         - else:
             <b>Parola Viola.</b>
@@ -185,7 +185,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
 //Varianti a dominante Rosso
     {
         - redYellowWords ^ discoveredEmotionalWords == ():
-            <i>La sesta parola non è stata ancora scoperta.</>
+            <i>La sesta parola non è stata ancora scoperta.
             
         - else:
             <b>Parola RossoGialla.</b>
@@ -235,7 +235,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     
     {
         - redBlueWords ^ discoveredEmotionalWords == ():
-            <i>La settima parola non è stata ancora scoperta.</>
+            <i>La settima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola RossoBlu.</b>
@@ -284,7 +284,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     } 
     {
         - redGreenWords ^ discoveredEmotionalWords == ():
-            <i>L'ottava parola non è stata ancora scoperta.</>
+            <i>L'ottava parola non è stata ancora scoperta.
             
         - else:
             <b>Parola RossoVerde.</b>
@@ -334,7 +334,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     
     {
         - redPurpleWords ^ discoveredEmotionalWords == ():
-            <i>La nona parola non è stata ancora scoperta.</>
+            <i>La nona parola non è stata ancora scoperta.
             
         - else:
             <b>Parola RossoViola.</b>
@@ -389,7 +389,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
 //Varianti a dominante Giallo
     {
         - yellowRedWords ^ discoveredEmotionalWords == ():
-            <i>La decima parola non è stata ancora scoperta.</>
+            <i>La decima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola GialloRossa.</b>
@@ -439,7 +439,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     
     {
         - yellowBlueWords ^ discoveredEmotionalWords == ():
-            <i>L'undicesima parola non è stata ancora scoperta.</>
+            <i>L'undicesima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola GialloBlu.</b>
@@ -488,7 +488,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     } 
     {
         - yellowGreenWords ^ discoveredEmotionalWords == ():
-            <i>La dodicesima parola non è stata ancora scoperta.</>
+            <i>La dodicesima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola GialloVerde.</b>
@@ -538,7 +538,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     
     {
         - yellowPurpleWords ^ discoveredEmotionalWords == ():
-            <i>La tredicesima parola non è stata ancora scoperta.</>
+            <i>La tredicesima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola GialloViola.</b>
@@ -590,7 +590,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
 //Varianti a dominante Blu
     {
         - blueRedWords ^ discoveredEmotionalWords == ():
-            <i>La quattordicesima parola non è stata ancora scoperta.</>
+            <i>La quattordicesima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola BluRossa.</b>
@@ -640,7 +640,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     
     {
         - blueYellowWords ^ discoveredEmotionalWords == ():
-            <i>La quindicesima parola non è stata ancora scoperta.</>
+            <i>La quindicesima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola BluGialla.</b>
@@ -689,7 +689,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     } 
     {
         - blueGreenWords ^ discoveredEmotionalWords == ():
-            <i>La sedicesima parola non è stata ancora scoperta.</>
+            <i>La sedicesima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola BluVerde.</b>
@@ -739,7 +739,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     
     {
         - bluePurpleWords ^ discoveredEmotionalWords == ():
-            <i>La diciassettesima parola non è stata ancora scoperta.</>
+            <i>La diciassettesima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola BluViola.</b>
@@ -793,7 +793,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
 //Varianti a dominante Verde
     {
         - greenRedWords ^ discoveredEmotionalWords == ():
-            <i>La diciottesima parola non è stata ancora scoperta.</>
+            <i>La diciottesima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola VerdeRossa.</b>
@@ -843,7 +843,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     
     {
         - greenYellowWords ^ discoveredEmotionalWords == ():
-            <i>La diciannovesima parola non è stata ancora scoperta.</>
+            <i>La diciannovesima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola VerdeGialla.</b>
@@ -892,7 +892,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     } 
     {
         - greenBlueWords ^ discoveredEmotionalWords == ():
-            <i>La ventesima parola non è stata ancora scoperta.</>
+            <i>La ventesima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola VerdeBlu.</b>
@@ -942,7 +942,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     
     {
         - greenPurpleWords ^ discoveredEmotionalWords == ():
-            <i>La ventunesima parola non è stata ancora scoperta.</>
+            <i>La ventunesima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola VerdeViola.</b>
@@ -995,7 +995,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
 //Varianti a dominante Viola
     {
         - purpleRedWords ^ discoveredEmotionalWords == ():
-            <i>La ventiduesima parola non è stata ancora scoperta.</>
+            <i>La ventiduesima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola ViolaRossa.</b>
@@ -1045,7 +1045,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     
     {
         - purpleYellowWords ^ discoveredEmotionalWords == ():
-            <i>La ventitreesima parola non è stata ancora scoperta.</>
+            <i>La ventitreesima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola ViolaGiallo.</b>
@@ -1094,7 +1094,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     } 
     {
         - purpleBlueWords ^ discoveredEmotionalWords == ():
-            <i>La ventiquattresima parola non è stata ancora scoperta.</>
+            <i>La ventiquattresima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola ViolaBlu.</b>
@@ -1144,7 +1144,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     
     {
         - purpleGreenWords ^ discoveredEmotionalWords == ():
-            <i>La venticinquesima parola non è stata ancora scoperta.</>
+            <i>La venticinquesima parola non è stata ancora scoperta.
             
         - else:
             <b>Parola ViolaVerde.</b>

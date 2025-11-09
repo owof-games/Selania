@@ -148,9 +148,6 @@
                                         -> main    
                         }
             
-            //Chitarra dona il libro a PG
-            - not foundLibro && (knowing_first_character ==true) && firstPauseTalking == 0 && not take_this_book:
-                -> take_this_book        
             
             //Storylets legati alla cucina        
                 //Chitarra sta cucinando ed entriamo in cucina
@@ -171,10 +168,15 @@
                     
         }
         
-        //Storylets di avanzamento trama
+     
         {
             - not one:
                 -> one
+        
+            //Chitarra dona il libro a PG -> metto dopo per evitare che parta di nuovo prima delle presentazioni
+            - not foundLibro && (knowing_first_character ==true) && firstPauseTalking == 0 && not take_this_book:
+                -> take_this_book   
+                
             - not two:
                 -> two
             - not three:
@@ -1506,6 +1508,12 @@
     
         = ending
         ~ temp charNameOne = translator(firstCharacterState)
+            {
+                - secondStory != StoryEnded:
+                    {name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - else:
+                    Cosa dirà {name} come <b><i>epilogo</b></i>?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}   
+            }  
         
             {
                 - firstCharacterInkLevel == Empty:
@@ -1513,12 +1521,7 @@
                 - else: Per questo ti dico: #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             } 
         
-            {
-                - secondStory != StoryEnded:
-                    {name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                - else:
-                    Cosa dirà {name} come <b><i>epilogo</b></i>?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}   
-            }   
+             
     
             + [Prendi una strada e se non ti piace cambiala!]
                 -> color_variation_management(FirstCharacter, redC)->

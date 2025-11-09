@@ -84,13 +84,15 @@
         
         - fourthRecipe == "":
             ~ fourthRecipe = tempRecipeName
-            
+                ->-> 
+        
         - fifthRecipe == "":
             ~ fifthRecipe = tempRecipeName 
+                ->-> 
         
         - sixthRecipe == "":
             ~ sixthRecipe = tempRecipeName
-        
+                ->-> 
         
         - else:
             {kitchenDebug:ERROR: non ci sono ricette a disposizione per storare l'informazione.}

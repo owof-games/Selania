@@ -283,7 +283,7 @@
             + (twoYellow) [Perché non le hai fatto uno scherzo?]
                 {charNameTwo}: Perché ero arrabbiato.
                 {charNameTwo}: E lei continuava a dire che i bambini qui non ci possono stare.
-                {charNameTwo}: Che non potevo saltare nel fiume.
+                {charNameTwo}: Che non potevo saltare nello stagno.
                 {charNameTwo}: E mi ha messo una mano sulla spalla.
                 {charNameTwo}: E a me
                 {charNameTwo}: non
@@ -305,7 +305,7 @@
                 
             + (twoGreen) [C'è rimasta male, sai?]
                 {charNameTwo}: E a me che mi importa?
-                {charNameTwo}: Mi ha sgridato perché saltavo nel fiume.
+                {charNameTwo}: Mi ha sgridato perché saltavo nello stagno.
                 {charNameTwo}: E poi mi ha detto che i bambini qui non ci devono stare.
                 {charNameTwo}: E mi ha preso per la spalla.
                 {charNameTwo}: Non mi piace quando mi toccano.
