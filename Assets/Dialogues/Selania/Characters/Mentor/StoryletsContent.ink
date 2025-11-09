@@ -288,6 +288,7 @@
     Gli effetti dei doni tra l'altro sono immediati e permanenti.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
     Ed è per questo che ogni Riscrittorə può darne solo uno a persona.
     Qualcosa di così forte non può certo essere usato senza coscienza. #speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+    @animation:RewriterBook
             ~ tutorialPauses = true
             ~ fifthPauseTalking = fifthCharPauseDuration
     -> main
@@ -301,6 +302,7 @@
     E mangiare è uno spazio di bella condivisione.
     Passar del tempo in cucina con qualcunə può essere un bel modo per conoscervi meglio.
     E per capire che piega stia prendendo la vostra relazione.
+    @animation:RewriterBook
         ~ tutorialPauses = true
         ~ fifthPauseTalking = fifthCharPauseDuration
     -> main
@@ -315,6 +317,7 @@
     Non mi piacciono i posti malmessi.
     E non mi piace quello che ti permette di fare. #speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
     Sto per tradire il mio ruolo di Mentore, ma non sarò io a dirti cosa farne.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+    @animation:RewriterBook
     ~ fifthPauseTalking = fifthCharPauseDuration
     ~ tutorialPauses = true
     -> main
