@@ -45,6 +45,28 @@
 
 ->->
 
+=== cooking_animations_on
+{kitchenDebug: passo per cooking_animations_on. Prima dell'intervento KitchenFire è in, {entity_location(KitchenFire)} mentre KitchenSmokeOneOne è in {entity_location(KitchenSmokeOne)}.}
+    ~ move_entity(KitchenFire, Kitchen)
+    ~ move_entity(KitchenSmokeOne, Kitchen)
+    ~ move_entity(KitchenSmokeTwo, Kitchen)
+    ~ move_entity(KitchenSmokeThree, Kitchen)
+{kitchenDebug: Dopo l'intervento KitchenFire è in {entity_location(KitchenFire)}, mentre KitchenSmokeOne è in {entity_location(KitchenSmokeOne)}.}
+->->
+
+
+=== cooking_animations_off
+{kitchenDebug: passo per cooking_animations_off. Prima dell'intervento KitchenFire è in, {entity_location(KitchenFire)} mentre KitchenSmokeOne è in {entity_location(KitchenSmokeOne)}.}
+    ~ move_entity(KitchenFire, Safekeeping)
+    ~ move_entity(KitchenSmokeOne, Safekeeping)
+    ~ move_entity(KitchenSmokeTwo, Safekeeping)
+    ~ move_entity(KitchenSmokeThree, Safekeeping)
+    
+{kitchenDebug: Dopo l'intervento KitchenFire è in {entity_location(KitchenFire)}, mentre KitchenSmokeOne è in {entity_location(KitchenSmokeOne)}.}    
+
+->->
+
+
 
 === recipe_name_creator ===
 {kitchenDebug: passo per recipeNameCreator.}

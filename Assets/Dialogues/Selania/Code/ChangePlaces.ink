@@ -83,6 +83,8 @@
         
     + {are_two_entities_together(PG, FromKitchenToPond)} [FromKitchenToPond]
             ~ move_entity(PG, Pond)
+            //Per sicurezza passo per cooking off, soprattutto nel caso in cui lx png stessero cucinando da solx.
+            -> cooking_animations_off ->
             -> on_movement_events ->
                 -> pond
 

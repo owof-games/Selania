@@ -6,7 +6,7 @@
 
 === cooking_with_first_char
     -> storage_colors(FirstCharacter)->
-    
+    -> cooking_animations_on ->
 Iniziamo proponendo a Chitarra di parlare di un tema.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
 Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le condizioni saranno valide (sostanzialmente: se almeno una volta abbiamo parlato di quel tema).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
 
@@ -470,7 +470,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
 === ending_cooking_with_first_char
 E poi ci saluta e se ne va allo stagno.
 
-
+    -> cooking_animations_off ->
    ~ move_entity(FirstCharacter, Pond)
     -> update_colors(FirstCharacter) ->
     -> check_kitchen_recap -> 
@@ -496,6 +496,7 @@ E poi ci saluta e se ne va allo stagno.
 
 === first_char_cooking_alone
 {debug: passo per first_char_cooking_alone.}
+-> cooking_animations_on ->
 Chitarra sta cucinando da sola e ci chiede di lasciarla in pace fino a quando non ha finito.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
 
 

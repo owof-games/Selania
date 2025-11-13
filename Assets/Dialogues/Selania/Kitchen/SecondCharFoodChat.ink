@@ -6,6 +6,7 @@
  
 === cooking_with_second_char
     -> storage_colors(SecondCharacter)->
+    -> cooking_animations_on ->
     
 Iniziamo proponendo a Riccio di parlare di un tema.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
 Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le condizioni saranno valide (sostanzialmente: se almeno una volta abbiamo parlato di quel tema).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -476,7 +477,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
 === ending_cooking_with_second_char
 E poi ci saluta e se ne va allo stagno.
 
-
+    -> cooking_animations_off ->
    ~ move_entity(SecondCharacter, Pond)
     -> update_colors(SecondCharacter) ->
     -> check_kitchen_recap ->
@@ -500,6 +501,7 @@ E poi ci saluta e se ne va allo stagno.
 
 === second_char_cooking_alone
 {debug: passo per second_char_cooking_alone.}
+-> cooking_animations_on ->
 Riccio cucina da solo e ci chiede di lasciarlo da solo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
 
 
