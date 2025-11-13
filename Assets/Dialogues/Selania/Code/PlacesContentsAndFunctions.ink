@@ -13,7 +13,7 @@
 
     VAR nestContents = (FromNestToLibrary, ELManagement, redShell, yellowShell, blueShell)
 
-    VAR kitchenContents = (FromKitchenToPond)
+    VAR kitchenContents = (FromKitchenToPond, FirstRipple, SecondRipple, ThirdRipple)
 
     VAR safekeepingContents = (RoomExit, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, TheFrog, FifthCharacterNotes, MenuSave, MenuQuit,  RewriterBook, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FrogRecap, DogRecap, WitchRecap, GreenhouseRecap, KitchenRecap, NestRecap, FifthRecap, RulesRecap, Inventory, cultivationKit, firstCharPaint, teaKit, littleLibrary, bowl, secondCharPaint, vase, miniBook, FromLibraryToNestNight, FromLibraryToNest, FromForestToLibrary, RedBee, GoldenBee, BrownBee, MoonTrees, Snail, FromPondToGreenhouseBlooming, WateringCan, TrainNoise, BastonSound, NewMoonAnim, FirstQuarterAnim, FullMoonAnim, ThirdQuarterAnim, RedMoonAnim, nightTable, waterLily, Mentor, FromPondToKitchen, FromPondToGreenhouse, greenShell, purpleShell)
     
