@@ -10,7 +10,7 @@
     
     //per testare i luoghi non subito aperti con calma
     VAR debug_test_library = false
-    VAR debug_test_kitchen = true
+    VAR debug_test_kitchen = false
     VAR debug_test_nest = false
     VAR debug_test_frog = false
     
