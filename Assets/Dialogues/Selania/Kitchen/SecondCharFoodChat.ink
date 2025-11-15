@@ -519,7 +519,7 @@ Riccio cucina da solo e ci chiede di lasciarlo da solo.#speaker:{secondChar_tag(
 
 === food_gift_second_char
 {debug: passo per food_gift_second_char.}
-Riccio attiva il suo storylet speciale dopo aver cucinato da solo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+Riccio attiva il suo storylet speciale dopo aver cucinato da solo e ci impezza sui pipistrelli per un po.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Scelta blu]
                 -> color_variation_management(SecondCharacter, blueC)->
                

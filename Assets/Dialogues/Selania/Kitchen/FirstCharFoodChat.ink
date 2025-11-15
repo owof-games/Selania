@@ -512,7 +512,7 @@ Chitarra sta cucinando da sola e ci chiede di lasciarla in pace fino a quando no
 
 === food_gift_first_char
 {debug: passo per food_gift_first_char.}
-Chitarra attiva il suo storylet speciale dopo aver cucinato da sola.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+Chitarra attiva il suo storylet speciale dopo aver cucinato da sola  e ci dice che ha trovato delle lucine in giro.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
 
             + [Scelta blu]
                 -> color_variation_management(FirstCharacter, blueC)->
