@@ -391,6 +391,8 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
 
 
 == at_table_with_second_char
+    ~ move_entity(CookingWithSecondCharOBJ, Kitchen)
+    ~ move_entity(EatingWithSecondCharOBJ, Kitchen)
     Passiamo alla scena al tavolo con Riccio.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     Buono questo {tempRecipeName}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     //Commento ricetta
@@ -501,6 +503,7 @@ E poi ci saluta e se ne va allo stagno.
 
 === second_char_cooking_alone
 {debug: passo per second_char_cooking_alone.}
+~ move_entity(SecondCharCookingAloneOBJ, Kitchen)
 -> cooking_animations_on ->
 Riccio cucina da solo e ci chiede di lasciarlo da solo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
 

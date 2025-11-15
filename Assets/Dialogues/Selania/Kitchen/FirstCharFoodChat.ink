@@ -386,6 +386,8 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
 
 
 === at_table_with_first_char
+    ~ move_entity(CookingWithFirstCharOBJ, Kitchen)
+    ~ move_entity(EatingWithFirstCharOBJ, Kitchen)
     Passiamo alla scena al tavolo con Chitarra#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
     Buono questo {tempRecipeName}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     //Commento ricetta
@@ -488,6 +490,7 @@ E poi ci saluta e se ne va allo stagno.
 
 
 === first_char_cooking_tracker
+~ move_entity(FirstCharCookingAloneOBJ, Kitchen)
 //Lo lascio come knot e non come variabile perché potrebbe essermi utile (es: per attivare un suono che faccia sapere che c'è qualcunx in cucina)
     {debug: passo per first_char_cooking_tracker.}
     
