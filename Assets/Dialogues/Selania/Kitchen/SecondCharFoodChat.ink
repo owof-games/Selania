@@ -503,7 +503,9 @@ E poi ci saluta e se ne va allo stagno.
 
 === second_char_cooking_alone
 {debug: passo per second_char_cooking_alone.}
-~ move_entity(SecondCharCookingAloneOBJ, Kitchen)
+~ move_entity(BatHouseFront, Kitchen)
+~ move_entity(BatHouseRetro, Kitchen)
+~ move_entity(Bat, Kitchen)
 -> cooking_animations_on ->
 Riccio cucina da solo e ci chiede di lasciarlo da solo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
 
