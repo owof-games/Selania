@@ -163,14 +163,14 @@ public class DialogueManagerSingleInk : MonoBehaviour
         }
 
         // imposta tutte le variabili di debug a false per sicurezza
-        var debugVariableNames = (
-            from variableName in story.variablesState
-            where variableName.IndexOf("debug", StringComparison.Ordinal) == 0
-            select variableName).ToList();
-        foreach (var debugVariableName in debugVariableNames)
-        {
-            story.variablesState[debugVariableName] = false;
-        }
+        // var debugVariableNames = (
+        //     from variableName in story.variablesState
+        //     where variableName.IndexOf("debug", StringComparison.Ordinal) == 0
+        //     select variableName).ToList();
+        // foreach (var debugVariableName in debugVariableNames)
+        // {
+        //     story.variablesState[debugVariableName] = false;
+        // }
 
         DisableDialoguePanel();
 

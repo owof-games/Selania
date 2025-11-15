@@ -165,10 +165,6 @@
                 -> kitchen
         - else:
             <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            ~ move_entity(PG, Kitchen)
-                -> on_movement_events ->
-                -> empty_tempTW ->  
-                -> kitchen
             -> main
     }        
 
