@@ -111,12 +111,6 @@
         -> main
         
 
-//Streets to Library
-    //+ {debug_test_library} [LibraryTest]
-    //        ~ move_entity(PG, Library)
-    //        -> on_movement_events ->
-    //            -> library
-                
     + {are_two_entities_together(PG, FromForestToLibraryBlocked)} [FromForestToLibraryBlocked]
     {
         - debug_test_library:
@@ -141,13 +135,6 @@
                 -> library
         
 
-//Streets to Kitchen
-    //+ {debug_test_kitchen} [KitchenTest]
-    //        ~ move_entity(PG, Library)
-    //        -> on_movement_events ->
-    //            -> kitchen
-
-
     + {are_two_entities_together(PG, FromPondToKitchen)} [FromPondToKitchen]
             ~ move_entity(PG, Kitchen)
                 -> on_movement_events ->
@@ -169,12 +156,6 @@
     }        
 
 
-//Streets to Nest
-    //+ {debug_test_nest} [NestTest]
-    //        ~ move_entity(PG, Nest)
-    //        -> on_movement_events ->
-    //            -> nest
-
     + {are_two_entities_together(PG, FromLibraryToNest)} [FromLibraryToNest]
             ~ move_entity(PG, Nest)
                 -> on_movement_events ->
@@ -182,17 +163,16 @@
                 -> nest
 
     + {are_two_entities_together(PG, FromLibraryToNestBlocked)} [FromLibraryToNestBlocked]
-        <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-    {
-        - debug_test_nest:
-            ~ move_entity(PG, Nest)
-                -> on_movement_events ->
-                -> empty_tempTW ->  
-                -> nest
-        - else:
-            <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            -> main
-    }   
+        {
+            - debug_test_nest:
+                ~ move_entity(PG, Nest)
+                    -> on_movement_events ->
+                    -> empty_tempTW ->  
+                    -> nest
+            - else:
+                Il relitto di una barca non permette di avanzare.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                -> main
+        }   
 
 
 

@@ -67,8 +67,18 @@ VAR saturationVar = 0
 
 === DarkLibraryModeOn
     #background: backNightLibrary
-    ~ move_entity(FromLibraryToNestNight, Library)
-    ~ move_entity(FromLibraryToNest, Safekeeping)
+    {
+        - playerAccessiblePlaces has Nest:
+            ~ move_entity(FromLibraryToNestNight, Library)
+            ~ move_entity(FromLibraryToNest, Safekeeping)
+        - else:
+            ~ move_entity(FromLibraryToNestBlockedNight, Library)
+            ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
+    
+    }
+    
+    
+    
     
     ~ move_entity(MoonTrees, Library)
     
@@ -95,8 +105,17 @@ VAR saturationVar = 0
     
 === DarkLibraryModeOff    
     #background: backLibrary
-    ~ move_entity(FromLibraryToNestNight, Safekeeping)
-    ~ move_entity(FromLibraryToNest, Library)
+    {
+        - playerAccessiblePlaces has Nest:
+            ~ move_entity(FromLibraryToNestNight, Safekeeping)
+            ~ move_entity(FromLibraryToNest, Library)
+        - else:
+            ~ move_entity(FromLibraryToNestBlockedNight, Safekeeping)
+            ~ move_entity(FromLibraryToNestBlocked, Library)
+    
+    }
+    
+    
     ~ move_entity(MoonTrees, Safekeeping)
     
     {
