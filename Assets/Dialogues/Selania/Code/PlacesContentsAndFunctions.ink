@@ -135,6 +135,14 @@
             DEBUG: error, cannot understand location {destination} while trying to move {entity} in.
     }
 
+    // se la PG si sposta da una stanza all'altra, rimuoviamo subito il TrainNoise.
+    // questo fa sì che se mi sposto sul libro della riscrittora (che è un "luogo"),
+    // al ritorno nella scena originale non parte il suono del treno, perché è stato
+    // messo via
+    { entity == PG:
+        ~ move_entity(TrainNoise, Safekeeping)
+    }
+
 
 //Funzioni per capire se due entità sono nello stesso luogo
 === function are_two_entities_together(entity1, entity2)
