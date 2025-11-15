@@ -112,14 +112,23 @@
         
 
 //Streets to Library
-    + {debug_test_library} [LibraryTest]
+    //+ {debug_test_library} [LibraryTest]
+    //        ~ move_entity(PG, Library)
+    //        -> on_movement_events ->
+    //            -> library
+                
+    + {are_two_entities_together(PG, FromForestToLibraryBlocked)} [FromForestToLibraryBlocked]
+    {
+        - debug_test_library:
             ~ move_entity(PG, Library)
             -> on_movement_events ->
                 -> library
-                
-    + {are_two_entities_together(PG, FromForestToLibraryBlocked)} [FromForestToLibraryBlocked]
-        Un cumulo di carta e colonne di legno blocca la strada.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        
+        - else:
+            Un cumulo di carta e colonne di legno blocca la strada.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
+    }  
+    
             
     + {are_two_entities_together(PG, FromForestToLibrary)} [FromForestToLibrary]
             ~ move_entity(PG, Library)
@@ -133,10 +142,10 @@
         
 
 //Streets to Kitchen
-    + {debug_test_kitchen} [KitchenTest]
-            ~ move_entity(PG, Library)
-            -> on_movement_events ->
-                -> kitchen
+    //+ {debug_test_kitchen} [KitchenTest]
+    //        ~ move_entity(PG, Library)
+    //        -> on_movement_events ->
+    //            -> kitchen
 
 
     + {are_two_entities_together(PG, FromPondToKitchen)} [FromPondToKitchen]
@@ -147,15 +156,24 @@
 
     
     + {are_two_entities_together(PG, FromPondToKitchenBlocked)} [FromPondToKitchenBlocked]
-    <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+    
+    {
+        - debug_test_kitchen:
+            ~ move_entity(PG, Kitchen)
+                -> on_movement_events ->
+                -> empty_tempTW ->  
+                -> kitchen
+        - else:
+            <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
+    }        
 
 
 //Streets to Nest
-    + {debug_test_nest} [NestTest]
-            ~ move_entity(PG, Nest)
-            -> on_movement_events ->
-                -> nest
+    //+ {debug_test_nest} [NestTest]
+    //        ~ move_entity(PG, Nest)
+    //        -> on_movement_events ->
+    //            -> nest
 
     + {are_two_entities_together(PG, FromLibraryToNest)} [FromLibraryToNest]
             ~ move_entity(PG, Nest)
@@ -165,7 +183,16 @@
 
     + {are_two_entities_together(PG, FromLibraryToNestBlocked)} [FromLibraryToNestBlocked]
         <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+    {
+        - debug_test_nest:
+            ~ move_entity(PG, Nest)
+                -> on_movement_events ->
+                -> empty_tempTW ->  
+                -> nest
+        - else:
+            <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
+    }   
 
 
 
