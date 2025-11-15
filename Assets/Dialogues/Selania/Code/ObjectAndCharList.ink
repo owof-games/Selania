@@ -6,9 +6,9 @@
 
     LIST transitions = FromTrainStopToForest, FromForestToTrainStop, FromForestToPond, FromForestToLibraryBlocked, FromForestToLibrary, FromPondToForest, FromPondToGreenhouse, FromPondToGreenhouseBlooming, FromPondToNest, FromPondToKitchen, FromPondToKitchenBlocked, FromGreenhouseToPond, FromLibraryToForest, FromLibraryToNest, FromLibraryToNestBlocked, FromLibraryToNestNight, FromNestToLibrary, FromKitchenToPond, FromPondToGreenhouseBlocked
     
-    LIST sceneObjects = Bench, WateringCan, TheWitch, ReadingPlace, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, StartingNote, Arbustini, MoonTrees, ELManagement, CookingWithFirstCharOBJ, CookingWithSecondCharOBJ, FirstCharCookingAloneOBJ, SecondCharCookingAloneOBJ, EatingWithSecondCharOBJ, EatingWithFirstCharOBJ
+    LIST sceneObjects = Bench, WateringCan, TheWitch, ReadingPlace, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, StartingNote, Arbustini, MoonTrees, ELManagement, CookingWithFirstCharOBJ, CookingWithSecondCharOBJ, FirstCharCookingAloneOBJ, BatHouseFront, BatHouseRetro, EatingWithSecondCharOBJ, EatingWithFirstCharOBJ
 
-    LIST animations = Birds, CloudOne, CloudTwo, CloudThree, RedBee, GoldenBee, BrownBee, LeafOneSin, LeafTwoSin, LeafThreeSin, LeafFourSin, LeafFiveSin, LeafOneDx, LeafTwoDx, LeafThreeDx, Snail, NewMoonAnim, FirstQuarterAnim, FullMoonAnim, ThirdQuarterAnim, RedMoonAnim, waterLily, FirstRipple, SecondRipple, ThirdRipple, KitchenFire, KitchenSmokeOne, KitchenSmokeTwo, KitchenSmokeThree
+    LIST animations = Birds, CloudOne, CloudTwo, CloudThree, RedBee, GoldenBee, BrownBee, LeafOneSin, LeafTwoSin, LeafThreeSin, LeafFourSin, LeafFiveSin, LeafOneDx, LeafTwoDx, LeafThreeDx, Snail, NewMoonAnim, FirstQuarterAnim, FullMoonAnim, ThirdQuarterAnim, RedMoonAnim, waterLily, FirstRipple, SecondRipple, ThirdRipple, KitchenFire, KitchenSmokeOne, KitchenSmokeTwo, KitchenSmokeThree, Bat
 
     LIST buttons = MenuSave, MenuQuit,  Inventory, FromTrainStopToBedroom
     
