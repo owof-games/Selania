@@ -253,6 +253,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
             // re-imposta lo stato di big dialogue
             story.variablesState[bigDialogueInkBoolVariable] = rewriterBookSavedIsBigDialogue;
+            
+            // re-imposta il portrait
+            if(rewriterBookPortraitName != null) portraitAnimator.Play(rewriterBookPortraitName);
 
             //Marco: copiatura elementi gestione bigDialogueMode per nestDialogueMode
             // re-imposta lo stato di nest dialogue
@@ -365,6 +368,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     private bool rewriterBookSavedIsNestDialogue;
     private string rewriterBookSavedCurrentLine;
     private List<Choice> rewriterBookSavedCurrentChoices;
+    private string rewriterBookPortraitName;
 
     private const string RewriterBookFlowName = "RewriterBook";
     private const string RewriterBookKnotName = "rewriter_book_with_flow";
@@ -381,6 +385,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
         rewriterBookSavedIsNestDialogue = (bool)story.variablesState[nestDialogueInkBoolVariable];
         rewriterBookSavedCurrentLine = lastCurrentLine;
         rewriterBookSavedCurrentChoices = lastCurrentChoices;
+        
+        // ripristina anche il portrait
+        rewriterBookPortraitName = lastPortraitName;
         
         // passa a flow RewriterBook
         story.SwitchFlow(RewriterBookFlowName);
@@ -455,6 +462,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
         ContinueStory();
     }
 
+    private string lastPortraitName;
+
 
     private void HandleTags(List<string> currentTags)
     {
@@ -501,6 +510,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
                 
                 case PORTRAIT_TAG:
                     portraitAnimator.Play(tagValue);
+                    lastPortraitName = tagValue;
                     Debug.Log("portrait" + tagValue);
                     break;
 
