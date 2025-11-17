@@ -120,12 +120,12 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
                     Ma posso fare una cosa: la prossima volta che inizierai a coltivare qualcosa in serra, crescerà un dono adatto.
                     Fanne tesoro.
                     {
-                        - nextCultivableOne == ():
-                            ~ nextCultivableOne = CantoDelleCompagne
-                        - nextCultivableTwo == () && nextCultivableOne != ():
-                            ~ nextCultivableTwo = CantoDelleCompagne
-                        - nextCultivableThree == () && nextCultivableTwo != ():
-                            ~ nextCultivableThree = CantoDelleCompagne
+                        - greenhouse_frog_nextCultivableOne == ():
+                            ~ greenhouse_frog_nextCultivableOne = CantoDelleCompagne
+                        - greenhouse_frog_nextCultivableTwo == () && greenhouse_frog_nextCultivableOne != ():
+                            ~ greenhouse_frog_nextCultivableTwo = CantoDelleCompagne
+                        - greenhouse_frog_nextCultivableThree == () && greenhouse_frog_nextCultivableTwo != ():
+                            ~ greenhouse_frog_nextCultivableThree = CantoDelleCompagne
                         - else:
                             ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
                     }
@@ -165,12 +165,12 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
                     Ma posso fare una cosa: la prossima volta che inizierai a coltivare qualcosa in serra, crescerà un ingrediente adatto.
                     Fanne tesoro.
                     {
-                        - nextCultivableOne == ():
-                            ~ nextCultivableOne = LanaNotturna
-                        - nextCultivableTwo == () && nextCultivableOne != ():
-                            ~ nextCultivableTwo = LanaNotturna
-                        - nextCultivableThree == () && nextCultivableTwo != ():
-                            ~ nextCultivableThree = LanaNotturna
+                        - greenhouse_frog_nextCultivableOne == ():
+                            ~ greenhouse_frog_nextCultivableOne = LanaNotturna
+                        - greenhouse_frog_nextCultivableTwo == () && greenhouse_frog_nextCultivableOne != ():
+                            ~ greenhouse_frog_nextCultivableTwo = LanaNotturna
+                        - greenhouse_frog_nextCultivableThree == () && greenhouse_frog_nextCultivableTwo != ():
+                            ~ greenhouse_frog_nextCultivableThree = LanaNotturna
                         - else:
                             ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
                     }
@@ -266,12 +266,12 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
                     Ma posso fare una cosa: la prossima volta che inizierai a coltivare qualcosa in serra, crescerà un dono adatto.
                     Fanne tesoro.
                         {
-                        - nextCultivableOne == ():
-                            ~ nextCultivableOne = BastoneDellOzioso
-                        - nextCultivableTwo == () && nextCultivableOne != ():
-                            ~ nextCultivableTwo = BastoneDellOzioso
-                        - nextCultivableThree == () && nextCultivableTwo != ():
-                            ~ nextCultivableThree = BastoneDellOzioso
+                        - greenhouse_frog_nextCultivableOne == ():
+                            ~ greenhouse_frog_nextCultivableOne = BastoneDellOzioso
+                        - greenhouse_frog_nextCultivableTwo == () && greenhouse_frog_nextCultivableOne != ():
+                            ~ greenhouse_frog_nextCultivableTwo = BastoneDellOzioso
+                        - greenhouse_frog_nextCultivableThree == () && greenhouse_frog_nextCultivableTwo != ():
+                            ~ greenhouse_frog_nextCultivableThree = BastoneDellOzioso
                         - else:
                             ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
                         }
@@ -307,12 +307,12 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
                     Ma posso fare una cosa: la prossima volta che inizierai a coltivare qualcosa in serra, crescerà un dono adatto.
                     Fanne tesoro.
                         {
-                        - nextCultivableOne == ():
-                            ~ nextCultivableOne = BrinaDellImpossibile
-                        - nextCultivableTwo == () && nextCultivableOne != ():
-                            ~ nextCultivableTwo = BrinaDellImpossibile
-                        - nextCultivableThree == () && nextCultivableTwo != ():
-                            ~ nextCultivableThree = BrinaDellImpossibile
+                        - greenhouse_frog_nextCultivableOne == ():
+                            ~ greenhouse_frog_nextCultivableOne = BrinaDellImpossibile
+                        - greenhouse_frog_nextCultivableTwo == () && greenhouse_frog_nextCultivableOne != ():
+                            ~ greenhouse_frog_nextCultivableTwo = BrinaDellImpossibile
+                        - greenhouse_frog_nextCultivableThree == () && greenhouse_frog_nextCultivableTwo != ():
+                            ~ greenhouse_frog_nextCultivableThree = BrinaDellImpossibile
                         - else:
                             ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
                         }

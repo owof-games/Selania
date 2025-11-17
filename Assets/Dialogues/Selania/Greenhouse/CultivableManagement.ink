@@ -92,48 +92,48 @@
     VAR greenhouse_cultivableGrowing = 0 
     
 //Gestione priorità coltivabili
-    VAR nextCultivableOne = ()
-    VAR nextCultivableTwo = ()
-    VAR nextCultivableThree = ()
+    VAR greenhouse_frog_nextCultivableOne = ()
+    VAR greenhouse_frog_nextCultivableTwo = ()
+    VAR greenhouse_frog_nextCultivableThree = ()
     
     
     
 === next_cultivable_management
 {debug: passo per next_cultivable_management.}
-{debug: prima di procedere, il valore di nextCultivableThree è {nextCultivableThree}, di nextCultivableTwo è {nextCultivableTwo} e di nextCultivableOne è {nextCultivableOne}.}
+{debug: prima di procedere, il valore di greenhouse_frog_nextCultivableThree è {greenhouse_frog_nextCultivableThree}, di greenhouse_frog_nextCultivableTwo è {greenhouse_frog_nextCultivableTwo} e di greenhouse_frog_nextCultivableOne è {greenhouse_frog_nextCultivableOne}.}
 //Qui gestiamo la priorità di crescita dettata dalla rana. Se c'è qualcosa in coda, facciamo salire tutto e poi attiviamo il next greenhouse_cultivable iniziale.
 
 //Step uno: riordino delle richieste
 {
-    - nextCultivableThree != () && nextCultivableTwo == ():
-        ~ nextCultivableTwo = nextCultivableThree
-        ~ nextCultivableThree = ()
+    - greenhouse_frog_nextCultivableThree != () && greenhouse_frog_nextCultivableTwo == ():
+        ~ greenhouse_frog_nextCultivableTwo = greenhouse_frog_nextCultivableThree
+        ~ greenhouse_frog_nextCultivableThree = ()
 }
 
 {
-    - nextCultivableTwo != () && nextCultivableOne == ():
-        ~ nextCultivableOne = nextCultivableTwo
-        ~ nextCultivableTwo = ()
+    - greenhouse_frog_nextCultivableTwo != () && greenhouse_frog_nextCultivableOne == ():
+        ~ greenhouse_frog_nextCultivableOne = greenhouse_frog_nextCultivableTwo
+        ~ greenhouse_frog_nextCultivableTwo = ()
 }
 
-{debug: dopo l'aggiornamento, il valore di nextCultivableThree è {nextCultivableThree}, di nextCultivableTwo è {nextCultivableTwo} e di nextCultivableOne è {nextCultivableOne}.}
+{debug: dopo l'aggiornamento, il valore di greenhouse_frog_nextCultivableThree è {greenhouse_frog_nextCultivableThree}, di greenhouse_frog_nextCultivableTwo è {greenhouse_frog_nextCultivableTwo} e di greenhouse_frog_nextCultivableOne è {greenhouse_frog_nextCultivableOne}.}
 
 //Step due: attivazione o meno (parte solo se greenhouse_chosenCultivable è vuoto)
  {
-        - nextCultivableOne != () && greenhouse_chosenCultivable == ():
+        - greenhouse_frog_nextCultivableOne != () && greenhouse_chosenCultivable == ():
             Sembra che la rana abbia messo qui le sue zampine.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             Ecco qualcosa che crescerà su sua richiesta.
-                ~ greenhouse_chosenCultivable = nextCultivableOne
+                ~ greenhouse_chosenCultivable = greenhouse_frog_nextCultivableOne
                 
-            {debug or debug_frog: il valore di nextCultivable è {nextCultivableOne} e per questo skippo le domande. Ora greenhouse_chosenCultivable è = a {greenhouse_chosenCultivable}.}
+            {debug or debug_frog: il valore di nextCultivable è {greenhouse_frog_nextCultivableOne} e per questo skippo le domande. Ora greenhouse_chosenCultivable è = a {greenhouse_chosenCultivable}.}
             
-                ~ nextCultivableOne = ()
-            {debug or debug_frog: svuoto nextCultivable, e il suo valore è {nextCultivableOne}.}
+                ~ greenhouse_frog_nextCultivableOne = ()
+            {debug or debug_frog: svuoto nextCultivable, e il suo valore è {greenhouse_frog_nextCultivableOne}.}
             
                 -> list_to_crops
         
         - else:
-            {debug_cultivable or debug_frog: il valore di nextCultivable è {nextCultivableOne}, quello di greenhouse_chosenCultivable {greenhouse_chosenCultivable} e per questo passo alle domande o avanzo, a seconda dello stato di greenhouse_chosenCultivable {greenhouse_chosenCultivable}.}
+            {debug_cultivable or debug_frog: il valore di nextCultivable è {greenhouse_frog_nextCultivableOne}, quello di greenhouse_chosenCultivable {greenhouse_chosenCultivable} e per questo passo alle domande o avanzo, a seconda dello stato di greenhouse_chosenCultivable {greenhouse_chosenCultivable}.}
             -> cultivable_test.top
     
     }
