@@ -116,7 +116,7 @@
             -
         ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameThree}.
         No, io sono <b>{charNameThree}</b>.
-    	    + {name_choice} [Mi chiamo {name}.]
+    	    + {name_choice} [Mi chiamo {player_name}.]
     	    + [Il mio nome è...]
     	        -> name_choice ->
     	    -
@@ -507,20 +507,20 @@ Stai per donare qualcosa a {charNameThree}.
             -> fourthAffinityCalc ->
         {
         - firstPurple && firstYellow > firstBlue: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
-        {charNameThree} vede {name} come una persona amica e fidata.
+        {charNameThree} vede {player_name} come una persona amica e fidata.
         
         -firstPurple or firstYellow > firstBlue:Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
         
-        {charNameThree} si trova bene con {name}.
+        {charNameThree} si trova bene con {player_name}.
         
         - firstPurple && firstYellow < firstBlue: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
         
-        {charNameThree} non si è sentita capita da {name}.
+        {charNameThree} non si è sentita capita da {player_name}.
         
         
         - else: A volte siamo sullo stesso brano, altre no. E non ho ancora capito chi tra noi stia ignorando l'altra parte.
         
-        {charNameThree} non riesce a capire che rapporto sta costruendo con {name}.
+        {charNameThree} non riesce a capire che rapporto sta costruendo con {player_name}.
         
         }
         E credo di aver capito perché il mio nome
@@ -533,7 +533,7 @@ Stai per donare qualcosa a {charNameThree}.
 
     = statement
     ~ temp charNameThree = translator(fourthCharacterState)
-        <i>A seguito del rapporto che {name} ha creato con {charNameThree} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità.|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
+        <i>A seguito del rapporto che {player_name} ha creato con {charNameThree} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità.|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(fourthCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]
@@ -544,10 +544,10 @@ Stai per donare qualcosa a {charNameThree}.
 
     = one
     ~ temp charNameThree = translator(fourthCharacterState)
-    {name}: Prima hai detto che hai il terrore di fare una scelta.
+    {player_name}: Prima hai detto che hai il terrore di fare una scelta.
         
         + [Qui hai accettato il tuo nuovo nome.]
-            {name}: E ammettere una propria paura, una scelta enorme.
+            {player_name}: E ammettere una propria paura, una scelta enorme.
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
@@ -587,8 +587,8 @@ Stai per donare qualcosa a {charNameThree}.
     ~ temp charNameThree = translator(fourthCharacterState)
 
         + [Con Talco puoi litigare, eppure siete legatissim3.]
-            {name}: Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
-            {name}: Il Talco che hai raccontato si arrabbierebbe di più se tu facessi una scelta per te pensando a ləi.
+            {player_name}: Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
+            {player_name}: Il Talco che hai raccontato si arrabbierebbe di più se tu facessi una scelta per te pensando a ləi.
             
                     
         + [La paura di tradire è un'altra faccia dell'ego.]
@@ -722,7 +722,7 @@ Stai per donare qualcosa a {charNameThree}.
                 
         -     
         
-    Grazie, {name}.
+    Grazie, {player_name}.
     Mentre parlavi mi è nata una nuova canzone in testa.
     Qualcosa di fresco, di pronto a cambiare.
     La canzone del mio vero nome.
@@ -772,7 +772,7 @@ Stai per donare qualcosa a {charNameThree}.
     
     = secret_ending
     ~ temp charNameThree = translator(fourthCharacterState)
-        C'è una cosa che vorrei dirti, {name}.
+        C'è una cosa che vorrei dirti, {player_name}.
         Riguarda Il mentore.
         -> close
             
@@ -783,11 +783,11 @@ Stai per donare qualcosa a {charNameThree}.
     
     = close
             ~ fourthStory = StoryEnded
-            ~ endedStories += fourthES
+            ~ story_endedStories += fourthES
             ~ fourthCharacterInkLevel = Empty
-            ~ movementsCounter = 0
+            ~ player_movementsCounter = 0
             ~ numberQuestion = 0
-            ~ PG_advance_management(fourthStoryPG)
+            ~ PG_advance_management(FourthCharacter)
         -> main
     
     
@@ -810,7 +810,7 @@ Stai per donare qualcosa a {charNameThree}.
         
         = goodbye
         ~ temp charNameThree = translator(fourthCharacterState)
-        {name}, per me è arrivato il momento di tornare a casa.
+        {player_name}, per me è arrivato il momento di tornare a casa.
         {firstCharacterPossibleStates hasnt Chitarra: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
         {firstCharacterPossibleStates hasnt Chitarra: Grazie per quello che hai fatto, davvero.}
         {firstCharacterPossibleStates has Chitarra: Vedremo cosa mi accadrà.}

@@ -3,7 +3,7 @@ VAR name = "NoName"
 LIST pronouns = him, her, they
 
 //Tracciamento colori personaggia
-VAR playerPurple = 0
+VAR player_purple = 0
 VAR playerYellow = 0
 VAR playerBlue = 0
 VAR playerGreen = 0
@@ -113,8 +113,8 @@ VAR purple  = ()
     //Qui aggiorno i valori delle scelte della player
     ~ playerRed = playerRed + red
         {debug: The value of playerRed is {playerRed}}
-    ~ playerPurple = playerPurple + purple
-        {debug: The value of playerPurple is {playerPurple}}
+    ~ player_purple = player_purple + purple
+        {debug: The value of player_purple is {player_purple}}
     ~ playerGreen = playerGreen + green
         {debug: The value of playerGreen is {playerGreen}}
     ~ playerYellow = playerYellow + yellow
@@ -125,7 +125,7 @@ VAR purple  = ()
 
     //E poi confronto quella che è la storia della personaggia, la progressione delle sue scelte: di fatto per ora basta che non ci siano pareggi tra colori per evitare il marrone. A quel punto emerge il colore dominante.
 {
-    - (playerGreen > playerBlue) && (playerGreen > playerRed) && (playerGreen > playerYellow) && (playerGreen > playerPurple):
+    - (playerGreen > playerBlue) && (playerGreen > playerRed) && (playerGreen > playerYellow) && (playerGreen > player_purple):
         {
             - char == firstStoryPG:
                ~ playerFirstStory += greenStatus
@@ -144,7 +144,7 @@ VAR purple  = ()
                     ERROR
         }
     
-    - (playerBlue > playerGreen) && (playerBlue > playerRed) && (playerBlue > playerYellow) && (playerBlue > playerPurple):
+    - (playerBlue > playerGreen) && (playerBlue > playerRed) && (playerBlue > playerYellow) && (playerBlue > player_purple):
         {
             - char == firstStoryPG:
                 ~ playerFirstStory += blueStatus
@@ -163,7 +163,7 @@ VAR purple  = ()
                     ERROR
         }        
     
-    - (playerRed > playerGreen) && (playerRed > playerBlue) && (playerRed > playerYellow) && (playerRed > playerPurple):
+    - (playerRed > playerGreen) && (playerRed > playerBlue) && (playerRed > playerYellow) && (playerRed > player_purple):
         {
             - char == firstStoryPG:
                 ~ playerFirstStory += redStatus
@@ -182,7 +182,7 @@ VAR purple  = ()
                     ERROR
         }    
     
-    - (playerYellow > playerGreen) && (playerYellow > playerBlue) && (playerYellow > playerRed) && (playerYellow > playerPurple):
+    - (playerYellow > playerGreen) && (playerYellow > playerBlue) && (playerYellow > playerRed) && (playerYellow > player_purple):
         {
             - char == firstStoryPG:
                 ~ playerFirstStory += yellowStatus
@@ -201,7 +201,7 @@ VAR purple  = ()
                     ERROR
         }    
     
-    - (playerPurple > playerGreen) && (playerPurple > playerBlue) && (playerPurple > playerRed) && (playerPurple > playerYellow):
+    - (player_purple > playerGreen) && (player_purple > playerBlue) && (player_purple > playerRed) && (player_purple > playerYellow):
         {
             - char == firstStoryPG:
                 ~ playerFirstStory += purpleStatus

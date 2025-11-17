@@ -9,9 +9,9 @@
     ~ temp charNameFive = translator(fifthCharacterState)
         
 
-<b><i>Appunti dalle conversazioni.</b></i> Ho incontrato una persona che mi ha detto di chiamarla Mentore, perché mi farà da guida in questo luogo. E dopo avermi chiesto nomi e pronomi, mi ha {pronouns has him:invitato|{pronouns has her:invitata|invitatə}} a parlare con le persone che trovo in giro. {about_ink_usage: Per poi dirmi che sono {pronouns has him:un Riscrittore|{pronouns has her:una Riscrittora|unə Riscrittorə}}, e darmi un po' di indicazioni su cosa dovrei fare.}
+<b><i>Appunti dalle conversazioni.</b></i> Ho incontrato una persona che mi ha detto di chiamarla Mentore, perché mi farà da guida in questo luogo. E dopo avermi chiesto nomi e pronomi, mi ha {player_pronouns has him:invitato|{player_pronouns has her:invitata|invitatə}} a parlare con le persone che trovo in giro. {about_ink_usage: Per poi dirmi che sono {player_pronouns has him:un Riscrittore|{player_pronouns has her:una Riscrittora|unə Riscrittorə}}, e darmi un po' di indicazioni su cosa dovrei fare.}
 
-{that_little_liar_storylet: Dopo l'arrivo del bimbo, la prima cosa che mi ha chiesto è se son {pronouns has him:riuscito|{pronouns has her:riuscita|riuscitə}} a mandarlo a casa. Dice che qui non è sicuro per i bambini, che lui le ha tirato un calcio. Ma che le fa tenerezza, e per questo gli sembra un Riccio.}
+{that_little_liar_storylet: Dopo l'arrivo del bimbo, la prima cosa che mi ha chiesto è se son {player_pronouns has him:riuscito|{player_pronouns has her:riuscita|riuscitə}} a mandarlo a casa. Dice che qui non è sicuro per i bambini, che lui le ha tirato un calcio. Ma che le fa tenerezza, e per questo gli sembra un Riccio.}
 
 
 {
@@ -150,7 +150,7 @@
         <b>Lettere di {charNameOne}.</b></i>
     
     
-        Ciao {name}, come stai? Alla fine Talco è sempre statə qui, me idiota. E ha creduto alla mia storia! Ora si è messə in testa di insegnare agli scoiattoli a suonare le noci. <>
+        Ciao {player_name}, come stai? Alla fine Talco è sempre statə qui, me idiota. E ha creduto alla mia storia! Ora si è messə in testa di insegnare agli scoiattoli a suonare le noci. <>
 
            {
                 - firstCharacterPossibleStates has Triangolo:

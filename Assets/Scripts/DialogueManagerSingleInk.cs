@@ -701,12 +701,12 @@ public class DialogueManagerSingleInk : MonoBehaviour
     //Questo viene utilizzato dai BranchManager
     public InkList GetPlayerFirstStory()
     {
-        return (InkList)story.variablesState["playerFirstStory"];
+        return (InkList)story.variablesState["player_firstStepStatus"];
     }
 
     public InkList GetPlayerSecondStory()
     {
-        return (InkList)story.variablesState["playerSecondStory"];
+        return (InkList)story.variablesState["player_secondStepStatus"];
     }
 
     //Questo viene utilizzato dai coltivabili

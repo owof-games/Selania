@@ -68,7 +68,7 @@ VAR saturationVar = 0
 === DarkLibraryModeOn
     #background: backNightLibrary
     {
-        - playerAccessiblePlaces has Nest:
+        - player_accessiblePlaces has Nest:
             ~ move_entity(FromLibraryToNestNight, Library)
             ~ move_entity(FromLibraryToNest, Safekeeping)
         - else:
@@ -106,7 +106,7 @@ VAR saturationVar = 0
 === DarkLibraryModeOff    
     #background: backLibrary
     {
-        - playerAccessiblePlaces has Nest:
+        - player_accessiblePlaces has Nest:
             ~ move_entity(FromLibraryToNestNight, Safekeeping)
             ~ move_entity(FromLibraryToNest, Library)
         - else:

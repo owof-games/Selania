@@ -80,7 +80,7 @@
             Informazioni sullo stagno.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             -> top    
             
-    + {(playerAccessiblePlaces has Library) or (playerAccessiblePlaces has Kitchen) or (playerAccessiblePlaces has Nest)}[Sono altri i luoghi di cui vorrei parlare.]
+    + {(player_accessiblePlaces has Library) or (player_accessiblePlaces has Kitchen) or (player_accessiblePlaces has Nest)}[Sono altri i luoghi di cui vorrei parlare.]
         -> second_top
     
     + [Voglio parlare d'altro.]
@@ -88,7 +88,7 @@
 
     
 - (second_top)    
-    + {playerAccessiblePlaces has Library}[Sulla biblioteca.]
+    + {player_accessiblePlaces has Library}[Sulla biblioteca.]
             La biblioteca è un posto... un posto.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
             Ci sono molti racconti, ma chi ha il tempo di leggerli?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_hurry
             Con tutta quella polvere che raccolgono, poi.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sad
@@ -97,7 +97,7 @@
             Quasi.
                 -> second_top
             
-    + {playerAccessiblePlaces has Kitchen}[Sulla cucina.]
+    + {player_accessiblePlaces has Kitchen}[Sulla cucina.]
             La cucina è un posto poco igienico.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
             No, ricominciamo.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_sorry
             La cucina è un posto dove condividere un po' di intimità con una persona.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_neutral
@@ -105,7 +105,7 @@
             E, magari, scoprire cosa stai sbagliando a dirle, e riuscire a conquistare prima la sua fiducia.
                 -> second_top
 
-    + {playerAccessiblePlaces has Nest}[Sul nido.]
+    + {player_accessiblePlaces has Nest}[Sul nido.]
             Il nido non mi piace.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthCharacterInkLevel)} #inkB:{ink_tag_b(fifthCharacterInkLevel)}  #inkC:{ink_tag_c(fifthCharacterInkLevel)}  #inkD:{ink_tag_d(fifthCharacterInkLevel)} #portrait:mentore_bored
             Quello che accade lì è manipolazione, comunque tu la voglia mettere.
             E quindi è qualcosa di sbagliato.

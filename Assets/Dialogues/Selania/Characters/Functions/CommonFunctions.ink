@@ -3,13 +3,14 @@
    Gestione avvio e chiusura storie personagge 
 
  ----------------------------------*/
-    LIST storyStates = StoryNotStarted, StoryStarted, StoryEnded
+    LIST story_storyStatus = StoryNotStarted, StoryStarted, StoryEnded
     
-    //Gestione parte dell'albero collegata e recap finale
-    LIST endedStories = firstES, secondES, thirdES, fourthES, fifthES
-    LIST endingOrders = firstEnd, secondEnd, thirdEnd, fourthEnd, fifthEnd
-    VAR char = ()
-
+    //Lista che tiene conto delle storie che sono finite
+    LIST story_endedStories = firstES, secondES, thirdES, fourthES, fifthES
+    //Lista che tiene conto dell'ordine della conclusione delle storie
+    LIST story_endingOrders = firstEnd, secondEnd, thirdEnd, fourthEnd, fifthEnd
+    
+    
 //COME PROMEMORIA. LISTA DI TIPI DI TONO CHE POSSIAMO TENERE IN UNA CONVERSAZIONE: ROSSO (RABBIA, PASSIONE, AZIONE, OPPOSIZIONE). VIOLA (SPIRITUALITA', VISIONE DEL GRANDE SCHEMA DELLE COSE, SGUARDO POETICO, TESA VERSO UNA MISSIONE). GIALLO (GIOCOSITA', RISATA, DIVERTIMENTO, FANCIULLEZZA). VERDE (CUORE, AFFETTI, CURA DELLE PERSONE CARE, RIFLESSIONE EMOTIVA). BLU (RAZIONALITA', CALCOLO, VISIONE PRATICA, DISCIPLINA).
 
 //Attesa comparsa prima personaggia
@@ -33,7 +34,7 @@
                 ~ mentorStory = StoryStarted
     
         //Dopo il delay previsto, compare Chitarra.
-        - movementsCounter == delayFirstChar && firstStory == StoryNotStarted:
+        - player_movementsCounter == delayFirstChar && firstStory == StoryNotStarted:
         {debug: introduco {FirstCharacter} in scena.}
                 ~ move_entity(FirstCharacter, TrainStop)
                 ~ move_entity(TrainNoise, CurrentLocation)
@@ -54,7 +55,7 @@
                 // ~ thirdStory = StoryStarted
                 
         //X movimenti dopo la furia della mentore, compare la quarta png
-        //- movementsCounter == delayFourthChar && mentor_rage:
+        //- player_movementsCounter == delayFourthChar && mentor_rage:
                 //{debug: introduco {FourthCharacter} in scena.}
                 //~ move_entity(FourthCharacter, Forest)
                 //~ fourthStory = StoryStarted
@@ -74,23 +75,23 @@
     
     
     //Check per l'allontanamento delle personagge
-        //- firstStory == StoryEnded && movementsCounter > 10:
+        //- firstStory == StoryEnded && player_movementsCounter > 10:
             //~ move_entity(FirstCharacter, Safekeeping)
             //~ move_entity(FirstCharacterNotes, TrainStop)
             
-        //- secondStory == StoryEnded && movementsCounter > 10:
+        //- secondStory == StoryEnded && player_movementsCounter > 10:
             //~ move_entity(SecondCharacter, Safekeeping)
             //~ move_entity(SecondCharacterNotes, TrainStop)
             
-        //- thirdStory == StoryEnded && movementsCounter > 10:
+        //- thirdStory == StoryEnded && player_movementsCounter > 10:
             //~ move_entity(ThirdCharacter, Safekeeping)
             //~ move_entity(ThirdCharacterNotes, TrainStop)
             
-        //- fourthStory == StoryEnded && movementsCounter > 10:
+        //- fourthStory == StoryEnded && player_movementsCounter > 10:
             //~ move_entity(FourthCharacter, Safekeeping)
            // ~ move_entity(FourthCharacterNotes, TrainStop)
             
-        //- fifthStory == StoryEnded && movementsCounter > 10:
+        //- fifthStory == StoryEnded && player_movementsCounter > 10:
             //~ move_entity(Mentor, Safekeeping)
            // ~ move_entity(FifthCharacterNotes, TrainStop)
     }
@@ -124,21 +125,21 @@
     {
         - welcome.your_name && (entity_location(FromPondToGreenhouse) == Safekeeping) && not olobino.step_tre.colto:
             ~ randomablePlaces += Greenhouse
-            ~ playerAccessiblePlaces += Greenhouse
+            ~ player_accessiblePlaces += Greenhouse
             ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
             ~ move_entity(FromPondToGreenhouse, Pond)
     }
     
     {
         - open_the_kitchen && (entity_location(FromPondToKitchen) == Safekeeping):
-            ~ playerAccessiblePlaces += Kitchen
+            ~ player_accessiblePlaces += Kitchen
             ~ move_entity(FromPondToKitchenBlocked, Safekeeping)
             ~ move_entity(FromPondToKitchen, Pond)
     }
     
     {
         - open_nest && (entity_location(FromLibraryToNest) == Safekeeping):
-            ~ playerAccessiblePlaces += Nest
+            ~ player_accessiblePlaces += Nest
             ~ move_entity(FromLibraryToNestBlocked, Safekeeping)
             ~ move_entity(FromLibraryToNest, Library)
     }
@@ -149,7 +150,7 @@
             ~ move_entity(FromForestToLibraryBlocked, Safekeeping)
             ~ move_entity(FromForestToLibrary, Forest)
             ~ randomablePlaces += Library
-            ~ playerAccessiblePlaces += Library
+            ~ player_accessiblePlaces += Library
     }
 
 ->->   
@@ -297,7 +298,7 @@
 //Aumento di contatori:
 
     //Contatore spostamenti PG
-    ~ movementsCounter ++
+    ~ player_movementsCounter ++
     
     //Gestione della cucina delle PNG
         //Chitarra

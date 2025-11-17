@@ -4,7 +4,7 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    {name}, ti invito a leggere il libro che ti è stato dato. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {player_name}, ti invito a leggere il libro che ti è stato dato. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Nel tuo lavoro, la conoscenza è potere.
     Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += missionOne
@@ -19,7 +19,7 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    {name}, è importante prendersi cura della serra.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    {player_name}, è importante prendersi cura della serra.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Non solo per avere dei doni per le persone che necessitano del tuo lavoro, ma anche per prenderti cura di te.
     La serra cresce grazie alle cose che puoi elaborare su di te.
     Per cui ti chiedo di tornare da me quando nella serra ci saranno almeno tre piante fiorite.
@@ -36,7 +36,7 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    Sai {name}, Mentore sente spesso il bisogno di sentirsi utile.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    Sai {player_name}, Mentore sente spesso il bisogno di sentirsi utile.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Perché non provi a chiederle qualche consiglio su come star meglio?
     Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += missionThree
@@ -67,7 +67,7 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    Questa è quasi un consiglio più che una missione, {name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    Questa è quasi un consiglio più che una missione, {player_name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Se delle persone hanno dei discorsi in sospeso, è facile che li tirino fuori appena saranno vicine.
     Per questo ti offro un suggerimento: prova a vedere cosa succede se {charNameOne} e {charNameTwo} sono assieme.
     E poi torna da me.
@@ -97,7 +97,7 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    Qualcunx ti ha scritto, {name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    Qualcunx ti ha scritto, {player_name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Perché non vai a vedere cosa ha da condividere con te?
     Trovi le lettere attaccate alla bacheca vicino alla fermata del treno.
     E il loro contenuto si aggiorna man mano che la loro vita continua.
@@ -111,7 +111,7 @@
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
-    La biblioteca è piena di racconti, {name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    La biblioteca è piena di racconti, {player_name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Perché non vai a prenderti un po' di tempo e leggerti qualcosa?
     Poi torna da me, e ti darò quello che ti serve.
         ~ activeMissions += missionEight

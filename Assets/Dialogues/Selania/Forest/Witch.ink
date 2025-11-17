@@ -67,27 +67,27 @@
         <b>Ci.</b>
         La cicatrice rimane, ma da essa esplode la vita.
         Torniamo a percepirci, questa è gioia.
-        E {name} ci ha portato questa gioia.
-        E {name}, cosa si domanda?
+        E {player_name} ci ha portato questa gioia.
+        E {player_name}, cosa si domanda?
         
             + [Posso sfiorarti?]
-                ~ playerGreen ++
+                ~ player_green ++
                 Sfioraci.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                {name} sente la voce del Canto delle Compagne.
-                {name} realizza che è collegata a {charNameOne}.
+                {player_name} sente la voce del Canto delle Compagne.
+                {player_name} realizza che è collegata a {charNameOne}.
                 Che tutto riporta a pochi istanti fa, quando ha sfiorato il suo stesso viso, e ha portato un ricordo.
-                E quel ricordo, {name}, è ora che ci stai sfiorando.
+                E quel ricordo, {player_name}, è ora che ci stai sfiorando.
                 
             + [Esci dalla mia testa!]
-                ~ playerRed ++
-                Non siamo nella testa di {name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                Non più di quanto {name} sia nella sua testa.
-                Non meno di quanto {name} sia nella nostra.
-                È come se {name} ci chiedesse di non essere.
+                ~ player_red ++
+                Non siamo nella testa di {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                Non più di quanto {player_name} sia nella sua testa.
+                Non meno di quanto {player_name} sia nella nostra.
+                È come se {player_name} ci chiedesse di non essere.
                 E questa è una cosa che non è e non sarà.
                 
             + [Le piante non dovrebbero parlare.]
-                ~ playerBlue ++
+                ~ player_blue ++
                 Non siamo una pianta.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Ma siamo una pianta.
                 E non parliamo.
@@ -98,18 +98,18 @@
                 Assieme a te.
                 
             + [Ci piace la gioia!]
-                ~ playerYellow ++
-                E a noi piace {name}.
+                ~ player_yellow ++
+                E a noi piace {player_name}.
                 E tutte le emozioni che si spostano in questo terreno e nell'aria.
-                E tutti i tempi che {name} vive, ha vissuto e vivrà.
+                E tutti i tempi che {player_name} vive, ha vissuto e vivrà.
             
             + [La tua voce mi guida dal mio arrivo.]
-                ~ playerPurple ++
-                E la tua guida noi, {name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                ~ player_purple ++
+                E la tua guida noi, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 La separazione è una illusione.
-                {name} è noi, noi siamo {charNameOne}.
+                {player_name} è noi, noi siamo {charNameOne}.
                 {charNameOne} è {charNameTwo} che è {charNameFive}.
-                E {charNameFive} è {name}.
+                E {charNameFive} è {player_name}.
             -
             
         Noi sussurriamo nella tua testa, ma ascoltiamo anche.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -119,8 +119,8 @@
         E un sorriso.
             - (nameWitch)
         Queste radici cercano di imparare le voci del terreno.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        E il terreno ci racconta che {name} ha appena compiuto qualcosa di importante.
-            ~ somethingStrange ++
+        E il terreno ci racconta che {player_name} ha appena compiuto qualcosa di importante.
+            ~ player_somethingStrange ++
                 {
                     - not first_story_ended_check && firstStory == StoryEnded:
                         -> first_story_ended_check
@@ -142,60 +142,60 @@
         {
             - came_from(->intro):Che ha compiuto qualcosa per la prima volta.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             
-            - else: Riaccogliamo con piacere {name}, per quanto non si sia mai davvero {pronouns has him:allontanato|{pronouns has her:allontanata|allontanatə}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}}.
+            - else: Riaccogliamo con piacere {player_name}, per quanto non si sia mai davvero {player_pronouns has him:allontanato|{player_pronouns has her:allontanata|allontanatə}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}}.
         }
         
-        Osserviamo {name} e ci chiediamo cosa provi dopo aver aiutato {charNameOne}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        Osserviamo {player_name} e ci chiediamo cosa provi dopo aver aiutato {charNameOne}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
             + [Mi chiedo se sono all'altezza di tutto questo.]
-                    ~ playerGreen ++
+                    ~ player_green ++
                 All'altezza per {charNameOne}?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                All'altezza per {name}?
+                All'altezza per {player_name}?
                 O all'altezza per soddisfare {charNameFive}?
-                La serra è tiepida, la stazione attende, e le nubi dicono che {name} è dove deve essere.
+                La serra è tiepida, la stazione attende, e le nubi dicono che {player_name} è dove deve essere.
                 
             + [Sono felice per lei, ma il mondo non dovrebbe fare così paura.]
-                    ~ playerRed ++
+                    ~ player_red ++
                 Non è il mondo a fare paura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Il mondo gira e muta e muore e rinasce.
                 Sono le regole degli uomini a generare la paura.
-                Ma così come l'acqua cancella anche la pietra più dura, {name} e {charNameOne} possono piegare le regole più severe.
+                Ma così come l'acqua cancella anche la pietra più dura, {player_name} e {charNameOne} possono piegare le regole più severe.
                 Con l'aiuto di altre goccie.
                 
             + [Non ho apprezzato la sua mancanza di senso pratico.]
-                    ~ playerBlue ++
+                    ~ player_blue ++
                 {charNameOne} possiede un forte senso pratico.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                Soltanto, è diverso da quello di {name}.
+                Soltanto, è diverso da quello di {player_name}.
                 O di {charNameFive}.
                 Il senso pratico del falco va verso l'alto.
                 Quello della talpa verso il basso.
                 E {charNameOne} segue ora la sua direzione.
                 
             + [Pensavo sarebbe stato più divertente.]
-                    ~ playerYellow ++
+                    ~ player_yellow ++
                 Quando il leone salta su un altro leone, trova la rissa.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Ma quando un leoncino salta su un altro leoncino, trova ruzzoloni e corse.
                 Il gioco non è nell'azione, ma nell'attitudine.
-                Quale attitudine è radicata nelle azioni di {name}?
+                Quale attitudine è radicata nelle azioni di {player_name}?
             
             + [Spero che {charNameOne} sia capace di portare il suo cambiamento nel mondo.]
-                    ~ playerPurple ++
+                    ~ player_purple ++
                 La luna distante sposta oceani.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Il vento invisibile sradica alberi.
                 {charNameOne} respira e il mondo ruota un po' più rapido.
-                E {name} decide di osservare le cose nell'interezza.
+                E {player_name} decide di osservare le cose nell'interezza.
                     
             -
-        L'acqua nel terreno ci racconta che {charNameFive} ha molto aiutato {name} in questo viaggio.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        Anche noi vogliamo aiutare {name}, e per questo condividiamo una cosa.
-        {name} può seguire la voce di {charNameFive} e scegliere di studiare la persona che ha davanti come un uomo studia la vita attraverso un libro.
-        Oppure {name} può decidere di essere sé {pronouns has him:stesso|{pronouns has her:stessa|stessə}}, anche se questo può creare attrito con l'altra persona.
+        L'acqua nel terreno ci racconta che {charNameFive} ha molto aiutato {player_name} in questo viaggio.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        Anche noi vogliamo aiutare {player_name}, e per questo condividiamo una cosa.
+        {player_name} può seguire la voce di {charNameFive} e scegliere di studiare la persona che ha davanti come un uomo studia la vita attraverso un libro.
+        Oppure {player_name} può decidere di essere sé {player_pronouns has him:stesso|{player_pronouns has her:stessa|stessə}}, anche se questo può creare attrito con l'altra persona.
         E scoprire che c'è chi ha bisogno di venir contraddettə.
         A volte l'attrito genera fastidio, o volte genera fuoco.
         A volte brucia il vecchio, permettendo al nuovo di crescere.
         Nessuna persona è uguale, nessuna persona vuole lo stesso trattamento.
         Ma funghi solleticano e distraggono le nostre rinascenti radici.
-        Ringraziandoti ancora {name} per ora ci congediamo.
+        Ringraziandoti ancora {player_name} per ora ci congediamo.
         Ma anche dall'altra parte del mondo sai già che non saremo mai lontani.
         
         @animation:RewriterBook
@@ -213,20 +213,20 @@
         {
             - came_from(->intro):Che ha compiuto qualcosa per la prima volta.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             
-            - else: Siamo così felici di riavere {name} qui con noi, per quanto non l'abbiamo mai {pronouns has him:lasciato solo|{pronouns has her:lasciata sola|lasciatə solə}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            - else: Siamo così felici di riavere {player_name} qui con noi, per quanto non l'abbiamo mai {player_pronouns has him:lasciato solo|{player_pronouns has her:lasciata sola|lasciatə solə}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         }
         
         Un nuovo pezzo di statua saggia il cielo.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         L'aria finalmente ci rinfresca.
-        E gli uccelli ci raccontano cose su {name}.
+        E gli uccelli ci raccontano cose su {player_name}.
         E su quello che ha fatto per {charNameTwo}.
-        E noi ci chiediamo: come sta {name} ora che {charNameTwo} è libero?
+        E noi ci chiediamo: come sta {player_name} ora che {charNameTwo} è libero?
         
             + [Mi chiedo chi sarei ora, con una famiglia diversa alle spalle.]
-                    ~ playerGreen ++
+                    ~ player_green ++
                 La gemma sul ramo ignora il tronco, eppure cresce.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Il girino nuota, non importa la dimensione dello stagno.
-                {name} prova a riscrivere il passato: non si ama per ciò che è in questo presente?
+                {player_name} prova a riscrivere il passato: non si ama per ciò che è in questo presente?
      
             + [Secondo te serve uno scopo più grande per vivere davvero?]
                 La rondine crea un nido di paglia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -235,33 +235,33 @@
                 Arricchiscono il terreno.
                 In primavera l'erba ricresce, col caldo si secca.
                 E la rondine ha paglia a sufficienza per un nuovo nido.
-                    ~ playerPurple ++
+                    ~ player_purple ++
                             
             + [Nonostante tutto, mi ha fatto rivalutare la forza della rabbia.]
                 La lava scorre e brucia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Ma col tempo rende il terreno fertile.
                 E dove prima cresceva solo erba, ora c'è un'intera foresta.
-                    ~ playerRed ++
+                    ~ player_red ++
                 
             + [Avevo dimenticato quanto conforto possa dare il sapere.]
                 Il sapere è una luce.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Il sapere è un rifugio.
                 Una luce troppo forte confonde strada e burrone.
                 Un rifugio col tempo può diventare prigione.
-                    ~ playerBlue ++
+                    ~ player_blue ++
          
             + [Dovrei reimparare a giocare, a prendere le cose alla leggera.]
                 Le radici ridono quando l'erba fa solletico.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Le foglie ridono quando il vento le sfiora.
-                {name} forse ride quando non è {pronouns has him:solo|{pronouns has her:sola|solə}}.
-                    ~ playerYellow ++
+                {player_name} forse ride quando non è {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}.
+                    ~ player_yellow ++
             -
         
         L'acqua ci ha portato le lacrime di {charNameFive}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         Questa storia per lei è stata faticosa.
         Le sue radici sembrano solide, ma il tronco ondeggia a ogni accenno di burrasca.
-        Forse {name} può essere il suo sostegno.
-        O forse {name} può lasciarla cadere, e ricominciare.
+        Forse {player_name} può essere il suo sostegno.
+        O forse {player_name} può lasciarla cadere, e ricominciare.
         Ora noi ci godiamo la brezza e il sole.
         Ma più tardi tornaci a trovare.
         
@@ -277,19 +277,19 @@
         ~ temp charNameFive = translator(fifthCharacterState)
         
         + [Mi chiedo se sono all'altezza di tutto questo.]
-                ~ playerGreen ++
+                ~ player_green ++
             
         + [Sono felice per lei, ma il mondo non dovrebbe fare così paura.]
-                ~ playerRed ++
+                ~ player_red ++
             
         + [Non ho apprezzato la sua mancanza di senso pratico.]
-                ~ playerBlue ++
+                ~ player_blue ++
      
         + [Pensavo sarebbe stato più divertente.]
-                ~ playerYellow ++
+                ~ player_yellow ++
  
         + [Spero che {charNameOne} sia capace di portare il suo cambiamento nel mondo.]
-                ~ playerPurple ++
+                ~ player_purple ++
         -        
             -> main  
         
@@ -301,19 +301,19 @@
         ~ temp charNameFive = translator(fifthCharacterState)
         
         + [Mi chiedo se sono all'altezza di tutto questo.]
-                ~ playerGreen ++
+                ~ player_green ++
             
         + [Sono felice per lei, ma il mondo non dovrebbe fare così paura.]
-                ~ playerRed ++
+                ~ player_red ++
             
         + [Non ho apprezzato la sua mancanza di senso pratico.]
-                ~ playerBlue ++
+                ~ player_blue ++
      
         + [Pensavo sarebbe stato più divertente.]
-                ~ playerYellow ++
+                ~ player_yellow ++
  
         + [Spero che {charNameOne} sia capace di portare il suo cambiamento nel mondo.]
-                ~ playerPurple ++
+                ~ player_purple ++
         -        
         
             -> main 
@@ -326,19 +326,19 @@
         ~ temp charNameFive = translator(fifthCharacterState)
         
         + [Mi chiedo se sono all'altezza di tutto questo.]
-                ~ playerGreen ++
+                ~ player_green ++
             
         + [Sono felice per lei, ma il mondo non dovrebbe fare così paura.]
-                ~ playerRed ++
+                ~ player_red ++
             
         + [Non ho apprezzato la sua mancanza di senso pratico.]
-                ~ playerBlue ++
+                ~ player_blue ++
      
         + [Pensavo sarebbe stato più divertente.]
-                ~ playerYellow ++
+                ~ player_yellow ++
  
         + [Spero che {charNameOne} sia capace di portare il suo cambiamento nel mondo.]
-                ~ playerPurple ++
+                ~ player_purple ++
         -        
             -> main
 
@@ -393,7 +393,7 @@ C'è un libro ai piedi del tronco, e porta il tuo nome.#speaker:{witch_tag()} #i
     ~ move_entity(WitchRecap, BookPlace)
     ~ move_entity(miniBook, Bedroom)
     ~ move_entity(nightTable, Bedroom)
-    ~ somethingStrange ++
+    ~ player_somethingStrange ++
     -> main
 
 

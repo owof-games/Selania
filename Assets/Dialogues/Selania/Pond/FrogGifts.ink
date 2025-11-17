@@ -4,7 +4,7 @@
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
-Quindi, come posso aiutarti {name}? #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 
 - (top)
     
@@ -18,7 +18,7 @@ Quindi, come posso aiutarti {name}? #speaker:{frog_tag()} #inkA:offState #inkB:o
                         -> top
             - else:
                 {
-                    - (firstGift == () && charOneGifts hasnt charOneCultivable) or (!ending_cooking_with_first_char && charOneGifts hasnt charOneCooking) or (playerAccessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord) or (playerAccessiblePlaces has Library && charOneGifts hasnt charOneLibrary):
+                    - (firstGift == () && charOneGifts hasnt charOneCultivable) or (!ending_cooking_with_first_char && charOneGifts hasnt charOneCooking) or (player_accessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord) or (player_accessiblePlaces has Library && charOneGifts hasnt charOneLibrary):
                         Credo proprio di poterti aiutare. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         -> frog_gift_dispatcher
                     
@@ -40,7 +40,7 @@ Quindi, come posso aiutarti {name}? #speaker:{frog_tag()} #inkA:offState #inkB:o
                         -> top
             - else:
                 {
-                    - (secondGift == () && charTwoGifts hasnt charTwoCultivable) or (!ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking) or (playerAccessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord) or (playerAccessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary):
+                    - (secondGift == () && charTwoGifts hasnt charTwoCultivable) or (!ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking) or (player_accessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord) or (player_accessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary):
                         Credo proprio di poterti aiutare. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         -> frog_gift_dispatcher
                     
@@ -201,7 +201,7 @@ Quindi, come posso aiutarti {name}? #speaker:{frog_tag()} #inkA:offState #inkB:o
                 
             }
             
-        + {playerAccessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord} [Che tipo di parole colorate apprezza?]
+        + {player_accessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord} [Che tipo di parole colorate apprezza?]
                 ~ charOneGifts += charOneEmotionalWord
                 {charNameOne} è una persona con idee molto sicure su tante cose.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Ma una cosa è certa: odia i discorsi troppo blu.
@@ -209,7 +209,7 @@ Quindi, come posso aiutarti {name}? #speaker:{frog_tag()} #inkA:offState #inkB:o
                 Perché in questo modo potresti già avere la soluzione.
                 -> closed_exchange
         
-        + {playerAccessiblePlaces has Library && charOneGifts hasnt charOneLibrary} [C'è un racconto della biblioteca che ha nel cuore?]
+        + {player_accessiblePlaces has Library && charOneGifts hasnt charOneLibrary} [C'è un racconto della biblioteca che ha nel cuore?]
             ~ charOneGifts += charOneLibrary
                 {
                     - readStories has Salvo:
@@ -343,7 +343,7 @@ Quindi, come posso aiutarti {name}? #speaker:{frog_tag()} #inkA:offState #inkB:o
             }
                     -> closed_exchange
                     
-        + {playerAccessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord} [Che tipo di parole colorate apprezza?]
+        + {player_accessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord} [Che tipo di parole colorate apprezza?]
             ~ charTwoGifts += charTwoEmotionalWord
                 {charNameTwo} è una bella testolina.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 E quello che posso dirti con certezza, è che apprezza la coerenza.
@@ -351,7 +351,7 @@ Quindi, come posso aiutarti {name}? #speaker:{frog_tag()} #inkA:offState #inkB:o
                 Se hai capito come funziona l'alchimia del nido, sono sicuro che avrai già capito cosa fare.
                         -> closed_exchange
                 
-        + {playerAccessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary} [C'è un racconto della biblioteca che ha nel cuore?] 
+        + {player_accessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary} [C'è un racconto della biblioteca che ha nel cuore?] 
             ~ charTwoGifts += charTwoLibrary
         {
                     - readStories has Lamia:
@@ -405,7 +405,7 @@ Quindi, come posso aiutarti {name}? #speaker:{frog_tag()} #inkA:offState #inkB:o
 === closed_exchange
 {frogDebug: passo closed_exchange.}
 E con questo è tutto! #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-A dopo {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+A dopo {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     -> special_mission_pause_check ->
     //Svuoto il destinatario della missione attuale per sicurezza
     ~ currentMissionAboutChar = ()

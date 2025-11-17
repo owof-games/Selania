@@ -2,7 +2,8 @@
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
 {debug: <i>La lista degli oggetti nella stanza è: {bedroomContents}.}
-            ~ book_arrivingFromTracking = Bedroom
+    
+    ~ book_arrivingFromTracking = Bedroom
 
     {
         - bedroom == 1:
@@ -14,7 +15,11 @@
         -> main
 
 
+
+
+
 === settings_management
+//Gestione delle impostazioni, raggiungibie dal libro e dalla camera da letto
     + {are_two_entities_together(PG, settings)} [settings]
         In futuro qui troverai le impostazioni.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             -> main

@@ -102,11 +102,11 @@ LIST speakersForEwWordTag = Influenced, Other
     
 === function PG_tag
     {
-        - nameChosen == false:
+        - player_nameChosen == false:
             ~ return "???"
             
         - else:
-            ~ return "{name}"
+            ~ return "{player_name}"
     
     }
   

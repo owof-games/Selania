@@ -13,7 +13,7 @@
 
 {
 
-        - name == "Senza nome":
+        - player_name == "Senza nome":
             -> name_choice -> gender ->
 }                
 

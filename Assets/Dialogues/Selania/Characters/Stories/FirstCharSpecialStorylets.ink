@@ -1,6 +1,6 @@
 === take_this_book
 //Se non abbiamo raccolto il libro della riscrittora autonomamente
-    Ehi, {name}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+    Ehi, {player_name}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     Prima ai piedi di quel vecchio tronco ho trovato questo libro.
     E ha il tuo nome.
     Hai unə ammiratorə segretə?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
@@ -12,7 +12,7 @@
         ~ move_entity(miniBook, Bedroom)
         ~ move_entity(nightTable, Bedroom)
         @animation:RewriterBook
-        ~ somethingStrange ++
+        ~ player_somethingStrange ++
             {
                 - forestContents has PG:
                     ~ move_entity(RewriterBook, Forest)

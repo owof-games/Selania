@@ -28,15 +28,15 @@
             -> questions
             
         //Sulla funzione della serra
-        - playerAccessiblePlaces has Greenhouse && not about_greenhouse && tutorialPauses == false:
+        - player_accessiblePlaces has Greenhouse && not about_greenhouse && tutorialPauses == false:
             -> about_greenhouse
             
         //Sulla funzione della cucina
-        - playerAccessiblePlaces has Kitchen &&not about_kitchen && tutorialPauses == false:
+        - player_accessiblePlaces has Kitchen &&not about_kitchen && tutorialPauses == false:
             -> about_kitchen
         
         //Sulla funzione del nido    
-        - playerAccessiblePlaces has Nest && not about_nest && tutorialPauses == false:
+        - player_accessiblePlaces has Nest && not about_nest && tutorialPauses == false:
             -> about_nest    
             
             

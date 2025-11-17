@@ -170,7 +170,7 @@
                 -> mission_six
             - 7 && availableMissions has missionSeven && (trainStopContents has FirstCharacterNotes) or (trainStopContents has SecondCharacterNotes):
                 -> mission_seven
-            - 8 && playerAccessiblePlaces has Library:
+            - 8 && player_accessiblePlaces has Library:
                 -> mission_eight
             - else:
                 {frogDebug: il valore di diceFrog è {diceFrog}, e la missione associata è già stata fatta. Ritiro il dado.}
@@ -195,14 +195,14 @@
         - missionOne:
             {
                 - first_character_recap.check && second_character_recap.check && greenhouse_recap.check:
-                    Hai letto le pagine del libro, grande {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Hai letto le pagine del libro, grande {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ activeMissions = ()
                         ~ availableMissions -= missionOne
                             -> frog_about_who_questions
                 
                 - else:
-                    Ricorda {name}: leggere è importante!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Ricorda {player_name}: leggere è importante!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Torna da me quando avrai esplorato il tuo libro.
                         -> main
             
@@ -211,13 +211,13 @@
         - missionTwo:
             {
                 - LIST_COUNT(backupCultivable) < 12:
-                    La serra sta crescendo grazie a te, {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    La serra sta crescendo grazie a te, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ availableMissions -= missionTwo
                         ~ activeMissions = ()
                             -> frog_about_who_questions
                 - else:
-                    Ricorda {name}: la serra ha bisogno di te.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Ricorda {player_name}: la serra ha bisogno di te.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Torna da me quando avrai almeno tre piante fiorite.
                         -> main            
             }
@@ -225,14 +225,14 @@
         - missionThree:
             {
                 - mindfulness:
-                    Grazie per aver parlato con Mentore, {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Grazie per aver parlato con Mentore, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Son sicuro che si sente più utile ora.
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ availableMissions -= missionThree
                         ~ activeMissions = ()
                             -> frog_about_who_questions
                 - else:
-                    Ricorda {name}: Mentore vuole condividere con te i suoi consigli per farti sentire meglio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Ricorda {player_name}: Mentore vuole condividere con te i suoi consigli per farti sentire meglio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Torna da me quando le avrai parlato del tuo benessere.
                         -> main  
             }
@@ -240,13 +240,13 @@
         - missionFour:
             {
                 - little_storylets:
-                    Grazie per aver condiviso le cose che hai scoperto con Mentore, {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Grazie per aver condiviso le cose che hai scoperto con Mentore, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ availableMissions -= missionFour
                         ~ activeMissions = ()
                             -> frog_about_who_questions
                 - else:
-                    Ricorda {name}: Mentore ci tiene a sentire le cose che hai scoperto su questo luogo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Ricorda {player_name}: Mentore ci tiene a sentire le cose che hai scoperto su questo luogo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Torna da me quando avrai condiviso con lei qualcosa di insolito.
                         -> main  
             }        
@@ -254,7 +254,7 @@
         - missionFive:
             {
                 - first_second_chit_chat:
-                    Hai ascoltato la conversazione tra Chitarra e Riccio, e ne sono felice {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Hai ascoltato la conversazione tra Chitarra e Riccio, e ne sono felice {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Anche se è difficile come posizione per unx Riscrittora: spesso una scelta in queste condizioni può far felice una persona, e scontentare l'altra.
                     Questa cosa accadrà altre volte, per cui: se vedi due personagge nello stesso luogo, prova a vedere se hanno qualcosa da dirsi.
                     
@@ -263,7 +263,7 @@
                         ~ activeMissions = ()
                             -> frog_about_who_questions
                 - else:
-                    Ricorda {name}: prova a parlare con Riccio e Chitarra quando sono assieme.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Ricorda {player_name}: prova a parlare con Riccio e Chitarra quando sono assieme.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Torna da me quando avrai sentito cosa hanno da dirsi.
                         -> main  
             }         
@@ -271,7 +271,7 @@
         - missionSix:
             {
                 - talking_witch.intro:
-                    Hai parlato con l'albero, {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Hai parlato con l'albero, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     E non sta a me chiederti cosa vi siete dett3, ma spero tu possa aver trovato un'alleata in questo percorso.
                     
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
@@ -279,7 +279,7 @@
                         ~ activeMissions = ()
                             -> frog_about_who_questions
                 - else:
-                    Ricorda {name}: prova a parlare con l'albero della foresta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Ricorda {player_name}: prova a parlare con l'albero della foresta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     E poi torna da me.
                         -> main  
             } 
@@ -287,7 +287,7 @@
         - missionSeven:
             {
                 - first_character_notes.check or second_character_notes.check:
-                    Hai letto la lettera che ti è stata inviata, {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Hai letto la lettera che ti è stata inviata, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Ricordati di darci un'occhiata ogni tanto, così da sapere come avanza la storia delle persone che hai aiutato.
                     
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
@@ -295,7 +295,7 @@
                         ~ activeMissions = ()
                             -> frog_about_who_questions
                 - else:
-                    Ricorda {name}: leggi la lettera che hai ricevuto alla fermata del treno.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Ricorda {player_name}: leggi la lettera che hai ricevuto alla fermata del treno.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     E poi torna da me.
                         -> main  
             }
@@ -303,7 +303,7 @@
         - missionEight:
             {
                 - readStories != ():
-                    Hai letto una della storie della biblioteca, {name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Hai letto una della storie della biblioteca, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     La biblioteca è un posto di riposo, ma non solo.
                     Anche alle persone che popolano questo posto piace leggere.
                     E a volte, se avete avuto una lettura in comune, potresti scoprire qualcosa di più su di loro.
@@ -313,7 +313,7 @@
                         ~ activeMissions = ()
                             -> frog_about_who_questions
                 - else:
-                    Ricorda {name}: leggi una delle storie della biblioteca.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Ricorda {player_name}: leggi una delle storie della biblioteca.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     E poi torna da me.
                         -> main  
             }
@@ -322,7 +322,7 @@
         - specialMissionOne:
             {
                 - special_mission_one_dialogue:
-                    Hai assistito alla discussione tra Riccio e Mentore, {name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Hai assistito alla discussione tra Riccio e Mentore, {player_name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     {
                         - special_mission_one_dialogue.not_intervention:
                             E hai deciso di non intervenire.
@@ -350,7 +350,7 @@
                     -> main
                     
                 - else:
-                Ricorda {name}: ascolta la discussione tra Mentore e Riccio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Ricorda {player_name}: ascolta la discussione tra Mentore e Riccio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     E poi torna da me.
                     -> main
             }
@@ -358,7 +358,7 @@
         - specialMissionTwo:
             {
                 - cooking_alone :
-                    Hai cucinato in autonomia, {name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Hai cucinato in autonomia, {player_name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Per questo ti dono una ingrediente universale, che potrai utilizzare per cucinare con le altre persone, e apprezzeranno sempre.
                     
                     @animation:Inventory
@@ -372,7 +372,7 @@
                     -> main
                     
                 - else:
-                Ricorda {name}: ascolta la discussione tra Mentore e Riccio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Ricorda {player_name}: ascolta la discussione tra Mentore e Riccio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     E poi torna da me.
                     -> main
             }
@@ -409,7 +409,7 @@
 }
     
 - (top)
-    Sono affaticato, {name}. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    Sono affaticato, {player_name}. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Torna più tardi.
     E ricordati di riposare anche tu.
 

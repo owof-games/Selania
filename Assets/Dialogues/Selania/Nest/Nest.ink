@@ -32,7 +32,7 @@
 === emotional_inventory_management
 //Ogni volta che scopriamo una nuova parola, possiamo ignorarla, aggiungerla all'inventario, sostituire una parola dell'inventario con questa
 //Qui è dove aggiungiamo, togliamo, limitiamo l'uso delle parole emozionali. Avremo:
-    Cosa desidera fare {name}?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    Cosa desidera fare {player_name}?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
     
     //Se ho almeno una parola

@@ -72,7 +72,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     -> step_one
 
     = step_one
-    {name} desidera una storia veloce come una pulce o lenta come la notte?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    {player_name} desidera una storia veloce come una pulce o lenta come la notte?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         + {shortStories != ()} [Qualcosa di brevissimo (max 1500 battute).]
         //(1500 battute max)
             ~ readingDuration += Short
@@ -157,15 +157,15 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     = about_unprepared
     La biblioteca ti offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
-        + {readingDuration has Short && shortStories^ aboutUnprepared != ()} [Che mi colga<b> {pronouns has him:impreparato|{pronouns has her:impreparata|impreparatə}}</b>].
+        + {readingDuration has Short && shortStories^ aboutUnprepared != ()} [Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b>].
             ~ book = LIST_RANDOM(shortStories^ aboutUnprepared)
          -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutUnprepared != ()} [Che mi colga<b> {pronouns has him:impreparato|{pronouns has her:impreparata|impreparatə}}</b>.]
+        + {readingDuration has Average && averageStories^ aboutUnprepared != ()} [Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b>.]
             ~ book = LIST_RANDOM(averageStories ^ aboutUnprepared)
         -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutUnprepared != ()} [Che mi colga<b> {pronouns has him:impreparato|{pronouns has her:impreparata|impreparatə}}</b>.]
+        + {readingDuration has Long && longStories^ aboutUnprepared != ()} [Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b>.]
             ~ book = LIST_RANDOM(longStories ^ aboutUnprepared)
         -> from_list_to_books            
         

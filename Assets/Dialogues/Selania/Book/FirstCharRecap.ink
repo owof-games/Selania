@@ -43,7 +43,7 @@
     - first_character_notes.two:
         <b><i>Seconda lettera di {charNameOne}.</b></i>: <>
         
-        Ciao {name}, qui è sempre {charNameOne} che ti scrive. Sono passate settimane dal mio ritorno, e finalmente ho avuto il coraggio di parlare con mio padre. <>
+        Ciao {player_name}, qui è sempre {charNameOne} che ti scrive. Sono passate settimane dal mio ritorno, e finalmente ho avuto il coraggio di parlare con mio padre. <>
 
            {
                 - firstCharacterPossibleStates has Triangolo:
@@ -69,7 +69,7 @@
         <b><i>Prima lettera di {charNameOne}.</b></i>: <>
     
     
-        Ciao {name}, come stai? Alla fine Talco è sempre statə qui, me idiota. E ha creduto alla mia storia! Ora si è messə in testa di insegnare agli scoiattoli a suonare le noci. <>
+        Ciao {player_name}, come stai? Alla fine Talco è sempre statə qui, me idiota. E ha creduto alla mia storia! Ora si è messə in testa di insegnare agli scoiattoli a suonare le noci. <>
 
            {
                 - firstCharacterPossibleStates has Triangolo:
@@ -235,7 +235,7 @@
     
     {
         - knowing_first_character.one:
-            Ho conosciuto una persona nuova, si chiama {charNameOne}. Quando l'ho incontrata era preoccupata perché non riesce a trovare lə sua migliore amicə, Talco. Non le piace molto il suo nome, ha l'impressione che essere una {charNameOne} per una come lei, che ha fatto il conservatorio, significhi arrendersi. Quando mi ha chiesto che nome dovrebbe avere secondo me, non sono {pronouns has him:stato|{pronouns has her:stata|statə}} capace di darle una risposta.
+            Ho conosciuto una persona nuova, si chiama {charNameOne}. Quando l'ho incontrata era preoccupata perché non riesce a trovare lə sua migliore amicə, Talco. Non le piace molto il suo nome, ha l'impressione che essere una {charNameOne} per una come lei, che ha fatto il conservatorio, significhi arrendersi. Quando mi ha chiesto che nome dovrebbe avere secondo me, non sono {player_pronouns has him:stato|{player_pronouns has her:stata|statə}} capace di darle una risposta.
         
     }
     

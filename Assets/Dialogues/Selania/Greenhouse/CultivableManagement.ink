@@ -873,7 +873,7 @@ QUESTIONS
      ~ thirteenthQuest = true
     {debugCultivable: Entro in thirteenthQuest. {thirteenthQuest: thirteenthQuest ora = true|thirteenthQuest = false}.}
     
-        {pronouns has him: Il riscrittore...|{pronouns has her:La riscrittora...|Lə riscrittorə...}}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        {player_pronouns has him: Il riscrittore...|{player_pronouns has her:La riscrittora...|Lə riscrittorə...}}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
             + [{~Assapora sulla lingua il sapore del cambiamento|Sente sulle mani un accesso di futuro|Freme nel lanciarsi verso ciò che arriverà}.]
                     ~ cropsType += understanding

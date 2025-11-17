@@ -20,7 +20,7 @@
 - (top)
     {
         - welcoming_frog.top == 1:
-            ~ somethingStrange ++
+            ~ player_somethingStrange ++
             ~ saturationVar ++
             ~ book_BGVariations ++
             ~ move_entity(bowl, Bedroom)
@@ -37,10 +37,10 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
         
       + [Chiedo un aiuto alla rana.]
       {frogDebug: il valore di availableSpecialMissions è {availableSpecialMissions}.}
-      {frogDebug: playerAccessiblePlaces contiene {playerAccessiblePlaces}.}
+      {frogDebug: player_accessiblePlaces contiene {player_accessiblePlaces}.}
 
     {       //Special mission one offre la nota
-        - pauseSpecialMission < 1 && (availableSpecialMissions has specialMissionOne) && (playerAccessiblePlaces ? Nest):
+        - pauseSpecialMission < 1 && (availableSpecialMissions has specialMissionOne) && (player_accessiblePlaces ? Nest):
             {frogDebug: condizioni rispettate per poter offrire la prima missione speciale.}
                 -> special_mission_one
             
@@ -49,7 +49,7 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
                 -> autonomy_mission_verify
         
             //Special mission two offre l'ingrediente universale
-        - pauseSpecialMission < 1 && (availableSpecialMissions has specialMissionTwo) && (playerAccessiblePlaces ? Kitchen):
+        - pauseSpecialMission < 1 && (availableSpecialMissions has specialMissionTwo) && (player_accessiblePlaces ? Kitchen):
             {frogDebug: condizioni rispettate per poter offrire la seconda missione speciale.}
                 -> special_mission_two      
     
@@ -58,11 +58,11 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
             {frogDebug: condizioni rispettate per poter offrire info sull'ingrediente per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - firstStory == StoryStarted && playerAccessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord:
+        - firstStory == StoryStarted && player_accessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord:
             {frogDebug: condizioni rispettate per poter offrire info su parola per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - firstStory == StoryStarted && playerAccessiblePlaces has Library && charOneGifts hasnt charOneLibrary:
+        - firstStory == StoryStarted && player_accessiblePlaces has Library && charOneGifts hasnt charOneLibrary:
             {frogDebug: condizioni rispettate per poter offrire info su racconto per Chitarra.}
                 -> autonomy_mission_verify
                 
@@ -74,11 +74,11 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
             {frogDebug: condizioni rispettate per poter offrire info su ingrediente per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - secondStory == StoryStarted && playerAccessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord:
+        - secondStory == StoryStarted && player_accessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord:
             {frogDebug: condizioni rispettate per poter offrire info sul dono per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - secondStory == StoryStarted && playerAccessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary:
+        - secondStory == StoryStarted && player_accessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary:
             {frogDebug: condizioni rispettate per poter offrire info su parola per Chitarra.}
                 -> autonomy_mission_verify
                 
@@ -87,7 +87,7 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
                 -> autonomy_mission_verify
                 
         - LIST_COUNT(charOneGifts) == 4 && LIST_COUNT(charTwoGifts) == 4 && availableSpecialMissions == ():
-            Non ho più niente da offrirti {name}. Ora è tutto nelle tue mani#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+            Non ho più niente da offrirti {player_name}. Ora è tutto nelle tue mani#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 -> main
         
         - else:
