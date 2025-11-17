@@ -4,7 +4,7 @@ VAR currentReceiver = ()
 
 
 === inventory_contents ===
-+ {are_two_entities_together(Inventory, PG) && !debugStochastic}[Inventory]
++ {are_two_entities_together(Inventory, PG) && !debug_stochastic}[Inventory]
     ~ enableBigDialogue()
     {findedGifts != (): -> inventory ->|-> empty ->}
     ~ disableBigDialogue()
