@@ -23,8 +23,8 @@
     VAR frog_maxValueRandomMissionDice = ()
 
         //Pausa tra una missione speciale e l'altra
-    VAR pauseSpecialMission = 0
-    VAR pauseSpecialMissionMax = 1
+    VAR frog_pauseSpecialMission = 0
+    VAR frog_pauseSpecialMissionMax = 1
 
 
 
@@ -35,9 +35,9 @@
                                      ----------------------------------*/
 
 //Lista di tutto ciò che posso "donare" per ogni personaggia
-    LIST allCharOneGifts = charOneCultivable, charOneCooking, charOneEmotionalWord, charOneLibrary
-    LIST allCharTwoGifts = charTwoCultivable, charTwoCooking, charTwoEmotionalWord, charTwoLibrary
-    LIST universalGifts = universalIngredient
+    LIST frog_firstCharAllPossibleGifts = charOneCultivable, charOneCooking, charOneEmotionalWord, charOneLibrary
+    LIST frog_secondCharAllPossibleGifts = charTwoCultivable, charTwoCooking, charTwoEmotionalWord, charTwoLibrary
+    LIST frog_universalGifts = universalIngredient
     
     //Devo poi tracciare la quantità di cose che rana mi può dare su una persona, e che sono per lo più legate a nodi, perché sono il dono giusto, le scelte giuste da dire, al max una formula utile per parlare con quella persona.
     VAR charOneGifts = ()

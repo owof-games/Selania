@@ -346,7 +346,7 @@
                     ~ frog_currentMission = ()
                     ~ frog_aboutGiftRequest = ()
                     //Metto in pausa le missioni speciali
-                    ~ pauseSpecialMission = pauseSpecialMissionMax
+                    ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
                     -> main
                     
                 - else:
@@ -368,7 +368,7 @@
                     ~ frog_currentMission = ()
                     ~ frog_aboutGiftRequest = ()
                     //Metto in pausa le missioni speciali
-                    ~ pauseSpecialMission = pauseSpecialMissionMax
+                    ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
                     -> main
                     
                 - else:
@@ -590,10 +590,10 @@ Le condizioni per la missione data dalla rana sono state raggiunte.#speaker:{wit
 
 === special_mission_pause_check
 {debug_frog: passo da special_mission_pause_check.}    
-{debug_frog: il valore di pauseSpecialMission è {pauseSpecialMission}.}    
+{debug_frog: il valore di frog_pauseSpecialMission è {frog_pauseSpecialMission}.}    
     {
-        - pauseSpecialMission > 0:
-            ~ pauseSpecialMission --
-        {debug_frog: il valore di pauseSpecialMission è {pauseSpecialMission}.}    
+        - frog_pauseSpecialMission > 0:
+            ~ frog_pauseSpecialMission --
+        {debug_frog: il valore di frog_pauseSpecialMission è {frog_pauseSpecialMission}.}    
     }
 ->->

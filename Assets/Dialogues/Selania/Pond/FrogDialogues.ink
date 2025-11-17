@@ -40,7 +40,7 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
       {debug_frog: player_accessiblePlaces contiene {player_accessiblePlaces}.}
 
     {       //Special mission one offre la nota
-        - pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionOne) && (player_accessiblePlaces ? Nest):
+        - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionOne) && (player_accessiblePlaces ? Nest):
             {debug_frog: condizioni rispettate per poter offrire la prima missione speciale.}
                 -> special_mission_one
             
@@ -49,7 +49,7 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
                 -> autonomy_mission_verify
         
             //Special mission two offre l'ingrediente universale
-        - pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionTwo) && (player_accessiblePlaces ? Kitchen):
+        - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionTwo) && (player_accessiblePlaces ? Kitchen):
             {debug_frog: condizioni rispettate per poter offrire la seconda missione speciale.}
                 -> special_mission_two      
     
