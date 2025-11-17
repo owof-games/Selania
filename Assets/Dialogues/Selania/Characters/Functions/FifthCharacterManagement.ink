@@ -18,7 +18,7 @@
  
     
 //Tracciamento del dono
-    VAR fifthGift = ()
+    VAR fifthChar_giftedObject = ()
 
     
 //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono

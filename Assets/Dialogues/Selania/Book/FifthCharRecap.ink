@@ -103,21 +103,20 @@
     - fifth_story_gift.ink_outcome:
     {
     
-        - fifthGift == EderaDelleAmanti:
+        - fifthChar_giftedObject == EderaDelleAmanti:
             Ho donato dell'Edera delle Amanti e la reazione è stata:
-        - fifthGift == BaccaDellaAddolorata:
+        - fifthChar_giftedObject == BaccaDellaAddolorata:
             Ho donato della Bacca dell'Addolorata e la reazione è stata:
-        - fifthGift == LaSpazzata:
-            Ho donato della Spazzata e la reazione è stata:
-        - fifthGift == BrinaDellImpossibile: 
+        - fifthChar_giftedObject == LaSpazzata:
+            Ho donato della Spazz == BrinaDellImpossibile: 
             Ho donato della Brina dell'Impossibile e la reazione è stata:
-        - fifthGift == CantoDelleCompagne: 
+        - fifthChar_giftedObject == CantoDelleCompagne: 
             Ho donato del Canto delle Compagne e la reazione è stata:
-        - fifthGift == LicheneDegliAbissi: 
+        - fifthChar_giftedObject == LicheneDegliAbissi: 
             Ho donato del Lichene degli Abissi e la reazione è stata:
-        - fifthGift == NonTiScordarDiTe: 
+        - fifthChar_giftedObject == NonTiScordarDiTe: 
             Ho donato del Non Ti Scordar Di Te e la reazione è stata:
-        - fifthGift == CardoAspinato: 
+        - fifthChar_giftedObject == CardoAspinato: 
             Ho donato del Cardo Aspinato e la reazione è stata:
     
     }    
