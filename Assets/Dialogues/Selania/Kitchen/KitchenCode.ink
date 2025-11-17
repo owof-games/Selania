@@ -1,5 +1,5 @@
 //Tracciamento nome ricette
-    VAR firstRecipe = ""
+    VAR kitchen_firstRecipe = ""
     VAR secondRecipe = ""
     VAR thirdRecipe = ""
     VAR fourthRecipe = ""
@@ -84,20 +84,20 @@
 {debug_kitchen: passo per recipe_name_storage.}
 
     {
-        - firstRecipe == "":
-            {debug_kitchen: il valore di firstRecipe è {firstRecipe} e quindi lo aggiorno.}
-                ~ firstRecipe = tempRecipeName
-            {debug_kitchen: il valore di firstRecipe ora è {firstRecipe}.}
+        - kitchen_firstRecipe == "":
+            {debug_kitchen: il valore di kitchen_firstRecipe è {kitchen_firstRecipe} e quindi lo aggiorno.}
+                ~ kitchen_firstRecipe = tempRecipeName
+            {debug_kitchen: il valore di kitchen_firstRecipe ora è {kitchen_firstRecipe}.}
                 ->->
         - secondRecipe == "":
-            {debug_kitchen: il valore di firstRecipe è {firstRecipe} e quindi non lo aggiorno.}
+            {debug_kitchen: il valore di kitchen_firstRecipe è {kitchen_firstRecipe} e quindi non lo aggiorno.}
             {debug_kitchen: il valore di secondRecipe è {secondRecipe} e quindi lo aggiorno.}
                 ~ secondRecipe = tempRecipeName
             {debug_kitchen: il valore di secondRecipe ora è {secondRecipe}.}
                 ->->
         
         - thirdRecipe == "":
-            {debug_kitchen: il valore di firstRecipe è {firstRecipe} e quindi non lo aggiorno.}
+            {debug_kitchen: il valore di kitchen_firstRecipe è {kitchen_firstRecipe} e quindi non lo aggiorno.}
             {debug_kitchen: il valore di secondRecipe è {secondRecipe} e quindi non lo aggiorno.}
             {debug_kitchen: il valore di thirdRecipe è {thirdRecipe} è quindi non lo aggiorno.}
                 ~ thirdRecipe = tempRecipeName
