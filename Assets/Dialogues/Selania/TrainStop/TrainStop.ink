@@ -13,7 +13,7 @@
     
             -> witch_frog_mission_notifier ->
     
-    ~ arrivingFrom = TrainStop
+    ~ book_arrivingFromTracking = TrainStop
 
 // {train_stop == 1: Questa è la stazione del treno.|{~La stazione profuma di partenze.|La panchina aspetta fremente una nuova conoscenza.|Sulle vette la luce brilla leggera.|Un vento fresco ti sospinge lungo la strada.|Le lettere ondeggiano sulla bacheca.|L'odore della foresta scalda il sentiero.}}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
 

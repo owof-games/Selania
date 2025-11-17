@@ -770,7 +770,7 @@ Stai per donare qualcosa a {charNameThree}.
         }
         
         ~ growing ++   
-        ~ bookBGVariations ++
+        ~ book_BGVariations ++
         
     
     = secret_ending

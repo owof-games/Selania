@@ -1194,7 +1194,7 @@
             -
             Forse nello stagno posso imparare a nuotare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             La rana sembra abbastanza forte da salvarmi nel caso.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                ~ bookBGVariations ++
+                ~ book_BGVariations ++
                 ~ secondPauseTalking = secondCharPauseDuration
                 
             @animation:RewriterBook
@@ -2114,7 +2114,7 @@
         }
         
             ~ growing ++   
-            ~ bookBGVariations ++
+            ~ book_BGVariations ++
             
             {
             - secondCharacterSpecialEvent == true:

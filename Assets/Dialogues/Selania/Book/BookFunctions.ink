@@ -1,5 +1,5 @@
-VAR arrivingFrom = ()
-VAR bookBGVariations = 0
+VAR book_arrivingFromTracking = ()
+VAR book_BGVariations = 0
 LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, bookBGFive
 
 
@@ -9,7 +9,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
 // in tutti i casi in cui c'è @exit_from_rewriter_book, non andrà più avanti: in UpdateUI di DialogueManagerSingleInk viene fatto switch al flow di default, e quindi smette di eseguire questo flow
 
 {
-    - arrivingFrom == Forest:
+    - book_arrivingFromTracking == Forest:
         ~ move_entity(PG, Forest)
         ~ move_entity(RewriterBook, Forest)
         {
@@ -20,7 +20,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         @exit_from_rewriter_book
   
     
-    - arrivingFrom == Greenhouse:
+    - book_arrivingFromTracking == Greenhouse:
         ~ move_entity(PG, Greenhouse)
         ~ move_entity(RewriterBook, Greenhouse)
         {
@@ -31,7 +31,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         @exit_from_rewriter_book
 
     
-    - arrivingFrom == Pond:
+    - book_arrivingFromTracking == Pond:
         ~ move_entity(PG, Pond)
         ~ move_entity(RewriterBook, Pond)
         {
@@ -41,7 +41,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         ~ disableBigDialogue()
         @exit_from_rewriter_book
     
-    - arrivingFrom == Kitchen:
+    - book_arrivingFromTracking == Kitchen:
         ~ move_entity(PG, Kitchen)
         ~ move_entity(RewriterBook, Kitchen)
         {
@@ -51,7 +51,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         ~ disableBigDialogue()
         @exit_from_rewriter_book
 
-    - arrivingFrom == Library:
+    - book_arrivingFromTracking == Library:
         ~ move_entity(PG, Library)
         ~ move_entity(RewriterBook, Library)
         {
@@ -61,7 +61,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         ~ disableBigDialogue()
         @exit_from_rewriter_book
         
-    - arrivingFrom == Nest:
+    - book_arrivingFromTracking == Nest:
         ~ move_entity(PG, Nest)
         ~ move_entity(RewriterBook, Nest)
         {
@@ -71,7 +71,7 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         ~ disableBigDialogue()
         @exit_from_rewriter_book
         
-    - arrivingFrom == TrainStop:
+    - book_arrivingFromTracking == TrainStop:
         ~ move_entity(PG, TrainStop)
         ~ move_entity(RewriterBook, TrainStop)
         {
@@ -81,12 +81,12 @@ LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, b
         ~ disableBigDialogue()
         @exit_from_rewriter_book
 
-    - arrivingFrom == Bedroom:
+    - book_arrivingFromTracking == Bedroom:
         ~ move_entity(PG, Bedroom)
         ~ disableBigDialogue()
         @exit_from_rewriter_book
 
     
-    -else: ERROR: non riesco a trovare il luogo di provenienza; arrivingFrom = {arrivingFrom}
+    -else: ERROR: non riesco a trovare il luogo di provenienza; book_arrivingFromTracking = {book_arrivingFromTracking}
 }
 -> main

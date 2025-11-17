@@ -41,22 +41,22 @@ VAR saturationVar = 0
         - entity_location(PG) == BookPlace:
         
                 {
-                    - bookBGVariations ==  5:
+                    - book_BGVariations ==  5:
                         ~ return "bookBGFive"
                     
-                    - bookBGVariations ==  4:
+                    - book_BGVariations ==  4:
                         ~ return "bookBGFour"
                         
-                    - bookBGVariations ==  3:
+                    - book_BGVariations ==  3:
                         ~ return "bookBGThree"
                 
-                    - bookBGVariations ==  2:
+                    - book_BGVariations ==  2:
                         ~ return "bookBGTwo"    
                         
-                    - bookBGVariations ==  1:
+                    - book_BGVariations ==  1:
                         ~ return "bookBGOne"          
                     
-                    - bookBGVariations ==  0:
+                    - book_BGVariations ==  0:
                         ~ return "bookBGZero"
                     
                     - else:

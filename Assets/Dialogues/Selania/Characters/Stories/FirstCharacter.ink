@@ -910,7 +910,7 @@
          Ma per capire perché sono in questo posto.
          Mi prendo un po' di tempo per me, {name}.
             ~ firstPauseTalking = firstCharPauseDuration
-            ~ bookBGVariations ++
+            ~ book_BGVariations ++
             ~ justTalkedFirstChar = true
             @animation:RewriterBook
                         
@@ -1581,7 +1581,7 @@
             
                 ~ growing ++    
     
-                ~ bookBGVariations ++
+                ~ book_BGVariations ++
     
                     {
                     - firstCharacterSpecialEvent == true:

@@ -8,7 +8,7 @@
     
         -> witch_frog_mission_notifier ->
     
-~ arrivingFrom = Pond
+~ book_arrivingFromTracking = Pond
 
 // {pond  == 1: Spazi aperti, insetti, e ninfee galleggianti|{~Il cammino è ricco dell'odore dei funghi|Il cammino è luce|Lontana, la serra si rinfresca all'ombra dei monti|Lo stagno brulica di vita}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
 

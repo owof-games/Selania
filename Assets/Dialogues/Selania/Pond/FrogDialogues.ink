@@ -22,7 +22,7 @@
         - welcoming_frog.top == 1:
             ~ somethingStrange ++
             ~ saturationVar ++
-            ~ bookBGVariations ++
+            ~ book_BGVariations ++
             ~ move_entity(bowl, Bedroom)
             ~ move_entity(waterLily, Bedroom)
             ~ move_entity(FrogRecap, BookPlace)

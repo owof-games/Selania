@@ -2,7 +2,7 @@
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
 {debug: <i>La lista degli oggetti nella stanza è: {bedroomContents}.}
-            ~ arrivingFrom = Bedroom
+            ~ book_arrivingFromTracking = Bedroom
 
     {
         - bedroom == 1:

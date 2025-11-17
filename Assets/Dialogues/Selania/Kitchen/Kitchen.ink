@@ -12,7 +12,7 @@
     
     {special_mission_two && not cooking_alone && (not are_two_entities_together(FirstCharacter, PG)) && (not are_two_entities_together(SecondCharacter, PG)): ->cooking_alone}
 
-    ~ arrivingFrom = Kitchen
+    ~ book_arrivingFromTracking = Kitchen
 
             -> main
 

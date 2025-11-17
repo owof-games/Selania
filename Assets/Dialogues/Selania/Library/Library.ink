@@ -8,7 +8,7 @@
         
         -> witch_frog_mission_notifier ->
     
-    ~ arrivingFrom = Library
+    ~ book_arrivingFromTracking = Library
     
     -> main
 
