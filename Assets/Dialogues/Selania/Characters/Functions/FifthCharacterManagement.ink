@@ -16,6 +16,17 @@
 //Tracciamento della relazione
     VAR fifthChar_relationshipStatus = 0 
  
+ //Tracciamento cucina
+    //Autonoma
+        VAR kitchen_fifthCharIsCooking = false
+        VAR kitchen_fifthCharCookingTime = 0
+        //Tempo che ci impiega a fare la sua ricetta
+        VAR kitchen_fifthCharCookingMaxTime = 8
+    //Nostro invito
+        VAR kitchen_fifthCharCookingTogetherInvite = false
+    //Valore quarto ingrediente
+        VAR kitchen_fifthCharExtraIngredient = ()
+        VAR kitchen_fifthCharExtraIngredientReaction = notReaction
     
 //Tracciamento del dono
     VAR fifthChar_giftedObject = ()
@@ -34,11 +45,11 @@
     VAR fifthChar_pauseDuration = 10
     
 //Variabile per il countdown per la sua uscita di scena
-    VAR fifthCharEndingDialogue = 0    
+    VAR fifthChar_exitCounter = 0    
 
 //Variabile per il tempo di attesa tra una lettera e l'altra
-    VAR fifthWritingPause = 0
-    VAR fifthWritingPauseDuration = 5    
+    VAR fifthChar_mailPause = 0
+    VAR fifthChar_mailPauseDuration = 5    
     
 //STATI UP: ???
 //STATI DOWN: ???

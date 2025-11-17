@@ -145,11 +145,11 @@
     VAR fifthCharPauseDurantion = 10
     
     //Variabile per il countdown per la sua uscita di scena
-    VAR fifthCharEndingDialogue = 0    
+    VAR fifthChar_exitCounter = 0    
 
     //Variabile per il tempo di attesa tra una lettera e l'altra
-    VAR fifthWritingPause = 0
-    VAR fifthWritingPauseDuration = 5    
+    VAR fifthChar_mailPause = 0
+    VAR fifthChar_mailPauseDuration = 5    
     
     //STATI UP: ???
     //STATI DOWN: ???

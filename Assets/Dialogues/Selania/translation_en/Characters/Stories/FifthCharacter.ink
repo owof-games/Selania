@@ -964,7 +964,7 @@ Placeholder
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
 
     {
-        - fifthCharEndingDialogue < 4:
+        - fifthChar_exitCounter < 4:
             -> top
         - else:
             -> goodbye
@@ -972,7 +972,7 @@ Placeholder
     
         - (top)
         {charNameFive}Placeholder
-                ~ fifthCharEndingDialogue ++
+                ~ fifthChar_exitCounter ++
         -> main
         
         = goodbye

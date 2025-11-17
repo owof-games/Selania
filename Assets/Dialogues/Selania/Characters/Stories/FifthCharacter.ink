@@ -1020,7 +1020,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
 
     {
-        - fifthCharEndingDialogue < 4:
+        - fifthChar_exitCounter < 4:
             -> top
         - else:
             -> goodbye
@@ -1028,7 +1028,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
     
         - (top)
         {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me.|Sono sicura di aver visto un'altra persona alla fermata del bus, ma quando ho cercato di raggiungerla è scomparsa.|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
-                ~ fifthCharEndingDialogue ++
+                ~ fifthChar_exitCounter ++
         -> main
         
         = goodbye

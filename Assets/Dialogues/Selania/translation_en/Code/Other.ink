@@ -82,7 +82,7 @@
     ~ firstWritingPause --
     ~ secondChar_mailPause --
     ~ thirdWritingPause --
-    ~ fifthWritingPause --
+    ~ fifthChar_mailPause --
     
     ~ lastMindfulness --
     

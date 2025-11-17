@@ -284,7 +284,7 @@
     ~ firstChar_mailPause --
     ~ secondChar_mailPause --
     ~ thirdChar_mailPause --
-    ~ fifthWritingPause --
+    ~ fifthChar_mailPause --
     
     ~ lastMindfulness --
     

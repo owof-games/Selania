@@ -787,7 +787,7 @@
                 {charNameFive}: zz
         }
         
-        ~ fifthWritingPause = fifthWritingPauseDuration
+        ~ fifthChar_mailPause = fifthChar_mailPauseDuration
             -> main
     
     = two
@@ -806,7 +806,7 @@
                 {charNameFive}: zz
         }
             
-        ~ fifthWritingPause = fifthWritingPauseDuration
+        ~ fifthChar_mailPause = fifthChar_mailPauseDuration
             -> main
     
     = three
@@ -824,5 +824,5 @@
                 {charNameFive}: zz
         }
             
-        ~ fifthWritingPause = fifthWritingPauseDuration
+        ~ fifthChar_mailPause = fifthChar_mailPauseDuration
             -> main
