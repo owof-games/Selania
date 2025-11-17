@@ -2250,13 +2250,13 @@
 {debug_nest: prima dell'aggiornamento il valore di temporaryWordUsageCounter è {temporaryWordUsageCounter}.}
     
     {
-        - oneUsageWords has activeEmotionalWord:
+        - nest_oneUseWords has activeEmotionalWord:
             ~ temporaryWordUsageCounter = 1
         
-        - twoUsageWords has activeEmotionalWord:
+        - nest_twoUseWords has activeEmotionalWord:
             ~ temporaryWordUsageCounter = 2
         
-        - threeUsageWords has activeEmotionalWord:
+        - nest_threeUseWords has activeEmotionalWord:
             ~ temporaryWordUsageCounter = 3
         
         - else: ERROR, non riesco a trovare {activeEmotionalWord} in nessuna delle tre liste, per cui non riesco ad assegnare un valore a temporaryWordUsageCounter, che ora è a {temporaryWordUsageCounter}.
