@@ -933,7 +933,7 @@ Placeholder
             
         
         {
-        - fifthCharacterSpecialEvent == true:
+        - fifthChar_specialEvent == true:
             -> secret_ending
         - else:
             -> exit

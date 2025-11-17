@@ -138,7 +138,7 @@
     VAR fifthChar_storyStatus = NotStarted
     //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
     VAR fifthChar_storyletsForRewritingCount = 0
-    VAR fifthCharacterSpecialEvent = false
+    VAR fifthChar_specialEvent = false
     
     //Variabili per mettere in pausa la conversazione. Plausibilmente per mentore sarà molto alta all'inizio.
     VAR fifthPauseTalking = 0

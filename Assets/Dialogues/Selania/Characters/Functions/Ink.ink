@@ -99,7 +99,7 @@
                         ~ fourthChar_specialEvent = true
                     
                     - InkLevel == fifthChar_InkLevel:
-                        ~ fifthCharacterSpecialEvent = true    
+                        ~ fifthChar_specialEvent = true    
                 }
                 
         - else:

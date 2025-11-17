@@ -987,7 +987,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         ~ growing ++   
         
         {
-        - fifthCharacterSpecialEvent == true:
+        - fifthChar_specialEvent == true:
             -> secret_ending
         - else:
             -> exit
