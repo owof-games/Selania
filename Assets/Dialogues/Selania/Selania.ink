@@ -30,6 +30,8 @@
     INCLUDE Characters\Functions\ThirdCharacterManagement.ink
     INCLUDE Characters\Functions\FourthCharacterManagement.ink
     INCLUDE Characters\Functions\FifthCharacterManagement.ink
+    INCLUDE Characters\Functions\WitchManagement.ink
+
 
                     /* ---------------------------------
                     
@@ -124,6 +126,7 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
+
 
 
 
