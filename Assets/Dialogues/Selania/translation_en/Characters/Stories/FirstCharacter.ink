@@ -920,7 +920,7 @@
 ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
 <i> Stai per donare qualcosa a {charNameOne}.</i>
         + {findedGifts != ()} [Scelgo il dono.]
-            ~ currentReceiver += FirstCharacter
+            ~ gift_currentReceiver += FirstCharacter
             -> inventory_management
         + {findedGifts == ()} <i> Il tuo inventario è vuoto.</i>
             ->main

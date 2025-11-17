@@ -1678,7 +1678,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     Stai per donare qualcosa a {charNameTwo}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             + {findedGifts != ()} [Scelgo il dono.]
-                ~ currentReceiver += SecondCharacter
+                ~ gift_currentReceiver += SecondCharacter
                 -> inventory_management
             + {findedGifts == ()} Il tuo inventario è vuoto. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 ->main

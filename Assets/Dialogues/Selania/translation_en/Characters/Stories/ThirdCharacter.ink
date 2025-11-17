@@ -460,7 +460,7 @@
 ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
 <i> Stai per donare qualcosa a {charNameThree}.</i>
         + {findedGifts != ()} [Scelgo il dono.]
-            ~ currentReceiver += ThirdCharacter
+            ~ gift_currentReceiver += ThirdCharacter
             -> inventory_management -> ink_outcome 
         + {findedGifts == ()} Scelgo il dono.
             ->main

@@ -681,7 +681,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
 ~ temp charNameFive = translator(fifthChar_ActualName)
 Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         + {findedGifts != ()} [Scelgo il dono.]
-            ~ currentReceiver += Mentor
+            ~ gift_currentReceiver += Mentor
             -> inventory_management -> ink_outcome 
         + {findedGifts == ()} Il tuo inventario è vuoto.
             ->main

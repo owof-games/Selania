@@ -1205,7 +1205,7 @@
     <i>Stai per donare qualcosa a {charNameOne}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             
             + {findedGifts != ()} [Scelgo il dono.]
-                ~ currentReceiver += FirstCharacter
+                ~ gift_currentReceiver += FirstCharacter
                     -> inventory_management
             
             + {findedGifts == ()} Il tuo inventario è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}

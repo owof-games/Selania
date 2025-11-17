@@ -631,7 +631,7 @@
 ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
 Placeholder
         + {findedGifts != ()} [Placeholder]
-            ~ currentReceiver += Mentor
+            ~ gift_currentReceiver += Mentor
             -> inventory_management -> ink_outcome 
         + {findedGifts == ()} Placeholder
             ->main

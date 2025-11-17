@@ -457,7 +457,7 @@
 ~ temp charNameThree = translator(thirdChar_ActualName)
 Stai per donare qualcosa a {charNameThree}.
         + {findedGifts != ()} [Scelgo il dono.]
-            ~ currentReceiver += ThirdCharacter
+            ~ gift_currentReceiver += ThirdCharacter
             -> inventory_management -> ink_outcome 
         + {findedGifts == ()} Il tuo inventario è vuoto.
             ->main
