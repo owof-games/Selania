@@ -125,20 +125,20 @@
         {charNameFive}: Ma quella sensazione che con le tue mani puoi permettere a un altro corpo di crescere al meglio.
 
             + (fiveBlue) [Preferisco la stazione dei treni, è ordinata, precisa.]
-                    ~ fifthBlue ++
+                    ~ fifthChar_blue ++
                 {charNameFive}: Sì, ne capisco il fascino.
                 {charNameFive}: A volte mi siedo lì e mi godo per qualche istante l'attesa.
                 {charNameFive}: Il nulla che accade.
                 {charNameFive}: Ma poi le mani fremono, mi supplicano di sistemare qualcosa fuori posto.
                 
             + (fiveYellow) [Lo stagno è divertente, succede di tutto.]
-                    ~ fifthYellow ++
+                    ~ fifthChar_yellow ++
                 {charNameFive}: Forse succede <i>di troppo</i>.
                 {charNameFive}: Non sembra pensare a nulla.
                 {charNameFive}: L'acqua è lì e lascia che tutto accada, senza pensare al domani.
                 
             + (fiveRed) [La foresta domina: è lotta, è potenza!]
-                    ~ fifthRed ++
+                    ~ fifthChar_red ++
                 {charNameFive}: E disordinata, sporca.
                 {charNameFive}: Posso capirne il fascino, ma non è un luogo dove resto con piacere.
                 {charNameFive}: E quel tronco al centro non vuole saperne né di crescere né di morire.
@@ -146,13 +146,13 @@
                     
                 
             + (fiveGreen) [Un po' come prendersi cura delle persone, qui.]
-                    ~ fifthGreen ++
+                    ~ fifthChar_green ++
                 {charNameFive}: Sì, anche se con meno aspettative.
                 {charNameFive}: Le persone a volte fanno cose che non ci aspettiamo.
                 {charNameFive}: Un <i>Lichene degli abissi</i> con le giuste condizioni cresce sempre allo stesso modo.
   
             + (fivePurple) [Invece sono felice che crescano a prescidere da me.]
-                    ~ fifthPurple ++
+                    ~ fifthChar_purple ++
                 {charNameFive}: Senza di te? Dobbiamo bagnare il terreno, prepararlo, seminare.
                 {charNameFive}: Non ci sarebbe nulla senza il nostro lavoro.
                 {charNameFive}: Non saprebbero resistere alle erbacce, al freddo.
@@ -181,26 +181,26 @@
         {charNameFive}: Questa è una cosa difficile anche alla mia età.
         
             + [I numeri sono indicatori, non fatti assoluti.]
-                    ~ fifthBlue ++
+                    ~ fifthChar_blue ++
                 {charNameFive}: Su questo hai ragione, {name}.
                 {charNameFive}: Eppure posso assicurarti che i miei cinquanta e rotti anni si portano addosso anche un bel po' di fatti scricchiolanti e ricordi.
                    
                 
             + [{charNameOne} sapeva ridere, giocare, e questo l'ha resa libera.]
-                    ~ fifthYellow ++
+                    ~ fifthChar_yellow ++
                 {charNameFive}: E la libertà può farti perdere ancora di più.
                 {charNameFive}: A volte non c'è maggiore libertà di essere stabili e felici nel proprio ruolo.
                 
                 
             + [Non c'è vera azione senza consapevolezza.]
-                    ~ fifthRed ++
+                    ~ fifthChar_red ++
                 {charNameFive}: Allora la maggior parte di noi non agisce mai veramente.
                 {charNameFive}: Eppure riusciamo a farci del male, e a farci del bene.
                 {charNameFive}: Qualcosa deve sempre cambiare.
 
                 
             + [E tu sei molto ricettiva verso le altre persone.]
-                    ~ fifthGreen ++
+                    ~ fifthChar_green ++
                 {charNameFive}: Forse non <i>molto</i>.
                 {charNameFive}: Ma indubbiamente quello che hanno da dire e quello che provano, conta.
                 {charNameFive}: Una mentore è una guida, ma per imparare a guidare deve capire chi ha dall'altra parte.
@@ -209,7 +209,7 @@
                 
                 
             + [Ci sono momenti in cui è necessario anche perdersi.]
-                    ~ fifthPurple ++
+                    ~ fifthChar_purple ++
                 {charNameFive}: E in questo luogo in fondo arrivano solo persone che si sono perse.
                 {charNameFive}: E che se ne vanno più serene.
                 {charNameFive}: Avrebbero scoperto quella serenità, senza un po' di smarrimento?
@@ -241,32 +241,32 @@
                 {charNameFive}: Vero.
                 {charNameFive}: Il valore di qualcosa viene da quanto ci è costata.
                 {charNameFive}: E la maggior parte delle volte non paghiamo in denaro.
-                    ~ fifthBlue ++
+                    ~ fifthChar_blue ++
                 
             + [Forse le volpi si mangiano le lettere!]
                 {charNameFive}: La fantasia è un modo piacevole di affrontare la realtà, {name}.
                 {charNameFive}: Ma alla lunga rende difficile capire cosa sia vero e cosa no.
-                    ~ fifthYellow ++
+                    ~ fifthChar_yellow ++
                 
             + [Il mondo è pieno di ingrati.]
                 {charNameFive}: No.
                 {charNameFive}: Direi che il mondo è pieno di persone distratte.
                 {charNameFive}: Le cose da fare sono infinite, e finiamo per dimenticarci di chi non vediamo tutti i giorni.
                 {charNameFive}: Non è ingratitudine, è una vita che scorre troppo veloce.
-                    ~ fifthRed ++
+                    ~ fifthChar_red ++
 
                 
             + [Ti prometto che ti scriverò ogni giorno.]
                 {charNameFive}: Oh, {pronouns has him: caro|{pronouns has her: cara|carə}}, è una bella promessa.
                 {charNameFive}: Una promessa che ho sentito decine di volte.
-                    ~ fifthGreen ++
+                    ~ fifthChar_green ++
   
                 
             + [Esiste un confine tra {charNameFive} e questo luogo?]
                 {charNameFive}: A volte mi sento <i>solo</i> questo luogo.
                 {charNameFive}: Non mi chiedo spesso se andarmene o meno.
                 {charNameFive}: O dove.
-                    ~ fifthPurple ++
+                    ~ fifthChar_purple ++
  
             -
             {charNameFive}: Ma basta con questo spirito malinconico!
@@ -300,14 +300,14 @@
                 {charNameFive}: Di crescita, di esplorazione.
                 {charNameFive}: Non un laboratorio.
                 {charNameFive}: Non il piccolo chimico.
-                    ~ fifthBlue ++
+                    ~ fifthChar_blue ++
                 
             + [Giocare è comunque un modo per capire il mondo, {charNameFive}.]
                 {charNameFive}: Ma un modo controllato, adatto per i bambini.
                 {charNameFive}: Con meno violenza possibile.
                 {charNameFive}: Senza le cose terribili che ci circondano.
                 {charNameFive}: Se non voglio vederle io a cinquant'anni, perché deve vederle un bimbo?
-                    ~ fifthYellow ++
+                    ~ fifthChar_yellow ++
                 
             + [Alla sua età avevo anche io idee e paure. Si è bambini, non idioti.]
                 {charNameFive}: Non serve che usi quel linguaggio con me, {name}.
@@ -316,21 +316,21 @@
                 {charNameFive}: Cosa conta a questo mondo.
                 {charNameFive}: Per questo i genitori ci sono.
                 {charNameFive}: Per proteggerti.
-                    ~ fifthRed ++
+                    ~ fifthChar_red ++
 
             + [Mi spiace che tu ti senta in colpa.]
                 {charNameFive}: Ma non hai detto che non ho sbagliato.
                 {charNameFive}: Scusa, non è quello il tuo ruolo.
                 {charNameFive}: Sennò non sarei io la mentore, ma tu.
                 {charNameFive}: Spero che almeno lui prima o poi mi perdoni.
-                    ~ fifthGreen ++
+                    ~ fifthChar_green ++
   
             + [Il genitore dovrebbe essere il lavoro di una comunità.]
                 {charNameFive}: Non dire castronerie, {name}.
                 {charNameFive}: Si fa così dai tempi dei tempi, due persone.
                 {charNameFive}: Una se manca.
                 {charNameFive}: Però dovrebbero avere il diritto di sbagliare.
-                    ~ fifthPurple ++
+                    ~ fifthChar_purple ++
             -
         
         {charNameFive}: Forse mi sono concentrata sulla cosa sbagliata.
@@ -367,7 +367,7 @@
                 {charNameFive}: E il letto è il luogo della stanchezza e della malattia.
                 {charNameFive}: Quando invece di chiamarci "amore".
                 {charNameFive}: Ci chiediamo dove sono le chiavi della macchina.
-                    ~ fifthBlue ++
+                    ~ fifthChar_blue ++
                 
             + [Un rifugio di stupore e gioia in un mondo grigio.]
                 {charNameFive}: Mi piace la tua ingenuità {name}.
@@ -376,7 +376,7 @@
                 {charNameFive}: Un posto sempre sorprendente, vivo.
                 {charNameFive}: Pieno di musica.
                 {charNameFive}: E forse è davvero così.
-                    ~ fifthYellow ++
+                    ~ fifthChar_yellow ++
                 
             + [Fondersi nella passione, a letto come in una protesta.]
                 {charNameFive}: La passione si spegne, {name}.
@@ -385,7 +385,7 @@
                 {charNameFive}: Rancore?
                 {charNameFive}: Odio?
                 {charNameFive}: Passioni forti chiamano passioni ancora più forti.
-                    ~ fifthRed ++
+                    ~ fifthChar_red ++
 
                 
             + [Cura, ascolto, affetto.]
@@ -395,7 +395,7 @@
                 {charNameFive}: L'affetto un'abitudine.
                 {charNameFive}: Eppure resti.
                 {charNameFive}: Vuol dire che è finito l'amore?
-                    ~ fifthGreen ++
+                    ~ fifthChar_green ++
   
                 
             + [Raggiungersi l'anima a vicenda, ricercando il divino che è noi.]
@@ -405,7 +405,7 @@
                 {charNameFive}: O nell'amicizia.
                 {charNameFive}: E a volte, se resto in silenzio e ferma a lungo, in questo luogo.
                 
-                    ~ fifthPurple ++
+                    ~ fifthChar_purple ++
  
             -
              ~ fifthChar_pauseTalking = fifthCharPauseDurantion
@@ -430,21 +430,21 @@
         
         {charNameFive}Placeholder
             + [Placeholder]
-                    ~ fifthBlue ++
+                    ~ fifthChar_blue ++
                 
             + [Placeholder]
-                    ~ fifthYellow ++
+                    ~ fifthChar_yellow ++
                 
             + [Placeholder]
-                ~ fifthRed ++
+                ~ fifthChar_red ++
 
                 
             + [Placeholder]
-                ~ fifthGreen ++
+                ~ fifthChar_green ++
   
                 
             + [Placeholder]
-                ~ fifthPurple ++
+                ~ fifthChar_purple ++
  
             -
             //Qui potrebbe aver senso ridurre i tempi di attesa tra un dialogo e l'altro.
@@ -459,21 +459,21 @@
         
         {charNameFive}Placeholder
             + [Placeholder]
-                    ~ fifthBlue ++
+                    ~ fifthChar_blue ++
                 
             + [Placeholder]
-                    ~ fifthYellow ++
+                    ~ fifthChar_yellow ++
                 
             + [Placeholder]
-                ~ fifthRed ++
+                ~ fifthChar_red ++
 
                 
             + [Placeholder]
-                ~ fifthGreen ++
+                ~ fifthChar_green ++
   
                 
             + [Placeholder]
-                ~ fifthPurple ++
+                ~ fifthChar_purple ++
  
             -
              ~ fifthChar_pauseTalking = fifthCharPauseDurantion
@@ -488,21 +488,21 @@
         
         {charNameFive}Placeholder
             + [Placeholder]
-                    ~ fifthBlue ++
+                    ~ fifthChar_blue ++
                 
             + [Placeholder]
-                    ~ fifthYellow ++
+                    ~ fifthChar_yellow ++
                 
             + [Placeholder]
-                ~ fifthRed ++
+                ~ fifthChar_red ++
 
                 
             + [Placeholder]
-                ~ fifthGreen ++
+                ~ fifthChar_green ++
   
                 
             + [Placeholder]
-                ~ fifthPurple ++
+                ~ fifthChar_purple ++
  
             -
              ~ fifthChar_pauseTalking = fifthCharPauseDurantion
@@ -517,21 +517,21 @@
         
         {charNameFive}Placeholder
             + [Placeholder]
-                    ~ fifthBlue ++
+                    ~ fifthChar_blue ++
                 
             + [Placeholder]
-                    ~ fifthYellow ++
+                    ~ fifthChar_yellow ++
                 
             + [Placeholder]
-                ~ fifthRed ++
+                ~ fifthChar_red ++
 
                 
             + [Placeholder]
-                ~ fifthGreen ++
+                ~ fifthChar_green ++
   
                 
             + [Placeholder]
-                ~ fifthPurple ++
+                ~ fifthChar_purple ++
  
             -
              ~ fifthChar_pauseTalking = fifthCharPauseDurantion
@@ -545,21 +545,21 @@
         
         {charNameFive}Placeholder
             + [Placeholder]
-                    ~ fifthBlue ++
+                    ~ fifthChar_blue ++
                 
             + [Placeholder]
-                    ~ fifthYellow ++
+                    ~ fifthChar_yellow ++
                 
             + [Placeholder]
-                ~ fifthRed ++
+                ~ fifthChar_red ++
 
                 
             + [Placeholder]
-                ~ fifthGreen ++
+                ~ fifthChar_green ++
   
                 
             + [Placeholder]
-                ~ fifthPurple ++
+                ~ fifthChar_purple ++
  
             -
              ~ fifthChar_pauseTalking = fifthCharPauseDurantion
@@ -573,21 +573,21 @@
         
         {charNameFive}Placeholder
             + [Placeholder]
-                    ~ fifthBlue ++
+                    ~ fifthChar_blue ++
                 
             + [Placeholder]
-                    ~ fifthYellow ++
+                    ~ fifthChar_yellow ++
                 
             + [Placeholder]
-                ~ fifthRed ++
+                ~ fifthChar_red ++
 
                 
             + [Placeholder]
-                ~ fifthGreen ++
+                ~ fifthChar_green ++
   
                 
             + [Placeholder]
-                ~ fifthPurple ++
+                ~ fifthChar_purple ++
  
             -
              ~ fifthChar_pauseTalking = fifthCharPauseDurantion
@@ -600,21 +600,21 @@
         
         {charNameFive}Placeholder
             + [Placeholder]
-                    ~ fifthBlue ++
+                    ~ fifthChar_blue ++
                 
             + [Placeholder]
-                    ~ fifthYellow ++
+                    ~ fifthChar_yellow ++
                 
             + [Placeholder]
-                ~ fifthRed ++
+                ~ fifthChar_red ++
 
                 
             + [Placeholder]
-                ~ fifthGreen ++
+                ~ fifthChar_green ++
   
                 
             + [Placeholder]
-                ~ fifthPurple ++
+                ~ fifthChar_purple ++
  
             -
              ~ fifthChar_pauseTalking = fifthCharPauseDurantion
@@ -881,15 +881,15 @@ Placeholder
     = ending
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
      Placeholder
-        + {fifthRed > 0} [Placeholder]
+        + {fifthChar_red > 0} [Placeholder]
         
-        + {fifthPurple > 0} [Placeholder]
+        + {fifthChar_purple > 0} [Placeholder]
         
-        + {fifthYellow > 0} [Placeholder]
+        + {fifthChar_yellow > 0} [Placeholder]
                 
-        + {fifthGreen > 0} [Placeholder]
+        + {fifthChar_green > 0} [Placeholder]
                 
-        + {fifthBlue > 0} [Placeholder]
+        + {fifthChar_blue > 0} [Placeholder]
                 
         
                 

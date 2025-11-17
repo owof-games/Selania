@@ -327,27 +327,27 @@
             + [Matematico: ascolto, analizzo, scelgo il dono.]
                 {charNameFive}: Esatto!
                 {charNameFive}: Siamo sulla stessa lunghezza d'onda noi due!
-                    ~ fifthBlue ++
+                    ~ fifthChar_blue ++
                     
             + [Come un gioco: comprendi il loop, dai il meglio di te.]
                 {charNameFive}: Sono troppo vecchia per giocare, ma credo tu abbia centrato il punto.
-                    ~ fifthYellow ++
+                    ~ fifthChar_yellow ++
                     
             + [Quindi devo lavorare senza ricevere mezzo soldo.]
                 {charNameFive}: Non è un lavoro.
                 {charNameFive}: E qui non c'è denaro.
                 {charNameFive}: Ma è colpa mia, sto dando troppe cose per scontato.
-                    ~ fifthRed ++
+                    ~ fifthChar_red ++
                     
             + [Mi piace l'idea di creare una relazione con queste persone.]
                 {charNameFive}: Un po' di distacco è utile, per non farti ferire.
                 {charNameFive}: Vediti più come {pronouns has him: un amico|{pronouns has her: un'amica|unə amicə}}, che aiuta una persona a vedersi in modo diverso. 
-                    ~ fifthGreen ++
+                    ~ fifthChar_green ++
                     
             + [La fiducia non si conquista, la fiducia è un dono.]
                 {charNameFive}: Ho usato delle parole frettolose, scusa.
                 {charNameFive}: Ma sì: tu doni loro tempo e ascolto, e loro ti donano la propria fiducia.
-                    ~ fifthPurple ++
+                    ~ fifthChar_purple ++
             -
         {charNameFive}: Il dono è importante non solo per guadagnare fiducia.
         {charNameFive}: Il giusto dono può anche aumentare la tua quantità di <b>inchiostro</b>.
@@ -358,30 +358,30 @@
                 {charNameFive}: Io?
                 {charNameFive}: No!
                 {charNameFive}: Questo è stato, è e sarà sempre il mio nome.
-                    ~ fifthPurple ++
+                    ~ fifthChar_purple ++
                     
             + [Con l'inchiostro ci posso disegnare?]
                 {charNameFive}: Apprezzo la tua creatività, {name}.
                 {charNameFive}: Ma tu sei {pronouns has him: un riscrittore|{pronouns has her: una riscrittora|unə riscrittorə}}, non {pronouns has him: un disegnatore|{pronouns has her: una disegnatrice|unə disegnatricə}}.
-                    ~ fifthYellow ++
+                    ~ fifthChar_yellow ++
                     
             + [Solo le persone care ci fanno vedere in modo diverso.]
                 {charNameFive}: A volte è più facile aprirsi a chi non si conosce.
                 {charNameFive}: E mentre noi riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
-                        ~ fifthGreen ++
+                        ~ fifthChar_green ++
                         
             + [Tipo gaslighting?]
                 {charNameFive}: No no no assolutamente no.
                 {charNameFive}: Cavolo, devo essere più chiara.
                 {charNameFive}: Ma se una persona si sente presa in giro, non si fiderà mai di te.
-                        ~ fifthRed ++
+                        ~ fifthChar_red ++
             
             + [Un nome è un nome. Che se ne fanno di uno nuovo?]
                 {charNameFive}: Un nome è come una magia.
                 {charNameFive}: Lo carichiamo di volta in volta di significato.
                 {charNameFive}: E quando lo usiamo, ci dice chi siamo.
                 {charNameFive}: A volte quella magia non va più bene, e dobbiamo cercare una nuova formula. Un nuovo nome.
-                    ~ fifthBlue ++
+                    ~ fifthChar_blue ++
             -
         
             {charNameFive}: Ora devo continuare a sbloccare un vecchio sentiero.
@@ -414,29 +414,29 @@
                 {charNameFive}: Sii chi sei.
                 {charNameFive}: Segui i miei consigli.
                 {charNameFive}: E non chiedere all'altra persona di diventare qualcosa che non è.
-                    ~ fifthGreen ++
+                    ~ fifthChar_green ++
                     
             + [Ma non posso dirle: chiamati così e cosà, addio!?]
                 {charNameFive}: Un nuovo nome è una nuova esperienza.
                 {charNameFive}: E l'esperienza viene dal percorso.
                 {charNameFive}: Se non c'è percorso, non c'è cambiamento.
-                    ~ fifthRed ++
+                    ~ fifthChar_red ++
             
             + [Non è una persona razionale. Può farcela?]
                 {charNameFive}: {name}, capisco la tua perplessità, ma con la giusta guida, ce la può fare.
                 {charNameFive}: E assieme noi non possiamo di certo sbagliare!
-                    ~ fifthBlue ++
+                    ~ fifthChar_blue ++
                     
             + [Gli scoiattoli non hanno bisogno di riscriverla, invece?]
                 {charNameFive}: {name}, apprezzo la tua creatività, ma mantieni l'attenzione sull'obiettivo.
                 {charNameFive}: E gli scoiattoli non si fanno queste domande.
                 {charNameFive}: Gli scoiattoli <i>sono</i> e basta.
-                    ~ fifthYellow ++
+                    ~ fifthChar_yellow ++
                     
             + [Non dovrei essere io a decidere il mio obiettivo?]
                 {charNameFive}: Il tuo obiettivo <i>qui</i>, perdonami.
                 {charNameFive}: Non avendo altri luoghi in cui andare, mi dimentico che possono esserci sono altre vite, altri obiettivi da raggiungere.
-                    ~ fifthPurple ++
+                    ~ fifthChar_purple ++
             -
         {charNameFive}: Ricorda {name}: sei una guida, ma sta alla persona decidere alla fine chi è, e di cosa ha bisogno.
         {charNameFive}: Quando te la senti, affronta questo ultimo passaggio e poi torna da me.

@@ -1505,11 +1505,11 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
             ~ secondChar_purple += temporaryPurple
         
         - currentTalker == Mentor:
-            ~ fifthRed += temporaryRed
-            ~ fifthYellow += temporaryYellow
-            ~ fifthBlue += temporaryBlue
-            ~ fifthGreen += temporaryGreen
-            ~ fifthPurple += temporaryPurple
+            ~ fifthChar_red += temporaryRed
+            ~ fifthChar_yellow += temporaryYellow
+            ~ fifthChar_blue += temporaryBlue
+            ~ fifthChar_green += temporaryGreen
+            ~ fifthChar_purple += temporaryPurple
     }
 
     //Poi azzeriamo i valori temporanei

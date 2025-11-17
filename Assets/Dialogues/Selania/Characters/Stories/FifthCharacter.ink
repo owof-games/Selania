@@ -493,7 +493,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ fifthPurple ++
+                ~ fifthChar_purple ++
  
             -
             //Qui potrebbe aver senso ridurre i tempi di attesa tra un dialogo e l'altro.
@@ -523,7 +523,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ fifthPurple ++
+                ~ fifthChar_purple ++
  
             -
              ~ fifthChar_pauseTalking = fifthChar_pauseDuration
@@ -552,7 +552,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ fifthPurple ++
+                ~ fifthChar_purple ++
  
             -
              ~ fifthChar_pauseTalking = fifthChar_pauseDuration
@@ -581,7 +581,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ fifthPurple ++
+                ~ fifthChar_purple ++
  
             -
              ~ fifthChar_pauseTalking = fifthChar_pauseDuration
@@ -609,7 +609,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ fifthPurple ++
+                ~ fifthChar_purple ++
  
             -
              ~ fifthChar_pauseTalking = fifthChar_pauseDuration
@@ -637,7 +637,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ fifthPurple ++
+                ~ fifthChar_purple ++
  
             -
              ~ fifthChar_pauseTalking = fifthChar_pauseDuration
@@ -664,7 +664,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ fifthPurple ++
+                ~ fifthChar_purple ++
  
             -
              ~ fifthChar_pauseTalking = fifthChar_pauseDuration
@@ -933,15 +933,15 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
     = ending
     ~ temp charNameFive = translator(fifthChar_ActualName)
      Per questo ti dico...
-        + {fifthRed > 0} [Prendi una strada e se non ti piace cambiala!]
+        + {fifthChar_red > 0} [Prendi una strada e se non ti piace cambiala!]
         
-        + {fifthPurple > 0} [Dai alla tua vita uno scopo più grande.]
+        + {fifthChar_purple > 0} [Dai alla tua vita uno scopo più grande.]
         
-        + {fifthYellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
+        + {fifthChar_yellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
                 
-        + {fifthGreen > 0} [Non deluderai i tuoi amici: loro saranno sempre con te.]
+        + {fifthChar_green > 0} [Non deluderai i tuoi amici: loro saranno sempre con te.]
                 
-        + {fifthBlue > 0} [Questa non è la tua strada. Succede. Ora puoi cambiare.]
+        + {fifthChar_blue > 0} [Questa non è la tua strada. Succede. Ora puoi cambiare.]
                 
         
                 
