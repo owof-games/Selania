@@ -55,13 +55,13 @@
     VAR nest_purpleWords = (Viola, ViolaViola, ViolaViolaViola)
     
     //Varianti a dominante Rosso
-    VAR redYellowWords = (RossoGiallo, RossoRossoGiallo, RossoGialloGiallo, RossoGialloBlu, RossoGialloVerde, RossoGialloViola, RossoGialloRosso)
-    VAR redBlueWords = (RossoBlu, RossoRossoBlu, RossoBluBlu, RossoBluVerde, RossoBluViola, RossoBluRosso, RossoBluGiallo)
-    VAR redGreenWords = (RossoVerde, RossoRossoVerde, RossoVerdeBlu, RossoVerdeVerde, RossoVerdeViola, RossoVerdeRosso, RossoVerdeGiallo)
-    VAR redPurpleWords = (RossoViola, RossoRossoViola, RossoViolaBlu, RossoViolaVerde, RossoViolaViola, RossoViolaRosso, RossoViolaGiallo)
+    VAR nest_redYellowWords = (RossoGiallo, RossoRossoGiallo, RossoGialloGiallo, RossoGialloBlu, RossoGialloVerde, RossoGialloViola, RossoGialloRosso)
+    VAR nest_redBlueWords = (RossoBlu, RossoRossoBlu, RossoBluBlu, RossoBluVerde, RossoBluViola, RossoBluRosso, RossoBluGiallo)
+    VAR nest_redGreenWords = (RossoVerde, RossoRossoVerde, RossoVerdeBlu, RossoVerdeVerde, RossoVerdeViola, RossoVerdeRosso, RossoVerdeGiallo)
+    VAR nest_redPurpleWords = (RossoViola, RossoRossoViola, RossoViolaBlu, RossoViolaVerde, RossoViolaViola, RossoViolaRosso, RossoViolaGiallo)
     
     //Varianti a dominante Giallo
-    VAR yellowRedWords = (GialloRosso, GialloGialloRosso, GialloRossoRosso, GialloRossoVerde, GialloRossoViola, GialloRossoBlu, GialloRossoGiallo)
+    VAR nest_yellowRedWords = (GialloRosso, GialloGialloRosso, GialloRossoRosso, GialloRossoVerde, GialloRossoViola, GialloRossoBlu, GialloRossoGiallo)
     VAR yellowBlueWords = (GialloBlu, GialloGialloBlu, GialloBluVerde, GialloBluViola, GialloBluBlu, GialloBluGiallo, GialloBluRosso)
     VAR yellowGreenWords = (GialloVerde, GialloGialloVerde, GialloVerdeVerde, GialloVerdeViola, GialloVerdeBlu, GialloVerdeGiallo, GialloVerdeRosso)
     VAR yellowPurpleWords = (GialloViola, GialloGialloViola, GialloViolaVerde, GialloViolaViola, GialloViolaBlu, GialloViolaGiallo, GialloViolaRosso)
