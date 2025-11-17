@@ -220,26 +220,26 @@ VAR numberQuestion = 0
 === function ink_tag_a (charInkCheck)
 
     {
-        - charInkCheck == firstCharacterInkLevel:
-            ~ Ink = firstCharacterInkLevel
+        - charInkCheck == firstChar_InkLevel:
+            ~ Ink = firstChar_InkLevel
         
-        - charInkCheck == secondCharacterInkLevel:
-            ~ Ink = secondCharacterInkLevel
+        - charInkCheck == secondChar_InkLevel:
+            ~ Ink = secondChar_InkLevel
         
-        - charInkCheck == thirdCharacterInkLevel:
-            ~ Ink = thirdCharacterInkLevel
+        - charInkCheck == thirdChar_InkLevel:
+            ~ Ink = thirdChar_InkLevel
             
-        - charInkCheck == fourthCharacterInkLevel:
-            ~ Ink = fourthCharacterInkLevel
+        - charInkCheck == fourthChar_InkLevel:
+            ~ Ink = fourthChar_InkLevel
         
-        - charInkCheck == fifthCharacterInkLevel:
-            ~ Ink = fifthCharacterInkLevel    
+        - charInkCheck == fifthChar_InkLevel:
+            ~ Ink = fifthChar_InkLevel    
             
     }
     
     {Ink:
                 
-        - Low:
+        - ink_low:
             {
                 - numberQuestion == 0:
                     ~ return "onState"
@@ -249,7 +249,7 @@ VAR numberQuestion = 0
             }
                 
         
-        - Normal:
+        - ink_normal:
             {
                 - numberQuestion == 0:
                     ~ return "onState"            
@@ -260,7 +260,7 @@ VAR numberQuestion = 0
             }    
             
                 
-        - Medium:
+        - ink_medium:
             {
                 - numberQuestion == 0:
                     ~ return "onState"            
@@ -272,7 +272,7 @@ VAR numberQuestion = 0
                     ~ return "emptyState"    
             }
             
-        - High:
+        - ink_high:
             {
                 - numberQuestion == 0:
                     ~ return "onState"            
@@ -295,26 +295,26 @@ VAR numberQuestion = 0
 === function ink_tag_b (charInkCheck)
 
     {
-        - charInkCheck == firstCharacterInkLevel:
-            ~ Ink = firstCharacterInkLevel
+        - charInkCheck == firstChar_InkLevel:
+            ~ Ink = firstChar_InkLevel
         
-        - charInkCheck == secondCharacterInkLevel:
-            ~ Ink = secondCharacterInkLevel
+        - charInkCheck == secondChar_InkLevel:
+            ~ Ink = secondChar_InkLevel
         
-        - charInkCheck == thirdCharacterInkLevel:
-            ~ Ink = thirdCharacterInkLevel
+        - charInkCheck == thirdChar_InkLevel:
+            ~ Ink = thirdChar_InkLevel
             
-        - charInkCheck == fourthCharacterInkLevel:
-            ~ Ink = fourthCharacterInkLevel
+        - charInkCheck == fourthChar_InkLevel:
+            ~ Ink = fourthChar_InkLevel
         
-        - charInkCheck == fifthCharacterInkLevel:
-            ~ Ink = fifthCharacterInkLevel    
+        - charInkCheck == fifthChar_InkLevel:
+            ~ Ink = fifthChar_InkLevel    
             
     }
     
     {Ink:
     
-        - Normal:
+        - ink_normal:
             {
                 - numberQuestion == 0:
                     ~ return "onState"            
@@ -325,7 +325,7 @@ VAR numberQuestion = 0
             }    
             
                 
-        - Medium:
+        - ink_medium:
             {
                 - numberQuestion == 0:
                     ~ return "onState"            
@@ -337,7 +337,7 @@ VAR numberQuestion = 0
                     ~ return "emptyState"                      
             }
             
-        - High:
+        - ink_high:
             {
                 - numberQuestion == 0:
                     ~ return "onState"            
@@ -358,26 +358,26 @@ VAR numberQuestion = 0
 === function ink_tag_c(charInkCheck)
 
     {
-        - charInkCheck == firstCharacterInkLevel:
-            ~ Ink = firstCharacterInkLevel
+        - charInkCheck == firstChar_InkLevel:
+            ~ Ink = firstChar_InkLevel
         
-        - charInkCheck == secondCharacterInkLevel:
-            ~ Ink = secondCharacterInkLevel
+        - charInkCheck == secondChar_InkLevel:
+            ~ Ink = secondChar_InkLevel
         
-        - charInkCheck == thirdCharacterInkLevel:
-            ~ Ink = thirdCharacterInkLevel
+        - charInkCheck == thirdChar_InkLevel:
+            ~ Ink = thirdChar_InkLevel
             
-        - charInkCheck == fourthCharacterInkLevel:
-            ~ Ink = fourthCharacterInkLevel
+        - charInkCheck == fourthChar_InkLevel:
+            ~ Ink = fourthChar_InkLevel
         
-        - charInkCheck == fifthCharacterInkLevel:
-            ~ Ink = fifthCharacterInkLevel    
+        - charInkCheck == fifthChar_InkLevel:
+            ~ Ink = fifthChar_InkLevel    
             
     }
     
     {Ink:
     
-        - Medium:
+        - ink_medium:
             {
                 - numberQuestion == 0:
                     ~ return "onState"            
@@ -389,7 +389,7 @@ VAR numberQuestion = 0
                     ~ return "emptyState"                     
             }
             
-        - High:
+        - ink_high:
             {
                 - numberQuestion == 0:
                     ~ return "onState"            
@@ -410,26 +410,26 @@ VAR numberQuestion = 0
 === function ink_tag_d (charInkCheck)
 
     {
-        - charInkCheck == firstCharacterInkLevel:
-            ~ Ink = firstCharacterInkLevel
+        - charInkCheck == firstChar_InkLevel:
+            ~ Ink = firstChar_InkLevel
         
-        - charInkCheck == secondCharacterInkLevel:
-            ~ Ink = secondCharacterInkLevel
+        - charInkCheck == secondChar_InkLevel:
+            ~ Ink = secondChar_InkLevel
         
-        - charInkCheck == thirdCharacterInkLevel:
-            ~ Ink = thirdCharacterInkLevel
+        - charInkCheck == thirdChar_InkLevel:
+            ~ Ink = thirdChar_InkLevel
             
-        - charInkCheck == fourthCharacterInkLevel:
-            ~ Ink = fourthCharacterInkLevel
+        - charInkCheck == fourthChar_InkLevel:
+            ~ Ink = fourthChar_InkLevel
         
-        - charInkCheck == fifthCharacterInkLevel:
-            ~ Ink = fifthCharacterInkLevel    
+        - charInkCheck == fifthChar_InkLevel:
+            ~ Ink = fifthChar_InkLevel    
             
     }
     
     {Ink:
     
-        - High:
+        - ink_high:
             {
                 - numberQuestion == 0:
                     ~ return "onState"            

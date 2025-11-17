@@ -32,7 +32,7 @@
 = hub
 ~ temp charNameThree = translator(fourthCharacterState)
 
-    {~ Ero sicura di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicura di star capendo tutto di questo luogo.} #speaker:{fourthChar_tag()} #inkA:{ink_tag_a(fourthCharacterInkLevel)} #inkB:{ink_tag_b(fourthCharacterInkLevel)}  #inkC:{ink_tag_c(fourthCharacterInkLevel)}  #inkD:{ink_tag_d(fourthCharacterInkLevel)} #portrait:fourth_neutral
+    {~ Ero sicura di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicura di star capendo tutto di questo luogo.} #speaker:{fourthChar_tag()} #inkA:{ink_tag_a(fourthChar_InkLevel)} #inkB:{ink_tag_b(fourthChar_InkLevel)}  #inkC:{ink_tag_c(fourthChar_InkLevel)}  #inkD:{ink_tag_d(fourthChar_InkLevel)} #portrait:fourth_neutral
             + [Ti va di raccontarmi qualcosa di te?]
                 -> knowing_fourth_character
                 
@@ -462,7 +462,7 @@ Stai per donare qualcosa a {charNameThree}.
         
     
         = ink_outcome    
-            Dopo il tuo dono {inkTranslator(fourthCharacterInkLevel)}.
+            Dopo il tuo dono {inkTranslator(fourthChar_InkLevel)}.
                 ~ move_entity(fourthCharPaint, Bedroom)
                 ~ saturationVar ++
                  -> talk_with_fourth_character
@@ -535,7 +535,7 @@ Stai per donare qualcosa a {charNameThree}.
     ~ temp charNameThree = translator(fourthCharacterState)
         <i>A seguito del rapporto che {player_name} ha creato con {charNameThree} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità.|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
-            ~ inkLevel(fourthCharacterInkLevel)
+            ~ inkLevel(fourthChar_InkLevel)
         + [Voglio cominciare la riscrittura.]
             -> fourthNaming -> 
             -> one
@@ -577,7 +577,7 @@ Stai per donare qualcosa a {charNameThree}.
         -
  
         {
-        - fourthCharacterInkLevel == Empty:
+        - fourthChar_InkLevel == ink_empty:
             -> ending
         - else: 
             -> three
@@ -620,7 +620,7 @@ Stai per donare qualcosa a {charNameThree}.
                     
         -
         {
-        - fourthCharacterInkLevel == Low:
+        - fourthChar_InkLevel == ink_low:
             -> ending
         - else: 
             -> three
@@ -661,7 +661,7 @@ Stai per donare qualcosa a {charNameThree}.
         -
 
         {
-        - firstCharacterInkLevel == Normal:
+        - firstChar_InkLevel == ink_normal:
             -> ending
         - else: 
             -> four
@@ -784,7 +784,7 @@ Stai per donare qualcosa a {charNameThree}.
     = close
             ~ fourthStory = story_storyEnded
             ~ story_endedStories += story_fourthCharStoryEnded
-            ~ fourthCharacterInkLevel = Empty
+            ~ fourthChar_InkLevel = ink_empty
             ~ player_movementsCounter = 0
             ~ numberQuestion = 0
             ~ PG_advance_management(FourthCharacter)

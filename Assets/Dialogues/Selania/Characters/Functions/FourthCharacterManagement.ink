@@ -54,11 +54,11 @@
 
     {
         - fourthPurple && fourthYellow > fourthBlue:
-            ~ fourthCharacterInkLevel ++
-            ~ fourthCharacterInkLevel ++
+            ~ fourthChar_InkLevel ++
+            ~ fourthChar_InkLevel ++
                 ->->
         - fourthPurple or fourthYellow > fourthBlue:
-            ~ fourthCharacterInkLevel ++
+            ~ fourthChar_InkLevel ++
                 ->->
     }
 
