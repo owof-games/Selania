@@ -982,7 +982,7 @@
             -
             //Se fiducia bassa.
             {
-                - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1):
+                - secondChar_purple or secondChar_Green or secondChar_Red or secondChar_Blue or secondChar_Yellow >= (secondChar_storyletsForRewritingCount - 1):
                     Comunque l'innaffiatoio non l'ho mica visto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     Ma.
                     Sono sicuro che se cerchi bene lo trovi dove l'avete lasciato.

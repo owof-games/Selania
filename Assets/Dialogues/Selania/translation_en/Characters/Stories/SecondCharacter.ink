@@ -135,7 +135,7 @@
                 ???: Tipo: perché c'è la neve ma non fa freddo?
                 ???: Perché c'è una stazione ma non passa nessun treno?
                 ???: Perché c'è vicino alla stazione ma non ci posso entrare?
-                    ~ secondBlue ++
+                    ~ secondChar_Blue ++
                 
             + [Perché è pieno di cose buffe!]
                 ???: Uh.
@@ -144,19 +144,19 @@
                 ???: Le lettere non si danno al postino?
                 ???: E il postino non le porta alle persone?
                 ???: Mica le appende così!
-                    ~ secondYellow ++
+                    ~ secondChar_Yellow ++
                 
             + [Perché <b>tu</b> sei qui?]
                 ???: Boh, che ne so? 
                 ???: Era solo una domanda!
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
 
                 
             + [Per aiutare chi è in difficoltà.]
                 ???: Come il veterinario?
                 ???: O come la maestra di ginnastica, che dice di aiutarmi.
                 ???: Ma poi mi sgrida se sbaglio?
-                    ~ secondGreen ++
+                    ~ secondChar_Green ++
                 
             + [Per capire meglio chi sono.]
                 ???: Non sai chi sei?
@@ -185,7 +185,7 @@
                 ???: Ma il compleanno è un'altra cosa.
                 ???: È un momento tutto tuo.
                 ???: E infatti lo puoi festeggiare in ritardo e comunque è il tuo compleanno!
-                    ~ secondBlue ++
+                    ~ secondChar_Blue ++
                 
             + (twoYellow) [Niente caramelle, ma c'è uno stagno dove nuotare!]
                 ???: FIGO!
@@ -193,21 +193,21 @@
                 ???: Però questa estate ho visto un mare gigantesco.
                 ???: Più grande anche del cielo!
                 ???: Quello qui non c'è di sicuro!
-                    ~ secondYellow ++
+                    ~ secondChar_Yellow ++
                 
             + (twoRed) [E come ti sei ripreso i giocattoli?]
                 ???: Non sono mica giocattoli.
                 ???: E non me li sono ripresi.
                 ???: Papà è buono, fino a quando non si arrabbia.
                 ???: E non voglio farlo arrabbiare.
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
 
                 
             + (twoGreen) [Vuoi molto bene alla tua mamma?]
                 ???: Sì sì sì.
                 ???: Lei è la mamma migliore del pianeta.
                 ???: Dell'universo.
-                    ~ secondGreen ++
+                    ~ secondChar_Green ++
   
                 
             + (twoPurple) [Quindi, rubandoti i giochi, tuo papà ti ha fatto un favore.]
@@ -278,7 +278,7 @@
                 {charNameTwo}: devono
                 {charNameTwo}: stare!
                 {charNameTwo}: Mi ha fatto arrabbiare.
-                    ~ secondBlue ++
+                    ~ secondChar_Blue ++
                 
             + (twoYellow) [Perché non le hai fatto uno scherzo?]
                 {charNameTwo}: Perché ero arrabbiato.
@@ -291,7 +291,7 @@
                 {charNameTwo}: quando
                 {charNameTwo}: i grandi
                 {charNameTwo}: mi toccano.
-                    ~ secondYellow ++
+                    ~ secondChar_Yellow ++
                 
             + (twoRed) [Picchiare una così è un po' da sfigati.]
                 {charNameTwo}: Mi aveva preso il braccio!
@@ -300,7 +300,7 @@
                 {charNameTwo}: Non volevo picchiarla.
                 {charNameTwo}: Volevo solo spingerla via.
                 {charNameTwo}: Ma mi sono arrabbiato troppo.
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
 
                 
             + (twoGreen) [C'è rimasta male, sai?]
@@ -309,7 +309,7 @@
                 {charNameTwo}: E poi mi ha detto che i bambini qui non ci devono stare.
                 {charNameTwo}: E mi ha preso per la spalla.
                 {charNameTwo}: Non mi piace quando mi toccano.
-                    ~ secondGreen ++
+                    ~ secondChar_Green ++
   
                 
             + (twoPurple) [Hai ottenuto quello che volevi?]
@@ -425,20 +425,20 @@
             //Definire meglio in base ai colori.
             
             + {him_liar} [Bugia: hai detto di esser pieno di action figures.]
-                    ~ secondBlue ++
+                    ~ secondChar_Blue ++
                 {charNameTwo}: "Pieno" è un modo di dire.
                 {charNameTwo}: Come "Furbo come una volpe".
                 {charNameTwo}: O "Simpatico come {name}".
             
             + {him_liar} [Prima hai detto che tutte le action te le ha rubate tuo padre.]
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
                 {charNameTwo}: No.
                 {charNameTwo}: Ricordi male.
                 {charNameTwo}: Papà è bravo, non fa queste cose. 
                
             
             + {her_liar} [Tua mamma si arrabbia spesso?]
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
                 {charNameTwo}: Un po'.
                 {charNameTwo}: Non è cattiva, è che sono cattivo io.
                 {charNameTwo}: E così perde la pazienza.
@@ -448,11 +448,11 @@
                 {charNameTwo}: Sì no boh.
                 {charNameTwo}: Anche.
                 {charNameTwo}: Uffi, che noia che fai!
-                    ~ secondBlue ++
+                    ~ secondChar_Blue ++
             
                   
             + {they_liar} [Ma non era il suo regalo di compleanno questo?]
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
                 {charNameTwo}: Sì, certo che sì.
                 {charNameTwo}: Si è dimenticata il compleanno, ma poi ha deciso di farmi questo.
                 {charNameTwo}: Per scusarsi.
@@ -467,7 +467,7 @@
                 {charNameTwo}: Ma poi papà si arrabbia.
                 {charNameTwo}: E così non facciamo mai nulla.
                 {charNameTwo}: E allora vado a letto prestissimo e correggo tutta la giornata.
-                    ~ secondGreen ++          
+                    ~ secondChar_Green ++          
             
 
             + [Però non mi hai detto il tuo nome. Sei una spia?]
@@ -475,7 +475,7 @@
                 {charNameTwo}: Una spia non direbbe mai che è una spia.
                 {charNameTwo}: Oppure ti confonde, così non capisci cosa è vero o cosa no.
                 {charNameTwo}: Però tu non puoi mica farlo!
-                    ~ secondYellow ++
+                    ~ secondChar_Yellow ++
                 
                 
             + [Sembra che tua mamma sia piena di preoccupazioni.]
@@ -527,7 +527,7 @@
                 {charNameTwo}: Poi ha smesso.
                 {charNameTwo}: Mamma dice che spera sia anneggato in mare.
                 {charNameTwo}: Papà invece ha ancora tutte le sue lettere nascoste nel garage.
-                    ~ secondBlue ++
+                    ~ secondChar_Blue ++
                 
             + [Insegni a barare anche a me?]
                 {charNameTwo}: Ho una idea!
@@ -535,7 +535,7 @@
                 {charNameTwo}: Ti insegno come si bara.
                 {charNameTwo}: E poi stracciamo {charNameFive}.
                 {charNameTwo}: Così la smette di dirmi cosa non devo fare.
-                    ~ secondYellow ++
+                    ~ secondChar_Yellow ++
                 
             + [Tua nonna sembra una tipa forte!]
                 {charNameTwo}: "Forte"?
@@ -545,7 +545,7 @@
                 {charNameTwo}: E poi gli ha sputato di nascosto nel caffé.
                 {charNameTwo}: E lui si è arrabbiato perché io ridevo mentre lo beveva.
                 {charNameTwo}: Abbiamo tantissimi segreti lei e io!
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
 
                 
             + [Ti manca casa? Vorresti tornare?]
@@ -556,7 +556,7 @@
                 {charNameTwo}: Voglio andare da mio fratello.
                 {charNameTwo}: Lì mi piace.
                 {charNameTwo}: Ma non piaccio al suo amico.
-                    ~ secondGreen ++
+                    ~ secondChar_Green ++
   
                 
             + [Quando i grandi hanno paura, fanno cose cattive.]
@@ -634,7 +634,7 @@
                 {charNameTwo}: Questa è una cosa nuova.
                 {charNameTwo}: E mi piace.
                 {charNameTwo}: Ma non so se mi piace piangere.
-                    ~ secondBlue ++
+                    ~ secondChar_Blue ++
                 
             + [La scuola è un posto senza fantasia!]
                 {charNameTwo}: Sì no boh.
@@ -645,14 +645,14 @@
                 {charNameTwo}: Ma ogni cosa che faccio fa arrabbiare qualcuno.
                 {charNameTwo}: Ma se non faccio cose mi annoio.
                 {charNameTwo}: E se mi annoio comunque finisco in castigo.
-                    ~ secondYellow ++
+                    ~ secondChar_Yellow ++
                 
             + [Stringi i denti, lotta, diventa più forte degli altri!]
                 {charNameTwo}: Lo dice anche papà.
                 {charNameTwo}: Ma a me non mi interessa mica tanto.
                 {charNameTwo}: Voglio solo studiare gli animali.
                 {charNameTwo}: E che mi lascino in pace.
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
 
                 
             + [A me spiace per te, sai?]
@@ -662,7 +662,7 @@
                 {charNameTwo}: Mi viene da piangere.
                 {charNameTwo}: Ma non voglio piangere.
                 {charNameTwo}: Quindi non dirlo più.
-                    ~ secondGreen ++
+                    ~ secondChar_Green ++
   
                 
             + [I castighi sono inutili. Hai mai imparato qualcosa dai castighi?]
@@ -677,7 +677,7 @@
             -
             //Se fiducia bassa.
             {
-                - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1):
+                - secondChar_purple or secondChar_Green or secondChar_Red or secondChar_Blue or secondChar_Yellow >= (secondChar_storyletsForRewritingCount - 1):
                     {charNameTwo}: Comunque l'innaffiatoio non l'ho mica visto.
                     {charNameTwo}: Ma.
                     {charNameTwo}: Sono sicuro che se cerchi bene lo trovi dove l'avete lasciato.
@@ -727,7 +727,7 @@
                 {charNameTwo}: Anche che salto e volo?
                 {charNameTwo}: O che la serra diventa di cioccolato?
                 {charNameTwo}: O che la mentore faccia una battuta carina?
-                    ~ secondBlue ++
+                    ~ secondChar_Blue ++
                 
             + [Speriamo sia il nuovo Super Wario!]
                 {charNameTwo}: Posso giocarci anche io?
@@ -735,14 +735,14 @@
                 {charNameTwo}: Qui non ci sono TV.
                 {charNameTwo}: Però lo stagno sbrilluccica.
                 {charNameTwo}: Forse la rana lo trasforma in uno schermo!
-                    ~ secondYellow ++
+                    ~ secondChar_Yellow ++
                 
             + [{charNameTwo}, se continui con le balle non mi fido più di te!]
                 {charNameTwo}: Non sono balle!
                 {charNameTwo}: Mi piacciono gli animali.
                 {charNameTwo}: Non mi serve inventare altri animali perché quelli che ci sono mi piacciono già.
                 {charNameTwo}: La rana c'è, vai a vedere!
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
 
                 
             + [Sembra una rana molto gentile.]
@@ -752,7 +752,7 @@
                 {charNameTwo}: Se non ti piace mi dai quello che ti dà?
                 {charNameTwo}: Spero tanto sia un cucciolo.
                 {charNameTwo}: O la Play!
-                    ~ secondGreen ++
+                    ~ secondChar_Green ++
   
                 
             + [E se lo senti e prudono le orecchie è una bugia.]
@@ -801,7 +801,7 @@
                 {charNameTwo}: Ma non mi servono le cose pratiche.
                 {charNameTwo}: Mi serve immaginare cose più belle.
                 {charNameTwo}: Così le giornate sono più facili.
-                    ~ secondBlue ++
+                    ~ secondChar_Blue ++
                 
             + [Hai mai corretto una giornata mettendoci vampiri o zombie?]
                 {charNameTwo}: Sì!
@@ -812,7 +812,7 @@
                 {charNameTwo}: E lottavamo contro i cervombie.
                 {charNameTwo}: Cervi zombie.
                 {charNameTwo}: Ho riso tantissimo quella sera!
-                        ~ secondYellow ++
+                        ~ secondChar_Yellow ++
                         
             + [Se i grandi ti picchiano, devi fare squadra con gli altri!]
                 {charNameTwo}: Una volta ci ho provato.
@@ -820,7 +820,7 @@
                 {charNameTwo}: Mi dicono che sono scemo, per via degli animali.
                 {charNameTwo}: O mi dicono che sono strano.
                 {charNameTwo}: E che non gli piace quando mi arrabbio.
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
 
                 
             + [Grazie per avermi raccontato questa cosa.]
@@ -832,7 +832,7 @@
                 {charNameTwo}: O quando non succede niente.
                 {charNameTwo}: A volte è peggio.
                 {charNameTwo}: Non mi piace annoiarmi.
-                    ~ secondGreen ++
+                    ~ secondChar_Green ++
   
                 
             + [Come mai se qualcuno ti chiama non rispondi?]
@@ -885,7 +885,7 @@
                 {charNameTwo}: "E se un'onda ti investe?"
                 {charNameTwo}: "E se tuo fratello si distrae?"
                 {charNameTwo}: Mamma è davvero pesante.
-                    ~ secondBlue ++
+                    ~ secondChar_Blue ++
                 
             + [Le statue di tuo fratello si muovono?]
                 {charNameTwo}: Forse quando non ci siamo?
@@ -894,7 +894,7 @@
                 {charNameTwo}: Però gli serve l'elettricità.
                 {charNameTwo}: Voglio costruirne una anche io.
                 {charNameTwo}: Forse in biblioteca c'è una guida!
-                    ~ secondYellow ++
+                    ~ secondChar_Yellow ++
                 
             + [{charNameTwo}, non devi sempre dare ragione agli adulti.]
                 {charNameTwo}: Non è mica facile!
@@ -903,7 +903,7 @@
                 {charNameTwo}: Credo che lui sia buono.
                 {charNameTwo}: Ma se poi si arrabbia con me e non mi vuole più lì?
                 {charNameTwo}: Poi non ci posso più stare con mio fratello!
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
 
                 
             + [Hai chiesto all'amico di tuo fratello cosa pensa di te?]
@@ -914,7 +914,7 @@
                 {charNameTwo}: Ma non ci credo.
                 {charNameTwo}: Anche perché a quello non gli piacciono i bambini proprio.
                 {charNameTwo}: Ed è una cosa che rende molto triste mio fratello.
-                    ~ secondGreen ++
+                    ~ secondChar_Green ++
   
                 
             + [Grazie per aver corretto le tue bugie.]
@@ -950,21 +950,21 @@
                 {charNameTwo}: "Bimbo, te le spiego lentamente le cose ora, vieni."
                 {charNameTwo}: Non mi deve spiegare lentamente le cose.
                 {charNameTwo}: Io so fare le frazioni!
-                    ~ secondBlue ++
+                    ~ secondChar_Blue ++
                 
             + [Questo non è il mio lavoro. I lavori sono noiosi.]
                 {charNameTwo}: Però ai grandi piace parlare di lavoro.
                 {charNameTwo}: E le maestre parlano sempre del futuro.
                 {charNameTwo}: E dicono che ci devo lavorare con le cose in cui sono bravo.
                 {charNameTwo}: Ma io voglio solo imparare cose nuove!
-                    ~ secondYellow ++
+                    ~ secondChar_Yellow ++
                 
             + [In realtà non l'ho scelto. Manco mi pagano.]
                 {charNameTwo}: Che fregatura.
                 {charNameTwo}: Nemmeno mamma mi paga per i lavoretti a casa.
                 {charNameTwo}: Dice che è una cosa che devono fare tutti, grandi e piccoli, maschi e femmine.
                 {charNameTwo}: Forse {charNameFive} è come mia mamma.
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
                 
             + [Mi è sempre piaciuto far stare bene le persone.]
                 {charNameTwo}: Questa è una cosa bella.
@@ -975,7 +975,7 @@
                 {charNameTwo}: E se la prendono con la persona che volevano aiutare.
                 {charNameTwo}: Per questo si fa prima a fare da soli.
                 {charNameTwo}: Mica puoi litigare con te stesso, no?
-                    ~ secondGreen ++
+                    ~ secondChar_Green ++
   
                 
             + [Voglio portare un grande cambiamento partendo dal piccolo.]
@@ -1016,7 +1016,7 @@
                 {charNameTwo}: E magari riesco a fare venire qui anche mio fratello.
                 {charNameTwo}: E la nonna.
                 {charNameTwo}: Così siamo tutti felici.
-                    ~ secondBlue ++
+                    ~ secondChar_Blue ++
                 
             + [E se invece rimanessi sia bambino che adulto?]
                 {charNameTwo}: Nonna dice che è il problema di mamma.
@@ -1026,7 +1026,7 @@
                 {charNameTwo}: Tutti i litigi.
                 {charNameTwo}: La rabbia.
                 {charNameTwo}: A me non mi piace la mia rabbia.
-                    ~ secondYellow ++
+                    ~ secondChar_Yellow ++
                 
             + [Puoi fare il ribelle e salvare gli animali!]
                 {charNameTwo}: Tipo Greta!
@@ -1036,7 +1036,7 @@
                 {charNameTwo}: Magari posso programmare le statue di mio fratello.
                 {charNameTwo}: E ci pensano loro a far fuori "quelli".
                 {charNameTwo}: Non ho capito mica nemmeno cosa sia "fare fuori".
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
 
                 
             + [Non ti preoccupare: hai moltissimo tempo per decidere che fare.]
@@ -1047,7 +1047,7 @@
                 {charNameTwo}: Io l'unica cosa che so fare è dire cose stupide sugli animali.
                 {charNameTwo}: E trovare nascondigli in ogni posto.
                 {charNameTwo}: E dire bugie.
-                    ~ secondGreen ++
+                    ~ secondChar_Green ++
   
                 
             + [Potresti diventare uno storico degli animali.]
@@ -1103,7 +1103,7 @@
                 {charNameTwo}: Un serpente.
                 {charNameTwo}: Un riccio.
                 {charNameTwo}: E ora ti spino!
-                    ~ secondBlue ++
+                    ~ secondChar_Blue ++
                 
             + [Immagina di picchiare i mostri invece dei compagni!]
                 {charNameTwo}: I mostri mi piacciono.
@@ -1112,7 +1112,7 @@
                 {charNameTwo}: Ma anche questo posto non doveva esistere, credo.
                 {charNameTwo}: E invece è qui.
                 {charNameTwo}: Chi lo dice che non faccio male ai mostri?
-                    ~ secondYellow ++
+                    ~ secondChar_Yellow ++
                 
             + [Tuo padre ti picchia, e tu hai imparato da lui a picchiare.]
                 {charNameTwo}: NO!
@@ -1121,7 +1121,7 @@
                 {charNameTwo}: Mi sembra una cosa difficile.
                 {charNameTwo}: Ma voglio tanto che non mi picchi più.
                 {charNameTwo}: Non mi piace avere paura di lui.
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
 
                 
             + [Nessuno merita di essere picchiato, né tu né quel bambino.]
@@ -1129,7 +1129,7 @@
                 {charNameTwo}: Mamma dice che papà non lascia mai nulla al caso.
                 {charNameTwo}: E per questo è il più bravo a lavoro.
                 {charNameTwo}: E quel bambino è davvero fastidioso.
-                    ~ secondGreen ++
+                    ~ secondChar_Green ++
   
                 
             + [La rabbia della ragazzina ha protetto il fratello.]
@@ -1176,7 +1176,7 @@
                 {charNameTwo}: Ma senza elettricità, dopo l'incidente.
                 {charNameTwo}: Però posso usare le batterie.
                 {charNameTwo}: Voglio fargli un regalo con le cose della serra, sai?
-                    ~ secondBlue ++
+                    ~ secondChar_Blue ++
                 
             + [Proviamo con la lampada della biblioteca!]
                 {charNameTwo}: Sì!
@@ -1186,7 +1186,7 @@
                 {charNameTwo}: Oppure ci mettiamo un faro!
                 {charNameTwo}: Ma ci serve qualcosa di alto.
                 {charNameTwo}: Forse se prendo tutti i rami del bosco...
-                    ~ secondYellow ++
+                    ~ secondChar_Yellow ++
                 
             + [Sei tosto perché alla fine fai quello che ti va.]
                 {charNameTwo}: Sì no boh.
@@ -1198,7 +1198,7 @@
                 {charNameTwo}: O il vecchio respiratore di nonna.
                 {charNameTwo}: Solo per capire.
                 {charNameTwo}: Poi li rimetto a posto prima che si svegliano tutti.
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
 
                 
             + [Promettimi che non mangerai nulla di strano, qui.]
@@ -1208,7 +1208,7 @@
                 {charNameTwo}: Ma hanno tutte un sapore fastidioso.
                 {charNameTwo}: Però per un attimo una delle piante mi ha fatto vedere le cose con colori strani.
                 {charNameTwo}: Ma è durato pochissimo e poi avevo solo tanta sete.
-                        ~ secondGreen ++
+                        ~ secondChar_Green ++
   
                 
             + [Tuo fratello ti lascia essere te stesso.]
@@ -1263,7 +1263,7 @@
                 {charNameTwo}: Senza usare un libro.
                 {charNameTwo}: A parte quando ne ho impilati alcuni per raggiungere i vasi alti della serra.
                 {charNameTwo}: Non dirlo a {charNameFive}, ti prego!
-                    ~ secondBlue ++
+                    ~ secondChar_Blue ++
                 
             + [Dobbiamo capire la lingua dei pesci così ci possiamo giocare.]
                 {charNameTwo}: Magari è come con le pecore che fanno tanti "bee" diversi.
@@ -1272,7 +1272,7 @@
                 {charNameTwo}: Ma la carpa ha la faccia da toscana.
                 {charNameTwo}: E il pesce spada sicuro che è romano!
                 {charNameTwo}: Posso creare un traduttore pescese/umano!
-                    ~ secondYellow ++
+                    ~ secondChar_Yellow ++
                 
             + [Andiamo a ruttare da {charNameFive} e la facciamo arrabbiare?]
                 {charNameTwo}: Ci sto!
@@ -1280,7 +1280,7 @@
                 {charNameTwo}: Che poi ora ho capito che {charNameFive} non ce l'ha mica con me.
                 {charNameTwo}: Forse mi inizia anche a piacere.
                 {charNameTwo}: Ma sì, un rutto se lo merita.
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
 
                 
             + [Vorresti che venissero anche mamma e papà?]
@@ -1292,7 +1292,7 @@
                 {charNameTwo}: Nemmeno quando ho versato tutto il caffè sul divano.
                 {charNameTwo}: O quando le ho rubato la grappa.
                 {charNameTwo}: Che brutto essere ubriaco!
-                    ~ secondGreen ++
+                    ~ secondChar_Green ++
   
                 
             + [Ti piace insegnare le cose all'altra nonna.]
@@ -1393,7 +1393,7 @@
         {
         
         //Migliore outcome
-        - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1): {charNameTwo}: Non sei male, per essere grande.
+        - secondChar_purple or secondChar_Green or secondChar_Red or secondChar_Blue or secondChar_Yellow >= (secondChar_storyletsForRewritingCount - 1): {charNameTwo}: Non sei male, per essere grande.
             {charNameTwo}: Dici sempre le cose allo stesso modo.
             {charNameTwo}: Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
             {charNameTwo}: E questo mi fa stare al sicuro.
@@ -1401,7 +1401,7 @@
         <i>{charNameTwo} vede {name} come una persona amica e fidata.</i>
         
         //Secondo migliore outcome
-        -secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 2): {charNameTwo}: Un po' mi fido.
+        -secondChar_purple or secondChar_Green or secondChar_Red or secondChar_Blue or secondChar_Yellow >= (secondChar_storyletsForRewritingCount - 2): {charNameTwo}: Un po' mi fido.
             {charNameTwo}: Secondo me non dici <i>sempre</i> le cose in modo preciso.
             {charNameTwo}: Sembri un po' un gatto.
             {charNameTwo}: Ma mi fido.
@@ -1409,7 +1409,7 @@
         <i>{charNameTwo} si trova bene con {name}.</i>
         
         //Outcome peggiore
-        - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow < (secondChar_storyletsForRewritingCount/2):  {charNameTwo}: Secondo me mi tratti come un bambino.
+        - secondChar_purple or secondChar_Green or secondChar_Red or secondChar_Blue or secondChar_Yellow < (secondChar_storyletsForRewritingCount/2):  {charNameTwo}: Secondo me mi tratti come un bambino.
             {charNameTwo}: Tutte le cose che dici cambiano, sono disordinate.
             {charNameTwo}: Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
             {charNameTwo}: Non mi piace mica come cosa.
@@ -1456,7 +1456,7 @@
 
     = statement
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1): l'inchiostro è aumentato di due unità|{secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
+        <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {secondChar_purple or secondChar_Green or secondChar_Red or secondChar_Blue or secondChar_Yellow >= (secondChar_storyletsForRewritingCount - 1): l'inchiostro è aumentato di due unità|{secondChar_purple or secondChar_Green or secondChar_Red or secondChar_Blue or secondChar_Yellow >= (secondChar_storyletsForRewritingCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(secondCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]
@@ -1480,7 +1480,7 @@
             {name}: Tua nonna ti ha insegnato a barare!
             {name}: Tuo fratello crea cose e ti protegge.
             {name}: Anche loro sono adulti.
-                   ~ secondRed ++
+                   ~ secondChar_Red ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)
         
@@ -1489,7 +1489,7 @@
             {name}: Diventiamo grandi, abbiamo un sacco di doveri, e non sappiamo cosa fare.
             {name}: Per questo i grandi fanno cose brutte.
             {name}: Ma questo non li rende schifosi.
-                   ~ secondGreen ++
+                   ~ secondChar_Green ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)  
         
@@ -1499,7 +1499,7 @@
             {name}: Tu puoi essere un grande che gioca.
             {name}: E che gioca con gli animali per vivere.
             {name}: Ed essere felice.
-                   ~ secondYellow ++
+                   ~ secondChar_Yellow ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)          
      
@@ -1509,7 +1509,7 @@
             {name}: Gli studi sugli animali.
             {name}: Le caramelle.
             {name}: Le action figures.
-                   ~ secondBlue ++
+                   ~ secondChar_Blue ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)    
         
@@ -1540,7 +1540,7 @@
             {name}: E la cosa certa è che gli animali ci sono ancora.
             {name}: Che tuo fratello ti vuole bene.
             {name}: E le caramelle sono buone.
-                   ~ secondYellow ++
+                   ~ secondChar_Yellow ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)            
   
@@ -1549,7 +1549,7 @@
             {name}: Si ha paura solo se non si conosce una cosa.
             {name}: Impara a conoscere quello di cui hai paura.
             {name}: E a quel punto saprai anche come cambiare le cose.
-                   ~ secondBlue ++
+                   ~ secondChar_Blue ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)    
     
@@ -1559,7 +1559,7 @@
             {name}: A scuola fai quello che vuoi.
             {name}: Fallo anche fuori.
             {name}: Per salvare il mondo.
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)            
             
@@ -1567,7 +1567,7 @@
             {name}: Un po' come la bugia del compleanno.
             {name}: Ma per far sì che ogni bosco abbia migliaia di compleanni.
             {name}: Usa il tuo dono per convincere le persone a cambiare.
-                   ~ secondGreen ++
+                   ~ secondChar_Green ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)  
                 
@@ -1609,7 +1609,7 @@
             {name}: E fa in modo che possiate passare tanto tempo assieme.
             {name}: Che tu possa avere uno spazio felice.
             {name}: E così rende il mondo un po' meno orribile.
-                   ~ secondGreen ++
+                   ~ secondChar_Green ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)  
                 
@@ -1617,7 +1617,7 @@
             {name}: Si è creato una nuova casa.
             {name}: Non si è fatto mettere i piedi in testa da nessuno.
             {name}: E questo lo fai se pensi ci sia un futuro dove andare.
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)
             
@@ -1625,7 +1625,7 @@
         + [Eppure gioca con te.]
             {name}: Si diverte, lascia che le cose belle accadano.
             {name}: In un mondo orribile, esisterebbe davvero il piacere?
-                   ~ secondYellow ++
+                   ~ secondChar_Yellow ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)            
 
@@ -1634,7 +1634,7 @@
             {name}: Vede le cose rotte e le ripara.
             {name}: Quindi ci sono cose che si possono aggiustare.
             {name}: Serve solo un meccanico per le cose che lo spaventano.
-                   ~ secondBlue ++
+                   ~ secondChar_Blue ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)         
         -
@@ -1656,7 +1656,7 @@
             {name}: Non ti piace da quando sei arrivato qui.
             {name}: Ti ha fatto arrabbiare dal primo momento.
             {name}: Vuoi davvero che sia lei a decidere come ti chiami?
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)
         
@@ -1665,7 +1665,7 @@
             {name}: Puoi studiare e diventare un superanimale.
             {name}: O divertirti a cambiare quando vuoi.
             {name}: E tornare riccio, quando le cose si fanno velenose.
-                   ~ secondBlue ++
+                   ~ secondChar_Blue ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)    
         
@@ -1684,7 +1684,7 @@
             {name}: Con me, con la rana.
             {name}: E con le cose che hai raccontato.
             {name}: Ti servono ancora quelle spine?
-                   ~ secondGreen ++
+                   ~ secondChar_Green ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)          
         
@@ -1693,7 +1693,7 @@
             {name}: Diventa qualcosa che vede fino alla luna, e insegui le stelle.
             {name}: Oppure impara a nuotare fino all'altra parte del mondo.
             {name}: Continua a cambiare.
-                    ~ secondYellow ++
+                    ~ secondChar_Yellow ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)    
             
@@ -1705,11 +1705,11 @@
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
      Per questo ti dico:
      
-        + {secondRed > 0} [Diventa il più forte, il più coraggioso.]
+        + {secondChar_Red > 0} [Diventa il più forte, il più coraggioso.]
             {name}: Sei un testardo, bugiardo, dispettoso.
             {name}: Queste cose unite possono renderti indistruttibile.
             {name}: E di cosa avrà mai paura un ragazzo indistruttibile?
-                    ~ secondRed ++
+                    ~ secondChar_Red ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)        
         
@@ -1724,26 +1724,26 @@
                     ~ secondStatementVariation(purple)    
                     
         
-        + {secondYellow > 0} [L'opposto della paura è la curiosità.]
+        + {secondChar_Yellow > 0} [L'opposto della paura è la curiosità.]
             {name}: E tu sei il ritratto della curiosità.
             {name}: Guarda le cose che arriveranno chiedendoti "Chissà se..." o "E se invece..." o "Perché accade questo?".
             {name}: E a quel punto ogni paura diventerà solo un problema da risolvere.
-                   ~ secondYellow ++
+                   ~ secondChar_Yellow ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(yellow)            
                 
-        + {secondGreen > 0} [I tuoi genitori sono spaventati, aiutatevi a vicenda.]
+        + {secondChar_Green > 0} [I tuoi genitori sono spaventati, aiutatevi a vicenda.]
             {name}: Nessuna persona può cambiare il mondo da sola.
             {name}: Ma possiamo partire dal cambiare le cose che ci circondano, un pezzo alla volta.
-                   ~ secondGreen ++
+                   ~ secondChar_Green ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(green)          
                 
-        + {secondBlue > 0} [Con la tua intelligenza puoi rendere il mondo migliore.]
+        + {secondChar_Blue > 0} [Con la tua intelligenza puoi rendere il mondo migliore.]
             {name}: Puoi aiutare gli adulti a essere meno tristi.
             {name}: E gli animali a non morire.
             {name}: E tua nonna a uscire dalla casa dei vecchi.
-                   ~ secondBlue ++
+                   ~ secondChar_Blue ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(blue)            
                 

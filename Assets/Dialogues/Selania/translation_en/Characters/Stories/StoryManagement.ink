@@ -72,10 +72,10 @@
     //UP: coerenza.
     //DOWN: incoerenza, cose random
     VAR secondChar_purple = 0
-    VAR secondYellow = 0
-    VAR secondBlue = 0
-    VAR secondGreen = 0
-    VAR secondRed = 0    
+    VAR secondChar_Yellow = 0
+    VAR secondChar_Blue = 0
+    VAR secondChar_Green = 0
+    VAR secondChar_Red = 0    
 
             /* ---------------------------------
             

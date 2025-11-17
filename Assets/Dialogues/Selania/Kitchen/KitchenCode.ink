@@ -491,14 +491,14 @@
         - cookingCompanion == SecondCharacter:
             ~ storagePurple = secondChar_purple
                 ~ secondChar_purple = 0
-            ~ storageYellow = secondYellow
-                ~ secondYellow = 0
-            ~ storageBlue = secondBlue
-                ~ secondBlue = 0
-            ~ storageGreen = secondGreen
-                ~ secondGreen = 0
-            ~ storageRed = secondRed
-                ~ secondRed = 0
+            ~ storageYellow = secondChar_Yellow
+                ~ secondChar_Yellow = 0
+            ~ storageBlue = secondChar_Blue
+                ~ secondChar_Blue = 0
+            ~ storageGreen = secondChar_Green
+                ~ secondChar_Green = 0
+            ~ storageRed = secondChar_Red
+                ~ secondChar_Red = 0
             ~ storageSecondStoryQuestCount = secondChar_storyletsForRewritingCount 
                 ~ secondChar_storyletsForRewritingCount = 0
     }
@@ -524,13 +524,13 @@
     - cookingCompanion == SecondCharacter:
             ~ secondChar_purple = secondChar_purple + storagePurple
                 ~ storagePurple = 0
-            ~ secondYellow = secondYellow + storageYellow
+            ~ secondChar_Yellow = secondChar_Yellow + storageYellow
                 ~ storageYellow = 0
-            ~ secondBlue = secondBlue + storageBlue
+            ~ secondChar_Blue = secondChar_Blue + storageBlue
                 ~ storageBlue = 0
-            ~ secondGreen = secondGreen + storageGreen
+            ~ secondChar_Green = secondChar_Green + storageGreen
                 ~ storageGreen = 0
-            ~ secondRed = secondRed + storageRed
+            ~ secondChar_Red = secondChar_Red + storageRed
                 ~ storageRed = 0
             //Non aggiungiamo le tre domande perché complica solo il conteggio finale
             ~ secondChar_storyletsForRewritingCount = storageSecondStoryQuestCount

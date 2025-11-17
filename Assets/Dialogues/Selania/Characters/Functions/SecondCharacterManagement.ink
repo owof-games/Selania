@@ -66,10 +66,10 @@
 //UP: coerenza.
 //DOWN: incoerenza, cose random
     VAR secondChar_purple = 0.00
-    VAR secondYellow = 0.00
-    VAR secondBlue = 0.00
-    VAR secondGreen = 0.00
-    VAR secondRed = 0.00                   
+    VAR secondChar_Yellow = 0.00
+    VAR secondChar_Blue = 0.00
+    VAR secondChar_Green = 0.00
+    VAR secondChar_Red = 0.00                   
                      
                     /* ---------------------------------
                     
@@ -86,22 +86,22 @@
     //L'obbiettivo è: beccare almeno il 66% delle risposte.
     //Invece di complicarmi la vita posso usare la matematica.
     
-    ~ temp allColorsValue = secondRed + secondBlue + secondGreen + secondYellow + secondChar_purple
+    ~ temp allColorsValue = secondChar_Red + secondChar_Blue + secondChar_Green + secondChar_Yellow + secondChar_purple
     ~ temp minimumPercentValue = ((allColorsValue/100.00)*secondChar_relationshipGoodPercentage)
     
         {debug: La percentuale di risposte coerenti per una buona relazione è di {secondChar_relationshipGoodPercentage}. Il {secondChar_relationshipGoodPercentage}% di tutta la somma dei colori di Riccio (che è {allColorsValue}) è {minimumPercentValue}.}
-        {debug: Il valore di viola è: {FLOAT(secondChar_purple)}, di verde è: {FLOAT(secondGreen)}, di rosso è: {FLOAT(secondRed)}, di blu è: {FLOAT(secondBlue)}, di giallo è: {FLOAT(secondYellow)}}
+        {debug: Il valore di viola è: {FLOAT(secondChar_purple)}, di verde è: {FLOAT(secondChar_Green)}, di rosso è: {FLOAT(secondChar_Red)}, di blu è: {FLOAT(secondChar_Blue)}, di giallo è: {FLOAT(secondChar_Yellow)}}
         
         {
             - secondChar_purple > minimumPercentValue:
                     ~ secondChar_relationshipStatus ++
-            - secondGreen > minimumPercentValue:
+            - secondChar_Green > minimumPercentValue:
                     ~ secondChar_relationshipStatus ++        
-            - secondRed > minimumPercentValue:
+            - secondChar_Red > minimumPercentValue:
                     ~ secondChar_relationshipStatus ++        
-            - secondBlue > minimumPercentValue:
+            - secondChar_Blue > minimumPercentValue:
                     ~ secondChar_relationshipStatus ++
-            - secondYellow > minimumPercentValue:
+            - secondChar_Yellow > minimumPercentValue:
                     ~ secondChar_relationshipStatus ++
             {debug: Una risposta supera il 66 per cento delle scelte e quindi aumento l'inchiostro del secondo personaggio di un livello. Ora è a {secondChar_relationshipStatus}}
         }    
@@ -206,23 +206,23 @@
 
 //    {
     //Potrebbe capitare un pareggio, e va bene così, così non è punitivo per la giocatrice.
-//        - secondRed >= secondBlue && secondRed >= secondYellow && secondRed >= secondGreen && secondRed >= //secondChar_purple && secondRed >= secondGreen:
+//        - secondChar_Red >= secondChar_Blue && secondChar_Red >= secondChar_Yellow && secondChar_Red >= secondChar_Green && secondChar_Red >= //secondChar_purple && secondChar_Red >= secondChar_Green:
                    // ~  secondRedMax = true
 //        {debugChangeName: Il valore di secondRedMax è {secondRedMax}.}
         
- //       - secondBlue >= secondRed && secondBlue >= secondYellow && secondBlue >= secondGreen && secondBlue >= //secondChar_purple && secondBlue >= secondGreen:
+ //       - secondChar_Blue >= secondChar_Red && secondChar_Blue >= secondChar_Yellow && secondChar_Blue >= secondChar_Green && secondChar_Blue >= //secondChar_purple && secondChar_Blue >= secondChar_Green:
    //                 ~  secondBlueMax = true
    //      {debugChangeName: Il valore di secondBlueMax è {secondBlueMax}.}
  //        
-  //      - secondGreen >= secondBlue && secondGreen >= secondYellow && secondGreen >= secondGreen && secondGreen //>= secondChar_purple && secondGreen >= secondRed:
+  //      - secondChar_Green >= secondChar_Blue && secondChar_Green >= secondChar_Yellow && secondChar_Green >= secondChar_Green && secondChar_Green //>= secondChar_purple && secondChar_Green >= secondChar_Red:
   //                  ~  secondGreenMax = true
   //          {debugChangeName: Il valore di secondGreenMax è {secondGreenMax}.}  
    //         
-  //      - secondChar_purple >= secondBlue && secondChar_purple >= secondYellow && secondChar_purple >= secondGreen && //secondChar_purple >= secondRed && secondChar_purple >= secondGreen:
+  //      - secondChar_purple >= secondChar_Blue && secondChar_purple >= secondChar_Yellow && secondChar_purple >= secondChar_Green && //secondChar_purple >= secondChar_Red && secondChar_purple >= secondChar_Green:
  //                   ~  secondPurpleMax = true
     //        {debugChangeName: Il valore di secondPurpleMax è {secondPurpleMax}.}  
     //        
-//        - secondYellow >= secondBlue && secondYellow >= secondRed && secondYellow >= secondGreen && //secondYellow >= secondChar_purple && secondYellow >= secondGreen:
+//        - secondChar_Yellow >= secondChar_Blue && secondChar_Yellow >= secondChar_Red && secondChar_Yellow >= secondChar_Green && //secondChar_Yellow >= secondChar_purple && secondChar_Yellow >= secondChar_Green:
              //       ~  secondYellowMax = true 
     //    {debugChangeName: Il valore di secondGreenMax è {secondGreenMax}.}                  
   //  }
@@ -236,28 +236,28 @@
 //Riutilizziamo la stessa logica prodotta dall'affinity calculator, ma con impatti diversi: > 90, >70, >60, > 40
 {debug: passo per secondNaming.}
 
-    ~ temp allColorsValue = secondRed + secondBlue + secondGreen + secondYellow + secondChar_purple
+    ~ temp allColorsValue = secondChar_Red + secondChar_Blue + secondChar_Green + secondChar_Yellow + secondChar_purple
     ~ temp minimumPercentValue = (allColorsValue/100.00)
 
-{debug: Il valore di secondRed è {secondRed} , di secondBlue è {secondBlue}, di secondGreen è {secondGreen}, di secondYellow è {secondYellow} e di secondChar_purple è {secondChar_purple}. La somma di tutti i colori è {allColorsValue}. Il valore di minimumPercentValue è {minimumPercentValue}.}
+{debug: Il valore di secondChar_Red è {secondChar_Red} , di secondChar_Blue è {secondChar_Blue}, di secondChar_Green è {secondChar_Green}, di secondChar_Yellow è {secondChar_Yellow} e di secondChar_purple è {secondChar_purple}. La somma di tutti i colori è {allColorsValue}. Il valore di minimumPercentValue è {minimumPercentValue}.}
 
 //Resetto il valore del nome di Riccio
     ~ secondChar_ActualName = ()
     
     {
-        - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * secondChar_crowPercentage):
+        - secondChar_purple or secondChar_Green or secondChar_Red or secondChar_Blue or secondChar_Yellow >= (minimumPercentValue * secondChar_crowPercentage):
             ~ secondChar_ActualName += Corvo
                 ->->
         
-        - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * secondChar_capibaraPercentage):
+        - secondChar_purple or secondChar_Green or secondChar_Red or secondChar_Blue or secondChar_Yellow >= (minimumPercentValue * secondChar_capibaraPercentage):
             ~ secondChar_ActualName += Capibara   
                 ->-> 
         
-        - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * secondChar_dolphinePercentage):
+        - secondChar_purple or secondChar_Green or secondChar_Red or secondChar_Blue or secondChar_Yellow >= (minimumPercentValue * secondChar_dolphinePercentage):
             ~ secondChar_ActualName += Delfino    
                 ->->
         
-        - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * secondChar_wolfPercentage):
+        - secondChar_purple or secondChar_Green or secondChar_Red or secondChar_Blue or secondChar_Yellow >= (minimumPercentValue * secondChar_wolfPercentage):
             ~ secondChar_ActualName += Lupo
                 ->->
         

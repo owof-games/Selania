@@ -1498,10 +1498,10 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
             ~ firstChar_purple += temporaryPurple
         
         - currentTalker == SecondCharacter:
-            ~ secondRed += temporaryRed
-            ~ secondYellow += temporaryYellow
-            ~ secondBlue += temporaryBlue
-            ~ secondGreen += temporaryGreen
+            ~ secondChar_Red += temporaryRed
+            ~ secondChar_Yellow += temporaryYellow
+            ~ secondChar_Blue += temporaryBlue
+            ~ secondChar_Green += temporaryGreen
             ~ secondChar_purple += temporaryPurple
         
         - currentTalker == Mentor:

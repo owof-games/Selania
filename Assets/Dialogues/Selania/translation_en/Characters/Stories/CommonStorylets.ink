@@ -39,7 +39,7 @@
     
             + [L'idea di dormirmela per qualche giorno non mi dispiace!]
                     ~ firstYellow ++
-                    ~ secondBlue --
+                    ~ secondChar_Blue --
                     ~ playerYellow ++
                 {knowing_second_character.two:{charNameTwo}|???}: Voi persone vecchie siete noiose.
                 {knowing_second_character.two:{charNameTwo}|???}: Nemmeno la nonna pensa così tanto a dormire!
@@ -47,21 +47,21 @@
   
             + [Sicuramente sono team: capiamo tutto!]
                     ~ firstYellow ++
-                    ~ secondBlue --
+                    ~ secondChar_Blue --
                     ~ playerBlue ++
                 {knowing_second_character.two:{charNameTwo}|???}: Sìì! E il nostro team batte il team SIAMO NOIOSI E DORMIAMO DI {charNameOne}!
                 {charNameOne}: Sarò noiosa, ma tu arriverai ai quindici anni più ansioso di un coniglio, nanetto.
 
             + [Credo rimarrei a piangere terrorizzata in un angolino.]
                     ~ firstPurple ++
-                    ~ secondRed --
+                    ~ secondChar_Red --
                     ~ playerGreen ++
                 {knowing_second_character.two:{charNameTwo}|???}: Come i bambini piccoli. No no no.
                 {charNameOne}: Mi ci riconosco, totale.
                 
             + [Spero per loro che non mi leggano nella mente.]
                     ~ firstPurple --
-                    ~ secondYellow ++
+                    ~ secondChar_Yellow ++
                     ~ playerRed ++
                 {knowing_second_character.two:{charNameTwo}|???}: Ah ah ah sarebbe divertentissimo!
                 {knowing_second_character.two:{charNameTwo}|???}: Ora provo a pensare tantissimo alla cacca!
@@ -72,7 +72,7 @@
             + [Magari chiedo loro quale sia il senso della vita.]
                     ~ firstPurple ++
                     ~ playerPurple ++
-                    ~ secondYellow --
+                    ~ secondChar_Yellow --
                 {knowing_second_character.two:{charNameTwo}|???}: Fai sembrare {charNameFive} interessante così.
                 {are_two_entities_together(Mentor, PG):{charNameFive}: Il tuo obiettivo segreto è farmi arrabbiare, vero?}
                 {are_two_entities_together(Mentor, PG):{charNameOne}: A dirla tutta a me non sembra mica tanto segreto.}

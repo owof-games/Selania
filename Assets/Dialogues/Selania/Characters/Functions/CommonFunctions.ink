@@ -470,10 +470,10 @@
     
         - partner == SecondCharacter:
             ~ secondChar_purple = secondChar_purple * number
-            ~ secondYellow = secondYellow * number
-            ~ secondBlue = secondBlue * number
-            ~ secondGreen = secondGreen * number
-            ~ secondRed = secondRed * number
+            ~ secondChar_Yellow = secondChar_Yellow * number
+            ~ secondChar_Blue = secondChar_Blue * number
+            ~ secondChar_Green = secondChar_Green * number
+            ~ secondChar_Red = secondChar_Red * number
 
     }
 ->->

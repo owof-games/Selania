@@ -101,10 +101,10 @@ VAR purple  = ()
         ~ playerFirstStory = ()
 
     - char == secondStoryPG:
-        ~ red = secondRed
-        ~ green = secondGreen
-        ~ blue = secondBlue
-        ~ yellow = secondYellow
+        ~ red = secondChar_Red
+        ~ green = secondChar_Green
+        ~ blue = secondChar_Blue
+        ~ yellow = secondChar_Yellow
         ~ purple = secondChar_purple
         ~ playerSecondStory = ()
 

@@ -174,10 +174,10 @@
             ~ temp_endedPNGPurple = firstChar_purple
             
         - charES == player_secondStepClosed:
-            ~ temp_endedPNGRed = secondRed
-            ~ temp_endedPNGGreen = secondGreen
-            ~ temp_endedPNGBlue = secondBlue
-            ~ temp_endedPNGYellow = secondYellow
+            ~ temp_endedPNGRed = secondChar_Red
+            ~ temp_endedPNGGreen = secondChar_Green
+            ~ temp_endedPNGBlue = secondChar_Blue
+            ~ temp_endedPNGYellow = secondChar_Yellow
             ~ temp_endedPNGPurple = secondChar_purple
             
     
