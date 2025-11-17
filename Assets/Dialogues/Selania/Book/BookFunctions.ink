@@ -1,6 +1,9 @@
-VAR book_arrivingFromTracking = ()
-VAR book_BGVariations = 0
-LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, bookBGFive
+//Variabile per tracciare la stanza in cui mi trovo quando apro il libro
+    VAR book_arrivingFromTracking = ()
+
+//Variabili per la gestione della variazione del background del libro: uso un contatore che aumenta e che poi si sposta sulla lista dei possibili stati, che è sempre progressiva.
+    VAR book_BGVariations = 0
+    LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, bookBGFive
 
 
 
