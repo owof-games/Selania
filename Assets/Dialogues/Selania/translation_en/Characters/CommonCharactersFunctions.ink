@@ -291,7 +291,7 @@ VAR delayFourthChar = 20
         ->-> 
 
 === secondColourCheck
-{debugChangeName: I pass for secondColourCheck.}
+{debug_changeName: I pass for secondColourCheck.}
 
 VAR secondRedMax = false
 VAR secondBlueMax = false
@@ -311,23 +311,23 @@ VAR secondPurpleMax = false
 //Potrebbe capitare un pareggio, e va bene così, così non è punitivo per la giocatrice.
     - secondChar_Red >= secondChar_Blue && secondChar_Red >= secondChar_Yellow && secondChar_Red >= secondChar_Green && secondChar_Red >= secondChar_purple && secondChar_Red >= secondChar_Green:
                 ~  secondRedMax = true
-    {debugChangeName: The value of secondRedMax is {secondRedMax}.}
+    {debug_changeName: The value of secondRedMax is {secondRedMax}.}
     
     - secondChar_Blue >= secondChar_Red && secondChar_Blue >= secondChar_Yellow && secondChar_Blue >= secondChar_Green && secondChar_Blue >= secondChar_purple && secondChar_Blue >= secondChar_Green:
                 ~  secondBlueMax = true
-     {debugChangeName: The value of secondBlueMax is {secondBlueMax}.}
+     {debug_changeName: The value of secondBlueMax is {secondBlueMax}.}
      
     - secondChar_Green >= secondChar_Blue && secondChar_Green >= secondChar_Yellow && secondChar_Green >= secondChar_Green && secondChar_Green >= secondChar_purple && secondChar_Green >= secondChar_Red:
                 ~  secondGreenMax = true
-        {debugChangeName: The value of secondGreenMax is {secondGreenMax}.}  
+        {debug_changeName: The value of secondGreenMax is {secondGreenMax}.}  
         
     - secondChar_purple >= secondChar_Blue && secondChar_purple >= secondChar_Yellow && secondChar_purple >= secondChar_Green && secondChar_purple >= secondChar_Red && secondChar_purple >= secondChar_Green:
                 ~  secondPurpleMax = true
-        {debugChangeName: The value of secondPurpleMax is {secondPurpleMax}.}  
+        {debug_changeName: The value of secondPurpleMax is {secondPurpleMax}.}  
         
     - secondChar_Yellow >= secondChar_Blue && secondChar_Yellow >= secondChar_Red && secondChar_Yellow >= secondChar_Green && secondChar_Yellow >= secondChar_purple && secondChar_Yellow >= secondChar_Green:
                 ~  secondYellowMax = true 
-    {debugChangeName: The value of secondGreenMax is {secondGreenMax}.}                  
+    {debug_changeName: The value of secondGreenMax is {secondGreenMax}.}                  
 
 
 }
@@ -337,7 +337,7 @@ VAR secondPurpleMax = false
 
 === function secondStatementVariation(color)
 ~ temp secondCheckColor = false
-{debugChangeName: I step by function secondStatementVariation.}
+{debug_changeName: I step by function secondStatementVariation.}
 
     {
         - color == red:
@@ -353,20 +353,20 @@ VAR secondPurpleMax = false
             
     }
 
-    {debugChangeName: The value of secondCheckColor is {secondCheckColor}.}                    
+    {debug_changeName: The value of secondCheckColor is {secondCheckColor}.}                    
     {
     - secondCheckColor:
         {
          - secondCharacterPossibleStates hasnt IlCorvo:
             ~ secondCharacterPossibleStates ++
-            {debugChangeName: I increase the status of the second character, which is now {secondCharacterPossibleStates }}
+            {debug_changeName: I increase the status of the second character, which is now {secondCharacterPossibleStates }}
         }
     
     - else:
         {
          - secondCharacterPossibleStates hasnt IlRiccio:
         ~ secondCharacterPossibleStates --
-        {debugChangeName: I decrease the status of the second character, which is now {secondCharacterPossibleStates }}
+        {debug_changeName: I decrease the status of the second character, which is now {secondCharacterPossibleStates }}
         }
     	            
     }  

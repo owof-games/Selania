@@ -725,7 +725,7 @@ Placeholder
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Placeholder {firstCharacterPossibleStates }}
+	                    {debug_changeName: Placeholder {firstCharacterPossibleStates }}
                 }            
         
         + [Placeholder]
@@ -738,14 +738,14 @@ Placeholder
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Placeholder {firstCharacterPossibleStates }}
+	                    {debug_changeName: Placeholder {firstCharacterPossibleStates }}
                 }
         + [Placeholder]
            
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Placeholder {firstCharacterPossibleStates }}
+    		           {debug_changeName: Placeholder {firstCharacterPossibleStates }}
                 }
             
         -
@@ -769,7 +769,7 @@ Placeholder
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Placeholder {firstCharacterPossibleStates }}
+	                    {debug_changeName: Placeholder {firstCharacterPossibleStates }}
                 }
     
             
@@ -781,7 +781,7 @@ Placeholder
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Placeholder {firstCharacterPossibleStates }}
+    		           {debug_changeName: Placeholder {firstCharacterPossibleStates }}
                 }
                 
         + [Placeholder]
@@ -789,7 +789,7 @@ Placeholder
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Placeholder {firstCharacterPossibleStates }}
+	                    {debug_changeName: Placeholder {firstCharacterPossibleStates }}
                 }
                     
         -
@@ -808,14 +808,14 @@ Placeholder
                 {
 	                - fifthChar_possibleStates hasnt Violino:
 		                ~ fifthChar_possibleStates ++
-	                    {debugChangeName: Placeholder {fifthChar_possibleStates }}
+	                    {debug_changeName: Placeholder {fifthChar_possibleStates }}
                 }
         
         + [Placeholder]
                 {
                 	- fifthChar_possibleStates hasnt Chitarra:
     		            ~ fifthChar_possibleStates --
-    		           {debugChangeName: Placeholder {fifthChar_possibleStates }}
+    		           {debug_changeName: Placeholder {fifthChar_possibleStates }}
                 }
                 
         + [Placeholder]
@@ -823,7 +823,7 @@ Placeholder
                 {
 	                - fifthChar_possibleStates hasnt Violino:
 		                ~ fifthChar_possibleStates ++
-	                    {debugChangeName: Placeholder {fifthChar_possibleStates }}
+	                    {debug_changeName: Placeholder {fifthChar_possibleStates }}
                 }
             
         
@@ -848,7 +848,7 @@ Placeholder
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Placeholder {firstCharacterPossibleStates }}
+	                    {debug_changeName: Placeholder {firstCharacterPossibleStates }}
                 }            
          
         
@@ -860,7 +860,7 @@ Placeholder
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Placeholder {firstCharacterPossibleStates }}
+	                    {debug_changeName: Placeholder {firstCharacterPossibleStates }}
                 }    
             
         + [Placeholder]
@@ -868,7 +868,7 @@ Placeholder
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Placeholder {firstCharacterPossibleStates }}
+    		           {debug_changeName: Placeholder {firstCharacterPossibleStates }}
                 }            
         
         + [Placeholder]

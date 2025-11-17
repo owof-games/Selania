@@ -551,7 +551,7 @@ Stai per donare qualcosa a {charNameThree}.
                 {
 	                - firstChar_possibleStates hasnt Violino:
 		                ~ firstChar_possibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }            
         
         + [Eppure hai deciso di costruire una famiglia con l3 tu3 amic3.]
@@ -564,14 +564,14 @@ Stai per donare qualcosa a {charNameThree}.
                 {
 	                - firstChar_possibleStates hasnt Violino:
 		                ~ firstChar_possibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }
         + [Però da che sei qui hai esplorato tutto questo luogo.]
            
                 {
                 	- firstChar_possibleStates hasnt Chitarra:
     		            ~ firstChar_possibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
+    		           {debug_changeName: Diminuisco lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }
             
         -
@@ -595,7 +595,7 @@ Stai per donare qualcosa a {charNameThree}.
                 {
 	                - firstChar_possibleStates hasnt Violino:
 		                ~ firstChar_possibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }
     
             
@@ -607,7 +607,7 @@ Stai per donare qualcosa a {charNameThree}.
                 {
                 	- firstChar_possibleStates hasnt Chitarra:
     		            ~ firstChar_possibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
+    		           {debug_changeName: Diminuisco lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }
                 
         + [Tradiamo la fiducia rompendo le regole a nostro vantaggio.]
@@ -615,7 +615,7 @@ Stai per donare qualcosa a {charNameThree}.
                 {
 	                - firstChar_possibleStates hasnt Violino:
 		                ~ firstChar_possibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }
                     
         -
@@ -634,14 +634,14 @@ Stai per donare qualcosa a {charNameThree}.
                 {
 	                - firstChar_possibleStates hasnt Violino:
 		                ~ firstChar_possibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }
         
         + [Ma ogni persona ha immaginato sorti diverse per Jonah.]
                 {
                 	- firstChar_possibleStates hasnt Chitarra:
     		            ~ firstChar_possibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
+    		           {debug_changeName: Diminuisco lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }
                 
         + [Eppure la prima cosa che hai visto qui sono otto sentieri.]
@@ -649,7 +649,7 @@ Stai per donare qualcosa a {charNameThree}.
                 {
 	                - firstChar_possibleStates hasnt Violino:
 		                ~ firstChar_possibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }
             
         
@@ -675,7 +675,7 @@ Stai per donare qualcosa a {charNameThree}.
                 {
 	                - firstChar_possibleStates hasnt Violino:
 		                ~ firstChar_possibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }            
          
         
@@ -687,7 +687,7 @@ Stai per donare qualcosa a {charNameThree}.
                 {
 	                - firstChar_possibleStates hasnt Violino:
 		                ~ firstChar_possibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }    
             
         + [Chitarrando a cercare Talco ti sei tutelata.]
@@ -695,7 +695,7 @@ Stai per donare qualcosa a {charNameThree}.
                 {
                 	- firstChar_possibleStates hasnt Chitarra:
     		            ~ firstChar_possibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
+    		           {debug_changeName: Diminuisco lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }            
         
         + [C'è più coraggio nella Chitarra che nel compromesso.]

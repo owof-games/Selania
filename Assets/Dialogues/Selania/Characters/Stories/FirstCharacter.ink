@@ -1489,7 +1489,7 @@
                     {
                     	- firstChar_possibleStates hasnt Chitarra:
         		            ~ firstChar_possibleStates --
-        		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
+        		           {debug_changeName: Diminuisco lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                     }            
             
             + [C'è più coraggio nella rinuncia che nel compromesso.]

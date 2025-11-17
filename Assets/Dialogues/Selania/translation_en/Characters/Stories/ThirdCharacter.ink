@@ -554,7 +554,7 @@
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Scelgo il dono. {firstCharacterPossibleStates }}
+	                    {debug_changeName: Scelgo il dono. {firstCharacterPossibleStates }}
                 }            
         
         + [Scelgo il dono.]
@@ -567,14 +567,14 @@
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Scelgo il dono. {firstCharacterPossibleStates }}
+	                    {debug_changeName: Scelgo il dono. {firstCharacterPossibleStates }}
                 }
         + [Scelgo il dono.]
            
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Scelgo il dono. {firstCharacterPossibleStates }}
+    		           {debug_changeName: Scelgo il dono. {firstCharacterPossibleStates }}
                 }
             
         -
@@ -598,7 +598,7 @@
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Scelgo il dono. {firstCharacterPossibleStates }}
+	                    {debug_changeName: Scelgo il dono. {firstCharacterPossibleStates }}
                 }
     
             
@@ -610,7 +610,7 @@
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Scelgo il dono. {firstCharacterPossibleStates }}
+    		           {debug_changeName: Scelgo il dono. {firstCharacterPossibleStates }}
                 }
                 
         + [Scelgo il dono.]
@@ -618,7 +618,7 @@
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Scelgo il dono. {firstCharacterPossibleStates }}
+	                    {debug_changeName: Scelgo il dono. {firstCharacterPossibleStates }}
                 }
                     
         -
@@ -637,14 +637,14 @@
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Scelgo il dono. {firstCharacterPossibleStates }}
+	                    {debug_changeName: Scelgo il dono. {firstCharacterPossibleStates }}
                 }
         
         + [Scelgo il dono.]
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Scelgo il dono. {firstCharacterPossibleStates }}
+    		           {debug_changeName: Scelgo il dono. {firstCharacterPossibleStates }}
                 }
                 
         + [Scelgo il dono.]
@@ -652,7 +652,7 @@
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Scelgo il dono. {firstCharacterPossibleStates }}
+	                    {debug_changeName: Scelgo il dono. {firstCharacterPossibleStates }}
                 }
             
         
@@ -677,7 +677,7 @@
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Scelgo il dono. {firstCharacterPossibleStates }}
+	                    {debug_changeName: Scelgo il dono. {firstCharacterPossibleStates }}
                 }            
          
         
@@ -689,7 +689,7 @@
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Scelgo il dono. {firstCharacterPossibleStates }}
+	                    {debug_changeName: Scelgo il dono. {firstCharacterPossibleStates }}
                 }    
             
         + [Scelgo il dono.]
@@ -697,7 +697,7 @@
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Scelgo il dono. {firstCharacterPossibleStates }}
+    		           {debug_changeName: Scelgo il dono. {firstCharacterPossibleStates }}
                 }            
         
         + [Scelgo il dono.]

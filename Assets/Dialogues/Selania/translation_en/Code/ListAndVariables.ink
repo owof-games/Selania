@@ -3,7 +3,7 @@
 //Per abilitare o meno i debug
 VAR debug = false
 VAR debug_cultivable = false
-VAR debugChangeName = false
+VAR debug_changeName = false
 
 
 //Lista di tutti i luoghi del gioco

@@ -1056,7 +1056,7 @@
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }            
         
         + [Ma hai deciso di costruire una famiglia con l3 tu3 am3.]
@@ -1076,7 +1076,7 @@
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
         + [Però da che sei qui hai esplorato tutto questo luogo.]
             {name}: Hai inseguito uno scoiattolo.
@@ -1085,7 +1085,7 @@
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+    		           {debug_changeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
             
         -
@@ -1114,7 +1114,7 @@
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
     
             
@@ -1129,7 +1129,7 @@
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+    		           {debug_changeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
                 
         + [Tradiamo la fiducia se rompiamo le regole a nostro vantaggio.]
@@ -1139,7 +1139,7 @@
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
                     
         -
@@ -1162,7 +1162,7 @@
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
         
         + [Tutt3 hanno immaginato sorti diverse per Jonah, ma nessuna fine.]
@@ -1171,7 +1171,7 @@
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+    		           {debug_changeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
                 
         + [Eppure la prima cosa che hai visto qui sono otto sentieri.]
@@ -1183,7 +1183,7 @@
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }
             
         
@@ -1215,7 +1215,7 @@
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }            
          
         
@@ -1230,7 +1230,7 @@
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }    
             
         + [Rinunciando a cercare Talco ti sei tutelata.]
@@ -1238,7 +1238,7 @@
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+    		           {debug_changeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }            
         
         + [C'è più coraggio nella rinuncia che nel compromesso.]
@@ -1257,14 +1257,14 @@
                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }           
         
         + {firstYellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
                                 {
 	                - firstCharacterPossibleStates hasnt Violino:
 		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                    {debug_changeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }   
         + {firstGreen > 0} [Non deluderai i tuoi amici: loro saranno sempre con te.]
                 
@@ -1272,7 +1272,7 @@
                 {
                 	- firstCharacterPossibleStates hasnt Chitarra:
     		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+    		           {debug_changeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
                 }           
                 
         
