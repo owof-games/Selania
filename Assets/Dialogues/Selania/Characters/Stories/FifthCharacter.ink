@@ -127,7 +127,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
 
     = one
     ~ temp charNameFive = translator(fifthChar_ActualName)
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         //Non mettere cose TW qui
         //Amore per il giardinaggio e la possibilità, per la giocatrice, di esprimere qualcosa che poi si potrebbe avvicinare ai possibili finali.
         Non è giusto avere delle preferenze, ma la serra è il mio posto preferito.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral 
@@ -184,7 +184,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ change_entity_place(SecondCharacter)
-    ~ fifthStoryQuestCount ++
+    ~ fifthChar_storyletsForRewritingCount ++
         
         //Non mettere cose TW qui
         //Partendo dalla prima personaggia, dipendenza dai rapporti (circa)
@@ -250,7 +250,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     ~ temp charNameFive = translator(fifthChar_ActualName)
         //Non mettere cose TW qui
         //Questo è un riferimento indiretto anche ai figli che ora non la chiamano molto.
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
          
         A volte un po' mi pesa, tutto questo via vai.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
         Ci sono persone a cui mi sono affezionata, che non rivedrò più.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -315,7 +315,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     ~ change_entity_place(SecondCharacter)
         //Non mettere cose TW qui
         //Responsabilità
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         Mi sto chiedendo se non sia stata troppo dura col piccolo {charNameTwo} appena arrivato qui.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry 
         Ero sinceramente spaventata, ma forse ho reagito con violenza.
         Ma questo non è un luogo per un bimbo.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -386,7 +386,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     
         //Non mettere cose TW qui
         //Presentazione.
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         Mi sento più stanca del solito.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
         E fa caldo.
         Ma l'idea di stendermi sotto quell'albero non mi piace.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
@@ -475,7 +475,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     
     // -> si parla esplicitamente di responsabilità personale (in antitesi anche con la visione del fungo)? Questa è una visione di RABBIA.
 
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
@@ -505,7 +505,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     //Non mettere cose TW qui
     
         //Presentazione.
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
@@ -534,7 +534,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
         //Presentazione.
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
@@ -563,7 +563,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
         //Presentazione.
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
@@ -591,7 +591,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
         //Presentazione.
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
@@ -619,7 +619,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
         //Presentazione.
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
@@ -646,7 +646,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
         //Presentazione.
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]

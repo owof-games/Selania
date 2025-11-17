@@ -22,7 +22,7 @@
 
     
 //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
-    VAR fifthStoryQuestCount = 0
+    VAR fifthChar_storyletsForRewritingCount = 0
     VAR fifthCharacterSpecialEvent = false
     
     //Questa variabile mi serve solo per evitare che Mentore mi dia subito lo storylet questions dopo gifts_and_inks

@@ -117,7 +117,7 @@
 
     = one
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         //Amore per il giardinaggio e la possibilità, per la giocatrice, di esprimere qualcosa che poi si potrebbe avvicinare ai possibili finali.
         {charNameFive}: Non è giusto avere delle preferenze, ma la serra è il mio posto preferito.
         {charNameFive}: C'è qualcosa nel vedere crescere piante, fiori, funghi che mi fa sentire appagata.
@@ -169,7 +169,7 @@
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     ~ change_entity_place(SecondCharacter)
-    ~ fifthStoryQuestCount ++
+    ~ fifthChar_storyletsForRewritingCount ++
         
         //Partendo dalla prima personaggia, dipendenza dai rapporti (circa)
         {charNameFive}: La storia di {charNameOne} mi ha colpita.
@@ -227,7 +227,7 @@
     = three
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
         //Questo è un riferimento indiretto anche ai figli che ora non la chiamano molto.
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
          
         {charNameFive}: A volte un po' mi pesa, tutto questo via vai.
         {charNameFive}: Ci sono persone a cui mi sono affezionata, che non rivedrò più.
@@ -283,7 +283,7 @@
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
     ~ change_entity_place(SecondCharacter)
         //Responsabilità
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         {charNameFive}: Mi sto chiedendo se non sia stata troppo dura col piccolo {charNameTwo} appena arrivato qui.
         {charNameFive}: Ero sinceramente spaventata, ma forse ho reagito con violenza.
         {charNameFive}: Ma questo non è un luogo per un bimbo.
@@ -346,7 +346,7 @@
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     
         //Presentazione.
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         {charNameFive}: Mi sento più stanca del solito.
         {charNameFive}: E fa caldo.
         {charNameFive}: Ma l'idea di stendermi sotto quell'albero non mi piace.
@@ -426,7 +426,7 @@
     
     // -> si parla esplicitamente di responsabilità personale (in antitesi anche con la visione del fungo)? Questa è una visione di RABBIA.
 
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         
         {charNameFive}Placeholder
             + [Placeholder]
@@ -455,7 +455,7 @@
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     
         //Presentazione.
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         
         {charNameFive}Placeholder
             + [Placeholder]
@@ -484,7 +484,7 @@
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     
         //Presentazione.
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         
         {charNameFive}Placeholder
             + [Placeholder]
@@ -513,7 +513,7 @@
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     
         //Presentazione.
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         
         {charNameFive}Placeholder
             + [Placeholder]
@@ -541,7 +541,7 @@
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     
         //Presentazione.
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         
         {charNameFive}Placeholder
             + [Placeholder]
@@ -569,7 +569,7 @@
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     
         //Presentazione.
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         
         {charNameFive}Placeholder
             + [Placeholder]
@@ -596,7 +596,7 @@
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     
         //Presentazione.
-        ~ fifthStoryQuestCount ++
+        ~ fifthChar_storyletsForRewritingCount ++
         
         {charNameFive}Placeholder
             + [Placeholder]
