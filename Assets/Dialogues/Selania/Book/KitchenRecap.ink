@@ -5,7 +5,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
 Qui finiranno le ricette una volta compilate (se faccio in tempo per la demo).
 
 -> rewriter_book_with_flow

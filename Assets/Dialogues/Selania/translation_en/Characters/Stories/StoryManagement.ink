@@ -132,8 +132,8 @@
             
              ----------------------------------*/
 //Gestione quinta personaggia
-    LIST fifthCharacterPossibleStates= IlMentore, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
-    VAR fifthCharacterState= IlMentore
+    LIST fifthChar_possibleStates= IlMentore, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
+    VAR fifthChar_ActualName= IlMentore
     
     VAR fifthStory = NotStarted
     //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono

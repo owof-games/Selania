@@ -5,11 +5,11 @@
                      ----------------------------------*/
  
  //Possibili nomi
-    LIST fifthCharacterPossibleStates= Mentore, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
-    VAR fifthCharacterState= Mentore
+    LIST fifthChar_possibleStates= Mentore, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
+    VAR fifthChar_ActualName= Mentore
     
-    //Per mentore, fifthStory sarà la parte di riscrittura, mentorStory tutta la parte di interazione come Mentore
-    VAR mentorStory = story_storyNotStarted
+    //Per mentore, fifthStory sarà la parte di riscrittura, mentorChar_storyStatus tutta la parte di interazione come Mentore
+    VAR mentorChar_storyStatus = story_storyNotStarted
     VAR fifthStory = story_storyNotStarted
     VAR charFiveEnding = () 
     

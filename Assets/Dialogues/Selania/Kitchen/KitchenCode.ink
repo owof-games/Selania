@@ -129,7 +129,7 @@
 {kitchenDebug: passo per extra_ingredient_management.}
 //Qui gestiremo la parte di ingredienti che possiamo aggiungere, coi relativi effetti
     ~ enableNestDialogue()
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     {kitchenDebug: I doni trovati sono {findedGifts}.}
     Aggiungo....
     

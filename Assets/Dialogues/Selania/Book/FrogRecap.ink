@@ -5,7 +5,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     
 C'è una rana bluastra dalle parti dello stagno, e sembra propensa a darmi una mano. <>
     

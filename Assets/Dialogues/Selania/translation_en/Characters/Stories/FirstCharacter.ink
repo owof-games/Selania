@@ -98,7 +98,7 @@
 
     = one
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
         //Presentazione.
         ~ firstStoryQuestCount ++
         
@@ -265,7 +265,7 @@
         
     = two
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
         //Paura di deludere la famiglia scelta
         ~ firstStoryQuestCount ++
         
@@ -323,7 +323,7 @@
             
     = three
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     ~ firstStoryQuestCount ++
         
         {charNameOne}: Stavo pensando ad Anna.
@@ -388,7 +388,7 @@
         
     = four
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     //Silenzio
         ~ firstStoryQuestCount ++
         
@@ -443,7 +443,7 @@
     = five
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     ~ firstStoryQuestCount ++
     
         {charNameOne}: Hai presente quel meme del tizio che sta a una festa in un angolo.
@@ -504,7 +504,7 @@
     = six
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
         //Paura delle conseguenze della scelta.
         ~ firstStoryQuestCount ++
         
@@ -568,7 +568,7 @@
     = seven
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     //Razionalità
         ~ firstStoryQuestCount ++
         
@@ -619,7 +619,7 @@
     = eight
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     ~ firstStoryQuestCount ++
         
         {charNameOne}: Giuro che non shippo il Ghiberti, ma continuo a pensare a quello che ci siamo dette prima.
@@ -680,7 +680,7 @@
     = nine
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
         //Voglia di fare qualcosa di utile, importante
         ~ firstStoryQuestCount ++
         
@@ -735,7 +735,7 @@
     = ten
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     ~ firstStoryQuestCount ++
         
         {charNameOne}: Comunque non è che penso solo a me stessa ama, giuro.
@@ -797,7 +797,7 @@
     = eleven
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
         //Famiglia d'origine
         ~ firstStoryQuestCount ++
         
@@ -855,7 +855,7 @@
     = twelve
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     ~ firstStoryQuestCount ++
     
         {charNameOne}: Comunque in merito a quello che ti dicevo prima, ama: non è che papà sia un mostro, sia chiaro.
@@ -967,7 +967,7 @@
     = confession
     //Per il feedback, temi legati al rapporto, all'amicizia
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         {charNameOne}: Ho capito una cosa su di noi, ama.
         {
@@ -1038,7 +1038,7 @@
     = one
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     {
         -   are_two_entities_together(Mentor, PG):{charNameFive}: Bene, è il momento che mi allontani.
                 ~ change_entity_place(Mentor)
@@ -1326,7 +1326,7 @@
     
     = secret_ending
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     
         {charNameOne}: C'è una cosa che devo dirti ama.
         {charNameOne}: Riguarda {charNameFive}.

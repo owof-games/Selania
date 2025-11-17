@@ -23,10 +23,10 @@
     {
     
         //Dopo essere arrivata per la prima volta allo stagno, compare mentore, e attivo la sua storia
-        - (pond == true) && (mentorStory != story_storyStarted):
+        - (pond == true) && (mentorChar_storyStatus != story_storyStarted):
         {debug: introduco mentore in scena.}
                 ~ move_entity(Mentor, Forest)
-                ~ mentorStory = story_storyStarted
+                ~ mentorChar_storyStatus = story_storyStarted
     
         //Dopo il delay previsto, compare Chitarra.
         - player_movementsCounter == firstChar_delay && firstChar_storyStatus == story_storyNotStarted:
@@ -158,10 +158,10 @@
     {debug: passo da check_png_randomizable_status.}
     
     {
-        - mentorStory == story_storyStarted:
+        - mentorChar_storyStatus == story_storyStarted:
             ~ movements_randomizable_characters += Mentor
         
-        - mentorStory == story_storyEnded:  
+        - mentorChar_storyStatus == story_storyEnded:  
             ~ movements_randomizable_characters -= Mentor 
     }
 

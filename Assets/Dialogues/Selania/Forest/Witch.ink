@@ -19,7 +19,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     
     {
         //Check per intro
@@ -58,7 +58,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthCharacterState)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
         
         ~ saturationVar ++
         ~ move_entity(vase, Bedroom)
@@ -137,7 +137,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthCharacterState)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
         
         {
             - came_from(->intro):Che ha compiuto qualcosa per la prima volta.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -208,7 +208,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthCharacterState)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
         
         {
             - came_from(->intro):Che ha compiuto qualcosa per la prima volta.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -274,7 +274,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthCharacterState)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
         
         + [Mi chiedo se sono all'altezza di tutto questo.]
                 ~ player_green ++
@@ -298,7 +298,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthCharacterState)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
         
         + [Mi chiedo se sono all'altezza di tutto questo.]
                 ~ player_green ++
@@ -323,7 +323,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthCharacterState)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
         
         + [Mi chiedo se sono all'altezza di tutto questo.]
                 ~ player_green ++
@@ -381,7 +381,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
         Dove ci viene detto a cosa serve il nido in modo sereno.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         E ci spiega che la manipolazione è un intento, non qualcosa di inerente all'oggetto, o al nido.
     -> main

@@ -22,7 +22,7 @@
 
 === first_character_notes ===
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     
     + {are_two_entities_together(FirstCharacterNotes, PG)}[FirstCharacterNotes]
     
@@ -53,7 +53,7 @@
     
     = one
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     
     {charNameOne}: Ciao {name}, come stai?
     {charNameOne}: Alla fine Talco è sempre statə qui, me idiota.
@@ -91,7 +91,7 @@
     
     = two
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     
     {charNameOne}: Ciao {name}, qui è sempre {charNameOne} che ti scrive.
     {charNameOne}: Sono passate settimane dal mio ritorno, e finalmente ho avuto il coraggio di parlare con mio padre.
@@ -134,7 +134,7 @@
         
     = three
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     
     {charNameOne}: Ciao ama!
     {charNameOne}: Indovina chi ha fatto il suo primo concerto?
@@ -430,7 +430,7 @@
     
     = three
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-    ~ temp charNameFive = uppercaseTranslator(fifthCharacterState) 
+    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName) 
     {charNameTwo}: Ciao {name}.
             {
             - secondCharacterPossibleStates has IlRiccio:

@@ -4,7 +4,7 @@
        
  ----------------------------------*/
  === support
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     - (top)
     Hai bisogno dei miei consigli?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_hurry
         + {about_ink_usage}[Mi ripeteresti cosa devo fare?]
@@ -23,7 +23,7 @@
             -> top   
 
     = myself
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     C'è qualcosa che posso fare per aiutarti?#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
         + [Vorrei cambiare il mio nome.]
                 -> name_choice -> support
@@ -45,7 +45,7 @@
 ~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameThree = translator(thirdChar_ActualName)
 ~ temp charNameFour= translator(fourthChar_ActualName)
-~ temp charNameFive = translator(fifthCharacterState)
+~ temp charNameFive = translator(fifthChar_ActualName)
 
 //Strutturare come wave sintetica?
     Ecco i luoghi che puoi visitare in questo momento.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
@@ -122,7 +122,7 @@
     -> talk_with_mentor
 
 === to_do
-~ temp charNameFive = translator(fifthCharacterState)
+~ temp charNameFive = translator(fifthChar_ActualName)
 
         {about_ink_usage:La prima cosa da fare è: conquistare la <b><i>fiducia</b></i> della persona che devi aiutare.}#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
         {about_ink_usage:Ci <b><i>parli</b></i>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.}
@@ -182,7 +182,7 @@
  }
  
     = one
-     ~ temp charNameFive = translator(fifthCharacterState)
+     ~ temp charNameFive = translator(fifthChar_ActualName)
      
         Quando inizio a pensare molto, ma molto molto, una cosa che mi aiuta è concentrarmi su quello che mi circonda.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
         Inizio ad osservare un oggetto e a dirmi dentro la testa cosa è.
@@ -196,7 +196,7 @@
             ->->
     
     = two
-     ~ temp charNameFive = translator(fifthCharacterState)
+     ~ temp charNameFive = translator(fifthChar_ActualName)
      
         Ci sono volte in cui mi focalizzo solo sulle cose che non vanno.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
         Una cosa che mi aiuta in queste situazioni è puntare una sveglia ogni due ore.
@@ -210,7 +210,7 @@
         ->->
     
     = three
-     ~ temp charNameFive = translator(fifthCharacterState)
+     ~ temp charNameFive = translator(fifthChar_ActualName)
      
          Un tempo conoscevo una ragazza che soffriva di attacchi d'ansia e che mi ha dato una dritta che puoi applicare ovunque.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral 
          Se il pensiero si inceppa su qualcosa, prova a stringere con forza degli oggetti che hai vicino.
@@ -222,7 +222,7 @@
             ->->
     
     = four
-     ~ temp charNameFive = translator(fifthCharacterState)
+     ~ temp charNameFive = translator(fifthChar_ActualName)
      
         Il mio migliore amico è il body scan.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
         Lo faccio al risveglio tra gli arbusti della foresta.
@@ -237,7 +237,7 @@
             ->->
         
     = five
-     ~ temp charNameFive = translator(fifthCharacterState)
+     ~ temp charNameFive = translator(fifthChar_ActualName)
      
         Non so se ti capita di avere l'addome contratto.#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
         Per molte persone quell'area, e il diaframma in particolare, accumula un sacco di tensione e preoccupazione.

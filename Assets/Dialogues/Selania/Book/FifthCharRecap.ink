@@ -6,7 +6,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
         
 
 <b><i>Appunti dalle conversazioni.</b></i> Ho incontrato una persona che mi ha detto di chiamarla Mentore, perché mi farà da guida in questo luogo. E dopo avermi chiesto nomi e pronomi, mi ha {player_pronouns has him:invitato|{player_pronouns has her:invitata|invitatə}} a parlare con le persone che trovo in giro. {about_ink_usage: Per poi dirmi che sono {player_pronouns has him:un Riscrittore|{player_pronouns has her:una Riscrittora|unə Riscrittorə}}, e darmi un po' di indicazioni su cosa dovrei fare.}
@@ -129,19 +129,19 @@
 
 {main_story_fifth_character: confessione.}
 
-{main_story_fifth_character.ending: Dopo la nostra conversazione, ha scelto un nuovo nome: {fifthCharacterState}.}
+{main_story_fifth_character.ending: Dopo la nostra conversazione, ha scelto un nuovo nome: {fifthChar_ActualName}.}
 
-{fifth_character_feedback: Dopo aver aiutato {fifthCharacterState}, {fifthCharacterState} mi ha detto che<>}
+{fifth_character_feedback: Dopo aver aiutato {fifthChar_ActualName}, {fifthChar_ActualName} mi ha detto che<>}
 {
-    - fifthCharacterPossibleStates has Grizzly: feedback Mentore
+    - fifthChar_possibleStates has Grizzly: feedback Mentore
         
-    - fifthCharacterPossibleStates has Lupo: feedback Mentore
+    - fifthChar_possibleStates has Lupo: feedback Mentore
                     
-    - fifthCharacterPossibleStates has Delfino:feedback Mentore
+    - fifthChar_possibleStates has Delfino:feedback Mentore
                     
-    - fifthCharacterPossibleStates has Capibara:feedback Mentore
+    - fifthChar_possibleStates has Capibara:feedback Mentore
     
-    - fifthCharacterPossibleStates has Corvo:feedback Mentore
+    - fifthChar_possibleStates has Corvo:feedback Mentore
 }
 
 
@@ -178,61 +178,61 @@
         Spero che lì vada tutto bene. E che {charNameFive} non sia sempre pesantona. Alla prossima lettera. <i>{charNameOne}</i>
 }
 
-{fifth_character_notes.one: Dopo la sua partenza, {fifthCharacterState} mi ha scritto una lettera, dove mi ha raccontato che<>}
+{fifth_character_notes.one: Dopo la sua partenza, {fifthChar_ActualName} mi ha scritto una lettera, dove mi ha raccontato che<>}
 {
-    - fifthCharacterPossibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
+    - fifthChar_possibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
         
-    - fifthCharacterPossibleStates has Lupo: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
+    - fifthChar_possibleStates has Lupo: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
                     
-    - fifthCharacterPossibleStates has Delfino:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
+    - fifthChar_possibleStates has Delfino:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
         E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
         Tu e quel posto mi avete reso una mollacciona.
         Ma non è così male, alla fine.
                     
-    - fifthCharacterPossibleStates has Capibara:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
+    - fifthChar_possibleStates has Capibara:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
         Se lo dico a mio padre mi fa ricoverare subito, ma amen.
         Sono felice ama, davvero felice.
                     
-    - fifthCharacterPossibleStates has Corvo:
+    - fifthChar_possibleStates has Corvo:
         sddd
 }
 
-{fifth_character_notes.two: Nella sua seconda lettera {fifthCharacterState} mi ha scritto una lettera, dove mi ha raccontato che<>}
+{fifth_character_notes.two: Nella sua seconda lettera {fifthChar_ActualName} mi ha scritto una lettera, dove mi ha raccontato che<>}
 {
-    - fifthCharacterPossibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
+    - fifthChar_possibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
         
-    - fifthCharacterPossibleStates has Lupo: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
+    - fifthChar_possibleStates has Lupo: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
                     
-    - fifthCharacterPossibleStates has Delfino:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
+    - fifthChar_possibleStates has Delfino:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
         E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
         Tu e quel posto mi avete reso una mollacciona.
         Ma non è così male, alla fine.
                     
-    - fifthCharacterPossibleStates has Capibara:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
+    - fifthChar_possibleStates has Capibara:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
         Se lo dico a mio padre mi fa ricoverare subito, ma amen.
         Sono felice ama, davvero felice.
                     
-    - fifthCharacterPossibleStates has Corvo:
+    - fifthChar_possibleStates has Corvo:
         sddd
 }
 
 
-{fifth_character_notes.three: Nella sua terza lettera {fifthCharacterState} mi ha scritto una lettera, dove mi ha raccontato che<>}
+{fifth_character_notes.three: Nella sua terza lettera {fifthChar_ActualName} mi ha scritto una lettera, dove mi ha raccontato che<>}
 {
-    - fifthCharacterPossibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
+    - fifthChar_possibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
         
-    - fifthCharacterPossibleStates has Lupo: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
+    - fifthChar_possibleStates has Lupo: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
                     
-    - fifthCharacterPossibleStates has Delfino:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
+    - fifthChar_possibleStates has Delfino:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
         E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
         Tu e quel posto mi avete reso una mollacciona.
         Ma non è così male, alla fine.
                     
-    - fifthCharacterPossibleStates has Capibara:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
+    - fifthChar_possibleStates has Capibara:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
         Se lo dico a mio padre mi fa ricoverare subito, ma amen.
         Sono felice ama, davvero felice.
                     
-    - fifthCharacterPossibleStates has Corvo:
+    - fifthChar_possibleStates has Corvo:
         sddd
 }
 

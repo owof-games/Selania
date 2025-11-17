@@ -1,5 +1,5 @@
 === fifth_character ===
-~ temp charNameFive = translator(fifthCharacterState)
+~ temp charNameFive = translator(fifthChar_ActualName)
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
@@ -19,7 +19,7 @@
 ~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameThree = translator(thirdChar_ActualName)
 ~ temp charNameFour= translator(fourthChar_ActualName)
-~ temp charNameFive = translator(fifthCharacterState)
+~ temp charNameFive = translator(fifthChar_ActualName)
 
     -> mentor_and_second_char_storylets
     //-> mentor_and_second_char_storylets
@@ -31,7 +31,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     
     Come posso esserti utile, {player_pronouns has him: amico mio|{player_pronouns has her: amica mia|amicə miə}}?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
     
@@ -59,7 +59,7 @@
 -> main
 
 === talk_with_fifth_character ===
-~ temp charNameFive = translator(fifthCharacterState)
+~ temp charNameFive = translator(fifthChar_ActualName)
 C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
 
             + [Ti va di raccontarmi qualcosa di te?]
@@ -86,7 +86,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
 
 
 === knowing_fifth_character
-~ temp charNameFive = translator(fifthCharacterState)
+~ temp charNameFive = translator(fifthChar_ActualName)
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {
             //Mentore esplode
@@ -126,7 +126,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
         }
 
     = one
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
         ~ fifthStoryQuestCount ++
         //Non mettere cose TW qui
         //Amore per il giardinaggio e la possibilità, per la giocatrice, di esprimere qualcosa che poi si potrebbe avvicinare ai possibili finali.
@@ -182,7 +182,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     
     = two
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ change_entity_place(SecondCharacter)
     ~ fifthStoryQuestCount ++
         
@@ -247,7 +247,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
 
     
     = three
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
         //Non mettere cose TW qui
         //Questo è un riferimento indiretto anche ai figli che ora non la chiamano molto.
         ~ fifthStoryQuestCount ++
@@ -310,7 +310,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     
     
     = four
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ change_entity_place(SecondCharacter)
         //Non mettere cose TW qui
@@ -382,7 +382,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
              
             -> main
     = five
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     
         //Non mettere cose TW qui
         //Presentazione.
@@ -470,7 +470,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     
     
     = six
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     //Non mettere cose TW qui
     
     // -> si parla esplicitamente di responsabilità personale (in antitesi anche con la visione del fungo)? Questa è una visione di RABBIA.
@@ -501,7 +501,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
              ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
     = seven
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     //Non mettere cose TW qui
     
         //Presentazione.
@@ -531,7 +531,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
             
             
     = eight
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     
         //Presentazione.
         ~ fifthStoryQuestCount ++
@@ -560,7 +560,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     
     
     = nine
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     
         //Presentazione.
         ~ fifthStoryQuestCount ++
@@ -588,7 +588,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
             -> main    
     
     = ten
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     
         //Presentazione.
         ~ fifthStoryQuestCount ++
@@ -616,7 +616,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
             -> main    
     
     = eleven
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     
         //Presentazione.
         ~ fifthStoryQuestCount ++
@@ -643,7 +643,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
              ~ fifthPauseTalking = fifthCharPauseDuration
             -> main    
     = twelve
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     
         //Presentazione.
         ~ fifthStoryQuestCount ++
@@ -678,7 +678,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
 
 
 === fifth_story_gift ===
-~ temp charNameFive = translator(fifthCharacterState)
+~ temp charNameFive = translator(fifthChar_ActualName)
 Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += Mentor
@@ -695,7 +695,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
 === fifth_story_chech_trigger
-      ~ temp charNameFive = translator(fifthCharacterState)
+      ~ temp charNameFive = translator(fifthChar_ActualName)
       //In questa storia non ci sono trigger, lascio la struttura perché non si sa mai.
       
         //{
@@ -717,7 +717,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         -> END
 
 === main_story_fifth_character
-~ temp charNameFive = translator(fifthCharacterState)
+~ temp charNameFive = translator(fifthChar_ActualName)
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
     {
         - not confession:
@@ -728,7 +728,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
             -> one
     }
     = confession
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
         Ho realizzato una cosa, una cosa su noi due.
             -> secondAffinityCalc ->
         {
@@ -758,7 +758,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
 
 
     = statement
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
         A seguito del rapporto che {player_name} ha creato con {charNameFive} {firstChar_purple && firstChar_yellow > firstChar_blue: l'inchiostro è aumentato di due unità.|{firstChar_purple or firstChar_yellow > firstChar_blue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(secondChar_InkLevel)
@@ -769,7 +769,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
             -> main
 
     = one
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     {player_name}: Prima hai detto che hai il terrore di fare una scelta.
         
         + [Qui hai accettato il tuo nuovo nome.]
@@ -810,7 +810,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         }        
         
     = two
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
 
         + [Con Talco puoi litigare, eppure siete legatissim3.]
             {player_name}: Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
@@ -853,29 +853,29 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         }
         
     = three
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
             
         + [Se non tiri nessun dado, non c'è storia da far avanzare.]
          
                 {
-	                - fifthCharacterPossibleStates hasnt Violino:
-		                ~ fifthCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {fifthCharacterPossibleStates }}
+	                - fifthChar_possibleStates hasnt Violino:
+		                ~ fifthChar_possibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {fifthChar_possibleStates }}
                 }
         
         + [Ma ogni persona ha immaginato sorti diverse per Jonah.]
                 {
-                	- fifthCharacterPossibleStates hasnt Chitarra:
-    		            ~ fifthCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {fifthCharacterPossibleStates }}
+                	- fifthChar_possibleStates hasnt Chitarra:
+    		            ~ fifthChar_possibleStates --
+    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {fifthChar_possibleStates }}
                 }
                 
         + [Eppure la prima cosa che hai visto qui sono otto sentieri.]
  
                 {
-	                - fifthCharacterPossibleStates hasnt Violino:
-		                ~ fifthCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {fifthCharacterPossibleStates }}
+	                - fifthChar_possibleStates hasnt Violino:
+		                ~ fifthChar_possibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {fifthChar_possibleStates }}
                 }
             
         
@@ -893,7 +893,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         }
     
     = four
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
 
         + [Giocare è bello perché puoi sempre Chitarrare a farlo.]
 
@@ -931,7 +931,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         -> ending
 
     = ending
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
      Per questo ti dico...
         + {fifthRed > 0} [Prendi una strada e se non ti piace cambiala!]
         
@@ -958,28 +958,28 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
             
             - firstChar_possibleStates has Triangolo:
                 E il mio vero nome è <b><i>Triangolo</b></i>, perché pensavo di essere uno strumento, e invece ho solo fallito.
-                    ~ fifthCharacterState = ()
-                    ~ fifthCharacterState += Triangolo
+                    ~ fifthChar_ActualName = ()
+                    ~ fifthChar_ActualName += Triangolo
             
             - firstChar_possibleStates has RagazzaOrchestra:
                 Mi chiamerò <b><i>Ragazza Orchestra</b></i>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
-                    ~ fifthCharacterState = ()
-                    ~ fifthCharacterState += RagazzaOrchestra
+                    ~ fifthChar_ActualName = ()
+                    ~ fifthChar_ActualName += RagazzaOrchestra
             
             - firstChar_possibleStates has FlautoDolce:
                 Il mio nome è <b><i>Flauto Dolce</b></i>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
-                    ~ fifthCharacterState = ()
-                    ~ fifthCharacterState += FlautoDolce                
+                    ~ fifthChar_ActualName = ()
+                    ~ fifthChar_ActualName += FlautoDolce                
             
             - firstChar_possibleStates has Ocarina:
                 Mi chiamerò <b><i>Ocarina</b></i>: perché il suo suono è gioco e festa.
-                    ~ fifthCharacterState = ()
-                    ~ fifthCharacterState += Ocarina
+                    ~ fifthChar_ActualName = ()
+                    ~ fifthChar_ActualName += Ocarina
             
             - firstChar_possibleStates has Violino:
                 Io sono <b><i>Violino</b></i>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
-                    ~ fifthCharacterState = ()
-                    ~ fifthCharacterState += Violino
+                    ~ fifthChar_ActualName = ()
+                    ~ fifthChar_ActualName += Violino
         }
         
         
@@ -995,13 +995,13 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
     
         
     = secret_ending
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
         C'è una cosa che vorrei dirti, {player_name}.
         Riguarda Il mentore.
         -> close
             
     = exit
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
         Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
         -> close
     
@@ -1015,7 +1015,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         -> main
     
 === fifth_char_story_ended
-~ temp charNameFive = translator(fifthCharacterState)
+~ temp charNameFive = translator(fifthChar_ActualName)
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
 
@@ -1032,7 +1032,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         -> main
         
         = goodbye
-        ~ temp charNameFive = translator(fifthCharacterState)
+        ~ temp charNameFive = translator(fifthChar_ActualName)
         {player_name}, per me è arrivato il momento di tornare a casa.
         {firstChar_possibleStates hasnt Chitarra: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
         {firstChar_possibleStates hasnt Chitarra: Grazie per quello che hai fatto, davvero.}
@@ -1040,7 +1040,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
             ~ move_entity(Mentor, Safekeeping)
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             {
-                - fifthCharacterPossibleStates hasnt Chitarra:
+                - fifthChar_possibleStates hasnt Chitarra:
                     ~ move_entity(FifthCharacterNotes, TrainStop)
             }    
             
@@ -1050,7 +1050,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
 
 
 === fifth_character_opinions
-~ temp charNameFive = translator(fifthCharacterState)
+~ temp charNameFive = translator(fifthChar_ActualName)
         {   
             //Opinioni dopo la fine della terza storia
             - player_accessiblePlaces has Kitchen:
@@ -1067,25 +1067,25 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         }
 
    = one
-   ~ temp charNameFive = translator(fifthCharacterState)
+   ~ temp charNameFive = translator(fifthChar_ActualName)
     {~ Sinceramente, non so che ne sarebbe di questo luogo senza tutta la manutenzione che devo fare.|Hai notato la bacheca alla stazione dei treni? Anche se è da molto che non arrivano lettere.|A volte vorrei che le cose in serra crescessero più velocemente, così da sapere subito se ho sbagliato qualcosa.|A ovest dello stagno c'è spesso un grande baccano, ma fiori e fieno sono troppo alti per poter vedere cosa ci sia da quelle parti.}
             ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
     
     = two
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     {~ Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.|A volte ho questo timore: posso davvero essere una buona mentore, anche se sono poco istruita?|Sono contenta di aver aperto la biblioteca, ma quella poltrona mi invita troppo a riposare, quando invece ci sono mille cose da fare.}
             ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
             
     = three
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     {~ xxx|yyy}
             ~ fifthPauseTalking = fifthCharPauseDuration
             -> main
             
     = four
-    ~ temp charNameFive = translator(fifthCharacterState)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
     {~ xxx|yyy}
             ~ fifthPauseTalking = fifthCharPauseDuration
             -> main        

@@ -12,7 +12,7 @@
 ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
 ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
 ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
 
 {
     //Check post storie
@@ -36,7 +36,7 @@
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
         ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     
     <i>Le nuove radici ci mettono in contatto con la terra che ci circonda.</i>
     <i><b>Ci.</b></i>
@@ -147,7 +147,7 @@
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
         ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     <i>I nostri rami saggiano il cielo.</i>
     <i>L'aria finalmente ci rinfresca.</i>
     <i>E gli uccelli ci raccontano cose su {name}.</i>
@@ -203,7 +203,7 @@
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
         ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
         
         + [Mi chiedo se sono all'altezza di tutto questo.]
                 ~ playerGreen ++
@@ -227,7 +227,7 @@
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
         ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
         
         + [Mi chiedo se sono all'altezza di tutto questo.]
                 ~ playerGreen ++
@@ -252,7 +252,7 @@
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
         ~ temp charNameFour = uppercaseTranslator(fourthCharacterState)
-        ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+        ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
         
         + [Mi chiedo se sono all'altezza di tutto questo.]
                 ~ playerGreen ++

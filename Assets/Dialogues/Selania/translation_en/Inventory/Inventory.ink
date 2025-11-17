@@ -16,7 +16,7 @@ VAR currentReceiver = ()
 
 
 === inventory_management ===
-~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
+~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
 {debug: I doni trovati sono {findedGifts}.}
 Dono...
 /* ---------------------------------
