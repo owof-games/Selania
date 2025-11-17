@@ -48,11 +48,11 @@
 
 //Qui invece raggruppo le emotional variations in emotional words:
     //Varianti monocolore
-    VAR redWords = (Rosso, RossoRosso, RossoRossoRosso)
-    VAR yellowWords = (Giallo, GialloGiallo, GialloGialloGiallo)
-    VAR bluWords = (Blu, BluBlu, BluBluBlu)    
-    VAR greenWords = (Verde, VerdeVerde, VerdeVerdeVerde)
-    VAR purpleWords = (Viola, ViolaViola, ViolaViolaViola)
+    VAR nest_redWords = (Rosso, RossoRosso, RossoRossoRosso)
+    VAR nest_yellowWords = (Giallo, GialloGiallo, GialloGialloGiallo)
+    VAR nest_blueWords = (Blu, BluBlu, BluBluBlu)    
+    VAR nest_greenWords = (Verde, VerdeVerde, VerdeVerdeVerde)
+    VAR nest_purpleWords = (Viola, ViolaViola, ViolaViolaViola)
     
     //Varianti a dominante Rosso
     VAR redYellowWords = (RossoGiallo, RossoRossoGiallo, RossoGialloGiallo, RossoGialloBlu, RossoGialloVerde, RossoGialloViola, RossoGialloRosso)
