@@ -12,7 +12,7 @@ VAR statoBaccaDellaAddolorata = notStarted
 VAR statoNonTiScordarDiTe = notStarted
 
 //Variabili per la gestione della serra
-LIST cropsType = collaborazione, ciclicità, novità, cancellazione, ricordo, indipendenza
+LIST greenhouse_cropsType = collaborazione, ciclicità, novità, cancellazione, ricordo, indipendenza
 
 //QUESTE LISTE HANNO UN VALORE CATALOGATIVO E PER LA GESTIONE DELLE DOMANDE
     //Relazione: piante che parlano del rapporto con l'altra. Che per lo più è positiva, ma non sempre. Forse in questo senso la Brina ci azzecca poco.
@@ -100,14 +100,14 @@ VAR growing = 0
             - firstQuest == false:
             {debug_cultivable: <i>Il valore di firstQuest è {firstQuest}. Piante Collaborazione contiene: {pianteCollaborazione}. Piante Indipendenza contiene: {pianteIndipendenza}.}
             {
-                - cropsType == ():
+                - greenhouse_cropsType == ():
                 {debug_cultivable: <i>Questa è la prima domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi vado direttamente alla domanda.}
                     -> first_question
                 
                 - else:
                 {debug_cultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}
                 {
-                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && cropsType hasnt collaborazione && cropsType hasnt indipendenza:
+                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && greenhouse_cropsType hasnt collaborazione && greenhouse_cropsType hasnt indipendenza:
                     {debug_cultivable: <i>L'intersezione tra prima scelta e piantecollaborazione produce {pianteCollaborazione^firstAnswerTracker}, quella tra prima scelta e piante Indipendenza produce {pianteIndipendenza^firstAnswerTracker}}
                     {debug_cultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> first_question
@@ -131,14 +131,14 @@ VAR growing = 0
             -secondQuest == false:
             {debug_cultivable: <i>Il valore di secondQuest è {secondQuest}. Piante Ciclicità contiene: {pianteCiclicità}. Piante Novità contiene: {pianteNovità} e per questo vado alla domanda.}
             {
-                - cropsType == ():
+                - greenhouse_cropsType == ():
                 {debug_cultivable: <i>Questa è la prima domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi vado direttamente alla domanda.}
                    -> second_question
                 
                 - else:
                 {debug_cultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}
                 {
-                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && cropsType hasnt ciclicità && cropsType hasnt novità:
+                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && greenhouse_cropsType hasnt ciclicità && greenhouse_cropsType hasnt novità:
                     {debug_cultivable: <i>L'intersezione tra prima scelta e piante ciclicità produce {pianteCiclicità^firstAnswerTracker}, quella tra prima scelta e piante novità produce {pianteNovità^firstAnswerTracker}.}
                     {debug_cultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> second_question
@@ -163,14 +163,14 @@ VAR growing = 0
             - thirdQuest == false:
                 {debug_cultivable: <i>Il valore di thirdQuest è {thirdQuest}. Piante Ricordo contiene: {pianteRicordo}. Piante Cancellazione contiene: {pianteCancellazione} e per questo vado alla domanda.}    
                     {
-                - cropsType == ():
+                - greenhouse_cropsType == ():
                 {debug_cultivable: <i>Questa è la prima domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi vado direttamente alla domanda.}
                    -> third_question
                 
                 - else:
                 {debug_cultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && cropsType hasnt ricordo && cropsType hasnt cancellazione:
+                    - LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && greenhouse_cropsType hasnt ricordo && greenhouse_cropsType hasnt cancellazione:
                     {debug_cultivable: <i>L'intersezione tra prima scelta e piante ricordo produce {pianteRicordo^firstAnswerTracker}, quella tra prima scelta e piante cancellazione produce {pianteCancellazione^firstAnswerTracker}.}
                     {debug_cultivable: <i>Ci sono elementi di intersezione tra il gruppo scelto nella prima domanda e gli altri due di questa, per cui procedo con la domanda.}
                         -> third_question
@@ -194,13 +194,13 @@ VAR growing = 0
         {
             - fourthQuest == false:
             {
-                - cropsType == ():
+                - greenhouse_cropsType == ():
                     -> fourth_question
                 
                 - else:
                 {debug_cultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}                 
                 {
-                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && cropsType hasnt collaborazione && cropsType hasnt ciclicità:
+                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && greenhouse_cropsType hasnt collaborazione && greenhouse_cropsType hasnt ciclicità:
                         -> fourth_question
                     - else:
                         ~ randomCounter ++
@@ -217,13 +217,13 @@ VAR growing = 0
         {
             - fifthQuest == false:
             {
-                - cropsType == ():
+                - greenhouse_cropsType == ():
                     -> fifth_question
                 
                 - else:
                 {debug_cultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && cropsType hasnt collaborazione && cropsType hasnt ricordo:
+                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && greenhouse_cropsType hasnt collaborazione && greenhouse_cropsType hasnt ricordo:
                         -> fifth_question
                     - else:
                         ~ randomCounter ++
@@ -240,13 +240,13 @@ VAR growing = 0
         {
             - sixthQuest == false:
             {
-                - cropsType == ():
+                - greenhouse_cropsType == ():
                     -> sixth_question
                 
                 - else:
                 {debug_cultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && cropsType hasnt collaborazione && cropsType hasnt cancellazione:
+                    - LIST_RANDOM(pianteCollaborazione^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && greenhouse_cropsType hasnt collaborazione && greenhouse_cropsType hasnt cancellazione:
                         -> sixth_question
                     - else:
                         ~ randomCounter ++
@@ -263,13 +263,13 @@ VAR growing = 0
         {
             - seventhQuest == false:
             {
-                - cropsType == ():
+                - greenhouse_cropsType == ():
                     -> seventh_question
                 
                 - else:
                 {debug_cultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && cropsType hasnt ciclicità && cropsType hasnt indipendenza:
+                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && greenhouse_cropsType hasnt ciclicità && greenhouse_cropsType hasnt indipendenza:
                         -> seventh_question
                     - else:
                         ~ randomCounter ++
@@ -287,14 +287,14 @@ VAR growing = 0
             - eighthQuest == false:
   
             {
-                - cropsType == ():
+                - greenhouse_cropsType == ():
                     -> eighth_question
                 
                 - else:
                 {debug_cultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.}
                    {debug_cultivable: <i>L'intersezione tra prima scelta e piante ricordo produce {pianteCiclicità^firstAnswerTracker}, quella tra prima scelta e piante cancellazione produce {pianteRicordo^firstAnswerTracker}.}                
                 {
-                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && cropsType hasnt ciclicità && cropsType hasnt ricordo:
+                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && greenhouse_cropsType hasnt ciclicità && greenhouse_cropsType hasnt ricordo:
                    
                         -> eighth_question
                     - else:
@@ -312,13 +312,13 @@ VAR growing = 0
         {
             - ninthQuest == false:
             {
-                - cropsType == ():
+                - greenhouse_cropsType == ():
                     -> ninth_question
                 
                 - else:
                 {debug_cultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && cropsType hasnt ciclicità && cropsType hasnt cancellazione:
+                    - LIST_RANDOM(pianteCiclicità^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && greenhouse_cropsType hasnt ciclicità && greenhouse_cropsType hasnt cancellazione:
                         -> ninth_question
                     - else:
                         ~ randomCounter ++
@@ -334,13 +334,13 @@ VAR growing = 0
         {
             - tenthQuest == false:
             {
-                - cropsType == ():
+                - greenhouse_cropsType == ():
                     -> tenth_question
                 
                 - else:
                 {debug_cultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && cropsType hasnt indipendenza && cropsType hasnt novità:
+                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && greenhouse_cropsType hasnt indipendenza && greenhouse_cropsType hasnt novità:
                         -> tenth_question
                     - else:
                         ~ randomCounter ++
@@ -358,13 +358,13 @@ VAR growing = 0
         {
             - eleventhQuest == false:
             {
-                - cropsType == ():
+                - greenhouse_cropsType == ():
                     -> eleventh_question
                 
                 - else:
                 {debug_cultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && cropsType hasnt indipendenza && cropsType hasnt ricordo:
+                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && greenhouse_cropsType hasnt indipendenza && greenhouse_cropsType hasnt ricordo:
                         -> eleventh_question
                     - else:
                         ~ randomCounter ++
@@ -380,12 +380,12 @@ VAR growing = 0
         {
             - twelfthQuest == false:
             {
-                - cropsType == ():
+                - greenhouse_cropsType == ():
                     -> twelfth_question
                 
                 - else:
                 {
-                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && cropsType hasnt indipendenza && cropsType hasnt cancellazione:
+                    - LIST_RANDOM(pianteIndipendenza^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && greenhouse_cropsType hasnt indipendenza && greenhouse_cropsType hasnt cancellazione:
                         -> twelfth_question
                     - else:
                         ~ randomCounter ++
@@ -401,13 +401,13 @@ VAR growing = 0
         {
             - thirteenthQuest == false:
             {
-                - cropsType == ():
+                - greenhouse_cropsType == ():
                     -> thirteenth_question
                 
                 - else:
                 {debug_cultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && cropsType hasnt novità && cropsType hasnt ricordo:
+                    - LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && LIST_RANDOM(pianteRicordo^firstAnswerTracker) != () && greenhouse_cropsType hasnt novità && greenhouse_cropsType hasnt ricordo:
                         -> thirteenth_question
                     - else:
                         ~ randomCounter ++
@@ -423,13 +423,13 @@ VAR growing = 0
         {
             - fourteenthQuest == false:
             {
-                - cropsType == ():
+                - greenhouse_cropsType == ():
                     -> fourteenth_question
                 
                 - else:
                 {debug_cultivable: <i>Questa è la seconda domanda (firstAnswerTracker uguale a {firstAnswerTracker} e quindi procedo con le verifiche.} 
                 {
-                    - LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && cropsType hasnt novità && cropsType hasnt cancellazione:
+                    - LIST_RANDOM(pianteNovità^firstAnswerTracker) != () && LIST_RANDOM(pianteCancellazione^firstAnswerTracker) != () && greenhouse_cropsType hasnt novità && greenhouse_cropsType hasnt cancellazione:
                         -> fourteenth_question
                     - else:
                         ~ randomCounter ++
@@ -461,13 +461,13 @@ QUESTIONS
  
         <i>Le foglie...
             + [<i>{~ Si sfiorano|Si mescolano|Si proteggono le une con le altre}.]
-                    ~ cropsType += collaborazione
+                    ~ greenhouse_cropsType += collaborazione
                     ~ firstAnswerTracker = pianteCollaborazione
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}
             + [<i>{~ Si accumulano sulla soglia|Si dispongono in ordine attorno ai vasi|Resistono al vento}.]
-                    ~ cropsType += indipendenza
+                    ~ greenhouse_cropsType += indipendenza
                     ~ firstAnswerTracker = pianteIndipendenza
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             -   
                 ~ counter ++
                     -> test
@@ -478,13 +478,13 @@ QUESTIONS
 
         <i>L'aria...
             + [<i>{~ Insegue sé stessa|Crea mulinelli di foglie|Ruota e ruzzola portando odori inaspettati}.]
-                    ~ cropsType += ciclicità
+                    ~ greenhouse_cropsType += ciclicità
                     ~ firstAnswerTracker = pianteCiclicità
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             + [<i>{~ È scoppiettante|Freme, carica di elettricità|Corre in avanti, sempre}.]
-                    ~ cropsType += novità
+                    ~ greenhouse_cropsType += novità
                     ~ firstAnswerTracker = pianteNovità
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             -   
                 ~ counter ++
                     -> test
@@ -496,13 +496,13 @@ QUESTIONS
     
         <i>L'acqua...
             + [<i>{~ È mossa solo sulla superficie|È torbida|È piena di foglie e petali}.]
-                    ~ cropsType += ricordo
+                    ~ greenhouse_cropsType += ricordo
                     ~ firstAnswerTracker = pianteRicordo
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             + [<i>{~ Scava, portando con sé ogni cosa|Schiaccia foglie e sassi|Rimbomba tra i vasi}.]
-                    ~ cropsType += cancellazione
+                    ~ greenhouse_cropsType += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             -   
                 ~ counter ++
                     -> test
@@ -513,13 +513,13 @@ QUESTIONS
     
         <i>Le api...
             + [<i>{~Proteggono la regina|Si scambiano direzioni|Si puliscono a vicenda}.]
-                    ~ cropsType += collaborazione
+                    ~ greenhouse_cropsType += collaborazione
                     ~ firstAnswerTracker = pianteCollaborazione 
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             + [<i>{~Danzano in sintonia|Cercano il sole|Spargono polline tra i fiori}.]
-                    ~ cropsType += ciclicità
+                    ~ greenhouse_cropsType += ciclicità
                     ~ firstAnswerTracker = pianteCiclicità
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             -   
                 ~ counter ++
                     -> test
@@ -530,13 +530,13 @@ QUESTIONS
     
         <i>Le formiche...
             + [<i>{~Lasciano tracce per le compagne|Accumulano cibo per l'inverno|Creano ponti di foglie}.]
-                    ~ cropsType += collaborazione
+                    ~ greenhouse_cropsType += collaborazione
                     ~ firstAnswerTracker = pianteCollaborazione 
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             + [<i>{~Pensano alle amiche perse|Ricordano ciò che non sono più|Si aggrappano ai sogni}.]
-                    ~ cropsType += ricordo
+                    ~ greenhouse_cropsType += ricordo
                     ~ firstAnswerTracker = pianteRicordo
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             -   
                 ~ counter ++
                     -> test
@@ -547,13 +547,13 @@ QUESTIONS
     
         <i>I sassi...
             + [<i>{~Creano scale verso il cielo|Si fanno mura, protezione|Si scaldano fregandosi lentamente l'un l'altro}.]
-                    ~ cropsType += collaborazione
+                    ~ greenhouse_cropsType += collaborazione
                     ~ firstAnswerTracker = pianteCollaborazione 
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             + [<i>{~Lasciano pezzi di sè sul terreno|Si lanciano contro porte serrate|Schiacciano noci per gli scoiattoli}.]
-                    ~ cropsType += cancellazione
+                    ~ greenhouse_cropsType += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             -   
                 ~ counter ++
                     -> test
@@ -564,13 +564,13 @@ QUESTIONS
     
         <i>La terra..
             + [<i>{~Avanza massaggiando le radici nodose delle quercie|Scivola, trascinando con sé i rospi|Asciutta, rotola a valle}.]
-                    ~ cropsType += ciclicità
+                    ~ greenhouse_cropsType += ciclicità
                     ~ firstAnswerTracker = pianteCiclicità 
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             + [<i>{~Tentenna sulla cima della collina|Si accumula inquieta lungo la strada|Si solleva dall'acqua, facendosi diga}.]
-                    ~ cropsType += indipendenza
+                    ~ greenhouse_cropsType += indipendenza
                     ~ firstAnswerTracker = pianteIndipendenza
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             -   
                 ~ counter ++
                     -> test
@@ -581,13 +581,13 @@ QUESTIONS
     
         <i>I cardellini...
             + [<i>{~Svolazzano in stormi sopra alla foresta|Saltellano tra i rami del salice}.]
-                    ~ cropsType += ciclicità 
+                    ~ greenhouse_cropsType += ciclicità 
                     ~ firstAnswerTracker = pianteCiclicità 
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             + [<i>{~Cantano i nomi dei compagni persi|Ricostruiscono i nidi di chi non c'è più|Controllano le vecchie scorte dell'inverno}.]
-                    ~ cropsType += ricordo
+                    ~ greenhouse_cropsType += ricordo
                     ~ firstAnswerTracker = pianteRicordo
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             -   
                 ~ counter ++
                     -> test                   
@@ -598,14 +598,14 @@ QUESTIONS
     
         <i>Il cervo volante...
             + [<i>{~Insegue l'odore di frutta matura|Scava nel legno lunghe gallerie|Trascina pensieri dimenticati}.]
-                    ~ cropsType += ciclicità
+                    ~ greenhouse_cropsType += ciclicità
                     ~ firstAnswerTracker = pianteCiclicità
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}
                     
             + [<i>{~Lotta temibile e inquieto|Spacca la crisalide, asciugandosi al vento}.]
-                    ~ cropsType += cancellazione
+                    ~ greenhouse_cropsType += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}
             -
                 ~ counter ++
                     -> test                   
@@ -616,13 +616,13 @@ QUESTIONS
     
         <i>Il sole...
             + [<i>{~Mostra il cammino|Offre coraggio alle lucertole|Solleva goccie dalla palude silente}. ]
-                    ~ cropsType += indipendenza  
+                    ~ greenhouse_cropsType += indipendenza  
                     ~ firstAnswerTracker = pianteIndipendenza 
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             + [<i>{~Accresce gli steli delle lenticchie selvatiche|Scalda le uova del fagiano|Carezza le foglie verdi di primavera}.]
-                    ~ cropsType += novità
+                    ~ greenhouse_cropsType += novità
                     ~ firstAnswerTracker = pianteNovità
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             -   
                 ~ counter ++
                     -> test
@@ -633,13 +633,13 @@ QUESTIONS
     
         <i>La notte...
             + [<i>{~Nasconde i sotterfugi delle falene|Raccoglie i baci delle amanti|Accompagna i ghiri nello spazio del sogno}.]
-                    ~ cropsType += indipendenza  
+                    ~ greenhouse_cropsType += indipendenza  
                     ~ firstAnswerTracker = pianteIndipendenza 
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             + [<i>{~Nasconde nomi amati tra le nuvole|Riempie di ricordi i sogni della lepre|Asciuga le lacrime tristi del riccio}.]
-                    ~ cropsType += ricordo
+                    ~ greenhouse_cropsType += ricordo
                     ~ firstAnswerTracker = pianteRicordo
-                {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             -   
                 ~ counter ++
                     -> test                     
@@ -650,13 +650,13 @@ QUESTIONS
     
         <i>La neve...
             + [<i>{~Nasconde allo stambecco il burrone|Spinge ai confini del parco|Piega le punte degli abeti più alti}.]
-                    ~ cropsType += indipendenza  
+                    ~ greenhouse_cropsType += indipendenza  
                     ~ firstAnswerTracker = pianteIndipendenza 
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             + [<i>{~Schiaccia i nidi delle tortore|Tradisce il passo della volpe}.]
-                    ~ cropsType += cancellazione
+                    ~ greenhouse_cropsType += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             -   
                 ~ counter ++
                     -> test 
@@ -668,13 +668,13 @@ QUESTIONS
         {pronouns has him: <i>Il riscrittore...|{pronouns has her:<i>La riscrittora...|<i>Lə riscrittorə...}}
         
             + [<i>{~Assapora sulla lingua il sapore del cambiamento|Sente sulle mani un accesso di futuro|Freme nel lanciarsi verso ciò che arriverà}.]
-                    ~ cropsType += novità
+                    ~ greenhouse_cropsType += novità
                     ~ firstAnswerTracker = pianteNovità
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             + [<i>{~Indugia su ciò che è stato|Trova conforto nel ricordo di ciò che era|Si chiede dove sia casa}.]
-                    ~ cropsType += ricordo
+                    ~ greenhouse_cropsType += ricordo
                     ~ firstAnswerTracker = pianteRicordo
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             -   
                 ~ counter ++
                     -> test                    
@@ -685,13 +685,13 @@ QUESTIONS
     
         <i>La serra...
             + [<i>{~Brama la crescita di una nuova pianta|Gioisce per l'erbetta che cresce tra le travi|Spalanca le sue porte a nuove sementi}.]
-                    ~ cropsType += novità   
+                    ~ greenhouse_cropsType += novità   
                     ~ firstAnswerTracker = pianteNovità 
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             + [<i>{~Scaccia cimici e cavallette|Acceca il corvo ingordo}.]
-                    ~ cropsType += cancellazione
+                    ~ greenhouse_cropsType += cancellazione
                     ~ firstAnswerTracker = pianteCancellazione
-                    {debug_cultivable: <i>cropsType contiene ora {cropsType}.}                    
+                    {debug_cultivable: <i>greenhouse_cropsType contiene ora {greenhouse_cropsType}.}                    
             -   
                 ~ counter ++
                     -> test
@@ -700,11 +700,11 @@ QUESTIONS
  
  === results
 {debug_cultivable: <i>Entro in results.}
-{debug_cultivable: <i>Il valore di cropsType è {cropsType}.}
+{debug_cultivable: <i>Il valore di greenhouse_cropsType è {greenhouse_cropsType}.}
  
     {
     
-    - cropsType == (collaborazione, ciclicità):{
+    - greenhouse_cropsType == (collaborazione, ciclicità):{
         - LIST_RANDOM(pianteCollaborazione ^ pianteCiclicità) == ():
             {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
@@ -726,7 +726,7 @@ QUESTIONS
     }
         
         
-    - cropsType == (collaborazione, novità): {
+    - greenhouse_cropsType == (collaborazione, novità): {
         - LIST_RANDOM(pianteCollaborazione ^ pianteNovità) == ():
             {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.} 
                 ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
@@ -747,7 +747,7 @@ QUESTIONS
         }
         
         
-    - cropsType == (collaborazione, cancellazione):{
+    - greenhouse_cropsType == (collaborazione, cancellazione):{
         - LIST_RANDOM(pianteCollaborazione ^ pianteCancellazione) == ():
         {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
@@ -768,7 +768,7 @@ QUESTIONS
         }
         
         
-    - cropsType == (collaborazione, ricordo):{
+    - greenhouse_cropsType == (collaborazione, ricordo):{
         - LIST_RANDOM(pianteCollaborazione ^ pianteRicordo) == ():
         {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
@@ -790,7 +790,7 @@ QUESTIONS
         
         
         
-    - cropsType == (indipendenza, ciclicità):{
+    - greenhouse_cropsType == (indipendenza, ciclicità):{
         - LIST_RANDOM(pianteIndipendenza ^ pianteCiclicità) == ():
        {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
@@ -810,7 +810,7 @@ QUESTIONS
                 }
         }
                 
-    - cropsType == (indipendenza, novità):{
+    - greenhouse_cropsType == (indipendenza, novità):{
         - LIST_RANDOM(pianteIndipendenza ^ pianteNovità) == ():
         {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
@@ -830,7 +830,7 @@ QUESTIONS
                 }
         }
         
-    - cropsType == (indipendenza, cancellazione): {
+    - greenhouse_cropsType == (indipendenza, cancellazione): {
         - LIST_RANDOM(pianteIndipendenza ^ pianteCancellazione) == ():
         {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
@@ -849,7 +849,7 @@ QUESTIONS
                 }
             }
         
-    - cropsType == (indipendenza, ricordo): {
+    - greenhouse_cropsType == (indipendenza, ricordo): {
         - LIST_RANDOM(pianteIndipendenza ^ pianteRicordo) == ():
         {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
@@ -869,7 +869,7 @@ QUESTIONS
                 }
         }
         
-    - cropsType == (ciclicità, cancellazione):{
+    - greenhouse_cropsType == (ciclicità, cancellazione):{
         - LIST_RANDOM(pianteCiclicità ^ pianteCancellazione) == ():
         {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
@@ -889,7 +889,7 @@ QUESTIONS
                 }
         }
         
-    - cropsType == (ciclicità, ricordo):{
+    - greenhouse_cropsType == (ciclicità, ricordo):{
         - LIST_RANDOM(pianteCiclicità ^ pianteRicordo) == ():
         {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
@@ -909,7 +909,7 @@ QUESTIONS
                 }
         }
         
-    - cropsType == (novità, cancellazione):{
+    - greenhouse_cropsType == (novità, cancellazione):{
         - LIST_RANDOM(pianteCancellazione ^ pianteNovità) == ():
         {debug_cultivable:<i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
@@ -929,7 +929,7 @@ QUESTIONS
                 }
         }
         
-    - cropsType == (novità, ricordo): {
+    - greenhouse_cropsType == (novità, ricordo): {
         - LIST_RANDOM(pianteRicordo ^ pianteNovità) == ():
         {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
             ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
@@ -951,7 +951,7 @@ QUESTIONS
         
     
     - else:
-    {debug_cultivable: <i>Passo da else nella lista cropsType perché non c'è un fungo adatto.}
+    {debug_cultivable: <i>Passo da else nella lista greenhouse_cropsType perché non c'è un fungo adatto.}
          ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
          ~ greenhouse_backupCultivable -= chosenCultivable
     {debug_cultivable: Il fungo proposto è {chosenCultivable}.}      
@@ -967,7 +967,7 @@ QUESTIONS
 
 
 === da_lista_a_coltivazioni ===
-    ~ cropsType = ()
+    ~ greenhouse_cropsType = ()
     ~ firstQuest = false
     ~ secondQuest = false
     ~ thirdQuest = false
@@ -990,7 +990,7 @@ QUESTIONS
  
 {debug_cultivable: <i>Entro in da_lista_a_coltivazioni. Il valore di counter è {counter}, il valore di growing è {growing}. firstQuest è {firstQuest}, secondQuest è {secondQuest}, thirdQuest è {thirdQuest}.}
 {debug_cultivable: <i>Gli elementi ancora coltivabili sono: {greenhouse_backupCultivable}.<i>}
-{debug_cultivable: <i>Svuoto lista tipo Coltivazioni. Il contenuto di tipo Coltivazioni ora è {cropsType}.}
+{debug_cultivable: <i>Svuoto lista tipo Coltivazioni. Il contenuto di tipo Coltivazioni ora è {greenhouse_cropsType}.}
 {debug_cultivable: <i>Svuoto lista firstAnswerTracker. Il contenuto di tipo firstAnswerTracker ora è {firstAnswerTracker==(): vuota|piena}.}
     -> chosen_cultivable
 
