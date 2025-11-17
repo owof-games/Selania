@@ -150,17 +150,16 @@
          {
         - frog_recoveredCultivables hasnt BaccaDellaAddolorata:
         ~ frog_recoverableCultivables += BaccaDellaAddolorata
-    } 
+        } 
             {
                 - PNG == FirstCharacter:
-                    ~ kitchen_firstCharExtraIngredientReaction = mehReaction
-                    ~ kitchen_firstCharExtraIngredient = BaccaDellaAddolorata
+                    -> object_value_for_PNG(BaccaDellaAddolorata, Kitchen, FirstCharacter) ->
+
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ kitchen_secondCharExtraIngredientReaction = badReaction
-                    ~ kitchen_secondCharExtraIngredient = BaccaDellaAddolorata
+                    -> object_value_for_PNG(BaccaDellaAddolorata, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }
@@ -174,14 +173,13 @@
     } 
             {
                 - PNG == FirstCharacter:
-                    ~ kitchen_firstCharExtraIngredientReaction = badReaction
-                    ~ kitchen_firstCharExtraIngredient = BarbaDellInciampo
+                    -> object_value_for_PNG(BarbaDellInciampo, Kitchen, FirstCharacter) ->
+
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ kitchen_secondCharExtraIngredientReaction = badReaction
-                    ~ kitchen_secondCharExtraIngredient = BarbaDellInciampo
+                    -> object_value_for_PNG(BarbaDellInciampo, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }
@@ -191,18 +189,17 @@
          {
         - frog_recoveredCultivables hasnt BastoneDellOzioso:
         ~ frog_recoverableCultivables += BastoneDellOzioso
-    } 
+        } 
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
-                    ~ kitchen_firstCharExtraIngredientReaction = mehReaction
-                    ~ kitchen_firstCharExtraIngredient = BastoneDellOzioso
+                    -> object_value_for_PNG(BastoneDellOzioso, Kitchen, FirstCharacter) ->
+
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ kitchen_secondCharExtraIngredientReaction = goodReaction
-                    ~ kitchen_secondCharExtraIngredient = BastoneDellOzioso
+                    -> object_value_for_PNG(BastoneDellOzioso, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }
@@ -216,14 +213,14 @@
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
-                    ~ kitchen_firstCharExtraIngredientReaction = badReaction
-                    ~ kitchen_firstCharExtraIngredient = BrinaDellImpossibile
+                    -> object_value_for_PNG(BrinaDellImpossibile, Kitchen, FirstCharacter) ->
+
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ kitchen_secondCharExtraIngredientReaction = goodReaction
-                    ~ kitchen_secondCharExtraIngredient = BrinaDellImpossibile
+                    -> object_value_for_PNG(BrinaDellImpossibile, Kitchen, SecondCharacter) ->
+
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
@@ -237,14 +234,12 @@
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
-                    ~ kitchen_firstCharExtraIngredientReaction = goodReaction
-                    ~ kitchen_firstCharExtraIngredient = CantoDelleCompagne
+                    -> object_value_for_PNG(CantoDelleCompagne, Kitchen, FirstCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ kitchen_secondCharExtraIngredientReaction = badReaction
-                    ~ kitchen_secondCharExtraIngredient = CantoDelleCompagne
+                    -> object_value_for_PNG(CantoDelleCompagne, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
@@ -258,14 +253,12 @@
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
-                    ~ kitchen_firstCharExtraIngredientReaction = mehReaction
-                    ~ kitchen_firstCharExtraIngredient = CardoAspinato
+                    -> object_value_for_PNG(CardoAspinato, Kitchen, FirstCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ kitchen_secondCharExtraIngredientReaction = mehReaction
-                    ~ kitchen_secondCharExtraIngredient = CardoAspinato
+                    -> object_value_for_PNG(CardoAspinato, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
@@ -279,14 +272,12 @@
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
-                    ~ kitchen_firstCharExtraIngredientReaction = badReaction
-                    ~ kitchen_firstCharExtraIngredient = EderaDelleAmanti
+                    -> object_value_for_PNG(EderaDelleAmanti, Kitchen, FirstCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ kitchen_secondCharExtraIngredientReaction = badReaction
-                    ~ kitchen_secondCharExtraIngredient = EderaDelleAmanti
+                    -> object_value_for_PNG(EderaDelleAmanti, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
@@ -300,14 +291,12 @@
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
-                    ~ kitchen_firstCharExtraIngredientReaction = mehReaction
-                    ~ kitchen_firstCharExtraIngredient = ErbaLiccia
+                    -> object_value_for_PNG(ErbaLiccia, Kitchen, FirstCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ kitchen_secondCharExtraIngredientReaction = mehReaction
-                    ~ kitchen_secondCharExtraIngredient = ErbaLiccia
+                   -> object_value_for_PNG(ErbaLiccia, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
@@ -321,14 +310,12 @@
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
-                    ~ kitchen_firstCharExtraIngredientReaction = badReaction
-                    ~ kitchen_firstCharExtraIngredient = FalsaPalude
+                    -> object_value_for_PNG(FalsaPalude, Kitchen, FirstCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ kitchen_secondCharExtraIngredientReaction = badReaction
-                    ~ kitchen_secondCharExtraIngredient = FalsaPalude
+                    -> object_value_for_PNG(FalsaPalude, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
@@ -342,14 +329,12 @@
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
-                    ~ kitchen_firstCharExtraIngredientReaction = goodReaction
-                    ~ kitchen_firstCharExtraIngredient = LanaNotturna
+                    -> object_value_for_PNG(LanaNotturna, Kitchen, FirstCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ kitchen_secondCharExtraIngredientReaction = badReaction
-                    ~ kitchen_secondCharExtraIngredient = LanaNotturna
+                    -> object_value_for_PNG(LicheneDegliAbissi, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
@@ -363,14 +348,12 @@
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
-                    ~ kitchen_firstCharExtraIngredientReaction = badReaction
-                    ~ kitchen_firstCharExtraIngredient = LicheneDegliAbissi
+                    -> object_value_for_PNG(LicheneDegliAbissi, Kitchen, FirstCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ kitchen_secondCharExtraIngredientReaction = goodReaction
-                    ~ kitchen_secondCharExtraIngredient = LicheneDegliAbissi
+                    -> object_value_for_PNG(LicheneDegliAbissi, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
@@ -384,14 +367,12 @@
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
-                    ~ kitchen_firstCharExtraIngredientReaction = goodReaction
-                    ~ kitchen_firstCharExtraIngredient = NonTiScordarDiTe
+                    -> object_value_for_PNG(NonTiScordarDiTe, Kitchen, FirstCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ kitchen_secondCharExtraIngredientReaction = mehReaction
-                    ~ kitchen_secondCharExtraIngredient = NonTiScordarDiTe
+                    -> object_value_for_PNG(NonTiScordarDiTe, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
@@ -405,14 +386,12 @@
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
-                    ~ kitchen_firstCharExtraIngredientReaction = mehReaction
-                    ~ kitchen_firstCharExtraIngredient = Olobino
+                    -> object_value_for_PNG(Olobino, Kitchen, FirstCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ kitchen_secondCharExtraIngredientReaction = badReaction
-                    ~ kitchen_secondCharExtraIngredient = Olobino
+                    -> object_value_for_PNG(Olobino, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
@@ -426,14 +405,12 @@
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
-                    ~ kitchen_firstCharExtraIngredientReaction = badReaction
-                    ~ kitchen_firstCharExtraIngredient = LaSpazzata
+                    -> object_value_for_PNG(LaSpazzata, Kitchen, FirstCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ kitchen_secondCharExtraIngredientReaction = mehReaction
-                    ~ kitchen_secondCharExtraIngredient = LaSpazzata
+                    -> object_value_for_PNG(LaSpazzata, Kitchen, SecondCharacter) ->
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
@@ -444,14 +421,14 @@
         
             {
                 - PNG == FirstCharacter:
-                    ~ kitchen_firstCharExtraIngredientReaction = badReaction
-                    ~ kitchen_firstCharExtraIngredient = universalIngredient
+                    -> object_value_for_PNG(universalIngredient, Kitchen, FirstCharacter) ->
+
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredientReaction in {kitchen_firstCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ kitchen_secondCharExtraIngredientReaction = goodReaction
-                    ~ kitchen_secondCharExtraIngredient = universalIngredient
+                   -> object_value_for_PNG(universalIngredient, Kitchen, SecondCharacter) ->
+
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
                     {debug_kitchen: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }

@@ -542,18 +542,23 @@ Funzione di traduzione da variabile a stringa
                 
                 {   
                     - object == universalIngredient:
+                        {debug: oggetto è universalIngredient.}
                             ~ kitchen_firstCharExtraIngredientReaction = goodReaction
 
                     - firstChar_favouritesGifts has object:
+                        {debug: l'oggetto è in firstChar_favouritesGifts.}
                             ~ kitchen_firstCharExtraIngredientReaction = goodReaction
 
                     - firstChar_goodGifts has object:
+                        {debug: l'oggetto è in firstChar_goodGifts.}
                             ~ kitchen_firstCharExtraIngredientReaction = mehReaction
                             
                     - else:
+                        {debug: a Chitarra l'oggetto non interessa.}
                             ~ kitchen_firstCharExtraIngredientReaction = badReaction
                             
                 }
+                ->->
             
             - comingFrom == Backpack:
                 {debug: passo dai valori dello zaino.}
@@ -562,19 +567,19 @@ Funzione di traduzione da variabile a stringa
                 {   
                     
                     - firstChar_favouritesGifts has object:
-                        Reazione entusiasta di Chitarra.
-                        ~ firstChar_InkLevel ++
-                        ~ firstChar_InkLevel ++
+                    {~ {translator(firstChar_ActualName)} ti abbraccia, entusiasta.|Sulle guancie di {translator(firstChar_ActualName)} compare una lacrima.|{translator(firstChar_ActualName)} è un concentrato di gioia.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                            ~ firstChar_InkLevel ++
+                            ~ firstChar_InkLevel ++
          
                     //Presupponiamo che un po' ma non troppo le piaccia l'ingrediente universale
                     - firstChar_goodGifts has object or object == universalIngredient:
-                        Reazione neutra di Chitarra.
-                        ~ firstChar_InkLevel ++
+                        {~ {translator(firstChar_ActualName)} si passa il dono tra le mani.|{translator(firstChar_ActualName)} ti sorride.|{translator(firstChar_ActualName)} ti ringrazia.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                                ~ firstChar_InkLevel ++
                     
                     - else:
-                        Reazione disinteressata di Chitarra.
+                        {~ {translator(firstChar_ActualName)} ignora il dono.|{translator(firstChar_ActualName)} ti ringrazia, e si distrae rapidamente.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 }
-                ->->
+                
             
             ~ gift_currentReceiver = ()
             -> first_story_gift.ink_outcome    
@@ -591,15 +596,19 @@ Funzione di traduzione da variabile a stringa
                 
                 {   
                     - object == universalIngredient:
+                        {debug: oggetto è universalIngredient.}
                             ~ kitchen_secondCharExtraIngredientReaction = goodReaction
 
                     - secondChar_favouritesGifts has object:
+                        {debug: l'oggetto è in secondChar_favouritesGifts.}
                             ~ kitchen_secondCharExtraIngredientReaction = goodReaction
 
                     - secondChar_goodGifts has object:
+                        {debug: l'oggetto è in secondChar_goodGifts.}
                             ~ kitchen_secondCharExtraIngredientReaction = mehReaction
                             
                     - else:
+                         {debug: a Riccio l'oggetto non interessa.}
                             ~ kitchen_secondCharExtraIngredientReaction = badReaction
                             
                 }
@@ -612,17 +621,17 @@ Funzione di traduzione da variabile a stringa
                 {   
                     
                     - secondChar_favouritesGifts has object:
-                        Reazione entusiasta di Riccio.
+                       {~ {translator(secondChar_ActualName)} ti abbraccia, entusiasta.|Sulle guancie di {translator(secondChar_ActualName)} compare una lacrima.|{translator(secondChar_ActualName)} è un concentrato di gioia.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                         ~ secondChar_InkLevel ++
                         ~ secondChar_InkLevel ++
          
                     //Presupponiamo che un po' ma non troppo le piaccia l'ingrediente universale
                     - secondChar_goodGifts has object or object == universalIngredient:
-                        Reazione neutra di Riccio.
+                        {~ {translator(secondChar_ActualName)} prova ad assaggiare il dono, divertito.|Sulle guancie di {translator(secondChar_ActualName)} compare un grande sorriso.|{translator(secondChar_ActualName)} saltella.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                         ~ secondChar_InkLevel ++
                     
                     - else:
-                        Reazione disinteressata di Riccio.
+                        {~ {translator(secondChar_ActualName)} insegue una lucertola con lo sguardo.|{translator(secondChar_ActualName)} lascia scivolare il dono a terra.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 }
             
             ~ gift_currentReceiver = ()
