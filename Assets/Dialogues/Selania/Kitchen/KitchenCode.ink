@@ -1,10 +1,10 @@
 //Tracciamento nome ricette
     VAR kitchen_firstRecipe = ""
-    VAR secondRecipe = ""
-    VAR thirdRecipe = ""
-    VAR fourthRecipe = ""
-    VAR fifthRecipe = ""
-    VAR sixthRecipe = ""
+    VAR kitchen_secondRecipe = ""
+    VAR kitchen_thirdRecipe = ""
+    VAR kitchen_fourthRecipe = ""
+    VAR kitchen_fifthRecipe = ""
+    VAR kitchen_sixthRecipe = ""
 
 //Tracciamento elementi che compongono il nome delle ricette
     VAR recipeNoun = ""
@@ -89,31 +89,31 @@
                 ~ kitchen_firstRecipe = tempRecipeName
             {debug_kitchen: il valore di kitchen_firstRecipe ora è {kitchen_firstRecipe}.}
                 ->->
-        - secondRecipe == "":
+        - kitchen_secondRecipe == "":
             {debug_kitchen: il valore di kitchen_firstRecipe è {kitchen_firstRecipe} e quindi non lo aggiorno.}
-            {debug_kitchen: il valore di secondRecipe è {secondRecipe} e quindi lo aggiorno.}
-                ~ secondRecipe = tempRecipeName
-            {debug_kitchen: il valore di secondRecipe ora è {secondRecipe}.}
+            {debug_kitchen: il valore di kitchen_secondRecipe è {kitchen_secondRecipe} e quindi lo aggiorno.}
+                ~ kitchen_secondRecipe = tempRecipeName
+            {debug_kitchen: il valore di kitchen_secondRecipe ora è {kitchen_secondRecipe}.}
                 ->->
         
-        - thirdRecipe == "":
+        - kitchen_thirdRecipe == "":
             {debug_kitchen: il valore di kitchen_firstRecipe è {kitchen_firstRecipe} e quindi non lo aggiorno.}
-            {debug_kitchen: il valore di secondRecipe è {secondRecipe} e quindi non lo aggiorno.}
-            {debug_kitchen: il valore di thirdRecipe è {thirdRecipe} è quindi non lo aggiorno.}
-                ~ thirdRecipe = tempRecipeName
-            {debug_kitchen: il valore di thirdRecipe ora è {thirdRecipe}.}
+            {debug_kitchen: il valore di kitchen_secondRecipe è {kitchen_secondRecipe} e quindi non lo aggiorno.}
+            {debug_kitchen: il valore di kitchen_thirdRecipe è {kitchen_thirdRecipe} è quindi non lo aggiorno.}
+                ~ kitchen_thirdRecipe = tempRecipeName
+            {debug_kitchen: il valore di kitchen_thirdRecipe ora è {kitchen_thirdRecipe}.}
                 ->-> 
         
-        - fourthRecipe == "":
-            ~ fourthRecipe = tempRecipeName
+        - kitchen_fourthRecipe == "":
+            ~ kitchen_fourthRecipe = tempRecipeName
                 ->-> 
         
-        - fifthRecipe == "":
-            ~ fifthRecipe = tempRecipeName 
+        - kitchen_fifthRecipe == "":
+            ~ kitchen_fifthRecipe = tempRecipeName 
                 ->-> 
         
-        - sixthRecipe == "":
-            ~ sixthRecipe = tempRecipeName
+        - kitchen_sixthRecipe == "":
+            ~ kitchen_sixthRecipe = tempRecipeName
                 ->-> 
         
         - else:
