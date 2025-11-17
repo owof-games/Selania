@@ -22,7 +22,7 @@
 
 //Tracciamento cucina
     //Autonoma
-        VAR kitchen_firstCharisCooking = false
+        VAR kitchen_firstCharIsCooking = false
         VAR kitchen_firstCharCookingTime = 0
         //Tempo che ci impiega a fare la sua ricetta
         VAR kitchen_firstCharCookingMaxTime = 8

@@ -48,7 +48,7 @@
                 -> ask
     
     //Vogliamo cucinare assieme          
-        - open_the_kitchen && not cooking_with_second_char && secondIsCooking==false:
+        - open_the_kitchen && not cooking_with_second_char && kitchen_secondCharIsCooking==false:
                 -> ask
     
     
@@ -117,20 +117,20 @@
     
         
         //Cucinare assieme
-        + {open_the_kitchen && not cooking_with_second_char && secondIsCooking==false}[Ti va di cucinare qualcosa assieme?]
+        + {open_the_kitchen && not cooking_with_second_char && kitchen_secondCharIsCooking==false}[Ti va di cucinare qualcosa assieme?]
                 ~ movements_changeLocationTimer = 0
                 
             {
                 - kitchenContents has FirstCharacter: Uh, mi sa che la cucina è occupata da {charNameOne}, sta cucinando qualcosa di strano.
                             ->main
                 
-                - SecondKitchenInvite: {Spero non mi farai aspettare come prima! Ho atteso un sacco!|Siamo a due volte che me lo chiedi e non ti presenti, sai?|E mi darai buca una terza volta? Vabbè.} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_neutral
+                - kitchen_secondCharCookingTogetherInvite: {Spero non mi farai aspettare come prima! Ho atteso un sacco!|Siamo a due volte che me lo chiedi e non ti presenti, sai?|E mi darai buca una terza volta? Vabbè.} #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_neutral
                         ~ move_entity(SecondCharacter, Kitchen)
                             ->main
                 
                 - else: Volentieri! Ci vediamo in cucina! #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_neutral
                         ~ move_entity(SecondCharacter, Kitchen)
-                        ~ SecondKitchenInvite = true
+                        ~ kitchen_secondCharCookingTogetherInvite = true
                             ->main    
             }
                 
@@ -175,12 +175,12 @@
                     
         //Cucina
             //Riccio sta cucinando ed entriamo in cucina
-            - are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && secondIsCooking == true:
+            - are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && kitchen_secondCharIsCooking == true:
                     -> second_char_cooking_alone
         
             
             //Riccio cucina con noi
-            -  are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && not cooking_with_second_char && secondIsCooking == false:
+            -  are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && not cooking_with_second_char && kitchen_secondCharIsCooking == false:
                     -> cooking_with_second_char        
 
             //Lettura Riccio

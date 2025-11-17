@@ -399,7 +399,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
     Quando prima hai aggiunto {recipeNoun} mi hai ricordato una cosa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     E con {recipeAdjective} un'altra, e con {recipeComplement} un'altra ancora.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             {
-                - fourthIngredientReactionSecondCharacter != notReaction:
+                - kitchen_secondCharExtraIngredientReaction != notReaction:
                     -> extra_ing_feedback
             }
         
@@ -411,23 +411,23 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         = extra_ing_feedback
         // Qui verranno fatti commenti diversi a seconda che l'ingrediente sarà apprezzato o meno.
             {
-                - fourthIngredientReactionSecondCharacter == goodReaction:
+                - kitchen_secondCharExtraIngredientReaction == goodReaction:
                     -> good_reaction
                 
-                - fourthIngredientReactionSecondCharacter == badReaction:
+                - kitchen_secondCharExtraIngredientReaction == badReaction:
                     -> bad_reaction
                 
-                - fourthIngredientReactionSecondCharacter == mehReaction:
+                - kitchen_secondCharExtraIngredientReaction == mehReaction:
                     -> meh_reaction
                 
                 - else:
-                    ERROR: non abbiamo un valore valido di fourthIngredientReactionSecondCharacter, che è uguale a {fourthIngredientReactionSecondCharacter}.
+                    ERROR: non abbiamo un valore valido di kitchen_secondCharExtraIngredientReaction, che è uguale a {kitchen_secondCharExtraIngredientReaction}.
             }
         
         
                 = good_reaction
                 Abbiamo aggiunto un ingrediente extra apprezzato da Riccio, per cui lui commenta:#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                Aggiungere {ingredientTranslator(fourthIngredientNameSecondCharacter)} è stata una scelta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
+                Aggiungere {ingredientTranslator(kitchen_secondCharExtraIngredient)} è stata una scelta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                 E poi ci dà un'informazione utile per capire come gestire le conversazioni in futuro:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Non mi piace quando gli adulti non sono coerenti, quando mi dicono le cose secondo quello che gli serve..#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                 
@@ -435,7 +435,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
                 
                 = bad_reaction
                 Abbiamo aggiunto un ingrediente extra detestato da Riccio, per cui lui commenta:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                Aggiungere {ingredientTranslator(fourthIngredientNameSecondCharacter)} è stata una scelta terrificante, non farlo mai più!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)} #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
+                Aggiungere {ingredientTranslator(kitchen_secondCharExtraIngredient)} è stata una scelta terrificante, non farlo mai più!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)} #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
                 E poiché ha odiato l'ingrediente, non ci dirà niente di utile su come gestire le conversazioni future.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                
                     -> relationship_feedback
@@ -443,7 +443,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
                 
                 = meh_reaction
                 Abbiamo aggiunto un ingrediente extra che Riccio percepisce come neutro, né buono né cattivo, per cui lui commenta:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                Aggiungere {ingredientTranslator(fourthIngredientNameSecondCharacter)} è stata una scelta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
+                Aggiungere {ingredientTranslator(kitchen_secondCharExtraIngredient)} è stata una scelta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                 E poi ci dà un'informazione enigmatica per capire come gestire le conversazioni in futuro:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Informazione enigmatica per dire che non gli piacciono le conversazioni incoerenti.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                 

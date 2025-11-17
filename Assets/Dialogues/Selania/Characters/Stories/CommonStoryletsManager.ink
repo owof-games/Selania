@@ -13,7 +13,7 @@
                     -> special_mission_one_dialogue
         
         //Riccio ha cucinato, e vediamo la scena del dono
-            - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Mentor, PG) && second_char_cooking_tracker && secondIsCooking == false && not food_gift_second_char:
+            - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Mentor, PG) && second_char_cooking_tracker && kitchen_secondCharIsCooking == false && not food_gift_second_char:
                     -> food_gift_second_char
         
         //Chiacchiere tra Riccio e Chitarra

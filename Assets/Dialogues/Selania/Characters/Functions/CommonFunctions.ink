@@ -179,7 +179,7 @@
         
         //Evitiamo che venga tolto dalla cucina se sta cucinando
         {
-            - secondIsCooking == true:
+            - kitchen_secondCharIsCooking == true:
                 ~ movements_randomizable_characters -= SecondCharacter
             - else:
                 ~ movements_randomizable_characters += SecondCharacter
@@ -304,16 +304,16 @@
             //Chitarra inizia a cucinare se abbiamo cucinato almeno una volta.
             {
                 - (cooking_with_first_char or cooking_with_second_char) && (not first_char_cooking_tracker):
-                        ~ kitchen_firstCharisCooking = true
+                        ~ kitchen_firstCharIsCooking = true
                         ~ move_entity(FirstCharacter, Kitchen)
                             -> first_char_cooking_tracker 
             }
             
 
             {debug: il valore di kitchen_firstCharCookingTime è {kitchen_firstCharCookingTime}}
-            {debug: il valore di kitchen_firstCharisCooking è {kitchen_firstCharisCooking}}
+            {debug: il valore di kitchen_firstCharIsCooking è {kitchen_firstCharIsCooking}}
             {
-                - kitchen_firstCharisCooking == true:
+                - kitchen_firstCharIsCooking == true:
                 
                     {
                     
@@ -321,7 +321,7 @@
                             ~ kitchen_firstCharCookingTime ++
                         
                         - else:
-                           ~ kitchen_firstCharisCooking = false
+                           ~ kitchen_firstCharIsCooking = false
                            ~ move_entity(FirstCharacter, Pond)
                     }
     
@@ -332,23 +332,23 @@
             //Riccio inizia a cucinare. Accade dopo aver fatto pace con Mentore.
             {
                 - about_violence_and_peace && not second_char_cooking_tracker:
-                    ~ secondIsCooking = true
+                    ~ kitchen_secondCharIsCooking = true
                     ~ move_entity(SecondCharacter, Kitchen)
                         -> second_char_cooking_tracker
             }            
             
                 
-            {debug: il valore di secondCookingTime è {secondCookingTime}}
-            {debug: il valore disecondtIsCooking è {secondIsCooking}}
+            {debug: il valore di kitchen_secondCharCookingTime è {kitchen_secondCharCookingTime}}
+            {debug: il valore disecondtIsCooking è {kitchen_secondCharIsCooking}}
             {
-                - secondIsCooking == true:
+                - kitchen_secondCharIsCooking == true:
                 
                 {
-                    - secondCookingTime < secondCookingMaxTime:
-                        ~ secondCookingTime ++
+                    - kitchen_secondCharCookingTime < kitchen_secondCharCookingMaxTime:
+                        ~ kitchen_secondCharCookingTime ++
                     
                     - else:
-                       ~ secondIsCooking = false
+                       ~ kitchen_secondCharIsCooking = false
                        ~ move_entity(SecondCharacter, Pond)
     
                 }

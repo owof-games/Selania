@@ -44,7 +44,7 @@
         - not first_story_gift.ink_outcome && findedGifts != ():
                 -> ask
         //Vogliamo cucinare assieme          
-        - open_the_kitchen && not cooking_with_first_char && kitchen_firstCharisCooking==false:
+        - open_the_kitchen && not cooking_with_first_char && kitchen_firstCharIsCooking==false:
             -> ask
         
         -else:
@@ -102,7 +102,7 @@
             
         
         //Cucinare assieme    
-            + {open_the_kitchen && not cooking_with_first_char && kitchen_firstCharisCooking==false}[Ti va di cucinare qualcosa assieme?]
+            + {open_the_kitchen && not cooking_with_first_char && kitchen_firstCharIsCooking==false}[Ti va di cucinare qualcosa assieme?]
                 ~ movements_changeLocationTimer = 0
                 
                 {
@@ -151,15 +151,15 @@
             
             //Storylets legati alla cucina        
                 //Chitarra sta cucinando ed entriamo in cucina
-                - are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && kitchen_firstCharisCooking == true:
+                - are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && kitchen_firstCharIsCooking == true:
                         -> first_char_cooking_alone
             
                 //Chitarra ha cucinato, e vediamo la scena del dono (a sé stessa)
-                - are_two_entities_together(FirstCharacter, PG) && first_char_cooking_tracker && kitchen_firstCharisCooking == false && not food_gift_first_char:
+                - are_two_entities_together(FirstCharacter, PG) && first_char_cooking_tracker && kitchen_firstCharIsCooking == false && not food_gift_first_char:
                         -> food_gift_first_char
                 
                 //Chitarra cucina con noi
-                -  are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && not cooking_with_first_char && kitchen_firstCharisCooking == false:
+                -  are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && not cooking_with_first_char && kitchen_firstCharIsCooking == false:
                         -> cooking_with_first_char
                 
                 //Lettura Chitarra

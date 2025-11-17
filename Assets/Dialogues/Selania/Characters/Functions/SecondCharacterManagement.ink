@@ -36,15 +36,15 @@
     
 //Tracciamento cucina
     //autonoma
-        VAR secondIsCooking = false
-        VAR secondCookingTime = 0
+        VAR kitchen_secondCharIsCooking = false
+        VAR kitchen_secondCharCookingTime = 0
         //Tempo che ci impiega a fare la sua ricetta
-        VAR secondCookingMaxTime = 5
+        VAR kitchen_secondCharCookingMaxTime = 5
     //Nostro invito
-        VAR SecondKitchenInvite = false
+        VAR kitchen_secondCharCookingTogetherInvite = false
     //Valore quarto ingrediente
-        VAR fourthIngredientNameSecondCharacter = ()
-        VAR fourthIngredientReactionSecondCharacter = notReaction    
+        VAR kitchen_secondCharExtraIngredient = ()
+        VAR kitchen_secondCharExtraIngredientReaction = notReaction    
     
 //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
     VAR secondStoryQuestCount = 0.00

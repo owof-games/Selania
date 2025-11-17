@@ -161,10 +161,10 @@
                     {kitchenDebug: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ fourthIngredientReactionSecondCharacter = badReaction
-                    ~ fourthIngredientNameSecondCharacter = BaccaDellaAddolorata
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+                    ~ kitchen_secondCharExtraIngredientReaction = badReaction
+                    ~ kitchen_secondCharExtraIngredient = BaccaDellaAddolorata
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }
     
     + {findedGifts has BarbaDellInciampo} [Una spina di Barba dell'Inciampo.]
@@ -182,10 +182,10 @@
                     {kitchenDebug: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ fourthIngredientReactionSecondCharacter = badReaction
-                    ~ fourthIngredientNameSecondCharacter = BarbaDellInciampo
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+                    ~ kitchen_secondCharExtraIngredientReaction = badReaction
+                    ~ kitchen_secondCharExtraIngredient = BarbaDellInciampo
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }
             
     + {findedGifts has BastoneDellOzioso} [Un nodo di Bastone dell'Ozioso.]
@@ -203,10 +203,10 @@
                     {kitchenDebug: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ fourthIngredientReactionSecondCharacter = goodReaction
-                    ~ fourthIngredientNameSecondCharacter = BastoneDellOzioso
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+                    ~ kitchen_secondCharExtraIngredientReaction = goodReaction
+                    ~ kitchen_secondCharExtraIngredient = BastoneDellOzioso
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }
         
     + {findedGifts has BrinaDellImpossibile} [Un frammento di Brina dell'Impossibile.]
@@ -224,10 +224,10 @@
                     {kitchenDebug: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ fourthIngredientReactionSecondCharacter = goodReaction
-                    ~ fourthIngredientNameSecondCharacter = BrinaDellImpossibile
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+                    ~ kitchen_secondCharExtraIngredientReaction = goodReaction
+                    ~ kitchen_secondCharExtraIngredient = BrinaDellImpossibile
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
     
     + {findedGifts has CantoDelleCompagne} [Una goccia di Canto delle Compagne.]
@@ -245,10 +245,10 @@
                     {kitchenDebug: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ fourthIngredientReactionSecondCharacter = badReaction
-                    ~ fourthIngredientNameSecondCharacter = CantoDelleCompagne
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+                    ~ kitchen_secondCharExtraIngredientReaction = badReaction
+                    ~ kitchen_secondCharExtraIngredient = CantoDelleCompagne
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
     
     + {findedGifts has CardoAspinato} [Un ciuffo di peli di Cardo Aspinato.]
@@ -266,10 +266,10 @@
                     {kitchenDebug: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ fourthIngredientReactionSecondCharacter = mehReaction
-                    ~ fourthIngredientNameSecondCharacter = CardoAspinato
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+                    ~ kitchen_secondCharExtraIngredientReaction = mehReaction
+                    ~ kitchen_secondCharExtraIngredient = CardoAspinato
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
             
     + {findedGifts has EderaDelleAmanti} [Una foglia di Edera delle amanti.]
@@ -287,10 +287,10 @@
                     {kitchenDebug: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ fourthIngredientReactionSecondCharacter = badReaction
-                    ~ fourthIngredientNameSecondCharacter = EderaDelleAmanti
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+                    ~ kitchen_secondCharExtraIngredientReaction = badReaction
+                    ~ kitchen_secondCharExtraIngredient = EderaDelleAmanti
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
 
     + {findedGifts has ErbaLiccia} [Un ricordo di Erba Liccia.]
@@ -308,10 +308,10 @@
                     {kitchenDebug: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ fourthIngredientReactionSecondCharacter = mehReaction
-                    ~ fourthIngredientNameSecondCharacter = ErbaLiccia
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+                    ~ kitchen_secondCharExtraIngredientReaction = mehReaction
+                    ~ kitchen_secondCharExtraIngredient = ErbaLiccia
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
         
      + {findedGifts has FalsaPalude} [Un petalo di Falsa Palude.]
@@ -329,10 +329,10 @@
                     {kitchenDebug: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ fourthIngredientReactionSecondCharacter = badReaction
-                    ~ fourthIngredientNameSecondCharacter = FalsaPalude
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+                    ~ kitchen_secondCharExtraIngredientReaction = badReaction
+                    ~ kitchen_secondCharExtraIngredient = FalsaPalude
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
         
       + {findedGifts has LanaNotturna} [Il calore della Lana Notturna.]
@@ -350,10 +350,10 @@
                     {kitchenDebug: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ fourthIngredientReactionSecondCharacter = badReaction
-                    ~ fourthIngredientNameSecondCharacter = LanaNotturna
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+                    ~ kitchen_secondCharExtraIngredientReaction = badReaction
+                    ~ kitchen_secondCharExtraIngredient = LanaNotturna
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
         
     + {findedGifts has LicheneDegliAbissi} [Una traccia dell'odore del Lichene degli Abissi.]
@@ -371,10 +371,10 @@
                     {kitchenDebug: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ fourthIngredientReactionSecondCharacter = goodReaction
-                    ~ fourthIngredientNameSecondCharacter = LicheneDegliAbissi
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+                    ~ kitchen_secondCharExtraIngredientReaction = goodReaction
+                    ~ kitchen_secondCharExtraIngredient = LicheneDegliAbissi
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
     
     + {findedGifts has NonTiScordarDiTe} [L'impronta del Non Ti Scordar di Te.]
@@ -392,10 +392,10 @@
                     {kitchenDebug: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ fourthIngredientReactionSecondCharacter = mehReaction
-                    ~ fourthIngredientNameSecondCharacter = NonTiScordarDiTe
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+                    ~ kitchen_secondCharExtraIngredientReaction = mehReaction
+                    ~ kitchen_secondCharExtraIngredient = NonTiScordarDiTe
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
     
     + {findedGifts has Olobino} [Una cappello di Olobino.]
@@ -413,10 +413,10 @@
                     {kitchenDebug: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ fourthIngredientReactionSecondCharacter = badReaction
-                    ~ fourthIngredientNameSecondCharacter = Olobino
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+                    ~ kitchen_secondCharExtraIngredientReaction = badReaction
+                    ~ kitchen_secondCharExtraIngredient = Olobino
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
         
     + {findedGifts has LaSpazzata} [Un rametto della Spezzata.]
@@ -434,10 +434,10 @@
                     {kitchenDebug: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ fourthIngredientReactionSecondCharacter = mehReaction
-                    ~ fourthIngredientNameSecondCharacter = LaSpazzata
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+                    ~ kitchen_secondCharExtraIngredientReaction = mehReaction
+                    ~ kitchen_secondCharExtraIngredient = LaSpazzata
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }        
 //Doni insoliti
     + {findedGifts has universalIngredient} [L'ingrediente universale della Rana.]
@@ -452,10 +452,10 @@
                     {kitchenDebug: Ho modificato il valore di kitchen_firstCharExtraIngredient in {kitchen_firstCharExtraIngredient}.}
                     
                 - PNG == SecondCharacter:
-                    ~ fourthIngredientReactionSecondCharacter = goodReaction
-                    ~ fourthIngredientNameSecondCharacter = universalIngredient
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientReactionSecondCharacter in {fourthIngredientReactionSecondCharacter}.}
-                    {kitchenDebug: Ho modificato il valore di fourthIngredientNameSecondCharacter in {fourthIngredientNameSecondCharacter}.}
+                    ~ kitchen_secondCharExtraIngredientReaction = goodReaction
+                    ~ kitchen_secondCharExtraIngredient = universalIngredient
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredientReaction in {kitchen_secondCharExtraIngredientReaction}.}
+                    {kitchenDebug: Ho modificato il valore di kitchen_secondCharExtraIngredient in {kitchen_secondCharExtraIngredient}.}
             }
     
     -
