@@ -1,13 +1,13 @@
-LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
+LIST nest_colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
 
 //Persona a cui stiamo parlando quando compiamo la scelta
-    VAR currentTalker = ()
+    VAR nest_currentTalker = ()
 //Creazione di parametri generici per semplificarmi la vita legati ai colori che poi verranno riportati sullx PNG    
-    VAR temporaryRed = 0
-    VAR temporaryYellow = 0
-    VAR temporaryBlue = 0
-    VAR temporaryGreen = 0
-    VAR temporaryPurple = 0
+    VAR nest_temporaryRed = 0.00
+    VAR nest_temporaryYellow = 0.00
+    VAR nest_temporaryBlue = 0.00
+    VAR nest_temporaryGreen = 0.00
+    VAR nest_temporaryPurple = 0.00
 
 //Contatore d'uso della parola    
     VAR temporaryWordUsageCounter = 0
@@ -19,16 +19,16 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
 
     {
     	- PNG == FirstCharacter:
-    	        ~ currentTalker = FirstCharacter
-    	        {debug_nest: dopo l'operazione il parlante attuale {currentTalker}.} 
+    	        ~ nest_currentTalker = FirstCharacter
+    	        {debug_nest: dopo l'operazione il parlante attuale {nest_currentTalker}.} 
     	 
     	- PNG == SecondCharacter:
-    	        ~ currentTalker = SecondCharacter
-    	        {debug_nest: dopo l'operazione il parlante attuale {currentTalker}.} 
+    	        ~ nest_currentTalker = SecondCharacter
+    	        {debug_nest: dopo l'operazione il parlante attuale {nest_currentTalker}.} 
     	 
     	- PNG == Mentor:
-    	        ~ currentTalker = Mentor
-    	        {debug_nest: dopo l'operazione il parlante attuale {currentTalker}.}       
+    	        ~ nest_currentTalker = Mentor
+    	        {debug_nest: dopo l'operazione il parlante attuale {nest_currentTalker}.}       
     	    
         - else: ERROR: sono in color_variation_management ma non trovo lx PNG indicatx
     }
@@ -47,19 +47,19 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
     - else:
         {Color:
             -redC:
-                ~ temporaryRed ++
+                ~ nest_temporaryRed ++
      
             -yellowC:
-                ~ temporaryYellow ++
+                ~ nest_temporaryYellow ++
             
             -blueC:
-                ~ temporaryBlue ++
+                ~ nest_temporaryBlue ++
             
             -greenC:
-                ~ temporaryGreen ++   
+                ~ nest_temporaryGreen ++   
             
             -purpleC:
-                ~ temporaryPurple ++
+                ~ nest_temporaryPurple ++
         }
         {debug_nest: non è attiva alcuna parola magica, per cui mi aumento di uno i valori e basta.}
           //E poi aggiorniamo i dettagli
@@ -76,294 +76,294 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
     {nest_activeEmotionalWord:
         //Variazioni di un solo colore
             - Rosso:
-                ~ temporaryRed ++
+                ~ nest_temporaryRed ++
             - RossoRosso:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
                 
             - RossoRossoRosso:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
             
             - Giallo:
-                ~ temporaryYellow ++
+                ~ nest_temporaryYellow ++
             - GialloGiallo:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
             - GialloGialloGiallo:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
             
             - Blu:
-                ~ temporaryBlue ++
+                ~ nest_temporaryBlue ++
             - BluBlu:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
             - BluBluBlu:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
             
             - Verde:
-                ~ temporaryGreen ++
+                ~ nest_temporaryGreen ++
             - VerdeVerde:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
             - VerdeVerdeVerde:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
             
             - Viola:
-                ~ temporaryPurple ++
+                ~ nest_temporaryPurple ++
             - ViolaViola:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
             - ViolaViolaViola:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
                 
         //Variazioni di due colori
             - RossoRossoBlu:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryBlue --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryBlue --
                 
             - RossoRossoVerde:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryGreen --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryGreen --
                 
             - RossoRossoViola:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryPurple --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryPurple --
                 
             - RossoRossoGiallo:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryYellow --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryYellow --
                 
             - RossoGiallo:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryYellow --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryYellow --
                 
             - RossoGialloRosso:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
             
             - RossoGialloGiallo:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryYellow --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
             
             - RossoBlu:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryBlue --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryBlue --
                 
             - RossoBluBlu:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryBlue --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
             
             - RossoBluRosso:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryRed --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryRed --
             
             - RossoVerde: 
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryGreen --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryGreen --
             
             - RossoVerdeVerde:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryGreen --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
             
             - RossoVerdeRosso:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryRed --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryRed --
             
             - RossoViola:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryPurple --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryPurple --
                 
             - RossoViolaViola:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryPurple --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
             
             - RossoViolaRosso:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryRed --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryRed --
             
             
             
             
             
             - GialloVerde:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryGreen --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryGreen --
         
             - GialloViola:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryPurple --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryPurple --
             
             - GialloRosso:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryRed --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryRed --
             
             - GialloBlu:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryBlue --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryBlue --
                 
                 
             - GialloRossoGiallo:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryYellow --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryYellow --
                 
             - GialloRossoRosso:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryRed --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
                 
             - GialloGialloVerde:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryGreen --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryGreen --
                 
             - GialloGialloViola:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryPurple --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryPurple --
                 
             - GialloGialloBlu:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryBlue --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryBlue --
                 
             - GialloGialloRosso:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryRed --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryRed --
                 
             
             - GialloBluBlu:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryBlue --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
                 
             - GialloBluGiallo:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryYellow --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryYellow --
                 
                 
             - GialloVerdeVerde:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryGreen --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
                 
             - GialloVerdeGiallo:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryYellow --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryYellow --
                 
             - GialloViolaViola:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryPurple --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
                 
             - GialloViolaGiallo:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryYellow --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryYellow --
                 
             
             
@@ -373,112 +373,112 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
             
             
             - BluRosso:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryRed --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryRed --
                 
             - BluGiallo:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryYellow --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryYellow --
                 
             - BluVerde:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryGreen --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryGreen --
                 
             - BluViola:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryPurple --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryPurple --
                 
             - BluRossoBlu:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryBlue --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryBlue --
                 
             - BluRossoRosso:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryRed --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
                 
             - BluGialloBlu:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryBlue --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryBlue --
                 
             - BluGialloGiallo:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryYellow --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
                 
             - BluBluVerde:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryGreen --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryGreen --
                 
             - BluBluViola:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryPurple --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryPurple --
                 
             - BluBluGiallo:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryYellow --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryYellow --
                 
             - BluBluRosso:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryRed --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryRed --
                 
             - BluVerdeVerde:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryGreen --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
                 
             - BluVerdeBlu:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryBlue --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryBlue --
                 
             - BluViolaViola:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryPurple --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
                 
             
             
@@ -488,439 +488,439 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
             
             
             - VerdeRosso:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryRed --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryRed --
                 
             - VerdeViola:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryPurple --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryPurple --
                 
             - VerdeGiallo:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryYellow --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryYellow --
                 
             - VerdeBlu:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryBlue --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryBlue --
                 
             - VerdeRossoVerde:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryGreen --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryGreen --
                 
             - VerdeRossoRosso:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryRed --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
                 
             - VerdeGialloVerde:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryGreen --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryGreen --
                 
             - VerdeGialloGiallo:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryYellow --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
                 
             - VerdeBluVerde:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryGreen --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryGreen --
                 
             - VerdeBluBlu:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryBlue --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
                 
             - VerdeVerdeViola:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryPurple --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryPurple --
                 
             - VerdeVerdeBlu:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryBlue --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryBlue --
                 
             - VerdeVerdeGiallo:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryYellow --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryYellow --
                 
             - VerdeVerdeRosso:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryRed --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryRed --
                 
             - VerdeViolaVerde:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryGreen --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryGreen --
                 
             - VerdeViolaViola:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryPurple --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
                 
             
             
             
             
             - ViolaRosso:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryRed --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryRed --
                 
             - ViolaGiallo:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryYellow --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryYellow --
                 
             - ViolaBlu:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryBlue --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryBlue --
                 
             - ViolaVerde:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryGreen --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryGreen --
                 
             - ViolaRossoViola:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryPurple --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryPurple --
                 
             - ViolaRossoRosso:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryRed --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
                 
             - ViolaGialloViola:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryPurple --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryPurple --
                 
             - ViolaGialloGiallo:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryYellow --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
                 
             - ViolaBluViola:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryPurple --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryPurple --
                 
             - ViolaBluBlu:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryBlue --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
                 
             - ViolaVerdeVerde:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryGreen --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
                 
             - ViolaVerdeViola:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryPurple --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryPurple --
                 
             - ViolaViolaVerde:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryGreen --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryGreen --
                 
             - ViolaViolaBlu:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryBlue --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryBlue --
                 
             - ViolaViolaGiallo:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryYellow --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryYellow --
                 
             - ViolaViolaRosso:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryRed --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryRed --
                 
         
         
         //Varizioni di tre colori
             - RossoGialloBlu: 
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryBlue --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryBlue --
             
             - RossoGialloVerde: 
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryGreen --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryGreen --
             
             - RossoGialloViola: 
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryPurple --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryPurple --
             
             - RossoBluVerde: 
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryGreen --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryGreen --
             
             - RossoBluViola: 
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryPurple --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryPurple --
             
             - RossoBluGiallo: 
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryYellow --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryYellow --
             
             - RossoVerdeBlu: 
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryBlue --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryBlue --
             
             - RossoVerdeViola: 
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryPurple --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryPurple --
             
             - RossoVerdeGiallo: 
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryYellow --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryYellow --
             
             - RossoViolaGiallo:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryYellow --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryYellow --
                 
             - RossoViolaVerde:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryGreen --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryGreen --
                 
             - RossoViolaBlu:
-                ~ temporaryRed ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++ 
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryBlue --
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++ 
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryBlue --
                 
         
         
         
         
             - GialloRossoVerde:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryGreen --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryGreen --
                 
             - GialloRossoViola:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryPurple --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryPurple --
                 
             - GialloRossoBlu:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryBlue --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryBlue --
                 
             - GialloBluVerde:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryGreen --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryGreen --
                 
             - GialloBluViola:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryPurple --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryPurple --
                 
             - GialloBluRosso:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryRed --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryRed --
                 
             - GialloVerdeViola:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryPurple --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryPurple --
                 
             - GialloVerdeBlu:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryBlue --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryBlue --
                 
             - GialloVerdeRosso:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryRed --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryRed --
                 
             - GialloViolaVerde:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryGreen --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryGreen --
                 
             - GialloViolaBlu:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryBlue --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryBlue --
                 
             - GialloViolaRosso:
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryYellow ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryRed --
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryYellow ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryRed --
                 
                 
                 
@@ -928,204 +928,204 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
                 
             
             - BluRossoVerde:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryRed ++
-                ~ temporaryRed ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryRed ++
+                ~ nest_temporaryRed ++
                 
             - BluRossoViola:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryPurple --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryPurple --
                 
             - BluRossoGiallo:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryYellow --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryYellow --
                 
             - BluGialloVerde:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryGreen --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryGreen --
                 
             - BluGialloViola:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryPurple --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryPurple --
                 
             - BluGialloRosso:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryRed --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryRed --
                 
             - BluVerdeViola:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryPurple --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryPurple --
                 
             - BluVerdeGiallo:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryYellow --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryYellow --
                 
             - BluVerdeRosso:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryRed --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryRed --
                 
             - BluViolaVerde:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryGreen --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryGreen --
                 
             - BluViolaBlu:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryBlue --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryBlue --
                 
             - BluViolaGiallo:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryYellow --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryYellow --
                 
             - BluViolaRosso:
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryBlue ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryRed --
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryBlue ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryRed --
                 
             
             - VerdeRossoViola:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryPurple --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryPurple --
                 
             - VerdeRossoBlu:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryBlue --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryBlue --
                 
             - VerdeRossoGiallo:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryYellow --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryYellow --
                 
             - VerdeGialloViola:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryPurple --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryPurple --
                 
             - VerdeGialloBlu:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryBlue --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryBlue --
                 
             - VerdeBluViola:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryPurple --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryPurple --
                 
             - VerdeBluGiallo:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryYellow --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryYellow --
                 
             - VerdeBluRosso:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryRed --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryRed --
                 
             - VerdeGialloRosso:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryRed --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryRed --
                 
             - VerdeViolaBlu:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryBlue --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryBlue --
                 
             - VerdeViolaGiallo:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryYellow --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryYellow --
                 
             - VerdeViolaRosso:
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryGreen ++
-                ~ temporaryPurple --
-                ~ temporaryPurple --
-                ~ temporaryRed --
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryGreen ++
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryPurple --
+                ~ nest_temporaryRed --
                 
             
             
@@ -1135,101 +1135,101 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
             
             
             - ViolaRossoVerde:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryGreen --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryGreen --
                 
             - ViolaRossoBlu:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryBlue --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryBlue --
                 
             - ViolaRossoGiallo:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryRed --
-                ~ temporaryRed --
-                ~ temporaryYellow --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryRed --
+                ~ nest_temporaryRed --
+                ~ nest_temporaryYellow --
                 
             - ViolaGialloVerde:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryGreen --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryGreen --
                 
             - ViolaGialloBlu:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryBlue --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryBlue --
                 
             - ViolaGialloRosso:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryYellow --
-                ~ temporaryYellow --
-                ~ temporaryRed --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryYellow --
+                ~ nest_temporaryRed --
                 
             - ViolaBluVerde:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryGreen --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryGreen --
                 
             - ViolaBluGiallo:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryYellow --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryYellow --
                 
             - ViolaBluRosso:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryBlue --
-                ~ temporaryBlue --
-                ~ temporaryRed --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryBlue --
+                ~ nest_temporaryRed --
                 
             
             - ViolaVerdeBlu:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryBlue --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryBlue --
                 
             - ViolaVerdeGiallo:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryYellow --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryYellow --
                 
             - ViolaVerdeRosso:
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryPurple ++
-                ~ temporaryGreen --
-                ~ temporaryGreen --
-                ~ temporaryRed --
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryPurple ++
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryGreen --
+                ~ nest_temporaryRed --
                 
             
             -else: Valore colore parola {nest_activeEmotionalWord} non trovato!
@@ -1240,13 +1240,13 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
 
 //E poi andiamo alle reazioni
     {
-        - currentTalker == FirstCharacter:
+        - nest_currentTalker == FirstCharacter:
             -> firstCharEmotionalActions
         
-        - currentTalker == SecondCharacter:
+        - nest_currentTalker == SecondCharacter:
             -> secondCharEmotionalActions
         
-        - currentTalker == Mentor:
+        - nest_currentTalker == Mentor:
             -> fifthCharEmotionalActions
     
     }
@@ -1487,39 +1487,39 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
 
 = update_PNG_color_values
     {debug_nest: entro in update_PNG_color_values.}
-    {debug_nest: prima dell'operazione il parlante attuale è {currentTalker}.}
+    {debug_nest: prima dell'operazione il parlante attuale è {nest_currentTalker}.}
     //Prima aggiorniamo i dati a seconda dei parlanti
     {
-        - currentTalker == FirstCharacter:
-            ~ firstChar_red += temporaryRed
-            ~ firstChar_yellow += temporaryYellow
-            ~ firstChar_blue += temporaryBlue
-            ~ firstChar_green += temporaryGreen
-            ~ firstChar_purple += temporaryPurple
+        - nest_currentTalker == FirstCharacter:
+            ~ firstChar_red += nest_temporaryRed
+            ~ firstChar_yellow += nest_temporaryYellow
+            ~ firstChar_blue += nest_temporaryBlue
+            ~ firstChar_green += nest_temporaryGreen
+            ~ firstChar_purple += nest_temporaryPurple
         
-        - currentTalker == SecondCharacter:
-            ~ secondChar_Red += temporaryRed
-            ~ secondChar_Yellow += temporaryYellow
-            ~ secondChar_Blue += temporaryBlue
-            ~ secondChar_Green += temporaryGreen
-            ~ secondChar_purple += temporaryPurple
+        - nest_currentTalker == SecondCharacter:
+            ~ secondChar_Red += nest_temporaryRed
+            ~ secondChar_Yellow += nest_temporaryYellow
+            ~ secondChar_Blue += nest_temporaryBlue
+            ~ secondChar_Green += nest_temporaryGreen
+            ~ secondChar_purple += nest_temporaryPurple
         
-        - currentTalker == Mentor:
-            ~ fifthChar_red += temporaryRed
-            ~ fifthChar_yellow += temporaryYellow
-            ~ fifthChar_blue += temporaryBlue
-            ~ fifthChar_green += temporaryGreen
-            ~ fifthChar_purple += temporaryPurple
+        - nest_currentTalker == Mentor:
+            ~ fifthChar_red += nest_temporaryRed
+            ~ fifthChar_yellow += nest_temporaryYellow
+            ~ fifthChar_blue += nest_temporaryBlue
+            ~ fifthChar_green += nest_temporaryGreen
+            ~ fifthChar_purple += nest_temporaryPurple
     }
 
     //Poi azzeriamo i valori temporanei
-        ~ currentTalker = ()
-        ~ temporaryRed = 0
-        ~ temporaryYellow = 0
-        ~ temporaryBlue = 0
-        ~ temporaryGreen = 0
-        ~ temporaryPurple = 0
-    {debug_nest: dopo l'operazione il parlante attuale {currentTalker}.}
+        ~ nest_currentTalker = ()
+        ~ nest_temporaryRed = 0
+        ~ nest_temporaryYellow = 0
+        ~ nest_temporaryBlue = 0
+        ~ nest_temporaryGreen = 0
+        ~ nest_temporaryPurple = 0
+    {debug_nest: dopo l'operazione il parlante attuale {nest_currentTalker}.}
 
 ->->
 

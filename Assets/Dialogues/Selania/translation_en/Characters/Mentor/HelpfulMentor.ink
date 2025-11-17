@@ -522,44 +522,44 @@
  
  === mindfulness
  //Randomizzo i contenuti e nel caso posso usare anche qui i trigger warning.
- LIST actualMindfulness = firstMind, secondMind, thirdMind, fourthMind, fifthMind
- VAR lastMindfulness = 0
- VAR pauseMindfulness = 10
+ LIST mentor_actualMindfulness = firstMind, secondMind, thirdMind, fourthMind, fifthMind
+ VAR mentor_lastMindfulness = 0
+ VAR mentor_pauseMindfulness = 10
  
  {
-    - lastMindfulness > 0:
+    - mentor_lastMindfulness > 0:
         {
-            - actualMindfulness has firstMind:
+            - mentor_actualMindfulness has firstMind:
                 -> one
-            - actualMindfulness has secondMind:
+            - mentor_actualMindfulness has secondMind:
                 -> two
-            - actualMindfulness has thirdMind:
+            - mentor_actualMindfulness has thirdMind:
                 -> three
-            - actualMindfulness has fourthMind:
+            - mentor_actualMindfulness has fourthMind:
                 -> four
-            - actualMindfulness has fifthMind:
+            - mentor_actualMindfulness has fifthMind:
                 -> five
         }
     
     - else:
-        ~ lastMindfulness = pauseMindfulness
-        ~ actualMindfulness = ()
+        ~ mentor_lastMindfulness = mentor_pauseMindfulness
+        ~ mentor_actualMindfulness = ()
         
          {shuffle:
             - 
-                ~  actualMindfulness += firstMind
+                ~  mentor_actualMindfulness += firstMind
                 -> one
             - 
-                ~  actualMindfulness += secondMind
+                ~  mentor_actualMindfulness += secondMind
                 -> two
             - 
-                ~  actualMindfulness += thirdMind
+                ~  mentor_actualMindfulness += thirdMind
                 -> three
             - 
-                ~  actualMindfulness += fourthMind
+                ~  mentor_actualMindfulness += fourthMind
                 -> four
             - 
-                ~  actualMindfulness += fifthMind
+                ~  mentor_actualMindfulness += fifthMind
                 -> five               
          }
  
