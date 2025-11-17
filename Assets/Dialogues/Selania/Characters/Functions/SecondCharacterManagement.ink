@@ -28,12 +28,11 @@
 //Tracciamento del dono
     VAR secondChar_giftedObject = ()
     
-    
 //Tengo conto delle interazioni avute per aprire la possibilità di avviare la riscrittura    
-    VAR minStoryQuesTCountSecondChar = 8
+    VAR secondChar_storyletsForRewritingCount = 8
 
 //Tracciamento attivazione secondo elemento tutorial
-    VAR secondTutorial = true
+    VAR secondChar_tutorial = true
     
 //Tracciamento cucina
     //autonoma

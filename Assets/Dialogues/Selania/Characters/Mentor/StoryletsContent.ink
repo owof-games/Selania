@@ -100,7 +100,7 @@
                         E poi torna da me.
                     
                 //Se sono già in uno stato intermedio di conoscenza con unx dellx PNG
-                    - (firstChar_storyletsForRewritingCount > (firstChar_minStoryletsForRewriting - 3)) or (secondStoryQuestCount > (minStoryQuesTCountSecondChar - 4)):
+                    - (firstChar_storyletsForRewritingCount > (firstChar_minStoryletsForRewriting - 3)) or (secondStoryQuestCount > (secondChar_storyletsForRewritingCount - 4)):
                         E visto che hai già parlato un po' con chi girella per questo luogo, è il caso che te lo spieghi subito!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                             -> about_ink_usage
                 
