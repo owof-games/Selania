@@ -88,15 +88,15 @@ VAR saturationVar = 0
     
     - else:
        {
-        - moonState == NewMoon:
+        - witch_moonState == NewMoon:
            ~ move_entity(NewMoonAnim, Library)
-        - moonState == FirstQuarter:
+        - witch_moonState == FirstQuarter:
             ~ move_entity(FirstQuarterAnim, Library)
-        - moonState == FullMoon:
+        - witch_moonState == FullMoon:
             ~ move_entity(FullMoonAnim, Library)
-        - moonState == ThirdQuarter:
+        - witch_moonState == ThirdQuarter:
             ~ move_entity(ThirdQuarterAnim, Library)
-        - moonState == RedMoon:
+        - witch_moonState == RedMoon:
             ~ move_entity(RedMoonAnim, Library)
        
        }

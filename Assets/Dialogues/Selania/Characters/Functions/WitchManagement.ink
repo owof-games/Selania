@@ -4,8 +4,8 @@
 
 //Variabili per la gestione del ritratto
     LIST witch_moonPhases = NewMoon, FirstQuarter, FullMoon, ThirdQuarter, RedMoon
-    VAR moonState = NewMoon
-    VAR moonTime = 0
+    VAR witch_moonState = NewMoon
+    VAR witch_moonTime = 0
     //l'idea è che ogni tre passaggi sia un giorno, e che cambi ogni sette giorni.
     VAR changeMoonFase = 21
     
