@@ -21,12 +21,10 @@
     VAR kitchen_storageGreen = 0
     VAR kitchen_storageRed = 0
 
-//Storage temporaneo di altre informazioni
-    VAR storageSecondStoryQuestCount = 0
-    
+
 //Reazioni possibili al quarto ingrediente
     //Nota: notReaction = non dato
-    LIST fourthIngredientReactions = notReaction, badReaction, mehReaction, goodReaction
+    LIST kitchen_extraIngredientPossibleReactions = notReaction, badReaction, mehReaction, goodReaction
 
 === check_kitchen_recap
     
@@ -499,8 +497,6 @@
                 ~ secondChar_Green = 0
             ~ kitchen_storageRed = secondChar_Red
                 ~ secondChar_Red = 0
-            ~ storageSecondStoryQuestCount = secondChar_storyletsForRewritingCount 
-                ~ secondChar_storyletsForRewritingCount = 0
     }
 ->->
 
@@ -532,9 +528,7 @@
                 ~ kitchen_storageGreen = 0
             ~ secondChar_Red = secondChar_Red + kitchen_storageRed
                 ~ kitchen_storageRed = 0
-            //Non aggiungiamo le tre domande perché complica solo il conteggio finale
-            ~ secondChar_storyletsForRewritingCount = storageSecondStoryQuestCount
-                ~ storageSecondStoryQuestCount = 0        
+ 
     
     }
     
