@@ -5,7 +5,7 @@
  ----------------------------------*/
 //Lista dei gifts che si possono trovare in gioco.
 LIST gifts = blanket, emptyvase 
-VAR findedGifts = ()
+VAR backpack_findedGifts = ()
 
 //Spazio dove caricare temporaneamente quale livello di inchiostro stiamo controllando
 VAR Ink = ()

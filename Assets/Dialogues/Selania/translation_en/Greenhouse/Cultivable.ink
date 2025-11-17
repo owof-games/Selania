@@ -227,8 +227,8 @@
                     ~ greenhouse_cultivableGrowing = 0
                     ~ greenhouse_chosenCultivable = ()
                     {
-                        - findedGifts hasnt LicheneDegliAbissi:
-                        ~ findedGifts += LicheneDegliAbissi
+                        - backpack_findedGifts hasnt LicheneDegliAbissi:
+                        ~ backpack_findedGifts += LicheneDegliAbissi
                         <i>Hai ottenuto: <b>Lichene degli Abissi.</b></i>
                     }
                     
@@ -276,8 +276,8 @@
                     ~ greenhouse_cultivableGrowing = 0
                     ~ greenhouse_chosenCultivable = ()
                     {
-                        - findedGifts hasnt MuschioDelleAmanti:
-                        ~ findedGifts += MuschioDelleAmanti
+                        - backpack_findedGifts hasnt MuschioDelleAmanti:
+                        ~ backpack_findedGifts += MuschioDelleAmanti
                         <i>Hai ottenuto: <b>Edera delle Amanti.</b></i>
                     }
                 
@@ -325,8 +325,8 @@
                     ~ greenhouse_cultivableGrowing = 0
                     ~ greenhouse_chosenCultivable = ()
                     {
-                        - findedGifts hasnt CantoDelleCompagne:
-                        ~ findedGifts += CantoDelleCompagne
+                        - backpack_findedGifts hasnt CantoDelleCompagne:
+                        ~ backpack_findedGifts += CantoDelleCompagne
                         <i>Hai ottenuto: <b>Canto delle Compagne.</b></i>
                     }
                 
@@ -376,8 +376,8 @@
                     ~ greenhouse_cultivableGrowing = 0
                     ~ greenhouse_chosenCultivable = ()
                     {
-                        - findedGifts hasnt LaSpazzata:
-                        ~ findedGifts += LaSpazzata
+                        - backpack_findedGifts hasnt LaSpazzata:
+                        ~ backpack_findedGifts += LaSpazzata
                         <i>Hai ottenuto: <b>La Spazzata.</b></i>
                     }
                 
@@ -419,8 +419,8 @@
                 ~ greenhouse_cultivableGrowing = 0
                 ~ greenhouse_chosenCultivable = ()
                     {
-                        - findedGifts hasnt BaccaDellaAddolorata:
-                        ~ findedGifts += BaccaDellaAddolorata
+                        - backpack_findedGifts hasnt BaccaDellaAddolorata:
+                        ~ backpack_findedGifts += BaccaDellaAddolorata
                         <i>Hai ottenuto: <b>Bacca della Addolorata</b></i>
                     }
             
@@ -468,8 +468,8 @@
                 ~ greenhouse_cultivableGrowing = 0
                 ~ greenhouse_chosenCultivable = ()
                 {
-                        - findedGifts hasnt NonTiScordarDiTe:
-                        ~ findedGifts += NonTiScordarDiTe
+                        - backpack_findedGifts hasnt NonTiScordarDiTe:
+                        ~ backpack_findedGifts += NonTiScordarDiTe
                         <i>Hai ottenuto: <b>Non Ti Scordar di Te.</b></i>
                     }
                 + + {greenhouse_backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]
@@ -512,8 +512,8 @@
                 ~ greenhouse_cultivableGrowing = 0
                 ~ greenhouse_chosenCultivable = ()
                     {
-                        - findedGifts hasnt BrinaDellImpossibile:
-                        ~ findedGifts += BrinaDellImpossibile
+                        - backpack_findedGifts hasnt BrinaDellImpossibile:
+                        ~ backpack_findedGifts += BrinaDellImpossibile
                        <i> Hai ottenuto: <b>Brina dell'Impossibile</b></i>
                     }
                 + + {greenhouse_backupCultivable != () && are_two_entities_together(WateringCan, PG)}[Voglio coltivare qualcosa di nuovo.]

@@ -44,7 +44,7 @@
                 -> ask
 
     //Vogliamo offrire un dono            
-        - not second_story_gift.ink_outcome && findedGifts != ():
+        - not second_story_gift.ink_outcome && backpack_findedGifts != ():
                 -> ask
     
     //Vogliamo cucinare assieme          
@@ -111,7 +111,7 @@
     //Azioni legate alla costruzione della relazione
             
         //Offrire un dono
-            + {not second_story_gift.ink_outcome && findedGifts != ()} [Ti vorrei donare questa cosa.]
+            + {not second_story_gift.ink_outcome && backpack_findedGifts != ()} [Ti vorrei donare questa cosa.]
                         -> second_story_gift
 
     
@@ -1677,10 +1677,10 @@
 === second_story_gift ===
     ~ temp charNameTwo = translator(secondChar_ActualName)
     Stai per donare qualcosa a {charNameTwo}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            + {findedGifts != ()} [Scelgo il dono.]
+            + {backpack_findedGifts != ()} [Scelgo il dono.]
                 ~ gift_currentReceiver += SecondCharacter
-                -> inventory_management
-            + {findedGifts == ()} Il tuo inventario è vuoto. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                -> backpack_management
+            + {backpack_findedGifts == ()} Il tuo inventario è vuoto. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 ->main
             
         

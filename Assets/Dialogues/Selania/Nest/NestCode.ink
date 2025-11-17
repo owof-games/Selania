@@ -95,7 +95,7 @@
 
 === emotional_words_feedback
 {debug_nest: passo per emotional_words_feedback.}
-//Passo da qui dopo aver creato la parola, per vedere se l'ho già scoperta o meno. Nel secondo caso aggiorno il libro della riscrittora e passo a emotional_inventory_management
+//Passo da qui dopo aver creato la parola, per vedere se l'ho già scoperta o meno. Nel secondo caso aggiorno il libro della riscrittora e passo a emotional_backpack_management
 //Per prima cosa, resetto i valori delle scelte durante la creazione della parola
     ~ nest_firstKeyColour = ()
     ~ nest_secondKeyColour = ()
@@ -119,7 +119,7 @@
                      @animation:RewriterBook
             }    
             
-            -> emotional_inventory_management.
+            -> emotional_backpack_management.
     
     }
 

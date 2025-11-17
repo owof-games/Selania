@@ -363,7 +363,7 @@
                     
                     @animation:Inventory
                     
-                    ~ findedGifts += universalIngredient
+                    ~ backpack_findedGifts += universalIngredient
                     ~ frog_availableSpecialMissions -= specialMissionTwo
                     ~ frog_currentMission = ()
                     ~ frog_aboutGiftRequest = ()

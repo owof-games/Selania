@@ -38,7 +38,7 @@
                 
     
             //Se non ho ancora fatto e ho parlato abbastanza con lui
-            + {thirdChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && findedGifts != ()} [Ti vorrei donare questa cosa.]
+            + {thirdChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && backpack_findedGifts != ()} [Ti vorrei donare questa cosa.]
                     -> third_story_gift
         
             //Dono fatto ma non ho avviato la main story
@@ -459,10 +459,10 @@
 === third_story_gift ===
 ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
 <i> Stai per donare qualcosa a {charNameThree}.</i>
-        + {findedGifts != ()} [Scelgo il dono.]
+        + {backpack_findedGifts != ()} [Scelgo il dono.]
             ~ gift_currentReceiver += ThirdCharacter
-            -> inventory_management -> ink_outcome 
-        + {findedGifts == ()} Scelgo il dono.
+            -> backpack_management -> ink_outcome 
+        + {backpack_findedGifts == ()} Scelgo il dono.
             ->main
         
     
@@ -877,8 +877,8 @@
 
 // = internal_inventario
 //     {charNameUno}: Tutto sommato è una cosa così banale, così banale. Eppure questo freddo non se ne vuole andare.
-//         + {findedGifts != ()} [Ho un dono per te, <i>{traduttorePersonaggeMinuscolo(effettivoStatoPersonaggiaUno)}</i>.]
-//             -> inventory_management
+//         + {backpack_findedGifts != ()} [Ho un dono per te, <i>{traduttorePersonaggeMinuscolo(effettivoStatoPersonaggiaUno)}</i>.]
+//             -> backpack_management
 //         + [Vorrei riascoltare la tua storia, <i>{traduttorePersonaggeMinuscolo(effettivoStatoPersonaggiaUno)}</i>.]
 //             -> intro_storia_uno.intro
 //         + [Mi allontano.]

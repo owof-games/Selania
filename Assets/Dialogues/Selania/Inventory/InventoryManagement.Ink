@@ -4,7 +4,7 @@
             
              ----------------------------------*/
 //Lista dei doni che si possono trovare in gioco.
-VAR findedGifts = ()
+VAR backpack_findedGifts = ()
 
 
 === function ingredientTranslator(ingredient)

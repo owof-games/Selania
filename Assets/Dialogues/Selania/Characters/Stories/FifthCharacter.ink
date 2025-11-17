@@ -66,7 +66,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
                 -> knowing_fifth_character
                 
             //Per la mentore: dono solo dopo la fine della quarta storia, per questo metto un knot come differenziatore.
-            + {knowing_fifth_character.seven && findedGifts != () && fourthChar_storyStatus == story_storyEnded} [Ti vorrei donare questa cosa.]
+            + {knowing_fifth_character.seven && backpack_findedGifts != () && fourthChar_storyStatus == story_storyEnded} [Ti vorrei donare questa cosa.]
                     -> second_story_gift
         
             //Dono fatto ma non ho avviato la main story
@@ -680,10 +680,10 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
 === fifth_story_gift ===
 ~ temp charNameFive = translator(fifthChar_ActualName)
 Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
-        + {findedGifts != ()} [Scelgo il dono.]
+        + {backpack_findedGifts != ()} [Scelgo il dono.]
             ~ gift_currentReceiver += Mentor
-            -> inventory_management -> ink_outcome 
-        + {findedGifts == ()} Il tuo inventario è vuoto.
+            -> backpack_management -> ink_outcome 
+        + {backpack_findedGifts == ()} Il tuo inventario è vuoto.
             ->main
         
     

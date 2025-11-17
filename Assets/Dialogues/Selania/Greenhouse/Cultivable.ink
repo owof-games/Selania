@@ -695,7 +695,7 @@
             Si uniscono in una festa, un sabba, rendendo il mondo intero il loro palcoscenico.
             Ridendo feroci di chi l3 teme.
             
-                ~ findedGifts += CantoDelleCompagne
+                ~ backpack_findedGifts += CantoDelleCompagne
                 ~ move_entity(RedBee, Greenhouse)
                 -> ending_cultivation
         
@@ -1222,7 +1222,7 @@
     {~ Hai raccolto|Hai ricevuto in dono|Tra le dita ti ritrovi|Nello zaino ora hai|Eccoti in dono|Eccoti} {ingredientTranslator(greenhouse_chosenCultivable)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
     
-    ~ findedGifts += greenhouse_chosenCultivable
+    ~ backpack_findedGifts += greenhouse_chosenCultivable
     ~ greenhouse_cultivableGrowing = 0
     ~ greenhouse_chosenCultivable = ()
     

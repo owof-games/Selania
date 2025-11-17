@@ -38,7 +38,7 @@
                 
     
             //Se non ho ancora fatto e ho parlato abbastanza con lui
-            + {fourthChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && findedGifts != ()} [Ti vorrei donare questa cosa.]
+            + {fourthChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && backpack_findedGifts != ()} [Ti vorrei donare questa cosa.]
                     -> fourth_story_gift
         
             //Dono fatto ma non ho avviato la main story
@@ -454,10 +454,10 @@
 === fourth_story_gift ===
 ~ temp charNameThree = translator(fourthChar_ActualName)
 Stai per donare qualcosa a {charNameThree}.
-        + {findedGifts != ()} [Scelgo il dono.]
+        + {backpack_findedGifts != ()} [Scelgo il dono.]
             ~ gift_currentReceiver += FourthCharacter
-            -> inventory_management -> ink_outcome 
-        + {findedGifts == ()} Il tuo inventario è vuoto.
+            -> backpack_management -> ink_outcome 
+        + {backpack_findedGifts == ()} Il tuo inventario è vuoto.
             ->main
         
     

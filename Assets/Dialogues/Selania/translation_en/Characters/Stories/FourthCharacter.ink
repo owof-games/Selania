@@ -29,10 +29,10 @@
 
 
 === aiuto_storia_quattro ===
-    + {findedGifts != ()} Scelgo il dono.
-    -> inventory_management -> capitolo_uno
+    + {backpack_findedGifts != ()} Scelgo il dono.
+    -> backpack_management -> capitolo_uno
     + ->
-    {findedGifts == (): Scelgo il dono. ->main}
+    {backpack_findedGifts == (): Scelgo il dono. ->main}
     
     
     

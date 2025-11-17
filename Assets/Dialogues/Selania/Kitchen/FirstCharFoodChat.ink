@@ -360,7 +360,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
             //La chiusura è comune, sempre per ridurre il rischio di errori
             = fourth_ingredient_dispatcher
                 {
-                    - findedGifts == (): Il tuo inventario è vuoto, e quindi non puoi aggiungere un ingrediente extra.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    - backpack_findedGifts == (): Il tuo inventario è vuoto, e quindi non puoi aggiungere un ingrediente extra.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                         -> at_table_with_first_char
                         
                     - else:

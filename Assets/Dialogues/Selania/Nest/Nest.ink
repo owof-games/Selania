@@ -22,14 +22,14 @@
 
 
 === nest_object
-{debug_nest: passo per emotional_inventory_management.}
+{debug_nest: passo per emotional_backpack_management.}
     + {are_two_entities_together(ELManagement, PG)}[ELManagement]
-    -> emotional_inventory_management
+    -> emotional_backpack_management
 
 
 
 
-=== emotional_inventory_management
+=== emotional_backpack_management
 //Ogni volta che scopriamo una nuova parola, possiamo ignorarla, aggiungerla all'inventario, sostituire una parola dell'inventario con questa
 //Qui è dove aggiungiamo, togliamo, limitiamo l'uso delle parole emozionali. Avremo:
     Cosa desidera fare {player_name}?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -38,7 +38,7 @@
     //Se ho almeno una parola
     + {nest_ownedEmotionalWords != ()} [Cosa ho nell'inventario?]
             Hai con te {generic_list_with_commas(nest_ownedEmotionalWords, -> emotional_words_translator)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-            -> emotional_inventory_management
+            -> emotional_backpack_management
 
     //Se ho appena scoperto una nuova parola e voglio aggiungerla:
     + {nest_newlyDiscoveredEmotionalWord != ()} [Aggiungo {nest_newlyDiscoveredEmotionalWord} all'inventario.]
@@ -55,11 +55,11 @@
                     ~ nest_takenEmotionalWords ++
                 {debug_nest: aumento il valore di nest_takenEmotionalWords che ora è {nest_takenEmotionalWords}.}
                 
-                -> emotional_inventory_management
+                -> emotional_backpack_management
             
             - else:
                 Hai raggiunto il massimo delle parole disponibili in questa partita, devi prima rimuovere un'altra parola.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                -> emotional_inventory_management
+                -> emotional_backpack_management
         }
     
 
@@ -70,10 +70,10 @@
         + + [Sì, ignoriamola.]
                 ~ nest_newlyDiscoveredEmotionalWord = ()
             {debug_nest: svuoto il valore di nest_discoveredEmotionalWords che ora è {nest_discoveredEmotionalWords}.} 
-                -> emotional_inventory_management
+                -> emotional_backpack_management
             
         + + [Ci ho ripensato.]
-            -> emotional_inventory_management
+            -> emotional_backpack_management
    
    
     //Se voglio rimuovere una parola dall'inventario (opzione sempre disponibile)
@@ -114,4 +114,4 @@
     
     -
 
--> emotional_inventory_management
+-> emotional_backpack_management

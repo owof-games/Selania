@@ -23,7 +23,7 @@
 <- move_between_rooms(my_location)
 
 //Inventario
-<- inventory_contents
+<- backpack_contents
 
 //Personagge
 <- first_character

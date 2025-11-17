@@ -62,7 +62,7 @@
                 -> knowing_fifth_character
                 
             //Per la mentore: dono solo dopo la fine della quarta storia, per questo metto un knot come differenziatore.
-            + {knowing_fifth_character.seven && findedGifts != () && fourthStory == Ended} [Ti vorrei donare questa cosa.]
+            + {knowing_fifth_character.seven && backpack_findedGifts != () && fourthStory == Ended} [Ti vorrei donare questa cosa.]
                     -> second_story_gift
         
             //Dono fatto ma non ho avviato la main story
@@ -630,10 +630,10 @@
 === fifth_story_gift ===
 ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
 Placeholder
-        + {findedGifts != ()} [Placeholder]
+        + {backpack_findedGifts != ()} [Placeholder]
             ~ gift_currentReceiver += Mentor
-            -> inventory_management -> ink_outcome 
-        + {findedGifts == ()} Placeholder
+            -> backpack_management -> ink_outcome 
+        + {backpack_findedGifts == ()} Placeholder
             ->main
         
     

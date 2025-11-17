@@ -2,12 +2,12 @@
 
 VAR gift_currentReceiver = ()
 
-=== inventory_contents ===
+=== backpack_contents ===
 + [Inventory]
-    {findedGifts != (): -> inventory|-> empty}
+    {backpack_findedGifts != (): -> inventory|-> empty}
 
     = inventory
-    <i>Hai con te {list_with_commas(findedGifts)}.</i>
+    <i>Hai con te {list_with_commas(backpack_findedGifts)}.</i>
     -> main
 
     = empty
@@ -15,9 +15,9 @@ VAR gift_currentReceiver = ()
     -> main
 
 
-=== inventory_management ===
+=== backpack_management ===
 ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
-{debug: I doni trovati sono {findedGifts}.}
+{debug: I doni trovati sono {backpack_findedGifts}.}
 Dono...
 /* ---------------------------------
 
@@ -26,8 +26,8 @@ Dono...
  ----------------------------------*/
 
 
-+ {findedGifts has MuschioDelleAmanti} [Del muschio delle amanti.]
-    ~ findedGifts -= MuschioDelleAmanti
++ {backpack_findedGifts has MuschioDelleAmanti} [Del muschio delle amanti.]
+    ~ backpack_findedGifts -= MuschioDelleAmanti
     {
         - gift_currentReceiver has FirstCharacter:
         <i>{uppercaseTranslator(firstCharacterState)} è confusa dal dono.</i>
@@ -45,8 +45,8 @@ Dono...
 
 
 
-+ {findedGifts has BaccaDellaAddolorata} [Una bacca della Addolorata.]
-    ~ findedGifts -= BaccaDellaAddolorata
++ {backpack_findedGifts has BaccaDellaAddolorata} [Una bacca della Addolorata.]
+    ~ backpack_findedGifts -= BaccaDellaAddolorata
 
     {
     - gift_currentReceiver has FirstCharacter:
@@ -68,8 +68,8 @@ Dono...
 
 
 
-+ {findedGifts has LaSpazzata} [Un frammento della Spezzata.]
-    ~ findedGifts -= LaSpazzata
++ {backpack_findedGifts has LaSpazzata} [Un frammento della Spezzata.]
+    ~ backpack_findedGifts -= LaSpazzata
     
     {
     - gift_currentReceiver has FirstCharacter:
@@ -87,8 +87,8 @@ Dono...
 
 
 
-+ {findedGifts has BrinaDellImpossibile} [Un frammento di Brina dell'Impossibile.]
-    ~ findedGifts -= BrinaDellImpossibile
++ {backpack_findedGifts has BrinaDellImpossibile} [Un frammento di Brina dell'Impossibile.]
+    ~ backpack_findedGifts -= BrinaDellImpossibile
 
     {
     - gift_currentReceiver has FirstCharacter:
@@ -111,8 +111,8 @@ Dono...
     -> main
     
     
-+ {findedGifts has CantoDelleCompagne} [Una goccia di Canto delle Compagne.]
-    ~ findedGifts -= CantoDelleCompagne
++ {backpack_findedGifts has CantoDelleCompagne} [Una goccia di Canto delle Compagne.]
+    ~ backpack_findedGifts -= CantoDelleCompagne
 
     {
     - gift_currentReceiver has FirstCharacter:
@@ -133,8 +133,8 @@ Dono...
     }
     -> main
 
-+ {findedGifts has LicheneDegliAbissi} [Una traccia dell'odore del Lichene degli Abissi.]
-    ~ findedGifts -= LicheneDegliAbissi
++ {backpack_findedGifts has LicheneDegliAbissi} [Una traccia dell'odore del Lichene degli Abissi.]
+    ~ backpack_findedGifts -= LicheneDegliAbissi
 
     {
     - gift_currentReceiver has FirstCharacter:
@@ -153,8 +153,8 @@ Dono...
     }
     -> main
 
-+ {findedGifts has NonTiScordarDiTe} [L'impronta del Non Ti Scordar di Te.]
-    ~ findedGifts -= NonTiScordarDiTe
++ {backpack_findedGifts has NonTiScordarDiTe} [L'impronta del Non Ti Scordar di Te.]
+    ~ backpack_findedGifts -= NonTiScordarDiTe
 
     {
     - gift_currentReceiver has FirstCharacter:
@@ -182,8 +182,8 @@ Dono...
             Oggetti trovabili
 
  ----------------------------------*/    
-+ {findedGifts has blanket} [Una coperta.]
-    ~ findedGifts -= blanket
++ {backpack_findedGifts has blanket} [Una coperta.]
+    ~ backpack_findedGifts -= blanket
     
     {
     - gift_currentReceiver has FirstCharacter:
@@ -204,8 +204,8 @@ Dono...
 
  
     
-+ {findedGifts has emptyvase} [Un vaso vuoto.]
-    ~ findedGifts -= emptyvase
++ {backpack_findedGifts has emptyvase} [Un vaso vuoto.]
+    ~ backpack_findedGifts -= emptyvase
     //Questo è uno dei doni preferiti della mentore, da brava giardiniera.
     
     {
@@ -231,7 +231,7 @@ Dono...
     
 
     //Se la lista è vuota
-    + {findedGifts == ()} [Non ho nulla da donare.]
+    + {backpack_findedGifts == ()} [Non ho nulla da donare.]
         -> main
     + [Ho bisogno di ragionarci ancora un poco.]
         ~ gift_currentReceiver = ()

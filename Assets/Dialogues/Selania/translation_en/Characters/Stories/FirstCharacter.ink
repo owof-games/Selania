@@ -38,13 +38,13 @@
                 
                 
             //Se non ho ancora fatto il dono e NON ho parlato col mentore e ho parlato abbastanza con lei
-            + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && not gifts_and_ink && findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
+            + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && not gifts_and_ink && backpack_findedGifts != ()} [Ho trovato questa cosa e vorrei donartela.]
                     {charNameOne}: Non voglio snitchare, ma non hai ancora chiesto alla mentore a cosa servono.
                     {charNameOne}: Se non parli con lei prima poi minimo ci rimane male.
                         -> main
             
             //Se non ho ancora fatto il dono e ho parlato con il mentore e ho parlato abbastanza con lei
-            + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && gifts_and_ink && findedGifts != ()} [Ti vorrei donare questa cosa.]
+            + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not first_story_gift.ink_outcome && gifts_and_ink && backpack_findedGifts != ()} [Ti vorrei donare questa cosa.]
                     -> first_story_gift
         
             //QUESTA OPZIONE C'è SOLO DOPO CHE HO FATTO IL DONO E NON HO ANCORA AVVIATO LA MAIN STORY
@@ -919,10 +919,10 @@
  === first_story_gift ===
 ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
 <i> Stai per donare qualcosa a {charNameOne}.</i>
-        + {findedGifts != ()} [Scelgo il dono.]
+        + {backpack_findedGifts != ()} [Scelgo il dono.]
             ~ gift_currentReceiver += FirstCharacter
-            -> inventory_management
-        + {findedGifts == ()} <i> Il tuo inventario è vuoto.</i>
+            -> backpack_management
+        + {backpack_findedGifts == ()} <i> Il tuo inventario è vuoto.</i>
             ->main
         
     

@@ -41,7 +41,7 @@
         - firstChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && rewriting_proposal_first_character:
                 -> ask
         //Vogliamo offrire un dono            
-        - not first_story_gift.ink_outcome && findedGifts != ():
+        - not first_story_gift.ink_outcome && backpack_findedGifts != ():
                 -> ask
         //Vogliamo cucinare assieme          
         - open_the_kitchen && not cooking_with_first_char && kitchen_firstCharIsCooking==false:
@@ -97,7 +97,7 @@
     //Azioni legate alla costruzione della relazione
     
         //Offrire un dono
-            + {not first_story_gift.ink_outcome && findedGifts != ()} [Ti vorrei donare questa cosa.]
+            + {not first_story_gift.ink_outcome && backpack_findedGifts != ()} [Ti vorrei donare questa cosa.]
                         -> first_story_gift
             
         
@@ -1204,11 +1204,11 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     <i>Stai per donare qualcosa a {charNameOne}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             
-            + {findedGifts != ()} [Scelgo il dono.]
+            + {backpack_findedGifts != ()} [Scelgo il dono.]
                 ~ gift_currentReceiver += FirstCharacter
-                    -> inventory_management
+                    -> backpack_management
             
-            + {findedGifts == ()} Il tuo inventario è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            + {backpack_findedGifts == ()} Il tuo inventario è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                     ->main
             
         

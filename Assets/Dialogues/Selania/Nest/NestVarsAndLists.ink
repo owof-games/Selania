@@ -87,7 +87,7 @@
 //Una lista degli usi possibili di emotional_words_management
     LIST nest_emotionalWordsManagementPossibleStatus = Activate, Delete
 
-//Una lista delle parole trovate. Se una parola è qui dentro, una volta "suonata" non passerò da emotional_inventory_management
+//Una lista delle parole trovate. Se una parola è qui dentro, una volta "suonata" non passerò da emotional_backpack_management
     VAR nest_discoveredEmotionalWords = ()
 
 //Il tracciamento della parola appena scoperta
