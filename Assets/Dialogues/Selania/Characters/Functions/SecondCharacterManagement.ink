@@ -24,7 +24,6 @@
     VAR secondChar_favouritesGifts = (BrinaDellImpossibile, BastoneDellOzioso, LicheneDegliAbissi)
     VAR secondChar_goodGifts = (CantoDelleCompagne, LanaNotturna, LaSpazzata, NonTiScordarDiTe)
        
-
 //Tracciamento del dono
     VAR secondChar_giftedObject = ()
     
@@ -184,51 +183,6 @@
 
 ->->        
         
-  
-        
-//Funzione per la gestione della riscrittura
-//=== secondColourCheck
-//{debugChangeName: Passo per secondColourCheck.}
-
-//VAR secondRedMax = false
-//VAR secondBlueMax = false
-//VAR secondYellowMax = false
-//VAR secondGreenMax = false
-//VAR secondPurpleMax = false
-
-//Resettiamo, così che per ogni scelta sia tutto su falso per sicurezza.
-//~  secondYellowMax = false
-//~  secondGreenMax = false
-//~  secondBlueMax = false
-//~  secondPurpleMax = false
-// ~  secondRedMax = false
-
-
-//    {
-    //Potrebbe capitare un pareggio, e va bene così, così non è punitivo per la giocatrice.
-//        - secondChar_Red >= secondChar_Blue && secondChar_Red >= secondChar_Yellow && secondChar_Red >= secondChar_Green && secondChar_Red >= //secondChar_purple && secondChar_Red >= secondChar_Green:
-                   // ~  secondRedMax = true
-//        {debugChangeName: Il valore di secondRedMax è {secondRedMax}.}
-        
- //       - secondChar_Blue >= secondChar_Red && secondChar_Blue >= secondChar_Yellow && secondChar_Blue >= secondChar_Green && secondChar_Blue >= //secondChar_purple && secondChar_Blue >= secondChar_Green:
-   //                 ~  secondBlueMax = true
-   //      {debugChangeName: Il valore di secondBlueMax è {secondBlueMax}.}
- //        
-  //      - secondChar_Green >= secondChar_Blue && secondChar_Green >= secondChar_Yellow && secondChar_Green >= secondChar_Green && secondChar_Green //>= secondChar_purple && secondChar_Green >= secondChar_Red:
-  //                  ~  secondGreenMax = true
-  //          {debugChangeName: Il valore di secondGreenMax è {secondGreenMax}.}  
-   //         
-  //      - secondChar_purple >= secondChar_Blue && secondChar_purple >= secondChar_Yellow && secondChar_purple >= secondChar_Green && //secondChar_purple >= secondChar_Red && secondChar_purple >= secondChar_Green:
- //                   ~  secondPurpleMax = true
-    //        {debugChangeName: Il valore di secondPurpleMax è {secondPurpleMax}.}  
-    //        
-//        - secondChar_Yellow >= secondChar_Blue && secondChar_Yellow >= secondChar_Red && secondChar_Yellow >= secondChar_Green && //secondChar_Yellow >= secondChar_purple && secondChar_Yellow >= secondChar_Green:
-             //       ~  secondYellowMax = true 
-    //    {debugChangeName: Il valore di secondGreenMax è {secondGreenMax}.}                  
-  //  }
-//        ->->
-    
-
 
 === secondNaming ==
 //Selezione nome prima della riscrittura
@@ -267,45 +221,3 @@
     }
     
         ->-> 
- 
-     
-//=== function secondStatementVariation(color)
-////Variazione nome durante la riscrittura   
-//~ temp secondCheckColor = false
-//{debugChangeName: Passo per function secondStatementVariation.}
-//
-//    {
-//        - color == red:
-//           ~ secondCheckColor = secondRedMax
-//        - color == blue:
-//            ~ secondCheckColor = secondBlueMax
-//        - color == yellow:
-//            ~ secondCheckColor = secondYellowMax
-//        - color == green:
-//            ~ secondCheckColor = secondGreenMax
-//        - color == purple:
-//            ~ secondCheckColor = secondPurpleMax
-//            
-//    }
-//
-//    {debugChangeName: Il valore di secondCheckColor è {secondCheckColor}.}
-//    
-//    //Questi sono check di sicurezza per evitare che vengano prodotti valori fuori dalla lista (non dovrebbe //accadere ma non si sa mai)
-//    {
-//        - secondCheckColor:
-//            {
-//             - secondChar_possibleStates hasnt Corvo:
-//                ~ secondChar_possibleStates ++
-//                {debugChangeName: Aumento lo stato del secondo personaggio, che ora è {secondChar_possibleStates }}
-//            }
-//        
-//        - else:
-//            {
-//             - secondChar_possibleStates hasnt Grizzly:
-//                ~ secondChar_possibleStates --
-//            {debugChangeName: Diminuisco lo stato del secondo personaggio, che ora è //{secondChar_possibleStates }}
-//            }
-//    	            
-//    }        
-    
-
