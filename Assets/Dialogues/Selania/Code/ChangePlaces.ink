@@ -113,7 +113,7 @@
 
     + {are_two_entities_together(PG, FromForestToLibraryBlocked)} [FromForestToLibraryBlocked]
     {
-        - debug_testlibrary:
+        - debug_testLibrary:
             ~ move_entity(PG, Library)
             -> on_movement_events ->
                 -> library
@@ -145,7 +145,7 @@
     + {are_two_entities_together(PG, FromPondToKitchenBlocked)} [FromPondToKitchenBlocked]
     
     {
-        - debug_testkitchen:
+        - debug_testKitchen:
             ~ move_entity(PG, Kitchen)
                 -> on_movement_events ->
                 -> empty_tempTW ->  
@@ -164,7 +164,7 @@
 
     + {are_two_entities_together(PG, FromLibraryToNestBlocked)} [FromLibraryToNestBlocked]
         {
-            - debug_testnest:
+            - debug_testNest:
                 ~ move_entity(PG, Nest)
                     -> on_movement_events ->
                     -> empty_tempTW ->  
