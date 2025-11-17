@@ -9,7 +9,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
 - (top)
     
     + {firstChar_storyStatus == story_storyStarted} [Ho bisogno di una mano con {charNameOne}.]
-        ~  currentMissionAboutChar = missionCharOne
+        ~  frog_aboutGiftRequest = missionCharOne
   
         {
             - LIST_COUNT(charOneGifts) == 4:
@@ -32,7 +32,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
         
     
     + {secondChar_storyStatus == story_storyStarted} [Ho bisogno di una mano con {charNameTwo}.]
-        ~  currentMissionAboutChar = missionCharTwo
+        ~  frog_aboutGiftRequest = missionCharTwo
         {
             - LIST_COUNT(charTwoGifts) == 4:
                 Temo tu sappia già tutto su di lui, perché non proviamo qualcos'altro?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -53,15 +53,15 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
         
     
     + {thirdChar_storyStatus == story_storyStarted} [PNG 3]
-        ~  currentMissionAboutChar = missionCharThree
+        ~  frog_aboutGiftRequest = missionCharThree
             -> frog_gift_dispatcher
         
     + {fourthChar_storyStatus == story_storyStarted} [PNG 4]
-        ~  currentMissionAboutChar = missionCharFour
+        ~  frog_aboutGiftRequest = missionCharFour
             -> frog_gift_dispatcher
         
     + {fifthChar_storyStatus == story_storyStarted} [PNG 5 (non come mentore)]
-        ~  currentMissionAboutChar = missionCharFive
+        ~  frog_aboutGiftRequest = missionCharFive
             -> frog_gift_dispatcher
         
     
@@ -85,7 +85,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
 //Qui è dove distribuiamo i doni a seconda della situazione
-    {currentMissionAboutChar:
+    {frog_aboutGiftRequest:
         - missionCharOne:
             -> char_one_gifts
         - missionCharTwo:
@@ -96,7 +96,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
         - missionObjects:
             -> mission_objects
         - else:
-            ERROR: il valore di currentMissionAboutChar è {currentMissionAboutChar} e non so a quale parte di dono passare.
+            ERROR: il valore di frog_aboutGiftRequest è {frog_aboutGiftRequest} e non so a quale parte di dono passare.
     }
 
 //Doni generici
@@ -218,7 +218,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
                                 - a_story_of_transformation:
                                     E che ne avete già parlato.
                                     Perché non scegli un altro    dono?
-                                    ~  currentMissionAboutChar = ()
+                                    ~  frog_aboutGiftRequest = ()
                                     -> frog_about_who_questions
                                 
                                 
@@ -235,14 +235,14 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
 
                 }
         + [No, preferisco qualcosa di diverso.]
-            ~  currentMissionAboutChar = ()
+            ~  frog_aboutGiftRequest = ()
             -> frog_about_who_questions
         + [Mi prendo del tempo e torno poi.]
-            ~  currentMissionAboutChar = ()
+            ~  frog_aboutGiftRequest = ()
             -> main
         + -> 
         Ad ora non ho doni utili per {charNameOne}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            ~  currentMissionAboutChar = ()
+            ~  frog_aboutGiftRequest = ()
             -> frog_about_who_questions
     
     
@@ -360,7 +360,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
                                 - a_story_of_transformation:
                                     E che ne avete già parlato.
                                     Perché non scegli un altro dono?
-                                    ~  currentMissionAboutChar = ()
+                                    ~  frog_aboutGiftRequest = ()
                                     -> frog_about_who_questions
                                 
                                 
@@ -376,14 +376,14 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
                 }
             
         + [No, preferisco qualcosa di diverso.]
-            ~  currentMissionAboutChar = ()
+            ~  frog_aboutGiftRequest = ()
             -> frog_about_who_questions
         + [Mi prendo del tempo e torno poi.]
-            ~  currentMissionAboutChar = ()
+            ~  frog_aboutGiftRequest = ()
             -> main
         + -> 
         Ad ora non ho doni utili per {charNameTwo}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-            ~  currentMissionAboutChar = ()
+            ~  frog_aboutGiftRequest = ()
             -> frog_about_who_questions
             
     = mission_objects
@@ -408,8 +408,8 @@ E con questo è tutto! #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC
 A dopo {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     -> special_mission_pause_check ->
     //Svuoto il destinatario della missione attuale per sicurezza
-    ~ currentMissionAboutChar = ()
-    ~ activeMissions = ()
+    ~ frog_aboutGiftRequest = ()
+    ~ frog_currentMission = ()
     ~ witchNotification = false
  
      @animation:RewriterBook

@@ -9,7 +9,7 @@
                     -> about_violence_and_peace
         
         //Discorso sbloccato da rana            
-            - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && activeMissions has specialMissionOne && not special_mission_one_dialogue:
+            - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && frog_currentMission has specialMissionOne && not special_mission_one_dialogue:
                     -> special_mission_one_dialogue
         
         //Riccio ha cucinato, e vediamo la scena del dono

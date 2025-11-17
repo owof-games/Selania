@@ -138,7 +138,7 @@
 
 === missions_dispatcher ===
 {debug_frog: passo da missions_dispatcher.}
-{debug_frog: currentMissionAboutChar == {currentMissionAboutChar}.}
+{debug_frog: frog_aboutGiftRequest == {frog_aboutGiftRequest}.}
 //Alla fine le missioni sono scollegate dai doni, e sono letteralmente scritte secondo bisogno.
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -183,21 +183,21 @@
 
 
 === closed_mission_verify
-{debug_frog: passo da closed_mission_verify. Il valore di activeMissions è {activeMissions}.}
+{debug_frog: passo da closed_mission_verify. Il valore di frog_currentMission è {frog_currentMission}.}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
-    {activeMissions:
-        //Qui la logica da implementare sarà: se le condizione è stata risolta (es: nodo attraversato) allora svuoto activeMissions (~ activeMissions = ()) e tolgo la missione da frog_availableCommonMissions, e invio la giocatrice alla parte del dono, altrimenti ho un reminder che mi ricorda di fare la missione.
+    {frog_currentMission:
+        //Qui la logica da implementare sarà: se le condizione è stata risolta (es: nodo attraversato) allora svuoto frog_currentMission (~ frog_currentMission = ()) e tolgo la missione da frog_availableCommonMissions, e invio la giocatrice alla parte del dono, altrimenti ho un reminder che mi ricorda di fare la missione.
         - missionOne:
             {
                 - first_character_recap.check && second_character_recap.check && greenhouse_recap.check:
                     Hai letto le pagine del libro, grande {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ activeMissions = ()
+                        ~ frog_currentMission = ()
                         ~ frog_availableCommonMissions -= missionOne
                             -> frog_about_who_questions
                 
@@ -214,7 +214,7 @@
                     La serra sta crescendo grazie a te, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ frog_availableCommonMissions -= missionTwo
-                        ~ activeMissions = ()
+                        ~ frog_currentMission = ()
                             -> frog_about_who_questions
                 - else:
                     Ricorda {player_name}: la serra ha bisogno di te.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -229,7 +229,7 @@
                     Son sicuro che si sente più utile ora.
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ frog_availableCommonMissions -= missionThree
-                        ~ activeMissions = ()
+                        ~ frog_currentMission = ()
                             -> frog_about_who_questions
                 - else:
                     Ricorda {player_name}: Mentore vuole condividere con te i suoi consigli per farti sentire meglio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -243,7 +243,7 @@
                     Grazie per aver condiviso le cose che hai scoperto con Mentore, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ frog_availableCommonMissions -= missionFour
-                        ~ activeMissions = ()
+                        ~ frog_currentMission = ()
                             -> frog_about_who_questions
                 - else:
                     Ricorda {player_name}: Mentore ci tiene a sentire le cose che hai scoperto su questo luogo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -260,7 +260,7 @@
                     
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ frog_availableCommonMissions -= missionFive
-                        ~ activeMissions = ()
+                        ~ frog_currentMission = ()
                             -> frog_about_who_questions
                 - else:
                     Ricorda {player_name}: prova a parlare con Riccio e Chitarra quando sono assieme.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -276,7 +276,7 @@
                     
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ frog_availableCommonMissions -= missionSix
-                        ~ activeMissions = ()
+                        ~ frog_currentMission = ()
                             -> frog_about_who_questions
                 - else:
                     Ricorda {player_name}: prova a parlare con l'albero della foresta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -292,7 +292,7 @@
                     
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ frog_availableCommonMissions -= missionSeven
-                        ~ activeMissions = ()
+                        ~ frog_currentMission = ()
                             -> frog_about_who_questions
                 - else:
                     Ricorda {player_name}: leggi la lettera che hai ricevuto alla fermata del treno.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -310,7 +310,7 @@
                     
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ frog_availableCommonMissions -= missionEight
-                        ~ activeMissions = ()
+                        ~ frog_currentMission = ()
                             -> frog_about_who_questions
                 - else:
                     Ricorda {player_name}: leggi una delle storie della biblioteca.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -342,9 +342,9 @@
                 L'armonia è importante.
                 Per questo ti dono una nota, che troverai al Nido.
                     ~ move_entity(purpleShell, Nest)
-                    ~ availableSpecialMissions -= specialMissionOne
-                    ~ activeMissions = ()
-                    ~ currentMissionAboutChar = ()
+                    ~ frog_availableSpecialMissions -= specialMissionOne
+                    ~ frog_currentMission = ()
+                    ~ frog_aboutGiftRequest = ()
                     //Metto in pausa le missioni speciali
                     ~ pauseSpecialMission = pauseSpecialMissionMax
                     -> main
@@ -364,9 +364,9 @@
                     @animation:Inventory
                     
                     ~ findedGifts += universalIngredient
-                    ~ availableSpecialMissions -= specialMissionTwo
-                    ~ activeMissions = ()
-                    ~ currentMissionAboutChar = ()
+                    ~ frog_availableSpecialMissions -= specialMissionTwo
+                    ~ frog_currentMission = ()
+                    ~ frog_aboutGiftRequest = ()
                     //Metto in pausa le missioni speciali
                     ~ pauseSpecialMission = pauseSpecialMissionMax
                     -> main
@@ -421,85 +421,85 @@
 Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
 
     + {recoverableCultivables has BaccaDellaAddolorata} [{ingredientTranslator(BaccaDellaAddolorata)}]
-            ~  currentMissionAboutChar = missionObjects
+            ~  frog_aboutGiftRequest = missionObjects
             ~  searchedCultivableRecovery = BaccaDellaAddolorata
             ~  recoveredCultivables += BaccaDellaAddolorata
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has BarbaDellInciampo} [{ingredientTranslator(BarbaDellInciampo)}]
-            ~  currentMissionAboutChar = missionObjects
+            ~  frog_aboutGiftRequest = missionObjects
             ~  searchedCultivableRecovery = BarbaDellInciampo
             ~  recoveredCultivables += BarbaDellInciampo
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has BastoneDellOzioso}[{ingredientTranslator(BastoneDellOzioso)}]
-            ~  currentMissionAboutChar = missionObjects
+            ~  frog_aboutGiftRequest = missionObjects
             ~  searchedCultivableRecovery = BastoneDellOzioso
             ~  recoveredCultivables += BastoneDellOzioso
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has BrinaDellImpossibile}[{ingredientTranslator(BrinaDellImpossibile)}]
-            ~  currentMissionAboutChar = missionObjects
+            ~  frog_aboutGiftRequest = missionObjects
             ~  searchedCultivableRecovery = BrinaDellImpossibile
             ~  recoveredCultivables += BrinaDellImpossibile
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has CantoDelleCompagne} [{ingredientTranslator(CantoDelleCompagne)}]
-            ~  currentMissionAboutChar = missionObjects
+            ~  frog_aboutGiftRequest = missionObjects
             ~  searchedCultivableRecovery = CantoDelleCompagne
             ~  recoveredCultivables += CantoDelleCompagne
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has CardoAspinato} [{ingredientTranslator(CardoAspinato)}]
-            ~  currentMissionAboutChar = missionObjects
+            ~  frog_aboutGiftRequest = missionObjects
             ~  searchedCultivableRecovery = CardoAspinato
             ~  recoveredCultivables += CardoAspinato
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has EderaDelleAmanti} [{ingredientTranslator(EderaDelleAmanti)}]
-            ~  currentMissionAboutChar = missionObjects
+            ~  frog_aboutGiftRequest = missionObjects
             ~  searchedCultivableRecovery = EderaDelleAmanti
             ~  recoveredCultivables += EderaDelleAmanti
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has ErbaLiccia} [{ingredientTranslator(ErbaLiccia)}]
-            ~  currentMissionAboutChar = missionObjects
+            ~  frog_aboutGiftRequest = missionObjects
             ~  searchedCultivableRecovery = BaccaDellaAddolorata
             ~  recoveredCultivables += BaccaDellaAddolorata
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has FalsaPalude} [{ingredientTranslator(FalsaPalude)}]
-            ~  currentMissionAboutChar = missionObjects
+            ~  frog_aboutGiftRequest = missionObjects
             ~  searchedCultivableRecovery = FalsaPalude
             ~  recoveredCultivables += FalsaPalude
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has LanaNotturna} [{ingredientTranslator(LanaNotturna)}]
-            ~  currentMissionAboutChar = missionObjects
+            ~  frog_aboutGiftRequest = missionObjects
             ~  searchedCultivableRecovery = LanaNotturna
             ~  recoveredCultivables += LanaNotturna
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has LicheneDegliAbissi} [{ingredientTranslator(LicheneDegliAbissi)}]
-            ~  currentMissionAboutChar = missionObjects
+            ~  frog_aboutGiftRequest = missionObjects
             ~  searchedCultivableRecovery = LicheneDegliAbissi
             ~  recoveredCultivables += LicheneDegliAbissi
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has NonTiScordarDiTe} [{ingredientTranslator(NonTiScordarDiTe)}]
-            ~  currentMissionAboutChar = missionObjects
+            ~  frog_aboutGiftRequest = missionObjects
             ~  searchedCultivableRecovery = NonTiScordarDiTe
             ~  recoveredCultivables += NonTiScordarDiTe
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has Olobino} [{ingredientTranslator(Olobino)}]
-            ~  currentMissionAboutChar = missionObjects
+            ~  frog_aboutGiftRequest = missionObjects
             ~  searchedCultivableRecovery = Olobino
             ~  recoveredCultivables += Olobino
             -> frog_gift_dispatcher
             
     + {recoverableCultivables has LaSpazzata} [{ingredientTranslator(LaSpazzata)}]
-            ~  currentMissionAboutChar = missionObjects
+            ~  frog_aboutGiftRequest = missionObjects
             ~  searchedCultivableRecovery = LaSpazzata
             ~  recoveredCultivables += LaSpazzata
             -> frog_gift_dispatcher
@@ -524,7 +524,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
     {
         - witchNotification == false:
             {
-                - activeMissions has missionOne:
+                - frog_currentMission has missionOne:
                     {
                         - first_character_recap.check && second_character_recap.check && greenhouse_recap.check:
                             -> notification
@@ -533,7 +533,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
                             ->->
                     }
                     
-                - activeMissions has missionTwo:
+                - frog_currentMission has missionTwo:
                     {
                         - LIST_COUNT(greenhouse_backupCultivable) < 12:
                             -> notification
@@ -542,20 +542,20 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
                             ->->    
                     }
                     
-                - activeMissions has missionThree && mindfulness:
+                - frog_currentMission has missionThree && mindfulness:
                     -> notification
                        
-                - activeMissions has missionFour && little_storylets:
+                - frog_currentMission has missionFour && little_storylets:
                     -> notification       
         
-                - activeMissions has missionFive && first_second_chit_chat:
+                - frog_currentMission has missionFive && first_second_chit_chat:
                     -> notification 
                
                 
-                - activeMissions has missionSix && talking_witch.intro:
+                - frog_currentMission has missionSix && talking_witch.intro:
                     -> notification
             
-                - activeMissions has missionSeven:
+                - frog_currentMission has missionSeven:
                     {
                         - first_character_notes.check or second_character_notes.check:
                             -> notification
@@ -564,13 +564,13 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
                             ->->    
                     }
                 
-                - activeMissions has missionEight && library_readStories != ():
+                - frog_currentMission has missionEight && library_readStories != ():
                     -> notification
                     
-                - activeMissions has specialMissionOne && special_mission_one_dialogue:
+                - frog_currentMission has specialMissionOne && special_mission_one_dialogue:
                     -> notification
                     
-                - activeMissions has specialMissionTwo && cooking_alone :
+                - frog_currentMission has specialMissionTwo && cooking_alone :
                     -> notification
                     
                 - else:

@@ -84,7 +84,7 @@
     {
                     
         //Discussione Mentore e Riccio legata a Rana
-        - are_two_entities_together(Mentor, PG) && activeMissions has specialMissionOne && not special_mission_one_dialogue:
+        - are_two_entities_together(Mentor, PG) && frog_currentMission has specialMissionOne && not special_mission_one_dialogue:
                         -> special_mission_one_dialogue
             
         //Dopo le presentazioni con due, scena in cui hanno litigato:
