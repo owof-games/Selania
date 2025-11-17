@@ -60,11 +60,11 @@
     
 //UP: ???
 //DOWN: ???
-    VAR thirdChar_purple = 0
-    VAR thirdChar_yellow = 0
-    VAR thirdChar_blue = 0
-    VAR thirdChar_green = 0
-    VAR thirdChar_red = 0                       
+    VAR thirdChar_purple = 0.00
+    VAR thirdChar_yellow = 0.00
+    VAR thirdChar_blue = 0.00
+    VAR thirdChar_green = 0.00
+    VAR thirdChar_red = 0.00                   
                      
                     /* ---------------------------------
                     

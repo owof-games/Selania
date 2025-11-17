@@ -53,11 +53,11 @@
     
 //STATI UP: ???
 //STATI DOWN: ???
-    VAR fifthChar_purple = 0
-    VAR fifthChar_yellow = 0
-    VAR fifthChar_blue = 0
-    VAR fifthChar_green = 0
-    VAR fifthChar_red = 0                    
+    VAR fifthChar_purple = 0.00
+    VAR fifthChar_yellow = 0.00
+    VAR fifthChar_blue = 0.00
+    VAR fifthChar_green = 0.00
+    VAR fifthChar_red = 0.00                    
                      
                      
 //VARIABILI NARRATIVI

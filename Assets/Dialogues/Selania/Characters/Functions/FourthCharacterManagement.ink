@@ -63,11 +63,11 @@
     
 //UP: ???
 //DOWN: ???
-    VAR fourthChar_purple = 0
-    VAR fourthChar_yellow = 0
-    VAR fourthChar_blue = 0
-    VAR fourthChar_green = 0
-    VAR fourthChar_red = 0  
+    VAR fourthChar_purple = 0.00
+    VAR fourthChar_yellow = 0.00
+    VAR fourthChar_blue = 0.00
+    VAR fourthChar_green = 0.00
+    VAR fourthChar_red = 0.00
                     /* ---------------------------------
                     
                        Gestione relazione e nomi

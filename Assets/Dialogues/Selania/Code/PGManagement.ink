@@ -10,11 +10,11 @@
     VAR player_accessiblePlaces = (Bedroom, TrainStop, Forest, Pond)
 
 //Tracciamento colori giocatrice
-    VAR player_purple = 0
-    VAR player_yellow = 0
-    VAR player_blue = 0
-    VAR player_green = 0
-    VAR player_red = 0
+    VAR player_purple = 0.00
+    VAR player_yellow = 0.00
+    VAR player_blue = 0.00
+    VAR player_green = 0.00
+    VAR player_red = 0.00
 
 //Per funzione aggiornamento colore: tengono conto del valore di quel colore dellx PNG la cui storia è stata appena conclusa
     VAR temp_endedPNGRed = ()

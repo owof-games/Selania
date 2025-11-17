@@ -66,11 +66,11 @@
     
 //STATI UP: Viola e Giallo.
 //STATI DOWN: Blu.
-    VAR firstChar_purple = 0
-    VAR firstChar_yellow = 0
-    VAR firstChar_blue = 0
-    VAR firstChar_green = 0
-    VAR firstChar_red = 0
+    VAR firstChar_purple = 0.00
+    VAR firstChar_yellow = 0.00
+    VAR firstChar_blue = 0.00
+    VAR firstChar_green = 0.00
+    VAR firstChar_red = 0.00
 
 
 
