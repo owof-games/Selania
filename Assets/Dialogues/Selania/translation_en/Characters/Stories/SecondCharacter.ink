@@ -45,7 +45,7 @@
                 
     
             //Se non ho ancora fatto e ho parlato abbastanza con lui
-            + {secondStoryQuestCount > secondChar_storyletsForRewritingCount && not second_story_gift.ink_outcome} [Voglio regalarti una cosa.]
+            + {secondChar_storyletsForRewritingCount > secondChar_storyletsForRewritingCount && not second_story_gift.ink_outcome} [Voglio regalarti una cosa.]
                     -> second_story_gift
         
             //Dono fatto ma non ho avviato la main story
@@ -125,7 +125,7 @@
         ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
         ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
-        ~ secondStoryQuestCount ++
+        ~ secondChar_storyletsForRewritingCount ++
         
         ???: Perché sei qui?
             
@@ -232,7 +232,7 @@
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ change_entity_place(Mentor)
-    ~ secondStoryQuestCount ++
+    ~ secondChar_storyletsForRewritingCount ++
       
         
         {charNameTwo}: Questo posto è PIENO di animali!
@@ -337,7 +337,7 @@
     ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ change_entity_place(Mentor)
-    ~ secondStoryQuestCount ++
+    ~ secondChar_storyletsForRewritingCount ++
 
         
         {charNameTwo}: Mica mi hai detto come ti chiami.
@@ -502,7 +502,7 @@
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ change_entity_place(Mentor)
     
-    ~ secondStoryQuestCount ++
+    ~ secondChar_storyletsForRewritingCount ++
         -> secondAffinityCheckCalc ->
         
         {charNameTwo}: Nonna non mi tratta mai come un bambino.
@@ -593,7 +593,7 @@
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ change_entity_place(Mentor)
     
-    ~ secondStoryQuestCount ++
+    ~ secondChar_storyletsForRewritingCount ++
         
         {name}: Dalla serra è scomparso l'innaffiatoio.
             + [Secondo {charNameFive} sei stato tu a prenderlo.]
@@ -677,7 +677,7 @@
             -
             //Se fiducia bassa.
             {
-                - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
+                - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1):
                     {charNameTwo}: Comunque l'innaffiatoio non l'ho mica visto.
                     {charNameTwo}: Ma.
                     {charNameTwo}: Sono sicuro che se cerchi bene lo trovi dove l'avete lasciato.
@@ -704,7 +704,7 @@
         ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         ~ change_entity_place(Mentor)
         
-        ~ secondStoryQuestCount ++
+        ~ secondChar_storyletsForRewritingCount ++
         
         {charNameTwo}: Prima ho visto una rana allo stagno.
         {charNameTwo}: E so tutto sulle rane.
@@ -776,7 +776,7 @@
         ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         ~ change_entity_place(Mentor)
         
-        ~ secondStoryQuestCount ++
+        ~ secondChar_storyletsForRewritingCount ++
         
         {charNameTwo}: La rana prima mi ha detto che tu scrivi storie.
         {charNameTwo}: A me mi piacciono le storie.
@@ -855,7 +855,7 @@
     ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
     ~ change_entity_place(Mentor)
     
-    ~ secondStoryQuestCount ++
+    ~ secondChar_storyletsForRewritingCount ++
         
         {charNameTwo}: Sai che mio fratello è campione di Karate?
         {charNameTwo}: E ha una macchina enorme gialla che fa arrabbiare papà.
@@ -939,7 +939,7 @@
         ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
         ~ change_entity_place(Mentor)
         
-        ~ secondStoryQuestCount ++
+        ~ secondChar_storyletsForRewritingCount ++
         
         {charNameTwo}: Tu hai sempre voluto fare {pronouns has him: il riscrittore|{pronouns has her: la riscrittora|lə riscrittorə}} come lavoro?
         
@@ -1074,7 +1074,7 @@
         ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         ~ change_entity_place(Mentor)
         
-        ~ secondStoryQuestCount ++
+        ~ secondChar_storyletsForRewritingCount ++
         
         {charNameTwo}: Stavo ripensando a un bambino.
         {charNameTwo}: Uno di seconda.
@@ -1152,7 +1152,7 @@
         ~ temp charNameFive = uppercaseTranslator(fifthCharacterState)
         ~ change_entity_place(Mentor)
         
-        ~ secondStoryQuestCount ++
+        ~ secondChar_storyletsForRewritingCount ++
         
         {charNameTwo}: Quando vado da mio fratello e non c'è il suo amico, mi lascia sperimentare con le sue cose.
         {charNameTwo}: Il suo amico fa il pasticciere.
@@ -1232,7 +1232,7 @@
         ~ temp charNameOne = uppercaseTranslator(firstCharacterState)
         ~ change_entity_place(Mentor)
         
-        ~ secondStoryQuestCount ++
+        ~ secondChar_storyletsForRewritingCount ++
         
         {charNameTwo}: Mi piace la biblioteca.
         {charNameTwo}: Mi ricorda la casa della nonna.
@@ -1393,7 +1393,7 @@
         {
         
         //Migliore outcome
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): {charNameTwo}: Non sei male, per essere grande.
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1): {charNameTwo}: Non sei male, per essere grande.
             {charNameTwo}: Dici sempre le cose allo stesso modo.
             {charNameTwo}: Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
             {charNameTwo}: E questo mi fa stare al sicuro.
@@ -1401,7 +1401,7 @@
         <i>{charNameTwo} vede {name} come una persona amica e fidata.</i>
         
         //Secondo migliore outcome
-        -secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): {charNameTwo}: Un po' mi fido.
+        -secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 2): {charNameTwo}: Un po' mi fido.
             {charNameTwo}: Secondo me non dici <i>sempre</i> le cose in modo preciso.
             {charNameTwo}: Sembri un po' un gatto.
             {charNameTwo}: Ma mi fido.
@@ -1409,7 +1409,7 @@
         <i>{charNameTwo} si trova bene con {name}.</i>
         
         //Outcome peggiore
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow < (secondStoryQuestCount/2):  {charNameTwo}: Secondo me mi tratti come un bambino.
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow < (secondChar_storyletsForRewritingCount/2):  {charNameTwo}: Secondo me mi tratti come un bambino.
             {charNameTwo}: Tutte le cose che dici cambiano, sono disordinate.
             {charNameTwo}: Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
             {charNameTwo}: Non mi piace mica come cosa.
@@ -1456,7 +1456,7 @@
 
     = statement
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1): l'inchiostro è aumentato di due unità|{secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
+        <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1): l'inchiostro è aumentato di due unità|{secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(secondCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]

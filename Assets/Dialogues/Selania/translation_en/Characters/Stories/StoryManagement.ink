@@ -55,7 +55,7 @@
     
     VAR secondChar_storyStatus = NotStarted
     //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
-    VAR secondStoryQuestCount = 0
+    VAR secondChar_storyletsForRewritingCount = 0
     VAR secondCharacterSpecialEvent = false
 
     //Variabili per mettere in pausa la conversazione

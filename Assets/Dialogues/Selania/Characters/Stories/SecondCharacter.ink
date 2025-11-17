@@ -32,15 +32,15 @@
 ~ temp charNameFive = translator(fifthCharacterState)
 {  
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-        - secondStoryQuestCount > secondChar_storyletsForRewritingCount && not rewriting_proposal_second_character && not questions:
+        - secondChar_storyletsForRewritingCount > secondChar_storyletsForRewritingCount && not rewriting_proposal_second_character && not questions:
                 -> ask
             
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-        - secondStoryQuestCount > secondChar_storyletsForRewritingCount && not rewriting_proposal_second_character && questions:
+        - secondChar_storyletsForRewritingCount > secondChar_storyletsForRewritingCount && not rewriting_proposal_second_character && questions:
                 -> ask
     
     //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo         
-        - secondStoryQuestCount > secondChar_storyletsForRewritingCount && rewriting_proposal_second_character:
+        - secondChar_storyletsForRewritingCount > secondChar_storyletsForRewritingCount && rewriting_proposal_second_character:
                 -> ask
 
     //Vogliamo offrire un dono            
@@ -94,17 +94,17 @@
 
     //Azioni legate alla riscrittura
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-            + {secondStoryQuestCount > secondChar_storyletsForRewritingCount && not rewriting_proposal_second_character && not questions} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
+            + {secondChar_storyletsForRewritingCount > secondChar_storyletsForRewritingCount && not rewriting_proposal_second_character && not questions} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
                             Parla prima con {charNameFive}, che già mi brontola tantissimo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                                     ~ secondChar_tutorial = true
                                 -> main
         
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-            + {secondStoryQuestCount > secondChar_storyletsForRewritingCount && not rewriting_proposal_second_character && questions} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
+            + {secondChar_storyletsForRewritingCount > secondChar_storyletsForRewritingCount && not rewriting_proposal_second_character && questions} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
                             -> rewriting_proposal_second_character
                             
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo             
-            + {secondStoryQuestCount > secondChar_storyletsForRewritingCount && rewriting_proposal_second_character}[Iniziamo la riscrittura?]
+            + {secondChar_storyletsForRewritingCount > secondChar_storyletsForRewritingCount && rewriting_proposal_second_character}[Iniziamo la riscrittura?]
                     -> rewriting_proposal_second_character
     
     
@@ -251,7 +251,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
-        ~ secondStoryQuestCount ++
+        ~ secondChar_storyletsForRewritingCount ++
         
         Perché sei qui?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             
@@ -380,7 +380,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ secondStoryQuestCount ++
+    ~ secondChar_storyletsForRewritingCount ++
     
     {
         - not about_violence_and_peace:
@@ -501,7 +501,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
-        ~ secondStoryQuestCount ++
+        ~ secondChar_storyletsForRewritingCount ++
             {
                 - not about_violence_and_peace:
                 ~ change_entity_place(Mentor)
@@ -684,7 +684,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ secondStoryQuestCount ++
+    ~ secondChar_storyletsForRewritingCount ++
             {
                 - not about_violence_and_peace:
                 ~ change_entity_place(Mentor)
@@ -781,7 +781,7 @@
                 ~ change_entity_place(Mentor)
             }     
     
-    ~ secondStoryQuestCount ++
+    ~ secondChar_storyletsForRewritingCount ++
 
     
         Nonna non mi tratta mai come un bambino.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
@@ -891,7 +891,7 @@
                 ~ change_entity_place(Mentor)
             }     
     
-    ~ secondStoryQuestCount ++
+    ~ secondChar_storyletsForRewritingCount ++
         
         Dalla serra è scomparso l'innaffiatoio. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         ...#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
@@ -982,7 +982,7 @@
             -
             //Se fiducia bassa.
             {
-                - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
+                - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1):
                     Comunque l'innaffiatoio non l'ho mica visto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     Ma.
                     Sono sicuro che se cerchi bene lo trovi dove l'avete lasciato.
@@ -1016,7 +1016,7 @@
                 - not about_violence_and_peace:
                 ~ change_entity_place(Mentor)
             }     
-        ~ secondStoryQuestCount ++
+        ~ secondChar_storyletsForRewritingCount ++
         
         La rana prima mi ha detto che tu scrivi storie.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
         A me mi piacciono le storie.
@@ -1109,7 +1109,7 @@
                 ~ change_entity_place(Mentor)
             }     
     
-    ~ secondStoryQuestCount ++
+    ~ secondChar_storyletsForRewritingCount ++
         
         Sai che mio fratello è campione di Karate?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
         E ha una macchina enorme gialla che fa arrabbiare papà.
@@ -1215,7 +1215,7 @@
                 ~ change_entity_place(Mentor)
             }     
         
-        ~ secondStoryQuestCount ++
+        ~ secondChar_storyletsForRewritingCount ++
         
         Tu hai sempre voluto fare {player_pronouns has him: il riscrittore|{player_pronouns has her: la riscrittora|lə riscrittorə}} come lavoro?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
         
@@ -1370,7 +1370,7 @@
                 ~ change_entity_place(Mentor)
             }     
         
-        ~ secondStoryQuestCount ++
+        ~ secondChar_storyletsForRewritingCount ++
         
         Stavo ripensando a un bambino.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
         Uno di seconda.
@@ -1462,7 +1462,7 @@
                 ~ change_entity_place(Mentor)
             }     
         
-        ~ secondStoryQuestCount ++
+        ~ secondChar_storyletsForRewritingCount ++
         
         Quando vado da mio fratello e non c'è il suo amico, mi lascia sperimentare con le sue cose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
         Il suo amico fa il pasticciere.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -1556,7 +1556,7 @@
                 ~ change_entity_place(Mentor)
             }     
         
-        ~ secondStoryQuestCount ++
+        ~ secondChar_storyletsForRewritingCount ++
         
         Mi piace molto passare il tempo in biblioteca.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
         Le biblioteche mi ricordano semore la casa della nonna.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral

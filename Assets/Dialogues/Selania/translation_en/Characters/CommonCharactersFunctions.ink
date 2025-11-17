@@ -257,11 +257,11 @@ VAR delayFourthChar = 20
 //Per il secondo personaggio la cosa che conta è coerenza. Ha bisogno di stabilità. A manoni la logica sarà: tengo conto di un counter delle domande a cui ha risposto la giocatrice e se un determinato valore è >= di counter - x allora ++, se >= counter -x-1 allora +. Probabilmente da bilanciare.
 === secondAffinityCalc ===
 {
-    - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
+    - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1):
         ~ secondCharacterInkLevel ++
         ~ secondCharacterInkLevel ++
             ->->
-    - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2):
+    - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 2):
         ~ secondCharacterInkLevel ++
             ->->     
 }
@@ -271,7 +271,7 @@ VAR delayFourthChar = 20
     === secondAffinityCheckCalc ===
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         {
-            - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
+            - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1):
                 {charNameTwo}: Sai? Mi sembri una persona che dice sempre le cose giuste.
                 {charNameTwo}: Non giuste giuste tipo per me.
                 {charNameTwo}: Ma che si assomigliano tutte.
@@ -409,19 +409,19 @@ VAR secondPurpleMax = false
 
 === secondNaming ==
     {
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 1):
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1):
             ~ secondCharacterPossibleStates += IlCorvo
                 ->->
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 2):
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 2):
             ~ secondCharacterPossibleStates += IlCapibara   
                 ->-> 
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 3):
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 3):
             ~ secondCharacterPossibleStates += IlDelfino    
                 ->->
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 4):
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 4):
             ~ secondCharacterPossibleStates += IlLupo
                 ->->
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondStoryQuestCount - 5):
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 5):
             ~ secondCharacterPossibleStates += IlGrizzly
                 ->->
         - else:     

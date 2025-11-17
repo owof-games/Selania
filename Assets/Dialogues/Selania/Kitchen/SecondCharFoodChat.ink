@@ -380,9 +380,9 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
                     -
             
                 //Per riccio devo aumentare il valore di tre, perché ho compiuto tre scelte, e mi serve per il calcolo dell'affinità
-                    ~ secondStoryQuestCount ++
-                    ~ secondStoryQuestCount ++
-                    ~ secondStoryQuestCount ++
+                    ~ secondChar_storyletsForRewritingCount ++
+                    ~ secondChar_storyletsForRewritingCount ++
+                    ~ secondChar_storyletsForRewritingCount ++
                     
                 Riccio ci dice di andare a tavola
                     -> recipe_name_creator ->

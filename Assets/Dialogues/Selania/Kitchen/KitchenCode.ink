@@ -499,8 +499,8 @@
                 ~ secondGreen = 0
             ~ storageRed = secondRed
                 ~ secondRed = 0
-            ~ storageSecondStoryQuestCount = secondStoryQuestCount 
-                ~ secondStoryQuestCount = 0
+            ~ storageSecondStoryQuestCount = secondChar_storyletsForRewritingCount 
+                ~ secondChar_storyletsForRewritingCount = 0
     }
 ->->
 
@@ -533,7 +533,7 @@
             ~ secondRed = secondRed + storageRed
                 ~ storageRed = 0
             //Non aggiungiamo le tre domande perché complica solo il conteggio finale
-            ~ secondStoryQuestCount = storageSecondStoryQuestCount
+            ~ secondChar_storyletsForRewritingCount = storageSecondStoryQuestCount
                 ~ storageSecondStoryQuestCount = 0        
     
     }

@@ -28,9 +28,6 @@
 //Tracciamento del dono
     VAR secondChar_giftedObject = ()
     
-//Tengo conto delle interazioni avute per aprire la possibilità di avviare la riscrittura    
-    VAR secondChar_storyletsForRewritingCount = 8
-
 //Tracciamento attivazione secondo elemento tutorial
     VAR secondChar_tutorial = true
     
@@ -46,8 +43,8 @@
         VAR kitchen_secondCharExtraIngredient = ()
         VAR kitchen_secondCharExtraIngredientReaction = notReaction    
     
-//Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
-    VAR secondStoryQuestCount = 0.00
+//Tengo conto delle interazioni avute per aprire la possibilità della riscrittura
+    VAR secondChar_storyletsForRewritingCount = 0.00
     VAR secondCharacterSpecialEvent = false
     VAR justTalkedSecondChar = false
 
