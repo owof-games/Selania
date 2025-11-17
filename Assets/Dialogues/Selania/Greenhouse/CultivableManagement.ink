@@ -86,7 +86,7 @@
 
 //Questa è una strategia (basic e temporanea) per evitare che il testing vada in loop se non ci sono combinazioni sensate di domande.
     VAR greenhouse_randomizedQuestionsCounter = 0
-    VAR maxgreenhouse_randomizedQuestionsCounter = 100
+    VAR greenhouse_maxRandomizableQuestions = 100
 
 //Variabili monitoraggio stato vegetali
     VAR greenhouse_cultivableGrowing = 0 
@@ -170,8 +170,8 @@
 {debug_cultivable: Il dado ha valore: {dice}.}
 {
 
-    - greenhouse_randomizedQuestionsCounter >= maxgreenhouse_randomizedQuestionsCounter:
-        {debug_cultivable: greenhouse_randomizedQuestionsCounter {greenhouse_randomizedQuestionsCounter} ha raggiunto il livello massimo {maxgreenhouse_randomizedQuestionsCounter}.}
+    - greenhouse_randomizedQuestionsCounter >= greenhouse_maxRandomizableQuestions:
+        {debug_cultivable: greenhouse_randomizedQuestionsCounter {greenhouse_randomizedQuestionsCounter} ha raggiunto il livello massimo {greenhouse_maxRandomizableQuestions}.}
         {
             - greenhouse_backupCultivable != ():
                 ~ greenhouse_chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
