@@ -36,24 +36,24 @@
     
     
     //Se ho almeno una parola
-    + {ownedEmotionalWords != ()} [Cosa ho nell'inventario?]
-            Hai con te {generic_list_with_commas(ownedEmotionalWords, -> emotional_words_translator)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    + {nest_ownedEmotionalWords != ()} [Cosa ho nell'inventario?]
+            Hai con te {generic_list_with_commas(nest_ownedEmotionalWords, -> emotional_words_translator)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             -> emotional_inventory_management
 
     //Se ho appena scoperto una nuova parola e voglio aggiungerla:
     + {nest_newlyDiscoveredEmotionalWord != ()} [Aggiungo {nest_newlyDiscoveredEmotionalWord} all'inventario.]
         
         {
-            - takenEmotionalWords < maximumEmotionalWordsForRun: 
+            - nest_takenEmotionalWords < nest_maximumEmotionalWordsForRun: 
                 {nest_newlyDiscoveredEmotionalWord} è stata aggiunta all'inventario.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                    ~  ownedEmotionalWords += nest_newlyDiscoveredEmotionalWord
-                {debug_nest: aggiungo {nest_newlyDiscoveredEmotionalWord} alla lista ownedEmotionalWords che ora contiene {ownedEmotionalWords}.}
+                    ~  nest_ownedEmotionalWords += nest_newlyDiscoveredEmotionalWord
+                {debug_nest: aggiungo {nest_newlyDiscoveredEmotionalWord} alla lista nest_ownedEmotionalWords che ora contiene {nest_ownedEmotionalWords}.}
                 
                     ~ nest_newlyDiscoveredEmotionalWord = ()
                 {debug_nest: svuoto il valore di nest_discoveredEmotionalWords che ora è {nest_newlyDiscoveredEmotionalWord}.}  
                 
-                    ~ takenEmotionalWords ++
-                {debug_nest: aumento il valore di takenEmotionalWords che ora è {takenEmotionalWords}.}
+                    ~ nest_takenEmotionalWords ++
+                {debug_nest: aumento il valore di nest_takenEmotionalWords che ora è {nest_takenEmotionalWords}.}
                 
                 -> emotional_inventory_management
             
@@ -77,18 +77,18 @@
    
    
     //Se voglio rimuovere una parola dall'inventario (opzione sempre disponibile)
-    + {ownedEmotionalWords != ()} [Rimuovo una parola dall'inventario.]
+    + {nest_ownedEmotionalWords != ()} [Rimuovo una parola dall'inventario.]
             -> emotional_words_management(Delete) ->
    
     //Se non ho nuove parole da aggiornare o attive, posso attivarne
-    + {ownedEmotionalWords != () && (nest_newlyDiscoveredEmotionalWord == ()) && (activeEmotionalWord == ())} [Attivo una parola dell'inventario.]
+    + {nest_ownedEmotionalWords != () && (nest_newlyDiscoveredEmotionalWord == ()) && (nest_activeEmotionalWord == ())} [Attivo una parola dell'inventario.]
             -> emotional_words_management(Activate) ->
     
     + {nest_newlyDiscoveredEmotionalWord == ()} [Voglio scoprire una nuova parola.]
     
         {
             //Se una parola è già attiva
-            - activeEmotionalWord != ():
+            - nest_activeEmotionalWord != ():
                 Hai attiva una parola, torna quando si sarà esaurita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                     -> main
             

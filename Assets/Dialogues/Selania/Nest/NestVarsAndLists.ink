@@ -94,27 +94,27 @@
     VAR nest_newlyDiscoveredEmotionalWord = ()
 
 //Tracciamento delle scelte fatte durante la composizione
-    LIST keysColour = redKey, yellowKey, blueKey, greenKey, purpleKey
-    VAR firstKeyColour = ()
-    VAR secondKeyColour = ()
-    VAR thirdKeyColour = ()
+    LIST nest_keysColour = redKey, yellowKey, blueKey, greenKey, purpleKey
+    VAR nest_firstKeyColour = ()
+    VAR nest_secondKeyColour = ()
+    VAR nest_thirdKeyColour = ()
 
 
 //L'inventario effettivo
-    VAR ownedEmotionalWords = ()
+    VAR nest_ownedEmotionalWords = ()
     
 //Una variabile che tiene conto di quale sia la parola attiva ora
-    VAR activeEmotionalWord = ()
+    VAR nest_activeEmotionalWord = ()
 
 //Una lista delle parole effettivamente utilizzate
-    VAR usedEmotionaWords = ()
+    VAR nest_usedEmotionaWords = ()
     
 //Qualcosa che limiti il numero di parole aggiungibili.
 //Remind: ogni volta che aggiungo una parola, il limite si aggiorna.
     //Un contatore che aumenta ogni volta che viene aggiunta una parola all'inventario effettivo
-    VAR takenEmotionalWords = 0
+    VAR nest_takenEmotionalWords = 0
     
     //Un parametro che indichi il massimo delle parole previste
-    VAR maximumEmotionalWordsForRun = 25
+    VAR nest_maximumEmotionalWordsForRun = 25
 
 

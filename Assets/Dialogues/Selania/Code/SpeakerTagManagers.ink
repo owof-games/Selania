@@ -117,15 +117,15 @@ LIST speakersForEwWordTag = Influenced, Other
     - Influenced:
         {
             //Se c'è una parola attiva
-            - activeEmotionalWord != ():
+            - nest_activeEmotionalWord != ():
                 {
                     //E ci sono utilizzi multipli a disposizione
                     - temporaryWordUsageCounter > 1:
-                        ~ return "{emotional_words_translator(activeEmotionalWord)}, {temporaryWordUsageCounter} usi disponibili."
+                        ~ return "{emotional_words_translator(nest_activeEmotionalWord)}, {temporaryWordUsageCounter} usi disponibili."
                     
                     //Altrimenti:
                     - temporaryWordUsageCounter == 1:
-                        ~ return "{emotional_words_translator(activeEmotionalWord)}, {temporaryWordUsageCounter} uso disponibile."  
+                        ~ return "{emotional_words_translator(nest_activeEmotionalWord)}, {temporaryWordUsageCounter} uso disponibile."  
                 }
             
             - else:

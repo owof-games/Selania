@@ -18,13 +18,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola Rossa.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_redWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_redWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {
-                - LIST_COUNT(nest_redWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_redWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {
-                - LIST_COUNT(nest_redWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_redWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -52,13 +52,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola Gialla.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_yellowWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_yellowWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {
-                - LIST_COUNT(nest_yellowWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_yellowWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {
-                - LIST_COUNT(nest_yellowWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_yellowWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -86,13 +86,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola Blu.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_blueWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_blueWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {
-                - LIST_COUNT(nest_blueWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_blueWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {
-                - LIST_COUNT(nest_blueWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_blueWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -120,13 +120,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola Verde.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_greenWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_greenWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {
-                - LIST_COUNT(nest_greenWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_greenWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {
-                - LIST_COUNT(nest_greenWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_greenWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -154,13 +154,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola Viola.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_purpleWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_purpleWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {
-                - LIST_COUNT(nest_purpleWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_purpleWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {
-                - LIST_COUNT(nest_purpleWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_purpleWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -191,13 +191,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola RossoGialla.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_redYellowWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_redYellowWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_redYellowWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_redYellowWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_redYellowWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_redYellowWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -241,13 +241,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola RossoBlu.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_redBlueWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_redBlueWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_redBlueWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_redBlueWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_redBlueWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_redBlueWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -290,13 +290,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola RossoVerde.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_redGreenWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_redGreenWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_redGreenWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_redGreenWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_redGreenWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_redGreenWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -340,13 +340,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola RossoViola.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_redPurpleWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_redPurpleWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_redPurpleWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_redPurpleWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_redPurpleWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_redPurpleWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -395,13 +395,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola GialloRossa.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_yellowRedWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_yellowRedWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_yellowRedWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_yellowRedWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_yellowRedWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_yellowRedWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -445,13 +445,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola GialloBlu.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_yellowBlueWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_yellowBlueWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_yellowBlueWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_yellowBlueWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_yellowBlueWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_yellowBlueWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -494,13 +494,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola GialloVerde.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_yellowGreenWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_yellowGreenWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_yellowGreenWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_yellowGreenWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_yellowGreenWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_yellowGreenWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -544,13 +544,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola GialloViola.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_yellowPurpleWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_yellowPurpleWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_yellowPurpleWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_yellowPurpleWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_yellowPurpleWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_yellowPurpleWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -596,13 +596,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola BluRossa.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_blueRedWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_blueRedWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_blueRedWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_blueRedWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_blueRedWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_blueRedWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -646,13 +646,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola BluGialla.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_blueYellowWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_blueYellowWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_blueYellowWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_blueYellowWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_blueYellowWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_blueYellowWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -695,13 +695,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola BluVerde.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_blueGreenWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_blueGreenWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_blueGreenWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_blueGreenWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_blueGreenWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_blueGreenWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -745,13 +745,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola BluViola.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_bluePurpleWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_bluePurpleWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_bluePurpleWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_bluePurpleWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_bluePurpleWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_bluePurpleWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -799,13 +799,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola VerdeRossa.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_greenRedWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_greenRedWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_greenRedWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_greenRedWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_greenRedWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_greenRedWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -849,13 +849,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola VerdeGialla.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_greenYellowWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_greenYellowWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_greenYellowWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_greenYellowWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_greenYellowWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_greenYellowWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -898,13 +898,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola VerdeBlu.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_greenBlueWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_greenBlueWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_greenBlueWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_greenBlueWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_greenBlueWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_greenBlueWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -948,13 +948,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola VerdeViola.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_greenPurpleWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_greenPurpleWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_greenPurpleWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_greenPurpleWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_greenPurpleWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_greenPurpleWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -1001,13 +1001,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola ViolaRossa.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_purpleRedWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_purpleRedWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_purpleRedWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_purpleRedWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_purpleRedWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_purpleRedWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -1051,13 +1051,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola ViolaGiallo.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_purpleYellowWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_purpleYellowWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_purpleYellowWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_purpleYellowWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_purpleYellowWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_purpleYellowWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -1100,13 +1100,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola ViolaBlu.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_purpleBlueWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_purpleBlueWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_purpleBlueWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_purpleBlueWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_purpleBlueWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_purpleBlueWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {
@@ -1150,13 +1150,13 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             <b>Parola ViolaVerde.</b>
             <> Caratteristiche generali.
             {
-                - LIST_COUNT(nest_purpleGreenWords ^ usedEmotionaWords) > 0: <> prima info.
+                - LIST_COUNT(nest_purpleGreenWords ^ nest_usedEmotionaWords) > 0: <> prima info.
             }
             {    
-                - LIST_COUNT(nest_purpleGreenWords ^ usedEmotionaWords) > 1: <> seconda info.
+                - LIST_COUNT(nest_purpleGreenWords ^ nest_usedEmotionaWords) > 1: <> seconda info.
             }
             {    
-                - LIST_COUNT(nest_purpleGreenWords ^ usedEmotionaWords) > 2: <> terza info.
+                - LIST_COUNT(nest_purpleGreenWords ^ nest_usedEmotionaWords) > 2: <> terza info.
             }
             
             {

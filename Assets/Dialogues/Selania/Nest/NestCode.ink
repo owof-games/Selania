@@ -9,27 +9,27 @@
             + {are_two_entities_together(PG, redShell)}[redShell]
             
                 @animation:RedShell
-                ~ firstKeyColour = redKey
+                ~ nest_firstKeyColour = redKey
             
             + {are_two_entities_together(PG, yellowShell)}[yellowShell]
             
                 @animation:YellowShell
-                ~ firstKeyColour = yellowKey
+                ~ nest_firstKeyColour = yellowKey
             
             + {are_two_entities_together(PG, blueShell)}[blueShell]
             
                 @animation:BlueShell
-                ~ firstKeyColour = blueKey
+                ~ nest_firstKeyColour = blueKey
             
             + {are_two_entities_together(PG, greenShell)}[greenShell]
             
                 @animation:GreenShell
-                ~ firstKeyColour = greenKey
+                ~ nest_firstKeyColour = greenKey
             
             + {are_two_entities_together(PG, purpleShell)}[purpleShell]
                 
                 @animation:PurpleShell
-                ~ firstKeyColour = purpleKey
+                ~ nest_firstKeyColour = purpleKey
             
             -
         Vuoi suonare un'altra conchiglia?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}  
@@ -43,23 +43,23 @@
             + {are_two_entities_together(PG, redShell)}[redShell]
             
                 @animation:RedShell
-                ~ secondKeyColour = redKey
+                ~ nest_secondKeyColour = redKey
             + {are_two_entities_together(PG, yellowShell)}[yellowShell]
             
                 @animation:YellowShell
-                ~ secondKeyColour = yellowKey
+                ~ nest_secondKeyColour = yellowKey
             + {are_two_entities_together(PG, blueShell)}[blueShell]
             
                 @animation:BlueShell
-                ~ secondKeyColour = blueKey
+                ~ nest_secondKeyColour = blueKey
             + {are_two_entities_together(PG, greenShell)}[greenShell]
             
                 @animation:GreenShell
-                ~ secondKeyColour = greenKey
+                ~ nest_secondKeyColour = greenKey
             + {are_two_entities_together(PG, purpleShell)}[purpleShell]
             
                 @animation:PurpleShell
-                ~ secondKeyColour = purpleKey
+                ~ nest_secondKeyColour = purpleKey
             -
         Vuoi suonare un'altra conchiglia?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}   
             + [Sì]
@@ -72,23 +72,23 @@
             + {are_two_entities_together(PG, redShell)}[redShell]
             
                 @animation:RedShell
-                ~ thirdKeyColour = redKey
+                ~ nest_thirdKeyColour = redKey
             + {are_two_entities_together(PG, yellowShell)}[yellowShell]
             
                 @animation:YellowShell
-                ~ thirdKeyColour = yellowKey
+                ~ nest_thirdKeyColour = yellowKey
             + {are_two_entities_together(PG, blueShell)}[blueShell]
             
                 @animation:BlueShell
-                ~ thirdKeyColour = blueKey
+                ~ nest_thirdKeyColour = blueKey
             + {are_two_entities_together(PG, greenShell)}[greenShell]
             
                 @animation:GreenShell
-                ~ thirdKeyColour = greenKey
+                ~ nest_thirdKeyColour = greenKey
             + {are_two_entities_together(PG, purpleShell)}[purpleShell]
             
                 @animation:PurpleShell
-                ~ thirdKeyColour = purpleKey
+                ~ nest_thirdKeyColour = purpleKey
             -
                 -> emotional_words_dispatcher
 
@@ -97,10 +97,10 @@
 {debug_nest: passo per emotional_words_feedback.}
 //Passo da qui dopo aver creato la parola, per vedere se l'ho già scoperta o meno. Nel secondo caso aggiorno il libro della riscrittora e passo a emotional_inventory_management
 //Per prima cosa, resetto i valori delle scelte durante la creazione della parola
-    ~ firstKeyColour = ()
-    ~ secondKeyColour = ()
-    ~ thirdKeyColour = ()
-    {debug_nest: dopo il reset, i valori delle tre key sono {firstKeyColour} {secondKeyColour} {thirdKeyColour}.}
+    ~ nest_firstKeyColour = ()
+    ~ nest_secondKeyColour = ()
+    ~ nest_thirdKeyColour = ()
+    {debug_nest: dopo il reset, i valori delle tre key sono {nest_firstKeyColour} {nest_secondKeyColour} {nest_thirdKeyColour}.}
 
     {
     
@@ -140,16 +140,16 @@
 
 === used_emotional_words_updater
 {debug_nest: passo per used_emotional_words_updater.}
-{debug_nest: il valore della parola attiva è {activeEmotionalWord}.}
-{debug_nest: prima di intervenire, usedEmotionaWords contiene {usedEmotionaWords}.}
+{debug_nest: il valore della parola attiva è {nest_activeEmotionalWord}.}
+{debug_nest: prima di intervenire, nest_usedEmotionaWords contiene {nest_usedEmotionaWords}.}
     {
         //Dato che posso passare da questo nodo anche per cancellare una parola ne ho una attiva, faccio questo check per evitare che venga aggiunta due volte (non dovrebbe, but)
-        - activeEmotionalWord !=() && (usedEmotionaWords hasnt activeEmotionalWord):
-            ~ usedEmotionaWords += activeEmotionalWord
+        - nest_activeEmotionalWord !=() && (nest_usedEmotionaWords hasnt nest_activeEmotionalWord):
+            ~ nest_usedEmotionaWords += nest_activeEmotionalWord
     
     }
 
-{debug_nest: dopo l'aggiornamento, usedEmotionaWords contiene {usedEmotionaWords}.}
+{debug_nest: dopo l'aggiornamento, nest_usedEmotionaWords contiene {nest_usedEmotionaWords}.}
 ->->
 
 

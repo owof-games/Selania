@@ -495,5 +495,5 @@
                 ~ return "nome parola"
    
             
-            -else: Traduzione colore parola {activeEmotionalWord} non trovato!
+            -else: Traduzione colore parola {nest_activeEmotionalWord} non trovato!
     }
