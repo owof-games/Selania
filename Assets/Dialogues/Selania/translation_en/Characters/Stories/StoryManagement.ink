@@ -135,7 +135,7 @@
     LIST fifthChar_possibleStates= IlMentore, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
     VAR fifthChar_ActualName= IlMentore
     
-    VAR fifthStory = NotStarted
+    VAR fifthChar_storyStatus = NotStarted
     //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
     VAR fifthStoryQuestCount = 0
     VAR fifthCharacterSpecialEvent = false

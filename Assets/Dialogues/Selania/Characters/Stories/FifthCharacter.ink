@@ -7,7 +7,7 @@
             -> talk_with_mentor
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(Mentor, PG) && fifthStory == story_storyEnded} [Mentor]
+        + {are_two_entities_together(Mentor, PG) && fifthChar_storyStatus == story_storyEnded} [Mentor]
             -> fifth_char_story_ended
         + ->
     
@@ -111,15 +111,15 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
             //Questo è lo storylet dove Mentore sbrocca, e che poi trasformo in quinta personaggia    
             - not seven && thirdChar_storyStatus == story_storyEnded && tutorialPauses == false:
                 -> seven
-            - not eight && fifthStory == story_storyStarted && tutorialPauses == false:
+            - not eight && fifthChar_storyStatus == story_storyStarted && tutorialPauses == false:
                 -> eight
-            - not nine && fifthStory == story_storyStarted && tutorialPauses == false:
+            - not nine && fifthChar_storyStatus == story_storyStarted && tutorialPauses == false:
                 -> nine
-            - not ten && fifthStory == story_storyStarted && tutorialPauses == false:
+            - not ten && fifthChar_storyStatus == story_storyStarted && tutorialPauses == false:
                 -> ten
-            - not eleven && fifthStory == story_storyStarted && tutorialPauses == false:
+            - not eleven && fifthChar_storyStatus == story_storyStarted && tutorialPauses == false:
                 -> eleven
-            - not twelve && fifthStory == story_storyStarted && tutorialPauses == false:
+            - not twelve && fifthChar_storyStatus == story_storyStarted && tutorialPauses == false:
                 -> twelve
             - else:
                 -> talk_with_mentor.talk
@@ -1006,7 +1006,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         -> close
     
     = close
-            ~ fifthStory = story_storyEnded
+            ~ fifthChar_storyStatus = story_storyEnded
             ~ story_endedStories += story_fifthCharStoryEnded
             ~ fifthChar_InkLevel = ink_empty
             ~ player_movementsCounter = 0

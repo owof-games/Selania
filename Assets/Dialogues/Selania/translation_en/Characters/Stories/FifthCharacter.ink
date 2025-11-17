@@ -7,7 +7,7 @@
             -> talk_with_mentor
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(Mentor, PG) && fifthStory == Ended} [Mentor]
+        + {are_two_entities_together(Mentor, PG) && fifthChar_storyStatus == Ended} [Mentor]
             -> fifth_char_story_ended
         + ->
     
@@ -99,17 +99,17 @@
             - not six && thirdStory == Ended:
                 -> six
             //Metà delle storie della mentore sono disponibili sostanzialmente da subito, le altre dopo che le condizioni per attivare la storia a tutti gli effetti sono state raggiunte.      
-            - not seven && fifthStory == Active:
+            - not seven && fifthChar_storyStatus == Active:
                 -> seven
-            - not eight && fifthStory == Active:
+            - not eight && fifthChar_storyStatus == Active:
                 -> eight
-            - not nine && fifthStory == Active:
+            - not nine && fifthChar_storyStatus == Active:
                 -> nine
-            - not ten && fifthStory == Active:
+            - not ten && fifthChar_storyStatus == Active:
                 -> ten
-            - not eleven && fifthStory == Active:
+            - not eleven && fifthChar_storyStatus == Active:
                 -> eleven
-            - not twelve && fifthStory == Active:
+            - not twelve && fifthChar_storyStatus == Active:
                 -> twelve
             - else:
                 -> fifth_character_opinions
@@ -945,7 +945,7 @@ Placeholder
         {charNameFive}Placeholder
         {charNameFive}Placeholder
 
-            ~ fifthStory = Ended
+            ~ fifthChar_storyStatus = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(fifthStoryPG)
                 -> main
@@ -953,7 +953,7 @@ Placeholder
     = exit
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
         {charNameFive}Placeholder
-            ~ fifthStory = Ended
+            ~ fifthChar_storyStatus = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(fifthStoryPG)
         -> main  

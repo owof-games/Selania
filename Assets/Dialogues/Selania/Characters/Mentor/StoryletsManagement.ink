@@ -121,7 +121,7 @@
         // - not fourth_character_feedback && fourthfourthChar_storyStatusStory == story_storyEnded:
         //     -> fourth_character_feedback        
     
-        // - not fifth_character_feedback && fifthStory == story_storyEnded:
+        // - not fifth_character_feedback && fifthChar_storyStatus == story_storyEnded:
         //     -> fifth_character_feedback        
         
      

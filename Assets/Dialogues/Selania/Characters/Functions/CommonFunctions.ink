@@ -57,14 +57,14 @@
                 //qualcosa per panchina sistemata
                 
         //E quando la storia della quarta è a tre, si presenta la mentore come uovo
-        //- knowing_fourth_character.three && fifthStory == story_storyNotStarted:
+        //- knowing_fourth_character.three && fifthChar_storyStatus == story_storyNotStarted:
                 //~ qualcosa per trasformare mentore in uovo
                     
         //E quando la storia della quarta è a cinque steps, parte la storia della mentore
-        //- knowing_fourth_character.five && fifthStory == story_storyNotStarted && qualcosa per cui abbiamo tocca l'uovo almeno una volta:
+        //- knowing_fourth_character.five && fifthChar_storyStatus == story_storyNotStarted && qualcosa per cui abbiamo tocca l'uovo almeno una volta:
                 // ~ move_entity(TrainNoise, CurrentLocation)
                 //{debug: introduco {FifthCharacter} in scena.}
-                //~ fifthStory == story_storyStarted:
+                //~ fifthChar_storyStatus == story_storyStarted:
                 //cambiamento asset per mentore, che passa a mostrone
     
     
@@ -86,7 +86,7 @@
             //~ move_entity(FourthCharacter, Safekeeping)
            // ~ move_entity(FourthCharacterNotes, TrainStop)
             
-        //- fifthStory == story_storyEnded && player_movementsCounter > 10:
+        //- fifthChar_storyStatus == story_storyEnded && player_movementsCounter > 10:
             //~ move_entity(Mentor, Safekeeping)
            // ~ move_entity(FifthCharacterNotes, TrainStop)
     }
@@ -207,10 +207,10 @@
     }
     
     {
-        - fifthStory == story_storyStarted:
+        - fifthChar_storyStatus == story_storyStarted:
             ~ movements_randomizable_characters += Mentor
         
-        -   fifthStory == story_storyEnded:  
+        -   fifthChar_storyStatus == story_storyEnded:  
             ~ movements_randomizable_characters -= Mentor
     }
     

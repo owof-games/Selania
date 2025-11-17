@@ -27,7 +27,7 @@
         - Relationship == fourthChar_relationshipStatus:
             ~ Ink = fourthChar_InkLevel
         
-        - Relationship == fifthCharStateRelationship:
+        - Relationship == fifthChar_relationshipStatus:
             ~ Ink = fifthChar_InkLevel    
             
     }

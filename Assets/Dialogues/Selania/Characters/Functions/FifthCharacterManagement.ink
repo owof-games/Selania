@@ -8,13 +8,13 @@
     LIST fifthChar_possibleStates= Mentore, NuovoStatoUnoCinque, NuovoStatoDueCinque, NuovoStatoTreCinque
     VAR fifthChar_ActualName= Mentore
     
-    //Per mentore, fifthStory sarà la parte di riscrittura, mentorChar_storyStatus tutta la parte di interazione come Mentore
+    //Per mentore, fifthChar_storyStatus sarà la parte di riscrittura, mentorChar_storyStatus tutta la parte di interazione come Mentore
     VAR mentorChar_storyStatus = story_storyNotStarted
-    VAR fifthStory = story_storyNotStarted
-    VAR charFiveEnding = () 
+    VAR fifthChar_storyStatus = story_storyNotStarted
+    VAR fifthChar_storyEndingPosition = ()
     
 //Tracciamento della relazione
-    VAR fifthCharStateRelationship = 0 
+    VAR fifthChar_relationshipStatus = 0 
  
     
 //Tracciamento del dono

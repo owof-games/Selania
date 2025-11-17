@@ -138,7 +138,7 @@ VAR purple  = ()
             //     ~ playerThirdStory += greenStatus
             // - char == fourthStory:
             //     ~ playerFourthStory += greenStatus
-            // - char == fifthStory:
+            // - char == fifthChar_storyStatus:
             //     ~ playerFifthStory += greenStatus
                   - else:
                     ERROR
@@ -157,7 +157,7 @@ VAR purple  = ()
             //     ~ playerThirdStory += blueStatus
             // - char == fourthStory:
             //     ~ playerFourthStory += blueStatus
-            // - char == fifthStory:
+            // - char == fifthChar_storyStatus:
             //     ~ playerFifthStory += blueStatus
                   - else:
                     ERROR
@@ -176,7 +176,7 @@ VAR purple  = ()
             //     ~ playerThirdStory += redStatus
             // - char == fourthStory:
             //     ~ playerFourthStory += redStatus
-            // - char == fifthStory:
+            // - char == fifthChar_storyStatus:
             //     ~ playerFifthStory += redStatus
                  - else:
                     ERROR
@@ -195,7 +195,7 @@ VAR purple  = ()
             //     ~ playerThirdStory += yellowStatus
             // - char == fourthStory:
             //     ~ playerFourthStory += yellowStatus
-            // - char == fifthStory:
+            // - char == fifthChar_storyStatus:
             //     ~ playerFifthStory += yellowStatus
                  - else:
                     ERROR
@@ -214,7 +214,7 @@ VAR purple  = ()
             //     ~ playerThirdStory += purpleStatus
             // - char == fourthStory:
             //     ~ playerFourthStory += purpleStatus
-            // - char == fifthStory:
+            // - char == fifthChar_storyStatus:
             //     ~ playerFifthStory += purpleStatus
                  - else:
                     ERROR
@@ -233,7 +233,7 @@ VAR purple  = ()
             //     ~ playerThirdStory += mixedStatus
             // - char == fourthStory:
             //     ~ playerFourthStory += mixedStatus
-            // - char == fifthStory:
+            // - char == fifthChar_storyStatus:
             //     ~ playerFifthStory += mixedStatus
                  - else:
                     ERROR

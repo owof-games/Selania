@@ -205,8 +205,8 @@ VAR delayFourthChar = 20
             //~ fourthStory = Active
             
 //E quando la storia della quarta è a metà, iniziamo a modo quella della mentore
-    //- knowing_fourth_character.five && fifthStory == NotStarted:
-            //~ fifthStory = Active
+    //- knowing_fourth_character.five && fifthChar_storyStatus == NotStarted:
+            //~ fifthChar_storyStatus = Active
                 
 
 
@@ -227,7 +227,7 @@ VAR delayFourthChar = 20
         //~ move_entity(FourthCharacter, Safekeeping)
        // ~ move_entity(FourthCharacterNotes, BusStop)
         
-    //- fifthStory == Ended && movementsCounter > 10:
+    //- fifthChar_storyStatus == Ended && movementsCounter > 10:
         //~ move_entity(Mentor, Safekeeping)
        // ~ move_entity(FifthCharacterNotes, BusStop)
 }

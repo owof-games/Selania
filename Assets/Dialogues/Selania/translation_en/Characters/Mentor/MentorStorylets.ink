@@ -109,7 +109,7 @@
     // - not fourth_character_feedback && fourthStory == Ended:
     //     -> fourth_character_feedback        
 
-    // - not fifth_character_feedback && fifthStory == Ended:
+    // - not fifth_character_feedback && fifthChar_storyStatus == Ended:
     //     -> fifth_character_feedback        
     
 // //Presentazione dei luoghi

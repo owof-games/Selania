@@ -214,7 +214,7 @@
                 //     ~ player_thirdStepStatus += greenStatus
                 // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
                 //     ~ player_fourthStepStatus += greenStatus
-                // - player_orderGrowingTreeUpdater == fifthStory:
+                // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
                 //     ~ player_fifthStepStatus += greenStatus
                       - else:
                         ERRORE
@@ -236,7 +236,7 @@
                 //     ~ player_thirdStepStatus += blueStatus
                 // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
                 //     ~ player_fourthStepStatus += blueStatus
-                // - player_orderGrowingTreeUpdater == fifthStory:
+                // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
                 //     ~ player_fifthStepStatus += blueStatus
                       - else:
                         ERRORE
@@ -258,7 +258,7 @@
                 //     ~ player_thirdStepStatus += redStatus
                 // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
                 //     ~ player_fourthStepStatus += redStatus
-                // - player_orderGrowingTreeUpdater == fifthStory:
+                // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
                 //     ~ player_fifthStepStatus += redStatus
                      - else:
                         ERRORE
@@ -280,7 +280,7 @@
                 //     ~ player_thirdStepStatus += yellowStatus
                 // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
                 //     ~ player_fourthStepStatus += yellowStatus
-                // - player_orderGrowingTreeUpdater == fifthStory:
+                // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
                 //     ~ player_fifthStepStatus += yellowStatus
                      - else:
                         ERRORE
@@ -302,7 +302,7 @@
                 //     ~ player_thirdStepStatus += purpleStatus
                 // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
                 //     ~ player_fourthStepStatus += purpleStatus
-                // - player_orderGrowingTreeUpdater == fifthStory:
+                // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
                 //     ~ player_fifthStepStatus += purpleStatus
                      - else:
                         ERRORE
@@ -324,7 +324,7 @@
                 //     ~ player_thirdStepStatus += mixedStatus
                 // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
                 //     ~ player_fourthStepStatus += mixedStatus
-                // - player_orderGrowingTreeUpdater == fifthStory:
+                // - player_orderGrowingTreeUpdater == fifthChar_storyStatus:
                 //     ~ player_fifthStepStatus += mixedStatus
                      - else:
                         ERRORE

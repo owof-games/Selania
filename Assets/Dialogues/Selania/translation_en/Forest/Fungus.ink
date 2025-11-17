@@ -24,7 +24,7 @@
             -> third_story_ended_check
         - not fourth_story_ended_check && fourthStory == Ended:
             -> fourth_story_ended_check
-        - not fifth_story_ended_check && fifthStory == Ended:
+        - not fifth_story_ended_check && fifthChar_storyStatus == Ended:
             -> fifth_story_ended_check    
     
     - else:

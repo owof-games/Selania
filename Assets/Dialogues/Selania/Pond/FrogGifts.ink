@@ -60,7 +60,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
         ~  currentMissionAboutChar = missionCharFour
             -> frog_gift_dispatcher
         
-    + {fifthStory == story_storyStarted} [PNG 5 (non come mentore)]
+    + {fifthChar_storyStatus == story_storyStarted} [PNG 5 (non come mentore)]
         ~  currentMissionAboutChar = missionCharFive
             -> frog_gift_dispatcher
         

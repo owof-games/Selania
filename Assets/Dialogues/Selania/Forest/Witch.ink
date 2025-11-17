@@ -41,7 +41,7 @@
             -> third_story_ended_check
         - intro && fourthChar_storyStatus == story_storyEnded:
             -> fourth_story_ended_check
-        - intro && fifthStory == story_storyEnded:
+        - intro && fifthChar_storyStatus == story_storyEnded:
             -> fifth_story_ended_check    
         
         
