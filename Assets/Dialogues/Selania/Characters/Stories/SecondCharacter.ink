@@ -1767,7 +1767,7 @@
             @animation:RewriterBook
         Ma se non mi invento un motivo per le cose nessuno mi ascolta.
        
-        ~ growing ++
+        ~ greenhouse_cultivableGrowing ++
             
             + [<i>Voglio cominciare la riscrittura.]
                 -> rewriting
@@ -2113,7 +2113,7 @@
                     
         }
         
-            ~ growing ++   
+            ~ greenhouse_cultivableGrowing ++   
             ~ book_BGVariations ++
             
             {

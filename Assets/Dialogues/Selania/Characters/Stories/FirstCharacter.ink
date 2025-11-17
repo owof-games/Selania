@@ -1268,7 +1268,7 @@
          Ecco perché mi chiamo {charNameOne}: perché rimango nel medio, nella cosa più ovvia e cringe.
          @animation:RewriterBook
          E lascio che le cose accadano.
-            ~ growing ++
+            ~ greenhouse_cultivableGrowing ++
     
             + [<i>Voglio cominciare la riscrittura.]
                 -> rewriting
@@ -1579,7 +1579,7 @@
                         
             }
             
-                ~ growing ++    
+                ~ greenhouse_cultivableGrowing ++    
     
                 ~ book_BGVariations ++
     

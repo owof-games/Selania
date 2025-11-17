@@ -89,7 +89,7 @@
     VAR maxgreenhouse_randomizedQuestionsCounter = 100
 
 //Variabili monitoraggio stato vegetali
-    VAR growing = 0 
+    VAR greenhouse_cultivableGrowing = 0 
     
 //Gestione priorità coltivabili
     VAR nextCultivableOne = ()
@@ -1270,12 +1270,12 @@ QUESTIONS
     ~ greenhouse_fourteenthQuest = false
     ~ greenhouse_fifteenQuest = false
     ~ greenhouse_questionsCounter = 0
-    ~ growing = 1
+    ~ greenhouse_cultivableGrowing = 1
     ~ greenhouse_firstAnswerTracker = ()
     ~ greenhouse_randomizedQuestionsCounter = 0
 
  
-{debug_cultivable: Entro in list_to_crops. Il valore di greenhouse_questionsCounter è {greenhouse_questionsCounter}, il valore di growing è {growing}. greenhouse_firstQuest è {greenhouse_firstQuest}, greenhouse_secondQuest è {greenhouse_secondQuest}, greenhouse_thirdQuest è {greenhouse_thirdQuest}.}
+{debug_cultivable: Entro in list_to_crops. Il valore di greenhouse_questionsCounter è {greenhouse_questionsCounter}, il valore di greenhouse_cultivableGrowing è {greenhouse_cultivableGrowing}. greenhouse_firstQuest è {greenhouse_firstQuest}, greenhouse_secondQuest è {greenhouse_secondQuest}, greenhouse_thirdQuest è {greenhouse_thirdQuest}.}
 {debug_cultivable: Gli elementi ancora coltivabili sono: {greenhouse_backupCultivable}.}
 {debug_cultivable: Svuoto lista tipo Coltivazioni. Il contenuto di tipo Coltivazioni ora è {greenhouse_cropsType}.}
 {debug_cultivable: Svuoto lista greenhouse_firstAnswerTracker. Il contenuto di tipo greenhouse_firstAnswerTracker ora è {greenhouse_firstAnswerTracker==(): vuota|piena}.}

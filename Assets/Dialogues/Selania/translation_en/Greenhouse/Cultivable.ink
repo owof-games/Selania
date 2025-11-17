@@ -2,13 +2,13 @@
 
 === growing_check
 {
-    - growing < 2:
+    - greenhouse_cultivableGrowing < 2:
         ~ greenhouse_growStep = ()
         ~ greenhouse_growStep += stepZero
-    - growing < 3:
+    - greenhouse_cultivableGrowing < 3:
         ~ greenhouse_growStep = ()
         ~ greenhouse_growStep += stepOne    
-    - growing < 4:
+    - greenhouse_cultivableGrowing < 4:
         ~ greenhouse_growStep = ()
         ~ greenhouse_growStep += stepTwo
     - else:
@@ -224,7 +224,7 @@
                 <i>Le tue dita sanno di ricordo, sanno di mare.</i>
                 <i>Pensi a qualcuno.</i>
                 <i>A volte c'è pace solo nell'allontanare.</i>
-                    ~ growing = 0
+                    ~ greenhouse_cultivableGrowing = 0
                     ~ greenhouse_chosenCultivable = ()
                     {
                         - findedGifts hasnt LicheneDegliAbissi:
@@ -273,7 +273,7 @@
                 <i>Il tuo corpo ha fame di piacere.</i>
                 <i>Perditi nel desiderio.</i>
  
-                    ~ growing = 0
+                    ~ greenhouse_cultivableGrowing = 0
                     ~ greenhouse_chosenCultivable = ()
                     {
                         - findedGifts hasnt MuschioDelleAmanti:
@@ -322,7 +322,7 @@
                 <i>O ad alzare la voce, cantare, e chiamare le compagne.</i>
                 <i>Lasciando che la musica vi unisca, rendendo il mondo intero il vostro palcoscenico.</i>
                 <i>Se qualcuno avrà paura, è solo perché non sa più come ballare.</i>
-                    ~ growing = 0
+                    ~ greenhouse_cultivableGrowing = 0
                     ~ greenhouse_chosenCultivable = ()
                     {
                         - findedGifts hasnt CantoDelleCompagne:
@@ -373,7 +373,7 @@
             <i>La sensazione di quando hai condiviso qualcosa che ritenevi terribile.</i>
             <i>Per poi scoprire che il mondo non è finito quella volta, e non finirà oggi.</i>
             <i>Ci sono conversazioni in sospeso che vuoi affrontare.</i>
-                    ~ growing = 0
+                    ~ greenhouse_cultivableGrowing = 0
                     ~ greenhouse_chosenCultivable = ()
                     {
                         - findedGifts hasnt LaSpazzata:
@@ -416,7 +416,7 @@
             <i>La mano molla la sua presa, rivelandosi per quel che era sin dall'inizio: solo un insieme tenace di radici.</i>
             <i>Senti le tue spalle sciogliersi, l'incertezza scivolare via.</i>
             <i>Il cambiamento fa paura, ma ora ricordi come camminare.</i>
-                ~ growing = 0
+                ~ greenhouse_cultivableGrowing = 0
                 ~ greenhouse_chosenCultivable = ()
                     {
                         - findedGifts hasnt BaccaDellaAddolorata:
@@ -465,7 +465,7 @@
             <i>L'aria è riscaldata da un profumo familiare.</i>
             <i>Una carezza sul viso: un saluto di chi non c'è più, ma vive in te.</i>
             <i>Siete parte della stessa storia.</i>
-                ~ growing = 0
+                ~ greenhouse_cultivableGrowing = 0
                 ~ greenhouse_chosenCultivable = ()
                 {
                         - findedGifts hasnt NonTiScordarDiTe:
@@ -509,7 +509,7 @@
             <i>La <b>Brina dell'Impossibile</b> si raccoglie nel luogo di un trauma.</i>
             <i>Riempie le ferite per permetterti di vederle, ascoltarle.</i>
             <i>Ti ricorda che non serve dimenticare per poter riprendere a vivere.</i>
-                ~ growing = 0
+                ~ greenhouse_cultivableGrowing = 0
                 ~ greenhouse_chosenCultivable = ()
                     {
                         - findedGifts hasnt BrinaDellImpossibile:

@@ -7,13 +7,13 @@
 }
 
 {
-    - growing < 2:
+    - greenhouse_cultivableGrowing < 2:
         ~ greenhouse_growStep = ()
         ~ greenhouse_growStep += stepZero
-    - growing < 3:
+    - greenhouse_cultivableGrowing < 3:
         ~ greenhouse_growStep = ()
         ~ greenhouse_growStep += stepOne    
-    - growing < 4:
+    - greenhouse_cultivableGrowing < 4:
         ~ greenhouse_growStep = ()
         ~ greenhouse_growStep += stepTwo
     - else:
@@ -1223,7 +1223,7 @@
     
     
     ~ findedGifts += greenhouse_chosenCultivable
-    ~ growing = 0
+    ~ greenhouse_cultivableGrowing = 0
     ~ greenhouse_chosenCultivable = ()
     
     + {greenhouse_backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]

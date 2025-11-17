@@ -1446,7 +1446,7 @@
         {charNameTwo}: Non è il mio compleanno.
         {charNameTwo}: Scusa per la bugia.
         {charNameTwo}: Ma se non mi invento un motivo per le cose nessuno mi ascolta.
-        ~ growing ++
+        ~ greenhouse_cultivableGrowing ++
         
             + [Forse so come farti vedere le cose in modo diverso.]
                 -> statement
@@ -1802,7 +1802,7 @@
                     ~ secondCharacterState += IlCorvo
         }
         
-         ~ growing ++   
+         ~ greenhouse_cultivableGrowing ++   
         
         {
         - secondChar_specialEvent == true:

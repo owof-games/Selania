@@ -55,7 +55,7 @@
 //Streets to Greenhouse
     + {are_two_entities_together(PG, FromGreenhouseMiddlePathToGreenhouse)}  [FromGreenhouseMiddlePathToGreenhouse]
             ~ move_entity(PG, Greenhouse)
-            ~ growing ++
+            ~ greenhouse_cultivableGrowing ++
             -> growing_check ->
             -> on_movement_events ->
                 -> greenhouse

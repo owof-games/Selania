@@ -224,7 +224,7 @@ No, although if the font is of sufficient quality and general interest we may in
 - to make money adjusting and extending existing open fonts
 - to get a better chance that foundations/NGOs/charities/companies who commission fonts will pick you 
 - to be part of a sharing design and development community 
-- to give back and contribute to a growing body of font sources
+- to give back and contribute to a greenhouse_cultivableGrowing body of font sources
 
 
 5  CHOOSING RESERVED FONT NAMES

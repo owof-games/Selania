@@ -92,7 +92,7 @@
     + {are_two_entities_together(PG, FromPondToGreenhouse)}  [FromPondToGreenhouse]
             ~ move_entity(PG, Greenhouse)
             //Entrando in serra aumentiamo il valore di crescita dei coltivabili
-            ~ growing ++
+            ~ greenhouse_cultivableGrowing ++
             -> growing_check ->
             -> on_movement_events ->
                 -> greenhouse
@@ -101,7 +101,7 @@
     + {are_two_entities_together(PG, FromPondToGreenhouseBlooming)} [FromPondToGreenhouseBlooming]
             ~ move_entity(PG, Greenhouse)
             //Entrando in serra aumentiamo il valore di crescita dei coltivabili
-            ~ growing ++
+            ~ greenhouse_cultivableGrowing ++
             -> growing_check ->
             -> on_movement_events ->
             -> greenhouse

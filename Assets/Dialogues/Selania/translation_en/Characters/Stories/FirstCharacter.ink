@@ -1016,7 +1016,7 @@
         {charNameOne}: O che lo faccia il mondo.
         {charNameOne}: Ecco perché mi chiamo {charNameOne}: perché rimango nel medio, nella cosa più ovvia e cringe.
         {charNameOne}: E lascio che le cose accadano.
-            ~ growing ++
+            ~ greenhouse_cultivableGrowing ++
             
             + [Credo di sapere come aiutarti.]
                 -> statement
@@ -1314,7 +1314,7 @@
                     ~ firstCharacterState += Violino
         }
         
-        ~ growing ++    
+        ~ greenhouse_cultivableGrowing ++    
         
         {
         - firstCharacterSpecialEvent == true:

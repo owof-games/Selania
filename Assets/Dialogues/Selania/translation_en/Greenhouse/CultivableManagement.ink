@@ -56,7 +56,7 @@ VAR randomCounter = 0
 VAR maxRandomCounter = 100
 
 //Variabili monitoraggio stato vegetali
-VAR growing = 0    
+VAR greenhouse_cultivableGrowing = 0    
 
 === cultivable_test ===
 <i>La serra ha qualcosa da svelarti.
@@ -983,12 +983,12 @@ QUESTIONS
     ~ thirteenthQuest = false
     ~ fourteenthQuest = false
     ~ greenhouse_questionsCounter = 0
-    ~ growing = 1
+    ~ greenhouse_cultivableGrowing = 1
     ~ firstAnswerTracker = ()
     ~ randomCounter = 0
 
  
-{debug_cultivable: <i>Entro in da_lista_a_coltivazioni. Il valore di greenhouse_questionsCounter è {greenhouse_questionsCounter}, il valore di growing è {growing}. firstQuest è {firstQuest}, secondQuest è {secondQuest}, thirdQuest è {thirdQuest}.}
+{debug_cultivable: <i>Entro in da_lista_a_coltivazioni. Il valore di greenhouse_questionsCounter è {greenhouse_questionsCounter}, il valore di greenhouse_cultivableGrowing è {greenhouse_cultivableGrowing}. firstQuest è {firstQuest}, secondQuest è {secondQuest}, thirdQuest è {thirdQuest}.}
 {debug_cultivable: <i>Gli elementi ancora coltivabili sono: {greenhouse_backupCultivable}.<i>}
 {debug_cultivable: <i>Svuoto lista tipo Coltivazioni. Il contenuto di tipo Coltivazioni ora è {greenhouse_cropsType}.}
 {debug_cultivable: <i>Svuoto lista firstAnswerTracker. Il contenuto di tipo firstAnswerTracker ora è {firstAnswerTracker==(): vuota|piena}.}
