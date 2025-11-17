@@ -17,11 +17,11 @@
     VAR player_red = 0.00
 
 //Per funzione aggiornamento colore: tengono conto del valore di quel colore dellx PNG la cui storia è stata appena conclusa
-    VAR temp_endedPNGRed = ()
-    VAR temp_endedPNGGreen = ()
-    VAR temp_endedPNGBlue = ()
-    VAR temp_endedPNGYellow = ()
-    VAR temp_endedPNGPurple  = ()    
+    VAR temp_endedPNGRed = 0.00
+    VAR temp_endedPNGGreen = 0.00
+    VAR temp_endedPNGBlue = 0.00
+    VAR temp_endedPNGYellow = 0.00
+    VAR temp_endedPNGPurple  = 0.00    
     
 
 // Lista che indica i possibli esiti delle varie sezioni dell'albero
