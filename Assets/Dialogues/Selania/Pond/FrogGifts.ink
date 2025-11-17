@@ -40,7 +40,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
                         -> top
             - else:
                 {
-                    - (secondGift == () && charTwoGifts hasnt charTwoCultivable) or (!ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking) or (player_accessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord) or (player_accessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary):
+                    - (secondChar_giftedObject == () && charTwoGifts hasnt charTwoCultivable) or (!ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking) or (player_accessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord) or (player_accessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary):
                         Credo proprio di poterti aiutare. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         -> frog_gift_dispatcher
                     
@@ -257,7 +257,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
     
     Come posso aiutarti con {charNameTwo}?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     
-        + {secondGift == () && charTwoGifts hasnt charTwoCultivable} [Vorrei sapere cosa donare a {charNameTwo}.]
+        + {secondChar_giftedObject == () && charTwoGifts hasnt charTwoCultivable} [Vorrei sapere cosa donare a {charNameTwo}.]
         ~ charTwoGifts += charTwoCultivable
         
              {

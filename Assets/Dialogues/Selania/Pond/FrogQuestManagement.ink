@@ -20,7 +20,7 @@
         
         {
             //Ho già fatto il dono (ed è il primo check)
-            - secondGift != () && charTwoGifts hasnt charTwoCultivable:
+            - secondChar_giftedObject != () && charTwoGifts hasnt charTwoCultivable:
                     ~ charTwoGifts += charTwoCultivable
     
             

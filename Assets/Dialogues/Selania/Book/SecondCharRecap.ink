@@ -136,28 +136,28 @@
 {
     - second_story_gift.ink_outcome:
         {
-            - secondGift == EderaDelleAmanti:
+            - secondChar_giftedObject == EderaDelleAmanti:
                 Gli ho donato una foglia di <b><i>Edera delle Amanti</b></i>, e mi ha guardato imbarazzato. <>
                 
-            - secondGift == BaccaDellaAddolorata:
+            - secondChar_giftedObject == BaccaDellaAddolorata:
                 Gli ho donato una <b><i>Bacca dell'Addolorata</b></i> ma non gli è interessata. <>
                 
-            - secondGift == LaSpazzata:
+            - secondChar_giftedObject == LaSpazzata:
                 Gli ho donato un rametto della <b><i>Spazzata</b></i> e si è esaltato, ha continuato a rigirarsi il frammento tra le dita, pieno di gioia rabbiosa. <>
                 
-            - secondGift == BrinaDellImpossibile: 
+            - secondChar_giftedObject == BrinaDellImpossibile: 
                 Gli ho donato un frammento di <b><i>Brina dell'Impossibile</b></i> e ha iniziato a tremare e piangere. Le linee della mia mano sono ricomparse. <>
                 
-            - secondGift == CantoDelleCompagne: 
+            - secondChar_giftedObject == CantoDelleCompagne: 
                 Gli ho donato una goccia di <b><i>Canto delle Compagne</b></i>: ha provato ad assaggiarla e ha vomitato. <>
                 
-            - secondGift == LicheneDegliAbissi: 
+            - secondChar_giftedObject == LicheneDegliAbissi: 
                 Gli ho donato una traccia dell'odore del <b><i>Lichene degli Abissi</b></i>, ha provato a dire qualcosa ma poi si è zittito. <>
                 
-            - secondGift == NonTiScordarDiTe: 
+            - secondChar_giftedObject == NonTiScordarDiTe: 
                 Gli ho donato l'impronta del <b><i>Non Ti Scordar Di Te</b></i>: mi ha abbracciato, per poi allontanarsi imbarazzato. <>
                 
-            - secondGift == CardoAspinato: 
+            - secondChar_giftedObject == CardoAspinato: 
                 Gli ho donato un ciuffo di peli di <b><i>Cardo Aspinato</b></i> e si è messo a ridere, poi mi ha ringraziato. <>
         
         }    

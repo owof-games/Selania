@@ -273,7 +273,7 @@
     Sai {player_name}? La <b><i>serra</b></i> non è solo un bel posto dove rilassarsi.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Tra i tanti modi per migliorare un rapporto con una persona, fare il dono giusto è forse il più immediato.
     {
-        - firstChar_giftedObject != () or secondGift != ():
+        - firstChar_giftedObject != () or secondChar_giftedObject != ():
             E vedo che hai già imparato come fare! Sei sempre un passo avanti.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         
         - else:

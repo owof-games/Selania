@@ -12,21 +12,21 @@
 
 //Tracciamento della relazione
     VAR secondChar_relationshipStatus = 0
-    VAR goodPercentageForRelationship = 66.00
+    VAR secondChar_relationshipGoodPercentage = 66.00
 
 //Valori per definire l'esito del nome
-    VAR crowPercentage = 90.00
-    VAR capibaraPercentage = 70.00
-    VAR dolphinePercentage = 60.00
-    VAR wolfPercentage = 40.00
+    VAR secondChar_crowPercentage = 90.00
+    VAR secondChar_capibaraPercentage = 70.00
+    VAR secondChar_dolphinePercentage = 60.00
+    VAR secondChar_wolfPercentage = 40.00
 
 //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
-    VAR secondGiftsFavourites = (BrinaDellImpossibile, BastoneDellOzioso, LicheneDegliAbissi)
-    VAR secondGiftsGood = (CantoDelleCompagne, LanaNotturna, LaSpazzata, NonTiScordarDiTe)
+    VAR secondChar_favouritesGifts = (BrinaDellImpossibile, BastoneDellOzioso, LicheneDegliAbissi)
+    VAR secondChar_goodGifts = (CantoDelleCompagne, LanaNotturna, LaSpazzata, NonTiScordarDiTe)
        
 
 //Tracciamento del dono
-    VAR secondGift = ()
+    VAR secondChar_giftedObject = ()
     
     
 //Tengo conto delle interazioni avute per aprire la possibilità di avviare la riscrittura    
@@ -90,9 +90,9 @@
     //Invece di complicarmi la vita posso usare la matematica.
     
     ~ temp allColorsValue = secondRed + secondBlue + secondGreen + secondYellow + secondPurple
-    ~ temp minimumPercentValue = ((allColorsValue/100.00)*goodPercentageForRelationship)
+    ~ temp minimumPercentValue = ((allColorsValue/100.00)*secondChar_relationshipGoodPercentage)
     
-        {debug: La percentuale di risposte coerenti per una buona relazione è di {goodPercentageForRelationship}. Il {goodPercentageForRelationship}% di tutta la somma dei colori di Riccio (che è {allColorsValue}) è {minimumPercentValue}.}
+        {debug: La percentuale di risposte coerenti per una buona relazione è di {secondChar_relationshipGoodPercentage}. Il {secondChar_relationshipGoodPercentage}% di tutta la somma dei colori di Riccio (che è {allColorsValue}) è {minimumPercentValue}.}
         {debug: Il valore di viola è: {FLOAT(secondPurple)}, di verde è: {FLOAT(secondGreen)}, di rosso è: {FLOAT(secondRed)}, di blu è: {FLOAT(secondBlue)}, di giallo è: {FLOAT(secondYellow)}}
         
         {
@@ -248,19 +248,19 @@
     ~ secondChar_ActualName = ()
     
     {
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * crowPercentage):
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * secondChar_crowPercentage):
             ~ secondChar_ActualName += Corvo
                 ->->
         
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * capibaraPercentage):
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * secondChar_capibaraPercentage):
             ~ secondChar_ActualName += Capibara   
                 ->-> 
         
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * dolphinePercentage):
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * secondChar_dolphinePercentage):
             ~ secondChar_ActualName += Delfino    
                 ->->
         
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * wolfPercentage):
+        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * secondChar_wolfPercentage):
             ~ secondChar_ActualName += Lupo
                 ->->
         

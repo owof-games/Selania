@@ -66,7 +66,7 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
             {frogDebug: condizioni rispettate per poter offrire info su racconto per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - secondChar_storyStatus == story_storyStarted && secondGift == () && charTwoGifts hasnt charTwoCultivable:
+        - secondChar_storyStatus == story_storyStarted && secondChar_giftedObject == () && charTwoGifts hasnt charTwoCultivable:
             {frogDebug: condizioni rispettate per poter offrire info sul dono per Riccio.}
                 -> autonomy_mission_verify
                 
