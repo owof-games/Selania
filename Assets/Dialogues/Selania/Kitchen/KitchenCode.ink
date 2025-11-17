@@ -7,12 +7,12 @@
     VAR kitchen_sixthRecipe = ""
 
 //Tracciamento elementi che compongono il nome delle ricette
-    VAR recipeNoun = ""
-    VAR recipeAdjective = ""
-    VAR recipeComplement = ""
+    VAR kitchen_recipeNoun = ""
+    VAR kitchen_recipeAdjective = ""
+    VAR kitchen_recipeComplement = ""
     //PP come Past Participle
-    VAR recipePP = ""
-    VAR tempRecipeName = ""
+    VAR kitchen_recipePP = ""
+    VAR kitchen_tempRecipeName = ""
 
 //Storage temporaneo dei colori
     VAR storagePurple = 0
@@ -71,9 +71,9 @@
 === recipe_name_creator ===
 {debug_kitchen: passo per recipeNameCreator.}
 
-~  tempRecipeName = "{recipeNoun} {recipeAdjective} {recipeComplement} {recipePP}"
+~  kitchen_tempRecipeName = "{kitchen_recipeNoun} {kitchen_recipeAdjective} {kitchen_recipeComplement} {kitchen_recipePP}"
 
-{player_name} ha cucinato {tempRecipeName}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+{player_name} ha cucinato {kitchen_tempRecipeName}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     -> recipe_name_storage ->
 
 
@@ -86,13 +86,13 @@
     {
         - kitchen_firstRecipe == "":
             {debug_kitchen: il valore di kitchen_firstRecipe è {kitchen_firstRecipe} e quindi lo aggiorno.}
-                ~ kitchen_firstRecipe = tempRecipeName
+                ~ kitchen_firstRecipe = kitchen_tempRecipeName
             {debug_kitchen: il valore di kitchen_firstRecipe ora è {kitchen_firstRecipe}.}
                 ->->
         - kitchen_secondRecipe == "":
             {debug_kitchen: il valore di kitchen_firstRecipe è {kitchen_firstRecipe} e quindi non lo aggiorno.}
             {debug_kitchen: il valore di kitchen_secondRecipe è {kitchen_secondRecipe} e quindi lo aggiorno.}
-                ~ kitchen_secondRecipe = tempRecipeName
+                ~ kitchen_secondRecipe = kitchen_tempRecipeName
             {debug_kitchen: il valore di kitchen_secondRecipe ora è {kitchen_secondRecipe}.}
                 ->->
         
@@ -100,20 +100,20 @@
             {debug_kitchen: il valore di kitchen_firstRecipe è {kitchen_firstRecipe} e quindi non lo aggiorno.}
             {debug_kitchen: il valore di kitchen_secondRecipe è {kitchen_secondRecipe} e quindi non lo aggiorno.}
             {debug_kitchen: il valore di kitchen_thirdRecipe è {kitchen_thirdRecipe} è quindi non lo aggiorno.}
-                ~ kitchen_thirdRecipe = tempRecipeName
+                ~ kitchen_thirdRecipe = kitchen_tempRecipeName
             {debug_kitchen: il valore di kitchen_thirdRecipe ora è {kitchen_thirdRecipe}.}
                 ->-> 
         
         - kitchen_fourthRecipe == "":
-            ~ kitchen_fourthRecipe = tempRecipeName
+            ~ kitchen_fourthRecipe = kitchen_tempRecipeName
                 ->-> 
         
         - kitchen_fifthRecipe == "":
-            ~ kitchen_fifthRecipe = tempRecipeName 
+            ~ kitchen_fifthRecipe = kitchen_tempRecipeName 
                 ->-> 
         
         - kitchen_sixthRecipe == "":
-            ~ kitchen_sixthRecipe = tempRecipeName
+            ~ kitchen_sixthRecipe = kitchen_tempRecipeName
                 ->-> 
         
         - else:
@@ -141,14 +141,14 @@
  //badReaction, mehReaction, goodReaction
         //Se la lista è vuota
     + {findedGifts == ()} [Non ho nulla da aggiungere.]
-        ~ recipePP = "distratta"
+        ~ kitchen_recipePP = "distratta"
     
     + [Ho cambiato idea.]
-        ~ recipePP = "indecisa"
+        ~ kitchen_recipePP = "indecisa"
         
     + {findedGifts has BaccaDellaAddolorata} [Una bacca della Addolorata.]
         ~ findedGifts -= BaccaDellaAddolorata
-        ~ recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
          {
         - recoveredCultivables hasnt BaccaDellaAddolorata:
         ~ recoverableCultivables += BaccaDellaAddolorata
@@ -169,7 +169,7 @@
     
     + {findedGifts has BarbaDellInciampo} [Una spina di Barba dell'Inciampo.]
         ~ findedGifts -= BarbaDellInciampo
-        ~ recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
          {
         - recoveredCultivables hasnt BarbaDellInciampo:
         ~ recoverableCultivables += BarbaDellInciampo
@@ -194,7 +194,7 @@
         - recoveredCultivables hasnt BastoneDellOzioso:
         ~ recoverableCultivables += BastoneDellOzioso
     } 
-        ~ recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
                     ~ kitchen_firstCharExtraIngredientReaction = mehReaction
@@ -215,7 +215,7 @@
         - recoveredCultivables hasnt BrinaDellImpossibile:
         ~ recoverableCultivables += BrinaDellImpossibile
     } 
-        ~ recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
                     ~ kitchen_firstCharExtraIngredientReaction = badReaction
@@ -236,7 +236,7 @@
         - recoveredCultivables hasnt CantoDelleCompagne:
         ~ recoverableCultivables += CantoDelleCompagne
     } 
-        ~ recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
                     ~ kitchen_firstCharExtraIngredientReaction = goodReaction
@@ -257,7 +257,7 @@
         - recoveredCultivables hasnt CardoAspinato:
         ~ recoverableCultivables += CardoAspinato
     } 
-        ~ recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
                     ~ kitchen_firstCharExtraIngredientReaction = mehReaction
@@ -278,7 +278,7 @@
         - recoveredCultivables hasnt EderaDelleAmanti:
         ~ recoverableCultivables += EderaDelleAmanti
     } 
-        ~ recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
                     ~ kitchen_firstCharExtraIngredientReaction = badReaction
@@ -299,7 +299,7 @@
         - recoveredCultivables hasnt ErbaLiccia:
         ~ recoverableCultivables += ErbaLiccia
     } 
-        ~ recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
                     ~ kitchen_firstCharExtraIngredientReaction = mehReaction
@@ -320,7 +320,7 @@
         - recoveredCultivables hasnt FalsaPalude:
         ~ recoverableCultivables += FalsaPalude
     } 
-        ~ recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
                     ~ kitchen_firstCharExtraIngredientReaction = badReaction
@@ -341,7 +341,7 @@
         - recoveredCultivables hasnt LanaNotturna:
         ~ recoverableCultivables += LanaNotturna
     } 
-        ~ recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
                     ~ kitchen_firstCharExtraIngredientReaction = goodReaction
@@ -362,7 +362,7 @@
         - recoveredCultivables hasnt LicheneDegliAbissi:
         ~ recoverableCultivables += LicheneDegliAbissi
     } 
-        ~ recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
                     ~ kitchen_firstCharExtraIngredientReaction = badReaction
@@ -383,7 +383,7 @@
         - recoveredCultivables hasnt NonTiScordarDiTe:
         ~ recoverableCultivables += NonTiScordarDiTe
     } 
-        ~ recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
                     ~ kitchen_firstCharExtraIngredientReaction = goodReaction
@@ -404,7 +404,7 @@
         - recoveredCultivables hasnt Olobino:
         ~ recoverableCultivables += Olobino
     } 
-        ~ recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
                     ~ kitchen_firstCharExtraIngredientReaction = mehReaction
@@ -425,7 +425,7 @@
             - recoveredCultivables hasnt LaSpazzata:
                 ~ recoverableCultivables += LaSpazzata
         } 
-        ~ recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
                 - PNG == FirstCharacter:
                     ~ kitchen_firstCharExtraIngredientReaction = badReaction
@@ -442,7 +442,7 @@
 //Doni insoliti
     + {findedGifts has universalIngredient} [L'ingrediente universale della Rana.]
         ~ findedGifts -= universalIngredient
-        ~ recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
         
             {
                 - PNG == FirstCharacter:
@@ -540,11 +540,11 @@
     
 //Ne approfitto per svuotare i nomi
 //Svuoto i nomi
-    ~ recipeNoun = ""
-    ~ recipeAdjective = ""
-    ~ recipeComplement = ""
-    ~ recipePP = ""
-    ~ tempRecipeName = ""
+    ~ kitchen_recipeNoun = ""
+    ~ kitchen_recipeAdjective = ""
+    ~ kitchen_recipeComplement = ""
+    ~ kitchen_recipePP = ""
+    ~ kitchen_tempRecipeName = ""
 
 
 {debug_kitchen: dopo aver aggiornato i valori, il valore di storagePurple è {storagePurple}, di storageYellow {storageYellow}, storageBlue è {storageBlue}, di storageGreen {storageGreen}, di storageRed {storageRed}. cookingCompanion è {cookingCompanion}.} 

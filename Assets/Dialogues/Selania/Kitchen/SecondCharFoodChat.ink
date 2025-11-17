@@ -43,19 +43,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         A questo punto è Riccio a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.
         Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Sostantivo A]
-                ~ recipeNoun = "Sostantivo A"
+                ~ kitchen_recipeNoun = "Sostantivo A"
                
             + [Sostantivo B]
-                ~ recipeNoun = "Sostantivo B"
+                ~ kitchen_recipeNoun = "Sostantivo B"
              
             + [Sostantivo C]
-               ~ recipeNoun = "Sostantivo C"
+               ~ kitchen_recipeNoun = "Sostantivo C"
         
             + [Sostantivo D]
-                ~ recipeNoun = "Sostantivo D"
+                ~ kitchen_recipeNoun = "Sostantivo D"
     
             + [Sostantivo E]
-                ~ recipeNoun = "Sostantivo E"
+                ~ kitchen_recipeNoun = "Sostantivo E"
             -  
         Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Riccio dice un'altra cosa sul tema che stiamo esplorando.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -78,19 +78,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Riccio allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Step due: aggettivi (es: saporito, triste, colorato).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Aggettivo A]
-                ~ recipeAdjective = "Aggettivo A"
+                ~ kitchen_recipeAdjective = "Aggettivo A"
                
             + [Aggettivo B]
-                ~ recipeAdjective = "Aggettivo B"
+                ~ kitchen_recipeAdjective = "Aggettivo B"
              
             + [Aggettivo C]
-               ~ recipeAdjective = "Aggettivo C"
+               ~ kitchen_recipeAdjective = "Aggettivo C"
         
             + [Aggettivo D]
-                ~ recipeAdjective = "Aggettivo D"
+                ~ kitchen_recipeAdjective = "Aggettivo D"
     
             + [Aggettivo E]
-                ~ recipeAdjective = "Aggettivo E"
+                ~ kitchen_recipeAdjective = "Aggettivo E"
             -      
     
         Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -115,19 +115,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Riccio ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Step tre: complementi (es: del campo, per rimbecco, di coriandolo)#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Complemento A]
-                ~ recipeComplement = "Complemento A"
+                ~ kitchen_recipeComplement = "Complemento A"
                
             + [Complemento B]
-                ~ recipeComplement = "Complemento B"
+                ~ kitchen_recipeComplement = "Complemento B"
              
             + [Complemento C]
-               ~ recipeComplement = "Complemento C"
+               ~ kitchen_recipeComplement = "Complemento C"
         
             + [Complemento D]
-                ~ recipeComplement = "Complemento D"
+                ~ kitchen_recipeComplement = "Complemento D"
     
             + [Complemento E]
-                ~ recipeComplement = "Complemento E"
+                ~ kitchen_recipeComplement = "Complemento E"
             -  
         Riccio lascia un ultimo commento, e poi ci dice che il piatto è pronto#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             -> fourth_ingredient_dispatcher
@@ -154,19 +154,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         A questo punto è Riccio a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Sostantivo A]
-                ~ recipeNoun = "Sostantivo A"
+                ~ kitchen_recipeNoun = "Sostantivo A"
                
             + [Sostantivo B]
-                ~ recipeNoun = "Sostantivo B"
+                ~ kitchen_recipeNoun = "Sostantivo B"
              
             + [Sostantivo C]
-               ~ recipeNoun = "Sostantivo C"
+               ~ kitchen_recipeNoun = "Sostantivo C"
         
             + [Sostantivo D]
-                ~ recipeNoun = "Sostantivo D"
+                ~ kitchen_recipeNoun = "Sostantivo D"
     
             + [Sostantivo E]
-                ~ recipeNoun = "Sostantivo E"
+                ~ kitchen_recipeNoun = "Sostantivo E"
             -  
         Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Riccio dice un'altra cosa sul tema che stiamo esplorando.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -189,19 +189,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Riccio allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Step due: aggettivi (es: saporito, triste, colorato).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Aggettivo A]
-                ~ recipeAdjective = "Aggettivo A"
+                ~ kitchen_recipeAdjective = "Aggettivo A"
                
             + [Aggettivo B]
-                ~ recipeAdjective = "Aggettivo B"
+                ~ kitchen_recipeAdjective = "Aggettivo B"
              
             + [Aggettivo C]
-               ~ recipeAdjective = "Aggettivo C"
+               ~ kitchen_recipeAdjective = "Aggettivo C"
         
             + [Aggettivo D]
-                ~ recipeAdjective = "Aggettivo D"
+                ~ kitchen_recipeAdjective = "Aggettivo D"
     
             + [Aggettivo E]
-                ~ recipeAdjective = "Aggettivo E"
+                ~ kitchen_recipeAdjective = "Aggettivo E"
             -      
     
         Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -226,19 +226,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Riccio ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Step tre: complementi (es: del campo, per rimbecco, di coriandolo)#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Complemento A]
-                ~ recipeComplement = "Complemento A"
+                ~ kitchen_recipeComplement = "Complemento A"
                
             + [Complemento B]
-                ~ recipeComplement = "Complemento B"
+                ~ kitchen_recipeComplement = "Complemento B"
              
             + [Complemento C]
-               ~ recipeComplement = "Complemento C"
+               ~ kitchen_recipeComplement = "Complemento C"
         
             + [Complemento D]
-                ~ recipeComplement = "Complemento D"
+                ~ kitchen_recipeComplement = "Complemento D"
     
             + [Complemento E]
-                ~ recipeComplement = "Complemento E"
+                ~ kitchen_recipeComplement = "Complemento E"
             -  
         Riccio lascia un ultimo commento, e poi ci dice che il piatto è pronto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             -> fourth_ingredient_dispatcher
@@ -266,19 +266,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         A questo punto è Riccio a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Sostantivo A]
-                ~ recipeNoun = "Sostantivo A"
+                ~ kitchen_recipeNoun = "Sostantivo A"
                
             + [Sostantivo B]
-                ~ recipeNoun = "Sostantivo B"
+                ~ kitchen_recipeNoun = "Sostantivo B"
              
             + [Sostantivo C]
-               ~ recipeNoun = "Sostantivo C"
+               ~ kitchen_recipeNoun = "Sostantivo C"
         
             + [Sostantivo D]
-                ~ recipeNoun = "Sostantivo D"
+                ~ kitchen_recipeNoun = "Sostantivo D"
     
             + [Sostantivo E]
-                ~ recipeNoun = "Sostantivo E"
+                ~ kitchen_recipeNoun = "Sostantivo E"
             -  
         Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Riccio dice un'altra cosa sul tema che stiamo esplorando.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -301,19 +301,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Riccio allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Step due: aggettivi (es: saporito, triste, colorato).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Aggettivo A]
-                ~ recipeAdjective = "Aggettivo A"
+                ~ kitchen_recipeAdjective = "Aggettivo A"
                
             + [Aggettivo B]
-                ~ recipeAdjective = "Aggettivo B"
+                ~ kitchen_recipeAdjective = "Aggettivo B"
              
             + [Aggettivo C]
-               ~ recipeAdjective = "Aggettivo C"
+               ~ kitchen_recipeAdjective = "Aggettivo C"
         
             + [Aggettivo D]
-                ~ recipeAdjective = "Aggettivo D"
+                ~ kitchen_recipeAdjective = "Aggettivo D"
     
             + [Aggettivo E]
-                ~ recipeAdjective = "Aggettivo E"
+                ~ kitchen_recipeAdjective = "Aggettivo E"
             -      
     
         Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -338,19 +338,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Riccio ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Step tre: complementi (es: del campo, per rimbecco, di coriandolo).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             + [Complemento A]
-                ~ recipeComplement = "Complemento A"
+                ~ kitchen_recipeComplement = "Complemento A"
                
             + [Complemento B]
-                ~ recipeComplement = "Complemento B"
+                ~ kitchen_recipeComplement = "Complemento B"
              
             + [Complemento C]
-               ~ recipeComplement = "Complemento C"
+               ~ kitchen_recipeComplement = "Complemento C"
         
             + [Complemento D]
-                ~ recipeComplement = "Complemento D"
+                ~ kitchen_recipeComplement = "Complemento D"
     
             + [Complemento E]
-                ~ recipeComplement = "Complemento E"
+                ~ kitchen_recipeComplement = "Complemento E"
             -  
         Riccio lascia un ultimo commento, e poi ci dice che il piatto è pronto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             -> fourth_ingredient_dispatcher
@@ -376,7 +376,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
                         -> extra_ingredient_management(SecondCharacter)->
                     
                     + Preferisco evitare.
-                        ~ recipePP = "semplice"
+                        ~ kitchen_recipePP = "semplice"
                     -
             
                 //Per riccio devo aumentare il valore di tre, perché ho compiuto tre scelte, e mi serve per il calcolo dell'affinità
@@ -394,10 +394,10 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
     ~ move_entity(CookingWithSecondCharOBJ, Kitchen)
     ~ move_entity(EatingWithSecondCharOBJ, Kitchen)
     Passiamo alla scena al tavolo con Riccio.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-    Buono questo {tempRecipeName}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+    Buono questo {kitchen_tempRecipeName}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     //Commento ricetta
-    Quando prima hai aggiunto {recipeNoun} mi hai ricordato una cosa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-    E con {recipeAdjective} un'altra, e con {recipeComplement} un'altra ancora.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+    Quando prima hai aggiunto {kitchen_recipeNoun} mi hai ricordato una cosa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+    E con {kitchen_recipeAdjective} un'altra, e con {kitchen_recipeComplement} un'altra ancora.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             {
                 - kitchen_secondCharExtraIngredientReaction != notReaction:
                     -> extra_ing_feedback

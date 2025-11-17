@@ -42,19 +42,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         A questo punto è chitarra a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             + [Sostantivo A]
-                ~ recipeNoun = "Sostantivo A"
+                ~ kitchen_recipeNoun = "Sostantivo A"
                
             + [Sostantivo B]
-                ~ recipeNoun = "Sostantivo B"
+                ~ kitchen_recipeNoun = "Sostantivo B"
              
             + [Sostantivo C]
-               ~ recipeNoun = "Sostantivo C"
+               ~ kitchen_recipeNoun = "Sostantivo C"
         
             + [Sostantivo D]
-                ~ recipeNoun = "Sostantivo D"
+                ~ kitchen_recipeNoun = "Sostantivo D"
     
             + [Sostantivo E]
-                ~ recipeNoun = "Sostantivo E"
+                ~ kitchen_recipeNoun = "Sostantivo E"
             -  
         Chitarra commenta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Chitarra dice un'altra cosa sul tema che stiamo esplorando.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -77,19 +77,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Chitarra allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Step due: aggettivi (es: saporito, triste, colorato).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             + [Aggettivo A]
-                ~ recipeAdjective = "Aggettivo A"
+                ~ kitchen_recipeAdjective = "Aggettivo A"
                
             + [Aggettivo B]
-                ~ recipeAdjective = "Aggettivo B"
+                ~ kitchen_recipeAdjective = "Aggettivo B"
              
             + [Aggettivo C]
-               ~ recipeAdjective = "Aggettivo C"
+               ~ kitchen_recipeAdjective = "Aggettivo C"
         
             + [Aggettivo D]
-                ~ recipeAdjective = "Aggettivo D"
+                ~ kitchen_recipeAdjective = "Aggettivo D"
     
             + [Aggettivo E]
-                ~ recipeAdjective = "Aggettivo E"
+                ~ kitchen_recipeAdjective = "Aggettivo E"
             -      
     
         Chitarra commenta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -114,19 +114,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Chitarra ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Step tre: complementi (es: del campo, per rimbecco, di coriandolo).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             + [Complemento A]
-                ~ recipeComplement = "Complemento A"
+                ~ kitchen_recipeComplement = "Complemento A"
                
             + [Complemento B]
-                ~ recipeComplement = "Complemento B"
+                ~ kitchen_recipeComplement = "Complemento B"
              
             + [Complemento C]
-               ~ recipeComplement = "Complemento C"
+               ~ kitchen_recipeComplement = "Complemento C"
         
             + [Complemento D]
-                ~ recipeComplement = "Complemento D"
+                ~ kitchen_recipeComplement = "Complemento D"
     
             + [Complemento E]
-                ~ recipeComplement = "Complemento E"
+                ~ kitchen_recipeComplement = "Complemento E"
             -  
         Chitarra lascia un ultimo commento, e poi ci dice che il piatto è pronto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             -> fourth_ingredient_dispatcher
@@ -154,19 +154,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         A questo punto è chitarra a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             + [Sostantivo A]
-                ~ recipeNoun = "Sostantivo A"
+                ~ kitchen_recipeNoun = "Sostantivo A"
                
             + [Sostantivo B]
-                ~ recipeNoun = "Sostantivo B"
+                ~ kitchen_recipeNoun = "Sostantivo B"
              
             + [Sostantivo C]
-               ~ recipeNoun = "Sostantivo C"
+               ~ kitchen_recipeNoun = "Sostantivo C"
         
             + [Sostantivo D]
-                ~ recipeNoun = "Sostantivo D"
+                ~ kitchen_recipeNoun = "Sostantivo D"
     
             + [Sostantivo E]
-                ~ recipeNoun = "Sostantivo E"
+                ~ kitchen_recipeNoun = "Sostantivo E"
             -  
         Chitarra commenta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Chitarra dice un'altra cosa sul tema che stiamo esplorando.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -189,19 +189,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Chitarra allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Step due: aggettivi (es: saporito, triste, colorato).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             + [Aggettivo A]
-                ~ recipeAdjective = "Aggettivo A"
+                ~ kitchen_recipeAdjective = "Aggettivo A"
                
             + [Aggettivo B]
-                ~ recipeAdjective = "Aggettivo B"
+                ~ kitchen_recipeAdjective = "Aggettivo B"
              
             + [Aggettivo C]
-               ~ recipeAdjective = "Aggettivo C"
+               ~ kitchen_recipeAdjective = "Aggettivo C"
         
             + [Aggettivo D]
-                ~ recipeAdjective = "Aggettivo D"
+                ~ kitchen_recipeAdjective = "Aggettivo D"
     
             + [Aggettivo E]
-                ~ recipeAdjective = "Aggettivo E"
+                ~ kitchen_recipeAdjective = "Aggettivo E"
             -      
     
         Chitarra commenta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -226,19 +226,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Chitarra ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Step tre: complementi (es: del campo, per rimbecco, di coriandolo)#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             + [Complemento A]
-                ~ recipeComplement = "Complemento A"
+                ~ kitchen_recipeComplement = "Complemento A"
                
             + [Complemento B]
-                ~ recipeComplement = "Complemento B"
+                ~ kitchen_recipeComplement = "Complemento B"
              
             + [Complemento C]
-               ~ recipeComplement = "Complemento C"
+               ~ kitchen_recipeComplement = "Complemento C"
         
             + [Complemento D]
-                ~ recipeComplement = "Complemento D"
+                ~ kitchen_recipeComplement = "Complemento D"
     
             + [Complemento E]
-                ~ recipeComplement = "Complemento E"
+                ~ kitchen_recipeComplement = "Complemento E"
             -  
         Chitarra lascia un ultimo commento, e poi ci dice che il piatto è pronto#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             -> fourth_ingredient_dispatcher
@@ -267,19 +267,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         A questo punto è chitarra a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             + [Sostantivo A]
-                ~ recipeNoun = "Sostantivo A"
+                ~ kitchen_recipeNoun = "Sostantivo A"
                
             + [Sostantivo B]
-                ~ recipeNoun = "Sostantivo B"
+                ~ kitchen_recipeNoun = "Sostantivo B"
              
             + [Sostantivo C]
-               ~ recipeNoun = "Sostantivo C"
+               ~ kitchen_recipeNoun = "Sostantivo C"
         
             + [Sostantivo D]
-                ~ recipeNoun = "Sostantivo D"
+                ~ kitchen_recipeNoun = "Sostantivo D"
     
             + [Sostantivo E]
-                ~ recipeNoun = "Sostantivo E"
+                ~ kitchen_recipeNoun = "Sostantivo E"
             -  
         Chitarra commenta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Chitarra dice un'altra cosa sul tema che stiamo esplorando.
@@ -302,19 +302,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Chitarra allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Step due: aggettivi (es: saporito, triste, colorato).
             + [Aggettivo A]
-                ~ recipeAdjective = "Aggettivo A"
+                ~ kitchen_recipeAdjective = "Aggettivo A"
                
             + [Aggettivo B]
-                ~ recipeAdjective = "Aggettivo B"
+                ~ kitchen_recipeAdjective = "Aggettivo B"
              
             + [Aggettivo C]
-               ~ recipeAdjective = "Aggettivo C"
+               ~ kitchen_recipeAdjective = "Aggettivo C"
         
             + [Aggettivo D]
-                ~ recipeAdjective = "Aggettivo D"
+                ~ kitchen_recipeAdjective = "Aggettivo D"
     
             + [Aggettivo E]
-                ~ recipeAdjective = "Aggettivo E"
+                ~ kitchen_recipeAdjective = "Aggettivo E"
             -      
     
         Chitarra commenta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -339,19 +339,19 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         Chitarra ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Step tre: complementi (es: del campo, per rimbecco, di coriandolo)
             + [Complemento A]
-                ~ recipeComplement = "Complemento A"
+                ~ kitchen_recipeComplement = "Complemento A"
                
             + [Complemento B]
-                ~ recipeComplement = "Complemento B"
+                ~ kitchen_recipeComplement = "Complemento B"
              
             + [Complemento C]
-               ~ recipeComplement = "Complemento C"
+               ~ kitchen_recipeComplement = "Complemento C"
         
             + [Complemento D]
-                ~ recipeComplement = "Complemento D"
+                ~ kitchen_recipeComplement = "Complemento D"
     
             + [Complemento E]
-                ~ recipeComplement = "Complemento E"
+                ~ kitchen_recipeComplement = "Complemento E"
             -  
         Chitarra lascia un ultimo commento, e poi ci dice che il piatto è pronto#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             -> fourth_ingredient_dispatcher
@@ -375,7 +375,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
                             -> extra_ingredient_management(FirstCharacter)->
                             
                         + Preferisco evitare.
-                            ~ recipePP = "semplice"
+                            ~ kitchen_recipePP = "semplice"
         
                         -
                         
@@ -389,10 +389,10 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
     ~ move_entity(CookingWithFirstCharOBJ, Kitchen)
     ~ move_entity(EatingWithFirstCharOBJ, Kitchen)
     Passiamo alla scena al tavolo con Chitarra#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-    Buono questo {tempRecipeName}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+    Buono questo {kitchen_tempRecipeName}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     //Commento ricetta
-    Quando prima hai aggiunto {recipeNoun} mi hai ricordato una cosa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-    E con {recipeAdjective} un'altra, e con {recipeComplement} un'altra ancora.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+    Quando prima hai aggiunto {kitchen_recipeNoun} mi hai ricordato una cosa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+    E con {kitchen_recipeAdjective} un'altra, e con {kitchen_recipeComplement} un'altra ancora.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             {
                 - kitchen_firstCharExtraIngredientReaction != notReaction:
                     -> extra_ing_feedback
