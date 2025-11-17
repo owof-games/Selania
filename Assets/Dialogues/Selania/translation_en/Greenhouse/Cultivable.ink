@@ -3,101 +3,101 @@
 === growing_check
 {
     - growing < 2:
-        ~ growStep = ()
-        ~ growStep += stepZero
+        ~ greenhouse_growStep = ()
+        ~ greenhouse_growStep += stepZero
     - growing < 3:
-        ~ growStep = ()
-        ~ growStep += stepOne    
+        ~ greenhouse_growStep = ()
+        ~ greenhouse_growStep += stepOne    
     - growing < 4:
-        ~ growStep = ()
-        ~ growStep += stepTwo
+        ~ greenhouse_growStep = ()
+        ~ greenhouse_growStep += stepTwo
     - else:
-        ~ growStep = ()
-        ~ growStep += stepThree
+        ~ greenhouse_growStep = ()
+        ~ greenhouse_growStep += stepThree
 
 }
 {
     - chosenCultivable has LicheneDegliAbissi:
     {
-        - growStep has stepZero:
+        - greenhouse_growStep has stepZero:
             ~ statoLicheneDegliAbissi = stepZero
-        - growStep has stepOne:
+        - greenhouse_growStep has stepOne:
             ~ statoLicheneDegliAbissi = stepOne
-        - growStep has stepTwo:
+        - greenhouse_growStep has stepTwo:
             ~ statoLicheneDegliAbissi = stepTwo
-        - growStep has stepThree:
+        - greenhouse_growStep has stepThree:
             ~ statoLicheneDegliAbissi = stepThree
     }
 
     - chosenCultivable has MuschioDelleAmanti:
     {
-        - growStep has stepZero:
+        - greenhouse_growStep has stepZero:
             ~ statoMuschioDelleAmanti = stepZero
-        - growStep has stepOne:
+        - greenhouse_growStep has stepOne:
             ~ statoMuschioDelleAmanti = stepOne
-        - growStep has stepTwo:
+        - greenhouse_growStep has stepTwo:
             ~ statoMuschioDelleAmanti = stepTwo
-        - growStep has stepThree:
+        - greenhouse_growStep has stepThree:
              ~ statoMuschioDelleAmanti = stepThree
     }
 
     - chosenCultivable has CantoDelleCompagne:
     {
-        - growStep has stepZero:
+        - greenhouse_growStep has stepZero:
             ~ statoCantoDelleCompagne = stepZero
-        - growStep has stepOne:
+        - greenhouse_growStep has stepOne:
             ~ statoCantoDelleCompagne = stepOne
-        - growStep has stepTwo:
+        - greenhouse_growStep has stepTwo:
             ~ statoCantoDelleCompagne = stepTwo
-        - growStep has stepThree:
+        - greenhouse_growStep has stepThree:
              ~ statoCantoDelleCompagne = stepThree
     }
 
     - chosenCultivable has LaSpazzata:
     {
-        - growStep has stepZero:
+        - greenhouse_growStep has stepZero:
             ~ statoLaSpazzata = stepZero
-        - growStep has stepOne:
+        - greenhouse_growStep has stepOne:
             ~ statoLaSpazzata = stepOne
-        - growStep has stepTwo:
+        - greenhouse_growStep has stepTwo:
             ~ statoLaSpazzata = stepTwo
-        - growStep has stepThree:
+        - greenhouse_growStep has stepThree:
             ~ statoLaSpazzata = stepThree
     }
 
     - chosenCultivable has BaccaDellaAddolorata:
     {
-        - growStep has stepZero:
+        - greenhouse_growStep has stepZero:
             ~ statoBaccaDellaAddolorata = stepZero
-        - growStep has stepOne:
+        - greenhouse_growStep has stepOne:
             ~ statoBaccaDellaAddolorata = stepOne
-        - growStep has stepTwo:
+        - greenhouse_growStep has stepTwo:
             ~ statoBaccaDellaAddolorata = stepTwo
-        - growStep has stepThree:
+        - greenhouse_growStep has stepThree:
             ~ statoBaccaDellaAddolorata = stepThree
     }
 
     - chosenCultivable has NonTiScordarDiTe:
     {
-        - growStep has stepZero:
+        - greenhouse_growStep has stepZero:
             ~ statoNonTiScordarDiTe = stepZero
-        - growStep has stepOne:
+        - greenhouse_growStep has stepOne:
             ~ statoNonTiScordarDiTe = stepOne
-        - growStep has stepTwo:
+        - greenhouse_growStep has stepTwo:
             ~ statoNonTiScordarDiTe = stepTwo
-        - growStep has stepThree:
+        - greenhouse_growStep has stepThree:
             ~ statoNonTiScordarDiTe = stepThree
     }
 
     - chosenCultivable has BrinaDellImpossibile:
     {
-        - growStep has stepZero:
+        - greenhouse_growStep has stepZero:
             ~ statoBrinaDellImpossibile = stepZero
-        - growStep has stepOne:
+        - greenhouse_growStep has stepOne:
             ~ statoBrinaDellImpossibile = stepOne
-        - growStep has stepTwo:
+        - greenhouse_growStep has stepTwo:
             ~ statoBrinaDellImpossibile = stepTwo
-        - growStep has stepThree:
+        - greenhouse_growStep has stepThree:
              ~ statoBrinaDellImpossibile = stepThree
     }    
     ->->
