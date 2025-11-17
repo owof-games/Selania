@@ -56,7 +56,7 @@
         
     //Missione due: coltivare almeno tre piante in serra.
         {
-            - LIST_COUNT(backupCultivable) < 12 && availableMissions has missionTwo:
+            - LIST_COUNT(greenhouse_backupCultivable) < 12 && availableMissions has missionTwo:
                 ~ availableMissions -= missionTwo
                 
                 Stavo per chiederti di coltivare almeno tre piante in serra, ma ho visto che hai già fatto senza di me! Per cui: ecco il tuo dono!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -210,7 +210,7 @@
             
         - missionTwo:
             {
-                - LIST_COUNT(backupCultivable) < 12:
+                - LIST_COUNT(greenhouse_backupCultivable) < 12:
                     La serra sta crescendo grazie a te, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ availableMissions -= missionTwo
@@ -535,7 +535,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
                     
                 - activeMissions has missionTwo:
                     {
-                        - LIST_COUNT(backupCultivable) < 12:
+                        - LIST_COUNT(greenhouse_backupCultivable) < 12:
                             -> notification
                         
                         - else:

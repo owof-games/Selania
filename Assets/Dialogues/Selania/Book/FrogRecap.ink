@@ -14,7 +14,7 @@ C'è una rana bluastra dalle parti dello stagno, e sembra propensa a darmi una m
             Mi ha invitato a leggere questo libro, e poi tornare da lei.
             
         - missionTwo:
-            Mi ha chiesto di coltivare almeno tre piante alla serra prima di tornare da lei. Ad ora ne ho coltivate: {14 - LIST_COUNT(backupCultivable)}.
+            Mi ha chiesto di coltivare almeno tre piante alla serra prima di tornare da lei. Ad ora ne ho coltivate: {14 - LIST_COUNT(greenhouse_backupCultivable)}.
             //Nota: questa cosa potrebbe generare errori se viene levata una pianta per via del trigger warning.
             
         - missionThree:

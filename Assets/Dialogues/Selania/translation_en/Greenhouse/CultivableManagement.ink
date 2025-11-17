@@ -1,7 +1,7 @@
 LIST greenhouse_growStep = notStarted, stepZero, stepOne, stepTwo, stepThree
 
 //QUESTA LISTA LA USO PER GESTIRE LA PESCATA O MENO DEI COLTIVABILI
-VAR backupCultivable = (LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
+VAR greenhouse_backupCultivable = (LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile)
 
 VAR statoCantoDelleCompagne = notStarted
 VAR statoLicheneDegliAbissi = notStarted
@@ -65,7 +65,7 @@ VAR growing = 0
 
 === test
 {debug_cultivable: <i>Sono passato da <i>test.}
-{debug_cultivable: <i>Gli elementi ancora coltivabili sono: {backupCultivable}.<i>}
+{debug_cultivable: <i>Gli elementi ancora coltivabili sono: {greenhouse_backupCultivable}.<i>}
 
 {
     - counter < 2:
@@ -85,9 +85,9 @@ VAR growing = 0
     - randomCounter == maxRandomCounter:
         {debug_cultivable: <i>randomCounter {randomCounter} ha raggiunto il livello massimo {maxRandomCounter}.}
         {
-            - backupCultivable != ():
-                ~ chosenCultivable = LIST_RANDOM(backupCultivable)
-                {debug_cultivable: <i>Erano presenti ancora coltivabili in backupCultivable e ho estratto {chosenCultivable}.}
+            - greenhouse_backupCultivable != ():
+                ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
+                {debug_cultivable: <i>Erano presenti ancora coltivabili in greenhouse_backupCultivable e ho estratto {chosenCultivable}.}
                 -> remove_fungo_proposto
             - else:
             <i>In questo momento non è possibile coltivare altro.
@@ -707,7 +707,7 @@ QUESTIONS
     - cropsType == (collaborazione, ciclicità):{
         - LIST_RANDOM(pianteCollaborazione ^ pianteCiclicità) == ():
             {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
-            ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+            ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
             {debug_cultivable: <i>Il fungo proposto è {chosenCultivable}.}   
                 -> remove_fungo_proposto
             
@@ -715,12 +715,12 @@ QUESTIONS
         {debug_cultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
                 ~ chosenCultivable = LIST_RANDOM(pianteCollaborazione ^ pianteCiclicità)
                 {
-                    - backupCultivable has chosenCultivable:
-                    {debug_cultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
+                    - greenhouse_backupCultivable has chosenCultivable:
+                    {debug_cultivable: <i>greenhouse_backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
                         -> remove_fungo_proposto
                     //Questo è un check extra: non dovrebbe mai accadere, ma non si sa mai.    
-                    - backupCultivable hasnt chosenCultivable:
-                    {debug_cultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
+                    - greenhouse_backupCultivable hasnt chosenCultivable:
+                    {debug_cultivable: <i>greenhouse_backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                         -> results
                 }
     }
@@ -729,7 +729,7 @@ QUESTIONS
     - cropsType == (collaborazione, novità): {
         - LIST_RANDOM(pianteCollaborazione ^ pianteNovità) == ():
             {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.} 
-                ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+                ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
             {debug_cultivable: <i> Il fungo proposto è {chosenCultivable}.}   
             -> remove_fungo_proposto
             
@@ -737,11 +737,11 @@ QUESTIONS
         {debug_cultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
                 ~ chosenCultivable = LIST_RANDOM(pianteCollaborazione ^ pianteNovità)
                 {
-                - backupCultivable has chosenCultivable:
-                {debug_cultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
+                - greenhouse_backupCultivable has chosenCultivable:
+                {debug_cultivable: <i>greenhouse_backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
                     -> remove_fungo_proposto
-                - backupCultivable hasnt chosenCultivable:
-                {debug_cultivable: <i> backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
+                - greenhouse_backupCultivable hasnt chosenCultivable:
+                {debug_cultivable: <i> greenhouse_backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
                 }
         }
@@ -750,7 +750,7 @@ QUESTIONS
     - cropsType == (collaborazione, cancellazione):{
         - LIST_RANDOM(pianteCollaborazione ^ pianteCancellazione) == ():
         {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
-            ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+            ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
             {debug_cultivable: <i>Il fungo proposto è {chosenCultivable}.}   
             -> remove_fungo_proposto
             
@@ -758,11 +758,11 @@ QUESTIONS
         {debug_cultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ chosenCultivable = LIST_RANDOM(pianteCollaborazione ^ pianteCancellazione)
                 {
-                - backupCultivable has chosenCultivable:
-                {debug_cultivable: <i> backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
+                - greenhouse_backupCultivable has chosenCultivable:
+                {debug_cultivable: <i> greenhouse_backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
                     -> remove_fungo_proposto
-                - backupCultivable hasnt chosenCultivable:
-                {debug_cultivable: <i> backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
+                - greenhouse_backupCultivable hasnt chosenCultivable:
+                {debug_cultivable: <i> greenhouse_backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
                 }
         }
@@ -771,7 +771,7 @@ QUESTIONS
     - cropsType == (collaborazione, ricordo):{
         - LIST_RANDOM(pianteCollaborazione ^ pianteRicordo) == ():
         {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
-            ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+            ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
             {debug_cultivable: <i>Il fungo proposto è {chosenCultivable}.}   
             -> remove_fungo_proposto
             
@@ -779,11 +779,11 @@ QUESTIONS
         {debug_cultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ chosenCultivable = LIST_RANDOM(pianteCollaborazione ^ pianteRicordo)
                 {
-                - backupCultivable has chosenCultivable:
-                {debug_cultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
+                - greenhouse_backupCultivable has chosenCultivable:
+                {debug_cultivable: <i>greenhouse_backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
                     -> remove_fungo_proposto
-                - backupCultivable hasnt chosenCultivable:
-                {debug_cultivable:<i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
+                - greenhouse_backupCultivable hasnt chosenCultivable:
+                {debug_cultivable:<i>greenhouse_backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
                 }
         }
@@ -793,7 +793,7 @@ QUESTIONS
     - cropsType == (indipendenza, ciclicità):{
         - LIST_RANDOM(pianteIndipendenza ^ pianteCiclicità) == ():
        {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
-            ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+            ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
             {debug_cultivable: <i> Il fungo proposto è {chosenCultivable}.}   
             -> remove_fungo_proposto
             
@@ -801,11 +801,11 @@ QUESTIONS
         {debug_cultivable: <i> Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ chosenCultivable = LIST_RANDOM(pianteIndipendenza ^ pianteCiclicità)
                 {
-                - backupCultivable has chosenCultivable:
-                {debug_cultivable: <i> backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
+                - greenhouse_backupCultivable has chosenCultivable:
+                {debug_cultivable: <i> greenhouse_backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
                     -> remove_fungo_proposto
-                - backupCultivable hasnt chosenCultivable:
-                {debug_cultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
+                - greenhouse_backupCultivable hasnt chosenCultivable:
+                {debug_cultivable: <i>greenhouse_backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
                 }
         }
@@ -813,7 +813,7 @@ QUESTIONS
     - cropsType == (indipendenza, novità):{
         - LIST_RANDOM(pianteIndipendenza ^ pianteNovità) == ():
         {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
-            ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+            ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
             {debug_cultivable: <i> Il fungo proposto è {chosenCultivable}.}   
             -> remove_fungo_proposto
             
@@ -821,11 +821,11 @@ QUESTIONS
         {debug_cultivable: <i> Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ chosenCultivable = LIST_RANDOM(pianteIndipendenza ^ pianteNovità)
                 {
-                - backupCultivable has chosenCultivable:
-                {debug_cultivable: <i> backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
+                - greenhouse_backupCultivable has chosenCultivable:
+                {debug_cultivable: <i> greenhouse_backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
                     -> remove_fungo_proposto
-                - backupCultivable hasnt chosenCultivable:
-                {debug_cultivable: <i> backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
+                - greenhouse_backupCultivable hasnt chosenCultivable:
+                {debug_cultivable: <i> greenhouse_backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
                 }
         }
@@ -833,18 +833,18 @@ QUESTIONS
     - cropsType == (indipendenza, cancellazione): {
         - LIST_RANDOM(pianteIndipendenza ^ pianteCancellazione) == ():
         {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
-            ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+            ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
             {debug_cultivable: <i>Il fungo proposto è {chosenCultivable}.}   
             -> remove_fungo_proposto
         - else:
         {debug_cultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ chosenCultivable = LIST_RANDOM(pianteIndipendenza ^ pianteCancellazione)
                 {
-                - backupCultivable has chosenCultivable:
-                {debug_cultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
+                - greenhouse_backupCultivable has chosenCultivable:
+                {debug_cultivable: <i>greenhouse_backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
                     -> remove_fungo_proposto
-                - backupCultivable hasnt chosenCultivable:
-                {debug_cultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
+                - greenhouse_backupCultivable hasnt chosenCultivable:
+                {debug_cultivable: <i>greenhouse_backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
                 }
             }
@@ -852,7 +852,7 @@ QUESTIONS
     - cropsType == (indipendenza, ricordo): {
         - LIST_RANDOM(pianteIndipendenza ^ pianteRicordo) == ():
         {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
-            ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+            ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
             {debug_cultivable: <i>Il fungo proposto è {chosenCultivable}.}   
             -> remove_fungo_proposto
             
@@ -860,11 +860,11 @@ QUESTIONS
         {debug_cultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ chosenCultivable = LIST_RANDOM(pianteIndipendenza ^ pianteRicordo)
                 {
-                - backupCultivable has chosenCultivable:
-                {debug_cultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
+                - greenhouse_backupCultivable has chosenCultivable:
+                {debug_cultivable: <i>greenhouse_backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
                     -> remove_fungo_proposto
-                - backupCultivable hasnt chosenCultivable:
-                {debug_cultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
+                - greenhouse_backupCultivable hasnt chosenCultivable:
+                {debug_cultivable: <i>greenhouse_backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
                 }
         }
@@ -872,7 +872,7 @@ QUESTIONS
     - cropsType == (ciclicità, cancellazione):{
         - LIST_RANDOM(pianteCiclicità ^ pianteCancellazione) == ():
         {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
-            ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+            ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
             {debug_cultivable: <i>Il fungo proposto è {chosenCultivable}.}   
             -> remove_fungo_proposto
             
@@ -880,11 +880,11 @@ QUESTIONS
         {debug_cultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ chosenCultivable = LIST_RANDOM(pianteCiclicità ^ pianteCancellazione)
                 {
-                - backupCultivable has chosenCultivable:
-                {debug_cultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
+                - greenhouse_backupCultivable has chosenCultivable:
+                {debug_cultivable: <i>greenhouse_backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
                     -> remove_fungo_proposto
-                - backupCultivable hasnt chosenCultivable:
-                {debug_cultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
+                - greenhouse_backupCultivable hasnt chosenCultivable:
+                {debug_cultivable: <i>greenhouse_backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
                 }
         }
@@ -892,7 +892,7 @@ QUESTIONS
     - cropsType == (ciclicità, ricordo):{
         - LIST_RANDOM(pianteCiclicità ^ pianteRicordo) == ():
         {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
-            ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+            ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
          {debug_cultivable: <i>Il fungo proposto è {chosenCultivable}.}   
             -> remove_fungo_proposto
             
@@ -900,11 +900,11 @@ QUESTIONS
         {debug_cultivable:<i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ chosenCultivable = LIST_RANDOM(pianteCiclicità ^ pianteRicordo)
                 {
-                - backupCultivable has chosenCultivable:
-                {debug_cultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
+                - greenhouse_backupCultivable has chosenCultivable:
+                {debug_cultivable: <i>greenhouse_backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
                     -> remove_fungo_proposto
-                - backupCultivable hasnt chosenCultivable:
-                {debug_cultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
+                - greenhouse_backupCultivable hasnt chosenCultivable:
+                {debug_cultivable: <i>greenhouse_backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
                 }
         }
@@ -912,7 +912,7 @@ QUESTIONS
     - cropsType == (novità, cancellazione):{
         - LIST_RANDOM(pianteCancellazione ^ pianteNovità) == ():
         {debug_cultivable:<i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
-            ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+            ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
             {debug_cultivable: <i>Il fungo proposto è {chosenCultivable}.}   
             -> remove_fungo_proposto
             
@@ -920,11 +920,11 @@ QUESTIONS
         {debug_cultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ chosenCultivable = LIST_RANDOM(pianteNovità ^ pianteCancellazione)
                 {
-                - backupCultivable has chosenCultivable:
-                {debug_cultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
+                - greenhouse_backupCultivable has chosenCultivable:
+                {debug_cultivable: <i>greenhouse_backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
                     -> remove_fungo_proposto
-                - backupCultivable hasnt chosenCultivable:
-                {debug_cultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
+                - greenhouse_backupCultivable hasnt chosenCultivable:
+                {debug_cultivable: <i>greenhouse_backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
                 }
         }
@@ -932,7 +932,7 @@ QUESTIONS
     - cropsType == (novità, ricordo): {
         - LIST_RANDOM(pianteRicordo ^ pianteNovità) == ():
         {debug_cultivable: <i>Non ci sono elementi in comune tra le liste o una delle liste è vuota, e quindi pesco il coltivabile dal backup.}
-            ~ chosenCultivable = LIST_RANDOM(backupCultivable)
+            ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
             {debug_cultivable: <i>il fungo proposto è {chosenCultivable}.}   
             -> remove_fungo_proposto
             
@@ -940,11 +940,11 @@ QUESTIONS
         {debug_cultivable: <i>Le due liste hanno ancora elementi coltivabili, e per questo pesco dalla loro intersezione.}
             ~ chosenCultivable = LIST_RANDOM(pianteNovità ^ pianteRicordo)
                 {
-                - backupCultivable has chosenCultivable:
-                {debug_cultivable: <i>backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
+                - greenhouse_backupCultivable has chosenCultivable:
+                {debug_cultivable: <i>greenhouse_backupCultivable contiene {chosenCultivable} e per questo lo rimuovo}
                     -> remove_fungo_proposto
-                - backupCultivable hasnt chosenCultivable:
-                {debug_cultivable: <i>backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
+                - greenhouse_backupCultivable hasnt chosenCultivable:
+                {debug_cultivable: <i>greenhouse_backupCultivable non contiene {chosenCultivable} e per questo rilancio "results".}
                     -> results
                 }
         }
@@ -952,8 +952,8 @@ QUESTIONS
     
     - else:
     {debug_cultivable: <i>Passo da else nella lista cropsType perché non c'è un fungo adatto.}
-         ~ chosenCultivable = LIST_RANDOM(backupCultivable)
-         ~ backupCultivable -= chosenCultivable
+         ~ chosenCultivable = LIST_RANDOM(greenhouse_backupCultivable)
+         ~ greenhouse_backupCultivable -= chosenCultivable
     {debug_cultivable: Il fungo proposto è {chosenCultivable}.}      
         -> remove_fungo_proposto
     
@@ -989,7 +989,7 @@ QUESTIONS
 
  
 {debug_cultivable: <i>Entro in da_lista_a_coltivazioni. Il valore di counter è {counter}, il valore di growing è {growing}. firstQuest è {firstQuest}, secondQuest è {secondQuest}, thirdQuest è {thirdQuest}.}
-{debug_cultivable: <i>Gli elementi ancora coltivabili sono: {backupCultivable}.<i>}
+{debug_cultivable: <i>Gli elementi ancora coltivabili sono: {greenhouse_backupCultivable}.<i>}
 {debug_cultivable: <i>Svuoto lista tipo Coltivazioni. Il contenuto di tipo Coltivazioni ora è {cropsType}.}
 {debug_cultivable: <i>Svuoto lista firstAnswerTracker. Il contenuto di tipo firstAnswerTracker ora è {firstAnswerTracker==(): vuota|piena}.}
     -> chosen_cultivable
@@ -1050,8 +1050,8 @@ QUESTIONS
     {debug_cultivable: <i>piante cancellazione.}    
 }
 {
-    - backupCultivable has chosenCultivable:
-        ~ backupCultivable -= chosenCultivable
+    - greenhouse_backupCultivable has chosenCultivable:
+        ~ greenhouse_backupCultivable -= chosenCultivable
     {debug_cultivable: <i>backup Coltivabili.}    
 }
 -> da_lista_a_coltivazioni

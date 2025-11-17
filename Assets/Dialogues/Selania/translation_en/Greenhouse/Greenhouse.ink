@@ -10,7 +10,7 @@
         
     - else:
     {
-        - backupCultivable != ():
+        - greenhouse_backupCultivable != ():
             -> pre_test
         - else:
             <i>Al momento non è possibile coltivare nulla</i>.
@@ -36,7 +36,7 @@
 === call_test
     + {are_two_entities_together(WateringCan, PG)} [WateringCan]
     {
-    	- backupCultivable != ():
+    	- greenhouse_backupCultivable != ():
             {
                 - chosenCultivable != ():
                         -> plant_check
@@ -54,7 +54,7 @@
         
     - else:
     {
-        - backupCultivable != ():
+        - greenhouse_backupCultivable != ():
             -> pre_test
         - else:
             <i>Al momento non è possibile coltivare nulla.</i>

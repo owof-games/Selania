@@ -24,7 +24,7 @@
         
     - else:
     {
-        - backupCultivable != ():
+        - greenhouse_backupCultivable != ():
             -> greenhouse_entry_check
         - else:
             Al momento la serra non ha domande da porti.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -36,7 +36,7 @@
 
 === greenhouse_entry_check
     La serra attende le tue visioni.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        +  {backupCultivable != ()}[Voglio coltivare qualcosa.]
+        +  {greenhouse_backupCultivable != ()}[Voglio coltivare qualcosa.]
                 -> cultivable_test
         +  [{~ Mi aggiro per la serra.|Osservo ciò che è in crescita.|Ascolto i rumori della serra.|Mi rilasso un attimo.|Mi perdo nei colori dei vasi.}] 
                 -> main

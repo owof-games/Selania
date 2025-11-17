@@ -1226,7 +1226,7 @@
     ~ growing = 0
     ~ chosenCultivable = ()
     
-    + {backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
+    + {greenhouse_backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
             -> cultivable_test
     
     + [{~ Mi aggiro per la serra.|Osservo ciò che è in crescita.|Ascolto i rumori della serra.|Mi rilasso un attimo.|Mi perdo nei colori dei vasi.}]  
