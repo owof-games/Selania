@@ -17,23 +17,23 @@ LIST library_allStories = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, Cec
     VAR library_temporaryRebellionTW = ()
     
 //Raggrupamento per lunghezza
-    LIST storiesDuration = Short, Average, Long
-    VAR readingDuration = ()
+    LIST library_storiesDuration = Short, Average, Long
+    VAR library_readingDuration = ()
     
-    VAR shortStories = (StenoArtico, B, ValFaustoLattanzio, Maura, QueerginiaWolf)
-    VAR averageStories = (AdriAllora, BeatriceYBottura, CeciliaFormicola, Lamia, Romi)
-    VAR longStories = (Aza, Beatrice, Salvo, LetiziaVaccarella)
+    VAR library_shortStories = (StenoArtico, B, ValFaustoLattanzio, Maura, QueerginiaWolf)
+    VAR library_averageStories = (AdriAllora, BeatriceYBottura, CeciliaFormicola, Lamia, Romi)
+    VAR library_longStories = (Aza, Beatrice, Salvo, LetiziaVaccarella)
     
 //Books about...
-    VAR aboutTransformation = (Aza, B, ValFaustoLattanzio, Salvo, BeatriceYBottura, LetiziaVaccarella)
-    VAR aboutQuestions = (AdriAllora, Beatrice, ValFaustoLattanzio, StenoArtico, Romi)
-    VAR aboutUnprepared = (StenoArtico, Beatrice, Lamia)
-    VAR aboutMonsters = (AdriAllora, Aza, B, BeatriceYBottura, CeciliaFormicola)
-    VAR aboutFire= (Aza, CeciliaFormicola, BeatriceYBottura, Romi, Maura, LetiziaVaccarella, QueerginiaWolf)
-    VAR aboutRebellion = (BeatriceYBottura, Lamia, Maura, Salvo, QueerginiaWolf)
+    VAR library_aboutTransformation = (Aza, B, ValFaustoLattanzio, Salvo, BeatriceYBottura, LetiziaVaccarella)
+    VAR library_aboutQuestions = (AdriAllora, Beatrice, ValFaustoLattanzio, StenoArtico, Romi)
+    VAR library_aboutUnprepared = (StenoArtico, Beatrice, Lamia)
+    VAR library_aboutMonsters = (AdriAllora, Aza, B, BeatriceYBottura, CeciliaFormicola)
+    VAR library_aboutFire= (Aza, CeciliaFormicola, BeatriceYBottura, Romi, Maura, LetiziaVaccarella, QueerginiaWolf)
+    VAR library_aboutRebellion = (BeatriceYBottura, Lamia, Maura, Salvo, QueerginiaWolf)
 
     //Libro che verrà proposto
-    VAR book = ()
+    VAR library_proposedBook = ()
     
 
 === book_test_intro ===
@@ -57,8 +57,8 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
 
 === storyRandom ===
 //Questo è il più facile: recupero un titolo randomico tra i libri non letti.
-    ~ book = ()
-    ~ book = LIST_RANDOM(library_unreadStories)
+    ~ library_proposedBook = ()
+    ~ library_proposedBook = LIST_RANDOM(library_unreadStories)
     ->from_list_to_books
 
 
@@ -68,198 +68,198 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
 
 === storyQuestions ===
     //Svuoto il valore del libro
-    ~ book = ()
+    ~ library_proposedBook = ()
     -> step_one
 
     = step_one
     {player_name} desidera una storia veloce come una pulce o lenta come la notte?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        + {shortStories != ()} [Qualcosa di brevissimo (max 1500 battute).]
+        + {library_shortStories != ()} [Qualcosa di brevissimo (max 1500 battute).]
         //(1500 battute max)
-            ~ readingDuration += Short
+            ~ library_readingDuration += Short
         
-        + {averageStories != ()} [Una storia veloce (max 3000 battute).]
+        + {library_averageStories != ()} [Una storia veloce (max 3000 battute).]
         // (3000 battute max)
-            ~ readingDuration += Average
+            ~ library_readingDuration += Average
         
-        + {longStories != ()} [Un racconto più lungo (max 8000 battute).]
+        + {library_longStories != ()} [Un racconto più lungo (max 8000 battute).]
         // 8000 battute max 
-            ~ readingDuration += Long
+            ~ library_readingDuration += Long
         -
         -> shuffle
         
     
     = shuffle
         {shuffle:
-            - {aboutTransformation != (): -> about_transformation| -> shuffle}
-            - {aboutQuestions != (): -> about_questions| -> shuffle}
-            - {aboutUnprepared != (): -> about_unprepared| -> shuffle}
-            - {aboutMonsters != (): -> about_monsters| -> shuffle}
-            - {aboutFire != (): -> about_fire| -> shuffle}
-            - {aboutRebellion != (): -> about_rebellion| -> shuffle}
+            - {library_aboutTransformation != (): -> about_transformation| -> shuffle}
+            - {library_aboutQuestions != (): -> about_questions| -> shuffle}
+            - {library_aboutUnprepared != (): -> about_unprepared| -> shuffle}
+            - {library_aboutMonsters != (): -> about_monsters| -> shuffle}
+            - {library_aboutFire != (): -> about_fire| -> shuffle}
+            - {library_aboutRebellion != (): -> about_rebellion| -> shuffle}
         }
     
     
     
     = about_transformation
     La biblioteca ti offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        + {readingDuration has Short && shortStories^ aboutTransformation != ()} [Che racconti di qualcosa che si <b>trasforma</b>.]
-            ~ book = LIST_RANDOM(shortStories^ aboutTransformation)
+        + {library_readingDuration has Short && library_shortStories^ library_aboutTransformation != ()} [Che racconti di qualcosa che si <b>trasforma</b>.]
+            ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutTransformation)
              -> from_list_to_books
  
-        + {readingDuration has Average && averageStories^ aboutTransformation != ()} [Che racconti di qualcosa che si <b>trasforma</b>.]
-            ~ book = LIST_RANDOM(averageStories ^ aboutTransformation)
+        + {library_readingDuration has Average && library_averageStories^ library_aboutTransformation != ()} [Che racconti di qualcosa che si <b>trasforma</b>.]
+            ~ library_proposedBook = LIST_RANDOM(library_averageStories ^ library_aboutTransformation)
              -> from_list_to_books           
             
-        + {readingDuration has Long && longStories^ aboutTransformation != ()} [Che racconti di qualcosa che si <b>trasforma</b>.]
-            ~ book = LIST_RANDOM(longStories ^ aboutTransformation)
+        + {library_readingDuration has Long && library_longStories^ library_aboutTransformation != ()} [Che racconti di qualcosa che si <b>trasforma</b>.]
+            ~ library_proposedBook = LIST_RANDOM(library_longStories ^ library_aboutTransformation)
             -> from_list_to_books
         
         //Qui vale per ogni scelta: se effettivamente posso scegliere quel tema, posso decidere di andare comunque avanti. Se invece quel tema è vuoto nella intersezione con la lunghezza della storia selezionata, passo avanti.
         //Questo tasto compare solo se questo tema non è vuoto. Ha senso? sennò non sarei qui, no?
-        + {(readingDuration has Short && shortStories^ aboutTransformation != ()) or (readingDuration has Average && averageStories^ aboutTransformation != ()) or (readingDuration has Long && longStories^ aboutTransformation != ())} [No, vorrei un altro tema.]
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutTransformation != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutTransformation != ()) or (library_readingDuration has Long && library_longStories^ library_aboutTransformation != ())} [No, vorrei un altro tema.]
                 -> shuffle
         
-        + {(readingDuration has Short && shortStories^ aboutTransformation != ()) or (readingDuration has Average && averageStories^ aboutTransformation != ()) or (readingDuration has Long && longStories^ aboutTransformation != ())} [Non ho più voglia di leggere.]
-                ~ readingDuration = ()
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutTransformation != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutTransformation != ()) or (library_readingDuration has Long && library_longStories^ library_aboutTransformation != ())} [Non ho più voglia di leggere.]
+                ~ library_readingDuration = ()
                 -> book_test_intro      
         
-        + {(readingDuration has Short && shortStories^ aboutTransformation == ()) or (readingDuration has Average && averageStories^ aboutTransformation == ()) or (readingDuration has Long && longStories^ aboutTransformation == ())}
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutTransformation == ()) or (library_readingDuration has Average && library_averageStories^ library_aboutTransformation == ()) or (library_readingDuration has Long && library_longStories^ library_aboutTransformation == ())}
             -> shuffle
         
     = about_questions       
     La biblioteca ti offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
-        + {readingDuration has Short && shortStories^ aboutQuestions != ()} [Che parli di chi <b>si pone domande</b>.]
-            ~ book = LIST_RANDOM(shortStories^ aboutQuestions)
+        + {library_readingDuration has Short && library_shortStories^ library_aboutQuestions != ()} [Che parli di chi <b>si pone domande</b>.]
+            ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutQuestions)
              -> from_list_to_books
         
-        + {readingDuration has Average && averageStories^ aboutQuestions != ()} [Che parli di chi <b>si pone domande</b>.]
-            ~ book = LIST_RANDOM(averageStories ^ aboutQuestions)
+        + {library_readingDuration has Average && library_averageStories^ library_aboutQuestions != ()} [Che parli di chi <b>si pone domande</b>.]
+            ~ library_proposedBook = LIST_RANDOM(library_averageStories ^ library_aboutQuestions)
          -> from_list_to_books
 
-        + {readingDuration has Long && longStories^ aboutQuestions != ()} [Che parli di chi <b>si pone domande</b>.]
-            ~ book = LIST_RANDOM(longStories ^ aboutQuestions)
+        + {library_readingDuration has Long && library_longStories^ library_aboutQuestions != ()} [Che parli di chi <b>si pone domande</b>.]
+            ~ library_proposedBook = LIST_RANDOM(library_longStories ^ library_aboutQuestions)
          -> from_list_to_books            
         
         
-        + {(readingDuration has Short && shortStories^ aboutQuestions != ()) or (readingDuration has Average && averageStories^ aboutQuestions != ()) or (readingDuration has Long && longStories^ aboutQuestions != ())}[No, vorrei un altro tema.]
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutQuestions != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutQuestions != ()) or (library_readingDuration has Long && library_longStories^ library_aboutQuestions != ())}[No, vorrei un altro tema.]
                 -> shuffle
                 
                 
-        + {(readingDuration has Short && shortStories^ aboutQuestions != ()) or (readingDuration has Average && averageStories^ aboutQuestions != ()) or (readingDuration has Long && longStories^ aboutQuestions != ())} [Non ho più voglia di leggere.]
-                ~ readingDuration = ()
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutQuestions != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutQuestions != ()) or (library_readingDuration has Long && library_longStories^ library_aboutQuestions != ())} [Non ho più voglia di leggere.]
+                ~ library_readingDuration = ()
                 -> book_test_intro           
         
-        + {(readingDuration has Short && shortStories^ aboutQuestions == ()) or (readingDuration has Average && averageStories^ aboutQuestions == ()) or (readingDuration has Long && longStories^ aboutQuestions == ())}
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutQuestions == ()) or (library_readingDuration has Average && library_averageStories^ library_aboutQuestions == ()) or (library_readingDuration has Long && library_longStories^ library_aboutQuestions == ())}
                 -> shuffle          
             
             
     = about_unprepared
     La biblioteca ti offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
-        + {readingDuration has Short && shortStories^ aboutUnprepared != ()} [Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b>].
-            ~ book = LIST_RANDOM(shortStories^ aboutUnprepared)
+        + {library_readingDuration has Short && library_shortStories^ library_aboutUnprepared != ()} [Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b>].
+            ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutUnprepared)
          -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutUnprepared != ()} [Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b>.]
-            ~ book = LIST_RANDOM(averageStories ^ aboutUnprepared)
+        + {library_readingDuration has Average && library_averageStories^ library_aboutUnprepared != ()} [Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b>.]
+            ~ library_proposedBook = LIST_RANDOM(library_averageStories ^ library_aboutUnprepared)
         -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutUnprepared != ()} [Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b>.]
-            ~ book = LIST_RANDOM(longStories ^ aboutUnprepared)
+        + {library_readingDuration has Long && library_longStories^ library_aboutUnprepared != ()} [Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b>.]
+            ~ library_proposedBook = LIST_RANDOM(library_longStories ^ library_aboutUnprepared)
         -> from_list_to_books            
         
         //Scelte di uscita se ho rifiutato tutte le opzioni precedenti.
-        + {(readingDuration has Short && shortStories^ aboutUnprepared != ()) or (readingDuration has Average && averageStories^ aboutUnprepared != ()) or (readingDuration has Long && longStories^ aboutUnprepared != ())}[No, vorrei un altro tema.]
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutUnprepared != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutUnprepared != ()) or (library_readingDuration has Long && library_longStories^ library_aboutUnprepared != ())}[No, vorrei un altro tema.]
                 -> shuffle
                 
                 
-        + {(readingDuration has Short && shortStories^ aboutUnprepared != ()) or (readingDuration has Average && averageStories^ aboutUnprepared != ()) or (readingDuration has Long && longStories^ aboutUnprepared != ())} [Non ho più voglia di leggere.]
-                ~ readingDuration = ()
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutUnprepared != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutUnprepared != ()) or (library_readingDuration has Long && library_longStories^ library_aboutUnprepared != ())} [Non ho più voglia di leggere.]
+                ~ library_readingDuration = ()
                 -> book_test_intro           
         
-        + {(readingDuration has Short && shortStories^ aboutUnprepared == ()) or (readingDuration has Average && averageStories^ aboutUnprepared == ()) or (readingDuration has Long && longStories^ aboutUnprepared == ())}
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutUnprepared == ()) or (library_readingDuration has Average && library_averageStories^ library_aboutUnprepared == ()) or (library_readingDuration has Long && library_longStories^ library_aboutUnprepared == ())}
                 -> shuffle 
 
     = about_monsters
     La biblioteca ti offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
-        + {readingDuration has Short && shortStories^ aboutMonsters != ()} [Che parli di <b>cose mostruose</b>.]
-            ~ book = LIST_RANDOM(shortStories^ aboutMonsters)
+        + {library_readingDuration has Short && library_shortStories^ library_aboutMonsters != ()} [Che parli di <b>cose mostruose</b>.]
+            ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutMonsters)
         -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutMonsters != ()} [Che parli di <b>cose mostruose</b>.]
-            ~ book = LIST_RANDOM(averageStories ^ aboutMonsters)
+        + {library_readingDuration has Average && library_averageStories^ library_aboutMonsters != ()} [Che parli di <b>cose mostruose</b>.]
+            ~ library_proposedBook = LIST_RANDOM(library_averageStories ^ library_aboutMonsters)
         -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutMonsters != ()} [Che parli di <b>cose mostruose</b>.]
-            ~ book = LIST_RANDOM(longStories ^ aboutMonsters)
+        + {library_readingDuration has Long && library_longStories^ library_aboutMonsters != ()} [Che parli di <b>cose mostruose</b>.]
+            ~ library_proposedBook = LIST_RANDOM(library_longStories ^ library_aboutMonsters)
         -> from_list_to_books            
         
         //Scelte di uscita se ho rifiutato tutte le opzioni precedenti.
-        + {(readingDuration has Short && shortStories^ aboutMonsters != ()) or (readingDuration has Average && averageStories^ aboutMonsters != ()) or (readingDuration has Long && longStories^ aboutMonsters != ())}[No, vorrei un altro tema.]
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutMonsters != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutMonsters != ()) or (library_readingDuration has Long && library_longStories^ library_aboutMonsters != ())}[No, vorrei un altro tema.]
                 -> shuffle
                 
                 
-        + {(readingDuration has Short && shortStories^ aboutMonsters != ()) or (readingDuration has Average && averageStories^ aboutMonsters != ()) or (readingDuration has Long && longStories^ aboutMonsters != ())} [Non ho più voglia di leggere.]
-                ~ readingDuration = ()
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutMonsters != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutMonsters != ()) or (library_readingDuration has Long && library_longStories^ library_aboutMonsters != ())} [Non ho più voglia di leggere.]
+                ~ library_readingDuration = ()
                 -> book_test_intro           
         
-        + {(readingDuration has Short && shortStories^ aboutMonsters == ()) or (readingDuration has Average && averageStories^ aboutMonsters == ()) or (readingDuration has Long && longStories^ aboutMonsters == ())}
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutMonsters == ()) or (library_readingDuration has Average && library_averageStories^ library_aboutMonsters == ()) or (library_readingDuration has Long && library_longStories^ library_aboutMonsters == ())}
                 -> shuffle
 
     = about_fire  
     La biblioteca ti offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
-        + {readingDuration has Short && shortStories^ aboutFire != ()} [Che racconti di <b>cose che bruciano</b>.]
-            ~ book = LIST_RANDOM(shortStories^ aboutFire)
+        + {library_readingDuration has Short && library_shortStories^ library_aboutFire != ()} [Che racconti di <b>cose che bruciano</b>.]
+            ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutFire)
         -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutFire != ()} [Che racconti di <b>cose che bruciano</b>.]
-            ~ book = LIST_RANDOM(averageStories ^ aboutFire)
+        + {library_readingDuration has Average && library_averageStories^ library_aboutFire != ()} [Che racconti di <b>cose che bruciano</b>.]
+            ~ library_proposedBook = LIST_RANDOM(library_averageStories ^ library_aboutFire)
          -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutFire != ()} [Che racconti di <b>cose che bruciano</b>.]
-            ~ book = LIST_RANDOM(longStories ^ aboutFire)
+        + {library_readingDuration has Long && library_longStories^ library_aboutFire != ()} [Che racconti di <b>cose che bruciano</b>.]
+            ~ library_proposedBook = LIST_RANDOM(library_longStories ^ library_aboutFire)
          -> from_list_to_books            
         
         //Scelte di uscita se ho rifiutato tutte le opzioni precedenti.
-        + {(readingDuration has Short && shortStories^ aboutFire != ()) or (readingDuration has Average && averageStories^ aboutFire != ()) or (readingDuration has Long && longStories^ aboutFire != ())}[No, vorrei un altro tema.]
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutFire != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutFire != ()) or (library_readingDuration has Long && library_longStories^ library_aboutFire != ())}[No, vorrei un altro tema.]
                 -> shuffle
                 
                 
-        + {(readingDuration has Short && shortStories^ aboutFire != ()) or (readingDuration has Average && averageStories^ aboutFire != ()) or (readingDuration has Long && longStories^ aboutFire != ())} [Non ho più voglia di leggere.]
-                ~ readingDuration = ()
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutFire != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutFire != ()) or (library_readingDuration has Long && library_longStories^ library_aboutFire != ())} [Non ho più voglia di leggere.]
+                ~ library_readingDuration = ()
                 -> book_test_intro           
         
-        + {(readingDuration has Short && shortStories^ aboutFire == ()) or (readingDuration has Average && averageStories^ aboutFire == ()) or (readingDuration has Long && longStories^ aboutFire == ())}
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutFire == ()) or (library_readingDuration has Average && library_averageStories^ library_aboutFire == ()) or (library_readingDuration has Long && library_longStories^ library_aboutFire == ())}
                 -> shuffle
 
     = about_rebellion
     La biblioteca ti offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
-        + {readingDuration has Short && shortStories^ aboutRebellion != ()} [Che urli di <b>sogni e ribellioni</b>.]
-            ~ book = LIST_RANDOM(shortStories^ aboutRebellion)
+        + {library_readingDuration has Short && library_shortStories^ library_aboutRebellion != ()} [Che urli di <b>sogni e ribellioni</b>.]
+            ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutRebellion)
          -> from_list_to_books
 
-        + {readingDuration has Average && averageStories^ aboutRebellion != ()} [Che urli di <b>sogni e ribellioni</b>.]
-            ~ book = LIST_RANDOM(averageStories ^ aboutRebellion)
+        + {library_readingDuration has Average && library_averageStories^ library_aboutRebellion != ()} [Che urli di <b>sogni e ribellioni</b>.]
+            ~ library_proposedBook = LIST_RANDOM(library_averageStories ^ library_aboutRebellion)
         -> from_list_to_books
         
-        + {readingDuration has Long && longStories^ aboutRebellion != ()} [Che urli di <b>sogni e ribellioni</b>.]
-            ~ book = LIST_RANDOM(longStories ^ aboutRebellion)
+        + {library_readingDuration has Long && library_longStories^ library_aboutRebellion != ()} [Che urli di <b>sogni e ribellioni</b>.]
+            ~ library_proposedBook = LIST_RANDOM(library_longStories ^ library_aboutRebellion)
              -> from_list_to_books            
         
         //Scelte di uscita se ho rifiutato tutte le opzioni precedenti.
-        + {(readingDuration has Short && shortStories^ aboutRebellion != ()) or (readingDuration has Average && averageStories^ aboutRebellion != ()) or (readingDuration has Long && longStories^ aboutRebellion != ())}[No, vorrei un altro tema.]
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutRebellion != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutRebellion != ()) or (library_readingDuration has Long && library_longStories^ library_aboutRebellion != ())}[No, vorrei un altro tema.]
                 -> shuffle
                 
                 
-        + {(readingDuration has Short && shortStories^ aboutRebellion != ()) or (readingDuration has Average && averageStories^ aboutRebellion != ()) or (readingDuration has Long && longStories^ aboutRebellion != ())} [Non ho più voglia di leggere.]
-                ~ readingDuration = ()
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutRebellion != ()) or (library_readingDuration has Average && library_averageStories^ library_aboutRebellion != ()) or (library_readingDuration has Long && library_longStories^ library_aboutRebellion != ())} [Non ho più voglia di leggere.]
+                ~ library_readingDuration = ()
                 -> book_test_intro           
         
-        + {(readingDuration has Short && shortStories^ aboutRebellion == ()) or (readingDuration has Average && averageStories^ aboutRebellion == ()) or (readingDuration has Long && longStories^ aboutRebellion == ())}
+        + {(library_readingDuration has Short && library_shortStories^ library_aboutRebellion == ()) or (library_readingDuration has Average && library_averageStories^ library_aboutRebellion == ()) or (library_readingDuration has Long && library_longStories^ library_aboutRebellion == ())}
                 -> shuffle                 
         
 ->->
@@ -267,60 +267,60 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
 
 //Gestione TW temporanei
 === tempTW
-{debug: Entro in tempTW. Prima di operare la funzione, il valore di book è {book}. Unreadstories ha questi libri: {library_unreadStories}, mentre readstories ha questi {library_readStories}.}
+{debug: Entro in tempTW. Prima di operare la funzione, il valore di library_proposedBook è {library_proposedBook}. Unreadstories ha questi libri: {library_unreadStories}, mentre readstories ha questi {library_readStories}.}
     {
-    - library_unreadStories has book:
-    	~ library_unreadStories -= book
-    	~ library_temporaryTW += book
-    - library_readStories has book:
-    	~ library_readStories -= book
-    	~ library_temporaryReadTW +=book
+    - library_unreadStories has library_proposedBook:
+    	~ library_unreadStories -= library_proposedBook
+    	~ library_temporaryTW += library_proposedBook
+    - library_readStories has library_proposedBook:
+    	~ library_readStories -= library_proposedBook
+    	~ library_temporaryReadTW +=library_proposedBook
     }
     
     {
-    - shortStories has book:
-        ~ shortStories -= book
-        ~ library_temporaryShortTW += book
-    - averageStories has book:
-        ~ averageStories -= book
-        ~ library_temporaryAverageTW += book
-    - longStories has book:
-        ~ longStories -= book
-        ~ library_temporaryLongTW += book
+    - library_shortStories has library_proposedBook:
+        ~ library_shortStories -= library_proposedBook
+        ~ library_temporaryShortTW += library_proposedBook
+    - library_averageStories has library_proposedBook:
+        ~ library_averageStories -= library_proposedBook
+        ~ library_temporaryAverageTW += library_proposedBook
+    - library_longStories has library_proposedBook:
+        ~ library_longStories -= library_proposedBook
+        ~ library_temporaryLongTW += library_proposedBook
     }
 
     {
-    - aboutTransformation has book:
-        ~ aboutTransformation -= book
-        ~ library_temporaryTransformationTW += book
+    - library_aboutTransformation has library_proposedBook:
+        ~ library_aboutTransformation -= library_proposedBook
+        ~ library_temporaryTransformationTW += library_proposedBook
     }
     {
-    - aboutQuestions has book:
-        ~ aboutQuestions -= book
-        ~ library_temporaryQuestionsTW += book
+    - library_aboutQuestions has library_proposedBook:
+        ~ library_aboutQuestions -= library_proposedBook
+        ~ library_temporaryQuestionsTW += library_proposedBook
     }
     {
-    - aboutUnprepared has book:
-        ~ aboutUnprepared -= book
-        ~ library_temporaryUnpreparedTW += book
+    - library_aboutUnprepared has library_proposedBook:
+        ~ library_aboutUnprepared -= library_proposedBook
+        ~ library_temporaryUnpreparedTW += library_proposedBook
     }
     {
-    - aboutMonsters has book:
-        ~ aboutMonsters -= book
-        ~ library_temporaryMonstersTW += book
+    - library_aboutMonsters has library_proposedBook:
+        ~ library_aboutMonsters -= library_proposedBook
+        ~ library_temporaryMonstersTW += library_proposedBook
     }
     {
-    - aboutFire has book:
-        ~ aboutFire -= book
-        ~ library_temporaryFireTW += book
+    - library_aboutFire has library_proposedBook:
+        ~ library_aboutFire -= library_proposedBook
+        ~ library_temporaryFireTW += library_proposedBook
     }
     {
-    - aboutRebellion has book:
-        ~ aboutRebellion -= book
-        ~ library_temporaryRebellionTW += book
+    - library_aboutRebellion has library_proposedBook:
+        ~ library_aboutRebellion -= library_proposedBook
+        ~ library_temporaryRebellionTW += library_proposedBook
     }
 
-{debug: Dopo aver operato la funzione, il valore di book è {book}. Unreadstories ha questi libri: {library_unreadStories}, mentre readstories ha questi {library_readStories}.}    
+{debug: Dopo aver operato la funzione, il valore di library_proposedBook è {library_proposedBook}. Unreadstories ha questi libri: {library_unreadStories}, mentre readstories ha questi {library_readStories}.}    
 ->->
 
 
@@ -332,24 +332,24 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     ~ library_readStories += library_temporaryReadTW
     ~ library_temporaryReadTW = ()
 
-    ~ shortStories += library_temporaryShortTW
+    ~ library_shortStories += library_temporaryShortTW
     ~ library_temporaryShortTW = ()
-    ~ averageStories += library_temporaryAverageTW
+    ~ library_averageStories += library_temporaryAverageTW
     ~ library_temporaryAverageTW = ()
-    ~ longStories += library_temporaryLongTW
+    ~ library_longStories += library_temporaryLongTW
     ~ library_temporaryLongTW = ()
 
-    ~ aboutTransformation += library_temporaryTransformationTW
+    ~ library_aboutTransformation += library_temporaryTransformationTW
     ~ library_temporaryTransformationTW = ()
-    ~ aboutQuestions += library_temporaryQuestionsTW
+    ~ library_aboutQuestions += library_temporaryQuestionsTW
     ~ library_temporaryQuestionsTW = ()
-    ~ aboutUnprepared += library_temporaryUnpreparedTW
+    ~ library_aboutUnprepared += library_temporaryUnpreparedTW
     ~ library_temporaryUnpreparedTW = ()
-    ~ aboutMonsters += library_temporaryMonstersTW
+    ~ library_aboutMonsters += library_temporaryMonstersTW
     ~ library_temporaryMonstersTW = ()
-    ~ aboutFire += library_temporaryFireTW
+    ~ library_aboutFire += library_temporaryFireTW
     ~ library_temporaryFireTW = ()
-    ~ aboutRebellion += library_temporaryRebellionTW
+    ~ library_aboutRebellion += library_temporaryRebellionTW
     ~ library_temporaryRebellionTW = ()
 
 {debug: dopo aver applicato empty_tempTW, la lista di storie non lette contiene {library_unreadStories} e la lista delle storie evitate contiene {library_temporaryTW}.La lista delle storie da rileggere è {library_readStories} e i trigger sono attivi per {library_temporaryReadTW}.}
@@ -358,59 +358,59 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
 
 //Funzione di rimozione permanente di un racconto
 === permanentTW
-{debug: Entro in permanentTW. Prima di operare la funzione, il valore di book è {book}. Unreadstories ha questi libri: {library_unreadStories}, mentre readstories ha questi {library_readStories}.}
+{debug: Entro in permanentTW. Prima di operare la funzione, il valore di library_proposedBook è {library_proposedBook}. Unreadstories ha questi libri: {library_unreadStories}, mentre readstories ha questi {library_readStories}.}
 {
-    - library_unreadStories has book:
-    	~ library_unreadStories -= book
-    - library_readStories has book:
-    	~ library_readStories -= book
+    - library_unreadStories has library_proposedBook:
+    	~ library_unreadStories -= library_proposedBook
+    - library_readStories has library_proposedBook:
+    	~ library_readStories -= library_proposedBook
 }
-{debug: Dopo aver operato la funzione, il valore di book è {book}. Unreadstories ha questi libri: {library_unreadStories}, mentre readstories ha questi {library_readStories}.}   
+{debug: Dopo aver operato la funzione, il valore di library_proposedBook è {library_proposedBook}. Unreadstories ha questi libri: {library_unreadStories}, mentre readstories ha questi {library_readStories}.}   
 ->->
     
 === refresh_book_lists
 //A prescindere prima di tutto levo il libro dalle storie non lette e lo metto tra le storie lette.
 
-    ~ readingDuration =()
+    ~ library_readingDuration =()
 {
     
-    - shortStories has book:
-        ~ shortStories -= book
-    - averageStories has book:
-        ~ averageStories -= book
-    - longStories has book:
-        ~ longStories -= book
+    - library_shortStories has library_proposedBook:
+        ~ library_shortStories -= library_proposedBook
+    - library_averageStories has library_proposedBook:
+        ~ library_averageStories -= library_proposedBook
+    - library_longStories has library_proposedBook:
+        ~ library_longStories -= library_proposedBook
 }
 {
-    - aboutTransformation has book:
-        ~ aboutTransformation -= book
+    - library_aboutTransformation has library_proposedBook:
+        ~ library_aboutTransformation -= library_proposedBook
 }
 {
-    - aboutQuestions has book:
-        ~ aboutQuestions -= book
+    - library_aboutQuestions has library_proposedBook:
+        ~ library_aboutQuestions -= library_proposedBook
 }
 {
-    - aboutUnprepared has book:
-        ~ aboutUnprepared -= book
+    - library_aboutUnprepared has library_proposedBook:
+        ~ library_aboutUnprepared -= library_proposedBook
 }
 {
-    - aboutMonsters has book:
-        ~ aboutMonsters -= book
+    - library_aboutMonsters has library_proposedBook:
+        ~ library_aboutMonsters -= library_proposedBook
 }
 {
-    - aboutFire has book:
-        ~ aboutFire -= book
+    - library_aboutFire has library_proposedBook:
+        ~ library_aboutFire -= library_proposedBook
 }
 {
-    - aboutRebellion has book:
-        ~ aboutRebellion -= book
+    - library_aboutRebellion has library_proposedBook:
+        ~ library_aboutRebellion -= library_proposedBook
 
 }
 ->->
 
 
 === from_list_to_books ===
-{book:
+{library_proposedBook:
     - AdriAllora:
         -> adri_allora
     - Aza:
@@ -453,8 +453,8 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
 -> DONE
 
 === reread ===
-//Per sicurezza svuoto book
-~ book = ()
+//Per sicurezza svuoto library_proposedBook
+~ library_proposedBook = ()
 
 {shuffle:
     - {library_readStories has AdriAllora: -> reread_adri_allora| -> reread}
