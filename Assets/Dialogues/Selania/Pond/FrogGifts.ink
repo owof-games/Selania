@@ -77,7 +77,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
 
 
 === frog_gift_dispatcher ===
-{frogDebug: passo frog_gift_dispatcher.}
+{debug_frog: passo frog_gift_dispatcher.}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -107,7 +107,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     //Chitarra
-        {frogDebug: passo char_one_gifts.}
+        {debug_frog: passo char_one_gifts.}
         
        Come posso aiutarti con {charNameOne}?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
        
@@ -253,7 +253,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthChar_ActualName)
     //Riccio
-    {frogDebug: passo char_two_gifts.}
+    {debug_frog: passo char_two_gifts.}
     
     Come posso aiutarti con {charNameTwo}?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     
@@ -388,8 +388,8 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
             
     = mission_objects
     //Oggetti
-    {frogDebug: passo mission_objects.}
-    {frogDebug: searchedCultivableRecovery è uguale a {searchedCultivableRecovery}. Prima dell'intervento, findedGifts contiene {findedGifts}.}
+    {debug_frog: passo mission_objects.}
+    {debug_frog: searchedCultivableRecovery è uguale a {searchedCultivableRecovery}. Prima dell'intervento, findedGifts contiene {findedGifts}.}
         
         Come concordato, eccoti {ingredientTranslator(searchedCultivableRecovery)}. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         
@@ -397,13 +397,13 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
             ~ recoverableCultivables -= searchedCultivableRecovery
             ~ searchedCultivableRecovery = ()
             
-        {frogDebug: Dopo l'intervento, searchedCultivableRecovery è uguale a {searchedCultivableRecovery} e findedGifts contiene {findedGifts}.}
+        {debug_frog: Dopo l'intervento, searchedCultivableRecovery è uguale a {searchedCultivableRecovery} e findedGifts contiene {findedGifts}.}
                 -> closed_exchange
 
 
 
 === closed_exchange
-{frogDebug: passo closed_exchange.}
+{debug_frog: passo closed_exchange.}
 E con questo è tutto! #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
 A dopo {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     -> special_mission_pause_check ->

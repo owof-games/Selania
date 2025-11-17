@@ -113,7 +113,7 @@
 
     + {are_two_entities_together(PG, FromForestToLibraryBlocked)} [FromForestToLibraryBlocked]
     {
-        - debug_test_library:
+        - debug_testlibrary:
             ~ move_entity(PG, Library)
             -> on_movement_events ->
                 -> library

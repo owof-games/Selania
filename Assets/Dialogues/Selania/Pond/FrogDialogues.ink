@@ -1,5 +1,5 @@
 === welcoming_frog
-{frogDebug: passo da welcoming_frog.}
+{debug_frog: passo da welcoming_frog.}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -36,54 +36,54 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
         -> main
         
       + [Chiedo un aiuto alla rana.]
-      {frogDebug: il valore di availableSpecialMissions è {availableSpecialMissions}.}
-      {frogDebug: player_accessiblePlaces contiene {player_accessiblePlaces}.}
+      {debug_frog: il valore di availableSpecialMissions è {availableSpecialMissions}.}
+      {debug_frog: player_accessiblePlaces contiene {player_accessiblePlaces}.}
 
     {       //Special mission one offre la nota
         - pauseSpecialMission < 1 && (availableSpecialMissions has specialMissionOne) && (player_accessiblePlaces ? Nest):
-            {frogDebug: condizioni rispettate per poter offrire la prima missione speciale.}
+            {debug_frog: condizioni rispettate per poter offrire la prima missione speciale.}
                 -> special_mission_one
             
         - firstChar_storyStatus == story_storyStarted && firstChar_giftedObject == () && charOneGifts hasnt charOneCultivable:
-            {frogDebug: condizioni rispettate per poter offrire info sul dono per Chitarra.}
+            {debug_frog: condizioni rispettate per poter offrire info sul dono per Chitarra.}
                 -> autonomy_mission_verify
         
             //Special mission two offre l'ingrediente universale
         - pauseSpecialMission < 1 && (availableSpecialMissions has specialMissionTwo) && (player_accessiblePlaces ? Kitchen):
-            {frogDebug: condizioni rispettate per poter offrire la seconda missione speciale.}
+            {debug_frog: condizioni rispettate per poter offrire la seconda missione speciale.}
                 -> special_mission_two      
     
                 
         - firstChar_storyStatus == story_storyStarted && !ending_cooking_with_first_char && charOneGifts hasnt charOneCooking:
-            {frogDebug: condizioni rispettate per poter offrire info sull'ingrediente per Chitarra.}
+            {debug_frog: condizioni rispettate per poter offrire info sull'ingrediente per Chitarra.}
                 -> autonomy_mission_verify
                 
         - firstChar_storyStatus == story_storyStarted && player_accessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord:
-            {frogDebug: condizioni rispettate per poter offrire info su parola per Chitarra.}
+            {debug_frog: condizioni rispettate per poter offrire info su parola per Chitarra.}
                 -> autonomy_mission_verify
                 
         - firstChar_storyStatus == story_storyStarted && player_accessiblePlaces has Library && charOneGifts hasnt charOneLibrary:
-            {frogDebug: condizioni rispettate per poter offrire info su racconto per Chitarra.}
+            {debug_frog: condizioni rispettate per poter offrire info su racconto per Chitarra.}
                 -> autonomy_mission_verify
                 
         - secondChar_storyStatus == story_storyStarted && secondChar_giftedObject == () && charTwoGifts hasnt charTwoCultivable:
-            {frogDebug: condizioni rispettate per poter offrire info sul dono per Riccio.}
+            {debug_frog: condizioni rispettate per poter offrire info sul dono per Riccio.}
                 -> autonomy_mission_verify
                 
         - secondChar_storyStatus == story_storyStarted && !ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking:
-            {frogDebug: condizioni rispettate per poter offrire info su ingrediente per Chitarra.}
+            {debug_frog: condizioni rispettate per poter offrire info su ingrediente per Chitarra.}
                 -> autonomy_mission_verify
                 
         - secondChar_storyStatus == story_storyStarted && player_accessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord:
-            {frogDebug: condizioni rispettate per poter offrire info sul dono per Chitarra.}
+            {debug_frog: condizioni rispettate per poter offrire info sul dono per Chitarra.}
                 -> autonomy_mission_verify
                 
         - secondChar_storyStatus == story_storyStarted && player_accessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary:
-            {frogDebug: condizioni rispettate per poter offrire info su parola per Chitarra.}
+            {debug_frog: condizioni rispettate per poter offrire info su parola per Chitarra.}
                 -> autonomy_mission_verify
                 
         - (recoverableCultivables!= ()):
-            {frogDebug: condizioni rispettate per poter offrire info su racconto per Chitarra.}
+            {debug_frog: condizioni rispettate per poter offrire info su racconto per Chitarra.}
                 -> autonomy_mission_verify
                 
         - LIST_COUNT(charOneGifts) == 4 && LIST_COUNT(charTwoGifts) == 4 && availableSpecialMissions == ():

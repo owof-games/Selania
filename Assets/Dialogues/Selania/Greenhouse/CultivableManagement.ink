@@ -125,15 +125,15 @@
             Ecco qualcosa che crescerà su sua richiesta.
                 ~ chosenCultivable = nextCultivableOne
                 
-            {debug or frogDebug: il valore di nextCultivable è {nextCultivableOne} e per questo skippo le domande. Ora chosenCultivable è = a {chosenCultivable}.}
+            {debug or debug_frog: il valore di nextCultivable è {nextCultivableOne} e per questo skippo le domande. Ora chosenCultivable è = a {chosenCultivable}.}
             
                 ~ nextCultivableOne = ()
-            {debug or frogDebug: svuoto nextCultivable, e il suo valore è {nextCultivableOne}.}
+            {debug or debug_frog: svuoto nextCultivable, e il suo valore è {nextCultivableOne}.}
             
                 -> list_to_crops
         
         - else:
-            {debug_cultivable or frogDebug: il valore di nextCultivable è {nextCultivableOne}, quello di chosenCultivable {chosenCultivable} e per questo passo alle domande o avanzo, a seconda dello stato di chosenCultivable {chosenCultivable}.}
+            {debug_cultivable or debug_frog: il valore di nextCultivable è {nextCultivableOne}, quello di chosenCultivable {chosenCultivable} e per questo passo alle domande o avanzo, a seconda dello stato di chosenCultivable {chosenCultivable}.}
             -> cultivable_test.top
     
     }

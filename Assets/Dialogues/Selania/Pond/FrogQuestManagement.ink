@@ -1,8 +1,8 @@
 === discovered_things_updater ===
 //Questo nodo mi permette di aggiornare sempre come prima cosa lo stato delle missioni autonome, e di eliminare le eventuali quest fatte di già senza dover tracciare le condizioni mille volte.
-{frogDebug: passo da discovered_things_updater.}
-{frogDebug: charOneGifts è uguale a {charOneGifts}.}
-{frogDebug: charTwoGifts è uguale a {charTwoGifts}.}
+{debug_frog: passo da discovered_things_updater.}
+{debug_frog: charOneGifts è uguale a {charOneGifts}.}
+{debug_frog: charTwoGifts è uguale a {charTwoGifts}.}
 
         //Aggiornare lo stato delle cose che posso donare o meno alla PG
         {
@@ -38,7 +38,7 @@
 
 === autonomy_mission_verify ===
 //Verifico quante missioni autonome ha fatto la giocatrice.
-{frogDebug: passo da autonomy_mission_verify.}
+{debug_frog: passo da autonomy_mission_verify.}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -137,8 +137,8 @@
 
 
 === missions_dispatcher ===
-{frogDebug: passo da missions_dispatcher.}
-{frogDebug: currentMissionAboutChar == {currentMissionAboutChar}.}
+{debug_frog: passo da missions_dispatcher.}
+{debug_frog: currentMissionAboutChar == {currentMissionAboutChar}.}
 //Alla fine le missioni sono scollegate dai doni, e sono letteralmente scritte secondo bisogno.
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -173,7 +173,7 @@
             - 8 && player_accessiblePlaces has Library:
                 -> mission_eight
             - else:
-                {frogDebug: il valore di diceFrog è {diceFrog}, e la missione associata è già stata fatta. Ritiro il dado.}
+                {debug_frog: il valore di diceFrog è {diceFrog}, e la missione associata è già stata fatta. Ritiro il dado.}
                 -> top
                 
         }
@@ -183,7 +183,7 @@
 
 
 === closed_mission_verify
-{frogDebug: passo da closed_mission_verify. Il valore di activeMissions è {activeMissions}.}
+{debug_frog: passo da closed_mission_verify. Il valore di activeMissions è {activeMissions}.}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -392,7 +392,7 @@
 ->->
 
 === tired_frog
-{frogDebug: passo da tired_frog.}
+{debug_frog: passo da tired_frog.}
  ~ temp dice = RANDOM(1,5)
  
 {
@@ -417,7 +417,7 @@
 
 
 === cultivable_recovery
-{frogDebug: passo da cultivable_recovery.}
+{debug_frog: passo da cultivable_recovery.}
 Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
 
     + {recoverableCultivables has BaccaDellaAddolorata} [{ingredientTranslator(BaccaDellaAddolorata)}]
@@ -514,7 +514,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
 
 === witch_frog_mission_notifier
 //Questa è la notifica della "strega" se chiudiamo una missione
-{frogDebug: passo da witch_frog_mission_notifier.}
+{debug_frog: passo da witch_frog_mission_notifier.}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -589,11 +589,11 @@ Le condizioni per la missione data dalla rana sono state raggiunte.#speaker:{wit
 -> main
 
 === special_mission_pause_check
-{frogDebug: passo da special_mission_pause_check.}    
-{frogDebug: il valore di pauseSpecialMission è {pauseSpecialMission}.}    
+{debug_frog: passo da special_mission_pause_check.}    
+{debug_frog: il valore di pauseSpecialMission è {pauseSpecialMission}.}    
     {
         - pauseSpecialMission > 0:
             ~ pauseSpecialMission --
-        {frogDebug: il valore di pauseSpecialMission è {pauseSpecialMission}.}    
+        {debug_frog: il valore di pauseSpecialMission è {pauseSpecialMission}.}    
     }
 ->->
