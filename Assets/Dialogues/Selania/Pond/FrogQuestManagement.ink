@@ -149,12 +149,12 @@
 
         - (top)
         //Dato che no mi fa fare questa cosa direttamente nella variabile, provo così.
-        //~ maxValueDice = LIST_COUNT(frog_allMissions)
+        //~ frog_maxValueRandomMissionDice = LIST_COUNT(frog_allMissions)
         
         //Tiro il dado
-        ~ diceFrog = RANDOM(1,8)
+        ~ frog_randomMissionDice = RANDOM(1,8)
         
-        {diceFrog:
+        {frog_randomMissionDice:
         
             - 1 && frog_availableCommonMissions has missionOne:
                 -> mission_one
@@ -173,7 +173,7 @@
             - 8 && player_accessiblePlaces has Library:
                 -> mission_eight
             - else:
-                {debug_frog: il valore di diceFrog è {diceFrog}, e la missione associata è già stata fatta. Ritiro il dado.}
+                {debug_frog: il valore di frog_randomMissionDice è {frog_randomMissionDice}, e la missione associata è già stata fatta. Ritiro il dado.}
                 -> top
                 
         }
@@ -522,7 +522,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
     {
-        - witchNotification == false:
+        - frog_witch_notification == false:
             {
                 - frog_currentMission has missionOne:
                     {
@@ -585,7 +585,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
 
 = notification
 Le condizioni per la missione data dalla rana sono state raggiunte.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
-        ~ witchNotification = true
+        ~ frog_witch_notification = true
 -> main
 
 === special_mission_pause_check

@@ -410,7 +410,7 @@ A dopo {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:o
     //Svuoto il destinatario della missione attuale per sicurezza
     ~ frog_aboutGiftRequest = ()
     ~ frog_currentMission = ()
-    ~ witchNotification = false
+    ~ frog_witch_notification = false
  
      @animation:RewriterBook
 -> main

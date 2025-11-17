@@ -17,12 +17,11 @@
     VAR frog_aboutGiftRequest = ()
     VAR frog_currentMission = ()
     
-    VAR witchNotification = false
+    VAR frog_witch_notification = false
 
-    VAR diceFrog = 0
-    VAR maxValueDice = ()
-    VAR maxSpecialValueDice = ()
-        
+    VAR frog_randomMissionDice = 0
+    VAR frog_maxValueRandomMissionDice = ()
+
         //Pausa tra una missione speciale e l'altra
     VAR pauseSpecialMission = 0
     VAR pauseSpecialMissionMax = 1
