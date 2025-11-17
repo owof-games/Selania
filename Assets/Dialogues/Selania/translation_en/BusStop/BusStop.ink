@@ -208,7 +208,7 @@
                 
             - not two:
                 {  
-                    - secondWritingPause < 0:
+                    - secondChar_mailPause < 0:
                         -> two
                     - else:
                         -> one
@@ -216,7 +216,7 @@
                 
             - not three:
                 {  
-                    - secondWritingPause < 0:
+                    - secondChar_mailPause < 0:
                         -> three
                     - else:
                         -> two
@@ -322,7 +322,7 @@
                 {charNameTwo}: Ti scriverò appena scopro qual è quella giusta e quale è quella sbagliata.
                 {charNameTwo}: Ciao!
         }
-        ~ secondWritingPause = secondWritingPauseDuration
+        ~ secondChar_mailPause = secondChar_mailPauseDuration
             -> main
     
     = two
@@ -425,7 +425,7 @@
                 {charNameTwo}: Stammi bene!
                 {charNameTwo}: {charNameTwo}.
         }    
-    ~ secondWritingPause = secondWritingPauseDuration
+    ~ secondChar_mailPause = secondChar_mailPauseDuration
         -> main
     
     = three
@@ -542,7 +542,7 @@
                 {charNameTwo}: {charNameTwo}.
                 
         }
-    ~ secondWritingPause = secondWritingPauseDuration
+    ~ secondChar_mailPause = secondChar_mailPauseDuration
 
         -> main
     

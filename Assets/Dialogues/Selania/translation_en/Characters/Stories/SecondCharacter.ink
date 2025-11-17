@@ -22,7 +22,7 @@
         - not knowing_second_character.one:
             -> knowing_second_character.one
     //Se prima chiacchierata fatta e passato abbastanza tempo dalla pausa prevista        
-        - secondPauseTalking == 0:
+        - secondChar_pauseTalking == 0:
             -> hub
     //Altre opzioni        
         - else:
@@ -164,7 +164,7 @@
                 ???: O un labrador, così se mi rotolo nel fango tutti ridono e non si arrabbiano.
                 ???: Ma non un gatto: sapevi che i gatti non sentono mica il sapore dolce?
                 ???: Che cosa triste!
-                    ~ secondPurple ++
+                    ~ secondChar_purple ++
             -    
         
         ???: Io sono qui perché è il mio compleanno.
@@ -215,14 +215,14 @@
                 ???: Non ha senso quello che dici.
                 ???: Papà non mi deve prendere mica le mie cose.
                 ???: Detesto quando fa così.
-                    ~ secondPurple ++
+                    ~ secondChar_purple ++
             -
             
         ???: Ma dove saranno i miei compagni di scuola?
         ???: Cercali!
         ???: A dopo!
             -
-            ~ secondPauseTalking = secondCharPauseDurantion
+            ~ secondChar_pauseTalking = secondCharPauseDurantion
             -> main
    
     = two
@@ -318,14 +318,14 @@
                 {charNameTwo}: E ha mollato la mia spalla.
                 {charNameTwo}: Non le volevo fare mica male.
                 {charNameTwo}: Ma non mi piace quando i grandi mi toccano.
-                    ~ secondPurple ++
+                    ~ secondChar_purple ++
 
             -
         {charNameTwo}: Se {charNameFive} non mi lascia in pace chiamo mio fratello.
         {charNameTwo}: Lui è superforte.
         {charNameTwo}: Ora lasciami in pace.
         {are_two_entities_together(FirstCharacter, PG): {charNameOne}: Che merda essere bambini.}        
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondChar_pauseTalking = secondCharPauseDurantion
             -> main
 
 
@@ -485,10 +485,10 @@
                 {charNameTwo}: E anche io ci provo.
                 {charNameTwo}: Lei dice che farsi aiutare è barare.
                 {charNameTwo}: Nonna dice che a volte bisogna barare per andare avanti.
-                    ~ secondPurple ++
+                    ~ secondChar_purple ++
  
             -
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondChar_pauseTalking = secondCharPauseDurantion
             -> main
     
     
@@ -566,7 +566,7 @@
                 {charNameTwo}: Mamma delle bollette.
                 {charNameTwo}: Nonna però non ha paura di nulla.
                 {charNameTwo}: Però si arrabbia tanto quando gioca a briscola.
-                    ~ secondPurple ++
+                    ~ secondChar_purple ++
  
             -
         {charNameTwo}: Mi spiace, {name}.    
@@ -581,7 +581,7 @@
         
             //Leviamo l'innaffiatoio
             ~ move_entity(WateringCan, Safekeeping)
-            ~ secondPauseTalking = secondCharPauseDurantion
+            ~ secondChar_pauseTalking = secondCharPauseDurantion
             -> main
     
     = five
@@ -672,12 +672,12 @@
                 {charNameTwo}: E tu non puoi fare nulla.
                 {charNameTwo}: Ti viene solo più rabbia.
                 {charNameTwo}: Sono ingiusti.
-                    ~ secondPurple ++
+                    ~ secondChar_purple ++
  
             -
             //Se fiducia bassa.
             {
-                - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1):
+                - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1):
                     {charNameTwo}: Comunque l'innaffiatoio non l'ho mica visto.
                     {charNameTwo}: Ma.
                     {charNameTwo}: Sono sicuro che se cerchi bene lo trovi dove l'avete lasciato.
@@ -692,7 +692,7 @@
             
             //Ricompare l'innaffiatoio
             ~ move_entity(WateringCan, Greenhouse)
-            ~ secondPauseTalking = secondCharPauseDurantion
+            ~ secondChar_pauseTalking = secondCharPauseDurantion
                 -> main
     
     
@@ -760,10 +760,10 @@
                 {charNameTwo}: Perché non mi credi?
                 {charNameTwo}: Non siamo amici?
                 {charNameTwo}: Ti giuro che c'è una rana nello stagno!
-                    ~ secondPurple ++
+                    ~ secondChar_purple ++
  
             - (theFrog)
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondChar_pauseTalking = secondCharPauseDurantion
              
                 -> main
     
@@ -840,10 +840,10 @@
                 {charNameTwo}: O mi chiede di fare qualcosa.
                 {charNameTwo}: Non succede mai che è per una bella sorpresa.
                 {charNameTwo}: O per guardare i cartoni assieme.
-                    ~ secondPurple ++
+                    ~ secondChar_purple ++
  
             -
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondChar_pauseTalking = secondCharPauseDurantion
             -> main        
             
             
@@ -924,10 +924,10 @@
                 {charNameTwo}: A parte {charNameFive}, ma lei di sicuro non mi piace mica.
                 {charNameTwo}: Poi le cose qui sono belle.
                 {charNameTwo}: Le bugie sono meno interessanti.
-                    ~ secondPurple ++
+                    ~ secondChar_purple ++
  
             -
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondChar_pauseTalking = secondCharPauseDurantion
             -> main    
     
     
@@ -987,7 +987,7 @@
                 {charNameTwo}: È così piccola che non la vedi.
                 {charNameTwo}: Ma fa muovere le cose grandi!
                 {charNameTwo}: O bruciare i muri.
-                    ~ secondPurple ++
+                    ~ secondChar_purple ++
  
             -
             
@@ -1059,11 +1059,11 @@
                 {charNameTwo}: Lo fanno perché gli va.
                 {charNameTwo}: E io vorrei sempre fare quello che mi va.
                 {charNameTwo}: Il resto è una rottura.
-                    ~ secondPurple ++
+                    ~ secondChar_purple ++
  
             -
         {charNameTwo}: Però mi piacerebbe fare il veterinario.
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondChar_pauseTalking = secondCharPauseDurantion
             -> main    
     
     = ten
@@ -1138,10 +1138,10 @@
                 {charNameTwo}: Qui sono stato io a fare il cattivo.
                 {charNameTwo}: Forse potrei chiedere a lei come fa?
                 {charNameTwo}: Ma sarebbe stupido.
-                    ~ secondPurple ++
+                    ~ secondChar_purple ++
  
             -
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondChar_pauseTalking = secondCharPauseDurantion
             -> main    
     
     = eleven
@@ -1218,10 +1218,10 @@
                 {charNameTwo}: E se non sono d'accordo e glielo dico, mi ascolta.
                 {charNameTwo}: Per questo mi piace stare con lui.
                 {charNameTwo}: Non mi fa sentire stupido.
-                    ~ secondPurple ++
+                    ~ secondChar_purple ++
  
             -
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondChar_pauseTalking = secondCharPauseDurantion
             -> main    
     
     = twelve
@@ -1304,10 +1304,10 @@
                 {charNameTwo}: Anche per questo a volte dico bugie.
                 {charNameTwo}: Perché le parole sono sbagliate, ma il contenuto è quello che so o sento.
                 {charNameTwo}: Non so se mi sono spiegato.
-                    ~ secondPurple ++
+                    ~ secondChar_purple ++
  
             -
-             ~ secondPauseTalking = secondCharPauseDurantion
+             ~ secondChar_pauseTalking = secondCharPauseDurantion
             -> main            
             
             
@@ -1393,7 +1393,7 @@
         {
         
         //Migliore outcome
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1): {charNameTwo}: Non sei male, per essere grande.
+        - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1): {charNameTwo}: Non sei male, per essere grande.
             {charNameTwo}: Dici sempre le cose allo stesso modo.
             {charNameTwo}: Come un cane che scodinzola se è felice ma abbaia se arrabbiato.
             {charNameTwo}: E questo mi fa stare al sicuro.
@@ -1401,7 +1401,7 @@
         <i>{charNameTwo} vede {name} come una persona amica e fidata.</i>
         
         //Secondo migliore outcome
-        -secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 2): {charNameTwo}: Un po' mi fido.
+        -secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 2): {charNameTwo}: Un po' mi fido.
             {charNameTwo}: Secondo me non dici <i>sempre</i> le cose in modo preciso.
             {charNameTwo}: Sembri un po' un gatto.
             {charNameTwo}: Ma mi fido.
@@ -1409,7 +1409,7 @@
         <i>{charNameTwo} si trova bene con {name}.</i>
         
         //Outcome peggiore
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow < (secondChar_storyletsForRewritingCount/2):  {charNameTwo}: Secondo me mi tratti come un bambino.
+        - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow < (secondChar_storyletsForRewritingCount/2):  {charNameTwo}: Secondo me mi tratti come un bambino.
             {charNameTwo}: Tutte le cose che dici cambiano, sono disordinate.
             {charNameTwo}: Come i camaleonti che sono verdi sulle foglie e bianchi sul muro.
             {charNameTwo}: Non mi piace mica come cosa.
@@ -1456,7 +1456,7 @@
 
     = statement
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
-        <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1): l'inchiostro è aumentato di due unità|{secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
+        <i>A seguito del rapporto che {name} ha creato con {charNameTwo} {secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1): l'inchiostro è aumentato di due unità|{secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 2): l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(secondCharacterInkLevel)
         + [Voglio cominciare la riscrittura.]
@@ -1517,7 +1517,7 @@
             {name}: Un adulto che sa correggere le giornate.
             {name}: Anche per le altre persone.
             {name}: Che può tornare a fidarsi delle altre persone.
-                   ~ secondPurple ++
+                   ~ secondChar_purple ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
             
@@ -1576,7 +1576,7 @@
             {name}: Se hai paura, non agisci.
             {name}: Se agisci non cambi nulla.
             {name}: Davvero vuoi restare per sempre bloccato dalla paura?
-                   ~ secondPurple ++
+                   ~ secondChar_purple ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
             
@@ -1599,7 +1599,7 @@
             {name}: L'arte è credere che le cose possano migliorare.
             {name}: Definisce un presente, per lanciarci altrove.
             {name}: E rende il mondo un posto meno orribile.
-                   ~ secondPurple ++
+                   ~ secondChar_purple ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
             
@@ -1674,7 +1674,7 @@
             {name}: Quando le cose sono superate?
             {name}: Restiamo ancora nel nostro posto sicuro?
             {name}: O decidiamo di guardare le cose da una prospettiva diversa, e cambiarle?
-                   ~ secondPurple ++
+                   ~ secondChar_purple ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
              
@@ -1713,13 +1713,13 @@
                     -> secondColourCheck ->
                     ~ secondStatementVariation(red)        
         
-        + {secondPurple > 0} [Tutti abbiamo paura. Condividi questa paura con le altre persone.]
+        + {secondChar_purple > 0} [Tutti abbiamo paura. Condividi questa paura con le altre persone.]
             {name}: Falle sentire meno sole.
             {name}: Meno sbagliate.
             {name}: A quel punto saranno pronte a fare il passo.
             {name}: A cambiare le cose a loro volta.
             {name}: Assieme.
-                   ~ secondPurple ++
+                   ~ secondChar_purple ++
                     -> secondColourCheck ->
                     ~ secondStatementVariation(purple)    
                     
@@ -1805,7 +1805,7 @@
          ~ growing ++   
         
         {
-        - secondCharacterSpecialEvent == true:
+        - secondChar_specialEvent == true:
             -> secret_ending
         - else:
             -> exit
@@ -1841,7 +1841,7 @@
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
 
     {
-        - secondCharEndingDialogue < 4:
+        - secondChar_exitCounter < 4:
             -> top
         - else:
             -> goodbye
@@ -1849,7 +1849,7 @@
     
         - (top)
         {charNameTwo}: {~ Stavo pensando che se divento grande posso andare via di casa.|Magari da grande posso anche portare nonna via dalla casa dei vecchi.|Quando torno a casa chiedo a mio fratello se mi prende un cane.|Mi piace l'idea di tornare a casa ora, ma non di non potere mica tornare qui.|Se vieni a trovarmi ti faccio vedere tutte le statue di mio fratello.|Sarà difficile spiegare questa cosa a papà.}
-                ~ secondCharEndingDialogue ++
+                ~ secondChar_exitCounter ++
         -> main
         
         = goodbye

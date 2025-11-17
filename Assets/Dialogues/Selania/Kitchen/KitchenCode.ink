@@ -489,8 +489,8 @@
                 ~ firstChar_red = 0
     
         - cookingCompanion == SecondCharacter:
-            ~ storagePurple = secondPurple
-                ~ secondPurple = 0
+            ~ storagePurple = secondChar_purple
+                ~ secondChar_purple = 0
             ~ storageYellow = secondYellow
                 ~ secondYellow = 0
             ~ storageBlue = secondBlue
@@ -522,7 +522,7 @@
                 ~ storageRed = 0
     
     - cookingCompanion == SecondCharacter:
-            ~ secondPurple = secondPurple + storagePurple
+            ~ secondChar_purple = secondChar_purple + storagePurple
                 ~ storagePurple = 0
             ~ secondYellow = secondYellow + storageYellow
                 ~ storageYellow = 0

@@ -90,7 +90,7 @@
                         ~ firstChar_specialEvent = true
                     
                     - InkLevel == secondChar_InkLevel:
-                        ~ secondCharacterSpecialEvent = true
+                        ~ secondChar_specialEvent = true
                     
                     - InkLevel == thirdChar_InkLevel:
                         ~ thirdChar_specialEvent = true

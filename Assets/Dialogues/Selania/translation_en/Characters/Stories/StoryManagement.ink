@@ -56,22 +56,22 @@
     VAR secondChar_storyStatus = NotStarted
     //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
     VAR secondChar_storyletsForRewritingCount = 0
-    VAR secondCharacterSpecialEvent = false
+    VAR secondChar_specialEvent = false
 
     //Variabili per mettere in pausa la conversazione
-    VAR secondPauseTalking = 0
+    VAR secondChar_pauseTalking = 0
     VAR secondCharPauseDurantion = 3
     
     //Variabile per il countdown per la sua uscita di scena
-    VAR secondCharEndingDialogue = 0    
+    VAR secondChar_exitCounter = 0    
 
     //Variabile per il tempo di attesa tra una lettera e l'altra
-    VAR secondWritingPause = 0
-    VAR secondWritingPauseDuration = 5
+    VAR secondChar_mailPause = 0
+    VAR secondChar_mailPauseDuration = 5
     
     //UP: coerenza.
     //DOWN: incoerenza, cose random
-    VAR secondPurple = 0
+    VAR secondChar_purple = 0
     VAR secondYellow = 0
     VAR secondBlue = 0
     VAR secondGreen = 0

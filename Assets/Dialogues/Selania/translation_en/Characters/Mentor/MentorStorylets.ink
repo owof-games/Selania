@@ -684,7 +684,7 @@
         {charNameFive}: Io non ho tempo ora, ma sono sicura che troverai una soluzione.
         {charNameFive}: Trova un modo per allontanarlo.
         {charNameFive}: Ma non metterci troppo, per favore.
-            ~ secondPauseTalking = 0
+            ~ secondChar_pauseTalking = 0
         -> talk_with_mentor
     
     === watering_can_storylet
@@ -705,7 +705,7 @@
         {charNameFive}: E caricalo di peso sul prossimo treno.
         {charNameFive}: No, non devo essere così severa.
         {charNameFive}: Ma ti prego, tienimelo lontano.
-            ~ secondPauseTalking = 0
+            ~ secondChar_pauseTalking = 0
         -> talk_with_mentor
 //Fine della demo
 === ending_demo

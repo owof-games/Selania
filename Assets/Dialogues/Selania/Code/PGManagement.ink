@@ -178,7 +178,7 @@
             ~ temp_endedPNGGreen = secondGreen
             ~ temp_endedPNGBlue = secondBlue
             ~ temp_endedPNGYellow = secondYellow
-            ~ temp_endedPNGPurple = secondPurple
+            ~ temp_endedPNGPurple = secondChar_purple
             
     
     }

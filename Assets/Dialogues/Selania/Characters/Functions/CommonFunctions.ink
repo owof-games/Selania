@@ -282,7 +282,7 @@
 {debug: passo per on_movement_events}
 //Riduzioni di contatori legati al tempo:
     ~ firstChar_mailPause --
-    ~ secondWritingPause --
+    ~ secondChar_mailPause --
     ~ thirdChar_mailPause --
     ~ fifthWritingPause --
     
@@ -387,7 +387,7 @@
 	
 	{
 	    - secondChar_storyStatus == story_storyEnded:
-	        ~ secondCharEndingDialogue ++     
+	        ~ secondChar_exitCounter ++     
     }
 
 //Spostamento di libro e inventario se scoperti
@@ -419,8 +419,8 @@
             ~ firstChar_pauseTalking --
             {debug: Il valore di firstChar_pauseTalking è {firstChar_pauseTalking}}
         
-        - secondPauseTalking > 0:
-            ~ secondPauseTalking --
+        - secondChar_pauseTalking > 0:
+            ~ secondChar_pauseTalking --
         
         - thirdChar_pauseTalking > 0:
             ~ thirdChar_pauseTalking --
@@ -469,7 +469,7 @@
             
     
         - partner == SecondCharacter:
-            ~ secondPurple = secondPurple * number
+            ~ secondChar_purple = secondChar_purple * number
             ~ secondYellow = secondYellow * number
             ~ secondBlue = secondBlue * number
             ~ secondGreen = secondGreen * number

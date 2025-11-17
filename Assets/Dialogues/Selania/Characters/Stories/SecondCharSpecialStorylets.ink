@@ -18,8 +18,8 @@
             -> color_variation_management(SecondCharacter, greenC)->
         -    
     Ci viene aperta la biblioteca.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        ~ secondPauseTalking = secondCharPauseDuration
-        ~ justTalkedSecondChar = true
+        ~ secondChar_pauseTalking = secondChar_pauseDuration
+        ~ secondChar_justTalked = true
         -> opening_places ->
         -> main
         
@@ -42,7 +42,7 @@ Qui Riccio ci dice che ha letto <b>Il sassolino</b> e ci chiede cosa ne pensiamo
         + [Scelta verde.]
             -> color_variation_management(SecondCharacter, greenC)->
         -    
-        ~ secondPauseTalking = secondCharPauseDuration
-        ~ justTalkedSecondChar = true
+        ~ secondChar_pauseTalking = secondChar_pauseDuration
+        ~ secondChar_justTalked = true
 -> main
         

@@ -77,8 +77,8 @@
             
             ~ firstChar_pauseTalking = firstChar_pauseDuration
             ~ firstChar_justTalked = true
-            ~ secondPauseTalking = secondCharPauseDuration
-            ~ justTalkedSecondChar = true
+            ~ secondChar_pauseTalking = secondChar_pauseDuration
+            ~ secondChar_justTalked = true
 
 === about_violence_and_peace
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -107,8 +107,8 @@
     Ora ho voglia solo di cercare qualcosa da mangiare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             ~ change_entity_place(SecondCharacter)
             ~ fifthPauseTalking = fifthCharPauseDuration
-            ~ secondPauseTalking = secondCharPauseDuration
-            ~ justTalkedSecondChar = true
+            ~ secondChar_pauseTalking = secondChar_pauseDuration
+            ~ secondChar_justTalked = true
 -> main
 
 
@@ -142,8 +142,8 @@
             -> color_variation_management(SecondCharacter, greenC)->
                 -    
     Finisce la scena. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        ~ secondPauseTalking = secondCharPauseDuration
-        ~ justTalkedSecondChar = true
+        ~ secondChar_pauseTalking = secondChar_pauseDuration
+        ~ secondChar_justTalked = true
         ~ fifthPauseTalking = fifthCharPauseDuration
     -> main
     

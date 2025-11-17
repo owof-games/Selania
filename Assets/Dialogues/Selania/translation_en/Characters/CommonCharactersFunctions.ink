@@ -257,11 +257,11 @@ VAR delayFourthChar = 20
 //Per il secondo personaggio la cosa che conta è coerenza. Ha bisogno di stabilità. A manoni la logica sarà: tengo conto di un counter delle domande a cui ha risposto la giocatrice e se un determinato valore è >= di counter - x allora ++, se >= counter -x-1 allora +. Probabilmente da bilanciare.
 === secondAffinityCalc ===
 {
-    - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1):
+    - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1):
         ~ secondCharacterInkLevel ++
         ~ secondCharacterInkLevel ++
             ->->
-    - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 2):
+    - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 2):
         ~ secondCharacterInkLevel ++
             ->->     
 }
@@ -271,7 +271,7 @@ VAR delayFourthChar = 20
     === secondAffinityCheckCalc ===
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         {
-            - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1):
+            - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1):
                 {charNameTwo}: Sai? Mi sembri una persona che dice sempre le cose giuste.
                 {charNameTwo}: Non giuste giuste tipo per me.
                 {charNameTwo}: Ma che si assomigliano tutte.
@@ -309,23 +309,23 @@ VAR secondPurpleMax = false
 
 {
 //Potrebbe capitare un pareggio, e va bene così, così non è punitivo per la giocatrice.
-    - secondRed >= secondBlue && secondRed >= secondYellow && secondRed >= secondGreen && secondRed >= secondPurple && secondRed >= secondGreen:
+    - secondRed >= secondBlue && secondRed >= secondYellow && secondRed >= secondGreen && secondRed >= secondChar_purple && secondRed >= secondGreen:
                 ~  secondRedMax = true
     {debugChangeName: The value of secondRedMax is {secondRedMax}.}
     
-    - secondBlue >= secondRed && secondBlue >= secondYellow && secondBlue >= secondGreen && secondBlue >= secondPurple && secondBlue >= secondGreen:
+    - secondBlue >= secondRed && secondBlue >= secondYellow && secondBlue >= secondGreen && secondBlue >= secondChar_purple && secondBlue >= secondGreen:
                 ~  secondBlueMax = true
      {debugChangeName: The value of secondBlueMax is {secondBlueMax}.}
      
-    - secondGreen >= secondBlue && secondGreen >= secondYellow && secondGreen >= secondGreen && secondGreen >= secondPurple && secondGreen >= secondRed:
+    - secondGreen >= secondBlue && secondGreen >= secondYellow && secondGreen >= secondGreen && secondGreen >= secondChar_purple && secondGreen >= secondRed:
                 ~  secondGreenMax = true
         {debugChangeName: The value of secondGreenMax is {secondGreenMax}.}  
         
-    - secondPurple >= secondBlue && secondPurple >= secondYellow && secondPurple >= secondGreen && secondPurple >= secondRed && secondPurple >= secondGreen:
+    - secondChar_purple >= secondBlue && secondChar_purple >= secondYellow && secondChar_purple >= secondGreen && secondChar_purple >= secondRed && secondChar_purple >= secondGreen:
                 ~  secondPurpleMax = true
         {debugChangeName: The value of secondPurpleMax is {secondPurpleMax}.}  
         
-    - secondYellow >= secondBlue && secondYellow >= secondRed && secondYellow >= secondGreen && secondYellow >= secondPurple && secondYellow >= secondGreen:
+    - secondYellow >= secondBlue && secondYellow >= secondRed && secondYellow >= secondGreen && secondYellow >= secondChar_purple && secondYellow >= secondGreen:
                 ~  secondYellowMax = true 
     {debugChangeName: The value of secondGreenMax is {secondGreenMax}.}                  
 
@@ -409,19 +409,19 @@ VAR secondPurpleMax = false
 
 === secondNaming ==
     {
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1):
+        - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 1):
             ~ secondCharacterPossibleStates += IlCorvo
                 ->->
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 2):
+        - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 2):
             ~ secondCharacterPossibleStates += IlCapibara   
                 ->-> 
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 3):
+        - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 3):
             ~ secondCharacterPossibleStates += IlDelfino    
                 ->->
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 4):
+        - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 4):
             ~ secondCharacterPossibleStates += IlLupo
                 ->->
-        - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 5):
+        - secondChar_purple or secondGreen or secondRed or secondBlue or secondYellow >= (secondChar_storyletsForRewritingCount - 5):
             ~ secondCharacterPossibleStates += IlGrizzly
                 ->->
         - else:     

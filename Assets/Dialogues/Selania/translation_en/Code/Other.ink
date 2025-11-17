@@ -80,7 +80,7 @@
 
 //Riduzioni di contatori legati al tempo:
     ~ firstWritingPause --
-    ~ secondWritingPause --
+    ~ secondChar_mailPause --
     ~ thirdWritingPause --
     ~ fifthWritingPause --
     
@@ -119,8 +119,8 @@
             ~ firstPauseTalking --
             {debug: The value of firstPauseTalking is {firstPauseTalking}}
         
-        - secondPauseTalking > 0:
-            ~ secondPauseTalking --
+        - secondChar_pauseTalking > 0:
+            ~ secondChar_pauseTalking --
         
         - thirdChar_pauseTalking > 0:
             ~ thirdChar_pauseTalking --

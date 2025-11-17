@@ -252,7 +252,7 @@
                 
             - not two:
                 {  
-                    - secondWritingPause < 0:
+                    - secondChar_mailPause < 0:
                         -> two
                     - else:
                         -> one
@@ -260,7 +260,7 @@
                 
             - not three:
                 {  
-                    - secondWritingPause < 0:
+                    - secondChar_mailPause < 0:
                         -> three
                     - else:
                         -> two
@@ -383,7 +383,7 @@
             
         }
         
-            ~ secondWritingPause = secondWritingPauseDuration
+            ~ secondChar_mailPause = secondChar_mailPauseDuration
                 -> main
     
     = two
@@ -498,7 +498,7 @@
             
         }
         
-                ~ secondWritingPause = secondWritingPauseDuration
+                ~ secondChar_mailPause = secondChar_mailPauseDuration
                     -> main
     
     = three
@@ -625,7 +625,7 @@
             @animation:RewriterBook
             
         }        
-            ~ secondWritingPause = secondWritingPauseDuration
+            ~ secondChar_mailPause = secondChar_mailPauseDuration
                 -> main
     
 === third_character_notes ===

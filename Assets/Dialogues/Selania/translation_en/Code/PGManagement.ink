@@ -105,7 +105,7 @@ VAR purple  = ()
         ~ green = secondGreen
         ~ blue = secondBlue
         ~ yellow = secondYellow
-        ~ purple = secondPurple
+        ~ purple = secondChar_purple
         ~ playerSecondStory = ()
 
 }

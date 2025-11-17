@@ -537,8 +537,8 @@ Riccio attiva il suo storylet speciale dopo aver cucinato da solo e ci impezza s
             -
     
     
-    ~ secondPauseTalking = secondCharPauseDuration
-    ~ justTalkedSecondChar = true
+    ~ secondChar_pauseTalking = secondChar_pauseDuration
+    ~ secondChar_justTalked = true
 
 
 -> main

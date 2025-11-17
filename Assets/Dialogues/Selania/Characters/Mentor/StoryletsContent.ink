@@ -615,7 +615,7 @@
         Io non ho tempo ora, ma sono sicura che troverai una soluzione.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
         Trova un modo per allontanarlo.
         Ma non metterci troppo, per favore.
-        ~ secondPauseTalking = 0
+        ~ secondChar_pauseTalking = 0
         ~ fifthPauseTalking = fifthCharPauseDuration
         ~ tutorialPauses = true
             - (nameSecond)
