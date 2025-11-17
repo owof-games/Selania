@@ -13,8 +13,8 @@ dog
 + (check){are_two_entities_together(WitchRecap, PG)} [WitchRecap]
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
-    ~ temp charNameThree = translator(thirdCharacterState)
-    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ enableBigDialogue()
 

@@ -3,8 +3,8 @@
     ~ enableBigDialogue()
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
-    ~ temp charNameThree = translator(thirdCharacterState)
-    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
 {knowing_fourth_character.one: prima informazione.}
@@ -25,21 +25,21 @@
     - fourth_story_gift.ink_outcome:
     {
     
-        - fourthGift == EderaDelleAmanti:
+        - fourthChar_giftedObject == EderaDelleAmanti:
             Ho donato dell'Edera delle Amanti e la reazione è stata:
-        - fourthGift == BaccaDellaAddolorata:
+        - fourthChar_giftedObject == BaccaDellaAddolorata:
             Ho donato della Bacca dell'Addolorata e la reazione è stata:
-        - fourthGift == LaSpazzata:
+        - fourthChar_giftedObject == LaSpazzata:
             Ho donato della Spazzata e la reazione è stata:
-        - fourthGift == BrinaDellImpossibile: 
+        - fourthChar_giftedObject == BrinaDellImpossibile: 
             Ho donato della Brina dell'Impossibile e la reazione è stata:
-        - fourthGift == CantoDelleCompagne: 
+        - fourthChar_giftedObject == CantoDelleCompagne: 
             Ho donato del Canto delle Compagne e la reazione è stata:
-        - fourthGift == LicheneDegliAbissi: 
+        - fourthChar_giftedObject == LicheneDegliAbissi: 
             Ho donato del Lichene degli Abissi e la reazione è stata:
-        - fourthGift == NonTiScordarDiTe: 
+        - fourthChar_giftedObject == NonTiScordarDiTe: 
             Ho donato del Non Ti Scordar Di Te e la reazione è stata:
-        - fourthGift == CardoAspinato: 
+        - fourthChar_giftedObject == CardoAspinato: 
             Ho donato del Cardo Aspinato e la reazione è stata:
     
     }    
@@ -48,78 +48,78 @@
 
 
 {main_story_fourth_character: confessione.}
-{main_story_fourth_character.ending: Dopo la nostra conversazione, ha scelto un nuovo nome: {fourthCharacterState}.}
+{main_story_fourth_character.ending: Dopo la nostra conversazione, ha scelto un nuovo nome: {fourthChar_ActualName}.}
 
 //Eventuale commento della rana.
 
-{fourth_character_feedback: Dopo aver aiutato {fourthCharacterState}, {fifthCharacterState} mi ha detto che<>}
+{fourth_character_feedback: Dopo aver aiutato {fourthChar_ActualName}, {fifthCharacterState} mi ha detto che<>}
 {
-    - fourthCharacterPossibleStates has Grizzly: feedback Mentore
+    - fourthChar_possibleStates has Grizzly: feedback Mentore
         
-    - fourthCharacterPossibleStates has Lupo: feedback Mentore
+    - fourthChar_possibleStates has Lupo: feedback Mentore
                     
-    - fourthCharacterPossibleStates has Delfino:feedback Mentore
+    - fourthChar_possibleStates has Delfino:feedback Mentore
                     
-    - fourthCharacterPossibleStates has Capibara:feedback Mentore
+    - fourthChar_possibleStates has Capibara:feedback Mentore
     
-    - fourthCharacterPossibleStates has Corvo:feedback Mentore
+    - fourthChar_possibleStates has Corvo:feedback Mentore
 }
 
-{fourth_character_notes.one: Dopo la sua partenza, {fourthCharacterState} mi ha scritto una lettera, dove mi ha raccontato che<>}
+{fourth_character_notes.one: Dopo la sua partenza, {fourthChar_ActualName} mi ha scritto una lettera, dove mi ha raccontato che<>}
 {
-    - fourthCharacterPossibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
+    - fourthChar_possibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
         
-    - fourthCharacterPossibleStates has Lupo: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
+    - fourthChar_possibleStates has Lupo: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
                     
-    - fourthCharacterPossibleStates has Delfino:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
+    - fourthChar_possibleStates has Delfino:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
         E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
         Tu e quel posto mi avete reso una mollacciona.
         Ma non è così male, alla fine.
                     
-    - fourthCharacterPossibleStates has Capibara:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
+    - fourthChar_possibleStates has Capibara:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
         Se lo dico a mio padre mi fa ricoverare subito, ma amen.
         Sono felice ama, davvero felice.
                     
-    - fourthCharacterPossibleStates has Corvo:
+    - fourthChar_possibleStates has Corvo:
         sddd
 }
 
-{fourth_character_notes.two: Nella sua seconda lettera {fourthCharacterState} mi ha scritto una lettera, dove mi ha raccontato che<>}
+{fourth_character_notes.two: Nella sua seconda lettera {fourthChar_ActualName} mi ha scritto una lettera, dove mi ha raccontato che<>}
 {
-    - fourthCharacterPossibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
+    - fourthChar_possibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
         
-    - fourthCharacterPossibleStates has Lupo: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
+    - fourthChar_possibleStates has Lupo: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
                     
-    - fourthCharacterPossibleStates has Delfino:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
+    - fourthChar_possibleStates has Delfino:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
         E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
         Tu e quel posto mi avete reso una mollacciona.
         Ma non è così male, alla fine.
                     
-    - fourthCharacterPossibleStates has Capibara:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
+    - fourthChar_possibleStates has Capibara:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
         Se lo dico a mio padre mi fa ricoverare subito, ma amen.
         Sono felice ama, davvero felice.
                     
-    - fourthCharacterPossibleStates has Corvo:
+    - fourthChar_possibleStates has Corvo:
         sddd
 }
 
 
-{fourth_character_notes.three: Nella sua terza lettera {fourthCharacterState} mi ha scritto una lettera, dove mi ha raccontato che<>}
+{fourth_character_notes.three: Nella sua terza lettera {fourthChar_ActualName} mi ha scritto una lettera, dove mi ha raccontato che<>}
 {
-    - fourthCharacterPossibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
+    - fourthChar_possibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
         
-    - fourthCharacterPossibleStates has Lupo: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
+    - fourthChar_possibleStates has Lupo: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
                     
-    - fourthCharacterPossibleStates has Delfino:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
+    - fourthChar_possibleStates has Delfino:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
         E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
         Tu e quel posto mi avete reso una mollacciona.
         Ma non è così male, alla fine.
                     
-    - fourthCharacterPossibleStates has Capibara:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
+    - fourthChar_possibleStates has Capibara:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
         Se lo dico a mio padre mi fa ricoverare subito, ma amen.
         Sono felice ama, davvero felice.
                     
-    - fourthCharacterPossibleStates has Corvo:
+    - fourthChar_possibleStates has Corvo:
         sddd
 }
 

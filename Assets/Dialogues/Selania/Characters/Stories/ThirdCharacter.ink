@@ -1,13 +1,13 @@
 === third_character ===
-~ temp charNameThree = translator(thirdCharacterState)
+~ temp charNameThree = translator(thirdChar_ActualName)
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
-        + {are_two_entities_together(ThirdCharacter, PG) && thirdStory == story_storyStarted}[ThirdCharacter]
+        + {are_two_entities_together(ThirdCharacter, PG) && thirdChar_storyStatus == story_storyStarted}[ThirdCharacter]
             -> talk_with_third_character
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(ThirdCharacter, PG) && thirdStory == story_storyEnded} [ThirdCharacter]
+        + {are_two_entities_together(ThirdCharacter, PG) && thirdChar_storyStatus == story_storyEnded} [ThirdCharacter]
             -> third_char_story_ended
         + ->
     
@@ -15,13 +15,13 @@
     
 
 === talk_with_third_character ===
-~ temp charNameThree = translator(thirdCharacterState)
+~ temp charNameThree = translator(thirdChar_ActualName)
 
    {//Se prima chiacchierata
         - not knowing_third_character.one:
             -> knowing_third_character.one
     //Se prima chiacchierata fatta e passato abbastanza tempo dalla pausa prevista        
-        - thirdPauseTalking == 0:
+        - thirdChar_pauseTalking == 0:
             -> hub
     //Altre opzioni        
         - else:
@@ -30,7 +30,7 @@
     }
 
 = hub
-~ temp charNameThree = translator(thirdCharacterState)
+~ temp charNameThree = translator(thirdChar_ActualName)
 
     {~ Ero sicura di aver visto una farfalla.|Non male questo posto, anche se casa mi manca.|Non son sicura di star capendo tutto di questo luogo.} #speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)}  #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #portrait:third_neutral
             + [Ti va di raccontarmi qualcosa di te?]
@@ -38,7 +38,7 @@
                 
     
             //Se non ho ancora fatto e ho parlato abbastanza con lui
-            + {thirdStoryQuestCount > firstChar_minStoryletsForRewriting && findedGifts != ()} [Ti vorrei donare questa cosa.]
+            + {thirdChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && findedGifts != ()} [Ti vorrei donare questa cosa.]
                     -> third_story_gift
         
             //Dono fatto ma non ho avviato la main story
@@ -58,7 +58,7 @@
 
 
 === knowing_third_character
-~ temp charNameThree = translator(thirdCharacterState)
+~ temp charNameThree = translator(thirdChar_ActualName)
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {
             - not one:
@@ -90,28 +90,28 @@
         }
 
     = one
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
     //Non mettere cose TW qui
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         ???: Non è che hai visto passare di qui una persona?
             + (threeBlue) [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + (threeYellow) [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + (threeRed) [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + (threeGreen) [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + (threePurple) [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
         ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameThree}.
@@ -123,322 +123,322 @@
     	E con che pronomi vuoi che ti chiami?
     	        -> gender ->
     	Grandioso, io uso i femminili.   
-             ~ thirdPauseTalking = thirdCharPauseDuration
+             ~ thirdChar_pauseTalking = thirdChar_pauseDuration
              ~ move_entity(ThirdRecap, BookPlace)
               
                 @animation:RewriterBook 
             -> main
     
     = two
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
     //Non mettere cose TW qui
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDuration
+             ~ thirdChar_pauseTalking = thirdChar_pauseDuration
             -> main
 
 
     
     = three
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
     //Non mettere cose TW qui
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDuration
+             ~ thirdChar_pauseTalking = thirdChar_pauseDuration
             -> main
 
     
     = four
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
     //Non mettere cose TW qui
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDuration
+             ~ thirdChar_pauseTalking = thirdChar_pauseDuration
             -> main
     = five
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
     //Non mettere cose TW qui
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDuration
+             ~ thirdChar_pauseTalking = thirdChar_pauseDuration
             -> main
     
     
     = six
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
     //Non mettere cose TW qui
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDuration
+             ~ thirdChar_pauseTalking = thirdChar_pauseDuration
             -> main
     = seven
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
     //Non mettere cose TW qui
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDuration
+             ~ thirdChar_pauseTalking = thirdChar_pauseDuration
             -> main        
             
             
     = eight
         //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
     
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDuration
+             ~ thirdChar_pauseTalking = thirdChar_pauseDuration
             -> main    
     
     
     = nine
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
     //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDuration
+             ~ thirdChar_pauseTalking = thirdChar_pauseDuration
             -> main    
     
     = ten
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
     //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDuration
+             ~ thirdChar_pauseTalking = thirdChar_pauseDuration
             -> main    
     
     = eleven
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
     //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDuration
+             ~ thirdChar_pauseTalking = thirdChar_pauseDuration
             -> main    
     = twelve
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
     //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDuration
+             ~ thirdChar_pauseTalking = thirdChar_pauseDuration
             -> main            
             
             
@@ -447,14 +447,14 @@
 
         
 === third_character_opinions
-~ temp charNameThree = translator(thirdCharacterState)
+~ temp charNameThree = translator(thirdChar_ActualName)
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
     {~ Bisogna sporcarsi le mani. Nelle cose. Non c’è contatto con le vita se le mani sono sempre pulite.|Le dita devono sapere di terra, come quando da bambina non avevi paura di cadere. Che cosa c’è di vivo se sono sempre pulite?}
             -> main
 
 
 === third_story_gift ===
-~ temp charNameThree = translator(thirdCharacterState)
+~ temp charNameThree = translator(thirdChar_ActualName)
 Stai per donare qualcosa a {charNameThree}.
         + {findedGifts != ()} [Scelgo il dono.]
             ~ currentReceiver += ThirdCharacter
@@ -472,7 +472,7 @@ Stai per donare qualcosa a {charNameThree}.
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
 === third_story_chech_trigger
-      ~ temp charNameThree = translator(thirdCharacterState)
+      ~ temp charNameThree = translator(thirdChar_ActualName)
       //In questa storia non ci sono trigger, lascio la struttura perché non si sa mai.
       
         //{
@@ -494,7 +494,7 @@ Stai per donare qualcosa a {charNameThree}.
         -> END
 
 === main_story_third_character
-~ temp charNameThree = translator(thirdCharacterState)
+~ temp charNameThree = translator(thirdChar_ActualName)
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
     {
         - not confession:
@@ -505,7 +505,7 @@ Stai per donare qualcosa a {charNameThree}.
             -> one
     }
     = confession
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
         Ho realizzato una cosa, una cosa su noi due.
             -> thirdAffinityCalc ->
         {
@@ -535,7 +535,7 @@ Stai per donare qualcosa a {charNameThree}.
 
 
     = statement
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
         <i>A seguito del rapporto che {player_name} ha creato con {charNameThree} {firstChar_purple && firstChar_yellow > firstChar_blue: l'inchiostro è aumentato di due unità.|{firstChar_purple or firstChar_yellow > firstChar_blue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.</i>
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(thirdChar_InkLevel)
@@ -546,7 +546,7 @@ Stai per donare qualcosa a {charNameThree}.
             -> main
 
     = one
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
     {player_name}: Prima hai detto che hai il terrore di fare una scelta.
         
         + [Qui hai accettato il tuo nuovo nome.]
@@ -587,7 +587,7 @@ Stai per donare qualcosa a {charNameThree}.
         }        
         
     = two
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
 
         + [Con Talco puoi litigare, eppure siete legatissim3.]
             {player_name}: Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
@@ -630,7 +630,7 @@ Stai per donare qualcosa a {charNameThree}.
         }
         
     = three
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
             
         + [Se non tiri nessun dado, non c'è storia da far avanzare.]
          
@@ -671,7 +671,7 @@ Stai per donare qualcosa a {charNameThree}.
         }
     
     = four
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
 
         + [Giocare è bello perché puoi sempre Chitarrare a farlo.]
 
@@ -709,17 +709,17 @@ Stai per donare qualcosa a {charNameThree}.
         -> ending
 
     = ending
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
      Per questo ti dico...
-        + {thirdRed > 0} [Prendi una strada e se non ti piace cambiala!]
+        + {thirdChar_red > 0} [Prendi una strada e se non ti piace cambiala!]
         
-        + {thirdPurple > 0} [Dai alla tua vita uno scopo più grande.]
+        + {thirdChar_purple > 0} [Dai alla tua vita uno scopo più grande.]
         
-        + {thirdYellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
+        + {thirdChar_yellow > 0} [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
                 
-        + {thirdGreen > 0} [Non deluderai i tuoi amici: loro saranno sempre con te.]
+        + {thirdChar_green > 0} [Non deluderai i tuoi amici: loro saranno sempre con te.]
                 
-        + {thirdBlue > 0} [Questa non è la tua strada. Succede. Ora puoi cambiare.]
+        + {thirdChar_blue > 0} [Questa non è la tua strada. Succede. Ora puoi cambiare.]
                 
         
                 
@@ -736,34 +736,34 @@ Stai per donare qualcosa a {charNameThree}.
             
             - firstChar_possibleStates has Triangolo:
                 E il mio vero nome è <b>Triangolo</b>, perché pensavo di essere uno strumento, e invece ho solo fallito.
-                    ~ thirdCharacterState = ()
-                    ~ thirdCharacterState += Triangolo
+                    ~ thirdChar_ActualName = ()
+                    ~ thirdChar_ActualName += Triangolo
             
             - firstChar_possibleStates has RagazzaOrchestra:
                 Mi chiamerò <b>Ragazza Orchestra</b>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
-                    ~ thirdCharacterState = ()
-                    ~ thirdCharacterState += RagazzaOrchestra
+                    ~ thirdChar_ActualName = ()
+                    ~ thirdChar_ActualName += RagazzaOrchestra
             
             - firstChar_possibleStates has FlautoDolce:
                 Il mio nome è <b>Flauto Dolce</b>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
-                    ~ thirdCharacterState = ()
-                    ~ thirdCharacterState += FlautoDolce                
+                    ~ thirdChar_ActualName = ()
+                    ~ thirdChar_ActualName += FlautoDolce                
             
             - firstChar_possibleStates has Ocarina:
                 Mi chiamerò <b>Ocarina</b>: perché il suo suono è gioco e festa.
-                    ~ thirdCharacterState = ()
-                    ~ thirdCharacterState += Ocarina
+                    ~ thirdChar_ActualName = ()
+                    ~ thirdChar_ActualName += Ocarina
             
             - firstChar_possibleStates has Violino:
                 Io sono <b>Violino</b>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
-                    ~ thirdCharacterState = ()
-                    ~ thirdCharacterState += Violino
+                    ~ thirdChar_ActualName = ()
+                    ~ thirdChar_ActualName += Violino
         }
         
             
         
         {
-        - thirdCharacterSpecialEvent == true:
+        - thirdChar_specialEvent == true:
             -> secret_ending
         - else:
             -> exit
@@ -774,18 +774,18 @@ Stai per donare qualcosa a {charNameThree}.
         
     
     = secret_ending
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
         C'è una cosa che vorrei dirti, {player_name}.
         Riguarda Il mentore.
             -> close
             
     = exit
-    ~ temp charNameThree = translator(thirdCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
         Credo rimarrò ancora in giro per un poco, in attesa del prossimo bus.
             -> close  
         
     = close
-            ~ thirdStory = story_storyEnded
+            ~ thirdChar_storyStatus = story_storyEnded
             ~ story_endedStories += story_thirdCharStoryEnded
             ~ thirdChar_InkLevel = ink_empty
             ~ player_movementsCounter = 0
@@ -794,12 +794,12 @@ Stai per donare qualcosa a {charNameThree}.
             -> main
     
 === third_char_story_ended
-~ temp charNameThree = translator(thirdCharacterState)
+~ temp charNameThree = translator(thirdChar_ActualName)
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
 
     {
-        - thirdCharEndingDialogue < 4:
+        - thirdChar_exitCounter < 4:
             -> top
         - else:
             -> goodbye
@@ -807,11 +807,11 @@ Stai per donare qualcosa a {charNameThree}.
     
         - (top)
         {~ Mi chiedo se le cose sarebbero andate diversamente, se Talco fosse arrivatə qui con me.|Sono sicura di aver visto un'altra persona alla fermata del bus, ma quando ho cercato di raggiungerla è scomparsa.|Ogni tanto te la prendi una pausa da questo posto, vero?|Sapevi che a volte c'è una rana nello stagno che circonda la serra?}
-                ~ thirdCharEndingDialogue ++
+                ~ thirdChar_exitCounter ++
         -> main
         
         = goodbye
-        ~ temp charNameThree = translator(thirdCharacterState)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
         {player_name}, per me è arrivato il momento di tornare a casa.
         {firstChar_possibleStates hasnt Chitarra: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
         {firstChar_possibleStates hasnt Chitarra: Grazie per quello che hai fatto, davvero.}
@@ -819,7 +819,7 @@ Stai per donare qualcosa a {charNameThree}.
             ~ move_entity(ThirdCharacter, Safekeeping)
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             {
-                - thirdCharacterPossibleStates hasnt Chitarra:
+                - thirdChar_possibleStates hasnt Chitarra:
                     ~ move_entity(ThirdCharacterNotes, TrainStop)
             }    
             

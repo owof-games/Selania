@@ -21,10 +21,10 @@
         - Relationship == secondCharStateRelationship:
             ~ Ink = secondChar_InkLevel
         
-        - Relationship == thirdCharStateRelationship:
+        - Relationship == thirdChar_relationshipStatus:
             ~ Ink = thirdChar_InkLevel
             
-        - Relationship == fourthCharStateRelationship:
+        - Relationship == fourthChar_relationshipStatus:
             ~ Ink = fourthChar_InkLevel
         
         - Relationship == fifthCharStateRelationship:
@@ -93,10 +93,10 @@
                         ~ secondCharacterSpecialEvent = true
                     
                     - InkLevel == thirdChar_InkLevel:
-                        ~ thirdCharacterSpecialEvent = true
+                        ~ thirdChar_specialEvent = true
                     
                     - InkLevel == fourthChar_InkLevel:
-                        ~ fourthCharacterSpecialEvent = true
+                        ~ fourthChar_specialEvent = true
                     
                     - InkLevel == fifthChar_InkLevel:
                         ~ fifthCharacterSpecialEvent = true    

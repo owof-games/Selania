@@ -17,13 +17,13 @@
 === talking_witch
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
-    ~ temp charNameThree = translator(thirdCharacterState)
-    ~ temp charNameFour = translator(fourthCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     {
         //Check per intro
-        - not intro && ((firstChar_storyStatus == story_storyEnded) or (secondStory == story_storyEnded) or (thirdStory == story_storyEnded)):
+        - not intro && ((firstChar_storyStatus == story_storyEnded) or (secondStory == story_storyEnded) or (thirdChar_storyStatus == story_storyEnded)):
             -> intro
         
         //Spiegazione del nido
@@ -37,9 +37,9 @@
             -> first_story_ended_check
         - intro && secondStory == story_storyEnded && not second_story_ended_check:
             -> second_story_ended_check
-        - intro && thirdStory == story_storyEnded && not third_story_ended_check:
+        - intro && thirdChar_storyStatus == story_storyEnded && not third_story_ended_check:
             -> third_story_ended_check
-        - intro && fourthStory == story_storyEnded:
+        - intro && fourthChar_storyStatus == story_storyEnded:
             -> fourth_story_ended_check
         - intro && fifthStory == story_storyEnded:
             -> fifth_story_ended_check    
@@ -56,8 +56,8 @@
     = intro
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondCharacterState)
-        ~ temp charNameThree = translator(thirdCharacterState)
-        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         
         ~ saturationVar ++
@@ -126,7 +126,7 @@
                         -> first_story_ended_check
                     - not second_story_ended_check && secondStory == story_storyEnded:
                         -> second_story_ended_check
-                    - not third_story_ended_check && thirdStory == story_storyEnded:
+                    - not third_story_ended_check && thirdChar_storyStatus == story_storyEnded:
                         -> third_story_ended_check
                 }
 
@@ -135,8 +135,8 @@
     = first_story_ended_check
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondCharacterState)
-        ~ temp charNameThree = translator(thirdCharacterState)
-        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         
         {
@@ -206,8 +206,8 @@
     = second_story_ended_check
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondCharacterState)
-        ~ temp charNameThree = translator(thirdCharacterState)
-        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         
         {
@@ -272,8 +272,8 @@
     = third_story_ended_check
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondCharacterState)
-        ~ temp charNameThree = translator(thirdCharacterState)
-        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         
         + [Mi chiedo se sono all'altezza di tutto questo.]
@@ -296,8 +296,8 @@
     = fourth_story_ended_check
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondCharacterState)
-        ~ temp charNameThree = translator(thirdCharacterState)
-        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         
         + [Mi chiedo se sono all'altezza di tutto questo.]
@@ -321,8 +321,8 @@
     = fifth_story_ended_check
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondCharacterState)
-        ~ temp charNameThree = translator(thirdCharacterState)
-        ~ temp charNameFour = translator(fourthCharacterState)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         
         + [Mi chiedo se sono all'altezza di tutto questo.]
@@ -379,8 +379,8 @@
 === trully_about_nest
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
-    ~ temp charNameThree = translator(thirdCharacterState)
-    ~ temp charNameFour = translator(fourthCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
         Dove ci viene detto a cosa serve il nido in modo sereno.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         E ci spiega che la manipolazione è un intento, non qualcosa di inerente all'oggetto, o al nido.

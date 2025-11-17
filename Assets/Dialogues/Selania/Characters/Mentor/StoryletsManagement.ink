@@ -50,8 +50,8 @@
 {debug: passo da mentor_and_first_char_storylets}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
-    ~ temp charNameThree = translator(thirdCharacterState)
-    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
 {    
@@ -75,8 +75,8 @@
 {debug: passo da mentor_and_second_char_storylets}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
-    ~ temp charNameThree = translator(thirdCharacterState)
-    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
         TODO: quando apro il terzo PNG, lo storylet della rana si sposta su di lui.
@@ -107,18 +107,18 @@
 {debug: passo da fifth_character_storylets}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
-    ~ temp charNameThree = translator(thirdCharacterState)
-    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     {
     //Feedback
         - not ending_demo && secondStory == story_storyEnded && firstChar_storyStatus == story_storyEnded:
             -> ending_demo
-        // - not third_character_feedback && thirdStory == story_storyEnded:
+        // - not third_character_feedback && thirdChar_storyStatus == story_storyEnded:
         //     -> third_character_feedback        
     
-        // - not fourth_character_feedback && fourthStory == story_storyEnded:
+        // - not fourth_character_feedback && fourthfourthChar_storyStatusStory == story_storyEnded:
         //     -> fourth_character_feedback        
     
         // - not fifth_character_feedback && fifthStory == story_storyEnded:

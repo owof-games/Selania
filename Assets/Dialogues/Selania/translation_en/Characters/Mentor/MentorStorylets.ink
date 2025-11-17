@@ -103,7 +103,7 @@
 //Feedback
     - not ending_demo && secondStory == Ended && firstStory == Ended:
         -> ending_demo
-    // - not third_character_feedback && thirdStory == Ended:
+    // - not third_character_feedback && thirdChar_storyStatus == Ended:
     //     -> third_character_feedback        
 
     // - not fourth_character_feedback && fourthStory == Ended:

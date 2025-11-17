@@ -34,7 +34,7 @@
 
     //Check stato tier
     {   
-            // - thirdStory == Ended:
+            // - thirdChar_storyStatus == Ended:
                     //~ fourthTier = true
                     
             // - secondStory == Ended:
@@ -59,7 +59,7 @@
         - secondStory == Active && talk_with_second_character:
             ~ randomizable_characters += SecondCharacter
         
-        // - thirdStory == Active && talk_with_third_character:
+        // - thirdChar_storyStatus == Active && talk_with_third_character:
             // ~ randomizable_characters += ThirdCharacter
         
         // - fourthStory == Active && dialogo_personaggia_quattro:
@@ -194,12 +194,12 @@ VAR delayFourthChar = 20
             ~ secondStory = Active
 
 //A metà della storia della seconda personaggia e finita la prima (così la biblioteca è aperta), compare la terza
-    //- knowing_second_character.four && firstStory == Ended && thirdStory == NotStarted:
+    //- knowing_second_character.four && firstStory == Ended && thirdChar_storyStatus == NotStarted:
            // ~ move_entity(ThirdCharacter, BusStop)    
-            //~ thirdStory = Active
+            //~ thirdChar_storyStatus = Active
             
 //Dopo un po' da quando la terza storia è finita, compare una quarta personaggia
-    //- movementsCounter == delayFourthChar && thirdStory == Ended:
+    //- movementsCounter == delayFourthChar && thirdChar_storyStatus == Ended:
         //Ma magari questo spettro vuole comparire altrove
             //~ move_entity(FourthCharacter, BusStop)
             //~ fourthStory = Active
@@ -219,7 +219,7 @@ VAR delayFourthChar = 20
         //~ move_entity(SecondCharacter, Safekeeping)
         //~ move_entity(SecondCharacterNotes, BusStop)
         
-    //- thirdStory == Ended && movementsCounter > 10:
+    //- thirdChar_storyStatus == Ended && movementsCounter > 10:
         //~ move_entity(ThirdCharacter, Safekeeping)
         //~ move_entity(ThirdCharacterNotes, BusStop)
         

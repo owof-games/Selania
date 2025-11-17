@@ -51,7 +51,7 @@ VAR fifthCharacterInkLevel = Empty
             - InkLevel == secondCharacterInkLevel:
                 ~ secondCharacterSpecialEvent = true
             - InkLevel == thirdCharacterInkLevel:
-                ~ thirdCharacterSpecialEvent = true    
+                ~ thirdChar_specialEvent = true    
         }
         
     - else:

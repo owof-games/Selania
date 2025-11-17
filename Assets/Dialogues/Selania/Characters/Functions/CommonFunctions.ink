@@ -43,17 +43,17 @@
                 ~ secondStory = story_storyStarted
     
         //Dopo aver aperto la biblioteca, compare il terzo png
-        //- open_the_library && not (thirdStory == story_storyStarted):
+        //- open_the_library && not (thirdChar_storyStatus == story_storyStarted):
             //{debug: introduco {ThirdCharacter} in scena.}
                 // ~ move_entity(ThirdCharacter, TrainStop)
                 // ~ move_entity(TrainNoise, CurrentLocation)
-                // ~ thirdStory = story_storyStarted
+                // ~ thirdChar_storyStatus = story_storyStarted
                 
         //X movimenti dopo la furia della mentore, compare la quarta png
         //- player_movementsCounter == delayFourthChar && mentor_rage:
                 //{debug: introduco {FourthCharacter} in scena.}
                 //~ move_entity(FourthCharacter, Forest)
-                //~ fourthStory = story_storyStarted
+                //~ fourthChar_storyStatus = story_storyStarted
                 //qualcosa per panchina sistemata
                 
         //E quando la storia della quarta è a tre, si presenta la mentore come uovo
@@ -78,11 +78,11 @@
             //~ move_entity(SecondCharacter, Safekeeping)
             //~ move_entity(SecondCharacterNotes, TrainStop)
             
-        //- thirdStory == story_storyEnded && player_movementsCounter > 10:
+        //- thirdChar_storyStatus == story_storyEnded && player_movementsCounter > 10:
             //~ move_entity(ThirdCharacter, Safekeeping)
             //~ move_entity(ThirdCharacterNotes, TrainStop)
             
-        //- fourthStory == story_storyEnded && player_movementsCounter > 10:
+        //- fourthChar_storyStatus == story_storyEnded && player_movementsCounter > 10:
             //~ move_entity(FourthCharacter, Safekeeping)
            // ~ move_entity(FourthCharacterNotes, TrainStop)
             
@@ -191,18 +191,18 @@
     }
   
     {    
-        - thirdStory == story_storyStarted:
+        - thirdChar_storyStatus == story_storyStarted:
              ~ movements_randomizable_characters += ThirdCharacter
         
-        - thirdStory == story_storyEnded:
+        - thirdChar_storyStatus == story_storyEnded:
             ~ movements_randomizable_characters -= ThirdCharacter
     }
     
     {
-        - fourthStory == story_storyStarted:
+        - fourthChar_storyStatus == story_storyStarted:
             ~ movements_randomizable_characters += FourthCharacter    
         
-         - fourthStory == story_storyEnded:
+         - fourthChar_storyStatus == story_storyEnded:
             ~ movements_randomizable_characters -= FourthCharacter 
     }
     
@@ -283,7 +283,7 @@
 //Riduzioni di contatori legati al tempo:
     ~ firstChar_mailPause --
     ~ secondWritingPause --
-    ~ thirdWritingPause --
+    ~ thirdChar_mailPause --
     ~ fifthWritingPause --
     
     ~ lastMindfulness --
@@ -422,8 +422,8 @@
         - secondPauseTalking > 0:
             ~ secondPauseTalking --
         
-        - thirdPauseTalking > 0:
-            ~ thirdPauseTalking --
+        - thirdChar_pauseTalking > 0:
+            ~ thirdChar_pauseTalking --
         
         - fifthPauseTalking > 0:
             ~ fifthPauseTalking --    

@@ -88,11 +88,11 @@
     
     VAR thirdStory = NotStarted
     //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
-    VAR thirdStoryQuestCount = 0
-    VAR thirdCharacterSpecialEvent = false
+    VAR thirdChar_storyletsForRewritingCount = 0
+    VAR thirdChar_specialEvent = false
     
     //Variabili per mettere in pausa la conversazione
-    VAR thirdPauseTalking = 0
+    VAR thirdChar_pauseTalking = 0
     VAR thirdCharPauseDurantion = 4
     
     //Variabile per il countdown per la sua uscita di scena
@@ -104,11 +104,11 @@
     
     //UP: ???
     //DOWN: ???
-    VAR thirdPurple = 0
-    VAR thirdYellow = 0
-    VAR thirdBlue = 0
-    VAR thirdGreen = 0
-    VAR thirdRed = 0  
+    VAR thirdChar_purple = 0
+    VAR thirdChar_yellow = 0
+    VAR thirdChar_blue = 0
+    VAR thirdChar_green = 0
+    VAR thirdChar_red = 0  
 
 
 
@@ -124,7 +124,7 @@
     VAR fourthCharacterState = LaMondatrice
     
     VAR fourthStory = NotStarted
-    VAR fourthCharacterSpecialEvent = false
+    VAR fourthChar_specialEvent = false
 
             /* ---------------------------------
             

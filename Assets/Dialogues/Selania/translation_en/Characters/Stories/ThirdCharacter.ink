@@ -21,7 +21,7 @@
         - not knowing_third_character.one:
             -> knowing_third_character.one
     //Se prima chiacchierata fatta e passato abbastanza tempo dalla pausa prevista        
-        - thirdPauseTalking == 0:
+        - thirdChar_pauseTalking == 0:
             -> hub
     //Altre opzioni        
         - else:
@@ -38,7 +38,7 @@
                 
     
             //Se non ho ancora fatto e ho parlato abbastanza con lui
-            + {thirdStoryQuestCount > firstChar_minStoryletsForRewriting && findedGifts != ()} [Ti vorrei donare questa cosa.]
+            + {thirdChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && findedGifts != ()} [Ti vorrei donare questa cosa.]
                     -> third_story_gift
         
             //Dono fatto ma non ho avviato la main story
@@ -93,25 +93,25 @@
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
     
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         ???: Non è che hai visto passare di qui una persona?
             + (threeBlue) [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + (threeYellow) [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + (threeRed) [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + (threeGreen) [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + (threePurple) [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
         ???: Ma che rinco che sono, non mi sono manco presentata: io sono {charNameThree}.
@@ -129,34 +129,34 @@
     	{charNameThree}: E con che pronomi vuoi che ti chiami?
     	        -> gender ->
     	{charNameThree}: Grandioso, io uso i femminili.      
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdChar_pauseTalking = thirdCharPauseDurantion
             -> main
     = two
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
     
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         {charNameThree}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdChar_pauseTalking = thirdCharPauseDurantion
             -> main
 
 
@@ -165,28 +165,28 @@
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
     
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         {charNameThree}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdChar_pauseTalking = thirdCharPauseDurantion
             -> main
     
     
@@ -196,55 +196,55 @@
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
     
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         {charNameThree}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdChar_pauseTalking = thirdCharPauseDurantion
             -> main
     = five
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
     
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         {charNameThree}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdChar_pauseTalking = thirdCharPauseDurantion
             -> main
     
     
@@ -252,55 +252,55 @@
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
     
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         {charNameThree}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdChar_pauseTalking = thirdCharPauseDurantion
             -> main
     = seven
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
     
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         {charNameThree}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdChar_pauseTalking = thirdCharPauseDurantion
             -> main        
             
             
@@ -308,28 +308,28 @@
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
     
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         {charNameThree}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdChar_pauseTalking = thirdCharPauseDurantion
             -> main    
     
     
@@ -337,111 +337,111 @@
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
     
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         {charNameThree}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdChar_pauseTalking = thirdCharPauseDurantion
             -> main    
     
     = ten
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
     
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         {charNameThree}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdChar_pauseTalking = thirdCharPauseDurantion
             -> main    
     
     = eleven
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
     
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         {charNameThree}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdChar_pauseTalking = thirdCharPauseDurantion
             -> main    
     = twelve
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
     
         //Presentazione.
-        ~ thirdStoryQuestCount ++
+        ~ thirdChar_storyletsForRewritingCount ++
         
         {charNameThree}: Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
-                    ~ thirdBlue ++
+                    ~ thirdChar_blue ++
                 
             + [Sicuro che il violino ha bisogno di un tamburo per tornare.]
-                    ~ thirdYellow ++
+                    ~ thirdChar_yellow ++
                 
             + [Seguiamo le sue tracce! Fiutiamo il suo odore.]
-                ~ thirdRed ++
+                ~ thirdChar_red ++
 
                 
             + [Se ti senti sola, sono qui ad ascoltarti.]
-                ~ thirdGreen ++
+                ~ thirdChar_green ++
   
                 
             + [Tu sei sempre con ləi, ləi è sempre con te.]
-                ~ thirdPurple ++
+                ~ thirdChar_purple ++
  
             -
-             ~ thirdPauseTalking = thirdCharPauseDurantion
+             ~ thirdChar_pauseTalking = thirdCharPauseDurantion
             -> main            
             
             
@@ -710,15 +710,15 @@
     = ending
     ~ temp charNameThree = uppercaseTranslator(thirdCharacterState)
      Scelgo il dono.
-        + {thirdRed > 0} [Scelgo il dono.]
+        + {thirdChar_red > 0} [Scelgo il dono.]
         
-        + {thirdPurple > 0} [Scelgo il dono.]
+        + {thirdChar_purple > 0} [Scelgo il dono.]
         
-        + {thirdYellow > 0} [Scelgo il dono.]
+        + {thirdChar_yellow > 0} [Scelgo il dono.]
                 
-        + {thirdGreen > 0} [Scelgo il dono.]
+        + {thirdChar_green > 0} [Scelgo il dono.]
                 
-        + {thirdBlue > 0} [Scelgo il dono.]
+        + {thirdChar_blue > 0} [Scelgo il dono.]
                 
         
                 
@@ -762,7 +762,7 @@
             
         
         {
-        - thirdCharacterSpecialEvent == true:
+        - thirdChar_specialEvent == true:
             -> secret_ending
         - else:
             -> exit

@@ -17,8 +17,8 @@
 {debug: passo da talk_with_mentor}
 ~ temp charNameOne = translator(firstChar_ActualName)
 ~ temp charNameTwo = translator(secondCharacterState)
-~ temp charNameThree = translator(thirdCharacterState)
-~ temp charNameFour= translator(fourthCharacterState)
+~ temp charNameThree = translator(thirdChar_ActualName)
+~ temp charNameFour= translator(fourthChar_ActualName)
 ~ temp charNameFive = translator(fifthCharacterState)
 
     -> mentor_and_second_char_storylets
@@ -29,8 +29,8 @@
     {debug: passo da talk_with_mentor.talk}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
-    ~ temp charNameThree = translator(thirdCharacterState)
-    ~ temp charNameFour= translator(fourthCharacterState)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     Come posso esserti utile, {player_pronouns has him: amico mio|{player_pronouns has her: amica mia|amicə miə}}?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
@@ -66,7 +66,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
                 -> knowing_fifth_character
                 
             //Per la mentore: dono solo dopo la fine della quarta storia, per questo metto un knot come differenziatore.
-            + {knowing_fifth_character.seven && findedGifts != () && fourthStory == story_storyEnded} [Ti vorrei donare questa cosa.]
+            + {knowing_fifth_character.seven && findedGifts != () && fourthChar_storyStatus == story_storyEnded} [Ti vorrei donare questa cosa.]
                     -> second_story_gift
         
             //Dono fatto ma non ho avviato la main story
@@ -90,7 +90,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {
             //Mentore esplode
-            - are_two_entities_together(Mentor, PG) && thirdStory == story_storyEnded and not mentor_rage:
+            - are_two_entities_together(Mentor, PG) && thirdChar_storyStatus == story_storyEnded and not mentor_rage:
                 -> mentor_rage
         }
         
@@ -106,10 +106,10 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
             - not five && secondStory == story_storyEnded && tutorialPauses == false:
                 -> five
             //Forse solo una di queste, perché con la terza storia avremo degli storylets ad hoc.    
-            - not six && thirdStory == story_storyStarted && tutorialPauses == false:
+            - not six && thirdChar_storyStatus == story_storyStarted && tutorialPauses == false:
                 -> six
             //Questo è lo storylet dove Mentore sbrocca, e che poi trasformo in quinta personaggia    
-            - not seven && thirdStory == story_storyEnded && tutorialPauses == false:
+            - not seven && thirdChar_storyStatus == story_storyEnded && tutorialPauses == false:
                 -> seven
             - not eight && fifthStory == story_storyStarted && tutorialPauses == false:
                 -> eight

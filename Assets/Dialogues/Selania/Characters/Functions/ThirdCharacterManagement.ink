@@ -5,41 +5,66 @@
                      ----------------------------------*/
 
 //Possibili nomi
-    LIST thirdCharacterPossibleStates = SpettroDelVuoto, Arrabbiato, Guarente, Terrorizzato, Abbandonato, Socievole, Consapevole
-    VAR thirdCharacterState = SpettroDelVuoto
+    LIST thirdChar_possibleStates = SpettroDelVuoto, Arrabbiato, Guarente, Terrorizzato, Abbandonato, Socievole, Consapevole
+    VAR thirdChar_ActualName = SpettroDelVuoto
     
-    VAR thirdStory = story_storyNotStarted
-    VAR charThreeEnding = ()
+    VAR thirdChar_storyStatus = story_storyNotStarted
+    VAR thirdChar_storyEndingPosition = ()
   
 //Tracciamento della relazione
-    VAR thirdCharStateRelationship = 0  
+    VAR thirdChar_relationshipStatus = 0  
   
+
+//Tracciamento cucina
+    //Autonoma
+        VAR kitchen_thirdCharisCooking = false
+        VAR kitchen_thirdCharCookingTime = 0
+        //Tempo che ci impiega a fare la sua ricetta
+        VAR kitchen_thirdCharCookingMaxTime = 8
+    //Nostro invito
+        VAR kitchen_thirdCharCookingTogetherInvite = false
+    //Valore quarto ingrediente
+        VAR kitchen_thirdCharExtraIngredient = ()
+        VAR kitchen_thirdCharExtraIngredientReaction = notReaction
+
+//Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
+    VAR thirdChar_favouritesGifts = ()
+    VAR thirdChar_goodGifts = ()
+
    
 //Tracciamento del dono
-    VAR thirdGift = ()   
+    VAR thirdChar_giftedObject = ()
     
-//Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
-    VAR thirdStoryQuestCount = 0
-    VAR thirdCharacterSpecialEvent = false
+//Tengo conto delle interazioni avute per aprire la possibilità di avviare la riscrittura
+    VAR thirdChar_storyletsForRewritingCount = 0
+//Quantità di storylets letti dalla giocatrice prima di accedere alla riscrittura
+    VAR thirdChar_minStoryletsForRewriting = 7    
+    VAR thirdChar_specialEvent = false
     
 //Variabili per mettere in pausa la conversazione
-    VAR thirdPauseTalking = 0
-    VAR thirdCharPauseDuration = 4
+    VAR thirdChar_pauseTalking = 0
+    VAR thirdChar_pauseDuration = 1
+    //Questa variabile verifica se abbiamo appena parlato con unx PNG, in modo tale da presentarci in modo diverso le possibili proposte che possiamo farle.
+    VAR thirdChar_justTalked = false
     
 //Variabile per il countdown per la sua uscita di scena
-    VAR thirdCharEndingDialogue = 0    
+    VAR thirdChar_exitCounter = 0
+    VAR thirdChar_startingValueExitCounter = 4  
 
 //Variabile per il tempo di attesa tra una lettera e l'altra
-    VAR thirdWritingPause = 0
-    VAR thirdWritingPauseDuration = 5
+    VAR thirdChar_mailPause = 0
+    VAR thirdChar_mailPauseDuration = 5
+    
+//Moltiplicatore del colore per il personaggio
+    VAR thirdChar_colorVariation = 3.0    
     
 //UP: ???
 //DOWN: ???
-    VAR thirdPurple = 0
-    VAR thirdYellow = 0
-    VAR thirdBlue = 0
-    VAR thirdGreen = 0
-    VAR thirdRed = 0                       
+    VAR thirdChar_purple = 0
+    VAR thirdChar_yellow = 0
+    VAR thirdChar_blue = 0
+    VAR thirdChar_green = 0
+    VAR thirdChar_red = 0                       
                      
                     /* ---------------------------------
                     

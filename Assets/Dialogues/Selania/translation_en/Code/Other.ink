@@ -122,8 +122,8 @@
         - secondPauseTalking > 0:
             ~ secondPauseTalking --
         
-        - thirdPauseTalking > 0:
-            ~ thirdPauseTalking --
+        - thirdChar_pauseTalking > 0:
+            ~ thirdChar_pauseTalking --
         
         - fifthPauseTalking > 0:
             ~ fifthPauseTalking --    

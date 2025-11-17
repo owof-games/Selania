@@ -63,7 +63,7 @@ LIST speakersForEwWordTag = Influenced, Other
 
     - !welcome.chiSei && !welcome.your_name.selfName:
 	    ~ return "???"
-    - thirdCharacterState == Mentore:
+    - thirdChar_ActualName == Mentore:
 	    ~ return "Mentore"
 }
 
@@ -73,7 +73,7 @@ LIST speakersForEwWordTag = Influenced, Other
 
     - !welcome.chiSei && !welcome.your_name.selfName:
 	    ~ return "???"
-    - fourthCharacterState == Mentore:
+    - fourthChar_ActualName == Mentore:
 	    ~ return "Mentore"
 }
 

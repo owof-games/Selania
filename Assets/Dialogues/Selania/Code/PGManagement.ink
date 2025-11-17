@@ -124,8 +124,8 @@
 			{debug: <i>Dato che charES coincide con {charES}. Il valore di charTwoEnding è {charTwoEnding}.}
 						
 			- charES == ThirdCharacter:
-				~ charThreeEnding = story_oneStoryClosed
-			{debug: <i>Dato che charES coincide con {charES} Il valore di charThreeEnding è {charThreeEnding}.}	
+				~ thirdChar_storyEndingPosition = story_oneStoryClosed
+			{debug: <i>Dato che charES coincide con {charES} Il valore di thirdChar_storyEndingPosition è {thirdChar_storyEndingPosition}.}	
 		}
 		
 	- LIST_COUNT(story_endedStories) == 2:
@@ -140,8 +140,8 @@
 			{debug: <i>Dato che charES coincide con {charES}. Il valore di charTwoEnding è {charTwoEnding}.}	
 			
 			- charES == ThirdCharacter:
-				~ charThreeEnding = story_twoStoriesClosed
-			{debug: <i>Dato che charES coincide con {charES} Il valore di charThreeEnding è {charThreeEnding}.}	
+				~ thirdChar_storyEndingPosition = story_twoStoriesClosed
+			{debug: <i>Dato che charES coincide con {charES} Il valore di thirdChar_storyEndingPosition è {thirdChar_storyEndingPosition}.}	
 		}		
 		
 		
@@ -155,7 +155,7 @@
 				~ charTwoEnding = story_threeStoriesClosed
 			
 			- charES == ThirdCharacter:
-				~ charThreeEnding = story_threeStoriesClosed	
+				~ thirdChar_storyEndingPosition = story_threeStoriesClosed	
 		}		 
 		 
 		 
@@ -210,9 +210,9 @@
                     ~ player_secondStepStatus = ()
                     ~ player_secondStepStatus += greenStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}    
-                // - player_orderGrowingTreeUpdater == thirdStory:
+                // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
                 //     ~ player_thirdStepStatus += greenStatus
-                // - player_orderGrowingTreeUpdater == fourthStory:
+                // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
                 //     ~ player_fourthStepStatus += greenStatus
                 // - player_orderGrowingTreeUpdater == fifthStory:
                 //     ~ player_fifthStepStatus += greenStatus
@@ -232,9 +232,9 @@
                     ~ player_secondStepStatus += blueStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
-                // - player_orderGrowingTreeUpdater == thirdStory:
+                // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
                 //     ~ player_thirdStepStatus += blueStatus
-                // - player_orderGrowingTreeUpdater == fourthStory:
+                // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
                 //     ~ player_fourthStepStatus += blueStatus
                 // - player_orderGrowingTreeUpdater == fifthStory:
                 //     ~ player_fifthStepStatus += blueStatus
@@ -254,9 +254,9 @@
                     ~ player_secondStepStatus += redStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
-                // - player_orderGrowingTreeUpdater == thirdStory:
+                // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
                 //     ~ player_thirdStepStatus += redStatus
-                // - player_orderGrowingTreeUpdater == fourthStory:
+                // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
                 //     ~ player_fourthStepStatus += redStatus
                 // - player_orderGrowingTreeUpdater == fifthStory:
                 //     ~ player_fifthStepStatus += redStatus
@@ -276,9 +276,9 @@
                     ~ player_secondStepStatus += yellowStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
-                // - player_orderGrowingTreeUpdater == thirdStory:
+                // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
                 //     ~ player_thirdStepStatus += yellowStatus
-                // - player_orderGrowingTreeUpdater == fourthStory:
+                // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
                 //     ~ player_fourthStepStatus += yellowStatus
                 // - player_orderGrowingTreeUpdater == fifthStory:
                 //     ~ player_fifthStepStatus += yellowStatus
@@ -298,9 +298,9 @@
                     ~ player_secondStepStatus += purpleStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                 
-                // - player_orderGrowingTreeUpdater == thirdStory:
+                // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
                 //     ~ player_thirdStepStatus += purpleStatus
-                // - player_orderGrowingTreeUpdater == fourthStory:
+                // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
                 //     ~ player_fourthStepStatus += purpleStatus
                 // - player_orderGrowingTreeUpdater == fifthStory:
                 //     ~ player_fifthStepStatus += purpleStatus
@@ -320,9 +320,9 @@
                     ~ player_thirdStepStatus += mixedStatus
                     {debug: Lo status di player_secondStepStatus è {player_secondStepStatus}}  
                     
-                // - player_orderGrowingTreeUpdater == thirdStory:
+                // - player_orderGrowingTreeUpdater == thirdChar_storyStatus:
                 //     ~ player_thirdStepStatus += mixedStatus
-                // - player_orderGrowingTreeUpdater == fourthStory:
+                // - player_orderGrowingTreeUpdater == fourthChar_storyStatus:
                 //     ~ player_fourthStepStatus += mixedStatus
                 // - player_orderGrowingTreeUpdater == fifthStory:
                 //     ~ player_fifthStepStatus += mixedStatus
