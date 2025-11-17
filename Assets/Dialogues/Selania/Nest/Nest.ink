@@ -22,7 +22,7 @@
 
 
 === nest_object
-{nestDebug: passo per emotional_inventory_management.}
+{debug_nest: passo per emotional_inventory_management.}
     + {are_two_entities_together(ELManagement, PG)}[ELManagement]
     -> emotional_inventory_management
 
@@ -47,13 +47,13 @@
             - takenEmotionalWords < maximumEmotionalWordsForRun: 
                 {newlyDiscoveredEmotionalWord} è stata aggiunta all'inventario.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                     ~  ownedEmotionalWords += newlyDiscoveredEmotionalWord
-                {nestDebug: aggiungo {newlyDiscoveredEmotionalWord} alla lista ownedEmotionalWords che ora contiene {ownedEmotionalWords}.}
+                {debug_nest: aggiungo {newlyDiscoveredEmotionalWord} alla lista ownedEmotionalWords che ora contiene {ownedEmotionalWords}.}
                 
                     ~ newlyDiscoveredEmotionalWord = ()
-                {nestDebug: svuoto il valore di discoveredEmotionalWords che ora è {newlyDiscoveredEmotionalWord}.}  
+                {debug_nest: svuoto il valore di discoveredEmotionalWords che ora è {newlyDiscoveredEmotionalWord}.}  
                 
                     ~ takenEmotionalWords ++
-                {nestDebug: aumento il valore di takenEmotionalWords che ora è {takenEmotionalWords}.}
+                {debug_nest: aumento il valore di takenEmotionalWords che ora è {takenEmotionalWords}.}
                 
                 -> emotional_inventory_management
             
@@ -69,7 +69,7 @@
         
         + + [Sì, ignoriamola.]
                 ~ newlyDiscoveredEmotionalWord = ()
-            {nestDebug: svuoto il valore di discoveredEmotionalWords che ora è {discoveredEmotionalWords}.} 
+            {debug_nest: svuoto il valore di discoveredEmotionalWords che ora è {discoveredEmotionalWords}.} 
                 -> emotional_inventory_management
             
         + + [Ci ho ripensato.]

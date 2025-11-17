@@ -1,7 +1,7 @@
 
 === function emotional_words_translator(wordValue)
 //Da fare quando son sicura del tutto
-{nestDebug: emotional_words_translator.}
+{debug_nest: emotional_words_translator.}
     
     {wordValue:
         //Variazioni di un solo colore

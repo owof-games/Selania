@@ -1,6 +1,6 @@
 === emotional_words_creator
 //Qui è dove la giocatrice compie delle scelte e genera nuove parole
-{nestDebug: passo per emotional_words_creator.}
+{debug_nest: passo per emotional_words_creator.}
         -> first_key
 
         = first_key
@@ -94,25 +94,25 @@
 
 
 === emotional_words_feedback
-{nestDebug: passo per emotional_words_feedback.}
+{debug_nest: passo per emotional_words_feedback.}
 //Passo da qui dopo aver creato la parola, per vedere se l'ho già scoperta o meno. Nel secondo caso aggiorno il libro della riscrittora e passo a emotional_inventory_management
 //Per prima cosa, resetto i valori delle scelte durante la creazione della parola
     ~ firstKeyColour = ()
     ~ secondKeyColour = ()
     ~ thirdKeyColour = ()
-    {nestDebug: dopo il reset, i valori delle tre key sono {firstKeyColour} {secondKeyColour} {thirdKeyColour}.}
+    {debug_nest: dopo il reset, i valori delle tre key sono {firstKeyColour} {secondKeyColour} {thirdKeyColour}.}
 
     {
     
         - discoveredEmotionalWords has newlyDiscoveredEmotionalWord:
-            {nestDebug: discoveredEmotionalWords ha già {newlyDiscoveredEmotionalWord}.}
+            {debug_nest: discoveredEmotionalWords ha già {newlyDiscoveredEmotionalWord}.}
             -> not_a_new_word
             
         - else:
             {
                 - newlyDiscoveredEmotionalWord != ():
                     ~  discoveredEmotionalWords += newlyDiscoveredEmotionalWord
-                        {nestDebug: aggiungo {newlyDiscoveredEmotionalWord} alla lista discoveredEmotionalWords che ora contiene {discoveredEmotionalWords}.}
+                        {debug_nest: aggiungo {newlyDiscoveredEmotionalWord} alla lista discoveredEmotionalWords che ora contiene {discoveredEmotionalWords}.}
                     //segnalo che c'è un aggiornamento
                     {player_name} ha scoperto una nuova parola: {newlyDiscoveredEmotionalWord}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                     Il Libro è stato aggiornato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -129,19 +129,19 @@
         
         + [Voglio cercare una nuova parola.]
             ~ newlyDiscoveredEmotionalWord = ()
-                {nestDebug: svuoto il valore di newlyDiscoveredEmotionalWord che ora è {newlyDiscoveredEmotionalWord}.}
+                {debug_nest: svuoto il valore di newlyDiscoveredEmotionalWord che ora è {newlyDiscoveredEmotionalWord}.}
             -> emotional_words_creator
             
         + [Mi fermo.]
             ~ newlyDiscoveredEmotionalWord = ()
-                {nestDebug: svuoto il valore di newlyDiscoveredEmotionalWord che ora è {newlyDiscoveredEmotionalWord}.}
+                {debug_nest: svuoto il valore di newlyDiscoveredEmotionalWord che ora è {newlyDiscoveredEmotionalWord}.}
             -> main
 
 
 === used_emotional_words_updater
-{nestDebug: passo per used_emotional_words_updater.}
-{nestDebug: il valore della parola attiva è {activeEmotionalWord}.}
-{nestDebug: prima di intervenire, usedEmotionaWords contiene {usedEmotionaWords}.}
+{debug_nest: passo per used_emotional_words_updater.}
+{debug_nest: il valore della parola attiva è {activeEmotionalWord}.}
+{debug_nest: prima di intervenire, usedEmotionaWords contiene {usedEmotionaWords}.}
     {
         //Dato che posso passare da questo nodo anche per cancellare una parola ne ho una attiva, faccio questo check per evitare che venga aggiunta due volte (non dovrebbe, but)
         - activeEmotionalWord !=() && (usedEmotionaWords hasnt activeEmotionalWord):
@@ -149,7 +149,7 @@
     
     }
 
-{nestDebug: dopo l'aggiornamento, usedEmotionaWords contiene {usedEmotionaWords}.}
+{debug_nest: dopo l'aggiornamento, usedEmotionaWords contiene {usedEmotionaWords}.}
 ->->
 
 

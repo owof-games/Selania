@@ -1,7 +1,7 @@
 === emotional_words_dispatcher
 //Qui è dove le scelte vengono combinate
-{nestDebug: passo per emotional_words_generator.}
-{nestDebug: i valori delle tre note sono {firstKeyColour} {secondKeyColour} {thirdKeyColour}.}
+{debug_nest: passo per emotional_words_generator.}
+{debug_nest: i valori delle tre note sono {firstKeyColour} {secondKeyColour} {thirdKeyColour}.}
 //Qui abbiamo il primo dispatcher, che ci manda a dei sottonodi di assegnazione, così da non avere dei blocconi giganteschi di roba
 {
     - firstKeyColour == redKey:
@@ -22,7 +22,7 @@
 
 
     = redDispatcher
-    {nestDebug: il primo colore è {firstKeyColour} passo per emotional_words_generator.redDispatcher.}
+    {debug_nest: il primo colore è {firstKeyColour} passo per emotional_words_generator.redDispatcher.}
     
         {
             - secondKeyColour == redKey:
@@ -111,7 +111,7 @@
             -> emotional_words_feedback
 
     = yellowDispatcher
-    {nestDebug: il primo colore è {firstKeyColour} passo per emotional_words_generator.yellowDispatcher.}
+    {debug_nest: il primo colore è {firstKeyColour} passo per emotional_words_generator.yellowDispatcher.}
     
         {
             - secondKeyColour == redKey:
@@ -200,7 +200,7 @@
             -> emotional_words_feedback
     
     = blueDispatcher
-    {nestDebug: il primo colore è {firstKeyColour} passo per emotional_words_generator.blueDispatcher.}
+    {debug_nest: il primo colore è {firstKeyColour} passo per emotional_words_generator.blueDispatcher.}
     
               {
             - secondKeyColour == redKey:
@@ -289,7 +289,7 @@
             -> emotional_words_feedback
     
     = greenDispatcher
-    {nestDebug: il primo colore è {firstKeyColour} passo per emotional_words_generator.greenDispatcher.}
+    {debug_nest: il primo colore è {firstKeyColour} passo per emotional_words_generator.greenDispatcher.}
     
         {
             - secondKeyColour == redKey:
@@ -378,7 +378,7 @@
            -> emotional_words_feedback
     
     = purpleDispatcher
-    {nestDebug: il primo colore è {firstKeyColour} passo per emotional_words_generator.purpleDispatcher.}
+    {debug_nest: il primo colore è {firstKeyColour} passo per emotional_words_generator.purpleDispatcher.}
     
         {
             - secondKeyColour == redKey:

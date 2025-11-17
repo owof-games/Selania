@@ -14,21 +14,21 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
 
 
 === color_variation_management(PNG, Color)
-{nestDebug: passo per color_variation_management. Il valore di PNG è {PNG}, il valore di colore è {Color}. Lo stato della parola attiva è {activeEmotionalWord}.}
+{debug_nest: passo per color_variation_management. Il valore di PNG è {PNG}, il valore di colore è {Color}. Lo stato della parola attiva è {activeEmotionalWord}.}
 //Primo step: capiamo di chi si parla.
 
     {
     	- PNG == FirstCharacter:
     	        ~ currentTalker = FirstCharacter
-    	        {nestDebug: dopo l'operazione il parlante attuale {currentTalker}.} 
+    	        {debug_nest: dopo l'operazione il parlante attuale {currentTalker}.} 
     	 
     	- PNG == SecondCharacter:
     	        ~ currentTalker = SecondCharacter
-    	        {nestDebug: dopo l'operazione il parlante attuale {currentTalker}.} 
+    	        {debug_nest: dopo l'operazione il parlante attuale {currentTalker}.} 
     	 
     	- PNG == Mentor:
     	        ~ currentTalker = Mentor
-    	        {nestDebug: dopo l'operazione il parlante attuale {currentTalker}.}       
+    	        {debug_nest: dopo l'operazione il parlante attuale {currentTalker}.}       
     	    
         - else: ERROR: sono in color_variation_management ma non trovo lx PNG indicatx
     }
@@ -38,7 +38,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
 {
     //Se una parola magica è attiva, andiamo al nodo di analisi dedicato
     - activeEmotionalWord != ():
-        {nestDebug: è attiva la parola magica {activeEmotionalWord}, per cui mi sposto al settore dedicato.}
+        {debug_nest: è attiva la parola magica {activeEmotionalWord}, per cui mi sposto al settore dedicato.}
             -> emotional_words
     
     
@@ -61,7 +61,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
             -purpleC:
                 ~ temporaryPurple ++
         }
-        {nestDebug: non è attiva alcuna parola magica, per cui mi aumento di uno i valori e basta.}
+        {debug_nest: non è attiva alcuna parola magica, per cui mi aumento di uno i valori e basta.}
           //E poi aggiorniamo i dettagli
                 -> update_PNG_color_values
     
@@ -1255,7 +1255,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
 
         
         = firstCharEmotionalActions
-            {nestDebug: entro in firstCharEmotionalActions.}
+            {debug_nest: entro in firstCharEmotionalActions.}
             TODO: posso fare una lista graduale di reazioni sempre più cariche (+ di tre però visto che una parola può essere usata tanterrimo)
             
             {
@@ -1328,7 +1328,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
         
         
         = secondCharEmotionalActions
-            {nestDebug: entro in secondCharEmotionalActions.}
+            {debug_nest: entro in secondCharEmotionalActions.}
             {
  
                 //Varianti monocolore
@@ -1399,7 +1399,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
         
         
         = fifthCharEmotionalActions
-            {nestDebug: entro in fifthCharEmotionalActions.}
+            {debug_nest: entro in fifthCharEmotionalActions.}
             {
  
                 //Varianti monocolore
@@ -1470,11 +1470,11 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
         
         
         = word_state_manager
-            {nestDebug: entro in word_state_manager.}
+            {debug_nest: entro in word_state_manager.}
         //Qui abbasso l'uso della parola, e se il suo uso è esaurito, la disattivo    
-            {nestDebug: prima di modificare temporaryWordUsageCounter il suo valore è {temporaryWordUsageCounter}.}
+            {debug_nest: prima di modificare temporaryWordUsageCounter il suo valore è {temporaryWordUsageCounter}.}
                 ~ temporaryWordUsageCounter --
-            {nestDebug: dopo aver ridotto temporaryWordUsageCounter il suo valore è {temporaryWordUsageCounter}.}
+            {debug_nest: dopo aver ridotto temporaryWordUsageCounter il suo valore è {temporaryWordUsageCounter}.}
             
                 {
                     - temporaryWordUsageCounter == 0:
@@ -1486,8 +1486,8 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
 
 
 = update_PNG_color_values
-    {nestDebug: entro in update_PNG_color_values.}
-    {nestDebug: prima dell'operazione il parlante attuale è {currentTalker}.}
+    {debug_nest: entro in update_PNG_color_values.}
+    {debug_nest: prima dell'operazione il parlante attuale è {currentTalker}.}
     //Prima aggiorniamo i dati a seconda dei parlanti
     {
         - currentTalker == FirstCharacter:
@@ -1519,7 +1519,7 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
         ~ temporaryBlue = 0
         ~ temporaryGreen = 0
         ~ temporaryPurple = 0
-    {nestDebug: dopo l'operazione il parlante attuale {currentTalker}.}
+    {debug_nest: dopo l'operazione il parlante attuale {currentTalker}.}
 
 ->->
 

@@ -5,7 +5,7 @@
     VAR debug_cultivable = false
     VAR debug_changeName = false
     VAR debug_kitchen = false
-    VAR nestDebug = false
+    VAR debug_nest = false
     VAR frogDebug = false
     
     //per testare i luoghi non subito aperti con calma
