@@ -174,7 +174,7 @@ LIST speakersForEwWordTag = Influenced, Other
 //Non passando più per l'uscita, devo farlo crescere in altri modi, ma con lentezza. Il passaggio 1 spostamento = 1 giorno rischia di essere troppo veloce. Possiamo provare a fare 3 spostamenti = 1 giorno?
 {
 
-    - witch_moonTime == changeMoonFase:
+    - witch_moonTime == witch_timeForChangingMoonPhase:
         ~ witch_moonTime = 0
         {
             //- not talking_witch.intro.nameWitch:
