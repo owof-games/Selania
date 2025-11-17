@@ -4,7 +4,7 @@
  //Book management (the book will be treated as a place)
 
     // Ho separato la versione blocca amico stocastico da una che non lo blocca perché così se devo testare elementi del libro non ci sono problemi
-    + {are_two_entities_together(PG, RewriterBook) && !debugStochastic}[RewriterBook]
+    + {are_two_entities_together(PG, RewriterBook) && !debug_stochastic}[RewriterBook]
             ~ move_entity(PG, BookPlace)
         -> main_book
     
@@ -13,7 +13,7 @@
     //        ~ move_entity(PG, BookPlace)
     //    -> main_book    
         
-    + {are_two_entities_together(PG, miniBook) && !debugStochastic} [miniBook]
+    + {are_two_entities_together(PG, miniBook) && !debug_stochastic} [miniBook]
             ~ move_entity(PG, BookPlace)
         -> main_book      
  
@@ -23,7 +23,7 @@
         -> on_movement_events ->
         -> bedroom
     
-    + {are_two_entities_together(PG, RoomExit) && (not debugStochastic)} [RoomExit]
+    + {are_two_entities_together(PG, RoomExit) && (not debug_stochastic)} [RoomExit]
     
             Salutiamo {player_name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()} 
             Se {player_name} sta per lasciare il prototipo, {player_pronouns has him:lo|{player_pronouns has her:la|lə}} invitiamo a segnarsi questo codice, da riportare sul documento di testing.
@@ -145,7 +145,7 @@
     + {are_two_entities_together(PG, FromPondToKitchenBlocked)} [FromPondToKitchenBlocked]
     
     {
-        - debug_test_kitchen:
+        - debug_testkitchen:
             ~ move_entity(PG, Kitchen)
                 -> on_movement_events ->
                 -> empty_tempTW ->  
@@ -164,7 +164,7 @@
 
     + {are_two_entities_together(PG, FromLibraryToNestBlocked)} [FromLibraryToNestBlocked]
         {
-            - debug_test_nest:
+            - debug_testnest:
                 ~ move_entity(PG, Nest)
                     -> on_movement_events ->
                     -> empty_tempTW ->  
