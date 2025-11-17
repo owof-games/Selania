@@ -66,29 +66,6 @@
                 //{debug: introduco {FifthCharacter} in scena.}
                 //~ fifthChar_storyStatus == story_storyStarted:
                 //cambiamento asset per mentore, che passa a mostrone
-    
-    
-    
-    //Check per l'allontanamento delle personagge
-        //- firstChar_storyStatus == story_storyEnded && player_movementsCounter > 10:
-            //~ move_entity(FirstCharacter, Safekeeping)
-            //~ move_entity(FirstCharacterNotes, TrainStop)
-            
-        //- secondChar_storyStatus == story_storyEnded && player_movementsCounter > 10:
-            //~ move_entity(SecondCharacter, Safekeeping)
-            //~ move_entity(SecondCharacterNotes, TrainStop)
-            
-        //- thirdChar_storyStatus == story_storyEnded && player_movementsCounter > 10:
-            //~ move_entity(ThirdCharacter, Safekeeping)
-            //~ move_entity(ThirdCharacterNotes, TrainStop)
-            
-        //- fourthChar_storyStatus == story_storyEnded && player_movementsCounter > 10:
-            //~ move_entity(FourthCharacter, Safekeeping)
-           // ~ move_entity(FourthCharacterNotes, TrainStop)
-            
-        //- fifthChar_storyStatus == story_storyEnded && player_movementsCounter > 10:
-            //~ move_entity(Mentor, Safekeeping)
-           // ~ move_entity(FifthCharacterNotes, TrainStop)
     }
     
         ->->
@@ -543,5 +520,123 @@ Funzione di traduzione da variabile a stringa
             ~ return "Mentore"
 
     }
+
+
+
+                    /* ---------------------------------
+                                    
+                Funzione di gestione di doni e ingredienti, accorpata
+                                    
+                    ----------------------------------*/
+                    
+
+=== object_value_for_PNG(object, comingFrom, PNG)
+{debug: passo per object_value_for_PNG. Il valore di object è {object}, di comingFrom è {comingFrom}, di PNG {PNG}.}
+
+{
+    - PNG == FirstCharacter:
+        {
+            - comingFrom == Kitchen:
+                {debug: passo dai valori di Kitchen.}
+                ~ kitchen_firstCharExtraIngredient = object
+                
+                {   
+                    - object == universalIngredient:
+                            ~ kitchen_firstCharExtraIngredientReaction = goodReaction
+
+                    - firstChar_favouritesGifts has object:
+                            ~ kitchen_firstCharExtraIngredientReaction = goodReaction
+
+                    - firstChar_goodGifts has object:
+                            ~ kitchen_firstCharExtraIngredientReaction = mehReaction
+                            
+                    - else:
+                            ~ kitchen_firstCharExtraIngredientReaction = badReaction
+                            
+                }
+            
+            - comingFrom == Backpack:
+                {debug: passo dai valori dello zaino.}
+                ~ firstChar_giftedObject += object
+                
+                {   
+                    
+                    - firstChar_favouritesGifts has object:
+                        Reazione entusiasta di Chitarra.
+                        ~ firstChar_InkLevel ++
+                        ~ firstChar_InkLevel ++
+         
+                    //Presupponiamo che un po' ma non troppo le piaccia l'ingrediente universale
+                    - firstChar_goodGifts has object or object == universalIngredient:
+                        Reazione neutra di Chitarra.
+                        ~ firstChar_InkLevel ++
+                    
+                    - else:
+                        Reazione disinteressata di Chitarra.
+                }
+                ->->
+            
+            ~ gift_currentReceiver = ()
+            -> first_story_gift.ink_outcome    
+        
+        }
+        
+        
+    
+    - PNG == SecondCharacter:
+        {
+            - comingFrom == Kitchen:
+                {debug: passo dai valori di Kitchen.}
+                ~ kitchen_secondCharExtraIngredient = object
+                
+                {   
+                    - object == universalIngredient:
+                            ~ kitchen_secondCharExtraIngredientReaction = goodReaction
+
+                    - secondChar_favouritesGifts has object:
+                            ~ kitchen_secondCharExtraIngredientReaction = goodReaction
+
+                    - secondChar_goodGifts has object:
+                            ~ kitchen_secondCharExtraIngredientReaction = mehReaction
+                            
+                    - else:
+                            ~ kitchen_secondCharExtraIngredientReaction = badReaction
+                            
+                }
+                ->->
+            
+            - comingFrom == Backpack:
+                {debug: passo dai valori dello zaino.}
+                ~ secondChar_giftedObject += object
+                
+                {   
+                    
+                    - secondChar_favouritesGifts has object:
+                        Reazione entusiasta di Riccio.
+                        ~ secondChar_InkLevel ++
+                        ~ secondChar_InkLevel ++
+         
+                    //Presupponiamo che un po' ma non troppo le piaccia l'ingrediente universale
+                    - secondChar_goodGifts has object or object == universalIngredient:
+                        Reazione neutra di Riccio.
+                        ~ secondChar_InkLevel ++
+                    
+                    - else:
+                        Reazione disinteressata di Riccio.
+                }
+            
+            ~ gift_currentReceiver = ()
+            -> second_story_gift.ink_outcome    
+        
+        }    
+
+    - else: ERRORE: valore di PNG non supportato {PNG}.
+
+}
+
+
+
+
+->->
 
 
