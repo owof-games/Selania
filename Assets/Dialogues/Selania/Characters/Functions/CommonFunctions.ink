@@ -373,8 +373,8 @@
 //Pause speciali tra un dialogo e l'altro
     {
     
-        - tutorialPauses == true:
-            ~ tutorialPauses = false
+        - mentor_tutorialPauses == true:
+            ~ mentor_tutorialPauses = false
         
     }
     

@@ -467,7 +467,7 @@ Stai per donare qualcosa a {charNameThree}.
             Dopo il tuo dono {inkTranslator(thirdChar_InkLevel)}.
                 ~ move_entity(thirdCharPaint, Bedroom)
                 ~ saturationVar ++
-                ~ tutorialPauses = false
+                ~ mentor_tutorialPauses = false
                  -> talk_with_third_character
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 

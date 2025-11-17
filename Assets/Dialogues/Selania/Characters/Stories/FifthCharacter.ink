@@ -95,31 +95,31 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
         }
         
         {
-            - not one && tutorialPauses == false:
+            - not one && mentor_tutorialPauses == false:
                 -> one
-            - not two && firstChar_storyStatus == story_storyEnded && tutorialPauses == false:
+            - not two && firstChar_storyStatus == story_storyEnded && mentor_tutorialPauses == false:
                 -> two
-            - not three && firstChar_storyStatus == story_storyEnded && tutorialPauses == false:
+            - not three && firstChar_storyStatus == story_storyEnded && mentor_tutorialPauses == false:
                 -> three
-            - not four && secondChar_storyStatus == story_storyEnded && tutorialPauses == false:
+            - not four && secondChar_storyStatus == story_storyEnded && mentor_tutorialPauses == false:
                 -> four
-            - not five && secondChar_storyStatus == story_storyEnded && tutorialPauses == false:
+            - not five && secondChar_storyStatus == story_storyEnded && mentor_tutorialPauses == false:
                 -> five
             //Forse solo una di queste, perché con la terza storia avremo degli storylets ad hoc.    
-            - not six && thirdChar_storyStatus == story_storyStarted && tutorialPauses == false:
+            - not six && thirdChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
                 -> six
             //Questo è lo storylet dove Mentore sbrocca, e che poi trasformo in quinta personaggia    
-            - not seven && thirdChar_storyStatus == story_storyEnded && tutorialPauses == false:
+            - not seven && thirdChar_storyStatus == story_storyEnded && mentor_tutorialPauses == false:
                 -> seven
-            - not eight && fifthChar_storyStatus == story_storyStarted && tutorialPauses == false:
+            - not eight && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
                 -> eight
-            - not nine && fifthChar_storyStatus == story_storyStarted && tutorialPauses == false:
+            - not nine && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
                 -> nine
-            - not ten && fifthChar_storyStatus == story_storyStarted && tutorialPauses == false:
+            - not ten && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
                 -> ten
-            - not eleven && fifthChar_storyStatus == story_storyStarted && tutorialPauses == false:
+            - not eleven && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
                 -> eleven
-            - not twelve && fifthChar_storyStatus == story_storyStarted && tutorialPauses == false:
+            - not twelve && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
                 -> twelve
             - else:
                 -> talk_with_mentor.talk

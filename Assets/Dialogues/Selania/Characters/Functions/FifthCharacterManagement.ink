@@ -26,7 +26,7 @@
     VAR fifthChar_specialEvent = false
     
     //Questa variabile mi serve solo per evitare che Mentore mi dia subito lo storylet questions dopo gifts_and_inks
-    VAR tutorialPauses = false
+    VAR mentor_tutorialPauses = false
     
 
 //Variabili per mettere in pausa la conversazione. Plausibilmente per mentore sarà molto alta all'inizio.

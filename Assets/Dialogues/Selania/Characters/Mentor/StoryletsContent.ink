@@ -117,7 +117,7 @@
                 @animation:RewriterBook 
         
         //Con questa voce evito che "about_ink_usage" compaia subito dopo se le condizioni sono sensate.
-                ~ tutorialPauses = true
+                ~ mentor_tutorialPauses = true
                 -> main
                 
             
@@ -200,7 +200,7 @@
             ~ move_entity(RulesRecap, BookPlace)      
             ~ fifthPauseTalking = fifthCharPauseDuration
             //Con questa voce evito che "questions" compaia subito dopo se le condizioni sono sensate.
-                ~ tutorialPauses = true
+                ~ mentor_tutorialPauses = true
             
             @animation:RewriterBook
             
@@ -263,7 +263,7 @@
             
             ~ fifthPauseTalking = fifthCharPauseDuration
             @animation:RewriterBook
-                ~ tutorialPauses = true
+                ~ mentor_tutorialPauses = true
                 
                 -> main
         
@@ -288,7 +288,7 @@
     Ed è per questo che ogni Riscrittorə può darne solo uno a persona.
     Qualcosa di così forte non può certo essere usato senza coscienza. #speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
     @animation:RewriterBook
-            ~ tutorialPauses = true
+            ~ mentor_tutorialPauses = true
             ~ fifthPauseTalking = fifthCharPauseDuration
     -> main
 
@@ -302,7 +302,7 @@
     Passar del tempo in cucina con qualcunə può essere un bel modo per conoscervi meglio.
     E per capire che piega stia prendendo la vostra relazione.
     @animation:RewriterBook
-        ~ tutorialPauses = true
+        ~ mentor_tutorialPauses = true
         ~ fifthPauseTalking = fifthCharPauseDuration
     -> main
 
@@ -318,7 +318,7 @@
     Sto per tradire il mio ruolo di Mentore, ma non sarò io a dirti cosa farne.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
     @animation:RewriterBook
     ~ fifthPauseTalking = fifthCharPauseDuration
-    ~ tutorialPauses = true
+    ~ mentor_tutorialPauses = true
     -> main
 
         
@@ -446,7 +446,7 @@
         O anche solo per due chiacchiere.
         A dopo.
             ~ fifthPauseTalking = fifthCharPauseDuration
-            ~ tutorialPauses = true
+            ~ mentor_tutorialPauses = true
                 -> main
           
 === second_character_feedback
@@ -519,7 +519,7 @@
     E un giorno potrai fare questo lavoro da {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
     E a quel punto forse anche io potrò un poco riposare.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
         ~ fifthPauseTalking = fifthCharPauseDuration
-        ~ tutorialPauses = true
+        ~ mentor_tutorialPauses = true
             -> main
    
    === third_character_feedback
@@ -617,7 +617,7 @@
         Ma non metterci troppo, per favore.
         ~ secondChar_pauseTalking = 0
         ~ fifthPauseTalking = fifthCharPauseDuration
-        ~ tutorialPauses = true
+        ~ mentor_tutorialPauses = true
             - (nameSecond)
             -> main
     
@@ -712,7 +712,7 @@
         Sono sicura che diventerai {player_pronouns has him:un ottimo riscrittore|{player_pronouns has her:un'ottima riscrittora| unə ottimə riscrittorə}}.
             ~ change_entity_place(Mentor)
             ~ fifthPauseTalking = fifthCharPauseDuration
-            ~ tutorialPauses = true
+            ~ mentor_tutorialPauses = true
             -> main
     
 === mentor_rage

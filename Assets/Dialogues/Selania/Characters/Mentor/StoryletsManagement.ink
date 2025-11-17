@@ -20,23 +20,23 @@
             -> welcome
         
         //Relazioni e inchiostro
-        - not about_ink_usage && tutorialPauses == false:
+        - not about_ink_usage && mentor_tutorialPauses == false:
             -> about_ink_usage
         
         //Sulla riscrittura    
-        - not questions && tutorialPauses == false:
+        - not questions && mentor_tutorialPauses == false:
             -> questions
             
         //Sulla funzione della serra
-        - player_accessiblePlaces has Greenhouse && not about_greenhouse && tutorialPauses == false:
+        - player_accessiblePlaces has Greenhouse && not about_greenhouse && mentor_tutorialPauses == false:
             -> about_greenhouse
             
         //Sulla funzione della cucina
-        - player_accessiblePlaces has Kitchen &&not about_kitchen && tutorialPauses == false:
+        - player_accessiblePlaces has Kitchen &&not about_kitchen && mentor_tutorialPauses == false:
             -> about_kitchen
         
         //Sulla funzione del nido    
-        - player_accessiblePlaces has Nest && not about_nest && tutorialPauses == false:
+        - player_accessiblePlaces has Nest && not about_nest && mentor_tutorialPauses == false:
             -> about_nest    
             
             
