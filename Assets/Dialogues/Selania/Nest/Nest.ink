@@ -41,16 +41,16 @@
             -> emotional_inventory_management
 
     //Se ho appena scoperto una nuova parola e voglio aggiungerla:
-    + {newlyDiscoveredEmotionalWord != ()} [Aggiungo {newlyDiscoveredEmotionalWord} all'inventario.]
+    + {nest_newlyDiscoveredEmotionalWord != ()} [Aggiungo {nest_newlyDiscoveredEmotionalWord} all'inventario.]
         
         {
             - takenEmotionalWords < maximumEmotionalWordsForRun: 
-                {newlyDiscoveredEmotionalWord} è stata aggiunta all'inventario.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                    ~  ownedEmotionalWords += newlyDiscoveredEmotionalWord
-                {debug_nest: aggiungo {newlyDiscoveredEmotionalWord} alla lista ownedEmotionalWords che ora contiene {ownedEmotionalWords}.}
+                {nest_newlyDiscoveredEmotionalWord} è stata aggiunta all'inventario.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    ~  ownedEmotionalWords += nest_newlyDiscoveredEmotionalWord
+                {debug_nest: aggiungo {nest_newlyDiscoveredEmotionalWord} alla lista ownedEmotionalWords che ora contiene {ownedEmotionalWords}.}
                 
-                    ~ newlyDiscoveredEmotionalWord = ()
-                {debug_nest: svuoto il valore di discoveredEmotionalWords che ora è {newlyDiscoveredEmotionalWord}.}  
+                    ~ nest_newlyDiscoveredEmotionalWord = ()
+                {debug_nest: svuoto il valore di nest_discoveredEmotionalWords che ora è {nest_newlyDiscoveredEmotionalWord}.}  
                 
                     ~ takenEmotionalWords ++
                 {debug_nest: aumento il valore di takenEmotionalWords che ora è {takenEmotionalWords}.}
@@ -64,12 +64,12 @@
     
 
     //Se ho appena scoperto una nuova parola ma voglio ignorarla:        
-    + {newlyDiscoveredEmotionalWord != ()} [Non aggiungo questa parola all'inventario]
+    + {nest_newlyDiscoveredEmotionalWord != ()} [Non aggiungo questa parola all'inventario]
         Ricordati che non potrai più aggiungerla!#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
         + + [Sì, ignoriamola.]
-                ~ newlyDiscoveredEmotionalWord = ()
-            {debug_nest: svuoto il valore di discoveredEmotionalWords che ora è {discoveredEmotionalWords}.} 
+                ~ nest_newlyDiscoveredEmotionalWord = ()
+            {debug_nest: svuoto il valore di nest_discoveredEmotionalWords che ora è {nest_discoveredEmotionalWords}.} 
                 -> emotional_inventory_management
             
         + + [Ci ho ripensato.]
@@ -81,10 +81,10 @@
             -> emotional_words_management(Delete) ->
    
     //Se non ho nuove parole da aggiornare o attive, posso attivarne
-    + {ownedEmotionalWords != () && (newlyDiscoveredEmotionalWord == ()) && (activeEmotionalWord == ())} [Attivo una parola dell'inventario.]
+    + {ownedEmotionalWords != () && (nest_newlyDiscoveredEmotionalWord == ()) && (activeEmotionalWord == ())} [Attivo una parola dell'inventario.]
             -> emotional_words_management(Activate) ->
     
-    + {newlyDiscoveredEmotionalWord == ()} [Voglio scoprire una nuova parola.]
+    + {nest_newlyDiscoveredEmotionalWord == ()} [Voglio scoprire una nuova parola.]
     
         {
             //Se una parola è già attiva
@@ -96,7 +96,7 @@
             - else:
                      {
                         //Ma ho esaurito tutte le parola da trovare
-                        - (LIST_COUNT(discoveredEmotionalWords) - 155) == 0:
+                        - (LIST_COUNT(nest_discoveredEmotionalWords) - 155) == 0:
                             Ma non hai più parole da scoprire!
                                 -> main
                         
@@ -109,7 +109,7 @@
         
         }        
     
-    + {newlyDiscoveredEmotionalWord == ()} [Mi guardo in giro.]
+    + {nest_newlyDiscoveredEmotionalWord == ()} [Mi guardo in giro.]
         -> main
     
     -

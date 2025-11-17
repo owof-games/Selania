@@ -104,17 +104,17 @@
 
     {
     
-        - discoveredEmotionalWords has newlyDiscoveredEmotionalWord:
-            {debug_nest: discoveredEmotionalWords ha già {newlyDiscoveredEmotionalWord}.}
+        - nest_discoveredEmotionalWords has nest_newlyDiscoveredEmotionalWord:
+            {debug_nest: nest_discoveredEmotionalWords ha già {nest_newlyDiscoveredEmotionalWord}.}
             -> not_a_new_word
             
         - else:
             {
-                - newlyDiscoveredEmotionalWord != ():
-                    ~  discoveredEmotionalWords += newlyDiscoveredEmotionalWord
-                        {debug_nest: aggiungo {newlyDiscoveredEmotionalWord} alla lista discoveredEmotionalWords che ora contiene {discoveredEmotionalWords}.}
+                - nest_newlyDiscoveredEmotionalWord != ():
+                    ~  nest_discoveredEmotionalWords += nest_newlyDiscoveredEmotionalWord
+                        {debug_nest: aggiungo {nest_newlyDiscoveredEmotionalWord} alla lista nest_discoveredEmotionalWords che ora contiene {nest_discoveredEmotionalWords}.}
                     //segnalo che c'è un aggiornamento
-                    {player_name} ha scoperto una nuova parola: {newlyDiscoveredEmotionalWord}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    {player_name} ha scoperto una nuova parola: {nest_newlyDiscoveredEmotionalWord}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                     Il Libro è stato aggiornato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                      @animation:RewriterBook
             }    
@@ -125,16 +125,16 @@
 
 
     = not_a_new_word
-    {player_name} ha trovato {newlyDiscoveredEmotionalWord}, che già conosceva. Cosa vorrebbe fare? #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    {player_name} ha trovato {nest_newlyDiscoveredEmotionalWord}, che già conosceva. Cosa vorrebbe fare? #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
         + [Voglio cercare una nuova parola.]
-            ~ newlyDiscoveredEmotionalWord = ()
-                {debug_nest: svuoto il valore di newlyDiscoveredEmotionalWord che ora è {newlyDiscoveredEmotionalWord}.}
+            ~ nest_newlyDiscoveredEmotionalWord = ()
+                {debug_nest: svuoto il valore di nest_newlyDiscoveredEmotionalWord che ora è {nest_newlyDiscoveredEmotionalWord}.}
             -> emotional_words_creator
             
         + [Mi fermo.]
-            ~ newlyDiscoveredEmotionalWord = ()
-                {debug_nest: svuoto il valore di newlyDiscoveredEmotionalWord che ora è {newlyDiscoveredEmotionalWord}.}
+            ~ nest_newlyDiscoveredEmotionalWord = ()
+                {debug_nest: svuoto il valore di nest_newlyDiscoveredEmotionalWord che ora è {nest_newlyDiscoveredEmotionalWord}.}
             -> main
 
 

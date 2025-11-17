@@ -85,13 +85,13 @@
     VAR nest_purpleGreenWords = (ViolaVerde, ViolaViolaVerde, ViolaVerdeVerde, ViolaVerdeViola, ViolaVerdeBlu, ViolaVerdeGiallo, ViolaVerdeRosso)
     
 //Una lista degli usi possibili di emotional_words_management
-    LIST emotionalWordsManagementStatus = Activate, Delete
+    LIST nest_emotionalWordsManagementPossibleStatus = Activate, Delete
 
 //Una lista delle parole trovate. Se una parola è qui dentro, una volta "suonata" non passerò da emotional_inventory_management
-    VAR discoveredEmotionalWords = ()
+    VAR nest_discoveredEmotionalWords = ()
 
 //Il tracciamento della parola appena scoperta
-    VAR newlyDiscoveredEmotionalWord = ()
+    VAR nest_newlyDiscoveredEmotionalWord = ()
 
 //Tracciamento delle scelte fatte durante la composizione
     LIST keysColour = redKey, yellowKey, blueKey, greenKey, purpleKey

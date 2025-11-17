@@ -28,85 +28,85 @@
             - secondKeyColour == redKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoRossoRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoRossoRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoRossoGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoRossoGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoRossoBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoRossoBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoRossoVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoRossoVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoRossoViola
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoRossoViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = RossoRosso
+                       ~ nest_newlyDiscoveredEmotionalWord = RossoRosso
                 }
             
             - secondKeyColour == yellowKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoGialloRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoGialloRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoGialloGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoGialloGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoGialloBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoGialloBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoGialloVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoGialloVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoGialloViola
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoGialloViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = RossoGiallo
+                       ~ nest_newlyDiscoveredEmotionalWord = RossoGiallo
                 }
             
             - secondKeyColour == blueKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoBluRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoBluRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoBluGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoBluGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoBluBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoBluBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoBluVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoBluVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoBluViola
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoBluViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = RossoBlu
+                       ~ nest_newlyDiscoveredEmotionalWord = RossoBlu
                 }
             
             - secondKeyColour == greenKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoVerdeRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoVerdeRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoVerdeGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoVerdeGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoVerdeBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoVerdeBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoVerdeVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoVerdeVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoVerdeViola
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoVerdeViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = RossoVerde
+                       ~ nest_newlyDiscoveredEmotionalWord = RossoVerde
                 }
             
             - secondKeyColour == purpleKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoViolaRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoViolaRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoViolaGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoViolaGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoViolaBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoViolaBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoViolaVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoViolaVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = RossoViolaViola
+                        ~ nest_newlyDiscoveredEmotionalWord = RossoViolaViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = RossoViola
+                       ~ nest_newlyDiscoveredEmotionalWord = RossoViola
                 }
             
             - else:
-                ~ newlyDiscoveredEmotionalWord = Rosso
+                ~ nest_newlyDiscoveredEmotionalWord = Rosso
         }
             -> emotional_words_feedback
 
@@ -117,85 +117,85 @@
             - secondKeyColour == redKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloRossoRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloRossoRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloRossoGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloRossoGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloRossoBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloRossoBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloRossoVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloRossoVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloRossoViola
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloRossoViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = GialloRosso
+                       ~ nest_newlyDiscoveredEmotionalWord = GialloRosso
                 }
             
             - secondKeyColour == yellowKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloGialloRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloGialloRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloGialloGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloGialloGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloGialloBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloGialloBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloGialloVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloGialloVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloGialloViola
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloGialloViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = GialloGiallo
+                       ~ nest_newlyDiscoveredEmotionalWord = GialloGiallo
                 }
             
             - secondKeyColour == blueKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloBluRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloBluRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloBluGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloBluGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloBluBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloBluBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloBluVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloBluVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloBluViola
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloBluViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = GialloBlu
+                       ~ nest_newlyDiscoveredEmotionalWord = GialloBlu
                 }
             
             - secondKeyColour == greenKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloVerdeRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloVerdeRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloVerdeGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloVerdeGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloVerdeBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloVerdeBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloVerdeVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloVerdeVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloVerdeViola
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloVerdeViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = GialloVerde
+                       ~ nest_newlyDiscoveredEmotionalWord = GialloVerde
                 }
             
             - secondKeyColour == purpleKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloViolaRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloViolaRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloViolaGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloViolaGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloViolaBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloViolaBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloViolaVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloViolaVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = GialloViolaViola
+                        ~ nest_newlyDiscoveredEmotionalWord = GialloViolaViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = GialloViola
+                       ~ nest_newlyDiscoveredEmotionalWord = GialloViola
                 }
             
             - else:
-                ~ newlyDiscoveredEmotionalWord = Giallo
+                ~ nest_newlyDiscoveredEmotionalWord = Giallo
         }
             -> emotional_words_feedback
     
@@ -206,85 +206,85 @@
             - secondKeyColour == redKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = BluRossoRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = BluRossoRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = BluRossoGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = BluRossoGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = BluRossoBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = BluRossoBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = BluRossoVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = BluRossoVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = BluRossoViola
+                        ~ nest_newlyDiscoveredEmotionalWord = BluRossoViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = BluRosso
+                       ~ nest_newlyDiscoveredEmotionalWord = BluRosso
                 }
             
             - secondKeyColour == yellowKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = BluGialloRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = BluGialloRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = BluGialloGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = BluGialloGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = BluGialloBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = BluGialloBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = BluGialloVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = BluGialloVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = BluGialloViola
+                        ~ nest_newlyDiscoveredEmotionalWord = BluGialloViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = BluGiallo
+                       ~ nest_newlyDiscoveredEmotionalWord = BluGiallo
                 }
             
             - secondKeyColour == blueKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = BluBluRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = BluBluRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = BluBluGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = BluBluGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = BluBluBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = BluBluBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = BluBluVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = BluBluVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = BluBluViola
+                        ~ nest_newlyDiscoveredEmotionalWord = BluBluViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = BluBlu
+                       ~ nest_newlyDiscoveredEmotionalWord = BluBlu
                 }
             
             - secondKeyColour == greenKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = BluVerdeRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = BluVerdeRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = BluVerdeGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = BluVerdeGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = BluVerdeBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = BluVerdeBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = BluVerdeVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = BluVerdeVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = BluVerdeViola
+                        ~ nest_newlyDiscoveredEmotionalWord = BluVerdeViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = BluVerde
+                       ~ nest_newlyDiscoveredEmotionalWord = BluVerde
                 }
             
             - secondKeyColour == purpleKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = BluViolaRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = BluViolaRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = BluViolaGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = BluViolaGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = BluViolaBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = BluViolaBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = BluViolaVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = BluViolaVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = BluViolaViola
+                        ~ nest_newlyDiscoveredEmotionalWord = BluViolaViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = BluViola
+                       ~ nest_newlyDiscoveredEmotionalWord = BluViola
                 }
             
             - else:
-                ~ newlyDiscoveredEmotionalWord = Blu
+                ~ nest_newlyDiscoveredEmotionalWord = Blu
         }
             -> emotional_words_feedback
     
@@ -295,85 +295,85 @@
             - secondKeyColour == redKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeRossoRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeRossoRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeRossoGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeRossoGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeRossoBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeRossoBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeRossoVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeRossoVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeRossoViola
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeRossoViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = VerdeRosso
+                       ~ nest_newlyDiscoveredEmotionalWord = VerdeRosso
                 }
             
             - secondKeyColour == yellowKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeGialloRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeGialloRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeGialloGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeGialloGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeGialloBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeGialloBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeGialloVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeGialloVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeGialloViola
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeGialloViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = VerdeGiallo
+                       ~ nest_newlyDiscoveredEmotionalWord = VerdeGiallo
                 }
             
             - secondKeyColour == blueKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeBluRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeBluRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeBluGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeBluGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeBluBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeBluBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeBluVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeBluVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeBluViola
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeBluViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = VerdeBlu
+                       ~ nest_newlyDiscoveredEmotionalWord = VerdeBlu
                 }
             
             - secondKeyColour == greenKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeVerdeRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeVerdeRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeVerdeGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeVerdeGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeVerdeBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeVerdeBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeVerdeVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeVerdeVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeVerdeViola
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeVerdeViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = VerdeVerde
+                       ~ nest_newlyDiscoveredEmotionalWord = VerdeVerde
                 }
             
             - secondKeyColour == purpleKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeViolaRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeViolaRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeViolaGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeViolaGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeViolaBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeViolaBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeViolaVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeViolaVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = VerdeViolaViola
+                        ~ nest_newlyDiscoveredEmotionalWord = VerdeViolaViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = VerdeViola
+                       ~ nest_newlyDiscoveredEmotionalWord = VerdeViola
                 }
             
             - else:
-                ~ newlyDiscoveredEmotionalWord = Verde
+                ~ nest_newlyDiscoveredEmotionalWord = Verde
         }
            -> emotional_words_feedback
     
@@ -384,85 +384,85 @@
             - secondKeyColour == redKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaRossoRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaRossoRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaRossoGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaRossoGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaRossoBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaRossoBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaRossoVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaRossoVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaRossoViola
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaRossoViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = ViolaRosso
+                       ~ nest_newlyDiscoveredEmotionalWord = ViolaRosso
                 }
             
             - secondKeyColour == yellowKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaGialloRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaGialloRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaGialloGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaGialloGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaGialloBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaGialloBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaGialloVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaGialloVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaGialloViola
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaGialloViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = ViolaGiallo
+                       ~ nest_newlyDiscoveredEmotionalWord = ViolaGiallo
                 }
             
             - secondKeyColour == blueKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaBluRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaBluRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaBluGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaBluGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaBluBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaBluBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaBluVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaBluVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaBluViola
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaBluViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = ViolaBlu
+                       ~ nest_newlyDiscoveredEmotionalWord = ViolaBlu
                 }
             
             - secondKeyColour == greenKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaVerdeRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaVerdeRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaVerdeGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaVerdeGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaVerdeBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaVerdeBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaVerdeVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaVerdeVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaVerdeViola
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaVerdeViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = ViolaVerde
+                       ~ nest_newlyDiscoveredEmotionalWord = ViolaVerde
                 }
             
             - secondKeyColour == purpleKey:
                 {
                     - thirdKeyColour == redKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaViolaRosso
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaViolaRosso
                     - thirdKeyColour == yellowKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaViolaGiallo
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaViolaGiallo
                     - thirdKeyColour == blueKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaViolaBlu
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaViolaBlu
                     - thirdKeyColour == greenKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaViolaVerde
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaViolaVerde
                     - thirdKeyColour == purpleKey:
-                        ~ newlyDiscoveredEmotionalWord = ViolaViolaViola
+                        ~ nest_newlyDiscoveredEmotionalWord = ViolaViolaViola
                     - else:
-                       ~ newlyDiscoveredEmotionalWord = ViolaViola
+                       ~ nest_newlyDiscoveredEmotionalWord = ViolaViola
                 }
             
             - else:
-                ~ newlyDiscoveredEmotionalWord = Viola
+                ~ nest_newlyDiscoveredEmotionalWord = Viola
         }  
     
             -> emotional_words_feedback

@@ -11,7 +11,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
 
 //Varianti monocolore
     {
-        - nest_redWords ^ discoveredEmotionalWords == ():
+        - nest_redWords ^ nest_discoveredEmotionalWords == ():
             <i>La prima parola non è stata ancora scoperta.
             
         - else:
@@ -28,16 +28,16 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_redWords ^ discoveredEmotionalWords has Rosso: <> caratteristiche variante uno.
-                - nest_redWords ^ discoveredEmotionalWords hasnt Rosso: <> variante non scoperta.
+                - nest_redWords ^ nest_discoveredEmotionalWords has Rosso: <> caratteristiche variante uno.
+                - nest_redWords ^ nest_discoveredEmotionalWords hasnt Rosso: <> variante non scoperta.
             }
             {
-                - nest_redWords ^ discoveredEmotionalWords has RossoRosso: <> caratteristiche variante due.
-                - nest_redWords ^ discoveredEmotionalWords hasnt RossoRosso: <> variante non scoperta.
+                - nest_redWords ^ nest_discoveredEmotionalWords has RossoRosso: <> caratteristiche variante due.
+                - nest_redWords ^ nest_discoveredEmotionalWords hasnt RossoRosso: <> variante non scoperta.
             }
             {
-                - nest_redWords ^ discoveredEmotionalWords has RossoRossoRosso: <> caratteristiche variante tre.
-                - nest_redWords ^ discoveredEmotionalWords hasnt RossoRossoRosso: <> variante non scoperta.
+                - nest_redWords ^ nest_discoveredEmotionalWords has RossoRossoRosso: <> caratteristiche variante tre.
+                - nest_redWords ^ nest_discoveredEmotionalWords hasnt RossoRossoRosso: <> variante non scoperta.
             
             }
     
@@ -45,7 +45,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     }
     
     {
-        - nest_yellowWords ^ discoveredEmotionalWords == ():
+        - nest_yellowWords ^ nest_discoveredEmotionalWords == ():
             <i>La seconda parola non è stata ancora scoperta.
             
         - else:
@@ -62,16 +62,16 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_yellowWords ^ discoveredEmotionalWords has Giallo: <> caratteristiche variante uno.
-                - nest_yellowWords ^ discoveredEmotionalWords hasnt Giallo: <> variante non scoperta.
+                - nest_yellowWords ^ nest_discoveredEmotionalWords has Giallo: <> caratteristiche variante uno.
+                - nest_yellowWords ^ nest_discoveredEmotionalWords hasnt Giallo: <> variante non scoperta.
             }
             {
-                - nest_yellowWords ^ discoveredEmotionalWords has GialloGiallo: <> caratteristiche variante due.
-                - nest_yellowWords ^ discoveredEmotionalWords hasnt GialloGiallo: <> variante non scoperta.
+                - nest_yellowWords ^ nest_discoveredEmotionalWords has GialloGiallo: <> caratteristiche variante due.
+                - nest_yellowWords ^ nest_discoveredEmotionalWords hasnt GialloGiallo: <> variante non scoperta.
             }
             {
-                - nest_yellowWords ^ discoveredEmotionalWords has GialloGialloGiallo: <> caratteristiche variante tre.
-                - nest_yellowWords ^ discoveredEmotionalWords hasnt GialloGialloGiallo: <> variante non scoperta.
+                - nest_yellowWords ^ nest_discoveredEmotionalWords has GialloGialloGiallo: <> caratteristiche variante tre.
+                - nest_yellowWords ^ nest_discoveredEmotionalWords hasnt GialloGialloGiallo: <> variante non scoperta.
             
             }
     
@@ -79,7 +79,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     }
     
     {
-        - nest_blueWords ^ discoveredEmotionalWords == ():
+        - nest_blueWords ^ nest_discoveredEmotionalWords == ():
             <i>La terza parola non è stata ancora scoperta.
             
         - else:
@@ -96,16 +96,16 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_blueWords ^ discoveredEmotionalWords has Blu: <> caratteristiche variante uno.
-                - nest_blueWords ^ discoveredEmotionalWords hasnt Blu: <> variante non scoperta.
+                - nest_blueWords ^ nest_discoveredEmotionalWords has Blu: <> caratteristiche variante uno.
+                - nest_blueWords ^ nest_discoveredEmotionalWords hasnt Blu: <> variante non scoperta.
             }
             {
-                - nest_blueWords ^ discoveredEmotionalWords has BluBlu: <> caratteristiche variante due.
-                - nest_blueWords ^ discoveredEmotionalWords hasnt BluBlu: <> variante non scoperta.
+                - nest_blueWords ^ nest_discoveredEmotionalWords has BluBlu: <> caratteristiche variante due.
+                - nest_blueWords ^ nest_discoveredEmotionalWords hasnt BluBlu: <> variante non scoperta.
             }
             {
-                - nest_blueWords ^ discoveredEmotionalWords has BluBluBlu: <> caratteristiche variante tre.
-                - nest_blueWords ^ discoveredEmotionalWords hasnt BluBluBlu: <> variante non scoperta.
+                - nest_blueWords ^ nest_discoveredEmotionalWords has BluBluBlu: <> caratteristiche variante tre.
+                - nest_blueWords ^ nest_discoveredEmotionalWords hasnt BluBluBlu: <> variante non scoperta.
             
             }
     
@@ -113,7 +113,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     }
     
     {
-        - nest_greenWords ^ discoveredEmotionalWords == ():
+        - nest_greenWords ^ nest_discoveredEmotionalWords == ():
             <i>La quarta parola non è stata ancora scoperta.
             
         - else:
@@ -130,16 +130,16 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_greenWords ^ discoveredEmotionalWords has Verde: <> caratteristiche variante uno.
-                - nest_greenWords ^ discoveredEmotionalWords hasnt Verde: <> variante non scoperta.
+                - nest_greenWords ^ nest_discoveredEmotionalWords has Verde: <> caratteristiche variante uno.
+                - nest_greenWords ^ nest_discoveredEmotionalWords hasnt Verde: <> variante non scoperta.
             }
             {
-                - nest_greenWords ^ discoveredEmotionalWords has VerdeVerde: <> caratteristiche variante due.
-                - nest_greenWords ^ discoveredEmotionalWords hasnt VerdeVerde: <> variante non scoperta.
+                - nest_greenWords ^ nest_discoveredEmotionalWords has VerdeVerde: <> caratteristiche variante due.
+                - nest_greenWords ^ nest_discoveredEmotionalWords hasnt VerdeVerde: <> variante non scoperta.
             }
             {
-                - nest_greenWords ^ discoveredEmotionalWords has VerdeVerdeVerde: <> caratteristiche variante tre.
-                - nest_greenWords ^ discoveredEmotionalWords hasnt VerdeVerdeVerde: <> variante non scoperta.
+                - nest_greenWords ^ nest_discoveredEmotionalWords has VerdeVerdeVerde: <> caratteristiche variante tre.
+                - nest_greenWords ^ nest_discoveredEmotionalWords hasnt VerdeVerdeVerde: <> variante non scoperta.
             
             }
     
@@ -147,7 +147,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     }
 
     {
-        - nest_purpleWords ^ discoveredEmotionalWords == ():
+        - nest_purpleWords ^ nest_discoveredEmotionalWords == ():
             <i>La quinta parola non è stata ancora scoperta.
             
         - else:
@@ -164,16 +164,16 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_purpleWords ^ discoveredEmotionalWords has Viola: <> caratteristiche variante uno.
-                - nest_purpleWords ^ discoveredEmotionalWords hasnt Viola: <> variante non scoperta.
+                - nest_purpleWords ^ nest_discoveredEmotionalWords has Viola: <> caratteristiche variante uno.
+                - nest_purpleWords ^ nest_discoveredEmotionalWords hasnt Viola: <> variante non scoperta.
             }
             {
-                - nest_purpleWords ^ discoveredEmotionalWords has ViolaViola: <> caratteristiche variante due.
-                - nest_purpleWords ^ discoveredEmotionalWords hasnt ViolaViola: <> variante non scoperta.
+                - nest_purpleWords ^ nest_discoveredEmotionalWords has ViolaViola: <> caratteristiche variante due.
+                - nest_purpleWords ^ nest_discoveredEmotionalWords hasnt ViolaViola: <> variante non scoperta.
             }
             {
-                - nest_purpleWords ^ discoveredEmotionalWords has ViolaViolaViola: <> caratteristiche variante tre.
-                - nest_purpleWords ^ discoveredEmotionalWords hasnt ViolaViolaViola: <> variante non scoperta.
+                - nest_purpleWords ^ nest_discoveredEmotionalWords has ViolaViolaViola: <> caratteristiche variante tre.
+                - nest_purpleWords ^ nest_discoveredEmotionalWords hasnt ViolaViolaViola: <> variante non scoperta.
             
             }
     
@@ -184,7 +184,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
 
 //Varianti a dominante Rosso
     {
-        - nest_redYellowWords ^ discoveredEmotionalWords == ():
+        - nest_redYellowWords ^ nest_discoveredEmotionalWords == ():
             <i>La sesta parola non è stata ancora scoperta.
             
         - else:
@@ -201,32 +201,32 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_redYellowWords ^ discoveredEmotionalWords has RossoGiallo: <> caratteristiche variante uno.
-                - nest_redYellowWords ^ discoveredEmotionalWords hasnt RossoGiallo: <> variante non scoperta.
+                - nest_redYellowWords ^ nest_discoveredEmotionalWords has RossoGiallo: <> caratteristiche variante uno.
+                - nest_redYellowWords ^ nest_discoveredEmotionalWords hasnt RossoGiallo: <> variante non scoperta.
             }
             {    
-                - nest_redYellowWords ^ discoveredEmotionalWords has RossoRossoGiallo:<> caratteristiche variante due.
-                - nest_redYellowWords ^ discoveredEmotionalWords hasnt RossoRossoGiallo:<> variante non scoperta.
+                - nest_redYellowWords ^ nest_discoveredEmotionalWords has RossoRossoGiallo:<> caratteristiche variante due.
+                - nest_redYellowWords ^ nest_discoveredEmotionalWords hasnt RossoRossoGiallo:<> variante non scoperta.
             }
             {    
-                - nest_redYellowWords ^ discoveredEmotionalWords has RossoGialloGiallo:<> caratteristiche variante tre.
-                - nest_redYellowWords ^ discoveredEmotionalWords hasnt RossoGialloGiallo:<> variante non scoperta.
+                - nest_redYellowWords ^ nest_discoveredEmotionalWords has RossoGialloGiallo:<> caratteristiche variante tre.
+                - nest_redYellowWords ^ nest_discoveredEmotionalWords hasnt RossoGialloGiallo:<> variante non scoperta.
             }
             {    
-                - nest_redYellowWords ^ discoveredEmotionalWords has RossoGialloBlu: <> caratteristiche variante quattro.
-                - nest_redYellowWords ^ discoveredEmotionalWords hasnt RossoGialloBlu: <> variante non scoperta.
+                - nest_redYellowWords ^ nest_discoveredEmotionalWords has RossoGialloBlu: <> caratteristiche variante quattro.
+                - nest_redYellowWords ^ nest_discoveredEmotionalWords hasnt RossoGialloBlu: <> variante non scoperta.
             }
             {    
-                - nest_redYellowWords ^ discoveredEmotionalWords has RossoGialloVerde:<> caratteristiche variante cinque.
-                - nest_redYellowWords ^ discoveredEmotionalWords hasnt RossoGialloVerde:<> variante non scoperta.
+                - nest_redYellowWords ^ nest_discoveredEmotionalWords has RossoGialloVerde:<> caratteristiche variante cinque.
+                - nest_redYellowWords ^ nest_discoveredEmotionalWords hasnt RossoGialloVerde:<> variante non scoperta.
             }
             {    
-                - nest_redYellowWords ^ discoveredEmotionalWords has RossoGialloViola:<> caratteristiche variante sei.
-                - nest_redYellowWords ^ discoveredEmotionalWords hasnt RossoGialloViola:<> variante non scoperta.
+                - nest_redYellowWords ^ nest_discoveredEmotionalWords has RossoGialloViola:<> caratteristiche variante sei.
+                - nest_redYellowWords ^ nest_discoveredEmotionalWords hasnt RossoGialloViola:<> variante non scoperta.
             }
             {     
-                - nest_redYellowWords ^ discoveredEmotionalWords has RossoGialloRosso:<> caratteristiche variante sette.
-                - nest_redYellowWords ^ discoveredEmotionalWords hasnt RossoGialloRosso:<> variante non scoperta.
+                - nest_redYellowWords ^ nest_discoveredEmotionalWords has RossoGialloRosso:<> caratteristiche variante sette.
+                - nest_redYellowWords ^ nest_discoveredEmotionalWords hasnt RossoGialloRosso:<> variante non scoperta.
             
             }
     
@@ -234,7 +234,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     } 
     
     {
-        - nest_redBlueWords ^ discoveredEmotionalWords == ():
+        - nest_redBlueWords ^ nest_discoveredEmotionalWords == ():
             <i>La settima parola non è stata ancora scoperta.
             
         - else:
@@ -251,39 +251,39 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_redBlueWords ^ discoveredEmotionalWords has RossoBlu: <> caratteristiche variante uno.
-                - nest_redBlueWords ^ discoveredEmotionalWords hasnt RossoBlu: <> variante non scoperta.
+                - nest_redBlueWords ^ nest_discoveredEmotionalWords has RossoBlu: <> caratteristiche variante uno.
+                - nest_redBlueWords ^ nest_discoveredEmotionalWords hasnt RossoBlu: <> variante non scoperta.
             }
             {    
-                - nest_redBlueWords ^ discoveredEmotionalWords has RossoRossoBlu:<> caratteristiche variante due.
-                - nest_redBlueWords ^ discoveredEmotionalWords hasnt RossoRossoBlu:<> variante non scoperta.
+                - nest_redBlueWords ^ nest_discoveredEmotionalWords has RossoRossoBlu:<> caratteristiche variante due.
+                - nest_redBlueWords ^ nest_discoveredEmotionalWords hasnt RossoRossoBlu:<> variante non scoperta.
             }
             {    
-                - nest_redBlueWords ^ discoveredEmotionalWords has RossoBluBlu:<> caratteristiche variante tre.
-                - nest_redBlueWords ^ discoveredEmotionalWords hasnt RossoBluBlu:<> variante non scoperta.
+                - nest_redBlueWords ^ nest_discoveredEmotionalWords has RossoBluBlu:<> caratteristiche variante tre.
+                - nest_redBlueWords ^ nest_discoveredEmotionalWords hasnt RossoBluBlu:<> variante non scoperta.
             }
             {    
-                - nest_redBlueWords ^ discoveredEmotionalWords has RossoBluVerde: <> caratteristiche variante quattro.
-                - nest_redBlueWords ^ discoveredEmotionalWords hasnt RossoBluVerde: <> variante non scoperta.
+                - nest_redBlueWords ^ nest_discoveredEmotionalWords has RossoBluVerde: <> caratteristiche variante quattro.
+                - nest_redBlueWords ^ nest_discoveredEmotionalWords hasnt RossoBluVerde: <> variante non scoperta.
             }
             {    
-                - nest_redBlueWords ^ discoveredEmotionalWords has RossoBluViola:<> caratteristiche variante cinque.
-                - nest_redBlueWords ^ discoveredEmotionalWords hasnt RossoBluViola:<> variante non scoperta.
+                - nest_redBlueWords ^ nest_discoveredEmotionalWords has RossoBluViola:<> caratteristiche variante cinque.
+                - nest_redBlueWords ^ nest_discoveredEmotionalWords hasnt RossoBluViola:<> variante non scoperta.
             }
             {    
-                - nest_redBlueWords ^ discoveredEmotionalWords has RossoBluRosso:<> caratteristiche variante sei.
-                - nest_redBlueWords ^ discoveredEmotionalWords hasnt RossoBluRosso:<> variante non scoperta.
+                - nest_redBlueWords ^ nest_discoveredEmotionalWords has RossoBluRosso:<> caratteristiche variante sei.
+                - nest_redBlueWords ^ nest_discoveredEmotionalWords hasnt RossoBluRosso:<> variante non scoperta.
             }
             {     
-                - nest_redBlueWords ^ discoveredEmotionalWords has RossoBluGiallo:<> caratteristiche variante sette.
-                - nest_redBlueWords ^ discoveredEmotionalWords hasnt RossoBluGiallo:<> variante non scoperta.
+                - nest_redBlueWords ^ nest_discoveredEmotionalWords has RossoBluGiallo:<> caratteristiche variante sette.
+                - nest_redBlueWords ^ nest_discoveredEmotionalWords hasnt RossoBluGiallo:<> variante non scoperta.
             
             }
     
     
     } 
     {
-        - nest_redGreenWords ^ discoveredEmotionalWords == ():
+        - nest_redGreenWords ^ nest_discoveredEmotionalWords == ():
             <i>L'ottava parola non è stata ancora scoperta.
             
         - else:
@@ -300,32 +300,32 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_redGreenWords ^ discoveredEmotionalWords has RossoVerde: <> caratteristiche variante uno.
-                - nest_redGreenWords ^ discoveredEmotionalWords hasnt RossoVerde: <> variante non scoperta.
+                - nest_redGreenWords ^ nest_discoveredEmotionalWords has RossoVerde: <> caratteristiche variante uno.
+                - nest_redGreenWords ^ nest_discoveredEmotionalWords hasnt RossoVerde: <> variante non scoperta.
             }
             {    
-                - nest_redGreenWords ^ discoveredEmotionalWords has RossoRossoVerde:<> caratteristiche variante due.
-                - nest_redGreenWords ^ discoveredEmotionalWords hasnt RossoRossoVerde:<> variante non scoperta.
+                - nest_redGreenWords ^ nest_discoveredEmotionalWords has RossoRossoVerde:<> caratteristiche variante due.
+                - nest_redGreenWords ^ nest_discoveredEmotionalWords hasnt RossoRossoVerde:<> variante non scoperta.
             }
             {    
-                - nest_redGreenWords ^ discoveredEmotionalWords has RossoVerdeBlu:<> caratteristiche variante tre.
-                - nest_redGreenWords ^ discoveredEmotionalWords hasnt RossoVerdeBlu:<> variante non scoperta.
+                - nest_redGreenWords ^ nest_discoveredEmotionalWords has RossoVerdeBlu:<> caratteristiche variante tre.
+                - nest_redGreenWords ^ nest_discoveredEmotionalWords hasnt RossoVerdeBlu:<> variante non scoperta.
             }
             {    
-                - nest_redGreenWords ^ discoveredEmotionalWords has RossoVerdeVerde: <> caratteristiche variante quattro.
-                - nest_redGreenWords ^ discoveredEmotionalWords hasnt RossoVerdeVerde: <> variante non scoperta.
+                - nest_redGreenWords ^ nest_discoveredEmotionalWords has RossoVerdeVerde: <> caratteristiche variante quattro.
+                - nest_redGreenWords ^ nest_discoveredEmotionalWords hasnt RossoVerdeVerde: <> variante non scoperta.
             }
             {    
-                - nest_redGreenWords ^ discoveredEmotionalWords has RossoVerdeViola:<> caratteristiche variante cinque.
-                - nest_redGreenWords ^ discoveredEmotionalWords hasnt RossoVerdeViola:<> variante non scoperta.
+                - nest_redGreenWords ^ nest_discoveredEmotionalWords has RossoVerdeViola:<> caratteristiche variante cinque.
+                - nest_redGreenWords ^ nest_discoveredEmotionalWords hasnt RossoVerdeViola:<> variante non scoperta.
             }
             {    
-                - nest_redGreenWords ^ discoveredEmotionalWords has RossoVerdeRosso:<> caratteristiche variante sei.
-                - nest_redGreenWords ^ discoveredEmotionalWords hasnt RossoVerdeRosso:<> variante non scoperta.
+                - nest_redGreenWords ^ nest_discoveredEmotionalWords has RossoVerdeRosso:<> caratteristiche variante sei.
+                - nest_redGreenWords ^ nest_discoveredEmotionalWords hasnt RossoVerdeRosso:<> variante non scoperta.
             }
             {     
-                - nest_redGreenWords ^ discoveredEmotionalWords has RossoVerdeGiallo:<> caratteristiche variante sette.
-                - nest_redGreenWords ^ discoveredEmotionalWords hasnt RossoVerdeGiallo:<> variante non scoperta.
+                - nest_redGreenWords ^ nest_discoveredEmotionalWords has RossoVerdeGiallo:<> caratteristiche variante sette.
+                - nest_redGreenWords ^ nest_discoveredEmotionalWords hasnt RossoVerdeGiallo:<> variante non scoperta.
             
             }
     
@@ -333,7 +333,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     } 
     
     {
-        - nest_redPurpleWords ^ discoveredEmotionalWords == ():
+        - nest_redPurpleWords ^ nest_discoveredEmotionalWords == ():
             <i>La nona parola non è stata ancora scoperta.
             
         - else:
@@ -350,32 +350,32 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_redPurpleWords ^ discoveredEmotionalWords has RossoViola: <> caratteristiche variante uno.
-                - nest_redPurpleWords ^ discoveredEmotionalWords hasnt RossoViola: <> variante non scoperta.
+                - nest_redPurpleWords ^ nest_discoveredEmotionalWords has RossoViola: <> caratteristiche variante uno.
+                - nest_redPurpleWords ^ nest_discoveredEmotionalWords hasnt RossoViola: <> variante non scoperta.
             }
             {    
-                - nest_redPurpleWords ^ discoveredEmotionalWords has RossoRossoViola:<> caratteristiche variante due.
-                - nest_redPurpleWords ^ discoveredEmotionalWords hasnt RossoRossoViola:<> variante non scoperta.
+                - nest_redPurpleWords ^ nest_discoveredEmotionalWords has RossoRossoViola:<> caratteristiche variante due.
+                - nest_redPurpleWords ^ nest_discoveredEmotionalWords hasnt RossoRossoViola:<> variante non scoperta.
             }
             {    
-                - nest_redPurpleWords ^ discoveredEmotionalWords has RossoViolaBlu:<> caratteristiche variante tre.
-                - nest_redPurpleWords ^ discoveredEmotionalWords hasnt RossoViolaBlu:<> variante non scoperta.
+                - nest_redPurpleWords ^ nest_discoveredEmotionalWords has RossoViolaBlu:<> caratteristiche variante tre.
+                - nest_redPurpleWords ^ nest_discoveredEmotionalWords hasnt RossoViolaBlu:<> variante non scoperta.
             }
             {    
-                - nest_redPurpleWords ^ discoveredEmotionalWords has RossoViolaVerde: <> caratteristiche variante quattro.
-                - nest_redPurpleWords ^ discoveredEmotionalWords hasnt RossoViolaVerde: <> variante non scoperta.
+                - nest_redPurpleWords ^ nest_discoveredEmotionalWords has RossoViolaVerde: <> caratteristiche variante quattro.
+                - nest_redPurpleWords ^ nest_discoveredEmotionalWords hasnt RossoViolaVerde: <> variante non scoperta.
             }
             {    
-                - nest_redPurpleWords ^ discoveredEmotionalWords has RossoViolaViola:<> caratteristiche variante cinque.
-                - nest_redPurpleWords ^ discoveredEmotionalWords hasnt RossoViolaViola:<> variante non scoperta.
+                - nest_redPurpleWords ^ nest_discoveredEmotionalWords has RossoViolaViola:<> caratteristiche variante cinque.
+                - nest_redPurpleWords ^ nest_discoveredEmotionalWords hasnt RossoViolaViola:<> variante non scoperta.
             }
             {    
-                - nest_redPurpleWords ^ discoveredEmotionalWords has RossoViolaRosso:<> caratteristiche variante sei.
-                - nest_redPurpleWords ^ discoveredEmotionalWords hasnt RossoViolaRosso:<> variante non scoperta.
+                - nest_redPurpleWords ^ nest_discoveredEmotionalWords has RossoViolaRosso:<> caratteristiche variante sei.
+                - nest_redPurpleWords ^ nest_discoveredEmotionalWords hasnt RossoViolaRosso:<> variante non scoperta.
             }
             {     
-                - nest_redPurpleWords ^ discoveredEmotionalWords has RossoViolaGiallo:<> caratteristiche variante sette.
-                - nest_redPurpleWords ^ discoveredEmotionalWords hasnt RossoViolaGiallo:<> variante non scoperta.
+                - nest_redPurpleWords ^ nest_discoveredEmotionalWords has RossoViolaGiallo:<> caratteristiche variante sette.
+                - nest_redPurpleWords ^ nest_discoveredEmotionalWords hasnt RossoViolaGiallo:<> variante non scoperta.
             
             }
     
@@ -388,7 +388,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
 
 //Varianti a dominante Giallo
     {
-        - nest_yellowRedWords ^ discoveredEmotionalWords == ():
+        - nest_yellowRedWords ^ nest_discoveredEmotionalWords == ():
             <i>La decima parola non è stata ancora scoperta.
             
         - else:
@@ -405,32 +405,32 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_yellowRedWords ^ discoveredEmotionalWords has GialloRosso: <> caratteristiche variante uno.
-                - nest_yellowRedWords ^ discoveredEmotionalWords hasnt GialloRosso: <> variante non scoperta.
+                - nest_yellowRedWords ^ nest_discoveredEmotionalWords has GialloRosso: <> caratteristiche variante uno.
+                - nest_yellowRedWords ^ nest_discoveredEmotionalWords hasnt GialloRosso: <> variante non scoperta.
             }
             {    
-                - nest_yellowRedWords ^ discoveredEmotionalWords has GialloGialloRosso:<> caratteristiche variante due.
-                - nest_yellowRedWords ^ discoveredEmotionalWords hasnt GialloGialloRosso:<> variante non scoperta.
+                - nest_yellowRedWords ^ nest_discoveredEmotionalWords has GialloGialloRosso:<> caratteristiche variante due.
+                - nest_yellowRedWords ^ nest_discoveredEmotionalWords hasnt GialloGialloRosso:<> variante non scoperta.
             }
             {    
-                - nest_yellowRedWords ^ discoveredEmotionalWords has GialloRossoRosso:<> caratteristiche variante tre.
-                - nest_yellowRedWords ^ discoveredEmotionalWords hasnt GialloRossoRosso:<> variante non scoperta.
+                - nest_yellowRedWords ^ nest_discoveredEmotionalWords has GialloRossoRosso:<> caratteristiche variante tre.
+                - nest_yellowRedWords ^ nest_discoveredEmotionalWords hasnt GialloRossoRosso:<> variante non scoperta.
             }
             {    
-                - nest_yellowRedWords ^ discoveredEmotionalWords has GialloRossoVerde: <> caratteristiche variante quattro.
-                - nest_yellowRedWords ^ discoveredEmotionalWords hasnt GialloRossoVerde: <> variante non scoperta.
+                - nest_yellowRedWords ^ nest_discoveredEmotionalWords has GialloRossoVerde: <> caratteristiche variante quattro.
+                - nest_yellowRedWords ^ nest_discoveredEmotionalWords hasnt GialloRossoVerde: <> variante non scoperta.
             }
             {    
-                - nest_yellowRedWords ^ discoveredEmotionalWords has GialloRossoViola:<> caratteristiche variante cinque.
-                - nest_yellowRedWords ^ discoveredEmotionalWords hasnt GialloRossoViola:<> variante non scoperta.
+                - nest_yellowRedWords ^ nest_discoveredEmotionalWords has GialloRossoViola:<> caratteristiche variante cinque.
+                - nest_yellowRedWords ^ nest_discoveredEmotionalWords hasnt GialloRossoViola:<> variante non scoperta.
             }
             {    
-                - nest_yellowRedWords ^ discoveredEmotionalWords has GialloRossoBlu:<> caratteristiche variante sei.
-                - nest_yellowRedWords ^ discoveredEmotionalWords hasnt GialloRossoBlu:<> variante non scoperta.
+                - nest_yellowRedWords ^ nest_discoveredEmotionalWords has GialloRossoBlu:<> caratteristiche variante sei.
+                - nest_yellowRedWords ^ nest_discoveredEmotionalWords hasnt GialloRossoBlu:<> variante non scoperta.
             }
             {     
-                - nest_yellowRedWords ^ discoveredEmotionalWords has GialloRossoGiallo:<> caratteristiche variante sette.
-                - nest_yellowRedWords ^ discoveredEmotionalWords hasnt GialloRossoGiallo:<> variante non scoperta.
+                - nest_yellowRedWords ^ nest_discoveredEmotionalWords has GialloRossoGiallo:<> caratteristiche variante sette.
+                - nest_yellowRedWords ^ nest_discoveredEmotionalWords hasnt GialloRossoGiallo:<> variante non scoperta.
             
             }
     
@@ -438,7 +438,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     } 
     
     {
-        - nest_yellowBlueWords ^ discoveredEmotionalWords == ():
+        - nest_yellowBlueWords ^ nest_discoveredEmotionalWords == ():
             <i>L'undicesima parola non è stata ancora scoperta.
             
         - else:
@@ -455,39 +455,39 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_yellowBlueWords ^ discoveredEmotionalWords has GialloBlu: <> caratteristiche variante uno.
-                - nest_yellowBlueWords ^ discoveredEmotionalWords hasnt GialloBlu: <> variante non scoperta.
+                - nest_yellowBlueWords ^ nest_discoveredEmotionalWords has GialloBlu: <> caratteristiche variante uno.
+                - nest_yellowBlueWords ^ nest_discoveredEmotionalWords hasnt GialloBlu: <> variante non scoperta.
             }
             {    
-                - nest_yellowBlueWords ^ discoveredEmotionalWords has GialloGialloBlu:<> caratteristiche variante due.
-                - nest_yellowBlueWords ^ discoveredEmotionalWords hasnt GialloGialloBlu:<> variante non scoperta.
+                - nest_yellowBlueWords ^ nest_discoveredEmotionalWords has GialloGialloBlu:<> caratteristiche variante due.
+                - nest_yellowBlueWords ^ nest_discoveredEmotionalWords hasnt GialloGialloBlu:<> variante non scoperta.
             }
             {    
-                - nest_yellowBlueWords ^ discoveredEmotionalWords has GialloBluVerde:<> caratteristiche variante tre.
-                - nest_yellowBlueWords ^ discoveredEmotionalWords hasnt GialloBluVerde:<> variante non scoperta.
+                - nest_yellowBlueWords ^ nest_discoveredEmotionalWords has GialloBluVerde:<> caratteristiche variante tre.
+                - nest_yellowBlueWords ^ nest_discoveredEmotionalWords hasnt GialloBluVerde:<> variante non scoperta.
             }
             {    
-                - nest_yellowBlueWords ^ discoveredEmotionalWords has GialloBluViola: <> caratteristiche variante quattro.
-                - nest_yellowBlueWords ^ discoveredEmotionalWords hasnt GialloBluViola: <> variante non scoperta.
+                - nest_yellowBlueWords ^ nest_discoveredEmotionalWords has GialloBluViola: <> caratteristiche variante quattro.
+                - nest_yellowBlueWords ^ nest_discoveredEmotionalWords hasnt GialloBluViola: <> variante non scoperta.
             }
             {    
-                - nest_yellowBlueWords ^ discoveredEmotionalWords has GialloBluBlu:<> caratteristiche variante cinque.
-                - nest_yellowBlueWords ^ discoveredEmotionalWords hasnt GialloBluBlu:<> variante non scoperta.
+                - nest_yellowBlueWords ^ nest_discoveredEmotionalWords has GialloBluBlu:<> caratteristiche variante cinque.
+                - nest_yellowBlueWords ^ nest_discoveredEmotionalWords hasnt GialloBluBlu:<> variante non scoperta.
             }
             {    
-                - nest_yellowBlueWords ^ discoveredEmotionalWords has GialloBluGiallo:<> caratteristiche variante sei.
-                - nest_yellowBlueWords ^ discoveredEmotionalWords hasnt GialloBluGiallo:<> variante non scoperta.
+                - nest_yellowBlueWords ^ nest_discoveredEmotionalWords has GialloBluGiallo:<> caratteristiche variante sei.
+                - nest_yellowBlueWords ^ nest_discoveredEmotionalWords hasnt GialloBluGiallo:<> variante non scoperta.
             }
             {     
-                - nest_yellowBlueWords ^ discoveredEmotionalWords has GialloBluRosso:<> caratteristiche variante sette.
-                - nest_yellowBlueWords ^ discoveredEmotionalWords hasnt GialloBluRosso:<> variante non scoperta.
+                - nest_yellowBlueWords ^ nest_discoveredEmotionalWords has GialloBluRosso:<> caratteristiche variante sette.
+                - nest_yellowBlueWords ^ nest_discoveredEmotionalWords hasnt GialloBluRosso:<> variante non scoperta.
             
             }
     
     
     } 
     {
-        - nest_yellowGreenWords ^ discoveredEmotionalWords == ():
+        - nest_yellowGreenWords ^ nest_discoveredEmotionalWords == ():
             <i>La dodicesima parola non è stata ancora scoperta.
             
         - else:
@@ -504,32 +504,32 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_yellowGreenWords ^ discoveredEmotionalWords has GialloVerde: <> caratteristiche variante uno.
-                - nest_yellowGreenWords ^ discoveredEmotionalWords hasnt GialloVerde: <> variante non scoperta.
+                - nest_yellowGreenWords ^ nest_discoveredEmotionalWords has GialloVerde: <> caratteristiche variante uno.
+                - nest_yellowGreenWords ^ nest_discoveredEmotionalWords hasnt GialloVerde: <> variante non scoperta.
             }
             {    
-                - nest_yellowGreenWords ^ discoveredEmotionalWords has GialloGialloVerde:<> caratteristiche variante due.
-                - nest_yellowGreenWords ^ discoveredEmotionalWords hasnt GialloGialloVerde:<> variante non scoperta.
+                - nest_yellowGreenWords ^ nest_discoveredEmotionalWords has GialloGialloVerde:<> caratteristiche variante due.
+                - nest_yellowGreenWords ^ nest_discoveredEmotionalWords hasnt GialloGialloVerde:<> variante non scoperta.
             }
             {    
-                - nest_yellowGreenWords ^ discoveredEmotionalWords has GialloVerdeVerde:<> caratteristiche variante tre.
-                - nest_yellowGreenWords ^ discoveredEmotionalWords hasnt GialloVerdeVerde:<> variante non scoperta.
+                - nest_yellowGreenWords ^ nest_discoveredEmotionalWords has GialloVerdeVerde:<> caratteristiche variante tre.
+                - nest_yellowGreenWords ^ nest_discoveredEmotionalWords hasnt GialloVerdeVerde:<> variante non scoperta.
             }
             {    
-                - nest_yellowGreenWords ^ discoveredEmotionalWords has GialloVerdeViola: <> caratteristiche variante quattro.
-                - nest_yellowGreenWords ^ discoveredEmotionalWords hasnt GialloVerdeViola: <> variante non scoperta.
+                - nest_yellowGreenWords ^ nest_discoveredEmotionalWords has GialloVerdeViola: <> caratteristiche variante quattro.
+                - nest_yellowGreenWords ^ nest_discoveredEmotionalWords hasnt GialloVerdeViola: <> variante non scoperta.
             }
             {    
-                - nest_yellowGreenWords ^ discoveredEmotionalWords has GialloVerdeBlu:<> caratteristiche variante cinque.
-                - nest_yellowGreenWords ^ discoveredEmotionalWords hasnt GialloVerdeBlu:<> variante non scoperta.
+                - nest_yellowGreenWords ^ nest_discoveredEmotionalWords has GialloVerdeBlu:<> caratteristiche variante cinque.
+                - nest_yellowGreenWords ^ nest_discoveredEmotionalWords hasnt GialloVerdeBlu:<> variante non scoperta.
             }
             {    
-                - nest_yellowGreenWords ^ discoveredEmotionalWords has GialloVerdeGiallo:<> caratteristiche variante sei.
-                - nest_yellowGreenWords ^ discoveredEmotionalWords hasnt GialloVerdeGiallo:<> variante non scoperta.
+                - nest_yellowGreenWords ^ nest_discoveredEmotionalWords has GialloVerdeGiallo:<> caratteristiche variante sei.
+                - nest_yellowGreenWords ^ nest_discoveredEmotionalWords hasnt GialloVerdeGiallo:<> variante non scoperta.
             }
             {     
-                - nest_yellowGreenWords ^ discoveredEmotionalWords has GialloVerdeRosso:<> caratteristiche variante sette.
-                - nest_yellowGreenWords ^ discoveredEmotionalWords hasnt GialloVerdeRosso:<> variante non scoperta.
+                - nest_yellowGreenWords ^ nest_discoveredEmotionalWords has GialloVerdeRosso:<> caratteristiche variante sette.
+                - nest_yellowGreenWords ^ nest_discoveredEmotionalWords hasnt GialloVerdeRosso:<> variante non scoperta.
             
             }
     
@@ -537,7 +537,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     } 
     
     {
-        - nest_yellowPurpleWords ^ discoveredEmotionalWords == ():
+        - nest_yellowPurpleWords ^ nest_discoveredEmotionalWords == ():
             <i>La tredicesima parola non è stata ancora scoperta.
             
         - else:
@@ -554,32 +554,32 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_yellowPurpleWords ^ discoveredEmotionalWords has GialloViola: <> caratteristiche variante uno.
-                - nest_yellowPurpleWords ^ discoveredEmotionalWords hasnt GialloViola: <> variante non scoperta.
+                - nest_yellowPurpleWords ^ nest_discoveredEmotionalWords has GialloViola: <> caratteristiche variante uno.
+                - nest_yellowPurpleWords ^ nest_discoveredEmotionalWords hasnt GialloViola: <> variante non scoperta.
             }
             {    
-                - nest_yellowPurpleWords ^ discoveredEmotionalWords has GialloGialloViola:<> caratteristiche variante due.
-                - nest_yellowPurpleWords ^ discoveredEmotionalWords hasnt GialloGialloViola:<> variante non scoperta.
+                - nest_yellowPurpleWords ^ nest_discoveredEmotionalWords has GialloGialloViola:<> caratteristiche variante due.
+                - nest_yellowPurpleWords ^ nest_discoveredEmotionalWords hasnt GialloGialloViola:<> variante non scoperta.
             }
             {    
-                - nest_yellowPurpleWords ^ discoveredEmotionalWords has GialloViolaVerde:<> caratteristiche variante tre.
-                - nest_yellowPurpleWords ^ discoveredEmotionalWords hasnt GialloViolaVerde:<> variante non scoperta.
+                - nest_yellowPurpleWords ^ nest_discoveredEmotionalWords has GialloViolaVerde:<> caratteristiche variante tre.
+                - nest_yellowPurpleWords ^ nest_discoveredEmotionalWords hasnt GialloViolaVerde:<> variante non scoperta.
             }
             {    
-                - nest_yellowPurpleWords ^ discoveredEmotionalWords has GialloViolaViola: <> caratteristiche variante quattro.
-                - nest_yellowPurpleWords ^ discoveredEmotionalWords hasnt GialloViolaViola: <> variante non scoperta.
+                - nest_yellowPurpleWords ^ nest_discoveredEmotionalWords has GialloViolaViola: <> caratteristiche variante quattro.
+                - nest_yellowPurpleWords ^ nest_discoveredEmotionalWords hasnt GialloViolaViola: <> variante non scoperta.
             }
             {    
-                - nest_yellowPurpleWords ^ discoveredEmotionalWords has GialloViolaBlu:<> caratteristiche variante cinque.
-                - nest_yellowPurpleWords ^ discoveredEmotionalWords hasnt GialloViolaBlu:<> variante non scoperta.
+                - nest_yellowPurpleWords ^ nest_discoveredEmotionalWords has GialloViolaBlu:<> caratteristiche variante cinque.
+                - nest_yellowPurpleWords ^ nest_discoveredEmotionalWords hasnt GialloViolaBlu:<> variante non scoperta.
             }
             {    
-                - nest_yellowPurpleWords ^ discoveredEmotionalWords has GialloViolaGiallo:<> caratteristiche variante sei.
-                - nest_yellowPurpleWords ^ discoveredEmotionalWords hasnt GialloViolaGiallo:<> variante non scoperta.
+                - nest_yellowPurpleWords ^ nest_discoveredEmotionalWords has GialloViolaGiallo:<> caratteristiche variante sei.
+                - nest_yellowPurpleWords ^ nest_discoveredEmotionalWords hasnt GialloViolaGiallo:<> variante non scoperta.
             }
             {     
-                - nest_yellowPurpleWords ^ discoveredEmotionalWords has GialloViolaRosso:<> caratteristiche variante sette.
-                - nest_yellowPurpleWords ^ discoveredEmotionalWords hasnt GialloViolaRosso:<> variante non scoperta.
+                - nest_yellowPurpleWords ^ nest_discoveredEmotionalWords has GialloViolaRosso:<> caratteristiche variante sette.
+                - nest_yellowPurpleWords ^ nest_discoveredEmotionalWords hasnt GialloViolaRosso:<> variante non scoperta.
             
             }
     
@@ -589,7 +589,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
 
 //Varianti a dominante Blu
     {
-        - nest_blueRedWords ^ discoveredEmotionalWords == ():
+        - nest_blueRedWords ^ nest_discoveredEmotionalWords == ():
             <i>La quattordicesima parola non è stata ancora scoperta.
             
         - else:
@@ -606,32 +606,32 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_blueRedWords ^ discoveredEmotionalWords has BluRosso: <> caratteristiche variante uno.
-                - nest_blueRedWords ^ discoveredEmotionalWords hasnt BluRosso: <> variante non scoperta.
+                - nest_blueRedWords ^ nest_discoveredEmotionalWords has BluRosso: <> caratteristiche variante uno.
+                - nest_blueRedWords ^ nest_discoveredEmotionalWords hasnt BluRosso: <> variante non scoperta.
             }
             {    
-                - nest_blueRedWords ^ discoveredEmotionalWords has BluBluRosso:<> caratteristiche variante due.
-                - nest_blueRedWords ^ discoveredEmotionalWords hasnt BluBluRosso:<> variante non scoperta.
+                - nest_blueRedWords ^ nest_discoveredEmotionalWords has BluBluRosso:<> caratteristiche variante due.
+                - nest_blueRedWords ^ nest_discoveredEmotionalWords hasnt BluBluRosso:<> variante non scoperta.
             }
             {    
-                - nest_blueRedWords ^ discoveredEmotionalWords has BluRossoVerde:<> caratteristiche variante tre.
-                - nest_blueRedWords ^ discoveredEmotionalWords hasnt BluRossoVerde:<> variante non scoperta.
+                - nest_blueRedWords ^ nest_discoveredEmotionalWords has BluRossoVerde:<> caratteristiche variante tre.
+                - nest_blueRedWords ^ nest_discoveredEmotionalWords hasnt BluRossoVerde:<> variante non scoperta.
             }
             {    
-                - nest_blueRedWords ^ discoveredEmotionalWords has BluRossoViola: <> caratteristiche variante quattro.
-                - nest_blueRedWords ^ discoveredEmotionalWords hasnt BluRossoViola: <> variante non scoperta.
+                - nest_blueRedWords ^ nest_discoveredEmotionalWords has BluRossoViola: <> caratteristiche variante quattro.
+                - nest_blueRedWords ^ nest_discoveredEmotionalWords hasnt BluRossoViola: <> variante non scoperta.
             }
             {    
-                - nest_blueRedWords ^ discoveredEmotionalWords has BluRossoBlu:<> caratteristiche variante cinque.
-                - nest_blueRedWords ^ discoveredEmotionalWords hasnt BluRossoBlu:<> variante non scoperta.
+                - nest_blueRedWords ^ nest_discoveredEmotionalWords has BluRossoBlu:<> caratteristiche variante cinque.
+                - nest_blueRedWords ^ nest_discoveredEmotionalWords hasnt BluRossoBlu:<> variante non scoperta.
             }
             {    
-                - nest_blueRedWords ^ discoveredEmotionalWords has BluRossoGiallo:<> caratteristiche variante sei.
-                - nest_blueRedWords ^ discoveredEmotionalWords hasnt BluRossoGiallo:<> variante non scoperta.
+                - nest_blueRedWords ^ nest_discoveredEmotionalWords has BluRossoGiallo:<> caratteristiche variante sei.
+                - nest_blueRedWords ^ nest_discoveredEmotionalWords hasnt BluRossoGiallo:<> variante non scoperta.
             }
             {     
-                - nest_blueRedWords ^ discoveredEmotionalWords has BluRossoRosso:<> caratteristiche variante sette.
-                - nest_blueRedWords ^ discoveredEmotionalWords hasnt BluRossoRosso:<> variante non scoperta.
+                - nest_blueRedWords ^ nest_discoveredEmotionalWords has BluRossoRosso:<> caratteristiche variante sette.
+                - nest_blueRedWords ^ nest_discoveredEmotionalWords hasnt BluRossoRosso:<> variante non scoperta.
             
             }
     
@@ -639,7 +639,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     } 
     
     {
-        - nest_blueYellowWords ^ discoveredEmotionalWords == ():
+        - nest_blueYellowWords ^ nest_discoveredEmotionalWords == ():
             <i>La quindicesima parola non è stata ancora scoperta.
             
         - else:
@@ -656,39 +656,39 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_blueYellowWords ^ discoveredEmotionalWords has BluGiallo: <> caratteristiche variante uno.
-                - nest_blueYellowWords ^ discoveredEmotionalWords hasnt BluGiallo: <> variante non scoperta.
+                - nest_blueYellowWords ^ nest_discoveredEmotionalWords has BluGiallo: <> caratteristiche variante uno.
+                - nest_blueYellowWords ^ nest_discoveredEmotionalWords hasnt BluGiallo: <> variante non scoperta.
             }
             {    
-                - nest_blueYellowWords ^ discoveredEmotionalWords has BluBluGiallo:<> caratteristiche variante due.
-                - nest_blueYellowWords ^ discoveredEmotionalWords hasnt BluBluGiallo:<> variante non scoperta.
+                - nest_blueYellowWords ^ nest_discoveredEmotionalWords has BluBluGiallo:<> caratteristiche variante due.
+                - nest_blueYellowWords ^ nest_discoveredEmotionalWords hasnt BluBluGiallo:<> variante non scoperta.
             }
             {    
-                - nest_blueYellowWords ^ discoveredEmotionalWords has BluGialloVerde:<> caratteristiche variante tre.
-                - nest_blueYellowWords ^ discoveredEmotionalWords hasnt BluGialloVerde:<> variante non scoperta.
+                - nest_blueYellowWords ^ nest_discoveredEmotionalWords has BluGialloVerde:<> caratteristiche variante tre.
+                - nest_blueYellowWords ^ nest_discoveredEmotionalWords hasnt BluGialloVerde:<> variante non scoperta.
             }
             {    
-                - nest_blueYellowWords ^ discoveredEmotionalWords has BluGialloViola: <> caratteristiche variante quattro.
-                - nest_blueYellowWords ^ discoveredEmotionalWords hasnt BluGialloViola: <> variante non scoperta.
+                - nest_blueYellowWords ^ nest_discoveredEmotionalWords has BluGialloViola: <> caratteristiche variante quattro.
+                - nest_blueYellowWords ^ nest_discoveredEmotionalWords hasnt BluGialloViola: <> variante non scoperta.
             }
             {    
-                - nest_blueYellowWords ^ discoveredEmotionalWords has BluGialloBlu:<> caratteristiche variante cinque.
-                - nest_blueYellowWords ^ discoveredEmotionalWords hasnt BluGialloBlu:<> variante non scoperta.
+                - nest_blueYellowWords ^ nest_discoveredEmotionalWords has BluGialloBlu:<> caratteristiche variante cinque.
+                - nest_blueYellowWords ^ nest_discoveredEmotionalWords hasnt BluGialloBlu:<> variante non scoperta.
             }
             {    
-                - nest_blueYellowWords ^ discoveredEmotionalWords has BluGialloGiallo:<> caratteristiche variante sei.
-                - nest_blueYellowWords ^ discoveredEmotionalWords hasnt BluGialloGiallo:<> variante non scoperta.
+                - nest_blueYellowWords ^ nest_discoveredEmotionalWords has BluGialloGiallo:<> caratteristiche variante sei.
+                - nest_blueYellowWords ^ nest_discoveredEmotionalWords hasnt BluGialloGiallo:<> variante non scoperta.
             }
             {     
-                - nest_blueYellowWords ^ discoveredEmotionalWords has BluGialloRosso:<> caratteristiche variante sette.
-                - nest_blueYellowWords ^ discoveredEmotionalWords hasnt BluGialloRosso:<> variante non scoperta.
+                - nest_blueYellowWords ^ nest_discoveredEmotionalWords has BluGialloRosso:<> caratteristiche variante sette.
+                - nest_blueYellowWords ^ nest_discoveredEmotionalWords hasnt BluGialloRosso:<> variante non scoperta.
             
             }
     
     
     } 
     {
-        - nest_blueGreenWords ^ discoveredEmotionalWords == ():
+        - nest_blueGreenWords ^ nest_discoveredEmotionalWords == ():
             <i>La sedicesima parola non è stata ancora scoperta.
             
         - else:
@@ -705,32 +705,32 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_blueGreenWords ^ discoveredEmotionalWords has BluVerde: <> caratteristiche variante uno.
-                - nest_blueGreenWords ^ discoveredEmotionalWords hasnt BluVerde: <> variante non scoperta.
+                - nest_blueGreenWords ^ nest_discoveredEmotionalWords has BluVerde: <> caratteristiche variante uno.
+                - nest_blueGreenWords ^ nest_discoveredEmotionalWords hasnt BluVerde: <> variante non scoperta.
             }
             {    
-                - nest_blueGreenWords ^ discoveredEmotionalWords has BluBluVerde:<> caratteristiche variante due.
-                - nest_blueGreenWords ^ discoveredEmotionalWords hasnt BluBluVerde:<> variante non scoperta.
+                - nest_blueGreenWords ^ nest_discoveredEmotionalWords has BluBluVerde:<> caratteristiche variante due.
+                - nest_blueGreenWords ^ nest_discoveredEmotionalWords hasnt BluBluVerde:<> variante non scoperta.
             }
             {    
-                - nest_blueGreenWords ^ discoveredEmotionalWords has BluVerdeVerde:<> caratteristiche variante tre.
-                - nest_blueGreenWords ^ discoveredEmotionalWords hasnt BluVerdeVerde:<> variante non scoperta.
+                - nest_blueGreenWords ^ nest_discoveredEmotionalWords has BluVerdeVerde:<> caratteristiche variante tre.
+                - nest_blueGreenWords ^ nest_discoveredEmotionalWords hasnt BluVerdeVerde:<> variante non scoperta.
             }
             {    
-                - nest_blueGreenWords ^ discoveredEmotionalWords has BluVerdeViola: <> caratteristiche variante quattro.
-                - nest_blueGreenWords ^ discoveredEmotionalWords hasnt BluVerdeViola: <> variante non scoperta.
+                - nest_blueGreenWords ^ nest_discoveredEmotionalWords has BluVerdeViola: <> caratteristiche variante quattro.
+                - nest_blueGreenWords ^ nest_discoveredEmotionalWords hasnt BluVerdeViola: <> variante non scoperta.
             }
             {    
-                - nest_blueGreenWords ^ discoveredEmotionalWords has BluVerdeBlu:<> caratteristiche variante cinque.
-                - nest_blueGreenWords ^ discoveredEmotionalWords hasnt BluVerdeBlu:<> variante non scoperta.
+                - nest_blueGreenWords ^ nest_discoveredEmotionalWords has BluVerdeBlu:<> caratteristiche variante cinque.
+                - nest_blueGreenWords ^ nest_discoveredEmotionalWords hasnt BluVerdeBlu:<> variante non scoperta.
             }
             {    
-                - nest_blueGreenWords ^ discoveredEmotionalWords has BluVerdeGiallo:<> caratteristiche variante sei.
-                - nest_blueGreenWords ^ discoveredEmotionalWords hasnt BluVerdeGiallo:<> variante non scoperta.
+                - nest_blueGreenWords ^ nest_discoveredEmotionalWords has BluVerdeGiallo:<> caratteristiche variante sei.
+                - nest_blueGreenWords ^ nest_discoveredEmotionalWords hasnt BluVerdeGiallo:<> variante non scoperta.
             }
             {     
-                - nest_blueGreenWords ^ discoveredEmotionalWords has BluVerdeRosso:<> caratteristiche variante sette.
-                - nest_blueGreenWords ^ discoveredEmotionalWords hasnt BluVerdeRosso:<> variante non scoperta.
+                - nest_blueGreenWords ^ nest_discoveredEmotionalWords has BluVerdeRosso:<> caratteristiche variante sette.
+                - nest_blueGreenWords ^ nest_discoveredEmotionalWords hasnt BluVerdeRosso:<> variante non scoperta.
             
             }
     
@@ -738,7 +738,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     } 
     
     {
-        - nest_bluePurpleWords ^ discoveredEmotionalWords == ():
+        - nest_bluePurpleWords ^ nest_discoveredEmotionalWords == ():
             <i>La diciassettesima parola non è stata ancora scoperta.
             
         - else:
@@ -755,32 +755,32 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_bluePurpleWords ^ discoveredEmotionalWords has BluViola: <> caratteristiche variante uno.
-                - nest_bluePurpleWords ^ discoveredEmotionalWords hasnt BluViola: <> variante non scoperta.
+                - nest_bluePurpleWords ^ nest_discoveredEmotionalWords has BluViola: <> caratteristiche variante uno.
+                - nest_bluePurpleWords ^ nest_discoveredEmotionalWords hasnt BluViola: <> variante non scoperta.
             }
             {    
-                - nest_bluePurpleWords ^ discoveredEmotionalWords has BluBluViola:<> caratteristiche variante due.
-                - nest_bluePurpleWords ^ discoveredEmotionalWords hasnt BluBluViola:<> variante non scoperta.
+                - nest_bluePurpleWords ^ nest_discoveredEmotionalWords has BluBluViola:<> caratteristiche variante due.
+                - nest_bluePurpleWords ^ nest_discoveredEmotionalWords hasnt BluBluViola:<> variante non scoperta.
             }
             {    
-                - nest_bluePurpleWords ^ discoveredEmotionalWords has BluViolaVerde:<> caratteristiche variante tre.
-                - nest_bluePurpleWords ^ discoveredEmotionalWords hasnt BluViolaVerde:<> variante non scoperta.
+                - nest_bluePurpleWords ^ nest_discoveredEmotionalWords has BluViolaVerde:<> caratteristiche variante tre.
+                - nest_bluePurpleWords ^ nest_discoveredEmotionalWords hasnt BluViolaVerde:<> variante non scoperta.
             }
             {    
-                - nest_bluePurpleWords ^ discoveredEmotionalWords has BluViolaViola: <> caratteristiche variante quattro.
-                - nest_bluePurpleWords ^ discoveredEmotionalWords hasnt BluViolaViola: <> variante non scoperta.
+                - nest_bluePurpleWords ^ nest_discoveredEmotionalWords has BluViolaViola: <> caratteristiche variante quattro.
+                - nest_bluePurpleWords ^ nest_discoveredEmotionalWords hasnt BluViolaViola: <> variante non scoperta.
             }
             {    
-                - nest_bluePurpleWords ^ discoveredEmotionalWords has BluViolaBlu:<> caratteristiche variante cinque.
-                - nest_bluePurpleWords ^ discoveredEmotionalWords hasnt BluViolaBlu:<> variante non scoperta.
+                - nest_bluePurpleWords ^ nest_discoveredEmotionalWords has BluViolaBlu:<> caratteristiche variante cinque.
+                - nest_bluePurpleWords ^ nest_discoveredEmotionalWords hasnt BluViolaBlu:<> variante non scoperta.
             }
             {    
-                - nest_bluePurpleWords ^ discoveredEmotionalWords has BluViolaGiallo:<> caratteristiche variante sei.
-                - nest_bluePurpleWords ^ discoveredEmotionalWords hasnt BluViolaGiallo:<> variante non scoperta.
+                - nest_bluePurpleWords ^ nest_discoveredEmotionalWords has BluViolaGiallo:<> caratteristiche variante sei.
+                - nest_bluePurpleWords ^ nest_discoveredEmotionalWords hasnt BluViolaGiallo:<> variante non scoperta.
             }
             {     
-                - nest_bluePurpleWords ^ discoveredEmotionalWords has BluViolaRosso:<> caratteristiche variante sette.
-                - nest_bluePurpleWords ^ discoveredEmotionalWords hasnt BluViolaRosso:<> variante non scoperta.
+                - nest_bluePurpleWords ^ nest_discoveredEmotionalWords has BluViolaRosso:<> caratteristiche variante sette.
+                - nest_bluePurpleWords ^ nest_discoveredEmotionalWords hasnt BluViolaRosso:<> variante non scoperta.
             
             }
     
@@ -792,7 +792,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
 
 //Varianti a dominante Verde
     {
-        - nest_greenRedWords ^ discoveredEmotionalWords == ():
+        - nest_greenRedWords ^ nest_discoveredEmotionalWords == ():
             <i>La diciottesima parola non è stata ancora scoperta.
             
         - else:
@@ -809,32 +809,32 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_greenRedWords ^ discoveredEmotionalWords has VerdeRosso: <> caratteristiche variante uno.
-                - nest_greenRedWords ^ discoveredEmotionalWords hasnt VerdeRosso: <> variante non scoperta.
+                - nest_greenRedWords ^ nest_discoveredEmotionalWords has VerdeRosso: <> caratteristiche variante uno.
+                - nest_greenRedWords ^ nest_discoveredEmotionalWords hasnt VerdeRosso: <> variante non scoperta.
             }
             {    
-                - nest_greenRedWords ^ discoveredEmotionalWords has VerdeVerdeRosso:<> caratteristiche variante due.
-                - nest_greenRedWords ^ discoveredEmotionalWords hasnt VerdeVerdeRosso:<> variante non scoperta.
+                - nest_greenRedWords ^ nest_discoveredEmotionalWords has VerdeVerdeRosso:<> caratteristiche variante due.
+                - nest_greenRedWords ^ nest_discoveredEmotionalWords hasnt VerdeVerdeRosso:<> variante non scoperta.
             }
             {    
-                - nest_greenRedWords ^ discoveredEmotionalWords has VerdeRossoVerde:<> caratteristiche variante tre.
-                - nest_greenRedWords ^ discoveredEmotionalWords hasnt VerdeRossoVerde:<> variante non scoperta.
+                - nest_greenRedWords ^ nest_discoveredEmotionalWords has VerdeRossoVerde:<> caratteristiche variante tre.
+                - nest_greenRedWords ^ nest_discoveredEmotionalWords hasnt VerdeRossoVerde:<> variante non scoperta.
             }
             {    
-                - nest_greenRedWords ^ discoveredEmotionalWords has VerdeRossoViola: <> caratteristiche variante quattro.
-                - nest_greenRedWords ^ discoveredEmotionalWords hasnt VerdeRossoViola: <> variante non scoperta.
+                - nest_greenRedWords ^ nest_discoveredEmotionalWords has VerdeRossoViola: <> caratteristiche variante quattro.
+                - nest_greenRedWords ^ nest_discoveredEmotionalWords hasnt VerdeRossoViola: <> variante non scoperta.
             }
             {    
-                - nest_greenRedWords ^ discoveredEmotionalWords has VerdeRossoBlu:<> caratteristiche variante cinque.
-                - nest_greenRedWords ^ discoveredEmotionalWords hasnt VerdeRossoBlu:<> variante non scoperta.
+                - nest_greenRedWords ^ nest_discoveredEmotionalWords has VerdeRossoBlu:<> caratteristiche variante cinque.
+                - nest_greenRedWords ^ nest_discoveredEmotionalWords hasnt VerdeRossoBlu:<> variante non scoperta.
             }
             {    
-                - nest_greenRedWords ^ discoveredEmotionalWords has VerdeRossoGiallo:<> caratteristiche variante sei.
-                - nest_greenRedWords ^ discoveredEmotionalWords hasnt VerdeRossoGiallo:<> variante non scoperta.
+                - nest_greenRedWords ^ nest_discoveredEmotionalWords has VerdeRossoGiallo:<> caratteristiche variante sei.
+                - nest_greenRedWords ^ nest_discoveredEmotionalWords hasnt VerdeRossoGiallo:<> variante non scoperta.
             }
             {     
-                - nest_greenRedWords ^ discoveredEmotionalWords has VerdeRossoRosso:<> caratteristiche variante sette.
-                - nest_greenRedWords ^ discoveredEmotionalWords hasnt VerdeRossoRosso:<> variante non scoperta.
+                - nest_greenRedWords ^ nest_discoveredEmotionalWords has VerdeRossoRosso:<> caratteristiche variante sette.
+                - nest_greenRedWords ^ nest_discoveredEmotionalWords hasnt VerdeRossoRosso:<> variante non scoperta.
             
             }
     
@@ -842,7 +842,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     } 
     
     {
-        - nest_greenYellowWords ^ discoveredEmotionalWords == ():
+        - nest_greenYellowWords ^ nest_discoveredEmotionalWords == ():
             <i>La diciannovesima parola non è stata ancora scoperta.
             
         - else:
@@ -859,39 +859,39 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_greenYellowWords ^ discoveredEmotionalWords has VerdeGiallo: <> caratteristiche variante uno.
-                - nest_greenYellowWords ^ discoveredEmotionalWords hasnt VerdeGiallo: <> variante non scoperta.
+                - nest_greenYellowWords ^ nest_discoveredEmotionalWords has VerdeGiallo: <> caratteristiche variante uno.
+                - nest_greenYellowWords ^ nest_discoveredEmotionalWords hasnt VerdeGiallo: <> variante non scoperta.
             }
             {    
-                - nest_greenYellowWords ^ discoveredEmotionalWords has VerdeVerdeGiallo:<> caratteristiche variante due.
-                - nest_greenYellowWords ^ discoveredEmotionalWords hasnt VerdeVerdeGiallo:<> variante non scoperta.
+                - nest_greenYellowWords ^ nest_discoveredEmotionalWords has VerdeVerdeGiallo:<> caratteristiche variante due.
+                - nest_greenYellowWords ^ nest_discoveredEmotionalWords hasnt VerdeVerdeGiallo:<> variante non scoperta.
             }
             {    
-                - nest_greenYellowWords ^ discoveredEmotionalWords has VerdeGialloVerde:<> caratteristiche variante tre.
-                - nest_greenYellowWords ^ discoveredEmotionalWords hasnt VerdeGialloVerde:<> variante non scoperta.
+                - nest_greenYellowWords ^ nest_discoveredEmotionalWords has VerdeGialloVerde:<> caratteristiche variante tre.
+                - nest_greenYellowWords ^ nest_discoveredEmotionalWords hasnt VerdeGialloVerde:<> variante non scoperta.
             }
             {    
-                - nest_greenYellowWords ^ discoveredEmotionalWords has VerdeGialloViola: <> caratteristiche variante quattro.
-                - nest_greenYellowWords ^ discoveredEmotionalWords hasnt VerdeGialloViola: <> variante non scoperta.
+                - nest_greenYellowWords ^ nest_discoveredEmotionalWords has VerdeGialloViola: <> caratteristiche variante quattro.
+                - nest_greenYellowWords ^ nest_discoveredEmotionalWords hasnt VerdeGialloViola: <> variante non scoperta.
             }
             {    
-                - nest_greenYellowWords ^ discoveredEmotionalWords has VerdeGialloBlu:<> caratteristiche variante cinque.
-                - nest_greenYellowWords ^ discoveredEmotionalWords hasnt VerdeGialloBlu:<> variante non scoperta.
+                - nest_greenYellowWords ^ nest_discoveredEmotionalWords has VerdeGialloBlu:<> caratteristiche variante cinque.
+                - nest_greenYellowWords ^ nest_discoveredEmotionalWords hasnt VerdeGialloBlu:<> variante non scoperta.
             }
             {    
-                - nest_greenYellowWords ^ discoveredEmotionalWords has VerdeGialloGiallo:<> caratteristiche variante sei.
-                - nest_greenYellowWords ^ discoveredEmotionalWords hasnt VerdeGialloGiallo:<> variante non scoperta.
+                - nest_greenYellowWords ^ nest_discoveredEmotionalWords has VerdeGialloGiallo:<> caratteristiche variante sei.
+                - nest_greenYellowWords ^ nest_discoveredEmotionalWords hasnt VerdeGialloGiallo:<> variante non scoperta.
             }
             {     
-                - nest_greenYellowWords ^ discoveredEmotionalWords has VerdeGialloRosso:<> caratteristiche variante sette.
-                - nest_greenYellowWords ^ discoveredEmotionalWords hasnt VerdeGialloRosso:<> variante non scoperta.
+                - nest_greenYellowWords ^ nest_discoveredEmotionalWords has VerdeGialloRosso:<> caratteristiche variante sette.
+                - nest_greenYellowWords ^ nest_discoveredEmotionalWords hasnt VerdeGialloRosso:<> variante non scoperta.
             
             }
     
     
     } 
     {
-        - nest_greenBlueWords ^ discoveredEmotionalWords == ():
+        - nest_greenBlueWords ^ nest_discoveredEmotionalWords == ():
             <i>La ventesima parola non è stata ancora scoperta.
             
         - else:
@@ -908,32 +908,32 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_greenBlueWords ^ discoveredEmotionalWords has VerdeBlu: <> caratteristiche variante uno.
-                - nest_greenBlueWords ^ discoveredEmotionalWords hasnt VerdeBlu: <> variante non scoperta.
+                - nest_greenBlueWords ^ nest_discoveredEmotionalWords has VerdeBlu: <> caratteristiche variante uno.
+                - nest_greenBlueWords ^ nest_discoveredEmotionalWords hasnt VerdeBlu: <> variante non scoperta.
             }
             {    
-                - nest_greenBlueWords ^ discoveredEmotionalWords has VerdeVerdeBlu:<> caratteristiche variante due.
-                - nest_greenBlueWords ^ discoveredEmotionalWords hasnt VerdeVerdeBlu:<> variante non scoperta.
+                - nest_greenBlueWords ^ nest_discoveredEmotionalWords has VerdeVerdeBlu:<> caratteristiche variante due.
+                - nest_greenBlueWords ^ nest_discoveredEmotionalWords hasnt VerdeVerdeBlu:<> variante non scoperta.
             }
             {    
-                - nest_greenBlueWords ^ discoveredEmotionalWords has VerdeBluVerde:<> caratteristiche variante tre.
-                - nest_greenBlueWords ^ discoveredEmotionalWords hasnt VerdeBluVerde:<> variante non scoperta.
+                - nest_greenBlueWords ^ nest_discoveredEmotionalWords has VerdeBluVerde:<> caratteristiche variante tre.
+                - nest_greenBlueWords ^ nest_discoveredEmotionalWords hasnt VerdeBluVerde:<> variante non scoperta.
             }
             {    
-                - nest_greenBlueWords ^ discoveredEmotionalWords has VerdeBluViola: <> caratteristiche variante quattro.
-                - nest_greenBlueWords ^ discoveredEmotionalWords hasnt VerdeBluViola: <> variante non scoperta.
+                - nest_greenBlueWords ^ nest_discoveredEmotionalWords has VerdeBluViola: <> caratteristiche variante quattro.
+                - nest_greenBlueWords ^ nest_discoveredEmotionalWords hasnt VerdeBluViola: <> variante non scoperta.
             }
             {    
-                - nest_greenBlueWords ^ discoveredEmotionalWords has VerdeBluBlu:<> caratteristiche variante cinque.
-                - nest_greenBlueWords ^ discoveredEmotionalWords hasnt VerdeBluBlu:<> variante non scoperta.
+                - nest_greenBlueWords ^ nest_discoveredEmotionalWords has VerdeBluBlu:<> caratteristiche variante cinque.
+                - nest_greenBlueWords ^ nest_discoveredEmotionalWords hasnt VerdeBluBlu:<> variante non scoperta.
             }
             {    
-                - nest_greenBlueWords ^ discoveredEmotionalWords has VerdeBluGiallo:<> caratteristiche variante sei.
-                - nest_greenBlueWords ^ discoveredEmotionalWords hasnt VerdeBluGiallo:<> variante non scoperta.
+                - nest_greenBlueWords ^ nest_discoveredEmotionalWords has VerdeBluGiallo:<> caratteristiche variante sei.
+                - nest_greenBlueWords ^ nest_discoveredEmotionalWords hasnt VerdeBluGiallo:<> variante non scoperta.
             }
             {     
-                - nest_greenBlueWords ^ discoveredEmotionalWords has VerdeBluRosso:<> caratteristiche variante sette.
-                - nest_greenBlueWords ^ discoveredEmotionalWords hasnt VerdeBluRosso:<> variante non scoperta.
+                - nest_greenBlueWords ^ nest_discoveredEmotionalWords has VerdeBluRosso:<> caratteristiche variante sette.
+                - nest_greenBlueWords ^ nest_discoveredEmotionalWords hasnt VerdeBluRosso:<> variante non scoperta.
             
             }
     
@@ -941,7 +941,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     } 
     
     {
-        - nest_greenPurpleWords ^ discoveredEmotionalWords == ():
+        - nest_greenPurpleWords ^ nest_discoveredEmotionalWords == ():
             <i>La ventunesima parola non è stata ancora scoperta.
             
         - else:
@@ -958,32 +958,32 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_greenPurpleWords ^ discoveredEmotionalWords has VerdeViola: <> caratteristiche variante uno.
-                - nest_greenPurpleWords ^ discoveredEmotionalWords hasnt VerdeViola: <> variante non scoperta.
+                - nest_greenPurpleWords ^ nest_discoveredEmotionalWords has VerdeViola: <> caratteristiche variante uno.
+                - nest_greenPurpleWords ^ nest_discoveredEmotionalWords hasnt VerdeViola: <> variante non scoperta.
             }
             {    
-                - nest_greenPurpleWords ^ discoveredEmotionalWords has VerdeVerdeViola:<> caratteristiche variante due.
-                - nest_greenPurpleWords ^ discoveredEmotionalWords hasnt VerdeVerdeViola:<> variante non scoperta.
+                - nest_greenPurpleWords ^ nest_discoveredEmotionalWords has VerdeVerdeViola:<> caratteristiche variante due.
+                - nest_greenPurpleWords ^ nest_discoveredEmotionalWords hasnt VerdeVerdeViola:<> variante non scoperta.
             }
             {    
-                - nest_greenPurpleWords ^ discoveredEmotionalWords has VerdeViolaVerde:<> caratteristiche variante tre.
-                - nest_greenPurpleWords ^ discoveredEmotionalWords hasnt VerdeViolaVerde:<> variante non scoperta.
+                - nest_greenPurpleWords ^ nest_discoveredEmotionalWords has VerdeViolaVerde:<> caratteristiche variante tre.
+                - nest_greenPurpleWords ^ nest_discoveredEmotionalWords hasnt VerdeViolaVerde:<> variante non scoperta.
             }
             {    
-                - nest_greenPurpleWords ^ discoveredEmotionalWords has VerdeViolaViola: <> caratteristiche variante quattro.
-                - nest_greenPurpleWords ^ discoveredEmotionalWords hasnt VerdeViolaViola: <> variante non scoperta.
+                - nest_greenPurpleWords ^ nest_discoveredEmotionalWords has VerdeViolaViola: <> caratteristiche variante quattro.
+                - nest_greenPurpleWords ^ nest_discoveredEmotionalWords hasnt VerdeViolaViola: <> variante non scoperta.
             }
             {    
-                - nest_greenPurpleWords ^ discoveredEmotionalWords has VerdeViolaBlu:<> caratteristiche variante cinque.
-                - nest_greenPurpleWords ^ discoveredEmotionalWords hasnt VerdeViolaBlu:<> variante non scoperta.
+                - nest_greenPurpleWords ^ nest_discoveredEmotionalWords has VerdeViolaBlu:<> caratteristiche variante cinque.
+                - nest_greenPurpleWords ^ nest_discoveredEmotionalWords hasnt VerdeViolaBlu:<> variante non scoperta.
             }
             {    
-                - nest_greenPurpleWords ^ discoveredEmotionalWords has VerdeViolaGiallo:<> caratteristiche variante sei.
-                - nest_greenPurpleWords ^ discoveredEmotionalWords hasnt VerdeViolaGiallo:<> variante non scoperta.
+                - nest_greenPurpleWords ^ nest_discoveredEmotionalWords has VerdeViolaGiallo:<> caratteristiche variante sei.
+                - nest_greenPurpleWords ^ nest_discoveredEmotionalWords hasnt VerdeViolaGiallo:<> variante non scoperta.
             }
             {     
-                - nest_greenPurpleWords ^ discoveredEmotionalWords has VerdeViolaRosso:<> caratteristiche variante sette.
-                - nest_greenPurpleWords ^ discoveredEmotionalWords hasnt VerdeViolaRosso:<> variante non scoperta.
+                - nest_greenPurpleWords ^ nest_discoveredEmotionalWords has VerdeViolaRosso:<> caratteristiche variante sette.
+                - nest_greenPurpleWords ^ nest_discoveredEmotionalWords hasnt VerdeViolaRosso:<> variante non scoperta.
             
             }
     
@@ -994,7 +994,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
 
 //Varianti a dominante Viola
     {
-        - nest_purpleRedWords ^ discoveredEmotionalWords == ():
+        - nest_purpleRedWords ^ nest_discoveredEmotionalWords == ():
             <i>La ventiduesima parola non è stata ancora scoperta.
             
         - else:
@@ -1011,32 +1011,32 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_purpleRedWords ^ discoveredEmotionalWords has ViolaRosso: <> caratteristiche variante uno.
-                - nest_purpleRedWords ^ discoveredEmotionalWords hasnt ViolaRosso: <> variante non scoperta.
+                - nest_purpleRedWords ^ nest_discoveredEmotionalWords has ViolaRosso: <> caratteristiche variante uno.
+                - nest_purpleRedWords ^ nest_discoveredEmotionalWords hasnt ViolaRosso: <> variante non scoperta.
             }
             {    
-                - nest_purpleRedWords ^ discoveredEmotionalWords has ViolaViolaRosso:<> caratteristiche variante due.
-                - nest_purpleRedWords ^ discoveredEmotionalWords hasnt ViolaViolaRosso:<> variante non scoperta.
+                - nest_purpleRedWords ^ nest_discoveredEmotionalWords has ViolaViolaRosso:<> caratteristiche variante due.
+                - nest_purpleRedWords ^ nest_discoveredEmotionalWords hasnt ViolaViolaRosso:<> variante non scoperta.
             }
             {    
-                - nest_purpleRedWords ^ discoveredEmotionalWords has ViolaRossoVerde:<> caratteristiche variante tre.
-                - nest_purpleRedWords ^ discoveredEmotionalWords hasnt ViolaRossoVerde:<> variante non scoperta.
+                - nest_purpleRedWords ^ nest_discoveredEmotionalWords has ViolaRossoVerde:<> caratteristiche variante tre.
+                - nest_purpleRedWords ^ nest_discoveredEmotionalWords hasnt ViolaRossoVerde:<> variante non scoperta.
             }
             {    
-                - nest_purpleRedWords ^ discoveredEmotionalWords has ViolaRossoViola: <> caratteristiche variante quattro.
-                - nest_purpleRedWords ^ discoveredEmotionalWords hasnt ViolaRossoViola: <> variante non scoperta.
+                - nest_purpleRedWords ^ nest_discoveredEmotionalWords has ViolaRossoViola: <> caratteristiche variante quattro.
+                - nest_purpleRedWords ^ nest_discoveredEmotionalWords hasnt ViolaRossoViola: <> variante non scoperta.
             }
             {    
-                - nest_purpleRedWords ^ discoveredEmotionalWords has ViolaRossoBlu:<> caratteristiche variante cinque.
-                - nest_purpleRedWords ^ discoveredEmotionalWords hasnt ViolaRossoBlu:<> variante non scoperta.
+                - nest_purpleRedWords ^ nest_discoveredEmotionalWords has ViolaRossoBlu:<> caratteristiche variante cinque.
+                - nest_purpleRedWords ^ nest_discoveredEmotionalWords hasnt ViolaRossoBlu:<> variante non scoperta.
             }
             {    
-                - nest_purpleRedWords ^ discoveredEmotionalWords has ViolaRossoGiallo:<> caratteristiche variante sei.
-                - nest_purpleRedWords ^ discoveredEmotionalWords hasnt ViolaRossoGiallo:<> variante non scoperta.
+                - nest_purpleRedWords ^ nest_discoveredEmotionalWords has ViolaRossoGiallo:<> caratteristiche variante sei.
+                - nest_purpleRedWords ^ nest_discoveredEmotionalWords hasnt ViolaRossoGiallo:<> variante non scoperta.
             }
             {     
-                - nest_purpleRedWords ^ discoveredEmotionalWords has ViolaRossoRosso:<> caratteristiche variante sette.
-                - nest_purpleRedWords ^ discoveredEmotionalWords hasnt ViolaRossoRosso:<> variante non scoperta.
+                - nest_purpleRedWords ^ nest_discoveredEmotionalWords has ViolaRossoRosso:<> caratteristiche variante sette.
+                - nest_purpleRedWords ^ nest_discoveredEmotionalWords hasnt ViolaRossoRosso:<> variante non scoperta.
             
             }
     
@@ -1044,7 +1044,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     } 
     
     {
-        - nest_purpleYellowWords ^ discoveredEmotionalWords == ():
+        - nest_purpleYellowWords ^ nest_discoveredEmotionalWords == ():
             <i>La ventitreesima parola non è stata ancora scoperta.
             
         - else:
@@ -1061,39 +1061,39 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_purpleYellowWords ^ discoveredEmotionalWords has ViolaGiallo: <> caratteristiche variante uno.
-                - nest_purpleYellowWords ^ discoveredEmotionalWords hasnt ViolaGiallo: <> variante non scoperta.
+                - nest_purpleYellowWords ^ nest_discoveredEmotionalWords has ViolaGiallo: <> caratteristiche variante uno.
+                - nest_purpleYellowWords ^ nest_discoveredEmotionalWords hasnt ViolaGiallo: <> variante non scoperta.
             }
             {    
-                - nest_purpleYellowWords ^ discoveredEmotionalWords has ViolaViolaGiallo:<> caratteristiche variante due.
-                - nest_purpleYellowWords ^ discoveredEmotionalWords hasnt ViolaViolaGiallo:<> variante non scoperta.
+                - nest_purpleYellowWords ^ nest_discoveredEmotionalWords has ViolaViolaGiallo:<> caratteristiche variante due.
+                - nest_purpleYellowWords ^ nest_discoveredEmotionalWords hasnt ViolaViolaGiallo:<> variante non scoperta.
             }
             {    
-                - nest_purpleYellowWords ^ discoveredEmotionalWords has ViolaGialloVerde:<> caratteristiche variante tre.
-                - nest_purpleYellowWords ^ discoveredEmotionalWords hasnt ViolaGialloVerde:<> variante non scoperta.
+                - nest_purpleYellowWords ^ nest_discoveredEmotionalWords has ViolaGialloVerde:<> caratteristiche variante tre.
+                - nest_purpleYellowWords ^ nest_discoveredEmotionalWords hasnt ViolaGialloVerde:<> variante non scoperta.
             }
             {    
-                - nest_purpleYellowWords ^ discoveredEmotionalWords has ViolaGialloViola: <> caratteristiche variante quattro.
-                - nest_purpleYellowWords ^ discoveredEmotionalWords hasnt ViolaGialloViola: <> variante non scoperta.
+                - nest_purpleYellowWords ^ nest_discoveredEmotionalWords has ViolaGialloViola: <> caratteristiche variante quattro.
+                - nest_purpleYellowWords ^ nest_discoveredEmotionalWords hasnt ViolaGialloViola: <> variante non scoperta.
             }
             {    
-                - nest_purpleYellowWords ^ discoveredEmotionalWords has ViolaGialloBlu:<> caratteristiche variante cinque.
-                - nest_purpleYellowWords ^ discoveredEmotionalWords hasnt ViolaGialloBlu:<> variante non scoperta.
+                - nest_purpleYellowWords ^ nest_discoveredEmotionalWords has ViolaGialloBlu:<> caratteristiche variante cinque.
+                - nest_purpleYellowWords ^ nest_discoveredEmotionalWords hasnt ViolaGialloBlu:<> variante non scoperta.
             }
             {    
-                - nest_purpleYellowWords ^ discoveredEmotionalWords has ViolaGialloGiallo:<> caratteristiche variante sei.
-                - nest_purpleYellowWords ^ discoveredEmotionalWords hasnt ViolaGialloGiallo:<> variante non scoperta.
+                - nest_purpleYellowWords ^ nest_discoveredEmotionalWords has ViolaGialloGiallo:<> caratteristiche variante sei.
+                - nest_purpleYellowWords ^ nest_discoveredEmotionalWords hasnt ViolaGialloGiallo:<> variante non scoperta.
             }
             {     
-                - nest_purpleYellowWords ^ discoveredEmotionalWords has ViolaGialloRosso:<> caratteristiche variante sette.
-                - nest_purpleYellowWords ^ discoveredEmotionalWords hasnt ViolaGialloRosso:<> variante non scoperta.
+                - nest_purpleYellowWords ^ nest_discoveredEmotionalWords has ViolaGialloRosso:<> caratteristiche variante sette.
+                - nest_purpleYellowWords ^ nest_discoveredEmotionalWords hasnt ViolaGialloRosso:<> variante non scoperta.
             
             }
     
     
     } 
     {
-        - nest_purpleBlueWords ^ discoveredEmotionalWords == ():
+        - nest_purpleBlueWords ^ nest_discoveredEmotionalWords == ():
             <i>La ventiquattresima parola non è stata ancora scoperta.
             
         - else:
@@ -1110,32 +1110,32 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_purpleBlueWords ^ discoveredEmotionalWords has ViolaBlu: <> caratteristiche variante uno.
-                - nest_purpleBlueWords ^ discoveredEmotionalWords hasnt ViolaBlu: <> variante non scoperta.
+                - nest_purpleBlueWords ^ nest_discoveredEmotionalWords has ViolaBlu: <> caratteristiche variante uno.
+                - nest_purpleBlueWords ^ nest_discoveredEmotionalWords hasnt ViolaBlu: <> variante non scoperta.
             }
             {    
-                - nest_purpleBlueWords ^ discoveredEmotionalWords has ViolaViolaBlu:<> caratteristiche variante due.
-                - nest_purpleBlueWords ^ discoveredEmotionalWords hasnt ViolaViolaBlu:<> variante non scoperta.
+                - nest_purpleBlueWords ^ nest_discoveredEmotionalWords has ViolaViolaBlu:<> caratteristiche variante due.
+                - nest_purpleBlueWords ^ nest_discoveredEmotionalWords hasnt ViolaViolaBlu:<> variante non scoperta.
             }
             {    
-                - nest_purpleBlueWords ^ discoveredEmotionalWords has ViolaBluVerde:<> caratteristiche variante tre.
-                - nest_purpleBlueWords ^ discoveredEmotionalWords hasnt ViolaBluVerde:<> variante non scoperta.
+                - nest_purpleBlueWords ^ nest_discoveredEmotionalWords has ViolaBluVerde:<> caratteristiche variante tre.
+                - nest_purpleBlueWords ^ nest_discoveredEmotionalWords hasnt ViolaBluVerde:<> variante non scoperta.
             }
             {    
-                - nest_purpleBlueWords ^ discoveredEmotionalWords has ViolaBluViola: <> caratteristiche variante quattro.
-                - nest_purpleBlueWords ^ discoveredEmotionalWords hasnt ViolaBluViola: <> variante non scoperta.
+                - nest_purpleBlueWords ^ nest_discoveredEmotionalWords has ViolaBluViola: <> caratteristiche variante quattro.
+                - nest_purpleBlueWords ^ nest_discoveredEmotionalWords hasnt ViolaBluViola: <> variante non scoperta.
             }
             {    
-                - nest_purpleBlueWords ^ discoveredEmotionalWords has ViolaBluBlu:<> caratteristiche variante cinque.
-                - nest_purpleBlueWords ^ discoveredEmotionalWords hasnt ViolaBluBlu:<> variante non scoperta.
+                - nest_purpleBlueWords ^ nest_discoveredEmotionalWords has ViolaBluBlu:<> caratteristiche variante cinque.
+                - nest_purpleBlueWords ^ nest_discoveredEmotionalWords hasnt ViolaBluBlu:<> variante non scoperta.
             }
             {    
-                - nest_purpleBlueWords ^ discoveredEmotionalWords has ViolaBluGiallo:<> caratteristiche variante sei.
-                - nest_purpleBlueWords ^ discoveredEmotionalWords hasnt ViolaBluGiallo:<> variante non scoperta.
+                - nest_purpleBlueWords ^ nest_discoveredEmotionalWords has ViolaBluGiallo:<> caratteristiche variante sei.
+                - nest_purpleBlueWords ^ nest_discoveredEmotionalWords hasnt ViolaBluGiallo:<> variante non scoperta.
             }
             {     
-                - nest_purpleBlueWords ^ discoveredEmotionalWords has ViolaBluRosso:<> caratteristiche variante sette.
-                - nest_purpleBlueWords ^ discoveredEmotionalWords hasnt ViolaBluRosso:<> variante non scoperta.
+                - nest_purpleBlueWords ^ nest_discoveredEmotionalWords has ViolaBluRosso:<> caratteristiche variante sette.
+                - nest_purpleBlueWords ^ nest_discoveredEmotionalWords hasnt ViolaBluRosso:<> variante non scoperta.
             
             }
     
@@ -1143,7 +1143,7 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
     } 
     
     {
-        - nest_purpleGreenWords ^ discoveredEmotionalWords == ():
+        - nest_purpleGreenWords ^ nest_discoveredEmotionalWords == ():
             <i>La venticinquesima parola non è stata ancora scoperta.
             
         - else:
@@ -1160,32 +1160,32 @@ TODO: A traduttore settato, invece della parola scritta a mano (es: Parola Giall
             }
             
             {
-                - nest_purpleGreenWords ^ discoveredEmotionalWords has ViolaVerde: <> caratteristiche variante uno.
-                - nest_purpleGreenWords ^ discoveredEmotionalWords hasnt ViolaVerde: <> variante non scoperta.
+                - nest_purpleGreenWords ^ nest_discoveredEmotionalWords has ViolaVerde: <> caratteristiche variante uno.
+                - nest_purpleGreenWords ^ nest_discoveredEmotionalWords hasnt ViolaVerde: <> variante non scoperta.
             }
             {    
-                - nest_purpleGreenWords ^ discoveredEmotionalWords has ViolaViolaVerde:<> caratteristiche variante due.
-                - nest_purpleGreenWords ^ discoveredEmotionalWords hasnt ViolaViolaVerde:<> variante non scoperta.
+                - nest_purpleGreenWords ^ nest_discoveredEmotionalWords has ViolaViolaVerde:<> caratteristiche variante due.
+                - nest_purpleGreenWords ^ nest_discoveredEmotionalWords hasnt ViolaViolaVerde:<> variante non scoperta.
             }
             {    
-                - nest_purpleGreenWords ^ discoveredEmotionalWords has ViolaVerdeVerde:<> caratteristiche variante tre.
-                - nest_purpleGreenWords ^ discoveredEmotionalWords hasnt ViolaVerdeVerde:<> variante non scoperta.
+                - nest_purpleGreenWords ^ nest_discoveredEmotionalWords has ViolaVerdeVerde:<> caratteristiche variante tre.
+                - nest_purpleGreenWords ^ nest_discoveredEmotionalWords hasnt ViolaVerdeVerde:<> variante non scoperta.
             }
             {    
-                - nest_purpleGreenWords ^ discoveredEmotionalWords has ViolaVerdeViola: <> caratteristiche variante quattro.
-                - nest_purpleGreenWords ^ discoveredEmotionalWords hasnt ViolaVerdeViola: <> variante non scoperta.
+                - nest_purpleGreenWords ^ nest_discoveredEmotionalWords has ViolaVerdeViola: <> caratteristiche variante quattro.
+                - nest_purpleGreenWords ^ nest_discoveredEmotionalWords hasnt ViolaVerdeViola: <> variante non scoperta.
             }
             {    
-                - nest_purpleGreenWords ^ discoveredEmotionalWords has ViolaVerdeBlu:<> caratteristiche variante cinque.
-                - nest_purpleGreenWords ^ discoveredEmotionalWords hasnt ViolaVerdeBlu:<> variante non scoperta.
+                - nest_purpleGreenWords ^ nest_discoveredEmotionalWords has ViolaVerdeBlu:<> caratteristiche variante cinque.
+                - nest_purpleGreenWords ^ nest_discoveredEmotionalWords hasnt ViolaVerdeBlu:<> variante non scoperta.
             }
             {    
-                - nest_purpleGreenWords ^ discoveredEmotionalWords has ViolaVerdeGiallo:<> caratteristiche variante sei.
-                - nest_purpleGreenWords ^ discoveredEmotionalWords hasnt ViolaVerdeGiallo:<> variante non scoperta.
+                - nest_purpleGreenWords ^ nest_discoveredEmotionalWords has ViolaVerdeGiallo:<> caratteristiche variante sei.
+                - nest_purpleGreenWords ^ nest_discoveredEmotionalWords hasnt ViolaVerdeGiallo:<> variante non scoperta.
             }
             {     
-                - nest_purpleGreenWords ^ discoveredEmotionalWords has ViolaVerdeRosso:<> caratteristiche variante sette.
-                - nest_purpleGreenWords ^ discoveredEmotionalWords hasnt ViolaVerdeRosso:<> variante non scoperta.
+                - nest_purpleGreenWords ^ nest_discoveredEmotionalWords has ViolaVerdeRosso:<> caratteristiche variante sette.
+                - nest_purpleGreenWords ^ nest_discoveredEmotionalWords hasnt ViolaVerdeRosso:<> variante non scoperta.
             
             }
     
