@@ -394,7 +394,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
     Quando prima hai aggiunto {recipeNoun} mi hai ricordato una cosa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     E con {recipeAdjective} un'altra, e con {recipeComplement} un'altra ancora.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             {
-                - fourthIngredientReactionFirstCharacter != notReaction:
+                - kitchen_firstCharExtraIngredientReaction != notReaction:
                     -> extra_ing_feedback
             }
     
@@ -406,23 +406,23 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         = extra_ing_feedback
         // Qui verranno fatti commenti diversi a seconda che l'ingrediente sarà apprezzato o meno.
             {
-                - fourthIngredientReactionFirstCharacter == goodReaction:
+                - kitchen_firstCharExtraIngredientReaction == goodReaction:
                     -> good_reaction
                 
-                - fourthIngredientReactionFirstCharacter == badReaction:
+                - kitchen_firstCharExtraIngredientReaction == badReaction:
                     -> bad_reaction
                 
-                - fourthIngredientReactionFirstCharacter == mehReaction:
+                - kitchen_firstCharExtraIngredientReaction == mehReaction:
                     -> meh_reaction
                 
                 - else:
-                    ERROR: non abbiamo un valore valido di fourthIngredientReactionFirstCharacter, che è uguale a {fourthIngredientReactionFirstCharacter}.
+                    ERROR: non abbiamo un valore valido di kitchen_firstCharExtraIngredientReaction, che è uguale a {kitchen_firstCharExtraIngredientReaction}.
             }
         
         
                 = good_reaction
                 Abbiamo aggiunto un ingrediente extra apprezzato da Chitarra, per cui lei commenta:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                Aggiungere {ingredientTranslator(fourthIngredientNameFirstCharacter)} è stata una scelta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                Aggiungere {ingredientTranslator(kitchen_firstCharExtraIngredient)} è stata una scelta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 E poi ci dà un'informazione utile per capire come gestire le conversazioni in futuro:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Non prendermi per terrapiattista o che, ma non sono una grande fan delle conversazioni eccessivamente razionali. Mi tarpano la creatività, il piacere.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 
@@ -430,7 +430,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
                 
                 = bad_reaction
                 Abbiamo aggiunto un ingrediente extra detestato da Chitarra, per cui lei commenta:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                Aggiungere {ingredientTranslator(fourthIngredientNameFirstCharacter)} è stata una scelta terrificante, non farlo mai più!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                Aggiungere {ingredientTranslator(kitchen_firstCharExtraIngredient)} è stata una scelta terrificante, non farlo mai più!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 E poiché ha odiato l'ingrediente, non ci dirà niente di utile su come gestire le conversazioni future.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                
                     -> relationship_feedback
@@ -438,7 +438,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
                 
                 = meh_reaction
                 Abbiamo aggiunto un ingrediente extra che Chitarra percepisce come neutro, né buono né cattivo, per cui lei commenta:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                Aggiungere {ingredientTranslator(fourthIngredientNameFirstCharacter)} è stata una scelta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                Aggiungere {ingredientTranslator(kitchen_firstCharExtraIngredient)} è stata una scelta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 E poi ci dà un'informazione enigmatica per capire come gestire le conversazioni in futuro:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Informazione enigmatica per dire che non le piacciono le conversazioni razionali.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 
@@ -453,15 +453,15 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
             {
                 - firstAffinityCalc == 1:
                     {
-                        - firstCharStateRelationship == 0: Non ci stiamo pigliando.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                        - firstCharStateRelationship == 1: Ci piacciamo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                        - firstChar_relationshipStatus == 0: Non ci stiamo pigliando.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                        - firstChar_relationshipStatus == 1: Ci piacciamo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                     }
                     
                 - firstAffinityCalc == 2:
                     {
-                        - firstCharStateRelationship == 0: Mi stai sul culo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                        - firstCharStateRelationship == 1: Non male ma potrebbe migliorare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                        - firstCharStateRelationship == 2: Ci piacciamo tantissimo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                        - firstChar_relationshipStatus == 0: Mi stai sul culo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                        - firstChar_relationshipStatus == 1: Non male ma potrebbe migliorare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                        - firstChar_relationshipStatus == 2: Ci piacciamo tantissimo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                     }    
         
             }
@@ -530,8 +530,8 @@ Chitarra attiva il suo storylet speciale dopo aver cucinato da sola  e ci dice c
                 -> color_variation_management(FirstCharacter, purpleC)->
             -
             
-    ~ firstPauseTalking = firstCharPauseDuration
-        ~ justTalkedFirstChar = true
+    ~ firstChar_pauseTalking = firstChar_pauseDuration
+        ~ firstChar_justTalked = true
 
 
 

@@ -15,7 +15,7 @@
     
 === talk_with_mentor
 {debug: passo da talk_with_mentor}
-~ temp charNameOne = translator(firstCharacterState)
+~ temp charNameOne = translator(firstChar_ActualName)
 ~ temp charNameTwo = translator(secondCharacterState)
 ~ temp charNameThree = translator(thirdCharacterState)
 ~ temp charNameFour= translator(fourthCharacterState)
@@ -27,7 +27,7 @@
 
     = talk
     {debug: passo da talk_with_mentor.talk}
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -97,9 +97,9 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
         {
             - not one && tutorialPauses == false:
                 -> one
-            - not two && firstStory == story_storyEnded && tutorialPauses == false:
+            - not two && firstChar_storyStatus == story_storyEnded && tutorialPauses == false:
                 -> two
-            - not three && firstStory == story_storyEnded && tutorialPauses == false:
+            - not three && firstChar_storyStatus == story_storyEnded && tutorialPauses == false:
                 -> three
             - not four && secondStory == story_storyEnded && tutorialPauses == false:
                 -> four
@@ -172,7 +172,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
                     
  
             -
-        {((firstStory hasnt story_storyEnded) && (secondStory hasnt story_storyEnded)): Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di mobili rotti che blocca il sentiero a ovest della foresta.|Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+        {((firstChar_storyStatus hasnt story_storyEnded) && (secondStory hasnt story_storyEnded)): Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di mobili rotti che blocca il sentiero a ovest della foresta.|Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         Grazie per la chiacchierata, {player_name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         
              ~ fifthPauseTalking = fifthCharPauseDuration
@@ -181,7 +181,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
             -> main
     
     = two
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ change_entity_place(SecondCharacter)
     ~ fifthStoryQuestCount ++
@@ -732,14 +732,14 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         Ho realizzato una cosa, una cosa su noi due.
             -> secondAffinityCalc ->
         {
-        - firstPurple && firstYellow > firstBlue: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
+        - firstChar_purple && firstYellow > firstBlue: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
         {charNameFive} vede {player_name} come una persona amica e fidata.
         
-        -firstPurple or firstYellow > firstBlue:Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
+        -firstChar_purple or firstYellow > firstBlue:Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
         
         {charNameFive} si trova bene con {player_name}.
         
-        - firstPurple && firstYellow < firstBlue: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
+        - firstChar_purple && firstYellow < firstBlue: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
         
         {charNameFive} non si è sentita capita da {player_name}.
         
@@ -759,7 +759,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
 
     = statement
     ~ temp charNameFive = translator(fifthCharacterState)
-        A seguito del rapporto che {player_name} ha creato con {charNameFive} {firstPurple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità.|{firstPurple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.
+        A seguito del rapporto che {player_name} ha creato con {charNameFive} {firstChar_purple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità.|{firstChar_purple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(secondChar_InkLevel)
         + [Voglio cominciare la riscrittura.]
@@ -775,9 +775,9 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         + [Qui hai accettato il tuo nuovo nome.]
             {player_name}: E ammettere una propria paura, una scelta enorme.
                 {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                - firstChar_possibleStates hasnt Violino:
+		                ~ firstChar_possibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }            
         
         + [Eppure hai deciso di costruire una famiglia con l3 tu3 amic3.]
@@ -788,16 +788,16 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
             
         + [Ma hai più volte accettato il rischio di suonare sul]
                 {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                - firstChar_possibleStates hasnt Violino:
+		                ~ firstChar_possibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }
         + [Però da che sei qui hai esplorato tutto questo luogo.]
            
                 {
-                	- firstCharacterPossibleStates hasnt Chitarra:
-    		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                	- firstChar_possibleStates hasnt Chitarra:
+    		            ~ firstChar_possibleStates --
+    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }
             
         -
@@ -819,9 +819,9 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
                     
         + [La paura di tradire è un'altra faccia dell'ego.]
                 {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                - firstChar_possibleStates hasnt Violino:
+		                ~ firstChar_possibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }
     
             
@@ -831,17 +831,17 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         + [Forse accadrà, ma non è un tuo problema.]
  
                 {
-                	- firstCharacterPossibleStates hasnt Chitarra:
-    		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                	- firstChar_possibleStates hasnt Chitarra:
+    		            ~ firstChar_possibleStates --
+    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }
                 
         + [Tradiamo la fiducia rompendo le regole a nostro vantaggio.]
  
                 {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                - firstChar_possibleStates hasnt Violino:
+		                ~ firstChar_possibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }
                     
         -
@@ -898,9 +898,9 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         + [Giocare è bello perché puoi sempre Chitarrare a farlo.]
 
                 {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                - firstChar_possibleStates hasnt Violino:
+		                ~ firstChar_possibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }            
          
         
@@ -910,17 +910,17 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         + [Un infinito più piccolo resta comunque infinito.]
 
                 {
-	                - firstCharacterPossibleStates hasnt Violino:
-		                ~ firstCharacterPossibleStates ++
-	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+	                - firstChar_possibleStates hasnt Violino:
+		                ~ firstChar_possibleStates ++
+	                    {debugChangeName: Aumento lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }    
             
         + [Chitarrando a cercare Talco ti sei tutelata.]
  
                 {
-                	- firstCharacterPossibleStates hasnt Chitarra:
-    		            ~ firstCharacterPossibleStates --
-    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                	- firstChar_possibleStates hasnt Chitarra:
+    		            ~ firstChar_possibleStates --
+    		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                 }            
         
         + [C'è più coraggio nella Chitarra che nel compromesso.]
@@ -953,30 +953,30 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
     La canzone del mio vero nome.
 
         {
-            - firstCharacterPossibleStates has Chitarra:
+            - firstChar_possibleStates has Chitarra:
                 Che <b><i>resterà Chitarra</b></i>, perché l'unica cosa che posso fare, è far sì che altr3 scelgano per me.
             
-            - firstCharacterPossibleStates has Triangolo:
+            - firstChar_possibleStates has Triangolo:
                 E il mio vero nome è <b><i>Triangolo</b></i>, perché pensavo di essere uno strumento, e invece ho solo fallito.
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += Triangolo
             
-            - firstCharacterPossibleStates has RagazzaOrchestra:
+            - firstChar_possibleStates has RagazzaOrchestra:
                 Mi chiamerò <b><i>Ragazza Orchestra</b></i>: nel non saper Chitarrare sono diventata l'ornitorinco della musica.
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += RagazzaOrchestra
             
-            - firstCharacterPossibleStates has FlautoDolce:
+            - firstChar_possibleStates has FlautoDolce:
                 Il mio nome è <b><i>Flauto Dolce</b></i>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += FlautoDolce                
             
-            - firstCharacterPossibleStates has Ocarina:
+            - firstChar_possibleStates has Ocarina:
                 Mi chiamerò <b><i>Ocarina</b></i>: perché il suo suono è gioco e festa.
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += Ocarina
             
-            - firstCharacterPossibleStates has Violino:
+            - firstChar_possibleStates has Violino:
                 Io sono <b><i>Violino</b></i>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.
                     ~ fifthCharacterState = ()
                     ~ fifthCharacterState += Violino
@@ -1034,9 +1034,9 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         = goodbye
         ~ temp charNameFive = translator(fifthCharacterState)
         {player_name}, per me è arrivato il momento di tornare a casa.
-        {firstCharacterPossibleStates hasnt Chitarra: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
-        {firstCharacterPossibleStates hasnt Chitarra: Grazie per quello che hai fatto, davvero.}
-        {firstCharacterPossibleStates has Chitarra: Vedremo cosa mi accadrà.}
+        {firstChar_possibleStates hasnt Chitarra: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
+        {firstChar_possibleStates hasnt Chitarra: Grazie per quello che hai fatto, davvero.}
+        {firstChar_possibleStates has Chitarra: Vedremo cosa mi accadrà.}
             ~ move_entity(Mentor, Safekeeping)
             //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
             {

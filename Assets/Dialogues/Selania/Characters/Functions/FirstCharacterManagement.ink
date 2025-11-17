@@ -5,64 +5,70 @@
                      ----------------------------------*/
 
 //Ordine degli stati: 0, Blue, Rosso, Verde, Giallo, Viola.
-    LIST firstCharacterPossibleStates = Chitarra, Triangolo, RagazzaOrchestra, FlautoDolce, Ocarina, Violino
-    VAR firstCharacterState = Chitarra
-    
-    VAR minStoryQuesTCountFirstChar = 7
+    LIST firstChar_possibleStates = Chitarra, Triangolo, RagazzaOrchestra, FlautoDolce, Ocarina, Violino
+    VAR firstChar_ActualName = Chitarra
     
     
-    VAR firstStory = story_storyNotStarted
-    VAR charOneEnding = ()
+    
+    //Stato della storia (non avviata, avviata, conclusa)
+    VAR firstChar_storyStatus = story_storyNotStarted
+    
+    //Ordine di conclusione della riscrittura (prima storia conclusa, seconda storia conclusa)
+    VAR firstChar_storyEndingPosition = ()
 
 //Attesa comparsa prima personaggia
-    VAR delayFirstChar = 2
+    VAR firstChar_delay = 2
 
 //Tracciamento della relazione
-    VAR firstCharStateRelationship = 0
+    VAR firstChar_relationshipStatus = 0
 
 //Tracciamento cucina
     //Autonoma
-        VAR firstIsCooking = false
-        VAR firstCookingTime = 0
+        VAR kitchen_firstCharisCooking = false
+        VAR kitchen_firstCharCookingTime = 0
         //Tempo che ci impiega a fare la sua ricetta
-        VAR firstCookingMaxTime = 8
+        VAR kitchen_firstCharCookingMaxTime = 8
     //Nostro invito
-        VAR FirstKitchenInvite = false
+        VAR kitchen_firstCharCookingTogetherInvite = false
     //Valore quarto ingrediente
-        VAR fourthIngredientNameFirstCharacter = ()
-        VAR fourthIngredientReactionFirstCharacter = notReaction
+        VAR kitchen_firstCharExtraIngredient = ()
+        VAR kitchen_firstCharExtraIngredientReaction = notReaction
 
 //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
-    VAR firstGiftsFavourites = (NonTiScordarDiTe, BaccaDellaAddolorata, CantoDelleCompagne)
-    VAR firstGiftsGood = (ErbaLiccia, Olobino, BastoneDellOzioso, LanaNotturna)
+    VAR firstChar_favouritesGifts = (NonTiScordarDiTe, BaccaDellaAddolorata, CantoDelleCompagne)
+    VAR firstChar_goodGifts = (ErbaLiccia, Olobino, BastoneDellOzioso, LanaNotturna)
     
     
-
 //Tracciamento del dono
-    VAR firstGift = ()
+    VAR firstChar_giftedObject = ()
 
-//Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
-    VAR firstStoryQuestCount = 0
-    VAR firstCharacterSpecialEvent = false
+
+//Tengo conto delle interazioni avute per aprire la possibilità di avviare la riscrittura
+    VAR firstChar_storyletsForRewritingCount = 0
+//Quantità di storylets letti dalla giocatrice prima di accedere alla riscrittura
+    VAR firstChar_minStoryletsForRewriting = 7    
+    VAR firstChar_specialEvent = false
     
 //Variabili per mettere in pausa la conversazione
-    VAR firstPauseTalking = 0
-    VAR firstCharPauseDuration = 1
-    VAR justTalkedFirstChar = false
+    VAR firstChar_pauseTalking = 0
+    VAR firstChar_pauseDuration = 1
+    //Questa variabile verifica se abbiamo appena parlato con unx PNG, in modo tale da presentarci in modo diverso le possibili proposte che possiamo farle.
+    VAR firstChar_justTalked = false
     
 //Variabile per il countdown per la sua uscita di scena
-    VAR firstCharEndingDialogue = 0
+    VAR firstChar_exitCounter = 0
+    VAR firstChar_startingValueExitCounter = 4
     
 //Variabile per il tempo di attesa tra una lettera e l'altra
-    VAR firstWritingPause = 0
-    VAR firstWritingPauseDuration = 5
+    VAR firstChar_mailPause = 0
+    VAR firstChar_mailPauseDuration = 5
     
 //Moltiplicatore del colore per il personaggio
-    VAR FirstCharacterColorMultiplier = 3.0    
+    VAR firstChar_colorVariation = 3.0    
     
 //STATI UP: Viola e Giallo.
 //STATI DOWN: Blu.
-    VAR firstPurple = 0
+    VAR firstChar_purple = 0
     VAR firstYellow = 0
     VAR firstBlue = 0
     VAR firstGreen = 0
@@ -85,9 +91,9 @@
 
     //In questa prima fase di testing, punterò su una soluzione di difficoltà media: basta che o giallo o viola siano maggiori del blu.
     {
-        - firstPurple or firstYellow > firstBlue:
-            ~ firstCharStateRelationship ++
-            {debug: aumento l'inchiostro della prima personaggia di un livello. Ora è a {~ firstCharStateRelationship}}  
+        - firstChar_purple or firstYellow > firstBlue:
+            ~ firstChar_relationshipStatus ++
+            {debug: aumento l'inchiostro della prima personaggia di un livello. Ora è a {~ firstChar_relationshipStatus}}  
     }
     
     {
@@ -96,7 +102,7 @@
             - rewriting_proposal_first_character.rewriting:
                 {debug: ho cliccato rewriting e quindi faccio gli ultimi passaggi e attivo il feedback.} 
                 //"Trasformo" la relazione in inchiostro
-                    ~ fromRelationshipToInk(firstCharStateRelationship)
+                    ~ fromRelationshipToInk(firstChar_relationshipStatus)
                 // Mando ai feedback
                     -> firstAffinityFeedback ->
                 //Arriva il commento della strega
@@ -114,8 +120,8 @@
     //La soluzione più tosta potrebbe essere questa invece.
     
     //{
-    //    - firstPurple && firstYellow > firstBlue:
-    //        ~ firstCharStateRelationship ++
+    //    - firstChar_purple && firstYellow > firstBlue:
+    //        ~ firstChar_relationshipStatus ++
     //            ->->
     //}
 
@@ -126,7 +132,7 @@
 
 
 === firstAffinityFeedback
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ temp charNameTwo = translator(secondCharacterState)
 {debug: passo per firstAffinityFeedback. Lo stato di inchiostro è {firstChar_InkLevel}.}
@@ -165,62 +171,62 @@
 
 === firstNaming ===
 {debug: passo per firstNaming.}
-{debug: prima di operare,il valore del nome è: {firstCharacterState}.}
+{debug: prima di operare,il valore del nome è: {firstChar_ActualName}.}
  //Svuoto il valore per sicurezza
- ~ firstCharacterState = ()
- {debug: svuoto firstCharacterState : {firstCharacterState}.}
+ ~ firstChar_ActualName = ()
+ {debug: svuoto firstChar_ActualName : {firstChar_ActualName}.}
  
     {
         //Blu colore più usato
-        - (firstBlue > firstGreen) && (firstBlue > firstRed) && (firstBlue > firstYellow) && (firstBlue > firstPurple):
-            ~ firstCharacterState += Triangolo
-            {debug: passo per Triangolo e il nome è : {firstCharacterState}.}
+        - (firstBlue > firstGreen) && (firstBlue > firstRed) && (firstBlue > firstYellow) && (firstBlue > firstChar_purple):
+            ~ firstChar_ActualName += Triangolo
+            {debug: passo per Triangolo e il nome è : {firstChar_ActualName}.}
                 ->->
         //Rosso colore più usato        
-        - (firstRed > firstGreen) && (firstRed > firstBlue) && (firstRed > firstYellow) && (firstRed > firstPurple):
-            ~ firstCharacterState += RagazzaOrchestra
-            {debug: passo per Orchestra e il nome è : {firstCharacterState}.}
+        - (firstRed > firstGreen) && (firstRed > firstBlue) && (firstRed > firstYellow) && (firstRed > firstChar_purple):
+            ~ firstChar_ActualName += RagazzaOrchestra
+            {debug: passo per Orchestra e il nome è : {firstChar_ActualName}.}
                 ->->
         
         //Verde colore più usato        
-        - (firstGreen > firstBlue) && (firstGreen > firstRed) && (firstGreen > firstYellow) && (firstGreen > firstPurple):
-            ~ firstCharacterState += FlautoDolce
-            {debug: passo per FlautoDolce e il nome è : {firstCharacterState}.}
+        - (firstGreen > firstBlue) && (firstGreen > firstRed) && (firstGreen > firstYellow) && (firstGreen > firstChar_purple):
+            ~ firstChar_ActualName += FlautoDolce
+            {debug: passo per FlautoDolce e il nome è : {firstChar_ActualName}.}
                 ->->
         
         //Giallo colore più usato        
-        - (firstYellow > firstGreen) && (firstYellow > firstRed) && (firstYellow > firstBlue) && (firstYellow > firstPurple):
-            ~ firstCharacterState += Ocarina
-            {debug: passo per Ocarina e il nome è : {firstCharacterState}.}
+        - (firstYellow > firstGreen) && (firstYellow > firstRed) && (firstYellow > firstBlue) && (firstYellow > firstChar_purple):
+            ~ firstChar_ActualName += Ocarina
+            {debug: passo per Ocarina e il nome è : {firstChar_ActualName}.}
                 ->->
         
         //Viola colore più usato        
-        - (firstPurple > firstGreen) && (firstPurple > firstRed) && (firstPurple > firstYellow) && (firstPurple > firstBlue):
-        {debug: passo per Violino e il nome è : {firstCharacterState}.}
-            ~ firstCharacterState += Violino    
+        - (firstChar_purple > firstGreen) && (firstChar_purple > firstRed) && (firstChar_purple > firstYellow) && (firstChar_purple > firstBlue):
+        {debug: passo per Violino e il nome è : {firstChar_ActualName}.}
+            ~ firstChar_ActualName += Violino    
                 ->->
                 
         - else:
             {
-                - (firstPurple < firstBlue) && (firstYellow < firstBlue):
-                        ~ firstCharacterState += Triangolo
-                        {debug: passo per Triangolo e il nome è : {firstCharacterState}.}
+                - (firstChar_purple < firstBlue) && (firstYellow < firstBlue):
+                        ~ firstChar_ActualName += Triangolo
+                        {debug: passo per Triangolo e il nome è : {firstChar_ActualName}.}
                         ->->
-                - firstPurple && firstYellow > firstBlue:
-                        ~ firstCharacterState += Ocarina   
-                            {debug: passo per Ocarina e il nome è : {firstCharacterState}.}
+                - firstChar_purple && firstYellow > firstBlue:
+                        ~ firstChar_ActualName += Ocarina   
+                            {debug: passo per Ocarina e il nome è : {firstChar_ActualName}.}
                         ->->
-                - (firstYellow > firstBlue) && (not firstPurple > firstBlue):
-                        ~ firstCharacterState += RagazzaOrchestra
-                        {debug: passo per Orchestra e il nome è : {firstCharacterState}.}
+                - (firstYellow > firstBlue) && (not firstChar_purple > firstBlue):
+                        ~ firstChar_ActualName += RagazzaOrchestra
+                        {debug: passo per Orchestra e il nome è : {firstChar_ActualName}.}
                             ->->
-                - (firstPurple > firstBlue) && (not firstYellow > firstBlue):
-                    {debug: passo per FlautoDolce e il nome è : {firstCharacterState}.}
-                        ~ firstCharacterState += FlautoDolce 
+                - (firstChar_purple > firstBlue) && (not firstYellow > firstBlue):
+                    {debug: passo per FlautoDolce e il nome è : {firstChar_ActualName}.}
+                        ~ firstChar_ActualName += FlautoDolce 
                             ->->
                 - else:
-                        ~ firstCharacterState += RagazzaOrchestra
-                            {debug: passo per Orchestra e il nome è : {firstCharacterState}.}
+                        ~ firstChar_ActualName += RagazzaOrchestra
+                            {debug: passo per Orchestra e il nome è : {firstChar_ActualName}.}
                             ->->
             }
         }

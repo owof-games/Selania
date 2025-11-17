@@ -36,7 +36,7 @@
 
 
 === first_character_notes ===
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     + (check){are_two_entities_together(FirstCharacterNotes, PG)}[FirstCharacterNotes]
@@ -47,7 +47,7 @@
                 
             - not two:
                 {  
-                    - firstWritingPause < 0:
+                    - firstChar_mailPause < 0:
                         -> two
                     - else:
                         -> one
@@ -55,7 +55,7 @@
                 
             - not three:
                 {  
-                    - firstWritingPause < 0:
+                    - firstChar_mailPause < 0:
                         -> three
                     - else:
                         -> two
@@ -67,7 +67,7 @@
         }
     
     = one
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         
         Ciao {player_name}, come stai?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
@@ -76,24 +76,24 @@
         Ora si è messə in testa di insegnare agli scoiattoli a suonare le noci.
            
            {
-                - firstCharacterPossibleStates has Triangolo:
+                - firstChar_possibleStates has Triangolo:
                     Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
                     
-                - firstCharacterPossibleStates has RagazzaOrchestra:
+                - firstChar_possibleStates has RagazzaOrchestra:
                     Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_curious
                     
-                - firstCharacterPossibleStates has FlautoDolce:
+                - firstChar_possibleStates has FlautoDolce:
                     Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
                     E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
                     Tu e quel posto mi avete reso una mollacciona.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
                     Ma non è così male, alla fine.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
                     
-                - firstCharacterPossibleStates has Ocarina:
+                - firstChar_possibleStates has Ocarina:
                     Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_curious
                     Se lo dico a mio padre mi fa ricoverare subito, ma amen.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
                     Sono felice ama, davvero felice.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
                     
-                - firstCharacterPossibleStates has Violino:
+                - firstChar_possibleStates has Violino:
                     Io invece mi sono resa conto che forse, con la musica, possiamo parlare con gli animali.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_curious
                     No, non ho esagerato col vinello.
                     Ma pensaci, ama: se così fosse, potrei dimostrare che siamo tutt3 collegat3, che potremmo parlarci e comunicare tra noi!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
@@ -112,41 +112,41 @@
             }
             
        
-            ~ firstWritingPause = firstWritingPauseDuration
+            ~ firstChar_mailPause = firstChar_mailPauseDuration
                 -> main
     
     = two
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
     Sono passate settimane dal mio ritorno, e finalmente ho avuto il coraggio di parlare con mio padre.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
        
        {
-            - firstCharacterPossibleStates has Triangolo:
+            - firstChar_possibleStates has Triangolo:
                 Non è che avete un traduttore padre/figlia da quelle parti?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
                 Quando gli ho detto che seguirò il suo consiglio e mi cercherò un lavoro vero, è sembrato deluso.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
                 Nei prossimi giorni farò un colloquio nella agenzia dove lavora.
                 Forse smistare merci è un altro modo di suonare musica.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
                 
-            - firstCharacterPossibleStates has RagazzaOrchestra:
+            - firstChar_possibleStates has RagazzaOrchestra:
                 Le cose non sono andate bene, abbiamo litigato per tutto il tempo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
                 A volte la mia rabbia mi triggera, non è qualcosa che pensavo nemmeno di possedere.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
                 Per assurdo però da quando gli ho detto che è la mia vita e ho il diritto di fare i miei errori, ci sentiamo più spesso.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
                 Non so se voglio rivederlo subito, ma forse le cose stanno cambiando per il meglio.
                 
-            - firstCharacterPossibleStates has FlautoDolce:
+            - firstChar_possibleStates has FlautoDolce:
                 Gli ho parlato di nonno, e gli ho detto che voglio seguire le sue tracce.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
                 Sul momento è rimasto interdetto, ma poi si è messo a piangere.
                 Mi ha chiesto del tempo per decidere se e cosa potrebbe fare per aiutarmi.
                 
-            - firstCharacterPossibleStates has Ocarina:
+            - firstChar_possibleStates has Ocarina:
                 Ha passato il tempo a dirmi che non prendo nulla sul serio.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
                 Parlargli dell'orchestra di topolini e scoiattoli non ha aiutato, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
                 Forse cambierà idea quando avrò finito di addestrare le falene.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_curious
                 O più plausibilmente mi taglierà tutti i fondi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
                 
-            - firstCharacterPossibleStates has Violino:
+            - firstChar_possibleStates has Violino:
                 Per la prima volta credo di averlo capito.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
                 Non ci siamo trovate, non riesce a comprendere perché per me sia importante fare qualcosa di utile per l'umanità e blah blah blah.
                 Ma ho visto nella sua preoccupazione la paura sincera che possa avere una vita difficile.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
@@ -157,7 +157,7 @@
     Sono arrivate nuove persone interessanti?
     Sicuro, nessunə più interessante di me!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
     A presto, <b>{charNameOne}</b>.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
-        ~ firstWritingPause = firstWritingPauseDuration
+        ~ firstChar_mailPause = firstChar_mailPauseDuration
         
         {
             - two == 1:
@@ -169,14 +169,14 @@
         -> main
         
     = three
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     Ciao ama!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
     Indovina chi ha fatto il suo primo concerto?
     
      {
-            - firstCharacterPossibleStates has Triangolo:
+            - firstChar_possibleStates has Triangolo:
                 Non io ovviamente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
                 Il lavoro di smistamento si mangia le giornate.
                 Però Talco ha spaccato!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
@@ -186,7 +186,7 @@
                 La peggiore.
 
                 
-            - firstCharacterPossibleStates has RagazzaOrchestra:
+            - firstChar_possibleStates has RagazzaOrchestra:
                 Il collettivo!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
                 Ci chiamiamo EDERE, che è un acronimo di cui non ricordo manco più il significato ma è tipo: ci attacchiamo agli alberi e non ci leviamo più.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
                 E a questo giro la pula non ci ha levate, perché c'era troppa gente ed è stato un casino assurdo.
@@ -196,7 +196,7 @@
                 Ma vedremo di trovare una soluzione.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_curious
 
                 
-            - firstCharacterPossibleStates has FlautoDolce:
+            - firstChar_possibleStates has FlautoDolce:
                 Il nonno!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
                 O meglio, una cover band che abbiamo tirato su con l3 am3.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
                 Abbiamo anche un suo cartonato che portiamo in giro.
@@ -206,7 +206,7 @@
                 Il nonno era un chillone totale comunque, e ora voglio imparare da lui.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
     
                 
-            - firstCharacterPossibleStates has Ocarina:
+            - firstChar_possibleStates has Ocarina:
                 I topolini!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
                 In teoria dovevano esserci anche gli scoiattoli, ma le luci li hanno spaventati.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
                 O forse quei bambini del cazzo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
@@ -215,7 +215,7 @@
                 Non so se lì prende ma nel caso cercaci su internet perché abbiamo spaccato.
       
                 
-            - firstCharacterPossibleStates has Violino:
+            - firstChar_possibleStates has Violino:
                 Madre natura!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
                 No dai, non il primo.
                 Il primo che abbiamo registrato.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
@@ -772,7 +772,7 @@
         }
         
     = one
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameThree = translator(thirdCharacterState)
         ~ temp charNameFour = translator(fourthCharacterState)
@@ -791,7 +791,7 @@
             -> main
     
     = two
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameThree = translator(thirdCharacterState)
         ~ temp charNameFour = translator(fourthCharacterState)
@@ -810,7 +810,7 @@
             -> main
     
     = three
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameThree = translator(thirdCharacterState)
         ~ temp charNameFour = translator(fourthCharacterState)

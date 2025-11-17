@@ -1,26 +1,26 @@
 === first_character ===
     //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
             //Chiacchiera normale
-            + {are_two_entities_together(FirstCharacter, PG) && firstStory == story_storyStarted}[FirstCharacter]
+            + {are_two_entities_together(FirstCharacter, PG) && firstChar_storyStatus == story_storyStarted}[FirstCharacter]
                 // -> talk_with_first_character
                     -> talk_with_first_character
 
             //Chiacchiera a fine storia
-            + {are_two_entities_together(FirstCharacter, PG) && firstStory == story_storyEnded} [FirstCharacter]
+            + {are_two_entities_together(FirstCharacter, PG) && firstChar_storyStatus == story_storyEnded} [FirstCharacter]
                 -> first_char_story_ended
             + ->
                 -> DONE
 
 
 === talk_with_first_character
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     //Se ho storylets in comune disponibili, passo subito a quelli.
         -> common_storylets ->
     
     //Se ho storylets disponibili di Chitarra e non sono in pausa, passo a quelli.
         {
 
-            - firstPauseTalking == 0:
+            - firstChar_pauseTalking == 0:
                 -> knowing_first_character
 
             - else:
@@ -29,66 +29,66 @@
 
                     
 === options_first_character
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     {   
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-        - firstStoryQuestCount > minStoryQuesTCountFirstChar && not rewriting_proposal_first_character && not questions:
+        - firstChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && not questions:
                 -> ask
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona                    
-        - firstStoryQuestCount > minStoryQuesTCountFirstChar && not rewriting_proposal_first_character && questions:
+        - firstChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && questions:
                 -> ask
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo         
-        - firstStoryQuestCount > minStoryQuesTCountFirstChar && rewriting_proposal_first_character:
+        - firstChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && rewriting_proposal_first_character:
                 -> ask
         //Vogliamo offrire un dono            
         - not first_story_gift.ink_outcome && findedGifts != ():
                 -> ask
         //Vogliamo cucinare assieme          
-        - open_the_kitchen && not cooking_with_first_char && firstIsCooking==false:
+        - open_the_kitchen && not cooking_with_first_char && kitchen_firstCharisCooking==false:
             -> ask
         
         -else:
             {
             //Stiamo parlando con la PNG, ma non dopo uno storylet, per cui mettiamo del testo
-            - justTalkedFirstChar == false:   
+            - firstChar_justTalked == false:   
                 {~Le farfalle qui giocano per ore!|No dai. Ma hai visto quanto sono carini gli scoiattoli?!|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious 
                     -> main
             //Stiamo parlando con la PNG ma dopo uno storylet, per cui non mettiamo del testo        
             - else:
-                ~ justTalkedFirstChar = false
+                ~ firstChar_justTalked = false
                     -> main
         }
     }
     
     = ask
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     //Se arrivo a options da un dialogo, non mostro commenti da parte della PNG, altrimenti sì.
         {
-            - justTalkedFirstChar == false:   
+            - firstChar_justTalked == false:   
                 {~Le farfalle qui giocano per ore!|No dai. Ma hai visto quanto sono carini gli scoiattoli?!|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious 
                 
             - else:
                 Vorresti chiedermi qualcosa? #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious 
             
-                ~ justTalkedFirstChar = false
+                ~ firstChar_justTalked = false
         }
 
     //Azioni legate alla riscrittura
  
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-            + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not rewriting_proposal_first_character && not questions} [Vorrei aiutarti a guardare le cose in modo diverso.]
+            + {firstChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && not questions} [Vorrei aiutarti a guardare le cose in modo diverso.]
                 Ama, parla prima con la mentore così ti dice cosa fare e non le prende una sincope se facciamo casini.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed 
                     ~ tutorialPauses = false
                         -> main
         
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona                    
-            + {firstStoryQuestCount > minStoryQuesTCountFirstChar && not rewriting_proposal_first_character && questions} [Ti va di riscrivere la tua storia con me?]
+            + {firstChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && questions} [Ti va di riscrivere la tua storia con me?]
                     -> rewriting_proposal_first_character
     
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo          
-            + {firstStoryQuestCount > minStoryQuesTCountFirstChar && rewriting_proposal_first_character} [Iniziamo la riscrittura?]
+            + {firstChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && rewriting_proposal_first_character} [Iniziamo la riscrittura?]
                     -> rewriting_proposal_first_character
             
 
@@ -102,7 +102,7 @@
             
         
         //Cucinare assieme    
-            + {open_the_kitchen && not cooking_with_first_char && firstIsCooking==false}[Ti va di cucinare qualcosa assieme?]
+            + {open_the_kitchen && not cooking_with_first_char && kitchen_firstCharisCooking==false}[Ti va di cucinare qualcosa assieme?]
                 ~ movements_changeLocationTimer = 0
                 
                 {
@@ -110,12 +110,12 @@
                     - kitchenContents has SecondCharacter: Uh, mi sa che la cucina è occupata da {charNameTwo}, sta cucinando qualcosa di strano.
                             ->main
                 
-                    - FirstKitchenInvite: {Spero non mi farai aspettare come prima! Ho atteso un sacco!|Siamo a due volte che me lo chiedi e non ti presenti, sai?|E mi darai buca una terza volta? Vabbè.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral 
+                    - kitchen_firstCharCookingTogetherInvite: {Spero non mi farai aspettare come prima! Ho atteso un sacco!|Siamo a due volte che me lo chiedi e non ti presenti, sai?|E mi darai buca una terza volta? Vabbè.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral 
                         ~ move_entity(FirstCharacter, Kitchen)
                             ->main
                         
                     - else: Volentieri! Ci vediamo in cucina! #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral 
-                        ~ FirstKitchenInvite = true
+                        ~ kitchen_firstCharCookingTogetherInvite = true
                         ~ move_entity(FirstCharacter, Kitchen)
                             ->main
                 
@@ -130,7 +130,7 @@
 
 
 === knowing_first_character
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
         
         //Storylets speciali    
@@ -151,15 +151,15 @@
             
             //Storylets legati alla cucina        
                 //Chitarra sta cucinando ed entriamo in cucina
-                - are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && firstIsCooking == true:
+                - are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && kitchen_firstCharisCooking == true:
                         -> first_char_cooking_alone
             
                 //Chitarra ha cucinato, e vediamo la scena del dono (a sé stessa)
-                - are_two_entities_together(FirstCharacter, PG) && first_char_cooking_tracker && firstIsCooking == false && not food_gift_first_char:
+                - are_two_entities_together(FirstCharacter, PG) && first_char_cooking_tracker && kitchen_firstCharisCooking == false && not food_gift_first_char:
                         -> food_gift_first_char
                 
                 //Chitarra cucina con noi
-                -  are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && not cooking_with_first_char && firstIsCooking == false:
+                -  are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && not cooking_with_first_char && kitchen_firstCharisCooking == false:
                         -> cooking_with_first_char
                 
                 //Lettura Chitarra
@@ -174,7 +174,7 @@
                 -> one
         
             //Chitarra dona il libro a PG -> metto dopo per evitare che parta di nuovo prima delle presentazioni
-            - not foundLibro && (knowing_first_character ==true) && firstPauseTalking == 0 && not take_this_book:
+            - not foundLibro && (knowing_first_character ==true) && firstChar_pauseTalking == 0 && not take_this_book:
                 -> take_this_book   
                 
             - not two:
@@ -204,11 +204,11 @@
         }
 
     = one
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         //Non mettere cose TW qui
         //Presentazione.
-        ~ firstStoryQuestCount ++
+        ~ firstChar_storyletsForRewritingCount ++
         
         Hai visto passare qualcunə?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
         Altə all’incirca una balla di fieno e che si muove come un violino.
@@ -353,7 +353,7 @@
             + [Rinunciare al superfluo ci avvicina alla natura delle cose.]
                 -> color_variation_management(FirstCharacter, purpleC)->
                 {
-                    - firstPurple > 1: {player_name}, continua così e ci shippo tantissimo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate 
+                    - firstChar_purple > 1: {player_name}, continua così e ci shippo tantissimo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate 
                 } 
                  Ho pensato subito che {charNameOne} avesse un valore negativo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral 
                  Dimenticandomi che in ogni brano il silenzio è parte fondamentale.
@@ -409,18 +409,18 @@
         L’unica cosa certa è che ho bisogno di Talco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_sad
         Ci vediamo dopo, {player_name}. Stammi bene.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             @animation:RewriterBook
-            ~ firstPauseTalking = firstCharPauseDuration
+            ~ firstChar_pauseTalking = firstChar_pauseDuration
             ~ move_entity(FirstRecap, BookPlace)
-            ~ justTalkedFirstChar = true
+            ~ firstChar_justTalked = true
             
             -> options_first_character
         
     = two
         //Non mettere cose TW qui
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         //Paura di deludere la famiglia scelta
-        ~ firstStoryQuestCount ++
+        ~ firstChar_storyletsForRewritingCount ++
         
          Non riesco a trovare Talco. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
          Forse devo fare pace col cervello e accettare che non è qui.
@@ -479,17 +479,17 @@
          
         Ma troppe chiacchiere ora, troppe.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
         Fammi chillare un attimo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-            ~ firstPauseTalking = firstCharPauseDuration
-            ~ justTalkedFirstChar = true
+            ~ firstChar_pauseTalking = firstChar_pauseDuration
+            ~ firstChar_justTalked = true
             @animation:RewriterBook
 
                 -> options_first_character 
             
     = three
     //Non mettere cose TW qui
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
-        ~ firstStoryQuestCount ++
+        ~ firstChar_storyletsForRewritingCount ++
         
          Stavo pensando ad Anna.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
          Anna è una mia ama del conservatorio.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -551,18 +551,18 @@
          Sono la mia famiglia, loro.
          E nessuna di queste scelte può accontentare tutt3.
          Che rottura di ovaie, {player_name}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-            ~ firstPauseTalking = firstCharPauseDuration
-            ~ justTalkedFirstChar = true
+            ~ firstChar_pauseTalking = firstChar_pauseDuration
+            ~ firstChar_justTalked = true
             @animation:RewriterBook
 
                 -> options_first_character
         
     = four
     //Non mettere cose TW qui
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     //Silenzio
-        ~ firstStoryQuestCount ++
+        ~ firstChar_storyletsForRewritingCount ++
         
          Questo posto è carino, ma il silenzio è pesante.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
          Non c'è nemmeno un accenno di musica, di ritmo.
@@ -617,18 +617,18 @@
                     Dai, si fa per il meme!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                 - else:Devo assolutamente chiederglielo!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
             }
-                ~ firstPauseTalking = firstCharPauseDuration
-                ~ justTalkedFirstChar = true
+                ~ firstChar_pauseTalking = firstChar_pauseDuration
+                ~ firstChar_justTalked = true
             @animation:RewriterBook
 
                     -> options_first_character
             
     = five
     //Non mettere cose TW qui
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
-    ~ firstStoryQuestCount ++
+    ~ firstChar_storyletsForRewritingCount ++
     
          Hai presente quel meme del tizio che sta a una festa in un angolo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
          E giudica tutti?
@@ -702,19 +702,19 @@
                 -
         Ma ora ho bisogno di rilassarmi un po' ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         E magari riposa anche tu.
-            ~ firstPauseTalking = firstCharPauseDuration
-            ~ justTalkedFirstChar = true
+            ~ firstChar_pauseTalking = firstChar_pauseDuration
+            ~ firstChar_justTalked = true
             @animation:RewriterBook
             
                 -> options_first_character
         
     = six
     //Non mettere cose TW qui
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
         //Paura delle conseguenze della scelta.
-        ~ firstStoryQuestCount ++
+        ~ firstChar_storyletsForRewritingCount ++
         
          Trigger warning: pesantezza, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
          Ma questo posto mi fa pensare a troppe cose.
@@ -774,19 +774,19 @@
             -
         A proposito di cause perse: vado a cercarmi uno spritz.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
         Ho proprio bisogno di staccare.
-            ~ firstPauseTalking = firstCharPauseDuration
-            ~ justTalkedFirstChar = true
+            ~ firstChar_pauseTalking = firstChar_pauseDuration
+            ~ firstChar_justTalked = true
             @animation:RewriterBook
             
                 -> options_first_character
         
     = seven
     //Non mettere cose TW qui
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     //Razionalità
-        ~ firstStoryQuestCount ++
+        ~ firstChar_storyletsForRewritingCount ++
         
          Stavo ripensando al prof Ghiberti. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
          E prometto che non è un pippone a questo giro.
@@ -837,17 +837,17 @@
             -
             Comunque non mi piace l'idea che esistano errore e verità.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
             Anche perché quelli pieni di verità hanno sempre finito per ammazzare quell3 come me e Talco.
-                ~ firstPauseTalking = firstCharPauseDuration
+                ~ firstChar_pauseTalking = firstChar_pauseDuration
                 @animation:RewriterBook
                 
                     -> options_first_character          
     
     = eight
     //Non mettere cose TW qui
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
-    ~ firstStoryQuestCount ++
+    ~ firstChar_storyletsForRewritingCount ++
         
         Giuro che non shippo il Ghiberti, ma continuo a pensare a quello che ci siamo dette prima.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         E il Ghiberti sembra un uomo felice, sorride molto.
@@ -909,20 +909,20 @@
          Comunque non sono di certo qui per il Ghiberti e le sue paranoie matematiche.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
          Ma per capire perché sono in questo posto.
          Mi prendo un po' di tempo per me, {player_name}.
-            ~ firstPauseTalking = firstCharPauseDuration
+            ~ firstChar_pauseTalking = firstChar_pauseDuration
             ~ book_BGVariations ++
-            ~ justTalkedFirstChar = true
+            ~ firstChar_justTalked = true
             @animation:RewriterBook
                         
                 -> options_first_character
     
     = nine
     //Da qui, no problem con contenuti TW. Si mette Chitarra che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
         //Voglia di fare qualcosa di utile, importante
-        ~ firstStoryQuestCount ++
+        ~ firstChar_storyletsForRewritingCount ++
         
          Non lo dire alla mentore, ma mi ci sto abituando a stare qui.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate 
          Anche se non sarebbe male avere almeno un pianoforte e del vinello.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
@@ -976,17 +976,17 @@
          Vabbè.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
          Credo me ne starò qui ad aspettare questo finto temporale.
 
-             ~ firstPauseTalking = firstCharPauseDuration
-             ~ justTalkedFirstChar = true
+             ~ firstChar_pauseTalking = firstChar_pauseDuration
+             ~ firstChar_justTalked = true
             @animation:RewriterBook
             
             -> options_first_character 
     = ten
         //Da qui, no problem con contenuti TW. Si mette Chitarra che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
-    ~ firstStoryQuestCount ++
+    ~ firstChar_storyletsForRewritingCount ++
         
          Comunque non è che penso solo a me stessa ama, giuro.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
          L'anno scorso abbiamo occupato un parco per una settimana.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -1053,19 +1053,19 @@
                 - are_two_entities_together(SecondCharacter, PG): No, gli alberi no, poveri!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                     E non povera {charNameTwo}?!?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
             } 
-            ~ firstPauseTalking = firstCharPauseDuration
-            ~ justTalkedFirstChar = true
+            ~ firstChar_pauseTalking = firstChar_pauseDuration
+            ~ firstChar_justTalked = true
             @animation:RewriterBook
             
             -> options_first_character
     
     = eleven
         //Da qui, no problem con contenuti TW. Si mette Chitarra che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
         //Famiglia d'origine
-        ~ firstStoryQuestCount ++
+        ~ firstChar_storyletsForRewritingCount ++
         
          Ti racconto una cosa idiota. La passione per la musica l'ho presa da mio papà.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
          Lo stesso uomo che ora vorrebbe cercassi un "lavoro vero".#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
@@ -1120,18 +1120,18 @@
             
         Lasciami un po' sola ora, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
         Perché sto entrando in fase lamentosa e non ho voglia di cringiarti.
-             ~ firstPauseTalking = firstCharPauseDuration
-             ~ justTalkedFirstChar = true
+             ~ firstChar_pauseTalking = firstChar_pauseDuration
+             ~ firstChar_justTalked = true
             @animation:RewriterBook
             
                     -> options_first_character
             
     = twelve
         //Da qui, no problem con contenuti TW. Si mette Chitarra che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
-    ~ firstStoryQuestCount ++
+    ~ firstChar_storyletsForRewritingCount ++
     
          Comunque in merito a quello che ti dicevo prima, ama: non è che papà sia un mostro, sia chiaro. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
          Mamma è più cinica di papà.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
@@ -1193,15 +1193,15 @@
         Woah.    
         Vado a deprimermi da qualche parte.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
 
-            ~ firstPauseTalking = firstCharPauseDuration
-            ~ justTalkedFirstChar = true
+            ~ firstChar_pauseTalking = firstChar_pauseDuration
+            ~ firstChar_justTalked = true
             @animation:RewriterBook
             
                     -> options_first_character
 
 
  === first_story_gift ===
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     <i>Stai per donare qualcosa a {charNameOne}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             
             + {findedGifts != ()} [Scelgo il dono.]
@@ -1222,7 +1222,7 @@
 
 
 === rewriting_proposal_first_character
-~ temp charNameOne = translator(firstCharacterState)
+~ temp charNameOne = translator(firstChar_ActualName)
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
     {
         - not confession:
@@ -1235,7 +1235,7 @@
     
     = confession
         //Per il feedback, temi legati al rapporto, all'amicizia
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         ~ temp charNameTwo = translator(secondCharacterState)
             
@@ -1278,7 +1278,7 @@
 
 
     = rewriting
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
             //Valuto lo stato della relazione 
                 -> firstAffinityCalc ->
 
@@ -1295,7 +1295,7 @@
 
 
         = one
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
     
@@ -1362,7 +1362,7 @@
                     }        
             
         = two
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         
         Temi che le persone a cui vuoi bene si sentano tradite dalla scelta che farai.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
     
@@ -1413,7 +1413,7 @@
             
         
         = three
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         Vedi una scelta come una strada chiusa, qualcosa da cui non poter tornare indietro.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
                 
             + [Se non tiri nessun dado, non c'è storia da far avanzare.]
@@ -1464,7 +1464,7 @@
             }
         
         = four
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
             Questo posto ti ha assegnato un nome, e quel nome è Chitarra. Ma tu lo vedi come una rinuncia.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
     
             + [Giocare è bello perché puoi sempre rinunciare a farlo.]
@@ -1487,9 +1487,9 @@
                 -> color_variation_management(FirstCharacter, blueC)->
                 Se una cosa non ha senso, non ha senso anche se continuiamo ad insistere nel farla.
                     {
-                    	- firstCharacterPossibleStates hasnt Chitarra:
-        		            ~ firstCharacterPossibleStates --
-        		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstCharacterPossibleStates }}
+                    	- firstChar_possibleStates hasnt Chitarra:
+        		            ~ firstChar_possibleStates --
+        		           {debugChangeName: Diminuisco lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
                     }            
             
             + [C'è più coraggio nella rinuncia che nel compromesso.]
@@ -1507,7 +1507,7 @@
             -> ending
     
         = ending
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
             {
                 - secondStory != story_storyEnded:
                     {player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -1545,7 +1545,7 @@
          La canzone del mio nome.
             
             //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
-                -> color_modifier(FirstCharacter, FirstCharacterColorMultiplier) ->
+                -> color_modifier(FirstCharacter, firstChar_colorVariation) ->
             
             //Poi aggiorniamo i colori, così il valore complessivo conta per la scelta del nome
                 -> update_colors(FirstCharacter) ->     
@@ -1554,26 +1554,26 @@
                 -> firstNaming -> naming
                 
             = naming
-            ~ temp charNameOne = translator(firstCharacterState)
+            ~ temp charNameOne = translator(firstChar_ActualName)
             
             {
-                - firstCharacterState has Triangolo:
+                - firstChar_ActualName has Triangolo:
                 
                      E il mio vero nome è <b><i>{charNameOne}</b></i>, perché pensavo di essere uno strumento, e invece ho solo fallito.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
                         
-                - firstCharacterState has RagazzaOrchestra:
+                - firstChar_ActualName has RagazzaOrchestra:
 
                      Mi chiamerò <b><i>{charNameOne}</b></i>: nel non saper rinunciare sono diventata l'ornitorinco della musica.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                         
-                - firstCharacterState has FlautoDolce:
+                - firstChar_ActualName has FlautoDolce:
 
                      Il mio nome è <b><i>{charNameOne}</b></i>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                       
-                - firstCharacterState has Ocarina:
+                - firstChar_ActualName has Ocarina:
 
                      Mi chiamerò <b><i>{charNameOne}</b></i>: perché il suo suono è gioco e festa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
         
-                - firstCharacterState has Violino:
+                - firstChar_ActualName has Violino:
 
                      Io sono <b><i>{charNameOne}</b></i>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                         
@@ -1584,7 +1584,7 @@
                 ~ book_BGVariations ++
     
                     {
-                    - firstCharacterSpecialEvent == true:
+                    - firstChar_specialEvent == true:
                         -> secret_ending
                     - else:
                         -> exit
@@ -1592,7 +1592,7 @@
         
         
     = secret_ending
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
         C'è una cosa che devo dirti ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
         Riguarda {charNameFive}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -1603,7 +1603,7 @@
                 -> close
             
     = exit
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
         Un'ultima cosa, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Volevo lasciarti qualcosa di buono di me, prima di andarmene, e ho pensato di donarti una conchiglia.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
         {
@@ -1619,7 +1619,7 @@
         
     = close   
             ~ story_endedStories += story_firstCharStoryEnded
-            ~ firstStory = story_storyEnded
+            ~ firstChar_storyStatus = story_storyEnded
             ~ player_movementsCounter = 0
             ~ PG_advance_management(FirstCharacter)
             ~ numberQuestion = 0
@@ -1632,12 +1632,12 @@
         
     
 === first_char_story_ended
-~ temp charNameOne = translator(firstCharacterState)
+~ temp charNameOne = translator(firstChar_ActualName)
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
 
     {
-        - firstCharEndingDialogue < 4:
+        - firstChar_exitCounter < firstChar_startingValueExitCounter:
             -> top
         - else:
             -> goodbye
@@ -1645,15 +1645,15 @@
     
         - (top)
             {~ Quanto mi prenderà per il culo Talco, quando lə racconterò tutta questa storia?|Comunque in questo posto dovreste mettere almeno un piano bar.|Se lo dico all3 am3 del conservatorio mi fanno il culo, ma vado pazza per le k-pop night.|Ma tu l'hai vista quella strana rana nello stagno?}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                    ~ firstCharEndingDialogue ++
+                    ~ firstChar_exitCounter ++
                         -> main
         
         = goodbye
-            ~ temp charNameOne = translator(firstCharacterState)
+            ~ temp charNameOne = translator(firstChar_ActualName)
             Ama: è il momento di tornare a casa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             {
             
-                - firstCharacterPossibleStates hasnt Chitarra: Non ho idea di che cosa accadrà, sinceramente, ma almeno ora mi sento pronta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                - firstChar_possibleStates hasnt Chitarra: Non ho idea di che cosa accadrà, sinceramente, ma almeno ora mi sento pronta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
                     E non cringiare ma: grazie. Mi hai dato una mano enorme. Me lo ricorderò.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
 
                 - else:Vedremo cosa mi accadrà.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
@@ -1672,8 +1672,8 @@
 
 
 === first_character_opinions
-~ temp charNameOne = translator(firstCharacterState) 
+~ temp charNameOne = translator(firstChar_ActualName) 
     //Le sue opinioni comunque ci fanno capire meglio il modo in cui vede il mondo e parte della sua vita fuori da qui.
     {~ Talco dice sempre che bisogna sporcarsi le mani per capire il mondo.|Se proprio devo restare qui, tiro su una band con le api. Sono troppo chaddone loro.|Comunque il Ghiberti ha una moglie che è stra in gamba. Forse a volte ci si deve compensare. E visto che Talco è svegliə, io allora sono l'idiota della cumpa.|Resti tra noi, ma il Conservatorio è un posto del cazzo. C'è una competitività che non c'entra nulla con la musica.|Mi scoccia litigare con mio padre, ma io e il suo modo di fare NON. ANDIAMO. D'ACCORDO. Zero, ama. Zero.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-            ~ firstPauseTalking = firstCharPauseDuration
+            ~ firstChar_pauseTalking = firstChar_pauseDuration
             -> options_first_character

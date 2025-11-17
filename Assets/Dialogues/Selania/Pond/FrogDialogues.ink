@@ -1,6 +1,6 @@
 === welcoming_frog
 {frogDebug: passo da welcoming_frog.}
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -44,7 +44,7 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
             {frogDebug: condizioni rispettate per poter offrire la prima missione speciale.}
                 -> special_mission_one
             
-        - firstStory == story_storyStarted && firstGift == () && charOneGifts hasnt charOneCultivable:
+        - firstChar_storyStatus == story_storyStarted && firstChar_giftedObject == () && charOneGifts hasnt charOneCultivable:
             {frogDebug: condizioni rispettate per poter offrire info sul dono per Chitarra.}
                 -> autonomy_mission_verify
         
@@ -54,15 +54,15 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
                 -> special_mission_two      
     
                 
-        - firstStory == story_storyStarted && !ending_cooking_with_first_char && charOneGifts hasnt charOneCooking:
+        - firstChar_storyStatus == story_storyStarted && !ending_cooking_with_first_char && charOneGifts hasnt charOneCooking:
             {frogDebug: condizioni rispettate per poter offrire info sull'ingrediente per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - firstStory == story_storyStarted && player_accessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord:
+        - firstChar_storyStatus == story_storyStarted && player_accessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord:
             {frogDebug: condizioni rispettate per poter offrire info su parola per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - firstStory == story_storyStarted && player_accessiblePlaces has Library && charOneGifts hasnt charOneLibrary:
+        - firstChar_storyStatus == story_storyStarted && player_accessiblePlaces has Library && charOneGifts hasnt charOneLibrary:
             {frogDebug: condizioni rispettate per poter offrire info su racconto per Chitarra.}
                 -> autonomy_mission_verify
                 

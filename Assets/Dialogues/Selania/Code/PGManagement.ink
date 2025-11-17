@@ -106,7 +106,7 @@
 
 === function PG_advance_management(charES)
 //Chiamo questa funzione a fine di una riscrittura, inserendo il valore della personaggia (es: player_firstStepClosed).
-//Controllo quante sono le storie concluse, in modo da poter inserire quella personaggia nell'ordine di conclusione delle storie previsto (es: se c'è già una storia chiusa in story_endedStories e ho chiuso player_firstStepClosed, allora metterò charOneEnding come story_twoStoriesClosed.
+//Controllo quante sono le storie concluse, in modo da poter inserire quella personaggia nell'ordine di conclusione delle storie previsto (es: se c'è già una storia chiusa in story_endedStories e ho chiuso player_firstStepClosed, allora metterò firstChar_storyEndingPosition come story_twoStoriesClosed.
 
 {debug: <i>Passo per PG_advance_managemente. Il valore di charES è {charES}.}
 
@@ -116,8 +116,8 @@
 		~ player_orderGrowingTreeUpdater = player_firstStepClosed
 		{
 			- charES == FirstCharacter:
-				~ charOneEnding = story_oneStoryClosed
-			{debug: <i>Dato che charES coincide con {charES}. Il valore di charOneEnding è {charOneEnding}.}
+				~ firstChar_storyEndingPosition = story_oneStoryClosed
+			{debug: <i>Dato che charES coincide con {charES}. Il valore di firstChar_storyEndingPosition è {firstChar_storyEndingPosition}.}
 			
 			- charES == SecondCharacter:
 				~ charTwoEnding = story_oneStoryClosed
@@ -132,8 +132,8 @@
 		~ player_orderGrowingTreeUpdater = player_secondStepClosed
 		{
 			- charES == FirstCharacter:
-				~ charOneEnding = story_twoStoriesClosed
-			{debug: <i>Dato che charES coincide con {charES}. Il valore di charOneEnding è {charOneEnding}.}	
+				~ firstChar_storyEndingPosition = story_twoStoriesClosed
+			{debug: <i>Dato che charES coincide con {charES}. Il valore di firstChar_storyEndingPosition è {firstChar_storyEndingPosition}.}	
 			
 			- charES == SecondCharacter:
 				~ charTwoEnding = story_twoStoriesClosed
@@ -149,7 +149,7 @@
 		 ~player_orderGrowingTreeUpdater = player_thirdStepClosed
 		{
 			- charES == FirstCharacter:
-				~ charOneEnding = story_threeStoriesClosed
+				~ firstChar_storyEndingPosition = story_threeStoriesClosed
 			
 			- charES == player_secondStepClosed:
 				~ charTwoEnding = story_threeStoriesClosed
@@ -171,7 +171,7 @@
             ~ temp_endedPNGGreen = firstGreen
             ~ temp_endedPNGBlue = firstBlue
             ~ temp_endedPNGYellow = firstYellow
-            ~ temp_endedPNGPurple = firstPurple
+            ~ temp_endedPNGPurple = firstChar_purple
             
         - charES == player_secondStepClosed:
             ~ temp_endedPNGRed = secondRed

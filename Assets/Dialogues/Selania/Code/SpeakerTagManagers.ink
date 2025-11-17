@@ -11,22 +11,22 @@ LIST speakersForEwWordTag = Influenced, Other
     - !knowing_first_character.one.firstPresentation:
         ~ return "???"
         
-    - firstCharacterState == Chitarra:
+    - firstChar_ActualName == Chitarra:
 	    ~ return "Chitarra"
 	    
-    - firstCharacterState == Triangolo:
+    - firstChar_ActualName == Triangolo:
 	    ~ return "Triangolo"
 	    
-	- firstCharacterState == RagazzaOrchestra:
+	- firstChar_ActualName == RagazzaOrchestra:
 	    ~ return "Orchestra"
 	    
-	- firstCharacterState == FlautoDolce:
+	- firstChar_ActualName == FlautoDolce:
 	    ~ return "Flauto Dolce"
 	    
-	- firstCharacterState == Ocarina:
+	- firstChar_ActualName == Ocarina:
 	    ~ return "Ocarina"
 	    
-	- firstCharacterState == Violino:
+	- firstChar_ActualName == Violino:
 	    ~ return "Violino"
 	    
 }

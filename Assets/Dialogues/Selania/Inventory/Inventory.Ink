@@ -38,10 +38,10 @@ VAR currentReceiver = ()
 
     {
         - currentReceiver has FirstCharacter:
-            {translator(firstCharacterState)} ti sorride.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            {translator(firstChar_ActualName)} ti sorride.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             Si rigira la bacca tra la mani, sembra più serena.
                 ~ firstChar_InkLevel ++
-                ~ firstGift += BaccaDellaAddolorata
+                ~ firstChar_giftedObject += BaccaDellaAddolorata
                 ~ currentReceiver = ()
                     -> first_story_gift.ink_outcome
             
@@ -63,8 +63,8 @@ VAR currentReceiver = ()
     } 
     {
         - currentReceiver has FirstCharacter:
-            {translator(firstCharacterState)} si punge, infastidita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                ~ firstGift += BarbaDellInciampo
+            {translator(firstChar_ActualName)} si punge, infastidita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                ~ firstChar_giftedObject += BarbaDellInciampo
                 ~ currentReceiver = ()
                     -> first_story_gift.ink_outcome
         
@@ -86,9 +86,9 @@ VAR currentReceiver = ()
     } 
     {
         - currentReceiver has FirstCharacter:
-            {translator(firstCharacterState)} inizia a girarselo tra le dita cantando divertita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            {translator(firstChar_ActualName)} inizia a girarselo tra le dita cantando divertita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 ~ firstChar_InkLevel ++
-                ~ firstGift += BastoneDellOzioso
+                ~ firstChar_giftedObject += BastoneDellOzioso
                 ~ currentReceiver = ()
                     -> first_story_gift.ink_outcome
         
@@ -113,9 +113,9 @@ VAR currentReceiver = ()
 
     {
         - currentReceiver has FirstCharacter:
-            {translator(firstCharacterState)} getta a terra il tuo dono, spaventata.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            {translator(firstChar_ActualName)} getta a terra il tuo dono, spaventata.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             Le linee della tua mano ricompaiono, i pezzi si rinsaldano.
-                ~ firstGift += BrinaDellImpossibile
+                ~ firstChar_giftedObject += BrinaDellImpossibile
                 ~ currentReceiver = ()
                     -> first_story_gift.ink_outcome
     
@@ -144,8 +144,8 @@ VAR currentReceiver = ()
     - currentReceiver has FirstCharacter:
         ~ firstChar_InkLevel ++
         ~ firstChar_InkLevel ++
-        {translator(firstCharacterState)} inizia a cantare il nome delle persone che ama.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                ~ firstGift += CantoDelleCompagne
+        {translator(firstChar_ActualName)} inizia a cantare il nome delle persone che ama.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                ~ firstChar_giftedObject += CantoDelleCompagne
                 ~ currentReceiver = ()
                     -> first_story_gift.ink_outcome
 
@@ -171,9 +171,9 @@ VAR currentReceiver = ()
     {
     - currentReceiver has FirstCharacter:
         ~ firstChar_InkLevel ++
-        {translator(firstCharacterState)} sembra prima disgustata, poi divertita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        {translator(firstChar_ActualName)} sembra prima disgustata, poi divertita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         E poi comprensione compare sul suo volto.
-                ~ firstGift += CardoAspinato
+                ~ firstChar_giftedObject += CardoAspinato
                 ~ currentReceiver = ()
                     -> first_story_gift.ink_outcome
 
@@ -198,8 +198,8 @@ VAR currentReceiver = ()
     } 
     {
         - currentReceiver has FirstCharacter:
-            {translator(firstCharacterState)} non comprende il significato del tuo dono.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                ~ firstGift += EderaDelleAmanti
+            {translator(firstChar_ActualName)} non comprende il significato del tuo dono.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                ~ firstChar_giftedObject += EderaDelleAmanti
                 ~ currentReceiver = ()
                     -> first_story_gift.ink_outcome
         
@@ -223,8 +223,8 @@ VAR currentReceiver = ()
         - currentReceiver has FirstCharacter:
             ~ firstChar_InkLevel ++
             
-            {translator(firstCharacterState)} si mette a canticchiare.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                ~ firstGift += ErbaLiccia
+            {translator(firstChar_ActualName)} si mette a canticchiare.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                ~ firstChar_giftedObject += ErbaLiccia
                 ~ currentReceiver = ()
                     -> first_story_gift.ink_outcome
         
@@ -246,8 +246,8 @@ VAR currentReceiver = ()
     } 
     {
         - currentReceiver has FirstCharacter:
-            {translator(firstCharacterState)} non sembra colpita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                ~ firstGift += FalsaPalude
+            {translator(firstChar_ActualName)} non sembra colpita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                ~ firstChar_giftedObject += FalsaPalude
                 ~ currentReceiver = ()
                     -> first_story_gift.ink_outcome
         
@@ -270,8 +270,8 @@ VAR currentReceiver = ()
         - currentReceiver has FirstCharacter:
             ~ firstChar_InkLevel ++
             ~ firstChar_InkLevel ++
-            {translator(firstCharacterState)} se lo stringe tra le mani, ringraziandoti.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                ~ firstGift += LanaNotturna
+            {translator(firstChar_ActualName)} se lo stringe tra le mani, ringraziandoti.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                ~ firstChar_giftedObject += LanaNotturna
                 ~ currentReceiver = ()
                     -> first_story_gift.ink_outcome
         
@@ -294,8 +294,8 @@ VAR currentReceiver = ()
 
     {
     - currentReceiver has FirstCharacter:
-        {translator(firstCharacterState)} sembra sinceramente delusa.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-            ~ firstGift += LicheneDegliAbissi
+        {translator(firstChar_ActualName)} sembra sinceramente delusa.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            ~ firstChar_giftedObject += LicheneDegliAbissi
             ~ currentReceiver = ()
             -> first_story_gift.ink_outcome
     
@@ -324,9 +324,9 @@ VAR currentReceiver = ()
     - currentReceiver has FirstCharacter:
         ~ firstChar_InkLevel ++
         ~ firstChar_InkLevel ++
-        {translator(firstCharacterState)} sussurra "nonno".#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        {translator(firstChar_ActualName)} sussurra "nonno".#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         Le lacrime le rigano il viso.
-            ~ firstGift += NonTiScordarDiTe
+            ~ firstChar_giftedObject += NonTiScordarDiTe
             ~ currentReceiver = ()
             -> first_story_gift.ink_outcome
 
@@ -351,10 +351,10 @@ VAR currentReceiver = ()
     {
         - currentReceiver has FirstCharacter:
             ~ firstChar_InkLevel ++
-            {translator(firstCharacterState)} è estatica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            {translator(firstChar_ActualName)} è estatica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             Grazie {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
             Credo mi prenderò un po' di tempo per me con questo dono.
-                ~ firstGift += Olobino
+                ~ firstChar_giftedObject += Olobino
                 ~ currentReceiver = ()
                     -> first_story_gift.ink_outcome
         
@@ -377,8 +377,8 @@ VAR currentReceiver = ()
     
     {
         - currentReceiver has FirstCharacter:
-            {translator(firstCharacterState)} è infastidita dalla tensione che viene dal frammento, lo lancia lontano.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                ~ firstGift += LaSpazzata
+            {translator(firstChar_ActualName)} è infastidita dalla tensione che viene dal frammento, lo lancia lontano.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                ~ firstChar_giftedObject += LaSpazzata
                 ~ currentReceiver = ()            
                     -> first_story_gift.ink_outcome
     
@@ -399,8 +399,8 @@ VAR currentReceiver = ()
     
     {
         - currentReceiver has FirstCharacter:
-            {translator(firstCharacterState)} è infastidita dal sapore.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                ~ firstGift += universalIngredient
+            {translator(firstChar_ActualName)} è infastidita dal sapore.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                ~ firstChar_giftedObject += universalIngredient
                 ~ currentReceiver = ()            
                     -> first_story_gift.ink_outcome
     

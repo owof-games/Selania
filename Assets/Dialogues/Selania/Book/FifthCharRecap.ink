@@ -2,7 +2,7 @@
 + (check){are_two_entities_together(FifthRecap, PG)} [FifthRecap]
 
     ~ enableBigDialogue()
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -153,24 +153,24 @@
         Ciao {player_name}, come stai? Alla fine Talco è sempre statə qui, me idiota. E ha creduto alla mia storia! Ora si è messə in testa di insegnare agli scoiattoli a suonare le noci. <>
 
            {
-                - firstCharacterPossibleStates has Triangolo:
+                - firstChar_possibleStates has Triangolo:
                     Io, invece, non riesco a prendere uno strumento in mano da che sono tornata. <>
                     
-                - firstCharacterPossibleStates has RagazzaOrchestra:
+                - firstChar_possibleStates has RagazzaOrchestra:
                     Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi. <>
                     
-                - firstCharacterPossibleStates has FlautoDolce:
+                - firstChar_possibleStates has FlautoDolce:
                     Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
                     E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
                     Tu e quel posto mi avete reso una mollacciona.
                     Ma non è così male, alla fine. <>
                     
-                - firstCharacterPossibleStates has Ocarina:
+                - firstChar_possibleStates has Ocarina:
                     Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
                     Se lo dico a mio padre mi fa ricoverare subito, ma amen.
                     Sono felice ama, davvero felice. <>
                     
-                - firstCharacterPossibleStates has Violino:
+                - firstChar_possibleStates has Violino:
                     Io invece mi sono resa conto che forse, con la musica, possiamo parlare con gli animali.
                     No, non ho esagerato col vinello.
                     Ma pensaci, ama: se così fosse, potrei dimostrare che siamo tutt3 collegat3, che potremmo parlarci e comunicare tra noi! <>

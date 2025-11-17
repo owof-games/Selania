@@ -73,7 +73,7 @@
 
                 
 = ask
-~ temp charNameOne = translator(firstCharacterState)
+~ temp charNameOne = translator(firstChar_ActualName)
 ~ temp charNameTwo = translator(secondCharacterState)
 ~ temp charNameFive = translator(fifthCharacterState)
 
@@ -249,7 +249,7 @@
     //Obiettivo: Presentare l’elemento delle bugie. Vengono dette cose sconfessate poi nella terza storia.
     //Contenuto: Compleanno, giochi
         ~ temp charNameTwo = translator(secondCharacterState)
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         ~ secondStoryQuestCount ++
         
@@ -379,7 +379,7 @@
     //Contenuto: Prima gioia per gli insetti, ecc, poi domande sulla sua violenza alla mentore.
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ secondStoryQuestCount ++
     
     {
@@ -499,7 +499,7 @@
     //Obiettivo: Mostrare che sta iniziando a non mentire.
     //Contenuto: Ci racconta della rana, possiamo decidere di non credergli o meno.
         ~ temp charNameTwo = translator(secondCharacterState)
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         ~ secondStoryQuestCount ++
             {
@@ -554,7 +554,7 @@
         	  
         	  = her_liar
         	  ~ temp charNameTwo = translator(secondCharacterState)
-        	  ~ temp charNameOne = translator(firstCharacterState)
+        	  ~ temp charNameOne = translator(firstChar_ActualName)
         	  
             	  Ah.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             	  Sei una ragazza quindi.
@@ -593,7 +593,7 @@
        
         = three_continue 
         ~ temp charNameTwo = translator(secondCharacterState)
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
             //Definire meglio in base ai colori.
             
             + {him_liar} [Bugia: hai detto di esser pieno di action figures.]
@@ -683,7 +683,7 @@
     //Contenuto: Ci chiede come ci chiamiamo, emerge una bugia diversa a seconda del genere -> Qui però scopriamo che ci mente, possiamo decidere di mettere in evidenza o meno questa bugia, solitudine.
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ secondStoryQuestCount ++
             {
                 - not about_violence_and_peace:
@@ -775,7 +775,7 @@
     //Contenuto: Momento di vulnerabilità, ci parla della nonna (ma non ci dice che è morta) e ci dice che è fuggito da casa.
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
             {
                 - not about_violence_and_peace:
                 ~ change_entity_place(Mentor)
@@ -885,7 +885,7 @@
   
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
             {
                 - not about_violence_and_peace:
                 ~ change_entity_place(Mentor)
@@ -1010,7 +1010,7 @@
     //Contenuto: Parla della fantasia, e del fatto che la sera si riscrive la giornata, capiamo che la famiglia litiga spesso. Tensione in casa anche per la morte della nonna
     
         ~ temp charNameTwo = translator(secondCharacterState)
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
             {
                 - not about_violence_and_peace:
@@ -1103,7 +1103,7 @@
     //Contenuti: ci parla del fratello come mito, riferimento, modello. All'inizio mente, ma poi si ridimensiona da solo (sta iniziano a fidarsi).
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
             {
                 - not about_violence_and_peace:
                 ~ change_entity_place(Mentor)
@@ -1209,7 +1209,7 @@
      //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
             {
                 - not about_violence_and_peace:
                 ~ change_entity_place(Mentor)
@@ -1363,7 +1363,7 @@
     //Contenuti: capiamo che a scuola è un bullo, ma ci sono persone che protegge. 
     //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
         ~ temp charNameTwo = translator(secondCharacterState)
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
             {
                 - not about_violence_and_peace:
@@ -1455,7 +1455,7 @@
     //Obiettivo: curiosità, sperimentazione. finale giallo, finale viola
     //Contenuti: esperimenti in casa (microscopio, muro bruciato col Meccano //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
         ~ temp charNameTwo = translator(secondCharacterState)
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
             {
                 - not about_violence_and_peace:
@@ -1550,7 +1550,7 @@
     //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
             {
                 - not about_violence_and_peace:
                 ~ change_entity_place(Mentor)
@@ -1706,7 +1706,7 @@
     = confession
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ change_entity_place(Mentor)
     
     //Parole chiave legate alla fiducia.
@@ -1796,7 +1796,7 @@
 
     = one
     ~ temp charNameTwo = translator(secondCharacterState)
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ change_entity_place(Mentor)
             {
                 -   are_two_entities_together(FirstCharacter, PG):Qui le cose si fanno serie, e io me ne vado. Buona fortuna, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
@@ -1848,7 +1848,7 @@
         Continua.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
         
             {
-                - firstStory!=story_storyEnded:{player_name} ha utilizzato la sua prima unità di inchiostro per compiere una riscrittura. L'inchiostro ora si è consumato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - firstChar_storyStatus!=story_storyEnded:{player_name} ha utilizzato la sua prima unità di inchiostro per compiere una riscrittura. L'inchiostro ora si è consumato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }        
 
             {
@@ -1901,7 +1901,7 @@
         Mmm, posso pensarci.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
         
             {
-                - firstStory!=story_storyEnded:{player_name} ha utilizzato la sua seconda unità di inchiostro per procedere con la riscrittura. Il boccetto ora è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - firstChar_storyStatus!=story_storyEnded:{player_name} ha utilizzato la sua seconda unità di inchiostro per procedere con la riscrittura. Il boccetto ora è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }         
         
             {
@@ -1952,7 +1952,7 @@
         Ok...#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
         
             {
-                - firstStory!=story_storyEnded:{player_name} ha utilizzato la terza unità di inchiostro, proponendo una riscruttura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - firstChar_storyStatus!=story_storyEnded:{player_name} ha utilizzato la terza unità di inchiostro, proponendo una riscruttura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }         
         
             {
@@ -2009,7 +2009,7 @@
         ...#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
         
         {
-            - firstStory!=story_storyEnded:{player_name}ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            - firstChar_storyStatus!=story_storyEnded:{player_name}ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         }  
         
             -> ending
@@ -2021,7 +2021,7 @@
     
     Per questo ti dico:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             {
-                - firstStory != story_storyEnded:{player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - firstChar_storyStatus != story_storyEnded:{player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }    
      
         + [Diventa il più forte, il più coraggioso.]

@@ -1,5 +1,5 @@
 === frog_about_who_questions
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -8,7 +8,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
 
 - (top)
     
-    + {firstStory == story_storyStarted} [Ho bisogno di una mano con {charNameOne}.]
+    + {firstChar_storyStatus == story_storyStarted} [Ho bisogno di una mano con {charNameOne}.]
         ~  currentMissionAboutChar = missionCharOne
   
         {
@@ -18,7 +18,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
                         -> top
             - else:
                 {
-                    - (firstGift == () && charOneGifts hasnt charOneCultivable) or (!ending_cooking_with_first_char && charOneGifts hasnt charOneCooking) or (player_accessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord) or (player_accessiblePlaces has Library && charOneGifts hasnt charOneLibrary):
+                    - (firstChar_giftedObject == () && charOneGifts hasnt charOneCultivable) or (!ending_cooking_with_first_char && charOneGifts hasnt charOneCooking) or (player_accessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord) or (player_accessiblePlaces has Library && charOneGifts hasnt charOneLibrary):
                         Credo proprio di poterti aiutare. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         -> frog_gift_dispatcher
                     
@@ -78,7 +78,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
 
 === frog_gift_dispatcher ===
 {frogDebug: passo frog_gift_dispatcher.}
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -101,7 +101,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
 
 //Doni generici
     = char_one_gifts
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -111,7 +111,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
         
        Come posso aiutarti con {charNameOne}?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
        
-        + {firstGift == () && charOneGifts hasnt charOneCultivable} [Vorrei sapere cosa donare a Chitarra.]
+        + {firstChar_giftedObject == () && charOneGifts hasnt charOneCultivable} [Vorrei sapere cosa donare a Chitarra.]
             ~ charOneGifts += charOneCultivable
         
             {
@@ -247,7 +247,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
     
     
     = char_two_gifts
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)

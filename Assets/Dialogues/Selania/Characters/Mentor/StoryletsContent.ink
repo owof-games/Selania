@@ -5,7 +5,7 @@
  ----------------------------------*/
 
 === welcome ===
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -59,7 +59,7 @@
             -> your_name
     
     = your_name
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         
         Come ti devo chiamare?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
@@ -100,7 +100,7 @@
                         E poi torna da me.
                     
                 //Se sono già in uno stato intermedio di conoscenza con unx dellx PNG
-                    - (firstStoryQuestCount > (minStoryQuesTCountFirstChar - 3)) or (secondStoryQuestCount > (minStoryQuesTCountSecondChar - 4)):
+                    - (firstChar_storyletsForRewritingCount > (firstChar_minStoryletsForRewriting - 3)) or (secondStoryQuestCount > (minStoryQuesTCountSecondChar - 4)):
                         E visto che hai già parlato un po' con chi girella per questo luogo, è il caso che te lo spieghi subito!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                             -> about_ink_usage
                 
@@ -122,7 +122,7 @@
                 
             
 === about_ink_usage
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -209,7 +209,7 @@
 
     
 === questions
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameThree = translator(thirdCharacterState)
         ~ temp charNameFour= translator(fourthCharacterState)
@@ -273,7 +273,7 @@
     Sai {player_name}? La <b><i>serra</b></i> non è solo un bel posto dove rilassarsi.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Tra i tanti modi per migliorare un rapporto con una persona, fare il dono giusto è forse il più immediato.
     {
-        - firstGift != () or secondGift != ():
+        - firstChar_giftedObject != () or secondGift != ():
             E vedo che hai già imparato come fare! Sei sempre un passo avanti.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         
         - else:
@@ -324,7 +324,7 @@
         
    
 === little_storylets
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -387,7 +387,7 @@
    
 //Feedback//
 === first_character_feedback
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -405,30 +405,30 @@
             }            
         
         {
-            - firstCharacterPossibleStates has Triangolo:
+            - firstChar_possibleStates has Triangolo:
                 Hai aiutato {charNameOne} a riscoprire il suo lato più pratico, razionale.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
                 Non quello di cui aveva bisogno, temo.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
                 Ma per essere la tua prima riscrittura hai dato davvero il massimo.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
                 Il resto, è colpa dei miei consigli imperfetti.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sorry
                 Spero mi concederai il tempo di migliorarmi.
                 
-            - firstCharacterPossibleStates has RagazzaOrchestra:
+            - firstChar_possibleStates has RagazzaOrchestra:
                 {charNameOne} ora sa di possedere un'idole più attiva, e anche oppositiva se serve.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
                 Forse avrei potuto guidarti meglio, non sono sicura che sia la natura più vicina al suo cuore.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sorry
                 Ma faremo meglio la prossima volta.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
                 
-            - firstCharacterPossibleStates has FlautoDolce:
+            - firstChar_possibleStates has FlautoDolce:
                 Grazie al tuo lavoro, {charNameOne} ha scoperto che gli affetti sono la cosa per lei fondamentale.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
                 Forse qualcosa che sapeva già.
                 Forse ora sta meglio, giusto?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
                 Questo è il massimo che potevamo fare per lei, vero?
                 
-            - firstCharacterPossibleStates has Ocarina:
+            - firstChar_possibleStates has Ocarina:
                 {charNameOne} ha trovato nella giocosità uno sblocco, ed è pronta ad abbandonarsi alla sua creatività.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
                 E chi sono io per giudicare cosa fa star bene un'altra persona?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sorry
                 E indubbiamente sembra molto più felice di quando è arrivata.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
                 
-            - firstCharacterPossibleStates has Violino:
+            - firstChar_possibleStates has Violino:
                 {charNameOne} aveva bisogno di riconoscere che per lei la vita ha senso solo con uno scopo più grande, e grazie a te, ce l'ha fatta.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
                 Abbiamo fatto un grande lavoro assieme, {player_name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
                 Non vedo l'ora di aiutare la prossima persona con te!
@@ -450,7 +450,7 @@
                 -> main
           
 === second_character_feedback
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -523,7 +523,7 @@
             -> main
    
    === third_character_feedback
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -533,7 +533,7 @@
     -> main
    
 === fourth_character_feedback
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -543,7 +543,7 @@
         -> main
     
 === fifth_character_feedback
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -554,7 +554,7 @@
     
 //Storylets di commentario
     === growing_witch_storylet
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameThree = translator(thirdCharacterState)
         ~ temp charNameFour= translator(fourthCharacterState)
@@ -573,7 +573,7 @@
     
 //Storylets sul secondo personaggio
     === that_little_liar_storylet
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
         
@@ -623,7 +623,7 @@
     
     
     === addressing_violence
-        ~ temp charNameOne = translator(firstCharacterState)
+        ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondCharacterState)
         ~ temp charNameFive = translator(fifthCharacterState)
     //Creare uno storylet che si attiva con mentore dopo knowing_second_character.two (tenendo conto che potrebbe esserci già stato o meno uno scambio su questa cosa a seconda che riccio e mentore siano stati vicini dopo "not_talk", e che questa condizione è tracciata da riccioMentoreViciniColpo) e che ci permetta di interagire con lei in merito allo strattone che ha dato a Riccio
@@ -734,7 +734,7 @@ Mentore sbrocca
     Salvati questo codice, e inseriscilo poi nel documento del testing.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
     O se non hai voglia di rispondere alle domande mandamelo attraverso Queerginia: faresti molto felice entrambe.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Other)} #portrait:mentore_bored
     - (repeat)
-    Il codice è {player_purple} - {player_yellow} - {player_blue} - {player_green}- {player_red}; {player_firstStepStatus}; {player_secondStepStatus}; {firstCharacterState}; {secondCharacterState}.
+    Il codice è {player_purple} - {player_yellow} - {player_blue} - {player_green}- {player_red}; {player_firstStepStatus}; {player_secondStepStatus}; {firstChar_ActualName}; {secondCharacterState}.
     E se non te lo sei {player_pronouns has him:segnato|{player_pronouns has her:segnata|segnatə}}, potrai sempre trovarlo uscendo dal gioco.
     Grazie di cuore.
         -> talk_with_mentor

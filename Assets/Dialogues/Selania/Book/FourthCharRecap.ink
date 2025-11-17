@@ -1,7 +1,7 @@
 === fourth_character_recap
 + (check){are_two_entities_together(FourthRecap, PG)} [FourthRecap]
     ~ enableBigDialogue()
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)

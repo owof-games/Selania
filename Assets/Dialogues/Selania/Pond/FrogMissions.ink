@@ -1,6 +1,6 @@
 //Missioni    
 === mission_one
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
@@ -15,7 +15,7 @@
     
     
 === mission_two
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
@@ -32,7 +32,7 @@
     
     
 === mission_three
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
@@ -48,7 +48,7 @@
 
 
 === mission_four
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
@@ -63,7 +63,7 @@
 
 
 === mission_five
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
@@ -80,7 +80,7 @@
 
 
 === mission_six
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
@@ -93,7 +93,7 @@
 
 
 === mission_seven
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
@@ -107,7 +107,7 @@
     -> main
 
 === mission_eight
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
@@ -120,7 +120,7 @@
 
 
 === special_mission_one
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
@@ -136,7 +136,7 @@
     
     
 === special_mission_two
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
 
@@ -149,7 +149,7 @@
 
     
 === special_mission_three
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
@@ -163,7 +163,7 @@
     -> main    
  
 === special_mission_four
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     

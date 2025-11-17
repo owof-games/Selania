@@ -15,7 +15,7 @@
 {debug: passo da fromRelationshipToInk.}
 
     {
-        - Relationship == firstCharStateRelationship:
+        - Relationship == firstChar_relationshipStatus:
             ~ Ink = firstChar_InkLevel
         
         - Relationship == secondCharStateRelationship:
@@ -87,7 +87,7 @@
             Dopo il dono consegnato e il rapporto creato, {player_name} ha quattro goccie di inchiostro a disposizione. Potrà fare la riscrittura garantita e altri tre riscritture extra. E riceverà un'informazione importante.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 {
                     - InkLevel == firstChar_InkLevel:
-                        ~ firstCharacterSpecialEvent = true
+                        ~ firstChar_specialEvent = true
                     
                     - InkLevel == secondChar_InkLevel:
                         ~ secondCharacterSpecialEvent = true

@@ -1,7 +1,7 @@
 === greenhouse_recap
 + (check){are_two_entities_together(GreenhouseRecap, PG)} [GreenhouseRecap]
     ~ enableBigDialogue()
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)

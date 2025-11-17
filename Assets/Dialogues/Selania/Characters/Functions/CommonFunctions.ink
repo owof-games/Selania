@@ -29,11 +29,11 @@
                 ~ mentorStory = story_storyStarted
     
         //Dopo il delay previsto, compare Chitarra.
-        - player_movementsCounter == delayFirstChar && firstStory == story_storyNotStarted:
+        - player_movementsCounter == firstChar_delay && firstChar_storyStatus == story_storyNotStarted:
         {debug: introduco {FirstCharacter} in scena.}
                 ~ move_entity(FirstCharacter, TrainStop)
                 ~ move_entity(TrainNoise, CurrentLocation)
-                ~ firstStory = story_storyStarted
+                ~ firstChar_storyStatus = story_storyStarted
                 
         //Dopo due steps della storia della prima personaggia, compare la seconda      
         - knowing_first_character.two && secondStory == story_storyNotStarted:
@@ -70,7 +70,7 @@
     
     
     //Check per l'allontanamento delle personagge
-        //- firstStory == story_storyEnded && player_movementsCounter > 10:
+        //- firstChar_storyStatus == story_storyEnded && player_movementsCounter > 10:
             //~ move_entity(FirstCharacter, Safekeeping)
             //~ move_entity(FirstCharacterNotes, TrainStop)
             
@@ -167,10 +167,10 @@
 
 
     {
-        - firstStory == story_storyStarted:
+        - firstChar_storyStatus == story_storyStarted:
             ~ movements_randomizable_characters += FirstCharacter
         
-        - firstStory == story_storyEnded:  
+        - firstChar_storyStatus == story_storyEnded:  
             ~ movements_randomizable_characters -= FirstCharacter 
     }
 
@@ -281,7 +281,7 @@
 
 {debug: passo per on_movement_events}
 //Riduzioni di contatori legati al tempo:
-    ~ firstWritingPause --
+    ~ firstChar_mailPause --
     ~ secondWritingPause --
     ~ thirdWritingPause --
     ~ fifthWritingPause --
@@ -304,24 +304,24 @@
             //Chitarra inizia a cucinare se abbiamo cucinato almeno una volta.
             {
                 - (cooking_with_first_char or cooking_with_second_char) && (not first_char_cooking_tracker):
-                        ~ firstIsCooking = true
+                        ~ kitchen_firstCharisCooking = true
                         ~ move_entity(FirstCharacter, Kitchen)
                             -> first_char_cooking_tracker 
             }
             
 
-            {debug: il valore di firstCookingTime è {firstCookingTime}}
-            {debug: il valore di firstIsCooking è {firstIsCooking}}
+            {debug: il valore di kitchen_firstCharCookingTime è {kitchen_firstCharCookingTime}}
+            {debug: il valore di kitchen_firstCharisCooking è {kitchen_firstCharisCooking}}
             {
-                - firstIsCooking == true:
+                - kitchen_firstCharisCooking == true:
                 
                     {
                     
-                        - firstCookingTime < firstCookingMaxTime:
-                            ~ firstCookingTime ++
+                        - kitchen_firstCharCookingTime < kitchen_firstCharCookingMaxTime:
+                            ~ kitchen_firstCharCookingTime ++
                         
                         - else:
-                           ~ firstIsCooking = false
+                           ~ kitchen_firstCharisCooking = false
                            ~ move_entity(FirstCharacter, Pond)
                     }
     
@@ -381,8 +381,8 @@
 
 //Avvio dialoghi di chiusura
     {
-        - firstStory == story_storyEnded:
-	        ~ firstCharEndingDialogue ++
+        - firstChar_storyStatus == story_storyEnded:
+	        ~ firstChar_exitCounter ++
 	}
 	
 	{
@@ -415,9 +415,9 @@
 //Riduzione del tempo di pausa del dialogo fino a quando non siamo a 0
 === characters_speaking
     {
-        - firstPauseTalking > 0:
-            ~ firstPauseTalking --
-            {debug: Il valore di firstPauseTalking è {firstPauseTalking}}
+        - firstChar_pauseTalking > 0:
+            ~ firstChar_pauseTalking --
+            {debug: Il valore di firstChar_pauseTalking è {firstChar_pauseTalking}}
         
         - secondPauseTalking > 0:
             ~ secondPauseTalking --
@@ -435,7 +435,7 @@
 //Qui traccio tutti gli eventi eccezionali, così li ho in un unico posto: animazioni, cambi assets e via di seguito
 
 //Comparsa lettere dopo fine delle storie (così non compaiono subito.
-    {firstCharacterPossibleStates hasnt Chitarra && first_char_story_ended.goodbye:
+    {firstChar_possibleStates hasnt Chitarra && first_char_story_ended.goodbye:
             ~ move_entity(FirstCharacterNotes, TrainStop)
             {debug: Ho messo la nota della prima personaggia alla fermata del bus.}
     }
@@ -461,7 +461,7 @@
 
     {
         - partner == FirstCharacter:
-            ~ firstPurple = firstPurple * number
+            ~ firstChar_purple = firstChar_purple * number
             ~ firstYellow = firstYellow * number
             ~ firstBlue = firstBlue * number
             ~ firstGreen = firstGreen * number

@@ -12,7 +12,7 @@
 {debug: passo da mentor_tutorial_storylets}
 {debug: valore di welcome == {welcome}}
 {debug: valore di questions == {questions}}
-~ temp charNameOne = translator(firstCharacterState)
+~ temp charNameOne = translator(firstChar_ActualName)
 //Ogni volta che parlo con Mentore, il primo check è sulla presenza o meno di tutorial. Se ci sono elementi di tutorial da condividere e le condizioni sono rispettate, a questo punto scattano per primi, ma senza darmi feedback, che verranno dati solo se non ci sono storylets di altro tipo da condividere.
     {
         //Presentazione generale
@@ -48,7 +48,7 @@
 
 === mentor_and_first_char_storylets ===
 {debug: passo da mentor_and_first_char_storylets}
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -59,7 +59,7 @@
     //Feedback
         - not first_character_feedback:
             {
-                - firstStory == story_storyEnded:
+                - firstChar_storyStatus == story_storyEnded:
                     -> first_character_feedback
                 - else:
                     -> fifth_character_storylets    
@@ -73,7 +73,7 @@
 
 === mentor_and_second_char_storylets ===
 {debug: passo da mentor_and_second_char_storylets}
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -105,7 +105,7 @@
 
 === fifth_character_storylets ===
 {debug: passo da fifth_character_storylets}
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -113,7 +113,7 @@
     
     {
     //Feedback
-        - not ending_demo && secondStory == story_storyEnded && firstStory == story_storyEnded:
+        - not ending_demo && secondStory == story_storyEnded && firstChar_storyStatus == story_storyEnded:
             -> ending_demo
         // - not third_character_feedback && thirdStory == story_storyEnded:
         //     -> third_character_feedback        

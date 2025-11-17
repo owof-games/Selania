@@ -7,7 +7,7 @@
         //Aggiornare lo stato delle cose che posso donare o meno alla PG
         {
             //Ho già fatto il dono (ed è il primo check)
-            - firstGift != () && charOneGifts hasnt charOneCultivable:
+            - firstChar_giftedObject != () && charOneGifts hasnt charOneCultivable:
                     ~ charOneGifts += charOneCultivable
     
             
@@ -39,7 +39,7 @@
 === autonomy_mission_verify ===
 //Verifico quante missioni autonome ha fatto la giocatrice.
 {frogDebug: passo da autonomy_mission_verify.}
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -140,7 +140,7 @@
 {frogDebug: passo da missions_dispatcher.}
 {frogDebug: currentMissionAboutChar == {currentMissionAboutChar}.}
 //Alla fine le missioni sono scollegate dai doni, e sono letteralmente scritte secondo bisogno.
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour = translator(fourthCharacterState)
@@ -164,9 +164,9 @@
                 -> mission_three
             - 4 && availableMissions has missionFour:
                 -> mission_four
-            - 5 && availableMissions has missionFive && (firstStory == story_storyStarted) && (secondStory == story_storyStarted):
+            - 5 && availableMissions has missionFive && (firstChar_storyStatus == story_storyStarted) && (secondStory == story_storyStarted):
                 -> mission_five
-            - 6 && availableMissions has missionSix && ((firstStory == story_storyEnded) or (secondStory == story_storyEnded) or (thirdStory == story_storyEnded)):
+            - 6 && availableMissions has missionSix && ((firstChar_storyStatus == story_storyEnded) or (secondStory == story_storyEnded) or (thirdStory == story_storyEnded)):
                 -> mission_six
             - 7 && availableMissions has missionSeven && (trainStopContents has FirstCharacterNotes) or (trainStopContents has SecondCharacterNotes):
                 -> mission_seven
@@ -184,7 +184,7 @@
 
 === closed_mission_verify
 {frogDebug: passo da closed_mission_verify. Il valore di activeMissions è {activeMissions}.}
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)
@@ -515,7 +515,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
 === witch_frog_mission_notifier
 //Questa è la notifica della "strega" se chiudiamo una missione
 {frogDebug: passo da witch_frog_mission_notifier.}
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameThree = translator(thirdCharacterState)
     ~ temp charNameFour= translator(fourthCharacterState)

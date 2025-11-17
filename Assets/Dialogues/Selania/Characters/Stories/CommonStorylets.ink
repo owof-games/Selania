@@ -1,5 +1,5 @@
 === first_second_chit_chat
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
 
@@ -75,13 +75,13 @@
     Tipo, a dove farmi un pisolino.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
             -> main
             
-            ~ firstPauseTalking = firstCharPauseDuration
-            ~ justTalkedFirstChar = true
+            ~ firstChar_pauseTalking = firstChar_pauseDuration
+            ~ firstChar_justTalked = true
             ~ secondPauseTalking = secondCharPauseDuration
             ~ justTalkedSecondChar = true
 
 === about_violence_and_peace
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     
@@ -114,7 +114,7 @@
 
 
 === special_mission_one_dialogue
-    ~ temp charNameOne = translator(firstCharacterState)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondCharacterState)
     ~ temp charNameFive = translator(fifthCharacterState)
     Questa conversazione è generata dalla missione della rana. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
