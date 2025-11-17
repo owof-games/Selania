@@ -2,7 +2,7 @@
 
 //Per abilitare o meno i debug
     VAR debug = false
-    VAR debugCultivable = false
+    VAR debug_cultivable = false
     VAR debugChangeName = false
     VAR kitchenDebug = false
     VAR nestDebug = false
