@@ -57,5 +57,5 @@
                                     
                                      ----------------------------------*/
                                      
-    VAR tiredFrog = 0
-    VAR maxTiredFrog = 3
+    VAR frog_tiredValue = 0
+    VAR frog_maxTiredValue = 3

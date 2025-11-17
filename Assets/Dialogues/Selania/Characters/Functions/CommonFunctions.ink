@@ -288,7 +288,7 @@
     
     ~ lastMindfulness --
     
-    ~ tiredFrog --
+    ~ frog_tiredValue --
     
 
     

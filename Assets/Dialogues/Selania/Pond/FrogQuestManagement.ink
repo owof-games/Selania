@@ -396,11 +396,11 @@
  ~ temp dice = RANDOM(1,5)
  
 {
-    - tiredFrog != 0:
+    - frog_tiredValue != 0:
         -> top
         
     - dice == 5:
-        ~ tiredFrog = maxTiredFrog
+        ~ frog_tiredValue = frog_maxTiredValue
             -> top
     
     - else:
