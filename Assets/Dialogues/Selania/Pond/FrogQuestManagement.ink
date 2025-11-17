@@ -422,86 +422,86 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
 
     + {frog_recoverableCultivables has BaccaDellaAddolorata} [{ingredientTranslator(BaccaDellaAddolorata)}]
             ~  frog_aboutGiftRequest = missionObjects
-            ~  searchedCultivableRecovery = BaccaDellaAddolorata
-            ~  recoveredCultivables += BaccaDellaAddolorata
+            ~  frog_cultivableRequested = BaccaDellaAddolorata
+            ~  frog_recoveredCultivables += BaccaDellaAddolorata
             -> frog_gift_dispatcher
             
     + {frog_recoverableCultivables has BarbaDellInciampo} [{ingredientTranslator(BarbaDellInciampo)}]
             ~  frog_aboutGiftRequest = missionObjects
-            ~  searchedCultivableRecovery = BarbaDellInciampo
-            ~  recoveredCultivables += BarbaDellInciampo
+            ~  frog_cultivableRequested = BarbaDellInciampo
+            ~  frog_recoveredCultivables += BarbaDellInciampo
             -> frog_gift_dispatcher
             
     + {frog_recoverableCultivables has BastoneDellOzioso}[{ingredientTranslator(BastoneDellOzioso)}]
             ~  frog_aboutGiftRequest = missionObjects
-            ~  searchedCultivableRecovery = BastoneDellOzioso
-            ~  recoveredCultivables += BastoneDellOzioso
+            ~  frog_cultivableRequested = BastoneDellOzioso
+            ~  frog_recoveredCultivables += BastoneDellOzioso
             -> frog_gift_dispatcher
             
     + {frog_recoverableCultivables has BrinaDellImpossibile}[{ingredientTranslator(BrinaDellImpossibile)}]
             ~  frog_aboutGiftRequest = missionObjects
-            ~  searchedCultivableRecovery = BrinaDellImpossibile
-            ~  recoveredCultivables += BrinaDellImpossibile
+            ~  frog_cultivableRequested = BrinaDellImpossibile
+            ~  frog_recoveredCultivables += BrinaDellImpossibile
             -> frog_gift_dispatcher
             
     + {frog_recoverableCultivables has CantoDelleCompagne} [{ingredientTranslator(CantoDelleCompagne)}]
             ~  frog_aboutGiftRequest = missionObjects
-            ~  searchedCultivableRecovery = CantoDelleCompagne
-            ~  recoveredCultivables += CantoDelleCompagne
+            ~  frog_cultivableRequested = CantoDelleCompagne
+            ~  frog_recoveredCultivables += CantoDelleCompagne
             -> frog_gift_dispatcher
             
     + {frog_recoverableCultivables has CardoAspinato} [{ingredientTranslator(CardoAspinato)}]
             ~  frog_aboutGiftRequest = missionObjects
-            ~  searchedCultivableRecovery = CardoAspinato
-            ~  recoveredCultivables += CardoAspinato
+            ~  frog_cultivableRequested = CardoAspinato
+            ~  frog_recoveredCultivables += CardoAspinato
             -> frog_gift_dispatcher
             
     + {frog_recoverableCultivables has EderaDelleAmanti} [{ingredientTranslator(EderaDelleAmanti)}]
             ~  frog_aboutGiftRequest = missionObjects
-            ~  searchedCultivableRecovery = EderaDelleAmanti
-            ~  recoveredCultivables += EderaDelleAmanti
+            ~  frog_cultivableRequested = EderaDelleAmanti
+            ~  frog_recoveredCultivables += EderaDelleAmanti
             -> frog_gift_dispatcher
             
     + {frog_recoverableCultivables has ErbaLiccia} [{ingredientTranslator(ErbaLiccia)}]
             ~  frog_aboutGiftRequest = missionObjects
-            ~  searchedCultivableRecovery = BaccaDellaAddolorata
-            ~  recoveredCultivables += BaccaDellaAddolorata
+            ~  frog_cultivableRequested = BaccaDellaAddolorata
+            ~  frog_recoveredCultivables += BaccaDellaAddolorata
             -> frog_gift_dispatcher
             
     + {frog_recoverableCultivables has FalsaPalude} [{ingredientTranslator(FalsaPalude)}]
             ~  frog_aboutGiftRequest = missionObjects
-            ~  searchedCultivableRecovery = FalsaPalude
-            ~  recoveredCultivables += FalsaPalude
+            ~  frog_cultivableRequested = FalsaPalude
+            ~  frog_recoveredCultivables += FalsaPalude
             -> frog_gift_dispatcher
             
     + {frog_recoverableCultivables has LanaNotturna} [{ingredientTranslator(LanaNotturna)}]
             ~  frog_aboutGiftRequest = missionObjects
-            ~  searchedCultivableRecovery = LanaNotturna
-            ~  recoveredCultivables += LanaNotturna
+            ~  frog_cultivableRequested = LanaNotturna
+            ~  frog_recoveredCultivables += LanaNotturna
             -> frog_gift_dispatcher
             
     + {frog_recoverableCultivables has LicheneDegliAbissi} [{ingredientTranslator(LicheneDegliAbissi)}]
             ~  frog_aboutGiftRequest = missionObjects
-            ~  searchedCultivableRecovery = LicheneDegliAbissi
-            ~  recoveredCultivables += LicheneDegliAbissi
+            ~  frog_cultivableRequested = LicheneDegliAbissi
+            ~  frog_recoveredCultivables += LicheneDegliAbissi
             -> frog_gift_dispatcher
             
     + {frog_recoverableCultivables has NonTiScordarDiTe} [{ingredientTranslator(NonTiScordarDiTe)}]
             ~  frog_aboutGiftRequest = missionObjects
-            ~  searchedCultivableRecovery = NonTiScordarDiTe
-            ~  recoveredCultivables += NonTiScordarDiTe
+            ~  frog_cultivableRequested = NonTiScordarDiTe
+            ~  frog_recoveredCultivables += NonTiScordarDiTe
             -> frog_gift_dispatcher
             
     + {frog_recoverableCultivables has Olobino} [{ingredientTranslator(Olobino)}]
             ~  frog_aboutGiftRequest = missionObjects
-            ~  searchedCultivableRecovery = Olobino
-            ~  recoveredCultivables += Olobino
+            ~  frog_cultivableRequested = Olobino
+            ~  frog_recoveredCultivables += Olobino
             -> frog_gift_dispatcher
             
     + {frog_recoverableCultivables has LaSpazzata} [{ingredientTranslator(LaSpazzata)}]
             ~  frog_aboutGiftRequest = missionObjects
-            ~  searchedCultivableRecovery = LaSpazzata
-            ~  recoveredCultivables += LaSpazzata
+            ~  frog_cultivableRequested = LaSpazzata
+            ~  frog_recoveredCultivables += LaSpazzata
             -> frog_gift_dispatcher
             
     

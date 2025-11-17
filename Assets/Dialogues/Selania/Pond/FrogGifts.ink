@@ -389,15 +389,15 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
     = mission_objects
     //Oggetti
     {debug_frog: passo mission_objects.}
-    {debug_frog: searchedCultivableRecovery è uguale a {searchedCultivableRecovery}. Prima dell'intervento, findedGifts contiene {findedGifts}.}
+    {debug_frog: frog_cultivableRequested è uguale a {frog_cultivableRequested}. Prima dell'intervento, findedGifts contiene {findedGifts}.}
         
-        Come concordato, eccoti {ingredientTranslator(searchedCultivableRecovery)}. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+        Come concordato, eccoti {ingredientTranslator(frog_cultivableRequested)}. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         
-            ~ findedGifts += searchedCultivableRecovery
-            ~ frog_recoverableCultivables -= searchedCultivableRecovery
-            ~ searchedCultivableRecovery = ()
+            ~ findedGifts += frog_cultivableRequested
+            ~ frog_recoverableCultivables -= frog_cultivableRequested
+            ~ frog_cultivableRequested = ()
             
-        {debug_frog: Dopo l'intervento, searchedCultivableRecovery è uguale a {searchedCultivableRecovery} e findedGifts contiene {findedGifts}.}
+        {debug_frog: Dopo l'intervento, frog_cultivableRequested è uguale a {frog_cultivableRequested} e findedGifts contiene {findedGifts}.}
                 -> closed_exchange
 
 

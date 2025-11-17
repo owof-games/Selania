@@ -32,7 +32,7 @@ VAR gift_currentReceiver = ()
 + {findedGifts has BaccaDellaAddolorata} [Una bacca della Addolorata.]
     ~ findedGifts -= BaccaDellaAddolorata
     {
-        - recoveredCultivables hasnt BaccaDellaAddolorata:
+        - frog_recoveredCultivables hasnt BaccaDellaAddolorata:
         ~ frog_recoverableCultivables += BaccaDellaAddolorata
     }    
 
@@ -58,7 +58,7 @@ VAR gift_currentReceiver = ()
 + {findedGifts has BarbaDellInciampo} [Una spina di Barba dell'Inciampo.]
     ~ findedGifts -= BarbaDellInciampo
     {
-        - recoveredCultivables hasnt BarbaDellInciampo:
+        - frog_recoveredCultivables hasnt BarbaDellInciampo:
         ~ frog_recoverableCultivables += BarbaDellInciampo
     } 
     {
@@ -81,7 +81,7 @@ VAR gift_currentReceiver = ()
 + {findedGifts has BastoneDellOzioso} [Un nodo di Bastone dell'Ozioso.]
     ~ findedGifts -= BastoneDellOzioso
     {
-        - recoveredCultivables hasnt BastoneDellOzioso:
+        - frog_recoveredCultivables hasnt BastoneDellOzioso:
         ~ frog_recoverableCultivables += BastoneDellOzioso
     } 
     {
@@ -107,7 +107,7 @@ VAR gift_currentReceiver = ()
 + {findedGifts has BrinaDellImpossibile} [Un frammento di Brina dell'Impossibile.]
     ~ findedGifts -= BrinaDellImpossibile
     {
-        - recoveredCultivables hasnt BrinaDellImpossibile:
+        - frog_recoveredCultivables hasnt BrinaDellImpossibile:
         ~ frog_recoverableCultivables += BrinaDellImpossibile
     } 
 
@@ -136,7 +136,7 @@ VAR gift_currentReceiver = ()
 + {findedGifts has CantoDelleCompagne} [Una goccia di Canto delle Compagne.]
     ~ findedGifts -= CantoDelleCompagne
     {
-        - recoveredCultivables hasnt CantoDelleCompagne:
+        - frog_recoveredCultivables hasnt CantoDelleCompagne:
         ~ frog_recoverableCultivables += CantoDelleCompagne
     } 
 
@@ -164,7 +164,7 @@ VAR gift_currentReceiver = ()
 + {findedGifts has CardoAspinato} [Un ciuffo di peli di Cardo Aspinato.]
     ~ findedGifts -= CardoAspinato
     {
-        - recoveredCultivables hasnt CardoAspinato:
+        - frog_recoveredCultivables hasnt CardoAspinato:
         ~ frog_recoverableCultivables += CardoAspinato
     } 
 
@@ -193,7 +193,7 @@ VAR gift_currentReceiver = ()
 + {findedGifts has EderaDelleAmanti} [Una foglia di Edera delle amanti.]
     ~ findedGifts -= EderaDelleAmanti
     {
-        - recoveredCultivables hasnt EderaDelleAmanti:
+        - frog_recoveredCultivables hasnt EderaDelleAmanti:
         ~ frog_recoverableCultivables += EderaDelleAmanti
     } 
     {
@@ -216,7 +216,7 @@ VAR gift_currentReceiver = ()
 + {findedGifts has ErbaLiccia} [Un ricordo di Erba Liccia.]
         ~ findedGifts -= ErbaLiccia
         {
-        - recoveredCultivables hasnt ErbaLiccia:
+        - frog_recoveredCultivables hasnt ErbaLiccia:
         ~ frog_recoverableCultivables += ErbaLiccia
     } 
     {
@@ -241,7 +241,7 @@ VAR gift_currentReceiver = ()
  + {findedGifts has FalsaPalude} [Un petalo di Falsa Palude.]
     ~ findedGifts -= FalsaPalude
     {
-        - recoveredCultivables hasnt FalsaPalude:
+        - frog_recoveredCultivables hasnt FalsaPalude:
         ~ frog_recoverableCultivables += FalsaPalude
     } 
     {
@@ -263,7 +263,7 @@ VAR gift_currentReceiver = ()
   + {findedGifts has LanaNotturna} [Il calore della Lana Notturna.]
         ~ findedGifts -= LanaNotturna
         {
-        - recoveredCultivables hasnt LanaNotturna:
+        - frog_recoveredCultivables hasnt LanaNotturna:
         ~ frog_recoverableCultivables += LanaNotturna
     } 
     {
@@ -288,7 +288,7 @@ VAR gift_currentReceiver = ()
 + {findedGifts has LicheneDegliAbissi} [Una traccia dell'odore del Lichene degli Abissi.]
     ~ findedGifts -= LicheneDegliAbissi
     {
-        - recoveredCultivables hasnt LicheneDegliAbissi:
+        - frog_recoveredCultivables hasnt LicheneDegliAbissi:
         ~ frog_recoverableCultivables += LicheneDegliAbissi
     } 
 
@@ -316,7 +316,7 @@ VAR gift_currentReceiver = ()
 + {findedGifts has NonTiScordarDiTe} [L'impronta del Non Ti Scordar di Te.]
     ~ findedGifts -= NonTiScordarDiTe
     {
-        - recoveredCultivables hasnt NonTiScordarDiTe:
+        - frog_recoveredCultivables hasnt NonTiScordarDiTe:
         ~ frog_recoverableCultivables += NonTiScordarDiTe
     } 
 
@@ -345,7 +345,7 @@ VAR gift_currentReceiver = ()
 + {findedGifts has Olobino} [Una cappello di Olobino.]
     ~ findedGifts -= Olobino
     {
-        - recoveredCultivables hasnt Olobino:
+        - frog_recoveredCultivables hasnt Olobino:
         ~ frog_recoverableCultivables += Olobino
     } 
     {
@@ -371,7 +371,7 @@ VAR gift_currentReceiver = ()
 + {findedGifts has LaSpazzata} [Un rametto della Spezzata.]
     ~ findedGifts -= LaSpazzata
     {
-        - recoveredCultivables hasnt LaSpazzata:
+        - frog_recoveredCultivables hasnt LaSpazzata:
         ~ frog_recoverableCultivables += LaSpazzata
     } 
     
