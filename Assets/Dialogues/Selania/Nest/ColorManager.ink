@@ -1491,10 +1491,10 @@ LIST colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
     //Prima aggiorniamo i dati a seconda dei parlanti
     {
         - currentTalker == FirstCharacter:
-            ~ firstRed += temporaryRed
-            ~ firstYellow += temporaryYellow
-            ~ firstBlue += temporaryBlue
-            ~ firstGreen += temporaryGreen
+            ~ firstChar_red += temporaryRed
+            ~ firstChar_yellow += temporaryYellow
+            ~ firstChar_blue += temporaryBlue
+            ~ firstChar_green += temporaryGreen
             ~ firstChar_purple += temporaryPurple
         
         - currentTalker == SecondCharacter:

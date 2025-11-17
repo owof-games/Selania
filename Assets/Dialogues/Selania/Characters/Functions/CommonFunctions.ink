@@ -462,10 +462,10 @@
     {
         - partner == FirstCharacter:
             ~ firstChar_purple = firstChar_purple * number
-            ~ firstYellow = firstYellow * number
-            ~ firstBlue = firstBlue * number
-            ~ firstGreen = firstGreen * number
-            ~ firstRed = firstRed * number
+            ~ firstChar_yellow = firstChar_yellow * number
+            ~ firstChar_blue = firstChar_blue * number
+            ~ firstChar_green = firstChar_green * number
+            ~ firstChar_red = firstChar_red * number
             
     
         - partner == SecondCharacter:

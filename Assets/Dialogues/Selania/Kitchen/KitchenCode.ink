@@ -479,14 +479,14 @@
         - cookingCompanion == FirstCharacter:
             ~ storagePurple = firstChar_purple
                 ~ firstChar_purple = 0
-            ~ storageYellow = firstYellow
-                ~ firstYellow = 0
-            ~ storageBlue = firstBlue
-                ~ firstBlue = 0
-            ~ storageGreen = firstGreen
-                ~ firstGreen = 0
-            ~ storageRed = firstRed
-                ~ firstRed = 0
+            ~ storageYellow = firstChar_yellow
+                ~ firstChar_yellow = 0
+            ~ storageBlue = firstChar_blue
+                ~ firstChar_blue = 0
+            ~ storageGreen = firstChar_green
+                ~ firstChar_green = 0
+            ~ storageRed = firstChar_red
+                ~ firstChar_red = 0
     
         - cookingCompanion == SecondCharacter:
             ~ storagePurple = secondPurple
@@ -512,13 +512,13 @@
         - cookingCompanion == FirstCharacter:
             ~ firstChar_purple = firstChar_purple + storagePurple
                 ~ storagePurple = 0
-            ~ firstYellow = firstYellow + storageYellow
+            ~ firstChar_yellow = firstChar_yellow + storageYellow
                 ~ storageYellow = 0
-            ~ firstBlue = firstBlue + storageBlue
+            ~ firstChar_blue = firstChar_blue + storageBlue
                 ~ storageBlue = 0
-            ~ firstGreen = firstGreen + storageGreen
+            ~ firstChar_green = firstChar_green + storageGreen
                 ~ storageGreen = 0
-            ~ firstRed = firstRed + storageRed
+            ~ firstChar_red = firstChar_red + storageRed
                 ~ storageRed = 0
     
     - cookingCompanion == SecondCharacter:

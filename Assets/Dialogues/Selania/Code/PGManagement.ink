@@ -167,10 +167,10 @@
 
     {
         - charES == player_firstStepClosed:
-            ~ temp_endedPNGRed = firstRed
-            ~ temp_endedPNGGreen = firstGreen
-            ~ temp_endedPNGBlue = firstBlue
-            ~ temp_endedPNGYellow = firstYellow
+            ~ temp_endedPNGRed = firstChar_red
+            ~ temp_endedPNGGreen = firstChar_green
+            ~ temp_endedPNGBlue = firstChar_blue
+            ~ temp_endedPNGYellow = firstChar_yellow
             ~ temp_endedPNGPurple = firstChar_purple
             
         - charES == player_secondStepClosed:

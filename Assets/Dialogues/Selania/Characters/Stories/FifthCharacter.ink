@@ -732,14 +732,14 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         Ho realizzato una cosa, una cosa su noi due.
             -> secondAffinityCalc ->
         {
-        - firstChar_purple && firstYellow > firstBlue: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
+        - firstChar_purple && firstChar_yellow > firstChar_blue: Sento ancora la mancanza di Talco, ma con te mi sento come se fossimo parte da sempre della stessa band.
         {charNameFive} vede {player_name} come una persona amica e fidata.
         
-        -firstChar_purple or firstYellow > firstBlue:Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
+        -firstChar_purple or firstChar_yellow > firstChar_blue:Ci sono momenti in cui cantiamo all'unisono, ed è bello. Mi sento ascoltata.
         
         {charNameFive} si trova bene con {player_name}.
         
-        - firstChar_purple && firstYellow < firstBlue: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
+        - firstChar_purple && firstChar_yellow < firstChar_blue: Facciamo parte di due cori diversi, vero? Non credo tu abbia preso una sola delle mie note.
         
         {charNameFive} non si è sentita capita da {player_name}.
         
@@ -759,7 +759,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
 
     = statement
     ~ temp charNameFive = translator(fifthCharacterState)
-        A seguito del rapporto che {player_name} ha creato con {charNameFive} {firstChar_purple && firstYellow > firstBlue: l'inchiostro è aumentato di due unità.|{firstChar_purple or firstYellow > firstBlue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.
+        A seguito del rapporto che {player_name} ha creato con {charNameFive} {firstChar_purple && firstChar_yellow > firstChar_blue: l'inchiostro è aumentato di due unità.|{firstChar_purple or firstChar_yellow > firstChar_blue: l'inchiostro è aumentato di una unità|l'inchiostro non ha subito variazioni}}.
         //Sopra ho già aggiornato il livello di inchiostro e quindi di affinità.
             ~ inkLevel(secondChar_InkLevel)
         + [Voglio cominciare la riscrittura.]
