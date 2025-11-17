@@ -33,7 +33,7 @@ VAR gift_currentReceiver = ()
     ~ findedGifts -= BaccaDellaAddolorata
     {
         - recoveredCultivables hasnt BaccaDellaAddolorata:
-        ~ recoverableCultivables += BaccaDellaAddolorata
+        ~ frog_recoverableCultivables += BaccaDellaAddolorata
     }    
 
     {
@@ -59,7 +59,7 @@ VAR gift_currentReceiver = ()
     ~ findedGifts -= BarbaDellInciampo
     {
         - recoveredCultivables hasnt BarbaDellInciampo:
-        ~ recoverableCultivables += BarbaDellInciampo
+        ~ frog_recoverableCultivables += BarbaDellInciampo
     } 
     {
         - gift_currentReceiver has FirstCharacter:
@@ -82,7 +82,7 @@ VAR gift_currentReceiver = ()
     ~ findedGifts -= BastoneDellOzioso
     {
         - recoveredCultivables hasnt BastoneDellOzioso:
-        ~ recoverableCultivables += BastoneDellOzioso
+        ~ frog_recoverableCultivables += BastoneDellOzioso
     } 
     {
         - gift_currentReceiver has FirstCharacter:
@@ -108,7 +108,7 @@ VAR gift_currentReceiver = ()
     ~ findedGifts -= BrinaDellImpossibile
     {
         - recoveredCultivables hasnt BrinaDellImpossibile:
-        ~ recoverableCultivables += BrinaDellImpossibile
+        ~ frog_recoverableCultivables += BrinaDellImpossibile
     } 
 
     {
@@ -137,7 +137,7 @@ VAR gift_currentReceiver = ()
     ~ findedGifts -= CantoDelleCompagne
     {
         - recoveredCultivables hasnt CantoDelleCompagne:
-        ~ recoverableCultivables += CantoDelleCompagne
+        ~ frog_recoverableCultivables += CantoDelleCompagne
     } 
 
     {
@@ -165,7 +165,7 @@ VAR gift_currentReceiver = ()
     ~ findedGifts -= CardoAspinato
     {
         - recoveredCultivables hasnt CardoAspinato:
-        ~ recoverableCultivables += CardoAspinato
+        ~ frog_recoverableCultivables += CardoAspinato
     } 
 
     {
@@ -194,7 +194,7 @@ VAR gift_currentReceiver = ()
     ~ findedGifts -= EderaDelleAmanti
     {
         - recoveredCultivables hasnt EderaDelleAmanti:
-        ~ recoverableCultivables += EderaDelleAmanti
+        ~ frog_recoverableCultivables += EderaDelleAmanti
     } 
     {
         - gift_currentReceiver has FirstCharacter:
@@ -217,7 +217,7 @@ VAR gift_currentReceiver = ()
         ~ findedGifts -= ErbaLiccia
         {
         - recoveredCultivables hasnt ErbaLiccia:
-        ~ recoverableCultivables += ErbaLiccia
+        ~ frog_recoverableCultivables += ErbaLiccia
     } 
     {
         - gift_currentReceiver has FirstCharacter:
@@ -242,7 +242,7 @@ VAR gift_currentReceiver = ()
     ~ findedGifts -= FalsaPalude
     {
         - recoveredCultivables hasnt FalsaPalude:
-        ~ recoverableCultivables += FalsaPalude
+        ~ frog_recoverableCultivables += FalsaPalude
     } 
     {
         - gift_currentReceiver has FirstCharacter:
@@ -264,7 +264,7 @@ VAR gift_currentReceiver = ()
         ~ findedGifts -= LanaNotturna
         {
         - recoveredCultivables hasnt LanaNotturna:
-        ~ recoverableCultivables += LanaNotturna
+        ~ frog_recoverableCultivables += LanaNotturna
     } 
     {
         - gift_currentReceiver has FirstCharacter:
@@ -289,7 +289,7 @@ VAR gift_currentReceiver = ()
     ~ findedGifts -= LicheneDegliAbissi
     {
         - recoveredCultivables hasnt LicheneDegliAbissi:
-        ~ recoverableCultivables += LicheneDegliAbissi
+        ~ frog_recoverableCultivables += LicheneDegliAbissi
     } 
 
     {
@@ -317,7 +317,7 @@ VAR gift_currentReceiver = ()
     ~ findedGifts -= NonTiScordarDiTe
     {
         - recoveredCultivables hasnt NonTiScordarDiTe:
-        ~ recoverableCultivables += NonTiScordarDiTe
+        ~ frog_recoverableCultivables += NonTiScordarDiTe
     } 
 
     {
@@ -346,7 +346,7 @@ VAR gift_currentReceiver = ()
     ~ findedGifts -= Olobino
     {
         - recoveredCultivables hasnt Olobino:
-        ~ recoverableCultivables += Olobino
+        ~ frog_recoverableCultivables += Olobino
     } 
     {
         - gift_currentReceiver has FirstCharacter:
@@ -372,7 +372,7 @@ VAR gift_currentReceiver = ()
     ~ findedGifts -= LaSpazzata
     {
         - recoveredCultivables hasnt LaSpazzata:
-        ~ recoverableCultivables += LaSpazzata
+        ~ frog_recoverableCultivables += LaSpazzata
     } 
     
     {

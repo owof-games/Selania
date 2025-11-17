@@ -149,7 +149,7 @@
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
          {
         - recoveredCultivables hasnt BaccaDellaAddolorata:
-        ~ recoverableCultivables += BaccaDellaAddolorata
+        ~ frog_recoverableCultivables += BaccaDellaAddolorata
     } 
             {
                 - PNG == FirstCharacter:
@@ -170,7 +170,7 @@
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
          {
         - recoveredCultivables hasnt BarbaDellInciampo:
-        ~ recoverableCultivables += BarbaDellInciampo
+        ~ frog_recoverableCultivables += BarbaDellInciampo
     } 
             {
                 - PNG == FirstCharacter:
@@ -190,7 +190,7 @@
         ~ findedGifts -= BastoneDellOzioso
          {
         - recoveredCultivables hasnt BastoneDellOzioso:
-        ~ recoverableCultivables += BastoneDellOzioso
+        ~ frog_recoverableCultivables += BastoneDellOzioso
     } 
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
@@ -211,7 +211,7 @@
         ~ findedGifts -= BrinaDellImpossibile
          {
         - recoveredCultivables hasnt BrinaDellImpossibile:
-        ~ recoverableCultivables += BrinaDellImpossibile
+        ~ frog_recoverableCultivables += BrinaDellImpossibile
     } 
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
@@ -232,7 +232,7 @@
         ~ findedGifts -= CantoDelleCompagne
          {
         - recoveredCultivables hasnt CantoDelleCompagne:
-        ~ recoverableCultivables += CantoDelleCompagne
+        ~ frog_recoverableCultivables += CantoDelleCompagne
     } 
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
@@ -253,7 +253,7 @@
         ~ findedGifts -= CardoAspinato
          {
         - recoveredCultivables hasnt CardoAspinato:
-        ~ recoverableCultivables += CardoAspinato
+        ~ frog_recoverableCultivables += CardoAspinato
     } 
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
@@ -274,7 +274,7 @@
         ~ findedGifts -= EderaDelleAmanti
         {
         - recoveredCultivables hasnt EderaDelleAmanti:
-        ~ recoverableCultivables += EderaDelleAmanti
+        ~ frog_recoverableCultivables += EderaDelleAmanti
     } 
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
@@ -295,7 +295,7 @@
         ~ findedGifts -= ErbaLiccia
          {
         - recoveredCultivables hasnt ErbaLiccia:
-        ~ recoverableCultivables += ErbaLiccia
+        ~ frog_recoverableCultivables += ErbaLiccia
     } 
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
@@ -316,7 +316,7 @@
         ~ findedGifts -= FalsaPalude
          {
         - recoveredCultivables hasnt FalsaPalude:
-        ~ recoverableCultivables += FalsaPalude
+        ~ frog_recoverableCultivables += FalsaPalude
     } 
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
@@ -337,7 +337,7 @@
         ~ findedGifts -= LanaNotturna
          {
         - recoveredCultivables hasnt LanaNotturna:
-        ~ recoverableCultivables += LanaNotturna
+        ~ frog_recoverableCultivables += LanaNotturna
     } 
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
@@ -358,7 +358,7 @@
         ~ findedGifts -= LicheneDegliAbissi
          {
         - recoveredCultivables hasnt LicheneDegliAbissi:
-        ~ recoverableCultivables += LicheneDegliAbissi
+        ~ frog_recoverableCultivables += LicheneDegliAbissi
     } 
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
@@ -379,7 +379,7 @@
         ~ findedGifts -= NonTiScordarDiTe
          {
         - recoveredCultivables hasnt NonTiScordarDiTe:
-        ~ recoverableCultivables += NonTiScordarDiTe
+        ~ frog_recoverableCultivables += NonTiScordarDiTe
     } 
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
@@ -400,7 +400,7 @@
         ~ findedGifts -= Olobino
          {
         - recoveredCultivables hasnt Olobino:
-        ~ recoverableCultivables += Olobino
+        ~ frog_recoverableCultivables += Olobino
     } 
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {
@@ -421,7 +421,7 @@
         ~ findedGifts -= LaSpazzata
          {
             - recoveredCultivables hasnt LaSpazzata:
-                ~ recoverableCultivables += LaSpazzata
+                ~ frog_recoverableCultivables += LaSpazzata
         } 
         ~ kitchen_recipePP = "aggiungere descrizione participio passato"
             {

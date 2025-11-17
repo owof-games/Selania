@@ -44,7 +44,7 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
             {debug_frog: condizioni rispettate per poter offrire la prima missione speciale.}
                 -> special_mission_one
             
-        - firstChar_storyStatus == story_storyStarted && firstChar_giftedObject == () && charOneGifts hasnt charOneCultivable:
+        - firstChar_storyStatus == story_storyStarted && firstChar_giftedObject == () && frog_firstCharObtainedGifts hasnt charOneCultivable:
             {debug_frog: condizioni rispettate per poter offrire info sul dono per Chitarra.}
                 -> autonomy_mission_verify
         
@@ -54,39 +54,39 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
                 -> special_mission_two      
     
                 
-        - firstChar_storyStatus == story_storyStarted && !ending_cooking_with_first_char && charOneGifts hasnt charOneCooking:
+        - firstChar_storyStatus == story_storyStarted && !ending_cooking_with_first_char && frog_firstCharObtainedGifts hasnt charOneCooking:
             {debug_frog: condizioni rispettate per poter offrire info sull'ingrediente per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - firstChar_storyStatus == story_storyStarted && player_accessiblePlaces has Nest && charOneGifts hasnt charOneEmotionalWord:
+        - firstChar_storyStatus == story_storyStarted && player_accessiblePlaces has Nest && frog_firstCharObtainedGifts hasnt charOneEmotionalWord:
             {debug_frog: condizioni rispettate per poter offrire info su parola per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - firstChar_storyStatus == story_storyStarted && player_accessiblePlaces has Library && charOneGifts hasnt charOneLibrary:
+        - firstChar_storyStatus == story_storyStarted && player_accessiblePlaces has Library && frog_firstCharObtainedGifts hasnt charOneLibrary:
             {debug_frog: condizioni rispettate per poter offrire info su racconto per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - secondChar_storyStatus == story_storyStarted && secondChar_giftedObject == () && charTwoGifts hasnt charTwoCultivable:
+        - secondChar_storyStatus == story_storyStarted && secondChar_giftedObject == () && frog_secondCharObtainedGifts hasnt charTwoCultivable:
             {debug_frog: condizioni rispettate per poter offrire info sul dono per Riccio.}
                 -> autonomy_mission_verify
                 
-        - secondChar_storyStatus == story_storyStarted && !ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking:
+        - secondChar_storyStatus == story_storyStarted && !ending_cooking_with_second_char && frog_secondCharObtainedGifts hasnt charTwoCooking:
             {debug_frog: condizioni rispettate per poter offrire info su ingrediente per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - secondChar_storyStatus == story_storyStarted && player_accessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord:
+        - secondChar_storyStatus == story_storyStarted && player_accessiblePlaces has Nest && frog_secondCharObtainedGifts hasnt charTwoEmotionalWord:
             {debug_frog: condizioni rispettate per poter offrire info sul dono per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - secondChar_storyStatus == story_storyStarted && player_accessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary:
+        - secondChar_storyStatus == story_storyStarted && player_accessiblePlaces has Library && frog_secondCharObtainedGifts hasnt charTwoLibrary:
             {debug_frog: condizioni rispettate per poter offrire info su parola per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - (recoverableCultivables!= ()):
+        - (frog_recoverableCultivables!= ()):
             {debug_frog: condizioni rispettate per poter offrire info su racconto per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - LIST_COUNT(charOneGifts) == 4 && LIST_COUNT(charTwoGifts) == 4 && frog_availableSpecialMissions == ():
+        - LIST_COUNT(frog_firstCharObtainedGifts) == 4 && LIST_COUNT(frog_secondCharObtainedGifts) == 4 && frog_availableSpecialMissions == ():
             Non ho più niente da offrirti {player_name}. Ora è tutto nelle tue mani#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 -> main
         
