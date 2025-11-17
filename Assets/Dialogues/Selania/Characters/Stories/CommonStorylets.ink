@@ -106,7 +106,7 @@
     Però va bene così.
     Ora ho voglia solo di cercare qualcosa da mangiare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             ~ change_entity_place(SecondCharacter)
-            ~ fifthPauseTalking = fifthCharPauseDuration
+            ~ fifthChar_pauseTalking = fifthChar_pauseDuration
             ~ secondChar_pauseTalking = secondChar_pauseDuration
             ~ secondChar_justTalked = true
 -> main
@@ -144,7 +144,7 @@
     Finisce la scena. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         ~ secondChar_pauseTalking = secondChar_pauseDuration
         ~ secondChar_justTalked = true
-        ~ fifthPauseTalking = fifthCharPauseDuration
+        ~ fifthChar_pauseTalking = fifthChar_pauseDuration
     -> main
     
 

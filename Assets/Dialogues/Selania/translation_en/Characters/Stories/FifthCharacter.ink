@@ -39,9 +39,9 @@
         + {(pre_test && not little_storylets.voices) or (firstCharacterInkLevel has High && not little_storylets.infoImpo) or (talking_fungus.first_story_ended_check && not little_storylets.talkingFungus) or (welcoming_frog && not little_storylets.talkingFrog)}[Mi è successa una cosa strana.]
             -> little_storylets
             
-        + {knowing_second_character && fifthPauseTalking == 0}[Vorrei conoscerti meglio.]
+        + {knowing_second_character && fifthChar_pauseTalking == 0}[Vorrei conoscerti meglio.]
             // {
-            //     - fifthPauseTalking == 0:
+            //     - fifthChar_pauseTalking == 0:
                     -> talk_with_fifth_character
                 
             //     - else:
@@ -162,7 +162,7 @@
             -
         Ma devo assolutamente sistemare la schedule delle attività della giornata.
         {charNameFive}: Grazie per la chiacchierata, {name}.
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthChar_pauseTalking = fifthCharPauseDurantion
             -> main
     
     = two
@@ -219,7 +219,7 @@
         {charNameFive}: Sei qui per aiutare le altre persone, e finisci per scoprire cose di te.
         {charNameFive}: Ma ora è il momeno di svuotare lo stagno dalle sue cose più schifose.
         {charNameFive}: Prega per me, {name}.
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthChar_pauseTalking = fifthCharPauseDurantion
                 -> main
 
 
@@ -272,7 +272,7 @@
             {charNameFive}: Ma basta con questo spirito malinconico!
             {charNameFive}: Mi sono appena ricordata che ci sono delle erbacce fastidiose sotto la poltrona della biblioteca,
             {charNameFive}: Devo inventarmi un modo per liberarmene!
-                ~ fifthPauseTalking = fifthCharPauseDurantion
+                ~ fifthChar_pauseTalking = fifthCharPauseDurantion
                     -> main
     
     
@@ -340,7 +340,7 @@
         {charNameFive}: Non può essere emotiva.
         {charNameFive}: Vado a riordinare in ordine di data i libri in biblioteca.
         
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthChar_pauseTalking = fifthCharPauseDurantion
             -> main
     = five
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
@@ -408,7 +408,7 @@
                     ~ fifthPurple ++
  
             -
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthChar_pauseTalking = fifthCharPauseDurantion
         
         {charNameFive}: A volte sono solo una sciocca romantica.
         {charNameFive}: E mi dimentico che l'amore è ovunque.
@@ -417,7 +417,7 @@
         {charNameFive}: Amore per noi.
         {charNameFive}: Vado a recuperare del terriccio dal sottobosco, {name}.
         {charNameFive}: Parleremo più tardi.
-        ~ fifthPauseTalking = fifthCharPauseDurantion
+        ~ fifthChar_pauseTalking = fifthCharPauseDurantion
             -> main
     
     
@@ -449,7 +449,7 @@
             -
             //Qui potrebbe aver senso ridurre i tempi di attesa tra un dialogo e l'altro.
              ~  fifthCharPauseDurantion = 5
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthChar_pauseTalking = fifthCharPauseDurantion
             -> main
     = seven
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
@@ -476,7 +476,7 @@
                 ~ fifthPurple ++
  
             -
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthChar_pauseTalking = fifthCharPauseDurantion
             -> main        
             
             
@@ -505,7 +505,7 @@
                 ~ fifthPurple ++
  
             -
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthChar_pauseTalking = fifthCharPauseDurantion
             -> main    
     
     
@@ -534,7 +534,7 @@
                 ~ fifthPurple ++
  
             -
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthChar_pauseTalking = fifthCharPauseDurantion
             -> main    
     
     = ten
@@ -562,7 +562,7 @@
                 ~ fifthPurple ++
  
             -
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthChar_pauseTalking = fifthCharPauseDurantion
             -> main    
     
     = eleven
@@ -590,7 +590,7 @@
                 ~ fifthPurple ++
  
             -
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthChar_pauseTalking = fifthCharPauseDurantion
             -> main    
     = twelve
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
@@ -617,7 +617,7 @@
                 ~ fifthPurple ++
  
             -
-             ~ fifthPauseTalking = fifthCharPauseDurantion
+             ~ fifthChar_pauseTalking = fifthCharPauseDurantion
             -> main            
             
             
@@ -1013,25 +1013,25 @@ Placeholder
    = one
    ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     {charNameFive}Placeholder
-            ~ fifthPauseTalking = fifthCharPauseDurantion
+            ~ fifthChar_pauseTalking = fifthCharPauseDurantion
             -> main
     
     = two
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     {charNameFive}Placeholder
-            ~ fifthPauseTalking = fifthCharPauseDurantion
+            ~ fifthChar_pauseTalking = fifthCharPauseDurantion
             -> main
             
     = three
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     {charNameFive}Placeholder
-            ~ fifthPauseTalking = fifthCharPauseDurantion
+            ~ fifthChar_pauseTalking = fifthCharPauseDurantion
             -> main
             
     = four
     ~ temp charNameFive = uppercaseTranslator(fifthChar_ActualName)
     {charNameFive}Placeholder
-            ~ fifthPauseTalking = fifthCharPauseDurantion
+            ~ fifthChar_pauseTalking = fifthCharPauseDurantion
             -> main        
 
 

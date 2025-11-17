@@ -30,8 +30,8 @@
     
 
 //Variabili per mettere in pausa la conversazione. Plausibilmente per mentore sarà molto alta all'inizio.
-    VAR fifthPauseTalking = 0
-    VAR fifthCharPauseDuration = 10
+    VAR fifthChar_pauseTalking = 0
+    VAR fifthChar_pauseDuration = 10
     
 //Variabile per il countdown per la sua uscita di scena
     VAR fifthCharEndingDialogue = 0    

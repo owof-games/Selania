@@ -425,8 +425,8 @@
         - thirdChar_pauseTalking > 0:
             ~ thirdChar_pauseTalking --
         
-        - fifthPauseTalking > 0:
-            ~ fifthPauseTalking --    
+        - fifthChar_pauseTalking > 0:
+            ~ fifthChar_pauseTalking --    
     }
 ->-> 
 
