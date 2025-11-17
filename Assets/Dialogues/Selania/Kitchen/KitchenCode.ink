@@ -15,11 +15,11 @@
     VAR kitchen_tempRecipeName = ""
 
 //Storage temporaneo dei colori
-    VAR storagePurple = 0
-    VAR storageYellow = 0
-    VAR storageBlue = 0
-    VAR storageGreen = 0
-    VAR storageRed = 0
+    VAR kitchen_storagePurple = 0
+    VAR kitchen_storageYellow = 0
+    VAR kitchen_storageBlue = 0
+    VAR kitchen_storageGreen = 0
+    VAR kitchen_storageRed = 0
 
 //Storage temporaneo di altre informazioni
     VAR storageSecondStoryQuestCount = 0
@@ -477,27 +477,27 @@
 
     {
         - cookingCompanion == FirstCharacter:
-            ~ storagePurple = firstChar_purple
+            ~ kitchen_storagePurple = firstChar_purple
                 ~ firstChar_purple = 0
-            ~ storageYellow = firstChar_yellow
+            ~ kitchen_storageYellow = firstChar_yellow
                 ~ firstChar_yellow = 0
-            ~ storageBlue = firstChar_blue
+            ~ kitchen_storageBlue = firstChar_blue
                 ~ firstChar_blue = 0
-            ~ storageGreen = firstChar_green
+            ~ kitchen_storageGreen = firstChar_green
                 ~ firstChar_green = 0
-            ~ storageRed = firstChar_red
+            ~ kitchen_storageRed = firstChar_red
                 ~ firstChar_red = 0
     
         - cookingCompanion == SecondCharacter:
-            ~ storagePurple = secondChar_purple
+            ~ kitchen_storagePurple = secondChar_purple
                 ~ secondChar_purple = 0
-            ~ storageYellow = secondChar_Yellow
+            ~ kitchen_storageYellow = secondChar_Yellow
                 ~ secondChar_Yellow = 0
-            ~ storageBlue = secondChar_Blue
+            ~ kitchen_storageBlue = secondChar_Blue
                 ~ secondChar_Blue = 0
-            ~ storageGreen = secondChar_Green
+            ~ kitchen_storageGreen = secondChar_Green
                 ~ secondChar_Green = 0
-            ~ storageRed = secondChar_Red
+            ~ kitchen_storageRed = secondChar_Red
                 ~ secondChar_Red = 0
             ~ storageSecondStoryQuestCount = secondChar_storyletsForRewritingCount 
                 ~ secondChar_storyletsForRewritingCount = 0
@@ -507,31 +507,31 @@
 
 === update_colors(cookingCompanion)
 {debug_kitchen or debug: update_colors.}
-{debug_kitchen: prima di aggiornare i valori, il valore di storagePurple è {storagePurple}, di storageYellow {storageYellow}, storageBlue è {storageBlue}, di storageGreen {storageGreen}, di storageRed {storageRed}. cookingCompanion è {cookingCompanion}.}
+{debug_kitchen: prima di aggiornare i valori, il valore di kitchen_storagePurple è {kitchen_storagePurple}, di kitchen_storageYellow {kitchen_storageYellow}, kitchen_storageBlue è {kitchen_storageBlue}, di kitchen_storageGreen {kitchen_storageGreen}, di kitchen_storageRed {kitchen_storageRed}. cookingCompanion è {cookingCompanion}.}
     {
         - cookingCompanion == FirstCharacter:
-            ~ firstChar_purple = firstChar_purple + storagePurple
-                ~ storagePurple = 0
-            ~ firstChar_yellow = firstChar_yellow + storageYellow
-                ~ storageYellow = 0
-            ~ firstChar_blue = firstChar_blue + storageBlue
-                ~ storageBlue = 0
-            ~ firstChar_green = firstChar_green + storageGreen
-                ~ storageGreen = 0
-            ~ firstChar_red = firstChar_red + storageRed
-                ~ storageRed = 0
+            ~ firstChar_purple = firstChar_purple + kitchen_storagePurple
+                ~ kitchen_storagePurple = 0
+            ~ firstChar_yellow = firstChar_yellow + kitchen_storageYellow
+                ~ kitchen_storageYellow = 0
+            ~ firstChar_blue = firstChar_blue + kitchen_storageBlue
+                ~ kitchen_storageBlue = 0
+            ~ firstChar_green = firstChar_green + kitchen_storageGreen
+                ~ kitchen_storageGreen = 0
+            ~ firstChar_red = firstChar_red + kitchen_storageRed
+                ~ kitchen_storageRed = 0
     
     - cookingCompanion == SecondCharacter:
-            ~ secondChar_purple = secondChar_purple + storagePurple
-                ~ storagePurple = 0
-            ~ secondChar_Yellow = secondChar_Yellow + storageYellow
-                ~ storageYellow = 0
-            ~ secondChar_Blue = secondChar_Blue + storageBlue
-                ~ storageBlue = 0
-            ~ secondChar_Green = secondChar_Green + storageGreen
-                ~ storageGreen = 0
-            ~ secondChar_Red = secondChar_Red + storageRed
-                ~ storageRed = 0
+            ~ secondChar_purple = secondChar_purple + kitchen_storagePurple
+                ~ kitchen_storagePurple = 0
+            ~ secondChar_Yellow = secondChar_Yellow + kitchen_storageYellow
+                ~ kitchen_storageYellow = 0
+            ~ secondChar_Blue = secondChar_Blue + kitchen_storageBlue
+                ~ kitchen_storageBlue = 0
+            ~ secondChar_Green = secondChar_Green + kitchen_storageGreen
+                ~ kitchen_storageGreen = 0
+            ~ secondChar_Red = secondChar_Red + kitchen_storageRed
+                ~ kitchen_storageRed = 0
             //Non aggiungiamo le tre domande perché complica solo il conteggio finale
             ~ secondChar_storyletsForRewritingCount = storageSecondStoryQuestCount
                 ~ storageSecondStoryQuestCount = 0        
@@ -547,6 +547,6 @@
     ~ kitchen_tempRecipeName = ""
 
 
-{debug_kitchen: dopo aver aggiornato i valori, il valore di storagePurple è {storagePurple}, di storageYellow {storageYellow}, storageBlue è {storageBlue}, di storageGreen {storageGreen}, di storageRed {storageRed}. cookingCompanion è {cookingCompanion}.} 
+{debug_kitchen: dopo aver aggiornato i valori, il valore di kitchen_storagePurple è {kitchen_storagePurple}, di kitchen_storageYellow {kitchen_storageYellow}, kitchen_storageBlue è {kitchen_storageBlue}, di kitchen_storageGreen {kitchen_storageGreen}, di kitchen_storageRed {kitchen_storageRed}. cookingCompanion è {cookingCompanion}.} 
 ->->
 
