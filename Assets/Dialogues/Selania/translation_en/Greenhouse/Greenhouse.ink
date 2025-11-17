@@ -5,7 +5,7 @@
 {greenhouse == 1:<i>Eccoti nella serra.</i>|{~ <i>La serra pulsa nell'aria tiepida.|<i>C'è odore di terra e tranquillità.|<i>I vasi chiedono di essere ascoltati.|<i>Le ragnatele raccolgono risposte.|<i>Le venature del legno propongono domande.}</i>}
 
 {
-	- chosenCultivable != ():
+	- greenhouse_chosenCultivable != ():
         -> plant_check
         
     - else:
@@ -38,7 +38,7 @@
     {
     	- greenhouse_backupCultivable != ():
             {
-                - chosenCultivable != ():
+                - greenhouse_chosenCultivable != ():
                         -> plant_check
                 - else:     
                         -> cultivable_test
@@ -49,7 +49,7 @@
     }
     
     {
-	- chosenCultivable != ():
+	- greenhouse_chosenCultivable != ():
         -> plant_check
         
     - else:

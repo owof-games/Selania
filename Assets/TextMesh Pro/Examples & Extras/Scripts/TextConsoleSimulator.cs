@@ -87,13 +87,13 @@ namespace TMPro.Examples
 
             int totalWordCount = textComponent.textInfo.wordCount;
             int totalVisibleCharacters = textComponent.textInfo.characterCount; // Get # of Visible Character in text object
-            int counter = 0;
+            int greenhouse_questionsCounter = 0;
             int currentWord = 0;
             int visibleCount = 0;
 
             while (true)
             {
-                currentWord = counter % (totalWordCount + 1);
+                currentWord = greenhouse_questionsCounter % (totalWordCount + 1);
 
                 // Get last character index for the current word.
                 if (currentWord == 0) // Display no words.
@@ -111,7 +111,7 @@ namespace TMPro.Examples
                     yield return new WaitForSeconds(1.0f);
                 }
 
-                counter += 1;
+                greenhouse_questionsCounter += 1;
 
                 yield return new WaitForSeconds(0.1f);
             }

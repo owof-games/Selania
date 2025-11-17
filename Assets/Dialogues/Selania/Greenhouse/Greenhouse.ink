@@ -19,7 +19,7 @@
 
 
 {
-	- chosenCultivable != ():
+	- greenhouse_chosenCultivable != ():
         -> plant_check
         
     - else:

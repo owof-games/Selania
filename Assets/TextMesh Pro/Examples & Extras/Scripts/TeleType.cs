@@ -52,12 +52,12 @@ namespace TMPro.Examples
 
 
             int totalVisibleCharacters = m_textMeshPro.textInfo.characterCount; // Get # of Visible Character in text object
-            int counter = 0;
+            int greenhouse_questionsCounter = 0;
             int visibleCount = 0;
 
             while (true)
             {
-                visibleCount = counter % (totalVisibleCharacters + 1);
+                visibleCount = greenhouse_questionsCounter % (totalVisibleCharacters + 1);
 
                 m_textMeshPro.maxVisibleCharacters = visibleCount; // How many characters should TextMeshPro display?
 
@@ -71,7 +71,7 @@ namespace TMPro.Examples
                     yield return new WaitForSeconds(1.0f);
                 }
 
-                counter += 1;
+                greenhouse_questionsCounter += 1;
 
                 yield return new WaitForSeconds(0.05f);
             }

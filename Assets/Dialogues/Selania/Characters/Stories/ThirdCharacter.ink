@@ -301,7 +301,7 @@
             
             
     = eight
-        //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
+        //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il greenhouse_questionsCounter non sale.
     ~ temp charNameThree = translator(thirdChar_ActualName)
     
         //Presentazione.
@@ -332,7 +332,7 @@
     
     = nine
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
+    //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il greenhouse_questionsCounter non sale.
         //Presentazione.
         ~ thirdChar_storyletsForRewritingCount ++
         
@@ -360,7 +360,7 @@
     
     = ten
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
+    //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il greenhouse_questionsCounter non sale.
         //Presentazione.
         ~ thirdChar_storyletsForRewritingCount ++
         
@@ -388,7 +388,7 @@
     
     = eleven
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
+    //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il greenhouse_questionsCounter non sale.
         //Presentazione.
         ~ thirdChar_storyletsForRewritingCount ++
         
@@ -415,7 +415,7 @@
             -> main    
     = twelve
     ~ temp charNameThree = translator(thirdChar_ActualName)
-    //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
+    //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il greenhouse_questionsCounter non sale.
         //Presentazione.
         ~ thirdChar_storyletsForRewritingCount ++
         

@@ -79,7 +79,7 @@
 //Aggiorniamo lo stato relazionale                     
 === secondAffinityCalc ===
 {debug: passo da secondAffinityCalc}
-//Per il secondo personaggio la cosa che conta è coerenza. Ha bisogno di stabilità. A manoni la logica sarà: tengo conto di un counter delle domande a cui ha risposto la giocatrice e se un determinato valore è >= di counter - x allora ++, se >= counter -x-1 allora +. Probabilmente da bilanciare.
+//Per il secondo personaggio la cosa che conta è coerenza. Ha bisogno di stabilità. A manoni la logica sarà: tengo conto di un greenhouse_questionsCounter delle domande a cui ha risposto la giocatrice e se un determinato valore è >= di greenhouse_questionsCounter - x allora ++, se >= greenhouse_questionsCounter -x-1 allora +. Probabilmente da bilanciare.
 
     //In questa prima fase di testing, punterò su una soluzione di difficoltà media.
     //L'obbiettivo è: beccare almeno il 66% delle risposte.

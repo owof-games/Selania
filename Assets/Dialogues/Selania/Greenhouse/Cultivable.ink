@@ -24,7 +24,7 @@
 
 {
 
-    - chosenCultivable has BaccaDellaAddolorata:
+    - greenhouse_chosenCultivable has BaccaDellaAddolorata:
         {
             - greenhouse_growStep has stepZero:
                 ~ growthBaccaDellaAddolorata = stepZero
@@ -39,7 +39,7 @@
                  ~ growthBaccaDellaAddolorata = stepTwo
                  ~ narrativeGrowthBaccaDellaAddolorata = stepThree
         }
-    - chosenCultivable has BarbaDellInciampo:
+    - greenhouse_chosenCultivable has BarbaDellInciampo:
         {
             - greenhouse_growStep has stepZero:
                 ~ growthBarbaDellInciampo = stepZero
@@ -55,7 +55,7 @@
                  ~ narrativeGrowthBarbaDellInciampo = stepThree
         }
 
-    - chosenCultivable has BastoneDellOzioso:
+    - greenhouse_chosenCultivable has BastoneDellOzioso:
         {
             - greenhouse_growStep has stepZero:
                 ~ growthBastoneDellOzioso = stepZero
@@ -71,7 +71,7 @@
                  ~ narrativeGrowthBastoneDellOzioso = stepThree
         } 
     
-    - chosenCultivable has BrinaDellImpossibile:
+    - greenhouse_chosenCultivable has BrinaDellImpossibile:
         {
             - greenhouse_growStep has stepZero:
                 ~ growthBrinaDellImpossibile = stepZero
@@ -87,7 +87,7 @@
                  ~ narrativeGrowthBrinaDellImpossibile = stepThree
         }
 
-    - chosenCultivable has CantoDelleCompagne:
+    - greenhouse_chosenCultivable has CantoDelleCompagne:
         {
             - greenhouse_growStep has stepZero:
                 ~ growthCantoDelleCompagne = stepZero
@@ -103,7 +103,7 @@
                  ~ narrativeGrowthCantoDelleCompagne = stepThree
         }
     
-    - chosenCultivable has CardoAspinato:
+    - greenhouse_chosenCultivable has CardoAspinato:
         {
             - greenhouse_growStep has stepZero:
                 ~ growthCardoAspinato = stepZero
@@ -119,7 +119,7 @@
                  ~ narrativeGrowthCardoAspinato = stepThree
         }     
 
-    - chosenCultivable has EderaDelleAmanti:
+    - greenhouse_chosenCultivable has EderaDelleAmanti:
         {
             - greenhouse_growStep has stepZero:
                 ~ growthEderaDelleAmanti = stepZero
@@ -135,7 +135,7 @@
                  ~ narrativeGrowthEderaDelleAmanti= stepThree
         }
     
-    - chosenCultivable has ErbaLiccia:
+    - greenhouse_chosenCultivable has ErbaLiccia:
         {
             - greenhouse_growStep has stepZero:
                 ~ growthErbaLiccia = stepZero
@@ -151,7 +151,7 @@
                  ~ narrativeGrowthErbaLiccia = stepThree
         }
     
-    - chosenCultivable has FalsaPalude:
+    - greenhouse_chosenCultivable has FalsaPalude:
         {
             - greenhouse_growStep has stepZero:
                 ~ growthFalsaPalude = stepZero
@@ -167,7 +167,7 @@
                  ~ narrativeGrowthFalsaPalude = stepThree
         }     
     
-    - chosenCultivable has LanaNotturna:
+    - greenhouse_chosenCultivable has LanaNotturna:
         {
             - greenhouse_growStep has stepZero:
                 ~ growthLanaNotturna = stepZero
@@ -183,7 +183,7 @@
                  ~ narrativeGrowthLanaNotturna = stepThree
         }
         
-    - chosenCultivable has LicheneDegliAbissi:
+    - greenhouse_chosenCultivable has LicheneDegliAbissi:
         {
             - greenhouse_growStep has stepZero:
                 ~ growthLicheneDegliAbissi = stepZero
@@ -199,7 +199,7 @@
                 ~ narrativeGrowthLicheneDegliAbissi = stepThree
         }
     
-    - chosenCultivable has NonTiScordarDiTe:
+    - greenhouse_chosenCultivable has NonTiScordarDiTe:
         {
             - greenhouse_growStep has stepZero:
                 ~ growthNonTiScordarDiTe = stepZero
@@ -215,7 +215,7 @@
                  ~ narrativeGrowthNonTiScordarDiTe = stepThree
         }
     
-    - chosenCultivable has Olobino:
+    - greenhouse_chosenCultivable has Olobino:
         {
             - greenhouse_growStep has stepZero:
                 ~ growthOlobino = stepZero
@@ -231,7 +231,7 @@
                  ~ narrativeGrowthOlobino = stepThree
         }
 
-    - chosenCultivable has LaSpazzata:
+    - greenhouse_chosenCultivable has LaSpazzata:
         {
             - greenhouse_growStep has stepZero:
                 ~ growthLaSpazzata = stepZero
@@ -253,7 +253,7 @@
 
 === plant_check
 {
-    - chosenCultivable has BaccaDellaAddolorata:
+    - greenhouse_chosenCultivable has BaccaDellaAddolorata:
     {
         - narrativeGrowthBaccaDellaAddolorata == stepZero:
             -> bacca_della_addolorata.step_zero
@@ -265,7 +265,7 @@
             -> bacca_della_addolorata.step_tre
     }
 
-    - chosenCultivable has BarbaDellInciampo:
+    - greenhouse_chosenCultivable has BarbaDellInciampo:
     {
         - narrativeGrowthBarbaDellInciampo == stepZero:
             -> barba_dell_inciampo.step_zero     
@@ -277,7 +277,7 @@
             -> barba_dell_inciampo.step_tre
     } 
     
-    - chosenCultivable has BastoneDellOzioso:
+    - greenhouse_chosenCultivable has BastoneDellOzioso:
     {
         - narrativeGrowthBastoneDellOzioso == stepZero:
             -> bastone_dell_ozioso.step_zero     
@@ -289,7 +289,7 @@
             -> bastone_dell_ozioso.step_tre
     }
 
-    - chosenCultivable has BrinaDellImpossibile:
+    - greenhouse_chosenCultivable has BrinaDellImpossibile:
     {
         - narrativeGrowthBrinaDellImpossibile == stepZero:
             -> brina_dell_impossibile.step_zero     
@@ -301,7 +301,7 @@
             -> brina_dell_impossibile.step_tre
     }
 
-    - chosenCultivable has CantoDelleCompagne:
+    - greenhouse_chosenCultivable has CantoDelleCompagne:
     {
         - narrativeGrowthCantoDelleCompagne == stepZero:
             -> canto_delle_compagne.step_zero    
@@ -313,7 +313,7 @@
             -> canto_delle_compagne.step_tre
     }
     
-    - chosenCultivable has CardoAspinato:
+    - greenhouse_chosenCultivable has CardoAspinato:
     {
         - narrativeGrowthCardoAspinato == stepZero:
             -> cardo_aspinato.step_zero     
@@ -325,7 +325,7 @@
             -> cardo_aspinato.step_tre
     }
 
-    - chosenCultivable has EderaDelleAmanti:
+    - greenhouse_chosenCultivable has EderaDelleAmanti:
     {
         - narrativeGrowthEderaDelleAmanti == stepZero:
             -> edera_delle_amanti.step_zero
@@ -337,7 +337,7 @@
             -> edera_delle_amanti.step_tre
     }
     
-    - chosenCultivable has ErbaLiccia:
+    - greenhouse_chosenCultivable has ErbaLiccia:
     {
         - narrativeGrowthErbaLiccia has stepZero:
             -> erba_liccia.step_zero 
@@ -349,7 +349,7 @@
             -> erba_liccia.step_tre 
     }
 
-    - chosenCultivable has FalsaPalude:
+    - greenhouse_chosenCultivable has FalsaPalude:
     {
         - narrativeGrowthFalsaPalude has stepZero:
             -> falsa_palude.step_zero 
@@ -361,7 +361,7 @@
             -> falsa_palude.step_tre 
     }
 
-    - chosenCultivable has LanaNotturna:
+    - greenhouse_chosenCultivable has LanaNotturna:
     {
         - narrativeGrowthLanaNotturna has stepZero:
             -> lana_notturna.step_zero 
@@ -374,7 +374,7 @@
     }
         
     
-    - chosenCultivable has LicheneDegliAbissi:
+    - greenhouse_chosenCultivable has LicheneDegliAbissi:
     {
         - narrativeGrowthLicheneDegliAbissi == stepZero:
             -> lichene_degli_abissi.step_zero
@@ -386,7 +386,7 @@
             -> lichene_degli_abissi.step_tre
     }
 
-    - chosenCultivable has NonTiScordarDiTe:
+    - greenhouse_chosenCultivable has NonTiScordarDiTe:
     {
         - narrativeGrowthNonTiScordarDiTe == stepZero:
             -> non_ti_scordar_di_te.step_zero     
@@ -398,7 +398,7 @@
             -> non_ti_scordar_di_te.step_tre
     }    
 
-    - chosenCultivable has Olobino:
+    - greenhouse_chosenCultivable has Olobino:
     {
         - narrativeGrowthOlobino has stepZero:
             -> olobino.step_zero 
@@ -411,7 +411,7 @@
     }    
 
 
-    - chosenCultivable has LaSpazzata:
+    - greenhouse_chosenCultivable has LaSpazzata:
     {
         - narrativeGrowthLaSpazzata == stepZero:
             -> la_spazzata.step_zero 
@@ -431,7 +431,7 @@
 === bacca_della_addolorata
 
     = TW
-        //{chosenCultivable} affronta questo tema delicato: XYZ.
+        //{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
         //Te la senti di farla crescere, o preferisci cambiare?
         //        + [Voglio andare avanti.]
         //    -> step_zero
@@ -487,7 +487,7 @@
 === barba_dell_inciampo
 
     = TW
-        ////{chosenCultivable} affronta questo tema delicato: XYZ.
+        ////{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
         //Te la senti di farla crescere, o preferisci cambiare?
         //        + [Voglio andare avanti.]
         //    -> step_zero
@@ -544,7 +544,7 @@
 === bastone_dell_ozioso
 
     = TW
-        ////{chosenCultivable} affronta questo tema delicato: XYZ.
+        ////{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
         //Te la senti di farla crescere, o preferisci cambiare?
         //        + [Voglio andare avanti.]
         //    -> step_zero
@@ -599,7 +599,7 @@
 === brina_dell_impossibile
 
     = TW
-        //{chosenCultivable} affronta questo tema delicato: XYZ.
+        //{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
         //Te la senti di farla crescere, o preferisci cambiare?
         //        + [Voglio andare avanti.]
         //    -> step_zero
@@ -649,7 +649,7 @@
 === canto_delle_compagne
 
     = TW
-        //{chosenCultivable} affronta questo tema delicato: XYZ.
+        //{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
         //Te la senti di farla crescere, o preferisci cambiare?
         //+ [Voglio andare avanti.]
         //    -> step_zero
@@ -707,7 +707,7 @@
 === cardo_aspinato
 
     = TW
-        ////{chosenCultivable} affronta questo tema delicato: XYZ.
+        ////{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
         //Te la senti di farla crescere, o preferisci cambiare?
         //        + [Voglio andare avanti.]
         //    -> step_zero
@@ -768,7 +768,7 @@
             -> tempCultTW_formula -> cultivable_test
         + (rimuovi) [Voglio rimuoverla per sempre.]
             -> remove_proposed_cultivable ->
-                ~ chosenCultivable = ()
+                ~ greenhouse_chosenCultivable = ()
             -> cultivable_test
         -
         -> step_zero
@@ -818,7 +818,7 @@
 === erba_liccia
 
     = TW
-        ////{chosenCultivable} affronta questo tema delicato: XYZ.
+        ////{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
         //Te la senti di farla crescere, o preferisci cambiare?
         //        + [Voglio andare avanti.]
         //    -> step_zero
@@ -871,7 +871,7 @@
 === falsa_palude
 
     = TW
-        ////{chosenCultivable} affronta questo tema delicato: XYZ.
+        ////{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
         //Te la senti di farla crescere, o preferisci cambiare?
         //        + [Voglio andare avanti.]
         //    -> step_zero
@@ -926,7 +926,7 @@
 === lana_notturna
 
     = TW
-        ////{chosenCultivable} affronta questo tema delicato: XYZ.
+        ////{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
         //Te la senti di farla crescere, o preferisci cambiare?
         //        + [Voglio andare avanti.]
         //    -> step_zero
@@ -979,7 +979,7 @@
 === lichene_degli_abissi
     
     = TW
-        //{chosenCultivable} affronta questo tema delicato: XYZ.
+        //{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
         //Te la senti di farla crescere, o preferisci cambiare?
         //+ [Voglio andare avanti.]
         //    -> step_zero
@@ -1040,7 +1040,7 @@
         //    -> tempCultTW_formula -> cultivable_test
         //+ [Non propormi mai più questa pianta.]
         //    -> remove_proposed_cultivable ->
-        //    ~ chosenCultivable = ()
+        //    ~ greenhouse_chosenCultivable = ()
         //    -> cultivable_test
         //-
             -> step_zero
@@ -1087,7 +1087,7 @@
 === olobino
 
     = TW
-        ////{chosenCultivable} affronta questo tema delicato: XYZ.
+        ////{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
         //Te la senti di farla crescere, o preferisci cambiare?
         //        + [Voglio andare avanti.]
         //    -> step_zero
@@ -1145,7 +1145,7 @@
 === la_spazzata
 
     = TW
-        //{chosenCultivable} affronta questo tema delicato: XYZ.
+        //{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
         //Te la senti di farla crescere, o preferisci cambiare?
         //+ [Voglio andare avanti.]
         //    -> step_zero
@@ -1219,12 +1219,12 @@
     }
     @animation:Inventory
     
-    {~ Hai raccolto|Hai ricevuto in dono|Tra le dita ti ritrovi|Nello zaino ora hai|Eccoti in dono|Eccoti} {ingredientTranslator(chosenCultivable)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    {~ Hai raccolto|Hai ricevuto in dono|Tra le dita ti ritrovi|Nello zaino ora hai|Eccoti in dono|Eccoti} {ingredientTranslator(greenhouse_chosenCultivable)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
     
-    ~ findedGifts += chosenCultivable
+    ~ findedGifts += greenhouse_chosenCultivable
     ~ growing = 0
-    ~ chosenCultivable = ()
+    ~ greenhouse_chosenCultivable = ()
     
     + {greenhouse_backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
             -> cultivable_test

@@ -17,7 +17,7 @@
 
 }
 {
-    - chosenCultivable has LicheneDegliAbissi:
+    - greenhouse_chosenCultivable has LicheneDegliAbissi:
     {
         - greenhouse_growStep has stepZero:
             ~ statoLicheneDegliAbissi = stepZero
@@ -29,7 +29,7 @@
             ~ statoLicheneDegliAbissi = stepThree
     }
 
-    - chosenCultivable has MuschioDelleAmanti:
+    - greenhouse_chosenCultivable has MuschioDelleAmanti:
     {
         - greenhouse_growStep has stepZero:
             ~ statoMuschioDelleAmanti = stepZero
@@ -41,7 +41,7 @@
              ~ statoMuschioDelleAmanti = stepThree
     }
 
-    - chosenCultivable has CantoDelleCompagne:
+    - greenhouse_chosenCultivable has CantoDelleCompagne:
     {
         - greenhouse_growStep has stepZero:
             ~ statoCantoDelleCompagne = stepZero
@@ -53,7 +53,7 @@
              ~ statoCantoDelleCompagne = stepThree
     }
 
-    - chosenCultivable has LaSpazzata:
+    - greenhouse_chosenCultivable has LaSpazzata:
     {
         - greenhouse_growStep has stepZero:
             ~ statoLaSpazzata = stepZero
@@ -65,7 +65,7 @@
             ~ statoLaSpazzata = stepThree
     }
 
-    - chosenCultivable has BaccaDellaAddolorata:
+    - greenhouse_chosenCultivable has BaccaDellaAddolorata:
     {
         - greenhouse_growStep has stepZero:
             ~ statoBaccaDellaAddolorata = stepZero
@@ -77,7 +77,7 @@
             ~ statoBaccaDellaAddolorata = stepThree
     }
 
-    - chosenCultivable has NonTiScordarDiTe:
+    - greenhouse_chosenCultivable has NonTiScordarDiTe:
     {
         - greenhouse_growStep has stepZero:
             ~ statoNonTiScordarDiTe = stepZero
@@ -89,7 +89,7 @@
             ~ statoNonTiScordarDiTe = stepThree
     }
 
-    - chosenCultivable has BrinaDellImpossibile:
+    - greenhouse_chosenCultivable has BrinaDellImpossibile:
     {
         - greenhouse_growStep has stepZero:
             ~ statoBrinaDellImpossibile = stepZero
@@ -107,7 +107,7 @@
 
 === plant_check
 {
-    - chosenCultivable has LicheneDegliAbissi:
+    - greenhouse_chosenCultivable has LicheneDegliAbissi:
     {
         - statoLicheneDegliAbissi == stepZero:
             -> lichene_degli_abissi.step_zero
@@ -119,7 +119,7 @@
             -> lichene_degli_abissi.step_tre
     }
 
-    - chosenCultivable has MuschioDelleAmanti:
+    - greenhouse_chosenCultivable has MuschioDelleAmanti:
     {
         - statoMuschioDelleAmanti == stepZero:
             -> edera_delle_amanti.step_zero
@@ -131,7 +131,7 @@
             -> edera_delle_amanti.step_tre
     }
 
-    - chosenCultivable has CantoDelleCompagne:
+    - greenhouse_chosenCultivable has CantoDelleCompagne:
     {
         - statoCantoDelleCompagne == stepZero:
             -> canto_delle_compagne.step_zero    
@@ -143,7 +143,7 @@
             -> canto_delle_compagne.step_tre
     }
 
-    - chosenCultivable has LaSpazzata:
+    - greenhouse_chosenCultivable has LaSpazzata:
     {
         - statoLaSpazzata == stepZero:
             -> la_spazzata.step_zero 
@@ -155,7 +155,7 @@
             -> la_spazzata.step_tre
     }
 
-    - chosenCultivable has BaccaDellaAddolorata:
+    - greenhouse_chosenCultivable has BaccaDellaAddolorata:
     {
         - statoBaccaDellaAddolorata == stepZero:
             -> bacca_della_addolorata.step_zero
@@ -167,7 +167,7 @@
             -> bacca_della_addolorata.step_tre
     }
 
-    - chosenCultivable has NonTiScordarDiTe:
+    - greenhouse_chosenCultivable has NonTiScordarDiTe:
     {
         - statoNonTiScordarDiTe == stepZero:
             -> non_ti_scordar_di_te.step_zero     
@@ -179,7 +179,7 @@
             -> non_ti_scordar_di_te.step_tre
     }
 
-    - chosenCultivable has BrinaDellImpossibile:
+    - greenhouse_chosenCultivable has BrinaDellImpossibile:
     {
         - statoBrinaDellImpossibile == stepZero:
             -> brina_dell_impossibile.step_zero     
@@ -225,7 +225,7 @@
                 <i>Pensi a qualcuno.</i>
                 <i>A volte c'è pace solo nell'allontanare.</i>
                     ~ growing = 0
-                    ~ chosenCultivable = ()
+                    ~ greenhouse_chosenCultivable = ()
                     {
                         - findedGifts hasnt LicheneDegliAbissi:
                         ~ findedGifts += LicheneDegliAbissi
@@ -274,7 +274,7 @@
                 <i>Perditi nel desiderio.</i>
  
                     ~ growing = 0
-                    ~ chosenCultivable = ()
+                    ~ greenhouse_chosenCultivable = ()
                     {
                         - findedGifts hasnt MuschioDelleAmanti:
                         ~ findedGifts += MuschioDelleAmanti
@@ -323,7 +323,7 @@
                 <i>Lasciando che la musica vi unisca, rendendo il mondo intero il vostro palcoscenico.</i>
                 <i>Se qualcuno avrà paura, è solo perché non sa più come ballare.</i>
                     ~ growing = 0
-                    ~ chosenCultivable = ()
+                    ~ greenhouse_chosenCultivable = ()
                     {
                         - findedGifts hasnt CantoDelleCompagne:
                         ~ findedGifts += CantoDelleCompagne
@@ -374,7 +374,7 @@
             <i>Per poi scoprire che il mondo non è finito quella volta, e non finirà oggi.</i>
             <i>Ci sono conversazioni in sospeso che vuoi affrontare.</i>
                     ~ growing = 0
-                    ~ chosenCultivable = ()
+                    ~ greenhouse_chosenCultivable = ()
                     {
                         - findedGifts hasnt LaSpazzata:
                         ~ findedGifts += LaSpazzata
@@ -417,7 +417,7 @@
             <i>Senti le tue spalle sciogliersi, l'incertezza scivolare via.</i>
             <i>Il cambiamento fa paura, ma ora ricordi come camminare.</i>
                 ~ growing = 0
-                ~ chosenCultivable = ()
+                ~ greenhouse_chosenCultivable = ()
                     {
                         - findedGifts hasnt BaccaDellaAddolorata:
                         ~ findedGifts += BaccaDellaAddolorata
@@ -466,7 +466,7 @@
             <i>Una carezza sul viso: un saluto di chi non c'è più, ma vive in te.</i>
             <i>Siete parte della stessa storia.</i>
                 ~ growing = 0
-                ~ chosenCultivable = ()
+                ~ greenhouse_chosenCultivable = ()
                 {
                         - findedGifts hasnt NonTiScordarDiTe:
                         ~ findedGifts += NonTiScordarDiTe
@@ -510,7 +510,7 @@
             <i>Riempie le ferite per permetterti di vederle, ascoltarle.</i>
             <i>Ti ricorda che non serve dimenticare per poter riprendere a vivere.</i>
                 ~ growing = 0
-                ~ chosenCultivable = ()
+                ~ greenhouse_chosenCultivable = ()
                     {
                         - findedGifts hasnt BrinaDellImpossibile:
                         ~ findedGifts += BrinaDellImpossibile
