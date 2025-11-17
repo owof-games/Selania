@@ -62,15 +62,15 @@
     
     //Varianti a dominante Giallo
     VAR nest_yellowRedWords = (GialloRosso, GialloGialloRosso, GialloRossoRosso, GialloRossoVerde, GialloRossoViola, GialloRossoBlu, GialloRossoGiallo)
-    VAR yellowBlueWords = (GialloBlu, GialloGialloBlu, GialloBluVerde, GialloBluViola, GialloBluBlu, GialloBluGiallo, GialloBluRosso)
-    VAR yellowGreenWords = (GialloVerde, GialloGialloVerde, GialloVerdeVerde, GialloVerdeViola, GialloVerdeBlu, GialloVerdeGiallo, GialloVerdeRosso)
-    VAR yellowPurpleWords = (GialloViola, GialloGialloViola, GialloViolaVerde, GialloViolaViola, GialloViolaBlu, GialloViolaGiallo, GialloViolaRosso)
+    VAR nest_yellowBlueWords = (GialloBlu, GialloGialloBlu, GialloBluVerde, GialloBluViola, GialloBluBlu, GialloBluGiallo, GialloBluRosso)
+    VAR nest_yellowGreenWords = (GialloVerde, GialloGialloVerde, GialloVerdeVerde, GialloVerdeViola, GialloVerdeBlu, GialloVerdeGiallo, GialloVerdeRosso)
+    VAR nest_yellowPurpleWords = (GialloViola, GialloGialloViola, GialloViolaVerde, GialloViolaViola, GialloViolaBlu, GialloViolaGiallo, GialloViolaRosso)
     
     //Varianti a dominate blu
-    VAR blueRedWords = (BluRosso, BluBluRosso, BluRossoVerde, BluRossoViola, BluRossoBlu, BluRossoGiallo, BluRossoRosso)
-    VAR blueYellowWords = (BluGiallo, BluBluGiallo, BluGialloVerde, BluGialloViola, BluGialloBlu, BluGialloGiallo, BluGialloRosso)
-    VAR blueGreenWords = (BluVerde, BluBluVerde, BluVerdeVerde, BluVerdeViola, BluVerdeBlu, BluVerdeGiallo, BluVerdeRosso)
-    VAR bluePurpleWords = (BluViola, BluBluViola, BluViolaVerde, BluViolaViola, BluViolaBlu, BluViolaGiallo, BluViolaRosso)
+    VAR nest_blueRedWords = (BluRosso, BluBluRosso, BluRossoVerde, BluRossoViola, BluRossoBlu, BluRossoGiallo, BluRossoRosso)
+    VAR nest_blueYellowWords = (BluGiallo, BluBluGiallo, BluGialloVerde, BluGialloViola, BluGialloBlu, BluGialloGiallo, BluGialloRosso)
+    VAR nest_blueGreenWords = (BluVerde, BluBluVerde, BluVerdeVerde, BluVerdeViola, BluVerdeBlu, BluVerdeGiallo, BluVerdeRosso)
+    VAR nest_bluePurpleWords = (BluViola, BluBluViola, BluViolaVerde, BluViolaViola, BluViolaBlu, BluViolaGiallo, BluViolaRosso)
     
     //Varianti a dominante verde
     VAR greenRedWords = (VerdeRosso, VerdeVerdeRosso, VerdeRossoVerde, VerdeRossoViola, VerdeRossoBlu, VerdeRossoGiallo, VerdeRossoRosso)
