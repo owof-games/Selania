@@ -41,8 +41,8 @@ INCLUDE Characters\Stories\FifthCharacter.ink
 INCLUDE Characters\Stories\CommonStorylets.ink
 
 //Gestione dell'inventario
-INCLUDE Inventory\Inventory.ink
-INCLUDE Inventory\InventoryManagement.ink
+INCLUDE Backpack\Backpack.ink
+INCLUDE Backpack\BackpackManagement.ink
 
 
 //Bus Stop

@@ -152,7 +152,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
                     
                     Sicuro, adorerà!
                     Te l'ho messo nell'inventario.
-                    @animation: Inventory
+                    @animation: Backpack
                     -> closed_exchange
             }
             
@@ -196,7 +196,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
                     
                     Sicuro, insaporirà alla perfezione il tuo piatto!
                     Te l'ho messo nell'inventario.
-                    @animation: Inventory
+                    @animation: Backpack
                     -> closed_exchange
                 
             }
@@ -295,7 +295,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
                     
                     Sicuro, adorerà!
                     Te l'ho messo nell'inventario.
-                    @animation: Inventory
+                    @animation: Backpack
                     -> closed_exchange
             }
             
@@ -338,7 +338,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
                     
                     Sicuro, adorerà!
                     Te l'ho messo nell'inventario.
-                    @animation: Inventory
+                    @animation: Backpack
                 
             }
                     -> closed_exchange

@@ -17,7 +17,7 @@
         ~ move_entity(RewriterBook, Forest)
         {
             - about_ink_usage.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Forest)
+                ~ move_entity(Backpack, Forest)
         }
         ~ disableBigDialogue()
         @exit_from_rewriter_book
@@ -28,7 +28,7 @@
         ~ move_entity(RewriterBook, Greenhouse)
         {
             - about_ink_usage.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Greenhouse)
+                ~ move_entity(Backpack, Greenhouse)
         }
         ~ disableBigDialogue()
         @exit_from_rewriter_book
@@ -39,7 +39,7 @@
         ~ move_entity(RewriterBook, Pond)
         {
             - about_ink_usage.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Pond)
+                ~ move_entity(Backpack, Pond)
         }
         ~ disableBigDialogue()
         @exit_from_rewriter_book
@@ -49,7 +49,7 @@
         ~ move_entity(RewriterBook, Kitchen)
         {
             - about_ink_usage.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Kitchen)
+                ~ move_entity(Backpack, Kitchen)
         }
         ~ disableBigDialogue()
         @exit_from_rewriter_book
@@ -59,7 +59,7 @@
         ~ move_entity(RewriterBook, Library)
         {
             - about_ink_usage.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Library)
+                ~ move_entity(Backpack, Library)
         }
         ~ disableBigDialogue()
         @exit_from_rewriter_book
@@ -69,7 +69,7 @@
         ~ move_entity(RewriterBook, Nest)
         {
             - about_ink_usage.sbadata or cultivable_test:
-                ~ move_entity(Inventory, Nest)
+                ~ move_entity(Backpack, Nest)
         }    
         ~ disableBigDialogue()
         @exit_from_rewriter_book
@@ -79,7 +79,7 @@
         ~ move_entity(RewriterBook, TrainStop)
         {
             - about_ink_usage.sbadata or cultivable_test:
-                ~ move_entity(Inventory, TrainStop)
+                ~ move_entity(Backpack, TrainStop)
         }
         ~ disableBigDialogue()
         @exit_from_rewriter_book

@@ -22,26 +22,26 @@ LIST sceneObjects = Bench, WateringCan , TheFungus, ReadingPlace, FirstCharacter
 LIST greenhouse_cultivable = LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile
 
 //Quit esce e salva, exit esce e basta (è l'uscita quando siamo in camera da letto. Menu Load non è nei piani perché sennò mi devo ricordare dove cavolo sono.
-LIST buttons = MenuSave, MenuQuit, RoomExit, RoomLoad, Inventory, FromBusStopToBedroom
+LIST buttons = MenuSave, MenuQuit, RoomExit, RoomLoad, Backpack, FromBusStopToBedroom
 
 
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
 VAR bedroomContents = (RoomExit, RoomLoad, PG)
 
-VAR busStopContents = (FromBusStopToForest, StartingNote, FromBusStopToBedroom, Inventory)
+VAR busStopContents = (FromBusStopToForest, StartingNote, FromBusStopToBedroom, Backpack)
 
-VAR forestContents = (Mentor, Bench, TheFungus, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat, Inventory)
+VAR forestContents = (Mentor, Bench, TheFungus, FromForestToBusStop, FromForestToGreenhouseMiddlePath, FromForestToLibraryDesat, Backpack)
 
-VAR greenhouseMiddlePathContents = (FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, Inventory)
+VAR greenhouseMiddlePathContents = (FromGreenhouseMiddlePathToForest, FromGreenhouseMiddlePathToGreenhouse, FromGreenhouseMiddlePathToNest, Backpack)
 
-VAR greenhouseContents = (FromGreenhouseToGreenhouseMiddlePath,  LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, Inventory, WateringCan)
+VAR greenhouseContents = (FromGreenhouseToGreenhouseMiddlePath,  LicheneDegliAbissi, NonTiScordarDiTe, MuschioDelleAmanti, CantoDelleCompagne, LaSpazzata, BaccaDellaAddolorata, BrinaDellImpossibile, Backpack, WateringCan)
 
-VAR libraryContents = (Inventory, FromLibraryToForest, FromLibraryToLaboratory, ReadingPlace)
+VAR libraryContents = (Backpack, FromLibraryToForest, FromLibraryToLaboratory, ReadingPlace)
 
 
-VAR nestContents = (Inventory)
+VAR nestContents = (Backpack)
 
-VAR laboratoryContents = (Inventory)
+VAR laboratoryContents = (Backpack)
 
 VAR safekeepingContents = (FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, MenuSave, MenuQuit, TheFrog, FromForestToLibrary)
 

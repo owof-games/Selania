@@ -361,7 +361,7 @@
                     Hai cucinato in autonomia, {player_name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Per questo ti dono una ingrediente universale, che potrai utilizzare per cucinare con le altre persone, e apprezzeranno sempre.
                     
-                    @animation:Inventory
+                    @animation:Backpack
                     
                     ~ backpack_findedGifts += universalIngredient
                     ~ frog_availableSpecialMissions -= specialMissionTwo

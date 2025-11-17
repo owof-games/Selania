@@ -3,10 +3,10 @@
 VAR gift_currentReceiver = ()
 
 === backpack_contents ===
-+ [Inventory]
-    {backpack_findedGifts != (): -> inventory|-> empty}
++ [Backpack]
+    {backpack_findedGifts != (): -> Backpack|-> empty}
 
-    = inventory
+    = Backpack
     <i>Hai con te {list_with_commas(backpack_findedGifts)}.</i>
     -> main
 

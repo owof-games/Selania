@@ -22401,7 +22401,7 @@ GameObject:
   - component: {fileID: 1456382450}
   - component: {fileID: 1456382449}
   m_Layer: 5
-  m_Name: Inventory
+  m_Name: Backpack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22479,7 +22479,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Inventory
+          m_StringArgument: Backpack
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1456382447
@@ -22532,7 +22532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7658d42ddfc7c845a8f9ceb40257cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myAnimationName: Inventory
+  myAnimationName: Backpack
 --- !u!95 &1456382450
 Animator:
   serializedVersion: 7

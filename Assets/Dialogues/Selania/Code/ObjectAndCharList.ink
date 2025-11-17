@@ -12,7 +12,7 @@
     
     LIST listAnimations = Birds, CloudOne, CloudTwo, CloudThree, RedBee, GoldenBee, BrownBee, LeafOneSin, LeafTwoSin, LeafThreeSin, LeafFourSin, LeafFiveSin, LeafOneDx, LeafTwoDx, LeafThreeDx, Snail, NewMoonAnim, FirstQuarterAnim, FullMoonAnim, ThirdQuarterAnim, RedMoonAnim, waterLily, FirstRipple, SecondRipple, ThirdRipple, KitchenFire, KitchenSmokeOne, KitchenSmokeTwo, KitchenSmokeThree, Bat
 
-    LIST listButtons = MenuSave, MenuQuit,  Inventory, FromTrainStopToBedroom
+    LIST listButtons = MenuSave, MenuQuit,  Backpack, FromTrainStopToBedroom
     
     LIST listBookElements = RewriterBook, BookExit, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FifthRecap, FrogRecap, DogRecap, WitchRecap, GreenhouseRecap, KitchenRecap, NestRecap, RulesRecap, SettingsBookVersion
     

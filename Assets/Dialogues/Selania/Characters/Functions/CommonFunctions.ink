@@ -396,8 +396,8 @@
             ~ move_entity(RewriterBook, currentPlace)
     }
     {
-        - safekeepingContents hasnt Inventory && currentPlace != Bedroom:
-           ~ move_entity(Inventory, currentPlace)
+        - safekeepingContents hasnt Backpack && currentPlace != Bedroom:
+           ~ move_entity(Backpack, currentPlace)
     }
 
 

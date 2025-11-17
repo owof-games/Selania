@@ -4,7 +4,7 @@ VAR gift_currentReceiver = ()
 
 
 === backpack_contents ===
-+ {are_two_entities_together(Inventory, PG) && !debug_stochastic}[Inventory]
++ {are_two_entities_together(Backpack, PG) && !debug_stochastic}[Backpack]
     ~ enableBigDialogue()
     {backpack_findedGifts != (): -> backpack ->|-> empty ->}
     ~ disableBigDialogue()
@@ -15,7 +15,7 @@ VAR gift_currentReceiver = ()
         ->->
 
     = empty
-        L'inventario è vuoto.
+        Lo zainetto è vuoto.
         ->->
 
 

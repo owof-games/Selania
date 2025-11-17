@@ -179,21 +179,21 @@
             Ora devo assolutamente spolverare le foglie della foresta.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             Questo posto collasserebbe senza me.
                 {
-                - not are_two_entities_together(Inventory, PG): Uh, che sbadata! Ti servirà di sicuro qualcosa per raccogliere gli oggetti!
+                - not are_two_entities_together(Backpack, PG): Uh, che sbadata! Ti servirà di sicuro qualcosa per raccogliere gli oggetti!
                     {
                         - forestContents has PG:
-                            ~ move_entity(Inventory, Forest)
+                            ~ move_entity(Backpack, Forest)
                         
                         - trainStopContents has PG:
-                            ~ move_entity(Inventory, TrainStop)
+                            ~ move_entity(Backpack, TrainStop)
                         
                         - pondContents has PG:
-                            ~ move_entity(Inventory, Pond)                            
+                            ~ move_entity(Backpack, Pond)                            
                     
                     }
                 - else: Noto che hai già uno zainetto con te.
                 }
-            {safekeepingContents hasnt Inventory: Ecco, prendi!| Spero non sia qualcosa che hai trovato in giro: questo posto è delicato.}
+            {safekeepingContents hasnt Backpack: Ecco, prendi!| Spero non sia qualcosa che hai trovato in giro: questo posto è delicato.}
                 - (sbadata)
             A dopo!#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry    
             

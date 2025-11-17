@@ -1217,7 +1217,7 @@
         - bookContents hasnt GreenhouseRecap:
         ~ move_entity(GreenhouseRecap, BookPlace)
     }
-    @animation:Inventory
+    @animation:Backpack
     
     {~ Hai raccolto|Hai ricevuto in dono|Tra le dita ti ritrovi|Nello zaino ora hai|Eccoti in dono|Eccoti} {ingredientTranslator(greenhouse_chosenCultivable)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
