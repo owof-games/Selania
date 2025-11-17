@@ -11,9 +11,11 @@
     VAR minStoryQuesTCountFirstChar = 7
     
     
-    VAR firstStory = StoryNotStarted
+    VAR firstStory = story_storyNotStarted
     VAR charOneEnding = ()
 
+//Attesa comparsa prima personaggia
+    VAR delayFirstChar = 2
 
 //Tracciamento della relazione
     VAR firstCharStateRelationship = 0

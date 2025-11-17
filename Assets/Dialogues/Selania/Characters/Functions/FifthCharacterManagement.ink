@@ -9,8 +9,8 @@
     VAR fifthCharacterState= Mentore
     
     //Per mentore, fifthStory sarà la parte di riscrittura, mentorStory tutta la parte di interazione come Mentore
-    VAR mentorStory = StoryNotStarted
-    VAR fifthStory = StoryNotStarted
+    VAR mentorStory = story_storyNotStarted
+    VAR fifthStory = story_storyNotStarted
     VAR charFiveEnding = () 
     
 //Tracciamento della relazione

@@ -164,9 +164,9 @@
                 -> mission_three
             - 4 && availableMissions has missionFour:
                 -> mission_four
-            - 5 && availableMissions has missionFive && (firstStory == StoryStarted) && (secondStory == StoryStarted):
+            - 5 && availableMissions has missionFive && (firstStory == story_storyStarted) && (secondStory == story_storyStarted):
                 -> mission_five
-            - 6 && availableMissions has missionSix && ((firstStory == StoryEnded) or (secondStory == StoryEnded) or (thirdStory == StoryEnded)):
+            - 6 && availableMissions has missionSix && ((firstStory == story_storyEnded) or (secondStory == story_storyEnded) or (thirdStory == story_storyEnded)):
                 -> mission_six
             - 7 && availableMissions has missionSeven && (trainStopContents has FirstCharacterNotes) or (trainStopContents has SecondCharacterNotes):
                 -> mission_seven

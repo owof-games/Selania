@@ -3,11 +3,11 @@
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
-        + {are_two_entities_together(ThirdCharacter, PG) && thirdStory == StoryStarted}[ThirdCharacter]
+        + {are_two_entities_together(ThirdCharacter, PG) && thirdStory == story_storyStarted}[ThirdCharacter]
             -> talk_with_third_character
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(ThirdCharacter, PG) && thirdStory == StoryEnded} [ThirdCharacter]
+        + {are_two_entities_together(ThirdCharacter, PG) && thirdStory == story_storyEnded} [ThirdCharacter]
             -> third_char_story_ended
         + ->
     
@@ -785,8 +785,8 @@ Stai per donare qualcosa a {charNameThree}.
             -> close  
         
     = close
-            ~ thirdStory = StoryEnded
-            ~ story_endedStories += thirdES
+            ~ thirdStory = story_storyEnded
+            ~ story_endedStories += story_thirdCharStoryEnded
             ~ thirdCharacterInkLevel = Empty
             ~ player_movementsCounter = 0
             ~ numberQuestion = 0
@@ -849,7 +849,7 @@ Stai per donare qualcosa a {charNameThree}.
 
 
 //         = intro
-//             ~ storiaUno = StoryStarted
+//             ~ storiaUno = story_storyStarted
 //             {charNameUno}: Vigilia di Natale.
 //             {charNameUno}: Per la prima volta da mesi ho tempo libero: non sto lavorando, non sto correndo da nessuna parte.
 //             {charNameUno}: Cammino lentamente col cane, andando a una cena con amici.
@@ -1301,7 +1301,7 @@ Stai per donare qualcosa a {charNameThree}.
 //                 -> evento_speciale
 //             - else:
 //                 {charNameUno}: E ora posso andarmene in pace.
-//                 ~ storiaUno = StoryEnded
+//                 ~ storiaUno = story_storyEnded
 //                 ~ player_movementsCounter = 0
 //                     -> main
 //         }
@@ -1314,7 +1314,7 @@ Stai per donare qualcosa a {charNameThree}.
 //         {charNameUno}: Fuori da qui.
 //         {charNameUno}: Dal mondo da cui provieni.
 //         {charNameUno}: Addio.                              
-//             ~ storiaUno = StoryEnded
+//             ~ storiaUno = story_storyEnded
 //                 -> main
 
 // === scelta_nome_uno
@@ -1326,7 +1326,7 @@ Stai per donare qualcosa a {charNameThree}.
 //          ~ effettivoStatoPersonaggiaUno = IlGuarente
 //     -
 //         ~ player_movementsCounter = 0
-//         ~ storiaUno = StoryEnded
+//         ~ storiaUno = story_storyEnded
 //         -> main
         
      

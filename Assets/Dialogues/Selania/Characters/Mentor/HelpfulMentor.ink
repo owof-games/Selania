@@ -15,7 +15,7 @@
             -> myself
         + [Vorrei consigli su come stare meglio.]
             -> mindfulness -> support
-        + {secondStory == StoryEnded && firstStory == StoryEnded} [Mi ridaresti il codice della demo?]
+        + {secondStory == story_storyEnded && firstStory == story_storyEnded} [Mi ridaresti il codice della demo?]
             -> ending_demo.repeat
         + [Vorrei parlare d'altro.]
             -> talk_with_mentor

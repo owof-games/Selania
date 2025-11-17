@@ -9,8 +9,11 @@
     VAR fourthCharacterState = Mondatrice
     
     
-    VAR fourthStory = StoryNotStarted
+    VAR fourthStory = story_storyNotStarted
     VAR charFourEnding = ()
+    
+//Attesa comparsa quarta personaggia
+    VAR delayFourthChar = 4    
 
 //Tracciamento della relazione
     VAR fourthCharStateRelationship = 0

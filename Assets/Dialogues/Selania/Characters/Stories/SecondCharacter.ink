@@ -3,11 +3,11 @@
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
-        + {are_two_entities_together(SecondCharacter, PG) && secondStory == StoryStarted}[SecondCharacter]
+        + {are_two_entities_together(SecondCharacter, PG) && secondStory == story_storyStarted}[SecondCharacter]
             -> talk_with_second_character
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(SecondCharacter, PG) && secondStory == StoryEnded} [SecondCharacter]
+        + {are_two_entities_together(SecondCharacter, PG) && secondStory == story_storyEnded} [SecondCharacter]
             -> second_char_story_ended
         + ->
     
@@ -118,7 +118,7 @@
         
         //Cucinare assieme
         + {open_the_kitchen && not cooking_with_second_char && secondIsCooking==false}[Ti va di cucinare qualcosa assieme?]
-                ~ changeLocationTimer = 0
+                ~ movements_changeLocationTimer = 0
                 
             {
                 - kitchenContents has FirstCharacter: Uh, mi sa che la cucina è occupata da {charNameOne}, sta cucinando qualcosa di strano.
@@ -156,7 +156,7 @@
                     - else:
                         Ehi {player_name}! Troviamoci alla foresta. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                             ~ move_entity(SecondCharacter, Forest)
-                            ~ changeLocationTimer = 0
+                            ~ movements_changeLocationTimer = 0
                                 -> main    
                } 
                
@@ -169,7 +169,7 @@
                     - else:
                         Ehi {player_name}! Vediamoci in biblioteca. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                             ~ move_entity(SecondCharacter, Library)
-                            ~ changeLocationTimer = 0
+                            ~ movements_changeLocationTimer = 0
                                 -> main    
               }
                     
@@ -1848,7 +1848,7 @@
         Continua.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         
             {
-                - firstStory!=StoryEnded:{player_name} ha utilizzato la sua prima unità di inchiostro per compiere una riscrittura. L'inchiostro ora si è consumato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - firstStory!=story_storyEnded:{player_name} ha utilizzato la sua prima unità di inchiostro per compiere una riscrittura. L'inchiostro ora si è consumato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }        
 
             {
@@ -1901,7 +1901,7 @@
         Mmm, posso pensarci.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         
             {
-                - firstStory!=StoryEnded:{player_name} ha utilizzato la sua seconda unità di inchiostro per procedere con la riscrittura. Il boccetto ora è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - firstStory!=story_storyEnded:{player_name} ha utilizzato la sua seconda unità di inchiostro per procedere con la riscrittura. Il boccetto ora è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }         
         
             {
@@ -1952,7 +1952,7 @@
         Ok...#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         
             {
-                - firstStory!=StoryEnded:{player_name} ha utilizzato la terza unità di inchiostro, proponendo una riscruttura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - firstStory!=story_storyEnded:{player_name} ha utilizzato la terza unità di inchiostro, proponendo una riscruttura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }         
         
             {
@@ -2009,7 +2009,7 @@
         ...#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondCharacterInkLevel)} #inkB:{ink_tag_b(secondCharacterInkLevel)}  #inkC:{ink_tag_c(secondCharacterInkLevel)}  #inkD:{ink_tag_d(secondCharacterInkLevel)} #portrait:riccio_neutral
         
         {
-            - firstStory!=StoryEnded:{player_name}ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            - firstStory!=story_storyEnded:{player_name}ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         }  
         
             -> ending
@@ -2021,7 +2021,7 @@
     
     Per questo ti dico:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             {
-                - firstStory != StoryEnded:{player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - firstStory != story_storyEnded:{player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }    
      
         + [Diventa il più forte, il più coraggioso.]
@@ -2151,9 +2151,9 @@
             
             ~ secondCharacterInkLevel = Empty
             ~ numberQuestion = 0
-            ~ secondStory = StoryEnded
+            ~ secondStory = story_storyEnded
             ~ player_movementsCounter = 0
-            ~ story_endedStories += secondES
+            ~ story_endedStories += story_secondCharStoryEnded
             ~ PG_advance_management(SecondCharacter)
                 -> main
     

@@ -7,7 +7,7 @@
             -> talk_with_mentor
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(Mentor, PG) && fifthStory == StoryEnded} [Mentor]
+        + {are_two_entities_together(Mentor, PG) && fifthStory == story_storyEnded} [Mentor]
             -> fifth_char_story_ended
         + ->
     
@@ -66,7 +66,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
                 -> knowing_fifth_character
                 
             //Per la mentore: dono solo dopo la fine della quarta storia, per questo metto un knot come differenziatore.
-            + {knowing_fifth_character.seven && findedGifts != () && fourthStory == StoryEnded} [Ti vorrei donare questa cosa.]
+            + {knowing_fifth_character.seven && findedGifts != () && fourthStory == story_storyEnded} [Ti vorrei donare questa cosa.]
                     -> second_story_gift
         
             //Dono fatto ma non ho avviato la main story
@@ -90,36 +90,36 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {
             //Mentore esplode
-            - are_two_entities_together(Mentor, PG) && thirdStory == StoryEnded and not mentor_rage:
+            - are_two_entities_together(Mentor, PG) && thirdStory == story_storyEnded and not mentor_rage:
                 -> mentor_rage
         }
         
         {
             - not one && tutorialPauses == false:
                 -> one
-            - not two && firstStory == StoryEnded && tutorialPauses == false:
+            - not two && firstStory == story_storyEnded && tutorialPauses == false:
                 -> two
-            - not three && firstStory == StoryEnded && tutorialPauses == false:
+            - not three && firstStory == story_storyEnded && tutorialPauses == false:
                 -> three
-            - not four && secondStory == StoryEnded && tutorialPauses == false:
+            - not four && secondStory == story_storyEnded && tutorialPauses == false:
                 -> four
-            - not five && secondStory == StoryEnded && tutorialPauses == false:
+            - not five && secondStory == story_storyEnded && tutorialPauses == false:
                 -> five
             //Forse solo una di queste, perché con la terza storia avremo degli storylets ad hoc.    
-            - not six && thirdStory == StoryStarted && tutorialPauses == false:
+            - not six && thirdStory == story_storyStarted && tutorialPauses == false:
                 -> six
             //Questo è lo storylet dove Mentore sbrocca, e che poi trasformo in quinta personaggia    
-            - not seven && thirdStory == StoryEnded && tutorialPauses == false:
+            - not seven && thirdStory == story_storyEnded && tutorialPauses == false:
                 -> seven
-            - not eight && fifthStory == StoryStarted && tutorialPauses == false:
+            - not eight && fifthStory == story_storyStarted && tutorialPauses == false:
                 -> eight
-            - not nine && fifthStory == StoryStarted && tutorialPauses == false:
+            - not nine && fifthStory == story_storyStarted && tutorialPauses == false:
                 -> nine
-            - not ten && fifthStory == StoryStarted && tutorialPauses == false:
+            - not ten && fifthStory == story_storyStarted && tutorialPauses == false:
                 -> ten
-            - not eleven && fifthStory == StoryStarted && tutorialPauses == false:
+            - not eleven && fifthStory == story_storyStarted && tutorialPauses == false:
                 -> eleven
-            - not twelve && fifthStory == StoryStarted && tutorialPauses == false:
+            - not twelve && fifthStory == story_storyStarted && tutorialPauses == false:
                 -> twelve
             - else:
                 -> talk_with_mentor.talk
@@ -172,7 +172,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
                     
  
             -
-        {((firstStory hasnt StoryEnded) && (secondStory hasnt StoryEnded)): Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di mobili rotti che blocca il sentiero a ovest della foresta.|Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+        {((firstStory hasnt story_storyEnded) && (secondStory hasnt story_storyEnded)): Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di mobili rotti che blocca il sentiero a ovest della foresta.|Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         Grazie per la chiacchierata, {player_name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthCharacterInkLevel)}#inkB:{ink_tag_b(fifthCharacterInkLevel)} #inkC:{ink_tag_c(fifthCharacterInkLevel)} #inkD:{ink_tag_d(fifthCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         
              ~ fifthPauseTalking = fifthCharPauseDuration
@@ -1006,8 +1006,8 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         -> close
     
     = close
-            ~ fifthStory = StoryEnded
-            ~ story_endedStories += fifthES
+            ~ fifthStory = story_storyEnded
+            ~ story_endedStories += story_fifthCharStoryEnded
             ~ fifthCharacterInkLevel = Empty
             ~ player_movementsCounter = 0
             ~ numberQuestion = 0

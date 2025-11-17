@@ -9,7 +9,7 @@
     
     VAR minStoryQuesTCountSecondChar = 8
     
-    VAR secondStory = StoryNotStarted
+    VAR secondStory = story_storyNotStarted
     VAR charTwoEnding = ()
 
 //Tracciamento della relazione

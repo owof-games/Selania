@@ -106,7 +106,7 @@
 
 === function PG_advance_management(charES)
 //Chiamo questa funzione a fine di una riscrittura, inserendo il valore della personaggia (es: player_firstStepClosed).
-//Controllo quante sono le storie concluse, in modo da poter inserire quella personaggia nell'ordine di conclusione delle storie previsto (es: se c'è già una storia chiusa in story_endedStories e ho chiuso player_firstStepClosed, allora metterò charOneEnding come secondEnd.
+//Controllo quante sono le storie concluse, in modo da poter inserire quella personaggia nell'ordine di conclusione delle storie previsto (es: se c'è già una storia chiusa in story_endedStories e ho chiuso player_firstStepClosed, allora metterò charOneEnding come story_twoStoriesClosed.
 
 {debug: <i>Passo per PG_advance_managemente. Il valore di charES è {charES}.}
 
@@ -116,15 +116,15 @@
 		~ player_orderGrowingTreeUpdater = player_firstStepClosed
 		{
 			- charES == FirstCharacter:
-				~ charOneEnding = firstEnd
+				~ charOneEnding = story_oneStoryClosed
 			{debug: <i>Dato che charES coincide con {charES}. Il valore di charOneEnding è {charOneEnding}.}
 			
 			- charES == SecondCharacter:
-				~ charTwoEnding = firstEnd
+				~ charTwoEnding = story_oneStoryClosed
 			{debug: <i>Dato che charES coincide con {charES}. Il valore di charTwoEnding è {charTwoEnding}.}
 						
 			- charES == ThirdCharacter:
-				~ charThreeEnding = firstEnd
+				~ charThreeEnding = story_oneStoryClosed
 			{debug: <i>Dato che charES coincide con {charES} Il valore di charThreeEnding è {charThreeEnding}.}	
 		}
 		
@@ -132,15 +132,15 @@
 		~ player_orderGrowingTreeUpdater = player_secondStepClosed
 		{
 			- charES == FirstCharacter:
-				~ charOneEnding = secondEnd
+				~ charOneEnding = story_twoStoriesClosed
 			{debug: <i>Dato che charES coincide con {charES}. Il valore di charOneEnding è {charOneEnding}.}	
 			
 			- charES == SecondCharacter:
-				~ charTwoEnding = secondEnd
+				~ charTwoEnding = story_twoStoriesClosed
 			{debug: <i>Dato che charES coincide con {charES}. Il valore di charTwoEnding è {charTwoEnding}.}	
 			
 			- charES == ThirdCharacter:
-				~ charThreeEnding = secondEnd
+				~ charThreeEnding = story_twoStoriesClosed
 			{debug: <i>Dato che charES coincide con {charES} Il valore di charThreeEnding è {charThreeEnding}.}	
 		}		
 		
@@ -149,13 +149,13 @@
 		 ~player_orderGrowingTreeUpdater = player_thirdStepClosed
 		{
 			- charES == FirstCharacter:
-				~ charOneEnding = thirdEnd
+				~ charOneEnding = story_threeStoriesClosed
 			
 			- charES == player_secondStepClosed:
-				~ charTwoEnding = thirdEnd
+				~ charTwoEnding = story_threeStoriesClosed
 			
 			- charES == ThirdCharacter:
-				~ charThreeEnding = thirdEnd	
+				~ charThreeEnding = story_threeStoriesClosed	
 		}		 
 		 
 		 

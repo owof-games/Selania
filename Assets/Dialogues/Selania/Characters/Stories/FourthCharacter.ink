@@ -3,11 +3,11 @@
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
-        + {are_two_entities_together(FourthCharacter, PG) && fourthStory == StoryStarted}[FourthCharacter]
+        + {are_two_entities_together(FourthCharacter, PG) && fourthStory == story_storyStarted}[FourthCharacter]
             -> talk_with_fourth_character
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(FourthCharacter, PG) && fourthStory == StoryEnded} [FourthCharacter]
+        + {are_two_entities_together(FourthCharacter, PG) && fourthStory == story_storyEnded} [FourthCharacter]
             -> fourth_char_story_ended
         + ->
     
@@ -782,8 +782,8 @@ Stai per donare qualcosa a {charNameThree}.
         -> close  
     
     = close
-            ~ fourthStory = StoryEnded
-            ~ story_endedStories += fourthES
+            ~ fourthStory = story_storyEnded
+            ~ story_endedStories += story_fourthCharStoryEnded
             ~ fourthCharacterInkLevel = Empty
             ~ player_movementsCounter = 0
             ~ numberQuestion = 0

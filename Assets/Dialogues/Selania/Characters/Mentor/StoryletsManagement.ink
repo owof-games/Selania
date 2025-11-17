@@ -59,7 +59,7 @@
     //Feedback
         - not first_character_feedback:
             {
-                - firstStory == StoryEnded:
+                - firstStory == story_storyEnded:
                     -> first_character_feedback
                 - else:
                     -> fifth_character_storylets    
@@ -95,7 +95,7 @@
         - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && knowing_second_character.two && (not addressing_violence):
             -> addressing_violence
         
-        - not second_character_feedback && secondStory == StoryEnded:
+        - not second_character_feedback && secondStory == story_storyEnded:
             -> second_character_feedback            
             
         - else:
@@ -113,15 +113,15 @@
     
     {
     //Feedback
-        - not ending_demo && secondStory == StoryEnded && firstStory == StoryEnded:
+        - not ending_demo && secondStory == story_storyEnded && firstStory == story_storyEnded:
             -> ending_demo
-        // - not third_character_feedback && thirdStory == StoryEnded:
+        // - not third_character_feedback && thirdStory == story_storyEnded:
         //     -> third_character_feedback        
     
-        // - not fourth_character_feedback && fourthStory == StoryEnded:
+        // - not fourth_character_feedback && fourthStory == story_storyEnded:
         //     -> fourth_character_feedback        
     
-        // - not fifth_character_feedback && fifthStory == StoryEnded:
+        // - not fifth_character_feedback && fifthStory == story_storyEnded:
         //     -> fifth_character_feedback        
         
      

@@ -23,7 +23,7 @@
     
     {
         //Check per intro
-        - not intro && ((firstStory == StoryEnded) or (secondStory == StoryEnded) or (thirdStory == StoryEnded)):
+        - not intro && ((firstStory == story_storyEnded) or (secondStory == story_storyEnded) or (thirdStory == story_storyEnded)):
             -> intro
         
         //Spiegazione del nido
@@ -33,15 +33,15 @@
     
     {
         //Check post storie dopo l'intro
-        - intro && firstStory == StoryEnded && not first_story_ended_check:
+        - intro && firstStory == story_storyEnded && not first_story_ended_check:
             -> first_story_ended_check
-        - intro && secondStory == StoryEnded && not second_story_ended_check:
+        - intro && secondStory == story_storyEnded && not second_story_ended_check:
             -> second_story_ended_check
-        - intro && thirdStory == StoryEnded && not third_story_ended_check:
+        - intro && thirdStory == story_storyEnded && not third_story_ended_check:
             -> third_story_ended_check
-        - intro && fourthStory == StoryEnded:
+        - intro && fourthStory == story_storyEnded:
             -> fourth_story_ended_check
-        - intro && fifthStory == StoryEnded:
+        - intro && fifthStory == story_storyEnded:
             -> fifth_story_ended_check    
         
         
@@ -122,11 +122,11 @@
         E il terreno ci racconta che {player_name} ha appena compiuto qualcosa di importante.
             ~ player_somethingStrange ++
                 {
-                    - not first_story_ended_check && firstStory == StoryEnded:
+                    - not first_story_ended_check && firstStory == story_storyEnded:
                         -> first_story_ended_check
-                    - not second_story_ended_check && secondStory == StoryEnded:
+                    - not second_story_ended_check && secondStory == story_storyEnded:
                         -> second_story_ended_check
-                    - not third_story_ended_check && thirdStory == StoryEnded:
+                    - not third_story_ended_check && thirdStory == story_storyEnded:
                         -> third_story_ended_check
                 }
 
@@ -346,10 +346,10 @@
 === descriptions
     {   
         //Opinioni dopo la fine di due storie    
-        - (firstStory == StoryEnded) && (secondStory == StoryEnded):
+        - (firstStory == story_storyEnded) && (secondStory == story_storyEnded):
             -> three
         //Opinioni dopo la fine di una storia     
-        - (firstStory == StoryEnded) or (secondStory == StoryEnded):
+        - (firstStory == story_storyEnded) or (secondStory == story_storyEnded):
             -> two
         //Opinioni presenti da inizio gioco    
         - else:

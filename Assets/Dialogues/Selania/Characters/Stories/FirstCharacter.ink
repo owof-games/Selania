@@ -1,12 +1,12 @@
 === first_character ===
     //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
             //Chiacchiera normale
-            + {are_two_entities_together(FirstCharacter, PG) && firstStory == StoryStarted}[FirstCharacter]
+            + {are_two_entities_together(FirstCharacter, PG) && firstStory == story_storyStarted}[FirstCharacter]
                 // -> talk_with_first_character
                     -> talk_with_first_character
 
             //Chiacchiera a fine storia
-            + {are_two_entities_together(FirstCharacter, PG) && firstStory == StoryEnded} [FirstCharacter]
+            + {are_two_entities_together(FirstCharacter, PG) && firstStory == story_storyEnded} [FirstCharacter]
                 -> first_char_story_ended
             + ->
                 -> DONE
@@ -103,7 +103,7 @@
         
         //Cucinare assieme    
             + {open_the_kitchen && not cooking_with_first_char && firstIsCooking==false}[Ti va di cucinare qualcosa assieme?]
-                ~ changeLocationTimer = 0
+                ~ movements_changeLocationTimer = 0
                 
                 {
                 
@@ -144,7 +144,7 @@
                             - else:
                                 Ehi {player_name}! Vediamoci allo stagno. Ho una cosa da mostrarti!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                                     ~ move_entity(FirstCharacter, Pond)
-                                    ~ changeLocationTimer = 0
+                                    ~ movements_changeLocationTimer = 0
                                         -> main    
                         }
             
@@ -1350,7 +1350,7 @@
             Capito. Continua.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             
             {
-                - secondStory!=StoryEnded:{player_name} ha utilizzato la sua prima unità di inchiostro per compiere una riscrittura. L'inchiostro ora si è consumato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - secondStory!=story_storyEnded:{player_name} ha utilizzato la sua prima unità di inchiostro per compiere una riscrittura. L'inchiostro ora si è consumato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
             
             
@@ -1401,7 +1401,7 @@
             Ti ascolto. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             
             {
-                - secondStory!=StoryEnded:{player_name} ha utilizzato la sua seconda unità di inchiostro per procedere con la riscrittura. Il boccetto ora è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - secondStory!=story_storyEnded:{player_name} ha utilizzato la sua seconda unità di inchiostro per procedere con la riscrittura. Il boccetto ora è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }        
             
             {
@@ -1453,7 +1453,7 @@
             
             
             {
-                - secondStory!=StoryEnded:{player_name} ha utilizzato la terza unità di inchiostro, proponendo una riscruttura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - secondStory!=story_storyEnded:{player_name} ha utilizzato la terza unità di inchiostro, proponendo una riscruttura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }        
             
             {
@@ -1501,7 +1501,7 @@
             Ok. E quindi... #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstCharacterInkLevel)} #inkB:{ink_tag_b(firstCharacterInkLevel)}  #inkC:{ink_tag_c(firstCharacterInkLevel)}  #inkD:{ink_tag_d(firstCharacterInkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             
             {
-                - secondStory!=StoryEnded:{player_name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - secondStory!=story_storyEnded:{player_name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }   
             
             -> ending
@@ -1509,7 +1509,7 @@
         = ending
         ~ temp charNameOne = translator(firstCharacterState)
             {
-                - secondStory != StoryEnded:
+                - secondStory != story_storyEnded:
                     {player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 - else:
                     Cosa dirà {player_name} come <b><i>epilogo</b></i>?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}   
@@ -1618,8 +1618,8 @@
                 -> close
         
     = close   
-            ~ story_endedStories += firstES
-            ~ firstStory = StoryEnded
+            ~ story_endedStories += story_firstCharStoryEnded
+            ~ firstStory = story_storyEnded
             ~ player_movementsCounter = 0
             ~ PG_advance_management(FirstCharacter)
             ~ numberQuestion = 0

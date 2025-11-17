@@ -3,23 +3,18 @@
    Gestione avvio e chiusura storie personagge 
 
  ----------------------------------*/
-    LIST story_storyStatus = StoryNotStarted, StoryStarted, StoryEnded
+    LIST story_storyStatus = story_storyNotStarted, story_storyStarted, story_storyEnded
     
-    //Lista che tiene conto delle storie che sono finite
-    LIST story_endedStories = firstES, secondES, thirdES, fourthES, fifthES
-    //Lista che tiene conto dell'ordine della conclusione delle storie
-    LIST story_endingOrders = firstEnd, secondEnd, thirdEnd, fourthEnd, fifthEnd
+    //Lista che tiene conto di quali storie sono state concluse
+    LIST story_endedStories = story_firstCharStoryEnded, story_secondCharStoryEnded, story_thirdCharStoryEnded, story_fourthCharStoryEnded, story_fifthCharStoryEnded
+    
+    //Lista che tiene conto in ordine progressivo della quantità di storie concluse
+    LIST story_endingOrders = story_oneStoryClosed, story_twoStoriesClosed, story_threeStoriesClosed, story_fourStoriesClosed, story_fifthStoriesClosed
     
     
 //COME PROMEMORIA. LISTA DI TIPI DI TONO CHE POSSIAMO TENERE IN UNA CONVERSAZIONE: ROSSO (RABBIA, PASSIONE, AZIONE, OPPOSIZIONE). VIOLA (SPIRITUALITA', VISIONE DEL GRANDE SCHEMA DELLE COSE, SGUARDO POETICO, TESA VERSO UNA MISSIONE). GIALLO (GIOCOSITA', RISATA, DIVERTIMENTO, FANCIULLEZZA). VERDE (CUORE, AFFETTI, CURA DELLE PERSONE CARE, RIFLESSIONE EMOTIVA). BLU (RAZIONALITA', CALCOLO, VISIONE PRATICA, DISCIPLINA).
 
-//Attesa comparsa prima personaggia
-    VAR delayFirstChar = 2
 
-//Attesa comparsa quarta personaggia
-    VAR delayFourthChar = 4
-    
-    
 === story_time_management_for_PNG
 //Questa la uso per far sentire il rumore del treno dove serve
 ~ temp CurrentLocation = entity_location(PG)
@@ -28,70 +23,70 @@
     {
     
         //Dopo essere arrivata per la prima volta allo stagno, compare mentore, e attivo la sua storia
-        - (pond == true) && (mentorStory != StoryStarted):
+        - (pond == true) && (mentorStory != story_storyStarted):
         {debug: introduco mentore in scena.}
                 ~ move_entity(Mentor, Forest)
-                ~ mentorStory = StoryStarted
+                ~ mentorStory = story_storyStarted
     
         //Dopo il delay previsto, compare Chitarra.
-        - player_movementsCounter == delayFirstChar && firstStory == StoryNotStarted:
+        - player_movementsCounter == delayFirstChar && firstStory == story_storyNotStarted:
         {debug: introduco {FirstCharacter} in scena.}
                 ~ move_entity(FirstCharacter, TrainStop)
                 ~ move_entity(TrainNoise, CurrentLocation)
-                ~ firstStory = StoryStarted
+                ~ firstStory = story_storyStarted
                 
         //Dopo due steps della storia della prima personaggia, compare la seconda      
-        - knowing_first_character.two && secondStory == StoryNotStarted:
+        - knowing_first_character.two && secondStory == story_storyNotStarted:
         {debug: introduco {SecondCharacter} in scena.}
                 ~ move_entity(SecondCharacter, TrainStop)
                 ~ move_entity(TrainNoise, CurrentLocation)
-                ~ secondStory = StoryStarted
+                ~ secondStory = story_storyStarted
     
         //Dopo aver aperto la biblioteca, compare il terzo png
-        //- open_the_library && not (thirdStory == StoryStarted):
+        //- open_the_library && not (thirdStory == story_storyStarted):
             //{debug: introduco {ThirdCharacter} in scena.}
                 // ~ move_entity(ThirdCharacter, TrainStop)
                 // ~ move_entity(TrainNoise, CurrentLocation)
-                // ~ thirdStory = StoryStarted
+                // ~ thirdStory = story_storyStarted
                 
         //X movimenti dopo la furia della mentore, compare la quarta png
         //- player_movementsCounter == delayFourthChar && mentor_rage:
                 //{debug: introduco {FourthCharacter} in scena.}
                 //~ move_entity(FourthCharacter, Forest)
-                //~ fourthStory = StoryStarted
+                //~ fourthStory = story_storyStarted
                 //qualcosa per panchina sistemata
                 
         //E quando la storia della quarta è a tre, si presenta la mentore come uovo
-        //- knowing_fourth_character.three && fifthStory == StoryNotStarted:
+        //- knowing_fourth_character.three && fifthStory == story_storyNotStarted:
                 //~ qualcosa per trasformare mentore in uovo
                     
         //E quando la storia della quarta è a cinque steps, parte la storia della mentore
-        //- knowing_fourth_character.five && fifthStory == StoryNotStarted && qualcosa per cui abbiamo tocca l'uovo almeno una volta:
+        //- knowing_fourth_character.five && fifthStory == story_storyNotStarted && qualcosa per cui abbiamo tocca l'uovo almeno una volta:
                 // ~ move_entity(TrainNoise, CurrentLocation)
                 //{debug: introduco {FifthCharacter} in scena.}
-                //~ fifthStory == StoryStarted:
+                //~ fifthStory == story_storyStarted:
                 //cambiamento asset per mentore, che passa a mostrone
     
     
     
     //Check per l'allontanamento delle personagge
-        //- firstStory == StoryEnded && player_movementsCounter > 10:
+        //- firstStory == story_storyEnded && player_movementsCounter > 10:
             //~ move_entity(FirstCharacter, Safekeeping)
             //~ move_entity(FirstCharacterNotes, TrainStop)
             
-        //- secondStory == StoryEnded && player_movementsCounter > 10:
+        //- secondStory == story_storyEnded && player_movementsCounter > 10:
             //~ move_entity(SecondCharacter, Safekeeping)
             //~ move_entity(SecondCharacterNotes, TrainStop)
             
-        //- thirdStory == StoryEnded && player_movementsCounter > 10:
+        //- thirdStory == story_storyEnded && player_movementsCounter > 10:
             //~ move_entity(ThirdCharacter, Safekeeping)
             //~ move_entity(ThirdCharacterNotes, TrainStop)
             
-        //- fourthStory == StoryEnded && player_movementsCounter > 10:
+        //- fourthStory == story_storyEnded && player_movementsCounter > 10:
             //~ move_entity(FourthCharacter, Safekeeping)
            // ~ move_entity(FourthCharacterNotes, TrainStop)
             
-        //- fifthStory == StoryEnded && player_movementsCounter > 10:
+        //- fifthStory == story_storyEnded && player_movementsCounter > 10:
             //~ move_entity(Mentor, Safekeeping)
            // ~ move_entity(FifthCharacterNotes, TrainStop)
     }
@@ -108,15 +103,18 @@
  ----------------------------------*/
 
 //Gestione spostamenti: tempo
-    VAR changeLocationTimer = 0
-    VAR changeLocationTrigger = 9
-
-    VAR randomablePlaces = (Forest, TrainStop, Pond)
-    // Laboratory, Library, Nest, Greenhouse
+    //Quando questa è a zero, non ci sono spostamenti
+    VAR movements_changeLocationTimer = 0
+    
+    //Questo è invece il valore che indica quando far partire la randomizzazione dei luoghi dell3 PNG
+    VAR movements_changeLocationTrigger = 9
+    
+    //Questa è la lista dei luoghi dove l3 PNG possono andare. All'inizio è ridotta a tre, poi si amplia man mano che sblocchiamo posti.
+    VAR movements_randomablePlaces = (Forest, TrainStop, Pond)
 
 
 //Gestione spostamenti: personagge
-    VAR randomizable_characters = ()
+    VAR movements_randomizable_characters = ()
 
 
 //Qui apriamo i luoghi cambiando gli assets di riferimento
@@ -124,7 +122,7 @@
 {debug: passo da opening_places.}
     {
         - welcome.your_name && (entity_location(FromPondToGreenhouse) == Safekeeping) && not olobino.step_tre.colto:
-            ~ randomablePlaces += Greenhouse
+            ~ movements_randomablePlaces += Greenhouse
             ~ player_accessiblePlaces += Greenhouse
             ~ move_entity(FromPondToGreenhouseBlocked, Safekeeping)
             ~ move_entity(FromPondToGreenhouse, Pond)
@@ -149,7 +147,7 @@
         
             ~ move_entity(FromForestToLibraryBlocked, Safekeeping)
             ~ move_entity(FromForestToLibrary, Forest)
-            ~ randomablePlaces += Library
+            ~ movements_randomablePlaces += Library
             ~ player_accessiblePlaces += Library
     }
 
@@ -160,60 +158,60 @@
     {debug: passo da check_png_randomizable_status.}
     
     {
-        - mentorStory == StoryStarted:
-            ~ randomizable_characters += Mentor
+        - mentorStory == story_storyStarted:
+            ~ movements_randomizable_characters += Mentor
         
-        - mentorStory == StoryEnded:  
-            ~ randomizable_characters -= Mentor 
+        - mentorStory == story_storyEnded:  
+            ~ movements_randomizable_characters -= Mentor 
     }
 
 
     {
-        - firstStory == StoryStarted:
-            ~ randomizable_characters += FirstCharacter
+        - firstStory == story_storyStarted:
+            ~ movements_randomizable_characters += FirstCharacter
         
-        - firstStory == StoryEnded:  
-            ~ randomizable_characters -= FirstCharacter 
+        - firstStory == story_storyEnded:  
+            ~ movements_randomizable_characters -= FirstCharacter 
     }
 
     {
-        - secondStory == StoryStarted:
+        - secondStory == story_storyStarted:
         
         //Evitiamo che venga tolto dalla cucina se sta cucinando
         {
             - secondIsCooking == true:
-                ~ randomizable_characters -= SecondCharacter
+                ~ movements_randomizable_characters -= SecondCharacter
             - else:
-                ~ randomizable_characters += SecondCharacter
+                ~ movements_randomizable_characters += SecondCharacter
                 
         }
         
-        - secondStory == StoryEnded:
-                ~ randomizable_characters -= SecondCharacter 
+        - secondStory == story_storyEnded:
+                ~ movements_randomizable_characters -= SecondCharacter 
     }
   
     {    
-        - thirdStory == StoryStarted:
-             ~ randomizable_characters += ThirdCharacter
+        - thirdStory == story_storyStarted:
+             ~ movements_randomizable_characters += ThirdCharacter
         
-        - thirdStory == StoryEnded:
-            ~ randomizable_characters -= ThirdCharacter
+        - thirdStory == story_storyEnded:
+            ~ movements_randomizable_characters -= ThirdCharacter
     }
     
     {
-        - fourthStory == StoryStarted:
-            ~ randomizable_characters += FourthCharacter    
+        - fourthStory == story_storyStarted:
+            ~ movements_randomizable_characters += FourthCharacter    
         
-         - fourthStory == StoryEnded:
-            ~ randomizable_characters -= FourthCharacter 
+         - fourthStory == story_storyEnded:
+            ~ movements_randomizable_characters -= FourthCharacter 
     }
     
     {
-        - fifthStory == StoryStarted:
-            ~ randomizable_characters += Mentor
+        - fifthStory == story_storyStarted:
+            ~ movements_randomizable_characters += Mentor
         
-        -   fifthStory == StoryEnded:  
-            ~ randomizable_characters -= Mentor
+        -   fifthStory == story_storyEnded:  
+            ~ movements_randomizable_characters -= Mentor
     }
     
     //Comparsa della rana
@@ -232,36 +230,36 @@
 {debug: randomize_png_location.}
 
     {//se ho raggiunto il tempo trigger, resetto il valore, e poi vado avanti.
-        - changeLocationTimer >= changeLocationTrigger:
-        {debug: <i> Il valore del Timer è {changeLocationTimer} e quindi randomizzo il luogo.}
+        - movements_changeLocationTimer >= movements_changeLocationTrigger:
+        {debug: <i> Il valore del Timer è {movements_changeLocationTimer} e quindi randomizzo il luogo.}
             -> top
 
         //altrimenti, aumento il valore e skippo
         - else:
-        {debug: <i>il valore del Timer è {changeLocationTimer} e quindi lo aumento.}
-            ~ changeLocationTimer ++
+        {debug: <i>il valore del Timer è {movements_changeLocationTimer} e quindi lo aumento.}
+            ~ movements_changeLocationTimer ++
             ->->
     }
     
     //provare così, o vedere se invece è il caso di creare una variabile temporanea per le liste
             = top
-            ~ changeLocationTimer = 0
-            //~ temp list_character = randomizable_characters
-            ~ temp character = LIST_RANDOM(randomizable_characters)
-                {debug: le personagge randomizzabili sono {randomizable_characters}}
-                //{debug: le personagge nella lista temporanea sono {randomizable_characters}}
+            ~ movements_changeLocationTimer = 0
+            //~ temp list_character = movements_randomizable_characters
+            ~ temp character = LIST_RANDOM(movements_randomizable_characters)
+                {debug: le personagge randomizzabili sono {movements_randomizable_characters}}
+                //{debug: le personagge nella lista temporanea sono {movements_randomizable_characters}}
                 {debug: la personaggia randomizzata è {character}}
-            ~ temp location = LIST_RANDOM(randomablePlaces)
-                {debug: i luoghi randomizzabili sono {randomablePlaces}}
+            ~ temp location = LIST_RANDOM(movements_randomablePlaces)
+                {debug: i luoghi randomizzabili sono {movements_randomablePlaces}}
                 {debug: il luogo scelto per la randomizzazione è {location}}
             
             ~ move_entity(character, location)
-            ~ randomizable_characters -= character    
+            ~ movements_randomizable_characters -= character    
             
             {debug: <i>{character} si trova in {location}.}       
             
             {
-               - randomizable_characters != ():
+               - movements_randomizable_characters != ():
                     -> top
                - else:
                     ->->
@@ -383,12 +381,12 @@
 
 //Avvio dialoghi di chiusura
     {
-        - firstStory == StoryEnded:
+        - firstStory == story_storyEnded:
 	        ~ firstCharEndingDialogue ++
 	}
 	
 	{
-	    - secondStory == StoryEnded:
+	    - secondStory == story_storyEnded:
 	        ~ secondCharEndingDialogue ++     
     }
 

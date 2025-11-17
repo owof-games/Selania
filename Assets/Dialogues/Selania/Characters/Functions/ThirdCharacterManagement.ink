@@ -8,7 +8,7 @@
     LIST thirdCharacterPossibleStates = SpettroDelVuoto, Arrabbiato, Guarente, Terrorizzato, Abbandonato, Socievole, Consapevole
     VAR thirdCharacterState = SpettroDelVuoto
     
-    VAR thirdStory = StoryNotStarted
+    VAR thirdStory = story_storyNotStarted
     VAR charThreeEnding = ()
   
 //Tracciamento della relazione

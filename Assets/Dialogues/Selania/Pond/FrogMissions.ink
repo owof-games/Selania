@@ -130,7 +130,7 @@
         ~ activeMissions += specialMissionOne
         ~ move_entity(SecondCharacter, Forest)
         ~ move_entity(Mentor, Forest)
-        ~ changeLocationTimer = 0
+        ~ movements_changeLocationTimer = 0
     @animation:RewriterBook    
     -> main
     

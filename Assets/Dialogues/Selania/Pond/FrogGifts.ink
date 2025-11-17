@@ -8,7 +8,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
 
 - (top)
     
-    + {firstStory == StoryStarted} [Ho bisogno di una mano con {charNameOne}.]
+    + {firstStory == story_storyStarted} [Ho bisogno di una mano con {charNameOne}.]
         ~  currentMissionAboutChar = missionCharOne
   
         {
@@ -31,7 +31,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
             
         
     
-    + {secondStory == StoryStarted} [Ho bisogno di una mano con {charNameTwo}.]
+    + {secondStory == story_storyStarted} [Ho bisogno di una mano con {charNameTwo}.]
         ~  currentMissionAboutChar = missionCharTwo
         {
             - LIST_COUNT(charTwoGifts) == 4:
@@ -52,15 +52,15 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
         }
         
     
-    + {thirdStory == StoryStarted} [PNG 3]
+    + {thirdStory == story_storyStarted} [PNG 3]
         ~  currentMissionAboutChar = missionCharThree
             -> frog_gift_dispatcher
         
-    + {fourthStory == StoryStarted} [PNG 4]
+    + {fourthStory == story_storyStarted} [PNG 4]
         ~  currentMissionAboutChar = missionCharFour
             -> frog_gift_dispatcher
         
-    + {fifthStory == StoryStarted} [PNG 5 (non come mentore)]
+    + {fifthStory == story_storyStarted} [PNG 5 (non come mentore)]
         ~  currentMissionAboutChar = missionCharFive
             -> frog_gift_dispatcher
         
