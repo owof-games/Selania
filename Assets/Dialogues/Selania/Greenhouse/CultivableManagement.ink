@@ -1,5 +1,5 @@
 //Lista coltivabili e stati possibili    
-    LIST cultivable = BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti,  ErbaLiccia, FalsaPalude, LanaNotturna, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata
+    LIST greenhouse_cultivable = BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti,  ErbaLiccia, FalsaPalude, LanaNotturna, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata
 
     LIST growStep = notStarted, stepZero, stepOne, stepTwo, stepThree
 
@@ -101,7 +101,7 @@
 === next_cultivable_management
 {debug: passo per next_cultivable_management.}
 {debug: prima di procedere, il valore di nextCultivableThree è {nextCultivableThree}, di nextCultivableTwo è {nextCultivableTwo} e di nextCultivableOne è {nextCultivableOne}.}
-//Qui gestiamo la priorità di crescita dettata dalla rana. Se c'è qualcosa in coda, facciamo salire tutto e poi attiviamo il next cultivable iniziale.
+//Qui gestiamo la priorità di crescita dettata dalla rana. Se c'è qualcosa in coda, facciamo salire tutto e poi attiviamo il next greenhouse_cultivable iniziale.
 
 //Step uno: riordino delle richieste
 {
