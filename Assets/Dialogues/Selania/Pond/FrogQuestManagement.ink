@@ -47,8 +47,8 @@
 
     //Missione uno: utilizzo del libro della riscrittora.
         {
-            - first_character_recap.check && second_character_recap.check && greenhouse_recap.check && availableMissions has missionOne:
-                ~ availableMissions -= missionOne
+            - first_character_recap.check && second_character_recap.check && greenhouse_recap.check && frog_availableCommonMissions has missionOne:
+                ~ frog_availableCommonMissions -= missionOne
                 
                 Stavo per chiederti di consultare in profondità il libro che ti è stato donato, ma ho visto che hai già fatto senza di me! Per cui: ecco il tuo dono!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     -> frog_about_who_questions
@@ -56,8 +56,8 @@
         
     //Missione due: coltivare almeno tre piante in serra.
         {
-            - LIST_COUNT(greenhouse_backupCultivable) < 12 && availableMissions has missionTwo:
-                ~ availableMissions -= missionTwo
+            - LIST_COUNT(greenhouse_backupCultivable) < 12 && frog_availableCommonMissions has missionTwo:
+                ~ frog_availableCommonMissions -= missionTwo
                 
                 Stavo per chiederti di coltivare almeno tre piante in serra, ma ho visto che hai già fatto senza di me! Per cui: ecco il tuo dono!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 -> frog_about_who_questions
@@ -65,16 +65,16 @@
         
     //Missione tre: mindfulness
         {
-            - mindfulness && availableMissions has missionThree:
-                ~ availableMissions -= missionThree
+            - mindfulness && frog_availableCommonMissions has missionThree:
+                ~ frog_availableCommonMissions -= missionThree
                 Stavo per chiederti di parlare di benessere con Mentore, ma ho visto che hai già fatto senza di me! Per cui: ecco il tuo dono!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 -> frog_about_who_questions                      
         }
         
     //Missione quattro: gossips 
         {
-            - little_storylets && availableMissions has missionFour:
-                ~ availableMissions -= missionFour
+            - little_storylets && frog_availableCommonMissions has missionFour:
+                ~ frog_availableCommonMissions -= missionFour
                 Stavo per chiederti di raccontare a Mentore le stranezze che hai incontrato in questo luogo, ma ho visto che hai già fatto in autonomia!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
                 -> frog_about_who_questions                        
@@ -83,8 +83,8 @@
         
     //Missione cinque: chiacchiere tra PNG 
         {
-            - first_second_chit_chat && availableMissions has missionFive:
-                ~ availableMissions -= missionFive
+            - first_second_chit_chat && frog_availableCommonMissions has missionFive:
+                ~ frog_availableCommonMissions -= missionFive
                 Stavo per dirti di provare a vedere cosa succede quando due persone sono vicine.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 E invece mi hai battuto, assistendo alla conversazione tra Chitarra e Riccio.
                 Questa cosa accadrà altre volte, per cui: se vedi due personagge nello stesso luogo, prova a vedere se hanno qualcosa da dirsi.
@@ -94,8 +94,8 @@
         
     //Missione sei: conoscere la strega
         {
-            - talking_witch.intro && availableMissions has missionSix:
-                ~ availableMissions -= missionSix
+            - talking_witch.intro && frog_availableCommonMissions has missionSix:
+                ~ frog_availableCommonMissions -= missionSix
                 Stavo per invitarti a parlare con l'albero della foresta, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
                 -> frog_about_who_questions                        
@@ -103,8 +103,8 @@
         
     //Missione sette: leggere una lettera
         {
-            - first_character_notes.check or second_character_notes.check && availableMissions has missionSeven:
-                ~ availableMissions -= missionSeven
+            - first_character_notes.check or second_character_notes.check && frog_availableCommonMissions has missionSeven:
+                ~ frog_availableCommonMissions -= missionSeven
                 Stavo per chiederti di leggere una delle lettere che hai ricevuto sulla bacheca, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
                 -> frog_about_who_questions                        
@@ -112,15 +112,15 @@
         
     //Missione otto: leggere un libro della biblioteca
         {
-            - library_readStories != () && availableMissions has missionEight:
-                ~ availableMissions -= missionEight
+            - library_readStories != () && frog_availableCommonMissions has missionEight:
+                ~ frog_availableCommonMissions -= missionEight
                 Stavo per chiederti di leggere una delle storie della biblioteca, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
                 -> frog_about_who_questions                        
         } 
 
         {
-            - availableMissions == ():
+            - frog_availableCommonMissions == ():
                 Non ho più missioni da offrirti, ma hai bisogno di me, per cui ti aiuterò!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     -> frog_about_who_questions 
                 
@@ -149,26 +149,26 @@
 
         - (top)
         //Dato che no mi fa fare questa cosa direttamente nella variabile, provo così.
-        //~ maxValueDice = LIST_COUNT(allMissions)
+        //~ maxValueDice = LIST_COUNT(frog_allMissions)
         
         //Tiro il dado
         ~ diceFrog = RANDOM(1,8)
         
         {diceFrog:
         
-            - 1 && availableMissions has missionOne:
+            - 1 && frog_availableCommonMissions has missionOne:
                 -> mission_one
-            - 2 && availableMissions has missionTwo:
+            - 2 && frog_availableCommonMissions has missionTwo:
                 -> mission_two
-            - 3 && availableMissions has missionThree:
+            - 3 && frog_availableCommonMissions has missionThree:
                 -> mission_three
-            - 4 && availableMissions has missionFour:
+            - 4 && frog_availableCommonMissions has missionFour:
                 -> mission_four
-            - 5 && availableMissions has missionFive && (firstChar_storyStatus == story_storyStarted) && (secondChar_storyStatus == story_storyStarted):
+            - 5 && frog_availableCommonMissions has missionFive && (firstChar_storyStatus == story_storyStarted) && (secondChar_storyStatus == story_storyStarted):
                 -> mission_five
-            - 6 && availableMissions has missionSix && ((firstChar_storyStatus == story_storyEnded) or (secondChar_storyStatus == story_storyEnded) or (thirdChar_storyStatus == story_storyEnded)):
+            - 6 && frog_availableCommonMissions has missionSix && ((firstChar_storyStatus == story_storyEnded) or (secondChar_storyStatus == story_storyEnded) or (thirdChar_storyStatus == story_storyEnded)):
                 -> mission_six
-            - 7 && availableMissions has missionSeven && (trainStopContents has FirstCharacterNotes) or (trainStopContents has SecondCharacterNotes):
+            - 7 && frog_availableCommonMissions has missionSeven && (trainStopContents has FirstCharacterNotes) or (trainStopContents has SecondCharacterNotes):
                 -> mission_seven
             - 8 && player_accessiblePlaces has Library:
                 -> mission_eight
@@ -191,14 +191,14 @@
     ~ temp charNameFive = translator(fifthChar_ActualName)
     
     {activeMissions:
-        //Qui la logica da implementare sarà: se le condizione è stata risolta (es: nodo attraversato) allora svuoto activeMissions (~ activeMissions = ()) e tolgo la missione da availableMissions, e invio la giocatrice alla parte del dono, altrimenti ho un reminder che mi ricorda di fare la missione.
+        //Qui la logica da implementare sarà: se le condizione è stata risolta (es: nodo attraversato) allora svuoto activeMissions (~ activeMissions = ()) e tolgo la missione da frog_availableCommonMissions, e invio la giocatrice alla parte del dono, altrimenti ho un reminder che mi ricorda di fare la missione.
         - missionOne:
             {
                 - first_character_recap.check && second_character_recap.check && greenhouse_recap.check:
                     Hai letto le pagine del libro, grande {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ activeMissions = ()
-                        ~ availableMissions -= missionOne
+                        ~ frog_availableCommonMissions -= missionOne
                             -> frog_about_who_questions
                 
                 - else:
@@ -213,7 +213,7 @@
                 - LIST_COUNT(greenhouse_backupCultivable) < 12:
                     La serra sta crescendo grazie a te, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ availableMissions -= missionTwo
+                        ~ frog_availableCommonMissions -= missionTwo
                         ~ activeMissions = ()
                             -> frog_about_who_questions
                 - else:
@@ -228,7 +228,7 @@
                     Grazie per aver parlato con Mentore, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Son sicuro che si sente più utile ora.
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ availableMissions -= missionThree
+                        ~ frog_availableCommonMissions -= missionThree
                         ~ activeMissions = ()
                             -> frog_about_who_questions
                 - else:
@@ -242,7 +242,7 @@
                 - little_storylets:
                     Grazie per aver condiviso le cose che hai scoperto con Mentore, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ availableMissions -= missionFour
+                        ~ frog_availableCommonMissions -= missionFour
                         ~ activeMissions = ()
                             -> frog_about_who_questions
                 - else:
@@ -259,7 +259,7 @@
                     Questa cosa accadrà altre volte, per cui: se vedi due personagge nello stesso luogo, prova a vedere se hanno qualcosa da dirsi.
                     
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ availableMissions -= missionFive
+                        ~ frog_availableCommonMissions -= missionFive
                         ~ activeMissions = ()
                             -> frog_about_who_questions
                 - else:
@@ -275,7 +275,7 @@
                     E non sta a me chiederti cosa vi siete dett3, ma spero tu possa aver trovato un'alleata in questo percorso.
                     
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ availableMissions -= missionSix
+                        ~ frog_availableCommonMissions -= missionSix
                         ~ activeMissions = ()
                             -> frog_about_who_questions
                 - else:
@@ -291,7 +291,7 @@
                     Ricordati di darci un'occhiata ogni tanto, così da sapere come avanza la storia delle persone che hai aiutato.
                     
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ availableMissions -= missionSeven
+                        ~ frog_availableCommonMissions -= missionSeven
                         ~ activeMissions = ()
                             -> frog_about_who_questions
                 - else:
@@ -309,7 +309,7 @@
                     E a volte, se avete avuto una lettura in comune, potresti scoprire qualcosa di più su di loro.
                     
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ availableMissions -= missionEight
+                        ~ frog_availableCommonMissions -= missionEight
                         ~ activeMissions = ()
                             -> frog_about_who_questions
                 - else:

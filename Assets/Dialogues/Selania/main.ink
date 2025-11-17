@@ -7,9 +7,9 @@
 
 {
 //disabilito missione rana con passaggio da libro riscrittora, così da non doverlo attivare durante testing stocastico
-    - debug_stochastic && availableMissions has missionOne:
-        ~ availableMissions -= missionOne
-        {debug: rimuovo missionOne da availableMissions perché in debug stocastico. availableMissions == {availableMissions}.}
+    - debug_stochastic && frog_availableCommonMissions has missionOne:
+        ~ frog_availableCommonMissions -= missionOne
+        {debug: rimuovo missionOne da frog_availableCommonMissions perché in debug stocastico. frog_availableCommonMissions == {frog_availableCommonMissions}.}
 }
 
 
