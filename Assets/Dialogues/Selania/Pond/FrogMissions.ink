@@ -1,7 +1,7 @@
 //Missioni    
 === mission_one
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     {player_name}, ti invito a leggere il libro che ti è stato dato. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -16,7 +16,7 @@
     
 === mission_two
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     {player_name}, è importante prendersi cura della serra.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -33,7 +33,7 @@
     
 === mission_three
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     Sai {player_name}, Mentore sente spesso il bisogno di sentirsi utile.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -49,7 +49,7 @@
 
 === mission_four
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     Stavo pensando: ci sono un po' di cose che hai scoperto su questo luogo, ma che non hai condiviso con Mentore.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -64,7 +64,7 @@
 
 === mission_five
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     Questa è quasi un consiglio più che una missione, {player_name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -81,7 +81,7 @@
 
 === mission_six
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
      Sembra che qualcosa sia cambiato in quell'albero al centro della foresta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -94,7 +94,7 @@
 
 === mission_seven
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     Qualcunx ti ha scritto, {player_name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -108,7 +108,7 @@
 
 === mission_eight
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     La biblioteca è piena di racconti, {player_name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -121,7 +121,7 @@
 
 === special_mission_one
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     Sembra che ci sia della tensione tra Riccio e Mentore.
@@ -137,7 +137,7 @@
     
 === special_mission_two
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
 
     Mi serve che ti prepari qualcosa in cucina senza nessuna persona attorno. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -150,7 +150,7 @@
     
 === special_mission_three
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     //* Missione tre: liberare uno slot parola
@@ -164,7 +164,7 @@
  
 === special_mission_four
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     //* Missione quattro: informazioni preziose

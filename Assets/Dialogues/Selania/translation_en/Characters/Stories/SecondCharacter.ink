@@ -3,11 +3,11 @@
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
-        + {are_two_entities_together(SecondCharacter, PG) && secondStory == Active}[SecondCharacter]
+        + {are_two_entities_together(SecondCharacter, PG) && secondChar_storyStatus == Active}[SecondCharacter]
             -> talk_with_second_character
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(SecondCharacter, PG) && secondStory == Ended} [SecondCharacter]
+        + {are_two_entities_together(SecondCharacter, PG) && secondChar_storyStatus == Ended} [SecondCharacter]
             -> second_char_story_ended
         + ->
     
@@ -1821,7 +1821,7 @@
         {charNameTwo}: Mi ricorda mamma quando gira per casa dando consigli e dicendo cose e sorridendo.
         {charNameTwo}: E poi si rinchiude in camera e resta in silenzio per ore.
         {charNameTwo}: Per me non sta mica bene.
-            ~ secondStory = Ended
+            ~ secondChar_storyStatus = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(secondStoryPG)
                 -> main
@@ -1830,7 +1830,7 @@
     ~ temp charNameTwo = uppercaseTranslator(secondCharacterState)
         {charNameTwo}: Voglio stare ancora un po' qui prima di prendere il treno.
         {charNameTwo}: Mi mancherà la rana!
-            ~ secondStory = Ended
+            ~ secondChar_storyStatus = Ended
             ~ movementsCounter = 0
             ~ PG_advace_management(secondStoryPG)
         -> main  

@@ -16,7 +16,7 @@
 === talk_with_mentor
 {debug: passo da talk_with_mentor}
 ~ temp charNameOne = translator(firstChar_ActualName)
-~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameThree = translator(thirdChar_ActualName)
 ~ temp charNameFour= translator(fourthChar_ActualName)
 ~ temp charNameFive = translator(fifthCharacterState)
@@ -28,7 +28,7 @@
     = talk
     {debug: passo da talk_with_mentor.talk}
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -101,9 +101,9 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
                 -> two
             - not three && firstChar_storyStatus == story_storyEnded && tutorialPauses == false:
                 -> three
-            - not four && secondStory == story_storyEnded && tutorialPauses == false:
+            - not four && secondChar_storyStatus == story_storyEnded && tutorialPauses == false:
                 -> four
-            - not five && secondStory == story_storyEnded && tutorialPauses == false:
+            - not five && secondChar_storyStatus == story_storyEnded && tutorialPauses == false:
                 -> five
             //Forse solo una di queste, perché con la terza storia avremo degli storylets ad hoc.    
             - not six && thirdChar_storyStatus == story_storyStarted && tutorialPauses == false:
@@ -172,7 +172,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
                     
  
             -
-        {((firstChar_storyStatus hasnt story_storyEnded) && (secondStory hasnt story_storyEnded)): Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di mobili rotti che blocca il sentiero a ovest della foresta.|Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+        {((firstChar_storyStatus hasnt story_storyEnded) && (secondChar_storyStatus hasnt story_storyEnded)): Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di mobili rotti che blocca il sentiero a ovest della foresta.|Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         Grazie per la chiacchierata, {player_name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         
              ~ fifthPauseTalking = fifthCharPauseDuration
@@ -311,7 +311,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
     
     = four
     ~ temp charNameFive = translator(fifthCharacterState)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ change_entity_place(SecondCharacter)
         //Non mettere cose TW qui
         //Responsabilità

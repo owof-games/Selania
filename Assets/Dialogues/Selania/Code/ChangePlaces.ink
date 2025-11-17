@@ -27,7 +27,7 @@
     
             Salutiamo {player_name}.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()} 
             Se {player_name} sta per lasciare il prototipo, {player_pronouns has him:lo|{player_pronouns has her:la|lə}} invitiamo a segnarsi questo codice, da riportare sul documento di testing.
-            Il codice è {player_purple} - {player_yellow} - {player_blue} - {player_green}- {player_red}; {player_firstStepStatus}; {player_secondStepStatus}; {firstChar_ActualName}; {secondCharacterState}.
+            Il codice è {player_purple} - {player_yellow} - {player_blue} - {player_green}- {player_red}; {player_firstStepStatus}; {player_secondStepStatus}; {firstChar_ActualName}; {secondChar_ActualName}.
             Grazie di cuore.
             
                 + + (close)[Voglio chiudere <i>Selanìa</i>.]

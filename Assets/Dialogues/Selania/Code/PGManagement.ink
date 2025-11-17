@@ -120,8 +120,8 @@
 			{debug: <i>Dato che charES coincide con {charES}. Il valore di firstChar_storyEndingPosition è {firstChar_storyEndingPosition}.}
 			
 			- charES == SecondCharacter:
-				~ charTwoEnding = story_oneStoryClosed
-			{debug: <i>Dato che charES coincide con {charES}. Il valore di charTwoEnding è {charTwoEnding}.}
+				~ secondChar_storyEndingPosition = story_oneStoryClosed
+			{debug: <i>Dato che charES coincide con {charES}. Il valore di secondChar_storyEndingPosition è {secondChar_storyEndingPosition}.}
 						
 			- charES == ThirdCharacter:
 				~ thirdChar_storyEndingPosition = story_oneStoryClosed
@@ -136,8 +136,8 @@
 			{debug: <i>Dato che charES coincide con {charES}. Il valore di firstChar_storyEndingPosition è {firstChar_storyEndingPosition}.}	
 			
 			- charES == SecondCharacter:
-				~ charTwoEnding = story_twoStoriesClosed
-			{debug: <i>Dato che charES coincide con {charES}. Il valore di charTwoEnding è {charTwoEnding}.}	
+				~ secondChar_storyEndingPosition = story_twoStoriesClosed
+			{debug: <i>Dato che charES coincide con {charES}. Il valore di secondChar_storyEndingPosition è {secondChar_storyEndingPosition}.}	
 			
 			- charES == ThirdCharacter:
 				~ thirdChar_storyEndingPosition = story_twoStoriesClosed
@@ -152,7 +152,7 @@
 				~ firstChar_storyEndingPosition = story_threeStoriesClosed
 			
 			- charES == player_secondStepClosed:
-				~ charTwoEnding = story_threeStoriesClosed
+				~ secondChar_storyEndingPosition = story_threeStoriesClosed
 			
 			- charES == ThirdCharacter:
 				~ thirdChar_storyEndingPosition = story_threeStoriesClosed	

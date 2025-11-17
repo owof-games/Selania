@@ -18,7 +18,7 @@
         - Relationship == firstChar_relationshipStatus:
             ~ Ink = firstChar_InkLevel
         
-        - Relationship == secondCharStateRelationship:
+        - Relationship == secondChar_relationshipStatus:
             ~ Ink = secondChar_InkLevel
         
         - Relationship == thirdChar_relationshipStatus:

@@ -36,11 +36,11 @@
                 ~ firstChar_storyStatus = story_storyStarted
                 
         //Dopo due steps della storia della prima personaggia, compare la seconda      
-        - knowing_first_character.two && secondStory == story_storyNotStarted:
+        - knowing_first_character.two && secondChar_storyStatus == story_storyNotStarted:
         {debug: introduco {SecondCharacter} in scena.}
                 ~ move_entity(SecondCharacter, TrainStop)
                 ~ move_entity(TrainNoise, CurrentLocation)
-                ~ secondStory = story_storyStarted
+                ~ secondChar_storyStatus = story_storyStarted
     
         //Dopo aver aperto la biblioteca, compare il terzo png
         //- open_the_library && not (thirdChar_storyStatus == story_storyStarted):
@@ -74,7 +74,7 @@
             //~ move_entity(FirstCharacter, Safekeeping)
             //~ move_entity(FirstCharacterNotes, TrainStop)
             
-        //- secondStory == story_storyEnded && player_movementsCounter > 10:
+        //- secondChar_storyStatus == story_storyEnded && player_movementsCounter > 10:
             //~ move_entity(SecondCharacter, Safekeeping)
             //~ move_entity(SecondCharacterNotes, TrainStop)
             
@@ -175,7 +175,7 @@
     }
 
     {
-        - secondStory == story_storyStarted:
+        - secondChar_storyStatus == story_storyStarted:
         
         //Evitiamo che venga tolto dalla cucina se sta cucinando
         {
@@ -186,7 +186,7 @@
                 
         }
         
-        - secondStory == story_storyEnded:
+        - secondChar_storyStatus == story_storyEnded:
                 ~ movements_randomizable_characters -= SecondCharacter 
     }
   
@@ -386,7 +386,7 @@
 	}
 	
 	{
-	    - secondStory == story_storyEnded:
+	    - secondChar_storyStatus == story_storyEnded:
 	        ~ secondCharEndingDialogue ++     
     }
 

@@ -18,7 +18,7 @@
     //Check post storie
         - not first_story_ended_check && firstStory == Ended:
             -> first_story_ended_check
-        - not second_story_ended_check && secondStory == Ended:
+        - not second_story_ended_check && secondChar_storyStatus == Ended:
             -> second_story_ended_check
         - not third_story_ended_check && thirdStory == Ended:
             -> third_story_ended_check
@@ -275,7 +275,7 @@
 === descriptions
     {   
         //Opinioni dopo la fine della seconda storia    
-        - secondStory == Ended:
+        - secondChar_storyStatus == Ended:
             -> three
         //Opinioni dopo la fine della prima storia      
         - firstStory == Ended:

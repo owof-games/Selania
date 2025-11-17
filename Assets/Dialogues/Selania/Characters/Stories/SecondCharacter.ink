@@ -1,13 +1,13 @@
 === second_character ===
-~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameTwo = translator(secondChar_ActualName)
 
 //SPAZIO PER VERIFICARE SE STORIA IN CORSO O CONCLUSA
         //Chiacchiera normale
-        + {are_two_entities_together(SecondCharacter, PG) && secondStory == story_storyStarted}[SecondCharacter]
+        + {are_two_entities_together(SecondCharacter, PG) && secondChar_storyStatus == story_storyStarted}[SecondCharacter]
             -> talk_with_second_character
         
         //Chiacchiera a fine storia
-        + {are_two_entities_together(SecondCharacter, PG) && secondStory == story_storyEnded} [SecondCharacter]
+        + {are_two_entities_together(SecondCharacter, PG) && secondChar_storyStatus == story_storyEnded} [SecondCharacter]
             -> second_char_story_ended
         + ->
     
@@ -15,7 +15,7 @@
     
 
 === talk_with_second_character ===
-~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameTwo = translator(secondChar_ActualName)
     -> common_storylets ->
     //Se ho storylets disponibili di Riccio e non sono in pausa, passo a quelli.
         {
@@ -28,7 +28,7 @@
         }
 
 === options_second_character
-~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameFive = translator(fifthCharacterState)
 {  
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
@@ -74,7 +74,7 @@
                 
 = ask
 ~ temp charNameOne = translator(firstChar_ActualName)
-~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameFive = translator(fifthCharacterState)
 
         {
@@ -142,7 +142,7 @@
 
 
 === knowing_second_character
-~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameFive = translator(fifthCharacterState)
 
     //Storylets speciali
@@ -248,7 +248,7 @@
     //Non mettere cose TW qui
     //Obiettivo: Presentare l’elemento delle bugie. Vengono dette cose sconfessate poi nella terza storia.
     //Contenuto: Compleanno, giochi
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         ~ secondStoryQuestCount ++
@@ -377,7 +377,7 @@
     //Non mettere cose TW qui
     //Obiettivo: Messa in evidenza della rabbia, ma anche della sua curiosità (finale rosso o finale viola: vede la bellezza nelle cose brutte.)
     //Contenuto: Prima gioia per gli insetti, ecc, poi domande sulla sua violenza alla mentore.
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ secondStoryQuestCount ++
@@ -498,7 +498,7 @@
     //Non mettere cose TW qui
     //Obiettivo: Mostrare che sta iniziando a non mentire.
     //Contenuto: Ci racconta della rana, possiamo decidere di non credergli o meno.
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         ~ secondStoryQuestCount ++
@@ -532,7 +532,7 @@
     	        
     	        
         	  = him_liar
-            	  ~ temp charNameTwo = translator(secondCharacterState)
+            	  ~ temp charNameTwo = translator(secondChar_ActualName)
             	  ~ temp charNameFive = translator(fifthCharacterState)
             	  
             	  Sono contento che sei un maschio.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
@@ -553,7 +553,7 @@
         	            -> three_continue
         	  
         	  = her_liar
-        	  ~ temp charNameTwo = translator(secondCharacterState)
+        	  ~ temp charNameTwo = translator(secondChar_ActualName)
         	  ~ temp charNameOne = translator(firstChar_ActualName)
         	  
             	  Ah.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -576,7 +576,7 @@
         	            -> three_continue
         	  
         	  = they_liar
-        	  ~ temp charNameTwo = translator(secondCharacterState)
+        	  ~ temp charNameTwo = translator(secondChar_ActualName)
         	        Mmm.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         	        Capito.
         	        Anche io vorrei un pronome strano.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
@@ -592,7 +592,7 @@
        
        
         = three_continue 
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameOne = translator(firstChar_ActualName)
             //Definire meglio in base ai colori.
             
@@ -681,7 +681,7 @@
     //Non mettere cose TW qui
     //Obiettivo: mostrare che ha mentito all'inizio
     //Contenuto: Ci chiede come ci chiamiamo, emerge una bugia diversa a seconda del genere -> Qui però scopriamo che ci mente, possiamo decidere di mettere in evidenza o meno questa bugia, solitudine.
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ secondStoryQuestCount ++
@@ -773,7 +773,7 @@
     //Non mettere cose TW qui
     //Obiettivo: Far vedere che c'è qualcosa che non va a casa.
     //Contenuto: Momento di vulnerabilità, ci parla della nonna (ma non ci dice che è morta) e ci dice che è fuggito da casa.
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ temp charNameOne = translator(firstChar_ActualName)
             {
@@ -883,7 +883,7 @@
     //Obiettivo: Mostrare sempre il carattere complicato ma anche la posizione complicata socialmente. La scuola è un posto in cui non è al sicuro.
     //Contenuto: Lo accusiamo del furto, da lì emergono alcune cose sulla scuola. A seconda del rapporto, mente per evitare le punizioni, o è sincero. Il discorso dei compagni parte a prescindere.
   
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ temp charNameOne = translator(firstChar_ActualName)
             {
@@ -1009,7 +1009,7 @@
     //Obiettivo: raccontare il suo rapporto con la fantasia e le tensioni in famiglia (finale verde e finale viola)
     //Contenuto: Parla della fantasia, e del fatto che la sera si riscrive la giornata, capiamo che la famiglia litiga spesso. Tensione in casa anche per la morte della nonna
     
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
             {
@@ -1101,7 +1101,7 @@
     //Non mettere cose TW qui
     //Obiettivo: presentare la relazione col fratello maggiore, che è una persona molto pragmatica (finale blu, finale giallo)
     //Contenuti: ci parla del fratello come mito, riferimento, modello. All'inizio mente, ma poi si ridimensiona da solo (sta iniziano a fidarsi).
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ temp charNameOne = translator(firstChar_ActualName)
             {
@@ -1207,7 +1207,7 @@
     //Obiettivo: mostrare tra le righe la paura per il futuro, anche dimostrazione di rabbia verso di sè? (finale rosso sicuro, finale blu?
     //Contenuti: tutti sanno cosa diventare da grandi, io voglio fare il veterinaio ma?
      //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         ~ temp charNameOne = translator(firstChar_ActualName)
             {
@@ -1362,7 +1362,7 @@
     //Obiettivo: si fida di noi, mostriamo il suo rapporto con la violenza. Finale rosso, finale viola (aiutare gli altri).
     //Contenuti: capiamo che a scuola è un bullo, ma ci sono persone che protegge. 
     //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
             {
@@ -1454,7 +1454,7 @@
     = eleven
     //Obiettivo: curiosità, sperimentazione. finale giallo, finale viola
     //Contenuti: esperimenti in casa (microscopio, muro bruciato col Meccano //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
             {
@@ -1548,7 +1548,7 @@
     //Obiettivo: narrativamente, lasciarcelo con una immagine positiva. Far vedere il peso dei genitori. Finale verde, finale giallo.
     //Contenuti. Momento tenero. L'altra nonna, la casa al mare, momenti di pace. I genitori non ci sono in queste occasioni 
     //Da qui, no problem con contenuti TW. Si mette lx PG che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         ~ temp charNameOne = translator(firstChar_ActualName)
             {
@@ -1675,7 +1675,7 @@
   
         
 === second_story_gift ===
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     Stai per donare qualcosa a {charNameTwo}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             + {findedGifts != ()} [Scelgo il dono.]
                 ~ currentReceiver += SecondCharacter
@@ -1692,7 +1692,7 @@
 
 
 === rewriting_proposal_second_character
-~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameTwo = translator(secondChar_ActualName)
 //Così se decido di uscire dalla conversazione, posso riprendere da dove eravamo rimaste.
     {
         - not confession:
@@ -1704,7 +1704,7 @@
     }
     
     = confession
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ change_entity_place(Mentor)
@@ -1777,7 +1777,7 @@
 
 
     = rewriting
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
 
             //Avvio aggiornamento relazione + commento PNG + commento strega
                 -> secondAffinityCalc ->
@@ -1795,7 +1795,7 @@
 
 
     = one
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ change_entity_place(Mentor)
             {
@@ -1860,7 +1860,7 @@
         
     
     = two
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     Hai paura che il mondo stia finendo e che spariranno tutti gli animali.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
   
         + [Non puoi prevedere il futuro. Goditi quello che c'è senza rimpianti.]
@@ -1912,7 +1912,7 @@
             }
         
     = three
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     //Affrontiamo il mondo. Rabbia, bugie, fantasia, violenza etc.
     Tuo fratello dice che il mondo è orribile e che non si può più aggiustare.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
     
@@ -1963,7 +1963,7 @@
             }
     
     = four
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)    
     
     //Commento più personale
@@ -2016,7 +2016,7 @@
 
     
     = ending
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     
     
     Per questo ti dico:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
@@ -2066,7 +2066,7 @@
                 -> secondNaming ->naming
                 
             = naming
-            ~ temp charNameTwo = translator(secondCharacterState)
+            ~ temp charNameTwo = translator(secondChar_ActualName)
             
 
             
@@ -2081,31 +2081,31 @@
 
         {
 
-            - secondCharacterState has Grizzly:
+            - secondChar_ActualName has Grizzly:
                 Il mio vero nome è <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 Combatterò la mia paura e diventerò il più forte di tutti, imbattibile!
             
-            - secondCharacterState has Lupo:
+            - secondChar_ActualName has Lupo:
                 Mi chiamerò <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 E proteggerò il mio branco.
                 Mamma, papà, nonna e mio fratello.
                 Nessuna delle persone a cui voglio bene deve più stare male.
               
             
-            - secondCharacterState has Delfino:
+            - secondChar_ActualName has Delfino:
                 E il mio nome è <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Se lo guardi bene tutto è un gioco.
                 La mia fantasia e le mie bugie aiuteranno le altre persone ad avere meno paura.
                                
             
-            - secondCharacterState has Capibara:
+            - secondChar_ActualName has Capibara:
                 Mi chiamerò <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                 E imparerò ad avere tantissimi amici.
                 Ci sentiremo meno soli!
                 E così avremo meno paura.
                     
             
-            - secondCharacterState has Corvo:
+            - secondChar_ActualName has Corvo:
                 Io sono <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Sono sveglio e posso capire ciò che mi circonda!
                 E posso cambiare le cose che mi fanno paura.
@@ -2125,7 +2125,7 @@
     
     
     = secret_ending
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
         Voglio dirti una cosa {player_name}. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
         Su {charNameFive}.
@@ -2138,7 +2138,7 @@
             -> close
             
     = exit
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
         Voglio stare ancora un po' qui prima di prendere il treno. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
         Mi mancherà la rana!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
             -> close  
@@ -2151,7 +2151,7 @@
             
             ~ secondChar_InkLevel = ink_empty
             ~ numberQuestion = 0
-            ~ secondStory = story_storyEnded
+            ~ secondChar_storyStatus = story_storyEnded
             ~ player_movementsCounter = 0
             ~ story_endedStories += story_secondCharStoryEnded
             ~ PG_advance_management(SecondCharacter)
@@ -2159,7 +2159,7 @@
     
     
 === second_char_story_ended
-~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameTwo = translator(secondChar_ActualName)
 //Con questa formula dopo un tot di scambi la personaggia se ne va salutandoci.
 //In alcune situazioni questa cosa non c'è, in altre c'è solo se ho determinati status (es: socievole). In altri non c'è la possibilità che la personaggia se ne vada senza averci salutate (e quindi non c'è l'opzione in story_start)
 
@@ -2176,10 +2176,10 @@
         -> main
         
         = goodbye
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         {player_name}, mi sa che torno a casa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
         {
-            -secondCharacterPossibleStates hasnt Riccio:Sì no boh.
+            -secondChar_possibleStates hasnt Riccio:Sì no boh.
                 Sai che mi è piaciuta alla fine tutta questa cosa?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                 Mi hai regalato il migliore compleanno del mondo.
                 Anche se non era mica davvero il mio compleanno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -2192,7 +2192,7 @@
 
 
 === second_character_opinions
-~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameFive = translator(fifthCharacterState)
 ~ change_entity_place(Mentor)
 

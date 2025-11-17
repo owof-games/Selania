@@ -1,7 +1,7 @@
 === welcoming_frog
 {frogDebug: passo da welcoming_frog.}
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -66,19 +66,19 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
             {frogDebug: condizioni rispettate per poter offrire info su racconto per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - secondStory == story_storyStarted && secondGift == () && charTwoGifts hasnt charTwoCultivable:
+        - secondChar_storyStatus == story_storyStarted && secondGift == () && charTwoGifts hasnt charTwoCultivable:
             {frogDebug: condizioni rispettate per poter offrire info sul dono per Riccio.}
                 -> autonomy_mission_verify
                 
-        - secondStory == story_storyStarted && !ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking:
+        - secondChar_storyStatus == story_storyStarted && !ending_cooking_with_second_char && charTwoGifts hasnt charTwoCooking:
             {frogDebug: condizioni rispettate per poter offrire info su ingrediente per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - secondStory == story_storyStarted && player_accessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord:
+        - secondChar_storyStatus == story_storyStarted && player_accessiblePlaces has Nest && charTwoGifts hasnt charTwoEmotionalWord:
             {frogDebug: condizioni rispettate per poter offrire info sul dono per Chitarra.}
                 -> autonomy_mission_verify
                 
-        - secondStory == story_storyStarted && player_accessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary:
+        - secondChar_storyStatus == story_storyStarted && player_accessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary:
             {frogDebug: condizioni rispettate per poter offrire info su parola per Chitarra.}
                 -> autonomy_mission_verify
                 

@@ -37,7 +37,7 @@
             // - thirdChar_storyStatus == Ended:
                     //~ fourthTier = true
                     
-            // - secondStory == Ended:
+            // - secondChar_storyStatus == Ended:
                      //~ thirdTier = true
                      
             - firstStory == Ended:
@@ -56,7 +56,7 @@
         - firstStory == Active && talk_with_first_character:
             ~ randomizable_characters += FirstCharacter
         
-        - secondStory == Active && talk_with_second_character:
+        - secondChar_storyStatus == Active && talk_with_second_character:
             ~ randomizable_characters += SecondCharacter
         
         // - thirdChar_storyStatus == Active && talk_with_third_character:
@@ -189,9 +189,9 @@ VAR delayFourthChar = 20
             ~ firstStory = Active
             
 //A metà della storia della prima personaggia, compare la seconda      
-    - knowing_first_character.three && secondStory == NotStarted:
+    - knowing_first_character.three && secondChar_storyStatus == NotStarted:
             ~ move_entity(SecondCharacter, BusStop)    
-            ~ secondStory = Active
+            ~ secondChar_storyStatus = Active
 
 //A metà della storia della seconda personaggia e finita la prima (così la biblioteca è aperta), compare la terza
     //- knowing_second_character.four && firstStory == Ended && thirdChar_storyStatus == NotStarted:
@@ -215,7 +215,7 @@ VAR delayFourthChar = 20
         //~ move_entity(FirstCharacter, Safekeeping)
         //~ move_entity(FirstCharacterNotes, BusStop)
         
-    //- secondStory == Ended && movementsCounter > 10:
+    //- secondChar_storyStatus == Ended && movementsCounter > 10:
         //~ move_entity(SecondCharacter, Safekeeping)
         //~ move_entity(SecondCharacterNotes, BusStop)
         

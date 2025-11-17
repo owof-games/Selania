@@ -16,14 +16,14 @@
     
 === talking_witch
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     {
         //Check per intro
-        - not intro && ((firstChar_storyStatus == story_storyEnded) or (secondStory == story_storyEnded) or (thirdChar_storyStatus == story_storyEnded)):
+        - not intro && ((firstChar_storyStatus == story_storyEnded) or (secondChar_storyStatus == story_storyEnded) or (thirdChar_storyStatus == story_storyEnded)):
             -> intro
         
         //Spiegazione del nido
@@ -35,7 +35,7 @@
         //Check post storie dopo l'intro
         - intro && firstChar_storyStatus == story_storyEnded && not first_story_ended_check:
             -> first_story_ended_check
-        - intro && secondStory == story_storyEnded && not second_story_ended_check:
+        - intro && secondChar_storyStatus == story_storyEnded && not second_story_ended_check:
             -> second_story_ended_check
         - intro && thirdChar_storyStatus == story_storyEnded && not third_story_ended_check:
             -> third_story_ended_check
@@ -55,7 +55,7 @@
 
     = intro
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
@@ -124,7 +124,7 @@
                 {
                     - not first_story_ended_check && firstChar_storyStatus == story_storyEnded:
                         -> first_story_ended_check
-                    - not second_story_ended_check && secondStory == story_storyEnded:
+                    - not second_story_ended_check && secondChar_storyStatus == story_storyEnded:
                         -> second_story_ended_check
                     - not third_story_ended_check && thirdChar_storyStatus == story_storyEnded:
                         -> third_story_ended_check
@@ -134,7 +134,7 @@
 
     = first_story_ended_check
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
@@ -205,7 +205,7 @@
     
     = second_story_ended_check
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
@@ -271,7 +271,7 @@
         
     = third_story_ended_check
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
@@ -295,7 +295,7 @@
         
     = fourth_story_ended_check
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
@@ -320,7 +320,7 @@
     
     = fifth_story_ended_check
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
@@ -346,10 +346,10 @@
 === descriptions
     {   
         //Opinioni dopo la fine di due storie    
-        - (firstChar_storyStatus == story_storyEnded) && (secondStory == story_storyEnded):
+        - (firstChar_storyStatus == story_storyEnded) && (secondChar_storyStatus == story_storyEnded):
             -> three
         //Opinioni dopo la fine di una storia     
-        - (firstChar_storyStatus == story_storyEnded) or (secondStory == story_storyEnded):
+        - (firstChar_storyStatus == story_storyEnded) or (secondChar_storyStatus == story_storyEnded):
             -> two
         //Opinioni presenti da inizio gioco    
         - else:
@@ -378,7 +378,7 @@
 //Altri storylets
 === trully_about_nest
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)

@@ -6,7 +6,7 @@
 
 === welcome ===
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -123,7 +123,7 @@
             
 === about_ink_usage
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -210,7 +210,7 @@
     
 === questions
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
@@ -325,7 +325,7 @@
    
 === little_storylets
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -388,7 +388,7 @@
 //Feedback//
 === first_character_feedback
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -451,7 +451,7 @@
           
 === second_character_feedback
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)   
@@ -472,32 +472,32 @@
         }    
     
     {
-            - secondCharacterPossibleStates has Riccio:
+            - secondChar_ActualName has Riccio:
                 Mi spiace che non si sia liberato delle sue paure.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
                 E di quell'atteggiamento violento e fastidioso.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Other)} #portrait:mentore_bored
                 Forse avrei dovuto darti più aiuto.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sorry
                 O forse devi imparare meglio ad ascoltare le altre persone?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
 
-            - secondCharacterPossibleStates has Grizzly:
+            - secondChar_ActualName has Grizzly:
                 A quanto pare il nostro bambino ha abbracciato il suo lato rabbioso.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
                 E invece di combatterlo, l'ha fatto proprio.
                 Personalmente, la rabbia non mi convince mai molto.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
                 Porta solo disordine e dolore.
                 Ma immagino tu sappia quello che stai facendo, no?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
     
-            - secondCharacterPossibleStates has Lupo:
+            - secondChar_ActualName has Lupo:
                 La famiglia è qualcosa di importante, {player_name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
                 E sono contenta che {charNameTwo} abbia scoperto in sé la voglia di prendersene cura.
                 E magari un giorno la sua nonna e suo fratello torneranno sotto il tetto dei genitori.
                 Per me sarebbe un finale davvero felice.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
 
-            - secondCharacterPossibleStates has Delfino:
+            - secondChar_ActualName has Delfino:
                 Sono perplessa: non pensavo l'avresti spinto ad abbracciare il suo lato più infantile.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
                 Giocoso.
                 So che il tuo lavoro è fare uscire queste persone dal blocco.
                 Ma l'unica soluzione era quella di renderlo un giullare?#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
                 
-            - secondCharacterPossibleStates has Capibara:
+            - secondChar_ActualName has Capibara:
                 A volte forse devo solo dirmi: non tutto il mondo può essere come vorrei.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
                 Il fatto che il nostro piccolo amico ora si senta un {charNameTwo} mi lascia perplessa.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
                 Non sono mai stata una grande fan de "l'unione fa la forza".
@@ -505,7 +505,7 @@
                 E un giorno diventerà un uomo responsabile.
                 Spero.
             
-            - secondCharacterPossibleStates has Corvo:
+            - secondChar_ActualName has Corvo:
                 Non credo avresti potuto ottenere un esito migliore.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
                 La sua curiosità, la sua intelligenza indirizzate verso qualcosa di concreto, utile.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
                 Ce lo vedo a studiare nuovi modi per curare le persone.
@@ -524,7 +524,7 @@
    
    === third_character_feedback
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState) 
@@ -534,7 +534,7 @@
    
 === fourth_character_feedback
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -544,7 +544,7 @@
     
 === fifth_character_feedback
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)    
@@ -555,7 +555,7 @@
 //Storylets di commentario
     === growing_witch_storylet
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
@@ -574,7 +574,7 @@
 //Storylets sul secondo personaggio
     === that_little_liar_storylet
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
         
         {
@@ -624,7 +624,7 @@
     
     === addressing_violence
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
     //Creare uno storylet che si attiva con mentore dopo knowing_second_character.two (tenendo conto che potrebbe esserci già stato o meno uno scambio su questa cosa a seconda che riccio e mentore siano stati vicini dopo "not_talk", e che questa condizione è tracciata da riccioMentoreViciniColpo) e che ci permetta di interagire con lei in merito allo strattone che ha dato a Riccio
     
@@ -734,7 +734,7 @@ Mentore sbrocca
     Salvati questo codice, e inseriscilo poi nel documento del testing.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
     O se non hai voglia di rispondere alle domande mandamelo attraverso Queerginia: faresti molto felice entrambe.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Other)} #portrait:mentore_bored
     - (repeat)
-    Il codice è {player_purple} - {player_yellow} - {player_blue} - {player_green}- {player_red}; {player_firstStepStatus}; {player_secondStepStatus}; {firstChar_ActualName}; {secondCharacterState}.
+    Il codice è {player_purple} - {player_yellow} - {player_blue} - {player_green}- {player_red}; {player_firstStepStatus}; {player_secondStepStatus}; {firstChar_ActualName}; {secondChar_ActualName}.
     E se non te lo sei {player_pronouns has him:segnato|{player_pronouns has her:segnata|segnatə}}, potrai sempre trovarlo uscendo dal gioco.
     Grazie di cuore.
         -> talk_with_mentor

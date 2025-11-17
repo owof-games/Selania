@@ -62,7 +62,7 @@
     
     = ask
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     //Se arrivo a options da un dialogo, non mostro commenti da parte della PNG, altrimenti sì.
         {
@@ -626,7 +626,7 @@
     = five
     //Non mettere cose TW qui
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ firstChar_storyletsForRewritingCount ++
     
@@ -711,7 +711,7 @@
     = six
     //Non mettere cose TW qui
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
         //Paura delle conseguenze della scelta.
         ~ firstChar_storyletsForRewritingCount ++
@@ -783,7 +783,7 @@
     = seven
     //Non mettere cose TW qui
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     //Razionalità
         ~ firstChar_storyletsForRewritingCount ++
@@ -845,7 +845,7 @@
     = eight
     //Non mettere cose TW qui
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ firstChar_storyletsForRewritingCount ++
         
@@ -919,7 +919,7 @@
     = nine
     //Da qui, no problem con contenuti TW. Si mette Chitarra che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
         //Voglia di fare qualcosa di utile, importante
         ~ firstChar_storyletsForRewritingCount ++
@@ -984,7 +984,7 @@
     = ten
         //Da qui, no problem con contenuti TW. Si mette Chitarra che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ firstChar_storyletsForRewritingCount ++
         
@@ -1062,7 +1062,7 @@
     = eleven
         //Da qui, no problem con contenuti TW. Si mette Chitarra che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
         //Famiglia d'origine
         ~ firstChar_storyletsForRewritingCount ++
@@ -1129,7 +1129,7 @@
     = twelve
         //Da qui, no problem con contenuti TW. Si mette Chitarra che ci dice che, se non ce la sentiamo, ci dice qualcosa di diverso. Il rapporto non cambia., il counter non sale.
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     ~ firstChar_storyletsForRewritingCount ++
     
@@ -1237,7 +1237,7 @@
         //Per il feedback, temi legati al rapporto, all'amicizia
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
             
         C'è una cosa che voglio dirti, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     
@@ -1296,7 +1296,7 @@
 
         = one
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameTwo = translator(secondCharacterState)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameFive = translator(fifthCharacterState)
     
         {
@@ -1350,7 +1350,7 @@
             Capito. Continua.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             
             {
-                - secondStory!=story_storyEnded:{player_name} ha utilizzato la sua prima unità di inchiostro per compiere una riscrittura. L'inchiostro ora si è consumato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - secondChar_storyStatus!=story_storyEnded:{player_name} ha utilizzato la sua prima unità di inchiostro per compiere una riscrittura. L'inchiostro ora si è consumato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
             
             
@@ -1401,7 +1401,7 @@
             Ti ascolto. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             
             {
-                - secondStory!=story_storyEnded:{player_name} ha utilizzato la sua seconda unità di inchiostro per procedere con la riscrittura. Il boccetto ora è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - secondChar_storyStatus!=story_storyEnded:{player_name} ha utilizzato la sua seconda unità di inchiostro per procedere con la riscrittura. Il boccetto ora è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }        
             
             {
@@ -1453,7 +1453,7 @@
             
             
             {
-                - secondStory!=story_storyEnded:{player_name} ha utilizzato la terza unità di inchiostro, proponendo una riscruttura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - secondChar_storyStatus!=story_storyEnded:{player_name} ha utilizzato la terza unità di inchiostro, proponendo una riscruttura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }        
             
             {
@@ -1501,7 +1501,7 @@
             Ok. E quindi... #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             
             {
-                - secondStory!=story_storyEnded:{player_name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - secondChar_storyStatus!=story_storyEnded:{player_name} ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }   
             
             -> ending
@@ -1509,7 +1509,7 @@
         = ending
         ~ temp charNameOne = translator(firstChar_ActualName)
             {
-                - secondStory != story_storyEnded:
+                - secondChar_storyStatus != story_storyEnded:
                     {player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 - else:
                     Cosa dirà {player_name} come <b><i>epilogo</b></i>?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}   

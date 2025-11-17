@@ -2,7 +2,7 @@
 + (check){are_two_entities_together(KitchenRecap, PG)} [KitchenRecap]
 ~ enableBigDialogue()
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)

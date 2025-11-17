@@ -38,22 +38,22 @@ LIST speakersForEwWordTag = Influenced, Other
     - ! that_little_liar_storylet.nameSecond:
         ~ return "???"
         
-    - secondCharacterState == Riccio:
+    - secondChar_ActualName == Riccio:
 	    ~ return "Riccio"
 	
-	- secondCharacterState == Grizzly:
+	- secondChar_ActualName == Grizzly:
 	    ~ return "Grizzly"
 	    
-    - secondCharacterState == Lupo:
+    - secondChar_ActualName == Lupo:
 	    ~ return "Lupo"
 	    
-    - secondCharacterState == Delfino:
+    - secondChar_ActualName == Delfino:
 	    ~ return "Delfino"
 	    
-    - secondCharacterState == Capibara:
+    - secondChar_ActualName == Capibara:
 	    ~ return "Capibara"
 	    
-    - secondCharacterState == Corvo:
+    - secondChar_ActualName == Corvo:
 	    ~ return "Corvo"
 	
 }

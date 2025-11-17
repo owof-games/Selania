@@ -15,7 +15,7 @@
             -> myself
         + [Vorrei consigli su come stare meglio.]
             -> mindfulness -> support
-        + {secondStory == story_storyEnded && firstChar_storyStatus == story_storyEnded} [Mi ridaresti il codice della demo?]
+        + {secondChar_storyStatus == story_storyEnded && firstChar_storyStatus == story_storyEnded} [Mi ridaresti il codice della demo?]
             -> ending_demo.repeat
         + [Vorrei parlare d'altro.]
             -> talk_with_mentor
@@ -42,7 +42,7 @@
 
 === tutorial
 ~ temp charNameOne = translator(firstChar_ActualName)
-~ temp charNameTwo = translator(secondCharacterState)
+~ temp charNameTwo = translator(secondChar_ActualName)
 ~ temp charNameThree = translator(thirdChar_ActualName)
 ~ temp charNameFour= translator(fourthChar_ActualName)
 ~ temp charNameFive = translator(fifthCharacterState)

@@ -1,6 +1,6 @@
 === frog_about_who_questions
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -31,7 +31,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
             
         
     
-    + {secondStory == story_storyStarted} [Ho bisogno di una mano con {charNameTwo}.]
+    + {secondChar_storyStatus == story_storyStarted} [Ho bisogno di una mano con {charNameTwo}.]
         ~  currentMissionAboutChar = missionCharTwo
         {
             - LIST_COUNT(charTwoGifts) == 4:
@@ -79,7 +79,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
 === frog_gift_dispatcher ===
 {frogDebug: passo frog_gift_dispatcher.}
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -102,7 +102,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
 //Doni generici
     = char_one_gifts
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -248,7 +248,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
     
     = char_two_gifts
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)

@@ -49,7 +49,7 @@
 === mentor_and_first_char_storylets ===
 {debug: passo da mentor_and_first_char_storylets}
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -74,7 +74,7 @@
 === mentor_and_second_char_storylets ===
 {debug: passo da mentor_and_second_char_storylets}
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -95,7 +95,7 @@
         - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && knowing_second_character.two && (not addressing_violence):
             -> addressing_violence
         
-        - not second_character_feedback && secondStory == story_storyEnded:
+        - not second_character_feedback && secondChar_storyStatus == story_storyEnded:
             -> second_character_feedback            
             
         - else:
@@ -106,14 +106,14 @@
 === fifth_character_storylets ===
 {debug: passo da fifth_character_storylets}
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
     
     {
     //Feedback
-        - not ending_demo && secondStory == story_storyEnded && firstChar_storyStatus == story_storyEnded:
+        - not ending_demo && secondChar_storyStatus == story_storyEnded && firstChar_storyStatus == story_storyEnded:
             -> ending_demo
         // - not third_character_feedback && thirdChar_storyStatus == story_storyEnded:
         //     -> third_character_feedback        

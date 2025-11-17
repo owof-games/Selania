@@ -8,8 +8,6 @@
     LIST firstChar_possibleStates = Chitarra, Triangolo, RagazzaOrchestra, FlautoDolce, Ocarina, Violino
     VAR firstChar_ActualName = Chitarra
     
-    
-    
     //Stato della storia (non avviata, avviata, conclusa)
     VAR firstChar_storyStatus = story_storyNotStarted
     
@@ -134,7 +132,7 @@
 === firstAffinityFeedback
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
 {debug: passo per firstAffinityFeedback. Lo stato di inchiostro è {firstChar_InkLevel}.}
 
     Prima di cominciare, ci tengo a dirti cosa penso del rapporto tra di noi.

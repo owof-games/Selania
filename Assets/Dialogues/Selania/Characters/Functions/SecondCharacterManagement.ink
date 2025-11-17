@@ -4,16 +4,14 @@
                     
                      ----------------------------------*/
 //Possibili nomi:
-    LIST secondCharacterPossibleStates = Riccio, Grizzly, Lupo, Delfino, Capibara, Corvo
-    VAR secondCharacterState = Riccio
+    LIST secondChar_possibleStates = Riccio, Grizzly, Lupo, Delfino, Capibara, Corvo
+    VAR secondChar_ActualName = Riccio
     
-    VAR minStoryQuesTCountSecondChar = 8
-    
-    VAR secondStory = story_storyNotStarted
-    VAR charTwoEnding = ()
+    VAR secondChar_storyStatus = story_storyNotStarted
+    VAR secondChar_storyEndingPosition = ()
 
 //Tracciamento della relazione
-    VAR secondCharStateRelationship = 0
+    VAR secondChar_relationshipStatus = 0
     VAR goodPercentageForRelationship = 66.00
 
 //Valori per definire l'esito del nome
@@ -30,6 +28,10 @@
 //Tracciamento del dono
     VAR secondGift = ()
     
+    
+//Tengo conto delle interazioni avute per aprire la possibilità di avviare la riscrittura    
+    VAR minStoryQuesTCountSecondChar = 8
+
 //Tracciamento attivazione secondo elemento tutorial
     VAR secondTutorial = true
     
@@ -95,16 +97,16 @@
         
         {
             - secondPurple > minimumPercentValue:
-                    ~ secondCharStateRelationship ++
+                    ~ secondChar_relationshipStatus ++
             - secondGreen > minimumPercentValue:
-                    ~ secondCharStateRelationship ++        
+                    ~ secondChar_relationshipStatus ++        
             - secondRed > minimumPercentValue:
-                    ~ secondCharStateRelationship ++        
+                    ~ secondChar_relationshipStatus ++        
             - secondBlue > minimumPercentValue:
-                    ~ secondCharStateRelationship ++
+                    ~ secondChar_relationshipStatus ++
             - secondYellow > minimumPercentValue:
-                    ~ secondCharStateRelationship ++
-            {debug: Una risposta supera il 66 per cento delle scelte e quindi aumento l'inchiostro del secondo personaggio di un livello. Ora è a {secondCharStateRelationship}}
+                    ~ secondChar_relationshipStatus ++
+            {debug: Una risposta supera il 66 per cento delle scelte e quindi aumento l'inchiostro del secondo personaggio di un livello. Ora è a {secondChar_relationshipStatus}}
         }    
 
     
@@ -114,7 +116,7 @@
             - rewriting_proposal_second_character.rewriting:
                 {debug: ho cliccato rewriting e quindi faccio gli ultimi passaggi e attivo il feedback.} 
                 //"Trasformo" la relazione in inchiostro
-                    ~ fromRelationshipToInk(secondCharStateRelationship)
+                    ~ fromRelationshipToInk(secondChar_relationshipStatus)
                 // Mando ai feedback
                     -> secondAffinityFeedback ->
                 //Arriva il commento della strega
@@ -135,7 +137,7 @@
 === secondAffinityFeedback
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
 {debug: passo per secondAffinityFeedback. Lo stato di inchiostro è {secondChar_InkLevel}.}
 
     Prima di cominciare: sto pensando tanto al nostro rapporto, sai? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -243,27 +245,27 @@
 {debug: Il valore di secondRed è {secondRed} , di secondBlue è {secondBlue}, di secondGreen è {secondGreen}, di secondYellow è {secondYellow} e di secondPurple è {secondPurple}. La somma di tutti i colori è {allColorsValue}. Il valore di minimumPercentValue è {minimumPercentValue}.}
 
 //Resetto il valore del nome di Riccio
-    ~ secondCharacterState = ()
+    ~ secondChar_ActualName = ()
     
     {
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * crowPercentage):
-            ~ secondCharacterState += Corvo
+            ~ secondChar_ActualName += Corvo
                 ->->
         
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * capibaraPercentage):
-            ~ secondCharacterState += Capibara   
+            ~ secondChar_ActualName += Capibara   
                 ->-> 
         
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * dolphinePercentage):
-            ~ secondCharacterState += Delfino    
+            ~ secondChar_ActualName += Delfino    
                 ->->
         
         - secondPurple or secondGreen or secondRed or secondBlue or secondYellow >= (minimumPercentValue * wolfPercentage):
-            ~ secondCharacterState += Lupo
+            ~ secondChar_ActualName += Lupo
                 ->->
         
         - else:
-            ~ secondCharacterState += Grizzly
+            ~ secondChar_ActualName += Grizzly
                 ->->
     }
     
@@ -295,16 +297,16 @@
 //    {
 //        - secondCheckColor:
 //            {
-//             - secondCharacterPossibleStates hasnt Corvo:
-//                ~ secondCharacterPossibleStates ++
-//                {debugChangeName: Aumento lo stato del secondo personaggio, che ora è {secondCharacterPossibleStates }}
+//             - secondChar_possibleStates hasnt Corvo:
+//                ~ secondChar_possibleStates ++
+//                {debugChangeName: Aumento lo stato del secondo personaggio, che ora è {secondChar_possibleStates }}
 //            }
 //        
 //        - else:
 //            {
-//             - secondCharacterPossibleStates hasnt Grizzly:
-//                ~ secondCharacterPossibleStates --
-//            {debugChangeName: Diminuisco lo stato del secondo personaggio, che ora è //{secondCharacterPossibleStates }}
+//             - secondChar_possibleStates hasnt Grizzly:
+//                ~ secondChar_possibleStates --
+//            {debugChangeName: Diminuisco lo stato del secondo personaggio, che ora è //{secondChar_possibleStates }}
 //            }
 //    	            
 //    }        

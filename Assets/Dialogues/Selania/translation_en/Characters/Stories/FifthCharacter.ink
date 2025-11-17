@@ -91,9 +91,9 @@
                 -> two
             - not three && firstStory == Ended:
                 -> three
-            - not four && secondStory == Ended:
+            - not four && secondChar_storyStatus == Ended:
                 -> four
-            - not five && secondStory == Ended:
+            - not five && secondChar_storyStatus == Ended:
                 -> five
             //Forse solo una di queste, perché con la terza storia avremo degli storylets ad hoc.    
             - not six && thirdStory == Ended:

@@ -53,7 +53,7 @@
     LIST secondCharacterPossibleStates = IlRiccio, IlGrizzly, IlLupo, IlDelfino, IlCapibara, IlCorvo
     VAR secondCharacterState = IlRiccio
     
-    VAR secondStory = NotStarted
+    VAR secondChar_storyStatus = NotStarted
     //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
     VAR secondStoryQuestCount = 0
     VAR secondCharacterSpecialEvent = false

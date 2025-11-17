@@ -40,7 +40,7 @@
 //Verifico quante missioni autonome ha fatto la giocatrice.
 {frogDebug: passo da autonomy_mission_verify.}
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -141,7 +141,7 @@
 {frogDebug: currentMissionAboutChar == {currentMissionAboutChar}.}
 //Alla fine le missioni sono scollegate dai doni, e sono letteralmente scritte secondo bisogno.
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -164,9 +164,9 @@
                 -> mission_three
             - 4 && availableMissions has missionFour:
                 -> mission_four
-            - 5 && availableMissions has missionFive && (firstChar_storyStatus == story_storyStarted) && (secondStory == story_storyStarted):
+            - 5 && availableMissions has missionFive && (firstChar_storyStatus == story_storyStarted) && (secondChar_storyStatus == story_storyStarted):
                 -> mission_five
-            - 6 && availableMissions has missionSix && ((firstChar_storyStatus == story_storyEnded) or (secondStory == story_storyEnded) or (thirdChar_storyStatus == story_storyEnded)):
+            - 6 && availableMissions has missionSix && ((firstChar_storyStatus == story_storyEnded) or (secondChar_storyStatus == story_storyEnded) or (thirdChar_storyStatus == story_storyEnded)):
                 -> mission_six
             - 7 && availableMissions has missionSeven && (trainStopContents has FirstCharacterNotes) or (trainStopContents has SecondCharacterNotes):
                 -> mission_seven
@@ -185,7 +185,7 @@
 === closed_mission_verify
 {frogDebug: passo da closed_mission_verify. Il valore di activeMissions è {activeMissions}.}
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
@@ -516,7 +516,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
 //Questa è la notifica della "strega" se chiudiamo una missione
 {frogDebug: passo da witch_frog_mission_notifier.}
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondCharacterState)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(fifthCharacterState)
