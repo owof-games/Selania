@@ -73,16 +73,16 @@
     VAR nest_bluePurpleWords = (BluViola, BluBluViola, BluViolaVerde, BluViolaViola, BluViolaBlu, BluViolaGiallo, BluViolaRosso)
     
     //Varianti a dominante verde
-    VAR greenRedWords = (VerdeRosso, VerdeVerdeRosso, VerdeRossoVerde, VerdeRossoViola, VerdeRossoBlu, VerdeRossoGiallo, VerdeRossoRosso)
-    VAR greenYellowWords = (VerdeGiallo, VerdeVerdeGiallo, VerdeGialloVerde, VerdeGialloViola, VerdeGialloBlu, VerdeGialloGiallo, VerdeGialloRosso)
-    VAR greenBlueWords = (VerdeBlu, VerdeVerdeBlu, VerdeBluVerde, VerdeBluViola, VerdeBluBlu, VerdeBluGiallo, VerdeBluRosso)
-    VAR greenPurpleWords = (VerdeViola, VerdeVerdeViola, VerdeViolaVerde, VerdeViolaViola, VerdeViolaBlu, VerdeViolaGiallo, VerdeViolaRosso)
+    VAR nest_greenRedWords = (VerdeRosso, VerdeVerdeRosso, VerdeRossoVerde, VerdeRossoViola, VerdeRossoBlu, VerdeRossoGiallo, VerdeRossoRosso)
+    VAR nest_greenYellowWords = (VerdeGiallo, VerdeVerdeGiallo, VerdeGialloVerde, VerdeGialloViola, VerdeGialloBlu, VerdeGialloGiallo, VerdeGialloRosso)
+    VAR nest_greenBlueWords = (VerdeBlu, VerdeVerdeBlu, VerdeBluVerde, VerdeBluViola, VerdeBluBlu, VerdeBluGiallo, VerdeBluRosso)
+    VAR nest_greenPurpleWords = (VerdeViola, VerdeVerdeViola, VerdeViolaVerde, VerdeViolaViola, VerdeViolaBlu, VerdeViolaGiallo, VerdeViolaRosso)
     
     //Varianti a dominante viola
-    VAR purpleRedWords = (ViolaRosso, ViolaViolaRosso, ViolaRossoVerde, ViolaRossoViola, ViolaRossoBlu, ViolaRossoGiallo, ViolaRossoRosso)
-    VAR purpleYellowWords = (ViolaGiallo, ViolaViolaGiallo, ViolaGialloVerde, ViolaGialloViola, ViolaGialloBlu, ViolaGialloGiallo, ViolaGialloRosso)
-    VAR purpleBlueWords = (ViolaBlu, ViolaViolaBlu, ViolaBluVerde, ViolaBluViola, ViolaBluBlu, ViolaBluGiallo, ViolaBluRosso)
-    VAR purpleGreenWords = (ViolaVerde, ViolaViolaVerde, ViolaVerdeVerde, ViolaVerdeViola, ViolaVerdeBlu, ViolaVerdeGiallo, ViolaVerdeRosso)
+    VAR nest_purpleRedWords = (ViolaRosso, ViolaViolaRosso, ViolaRossoVerde, ViolaRossoViola, ViolaRossoBlu, ViolaRossoGiallo, ViolaRossoRosso)
+    VAR nest_purpleYellowWords = (ViolaGiallo, ViolaViolaGiallo, ViolaGialloVerde, ViolaGialloViola, ViolaGialloBlu, ViolaGialloGiallo, ViolaGialloRosso)
+    VAR nest_purpleBlueWords = (ViolaBlu, ViolaViolaBlu, ViolaBluVerde, ViolaBluViola, ViolaBluBlu, ViolaBluGiallo, ViolaBluRosso)
+    VAR nest_purpleGreenWords = (ViolaVerde, ViolaViolaVerde, ViolaVerdeVerde, ViolaVerdeViola, ViolaVerdeBlu, ViolaVerdeGiallo, ViolaVerdeRosso)
     
 //Una lista degli usi possibili di emotional_words_management
     LIST emotionalWordsManagementStatus = Activate, Delete
