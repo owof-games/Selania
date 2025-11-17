@@ -1,6 +1,6 @@
 === main
 //Main è il punto da cui passiamo costantemente per caricare i thread di tutto ciò che genera testo in ogni area del gioco.
-{debug and (shortStories + averageStories + longStories) != unreadStories:
+{debug and (shortStories + averageStories + longStories) != library_unreadStories:
     Errore nella biblioteca!
     -> DONE
 }

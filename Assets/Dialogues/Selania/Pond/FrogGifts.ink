@@ -212,7 +212,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
         + {player_accessiblePlaces has Library && charOneGifts hasnt charOneLibrary} [C'è un racconto della biblioteca che ha nel cuore?]
             ~ charOneGifts += charOneLibrary
                 {
-                    - readStories has Salvo:
+                    - library_readStories has Salvo:
                         Uh, vedo che hai già letto <b>Il cancello</b>.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                             {
                                 - a_story_of_transformation:
@@ -354,7 +354,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
         + {player_accessiblePlaces has Library && charTwoGifts hasnt charTwoLibrary} [C'è un racconto della biblioteca che ha nel cuore?] 
             ~ charTwoGifts += charTwoLibrary
         {
-                    - readStories has Lamia:
+                    - library_readStories has Lamia:
                         Uh, vedo che hai già letto <b>Il sassolino</b>.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                             {
                                 - a_story_of_transformation:

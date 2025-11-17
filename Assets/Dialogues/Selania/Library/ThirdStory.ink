@@ -2,9 +2,9 @@
 === lamia
 //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
-                - unreadStories has Lamia:
-                    ~ unreadStories -= Lamia
-                    ~ readStories += Lamia
+                - library_unreadStories has Lamia:
+                    ~ library_unreadStories -= Lamia
+                    ~ library_readStories += Lamia
                      -> refresh_book_lists ->
             }  
             
@@ -49,15 +49,15 @@
         + [Inizio la lettura.]
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
-                - unreadStories has ValFaustoLattanzio:
-                    ~ unreadStories -= ValFaustoLattanzio
-                    ~ readStories += ValFaustoLattanzio
+                - library_unreadStories has ValFaustoLattanzio:
+                    ~ library_unreadStories -= ValFaustoLattanzio
+                    ~ library_readStories += ValFaustoLattanzio
                      -> refresh_book_lists ->
             }  
-        + {unreadStories has ValFaustoLattanzio}[Per ora non me la sento di affrontare questo tema.]
+        + {library_unreadStories has ValFaustoLattanzio}[Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + {unreadStories has ValFaustoLattanzio}[Non presentarmi più questo racconto.]
-            ~ unreadStories -= ValFaustoLattanzio
+        + {library_unreadStories has ValFaustoLattanzio}[Non presentarmi più questo racconto.]
+            ~ library_unreadStories -= ValFaustoLattanzio
                 -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -100,15 +100,15 @@
         + [Inizio la lettura.]
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
-                - unreadStories has Romi:
-                    ~ unreadStories -= Romi
-                    ~ readStories += Romi
+                - library_unreadStories has Romi:
+                    ~ library_unreadStories -= Romi
+                    ~ library_readStories += Romi
                      -> refresh_book_lists ->
             }  
-        + {unreadStories has Romi}[Per ora non me la sento di affrontare questo tema.]
+        + {library_unreadStories has Romi}[Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + {unreadStories has Romi}[Non presentarmi più questo racconto.]
-            ~ unreadStories -= Romi
+        + {library_unreadStories has Romi}[Non presentarmi più questo racconto.]
+            ~ library_unreadStories -= Romi
                 -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->

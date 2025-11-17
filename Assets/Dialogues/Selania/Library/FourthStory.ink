@@ -3,9 +3,9 @@
 === salvo
 //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
-                - unreadStories has Salvo:
-                    ~ unreadStories -= Salvo
-                    ~ readStories += Salvo
+                - library_unreadStories has Salvo:
+                    ~ library_unreadStories -= Salvo
+                    ~ library_readStories += Salvo
                      -> refresh_book_lists ->
             }  
     -> DarkLibraryModeOn ->
@@ -64,15 +64,15 @@
         + [Inizio la lettura.]
 //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
-                - unreadStories has Maura:
-                    ~ unreadStories -= Maura
-                    ~ readStories += Maura
+                - library_unreadStories has Maura:
+                    ~ library_unreadStories -= Maura
+                    ~ library_readStories += Maura
                      -> refresh_book_lists ->
             }  
-        + {unreadStories has Maura}[Per ora non me la sento di affrontare questo tema.]
+        + {library_unreadStories has Maura}[Per ora non me la sento di affrontare questo tema.]
                 -> tempTW -> book_test_intro
-        + {unreadStories has Maura}[Non presentarmi più questo racconto.]
-            ~ unreadStories -= Maura
+        + {library_unreadStories has Maura}[Non presentarmi più questo racconto.]
+            ~ library_unreadStories -= Maura
                 -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -118,15 +118,15 @@
         + [Inizio la lettura.]
 //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
-                - unreadStories has LetiziaVaccarella:
-                    ~ unreadStories -= LetiziaVaccarella
-                    ~ readStories += LetiziaVaccarella
+                - library_unreadStories has LetiziaVaccarella:
+                    ~ library_unreadStories -= LetiziaVaccarella
+                    ~ library_readStories += LetiziaVaccarella
                      -> refresh_book_lists ->
             }        
-        + {unreadStories has LetiziaVaccarella}[Per ora non me la sento di affrontare questo tema.]
+        + {library_unreadStories has LetiziaVaccarella}[Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + {unreadStories has LetiziaVaccarella}[Non presentarmi più questo racconto.]
-            ~ unreadStories -= LetiziaVaccarella
+        + {library_unreadStories has LetiziaVaccarella}[Non presentarmi più questo racconto.]
+            ~ library_unreadStories -= LetiziaVaccarella
                 -> refresh_book_lists -> book_test_intro
         -
     -> DarkLibraryModeOn ->
@@ -187,9 +187,9 @@
         ~ enableBigDialogue()
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
         {
-            - unreadStories has QueerginiaWolf:
-                ~ unreadStories -= QueerginiaWolf
-                ~ readStories += QueerginiaWolf
+            - library_unreadStories has QueerginiaWolf:
+                ~ library_unreadStories -= QueerginiaWolf
+                ~ library_readStories += QueerginiaWolf
                  -> refresh_book_lists ->
         }
         

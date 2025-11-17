@@ -2,19 +2,19 @@
 LIST library_allStories = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, QueerginiaWolf
 
 //Liste per distinguere storie lette e non
-    VAR unreadStories = (AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, QueerginiaWolf)
-    VAR readStories = ()
-    VAR temporaryTW = ()
-    VAR temporaryReadTW = ()
-    VAR temporaryShortTW = ()
-    VAR temporaryAverageTW = ()
-    VAR temporaryLongTW = ()
-    VAR temporaryTransformationTW = ()
-    VAR temporaryQuestionsTW = ()
-    VAR temporaryUnpreparedTW = ()
-    VAR temporaryMonstersTW = ()
-    VAR temporaryFireTW = ()
-    VAR temporaryRebellionTW = ()
+    VAR library_unreadStories = (AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, QueerginiaWolf)
+    VAR library_readStories = ()
+    VAR library_temporaryTW = ()
+    VAR library_temporaryReadTW = ()
+    VAR library_temporaryShortTW = ()
+    VAR library_temporaryAverageTW = ()
+    VAR library_temporaryLongTW = ()
+    VAR library_temporaryTransformationTW = ()
+    VAR library_temporaryQuestionsTW = ()
+    VAR library_temporaryUnpreparedTW = ()
+    VAR library_temporaryMonstersTW = ()
+    VAR library_temporaryFireTW = ()
+    VAR library_temporaryRebellionTW = ()
     
 //Raggrupamento per lunghezza
     LIST storiesDuration = Short, Average, Long
@@ -38,14 +38,14 @@ LIST library_allStories = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, Cec
 
 === book_test_intro ===
 La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        + {readStories != ()} [Voglio rileggere qualcosa.]
-        La tua libreria contiene {number_translator(readStories)} {libro_libri(readStories)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        + {library_readStories != ()} [Voglio rileggere qualcosa.]
+        La tua libreria contiene {number_translator(library_readStories)} {libro_libri(library_readStories)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             -> reread
             
-        + {unreadStories != ()} [Vorrei una nuova storia casuale.]
+        + {library_unreadStories != ()} [Vorrei una nuova storia casuale.]
             -> storyRandom
             
-        + {unreadStories != ()}[Voglio scegliere la mia storia.]
+        + {library_unreadStories != ()}[Voglio scegliere la mia storia.]
             -> storyQuestions
     
         + [Non voglio più leggere.]
@@ -58,7 +58,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
 === storyRandom ===
 //Questo è il più facile: recupero un titolo randomico tra i libri non letti.
     ~ book = ()
-    ~ book = LIST_RANDOM(unreadStories)
+    ~ book = LIST_RANDOM(library_unreadStories)
     ->from_list_to_books
 
 
@@ -267,105 +267,105 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
 
 //Gestione TW temporanei
 === tempTW
-{debug: Entro in tempTW. Prima di operare la funzione, il valore di book è {book}. Unreadstories ha questi libri: {unreadStories}, mentre readstories ha questi {readStories}.}
+{debug: Entro in tempTW. Prima di operare la funzione, il valore di book è {book}. Unreadstories ha questi libri: {library_unreadStories}, mentre readstories ha questi {library_readStories}.}
     {
-    - unreadStories has book:
-    	~ unreadStories -= book
-    	~ temporaryTW += book
-    - readStories has book:
-    	~ readStories -= book
-    	~ temporaryReadTW +=book
+    - library_unreadStories has book:
+    	~ library_unreadStories -= book
+    	~ library_temporaryTW += book
+    - library_readStories has book:
+    	~ library_readStories -= book
+    	~ library_temporaryReadTW +=book
     }
     
     {
     - shortStories has book:
         ~ shortStories -= book
-        ~ temporaryShortTW += book
+        ~ library_temporaryShortTW += book
     - averageStories has book:
         ~ averageStories -= book
-        ~ temporaryAverageTW += book
+        ~ library_temporaryAverageTW += book
     - longStories has book:
         ~ longStories -= book
-        ~ temporaryLongTW += book
+        ~ library_temporaryLongTW += book
     }
 
     {
     - aboutTransformation has book:
         ~ aboutTransformation -= book
-        ~ temporaryTransformationTW += book
+        ~ library_temporaryTransformationTW += book
     }
     {
     - aboutQuestions has book:
         ~ aboutQuestions -= book
-        ~ temporaryQuestionsTW += book
+        ~ library_temporaryQuestionsTW += book
     }
     {
     - aboutUnprepared has book:
         ~ aboutUnprepared -= book
-        ~ temporaryUnpreparedTW += book
+        ~ library_temporaryUnpreparedTW += book
     }
     {
     - aboutMonsters has book:
         ~ aboutMonsters -= book
-        ~ temporaryMonstersTW += book
+        ~ library_temporaryMonstersTW += book
     }
     {
     - aboutFire has book:
         ~ aboutFire -= book
-        ~ temporaryFireTW += book
+        ~ library_temporaryFireTW += book
     }
     {
     - aboutRebellion has book:
         ~ aboutRebellion -= book
-        ~ temporaryRebellionTW += book
+        ~ library_temporaryRebellionTW += book
     }
 
-{debug: Dopo aver operato la funzione, il valore di book è {book}. Unreadstories ha questi libri: {unreadStories}, mentre readstories ha questi {readStories}.}    
+{debug: Dopo aver operato la funzione, il valore di book è {book}. Unreadstories ha questi libri: {library_unreadStories}, mentre readstories ha questi {library_readStories}.}    
 ->->
 
 
 //Chiamo questa funzione per i trigger warning temporanei, quando voglio evitare una storia solo in una occasione
 === empty_tempTW
-{debug: passo per empty_tempTW. Prima di operare la funzione, la lista di storie non lette contiene {unreadStories} e la lista delle storie non lette ed evitate contiene {temporaryTW}. La lista delle storie da rileggere è {readStories} e le storie da rileggere evitate sono {temporaryReadTW}.}
-    ~ unreadStories += temporaryTW
-    ~ temporaryTW = ()
-    ~ readStories += temporaryReadTW
-    ~ temporaryReadTW = ()
+{debug: passo per empty_tempTW. Prima di operare la funzione, la lista di storie non lette contiene {library_unreadStories} e la lista delle storie non lette ed evitate contiene {library_temporaryTW}. La lista delle storie da rileggere è {library_readStories} e le storie da rileggere evitate sono {library_temporaryReadTW}.}
+    ~ library_unreadStories += library_temporaryTW
+    ~ library_temporaryTW = ()
+    ~ library_readStories += library_temporaryReadTW
+    ~ library_temporaryReadTW = ()
 
-    ~ shortStories += temporaryShortTW
-    ~ temporaryShortTW = ()
-    ~ averageStories += temporaryAverageTW
-    ~ temporaryAverageTW = ()
-    ~ longStories += temporaryLongTW
-    ~ temporaryLongTW = ()
+    ~ shortStories += library_temporaryShortTW
+    ~ library_temporaryShortTW = ()
+    ~ averageStories += library_temporaryAverageTW
+    ~ library_temporaryAverageTW = ()
+    ~ longStories += library_temporaryLongTW
+    ~ library_temporaryLongTW = ()
 
-    ~ aboutTransformation += temporaryTransformationTW
-    ~ temporaryTransformationTW = ()
-    ~ aboutQuestions += temporaryQuestionsTW
-    ~ temporaryQuestionsTW = ()
-    ~ aboutUnprepared += temporaryUnpreparedTW
-    ~ temporaryUnpreparedTW = ()
-    ~ aboutMonsters += temporaryMonstersTW
-    ~ temporaryMonstersTW = ()
-    ~ aboutFire += temporaryFireTW
-    ~ temporaryFireTW = ()
-    ~ aboutRebellion += temporaryRebellionTW
-    ~ temporaryRebellionTW = ()
+    ~ aboutTransformation += library_temporaryTransformationTW
+    ~ library_temporaryTransformationTW = ()
+    ~ aboutQuestions += library_temporaryQuestionsTW
+    ~ library_temporaryQuestionsTW = ()
+    ~ aboutUnprepared += library_temporaryUnpreparedTW
+    ~ library_temporaryUnpreparedTW = ()
+    ~ aboutMonsters += library_temporaryMonstersTW
+    ~ library_temporaryMonstersTW = ()
+    ~ aboutFire += library_temporaryFireTW
+    ~ library_temporaryFireTW = ()
+    ~ aboutRebellion += library_temporaryRebellionTW
+    ~ library_temporaryRebellionTW = ()
 
-{debug: dopo aver applicato empty_tempTW, la lista di storie non lette contiene {unreadStories} e la lista delle storie evitate contiene {temporaryTW}.La lista delle storie da rileggere è {readStories} e i trigger sono attivi per {temporaryReadTW}.}
+{debug: dopo aver applicato empty_tempTW, la lista di storie non lette contiene {library_unreadStories} e la lista delle storie evitate contiene {library_temporaryTW}.La lista delle storie da rileggere è {library_readStories} e i trigger sono attivi per {library_temporaryReadTW}.}
 
 ->->
 
 //Funzione di rimozione permanente di un racconto
 === permanentTW
-{debug: Entro in permanentTW. Prima di operare la funzione, il valore di book è {book}. Unreadstories ha questi libri: {unreadStories}, mentre readstories ha questi {readStories}.}
+{debug: Entro in permanentTW. Prima di operare la funzione, il valore di book è {book}. Unreadstories ha questi libri: {library_unreadStories}, mentre readstories ha questi {library_readStories}.}
 {
-    - unreadStories has book:
-    	~ unreadStories -= book
-    - readStories has book:
-    	~ readStories -= book
+    - library_unreadStories has book:
+    	~ library_unreadStories -= book
+    - library_readStories has book:
+    	~ library_readStories -= book
 }
-{debug: Dopo aver operato la funzione, il valore di book è {book}. Unreadstories ha questi libri: {unreadStories}, mentre readstories ha questi {readStories}.}   
+{debug: Dopo aver operato la funzione, il valore di book è {book}. Unreadstories ha questi libri: {library_unreadStories}, mentre readstories ha questi {library_readStories}.}   
 ->->
     
 === refresh_book_lists
@@ -457,23 +457,23 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
 ~ book = ()
 
 {shuffle:
-    - {readStories has AdriAllora: -> reread_adri_allora| -> reread}
-    - {readStories has Aza: -> reread_aza| -> reread}    
-    - {readStories has Salvo: -> reread_salvo| -> reread}
-    - {readStories has StenoArtico: -> reread_steno_artico| -> reread}
-    - {readStories has B: -> reread_b| -> reread}     
-    - {readStories has Beatrice: -> reread_beatrice| -> reread}    
-    - {readStories has BeatriceYBottura: -> reread_beatrice_y_bottura| -> reread}
+    - {library_readStories has AdriAllora: -> reread_adri_allora| -> reread}
+    - {library_readStories has Aza: -> reread_aza| -> reread}    
+    - {library_readStories has Salvo: -> reread_salvo| -> reread}
+    - {library_readStories has StenoArtico: -> reread_steno_artico| -> reread}
+    - {library_readStories has B: -> reread_b| -> reread}     
+    - {library_readStories has Beatrice: -> reread_beatrice| -> reread}    
+    - {library_readStories has BeatriceYBottura: -> reread_beatrice_y_bottura| -> reread}
     
-    - {readStories has CeciliaFormicola: -> reread_cecilia_formicola| -> reread}   
+    - {library_readStories has CeciliaFormicola: -> reread_cecilia_formicola| -> reread}   
     
-    - {readStories has Lamia: -> reread_lamia| ->reread} 
-    - {readStories has ValFaustoLattanzio: -> reread_val_lattanzio| ->reread}
-    - {readStories has Romi: -> reread_romi| ->reread}    
+    - {library_readStories has Lamia: -> reread_lamia| ->reread} 
+    - {library_readStories has ValFaustoLattanzio: -> reread_val_lattanzio| ->reread}
+    - {library_readStories has Romi: -> reread_romi| ->reread}    
     
-    - {readStories has Maura: -> reread_maura| -> reread}
-    - {readStories has LetiziaVaccarella: -> reread_letizia_vaccarella| -> reread}
-    - {readStories has QueerginiaWolf: -> reread_queerginia_wolf| -> reread}
+    - {library_readStories has Maura: -> reread_maura| -> reread}
+    - {library_readStories has LetiziaVaccarella: -> reread_letizia_vaccarella| -> reread}
+    - {library_readStories has QueerginiaWolf: -> reread_queerginia_wolf| -> reread}
 }
 
 
@@ -483,7 +483,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     
         + [Rileggo <b>Il mio bellissimo gatto</b> di Adri Allora(ləi).]
                 -> adri_allora
-        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro
@@ -492,7 +492,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     La biblioteca si chiede cosa tu voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         + [Rileggo <b>Luna vergine</b> di Aza (any).]
                 -> aza
-        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro                 
@@ -502,7 +502,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     
         + [Rileggo <b>This anger</b> by StenoArtico (he/him, none).]
                 -> steno_artico
-        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
@@ -512,7 +512,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     
         + [Rileggo <b>The touch of anger</b> di K.(she/her).]
                 -> b
-        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
@@ -522,7 +522,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     
         + [Rileggo <b>La rete non esiste di Beatrice(she/her).]
                 -> beatrice
-        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
@@ -532,7 +532,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     
         + [Rileggo <b>Artigli Rosso Ruggine</b> di Beatrice Y. Bottura (she/it).]
                 -> beatrice_y_bottura
-        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
@@ -545,7 +545,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     
         + [Rileggo <b>Getting warm</b> di Cecilia Formicola (she/her).]
                 -> cecilia_formicola
-        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
@@ -557,7 +557,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     
         + [Rileggo <b>Il sassolino</b> di Lamia (she/they).]
                 -> lamia
-        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro  
@@ -567,7 +567,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     
         + [Rileggo <b>Home</b> di Val Fausto Lattanzio (he/they).]
                 -> val_fausto_lattanzio
-        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro        
@@ -577,7 +577,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     
         + [Rileggo <b>Il principe sbagliato</b> di Romi (any).]
                 -> val_fausto_lattanzio
-        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro   
@@ -588,7 +588,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     
         + [Rileggo <b>Il cancello</b> di Salvo (he/him).]
                 -> salvo
-        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
@@ -598,7 +598,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     
         + [Rileggo <b>Polvere</b> di Maura (she/they).]
                 -> maura
-        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro        
@@ -609,7 +609,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     
         + [Rileggo <b>Dodici Stelle</b> di Letizia Vaccarella (she/her).]
                 -> letizia_vaccarella
-        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro     
@@ -619,7 +619,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     
         + [Rileggo <b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).]
                 -> queerginia_wolf
-        + {LIST_COUNT(readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+        + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 

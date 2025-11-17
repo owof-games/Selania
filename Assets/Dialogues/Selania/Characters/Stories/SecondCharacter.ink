@@ -184,7 +184,7 @@
                     -> cooking_with_second_char        
 
             //Lettura Riccio
-                - are_two_entities_together(SecondCharacter, PG) && readStories has Lamia && not a_story_of_rebellion:
+                - are_two_entities_together(SecondCharacter, PG) && library_readStories has Lamia && not a_story_of_rebellion:
                     -> a_story_of_rebellion
 
         }

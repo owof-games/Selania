@@ -112,7 +112,7 @@
         
     //Missione otto: leggere un libro della biblioteca
         {
-            - readStories != () && availableMissions has missionEight:
+            - library_readStories != () && availableMissions has missionEight:
                 ~ availableMissions -= missionEight
                 Stavo per chiederti di leggere una delle storie della biblioteca, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
@@ -302,7 +302,7 @@
         
         - missionEight:
             {
-                - readStories != ():
+                - library_readStories != ():
                     Hai letto una della storie della biblioteca, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     La biblioteca è un posto di riposo, ma non solo.
                     Anche alle persone che popolano questo posto piace leggere.
@@ -564,7 +564,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
                             ->->    
                     }
                 
-                - activeMissions has missionEight && readStories != ():
+                - activeMissions has missionEight && library_readStories != ():
                     -> notification
                     
                 - activeMissions has specialMissionOne && special_mission_one_dialogue:
