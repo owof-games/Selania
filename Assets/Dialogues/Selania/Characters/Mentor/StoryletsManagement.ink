@@ -59,6 +59,8 @@
         - player_accessiblePlaces has Nest && not about_nest && mentor_tutorialPauses == false && fifthChar_pauseTalking == 0:
             -> about_nest    
             
+        - trainStopContents has FirstCharacterNotes && not first_character_notes && not first_char_new_mail:
+            -> first_char_new_mail
             
         - else:
             -> mentor_and_first_char_storylets    

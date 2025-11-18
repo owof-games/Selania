@@ -321,7 +321,44 @@
     ~ mentor_tutorialPauses = true
     -> main
 
-        
+ 
+=== first_char_new_mail
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    Sembra che {charNameOne} ti abbia scritto una lettera, {player_name}! #speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+    Che cosa dolce, vero?
+    {
+        - entity_location(PG) == TrainStop:
+            La trovi lì, sulla bacheca!
+            
+        - else:
+            La trovi sulla bacheca della fermata del treno!
+    }
+
+-> main
+
+
+=== second_char_new_mail
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp charNameFive = translator(fifthChar_ActualName)
+    Sembra che {charNameTwo} ti abbia scritto una lettera, {player_name}! #speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+    Che cosa dolce, vero?
+    {
+        - entity_location(PG) == TrainStop:
+            La trovi lì, sulla bacheca!
+            
+        - else:
+            La trovi sulla bacheca della fermata del treno!
+    }
+
+-> main
+   
    
 === little_storylets
     ~ temp charNameOne = translator(firstChar_ActualName)
