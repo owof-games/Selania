@@ -2852,7 +2852,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25099364, y: 0.24999724}
   m_AnchorMax: {x: 0.75298333, y: 0.7499962}
-  m_AnchoredPosition: {x: -1.2232666, y: -1.9320679}
+  m_AnchoredPosition: {x: -1.2232666, y: -1.9320831}
   m_SizeDelta: {x: 1.2232, y: 4.0727}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &89676805
@@ -9544,6 +9544,7 @@ GameObject:
   - component: {fileID: 607475366}
   - component: {fileID: 607475368}
   - component: {fileID: 607475367}
+  - component: {fileID: 607475369}
   m_Layer: 5
   m_Name: TrainNoise
   m_TagString: Untagged
@@ -9711,6 +9712,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &607475369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607475365}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c9bbc971d9d3741b782b84cac9db4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioPanScript
+  audioSource: {fileID: 0}
+  targetPan: -1
+  speed: 0.2
 --- !u!1 &617244497
 GameObject:
   m_ObjectHideFlags: 0
@@ -34624,7 +34640,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.33093396, y: -2.4752903}
   m_AnchorMax: {x: 0.6764201, y: -0.15701962}
-  m_AnchoredPosition: {x: 20.929993, y: 4.2368164}
+  m_AnchoredPosition: {x: 20.929993, y: 4.2368774}
   m_SizeDelta: {x: 41.859, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2126219295
