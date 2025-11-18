@@ -84,22 +84,28 @@
     {
         - kitchen_firstRecipe == "":
             {debug_kitchen: il valore di kitchen_firstRecipe è {kitchen_firstRecipe} e quindi lo aggiorno.}
+            
                 ~ kitchen_firstRecipe = kitchen_tempRecipeName
             {debug_kitchen: il valore di kitchen_firstRecipe ora è {kitchen_firstRecipe}.}
+                
                 ->->
         - kitchen_secondRecipe == "":
             {debug_kitchen: il valore di kitchen_firstRecipe è {kitchen_firstRecipe} e quindi non lo aggiorno.}
             {debug_kitchen: il valore di kitchen_secondRecipe è {kitchen_secondRecipe} e quindi lo aggiorno.}
+            
                 ~ kitchen_secondRecipe = kitchen_tempRecipeName
             {debug_kitchen: il valore di kitchen_secondRecipe ora è {kitchen_secondRecipe}.}
+            
                 ->->
         
         - kitchen_thirdRecipe == "":
             {debug_kitchen: il valore di kitchen_firstRecipe è {kitchen_firstRecipe} e quindi non lo aggiorno.}
             {debug_kitchen: il valore di kitchen_secondRecipe è {kitchen_secondRecipe} e quindi non lo aggiorno.}
             {debug_kitchen: il valore di kitchen_thirdRecipe è {kitchen_thirdRecipe} è quindi non lo aggiorno.}
+            
                 ~ kitchen_thirdRecipe = kitchen_tempRecipeName
             {debug_kitchen: il valore di kitchen_thirdRecipe ora è {kitchen_thirdRecipe}.}
+            
                 ->-> 
         
         - kitchen_fourthRecipe == "":
@@ -127,7 +133,7 @@
 {debug_kitchen: passo per extra_ingredient_management.}
 //Qui gestiremo la parte di ingredienti che possiamo aggiungere, coi relativi effetti
     ~ enableNestDialogue()
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    
     {debug_kitchen: I doni trovati sono {backpack_findedGifts}.}
     Aggiungo....
     
