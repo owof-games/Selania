@@ -132,37 +132,20 @@
 
 {rewriting_proposal_second_character.ending: Dopo la nostra conversazione, {charNameTwo} ha scelto un nuovo nome: <b><i>{charNameTwo}.}
 
-
 {
     - second_story_gift.ink_outcome:
         {
-            - secondChar_giftedObject == EderaDelleAmanti:
-                Gli ho donato una foglia di <b><i>Edera delle Amanti</b></i>, e mi ha guardato imbarazzato. <>
-                
-            - secondChar_giftedObject == BaccaDellaAddolorata:
-                Gli ho donato una <b><i>Bacca dell'Addolorata</b></i> ma non gli è interessata. <>
-                
-            - secondChar_giftedObject == LaSpazzata:
-                Gli ho donato un rametto della <b><i>Spazzata</b></i> e si è esaltato, ha continuato a rigirarsi il frammento tra le dita, pieno di gioia rabbiosa. <>
-                
-            - secondChar_giftedObject == BrinaDellImpossibile: 
-                Gli ho donato un frammento di <b><i>Brina dell'Impossibile</b></i> e ha iniziato a tremare e piangere. Le linee della mia mano sono ricomparse. <>
-                
-            - secondChar_giftedObject == CantoDelleCompagne: 
-                Gli ho donato una goccia di <b><i>Canto delle Compagne</b></i>: ha provato ad assaggiarla e ha vomitato. <>
-                
-            - secondChar_giftedObject == LicheneDegliAbissi: 
-                Gli ho donato una traccia dell'odore del <b><i>Lichene degli Abissi</b></i>, ha provato a dire qualcosa ma poi si è zittito. <>
-                
-            - secondChar_giftedObject == NonTiScordarDiTe: 
-                Gli ho donato l'impronta del <b><i>Non Ti Scordar Di Te</b></i>: mi ha abbracciato, per poi allontanarsi imbarazzato. <>
-                
-            - secondChar_giftedObject == CardoAspinato: 
-                Gli ho donato un ciuffo di peli di <b><i>Cardo Aspinato</b></i> e si è messo a ridere, poi mi ha ringraziato. <>
+            - secondChar_favouritesGifts has secondChar_giftedObject:
+            Gli ho donato <b><i>{secondChar_giftedObject}</b></i> ed era entusiasta! <>
+            
+            - secondChar_goodGifts has secondChar_giftedObject:
+            Gli ho donato <b><i>{secondChar_giftedObject}</b></i> ed ha abbastanza apprezzato. <>
+            
+            - else:
+            Gli ho donato <b><i>{secondChar_giftedObject}</b></i> e non ha apprezzato per nulla. <>
         
-        }    
-
-}
+        }
+}        
 
 
 {

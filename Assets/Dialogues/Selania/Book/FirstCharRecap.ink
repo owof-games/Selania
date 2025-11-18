@@ -127,31 +127,17 @@
 {
     - first_story_gift.ink_outcome:
         {
-            - firstChar_giftedObject == EderaDelleAmanti:
-                Le ho donato una foglia di <b><i>Edera delle Amanti</b></i>, ma non ha compreso il significato del mio dono. <>
-                
-            - firstChar_giftedObject == BaccaDellaAddolorata:
-                Le ho donato una <b><i>Bacca dell'Addolorata</b></i> e ha sorriso, si è rasserenata. <>
-                
-            - firstChar_giftedObject == LaSpazzata:
-                Le ho donato un rametto della <b><i>Spazzata</b></i> e, infastidita, l'ha lanciato via. <>
-                
-            - firstChar_giftedObject == BrinaDellImpossibile: 
-                Le ho donato un frammento di <b><i>Brina dell'Impossibile</b></i> e l'ha gettato a terra, spaventata. Almeno sono ricomparse le linee della mia mano. <>
-                
-            - firstChar_giftedObject == CantoDelleCompagne: 
-                Le ho donato una goccia di <b><i>Canto delle Compagne</b></i> e si è messa a cantare il nome delle persone amate. <>
-                
-            - firstChar_giftedObject == LicheneDegliAbissi: 
-                Le ho donato una traccia dell'odore del <b><i>Lichene degli Abissi</b></i> ed era palesemente delusa. <>
-                
-            - firstChar_giftedObject == NonTiScordarDiTe: 
-                Le ho donato l'impronta del <b><i>Non Ti Scordar Di Te</b></i>: ha sussurrato "nonno" e ha inizito a piangere. <>
-                
-            - firstChar_giftedObject == CardoAspinato: 
-                Le ho donato un ciuffo di peli di <b><i>Cardo Aspinato</b></i> e sul momento sembra disgustata, ma poi si è messa a ridere. <>
+            - firstChar_favouritesGifts has firstChar_giftedObject:
+            Le ho donato <b><i>{firstChar_giftedObject}</b></i> ed era entusiasta! <>
+            
+            - firstChar_goodGifts has firstChar_giftedObject:
+            Le ho donato <b><i>{firstChar_giftedObject}</b></i> ed ha abbastanza apprezzato. <>
+            
+            - else:
+            Le ho donato <b><i>{firstChar_giftedObject}</b></i> e non ha apprezzato per nulla. <>
         
         }
+}        
 
 
 {
@@ -160,7 +146,7 @@
     
 }        
 
-}
+
 
     {
         - knowing_first_character.one:
