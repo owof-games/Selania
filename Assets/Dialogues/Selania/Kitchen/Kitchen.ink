@@ -8,17 +8,38 @@
 
     {kitchen == 1:La vecchia cucina non vede l'ora di riempirsi di profumi e chiacchiere.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
-        -> witch_frog_mission_notifier ->
-    
-    {special_mission_two && not cooking_alone && (not are_two_entities_together(FirstCharacter, PG)) && (not are_two_entities_together(SecondCharacter, PG)): ->cooking_alone}
-
     ~ book_arrivingFromTracking = Kitchen
+    
+        -> witch_frog_mission_notifier ->
+        -> kitchen_storylets_dispatcher
 
-            -> main
 
+=== kitchen_storylets_dispatcher ===
+{
+    //Scena in cui cuciniamo da solx
+    - special_mission_two && not cooking_alone && (not are_two_entities_together(FirstCharacter, PG)) && (not are_two_entities_together(SecondCharacter, PG)):     ->cooking_alone
+    
+    //Scena in cui cuciniamo con Chitarra
+    - are_two_entities_together(FirstCharacter, PG) && not cooking_with_first_char:
+        -> pre_start_cooking_with_first_char
+    
+    //Scena in cui Chitarra sta cucinando da sola
+    - are_two_entities_together(FirstCharacter, PG) && kitchen_firstCharIsCooking:
+        -> first_char_cooking_alone   
+    
+    //Scena in cui cuciniamo con Riccio
+    - are_two_entities_together(SecondCharacter, PG) && not cooking_with_second_char:
+        -> pre_start_cooking_with_second_char
+    
+    //Scena in cui Riccio sta cucinando da solo
+    - are_two_entities_together(SecondCharacter, PG) && kitchen_secondCharIsCooking:
+        -> second_char_cooking_alone      
+        
+        
+    - else:
+        -> main
 
-
-
+}
 
 
 

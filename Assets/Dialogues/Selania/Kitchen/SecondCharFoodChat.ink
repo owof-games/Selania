@@ -3,6 +3,14 @@
    Cucina con Riccio
 
  ----------------------------------*/
+=== pre_start_cooking_with_second_char
+Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        + [Ci sto!]
+            -> cooking_with_second_char
+        + [Ci penso un attimo.]
+            -> main
+  
+ 
  
 === cooking_with_second_char
     -> storage_colors(SecondCharacter)->
