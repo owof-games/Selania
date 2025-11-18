@@ -20,10 +20,10 @@
 ~ temp charNameThree = translator(thirdChar_ActualName)
 ~ temp charNameFour= translator(fourthChar_ActualName)
 ~ temp charNameFive = translator(fifthChar_ActualName)
-
+    
+    -> common_storylets ->
     -> mentor_and_second_char_storylets
-    //-> mentor_and_second_char_storylets
-    //-> fifth_character_storylets
+
 
     = talk
     {debug: passo da talk_with_mentor.talk}

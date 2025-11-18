@@ -7,7 +7,7 @@
 
             //Chiacchiera a fine storia
             + {are_two_entities_together(FirstCharacter, PG) && firstChar_storyStatus == story_storyEnded} [FirstCharacter]
-                -> first_char_story_ended
+                    -> first_char_story_ended
             + ->
                 -> DONE
 
