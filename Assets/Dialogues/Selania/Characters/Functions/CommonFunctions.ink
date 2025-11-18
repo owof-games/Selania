@@ -265,82 +265,74 @@
     ~ thirdChar_mailPause --
     ~ fifthChar_mailPause --
     
+//Riduzione valore Mindfulness per proporne una diversa poi    
     ~ lastMindfulness --
-    
+
+//Riduzione stanchezza rana
     ~ frog_tiredValue --
-    
 
-    
-    
-//Aumento di contatori:
-
-    //Contatore spostamenti PG
+//Contatore spostamenti PG
     ~ player_movementsCounter ++
     
-    //Gestione della cucina delle PNG
-        //Chitarra
-        
-            //Chitarra inizia a cucinare se abbiamo cucinato almeno una volta.
-            {
-                - (cooking_with_first_char or cooking_with_second_char) && (not first_char_cooking_tracker):
-                        ~ kitchen_firstCharIsCooking = true
-                        ~ move_entity(FirstCharacter, Kitchen)
-                            -> first_char_cooking_tracker 
-            }
-            
-
-            {debug: il valore di kitchen_firstCharCookingTime è {kitchen_firstCharCookingTime}}
-            {debug: il valore di kitchen_firstCharIsCooking è {kitchen_firstCharIsCooking}}
-            {
-                - kitchen_firstCharIsCooking == true:
-                
-                    {
-                    
-                        - kitchen_firstCharCookingTime < kitchen_firstCharCookingMaxTime:
-                            ~ kitchen_firstCharCookingTime ++
-                        
-                        - else:
-                           ~ kitchen_firstCharIsCooking = false
-                           ~ move_entity(FirstCharacter, Pond)
-                    }
+//Gestione della cucina delle PNG
     
+    //Riccio
+    //Riccio inizia a cucinare. Metto prima di Chitarra giusto perché il suo storylet coinvolge anche Mentore e quindi forse è più interessante.
+    
+        {
+            - player_accessiblePlaces has Kitchen && (not second_char_cooking_tracker) && (kitchen_firstCharIsCooking == false):
+            
+                ~ kitchen_secondCharIsCooking = true
+                ~ move_entity(SecondCharacter, Kitchen)
+                    -> second_char_cooking_tracker
+        }            
+        
+            
+        //Gestione tempi di cucina autonoma di Riccio.
+        {debug: il valore di kitchen_secondCharCookingTime è {kitchen_secondCharCookingTime}}
+        {debug: il valore disecondtIsCooking è {kitchen_secondCharIsCooking}}
+        {
+            - kitchen_secondCharIsCooking == true:
+            
+            {
+                - kitchen_secondCharCookingTime < kitchen_secondCharCookingMaxTime:
+                    ~ kitchen_secondCharCookingTime ++
+                
+                - else:
+                   ~ kitchen_secondCharIsCooking = false
+                   ~ move_entity(SecondCharacter, Pond)
             }
             
-        //Riccio
-        
-            //Riccio inizia a cucinare. Accade dopo aver fatto pace con Mentore.
-            {
-                - about_violence_and_peace && not second_char_cooking_tracker:
-                    ~ kitchen_secondCharIsCooking = true
-                    ~ move_entity(SecondCharacter, Kitchen)
-                        -> second_char_cooking_tracker
-            }            
+        }
+    //Chitarra
+    //Chitarra inizia a cucinare se abbiamo cucinato almeno una volta.
+        {
+            - player_accessiblePlaces has Kitchen && (not first_char_cooking_tracker) && (kitchen_secondCharIsCooking == false):
             
-                
-            {debug: il valore di kitchen_secondCharCookingTime è {kitchen_secondCharCookingTime}}
-            {debug: il valore disecondtIsCooking è {kitchen_secondCharIsCooking}}
-            {
-                - kitchen_secondCharIsCooking == true:
-                
+                    ~ kitchen_firstCharIsCooking = true
+                    ~ move_entity(FirstCharacter, Kitchen)
+                        -> first_char_cooking_tracker 
+        }
+        
+        //Gestione tempi di cucina autonoma di Chitarra.
+        {debug: il valore di kitchen_firstCharCookingTime è {kitchen_firstCharCookingTime}}
+        {debug: il valore di kitchen_firstCharIsCooking è {kitchen_firstCharIsCooking}}
+        {
+            - kitchen_firstCharIsCooking == true:
+            
                 {
-                    - kitchen_secondCharCookingTime < kitchen_secondCharCookingMaxTime:
-                        ~ kitchen_secondCharCookingTime ++
+                
+                    - kitchen_firstCharCookingTime < kitchen_firstCharCookingMaxTime:
+                        ~ kitchen_firstCharCookingTime ++
                     
                     - else:
-                       ~ kitchen_secondCharIsCooking = false
-                       ~ move_entity(SecondCharacter, Pond)
-    
+                       ~ kitchen_firstCharIsCooking = false
+                       ~ move_entity(FirstCharacter, Pond)
                 }
-    
-            }
-    
 
-//Check di sicurezza per conchiglia
-//    {
-//        - frog_availableSpecialMissions hasnt specialMissionOne and nestContents hasnt purpleShell:
-//                   ~ move_entity(purpleShell, Nest)
-//    }
-
+        }
+        
+    
 //Gestione suoni
     {
         - safekeepingContents hasnt TrainNoise:

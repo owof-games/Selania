@@ -4,8 +4,8 @@
             - are_two_entities_together(Mentor, PG) && knowing_second_character.two && (not addressing_violence):
                     -> addressing_violence
     
-        //Mentore e Riccio parlano dopo il litigio
-            - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && addressing_violence && not about_violence_and_peace:
+        //Mentore e Riccio parlano dopo il litigio. Parte fintanto che riccio non ha cucinato da solo.
+            - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && addressing_violence && not about_violence_and_peace && not second_char_cooking_tracker:
                     -> about_violence_and_peace
         
         //Discorso sbloccato da rana            
