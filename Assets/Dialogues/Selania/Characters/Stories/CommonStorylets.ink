@@ -73,12 +73,11 @@
             -    
     Bene, direi che abbiamo tutte qualcosa a cui pensare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     Tipo, a dove farmi un pisolino.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-            -> main
-            
             ~ firstChar_pauseTalking = firstChar_pauseDuration
             ~ firstChar_justTalked = true
             ~ secondChar_pauseTalking = secondChar_pauseDuration
             ~ secondChar_justTalked = true
+        -> main    
 
 === about_violence_and_peace
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -109,7 +108,8 @@
             ~ fifthChar_pauseTalking = fifthChar_pauseDuration
             ~ secondChar_pauseTalking = secondChar_pauseDuration
             ~ secondChar_justTalked = true
--> main
+        
+        -> main
 
 
 
@@ -145,7 +145,8 @@
         ~ secondChar_pauseTalking = secondChar_pauseDuration
         ~ secondChar_justTalked = true
         ~ fifthChar_pauseTalking = fifthChar_pauseDuration
-    -> main
+        
+        -> main
     
 
 

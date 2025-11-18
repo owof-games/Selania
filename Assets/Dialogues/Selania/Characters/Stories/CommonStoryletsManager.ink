@@ -17,7 +17,7 @@
                     -> food_gift_second_char
         
         //Chiacchiere tra Riccio e Chitarra
-            - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(SecondCharacter, PG) && not first_second_chit_chat && firstChar_pauseTalking == 0:
+            - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(SecondCharacter, PG) && not first_second_chit_chat && firstChar_pauseTalking == 0 && secondChar_pauseTalking == 0:
                     -> first_second_chit_chat
 
             - else:
