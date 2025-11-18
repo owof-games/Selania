@@ -374,8 +374,9 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
                 
                     + Voglio aggiungere un ingrediente extra.
                         -> extra_ingredient_management(SecondCharacter)->
+                        ~ disableNestDialogue()
                     
-                    + Preferisco evitare.
+                    + [Ho cambiato idea.]
                         ~ kitchen_recipePP = "semplice"
                     -
             

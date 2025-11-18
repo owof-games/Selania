@@ -1662,7 +1662,7 @@
                 MAI
                 PIU'!
                 Mi ha fatto male!
-            - else: {~ Non ci parlo con chi è in combutta con quella!|Hai risolto le cose con quella?|Mi ha fatto male, e tu sei qui a non fare nulla?}    
+            - else: {~ Non ci parlo con chi è in combutta con quella!|Hai risolto le cose con quella?|Mi ha fatto male, e tu sei qui a non fare nulla?}#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry      
         }
              {
                 - are_two_entities_together(Mentor, PG) && (not that_little_liar_storylet):
