@@ -17,10 +17,10 @@
     {
                     
         //Dopo le presentazioni con due, scena in cui hanno litigato:
-        - knowing_second_character.one && (not that_little_liar_storylet) :
+        - knowing_second_character.one && (not that_little_liar_storylet) && fifthChar_pauseTalking == 0:
                 -> that_little_liar_storylet
         
-        - not second_character_feedback && secondChar_storyStatus == story_storyEnded:
+        - not second_character_feedback && secondChar_storyStatus == story_storyEnded && fifthChar_pauseTalking == 0:
                 -> second_character_feedback            
             
         - else:
@@ -40,23 +40,23 @@
             -> welcome
         
         //Relazioni e inchiostro
-        - not about_ink_usage && mentor_tutorialPauses == false:
+        - not about_ink_usage && mentor_tutorialPauses == false && fifthChar_pauseTalking == 0:
             -> about_ink_usage
         
         //Sulla riscrittura    
-        - not questions && mentor_tutorialPauses == false:
+        - not questions && mentor_tutorialPauses == false && fifthChar_pauseTalking == 0:
             -> questions
             
         //Sulla funzione della serra
-        - player_accessiblePlaces has Greenhouse && not about_greenhouse && mentor_tutorialPauses == false:
+        - player_accessiblePlaces has Greenhouse && not about_greenhouse && mentor_tutorialPauses == false && fifthChar_pauseTalking == 0:
             -> about_greenhouse
             
         //Sulla funzione della cucina
-        - player_accessiblePlaces has Kitchen &&not about_kitchen && mentor_tutorialPauses == false:
+        - player_accessiblePlaces has Kitchen &&not about_kitchen && mentor_tutorialPauses == false && fifthChar_pauseTalking == 0:
             -> about_kitchen
         
         //Sulla funzione del nido    
-        - player_accessiblePlaces has Nest && not about_nest && mentor_tutorialPauses == false:
+        - player_accessiblePlaces has Nest && not about_nest && mentor_tutorialPauses == false && fifthChar_pauseTalking == 0:
             -> about_nest    
             
             
@@ -79,8 +79,9 @@
     //Feedback
         - not first_character_feedback:
             {
-                - firstChar_storyStatus == story_storyEnded:
+                - firstChar_storyStatus == story_storyEnded && fifthChar_pauseTalking == 0:
                     -> first_character_feedback
+                
                 - else:
                     -> fifth_character_storylets    
             }
@@ -115,7 +116,7 @@
         
      
      //Commenti a situazioni, eventi o altro.
-        - talking_witch.first_story_ended_check && not growing_witch_storylet:
+        - talking_witch.first_story_ended_check && not growing_witch_storylet && fifthChar_pauseTalking == 0:
             -> growing_witch_storylet
             
         - else:
