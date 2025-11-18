@@ -1666,7 +1666,8 @@
             E non ti abbraccio, ma un po' è come se l'avessi fatto.
             Ciao!
                 ~ move_entity(FirstCharacter, Safekeeping)
-                //Abbiamo accesso alle note solo se è cambiata. Sennò lei se ne va abbastanza arresa da tutto.
+                ~ firstChar_mailPause = firstChar_mailPauseDuration
+                
             
         -> main
 

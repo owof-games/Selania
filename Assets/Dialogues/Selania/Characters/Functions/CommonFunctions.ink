@@ -412,12 +412,12 @@
 //Qui traccio tutti gli eventi eccezionali, così li ho in un unico posto: animazioni, cambi assets e via di seguito
 
 //Comparsa lettere dopo fine delle storie (così non compaiono subito.
-    {firstChar_possibleStates hasnt Chitarra && first_char_story_ended.goodbye:
+    {first_char_story_ended.goodbye && firstChar_mailPause == 0:
             ~ move_entity(FirstCharacterNotes, TrainStop)
             {debug: Ho messo la nota della prima personaggia alla fermata del bus.}
     }
     
-    {second_char_story_ended.goodbye:
+    {second_char_story_ended.goodbye && secondChar_mailPause == 0:
             ~ move_entity(SecondCharacterNotes, TrainStop)
             {debug: Ho messo la nota del secondo personaggio alla fermata del bus.}
     }
