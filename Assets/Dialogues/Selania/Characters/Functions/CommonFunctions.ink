@@ -192,7 +192,7 @@
     }
     
     //Comparsa della rana
-    {knowing_second_character.four.theFrog && (not are_two_entities_together(TheFrog, Mentor)) && entity_location(TheFrog)!=Pond:
+    {knowing_second_character.three.theFrog && entity_location(TheFrog)!=Pond:
             {debug: Ho spostato la rana allo stagno.}
            ~  move_entity(TheFrog, Pond)
     }
