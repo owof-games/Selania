@@ -9,7 +9,7 @@
     
 C'è una rana bluastra dalle parti dello stagno, e sembra propensa a darmi una mano. <>
     
-    {frog_currentMission:
+    <b>{frog_currentMission:
         - missionOne:
             Mi ha invitato a leggere questo libro, e poi tornare da lei.
             
@@ -34,6 +34,9 @@ C'è una rana bluastra dalle parti dello stagno, e sembra propensa a darmi una m
             
         - missionEight:
             Mi ha chiesto di leggermi qualcosa in biblioteca, e poi tornare da lei.
+        
+        - missionNine:
+            Mi ha chiesto di parlare con l'albero della foresta, e poi tornare da lei.   
             
         - specialMissionOne:
             Mi ha detto che c'è della tensione tra {charNameTwo} e {charNameFive}, e per questo di vedere cosa sta accadendo, e poi tornare da lei.
@@ -42,7 +45,7 @@ C'è una rana bluastra dalle parti dello stagno, e sembra propensa a darmi una m
             Mi ha chiesto di cucinare qualcosa da {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}, e poi tornare da lei.
             
         - else: Per ora non ci sono missioni attive.
-    }
+    }</b>
 
 
 

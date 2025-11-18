@@ -117,7 +117,16 @@
                 Stavo per chiederti di leggere una delle storie della biblioteca, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
                 -> frog_about_who_questions                        
-        } 
+        }
+    
+    //Missione nove: parlare con la strega
+        {
+            - witch_feedback.intro && frog_availableCommonMissions has missionNine:
+                ~ frog_availableCommonMissions -= missionNine
+                Stavo per chiederti di fare amicizia con l'albero della foresta, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Per cui: ecco il tuo dono!
+                -> frog_about_who_questions                        
+        }    
 
         {
             - frog_availableCommonMissions == ():
@@ -152,7 +161,7 @@
         //~ frog_maxValueRandomMissionDice = LIST_COUNT(frog_allMissions)
         
         //Tiro il dado
-        ~ frog_randomMissionDice = RANDOM(1,8)
+        ~ frog_randomMissionDice = RANDOM(1,9)
         
         {frog_randomMissionDice:
         
@@ -172,6 +181,8 @@
                 -> mission_seven
             - 8 && player_accessiblePlaces has Library:
                 -> mission_eight
+            - 9 && not witch_feedback.intro:
+                -> mission_nine
             - else:
                 {debug_frog: il valore di frog_randomMissionDice è {frog_randomMissionDice}, e la missione associata è già stata fatta. Ritiro il dado.}
                 -> top
@@ -317,6 +328,21 @@
                     E poi torna da me.
                         -> main  
             }
+        
+        - missionNine:
+            {
+                - witch_feedback.intro:
+                    Hai parlato con l'albero della foresta, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Sono sicuro che troverai in lei una grande alleata in questo lavoro.
+                    Ma nel mentre, parliamo del tuo dono.
+                        ~ frog_availableCommonMissions -= missionNine
+                        ~ frog_currentMission = ()
+                            -> frog_about_who_questions
+                - else:
+                    Ricorda {player_name}: parla con l'albero della foresta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    E poi torna da me.
+                        -> main  
+            }    
     
         //Le missioni speciali risolvono il dono direttamente, senza andare a frog_about_who_questions
         - specialMissionOne:
@@ -566,12 +592,16 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
                 
                 - frog_currentMission has missionEight && library_readStories != ():
                     -> notification
+                
+                - frog_currentMission has missionNine && witch_feedback.intro:
+                    -> notification
                     
                 - frog_currentMission has specialMissionOne && special_mission_one_dialogue:
                     -> notification
                     
                 - frog_currentMission has specialMissionTwo && cooking_alone :
                     -> notification
+                    
                     
                 - else:
                     ->->
