@@ -21,6 +21,6 @@
                     -> first_second_chit_chat
 
             - else:
-                ->->
+                -> mentor_and_second_char_storylets
     }
 ->->

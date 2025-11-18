@@ -21,8 +21,8 @@
 ~ temp charNameFour= translator(fourthChar_ActualName)
 ~ temp charNameFive = translator(fifthChar_ActualName)
     
-    -> common_storylets ->
-    -> mentor_and_second_char_storylets
+    -> common_storylets
+    
 
 
     = talk
