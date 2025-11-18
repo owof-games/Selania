@@ -121,7 +121,9 @@
 
 {rewriting_proposal_first_character.ending: Dopo la Riscrittura, ha scelto un nuovo nome: <b><i>{translator(firstChar_ActualName)}.</b></i>}
 
-
+{firstAffinityFeedback:
+    Il valore massimo di inchistro che ho ricevuto è stato: {fromInkToNumbers(firstChar_maximum_inkLevel)}. <>
+}
 
 //Appunto sul dono fatto
 {

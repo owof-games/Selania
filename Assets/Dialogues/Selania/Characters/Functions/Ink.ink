@@ -8,8 +8,14 @@
     VAR thirdChar_InkLevel = ink_empty
     VAR fourthChar_InkLevel = ink_empty
     VAR fifthChar_InkLevel = ink_empty
-
-
+    
+//Registro anche il massimo di inchiostro raggiunto per ogni PNG, sia per statistica che per il diario.
+    VAR firstChar_maximum_inkLevel = ink_empty
+    VAR secondChar_maximum_inkLevel = ink_empty
+    VAR thirdChar_maximum_inkLevel = ink_empty
+    VAR fourthChar_maximum_inkLevel = ink_empty
+    VAR fifthChar_maximum_inkLevel = ink_empty
+    
 === function fromRelationshipToInk(Relationship)
 //Chiamo questa funzione quando sto per partire con la riscrittura, in modo da aggiornare il valore di inchiostro in base alla relazione sviluppata
 {debug: passo da fromRelationshipToInk.}
@@ -59,18 +65,24 @@
     {
         - InkLevel == firstChar_InkLevel:
             ~ Ink = firstChar_InkLevel
+            //Mi salvo il livello massimo di inchiostro raggiunto, visto che poi firstChar_InkLevel diminuirà di uso in uso.
+            ~ firstChar_maximum_inkLevel = firstChar_InkLevel
         
         - InkLevel == secondChar_InkLevel:
             ~ Ink = secondChar_InkLevel
+            ~ secondChar_maximum_inkLevel = secondChar_InkLevel
         
         - InkLevel == thirdChar_InkLevel:
             ~ Ink = thirdChar_InkLevel
+            ~ thirdChar_maximum_inkLevel = thirdChar_InkLevel
             
         - InkLevel == fourthChar_InkLevel:
             ~ Ink = fourthChar_InkLevel
+            ~ fourthChar_maximum_inkLevel = fourthChar_InkLevel
         
         - InkLevel == fifthChar_InkLevel:
-            ~ Ink = fifthChar_InkLevel    
+            ~ Ink = fifthChar_InkLevel 
+            ~ fifthChar_maximum_inkLevel = fifthChar_InkLevel
             
     }
 
@@ -142,6 +154,48 @@
         
         - ink_high:
             hai guadagnato tre goccie di inchiostro a disposizione, e la personaggia ti darà una informazione importante#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        - else:
+            <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            {debug: <i>Il livello di inchiostro per la prima personaggia è {firstChar_InkLevel}}
+    
+    }
+
+
+//Funzione che chiamo dopo il dono, per dire quanto inchiostro ho guadagnato.
+=== function fromInkToNumbers(InkLevel)
+    {
+        - InkLevel == firstChar_maximum_inkLevel:
+            ~ Ink = firstChar_maximum_inkLevel
+        
+        - InkLevel == secondChar_maximum_inkLevel:
+            ~ Ink = secondChar_maximum_inkLevel
+    
+        - InkLevel == thirdChar_maximum_inkLevel:
+            ~ Ink = thirdChar_maximum_inkLevel
+        
+        - InkLevel == fourthChar_maximum_inkLevel:
+            ~ Ink = fourthChar_maximum_inkLevel
+        
+        - InkLevel == fifthChar_maximum_inkLevel:
+            ~ Ink = fifthChar_maximum_inkLevel            
+    
+    }
+    
+    {Ink:
+        - ink_empty:
+            nessun boccettino di inchiostro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        
+        - ink_low:
+            un boccettino di inchiostro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        
+        - ink_normal:
+            due boccettini di inchiostro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        
+        - ink_medium:
+            tre boccettini di inchiostro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}     
+        
+        - ink_high:
+            quattro boccettini di inchiostro, e una informazione importante.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         - else:
             <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             {debug: <i>Il livello di inchiostro per la prima personaggia è {firstChar_InkLevel}}
