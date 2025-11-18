@@ -14,10 +14,13 @@
 
 === talk_with_first_character
     ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ actual_speaker = FirstCharacter
     //Se ho storylets in comune disponibili, passo subito a quelli.
-        -> common_storylets ->
+        -> common_storylets
     
     //Se ho storylets disponibili di Chitarra e non sono in pausa, passo a quelli.
+    
+    - (top)
         {
 
             - firstChar_pauseTalking == 0:

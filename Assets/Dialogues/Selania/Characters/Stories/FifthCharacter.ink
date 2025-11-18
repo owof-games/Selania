@@ -20,7 +20,7 @@
 ~ temp charNameThree = translator(thirdChar_ActualName)
 ~ temp charNameFour= translator(fourthChar_ActualName)
 ~ temp charNameFive = translator(fifthChar_ActualName)
-    
+~ actual_speaker = Mentor
     -> common_storylets
     
 

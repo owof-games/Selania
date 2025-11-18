@@ -16,8 +16,10 @@
 
 === talk_with_second_character ===
 ~ temp charNameTwo = translator(secondChar_ActualName)
-        -> common_storylets ->
+~ actual_speaker = FirstCharacter
+        -> common_storylets
     //Se ho storylets disponibili di Riccio e non sono in pausa, passo a quelli.
+    - (top)
         {
 
             - secondChar_pauseTalking == 0:

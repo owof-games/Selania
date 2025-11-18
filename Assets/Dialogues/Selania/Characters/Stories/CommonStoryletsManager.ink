@@ -21,6 +21,23 @@
                     -> first_second_chit_chat
 
             - else:
-                -> mentor_and_second_char_storylets
+                {
+                    - actual_speaker == Mentor:
+                        ~ actual_speaker = ()
+                         -> mentor_and_second_char_storylets
+                    
+                    - actual_speaker == FirstCharacter:
+                        ~ actual_speaker = ()
+                         -> talk_with_first_character.top
+                         
+                    - actual_speaker == SecondCharacter:
+                        ~ actual_speaker = ()
+                         -> talk_with_second_character.top  
+                         
+                    - else:
+                        ->->
+                
+                }
+
     }
 ->->
