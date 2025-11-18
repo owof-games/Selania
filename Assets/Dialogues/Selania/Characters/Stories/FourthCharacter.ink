@@ -463,8 +463,7 @@ Stai per donare qualcosa a {charNameThree}.
     
         = ink_outcome    
             Dopo il tuo dono {inkTranslator(fourthChar_InkLevel)}.
-                ~ move_entity(fourthCharPaint, Bedroom)
-                ~ saturationVar ++
+                
                  -> talk_with_fourth_character
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
@@ -810,6 +809,9 @@ Stai per donare qualcosa a {charNameThree}.
         
         = goodbye
         ~ temp charNameThree = translator(fourthChar_ActualName)
+        ~ move_entity(fourthCharPaint, Bedroom)
+        ~ saturationVar ++
+                
         {player_name}, per me è arrivato il momento di tornare a casa.
         {firstChar_possibleStates hasnt Chitarra: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
         {firstChar_possibleStates hasnt Chitarra: Grazie per quello che hai fatto, davvero.}

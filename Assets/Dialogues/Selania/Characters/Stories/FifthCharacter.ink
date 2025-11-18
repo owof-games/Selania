@@ -689,8 +689,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
     
         = ink_outcome    
             Dopo il tuo dono {inkTranslator(secondChar_InkLevel)}.
-            ~ move_entity(fifthCharPaint, Bedroom)
-            ~ saturationVar ++
+            
                  -> talk_with_fifth_character
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco
 
@@ -1033,6 +1032,9 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         
         = goodbye
         ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ move_entity(fifthCharPaint, Bedroom)
+        ~ saturationVar ++
+        
         {player_name}, per me è arrivato il momento di tornare a casa.
         {firstChar_possibleStates hasnt Chitarra: Non so di preciso cosa mi accadrà ora, ma in un certo senso so che sono più pronta.}
         {firstChar_possibleStates hasnt Chitarra: Grazie per quello che hai fatto, davvero.}

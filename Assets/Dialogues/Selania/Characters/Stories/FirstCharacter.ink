@@ -1214,8 +1214,7 @@
         
             = ink_outcome    
                 Dopo il tuo dono {inkTranslator(firstChar_InkLevel)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-                    ~ move_entity(firstCharPaint, Bedroom)
-                    ~ saturationVar ++
+                    
                     ~ mentor_tutorialPauses = false
                         -> main
                 
@@ -1650,6 +1649,8 @@
         
         = goodbye
             ~ temp charNameOne = translator(firstChar_ActualName)
+            ~ move_entity(firstCharPaint, Bedroom)
+            ~ saturationVar ++
             Ama: è il momento di tornare a casa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             {
             

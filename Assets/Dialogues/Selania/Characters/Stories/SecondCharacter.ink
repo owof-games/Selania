@@ -1680,8 +1680,7 @@
         
             = ink_outcome
                 Dopo il tuo dono {inkTranslator(secondChar_InkLevel)}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-                    ~ move_entity(secondCharPaint, Bedroom)
-                    ~ saturationVar ++
+                    
                      -> main
 
 
@@ -2171,6 +2170,9 @@
         
         = goodbye
         ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ move_entity(secondCharPaint, Bedroom)
+        ~ saturationVar ++
+        
         {player_name}, mi sa che torno a casa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
         {
             -secondChar_possibleStates hasnt Riccio:Sì no boh.
