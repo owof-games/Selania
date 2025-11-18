@@ -177,7 +177,7 @@
                 -> one
         
             //Chitarra dona il libro a PG -> metto dopo per evitare che parta di nuovo prima delle presentazioni
-            - not foundLibro && (knowing_first_character ==true) && firstChar_pauseTalking == 0 && not take_this_book:
+            - not foundLibro && firstChar_pauseTalking == 0 && not take_this_book:
                 -> take_this_book   
                 
             - not two:

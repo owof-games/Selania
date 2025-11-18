@@ -118,6 +118,7 @@
         
         //Con questa voce evito che "about_ink_usage" compaia subito dopo se le condizioni sono sensate.
                 ~ mentor_tutorialPauses = true
+                ~ actual_speaker = ()
                 -> main
                 
             

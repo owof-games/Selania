@@ -398,11 +398,10 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
 
 == at_table_with_second_char
     ~ move_entity(CookingWithSecondCharOBJ, Kitchen)
-    ~ move_entity(EatingWithSecondCharOBJ, Kitchen)
-    
     ~ temp piatto = kitchen_tempRecipeName
     
     Passiamo alla scena al tavolo con Riccio.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+    ~ move_entity(EatingWithSecondCharOBJ, Kitchen)
     Buono questo {piatto}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     
     

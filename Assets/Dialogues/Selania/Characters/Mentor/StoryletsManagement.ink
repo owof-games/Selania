@@ -17,10 +17,10 @@
     {
                     
         //Dopo le presentazioni con due, scena in cui hanno litigato:
-        - knowing_second_character.one && (not that_little_liar_storylet) && fifthChar_pauseTalking == 0:
+        - knowing_second_character.one && (not that_little_liar_storylet):
                 -> that_little_liar_storylet
         
-        - not second_character_feedback && secondChar_storyStatus == story_storyEnded && fifthChar_pauseTalking == 0:
+        - not second_character_feedback && secondChar_storyStatus == story_storyEnded:
                 -> second_character_feedback            
             
         - else:
@@ -40,23 +40,23 @@
             -> welcome
         
         //Relazioni e inchiostro
-        - not about_ink_usage && mentor_tutorialPauses == false && fifthChar_pauseTalking == 0:
+        - not about_ink_usage && mentor_tutorialPauses == false:
             -> about_ink_usage
         
         //Sulla riscrittura    
-        - not questions && mentor_tutorialPauses == false && fifthChar_pauseTalking == 0:
+        - not questions && mentor_tutorialPauses == false:
             -> questions
             
         //Sulla funzione della serra
-        - player_accessiblePlaces has Greenhouse && not about_greenhouse && mentor_tutorialPauses == false && fifthChar_pauseTalking == 0:
+        - player_accessiblePlaces has Greenhouse && not about_greenhouse && mentor_tutorialPauses == false:
             -> about_greenhouse
             
         //Sulla funzione della cucina
-        - player_accessiblePlaces has Kitchen &&not about_kitchen && mentor_tutorialPauses == false && fifthChar_pauseTalking == 0:
+        - player_accessiblePlaces has Kitchen &&not about_kitchen && mentor_tutorialPauses == false:
             -> about_kitchen
         
         //Sulla funzione del nido    
-        - player_accessiblePlaces has Nest && not about_nest && mentor_tutorialPauses == false && fifthChar_pauseTalking == 0:
+        - player_accessiblePlaces has Nest && not about_nest && mentor_tutorialPauses == false:
             -> about_nest    
             
         - trainStopContents has FirstCharacterNotes && not first_character_notes && not first_char_new_mail:

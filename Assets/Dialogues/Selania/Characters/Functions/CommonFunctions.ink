@@ -25,7 +25,7 @@
     {
     
         //Dopo essere arrivata per la prima volta allo stagno, compare mentore, e attivo la sua storia
-        - (pond == true) && (mentorChar_storyStatus != story_storyStarted):
+        - (pond == true or talk_with_first_character) && (mentorChar_storyStatus != story_storyStarted):
         {debug: introduco mentore in scena.}
                 ~ move_entity(Mentor, Forest)
                 ~ mentorChar_storyStatus = story_storyStarted
