@@ -2048,7 +2048,17 @@
             E tua nonna a uscire dalla casa dei vecchi.
                    -> color_variation_management(SecondCharacter, blueC)->
     
-        - 
+        -
+    //Nota: la parte di accettazione del nome è prima dell'aggiornamento, così il nome nuovo compare solo quando viene dichiarato.
+    Sì. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+    No.
+    Boh.
+    {player_name}.
+    Tu mi dici queste cose e io mi dico che c'è un animale.
+    Un animale che mi piace.
+    Un animale che un po' è me.
+    E lo voglio come mio nuovo nome.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    
             //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
                 -> color_modifier(SecondCharacter, secondChar_colorVariation) ->
             
@@ -2058,20 +2068,11 @@
             //E infine genero il nome
                 -> secondNaming ->naming
                 
-            = naming
-            ~ temp charNameTwo = translator(secondChar_ActualName)
-            
-
-            
-    Sì. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
-    No.
-    Boh.
-    {player_name}.
-    Tu mi dici queste cose e io mi dico che c'è un animale.
-    Un animale che mi piace.
-    Un animale che un po' è me.
-    E lo voglio come mio nuovo nome.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-
+    
+    
+    = naming
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    
         {
 
             - secondChar_ActualName has Grizzly:
