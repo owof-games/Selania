@@ -28,7 +28,28 @@ LIST nest_colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
     	 
     	- PNG == Mentor:
     	        ~ nest_currentTalker = Mentor
-    	        {debug_nest: dopo l'operazione il parlante attuale {nest_currentTalker}.}       
+    	        {debug_nest: dopo l'operazione il parlante attuale {nest_currentTalker}.}
+    	        
+    	- PNG == PG:
+    	//Nel caso dellx PG, non attivo mai le parole magiche.
+    	        {Color:
+                    -redC:
+                        ~ player_red ++
+             
+                    -yellowC:
+                        ~ player_yellow ++
+                    
+                    -blueC:
+                        ~ player_blue ++
+                    
+                    -greenC:
+                        ~ player_green ++   
+                    
+                    -purpleC:
+                        ~ player_purple ++
+                }
+                ->->
+    	        
     	    
         - else: ERROR: sono in color_variation_management ma non trovo lx PNG indicatx
     }

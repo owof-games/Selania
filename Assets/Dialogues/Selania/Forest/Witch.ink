@@ -54,7 +54,7 @@
         E {player_name}, cosa si domanda?
         
             + [Posso sfiorarti?]
-                ~ player_green ++
+                -> color_variation_management(PG, greenC)->
                 Sfioraci.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 {player_name} sente la voce del Canto delle Compagne.
                 {player_name} realizza che è collegata a {charNameOne}.
@@ -62,7 +62,7 @@
                 E quel ricordo, {player_name}, è ora che ci stai sfiorando.
                 
             + [Esci dalla mia testa!]
-                ~ player_red ++
+                -> color_variation_management(PG, redC)->
                 Non siamo nella testa di {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Non più di quanto {player_name} sia nella sua testa.
                 Non meno di quanto {player_name} sia nella nostra.
@@ -81,13 +81,13 @@
                 Assieme a te.
                 
             + [Ci piace la gioia!]
-                ~ player_yellow ++
+                -> color_variation_management(PG, yellowC)->
                 E a noi piace {player_name}.
                 E tutte le emozioni che si spostano in questo terreno e nell'aria.
                 E tutti i tempi che {player_name} vive, ha vissuto e vivrà.
             
             + [La tua voce mi guida dal mio arrivo.]
-                ~ player_purple ++
+                -> color_variation_management(PG, purpleC)->
                 E la tua guida noi, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 La separazione è una illusione.
                 {player_name} è noi, noi siamo {charNameOne}.
@@ -131,14 +131,14 @@
         Osserviamo {player_name} e ci chiediamo cosa provi dopo aver aiutato {charNameOne}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
             + [Mi chiedo se sono all'altezza di tutto questo.]
-                    ~ player_green ++
+                    -> color_variation_management(PG, greenC)->
                 All'altezza per {charNameOne}?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 All'altezza per {player_name}?
                 O all'altezza per soddisfare {charNameFive}?
                 La serra è tiepida, la stazione attende, e le nubi dicono che {player_name} è dove deve essere.
                 
             + [Sono felice per lei, ma il mondo non dovrebbe fare così paura.]
-                    ~ player_red ++
+                    -> color_variation_management(PG, redC)->
                 Non è il mondo a fare paura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Il mondo gira e muta e muore e rinasce.
                 Sono le regole degli uomini a generare la paura.
@@ -146,7 +146,7 @@
                 Con l'aiuto di altre goccie.
                 
             + [Non ho apprezzato la sua mancanza di senso pratico.]
-                    ~ player_blue ++
+                   -> color_variation_management(PG, blueC)->
                 {charNameOne} possiede un forte senso pratico.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Soltanto, è diverso da quello di {player_name}.
                 O di {charNameFive}.
@@ -155,14 +155,14 @@
                 E {charNameOne} segue ora la sua direzione.
                 
             + [Pensavo sarebbe stato più divertente.]
-                    ~ player_yellow ++
+                    -> color_variation_management(PG, yellowC)->
                 Quando il leone salta su un altro leone, trova la rissa.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Ma quando un leoncino salta su un altro leoncino, trova ruzzoloni e corse.
                 Il gioco non è nell'azione, ma nell'attitudine.
                 Quale attitudine è radicata nelle azioni di {player_name}?
             
             + [Spero che {charNameOne} sia capace di portare il suo cambiamento nel mondo.]
-                    ~ player_purple ++
+                    -> color_variation_management(PG, purpleC)->
                 La luna distante sposta oceani.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Il vento invisibile sradica alberi.
                 {charNameOne} respira e il mondo ruota un po' più rapido.
@@ -206,38 +206,39 @@
         E noi ci chiediamo: come sta {player_name} ora che {charNameTwo} è libero?
         
             + [Mi chiedo chi sarei ora, con una famiglia diversa alle spalle.]
-                    ~ player_green ++
+                    -> color_variation_management(PG, greenC)->
                 La gemma sul ramo ignora il tronco, eppure cresce.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Il girino nuota, non importa la dimensione dello stagno.
                 {player_name} prova a riscrivere il passato: non si ama per ciò che è in questo presente?
      
             + [Secondo te serve uno scopo più grande per vivere davvero?]
+                -> color_variation_management(PG, purpleC)->
                 La rondine crea un nido di paglia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 E quando l'inverno arriva il nido cade sul terreno.
                 Formiche e funghi lo trasformano in cibo.
                 Arricchiscono il terreno.
                 In primavera l'erba ricresce, col caldo si secca.
                 E la rondine ha paglia a sufficienza per un nuovo nido.
-                    ~ player_purple ++
+                    
                             
             + [Nonostante tutto, mi ha fatto rivalutare la forza della rabbia.]
+                -> color_variation_management(PG, redC)->
                 La lava scorre e brucia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Ma col tempo rende il terreno fertile.
                 E dove prima cresceva solo erba, ora c'è un'intera foresta.
-                    ~ player_red ++
                 
             + [Avevo dimenticato quanto conforto possa dare il sapere.]
+                -> color_variation_management(PG, blueC)->
                 Il sapere è una luce.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Il sapere è un rifugio.
                 Una luce troppo forte confonde strada e burrone.
                 Un rifugio col tempo può diventare prigione.
-                    ~ player_blue ++
          
             + [Dovrei reimparare a giocare, a prendere le cose alla leggera.]
+                -> color_variation_management(PG, yellowC)->
                 Le radici ridono quando l'erba fa solletico.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Le foglie ridono quando il vento le sfiora.
                 {player_name} forse ride quando non è {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}.
-                    ~ player_yellow ++
             -
         
         L'acqua ci ha portato le lacrime di {charNameFive}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -259,72 +260,70 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
-        + [Mi chiedo se sono all'altezza di tutto questo.]
-                ~ player_green ++
+        + [Scelta verde.]
+            -> color_variation_management(PG, greenC)->
             
-        + [Sono felice per lei, ma il mondo non dovrebbe fare così paura.]
-                ~ player_red ++
+        + [SCelta rossa.]
+            -> color_variation_management(PG, redC)->
             
-        + [Non ho apprezzato la sua mancanza di senso pratico.]
-                ~ player_blue ++
+        + [Scelta blu.]
+            -> color_variation_management(PG, blueC)->
      
-        + [Pensavo sarebbe stato più divertente.]
-                ~ player_yellow ++
+        + [Scelta gialla.]
+            -> color_variation_management(PG, yellowC)->
  
-        + [Spero che {charNameOne} sia capace di portare il suo cambiamento nel mondo.]
-                ~ player_purple ++
+        + [Scelta viola.]
+            -> color_variation_management(PG, purpleC)->
         -        
             -> main  
         
     = fourth_story_ended_check
-        ~ temp charNameOne = translator(firstChar_ActualName)
+         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
-        + [Mi chiedo se sono all'altezza di tutto questo.]
-                ~ player_green ++
+        + [Scelta verde.]
+            -> color_variation_management(PG, greenC)->
             
-        + [Sono felice per lei, ma il mondo non dovrebbe fare così paura.]
-                ~ player_red ++
+        + [SCelta rossa.]
+            -> color_variation_management(PG, redC)->
             
-        + [Non ho apprezzato la sua mancanza di senso pratico.]
-                ~ player_blue ++
+        + [Scelta blu.]
+            -> color_variation_management(PG, blueC)->
      
-        + [Pensavo sarebbe stato più divertente.]
-                ~ player_yellow ++
+        + [Scelta gialla.]
+            -> color_variation_management(PG, yellowC)->
  
-        + [Spero che {charNameOne} sia capace di portare il suo cambiamento nel mondo.]
-                ~ player_purple ++
+        + [Scelta viola.]
+            -> color_variation_management(PG, purpleC)->
         -        
-        
-            -> main 
+            -> main   
     
     = fifth_story_ended_check
-        ~ temp charNameOne = translator(firstChar_ActualName)
+         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp charNameFive = translator(fifthChar_ActualName)
         
-        + [Mi chiedo se sono all'altezza di tutto questo.]
-                ~ player_green ++
+        + [Scelta verde.]
+            -> color_variation_management(PG, greenC)->
             
-        + [Sono felice per lei, ma il mondo non dovrebbe fare così paura.]
-                ~ player_red ++
+        + [SCelta rossa.]
+            -> color_variation_management(PG, redC)->
             
-        + [Non ho apprezzato la sua mancanza di senso pratico.]
-                ~ player_blue ++
+        + [Scelta blu.]
+            -> color_variation_management(PG, blueC)->
      
-        + [Pensavo sarebbe stato più divertente.]
-                ~ player_yellow ++
+        + [Scelta gialla.]
+            -> color_variation_management(PG, yellowC)->
  
-        + [Spero che {charNameOne} sia capace di portare il suo cambiamento nel mondo.]
-                ~ player_purple ++
+        + [Scelta viola.]
+            -> color_variation_management(PG, purpleC)->
         -        
-            -> main
-
+            -> main  
 
 === descriptions
     {   
