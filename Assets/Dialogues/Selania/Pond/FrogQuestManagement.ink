@@ -94,7 +94,7 @@
         
     //Missione sei: conoscere la strega
         {
-            - talking_witch.intro && frog_availableCommonMissions has missionSix:
+            - witch_feedback.intro && frog_availableCommonMissions has missionSix:
                 ~ frog_availableCommonMissions -= missionSix
                 Stavo per invitarti a parlare con l'albero della foresta, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
@@ -270,7 +270,7 @@
         
         - missionSix:
             {
-                - talking_witch.intro:
+                - witch_feedback.intro:
                     Hai parlato con l'albero, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     E non sta a me chiederti cosa vi siete dett3, ma spero tu possa aver trovato un'alleata in questo percorso.
                     
@@ -552,7 +552,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
                     -> notification 
                
                 
-                - frog_currentMission has missionSix && talking_witch.intro:
+                - frog_currentMission has missionSix && witch_feedback.intro:
                     -> notification
             
                 - frog_currentMission has missionSeven:

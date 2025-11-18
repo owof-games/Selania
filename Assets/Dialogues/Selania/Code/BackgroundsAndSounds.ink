@@ -83,7 +83,7 @@ VAR saturationVar = 0
     ~ move_entity(MoonTrees, Library)
     
 {
-    - not talking_witch.intro.nameWitch:
+    - not witch_feedback.intro.nameWitch:
        ~ move_entity(NewMoonAnim, Library)
     
     - else:

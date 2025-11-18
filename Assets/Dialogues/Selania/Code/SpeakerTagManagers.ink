@@ -91,7 +91,7 @@ LIST speakersForEwWordTag = Influenced, Other
 
 === function witch_tag
 {
-    - !talking_witch.intro.nameWitch:
+    - !witch_feedback.intro.nameWitch:
         ~ return "..."
     - else:
         ~ return "^_^"
@@ -146,7 +146,7 @@ LIST speakersForEwWordTag = Influenced, Other
 
  === function witch_state()
 //{
-    //- not talking_witch.intro.nameWitch:
+    //- not witch_feedback.intro.nameWitch:
     //   ~ return "witch_new_moon"
     //- else:
        {
@@ -177,7 +177,7 @@ LIST speakersForEwWordTag = Influenced, Other
     - witch_moonTime == witch_timeForChangingMoonPhase:
         ~ witch_moonTime = 0
         {
-            //- not talking_witch.intro.nameWitch:
+            //- not witch_feedback.intro.nameWitch:
             //    ->->
             - witch_moonState == FirstQuarter:
                 {

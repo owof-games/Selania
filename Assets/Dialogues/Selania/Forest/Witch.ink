@@ -1,10 +1,10 @@
 
 === the_witch
 + {are_two_entities_together(TheWitch, PG)} [TheWitch]
-   ->talking_witch
+   -> witch_storylets
     
     
-=== talking_witch
+=== witch_feedback
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -15,10 +15,7 @@
         //Check per intro
         - not intro && ((firstChar_storyStatus == story_storyEnded) or (secondChar_storyStatus == story_storyEnded) or (thirdChar_storyStatus == story_storyEnded)):
             -> intro
-        
-        //Spiegazione del nido
-        - intro && about_nest:
-            -> trully_about_nest
+
     }
     
     {
@@ -33,11 +30,7 @@
             -> fourth_story_ended_check
         - intro && fifthChar_storyStatus == story_storyEnded:
             -> fifth_story_ended_check    
-        
-        
-        //Altre storie
-        - not foundLibro && not take_this_book:
-            -> foundLibro
+
         
         - else:
             -> descriptions
@@ -365,31 +358,3 @@
     
     -> main
     
-//Altri storylets
-=== trully_about_nest
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
-        Dove ci viene detto a cosa serve il nido in modo sereno.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        E ci spiega che la manipolazione è un intento, non qualcosa di inerente all'oggetto, o al nido.
-    -> main
-
-=== foundLibro
-C'è un libro ai piedi del tronco, e porta il tuo nome.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-
-    ~ move_entity(RewriterBook, Forest)
-    ~ move_entity(WitchRecap, BookPlace)
-    ~ move_entity(miniBook, Bedroom)
-    ~ move_entity(nightTable, Bedroom)
-    ~ player_somethingStrange ++
-    -> main
-
-
-
-=== final ===
-    Hai donato la Selanìa, il gioco è finito.
-    Compare lo sfondo stellato.
-    ~ move_entity(vase, Bedroom)
--> main

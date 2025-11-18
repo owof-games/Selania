@@ -87,6 +87,7 @@
 //Forest
     INCLUDE Forest\Forest.ink
     INCLUDE Forest\Witch.ink
+    INCLUDE Forest\WitchStorylets.ink
 
 //Greenhouse
     INCLUDE Greenhouse\Greenhouse.ink
@@ -126,6 +127,8 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
+
+
 
 
 

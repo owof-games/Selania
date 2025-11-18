@@ -118,7 +118,7 @@
         
      
      //Commenti a situazioni, eventi o altro.
-        - talking_witch.first_story_ended_check && not growing_witch_storylet && fifthChar_pauseTalking == 0:
+        - witch_feedback.first_story_ended_check && not growing_witch_storylet && fifthChar_pauseTalking == 0:
             -> growing_witch_storylet
             
         - else:
