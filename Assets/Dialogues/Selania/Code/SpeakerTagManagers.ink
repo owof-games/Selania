@@ -77,6 +77,14 @@ LIST speakersForEwWordTag = Influenced, Other
 	    ~ return "Mentore"
 }
 
+=== function mentor_tag
+{
+
+    - !welcome.chiSei && !welcome.your_name.selfName:
+	    ~ return "???"
+    - mentor_ActualName == Mentore:
+	    ~ return "Mentore"
+}
 
 
 === function fifthChar_tag
