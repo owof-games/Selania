@@ -27,10 +27,6 @@
     
     INCLUDE Characters\Functions\MentorManagement.ink
     
-    
-    INCLUDE Characters\Functions\ThirdCharacterManagement.ink
-    INCLUDE Characters\Functions\FourthCharacterManagement.ink
-    INCLUDE Characters\Functions\FifthCharacterManagement.ink
     INCLUDE Characters\Functions\WitchManagement.ink
 
 
@@ -47,34 +43,38 @@
     INCLUDE Characters\Mentor\HelpfulMentor.ink
     INCLUDE Characters\Mentor\MentorTutorial.ink
     INCLUDE Characters\Mentor\CharsFeedbacks.ink
-    INCLUDE Characters\Mentor\StoryletsContent.ink
     INCLUDE Characters\Mentor\MentorSpecialStorylets.ink
     
-    INCLUDE Characters\FirstCharacter\FirstCharacter.ink
-    INCLUDE Characters\FirstCharacter\FirstCharacterManagement.ink
-    INCLUDE Characters\FirstCharacter\FirstCharacterStorylets.ink
-    INCLUDE Characters\FirstCharacter\FirstCharSpecialStorylets.ink
-    INCLUDE Characters\FirstCharacter\FirstCharRewriting.ink
+    INCLUDE Characters\FirstChar\FirstChar.ink
+    INCLUDE Characters\FirstChar\FirstCharManagement.ink
+    INCLUDE Characters\FirstChar\FirstCharStorylets.ink
+    INCLUDE Characters\FirstChar\FirstCharSpecialStorylets.ink
+    INCLUDE Characters\FirstChar\FirstCharRewriting.ink
 
-
+    INCLUDE Characters\SecondChar\SecondChar.ink
+    INCLUDE Characters\SecondChar\SecondCharManagement.ink
+    INCLUDE Characters\SecondChar\SecondCharStorylets.ink
+    INCLUDE Characters\SecondChar\SecondCharSpecialStorylets.ink
+    INCLUDE Characters\SecondChar\SecondCharRewriting.ink
+    
+    
+    INCLUDE Characters\ThirdChar\ThirdCharacter.ink
+    INCLUDE Characters\ThirdChar\ThirdCharacterManagement.ink
+    INCLUDE Characters\ThirdChar\ThirdCharStorylets.ink
+    INCLUDE Characters\ThirdChar\ThirdCharSpecialStorylets.ink
+    
+    
+    INCLUDE Characters\FourthChar\FourthCharacter.ink
+    INCLUDE Characters\FourthChar\FourthCharStorylets.ink
+    INCLUDE Characters\FourthChar\FourthCharacterManagement.ink
     
 
-    INCLUDE Characters\SecondCharacter\SecondCharacter.ink
-    INCLUDE Characters\SecondCharacter\SecondCharacterManagement.ink
-    INCLUDE Characters\SecondCharacter\SecondCharacterStorylets.ink
-    INCLUDE Characters\SecondCharacter\SecondCharSpecialStorylets.ink
-    INCLUDE Characters\SecondCharacter\SecondCharRewriting.ink
+    INCLUDE Characters\FifthChar\FifthCharacter.ink
+    INCLUDE Characters\FifthChar\FifthCharStorylets.ink
+    INCLUDE Characters\FifthChar\FifthCharacterManagement.ink
     
     
     
-    
-    INCLUDE Characters\Stories\ThirdCharacter.ink
-    INCLUDE Characters\Stories\FourthCharacter.ink
-    INCLUDE Characters\Stories\FifthCharacter.ink
-    
-    
-    
-    INCLUDE Characters\Stories\ThirdCharSpecialStorylets.ink
     
     INCLUDE Characters\Stories\CommonStoryletsManager.ink
     INCLUDE Characters\Stories\CommonStorylets.ink
@@ -149,6 +149,11 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
+
+
+
+
+
 
 
 
