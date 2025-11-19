@@ -22,13 +22,10 @@
     INCLUDE Code\TextFunctions.ink
 
 //File dedicati alla gestione delle personagge
-    INCLUDE Characters\Functions\CommonFunctions.ink
-    INCLUDE Characters\Functions\Ink.ink
-    
-    INCLUDE Characters\Functions\MentorManagement.ink
-    
-    INCLUDE Characters\Functions\WitchManagement.ink
-
+    INCLUDE CommonElements\CommonFunctions.ink
+    INCLUDE CommonElements\Ink.ink
+    INCLUDE CommonElements\CommonStoryletsManager.ink
+    INCLUDE CommonElements\CommonStorylets.ink
 
                     /* ---------------------------------
                     
@@ -38,6 +35,7 @@
 
 //Personagge
     INCLUDE Characters\Mentor\Mentor.ink
+    INCLUDE Characters\Mentor\MentorManagement.ink
     INCLUDE Characters\Mentor\StoryletsManagement.ink
     INCLUDE Characters\Mentor\MentorStorylets.ink
     INCLUDE Characters\Mentor\HelpfulMentor.ink
@@ -45,11 +43,19 @@
     INCLUDE Characters\Mentor\CharsFeedbacks.ink
     INCLUDE Characters\Mentor\MentorSpecialStorylets.ink
     
+    
+    INCLUDE Characters\Witch\Witch.ink
+    INCLUDE Characters\Witch\WitchManagement.ink
+    INCLUDE Characters\Witch\WitchStorylets.ink
+    INCLUDE Characters\Witch\WitchSpecialStorylets.ink
+    
+    
     INCLUDE Characters\FirstChar\FirstChar.ink
     INCLUDE Characters\FirstChar\FirstCharManagement.ink
     INCLUDE Characters\FirstChar\FirstCharStorylets.ink
     INCLUDE Characters\FirstChar\FirstCharSpecialStorylets.ink
     INCLUDE Characters\FirstChar\FirstCharRewriting.ink
+    
 
     INCLUDE Characters\SecondChar\SecondChar.ink
     INCLUDE Characters\SecondChar\SecondCharManagement.ink
@@ -73,11 +79,6 @@
     INCLUDE Characters\FifthChar\FifthCharStorylets.ink
     INCLUDE Characters\FifthChar\FifthCharacterManagement.ink
     
-    
-    
-    
-    INCLUDE Characters\Stories\CommonStoryletsManager.ink
-    INCLUDE Characters\Stories\CommonStorylets.ink
 
 //Gestione dell'inventario
     INCLUDE Backpack\Backpack.ink
@@ -108,8 +109,7 @@
 
 //Forest
     INCLUDE Forest\Forest.ink
-    INCLUDE Forest\Witch.ink
-    INCLUDE Forest\WitchStorylets.ink
+    
 
 //Greenhouse
     INCLUDE Greenhouse\Greenhouse.ink
@@ -149,6 +149,10 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
+
+
+
+
 
 
 
