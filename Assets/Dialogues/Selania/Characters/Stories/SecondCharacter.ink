@@ -150,7 +150,7 @@
     //Storylets speciali
         {
         //Apertura biblioteca
-         - are_two_entities_together(SecondCharacter, PG) && (knowing_first_character.five or knowing_second_character.three) && kitchenContents hasnt PG && not open_the_library:
+         - are_two_entities_together(SecondCharacter, PG) && (first_char_main_storylets.five or knowing_second_character.three) && kitchenContents hasnt PG && not open_the_library:
                {
                    - forestContents has PG:
                         -> open_the_library
@@ -163,7 +163,7 @@
                } 
                
         //Apertura nido
-        - are_two_entities_together(SecondCharacter, PG) && (knowing_first_character.six or knowing_second_character.six) && kitchenContents hasnt PG && not open_nest:
+        - are_two_entities_together(SecondCharacter, PG) && (first_char_main_storylets.six or knowing_second_character.six) && kitchenContents hasnt PG && not open_nest:
                 {
                    - libraryContents has PG:
                         -> open_nest

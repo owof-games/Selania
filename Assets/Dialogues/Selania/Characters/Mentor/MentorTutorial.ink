@@ -95,7 +95,7 @@
             
             {
                 //Se non ho parlato con nessunx (ovvero: Chitarra, perché senza parlare a Chitarra, Riccio non compare)
-                    - not knowing_first_character:
+                    - not first_char_main_storylets:
                         Facciamo così: inizia parlando con qualcunə tra le persone che incontrerai qui in giro.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                         E poi torna da me.
                     

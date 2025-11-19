@@ -8,7 +8,7 @@ LIST speakersForEwWordTag = Influenced, Other
 
 === function firstChar_tag
 {
-    - !knowing_first_character.one.firstPresentation:
+    - !first_char_main_storylets.one.firstPresentation:
         ~ return "???"
         
     - firstChar_ActualName == Chitarra:

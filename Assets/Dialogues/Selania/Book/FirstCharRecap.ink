@@ -151,78 +151,78 @@
 
 
     {
-        - knowing_first_character.one:
+        - first_char_main_storylets.one:
             <b><i>Appunti dalle conversazioni.</b></i> <>
     }
 
     {
-        - knowing_first_character.twelve:
+        - first_char_main_storylets.twelve:
             {charNameOne} mi ha parlato di sua madre. È stata la madre a permetterle di frequentare il conservatorio, ma con l'obiettivo di portare prestigio alla famiglia. {charNameOne} sa che non è possibile, che per il mondo della classica è già vecchia, ma la madre non è pronta a capirlo.
         
     }
     
     {
-        - knowing_first_character.eleven:
+        - first_char_main_storylets.eleven:
             Per la prima volta {charNameOne} mi ha parlato della sua famiglia d'origine. La passione per la musica l'ha presa dal padre, ma era il nonno paterno ad essere musicista. Da piccola poteva sentire le vecchie registrazioni del nonno, giocare coi suoi strumenti. Ma ora che è grande suo padre tiene queste cose come delle reliquie. E se prima rideva molto, ora ha smesso. E vuole che la figlia si trovi "un lavoro vero".
         
     }
     
     {
-        - knowing_first_character.ten:
+        - first_char_main_storylets.ten:
             {charNameOne} mi ha raccontato qualcosa di diverso. L'anno scorso assieme ad altr3 attivist3 ha protetto gli alberi di un parco per una settimana, alberi che il Comune voleva abbattere. E quando ha sentito gli alberi cantare nel silenzio, si è sentita viva. Poi sono arrivati i poliziotti, hanno arrestato tutt3, gli alberi son stati abbattuti, e {charNameOne} è tornata a sentirsi inutile.
         
     }
 
     {
-        - knowing_first_character.nine:
+        - first_char_main_storylets.nine:
             {charNameOne} pensa di non far schifo a parlare.
         
     }
 
     {
-        - knowing_first_character.eight:
+        - first_char_main_storylets.eight:
             È tornata a parlare del Ghiberti. Dice che sembra felice ma in realtà sorride come un robot. Ed è tornata sul discorso dell'errore. Secondo {charNameOne} l'errore serve per fare esperienza e comunità. Se non si sbaglia non si cresce. Se non si sbaglia non c'è occasione per il perdono. Nei numerini del Ghiberti per {charNameOne} c'è la morte.
         
     }
 
     {
-        - knowing_first_character.seven:
+        - first_char_main_storylets.seven:
             {charNameOne} ha ritirato fuori quel professore, il Ghiberti. E gli sta sulle scatole perché vede la musica come qualcosa di matematico. È una cosa che non le piace, perché rende l'idea che esistano errore e verità, e cito: "anche perché quelli pieni di verità hanno sempre finito per ammazzare quell3 come me e Talco."
         
     } 
     
     {
-        - knowing_first_character.six:
+        - first_char_main_storylets.six:
             {charNameOne} mi ha raccontato la storia di questo ragazzo, Jonah. Un prodigio che dopo una carriera sfolgorante in Cina ha deciso di tornare in Italia, e le cose gli sono andate di merda. Non si capisce se ora mendichi, suoni per i ricchi, o lavori in un supermercato. Ma la storia di Jonah lascia una domanda a {charNameOne}: cosa fare quando si sa fare bene solo una cosa ma il mondo non permette di farla? Si accettano compromessi o si muore di fame? O si aspetta fino a quando non è il mondo a decidere per te?
         
     }
 
     {
-        - knowing_first_character.five:
+        - first_char_main_storylets.five:
             {charNameOne} ama fare festa, ed è abituata ad essere circondata da persone. Vive con cinque amich3, e poi ci sono l3 ospiti. D'estate fanno le feste sul tetto dove suonano e cantano. Il silenzio di questo posto la fa star male, perché può sentire i propri pensieri.
         
     } 
 
     {
-        - knowing_first_character.four:
+        - first_char_main_storylets.four:
             A {charNameOne} il silenzio pesa, e molto. Senza musica teme di sbroccare.
         
     } 
     
     {
-        - knowing_first_character.three:
+        - first_char_main_storylets.three:
             Ogni persona vicina a {charNameOne} sembra avere un'idea su come lei dovrebbe vivere la sua vita. Anna, una delle sue amiche, insiste perché divenga assistete di un suo professore, tal Ghiberti. Olga vuole che metta su una band e sfondi per locali. Talco vuole che partecipi a qualche reality musicale. Ed Ennio pensa che abbia completamente sbagliato strada. Tutte queste persone sono famiglia per {charNameOne}, ed è frustrata perché qualsiasi scelta prenderà, delulderà qualcunə.
         
     }
     
     {
-        - knowing_first_character.two:
+        - first_char_main_storylets.two:
             {charNameOne} sembra davvero persa senza Talco. Da tanto non andava in giro senza di ləi. Di sicuro, sembra non avere in simpatia Mentore.
         
     }    
     
     {
-        - knowing_first_character.one:
+        - first_char_main_storylets.one:
             Ho conosciuto una persona nuova, si chiama {charNameOne}. Quando l'ho incontrata era preoccupata perché non riesce a trovare lə sua migliore amicə, Talco. Non le piace molto il suo nome, ha l'impressione che essere una {charNameOne} per una come lei, che ha fatto il conservatorio, significhi arrendersi. Quando mi ha chiesto che nome dovrebbe avere secondo me, non sono {player_pronouns has him:stato|{player_pronouns has her:stata|statə}} capace di darle una risposta.
         
     }

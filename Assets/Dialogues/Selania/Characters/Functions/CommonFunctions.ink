@@ -38,7 +38,7 @@
                 ~ firstChar_storyStatus = story_storyStarted
                 
         //Dopo due steps della storia della prima personaggia, compare la seconda      
-        - knowing_first_character.two && secondChar_storyStatus == story_storyNotStarted:
+        - first_char_main_storylets.two && secondChar_storyStatus == story_storyNotStarted:
         {debug: introduco {SecondCharacter} in scena.}
                 ~ move_entity(SecondCharacter, TrainStop)
                 ~ move_entity(TrainNoise, CurrentLocation)
