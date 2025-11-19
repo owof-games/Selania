@@ -6,7 +6,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
         
 
 <b><i>Appunti dalle conversazioni.</b></i> Ho incontrato una persona che mi ha detto di chiamarla Mentore, perché mi farà da guida in questo luogo. E dopo avermi chiesto nomi e pronomi, mi ha {player_pronouns has him:invitato|{player_pronouns has her:invitata|invitatə}} a parlare con le persone che trovo in giro. {about_ink_usage: Per poi dirmi che sono {player_pronouns has him:un Riscrittore|{player_pronouns has her:una Riscrittora|unə Riscrittorə}}, e darmi un po' di indicazioni su cosa dovrei fare.}
@@ -90,12 +90,12 @@
 
 {
     - rewriting_proposal_first_character.secret_ending: 
-    Dopo aver concluso la sua riscrittura, {charNameOne} mi ha chiesto qual è secondo me il confine tra essere una brava persona ed essere una manipolatrice, riferendosi a {charNameFive}.
+    Dopo aver concluso la sua riscrittura, {charNameOne} mi ha chiesto qual è secondo me il confine tra essere una brava persona ed essere una manipolatrice, riferendosi a {mentorName}.
 }
 
 {
     - rewriting_proposal_second_character.secret_ending: 
-    Dopo aver scelto il suo nome, {charNameTwo} mi ha detto che {charNameFive} non gli sembra felice. Che gli ricorda mamma quando gira per casa dando cosnigli e dicendo cose sorridendo, per poi rinchiudersi in camera e restare in silenzio per ore.
+    Dopo aver scelto il suo nome, {charNameTwo} mi ha detto che {mentorName} non gli sembra felice. Che gli ricorda mamma quando gira per casa dando cosnigli e dicendo cose sorridendo, per poi rinchiudersi in camera e restare in silenzio per ore.
 }
 
 //Appunto sul dono fatto
@@ -128,9 +128,9 @@
 
 {main_story_fifth_character: confessione.}
 
-{main_story_fifth_character.ending: Dopo la nostra conversazione, ha scelto un nuovo nome: {fifthChar_ActualName}.}
+{main_story_fifth_character.ending: Dopo la nostra conversazione, ha scelto un nuovo nome: {mentor_ActualName}.}
 
-{fifth_character_feedback: Dopo aver aiutato {fifthChar_ActualName}, {fifthChar_ActualName} mi ha detto che<>}
+{fifth_character_feedback: Dopo aver aiutato {mentor_ActualName}, {mentor_ActualName} mi ha detto che<>}
 {
     - fifthChar_possibleStates has Grizzly: feedback Mentore
         
@@ -174,10 +174,10 @@
                     No, non ho esagerato col vinello.
                     Ma pensaci, ama: se così fosse, potrei dimostrare che siamo tutt3 collegat3, che potremmo parlarci e comunicare tra noi! <>
             }
-        Spero che lì vada tutto bene. E che {charNameFive} non sia sempre pesantona. Alla prossima lettera. <i>{charNameOne}</i>
+        Spero che lì vada tutto bene. E che {mentorName} non sia sempre pesantona. Alla prossima lettera. <i>{charNameOne}</i>
 }
 
-{fifth_character_notes.one: Dopo la sua partenza, {fifthChar_ActualName} mi ha scritto una lettera, dove mi ha raccontato che<>}
+{fifth_character_notes.one: Dopo la sua partenza, {mentor_ActualName} mi ha scritto una lettera, dove mi ha raccontato che<>}
 {
     - fifthChar_possibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
         
@@ -196,7 +196,7 @@
         sddd
 }
 
-{fifth_character_notes.two: Nella sua seconda lettera {fifthChar_ActualName} mi ha scritto una lettera, dove mi ha raccontato che<>}
+{fifth_character_notes.two: Nella sua seconda lettera {mentor_ActualName} mi ha scritto una lettera, dove mi ha raccontato che<>}
 {
     - fifthChar_possibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
         
@@ -216,7 +216,7 @@
 }
 
 
-{fifth_character_notes.three: Nella sua terza lettera {fifthChar_ActualName} mi ha scritto una lettera, dove mi ha raccontato che<>}
+{fifth_character_notes.three: Nella sua terza lettera {mentor_ActualName} mi ha scritto una lettera, dove mi ha raccontato che<>}
 {
     - fifthChar_possibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
         

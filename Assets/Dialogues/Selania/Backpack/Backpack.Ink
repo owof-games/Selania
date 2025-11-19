@@ -20,7 +20,6 @@ VAR gift_currentReceiver = ()
 
 
 === backpack_management ===
-    ~ temp charNameFive = translator(fifthChar_ActualName)
     {debug: I doni trovati sono {list_with_commas(backpack_findedGifts)}.}
     Dono...
     

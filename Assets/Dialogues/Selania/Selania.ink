@@ -25,6 +25,7 @@
     INCLUDE Characters\Functions\CommonFunctions.ink
     INCLUDE Characters\Functions\Ink.ink
     
+    INCLUDE Characters\Functions\MentorManagement.ink
     INCLUDE Characters\Functions\FirstCharacterManagement.ink
     INCLUDE Characters\Functions\SecondCharacterManagement.ink
     INCLUDE Characters\Functions\ThirdCharacterManagement.ink
@@ -40,6 +41,7 @@
                      ----------------------------------*/
 
 //Personagge
+    INCLUDE Characters\Mentor\Mentor.ink
     INCLUDE Characters\Mentor\HelpfulMentor.ink
     INCLUDE Characters\Mentor\StoryletsManagement.ink
     INCLUDE Characters\Mentor\StoryletsContent.ink
@@ -129,6 +131,10 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
+
+
+
+
 
 
 

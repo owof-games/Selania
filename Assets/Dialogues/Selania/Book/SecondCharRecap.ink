@@ -10,7 +10,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 ~ enableBigDialogue()
 
 
@@ -21,13 +21,13 @@
 
            {
                 - secondChar_ActualName has Riccio:
-                    Ti scrivo da casa di mio fratello. Novità: ora vivo qui! All'inizio il suo amico non era contento, ma ora mi insegna anche a fare i dolci! Fa anche delle caramelle superbuone. Papà non è più tornato. Mamma non ha nemmeno fatto storie quando me ne sono andato. Non mi sento mica felice. Sì no boh. Che cosa strana da scrivere. Però le cose sono diverse. A volte abbasso le spine. A volte mi addormento sul divano mentre guardo i telefilm con mio fratello. E non ho mica paura. Spero che tu non abbia paura. Salutami {charNameFive}. Ti voglio bene. <>
+                    Ti scrivo da casa di mio fratello. Novità: ora vivo qui! All'inizio il suo amico non era contento, ma ora mi insegna anche a fare i dolci! Fa anche delle caramelle superbuone. Papà non è più tornato. Mamma non ha nemmeno fatto storie quando me ne sono andato. Non mi sento mica felice. Sì no boh. Che cosa strana da scrivere. Però le cose sono diverse. A volte abbasso le spine. A volte mi addormento sul divano mentre guardo i telefilm con mio fratello. E non ho mica paura. Spero che tu non abbia paura. Salutami {mentorName}. Ti voglio bene. <>
  
                 - secondChar_ActualName has Grizzly:
                     Sono SUPER ARRABBIATO. CON MIO FRATELLO. Non avevamo mai litigato, mai. Ma l'altro giorno è venuto a casa e mi ha detto che sto diventando come papà. Papà si è incazzato con lui e mi ha difeso. Mio fratello dice che sto diventando un bullo. Che un suo amico maestro a scuola gli ha detto che me la prendo coi più piccoli. Papà gli ha detto che mi faccio rispettare. E che non sono una checca come lui. Lui mio fratello. Non sono mica abituato a mio padre così. Ma poi in camera mi è preso male tutto. Mi manca mio fratello. Mi mancate voi. Vorrei sapere cosa fare. <>
                     
                 - secondChar_ActualName has Lupo:
-                    Oggi sono triste, e non so perché. Ho dato un pugno a un ragazzo delle medie, ma non mi è mica piaciuto. A casa le cose vanno bene, ma. Sì no boh. Mica pensavo che è così faticoso. Mamma e papà sono tranquilli solo se siamo assieme. Mi sembra un lavoro. E se sono giù si preoccupano tantissimo. E se si preoccupano tornano a litigare. Non so mica cosa fare. Forse {charNameFive} li può aiutare? Mi mancate. <b>{charNameTwo}</b>. <>
+                    Oggi sono triste, e non so perché. Ho dato un pugno a un ragazzo delle medie, ma non mi è mica piaciuto. A casa le cose vanno bene, ma. Sì no boh. Mica pensavo che è così faticoso. Mamma e papà sono tranquilli solo se siamo assieme. Mi sembra un lavoro. E se sono giù si preoccupano tantissimo. E se si preoccupano tornano a litigare. Non so mica cosa fare. Forse {mentorName} li può aiutare? Mi mancate. <b>{charNameTwo}</b>. <>
 
                     
                 - secondChar_ActualName has Delfino:
@@ -99,7 +99,7 @@
                 
      
             }
-          PS: come sta {charNameFive}? Mi spiace per come l'ho trattata mentre ero lì, sai? Ma non dirglielo. Per ora per lo meno. Ciao!
+          PS: come sta {mentorName}? Mi spiace per come l'ho trattata mentre ero lì, sai? Ma non dirglielo. Per ora per lo meno. Ciao!
 }
 
 //Appunto sul dono fatto

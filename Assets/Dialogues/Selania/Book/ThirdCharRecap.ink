@@ -5,7 +5,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
 {
     - knowing_third_character.one: prima informazione.
@@ -102,7 +102,7 @@
 
 {main_story_third_character.ending: Dopo la nostra conversazione, ha scelto un nuovo nome: {thirdChar_ActualName}.}
 
-{third_character_feedback: Dopo aver aiutato {thirdChar_ActualName}, {fifthChar_ActualName} mi ha detto che<>}
+{third_character_feedback: Dopo aver aiutato {thirdChar_ActualName}, {mentor_ActualName} mi ha detto che<>}
 {
     - thirdChar_possibleStates has Grizzly: feedback Mentore
         

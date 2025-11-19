@@ -397,8 +397,8 @@
         - thirdChar_pauseTalking > 0:
             ~ thirdChar_pauseTalking --
         
-        - fifthChar_pauseTalking > 0:
-            ~ fifthChar_pauseTalking --    
+        - mentor_pauseTalking > 0:
+            ~ mentor_pauseTalking --    
     }
 ->-> 
 

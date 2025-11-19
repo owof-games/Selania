@@ -36,7 +36,7 @@ C'è un libro ai piedi del tronco, e porta il tuo nome.#speaker:{witch_tag()} #i
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp charNameFive = translator(mentor_ActualName)
 Ehi {player_name}, qui ti spiego come aggiorno per te il libro della riscrittora!#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
         + [Scelta verde.]
@@ -63,7 +63,7 @@ Ehi {player_name}, qui ti spiego come aggiorno per te il libro della riscrittora
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp charNameFive = translator(mentor_ActualName)
         Dove ci viene detto a cosa serve il nido in modo sereno.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         E ci spiega che la manipolazione è un intento, non qualcosa di inerente all'oggetto, o al nido.
         
@@ -92,7 +92,7 @@ Ehi {player_name}, qui ti spiego come aggiorno per te il libro della riscrittora
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp charNameFive = translator(mentor_ActualName)
     Hai donato la Selanìa, il gioco è finito.
     Compare lo sfondo stellato.
     

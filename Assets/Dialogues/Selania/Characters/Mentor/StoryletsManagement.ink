@@ -12,7 +12,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
     
     {
                     
@@ -79,14 +79,14 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
     
 {    
             
     //Feedback
         - not first_character_feedback:
             {
-                - firstChar_storyStatus == story_storyEnded && fifthChar_pauseTalking == 0:
+                - firstChar_storyStatus == story_storyEnded && mentor_pauseTalking == 0:
                     -> first_character_feedback
                 
                 - else:
@@ -105,7 +105,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
     
     {
     //Feedback
@@ -123,7 +123,7 @@
         
      
      //Commenti a situazioni, eventi o altro.
-        - witch_feedback.first_story_ended_check && not growing_witch_storylet && fifthChar_pauseTalking == 0:
+        - witch_feedback.first_story_ended_check && not growing_witch_storylet && mentor_pauseTalking == 0:
             -> growing_witch_storylet
             
         - else:

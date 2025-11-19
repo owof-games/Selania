@@ -37,7 +37,7 @@
 
 === first_character_notes ===
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
     
     + (check){are_two_entities_together(FirstCharacterNotes, PG)}[FirstCharacterNotes]
     
@@ -68,7 +68,7 @@
     
     = one
         ~ temp charNameOne = translator(firstChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         
         Ciao {player_name}, come stai?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
         Alla fine Talco è sempre statə qui, me idiota.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
@@ -100,7 +100,7 @@
             }
         
         Spero che lì vada tutto bene.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
-        E che {charNameFive} non sia sempre pesantona.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
+        E che {mentorName} non sia sempre pesantona.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
         Alla prossima lettera.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
          
         <b>{charNameOne}</b>
@@ -117,7 +117,7 @@
     
     = two
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
     
     Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
     Sono passate settimane dal mio ritorno, e finalmente ho avuto il coraggio di parlare con mio padre.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_neutral
@@ -170,7 +170,7 @@
         
     = three
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
     
     Ciao ama!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
     Indovina chi ha fatto il suo primo concerto?
@@ -273,7 +273,7 @@
     
     = one
         ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         
         Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
         Cioè a te.
@@ -373,7 +373,7 @@
                 
             }
             
-            PS: come sta {charNameFive}? Mi spiace per come l'ho trattata mentre ero lì, sai?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
+            PS: come sta {mentorName}? Mi spiace per come l'ho trattata mentre ero lì, sai?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
             Ma non dirglielo. Per ora per lo meno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
             Ciao!
 
@@ -388,7 +388,7 @@
     
     = two
         ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         
         Che strano.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
         Ho lasciato l'altra lettera sul comodino di notte.
@@ -503,7 +503,7 @@
     
     = three
         ~ temp charNameTwo = translator(secondChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         
         Ciao {player_name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
                 
@@ -524,7 +524,7 @@
                     A volte mi addormento sul divano mentre guardo i telefilm con mio fratello.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
                     E non ho mica paura.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
                     Spero che tu non abbia paura.
-                    Salutami {charNameFive}.
+                    Salutami {mentorName}.
                     Ti voglio bene.
                     
                 - secondChar_ActualName has Grizzly:
@@ -557,7 +557,7 @@
                     E se sono giù si preoccupano tantissimo.
                     E se si preoccupano tornano a litigare.
                     Non so mica cosa fare.
-                    Forse {charNameFive} li può aiutare?
+                    Forse {mentorName} li può aiutare?
                     Mi mancate.
                     <b>{charNameTwo}</b>.
                     
@@ -646,7 +646,7 @@
         
     = one
         ~ temp charNameThree = translator(thirdChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         
         {charNameThree}: Lettere random note da parte della personaggia #speaker:{thirdChar_tag()} #inkA:{ink_tag_a(thirdChar_InkLevel)} #inkB:{ink_tag_b(thirdChar_InkLevel)} #inkC:{ink_tag_c(thirdChar_InkLevel)}  #inkD:{ink_tag_d(thirdChar_InkLevel)} #portrait:third_neutral
         
@@ -662,7 +662,7 @@
     
     = two
         ~ temp charNameThree = translator(thirdChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         
         {charNameThree}: seconda lettera
         
@@ -678,7 +678,7 @@
     
     = three
         ~ temp charNameThree = translator(thirdChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         
         {charNameThree}: terza lettera
         
@@ -710,7 +710,7 @@
         
     = one
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         
         {charNameFour}: Lettere random note da parte della personaggia#speaker:{fourthChar_tag()} #inkA:{ink_tag_a(fourthChar_InkLevel)} #inkB:{ink_tag_b(fourthChar_InkLevel)} #inkC:{ink_tag_c(fourthChar_InkLevel)}  #inkD:{ink_tag_d(fourthChar_InkLevel)} #portrait:fourth_neutral
         
@@ -726,7 +726,7 @@
     
     = two
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         
         {charNameFour}: seconda lettera
         
@@ -742,7 +742,7 @@
     
     = three
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         {charNameFour}: terza lettera
     
         {
@@ -776,15 +776,15 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         
-        {charNameFive}: Lettere random note da parte della personaggia#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
+        {mentorName}: Lettere random note da parte della personaggia#speaker:{fifthChar_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
         
         {
             - fifthChar_possibleStates has Riccio: 
-                {charNameFive}: xy
+                {mentorName}: xy
             - fifthChar_possibleStates has Capibara:
-                {charNameFive}: zz
+                {mentorName}: zz
         }
         
         ~ fifthChar_mailPause = fifthChar_mailPauseDuration
@@ -795,15 +795,15 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         
-        {charNameFive}: seconda lettera
+        {mentorName}: seconda lettera
         
         {
             - fifthChar_possibleStates has Riccio: 
-                {charNameFive}: xy
+                {mentorName}: xy
             - fifthChar_possibleStates has Capibara:
-                {charNameFive}: zz
+                {mentorName}: zz
         }
             
         ~ fifthChar_mailPause = fifthChar_mailPauseDuration
@@ -814,14 +814,14 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
-        {charNameFive}: terza lettera
+        ~ temp mentorName = translator(mentor_ActualName)
+        {mentorName}: terza lettera
         
         {
             - fifthChar_possibleStates has Riccio: 
-                {charNameFive}: xy
+                {mentorName}: xy
             - fifthChar_possibleStates has Capibara:
-                {charNameFive}: zz
+                {mentorName}: zz
         }
             
         ~ fifthChar_mailPause = fifthChar_mailPauseDuration

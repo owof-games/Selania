@@ -131,7 +131,7 @@
 
 === firstAffinityFeedback
     ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
 {debug: passo per firstAffinityFeedback. Lo stato di inchiostro è {firstChar_InkLevel}.}
 

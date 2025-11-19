@@ -11,7 +11,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
 {
     - first_character_notes.three:
@@ -94,7 +94,7 @@
                     No, non ho esagerato col vinello.
                     Ma pensaci, ama: se così fosse, potrei dimostrare che siamo tutt3 collegat3, che potremmo parlarci e comunicare tra noi! <>
             }
-        Spero che lì vada tutto bene. E che {charNameFive} non sia sempre pesantona. Alla prossima lettera. <b>{charNameOne}</b>
+        Spero che lì vada tutto bene. E che {mentorName} non sia sempre pesantona. Alla prossima lettera. <b>{charNameOne}</b>
 }
 
 

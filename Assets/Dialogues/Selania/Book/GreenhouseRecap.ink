@@ -5,7 +5,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
     
 {growing_check > 3: <b>Estratti da <i>"Funghi, licheni, muschi: fitomanzia ed erboristeria esoterica."</i> di M.M. - Bozza per la editor.</b> }
 

@@ -5,7 +5,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
     {
         - about_ink_usage:
         <b>Sulla riscrittura: appunti apocrifi del collettivo P.K.</b> <>

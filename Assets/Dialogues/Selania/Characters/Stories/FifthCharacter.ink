@@ -62,9 +62,9 @@
         + {player_somethingStrange > 0 or (firstChar_InkLevel has ink_high && not little_storylets.infoImpo) && about_ink_usage} [Mi è successa una cosa strana.]
             -> little_storylets
             
-        //+ {knowing_second_character && fifthChar_pauseTalking == 0}[Vorrei conoscerti meglio.]
+        //+ {knowing_second_character && mentor_pauseTalking == 0}[Vorrei conoscerti meglio.]
             // {
-            //     - fifthChar_pauseTalking == 0:
+            //     - mentor_pauseTalking == 0:
                     //-> talk_with_fifth_character
                 
             //     - else:
@@ -194,7 +194,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
         {((firstChar_storyStatus hasnt story_storyEnded) && (secondChar_storyStatus hasnt story_storyEnded)): Ma a proposito di questo posto: devo ancora capire come sgomberare quell'ammasso di mobili rotti che blocca il sentiero a ovest della foresta.|Ma a proposito di questo posto: devo ancora liberare il sentiero da quei fiori enormi vicino alla serra.}#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         Grazie per la chiacchierata, {player_name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         
-             ~ fifthChar_pauseTalking = fifthChar_pauseDuration
+             ~ mentor_pauseTalking = mentor_pauseDuration
             @animation:RewriterBook
  
             -> main
@@ -258,7 +258,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
         Ma ora è il momeno di svuotare lo stagno dalle sue cose più schifose.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         Prega per me, {player_name}.
                 
-             ~ fifthChar_pauseTalking = fifthChar_pauseDuration
+             ~ mentor_pauseTalking = mentor_pauseDuration
              @animation:RewriterBook
              
                 -> main
@@ -320,7 +320,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
             Mi sono appena ricordata che ci sono delle erbacce fastidiose sotto la poltrona della biblioteca.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Devo inventarmi un modo per liberarmene!
             
-                ~ fifthChar_pauseTalking = fifthChar_pauseDuration
+                ~ mentor_pauseTalking = mentor_pauseDuration
                 @animation:RewriterBook
                             
                     -> main
@@ -396,7 +396,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
         Non può essere emotiva.
         Vado a riordinare in ordine di data i libri in biblioteca.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
     
-             ~ fifthChar_pauseTalking = fifthChar_pauseDuration
+             ~ mentor_pauseTalking = mentor_pauseDuration
              @animation:RewriterBook
              
             -> main
@@ -472,7 +472,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
 
  
             -
-             ~ fifthChar_pauseTalking = fifthChar_pauseDuration
+             ~ mentor_pauseTalking = mentor_pauseDuration
         
         Perdonami: a volte sono solo una sciocca romantica.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
         E mi dimentico che l'amore è ovunque.
@@ -482,7 +482,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
         Vado a recuperare del terriccio dal sottobosco, {player_name}.#speaker:{fifthChar_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         Parleremo più tardi.
         
-        ~ fifthChar_pauseTalking = fifthChar_pauseDuration
+        ~ mentor_pauseTalking = mentor_pauseDuration
         @animation:RewriterBook
         
             -> main
@@ -516,8 +516,8 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
  
             -
             //Qui potrebbe aver senso ridurre i tempi di attesa tra un dialogo e l'altro.
-             ~  fifthChar_pauseDuration = 5
-             ~ fifthChar_pauseTalking = fifthChar_pauseDuration
+             ~  mentor_pauseDuration = 5
+             ~ mentor_pauseTalking = mentor_pauseDuration
             -> main
     = seven
     ~ temp charNameFive = translator(fifthChar_ActualName)
@@ -545,7 +545,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
                 ~ fifthChar_purple ++
  
             -
-             ~ fifthChar_pauseTalking = fifthChar_pauseDuration
+             ~ mentor_pauseTalking = mentor_pauseDuration
             -> main        
             
             
@@ -574,7 +574,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
                 ~ fifthChar_purple ++
  
             -
-             ~ fifthChar_pauseTalking = fifthChar_pauseDuration
+             ~ mentor_pauseTalking = mentor_pauseDuration
             -> main    
     
     
@@ -603,7 +603,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
                 ~ fifthChar_purple ++
  
             -
-             ~ fifthChar_pauseTalking = fifthChar_pauseDuration
+             ~ mentor_pauseTalking = mentor_pauseDuration
             -> main    
     
     = ten
@@ -631,7 +631,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
                 ~ fifthChar_purple ++
  
             -
-             ~ fifthChar_pauseTalking = fifthChar_pauseDuration
+             ~ mentor_pauseTalking = mentor_pauseDuration
             -> main    
     
     = eleven
@@ -659,7 +659,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
                 ~ fifthChar_purple ++
  
             -
-             ~ fifthChar_pauseTalking = fifthChar_pauseDuration
+             ~ mentor_pauseTalking = mentor_pauseDuration
             -> main    
     = twelve
     ~ temp charNameFive = translator(fifthChar_ActualName)
@@ -686,7 +686,7 @@ C'è qualcosa che ti frulla nella testa.#speaker:{witch_tag()} #inkA:offState #i
                 ~ fifthChar_purple ++
  
             -
-             ~ fifthChar_pauseTalking = fifthChar_pauseDuration
+             ~ mentor_pauseTalking = mentor_pauseDuration
             -> main            
             
             

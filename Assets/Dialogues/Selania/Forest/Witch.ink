@@ -9,7 +9,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
     
     {
         //Check per intro
@@ -41,7 +41,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         
         ~ saturationVar ++
         ~ move_entity(vase, Bedroom)
@@ -91,8 +91,8 @@
                 E la tua guida noi, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 La separazione è una illusione.
                 {player_name} è noi, noi siamo {charNameOne}.
-                {charNameOne} è {charNameTwo} che è {charNameFive}.
-                E {charNameFive} è {player_name}.
+                {charNameOne} è {charNameTwo} che è {mentorName}.
+                E {mentorName} è {player_name}.
             -
             
         Noi sussurriamo nella tua testa, ma ascoltiamo anche.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -120,7 +120,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         
         {
             - came_from(->intro):Che ha compiuto qualcosa per la prima volta.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -134,7 +134,7 @@
                     -> color_variation_management(PG, greenC)->
                 All'altezza per {charNameOne}?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 All'altezza per {player_name}?
-                O all'altezza per soddisfare {charNameFive}?
+                O all'altezza per soddisfare {mentorName}?
                 La serra è tiepida, la stazione attende, e le nubi dicono che {player_name} è dove deve essere.
                 
             + [Sono felice per lei, ma il mondo non dovrebbe fare così paura.]
@@ -149,7 +149,7 @@
                    -> color_variation_management(PG, blueC)->
                 {charNameOne} possiede un forte senso pratico.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Soltanto, è diverso da quello di {player_name}.
-                O di {charNameFive}.
+                O di {mentorName}.
                 Il senso pratico del falco va verso l'alto.
                 Quello della talpa verso il basso.
                 E {charNameOne} segue ora la sua direzione.
@@ -169,9 +169,9 @@
                 E {player_name} decide di osservare le cose nell'interezza.
                     
             -
-        L'acqua nel terreno ci racconta che {charNameFive} ha molto aiutato {player_name} in questo viaggio.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        L'acqua nel terreno ci racconta che {mentorName} ha molto aiutato {player_name} in questo viaggio.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         Anche noi vogliamo aiutare {player_name}, e per questo condividiamo una cosa.
-        {player_name} può seguire la voce di {charNameFive} e scegliere di studiare la persona che ha davanti come un uomo studia la vita attraverso un libro.
+        {player_name} può seguire la voce di {mentorName} e scegliere di studiare la persona che ha davanti come un uomo studia la vita attraverso un libro.
         Oppure {player_name} può decidere di essere sé {player_pronouns has him:stesso|{player_pronouns has her:stessa|stessə}}, anche se questo può creare attrito con l'altra persona.
         E scoprire che c'è chi ha bisogno di venir contraddettə.
         A volte l'attrito genera fastidio, o volte genera fuoco.
@@ -191,7 +191,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         
         {
             - came_from(->intro):Che ha compiuto qualcosa per la prima volta.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -241,7 +241,7 @@
                 {player_name} forse ride quando non è {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}.
             -
         
-        L'acqua ci ha portato le lacrime di {charNameFive}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        L'acqua ci ha portato le lacrime di {mentorName}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         Questa storia per lei è stata faticosa.
         Le sue radici sembrano solide, ma il tronco ondeggia a ogni accenno di burrasca.
         Forse {player_name} può essere il suo sostegno.
@@ -258,7 +258,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         
         + [Scelta verde.]
             -> color_variation_management(PG, greenC)->
@@ -282,7 +282,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         
         + [Scelta verde.]
             -> color_variation_management(PG, greenC)->
@@ -306,7 +306,7 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
         ~ temp charNameFour = translator(fourthChar_ActualName)
-        ~ temp charNameFive = translator(fifthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
         
         + [Scelta verde.]
             -> color_variation_management(PG, greenC)->

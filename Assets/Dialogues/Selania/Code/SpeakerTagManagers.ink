@@ -84,7 +84,7 @@ LIST speakersForEwWordTag = Influenced, Other
 
     - !welcome.chiSei && !welcome.your_name.selfName:
 	    ~ return "???"
-    - fifthChar_ActualName == Mentore:
+    - mentor_ActualName == Mentore:
 	    ~ return "Mentore"
 }
 

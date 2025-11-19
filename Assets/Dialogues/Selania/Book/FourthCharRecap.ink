@@ -5,7 +5,7 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp charNameFive = translator(fifthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
     
 {knowing_fourth_character.one: prima informazione.}
 {knowing_fourth_character.two: seconda informazione.}
@@ -52,7 +52,7 @@
 
 //Eventuale commento della rana.
 
-{fourth_character_feedback: Dopo aver aiutato {fourthChar_ActualName}, {fifthChar_ActualName} mi ha detto che<>}
+{fourth_character_feedback: Dopo aver aiutato {fourthChar_ActualName}, {mentor_ActualName} mi ha detto che<>}
 {
     - fourthChar_possibleStates has Grizzly: feedback Mentore
         
