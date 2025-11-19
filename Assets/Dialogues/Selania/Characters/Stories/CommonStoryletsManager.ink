@@ -1,7 +1,7 @@
 === common_storylets
     {
         //Storylet dopo lo scambio con Riccio e il fatto che l'ha afferrato
-            - are_two_entities_together(Mentor, PG) && knowing_second_character.two && (not addressing_violence):
+            - are_two_entities_together(Mentor, PG) && second_char_main_storylets.two && (not addressing_violence):
                     -> addressing_violence
     
         //Mentore e Riccio parlano dopo il litigio. Parte fintanto che riccio non ha cucinato da solo.

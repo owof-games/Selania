@@ -27,7 +27,7 @@
     
     INCLUDE Characters\Functions\MentorManagement.ink
     
-    INCLUDE Characters\Functions\SecondCharacterManagement.ink
+    
     INCLUDE Characters\Functions\ThirdCharacterManagement.ink
     INCLUDE Characters\Functions\FourthCharacterManagement.ink
     INCLUDE Characters\Functions\FifthCharacterManagement.ink
@@ -54,17 +54,26 @@
     INCLUDE Characters\FirstCharacter\FirstCharacterManagement.ink
     INCLUDE Characters\FirstCharacter\FirstCharacterStorylets.ink
     INCLUDE Characters\FirstCharacter\FirstCharSpecialStorylets.ink
+    INCLUDE Characters\FirstCharacter\FirstCharRewriting.ink
+
+
+    
+
+    INCLUDE Characters\SecondCharacter\SecondCharacter.ink
+    INCLUDE Characters\SecondCharacter\SecondCharacterManagement.ink
+    INCLUDE Characters\SecondCharacter\SecondCharacterStorylets.ink
+    INCLUDE Characters\SecondCharacter\SecondCharSpecialStorylets.ink
+    INCLUDE Characters\SecondCharacter\SecondCharRewriting.ink
     
     
     
     
-    INCLUDE Characters\Stories\SecondCharacter.ink
     INCLUDE Characters\Stories\ThirdCharacter.ink
     INCLUDE Characters\Stories\FourthCharacter.ink
     INCLUDE Characters\Stories\FifthCharacter.ink
     
     
-    INCLUDE Characters\Stories\SecondCharSpecialStorylets.ink
+    
     INCLUDE Characters\Stories\ThirdCharSpecialStorylets.ink
     
     INCLUDE Characters\Stories\CommonStoryletsManager.ink
@@ -140,6 +149,10 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
+
+
+
+
 
 
 

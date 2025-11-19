@@ -19,11 +19,11 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{secondChar_tag()} #
 Iniziamo proponendo a Riccio di parlare di un tema.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
 Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le condizioni saranno valide (sostanzialmente: se almeno una volta abbiamo parlato di quel tema).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
 
-    + {knowing_second_character.one}[Tema Uno]
+    + {second_char_main_storylets.one}[Tema Uno]
         -> first_theme
-    + {knowing_second_character.two}[Tema Due]
+    + {second_char_main_storylets.two}[Tema Due]
         -> second_theme
-    + {knowing_second_character.three}[Tema Tre]
+    + {second_char_main_storylets.three}[Tema Tre]
         -> third_theme
     -
     -> main
