@@ -49,8 +49,8 @@
         - not second_story_gift.ink_outcome && backpack_findedGifts != ():
                 -> ask
     
-    //Vogliamo cucinare assieme          
-        - open_the_kitchen && not cooking_with_second_char && kitchen_secondCharIsCooking==false:
+    //Vogliamo cucinare assieme (dopo almeno uno storylet assieme)      
+        - knowing_second_character.one && open_the_kitchen && not cooking_with_second_char && kitchen_secondCharIsCooking==false:
                 -> ask
     
     
@@ -119,7 +119,7 @@
     
         
         //Cucinare assieme
-        + {open_the_kitchen && not cooking_with_second_char && kitchen_secondCharIsCooking==false}[Ti va di cucinare qualcosa assieme?]
+        + {knowing_second_character.one && open_the_kitchen && not cooking_with_second_char && kitchen_secondCharIsCooking==false}[Ti va di cucinare qualcosa assieme?]
                 ~ movements_changeLocationTimer = 0
                 
             {
