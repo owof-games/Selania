@@ -108,7 +108,7 @@
 //Chiamo questa funzione a fine di una riscrittura, inserendo il valore della personaggia (es: player_firstStepClosed).
 //Controllo quante sono le storie concluse, in modo da poter inserire quella personaggia nell'ordine di conclusione delle storie previsto (es: se c'è già una storia chiusa in story_endedStories e ho chiuso player_firstStepClosed, allora metterò firstChar_storyEndingPosition come story_twoStoriesClosed.
 
-{debug: <i>Passo per PG_advance_managemente. Il valore di charES è {charES}.}
+{debug: <i>Passo per PG_advance_management. Il valore di charES è {charES}.}
 
 {
 	- LIST_COUNT(story_endedStories) == 1:
@@ -151,7 +151,7 @@
 			- charES == FirstCharacter:
 				~ firstChar_storyEndingPosition = story_threeStoriesClosed
 			
-			- charES == player_secondStepClosed:
+			- charES == SecondCharacter:
 				~ secondChar_storyEndingPosition = story_threeStoriesClosed
 			
 			- charES == ThirdCharacter:
@@ -166,14 +166,14 @@
 {debug: <i>Ho finito di assegnare l'ordine di conclusione delle storie, e passo ad aggiornare i colori.}
 
     {
-        - charES == player_firstStepClosed:
+        - charES == FirstCharacter:
             ~ temp_endedPNGRed = firstChar_red
             ~ temp_endedPNGGreen = firstChar_green
             ~ temp_endedPNGBlue = firstChar_blue
             ~ temp_endedPNGYellow = firstChar_yellow
             ~ temp_endedPNGPurple = firstChar_purple
             
-        - charES == player_secondStepClosed:
+        - charES == SecondCharacter:
             ~ temp_endedPNGRed = secondChar_Red
             ~ temp_endedPNGGreen = secondChar_Green
             ~ temp_endedPNGBlue = secondChar_Blue
