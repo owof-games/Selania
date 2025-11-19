@@ -1365,8 +1365,17 @@ QUESTIONS
 	~ greenhouse_tempCultTriggerWarning += greenhouse_chosenCultivable
     ~ greenhouse_chosenCultivable = ()
 	
-{debug_cultivable: Dopo l'operazione la lista dei coltivabili include {greenhouse_backupCultivable}.}	
-->->
+{debug_cultivable: Dopo l'operazione la lista dei coltivabili include {greenhouse_backupCultivable}.}
+
+    {
+        - greenhouse_backupCultivable != ():
+            ->  cultivable_test
+        
+        - else:
+            Al momento la serra non ha domande da porti.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            -> main
+    }
+            
 
 //Per renderli disponibili la volta successiva
 === empty_tempCultTW

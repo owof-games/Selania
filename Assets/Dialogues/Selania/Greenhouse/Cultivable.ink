@@ -718,18 +718,9 @@
             -> step_zero
         
         + [Voglio rimuoverla, ma solo per ora.]
-            -> tempCultTW_formula ->
+            -> tempCultTW_formula
             
-            {
-                - greenhouse_backupCultivable != ():
-                    ->  cultivable_test
-                
-                - else:
-                    Al momento la serra non ha domande da porti.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-	                -> main
-            }
-            
-            
+    
         + (rimuovi) [Voglio rimuoverla per sempre.]
             -> remove_proposed_cultivable ->
                 ~ greenhouse_chosenCultivable = ()
