@@ -17,24 +17,25 @@
 === kitchen_storylets_dispatcher ===
 {
     //Scena in cui cuciniamo da solx
-    - special_mission_two && not cooking_alone && (not are_two_entities_together(FirstCharacter, PG)) && (not are_two_entities_together(SecondCharacter, PG)):     ->cooking_alone
-    
-    //Scena in cui cuciniamo con Chitarra
-    - are_two_entities_together(FirstCharacter, PG) && not cooking_with_first_char:
-        -> pre_start_cooking_with_first_char
+    - special_mission_two && not cooking_alone && (not are_two_entities_together(FirstCharacter, PG)) && (not are_two_entities_together(SecondCharacter, PG)):
+            ->cooking_alone
     
     //Scena in cui Chitarra sta cucinando da sola
-    - are_two_entities_together(FirstCharacter, PG) && kitchen_firstCharIsCooking:
+    - are_two_entities_together(FirstCharacter, PG) && kitchen_firstCharIsCooking == true:
         -> first_char_cooking_alone   
     
-    //Scena in cui cuciniamo con Riccio
-    - are_two_entities_together(SecondCharacter, PG) && not cooking_with_second_char:
-        -> pre_start_cooking_with_second_char
+    //Scena in cui cuciniamo con Chitarra
+    - are_two_entities_together(FirstCharacter, PG) && not cooking_with_first_char && (kitchen_firstCharIsCooking == false):
+        -> pre_start_cooking_with_first_char
     
     //Scena in cui Riccio sta cucinando da solo
-    - are_two_entities_together(SecondCharacter, PG) && kitchen_secondCharIsCooking:
-        -> second_char_cooking_alone      
-        
+    - are_two_entities_together(SecondCharacter, PG) && kitchen_secondCharIsCooking == true:
+        -> second_char_cooking_alone 
+    
+    //Scena in cui cuciniamo con Riccio
+    - are_two_entities_together(SecondCharacter, PG) && not cooking_with_second_char && (kitchen_secondCharIsCooking == false):
+        -> pre_start_cooking_with_second_char
+    
         
     - else:
         -> main
