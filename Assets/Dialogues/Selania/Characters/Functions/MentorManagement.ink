@@ -13,5 +13,5 @@
     VAR mentor_pauseDuration = 10
 
 //VARIABILI NARRATIVE
-VAR riccioMentoreViciniColpo = false
-VAR riccioMentoreViciniInnaffiatoio = false
+    VAR riccioMentoreViciniColpo = false
+    VAR riccioMentoreViciniInnaffiatoio = false

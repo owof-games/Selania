@@ -26,6 +26,7 @@
 <- backpack_contents
 
 //Personagge
+<- mentor_character
 <- first_character
 <- second_character
 <- third_character

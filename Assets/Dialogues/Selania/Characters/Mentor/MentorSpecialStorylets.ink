@@ -1,5 +1,3 @@
-
-    
 //Storylets di commentario
     === growing_witch_storylet
         ~ temp charNameOne = translator(firstChar_ActualName)
@@ -185,4 +183,4 @@ Mentore sbrocca
     Il codice è {player_purple} - {player_yellow} - {player_blue} - {player_green}- {player_red}; {player_firstStepStatus}; {player_secondStepStatus}; {firstChar_ActualName}; {secondChar_ActualName}.
     E se non te lo sei {player_pronouns has him:segnato|{player_pronouns has her:segnata|segnatə}}, potrai sempre trovarlo uscendo dal gioco.
     Grazie di cuore.
-        -> talk_with_mentor
+        -> helping_mentor

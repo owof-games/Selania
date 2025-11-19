@@ -6,7 +6,7 @@
  
  //Possibili nomi
     LIST fifthChar_possibleStates= Uno, Due, Tre
-    VAR fifthChar_ActualName= Mentore
+    VAR fifthChar_ActualName= Uno
     
 //Per mentore, fifthChar_storyStatus sarà la parte di riscrittura, mentorChar_storyStatus tutta la parte di interazione come Mentore
     VAR fifthChar_storyStatus = story_storyNotStarted
@@ -34,7 +34,6 @@
 //Tengo conto delle interazioni avute per aprire la possibilità di dare un dono
     VAR fifthChar_storyletsForRewritingCount = 0
     VAR fifthChar_specialEvent = false
-
 
 //Variabili per mettere in pausa la conversazione. Plausibilmente per mentore sarà molto alta all'inizio.
     VAR fifthChar_pauseTalking = 0

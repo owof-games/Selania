@@ -90,17 +90,17 @@
                     -> first_character_feedback
                 
                 - else:
-                    -> fifth_character_storylets    
+                    -> personal_mentor_storylets    
             }
         
         - else:
-            -> fifth_character_storylets
+            -> personal_mentor_storylets
     
  }  
     
 
-=== fifth_character_storylets ===
-{debug: passo da fifth_character_storylets}
+=== personal_mentor_storylets ===
+{debug: passo da personal_mentor_storylets}
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -112,22 +112,49 @@
         - not ending_demo && secondChar_storyStatus == story_storyEnded && firstChar_storyStatus == story_storyEnded:
                 -> ending_demo
             
-        // - not third_character_feedback && thirdChar_storyStatus == story_storyEnded:
-        //     -> third_character_feedback        
-    
-        // - not fourth_character_feedback && fourthfourthChar_storyStatusStory == story_storyEnded:
-        //     -> fourth_character_feedback        
-    
-        // - not fifth_character_feedback && fifthChar_storyStatus == story_storyEnded:
-        //     -> fifth_character_feedback        
-        
      
      //Commenti a situazioni, eventi o altro.
         - witch_feedback.first_story_ended_check && not growing_witch_storylet && mentor_pauseTalking == 0:
             -> growing_witch_storylet
             
+        {
+            //Mentore esplode
+            - are_two_entities_together(Mentor, PG) && thirdChar_storyStatus == story_storyEnded and not mentor_rage:
+                -> mentor_rage
+        }
+        
+        {
+            - not knowing_mentor_character.one && mentor_tutorialPauses == false:
+                -> knowing_mentor_character.one
+            - not knowing_mentor_character.two && firstChar_storyStatus == story_storyEnded && mentor_tutorialPauses == false:
+                -> knowing_mentor_character.two
+            - not knowing_mentor_character.three && firstChar_storyStatus == story_storyEnded && mentor_tutorialPauses == false:
+                -> knowing_mentor_character.three
+            - not knowing_mentor_character.four && secondChar_storyStatus == story_storyEnded && mentor_tutorialPauses == false:
+                -> knowing_mentor_character.four
+            - not knowing_mentor_character.five && secondChar_storyStatus == story_storyEnded && mentor_tutorialPauses == false:
+                -> knowing_mentor_character.five
+            //Forse solo una di queste, perché con la terza storia avremo degli storylets ad hoc.    
+            - not knowing_mentor_character.six && thirdChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
+                -> knowing_mentor_character.six
+            //Questo è lo storylet dove Mentore sbrocca, e che poi trasformo in quinta personaggia    
+            - not knowing_mentor_character.seven && thirdChar_storyStatus == story_storyEnded && mentor_tutorialPauses == false:
+                -> knowing_mentor_character.seven
+            - not knowing_mentor_character.eight && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
+                -> knowing_mentor_character.eight
+            - not knowing_mentor_character.nine && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
+                -> knowing_mentor_character.nine
+            - not knowing_mentor_character.ten && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
+                -> knowing_mentor_character.ten
+            - not knowing_mentor_character.eleven && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
+                -> knowing_mentor_character.eleven
+            - not knowing_mentor_character.twelve && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
+                -> knowing_mentor_character.twelve
+
+        }    
+            
         - else:
-            -> knowing_fifth_character
+            -> helping_mentor
     
     }
 

@@ -126,7 +126,8 @@
         ~ mentor_tutorialPauses = true
             -> main
    
-   === third_character_feedback
+
+=== third_character_feedback
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
