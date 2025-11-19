@@ -58,9 +58,14 @@
         //Sulla funzione del nido    
         - player_accessiblePlaces has Nest && not about_nest && mentor_tutorialPauses == false:
             -> about_nest    
-            
+        
+        //Invito a leggere la posta nuova    
         - trainStopContents has FirstCharacterNotes && not first_character_notes && not first_char_new_mail:
             -> first_char_new_mail
+        
+        //Info sulla non obbligatorietà dei minigames
+        - player_accessiblePlaces has Library or player_accessiblePlaces has Kitchen and not about_not_mandatory_work:
+            -> about_not_mandatory_work
             
         - else:
             -> mentor_and_first_char_storylets    

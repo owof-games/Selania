@@ -43,6 +43,8 @@
     INCLUDE Characters\Mentor\HelpfulMentor.ink
     INCLUDE Characters\Mentor\StoryletsManagement.ink
     INCLUDE Characters\Mentor\StoryletsContent.ink
+    INCLUDE Characters\Mentor\CharsFeedbacks.ink
+    INCLUDE Characters\Mentor\MentorSpecialStorylets.ink
     
     INCLUDE Characters\Stories\FirstCharacter.ink
     INCLUDE Characters\Stories\SecondCharacter.ink
@@ -127,6 +129,9 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
+
+
+
 
 
 
