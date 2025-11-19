@@ -431,15 +431,7 @@
 === bacca_della_addolorata
 
     = TW
-        //{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
-        //Te la senti di farla crescere, o preferisci cambiare?
-        //        + [Voglio andare avanti.]
-        //    -> step_zero
-        //+ [Voglio rimuoverla, ma solo per ora.]
-        //    -> tempCultTW_formula -> cultivable_test
-        //+ [Voglio rimuoverla, per sempre.]
-        //    -> remove_proposed_cultivable -> cultivable_test
-        // -
+
         -> step_zero
         
     = step_zero
@@ -487,15 +479,7 @@
 === barba_dell_inciampo
 
     = TW
-        ////{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
-        //Te la senti di farla crescere, o preferisci cambiare?
-        //        + [Voglio andare avanti.]
-        //    -> step_zero
-        //+ [Voglio rimuoverla, ma solo per ora.]
-        //    -> tempCultTW_formula -> cultivable_test
-        //+ [Voglio rimuoverla, per sempre.]
-        //    -> remove_proposed_cultivable -> cultivable_test
-        //-
+
         -> step_zero
     
     = step_zero
@@ -544,15 +528,7 @@
 === bastone_dell_ozioso
 
     = TW
-        ////{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
-        //Te la senti di farla crescere, o preferisci cambiare?
-        //        + [Voglio andare avanti.]
-        //    -> step_zero
-        //+ [Voglio rimuoverla, ma solo per ora.]
-        //    -> tempCultTW_formula -> cultivable_test
-        //+ [Voglio rimuoverla, per sempre.]
-        //    -> remove_proposed_cultivable -> cultivable_test
-        //-
+
         -> step_zero
     
     = step_zero
@@ -599,15 +575,7 @@
 === brina_dell_impossibile
 
     = TW
-        //{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
-        //Te la senti di farla crescere, o preferisci cambiare?
-        //        + [Voglio andare avanti.]
-        //    -> step_zero
-        //+ [Voglio rimuoverla, ma solo per ora.]
-        //    -> tempCultTW_formula -> cultivable_test
-        //+ [Voglio rimuoverla, per sempre.]
-        //    -> remove_proposed_cultivable -> cultivable_test
-        // -
+
         -> step_zero
         
     = step_zero
@@ -649,15 +617,7 @@
 === canto_delle_compagne
 
     = TW
-        //{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
-        //Te la senti di farla crescere, o preferisci cambiare?
-        //+ [Voglio andare avanti.]
-        //    -> step_zero
-        //+ [Voglio rimuoverla, ma solo per ora.]
-        //    -> tempCultTW_formula -> cultivable_test
-        //+ [Voglio rimuoverla, per sempre.]
-        //    -> remove_proposed_cultivable -> cultivable_test
-        //-
+
         -> step_zero
 
         
@@ -707,15 +667,7 @@
 === cardo_aspinato
 
     = TW
-        ////{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
-        //Te la senti di farla crescere, o preferisci cambiare?
-        //        + [Voglio andare avanti.]
-        //    -> step_zero
-        //+ [Voglio rimuoverla, ma solo per ora.]
-        //    -> tempCultTW_formula -> cultivable_test
-        //+ [Voglio rimuoverla, per sempre.]
-        //    -> remove_proposed_cultivable -> cultivable_test
-        //-
+
         -> step_zero
     
     = step_zero
@@ -764,15 +716,32 @@
         {player_name} vuole farla crescere, o preferisce cambiare?
         + [Voglio andare avanti.]
             -> step_zero
+        
         + [Voglio rimuoverla, ma solo per ora.]
-            -> tempCultTW_formula -> cultivable_test
+            -> tempCultTW_formula ->
+            
+            {
+                - greenhouse_backupCultivable != ():
+                    ->  cultivable_test
+                
+                - else:
+                    Al momento la serra non ha domande da porti.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+	                -> main
+            }
+            
+            
         + (rimuovi) [Voglio rimuoverla per sempre.]
             -> remove_proposed_cultivable ->
                 ~ greenhouse_chosenCultivable = ()
-            -> cultivable_test
-        -
-        -> step_zero
-
+            {
+                - greenhouse_backupCultivable != ():
+                    ->  cultivable_test
+                
+                - else:
+                    Al momento la serra non ha domande da porti.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+	            -> main
+            }
+            
     
         = step_zero
             -> remove_proposed_cultivable ->  
@@ -818,15 +787,6 @@
 === erba_liccia
 
     = TW
-        ////{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
-        //Te la senti di farla crescere, o preferisci cambiare?
-        //        + [Voglio andare avanti.]
-        //    -> step_zero
-        //+ [Voglio rimuoverla, ma solo per ora.]
-        //    -> tempCultTW_formula -> cultivable_test
-        //+ [Voglio rimuoverla, per sempre.]
-        //    -> remove_proposed_cultivable -> cultivable_test
-        //-
         -> step_zero
     
     = step_zero
@@ -871,15 +831,6 @@
 === falsa_palude
 
     = TW
-        ////{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
-        //Te la senti di farla crescere, o preferisci cambiare?
-        //        + [Voglio andare avanti.]
-        //    -> step_zero
-        //+ [Voglio rimuoverla, ma solo per ora.]
-        //    -> tempCultTW_formula -> cultivable_test
-        //+ [Voglio rimuoverla, per sempre.]
-        //    -> remove_proposed_cultivable -> cultivable_test
-        //-
         -> step_zero
     
     = step_zero
@@ -926,15 +877,6 @@
 === lana_notturna
 
     = TW
-        ////{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
-        //Te la senti di farla crescere, o preferisci cambiare?
-        //        + [Voglio andare avanti.]
-        //    -> step_zero
-        //+ [Voglio rimuoverla, ma solo per ora.]
-        //    -> tempCultTW_formula -> cultivable_test
-        //+ [Voglio rimuoverla, per sempre.]
-        //    -> remove_proposed_cultivable -> cultivable_test
-        //-
         -> step_zero
     
     = step_zero
@@ -979,15 +921,6 @@
 === lichene_degli_abissi
     
     = TW
-        //{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
-        //Te la senti di farla crescere, o preferisci cambiare?
-        //+ [Voglio andare avanti.]
-        //    -> step_zero
-        //+ [Voglio rimuoverla, ma solo per ora.]
-        //    -> tempCultTW_formula -> cultivable_test
-        //+ [Voglio rimuoverla, per sempre.]
-        //    -> remove_proposed_cultivable -> cultivable_test
-        //-
         -> step_zero
         
     = step_zero
@@ -1032,17 +965,6 @@
 === non_ti_scordar_di_te
 
     = TW
-        //Attenzione: questa pianta parla di lutto e della sua elaborazione.
-        //Se la sente {player_name} di farla crescere, o preferisce cercare qualcosa di diverso?
-        //+ [Me la sento, iniziamo.]
-        //    -> step_zero
-        //+ [Vorrei evitarla ora, ma riproponimela in futuro.]
-        //    -> tempCultTW_formula -> cultivable_test
-        //+ [Non propormi mai più questa pianta.]
-        //    -> remove_proposed_cultivable ->
-        //    ~ greenhouse_chosenCultivable = ()
-        //    -> cultivable_test
-        //-
             -> step_zero
         
     = step_zero
@@ -1087,15 +1009,6 @@
 === olobino
 
     = TW
-        ////{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
-        //Te la senti di farla crescere, o preferisci cambiare?
-        //        + [Voglio andare avanti.]
-        //    -> step_zero
-        //+ [Voglio rimuoverla, ma solo per ora.]
-        //    -> tempCultTW_formula -> cultivable_test
-        //+ [Voglio rimuoverla, per sempre.]
-        //    -> remove_proposed_cultivable -> cultivable_test
-        //-
         -> step_zero
     
     = step_zero
@@ -1145,15 +1058,6 @@
 === la_spazzata
 
     = TW
-        //{greenhouse_chosenCultivable} affronta questo tema delicato: XYZ.
-        //Te la senti di farla crescere, o preferisci cambiare?
-        //+ [Voglio andare avanti.]
-        //    -> step_zero
-        //+ [Voglio rimuoverla, ma solo per ora.]
-        //    -> tempCultTW_formula -> cultivable_test
-        //+ [Voglio rimuoverla, per sempre.]
-        //    -> remove_proposed_cultivable -> cultivable_test
-        //-
         -> step_zero
 
         
