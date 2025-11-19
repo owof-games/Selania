@@ -46,7 +46,6 @@
     Chitarra ci apre la cucina.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     Ricordati di invitare una persona, se vuoi cucinarci assieme!
         ~ firstChar_pauseTalking = firstChar_pauseDuration
-        ~ firstChar_justTalked = true
         -> opening_places ->
         -> main
         
@@ -69,5 +68,4 @@ Qui Chitarra ci dice che ha letto <b>Il cancello</b> e ci chiede cosa ne pensiam
             -> color_variation_management(FirstCharacter, greenC)->
         -    
         ~ firstChar_pauseTalking = firstChar_pauseDuration
-        ~ firstChar_justTalked = true
 -> main        
