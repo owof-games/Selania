@@ -58,6 +58,8 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
             //Valuto lo stato della relazione 
                 -> firstAffinityCalc ->
+            
+            
 
             //Vado a svuotare i contatori di colore, così son tranquilla.
                 -> storage_colors(FirstCharacter) ->

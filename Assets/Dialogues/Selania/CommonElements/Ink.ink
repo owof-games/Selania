@@ -65,24 +65,18 @@
     {
         - InkLevel == firstChar_InkLevel:
             ~ Ink = firstChar_InkLevel
-            //Mi salvo il livello massimo di inchiostro raggiunto, visto che poi firstChar_InkLevel diminuirà di uso in uso.
-            ~ firstChar_maximum_inkLevel = firstChar_InkLevel
-        
+
         - InkLevel == secondChar_InkLevel:
             ~ Ink = secondChar_InkLevel
-            ~ secondChar_maximum_inkLevel = secondChar_InkLevel
-        
+
         - InkLevel == thirdChar_InkLevel:
             ~ Ink = thirdChar_InkLevel
-            ~ thirdChar_maximum_inkLevel = thirdChar_InkLevel
             
         - InkLevel == fourthChar_InkLevel:
             ~ Ink = fourthChar_InkLevel
-            ~ fourthChar_maximum_inkLevel = fourthChar_InkLevel
         
         - InkLevel == fifthChar_InkLevel:
             ~ Ink = fifthChar_InkLevel 
-            ~ fifthChar_maximum_inkLevel = fifthChar_InkLevel
             
     }
 
@@ -118,6 +112,28 @@
             <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     }
 
+//Formula chiamata prima dello statement, per tenere conto del rapporto effettivo.
+=== function maxInkLevelUpdater(InkLevel)
+{debug: passo da maxInkLevelUpdater.}
+
+    {
+        - InkLevel == firstChar_InkLevel:
+            ~ firstChar_maximum_inkLevel = firstChar_InkLevel
+        
+        - InkLevel == secondChar_InkLevel:
+            ~ secondChar_maximum_inkLevel = secondChar_InkLevel
+        
+        - InkLevel == thirdChar_InkLevel:
+            ~ thirdChar_maximum_inkLevel = thirdChar_InkLevel
+            
+        - InkLevel == fourthChar_InkLevel:
+            ~ fourthChar_maximum_inkLevel = fourthChar_InkLevel
+        
+        - InkLevel == fifthChar_InkLevel:
+            ~ fifthChar_maximum_inkLevel = fifthChar_InkLevel
+            
+    }
+ 
 
 //Funzione che chiamo dopo il dono, per dire quanto inchiostro ho guadagnato.
 === function inkTranslator(InkLevel)
