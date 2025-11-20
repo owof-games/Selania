@@ -21,8 +21,6 @@
     VAR growthNonTiScordarDiTe = notStarted
     VAR growthOlobino = notStarted
     VAR growthLaSpazzata = notStarted
-
-
     
 //LISTA PER FAR AVANZARE GLI ELEMENTI TESTUALI
     VAR narrativeGrowthBaccaDellaAddolorata = notStarted
@@ -39,6 +37,14 @@
     VAR narrativeGrowthNonTiScordarDiTe = notStarted
     VAR narrativeGrowthOlobino = notStarted
     VAR narrativeGrowthLaSpazzata = notStarted
+
+//GESTIONE DEL TW TEMPORANEO
+    VAR greenhouse_relationshipCrops_tempTriggerWarning = ()
+    VAR greenhouse_shiftCrops_tempTriggerWarning = ()
+    VAR greenhouse_understandingCrops_tempTriggerWarning = ()
+    VAR greenhouse_selfdeterminationCrops_tempTriggerWarning = ()
+    VAR greenhouse_wonderCrops_tempTriggerWarning = ()
+    VAR greenhouse_imaginationCrops_tempTriggerWarning = ()
 
 //Variabili per la gestione della serra
     LIST greenhouse_cropsType = relationship, shift, understanding, selfdetermination, wonder, imagination
@@ -1361,8 +1367,43 @@ QUESTIONS
 === tempCultTW_formula
 {debug_cultivable: Passo dalla funzione tempCultTW_formula. Il coltivabile selezionato è {greenhouse_chosenCultivable} e prima dell'operazione la lista dei coltivabili include {greenhouse_backupCultivable}.}
 
-	~ greenhouse_backupCultivable -= greenhouse_chosenCultivable
-	~ greenhouse_tempCultTriggerWarning += greenhouse_chosenCultivable
+	
+	{
+        - greenhouse_backupCultivable has greenhouse_chosenCultivable:
+            ~ greenhouse_backupCultivable -= greenhouse_chosenCultivable
+            ~ greenhouse_tempCultTriggerWarning += greenhouse_chosenCultivable
+    }
+    {
+        - greenhouse_relationshipCrops has greenhouse_chosenCultivable:
+            ~ greenhouse_relationshipCrops -= greenhouse_chosenCultivable
+            ~ greenhouse_relationshipCrops_tempTriggerWarning += greenhouse_chosenCultivable
+    }
+    {
+        - greenhouse_shiftCrops has greenhouse_chosenCultivable:
+            ~ greenhouse_shiftCrops -= greenhouse_chosenCultivable 
+            ~ greenhouse_shiftCrops_tempTriggerWarning += greenhouse_chosenCultivable
+    }
+    {
+        - greenhouse_understandingCrops has greenhouse_chosenCultivable:
+            ~ greenhouse_understandingCrops -= greenhouse_chosenCultivable 
+            ~ greenhouse_understandingCrops_tempTriggerWarning += greenhouse_chosenCultivable
+    }
+    {
+        - greenhouse_selfdeterminationCrops has greenhouse_chosenCultivable:
+            ~ greenhouse_selfdeterminationCrops -= greenhouse_chosenCultivable
+            ~ greenhouse_selfdeterminationCrops_tempTriggerWarning += greenhouse_chosenCultivable
+    }
+    {
+        - greenhouse_wonderCrops has greenhouse_chosenCultivable:
+            ~ greenhouse_wonderCrops -= greenhouse_chosenCultivable
+            ~ greenhouse_wonderCrops_tempTriggerWarning += greenhouse_chosenCultivable
+    }
+    {
+        - greenhouse_imaginationCrops has greenhouse_chosenCultivable:
+            ~ greenhouse_imaginationCrops -= greenhouse_chosenCultivable
+            ~ greenhouse_imaginationCrops_tempTriggerWarning += greenhouse_chosenCultivable
+    }
+
     ~ greenhouse_chosenCultivable = ()
 	
 {debug_cultivable: Dopo l'operazione la lista dei coltivabili include {greenhouse_backupCultivable}.}
@@ -1381,8 +1422,40 @@ QUESTIONS
 === empty_tempCultTW
 {debug_cultivable: Passo dalla funzione empty_tempCultTW. Prima dell'operazione la lista dei coltivabili include {greenhouse_backupCultivable}, mentre dei TW temporanei include {greenhouse_tempCultTriggerWarning}.}
 
-	~ greenhouse_backupCultivable +=  greenhouse_tempCultTriggerWarning
-	~  greenhouse_tempCultTriggerWarning = ()
+
+    {
+        - greenhouse_relationshipCrops_tempTriggerWarning has greenhouse_tempCultTriggerWarning:
+            ~ greenhouse_relationshipCrops += greenhouse_tempCultTriggerWarning
+            ~ greenhouse_relationshipCrops_tempTriggerWarning = ()
+    }
+    {
+        - greenhouse_shiftCrops_tempTriggerWarning has greenhouse_tempCultTriggerWarning:
+            ~ greenhouse_shiftCrops += greenhouse_tempCultTriggerWarning 
+            ~ greenhouse_shiftCrops_tempTriggerWarning = ()
+    }
+    {
+        - greenhouse_understandingCrops_tempTriggerWarning has greenhouse_tempCultTriggerWarning:
+            ~ greenhouse_understandingCrops += greenhouse_tempCultTriggerWarning 
+            ~ greenhouse_understandingCrops_tempTriggerWarning = ()
+    }
+    {
+        - greenhouse_selfdeterminationCrops_tempTriggerWarning has greenhouse_tempCultTriggerWarning:
+            ~ greenhouse_selfdeterminationCrops += greenhouse_tempCultTriggerWarning
+            ~ greenhouse_selfdeterminationCrops_tempTriggerWarning = ()
+    }
+    {
+        - greenhouse_wonderCrops_tempTriggerWarning has greenhouse_tempCultTriggerWarning:
+            ~ greenhouse_wonderCrops += greenhouse_tempCultTriggerWarning
+            ~ greenhouse_wonderCrops_tempTriggerWarning = ()
+    }
+    {
+        - greenhouse_imaginationCrops_tempTriggerWarning has greenhouse_tempCultTriggerWarning:
+            ~ greenhouse_imaginationCrops += greenhouse_tempCultTriggerWarning
+            ~ greenhouse_imaginationCrops_tempTriggerWarning = ()
+    }
+    
+    ~ greenhouse_backupCultivable += greenhouse_tempCultTriggerWarning
+    ~ greenhouse_tempCultTriggerWarning = ()
 	
 {debug_cultivable: Dopo l'operazione la lista dei coltivabili include {greenhouse_backupCultivable}, mentre dei TW temporanei include {greenhouse_tempCultTriggerWarning}.}	
 ->->
