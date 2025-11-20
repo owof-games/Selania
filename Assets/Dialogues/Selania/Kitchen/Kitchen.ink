@@ -18,7 +18,7 @@
 {
     //Scena in cui cuciniamo da solx
     - special_mission_two && not cooking_alone && (not are_two_entities_together(FirstCharacter, PG)) && (not are_two_entities_together(SecondCharacter, PG)):
-            ->cooking_alone
+        ->cooking_alone
     
     //Scena in cui Chitarra sta cucinando da sola
     - are_two_entities_together(FirstCharacter, PG) && kitchen_firstCharIsCooking == true:

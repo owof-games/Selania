@@ -1,4 +1,4 @@
-//~ SEED_RANDOM(246)
+~ SEED_RANDOM(246)
 
 //Per abilitare o meno i debug
     VAR debug = false

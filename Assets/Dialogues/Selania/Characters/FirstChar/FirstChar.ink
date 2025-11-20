@@ -169,6 +169,7 @@
                 - are_two_entities_together(FirstCharacter, PG) && library_readStories has Salvo && not a_story_of_transformation:
                     -> a_story_of_transformation
                     
+                    
         }
         
      

@@ -569,7 +569,7 @@ Funzione di traduzione da variabile a stringa
                     //Presupponiamo che un po' ma non troppo le piaccia l'ingrediente universale
                     - firstChar_goodGifts has object or object == universalIngredient:
                         {~ {translator(firstChar_ActualName)} si passa il dono tra le mani.|{translator(firstChar_ActualName)} ti sorride.|{translator(firstChar_ActualName)} ti ringrazia.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-                                ~ firstChar_InkLevel ++
+                            ~ firstChar_InkLevel ++
                     
                     - else:
                         {~ {translator(firstChar_ActualName)} ignora il dono.|{translator(firstChar_ActualName)} ti ringrazia, e si distrae rapidamente.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}

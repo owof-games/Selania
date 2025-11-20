@@ -515,10 +515,6 @@ E poi ci saluta e se ne va allo stagno.
 {debug: passo per first_char_cooking_alone.}
 -> cooking_animations_on ->
 Chitarra sta cucinando da sola e ci chiede di lasciarla in pace fino a quando non ha finito.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-
-
-
-
 -> main
 
 
