@@ -163,17 +163,17 @@
                } 
                
         //Apertura nido
-        - are_two_entities_together(SecondCharacter, PG) && (first_char_main_storylets.six or second_char_main_storylets.six) && kitchenContents hasnt PG && not open_nest:
-                {
-                   - libraryContents has PG:
-                        -> open_nest
+        // - are_two_entities_together(SecondCharacter, PG) && (first_char_main_storylets.six or second_char_main_storylets.six) && kitchenContents hasnt PG && not open_nest:
+        //         {
+        //            - libraryContents has PG:
+        //                 -> open_nest
                     
-                    - else:
-                        Ehi {player_name}! Vediamoci in biblioteca. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                            ~ move_entity(SecondCharacter, Library)
-                            ~ movements_changeLocationTimer = 0
-                                -> main    
-              }
+        //             - else:
+        //                 Ehi {player_name}! Vediamoci in biblioteca. Ho una cosa da mostrarti!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        //                     ~ move_entity(SecondCharacter, Library)
+        //                     ~ movements_changeLocationTimer = 0
+        //                         -> main    
+        //       }
                     
         //Cucina
             //Riccio sta cucinando ed entriamo in cucina
