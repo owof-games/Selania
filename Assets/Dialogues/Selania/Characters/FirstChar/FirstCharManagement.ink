@@ -101,15 +101,14 @@
                 {debug: ho cliccato rewriting e quindi faccio gli ultimi passaggi e attivo il feedback.} 
                 //"Trasformo" la relazione in inchiostro
                     ~ fromRelationshipToInk(firstChar_relationshipStatus)
-                
-                //Salvo il massimo di inchiostro raggiunto con la personaggia
-                    ~ maxInkLevelUpdater(firstChar_InkLevel)
-                
                 // Mando ai feedback
                     -> firstAffinityFeedback ->
                 
                 //Arriva il commento della strega
                     ~ inkLevel(firstChar_InkLevel)
+                
+                //Salvo il massimo di inchiostro raggiunto con la personaggia
+                    ~ maxInkLevelUpdater(firstChar_InkLevel)    
                         ->-> 
             
             // altrimenti, mando avanti
