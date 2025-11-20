@@ -28,11 +28,11 @@
                     
                     - actual_speaker == FirstCharacter:
                         ~ actual_speaker = ()
-                         -> talk_with_first_character.top
+                        -> talk_with_first_character
                          
                     - actual_speaker == SecondCharacter:
                         ~ actual_speaker = ()
-                         -> talk_with_second_character.top  
+                         -> talk_with_second_character
                          
                     - else:
                         ->->

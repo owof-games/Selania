@@ -50,15 +50,20 @@
     INCLUDE Characters\Witch\WitchSpecialStorylets.ink
     
     
+    INCLUDE Characters\FirstChar\FirstCharDialogueManager.ink
     INCLUDE Characters\FirstChar\FirstChar.ink
     INCLUDE Characters\FirstChar\FirstCharManagement.ink
+    INCLUDE Characters\FirstChar\FirstCharStoryletsManagement.ink
     INCLUDE Characters\FirstChar\FirstCharStorylets.ink
     INCLUDE Characters\FirstChar\FirstCharSpecialStorylets.ink
     INCLUDE Characters\FirstChar\FirstCharRewriting.ink
     
 
+
+    INCLUDE Characters\SecondChar\SecondCharDialogueManager.ink
     INCLUDE Characters\SecondChar\SecondChar.ink
     INCLUDE Characters\SecondChar\SecondCharManagement.ink
+    INCLUDE Characters\SecondChar\SecondCharStoryletsManagement.ink
     INCLUDE Characters\SecondChar\SecondCharStorylets.ink
     INCLUDE Characters\SecondChar\SecondCharSpecialStorylets.ink
     INCLUDE Characters\SecondChar\SecondCharRewriting.ink
@@ -149,6 +154,12 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
+
+
+
+
+
+
 
 
 
