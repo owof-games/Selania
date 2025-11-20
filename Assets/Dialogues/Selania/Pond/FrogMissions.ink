@@ -8,6 +8,7 @@
     Nel tuo lavoro, la conoscenza è potere.
     Poi torna da me, e ti darò quello che ti serve.
         ~ frog_currentMission += missionOne
+        ~ frog_availableCommonMissions -= missionOne
     @animation:RewriterBook
     -> main
     
@@ -24,6 +25,7 @@
     La serra cresce grazie alle cose che puoi elaborare su di te.
     Per cui ti chiedo di tornare da me quando nella serra ci saranno almeno tre piante fiorite.
         ~ frog_currentMission += missionTwo
+        frog_availableCommonMissions -= missionTwo
     @animation:RewriterBook
     -> main
     
@@ -40,6 +42,7 @@
     Perché non provi a chiederle qualche consiglio su come star meglio?
     Poi torna da me, e ti darò quello che ti serve.
         ~ frog_currentMission += missionThree
+        frog_availableCommonMissions -= missionThree
     @animation:RewriterBook    
     -> main
 
@@ -56,6 +59,7 @@
     E conoscendola, credo le farebbe piacere se le parlassi delle cose strane che hai trovato in questo luogo.
     Poi torna da me, e ti darò quello che ti serve.
         ~ frog_currentMission += missionFour
+        frog_availableCommonMissions -= missionFour
     @animation:RewriterBook
     -> main
 
@@ -72,6 +76,7 @@
     Per questo ti offro un suggerimento: prova a vedere cosa succede se {charNameOne} e {charNameTwo} sono assieme.
     E poi torna da me.
         ~ frog_currentMission += missionFive
+        frog_availableCommonMissions -= missionFive
     @animation:RewriterBook    
     -> main
 
@@ -88,6 +93,7 @@
      Perché non provia a parlarci?
      Poi torna da me, e ti darò quello che ti serve.
          ~ frog_currentMission += missionSix
+         frog_availableCommonMissions -= missionSix
     @animation:RewriterBook     
     -> main
 
@@ -103,6 +109,7 @@
     E il loro contenuto si aggiorna man mano che la loro vita continua.
     Poi torna da me, e ti darò quello che ti serve.
         ~ frog_currentMission += missionSeven
+        frog_availableCommonMissions -= missionSeven
     @animation:RewriterBook    
     -> main
 
@@ -115,6 +122,7 @@
     Perché non vai a prenderti un po' di tempo e leggerti qualcosa?
     Poi torna da me, e ti darò quello che ti serve.
         ~ frog_currentMission += missionEight
+        frog_availableCommonMissions -= missionEight
     @animation:RewriterBook    
     -> main
 
@@ -127,6 +135,7 @@
     Perché non provi a parlare con l'albero della foresta? Sono sicuro che potrebbe offrirti un aiuto inaspettato.
     Poi torna da me, e ti darò quello che ti serve.
         ~ frog_currentMission += missionNine
+        frog_availableCommonMissions -= missionNine
     @animation:RewriterBook    
     -> main
     
@@ -139,6 +148,7 @@
     Perché non vedi cosa accade? #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Poi torna da me, e ti darò quello che ti serve.
         ~ frog_currentMission += specialMissionOne
+        ~ frog_availableSpecialMissions -= specialMissionOne
         ~ move_entity(SecondCharacter, Forest)
         ~ move_entity(Mentor, Forest)
         ~ movements_changeLocationTimer = 0
@@ -154,6 +164,7 @@
     Mi serve che ti prepari qualcosa in cucina senza nessuna persona attorno. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     Poi torna da me, e ti darò quello che ti serve.
         ~ frog_currentMission += specialMissionTwo
+        ~ frog_availableSpecialMissions -= specialMissionTwo
     @animation:RewriterBook    
     -> main
     
@@ -171,6 +182,7 @@
     missione speciale tre: le special creano storylets ad hoc anche con le altre personagge, magari con un blocco di scelte#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     @animation:RewriterBook    
         ~ frog_currentMission += specialMissionThree
+        ~ frog_availableSpecialMissions -= specialMissionThree
     -> main    
  
 === special_mission_four
@@ -183,6 +195,7 @@
     missione speciale quattro: le special creano storylets ad hoc anche con le altre personagge, magari con un blocco di scelte#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
     @animation:RewriterBook    
         ~ frog_currentMission += specialMissionFour
+        ~ frog_availableSpecialMissions -= specialMissionFour
     -> main   
     
 

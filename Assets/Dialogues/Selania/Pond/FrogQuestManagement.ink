@@ -209,7 +209,6 @@
                     Hai letto le pagine del libro, grande {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
                         ~ frog_currentMission = ()
-                        ~ frog_availableCommonMissions -= missionOne
                             -> frog_about_who_questions
                 
                 - else:
@@ -224,7 +223,6 @@
                 - LIST_COUNT(greenhouse_backupCultivable) < 12:
                     La serra sta crescendo grazie a te, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ frog_availableCommonMissions -= missionTwo
                         ~ frog_currentMission = ()
                             -> frog_about_who_questions
                 - else:
@@ -239,7 +237,6 @@
                     Grazie per aver parlato con Mentore, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Son sicuro che si sente più utile ora.
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ frog_availableCommonMissions -= missionThree
                         ~ frog_currentMission = ()
                             -> frog_about_who_questions
                 - else:
@@ -253,7 +250,6 @@
                 - little_storylets:
                     Grazie per aver condiviso le cose che hai scoperto con Mentore, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ frog_availableCommonMissions -= missionFour
                         ~ frog_currentMission = ()
                             -> frog_about_who_questions
                 - else:
@@ -270,7 +266,6 @@
                     Questa cosa accadrà altre volte, per cui: se vedi due personagge nello stesso luogo, prova a vedere se hanno qualcosa da dirsi.
                     
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ frog_availableCommonMissions -= missionFive
                         ~ frog_currentMission = ()
                             -> frog_about_who_questions
                 - else:
@@ -286,7 +281,6 @@
                     E non sta a me chiederti cosa vi siete dett3, ma spero tu possa aver trovato un'alleata in questo percorso.
                     
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ frog_availableCommonMissions -= missionSix
                         ~ frog_currentMission = ()
                             -> frog_about_who_questions
                 - else:
@@ -302,7 +296,6 @@
                     Ricordati di darci un'occhiata ogni tanto, così da sapere come avanza la storia delle persone che hai aiutato.
                     
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ frog_availableCommonMissions -= missionSeven
                         ~ frog_currentMission = ()
                             -> frog_about_who_questions
                 - else:
@@ -320,7 +313,6 @@
                     E a volte, se avete avuto una lettura in comune, potresti scoprire qualcosa di più su di loro.
                     
                     Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ frog_availableCommonMissions -= missionEight
                         ~ frog_currentMission = ()
                             -> frog_about_who_questions
                 - else:
@@ -335,7 +327,6 @@
                     Hai parlato con l'albero della foresta, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Sono sicuro che troverai in lei una grande alleata in questo lavoro.
                     Ma nel mentre, parliamo del tuo dono.
-                        ~ frog_availableCommonMissions -= missionNine
                         ~ frog_currentMission = ()
                             -> frog_about_who_questions
                 - else:
@@ -368,7 +359,6 @@
                 L'armonia è importante.
                 Per questo ti dono una nota, che troverai al Nido.
                     ~ move_entity(purpleShell, Nest)
-                    ~ frog_availableSpecialMissions -= specialMissionOne
                     ~ frog_currentMission = ()
                     ~ frog_aboutGiftRequest = ()
                     //Metto in pausa le missioni speciali
@@ -390,7 +380,6 @@
                     @animation:Backpack
                     
                     ~ backpack_findedGifts += universalIngredient
-                    ~ frog_availableSpecialMissions -= specialMissionTwo
                     ~ frog_currentMission = ()
                     ~ frog_aboutGiftRequest = ()
                     //Metto in pausa le missioni speciali
