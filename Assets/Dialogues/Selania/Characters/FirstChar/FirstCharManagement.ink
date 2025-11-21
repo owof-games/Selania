@@ -232,4 +232,15 @@
                             ->->
             }
         }
-        ->->    
+        ->->
+        
+//Formula per la chiusura di uno storylet
+=== first_char_closing_storylet
+        //Questo evita che venga proposto un altro storylet fino a quando la pausa non è finita
+        ~ firstChar_pauseTalking = firstChar_pauseDuration
+        //Questo è per la gestione delle domande
+        ~ firstChar_justTalked = true
+        //L'animazione per via dell'informazione nuova
+        @animation:RewriterBook
+
+->->
