@@ -122,11 +122,10 @@
                 - are_two_entities_together(FirstCharacter, PG):Ho bisogno di bere. Troppe energie. Troppe.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
             }   
         A dopo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                ~ secondChar_pauseTalking = secondChar_pauseDuration
-                ~ move_entity(SecondRecap, BookPlace)
+                
+        ~ move_entity(SecondRecap, BookPlace)
                          
-        @animation:RewriterBook
-        ~ secondChar_justTalked = true
+        -> second_char_closing_storylet ->
         -> options_second_character
    
     = two
@@ -247,10 +246,8 @@
         {
             - are_two_entities_together(FirstCharacter, PG): Mi ero dimenticata quanto fosse schifoso essere bambini.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
         }
-            ~ secondChar_pauseTalking = secondChar_pauseDuration
             
-            @animation:RewriterBook
-            ~ secondChar_justTalked = true
+            -> second_char_closing_storylet ->
             -> options_second_character
 
     = three
@@ -335,13 +332,8 @@
                          
             Valla a vedere, ora!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             Che poi se scappa pensi che me lo sono inventato.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-                    ~ secondChar_pauseTalking = secondChar_pauseDuration
-                    
-                @animation:RewriterBook
-                    
-        ~ secondChar_justTalked = true
-    
-    
+        
+        -> second_char_closing_storylet ->
         -> options_second_character
             
 
@@ -523,11 +515,9 @@
                 - are_two_entities_together(Mentor, PG): Commento mentore. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
 }
             A dopo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                 ~ secondChar_pauseTalking = secondChar_pauseDuration
-                 
-                @animation:RewriterBook
-                
-        ~ secondChar_justTalked = true
+        
+        
+        -> second_char_closing_storylet ->
         -> options_second_character
 
     = five
@@ -634,12 +624,9 @@
         A parte {mentorName}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
         Ti prometto che non dirò più bugie.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Ora però lasciami solo.
-                ~ secondChar_pauseTalking = secondChar_pauseDuration
-                
-            @animation:RewriterBook
-              ~ secondChar_justTalked = true
-              
-        -> options_second_character
+        
+            -> second_char_closing_storylet ->
+            -> options_second_character
     
 
     = six
@@ -766,12 +753,8 @@
             //Se fiducia alta.
             Magari l'ha preso {mentorName}, così poi ti arrabbiavi con me.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
             Che quella non mi vuole mica a me qui.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-                    ~ move_entity(WateringCan, Greenhouse)
-                    ~ secondChar_pauseTalking = secondChar_pauseDuration
                     
-                @animation:RewriterBook
-                
-        ~ secondChar_justTalked = true
+        -> second_char_closing_storylet ->            
         -> options_second_character
     
 
@@ -868,11 +851,8 @@
             -
             Da quando sono qui però non ho riscritto nulla.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             Però ho provato a leccare la rana, ma si è allontanata.
-                ~ secondChar_pauseTalking = secondChar_pauseDuration
                 
-                @animation:RewriterBook
-                
-        ~ secondChar_justTalked = true
+        -> second_char_closing_storylet ->        
         -> options_second_character     
             
             
@@ -980,12 +960,9 @@
             -
             Forse nello stagno posso imparare a nuotare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             La rana sembra abbastanza forte da salvarmi nel caso.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                ~ book_BGVariations ++
-                ~ secondChar_pauseTalking = secondChar_pauseDuration
-                
-            @animation:RewriterBook
-            
-        ~ secondChar_justTalked = true
+        
+        ~ book_BGVariations ++
+        -> second_char_closing_storylet ->        
         -> options_second_character 
     
     
@@ -1140,12 +1117,9 @@
             -
         Ho tanto da pensare ora. Però una cosa è sicura.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Mi piacerebbe tanto fare il veterinario.
-             ~ secondChar_pauseTalking = secondChar_pauseDuration
-             
-                @animation:RewriterBook
-                
-        ~ secondChar_justTalked = true
-        -> options_second_character
+        
+            -> second_char_closing_storylet ->
+            -> options_second_character
     
     = ten
     //Obiettivo: si fida di noi, mostriamo il suo rapporto con la violenza. Finale rosso, finale viola (aiutare gli altri).
@@ -1236,11 +1210,8 @@
                 - are_two_entities_together(Mentor, PG): Commento mentore. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
 }
         Ma non è bello nemmeno essere bambini.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-             ~ secondChar_pauseTalking = secondChar_pauseDuration
-                
-                @animation:RewriterBook
-                
-        ~ secondChar_justTalked = true
+        
+        -> second_char_closing_storylet ->
         -> options_second_character 
     
     = eleven
@@ -1336,11 +1307,8 @@
                 - are_two_entities_together(Mentor, PG): Commento mentore. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
 }
         Tocca a me trovare le risposte!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-                ~ secondChar_pauseTalking = secondChar_pauseDuration
-                
-            @animation:RewriterBook
-            
-        ~ secondChar_justTalked = true
+        
+        -> second_char_closing_storylet ->
         -> options_second_character 
     
     = twelve
@@ -1447,9 +1415,6 @@
                     
             } 
             E poi mi verrai a trovare e leggeremo assieme!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
-                    ~ secondChar_pauseTalking = secondChar_pauseDuration
-                    
-                @animation:RewriterBook
-                
-        ~ secondChar_justTalked = true
+        
+        -> second_char_closing_storylet ->
         -> options_second_character   

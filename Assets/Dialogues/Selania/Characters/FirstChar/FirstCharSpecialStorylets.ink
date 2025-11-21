@@ -8,11 +8,13 @@
             - are_two_entities_together(SecondCharacter, PG):Bleah!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         } 
     Comunque ho pensato fosse il caso di dartelo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        
         ~ move_entity(WitchRecap, BookPlace)
         ~ move_entity(miniBook, Bedroom)
         ~ move_entity(nightTable, Bedroom)
         @animation:RewriterBook
         ~ player_somethingStrange ++
+            
             {
                 - forestContents has PG:
                     ~ move_entity(RewriterBook, Forest)
@@ -22,7 +24,7 @@
                     ~ move_entity(RewriterBook, Pond)        
             }
             
--> main
+        -> main
 
 
 === open_the_kitchen
@@ -106,5 +108,6 @@ Qui Chitarra ci dice che ha letto <b>Il cancello</b> e ci chiede cosa ne pensiam
         + [Scelta verde.]
             -> color_variation_management(FirstCharacter, greenC)->
         -    
+        
         ~ firstChar_pauseTalking = firstChar_pauseDuration
--> main        
+        -> main        
