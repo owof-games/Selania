@@ -57,6 +57,7 @@
     INCLUDE Characters\FirstChar\FirstCharStorylets.ink
     INCLUDE Characters\FirstChar\FirstCharSpecialStorylets.ink
     INCLUDE Characters\FirstChar\FirstCharRewriting.ink
+    INCLUDE Characters\FirstChar\FirstCharArchive.ink
     
 
 
@@ -154,71 +155,6 @@
     INCLUDE Library\ThirdStory.ink
     INCLUDE Library\FourthStory.ink
     INCLUDE Library\LibraryManagement.ink
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
