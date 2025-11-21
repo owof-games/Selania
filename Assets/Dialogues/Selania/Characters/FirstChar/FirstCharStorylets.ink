@@ -36,7 +36,7 @@
         
         Merda, Talco sa sempre come tirarmi fuori dai casini!
         E avevo giurato ad Ennio che non sarebbero più successe cose strane.
-        Per la cronaca Ennio è circa il mio ragazzo, mentre Talco è lə miə amə.
+        Per la cronaca Ennio è diciamo il mio ragazzo, mentre Talco è lə miə amə.
         Ma perché te lo sto dicendo?
         Non è che ho preso dei funghi e manco me ne sono resa conto?
         Come con quel risotto allucinogeno dopo l’esame di composizione.
@@ -54,11 +54,11 @@
         Prova tu.
         Come ti chiami?
         
-        + {name_choice} [Mi chiamo {player_name}.]
-        + [Il mio nome è...]
-            -> name_choice ->
-            -> gender ->
-        -
+            + {name_choice} [Mi chiamo {player_name}.]
+            + [Il mio nome è...]
+                -> name_choice ->
+                -> gender ->
+            -
 
         {player_pronouns has her:Anche io uso i pronomi femminili!|Invece io uso i femminili.}
         Anche se continuo a non chiamarmi {charNameOne}.
@@ -70,8 +70,6 @@
         O entrambe.
         
             //Risposte, di cui una diversa se ho parlato o meno con Mentore.
-            
-    
             + {not welcome} [Risposta blu.]
                 -> color_variation_management(FirstCharacter, blueC)->
             
@@ -89,9 +87,8 @@
                  
             + [Risposta verde.]
                 -> color_variation_management(FirstCharacter, greenC)->
-    
-            
             -
+            
         ~ move_entity(Mentor, TrainStop)
         
         {
@@ -121,84 +118,69 @@
             
             -> options_first_character
         
-    
-    
-    
+
     
     = two
-        //Non mettere cose TW qui
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-        //Paura di deludere la famiglia scelta
         ~ firstChar_storyletsForRewritingCount ++
         
-         Non riesco a trovare Talco. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-         Forse devo fare pace col cervello e accettare che non è qui.
-         Ma non ricordo quando è stata l'ultima volta che sono andata in giro senza di ləi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-         Prima mi sono pure persa nel cercarlə.
-         Ok, forse mi sono distratta cercando di raggiungere uno scoiattolo perché aveva la ghianda più bella che avessi mai visto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-         Volevo insegnargli a suonarla, e invece mi sono ritrovata tra gli alberi senza sapere dove andare.
-         E c’erano otto sentieri diversi davanti a me.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-         {
-                - are_two_entities_together(SecondCharacter, PG): Commentto Riccio!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+    {
+        - are_two_entities_together(SecondCharacter, PG): Commetto Riccio.
                     
-            } 
-         Otto!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-         Otto sentieri per tre persone?
+    }
+    {
+        - are_two_entities_together(Mentor, PG): Commetto Mentore.
+                    
+    } 
         
-            + [O forse il sentiero è unico, ma ci sono otto te.]
-                -> color_variation_management(FirstCharacter, purpleC)->
-                 Ah, ci sta!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 In effetti mi sento divisa, frammentata.
-                 In questo periodo della mia vita ci sono troppe spinte.
-                 E non so dove andare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-                    
-            
-            + [Ok l'amicizia con Talco, ma devi essere indipendente.]
-                -> color_variation_management(FirstCharacter, redC)->
-                 Ama, prenditi meno spazi, grazie.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                 Talco e io siamo due parti della stessa armonia, ma sappiamo essere indipendenti.
-                 È che in momenti come questo so suonare solo se è con me.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-                    
-            
-            + [Esiste un numero definito di sentieri per persona?]
-                -> color_variation_management(FirstCharacter, blueC)->
-                 Non era quello il punto, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 Ma credo dipenda dal tempo a disposizione.
-                 Alla fine puoi suonare qualsiasi strumento, se ne hai il tempo.
-                 Ma quanti mesi servono per creare otto sentieri da sola?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-                    
-                    
-            + [Vorresti suonare qualcosa per Talco?]
-                -> color_variation_management(FirstCharacter, greenC)->
-                 Adoro.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                 Ma magari non ora.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 Forse prima devo capire perché ho questo nuovo nome, cosa farmene.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                    
-            
-            + [Non so molto di scoiattoli, ma le falene suonano i girasoli!]
-                -> color_variation_management(FirstCharacter, yellowC)->
-                 Toppissimo!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                 Scoiattoli e falene sarebbero la migliore band possibile!
-                 Tipo gli Stray Kids della natura.
-                 E credo di aver visto una lumaca prima, potrebbe tenere il tempo!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-                
+    {player_name}, ma hai sentito che silenzio che c’è in questo posto?
+    Non silenzio silenzio tipo vuoto nello spazio.
+    Anche perché ci sono animaletti e insetti e tutto il resto che fanno un sacco di casino.
+    Ma mi sento la testa libera.
+    Riesco ad ascoltare i miei pensieri.
+    E le canzoncine della pubblicità ancorate nel mio cervello.
+    O magari è perché prima ho preso una botta assurda contro il vetro della serra e mi sono resettata?
+    Ma il male mi ha fatto capire che questa non è un’allucinazione o un sogno.
+    E invece di essere preoccupata vorrei solo stendermi a riposare.
+    Mi spiace giusto perché le mie coinquiline saranno preoccupate.
+    E a lavoro saranno incazzati a bestia.
+    Sempre che non sia una di quelle situazioni in cui il tempo qui passa velocissimo e nel mondo reale zero.
+    Magari mi metto a recuperare il sonno arretrato.
+    Forse vorrei giusto avere la mia tastiera, e le ragazze della band perché ho voglia di creare qualcosa di nuovo.
+    Sono settimane che non ho le energie per creare un pezzo che uno, un accenno di melodia.
+    Ma tu che idea ti sei {player_pronouns has him:fatto|{player_pronouns has her:fatta|fattə}}. di questo posto?
     
-            -    
-         Che poi a pensarci bene, non è che saranno tutti i passi di quell'altra?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-         Cammina così tanto, e per cosa poi?
-        {
-            - are_two_entities_together(Mentor, PG): Non hai idea di quanto lavoro ci sia da fare. Quindi sì, cammino MOLTO.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-        } 
-         
-        Ma troppe chiacchiere ora, troppe.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-        Fammi chillare un attimo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+    //Risposte, di cui una diversa se ho parlato o meno con Mentore.
+            
+            + [Risposta gialla.]
+                -> color_variation_management(FirstCharacter, yellowC)->
+            
+            + [Risposta rossa.]
+                -> color_variation_management(FirstCharacter, redC)->  
+                
+            + [Risposta viola.]
+                -> color_variation_management(FirstCharacter, purpleC)->
+                
+            + {not welcome} [Risposta blu.]
+                -> color_variation_management(FirstCharacter, blueC)->
+            
+            + {welcome} [Risposta blu.]
+                -> color_variation_management(FirstCharacter, blueC)->
+
+            + [Risposta verde.]
+                -> color_variation_management(FirstCharacter, greenC)->
+            -
+    
+    Sai {player_name}: mi spiace che Talco non sia qui ma son felice di non essere sola.
+    Potrebbe piacermi la tua compagnia.
+             
             ~ firstChar_pauseTalking = firstChar_pauseDuration
             ~ firstChar_justTalked = true
             @animation:RewriterBook
-
-                -> options_first_character 
             
+        -> options_first_character 
+        
     = three
     //Non mettere cose TW qui
         ~ temp charNameOne = translator(firstChar_ActualName)
