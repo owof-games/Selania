@@ -25,7 +25,7 @@
         -> first_char_cooking_alone   
     
     //Scena in cui cuciniamo con Chitarra
-    - are_two_entities_together(FirstCharacter, PG) && not cooking_with_first_char && (kitchen_firstCharIsCooking == false):
+    - are_two_entities_together(FirstCharacter, PG) && not ending_cooking_with_first_char && (kitchen_firstCharIsCooking == false):
         -> pre_start_cooking_with_first_char
     
     //Scena in cui Riccio sta cucinando da solo

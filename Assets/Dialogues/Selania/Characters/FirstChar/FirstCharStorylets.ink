@@ -125,141 +125,142 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ firstChar_storyletsForRewritingCount ++
         
-    {
-        - are_two_entities_together(SecondCharacter, PG): Commetto Riccio.
-                    
-    }
-    {
-        - are_two_entities_together(Mentor, PG): Commetto Mentore.
-                    
-    } 
+        {
+            - are_two_entities_together(SecondCharacter, PG):
+            Commetto Riccio.
+                        
+        }
+        {
+            - are_two_entities_together(Mentor, PG):
+            Commetto Mentore.
+                        
+        } 
+            
+        {player_name}, ma hai sentito che silenzio che c’è in questo posto?
+        Non silenzio silenzio tipo vuoto nello spazio.
+        Anche perché ci sono animaletti e insetti e tutto il resto che fanno un sacco di casino.
+        Ma mi sento la testa libera.
+        Riesco ad ascoltare i miei pensieri.
+        E le canzoncine della pubblicità ancorate nel mio cervello.
+        O magari è perché prima ho preso una botta assurda contro il vetro della serra e mi sono resettata?
+        Ma il male mi ha fatto capire che questa non è un’allucinazione o un sogno.
+        E invece di essere preoccupata vorrei solo stendermi a riposare.
+        Mi spiace giusto perché le mie coinquiline saranno preoccupate.
+        E a lavoro saranno incazzati a bestia.
+        Sempre che non sia una di quelle situazioni in cui il tempo qui passa velocissimo e nel mondo reale zero.
+        Magari mi metto a recuperare il sonno arretrato.
+        Forse vorrei giusto avere la mia tastiera, e le ragazze della band perché ho voglia di creare qualcosa di nuovo.
+        Sono settimane che non ho le energie per creare un pezzo che uno, un accenno di melodia.
+        Ma tu che idea ti sei {player_pronouns has him:fatto|{player_pronouns has her:fatta|fattə}}. di questo posto?
         
-    {player_name}, ma hai sentito che silenzio che c’è in questo posto?
-    Non silenzio silenzio tipo vuoto nello spazio.
-    Anche perché ci sono animaletti e insetti e tutto il resto che fanno un sacco di casino.
-    Ma mi sento la testa libera.
-    Riesco ad ascoltare i miei pensieri.
-    E le canzoncine della pubblicità ancorate nel mio cervello.
-    O magari è perché prima ho preso una botta assurda contro il vetro della serra e mi sono resettata?
-    Ma il male mi ha fatto capire che questa non è un’allucinazione o un sogno.
-    E invece di essere preoccupata vorrei solo stendermi a riposare.
-    Mi spiace giusto perché le mie coinquiline saranno preoccupate.
-    E a lavoro saranno incazzati a bestia.
-    Sempre che non sia una di quelle situazioni in cui il tempo qui passa velocissimo e nel mondo reale zero.
-    Magari mi metto a recuperare il sonno arretrato.
-    Forse vorrei giusto avere la mia tastiera, e le ragazze della band perché ho voglia di creare qualcosa di nuovo.
-    Sono settimane che non ho le energie per creare un pezzo che uno, un accenno di melodia.
-    Ma tu che idea ti sei {player_pronouns has him:fatto|{player_pronouns has her:fatta|fattə}}. di questo posto?
-    
-    //Risposte, di cui una diversa se ho parlato o meno con Mentore.
-            
-            + [Risposta gialla.]
-                -> color_variation_management(FirstCharacter, yellowC)->
-            
-            + [Risposta rossa.]
-                -> color_variation_management(FirstCharacter, redC)->  
+        //Risposte, di cui una diversa se ho parlato o meno con Mentore.
                 
-            + [Risposta viola.]
-                -> color_variation_management(FirstCharacter, purpleC)->
+                + [Risposta gialla.]
+                    -> color_variation_management(FirstCharacter, yellowC)->
                 
-            + {not welcome} [Risposta blu.]
-                -> color_variation_management(FirstCharacter, blueC)->
-            
-            + {welcome} [Risposta blu.]
-                -> color_variation_management(FirstCharacter, blueC)->
-
-            + [Risposta verde.]
-                -> color_variation_management(FirstCharacter, greenC)->
-            -
+                + [Risposta rossa.]
+                    -> color_variation_management(FirstCharacter, redC)->  
+                    
+                + [Risposta viola.]
+                    -> color_variation_management(FirstCharacter, purpleC)->
+                    
+                + {not welcome} [Risposta blu.]
+                    -> color_variation_management(FirstCharacter, blueC)->
+                
+                + {welcome} [Risposta blu.]
+                    -> color_variation_management(FirstCharacter, blueC)->
     
-    Sai {player_name}: mi spiace che Talco non sia qui ma son felice di non essere sola.
-    Potrebbe piacermi la tua compagnia.
-             
-            ~ firstChar_pauseTalking = firstChar_pauseDuration
-            ~ firstChar_justTalked = true
-            @animation:RewriterBook
-            
-        -> options_first_character 
+                + [Risposta verde.]
+                    -> color_variation_management(FirstCharacter, greenC)->
+                -
+        
+        Sai {player_name}: mi spiace che Talco non sia qui ma son felice di non essere sola.
+        Potrebbe piacermi la tua compagnia.
+                 
+                ~ firstChar_pauseTalking = firstChar_pauseDuration
+                ~ firstChar_justTalked = true
+                @animation:RewriterBook
+                
+            -> options_first_character 
         
     = three
-    //Non mettere cose TW qui
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         ~ firstChar_storyletsForRewritingCount ++
-        
-         Stavo pensando ad Anna.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-         {
-                - are_two_entities_together(Mentor, PG): Commento mentore. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-}
-         Anna è una mia ama del conservatorio.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-         Insiste perché mi proponga come assistente del Ghiberti.
-         Dice che lui ha stima di me e questa è la mia GRANDE occasione.
-         E non per flexare, ma so che me la caverei bene.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-         Anna è così sicura di sè da quando ha lasciato l'ex tossico! Adoro.
-         A volte Anna e Olga discutono perché Olga pensa che io con la classica sia buttata via.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-         Dice che devo mettere su una band e invadere tutti i locali della città.
-         Olga è sicura che Talco le dia ragione, ma Talco vuole che mi butti sui reality show.
-         Dice che non importa vincere, importa fare casino così poi sui social se ne parla.
-         Ha il suo senso.
-         E poi Ennio, no Ennio no.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-         Ennio dice che ho sbagliato strada.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-         {
-                - are_two_entities_together(SecondCharacter, PG): Commentto Riccio!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-                    
-            } 
-        
-            + [La risposta è sempre dove c'è casino: ascolta Talco!]
-                -> color_variation_management(FirstCharacter, yellowC)->
-                 Voi due diventereste bestie in due secondo, cavolo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                 E potrei portarvi sul palco e fare qualcosa di assurdo.
-                 Tipo creare uno xilofono di papere!
-                 Sarebbe toppissimo!
-                    
-            
-            + [Anna ha ragione: bisogna essere pratiche nella vita.]
-                -> color_variation_management(FirstCharacter, blueC)-> 
-                 La praticità non è tutto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                 Sennò avrei dovuto iscrivermi a economia.
-                 E inventare nuove supercazzole per fregare il prossimo.
-                 O far finta di predire il futuro scazzando più di Nostradamus.
-                           
     
-            + [Tutte le strade sono sbagliate se non sai dove andare.]
-                -> color_variation_management(FirstCharacter, purpleC)->
-                 Mi ricordi il nonno.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                 Ignorava i piccoli fastidi per concentrarsi sul grande insieme delle cose.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 A me non viene benissimo questa cosa però.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-                 Quanto son cringe.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                    
-            
-            + [E cosa vuole {charNameOne}?]
-                -> color_variation_management(FirstCharacter, greenC)->
-                 Ora?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 Un letto caldo, una copertina.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                 E non doversi fare questa domanda.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-                    
-            
-            + [Ascolta Olga e invadi il mondo!]
-                -> color_variation_management(FirstCharacter, redC)->    
-                 Tu sei un treno, {player_name}. Chi ti ferma?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 Ma io sono più dell'idea di ricrearlo assieme questo maledetto mondo.
-                 Ascoltarci a vicenda, entrare in armonia.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                 E ricostruire sulle macerie che ci circondano.
-                 Ora datemi il Nobel per la pace, su!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        {
+            - are_two_entities_together(SecondCharacter, PG):
+            Commetto Riccio.
                         
-            
-            -    
-         Comunque sembra che tutt3 abbiano le idee chiare su cosa dovrei fare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-         E dato che nessunə amə ha la stessa opinione delle altre, finirò per deluderne qualcunə.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-         Sono la mia famiglia, loro.
-         E nessuna di queste scelte può accontentare tutt3.
-         Che rottura di ovaie, {player_name}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-            ~ firstChar_pauseTalking = firstChar_pauseDuration
-            ~ firstChar_justTalked = true
-            @animation:RewriterBook
-
+        }
+        {
+            - are_two_entities_together(Mentor, PG):
+            Commetto Mentore.
+                        
+        }     
+        
+        Ehi {player_name}!
+        Prima ho parlato con {mentorName} che mi ha spiegato che sei qui per aiutarmi.
+        Dice che c’è qualcosa che mi blocca.
+        E che quando mi fiderò di te potrò chiederti aiuto e sbloccarmi e tornare a casa.
+        Tipo una versione di D&D con le quest scritte da un emo.
+        Stavo per dirle: guarda ama, mi fido già di {player_name}!
+        Sono un labrador e mi fido sempre di tutte le persone che incontro!
+        Poi ho pensato che non è vero.
+        E che se sei davvero qui per aiutarmi, posso tirarti un piccolo pippone.
+        Così ci conosciamo meglio.
+        No, non è un vero pippone.
+        Ma mi sono chiesta cosa sia la fiducia.
+        E se fosse un tema, uno di quelli delle medie tipo “Parla della persona di cui ti fidi di più”, sarebbe un tema su Talco.
+        Si dice spesso “cosa x mi ha salvato la vita”, e ho creduto per un sacco che fosse una cazzata.
+        Pensavo che niente salvasse nessunə.
+        Poi ho conosciuto Talco.
+        Abbiamo iniziato il Conservatorio assieme, ma ləi l’ha lasciato dopo un anno.
+        Credo abbia litigato con tutti i professori.
+        Talco non sopporta le regole che non hanno senso, e il Conservatorio ne è pieno.
+        Non so se l’avevi già capito {player_name}, ma sono una persona che si tira un sacco di film in testa.
+        E quando ho incontrato Talco, ero bloccata in un brutto film che durava dalla fine del liceo.
+        E ləi mi ha buttato nel mondo.
+        Non con quelle cagate tipo “cammina nel verde e vedrai che passa tutto”.
+        Ma mi ha fatto fare cose piccole che mi hanno aperto un mondo.
+        Come quando ci siamo stes3 in piazza per vedere come le persone reagivano.
+        O quando abbiamo finto di intervistare persone anziane per farle sentire ascoltate.
+        O tutte le volte che davanti a una cosa ingiusta ha detto “no”!
+        Mi ha fatto capire che per me è importante fare qualcosa di utile per il mondo.
+        E che mi piace quando posso farlo con le altre persone.
+        Mi piace stare con le persone.
+        Io non so se sono bloccata in qualcosa, come dice {mentorName}.
+        Ma forse è vero che in qualche modo non mi muovo nella mia vita da un po’.
+        Con Talco mi sono messa in situazioni strane perché mi fidavo di lei.
+        E mi chiedevo: secondo te, cosa vuol dire fidarsi?
+        
+        //Risposte
+                + [Risposta verde.]
+                    -> color_variation_management(FirstCharacter, greenC)->
+                    
+                + [Risposta viola.]
+                    -> color_variation_management(FirstCharacter, purpleC)->
+                
+                + [Risposta gialla.]
+                    -> color_variation_management(FirstCharacter, yellowC)->
+                
+                + [Risposta blu.]
+                    -> color_variation_management(FirstCharacter, blueC)->
+                
+                + [Risposta rossa.]
+                    -> color_variation_management(FirstCharacter, redC)->  
+                    
+                -
+        Mi manca, Talco.
+        Mi spiace per come le cose siano cambiate.    
+             
+                ~ firstChar_pauseTalking = firstChar_pauseDuration
+                ~ firstChar_justTalked = true
+                @animation:RewriterBook
+    
                 -> options_first_character
         
+    
     = four
     //Non mettere cose TW qui
     ~ temp charNameOne = translator(firstChar_ActualName)

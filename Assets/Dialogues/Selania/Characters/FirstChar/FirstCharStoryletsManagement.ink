@@ -29,7 +29,7 @@
                         -> food_gift_first_char
                 
                 //Chitarra cucina con noi
-                -  are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && not cooking_with_first_char && kitchen_firstCharIsCooking == false:
+                -  are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && not ending_cooking_with_first_char && kitchen_firstCharIsCooking == false:
                         -> cooking_with_first_char
                 
                 //Lettura Chitarra
