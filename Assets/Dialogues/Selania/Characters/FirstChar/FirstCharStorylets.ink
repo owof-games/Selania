@@ -155,24 +155,24 @@
         
         //Risposte, di cui una diversa se ho parlato o meno con Mentore.
                 
-                + [Risposta gialla.]
-                    -> color_variation_management(FirstCharacter, yellowC)->
+            + [Risposta gialla.]
+                -> color_variation_management(FirstCharacter, yellowC)->
+            
+            + [Risposta rossa.]
+                -> color_variation_management(FirstCharacter, redC)->  
                 
-                + [Risposta rossa.]
-                    -> color_variation_management(FirstCharacter, redC)->  
-                    
-                + [Risposta viola.]
-                    -> color_variation_management(FirstCharacter, purpleC)->
-                    
-                + {not welcome} [Risposta blu.]
-                    -> color_variation_management(FirstCharacter, blueC)->
+            + [Risposta viola.]
+                -> color_variation_management(FirstCharacter, purpleC)->
                 
-                + {welcome} [Risposta blu.]
-                    -> color_variation_management(FirstCharacter, blueC)->
-    
-                + [Risposta verde.]
-                    -> color_variation_management(FirstCharacter, greenC)->
-                -
+            + {not welcome} [Risposta blu.]
+                -> color_variation_management(FirstCharacter, blueC)->
+            
+            + {welcome} [Risposta blu.]
+                -> color_variation_management(FirstCharacter, blueC)->
+
+            + [Risposta verde.]
+                -> color_variation_management(FirstCharacter, greenC)->
+            -
         
         Sai {player_name}: mi spiace che Talco non sia qui ma son felice di non essere sola.
         Potrebbe piacermi la tua compagnia.
@@ -235,22 +235,22 @@
         E mi chiedevo: secondo te, cosa vuol dire fidarsi?
         
         //Risposte
-                + [Risposta verde.]
-                    -> color_variation_management(FirstCharacter, greenC)->
-                    
-                + [Risposta viola.]
-                    -> color_variation_management(FirstCharacter, purpleC)->
+            + [Risposta verde.]
+                -> color_variation_management(FirstCharacter, greenC)->
                 
-                + [Risposta gialla.]
-                    -> color_variation_management(FirstCharacter, yellowC)->
+            + [Risposta viola.]
+                -> color_variation_management(FirstCharacter, purpleC)->
+            
+            + [Risposta gialla.]
+                -> color_variation_management(FirstCharacter, yellowC)->
+            
+            + [Risposta blu.]
+                -> color_variation_management(FirstCharacter, blueC)->
+            
+            + [Risposta rossa.]
+                -> color_variation_management(FirstCharacter, redC)->  
                 
-                + [Risposta blu.]
-                    -> color_variation_management(FirstCharacter, blueC)->
-                
-                + [Risposta rossa.]
-                    -> color_variation_management(FirstCharacter, redC)->  
-                    
-                -
+            -
         Mi manca, Talco.
         Mi spiace per come le cose siano cambiate.    
              
@@ -262,72 +262,72 @@
         
     
     = four
-    //Non mettere cose TW qui
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-    //Silenzio
-        ~ firstChar_storyletsForRewritingCount ++
+    ~ firstChar_storyletsForRewritingCount ++
+        {
+            - are_two_entities_together(SecondCharacter, PG):
+            Commento Riccio.
+                        
+        }
+        {
+            - are_two_entities_together(Mentor, PG):
+            Commento Mentore.
+                        
+        }
         
-         Questo posto è carino, ma il silenzio è pesante.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-         Non c'è nemmeno un accenno di musica, di ritmo.
-         
-         Come ci si sta in un posto del genere senza sbroccare?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+        Da qualche mese lavoro in un ristorante.
+        Così, per iniziare le conversazioni a cavolo.
+        Comunque, {player_name}: lavoro in un ristornante.
+        Uno di quelli da catena, che si gasano perché hanno la sede sia a Buco di Culo Lombardo che a Pechino.
+        Come puoi immaginare, non era quello che mi aspettavo dopo il Conservatorio.
+        Per un po’ sono riuscita a fare qualche lavoretto con il pianoforte, quasi sempre non pagato.
+        Poi mio padre ha perso il lavoro, e mi ha detto: figlia, siamo nella merda.
+        Tengo sempre un orecchio alzato per qualche commissione.
+        Ma per lo più sono di sera o nel fine settimana, quando col cavolo che mi danno il giorno libero dal ristorante.
+        Per fortuna ci sono le prove con la band.
+        Quando ho le energie per farle.
+        Lavorare al ristorante è una merda, ma il rapporto con alcune colleghe è bello.
+        Qualche settimana fa è venuto un dirigente di una compagnia petrolifera a mangiare.
+        Una di quelle specializzate in greenwashing e che ti denunciano se solo racconti quello che fanno.
+        Ci siamo rifiutate di servirlo.
+        Il caposala era verde bestia, ma è stata la prima volta che mi son sentita viva a lavoro.
+        Dire “no” è una cosa potentissima.
+        Ed è stato bello farlo assieme.
+        Da quel momento mi chiedo se possano esserci cose che mi diano uno scopo più ampio.
+        A lavoro stiamo provando di nascosto a tirare su un gruppo sindacale.
+        “Di nascosto”, perché coi contrattini precari da fame che ci ritroviamo fanno alla svelta a non rinnovarci.
+        A volte temo siano energie sprecate.
+        Altre, che dovrei fare qualcosa di più grande, che faccia meglio a più persone.
+        Tu cosa ne pensi?
         
-            + [Studiandolo, cercando di capire come funziona.]
-                -> color_variation_management(FirstCharacter, blueC)->
-                 Dovrei vivisezionare una di quelle lumacone trovate dietro alla serra?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                 Testare gli arbusti della foresta?
-                 Flexare a manetta e dire "Ora sono il dio di questo posto?!?"
-                 Thank you, next!
-                    
-                    
-            + [Più silenzio significa più spazio per fare rumore!]
-                -> color_variation_management(FirstCharacter, yellowC)->
-                 AAAAAAAAAAAAAAAAAAAAAAAAAAAA!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 Forse dovevo avvisarti.
-                 Ma non funziona, ama.
-                 È come quando fai le prove per un concerto in un'enorme sala vuota.
-                 Mi fa sentire esposta, e idiota.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                    
-                    
-            + [Se corri veloce il ritmo lo crei da sola.]
-                -> color_variation_management(FirstCharacter, redC)->
-                 O mi parte un polmone.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                 Non sono esattamente una gymbro, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 E poi serve qualcuno che suoni con te.
-                 E qualcuno che canti.
-                    
-                    
-            + [Il silenzio offre la vulnerabilità necessaria per raccontarsi.]
-                -> color_variation_management(FirstCharacter, greenC)->
-                 Non ti sono sembrata già abbastanza needy, ama?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                 E poi vorrei ricordarti che manco so perché mi chiamo così.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-                 No dai, tu cerchi di essere gentile, scusa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 Ma non conosco bene le parole per "raccontarmi".#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-                 L'unica cosa che so fare è suonare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-                    
-                    
-            + [Il giardino <b><i>è</b></i> musica, si tratta solo di ascoltare.]
+        //Risposte
+        //Una di queste risposte genera un commento di Chitarra che ci racconta qualcosa simili imprenditore giochi Cortese come esempio tossico.
+
+            + [Risposta viola.]
                 -> color_variation_management(FirstCharacter, purpleC)->
-                 Tu sei un mood tutto tuo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                 Ma forse hai ragione, {player_name}.
-                 È che per ascoltare serve restare in silenzio.
-                 E a me viene solo da parlare a ruota e non pensare in questo momento.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-                    
-            -
-            {
-                - are_two_entities_together(SecondCharacter, PG): Commentto Riccio!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-                    
-            } 
-         Idea!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-         Forse la mentore è abbastanza vecchia da avere una radio?
-            {
-                - are_two_entities_together(Mentor, PG):Non approfittare della mia gentilezza, ragazzina!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
-                    Dai, si fa per il meme!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                - else:Devo assolutamente chiederglielo!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-            }
-                ~ firstChar_pauseTalking = firstChar_pauseDuration
-                ~ firstChar_justTalked = true
+            
+            + [Risposta blu.]
+                -> color_variation_management(FirstCharacter, blueC)->
+            
+            + [Risposta rossa.]
+                -> color_variation_management(FirstCharacter, redC)->  
+                
+            + [Risposta gialla.]
+                -> color_variation_management(FirstCharacter, yellowC)->
+                
+            + [Risposta verde.]
+                -> color_variation_management(FirstCharacter, greenC)->
+
+            -    
+        
+        A prescindere, ci sono giornate in cui l’unica cosa che mi gasa è la rabbia nella chat ribelle.
+        Gli insulti ai capoccia.
+        Il tenere traccia di tutte le ingiustizie.
+        La speranza di fargliele ripagare, un giorno o l’altro.
+        
+            ~ firstChar_pauseTalking = firstChar_pauseDuration
+            ~ firstChar_justTalked = true
             @animation:RewriterBook
 
                     -> options_first_character
@@ -426,7 +426,32 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     ~ firstChar_storyletsForRewritingCount ++
-    
+        
+        {
+            - are_two_entities_together(SecondCharacter, PG):
+            Commento Riccio.
+                        
+        }
+        {
+            - are_two_entities_together(Mentor, PG):
+            Commento Mentore.
+                        
+        }
+        
+         
+            ~ firstChar_pauseTalking = firstChar_pauseDuration
+            ~ firstChar_justTalked = true
+            @animation:RewriterBook
+            
+                -> options_first_character
+        
+    = seven
+    //Non mettere cose TW qui
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+    ~ firstChar_storyletsForRewritingCount ++
+        
         {
             - are_two_entities_together(SecondCharacter, PG):
             Commento Riccio.
@@ -527,78 +552,9 @@
         Un mese dopo Talco è partitə, e non ci siamo più sentite fino a qualche settimana fa, quando mi ha mandato una cartolina.
         Una foto dellə bimbə.
         “Qualcuno aspetta un tuo abbraccio.”
-         
-            ~ firstChar_pauseTalking = firstChar_pauseDuration
-            ~ firstChar_justTalked = true
-            @animation:RewriterBook
-            
-                -> options_first_character
         
-    = seven
-    //Non mettere cose TW qui
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
-    //Razionalità
-        ~ firstChar_storyletsForRewritingCount ++
-        
-         Stavo ripensando al prof Ghiberti. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-         E prometto che non è un pippone a questo giro.
-         Forse.
-         Comunque: il Ghiberti vede tutta la musica come una cosa matematica.
-         Non è una cosa nuova, ma di solito chi lo fa non rinuncia alla poesia.
-         Per Ghiberti invece la musica e il mondo sono solo una combinazione di numeri.
-         Una somma che dà sempre lo stesso risultato.
-         Ma quanto sono basic quando dico queste cose?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-         Tra l'altro una volta a vocina bassa ha giurato che il jazz è un errore.
-         {
-                - are_two_entities_together(SecondCharacter, PG): Commentto Riccio!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-                    
-            } 
-        
-            + [La prevedibilità <b><i>è</b></i> poetica. La cosa più rara al mondo.]
-                -> color_variation_management(FirstCharacter, blueC)->
-                 Allora non sono una persona poetica.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                 Se non c'è caos, imprevedibilità, mi annoio.
-                    
-                    
-            + [Ognuna ha il suo modo di raggiungere la verità.]
-                -> color_variation_management(FirstCharacter, purpleC)->
-                 Ci sta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 Ma non è troppo facile così?
-                 Non è togliersi la responsabilità verso le altre persone?
-                    
-                    
-            + [È un errore non giocare, e il jazz è musica che gioca.]
-                -> color_variation_management(FirstCharacter, yellowC)->
-                 Top!
-                 Anche se sicuro che ora si è preso un infarto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                 Per me tutta la musica è gioco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)} #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_curious
-                 Basta smetterla di sentirsi stocazzo e perdersi con band e pubblico.
-                
-                
-            + [Sembrano le parole di una persona ferita.]
-                -> color_variation_management(FirstCharacter, greenC)->
-                 Lo dice anche Talco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 Metti che voglio pure aiutarlo con questa ferita, cosa dovrei fare?
-                 Rispettare la sua ossessione per le regole?
-                 O sorprenderlo con del caos creativo?
-                
-                
-            + [Ha paura di accogliere la potenza del disordine.]
-                -> color_variation_management(FirstCharacter, redC)->
-                 Ci sta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 Anche se poi credo che il disordine sia solo una questione di prospettiva.
-                 Alla lunga ci si abiuta e diventa difficile cambiare.
-                 Un po' come quel casino che è camera mia.
-                    
-            -
-            Comunque non mi piace l'idea che esistano errore e verità.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-            {
-                - are_two_entities_together(Mentor, PG): Commento mentore. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-}
-            Anche perché quelli pieni di verità hanno sempre finito per ammazzare quell3 come me e Talco.
                 ~ firstChar_pauseTalking = firstChar_pauseDuration
+                ~ firstChar_justTalked = true
                 @animation:RewriterBook
                 
                     -> options_first_character          
@@ -610,66 +566,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
     ~ firstChar_storyletsForRewritingCount ++
         
-        Giuro che non shippo il Ghiberti, ma continuo a pensare a quello che ci siamo dette prima.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        E il Ghiberti sembra un uomo felice, sorride molto.
-        Ma poi se lo guardi bene sembra il sorriso di un robot.
-        O di uno che ha una Tesla.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-        A me fa venire la caga quel sorriso, quel modo di fare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Tutti questi numerini e fattori tolgono l’esperienza, l’errore, il senso di comunità.
-        Talco dice sempre che una comunità canta, ma per farlo deve sbagliare, essere imprevedibile.
-        Che diavolo ci fai con una canzone fatta con la sola precisione?
-        Tra ame sbagliamo sempre, e poi ci perdoniamo.
-        Mentre il mondo del Ghiberti sembra come quella roba con l’AI, orecchiabile, prevedibile, dimenticabile.
-        C'è una sola cosa che mi triggera le ovaie: tutte le cosine pratichine e calcolabili e precise.
-        Sono roba morta.
-            {
-                - are_two_entities_together(SecondCharacter, PG):Essere adulti è orribile!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-                    E non hai ancora prova l'adolescenza!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-            }
- 
-            + [Una comunità sboccia quando c'è affetto e fiducia.]
-                -> color_variation_management(FirstCharacter, greenC)->
-                 Esatto!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                 Una casa in campagna con l3 am3.
-                 Un giardino.
-                 Anna dice che è come fuggire dalle responsabilità.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                 Ma non è che possiamo salvare il mondo, noi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-                    
-                
-            + [Una comunità non regge senza senso pratico.]
-                -> color_variation_management(FirstCharacter, blueC)->
-                 Giuro ama che a volte mi triggeri tantissimo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                 Perché tutto è solo senso pratico per te?
-                 Non è comunità la roba che hai in mente, ma una roba come una fabbrica.
-                 E io non ci voglio vivere in una fabbrica.
-                    
-                    
-            + [Una comunità resiste se segue un obiettivo superiore.]
-                -> color_variation_management(FirstCharacter, purpleC)->
-                 Mood totale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 Una comunità unita per rendere il mondo più giusto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                 O trasformare qualcosa di terribile in un gioco.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-                 E farlo esplodere.
-                    
-        
-            + [Ciò che ci tiene unite è il giocare.]
-                -> color_variation_management(FirstCharacter, yellowC)->
-                 Ah, ci sta!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 È  liberatorio ridere tutt3 assieme.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                 Forse dovrei solo far ridere il Ghiberti, e magari quel sorrisino finto si rompe.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 Oppure mi schiatta sul posto.
-                    
-                    
-            + [Ci si accresce nel dissenso e nella discussione.]
-                -> color_variation_management(FirstCharacter, redC)->
-                 Amo noi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 Ma non è manco male sedersi assieme al sole e chillare, ogni tanto, no?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                    
-     
-            -
-         Comunque non sono di certo qui per il Ghiberti e le sue paranoie matematiche.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-         Ma per capire perché sono in questo posto.
-         Mi prendo un po' di tempo per me, {player_name}.
+       
             ~ firstChar_pauseTalking = firstChar_pauseDuration
             ~ book_BGVariations ++
             ~ firstChar_justTalked = true

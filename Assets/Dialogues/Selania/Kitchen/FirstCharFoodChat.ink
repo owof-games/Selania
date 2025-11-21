@@ -32,28 +32,31 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     Iniziamo proponendo a Chitarra di parlare di un tema.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le condizioni saranno valide (sostanzialmente: se almeno una volta abbiamo parlato di quel tema).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     
-        + [Parliamo di relazioni.]
-            {
-                - first_char_main_storylets.four:
-                    -> first_theme
-                
-                - else:
-                    Preferirei raccontarti ancora di qualcosa di mio prima di farlo. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-            }
         
         + [Parliamo di avere una vita con uno scopo.]
             {
-                - first_char_main_storylets.six:
+                - first_char_main_storylets.four:
                     -> second_theme
                 
                 - else:
                     Preferirei raccontarti ancora di qualcosa di mio prima di farlo. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             }
         
+        
+        + [Parliamo di relazioni.]
+            {
+                - first_char_main_storylets.five:
+                    -> first_theme
+                
+                - else:
+                    Preferirei raccontarti ancora di qualcosa di mio prima di farlo. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+            }
+        
+        
         + [Parliamo di creatività.]
             {
             
-                - first_char_main_storylets.eight:
+                - first_char_main_storylets.six:
                     -> third_theme
                 
                 - else:
