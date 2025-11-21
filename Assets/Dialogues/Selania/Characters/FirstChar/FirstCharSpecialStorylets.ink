@@ -26,8 +26,40 @@
 
 
 === open_the_kitchen
-//Ci apre la cucina
-    Dialogo allo stagno.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+    
+    Dopo che {mentorName} mi ha detto che sei qui per aiutarci mi sono detta: come posso rendere la vita più facile a {player_name}?
+    Alla fine ti stai ascoltando le mie seghe mentali da un bel po’.
+    E immagino che anche il piccoletto avrà i suoi casini da gestire.
+        {
+            - are_two_entities_together(SecondCharacter, PG):
+            Commento Riccio.
+                        
+        }
+
+    E {mentorName} mi sta simpatica, ma adora parlare di lavoro, non la cosa più riposante.
+        {
+            - are_two_entities_together(Mentor, PG):
+            Commento Mentore.
+                        
+        }
+        
+    Poi ho trovato qualcosa di inaspettato dietro il pontile: una cucina abbandonata.
+    Mi son messa a sistemarla tra una chiacchierata e l’altra, principalmente sperando di trovare qualcosa da mangiare.
+    E man mano mi sono ricordata delle belle chiacchiere che mi son fatta a tavola.
+    Il cibo apre alle confidenze.
+    E quindi, ecco il mio regalo per te, {player_name}: un posto dove cucinare in compagnia, per conoscerci meglio.
+    E visto che di solito siamo noi a decidere di cosa parlarti, ho già avvisato {charNameTwo} che a questo giro sarai tu a decidere di cosa parlare.
+    Per cui: quando ti butta bene invita qualcunx di noi a cucinare, e vediamo che salta fuori.
+    Magari scopri anche qualcosa di utile per il tuo lavoro qui.
+    Che ne dici?
+
+    //Risposte.    
+    
         + [Scelta blu.]
              -> color_variation_management(FirstCharacter, blueC)->
     
@@ -43,16 +75,8 @@
         + [Scelta verde.]
             -> color_variation_management(FirstCharacter, greenC)->
         -    
-    {
-                - are_two_entities_together(Mentor, PG): Commento mentore. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-    }
-{
-                - are_two_entities_together(SecondCharacter, PG): Commentto Riccio!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-                    
-            } 
-            
-    Chitarra ci apre la cucina.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-    Ricordati di invitare una persona, se vuoi cucinarci assieme!
+    
+    Comunque: quando vuoi cucinare con qualcuna di noi, basta che ce lo chiedi.
         ~ firstChar_pauseTalking = firstChar_pauseDuration
         -> opening_places ->
         -> main
