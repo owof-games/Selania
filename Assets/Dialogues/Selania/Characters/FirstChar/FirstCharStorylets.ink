@@ -422,79 +422,112 @@
                 -> options_first_character
         
     = six
-    //Non mettere cose TW qui
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-        //Paura delle conseguenze della scelta.
-        ~ firstChar_storyletsForRewritingCount ++
+    ~ firstChar_storyletsForRewritingCount ++
+    
+        {
+            - are_two_entities_together(SecondCharacter, PG):
+            Commento Riccio.
+                        
+        }
+        {
+            - are_two_entities_together(Mentor, PG):
+            Commento Mentore.
+                        
+        }
         
-         Trigger warning: pesantezza, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-         
-         Ma questo posto mi fa pensare a troppe cose.
-         Conoscevo questo ragazzo, Jonah, un arpista e un genio.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-         Per due anni ha fatto da spalla a un tizio di Beijing, una rockstar della musica classica.
-         Ma poi non si sa perché ma Jonah sentiva la mancanza di casa ed è tornato per fare una carriera da solista.
-         Le cose gli sono andate di merda.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-         E man mano che gli studi gli sbattevano la porta in faccia, lui ha iniziato a perdere fiducia in sé e nella musica.
-         Ora non so più dove sia, Jonah.
-         Qualche compagna del Conservatorio giura di averlo visto mendicare.
-         Nella chat dei lavoretti qualcuno dice che suona sotto pseudonimo per dei ricchi di merda.
-         Una volta credo di averlo visto lavorare in un supermercato.
-         Scusa, ama.
-         Che pesantezza.
-         Però sono qui che mi chiedo: cosa puoi fare quando sai fare bene solo una cosa ma il mondo non ti permette di farla?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-         Accetti i compromessi o corri il rischio di morire di fame?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-         O aspetti fino a quando non sia il mondo a decidere per te?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-            
-            + [Canta e balla. Domani è una cosa lontana.]
-                -> color_variation_management(FirstCharacter, yellowC)->
-                 Mi sembra di sentire Talco con queste frasi.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                 Non che non aprezzi, ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 Ma per me è da molto ormai che è <i>domani</i>.
-                 Il conservatorio è finito da mesi, e io suono, ballo, ma non so ancora che cosa fare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
+        Ammettiamolo: ci sto girando attorno da un bel po’ ormai.
+        Continuo a parlare al passato di Talco, l’avrai notato.
+        Ed è perché non ci sentiamo da mesi.
+        E ora ti racconterò il perché e tu mi giudicherai una stronza epocale, e me lo merito.
+        Quindi.
+        Un anno fa Talco mi scrive per propormi un aperitivo solo tra noi, “come ai vecchi tempi”.
+        Tra lavori e fidanzati e il resto non ci vedevamo da molte settimane.
+        Abbiamo trovato un incrocio coi calendari, e la sera che l’ho rivistə mi si è spalacanto il cuore.
+        E tra una battuta e un lamento sul lavoro continuavo a pensare: e se riprendessimo in mano il vecchio progetto?
+        E se andassimo a vivere tutt3 assieme in campagna?
+        Talco, io, le ragazze del gruppo?
+        Sicuro Ennio non apprezzerebbe molto, ma alla peggio potrebbe venire a trovarci nel fine settimana.
+        Quando Talco mi ha detto “devo dirti qualcosa di importante”, ero già nel pieno del mio film.
+        Mi ha preso la mano, tesə a bestia come non l’avevo mai vistə.
+        “Aspetto un bambino”.
+        E {player_name}, tutto è diventato grigio.
+        Ci eravamo ripromess3 mille volte che non sarebbe successo.
+        Niente figli, niente partner a frapporsi tra noi o cose del genere.
+        E stava già succedendo comunque col lavoro e con Ennio e il suo Thomas ma cazzo, questa roba!
+        Talco che diventa la prima persona che conosco a rimanere incintə.
+        Non abbiamo manco trent’anni, cazzo!
+        E l’ha visto, sulla mia faccia.
+        Non ho detto nulla ma già aveva capito tutto.
+        E non si è manco arrabbiatə**.**
+        Mi ha solo detto che era un passo importante per ləi, perché anche se è una cosa inaspettata, ama Thomas, e sa che è l’uomo giusto.
+        E poi, il colpo finale.
+        “Vorrei trasferirmi da lui a Toronto. Qui non mi rimane nulla, nulla a parte te.”
+        “E per questo, vorrei ti trasferissi con noi.”
+        “Vorrei crescerla con te, questa creaturina. Con te e Thomas.”
+        E…
+        Dio, quanto vorrei del vino ora.
+        Tu come ti saresti {player_pronouns has him:sentito|{player_pronouns has her:sentita|sentitə}} al mio posto?
+        
+        //Risposte.
+                + [{player_pronouns has him:Tradito|{player_pronouns has her:Tradita|Traditə}}.]
+                    -> color_variation_management(FirstCharacter, redC)->
                     
+                    Uh.
+                    Scusa per il sospirone.
+                    Ma credo sia stata la prima emozione che mi ha colta.
+                    E mi ha fatto un male boia, {player_name}.
+                    Un male boia.
                     
-            + [È imperativo sopravvivere, troviamo sempre una soluzione.]
-                -> color_variation_management(FirstCharacter, blueC)->
-                 "Imperativo" rimettilo nel vocabolario, ora.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                 E voglio qualcosa di più che sopravvivere.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 Lo voglio per tutte le persone!
+                + [{player_pronouns has him:Incuriosito|{player_pronouns has her:Incuriosita|Incuriositə}} dall'idea di qualcosa di nuovo.]
+                    -> color_variation_management(FirstCharacter, yellowC)->
+                    
+                    Qualcosa di nuovo con un tizio che ho visto tre volte.
+                    In una città diversa in un altro continente.
+                    Eppure.
+                    Eppure anche qualcosa di diverso da tutto quello che avevo.
+                    Dalla stasi della mia vita.
+                    
+                + [Felice di questa nuova famiglia con Talco.]
+                    -> color_variation_management(FirstCharacter, greenC)->
+                    
+                    Sei una persona migliore di me allora, {player_name}.
+                    Perché le emozioni che ho provato erano davvero tante, ma non felicità.
+                    Per nessuna delle persone coinvolte.
+                    E per questo mi sento una stronza.
+                    Talco era felice di questa novità.
+                    Io non son stata capace di essere felice per ləi.
+                    
+                + [Una situazione assurda può farmi conoscere cose assurde di me.]
+                    -> color_variation_management(FirstCharacter, purpleC)->
+                    
+                    Possibile.
+                    E la cosa più assurda sarebbe scoprire che è vero che non mi piacciono i bambini.
+                    A migliaia di chilometri da tutto quello che conosco.
+                    Col mio inglese terribile.
+                    Dipendendo totalmente da una persona che deve prendersi cura di un infante.
                 
+                + [{player_pronouns has him:Confuso|{player_pronouns has her:Confusa|Confusə}} dall'assurdità di questa situazione.]
+                    -> color_variation_management(FirstCharacter, blueC)->
                     
-            + [Restati fedele e non ci sarà compromesso ma cambiamento.]
-                -> color_variation_management(FirstCharacter, purpleC)->
-                 Ah, ci sta!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 E a quel punto ogni decisione sarebbe la <i>mia</i> decisione.
-                    
-            
-            + [Dona la tua musica senza chiedere e tutto arriverà.]
-                -> color_variation_management(FirstCharacter, greenC)->
-                 Forse in questo posto strano funziona così.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 Ma nel mondo reale tutto prende e non dà nulla.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                 A parte l3 am3.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                 O dici che devo darli a loro i miei doni?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-                 Mmm.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                 Ci devo pensare.
-                    
-           
-            + [Mezzo compromesso è già una completa sconfitta.]
-                -> color_variation_management(FirstCharacter, redC)->
-                Eppure Jonah ha perso del tutto, comunque.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-                Con o senza compromessi.
-                Questa è l'unica soluzione?
-                           
-            
-            -
-        A proposito di cause perse: vado a cercarmi uno spritz.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-        Ho proprio bisogno di staccare.
-        {
-                - are_two_entities_together(SecondCharacter, PG): Commentto Riccio!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-                    
-            } 
-        {
-                - are_two_entities_together(Mentor, PG): Commento mentore. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-}
+                    Non è assurda, non con Talco.
+                    Ma confusione è una parola che mi ritorna, quando ripenso a quella sera.
+                    Perché la quantità di cose che ho provato è stata immensa.
+                
+                -
+        
+        Quella sera ho scoperto che la persona in me che sa fare cose, le sa fare solo se sa che Talco è dalla sua parte.
+        Un intero film mi è partito in testa.
+        Una roba con Margherita Buy piena di solitudine abbandono e perdita.
+        Ho lasciato il tavolo in silenzio, ho chiamato Ennio e l’ho raggiunto a casa sua.
+        Abbiamo scopato senza preservativo, ma l’ho cacciato fuori di forza quando stava per venire.
+        E poi ho pianto tutta la notte.
+        Un mese dopo Talco è partitə, e non ci siamo più sentite fino a qualche settimana fa, quando mi ha mandato una cartolina.
+        Una foto dellə bimbə.
+        “Qualcuno aspetta un tuo abbraccio.”
+         
             ~ firstChar_pauseTalking = firstChar_pauseDuration
             ~ firstChar_justTalked = true
             @animation:RewriterBook

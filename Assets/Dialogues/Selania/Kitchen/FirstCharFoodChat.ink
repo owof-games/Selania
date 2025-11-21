@@ -53,7 +53,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         + [Parliamo di creatività.]
             {
             
-                - first_char_main_storylets.seven:
+                - first_char_main_storylets.eight:
                     -> third_theme
                 
                 - else:
