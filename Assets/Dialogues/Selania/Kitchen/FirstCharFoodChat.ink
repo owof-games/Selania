@@ -34,20 +34,20 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     
         + [Parliamo di relazioni.]
             {
-                - first_char_main_storylets.three:
+                - first_char_main_storylets.four:
                     -> first_theme
                 
                 - else:
-                    Conosci meglio {charNameOne} prima di parlare di questo tema. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    Preferirei raccontarti ancora di qualcosa di mio prima di farlo. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             }
         
         + [Parliamo di avere una vita con uno scopo.]
             {
-                - first_char_main_storylets.five:
+                - first_char_main_storylets.six:
                     -> second_theme
                 
                 - else:
-                    Conosci meglio {charNameOne} prima di parlare di questo tema. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    Preferirei raccontarti ancora di qualcosa di mio prima di farlo. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             }
         
         + [Parliamo di creatività.]
@@ -57,7 +57,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                     -> third_theme
                 
                 - else:
-                    Conosci meglio {charNameOne} prima di parlare di questo tema. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    Preferirei raccontarti ancora di qualcosa di mio prima di farlo. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             }
         
         + [Ho cambiato idea.]

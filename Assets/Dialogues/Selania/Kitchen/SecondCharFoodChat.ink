@@ -33,7 +33,7 @@ TODO: da riorganizzare poi quando scrivo Riccio
                     -> first_theme
                 
                 - else:
-                    Conosci meglio {charNameTwo} prima di parlare di questo tema. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    Preferirei raccontarti ancora di qualcosa di mio prima di farlo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             }
         
         + [Parliamo di avere una vita con uno scopo.]
@@ -42,7 +42,7 @@ TODO: da riorganizzare poi quando scrivo Riccio
                     -> second_theme
                 
                 - else:
-                    Conosci meglio {charNameTwo} prima di parlare di questo tema. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    Preferirei raccontarti ancora di qualcosa di mio prima di farlo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             }
         
         + [Parliamo di creatività.]
@@ -52,7 +52,7 @@ TODO: da riorganizzare poi quando scrivo Riccio
                     -> third_theme
                 
                 - else:
-                    Conosci meglio {charNameTwo} prima di parlare di questo tema. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    Preferirei raccontarti ancora di qualcosa di mio prima di farlo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             }
         
         + [Ho cambiato idea.]
