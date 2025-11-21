@@ -48,7 +48,7 @@
                 -> ask
     
     //Vogliamo cucinare assieme (dopo almeno uno storylet assieme)      
-        - second_char_main_storylets.one && open_the_kitchen && not cooking_with_second_char && kitchen_secondCharIsCooking==false:
+        - second_char_main_storylets.one && open_the_kitchen && not ending_cooking_with_second_char && kitchen_secondCharIsCooking==false:
                 -> ask
     
     - else:
@@ -107,7 +107,7 @@
         
             
             //Cucinare assieme
-            + {second_char_main_storylets.one && open_the_kitchen && not cooking_with_second_char && kitchen_secondCharIsCooking==false}[Ti va di cucinare qualcosa assieme?]
+            + {second_char_main_storylets.one && open_the_kitchen && not ending_cooking_with_second_char && kitchen_secondCharIsCooking==false}[Ti va di cucinare qualcosa assieme?]
                     ~ movements_changeLocationTimer = 0
                     
                 {

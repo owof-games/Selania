@@ -33,7 +33,7 @@
         -> second_char_cooking_alone 
     
     //Scena in cui cuciniamo con Riccio
-    - are_two_entities_together(SecondCharacter, PG) && not cooking_with_second_char && (kitchen_secondCharIsCooking == false):
+    - are_two_entities_together(SecondCharacter, PG) && not ending_cooking_with_second_char && (kitchen_secondCharIsCooking == false):
         -> pre_start_cooking_with_second_char
     
         

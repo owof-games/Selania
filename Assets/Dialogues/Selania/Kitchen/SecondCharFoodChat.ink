@@ -7,26 +7,56 @@
 Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         + [Ci sto!]
             -> cooking_with_second_char
+        
         + [Ci penso un attimo.]
             -> main
   
  
  
 === cooking_with_second_char
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+    
     -> storage_colors(SecondCharacter)->
     -> cooking_animations_on ->
     
 Iniziamo proponendo a Riccio di parlare di un tema.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
 Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le condizioni saranno valide (sostanzialmente: se almeno una volta abbiamo parlato di quel tema).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
 
-    + {second_char_main_storylets.one}[Tema Uno]
-        -> first_theme
-    + {second_char_main_storylets.two}[Tema Due]
-        -> second_theme
-    + {second_char_main_storylets.three}[Tema Tre]
-        -> third_theme
-    -
-    -> main
+TODO: da riorganizzare poi quando scrivo Riccio
+    + [Parliamo di relazioni.]
+            {
+                - second_char_main_storylets.three:
+                    -> first_theme
+                
+                - else:
+                    Conosci meglio {charNameTwo} prima di parlare di questo tema. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            }
+        
+        + [Parliamo di avere una vita con uno scopo.]
+            {
+                - second_char_main_storylets.five:
+                    -> second_theme
+                
+                - else:
+                    Conosci meglio {charNameTwo} prima di parlare di questo tema. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            }
+        
+        + [Parliamo di creatività.]
+            {
+            
+                - second_char_main_storylets.seven:
+                    -> third_theme
+                
+                - else:
+                    Conosci meglio {charNameTwo} prima di parlare di questo tema. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            }
+        
+        + [Ho cambiato idea.]
+            -> main
 
     
     = first_theme

@@ -38,7 +38,7 @@
         
             
             //Riccio cucina con noi
-            -  are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && not cooking_with_second_char && kitchen_secondCharIsCooking == false:
+            -  are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && not ending_cooking_with_second_char && kitchen_secondCharIsCooking == false:
                     -> cooking_with_second_char        
 
             //Lettura Riccio
