@@ -305,6 +305,21 @@
             }
             
         }
+
+        //Gestione attesa in cucina di Riccio se invitato a cucinare
+        {   
+            - kitchen_secondCharCookingTogetherInvite == true:
+            
+            {
+                - kitchen_secondCharCookingTogetherWaiting < kitchen_secondCharCookingMAXTogetherWaiting:
+                    ~ kitchen_secondCharCookingTogetherWaiting ++
+                
+                - else:
+                   ~ kitchen_secondCharCookingTogetherInvite = false
+                   ~ move_entity(SecondCharacter, Pond)
+            }
+        }
+
     //Chitarra
     //Chitarra inizia a cucinare se abbiamo cucinato almeno una volta.
         {
@@ -331,6 +346,20 @@
                        ~ move_entity(FirstCharacter, Pond)
                 }
 
+        }
+
+        //Gestione attesa in cucina di Chitarra se invitata a cucinare
+        {   
+            - kitchen_firstCharCookingTogetherInvite == true:
+            
+            {
+                - kitchen_firstCharCookingTogetherWaiting < kitchen_firstCharCookingMAXTogetherWaiting:
+                    ~ kitchen_firstCharCookingTogetherWaiting ++
+                
+                - else:
+                   ~ kitchen_firstCharCookingTogetherInvite = false
+                   ~ move_entity(FirstCharacter, Pond)
+            }
         }
         
     

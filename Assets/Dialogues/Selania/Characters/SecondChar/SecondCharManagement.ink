@@ -38,6 +38,9 @@
         VAR kitchen_secondCharCookingMaxTime = 5
     //Nostro invito
         VAR kitchen_secondCharCookingTogetherInvite = false
+        VAR kitchen_secondCharCookingTogetherWaiting = 0
+        VAR kitchen_secondCharCookingMAXTogetherWaiting = 5
+    
     //Valore quarto ingrediente
         VAR kitchen_secondCharExtraIngredient = ()
         VAR kitchen_secondCharExtraIngredientReaction = notReaction    
