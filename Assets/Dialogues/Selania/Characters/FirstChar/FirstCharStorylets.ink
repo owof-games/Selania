@@ -350,6 +350,48 @@
             Commento Mentore.
                         
         }
+    Prima mi sono tuffata nello stagno.
+    Avevo bisogno di fare qualcosa di diverso.
+    Mi aspettavo qualcosa di freddo e schifoso, e invece l’acqua era tiepida, quasi avvolgente.
+    Mi ha fatto sentire così al sicuro, vulnerabile in modo piacevole.
+    Mi ha fatto pensare a cosa significhi “casa”.
+    Quella dove vivo è una catapecchia piena di muffa, ma adoro le mie coinquiline.
+    UItimamente però il continuo ricambio di coinqui e le tracce di chi se ne è andata riempie lo spazio di fantasmi, e mi fa sentire precaria.
+    Poi c’è la casa dei miei.
+    Continuo a dire “torno a casa” quando scendo a trovarli, ma a dire il vero è il posto che mi ricorda cosa voglio costruire, ma non quello che voglio abitare.
+    E poi c’è Ennio.
+    In questi anni mi sono chiesta se Ennio possa essere la mia casa, il mio rifugio.
+    Quando l’ho conosciuto non avrei mai pensato che ci saremmo messi assieme.
+    È così solido. Ama il suo lavoro, è quasi pedante nel rispettare i suoi ritmi.
+    Non è una persona che ti fa sdraiare in mezzo a una piazza, ma più uno da sabato a fare la spesa.
+    Ho iniziato a frequentarlo perché pensavo che una persona così solida mi avrebbe permesso di sperimentarmi tantissimo.
+    Avrei potuto fare qualsiasi cazzata, sicura di avere una persona a cui tornare.
+    Col tempo però anche io ho smesso di svolazzare.
+    E non so se è perché sto crescendo, o se perché il suo peso mi tiene a terra.
+    Secondo te una relazione ci cambia? O ci mostra chi siamo davvero?
+    
+    //Risposte
+    
+        + [Risposta verde.]
+            -> color_variation_management(FirstCharacter, greenC)->
+        
+        + [Risposta gialla.]
+            -> color_variation_management(FirstCharacter, yellowC)->
+            
+        + [Risposta blu.]
+            -> color_variation_management(FirstCharacter, blueC)->
+            
+        + [Risposta rossa.]
+            -> color_variation_management(FirstCharacter, redC)->  
+                
+        + [Risposta viola.]
+            //Qualcosa sull'idea che la relazione è una cosa terza, e che esalata alcuni aspetti di noi a scapito di altri.
+            -> color_variation_management(FirstCharacter, purpleC)->
+        - 
+    
+    Una settimana fa mi ha chiesto di andare a convivere.
+    Ho risposto subito di sì, presa dall’entusiasmo.
+    Ma non so se è davvero ciò che voglio.
          
             -> first_char_closing_storylet ->
             -> options_first_character
