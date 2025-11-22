@@ -316,6 +316,7 @@
                 
                 - else:
                    ~ kitchen_secondCharCookingTogetherInvite = false
+                   ~ kitchen_secondCharCookingTogetherWaiting = 0
                    ~ move_entity(SecondCharacter, Pond)
             }
         }
@@ -358,6 +359,7 @@
                 
                 - else:
                    ~ kitchen_firstCharCookingTogetherInvite = false
+                   ~ kitchen_firstCharCookingTogetherWaiting = 0
                    ~ move_entity(FirstCharacter, Pond)
             }
         }

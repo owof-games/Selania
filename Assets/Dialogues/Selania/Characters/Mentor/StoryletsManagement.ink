@@ -2,8 +2,8 @@
 
    Ordine priorità storylets:
    * Con/su Riccio
-   * Tutorial
    * Con/su Chitarra
+   * Tutorial
    * Personali
  ----------------------------------*/
 === mentor_and_second_char_storylets ===
@@ -24,10 +24,34 @@
                 -> second_character_feedback            
             
         - else:
-                -> mentor_tutorial_storylets
+                -> mentor_and_first_char_storylets
     }
 
-
+=== mentor_and_first_char_storylets ===
+{debug: passo da mentor_and_first_char_storylets}
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+    
+{    
+            
+    //Feedback
+        - not first_character_feedback:
+            {
+                - firstChar_storyStatus == story_storyEnded && mentor_pauseTalking == 0:
+                    -> first_character_feedback
+                
+                - else:
+                    -> personal_mentor_storylets    
+            }
+        
+        - else:
+            -> mentor_tutorial_storylets
+    
+ }  
+    
 === mentor_tutorial_storylets
 {debug: passo da mentor_tutorial_storylets}
 {debug: valore di welcome == {welcome}}
@@ -68,36 +92,12 @@
             -> about_not_mandatory_work
             
         - else:
-            -> mentor_and_first_char_storylets    
+            -> personal_mentor_storylets
     
     }
 
 
-=== mentor_and_first_char_storylets ===
-{debug: passo da mentor_and_first_char_storylets}
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp charNameThree = translator(thirdChar_ActualName)
-    ~ temp charNameFour= translator(fourthChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
-    
-{    
-            
-    //Feedback
-        - not first_character_feedback:
-            {
-                - firstChar_storyStatus == story_storyEnded && mentor_pauseTalking == 0:
-                    -> first_character_feedback
-                
-                - else:
-                    -> personal_mentor_storylets    
-            }
-        
-        - else:
-            -> personal_mentor_storylets
-    
- }  
-    
+
 
 === personal_mentor_storylets ===
 {debug: passo da personal_mentor_storylets}
