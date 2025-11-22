@@ -13,37 +13,40 @@ using UnityEngine;
 public class AnalyticsManager : MonoBehaviour
 {
     [Tooltip("The dialogue manager from which we read the changes we're interested in")] [SerializeField]
-    DialogueManagerSingleInk dialogueManager;
+    private DialogueManagerSingleInk dialogueManager;
 
     [Tooltip("The list of variables referring to colors")] [SerializeField]
-    ColorVariable[] colorVariables;
+    private ColorVariable[] colorVariables;
+
+    [Tooltip("The list of extra variables to track as player props, in addiction to colorVariables")] [SerializeField]
+    private string[] extraTrackedVariables;
 
     /// <summary>
     ///     The last value that was computed for a given color.
     /// </summary>
-    readonly Dictionary<string, int> lastComputedColorValue = new();
+    private readonly Dictionary<string, int> lastComputedColorValue = new();
 
     /// <summary>
     ///     The internal name of all the stats that can be set on Talo.
     /// </summary>
-    string[] availableStats;
+    private string[] availableStats;
 
     /// <summary>
     ///     The value of a variable the last time it was observed.
     /// </summary>
-    Dictionary<string, int> lastObservedVariableValue;
+    private Dictionary<string, int> lastObservedVariableValue;
 
     /// <summary>
     ///     All the actions to call in order to unregister the color variable observers.
     /// </summary>
-    List<Action> unregisterActions;
+    private List<Action> unregisterActions;
 
     /// <summary>
     ///     A map between variable names and their relative colors.
     /// </summary>
-    Dictionary<string, string> variableNameToColor;
+    private Dictionary<string, string> variableNameToColor;
 
-    async void Start()
+    private async void Start()
     {
         try
         {
@@ -74,22 +77,19 @@ public class AnalyticsManager : MonoBehaviour
 
             // save the current value of all the variables we're interested in
             lastObservedVariableValue = new Dictionary<string, int>(
-                from colorVariable in colorVariables
+                from variableName in colorVariables.Select(colorVariable => colorVariable.variableName)
+                    .Concat(extraTrackedVariables)
                 select new KeyValuePair<string, int>(
-                    colorVariable.variableName,
-                    GetColorVariableValue(colorVariable)));
+                    variableName,
+                    GetIntVariableValue(variableName)));
 
             Debug.Log("First phase of analytics manager initialization completed.", this);
 
             // check if we can immediately continue with the ink-dependent initialization or must wait for the story to load
             if (dialogueManager.IsInkStoryLoaded)
-            {
                 Initialize();
-            }
             else
-            {
                 dialogueManager.onInkStoryLoaded.AddListener(Initialize);
-            }
         }
         catch (Exception e)
         {
@@ -100,13 +100,41 @@ public class AnalyticsManager : MonoBehaviour
         }
     }
 
-    private int GetColorVariableValue(ColorVariable colorVariable)
+    private void OnDestroy()
     {
-        var variableName = colorVariable.variableName;
-        return GetColorVariableValue(variableName);
+        // de-register all the variable observers when this manager is destroyed
+        if (unregisterActions == null) return;
+
+        foreach (var action in unregisterActions)
+            try
+            {
+                action();
+            }
+            catch (Exception e)
+            {
+                Debug.LogError("Error during de-initialization", this);
+                Debug.LogError(e, this);
+            }
     }
 
-    private int GetColorVariableValue(string variableName)
+#if UNITY_EDITOR
+
+    private void OnValidate()
+    {
+        // fill the dialogueManager variable with the (only) instance
+        if (!dialogueManager) dialogueManager = FindAnyObjectByType<DialogueManagerSingleInk>();
+    }
+
+#endif
+
+    private int GetColorVariableValue(ColorVariable colorVariable)
+    {
+        Debug.Log($"Getting value of variable {colorVariable.variableName}");
+        var variableName = colorVariable.variableName;
+        return GetIntVariableValue(variableName);
+    }
+
+    private int GetIntVariableValue(string variableName)
     {
         var value = dialogueManager.GetVariableValue(variableName);
         switch (value)
@@ -117,10 +145,8 @@ public class AnalyticsManager : MonoBehaviour
             {
                 var roundedValue = Mathf.RoundToInt(floatValue);
                 if (Mathf.Abs(floatValue - roundedValue) > 0.01f)
-                {
                     Debug.LogWarning(
                         $"Got float value {floatValue} for variable ${variableName}, which is not really an integer");
-                }
 
                 return roundedValue;
             }
@@ -130,39 +156,7 @@ public class AnalyticsManager : MonoBehaviour
         }
     }
 
-    void OnDestroy()
-    {
-        // de-register all the variable observers when this manager is destroyed
-        if (unregisterActions == null) return;
-
-        foreach (var action in unregisterActions)
-        {
-            try
-            {
-                action();
-            }
-            catch (Exception e)
-            {
-                Debug.LogError("Error during de-initialization", this);
-                Debug.LogError(e, this);
-            }
-        }
-    }
-
-#if UNITY_EDITOR
-
-    void OnValidate()
-    {
-        // fill the dialogueManager variable with the (only) instance
-        if (!dialogueManager)
-        {
-            dialogueManager = FindAnyObjectByType<DialogueManagerSingleInk>();
-        }
-    }
-
-#endif
-
-    async void Initialize()
+    private async void Initialize()
     {
         try
         {
@@ -174,17 +168,21 @@ public class AnalyticsManager : MonoBehaviour
                 select dialogueManager.RegisterVariableObserver(colorVariable.variableName, OnVariableChange)
             ).ToList();
 
+            // register an observer also for each extra variable
+            unregisterActions.AddRange(from extraTrackedVariable in extraTrackedVariables
+                select dialogueManager.RegisterVariableObserver(extraTrackedVariable, OnVariableChange));
+
             // set a player prop with the current info about every color
             foreach (var color in (from colorVariable in colorVariables select colorVariable.color).Distinct())
-            {
                 await UpdatePlayerPropForColor(color);
-            }
 
-            // set a player prop with the current info about every variable
+            // set a player prop with the current info about every color variable
             foreach (var colorVariable in colorVariables)
-            {
                 await UpdatePlayerPropForColorVariable(colorVariable.variableName);
-            }
+
+            // set a player prop with the current info about every extra variable
+            foreach (var extraTrackedVariable in extraTrackedVariables)
+                await UpdatePlayerPropForVariable(extraTrackedVariable);
 
             // send the updates in block
             await Talo.Players.Update();
@@ -205,27 +203,38 @@ public class AnalyticsManager : MonoBehaviour
     /// </summary>
     /// <param name="variableName">The variable that changed.</param>
     /// <param name="newValue">Its new value.</param>
-    async void OnVariableChange(string variableName, object newValue)
+    private async void OnVariableChange(string variableName, object newValue)
     {
         try
         {
             // extract the color of this variable
-            if (!variableNameToColor.TryGetValue(variableName, out var color))
+            if (variableNameToColor.TryGetValue(variableName, out var color))
+            {
+                // send an event about the variable change.
+                await Talo.Events.Track("variable_changed", ("type", "color"), ("name", variableName),
+                    ("newValue", newValue.ToString()));
+
+                // update the player props
+                await UpdatePlayerPropForColorVariable(variableName);
+                await UpdatePlayerPropForColor(color);
+                await Talo.Players.Update();
+            }
+            else if (extraTrackedVariables.Contains(variableName))
+            {
+                // send an event about the variable change.
+                await Talo.Events.Track("variable_changed", ("type", "extra"), ("name", variableName),
+                    ("newValue", newValue.ToString()));
+
+                // update the player props
+                await UpdatePlayerPropForVariable(variableName);
+                await Talo.Players.Update();
+            }
+            else
             {
                 Debug.LogError(
-                    $"Received notification about the change of variable {variableName}, but this variable has no color associated",
+                    $"Received notification about the change of variable {variableName}, but this variable has no color associated and is not between the extra tracked variables",
                     this);
-                return;
             }
-
-            // send an event about the variable change.
-            await Talo.Events.Track("Variable changed", ("type", "color"), ("name", variableName),
-                ("newValue", newValue.ToString()));
-
-            // update the player props
-            await UpdatePlayerPropForColorVariable(variableName);
-            await UpdatePlayerPropForColor(color);
-            await Talo.Players.Update();
         }
         catch (Exception e)
         {
@@ -237,14 +246,25 @@ public class AnalyticsManager : MonoBehaviour
     }
 
     /// <summary>
+    ///     Update the player props, setting the value of a specific color variable.
+    /// </summary>
+    /// <param name="variableName">The name of the updated color variable.</param>
+    private async Awaitable UpdatePlayerPropForColorVariable(string variableName)
+    {
+        var (oldValue, newValue) = await UpdatePlayerPropForVariable(variableName);
+        await UpdateStat(variableName, oldValue, newValue);
+    }
+
+    /// <summary>
     ///     Update the player props, setting the value of a specific variable.
     /// </summary>
     /// <param name="variableName">The name of the updated variable.</param>
-    async Awaitable UpdatePlayerPropForColorVariable(string variableName)
+    /// <returns>The old and new values of the variable.</returns>
+    private async Awaitable<(int oldValue, int newValue)> UpdatePlayerPropForVariable(string variableName)
     {
         // update data structures to track changes
         var oldValue = lastObservedVariableValue[variableName];
-        var newValue = GetColorVariableValue(variableName);
+        var newValue = GetIntVariableValue(variableName);
         lastObservedVariableValue[variableName] = newValue;
 
         // update player's property and stat
@@ -253,14 +273,14 @@ public class AnalyticsManager : MonoBehaviour
             FormatForTaloPlayerProp(newValue),
             false
         );
-        await UpdateStat(variableName, oldValue, newValue);
+        return (oldValue, newValue);
     }
 
     /// <summary>
     ///     Update the player props, setting the value for a specific color.
     /// </summary>
     /// <param name="color">The color to update.</param>
-    async Awaitable UpdatePlayerPropForColor(string color)
+    private async Awaitable UpdatePlayerPropForColor(string color)
     {
         // compute the sum of all the color variables for the given color
         var totalColor = (from colorVariable in colorVariables
@@ -286,15 +306,12 @@ public class AnalyticsManager : MonoBehaviour
     /// <param name="statName">The stat to update.</param>
     /// <param name="oldValue">The previous value of the stat.</param>
     /// <param name="newValue">The new value of the stat.</param>
-    async Awaitable UpdateStat(string statName, int oldValue, int newValue)
+    private async Awaitable UpdateStat(string statName, int oldValue, int newValue)
     {
         if (availableStats.Contains(statName))
         {
             var delta = newValue - oldValue;
-            if (delta > 0)
-            {
-                await Talo.Stats.Track(statName, delta);
-            }
+            if (delta > 0) await Talo.Stats.Track(statName, delta);
         }
         else
         {
@@ -307,7 +324,7 @@ public class AnalyticsManager : MonoBehaviour
     /// </summary>
     /// <param name="number">The number to format.</param>
     /// <returns>A string containing the number formatted in a convenient way for Talo.</returns>
-    static string FormatForTaloPlayerProp(int number)
+    private static string FormatForTaloPlayerProp(int number)
     {
         return number.ToString("000");
     }
