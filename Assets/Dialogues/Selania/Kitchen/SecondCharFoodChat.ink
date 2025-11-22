@@ -525,6 +525,7 @@ E poi ci saluta e se ne va allo stagno.
 
     -> cooking_animations_off ->
    ~ move_entity(SecondCharacter, Pond)
+   ~ kitchen_secondCharCookingTogetherInvite = false
     -> update_colors(SecondCharacter) ->
     -> check_kitchen_recap ->
 

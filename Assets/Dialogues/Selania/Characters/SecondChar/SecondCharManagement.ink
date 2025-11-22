@@ -37,8 +37,13 @@
         //Tempo che ci impiega a fare la sua ricetta
         VAR kitchen_secondCharCookingMaxTime = 5
     //Nostro invito
+         //l'abbiamo invitata
         VAR kitchen_secondCharCookingTogetherInvite = false
+        //Quante volte l'abbiamo invitata
+        VAR kitchen_secondCharCookingTogetherNumberInvite = 0
+        //Da quanto ci sta aspettando
         VAR kitchen_secondCharCookingTogetherWaiting = 0
+        //Quanta pazienza ha ad aspettarci
         VAR kitchen_secondCharCookingMAXTogetherWaiting = 5
     
     //Valore quarto ingrediente

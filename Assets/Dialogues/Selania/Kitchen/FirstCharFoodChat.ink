@@ -531,7 +531,8 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
 E poi ci saluta e se ne va allo stagno.
 
     -> cooking_animations_off ->
-   ~ move_entity(FirstCharacter, Pond)
+    ~ move_entity(FirstCharacter, Pond)
+    ~ kitchen_firstCharCookingTogetherInvite = false
     -> update_colors(FirstCharacter) ->
     -> check_kitchen_recap -> 
 
