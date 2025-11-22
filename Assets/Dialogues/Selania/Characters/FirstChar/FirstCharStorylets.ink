@@ -414,6 +414,49 @@
             Commento Mentore.
                         
         }
+    Comunque amo vivere con le mie ragazze.
+    Ah, sì, scusa, sto tornando sul pippone delle case di prima.
+    Ma continuo a pensarci, anche perché ho paura che pensi che sono fredda riguardo ad andare a vivere con Ennio.
+    È che dove sto ora non è solo una casa, per nulla, ed è la cosa più figa.
+    Ormai la chiamano “La Rifugia”.
+    All’inizio era solo una battuta perché avevamo sempre ospiti in giro per casa, gente che cercava un appoggio o era nei casini.
+    Ma a forza di ripetere la battuta ci siamo dette: ma se facessimo qualcosa di buono?
+    Da una parte cerchiamo a sgamo di offrire un posto temporaneo a chi è nella cacca.
+    Cosa sempre più pesante con la crisi abitativa e il caro affitti.
+    Dall’altra facciamo incontri informativi con le associazioni di tutela dei coinquilini, con associazioni migranti e altre realtà.
+    E lo so che dirai “blah blah blah” che palle, ma ti giuro che è tutto così vivo.
+    La cosa più viva delle mie giornate.
+    Organizziamo raccolte fondi, e abbiamo fatto una mostra e delle proteste sotto al comune.
+    La mostra è stata un’idea di Valeria, la mia bestie in casa, nonché la nostra cantante, perché abbiamo una band assieme.
+    All’inizio la usavamo solo per sfogarci e raccattare qualche soldino.
+    Ma poi le storie che sentivamo nella rifugia, e le lotte dell’associazione e di altre realtà hanno iniziato a infilarsi nei testi.
+    Ed è una cosa strana scrivere robe politiche, perché diventa difficile mantenere la poesia.
+    Abbiamo mille modi di parlare d’amore, ma i problemi reali sembrano sempre didascalici.
+    Eppure sono convinta che l’arte possa fare tanto per cambiare il mondo.
+    Perché i fatti sono freddi, e l’arte può renderli pieni di calore.
+    Puoi tipo raccontare tutti i femminicidi del mondo e un uomo smonterà ogni dato e movente.
+    Oppure scrivere “*Un violador en tu camino”* e riempire una piazza di forza e rabbia.
+    Suonerà arrogante, ma vorrei per una volta creare qualcosa di altrettanto forte.
+    Qualcosa che sia potente e inappellabile.
+    Qualcosa che salvi il mondo.
+    
+    //In una delle opzioni resti in silenzio. Oppure resti in cinque modi diversi di silenzio?
+        + [Risposta rossa.]
+            -> color_variation_management(FirstCharacter, redC)->  
+                
+        + [Risposta viola.]
+            -> color_variation_management(FirstCharacter, purpleC)->
+    
+        + [Risposta gialla.]
+            -> color_variation_management(FirstCharacter, yellowC)->
+        
+        + [Risposta verde.]
+            -> color_variation_management(FirstCharacter, greenC)->
+
+            
+        + [Risposta blu.]
+            -> color_variation_management(FirstCharacter, blueC)->
+        -    
         
          
             -> first_char_closing_storylet ->
