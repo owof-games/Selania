@@ -457,7 +457,8 @@
         + [Risposta blu.]
             -> color_variation_management(FirstCharacter, blueC)->
         -    
-        
+    A volte mi chiedo se non abbia senso lasciare il lavoro, rischiare tutto, e dedicarmi solo alla musica.
+    Non più per fama e concerti, ma per fare del bene.
          
             -> first_char_closing_storylet ->
             -> options_first_character
@@ -638,7 +639,47 @@
             Commento Mentore.
                         
         }
-   
+        Sai, {player_name}, l’amore non è come me l’aspettavo.
+        Ho avuto qualche altra relazione prima di Ennio, ma quando gli ho detto “Ti amo”, è stato diverso dalle altre volte.
+        Aveva proprio un altro sapore in bocca, non di entusiasmo ma di promessa.
+        I primi mesi sono stati strani: è il fratello di Valeria, e boh, eravamo convinti che si sarebbe arrabbiata.
+        Viverci di nascosto ha reso le cose complicate ma anche, beh, eccitanti.
+        E il giorno in cui Valeria ci ha detto che era felice per noi, il “ti amo” ha cambiato di nuovo sapore.
+        Come pane caldo, una cosa buona e quotidiana.
+        C’è più silenzio ora, quando stiamo assieme.
+        Non mi serve riempire gli spazi di cose intelligenti per paura che lui si annoi.
+        A volte lo osservo giocare al PC mentre coccolo i suoi gatti.
+        Ci sono sere in cui parlo più col suo coinquilino che con lui.
+        E il sesso è una coperta calda e non più una spiaggia torrida.
+        Qualcosa che rassicura, che fa dormire bene.
+        Non so come guardare a tutto questo.
+        Un po’ come quando sei su un treno in stazione, e ne hai un altro fuori dal finestrino.
+        E tu guardi fuori e c’è movimento ma non riesci a capire se stai riprendendo a viaggiare, o se è l’altro treno a spostarsi.
+        Ultimamente Ennio è più insofferente, sente il bisogno di passare più tempo assieme.
+        Credo che sia per questo che mi ha chiesto di andare a convivere.
+        Non mi dice mai “rinuncia a qualcosa per stare con me”.
+        Ma è lì, negli sbuffi quando gli dico che quel fine settimana ho un concerto.
+        O che farò tardi perché siamo a una protesta.
+        Sono mesi che non viene a vedere le cose che facciamo con la Rifugia.
+        Per dargli più tempo non posso di certo smollare il lavoro, c’è solo una cosa che posso togliere dalla mia vita.
+        E a quel punto, ripartirà mai il treno dalla mia stazione?
+        //Risposte
+            
+            + [Risposta verde.]
+                -> color_variation_management(FirstCharacter, greenC)->
+            
+            + [Risposta rossa.]
+                -> color_variation_management(FirstCharacter, redC)->  
+                    
+            + [Risposta viola.]
+                -> color_variation_management(FirstCharacter, purpleC)->
+            
+            + [Risposta gialla.]
+                -> color_variation_management(FirstCharacter, yellowC)->    
+            
+            + [Risposta blu.]
+                -> color_variation_management(FirstCharacter, blueC)->    
+            -    
             
             -> first_char_closing_storylet ->
             -> options_first_character
