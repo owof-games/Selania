@@ -683,7 +683,48 @@
             Commento Mentore.
                         
         }
-         
+        Sai perché litigo tantissimo coi miei?
+        È perché dicono che non so mai accontentarmi.
+        Detto da quelli che mi hanno spedito in quell’inferno di ipercompetitività che il Conservatorio.
+        Per fortuna li ho scagati e non ho fatto classica o a quest’ora starei avvelenando gente per un assolo alla Carnegie Hall.
+        Ma la cosa che mi ferisce è che dicono che sono pretenziosa, quando invece quello che continuo a pensare è di non essere abbastanza.
+        Di non essere all’altezza.
+        Se c’è un’ultima cosa da ammettere con te, qualcosa che mi dia a speranza di uscire da qui, è questa:
+        la persona che sono non è all’altezza delle mie aspettative.
+        Prendi le relazioni: non sono stata capace di tenermi vicina la persona a cui voglio più bene.
+        E non so godermi la solidità che mi regala Ennio.
+        Ma la cosa peggiore è tutta la roba che dico quando parlo di attivismo e della Rifugia e le canzoni che scrivo.
+        Perché sai qual è il sentimento che provo più spesso?
+        Invidia.
+        Quando scrollo su IG e vedo vecchie compagne del conservatorio avere successo, mi rode il culo.
+        Quando le vedo a fare viaggi fighi con tizi fighi e senza la paura di perdere la casa, senza dover fare lavori di merda, muoio dentro.
+        Dio, darei tutto a volte per la loro vita.
+        E so che non è vero, non è vero fino in fondo.
+        So che in un certo senso quella roba è parte di un problema più grande.
+        Lo so, ma non lo “capisco” davvero.
+        Non lo sento fino in fondo.
+        Vorrei solo essere loro, a volte.
+        Provare per una volta un po’ di pace, di sicurezza economica.
+        Forse anche di riconoscimento sociale.
+        Sono una merda, {player_name}, vero?
+        Una delusione.
+        
+        + [Risposta rossa.]
+            -> color_variation_management(FirstCharacter, redC)->  
+                
+        + [Risposta blu.]
+            -> color_variation_management(FirstCharacter, blueC)->
+        
+        + [Risposta gialla.]
+            -> color_variation_management(FirstCharacter, yellowC)->
+        
+        + [Risposta verde.]
+            -> color_variation_management(FirstCharacter, greenC)->     
+            
+        + [Sei responsabile di ciò che fai, non ciò che provi.]
+            -> color_variation_management(FirstCharacter, purpleC)->
+    
+        -     
 
             -> first_char_closing_storylet ->
             -> options_first_character
