@@ -60,11 +60,11 @@
             -> about_nest    
         
         //Invito a leggere la posta nuova    
-        - trainStopContents has FirstCharacterNotes && not first_character_notes && not first_char_new_mail:
+        - trainStopContents has FirstCharacterNotes && not first_character_notes && not first_char_new_mail && mentor_tutorialPauses == false:
             -> first_char_new_mail
         
         //Info sulla non obbligatorietà dei minigames
-        - player_accessiblePlaces has Library or player_accessiblePlaces has Kitchen and not about_not_mandatory_work:
+        - player_accessiblePlaces has Library or player_accessiblePlaces has Kitchen and not about_not_mandatory_work && mentor_tutorialPauses == false:
             -> about_not_mandatory_work
             
         - else:
