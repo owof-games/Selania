@@ -46,53 +46,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 0}
   colorVariables:
-  - variableName: firstPurple
+  - variableName: firstChar_purple
     color: purple
-  - variableName: secondPurple
+  - variableName: secondChar_purple
     color: purple
-  - variableName: thirdPurple
+  - variableName: thirdChar_purple
     color: purple
-  - variableName: fourthPurple
+  - variableName: fourthChar_purple
     color: purple
-  - variableName: fifthPurple
+  - variableName: fifthChar_purple
     color: purple
-  - variableName: firstYellow
+  - variableName: firstChar_yellow
     color: yellow
-  - variableName: secondYellow
+  - variableName: secondChar_Yellow
     color: yellow
-  - variableName: thirdYellow
+  - variableName: thirdChar_yellow
     color: yellow
-  - variableName: fourthYellow
+  - variableName: fourthChar_yellow
     color: yellow
-  - variableName: fifthYellow
+  - variableName: fifthChar_yellow
     color: yellow
-  - variableName: firstBlue
+  - variableName: firstChar_blue
     color: blue
-  - variableName: secondBlue
+  - variableName: secondChar_Blue
     color: blue
-  - variableName: thirdBlue
+  - variableName: thirdChar_blue
     color: blue
-  - variableName: fourthBlue
+  - variableName: fourthChar_blue
     color: blue
-  - variableName: fifthBlue
+  - variableName: fifthChar_blue
     color: blue
-  - variableName: firstGreen
+  - variableName: firstChar_green
     color: green
-  - variableName: secondGreen
+  - variableName: secondChar_Green
     color: green
-  - variableName: thirdGreen
+  - variableName: thirdChar_green
     color: green
-  - variableName: fourthGreen
+  - variableName: fourthChar_green
     color: green
-  - variableName: fifthGreen
+  - variableName: fifthChar_green
     color: green
-  - variableName: firstRed
+  - variableName: firstChar_red
     color: red
-  - variableName: secondRed
+  - variableName: secondChar_Red
     color: red
-  - variableName: thirdRed
+  - variableName: thirdChar_red
     color: red
-  - variableName: fourthRed
+  - variableName: fourthChar_red
     color: red
-  - variableName: fifthRed
+  - variableName: fifthChar_red
     color: red
+  extraTrackedVariables:
+  - saturationVar
+  - book_BGVariations
