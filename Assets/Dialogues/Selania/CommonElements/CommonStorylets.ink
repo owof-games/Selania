@@ -109,8 +109,6 @@
             ~ actual_speaker = ()
         -> main
 
-
-
 === special_mission_one_dialogue
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -145,6 +143,50 @@
         ~ actual_speaker = ()
         -> main
     
+    
+=== first_mentor_chit_chat
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+    
+    C: No, non scherzo, {mentorName}, ti invidio un sacco.
+    C: Hai uno scopo chiaro.
+    C: E fai qualcosa di buono per le altre persone.
+    C: Mi sembra la cosa migliore che possa capitare nella vita.
+    M: Anche tu hai uno scopo, {charNameOne}.
+    M: Tutti l’abbiamo.
+    C: E quale sarebbe il mio?
+    M: Un po’ lo scoprirai da te, parlando con {player_name}.
+    M: Ma una cosa è certa: se non saprai trovare il bello in ciò che già hai, non sarai felice nemmeno quando avrai un nuovo nome.
+    M: La felicità non è un luogo da raggiungere, ma qualcosa che si ha dentro.
+    C: Mmm.
+    C: Certo.
+    C: Scusa {mentorName}, però un po’ mi viene da dirti che è facile dirlo, quando fai già quello che ami.
+    C: è una posizione privilegiata.
+    M: è un privilegio che mi sono creata, accogliendo il bello anche nelle cose difficili.
+    C: {player_name}, tu cosa pensi?
+    C: La felicità è questa roba che dice {mentorName}?
+    C: Che te la ritrovi se ti fai andare bene quello che hai?
+    M: O quello che dice {charNameOne}.
+    M: Qualcosa che è sempre altrove e quindi irraggiungibile?
+    
+        + [{mentorName} parla di resa.]
+            -> color_variation_management(FirstCharacter, redC)->
+            //Mettere variante mentore o quel che sarà -> color_variation_management(PG, blueC)->
+                
+        + [Risposta blu.]
+            -> color_variation_management(FirstCharacter, blueC)->
+        
+        + [Risposta gialla.]
+            -> color_variation_management(FirstCharacter, yellowC)->
+        
+        + [Risposta verde.]
+            -> color_variation_management(FirstCharacter, greenC)->     
+            
+        + [Risposta viola.]
+            -> color_variation_management(FirstCharacter, purpleC)->
+        -
 
+-> main
 
 
