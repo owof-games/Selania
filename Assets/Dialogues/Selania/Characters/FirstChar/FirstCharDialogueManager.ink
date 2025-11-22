@@ -20,7 +20,11 @@
 
             - firstChar_pauseTalking == 0:
                 -> knowing_first_character
-
+            
+            //Chitarra sta cucinando ed entriamo in cucina
+            - are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && kitchen_firstCharIsCooking == true:
+                -> first_char_cooking_alone
+            
             - else:
                 -> options_first_character
         }

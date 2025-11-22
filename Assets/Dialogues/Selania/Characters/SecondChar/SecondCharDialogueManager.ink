@@ -23,6 +23,10 @@
             - secondChar_pauseTalking == 0:
                 -> knowing_second_character
 
+            //Riccio sta cucinando ed entriamo in cucina
+            - are_two_entities_together(SecondCharacter, PG) && entity_location(PG) == Kitchen && kitchen_secondCharIsCooking == true:
+                -> second_char_cooking_alone    
+
             - else:
                 -> options_second_character
         }
