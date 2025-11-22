@@ -156,6 +156,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
         FillChoicesTextMeshPro(choicesNest, ref choicesTextNest);
 
         story = new Story(inkAssetJSON.text);
+        
+        story.onDidContinue += StoryOnDidContinue;
 
         if (!LoadGame())
         {
@@ -175,6 +177,74 @@ public class DialogueManagerSingleInk : MonoBehaviour
         DisableDialoguePanel();
 
         InkStoryLoaded();
+    }
+
+    [Serializable]
+    public class StoryStepEvent
+    {
+        private Story _story;
+
+        private void CheckEnabled()
+        {
+            if(_story == null) throw new Exception("This StoryStep is disabled, and probably used outside of its validity");
+        }
+        
+        public void Enable(Story story)
+        {
+            _story = story;
+        }
+
+        public void Disable()
+        {
+            _story = null;
+        }
+
+        public string PreviousPathString
+        {
+            get
+            {
+                CheckEnabled();
+                return _story.state.previousPathString;
+            }
+        }
+
+        public string CurrentText
+        {
+            get
+            {
+                CheckEnabled();
+                return _story.currentText;
+            }
+        }
+
+        public bool HasChoices
+        {
+            get
+            {
+                CheckEnabled();
+                return _story.currentChoices.Count > 0;
+            }
+        }
+
+        public bool IsCommand
+        {
+            get
+            {
+                CheckEnabled();
+                return _story.currentText.StartsWith('@');
+            }
+        }
+    }
+    
+    public UnityEvent<StoryStepEvent> onStoryStep;
+    private StoryStepEvent _storyStepEvent;
+
+    private void StoryOnDidContinue()
+    {
+        _storyStepEvent ??= new StoryStepEvent();
+        _storyStepEvent.Enable(story);
+        onStoryStep.Invoke(_storyStepEvent);
+        _storyStepEvent.Disable();
     }
 
     private void FillChoicesTextMeshPro(GameObject[] choicesGameObjects, ref TextMeshProUGUI[] choicesTextMeshPros)

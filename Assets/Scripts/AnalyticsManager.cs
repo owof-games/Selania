@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using TaloGameServices;
 using UnityEngine;
 
@@ -25,6 +26,11 @@ public class AnalyticsManager : MonoBehaviour
     ///     The last value that was computed for a given color.
     /// </summary>
     private readonly Dictionary<string, int> lastComputedColorValue = new();
+
+    /// <summary>
+    ///     The info about the last line with choices, or null if the last line had no choices.
+    /// </summary>
+    private LastLineWithChoices _lastLineWithChoices;
 
     /// <summary>
     ///     The internal name of all the stats that can be set on Talo.
@@ -172,17 +178,20 @@ public class AnalyticsManager : MonoBehaviour
             unregisterActions.AddRange(from extraTrackedVariable in extraTrackedVariables
                 select dialogueManager.RegisterVariableObserver(extraTrackedVariable, OnExtraVariableChanged));
 
+            // register an observer for the changes in story step
+            dialogueManager.onStoryStep.AddListener(OnStoryStep);
+
             // set a player prop with the current info about every color
             foreach (var color in (from colorVariable in colorVariables select colorVariable.color).Distinct())
                 await UpdateTaloForColorChange(color);
 
             // set a player prop with the current info about every color+character
             foreach (var colorVariable in colorVariables)
-                await UpdateTaloForColorVariableChange(colorVariable);
+                await UpdateTaloForColorVariableChange(colorVariable, true);
 
             // set a player prop with the current info about every extra variable
             foreach (var extraTrackedVariable in extraTrackedVariables)
-                await UpdatePlayerPropForVariable(extraTrackedVariable);
+                await UpdatePlayerPropForVariable(extraTrackedVariable, true);
 
             // send the updates in block
             await Talo.Players.Update();
@@ -198,6 +207,18 @@ public class AnalyticsManager : MonoBehaviour
         }
     }
 
+    private void OnStoryStep(DialogueManagerSingleInk.StoryStepEvent storyStepEvent)
+    {
+        // update _lastLineWithChoices according to the current line, to use when a color changes
+        if (!storyStepEvent.HasChoices || storyStepEvent.IsCommand) return;
+
+        _lastLineWithChoices = new LastLineWithChoices
+        {
+            CurrentText = storyStepEvent.CurrentText.Trim(),
+            PreviousPathString = storyStepEvent.PreviousPathString
+        };
+    }
+
     /// <summary>
     ///     Callback method invoked whenever a color variable changed.
     /// </summary>
@@ -207,24 +228,46 @@ public class AnalyticsManager : MonoBehaviour
     {
         try
         {
-            // extract the color of this variable
-            if (variableNameToColor.TryGetValue(variableName, out var colorVariable))
-            {
-                // send an event about the variable change.
-                await Talo.Events.Track("variable_changed", ("type", "color"), ("name", variableName),
-                    ("newValue", newValue.ToString()));
+            // cache the value in the local stack since we're an async void method, and execution can go on without waiting
+            // for the async method to finish
+            var lastLineWithChoices = _lastLineWithChoices;
 
-                // update the player props
-                await UpdateTaloForColorVariableChange(colorVariable);
-                await UpdateTaloForColorChange(colorVariable.color);
-                await Talo.Players.Update();
-            }
-            else
+            // create a context to update the player props and stats at once, and only if something actually changed
+            await using var taloPlayersUpdateContext = new TaloPlayersUpdateContext();
+
+            // extract the color of this variable
+            if (!variableNameToColor.TryGetValue(variableName, out var colorVariable))
             {
                 Debug.LogError(
                     $"Received notification about the change of color variable {variableName}, but this variable has no color associated and is not between the extra tracked variables",
                     this);
+                return;
             }
+
+            // update the color player props and stats
+            var actuallyUpdated = await UpdateTaloForColorVariableChange(colorVariable);
+            if (!actuallyUpdated) return; // nothing actually changed, so we can skip the rest of the steps
+
+            taloPlayersUpdateContext.Changed();
+            await UpdateTaloForColorChange(colorVariable.color);
+
+            // send an event about the variable change.
+            await Talo.Events.Track("variable_changed", ("type", "color"), ("name", variableName),
+                ("newValue", newValue.ToString()));
+
+            // update the choice player props and send events
+            if (lastLineWithChoices == null)
+            {
+                Debug.LogError("Received a color change event before any choice was faced by the player.");
+                return;
+            }
+
+            await Talo.CurrentPlayer.SetProp($"choice_color_{lastLineWithChoices.PreviousPathString}_text",
+                lastLineWithChoices.CurrentText, false);
+            await Talo.CurrentPlayer.SetProp($"choice_color_{lastLineWithChoices.PreviousPathString}_color",
+                colorVariable.color, false);
+            await Talo.Events.Track("color_choice_taken", ("path", lastLineWithChoices.PreviousPathString),
+                ("text", lastLineWithChoices.CurrentText), ("color", colorVariable.color));
         }
         catch (Exception e)
         {
@@ -246,13 +289,15 @@ public class AnalyticsManager : MonoBehaviour
         {
             if (extraTrackedVariables.Contains(variableName))
             {
+                await using var taloPlayersUpdateContext = new TaloPlayersUpdateContext();
+
                 // send an event about the variable change.
                 await Talo.Events.Track("variable_changed", ("type", "extra"), ("name", variableName),
                     ("newValue", newValue.ToString()));
 
                 // update the player props
                 await UpdatePlayerPropForVariable(variableName);
-                await Talo.Players.Update();
+                taloPlayersUpdateContext.Changed();
             }
             else
             {
@@ -274,12 +319,21 @@ public class AnalyticsManager : MonoBehaviour
     ///     Update the player props, setting the value of a specific color variable.
     /// </summary>
     /// <param name="colorVariable">The color variable to update.</param>
-    private async Awaitable UpdateTaloForColorVariableChange(ColorVariable colorVariable)
+    /// <param name="forceUpdate">
+    ///     Whether to force the update of the prop on the Talo side even when it didn't actually change
+    ///     locally; this is useful during initialization.
+    /// </param>
+    /// <returns>Whether the value was actually different from the previous value</returns>
+    private async Awaitable<bool> UpdateTaloForColorVariableChange(ColorVariable colorVariable,
+        bool forceUpdate = false)
     {
-        // update the player prop
-        var (oldValue, newValue) = await UpdatePlayerPropForVariable(colorVariable.variableName);
-        // and then update the global stat
-        await UpdateTaloStat($"character_{colorVariable.character}_{colorVariable.color}", oldValue, newValue);
+        // try to update the player prop, if necessary
+        var (oldValue, newValue) = await UpdatePlayerPropForVariable(colorVariable.variableName, forceUpdate);
+        // Update the stat too (if necessary)
+        if (forceUpdate || oldValue != newValue)
+            await UpdateTaloStat($"character_{colorVariable.character}_{colorVariable.color}", oldValue, newValue);
+
+        return oldValue != newValue;
     }
 
     /// <summary>
@@ -305,8 +359,13 @@ public class AnalyticsManager : MonoBehaviour
     ///     Update the player props, setting the value of a specific variable.
     /// </summary>
     /// <param name="variableName">The name of the updated variable.</param>
+    /// <param name="forceUpdate">
+    ///     Whether to force the update of the prop on the Talo side even when it didn't actually change
+    ///     locally; this is useful during initialization.
+    /// </param>
     /// <returns>The old and new values of the variable.</returns>
-    private async Awaitable<(int oldValue, int newValue)> UpdatePlayerPropForVariable(string variableName)
+    private async Awaitable<(int oldValue, int newValue)> UpdatePlayerPropForVariable(string variableName,
+        bool forceUpdate = false)
     {
         // update data structures to track changes
         var oldValue = lastObservedVariableValue[variableName];
@@ -314,11 +373,13 @@ public class AnalyticsManager : MonoBehaviour
         lastObservedVariableValue[variableName] = newValue;
 
         // update player's property and stat
-        await Talo.CurrentPlayer.SetProp(
-            $"variable_{variableName}",
-            FormatForTaloPlayerProp(newValue),
-            false
-        );
+        if (forceUpdate || oldValue != newValue)
+            await Talo.CurrentPlayer.SetProp(
+                $"variable_{variableName}",
+                FormatForTaloPlayerProp(newValue),
+                false
+            );
+
         return (oldValue, newValue);
     }
 
@@ -360,6 +421,31 @@ public class AnalyticsManager : MonoBehaviour
     private static string FormatForTaloPlayerProp(int number)
     {
         return number.ToString("000");
+    }
+
+    /// <summary>
+    ///     Class to pack together all the information we need in case we faced a choice with a color change.
+    /// </summary>
+    private class LastLineWithChoices
+    {
+        public string CurrentText;
+        public string PreviousPathString;
+    }
+
+    private sealed class TaloPlayersUpdateContext : IAsyncDisposable
+    {
+        private bool _changed;
+
+        public async ValueTask DisposeAsync()
+        {
+            if (!_changed) return;
+            await Talo.Players.Update();
+        }
+
+        public void Changed()
+        {
+            _changed = true;
+        }
     }
 
     /// <summary>
