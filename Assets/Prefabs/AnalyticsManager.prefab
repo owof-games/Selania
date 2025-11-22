@@ -48,54 +48,79 @@ MonoBehaviour:
   colorVariables:
   - variableName: firstChar_purple
     color: purple
+    character: first
   - variableName: secondChar_purple
     color: purple
+    character: second
   - variableName: thirdChar_purple
     color: purple
+    character: third
   - variableName: fourthChar_purple
     color: purple
+    character: fourth
   - variableName: fifthChar_purple
     color: purple
+    character: fifth
   - variableName: firstChar_yellow
     color: yellow
+    character: first
   - variableName: secondChar_Yellow
     color: yellow
+    character: second
   - variableName: thirdChar_yellow
     color: yellow
+    character: third
   - variableName: fourthChar_yellow
     color: yellow
+    character: fourth
   - variableName: fifthChar_yellow
     color: yellow
+    character: fifth
   - variableName: firstChar_blue
     color: blue
+    character: first
   - variableName: secondChar_Blue
     color: blue
+    character: second
   - variableName: thirdChar_blue
     color: blue
+    character: third
   - variableName: fourthChar_blue
     color: blue
+    character: fourth
   - variableName: fifthChar_blue
     color: blue
+    character: fifth
   - variableName: firstChar_green
     color: green
+    character: first
   - variableName: secondChar_Green
     color: green
+    character: second
   - variableName: thirdChar_green
     color: green
+    character: third
   - variableName: fourthChar_green
     color: green
+    character: fourth
   - variableName: fifthChar_green
     color: green
+    character: fifth
   - variableName: firstChar_red
     color: red
+    character: first
   - variableName: secondChar_Red
     color: red
+    character: second
   - variableName: thirdChar_red
     color: red
+    character: third
   - variableName: fourthChar_red
     color: red
+    character: fourth
   - variableName: fifthChar_red
     color: red
+    character: fifth
   extraTrackedVariables:
   - saturationVar
   - book_BGVariations
