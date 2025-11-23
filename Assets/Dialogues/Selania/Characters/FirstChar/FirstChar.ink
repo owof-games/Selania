@@ -61,7 +61,11 @@
             In bocca al lupo per tutte le tue assurde avventure in questo posto!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             E non ti abbraccio, ma un po' è come se l'avessi fatto.
             Ciao!
+                
+                ~ temp currentPlace = entity_location(PG)
                 ~ move_entity(FirstCharacter, Safekeeping)
+                
+                ~ move_entity(TrainNoiseGoingAway, currentPlace)
                 ~ firstChar_mailPause = firstChar_mailPauseDuration
                 
             

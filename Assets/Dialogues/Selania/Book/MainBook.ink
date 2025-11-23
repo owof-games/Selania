@@ -6,9 +6,14 @@
 
 //Gestione suoni (per evitare che mi parta il suono del treno quando si è attivato e apro e chiudo il libro e non ho cambiato luogo)
     {
-        - safekeepingContents hasnt TrainNoise:
-            ~ move_entity(TrainNoise, Safekeeping)
+        - safekeepingContents hasnt TrainNoiseComing:
+            ~ move_entity(TrainNoiseComing, Safekeeping)
     }
+    {
+        - safekeepingContents hasnt TrainNoiseGoingAway:
+            ~ move_entity(TrainNoiseGoingAway, Safekeeping)
+    }
+
 
     -> main
 

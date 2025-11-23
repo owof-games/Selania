@@ -18,6 +18,6 @@
     
     LIST listRoomElements = RoomExit, RoomLoad, cultivationKit,  teaKit, littleLibrary, bowl, vase, miniBook, nightTable, settings, firstCharPaint, secondCharPaint, thirdCharPaint, fourthCharPaint, fifthCharPaint
     
-    LIST listSounds = TrainNoise, TrainNoiseGoingAway, BastonSound
+    LIST listSounds = TrainNoiseComing, TrainNoiseGoingAway, BastonSound
     
     LIST listColoredShells = redShell, yellowShell, blueShell, greenShell, purpleShell    

@@ -34,21 +34,21 @@
         - player_movementsCounter == firstChar_delay && firstChar_storyStatus == story_storyNotStarted:
         {debug: introduco {FirstCharacter} in scena.}
                 ~ move_entity(FirstCharacter, TrainStop)
-                ~ move_entity(TrainNoise, CurrentLocation)
+                ~ move_entity(TrainNoiseComing, CurrentLocation)
                 ~ firstChar_storyStatus = story_storyStarted
                 
         //Dopo due steps della storia della prima personaggia, compare la seconda      
         - first_char_main_storylets.two && secondChar_storyStatus == story_storyNotStarted:
         {debug: introduco {SecondCharacter} in scena.}
                 ~ move_entity(SecondCharacter, TrainStop)
-                ~ move_entity(TrainNoise, CurrentLocation)
+                ~ move_entity(TrainNoiseComing, CurrentLocation)
                 ~ secondChar_storyStatus = story_storyStarted
     
         //Dopo aver aperto la biblioteca, compare il terzo png
         //- open_the_library && not (thirdChar_storyStatus == story_storyStarted):
             //{debug: introduco {ThirdCharacter} in scena.}
                 // ~ move_entity(ThirdCharacter, TrainStop)
-                // ~ move_entity(TrainNoise, CurrentLocation)
+                // ~ move_entity(TrainNoiseComing, CurrentLocation)
                 // ~ thirdChar_storyStatus = story_storyStarted
                 
         //X movimenti dopo la furia della mentore, compare la quarta png
@@ -64,7 +64,7 @@
                     
         //E quando la storia della quarta è a cinque steps, parte la storia della mentore
         //- knowing_fourth_character.five && fifthChar_storyStatus == story_storyNotStarted && qualcosa per cui abbiamo tocca l'uovo almeno una volta:
-                // ~ move_entity(TrainNoise, CurrentLocation)
+                // ~ move_entity(TrainNoiseComing, CurrentLocation)
                 //{debug: introduco {FifthCharacter} in scena.}
                 //~ fifthChar_storyStatus == story_storyStarted:
                 //cambiamento asset per mentore, che passa a mostrone
@@ -197,6 +197,20 @@
     {second_char_main_storylets.three.theFrog && entity_location(TheFrog)!=Pond:
             {debug: Ho spostato la rana allo stagno.}
            ~  move_entity(TheFrog, Pond)
+    }
+    
+    
+    //Se la storia della PNG è conclusa, la spostiamo nella foresta, così poi si può spostare in stazione e da lì sentiamo il treno partire.
+    {
+
+        - firstChar_storyStatus == story_storyEnded:  
+            ~  move_entity(FirstCharacter, Forest)
+    }
+    
+    {
+
+        - secondChar_storyStatus == story_storyEnded:  
+            ~  move_entity(SecondCharacter, Forest)
     }
     
     -> randomize_png_location
@@ -367,10 +381,15 @@
     
 //Gestione suoni
     {
-        - safekeepingContents hasnt TrainNoise:
-            ~ move_entity(TrainNoise, Safekeeping)
+        - safekeepingContents hasnt TrainNoiseComing:
+            ~ move_entity(TrainNoiseComing, Safekeeping)
     }
 
+
+    {
+        - safekeepingContents hasnt TrainNoiseGoingAway:
+            ~ move_entity(TrainNoiseGoingAway, Safekeeping)
+    }
                  
 
 //Pause speciali tra un dialogo e l'altro
