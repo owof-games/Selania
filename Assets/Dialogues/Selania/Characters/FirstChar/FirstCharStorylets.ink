@@ -8,9 +8,9 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ firstChar_storyletsForRewritingCount ++
         
-        Ehi, ciao!
-        Non è che hai visto in giro la versione umana di un pettirosso?
-        Una persona rossiccia, morbidosa e che sembra sempre un po’ pissata?
+        Ehi, ciao!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        Non è che hai visto in giro la versione umana di un pettirosso?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        Una persona rossiccia, morbidosa e che sembra sempre un po’ pissata?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Si chiama Talco e parla solo di Florence and the Machine.
         Anzi, *parlava* solo di Florence.
         Poi c’è stata quell’altra roba.

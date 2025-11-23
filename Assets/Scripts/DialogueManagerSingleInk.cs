@@ -59,6 +59,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
     [SerializeField] private Animator inkAnimatorD;
 
     //Elementi per la gestione delle parole emozionali
+    [SerializeField] private GameObject displayEWPanel;
     [SerializeField] private TextMeshProUGUI displayEWText;
 
     [Header("Background setting")] [SerializeField]
@@ -537,6 +538,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     private void HandleTags(List<string> currentTags)
     {
+        var ewTagPresent = false;
         foreach (string tag in currentTags)
         {
             string[] splitTag = tag.Split(':');
@@ -605,7 +607,16 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     break;
 
                 case EW_TAG:
-                    displayEWText.text = tagValue;
+                    ewTagPresent = true;
+                    if (string.IsNullOrWhiteSpace(tagValue))
+                    {
+                        displayEWPanel.SetActive(false);
+                    }
+                    else
+                    {
+                        displayEWPanel.SetActive(true);
+                        displayEWText.text = tagValue;
+                    }
                     Debug.Log("ewWord" + tagValue);
                     break;
                     
@@ -615,6 +626,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     break;
             }
         }
+        
+        if(!ewTagPresent) displayEWPanel.SetActive(false);
     }
 
     private string lastMusicValue;
