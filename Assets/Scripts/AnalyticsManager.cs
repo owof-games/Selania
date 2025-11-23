@@ -66,10 +66,12 @@ public class AnalyticsManager : MonoBehaviour
             }
 
             // initialize talo by identifying the player in a unique way
-            var id = PlayerPrefs.GetString("talo-id", Guid.NewGuid().ToString());
+            var playerId = PlayerPrefs.GetString("talo-id", Guid.NewGuid().ToString());
+            var id = Guid.NewGuid().ToString();
             await Talo.Players.Identify("custom", id);
-            PlayerPrefs.SetString("talo-id", id);
-            Debug.Log($"Talo initialized; user id is {id}", this);
+            await Talo.CurrentPlayer.SetProp("player_id", playerId);
+            PlayerPrefs.SetString("talo-id", playerId);
+            Debug.Log($"Talo initialized; user id is {playerId}, session id is {id}", this);
 
             // save the internal name of all the stats we can use
             availableStats = (await Talo.Stats.GetStats()).Select(stat => stat.internalName).ToArray();
