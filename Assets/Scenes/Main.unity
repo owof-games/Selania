@@ -8186,7 +8186,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7867675, y: -0.57725114}
   m_AnchorMax: {x: 0.9970842, y: -0.28000176}
-  m_AnchoredPosition: {x: 0, y: 16.99997}
+  m_AnchoredPosition: {x: 0, y: 17}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &481896148
@@ -9745,8 +9745,9 @@ GameObject:
   - component: {fileID: 607475366}
   - component: {fileID: 607475368}
   - component: {fileID: 607475367}
+  - component: {fileID: 607475369}
   m_Layer: 5
-  m_Name: TrainNoise
+  m_Name: TrainNoiseComing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9784,7 +9785,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 2eed8924178fe774086ad21c002d0d88, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.56
+  m_Volume: 0.554
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9794,7 +9795,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 1
+  Pan2D: 0.09
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -9912,6 +9913,28 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &607475369
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607475365}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8bf077b0547abe84f93294efd4d6e76b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &617244497
 GameObject:
   m_ObjectHideFlags: 0
@@ -29852,6 +29875,7 @@ MonoBehaviour:
   - {fileID: 760274119}
   - {fileID: 1569184872}
   - {fileID: 607475365}
+  - {fileID: 368941955}
   - {fileID: 856353203}
   - {fileID: 937375254}
   - {fileID: 112976945}
@@ -29947,7 +29971,6 @@ MonoBehaviour:
   - {fileID: 551789393}
   - {fileID: 27236686}
   - {fileID: 543492529}
-  - {fileID: 368941955}
   displayNameText: {fileID: 1171737394}
   portraitAnimator: {fileID: 1021419974}
   inkAnimatorA: {fileID: 53077552}
