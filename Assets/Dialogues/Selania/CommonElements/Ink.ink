@@ -17,6 +17,17 @@
     VAR fifthChar_maximum_inkLevel = ink_empty
     
 === function fromRelationshipToInk(Relationship)
+TODO: invece di passare, e.g., firstChar_relationshipStatus, passare FirstCharacter.
+/*
+{character:
+    - FirstCharacter:
+        ~ Relationship = firstChar_relationshipStatus
+        ~ Ink = firstChar_InkLevel
+    - SecondCharacter:
+        ...
+}
+Il secondo IF rimane com'è
+*/
 //Chiamo questa funzione quando sto per partire con la riscrittura, in modo da aggiornare il valore di inchiostro in base alla relazione sviluppata
 {debug: passo da fromRelationshipToInk.}
 
