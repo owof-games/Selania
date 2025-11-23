@@ -1,4 +1,4 @@
-~ SEED_RANDOM(246)
+    VAR debug_seedRandom = true
 
 //Per abilitare o meno i debug
     VAR debug = false
@@ -20,3 +20,6 @@
     
     
     
+{debug_seedRandom:
+    ~ SEED_RANDOM(246)
+}
