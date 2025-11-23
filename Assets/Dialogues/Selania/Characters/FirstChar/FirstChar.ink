@@ -11,7 +11,7 @@
             
         
             = ink_outcome    
-                Dopo il tuo dono {inkTranslator(firstChar_InkLevel)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                Dopo il tuo dono {inkTranslator(FirstCharacter)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                     
                     ~ mentor_tutorialPauses = false
                         -> main

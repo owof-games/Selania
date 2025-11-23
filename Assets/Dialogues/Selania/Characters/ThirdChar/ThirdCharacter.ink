@@ -464,7 +464,7 @@ Stai per donare qualcosa a {charNameThree}.
         
     
         = ink_outcome    
-            Dopo il tuo dono {inkTranslator(thirdChar_InkLevel)}.
+            Dopo il tuo dono {inkTranslator(ThirdCharacter)}.
                 
                 ~ mentor_tutorialPauses = false
                  -> talk_with_third_character

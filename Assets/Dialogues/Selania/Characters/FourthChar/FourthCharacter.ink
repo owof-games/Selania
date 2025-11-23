@@ -462,7 +462,7 @@ Stai per donare qualcosa a {charNameThree}.
         
     
         = ink_outcome    
-            Dopo il tuo dono {inkTranslator(fourthChar_InkLevel)}.
+            Dopo il tuo dono {inkTranslator(FourthCharacter)}.
                 
                  -> talk_with_fourth_character
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco

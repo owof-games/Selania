@@ -9,7 +9,7 @@
             
         
             = ink_outcome
-                Dopo il tuo dono {inkTranslator(secondChar_InkLevel)}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                Dopo il tuo dono {inkTranslator(SecondCharacter)}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                     
                      -> main
 

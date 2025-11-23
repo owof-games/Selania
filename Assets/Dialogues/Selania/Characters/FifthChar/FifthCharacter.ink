@@ -634,7 +634,7 @@ Stai per donare qualcosa a {charNameFive}. #speaker:{witch_tag()}
         
     
         = ink_outcome    
-            Dopo il tuo dono {inkTranslator(secondChar_InkLevel)}.
+            Dopo il tuo dono {inkTranslator(FifthCharacter)}.
             
                  -> talk_with_fifth_character
             //queste opzioni poi non saranno scelte dirette, ma risultati delle scelte fatte durante il gioco

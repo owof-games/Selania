@@ -16,12 +16,11 @@
     VAR fourthChar_maximum_inkLevel = ink_empty
     VAR fifthChar_maximum_inkLevel = ink_empty
     
-=== function fromRelationshipToInk(Relationship)
-TODO: invece di passare, e.g., firstChar_relationshipStatus, passare FirstCharacter.
+=== function fromRelationshipToInk(Character)
 /*
 {character:
     - FirstCharacter:
-        ~ Relationship = firstChar_relationshipStatus
+        ~ Character = firstChar_relationshipStatus
         ~ Ink = firstChar_InkLevel
     - SecondCharacter:
         ...
@@ -31,37 +30,42 @@ Il secondo IF rimane com'è
 //Chiamo questa funzione quando sto per partire con la riscrittura, in modo da aggiornare il valore di inchiostro in base alla relazione sviluppata
 {debug: passo da fromRelationshipToInk.}
 
-    {
-        - Relationship == firstChar_relationshipStatus:
+    {Character:
+        - FirstCharacter:
+            ~ Character = firstChar_relationshipStatus
             ~ Ink = firstChar_InkLevel
         
-        - Relationship == secondChar_relationshipStatus:
+        - SecondCharacter:
+            ~ Character = secondChar_relationshipStatus
             ~ Ink = secondChar_InkLevel
         
-        - Relationship == thirdChar_relationshipStatus:
+        - ThirdCharacter:
+            ~ Character = thirdChar_relationshipStatus
             ~ Ink = thirdChar_InkLevel
             
-        - Relationship == fourthChar_relationshipStatus:
+        - FourthCharacter:
+            ~ Character = fourthChar_relationshipStatus
             ~ Ink = fourthChar_InkLevel
         
-        - Relationship == fifthChar_relationshipStatus:
+        - FifthCharacter:
+            ~ Character = fifthChar_relationshipStatus
             ~ Ink = fifthChar_InkLevel    
             
     }
     
     {
     
-        - Relationship == 0:
-            {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {Relationship}, {Ink}.}
+        - Character == 0:
+            {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {Character}, {Ink}.}
             
-        - Relationship == 1:
+        - Character == 1:
             ~ Ink ++
-            {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {Relationship}, {Ink}.}
+            {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {Character}, {Ink}.}
             
-        - Relationship == 2:
+        - Character == 2:
             ~ Ink ++
             ~ Ink ++
-            {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {Relationship}, {Ink}.}
+            {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {Character}, {Ink}.}
                
     }
     
@@ -70,23 +74,24 @@ Il secondo IF rimane com'è
 
 
 //Formula chiamata prima dello statement, per tenere conto del rapporto effettivo.
-=== function inkLevel(InkLevel)
+=== function inkLevel(Character)
 {debug: passo da inkLevel.}
 
-    {
-        - InkLevel == firstChar_InkLevel:
+    {Character:
+    
+        - FirstCharacter:
             ~ Ink = firstChar_InkLevel
 
-        - InkLevel == secondChar_InkLevel:
+        - SecondCharacter:
             ~ Ink = secondChar_InkLevel
 
-        - InkLevel == thirdChar_InkLevel:
+        - ThirdCharacter:
             ~ Ink = thirdChar_InkLevel
             
-        - InkLevel == fourthChar_InkLevel:
+        - FourthCharacter:
             ~ Ink = fourthChar_InkLevel
         
-        - InkLevel == fifthChar_InkLevel:
+        - FifthCharacter:
             ~ Ink = fifthChar_InkLevel 
             
     }
@@ -103,19 +108,19 @@ Il secondo IF rimane com'è
         - ink_high:
             Dopo il dono consegnato e il rapporto creato, {player_name} ha quattro goccie di inchiostro a disposizione. Potrà fare la riscrittura garantita e altri tre riscritture extra. E riceverà un'informazione importante.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 {
-                    - InkLevel == firstChar_InkLevel:
+                    - Character == FirstCharacter:
                         ~ firstChar_specialEvent = true
                     
-                    - InkLevel == secondChar_InkLevel:
+                    - Character == SecondCharacter:
                         ~ secondChar_specialEvent = true
                     
-                    - InkLevel == thirdChar_InkLevel:
+                    - Character == ThirdCharacter:
                         ~ thirdChar_specialEvent = true
                     
-                    - InkLevel == fourthChar_InkLevel:
+                    - Character == FourthCharacter:
                         ~ fourthChar_specialEvent = true
                     
-                    - InkLevel == fifthChar_InkLevel:
+                    - Character == FifthCharacter:
                         ~ fifthChar_specialEvent = true    
                 }
                 
@@ -124,23 +129,23 @@ Il secondo IF rimane com'è
     }
 
 //Formula chiamata prima dello statement, per tenere conto del rapporto effettivo.
-=== function maxInkLevelUpdater(InkLevel)
+=== function maxInkLevelUpdater(Character)
 {debug: passo da maxInkLevelUpdater.}
 
-    {
-        - InkLevel == firstChar_InkLevel:
+    {Character:
+        - FirstCharacter:
             ~ firstChar_maximum_inkLevel = firstChar_InkLevel
         
-        - InkLevel == secondChar_InkLevel:
+        - SecondCharacter:
             ~ secondChar_maximum_inkLevel = secondChar_InkLevel
         
-        - InkLevel == thirdChar_InkLevel:
+        - ThirdCharacter:
             ~ thirdChar_maximum_inkLevel = thirdChar_InkLevel
             
-        - InkLevel == fourthChar_InkLevel:
+        - FourthCharacter:
             ~ fourthChar_maximum_inkLevel = fourthChar_InkLevel
         
-        - InkLevel == fifthChar_InkLevel:
+        - FifthCharacter:
             ~ fifthChar_maximum_inkLevel = fifthChar_InkLevel
             
     }
@@ -148,21 +153,21 @@ Il secondo IF rimane com'è
  
 
 //Funzione che chiamo dopo il dono, per dire quanto inchiostro ho guadagnato.
-=== function inkTranslator(InkLevel)
-    {
-        - InkLevel == firstChar_InkLevel:
+=== function inkTranslator(Character)
+    {Character:
+        - FirstCharacter:
             ~ Ink = firstChar_InkLevel
         
-        - InkLevel == secondChar_InkLevel:
+        - SecondCharacter:
             ~ Ink = secondChar_InkLevel
     
-        - InkLevel == thirdChar_InkLevel:
+        - ThirdCharacter:
             ~ Ink = thirdChar_InkLevel
         
-        - InkLevel == fourthChar_InkLevel:
+        - FourthCharacter:
             ~ Ink = fourthChar_InkLevel
         
-        - InkLevel == fifthChar_InkLevel:
+        - FifthCharacter:
             ~ Ink = fifthChar_InkLevel            
     
     }
