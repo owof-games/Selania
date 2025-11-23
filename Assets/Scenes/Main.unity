@@ -29795,6 +29795,15 @@ MonoBehaviour:
   kitchenSounds: {fileID: 8300000, guid: 1f1654cd7b194e84ab045cf3a85386c0, type: 3}
   nestSounds: {fileID: 8300000, guid: 9fc933d7c2f36d34b8b0d6d1f2872911, type: 3}
   bookSounds: {fileID: 8300000, guid: 7eb8d000cd6114d42bd31eaf75c6c871, type: 3}
+  debugWordsToDisable:
+  - debug_seedRandom
+  - debug
+  - debug_cultivable
+  - debug_changeName
+  - debug_kitchen
+  - debug_nest
+  - debug_frog
+  - debug_stochastic
   onStoryStep:
     m_PersistentCalls:
       m_Calls: []

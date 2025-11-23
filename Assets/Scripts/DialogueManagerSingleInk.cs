@@ -150,6 +150,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
     //TAG USATO PER EMOTIONA WORD
     private const string EW_TAG = "ewWord";
 
+    [SerializeField] private string[] debugWordsToDisable;
+
     void Start()
     {
         FillChoicesTextMeshPro(choices, ref choicesText);
@@ -158,13 +160,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
         story = new Story(inkAssetJSON.text);
         
-        story.onDidContinue += StoryOnDidContinue;
-
-        if (!LoadGame())
-        {
-            ContinueStory();
-        }
-
+        // TODO: ri-abilitare questo codice, ma solo quando siamo in una build fuori dall'editor
         // imposta tutte le variabili di debug a false per sicurezza
         // var debugVariableNames = (
         //     from variableName in story.variablesState
@@ -174,6 +170,19 @@ public class DialogueManagerSingleInk : MonoBehaviour
         // {
         //     story.variablesState[debugVariableName] = false;
         // }
+        
+        foreach (var debugVariableName in debugWordsToDisable)
+        {
+            Debug.Log($"Disabling debug flag {debugVariableName}");
+            story.variablesState[debugVariableName] = false;
+        }
+
+        story.onDidContinue += StoryOnDidContinue;
+
+        if (!LoadGame())
+        {
+            ContinueStory();
+        }
 
         DisableDialoguePanel();
 
