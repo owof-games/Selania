@@ -319,6 +319,8 @@
     
         = ending
         ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
+
             {
                 - secondChar_storyStatus != story_storyEnded:
                     {player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -359,16 +361,45 @@
                     
             - 
         //Nota: la parte di accettazione del nome è prima dell'aggiornamento, così il nome nuovo compare solo quando viene dichiarato.    
-         Grazie, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-         Mentre ti ascoltavo mi è nata una nuova canzone in testa.
-         La canzone del mio nome.
-        So che hai detto <>
+        Grazie, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        Non.
+        Uh.
+        Non è facile guardarsi in modo diverso.
+        Alla fine ci raccontiamo tutto il giorno allo stesso modo.
+        E i giorni si fanno mesi e blah blah blah.
+        È un po' come le canzoni, che a volte le capisci solo in un modo, fino a quando un'altra persona non te le fa ascoltare in modo diverso.
+        O tipo con una cover.
+        Eccoci di nuovo con i pipponi.
+        Invece.
+
         {
-            - ending.red: e/ma a seconda del'esito
-            - ending.purple: e/ma a seconda del'esito
-            - ending.yellow: e/ma a seconda del'esito
-            - ending.green: e/ma a seconda del'esito
-            - ending.blue: e/ma a seconda del'esito
+            - ending.red:
+                Hai detto che Talco mi aspetta in Canada.
+                Non avevo mai davvero guardato fino in fondo alla possibilità di andarmene dall'Italia.
+            
+            - ending.purple:
+                Sentirti dire che la musica mi dà uno scopo è stato diverso dal dirlo io.
+                È diventata una cosa vera.
+                Ha senso?
+
+            - ending.yellow:
+                Non avevo ancora guardato all'andare dai miei come a un ricominciare.
+                È una parola molto più bella e positiva di "fallire".
+                Mi piace come prospettiva.
+
+            - ending.green:
+                Forse hai ragione.
+                La relazione con Ennio è partita con quella rassicurazione per la sua stabilità.
+                E potrei ripartire da lì per trovare me stessa in altri modi.
+                Anche in altri modi dentro la relazione con lui.
+
+            - ending.blue:
+                Riconoscere la ricchezza della mia vita mi fa sentire, mmm.
+                Lagnosa.
+                Ma ha senso.
+                Ti ho raccontato così tante cose.
+                Ho davvero motivo di essere così infelice?
+                O come direbbe {mentorName}, bloccata?
 
         }
             //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
@@ -385,24 +416,79 @@
             
             {
                 - firstChar_ActualName has Triangolo:
-                
-                     E il mio vero nome è <b><i>{charNameOne}</b></i>, perché pensavo di essere uno strumento, e invece ho solo fallito.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
+                    {
+                        - ending.blue:
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                        - else:
+                            Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                    }
+                    
+                    
+                    Sono lo strumento semplice, eppure fondamentale.
+                    Sono quella che attende che le altre facciano casino, per mettere un accento, un colore.
+                    Che ritrova il bello nelle cose quotidiane.
+                    Apprezzando quello che ha.
+                    Sì.
+                    Ho trovato il mio nome.
                         
                 - firstChar_ActualName has RagazzaOrchestra:
+                    {
+                        - ending.red:
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                        - else:
+                            Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                    }
 
-                     Mi chiamerò <b><i>{charNameOne}</b></i>: nel non saper rinunciare sono diventata l'ornitorinco della musica.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                    Rullo di tamburi...
+                    Io sono <b><i>{charNameOne}</b></i>!
+                    Signore e signor3 e signori: sono la gioia del cambiamento.
+                    Dell'infinita possibilità.
+                    Sono colei che può provare tutto.
+                    Incluso il cambiare paese.
+                    Colei che nulla teme, perché tutto è.
                         
                 - firstChar_ActualName has FlautoDolce:
+                    {
+                        - ending.purple:
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                        - else:
+                            Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                    }
 
-                     Il mio nome è <b><i>{charNameOne}</b></i>: perché semplice, elementare, ma apprezzata da chi ha buon cuore.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                    Ho scelto come nome <b><i>{charNameOne}</b></i>.
+                    Che sia quel pezzetto di plastica suonato alle elementari o un pezzo pregiato di un'orchestra, il Flauto ci ricorda che la musica è ovunque.
+                    E dove c'è musica, c'è cambiamento.
+                    E metterò al centro di tutto la mia musica, la band, per fare cose che davvero cambino il mondo.
+                    
                       
                 - firstChar_ActualName has Ocarina:
+                    {
+                        - ending.yellow:
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                        - else:
+                            Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                    }
 
-                     Mi chiamerò <b><i>{charNameOne}</b></i>: perché il suo suono è gioco e festa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
+                    Il mio nome è <b><i>{charNameOne}</b></i>.
+                    E riabbraccio la mia infanzia, gli spazi in cui sono cresciuta.
+                    Per ricominciare a giocare, a esplorare quello che già conosco.
+                    Per prendermi cura dei miei e della mia terra.
+                    Per permettere ad altr3 di non doversene andare.
         
                 - firstChar_ActualName has Violino:
+                    {
+                        - ending.green:
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                        - else:
+                            Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                    }
 
-                     Io sono <b><i>{charNameOne}</b></i>: perché anche se suono bene da sola, do il meglio di me stessa suonando con e per gli altri.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+                    Io sono <b><i>{charNameOne}</b></i>.
+                    Lo strumento romantico.
+                    Lo strumento divino.
+                    Abbraccio l'amore come motore del cambiamento.
+                    Smuovendo le sue acque sicure per trovare la mia felicità.
+
                         
             }
             
@@ -412,34 +498,40 @@
                     - firstChar_specialEvent == true:
                         -> secret_ending
                     - else:
-                        -> exit
+                        -> close
                     }
         
         
     = secret_ending
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-        C'è una cosa che devo dirti ama.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-        Riguarda {mentorName}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Non voglio sembrare una snitch ma continuo a chiedermi: qual è il confine tra essere una brava persona ed essere una manipolatrice?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-        A me non la conta giusta quella.
-        Però tra un po' mi potrò levare di culo e non è più un mio problema.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Ma se hai intenzione di restare qui a lungo, forse devi chiedertelo anche tu.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-                -> close
+            {
+                - not rewriting_proposal_second_character.secret_ending:
+                    La fiducia che {charNameOne} ha verso {player_name} fa sentire {charNameOne} piena della voglia di condividere una informazione importante.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            }
+
+        Vorrei anche dirti una cosa, {player_name}.
+        Credo che {mentorName} sia triste per qualcosa.
+        Mi dà l'impressione di mettercela tutta, qui.
+        Ma di essere, non so come dire, scomoda?
+        Non credo lo ammetterebbe mai, ma credo abbia bisogno di una persona amica.
+        Portale del bene.
+            -> exit
             
+   
     = exit
     ~ temp charNameOne = translator(firstChar_ActualName)
-        Un'ultima cosa, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Volevo lasciarti qualcosa di buono di me, prima di andarmene, e ho pensato di donarti una conchiglia.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-        {
-            - player_accessiblePlaces has Nest: La troverai al nido, e son sicura che saprai già cosa farne.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        // Un'ultima cosa, {player_name}.
+        // Volevo lasciarti qualcosa di buono di me, prima di andarmene, e ho pensato di donarti una conchiglia.
+        // {
+        //     - player_accessiblePlaces has Nest: La troverai al nido, e son sicura che saprai già cosa farne.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             
-            - else: Una certa voce mi ha detto che presto saprai cosa farne. E te la farà trovare dove ne avrai più bisogno.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        }
-                //Spostiamo la conchiglia
-                ~ move_entity(greenShell, Nest)
+        //     - else: Una certa voce mi ha detto che presto saprai cosa farne. E te la farà trovare dove ne avrai più bisogno.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        // }
+        //         //Spostiamo la conchiglia
+        //         ~ move_entity(greenShell, Nest)
         
-        E ora resterò qui a disturbarti ancora per un po', in attesa del prossimo treno.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        
                 -> close
         
     = close   
@@ -449,8 +541,11 @@
             ~ PG_advance_management(FirstCharacter)
             ~ numberQuestion = 0
             ~ firstChar_InkLevel = ink_empty
-            A dopo {player_name}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral 
-            E prenditi un po' di riposo, non mi schiodare!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+
+            Credo resterò ancora un po' in giro.
+            Ma senza altri pipponi per te, promesso!
+            E cerca di riposarti, non voglio che mi schiodi.
+            
             @animation:RewriterBook
             
         -> main  
