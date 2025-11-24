@@ -10,11 +10,11 @@
         ~ firstChar_storyletsForRewritingCount ++
         
         Ehi, ciao!
-        Non è che hai visto in giro la versione umana di un pettirosso?
-        Una persona rossiccia, morbidosa e che sembra sempre un po’ pissata?
-        Si chiama Talco e parla solo di Florence and the Machine.
-        Anzi, *parlava* solo di Florence.
-        Poi c’è stata quell’altra roba.
+        Non è che hai visto in giro la versione umana di un pettirosso, tipo?
+        Una persona rossiccia, morbidosa e che sembra sempre un po’ pissata col mondo?
+        Si chiama Talco.
+        E sicuro che nel caso ti ha tirato le pezze contro le AI o qualcosa su Florence and the Machine.
+        Sempre che non abbia cambiato fissa in questi mesi.
         Insomma: l’hai vistə?
         
             //Risposte, di cui una diversa a seconda che abbiamo incontrato o meno Mentore.
@@ -39,20 +39,21 @@
             -
         
         Merda, Talco sa sempre come tirarmi fuori dai casini!
-        E avevo giurato ad Ennio che non sarebbero più successe cose strane.
-        Per la cronaca Ennio è diciamo il mio ragazzo, mentre Talco è lə miə amə.
+        E avevo giurato ad Ennio che non sarebbero più successe cose imbarazzanti.
+        Per la cronaca Ennio è il mio ragazzo, mentre Talco è lə miə amə.
         Ma perché te lo sto dicendo?
         Non è che ho preso dei funghi e manco me ne sono resa conto?
         Come con quel risotto allucinogeno dopo l’esame di composizione.
-        Che giornatona assurda quella!
-        Ma manco mi sono presentata!
+        Madonna che giornata quella!
+        Ma manco mi sono presentata.
         Mi chiamo {charNameOne}.
             - (firstPresentation)
         
         No no aspetta io sono <b><i>{charNameOne}</b></i>.
         Ehi! Non è mica questo il mio nome!
         <i>{charNameOne}</i>.
-        Se lo dico al contrario?
+        Ma.
+        E se lo dico al contrario?
         Arratihc.
         Uh.
         Prova tu.
@@ -67,10 +68,11 @@
         {player_pronouns has her:Anche io uso i pronomi femminili!|Invece io uso i femminili.}
         Anche se continuo a non chiamarmi {charNameOne}.
         Ora: la cosa più sensata è pensare che tutto questo sia un’allucinazione.
+        Ha senso?
         O forse mi sono di nuovo addormentata a lavoro e sto sognando.
-        Merda, il capo mi farà il culo.
+        Merda, Luca mi farà il culo.
         Quindi, {player_name}, qual è il messaggio nascosto di questo trip o sogno o quel che è?
-        Datti da fare con tutte le tue cose da inconscio, così mi sveglio o ripiglio e vedo di non mandare a puttane il lavoro e relazione.
+        Datti da fare con le stronzate da inconscio, così mi sveglio o ripiglio e vedo di non mandare a puttane lavoro e relazione.
      
             //Risposte, di cui una diversa se ho parlato o meno con Mentore.
             + {not welcome} [Risposta blu.]
@@ -141,31 +143,34 @@
             
         {player_name}, ma hai sentito che silenzio che c’è in questo posto?
         Non silenzio silenzio tipo vuoto nello spazio.
-        Anche perché ci sono animaletti e insetti e tutto il resto che fanno un sacco di casino.
+        Anche perché ci sono insetti e tutto il resto che fanno un sacco di casino.
         Ma mi sento la testa libera.
         Riesco ad ascoltare i miei pensieri.
+        Non per forza una cosa buona.
         E le canzoncine della pubblicità ancorate nel mio cervello.
-        O magari è perché prima ho preso una botta assurda contro il vetro della serra e mi sono resettata?
-        Ma il male mi ha fatto capire che questa non è un’allucinazione o un sogno.
-        E invece di essere preoccupata vorrei solo stendermi a riposare.
-        Mi spiace giusto perché le mie coinquiline saranno preoccupate.
-        Non me l'aspettavo, ma sono diventate la mia famiglia.
+        Che sfigata.
+        O magari è perché prima ho preso una botta assurda contro il vetro della serra e mi sono resettata il cervello?
+        Però il male mi ha fatto capire che questa non è un’allucinazione o un sogno.
+        E invece di essere preoccupata vorrei solo mettermi a dormire.
+        Mi spiace giusto perché le mie coinquiline saranno di sicuro preoccupate.
+        Non me l'aspettavo ma sono diventate la mia famiglia.
         Sono le persone con cui cazzeggio e piango e con cui ho anche una band.
+        Una band davvero figa!
         E facciamo volontariato, circa.
         Le amo.
         Uh, e ora che ci penso, anche a lavoro saranno incazzati a bestia.
         Non che me ne freghi un granché per Luca, il capo: è una gran testa di cazzo.
         Come ogni capo.
-        Però le colleghe possono essere nella merda: se manca una di noi, si devono sobbarcare il suo lavoro.
-        Siamo sotto personale da sempre, e non gliene frega a nessuno.
-        Meno stipendi uguale più guadagni, credo, giusto?
+        Però le colleghe possono essere nella merda: se manca una di noi, si devono smazzare più lavoro.
+        Siamo sotto personale da sempre, e non gliene frega niente a nessuno.
+        Meno stipendi uguale più guadagni, credo, quella roba lì da ricchi, giusto?
         Merda, spero che non sia una di quelle situazioni in cui il tempo qui passa lentissimo e nel mondo reale come un fulmine o divento del tutto povera.
         Come lo pago l'affitto poi?
         Mmm.
         Forse dovrei respirare e bona, alla fine non so come va questa roba.
-        Vorrei avere giusto avere carta e penna, e pensare a un brano su questa situazione.
-        Sono settimane che non ho le energie per creare un pezzo che uno, un accenno di melodia.
-        Ma tu che idea ti sei {player_pronouns has him:fatto|{player_pronouns has her:fatta|fattə}}. di questo posto?
+        Vorrei avere giusto avere carta e penna, e pensare a un pezzo su questa situazione.
+        Sono settimane che non ho le energie per crearne uno che uno, manco mezzo accordo.
+        Ma tu invece che idea ti sei {player_pronouns has him:fatto|{player_pronouns has her:fatta|fattə}} di questo posto?
         
         //Risposte, di cui una diversa se ho parlato o meno con Mentore.
                 
@@ -217,24 +222,26 @@
         
         Ehi {player_name}!
         Prima ho parlato con {mentorName} che mi ha spiegato che sei qui per aiutarmi.
+        {player_pronouns has him:Povero|{player_pronouns has her:Povera|Poverə}}.
         Dice che c’è qualcosa che mi blocca.
         E che quando mi fiderò di te potrò chiederti aiuto e sbloccarmi e tornare a casa.
         Tipo una versione di D&D con le quest scritte da una millenial.
         Stavo per dirle: guarda ama, mi fido già di {player_name}!
-        Sono un labrador e mi fido sempre di tutte le persone che incontro!
+        Sono un labrador e mi fido sempre di tutti subito.
         Poi ho pensato che non è vero.
         E che se sei davvero qui per aiutarmi, posso tirarti un piccolo pippone.
         Così ci conosciamo meglio.
         No, non è un vero pippone.
         Ma mi sono chiesta cosa sia la fiducia.
         E se fosse un tema, uno di quelli delle medie tipo “Parla della persona di cui ti fidi di più”, sarebbe un tema su Talco.
-        Si dice spesso “cosa x mi ha salvato la vita”, e ho creduto per un sacco che fosse una cazzata.
+        Si dice spesso “La cosa x mi ha salvato la vita”, e ho sempre creduto che fosse una cazzata.
         Pensavo che niente salvasse nessunə.
         Poi ho conosciuto Talco.
         Abbiamo iniziato il Conservatorio assieme, ma ləi l’ha lasciato dopo un anno.
         Credo abbia litigato con tutti i professori.
+        E anche i tizi della reception.
         Talco non sopporta le regole che non hanno senso, e il Conservatorio ne è pieno.
-        Non so se l’avevi già capito {player_name}, ma sono una persona che si tira un sacco di film in testa.
+        Non so se l’avevi già capito {player_name}, ma io invece sono una persona che si tira un sacco di film in testa.
         E quando ho incontrato Talco, ero bloccata in un brutto film che durava dalla fine del liceo.
         E ləi mi ha buttato nel mondo.
         Non con quelle cagate tipo “cammina nel verde e vedrai che passa tutto”.
@@ -243,11 +250,12 @@
         O quando abbiamo finto di intervistare persone anziane per farle sentire ascoltate.
         O tutte le volte che davanti a una cosa ingiusta ha detto “no”!
         Mi ha fatto capire che per me è importante fare qualcosa di utile per il mondo.
-        E che mi piace quando posso farlo con le altre persone.
+        E che mi piace quando posso farlo con altre persone.
         Mi piace stare con le persone.
-        Io non so se sono bloccata in qualcosa, come dice {mentorName}.
+        Io non so se sono davvero bloccata in qualcosa, come dice {mentorName}.
         Ma forse è vero che in qualche modo non mi muovo nella mia vita da un po’.
         Con Talco mi sono messa in situazioni strane perché mi fidavo di lei.
+        Ha senso?
         E mi chiedevo: secondo te, cosa vuol dire fidarsi?
         
         //Risposte
@@ -295,25 +303,27 @@
         }
         
         Quando prima sono andata in panico parlando di lavoro, è perché da qualche mese servo in un ristorante.
-        Uno di quelli lussuosi, che si gasano perché hanno la sede sia a Buco di Culo Lombardo che a Pechino.
-        E non ti pagano un cazzo.
+        Uno di quelli lussuosi, che si gasano tipo perché hanno la sede sia a Buco di Culo Lombardo che a Pechino.
+        E non ti pagano un cazzo, ovvio.
         E ama, non era quello che mi aspettavo dopo il Conservatorio.
-        Per un po’ sono riuscita a fare qualche lavoretto con il pianoforte, quasi sempre non pagato.
+        Zero proprio.
+        Per un po’ sono riuscita a fare qualche lavoretto con il pianoforte, ma quasi sempre non pagato.
         Poi mio padre ha perso il lavoro e mi ha detto: figlia, siamo nella merda.
+        E quindi: eccoci qui.
         Tengo sempre un orecchio alzato per qualche commissione.
-        Ma per lo più sono di sera o nel fine settimana, quando col cavolo che mi danno il giorno libero dal ristorante.
+        Ma per lo più sono di sera o nel fine settimana, quando figurati se mi danno il giorno libero dal ristorante.
         Per fortuna ci sono le prove con la band.
         Quando ho le energie per farle.
-        Lavorare al ristorante è una merda, ma il rapporto con alcune colleghe è bello.
-        Qualche settimana fa è venuto un dirigente di una compagnia petrolifera a mangiare.
+        Lavorare al ristorante è una botta di fatica, ma il rapporto con alcune colleghe è bello.
+        Qualche settimana fa è venuto un pezzo grosso di una compagnia petrolifera a mangiare.
         Una di quelle specializzate in greenwashing e che ti denunciano se solo racconti quello che fanno.
         Ci siamo rifiutate di servirlo.
         Il caposala era giallo bestia, ma è stata la prima volta che mi sono sentita viva a lavoro.
         Dire “no” è una cosa potentissima.
-        Ed è stato bello farlo assieme.
+        Ed è stato bello farlo con le altre.
         Ora stiamo provando di nascosto a tirare su un gruppo sindacale.
-        “Di nascosto”, perché coi contrattini precari da fame che ci ritroviamo fanno alla svelta a non rinnovarci.
-        E perché abbiamo colleghe convinte di poter far carriera se denunciano le "rompicoglioni" alla dirigenza.
+        “Di nascosto”, perché coi contrattini da fame che ci ritroviamo fanno alla svelta a lasciarci a casa.
+        E perché abbiamo colleghe convinte di poter fare carriera se denunciano le "rompicoglioni" alla dirigenza.
         A volte temo siano energie sprecate.
         Altre, che dovrei fare qualcosa di più grande, che faccia meglio a più persone.
         Non so se ha senso.
@@ -338,7 +348,7 @@
 
             -    
         
-        A prescindere, ci sono giornate in cui l’unica cosa che mi gasa è la rabbia nella chat ribelle.
+        A prescindere, ci sono giornate in cui l’unica cosa che mi gasa è la rabbia nella chat delle ribelli.
         Gli insulti ai capoccia.
         Il tenere traccia di tutte le ingiustizie.
         La speranza di fargliele ripagare, un giorno o l’altro.
@@ -368,26 +378,30 @@
         }
         Prima mi sono tuffata nello stagno.
         Avevo bisogno di fare qualcosa di diverso.
-        Mi aspettavo qualcosa di freddo e schifoso, e invece l’acqua era tiepida, quasi avvolgente.
+        Mi aspettavo acqua fredda e schifosa, e invece era tiepida e avvolgente.
         Mi ha fatto sentire così al sicuro, vulnerabile in modo piacevole.
-        Mi ha fatto pensare a cosa significhi “casa”.
-        Quella dove vivo è una catapecchia piena di muffa, ma è calda grazie a Valeria e le altre coinqui.
-        UItimamente però il continuo ricambio di coinquiline e le tracce di chi se ne è andata riempie lo spazio di fantasmi, e mi fa sentire precaria.
+        Mi ha fatto pensare a cosa penso quando penso a “casa”.
+        Quella dove vivo è una catapecchia piena di muffa, ma è calda grazie a Valeria e le altre coinquiline.
+        UItimamente però il continuo ricambio di coinqui e le tracce di chi se ne è andata riempie lo spazio di fantasmi.
+        Mi fa sentire precaria, tipo.
         Poi c’è la casa dei miei.
-        Continuo a dire “torno a casa” quando scendo a trovarli, ma a dire il vero è il posto che mi ricorda cosa voglio costruire, ma non quello che voglio abitare.
+        Continuo a dire “torno a casa” quando scendo a trovarli.
+        Ma se vogliamo dircela davvero è un bel posto pieno di ricordi, ma non qualcosa dove restare.
+        Credo.
         E poi c’è Ennio.
         In questi anni mi sono chiesta se Ennio possa essere la mia casa, il mio rifugio.
         Quando l’ho conosciuto non avrei mai pensato che ci saremmo messi assieme.
+        Lo trovavo noioso.
         E invece è diventato il mio primo amore, quello con la A gigante.
-        È così solido.
         Ama il suo lavoro, è quasi pedante nel rispettare i suoi ritmi.
-        Non è una persona che ti fa sdraiare in mezzo a una piazza, ma più uno da sabato a fare la spesa.
-        Ho iniziato a frequentarlo perché pensavo che una persona così solida mi avrebbe permesso di sperimentarmi tantissimo.
+        Non è una persona che ti fa sdraiare in mezzo a una piazza, è più uno da sabato pomeriggio a fare la spesa.
+        Pensavo che una persona così solida mi avrebbe permesso di sperimentarmi tantissimo.
         Avrei potuto fare qualsiasi cazzata, sicura di avere una persona a cui tornare.
-        Col tempo però anche io ho smesso di svolazzare.
+        Col tempo però ho smesso di svolazzare.
         E non so se è perché sto crescendo, o se perché il suo peso mi tiene a terra.
         Mi ripeto che essere adulta significa riconoscere che bisogna fare delle scelte, che non si può avere tutto.
         Forse però non sono capace di prevedere le conseguenze delle mie scelte.
+        Faccio sempre schifo col pianificare le cose.
         Ha senso?
         Secondo te una relazione ci cambia? O ci mostra chi siamo davvero?
         
@@ -411,8 +425,8 @@
             - 
         
         Una settimana fa mi ha chiesto di andare a convivere.
-        Ho risposto subito di sì, presa dall’entusiasmo.
-        Ma non so se è davvero ciò che voglio.
+        Ho risposto subito di sì, presa dalla botta dell'entusiasmo.
+        Ma non so se è davvero quello che voglio.
              
                 -> first_char_closing_storylet ->
                 -> options_first_character
@@ -439,12 +453,12 @@
         
         Ma poi forse non ho sto già davvero vivendo con la mia famiglia?
         Ah, sì, scusa, sto tornando sul pippone delle case di prima.
-        Ma continuo a pensarci, anche perché ho paura che pensi che sono fredda riguardo ad andare a vivere con Ennio.
-        È che dove sto ora non è solo una casa, per nulla, ed è la cosa più figa.
+        Però continuo a pensarci, anche perché ho paura che pensi che sono fredda rquando parlo di Ennio.
+        È che dove sto ora non è che è solo una casa, anzi, ed è la cosa più figa.
         Ormai la chiamano “La Rifugia”.
         All’inizio era solo una battuta perché avevamo sempre ospiti in giro per casa, gente che cercava un appoggio o era nei casini.
-        Ma a forza di ripetere la battuta ci siamo dette: ma se facessimo qualcosa di buono?
-        Da una parte cerchiamo a sgamo di offrire un posto temporaneo a chi è nei casini.
+        Ma a forza di ripetere la battuta ci siamo dette: ma se facessimo qualcosa di buono per una volta?
+        Da una parte cerchiamo di offrire un posto temporaneo a chi è nei casini.
         Cosa sempre più pesante con la crisi abitativa e il caro affitti.
         Dall’altra facciamo incontri informativi con le associazioni di tutela dei coinquilini, con associazioni migranti e altre realtà.
         E lo so che dirai “blah blah blah” che palle, ma ti giuro che è tutto così vivo.
@@ -452,14 +466,15 @@
         Organizziamo raccolte fondi, e abbiamo fatto una mostra e delle proteste sotto al comune.
         La mostra è stata un’idea di Valeria, la mia bestie in casa, nonché la nostra cantante.
         All’inizio la usavamo solo per sfogarci e raccattare qualche soldino.
-        Ma poi le storie che sentivamo nella Rifugia, e le lotte dell’associazione e di altre realtà hanno iniziato a infilarsi nei testi.
+        Ma poi le storie che sentivamo nella Rifugia, e le lotte dell’associazione e di altre realtà hanno iniziato a infilarsi nelle nostre canzoni.
         Ed è una cosa strana scrivere robe politiche, perché diventa difficile mantenere la poesia.
         Abbiamo mille modi di parlare d’amore, ma i problemi reali sembrano sempre didascalici.
-        Eppure sono convinta che l’arte possa fare tanto per cambiare il mondo.
+        Dice tanto del nostro mondo, non credi?
+        Eppure sono convinta che l’arte possa fare tanto per cambiare le cose.
         Perché i fatti sono freddi, e l’arte può renderli pieni di calore.
         Puoi tipo raccontare tutti i femminicidi del mondo e un uomo smonterà ogni dato e movente.
         Oppure scrivere <b>“Un violador en tu camino”</b> e riempire una piazza di forza e rabbia.
-        Suonerà arrogante, ma vorrei per una volta creare qualcosa di altrettanto forte.
+        Suonerà arrogante, ma vorrei per una volta creare qualcosa di così forte da spazzare tutta questa merda.
         Qualcosa che sia potente e inappellabile.
         Qualcosa che salvi il mondo.
         
@@ -511,32 +526,35 @@
         Ed è perché non ci sentiamo da mesi.
         E ora ti racconterò il perché e tu mi giudicherai una stronza epocale, e me lo merito.
         Quindi.
-        Un anno fa Talco mi scrive per propormi un aperitivo solo tra noi, “come ai vecchi tempi”.
-        Tra lavori e fidanzati e il resto non ci vedevamo da molte settimane.
-        Abbiamo trovato un incrocio coi calendari, e la sera che l’ho rivistə mi si è spalacanto il cuore.
+        Un anno fa Talco mi scrive per fare un aperitivo solo tra noi, “come ai vecchi tempi”.
+        Tra lavori e fidanzati e il resto non ci vedevamo da settimane.
+        Abbiamo trovato un incrocio sui calendari, e la sera che l’ho rivistə mi si è spalacanto il cuore.
         E tra una battuta e un lamento sul lavoro continuavo a pensare: e se riprendessimo in mano il vecchio progetto?
         E se andassimo a vivere tutt3 assieme in campagna?
         Talco, io, le ragazze del gruppo?
-        Sicuro Ennio non apprezzerebbe molto, ma alla peggio potrebbe venire a trovarci nel fine settimana.
+        Sicuro Ennio non apprezzerebbe molto, ma alla peggio potrebbe venire a trovarci nel fine settimana, no?
         Quando Talco mi ha detto “devo dirti qualcosa di importante”, ero già nel pieno del mio film.
         Mi ha preso la mano, tesə a bestia come non l’avevo mai vistə.
         “Aspetto un bambino”.
         E {player_name}, tutto è diventato grigio.
+        Zero, il vuoto nella testa.
         Ci eravamo ripromess3 mille volte che non sarebbe successo.
-        Niente figli, niente partner a frapporsi tra noi o cose del genere.
+        Niente figli.
+        Niente partner gelosi.
+        Niente a frapporsi tra noi.
         E stava già succedendo comunque col lavoro e con Ennio e il suo Thomas ma cazzo, questa roba!
-        Talco che diventa la prima persona che conosco a rimanere incintə.
         Non abbiamo manco trent’anni, cazzo!
         E l’ha visto, sulla mia faccia.
         Non ho detto nulla ma già aveva capito tutto.
         E non si è manco arrabbiatə.
-        Mi ha solo detto che era un passo importante per ləi, perché anche se è una cosa inaspettata, ama Thomas, e sa che è l’uomo giusto.
-        E poi, il colpo finale.
-        “Vorrei trasferirmi da lui a Toronto. Qui non mi rimane nulla, nulla a parte te.”
-        “E per questo, vorrei ti trasferissi con noi.”
-        “Vorrei crescerla con te, questa creaturina. Con te e Thomas.”
+        Mi ha solo detto che era un passo importante per ləi.
+        Perché anche se è una cosa inaspettata, ama Thomas, e sa che è l’uomo giusto.
+        E poi il colpo finale.
+        “Mi trasferisco da lui a Toronto. Qui non mi rimane nulla, nulla a parte te.”
+        “E per questo, voglio che ti trasferisci con noi.”
+        “Voglio crescerla con te, questa creaturina. Con le persone che amo. Con te e Thomas.”
         E…
-        Dio, quanto vorrei del vino ora.
+        Madonna, quanto vorrei del vino ora.
         Tu come ti saresti {player_pronouns has him:sentito|{player_pronouns has her:sentita|sentitə}} al mio posto?
         
         //Risposte.
@@ -590,8 +608,8 @@
         Un intero film mi è partito in testa.
         Una roba con Margherita Buy piena di solitudine abbandono e perdita.
         Ho lasciato il tavolo in silenzio, ho chiamato Ennio e l’ho raggiunto a casa sua.
-        Abbiamo scopato senza preservativo, ma l’ho cacciato fuori di forza quando stava per venire.
-        E poi ho pianto tutta la notte.
+        Abbiamo scopato senza preservativo, l’ho cacciato fuori di forza quando stava per venire.
+        Ho pianto tutta la notte.
         Un mese dopo Talco è partitə, e non ci siamo più sentite fino a qualche settimana fa, quando mi ha mandato una cartolina.
         Una foto dellə bimbə.
         “Qualcuno aspetta un tuo abbraccio.”
@@ -623,22 +641,25 @@
         Tornare dai miei è come un viaggio nel tempo.
         Scendo, e mi sembra che tutto sia fermo, e questa cosa è rassicurante.
         Ma passano i giorni e mi rendo conto della bugia.
-        Chi sta via pensa sempre che il posto che lascia sia immutabile, che non cambino le persone che ama.
+        Chi sta via pensa sempre che il posto che lascia sia immutabile, che non cambino mai le persone che restano.
         Ma quei cambiamenti arrivano spesso tra le righe.
-        Come quando scopri che un amico di famiglia non c’è più, o che c’è una discussione tra i fratelli di tuo padre che va avanti da due anni e non ne sapevi nulla.
+        Come quando scopri che un amico di famiglia non c’è più.
+        O che c’è una discussione tra i fratelli di tuo padre che va avanti da due anni e non ne sapevi niente.
         Alcune delle amiche che sono tornate a vivere giù hanno trovato un altro modo di far parte di quel cambiamento.
-        Anna, che studiava jazz, ha tirato su assieme ad altre persone un piccolo festival locale che sta iniziando a ingranare.
+        Anna, che studiava jazz, ha tirato su assieme ad altre persone un festival locale che sta iniziando a ingranare.
         E Luigia, una ex di Valeria, ora si occupa di recupero e decolonizzazione della storia del suo paesino sul Coghinas.
-        Altre, che qui facevano occupazioni e proteste e litigavano con la polizia, ora sono sposate e raccontano vite che.
+        Altre, che qui facevano occupazioni e proteste e litigavano con la polizia ora sono sposate e raccontano vite che.
         Io.
+        Io.
+        Merda.
         Tornare giù è un’opzione.
         Voglio molto bene ai miei.
-        Conosco poche ragazze che possono dire “Scendo a casa e son felice di suonare e ubriacarmi con mio padre”.
+        Conosco poche persone che possono dire “Scendo a casa e sono felice di suonare e ubriacarmi con mio padre”.
         Farmi salire e studiare è stato uno sforzo enorme per loro.
-        E ora che sono sempre più vecchi, tornare potrebbe significare restituire loro il favore.
+        E ora che sono sempre più vecchi, tornare potrebbe significare restituire il favore.
         Prendermi cura di loro.
         Ma una parte di me ha paura che tornare voglia dire “Ok, ho sbagliato tutto”.
-        E ho paura di finire in quell’alveo.
+        E ho paura di finire per finire in un certo tipo di gruppo.
         Quello delle amiche sposate.
         Non è un crimine contro l’umanità, lo so.
         Ma so anche che a volte sono la persona che il contesto mi permette di essere.
@@ -694,32 +715,31 @@
         Mi ricordano quando arriva l’insonnia.
         Forse mi piace solo perché è una cosa che mi accade di rado.
         E a volte si traduce in un rigirarsi nel letto guardando il cellulare, scorrendo video e articoli che ti dicono che il mondo è fottuto.
-        E può essere stupido addormentarsi con queste cose, ma boh, forse sapere che non puoi fare nulla è più rassicurante che sapere che puoi fare qualcosa ma non sai cosa.
+        E può essere stupido addormentarsi con queste cose, ma boh.
+        Forse sapere che non puoi fare nulla è più rassicurante che sapere che puoi fare qualcosa ma non sai cosa.
         Ma queste conversazioni con te sono più come l’altra cosa che faccio quando mi viene l’insonnia.
         Mi alzo, e vado in cucina.
-        La cucina a casa è sempre piena di vita, abbiamo persone o ospiti praticamente da pranzo a notte fonda.
+        La cucina a casa è sempre piena di vita, abbiamo ospiti praticamente da pranzo a notte fonda.
         Ma averla per me, sapendo che tutto dorme, mi offre una pace piena.
         E i brani migliori li ho scritti in quelle situazioni.
         Caffeino e quaderno, mi piace un sacco comporre andando a sentimento prima ancora di mettermi sulla tastiera.
         Ci sono momenti in cui qualcosa clicca, e allora so che ho preso una buona idea.
-        E non ha a che fare col razionale, no.
-        Ma è un ritrovarsi i piedi in un’acqua antica.
+        E non ha a che fare col razionale, no no.
+        Ma è tipo come ritrovarsi i piedi in un’acqua antica.
         Che raccoglie tutte le storie del mondo.
-        Per un attimo rinuncio a me, e trovo il tutto.
-        E allora sento che anche se uso parole di oggi e suoni di oggi sto parlando del sempre.
+        Per un attimo rinuncio a me, e allora trovo il tutto.
+        E allora sento che anche se uso parole di oggi e suoni di oggi sto parlando del <i>sempre</i>.
         Di un certo tipo di sempre.
         E allora quella roba può far qualcosa di buono, di davvero buono.
-        Ci arrivo sempre più di rado in quell’acqua.
-        L’insonnia ha più a che fare ora con la paura di perdere il lavoro, col chiedermi cosa accadrà poi.
-        Mi fa una paura pratica e spaventosa.
+        Però ora ci arrivo di rado in quell’acqua.
+        L’insonnia ha più a che fare ora con la caga di perdere il lavoro e altre para.
         Mi fa sentire minacciata.
         Però a volte torno a immergermi, e a quel punto non ho paura.
-        Non perché sono coraggiosa o che di punto in bianco.
+        Non perché sono coraggiosa o che di punto in bianco, figurati.
         Ma perché ho la sensazione che anche questi problemi, tutti i problemi, siano parte di quell’enorme storia.
-        E sono cose che abbiamo già affrontato miliardi di volte.
+        E sono cose che noi persone abbiamo già affrontato miliardi di volte.
         Eppure siamo ancora qui.
         E c’è ancora speranza.
-            
             
             + [Risposta blu.]
                 -> color_variation_management(FirstCharacter, blueC)->  
@@ -762,28 +782,32 @@
             Commento Mentore.
                         
         }
+        
         Sai, {player_name}, l’amore non è come me l’aspettavo.
         Sono una di quelle che dice "Ti amo" dopo due incontri.
+        Lo puoi dire, è cringe.
         Ma quando l'ho detto ad Ennio, è stato diverso dalle altre volte.
-        Aveva proprio un altro sapore in bocca, non di entusiasmo ma di promessa.
+        Aveva proprio un altro sapore in bocca, non di entusiasmo ma di qualcosa di dolce.
+        Di promessa.
         E poi la routine ha trasformato col tempo quel sapore.
         Ora sa di pane caldo, una cosa semplice ma magica.
-        C’è più silenzio ora, quando stiamo assieme.
-        Non mi serve riempire gli spazi di cose intelligenti per paura che lui si annoi.
-        A volte lo osservo giocare al PC mentre coccolo i suoi gatti.
-        Ci sono sere in cui parlo più col suo coinquilino che con lui.
-        E il sesso è una coperta calda e non più una spiaggia torrida.
+        C’è più silenzio quando stiamo assieme.
+        Non mi serve riempire gli spazi di cose intelligenti o parlare di cose fighe per paura che lui si annoi.
+        A volte lo osservo giocare al PC mentre coccolo i suoi gatti e mi basta.
+        Ci sono sere in cui parlo più col suo coinquilino che non con lui.
+        Ma è lì che mi tiene la mano o ci guarda, e so che mi ama.
+        Il sesso è una coperta calda e non più una spiaggia torrida.
         Qualcosa che rassicura, che fa dormire bene.
-        Non so come guardare a tutto questo.
+        Non so sempre cosa provo davanti a tutto questo.
         Mi sento un po’ come quando sei su un treno in stazione, e ne hai un altro fuori dal finestrino.
-        E tu guardi fuori e c’è movimento ma non riesci a capire se stai riprendendo a viaggiare, o se è l’altro treno a spostarsi.
-        Ultimamente Ennio è più insofferente, sente il bisogno di passare più tempo assieme.
-        Credo che sia per questo che mi ha chiesto di andare a convivere.
-        Non mi dice mai “rinuncia a qualcosa per stare con me”.
-        Ma è lì, negli sbuffi quando gli dico che quel fine settimana ho un concerto.
+        E tu guardi fuori e c’è movimento ma non riesci proprio a capire se stai riprendendo a viaggiare, o se è l’altro treno che si sta spostando.
+        Ultimamente Ennio mi sembra insofferente, dice che ha il bisogno di passare più tempo assieme.
+        Non mi dice mai “Devi rinunciare a qualcosa per stare con me”.
+        Ma è lì, negli sbuffi quando gli dico che quel fine settimana suoniamo per qualche associazione.
         O che farò tardi perché siamo a una protesta.
-        Sono mesi che non viene a vedere le cose che facciamo con la Rifugia.
-        Per dargli più tempo non posso di certo smollare il lavoro, c’è solo una cosa che posso togliere dalla mia vita.
+        Sono mesi che non viene manco a vedere le cose che facciamo con la Rifugia.
+        Per dargli più tempo non posso di certo smollare il lavoro, no?
+        E quindi c'’è solo una cosa che posso togliere dalla mia vita.
         E a quel punto, ripartirà mai il treno dalla mia stazione?
         //Risposte
             
@@ -827,17 +851,17 @@
         
         C’è questa cosa che mi stupisce sempre.
         Puoi passare anni con una persona, vederla quasi tutti i giorni.
-        Studiarci, farci balotta.
+        Studiarci, farci festa, finire nei casini.
         Poi cambierà città e a quel punto vi sentirete di rado o mai.
         Da una parte è bello quando ci si ritrova, perché ci si sente a casa.
-        Dall’altra, questa cosa è vera solo fino a quando non accade qualcosa di grosso, come un matrimonio, come l’avere figli.
+        Ma poi accade qualcosa di grosso, come un matrimonio, come l’avere figli e non vi capite più.
         Una cosa che non mi aspettavo della vita adulta, è di poter dimenticare le altre persone.
         Mi fa sentire una merda.
         Ma ti svegli, vai a lavoro, torni, cerchi di tenere in piedi le relazioni che hai qui, di lavarti e dormire, di prenderti cura dei tuoi interessi.
         E ti dici “Cazzo, devo scrivere a Cristina” oppure il calendario ti ricorda che è il compleanno di Stefano.
         E allora magari vi sentite per uno, due giorni ma poi gli audio rimangono lì appesi.
         E un po’ ti senti una merda, ti senti in colpa, e alla fine non scrivi fino a quando non riaccade qualcosa che sia una scusa per farlo.
-        Molte delle ame che sono tornare al Sud sono diventate “amiche da ricorrenza”.
+        Molte delle ame che sono tornare giù sono diventate “amiche da ricorrenza”.
         E forse c’è questa cosa che mi spaventa, all’idea di scegliere di andare da Talco, o di finire per tornare dai miei.
         Di diventare anche per Valeria e le altre ragazze, per le colleghe, una “amica da ricorrenza”.
         Per non parlare di Ennio.
@@ -892,20 +916,20 @@
             Commento Mentore.
                         
         }
-        Sai perché litigo tantissimo coi miei?
-        È perché dicono che non so mai accontentarmi.
-        Detto da quelli che mi hanno spedito in quell’inferno di ipercompetitività che il Conservatorio.
-        Per fortuna li ho scagati e non ho fatto classica o a quest’ora starei avvelenando gente per un assolo alla Carnegie Hall.
-        Ma la cosa che mi ferisce è che dicono che sono pretenziosa, quando invece quello che continuo a pensare è di non essere abbastanza.
+        Sai perché litigo tantissimo con mamma?
+        È perché dice che non so mai accontentarmi.
+        Detto da quellia che mi ha spedito in quell’inferno di ipercompetitività che il Conservatorio.
+        Per fortuna l'ho scagata e non ho fatto classica o a quest’ora starei avvelenando gente per un assolo alla Carnegie Hall.
+        Ma la cosa che mi ferisce è che dice che sono pretenziosa, quando invece quello che continuo a pensare è di non essere abbastanza.
         Di non essere all’altezza.
-        Se c’è un’ultima cosa da ammettere con te, qualcosa che mi dia a speranza di uscire da qui, è questa:
+        Se c’è un’ultima cosa da ammettere con te, qualcosa che magari ci fa capire come uscire da qui, è questa:
         la persona che sono non è all’altezza delle mie aspettative.
         Prendi le relazioni: non sono stata capace di tenermi vicina la persona a cui voglio più bene.
         E non so godermi la solidità che mi regala Ennio.
         Ma la cosa peggiore è tutta la roba che dico quando parlo di attivismo e della Rifugia e le canzoni che scrivo.
         Perché sai qual è il sentimento che provo più spesso?
         Invidia.
-        Quando scrollo su IG e vedo vecchie compagne del conservatorio avere successo, mi rode il culo.
+        Quando scrollo sui social e vedo vecchie compagne del Conservatorio avere successo, mi rode il culo.
         Quando le vedo a fare viaggi fighi con tizi fighi e senza la paura di perdere la casa, senza dover fare lavori di merda, muoio dentro.
         Dio, darei tutto a volte per la loro vita.
         E so che non è vero, non è vero fino in fondo.
