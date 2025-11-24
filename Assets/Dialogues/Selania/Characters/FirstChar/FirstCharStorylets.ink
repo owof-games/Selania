@@ -453,7 +453,7 @@
         
         Ma poi forse non ho sto già davvero vivendo con la mia famiglia?
         Ah, sì, scusa, sto tornando sul pippone delle case di prima.
-        Però continuo a pensarci, anche perché ho paura che pensi che sono fredda rquando parlo di Ennio.
+        Però continuo a pensarci, anche perché ho paura che pensi che sono fredda quando parlo di Ennio.
         È che dove sto ora non è che è solo una casa, anzi, ed è la cosa più figa.
         Ormai la chiamano “La Rifugia”.
         All’inizio era solo una battuta perché avevamo sempre ospiti in giro per casa, gente che cercava un appoggio o era nei casini.
@@ -918,7 +918,7 @@
         }
         Sai perché litigo tantissimo con mamma?
         È perché dice che non so mai accontentarmi.
-        Detto da quellia che mi ha spedito in quell’inferno di ipercompetitività che il Conservatorio.
+        Detto da quella che mi ha spedito in quell’inferno di ipercompetitività che il Conservatorio.
         Per fortuna l'ho scagata e non ho fatto classica o a quest’ora starei avvelenando gente per un assolo alla Carnegie Hall.
         Ma la cosa che mi ferisce è che dice che sono pretenziosa, quando invece quello che continuo a pensare è di non essere abbastanza.
         Di non essere all’altezza.
