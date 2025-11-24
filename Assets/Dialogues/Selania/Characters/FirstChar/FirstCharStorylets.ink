@@ -9,9 +9,9 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ firstChar_storyletsForRewritingCount ++
         
-        Ehi, ciao!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Non è che hai visto in giro la versione umana di un pettirosso?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Una persona rossiccia, morbidosa e che sembra sempre un po’ pissata?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        Ehi, ciao!
+        Non è che hai visto in giro la versione umana di un pettirosso?
+        Una persona rossiccia, morbidosa e che sembra sempre un po’ pissata?
         Si chiama Talco e parla solo di Florence and the Machine.
         Anzi, *parlava* solo di Florence.
         Poi c’è stata quell’altra roba.
@@ -70,9 +70,8 @@
         O forse mi sono di nuovo addormentata a lavoro e sto sognando.
         Merda, il capo mi farà il culo.
         Quindi, {player_name}, qual è il messaggio nascosto di questo trip o sogno o quel che è?
-        Datti da fare con tutte le tue cose da inconscio, così mi sveglio o ripiglio e vedo di non mandare a puttane il lavoro o relazione.
-        O entrambe.
-        
+        Datti da fare con tutte le tue cose da inconscio, così mi sveglio o ripiglio e vedo di non mandare a puttane il lavoro e relazione.
+     
             //Risposte, di cui una diversa se ho parlato o meno con Mentore.
             + {not welcome} [Risposta blu.]
                 -> color_variation_management(FirstCharacter, blueC)->
@@ -150,10 +149,21 @@
         Ma il male mi ha fatto capire che questa non è un’allucinazione o un sogno.
         E invece di essere preoccupata vorrei solo stendermi a riposare.
         Mi spiace giusto perché le mie coinquiline saranno preoccupate.
-        E a lavoro saranno incazzati a bestia.
-        Sempre che non sia una di quelle situazioni in cui il tempo qui passa velocissimo e nel mondo reale zero.
-        Magari mi metto a recuperare il sonno arretrato.
-        Forse vorrei giusto avere la mia tastiera, e le ragazze della band perché ho voglia di creare qualcosa di nuovo.
+        Non me l'aspettavo, ma sono diventate la mia famiglia.
+        Sono le persone con cui cazzeggio e piango e con cui ho anche una band.
+        E facciamo volontariato, circa.
+        Le amo.
+        Uh, e ora che ci penso, anche a lavoro saranno incazzati a bestia.
+        Non che me ne freghi un granché per Luca, il capo: è una gran testa di cazzo.
+        Come ogni capo.
+        Però le colleghe possono essere nella merda: se manca una di noi, si devono sobbarcare il suo lavoro.
+        Siamo sotto personale da sempre, e non gliene frega a nessuno.
+        Meno stipendi uguale più guadagni, credo, giusto?
+        Merda, spero che non sia una di quelle situazioni in cui il tempo qui passa lentissimo e nel mondo reale come un fulmine o divento del tutto povera.
+        Come lo pago l'affitto poi?
+        Mmm.
+        Forse dovrei respirare e bona, alla fine non so come va questa roba.
+        Vorrei avere giusto avere carta e penna, e pensare a un brano su questa situazione.
         Sono settimane che non ho le energie per creare un pezzo che uno, un accenno di melodia.
         Ma tu che idea ti sei {player_pronouns has him:fatto|{player_pronouns has her:fatta|fattə}}. di questo posto?
         
@@ -209,7 +219,7 @@
         Prima ho parlato con {mentorName} che mi ha spiegato che sei qui per aiutarmi.
         Dice che c’è qualcosa che mi blocca.
         E che quando mi fiderò di te potrò chiederti aiuto e sbloccarmi e tornare a casa.
-        Tipo una versione di D&D con le quest scritte da un emo.
+        Tipo una versione di D&D con le quest scritte da una millenial.
         Stavo per dirle: guarda ama, mi fido già di {player_name}!
         Sono un labrador e mi fido sempre di tutte le persone che incontro!
         Poi ho pensato che non è vero.
@@ -228,7 +238,7 @@
         E quando ho incontrato Talco, ero bloccata in un brutto film che durava dalla fine del liceo.
         E ləi mi ha buttato nel mondo.
         Non con quelle cagate tipo “cammina nel verde e vedrai che passa tutto”.
-        Ma mi ha fatto fare cose piccole che mi hanno aperto un mondo.
+        Ma mi ha fatto fare cose piccole che mi hanno aperto la testa.
         Come quando ci siamo stes3 in piazza per vedere come le persone reagivano.
         O quando abbiamo finto di intervistare persone anziane per farle sentire ascoltate.
         O tutte le volte che davanti a una cosa ingiusta ha detto “no”!
@@ -284,13 +294,12 @@
                         
         }
         
-        Da qualche mese lavoro in un ristorante.
-        Così, per iniziare le conversazioni a cavolo.
-        Comunque, {player_name}: lavoro in un ristornante.
-        Uno di quelli da catena, che si gasano perché hanno la sede sia a Buco di Culo Lombardo che a Pechino.
-        Come puoi immaginare, non era quello che mi aspettavo dopo il Conservatorio.
+        Quando prima sono andata in panico parlando di lavoro, è perché da qualche mese servo in un ristorante.
+        Uno di quelli lussuosi, che si gasano perché hanno la sede sia a Buco di Culo Lombardo che a Pechino.
+        E non ti pagano un cazzo.
+        E ama, non era quello che mi aspettavo dopo il Conservatorio.
         Per un po’ sono riuscita a fare qualche lavoretto con il pianoforte, quasi sempre non pagato.
-        Poi mio padre ha perso il lavoro, e mi ha detto: figlia, siamo nella merda.
+        Poi mio padre ha perso il lavoro e mi ha detto: figlia, siamo nella merda.
         Tengo sempre un orecchio alzato per qualche commissione.
         Ma per lo più sono di sera o nel fine settimana, quando col cavolo che mi danno il giorno libero dal ristorante.
         Per fortuna ci sono le prove con la band.
@@ -299,15 +308,15 @@
         Qualche settimana fa è venuto un dirigente di una compagnia petrolifera a mangiare.
         Una di quelle specializzate in greenwashing e che ti denunciano se solo racconti quello che fanno.
         Ci siamo rifiutate di servirlo.
-        Il caposala era verde bestia, ma è stata la prima volta che mi son sentita viva a lavoro.
+        Il caposala era giallo bestia, ma è stata la prima volta che mi sono sentita viva a lavoro.
         Dire “no” è una cosa potentissima.
         Ed è stato bello farlo assieme.
-        Da quel momento mi chiedo se possano esserci cose che mi diano uno scopo più ampio.
-        A lavoro stiamo provando di nascosto a tirare su un gruppo sindacale.
+        Ora stiamo provando di nascosto a tirare su un gruppo sindacale.
         “Di nascosto”, perché coi contrattini precari da fame che ci ritroviamo fanno alla svelta a non rinnovarci.
+        E perché abbiamo colleghe convinte di poter far carriera se denunciano le "rompicoglioni" alla dirigenza.
         A volte temo siano energie sprecate.
         Altre, che dovrei fare qualcosa di più grande, che faccia meglio a più persone.
-        Tu cosa ne pensi?
+        Non so se ha senso.
         
         //Risposte
         //Una di queste risposte genera un commento di Chitarra che ci racconta qualcosa simili imprenditore giochi Cortese come esempio tossico.
@@ -362,19 +371,24 @@
         Mi aspettavo qualcosa di freddo e schifoso, e invece l’acqua era tiepida, quasi avvolgente.
         Mi ha fatto sentire così al sicuro, vulnerabile in modo piacevole.
         Mi ha fatto pensare a cosa significhi “casa”.
-        Quella dove vivo è una catapecchia piena di muffa, ma adoro le mie coinquiline.
-        UItimamente però il continuo ricambio di coinqui e le tracce di chi se ne è andata riempie lo spazio di fantasmi, e mi fa sentire precaria.
+        Quella dove vivo è una catapecchia piena di muffa, ma è calda grazie a Valeria e le altre coinqui.
+        UItimamente però il continuo ricambio di coinquiline e le tracce di chi se ne è andata riempie lo spazio di fantasmi, e mi fa sentire precaria.
         Poi c’è la casa dei miei.
         Continuo a dire “torno a casa” quando scendo a trovarli, ma a dire il vero è il posto che mi ricorda cosa voglio costruire, ma non quello che voglio abitare.
         E poi c’è Ennio.
         In questi anni mi sono chiesta se Ennio possa essere la mia casa, il mio rifugio.
         Quando l’ho conosciuto non avrei mai pensato che ci saremmo messi assieme.
-        È così solido. Ama il suo lavoro, è quasi pedante nel rispettare i suoi ritmi.
+        E invece è diventato il mio primo amore, quello con la A gigante.
+        È così solido.
+        Ama il suo lavoro, è quasi pedante nel rispettare i suoi ritmi.
         Non è una persona che ti fa sdraiare in mezzo a una piazza, ma più uno da sabato a fare la spesa.
         Ho iniziato a frequentarlo perché pensavo che una persona così solida mi avrebbe permesso di sperimentarmi tantissimo.
         Avrei potuto fare qualsiasi cazzata, sicura di avere una persona a cui tornare.
         Col tempo però anche io ho smesso di svolazzare.
         E non so se è perché sto crescendo, o se perché il suo peso mi tiene a terra.
+        Mi ripeto che essere adulta significa riconoscere che bisogna fare delle scelte, che non si può avere tutto.
+        Forse però non sono capace di prevedere le conseguenze delle mie scelte.
+        Ha senso?
         Secondo te una relazione ci cambia? O ci mostra chi siamo davvero?
         
         //Risposte
@@ -422,28 +436,29 @@
             Commento Mentore.
                         
         }
-        Comunque amo vivere con le mie ragazze.
+        
+        Ma poi forse non ho sto già davvero vivendo con la mia famiglia?
         Ah, sì, scusa, sto tornando sul pippone delle case di prima.
         Ma continuo a pensarci, anche perché ho paura che pensi che sono fredda riguardo ad andare a vivere con Ennio.
         È che dove sto ora non è solo una casa, per nulla, ed è la cosa più figa.
         Ormai la chiamano “La Rifugia”.
         All’inizio era solo una battuta perché avevamo sempre ospiti in giro per casa, gente che cercava un appoggio o era nei casini.
         Ma a forza di ripetere la battuta ci siamo dette: ma se facessimo qualcosa di buono?
-        Da una parte cerchiamo a sgamo di offrire un posto temporaneo a chi è nella cacca.
+        Da una parte cerchiamo a sgamo di offrire un posto temporaneo a chi è nei casini.
         Cosa sempre più pesante con la crisi abitativa e il caro affitti.
         Dall’altra facciamo incontri informativi con le associazioni di tutela dei coinquilini, con associazioni migranti e altre realtà.
         E lo so che dirai “blah blah blah” che palle, ma ti giuro che è tutto così vivo.
         La cosa più viva delle mie giornate.
         Organizziamo raccolte fondi, e abbiamo fatto una mostra e delle proteste sotto al comune.
-        La mostra è stata un’idea di Valeria, la mia bestie in casa, nonché la nostra cantante, perché abbiamo una band assieme.
+        La mostra è stata un’idea di Valeria, la mia bestie in casa, nonché la nostra cantante.
         All’inizio la usavamo solo per sfogarci e raccattare qualche soldino.
-        Ma poi le storie che sentivamo nella rifugia, e le lotte dell’associazione e di altre realtà hanno iniziato a infilarsi nei testi.
+        Ma poi le storie che sentivamo nella Rifugia, e le lotte dell’associazione e di altre realtà hanno iniziato a infilarsi nei testi.
         Ed è una cosa strana scrivere robe politiche, perché diventa difficile mantenere la poesia.
         Abbiamo mille modi di parlare d’amore, ma i problemi reali sembrano sempre didascalici.
         Eppure sono convinta che l’arte possa fare tanto per cambiare il mondo.
         Perché i fatti sono freddi, e l’arte può renderli pieni di calore.
         Puoi tipo raccontare tutti i femminicidi del mondo e un uomo smonterà ogni dato e movente.
-        Oppure scrivere “*Un violador en tu camino”* e riempire una piazza di forza e rabbia.
+        Oppure scrivere <b>“Un violador en tu camino”</b> e riempire una piazza di forza e rabbia.
         Suonerà arrogante, ma vorrei per una volta creare qualcosa di altrettanto forte.
         Qualcosa che sia potente e inappellabile.
         Qualcosa che salvi il mondo.
@@ -514,7 +529,7 @@
         Non abbiamo manco trent’anni, cazzo!
         E l’ha visto, sulla mia faccia.
         Non ho detto nulla ma già aveva capito tutto.
-        E non si è manco arrabbiatə**.**
+        E non si è manco arrabbiatə.
         Mi ha solo detto che era un passo importante per ləi, perché anche se è una cosa inaspettata, ama Thomas, e sa che è l’uomo giusto.
         E poi, il colpo finale.
         “Vorrei trasferirmi da lui a Toronto. Qui non mi rimane nulla, nulla a parte te.”
@@ -618,15 +633,17 @@
         Io.
         Tornare giù è un’opzione.
         Voglio molto bene ai miei.
-        Conosco poche ragazze che possono dire “Scendo a casa e son felice di ubriacarmi con mio padre”.
+        Conosco poche ragazze che possono dire “Scendo a casa e son felice di suonare e ubriacarmi con mio padre”.
         Farmi salire e studiare è stato uno sforzo enorme per loro.
-        Tornare è come dire “Ok, ho sbagliato tutto”.
+        E ora che sono sempre più vecchi, tornare potrebbe significare restituire loro il favore.
+        Prendermi cura di loro.
+        Ma una parte di me ha paura che tornare voglia dire “Ok, ho sbagliato tutto”.
         E ho paura di finire in quell’alveo.
         Quello delle amiche sposate.
-        Non è un crimine contro l’umanità, sia chiaro.
+        Non è un crimine contro l’umanità, lo so.
         Ma so anche che a volte sono la persona che il contesto mi permette di essere.
         E mi piace la persona che sono ora.
-        Ma non so se mi piacerebbe la persona che sarei tornando dai miei.
+        Ma non so se mi piacerebbe la persona che sarei tornando dai miei, tornando al paesino.
         Credi abbia senso?
         
         //Risposte
@@ -688,6 +705,7 @@
         E non ha a che fare col razionale, no.
         Ma è un ritrovarsi i piedi in un’acqua antica.
         Che raccoglie tutte le storie del mondo.
+        Per un attimo rinuncio a me, e trovo il tutto.
         E allora sento che anche se uso parole di oggi e suoni di oggi sto parlando del sempre.
         Di un certo tipo di sempre.
         E allora quella roba può far qualcosa di buono, di davvero buono.
@@ -745,12 +763,11 @@
                         
         }
         Sai, {player_name}, l’amore non è come me l’aspettavo.
-        Ho avuto qualche altra relazione prima di Ennio, ma quando gli ho detto “Ti amo”, è stato diverso dalle altre volte.
+        Sono una di quelle che dice "Ti amo" dopo due incontri.
+        Ma quando l'ho detto ad Ennio, è stato diverso dalle altre volte.
         Aveva proprio un altro sapore in bocca, non di entusiasmo ma di promessa.
-        I primi mesi sono stati strani: è il fratello di Valeria, e boh, eravamo convinti che si sarebbe arrabbiata.
-        Viverci di nascosto ha reso le cose complicate ma anche, beh, eccitanti.
-        E il giorno in cui Valeria ci ha detto che era felice per noi, il “ti amo” ha cambiato di nuovo sapore.
-        Come pane caldo, una cosa buona e quotidiana.
+        E poi la routine ha trasformato col tempo quel sapore.
+        Ora sa di pane caldo, una cosa semplice ma magica.
         C’è più silenzio ora, quando stiamo assieme.
         Non mi serve riempire gli spazi di cose intelligenti per paura che lui si annoi.
         A volte lo osservo giocare al PC mentre coccolo i suoi gatti.
@@ -758,7 +775,7 @@
         E il sesso è una coperta calda e non più una spiaggia torrida.
         Qualcosa che rassicura, che fa dormire bene.
         Non so come guardare a tutto questo.
-        Un po’ come quando sei su un treno in stazione, e ne hai un altro fuori dal finestrino.
+        Mi sento un po’ come quando sei su un treno in stazione, e ne hai un altro fuori dal finestrino.
         E tu guardi fuori e c’è movimento ma non riesci a capire se stai riprendendo a viaggiare, o se è l’altro treno a spostarsi.
         Ultimamente Ennio è più insofferente, sente il bisogno di passare più tempo assieme.
         Credo che sia per questo che mi ha chiesto di andare a convivere.

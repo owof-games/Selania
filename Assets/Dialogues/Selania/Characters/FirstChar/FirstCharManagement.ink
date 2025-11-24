@@ -52,7 +52,7 @@
 //Tengo conto delle interazioni avute per aprire la possibilità di avviare la riscrittura
     VAR firstChar_storyletsForRewritingCount = 0
 //Quantità di storylets letti dalla giocatrice prima di accedere alla riscrittura
-    VAR firstChar_minStoryletsForRewriting = 7    
+    VAR firstChar_minStoryletsForRewriting = 9    
     VAR firstChar_specialEvent = false
     
 //Variabili per mettere in pausa la conversazione

@@ -58,27 +58,27 @@
         Sono pronta, {player_name}. Iniziamo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         
         
-        Ti aspettavo concerti e viaggi nel mondo.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        Ti aspettavi concerti e viaggi nel mondo.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         Ci sono cose a cui hai rinunciato.
         //pensa a ciò che puoi avere
             
-            + [blu]
+            + [L'hai detto anche tu: non si può avere tutto.]
                 -> color_variation_management(FirstCharacter, blueC)->
               
                   
-            + [verde.]
+            + [Ma per la prima volta hai una relazione romantica.]
                 -> color_variation_management(FirstCharacter, greenC)->
                
             
-            + [rosso.]
+            + [Ma hai trovato la lotta, la voglia di cambiare le cose.]
                 -> color_variation_management(FirstCharacter, redC)->
                 
                 
-            + [giallo.]
+            + [Puoi sempre viaggiare da Talco, ricominciare.]
                 -> color_variation_management(FirstCharacter, yellowC)->
                
             
-            + [viola.]
+            + [Hai detto che quando rinunci a te creando, trovi tutto.]
                 -> color_variation_management(FirstCharacter, purpleC)->
                
     
@@ -104,19 +104,19 @@
         Ti aspettavi amicizie eterne e case in campagna e un amore da film.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
        
     
-            + [Talco.]
+            + [I sogni si trasformano, ma Talco ancora ti aspetta.]
                 -> color_variation_management(FirstCharacter, redC)->
                
-            + [La rifugia.]
+            + [Hai già una casa: La Rifugia e le tue coinquiline.]
                 -> color_variation_management(FirstCharacter, purpleC)->
                
-            + [Ennio.]
+            + [Hai un innamorato che ti ha chiesto di convivere.]
                 -> color_variation_management(FirstCharacter, greenC)->
                 
-            + [Le colleghe?.]
+            + [Essere persone adulte significa sopravvivere alle proprie aspettative.]
                 -> color_variation_management(FirstCharacter, blueC)->
                
-            + [La famiglia.]
+            + [Hai un padre con cui suonare e ubriacarti.]
                 -> color_variation_management(FirstCharacter, yellowC)->
                
             -
@@ -140,23 +140,28 @@
         Ti aspettavi di fare qualcosa di buono, di salvare il mondo con le tue canzoni.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         
                 
-            + [.]
+            + [Talco ti ha insegnato a rompere le regole.]
+                Il mondo è duro da cambiare, ma l'esempio è una gran cosa.
+                Rompere le aspettative, l'ovvio, è rivoluzionario.
                 -> color_variation_management(FirstCharacter, yellowC)->
               
             
-            + [.]
+            + [Ma nessunə salva il mondo da solə, {charNameOne}.]
                 -> color_variation_management(FirstCharacter, blueC)->
                 
                     
-            + [Hai bisogno di uno scopo.]
+            + [Con La Rifugia ti sei data uno scopo più grande.]
                 -> color_variation_management(FirstCharacter, purpleC)->
                
   
-            + [.]
+            + [Pensa a come stai lottando con le colleghe.]
+                A quello che avete fatto contro il dirigente venuto a pranzo.
+                Al tentativo di fare un sindacato.
+                Hai trovato un modo di lottare anche al di fuori della musica.
                 -> color_variation_management(FirstCharacter, redC)->
                
                     
-            + [Puoi aiutare le persone vicine.]
+            + [Ma puoi aiutare i tuoi genitori, una bontà più ristretta ma comunque enorme.]
                 -> color_variation_management(FirstCharacter, greenC)->
                        
             -
@@ -179,21 +184,23 @@
         ~ temp charNameOne = translator(firstChar_ActualName)
             Ti senti mediocre, e hai paura di rischiare di fare un salto e perdere tutto, di fallire.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
     
-            + [.]
+            + [Ma alla fine agisci comunque, come con le colleghe e il sindacato.]
                 -> color_variation_management(FirstCharacter, yellowC)->
                
-            + [Ma non sei sola.]
+            
+            + [Sei amata da molte persone: anche se cadi, non sarai sola.]
                 -> color_variation_management(FirstCharacter, greenC)->
                 
             
-            + [Salvare il mondo chiede sacrificio.]
+            + [La Rifugia è la prova che c'è sempre un posto da cui ripartire.]
                 -> color_variation_management(FirstCharacter, purpleC)->
                
-            + [Essere mediocri è qualcosa di virtuoso.]
+            
+            + [Ennio è felice nel suo non cercare di essere speciale.]
                 -> color_variation_management(FirstCharacter, blueC)->
                 
             
-            + [Serve rischiare.]
+            + [Talco ha abbracciato il rischio, parlandoti della maternità.]
                 -> color_variation_management(FirstCharacter, redC)->
                
             -
