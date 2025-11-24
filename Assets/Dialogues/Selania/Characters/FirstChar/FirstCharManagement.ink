@@ -4,7 +4,7 @@
                     
                      ----------------------------------*/
 
-//Ordine degli stati: 0, Blue, Rosso, Verde, Giallo, Viola.
+//Possibili stati Chitarra
     LIST firstChar_possibleStates = Chitarra, Triangolo, RagazzaOrchestra, FlautoDolce, Ocarina, Violino
     VAR firstChar_ActualName = Chitarra
     
@@ -97,9 +97,9 @@
 
     //In questa prima fase di testing, punterò su una soluzione di difficoltà media: basta che o giallo o viola siano maggiori del blu.
     {
-        - firstChar_purple or firstChar_yellow > firstChar_blue:
+        - firstChar_purple or firstChar_green > firstChar_blue:
             ~ firstChar_relationshipStatus ++
-            {debug: aumento l'inchiostro della prima personaggia di un livello. Ora è a {~ firstChar_relationshipStatus}}  
+            {debug: aumento l'inchiostro della prima personaggia di un livello. Ora è a {~ firstChar_relationshipStatus}}
     }
     
     {
@@ -109,6 +109,7 @@
                 {debug: ho cliccato rewriting e quindi faccio gli ultimi passaggi e attivo il feedback.} 
                 //"Trasformo" la relazione in inchiostro
                     ~ fromRelationshipToInk(FirstCharacter)
+                
                 // Mando ai feedback
                     -> firstAffinityFeedback ->
                 
@@ -192,6 +193,7 @@
             ~ firstChar_ActualName += Triangolo
             {debug: passo per Triangolo e il nome è : {firstChar_ActualName}.}
                 ->->
+        
         //Rosso colore più usato        
         - (firstChar_red > firstChar_green) && (firstChar_red > firstChar_blue) && (firstChar_red > firstChar_yellow) && (firstChar_red > firstChar_purple):
             ~ firstChar_ActualName += RagazzaOrchestra
@@ -200,8 +202,8 @@
         
         //Verde colore più usato        
         - (firstChar_green > firstChar_blue) && (firstChar_green > firstChar_red) && (firstChar_green > firstChar_yellow) && (firstChar_green > firstChar_purple):
-            ~ firstChar_ActualName += FlautoDolce
-            {debug: passo per FlautoDolce e il nome è : {firstChar_ActualName}.}
+            ~ firstChar_ActualName += Violino
+            {debug: passo per Violino e il nome è : {firstChar_ActualName}.}
                 ->->
         
         //Giallo colore più usato        
@@ -212,27 +214,28 @@
         
         //Viola colore più usato        
         - (firstChar_purple > firstChar_green) && (firstChar_purple > firstChar_red) && (firstChar_purple > firstChar_yellow) && (firstChar_purple > firstChar_blue):
-        {debug: passo per Violino e il nome è : {firstChar_ActualName}.}
-            ~ firstChar_ActualName += Violino    
+        {debug: passo per FlautoDolce e il nome è : {firstChar_ActualName}.}
+            ~ firstChar_ActualName += FlautoDolce    
                 ->->
                 
         - else:
             {
-                - (firstChar_purple < firstChar_blue) && (firstChar_yellow < firstChar_blue):
+                - (firstChar_purple < firstChar_blue) && (firstChar_green < firstChar_blue):
                         ~ firstChar_ActualName += Triangolo
                         {debug: passo per Triangolo e il nome è : {firstChar_ActualName}.}
                         ->->
-                - firstChar_purple && firstChar_yellow > firstChar_blue:
-                        ~ firstChar_ActualName += Ocarina   
-                            {debug: passo per Ocarina e il nome è : {firstChar_ActualName}.}
+                
+                - firstChar_purple && firstChar_green > firstChar_blue:
+                        ~ firstChar_ActualName += FlautoDolce
+                            {debug: passo per FlautoDolce e il nome è : {firstChar_ActualName}.}
                         ->->
-                - (firstChar_yellow > firstChar_blue) && (not firstChar_purple > firstChar_blue):
-                        ~ firstChar_ActualName += RagazzaOrchestra
-                        {debug: passo per Orchestra e il nome è : {firstChar_ActualName}.}
+                - (firstChar_green > firstChar_blue) && (not firstChar_purple > firstChar_blue):
+                        ~ firstChar_ActualName += Violino
+                        {debug: passo per Violino e il nome è : {firstChar_ActualName}.}
                             ->->
-                - (firstChar_purple > firstChar_blue) && (not firstChar_yellow > firstChar_blue):
-                    {debug: passo per FlautoDolce e il nome è : {firstChar_ActualName}.}
-                        ~ firstChar_ActualName += FlautoDolce 
+                - (firstChar_purple > firstChar_blue) && (not firstChar_green > firstChar_blue):
+                    {debug: passo per Ocarina e il nome è : {firstChar_ActualName}.}
+                        ~ firstChar_ActualName += Ocarina 
                             ->->
                 - else:
                         ~ firstChar_ActualName += RagazzaOrchestra

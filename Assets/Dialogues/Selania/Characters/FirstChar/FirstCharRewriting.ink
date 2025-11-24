@@ -423,7 +423,7 @@
                             Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
                     }
                     
-                    
+                    Io sono <b><i>{charNameOne}</b></i>.
                     Sono lo strumento semplice, eppure fondamentale.
                     Sono quella che attende che le altre facciano casino, per mettere un accento, un colore.
                     Che ritrova il bello nelle cose quotidiane.
