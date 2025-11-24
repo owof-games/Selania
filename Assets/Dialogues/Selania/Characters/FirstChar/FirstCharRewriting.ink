@@ -16,8 +16,38 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
 
-    
-            + [<i>Voglio cominciare la riscrittura.]
+        Io...
+        Forse ho frainteso tutto il discorso sulla Chitarra.
+        Non è tanto "il piano b", la cosa facile.
+        Ma piuttosto la cosa che possono fare tutt3.
+        E...
+        E non ero pronta ad essere "tutt3".
+        Mi aspettavo concerti e viaggi nel mondo.
+        Mi aspettavo amicizie eterne e case in campagna ad aiutarci reciprocamente.
+        Mi aspettavo un amore folle, di quelli su cui ci fanno i film.
+        Mi aspettavo di fare qualcosa di buono, di salvare il mondo con le mie canzoni.
+        E non ho che non ho ottenuto questo.
+        Sono soltanto mediocre.
+        Un concentrato di rinunce.
+        Faccio un lavoro di merda che mi ammazza le giornate.
+        Le persone che amo vivono lontane, e alcune sono scomparse.
+        Non capisco se la relazione con Ennio è stabile o immobile.
+        E non riesco manco a risparmiare a sufficienza da donare dieci euro per la Palestina, figurarsi salvare il mondo.
+        {player_name}, credo di avere paura.
+        Perché l'unica domanda che mi rimane, l'unica spocchiosa domanda è:
+        è questo il massimo che posso aspettarmi dalla vita?
+        Andrà sempre peggio?
+        Tra quanto dovrò fare due lavori di merda invece di uno e morire dentro?
+        O vedere La Rifugia trasformarsi in un altro airbnb vintage e dover tornare dai miei ad inacidirmi?
+        O perdere anche Ennio, e rimanere sola e infelice con gatto e vibratore?
+        E non è vero che la chitarra fa schifo, Mark Bowen sposami, ma non è il mio strumento.
+        Non sono nel mio strumento.
+        {player_name}: devo continuare a vivere una vita che non è la mia?
+        O fare il salto e rischiare di perdere qualcosa.
+        O tutto?
+        Quanto si può sperare di essere felici, a questo mondo?
+
+            + [Che ne dici se riscriviamo assieme la tua storia?]
                 -> rewriting
             
             + [Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.]
