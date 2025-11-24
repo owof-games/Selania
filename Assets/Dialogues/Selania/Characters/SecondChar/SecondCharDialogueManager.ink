@@ -95,7 +95,9 @@
             
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
                 + {secondChar_storyletsForRewritingCount > secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && questions} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
-                                -> rewriting_proposal_second_character
+                //Incremento le variazioni del libro della Riscrittora           
+                    ~ book_BGVariations ++
+                        -> rewriting_proposal_second_character
                                 
             //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo             
                 + {secondChar_storyletsForRewritingCount > secondChar_minStoryletsForRewriting && rewriting_proposal_second_character}[Iniziamo la riscrittura?]

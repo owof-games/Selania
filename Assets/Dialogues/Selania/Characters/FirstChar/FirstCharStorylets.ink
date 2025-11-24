@@ -585,6 +585,8 @@
             -> options_first_character          
     
     = eight
+        //Riferimenti per la riscrittura: mediocrità e fallimento, un poco "affetti"
+        //Brano: Back in Town, Florence + The Machine.
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -602,9 +604,50 @@
             Commento Mentore.
                         
         }
-       
-           
-            ~ book_BGVariations ++
+        
+        Tornare dai miei è come un viaggio nel tempo.
+        Scendo, e mi sembra che tutto sia fermo, e questa cosa è rassicurante.
+        Ma passano i giorni e mi rendo conto della bugia.
+        Chi sta via pensa sempre che il posto che lascia sia immutabile, che non cambino le persone che ama.
+        Ma quei cambiamenti arrivano spesso tra le righe.
+        Come quando scopri che un amico di famiglia non c’è più, o che c’è una discussione tra i fratelli di tuo padre che va avanti da due anni e non ne sapevi nulla.
+        Alcune delle amiche che sono tornate a vivere giù hanno trovato un altro modo di far parte di quel cambiamento.
+        Anna, che studiava jazz, ha tirato su assieme ad altre persone un piccolo festival locale che sta iniziando a ingranare.
+        E Luigia, una ex di Valeria, ora si occupa di recupero e decolonizzazione della storia del suo paesino sul Coghinas.
+        Altre, che qui facevano occupazioni e proteste e litigavano con la polizia, ora sono sposate e raccontano vite che.
+        Io.
+        Tornare giù è un’opzione.
+        Voglio molto bene ai miei.
+        Conosco poche ragazze che possono dire “Scendo a casa e son felice di ubriacarmi con mio padre”.
+        Farmi salire e studiare è stato uno sforzo enorme per loro.
+        Tornare è come dire “Ok, ho sbagliato tutto”.
+        E ho paura di finire in quell’alveo.
+        Quello delle amiche sposate.
+        Non è un crimine contro l’umanità, sia chiaro.
+        Ma so anche che a volte sono la persona che il contesto mi permette di essere.
+        E mi piace la persona che sono ora.
+        Ma non so se mi piacerebbe la persona che sarei tornando dai miei.
+        Credi abbia senso?
+        
+        //Risposte
+            
+            + [Risposta gialla.]
+                -> color_variation_management(FirstCharacter, yellowC)->  
+            
+            + [Risposta rossa.]
+                -> color_variation_management(FirstCharacter, redC)->
+            
+            + [Risposta blu.]
+                -> color_variation_management(FirstCharacter, blueC)->  
+            
+            + [Risposta verde.]
+                -> color_variation_management(FirstCharacter, greenC)->    
+                    
+            + [Risposta viola.]
+                -> color_variation_management(FirstCharacter, purpleC)->
+            
+            -    
+
             -> first_char_closing_storylet ->
             -> options_first_character
     

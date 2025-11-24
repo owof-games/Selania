@@ -293,8 +293,6 @@
                         
             }
             
-                ~ greenhouse_cultivableGrowing ++    
-    
                 ~ book_BGVariations ++
     
                     {
