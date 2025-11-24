@@ -174,19 +174,19 @@ Qui Mentore ci dice che ha letto <b>Il cancello</b> e ci chiede cosa ne pensiamo
             } 
         
         + [Scelta blu.]
-             -> color_variation_management(FirstCharacter, blueC)->
+             -> color_variation_management(Mentor, blueC)->
     
         + [Scelta rossa.]
-            -> color_variation_management(FirstCharacter, redC)->
+            -> color_variation_management(Mentor, redC)->
      
         + [Scelta viola.]
-                -> color_variation_management(FirstCharacter, purpleC)->
+                -> color_variation_management(Mentor, purpleC)->
     
         + [Scelta gialla.]
-            -> color_variation_management(FirstCharacter, yellowC)->
+            -> color_variation_management(Mentor, yellowC)->
             
         + [Scelta verde.]
-            -> color_variation_management(FirstCharacter, greenC)->
+            -> color_variation_management(Mentor, greenC)->
         -    
         
         ~ firstChar_pauseTalking = firstChar_pauseDuration

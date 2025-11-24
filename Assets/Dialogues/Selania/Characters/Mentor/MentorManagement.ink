@@ -12,6 +12,16 @@
     VAR mentor_pauseTalking = 0
     VAR mentor_pauseDuration = 10
 
+//Variabili colore
+    VAR mentor_purple = 0.00
+    VAR mentor_yellow = 0.00
+    VAR mentor_blue = 0.00
+    VAR mentor_green = 0.00
+    VAR mentor_red = 0.00     
+
+
 //VARIABILI NARRATIVE
     VAR riccioMentoreViciniColpo = false
     VAR riccioMentoreViciniInnaffiatoio = false
+    
+   
