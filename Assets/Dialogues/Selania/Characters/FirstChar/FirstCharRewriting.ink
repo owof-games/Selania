@@ -15,37 +15,7 @@
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
-            
-        C'è una cosa che voglio dirti, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-    
-                {
-                    -   are_two_entities_together(Mentor, PG):Sicuro è il caso che vi lasci il vostro spazio.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurryl
-                            ~ change_entity_place(Mentor)
-                }
-                {
-                    -   are_two_entities_together(SecondCharacter, PG):Nanetto, ci lasceresti un po' da sole?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                            ~ change_entity_place(SecondCharacter)
-                }  
-            
-        Credo di aver capito perché il mio nome qui è {charNameOne}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Penso al Ghiberti.
-        Penso all3 am3.
-        Penso alla mia famiglia.
-        Non so se l'hai visto, ma tutta questa roba mi fa pressione.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-        Tutte le persone che conosco mi stanno chiedendo di fare una scelta, di decidere che cosa fare da grande.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-        Ma sinceramente, {player_name}?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Mi cago addosso all'idea di fare una scelta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_sad
-         Perché una scelta chiude strade.
-         Perché una scelta delude persone.
-         Perché una scelta può portarti in luoghi che non sono per te.
-         Ma a quel punto, non si può più tornare indietro.
-         E così l'unica cosa che rimane è rinunciare.
-         Lasciare che le altre persone scelgano per te.
-         O che lo faccia il mondo.
-         Ecco perché mi chiamo {charNameOne}: perché rimango nel medio, nella cosa più ovvia e cringe.
-         @animation:RewriterBook
-         E lascio che le cose accadano.
-            ~ greenhouse_cultivableGrowing ++
+
     
             + [<i>Voglio cominciare la riscrittura.]
                 -> rewriting
@@ -88,38 +58,29 @@
         Sono pronta, {player_name}. Iniziamo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         
         
-        Prima hai detto che hai il terrore di fare una scelta.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        Ti aspettavo concerti e viaggi nel mondo.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        Ci sono cose a cui hai rinunciato.
+        //pensa a ciò che puoi avere
             
-            + [Qui hai accettato il tuo nuovo nome.]
+            + [blu]
                 -> color_variation_management(FirstCharacter, blueC)->
-                Accettare è una scelta.
-                Cercare risposte è un'altra scelta ancora.
-                E ammettere una propria paura, una scelta enorme.
+              
                   
-            + [Ma hai deciso di costruire una famiglia con l3 tu3 am3.]
+            + [verde.]
                 -> color_variation_management(FirstCharacter, greenC)->
-                Hai aperto il tuo cuore, e loro ti amano.
-                Si preoccupano per te, cercano di aiutarti a trovare la tua strada.
-                E questo amore è frutto di infinite piccole scelte fatte ogni giorno.
+               
             
-            + [Dimenticando che per finire gli studi hai lottato per anni.]
+            + [rosso.]
                 -> color_variation_management(FirstCharacter, redC)->
-                Che ogni esame che hai dato è stata una scelta.
-                Che ogni lezione che hai seguito è stata una scelta.
-                E presto o tardi, hai trovato la volontà di continuare.
                 
-            + [Ma hai più volte accettato il rischio di suonare sul tetto.]
+                
+            + [giallo.]
                 -> color_variation_management(FirstCharacter, yellowC)->
-                Hai accettato di essere festa in un mondo severo.
-                Hai cercato il gioco quando tutto ti dice che devi lavorare.
-                Hai accolto falene, scoiattoli e altri animali suonanti.
-        
+               
             
-            + [Però da che sei qui hai esplorato tutto questo luogo.]
+            + [viola.]
                 -> color_variation_management(FirstCharacter, purpleC)->
-                Hai inseguito uno scoiattolo.
-                Hai cercato Talco.
-                Non ti sei fatta spaventare dalla novità.
+               
     
             -
                 ~ numberQuestion ++   
@@ -140,39 +101,24 @@
             
         = two
         ~ temp charNameOne = translator(firstChar_ActualName)
-        
-        Temi che le persone a cui vuoi bene si sentano tradite dalla scelta che farai.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        Ti aspettavi amicizie eterne e case in campagna e un amore da film.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+       
     
-            + [Con Talco puoi litigare, eppure siete legatissim3.]
+            + [Talco.]
                 -> color_variation_management(FirstCharacter, redC)->
-                Pensi davvero che ti accuserebbe di tradimento solo perché hai deciso di decidere per te stessa?
-                Lə Talco che hai raccontato si arrabbierebbe di più se tu facessi una scelta per te pensando a ləi.
-                
-            + [La paura di tradire è un'altra faccia dell'ego.]
+               
+            + [La rifugia.]
                 -> color_variation_management(FirstCharacter, purpleC)->
-                È la voglia di sembrare impeccabili.
-                Infallibili.
-                Inattaccabili.
-                Ma amore e crescita prosperano nell'errore e nella vulnerabilità.
-        
-            + [Ti preoccupi molto di loro, e poco di te.]
+               
+            + [Ennio.]
                 -> color_variation_management(FirstCharacter, greenC)->
-                Non ti sei chiesta molto dove eri, ti sei messa solo a cercare Talco.
-                Ti sei preoccupata per Jonah.
-                Ma per te?
                 
-            + [Forse accadrà, ma non è un tuo problema.]
+            + [Le colleghe?.]
                 -> color_variation_management(FirstCharacter, blueC)->
-                Stai costruendo la tua vita, non la loro.
-                Se la pensano diversamente, non è amicizia, e ti sei salvata da qualcosa di peggiore.
-     
-                    
-            + [Tradiamo la fiducia se rompiamo le regole a nostro vantaggio.]
+               
+            + [La famiglia.]
                 -> color_variation_management(FirstCharacter, yellowC)->
-                Hai deciso di giocare con loro e lasciar loro tutto il potere?
-                O è una regola implicita, che non avete mai concordato ma che senti nell'aria?
-                E a prescindere: abbiamo sempre il diritto di revocare un accordo, una regola.
-                        
+               
             -
                 ~ numberQuestion ++
             Ti ascolto. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -191,39 +137,28 @@
         
         = three
         ~ temp charNameOne = translator(firstChar_ActualName)
-        Vedi una scelta come una strada chiusa, qualcosa da cui non poter tornare indietro.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        Ti aspettavi di fare qualcosa di buono, di salvare il mondo con le tue canzoni.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        
                 
-            + [Se non tiri nessun dado, non c'è storia da far avanzare.]
+            + [.]
                 -> color_variation_management(FirstCharacter, yellowC)->
-                Quando giochi non sempre le cose vanno come vuoi, ma comunque <i>vanno</i>.
-                E fintanto che le cose hanno di dove andare, c'è tempo per cambiare.
-                E a volte anche ritirare i dadi.
+              
             
-            + [Tutt3 hanno immaginato sorti diverse per Jonah, ma nessuna fine.]
+            + [.]
                 -> color_variation_management(FirstCharacter, blueC)->
-                Ogni passo avanti prevede la possibilità di tornare indietro.
-                A volte è più difficile, a volte meno, ma è sempre possibile.
+                
                     
-            + [Eppure la prima cosa che hai visto qui sono otto sentieri.]
+            + [Hai bisogno di uno scopo.]
                 -> color_variation_management(FirstCharacter, purpleC)->
-                Otto luoghi dove andare.
-                E ogni sentiero ha una direzione in cui andare, e una da cui tornare.
-                A volte l'erba può essere cresciuta.
-                A volte l'acqua può averne cancellato un pezzo.
-                Ma il sentiero è sempre lì, ad aspettare.
+               
   
-            + [A suo modo, la storia di Jonah è un successo.]
+            + [.]
                 -> color_variation_management(FirstCharacter, redC)->
-                Ha deciso che non gli stava più bene quello che aveva, e si è mosso per cambiarlo.
-                E il leggere negativamente le cose che forse gli sono capitate raccontano nulla di Jonah e molto di chi le racconta.
-                C'è orgoglio anche dietro una cassa del supermercato, non solo su palco.
+               
                     
-            + [Ragioni come se fossi sola se dovessi cadere.]
+            + [Puoi aiutare le persone vicine.]
                 -> color_variation_management(FirstCharacter, greenC)->
-                Pensi che Talco ti abbandonerebbe?
-                Anna? Olga? Persino Ennio.
-                I tuoi genitori.
-                Anche se a volte i vostri cuori sono distanti, quando c'è un bisogno sappiamo sempre ritrovarci.            
+                       
             -
                 ~ numberQuestion ++
             Mmm.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -242,37 +177,25 @@
         
         = four
         ~ temp charNameOne = translator(firstChar_ActualName)
-            Questo posto ti ha assegnato un nome, e quel nome è Chitarra. Ma tu lo vedi come una rinuncia.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+            Ti senti mediocre, e hai paura di rischiare di fare un salto e perdere tutto, di fallire.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
     
-            + [Giocare è bello perché puoi sempre rinunciare a farlo.]
+            + [.]
                 -> color_variation_management(FirstCharacter, yellowC)->
-                Quando una roba la devi fare anche quando non vuoi, quello è il lavoro.
-                Per questo fa schifo.
-            
-            + [Quando Anna ha rinunciato all'ex, è rinata.]
+               
+            + [Ma non sei sola.]
                 -> color_variation_management(FirstCharacter, greenC)->
-                Rinunciare vuol dire anche prendersi cura di sé.
-                Un atto d'amore quando qualcosa non ci fa più bene.
+                
             
-            + [Un infinito più piccolo resta comunque infinito.]
+            + [Salvare il mondo chiede sacrificio.]
                 -> color_variation_management(FirstCharacter, purpleC)->
-                Rinuncia a una cosa e sarai comunque tutto.
-                Un nome è solo un nome.
-                Una persona è un universo intero.
-                
-            + [Rinunciando a cercare Talco ti sei tutelata.]
+               
+            + [Essere mediocri è qualcosa di virtuoso.]
                 -> color_variation_management(FirstCharacter, blueC)->
-                Se una cosa non ha senso, non ha senso anche se continuiamo ad insistere nel farla.
-                    {
-                    	- firstChar_possibleStates hasnt Chitarra:
-        		            ~ firstChar_possibleStates --
-        		           {debug_changeName: Diminuisco lo stato della prima personaggia, che ora è {firstChar_possibleStates }}
-                    }            
-            
-            + [C'è più coraggio nella rinuncia che nel compromesso.]
-                -> color_variation_management(FirstCharacter, redC)->
-                Spesso è più costosa, ma la coerenza personale non ha prezzo.
                 
+            
+            + [Serve rischiare.]
+                -> color_variation_management(FirstCharacter, redC)->
+               
             -
                 ~ numberQuestion ++
             Ok. E quindi... #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -298,21 +221,26 @@
                 - else: Per questo ti dico: #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             } 
         
-             
+            Ti chiedi se questo il massimo che puoi aspettarti dalla vita. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
     
-            + [Prendi una strada e se non ti piace cambiala!]
+            + (red) [Una nuova vita ti aspetta in Canada, con Talco.]
+            //me ne vado all’estero da Talco.
                 -> color_variation_management(FirstCharacter, redC)->
             
-            + [Dai alla tua vita uno scopo più grande.]
+            + (purple) [La musica ti dà uno scopo più grande. Seguila.]
+            // mollo il lavoro per la musica, per far qualcosa di buono per le altre persone.
                  -> color_variation_management(FirstCharacter, purpleC)->         
             
-            + [Ogni gioco richiede una pausa, e tu hai bisogno di ascoltarti.]
+            + (yellow) [Puoi tornare dai tuoi e ricominciare dalla tua infanzia.]
+            //torno al sud, ricomincio al sicuro.
                 -> color_variation_management(FirstCharacter, yellowC)->
                 
-            + [Non deluderai i tuoi amici: loro saranno sempre con te.]
+            + (green) [La stabilità di Ennio è il cambiamento di cui hai bisogno.]
+            //me ne vado a vivere col moroso.
                 -> color_variation_management(FirstCharacter, greenC)->
-                    
-            + [Questa non è la tua strada. Succede. Ora puoi cambiare.]
+                
+            + (blue) [Eppure hai una vita ricca. Goditela.]
+            //trovare il bello in quello che si ha (per la gioia di Mentore).
                 -> color_variation_management(FirstCharacter, blueC)->
             
                     
@@ -321,7 +249,15 @@
          Grazie, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
          Mentre ti ascoltavo mi è nata una nuova canzone in testa.
          La canzone del mio nome.
-            
+        So che hai detto <>
+        {
+            - ending.red: e/ma a seconda del'esito
+            - ending.purple: e/ma a seconda del'esito
+            - ending.yellow: e/ma a seconda del'esito
+            - ending.green: e/ma a seconda del'esito
+            - ending.blue: e/ma a seconda del'esito
+
+        }
             //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
                 -> color_modifier(FirstCharacter, firstChar_colorVariation) ->
             

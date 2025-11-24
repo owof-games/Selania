@@ -1,6 +1,7 @@
 === first_char_main_storylets
 
     = one
+        //Riferimenti per la riscrittura: poco poco affetti.
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -120,6 +121,7 @@
 
     
     = two
+        //Riferimenti per la riscrittura: poco poco musica.
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -183,6 +185,8 @@
             -> options_first_character 
         
     = three
+        //Riferimenti per la riscrittura: affetti e far del bene, scopo più grande
+        //Reference musicale: Patricia di Florence + the Machine
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -261,6 +265,7 @@
         
     
     = four
+        //Riferimenti per la riscrittura: avere uno scopo
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -333,6 +338,8 @@
             -> options_first_character
             
     = five
+        //Riferimenti per la riscrittura: relazioni, forse un po' di rinuncia.
+        //Reference musicale: All your gold di Bat for Lashes
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -350,53 +357,54 @@
             Commento Mentore.
                         
         }
-    Prima mi sono tuffata nello stagno.
-    Avevo bisogno di fare qualcosa di diverso.
-    Mi aspettavo qualcosa di freddo e schifoso, e invece l’acqua era tiepida, quasi avvolgente.
-    Mi ha fatto sentire così al sicuro, vulnerabile in modo piacevole.
-    Mi ha fatto pensare a cosa significhi “casa”.
-    Quella dove vivo è una catapecchia piena di muffa, ma adoro le mie coinquiline.
-    UItimamente però il continuo ricambio di coinqui e le tracce di chi se ne è andata riempie lo spazio di fantasmi, e mi fa sentire precaria.
-    Poi c’è la casa dei miei.
-    Continuo a dire “torno a casa” quando scendo a trovarli, ma a dire il vero è il posto che mi ricorda cosa voglio costruire, ma non quello che voglio abitare.
-    E poi c’è Ennio.
-    In questi anni mi sono chiesta se Ennio possa essere la mia casa, il mio rifugio.
-    Quando l’ho conosciuto non avrei mai pensato che ci saremmo messi assieme.
-    È così solido. Ama il suo lavoro, è quasi pedante nel rispettare i suoi ritmi.
-    Non è una persona che ti fa sdraiare in mezzo a una piazza, ma più uno da sabato a fare la spesa.
-    Ho iniziato a frequentarlo perché pensavo che una persona così solida mi avrebbe permesso di sperimentarmi tantissimo.
-    Avrei potuto fare qualsiasi cazzata, sicura di avere una persona a cui tornare.
-    Col tempo però anche io ho smesso di svolazzare.
-    E non so se è perché sto crescendo, o se perché il suo peso mi tiene a terra.
-    Secondo te una relazione ci cambia? O ci mostra chi siamo davvero?
-    
-    //Risposte
-    
-        + [Risposta verde.]
-            -> color_variation_management(FirstCharacter, greenC)->
+        Prima mi sono tuffata nello stagno.
+        Avevo bisogno di fare qualcosa di diverso.
+        Mi aspettavo qualcosa di freddo e schifoso, e invece l’acqua era tiepida, quasi avvolgente.
+        Mi ha fatto sentire così al sicuro, vulnerabile in modo piacevole.
+        Mi ha fatto pensare a cosa significhi “casa”.
+        Quella dove vivo è una catapecchia piena di muffa, ma adoro le mie coinquiline.
+        UItimamente però il continuo ricambio di coinqui e le tracce di chi se ne è andata riempie lo spazio di fantasmi, e mi fa sentire precaria.
+        Poi c’è la casa dei miei.
+        Continuo a dire “torno a casa” quando scendo a trovarli, ma a dire il vero è il posto che mi ricorda cosa voglio costruire, ma non quello che voglio abitare.
+        E poi c’è Ennio.
+        In questi anni mi sono chiesta se Ennio possa essere la mia casa, il mio rifugio.
+        Quando l’ho conosciuto non avrei mai pensato che ci saremmo messi assieme.
+        È così solido. Ama il suo lavoro, è quasi pedante nel rispettare i suoi ritmi.
+        Non è una persona che ti fa sdraiare in mezzo a una piazza, ma più uno da sabato a fare la spesa.
+        Ho iniziato a frequentarlo perché pensavo che una persona così solida mi avrebbe permesso di sperimentarmi tantissimo.
+        Avrei potuto fare qualsiasi cazzata, sicura di avere una persona a cui tornare.
+        Col tempo però anche io ho smesso di svolazzare.
+        E non so se è perché sto crescendo, o se perché il suo peso mi tiene a terra.
+        Secondo te una relazione ci cambia? O ci mostra chi siamo davvero?
         
-        + [Risposta gialla.]
-            -> color_variation_management(FirstCharacter, yellowC)->
+        //Risposte
+        
+            + [Risposta verde.]
+                -> color_variation_management(FirstCharacter, greenC)->
             
-        + [Risposta blu.]
-            -> color_variation_management(FirstCharacter, blueC)->
-            
-        + [Risposta rossa.]
-            -> color_variation_management(FirstCharacter, redC)->  
+            + [Risposta gialla.]
+                -> color_variation_management(FirstCharacter, yellowC)->
                 
-        + [Risposta viola.]
-            //Qualcosa sull'idea che la relazione è una cosa terza, e che esalata alcuni aspetti di noi a scapito di altri.
-            -> color_variation_management(FirstCharacter, purpleC)->
-        - 
-    
-    Una settimana fa mi ha chiesto di andare a convivere.
-    Ho risposto subito di sì, presa dall’entusiasmo.
-    Ma non so se è davvero ciò che voglio.
-         
-            -> first_char_closing_storylet ->
-            -> options_first_character
+            + [Risposta blu.]
+                -> color_variation_management(FirstCharacter, blueC)->
+                
+            + [Risposta rossa.]
+                -> color_variation_management(FirstCharacter, redC)->  
+                    
+            + [Risposta viola.]
+                //Qualcosa sull'idea che la relazione è una cosa terza, e che esalata alcuni aspetti di noi a scapito di altri.
+                -> color_variation_management(FirstCharacter, purpleC)->
+            - 
+        
+        Una settimana fa mi ha chiesto di andare a convivere.
+        Ho risposto subito di sì, presa dall’entusiasmo.
+        Ma non so se è davvero ciò che voglio.
+             
+                -> first_char_closing_storylet ->
+                -> options_first_character
         
     = six
+        //Riferimenti per la riscrittura: scopo più grande
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -414,56 +422,57 @@
             Commento Mentore.
                         
         }
-    Comunque amo vivere con le mie ragazze.
-    Ah, sì, scusa, sto tornando sul pippone delle case di prima.
-    Ma continuo a pensarci, anche perché ho paura che pensi che sono fredda riguardo ad andare a vivere con Ennio.
-    È che dove sto ora non è solo una casa, per nulla, ed è la cosa più figa.
-    Ormai la chiamano “La Rifugia”.
-    All’inizio era solo una battuta perché avevamo sempre ospiti in giro per casa, gente che cercava un appoggio o era nei casini.
-    Ma a forza di ripetere la battuta ci siamo dette: ma se facessimo qualcosa di buono?
-    Da una parte cerchiamo a sgamo di offrire un posto temporaneo a chi è nella cacca.
-    Cosa sempre più pesante con la crisi abitativa e il caro affitti.
-    Dall’altra facciamo incontri informativi con le associazioni di tutela dei coinquilini, con associazioni migranti e altre realtà.
-    E lo so che dirai “blah blah blah” che palle, ma ti giuro che è tutto così vivo.
-    La cosa più viva delle mie giornate.
-    Organizziamo raccolte fondi, e abbiamo fatto una mostra e delle proteste sotto al comune.
-    La mostra è stata un’idea di Valeria, la mia bestie in casa, nonché la nostra cantante, perché abbiamo una band assieme.
-    All’inizio la usavamo solo per sfogarci e raccattare qualche soldino.
-    Ma poi le storie che sentivamo nella rifugia, e le lotte dell’associazione e di altre realtà hanno iniziato a infilarsi nei testi.
-    Ed è una cosa strana scrivere robe politiche, perché diventa difficile mantenere la poesia.
-    Abbiamo mille modi di parlare d’amore, ma i problemi reali sembrano sempre didascalici.
-    Eppure sono convinta che l’arte possa fare tanto per cambiare il mondo.
-    Perché i fatti sono freddi, e l’arte può renderli pieni di calore.
-    Puoi tipo raccontare tutti i femminicidi del mondo e un uomo smonterà ogni dato e movente.
-    Oppure scrivere “*Un violador en tu camino”* e riempire una piazza di forza e rabbia.
-    Suonerà arrogante, ma vorrei per una volta creare qualcosa di altrettanto forte.
-    Qualcosa che sia potente e inappellabile.
-    Qualcosa che salvi il mondo.
-    
-    //In una delle opzioni resti in silenzio. Oppure resti in cinque modi diversi di silenzio?
-        + [Risposta rossa.]
-            -> color_variation_management(FirstCharacter, redC)->  
-                
-        + [Risposta viola.]
-            -> color_variation_management(FirstCharacter, purpleC)->
-    
-        + [Risposta gialla.]
-            -> color_variation_management(FirstCharacter, yellowC)->
+        Comunque amo vivere con le mie ragazze.
+        Ah, sì, scusa, sto tornando sul pippone delle case di prima.
+        Ma continuo a pensarci, anche perché ho paura che pensi che sono fredda riguardo ad andare a vivere con Ennio.
+        È che dove sto ora non è solo una casa, per nulla, ed è la cosa più figa.
+        Ormai la chiamano “La Rifugia”.
+        All’inizio era solo una battuta perché avevamo sempre ospiti in giro per casa, gente che cercava un appoggio o era nei casini.
+        Ma a forza di ripetere la battuta ci siamo dette: ma se facessimo qualcosa di buono?
+        Da una parte cerchiamo a sgamo di offrire un posto temporaneo a chi è nella cacca.
+        Cosa sempre più pesante con la crisi abitativa e il caro affitti.
+        Dall’altra facciamo incontri informativi con le associazioni di tutela dei coinquilini, con associazioni migranti e altre realtà.
+        E lo so che dirai “blah blah blah” che palle, ma ti giuro che è tutto così vivo.
+        La cosa più viva delle mie giornate.
+        Organizziamo raccolte fondi, e abbiamo fatto una mostra e delle proteste sotto al comune.
+        La mostra è stata un’idea di Valeria, la mia bestie in casa, nonché la nostra cantante, perché abbiamo una band assieme.
+        All’inizio la usavamo solo per sfogarci e raccattare qualche soldino.
+        Ma poi le storie che sentivamo nella rifugia, e le lotte dell’associazione e di altre realtà hanno iniziato a infilarsi nei testi.
+        Ed è una cosa strana scrivere robe politiche, perché diventa difficile mantenere la poesia.
+        Abbiamo mille modi di parlare d’amore, ma i problemi reali sembrano sempre didascalici.
+        Eppure sono convinta che l’arte possa fare tanto per cambiare il mondo.
+        Perché i fatti sono freddi, e l’arte può renderli pieni di calore.
+        Puoi tipo raccontare tutti i femminicidi del mondo e un uomo smonterà ogni dato e movente.
+        Oppure scrivere “*Un violador en tu camino”* e riempire una piazza di forza e rabbia.
+        Suonerà arrogante, ma vorrei per una volta creare qualcosa di altrettanto forte.
+        Qualcosa che sia potente e inappellabile.
+        Qualcosa che salvi il mondo.
         
-        + [Risposta verde.]
-            -> color_variation_management(FirstCharacter, greenC)->
-
+        //In una delle opzioni resti in silenzio. Oppure resti in cinque modi diversi di silenzio?
+            + [Risposta rossa.]
+                -> color_variation_management(FirstCharacter, redC)->  
+                    
+            + [Risposta viola.]
+                -> color_variation_management(FirstCharacter, purpleC)->
+        
+            + [Risposta gialla.]
+                -> color_variation_management(FirstCharacter, yellowC)->
             
-        + [Risposta blu.]
-            -> color_variation_management(FirstCharacter, blueC)->
-        -    
-    A volte mi chiedo se non abbia senso lasciare il lavoro, rischiare tutto, e dedicarmi solo alla musica.
-    Non più per fama e concerti, ma per fare del bene.
-         
-            -> first_char_closing_storylet ->
-            -> options_first_character
+            + [Risposta verde.]
+                -> color_variation_management(FirstCharacter, greenC)->
+    
+                
+            + [Risposta blu.]
+                -> color_variation_management(FirstCharacter, blueC)->
+            -    
+        A volte mi chiedo se non abbia senso lasciare il lavoro, rischiare tutto, e dedicarmi solo alla musica.
+        Non più per fama e concerti, ma per fare del bene.
+             
+                -> first_char_closing_storylet ->
+                -> options_first_character
         
     = seven
+        //Riferimenti per la riscrittura: affetti
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -621,7 +630,11 @@
 
             -> first_char_closing_storylet ->
             -> options_first_character 
+    
+    
     = ten
+        //Riferimenti per la riscrittura: affetti e rinunce
+        //Reference musicale: And Love/No Choir di Florence + the Machine
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -702,11 +715,57 @@
             Commento Mentore.
                         
         }
-
+        
+        C’è questa cosa che mi stupisce sempre.
+        Puoi passare anni con una persona, vederla quasi tutti i giorni.
+        Studiarci, farci balotta.
+        Poi cambierà città e a quel punto vi sentirete di rado o mai.
+        Da una parte è bello quando ci si ritrova, perché ci si sente a casa.
+        Dall’altra, questa cosa è vera solo fino a quando non accade qualcosa di grosso, come un matrimonio, come l’avere figli.
+        Una cosa che non mi aspettavo della vita adulta, è di poter dimenticare le altre persone.
+        Mi fa sentire una merda.
+        Ma ti svegli, vai a lavoro, torni, cerchi di tenere in piedi le relazioni che hai qui, di lavarti e dormire, di prenderti cura dei tuoi interessi.
+        E ti dici “Cazzo, devo scrivere a Cristina” oppure il calendario ti ricorda che è il compleanno di Stefano.
+        E allora magari vi sentite per uno, due giorni ma poi gli audio rimangono lì appesi.
+        E un po’ ti senti una merda, ti senti in colpa, e alla fine non scrivi fino a quando non riaccade qualcosa che sia una scusa per farlo.
+        Molte delle ame che sono tornare al Sud sono diventate “amiche da ricorrenza”.
+        E forse c’è questa cosa che mi spaventa, all’idea di scegliere di andare da Talco, o di finire per tornare dai miei.
+        Di diventare anche per Valeria e le altre ragazze, per le colleghe, una “amica da ricorrenza”.
+        Per non parlare di Ennio.
+        Credo che mi lascerebbe prima.
+        E non è solo questo.
+        Vedo le colleghe più grandi, e la difficoltà che hanno a fare nuove amicizie.
+        Il senso di mancanza che si sente mentre parlano di persone che non vedono quasi più.
+        Mi sembra che più si è grandi, più si finisce per essere soli.
+        E io non voglio stare sola.
+        Ha senso?
+        
+        //Risposte
+            + [Risposta rossa.]
+                -> color_variation_management(FirstCharacter, redC)->
+                
+             + [Risposta verde.]
+                -> color_variation_management(FirstCharacter, greenC)->    
+                    
+            + [Risposta viola.]
+                -> color_variation_management(FirstCharacter, purpleC)->
+             
+            + [Risposta gialla.]
+                -> color_variation_management(FirstCharacter, yellowC)-> 
+                
+            + [Risposta blu.]
+                -> color_variation_management(FirstCharacter, blueC)->     
+            -
+        Dopo il nostro primo litigio, Talco mi ha detto che una buona relazione è una relazione scomoda.
+        Che abbiamo delle teste pigre, e che le relazioni sane ci fanno uscire dalla pigrizia.
+        Forse allora il problema della distanza è che può diventare una scusa per abbracciare quella pigrizia.
+        Mentre nei rapporti di tutti i giorni questa cosa non la puoi evitare.
+        Ha senso?
             -> first_char_closing_storylet ->
             -> options_first_character
             
     = twelve
+        //Riferimenti per la riscrittura: sentirsi mediocre
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
