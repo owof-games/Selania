@@ -122,6 +122,11 @@
             - are_two_entities_together(Mentor, PG) && thirdChar_storyStatus == story_storyEnded and not mentor_rage:
                 -> mentor_rage
         }
+    
+    
+    //Lettura Mentore
+            - are_two_entities_together(Mentor, PG) && library_readStories has Salvo && not a_story_of_transformation:
+                -> a_story_of_transformation    
         
         {
             - not knowing_mentor_character.one && mentor_tutorialPauses == false:

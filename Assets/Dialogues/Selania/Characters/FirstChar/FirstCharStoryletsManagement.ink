@@ -32,9 +32,9 @@
                 -  are_two_entities_together(FirstCharacter, PG) && entity_location(PG) == Kitchen && not ending_cooking_with_first_char && kitchen_firstCharIsCooking == false:
                         -> cooking_with_first_char
                 
-                //Lettura Chitarra
-                - are_two_entities_together(FirstCharacter, PG) && library_readStories has Salvo && not a_story_of_transformation:
-                    -> a_story_of_transformation
+            //Racconto di Aza letto
+            - are_two_entities_together(FirstCharacter, PG) && library_readStories has Aza && not a_story_of_revenge:
+                -> a_story_of_revenge 
                     
                     
         }
