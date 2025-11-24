@@ -102,7 +102,6 @@ LIST story = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola
             -> refresh_book_lists -> from_list_to_books
         
         //Qui vale per ogni scelta: se effettivamente posso scegliere quel tema, posso decidere di andare comunque avanti. Se invece quel tema è vuoto nella intersezione con la lunghezza della storia selezionata, passo avanti.
-        TODO: come fare in modo che non venga proposto questo tasto se non ci sono altri temi disponibili?
         //Questo tasto compare solo se questo tema non è vuoto. Ha senso? sennò non sarei qui, no?
         + {(readingDuration has Short && shortStories^ aboutTransformation != ()) or (readingDuration has Average && averageStories^ aboutTransformation != ()) or (readingDuration has Long && longStories^ aboutTransformation != ())} [No, vorrei un altro tema.]
                 -> shuffle

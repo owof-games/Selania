@@ -1277,7 +1277,6 @@ LIST nest_colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
         
         = firstCharEmotionalActions
             {debug_nest: entro in firstCharEmotionalActions.}
-            TODO: posso fare una lista graduale di reazioni sempre più cariche (+ di tre però visto che una parola può essere usata tanterrimo)
             
             {
  
