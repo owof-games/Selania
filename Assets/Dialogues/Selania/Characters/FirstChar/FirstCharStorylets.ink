@@ -794,6 +794,7 @@
         C’è più silenzio quando stiamo assieme.
         Non mi serve riempire gli spazi di cose intelligenti o parlare di cose fighe per paura che lui si annoi.
         A volte lo osservo giocare al PC mentre coccolo i suoi gatti e mi basta.
+        Gli piace un sacco giocare, perché gli ricorda che se anche sbagli, puoi sempre ricominciare.
         Ci sono sere in cui parlo più col suo coinquilino che non con lui.
         Ma è lì che mi tiene la mano o ci guarda, e so che mi ama.
         Il sesso è una coperta calda e non più una spiaggia torrida.
