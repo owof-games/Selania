@@ -34,15 +34,15 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     {   
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-        - firstChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && not questions:
+        - firstChar_storyletsForRewritingCount >= firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && not questions:
                 -> ask
         
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona                    
-        - firstChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && questions:
+        - firstChar_storyletsForRewritingCount >= firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && questions:
                 -> ask
         
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo         
-        - firstChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && rewriting_proposal_first_character:
+        - firstChar_storyletsForRewritingCount >= firstChar_minStoryletsForRewriting && rewriting_proposal_first_character:
                 -> ask
         
         //Vogliamo offrire un dono            
@@ -77,20 +77,20 @@
 
     //Azioni legate alla riscrittura
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-            + {firstChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && not questions} [Vorrei aiutarti a guardare le cose in modo diverso.]
+            + {firstChar_storyletsForRewritingCount >= firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && not questions} [Vorrei aiutarti a guardare le cose in modo diverso.]
                 Ama, parla prima con la mentore così ti dice cosa fare e non le prende una sincope se facciamo casini.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed 
                     ~ mentor_tutorialPauses = false
                         -> main
         
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona                    
-            + {firstChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && questions} [Ti va di riscrivere la tua storia con me?]
+            + {firstChar_storyletsForRewritingCount >= firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && questions} [Ti va di riscrivere la tua storia con me?]
                 
                 //Incremento le variazioni del libro della Riscrittora           
                 ~ book_BGVariations ++
                     -> rewriting_proposal_first_character
     
         //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo          
-            + {firstChar_storyletsForRewritingCount > firstChar_minStoryletsForRewriting && rewriting_proposal_first_character} [Iniziamo la riscrittura?]
+            + {firstChar_storyletsForRewritingCount >= firstChar_minStoryletsForRewriting && rewriting_proposal_first_character} [Iniziamo la riscrittura?]
                     -> rewriting_proposal_first_character
             
         

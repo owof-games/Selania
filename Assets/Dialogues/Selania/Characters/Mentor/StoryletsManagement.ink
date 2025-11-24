@@ -17,7 +17,7 @@
     {
                     
         //Dopo le presentazioni con due, scena in cui hanno litigato:
-        - second_char_main_storylets.one && (not that_little_liar_storylet):
+        - secondChar_storyStatus == story_storyStarted && (not that_little_liar_storylet):
                 -> that_little_liar_storylet
         
         - not second_character_feedback && secondChar_storyStatus == story_storyEnded:
@@ -44,7 +44,7 @@
                     -> first_character_feedback
                 
                 - else:
-                    -> personal_mentor_storylets    
+                    -> mentor_tutorial_storylets  
             }
         
         - else:

@@ -36,15 +36,15 @@
 ~ temp mentorName = translator(mentor_ActualName)
 {  
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-        - secondChar_storyletsForRewritingCount > secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && not questions:
+        - secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && not questions:
                 -> ask
             
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-        - secondChar_storyletsForRewritingCount > secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && questions:
+        - secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && questions:
                 -> ask
     
     //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo         
-        - secondChar_storyletsForRewritingCount > secondChar_minStoryletsForRewriting && rewriting_proposal_second_character:
+        - secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && rewriting_proposal_second_character:
                 -> ask
 
     //Vogliamo offrire un dono            
@@ -88,19 +88,19 @@
     
         //Azioni legate alla riscrittura
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-                + {secondChar_storyletsForRewritingCount > secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && not questions} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
+                + {secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && not questions} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
                                 Parla prima con {mentorName}, che già mi brontola tantissimo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                                         ~ secondChar_tutorial = true
                                     -> main
             
             //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-                + {secondChar_storyletsForRewritingCount > secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && questions} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
+                + {secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && questions} [{charNameTwo}, ti va di guardare assieme le cose in modo diverso?]
                 //Incremento le variazioni del libro della Riscrittora           
                     ~ book_BGVariations ++
                         -> rewriting_proposal_second_character
                                 
             //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo             
-                + {secondChar_storyletsForRewritingCount > secondChar_minStoryletsForRewriting && rewriting_proposal_second_character}[Iniziamo la riscrittura?]
+                + {secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && rewriting_proposal_second_character}[Iniziamo la riscrittura?]
                         -> rewriting_proposal_second_character
         
         

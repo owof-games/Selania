@@ -186,7 +186,10 @@
         + [Risposta viola.]
             -> color_variation_management(FirstCharacter, purpleC)->
         -
-
+        ~ firstChar_pauseTalking = firstChar_pauseDuration
+        ~ mentor_pauseTalking = mentor_pauseDuration
+    
+    
 -> main
 
 
