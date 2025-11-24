@@ -652,6 +652,8 @@
             -> options_first_character
     
     = nine
+        //Riferimenti per la riscrittura: forse il "fare qualcosa di buono", ma ha a che fare molto con la creatività.
+        //Brano: Third Eye, Florence + The Machine.
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -669,8 +671,55 @@
             Commento Mentore.
                         
         }
-         
+        
+        Ciao {player_name}, e {player_pronouns has him:benvenuto|{player_pronouns has her:benvenuta|benvenutə}} in un nuovo flusso di coscienza di {charNameOne} che non si chiama {charNameOne} e che prima o poi troverà il suo vero nome.
+        E forse ci sto prendendo gusto con questi pipponi.
+        Mi ricordano quando arriva l’insonnia.
+        Forse mi piace solo perché è una cosa che mi accade di rado.
+        E a volte si traduce in un rigirarsi nel letto guardando il cellulare, scorrendo video e articoli che ti dicono che il mondo è fottuto.
+        E può essere stupido addormentarsi con queste cose, ma boh, forse sapere che non puoi fare nulla è più rassicurante che sapere che puoi fare qualcosa ma non sai cosa.
+        Ma queste conversazioni con te sono più come l’altra cosa che faccio quando mi viene l’insonnia.
+        Mi alzo, e vado in cucina.
+        La cucina a casa è sempre piena di vita, abbiamo persone o ospiti praticamente da pranzo a notte fonda.
+        Ma averla per me, sapendo che tutto dorme, mi offre una pace piena.
+        E i brani migliori li ho scritti in quelle situazioni.
+        Caffeino e quaderno, mi piace un sacco comporre andando a sentimento prima ancora di mettermi sulla tastiera.
+        Ci sono momenti in cui qualcosa clicca, e allora so che ho preso una buona idea.
+        E non ha a che fare col razionale, no.
+        Ma è un ritrovarsi i piedi in un’acqua antica.
+        Che raccoglie tutte le storie del mondo.
+        E allora sento che anche se uso parole di oggi e suoni di oggi sto parlando del sempre.
+        Di un certo tipo di sempre.
+        E allora quella roba può far qualcosa di buono, di davvero buono.
+        Ci arrivo sempre più di rado in quell’acqua.
+        L’insonnia ha più a che fare ora con la paura di perdere il lavoro, col chiedermi cosa accadrà poi.
+        Mi fa una paura pratica e spaventosa.
+        Mi fa sentire minacciata.
+        Però a volte torno a immergermi, e a quel punto non ho paura.
+        Non perché sono coraggiosa o che di punto in bianco.
+        Ma perché ho la sensazione che anche questi problemi, tutti i problemi, siano parte di quell’enorme storia.
+        E sono cose che abbiamo già affrontato miliardi di volte.
+        Eppure siamo ancora qui.
+        E c’è ancora speranza.
+            
+            
+            + [Risposta blu.]
+                -> color_variation_management(FirstCharacter, blueC)->  
+            
+            + [Risposta verde.]
+                -> color_variation_management(FirstCharacter, greenC)->    
+                    
+            + [Risposta viola.]
+                -> color_variation_management(FirstCharacter, purpleC)->
+            
+            + [Risposta rossa.]
+                -> color_variation_management(FirstCharacter, redC)->
+            
+            + [Risposta gialla.]
+                -> color_variation_management(FirstCharacter, yellowC)->  
 
+            -
+            
             -> first_char_closing_storylet ->
             -> options_first_character 
     
