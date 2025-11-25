@@ -38,7 +38,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 -> first_theme
                 
 
-        + [{first_char_main_storylets.six: Del bisogno di fare qualcosa che salvi il mondo.|<i>Parla ancora con {charNameOne} per sbloccare questo tema.</i>}]
+        + [{first_char_main_storylets.six: Del bisogno di fare qualcosa che salvi il mondo.|<i>{player_name} deve parlare ancora con {charNameOne} per sbloccare questo tema.</i>}]
             {
                 - first_char_main_storylets.six:
                     -> second_theme
@@ -47,7 +47,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                     -> top
             }
         
-        + [{first_char_main_storylets.nine: Del tuo rapporto con la creatività.|<i>Parla ancora con {charNameOne} per sbloccare questo tema.</i>}]
+        + [{first_char_main_storylets.nine: Del tuo rapporto con la creatività.|<i>{player_name} deve parlare ancora con {charNameOne} per sbloccare questo tema.</i>}]
             {
             
                 - first_char_main_storylets.nine:
@@ -99,7 +99,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         No no taglio io, non ti preoccupare, continua a mischiare.
         Ma invece tu che rapporto hai coi tuoi genitori?
             {
-                - not cooking_with_second_char: Provi a parlare, ma non ti escono le parole. Però gli ingredienti possono parlare per te.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - not cooking_with_second_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
         {player_name} aggiunge alla ricetta... #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
@@ -287,9 +287,25 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             
     
     = second_theme
-        Il tema scelto è il numero due.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Chitarra parla.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Possiamo fare una di queste cinque scelte.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        Woah.
+        Qui si va giù leggero.
+        E forse "salvare il mondo" è pretenzioso da dire.
+        Anche se so bene di averlo detto io.
+        Credo.
+        Perché poi, da cosa dovrei salvarlo?
+        Nel senso: non sono una brava con le cose politiche.
+        La Rifugia è nata perché c'è un bisogno che vedo: per vivere ci servono le case.
+        Ma le case non ci sono.
+        O meglio, ci sono, ma solo per far fare vacanze a persone che poi alla fin fine della tua città non gliene frega una ceppa.
+        E quindi non so dire bene "salvare da cosa".
+        Faccio fatica a usare le parole grandi.
+        Patriarcato.
+        Fascismo.
+        Crisi climatica.
+        Sarebbe come mettermi in bocca concetti che non conosco bene.
+        Ma anche se non so che nome dare alle cose, le vedo.
+        Ha senso?
+        
             + [Scelta blu]
                 -> color_variation_management(FirstCharacter, blueC)->
                
@@ -304,23 +320,41 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     
             + [Scelta viola]
                 -> color_variation_management(FirstCharacter, purpleC)->
-            -    
-        A questo punto è chitarra a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-            + [Sostantivo A]
-                ~ kitchen_recipeNoun = "Sostantivo A"
-               
-            + [Sostantivo B]
-                ~ kitchen_recipeNoun = "Sostantivo B"
-             
-            + [Sostantivo C]
-               ~ kitchen_recipeNoun = "Sostantivo C"
+            -        
         
-            + [Sostantivo D]
-                ~ kitchen_recipeNoun = "Sostantivo D"
+        Aspetta, ho visto delle forbici prima.
+        Sempre che ci serva qualcosa da aprire o tagliuzzare.
+        E tu {player_name} hai sempre le idee chiare quando si tratta delle cose per cui vuoi lottare?
+        
+            {
+                - not cooking_with_second_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            }
+            
+            + [Infarini confusamente delle tagliatelle.]
+                ~ kitchen_recipeNoun = "Tagliatelle"
+                Già.
+                Non è facile capire cosa sia giusto fare, vero?
+               
+            + [Stendi con decisione delle lasagne.]
+                ~ kitchen_recipeNoun = "Lasagne"
+                Uh.
+                Ha senso dire che ti invidio per questa tua chiarezza?
+             
+            + [Affetti con disinteresse delle bruschette.]
+               ~ kitchen_recipeNoun = "Bruschette"
+               Amo le bruschette, meno il disinteresse.
+               Le idee chiare non credo siano un freno valido, no?
+        
+            + [Impasti furiosamente delle arancine.]
+                ~ kitchen_recipeNoun = "Arancine"
+                Credo che la passione faccia indubbiamente parte della lotta.
+                Anche se così sembra quasi che la lotta esista per veicolare la rabbia.
     
-            + [Sostantivo E]
+            + [Frulli disperatamente della vellutata.]
                 ~ kitchen_recipeNoun = "Sostantivo E"
+                È un sentimento.
+                Non so se sia peggio la confusione o la disperazione.
+                
             -  
         Chitarra commenta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Chitarra dice un'altra cosa sul tema che stiamo esplorando.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -420,6 +454,10 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             -    
         A questo punto è chitarra a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+            
+            {
+                - not cooking_with_second_char: Provi a parlare, ma non ti escono le parole. Però gli ingredienti possono parlare per te.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            }
             + [Sostantivo A]
                 ~ kitchen_recipeNoun = "Sostantivo A"
                
