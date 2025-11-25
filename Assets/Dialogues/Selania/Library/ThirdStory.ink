@@ -1,18 +1,18 @@
 //Cognome/alias L - R
 === lamia
-//Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
-            {
-                - library_unreadStories has Lamia:
-                    ~ library_unreadStories -= Lamia
-                    ~ library_readStories += Lamia
-                     -> refresh_book_lists ->
-            }  
-            
+<b>Il sassolino</b> di Lamia (she/they). Instagram: @mannaggiate_
+    //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+        {
+            - library_unreadStories has Lamia:
+                ~ library_unreadStories -= Lamia
+                ~ library_readStories += Lamia
+                 -> refresh_book_lists ->
+        }  
+        
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
 
 
-    <b>Il sassolino</b> di Lamia (she/they).
     È iniziato tutto in una giornata mediocre.
     Il sole era coperto da nuvole scialbe, e nell’aria ancora si sentiva l’olezzo dei campi fertilizzati di fresco.
     Tutto è iniziato in una giornata così, anzi, tutto è iniziato nella vasca delle aragoste del ristorante Da Sallustio, in Porta Genova, in una giornata così.
@@ -46,7 +46,7 @@
 === loris_casagrandi
 <b>Volevo essere solo cervello</b>, di Loris Casagrandi (he/him - she/her). Instagram: @lorisdesign4exp
 
-    Trigger warning: riferimento a gesti ti autolesionismo o violenza.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+Trigger warning: riferimento a gesti ti autolesionismo o violenza.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
         + [Inizio la lettura.]
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -83,7 +83,7 @@
 
 
 === val_fausto_lattanzio
-<b>Home</b>, di Val Fausto Lattanzio (he/they).
+<b>Home</b>, di Val Fausto Lattanzio (he/they). Instagram: @_whimsival
 
     Trigger warning: disforia, dismorfia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
@@ -134,7 +134,7 @@
             -> main
 
 === romi
-<b>Il principe sbagliato</b> di Sofia Abatangelo alias Romi alias Romi Sofia Abatangelo(any).
+<b>Il principe sbagliato</b> di Sofia Abatangelo alias Romi alias Romi Sofia Abatangelo(any). Instagram: @romiabatangelo
 
     Trigger warning: violenza psicologica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]

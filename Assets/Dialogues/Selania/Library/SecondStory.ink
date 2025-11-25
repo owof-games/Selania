@@ -12,6 +12,7 @@
             }  
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
+    
     "I hate them."
     "Who doesn't, Alchemilla."
     "I can't stand them. I want to see them suffer, agonise, burn...."
@@ -55,11 +56,10 @@
 === francesca_tosca_raimondi
 <b>Trecentotrenta metri.</b> di Francesca Tosca Raimondi (she/her).
 
-
-        Trigger warning: rabbia domestica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+Trigger warning: rabbia domestica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
-                + [Inizio la lettura.]
-        //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+            + [Inizio la lettura.]
+            //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
                     {
                         - library_unreadStories has FrancescaToscaRaimondi:
                             ~ library_unreadStories -= FrancescaToscaRaimondi

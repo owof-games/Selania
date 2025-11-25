@@ -2,22 +2,24 @@
 
 === adri_allora
 <b>Il mio bellissimo gatto</b> di Adri Allora (ləi).
-    Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-        + [Inizio la lettura.]
-        //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
-            {
-                - library_unreadStories has AdriAllora:
-                    ~ library_unreadStories -= AdriAllora
-                    ~ library_readStories += AdriAllora
-                     -> refresh_book_lists ->
-            }  
-        + {library_unreadStories has AdriAllora}[Per ora non me la sento di affrontare questo tema.]
-            -> tempTW -> book_test_intro
-        + (rimuovi) {library_unreadStories has AdriAllora} [Non presentarmi più questo racconto.]
-            -> permanentTW -> refresh_book_lists -> book_test_intro
-        -
-    -> DarkLibraryModeOn ->
-    ~ enableBigDialogue()
+
+Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+
+    + [Inizio la lettura.]
+    //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+        {
+            - library_unreadStories has AdriAllora:
+                ~ library_unreadStories -= AdriAllora
+                ~ library_readStories += AdriAllora
+                 -> refresh_book_lists ->
+        }  
+    + {library_unreadStories has AdriAllora}[Per ora non me la sento di affrontare questo tema.]
+        -> tempTW -> book_test_intro
+    + (rimuovi) {library_unreadStories has AdriAllora} [Non presentarmi più questo racconto.]
+        -> permanentTW -> refresh_book_lists -> book_test_intro
+    -
+-> DarkLibraryModeOn ->
+~ enableBigDialogue()
     
     Mi chiama.
     La mia rabbia è un gatto che insiste per essere nutrito in continuazione, mi chiama, mi chiama con quell'insistenza che ha costretto sir Isaac Newton a inventare la porticina per i gatti.
@@ -50,6 +52,7 @@
         + [Vorrei leggere ancora.]
         ~ disableBigDialogue()
            -> book_test_intro
+        
         + [Me ne vado.]
         ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
@@ -58,40 +61,41 @@
 === alexias_d_avino
 <b>Il Riflesso</b> di Alexias D'Avino (lui/lei). Instagram: @togetherweread29
 
-    Trigger warning: lutto, rifiuto da parte della figura genitoriale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-            
-            + [Inizio la lettura.]
-            //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
-                {
-                    - library_unreadStories has AlexiasDAvino:
-                        ~ library_unreadStories -= AlexiasDAvino
-                        ~ library_readStories += AlexiasDAvino
-                         -> refresh_book_lists ->
-                }  
-            + {library_unreadStories has AlexiasDAvino}[Per ora non me la sento di affrontare questo tema.]
-                -> tempTW -> book_test_intro
-            + (rimuovi) {library_unreadStories has AlexiasDAvino}[Non presentarmi più questo racconto.]
-                -> permanentTW -> refresh_book_lists -> book_test_intro
-            -
-        -> DarkLibraryModeOn ->
-        ~ enableBigDialogue()
+Trigger warning: lutto, rifiuto da parte della figura genitoriale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+        
+        + [Inizio la lettura.]
+        //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+            {
+                - library_unreadStories has AlexiasDAvino:
+                    ~ library_unreadStories -= AlexiasDAvino
+                    ~ library_readStories += AlexiasDAvino
+                     -> refresh_book_lists ->
+            }  
+        + {library_unreadStories has AlexiasDAvino}[Per ora non me la sento di affrontare questo tema.]
+            -> tempTW -> book_test_intro
+        + (rimuovi) {library_unreadStories has AlexiasDAvino}[Non presentarmi più questo racconto.]
+            -> permanentTW -> refresh_book_lists -> book_test_intro
+        -
+    -> DarkLibraryModeOn ->
+    ~ enableBigDialogue()
 
     Testo
 
-        + [Vorrei leggere ancora.]
-        ~ disableBigDialogue()
-           -> book_test_intro
-        + [Me ne vado.]
-        ~ disableBigDialogue()
-            -> DarkLibraryModeOff ->
-                     
-            -> main
-
+    + [Vorrei leggere ancora.]
+    ~ disableBigDialogue()
+       -> book_test_intro
+    
+    + [Me ne vado.]
+    ~ disableBigDialogue()
+        -> DarkLibraryModeOff ->
+        -> main
 
 
 === aza
 <b>Luna vergine</b> di Aza (any).
+
 Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+        
         + [Inizio la lettura.]
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
@@ -155,8 +159,10 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
 
 
 === steno_artico
-<b>This anger, which has been stolen from me</b> by StenoArtico (he/him, none).
-    Trigger warning: violenza psicologica, abusi fisici, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>This anger, which has been stolen from me</b> by StenoArtico (he/him, none). Instagram: @stenoartico
+
+Trigger warning: violenza psicologica, abusi fisici, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+        
         + [Inizio la lettura.]
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
@@ -229,7 +235,7 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
 === b
 <b>The touch of anger</b> di K.(she/her).
 
-    Trigger warning: violenza fisica, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+Trigger warning: violenza fisica, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
@@ -274,9 +280,10 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
             -> main
 
 === beatrice
-<b>La rete non esiste</b> di Beatrice (she/her).
+<b>La rete non esiste</b> di Beatrice (she/her). Instagram: @vistadibea
 
-    Trigger warning: depressione, religione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+Trigger warning: depressione, religione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+        
         + [Inizio la lettura.]
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
@@ -424,7 +431,8 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
 === beatrice_y_bottura
 <b>Artigli Rosso Ruggine</b> di Beatrice Y. Bottura (she/it).
 
-    Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+        
         + [Inizio la lettura.]
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {

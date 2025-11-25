@@ -1,17 +1,17 @@
 //Cognome/alias S - Z
 
 === salvo
-//Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
-            {
-                - library_unreadStories has Salvo:
-                    ~ library_unreadStories -= Salvo
-                    ~ library_readStories += Salvo
-                     -> refresh_book_lists ->
-            }  
+<b>Il cancello</b> di Salvo (he/him).
+    //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+        {
+            - library_unreadStories has Salvo:
+                ~ library_unreadStories -= Salvo
+                ~ library_readStories += Salvo
+                 -> refresh_book_lists ->
+        }  
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
     
-<b>Il cancello</b> di Salvo (he/him).
 
     Il sole stava tramontando ad occidente e illuminava con i suoi raggi obliqui le chiome degli ulivi.
     Liliana osservava il viale, dritto, che separava la casa dal cancello; al di là la strada era deserta.
@@ -58,11 +58,12 @@
 
 
 === maura
-<b>Polvere</b> di Maura (she/they).
+<b>Polvere</b> di Maura (she/they). Instagram: @maura_sacca
 
     Trigger warning: violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+       
         + [Inizio la lettura.]
-//Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+    //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has Maura:
                     ~ library_unreadStories -= Maura
@@ -77,6 +78,7 @@
         -
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
+    
     Me lo chiede per l'ennesima volta, dopo i miei già innumerevoli no.
     A questo punto faccio uscire tutta la mia rabbia urlando fino a perdere il respiro.
     Tirando fuori tutte le cose che mi ero tenuta dentro.
@@ -114,7 +116,7 @@
 === simo
 <b>SCP</b> di Simo (they/he). Instragram: @il_radioattivo
 
-    Trigger violenza, deadnaming, morte.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+Trigger violenza, deadnaming, morte.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
 //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
@@ -207,9 +209,9 @@
             
 
 === letizia_vaccarella
-<b>Dodici stelle</b> di Letizia Vaccarella (she/her).
+<b>Dodici stelle</b> di Letizia Vaccarella (she/her). Instagram: @aidoruinquantumland
 
-    Trigger warning: depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+Trigger warning: depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
 //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
@@ -289,7 +291,7 @@
                  -> refresh_book_lists ->
         }
         
-<b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).
+<b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they). Instagram: @queerginiawolf
 
     Non hai fatto nulla di male.
     Lanciavi i tuoi fiori nell'aria, il polline rendeva il sentiero giallo per settimane.
