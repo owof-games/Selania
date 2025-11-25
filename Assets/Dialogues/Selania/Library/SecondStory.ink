@@ -127,3 +127,40 @@
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
             -> main
+            
+            
+=== kayleig
+<b>Volevo che mia madre fosse forte.</b> di Kayleig (she/her).
+
+        {
+            - library_unreadStories has Kayleig:
+                ~ library_unreadStories -= Kayleig
+                ~ library_readStories += Kayleig
+                 -> refresh_book_lists ->
+        }  
+            
+        -> DarkLibraryModeOn ->
+        ~ enableBigDialogue()
+        
+    Volevo che mia madre fosse forte. La vedevo sprofondare in un matrimonio infelice, in una vita senza orizzonti. La vedevo arrendersi, lei che era sempre stata per me un esempio di determinazione, rigore e autodisciplina. Lo vivevo come un tradimento, e mi arrabbiavo con lei per la persona che non riusciva a essere. 
+    Dietro la rabbia c’è sempre una ferita aperta, un dolore che urla per essere visto. Proprio perché le volevo bene, non riuscivo ad accettare che diventasse l’ombra della persona che era stata, della persona che ammiravo.
+    Volevo che lei fosse lì per me, a darmi quel senso di sicurezza e stabilità che mi mancava. Volevo che lei si prendesse cura di me, e invece ero io a dovermi prendere cura di lei, senza sapere come aiutarla. 
+    Volevo vederla rialzarsi e continuare a lottare. Volevo vederla ricominciare, trovare un senso per andare avanti. Dietro ogni litigio, una piccola me gridava disperatamente: “Perché non riesci a essere la persona di cui ho bisogno?”
+    Avevo giurato a me stessa che non sarei stata come lei. Che avrei costruito qualcosa con la mia vita, che avrei spezzato il cerchio. Credo che tutte noi donne in qualche modo siamo figlie del dolore delle nostre madri e del silenzio dei nostri padri. Degli abbracci che ci sono mancati e dei “sono fiero di te” mai pronunciati. Degli sguardi di disapprovazione e delle porte sbattute. 
+    Solo dopo aver litigato riuscivamo a parlare. Sembrava che riuscisse ad ascoltarmi solo quando la rabbia si era dissolta nelle urla e nelle lacrime, solo quando le ferite erano state messe a nudo. Allora vedevo il suo dolore, la vedevo davvero per la persona ferita ma non spezzata che era, e non riuscivo a provare rabbia verso di lei. Nonostante tutto, stava cercando di non andare in pezzi. 
+    Nonostante tutto, non si è mai arresa. 
+    Litigando abbiamo costruito un terreno comune, abbiamo imparato a dare voce al nostro dolore. Siamo passate attraverso la rabbia per ritrovarci. Abbiamo imparato ad abbracciarci piangendo, a dirci “ti voglio bene”. 
+    Oggi so quanto la mia rabbia fosse parte di ciò che la feriva, e so che la mia rabbia non era giusta. Non sono stata in grado di accoglierla quando era più fragile. Spero che abbia sempre saputo che le volevo bene, anche quando c’era questa rabbia fra di noi. 
+    Ho imparato che tutti dobbiamo fare i conti con le nostre ferite se non vogliamo che infliggano dolore anche agli altri. 
+    Oggi, quella rabbia non è più con me. È un ricordo sbiadito, che non riesco ad afferrare: se n’è andata, non mi appartiene più. Non sono più quell’adolescente piena di rabbia. 
+    Ho sempre pensato che quella rabbia mi rendesse forte, che fosse come un’armatura che mi avrebbe resa inscalfibile. Ora che non riesco più a ritrovarla, mi domando se non fosse – forse solo, forse anche – un peso, un peso che mi ero abituata a portare ma senza il quale sono più leggera. Più fragile, ma più leggera.         
+            
+        + [Vorrei leggere ancora.]
+            ~ disableBigDialogue()
+           -> book_test_intro
+        
+        + [Me ne vado.]
+            ~ disableBigDialogue()
+            -> DarkLibraryModeOff ->
+            -> main
+            
