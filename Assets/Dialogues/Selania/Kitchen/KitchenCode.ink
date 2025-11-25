@@ -145,14 +145,13 @@
  //badReaction, mehReaction, goodReaction
         //Se la lista è vuota
     + {backpack_findedGifts == ()} [Non ho nulla da aggiungere.]
-        ~ kitchen_recipePP = "distratta"
     
     + [Ho cambiato idea.]
-        ~ kitchen_recipePP = "indecisa"
+        ~ kitchen_recipePP = "esitante"
         
     + {backpack_findedGifts has BaccaDellaAddolorata} [Una bacca della Addolorata.]
         ~ backpack_findedGifts -= BaccaDellaAddolorata
-        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "errante"
          {
         - frog_recoveredCultivables hasnt BaccaDellaAddolorata:
         ~ frog_recoverableCultivables += BaccaDellaAddolorata
@@ -172,7 +171,7 @@
     
     + {backpack_findedGifts has BarbaDellInciampo} [Una spina di Barba dell'Inciampo.]
         ~ backpack_findedGifts -= BarbaDellInciampo
-        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "svagante"
          {
         - frog_recoveredCultivables hasnt BarbaDellInciampo:
         ~ frog_recoverableCultivables += BarbaDellInciampo
@@ -196,7 +195,7 @@
         - frog_recoveredCultivables hasnt BastoneDellOzioso:
         ~ frog_recoverableCultivables += BastoneDellOzioso
         } 
-        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "cantante"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(BastoneDellOzioso, Kitchen, FirstCharacter) ->
@@ -216,7 +215,7 @@
         - frog_recoveredCultivables hasnt BrinaDellImpossibile:
         ~ frog_recoverableCultivables += BrinaDellImpossibile
     } 
-        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "penetrante"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(BrinaDellImpossibile, Kitchen, FirstCharacter) ->
@@ -237,7 +236,7 @@
         - frog_recoveredCultivables hasnt CantoDelleCompagne:
         ~ frog_recoverableCultivables += CantoDelleCompagne
     } 
-        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "pulsante"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(CantoDelleCompagne, Kitchen, FirstCharacter) ->
@@ -256,7 +255,7 @@
         - frog_recoveredCultivables hasnt CardoAspinato:
         ~ frog_recoverableCultivables += CardoAspinato
     } 
-        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "tremante"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(CardoAspinato, Kitchen, FirstCharacter) ->
@@ -275,7 +274,7 @@
         - frog_recoveredCultivables hasnt EderaDelleAmanti:
         ~ frog_recoverableCultivables += EderaDelleAmanti
     } 
-        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "vibrante"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(EderaDelleAmanti, Kitchen, FirstCharacter) ->
@@ -294,7 +293,7 @@
         - frog_recoveredCultivables hasnt ErbaLiccia:
         ~ frog_recoverableCultivables += ErbaLiccia
     } 
-        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "avvolgente"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(ErbaLiccia, Kitchen, FirstCharacter) ->
@@ -313,7 +312,7 @@
         - frog_recoveredCultivables hasnt FalsaPalude:
         ~ frog_recoverableCultivables += FalsaPalude
     } 
-        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "incombente"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(FalsaPalude, Kitchen, FirstCharacter) ->
@@ -332,7 +331,7 @@
         - frog_recoveredCultivables hasnt LanaNotturna:
         ~ frog_recoverableCultivables += LanaNotturna
     } 
-        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "rassicurante"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(LanaNotturna, Kitchen, FirstCharacter) ->
@@ -351,7 +350,7 @@
         - frog_recoveredCultivables hasnt LicheneDegliAbissi:
         ~ frog_recoverableCultivables += LicheneDegliAbissi
     } 
-        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "struggente"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(LicheneDegliAbissi, Kitchen, FirstCharacter) ->
@@ -370,7 +369,7 @@
         - frog_recoveredCultivables hasnt NonTiScordarDiTe:
         ~ frog_recoverableCultivables += NonTiScordarDiTe
     } 
-        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "confortante"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(NonTiScordarDiTe, Kitchen, FirstCharacter) ->
@@ -389,7 +388,7 @@
         - frog_recoveredCultivables hasnt Olobino:
         ~ frog_recoverableCultivables += Olobino
     } 
-        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "travolgente"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(Olobino, Kitchen, FirstCharacter) ->
@@ -408,7 +407,7 @@
             - frog_recoveredCultivables hasnt LaSpazzata:
                 ~ frog_recoverableCultivables += LaSpazzata
         } 
-        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "irritante"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(LaSpazzata, Kitchen, FirstCharacter) ->
@@ -423,7 +422,7 @@
 //Doni insoliti
     + {backpack_findedGifts has universalIngredient} [L'ingrediente universale della Rana.]
         ~ backpack_findedGifts -= universalIngredient
-        ~ kitchen_recipePP = "aggiungere descrizione participio passato"
+        ~ kitchen_recipePP = "allettante"
         
             {
                 - PNG == FirstCharacter:
