@@ -55,6 +55,40 @@
             -> DarkLibraryModeOff ->
             -> main
 
+=== alexias_d_avino
+<b>Il Riflesso</b> di Alexias D'Avino (lui/lei). Instagram: @togetherweread29
+
+    Trigger warning: lutto, rifiuto da parte della figura genitoriale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+            
+            + [Inizio la lettura.]
+            //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
+                {
+                    - library_unreadStories has AlexiasDAvino:
+                        ~ library_unreadStories -= AlexiasDAvino
+                        ~ library_readStories += AlexiasDAvino
+                         -> refresh_book_lists ->
+                }  
+            + {library_unreadStories has AlexiasDAvino}[Per ora non me la sento di affrontare questo tema.]
+                -> tempTW -> book_test_intro
+            + (rimuovi) {library_unreadStories has AlexiasDAvino}[Non presentarmi più questo racconto.]
+                -> permanentTW -> refresh_book_lists -> book_test_intro
+            -
+        -> DarkLibraryModeOn ->
+        ~ enableBigDialogue()
+
+    Testo
+
+        + [Vorrei leggere ancora.]
+        ~ disableBigDialogue()
+           -> book_test_intro
+        + [Me ne vado.]
+        ~ disableBigDialogue()
+            -> DarkLibraryModeOff ->
+                     
+            -> main
+
+
+
 === aza
 <b>Luna vergine</b> di Aza (any).
 Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}

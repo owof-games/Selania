@@ -1,8 +1,8 @@
 //Variabili per la gestione della biblioteca
-LIST library_allStories = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, FrancescaToscaRaimondi, Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, Simo, QueerginiaWolf
+LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, FrancescaToscaRaimondi, Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, Simo, QueerginiaWolf
 
 //Liste per distinguere storie lette e non
-    VAR library_unreadStories = (AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, FrancescaToscaRaimondi, Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, Simo, QueerginiaWolf)
+    VAR library_unreadStories = (AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, FrancescaToscaRaimondi, Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, Simo, QueerginiaWolf)
     VAR library_readStories = ()
     VAR library_temporaryTW = ()
     VAR library_temporaryReadTW = ()
@@ -22,11 +22,11 @@ LIST library_allStories = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, Cec
     
     VAR library_shortStories = (StenoArtico, B, ValFaustoLattanzio, Maura, QueerginiaWolf)
     VAR library_averageStories = (AdriAllora, BeatriceYBottura, CeciliaFormicola, Lamia, Romi, Simo)
-    VAR library_longStories = (Aza, Beatrice, FrancescaToscaRaimondi, Salvo, LetiziaVaccarella)
+    VAR library_longStories = (Aza, AlexiasDAvino, Beatrice, FrancescaToscaRaimondi, Salvo, LetiziaVaccarella)
     
 //Books about...
-    VAR library_aboutTransformation = (Aza, B, FrancescaToscaRaimondi, ValFaustoLattanzio, Salvo, BeatriceYBottura, LetiziaVaccarella)
-    VAR library_aboutQuestions = (AdriAllora, Beatrice, FrancescaToscaRaimondi, ValFaustoLattanzio, StenoArtico, Romi, Simo)
+    VAR library_aboutTransformation = (Aza, AlexiasDAvino, B, FrancescaToscaRaimondi, ValFaustoLattanzio, Salvo, BeatriceYBottura, LetiziaVaccarella)
+    VAR library_aboutQuestions = (AdriAllora, AlexiasDAvino, Beatrice, FrancescaToscaRaimondi, ValFaustoLattanzio, StenoArtico, Romi, Simo)
     VAR library_aboutUnprepared = (StenoArtico, Beatrice, Lamia, Simo)
     VAR library_aboutMonsters = (AdriAllora, Aza, B, BeatriceYBottura, CeciliaFormicola, Simo)
     VAR library_aboutFire= (Aza, CeciliaFormicola, BeatriceYBottura, Romi, Maura, LetiziaVaccarella, QueerginiaWolf)
@@ -415,6 +415,8 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
         -> adri_allora
     - Aza:
         -> aza
+    - AlexiasDAvino:
+        -> alexias_d_avino
     - StenoArtico:
         -> steno_artico
     - B:
@@ -462,6 +464,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
 
 {shuffle:
     - {library_readStories has AdriAllora: -> reread_adri_allora| -> reread}
+    - {library_readStories has AlexiasDAvino: -> reread_alexias_d_avino| -> reread}    
     - {library_readStories has Aza: -> reread_aza| -> reread}    
     - {library_readStories has StenoArtico: -> reread_steno_artico| -> reread}
     - {library_readStories has B: -> reread_b| -> reread}     
@@ -493,6 +496,16 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro
+    
+    = reread_alexias_d_avino
+    La biblioteca si chiede cosa tu voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    
+        + [Rileggo <b>Il Riflesso</b> di Alexias D'Avino (lui/lei).]
+                -> alexias_d_avino
+        + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+                -> reread
+        + [Ho cambiato idea, voglio una storia nuova.]
+                -> book_test_intro            
                 
     = reread_aza
     La biblioteca si chiede cosa tu voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
