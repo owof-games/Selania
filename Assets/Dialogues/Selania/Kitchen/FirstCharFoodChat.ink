@@ -548,33 +548,44 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             -> fourth_ingredient_dispatcher
     
     
-            //La chiusura è comune, sempre per ridurre il rischio di errori
-            = fourth_ingredient_dispatcher
-            Ma {player_name}, qui a me sembra tutto pronto, non trovi?
-            
-                {
-                    - backpack_findedGifts == (): Dato che lo zaino di {player_name} è vuoto, non è possibile inserire un ingrediente speciale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                        -> recipe_name_creator ->
-                        -> at_table_with_first_char
-                        
-                    - else:
-                        -> add_ingredient
+    //La chiusura è comune, sempre per ridurre il rischio di errori
+    = fourth_ingredient_dispatcher
+    Ma {player_name}, qui a me sembra tutto pronto, non trovi?
+    
+        {
+            - backpack_findedGifts == (): Dato che lo zaino di {player_name} è vuoto, non è possibile inserire un ingrediente speciale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                -> recipe_name_creator ->
+                -> at_table_with_first_char
                 
-                }
-            
-                = add_ingredient
-                    Dato che lo zaino di {player_name} contiene degli oggetti, può inserirne uno nel piatto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                        
-                        + [Voglio aggiungere un ingrediente extra.]
-                            -> extra_ingredient_management(FirstCharacter)->
-                            ~ disableNestDialogue()
-                            
-                        + [Mi va bene così.]
-                        -
-                        
-                    Andiamo a mangiare, ama!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                        -> recipe_name_creator ->
-                        -> at_table_with_first_char
+            - else:
+                -> add_ingredient
+        
+        }
+    
+        = add_ingredient
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
+        
+            Dato che lo zaino di {player_name} contiene degli oggetti, può inserirne uno nel piatto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            {
+                - not cooking_with_second_char:
+                    Abbiamo la sensazione che il giusto ingrediente possa dare un tocco speciale alla ricetta di {player_name} e {charNameOne}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    E aiutare {player_name} a capire un po' meglio {charNameOne}.
+            }
+                
+                + [Voglio aggiungere un ingrediente speciale.]
+                    -> extra_ingredient_management(FirstCharacter)->
+                    ~ disableNestDialogue()
+                    
+                + [Mi va bene così.]
+                -
+                
+            Andiamo a mangiare, ama!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                -> recipe_name_creator ->
+                -> at_table_with_first_char
 
 
 

@@ -89,6 +89,9 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
             -    
         A questo punto è Riccio a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.
         Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+            {
+                - not cooking_with_first_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            }
             + [Sostantivo A]
                 ~ kitchen_recipeNoun = "Sostantivo A"
                
@@ -200,6 +203,11 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
             -    
         A questo punto è Riccio a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        
+            {
+                - not cooking_with_first_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            }
+            
             + [Sostantivo A]
                 ~ kitchen_recipeNoun = "Sostantivo A"
                
@@ -235,6 +243,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
             -
         Riccio allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Step due: aggettivi (es: saporito, triste, colorato).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        
             + [Aggettivo A]
                 ~ kitchen_recipeAdjective = "Aggettivo A"
                
@@ -272,6 +281,8 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
         
         Riccio ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Step tre: complementi (es: del campo, per rimbecco, di coriandolo)#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+
+            
             + [Complemento A]
                 ~ kitchen_recipeComplement = "Complemento A"
                
@@ -312,6 +323,11 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
             -    
         A questo punto è Riccio a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        
+            {
+                - not cooking_with_first_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            }
+        
             + [Sostantivo A]
                 ~ kitchen_recipeNoun = "Sostantivo A"
                
@@ -405,31 +421,43 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
 
 
     
-                //La chiusura è comune, sempre per ridurre il rischio di errori
-            = fourth_ingredient_dispatcher
-                {
-                    - backpack_findedGifts == (): Il tuo inventario è vuoto, e quindi non puoi aggiungere un ingrediente extra.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                        -> recipe_name_creator ->
-                        -> at_table_with_second_char
-                    
-                    - else:
-                        -> add_ingredient
+        //La chiusura è comune, sempre per ridurre il rischio di errori
+        = fourth_ingredient_dispatcher
+        A me mi sembra che è cotto, e ho fame, che ne dici?
+        
+            {
+                - backpack_findedGifts == (): Dato che lo zaino di {player_name} è vuoto, non è possibile inserire un ingrediente speciale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    -> recipe_name_creator ->
+                    -> at_table_with_second_char
                 
-                }
+                - else:
+                    -> add_ingredient
+            
+            }
             
                 = add_ingredient
-                Dato che il nostro inventario contiene degli oggetti, possiamo inserirne uno nel piatto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                ~ temp charNameOne = translator(firstChar_ActualName)
+                ~ temp charNameTwo = translator(secondChar_ActualName)
+                ~ temp charNameThree = translator(thirdChar_ActualName)
+                ~ temp charNameFour= translator(fourthChar_ActualName)
+                ~ temp mentorName = translator(mentor_ActualName)
                 
-                    + Voglio aggiungere un ingrediente extra.
+                Dato che lo zaino di {player_name} contiene degli oggetti, può inserirne uno nel piatto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            {
+                - not cooking_with_first_char:
+                    Abbiamo la sensazione che il giusto ingrediente possa dare un tocco speciale alla ricetta di {player_name} e {charNameTwo}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    E aiutare {player_name} a capire un po' meglio {charNameTwo}.
+            }
+                
+                    + [Voglio aggiungere un ingrediente speciale.]
                         -> extra_ingredient_management(SecondCharacter)->
                         ~ disableNestDialogue()
                     
                     + [Ho cambiato idea.]
-                        ~ kitchen_recipePP = "semplice"
                     -
-        
-                    
-                Riccio ci dice di andare a tavola
+            A tavola!
+            Ho tantissima aquilina!
+            
                     -> recipe_name_creator ->
                     -> at_table_with_second_char
     
