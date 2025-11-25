@@ -79,6 +79,10 @@
         -    
     
     Comunque: quando vuoi cucinare con qualcuna di noi, basta che ce lo chiedi.
+    Ah: non ho trovato molta roba, scusa.
+    Per cui credo abbia senso che tu ti faccia una cucinata soltanto con ognuna di noi.
+    Scusa.
+    
         ~ firstChar_pauseTalking = firstChar_pauseDuration
         -> opening_places ->
         -> main
