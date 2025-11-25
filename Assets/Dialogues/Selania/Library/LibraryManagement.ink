@@ -525,7 +525,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     = reread_steno_artico
     La biblioteca si chiede cosa tu voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
-        + [Rileggo <b>This anger</b> by StenoArtico (he/him, none).]
+        + [Rileggo <b>Questa rabbia, che mi è stata rubata</b> by StenoArtico (he/him, none).]
                 -> steno_artico
         + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
@@ -568,7 +568,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     = reread_cecilia_formicola
     La biblioteca si chiede cosa tu voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
-        + [Rileggo <b>Getting warm</b> di Cecilia Formicola (she/her).]
+        + [Rileggo <b>Fuochino</b> di Cecilia Formicola (she/her).]
                 -> cecilia_formicola
         + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread

@@ -2,7 +2,7 @@
 
 === cecilia_formicola
 
-<b>Getting warm</b> di Cecilia Formicola (she/her).
+<b>Fuochino</b> di Cecilia Formicola (she/her).
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has CeciliaFormicola:
@@ -13,36 +13,37 @@
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
     
-    "I hate them."
-    "Who doesn't, Alchemilla."
-    "I can't stand them. I want to see them suffer, agonise, burn...."
-    An overbearing tongue of fire rose to lap the pewter pot that simmered briskly, dangling over the bonfire.
-    "If I could, Alchemilla" muttered Bergamot, "I would skewer them myself."
-    The embers smouldered, glowing in dark red, for just an instant. Forsythia diligently stirred them. "Let go, girls" she urged them. "We need more fire.
-    "Louts, bullies..."
-    "Damn cowards" reproached Bergamot."
-    "Dirty, filthy..."
-    "Is it true they don't wash? Will someone explain to me why they don't wash?" wondered Mimosa. The fire crackled softly in reply.
-    "Ridiculous, scoundrels..."
-    "Alchemilla, don't hold back, please" said Forsythia, lifting the lid to check the contents of the pot. "We need much more fire."
-    "All right!" blurted out Alchemilla. "Bastards! Ass"licking pieces of shit, lousy fascists...."
-    "Men! " shouted Bergamot. "There is not one that won't let you down. Make me change my mind!". The flames rose brighter."
-    "I can't stand collaborationists" exclaimed Mimosa firmly, frowning. "Gutless, spineless… headless! I hate them even more than fascists." Mimosa's seething anger revived the wooden logs which were almost extinguished and then began to burn again. Forsythia nodded approvingly.
-    "But why do they still exist" sobbed Alchemilla. "We should have killed them all before."
-    "We can still make up for it…" Bergamot reminded her.
-    Mimosa sneered at the idea. "Forsythia, how much can we indulge in torture dreams?"
-    "No need" answered Forsythia cheerfully, giving the pot a stir. "It's ready. Unless, of course, you still want to...."
-    "No, thank you" replied Alchemilla huffing. "You know how hard it is for me to let the anger out."
-    "You're a marvel when you do, though" Mimosa smiled at her. Alchemilla lowered her eyes, delighted.
-    Bergamot stood up, approaching Forsythia to help her with the ladles. Mimosa hugged Alchemilla tightly, snapping a kiss on her cheek. The fire turned all red with emotion. Forsythia handed them all a steaming bowl and then joined them, sitting down to admire the fire as well, satisfied.
-    "What have you prepared today?" Alchemilla asked her, still a bit excited.
-    "Potato soup" answered Forsythia, taking a generous spoonful.
-    "My favourite!" sighed Bergamot happily, also taking a seat around the fire.
-    "I put a secret ingredient in it this time. Let's see if you can guess."
-    "Mmm... what is it, sweet paprika?" asked Alchemilla, tasting.
-    "No, I think it's berbere" said Mimosa.
-    "Getting warm" answered Forsythia, giggling.
-    The fire, which just before was roaring high and glowing, gently lapped at the wooden logs, warm and enveloping, illuminating them all with a sweet, enchanting golden light.
+    "Io li odio."
+    "Chi non li odia, Alchemilla."
+    "Non li sopporto. Vorrei vederli soffrire, agonizzare, bruciare…"
+    Una prepotente lingua di fuoco si alzò a lambire la pentola di peltro che sobbolliva vivacemente, penzolando sul falò.
+    "Se potessi, Alchemilla" borbottò Bergamotto "li infilzerei allo spiedo io stessa.
+    Le braci si arroventarono, illuminandosi di un rosso cupissimo, per un solo istante. Forsizia le rimestò diligentemente. "Lasciatevi andare, ragazze" le esortò. "Ci serve più fuoco."
+    "Villani, prepotenti…"
+    "Maledetti vigliacchi" rimbrottò Bergamotto.
+    "Sudici, lerci…"
+    "È vero che non si lavano? Qualcuna mi spiega perché non si lavano?" si domandò Mimosa. Il fuoco crepitò sommessamente in risposta.
+    "Ridicoli, farabutti…"
+    "Alchemilla, non ti trattenere, ti prego" disse Forsizia, alzando il coperchio per controllare il contenuto della pentola. "Ci serve tanto più fuoco."
+    "E va bene!" sbottò Alchemilla. "Bastardi! Pezzi di merda leccaculo, schifosi fascisti…"
+    "Uomini!" gridò Bergamotto. "Non ne esiste uno che non ti deluda. Fatemi pure cambiare idea!". Le fiamme si innalzarono più vivaci.
+    "Io non sopporto i collaborazionisti" esclamò Mimosa con decisione, aggrottando la fronte. "Senza coraggio, senza spina dorsale, senza… senza testa!. Li odio persino più dei fascisti." La rabbia ribollente di Mimosa ravvivò i ciocchi di legno quasi spenti, che ripresero a bruciare. Forsizia annuiva con approvazione.
+    "Ma perché esistono ancora" singhiozzò Alchemilla. "Avremmo dovuto ucciderli tutti prima."
+    "Possiamo ancora rimediare…" le ricordò Bergamotto.
+    Mimosa sogghignò all’idea. "Forsizia, quanto possiamo lasciarci andare ai sogni di tortura?"
+    "Non serve" rispose Forsizia allegramente, dando una mescolata nel pentolone. "È pronto. A meno che, ovviamente, non vogliate comunque…"
+    "No, grazie" rispose Alchemilla sbuffando. "Sai quanto mi è difficile far uscire la rabbia."
+    "Sei una meraviglia quando ci riesci, però" le sorrise Mimosa. Alchemilla abbassò gli occhi, deliziata.
+    Bergamotto si alzò, avvicinandosi a Forsizia per aiutarla con le mestolate. Mimosa abbracciò stretta Alchemilla, schioccandole un bacio sulla guancia. Il fuoco diventò tutto rosso dall’emozione. Forsizia passò a tutte una ciotola fumante e infine le raggiunse, sedendosi anche lei ad ammirare il fuoco, soddisfatta.
+    -"he hai preparato oggi?" le chiese Alchemilla, ancora un po’ su di giri.
+    "Zuppa di patate" rispose Forsizia, prendendo un’abbondante cucchiaiata. 
+    "La mia preferita!" sospirò felice Bergamotto, prendendo posto anche lei intorno al fuoco.
+    "Ci ho messo un ingrediente segreto stavolta. Vediamo se indovinate."
+    "Mmm… cos’è, paprika dolce?" chiese Alchemilla, assaggiando.
+    "No, secondo me è berberè" disse Mimosa.
+    "Fuochino" rispose Forsizia, ridacchiando.
+    Il fuoco, che poco prima ruggiva alto e incandescente, ora lambiva dolcemente i ciocchi di legno, caldo e avvolgente, illuminando tutte di una dolce, incantevole luce dorata.
+
 
         + [Vorrei leggere ancora.]
         ~ disableBigDialogue()

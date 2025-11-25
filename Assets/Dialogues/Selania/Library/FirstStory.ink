@@ -159,7 +159,7 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
 
 
 === steno_artico
-<b>This anger, which has been stolen from me</b> by StenoArtico (he/him, none). Instagram: @stenoartico
+<b>Questa rabbia, che mi è stata rubata</b> by StenoArtico (he/him, none). Instagram: @stenoartico
 
 Trigger warning: violenza psicologica, abusi fisici, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
@@ -180,48 +180,49 @@ Trigger warning: violenza psicologica, abusi fisici, depressione.#speaker:{witch
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
     
-    It always comes
-    to kick me in the stomach
-    when I’m already on the ground.
-    That angry voice
-    calls me, defines me, condemns me
-    the worst person possible
-    worthless
-    disgusting.
+    Arriva sempre,
+    quando sono già a terra,
+    a prendermi a calci nello stomaco
+    quella voce arrabbiata
+    che mi chiama definisce condanna
+    la persona peggiore possibile
+    inutile
+    schifosa.
     
-    Why is it dead set against me?
-    We are like a rabbit that mauls its own paw
-    to escape a bear trap. 
-    But why does nobody maul the hunter?
+    Ma perché ce l'ha a morte con me?
+    Siamo come un coniglio che si azzanna la zampa
+    intrappolata in una tagliola. 
+    Ma perchè nessuno azzanna il cacciatore?
     
-    Where does it come from?
-    Is it an echo of childhood? The offhand comment of an offended uncle
-    now forever burned in my brain?
-    Maybe this is a misplaced question.
+    Da dove arriva?
+    È un'eco dell'infanzia? Il commento di una zia stanca e distratta
+    ormai impresso a carne viva nel cervello?
+    Ma forse questa è una domanda malriposta.
     
-    It has no origin,
-    it is the origin: action and reaction, 
-    eternal energy which touches, 
-    bounces, transforms.
-    After all, everything was born out of a bang,
-    not out of a shy raised hand.
+    Non ha origine,
+    è l’origine: azione e reazione, 
+    energia eterna che tocca, 
+    rimbalza, trasforma.
+    In fondo tutto è nato da uno scoppio,
+    non da una timida alzata di mano.
     
-    This anger, which has been stolen from me, 
-    I want to try to embrace it.
+    Questa rabbia, che mi è stata rubata, 
+    voglio provare a riabbracciarla.
     
-    I want to catch its lightning bolt with bare hands.
-    It will hurt, but it’s fine.
+    Voglio catturare il suo fulmine a mani nude.
+    Farà male, ma va bene.
     
-    I want to smash the mirror maze
-    and turn it into windows.
+    Voglio spaccare il labirinto di specchi
+    e farne finestre.
     
-    I want to aim this new hurricane far away,
-    towards the mountains of my mind,
-    then transform their wind turbines in propellers
-    and take it off.
+    Voglio puntare questo nuovo uragano lontano,
+    verso i monti della mia mente,
+    trasformare le loro pale eoliche in eliche
+    e farla decollare.
     
-    Which way, I don’t know yet.
-    And I like it.
+    Verso dove, ancora non lo so.
+    E mi piace.
+
 
         + [Vorrei leggere ancora.]
         ~ disableBigDialogue()
