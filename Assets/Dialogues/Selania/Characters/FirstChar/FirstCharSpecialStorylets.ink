@@ -89,28 +89,67 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-    Chitarra ha letto il racconto di Aza
     
-     //Risposte.    
+    Ehi {player_name}.
+    Ho visto che anche tu hai letto <b>Luna vergine</b> di Aza.
+    Non so come mai ma quella storia mi si è appiccicata in testa.
+    Non sono una da vendetta.
+    Sono troppo cagasotto, sicuro.
+    O forse, boh.
+    Non ho un buon rapporto con la rabbia.
+    Le poche volte che l'ho lasciata uscire mi sono vista chiamare isterica, nevrotica, mestruata.
+    Sembra che se sono arrabbiata allora sono in automatico nel torto.
+    Ma quando sono arrivata in fondo e ho capito che lei si stava trasformando in lupo mannaro, mi sono trovata a digrignare i denti.
+    Avevo voglia di morsicare quel tizio anche io.
+    Di tirare fuori gli artigli.
+    E non so, forse è perché qui c'è tanto tempo per ascoltarsi.
+    Ma per la prima volta ho visto la rabbia non come una cosa da evitare.
+    Ma come una possibilità, ha senso?
+    Come un segnale.
+    L'allarme che scatta perché è stato superato un confine invalicabile.
+    Forse vorrei essere mostruosa per una volta.
+    Anche solo per essere lasciata in pace.
+    Tu che ne pensi della rabbia della tipa del racconto?
     
-        + [Scelta blu.]
+    //Risposte.    
+    
+        + [La vendetta non è giustizia. A cosa è servita?]
              -> color_variation_management(FirstCharacter, blueC)->
-    
-        + [Scelta viola.]
+            Ma nemmeno la giustizia è giustizia, {player_name}.
+            E non so cosa ha scatenato la tipa del racconto.
+            Ma sono tante le situazioni in cui una donna non la vede la giustizia.
+            Per cui almeno è servita a farla stare meglio, credo.
+            
+        + [Lui è ricco, ho pensato parlasse di lotta di classe.]
             -> color_variation_management(FirstCharacter, purpleC)->
+            Quindi dici tipo che la rabbia è giustificata che per un progetto più grande?
+            Però se è ricco ma lei si vendica perché stronzo?
+            O magari è stronzo <i>anche</i> perché è ricco?
             
-        + [Scelta gialla.]
+        + [Mi è sembrato un gioco: "cosa succede se sono un mostro?".]
             -> color_variation_management(FirstCharacter, yellowC)->
+            Non è male come gioco, vero?
+            Mi piacerebbe farlo una volta.
+            Credo mi farebbe sentire parti di me che non cago mai.
             
-        + [Scelta verde.]
+        + [Posso capirla, ma non ha pensato a Irene, e ha generato altro dolore.]
             -> color_variation_management(FirstCharacter, greenC)->
+            Ed è una cosa che capisco, ma.
+            Lui non si è posto questa domanda mi sa, qualsiasi cosa abbia fatto.
+            Perché la protagonista è palesemente strapissata.
+            E forse ferita.
+            Cazzo, la rabbia che ci vuole per odiare uno per ventitrè anni è enorme.
+            Bisogna sempre ingoiare tutto per proteggere le altre persone?
             
-        + [Scelta rossa.]
+        + [La sua vendetta è una forma di autodifesa.]
             -> color_variation_management(FirstCharacter, redC)->
-
+            Non credo reggerebbe in un processo, ma mi suona.
+            A volte quando ti viene detto che non puoi arrabbiarti, ci metti molto per capire che sei arrabbiata.
+            Quindi è un po' come se avesse reagito con ventitrè anni di ritardo a quello che Jacopo le ha fatto.
         -    
     
-    Comunque: quando vuoi cucinare con qualcuna di noi, basta che ce lo chiedi.
+    Comunque mi sa che più tardi mi faccio un altro giro tra i racconti.
+    Erano mesi che non mi mettevo a leggere qualcosa.
         ~ firstChar_pauseTalking = firstChar_pauseDuration
 
         -> main

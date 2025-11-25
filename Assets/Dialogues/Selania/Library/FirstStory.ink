@@ -75,7 +75,7 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
     ~ enableBigDialogue()
         
     Le caviglie tentennano quando provo a sedermi nella hall dell'hotel, ma in piedi continuerei a fare avanti e indietro col ticchettio dei tacchi che rimbomba, non voglio attirare ulteriormente l'attenzione degli ospiti.
-    La brezza di mare si scaglia dalla porta girevole fino agli ascensori, anche di notte non cede. Un vento medio, di quelli che alza la sabbia ma non gli aquiloni, così da 4 giorni, da quando sono arrivata.
+    La brezza di mare si scaglia dalla porta girevole fino agli ascensori, anche di notte non cede. Un vento medio, di quelli che alza la sabbia ma non gli aquiloni, così da quattro giorni, da quando sono arrivata.
     Il piano è semplice, ho capito la sua routine, gli ho chiesto se avesse da accendere e abbiamo fatto due chiacchiere, non si è sicuramente accorto di chi sono, non si ricorda di me, la trasformazione ha avuto successo.
     Quindi è oggi la notte in cui succede. Allora facciamolo succedere.
     
@@ -83,7 +83,7 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
     Ordino un drink, annuso la stanza, sta arrivando.
     "Hey cappello volante!" eccolo. "Ancora sola? Non è mai arrivato a farti compagnia?"
     Ho inventato una storia strappalacrime, un fantomatico zio molto ricco che doveva venire in villeggiatura con me, non è mai arrivato perché non è mai esistito.
-    Sono 23 anni che lavoro a questo piano e risparmio soldi per fingermi ricca.
+    Sono ventitrè anni che lavoro a questo piano e risparmio soldi per fingermi ricca.
     
     Rispondo con tono malinconico "Ancora sola, morirò sola" lo faccio ridere sguaiatamente.
     "Una donna così bella non può morire sola, lascialo stare sarà stato impegnato col suo business, sai come sono i clienti" ah sì so benissimo come sono i ricchi.
@@ -106,7 +106,7 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
     Mi lancio sul suo corpo, voglio entrargli dentro e farlo esplodere, gli tengo il fazzoletto sulla bocca e dopo qualche secondo le sue membra si placano. 
     Il mio respiro si fa grande e minaccioso, inizio a inspirare frettolosamente come per indurre un attacco di iperventilazione, e poi esco dal nascondiglio e fisso la luna, lascio che mi entri negli occhi e nel cuore. Le vene si fanno bollenti, mentre mi sento diventare gigante finisco di spogliarmi, inizia la trasformazione.
     Sento la pelle delle punta delle dita farsi sottile e le unghie allungarsi. Non mi ero mai trasformata in mannara con così tanta manicure e con vestiti così costosi, inizio a perdere lucidità, era questo l'obiettivo, ci siamo entrambe dentro questo corpo.
-    23 Anni di studio freddo e preciso che culminano nella furia totale, l’ira mi pervade.
+    Ventitrè anni di studio freddo e preciso che culminano nella furia totale, l’ira mi pervade.
     
     L'ultima cosa che ricordo è la sensazione di sabbia fredda fra le dita dei piedi, i botti dei fuochi d'artificio e il suo ansimare sofferente, non saprò mai se mi ha riconosciuta o meno.
     

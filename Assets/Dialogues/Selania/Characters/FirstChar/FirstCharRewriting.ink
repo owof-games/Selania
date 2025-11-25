@@ -220,6 +220,9 @@
                 -> color_variation_management(FirstCharacter, yellowC)->
                 Il mondo è duro da cambiare, ma l'esempio è una gran cosa.
                 Rompere le aspettative, l'ovvio, è rivoluzionario.
+                {
+                    - a_story_of_revenge: O come hai detto per <b>Luna vergine</b>, puoi abbracciare il tuo essere mostro.
+                }
 
             + [Ma nessunə salva il mondo da solə, {charNameOne}.]
                 -> color_variation_management(FirstCharacter, blueC)->
