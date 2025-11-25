@@ -104,7 +104,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         {player_name} aggiunge alla ricetta... #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
             + [Dei cubetti di grano del rispetto.]
-                ~ kitchen_recipeNoun = "Sautè di grano"
+                ~ kitchen_recipeNoun = "Zuppa di grano"
                 Uh, credo di capire.
                 Il rispetto è una bella cosa coi genitori.
                 Il trattarsi reciprocamente da adulti, giusto?

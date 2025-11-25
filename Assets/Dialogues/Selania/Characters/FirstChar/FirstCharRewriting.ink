@@ -190,7 +190,7 @@
                 Palese che ti vogliono un bene immenso.
                {
                 - first_char_main_storylets.twelve:
-                    Anceh se confondono la tua insicurezza con pretenziosità.
+                    Anche se confondono la tua insicurezza con pretenziosità.
                 }
             -
                 ~ numberQuestion ++
@@ -248,6 +248,9 @@
                 -> color_variation_management(FirstCharacter, greenC)->
                 {
                     -food_gift_first_char: Magari scoprendo come capire tua madre cucinando assieme.
+                }
+                {
+                    - cooking_with_first_char.first_theme: E recuperano quel pezzo di paradiso di quando eri piccola.
                 }
             -
                 ~ numberQuestion ++
