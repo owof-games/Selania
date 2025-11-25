@@ -4,6 +4,12 @@
 
  ----------------------------------*/
 === pre_start_cooking_with_second_char
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+    
 Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         + [Ci sto!]
             -> cooking_with_second_char
@@ -429,7 +435,12 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
     
 
 
-== at_table_with_second_char
+=== at_table_with_second_char
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
     ~ move_entity(CookingWithSecondCharOBJ, Kitchen)
     ~ temp piatto = kitchen_tempRecipeName
     
@@ -520,6 +531,11 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
 
 
 === ending_cooking_with_second_char
+~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 E poi ci saluta e se ne va allo stagno.
 
     -> cooking_animations_off ->
@@ -547,9 +563,9 @@ E poi ci saluta e se ne va allo stagno.
 
 === second_char_cooking_alone
 {debug: passo per second_char_cooking_alone.}
-~ move_entity(BatHouseFront, Kitchen)
-~ move_entity(BatHouseRetro, Kitchen)
-~ move_entity(Bat, Kitchen)
+    ~ move_entity(BatHouseFront, Kitchen)
+    ~ move_entity(BatHouseRetro, Kitchen)
+    ~ move_entity(Bat, Kitchen)
 -> cooking_animations_on ->
 Riccio cucina da solo e ci chiede di lasciarlo da solo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
 
@@ -562,6 +578,11 @@ Riccio cucina da solo e ci chiede di lasciarlo da solo.#speaker:{secondChar_tag(
 
 
 === food_gift_second_char
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 {debug: passo per food_gift_second_char.}
 Riccio attiva il suo storylet speciale dopo aver cucinato da solo e ci impezza sui pipistrelli per un po.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
 

@@ -29,52 +29,58 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     -> storage_colors(FirstCharacter)->
     -> cooking_animations_on ->
 
-    Iniziamo proponendo a Chitarra di parlare di un tema.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-    Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le condizioni saranno valide (sostanzialmente: se almeno una volta abbiamo parlato di quel tema).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+    Sai {charNameOne}, mentre cuciniamo potremmo parlare un po'.
+    In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...
     
     - (top)    
-        + [Parliamo di avere una vita con uno scopo.]
+        
+        + [Dei rapporti che hai con le persone che ti sono care.]
+                -> first_theme
+                
+
+        + [{first_char_main_storylets.six: Del bisogno di fare qualcosa che salvi il mondo.|<i>Parla ancora con {charNameOne} per sbloccare questo tema.</i>}]
             {
-                - first_char_main_storylets.four:
+                - first_char_main_storylets.six:
                     -> second_theme
                 
                 - else:
-                    Preferirei raccontarti ancora di qualcosa di mio prima di farlo. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                     -> top
             }
         
-        
-        + [Parliamo di relazioni.]
-            {
-                - first_char_main_storylets.five:
-                    -> first_theme
-                
-                - else:
-                    Preferirei raccontarti ancora di qualcosa di mio prima di farlo. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                   -> top 
-            }
-        
-        
-        + [Parliamo di creatività.]
+        + [{first_char_main_storylets.nine: Del tuo rapporto con la creatività.|<i>Parla ancora con {charNameOne} per sbloccare questo tema.</i>}]
             {
             
-                - first_char_main_storylets.six:
+                - first_char_main_storylets.nine:
                     -> third_theme
                 
                 - else:
-                    Preferirei raccontarti ancora di qualcosa di mio prima di farlo. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                     -> top
             }
-        
-        + [Ho cambiato idea.]
+            
+        + [Sai, forse preferirei cucinare più tardi.]
+            Nessun problema, prenditi i tuoi tempi {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             -> main
 
 
     
     = first_theme
-        Il tema scelto è il numero uno.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Chitarra parla.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Possiamo fare una di queste cinque scelte.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        Uh, hai già capito che per me le relazioni sono abbastanza il centro di tutto.
+        Vediamo, cosa ti posso raccontare?
+        Da piccola in realtà ero abbastanza un disastro sociale.
+        Timida a bestia, bullizzata perché in carne, e secchiona.
+        Non la ragazzina più amata dalla scuola.
+        Uh, aspetta che abbasso la fiamma.
+        Meglio.
+        Però a casa era un piccolo paradiso.
+        I miei sono gente semplice, ma hanno sempre premiato la curiosità.
+        Papà mi ha passato l'amore per la musica.
+        Mamma quando canta ha una voce che scioglie ogni tensione.
+        Ma è stato papà quello che mi regalava sempre qualcosina che faceva rumore.
+        E appena è riuscito a risparmiare a sufficienza, mi ha dato lezioni di piano.
+        Credo che i miei mi abbiano insegnato che le relazioni sono cura.
+        E sacrificio.
+        Credi abbia senso?
+        
             + [Scelta blu]
                 -> color_variation_management(FirstCharacter, blueC)->
                
@@ -90,26 +96,69 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Scelta viola]
                 -> color_variation_management(FirstCharacter, purpleC)->
             -    
-        A questo punto è chitarra a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-            + [Sostantivo A]
-                ~ kitchen_recipeNoun = "Sostantivo A"
-               
-            + [Sostantivo B]
-                ~ kitchen_recipeNoun = "Sostantivo B"
-             
-            + [Sostantivo C]
-               ~ kitchen_recipeNoun = "Sostantivo C"
+        No no taglio io, non ti preoccupare, continua a mischiare.
+        Ma invece tu che rapporto hai coi tuoi genitori?
+            {
+                - not cooking_with_second_char: Provi a parlare, ma non ti escono le parole. Però gli ingredienti possono parlare per te.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            }
+        {player_name} aggiunge alla ricetta... #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
-            + [Sostantivo D]
-                ~ kitchen_recipeNoun = "Sostantivo D"
+            + [Dei cubetti di grano del rispetto.]
+                ~ kitchen_recipeNoun = "Sautè di grano"
+                Uh, credo di capire.
+                Il rispetto è una bella cosa coi genitori.
+                Il trattarsi reciprocamente da adulti, giusto?
+                Una forma di affetto.
+               
+            + [Delle striscioline di seitan malinconico.]
+                ~ kitchen_recipeNoun = "Grigliata di seitan"
+                Credo mi dispiaccia, vero?
+                Insomma.
+                Qualcosa che manca, che non è come dovrebbe essere.
+                O che non è più.
+                Mi spiace, {player_name}, davvero.
+                
+            + [Dei fagioli del conflitto.]
+               ~ kitchen_recipeNoun = "Fagiolata"
+               Non so se ti possa consolare, ma è una cosa comune.
+               Molte delle mie amiche hanno un rapporto conflittuale coi genitori.
+               Talco pensa sia un passaggio necessario per diventare adulti.
+               Per questo mi chiamava "Cocca di papà".
+        
+            + [Delle cimette di broccolo della fiducia.]
+                ~ kitchen_recipeNoun = "Cimetta di broccolo"
+                Sento anche io questa cosa.
+                Questa fiducia reciproca.
+                Credo sia l'esito la cosa più bella da creare coi propri genitori.
+                Un segno totale d'amore.
     
-            + [Sostantivo E]
-                ~ kitchen_recipeNoun = "Sostantivo E"
+            + [Degli spicchi di aglio del distacco.]
+                ~ kitchen_recipeNoun = "Crema d'aglio"
+                Merda.
+                Mi spiace {player_name}.
+                Non so se ha senso, ma la distanza mi sembra peggio del litigio, del conflitto.
+                Perché dal conflitto può nascere un cambiamento.
+                Ed è comunque un rapporto.
+                Insomma.
+                Mi spiace, davvero.
             -  
-        Chitarra commenta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Chitarra dice un'altra cosa sul tema che stiamo esplorando.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Noi rispondiamo una di queste cinque cose.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        
+        Dove ho messo il sale?
+        Eccolo.
+        Però anche se da piccola non avevo amicizie con persone della mia età, l'arrivo al nord ha cambiato tutto.
+        È stato come poter ricominciare da capo.
+        Nel giro di pochi mesi avevo il mio giro del Conservatorio.
+        I primi mesi sono stati magnifici.
+        Poi, dopo un anno ho scoperto una cosa: nei gruppi si litiga.
+        E a una certa Luana, una ragazza del gruppo, si è allontanata.
+        Quel tipo di rapporto per cui ci si saluta etc, ma non si parla più.
+        Io.
+        Boh.
+        Credo sentissi il bisogno di chiarire, ma non sapevo come fare.
+        Mi sembrava che farlo avrebbe significato tradire il gruppo, che invece si era più ancorato all'idea di lasciare cadere le cose.
+        Anche se Luana si è comportata da stronza.
+        Ha senso?
+        
             + [Scelta blu]
                 -> color_variation_management(FirstCharacter, blueC)->
                
@@ -125,27 +174,60 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Scelta viola]
                 -> color_variation_management(FirstCharacter, purpleC)->
             -
-        Chitarra allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Step due: aggettivi (es: saporito, triste, colorato).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-            + [Aggettivo A]
-                ~ kitchen_recipeAdjective = "Aggettivo A"
-               
-            + [Aggettivo B]
-                ~ kitchen_recipeAdjective = "Aggettivo B"
-             
-            + [Aggettivo C]
-               ~ kitchen_recipeAdjective = "Aggettivo C"
         
-            + [Aggettivo D]
-                ~ kitchen_recipeAdjective = "Aggettivo D"
+        Buono comunque questo vino rosso.
+        E tu cosa ti aspetti da un'amicizia, {player_name}?
+        {player_name} aggiunge alla ricetta... #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        
+            + [Del pepe dell'onestà.]
+                ~ kitchen_recipeAdjective = "onesta"
+                Come Talco.
+                Quel tipo di persona che se fai una cagata, te la dice.
+               
+            + [Della curcuma divertente.]
+                ~ kitchen_recipeAdjective = "allegra"
+                L'amicizia da balotta quindi.
+                Da cazzeggio assieme.
+                Da oasi nel casino del mondo.
+             
+            + [Del cumino empatico.]
+               ~ kitchen_recipeAdjective = "empatica"
+               Quel tipo di rapporto che ti fa sentire ascoltata.
+               Capita.
+               Dove puoi essere te stessa.
+               Spero di essere quel tipo di amica, sai?
+        
+            + [Della cannella incondizionata.]
+                ~ kitchen_recipeAdjective = "incondizionata"
+                Posso capire, ma non mi piace tantissimo come idea.
+                Mi piace che le amicizie ci siano anche nel conflitto.
+                Non mi preoccupa che le amicizie finiscano.
+                Mi preoccupa il come.
+                Tipo se finisce la stima.
+                Terribile.
     
-            + [Aggettivo E]
-                ~ kitchen_recipeAdjective = "Aggettivo E"
+            + [Dello zenzero leale.]
+                ~ kitchen_recipeAdjective = "leale"
+                Essere leali significa essere affidabili, vero?
+                Quel tipo di persona che non va in giro a dire i tuoi segreti.
+                E che cerca sempre di darti il consiglio giusto, non quello che le torna comodo.
             -      
-    
-        Chitarra commenta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Chitarra condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Noi diciamo per la terza volta qualcosa legato a quel tema.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        
+        Aspè, aggiungo ancora del brodino.
+        Ecco.
+        Si stava addensando troppo.
+        Ma il profumo è magnifico.
+        Comunque, unpopular opinion che non è poi molto unpopular: non è che c'è tutta 'sta differenza tra amore romantico e amicizia.
+        Credo che una parte di me veda il tizio che chiami "amore" solo come un amico con cui è anche bello scopare.
+        E di certo non me la sento di dire che una persona viene prima dell'altra solo per questo tipo di cose.
+        Tipo che Talco ed Ennio per me sono i miei due grandi amori.
+        E forse mi contraddico con altre cose che ho detto ma è un casino perché quando parli devi parlare con il linguaggio di chi hai davanti.
+        E non c'è molto linguaggio per dire queste cose.
+        Quando ho detto "Ti amo" a Talco una volta, ubriaca, per un poco le cose si sono fatte strane.
+        Perché dietro quella parola c'è una botta infinita di aspettative.
+        Però per fortuna Talco è Talco e ne abbiamo parlato e ci siamo capit3.
+        Ha senso vero?
+        
             + [Scelta blu]
                 -> color_variation_management(FirstCharacter, blueC)->
                
@@ -162,24 +244,45 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 -> color_variation_management(FirstCharacter, purpleC)->
             -
         
-        Chitarra ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Step tre: complementi (es: del campo, per rimbecco, di coriandolo).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-            + [Complemento A]
-                ~ kitchen_recipeComplement = "Complemento A"
-               
-            + [Complemento B]
-                ~ kitchen_recipeComplement = "Complemento B"
-             
-            + [Complemento C]
-               ~ kitchen_recipeComplement = "Complemento C"
+        Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
+        Ecco, questo coperchio ci sta perfettamente.
+        Così, a caldo.
+        Una persona che ti piace ti dice "Ti amo". Qual è la prima sensazione che provi?
+        {player_name} aggiunge alla ricetta... #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
-            + [Complemento D]
-                ~ kitchen_recipeComplement = "Complemento D"
+            + [Una mestolata di brodo del terrore.]
+                ~ kitchen_recipeComplement = "del terrore"
+                Woah, {player_name}.
+                Questa è intensa.
+                Anche se effettivamente l'amore può far cagare addosso.
+               
+            + [Una grattuggiata di noce euforica.]
+                ~ kitchen_recipeComplement = "dell'euforia"
+                Mi risuona tanto.
+                Detta dalla persona giusta è una parola che ti fa volare, vero?
+             
+            + [Una spolverata di semi dell'"io? no, no è possibile!".]
+               ~ kitchen_recipeComplement = "dell'impossibile"
+                Coff Coff.
+                La sento.
+                Madonna se la sento.
+                Mi è successo anche con Ennio.
+                E a volte mi succede ancora.
+        
+            + [Una cucchiata di olio lusingato.]
+                ~ kitchen_recipeComplement = "della lusinga"
+                Uh, a qualcuno piace quando il suo pelo viene lisciato, vero?
+                Però non rischia di essere una cosa egoista?
+                Più legata a come ti senti che al sentimento che provi per quella persona?
     
-            + [Complemento E]
-                ~ kitchen_recipeComplement = "Complemento E"
+            + [Una manciata di peperoncini arrapati.]
+                ~ kitchen_recipeComplement = "dell'arrapamento"
+                Questa non me l'aspettavo, ma ci sta.
+                Sentirsi amatə è indubbiamente sexy.
+                Anni fa confondevo a manetta arrapamento e amore.
+                Puoi immaginare i casini che ho combinato.
             -  
-        Chitarra lascia un ultimo commento, e poi ci dice che il piatto è pronto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        
             -> fourth_ingredient_dispatcher
             
     
@@ -291,7 +394,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Complemento E]
                 ~ kitchen_recipeComplement = "Complemento E"
             -  
-        Chitarra lascia un ultimo commento, e poi ci dice che il piatto è pronto#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+
             -> fourth_ingredient_dispatcher
                 
                 
@@ -404,14 +507,15 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Complemento E]
                 ~ kitchen_recipeComplement = "Complemento E"
             -  
-        Chitarra lascia un ultimo commento, e poi ci dice che il piatto è pronto#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             -> fourth_ingredient_dispatcher
     
     
             //La chiusura è comune, sempre per ridurre il rischio di errori
             = fourth_ingredient_dispatcher
+            Ma {player_name}, qui a me sembra tutto pronto, non trovi?
+            
                 {
-                    - backpack_findedGifts == (): Il tuo inventario è vuoto, e quindi non puoi aggiungere un ingrediente extra.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    - backpack_findedGifts == (): Dato che lo zaino di {player_name} è vuoto, non è possibile inserire un ingrediente speciale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                         -> recipe_name_creator ->
                         -> at_table_with_first_char
                         
@@ -421,18 +525,16 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 }
             
                 = add_ingredient
-                    Dato che il nostro inventario contiene degli oggetti, possiamo inserirne uno nel piatto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    Dato che lo zaino di {player_name} contiene degli oggetti, può inserirne uno nel piatto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                         
-                        + Voglio aggiungere un ingrediente extra.
+                        + [Voglio aggiungere un ingrediente extra.]
                             -> extra_ingredient_management(FirstCharacter)->
                             ~ disableNestDialogue()
                             
-                        + [Ho cambiato idea.]
-                            ~ kitchen_recipePP = "semplice"
-                        
+                        + [Mi va bene così.]
                         -
                         
-                    Chitarra ci dice che possiamo mangiare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                    Andiamo a mangiare, ama!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                         -> recipe_name_creator ->
                         -> at_table_with_first_char
 
@@ -440,11 +542,12 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
 
 === at_table_with_first_char
     ~ move_entity(CookingWithFirstCharOBJ, Kitchen)
-
+    ~ move_entity(EatingWithFirstCharOBJ, Kitchen)
     ~ temp piatto = kitchen_tempRecipeName
+    
     Passiamo alla scena al tavolo con Chitarra#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
 
-    ~ move_entity(EatingWithFirstCharOBJ, Kitchen)
+    
     
     Buono questo {piatto}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     
@@ -528,6 +631,11 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             
         
 === ending_cooking_with_first_char
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 E poi ci saluta e se ne va allo stagno.
 
     -> cooking_animations_off ->
@@ -601,6 +709,11 @@ E poi ci saluta e se ne va allo stagno.
 
 === food_gift_first_char
 {debug: passo per food_gift_first_char.}
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
     
     Cucinare da sola prima è stato un momento terapeutico.
     E non lo dico solo perché mi sono sparata un bel po' di vinello.
