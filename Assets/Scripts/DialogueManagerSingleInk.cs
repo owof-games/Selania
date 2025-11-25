@@ -568,9 +568,9 @@ public class DialogueManagerSingleInk : MonoBehaviour
                     UpdateBackground(tagValue);
 
 
-                    // Salviamo solo quando entriamo in una nuova "scena", e solo se siamo sul flow di default
-                    // (e.g.: non nel diario)
-                    if (story.currentFlowIsDefaultFlow)
+                    // Salviamo solo quando entriamo in una nuova "scena", se siamo sul flow di default (e.g.: non nel
+                    // diario), e non siamo su un nodo generato solo per attaccare i tag di knot
+                    if (story.currentFlowIsDefaultFlow && story.currentText.Trim() != "")
                     {
                         SaveGame();
                     }
@@ -902,8 +902,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
             // Ripristina lo stato di Ink
             story.state.LoadJson(saveData.inkState);
             Debug.Log("Gioco caricato!");
-            ContinueStory();
             UpdateUI(story.currentText.Trim(), story.currentChoices);
+            // ContinueStory();
             return true;
         }
         else
