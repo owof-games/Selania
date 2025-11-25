@@ -753,7 +753,6 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
 
 
 === first_char_cooking_tracker
-~ move_entity(FirstCharCookingAloneOBJ, Kitchen)
 //Lo lascio come knot e non come variabile perché potrebbe essermi utile (es: per attivare un suono che faccia sapere che c'è qualcunx in cucina)
     {debug: passo per first_char_cooking_tracker.}
     

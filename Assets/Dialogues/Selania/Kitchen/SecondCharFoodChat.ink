@@ -591,12 +591,35 @@ E poi ci saluta e se ne va allo stagno.
 
 === second_char_cooking_alone
 {debug: passo per second_char_cooking_alone.}
-    ~ move_entity(BatHouseFront, Kitchen)
-    ~ move_entity(BatHouseRetro, Kitchen)
-    ~ move_entity(Bat, Kitchen)
 -> cooking_animations_on ->
-Riccio cucina da solo e ci chiede di lasciarlo da solo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
 
+{second_char_cooking_alone:
+    
+        - 1:
+            {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}
+            
+        - 2:
+            {Potrei sostituire l'aneto con, uh, no, non una buona idea.|Perdonami {player_name}, ma sto cercando qualcosa che non mi avveleni.}
+        
+        - 3:
+            {Ricordati ragazza che cucinare non è una scusa per bere. Ma che gioia aver trovato del vinello. |Torna dopo {player_name}, devo, ehm, riflettere.}
+            
+        - 4:
+            {Quante possibilità ci sono che se caccio la mano nell'alveare della serra riesco a recuperare del miele?|{player_name}, ho un'idea stupida, torna dopo.}
+        
+        - 5:
+            {Uh, questo sughino spacca. Mamma ne sarebbe orgogliosa.|{player_name}, ho bisogno di concentrazione, a dopo.}
+    
+        - 6:
+            {Sarà una buona idea avere tutti questi coltelli accessibili con il bimbo in giro in giro? Merda, stavo per tagliarmi. Forse sono io il problema, non lui.|{player_name}, faccio danni già da sola, torna tra un po'.}
+        
+        - 7:
+            {Tocco finale, la crema di funghi. E ora lasciamo cuocere un po'. E ci beviamo un altro goccino.|{player_name}, resisti che ho quasi finito!}
+        
+        - else:
+            {Direi che ci siamo. Giusto la fiammata per restringere il brodo, ed è perfetta!|{player_name}, un attimo e ti lascio i fornelli, promesso.}
+        
+    }
 
 
 

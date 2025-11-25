@@ -314,8 +314,13 @@
                     ~ kitchen_secondCharCookingTime ++
                 
                 - else:
-                   ~ kitchen_secondCharIsCooking = false
-                   ~ move_entity(SecondCharacter, Pond)
+                    ~ kitchen_secondCharIsCooking = false
+                    ~ move_entity(SecondCharacter, Pond)
+                    //E poi sposto gli elementi decorativi in cucina
+                    ~ move_entity(BatHouseFront, Kitchen)
+                    ~ move_entity(BatHouseRetro, Kitchen)
+                    ~ move_entity(Bat, Kitchen)
+                    
             }
             
         }
@@ -359,6 +364,8 @@
                     - else:
                        ~ kitchen_firstCharIsCooking = false
                        ~ move_entity(FirstCharacter, Pond)
+                       //E poi sposto gli elementi decorativi in cucina
+                       ~ move_entity(FirstCharCookingAloneOBJ, Kitchen)
                 }
 
         }
