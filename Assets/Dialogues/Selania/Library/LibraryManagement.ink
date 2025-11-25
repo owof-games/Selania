@@ -1,8 +1,8 @@
 //Variabili per la gestione della biblioteca
-LIST library_allStories = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, QueerginiaWolf
+LIST library_allStories = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, FrancescaToscaRaimondi, Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, QueerginiaWolf
 
 //Liste per distinguere storie lette e non
-    VAR library_unreadStories = (AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, QueerginiaWolf)
+    VAR library_unreadStories = (AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, Lamia, FrancescaToscaRaimondi, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, QueerginiaWolf)
     VAR library_readStories = ()
     VAR library_temporaryTW = ()
     VAR library_temporaryReadTW = ()
@@ -22,11 +22,11 @@ LIST library_allStories = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, Cec
     
     VAR library_shortStories = (StenoArtico, B, ValFaustoLattanzio, Maura, QueerginiaWolf)
     VAR library_averageStories = (AdriAllora, BeatriceYBottura, CeciliaFormicola, Lamia, Romi)
-    VAR library_longStories = (Aza, Beatrice, Salvo, LetiziaVaccarella)
+    VAR library_longStories = (Aza, Beatrice, FrancescaToscaRaimondi, Salvo, LetiziaVaccarella)
     
 //Books about...
-    VAR library_aboutTransformation = (Aza, B, ValFaustoLattanzio, Salvo, BeatriceYBottura, LetiziaVaccarella)
-    VAR library_aboutQuestions = (AdriAllora, Beatrice, ValFaustoLattanzio, StenoArtico, Romi)
+    VAR library_aboutTransformation = (Aza, B, FrancescaToscaRaimondi, ValFaustoLattanzio, Salvo, BeatriceYBottura, LetiziaVaccarella)
+    VAR library_aboutQuestions = (AdriAllora, Beatrice, FrancescaToscaRaimondi, ValFaustoLattanzio, StenoArtico, Romi)
     VAR library_aboutUnprepared = (StenoArtico, Beatrice, Lamia)
     VAR library_aboutMonsters = (AdriAllora, Aza, B, BeatriceYBottura, CeciliaFormicola)
     VAR library_aboutFire= (Aza, CeciliaFormicola, BeatriceYBottura, Romi, Maura, LetiziaVaccarella, QueerginiaWolf)
@@ -426,8 +426,10 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
 
         
     - CeciliaFormicola:
-        -> cecilia_formicola   
-
+        -> cecilia_formicola
+    - FrancescaToscaRaimondi:
+        -> francesca_tosca_raimondi
+            
     - Lamia:
         -> lamia         
     - ValFaustoLattanzio:
@@ -465,7 +467,8 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     - {library_readStories has Beatrice: -> reread_beatrice| -> reread}    
     - {library_readStories has BeatriceYBottura: -> reread_beatrice_y_bottura| -> reread}
     
-    - {library_readStories has CeciliaFormicola: -> reread_cecilia_formicola| -> reread}   
+    - {library_readStories has CeciliaFormicola: -> reread_cecilia_formicola| -> reread}
+    - {library_readStories has FrancescaToscaRaimondi: -> reread_francesca_tosca_raimondi| -> reread}   
     
     - {library_readStories has Lamia: -> reread_lamia| ->reread} 
     - {library_readStories has ValFaustoLattanzio: -> reread_val_lattanzio| ->reread}
@@ -550,7 +553,17 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
  
- 
+    = reread_francesca_tosca_raimondi
+    La biblioteca si chiede cosa tu voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    
+        + [Rileggo <b>Trecentotrenta metri.</b> di Francesca Tosca Raimondi (she/her).]
+                -> francesca_tosca_raimondi
+        + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+                -> reread
+        + [Ho cambiato idea, voglio una storia nuova.]
+                -> book_test_intro 
+    
+    
  
     = reread_lamia
     La biblioteca si chiede cosa tu voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}

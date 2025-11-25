@@ -111,6 +111,10 @@
             -> main
 
 
+
+            
+
+
 === letizia_vaccarella
 <b>Dodici stelle</b> di Letizia Vaccarella (she/her).
 
@@ -174,6 +178,7 @@
         + [Vorrei leggere ancora.]
             ~ disableBigDialogue()
            -> book_test_intro
+        
         + [Me ne vado.]
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
