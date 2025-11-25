@@ -562,65 +562,72 @@ E poi ci saluta e se ne va allo stagno.
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-{debug: passo per first_char_cooking_alone.}
--> cooking_animations_on ->
-{first_char_cooking_alone:
-
-    - 1:
-        {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}
+    {debug: passo per first_char_cooking_alone.}
+        -> cooking_animations_on ->
         
-    - 2:
-        {Potrei sostituire l'aneto con, uh, no, non una buona idea.|Perdonami {player_name}, ma sto cercando qualcosa che non mi avveleni.}
+    {first_char_cooking_alone:
     
-    - 3:
-        {Ricordati ragazza che cucinare non è una scusa per bere. Ma che gioia aver trovato del vinello. |Torna dopo {player_name}, devo, ehm, riflettere.}
+        - 1:
+            {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}
+            
+        - 2:
+            {Potrei sostituire l'aneto con, uh, no, non una buona idea.|Perdonami {player_name}, ma sto cercando qualcosa che non mi avveleni.}
         
-    - 4:
-        {Quante possibilità ci sono che se caccio la mano nell'alveare della serra riesco a recuperare del miele?|{player_name}, ho un'idea stupida, torna dopo.}
+        - 3:
+            {Ricordati ragazza che cucinare non è una scusa per bere. Ma che gioia aver trovato del vinello. |Torna dopo {player_name}, devo, ehm, riflettere.}
+            
+        - 4:
+            {Quante possibilità ci sono che se caccio la mano nell'alveare della serra riesco a recuperare del miele?|{player_name}, ho un'idea stupida, torna dopo.}
+        
+        - 5:
+            {Uh, questo sughino spacca. Mamma ne sarebbe orgogliosa.|{player_name}, ho bisogno di concentrazione, a dopo.}
     
-    - 5:
-        {Uh, questo sughino spacca. Mamma ne sarebbe orgogliosa.|{player_name}, ho bisogno di concentrazione, a dopo.}
-
-    - 6:
-        {Sarà una buona idea avere tutti questi coltelli accessibili con il bimbo in giro in giro? Merda, stavo per tagliarmi. Forse sono io il problema, non lui.|{player_name}, faccio danni già da sola, torna tra un po'.}
+        - 6:
+            {Sarà una buona idea avere tutti questi coltelli accessibili con il bimbo in giro in giro? Merda, stavo per tagliarmi. Forse sono io il problema, non lui.|{player_name}, faccio danni già da sola, torna tra un po'.}
+        
+        - 7:
+            {Tocco finale, la crema di funghi. E ora lasciamo cuocere un po'. E ci beviamo un altro goccino.|{player_name}, resisti che ho quasi finito!}
+        
+        - else:
+            {Direi che ci siamo. Giusto la fiammata per restringere il brodo, ed è perfetta!|{player_name}, un attimo e ti lascio i fornelli, promesso.}
+        
+    }
     
-    - 7:
-        {Tocco finale, la crema di funghi. E ora lasciamo cuocere un po'. E ci beviamo un altro goccino.|{player_name}, resisti che ho quasi finito!}
     
-    - else:
-        {Direi che ci siamo. Giusto la fiammata per restringere il brodo, ed è perfetta!|{player_name}, un attimo e ti lascio i fornelli, promesso.}
-    
-}
-
-
--> main
+    -> main
 
 
 
 
 === food_gift_first_char
 {debug: passo per food_gift_first_char.}
-Chitarra attiva il suo storylet speciale dopo aver cucinato da sola  e ci dice che ha trovato delle lucine in giro e qualcosa sul Natale e le ame o il fidanzato.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-
-            + [Scelta blu]
-                -> color_variation_management(FirstCharacter, blueC)->
-               
-            + [Scelta gialla]
-                -> color_variation_management(FirstCharacter, yellowC)->
-             
-            + [Scelta rossa]
-                -> color_variation_management(FirstCharacter, redC)->
-        
-            + [Scelta verde]
-                -> color_variation_management(FirstCharacter, greenC)->
     
-            + [Scelta viola]
-                -> color_variation_management(FirstCharacter, purpleC)->
-            -
-            
-    ~ firstChar_pauseTalking = firstChar_pauseDuration
+    Cucinare da sola prima è stato un momento terapeutico.
+    E non lo dico solo perché mi sono sparata un bel po' di vinello.
+    Per me la tavola è lo spazio più bello di una casa perché amo mangiare con le altre persone.
+    E amo quando mangiano quello che cucino.
+    Credo sia una cosa che ho imparato da mia mamma.
+    Mamma non l'ho mai capita fino in fondo.
+    Non è una che parla tantissimo.
+    Però ci tiene molto alle persone, e per fartelo capire fa cose.
+    Come cucinare.
+    Da quando vivo al Nord è salita solo una volta.
+    Lei e papà hanno dormito nella mia camera, mentre io ho dormito con Valeria.
+    Le coinqui erano in imbarazzo perché ha pulito tutta casa.
+    E un giorno quando siamo uscite con papà a fargli fare il giro della città, lei è rimasta in casa da sola.
+    Siamo tornate, e aveva preparato praticamente un cenone della vigilia.
+    E ha tenuto conto del fatto che Valeria è vegana, e che a Irene non piacciono le cose rosse e tutta una serie di cose che ha capito in quei pochi giorni con loro.
+    Credo che mamma sappia dire "Ti voglio bene" solo dietro ai fornelli.
+    Non ti chiedo un'opinione, scusa, voglio tenermi ancorata ancora un po' a questa sensazione.
+    Ma a proposito di cenone della vigilia.
+    Da quando vivo su, ho iniziato a organizzare cenoni con le ame.
+    Credo sia uno dei momenti più belli dell'anno.
+    Qui non c'è abbastanza roba per farlo, ma ho pensato di portare un po' di Natale comunque.
+    E quindi ti ho lasciato qualcosina su uno degli alberi della cucina.
+    Spero possa portarti un po' di gioia, {player_name}.
+    A dopo.
+
+        ~ firstChar_pauseTalking = firstChar_pauseDuration
         ~ firstChar_justTalked = true
-
-
 
 -> main
