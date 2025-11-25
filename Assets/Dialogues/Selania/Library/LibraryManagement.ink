@@ -545,7 +545,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     = reread_beatrice
     La biblioteca si chiede cosa tu voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
-        + [Rileggo <b>La rete non esiste di Beatrice(she/her).]
+        + [Rileggo <b>La rete non esiste</b> di Beatrice (she/her).]
                 -> beatrice
         + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
@@ -578,7 +578,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     = reread_francesca_tosca_raimondi
     La biblioteca si chiede cosa tu voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
-        + [Rileggo <b>Trecentotrenta metri.</b> di Francesca Tosca Raimondi (she/her).]
+        + [Rileggo <b>Trecentotrenta metri</b> di Francesca Tosca Raimondi (she/her).]
                 -> francesca_tosca_raimondi
         + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
@@ -589,7 +589,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     = reread_kayleig
     La biblioteca si chiede cosa tu voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
-        + [Rileggo <b>Volevo che mia madre fosse forte.</b> di Kayleig (she/her).]
+        + [Rileggo <b>Volevo che mia madre fosse forte</b> di Kayleig (she/her).]
                 -> kayleig
         + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
@@ -610,7 +610,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     = reread_loris_casagrandi
     La biblioteca si chiede cosa tu voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
-        + [Rileggo <b>Volevo essere solo cervello</b>, di Loris Casagrandi (he/him - she/her).]
+        + [Rileggo <b>Volevo essere solo cervello</b> di Loris Casagrandi (he/him - she/her).]
                 -> loris_casagrandi
         + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
@@ -631,7 +631,7 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     La biblioteca si chiede cosa tu voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [Rileggo <b>Il principe sbagliato</b> di Romi (any).]
-                -> val_fausto_lattanzio
+                -> romi
         + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread
         + [Ho cambiato idea, voglio una storia nuova.]
@@ -688,7 +688,6 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro 
     
-        
 
 
 ->->

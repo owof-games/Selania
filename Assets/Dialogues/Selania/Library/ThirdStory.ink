@@ -44,7 +44,7 @@
 
 
 === loris_casagrandi
-<b>Volevo essere solo cervello</b>, di Loris Casagrandi (he/him - she/her).
+<b>Volevo essere solo cervello</b>, di Loris Casagrandi (he/him - she/her). Instagram: @lorisdesign4exp
 
     Trigger warning: riferimento a gesti ti autolesionismo o violenza.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
