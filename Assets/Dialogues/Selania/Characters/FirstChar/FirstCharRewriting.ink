@@ -246,7 +246,9 @@
                     
             + [Ma il cambiamento parte anche dalla casa. Ad esempio aiutando i tuoi genitori.]
                 -> color_variation_management(FirstCharacter, greenC)->
-        
+                {
+                    -food_gift_first_char: Magari scoprendo come capire tua madre cucinando assieme.
+                }
             -
                 ~ numberQuestion ++
             
