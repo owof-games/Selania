@@ -545,22 +545,22 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     ~ move_entity(EatingWithFirstCharOBJ, Kitchen)
     ~ temp piatto = kitchen_tempRecipeName
     
-    Passiamo alla scena al tavolo con Chitarra#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-
+    È stato divertente cucinare assieme, {player_name}.
+    Mi ha fatto sentire a casa.
+    E poi questo {piatto}!
+    Spacca, non trovi?
     
-    
-    Buono questo {piatto}!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-    
-    //Commento ricetta
-    Quando prima hai aggiunto {kitchen_recipeNoun} mi hai ricordato una cosa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-    E con {kitchen_recipeAdjective} un'altra, e con {kitchen_recipeComplement} un'altra ancora.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-            {
-                - kitchen_firstCharExtraIngredientReaction != notReaction:
-                    -> extra_ing_feedback
-            }
-    
-    Non abbiamo aggiunto un ingrediente extra, per cui Chitarra ci dice: "Comunque, ottimo piatto!"#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        -> relationship_feedback
+        {
+            - kitchen_firstCharExtraIngredientReaction != notReaction:
+                -> extra_ing_feedback
+            
+            - else:
+                E ho la pancia strapiena ora.
+                -> relationship_feedback
+                
+        }
+        
+        
     
         
         
@@ -582,47 +582,91 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         
         
                 = good_reaction
-                Abbiamo aggiunto un ingrediente extra apprezzato da Chitarra, per cui lei commenta:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                Aggiungere {ingredientTranslator(kitchen_firstCharExtraIngredient)} è stata una scelta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                E poi ci dà un'informazione utile per capire come gestire le conversazioni in futuro:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                Non prendermi per terrapiattista o che, ma non sono una grande fan delle conversazioni eccessivamente razionali. Mi tarpano la creatività, il piacere.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                
-                    -> relationship_feedback
+                    Aggiungere {ingredientTranslator(kitchen_firstCharExtraIngredient)} è stato un tocco geniale.
+                    Mi è arrivato proprio al cuore.
+                    Sai, so che non è sempre facilissimo capire come ragiono.
+                    Però a me sembra tutto abbastanza limpido.
+                    Alla fine basta non riempirmi di commenti rigidini e razionali quando parliamo.
+                    Non mi fraintendere, non sono qui per dire che la terra è piatta o altra roba del genere.
+                    Ma solo che mi trovo più a mio agio con le cose emotive, che non con i dati freddi e distaccati.
+                    
+                        -> relationship_feedback
                 
                 = bad_reaction
-                Abbiamo aggiunto un ingrediente extra detestato da Chitarra, per cui lei commenta:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                Aggiungere {ingredientTranslator(kitchen_firstCharExtraIngredient)} è stata una scelta terrificante, non farlo mai più!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                E poiché ha odiato l'ingrediente, non ci dirà niente di utile su come gestire le conversazioni future.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-               
-                    -> relationship_feedback
+                    Aggiungere {ingredientTranslator(kitchen_firstCharExtraIngredient)} è stata una scelta.
+                    Una scelta terribile, {player_name}.
+                    Per fortuna che ho una fame bestiale.
+        
+                        -> relationship_feedback
             
                 
                 = meh_reaction
-                Abbiamo aggiunto un ingrediente extra che Chitarra percepisce come neutro, né buono né cattivo, per cui lei commenta:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                Aggiungere {ingredientTranslator(kitchen_firstCharExtraIngredient)} è stata una scelta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                E poi ci dà un'informazione enigmatica per capire come gestire le conversazioni in futuro:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                Informazione enigmatica per dire che non le piacciono le conversazioni razionali.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                    L'aggiunta di {ingredientTranslator(kitchen_firstCharExtraIngredient)} mi ha confusa.
+                    È come.
+                    Uh, non so se hai presente.
+                    Quando parli con una persona sai cosa ami, e sai cosa detesti.
+                    E poi ci sono quelle cose che stanno nel mezzo, che non ti fanno nulla.
+                    Tipo, per me è quando una persona mi dice sempre che si risolve tutto facendo cose.
+                    O con la rabbia.
+                    Oppure che non prende mai troppo il mondo sul serio.
+                    Cioè, mi piace fare casino, ma ogni tanto.
+                    E quindi boh, il sapore di {ingredientTranslator(kitchen_firstCharExtraIngredient)} è come questa roba a metà, che non mi dice niente.
+                    Ma non mi fa manco schifo.
                 
-                    -> relationship_feedback
+                        -> relationship_feedback
             
     
         
     = relationship_feedback
-        A prescindere che sia stato aggiunto o meno il quarto ingrediente, Chitarra ci dirà anche finalmente dove sta andando la relazione con lei.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Il feedback fa riferimento a come è andata la conversazione in cucina, e non in generale.
+        Comunque {player_name}, stavo pensando alla nostra conversazione qui, assieme.
+        E se basandomi solo su questa chiacchierata in cucina dovessi dire: ho appena conosciuto {player_name}, vorrei farci amicizia?
+        
             -> firstAffinityCalc ->
             {
                 - firstAffinityCalc == 1:
                     {
-                        - firstChar_relationshipStatus == 0: Non ci stiamo pigliando.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                        - firstChar_relationshipStatus == 1: Ci piacciamo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                        - firstChar_relationshipStatus == 0:
+                            Credo che la risposta sia no.
+                            Non sei tu, sia chiaro.
+                            E non sono io.
+                            Ma piuttosto, le cose che sono per te importanti non lo sono per me.
+                            È come se guardassimo il mondo con due paia di occhiali molto diversi.
+                            Ma non ti preoccupare: abbiamo ancora un sacco di chiacchierate da fare per conoscerci, no?
+                    
+                        - firstChar_relationshipStatus == 1:
+                            La risposta è sicuramente "sì".
+                            Vediamo il mondo in modo simile.
+                            E non credo che l'amicizia debba coincidere con l'essere la stessa persona, assolutamente no.
+                            Però avere gli stessi valori aiuta a capirsi, a costruire cose assieme.
+                            E posso dirti per ora che sei una persona che mi dà fiducia, {player_name}.
+                            Sono felice di starti conoscendo.
                     }
                     
                 - firstAffinityCalc == 2:
                     {
-                        - firstChar_relationshipStatus == 0: Mi stai sul culo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                        - firstChar_relationshipStatus == 1: Non male ma potrebbe migliorare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-                        - firstChar_relationshipStatus == 2: Ci piacciamo tantissimo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                        - firstChar_relationshipStatus == 0:
+                            Credo che la risposta sia no.
+                            Non sei tu, sia chiaro.
+                            E non sono io.
+                            Ma piuttosto, le cose che sono per te importanti non lo sono per me.
+                            È come se guardassimo il mondo con due paia di occhiali molto diversi.
+                            Ma non ti preoccupare: abbiamo ancora un sacco di chiacchierate da fare per conoscerci, no?
+                            
+                        - firstChar_relationshipStatus == 1:
+                            Credo che la risposta sia "{player_pronouns has him:rimandato|{player_pronouns has her:rimandata|rimandatə}} a settembre".
+                            Un po' ci capiamo e un po' no.
+                            Che poi ci sta, no?
+                            Alla fine ci stiamo conoscendo giusto ora.
+                            E abbiamo ancora un bel po' di chiacchierate da farci assieme, e capirci di più.
+                            O di meno.
+                        
+                        - firstChar_relationshipStatus == 2:
+                            La risposta è sicuramente "sì".
+                            Vediamo il mondo in modo simile.
+                            E non credo che l'amicizia debba coincidere con l'essere la stessa persona, assolutamente no.
+                            Però avere gli stessi valori aiuta a capirsi, a costruire cose assieme.
+                            E posso dirti per ora che sei una persona che mi dà fiducia, {player_name}.
+                            Sono felice di starti conoscendo.
                     }    
         
             }
@@ -636,15 +680,18 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-E poi ci saluta e se ne va allo stagno.
+    
+    E ora {player_name}, credo mi farò due passi.
+    Mi sento piena e soddisfatta.
+    Grazie ancora per questo tempo assieme.
 
-    -> cooking_animations_off ->
-    ~ move_entity(FirstCharacter, Pond)
-    ~ kitchen_firstCharCookingTogetherInvite = false
-    -> update_colors(FirstCharacter) ->
-    -> check_kitchen_recap -> 
-
--> main
+            -> cooking_animations_off ->
+            ~ move_entity(FirstCharacter, Pond)
+            ~ kitchen_firstCharCookingTogetherInvite = false
+            -> update_colors(FirstCharacter) ->
+            -> check_kitchen_recap -> 
+        
+            -> main
 
 
 
