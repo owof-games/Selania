@@ -557,9 +557,42 @@ E poi ci saluta e se ne va allo stagno.
 
 
 === first_char_cooking_alone
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 {debug: passo per first_char_cooking_alone.}
 -> cooking_animations_on ->
-Chitarra sta cucinando da sola e ci chiede di lasciarla in pace fino a quando non ha finito.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+{first_char_cooking_alone:
+
+    - 1:
+        {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}
+        
+    - 2:
+        {Potrei sostituire l'aneto con, uh, no, non una buona idea.|Perdonami {player_name}, ma sto cercando qualcosa che non mi avveleni.}
+    
+    - 3:
+        {Ricordati ragazza che cucinare non è una scusa per bere. Ma che gioia aver trovato del vinello. |Torna dopo {player_name}, devo, ehm, riflettere.}
+        
+    - 4:
+        {Quante possibilità ci sono che se caccio la mano nell'alveare della serra riesco a recuperare del miele?|{player_name}, ho un'idea stupida, torna dopo.}
+    
+    - 5:
+        {Uh, questo sughino spacca. Mamma ne sarebbe orgogliosa.|{player_name}, ho bisogno di concentrazione, a dopo.}
+
+    - 6:
+        {Sarà una buona idea avere tutti questi coltelli accessibili con il bimbo in giro in giro? Merda, stavo per tagliarmi. Forse sono io il problema, non lui.|{player_name}, faccio danni già da sola, torna tra un po'.}
+    
+    - 7:
+        {Tocco finale, la crema di funghi. E ora lasciamo cuocere un po'. E ci beviamo un altro goccino.|{player_name}, resisti che ho quasi finito!}
+    
+    - else:
+        {Direi che ci siamo. Giusto la fiammata per restringere il brodo, ed è perfetta!|{player_name}, un attimo e ti lascio i fornelli, promesso.}
+    
+}
+
+
 -> main
 
 
