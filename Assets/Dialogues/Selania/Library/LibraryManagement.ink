@@ -1,8 +1,8 @@
 //Variabili per la gestione della biblioteca
-LIST library_allStories = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, FrancescaToscaRaimondi, Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, QueerginiaWolf
+LIST library_allStories = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, FrancescaToscaRaimondi, Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, Simo, QueerginiaWolf
 
 //Liste per distinguere storie lette e non
-    VAR library_unreadStories = (AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, Lamia, FrancescaToscaRaimondi, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, QueerginiaWolf)
+    VAR library_unreadStories = (AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, CeciliaFormicola, FrancescaToscaRaimondi, Lamia, ValFaustoLattanzio, Romi, Salvo, Maura, Beatrice, LetiziaVaccarella, Simo, QueerginiaWolf)
     VAR library_readStories = ()
     VAR library_temporaryTW = ()
     VAR library_temporaryReadTW = ()
@@ -21,14 +21,14 @@ LIST library_allStories = AdriAllora, Aza, StenoArtico, B, BeatriceYBottura, Cec
     VAR library_readingDuration = ()
     
     VAR library_shortStories = (StenoArtico, B, ValFaustoLattanzio, Maura, QueerginiaWolf)
-    VAR library_averageStories = (AdriAllora, BeatriceYBottura, CeciliaFormicola, Lamia, Romi)
+    VAR library_averageStories = (AdriAllora, BeatriceYBottura, CeciliaFormicola, Lamia, Romi, Simo)
     VAR library_longStories = (Aza, Beatrice, FrancescaToscaRaimondi, Salvo, LetiziaVaccarella)
     
 //Books about...
     VAR library_aboutTransformation = (Aza, B, FrancescaToscaRaimondi, ValFaustoLattanzio, Salvo, BeatriceYBottura, LetiziaVaccarella)
-    VAR library_aboutQuestions = (AdriAllora, Beatrice, FrancescaToscaRaimondi, ValFaustoLattanzio, StenoArtico, Romi)
-    VAR library_aboutUnprepared = (StenoArtico, Beatrice, Lamia)
-    VAR library_aboutMonsters = (AdriAllora, Aza, B, BeatriceYBottura, CeciliaFormicola)
+    VAR library_aboutQuestions = (AdriAllora, Beatrice, FrancescaToscaRaimondi, ValFaustoLattanzio, StenoArtico, Romi, Simo)
+    VAR library_aboutUnprepared = (StenoArtico, Beatrice, Lamia, Simo)
+    VAR library_aboutMonsters = (AdriAllora, Aza, B, BeatriceYBottura, CeciliaFormicola, Simo)
     VAR library_aboutFire= (Aza, CeciliaFormicola, BeatriceYBottura, Romi, Maura, LetiziaVaccarella, QueerginiaWolf)
     VAR library_aboutRebellion = (BeatriceYBottura, Lamia, Maura, Salvo, QueerginiaWolf)
 
@@ -441,6 +441,8 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
         -> salvo
     - Maura:
         -> maura
+    - Simo:
+        -> simo    
     - LetiziaVaccarella:
         -> letizia_vaccarella
     - QueerginiaWolf:
@@ -461,7 +463,6 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
 {shuffle:
     - {library_readStories has AdriAllora: -> reread_adri_allora| -> reread}
     - {library_readStories has Aza: -> reread_aza| -> reread}    
-    - {library_readStories has Salvo: -> reread_salvo| -> reread}
     - {library_readStories has StenoArtico: -> reread_steno_artico| -> reread}
     - {library_readStories has B: -> reread_b| -> reread}     
     - {library_readStories has Beatrice: -> reread_beatrice| -> reread}    
@@ -472,9 +473,11 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
     
     - {library_readStories has Lamia: -> reread_lamia| ->reread} 
     - {library_readStories has ValFaustoLattanzio: -> reread_val_lattanzio| ->reread}
-    - {library_readStories has Romi: -> reread_romi| ->reread}    
+    - {library_readStories has Romi: -> reread_romi| ->reread}
     
+    - {library_readStories has Salvo: -> reread_salvo| -> reread}
     - {library_readStories has Maura: -> reread_maura| -> reread}
+    - {library_readStories has Simo: -> reread_simo| -> reread}
     - {library_readStories has LetiziaVaccarella: -> reread_letizia_vaccarella| -> reread}
     - {library_readStories has QueerginiaWolf: -> reread_queerginia_wolf| -> reread}
 }
@@ -616,6 +619,15 @@ La biblioteca freme all'idea di offrirti una storia da leggere.#speaker:{witch_t
         + [Ho cambiato idea, voglio una storia nuova.]
                 -> book_test_intro        
     
+    = reread_simo
+    La biblioteca si chiede cosa tu voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    
+        + [Rileggo <b>SCP</b> di Simo (they/he).]
+                -> simo
+        + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
+                -> reread
+        + [Ho cambiato idea, voglio una storia nuova.]
+                -> book_test_intro 
 
     = reread_letizia_vaccarella
     La biblioteca si chiede cosa tu voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
