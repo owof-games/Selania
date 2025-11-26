@@ -99,7 +99,21 @@
 
                     
                 - firstChar_ActualName has FlautoDolce:
-                    
+                    Tipo: ho mollato il lavoro.
+                    Prima ne ho parlato con Valeria, e ci siamo organizzate per una cosa sgamosa che, coff coff, chiameremo subaffitto, circa.
+                    Insomma: divido camera con un'altra figliola, e per ora non pago l'affitto, ma mi occupo della gestione della casa.
+                    Perché?
+                    Perché così posso dedicarmi totalmente sia alla Rifugia, sia alla musica.
+                    E non hai idea di quanto abbia scritto da quando sono tornata.
+                    E non solo: ho un po' meno paura.
+                    Paura di dire cosa penso sulle cose politiche.
+                    Di fare proposte.
+                    Di cercare soluzioni.
+                    Valeria è totalmente presa bene da tutto questo.
+                    Ennio, non si pronuncia.
+                    E un po' mi fa paura.
+                    E fa strano forse, ma ti vorrei qui.
+                    A fare questo casino con me.
                     
                 - firstChar_ActualName has Ocarina:
                     
@@ -161,7 +175,27 @@
                 
                 
             - firstChar_ActualName has FlautoDolce:
-                
+                In poche settimane ho fatto una collezione assurda di "prime volte".
+                La mia prima volta in Questura, e solo perché ho osato tirare fuori uno striscione.
+                Il mio primo concerto sold out.
+                E ok, è facile fare sold out in un buco di culo come quello in cui eravamo.
+                Ma le persone hanno cantato i nostri brani, {player_name}!
+                I soldi sono andati in parte a La Rifugia, in parte a un'associazione migranti.
+                E con Valeria abbiamo deciso che è il caso di tirare su una associazione anche noi, a modo.
+                Sia per non finire nei casini sia perché, boh, sembra che il nostro progetto possa davvero funzionare.
+                E questa gioia mi aiuta ad affrontare la terza "prima volta".
+                Ennio mi ha lasciato.
+                E non mi sono mai sentita così disperata.
+                Lo amo tanto, ma tanto tanto.
+                E lui lo sa.
+                E mi ama anche lui.
+                Ma mi ha detto che ha bisogno di una relazione in cui non si senta secondo.
+                In cui non debba aspettare ogni giorno per sapere se mi ricorderò di lui.
+                Sinceramente è stata una cosa crudele da dirmi.
+                Ma vera, forse.
+                Perché musica e associazione si stanno mangiando le mie giornate.
+                Ma {player_name}: mi sento viva come non mi è mai successo.
+
                 
             - firstChar_ActualName has Ocarina:
                 
@@ -244,7 +278,19 @@
 
                 
             - firstChar_ActualName has FlautoDolce:
-                
+                Stai parlando ufficialmente con la presidentessa di 'sto cazzo de La Rifugia.
+                Siamo una associazione a modino.
+                Ed anche se è una cosa piccola, ne sono felice.
+                E tra le varie, stiamo tirando su un sistema di finanziamento per cantanti emergenti senza cittadinanza.
+                Ed è un casino burocratico che aiuto.
+                Ma la musica che stanno portando quest3 figliol3, non ne hai idea.
+                Per la prima volta ci sono storie e cose che proprio non capisco.
+                E mi va bene così.
+                Ci ho messo una vita a capire che non posso farmi sempre capire da tutt3, ma non per questo la mia storia non conta.
+                E ora sto imparando a fare lo stesso con loro.
+                Sto diventando una persona adulta?
+                Cringe.
+                Ma intanto di mando un abbraccio giganterrimo.
     
                 
             - firstChar_ActualName has Ocarina:
