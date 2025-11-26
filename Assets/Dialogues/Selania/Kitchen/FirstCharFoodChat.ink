@@ -101,16 +101,16 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             {
                 - not cooking_with_second_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
-        {player_name} aggiunge alla ricetta... #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
-            + [Dei cubetti di grano del rispetto.]
+
+            + [Soffriggo dei cubetti di grano del rispetto.]
                 ~ kitchen_recipeNoun = "Zuppa di grano"
                 Uh, credo di capire.
                 Il rispetto è una bella cosa coi genitori.
                 Il trattarsi reciprocamente da adulti, giusto?
                 Una forma di affetto.
                
-            + [Delle striscioline di seitan malinconico.]
+            + [Impano delle striscioline di seitan malinconico.]
                 ~ kitchen_recipeNoun = "Grigliata di seitan"
                 Credo mi dispiaccia, vero?
                 Insomma.
@@ -118,21 +118,21 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 O che non è più.
                 Mi spiace, {player_name}, davvero.
                 
-            + [Dei fagioli del conflitto.]
+            + [Sgrano dei fagioli del conflitto.]
                ~ kitchen_recipeNoun = "Fagiolata"
                Non so se ti possa consolare, ma è una cosa comune.
                Molte delle mie amiche hanno un rapporto conflittuale coi genitori.
                Talco pensa sia un passaggio necessario per diventare adulti.
                Per questo mi chiamava "Cocca di papà".
         
-            + [Delle cimette di broccolo della fiducia.]
+            + [Sbollento delle cimette di broccolo della fiducia.]
                 ~ kitchen_recipeNoun = "Cimetta di broccolo"
                 Sento anche io questa cosa.
                 Questa fiducia reciproca.
                 Credo sia l'esito la cosa più bella da creare coi propri genitori.
                 Un segno totale d'amore.
     
-            + [Degli spicchi di aglio del distacco.]
+            + [Schiaccio degli spicchi di aglio del distacco.]
                 ~ kitchen_recipeNoun = "Crema d'aglio"
                 Merda.
                 Mi spiace {player_name}.
@@ -177,27 +177,26 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         
         Buono comunque questo vino rosso.
         E tu cosa ti aspetti da un'amicizia, {player_name}?
-        {player_name} aggiunge alla ricetta... #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
-            + [Del pepe dell'onestà.]
+            + [Tosto del pepe dell'onestà.]
                 ~ kitchen_recipeAdjective = "onesta"
                 Come Talco.
                 Quel tipo di persona che se fai una cagata, te la dice.
                
-            + [Della curcuma divertente.]
+            + [Spargo della curcuma divertente.]
                 ~ kitchen_recipeAdjective = "allegra"
                 L'amicizia da balotta quindi.
                 Da cazzeggio assieme.
                 Da oasi nel casino del mondo.
              
-            + [Del cumino empatico.]
+            + [Aggiungo del cumino empatico.]
                ~ kitchen_recipeAdjective = "empatica"
                Quel tipo di rapporto che ti fa sentire ascoltata.
                Capita.
                Dove puoi essere te stessa.
                Spero di essere quel tipo di amica, sai?
         
-            + [Della cannella incondizionata.]
+            + [Grattugio della cannella incondizionata.]
                 ~ kitchen_recipeAdjective = "incondizionata"
                 Posso capire, ma non mi piace tantissimo come idea.
                 Mi piace che le amicizie ci siano anche nel conflitto.
@@ -206,7 +205,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Tipo se finisce la stima.
                 Terribile.
     
-            + [Dello zenzero leale.]
+            + [Sminuzzo dello zenzero leale.]
                 ~ kitchen_recipeAdjective = "leale"
                 Essere leali significa essere affidabili, vero?
                 Quel tipo di persona che non va in giro a dire i tuoi segreti.
@@ -248,20 +247,19 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Ecco, questo coperchio ci sta perfettamente.
         Così, a caldo.
         Una persona che ti piace ti dice "Ti amo". Qual è la prima sensazione che provi?
-        {player_name} aggiunge alla ricetta... #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
-            + [Una mestolata di brodo del terrore.]
+            + [Verso una mestolata di brodo del terrore.]
                 ~ kitchen_recipeComplement = "del terrore"
                 Woah, {player_name}.
                 Questa è intensa.
                 Anche se effettivamente l'amore può far cagare addosso.
                
-            + [Una grattuggiata di noce euforica.]
+            + [Manteco della noce euforica.]
                 ~ kitchen_recipeComplement = "dell'euforia"
                 Mi risuona tanto.
                 Detta dalla persona giusta è una parola che ti fa volare, vero?
              
-            + [Una spolverata di semi dell'"io? no, no è possibile!".]
+            + [Condisco con dei semi dell'"io? no, no è possibile!".]
                ~ kitchen_recipeComplement = "dell'impossibile"
                 Coff Coff.
                 La sento.
@@ -269,13 +267,13 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Mi è successo anche con Ennio.
                 E a volte mi succede ancora.
         
-            + [Una cucchiata di olio lusingato.]
+            + [Incorporo una cucchiata di olio lusingato.]
                 ~ kitchen_recipeComplement = "della lusinga"
                 Uh, a qualcuno piace quando il suo pelo viene lisciato, vero?
                 Però non rischia di essere una cosa egoista?
                 Più legata a come ti senti che al sentimento che provi per quella persona?
     
-            + [Una manciata di peperoncini arrapati.]
+            + [Sminuzzo una manciata di peperoncini arrapati.]
                 ~ kitchen_recipeComplement = "dell'arrapamento"
                 Questa non me l'aspettavo, ma ci sta.
                 Sentirsi amatə è indubbiamente sexy.
