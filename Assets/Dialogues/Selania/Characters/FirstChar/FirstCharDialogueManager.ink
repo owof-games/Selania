@@ -57,7 +57,23 @@
             {
             //Stiamo parlando con la PNG, ma non dopo uno storylet, per cui mettiamo del testo
             - firstChar_justTalked == false:   
-                {~Le farfalle qui giocano per ore!|No dai. Ma hai visto quanto sono carini gli scoiattoli?!|Con il rumore dell'acqua dello stagno ci posso fare una base niente male.}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious 
+                {shuffle:
+                    - Le farfalle qui giocano per ore!
+                    - No dai, ma hai visto quanto sono carini gli scoiattoli?
+                    - Con il rumore dell'acqua dello stagno ci posso fare una base niente male.
+                    - Il Conservatorio è un posto terrificante, {player_name}, ipercompetitivo. Ho ancora gli incubi a volte.
+                    - Quando avrò un gatto lo chiamerò Bach, e poi metterò su IG le foto del su Bach-ano. Ok, è terribile, ed è di mio padre.
+                    - Forse è la fame, ma prima ho sentito odore di lasagna, giuro!
+                    - Ho voglia di leggere qualcosa. Sono secoli che non leggo per mezz'ora di fila in santa pace.
+                    - Non so perché ma ti ci vedo a suonare la viola. Hai una faccia da viola.
+                    - Se questa cosa mi fosse successa alle elementari, sarei già stata avvelenata dai funghi dello stagno.
+                    - Prima ho provato a capire come raggiungere la montagna dietro alla stazione ma zero, non c'è un sentiero che uno.
+                    - Chissà cosa starà facendo Ennio in questo momento.
+                    - Valeria avrà dato da mangiare al gatto dei vicini? Ce lo hanno affidato durante le vacanze.
+                    - Forse avrei dovuto rispondere alla cartolina di Talco. Non pensavo avrei avuto paura di una cartolina.
+                    - Prima nello stagno non ho visto il mio riflesso ma quello di una Chitarra e non.voglio.farmi.domande! Né avere risposte.
+                    - Lavorare è sopravvalutato.
+                }#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious 
                     -> main
             //Stiamo parlando con la PNG ma dopo uno storylet, per cui non mettiamo del testo        
             - else:
