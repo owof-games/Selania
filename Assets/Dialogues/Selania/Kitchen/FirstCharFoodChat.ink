@@ -59,6 +59,9 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             
         + [Sai, forse preferirei cucinare più tardi.]
             Nessun problema, prenditi i tuoi tempi {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                ~ kitchen_firstCharCookingTogetherInvite = false
+                ~ kitchen_firstCharCookingTogetherWaiting = 0
+                ~ move_entity(FirstCharacter, Pond)
             -> main
 
 
@@ -68,15 +71,15 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Vediamo, cosa ti posso raccontare?
         Da piccola in realtà ero abbastanza un disastro sociale.
         Timida a bestia, bullizzata perché in carne, e secchiona.
-        Non la ragazzina più amata dalla scuola.
+        Non la ragazzina più amata dalla scuola, poco ma sicuro.
         Uh, aspetta che abbasso la fiamma.
         Meglio.
         Però a casa era un piccolo paradiso.
         I miei sono gente semplice, ma hanno sempre premiato la curiosità.
-        Papà mi ha passato l'amore per la musica.
         Mamma quando canta ha una voce che scioglie ogni tensione.
-        Ma è stato papà quello che mi regalava sempre qualcosina che faceva rumore.
-        E appena è riuscito a risparmiare a sufficienza, mi ha dato lezioni di piano.
+        Papà mi ha passato l'amore per la musica.
+        È stato lui quello che mi regalava sempre qualcosa che faceva rumore.
+        E appena è riuscito a risparmiare a sufficienza, mi ha fatto fare lezioni di piano.
         Credo che i miei mi abbiano insegnato che le relazioni sono cura.
         E sacrificio.
         Credi abbia senso?
@@ -107,7 +110,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 ~ kitchen_recipeNoun = "Zuppa di grano"
                 Uh, credo di capire.
                 Il rispetto è una bella cosa coi genitori.
-                Il trattarsi reciprocamente da adulti, giusto?
+                Il trattarsi reciprocamente da adulti etc etc, giusto?
                 Una forma di affetto.
                
             + [Impano delle striscioline di seitan malinconico.]
@@ -123,13 +126,14 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                Non so se ti possa consolare, ma è una cosa comune.
                Molte delle mie amiche hanno un rapporto conflittuale coi genitori.
                Talco pensa sia un passaggio necessario per diventare adulti.
-               Per questo mi chiamava "Cocca di papà".
+               E poi mi chiama "Cocca di papà".
+               Stronzə.
         
             + [Sbollento delle cimette di broccolo della fiducia.]
                 ~ kitchen_recipeNoun = "Cimetta di broccolo"
                 Sento anche io questa cosa.
                 Questa fiducia reciproca.
-                Credo sia l'esito la cosa più bella da creare coi propri genitori.
+                Credo sia la cosa più bella da creare coi propri genitori.
                 Un segno totale d'amore.
     
             + [Schiaccio degli spicchi di aglio del distacco.]
@@ -194,14 +198,14 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                Quel tipo di rapporto che ti fa sentire ascoltata.
                Capita.
                Dove puoi essere te stessa.
-               Spero di essere quel tipo di amica, sai?
+               Vorrei tanto essere quel tipo di amica, sai?
         
             + [Grattugio della cannella incondizionata.]
                 ~ kitchen_recipeAdjective = "incondizionata"
                 Posso capire, ma non mi piace tantissimo come idea.
                 Mi piace che le amicizie ci siano anche nel conflitto.
                 Non mi preoccupa che le amicizie finiscano.
-                Mi preoccupa il come.
+                Mi preoccupa il <i>come</i>.
                 Tipo se finisce la stima.
                 Terribile.
     
@@ -216,10 +220,13 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Ecco.
         Si stava addensando troppo.
         Ma il profumo è magnifico.
-        Comunque, unpopular opinion che non è poi molto unpopular: non è che c'è tutta 'sta differenza tra amore romantico e amicizia.
-        Credo che una parte di me veda il tizio che chiami "amore" solo come un amico con cui è anche bello scopare.
+        Comunque, unpopular opinion che non è poi molto unpopular: non è che c'è tutta 'sta differenza tra amore e amicizia.
+        Credo che una parte di me veda lə tiziə che chiami "amore" solo come unə amicə con cui è anche bello scopare.
+        O anche senza, sesso.
+        Però vedi il casino con 'ste parole?
         E di certo non me la sento di dire che una persona viene prima dell'altra solo per questo tipo di cose.
         Tipo che Talco ed Ennio per me sono i miei due grandi amori.
+        Punto.
         E forse mi contraddico con altre cose che ho detto ma è un casino perché quando parli devi parlare con il linguaggio di chi hai davanti.
         E non c'è molto linguaggio per dire queste cose.
         Quando ho detto "Ti amo" a Talco una volta, ubriaca, per un poco le cose si sono fatte strane.
@@ -299,8 +306,8 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Perché poi, da cosa dovrei salvarlo?
         Nel senso: non sono una brava con le cose politiche.
         La Rifugia è nata perché c'è un bisogno che vedo: per vivere ci servono le case.
-        Ma le case non ci sono.
-        O meglio, ci sono, ma solo per far fare vacanze a persone che poi alla fin fine della tua città non gliene frega una ceppa.
+        E le case non ci sono.
+        O meglio, ci sono, ma solo per far fare vacanze a persone che poi alla fin fine della tua città non gliene frega niente.
         E quindi non so dire bene "salvare da cosa".
         Faccio fatica a usare le parole grandi.
         Patriarcato.
@@ -334,7 +341,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Ora abbiamo alcune cose nel presente.
         Quelle cose ci fanno cagare.
         Non le vogliamo, o le vogliamo diverse nel futuro.
-        Tu {player_name} sai che futuro vorresti avere?
+        Tu {player_name} sai che futuro vuoi vedere?
         
             {
                 - not cooking_with_second_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -362,7 +369,14 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 ~ kitchen_recipeNoun = "Arancine"
                Immagino che la furia sia un modo per guardare a ciò che non va ora.
                A volte mi piacerebbe sapermi arrabbiare.
-               Dovrei imparare da {charNameTwo}.
+                {
+                    - secondChar_storyStatus == story_storyStarted:
+                        Dovrei imparare da {charNameTwo}.
+                    
+                    - else:
+                        Avrei dovuto imparare da {charNameTwo}.
+                }
+               
     
             + [Frullo disperatamente della vellutata.]
                 ~ kitchen_recipeNoun = "Sostantivo E"
@@ -373,8 +387,8 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
        
         Mi sa che mi metto ad affettare qualcosa intanto.
         C'è una cosa che mi imbarazza tantissimo dire, ma.
-        Di base non sono la persona più sicura del pianeta, lo so.
-        Ma se c'è un motivo per cui non mi sento mai all'altezza sono i social.
+        Di base non sono la persona più sicura del pianeta, l'avrai visto.
+        Ma se c'è un motivo quando si parla di queste cose per cui non mi sento mai all'altezza sono i social.
         Anche dal vivo, anche ora, una parte di me ha in testa la voce di InfluTizia e TikTokerCoso che mi criticano per una parola sbagliata o che.
         Non si dice così ma cosà.
         E hai dimenticato questo.
@@ -383,7 +397,8 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         E insomma, ci sta.
         Si sta cercando di creare un mondo diverso ed è un bene non portarci dentro le cose che non vanno ora.
         Ma questo modo di fare mi fa sentire costantemente inadeguata.
-        E una parte di me pensa che abbiamo il diritto anche di sbagliare.
+        Sbagliata.
+        E una parte di me pensa che abbiamo il diritto anche di sbagliare, no?
         In generale, ma soprattutto in queste cose.
         Perché se dobbiamo andare verso futuri che ancora non esistono, sbagliare è inevitabile.
         E ci fa bene, no?
@@ -469,11 +484,11 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
 
         }
 
-        Madonna, che profumi che sta salendo.
-        Faccio un brindisino a noi al volo.
+        Madonna, che profumino che sta salendo.
+        Faccio un brindisi a noi al volo.
         Ecco.
         Alla fine non sto rispondendo fino in fondo alla tua domanda o quello che.
-        Ammazza se picchia questo vino.
+        Ammazza se picchia 'sto vino.
         No no mescolo io, lascia pure.
         Sto imparando tanto da Valeria, sai?
         Talco è statə la persona che mi ha insegnato ad accogliere la creatività del caos.
@@ -549,7 +564,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Cavolo.
         Tu e Talco andreste davvero d'accordo, {player_name}.
         Però dopo il pippone di prima sull'acqua antica e blah blah blah ci sta.
-        Intanto pulisco qualche ciotola, che penso meglio se mi muovo.
+        Intanto pulisco qualche ciotola, che penso meglio quando mi muovo.
         E a proposito di pulire, la prima cosa che mi viene da dire è che creare mi pulisce il cervello.
         Io.
         Insomma.
@@ -622,11 +637,11 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Abbasso la fiamma un attimo.
         Come se sapessi farlo con questa legna.
         Però che odore buono, vero?
-        Cominciare a lavorare mi ha aperto a problemi che prima mi erano ignoti.
+        Cominciare a lavorare mi ha aperto a problemi che non avevo mai cagato.
         E credo che il più grosso sia: a volte sono così stanca che proprio non ci riesco a comporre qualcosa.
         Manco a suonare e bona.
-        E allora mi il mio cervello si mette a creare musica durante la notte.
-        Col risultato che mi sveglio stanca morta, e frustrata perché non ricordo mezzo accordo, o lo ricordo ma devo correre da qualche parte.
+        E allora il mio cervello si mette a creare musica mentre cerco di dormire.
+        Col risultato che mi sveglio stanca morta, e frustrata perché non ricordo mezzo accordo, o lo ricordo ma devo correre da qualche parte e poi lo perdo.
         Però non è solo quello.
         Per la prima volta mi sto chiedendo: esisterei ancora, se non potessi creare?
         Perché l'ho fatto da sempre, {player_name}.
@@ -652,6 +667,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         {
             - secondChar_storyStatus == story_storyStarted:
                 Devo metterlo in alto, non vorrei mai che {charNameTwo} provasse a berlo.
+            
             - else:
                 Dovrei proporre un brindisino a {mentorName}, e farci due chiacchiere in scialleria.
         }
@@ -693,7 +709,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Ha senso?
             -      
     
-        Il sapore è ottimo, aggiusto giusto di sale.
+        Il sapore è ottimo, aggiusto appena appena di sale.
         Anche se credo manchi qualcosa, ma non so ancora cosa.
         Comunque per me creare non è solo una cosa per me, per stare bene.
         È gettare un ponte.
@@ -821,11 +837,20 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     Mi ha fatto sentire a casa.
         {
             -cooking_with_first_char.first_theme:
+                E non mi facevo certe domande da molto.
+                Mi ha fatto bene parlare di rapporti.
+                Grazie di cuore, davvero.
 
             -cooking_with_first_char.second_theme:
+                E non avevo mai pensato fino in fondo al discorso del salvare il mondo etc etc.
+                Parlarne con te mi ha reso le idee molto più chiare.
+                Grazie, davvero.
             
             -cooking_with_first_char.third_theme:
-            
+                E discutere di creatività.
+                Madonna, quanto vorrei avere la mia tastiera, ora.
+                Ma a prescindere, parlarne mi ha aiutato tantissimo.
+                Grazie mille, sei un tesoro.
 
         }
     E poi questo {piatto}!

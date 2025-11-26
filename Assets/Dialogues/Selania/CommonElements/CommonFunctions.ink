@@ -341,7 +341,6 @@
         }
 
     //Chitarra
-    //Chitarra inizia a cucinare se abbiamo cucinato almeno una volta.
         {
             - player_accessiblePlaces has Kitchen && (not first_char_cooking_tracker) && (entity_location(SecondCharacter) != Kitchen):
             
