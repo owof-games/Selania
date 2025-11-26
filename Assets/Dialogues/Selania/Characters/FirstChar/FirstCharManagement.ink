@@ -63,7 +63,7 @@
     
 //Variabile per il countdown per la sua uscita di scena
     VAR firstChar_exitCounter = 0
-    VAR firstChar_startingValueExitCounter = 4
+    VAR firstChar_startingValueExitCounter = 6
     
 //Variabile per il tempo di attesa tra una lettera e l'altra
     VAR firstChar_mailPause = 0

@@ -47,7 +47,7 @@
         - Se passi dalle mie parti comunque uno spazio a La Rifugia te lo trovo sempre, promesso.
         - C'è una sola cosa che non dirò mai a Talco: che lə suə bimbə somiglia molto più a Thomas che a ləi. Non credo apprezzerebbe.
     }#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-    
+
             ~ firstChar_pauseTalking = firstChar_pauseDuration
             ~ firstChar_justTalked = true
                 -> options_first_character 
@@ -66,7 +66,15 @@
     }
     
         - (top)
-            {~ Quanto mi prenderà per il culo Talco, quando lə racconterò tutta questa storia?|Comunque in questo posto dovreste mettere almeno un piano bar.|Se lo dico all3 am3 del conservatorio mi fanno il culo, ma vado pazza per le k-pop night.|Ma tu l'hai vista quella strana rana nello stagno?}#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+            {shuffle:
+                - Questa cosa della riscrittura è stata intensa, {player_name}. Spero non sia stata faticosa anche per te.
+                - Credo che la cucina mi mancherà un sacco. Ed è stato divertente gettare gli avanzini ai pesci. Ed ecologico.
+                - Hai trovato poi un modo di usare il mio regalino?
+                - Non so se raccontare o meno questa cosa a qualcunə. Forse Talco capirebbe.
+                - Da quando l'albero è cresciuto, mi sento, ehm, osservata. Ha senso?
+                - Prima ho abbozzato una melodia per raccontare questa esperienza, ma poi ho visto un pipistrello, mi sono distratta e addio idea.
+            }#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+
                     ~ firstChar_exitCounter ++
                         -> main
         
@@ -74,16 +82,11 @@
             ~ temp charNameOne = translator(firstChar_ActualName)
             ~ move_entity(firstCharPaint, Bedroom)
             ~ saturationVar ++
+            
             Ama: è il momento di tornare a casa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-            {
-            
-                - firstChar_possibleStates hasnt Chitarra: Non ho idea di che cosa accadrà, sinceramente, ma almeno ora mi sento pronta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-                    E non cringiare ma: grazie. Mi hai dato una mano enorme. Me lo ricorderò.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-
-                - else:Vedremo cosa mi accadrà.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
-            
-            }
-            
+            Non so cosa ora cosa accadrà, ma a prescindere: grazie per tutto quello che hai fatto per me.
+            Qualsiasi cosa mi stesse bloccando fino ad ora, è svanita.
+            E un po' delle mie paure con lei.
             In bocca al lupo per tutte le tue assurde avventure in questo posto!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
             E non ti abbraccio, ma un po' è come se l'avessi fatto.
             Ciao!
