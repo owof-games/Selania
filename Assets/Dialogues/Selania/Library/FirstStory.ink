@@ -79,16 +79,117 @@ Trigger warning: lutto, rifiuto da parte della figura genitoriale.#speaker:{witc
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
 
-    Testo
+    Shmi entrò nell’appartamento trascinandosi dietro lo zaino. Odiava il suo lavoro: la
+    contabilità era una delle cose più noiose sulla faccia della Terra e ci si era buttatə a capofitto per
+    paura di finire in mezzo a una strada. Il suo ex fidanzato glielo aveva detto, si stava scavando la
+    fossa da solə. 
+    Dopo una lunga doccia, infilò il suo pigiama preferito, quello con le eroine dei manga che
+    tanto amava leggere. 
+    Mentre si guardava allo specchio del bagno, con i capelli raccolti in una coda scomposta, le
+    occhiaie scure sul viso olivastro e un’espressione a metà tra l’angoscia più totale e la noia, si chiese
+    se sarebbe mortə giovane. Magari l’avrebbero trovatə proprio con quel pigiama, con gli occhi spenti
+    e il corpo già rigido e freddo. 
+    Dopo quelle riflessioni fondamentali, Shmi entrò con una lentezza disarmante in camera da
+    letto. Adorava così tanto il colore turchese che aveva arredato la sua stanza con qualsiasi tipo di
+    arredo di quella tonalità. L’unica cosa che stonava era il bianco delle tende che aveva trovato
+    quando aveva affittato l’appartamento. Doveva aggiungere l’acquisto di un nuovo tendaggio alla
+    lista della spesa. 
+    Sospirò. Era diventatə come sua madre, tutto doveva essere coordinato. Sotto controllo,
+    proprio come piaceva a lei. 
+    Se avessi un minimo di ordine, non saresti un eterno scapolo! 
+    Col tempo, sua madre era venuta a patti con la sua identità e aveva evitato i pronomi maschili.
+    Aveva persino accettato di vederlə con un uomo, ma le sue parole l’avevano feritə lo stesso.
+    Nonostante il lavoro, nonostante il tetto sulla sua testa e la prospettiva di una vita piuttosto
+    normale, nulla era in ordine nel cervello di Shmi. 
+    Ogni notte si svegliava di soprassalto, con il cuore in gola e le gambe tese, pronte a saltare dal
+    letto e correre il più lontano possibile.
+    Sognava il suo docente di arte che lə urlava contro e lə diceva che non sarebbe mai diventatə
+    unə artista. Vedeva la delusione negli occhi di sua madre, quando lə aveva detto di volersi laureare
+    in pittura e arti visive. Riviveva il funerale di nonna Olga, l’unica persona che credeva in ləi.
+    Ogni singola volta, Shmi desiderava prendere a pugni qualcuno, strappare i disegni che
+    tappezzavano la parete della camera, un’accozzaglia di colori, bozze tracciate con il carboncino e
+    piccoli quadri dipinti a olio.
+    Si voltò verso lo specchio di nonna Olga, alto quanto ləi e inserito in una semplice
+    cornice d’argento.
+    I momenti con lei erano i più preziosi. Ricordava i pomeriggi passati a ballare, vestitə da
+    principessa guerriera, i biscotti sempre bruciati e le risate che riempivano quella vecchia casa. Con
+    nonna Olga aveva iniziato a dipingere. Aveva imparato a sognare.
+    Adesso non vedeva altro che il riflesso di una persona triste. Era dimagritə troppo, forse
+    perché dimenticava di mangiare, e i suoi occhi, piccoli e scuri, rendevano il suo sguardo sempre
+    severo e cupo. Le amiche di Shmi lə dicevano che, con un makeover come quello delle romcom
+    degli anni 2000, sarebbe potutə sembrare unə fotomodellə, visto che era sempre statə parecchio altə.
+    Quante sciocchezze, pensò sbuffando.
+    Chiuse gli occhi per trattenere le lacrime di frustrazione. Un’aria fresca entrò nella stanza:
+    forse aveva lasciato la finestra aperta, cosa strana, visto che detestava gli odori della metropoli.
+    Quando riaprì gli occhi, quasi inciampò per terra dallo stupore: non era più a casa. Al posto
+    del parquet, ai suoi piedi c’era una distesa di fili d’erba e fiori. Alzò lo sguardo, vide una casa
+    dipinta di bianco, con il tetto color lavanda. Quella era la sua vecchia casa, immersa tra rose,
+    violette e tulipani di tutte le varietà.
+    Si avvicinò ai gelsomini e non riuscì a trattenere le lacrime quando sentì il loro profumo:
+    dolce e intenso, proprio come lo ricordava.
 
-    + [Vorrei leggere ancora.]
-    ~ disableBigDialogue()
-       -> book_test_intro
-    
-    + [Me ne vado.]
-    ~ disableBigDialogue()
-        -> DarkLibraryModeOff ->
-        -> main
+    Colse uno dei fiorellini bianchi, quasi di riflesso. I petali cominciarono a sciogliersi tra le
+    dita, come una tela lasciata sotto la pioggia. Allo stesso modo, ogni cosa intorno a Shmi iniziò a
+    svanire. Fu a quel punto che vide una figura scura, in attesa vicino alla porta d’ingresso.
+    “C-chi sei?” sussurrò. A quel punto, la figura iniziò a camminare verso di ləi.
+    Il terrore percorse tutto il corpo di Shmi, che iniziò a correre verso il lato opposto della casa.
+    Il cuore batteva all’impazzata, il fiato spezzato. Tutto quello che riusciva a fare era scappare.
+    Poi, come se fosse saltatə da uno dei suoi dipinti all’altro, Shmi si trovò in spiaggia. Era uno
+    dei suoi posti preferiti, dipinto quando aveva un disperato bisogno di fuggire dalla città. Ma tutto lə
+    sembrava diverso. Le nuvole erano nere, cariche di pioggia. Un’onda alta quasi quanto il palazzo
+    dove abitava minacciava di abbattersi sulla spiaggia con tutta la sua violenza.
+    Vide la figura scura di prima scivolare leggiadra sulla cresta dello tsunami, quasi come se
+    stesse guidando il mare verso di ləi. Un attimo dopo, stava affogando, il suo corpo lottava
+    disperatamente contro le correnti. Era tutto buio attorno e più si muoveva, meno forza aveva per
+    risalire in superficie.
+    Con un bagliore di luce improvviso, lo scenario cambiò ancora e Shmi riprese a respirare.
+    Mentre vomitava acqua salmastra, un nuovo luogo prese vita attorno a ləi: uno stagno pieno di fiori
+    di loto, illuminato dalla luna e da stelle che sembravano appena uscite da un quadro di Van Gogh.
+    Non l’aveva mai visto prima, né l’aveva immaginato durante una delle sue esplosioni di creatività.
+    Quando la vista si abituò alla luce degli astri, si accorse che stava camminando sulla
+    superficie dello specchio d’acqua. Shmi cominciò a tremare, non perché fosse ancora bagnatə, ma
+    perché la rabbia le incendiava il cuore. Non bastava che fosse intrappolatə in una vita che non
+    sentiva sua, adesso era tormentatə da chissà quale forza invisibile.
+    Fu allora che la figura si avvicinò, quasi come se avesse sentito i suoi pensieri. Ora Shmi
+    poteva vedere le sue forme: aveva una silhouette familiare, cinta da un corpetto smeraldo in stile
+    vittoriano, stretto in vita e da un pantalone palazzo sporco di…pittura?
+    I capelli scuri erano legati in una treccia che lə arrivava alle spalle, le perle che portava al
+    collo brillavano come la luna. Gli occhi scuri erano pieni di vita e studiavano Shmi.
+    “Perché stai scappando da me? Da te stessə?” La figura proiettò un pensiero che fece
+    increspare la superficie dello stagno. Shmi si accorse che stringeva tra le mani una spada.
+    «Chi sei? Cosa vuoi da me?!» Urlò, la gola ancora irritata dopo tutta l’acqua di mare che
+    aveva bevuto.
+    “Sono te. Beh, sono la persona che vorresti essere, la principessa guerriera che la nonna
+    amava. Che ti è successo? Non sei più tu!”
+    Shmi non sapeva cosa dire. La rabbia di quella versione di sé così diversa la fece
+    indietreggiare. Era così che lə vedevano le persone attorno a lei? Una creatura piena d’ira?
+    Davanti alla confusione di Shmi, l’espressione della principessa guerriera si fece più dolce.
+    Non era compassione, ma piena consapevolezza del senso di smarrimento che entrambə provavano.
+    “Puoi ancora aggiustare tutto. Puoi essere chi desideri. La nonna diceva che potevamo fare
+    qualsiasi cosa, finché restavamo fedeli a noi stessə.” Tese la mano verso Shmi. “Facciamolo,
+    insieme.”
+    Quando le loro dita si intrecciarono, Shmi sentì un calore che si sostituì al gelo che aveva
+    provato fino ad allora.
+    Non devi più nasconderti, principessa.
+    La voce di nonna Olga arrivò come una carezza, come il profumo di gelsomino e il calore dei
+    suoi abbracci. Shmi non aveva più paura della rabbia. Con essa avrebbe dipinto un nuovo futuro.
+    Quando riaprì gli occhi, era ancor davanti allo specchio. Il suo riflesso, però, era cambiato. In
+    ləi c’era la stessa fiamma che albergava negli occhi della principessa guerriera. Corse nel piccolo
+    soggiorno del suo appartamento. Dallo sgabuzzino tirò fuori una tela bianca e il cavalletto. Poi
+    afferrò l’astuccio con le matite e i pennelli. Un’infinità di realtà l’aspettava al di là di quella tela
+    bianca. Doveva solo disegnare la porta.
+    “Basta nascondersi.”
+
+    Il suo futuro cominciò con una pennellata di verde.
+
+        + [Vorrei leggere ancora.]
+        ~ disableBigDialogue()
+        -> book_test_intro
+        
+        + [Me ne vado.]
+        ~ disableBigDialogue()
+            -> DarkLibraryModeOff ->
+            -> main
 
 
 === aza
