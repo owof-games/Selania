@@ -159,7 +159,7 @@
         E a un certo punto hai iniziato ad aspettarti amicizie eterne, case in campagna e un amore da film.
         Eppure...
        
-            + [I sogni si trasformano, ma Talco ancora ti aspetta in Canada.]
+            + [I sogni si trasformano, ma Talco ancora ti aspetta in Islanda.]
                 -> color_variation_management(FirstCharacter, redC)->
                 Pensavi Ennio fosse noioso, e te ne sei innamorata.
                 La vita ci sorprende sempre quando si tratta di relazioni.
@@ -346,7 +346,7 @@
             Ti chiedi se questo il massimo che puoi aspettarti dalla vita. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             Da una vita che non senti tua.
 
-            + (red) [Una nuova vita ti aspetta in Canada, con Talco.]
+            + (red) [Una nuova vita ti aspetta in Islanda, con Talco.]
             //me ne vado all’estero da Talco.
                 -> color_variation_management(FirstCharacter, redC)->
             
@@ -382,7 +382,7 @@
 
         {
             - ending.red:
-                Hai detto che Talco mi aspetta in Canada.
+                Hai detto che Talco mi aspetta in Islanda.
                 Non avevo mai davvero guardato fino in fondo alla possibilità di andarmene dall'Italia.
             
             - ending.purple:

@@ -550,7 +550,7 @@
         Mi ha solo detto che era un passo importante per ləi.
         Perché anche se è una cosa inaspettata, ama Thomas, e sa che è l’uomo giusto.
         E poi il colpo finale.
-        “Mi trasferisco da lui a Toronto. Qui non mi rimane nulla, nulla a parte te.”
+        “Mi trasferisco da lui a Reykjavík. Qui non mi rimane nulla, nulla a parte te.”
         “E per questo, voglio che ti trasferisci con noi.”
         “Voglio crescerla con te, questa creaturina. Con le persone che amo. Con te e Thomas.”
         E…
