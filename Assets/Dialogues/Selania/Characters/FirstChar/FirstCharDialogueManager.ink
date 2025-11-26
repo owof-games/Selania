@@ -94,7 +94,9 @@
     //Azioni legate alla riscrittura
         //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
             + {firstChar_storyletsForRewritingCount >= firstChar_minStoryletsForRewriting && not rewriting_proposal_first_character && not questions} [Vorrei aiutarti a guardare le cose in modo diverso.]
-                Ama, parla prima con la mentore così ti dice cosa fare e non le prende una sincope se facciamo casini.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed 
+                
+                Ama, mi sa che conviene che tu parli con la nostra fiorellona qui in giro, così ti dice giusto due cose due importanti.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                Tanto non scappo.
                     ~ mentor_tutorialPauses = false
                         -> main
         
@@ -123,18 +125,27 @@
                 
                 {
                 
-                    - kitchen_secondCharIsCooking: Uh, mi sa che la cucina è occupata da {charNameTwo}, sta cucinando qualcosa di strano.
+                    - kitchen_secondCharIsCooking:
+                        Uh, mi sa che la cucina è occupata da {charNameTwo}, sta cucinando qualcosa di strano.
                             ->main
 
-                    - kitchen_secondCharCookingTogetherInvite: Credo che {charNameTwo} ti stia già aspettando, sai?
+                    - kitchen_secondCharCookingTogetherInvite:
+                        Credo che {charNameTwo} ti stia già aspettando, sai?
                             ->main
 
-                    - kitchen_firstCharCookingTogetherNumberInvite > 0: {Spero non mi farai aspettare come prima! Ho atteso un sacco!|Siamo a due volte che me lo chiedi e non ti presenti, sai?|E mi darai buca una terza volta? Vabbè.} #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral 
+                    - kitchen_firstCharCookingTogetherNumberInvite > 0:
+                        {stopping:
+                            - Ma non farmi aspettare ore come prima, ama.
+                            - Siamo a due volte che me lo chiedi e non ti presenti, sai?
+                            - E mi darai buca una terza volta? Vabbè, ci vediamo lì.
+                            - Oook, riproviamoci di nuovo. Mi diverto così tanto ad aspettarti in cucina!
+                        } #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral 
                         ~ kitchen_firstCharCookingTogetherInvite = true
                         ~ move_entity(FirstCharacter, Kitchen)
                             ->main
                         
-                    - else: Volentieri! Ci vediamo in cucina! #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral 
+                    - else:
+                        Volentieri! Ci vediamo in cucina! #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral 
                         ~ kitchen_firstCharCookingTogetherInvite = true
                         ~ kitchen_firstCharCookingTogetherNumberInvite ++
                         ~ move_entity(FirstCharacter, Kitchen)
