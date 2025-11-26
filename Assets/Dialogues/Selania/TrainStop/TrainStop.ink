@@ -85,8 +85,17 @@
                     Spero mi risponda presto.
                     Intanto ti mando un grande abbraccio.
                     
-                    
                 - firstChar_ActualName has RagazzaOrchestra:
+                    L'altra sera ho mandato un messaggio a Talco.
+                    "Ci sto."
+                    E mi ha chiamata dopo dieci minuti dieci.
+                    Ed è stato come tornare a casa.
+                    Ci vorranno almeno due mesi prima di riuscire a combinare tutto, e va bene così.
+                    Almeno ho due mesi di tempo per informare Ennio.
+                    E Valeria.
+                    Non avevo pensato a quanto mi avrebbe fatto paura lasciare questa casa.
+                    Ti aggiornerò presto comunque.
+                    Così magari vieni a trovarci!
 
                     
                 - firstChar_ActualName has FlautoDolce:
@@ -132,6 +141,23 @@
                 Cerco di non cagarmi addosso, ma non è facilissimo.
                 
             - firstChar_ActualName has RagazzaOrchestra:
+                Anche se dovrei chiamarmi "La piagnona".
+                Mentre le cose pratiche per trasferirmi vanno avanti, ho iniziato a dirlo all3 altr3.
+                Con Valeria abbiamo passato una serata a bere e fare progetti.
+                E mi ha promesso che non diventeremo "amiche da ricorrenza".
+                Si sta già organizzando per venire a trovarmi.
+                Ma la sorpresa più grande l'ho avuta da Ennio.
+                Prima cosa: per la prima volta l'ho visto piangere.
+                Seconda cosa: mi ha detto "l'ho sempre saputo".
+                Mi ha detto che sapeva che tutto questo era troppo poco per me.
+                Che lui era troppo poco per me.
+                Mi si è spezzato il cuore.
+                Gli ho detto che lo amo, che questa scelta è per me, per vivere.
+                Lui mi ha detto che lo sa, e che ci penserà un po' sopra.
+                Per un attimo ha detto "potrei venire anche io".
+                E ho reagito con gioia.
+                Ma non oso credere possa accadere.
+                Sono una codarda, {player_name}?
                 
                 
             - firstChar_ActualName has FlautoDolce:
@@ -161,8 +187,11 @@
         -> main
         
     = three
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
     
     Ciao ama!
     
@@ -184,7 +213,34 @@
 
                 
             - firstChar_ActualName has RagazzaOrchestra:
-               
+               Ti sto scrivendo da... Boston!
+               Ok no, questa battuta fa ridere solo una volta.
+               Ti sto scrivendo in realtà <i>dal</i> Boston.
+               Un pub dove Talco giura di aver beccato Björk più di una volta.
+               Un posticino adorabile a Reykjavík.
+               I primi giorni qui sono stati assurdi.
+               Thomas è adorabile ora che è nel suo ambiente naturale.
+               E Talco.
+               Madonna, non l'avrei pensato, ma spacca come genitore.
+               Ennio sta continuando a dirmi che gli manco.
+               Che casa sua è aperta.
+               Ma non ha più parlato della possibilità che lui venga qui.
+               E...
+               Mi va bene così.
+               Per la seconda volta nella mia vita posso fare un reset.
+               Posso provare a essere me stessa.
+               Ma con una consapevolezza che non avevo a diciannove anni.
+               Forse anche per questo sfacciatamente mi sono proposta per suonare in una band locale.
+               E tra qualche sera porteremo due pezzi a un festival jazz.
+               Io.
+               Jazz.
+               Mai pensato.
+               E invece la vita può sempre sorprenderci, vero?
+               E tu?
+               Come stai?
+               Come sta {charNameTwo}?
+               E {mentorName}?
+               Mi mancate.
 
                 
             - firstChar_ActualName has FlautoDolce:
