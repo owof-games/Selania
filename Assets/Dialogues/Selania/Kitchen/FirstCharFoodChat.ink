@@ -287,6 +287,12 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             
     
     = second_theme
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
+
         Woah.
         Qui si va giù leggero.
         E forse "salvare il mondo" è pretenzioso da dire.
@@ -302,8 +308,10 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Patriarcato.
         Fascismo.
         Crisi climatica.
+        Gaza, Darfur, genocidio.
         Sarebbe come mettermi in bocca concetti che non conosco bene.
         Ma anche se non so che nome dare alle cose, le vedo.
+        E le voglio cambiare.
         Ha senso?
         
             + [Scelta blu]
@@ -324,41 +332,170 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         
         Aspetta, ho visto delle forbici prima.
         Sempre che ci serva qualcosa da aprire o tagliuzzare.
-        E tu {player_name} hai sempre le idee chiare quando si tratta delle cose per cui vuoi lottare?
+        Comunque è una questione di futuro, no?
+        Ora abbiamo alcune cose nel presente.
+        Quelle cose ci fanno cagare.
+        Non le vogliamo, o le vogliamo diverse nel futuro.
+        Tu {player_name} sai che futuro vorresti avere?
         
             {
                 - not cooking_with_second_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
             
-            + [Infarini confusamente delle tagliatelle.]
+            + [Infarino confusamente delle tagliatelle.]
                 ~ kitchen_recipeNoun = "Tagliatelle"
                 Già.
-                Non è facile capire cosa sia giusto fare, vero?
+                Anche perché sembra sempre che puoi salvare una sola cosa alla volta.
+                Anche se Valeria dice che non è vero, che le lotte son tutte collegate.
                
-            + [Stendi con decisione delle lasagne.]
+            + [Stendo con decisione delle lasagne.]
                 ~ kitchen_recipeNoun = "Lasagne"
                 Uh.
                 Ha senso dire che ti invidio per questa tua chiarezza?
+                Deve essere bello sapere dove si vuole andare.
              
-            + [Affetti con disinteresse delle bruschette.]
+            + [Affetto con disinteresse delle bruschette.]
                ~ kitchen_recipeNoun = "Bruschette"
-               Amo le bruschette, meno il disinteresse.
-               Le idee chiare non credo siano un freno valido, no?
+               Quindi sei più del tipo "Vediamo dove andiamo?"
+               Che ha senso magari a livello personale.
+               Ma per le grandi cose, boh.
         
-            + [Impasti furiosamente delle arancine.]
+            + [Impasto furiosamente delle arancine.]
                 ~ kitchen_recipeNoun = "Arancine"
-                Credo che la passione faccia indubbiamente parte della lotta.
-                Anche se così sembra quasi che la lotta esista per veicolare la rabbia.
+               Immagino che la furia sia un modo per guardare a ciò che non va ora.
+               A volte mi piacerebbe sapermi arrabbiare.
+               Dovrei imparare da {charNameTwo}.
     
-            + [Frulli disperatamente della vellutata.]
+            + [Frullo disperatamente della vellutata.]
                 ~ kitchen_recipeNoun = "Sostantivo E"
                 È un sentimento.
                 Non so se sia peggio la confusione o la disperazione.
                 
             -  
-        Chitarra commenta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Chitarra dice un'altra cosa sul tema che stiamo esplorando.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Noi rispondiamo una di queste cinque cose.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+       
+        Mi sa che mi metto ad affettare qualcosa intanto.
+        C'è una cosa che mi imbarazza tantissimo dire, ma.
+        Di base non sono la persona più sicura del pianeta, lo so.
+        Ma se c'è un motivo per cui non mi sento mai all'altezza sono i social.
+        Anche dal vivo, anche ora, una parte di me ha in testa la voce di InfluTizia e TikTokerCoso che mi criticano per una parola sbagliata o che.
+        Non si dice così ma cosà.
+        E hai dimenticato questo.
+        E questa cosa non è vera, l'ha detto Butler dieci minuti fa, dovevi saperlo.
+        E.
+        E insomma, ci sta.
+        Si sta cercando di creare un mondo diverso ed è un bene non portarci dentro le cose che non vanno ora.
+        Ma questo modo di fare mi fa sentire costantemente inadeguata.
+        E una parte di me pensa che abbiamo il diritto anche di sbagliare.
+        In generale, ma soprattutto in queste cose.
+        Perché se dobbiamo andare verso futuri che ancora non esistono, sbagliare è inevitabile.
+        E ci fa bene, no?
+        Alla fine cose buonissime sono nate da errori.
+        Come il gorgonzola.
+        Dovremmo fare meno l3 poliziott3, e perdonarci di più.
+        
+            + [Serve del metodo. Se la base non è solida, crolla tutta la casa.]
+                -> color_variation_management(FirstCharacter, blueC)->
+                Ma se poi quella base non la costruisce nessunə, perché si perde lo slancio, il coraggio?
+                Cosa ci abbiamo guadagnato?
+               
+            + [Scelta gialla]
+                -> color_variation_management(FirstCharacter, yellowC)->
+             
+            + [Dovremmo farci meno paranoie e agire di più.]
+                -> color_variation_management(FirstCharacter, redC)->
+                Non so.
+                Fare per fare non porta molto lontano.
+                O meglio: magari porta lontano.
+                Ma senza sapere dove arriveremo.
+        
+            + [Scelta verde]
+                -> color_variation_management(FirstCharacter, greenC)->
+    
+            + [Quello che conta è cosa fai quando ti viene detto che hai sbagliato.]
+                -> color_variation_management(FirstCharacter, purpleC)->
+            -
+        
+        <i>Più gorgonzola, meno poliziott3.</i>
+        Devo proporlo a Valeria.
+        Aspetta, rimestolo un attimo.
+        Ottimo.
+        Comunque non te l'ho mai chiesto, {player_name}: tu ti senti una persona sicura?
+
+            + [Aggiungo con convinzione delle prugne.]
+                ~ kitchen_recipeAdjective = "convinte"
+               
+            + [Spolvero con titubanza del mais.]
+                ~ kitchen_recipeAdjective = "titubanti"
+             
+            + [Affetto con autocontrollo delle zucchine.]
+               ~ kitchen_recipeAdjective = "disciplinate"
+        
+            + [Spremo tempestosamente del chinotto.]
+                ~ kitchen_recipeAdjective = "tempestose"
+    
+            + [Sminuzzo con consapevolezza della cipolla.]
+                ~ kitchen_recipeAdjective = "consapevoli"
+            -     
+        {
+            - (kitchen_storagePurple >  kitchen_storageYellow) && (kitchen_storagePurple >  kitchen_storageRed) && (kitchen_storagePurple >  kitchen_storageGreen) && (kitchen_storagePurple >  kitchen_storageBlue):
+                Interessante.
+                In queste conversazioni non so perché ma ti ho visto come una persona quasi spirituale.
+                Più attenta al grande insieme delle cose.
+                Mi dai l'idea di solidità, sai?
+
+            - (kitchen_storageYellow >  kitchen_storagePurple) && (kitchen_storageYellow >  kitchen_storageRed) && (kitchen_storageYellow >  kitchen_storageGreen) && (kitchen_storageYellow >  kitchen_storageBlue):
+                Interessante.
+                In queste conversazioni non so perché ma ti ho visto come una persona giocosa.
+                Una che trova il piacere, il bello nel mondo, anche quando non è facile.
+                Credo ci voglia tanto equilibrio interiore per farlo.
+
+            - (kitchen_storageRed >  kitchen_storageYellow) && (kitchen_storageRed >  kitchen_storagePurple) && (kitchen_storageRed >  kitchen_storageGreen) && (kitchen_storageRed >  kitchen_storageBlue):
+                Interessante.
+                In queste conversazioni non so perché ma ti ho visto come una persona molto attiva.
+                Più interessata alle cose da fare che non ai grandi ragionamenti.
+                Ammetto che associo questa cosa all'idea del chaddone tontolotto.
+                Ma è un mio pregiudizio, lo so.
+
+            - (kitchen_storageGreen >  kitchen_storageYellow) && (kitchen_storageGreen >  kitchen_storageRed) && (kitchen_storageGreen >  kitchen_storagePurple) && (kitchen_storageGreen >  kitchen_storageBlue):
+                Interessante.
+                In queste conversazioni non so perché ma ti ho visto come una persona molto legata alle emozioni.
+                Ma a differenza mia, sembra che tu riesca a trovare la tua solidità in questo.
+
+            - (kitchen_storageBlue >  kitchen_storageYellow) && (kitchen_storageBlue >  kitchen_storageRed) && (kitchen_storageBlue >  kitchen_storageGreen) && (kitchen_storageBlue >  kitchen_storagePurple):
+                Interessante.
+                In queste conversazioni non so perché ma ti ho visto come una persona molto razionale.
+                Con uno sguardo analitico sul mondo.
+                Nella mia testa questa roba è tipo finta sicurezza.
+                Ha a che fare col controllo.
+                Ma lo so, è un vizio tutto mio.
+
+        }
+
+        Madonna, che profumi che sta salendo.
+        Faccio un brindisino a noi al volo.
+        Ecco.
+        Alla fine non sto rispondendo fino in fondo alla tua domanda o quello che.
+        Ammazza se picchia questo vino.
+        No no mescolo io, lascia pure.
+        Sto imparando tanto da Valeria, sai?
+        Talco è statə la persona che mi ha insegnato ad accogliere la creatività del caos.
+        Valeria mi sta mostrando quanto si possa fare unit3.
+        Ma non c'è solo quello: c'è un aspetto di piacere.
+        Lei è sfavata quando vede i modi seriosi e pesanti di comunicare, di fare le cose.
+        Crede che il cambiamento, la lotta debba essere piacevole.
+        Perché sennò al primo problema, e ce ne sono sempre di problemi, finisci per smollare.
+        Per questo abbiamo tirato su la band.
+        E c'è anche un piacere più piccolo.
+        Quello che provo quando vado a letto e so che un'altra persona ora sta meglio, anche grazie a me.
+        A volte lo ritrovo anche nel lavoro.
+        Come quando si vede che una ha avuto proprio una giornata di merda, e la fai uscire col sorriso.
+        Ma non so come dire, non è merito del lavoro, è giusto per caso che vi siete trovate lì, perché passiamo una marea di tempo a lavorare.
+        E a volte è quasi un incidente, perché gli obbiettivi dei capoccia sono diversi.
+        Merda, mi sto perdendo, maledetto vino.
+        Insomma: è bello lottare per le cose grandi.
+        Ed è bello addormentarsi precarie e con i casini ma sapendo di aver portato un po' di gioia a una persona.
+        Ha senso?
+
             + [Scelta blu]
                 -> color_variation_management(FirstCharacter, blueC)->
                
@@ -374,60 +511,31 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Scelta viola]
                 -> color_variation_management(FirstCharacter, purpleC)->
             -
-        Chitarra allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Step due: aggettivi (es: saporito, triste, colorato).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-            + [Aggettivo A]
-                ~ kitchen_recipeAdjective = "Aggettivo A"
+        
+        Ancora due minuti e ci siamo ama.
+        Madonna che fame!
+        E visto che siamo alla fine, te la butto leggera: sei felice della vita che hai?
+        Anzi no aspetta che sennò ci prende male di sicuro.
+        Ti senti di star partecipando a qualcosa di più grande, di trasformativo, con le cose che fai?
+
+            + [Trituro con gioia dell'anice stellato.]
+                ~ kitchen_recipeComplement = "della gioia."
                
-            + [Aggettivo B]
-                ~ kitchen_recipeAdjective = "Aggettivo B"
+            + [Aggiungo {player_pronouns has him:pieno|{player_pronouns has her:piena|pienə}} di terrore esistenziale dell'origano.]
+                ~ kitchen_recipeComplement = "del terrore esistenziale."
              
-            + [Aggettivo C]
-               ~ kitchen_recipeAdjective = "Aggettivo C"
+            + [Sbuccio titubante della vaniglia.]
+               ~ kitchen_recipeComplement = "della titubanza."
         
-            + [Aggettivo D]
-                ~ kitchen_recipeAdjective = "Aggettivo D"
+            + [Tosto {player_pronouns has him:rassegnato|{player_pronouns has her:rassegnata|rassegnatə}} del coriandolo.]
+                ~ kitchen_recipeComplement = "della rassegnazione."
     
-            + [Aggettivo E]
-                ~ kitchen_recipeAdjective = "Aggettivo E"
-            -      
-    
-        Chitarra commenta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Chitarra condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Noi diciamo per la terza volta qualcosa legato a quel tema.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-            + [Scelta blu]
-                -> color_variation_management(FirstCharacter, blueC)->
-               
-            + [Scelta gialla]
-                -> color_variation_management(FirstCharacter, yellowC)->
-             
-            + [Scelta rossa]
-                -> color_variation_management(FirstCharacter, redC)->
-        
-            + [Scelta verde]
-                -> color_variation_management(FirstCharacter, greenC)->
-    
-            + [Scelta viola]
-                -> color_variation_management(FirstCharacter, purpleC)->
-            -
-        
-        Chitarra ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Step tre: complementi (es: del campo, per rimbecco, di coriandolo)#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-            + [Complemento A]
-                ~ kitchen_recipeComplement = "Complemento A"
-               
-            + [Complemento B]
-                ~ kitchen_recipeComplement = "Complemento B"
-             
-            + [Complemento C]
-               ~ kitchen_recipeComplement = "Complemento C"
-        
-            + [Complemento D]
-                ~ kitchen_recipeComplement = "Complemento D"
-    
-            + [Complemento E]
-                ~ kitchen_recipeComplement = "Complemento E"
+            + [Caramello {player_pronouns has him:sopraffatto|{player_pronouns has her:sopraffatta|sopraffattə}} della salvia.]
+                ~ kitchen_recipeComplement = "della sopraffazione."
             -  
+        Che poi è una domanda stupida da farti, vero?
+        Sei {player_pronouns has him:un riscrittore|{player_pronouns has her: una riscrittora|unə riscrittorə}}, e stai facendo un lavorone anche solo con me.
+        Grazie per questo, {player_name}!
 
             -> fourth_ingredient_dispatcher
                 

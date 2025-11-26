@@ -58,5 +58,8 @@
     },
     "dotnet.defaultSolution": "Selania.sln",
     "dotnet.preferCSharpExtension": true,
-    "cSpell.language": "en,it"
+    "cSpell.language": "en,it",
+    "cSpell.words": [
+        "bruschette"
+    ]
 }
