@@ -97,7 +97,6 @@
                     Ti aggiornerò presto comunque.
                     Così magari vieni a trovarci!
 
-                    
                 - firstChar_ActualName has FlautoDolce:
                     Tipo: ho mollato il lavoro.
                     Prima ne ho parlato con Valeria, e ci siamo organizzate per una cosa sgamosa che, coff coff, chiameremo subaffitto, circa.
@@ -116,7 +115,22 @@
                     A fare questo casino con me.
                     
                 - firstChar_ActualName has Ocarina:
-                    
+                    Partiamo dalle cose strane.
+                    Mio padre si è incazzato quando gli ho detto che tornerò giù.
+                    E non me l'aspettavo.
+                    Mi ha detto che mi condanno a una vita di casini e lavori di merda.
+                    E che anche se stanno invecchiando, se la sanno cavare.
+                    Gli ho detto che ci penserò un po' su, ma non è vero: so già cosa voglio.
+                    E invece mamma mi scrive tutti i giorni ora.
+                    Lei, che di solito si fa sentire una volta al mese.
+                    Ma forse la cosa più strana è stata Ennio: mi ha detto che potrebbe scendere anche lui.
+                    Per un po', per provare.
+                    Che comunque il lavoro è in remoto.
+                    E non sopporta da mo il suo coinquilino.
+                    E che sarebbe più vicino ai suoi, così.
+                    E l'idea mi piace.
+                    È come se due pezzi della mia vita si unissero.
+ 
                     
                 - firstChar_ActualName has Violino:
                     
@@ -172,8 +186,7 @@
                 E ho reagito con gioia.
                 Ma non oso credere possa accadere.
                 Sono una codarda, {player_name}?
-                
-                
+            
             - firstChar_ActualName has FlautoDolce:
                 In poche settimane ho fatto una collezione assurda di "prime volte".
                 La mia prima volta in Questura, e solo perché ho osato tirare fuori uno striscione.
@@ -195,10 +208,21 @@
                 Ma vera, forse.
                 Perché musica e associazione si stanno mangiando le mie giornate.
                 Ma {player_name}: mi sento viva come non mi è mai successo.
-
                 
             - firstChar_ActualName has Ocarina:
-                
+                Sono ufficialmente a casa da due settimane, e i sentimenti sono complicati.
+                Prima cosa: papà è ancora arrabbiato.
+                Ma: un po' meno arrabbiato.
+                Perché, sorpresa delle sorprese, si trova bene con Ennio.
+                Ed Ennio il sedentario, la roccia, quello con tutte le sue routine, qui sta diventando un'altra persona.
+                Si fa passeggiate chilometriche.
+                Va a farsi la bevutina con mio padre e i suoi amici.
+                Ha anche iniziato a recuperare il vecchio orto dei miei, che mia mamma ora con la schiena a pezzi non riesce a starci dietro.
+                E quando sistema le piante mi racconta cose per ore, cose che non avevo mai sentito.
+                C'è anche un gatto che girella qui e che lui ha deciso di adottare, e l'ha chiamato Shinji.
+                E l'altra sera eravamo nella mia cameretta abbracciati, con Shinji che faceva avanti e indietro dalla portafinestra socchiusa.
+                La pancia piena del cibo che ho cucinato con mia madre.
+                Mi sono sentita completa.
                 
             - firstChar_ActualName has Violino:
                 
@@ -247,34 +271,34 @@
 
                 
             - firstChar_ActualName has RagazzaOrchestra:
-               Ti sto scrivendo da... Boston!
-               Ok no, questa battuta fa ridere solo una volta.
-               Ti sto scrivendo in realtà <i>dal</i> Boston.
-               Un pub dove Talco giura di aver beccato Björk più di una volta.
-               Un posticino adorabile a Reykjavík.
-               I primi giorni qui sono stati assurdi.
-               Thomas è adorabile ora che è nel suo ambiente naturale.
-               E Talco.
-               Madonna, non l'avrei pensato, ma spacca come genitore.
-               Ennio sta continuando a dirmi che gli manco.
-               Che casa sua è aperta.
-               Ma non ha più parlato della possibilità che lui venga qui.
-               E...
-               Mi va bene così.
-               Per la seconda volta nella mia vita posso fare un reset.
-               Posso provare a essere me stessa.
-               Ma con una consapevolezza che non avevo a diciannove anni.
-               Forse anche per questo sfacciatamente mi sono proposta per suonare in una band locale.
-               E tra qualche sera porteremo due pezzi a un festival jazz.
-               Io.
-               Jazz.
-               Mai pensato.
-               E invece la vita può sempre sorprenderci, vero?
-               E tu?
-               Come stai?
-               Come sta {charNameTwo}?
-               E {mentorName}?
-               Mi mancate.
+                Ti sto scrivendo da... Boston!
+                Ok no, questa battuta fa ridere solo una volta.
+                Ti sto scrivendo in realtà <i>dal</i> Boston.
+                Un pub dove Talco giura di aver beccato Björk più di una volta.
+                Un posticino adorabile a Reykjavík.
+                I primi giorni qui sono stati assurdi.
+                Thomas è adorabile ora che è nel suo ambiente naturale.
+                E Talco.
+                Madonna, non l'avrei pensato, ma spacca come genitore.
+                Ennio sta continuando a dirmi che gli manco.
+                Che casa sua è aperta.
+                Ma non ha più parlato della possibilità che lui venga qui.
+                E...
+                Mi va bene così.
+                Per la seconda volta nella mia vita posso fare un reset.
+                Posso provare a essere me stessa.
+                Ma con una consapevolezza che non avevo a diciannove anni.
+                Forse anche per questo sfacciatamente mi sono proposta per suonare in una band locale.
+                E tra qualche sera porteremo due pezzi a un festival jazz.
+                Io.
+                Jazz.
+                Mai pensato.
+                E invece la vita può sempre sorprenderci, vero?
+                E tu?
+                Come stai?
+                Come sta {charNameTwo}?
+                E {mentorName}?
+                Mi mancate.
 
                 
             - firstChar_ActualName has FlautoDolce:
@@ -294,7 +318,24 @@
     
                 
             - firstChar_ActualName has Ocarina:
-                
+                Qui oggi la malinconia imperversa.
+                Mi manca Valeria, mi mancano le ragazze.
+                La Rifugia continua anche senza di me e una piccola piccola parte di me che è vanitosa, si è sentita subito dimenticabile.
+                Ma sono felice perché hanno fatto il primo concerto grandicello di beneficenza.
+                Grandi!
+                E ho riscritto a Talco, raccontandolə quello che sto combinando qui.
+                La prima volta mi ha detto che spostarmi per spostarmi potevo andare da ləi, ma ora sembra più tranquillə sul tema.
+                Ci sono state anche le prime questioni pratiche da affrontare.
+                Tipo che non ho la patente e qui i mezzi pubblici col cavolo che funzionano come su.
+                Per un po' Ennio mi ha detto che avrebbe potuto fare avanti e indietro lui per portarmi a un ipotetico lavoro.
+                Ma poi papà ha fatto un giro di telefonate e mi ha recuperato questo motorino che sicuro sicuro è più vecchio di me.
+                E ora provo a farci avanti e indietro per il cortile dei miei e mi sento come quando ho imparato ad usare la bici da piccola.
+                Ma con più lividi e graffi perché solo la Madonna sa quante volte sono cascata.
+                L'altra sera, dolorante e un po' alticcia, stavo per raccontare di te, del posto.
+                Ma poi le parole non sono venute.
+                Come se fosse proprio un'altra lingua.
+                E forse è meglio così.
+                Credo.
       
                 
             - firstChar_ActualName has Violino:
