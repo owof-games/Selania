@@ -47,7 +47,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                     -> top
             }
         
-        + [{first_char_main_storylets.nine: Del tuo rapporto con la creatività.|<i>{player_name} deve parlare ancora con {charNameOne} per sbloccare questo tema.</i>}]
+        + [{first_char_main_storylets.nine: Della tua creatività.|<i>{player_name} deve parlare ancora con {charNameOne} per sbloccare questo tema.</i>}]
             {
             
                 - first_char_main_storylets.nine:
@@ -542,9 +542,28 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 
     
     = third_theme
-        Il tema scelto è il numero tre.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Chitarra parla.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Possiamo fare una di queste cinque scelte.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+        Cavolo.
+        Tu e Talco andreste davvero d'accordo, {player_name}.
+        Però dopo il pippone di prima sull'acqua antica e blah blah blah ci sta.
+        Intanto pulisco qualche ciotola, che penso meglio se mi muovo.
+        E a proposito di pulire, la prima cosa che mi viene da dire è che creare mi pulisce il cervello.
+        Io.
+        Insomma.
+        Quando inizio a creare un brano vado in un posto altro, dove vedo e mi vedo in modo diverso.
+        Ci sono cose che so pensare solo quando compongo.
+        Cose che riesco a sentire solo quando compongo.
+        Creare è terapeutico.
+        Certo, poi quello che hai in testa deve parlare a più persone, sennò stai facendo un diario, no?
+        Però credo che il primo motivo per cui la creatività per me è importante, è che mi fa stare bene.
+        Bene con me stessa.
+        Ha senso?
+
             + [Scelta blu]
                 -> color_variation_management(FirstCharacter, blueC)->
                
@@ -560,30 +579,62 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Scelta viola]
                 -> color_variation_management(FirstCharacter, purpleC)->
             -    
-        A questo punto è chitarra a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+        Ciotole pulite!
+        Do una sciacquata anche ai bicchieri, che ho visto che c'è del vino rosso sotto al lavello.
+        O è una bomba o ci avvelena.
+        E tu {player_name} hai qualcosa che ti aiuta a star bene con te?
             
             {
                 - not cooking_with_second_char: Provi a parlare, ma non ti escono le parole. Però gli ingredienti possono parlare per te.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
-            + [Sostantivo A]
+            + [Lesso sportivamente delle patate.]
                 ~ kitchen_recipeNoun = "Sostantivo A"
-               
-            + [Sostantivo B]
+                Ti ci vedo a correre e scaricare il nervo.
+                O in piscina.
+                O a ballare.
+                Uh, sarà un caso che non ho citato sport di gruppo?
+
+            + [Friggo con creatività delle mele. ]
                 ~ kitchen_recipeNoun = "Sostantivo B"
-             
-            + [Sostantivo C]
+                Lo sapevo!
+                Ecco perché mi sento capita da te.
+                {player_pronouns has her:unite|unit3} dalla creatività!
+
+            + [Arrostisco scientemente delle melanzane.]
                ~ kitchen_recipeNoun = "Sostantivo C"
+                Ennio fa qualcosa di simile.
+                Quando è teso si mette a studiare qualcosa che ama.
+                O a fare esercizi di fisica.
+                Quando ha perso il lavoro, ha passato un intero fine settimana a fare calcoli prima di dire: "Ok, ora me ne cerco uno nuovo".
         
-            + [Sostantivo D]
+            + [Griglio amichevolmente delle pesche.]
                 ~ kitchen_recipeNoun = "Sostantivo D"
+                Stare assieme è una cosa che cura molte ferite.
+                Forse a volte ho bisogno però di star da sola.
+                Ma mi rendo conto che per altre persone la socialità è una medicina.
     
-            + [Sostantivo E]
+            + [Abbrustolisco meditativamente delle bietole.]
                 ~ kitchen_recipeNoun = "Sostantivo E"
+                Ci ho provato mille volte.
+                Ma non so, non riesco a starmene ferma.
+                Però gli "ohm" mi piacciono.
+                Mi vibra tutta la pancia.
             -  
-        Chitarra commenta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Chitarra dice un'altra cosa sul tema che stiamo esplorando.
-        Noi rispondiamo una di queste cinque cose.
+        
+        Abbasso la fiamma un attimo.
+        Come se sapessi farlo con questa legna.
+        Però che odore buono, vero?
+        Cominciare a lavorare mi ha aperto a problemi che prima mi erano ignoti.
+        E credo che il più grosso sia: a volte sono così stanca che proprio non ci riesco a comporre qualcosa.
+        Manco a suonare e bona.
+        E allora mi il mio cervello si mette a creare musica durante la notte.
+        Col risultato che mi sveglio stanca morta, e frustrata perché non ricordo mezzo accordo, o lo ricordo ma devo correre da qualche parte.
+        Però non è solo quello.
+        Per la prima volta mi sto chiedendo: esisterei ancora, se non potessi creare?
+        Perché l'ho fatto da sempre, {player_name}.
+        Papà dice sempre che ho imparato prima a creare con lo xilofono che a parlare.
+        Puoi essere ancora te se perdi qualcosa che ti ha sempre caratterizzatə?
+
             + [Scelta blu]
                 -> color_variation_management(FirstCharacter, blueC)->
                
@@ -599,27 +650,67 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Scelta viola]
                 -> color_variation_management(FirstCharacter, purpleC)->
             -
-        Chitarra allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Step due: aggettivi (es: saporito, triste, colorato).
-            + [Aggettivo A]
+        Che botta questo vino comunque.
+        {
+            - secondChar_storyStatus == story_storyStarted:
+                Devo metterlo in alto, non vorrei mai che {charNameTwo} provasse a berlo.
+            - else:
+                Dovrei proporre un brindisino a {mentorName}, e farci due chiacchiere in scialleria.
+        }
+        Tu {player_name} ti senti te?
+        Domanda idiota.
+        Ti senti la persona che puoi essere?
+        La persona che avresti voluto essere?
+        O ti senti qualcosa che non vorresti essere?
+        E sì, se ripeto ancora "essere" puoi mandarmi a sbucciare patate per tutto il giorno.
+
+            + [Frullo della zucca camminando in avanti.]
                 ~ kitchen_recipeAdjective = "Aggettivo A"
-               
-            + [Aggettivo B]
+               C'è anche qualcosa di bello nel sapere che si sta compiendo la propria strada, vero?
+
+            + [Pesto dell'ortica con statica soddisfazione.]
                 ~ kitchen_recipeAdjective = "Aggettivo B"
+                Vorrei sapere cosa si prova ad esser al proprio posto.
+                Ti guardo e mi sembri una persona equilibrata.
+                Deve essere bello.
              
-            + [Aggettivo C]
+            + [Schiaccio dei rapanelli girando in tondo.]
                ~ kitchen_recipeAdjective = "Aggettivo C"
+                Già.
+                Ne hanno voglia a dire "conosci te stessə" e tutte quelle robe lì.
+                Ma alla fine il più delle volte invece di avanzare, continui a girare su te stessə.
         
-            + [Aggettivo D]
+            + [Pulisco dei finferli arretrando.]
                 ~ kitchen_recipeAdjective = "Aggettivo D"
+                Uh.
+                Spero tu non viva male questa cosa.
+                Per quanto può valere, tornare sui propri passi credo sia sempre un segno del conoscersi meglio.
+                Almeno sai dove non vuoi andare.
     
-            + [Aggettivo E]
+            + [Sciacquo confusamente della lattuga.]
                 ~ kitchen_recipeAdjective = "Aggettivo E"
+                A volte è solo questione di tempo, vero?
+                Prima di capire dove andare.
+                O magari è un momento per fermarsi e riposare.
+                Ha senso?
             -      
     
-        Chitarra commenta.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Chitarra condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.
-        Noi diciamo per la terza volta qualcosa legato a quel tema.
+        Il sapore è ottimo, aggiusto giusto di sale.
+        Anche se credo manchi qualcosa, ma non so ancora cosa.
+        Comunque per me creare non è solo una cosa per me, per stare bene.
+        È gettare un ponte.
+        C'è sia quella cosa di prima dell'acqua antica la storia blah blah blah.
+        Ma è anche un ponte con la storia delle persone che ho conosciuto.
+        Quelle legate alla musica, come mio padre o le compagne del conservatorio o le ragazze della band.
+        E anche chi con la musica c'ha avuto poco a che fare, come mamma o Ennio o le colleghe di lavoro.
+        Creare secondo me significa immaginare nuovi collegamenti.
+        Anche tra persone che non si conoscono.
+        E fare da testimoni di queste storie.
+        Trovare l'universale nel particolare, per non perderci.
+        Per ritrovarci.
+        E a quel punto mi sale un po' un'altra domanda.
+        Perché se ciò che creo viene dagli scambi quotidiani, dai ricordi creati assieme, allora di chi è l'opera che si crea?
+
             + [Scelta blu]
                 -> color_variation_management(FirstCharacter, blueC)->
                
@@ -636,22 +727,48 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 -> color_variation_management(FirstCharacter, purpleC)->
             -
         
-        Chitarra ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        Step tre: complementi (es: del campo, per rimbecco, di coriandolo)
-            + [Complemento A]
+        Merda, credo di aver raggiunto dei livelli di pesantezza da record.
+        Perdonami {player_name}.
+        Il vino mi rende filosofica.
+        O solo inconsapevolmente idiota.
+        Riposati un secondo, controllo io che non bruci tutto.
+        Ma a proposito di scambi quotidiani: quando crei qualcosa, la tieni per te?
+        La condividi?
+        Che ci fai?
+
+            + [Brucio del peperoncino.]
                 ~ kitchen_recipeComplement = "Complemento A"
-               
-            + [Complemento B]
+                Merda.
+                Spero non per insoddisfazione.
+                Perché non so te, ma è dura essere soddisfattə di quello che si crea.
+
+            + [Spargo ovunque del cardamomo.]
                 ~ kitchen_recipeComplement = "Complemento B"
+                Un gesto sicuro, deciso.
+                Che alla fine immagino ci stia.
+                Hai creato qualcosa, vuoi che lo conoscano più persone possibile.
+                Credo.
              
-            + [Complemento C]
+            + [Raggruppo dei chiodi di garofano.]
                ~ kitchen_recipeComplement = "Complemento C"
+                Anche a me piace condividere solo con la cerchia ristretta di am3.
+                Mi fa sentire al sicuro.
+                Ma a volte da quella bolla ci devo uscire.
+                Anche solo per La Rifugia.
         
-            + [Complemento D]
+            + [Copro dello zenzero.]
                 ~ kitchen_recipeComplement = "Complemento D"
+                Tieni le tue creature per te.
+                Sarà un gesto di affetto o di insicurezza?
+                O una lotta all'idea che tutto debba essere produttivo?
+                Sarei curiosa di scoprirlo.
     
-            + [Complemento E]
+            + [Non faccio nulla.]
                 ~ kitchen_recipeComplement = "Complemento E"
+                Perdonami, do sempre per scontato che le persone creino qualcosa.
+                Che poi in parte credo sia vero.
+                Anche questo piatto ha la sua creatività, la sua magia.
+                E spesso cosa è creatività e cosa no ha a che fare con la cultura, non con qualche oggettività del cazzo.
             -  
             -> fourth_ingredient_dispatcher
     
@@ -704,6 +821,15 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     
     È stato divertente cucinare assieme, {player_name}.
     Mi ha fatto sentire a casa.
+        {
+            -cooking_with_first_char.first_theme:
+
+            -cooking_with_first_char.second_theme:
+            
+            -cooking_with_first_char.third_theme:
+            
+
+        }
     E poi questo {piatto}!
     Spacca, non trovi?
     

@@ -472,22 +472,29 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
     ~ move_entity(CookingWithSecondCharOBJ, Kitchen)
     ~ temp piatto = kitchen_tempRecipeName
     
-    Passiamo alla scena al tavolo con Riccio.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-    ~ move_entity(EatingWithSecondCharOBJ, Kitchen)
-    Buono questo {piatto}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-    
-    
-    //Commento ricetta
-    Quando prima hai aggiunto {kitchen_recipeNoun} mi hai ricordato una cosa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-    E con {kitchen_recipeAdjective} un'altra, e con {kitchen_recipeComplement} un'altra ancora.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-            {
-                - kitchen_secondCharExtraIngredientReaction != notReaction:
-                    -> extra_ing_feedback
-            }
+    È stato divertente cucinare assieme, {player_name}.
+    Mi ha fatto sentire a casa.
+        {
+            -cooking_with_second_char.first_theme:
+
+            -cooking_with_second_char.second_theme:
+            
+            -cooking_with_second_char.third_theme:
+            
+        }
         
-    Non abbiamo aggiunto un ingrediente extra, per cui Riccio ci dice: "Comunque, ottimo piatto!"#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        -> relationship_feedback
+    E poi questo {piatto}!
+    Spacca, non trovi?
     
+        {
+            - kitchen_secondCharExtraIngredientReaction != notReaction:
+                -> extra_ing_feedback
+            
+            - else:
+                E ho la pancia strapiena ora.
+                -> relationship_feedback
+                
+        }
         
         
         = extra_ing_feedback
