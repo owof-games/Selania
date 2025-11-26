@@ -145,7 +145,7 @@
                 Il mondo gira e muta e muore e rinasce.
                 Sono le regole degli uomini a generare la paura.
                 Ma così come l'acqua cancella anche la pietra più dura, {player_name} e {charNameOne} possono piegare le regole più severe.
-                Con l'aiuto di altre goccie.
+                Con l'aiuto di altre gocce.
                 
             + [Non ho apprezzato la sua mancanza di senso pratico.]
                    -> color_variation_management(PG, blueC)->
@@ -236,7 +236,7 @@
                 Una luce troppo forte confonde strada e burrone.
                 Un rifugio col tempo può diventare prigione.
          
-            + [Dovrei reimparare a giocare, a prendere le cose alla leggera.]
+            + [Dovrei rimparare a giocare, a prendere le cose alla leggera.]
                 -> color_variation_management(PG, yellowC)->
                 Le radici ridono quando l'erba fa solletico.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Le foglie ridono quando il vento le sfiora.
