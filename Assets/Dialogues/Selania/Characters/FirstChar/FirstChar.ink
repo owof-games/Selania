@@ -69,7 +69,7 @@
             {shuffle:
                 - Questa cosa della riscrittura è stata intensa, {player_name}. Spero non sia stata faticosa anche per te.
                 - Credo che la cucina mi mancherà un sacco. Ed è stato divertente gettare gli avanzini ai pesci. Ed ecologico.
-                - Hai trovato poi un modo di usare il mio regalino?
+                - Ho deciso che quando me ne vado ti lascio una sorpresa. Ma non ti dico dove.
                 - Non so se raccontare o meno questa cosa a qualcunə. Forse Talco capirebbe.
                 - Da quando l'albero è cresciuto, mi sento, ehm, osservata. Ha senso?
                 - Prima ho abbozzato una melodia per raccontare questa esperienza, ma poi ho visto un pipistrello, mi sono distratta e addio idea.
