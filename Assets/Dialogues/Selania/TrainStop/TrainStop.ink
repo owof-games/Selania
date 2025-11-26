@@ -70,7 +70,7 @@
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        Ciao {player_name}, come stai?
+        Ciao {player_name}, come stai?#speaker:{firstChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:unknown
         Qui, questi primi giorni qui sono stati strani.
         A quanto pare la mia assenza è stata solo per qualche ora.
         E nessunə mi ha fatto domande su nulla.
@@ -164,7 +164,7 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.
+    Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.#speaker:{firstChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:unknown
        
        {
             - firstChar_ActualName has Triangolo:
@@ -271,7 +271,7 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
     
-    Ciao ama!
+    Ciao ama!#speaker:{firstChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:unknown
     
      {
             - firstChar_ActualName has Triangolo:
