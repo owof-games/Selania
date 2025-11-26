@@ -16,26 +16,125 @@
 {
     - first_character_notes.three:
         <b><i>Terza lettera di {charNameOne}.</b></i>: <>
-        
-            Ciao ama! Indovina chi ha fatto il suo primo concerto? <>
+        Ciao ama!
+    
+     {
+            - firstChar_ActualName has Triangolo:
+                Qui...
+                Uh.
+                Continua a piacermi questa cosa di essere {charNameOne}, ma non è facilissima.
+                Talco ha rimandato per due volte i nostri incontri, e credo sia una scusa.
+                E a lavoro sembra che non rinnoveranno i contratti a nessunə.
+                Hanno già fatto arrivare tre persone nuove, e Luca sta facendo di tutto per tenercele lontane.
+                Ho questa sensazione strana.
+                Che sia facile dire "goditi le piccole cose" quando tutto va bene.
+                Ma ora è.
+                È difficile.
+                Però, nota positiva: con Ennio stiamo davvero bene.
+                È come se ci fossimo risintonizzat3.
+                E le sere assieme sono tranquillizzanti.
 
-           {
-                - firstChar_ActualName has Triangolo:
-                    Non io ovviamente. Il lavoro di smistamento si mangia le giornate. Però Talco ha spaccato! Quando ha finito sono scoppiata a piangere. L3 am3 pensavano fosse gioia. Non ho avuto il coraggio di dire loro che temo di aver fatto la scelta peggiore della mia vita. La peggiore. <>
-                    
-                - firstChar_ActualName has RagazzaOrchestra:
-                    Il collettivo! Ci chiamiamo EDERE, che è un acronimo di cui non ricordo manco più il significato ma è tipo: ci attacchiamo agli alberi e non ci leviamo più. E a questo giro la pula non ci ha levate, perché c'era troppa gente ed è stato un casino assurdo. Alcune compagne sono critiche perché temono che abbiamo spaventato la fauna. Credo che abbiano ragione. Anche se questa cosa mi rompe le ovaie. Ma vedremo di trovare una soluzione. <>
-                    
-                - firstChar_ActualName has FlautoDolce:
-                    Il nonno! O meglio, una cover band che abbiamo tirato su con l3 am3. Abbiamo anche un suo cartonato che portiamo in giro. Ho incontrato vecchie che l'hanno conosciuto. E ho scoperto cose nuove su di lui. Anche cose che non avrei voluto sapere. Il nonno era un chillone totale comunque, e ora voglio imparare da lui. <>
-                    
-                - firstChar_ActualName has Ocarina:
-                    I topolini! In teoria dovevano esserci anche gli scoiattoli, ma le luci li hanno spaventati. O forse quei bambini del cazzo. Che in teoria erano vietati. Però è stata una roba toppissima ama. Non so se lì prende ma nel caso cercaci su internet perché abbiamo spaccato. <>
-                    
-                - firstChar_ActualName has Violino:
-                    Madre natura! No dai, non il primo. Il primo che abbiamo registrato. La prima collaborazione tra umani, funghi e piante. E sembra che ora parte delle nostre note stiano vibrano nel terreno. Un gruppo di scienziati ha trovato frequenze simili alle nostre in un bosco a cento chilometri e passa di distanza! Chi l'avrebbe detto che mi sarebbero piaciuti gli scienziati? Ora però dobbiamo anche imparare ad ascoltare. Perché facile che ci siano altre canzoni in giro da eoni. E questa sarà la parte difficile. Non vedo l'ora! <>
-            }
-            Comunque un giorno mi piacerebbe che la musica, questa musica arrivasse anche dalle vostre parti. O che, quando te ne andrai da lì, verrai ad ascoltarla con me. Un saluto. <b>{charNameOne}</b>.
+                
+            - firstChar_ActualName has RagazzaOrchestra:
+                Ti sto scrivendo da... Boston!
+                Ok no, questa battuta fa ridere solo una volta.
+                Ti sto scrivendo in realtà <i>dal</i> Boston.
+                Un pub dove Talco giura di aver beccato Björk più di una volta.
+                Un posticino adorabile a Reykjavík.
+                I primi giorni qui sono stati assurdi.
+                Thomas è adorabile ora che è nel suo ambiente naturale.
+                E Talco.
+                Madonna, non l'avrei pensato, ma spacca come genitore.
+                Ennio sta continuando a dirmi che gli manco.
+                Che casa sua è aperta.
+                Ma non ha più parlato della possibilità che lui venga qui.
+                E...
+                Mi va bene così.
+                Per la seconda volta nella mia vita posso fare un reset.
+                Posso provare a essere me stessa.
+                Ma con una consapevolezza che non avevo a diciannove anni.
+                Forse anche per questo sfacciatamente mi sono proposta per suonare in una band locale.
+                E tra qualche sera porteremo due pezzi a un festival jazz.
+                Io.
+                Jazz.
+                Mai pensato.
+                E invece la vita può sempre sorprenderci, vero?
+                E tu?
+                Come stai?
+                Come sta {charNameTwo}?
+                E {mentorName}?
+                Mi mancate.
+
+                
+            - firstChar_ActualName has FlautoDolce:
+                Stai parlando ufficialmente con la presidentessa di 'sto cazzo de La Rifugia.
+                Siamo una associazione a modino.
+                Ed anche se è una cosa piccola, ne sono felice.
+                E tra le varie, stiamo tirando su un sistema di finanziamento per cantanti emergenti senza cittadinanza.
+                Ed è un casino burocratico che aiuto.
+                Ma la musica che stanno portando quest3 figliol3, non ne hai idea.
+                Per la prima volta ci sono storie e cose che proprio non capisco.
+                E mi va bene così.
+                Ci ho messo una vita a capire che non posso farmi sempre capire da tutt3, ma non per questo la mia storia non conta.
+                E ora sto imparando a fare lo stesso con loro.
+                Sto diventando una persona adulta?
+                Cringe.
+                Ma intanto di mando un abbraccio giganterrimo.
+    
+                
+            - firstChar_ActualName has Ocarina:
+                Qui oggi la malinconia imperversa.
+                Mi manca Valeria, mi mancano le ragazze.
+                La Rifugia continua anche senza di me e una piccola piccola parte di me che è vanitosa, si è sentita subito dimenticabile.
+                Ma sono felice perché hanno fatto il primo concerto grandicello di beneficenza.
+                Grandi!
+                E ho riscritto a Talco, raccontandolə quello che sto combinando qui.
+                La prima volta mi ha detto che spostarmi per spostarmi potevo andare da ləi, ma ora sembra più tranquillə sul tema.
+                Ci sono state anche le prime questioni pratiche da affrontare.
+                Tipo che non ho la patente e qui i mezzi pubblici col cavolo che funzionano come su.
+                Per un po' Ennio mi ha detto che avrebbe potuto fare avanti e indietro lui per portarmi a un ipotetico lavoro.
+                Ma poi papà ha fatto un giro di telefonate e mi ha recuperato questo motorino che sicuro sicuro è più vecchio di me.
+                E ora provo a farci avanti e indietro per il cortile dei miei e mi sento come quando ho imparato ad usare la bici da piccola.
+                Ma con più lividi e graffi perché solo la Madonna sa quante volte sono cascata.
+                L'altra sera, dolorante e un po' alticcia, stavo per raccontare di te, del posto.
+                Ma poi le parole non sono venute.
+                Come se fosse proprio un'altra lingua.
+                E forse è meglio così.
+                Credo.
+      
+                
+            - firstChar_ActualName has Violino:
+                Sono passati mesi, spero che lì le cose vadano bene.
+                Qui... vanno.
+                No, non voglio essere negativa.
+                Alla fine abbiamo preso casa in provincia.
+                E non è male.
+                Ci sono tante passeggiate da fare, per esempio.
+                E c'è un silenzio che mi entra dentro e mi rassicura.
+                Ho iniziato a lavorare a un ristorante, conduzione familiare.
+                Lei una dea, lui un maniaco.
+                Credo che lo menerò abbastanza presto.
+                Settimana scorsa sono scesa a trovare i miei, e quando sono tornata, Ennio mi ha fatto trovare una sorpresa.
+                Il pezzettino di attico che abbiamo, trasformato in uno studiolo per la mia musica.
+                E lì, qualcosa mi è morto dentro.
+                Lo so, sono stronza.
+                Ma mi sono chiesta per la prima volta se davvero lui mi capisca.
+                Perché per me la musica non è una cosa da fare da sola.
+                Non è una cosa da mettere su Youtube.
+                E ho avuto questa immagine, da signora degli anni Cinquanta che suona il pianoforte per i colleghi del marito.
+                E avrei voluto urlare.
+                Abbiamo litigato.
+                Ma litigato pesante {player_name}.
+                E non me l'aspettavo.
+                Ora le cose sono più calme.
+                E l'altra sera dopo giorni abbiamo fatto di nuovo l'amore.
+                Ma ho fatto una piccola valigia, con le cose essenziali, e l'ho nascosta nello studiolo.
+                Mi serve qualcosa che mi ricordi che posso sempre andarmene.
+                
+        }
+
+        Un saluto.
+        <b>{charNameOne}</b>.
 }
 
 
@@ -43,25 +142,95 @@
     - first_character_notes.two:
         <b><i>Seconda lettera di {charNameOne}.</b></i>: <>
         
-        Ciao {player_name}, qui è sempre {charNameOne} che ti scrive. Sono passate settimane dal mio ritorno, e finalmente ho avuto il coraggio di parlare con mio padre. <>
+        Ciao {player_name}, qui è sempre {charNameOne} che ti scrive.
+       
+       {
+            - firstChar_ActualName has Triangolo:
+                Talco mi ha risposto, e abbiamo ripreso a videochiamarci.
+                Lə bimbə è adorabile.
+                Le prime volte ci siamo raccontat3 il mondo.
+                Ma ultimamente ci sono molti silenzi.
+                Ləi mi racconta le sue giornate, ma mi rendo conto che le mie sono piccoline.
+                La cosa più grossa è anche la meno bella: ci sono dei casini sul lavoro.
+                Hanno scoperto il tentativo di fare sindacato, e c'è aria di vendetta.
+                Cerco di non cagarmi addosso, ma non è facilissimo.
+                
+            - firstChar_ActualName has RagazzaOrchestra:
+                Anche se dovrei chiamarmi "La piagnona".
+                Mentre le cose pratiche per trasferirmi vanno avanti, ho iniziato a dirlo all3 altr3.
+                Con Valeria abbiamo passato una serata a bere e fare progetti.
+                E mi ha promesso che non diventeremo "amiche da ricorrenza".
+                Si sta già organizzando per venire a trovarmi.
+                Ma la sorpresa più grande l'ho avuta da Ennio.
+                Prima cosa: per la prima volta l'ho visto piangere.
+                Seconda cosa: mi ha detto "l'ho sempre saputo".
+                Mi ha detto che sapeva che tutto questo era troppo poco per me.
+                Che lui era troppo poco per me.
+                Mi si è spezzato il cuore.
+                Gli ho detto che lo amo, che questa scelta è per me, per vivere.
+                Lui mi ha detto che lo sa, e che ci penserà un po' sopra.
+                Per un attimo ha detto "potrei venire anche io".
+                E ho reagito con gioia.
+                Ma non oso credere possa accadere.
+                Sono una codarda, {player_name}?
+            
+            - firstChar_ActualName has FlautoDolce:
+                In poche settimane ho fatto una collezione assurda di "prime volte".
+                La mia prima volta in Questura, e solo perché ho osato tirare fuori uno striscione.
+                Il mio primo concerto sold out.
+                E ok, è facile fare sold out in un buco di culo come quello in cui eravamo.
+                Ma le persone hanno cantato i nostri brani, {player_name}!
+                I soldi sono andati in parte a La Rifugia, in parte a un'associazione migranti.
+                E con Valeria abbiamo deciso che è il caso di tirare su una associazione anche noi, a modo.
+                Sia per non finire nei casini sia perché, boh, sembra che il nostro progetto possa davvero funzionare.
+                E questa gioia mi aiuta ad affrontare la terza "prima volta".
+                Ennio mi ha lasciato.
+                E non mi sono mai sentita così disperata.
+                Lo amo tanto, ma tanto tanto.
+                E lui lo sa.
+                E mi ama anche lui.
+                Ma mi ha detto che ha bisogno di una relazione in cui non si senta secondo.
+                In cui non debba aspettare ogni giorno per sapere se mi ricorderò di lui.
+                Sinceramente è stata una cosa crudele da dirmi.
+                Ma vera, forse.
+                Perché musica e associazione si stanno mangiando le mie giornate.
+                Ma {player_name}: mi sento viva come non mi è mai successo.
+                
+            - firstChar_ActualName has Ocarina:
+                Sono ufficialmente a casa da due settimane, e i sentimenti sono complicati.
+                Prima cosa: papà è ancora arrabbiato.
+                Ma: un po' meno arrabbiato.
+                Perché, sorpresa delle sorprese, si trova bene con Ennio.
+                Ed Ennio il sedentario, la roccia, quello con tutte le sue routine, qui sta diventando un'altra persona.
+                Si fa passeggiate chilometriche.
+                Va a farsi la bevutina con mio padre e i suoi amici.
+                Ha anche iniziato a recuperare il vecchio orto dei miei, che mia mamma ora con la schiena a pezzi non riesce a starci dietro.
+                E quando sistema le piante mi racconta cose per ore, cose che non avevo mai sentito.
+                C'è anche un gatto che girella qui e che lui ha deciso di adottare, e l'ha chiamato Shinji.
+                E l'altra sera eravamo nella mia cameretta abbracciati, con Shinji che faceva avanti e indietro dalla portafinestra socchiusa.
+                La pancia piena del cibo che ho cucinato con mia madre.
+                Mi sono sentita completa.
+                
+            - firstChar_ActualName has Violino:
+                La situazione col coinquilino è estremamente tesa, e mi spiace tantissimo.
+                Ennio la prende sempre con la sua filosofia, ma sono giorni che non si parlano.
+                Ma non riusciamo a trovare una casa che una, soprattutto coi nostri stipendi.
+                L'alternativa è spostarci fuori dalla città.
+                E di molto.
+                E questo significherebbe mettere una croce sulla band, e sul La Rifugia.
+                Già ora Valeria mi scrive spesso che le manco.
+                Ma quando dico ad Ennio che esco, il suo sguardo è sempre più distaccato, quasi ferito.
+                L'altra sera stavamo guardando un film a letto e mi ha detto: "Non ti basto, vero?"
+                Gli ho detto che lo amo.
+                E lui mi ha risposto che non è la stessa cosa.
+                Ho lasciato che si addormentasse, e sono andata in bagno a piangere.
+        }
+    
+    E lì invece? Come stanno le tue piante?
+    Sono arrivate nuove persone interessanti?
+    Sicuro, nessunə più interessante di me!
+    A presto, <b>{charNameOne}</b>.
 
-           {
-                - firstChar_ActualName has Triangolo:
-                    Non è che avete un traduttore padre/figlia da quelle parti? Quando gli ho detto che seguirò il suo consiglio e mi cercherò un lavoro vero, è sembrato deluso. Nei prossimi giorni farò un colloquio nella agenzia dove lavora. Forse smistare merci è un altro modo di suonare musica. <>
-                    
-                - firstChar_ActualName has RagazzaOrchestra:
-                    Le cose non sono andate bene, abbiamo litigato per tutto il tempo. A volte la mia rabbia mi triggera, non è qualcosa che pensavo nemmeno di possedere. Per assurdo però da quando gli ho detto che è la mia vita e ho il diritto di fare i miei errori, ci sentiamo più spesso. Non so se voglio rivederlo subito, ma forse le cose stanno cambiando per il meglio. <>
-                    
-                - firstChar_ActualName has FlautoDolce:
-                    Gli ho parlato di nonno, e gli ho detto che voglio seguire le sue tracce. Sul momento è rimasto interdetto, ma poi si è messo a piangere. Mi ha chiesto del tempo per decidere se e cosa potrebbe fare per aiutarmi. <>
-                    
-                - firstChar_ActualName has Ocarina:
-                    Ha passato il tempo a dirmi che non prendo nulla sul serio. Parlargli dell'orchestra di topolini e scoiattoli non ha aiutato, ama. Forse cambierà idea quando avrò finito di addestrare le falene. O più plausibilmente mi taglierà tutti i fondi. <>
-                    
-                - firstChar_ActualName has Violino:
-                    Per la prima volta credo di averlo capito. Non ci siamo trovate, non riesce a comprendere perché per me sia importante fare qualcosa di utile per l'umanità e blah blah blah. Ma ho visto nella sua preoccupazione la paura sincera che possa avere una vita difficile. Mi ha fatto insieme tenerezza e dispiacere. <>
-            }
-        E lì invece? Come stanno le tue piante? Sono arrivate nuove persone interessanti? Sicuro, nessunə più interessante di me! A presto, <b>{charNameOne}</b>.
 }
 
 {
@@ -69,32 +238,85 @@
         <b><i>Prima lettera di {charNameOne}.</b></i>: <>
     
     
-        Ciao {player_name}, come stai? Alla fine Talco è sempre statə qui, me idiota. E ha creduto alla mia storia! Ora si è messə in testa di insegnare agli scoiattoli a suonare le noci. <>
-
+        Ciao {player_name}, come stai?
+        Qui, questi primi giorni qui sono stati strani.
+        A quanto pare la mia assenza è stata solo per qualche ora.
+        E nessunə mi ha fatto domande su nulla.
+        Eppure io vedo i cambiamenti, i cambiamenti in me.
+           
            {
                 - firstChar_ActualName has Triangolo:
-                    Io, invece, non riesco a prendere uno strumento in mano da che sono tornata. <>
+                    Sto prendendo le cose con un'altra piega.
+                    A lavoro riesco a trovare il bello nelle piccole cose.
+                    E mi sto interessando ai giochi di Ennio.
+                    E ho scritto una lettera a Talco, per dirlə che non mi trasferirò, ma mi manca.
+                    Spero mi risponda presto.
+                    Intanto ti mando un grande abbraccio.
                     
                 - firstChar_ActualName has RagazzaOrchestra:
-                    Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi. <>
-                    
+                    L'altra sera ho mandato un messaggio a Talco.
+                    "Ci sto."
+                    E mi ha chiamata dopo dieci minuti dieci.
+                    Ed è stato come tornare a casa.
+                    Ci vorranno almeno due mesi prima di riuscire a combinare tutto, e va bene così.
+                    Almeno ho due mesi di tempo per informare Ennio.
+                    E Valeria.
+                    Non avevo pensato a quanto mi avrebbe fatto paura lasciare questa casa.
+                    Ti aggiornerò presto comunque.
+                    Così magari vieni a trovarci!
+
                 - firstChar_ActualName has FlautoDolce:
-                    Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
-                    E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
-                    Tu e quel posto mi avete reso una mollacciona.
-                    Ma non è così male, alla fine. <>
+                    Tipo: ho mollato il lavoro.
+                    Prima ne ho parlato con Valeria, e ci siamo organizzate per una cosa sgamosa che, coff coff, chiameremo subaffitto, circa.
+                    Insomma: divido camera con un'altra figliola, e per ora non pago l'affitto, ma mi occupo della gestione della casa.
+                    Perché?
+                    Perché così posso dedicarmi totalmente sia alla Rifugia, sia alla musica.
+                    E non hai idea di quanto abbia scritto da quando sono tornata.
+                    E non solo: ho un po' meno paura.
+                    Paura di dire cosa penso sulle cose politiche.
+                    Di fare proposte.
+                    Di cercare soluzioni.
+                    Valeria è totalmente presa bene da tutto questo.
+                    Ennio, non si pronuncia.
+                    E un po' mi fa paura.
+                    E fa strano forse, ma ti vorrei qui.
+                    A fare questo casino con me.
                     
                 - firstChar_ActualName has Ocarina:
-                    Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
-                    Se lo dico a mio padre mi fa ricoverare subito, ma amen.
-                    Sono felice ama, davvero felice. <>
+                    Partiamo dalle cose strane.
+                    Mio padre si è incazzato quando gli ho detto che tornerò giù.
+                    E non me l'aspettavo.
+                    Mi ha detto che mi condanno a una vita di casini e lavori di merda.
+                    E che anche se stanno invecchiando, se la sanno cavare.
+                    Gli ho detto che ci penserò un po' su, ma non è vero: so già cosa voglio.
+                    E invece mamma mi scrive tutti i giorni ora.
+                    Lei, che di solito si fa sentire una volta al mese.
+                    Ma forse la cosa più strana è stata Ennio: mi ha detto che potrebbe scendere anche lui.
+                    Per un po', per provare.
+                    Che comunque il lavoro è in remoto.
+                    E non sopporta da mo il suo coinquilino.
+                    E che sarebbe più vicino ai suoi, così.
+                    E l'idea mi piace.
+                    È come se due pezzi della mia vita si unissero.
+ 
                     
                 - firstChar_ActualName has Violino:
-                    Io invece mi sono resa conto che forse, con la musica, possiamo parlare con gli animali.
-                    No, non ho esagerato col vinello.
-                    Ma pensaci, ama: se così fosse, potrei dimostrare che siamo tutt3 collegat3, che potremmo parlarci e comunicare tra noi! <>
+                    Tipo che vivo già con Ennio da due giorni.
+                    Il suo coinquilino non l'ha presa benissimo, ma ci stiamo guardando in giro per cercare un posto solo per noi.
+                    A casa vecchia hanno trovato una coinquilina in quindici secondi.
+                    Però sono spesso lì per le cose de La Rifugia.
+                    Ogni tanto guardo la cartolina di Talco, e mi chiedo cosa scriverlə.
+                    Ho l'impressione che non apprezzerebbe molto questa versione di me.
+                    Mentre a lavoro le colleghe più anziane hanno già iniziato a chiedermi: a quando un figlio?
+                    Credo che prima o poi ne inforchetto una, così la piantano.
+
+                    
             }
-        Spero che lì vada tutto bene. E che {mentorName} non sia sempre pesantona. Alla prossima lettera. <b>{charNameOne}</b>
+        
+
+        Alla prossima lettera.
+         
+        <b>{charNameOne}</b>
 }
 
 
