@@ -12,7 +12,12 @@
                                -> open_the_kitchen
                             
                             - else:
-                                Ehi {player_name}! Vediamoci allo stagno. Ho una cosa da mostrarti!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                                {stopping:
+                                    - Ehi {player_name}! Vediamoci allo stagno. Ho una cosa da mostrarti!
+                                    - Scusa, prima c'erano cose più importanti da fare, ma ritroviamoci allo stagno, è importante!
+                                    - La terza sarà la volta buona, spero. Ti aspetto allo stagno, preparati perché è una cosa fighissima!
+                                    - Bene, vediamo se è l'ultima volta. Vediamoci allo stagno {player_name}, così ti mostro quello che ho combinato!
+                                }#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                                     ~ move_entity(FirstCharacter, Pond)
                                     ~ movements_changeLocationTimer = 0
                                         -> main    
