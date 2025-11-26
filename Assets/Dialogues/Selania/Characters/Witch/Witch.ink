@@ -128,6 +128,8 @@
             - else: Riaccogliamo con piacere {player_name}, per quanto non si sia mai davvero {player_pronouns has him:allontanato|{player_pronouns has her:allontanata|allontanatə}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}}.
         }
         
+        Strega ci riprende il discorso dell'acqua antica di chitarra
+
         Osserviamo {player_name} e ci chiediamo cosa provi dopo aver aiutato {charNameOne}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
             + [Mi chiedo se sono all'altezza di tutto questo.]
