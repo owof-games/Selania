@@ -73,6 +73,7 @@
                     - Forse avrei dovuto rispondere alla cartolina di Talco. Non pensavo avrei avuto paura di una cartolina.
                     - Prima nello stagno non ho visto il mio riflesso ma quello di una Chitarra e non.voglio.farmi.domande! Né avere risposte.
                     - Lavorare è sopravvalutato.
+                    - Quando esco da qui dovrei dire a Thomas che non lo odio. Spero che non pensi che lo odio, cazzo.
                 }#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious 
                     -> main
             //Stiamo parlando con la PNG ma dopo uno storylet, per cui non mettiamo del testo        

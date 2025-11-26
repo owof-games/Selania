@@ -43,7 +43,7 @@
         E non è vero che la chitarra fa schifo, Mark Bowen sposami, ma non è il mio strumento.
         Non sono nel mio strumento.
         {player_name}: devo continuare a vivere una vita che non è la mia?
-        O fare il salto e rischiare di perdere qualcosa.
+        O fare il salto e rischiare di perdere tutto.
         O tutto?
         Quanto si può sperare di essere felici, a questo mondo?
 

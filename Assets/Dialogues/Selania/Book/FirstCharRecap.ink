@@ -366,7 +366,7 @@
 
 {
     - rewriting_proposal_first_character:
-        Dopo il dono, {charNameOne} mi ha detto di aver capito perché si sia ritrovata con questo nome. Crede che la {charNameOne} sia il segno del rimanere nel medio, nella cosa più ovvia, e questo perché mentre tutte le persone care le fanno pressioni su cosa scegliere o meno per il suo futuro, lei ha solo paura. Crede che una scelta chiuda strade, deluda persone, o possa portarti in luoghi sbagliati. E a quel punto non ci sia modo di tornare indietro. Forse, allora, è meglio che siano le altre persone a scegliere per te.
+        Dopo il dono, {charNameOne} mi ha detto di aver capito perché si sia ritrovata con questo nome. Crede che la Chitarra sia la cosa media, la cosa che possono fare tutt3. Lei si aspettava grandi cose dalla vita, e invece ora ha una vita comune. E si chiede se questo è il massimo che può aspettarsi dalla vita, e se le cose non andranno sempre peggio.
     
 }        
 
@@ -378,74 +378,110 @@
     }
 
     {
+        - food_gift_first_char:
+            Dopo aver cucinato da sola, {charNameOne} ha parlato del rapporto che ha con sua madre, e di come lei non la capisca fino in fondo. Ma sa che è una donna che parla poco ma ci tiene tanto alle altre persone. Ha raccontato del cibo che ha preparato quando è salita a trovarla, del riordino della casa, del saper dire "Ti voglio bene" solo coi fornelli. E che da quando {charNameOne} questa cosa un po' l'ha portata con sé, cucinando cenoni con le ame.
+
+    }
+
+    {
+        - cooking_with_first_char.first_theme:
+            Durante l'incontro in cucina, {charNameOne} ha parlato delle sue relazione. Ha raccontato di aver avuto un'infanzia senza amici, ma con un forte legame con suo padre, che le ha passato l'amore per la musica. E dai suoi ha imparato che le relazioni sono cura e sacrificio. Con l'arrivo al Nord ha fatto molte amicizie in Conservatorio, scoprendo però che nei gruppi si litiga, e questa cosa l'ha riempita di conflitti, soprattutto quando il rapporto con un'amica è stato lasciato morire. Crede anche che non ci sia una differenza vera tra amicizia e amore, e che sia un problema per lo più culturale e linguistico, e le complicazioni che nascono vengono dalle parole che ancora mancano per parlare a modo delle relazioni.
+
+    }
+    {
+        - cooking_with_first_char.second_theme:
+            Durante l'incontro in cucina, {charNameOne} ha parlato del suo desiderio di salvare il mondo. E delle sue difficoltà: non si sente brava a parlare di cose politiche, e La Rifugia è nata perché ha potuto vedere un problema concreto e decidere di fare qualcosa, mentre altre parole cariche la fanno sentire inadeguata. E crede che parte di questa inadeguatezza venga dalle dinamiche social e dal giudizio costante. Ritiene che questo tolga la possibilità di sbagliare, ma gli sbagli creano possibilità impreviste. Come il gorgonzola. E poi ha citato la sua amica Valeria, che dice che l'attivismo deve dare piacere, e che a {charNameOne} piace addormentarsi sapendo di aver portato qualcosa di buono nel mondo. E poi: <i>più gorgonzola, meno poliziott3.</i>
+
+    }
+    {
+        - cooking_with_first_char.third_theme:
+            Durante l'incontro in cucina, {charNameOne} ha parlato del suo rapporto con la creatività. Ha detto che ci sono cose che sa pensare solo quando compone, e per questo è terapeutico. Ma che è preoccupata perché il lavoro la stanca così tanto che a volte non riesce a comporre nulla. E ha paura di non esistere più se dovesse smettere di creare. Creare per lei poi è come gettare un ponte: sia tra le persone che ha conosciuto, sia tra persone che non si conoscono. Trovare l'universale nel particolare, così da potersi ritrovare.
+
+    }
+    {
+        - open_the_kitchen:
+            Aprendo la strada per la cucina, {charNameOne} ha detto che il cibo apre alle confidenze, e che si è ricordata tutte le belle chiacchierate fatte a tavola.
+
+    }
+    {
+        - a_story_of_revenge:
+            Dopo aver letto <b>Luna vergine</b> di Aza, {charNameOne} ha raccontato di non avere un buon rapporto con la rabbia, ma di aver sentito il desiderio, leggendo il racconto, di morsicare anche lei il tizio, di tirare fuori gli artigli. E per la prima volta ha visto la rabbia non come qualcosa da evitare ma come un segnale, l'allarme che scatta perché è stato superato un confine invalicabile.
+
+    }
+    {
+        - first_mentor_chit_chat:
+            Durante una conversazione con {mentorName}, {charNameOne} si è infastidita perché {mentorName} ha definito la felicità "non un luogo da raggiungere, ma qualcosa che si ha dentro", ma {charNameOne} crede sia un privilegio di chi fa il lavoro che ama. E teme che questo significhi che la felicità "te la ritrovi se ti fai andare bene quello che hai".
+
+    }
+    {
         - first_char_main_storylets.twelve:
-            {charNameOne} mi ha parlato di sua madre. È stata la madre a permetterle di frequentare il conservatorio, ma con l'obiettivo di portare prestigio alla famiglia. {charNameOne} sa che non è possibile, che per il mondo della classica è già vecchia, ma la madre non è pronta a capirlo.
+            {charNameOne} ha parlato di sua mamma, e del fatto che litigano perché la madre pensa che lei non sappia accontentarsi. Ma {charNameOne} in realtà non si sente all'altezza delle sue aspettative. Soffre perché prova invidia verso chi ha raggiunto dei traguardi, e a volte vorrebbe avere la loro vita. Per questo si sente una delusione.
         
     }
     
     {
         - first_char_main_storylets.eleven:
-            Per la prima volta {charNameOne} mi ha parlato della sua famiglia d'origine. La passione per la musica l'ha presa dal padre, ma era il nonno paterno ad essere musicista. Da piccola poteva sentire le vecchie registrazioni del nonno, giocare coi suoi strumenti. Ma ora che è grande suo padre tiene queste cose come delle reliquie. E se prima rideva molto, ora ha smesso. E vuole che la figlia si trovi "un lavoro vero".
+            Una delle paure di {charNameOne} all'idea di andare a vivere in Islanda con Talco, è che possa diventare una "amica da ricorrenza" per le persone a cui vuol bene. Quel tipo di persona a cui tieni, ma che finisci per sentire una volta ogni tanto, giusto per le feste e i compleanni. E teme che diventare grandi significhi rimanere soli. E lei non vuole stare da sola.
         
     }
     
     {
         - first_char_main_storylets.ten:
-            {charNameOne} mi ha raccontato qualcosa di diverso. L'anno scorso assieme ad altr3 attivist3 ha protetto gli alberi di un parco per una settimana, alberi che il Comune voleva abbattere. E quando ha sentito gli alberi cantare nel silenzio, si è sentita viva. Poi sono arrivati i poliziotti, hanno arrestato tutt3, gli alberi son stati abbattuti, e {charNameOne} è tornata a sentirsi inutile.
+            {charNameOne} ha raccontato che l'amore non è come se lo aspettava. E soprattutto ora che le cose con Ennio si sono fatte solide, sembra un pane caldo, una cosa semplice. Lei ed Ennio passano molto tempo assieme, il sesso con lui è rassicurante. Lui ultimamente è più insofferente, sembra abbia bisogno di passare più tempo con lei. Ma {charNameOne} a volte si chiede se non stia rischiando di ritrovarsi su un treno fermo, senza sapere se sia fermo perché arrivato a destinazione, o perché non ripartirà più.
         
     }
 
     {
         - first_char_main_storylets.nine:
-            {charNameOne} pensa di non far schifo a parlare.
+            {charNameOne} ama scrivere comporre la notte, quando a casa tutt3 dormono. E sente la creatività come l'immergersi in un fiume, una "acqua antica" l'ha chiamata, che raccoglie tutte le storie del mondo. E quel posto, quell'acqua la rassicura, perché le dice che i problemi di tutti i giorni sono problemi che come persone abbiamo affrontato miliardi di volte, e siamo ancora qui. Questo le offre speranza.
         
     }
 
     {
         - first_char_main_storylets.eight:
-            È tornata a parlare del Ghiberti. Dice che sembra felice ma in realtà sorride come un robot. Ed è tornata sul discorso dell'errore. Secondo {charNameOne} l'errore serve per fare esperienza e comunità. Se non si sbaglia non si cresce. Se non si sbaglia non c'è occasione per il perdono. Nei numerini del Ghiberti per {charNameOne} c'è la morte.
+            {charNameOne} si trova molto bene con la sua famiglia, in particolare con suo padre, con cui può suonare e ubriacarsi. Tornare a vivere giù è una opzione, ma ha la sensazione di rischiare di viverla come un fallimento. E dice che teme di essere la persona che il contesto le permette di essere. Che le piace la persona che è ora, ma che non sa se le piacerebbe essere la persona che sarebbe se tornasse giù.
         
     }
 
     {
         - first_char_main_storylets.seven:
-            {charNameOne} ha ritirato fuori quel professore, il Ghiberti. E gli sta sulle scatole perché vede la musica come qualcosa di matematico. È una cosa che non le piace, perché rende l'idea che esistano errore e verità, e cito: "anche perché quelli pieni di verità hanno sempre finito per ammazzare quell3 come me e Talco."
+            Per la prima volta {charNameOne} ha parlato del suo litigio con Talco. Si erano ripromess3 di non aver figli, di non aver ostacoli al loro rapporto. Ma poi Talco è rimastə incintə, e ha deciso di trasferirsi in Islanda con il compagno, Thomas. E ha invitato {charNameOne} con ləi. Ma {charNameOne} è scappata a casa, ha fatto sesso con Ennio e pianto tutta la notte. Ma comunque, mesi dopo, Talco le ha inviato una foto dellə figliə con l'invito di nuovo a vivere con loro.
         
     } 
     
     {
         - first_char_main_storylets.six:
-            {charNameOne} mi ha raccontato la storia di questo ragazzo, Jonah. Un prodigio che dopo una carriera sfolgorante in Cina ha deciso di tornare in Italia, e le cose gli sono andate di merda. Non si capisce se ora mendichi, suoni per i ricchi, o lavori in un supermercato. Ma la storia di Jonah lascia una domanda a {charNameOne}: cosa fare quando si sa fare bene solo una cosa ma il mondo non permette di farla? Si accettano compromessi o si muore di fame? O si aspetta fino a quando non è il mondo a decidere per te?
+            {charNameOne} ha parlato della sua famiglia, quella d'adozione: le ragazze con cui vive. Hanno creato assieme un gruppo, La Rifugia, che praticamente è la sua casa dove ospitano persone che hanno bisogno di un tetto, fanno cose con associazioni migranti, proteste, raccolte fondi. E ha detto che l'arte può fare tanto per cambiare le cose. E che vorrebbe scrivere qualcosa così forte da spazzare tutta questa merda.
         
     }
 
     {
         - first_char_main_storylets.five:
-            {charNameOne} ama fare festa, ed è abituata ad essere circondata da persone. Vive con cinque amich3, e poi ci sono l3 ospiti. D'estate fanno le feste sul tetto dove suonano e cantano. Il silenzio di questo posto la fa star male, perché può sentire i propri pensieri.
+            {charNameOne} si è fatta delle domande su cosa sia casa, e sul suo rapporto con Ennio. Si chiede se Ennio, il fidanzato, possa essere il suo rifugio. Lo vede come un tipo ordinato, coi suoi ritmi un po' pedanti, e solido. Quando si è messa con lui, pensava che una persona così solida le avrebbe permesso di svolazzare dentro i suoi casini. Ora si chiede se lui non la stia ancorando a terra.
         
     } 
 
     {
         - first_char_main_storylets.four:
-            A {charNameOne} il silenzio pesa, e molto. Senza musica teme di sbroccare.
+            {charNameOne} ha raccontato delle dinamiche a lavoro, e di quando con le sue colleghe si è rifiutata si servire al ristorante un tizio di una compagnia petrolifera. E che ora stanno provando a creare un sindacato, anche se la situazione è incasinata perché hanno contratti di merda, ma sente il bisogno di fare qualcosa di grande.
         
     } 
     
     {
         - first_char_main_storylets.three:
-            Ogni persona vicina a {charNameOne} sembra avere un'idea su come lei dovrebbe vivere la sua vita. Anna, una delle sue amiche, insiste perché divenga assistete di un suo professore, tal Ghiberti. Olga vuole che metta su una band e sfondi per locali. Talco vuole che partecipi a qualche reality musicale. Ed Ennio pensa che abbia completamente sbagliato strada. Tutte queste persone sono famiglia per {charNameOne}, ed è frustrata perché qualsiasi scelta prenderà, delulderà qualcunə.
+            {charNameOne} ha parlato di fiducia, e in particolare del rapporto con Talco, che lə ha permesso di uscire da un brutto film mentale per imparare a guardare il mondo in modo diverso, tipo stendendosi in piazza o facendo sentire le persone anziane, importanti e ascoltate.
         
     }
     
     {
         - first_char_main_storylets.two:
-            {charNameOne} sembra davvero persa senza Talco. Da tanto non andava in giro senza di ləi. Di sicuro, sembra non avere in simpatia Mentore.
+            {charNameOne} sta iniziando a godersi il silenzio di questo luogo. Ha smesso di credere che sia una allucinazione, e si sta chiedendo se le coinquiline siano preoccupate. O se le colleghe siano nella merda per la sua assenza. E poi ha detto che vorrebbe comporre qualcosa, approfittando della situazione, perché sono settimane che riesce a creare nulla.
         
     }    
     
     {
         - first_char_main_storylets.one:
-            Ho conosciuto una persona nuova, si chiama {charNameOne}. Quando l'ho incontrata era preoccupata perché non riesce a trovare lə sua migliore amicə, Talco. Non le piace molto il suo nome, ha l'impressione che essere una {charNameOne} per una come lei, che ha fatto il conservatorio, significhi arrendersi. Quando mi ha chiesto che nome dovrebbe avere secondo me, non sono {player_pronouns has him:stato|{player_pronouns has her:stata|statə}} capace di darle una risposta.
+            C'è questa ragazza, si chiama {charNameOne}. Ha iniziato la conversazione chiedendo dove fosse lə suə migliore amə, Talco. Poi ha accennato al suo ragazzo, Ennio, e a un risotto allucinogeno coi funghi. E quando è {welcome: è arrivata Mentore|arrivato un fiore parlante} si è convinta che fosse un trip, e se ne è andata a cercare dell'acqua.
         
     }
     
