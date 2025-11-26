@@ -133,6 +133,15 @@
  
                     
                 - firstChar_ActualName has Violino:
+                    Tipo che vivo già con Ennio da due giorni.
+                    Il suo coinquilino non l'ha presa benissimo, ma ci stiamo guardando in giro per cercare un posto solo per noi.
+                    A casa vecchia hanno trovato una coinquilina in quindici secondi.
+                    Però sono spesso lì per le cose de La Rifugia.
+                    Ogni tanto guardo la cartolina di Talco, e mi chiedo cosa scriverlə.
+                    Ho l'impressione che non apprezzerebbe molto questa versione di me.
+                    Mentre a lavoro le colleghe più anziane hanno già iniziato a chiedermi: a quando un figlio?
+                    Credo che prima o poi ne inforchetto una, così la piantano.
+
                     
             }
         
@@ -225,7 +234,18 @@
                 Mi sono sentita completa.
                 
             - firstChar_ActualName has Violino:
-                
+                La situazione col coinquilino è estremamente tesa, e mi spiace tantissimo.
+                Ennio la prende sempre con la sua filosofia, ma sono giorni che non si parlano.
+                Ma non riusciamo a trovare una casa che una, soprattutto coi nostri stipendi.
+                L'alternativa è spostarci fuori dalla città.
+                E di molto.
+                E questo significherebbe mettere una croce sulla band, e sul La Rifugia.
+                Già ora Valeria mi scrive spesso che le manco.
+                Ma quando dico ad Ennio che esco, il suo sguardo è sempre più distaccato, quasi ferito.
+                L'altra sera stavamo guardando un film a letto e mi ha detto: "Non ti basto, vero?"
+                Gli ho detto che lo amo.
+                E lui mi ha risposto che non è la stessa cosa.
+                Ho lasciato che si addormentasse, e sono andata in bagno a piangere.
         }
     
     E lì invece? Come stanno le tue piante?
@@ -339,6 +359,32 @@
       
                 
             - firstChar_ActualName has Violino:
+                Sono passati mesi, spero che lì le cose vadano bene.
+                Qui... vanno.
+                No, non voglio essere negativa.
+                Alla fine abbiamo preso casa in provincia.
+                E non è male.
+                Ci sono tante passeggiate da fare, per esempio.
+                E c'è un silenzio che mi entra dentro e mi rassicura.
+                Ho iniziato a lavorare a un ristorante, conduzione familiare.
+                Lei una dea, lui un maniaco.
+                Credo che lo menerò abbastanza presto.
+                Settimana scorsa sono scesa a trovare i miei, e quando sono tornata, Ennio mi ha fatto trovare una sorpresa.
+                Il pezzettino di attico che abbiamo, trasformato in uno studiolo per la mia musica.
+                E lì, qualcosa mi è morto dentro.
+                Lo so, sono stronza.
+                Ma mi sono chiesta per la prima volta se davvero lui mi capisca.
+                Perché per me la musica non è una cosa da fare da sola.
+                Non è una cosa da mettere su Youtube.
+                E ho avuto questa immagine, da signora degli anni Cinquanta che suona il pianoforte per i colleghi del marito.
+                E avrei voluto urlare.
+                Abbiamo litigato.
+                Ma litigato pesante {player_name}.
+                E non me l'aspettavo.
+                Ora le cose sono più calme.
+                E l'altra sera dopo giorni abbiamo fatto di nuovo l'amore.
+                Ma ho fatto una piccola valigia, con le cose essenziali, e l'ho nascosta nello studiolo.
+                Mi serve qualcosa che mi ricordi che posso sempre andarmene.
                 
         }
 
