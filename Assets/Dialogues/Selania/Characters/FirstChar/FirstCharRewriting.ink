@@ -125,9 +125,13 @@
                 La cartolina è una porta aperta: Talco ti attende.
                {
                 - first_char_main_storylets.eleven: 
-                E ti ha già detto in passato che una buona relazione è una relazione scomoda.
-                Non aver paura del conflitto che avete avuto: l'amore è ancora lì, o non ti avrebbe mai riscritto.
+                    E ti ha già detto in passato che una buona relazione è una relazione scomoda.
+                    Non aver paura del conflitto che avete avuto: l'amore è ancora lì, o non ti avrebbe mai riscritto.
                }
+               {
+                    - cooking_with_first_char.first_theme:
+                        E già una volta ti sei riscostruita una vita, quando sei arrivata al Nord.
+                }
             
             + [Hai detto che quando rinunci a te creando, trovi tutto.]
                 -> color_variation_management(FirstCharacter, purpleC)->
@@ -174,6 +178,11 @@
                 Un innamorato che ti fa sentire solida.
                 Con cui hai potuto svolazzare, conoscerti al meglio.
                 {first_char_main_storylets.ten: Con cui puoi stare piacevolmente in silenzio.}
+                {
+                    - cooking_with_first_char.first_theme:
+                        E l'amore per Talco.
+                        Sei piena d'amore, non trovi?
+                }
                 
             + [Essere persone adulte significa sopravvivere alle proprie aspettative.]
                 -> color_variation_management(FirstCharacter, blueC)->
@@ -236,6 +245,14 @@
             + [Con La Rifugia ti sei data uno scopo più grande.]
                 -> color_variation_management(FirstCharacter, purpleC)->
                E anche le tue amiche che sono tornate nei paesini, hanno fatto grandi cose.
+               {
+                    - cooking_with_first_char.second_theme:
+                       E sei stata tu a dirmi che bisogna perdornarsi in queste situazioni.
+                       Sbagliare.
+                       Provare cose nuove.
+                       <i>Più gorgonzola, meno poliziott3.</i>
+                       Ricordi?
+                }
 
             + [Con le tue colleghe stai portando la lotta grande in qualcosa di piccolo.]
                 -> color_variation_management(FirstCharacter, redC)->
@@ -251,6 +268,9 @@
                 }
                 {
                     - cooking_with_first_char.first_theme: E recuperano quel pezzo di paradiso di quando eri piccola.
+                }
+                {
+                    - cooking_with_first_char.second_theme: Partendo dal piccolo, dalle cose che vedi come raccontavi in cucina.
                 }
             -
                 ~ numberQuestion ++
