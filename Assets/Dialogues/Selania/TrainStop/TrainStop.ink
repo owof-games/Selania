@@ -434,106 +434,92 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+        Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:unknown
         Cioè a te.
         Anche se non ho mica capito come te la mando la lettera.
-        Ma come sta la rana?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
+        Ma come sta la rana?#
         Hai scoperto poi se è elettrica?
             
             {
-                - secondChar_ActualName has Riccio:
-                    
-                    Qui le cose sono strane.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    Forse perché sono uguali a prima.
-                    Ora passo più tempo in camera.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
-                    Papà è contento perché dice che non rompo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    Mamma è preoccupata perché vuole che gioco con gli altri.
-                    A volte guardo fuori dalla finestra e basta.
-                    E vado a letto e non correggo più nulla.
-                    Mi addormento, e aspetto.
-                    A volte voglio tornare lì da voi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
-                    Ma non so cosa fare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    La prof di matematica mi guarda male.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_angry
-                    Ci sentiamo {player_name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    
+
                 - secondChar_ActualName has Grizzly:
                     
-                    Oggi per la prima volta ho litigato con papà.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_angry
+                    Oggi per la prima volta ho litigato con papà.
                     Nel senso che non è stato mica lui a cominciare ma io.
                     Ha cercato di picchiarmi e gli ho urlato che è un bullo.
                     E poi ho preso i miei libri e glieli ho tirati contro.
                     Lui si è arrabbiato così tanto, {player_name}!
                     E allora ho urlato.
                     Urlato come un orso.
-                    Che si dice che ho bramito quindi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
-                    E lui se ne è andato sbattendo la porta, urlando a mamma che ha tirato su un deficiente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_angry
+                    Che si dice che ho bramito quindi.
+                    E lui se ne è andato sbattendo la porta, urlando a mamma che ha tirato su un deficiente.
                     Però sono felice perché ho meno paura ora.
-                    Mamma mi guarda strano.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
-                    Ma so che tu mica mi avresti guardato così.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
+                    Mamma mi guarda strano.
+                    Ma so che tu mica mi avresti guardato così.
                     Salutami la rana!
                     
                 - secondChar_ActualName has Lupo:
                     
-                    L'altro giorno ho parlato con l'amico di mio fratello.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    L'altro giorno ho parlato con l'amico di mio fratello.
                     Gli ho detto che per me siamo un branco ma che secondo me lui mica mi ci vede in questo branco.
                     E lui mi ha detto una cosa strana.
                     Che non ce l'ha con me.
-                    Ma che non sa parlare coi bambini.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
-                    Allora gli ho detto di non parlarmi come un bambino.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    Che so cosa sono i lupi, le frazioni, l'elettricità.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
-                    Lui ha riso e mi ha detto: "Ma sai creare un muffin?".#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    Ma che non sa parlare coi bambini.
+                    Allora gli ho detto di non parlarmi come un bambino.
+                    Che so cosa sono i lupi, le frazioni, l'elettricità.
+                    Lui ha riso e mi ha detto: "Ma sai creare un muffin?".
                     E mi ha insegnato a fare i muffin.
-                    Mi sono divertito tanto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
+                    Mi sono divertito tanto.
                     E voglio portartene uno.
                   
     
                 - secondChar_ActualName has Delfino:
                     
-                    A scuola sto finendo tantissimo nei guai.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
-                    Ho iniziato a fare qualche dispetto ai bambini prepotenti.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_angry
+                    A scuola sto finendo tantissimo nei guai.
+                    Ho iniziato a fare qualche dispetto ai bambini prepotenti.
                     Secondo me hanno funzionato, ma le maestre si sono arrabbiate.
-                    Soprattutto per l'inchiostro sulle loro scarpe.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
-                    Ma non è colpa mia se si sono messe in mezzo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_angry
-                    Però mi sono fatto due nuovi amici, e l'altro giorno abbiamo passato mezz'ora in castigo assieme.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
-                    Quando la maestra di matematica è tornata e ha trovato la stanza tutta legata con lo spago, ha detto una parolaccia grossa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
+                    Soprattutto per l'inchiostro sulle loro scarpe.
+                    Ma non è colpa mia se si sono messe in mezzo!
+                    Però mi sono fatto due nuovi amici, e l'altro giorno abbiamo passato mezz'ora in castigo assieme.
+                    Quando la maestra di matematica è tornata e ha trovato la stanza tutta legata con lo spago, ha detto una parolaccia grossa.
                     Ma grossa grossa.
                     Quando l'ho ridetta a mio fratello è scoppiato a ridere.
-                    Ma forse qui non te la scrivo, per ora.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    Ma forse qui non te la scrivo, per ora.
                    
                     
                 - secondChar_ActualName has Capibara:
                     
-                    Ieri ho avuto una conversazione da grandi con mio fratello.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    Me l'ha fatta perché ho chiamato il suo amico "frocio" quando mi ha sgridato.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
+                    Ieri ho avuto una conversazione da grandi con mio fratello.
+                    Me l'ha fatta perché ho chiamato il suo amico "frocio" quando mi ha sgridato.
                     E non avevo fatto nulla di male.
-                    A parte mettere della tempera nel suo frullatore.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
-                    Mio fratello mi ha spiegato perché fa male quella parola.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
-                    E perché papà la usa quando è arrabbiato.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    A parte mettere della tempera nel suo frullatore.
+                    Mio fratello mi ha spiegato perché fa male quella parola.
+                    E perché papà la usa quando è arrabbiato.
                     Mi ha detto che tantissime persone usano quella parola come scusa per fare del male ad altre persone.
                     E lo fanno perché hanno paura.
-                    E poi mi ha portato in una associazione che serve per chi è come mio fratello o il suo amico e non vuole più avere paura.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
+                    E poi mi ha portato in una associazione che serve per chi è come mio fratello o il suo amico e non vuole più avere paura.
                     E io non avevo mai capito che si possono fare tutte queste cose assieme.
-                    Mi è dispiaciuto tantissimo aver fatto male al suo amico.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
-                    Però sono anche contento che mi hanno detto le cose per bene dopo tutti questi anni.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    E tu hai paura di alcune persone?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_angry
+                    Mi è dispiaciuto tantissimo aver fatto male al suo amico.
+                    Però sono anche contento che mi hanno detto le cose per bene dopo tutti questi anni.
+                    E tu hai paura di alcune persone?
                     
                     
                 - secondChar_ActualName has Corvo:
                     
-                    L'altro giorno ho detto a mamma e papà che voglio diventare un veterinario.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
+                    L'altro giorno ho detto a mamma e papà che voglio diventare un veterinario.
                     Per studiare e salvare gli animali.
-                    Mamma ha detto che allora forse dovrei diventare un etologo (questo l'ho fatto scrivere a lei, che però vuole sapere chi sei, è preoccupata).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
-                    Quando poi ne ho parlato con mio fratello, mi ha detto che questa estate se voglio mi fa conoscere una persona che fa una cosa bellissima: salva gli animali dai laboratori.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
-                    Mio fratello dice che studiare è importante, ma che per cambiare le cose devo capire come lottare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
+                    Mamma ha detto che allora forse dovrei diventare un etologo (questo l'ho fatto scrivere a lei, che però vuole sapere chi sei, è preoccupata).
+                    Quando poi ne ho parlato con mio fratello, mi ha detto che questa estate se voglio mi fa conoscere una persona che fa una cosa bellissima: salva gli animali dai laboratori.
+                    Mio fratello dice che studiare è importante, ma che per cambiare le cose devo capire come lottare.
                     Avevo capito che dovevo lasciarla via la rabbia, {player_name}.
                     Ma lui mi dice che la rabbia serve.
-                    Va solo mandata nella giusta direzione.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    Va solo mandata nella giusta direzione.
                     Ti scriverò appena scopro qual è quella giusta e quale è quella sbagliata.
                 
             }
             
-            PS: come sta {mentorName}? Mi spiace per come l'ho trattata mentre ero lì, sai?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
-            Ma non dirglielo. Per ora per lo meno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+            PS: come sta {mentorName}? Mi spiace per come l'ho trattata mentre ero lì, sai?
+            Ma non dirglielo. Per ora per lo meno.
             Ciao!
 
         {
@@ -549,107 +535,93 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        Che strano.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
+        Che strano.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:unknown
         Ho lasciato l'altra lettera sul comodino di notte.
         E poi è sparita.
         Non so mica se ti è arrivata.
-        O se papà l'ha buttata.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_angry
+        O se papà l'ha buttata.
             
             {
-                - secondChar_ActualName has Riccio:
-                
-                    Le cose a scuola vanno male.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    L'altro giorno ho picchiato un bambino perché mi ha chiamato "strano".
-                    E l'ho spinto dalle scale.
-                    Ora sono in sospensione, a casa.
-                    Papà è sparito da due giorni.
-                    Mamma piange in camera.
-                    Io non so come mi sento.
-                    Però ho ripreso a fare esperimenti.
-                    In un vecchio libro un bambino disegnava la porta sul muro, e andava in un altro mondo.
-                    Forse se trovo il modo posso tornare da voi.
-                    Mi mancate.
-                    Ciao.
-    
+
                 - secondChar_ActualName has Grizzly:
                 
-                    Se l'ha buttata urlo di nuovo, vediamo che mi dice poi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_angry
-                    Però ti dovevo dire questa cosa: sono nella squadra di calcio.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    Non sono mica bravo, sinceramente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
-                    Questa roba delle forza e della velocità non è roba mia proprio.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    Però dice l'allenatore che ho strategia.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
-                    Mamma me l'ha fatto fare perché dice che devo scaricare tutta questa "rabbia da ragazzino".#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    Se l'ha buttata urlo di nuovo, vediamo che mi dice poi.
+                    Però ti dovevo dire questa cosa: sono nella squadra di calcio.
+                    Non sono mica bravo, sinceramente.
+                    Questa roba delle forza e della velocità non è roba mia proprio.
+                    Però dice l'allenatore che ho strategia.
+                    Mamma me l'ha fatto fare perché dice che devo scaricare tutta questa "rabbia da ragazzino".
                     E non mi chiama più bambino.
                     Negli spogliatoi ci sono state delle risse.
-                    Ho dato un pugno straforte a uno più grande.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_angry
-                    E ora a scuola non mi rompono più le scatole.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
-                    Se qualcuno ti rompe le scatole {player_name} chiamami.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    E ti aiuto io.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
+                    Ho dato un pugno straforte a uno più grande.
+                    E ora a scuola non mi rompono più le scatole.
+                    Se qualcuno ti rompe le scatole {player_name} chiamami.
+                    E ti aiuto io.
                     Ciao!
     
                 - secondChar_ActualName has Lupo:
                 
-                    Ma non credo: le cose negli ultimi giorni vanno meglio.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    Con l'amico di mio fratello ho fatto dei muffin per lui e mamma.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
-                    E poi gli ho detto che mi dispiace quando litigano.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
-                    E che ho capito che essere grandi fa schifo, ma che ci sono anche cose belle.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
+                    Ma non credo: le cose negli ultimi giorni vanno meglio.
+                    Con l'amico di mio fratello ho fatto dei muffin per lui e mamma.
+                    E poi gli ho detto che mi dispiace quando litigano.
+                    E che ho capito che essere grandi fa schifo, ma che ci sono anche cose belle.
                     Come andare al mare.
-                    Mamma si è messa a piangere.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
-                    Papà è stato in silenzio tantissimo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    Mamma si è messa a piangere.
+                    Papà è stato in silenzio tantissimo.
                     E ho iniziato a pensare che mi avrebbe picchiato.
-                    Invece ha detto: domani si fa vacanza e si va a nuotare tutti assieme.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
+                    Invece ha detto: domani si fa vacanza e si va a nuotare tutti assieme.
                     Mamma l'ha abbracciato, e si è mangiata un intero muffin.
-                    Ti dico poi come è andata!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    Ti dico poi come è andata!
                     A presto.
                     
                 - secondChar_ActualName has Delfino:
                 
-                    In questi giorni ho ripreso a dire delle bugie.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
+                    In questi giorni ho ripreso a dire delle bugie.
                     Ma invece di dirle piccole, le sto dicendo grandissime.
-                    E questa cosa fa divertire i miei nuovi amici.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
+                    E questa cosa fa divertire i miei nuovi amici.
                     E anche qualche maestra.
                     Mamma dice che da grande devo fare il comico.
-                    Papà è banale e dice che devo fare il politico.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    Mio fratello è preoccupato, perché teme che mi metto nei pasticci.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
-                    Gioco: una di queste cose che ho detto non è vera.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
+                    Papà è banale e dice che devo fare il politico.
+                    Mio fratello è preoccupato, perché teme che mi metto nei pasticci.
+                    Gioco: una di queste cose che ho detto non è vera.
                     Tu lo capisci quale?
-                    Salutami la rana!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
+                    Salutami la rana!
                     <b>{charNameTwo}</b>.
                     
                 - secondChar_ActualName has Capibara:
                 
-                    Dopo che gli ho detto che lui usa quella parola con mio fratello perché ha paura, non mi parla più.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    Dopo che gli ho detto che lui usa quella parola con mio fratello perché ha paura, non mi parla più.
                     Mamma dice che lui ha paura di tutte le cose, ma non lo sa dire.
                     Le ho detto che ci sono delle associazioni.
-                    Lei ha sorriso e mi ha detto che sto davvero diventando grande.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
-                    Però continuo a pensarci a questa cosa delle associazioni.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    Tu lo sai che io ho paura per gli animali.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
-                    E mi hai insegnato che le cose si affrontano con gli amici.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    Lei ha sorriso e mi ha detto che sto davvero diventando grande.
+                    Però continuo a pensarci a questa cosa delle associazioni.
+                    Tu lo sai che io ho paura per gli animali.
+                    E mi hai insegnato che le cose si affrontano con gli amici.
                     Magari non sono bravo a farmi degli amici, ma sono bravo a parlare degli animali.
                     E forse ci riesco a fare qualcosa così, come mio fratello fa per i suoi amici.
                     Devo solo capire cosa.
-                    Vorrei tanto chiederlo alla rana.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
-                    Salutamela!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    Vorrei tanto chiederlo alla rana.
+                    Salutamela!
                 
                 - secondChar_ActualName has Corvo:
                 
-                    Ultimamente parliamo di più.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    Ultimamente parliamo di più.
                     Gli piace parlare di politica.
                     Secondo me dice cose stupide, ma forse nelle sue cose stupide c'è lui, le sue paure.
                     Almeno così dice l'amico di mio fratello.
                     Oggi siamo stati da nonna.
                     Ho dovuto insistere perché avevano paura che ci rimanevo male.
                     Si no boh.
-                    Mi è spiaciuto quando non mi ha riconosciuto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
-                    Però è sempre la nonna.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
-                    Quando mamma ha parlato con l'infermiera ho preso un mazzo di carte.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    Mi è spiaciuto quando non mi ha riconosciuto.
+                    Però è sempre la nonna.
+                    Quando mamma ha parlato con l'infermiera ho preso un mazzo di carte.
                     Era sporco e mancava l'asso di picche.
-                    Ma nonna ha ricordato tutti i trucchi e mi ha stracciato.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
-                    Stammi bene!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    Ma nonna ha ricordato tutti i trucchi e mi ha stracciato.
+                    Stammi bene!
                     <b>{charNameTwo}</b>.
             }
-            PS: mi piace mettere i PS, su internet non ci sono.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-            PPS: ma sono arrivate persone nuove poi? Qualcuna con dei dolci magari?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
+            PS: mi piace mettere i PS, su internet non ci sono.
+            PPS: ma sono arrivate persone nuove poi? Qualcuna con dei dolci magari?
         
         {
             - two == 1:
@@ -664,31 +636,13 @@
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        Ciao {player_name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+        Ciao {player_name}.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:unknown
                 
                 {
-                - secondChar_ActualName has Riccio:
-                    
-                    Ti scrivo da casa di mio fratello.
-                    Novità: ora vivo qui!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
-                    All'inizio il suo amico non era contento, ma ora mi insegna anche a fare i dolci!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
-                    Fa anche delle caramelle superbuone.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
-                    Papà non è più tornato.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    Mamma non ha nemmeno fatto storie quando me ne sono andato.
-                    Non mi sento mica felice.
-                    Sì no boh.
-                    Che cosa strana da scrivere.
-                    Però le cose sono diverse.
-                    A volte abbasso le spine.
-                    A volte mi addormento sul divano mentre guardo i telefilm con mio fratello.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
-                    E non ho mica paura.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    Spero che tu non abbia paura.
-                    Salutami {mentorName}.
-                    Ti voglio bene.
-                    
+     
                 - secondChar_ActualName has Grizzly:
                     
-                    Sono SUPER ARRABBIATO.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_angry
+                    Sono SUPER ARRABBIATO.
                     CON MIO FRATELLO.
                     Non avevamo mai litigato, mai.
                     Ma l'altro giorno è venuto a casa e mi ha detto che sto diventando come papà.
@@ -699,19 +653,19 @@
                     E che non sono una checca come lui.
                     Lui mio fratello.
                     Non sono mica abituato a mio padre così.
-                    Ma poi in camera mi è preso male tutto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
+                    Ma poi in camera mi è preso male tutto.
                     Mi manca mio fratello.
                     Mi mancate voi.
                     Vorrei sapere cosa fare.
                     
                 - secondChar_ActualName has Lupo:
                     
-                    Oggi sono triste, e non so perché.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
+                    Oggi sono triste, e non so perché.
                     Ho dato un pugno a un ragazzo delle medie, ma non mi è mica piaciuto.
-                    A casa le cose vanno bene, ma.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    A casa le cose vanno bene, ma.
                     Sì no boh.
                     Mica pensavo che è così faticoso.
-                    Mamma e papà sono tranquilli solo se siamo assieme.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
+                    Mamma e papà sono tranquilli solo se siamo assieme.
                     Mi sembra un lavoro.
                     E se sono giù si preoccupano tantissimo.
                     E se si preoccupano tornano a litigare.
@@ -722,61 +676,61 @@
                     
                 - secondChar_ActualName has Delfino:
                     
-                    Se non l'hai capito nell'ultima lettera solo l'ultima frase non era vera: tutte le altre lo erano.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
+                    Se non l'hai capito nell'ultima lettera solo l'ultima frase non era vera: tutte le altre lo erano.
                     Però è successa una cosa divertente, {player_name}!
                     La prof di matematica mi ha detto che le mie bugie sono storie.
                     E che le storie sono da conservare.
                     E quindi abbiamo aperto assieme a altri bambini un giornale della scuola.
                     Faremo uscire per tutto il resto dell'anno i nostri racconti e le notizie.
-                    Mi ha solo chiesto di non scrivere più quella parolaccia che lei ha detto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    Mi ha solo chiesto di non scrivere più quella parolaccia che lei ha detto.
                     E di non dire niente sulla preside o si arrabbia.
-                    E allora ti saluto dicendoti quella parolaccia, perché poi non la potrò più scrivere.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
-                    "Per il catarro del cammello!"#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
-                    Che schifo, {player_name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    Ma lì ci sono i cammelli?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
-                    Un saluto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
+                    E allora ti saluto dicendoti quella parolaccia, perché poi non la potrò più scrivere.
+                    "Per il catarro del cammello!"
+                    Che schifo, {player_name}.
+                    Ma lì ci sono i cammelli?
+                    Un saluto.
                     <b>{charNameTwo}</b>.
                     
                 - secondChar_ActualName has Capibara:
         
-                    Questo cervellino (il mio cervellino) ha trovato una soluzione.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
-                    Ho parlato con la prof di matematica, e le ho detto delle mie paure.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    Questo cervellino (il mio cervellino) ha trovato una soluzione.
+                    Ho parlato con la prof di matematica, e le ho detto delle mie paure.
                     Degli animali che spariscono, dei boschi che bruciano.
                     Dei ghiacciai.
                     Lei mi ha detto che possiamo raccogliere dei soldi ma sì no boh.
                     Io pensavo all'associazione di mio fratello e del suo fidanzato, e loro insegnano a non avere paura non a spendere soldi.
-                    Allora mi ha fatto fare una lezione in classe su queste cose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
-                    Ho spiegato le paure.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    Allora mi ha fatto fare una lezione in classe su queste cose.
+                    Ho spiegato le paure.
                     E poi ho detto che se ci mettiamo assieme ci sono anche le soluzioni.
                     Alcuni compagni hanno detto che ci possiamo trovare nel campetto il pomeriggio.
-                    E quindi forse qualcosa sta iniziando, {player_name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
-                    Non so cosa faremo, però è bello non farlo da solo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
-                    E vorrei tanto tu fossi qui con me, ora.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    Secondo me ci diresti tantissime cose sagge.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
+                    E quindi forse qualcosa sta iniziando, {player_name}.
+                    Non so cosa faremo, però è bello non farlo da solo.
+                    E vorrei tanto tu fossi qui con me, ora.
+                    Secondo me ci diresti tantissime cose sagge.
                     Salutami la rana.
                     <b>{charNameTwo}</b>.
                 
                 - secondChar_ActualName has Corvo:
                 
-                    Ieri è successa una cosa fighissima.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
+                    Ieri è successa una cosa fighissima.
                     Ti ricordi quell'amica di mio fratello, che dovevo conoscere al mare?
-                    Sta da tre giorni da lui perché dice che è stata buttata fuori di casa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
-                    E mi ha raccontato tante cose che mica sapevo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
-                    Cose brutte che vengono fatte agli animali.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_angry
-                    Ma, {player_name}: non aveva paura.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    Sta da tre giorni da lui perché dice che è stata buttata fuori di casa.
+                    E mi ha raccontato tante cose che mica sapevo.
+                    Cose brutte che vengono fatte agli animali.
+                    Ma, {player_name}: non aveva paura.
                     Lei dice che sono sveglio, e che per questo non devo avere paura perché posso capire tutto.
                     E che magari un giorno trovo un modo per salvare gli animali.
-                    Mi ha regalato un romanzo di Ursula LeGuin (ho dovuto guardare la copertina, è un nome difficile).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy
+                    Mi ha regalato un romanzo di Ursula LeGuin (ho dovuto guardare la copertina, è un nome difficile).
                     Non sapevo di potere imparare cose dai romanzi.
                     Oggi ho chiesto alla maestra di matematica di darmi dei libri sull'ambiente.
-                    Ci sono così tante cose da imparare, {player_name}, così tante!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
-                    Spero ci vedremo presto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_neutral
+                    Ci sono così tante cose da imparare, {player_name}, così tante!
+                    Spero ci vedremo presto.
                     Salutami la rana!
                     <b>{charNameTwo}</b>.
                     
             }
         
-        PS: Ma poi hai scoperto cos'è quella statua nella foresta?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_energy   
+        PS: Ma poi hai scoperto cos'è quella statua nella foresta? 
         PPS: Ho un segreto che riguarda la serra, ma te lo dirò con la prossima lettera! Ciao ciao!
         
         {
