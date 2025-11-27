@@ -326,20 +326,21 @@
     
     = ending
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
     
     Per questo ti dico:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             {
                 - firstChar_storyStatus != story_storyEnded:{player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }    
      
-        + [Diventa il più forte, il più coraggioso.]
+        + (red)[Diventa il più forte, il più coraggioso.]
             Sei un testardo, bugiardo, dispettoso.
             Queste cose unite possono renderti indistruttibile.
             E di cosa avrà mai paura un ragazzo indistruttibile?
                     -> color_variation_management(SecondCharacter, redC)->
     
-        + [Tutti abbiamo paura. Condividi questa paura con le altre persone.]
+        + (purple)[Tutti abbiamo paura. Condividi questa paura con le altre persone.]
             Falle sentire meno sole.
             Meno sbagliate.
             A quel punto saranno pronte a fare il passo.
@@ -347,18 +348,18 @@
             Assieme.
                    -> color_variation_management(SecondCharacter, purpleC)->
 
-        + [L'opposto della paura è la curiosità.]
+        + (yellow)[L'opposto della paura è la curiosità.]
             E tu sei il ritratto della curiosità.
             Guarda le cose che arriveranno chiedendoti "Chissà se..." o "E se invece..." o "Perché accade questo?".
             E a quel punto ogni paura diventerà solo un problema da risolvere.
                    -> color_variation_management(SecondCharacter, yellowC)->
                 
-        + [I tuoi genitori sono spaventati, aiutatevi a vicenda.]
+        + (green)[I tuoi genitori sono spaventati, aiutatevi a vicenda.]
             Nessuna persona può cambiare il mondo da sola.
             Ma possiamo partire dal cambiare le cose che ci circondano, un pezzo alla volta.
                    -> color_variation_management(SecondCharacter, greenC)->
       
-        + [Con la tua intelligenza puoi rendere il mondo migliore.]
+        + (blue)[Con la tua intelligenza puoi rendere il mondo migliore.]
             Puoi aiutare gli adulti a essere meno tristi.
             E gli animali a non morire.
             E tua nonna a uscire dalla casa dei vecchi.
@@ -374,7 +375,24 @@
     Un animale che mi piace.
     Un animale che un po' è me.
     E lo voglio come mio nuovo nome.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-    
+            {
+                - ending.red:
+                    
+                
+                - ending.purple:
+                    
+
+                - ending.yellow:
+                    
+
+                - ending.green:
+                    
+
+                - ending.blue:
+                    
+
+            }
+
             //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
                 -> color_modifier(SecondCharacter, secondChar_colorVariation) ->
             
@@ -392,10 +410,22 @@
         {
 
             - secondChar_ActualName has Grizzly:
+                    {
+                        - ending.red:
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                        - else:
+                            Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                    }
                 Il mio vero nome è <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 Combatterò la mia paura e diventerò il più forte di tutti, imbattibile!
             
             - secondChar_ActualName has Lupo:
+                    {
+                        - ending.green:
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                        - else:
+                            Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                    }
                 Mi chiamerò <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 E proteggerò il mio branco.
                 Mamma, papà, nonna e mio fratello.
@@ -403,12 +433,24 @@
               
             
             - secondChar_ActualName has Delfino:
+                    {
+                        - ending.yellow:
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                        - else:
+                            Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                    }
                 E il mio nome è <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Se lo guardi bene tutto è un gioco.
                 La mia fantasia e le mie bugie aiuteranno le altre persone ad avere meno paura.
                                
             
             - secondChar_ActualName has Capibara:
+                    {
+                        - ending.purple:
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                        - else:
+                            Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                    }
                 Mi chiamerò <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                 E imparerò ad avere tantissimi amici.
                 Ci sentiremo meno soli!
@@ -416,6 +458,12 @@
                     
             
             - secondChar_ActualName has Corvo:
+                    {
+                        - ending.blue:
+                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                        - else:
+                            Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                    }
                 Io sono <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Sono sveglio e posso capire ciò che mi circonda!
                 E posso cambiare le cose che mi fanno paura.
@@ -447,8 +495,7 @@
         Mi ricorda mamma quando gira per casa dando consigli e dicendo cose sorridendo.
         E poi si rinchiude in camera e resta in silenzio per ore.
         Per me non sta mica bene.
-    
-            
+
             -> close
             
     = exit
