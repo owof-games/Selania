@@ -10,11 +10,14 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        + [Ci sto!]
+    Quando cuciniamo? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+    Quando cuciniamo? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_energy
+    Cuciniamo ora?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_emotional
+
+        + [Iniziamo!]
             -> cooking_with_second_char
         
-        + [Ci penso un attimo.]
+        + [Ti chiedo ancora un attimo {charNameTwo}.]
             -> main
   
  
@@ -29,49 +32,41 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{secondChar_tag()} #
     -> storage_colors(SecondCharacter)->
     -> cooking_animations_on ->
     
-Iniziamo proponendo a Riccio di parlare di un tema.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le condizioni saranno valide (sostanzialmente: se almeno una volta abbiamo parlato di quel tema).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+    Sai {charNameTwo}, mentre cuciniamo potremmo parlare un po'.
+    In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...
 
     - (top)
-    + [Parliamo di relazioni.]
-            {
-                - second_char_main_storylets.three:
+
+            + [Parliamo di animali.]
                     -> first_theme
-                
-                - else:
-                    Preferirei raccontarti ancora di qualcosa di mio prima di farlo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    -> top
-            }
-        
-        + [Parliamo di avere una vita con uno scopo.]
-            {
-                - second_char_main_storylets.five:
-                    -> second_theme
-                
-                - else:
-                    Preferirei raccontarti ancora di qualcosa di mio prima di farlo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    -> top
-            }
-        
-        + [Parliamo di creatività.]
-            {
+                    
             
-                - second_char_main_storylets.seven:
-                    -> third_theme
+            + [{second_char_main_storylets.five: Della tua famiglia.|<i>{player_name} deve parlare ancora con {charNameTwo} per sbloccare questo tema.</i>}]
+                {
+                    - second_char_main_storylets.five:
+                        -> second_theme
+                    
+                    - else:
+                        -> top
+                }
+            
+            + [{second_char_main_storylets.seven: Delle bugie.|<i>{player_name} deve parlare ancora con {charNameTwo} per sbloccare questo tema.</i>}]
+                {
                 
-                - else:
-                    Preferirei raccontarti ancora di qualcosa di mio prima di farlo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                    -> top
-            }
-        
-        + [Ho cambiato idea.]
+                    - second_char_main_storylets.seven:
+                        -> third_theme
+                    
+                    - else:
+                        -> top
+                }
+            
+            + [Ho cambiato idea.]
             -> main
 
     
     = first_theme
-        Il tema scelto è il numero uno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Riccio parla.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Possiamo fare una di queste cinque scelte.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        Prima qualcosa di più generico sugli animali.
+
             + [Scelta blu]
                 -> color_variation_management(SecondCharacter, blueC)->
                
@@ -87,8 +82,8 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
             + [Scelta viola]
                -> color_variation_management(SecondCharacter, purpleC)->
             -    
-        A questo punto è Riccio a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.
-        Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        
+
             {
                 - not cooking_with_first_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
@@ -108,8 +103,10 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
                 ~ kitchen_recipeNoun = "Sostantivo E"
             -  
         Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Riccio dice un'altra cosa sul tema che stiamo esplorando.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Noi rispondiamo una di queste cinque cose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        
+        Poi ci dice che gli piacciono gli animali perché sono prevedibili. E che non sono cattivi, quella è una roba delle persone.
+        E che le persone non le capisce, ma gli animali sì.
+
             + [Scelta blu]
                 -> color_variation_management(SecondCharacter, blueC)->
                
@@ -126,7 +123,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
                -> color_variation_management(SecondCharacter, purpleC)->
             -
         Riccio allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Step due: aggettivi (es: saporito, triste, colorato).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        
             + [Aggettivo A]
                 ~ kitchen_recipeAdjective = "Aggettivo A"
                
@@ -144,8 +141,9 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
             -      
     
         Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Riccio condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Noi diciamo per la terza volta qualcosa legato a quel tema.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        Ci dice che capire le cose lo fa stare bene, al sicuro.
+        Ci fa degli esempi.
+        Ci dice che a volte per capire le persone le associa a degli animali, ci fa degli esempi, e la cosa funziona.
             + [Scelta blu]
                 -> color_variation_management(SecondCharacter, blueC)->
                
@@ -162,8 +160,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
                -> color_variation_management(SecondCharacter, purpleC)->
             -
         
-        Riccio ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Step tre: complementi (es: del campo, per rimbecco, di coriandolo)#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        Riccio ci chiede che animale ci sentiamo.
             + [Complemento A]
                 ~ kitchen_recipeComplement = "Complemento A"
                
@@ -183,9 +180,10 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
             -> fourth_ingredient_dispatcher
     
     = second_theme
-         Il tema scelto è il numero uno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Riccio parla.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Possiamo fare una di queste cinque scelte.
+        
+        Qui ci dice che quando parla della sua famiglia di solito dice che è molto bella e che si amano tutti.
+        Un po' perché odia quando le maestre lo trattano con pietà, un po' perché ha visto cosa hanno fatto a (nome marocchino femminile) gli assistenti sociali, e lui non vuole che gli portino via la famiglia (valuta se ha senso).
+
             + [Scelta blu]#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 -> color_variation_management(SecondCharacter, blueC)->
                
@@ -202,7 +200,6 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
                -> color_variation_management(SecondCharacter, purpleC)->
             -    
         A questo punto è Riccio a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         
             {
                 - not cooking_with_first_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -224,8 +221,10 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
                 ~ kitchen_recipeNoun = "Sostantivo E"
             -  
         Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Riccio dice un'altra cosa sul tema che stiamo esplorando.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Noi rispondiamo una di queste cinque cose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        
+        Qui ci dice che sa che la sua non è la famiglia migliore del mondo.
+        Ma che il tempo che ha da solo gli permette di fare esperimenti e prove.
+        E ci racconta cose assurde che ha fatto (aka: quelle da piccolo che ho fatto con il Meccano e via di seguito.)
             + [Scelta blu]
                 -> color_variation_management(SecondCharacter, blueC)->
                
@@ -242,7 +241,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
                -> color_variation_management(SecondCharacter, purpleC)->
             -
         Riccio allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Step due: aggettivi (es: saporito, triste, colorato).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+
         
             + [Aggettivo A]
                 ~ kitchen_recipeAdjective = "Aggettivo A"
@@ -261,8 +260,11 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
             -      
     
         Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Riccio condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Noi diciamo per la terza volta qualcosa legato a quel tema.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        
+        Qui ci parla dello stare al sicuro.
+        Che il suo problema non sono i litigi, ma non il sentirsi al sicuro.
+        Che è felice quando sta da suo fratello, ma si agita anche lì se litiga col suo amico.
+
             + [Scelta blu]
                 -> color_variation_management(SecondCharacter, blueC)->
                
@@ -303,9 +305,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
     
     
     = third_theme
-         Il tema scelto è il numero uno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Riccio parla.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Possiamo fare una di queste cinque scelte.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        Qui parte sulla difensiva.
             + [Scelta blu]
                 -> color_variation_management(SecondCharacter, blueC)->
                
@@ -321,9 +321,8 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
             + [Scelta viola]
                -> color_variation_management(SecondCharacter, purpleC)->
             -    
-        A questo punto è Riccio a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Step uno: sostantivi (es: Patate, bellezza, calcestruzzo).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        
+        E poi ci chiede se le bugie sono sempre sbagliate.
+        Potrebbe essere carino fare in modo che se lo ricordi da qualche parte.
             {
                 - not cooking_with_first_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
@@ -344,8 +343,14 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
                 ~ kitchen_recipeNoun = "Sostantivo E"
             -  
         Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Riccio dice un'altra cosa sul tema che stiamo esplorando.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Noi rispondiamo una di queste cinque cose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        
+        Ci dice che ha imparato a mentire a scuola, perché è l'unico modo che ha trovato per avere attenzioni.
+        Ma il problema è che la cosa gli è sfuggita di mano, ne racconta di assurde, e ora ha un soprannome per questa cosa.
+        E che gli servono anche per uscire dai casini.
+        Ma a volte le bugie incolpano persone che non c'entrano nulla, e questo gli dispiace.
+        Gli scappano e manco ci fa caso.
+
+
             + [Scelta blu]
                 -> color_variation_management(SecondCharacter, blueC)->
                
@@ -362,7 +367,7 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
                -> color_variation_management(SecondCharacter, purpleC)->
             -
         Riccio allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Step due: aggettivi (es: saporito, triste, colorato).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+
             + [Aggettivo A]
                 ~ kitchen_recipeAdjective = "Aggettivo A"
                
@@ -380,8 +385,11 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
             -      
     
         Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Riccio condivide per la terza e ultima volta qualcosa sul tema che stiamo affrontando.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Noi diciamo per la terza volta qualcosa legato a quel tema.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+
+        Poi ci dice che passa tanto tempo a immaginare cose, e a volte non è che vuole dire bugie, vuole solo raccontare delle storie.
+        Delle cose più belle della vita che ha, e da qui torniamo al fatto che corregge le sue giornate.
+        E che non gli piace dire le bugie, ma che vorrebbe una vita in cui non deve dirle.
+
             + [Scelta blu]
                 -> color_variation_management(SecondCharacter, blueC)->
                
@@ -473,6 +481,13 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
     ~ temp piatto = kitchen_tempRecipeName
     
     È stato divertente cucinare assieme, {player_name}.
+        {
+            - firstChar_storyStatus == story_storyStarted:
+                Commento su Chitarra
+            
+            - else:
+                Commento malinconico su Chitarra.
+        }
     Mi ha fatto sentire a casa.
         {
             -cooking_with_second_char.first_theme:
@@ -547,15 +562,20 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
             {
                 - secondAffinityCalc == 1:
                     {
-                        - secondChar_relationshipStatus == 0: Non ci stiamo pigliando #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                        - secondChar_relationshipStatus == 1: Ci piacciamo#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                        - secondChar_relationshipStatus == 0:
+                            Non ci stiamo pigliando #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                        - secondChar_relationshipStatus == 1:
+                            Ci piacciamo#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     }
                     
                 - secondAffinityCalc == 2:
                     {
-                        - secondChar_relationshipStatus == 0: Mi stai sul culo#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                        - secondChar_relationshipStatus == 1: Non male ma potrebbe migliorare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                        - secondChar_relationshipStatus == 2: Ci piacciamo tantissimo#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                        - secondChar_relationshipStatus == 0:
+                            Mi stai sul culo#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                        - secondChar_relationshipStatus == 1:
+                            Non male ma potrebbe migliorare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                        - secondChar_relationshipStatus == 2:
+                            Ci piacciamo tantissimo#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     }    
         
             }
@@ -566,20 +586,23 @@ Ci saranno massimo tre temi a disposizione, e saranno accessibili solo se le con
 
 
 === ending_cooking_with_second_char
-~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-E poi ci saluta e se ne va allo stagno.
 
-    -> cooking_animations_off ->
-   ~ move_entity(SecondCharacter, Pond)
-   ~ kitchen_secondCharCookingTogetherInvite = false
-    -> update_colors(SecondCharacter) ->
-    -> check_kitchen_recap ->
+    E ora {player_name}, credo mi farò due passi.
+    Mi sento piena e soddisfatta.
+    Grazie ancora per questo tempo assieme.
 
--> main
+        -> cooking_animations_off ->
+        ~ move_entity(SecondCharacter, Pond)
+        ~ kitchen_secondCharCookingTogetherInvite = false
+        -> update_colors(SecondCharacter) ->
+        -> check_kitchen_recap ->
+
+        -> main
 
 
 /* ---------------------------------
