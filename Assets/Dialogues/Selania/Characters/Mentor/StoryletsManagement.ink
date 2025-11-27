@@ -119,7 +119,7 @@
             
         
         //Commento sul cane    
-        - first_character_notes or second_character_notes && not dog_mentor:
+        - first_character_notes.one or second_character_notes.one && not dog_mentor:
             -> dog_mentor
         
         

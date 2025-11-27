@@ -42,7 +42,7 @@
                 -> a_story_of_revenge
             
             //Commento sul cane    
-            - second_character_notes && not dog_first_char:
+            - second_character_notes.one && not dog_first_char:
                 -> dog_first_char      
                     
                     

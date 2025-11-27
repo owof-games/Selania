@@ -46,7 +46,7 @@
                     -> a_story_of_rebellion
                     
         //Commento sul cane    
-            - first_character_notes && not dog_second_char:
+            - first_character_notes.one && not dog_second_char:
                 -> dog_second_char           
 
         }
