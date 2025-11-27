@@ -256,32 +256,32 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Una persona che ti piace ti dice "Ti amo". Qual è la prima sensazione che provi?
         
             + [Verso una mestolata di brodo del terrore.]
-                ~ kitchen_recipeComplement = "del terrore"
+                ~ kitchen_recipeComplement = "con brodo del terrore"
                 Woah, {player_name}.
                 Questa è intensa.
                 Anche se effettivamente l'amore può far cagare addosso.
                
             + [Manteco della noce euforica.]
-                ~ kitchen_recipeComplement = "dell'euforia"
+                ~ kitchen_recipeComplement = "con noce euforica"
                 Mi risuona tanto.
                 Detta dalla persona giusta è una parola che ti fa volare, vero?
              
-            + [Condisco con dei semi dell'"io? no, no è possibile!".]
-               ~ kitchen_recipeComplement = "dell'impossibile"
+            + [Condisco con semi dell'"io? no, no è possibile!".]
+               ~ kitchen_recipeComplement = "con semi dell'<i>io? no, no è possibile!</i>"
                 Coff Coff.
                 La sento.
                 Madonna se la sento.
                 Mi è successo anche con Ennio.
                 E a volte mi succede ancora.
         
-            + [Incorporo una cucchiata di olio lusingato.]
-                ~ kitchen_recipeComplement = "della lusinga"
+            + [Incorporo una cucchiata di olio delle lusinghe.]
+                ~ kitchen_recipeComplement = "con olio delle lusinghe"
                 Uh, a qualcuno piace quando il suo pelo viene lisciato, vero?
                 Però non rischia di essere una cosa egoista?
                 Più legata a come ti senti che al sentimento che provi per quella persona?
     
             + [Sminuzzo una manciata di peperoncini arrapati.]
-                ~ kitchen_recipeComplement = "dell'arrapamento"
+                ~ kitchen_recipeComplement = "con peperoncini arrapati"
                 Questa non me l'aspettavo, ma ci sta.
                 Sentirsi amatə è indubbiamente sexy.
                 Anni fa confondevo a manetta arrapamento e amore.
@@ -377,9 +377,8 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                         Avrei dovuto imparare da {charNameTwo}.
                 }
                
-    
-            + [Frullo disperatamente della vellutata.]
-                ~ kitchen_recipeNoun = "Sostantivo E"
+            + [Scaldo disperatamente delle tortillas.]
+                ~ kitchen_recipeNoun = "Tortillas"
                 È un sentimento.
                 Non so se sia peggio la confusione o la disperazione.
                 
@@ -532,19 +531,19 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Ti senti di star partecipando a qualcosa di più grande, di trasformativo, con le cose che fai?
 
             + [Trituro con gioia dell'anice stellato.]
-                ~ kitchen_recipeComplement = "della gioia."
+                ~ kitchen_recipeComplement = "con anice stellato."
                
             + [Aggiungo {player_pronouns has him:pieno|{player_pronouns has her:piena|pienə}} di terrore esistenziale dell'origano.]
-                ~ kitchen_recipeComplement = "del terrore esistenziale."
+                ~ kitchen_recipeComplement = "con origano."
              
             + [Sbuccio titubante della vaniglia.]
-               ~ kitchen_recipeComplement = "della titubanza."
+               ~ kitchen_recipeComplement = "con vaniglia."
         
             + [Tosto {player_pronouns has him:rassegnato|{player_pronouns has her:rassegnata|rassegnatə}} del coriandolo.]
-                ~ kitchen_recipeComplement = "della rassegnazione."
+                ~ kitchen_recipeComplement = "con coriandolo."
     
             + [Caramello {player_pronouns has him:sopraffatto|{player_pronouns has her:sopraffatta|sopraffattə}} della salvia.]
-                ~ kitchen_recipeComplement = "della sopraffazione."
+                ~ kitchen_recipeComplement = "con salvia."
             -  
         Che poi è una domanda stupida da farti, vero?
         Sei {player_pronouns has him:un riscrittore|{player_pronouns has her: una riscrittora|unə riscrittorə}}, e stai facendo un lavorone anche solo con me.
@@ -601,33 +600,33 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 - not cooking_with_second_char: Provi a parlare, ma non ti escono le parole. Però gli ingredienti possono parlare per te.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
             + [Lesso sportivamente delle patate.]
-                ~ kitchen_recipeNoun = "Sostantivo A"
+                ~ kitchen_recipeNoun = "Patate"
                 Ti ci vedo a correre e scaricare il nervo.
                 O in piscina.
                 O a ballare.
                 Uh, sarà un caso che non ho citato sport di gruppo?
 
             + [Friggo con creatività delle mele. ]
-                ~ kitchen_recipeNoun = "Sostantivo B"
+                ~ kitchen_recipeNoun = "Mele"
                 Lo sapevo!
                 Ecco perché mi sento capita da te.
                 {player_pronouns has her:unite|unit3} dalla creatività!
 
             + [Arrostisco scientemente delle melanzane.]
-               ~ kitchen_recipeNoun = "Sostantivo C"
+               ~ kitchen_recipeNoun = "Melanzane"
                 Ennio fa qualcosa di simile.
                 Quando è teso si mette a studiare qualcosa che ama.
                 O a fare esercizi di fisica.
                 Quando ha perso il lavoro, ha passato un intero fine settimana a fare calcoli prima di dire: "Ok, ora me ne cerco uno nuovo".
         
             + [Griglio amichevolmente delle pesche.]
-                ~ kitchen_recipeNoun = "Sostantivo D"
+                ~ kitchen_recipeNoun = "Pesche"
                 Stare assieme è una cosa che cura molte ferite.
                 Forse a volte ho bisogno però di star da sola.
                 Ma mi rendo conto che per altre persone la socialità è una medicina.
     
             + [Abbrustolisco meditativamente delle bietole.]
-                ~ kitchen_recipeNoun = "Sostantivo E"
+                ~ kitchen_recipeNoun = "Bietole"
                 Ci ho provato mille volte.
                 Ma non so, non riesco a starmene ferma.
                 Però gli "ohm" mi piacciono.
@@ -679,30 +678,30 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         E sì, se ripeto ancora "essere" puoi mandarmi a sbucciare patate per tutto il giorno.
 
             + [Frullo della zucca camminando in avanti.]
-                ~ kitchen_recipeAdjective = "Aggettivo A"
+                ~ kitchen_recipeAdjective = "avanzanti"
                C'è anche qualcosa di bello nel sapere che si sta compiendo la propria strada, vero?
 
             + [Pesto dell'ortica con statica soddisfazione.]
-                ~ kitchen_recipeAdjective = "Aggettivo B"
+                ~ kitchen_recipeAdjective = "soddisfatte"
                 Vorrei sapere cosa si prova ad esser al proprio posto.
                 Ti guardo e mi sembri una persona equilibrata.
                 Deve essere bello.
              
             + [Schiaccio dei rapanelli girando in tondo.]
-               ~ kitchen_recipeAdjective = "Aggettivo C"
+               ~ kitchen_recipeAdjective = "bloccate"
                 Già.
                 Ne hanno voglia a dire "conosci te stessə" e tutte quelle robe lì.
                 Ma alla fine il più delle volte invece di avanzare, continui a girare su te stessə.
         
             + [Pulisco dei finferli arretrando.]
-                ~ kitchen_recipeAdjective = "Aggettivo D"
+                ~ kitchen_recipeAdjective = "arretranti"
                 Uh.
                 Spero tu non viva male questa cosa.
                 Per quanto può valere, tornare sui propri passi credo sia sempre un segno del conoscersi meglio.
                 Almeno sai dove non vuoi andare.
     
             + [Sciacquo confusamente della lattuga.]
-                ~ kitchen_recipeAdjective = "Aggettivo E"
+                ~ kitchen_recipeAdjective = "confuse"
                 A volte è solo questione di tempo, vero?
                 Prima di capire dove andare.
                 O magari è un momento per fermarsi e riposare.
@@ -751,34 +750,34 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Che ci fai?
 
             + [Brucio del peperoncino.]
-                ~ kitchen_recipeComplement = "Complemento A"
+                ~ kitchen_recipeComplement = "con peperoncino"
                 Merda.
                 Spero non per insoddisfazione.
                 Perché non so te, ma è dura essere soddisfattə di quello che si crea.
 
             + [Spargo ovunque del cardamomo.]
-                ~ kitchen_recipeComplement = "Complemento B"
+                ~ kitchen_recipeComplement = "con cardamomo"
                 Un gesto sicuro, deciso.
                 Che alla fine immagino ci stia.
                 Hai creato qualcosa, vuoi che lo conoscano più persone possibile.
                 Credo.
              
             + [Raggruppo dei chiodi di garofano.]
-               ~ kitchen_recipeComplement = "Complemento C"
+               ~ kitchen_recipeComplement = "con chiodi di garofano"
                 Anche a me piace condividere solo con la cerchia ristretta di am3.
                 Mi fa sentire al sicuro.
                 Ma a volte da quella bolla ci devo uscire.
                 Anche solo per La Rifugia.
         
             + [Copro dello zenzero.]
-                ~ kitchen_recipeComplement = "Complemento D"
+                ~ kitchen_recipeComplement = "con zenzero"
                 Tieni le tue creature per te.
                 Sarà un gesto di affetto o di insicurezza?
                 O una lotta all'idea che tutto debba essere produttivo?
                 Sarei curiosa di scoprirlo.
     
             + [Non faccio nulla.]
-                ~ kitchen_recipeComplement = "Complemento E"
+                ~ kitchen_recipeComplement = "con essenza del nulla"
                 Perdonami, do sempre per scontato che le persone creino qualcosa.
                 Che poi in parte credo sia vero.
                 Anche questo piatto ha la sua creatività, la sua magia.

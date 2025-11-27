@@ -151,7 +151,7 @@
         
     + {backpack_findedGifts has BaccaDellaAddolorata} [Una bacca della Addolorata.]
         ~ backpack_findedGifts -= BaccaDellaAddolorata
-        ~ kitchen_recipePP = "errante"
+        ~ kitchen_recipePP = "e distillato del primo passo"
          {
         - frog_recoveredCultivables hasnt BaccaDellaAddolorata:
         ~ frog_recoverableCultivables += BaccaDellaAddolorata
@@ -171,7 +171,7 @@
     
     + {backpack_findedGifts has BarbaDellInciampo} [Una spina di Barba dell'Inciampo.]
         ~ backpack_findedGifts -= BarbaDellInciampo
-        ~ kitchen_recipePP = "svagante"
+        ~ kitchen_recipePP = "ed essenza della responsabilità"
          {
         - frog_recoveredCultivables hasnt BarbaDellInciampo:
         ~ frog_recoverableCultivables += BarbaDellInciampo
@@ -195,7 +195,7 @@
         - frog_recoveredCultivables hasnt BastoneDellOzioso:
         ~ frog_recoverableCultivables += BastoneDellOzioso
         } 
-        ~ kitchen_recipePP = "cantante"
+        ~ kitchen_recipePP = "e aroma di ozio"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(BastoneDellOzioso, Kitchen, FirstCharacter) ->
@@ -215,7 +215,7 @@
         - frog_recoveredCultivables hasnt BrinaDellImpossibile:
         ~ frog_recoverableCultivables += BrinaDellImpossibile
     } 
-        ~ kitchen_recipePP = "penetrante"
+        ~ kitchen_recipePP = "e aroma di trauma"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(BrinaDellImpossibile, Kitchen, FirstCharacter) ->
@@ -236,7 +236,7 @@
         - frog_recoveredCultivables hasnt CantoDelleCompagne:
         ~ frog_recoverableCultivables += CantoDelleCompagne
     } 
-        ~ kitchen_recipePP = "pulsante"
+        ~ kitchen_recipePP = "e profumo di rabbia"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(CantoDelleCompagne, Kitchen, FirstCharacter) ->
@@ -255,7 +255,7 @@
         - frog_recoveredCultivables hasnt CardoAspinato:
         ~ frog_recoverableCultivables += CardoAspinato
     } 
-        ~ kitchen_recipePP = "tremante"
+        ~ kitchen_recipePP = "e copertura di vulnerabilità"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(CardoAspinato, Kitchen, FirstCharacter) ->
@@ -274,7 +274,7 @@
         - frog_recoveredCultivables hasnt EderaDelleAmanti:
         ~ frog_recoverableCultivables += EderaDelleAmanti
     } 
-        ~ kitchen_recipePP = "vibrante"
+        ~ kitchen_recipePP = "e glassa di piacere"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(EderaDelleAmanti, Kitchen, FirstCharacter) ->
@@ -293,7 +293,7 @@
         - frog_recoveredCultivables hasnt ErbaLiccia:
         ~ frog_recoverableCultivables += ErbaLiccia
     } 
-        ~ kitchen_recipePP = "avvolgente"
+        ~ kitchen_recipePP = "e doratura di rinuncia"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(ErbaLiccia, Kitchen, FirstCharacter) ->
@@ -312,7 +312,7 @@
         - frog_recoveredCultivables hasnt FalsaPalude:
         ~ frog_recoverableCultivables += FalsaPalude
     } 
-        ~ kitchen_recipePP = "incombente"
+        ~ kitchen_recipePP = "e ripieno di collaborazione"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(FalsaPalude, Kitchen, FirstCharacter) ->
@@ -331,7 +331,7 @@
         - frog_recoveredCultivables hasnt LanaNotturna:
         ~ frog_recoverableCultivables += LanaNotturna
     } 
-        ~ kitchen_recipePP = "rassicurante"
+        ~ kitchen_recipePP = "e polvere di cambiamento"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(LanaNotturna, Kitchen, FirstCharacter) ->
@@ -350,7 +350,7 @@
         - frog_recoveredCultivables hasnt LicheneDegliAbissi:
         ~ frog_recoverableCultivables += LicheneDegliAbissi
     } 
-        ~ kitchen_recipePP = "struggente"
+        ~ kitchen_recipePP = "e panatura di relazione tossica"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(LicheneDegliAbissi, Kitchen, FirstCharacter) ->
@@ -369,7 +369,7 @@
         - frog_recoveredCultivables hasnt NonTiScordarDiTe:
         ~ frog_recoverableCultivables += NonTiScordarDiTe
     } 
-        ~ kitchen_recipePP = "confortante"
+        ~ kitchen_recipePP = "e crosticina dell'eredità"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(NonTiScordarDiTe, Kitchen, FirstCharacter) ->
@@ -388,7 +388,7 @@
         - frog_recoveredCultivables hasnt Olobino:
         ~ frog_recoverableCultivables += Olobino
     } 
-        ~ kitchen_recipePP = "travolgente"
+        ~ kitchen_recipePP = "e marinatura spirituale"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(Olobino, Kitchen, FirstCharacter) ->
@@ -407,7 +407,7 @@
             - frog_recoveredCultivables hasnt LaSpazzata:
                 ~ frog_recoverableCultivables += LaSpazzata
         } 
-        ~ kitchen_recipePP = "irritante"
+        ~ kitchen_recipePP = "e farcitura di comunicazione"
             {
                 - PNG == FirstCharacter:
                     -> object_value_for_PNG(LaSpazzata, Kitchen, FirstCharacter) ->
@@ -422,7 +422,7 @@
 //Doni insoliti
     + {backpack_findedGifts has universalIngredient} [L'ingrediente universale della Rana.]
         ~ backpack_findedGifts -= universalIngredient
-        ~ kitchen_recipePP = "allettante"
+        ~ kitchen_recipePP = "e gratinatura goduriosa"
         
             {
                 - PNG == FirstCharacter:

@@ -182,21 +182,26 @@
     M: O quello che dice {charNameOne}.
     M: Qualcosa che è sempre altrove e quindi irraggiungibile?
     
-        + [{mentorName} parla di resa.]
+        + [{mentorName}, tu parli di arrendersi.]
             -> color_variation_management(FirstCharacter, redC)->
-            //Mettere variante mentore o quel che sarà -> color_variation_management(PG, blueC)->
-                
-        + [Risposta blu.]
+            -> color_variation_management(Mentor, blueC)->
+            
+        + [{charNameOne}, non potrai essere felice fintanto che non sai goderti ciò che hai. ]
             -> color_variation_management(FirstCharacter, blueC)->
+            -> color_variation_management(Mentor, blueC)->
         
         + [Risposta gialla.]
             -> color_variation_management(FirstCharacter, yellowC)->
+            -> color_variation_management(Mentor, blueC)->
         
         + [Risposta verde.]
-            -> color_variation_management(FirstCharacter, greenC)->     
+            -> color_variation_management(FirstCharacter, greenC)->    
+            -> color_variation_management(Mentor, blueC)->
+
             
         + [Risposta viola.]
             -> color_variation_management(FirstCharacter, purpleC)->
+            -> color_variation_management(Mentor, blueC)->
         -
         ~ firstChar_pauseTalking = firstChar_pauseDuration
         ~ mentor_pauseTalking = mentor_pauseDuration
