@@ -274,8 +274,7 @@
 
 {debug: passo per on_movement_events}
 //Riduzioni di contatori legati al tempo:
-    ~ firstChar_mailPause --
-    ~ secondChar_mailPause --
+
     ~ thirdChar_mailPause --
     ~ fifthChar_mailPause --
     
@@ -463,15 +462,38 @@
 //Qui traccio tutti gli eventi eccezionali, così li ho in un unico posto: animazioni, cambi assets e via di seguito
 
 //Comparsa lettere dopo fine delle storie (così non compaiono subito.
-    {first_char_story_ended.goodbye && firstChar_mailPause == 0:
-            ~ move_entity(FirstCharacterNotes, TrainStop)
-            {debug: Ho messo la nota della prima personaggia alla fermata del bus.}
+//La logica è: quando una png se ne va dal gioco, setto  (es.)~ firstChar_mailPause = firstChar_mailPauseDuration
+//Quando il valore di firstChar_mailPause è minore di zero: se non c'è già una lettera in giro, sposto la lettera/dogga in stazione.
+//Se l'ho letta, quando mi sposterò dalla stazione, il cane se ne andrà
+//Se ci sono lettere da leggere e quella del doggo ancora non è stata letta, 
+    {
+        - first_char_story_ended.goodbye && firstChar_mailPause < 0 && trainStopContents hasnt SecondCharacterNotes && not first_character_notes.three:
+        
+                ~ move_entity(FirstCharacterNotes, TrainStop)
+                {debug: Ho messo la nota della prima personaggia alla fermata del bus.}
+            
     }
     
-    {second_char_story_ended.goodbye && secondChar_mailPause == 0:
-            ~ move_entity(SecondCharacterNotes, TrainStop)
-            {debug: Ho messo la nota del secondo personaggio alla fermata del bus.}
+    {
+        - second_char_story_ended.goodbye && secondChar_mailPause < 0 && trainStopContents hasnt FirstCharacterNotes && not second_character_notes.three:
+        
+                ~ move_entity(SecondCharacterNotes, TrainStop)
+                {debug: Ho messo la nota del secondo personaggio alla fermata del bus.}
+
+                
     }
+    
+    {
+        - trainStopContents has DoggoNoNotes:
+        
+                ~ move_entity(DoggoNoNotes, Safekeeping)
+                {debug: Ho spostato la dogga nel safekeeping.}
+    
+    }
+    
+    
+    ~ firstChar_mailPause --
+    ~ secondChar_mailPause --
     
 //Eventi legati alla serra    
     {

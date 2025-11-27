@@ -6,7 +6,7 @@
 
     LIST listTransitions = FromTrainStopToForest, FromForestToTrainStop, FromForestToPond, FromForestToLibraryBlocked, FromForestToLibrary, FromPondToForest, FromPondToGreenhouse, FromPondToGreenhouseBlooming, FromPondToNest, FromPondToKitchen, FromPondToKitchenBlocked, FromGreenhouseToPond, FromLibraryToForest, FromLibraryToNest, FromLibraryToNestBlocked, FromLibraryToNestNight, FromNestToLibrary, FromKitchenToPond, FromPondToGreenhouseBlocked, FromLibraryToNestBlockedNight
     
-    LIST listStaticObjects = Bench, WateringCan, TheWitch, ReadingPlace, StartingNote, Arbustini, MoonTrees, ELManagement
+    LIST listStaticObjects = Bench, WateringCan, TheWitch, ReadingPlace, StartingNote, Arbustini, MoonTrees, ELManagement, DoggoNoNotes
     
     LIST listConditionalObjects =  FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, FifthCharacterNotes, CookingWithFirstCharOBJ, CookingWithSecondCharOBJ, FirstCharCookingAloneOBJ, BatHouseFront, BatHouseRetro, EatingWithSecondCharOBJ, EatingWithFirstCharOBJ
     

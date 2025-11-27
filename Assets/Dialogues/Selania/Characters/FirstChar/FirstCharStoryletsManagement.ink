@@ -39,7 +39,11 @@
                 
             //Racconto di Aza letto
             - are_two_entities_together(FirstCharacter, PG) && library_readStories has Aza && not a_story_of_revenge:
-                -> a_story_of_revenge 
+                -> a_story_of_revenge
+            
+            //Commento sul cane    
+            - second_character_notes && not dog_first_char:
+                -> dog_first_char      
                     
                     
         }

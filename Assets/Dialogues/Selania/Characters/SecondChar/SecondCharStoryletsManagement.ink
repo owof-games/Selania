@@ -44,6 +44,10 @@
             //Lettura Riccio
                 - are_two_entities_together(SecondCharacter, PG) && library_readStories has Lamia && not a_story_of_rebellion:
                     -> a_story_of_rebellion
+                    
+        //Commento sul cane    
+            - first_character_notes && not dog_second_char:
+                -> dog_second_char           
 
         }
             

@@ -40,6 +40,10 @@
     ~ temp mentorName = translator(mentor_ActualName)
     
     + (check){are_two_entities_together(FirstCharacterNotes, PG)}[FirstCharacterNotes]
+            
+            ~ move_entity(FirstCharacterNotes, Safekeeping)
+            ~ move_entity(DoggoNoNotes, TrainStop)
+                    
     
         {
             - not one:
@@ -404,7 +408,10 @@
 === second_character_notes ===
 //Mettere cose sul rapporto con nonna, papà. mamma, fratello, animali, futuro.
     + (check){are_two_entities_together(SecondCharacterNotes, PG)}[SecondCharacterNotes]
-    
+            
+            ~ move_entity(SecondCharacterNotes, Safekeeping)
+            ~ move_entity(DoggoNoNotes, TrainStop)
+        
     {
             - not one:
                 -> one

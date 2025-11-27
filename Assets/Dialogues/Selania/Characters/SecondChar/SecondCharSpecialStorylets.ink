@@ -60,4 +60,9 @@ Qui Riccio ci dice che ha letto <b>Il sassolino</b> e ci chiede cosa ne pensiamo
         
         ~ secondChar_pauseTalking = secondChar_pauseDuration
         -> main
-        
+
+
+=== dog_second_char
+Commento sul cane
+
+-> main        

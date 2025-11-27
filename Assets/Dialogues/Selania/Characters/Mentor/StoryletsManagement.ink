@@ -117,6 +117,12 @@
         - witch_feedback.first_story_ended_check && not growing_witch_storylet && mentor_pauseTalking == 0:
             -> growing_witch_storylet
             
+        
+        //Commento sul cane    
+        - first_character_notes or second_character_notes && not dog_mentor:
+            -> dog_mentor
+        
+        
         {
             //Mentore esplode
             - are_two_entities_together(Mentor, PG) && thirdChar_storyStatus == story_storyEnded and not mentor_rage:
