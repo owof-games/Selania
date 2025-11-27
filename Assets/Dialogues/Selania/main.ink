@@ -40,6 +40,7 @@
 <- third_character_notes
 <- fourth_character_notes
 <- fifth_character_notes
+<- doggo_no_notes
 
 //Elementi della foresta
 <- bench

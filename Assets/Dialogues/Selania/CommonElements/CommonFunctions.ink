@@ -203,13 +203,13 @@
     //Se la storia della PNG è conclusa, la spostiamo nella foresta, così poi si può spostare in stazione e da lì sentiamo il treno partire.
     {
 
-        - firstChar_storyStatus == story_storyEnded:  
+        - firstChar_storyStatus == story_storyEnded && not first_char_story_ended.goodbye:  
             ~  move_entity(FirstCharacter, Forest)
     }
     
     {
 
-        - secondChar_storyStatus == story_storyEnded:  
+        - secondChar_storyStatus == story_storyEnded&& not second_char_story_ended.goodbye:  
             ~  move_entity(SecondCharacter, Forest)
     }
     

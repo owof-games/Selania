@@ -33,9 +33,10 @@
     -> cooking_animations_on ->
     
     Sai {charNameTwo}, mentre cuciniamo potremmo parlare un po'.
-    In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...
 
     - (top)
+    
+    In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...
 
             + [Parliamo di animali.]
                     -> first_theme

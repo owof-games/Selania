@@ -30,9 +30,9 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     -> cooking_animations_on ->
 
     Sai {charNameOne}, mentre cuciniamo potremmo parlare un po'.
-    In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...
     
-    - (top)    
+    - (top)
+    In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...
         
         + [Dei rapporti che hai con le persone che ti sono care.]
                 -> first_theme

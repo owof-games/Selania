@@ -20,6 +20,17 @@
 
         -> main
   
+
+=== doggo_no_notes ===
+    + {are_two_entities_together(DoggoNoNotes, PG)}[DoggoNoNotes]
+        
+        {shuffle:
+            - waarf! #speaker:Doggo #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:doggo
+            - bauuu! #speaker:Doggo #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:doggo
+            - pant pant pant. #speaker:Doggo #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:doggo
+        }
+    
+    -> main
   
   
         
