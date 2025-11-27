@@ -56,7 +56,7 @@
     Il cibo apre alle confidenze.
     E quindi, ecco il mio regalo per te, {player_name}: un posto dove cucinare in compagnia, per conoscerci meglio.
     E visto che di solito siamo noi a decidere di cosa parlarti, ho già avvisato {charNameTwo} che a questo giro sarai tu a decidere di cosa parlare.
-    Per cui: quando ti butta bene invita qualcunx di noi a cucinare, e vediamo che salta fuori.
+    Per cui: quando ti butta bene invita qualcunə di noi a cucinare, e vediamo che salta fuori.
     Magari scopri anche qualcosa di utile per il tuo lavoro qui.
     Che ne dici?
 
@@ -142,14 +142,14 @@
             Lui non si è posto questa domanda mi sa, qualsiasi cosa abbia fatto.
             Perché la protagonista è palesemente strapissata.
             E forse ferita.
-            Cazzo, la rabbia che ci vuole per odiare uno per ventitrè anni è enorme.
+            Cazzo, la rabbia che ci vuole per odiare uno per ventitré anni è enorme.
             Bisogna sempre ingoiare tutto per proteggere le altre persone?
             
         + [La sua vendetta è una forma di autodifesa.]
             -> color_variation_management(FirstCharacter, redC)->
             Non credo reggerebbe in un processo, ma mi suona.
             A volte quando ti viene detto che non puoi arrabbiarti, ci metti molto per capire che sei arrabbiata.
-            Quindi è un po' come se avesse reagito con ventitrè anni di ritardo a quello che Jacopo le ha fatto.
+            Quindi è un po' come se avesse reagito con ventitré anni di ritardo a quello che Jacopo le ha fatto.
         -    
     
     Comunque mi sa che più tardi mi faccio un altro giro tra i racconti.

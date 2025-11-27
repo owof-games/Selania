@@ -103,10 +103,10 @@
             
             - else:
             (Mentore) Scusatemi, non avrei voluto origliare, ma ci tenevo a dirti che no, non sei in un sogno {charNameOne}, ma {player_name} può davvero aiutarti.
-            E {player_name}, ci sono altre cose che posso spiegarti in più rispetto al solo “vai e parla con qualcunx”.
+            E {player_name}, ci sono altre cose che posso spiegarti in più rispetto al solo “vai e parla con qualcunə”.
         }
         
-        Ooook.
+        Oook.
         Ok.
         Un fiore parlante.
         Quindi è un trip.
@@ -225,7 +225,7 @@
         {player_pronouns has him:Povero|{player_pronouns has her:Povera|Poverə}}.
         Dice che c’è qualcosa che mi blocca.
         E che quando mi fiderò di te potrò chiederti aiuto e sbloccarmi e tornare a casa.
-        Tipo una versione di D&D con le quest scritte da una millenial.
+        Tipo una versione di D&D con le quest scritte da una millennial.
         Stavo per dirle: guarda ama, mi fido già di {player_name}!
         Sono un labrador e mi fido sempre di tutti subito.
         Poi ho pensato che non è vero.
@@ -382,7 +382,7 @@
         Mi ha fatto sentire così al sicuro, vulnerabile in modo piacevole.
         Mi ha fatto pensare a cosa penso quando penso a “casa”.
         Quella dove vivo è una catapecchia piena di muffa, ma è calda grazie a Valeria e le altre coinquiline.
-        UItimamente però il continuo ricambio di coinqui e le tracce di chi se ne è andata riempie lo spazio di fantasmi.
+        Ultimamente però il continuo ricambio di coinqui e le tracce di chi se ne è andata riempie lo spazio di fantasmi.
         Mi fa sentire precaria, tipo.
         Poi c’è la casa dei miei.
         Continuo a dire “torno a casa” quando scendo a trovarli.
@@ -528,7 +528,7 @@
         Quindi.
         Un anno fa Talco mi scrive per fare un aperitivo solo tra noi, “come ai vecchi tempi”.
         Tra lavori e fidanzati e il resto non ci vedevamo da settimane.
-        Abbiamo trovato un incrocio sui calendari, e la sera che l’ho rivistə mi si è spalacanto il cuore.
+        Abbiamo trovato un incrocio sui calendari, e la sera che l’ho rivistə mi si è spalancato il cuore.
         E tra una battuta e un lamento sul lavoro continuavo a pensare: e se riprendessimo in mano il vecchio progetto?
         E se andassimo a vivere tutt3 assieme in campagna?
         Talco, io, le ragazze del gruppo?

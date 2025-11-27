@@ -104,7 +104,7 @@
     
     {
     
-            //Se vengo dalla preriscrittura:
+            //Se vengo dalla pre riscrittura:
             - rewriting_proposal_first_character.rewriting:
                 {debug: ho cliccato rewriting e quindi faccio gli ultimi passaggi e attivo il feedback.} 
                 //"Trasformo" la relazione in inchiostro

@@ -121,7 +121,7 @@
                 ->-> 
         
         - else:
-            {debug_kitchen:ERROR: non ci sono ricette a disposizione per storare l'informazione.}
+            {debug_kitchen:ERROR: non ci sono ricette a disposizione per salvare l'informazione.}
                 ->->
     
     }

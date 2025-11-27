@@ -109,7 +109,7 @@
                 Con le tue colleghe sul lavoro.
                 Con La Rifugia.
                 L'hai detto prima: è stato bello dire "no".
-                Alcune rinuncie ti hanno resa potente.
+                Alcune rinunce ti hanno resa potente.
                 
             + [Puoi sempre viaggiare da Talco, ricominciare.]
                 -> color_variation_management(FirstCharacter, yellowC)->
@@ -121,7 +121,7 @@
                }
                {
                     - cooking_with_first_char.first_theme:
-                        E già una volta ti sei riscostruita una vita, quando sei arrivata al Nord.
+                        E già una volta ti sei ricostruita una vita, quando sei arrivata al Nord.
                 }
             
             + [Hai detto che quando rinunci a te creando, trovi tutto.]
@@ -199,7 +199,7 @@
             E sono felice solo se sono con le persone a cui voglio bene.
             
             {
-                - secondChar_storyStatus!=story_storyEnded:{player_name} ha utilizzato la sua seconda unità di inchiostro per procedere con la riscrittura. Il boccetto ora è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - secondChar_storyStatus!=story_storyEnded:{player_name} ha utilizzato la sua seconda unità di inchiostro per procedere con la riscrittura. La boccetta ora è vuota.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }        
             
             {
@@ -238,7 +238,7 @@
                E anche le tue amiche che sono tornate nei paesini, hanno fatto grandi cose.
                {
                     - cooking_with_first_char.second_theme:
-                       E sei stata tu a dirmi che bisogna perdornarsi in queste situazioni.
+                       E sei stata tu a dirmi che bisogna perdonarsi in queste situazioni.
                        Sbagliare.
                        Provare cose nuove.
                        <i>Più gorgonzola, meno poliziott3.</i>
@@ -270,7 +270,7 @@
             
             
             {
-                - secondChar_storyStatus!=story_storyEnded:{player_name} ha utilizzato la terza unità di inchiostro, proponendo una riscruttura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - secondChar_storyStatus!=story_storyEnded:{player_name} ha utilizzato la terza unità di inchiostro, proponendo una riscrittura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }        
             
             {
