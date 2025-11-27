@@ -11,7 +11,6 @@
             
         
             = ink_outcome    
-                Dopo il tuo dono {inkTranslator(FirstCharacter)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 {
                     - firstChar_favouritesGifts:
                         Quello che mi hai dato è qualcosa di più di un regalo: è un gesto di affinità.
@@ -26,8 +25,10 @@
                         Per cui non dovrei nemmeno esserne delusa, giusto?
 
                 }
-
+                
+                Dopo il tuo dono {inkTranslator(FirstCharacter)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                     ~ mentor_tutorialPauses = false
+                    
                         -> main
                 
 

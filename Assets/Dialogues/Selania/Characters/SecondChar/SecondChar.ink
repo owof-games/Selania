@@ -9,7 +9,23 @@
             
         
             = ink_outcome
+                {
+                    - secondChar_favouritesGifts:
+                        Quello che mi hai dato è qualcosa di più di un regalo: è un gesto di affinità.
+                        Mi piace stare con te, {player_name}.
+
+                    - secondChar_goodGifts:
+                        I regali mi mettono sempre in imbarazzo, sai?
+                        Ma il tuo dono mi ha fatto sentire ascoltata.
+
+                    - else:
+                        Non mi aspettavo un regalo.
+                        Per cui non dovrei nemmeno esserne delusa, giusto?
+
+                }
+
                 Dopo il tuo dono {inkTranslator(SecondCharacter)}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                    ~ mentor_tutorialPauses = false
                     
                      -> main
 
