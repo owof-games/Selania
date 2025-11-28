@@ -23,8 +23,11 @@
         //Chiacchiere tra Chitarra e Mentore
             - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(Mentor, PG) && not first_mentor_chit_chat && first_char_main_storylets.one && firstChar_pauseTalking == 0:
                     -> first_mentor_chit_chat
-                    
-                    
+        
+        //Chiacchiere tra Riccio e Mentore
+            - are_two_entities_together(Mentor, PG) && are_two_entities_together (TheFrog, PG) && not frog_and_mentor_chit_chat:
+                -> frog_and_mentor_chit_chat
+
             - else:
                 {
                     - actual_speaker == Mentor:

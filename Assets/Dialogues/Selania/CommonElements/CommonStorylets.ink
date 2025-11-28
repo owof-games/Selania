@@ -209,4 +209,13 @@
     
 -> main
 
+=== frog_and_mentor_chit_chat
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
+Rana e mentore sono assieme e per la prima volta forse si inizia anche a capire che Mentore non sa proprio tutto tutto del luogo, o che forse non c'è mai stata una mentore.
+
+
+
+-> main
