@@ -1,12 +1,12 @@
  === first_story_gift ===
     ~ temp charNameOne = translator(firstChar_ActualName)
-    <i>Stai per donare qualcosa a {charNameOne}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+    {player_name} sta per donare qualcosa a {charNameOne}.</i> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             
             + {backpack_findedGifts != ()} [Scelgo il dono.]
                 ~ gift_currentReceiver += FirstCharacter
                     -> backpack_management
             
-            + {backpack_findedGifts == ()} Il tuo inventario è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            + {backpack_findedGifts == ()} Lo zainetto di {player_name} è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                     ->main
             
         
@@ -26,7 +26,7 @@
 
                 }
                 
-                Dopo il tuo dono {inkTranslator(FirstCharacter)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                Dopo il dono di {player_name} {inkTranslator(FirstCharacter)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                     ~ mentor_tutorialPauses = false
                     
                         -> main
