@@ -52,7 +52,7 @@
                 -> ask
     
     //Vogliamo cucinare assieme (dopo almeno uno storylet assieme)      
-        - second_char_main_storylets.one && open_the_kitchen && not ending_cooking_with_second_char && kitchen_secondCharIsCooking==false:
+        - second_char_main_storylets.four && open_the_kitchen && not ending_cooking_with_second_char && kitchen_secondCharIsCooking==false:
                 -> ask
     
     - else:

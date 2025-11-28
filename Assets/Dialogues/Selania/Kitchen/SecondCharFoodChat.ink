@@ -42,19 +42,19 @@
                     -> first_theme
                     
             
-            + [{second_char_main_storylets.five: Della tua famiglia.|<i>{player_name} deve parlare ancora con {charNameTwo} per sbloccare questo tema.</i>}]
+            + [{second_char_main_storylets.six: Della scuola.|<i>{player_name} deve parlare ancora con {charNameTwo} per sbloccare questo tema.</i>}]
                 {
-                    - second_char_main_storylets.five:
+                    - second_char_main_storylets.six:
                         -> second_theme
                     
                     - else:
                         -> top
                 }
             
-            + [{second_char_main_storylets.seven: Delle bugie.|<i>{player_name} deve parlare ancora con {charNameTwo} per sbloccare questo tema.</i>}]
+            + [{second_char_main_storylets.eight: Delle bugie.|<i>{player_name} deve parlare ancora con {charNameTwo} per sbloccare questo tema.</i>}]
                 {
                 
-                    - second_char_main_storylets.seven:
+                    - second_char_main_storylets.eight:
                         -> third_theme
                     
                     - else:

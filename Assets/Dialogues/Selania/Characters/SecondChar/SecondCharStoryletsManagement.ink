@@ -55,7 +55,6 @@
 
         }
         
-    Todo: sistemare il rapporto con Mentore.
         //Qui man mano faccio avanzare i temi toccati dalla personaggia
         {
             - not second_char_main_storylets.one:
@@ -84,7 +83,6 @@
                     - else:
                         -> not_talk
                 }
-                
                 
             - not second_char_main_storylets.five:
                 -> second_char_main_storylets.five
