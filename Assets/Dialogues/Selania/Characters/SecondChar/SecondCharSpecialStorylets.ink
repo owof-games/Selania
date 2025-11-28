@@ -106,6 +106,30 @@ Qui Riccio ci dice che ha letto <b>Il sassolino</b> e ci chiede cosa ne pensiamo
 
 
 === dog_second_char
-Commento sul cane
+    {player_name} {player_name} {player_name} {player_name} {player_name} <b>{player_name} </b>!!!
+    C'è
+    In giro
+    Un
+    CANEEEEE!
+    {
+        - trainStopContents has PG:
+            Ho visto un cane prima all'ingresso ed è.
+        - else:
+            {
+                - trainStopContents has DoggoNoNotes:
+                    L'hai visto?!?! Lì sotto al tabellone!
+                
+                - else:
+                    Era lì, sotto al tabellone!     
+            }
+            L'hai visto?
+    }
 
+    Uh, è tanto carino.
+    Mi ha abbaiato contro.
+    Ma poi son stato fermo e mi ha leccato la mano.
+    Poi si è messo a guardare una lucertola.
+    Ha provato a prenderla, ma ha sbattuto contro l'albero.
+    E poi si è messa a fissarmi.
+    C'è un caneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee!
 -> main        
