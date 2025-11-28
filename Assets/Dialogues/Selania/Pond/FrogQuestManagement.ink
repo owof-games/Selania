@@ -260,6 +260,7 @@
         
         - missionFive:
             {
+                //TODO: per questa come condizioni mettere anche le altre storie condivise
                 - first_second_chit_chat:
                     Hai ascoltato la conversazione tra Chitarra e Riccio, e ne sono felice {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Anche se è difficile come posizione per unx Riscrittora: spesso una scelta in queste condizioni può far felice una persona, e scontentare l'altra.

@@ -156,8 +156,6 @@
     CANEEEEE!
     {
         - trainStopContents has PG:
-            Ho visto un cane prima all'ingresso ed è.
-        - else:
             {
                 - trainStopContents has DoggoNoNotes:
                     L'hai visto?!?! Lì sotto al tabellone!
@@ -165,9 +163,11 @@
                 - else:
                     Era lì, sotto al tabellone!     
             }
-            L'hai visto?
+        - else:
+            L'ho visto prima alla stazione ed è adorabileeeeeeeeeeee!
+               
     }
-
+    L'hai visto?
     Uh, è tanto carino.
     Mi ha abbaiato contro.
     Ma poi son stato fermo e mi ha leccato la mano.

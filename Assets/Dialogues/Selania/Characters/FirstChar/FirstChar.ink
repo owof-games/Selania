@@ -73,6 +73,7 @@
                 - Ho deciso che quando me ne vado ti lascio una sorpresa. Ma non ti dico dove.
                 - Non so se raccontare o meno questa cosa a qualcunə. Forse Talco capirebbe.
                 - Da quando l'albero è cresciuto, mi sento, ehm, osservata. Ha senso?
+                - Comunque credo che mi terrò questa storia per me per un po', sai?
                 - Prima ho abbozzato una melodia per raccontare questa esperienza, ma poi ho visto un pipistrello, mi sono distratta e addio idea.
             }#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
 

@@ -160,6 +160,26 @@
     
 
 === dog_first_char
-Commento sul cane
+    C'è un cane!
+    Non so perché dovrebbe essere la cosa che più mi stupisce di questo posto.
+    {
+        - trainStopContents has PG:
+            {
+                - trainStopContents has DoggoNoNotes:
+                    Hai visto com'è carina? 
+                    Lì, sotto il tabellone?
+                
+                - else:
+                    Hai visto com'è carina? 
+                    Era lì, sotto il tabellone?    
+            }
+        - else:
+            Era alla stazione dei treni, con degli occhioni enormi.    
+    }
+    Adorabile.
+    Mi sono seduta a terra, e lei è venuta a leccarmi tutta la faccia.
+    Non ho avuto il coraggio di muovermi.
+    Si è accoccolata un poco, e poi si è messa a fare toeletta.
+    La adoro.
 
 -> main

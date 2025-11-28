@@ -40,7 +40,7 @@ La rana ci saluta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offS
       {debug_frog: player_accessiblePlaces contiene {player_accessiblePlaces}.}
 
     {       //Special mission one offre la nota
-        - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionOne) && (player_accessiblePlaces ? Nest):
+        - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionOne) && (player_accessiblePlaces ? Nest) && second_char_main_storylets.four:
             {debug_frog: condizioni rispettate per poter offrire la prima missione speciale.}
                 -> special_mission_one
             

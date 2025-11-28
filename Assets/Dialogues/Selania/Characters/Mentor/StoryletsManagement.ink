@@ -17,7 +17,7 @@
     {
                     
         //Dopo le presentazioni con due, scena in cui hanno litigato:
-        - secondChar_storyStatus == story_storyStarted && (not that_little_liar_storylet):
+        - second_char_main_storylets.three && (not that_little_liar_storylet):
                 -> that_little_liar_storylet
         
         - not second_character_feedback && secondChar_storyStatus == story_storyEnded:
@@ -118,7 +118,7 @@
             -> growing_witch_storylet
             
         
-        //Commento sul cane    
+    //Commento sul cane    
         - first_character_notes.one or second_character_notes.one && not dog_mentor:
             -> dog_mentor
         
