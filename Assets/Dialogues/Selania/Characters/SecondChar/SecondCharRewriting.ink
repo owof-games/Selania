@@ -17,44 +17,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ change_entity_place(Mentor)
-    
-    //Parole chiave legate alla fiducia.
-        Abbiamo parlato tantissimo!!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
 
-        Ma davvero TANTISSSSSSIMO!
-        Sai cosa penso di te?
-            {
-                -   are_two_entities_together(FirstCharacter, PG): E questo è il momento per me di levarmi da qui e lasciarvi in pace. Anche se sono stracuriosa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-                    Non ditemi che questo non è un atto d'amore!
-                            ~ change_entity_place(FirstCharacter)
-            }
-            
-            {
-                -   are_two_entities_together(Mentor, PG): Vi lascio la vostra privacy.#speaker:{mentor_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:mentor_neutral
-                    
-                            ~ change_entity_place(Mentor)
-            }
-            
-       
-        {
-        
-            //Migliore outcome
-            - secondChar_InkLevel >= ink_medium:C'è una cosa che devo dire a qualcuno, e voglio dirla a te.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
-    
-            //Secondo migliore outcome
-            - secondChar_InkLevel >= ink_normal: C'è una cosa che devo dire a qualcuno, e voglio dirla a te.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
-            
-            //Outcome peggiore
-            - secondChar_InkLevel == ink_empty: C'è una cosa che devo dire a qualcuno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-                E posso dirla solo a te.
-                Purtroppo.
-            
-            //Outcome neutro
-            - else:C'è una cosa che devo dire a qualcuno.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-                E posso dirla solo a te.
-                Purtroppo.
-        }
-       
         Da quando nonna è nella casa dei vecchi fa tutto schifo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
         Papà è tornato ma litiga sempre con mamma.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         E quando papà non c'è mamma si arrabbia con me.
@@ -75,10 +38,8 @@
         Scusa per la bugia.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
             @animation:RewriterBook
         Ma se non mi invento un motivo per le cose nessuno mi ascolta.
-       
-        ~ greenhouse_cultivableGrowing ++
-            
-            + [<i>Voglio cominciare la riscrittura.]
+    
+            + [Ti ho ascoltato, {charNameTwo}, e posso aiutarti a stare meglio.]
                 -> rewriting
             
             + [Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.]
@@ -87,6 +48,12 @@
 
     = rewriting
     ~ temp charNameTwo = translator(secondChar_ActualName)
+
+            Va bene.
+            Ma stavo pensando una cosa però prima.
+            Abbiamo parlato tantissimo noi due.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
+            Ma davvero TANTISSSSSSIMO!
+            E sai cosa penso di te?
 
             //Avvio aggiornamento relazione + commento PNG + commento strega
                 -> secondAffinityCalc ->

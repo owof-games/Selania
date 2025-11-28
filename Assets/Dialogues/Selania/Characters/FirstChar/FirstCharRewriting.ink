@@ -46,6 +46,7 @@
         O fare il salto e rischiare di perdere tutto.
         O tutto?
         Quanto si può sperare di essere felici, a questo mondo?
+            @animation:RewriterBook
 
             + [Che ne dici se riscriviamo assieme la tua storia?]
                 -> rewriting
