@@ -36,15 +36,15 @@
 ~ temp mentorName = translator(mentor_ActualName)
 {  
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, ma non ho fatto il tutorial su come funziona
-        - secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && not questions:
+        - secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && about_violence_and_peace && not rewriting_proposal_second_character && not questions:
                 -> ask
             
     //Se voglio avviare la riscrittura, ho ascoltato il minimo previsto di storylet, e ho fatto il tutorial su come funziona
-        - secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && questions:
+        - secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && about_violence_and_peace && not rewriting_proposal_second_character && questions:
                 -> ask
     
     //Abbiamo proposto di fare la riscrittura, ma poi ci siamo prese del tempo         
-        - secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && rewriting_proposal_second_character:
+        - secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && about_violence_and_peace && rewriting_proposal_second_character:
                 -> ask
 
     //Vogliamo offrire un dono            

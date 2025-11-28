@@ -22,24 +22,23 @@
         Papà è tornato ma litiga sempre con mamma.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         E quando papà non c'è mamma si arrabbia con me.
         E l'unica cosa che mi dice è che devo smetterla di piangere e fare il grande.
-        Che anche se piango nonna non torna.
+        Che anche se piango nonna non torna e che è in un posto migliore.
         E a scuola le maestre sono fastidiose.
-        <b><i>Stronze</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-        Scusa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+        Dicono che sono cattivo e bugiardo e sono violento, e finisco sempre in punizione.
         Mio fratello dice che il mondo è un posto orribile e che non si può più aggiustare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Gli animali spariranno tutti ed è colpa nostra.
+        Gli animali spariranno tutti e non posso fare nulla.
         Papà dice che devo crescere, non pensare agli animali perché ora sono grande.
         Ma i grandi fanno schifo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
         E non voglio fare schifo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
         E non voglio diventare grande.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
         Per questo sono venuto qui.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Per stare con gli animali.
-        Non è il mio compleanno.
-        Scusa per la bugia.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-            @animation:RewriterBook
+        E non è il mio compleanno.
         Ma se non mi invento un motivo per le cose nessuno mi ascolta.
-    
-            + [Ti ho ascoltato, {charNameTwo}, e posso aiutarti a stare meglio.]
+        Scusa per la {player_name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+            @animation:RewriterBook
+        
+            + [Ti ho ascoltato, {charNameTwo}, e posso aiutarti a riscrivere la tua storia.]
                 -> rewriting
             
             + [Capisco il tuo dolore, ma ho bisogno di riflettere un attimo.]
@@ -74,54 +73,57 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ change_entity_place(Mentor)
-            {
-                -   are_two_entities_together(FirstCharacter, PG):Qui le cose si fanno serie, e io me ne vado. Buona fortuna, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_affectionate
-                        ~ change_entity_place(FirstCharacter)
-            }        
-      //Affrontiamo gli adulti in generale
-    Hai detto che i grandi fanno schifo e che non ti fidi di loro.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
 
-        + [Però tua nonna e tuo fratello spaccano.]
-            Tua nonna ti ha insegnato a barare!
-            Tuo fratello crea cose e ti protegge.
-            Anche loro sono adulti.
-                   -> color_variation_management(SecondCharacter, redC)->
-
+        Comunque possiamo cominciare quando vuoi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         
-        + [I tuoi genitori sono infelici, essere adulti è difficile.]
-            Tutti i litigi, la fuga di tuo padre.
-            Diventiamo grandi, abbiamo un sacco di doveri, e non sappiamo cosa fare.
-            Per questo i grandi fanno cose brutte.
-            Ma questo non li rende schifosi.
-                   -> color_variation_management(SecondCharacter, greenC)->
-                   
-        
-        + [Il problema è che agli adulti non è permesso giocare.]
-            Tua nonna gioca, bara, e infatti è super.
-            I tuoi genitori lavorano e litigano e sono infelici.
-            Tu puoi essere un grande che gioca.
-            E che gioca con gli animali per vivere.
-            Ed essere felice.
-                   -> color_variation_management(SecondCharacter, yellowC)->
-                            
+        //Affrontiamo gli adulti in generale
+            Hai detto che da quando nonna è nella casa dei vecchi fa tutto schifo.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+            Che tuo papà litiga con tua mamma, e che mamma si arrabbia con te e di non piangere perché nonna è in un posto migliore.
 
+            + [Tua nonna ti ha insegnato a lottare: lotta anche tu!]
+                -> color_variation_management(SecondCharacter, redC)->
+                E ti ha insegnato a barare!
+                E a sputare nel caffè di chi ti fa male.
+                    
             
-        + [Però gli adulti hanno anche scoperto le cose che ti piacciono.]
-            L'elettricità.
-            Gli studi sugli animali.
-            Le caramelle.
-            Le action figures.
-                   -> color_variation_management(SecondCharacter, blueC)->
- 
-        + [Hai ragione. Ma tu puoi essere un altro tipo di adulto.]
-            Un adulto che sa correggere le giornate.
-            Anche per le altre persone.
-            Che può tornare a fidarsi delle altre persone.
-                   -> color_variation_management(SecondCharacter, purpleC)->
+            + [I tuoi genitori sono infelici, {charNameTwo}, prova a comprenderli.]
+                -> color_variation_management(SecondCharacter, greenC)->
+                Tutti i litigi, la fuga di tuo padre.
+                Il modo in cui si arrabbia per tutto.
+                Le paure di tua mamma.
+                Sono cose che puoi capire, che vivi anche tu.
+                    
+                    
+            + [Tuo fratello però ha trovato il bello anche in questo casino.]
+                -> color_variation_management(SecondCharacter, yellowC)->
+                Ci sono le sue statue, c'è il suo amico.
+                {
+                    -second_char_main_storylets.eleven:
+                        E quando sei a casa sua, ti lascia sperimentare con le cose di casa.
+                }
+
+                                
+            + [E forse la casa dei vecchi è davvero un posto migliore.]
+                -> color_variation_management(SecondCharacter, blueC)->
+                Una persona anziana ha bisogno di cure, {charNameTwo}.
+                Di persone che le diano quello di cui ha bisogno.
+                È giusto che tu senta la sua mancanza.
+                Ma sarebbe la cosa giusta per lei, riportarla a casa?
+                    
+    
+            + [Ma è grazie al pianto che puoi essere diverso da loro.]
+                -> color_variation_management(SecondCharacter, purpleC)->
+                Tu tieni agli animali.
+                A tuo fratello.
+                Alla nonna.
+                E anche a loro.
+                Puoi imparare a fidarti.
+                    
             
         -
-        ~ numberQuestion ++  
-        Continua.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+            ~ numberQuestion ++  
+        Sì no boh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+        Continua.
         
             {
                 - firstChar_storyStatus!=story_storyEnded:{player_name} ha utilizzato la sua prima unità di inchiostro per compiere una riscrittura. L'inchiostro ora si è consumato.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -136,45 +138,87 @@
         
     
     = two
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    Hai paura che il mondo stia finendo e che spariranno tutti gli animali.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-  
-        + [Non puoi prevedere il futuro. Goditi quello che c'è senza rimpianti.]
-            Se le cose sono incerte, prenditi le certezze.
-            E la cosa certa è che gli animali ci sono ancora.
-            Che tuo fratello ti vuole bene.
-            E le caramelle sono buone.
-                   -> color_variation_management(SecondCharacter, yellowC)->
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
+
+        A scuola le maestre dicono che sei cattivo, bugiardo, violento, e finisci sempre in punizione.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+
+        + [Le bugie alla fine sono solo storie. Usale per divertirti.]
+            -> color_variation_management(SecondCharacter, yellowC)->
+            Ti piace immaginare giornate diverse: prova a condividere questa cosa con i tuoi amici.
+            La tua testa è un bellissimo parco giochi: perché non condividerla con gli altri?
+                   
+        + [Tutto a questo mondo può cambiare. Anche un bambino cocciuto e bugiardo.]
+            -> color_variation_management(SecondCharacter, blueC)->
+            Quando sei arrivato qui hai picchiato {mentorName}.
+            E mi hai detto molte bugie.
+            Ma hai anche chiesto scusa.
+            Puoi partire da questo per cambiare.
+                   
+        + [La rabbia è parte della tua vita, della tua famiglia: trasformala.]
+            -> color_variation_management(SecondCharacter, redC)->
+            Come quando ti arrabbi perché gli animali stanno scomparendo.
+            O perché papà tratta male nonna.
+            Puoi prendere quello che senti a farci qualcosa di buono per te e le persone che ami.
+                    
+        + [Ma non sei solo questo: sei gentile, sei curioso, sei divertente.]
+            -> color_variation_management(SecondCharacter, greenC)->
+            Hai sviluppato un bel rapporto con {charNameOne}.
+            Mi hai raccontato tante cose interessanti sugli animali.
+            Hai fatto amicizia con la rana.
+            Ti sei preso le tue responsabilità.
+            Forse a volte sei violento.
+            E menti.
+            Ma sei anche tante altre cose, {charNameTwo}.
+                   
+        + [Eppure hai trovato il modo di fare pace con {mentorName}.]
+            -> color_variation_management(SecondCharacter, purpleC)->
+            Hai fatto lo sforzo di capirla.
+            E mi hai chiesto scusa più volte per le tue bugie.
+            Stai già cambiando, {charNameTwo}!
+                   
+
+
+        // + [Non puoi prevedere il futuro. Goditi quello che c'è senza rimpianti.]
+        //     Se le cose sono incerte, prenditi le certezze.
+        //     E la cosa certa è che gli animali ci sono ancora.
+        //     Che tuo fratello ti vuole bene.
+        //     E le caramelle sono buone.
+        //            -> color_variation_management(SecondCharacter, yellowC)->
  
-        + [Sei giovane ma sai già un sacco di cose. Studia e salvali.]
-            Si ha paura solo se non si conosce una cosa.
-            Impara a conoscere quello di cui hai paura.
-            E a quel punto saprai anche come cambiare le cose.
-                   -> color_variation_management(SecondCharacter, blueC)->
+        // + [Sei giovane ma sai già un sacco di cose. Studia e salvali.]
+        //     Si ha paura solo se non si conosce una cosa.
+        //     Impara a conoscere quello di cui hai paura.
+        //     E a quel punto saprai anche come cambiare le cose.
+        //            -> color_variation_management(SecondCharacter, blueC)->
 
-        + [E allora lotta. Unisciti ad altri e protesta!]
-            Sei abituato a stare in castigo, di cosa hai paura?
-            A scuola fai quello che vuoi.
-            Fallo anche fuori.
-            Per salvare il mondo.
-                    -> color_variation_management(SecondCharacter, redC)->
+        // + [E allora lotta. Unisciti ad altri e protesta!]
+        //     Sei abituato a stare in castigo, di cosa hai paura?
+        //     A scuola fai quello che vuoi.
+        //     Fallo anche fuori.
+        //     Per salvare il mondo.
+        //             -> color_variation_management(SecondCharacter, redC)->
 
-        + [Inventa storie, bugie che creino compassione, che cambino le persone.]
-            Un po' come la bugia del compleanno.
-            Ma per far sì che ogni bosco abbia migliaia di compleanni.
-            Usa il tuo dono per convincere le persone a cambiare.
-                   -> color_variation_management(SecondCharacter, greenC)->
+        // + [Inventa storie, bugie che creino compassione, che cambino le persone.]
+        //     Un po' come la bugia del compleanno.
+        //     Ma per far sì che ogni bosco abbia migliaia di compleanni.
+        //     Usa il tuo dono per convincere le persone a cambiare.
+        //            -> color_variation_management(SecondCharacter, greenC)->
   
-        + [La paura blocca, la paura è una scusa comoda.]
-            La paura è un rifugio.
-            Se hai paura, non agisci.
-            Se agisci non cambi nulla.
-            Davvero vuoi restare per sempre bloccato dalla paura?
-                   -> color_variation_management(SecondCharacter, purpleC)->
+        // + [La paura blocca, la paura è una scusa comoda.]
+        //     La paura è un rifugio.
+        //     Se hai paura, non agisci.
+        //     Se agisci non cambi nulla.
+        //     Davvero vuoi restare per sempre bloccato dalla paura?
+        //            -> color_variation_management(SecondCharacter, purpleC)->
                    
         -
         ~ numberQuestion ++  
-        Mmm, posso pensarci.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+        Non ci avevo pensato, pensato davvero.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+        Che posso fare qualcosa per gli animali.
         
             {
                 - firstChar_storyStatus!=story_storyEnded:{player_name} ha utilizzato la sua seconda unità di inchiostro per procedere con la riscrittura. La boccetta ora è vuota.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -190,42 +234,45 @@
     = three
     ~ temp charNameTwo = translator(secondChar_ActualName)
     //Affrontiamo il mondo. Rabbia, bugie, fantasia, violenza etc.
-    Tuo fratello dice che il mondo è orribile e che non si può più aggiustare.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+            Tuo fratello dice che il mondo è orribile e che non si può più aggiustare.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+            E hai paura che gli animali possano sparire.
+            Così è logico vedere il futuro come un posto spaventoso.
     
-        + [Eppure crea arte.]
-            E l'arte è respiro, futuro, è cambiamento.
-            L'arte è credere che le cose possano migliorare.
-            Definisce un presente, per lanciarci altrove.
-            E rende il mondo un posto meno orribile.
-                   -> color_variation_management(SecondCharacter, purpleC)->
-   
-        + [Eppure ama il suo ragazzo.]
+        + [Eppure ci sono le associazioni che proteggono gli animali.]
+            -> color_variation_management(SecondCharacter, purpleC)->
+            Come quelle di cui ti ha parlato la tua maestra.
+            E la sua amica del canile.
+
+        + [Eppure tuo fratello ama il suo ragazzo.]
+            -> color_variation_management(SecondCharacter, greenC)->
             E ama te.
             E fa in modo che possiate passare tanto tempo assieme.
             Che tu possa avere uno spazio felice.
             E così rende il mondo un po' meno orribile.
-                   -> color_variation_management(SecondCharacter, greenC)->
- 
-        + [Eppure lotta contro tuo padre perché tu stia meglio.]
+                   
+        + [Eppure tuo fratello lotta contro tuo padre perché tu stia meglio.]
+            -> color_variation_management(SecondCharacter, redC)->
             Si è creato una nuova casa.
             Non si è fatto mettere i piedi in testa da nessuno.
             E questo lo fai se pensi ci sia un futuro dove andare.
-                    -> color_variation_management(SecondCharacter, redC)->
-  
-        + [Eppure gioca con te.]
-            Si diverte, lascia che le cose belle accadano.
-            In un mondo orribile, esisterebbe davvero il piacere?
-                   -> color_variation_management(SecondCharacter, yellowC)->
-
-        + [Eppure per lavoro aggiusta le cose.]
+                    
+        + [Ma sai anche trovare la gioia e la giocosità nel mondo.]
+            -> color_variation_management(SecondCharacter, yellowC)->
+            Sei arrivato in questo posto sconosciuto e invece di avere paura, ti sei messo a curiosare.
+            Ti sei fatto amico una rana parlante.
+            Quando tu giochi non hai paura di nulla.
+                   
+        + [Eppure tuo fratello per lavoro aggiusta le cose.]
+            -> color_variation_management(SecondCharacter, blueC)->
             Vede le cose rotte e le ripara.
             Quindi ci sono cose che si possono aggiustare.
             Serve solo un meccanico per le cose che lo spaventano.
-                   -> color_variation_management(SecondCharacter, blueC)->
-  
+                   
         -
-        ~ numberQuestion ++  
-        Ok...#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+
+        ~ numberQuestion ++ 
+        Si no boh.
+        Magari hai ragione.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
         
             {
                 - firstChar_storyStatus!=story_storyEnded:{player_name} ha utilizzato la terza unità di inchiostro, proponendo una riscrittura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -239,55 +286,49 @@
             }
     
     = four
+    ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)    
-    
-    //Commento più personale
-    {mentorName} ti ha chiamato {charNameTwo}.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-    
-        + [Vuoi davvero dargliela vinta?]
-            Non ti piace da quando sei arrivato qui.
-            Ti ha fatto arrabbiare dal primo momento.
-            Vuoi davvero che sia lei a decidere come ti chiami?
-                    -> color_variation_management(SecondCharacter, redC)->
-     
-        + [I ricci resistono a tantissimi veleni.]
-            Ogni animale ha la sua dote, il suo modo di superare le paure.
-            Puoi studiare e diventare un superanimale.
-            O divertirti a cambiare quando vuoi.
-            E tornare riccio, quando le cose si fanno velenose.
-                   -> color_variation_management(SecondCharacter, blueC)->
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName) 
+
+        Hai detto che i grandi fanno schifo, e che non vuoi diventare grande.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         
-        + [A volte ci raggomitoliamo per superare il peggio.]
-            Quello che conta è: cosa facciamo, dopo?
-            Quando le cose sono superate?
-            Restiamo ancora nel nostro posto sicuro?
-            O decidiamo di guardare le cose da una prospettiva diversa, e cambiarle?
-                   -> color_variation_management(SecondCharacter, purpleC)->
+            + [Ma puoi essere un adulto combattente, come tua nonna.]
+                -> color_variation_management(SecondCharacter, redC)->
+                E non farti mettere i piedi in testa da nessuna persona!
+                        
+        
+            + [Ma puoi essere un adulto curioso e studioso, come un po' già sei.]
+                -> color_variation_management(SecondCharacter, blueC)->
+                E tutto quello che ora sai degli animali diventerà mille volte ancora di più.
 
             
-        + [Anche se la schiena ha le spine, la loro pancia è tenera e gentile.]
-            E tu sei stato tenero molte volte da quando sei qui.
-            Con me, con la rana.
-            E con le cose che hai raccontato.
-            Ti servono ancora quelle spine?
-                   -> color_variation_management(SecondCharacter, greenC)->
+            + [Ma puoi essere un adulto in cerca di uno scopo più grande, come {charNameOne}.]
+                E trovare modi inaspettati di aiutare le altre persone, gli animali, il mondo.
+                    -> color_variation_management(SecondCharacter, purpleC)->
 
-        + [I ricci hanno un olfatto super, possono trovare tutte le caramelle del mondo.]
-            E dopo che hai trovato le caramelle, cambia animale.
-            Diventa qualcosa che vede fino alla luna, e insegui le stelle.
-            Oppure impara a nuotare fino all'altra parte del mondo.
-            Continua a cambiare.
-                    -> color_variation_management(SecondCharacter, yellowC)->
+                
+            + [Ma puoi essere un adulto che si prende cura delle persone, come {mentorName}.]
+                -> color_variation_management(SecondCharacter, greenC)->
+                E rendere più facile la vita all3 altr3.
+                    
+
+            + [Ma puoi essere un adulto creativo, come tuo fratello.]
+                -> color_variation_management(SecondCharacter, yellowC)->
+                E condividere le tue storie e i tuoi esperimenti.
+                Essere felice nel farli.
+                        
 
         -
         ~ numberQuestion ++  
-        ...#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+        Posso essere un adulto buono.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+        Woah.
         
-        {
-            - firstChar_storyStatus!=story_storyEnded:{player_name}ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        }  
-        
+            {
+                - firstChar_storyStatus!=story_storyEnded:{player_name}ha utilizzato la quarta e ultima unità di inchiostro, compiendo il massimo di riscritture possibili.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            }  
+            
             -> ending
 
     
@@ -296,10 +337,10 @@
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    Per questo ti dico:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-            {
-                - firstChar_storyStatus != story_storyEnded:{player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-            }    
+        Per questo ti dico {charNameTwo}:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+                {
+                    - firstChar_storyStatus != story_storyEnded:{player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                }    
      
         + (red)[Diventa il più forte, il più coraggioso.]
             Sei un testardo, bugiardo, dispettoso.
@@ -337,27 +378,26 @@
     Sì. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
     No.
     Boh.
-    {player_name}.
-    Tu mi dici queste cose e io mi dico che c'è un animale.
-    Un animale che mi piace.
-    Un animale che un po' è me.
-    E lo voglio come mio nuovo nome.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+
             {
                 - ending.red:
-                    
+                    Non ci avevo mai pensato, che il fatto che sono bugiardo e dispettoso può rendermi indistruttibile.
                 
                 - ending.purple:
-                    
+                    Non è che vedo sempre che anche le altre persone hanno paura.
+                    Questa cosa mi ha fatto sentire meno stupido.
 
                 - ending.yellow:
-                    
+                    Mi piace quella cosa che hai detto sulla curiosità perché è vera.
+                    Curioso sempre, curioso forte!
 
                 - ending.green:
-                    
+                    Io non ci avevo mica pensato che anche i miei genitori hanno paura.
 
                 - ending.blue:
+                    Hai detto che la mia intelligenza può fare felici le altre persone.
+                    È una cosa bella, {player_name}.
                     
-
             }
 
             //Prima chiamo il moltiplicatore di colori, così che comunque le scelte fatte qui abbiano un impatto maggiore.
@@ -379,9 +419,9 @@
             - secondChar_ActualName has Grizzly:
                     {
                         - ending.red:
-                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 Il mio vero nome è <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 Combatterò la mia paura e diventerò il più forte di tutti, imbattibile!
@@ -389,47 +429,45 @@
             - secondChar_ActualName has Lupo:
                     {
                         - ending.green:
-                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 Mi chiamerò <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 E proteggerò il mio branco.
                 Mamma, papà, nonna e mio fratello.
                 Nessuna delle persone a cui voglio bene deve più stare male.
               
-            
             - secondChar_ActualName has Delfino:
                     {
                         - ending.yellow:
-                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 E il mio nome è <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-                Se lo guardi bene tutto è un gioco.
+                Perché tutto è un gioco.
                 La mia fantasia e le mie bugie aiuteranno le altre persone ad avere meno paura.
                                
             
             - secondChar_ActualName has Capibara:
                     {
                         - ending.purple:
-                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 Mi chiamerò <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                 E imparerò ad avere tantissimi amici.
                 Ci sentiremo meno soli!
                 E così avremo meno paura.
                     
-            
             - secondChar_ActualName has Corvo:
                     {
                         - ending.blue:
-                            E se ripenso a tutto quello che ci siamo dett3 fino ad ora, credo che questa sia la mia canzone.
+                            E se penso a tutte le cose che abbiamo detto, c'è questo animale che è un po' me e che mi piace.
                         - else:
-                            Ma se ripenso a tutto quello che ci siamo dett3 fino ad ora, è un'altra la mia canzone.
+                            Ma se penso a tutte le cose che abbiamo detto c'è un animale che mi piace e che so che è il nome che mi serve.
                     }
                 Io sono <b><i>{charNameTwo}</b></i>.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Sono sveglio e posso capire ciò che mi circonda!
@@ -445,7 +483,7 @@
             - secondChar_specialEvent == true:
                 -> secret_ending
             - else:
-                -> exit
+                -> close
             }
     
     
@@ -461,19 +499,16 @@
         A me non mi sembra mica felice.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
         Mi ricorda mamma quando gira per casa dando consigli e dicendo cose sorridendo.
         E poi si rinchiude in camera e resta in silenzio per ore.
-        Per me non sta mica bene.
-
+        Ora fa tante cose e parla tanto.
+        Ma non mi sembra felice.
             -> close
             
-    = exit
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-        Voglio stare ancora un po' qui prima di prendere il treno. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
-        Mi mancherà la rana!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
-            -> close  
     
     = close
-        Ci sono alcune cose che devo ancora vedere prima di andarmene.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-        A dopo, {player_name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+            Ora voglio stare ancora un po' qui prima di prendere il treno. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
+            Mi mancherà la rana!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+                -> close  
         
             @animation:RewriterBook
             
