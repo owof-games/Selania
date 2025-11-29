@@ -256,8 +256,9 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
 
             - else:
                 Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
+
+
         }
-        
         Ecco, questo coperchio ci sta perfettamente.
         Così, a caldo.
         Una persona che ti piace ti dice "Ti amo". Qual è la prima sensazione che provi?
@@ -877,6 +878,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         
         
         = extra_ing_feedback
+        
         // Qui verranno fatti commenti diversi a seconda che l'ingrediente sarà apprezzato o meno.
             {
                 - kitchen_firstCharExtraIngredientReaction == goodReaction:
@@ -891,9 +893,18 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 - else:
                     ERROR: non abbiamo un valore valido di kitchen_firstCharExtraIngredientReaction, che è uguale a {kitchen_firstCharExtraIngredientReaction}.
             }
-        
+
         
                 = good_reaction
+                ~ temp charNameOne = translator(firstChar_ActualName)
+                ~ temp charNameTwo = translator(secondChar_ActualName)
+                ~ temp charNameThree = translator(thirdChar_ActualName)
+                ~ temp charNameFour= translator(fourthChar_ActualName)
+                ~ temp mentorName = translator(mentor_ActualName)
+                        {
+                            - not at_table_with_second_char.extra_ing_feedback:
+                                Poiché {player_name} ha aggiunto ingrediente adorato da {charNameOne}, riceverà un consiglio su come gestire le conversazioni con lei.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                        }
                     Aggiungere {ingredientTranslator(kitchen_firstCharExtraIngredient)} è stato un tocco geniale.
                     Mi è arrivato proprio al cuore.
                     Sai, so che non è sempre facilissimo capire come ragiono.
@@ -905,6 +916,15 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                         -> relationship_feedback
                 
                 = bad_reaction
+                ~ temp charNameOne = translator(firstChar_ActualName)
+                ~ temp charNameTwo = translator(secondChar_ActualName)
+                ~ temp charNameThree = translator(thirdChar_ActualName)
+                ~ temp charNameFour= translator(fourthChar_ActualName)
+                ~ temp mentorName = translator(mentor_ActualName)  
+                        {
+                            - not at_table_with_second_char.extra_ing_feedback:
+                                Poiché {player_name} ha aggiunto ingrediente detestato da {charNameOne}, non riceverà alcun consiglio su come gestire le conversazioni con lei.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                        }
                     Aggiungere {ingredientTranslator(kitchen_firstCharExtraIngredient)} è stata una scelta.
                     Una scelta terribile, {player_name}.
                     Per fortuna che ho una fame bestiale.
@@ -913,6 +933,16 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             
                 
                 = meh_reaction
+                ~ temp charNameOne = translator(firstChar_ActualName)
+                ~ temp charNameTwo = translator(secondChar_ActualName)
+                ~ temp charNameThree = translator(thirdChar_ActualName)
+                ~ temp charNameFour= translator(fourthChar_ActualName)
+                ~ temp mentorName = translator(mentor_ActualName)
+                        {
+                            - not at_table_with_second_char.extra_ing_feedback:
+                                Poiché {player_name} ha aggiunto ingrediente abbastanza apprezzato da {charNameOne}, riceverà un consiglio fumoso su cosa fare parlando con lei.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                        }
+
                     L'aggiunta di {ingredientTranslator(kitchen_firstCharExtraIngredient)} mi ha confusa.
                     È come.
                     Uh, non so se hai presente.

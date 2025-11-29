@@ -32,16 +32,14 @@
     -> storage_colors(SecondCharacter)->
     -> cooking_animations_on ->
     
-    Sai {charNameTwo}, mentre cuciniamo potremmo parlare un po'.
-
-    - (top)
+    Sai {charNameTwo}, mentre cuciniamo potremmo parlare un po'.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+        - (top)
     
-    In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più...
+    In particolare, ripensando alle nostre conversazioni, mi farebbe piacere parlare di più... #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
 
             + [Parliamo di animali.]
                     -> first_theme
                     
-            
             + [{second_char_main_storylets.six: Della scuola.|<i>{player_name} deve parlare ancora con {charNameTwo} per sbloccare questo tema.</i>}]
                 {
                     - second_char_main_storylets.six:
@@ -66,7 +64,27 @@
 
     
     = first_theme
-        Prima qualcosa di più generico sugli animali.
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
+
+        Animaliiiiiiiiiiii!
+        A casa ho una vecchia enciclopedia, era del papà, che è piena di disegni e cose sugli animali.
+        E poi a un mercatino abbiamo trovato una vecchia collezione di riviste sugli insetti.
+        Poi ho dei modellini di dinosauri.
+        Che però ultimamente non mi piacciono più.
+        Mentre mi piace disegnare animali inventati mettendo assieme pezzi diversi.
+        Il mio preferito è il prociorso, che è un po' procione e un po' orso e mangia il miele ma lo puoi coccolare.
+        Perché l'orso ti mangerebbe la mano.
+        Papà dice che sono fissato, ma mio fratello dice che sono molto intelligente e quindi è normale.
+        Ci mettiamo anche il cioccolato?
+        Una volta ho fatto uno spettacolo a casa con il teatrino i disegni e gli animali inventati.
+        Quando faccio queste cose chiamo tutta la famiglia.
+        E mi fanno i complimenti e ridono però non lo so.
+        Mi sembra che i grandi le cose le fanno perché devono.
+        Non lo so mica se si divertono davvero.
 
             + [Scelta blu]
                 -> color_variation_management(SecondCharacter, blueC)->
@@ -84,29 +102,67 @@
                -> color_variation_management(SecondCharacter, purpleC)->
             -    
         
+        Ho una fame!
+        Ho anche trovato del cacao!
+        Ma a te come ti piace divertirti?
 
             {
                 - not cooking_with_first_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
-            + [Sostantivo A]
-                ~ kitchen_recipeNoun = "Sostantivo A"
+        
+            + [Preparo una base per biscotti sportivi.]
+                ~ kitchen_recipeNoun = "Biscotti"
+                Bleah.
+                Non i biscotti.
+                Ma lo sport.
+                Bleah!
                
-            + [Sostantivo B]
-                ~ kitchen_recipeNoun = "Sostantivo B"
+            + [Stendo della sfoglia per brioches giocose.]
+                ~ kitchen_recipeNoun = "Brioches"
+                E a chi giochi?
+                A me piace tantissimo fare quelli di intelligenza ora.
+                Quando sono a casa di mio fratello posso starci tutto il tempo che voglio!
              
-            + [Sostantivo C]
-               ~ kitchen_recipeNoun = "Sostantivo C"
+            + [Impasto un preparato per crostate socievoli.]
+               ~ kitchen_recipeNoun = "Crostata"
+               Nel senso che stai sempre con le persone?
+               Sempre?
+               Anche dopo la scuola e il lavoro?
         
-            + [Sostantivo D]
-                ~ kitchen_recipeNoun = "Sostantivo D"
+            + [Pulisco le formine per gelati artistici.]
+                ~ kitchen_recipeNoun = "Gelato"
+                Mmm.
+                So che è roba che piace a {charNameOne}.
+                A me mi piace fare le cose.
+                Ma non so se mi piace guardarle.
     
-            + [Sostantivo E]
-                ~ kitchen_recipeNoun = "Sostantivo E"
-            -  
-        Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        
-        Poi ci dice che gli piacciono gli animali perché sono prevedibili. E che non sono cattivi, quella è una roba delle persone.
-        E che le persone non le capisce, ma gli animali sì.
+            + [Raffreddo la frutta per sorbetti sonnacchiosi.]
+                ~ kitchen_recipeNoun = "Sorbetto"
+                {first_second_chit_chat: Ancora con questa cosa del dormire!|Che balle dormire!}
+                Ci sono così tante cose da fare!
+                Che noia!
+            -
+        Posso schiacciare qualcosa?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        Mi piace schiacciare le cose perché alcune vanno dappertutto, altre fanno l'olio, altre sembrano dei dischi volanti!    
+        E mi piace prevedere cosa succederà.
+        Mi piacciono le cose che si possono prevedere.
+        Anche per questo mi piacciono gli animali.
+        Non è che un leone all'improvviso fa il ragioniere.
+        O un coniglio diventa campione di videogiochi.
+        E poi gli animali non sono cattivi.
+        Fanno le cose che devono fare.
+        E litigano per le cose importanti per loro.
+        Ma non fanno male solo perché gli piace fare male.
+        A parte i gatti.
+        Che non mi piacciono.
+        Però mi piace immaginare le persone come animali.
+        Mi aiuta a capirle.
+        E a prevedere di più cosa faranno.
+        {charNameOne} per esempio mi ricorda un quokka perché con me è sempre giocosa.
+        Mentre {mentorName} mi sembra un delfino perché sono simpatici fino a quando non sai cosa fanno davvero.
+        E tu invece.
+        No, dimmelo tu.
+        Che animale sei?
 
             + [Scelta blu]
                 -> color_variation_management(SecondCharacter, blueC)->
@@ -123,28 +179,59 @@
             + [Scelta viola]
                -> color_variation_management(SecondCharacter, purpleC)->
             -
-        Riccio allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        Il profumo è buono.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        Ma quindi mangiamo solo dolce oggi?
+        Questa è una cosa bellissima!
+        Ma tu capisci sempre le persone?
         
-            + [Aggettivo A]
-                ~ kitchen_recipeAdjective = "Aggettivo A"
-               
-            + [Aggettivo B]
-                ~ kitchen_recipeAdjective = "Aggettivo B"
+            + [Aggiungo del caramello della perplessità.]
+                ~ kitchen_recipeAdjective = "della perplessità"
+                Anche io.
+                Sono così difficili.
+                È come capire degli animaletti strani.
+                Come l'aye-aye o il rinopiteco.
+                Ma almeno quello so che se piove starnutisce.
+                Mentre mamma a volte è felice e a volte si arrabbia.
+
+            + [Spolvero del cacao della convinzione.]
+                ~ kitchen_recipeAdjective = "della convinzione"
+                Magari mentre siamo assieme capisco qualcosa da te allora.
+                Magari.
              
-            + [Aggettivo C]
-               ~ kitchen_recipeAdjective = "Aggettivo C"
-        
-            + [Aggettivo D]
-                ~ kitchen_recipeAdjective = "Aggettivo D"
+            + [Verso dello sciroppo della negazione.]
+               ~ kitchen_recipeAdjective = "della negazione"
+                Magari allora puoi provare anche tu con gli animali.
+                O un'altra cosa che ti piace.
+                L'amico di mio fratello usa i segni zodiacali.
+                Che non hanno assolutamente senso.
+                Contento lui.
+                
+            + [Grattugio della noce della vicinanza.]
+                ~ kitchen_recipeAdjective = "della vicinanza"
+                Si no boh.
+                Le persone vicine mi sembrano ancora più incasinate.
+                Per loro devo avere almeno tre animali per capirle.
     
-            + [Aggettivo E]
-                ~ kitchen_recipeAdjective = "Aggettivo E"
+            + [Mescolo della vaniglia della solitudine.]
+                ~ kitchen_recipeAdjective = "della solitudine"
+                Già.
+                Si no boh.
+                Quindi capita anche alle altre persone.
+                Wow.
             -      
-    
-        Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Ci dice che capire le cose lo fa stare bene, al sicuro.
-        Ci fa degli esempi.
-        Ci dice che a volte per capire le persone le associa a degli animali, ci fa degli esempi, e la cosa funziona.
+
+        Intanto preparo del succo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        Ma non con le cose della serra, perché fanno cose strane.
+        A me piacciono le cose strane.
+        Ma le persone mi dicono sempre che sono strano.
+        La cosa che mi dicono di più a casa è "Ma perché fai così?!?!"
+        Con un sacco di gesti delle mani.
+        E io provo a spiegarlo ma mica mi capiscono.
+        E poi si arrabbiano perché mi dicono delle cose ma non sono davvero le cose che vogliono.
+        I grandi sono strani.
+        Ti dicono una cosa ma ne vogliono un'altra e quindi tu sbagli sempre alla fine.
+        E dicono a me che sono strano.
+
             + [Scelta blu]
                 -> color_variation_management(SecondCharacter, blueC)->
                
@@ -161,23 +248,50 @@
                -> color_variation_management(SecondCharacter, purpleC)->
             -
         
-        Riccio ci chiede che animale ci sentiamo.
-            + [Complemento A]
-                ~ kitchen_recipeComplement = "Complemento A"
+        No non mettere lo zucchero a velo, non mi piace.
+        Mi fa venire la tosse e poi mi sporco tutto!
+        A me non piace essere strano.
+        Io voglio essere {charNameTwo}.
+        Nessuno dice a {mentorName} che è strana.
+        Se si preoccupa tantissimo per qualcosa, {charNameOne} dice solo "Che ci vuoi fare, è {charNameTwo}".
+        Voglio solo essere me.
+        A te ti piace come ti trattano le altre persone?
+
+            + [Guarnisco con delle ciliege deluse.]
+                ~ kitchen_recipeComplement = "con ciliege deluse"
+                A mamma piace tanto quella parola.
+                Delusa.
+                Di solito quando dice "{charNameTwo}, mi hai delusa."
+                Poi le ciliege deludono sempre.
+                Te le ricordi più buone.
+                Poi le mangi e bleah!
                
-            + [Complemento B]
-                ~ kitchen_recipeComplement = "Complemento B"
+            + [Decoro con della granella soddisfatta.]
+                ~ kitchen_recipeComplement = "con granella soddisfatta"
+                Deve essere bello.
+                Come l'amico di mio fratello.
+                Mio fratello dice che ha un cuore grande e gli vogliono tutti bene.
              
-            + [Complemento C]
-               ~ kitchen_recipeComplement = "Complemento C"
+            + [Rifinisco con della glassa sofferente.]
+               ~ kitchen_recipeComplement = "con glassa sofferente"
+                Mmm.
+                Mi dispiace.
         
-            + [Complemento D]
-                ~ kitchen_recipeComplement = "Complemento D"
+            + [Aggiungo delle crema migliorante.]
+                ~ kitchen_recipeComplement = "con crema migliorante"
+                Nonna dice che tutto migliora, sempre.
+                Però a me interessa più che una cosa arriva da qualche parte.
+                Mica puoi migliorare all'infinito.
+                Non c'ha senso.
     
-            + [Complemento E]
-                ~ kitchen_recipeComplement = "Complemento E"
-            -  
-        Riccio lascia un ultimo commento, e poi ci dice che il piatto è pronto#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+            + [Spalmo della confettura altalenante.]
+                ~ kitchen_recipeComplement = "con confettura altalenante"
+                Cioè che dipende dalle persone?
+                O dalla persona?
+                Tipo mamma che un giorno ti adora e poi il giorno dopo non ti parla più?
+            - 
+        
+        Mi sa che questo dolce lo faccio anche a mio fratello.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             -> fourth_ingredient_dispatcher
     
     = second_theme
@@ -432,10 +546,13 @@
     
         //La chiusura è comune, sempre per ridurre il rischio di errori
         = fourth_ingredient_dispatcher
-        A me mi sembra che è cotto, e ho fame, che ne dici?
+        Abbiamo sporcato tantissime cose.
+        Dici che si lavano da sole?
+        Dici che è pronto?
         
             {
-                - backpack_findedGifts == (): Dato che lo zaino di {player_name} è vuoto, non è possibile inserire un ingrediente speciale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - backpack_findedGifts == ():
+                    Dato che lo zaino di {player_name} è vuoto, non è possibile inserire un ingrediente speciale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                     -> recipe_name_creator ->
                     -> at_table_with_second_char
                 
@@ -481,27 +598,32 @@
     ~ move_entity(CookingWithSecondCharOBJ, Kitchen)
     ~ temp piatto = kitchen_tempRecipeName
     
-    È stato divertente cucinare assieme, {player_name}.
+    Hai visto che pancia grande che ho ora?
+    Grazie {player_name}, era buonissimo!
+    E poi questo {piatto} sembra una cosa da cinema.
         {
             - firstChar_storyStatus == story_storyStarted:
-                Commento su Chitarra
-            
+                Secondo me a {charNameOne} gli sarebbe piaciuto TAN-TIS-SI-MO!
+                Dovevo lasciargli un pezzetto!
             - else:
-                Commento malinconico su Chitarra.
+                Secondo me a {charNameOne} gli sarebbe piaciuto TAN-TIS-SI-MO!
+                Un po' mi manca.
         }
-    Mi ha fatto sentire a casa.
+
+    A me mi piace parlare, ma gli adulti non mi ascoltano mai così tanto.
         {
             -cooking_with_second_char.first_theme:
+                E sono contento che mi hai chiesto degli animali.
+                E le cose che mi hai detto sulle persone.
+                Grazie.
 
             -cooking_with_second_char.second_theme:
             
             -cooking_with_second_char.third_theme:
             
         }
-        
-    E poi questo {piatto}!
-    Spacca, non trovi?
-    
+
+
         {
             - kitchen_secondCharExtraIngredientReaction != notReaction:
                 -> extra_ing_feedback
@@ -531,58 +653,114 @@
         
         
                 = good_reaction
-                Abbiamo aggiunto un ingrediente extra apprezzato da Riccio, per cui lui commenta:#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                Aggiungere {ingredientTranslator(kitchen_secondCharExtraIngredient)} è stata una scelta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
-                E poi ci dà un'informazione utile per capire come gestire le conversazioni in futuro:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                Non mi piace quando gli adulti non sono coerenti, quando mi dicono le cose secondo quello che gli serve..#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
-                
-                    -> relationship_feedback
+                ~ temp charNameOne = translator(firstChar_ActualName)
+                ~ temp charNameTwo = translator(secondChar_ActualName)
+                ~ temp charNameThree = translator(thirdChar_ActualName)
+                ~ temp charNameFour= translator(fourthChar_ActualName)
+                ~ temp mentorName = translator(mentor_ActualName)
+                        {
+                            - not at_table_with_first_char.extra_ing_feedback:
+                                Poiché {player_name} ha aggiunto ingrediente adorato da {charNameTwo}, riceverà un consiglio su come gestire le conversazioni con lui.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                        }
+
+                    Mi è piaciuto tanto tanto che c'hai messo {ingredientTranslator(kitchen_secondCharExtraIngredient)}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
+                    Lo vuoi sapere un segreto?
+                    Alla fine non sono <i>così</i> strano.
+                    Ma mi piace quando le persone sono <b>coerenti</b>.
+                    Sennò mi sembra che vuoi avere ragione, non che mi vuoi parlare davvero.
+                        -> relationship_feedback
                 
                 = bad_reaction
-                Abbiamo aggiunto un ingrediente extra detestato da Riccio, per cui lui commenta:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                Aggiungere {ingredientTranslator(kitchen_secondCharExtraIngredient)} è stata una scelta terrificante, non farlo mai più!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)} #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_emotional
-                E poiché ha odiato l'ingrediente, non ci dirà niente di utile su come gestire le conversazioni future.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-               
-                    -> relationship_feedback
+                ~ temp charNameOne = translator(firstChar_ActualName)
+                ~ temp charNameTwo = translator(secondChar_ActualName)
+                ~ temp charNameThree = translator(thirdChar_ActualName)
+                ~ temp charNameFour= translator(fourthChar_ActualName)
+                ~ temp mentorName = translator(mentor_ActualName)
+                        {
+                            - not at_table_with_first_char.extra_ing_feedback:
+                                Poiché {player_name} ha aggiunto ingrediente detestato da {charNameOne}, non riceverà alcun consiglio su come gestire le conversazioni con lui.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                        }
+                    Però {ingredientTranslator(kitchen_secondCharExtraIngredient)} mi ha fatto suuuuuperschifo.
+                    Super.
+                    Bleah!
+                        -> relationship_feedback
             
                 
                 = meh_reaction
-                Abbiamo aggiunto un ingrediente extra che Riccio percepisce come neutro, né buono né cattivo, per cui lui commenta:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                Aggiungere {ingredientTranslator(kitchen_secondCharExtraIngredient)} è stata una scelta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
-                E poi ci dà un'informazione enigmatica per capire come gestire le conversazioni in futuro:#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                Informazione enigmatica per dire che non gli piacciono le conversazioni incoerenti.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
-                
-                    -> relationship_feedback
+                ~ temp charNameOne = translator(firstChar_ActualName)
+                ~ temp charNameTwo = translator(secondChar_ActualName)
+                ~ temp charNameThree = translator(thirdChar_ActualName)
+                ~ temp charNameFour= translator(fourthChar_ActualName)
+                ~ temp mentorName = translator(mentor_ActualName)
+                        {
+                            - not at_table_with_first_char.extra_ing_feedback:
+                                Poiché {player_name} ha aggiunto ingrediente detestato da {charNameOne}, riceverà un consiglio fumoso su cosa fare parlando con lui.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                        }
+                    Mi è piaciuto che c'hai messo {ingredientTranslator(kitchen_secondCharExtraIngredient)}.
+                    Non il mio preferito, ma quasi.
+                    Mi ha fatto pensare una cosa.
+                    Mi piacciono i cani.
+                    Ma non mi piace quando fanno le cose a caso.
+                    Tipo correre a destra e sinistra e ovunque.
+                    Devi andare dove devi andare.
+                    Come quando si parla.
+                        -> relationship_feedback
             
     
         
     = relationship_feedback
-        A prescindere che sia stato aggiunto o meno il quarto ingrediente, Riccio ci dirà anche finalmente dove sta andando la relazione con lui.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Il feedback fa riferimento a come è andata la conversazione in cucina, e non in generale.
+        ~ temp charNameOne = translator(firstChar_ActualName)
+        ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ temp charNameThree = translator(thirdChar_ActualName)
+        ~ temp charNameFour= translator(fourthChar_ActualName)
+        ~ temp mentorName = translator(mentor_ActualName)
+
+        Mi sa che sono davvero pieno.
+        Abbiamo parlato tanto, vero, qui?
+        Non abbiamo mai passato così tanto tempo assieme.
+        E penso che se ti ho conosciuto solo qui in cucina ora e {charNameOne} mi dice: vuoi fare amicizia con {player_name}?
+
             -> secondAffinityCalc ->
             {
                 - secondAffinityCalc == 1:
                     {
                         - secondChar_relationshipStatus == 0:
-                            Non ci stiamo pigliando #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                            Rispondo di no.
+                            Perché non so.
+                            Non è che mi è piaciuto molto molto come abbiamo parlato.
+
                         - secondChar_relationshipStatus == 1:
-                            Ci piacciamo#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                            Rispondo subito sììììììììì!
+                            Mi sono divertito.
+                            E mi è sembrato che mi hai ascoltato davvero.
+                            E mi piace questa cosa!
                     }
                     
                 - secondAffinityCalc == 2:
                     {
                         - secondChar_relationshipStatus == 0:
-                            Mi stai sul culo#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                            Rispondo di no.
+                            Perché non so.
+                            Non è che mi è piaciuto molto molto come abbiamo parlato.
+                        
                         - secondChar_relationshipStatus == 1:
-                            Non male ma potrebbe migliorare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                            Sì no boh.
+                            Devo ancora capirlo.
+                            Perché ci sono stati dei momenti in cui ho detto "Ma che figo che è avere qui {player_name}".
+                            E dei momenti in cui non ti capivo.
+                        
                         - secondChar_relationshipStatus == 2:
-                            Ci piacciamo tantissimo#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+                            Rispondo subito sììììììììì!
+                            Mi sono divertito.
+                            E mi è sembrato che mi hai ascoltato davvero.
+                            E mi piace questa cosa!
                     }    
         
             }
+
+    Abbiamo ancora tante chiacchierate da fare, vero?        
             
-            
-    -> ending_cooking_with_second_char
+        -> ending_cooking_with_second_char
 
 
 
@@ -593,9 +771,10 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    E ora {player_name}, credo mi farò due passi.
-    Mi sento piena e soddisfatta.
-    Grazie ancora per questo tempo assieme.
+    Però ora devo farmi due passi o mi addormento.
+    E non voglio dormire.
+    Voglio fare qualche dispetto.
+    A dopo {player_name}!
 
         -> cooking_animations_off ->
         ~ move_entity(SecondCharacter, Pond)
