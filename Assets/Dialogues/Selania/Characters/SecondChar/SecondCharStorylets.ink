@@ -243,7 +243,7 @@
             }
             {
                 - are_two_entities_together(Mentor, PG): 
-                        Perché come un riccio hai la faccina tenera ma spini come pochi, ragazzo..#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+                        Perché come un riccio hai la faccina tenera ma spini come pochi, ragazzo.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                     
             }  
         E i ricci mi piacciono.

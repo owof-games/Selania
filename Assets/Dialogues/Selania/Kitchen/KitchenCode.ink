@@ -135,7 +135,7 @@
     ~ enableNestDialogue()
     
     {debug_kitchen: I doni trovati sono {backpack_findedGifts}.}
-    Aggiungo....
+    Aggiungo...
     
 /* ---------------------------------
 
