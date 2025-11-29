@@ -295,51 +295,186 @@
             -> fourth_ingredient_dispatcher
     
     = second_theme
-        
-        Qui ci dice che quando parla della sua famiglia di solito dice che è molto bella e che si amano tutti.
-        Un po' perché odia quando le maestre lo trattano con pietà, un po' perché ha visto cosa hanno fatto a (nome marocchino femminile) gli assistenti sociali, e lui non vuole che gli portino via la famiglia (valuta se ha senso).
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 
-            + [Scelta blu]#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-                -> color_variation_management(SecondCharacter, blueC)->
-               
-            + [Scelta gialla]
-                -> color_variation_management(SecondCharacter, yellowC)->
-             
-            + [Scelta rossa]
-                -> color_variation_management(SecondCharacter, redC)->
-        
-            + [Scelta verde]
-                -> color_variation_management(SecondCharacter, greenC)->
-    
-            + [Scelta viola]
-               -> color_variation_management(SecondCharacter, purpleC)->
-            -    
-        A questo punto è Riccio a chiedere a noi qualcosa sul tema a, e noi e rispondiamo con un ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        
-            {
-                - not cooking_with_first_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-            }
+            Bleah.
+            Ma questa è una punizione!
+            La scuola fa schifo.
+            Ed è tutto lento.
+            Mi annoia tantissimo.
+            A scuola sono sempre in punizione.
+            O prendo le note.
+            Ma mi annoio.
+            Mi annoio.
+            Quando ci sono i compiti finisco subito.
+            E non so cosa fare.
+            A volte leggo.
+            A volte faccio cadere le cose per raccoglierle.
+            O vado in bagno.
+            Ma si può andare in bagno solo una volta per lezione.
+            Che è una cosa stupida.
+            E infatti una volta Cristian della terza si è fatto la pipì addosso.
+            Mettiamo le noccioline?
+            Le punizioni sono stupide.
+
+                + [Scelta blu]
+                    -> color_variation_management(SecondCharacter, blueC)->
+                
+                + [Scelta gialla]
+                    -> color_variation_management(SecondCharacter, yellowC)->
+                
+                + [Scelta rossa]
+                    -> color_variation_management(SecondCharacter, redC)->
             
-            + [Sostantivo A]
-                ~ kitchen_recipeNoun = "Sostantivo A"
-               
-            + [Sostantivo B]
-                ~ kitchen_recipeNoun = "Sostantivo B"
+                + [Scelta verde]
+                    -> color_variation_management(SecondCharacter, greenC)->
+        
+                + [Scelta viola]
+                -> color_variation_management(SecondCharacter, purpleC)->
+            -
+            
+            Possiamo usare la grattugia?
+            Mi piace tanto grattugiare le cose!    
+            Mi puniscono, ma poi sono il più bravo.
+            Che è una cosa ancora più stupida.
+            Tu sei {player_pronouns has him:il più bravo|{player_pronouns has her:la più brava|lə più bravə}} in quello che fai?
+
+                {
+                    - not cooking_with_first_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                }
+            
+            + [Preparo un mediocre stampo da cupcake.]
+                ~ kitchen_recipeNoun = "Cupcake"
+                    Nonna dice sempre che la virtù sta a metà.
+                    Mamma dice che è una frase da perdenti.
+
+            + [Pulisco le migliori formine da muffin.]
+                ~ kitchen_recipeNoun = "Muffin"
+                    Sii.
+                    Tra migliori ci capiamo!!!
              
-            + [Sostantivo C]
-               ~ kitchen_recipeNoun = "Sostantivo C"
+            + [Infarino la peggior teglia per tartellette.]
+               ~ kitchen_recipeNoun = "Tartellette "
+                    Uh.
+                    Io tipo sono il peggiore a ginnastica.
+                    Solo Lara è peggio di me.
+                    Ma mi batte a inglese.
         
-            + [Sostantivo D]
-                ~ kitchen_recipeNoun = "Sostantivo D"
+            + [Riscaldo l'unica piastra da waffle.]
+                ~ kitchen_recipeNoun = "Waffle"
+                    Sulla cima.
+                    Anche io ci arrivo.
+                    Sì sì.
     
-            + [Sostantivo E]
-                ~ kitchen_recipeNoun = "Sostantivo E"
+            + [Controllo una disperata teglia da plumcake.]
+                ~ kitchen_recipeNoun = "Plumcake"
+                    Mi sembra piena di buchi, {player_name}.
+                    Che vuole dire?
+                    Non capisco.
             -  
-        Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+
+            Per un po' a scuola hanno tolto i voti.
+            Le maestre dicono che se guardiamo i voti poi non impariamo, cerchiamo solo di vincere.
+            Cosa, non l'ho capito.
+            Però alcune mamme si sono arrabbiate.
+            Anche la mia.
+            Posso assaggiare l'impasto?
+            {charNameOne} ha lasciato solo cose vegane.
+            Però sono buone!
+            Se c'è una cosa che mi fa arrabbiare della mamma, è che quando si tratta di scuola lei sa solo arrabbiarsi.
+            Se torno con un bel voto mi dice "Hai fatto il tuo dovere!" e poi torna a fare le sue cose.
+            Ma se combino qualcosa, vengo punito.
+            E poi dice a tutti che sono bravo.
+            Quando siamo in giro dice "Come sono orgogliosa di {charNameTwo}, è il più bravo della classe!"
+            E ho visto che se faccio un casino, più è grosso il casino più dice che sono bravo a scuola.
+            Ma poi a casa si arrabbia.
+            Mio fratello dice che non devo ascoltare mamma, perché non serve essere i più bravi, ma essere brave persone.
+            Mamma dice che lui parla facile perché non ha nemmeno finito le superiori.
+            Nonna dice che serve essere furbi.
+            Io non so mica se posso essere tutte queste cose.
+
+                + [Scelta blu]
+                    -> color_variation_management(SecondCharacter, blueC)->
+                
+                + [Scelta gialla]
+                    -> color_variation_management(SecondCharacter, yellowC)->
+                
+                + [Scelta rossa]
+                    -> color_variation_management(SecondCharacter, redC)->
+            
+                + [Scelta verde]
+                    -> color_variation_management(SecondCharacter, greenC)->
         
-        Qui ci dice che sa che la sua non è la famiglia migliore del mondo.
-        Ma che il tempo che ha da solo gli permette di fare esperimenti e prove.
-        E ci racconta cose assurde che ha fatto (aka: quelle da piccolo che ho fatto con il Meccano e via di seguito.)
+                + [Scelta viola]
+                -> color_variation_management(SecondCharacter, purpleC)->
+                -
+            
+            Ho trovato della cannella!
+            Mi piace la cannella.
+            Possiamo metterla?
+            Papà dice che lui è bravo a lavoro perché è capace di fare le cose sotto pressione.
+            E che il capo all'inizio diceva che era uno che <i>cazzeggiava</i>, ma poi ha visto che corre tantissimo con le scadenze.
+            A me la pressione non mi piace.
+            Mi agita.
+            Mio fratello invece dice che lavora bene quando c'è tanto casino.
+            E te?
+            Magari poi io parlo tanto e tu cucini e ti agiti?
+        
+                + [Trito della menta isolata.]
+                    ~ kitchen_recipeAdjective = "dell'isolamento"
+                    Deve essere difficile questo lavoro allora.
+                    Perché c'è sempre gente in giro.
+                    E devi parlare con noi.
+                
+                + [Sbuccio della vaniglia frenetica.]
+                    ~ kitchen_recipeAdjective = "della frenesia"
+                    Un po' come {mentorName} allora.
+                    Che corre sempre da una parte all'altra.
+                
+                + [Spremo del cedro organizzato.]
+                    ~ kitchen_recipeAdjective = "dell'organizzazione"
+                    Io ci provo a organizzarmi.
+                    Ma non mi viene benissimo.
+                    Voglio fare le cose con calma.
+                    Ma poi finisco nel caos.
+            
+                + [Setaccio della cannella ritardataria.]
+                    ~ kitchen_recipeAdjective = "del ritardamento"
+                    Lara in classe fa sempre così.
+                    Arriva sempre il giorno dopo coi compiti.
+                    La maestra dice che Lara si dimenticherà la testa a casa un giorno.
+        
+                + [Frullo del caffè caotico.]
+                    ~ kitchen_recipeAdjective = "della caoticità"
+                    Io non posso bere il caffè.
+                    Mamma dice che faccio già abbastanza casini da solo.
+                    Però conosco il caos.
+                -      
+
+        Mi sa che mi preparo del succo.
+        A te ti piace?
+        C'è una cosa che voglio dirti.
+        E che dico solo a te.
+        Perché sembra triste.
+        Ma non mi piace quando le persone sono tristi per me.
+        A scuola ho un posto segreto.
+        C'è una porticina che si nasconde nel muro, e che porta sotto il tetto.
+        E lì c'è un sacco di polvere e scatole.
+        Ma ci sono le finestre e c'è luce.
+        E allora mi metto lì a leggere.
+        A volte durante l'intervallo, così mi lasciano in pace.
+        A volte anche durante le lezioni.
+        E mi prendo le note.
+        Ma non mi hanno ancora scoperto.
+        Ci ho letto tutto "La storia infinita".
+        Due volte.
+        E un libro sugli insetti della città che mi ha dato mio fratello.
+        È il mio posto segreto.
+
             + [Scelta blu]
                 -> color_variation_management(SecondCharacter, blueC)->
                
@@ -355,67 +490,59 @@
             + [Scelta viola]
                -> color_variation_management(SecondCharacter, purpleC)->
             -
-        Riccio allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        
+        Che profumino!
+        Mi sa che manca poco.
+        Posso assaggiare?
+        Scotta!
+        Però ora che ci penso.
+        Così sembra che le persone non mi piacciono.
+        Ma a me piacciono tanto, {player_name}.
+        Solo che non le capisco.
+        Mi piace stare da solo.
+        Ma non mi piace sentirmi solo.
+        E boh.
+        Forse sono qui perché mi sento solo.
+        Magari con te capisco come fare?
+        Tu ti senti {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}?
 
-        
-            + [Aggettivo A]
-                ~ kitchen_recipeAdjective = "Aggettivo A"
-               
-            + [Aggettivo B]
-                ~ kitchen_recipeAdjective = "Aggettivo B"
+            + [Do una spolverata di moltissimo cacao.]
+                ~ kitchen_recipeComplement = "con moltissimo cacao"
+                Però ora hai me!
+                E {charNameOne}!
+                E me!
+                
+            + [Incorporo un poco di marmellata.]
+                ~ kitchen_recipeComplement = "con poca marmellata"
+                In effetti già qui hai fatto tante amicizie, vero?
+                Anche con me.
              
-            + [Aggettivo C]
-               ~ kitchen_recipeAdjective = "Aggettivo C"
+            + [Non aggiungo nulla.]
+               ~ kitchen_recipeComplement = "senza guarnizioni"
+                Woah.
+                Deve essere bello.
+                Spero di essere anche io tuo amico!
         
-            + [Aggettivo D]
-                ~ kitchen_recipeAdjective = "Aggettivo D"
+            + [Spennello della glassa solitaria.]
+                ~ kitchen_recipeComplement = "con glassa solitaria"
+                Mio fratello è uno solitario.
+                Dice che è un orso.
+                Anche il suo amico dice che è un orso.
+                E poi ridono.
+                Non ho mica capito perché.
     
-            + [Aggettivo E]
-                ~ kitchen_recipeAdjective = "Aggettivo E"
-            -      
-    
-        Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        
-        Qui ci parla dello stare al sicuro.
-        Che il suo problema non sono i litigi, ma non il sentirsi al sicuro.
-        Che è felice quando sta da suo fratello, ma si agita anche lì se litiga col suo amico.
-
-            + [Scelta blu]
-                -> color_variation_management(SecondCharacter, blueC)->
-               
-            + [Scelta gialla]
-                -> color_variation_management(SecondCharacter, yellowC)->
-             
-            + [Scelta rossa]
-                -> color_variation_management(SecondCharacter, redC)->
-        
-            + [Scelta verde]
-                -> color_variation_management(SecondCharacter, greenC)->
-    
-            + [Scelta viola]
-               -> color_variation_management(SecondCharacter, purpleC)->
-            -
-        
-        Riccio ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Step tre: complementi (es: del campo, per rimbecco, di coriandolo)#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-
-            
-            + [Complemento A]
-                ~ kitchen_recipeComplement = "Complemento A"
-               
-            + [Complemento B]
-                ~ kitchen_recipeComplement = "Complemento B"
-             
-            + [Complemento C]
-               ~ kitchen_recipeComplement = "Complemento C"
-        
-            + [Complemento D]
-                ~ kitchen_recipeComplement = "Complemento D"
-    
-            + [Complemento E]
-                ~ kitchen_recipeComplement = "Complemento E"
+            + [Farcisco con pochi ma affidabili pezzetti di cioccolato.]
+                ~ kitchen_recipeComplement = "con affidabili pezzetti di cioccolato!"
+                Come nonna.
+                Che dice che la vita ti da un grande amore, due grandi amicizie, tre grandi rotture di gatto.
+                Non abbiamo un gatto.
+                Quindi non ne ho rotto nessuno.
             -  
-        Riccio lascia un ultimo commento, e poi ci dice che il piatto è pronto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        
+        Sono contento che parli di cose serie con me.
+        Gli adulti pensano che i bambini siano stupidi.
+        Ma sappiamo tantissime cose.
+        Ma ora ho fame.
             -> fourth_ingredient_dispatcher
     
     
