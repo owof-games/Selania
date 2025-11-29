@@ -379,7 +379,7 @@
 
             Per un po' a scuola hanno tolto i voti.
             Le maestre dicono che se guardiamo i voti poi non impariamo, cerchiamo solo di vincere.
-            Cosa, non l'ho capito.
+            Cosa non l'ho capito.
             Però alcune mamme si sono arrabbiate.
             Anche la mia.
             Posso assaggiare l'impasto?
@@ -393,7 +393,7 @@
             E ho visto che se faccio un casino, più è grosso il casino più dice che sono bravo a scuola.
             Ma poi a casa si arrabbia.
             Mio fratello dice che non devo ascoltare mamma, perché non serve essere i più bravi, ma essere brave persone.
-            Mamma dice che lui parla facile perché non ha nemmeno finito le superiori.
+            Mamma dice che lui dice così perché non ha nemmeno finito le superiori.
             Nonna dice che serve essere furbi.
             Io non so mica se posso essere tutte queste cose.
 
@@ -883,8 +883,13 @@
                 Grazie.
 
             -cooking_with_second_char.second_theme:
+                Mi è piaciuto parlare di cose da adulti.
+                E conoscerti di più.
             
             -cooking_with_second_char.third_theme:
+                È bello che abbiamo parlato di bugie.
+                Ci sono tantissime cose nelle bugie.
+                Ma nessuno le ascolta mai davvero.
             
         }
 

@@ -77,6 +77,7 @@
     = one
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
     ~ change_entity_place(Mentor)
 
         Comunque possiamo cominciare quando vuoi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -89,6 +90,11 @@
                 -> color_variation_management(SecondCharacter, redC)->
                 E ti ha insegnato a barare!
                 E a sputare nel caffè di chi ti fa male.
+                {
+                    - about_violence_and_peace:
+                        Pensa a prima, a quando hai convinto {mentorName} a chiederti scusa.
+                        Sapevi di avere ragione, e per questo hai ottenuto quello di cui avevi bisogno.
+                }
                     
             
             + [I tuoi genitori sono infelici, {charNameTwo}, prova a comprenderli.]
@@ -152,25 +158,39 @@
         A scuola le maestre dicono che sei cattivo, bugiardo, violento, e finisci sempre in punizione.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
 
         + [Le bugie alla fine sono solo storie. Usale per divertirti.]
-            -> color_variation_management(SecondCharacter, yellowC)->
+                -> color_variation_management(SecondCharacter, yellowC)->
+            {
+                - cooking_with_second_char.third_theme:
+                    L'hai detto anche mentre cucinavamo: non tutte le bugie sono uguali.
+                    E che sei felice di inventare storie con tuo fratello.
+            }    
             Ti piace immaginare giornate diverse: prova a condividere questa cosa con i tuoi amici.
             La tua testa è un bellissimo parco giochi: perché non condividerla con gli altri?
+            {
+                - open_the_library:
+                    Come i racconti che hai trovato in biblioteca!
+            }
                    
         + [Tutto a questo mondo può cambiare. Anche un bambino cocciuto e bugiardo.]
-            -> color_variation_management(SecondCharacter, blueC)->
-            Quando sei arrivato qui hai picchiato {mentorName}.
+                -> color_variation_management(SecondCharacter, blueC)->
+            Quando sei arrivato qui hai litigato con {mentorName}.
             E mi hai detto molte bugie.
             Ma hai anche chiesto scusa.
             Puoi partire da questo per cambiare.
                    
         + [La rabbia è parte della tua vita, della tua famiglia: trasformala.]
-            -> color_variation_management(SecondCharacter, redC)->
+                -> color_variation_management(SecondCharacter, redC)->
             Come quando ti arrabbi perché gli animali stanno scomparendo.
             O perché papà tratta male nonna.
             Puoi prendere quello che senti a farci qualcosa di buono per te e le persone che ami.
+            {
+                - a_story_of_rebellion:
+                    L'hai detto anche quando hai letto il racconto del sassolino: i grandi non sempre vedono l'aragosta.
+                    Ma tu sì, e puoi cambiare tante cose.
+            }
                     
         + [Ma non sei solo questo: sei gentile, sei curioso, sei divertente.]
-            -> color_variation_management(SecondCharacter, greenC)->
+                -> color_variation_management(SecondCharacter, greenC)->
             Hai sviluppato un bel rapporto con {charNameOne}.
             Mi hai raccontato tante cose interessanti sugli animali.
             Hai fatto amicizia con la rana.
@@ -180,7 +200,7 @@
             Ma sei anche tante altre cose, {charNameTwo}.
                    
         + [Eppure hai trovato il modo di fare pace con {mentorName}.]
-            -> color_variation_management(SecondCharacter, purpleC)->
+                -> color_variation_management(SecondCharacter, purpleC)->
             Hai fatto lo sforzo di capirla.
             E mi hai chiesto scusa più volte per le tue bugie.
             Stai già cambiando, {charNameTwo}!
@@ -247,6 +267,10 @@
             -> color_variation_management(SecondCharacter, purpleC)->
             Come quelle di cui ti ha parlato la tua maestra.
             E la sua amica del canile.
+            {
+                - second_char_main_storylets.twelve:
+                    E magari da grande studierai davvero come si curano i pesci.
+            }
 
         + [Eppure tuo fratello ama il suo ragazzo.]
             -> color_variation_management(SecondCharacter, greenC)->
@@ -257,6 +281,10 @@
                    
         + [Eppure tuo fratello lotta contro tuo padre perché tu stia meglio.]
             -> color_variation_management(SecondCharacter, redC)->
+            {
+                - second_char_main_storylets.eleven:
+                    E quando sei a casa sua ti fa fare un sacco di esperimenti.
+            }
             Si è creato una nuova casa.
             Non si è fatto mettere i piedi in testa da nessuno.
             E questo lo fai se pensi ci sia un futuro dove andare.
@@ -265,8 +293,16 @@
             -> color_variation_management(SecondCharacter, yellowC)->
             Sei arrivato in questo posto sconosciuto e invece di avere paura, ti sei messo a curiosare.
             Ti sei fatto amico una rana parlante.
+                {
+                    - dog_second_char:
+                        E ti sei esaltato quando hai incontrato il cane.
+                }
+                {
+                    - cooking_with_second_char.third_theme:
+                        E un giorno avrai uno struzzo!
+                }    
             Quando tu giochi non hai paura di nulla.
-                   
+
         + [Eppure tuo fratello per lavoro aggiusta le cose.]
             -> color_variation_management(SecondCharacter, blueC)->
             Vede le cose rotte e le ripara.
@@ -301,15 +337,32 @@
         
             + [Ma puoi essere un adulto combattente, come tua nonna.]
                 -> color_variation_management(SecondCharacter, redC)->
+                {
+                    - cooking_with_second_char.first_theme:
+                        Un adulto che dice le cose come sono, come mi raccontavi cucinando.
+                }
+                {
+                    - cooking_with_second_char.second_theme:
+                        Essere furbo, come ti ha detto lei.
+                }
                 E non farti mettere i piedi in testa da nessuna persona!
                         
         
             + [Ma puoi essere un adulto curioso e studioso, come un po' già sei.]
                 -> color_variation_management(SecondCharacter, blueC)->
+                {
+                    -first_second_chit_chat:
+                        Come quando hai detto a {charNameOne} che volevi scoprire dove vanno tutti i posti chiusi qui.
+                        E come trovare le caramelle.
+                }
                 E tutto quello che ora sai degli animali diventerà mille volte ancora di più.
 
             
             + [Ma puoi essere un adulto in cerca di uno scopo più grande, come {charNameOne}.]
+                {
+                    - cooking_with_second_char.first_theme:
+                        Non uno di quegli adulti che fanno le cose perché devono, come raccontavi in cucina.
+                }
                 E trovare modi inaspettati di aiutare le altre persone, gli animali, il mondo.
                     -> color_variation_management(SecondCharacter, purpleC)->
 
@@ -317,7 +370,15 @@
             + [Ma puoi essere un adulto che si prende cura delle persone, come {mentorName}.]
                 -> color_variation_management(SecondCharacter, greenC)->
                 E rendere più facile la vita all3 altr3.
-                    
+                {
+                    - cooking_with_second_char.second_theme:
+                        Una brava persona, come ti ha detto tuo fratello.
+                }
+                {
+                    - about_violence_and_peace:
+                        Non uno di quei grandi che chiedono sempre scusa per tutte le cose ma poi le rifanno, come hai detto a {mentorName}.
+                        Ma un adulto responsabile, come tuo fratello.
+                }
 
             + [Ma puoi essere un adulto creativo, come tuo fratello.]
                 -> color_variation_management(SecondCharacter, yellowC)->
