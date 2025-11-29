@@ -354,9 +354,11 @@
                 - else:
                     Per questo ti dico: #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             } 
-        
-            Ti chiedi se questo il massimo che puoi aspettarti dalla vita. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-            Da una vita che non senti tua.
+
+            Vedo il tuo blocco, {charNameOne}.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+            Sei arrivata qui perché non sai più cosa aspettarti dalla tua vita.
+            Come avanzare.
+            Come uscire da una vita che non senti più tua.
 
             + (red) [Una nuova vita ti aspetta in Islanda, con Talco.]
             //me ne vado all’estero da Talco.

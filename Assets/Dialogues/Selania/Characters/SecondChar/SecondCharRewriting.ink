@@ -35,7 +35,12 @@
         Per stare con gli animali.
         E non è il mio compleanno.
         Ma se non mi invento un motivo per le cose nessuno mi ascolta.
-        Scusa per la {player_name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+        Scusa per la bugia {player_name}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+        Io voglio solo fare il bambino.
+        Invece i grandi mi dicono che mi vogliono bene.
+        Ma poi mi fanno male.
+        E io non mi fido più di voi.
+
             @animation:RewriterBook
         
             + [Ti ho ascoltato, {charNameTwo}, e posso aiutarti a riscrivere la tua storia.]
@@ -336,8 +341,11 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-    
-        Per questo ti dico {charNameTwo}:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+
+        Credo di aver compreso quale sia il tuo blocco, perché sei qui.
+        E riguarda gli adulti.
+        Perché se chi dovrebbe proteggerti ti ha ferito, come fai a fidarti delle persone?
+        E per questo ti dico {charNameTwo}:#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
                 {
                     - firstChar_storyStatus != story_storyEnded:{player_name} sta per utilizzare il potere dell'<b><i>epilogo</b></i>.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 }    
