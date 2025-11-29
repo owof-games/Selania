@@ -617,7 +617,7 @@
                 Ci sono bugie che non fanno male a nessuno.
                 E sono anche carine!
                
-            +(bugie_omesse) [Affetto delle mele omesse.]
+            + (bugie_omesse) [Affetto delle mele omesse.]
                 ~ kitchen_recipeNoun = "Mele"
                 Come quando non dici che hai fatto una cosa.
                 Fino a quando non ti scoprono.

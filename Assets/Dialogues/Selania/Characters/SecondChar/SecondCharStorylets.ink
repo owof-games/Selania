@@ -11,34 +11,34 @@
         
         Tu perché sei qui?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             
-            + [Questo luogo è assurdo e voglio capirlo.]
-                -> color_variation_management(SecondCharacter, blueC)->
+            + (capire) [Questo luogo è assurdo e voglio capirlo.]
+                    -> color_variation_management(SecondCharacter, blueC)->
                 Anche a me mi piace capire le cose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 I grandi si arrabbiano se faccio troppe domande. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                 Perché c'è la neve ma non fa freddo? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Perché c'è una stazione ma non passa nessun treno?
                 Perché c'è una porta vicino alla stazione ma non ci posso entrare?
                 
-            + [Perché è pieno di cose buffe!]
-                -> color_variation_management(SecondCharacter, yellowC)->
+            + (buffe) [Perché è pieno di cose buffe!]
+                    -> color_variation_management(SecondCharacter, yellowC)->
                 Uh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Per ora ho esplorato solo la stazione.
                 E devo capire cos'è quella cosa sul tabellone.
                 Le lettere non si danno al postino?
                 E poi ho sentito un treno ma non l'ho visto.
                     
-            + [Perché <b><i>tu</b></i> sei qui?]
-                -> color_variation_management(SecondCharacter, redC)->
+            + (tu)[Perché <b><i>tu</b></i> sei qui?]
+                    -> color_variation_management(SecondCharacter, redC)->
                 Boh, che ne so? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 Era solo una domanda!
                 
-            + [Per aiutare chi è in difficoltà.]
+            + (difficoltà)[Per aiutare chi è in difficoltà.]
                 -> color_variation_management(SecondCharacter, greenC)->
                 Come il veterinario?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                 O come la maestra di ginnastica che dice di aiutarmi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Ma poi mi sgrida se sbaglio?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                     
-            + [Per capire meglio chi sono.]
+            + (me)[Per capire meglio chi sono.]
                 -> color_variation_management(SecondCharacter, purpleC)->
                 Non sai chi sei?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 A me mi piacerebbe essere un'altra persona a volte.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
@@ -153,7 +153,12 @@
         O promettere dei doni.
         E quella dello stagno mi ha parlato.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
         Ma mi ha detto che il dono invece è per te.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        E ce l'ho detto che è il mio compleanno e che quindi il dono deve essere per me.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_angry
+            {
+                - second_char_main_storylets.one.me:
+                    Magari ti aiuta a capire chi sei come dicevi prima!
+                
+            }
+        Gliel'ho detto che è il mio compleanno e che quindi il dono deve essere per me.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_angry
         Ma mi ha detto che sono doni che non mi piacerebbero. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Saranno broccoli?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
         
@@ -428,7 +433,13 @@
                 -> top
             + [Lo lascio continuare.]
             -
-        E le capre hanno dei loro accenti!
+            {
+                - second_char_main_storylets.one.buffe:
+                Prima hai detto che sei qui perché è pieno di cose buffe.
+                Vuoi sapere una cosa buffissima?
+
+            }    
+        Le capre hanno dei loro accenti!
         Non sono mica tutti dei beeeeeeeeee uguali!
         Solo i colibrì sanno volare all'indietro!
         Tu sai camminare indietro? Secondo me no.
@@ -452,7 +463,7 @@
     - (top)
         {mentorName} dice che prima le hai dato un calcio.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             
-            + (twoBlue) [Credevo tu fossi disciplinato. Che delusione.]
+            + (disciplinato) [Credevo tu fossi disciplinato. Che delusione.]
                     -> color_variation_management(SecondCharacter, blueC)->
                 Ehi! Mica mi chiedi perché lo fatto!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 Vi odio.
@@ -466,7 +477,7 @@
                     ~ change_entity_place(Mentor)
                 Mi ha fatto arrabbiare.
                     
-            + (twoYellow) [Perché non le hai fatto uno scherzo?]
+            + (scherzo) [Perché non le hai fatto uno scherzo?]
                     -> color_variation_management(SecondCharacter, yellowC)->
                         {
                             - are_two_entities_together(Mentor, PG): Seriamente? 
@@ -484,7 +495,7 @@
                 mi toccano.
                     ~ change_entity_place(Mentor)
                     
-            + (twoRed) [Picchiare una così è un po' da sfigati.]
+            + (sfigati) [Picchiare una così è un po' da sfigati.]
                     -> color_variation_management(SecondCharacter, redC)->
                 Mi aveva preso il braccio!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 E continuava a dire che sono un bambino e che i bambini qui non ci devono stare.
@@ -494,7 +505,7 @@
                 Volevo solo spingerla via.
                 Ma mi sono arrabbiato troppo.
 
-            + (twoGreen) [C'è rimasta male, sai?]
+            + (male) [C'è rimasta male, sai?]
                     -> color_variation_management(SecondCharacter, greenC)->
                 E a me che mi importa?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 Mi ha sgridato perché facevo i salti nello stagno.
@@ -503,7 +514,7 @@
                 Non mi piace quando mi toccano.
                     ~ change_entity_place(Mentor)
 
-            + (twoPurple) [Hai ottenuto quello che volevi?]
+            + (ottenuto) [Hai ottenuto quello che volevi?]
                     -> color_variation_management(SecondCharacter, purpleC)->
                 Ha smesso di dirmi che non devo stare qui.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Che devo tornare a casa.
@@ -514,6 +525,12 @@
             -
         {mentorName} è stata prepotente con me.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
         Non mi piacciono gli adulti prepotenti.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+            {
+                - second_char_main_storylets.one.difficoltà:
+                    Prima hai detto che sei qui per aiutare chi è in difficoltà.
+                    Io ora sto male.
+                    Aiutami.
+            }
         Se {mentorName} non mi lascia in pace chiamo mio fratello.
         Lui è superforte.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                 {
@@ -536,9 +553,21 @@
 
         {mentorName} si vuole comportare come la mia nonna.
         Ma la mia nonna non mi tratta mai come un bambino.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
+            {
+                - second_char_main_storylets.one.tu:
+                    Come hai fatto tu prima quando non mi hai risposto e mi hai chiesto cosa facevo qui.
+            }
         Mi ha anche insegnato come barare a carte.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
         E come aprire il cassetto dei dolci di mamma.
         E a sputare nel caffè di chi ti fa male.
+            {
+                - second_char_main_storylets.four.disciplinato:
+                    E non mi dire di nuovo che devo essere più disciplinato, come prima!
+                
+                - second_char_main_storylets.four.scherzo:
+                    Forse è questo lo scherzo da fare a {mentorName}!
+                    Devo solo trovare il caffè.
+            }
         Quando mamma e papà ci lasciavano a casa da soli mangiavamo sempre cose buone.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         E guardavamo assieme la tele.
         E potevo scegliere cosa guardare.
@@ -610,12 +639,20 @@
             -
 
         Mi spiace, {player_name}. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+            {
+                - second_char_main_storylets.four.sfigati:
+                    Anche se prima mi hai chiamato sfigato.
+            }
         Prima ho detto delle bugie.
         Non è vero che mamma mi ha mandato qui.
         Ma volevo così tanto avere un bel compleanno.
         Questo posto è pieno di animali!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
         E nessuno si arrabbia con me.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         A parte {mentorName}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+            {
+                - second_char_main_storylets.four.male:
+                    Ma mi spiace che c'è rimasta male.
+            }
         Ti prometto che non dirò più bugie.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Ora però lasciami solo.
         
@@ -969,6 +1006,28 @@
                 Ma fa muovere le cose grandi!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 O bruciare i muri.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
             -
+        {
+            - cooking_with_second_char.third_theme.bugie_innocenti:
+                Chissà se mi hai risposto sinceramente.
+                O se è una bugia innocente, visto quello che hai detto in cucina.
+
+            - cooking_with_second_char.third_theme.bugie_difensive:
+                Chissà se mi hai risposto sinceramente.
+                O se è una bugia difensiva, visto quello che hai detto in cucina.
+
+            - cooking_with_second_char.third_theme.bugie_autoinganno:
+                Chissà se mi hai risposto sinceramente.
+                O se è una bugia che ti stai dicendo, visto quello che hai detto in cucina.
+
+            - cooking_with_second_char.third_theme.bugie_nessuna:
+                Chissà se mi hai risposto sinceramente.
+                Anche se prima in cucina hai detto che non dici mai bugie.
+
+            - cooking_with_second_char.third_theme.bugie_omesse:
+                Chissà se mi hai risposto sinceramente.
+                O se è c'è una omissione, visto quello che hai detto in cucina.
+
+        }    
             
         I miei compagni fanno tantissime cose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Calcio. Basket. Pallavolo.
@@ -1237,6 +1296,11 @@
 
         Comunque è una fortuna che qui c'è un bambino!
         Questo posto è pieno di cose e voi non vi fate le domande.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+            {
+                - second_char_main_storylets.one.capire:
+                    Prima avevi anche detto che sei qui per capire questo posto, ma non mi sembra mica.
+
+            }
         Tocca a me trovare le risposte!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 -> second_char_closing_storylet ->
                 -> options_second_character 
