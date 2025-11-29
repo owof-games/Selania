@@ -532,7 +532,7 @@
                 Non ho mica capito perché.
     
             + [Farcisco con pochi ma affidabili pezzetti di cioccolato.]
-                ~ kitchen_recipeComplement = "con affidabili pezzetti di cioccolato!"
+                ~ kitchen_recipeComplement = "con affidabili pezzetti di cioccolato"
                 Come nonna.
                 Che dice che la vita ti da un grande amore, due grandi amicizie, tre grandi rotture di gatto.
                 Non abbiamo un gatto.
@@ -547,7 +547,15 @@
     
     
     = third_theme
-        Qui parte sulla difensiva.
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+        Mi vuoi sgridare di nuovo?
+        Ti ho già chiesto scusa.
+
             + [Scelta blu]
                 -> color_variation_management(SecondCharacter, blueC)->
                
@@ -562,36 +570,105 @@
     
             + [Scelta viola]
                -> color_variation_management(SecondCharacter, purpleC)->
-            -    
-        E poi ci chiede se le bugie sono sempre sbagliate.
-        Potrebbe essere carino fare in modo che se lo ricordi da qualche parte.
+            -  
+        Scusami comunque.
+            {
+                - food_gift_second_char:
+                    Sono contento di aver fatto pace con {mentorName}.
+                    Ma sono ancora un po' arrabbiato.
+                    E questo mi fa arrabbiare velocemente.
+
+                - about_violence_and_peace:
+                    Sto ancora cercando di non essere arrabbiato con {mentorName}.
+                    E non mi piace essere arrabbiato.
+                    Mi fa arrabbiare di più.
+
+                - else:
+                    Sono ancora arrabbiato con {mentorName}.
+                    E non mi piace essere arrabbiato.
+                    Mi fa arrabbiare di più.
+            }
+
+        Facciamo qualcosa con la frutta?
+        Mamma pensa che mangio solo schifezze.
+        Ma la frutta mi piace.
+        C'è una cosa che mi fa arrabbiare tanto tanto quasi si parla di bugie.
+        Perché in casa sembra che sia solo io a dire le bugie.
+        Ma mamma ne dice tante.
+        E le sue sono brutte.
+        Perché non dice mai cose giganti.
+        No.
+        Lei dice che non ha fatto cose che ha fatto.
+        Cose che non ha fatto a me.
+        O mi dà la colpa per cose che ha fatto lei.
+        E quando lei dice qualcosa, papà le crede sempre.
+        E nonna non le crede, ma mi dice che fa finta di crederci per non litigare.
+        Le sue bugie fanno male.
+        Le mie no.
+        Tutte le bugie sono sbagliate?
+
             {
                 - not cooking_with_first_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
         
-            + [Sostantivo A]
-                ~ kitchen_recipeNoun = "Sostantivo A"
+            + (bugie_innocenti) [Sbuccio delle pesche innocenti.]
+                ~ kitchen_recipeNoun = "Pesche"
+                Esatto!
+                Ci sono bugie che non fanno male a nessuno.
+                E sono anche carine!
                
-            + [Sostantivo B]
-                ~ kitchen_recipeNoun = "Sostantivo B"
+            +(bugie_omesse) [Affetto delle mele omesse.]
+                ~ kitchen_recipeNoun = "Mele"
+                Come quando non dici che hai fatto una cosa.
+                Fino a quando non ti scoprono.
+                Però poi finisci nei guai.
+                Grossi.
              
-            + [Sostantivo C]
-               ~ kitchen_recipeNoun = "Sostantivo C"
+            + (bugie_difensive)[Taglio delle pere difensive.]
+               ~ kitchen_recipeNoun = "Pere"
+               A scuola servono le bugie per difendersi.
+               Tantissime.
+               Le maestre pensano sempre che hai fatto qualcosa di brutto.
         
-            + [Sostantivo D]
-                ~ kitchen_recipeNoun = "Sostantivo D"
+            + (bugie_nessuna)[Sciacquo delle prugne impeccabili.]
+                ~ kitchen_recipeNoun = "Prugne"
+                Si no boh.
+                Nessuna persona non dice le bugie.
+                Anche perché ci ricordiamo sempre le cose diverse da come sono.
+                Magari <i>pensi</i> di non dire bugie.
+                Ma le dici comunque.
     
-            + [Sostantivo E]
-                ~ kitchen_recipeNoun = "Sostantivo E"
+            + (bugie_autoinganno)[Spremo delle arance dell'autoinganno]
+                ~ kitchen_recipeNoun = "Arance"
+                Come quando mi dico che a ginnastica sono stato bravo.
+                Anche se sono caduto con la faccia sulle scarpe di Tommaso.
+                Che schifo!
             -  
-        Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        
-        Ci dice che ha imparato a mentire a scuola, perché è l'unico modo che ha trovato per avere attenzioni.
-        Ma il problema è che la cosa gli è sfuggita di mano, ne racconta di assurde, e ora ha un soprannome per questa cosa.
-        E che gli servono anche per uscire dai casini.
-        Ma a volte le bugie incolpano persone che non c'entrano nulla, e questo gli dispiace.
-        Gli scappano e manco ci fa caso.
-
+        Posso assaggiare?
+        Comunque i grandi fanno un sacco di regole.
+        Ma poi le rompono tantissimo.
+        E poi sgridano noi bambini se lo facciamo.
+        Ci metto della menta.
+        Ecco.
+        A scuola ho un soprannome.
+        Un soprannome brutto.
+        Perché una volta ho detto una bugia così grossa che tutti si sono arrabbiati.
+        E ora c'ho questo soprannome addosso.
+        Lo so che dico tantissime bugie.
+        A volte non me ne accorgo nemmeno.
+        Ma.
+        Mmm.
+        Nonna dice sempre che "ma" è amico del diavolo.
+        Ma con le bugie le persone mi ascoltano.
+        E poi.
+        La mia vita è.
+        Non è che le mie cose piacciono agli altri bambini.
+        Non posso vedere i cartoni.
+        Non ho i fumetti.
+        Ho pochissimi giochi.
+        Posso giocare ai videogiochi di mio fratello, ma non sono quelli dei miei compagni.
+        Io non so cosa dire.
+        E quindi o sto da solo, o devo dire bugie.
 
             + [Scelta blu]
                 -> color_variation_management(SecondCharacter, blueC)->
@@ -608,29 +685,60 @@
             + [Scelta viola]
                -> color_variation_management(SecondCharacter, purpleC)->
             -
-        Riccio allora ci chiede qualcosa di personale sempre sul tema, e noi rispondiamo con il secondo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        Guarda!
+        La frutta piace anche ai pesci!
+        Che faccia buffa quello!
+        Ci sono compagni che piacciono a tutti.
+        Lara ha un sacchissimo di amiche!
+        Jin è il primo che viene cercato ogni volta che si gioca a qualcosa.
+        Tommaso è antipatico invece.
+        Ma la sua famiglia è ricca.
+        E ha la piscina e tantissimi giochi.
+        A te cosa ti rende interessante?
 
-            + [Aggettivo A]
-                ~ kitchen_recipeAdjective = "Aggettivo A"
+            + [Shakero un bicchiere vuoto.]
+                ~ kitchen_recipeAdjective = "del vuoto"
+                Non è vero!
+                Abbiamo già parlato tantissimo!
                
-            + [Aggettivo B]
-                ~ kitchen_recipeAdjective = "Aggettivo B"
+            + [Aggiungo della lavanda empatica.]
+                ~ kitchen_recipeAdjective = "dell'empatia"
+                Come quando io mi faccio male e tu senti dolore?
+                Deve essere faticoso!
              
-            + [Aggettivo C]
-               ~ kitchen_recipeAdjective = "Aggettivo C"
+            + [Grattugio della scorza di chinotto sportivo.]
+               ~ kitchen_recipeAdjective = "della sportività"
+                Magari conosci Jin.
+                O suo fratello.
+                Il fratello di Jin è ENORME!
+                È campione di sollevamento pesi.
+                Una volta mi ha alzato con una sola mano!
         
-            + [Aggettivo D]
-                ~ kitchen_recipeAdjective = "Aggettivo D"
+            + [Misuro dell'acqua di rose erudita.]
+                ~ kitchen_recipeAdjective = "dell'erudizione"
+                Anche a me piace sapere le cose.
+                Ma poi devi trovare le persone a cui piacciono le cose che piacciono a te.
+                O ti dicono che sei strano.
     
-            + [Aggettivo E]
-                ~ kitchen_recipeAdjective = "Aggettivo E"
+            + [Macino del pepe rosa divertito.]
+                ~ kitchen_recipeAdjective = "del divertimento"
+                Scherzi e battute!
+                Ma lontano dalle maestre.
+                E da {mentorName}.
             -      
     
-        Riccio commenta.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-
-        Poi ci dice che passa tanto tempo a immaginare cose, e a volte non è che vuole dire bugie, vuole solo raccontare delle storie.
-        Delle cose più belle della vita che ha, e da qui torniamo al fatto che corregge le sue giornate.
-        E che non gli piace dire le bugie, ma che vorrebbe una vita in cui non deve dirle.
+        Bleah.
+        Le spezie sono strane.
+        Nei cibi sono buone.
+        Ma da solo fanno bleah.
+        A mio fratello non dico mai bugie.
+        E inventiamo tante storie.
+        Mio fratello mi dice che le storie sono delle bugie condivise.
+        E per questo non fanno male.
+        Una volta era triste.
+        E mi ha detto che le persone creano cose per mentire.
+        Per dirsi che possono esistere cose diverse da quelle che si hanno.
+        E che l'arte è una bella bugia per farci andare avanti quando le cose fanno schifo.
 
             + [Scelta blu]
                 -> color_variation_management(SecondCharacter, blueC)->
@@ -648,27 +756,57 @@
                -> color_variation_management(SecondCharacter, purpleC)->
             -
         
-        Riccio ci chiede per la terza e ultima volta qualcosa di personale sul tema, e aggiungiamo il terzo ingrediente.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        Step tre: complementi (es: del campo, per rimbecco, di coriandolo).#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-            + [Complemento A]
-                ~ kitchen_recipeComplement = "Complemento A"
-               
-            + [Complemento B]
-                ~ kitchen_recipeComplement = "Complemento B"
-             
-            + [Complemento C]
-               ~ kitchen_recipeComplement = "Complemento C"
+        Con la frutta avanzata ci preparo un succo!
+        A me non mi piacciono i grandi.
+        E so che devo diventare grande.
+        Ma mi fa paura.
+        L'unica cosa bella di diventare grande è che posso avere una casa tutta per me.
+        E comprarmi uno struzzo senza che la mamma rompa.
+        Voglio andare a scuola su uno struzzo.
+        Non è vero che gli struzzi sono stupidi.
+        Fanno delle cose che non capiamo, ma che per loro sono fondamentali per sopravvivere.
+        Come dire bugie quando sei un bambino.
+        Per te cosa significa essere grande?
         
-            + [Complemento D]
-                ~ kitchen_recipeComplement = "Complemento D"
+            + [Unisco della cioccolata angosciata.]
+                ~ kitchen_recipeComplement = "con cioccolata angosciata"
+                Vedi?
+                Perché dovrei diventare grande?!?
+               
+            + [Caramello delle scorze di limone indipendente.]
+                ~ kitchen_recipeComplement = "con limone indipendente"
+                Perché fai quello che vuoi?
+                Questo è bello.
+                Per lo struzzo.
+                E magari anche una volpe.
+                E una lontra.
+                I grandi possono avere uno zoo?
+             
+            + [Guarnisco con marshmallow responsabili.]
+               ~ kitchen_recipeComplement = "con marshmallow responsabili"
+               Sì no boh.
+               Anche i bambini sono responsabili.
+               Quindi non è tanto diverso no?
+        
+            + [Spolvero dello zenzero fallito.]
+                ~ kitchen_recipeComplement = "con zenzero fallito"
+                Non voglio diventare grandeeeeeee.
+                Non vogliooooo!
     
-            + [Complemento E]
-                ~ kitchen_recipeComplement = "Complemento E"
+            + [Verso del succo d'ananas esplorativo.]
+                ~ kitchen_recipeComplement = "con ananas esplorativo"
+                Non ci avevo pensato.
+                Però posso viaggiare dove voglio.
+                Noi viaggiamo poco.
+                Perché non abbiamo soldi.
+                Però conosco tutti i posto segreti del mio quartiere!
+                E alcuni sono pericolosi!
             -  
-        Riccio lascia un ultimo commento, e poi ci dice che il piatto è pronto.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+        Comunque giuro su tutto tuttissimo che ho smesso di dirti bugie.
+        E ho tanta fame, {player_name}.
+        Tanta tanta fame!
             -> fourth_ingredient_dispatcher
     
-
 
     
         //La chiusura è comune, sempre per ridurre il rischio di errori
