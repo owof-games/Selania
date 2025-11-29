@@ -1068,7 +1068,7 @@
 {debug: passo per second_char_cooking_alone.}
 -> cooking_animations_on ->
 
-{second_char_cooking_alone:
+{kitchen_secondCharCookingTime:
     
         - 1:
             {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}

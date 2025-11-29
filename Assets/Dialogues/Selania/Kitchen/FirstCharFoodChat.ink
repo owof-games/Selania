@@ -1061,7 +1061,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     {debug: passo per first_char_cooking_alone.}
         -> cooking_animations_on ->
         
-    {first_char_cooking_alone:
+    {kitchen_firstCharCookingTime:
     
         - 1:
             {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}
