@@ -35,7 +35,7 @@
         VAR kitchen_secondCharIsCooking = false
         VAR kitchen_secondCharCookingTime = 0
         //Tempo che ci impiega a fare la sua ricetta
-        VAR kitchen_secondCharCookingMaxTime = 5
+        VAR kitchen_secondCharCookingMaxTime = 7
     //Nostro invito
         //l'abbiamo invitata
         VAR kitchen_secondCharCookingTogetherInvite = false

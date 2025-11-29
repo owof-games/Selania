@@ -1065,34 +1065,39 @@
 
 
 === second_char_cooking_alone
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp charNameThree = translator(thirdChar_ActualName)
+    ~ temp charNameFour= translator(fourthChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
 {debug: passo per second_char_cooking_alone.}
 -> cooking_animations_on ->
 
 {kitchen_secondCharCookingTime:
     
         - 1:
-            {Voglio preparare il piatto preferito di mio padre.|Scusami {player_name}, ma sto cucinando.}
+            {Se unisco aceto e bicarbonato la schiuma è buona?| Sto cucinando {player_name}!}
             
         - 2:
-            {Potrei sostituire l'aneto con, uh, no, non una buona idea.|Perdonami {player_name}, ma sto cercando qualcosa che non mi avveleni.}
+            {Il lievito ha un sapore strano.|{player_name} vai via ora!}
         
         - 3:
-            {Ricordati ragazza che cucinare non è una scusa per bere. Ma che gioia aver trovato del vinello. |Torna dopo {player_name}, devo, ehm, riflettere.}
+            {Mi fa male la pancia. Ma devo tagliare tantissime mele.|Torna dopo {player_name}!}
             
         - 4:
-            {Quante possibilità ci sono che se caccio la mano nell'alveare della serra riesco a recuperare del miele?|{player_name}, ho un'idea stupida, torna dopo.}
+            {Cavolo, quante cose possono bruciare! Ma sono in ritardo col piatto!|{player_name} non guardare o mi agito.}
         
         - 5:
-            {Uh, questo sughino spacca. Mamma ne sarebbe orgogliosa.|{player_name}, ho bisogno di concentrazione, a dopo.}
+            {È normale che il pane abbia questo odore?|{player_name} lasciami solo.}
     
         - 6:
-            {Sarà una buona idea avere tutti questi coltelli accessibili con il bimbo in giro in giro? Merda, stavo per tagliarmi. Forse sono io il problema, non lui.|{player_name}, faccio danni già da sola, torna tra un po'.}
+            {Se {mentorName} scopre che {charNameOne} ha messo tutti questi coltelli, si arrabbia tantissimo. Ma così posso tagliare le noci.|{player_name}, via o brucio tutto.}
         
         - 7:
-            {Tocco finale, la crema di funghi. E ora lasciamo cuocere un po'. E ci beviamo un altro goccino.|{player_name}, resisti che ho quasi finito!}
+            {Un pezzo di unghia in tutto questo cioccolato grattugiato sparisce, vero?|Due minuti e ho finito, davvero.}
         
         - else:
-            {Direi che ci siamo. Giusto la fiammata per restringere il brodo, ed è perfetta!|{player_name}, un attimo e ti lascio i fornelli, promesso.}
+            {Direi che ci siamo. Deve giusto diventare freddo. E stare fermo.|{player_name}, non hai pazienza!}
         
     }
 
