@@ -382,7 +382,13 @@
             Dopo aver cucinato da sola, {charNameOne} ha parlato del rapporto che ha con sua madre, e di come lei non la capisca fino in fondo. Ma sa che è una donna che parla poco ma ci tiene tanto alle altre persone. Ha raccontato del cibo che ha preparato quando è salita a trovarla, del riordino della casa, del saper dire "Ti voglio bene" solo coi fornelli. E che da quando {charNameOne} questa cosa un po' l'ha portata con sé, cucinando cenoni con le ame.
 
     }
+    {
+        - at_table_with_first_char.good_reaction:
+            Dopo aver cucinato assieme, {charNameOne} ha detto a {player_name} che si trova più a suo agio con le cose emotive, che non con i dati freddi e distaccati.
 
+        - at_table_with_first_char.meh_reaction:
+            Dopo aver cucinato assieme, {charNameOne} ha detto a {player_name} che ci sono cose che stanno nel mezzo per lei, tipo quando una persona dice che si risolve tutto faecndo cose, o che non prende mai le cose sul serio. Sono cose che non le dicono niente, ma non fanno nemmeno schifo.
+    }
     {
         - cooking_with_first_char.first_theme:
             Durante l'incontro in cucina, {charNameOne} ha parlato delle sue relazione. Ha raccontato di aver avuto un'infanzia senza amici, ma con un forte legame con suo padre, che le ha passato l'amore per la musica. E dai suoi ha imparato che le relazioni sono cura e sacrificio. Con l'arrivo al Nord ha fatto molte amicizie in Conservatorio, scoprendo però che nei gruppi si litiga, e questa cosa l'ha riempita di conflitti, soprattutto quando il rapporto con un'amica è stato lasciato morire. Crede anche che non ci sia una differenza vera tra amicizia e amore, e che sia un problema per lo più culturale e linguistico, e le complicazioni che nascono vengono dalle parole che ancora mancano per parlare a modo delle relazioni.

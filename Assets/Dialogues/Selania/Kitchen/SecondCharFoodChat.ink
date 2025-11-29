@@ -938,6 +938,8 @@
                     Alla fine non sono <i>così</i> strano.
                     Ma mi piace quando le persone sono <b>coerenti</b>.
                     Sennò mi sembra che vuoi avere ragione, non che mi vuoi parlare davvero.
+                        @animation:RewriterBook
+
                         -> relationship_feedback
                 
                 = bad_reaction
@@ -974,6 +976,8 @@
                     Tipo correre a destra e sinistra e ovunque.
                     Devi andare dove devi andare.
                     Come quando si parla.
+                        @animation:RewriterBook
+                        
                         -> relationship_feedback
             
     

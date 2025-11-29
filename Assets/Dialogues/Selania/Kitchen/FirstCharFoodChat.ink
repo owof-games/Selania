@@ -912,7 +912,8 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                     Alla fine basta non riempirmi di commenti rigidini e razionali quando parliamo.
                     Non mi fraintendere, non sono qui per dire che la terra è piatta o altra roba del genere.
                     Ma solo che mi trovo più a mio agio con le cose emotive, che non con i dati freddi e distaccati.
-                    
+                        @animation:RewriterBook
+
                         -> relationship_feedback
                 
                 = bad_reaction
@@ -954,7 +955,8 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                     Cioè, mi piace fare casino, ma ogni tanto.
                     E quindi boh, il sapore di {ingredientTranslator(kitchen_firstCharExtraIngredient)} è come questa roba a metà, che non mi dice niente.
                     Ma non mi fa manco schifo.
-                
+                        @animation:RewriterBook
+                        
                         -> relationship_feedback
             
     

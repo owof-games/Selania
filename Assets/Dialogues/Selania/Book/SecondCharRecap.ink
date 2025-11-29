@@ -133,7 +133,7 @@
 {rewriting_proposal_second_character.ending: Dopo la nostra conversazione, {charNameTwo} ha scelto un nuovo nome: <b><i>{charNameTwo}.}
 
 {secondAffinityFeedback:
-    Il valore massimo di inchistro che ho ricevuto è stato: {fromInkToNumbers(secondChar_maximum_inkLevel)}. <>
+    Il valore massimo di inchiostro che ho ricevuto è stato: {fromInkToNumbers(secondChar_maximum_inkLevel)}. <>
 }
 
 {
@@ -161,6 +161,13 @@
 {
     - second_char_main_storylets.one:
            <b><i>Appunti dalle conversazioni.</b></i> <>
+}
+{
+    - at_table_with_second_char.good_reaction:
+        Dopo aver cucinato assieme, {charNameTwo} ha detto a {player_name} che gli piacciono le persone coerenti.
+
+    - at_table_with_second_char.meh_reaction:
+        Dopo aver cucinato assieme, {charNameTwo} ha detto a {player_name} che gli piacciono i cani, ma non gli piace quando fanno le cose a caso. Tipo correre a destra e sinistra e ovunque.Devi andare dove devi andare. Come quando si parla.
 }
 
 {
