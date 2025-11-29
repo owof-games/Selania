@@ -666,33 +666,35 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 {debug: passo per food_gift_second_char.}
-Riccio attiva il suo storylet speciale dopo aver cucinato da solo e ci impezza sui pipistrelli per un po', e su dei bei ricordi col padre, sono andati alle cave assieme o qualcosa di simile Scopriamo che è abituato a cucinarsi roba da solo perché a casa non c’è mai nessuno
-Fanno pace.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
 
-{
-    - about_violence_and_peace:
-        Commento se abbiamo visitato lo storylet about_violence_and_peace
-    - else:
-        Commento se non abbiamo visitato lo storylet about_violence_and_peace
+    M: E proteggono tutta la biblioteca?
+    R: Sì! Vedi che sono carini?
+    M: Continuo a pensare che non siano carini, ma ora mi fanno un po' meno paura.
+    M: Ehi {player_name}! {charNameTwo} mi diceva che c'è questa biblioteca in Portogallo dove i pipistrelli proteggono i libri!
+    R: Sìì! E allora ho pensato di mettere una casetta per pipistrelli in cucina.
+    R: Così tengono lontani gli insetti fastidiosi!
+    M: E poi mi ha preparato questo piatto, ehm, curioso.
+    R: Si chiama PanTutto.
+    R: So cucinare tantissime cose!
+    M: Hai imparato dalla tua mamma?
+    R: No.
+    R: A casa ci sto tanto da solo, e quindi mi invento le cose. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
+    R: Ma cucinare è come un laboratorio.
+    R: E quindi ho inventato tanti piatti.
+    R: Sono contento che l'hai assaggiato, {mentorName}!
+    R: Ma non mi arrabbio se non ti piace.
+    R: So che i vecchi mangiano solo cose schifose come i broccoli.
+    M: Dovresti assaggiare la mia sacher, bimbo: ti porta direttamente in paradiso.
+    R: Ha il cioccolato?
+    M: Ha il cioccolato, e tanto.
+    M: {charNameTwo}: abbiamo fatto pace?
+    R: Mmm.
+    R: Sì.
+    R: Ma già da prima.
+    M: Posso abbracciarti?
+    R: No.
+    R: Ma puoi farmi quella torta al cioccolato?
 
-}
-            + [Scelta blu]
-                -> color_variation_management(SecondCharacter, blueC)->
-               
-            + [Scelta gialla]
-                -> color_variation_management(SecondCharacter, yellowC)->
-             
-            + [Scelta rossa]
-                -> color_variation_management(SecondCharacter, redC)->
-        
-            + [Scelta verde]
-                -> color_variation_management(SecondCharacter, greenC)->
-    
-            + [Scelta viola]
-               -> color_variation_management(SecondCharacter, purpleC)->
-            -
-    
-    
     ~ secondChar_pauseTalking = secondChar_pauseDuration
     ~ secondChar_justTalked = true
 

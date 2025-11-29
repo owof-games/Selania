@@ -249,8 +249,15 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Scelta viola]
                 -> color_variation_management(FirstCharacter, purpleC)->
             -
+        {
+            - kitchenContents has Bat:
+                Questo pipistrello mi sta spaventando.
+                Ma c'è da dire che da quando c'è lui in giro ci sono meno zanzare in giro!
+
+            - else:
+                Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
+        }
         
-        Carini gli insetti ma vorrei non finissero nel nostro veganissimo piatto.
         Ecco, questo coperchio ci sta perfettamente.
         Così, a caldo.
         Una persona che ti piace ti dice "Ti amo". Qual è la prima sensazione che provi?

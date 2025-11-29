@@ -1,3 +1,41 @@
+//Questi storylets speciali non tornano sulle opzioni di dialogo, ma sul main        
+    === not_talk
+        ~ temp mentorName = translator(mentor_ActualName)
+        
+        {not_talk: 
+        
+            - 1: 
+                Io ODIO {not welcome:quella strega coi petali| {mentorName}}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+                E non ci parlerò
+                mai
+                MAI
+                PIU'!
+                Mi ha fatto male!
+            
+            - else: 
+                {stopping:
+                    - Non ci parlo con chi è {player_pronouns has him:amico|{player_pronouns has her:amica|amicə}} di quella là!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry   
+                    
+                    - Hai risolto le cose con quella?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry   
+                    
+                    - Mi ha fatto male, e tu sei qui a non fare nulla?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry   
+                    
+                    - Vai via!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry   
+                }
+                   
+        }
+
+        {
+            - are_two_entities_together(Mentor, PG) && (not that_little_liar_storylet):
+                ~ riccioMentoreViciniColpo = true
+                -> that_little_liar_storylet  
+
+            - else:
+                -> main           
+        }
+                
+
+
 === open_the_library
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)

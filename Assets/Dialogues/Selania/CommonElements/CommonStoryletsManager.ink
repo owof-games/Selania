@@ -5,15 +5,15 @@
                     -> addressing_violence
     
         //Mentore e Riccio parlano dopo il litigio. Parte fintanto che riccio non ha cucinato da solo.
-            - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && addressing_violence && not about_violence_and_peace && not second_char_cooking_tracker:
+            - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && addressing_violence && (not about_violence_and_peace):
                     -> about_violence_and_peace
         
         //Discorso sbloccato da rana            
-            - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && frog_currentMission has specialMissionOne && not special_mission_one_dialogue:
+            - are_two_entities_together(Mentor, PG) && are_two_entities_together(SecondCharacter, PG) && frog_currentMission has specialMissionOne && (not special_mission_one_dialogue):
                     -> special_mission_one_dialogue
         
         //Riccio ha cucinato, e vediamo la scena del dono
-            - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Mentor, PG) && second_char_cooking_tracker && kitchen_secondCharIsCooking == false && not food_gift_second_char:
+            - are_two_entities_together(SecondCharacter, PG) && are_two_entities_together(Mentor, PG) && second_char_cooking_tracker && kitchen_secondCharIsCooking == false && about_violence_and_peace && (not food_gift_second_char):
                     -> food_gift_second_char
         
         //Chiacchiere tra Riccio e Chitarra
