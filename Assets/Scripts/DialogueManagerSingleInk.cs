@@ -293,7 +293,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
         var sb = new StringBuilder();
         sb.AppendLine($"Current line: {currentLine}");
-        sb.AppendLine($"Current choices:");
+        sb.AppendLine("Current choices:");
         foreach (var choice in currentChoices)
         {
             sb.AppendLine($"  {choice.text}");
@@ -349,9 +349,10 @@ public class DialogueManagerSingleInk : MonoBehaviour
         {
             // dialoguePanel.SetActive(true);
             EnableDialoguePanel();
-            dialogueText.text = currentLine;
-            dialogueTextBig.text = currentLine;
-            dialogueTextNest.text = currentLine;
+            var currentLineWithNewLines = currentLine.Replace("<N>", "\n");
+            dialogueText.text = currentLineWithNewLines;
+            dialogueTextBig.text = currentLineWithNewLines;
+            dialogueTextNest.text = currentLineWithNewLines;
             DisplayChoices(currentChoices);
             buttonsEnabled = false;
         }
