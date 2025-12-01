@@ -6,8 +6,9 @@
                 ~ gift_currentReceiver += FirstCharacter
                     -> backpack_management
             
-            + {backpack_findedGifts == ()} Lo zainetto di {player_name} è vuoto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-                    ->main
+            + -> 
+                Lo zaino che accompagna {player_name} è privo di oggetti.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                ->main
             
         
             = ink_outcome    

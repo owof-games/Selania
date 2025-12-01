@@ -98,15 +98,155 @@ Il secondo IF rimane com'è
 
     {Ink:
         - ink_empty:
-            Dopo il dono consegnato e il rapporto creato, {player_name} si ritrova senza inchiostro. Potrà fare solo la riscrittura garantita.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            Dopo le molte parole spese <>
+            {
+                - FirstCharacter:
+                    con {translator(firstChar_ActualName)}<>
+                    {
+                        - firstChar_giftedObject != (): e il dono consegnato
+                    }
+                - SecondCharacter:
+                    con {translator(secondChar_ActualName)}<>
+                    {
+                        - secondChar_giftedObject != (): e il dono consegnato
+                    }
+                - ThirdCharacter:
+                    con {translator(thirdChar_ActualName)}<>
+                    {
+                        - thirdChar_giftedObject != (): e il dono consegnato
+                    }
+                - FourthCharacter:
+                   con {translator(fourthChar_ActualName)}<>
+                    {
+                        - fourthChar_giftedObject != (): e il dono consegnato
+                    }
+                - FifthCharacter:
+                    con {translator(fifthChar_ActualName)}<>
+                    {
+                        - fifthChar_giftedObject != (): e il dono consegnato
+                    }
+            }
+            ,{player_name} si ritrova {player_pronouns has him:privo|{player_pronouns has her:priva|privə}} di inchiostro. Potrà solo usare il potere dell'epilogo.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         - ink_low:
-            Dopo il dono consegnato e il rapporto creato, {player_name} ha una goccia di inchiostro a disposizione. Potrà fare la riscrittura garantita e un riscrittura extra.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            Dopo le molte parole spese <>
+            {
+                - FirstCharacter:
+                    con {translator(firstChar_ActualName)}<>
+                    {
+                        - firstChar_giftedObject != (): e il dono consegnato
+                    }
+                - SecondCharacter:
+                    con {translator(secondChar_ActualName)}<>
+                    {
+                        - secondChar_giftedObject != (): e il dono consegnato
+                    }
+                - ThirdCharacter:
+                    con {translator(thirdChar_ActualName)}<>
+                    {
+                        - thirdChar_giftedObject != (): e il dono consegnato
+                    }
+                - FourthCharacter:
+                   con {translator(fourthChar_ActualName)}<>
+                    {
+                        - fourthChar_giftedObject != (): e il dono consegnato
+                    }
+                - FifthCharacter:
+                    con {translator(fifthChar_ActualName)}<>
+                    {
+                        - fifthChar_giftedObject != (): e il dono consegnato
+                    }
+            }
+            ,{player_name} ha a disposizione una goccia di inchiostro. Potrà compiere una riscrittura e usare il potere dell'epilogo.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         - ink_normal:
-            Dopo il dono consegnato e il rapporto creato, {player_name} ha due goccie di inchiostro a disposizione. Potrà fare la riscrittura garantita e altri due riscritture extra.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+           Dopo le molte parole spese <>
+            {
+                - FirstCharacter:
+                    con {translator(firstChar_ActualName)}<>
+                    {
+                        - firstChar_giftedObject != (): e il dono consegnato
+                    }
+                - SecondCharacter:
+                    con {translator(secondChar_ActualName)}<>
+                    {
+                        - secondChar_giftedObject != (): e il dono consegnato
+                    }
+                - ThirdCharacter:
+                    con {translator(thirdChar_ActualName)}<>
+                    {
+                        - thirdChar_giftedObject != (): e il dono consegnato
+                    }
+                - FourthCharacter:
+                   con {translator(fourthChar_ActualName)}<>
+                    {
+                        - fourthChar_giftedObject != (): e il dono consegnato
+                    }
+                - FifthCharacter:
+                    con {translator(fifthChar_ActualName)}<>
+                    {
+                        - fifthChar_giftedObject != (): e il dono consegnato
+                    }
+            }
+            ,{player_name} ha a disposizione due gocce di inchiostro. Potrà compiere due riscritture e usare il potere dell'epilogo.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         - ink_medium:
-            Dopo il dono consegnato e il rapporto creato, {player_name} ha tre goccie di inchiostro a disposizione. Potrà fare la riscrittura garantita e altri tre riscritture extra.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}       
+            Dopo le molte parole spese <>
+            {
+                - FirstCharacter:
+                    con {translator(firstChar_ActualName)}<>
+                    {
+                        - firstChar_giftedObject != (): e il dono consegnato
+                    }
+                - SecondCharacter:
+                    con {translator(secondChar_ActualName)}<>
+                    {
+                        - secondChar_giftedObject != (): e il dono consegnato
+                    }
+                - ThirdCharacter:
+                    con {translator(thirdChar_ActualName)}<>
+                    {
+                        - thirdChar_giftedObject != (): e il dono consegnato
+                    }
+                - FourthCharacter:
+                   con {translator(fourthChar_ActualName)}<>
+                    {
+                        - fourthChar_giftedObject != (): e il dono consegnato
+                    }
+                - FifthCharacter:
+                    con {translator(fifthChar_ActualName)}<>
+                    {
+                        - fifthChar_giftedObject != (): e il dono consegnato
+                    }
+            }
+            ,{player_name} ha a disposizione tre gocce di inchiostro. Potrà compiere tre riscritture e usare il potere dell'epilogo.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}       
         - ink_high:
-            Dopo il dono consegnato e il rapporto creato, {player_name} ha quattro goccie di inchiostro a disposizione. Potrà fare la riscrittura garantita e altri tre riscritture extra. E riceverà un'informazione importante.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            Dopo le molte parole spese <>
+            {
+                - FirstCharacter:
+                    con {translator(firstChar_ActualName)}<>
+                    {
+                        - firstChar_giftedObject != (): e il dono consegnato
+                    }
+                - SecondCharacter:
+                    con {translator(secondChar_ActualName)}<>
+                    {
+                        - secondChar_giftedObject != (): e il dono consegnato
+                    }
+                - ThirdCharacter:
+                    con {translator(thirdChar_ActualName)}<>
+                    {
+                        - thirdChar_giftedObject != (): e il dono consegnato
+                    }
+                - FourthCharacter:
+                   con {translator(fourthChar_ActualName)}<>
+                    {
+                        - fourthChar_giftedObject != (): e il dono consegnato
+                    }
+                - FifthCharacter:
+                    con {translator(fifthChar_ActualName)}<>
+                    {
+                        - fifthChar_giftedObject != (): e il dono consegnato
+                    }
+            }
+            ,{player_name} ha a disposizione quattro gocce di inchiostro. Potrà compiere quattro riscritture e usare il potere dell'epilogo. E riceverà un'informazione importante.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 {
                     - Character == FirstCharacter:
                         ~ firstChar_specialEvent = true
@@ -174,19 +314,37 @@ Il secondo IF rimane com'è
     
     {Ink:
         - ink_empty:
-            non hai guadagnato alcuna goccia di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            non ha raccolto alcuna goccia di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         - ink_low:
-            hai guadagnato una goccia di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            ha raccolto una goccia di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         - ink_normal:
-            hai guadagnato due goccie di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            ha raccolto due gocce di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         - ink_medium:
-            hai guadagnato tre goccie di inchiostro a disposizione#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}     
+            ha raccolto tre gocce di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}     
         
         - ink_high:
-            hai guadagnato tre goccie di inchiostro a disposizione, e la personaggia ti darà una informazione importante#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            ha raccolto tre gocce di inchiostro, e col tempo riceverà da <>
+                {Character:
+                    - FirstCharacter:
+                        {translator(firstChar_ActualName)} <>
+                    
+                    - SecondCharacter:
+                        {translator(secondChar_ActualName)} <>
+                
+                    - ThirdCharacter:
+                        {translator(thirdChar_ActualName)} <>
+                    
+                    - FourthCharacter:
+                        {translator(fourthChar_ActualName)} <>
+                    
+                    - FifthCharacter:
+                        {translator(fifthChar_ActualName)} <>
+
+                }
+                una informazione importante.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         - else:
             <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             {debug: <i>Il livello di inchiostro per la prima personaggia è {firstChar_InkLevel}}
@@ -216,19 +374,19 @@ Il secondo IF rimane com'è
     
     {Ink:
         - ink_empty:
-            nessun boccettino di inchiostro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            nessuna goccia di inchiostro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         - ink_low:
-            un boccettino di inchiostro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            una goccia di inchiostro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         - ink_normal:
-            due boccettini di inchiostro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            due gocce di inchiostro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         - ink_medium:
-            tre boccettini di inchiostro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}     
+            tre gocce di inchiostro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}     
         
         - ink_high:
-            quattro boccettini di inchiostro, e una informazione importante.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            quattro gocce di inchiostro, e una informazione importante.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         - else:
             <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             {debug: <i>Il livello di inchiostro per la prima personaggia è {firstChar_InkLevel}}
