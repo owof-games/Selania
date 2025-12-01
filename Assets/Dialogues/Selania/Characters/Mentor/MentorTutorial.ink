@@ -15,6 +15,12 @@
         
         Immagino tu abbia un milione di domande, vero?
         
+            {
+                - not about_colors_choices:
+                    -> about_colors_choices ->
+            }
+
+        
             * (dove) [Dove sono? (opzione blu)]
                 -> color_variation_management(Mentor, blueC)->
                  Questo luogo non ha un nome.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral

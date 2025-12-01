@@ -210,7 +210,7 @@
                 ~ player_somethingStrange --
                 -> helping_mentor
                 
-        * (infoImpo){firstChar_InkLevel has ink_high} [Le personagge hanno informazioni importanti?]
+        * (infoImpo){(firstChar_InkLevel has ink_high) or (secondChar_InkLevel has ink_high)} [Le personagge hanno informazioni importanti?]
             Dove l'hai sentita questa cosa, stellina?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
             Quando stavo per fare le ultime domande a {charNameOne}, {voices:la|una} voce mi ha detto quanto inchiostro avevo e che avrei ricevuto una informazione importante.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             {not voices:Per la voce sarà la stanchezza, questo lavoro è faticoso.|Come ti dicevo, vedrai che è solo la tua empatia che parla.}#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
@@ -219,7 +219,7 @@
                 ~ player_somethingStrange --
                 -> helping_mentor
         
-        * (talkingWitch) {witch_feedback.intro} [Prima ho parlato con le radici nella foresta.]
+        * (talkingWitch) {witch_intro} [Prima ho parlato con le radici nella foresta.]
             E mi hanno chiesto come stavo dopo aver aiutato {charNameOne}.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             {infoImpo or voices:Stellina, di nuovo con questa voce?|Senti le voci, stellina?}#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
             Sono in questo posto da non so quanto e non ho mai parlato con tronchi o rami o radici.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral

@@ -94,7 +94,7 @@
         
     //Missione sei: conoscere la strega
         {
-            - witch_feedback.intro && frog_availableCommonMissions has missionSix:
+            - witch_intro && frog_availableCommonMissions has missionSix:
                 ~ frog_availableCommonMissions -= missionSix
                 Stavo per invitarti a parlare con l'albero della foresta, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
@@ -121,7 +121,7 @@
     
     //Missione nove: parlare con la strega
         {
-            - witch_feedback.intro && frog_availableCommonMissions has missionNine:
+            - witch_intro && frog_availableCommonMissions has missionNine:
                 ~ frog_availableCommonMissions -= missionNine
                 Stavo per chiederti di fare amicizia con l'albero della foresta, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
@@ -181,7 +181,7 @@
                 -> mission_seven
             - 8 && player_accessiblePlaces has Library:
                 -> mission_eight
-            - 9 && not witch_feedback.intro:
+            - 9 && not witch_intro:
                 -> mission_nine
             - else:
                 {debug_frog: il valore di frog_randomMissionDice è {frog_randomMissionDice}, e la missione associata è già stata fatta. Ritiro il dado.}
@@ -277,7 +277,7 @@
         
         - missionSix:
             {
-                - witch_feedback.intro:
+                - witch_intro:
                     Hai parlato con l'albero, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     E non sta a me chiederti cosa vi siete dett3, ma spero tu possa aver trovato un'alleata in questo percorso.
                     
@@ -324,7 +324,7 @@
         
         - missionNine:
             {
-                - witch_feedback.intro:
+                - witch_intro:
                     Hai parlato con l'albero della foresta, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Sono sicuro che troverai in lei una grande alleata in questo lavoro.
                     Ma nel mentre, parliamo del tuo dono.
@@ -568,7 +568,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
                     -> notification 
                
                 
-                - frog_currentMission has missionSix && witch_feedback.intro:
+                - frog_currentMission has missionSix && witch_intro:
                     -> notification
             
                 - frog_currentMission has missionSeven:
@@ -583,7 +583,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
                 - frog_currentMission has missionEight && library_readStories != ():
                     -> notification
                 
-                - frog_currentMission has missionNine && witch_feedback.intro:
+                - frog_currentMission has missionNine && witch_intro:
                     -> notification
                     
                 - frog_currentMission has specialMissionOne && special_mission_one_dialogue:

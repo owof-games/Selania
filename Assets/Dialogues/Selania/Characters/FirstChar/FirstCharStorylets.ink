@@ -17,6 +17,11 @@
         Sempre che non abbia cambiato fissa in questi mesi.
         Insomma: l’hai vistə?
         
+            {
+                - not about_colors_choices:
+                    -> about_colors_choices ->
+            }
+        
             //Risposte, di cui una diversa a seconda che abbiamo incontrato o meno Mentore.
             + [Risposta viola.]
                 -> color_variation_management(FirstCharacter, purpleC)->

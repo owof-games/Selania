@@ -37,7 +37,7 @@ dog
 
 
 {
-    - witch_feedback.intro:
+    - witch_intro:
         Non è solo un vecchio tronco, comunque. Sembra che venga da qui la voce che mi sento in testa, che mi descrive i luoghi e altre cose di questo posto. Dice che è, anzi, sono tornati a precepirsi. E che saranno la luna e un sorriso.
 }
 

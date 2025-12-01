@@ -99,7 +99,7 @@ LIST speakersForEwWordTag = Influenced, Other
 
 === function witch_tag
 {
-    - !witch_feedback.intro.nameWitch:
+    - !witch_intro.nameWitch:
         ~ return "..."
     - else:
         ~ return "^_^"

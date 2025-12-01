@@ -28,6 +28,10 @@
             - are_two_entities_together(Mentor, PG) && are_two_entities_together (TheFrog, PG) && not frog_and_mentor_chit_chat:
                 -> frog_and_mentor_chit_chat
 
+        //Feedback da parte di Mentore su pensieri strega se le abbiamo detto che abbiamo parlato con la pianta
+            - are_two_entities_together(Mentor, PG) && are_two_entities_together(TheWitch, PG) && little_storylets.talkingWitch && not the_witch_and_the_mentor:
+                -> the_witch_and_the_mentor        
+
             - else:
                 {
                     - actual_speaker == Mentor:

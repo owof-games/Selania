@@ -6,6 +6,13 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
+
+    {
+        - about_colors_choices:
+        xxx
+    }
+
+
     {
         - about_ink_usage:
         <b>Sulla riscrittura: appunti apocrifi del collettivo P.K.</b> <>
