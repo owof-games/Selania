@@ -55,7 +55,7 @@
 
 //Per assegnare/cambiare player_pronouns di riferimento
 === gender ===
-    <i>Quali pronomi ti fanno sentire <b>te</b>?</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>Quali pronomi fanno sentire {player_name} la persona che è?</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
     + {gender> 1} [Mi trovo a mio agio con i pronomi {player_pronouns has him:maschili|{player_pronouns has her:femminili|neutri}}.]
         ->->
@@ -81,15 +81,17 @@
 
 //Per la scelta del nome
 === name_choice ===
-    C'è qualcosa che vuoi dirci sul tuo nome?#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-    + {name_choice > 1} [Il mio nome è {player_name}.]
-        ->->
-    
-    + {name_choice > 1}[<i>Non sento più questo nome come mio.]
-        ~ player_nameChosen = false
-        -> top
-    
-    + ->
+    Un nome è un incantesimo, una possibilità.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+    Quale nome verrà pronunciato?
+
+        + {name_choice > 1} [Il mio nome è {player_name}.]
+            ->->
+        
+        + {name_choice > 1}[<i>Non sento più questo nome come mio.]
+            ~ player_nameChosen = false
+            -> top
+        
+        + ->
     
     - (top)
         Il mio nome è...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral

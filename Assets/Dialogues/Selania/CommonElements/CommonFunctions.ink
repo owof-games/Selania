@@ -640,17 +640,17 @@ Funzione di traduzione da variabile a stringa
                 {   
                     
                     - firstChar_favouritesGifts has object:
-                    {~ {translator(firstChar_ActualName)} ti abbraccia, entusiasta.|Sulle guancie di {translator(firstChar_ActualName)} compare una lacrima.|{translator(firstChar_ActualName)} è un concentrato di gioia.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                    {~ {translator(firstChar_ActualName)} abbraccia {player_name} entusiasta.|Sulle guance di {translator(firstChar_ActualName)} compare una lacrima.|{translator(firstChar_ActualName)} è un concentrato di gioia.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                             ~ firstChar_InkLevel ++
                             ~ firstChar_InkLevel ++
          
                     //Presupponiamo che un po' ma non troppo le piaccia l'ingrediente universale
                     - firstChar_goodGifts has object or object == universalIngredient:
-                        {~ {translator(firstChar_ActualName)} si passa il dono tra le mani.|{translator(firstChar_ActualName)} ti sorride.|{translator(firstChar_ActualName)} ti ringrazia.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                        {~ {translator(firstChar_ActualName)} si passa il dono tra le mani.|{translator(firstChar_ActualName)} sorride.|{translator(firstChar_ActualName)} ringrazia {player_name}.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                             ~ firstChar_InkLevel ++
                     
                     - else:
-                        {~ {translator(firstChar_ActualName)} ignora il dono.|{translator(firstChar_ActualName)} ti ringrazia, e si distrae rapidamente.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                        {~ {translator(firstChar_ActualName)} ignora il dono.|{translator(firstChar_ActualName)} ringrazia {player_name} e si distrae rapidamente.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 }
                 
             
@@ -694,13 +694,13 @@ Funzione di traduzione da variabile a stringa
                 {   
                     
                     - secondChar_favouritesGifts has object:
-                       {~ {translator(secondChar_ActualName)} ti abbraccia, entusiasta.|Sulle guancie di {translator(secondChar_ActualName)} compare una lacrima.|{translator(secondChar_ActualName)} è un concentrato di gioia.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                       {~ {translator(secondChar_ActualName)} abbraccia {player_name}, entusiasta.|Sulle guance di {translator(secondChar_ActualName)} compare una lacrima.|{translator(secondChar_ActualName)} è un concentrato di gioia.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                         ~ secondChar_InkLevel ++
                         ~ secondChar_InkLevel ++
          
                     //Presupponiamo che un po' ma non troppo le piaccia l'ingrediente universale
                     - secondChar_goodGifts has object or object == universalIngredient:
-                        {~ {translator(secondChar_ActualName)} prova ad assaggiare il dono, divertito.|Sulle guancie di {translator(secondChar_ActualName)} compare un grande sorriso.|{translator(secondChar_ActualName)} saltella.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                        {~ {translator(secondChar_ActualName)} prova ad assaggiare il dono, divertito.|Sulle guance di {translator(secondChar_ActualName)} compare un grande sorriso.|{translator(secondChar_ActualName)} saltella.}#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                         ~ secondChar_InkLevel ++
                     
                     - else:

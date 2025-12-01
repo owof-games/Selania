@@ -107,7 +107,8 @@
         Ma a te come ti piace divertirti?
 
             {
-                - not cooking_with_first_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - not cooking_with_first_char:
+                    {player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
         
             + [Preparo una base per biscotti sportivi.]
@@ -344,7 +345,8 @@
             Tu sei {player_pronouns has him:il più bravo|{player_pronouns has her:la più brava|lə più bravə}} in quello che fai?
 
                 {
-                    - not cooking_with_first_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    - not cooking_with_first_char:
+                        {player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 }
             
             + [Preparo un mediocre stampo da cupcake.]
@@ -608,7 +610,8 @@
         Tutte le bugie sono sbagliate?
 
             {
-                - not cooking_with_first_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - not cooking_with_first_char:
+                    {player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
         
             + (bugie_innocenti) [Sbuccio delle pesche innocenti.]
@@ -817,9 +820,9 @@
         
             {
                 - backpack_findedGifts == ():
-                    Dato che lo zaino di {player_name} è vuoto, non è possibile inserire un ingrediente speciale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    Lo zaino di {player_name} giace vuoto sulle sue spalle. {player_name} non può aggiungere alla ricetta un ingrediente speciale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                     -> recipe_name_creator ->
-                    -> at_table_with_second_char
+                    -> at_table_with_first_char
                 
                 - else:
                     -> add_ingredient
@@ -833,13 +836,9 @@
                 ~ temp charNameFour= translator(fourthChar_ActualName)
                 ~ temp mentorName = translator(mentor_ActualName)
                 
-                Dato che lo zaino di {player_name} contiene degli oggetti, può inserirne uno nel piatto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-            {
-                - not cooking_with_first_char:
-                    Abbiamo la sensazione che il giusto ingrediente possa dare un tocco speciale alla ricetta di {player_name} e {charNameTwo}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                    E aiutare {player_name} a capire un po' meglio {charNameTwo}.
-            }
-                
+                Il giusto ingrediente renderà la ricetta di {player_name} e {charNameTwo} spaziale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                E {player_name} potrebbe capire un po' meglio {charNameTwo}. 
+
                     + [Voglio aggiungere un ingrediente speciale.]
                         -> extra_ingredient_management(SecondCharacter)->
                         ~ disableNestDialogue()
@@ -929,8 +928,8 @@
                 ~ temp charNameFour= translator(fourthChar_ActualName)
                 ~ temp mentorName = translator(mentor_ActualName)
                         {
-                            - not at_table_with_first_char.extra_ing_feedback:
-                                Poiché {player_name} ha aggiunto ingrediente adorato da {charNameTwo}, riceverà un consiglio su come gestire le conversazioni con lui.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                            - not at_table_with_first_char.good_reaction:
+                                {player_name} ha aggiunto ingrediente adorato da {charNameTwo}, e quindi riceverà un consiglio su come gestire le conversazioni con lui.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                         }
 
                     Mi è piaciuto tanto tanto che c'hai messo {ingredientTranslator(kitchen_secondCharExtraIngredient)}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
@@ -949,8 +948,8 @@
                 ~ temp charNameFour= translator(fourthChar_ActualName)
                 ~ temp mentorName = translator(mentor_ActualName)
                         {
-                            - not at_table_with_first_char.extra_ing_feedback:
-                                Poiché {player_name} ha aggiunto ingrediente detestato da {charNameOne}, non riceverà alcun consiglio su come gestire le conversazioni con lui.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                            - not at_table_with_first_char.bad_reaction:
+                                {player_name} ha aggiunto ingrediente detestato da {charNameOne}, e quindi non riceverà alcun consiglio su come gestire le conversazioni con lui.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                         }
                     Però {ingredientTranslator(kitchen_secondCharExtraIngredient)} mi ha fatto suuuuuperschifo.
                     Super.
@@ -965,8 +964,8 @@
                 ~ temp charNameFour= translator(fourthChar_ActualName)
                 ~ temp mentorName = translator(mentor_ActualName)
                         {
-                            - not at_table_with_first_char.extra_ing_feedback:
-                                Poiché {player_name} ha aggiunto ingrediente detestato da {charNameOne}, riceverà un consiglio fumoso su cosa fare parlando con lui.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                            - not at_table_with_first_char.meh_reaction:
+                                {player_name} ha aggiunto ingrediente detestato da {charNameOne}, e quindi riceverà un consiglio fumoso su cosa fare parlando con lui.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                         }
                     Mi è piaciuto che c'hai messo {ingredientTranslator(kitchen_secondCharExtraIngredient)}.
                     Non il mio preferito, ma quasi.

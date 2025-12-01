@@ -71,11 +71,9 @@
 
 ~  kitchen_tempRecipeName = "{kitchen_recipeNoun} {kitchen_recipeAdjective} {kitchen_recipeComplement} {kitchen_recipePP}"
 
-{player_name} ha cucinato {kitchen_tempRecipeName}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-    -> recipe_name_storage ->
-
-
-    ->->
+    La cucina si riempie del profumo di {kitchen_tempRecipeName}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        -> recipe_name_storage ->
+        ->->
 
 //Lo chiamo da recipeNameCreator, non mi serve chiamarlo altrove
 === recipe_name_storage

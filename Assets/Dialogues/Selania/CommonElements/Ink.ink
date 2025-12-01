@@ -387,6 +387,7 @@ Il secondo IF rimane com'è
         
         - ink_high:
             quattro gocce di inchiostro, e una informazione importante.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        
         - else:
             <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             {debug: <i>Il livello di inchiostro per la prima personaggia è {firstChar_InkLevel}}

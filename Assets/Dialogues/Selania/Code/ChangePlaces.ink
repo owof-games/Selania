@@ -31,7 +31,7 @@
             Grazie di cuore.
             
                 + + (close)[Voglio chiudere <i>Selanìa</i>.]
-                    A presto, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    Salutiamo {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                     @quit
                     -> END
                     
@@ -107,7 +107,7 @@
             -> greenhouse
 
     + {are_two_entities_together(PG, FromPondToGreenhouseBlocked)} [FromPondToGreenhouseBlocked]
-        <i>La porta risulta chiusa, l'interno è buio.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()} 
+        <i>Una porta chiusa, un interno buio.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()} 
         -> main
         
 
@@ -119,7 +119,7 @@
                 -> library
         
         - else:
-            Un cumulo di carta e colonne di legno blocca la strada.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            Legna e carta proteggono la strada.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     }  
     
@@ -151,7 +151,7 @@
                 -> empty_tempTW ->  
                 -> kitchen
         - else:
-            <i>Questa strada risulta bloccata.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            Un ponte spezzato interrompe il cammino di chi viaggia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     }        
 
@@ -170,7 +170,7 @@
                     -> empty_tempTW ->  
                     -> nest
             - else:
-                Il relitto di una barca non permette di avanzare.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                Il relitto di una barca ostacola il cammino di {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 -> main
         }   
 

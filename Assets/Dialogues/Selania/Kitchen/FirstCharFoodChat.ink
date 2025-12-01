@@ -102,7 +102,8 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         No no taglio io, non ti preoccupare, continua a mischiare.
         Ma invece tu che rapporto hai coi tuoi genitori?
             {
-                - not cooking_with_second_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                - not cooking_with_second_char:
+                    {player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
         
 
@@ -351,8 +352,9 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Non le vogliamo, o le vogliamo diverse nel futuro.
         Tu {player_name} sai che futuro vuoi vedere?
         
-            {
-                - not cooking_with_second_char: {player_name} prova a parlare, ma non escono le parole. Però gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+             {
+                - not cooking_with_second_char:
+                    {player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
             
             + [Infarino confusamente delle tagliatelle.]
@@ -604,8 +606,9 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         O è una bomba o ci avvelena.
         E tu {player_name} hai qualcosa che ti aiuta a star bene con te?
             
-            {
-                - not cooking_with_second_char: Provi a parlare, ma non ti escono le parole. Però gli ingredienti possono parlare per te.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+             {
+                - not cooking_with_second_char:
+                    {player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
             + [Lesso sportivamente delle patate.]
                 ~ kitchen_recipeNoun = "Patate"
@@ -799,9 +802,10 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     Ma {player_name}, qui a me sembra tutto pronto, non trovi?
     
         {
-            - backpack_findedGifts == (): Dato che lo zaino di {player_name} è vuoto, non è possibile inserire un ingrediente speciale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                -> recipe_name_creator ->
-                -> at_table_with_first_char
+            - backpack_findedGifts == (): 
+                Lo zaino di {player_name} giace vuoto sulle sue spalle. {player_name} non può aggiungere alla ricetta un ingrediente speciale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    -> recipe_name_creator ->
+                    -> at_table_with_first_char
                 
             - else:
                 -> add_ingredient
@@ -815,13 +819,9 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-            Dato che lo zaino di {player_name} contiene degli oggetti, può inserirne uno nel piatto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-            {
-                - not cooking_with_second_char:
-                    Abbiamo la sensazione che il giusto ingrediente possa dare un tocco speciale alla ricetta di {player_name} e {charNameOne}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                    E aiutare {player_name} a capire un po' meglio {charNameOne}.
-            }
-                
+            Il giusto ingrediente renderà la ricetta di {player_name} e {charNameOne} musicale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            E {player_name} potrebbe capire un po' meglio {charNameOne}.
+       
                 + [Voglio aggiungere un ingrediente speciale.]
                     -> extra_ingredient_management(FirstCharacter)->
                     ~ disableNestDialogue()
@@ -902,8 +902,8 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 ~ temp charNameFour= translator(fourthChar_ActualName)
                 ~ temp mentorName = translator(mentor_ActualName)
                         {
-                            - not at_table_with_second_char.extra_ing_feedback:
-                                Poiché {player_name} ha aggiunto ingrediente adorato da {charNameOne}, riceverà un consiglio su come gestire le conversazioni con lei.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                            - not at_table_with_second_char.good_reaction:
+                                {player_name} ha aggiunto ingrediente adorato da {charNameOne}, e quindi riceverà un consiglio su come gestire le conversazioni con lei.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                         }
                     Aggiungere {ingredientTranslator(kitchen_firstCharExtraIngredient)} è stato un tocco geniale.
                     Mi è arrivato proprio al cuore.
@@ -923,8 +923,8 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 ~ temp charNameFour= translator(fourthChar_ActualName)
                 ~ temp mentorName = translator(mentor_ActualName)  
                         {
-                            - not at_table_with_second_char.extra_ing_feedback:
-                                Poiché {player_name} ha aggiunto ingrediente detestato da {charNameOne}, non riceverà alcun consiglio su come gestire le conversazioni con lei.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                            - not at_table_with_second_char.bad_reaction:
+                                {player_name} ha aggiunto ingrediente detestato da {charNameOne}, e quindi non riceverà alcun consiglio su come gestire le conversazioni con lei.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                         }
                     Aggiungere {ingredientTranslator(kitchen_firstCharExtraIngredient)} è stata una scelta.
                     Una scelta terribile, {player_name}.
@@ -940,8 +940,8 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 ~ temp charNameFour= translator(fourthChar_ActualName)
                 ~ temp mentorName = translator(mentor_ActualName)
                         {
-                            - not at_table_with_second_char.extra_ing_feedback:
-                                Poiché {player_name} ha aggiunto ingrediente abbastanza apprezzato da {charNameOne}, riceverà un consiglio fumoso su cosa fare parlando con lei.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                            - not at_table_with_second_char.meh_reaction:
+                                {player_name} ha aggiunto ingrediente abbastanza apprezzato da {charNameOne}, e quindi riceverà un consiglio fumoso su cosa fare parlando con lei.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                         }
 
                     L'aggiunta di {ingredientTranslator(kitchen_firstCharExtraIngredient)} mi ha confusa.
