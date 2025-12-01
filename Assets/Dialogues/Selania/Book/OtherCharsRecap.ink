@@ -1,5 +1,4 @@
 
-
 === dog_character_recap
 + {are_two_entities_together(DogRecap, PG)} [DogRecap]
 ~ enableBigDialogue()
