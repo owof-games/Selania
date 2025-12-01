@@ -59,8 +59,7 @@
 
 === maura
 <b>Polvere</b> di Maura (she/they). Instagram: @maura_sacca
-
-    Trigger warning: violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+Trigger warning: violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
        
         + [Inizio la lettura.]
     //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.

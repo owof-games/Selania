@@ -59,7 +59,6 @@ Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA
 
 === alexias_d_avino
 <b>Il Riflesso</b> di Alexias D'Avino (lui/lei). Instagram: @togetherweread29
-
 Trigger warning: lutto, rifiuto da parte della figura genitoriale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
         + [Inizio la lettura.]
@@ -193,7 +192,6 @@ Trigger warning: lutto, rifiuto da parte della figura genitoriale.#speaker:{witc
 
 === aza
 <b>Luna vergine</b> di Aza (any).
-
 Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
         + [Inizio la lettura.]
