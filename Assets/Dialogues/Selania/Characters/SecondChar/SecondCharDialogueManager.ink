@@ -77,6 +77,7 @@
                         - Mamma non ci crede ma una volta ho mangiato dieci gelati e non sono stato male ma non me li dà comunque, uffa!
                         - Ho fatto un tema così bello che la maestra l'ha mandato a tutte le mamme per far vedere che sono il bambino più bravo della scuola!
                     }
+                    -> main
                 
                 - else:
                     {shuffle:
@@ -95,7 +96,8 @@
                         - A volte leggo così tanto che mi dimentico del mondo e mi piace tanto tanto.
                         - C'è una lumaca che può dormire tre anni di fila. Pensa che noia!
                         - L'ippopotamo è super aggressivo. E ha la faccia stupida, vero?
-                    }    
+                    }
+                    -> main
             }        
 
             - else:
