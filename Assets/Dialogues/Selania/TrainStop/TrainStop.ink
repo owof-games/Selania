@@ -12,6 +12,7 @@
     }
     
             -> witch_frog_mission_notifier ->
+            -> talk_to_me ->
     
     ~ book_arrivingFromTracking = TrainStop
 

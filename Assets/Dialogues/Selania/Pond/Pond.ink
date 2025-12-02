@@ -7,6 +7,7 @@
 {pond  == 1:Lo stagno è caldo, il cammino ricco dell'odore dei funghi.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         -> witch_frog_mission_notifier ->
+        -> talk_to_me ->
     
 ~ book_arrivingFromTracking = Pond
 

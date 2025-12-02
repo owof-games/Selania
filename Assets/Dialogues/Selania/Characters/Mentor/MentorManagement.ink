@@ -28,4 +28,29 @@
     VAR riccioMentoreViciniColpo = false
     VAR riccioMentoreViciniInnaffiatoio = false
     
-   
+
+
+//Funzione per farsi notare
+=== talk_to_me ===
+{debug: passo per talk_to_me. Il valore di mentor_lastTimeTalking è {mentor_lastTimeTalking}.}
+    {
+        - are_two_entities_together(Mentor, PG) && welcome:
+            {
+                - mentor_lastTimeTalking < mentor_MAX_lastTimeTalking:
+                    ~ mentor_lastTimeTalking ++
+                    ->->    
+
+                - else:
+                    {shuffle:
+                        - Ehi {player_name}, spero vada tutto bene.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+                        - Ehi {player_name}, è da un po' che non parliamo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+                        - {player_name}, se ti vanno due chiacchiere sono qui.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+                        - Ciao {player_name}, spero tu non ti stia affaticando troppo.#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+                    }
+                    ->->    
+
+            }
+
+    }
+
+->->

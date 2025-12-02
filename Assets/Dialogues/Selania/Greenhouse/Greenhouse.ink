@@ -8,6 +8,7 @@
 
     {greenhouse == 1:Nella serra a lungo dimenticata i vasi attendono sussurri e confidenze.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             -> witch_frog_mission_notifier ->
+            -> talk_to_me ->
 
     ~ book_arrivingFromTracking = Greenhouse
 
