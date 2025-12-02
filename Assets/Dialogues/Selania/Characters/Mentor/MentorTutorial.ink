@@ -3,7 +3,6 @@
        Storylets tutorial
 
  ----------------------------------*/
-
 === welcome ===
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -158,7 +157,7 @@
                 //Se sono già in uno stato intermedio di conoscenza con unx dellx PNG
                     - (firstChar_storyletsForRewritingCount > (firstChar_minStoryletsForRewriting - 3)) or (secondChar_storyletsForRewritingCount > (secondChar_storyletsForRewritingCount - 4)):
                         E visto che hai già parlato un po' con chi girella per questo luogo, è il caso che te lo spieghi subito!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                            -> about_ink_usage
+                            -> you_are_a_rewriter
                 
                 //Altrimenti
                     - else:
@@ -172,13 +171,13 @@
                 ~ move_entity(FifthRecap, BookPlace)
                 @animation:RewriterBook 
         
-        //Con questa voce evito che "about_ink_usage" compaia subito dopo se le condizioni sono sensate.
+        //Con questa voce evito che "you_are_a_rewriter" compaia subito dopo se le condizioni sono sensate.
                 ~ mentor_tutorialPauses = true
                 ~ actual_speaker = ()
                 -> main
                 
             
-=== about_ink_usage
+=== you_are_a_rewriter
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp charNameThree = translator(thirdChar_ActualName)
@@ -271,7 +270,7 @@
         
             ~ move_entity(RulesRecap, BookPlace)      
             ~ mentor_pauseTalking = mentor_pauseDuration
-            //Con questa voce evito che "questions" compaia subito dopo se le condizioni sono sensate.
+            //Con questa voce evito che "ink_and_rewriting" compaia subito dopo se le condizioni sono sensate.
             ~ mentor_tutorialPauses = true
         
         @animation:RewriterBook
@@ -280,7 +279,7 @@
              
 
     
-=== questions
+=== ink_and_rewriting
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp charNameThree = translator(thirdChar_ActualName)

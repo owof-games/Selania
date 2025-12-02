@@ -16,7 +16,7 @@
         ~ move_entity(PG, Forest)
         ~ move_entity(RewriterBook, Forest)
         {
-            - about_ink_usage.sbadata or cultivable_test:
+            - you_are_a_rewriter.sbadata or cultivable_test:
                 ~ move_entity(Backpack, Forest)
         }
         ~ disableBigDialogue()
@@ -27,7 +27,7 @@
         ~ move_entity(PG, Greenhouse)
         ~ move_entity(RewriterBook, Greenhouse)
         {
-            - about_ink_usage.sbadata or cultivable_test:
+            - you_are_a_rewriter.sbadata or cultivable_test:
                 ~ move_entity(Backpack, Greenhouse)
         }
         ~ disableBigDialogue()
@@ -38,7 +38,7 @@
         ~ move_entity(PG, Pond)
         ~ move_entity(RewriterBook, Pond)
         {
-            - about_ink_usage.sbadata or cultivable_test:
+            - you_are_a_rewriter.sbadata or cultivable_test:
                 ~ move_entity(Backpack, Pond)
         }
         ~ disableBigDialogue()
@@ -48,7 +48,7 @@
         ~ move_entity(PG, Kitchen)
         ~ move_entity(RewriterBook, Kitchen)
         {
-            - about_ink_usage.sbadata or cultivable_test:
+            - you_are_a_rewriter.sbadata or cultivable_test:
                 ~ move_entity(Backpack, Kitchen)
         }
         ~ disableBigDialogue()
@@ -58,7 +58,7 @@
         ~ move_entity(PG, Library)
         ~ move_entity(RewriterBook, Library)
         {
-            - about_ink_usage.sbadata or cultivable_test:
+            - you_are_a_rewriter.sbadata or cultivable_test:
                 ~ move_entity(Backpack, Library)
         }
         ~ disableBigDialogue()
@@ -68,7 +68,7 @@
         ~ move_entity(PG, Nest)
         ~ move_entity(RewriterBook, Nest)
         {
-            - about_ink_usage.sbadata or cultivable_test:
+            - you_are_a_rewriter.sbadata or cultivable_test:
                 ~ move_entity(Backpack, Nest)
         }    
         ~ disableBigDialogue()
@@ -78,7 +78,7 @@
         ~ move_entity(PG, TrainStop)
         ~ move_entity(RewriterBook, TrainStop)
         {
-            - about_ink_usage.sbadata or cultivable_test:
+            - you_are_a_rewriter.sbadata or cultivable_test:
                 ~ move_entity(Backpack, TrainStop)
         }
         ~ disableBigDialogue()

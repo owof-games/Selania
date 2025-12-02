@@ -55,7 +55,7 @@
 === mentor_tutorial_storylets
 {debug: passo da mentor_tutorial_storylets}
 {debug: valore di welcome == {welcome}}
-{debug: valore di questions == {questions}}
+{debug: valore di ink_and_rewriting == {ink_and_rewriting}}
 ~ temp charNameOne = translator(firstChar_ActualName)
 //Ogni volta che parlo con Mentore, il primo check è sulla presenza o meno di tutorial. Se ci sono elementi di tutorial da condividere e le condizioni sono rispettate, a questo punto scattano per primi, ma senza darmi feedback, che verranno dati solo se non ci sono storylets di altro tipo da condividere.
     {
@@ -64,12 +64,12 @@
             -> welcome
         
         //Relazioni e inchiostro
-        - not about_ink_usage && mentor_tutorialPauses == false:
-            -> about_ink_usage
+        - not you_are_a_rewriter && mentor_tutorialPauses == false:
+            -> you_are_a_rewriter
         
         //Sulla riscrittura    
-        - not questions && mentor_tutorialPauses == false:
-            -> questions
+        - not ink_and_rewriting && mentor_tutorialPauses == false:
+            -> ink_and_rewriting
             
         //Sulla funzione della serra
         - player_accessiblePlaces has Greenhouse && not about_greenhouse && mentor_tutorialPauses == false:

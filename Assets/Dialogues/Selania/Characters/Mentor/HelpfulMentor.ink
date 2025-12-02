@@ -34,7 +34,7 @@
         + [Avrei bisogno di una mano.]
             -> support
         
-        + {player_somethingStrange > 0 or (firstChar_InkLevel has ink_high && not little_storylets.infoImpo) && about_ink_usage} [Mi è successa una cosa strana.]
+        + {player_somethingStrange > 0 or (firstChar_InkLevel has ink_high && not little_storylets.infoImpo) && you_are_a_rewriter} [Mi è successa una cosa strana.]
             -> little_storylets
     
         + [Ho cambiato idea.]
@@ -51,7 +51,7 @@
     - (top)
     Hai bisogno dei miei consigli?#speaker:{mentor_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_hurry
     
-        + {about_ink_usage}[Mi ripeteresti cosa devo fare?]
+        + {you_are_a_rewriter}[Mi ripeteresti cosa devo fare?]
             -> to_do
         
         + [Ho una domanda su un luogo.]
@@ -177,15 +177,15 @@
 === to_do
 ~ temp mentorName = translator(mentor_ActualName)
 
-        {about_ink_usage:La prima cosa da fare è: conquistare la <b><i>fiducia</b></i> della persona che devi aiutare.}#speaker:{mentor_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
-        {about_ink_usage:Ci <b><i>parli</b></i>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.}
-        {questions: Fino a quando non è pronta per una <b><i>riscrittura</b></i>}
-        {questions: A quel punto inizi i tuoi <b><i>riscritture</b></i>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.}
-        {questions: Più inchiostro hai, più riscritture puoi fare.}
+        {you_are_a_rewriter:La prima cosa da fare è: conquistare la <b><i>fiducia</b></i> della persona che devi aiutare.}#speaker:{mentor_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
+        {you_are_a_rewriter:Ci <b><i>parli</b></i>, cerchi di capire di cosa ha bisogno e quali sono le risposte che le piacciono.}
+        {ink_and_rewriting: Fino a quando non è pronta per una <b><i>riscrittura</b></i>}
+        {ink_and_rewriting: A quel punto inizi i tuoi <b><i>riscritture</b></i>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.}
+        {ink_and_rewriting: Più inchiostro hai, più riscritture puoi fare.}
         {about_greenhouse: Per aumentare l'inchiostro puoi fare cose diverse. Come il giusto dono.}
         {about_kitchen: E se mangiate qualcosa assieme, magari riesci anche a capire se stai o meno conquistando la fiducia di quella persona.}
-        {questions: Così, a fine riscrittura, in base alle cose che avrai detto, la persona sceglierà il suo <b><i>nuovo nome</b></i>.}
-        {questions: E poi si ricomincia.}
+        {ink_and_rewriting: Così, a fine riscrittura, in base alle cose che avrai detto, la persona sceglierà il suo <b><i>nuovo nome</b></i>.}
+        {ink_and_rewriting: E poi si ricomincia.}
            -> helping_mentor
 
 
