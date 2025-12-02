@@ -84,8 +84,18 @@
             -> about_nest    
         
         //Invito a leggere la posta nuova    
-        - trainStopContents has FirstCharacterNotes && not first_character_notes && not first_char_new_mail && mentor_tutorialPauses == false:
-            -> first_char_new_mail
+        - trainStopContents has FirstCharacterNotes or trainStopContents has SecondCharacterNotes && not first_character_notes && not second_character_notes:
+            {
+                - trainStopContents has FirstCharacterNotes && not first_character_notes && not first_char_new_mail && mentor_tutorialPauses == false:
+                    -> first_char_new_mail
+
+                - trainStopContents has SecondCharacterNotes && not second_character_notes && not second_char_new_mail && mentor_tutorialPauses == false:
+                    -> second_char_new_mail
+
+                - else:
+                    -> personal_mentor_storylets    
+            }
+            
         
         //Info sulla non obbligatorietà dei minigames
         - player_accessiblePlaces has Library or player_accessiblePlaces has Kitchen and not about_not_mandatory_work && mentor_tutorialPauses == false:
