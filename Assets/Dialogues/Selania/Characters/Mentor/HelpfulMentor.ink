@@ -8,25 +8,43 @@
 ~ actual_speaker = Mentor
 
 {      
-    //Commenti per quando tutto è sbloccato.
-    - player_accessiblePlaces has Kitchen && player_accessiblePlaces has Nest && player_accessiblePlaces has Library:
-        {~ Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.|A volte ho questo timore: posso davvero essere una buona mentore, anche se sono poco istruita?|Sono contenta di aver aperto la biblioteca, ma quella poltrona mi invita troppo a riposare, quando invece ci sono mille cose da fare.}#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
+
+    - player_accessiblePlaces has Kitchen && player_accessiblePlaces has Library:
+        {shuffle once:
+            - La neve sui monti dietro la stazione a volte mi ricorda casa.
+            - I cespugli della foresta credo nascondano qualche animaletto, ma per ora non ne ho preso nessuno.
+            - All'inizio l'idea di avere anche una biblioteca da mantenere mi innervosiva, ma ora ne sono felice.
+            - Lo stagno sta cambiando molto dal tuo arrivo.
+            - La serra è così florida e viva ora.
+            - Dalla cucina arrivano sempre profumi insoliti. Ve la cavate tutt3 molto bene!
+        }#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
     
-    //Opinioni dopo la fine della terza storia
     - player_accessiblePlaces has Kitchen:
+        {shuffle once:
+            - Non sono mai stata una grande cuoca. Ma amo mangiare.
+            - Il cibo è un momento di unione anche con l'essere che l'ha generato.
+            - La luce che si riflette sull'acqua della cucina è appagante.
+            - Gli alberi della cucina sono diversi da quelli della foresta, sono più ampi e muschiosi.
+            }#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
+      
+    //- player_accessiblePlaces has Nest:
         {~ Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.|A volte ho questo timore: posso davvero essere una buona mentore, anche se sono poco istruita?|Sono contenta di aver aperto la biblioteca, ma quella poltrona mi invita troppo a riposare, quando invece ci sono mille cose da fare.}#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
-    
-    //Opinioni dopo la fine della seconda storia    
-    - player_accessiblePlaces has Nest:
-        {~ Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.|A volte ho questo timore: posso davvero essere una buona mentore, anche se sono poco istruita?|Sono contenta di aver aperto la biblioteca, ma quella poltrona mi invita troppo a riposare, quando invece ci sono mille cose da fare.}#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
-    
-    //Opinioni dopo la fine della prima storia      
+        
     - player_accessiblePlaces has Library:
-         {~ Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.|A volte ho questo timore: posso davvero essere una buona mentore, anche se sono poco istruita?|Sono contenta di aver aperto la biblioteca, ma quella poltrona mi invita troppo a riposare, quando invece ci sono mille cose da fare.}#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
+         {shuffle once:
+         - Da piccola amavo leggere, ma dove vivevo non c'erano biblioteche, e per molto tempo avevamo a malapena i soldi per mangiare.
+         - A volte ho questo timore: posso davvero essere una buona mentore, anche se sono poco istruita?
+         - Sono contenta di aver aperto la biblioteca, ma quella poltrona mi invita troppo a riposare, quando invece ci sono mille cose da fare.
+         }#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
     
     //Opinioni presenti da inizio gioco    
     - else:
-        {~ Sinceramente, non so che ne sarebbe di questo luogo senza tutta la manutenzione che devo fare.|Hai notato la bacheca alla stazione dei treni? Anche se è da molto che non arrivano lettere.|A volte vorrei che le cose in serra crescessero più velocemente, così da sapere subito se ho sbagliato qualcosa.|A ovest dello stagno c'è spesso un grande baccano, ma fiori e fieno sono troppo alti per poter vedere cosa ci sia da quelle parti.}#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
+        {shuffle once:
+        - Sinceramente, non so che ne sarebbe di questo luogo senza tutta la manutenzione che devo fare.
+        - Hai notato la bacheca alla stazione dei treni?
+        - A volte vorrei che le cose in serra crescessero più velocemente, così da sapere subito se ho sbagliato qualcosa.
+        - A ovest dello stagno c'è spesso un grande baccano, ma fiori e fieno sono troppo alti per poter vedere cosa ci sia da quelle parti.
+         }#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
 }
 
     Come posso esserti utile, {player_pronouns has him: amico mio|{player_pronouns has her: amica mia|amicə miə}}?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
@@ -73,16 +91,16 @@
 
     = myself
     ~ temp mentorName = translator(mentor_ActualName)
-    C'è qualcosa che posso fare per aiutarti?#speaker:{mentor_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
-        
-        + [Vorrei cambiare il mio nome.]
-                -> name_choice -> support
-        
-        + [Vorrei cambiare i miei pronomi.]
-                -> gender -> support
-        
-        + [Sono a posto così, grazie.]
-                -> helping_mentor
+        Di cosa senti il bisogno?#speaker:{mentor_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
+            
+            + [Vorrei cambiare il mio nome.]
+                    -> name_choice -> support
+            
+            + [Vorrei cambiare i miei pronomi.]
+                    -> gender -> support
+            
+            + [A dire il vero sono a posto così.]
+                    -> helping_mentor
  
  
 
@@ -100,7 +118,7 @@
 ~ temp mentorName = translator(mentor_ActualName)
 
 //Strutturare come wave sintetica?
-    Ecco i luoghi che puoi visitare in questo momento.#speaker:{mentor_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
+    Questi sono i luoghi che conosci.#speaker:{mentor_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
     Su quali vorresti avere informazioni?
 
 - (top)
@@ -108,6 +126,7 @@
     + [Sulla stazione.]
             Intendi il luogo dove passo ore a spalare neve?#speaker:{mentor_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_hurry
             La stazione, ad est della foresta, è il posto dove approdano le nuove persone.
+            {trainStopContents has FirstCharacterNotes or trainStopContents has SecondCharacterNotes: E dove arriva la cagnolina postina.}
             È anche il luogo attraverso cui potrai raggiungerci.
             O da cui andartene, quando vorrai.#speaker:{mentor_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_sorry
                 -> top
@@ -125,12 +144,16 @@
             La foresta è un po' il nostro posto di passaggio.#speaker:{mentor_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
             Non ho idea di chi abbia messo la panchina, sinceramente.
             E tenerla pulita tutti i giorni è una gran fatica.
-            E quella pianta, quella cosa che è nel mezzo, non ho ancora capito come farla rifiorire.
+            E quella pianta, quella cosa che è nel mezzo {firstChar_storyStatus == story_storyEnded or secondChar_storyStatus == story_storyEnded: non ho ancora capito come abbia iniziato a crescere.|non ho ancora capito come rimetterla in sesto.}
             E questo mi lascia molto frustrata.#speaker:{mentor_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_bored
             -> top
     
     + {pond}[Sullo stagno.]
-            Informazioni sullo stagno.#speaker:{mentor_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
+            Lo stagno è un posto umido.
+            E a modo suo rilassante.
+            Serve ad arrivare alla serra.
+            {player_accessiblePlaces has Kitchen: E ad accedere alla cucina.}
+            {pondContents has TheFrog: E poi c'è quella rana.}
             -> top    
             
     + {(player_accessiblePlaces has Library) or (player_accessiblePlaces has Kitchen) or (player_accessiblePlaces has Nest)}[Sono altri i luoghi di cui vorrei parlare.]
@@ -182,7 +205,7 @@
         {ink_and_rewriting: Fino a quando non è pronta per una <b><i>riscrittura</b></i>}
         {ink_and_rewriting: A quel punto inizi i tuoi <b><i>riscritture</b></i>: riprendi eventi della sua storia e la aiuti a guardarli sotto una luce diversa.}
         {ink_and_rewriting: Più inchiostro hai, più riscritture puoi fare.}
-        {about_greenhouse: Per aumentare l'inchiostro puoi fare cose diverse. Come il giusto dono.}
+        {about_greenhouse: Per aumentare l'inchiostro puoi fare cose diverse. Come dare il giusto dono. E i doni migliori crescono nella serra.}
         {about_kitchen: E se mangiate qualcosa assieme, magari riesci anche a capire se stai o meno conquistando la fiducia di quella persona.}
         {ink_and_rewriting: Così, a fine riscrittura, in base alle cose che avrai detto, la persona sceglierà il suo <b><i>nuovo nome</b></i>.}
         {ink_and_rewriting: E poi si ricomincia.}
@@ -198,6 +221,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
     
     Vorrei raccontarti una cosa strana.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+
         * (voices){growing_check}[C'è una voce che mi racconta cose.]
             Voce?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
             Sì.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
@@ -231,12 +255,27 @@
                 -> helping_mentor
         
         * (talkingFrog) {pondContents has TheFrog} [C'è una rana blu parlante.]
-            Una rana. E dove?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Other)} #portrait:mentore_bored
-            {are_entities_together_in(Mentor, PG, Pond):Qui nello stagno.|Allo stagno.}#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-            Da che sono qui non ho mai visto rane parlanti, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
-            E nemmeno rane e basta.
-            Forse è il caso che ti riposi un poco, davvero.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
-            Lascia fare a me il resto.
+            {
+                - are_entities_together_in(Mentor, PG, Pond):
+                    Ho notato.
+                    {frog_and_mentor_chit_chat: E non mi ispira molta fiducia.}
+                    Quando me ne ha parlato {charNameTwo}, ho pensato fosse una bugia.
+                    {
+                        - are_two_entities_together(SecondCharacter, PG):
+                            Ehi!
+                    }
+                    Invece me ne sono ricreduta.
+                
+                - else:
+                    {
+                        - frog_and_mentor_chit_chat: 
+                            Ci ho parlato prima. E non mi ispira molta fiducia.
+                        - else: 
+                            Ho notato.    
+                    }
+                    Molte cose qui stanno cambiando dal tuo arrivo.
+                    Immagino che una rana parlante non sia la cosa più assurda che potesse capitarci, vero?  
+            }
                 ~ player_somethingStrange --
             -> helping_mentor
         

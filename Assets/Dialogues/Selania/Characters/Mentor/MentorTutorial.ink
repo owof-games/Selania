@@ -12,6 +12,10 @@
     
         Oh, quanto ho sperato nel tuo arrivo!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         Scusa, ma sono così felice che tu sia qui.
+        {
+            - that_little_liar_storylet:
+                Prima col trambusto del bambino non mi sono comportata a modo.
+        }
         Immagino tu abbia un milione di domande, vero?
         
             {
