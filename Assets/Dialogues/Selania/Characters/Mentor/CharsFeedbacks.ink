@@ -5,47 +5,92 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-    
-        Hai concluso la tua prima riscrittura, {player_name}, grande!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
+
+
+        Hai concluso la riscrittura di {charNameOne}, {player_name}!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
         E quindi: è tempo di feedback!
             {
-                - are_two_entities_together(FirstCharacter, PG): Mmm, sembra l'ora della pagella. Me ne vado.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Other)} #portrait:chitarra_annoyed
+                - are_two_entities_together(FirstCharacter, PG):
+                    Ehm, non sono una grande fan delle pagelle.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Other)} #portrait:chitarra_annoyed
                         ~ change_entity_place(FirstCharacter)
             }
             {
-                - are_two_entities_together(SecondCharacter, PG): Non mi piacciono i voti. Ciao ciao!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+                - are_two_entities_together(SecondCharacter, PG):
+                    Ma siamo a scuola?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+                    Che noooooia!
                         ~ change_entity_place(SecondCharacter)
-            }            
+            }
         
+        Partiamo con un promemoria: non ci sono riscritture buone o cattive, e nomi sbagliati.
+        Ma: il mio lavoro come {mentorName} è quello di assicurarmi che tu possa essere la versione migliore di te.
+        E quindi.
+        {
+            - firstChar_giftedObject == ():
+                Ho notato che hai deciso di non donare nulla a {charNameOne}. Spero che questo non ti abbia complicato il lavoro.
+
+            - firstChar_favouritesGifts has firstChar_giftedObject:
+                Hai donato qualcosa che {charNameOne} ha adorato. Sono così orgogliosa di te!
+
+            - firstChar_goodGifts has firstChar_giftedObject:
+                Hai donato qualcosa che {charNameOne} ha apprezzato molto.
+                Poteva esserci qualcosa di meglio?
+                Sicuramente sì.
+                Era quello l'obiettivo?
+                No, se sei {player_pronouns has him:soddisfatto|{player_pronouns has her:soddisfatta|soddisfattə}} di com'è andata la riscrittura.
+
+            - firstChar_giftedObject != () && (firstChar_favouritesGifts hasnt firstChar_giftedObject) && (firstChar_goodGifts hasnt firstChar_giftedObject):
+                Hai donato qualcosa che {charNameOne} non desiderava.
+                Questo non ti ha permesso di ottenere dell'inchiostro, ma dai propri errori si impara, giusto?
+
+        }
+        {
+            - firstChar_relationshipStatus == 0:
+                La vostra relazione non è proprio andata benissimo.
+                Ecco: forse qui è dove mi sento più in colpa.
+                Perché l'alunno alla fine rispecchia sempre le capacità dell'insegnante.
+
+            - firstChar_relationshipStatus == 1:
+                Hai sviluppato con {charNameOne} una buona fiducia.
+                {not ending_cooking_with_first_char: Forse cucinare con lei avrebbe aperto qualche altra occasione di chiarimento? Chi lo sa.}
+                Hai fatto un buon lavoro.
+
+            - firstChar_relationshipStatus == 2:
+                La vostra relazione si è rivelata ottima.
+                Credo proprio che tu abbia fatto sentire {charNameOne} ascoltata e capita.
+                
+        }
+
+        Il nome che ha scelto è stato {charNameOne}.    
+
         {
             - firstChar_ActualName ==  Triangolo:
-                Hai aiutato {charNameOne} a riscoprire il suo lato più pratico, razionale.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
-                Non quello di cui aveva bisogno, temo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
-                Ma per essere la tua prima riscrittura hai dato davvero il massimo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
-                Il resto, è colpa dei miei consigli imperfetti.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sorry
-                Spero mi concederai il tempo di migliorarmi.
+                E hai aiutato {charNameOne} a trovare il bello nel quotidiano.
+                Qualcosa che personalmente apprezzo molto, ma che spero possa apprezzare anche lei.
+                {charNameOne} forse ora è capace di vedere quanta bellezza e quante soddisfazioni ha nella vita.
+                Grazie a te.
                 
             - firstChar_ActualName ==  RagazzaOrchestra:
-                {charNameOne} ora sa di possedere un'idole più attiva, e anche oppositiva se serve.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
-                Forse avrei potuto guidarti meglio, non sono sicura che sia la natura più vicina al suo cuore.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sorry
-                Ma faremo meglio la prossima volta.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
+                E ora {charNameOne} è pronta per cambiare città, provare qualcosa di nuovo.
+                Con una persona a cui vuole bene.
+                Ammetto che un po' mi ha colpita questa scelta, ma perché {charNameOne} ha già vicine persone che le vogliono molto bene.
+                Ma immagino che a volte andarsene possa aiutare.
+                Anche se si dice che i problemi che abbiamo ci seguono quando ce ne andiamo, vero?
                 
             - firstChar_ActualName ==  FlautoDolce:
-                Grazie al tuo lavoro, {charNameOne} ha scoperto che gli affetti sono la cosa per lei fondamentale.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
-                Forse qualcosa che sapeva già.
-                Forse ora sta meglio, giusto?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
-                Questo è il massimo che potevamo fare per lei, vero?
+                E dopo il percorso fatto con te, {charNameOne} ha deciso di fare un passo enorme.
+                Mettere al centro della propria vita le altre persone, non è cosa da tutt3.
+                E la propria passione.
                 
             - firstChar_ActualName == Ocarina:
-                {charNameOne} ha trovato nella giocosità uno sblocco, ed è pronta ad abbandonarsi alla sua creatività.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
-                E chi sono io per giudicare cosa fa star bene un'altra persona?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sorry
-                E indubbiamente sembra molto più felice di quando è arrivata.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
+                L'idea di tornare dalla sua famiglia di origine è qualcosa che mi ha fatto tremare il mio cuoricino.
+                Un gesto bello.
+                Che risponde al bisogno di ricominciare da un luogo che si conosce, anche per aiutare le altre persone.
+                E la parte più giocosa di {charNameOne} e infantile, ha trovato il suo scopo nel riabbracciare le proprie radici.
                 
             - firstChar_ActualName == Violino:
-                {charNameOne} aveva bisogno di riconoscere che per lei la vita ha senso solo con uno scopo più grande, e grazie a te, ce l'ha fatta.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
-                Abbiamo fatto un grande lavoro assieme, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
-                Non vedo l'ora di aiutare la prossima persona con te!
-                
+                E {charNameOne} ha scelto l'amore.
+                L'amore è uno strumento molto potente.
+                Spero possa trovare la felicità di cui ha bisogno.  
         }
         
         
@@ -67,39 +112,85 @@
     ~ temp mentorName = translator(mentor_ActualName)   
     
    Hai finito il percorso con {charNameTwo}, {player_name}!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
-   Ed entrambi mi avete stupita: non pensavo davvero che un bambino avrebbe avuto bisogno di questo luogo.
+   Ed entramb3 mi avete stupita: non pensavo davvero che un bambino avrebbe avuto bisogno di questo luogo.
+   E ne avrebbe tratto così tanto giovamento.
         {
-        - are_two_entities_together(SecondCharacter, PG): Devi imparare tante cose sui bambini, tu. Vado a farmi due passi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-                ~ change_entity_place(SecondCharacter)
-            Mi mancherà. Buffo, vero?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
-        
-        
+            - are_two_entities_together(SecondCharacter, PG):
+                Il mio nome è {charNameTwo}, e sono sempre felice di stupirvi!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+                Mi mancherai bimbetto, mi mancherai.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
         }
-    Eccoti il mio modesto pensiero. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
+
+    Ed è arrivato il momento di dirti due cosine su come sono andate le cose.
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                    Credo sia giusto lasciarvi in santa pace.
+                        ~ change_entity_place(FirstCharacter)
+            }
+            {
+                - are_two_entities_together(SecondCharacter, PG):
+                    Mi sà che vado a salutare il pipistrello prima di partire!
+                        ~ change_entity_place(SecondCharacter)
+            }
+            
         {
-            - are_two_entities_together(FirstCharacter, PG):Ecco che parte coi voti. E io volo via.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Other)} #portrait:chitarra_annoyed
-                    ~ change_entity_place(FirstCharacter)
-        }    
-    
+            - secondChar_giftedObject == ():
+                Hai scelto di non offrire doni a {charNameTwo}. Spero sia stata una scelta deliberata, e non la paura di sbagliare.
+
+            - secondChar_favouritesGifts has secondChar_giftedObject:
+                Hai donato qualcosa che {charNameTwo} l'ha fatto molto molto felice.
+                E questo è indice di grande ascolto e comprensione da parte tua.
+
+            - secondChar_goodGifts has secondChar_giftedObject:
+                Hai donato qualcosa che {charNameTwo} ha davvero apprezzato.
+                Poteva andare meglio, ma sono sicura che questo non ti abbia complicato la riscrittura.
+
+            - secondChar_giftedObject != () && (secondChar_favouritesGifts hasnt secondChar_giftedObject) && (secondChar_goodGifts hasnt secondChar_giftedObject):
+                Hai donato a {charNameTwo} la sua cosa "schiferita", come direbbe mia figlia.
+                Ehm, scusa.
+                Comunque un dono poco apprezzato non ti ha permesso di ottenere dell'inchiostro.
+
+        }
+        {
+            - secondChar_relationshipStatus == 0:
+                Non avete sviluppato una grande relazione.
+                Credo sia inevitabile, soprattutto con un bambino.
+                Sono molto più complessi di un adulto.
+                Avrei dovuto darti degli strumenti migliori.
+
+            - secondChar_relationshipStatus == 1:
+                {charNameTwo} si è fidato di te.
+                {not ending_cooking_with_first_char: Non so se l'hai tenuto lontano dalla cucina per non fare disastri, ma magari avrebbe apprezzato.}
+                Hai fatto un buon lavoro. Non perfetto, ma buono.
+
+            - secondChar_relationshipStatus == 2:
+                Hai creato con lui la migliore relazione pensabile.
+                Spero tu possa provare orgoglio, {player_name}!
+                
+        }
+
+    Il nostro piccoletto ha scelto il nome di {charNameTwo}. 
+
     {
             - secondChar_ActualName == Grizzly:
-                A quanto pare il nostro bambino ha abbracciato il suo lato rabbioso.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
+                Ha deciso di abbracciare il suo lato rabbioso.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
                 E invece di combatterlo, l'ha fatto proprio.
                 Personalmente, la rabbia non mi convince mai molto.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
                 Porta solo disordine e dolore.
-                Ma immagino tu sappia quello che stai facendo, no?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
+                Ma quello che non funziona per una persona, può essere la soluzione per un'altra, vero?
     
             - secondChar_ActualName == Lupo:
                 La famiglia è qualcosa di importante, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
                 E sono contenta che {charNameTwo} abbia scoperto in sé la voglia di prendersene cura.
-                E magari un giorno la sua nonna e suo fratello torneranno sotto il tetto dei genitori.
+                Spero solo che non si sobbarchi di un carico che non è adatto a un bambino.
+                Magari un giorno la sua nonna e suo fratello torneranno sotto il tetto dei genitori.
                 Per me sarebbe un finale davvero felice.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
 
             - secondChar_ActualName == Delfino:
                 Sono perplessa: non pensavo l'avresti spinto ad abbracciare il suo lato più infantile.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
                 Giocoso.
                 So che il tuo lavoro è fare uscire queste persone dal blocco.
-                Ma l'unica soluzione era quella di renderlo un giullare?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
+                Mi chiedo solo se renderlo un giullare potesse essere l'unica soluzione.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
+                Un giullare bugiardo.
                 
             - secondChar_ActualName == Capibara:
                 A volte forse devo solo dirmi: non tutto il mondo può essere come vorrei.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
@@ -110,7 +201,7 @@
                 Spero.
             
             - secondChar_ActualName == Corvo:
-                Non credo avresti potuto ottenere un esito migliore.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
+                In cuor mio, non credo avresti potuto ottenere un esito migliore.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
                 La sua curiosità, la sua intelligenza indirizzate verso qualcosa di concreto, utile.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
                 Ce lo vedo a studiare nuovi modi per curare le persone.
                 Per ridurre la fame nel mondo.
