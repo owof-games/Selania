@@ -6,12 +6,10 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         
-        Quella pianta mezza morta.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
-        Come ha fatto a riprendersi?
-        Non pensavo che questo luogo mi avrebbe stupita.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
+        Non mi aspettavo che quella pianta mezza morta si sarebbe ripresa.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
         Da quando sei qui, {player_name}, sono cambiate molte cose.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
         Spero solo sia un segno positivo.
-        Io provo a concimarla comunque, male non le farà.
+        Dopo provo a concimarla comunque, male non le farà.
         <i>Noi preferiamo crescere senza concime. Chiederemo alle formiche di forare il sacco.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait: {witch_state()}
         
             -> main
@@ -46,7 +44,6 @@
         
         }
     
-
         Questo posto non è adatto a dell3 bambin3.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sorry
         Non ce l'ho con {charNameTwo}, ma i pericoli qui sono tanti: i binari, lo stagno, la serra pericolante, e le bestie della foresta.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sorry
         E potrei continuare per ore.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
@@ -84,26 +81,24 @@
                 - (nameSecond)
                 -> main
     
-    
     === addressing_violence
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp charNameTwo = translator(secondChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
-    //Creare uno storylet che si attiva con mentore dopo knowing_second_character.two (tenendo conto che potrebbe esserci già stato o meno uno scambio su questa cosa a seconda che riccio e mentore siano stati vicini dopo "not_talk", e che questa condizione è tracciata da riccioMentoreViciniColpo) e che ci permetta di interagire con lei in merito allo strattone che ha dato a Riccio
-    
+
     {
         - riccioMentoreViciniColpo:
-        Dopo la discussione di prima, ho riparlato con {charNameTwo}, <>
+            Dopo la discussione di prima, ho riparlato con {charNameTwo}, <>#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         
         - else:
-        Ho parlato con {charNameTwo}, <>
+            Ho parlato con {charNameTwo}, <>#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         }
-        e dice che gli hai dato uno strattone, {mentorName}. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
-        Che ti sei comportata da prepotente.
+            e dice che gli hai dato uno strattone, {mentorName}. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
+            Che ti sei comportata da prepotente.
         {
             - are_two_entities_together(PG, SecondCharacter):
-            E a {charNameTwo} non va di venir picchiato di nuovo, per cui se ne va.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
-                    ~ change_entity_place(SecondCharacter)
+                E a {charNameTwo} non va di venir picchiato di nuovo, per cui se ne va.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#portrait:riccio_melanchonic
+                        ~ change_entity_place(SecondCharacter)
         }
 
     Non sono stata prepotente!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_bored
@@ -126,7 +121,7 @@
     No.
     Non me la sento.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
         
-        + [Che provi piacere?]
+        + [Che razionalmente sai che è sbagliato?]
                 -> color_variation_management(Mentor, blueC)->
             Mi sento potente.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Forte.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
@@ -138,10 +133,12 @@
                         Vedere il problema è il passo più grande, {mentorName}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 }
 
-        + [Che non riesci comunque a trattenerti?]
+        + [Che è bello perdere il controllo, vero?]
                 -> color_variation_management(Mentor, redC)->
             Peggio.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_sorry
-            Faccio volontariamente il salto dal "non alzare le mani" a "dai uno schiaffo".
+            Il controllo non si perde, {player_name}.
+            Si decide sempre se fare o meno il salto da "non alzare le mani" a "dai uno schiaffo"
+            E io quel salto l'ho fatto volontariamente.
             Sento il bisogno di.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             Non so.
             Di farmi rispettare.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
@@ -157,7 +154,7 @@
             Lo fai quando non comprendi le tue emozioni.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             E quando non provi empatia per le altre persone.
             No.
-            Arrabbiarsi non è umano.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+            Arrabbiarsi magari è umano, ma non è degno del mio ruolo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 {
                     - are_two_entities_together(PG, FirstCharacter):
                         E qui è il momento in cui qualcunə dovrebbe dirti di andare in terapia.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
@@ -184,53 +181,106 @@
                         Ma non toglie il problema di ciò che hai fatto.
                 }
         -
-        Comunque c'è una sola cosa sensata da fare.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Chiedere scusa a {charNameTwo}.
-        E vedere se avrà voglia di perdonarmi.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
-        Grazie per l'ascolto, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        Sono sicura che diventerai {player_pronouns has him:un ottimo riscrittore|{player_pronouns has her:un'ottima riscrittora| unə ottimə riscrittorə}}.
-            
-            ~ change_entity_place(Mentor)
-            ~ mentor_pauseTalking = mentor_pauseDuration
-            ~ mentor_tutorialPauses = true
-            -> main
+    Comunque c'è una sola cosa sensata da fare.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+    Chiedere scusa a {charNameTwo}.
+    E vedere se avrà voglia di perdonarmi.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
+    Grazie per l'ascolto, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+    Sono sicura che diventerai {player_pronouns has him:un ottimo riscrittore|{player_pronouns has her:un'ottima riscrittora| unə ottimə riscrittorə}}.
+        
+        ~ change_entity_place(Mentor)
+        ~ mentor_pauseTalking = mentor_pauseDuration
+        ~ mentor_tutorialPauses = true
+        -> main
     
-
-
 === a_story_of_transformation
-Qui Mentore ci dice che ha letto <b>Il cancello</b> e ci chiede cosa ne pensiamo.
-{
-                - are_two_entities_together(FirstCharacter, PG): Commento Chitarra. #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-}
-{
-                - are_two_entities_together(SecondCharacter, PG): Commentto Riccio!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+
+    Sono un po' pensierosa {player_name}.
+    Prima mi sono concessa una pausa in biblioteca.
+    Una pausa piccolissima.
+    E ho letto questo racconto, si chiama <b>Il cancello</b>.
+    E la protagonista...
+    Non so se ti capita mai di leggere una storia che non è la tua, eppure ti accende ricordi, ti accende modi diversi di guardare i tuoi ricordi.
+    Leggo poco perché a volte le storie mi entrano nella testa e non riesco a star bene fino a quando non sono concluse.
+    E Liliana.
+    Non so.
+    Liliana mi ricorda la persona che sono stata.
+    La persona che poteva anche arrabbiarsi.
+    E la sua stanchezza.
+    Ti senti mai così {player_pronouns has him:stanco|{player_pronouns has her:stanca|stancə}} che vorresti sparire per un po' dal mondo, e basta?
+
+        + [Non si può sparire, per cui è un pensiero abbastanza inutile.]
+                -> color_variation_management(Mentor, blueC)->
+            Un pensiero non è inutile.
+            Un pensiero è solo un pensiero.
+            E a volte ti fa stare bene anche quando non può essere vero.
+                {
+                    - are_two_entities_together(FirstCharacter, PG):
+                        Potrei scrivere una canzone su questa cosa.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                }
+    
+        + [Ma Liliana è stanca dell'ingiustizia, non del mondo. E ha reagito.]
+                -> color_variation_management(Mentor, redC)->
+            Ma una magari a volte ha voglia di non reagire e basta.
+            E di agire.
+            No?
+            Di fare quello che vuole, e non solo rispondere a quello che ha attorno.
+     
+        + [Vorresti sparire dal mondo, o da te?]
+                -> color_variation_management(Mentor, purpleC)->
+            Cambierebbe poi così tanto?
+            No, è una cosa stupida da dire.
+            Ed è stato stupido dire di voler sparire.
+            Lascia perdere.
+    
+        + [No, però mi capita di fare dei grandiosi pisolini.]
+                -> color_variation_management(Mentor, yellowC)->
+            Pensavo a qualcosa di più impegnativo.
+            Qualcosa che non si risolve dormendo.
+            Ma comunque tempo per dormire non l'ho mai.
+            {
+                - are_two_entities_together(SecondCharacter, PG): 
+                    Lo dico sempre: i pisolini sono no-io-si!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                     
             } 
-        
-        + [Scelta blu.]
-             -> color_variation_management(Mentor, blueC)->
-    
-        + [Scelta rossa.]
-            -> color_variation_management(Mentor, redC)->
-     
-        + [Scelta viola.]
-                -> color_variation_management(Mentor, purpleC)->
-    
-        + [Scelta gialla.]
-            -> color_variation_management(Mentor, yellowC)->
             
-        + [Scelta verde.]
-            -> color_variation_management(Mentor, greenC)->
+        + [A volte vorrei solo diventare invisibile.]
+                -> color_variation_management(Mentor, greenC)->
+            Esatto, {player_name}.
+            So che è una scelta egoista.
+            Perché abbiamo una responsabilità verso il mondo.
+            Ma questo mondo a volte sa essere davvero <b>troppo</b>.
         -    
-        
+    Comunque alla fine Liliana con la sua rabbia trova un modo per cambiare.
+    E quando riesce a vedere la sua casa come uno spazio brillante, mi ha fatto pensare: questa è l'essenza stessa della riscrittura.
         ~ firstChar_pauseTalking = firstChar_pauseDuration
         -> main   
 
 
-
-
 === dog_mentor
-Commento sul cane
+    {
+        - trainStopContents has PG:
+            {
+                - trainStopContents has DoggoNoNotes:
+                    Ma quanto sei carina cagnolina!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_hurry
+                    Ma quanto!
+                    Andiamo a fare due passi?
+                    Giochiamo con il bastoncino?
+                    Woof!#speaker:Doggo #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:doggo
+                
+                - else:
+                    Ehi {player_name}!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+                    Hai visto quella cagnolina prima?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_hurry
+                    Era lì sotto il tabellone.
+                    Con un musino adorabile.
+                    Ho provato a giocarci, ma si è allontanata.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_sad
+            }
+        - else:
+            Ehi {player_name}!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_neutral
+            Hai visto quella cagnolina prima?#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_hurry
+            Era lì sotto il tabellone della stazione.
+            Con un musino adorabile.
+            Ho provato a giocarci, ma si è allontanata.#speaker:{fifthChar_tag()}#inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_sad
+    }
 
 -> main
 
