@@ -27,7 +27,7 @@
     {
         - you_are_a_rewriter:
             <b>Sulla riscrittura: appunti apocrifi del collettivo P.K.</b> <>
-            Il processo di riscrittura si basa principalmente su una cosa: la <b><i>fiducia</b></i>. E qui l'attitudine dellə Riscrittorə fa tutto. Se U.O.J. è stata famosa per assecondare al massimo l'interlocutorə, A.S. viene ancora ricordatə per la sua natura prettamente oppositiva, mentre gli schemi logici di B.M., pieni di formule e statistiche, sono quelli che ci hanno permesso di arrivare a questo volume. Molt3 Riscrittor3 portano avanti la visione di chi ha fatto loro da mentore, ma l'indipendenza di pensiero è sempre un'ottima qualità per unə Riscrittorə. 
+            Il processo di riscrittura si basa principalmente su una cosa: la <b><i>fiducia</b></i>. E qui l'attitudine dellə Riscrittorə fa tutto. Se U.O.J. è stata famosa per assecondare al massimo l'interlocutorə, A.S. viene ancora ricordatə per la sua natura prettamente oppositiva, mentre gli schemi logici di B.M., pieni di formule e statistiche, sono quelli che ci hanno permesso di arrivare a questo volume. Molt3 Riscrittor3 si affidano a quello che ritengono sia buonsenso, ma l'indipendenza di pensiero è sempre un'ottima qualità per unə Riscrittorə. 
     }
     {
 

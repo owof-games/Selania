@@ -218,14 +218,94 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-Rana e mentore sono assieme e per la prima volta forse si inizia anche a capire che Mentore non sa proprio tutto tutto del luogo, o che forse non c'è mai stata una mentore.
-    -> main
+    M: Però non ti ho mai visto in giro.
+    R: Però sono sempre stato cra!
+    M: Ma non ti ho mai mai visto in giro.
+    M: E ogni giorno vengo a sistemare il sentiero e pulire la serra.
+    R: Forse allora non sei venuta ogni giorno.
+    R: O forse non è che hai proprio proprio proprio tutto sotto il tuo controllo.
+    M: Impossibile.
+    R: Eppure eccoci cra, con io che so dove sono stato, e tu mi dici che non ricordo bene,
+    M: Non ho detto che non ricordi bene.
+    R: Ma dici che hai tutto sotto il tuo controllo e che non mi hai visto, quindi o non ricordo bene, o mento.
+    M: Non mi permetterei mai di dirlo.
+    R: Infatti non l'hai detto, l'hai implicato.
+    M: Non mi piace il tuo tono.
+    R: Ma non cambia il fatto che mi stai dando o del bugiardo o dello smemorato.
+    M: Io non l'ho detto!
+    R: Vuoi ricominciare da capo?
+    M: AAAAAAAARG!
+    M: SEI INSOPPORTABILE!
+        ~ change_entity_place(Mentor)
+    R: E comunque non ricordo l'esistenza di nessun mentore, mai.
+        -> main
 
 
 === the_witch_and_the_mentor
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-Mentore ci chiede cosa pensa l'albero di lei.
+
+    Quindi puoi parlare con, con questa pianta?
+    Perché mi piacerebbe.
+    Oh, è una cosa vanitosa.
+    Ma mi piacerebbe sapere cosa ne pensa di me.
+    Del mio lavoro.
+    Se sto facendo un buon lavoro.
+    Visto che vedono e sentono tutto.
+
+    S: Crediamo che {mentorName} stia facendo un buon lavoro.
+    S: Così come l'acqua che si raccoglie tra le mani per dissetarci.
+    S: Ma così come l'acqua non può essere incendio, così {mentorName} non può essere qualcosa che non è.
+    S: O portare nomi che non sa.
+
+        + [Metà delle cose che la voce dice non hanno senso.]
+                -> color_variation_management(Mentor, blueC)->
+            S: {player_name} non vede, e quindi decide che qualcosa non esiste.
+            S: Ma quella cosa esiste anche se {player_name} non vede.
+            Uh, peccato.
+            Ma ci sta: questo luogo è così insolito, immagino sia inevitabile non capirlo fino in fondo.
+            
+        + [Dice che stai facendo un buon lavoro.]
+                -> color_variation_management(Mentor, greenC)->
+            Oh, ma sicuramente esagera.
+            Prendi prima: ho scoperto che per via della mia incuria sta crescendo del muschio sotto la panchina.
+            Però.
+            Ringrazia la voce da parte mia.
+            S: Dire una mezza verità porta su una mezza strada.
+        
+        + [Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?]
+                -> color_variation_management(Mentor, yellowC)->
+            Non è che ho lasciato qualcosa di acceso in cucina?
+            No dai, si vedrebbe il fumo da qui, sicuro.
+            Magari è qualcosa di simbolico.
+            Spero di non aver distrutto nulla.
+        
+        + [Non è più importante il tuo di giudizio sul tuo lavoro, {mentorName}?]
+                -> color_variation_management(Mentor, purpleC)->
+            Credo di sì.
+            Ma uno sguardo esterno ci può aiutare, immagino.
+            Oh, non lo so.
+            Sì.
+            Credo di star facendo un buon lavoro.
+
+        + [Ha detto tante cose ma la risposta è: no.]
+                -> color_variation_management(Mentor, redC)->
+            S: La frusta che cade senza motivo non porta alcun insegnamento.
+            Oh.
+            Forse potrei chiedere scusa in qualche modo a...
+            Ma a chi?
+            Come?
+            Ho deciso: pulisco il tronco.
+            Potrebbe apprezzare, immagino.
+            S: Noi non abbiamo bisogno di pulizia, il nostro sporco è nido per funghi e insetti.    
+        -
+    Immagino sia faticoso, avere una voce in testa, così.
+    O magari ti fa sentire meno {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}.
+    Ho qualcosa su cui riflettere, immagino.
+       
+        ~ firstChar_pauseTalking = firstChar_pauseDuration
+        ~ mentor_pauseTalking = mentor_pauseDuration
+
 
 -> main
