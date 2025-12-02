@@ -286,70 +286,85 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-
-                L'inchiostro ti aiuta concretamente nel riscrivere assieme la loro storia.
-        Ogni persona ha il suo inchiostro, e aumenta man mano che aumenta la fiducia che prova nei tuoi confronti.
-        Quindi: più fiducia uguale più inchiostro uguale più occasioni di riscrittura uguale maggiori occasioni di successo!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-
-
-            {player_name}, ci siamo: sto per darti le ultime istruzioni per renderti {player_pronouns has him:un perfetto Riscrittore|{player_pronouns has her:una perfetta Riscrittora|unə perfettə Riscrittorə}}!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-            Più sei in confidenza con la persona più avrai inchiostro a disposizione per aiutarla a riscrivere la sua storia.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-            Tra mentori definiamo le azioni che l'inchiostro permette di compiere <b><i>riscritture</b></i>.
-            Un po' come quando riscriviamo un testo.
-            Come dicevamo prima: più inchiostro significa più possibilità di aiutare quella persona a vedersi in un modo nuovo.
-            A prescindere dalla quantità di inchiostro, ogni Riscrittorə ha in sé il dono dell'<b><i>epilogo</b></i>.
-            L'<b><i>epilogo</b></i> è una dichiarazione finale dellə Riscrittorə che permette alla persona di mettere un punto sul presente, e iniziare a guardare al futuro in modo diverso.
-            Così persona e Riscrittorə raggiungeranno il loro obiettivo: un nuovo nome, simbolo di un nuovo inizio.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-            Per cui: anche se non dovessi accumulare inchiostro, potrai comunque provare ad aiutare la persona, usando il tuo potere dell'epilogo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                        {
-                - are_two_entities_together(FirstCharacter, PG): Commento Chitarra!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed 
+        {player_name}!
+        Credo sia giunto il momento di spiegarti le ultime cose importanti per il tuo lavoro di {player_pronouns has him:riscrittore|{player_pronouns has her:riscrittora|riscrittorə}}.
+                {
+                    - are_two_entities_together(SecondCharacter, PG):
+                        Uffi. Sembra di stare a scuola.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                     
+                } 
+        Prima ho fatto cenno all'inchiostro.
+        Arriverà un momento nel tuo rapporto con chi devi aiutare, in cui la persona sarà disponibile a riscrivere con te il suo passato.
+        Tocca a te farle la proposta.
+        Spesso a quel punto la persona avrà preso maggiore consapevolezza di sé, e ti confesserà come si legge, cosa la blocca qui.
+        E a quel punto tu potrai proporre una riscrittura.
+        O meglio: <b><i>delle riscritture</b></i>.
+        Perché ogni goccia di inchiostro che la vostra relazione avrà generato ti permetterà di proporre una riscrittura di un aspetto della vita di quella persona.
+        E quindi: più fiducia uguale più inchiostro uguale più riscritture uguale maggiori occasioni di successo!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+        Ma a prescindere dalla quantità di inchiostro, ogni Riscrittorə ha in sé un terzo strumento.
+        Lo strumento dell'<b><i>epilogo</b></i>.
+        L'<b><i>epilogo</b></i> è una dichiarazione finale dellə Riscrittorə che permette alla persona di mettere un punto sul presente, e iniziare a guardare al futuro in modo diverso.
+        Così persona e Riscrittorə raggiungeranno il loro obiettivo: un nuovo nome, simbolo di un nuovo inizio.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                    Ma a me sembra più una rilettura che non una riscrittura, no?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                    Ma quando rileggi non ci sono effetti concreti sul reale.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                    Mentre quando riscrivi, sì.
+                    Definisci "reale", o "concreti", {mentorName}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                    Non ora, ma dopo possiamo farci una chiacchierata assieme!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+
             } 
-            
+        Per cui {player_name}: anche se non dovessi accumulare inchiostro, potrai comunque provare ad aiutare la persona, usando il tuo potere dell'epilogo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral    
+                
                 + [Hai un consiglio da darmi Mentore?]
-                    -> color_variation_management(Mentor, greenC)->
+                        -> color_variation_management(Mentor, greenC)->
                     Ascolta a cuore aperto.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     Segui i miei consigli.
                     E non chiedere all'altra persona di diventare qualcosa che non è.
                         
-                        
                 + [Ma non posso dirle: chiamati così e cosà, addio!?]
-                    -> color_variation_management(Mentor, redC)->
+                        -> color_variation_management(Mentor, redC)->
                     Un nuovo nome è una nuova esperienza.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     E l'esperienza viene dal percorso.
                     Se non c'è percorso, non c'è cambiamento.
+                    E poi sta alla persona decidere il suo nome.
                         
-                
                 + [{charNameOne} non è una persona razionale. Può farcela?]
-                    -> color_variation_management(Mentor, blueC)->
-                    {player_name}, capisco la tua perplessità, ma con la giusta guida, ce la può fare.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                    E assieme noi non possiamo di certo sbagliare!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                        -> color_variation_management(Mentor, blueC)->
+                    {player_name}, capisco la tua perplessità, ma con la giusta guida, ogni strada è percorribile.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                    E noi due assieme non possiamo di certo sbagliare!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                        {
+                            - are_two_entities_together(FirstCharacter, PG):
+                                E {charNameOne} è razionale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                                -> color_variation_management(FirstCharacter, blueC)->
+                                A modo suo.     
+                        }
                         
                         
                 + [Gli scoiattoli non hanno bisogno di riscriverla, invece?]
-                    -> color_variation_management(Mentor, yellowC)->
+                        -> color_variation_management(Mentor, yellowC)->
                     {player_name}, apprezzo la tua creatività, ma mantieni l'attenzione sull'obiettivo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     E gli scoiattoli non si fanno queste domande.
                     Gli scoiattoli <i>sono</i>, e basta.
-                        
+                        {
+                            - are_two_entities_together(SecondCharacter, PG):
+                                Gli scoiattoli si fanno tantissime domande in realtà!
+                                E comunicano con la coda!
+                                    -> color_variation_management(SecondCharacter, yellowC)->
+                                E con tantissimi suoni.   
+                        }
                         
                 + [Non dovrei essere io a decidere il mio obiettivo?]
-                    -> color_variation_management(Mentor, purpleC)->
+                        -> color_variation_management(Mentor, purpleC)->
                     Il tuo obiettivo <i>qui</i>, perdonami.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                    Non avendo altri luoghi in cui andare, mi dimentico che possono esserci sono altre vite, altri obiettivi da raggiungere.
-                        
+                    Non avendo altri luoghi in cui andare, mi dimentico che possono esserci sono altre vite, altri obiettivi da raggiungere. 
                 -
-                
-                {
-                - are_two_entities_together(SecondCharacter, PG): Commentto Riccio!
-                    #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-                    
-                } 
+
             Ricorda {player_name}: sei una guida, ma sta alla persona decidere alla fine chi è, e di cosa ha bisogno.
             Quando te la senti, affronta questo ultimo passaggio e poi torna da me.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             
-            ~ mentor_pauseTalking = mentor_pauseDuration
-            @animation:RewriterBook
+                ~ mentor_pauseTalking = mentor_pauseDuration
+                @animation:RewriterBook
                 ~ mentor_tutorialPauses = true
                 
                 -> main
