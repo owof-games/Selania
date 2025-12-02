@@ -206,7 +206,7 @@
 
 {
     - second_char_main_storylets.seven:
-        Abbiamo uno scrittore. O per lo meno, un Riscrittore. Perché {charNameTwo} la sera va a letto presto per "correggere le giornate", immaginarle in modo diverso, per far sì che i suoi non litighino, o che sia più forte degli altri bambini così che gli altri divengano suoi amici. E ha provato a leccare la rana.
+        Abbiamo uno scrittore. O per lo meno, un riscrittore. Perché {charNameTwo} la sera va a letto presto per "correggere le giornate", immaginarle in modo diverso, per far sì che i suoi non litighino, o che sia più forte degli altri bambini così che gli altri divengano suoi amici. E ha provato a leccare la rana.
     
 }
 

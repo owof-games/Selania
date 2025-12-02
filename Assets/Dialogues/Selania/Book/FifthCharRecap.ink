@@ -9,7 +9,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
         
 
-<b><i>Appunti dalle conversazioni.</b></i> Ho incontrato una persona che mi ha detto di chiamarla Mentore, perché mi farà da guida in questo luogo. E dopo avermi chiesto nomi e pronomi, mi ha {player_pronouns has him:invitato|{player_pronouns has her:invitata|invitatə}} a parlare con le persone che trovo in giro. {you_are_a_rewriter: Per poi dirmi che sono {player_pronouns has him:un Riscrittore|{player_pronouns has her:una Riscrittora|unə Riscrittorə}}, e darmi un po' di indicazioni su cosa dovrei fare.}
+<b><i>Appunti dalle conversazioni.</b></i> Ho incontrato una persona che mi ha detto di chiamarla Mentore, perché mi farà da guida in questo luogo. E dopo avermi chiesto nomi e pronomi, mi ha {player_pronouns has him:invitato|{player_pronouns has her:invitata|invitatə}} a parlare con le persone che trovo in giro. {you_are_a_rewriter: Per poi dirmi che sono {player_pronouns has him:un riscrittore|{player_pronouns has her:una riscrittora|unə riscrittorə}}, e darmi un po' di indicazioni su cosa dovrei fare.}
 
 {that_little_liar_storylet: Dopo l'arrivo del bimbo, la prima cosa che mi ha chiesto è se son {player_pronouns has him:riuscito|{player_pronouns has her:riuscita|riuscitə}} a mandarlo a casa. Dice che qui non è sicuro per i bambini, che lui le ha tirato un calcio. Ma che le fa tenerezza, e per questo gli sembra un Riccio.}
 
