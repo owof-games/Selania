@@ -29,43 +29,44 @@ Il secondo IF rimane com'è
 */
 //Chiamo questa funzione quando sto per partire con la riscrittura, in modo da aggiornare il valore di inchiostro in base alla relazione sviluppata
 {debug: passo da fromRelationshipToInk.}
+~ temp charRelationship = ()
 
     {Character:
         - FirstCharacter:
-            ~ Character = firstChar_relationshipStatus
+            ~ charRelationship = firstChar_relationshipStatus
             ~ Ink = firstChar_InkLevel
         
         - SecondCharacter:
-            ~ Character = secondChar_relationshipStatus
+            ~ charRelationship = secondChar_relationshipStatus
             ~ Ink = secondChar_InkLevel
         
         - ThirdCharacter:
-            ~ Character = thirdChar_relationshipStatus
+            ~ charRelationship = thirdChar_relationshipStatus
             ~ Ink = thirdChar_InkLevel
             
         - FourthCharacter:
-            ~ Character = fourthChar_relationshipStatus
+            ~ charRelationship = fourthChar_relationshipStatus
             ~ Ink = fourthChar_InkLevel
         
         - FifthCharacter:
-            ~ Character = fifthChar_relationshipStatus
+            ~ charRelationship = fifthChar_relationshipStatus
             ~ Ink = fifthChar_InkLevel    
             
     }
     
     {
     
-        - Character == 0:
-            {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {Character}, {Ink}.}
+        - charRelationship == 0:
+            {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {charRelationship}, {Ink}.}
             
-        - Character == 1:
+        - charRelationship == 1:
             ~ Ink ++
-            {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {Character}, {Ink}.}
+            {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {charRelationship}, {Ink}.}
             
-        - Character == 2:
+        - charRelationship == 2:
             ~ Ink ++
             ~ Ink ++
-            {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {Character}, {Ink}.}
+            {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {charRelationship}, {Ink}.}
                
     }
     
@@ -78,7 +79,6 @@ Il secondo IF rimane com'è
 {debug: passo da inkLevel.}
 
     {Character:
-    
         - FirstCharacter:
             ~ Ink = firstChar_InkLevel
 
@@ -352,24 +352,23 @@ Il secondo IF rimane com'è
     }
 
 
-//Funzione che chiamo dopo il dono, per dire quanto inchiostro ho guadagnato.
-=== function fromInkToNumbers(InkLevel)
-    {
-        - InkLevel == firstChar_maximum_inkLevel:
+//Funzione che chiamo per vedere quanto inchiostro massimo ho generato con ogni personaggia.
+=== function fromInkToNumbers(Character)
+    {Character:
+        - FirstCharacter:
             ~ Ink = firstChar_maximum_inkLevel
         
-        - InkLevel == secondChar_maximum_inkLevel:
+        - SecondCharacter:
             ~ Ink = secondChar_maximum_inkLevel
     
-        - InkLevel == thirdChar_maximum_inkLevel:
+        - ThirdCharacter:
             ~ Ink = thirdChar_maximum_inkLevel
         
-        - InkLevel == fourthChar_maximum_inkLevel:
+        - FourthCharacter:
             ~ Ink = fourthChar_maximum_inkLevel
         
-        - InkLevel == fifthChar_maximum_inkLevel:
-            ~ Ink = fifthChar_maximum_inkLevel            
-    
+        - FifthCharacter:
+            ~ Ink = fifthChar_maximum_inkLevel 
     }
     
     {Ink:

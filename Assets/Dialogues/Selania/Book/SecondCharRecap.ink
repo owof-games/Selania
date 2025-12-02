@@ -133,7 +133,7 @@
 {rewriting_proposal_second_character.ending: Dopo la nostra conversazione, {charNameTwo} ha scelto un nuovo nome: <b><i>{charNameTwo}.}
 
 {secondAffinityFeedback:
-    Il valore massimo di inchiostro che ho ricevuto è stato: {fromInkToNumbers(secondChar_maximum_inkLevel)}. <>
+    Il valore massimo di inchiostro che ho ricevuto è stato: {fromInkToNumbers(SecondCharacter)}. <>
 }
 
 {
