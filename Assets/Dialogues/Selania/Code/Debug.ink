@@ -1,5 +1,5 @@
-    VAR debug_seedRandom = false
-
+    VAR debug_seedRandom = true
+    
 //Per abilitare o meno i debug
     VAR debug = false
     VAR debug_cultivable = false
