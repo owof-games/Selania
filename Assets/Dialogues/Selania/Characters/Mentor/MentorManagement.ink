@@ -12,6 +12,10 @@
     VAR mentor_pauseTalking = 0
     VAR mentor_pauseDuration = 10
 
+//Check per monitorare l'ultima volta che abbiamo parlato con Mentore.
+    VAR mentor_lastTimeTalking = 0
+    VAR mentor_MAX_lastTimeTalking = 10
+
 //Variabili colore
     VAR mentor_purple = 0.00
     VAR mentor_yellow = 0.00
