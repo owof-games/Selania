@@ -294,7 +294,7 @@
     //Ho messo (entity_location(SecondCharacter) != Kitchen) perché così non parte mai la cucina autonoma se c'è qualcunx in cucina.
     
         {
-            - player_accessiblePlaces has Kitchen && (not second_char_cooking_tracker) && (entity_location(FirstCharacter) != Kitchen) && second_char_main_storylets:
+            - player_accessiblePlaces has Kitchen && (not second_char_cooking_tracker) && (entity_location(FirstCharacter) != Kitchen) && second_char_main_storylets.one && kitchenContents hasnt TheKitchenFrog:
             
                 ~ kitchen_secondCharIsCooking = true
                 ~ move_entity(SecondCharacter, Kitchen)
@@ -341,7 +341,7 @@
 
     //Chitarra
         {
-            - player_accessiblePlaces has Kitchen && (not first_char_cooking_tracker) && (entity_location(SecondCharacter) != Kitchen):
+            - player_accessiblePlaces has Kitchen && (not first_char_cooking_tracker) && (entity_location(SecondCharacter) != Kitchen) && kitchenContents hasnt TheKitchenFrog:
             
                     ~ kitchen_firstCharIsCooking = true
                     ~ move_entity(FirstCharacter, Kitchen)

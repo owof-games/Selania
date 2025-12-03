@@ -16,9 +16,6 @@
 
 === kitchen_storylets_dispatcher ===
 {
-    //Scena in cui cuciniamo da solx
-    - special_mission_two && not cooking_alone && (not are_two_entities_together(FirstCharacter, PG)) && (not are_two_entities_together(SecondCharacter, PG)):
-        ->cooking_alone
     
     //Scena in cui Chitarra sta cucinando da sola
     - are_two_entities_together(FirstCharacter, PG) && kitchen_firstCharIsCooking == true:
@@ -35,12 +32,16 @@
     //Scena in cui cuciniamo con Riccio
     - are_two_entities_together(SecondCharacter, PG) && not ending_cooking_with_second_char && (kitchen_secondCharIsCooking == false):
         -> pre_start_cooking_with_second_char
+
+    //Scena in cui cuciniamo da solx
+    - are_two_entities_together(TheKitchenFrog, PG) && not cooking_alone && (kitchen_secondCharIsCooking == false) && (kitchen_firstCharIsCooking == false):
+        -> cooking_alone
     
-        
     - else:
         -> main
 
 }
 
-
-
+=== the_kitchen_frog ===
+        + {are_two_entities_together(TheKitchenFrog, PG)} [TheKitchenFrog]
+    -> cooking_alone

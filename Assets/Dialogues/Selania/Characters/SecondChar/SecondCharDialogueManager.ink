@@ -162,6 +162,10 @@
                     - kitchen_firstCharCookingTogetherInvite:
                         C'è già {charNameOne} che ti sta aspettando. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:riccio_neutral
                             ->main
+
+                    - kitchenContents has TheKitchenFrog:
+                        Ma la mia amica rana ti sta aspettando lì!    
+                            ->main        
                     
                     - kitchen_secondCharCookingTogetherNumberInvite > 0: 
                         {stopping:
