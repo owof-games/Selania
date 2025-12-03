@@ -161,8 +161,9 @@
     ~ temp charNameTwo = translator(secondChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    Mi serve che ti prepari qualcosa in cucina senza nessuna persona attorno. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-    Poi torna da me, e ti darò quello che ti serve.
+    Vediamoci in cucina, ho una piccola missione speciale per te, {player_name}!
+        ~ move_entity(TheFrog, Safekeeping)
+        ~ move_entity(TheKitchenFrog, Kitchen)
         ~ frog_currentMission += specialMissionTwo
         ~ frog_availableSpecialMissions -= specialMissionTwo
     @animation:RewriterBook    
