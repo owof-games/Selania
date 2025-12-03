@@ -3,7 +3,7 @@
 
 //Variabili per la gestione della variazione del background del libro: uso un contatore che aumenta e che poi si sposta sulla lista dei possibili stati, che è sempre progressiva.
     VAR book_BGVariations = 0
-    LIST bookBGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, bookBGFive
+    LIST book_BGStates = bookBGZero, bookBGOne, bookBGTwo, bookBGThree, bookBGFour, bookBGFive
 
 
 
