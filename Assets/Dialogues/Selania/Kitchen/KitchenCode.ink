@@ -28,18 +28,19 @@
 
 === check_kitchen_recap
     
-    @animation:RewriterBook
+    //Disabilitato per ora perché non c'è un recap sul libro
+    // @animation:RewriterBook
 
-    {
-        - BookPlace hasnt KitchenRecap:
+    // {
+    //     - BookPlace hasnt KitchenRecap:
         
-            ~ move_entity(KitchenRecap, BookPlace)
-                {
-                    - kitchen == 1:
-                    ~ saturationVar ++
-                    ~ move_entity(teaKit, Bedroom)
-                }
-    }
+    //         ~ move_entity(KitchenRecap, BookPlace)
+    //             {
+    //                 - kitchen == 1:
+    //                 ~ saturationVar ++
+    //                 ~ move_entity(teaKit, Bedroom)
+    //             }
+    // }
 
 ->->
 

@@ -372,27 +372,7 @@
                     -> main
             }
             
-        - specialMissionTwo:
-            {
-                - cooking_alone :
-                    Hai cucinato in autonomia, {player_name}.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Per questo ti dono una ingrediente universale, che potrai utilizzare per cucinare con le altre persone, e apprezzeranno sempre.
-                    
-                    @animation:Backpack
-                    
-                    ~ backpack_findedGifts += universalIngredient
-                    ~ frog_currentMission = ()
-                    ~ frog_aboutGiftRequest = ()
-                    //Metto in pausa le missioni speciali
-                    ~ frog_pauseSpecialMission = frog_pauseSpecialMissionMax
-                    -> main
-                    
-                - else:
-                Ricorda {player_name}: ascolta la discussione tra Mentore e Riccio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    E poi torna da me.
-                    -> main
-            }
-            
+
         
         - else:
             //Vuol dire che non ci sono missioni attive e posso proporne di nuove, se la rana non risulterà stanca
