@@ -30332,15 +30332,15 @@ MonoBehaviour:
   - {fileID: 207873483}
   - {fileID: 1272011929}
   allPlaces:
-  - bedroomContents
-  - trainStopContents
-  - forestContents
-  - pondContents
-  - greenhouseContents
-  - libraryContents
-  - kitchenContents
-  - nestContents
-  - bookContents
+  - contentsBedroom
+  - contentsTrainStop
+  - contentsForest
+  - contentsPond
+  - contentsGreenhouse
+  - contentsLibrary
+  - contentsNest
+  - contentsKitchen
+  - contentsBook
   bigDialogueInkBoolVariable: bigDialogue
   nestDialogueInkBoolVariable: nestDialogue
   inkAssetJSON: {fileID: 4900000, guid: bc00609c8f8ddae47b1b8cd2c864dabe, type: 3}

@@ -918,8 +918,8 @@ public class DialogueManagerSingleInk : MonoBehaviour
 
     public bool IsPGInBedroom()
     {
-        var bedroomContents = (InkList)story.variablesState["bedroomContents"];
-        return bedroomContents.ContainsItemNamed("PG");
+        var contentsBedroom = (InkList)story.variablesState["contentsBedroom"];
+        return contentsBedroom.ContainsItemNamed("PG");
     }
 
 
