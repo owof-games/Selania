@@ -17,59 +17,92 @@
     VAR fifthChar_maximum_inkLevel = ink_empty
     
 === function fromRelationshipToInk(Character)
-/*
-{character:
-    - FirstCharacter:
-        ~ Character = firstChar_relationshipStatus
-        ~ Ink = firstChar_InkLevel
-    - SecondCharacter:
-        ...
-}
-Il secondo IF rimane com'è
-*/
 //Chiamo questa funzione quando sto per partire con la riscrittura, in modo da aggiornare il valore di inchiostro in base alla relazione sviluppata
 {debug: passo da fromRelationshipToInk.}
-~ temp charRelationship = ()
 
     {Character:
         - FirstCharacter:
-            ~ charRelationship = firstChar_relationshipStatus
-            ~ Ink = firstChar_InkLevel
+                {
+                    - firstChar_relationshipStatus == 0:
+                        {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {firstChar_relationshipStatus}.}
+                        
+                    - firstChar_relationshipStatus == 1:
+                        ~ firstChar_InkLevel ++
+                        {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {firstChar_relationshipStatus}.}
+                        
+                    - firstChar_relationshipStatus == 2:
+                        ~ firstChar_InkLevel ++
+                        ~ firstChar_InkLevel ++
+                        {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {firstChar_relationshipStatus}.}
+                        
+                }
         
         - SecondCharacter:
-            ~ charRelationship = secondChar_relationshipStatus
-            ~ Ink = secondChar_InkLevel
-        
+                {
+                    - secondChar_relationshipStatus == 0:
+                        {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {secondChar_relationshipStatus}, {Ink}.}
+                        
+                    - secondChar_relationshipStatus == 1:
+                        ~ secondChar_InkLevel ++
+                        {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {secondChar_relationshipStatus}, {Ink}.}
+                        
+                    - secondChar_relationshipStatus == 2:
+                        ~ secondChar_InkLevel ++
+                        ~ secondChar_InkLevel ++
+                        {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {secondChar_relationshipStatus}, {Ink}.}
+                        
+                }            
+                    
         - ThirdCharacter:
-            ~ charRelationship = thirdChar_relationshipStatus
-            ~ Ink = thirdChar_InkLevel
+                {
+                    - thirdChar_relationshipStatus == 0:
+                        {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {thirdChar_relationshipStatus}.}
+                        
+                    - thirdChar_relationshipStatus == 1:
+                        ~ thirdChar_InkLevel ++
+                        {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {thirdChar_relationshipStatus}.}
+                        
+                    - thirdChar_relationshipStatus == 2:
+                        ~ thirdChar_InkLevel ++
+                        ~ thirdChar_InkLevel ++
+                        {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {thirdChar_relationshipStatus}.}
+                        
+                }            
             
         - FourthCharacter:
-            ~ charRelationship = fourthChar_relationshipStatus
-            ~ Ink = fourthChar_InkLevel
+                {
+                    - fourthChar_relationshipStatus == 0:
+                        {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {fourthChar_relationshipStatus}.}
+                        
+                    - fourthChar_relationshipStatus == 1:
+                        ~ fourthChar_InkLevel ++
+                        {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {fourthChar_relationshipStatus}.}
+                        
+                    - fourthChar_relationshipStatus == 2:
+                        ~ fourthChar_InkLevel ++
+                        ~ fourthChar_InkLevel ++
+                        {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {fourthChar_relationshipStatus}.}
+                        
+                }            
         
         - FifthCharacter:
-            ~ charRelationship = fifthChar_relationshipStatus
-            ~ Ink = fifthChar_InkLevel    
+            {
+                - fifthChar_relationshipStatus == 0:
+                    {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {fifthChar_relationshipStatus}.}
+                    
+                - fifthChar_relationshipStatus == 1:
+                    ~ fifthChar_InkLevel ++
+                    {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {fifthChar_relationshipStatus}.}
+                    
+                - fifthChar_relationshipStatus == 2:
+                    ~ fifthChar_InkLevel ++
+                    ~ fifthChar_InkLevel ++
+                    {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {fifthChar_relationshipStatus}.}
+                    
+            }                
             
     }
-    
-    {
-    
-        - charRelationship == 0:
-            {debug: il valore di relazione è 0, e quindi non aumento il valore dell'inchiostro. {charRelationship}, {Ink}.}
-            
-        - charRelationship == 1:
-            ~ Ink ++
-            {debug: il valore di relazione è 1, e quindi aumento il valore dell'inchiostro. {charRelationship}, {Ink}.}
-            
-        - charRelationship == 2:
-            ~ Ink ++
-            ~ Ink ++
-            {debug: il valore di relazione è 2, e quindi aumento il valore dell'inchiostro. {charRelationship}, {Ink}.}
-               
-    }
-    
+
 
 
 
