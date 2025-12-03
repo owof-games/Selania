@@ -110,26 +110,27 @@
 //Formula chiamata prima dello statement, per tenere conto del rapporto effettivo.
 === function inkLevel(Character)
 {debug: passo da inkLevel.}
+ ~ temp ink_status = ink_empty
 
     {Character:
         - FirstCharacter:
-            ~ Ink = firstChar_InkLevel
+            ~ ink_status = firstChar_InkLevel
 
         - SecondCharacter:
-            ~ Ink = secondChar_InkLevel
+            ~ ink_status = secondChar_InkLevel
 
         - ThirdCharacter:
-            ~ Ink = thirdChar_InkLevel
+            ~ ink_status = thirdChar_InkLevel
             
         - FourthCharacter:
-            ~ Ink = fourthChar_InkLevel
+            ~ ink_status = fourthChar_InkLevel
         
         - FifthCharacter:
-            ~ Ink = fifthChar_InkLevel 
+            ~ ink_status = fifthChar_InkLevel 
             
     }
 
-    {Ink:
+    {ink_status:
         - ink_empty:
             Dopo le molte parole spese <>
             {
@@ -327,25 +328,26 @@
 
 //Funzione che chiamo dopo il dono, per dire quanto inchiostro ho guadagnato.
 === function inkTranslator(Character)
+~ temp ink_status = ink_empty
     {Character:
         - FirstCharacter:
-            ~ Ink = firstChar_InkLevel
+            ~ ink_status = firstChar_InkLevel
         
         - SecondCharacter:
-            ~ Ink = secondChar_InkLevel
+            ~ ink_status = secondChar_InkLevel
     
         - ThirdCharacter:
-            ~ Ink = thirdChar_InkLevel
+            ~ ink_status = thirdChar_InkLevel
         
         - FourthCharacter:
-            ~ Ink = fourthChar_InkLevel
+            ~ ink_status = fourthChar_InkLevel
         
         - FifthCharacter:
-            ~ Ink = fifthChar_InkLevel            
+            ~ ink_status = fifthChar_InkLevel            
     
     }
     
-    {Ink:
+    {ink_status:
         - ink_empty:
             non ha raccolto alcuna goccia di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
@@ -387,24 +389,25 @@
 
 //Funzione che chiamo per vedere quanto inchiostro massimo ho generato con ogni personaggia.
 === function fromInkToNumbers(Character)
+~ temp ink_status = ink_empty
     {Character:
         - FirstCharacter:
-            ~ Ink = firstChar_maximum_inkLevel
+            ~ ink_status = firstChar_maximum_inkLevel
         
         - SecondCharacter:
-            ~ Ink = secondChar_maximum_inkLevel
+            ~ ink_status = secondChar_maximum_inkLevel
     
         - ThirdCharacter:
-            ~ Ink = thirdChar_maximum_inkLevel
+            ~ ink_status = thirdChar_maximum_inkLevel
         
         - FourthCharacter:
-            ~ Ink = fourthChar_maximum_inkLevel
+            ~ ink_status = fourthChar_maximum_inkLevel
         
         - FifthCharacter:
-            ~ Ink = fifthChar_maximum_inkLevel 
+            ~ ink_status = fifthChar_maximum_inkLevel 
     }
     
-    {Ink:
+    {ink_status:
         - ink_empty:
             nessuna goccia di inchiostro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
