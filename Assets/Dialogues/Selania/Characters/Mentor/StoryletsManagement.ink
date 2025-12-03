@@ -145,28 +145,28 @@
             -> knowing_mentor_character.one
         - not knowing_mentor_character.two && firstChar_storyStatus == story_storyEnded && mentor_tutorialPauses == false:
             -> knowing_mentor_character.two
-        - not knowing_mentor_character.three && firstChar_storyStatus == story_storyEnded && mentor_tutorialPauses == false:
+        - not knowing_mentor_character.three && (firstChar_storyStatus == story_storyEnded or secondChar_storyStatus == story_storyEnded )&& mentor_tutorialPauses == false:
             -> knowing_mentor_character.three
         - not knowing_mentor_character.four && secondChar_storyStatus == story_storyEnded && mentor_tutorialPauses == false:
             -> knowing_mentor_character.four
         - not knowing_mentor_character.five && secondChar_storyStatus == story_storyEnded && mentor_tutorialPauses == false:
             -> knowing_mentor_character.five
-        //Forse solo una di queste, perché con la terza storia avremo degli storylets ad hoc.    
-        - not knowing_mentor_character.six && thirdChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
-            -> knowing_mentor_character.six
-        //Questo è lo storylet dove Mentore sbrocca, e che poi trasformo in quinta personaggia    
-        - not knowing_mentor_character.seven && thirdChar_storyStatus == story_storyEnded && mentor_tutorialPauses == false:
-            -> knowing_mentor_character.seven
-        - not knowing_mentor_character.eight && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
-            -> knowing_mentor_character.eight
-        - not knowing_mentor_character.nine && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
-            -> knowing_mentor_character.nine
-        - not knowing_mentor_character.ten && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
-            -> knowing_mentor_character.ten
-        - not knowing_mentor_character.eleven && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
-            -> knowing_mentor_character.eleven
-        - not knowing_mentor_character.twelve && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
-            -> knowing_mentor_character.twelve
+        // //Forse solo una di queste, perché con la terza storia avremo degli storylets ad hoc.    
+        // - not knowing_mentor_character.six && thirdChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
+        //     -> knowing_mentor_character.six
+        // //Questo è lo storylet dove Mentore sbrocca, e che poi trasformo in quinta personaggia    
+        // - not knowing_mentor_character.seven && thirdChar_storyStatus == story_storyEnded && mentor_tutorialPauses == false:
+        //     -> knowing_mentor_character.seven
+        // - not knowing_mentor_character.eight && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
+        //     -> knowing_mentor_character.eight
+        // - not knowing_mentor_character.nine && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
+        //     -> knowing_mentor_character.nine
+        // - not knowing_mentor_character.ten && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
+        //     -> knowing_mentor_character.ten
+        // - not knowing_mentor_character.eleven && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
+        //     -> knowing_mentor_character.eleven
+        // - not knowing_mentor_character.twelve && fifthChar_storyStatus == story_storyStarted && mentor_tutorialPauses == false:
+        //     -> knowing_mentor_character.twelve
  
     //Niente da attivare:
         - else:
