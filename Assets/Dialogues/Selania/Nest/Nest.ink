@@ -4,10 +4,10 @@
 //Qui Oven avrà solo una funzione di animazione, non serve che ci interagiamo
 
     {debug: <i>La lista degli oggetti nella stanza è: {contentsNest}.}
-    {debug: <i>La lista degli oggetti nel deposito è: {safekeepingContents}.}
+    {debug: <i>La lista degli oggetti nel deposito è: {contentsSafekeeping}.}
     
         {
-            - bookContents hasnt NestRecap:
+            - contentsBook hasnt NestRecap:
             ~ move_entity(NestRecap, BookPlace)
         }
 

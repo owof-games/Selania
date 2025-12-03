@@ -7,7 +7,7 @@
     {train_stop == 1: La stazione profuma di aria nevosa e nuovi arrivi.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
     {
-        - safekeepingContents has RoomExit:
+        - contentsSafekeeping has RoomExit:
             ~ move_entity (RoomExit, Bedroom)
     }
     

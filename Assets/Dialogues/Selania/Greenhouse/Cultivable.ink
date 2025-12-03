@@ -1109,7 +1109,7 @@
            @animation:RewriterBook
     }
     {
-        - bookContents hasnt GreenhouseRecap:
+        - contentsBook hasnt GreenhouseRecap:
         ~ move_entity(GreenhouseRecap, BookPlace)
     }
     @animation:Backpack

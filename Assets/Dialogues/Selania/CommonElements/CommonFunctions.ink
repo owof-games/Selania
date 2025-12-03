@@ -386,13 +386,13 @@
     
 //Gestione suoni
     {
-        - safekeepingContents hasnt TrainNoiseComing:
+        - contentsSafekeeping hasnt TrainNoiseComing:
             ~ move_entity(TrainNoiseComing, Safekeeping)
     }
 
 
     {
-        - safekeepingContents hasnt TrainNoiseGoingAway:
+        - contentsSafekeeping hasnt TrainNoiseGoingAway:
             ~ move_entity(TrainNoiseGoingAway, Safekeeping)
     }
                  
@@ -419,11 +419,11 @@
 
 //Spostamento di libro e inventario se scoperti
     {
-        - safekeepingContents hasnt RewriterBook && currentPlace != Bedroom:
+        - contentsSafekeeping hasnt RewriterBook && currentPlace != Bedroom:
             ~ move_entity(RewriterBook, currentPlace)
     }
     {
-        - safekeepingContents hasnt Backpack && currentPlace != Bedroom:
+        - contentsSafekeeping hasnt Backpack && currentPlace != Bedroom:
            ~ move_entity(Backpack, currentPlace)
     }
 

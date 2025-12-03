@@ -15,9 +15,9 @@
 
     VAR contentsKitchen = (FromKitchenToPond, FirstRipple, SecondRipple, ThirdRipple)
 
-    VAR safekeepingContents = (RoomExit, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FifthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, TheFrog, FifthCharacterNotes, MenuSave, MenuQuit,  RewriterBook, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FrogRecap, DogRecap, WitchRecap, GreenhouseRecap, KitchenRecap, NestRecap, FifthRecap, RulesRecap, Backpack, cultivationKit, firstCharPaint, teaKit, littleLibrary, bowl, secondCharPaint, vase, miniBook, FromLibraryToNestNight, FromLibraryToNest, FromForestToLibrary, RedBee, GoldenBee, BrownBee, MoonTrees, Snail, FromPondToGreenhouseBlooming, WateringCan, TrainNoiseComing, BastonSound, NewMoonAnim, FirstQuarterAnim, FullMoonAnim, ThirdQuarterAnim, RedMoonAnim, nightTable, waterLily, Mentor, FromPondToKitchen, FromPondToGreenhouse, greenShell, purpleShell, KitchenFire, KitchenSmokeOne, KitchenSmokeTwo, KitchenSmokeThree, CookingWithFirstCharOBJ, CookingWithSecondCharOBJ, FirstCharCookingAloneOBJ,  EatingWithSecondCharOBJ, EatingWithFirstCharOBJ, Bat, BatHouseFront, BatHouseRetro, FromLibraryToNestBlockedNight, TrainNoiseGoingAway, StartingNote, DoggoNoNotes, TheKitchenFrog)
+    VAR contentsSafekeeping = (RoomExit, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FifthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, TheFrog, FifthCharacterNotes, MenuSave, MenuQuit,  RewriterBook, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FrogRecap, DogRecap, WitchRecap, GreenhouseRecap, KitchenRecap, NestRecap, FifthRecap, RulesRecap, Backpack, cultivationKit, firstCharPaint, teaKit, littleLibrary, bowl, secondCharPaint, vase, miniBook, FromLibraryToNestNight, FromLibraryToNest, FromForestToLibrary, RedBee, GoldenBee, BrownBee, MoonTrees, Snail, FromPondToGreenhouseBlooming, WateringCan, TrainNoiseComing, BastonSound, NewMoonAnim, FirstQuarterAnim, FullMoonAnim, ThirdQuarterAnim, RedMoonAnim, nightTable, waterLily, Mentor, FromPondToKitchen, FromPondToGreenhouse, greenShell, purpleShell, KitchenFire, KitchenSmokeOne, KitchenSmokeTwo, KitchenSmokeThree, CookingWithFirstCharOBJ, CookingWithSecondCharOBJ, FirstCharCookingAloneOBJ,  EatingWithSecondCharOBJ, EatingWithFirstCharOBJ, Bat, BatHouseFront, BatHouseRetro, FromLibraryToNestBlockedNight, TrainNoiseGoingAway, StartingNote, DoggoNoNotes, TheKitchenFrog)
     
-    VAR bookContents = (BookExit, SettingsBookVersion)
+    VAR contentsBook = (BookExit, SettingsBookVersion)
    
 
 //Funzione per tracciare se una data entità si trova o meno in un determinato luogo
@@ -44,18 +44,18 @@
         - contentsPond has entity:
             ~ return Pond         
         
-        - safekeepingContents has entity:
+        - contentsSafekeeping has entity:
             ~ return Safekeeping
         
         - contentsBedroom has entity:
             ~ return Bedroom
         
-        - bookContents has entity:
+        - contentsBook has entity:
             ~ return BookPlace    
         
         - else:
             DEBUG: error, cannot find {entity} anywhere!
-            {safekeepingContents}
+            {contentsSafekeeping}
             ~ return Forest
     }
 
@@ -88,13 +88,13 @@
             ~ contentsPond -= entity
             
         - Safekeeping:
-            ~ safekeepingContents -= entity
+            ~ contentsSafekeeping -= entity
         
         - Bedroom:
             ~ contentsBedroom -= entity
             
         - BookPlace:
-            ~ bookContents -= entity
+            ~ contentsBook -= entity
             
         - else:
             DEBUG: error, cannot understand location {CurrentLocation} while trying to move {entity} out.
@@ -123,13 +123,13 @@
             ~ contentsPond += entity
             
         - Safekeeping:
-            ~ safekeepingContents += entity
+            ~ contentsSafekeeping += entity
         
         - Bedroom:
             ~ contentsBedroom += entity
             
          - BookPlace:
-            ~ bookContents += entity 
+            ~ contentsBook += entity 
             
         - else:
             DEBUG: error, cannot understand location {destination} while trying to move {entity} in.
