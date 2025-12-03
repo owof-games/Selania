@@ -26,6 +26,8 @@
     //Valore quarto ingrediente
         VAR kitchen_fifthCharExtraIngredient = ()
         VAR kitchen_fifthCharExtraIngredientReaction = notReaction
+    //Ricetta creata
+        VAR kitchen_fifthCharRecipe = ""    
     
 //Tracciamento del dono
     VAR fifthChar_giftedObject = ()

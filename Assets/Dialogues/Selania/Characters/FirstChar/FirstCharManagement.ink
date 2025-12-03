@@ -35,6 +35,8 @@
         VAR kitchen_firstCharCookingTogetherWaiting = 0
         //Quanta pazienza ha ad aspettarci
         VAR kitchen_firstCharCookingMAXTogetherWaiting = 8
+        //Ricetta creata
+        VAR kitchen_firstCharRecipe = ""
         
     //Valore quarto ingrediente
         VAR kitchen_firstCharExtraIngredient = ()

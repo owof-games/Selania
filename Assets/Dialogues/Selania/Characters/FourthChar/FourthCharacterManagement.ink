@@ -29,6 +29,8 @@
     //Valore quarto ingrediente
         VAR kitchen_fourthCharExtraIngredient = ()
         VAR kitchen_fourthCharExtraIngredientReaction = notReaction
+    //Ricetta creata
+        VAR kitchen_fourthCharRecipe = ""    
 
 //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
     VAR fourthChar_favouritesGifts = ()

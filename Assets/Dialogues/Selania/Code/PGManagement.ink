@@ -9,6 +9,9 @@
 //Tracciamento dei luoghi accessibili alla giocatrice
     VAR player_accessiblePlaces = (Bedroom, TrainStop, Forest, Pond)
 
+//Ricetta cucinata con la rana
+    VAR kitchen_PGCharRecipe = ""   
+
 //Tracciamento colori giocatrice
     VAR player_purple = 0.00
     VAR player_yellow = 0.00

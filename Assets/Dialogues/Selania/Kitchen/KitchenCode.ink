@@ -73,12 +73,32 @@
 ~  kitchen_tempRecipeName = "{kitchen_recipeNoun} {kitchen_recipeAdjective} {kitchen_recipeComplement} {kitchen_recipePP}"
 
     La cucina si riempie del profumo di {kitchen_tempRecipeName}. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        -> recipe_name_storage ->
         ->->
 
 //Lo chiamo da recipeNameCreator, non mi serve chiamarlo altrove
-=== recipe_name_storage
+=== recipe_name_storage(Character)
 {debug_kitchen: passo per recipe_name_storage.}
+    {Character:
+        - FirstCharacter:
+            ~ kitchen_firstCharRecipe = kitchen_tempRecipeName
+        
+        - SecondCharacter:
+            ~ kitchen_secondCharRecipe = kitchen_tempRecipeName
+        
+        - ThirdCharacter:
+            ~ kitchen_thirdCharRecipe = kitchen_tempRecipeName
+        
+        - FourthCharacter:
+            ~ kitchen_fourthCharRecipe = kitchen_tempRecipeName
+
+        - FifthCharacter:
+            ~ kitchen_fifthCharRecipe = kitchen_tempRecipeName
+
+        - PG:
+            ~ kitchen_PGCharRecipe = kitchen_tempRecipeName     
+                
+    }
+
 
     {
         - kitchen_firstRecipe == "":
@@ -86,7 +106,7 @@
             
                 ~ kitchen_firstRecipe = kitchen_tempRecipeName
             {debug_kitchen: il valore di kitchen_firstRecipe ora è {kitchen_firstRecipe}.}
-                
+
                 ->->
         - kitchen_secondRecipe == "":
             {debug_kitchen: il valore di kitchen_firstRecipe è {kitchen_firstRecipe} e quindi non lo aggiorno.}

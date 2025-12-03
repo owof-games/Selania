@@ -390,6 +390,10 @@
             Dopo aver cucinato assieme, {charNameOne} ha detto a {player_name} che ci sono cose che stanno nel mezzo per lei, tipo quando una persona dice che si risolve tutto faecndo cose, o che non prende mai le cose sul serio. Sono cose che non le dicono niente, ma non fanno nemmeno schifo.
     }
     {
+        - ending_cooking_with_first_char:
+            Cucinando assieme, abbiamo preparato un buon piatto di {kitchen_firstCharRecipe}.
+    }
+    {
         - cooking_with_first_char.first_theme:
             Durante l'incontro in cucina, {charNameOne} ha parlato delle sue relazione. Ha raccontato di aver avuto un'infanzia senza amici, ma con un forte legame con suo padre, che le ha passato l'amore per la musica. E dai suoi ha imparato che le relazioni sono cura e sacrificio. Con l'arrivo al Nord ha fatto molte amicizie in Conservatorio, scoprendo però che nei gruppi si litiga, e questa cosa l'ha riempita di conflitti, soprattutto quando il rapporto con un'amica è stato lasciato morire. Crede anche che non ci sia una differenza vera tra amicizia e amore, e che sia un problema per lo più culturale e linguistico, e le complicazioni che nascono vengono dalle parole che ancora mancano per parlare a modo delle relazioni.
 

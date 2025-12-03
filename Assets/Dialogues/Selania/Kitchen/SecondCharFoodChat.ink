@@ -822,6 +822,7 @@
                 - backpack_findedGifts == ():
                     Lo zaino di {player_name} giace vuoto sulle sue spalle. {player_name} non può aggiungere alla ricetta un ingrediente speciale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                     -> recipe_name_creator ->
+                    -> recipe_name_storage(SecondCharacter) ->
                     -> at_table_with_first_char
                 
                 - else:
@@ -849,6 +850,7 @@
             Ho tantissima aquilina!
             
                     -> recipe_name_creator ->
+                    -> recipe_name_storage(SecondCharacter) ->
                     -> at_table_with_second_char
     
 

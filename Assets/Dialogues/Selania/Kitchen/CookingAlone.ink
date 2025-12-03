@@ -110,6 +110,7 @@
             -
         Bene, direi che il nostro piatto è pronto!
             -> recipe_name_creator ->
+            -> recipe_name_storage(PG) ->
         Pesciolini: abbiamo un  {piatto}.
         Ed è tutto per voi.
         Credo proprio che apprezzeranno.

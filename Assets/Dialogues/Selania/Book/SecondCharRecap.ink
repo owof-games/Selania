@@ -169,7 +169,10 @@
     - at_table_with_second_char.meh_reaction:
         Dopo aver cucinato assieme, {charNameTwo} ha detto a {player_name} che gli piacciono i cani, ma non gli piace quando fanno le cose a caso. Tipo correre a destra e sinistra e ovunque.Devi andare dove devi andare. Come quando si parla.
 }
-
+{
+    - ending_cooking_with_second_char:
+        Cucinando assieme, abbiamo preparato un buon piatto di {kitchen_secondCharRecipe}.
+}
 {
     - second_char_main_storylets.twelve:
         {charNameTwo} ama la biblioteca, e l'altra nonna, una che vive al mare, ha tantissimi libri. Ama stare in quel posto, anche perché sua madre e suo padre non ci vanno. E così può passare il tempo che suo fratello e il suo amico, studiare con la nonna del mare. Al mare quando va a letto non deve "correggere le giornate". L'altra nonna è nella "casa dei vecchi", e per questo {charNameTwo} ora vorrebbe andare a vivere con la nonna del mare. E mi ha invitato a leggere i libri della biblioteca che avrà quando sarà grande.
