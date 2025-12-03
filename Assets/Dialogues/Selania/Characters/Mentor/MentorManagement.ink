@@ -4,6 +4,7 @@
     
 //Per mentore, fifthChar_storyStatus sarà la parte di riscrittura, mentorChar_storyStatus tutta la parte di interazione come Mentore
     VAR mentorChar_storyStatus = story_storyNotStarted
+    VAR mentor_storyletsForRewritingCount = 0
     
 //Questa variabile mi serve solo per evitare che Mentore mi dia subito lo storylet questions dopo gifts_and_inks
     VAR mentor_tutorialPauses = false

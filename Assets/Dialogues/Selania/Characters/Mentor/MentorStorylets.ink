@@ -7,7 +7,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    ~ fifthChar_storyletsForRewritingCount ++
+    ~ mentor_storyletsForRewritingCount ++
        
         Ehi {player_name}!
         Stavo pensando a una cosa sciocca.
@@ -98,7 +98,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    ~ fifthChar_storyletsForRewritingCount ++
+    ~ mentor_storyletsForRewritingCount ++
 
         La storia di {charNameOne} mi ha colpita.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         Così giovane.
@@ -172,7 +172,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    ~ fifthChar_storyletsForRewritingCount ++
+    ~ mentor_storyletsForRewritingCount ++
          
         A volte un po' mi pesa, tutto questo via vai.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
         Ci sono persone a cui mi sono affezionata che non rivedrò più.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -242,7 +242,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
 
-    ~ fifthChar_storyletsForRewritingCount ++
+    ~ mentor_storyletsForRewritingCount ++
 
         Mi sto chiedendo se non sia stata troppo dura col piccolo {charNameTwo} appena arrivato qui.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry 
         Ero sinceramente spaventata, ma forse ho reagito con violenza.
@@ -319,7 +319,7 @@
     ~ temp charNameFour= translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
     
-    ~ fifthChar_storyletsForRewritingCount ++
+    ~ mentor_storyletsForRewritingCount ++
 
         Mi sento più stanca del solito.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
         E fa caldo.
@@ -412,7 +412,7 @@
     
     // -> si parla esplicitamente di responsabilità personale (in antitesi anche con la visione del fungo)? Questa è una visione di RABBIA.
 
-        ~ fifthChar_storyletsForRewritingCount ++
+        ~ mentor_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
@@ -442,7 +442,7 @@
     //Non mettere cose TW qui
     
         //Presentazione.
-        ~ fifthChar_storyletsForRewritingCount ++
+        ~ mentor_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
@@ -471,7 +471,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
     
         //Presentazione.
-        ~ fifthChar_storyletsForRewritingCount ++
+        ~ mentor_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
@@ -500,7 +500,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
     
         //Presentazione.
-        ~ fifthChar_storyletsForRewritingCount ++
+        ~ mentor_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
@@ -528,7 +528,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
     
         //Presentazione.
-        ~ fifthChar_storyletsForRewritingCount ++
+        ~ mentor_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
@@ -556,7 +556,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
     
         //Presentazione.
-        ~ fifthChar_storyletsForRewritingCount ++
+        ~ mentor_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]
@@ -583,7 +583,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
     
         //Presentazione.
-        ~ fifthChar_storyletsForRewritingCount ++
+        ~ mentor_storyletsForRewritingCount ++
         
         Non è che hai visto passare di qui una persona?
             + [Dammi dettagli più concreti.]

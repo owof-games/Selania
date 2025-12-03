@@ -289,7 +289,7 @@
             Spero solo non parli male di me!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sad
                 -> helping_mentor
         
-        + [Ripensadonci, non ho nulla di nuovo da dire.]
+        + [Ripensandoci, non ho nulla di nuovo da dire.]
             -> helping_mentor
    
 
