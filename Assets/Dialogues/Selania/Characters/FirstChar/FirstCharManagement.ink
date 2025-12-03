@@ -151,7 +151,8 @@
     Prima però ci terrei a dirti come sono andate le cose tra noi, qui.
             
         {
-            -   are_two_entities_together(Mentor, PG): Vi lascio un po' di privacy. In bocca al lupo {player_name} e {charNameOne}.#speaker:{mentor_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
+            -   are_two_entities_together(Mentor, PG):
+                Vi lascio un po' di privacy. In bocca al lupo {player_name} e {charNameOne}.#speaker:{mentor_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_neutral
                     ~ change_entity_place(Mentor)
         }
         {

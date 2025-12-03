@@ -46,7 +46,7 @@
     E {mentorName} mi sta simpatica, ma adora parlare di lavoro, non la cosa più riposante.
         {
             - are_two_entities_together(Mentor, PG):
-            Commento Mentore.
+                La mia vita è lavoro, non saprei di cos'altro parlare, {charNameTwo}!
                         
         }
         
@@ -102,6 +102,10 @@
     O forse, boh.
     Non ho un buon rapporto con la rabbia.
     Le poche volte che l'ho lasciata uscire mi sono vista chiamare isterica, nevrotica, mestruata.
+        {
+            - are_two_entities_together(Mentor, PG):
+                Uh, è una storia che ho già sentito.          
+        }
     Sembra che se sono arrabbiata allora sono in automatico nel torto.
     Ma quando sono arrivata in fondo e ho capito che lei si stava trasformando in lupo mannaro, mi sono trovata a digrignare i denti.
     Avevo voglia di morsicare quel tizio anche io.

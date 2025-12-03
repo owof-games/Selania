@@ -103,12 +103,12 @@
         
         {
             - not welcome:
-            (Mentore) Vi chiedo scusa, non avrei voluto origliare, ma volevo dirvi che non siete in un sogno, e che posso aiutarvi.
-            Tu, {player_name}, quando puoi parlami, e ti spiegherò un po’ di cose.
+                (Mentore) Vi chiedo scusa, non avrei voluto origliare, ma volevo dirvi che non siete in un sogno, e che posso aiutarvi.
+                E tu quando puoi parlami, e ti spiegherò un po’ di cose.
             
             - else:
-            (Mentore) Scusatemi, non avrei voluto origliare, ma ci tenevo a dirti che no, non sei in un sogno {charNameOne}, ma {player_name} può davvero aiutarti.
-            E {player_name}, ci sono altre cose che posso spiegarti in più rispetto al solo “vai e parla con qualcunə”.
+                (Mentore) Scusatemi, non avrei voluto origliare, ma ci tenevo a dirti che no, non sei in un sogno {charNameOne}, ma {player_name} può davvero aiutarti.
+                E {player_name}, ci sono altre cose che posso spiegarti in più rispetto al solo “vai e parla con qualcunə”.
         }
         
         Oook.
@@ -140,11 +140,7 @@
             Commento Riccio.
                         
         }
-        {
-            - are_two_entities_together(Mentor, PG):
-            Commento Mentore.
-                        
-        }  
+
             
         {player_name}, ma hai sentito che silenzio che c’è in questo posto?
         Non silenzio silenzio tipo vuoto nello spazio.
@@ -155,6 +151,10 @@
         E le canzoncine della pubblicità ancorate nel mio cervello.
         Che sfigata.
         O magari è perché prima ho preso una botta assurda contro il vetro della serra e mi sono resettata il cervello?
+                {
+                    - are_two_entities_together(Mentor, PG):
+                        Questo posto non è mai abbastanza al sicuro.     
+                }  
         Però il male mi ha fatto capire che questa non è un’allucinazione o un sogno.
         E invece di essere preoccupata vorrei solo mettermi a dormire.
         Mi spiace giusto perché le mie coinquiline saranno di sicuro preoccupate.
@@ -219,14 +219,14 @@
             Commento Riccio.
                         
         }
-        {
-            - are_two_entities_together(Mentor, PG):
-            Commento Mentore.
-                        
-        }    
-        
+
         Ehi {player_name}!
         Prima ho parlato con {mentorName} che mi ha spiegato che sei qui per aiutarmi.
+            {
+                - are_two_entities_together(Mentor, PG):
+                    Non l'ho messa esattamente così.
+                    Ma va bene, direi.              
+            }    
         {player_pronouns has him:Povero|{player_pronouns has her:Povera|Poverə}}.
         Dice che c’è qualcosa che mi blocca.
         E che quando mi fiderò di te potrò chiederti aiuto e sbloccarmi e tornare a casa.
@@ -301,15 +301,20 @@
             Commento Riccio.
                         
         }
-        {
-            - are_two_entities_together(Mentor, PG):
-            Commento Mentore.
-                        
-        }
         
         Quando prima sono andata in panico parlando di lavoro, è perché da qualche mese servo in un ristorante.
         Uno di quelli lussuosi, che si gasano tipo perché hanno la sede sia a Buco di Culo Lombardo che a Pechino.
-        E non ti pagano un cazzo, ovvio.
+            {
+                - are_two_entities_together(Mentor, PG):
+                    Potremmo evitare le parolacce, {charNameOne}?
+                    Oook.
+                    Ano Lombardo.           
+            }
+        Ovviamente in posti del genere non ti pagano un cazzo.
+            {
+                - are_two_entities_together(Mentor, PG):
+                    Mi arrendo.           
+            }
         E ama, non era quello che mi aspettavo dopo il Conservatorio.
         Zero proprio.
         Per un po’ sono riuscita a fare qualche lavoretto con il pianoforte, ma quasi sempre non pagato.
@@ -376,12 +381,12 @@
             Commento Riccio.
                         
         }
-        {
-            - are_two_entities_together(Mentor, PG):
-            Commento Mentore.
-                        
-        }
+
         Prima mi sono tuffata nello stagno.
+            {
+                - are_two_entities_together(Mentor, PG):
+                    Non è igienico!       
+            }
         Avevo bisogno di fare qualcosa di diverso.
         Mi aspettavo acqua fredda e schifosa, e invece era tiepida e avvolgente.
         Mi ha fatto sentire così al sicuro, vulnerabile in modo piacevole.
@@ -450,12 +455,7 @@
             Commento Riccio.
                         
         }
-        {
-            - are_two_entities_together(Mentor, PG):
-            Commento Mentore.
-                        
-        }
-        
+ 
         Ma poi forse non ho sto già davvero vivendo con la mia famiglia?
         Ah, sì, scusa, sto tornando sul pippone delle case di prima.
         Però continuo a pensarci, anche perché ho paura che pensi che sono fredda quando parlo di Ennio.
@@ -482,6 +482,11 @@
         Suonerà arrogante, ma vorrei per una volta creare qualcosa di così forte da spazzare tutta questa merda.
         Qualcosa che sia potente e inappellabile.
         Qualcosa che salvi il mondo.
+            {
+                - are_two_entities_together(Mentor, PG):
+                    Oh ragazza mia.
+                    Che vita difficile vuoi sceglierti!             
+            }
         
         //In una delle opzioni resti in silenzio. Oppure resti in cinque modi diversi di silenzio?
             + [Risposta rossa.]
@@ -520,11 +525,6 @@
             Commento Riccio.
                         
         }
-        {
-            - are_two_entities_together(Mentor, PG):
-            Commento Mentore.
-                        
-        }
         
         Ammettiamolo: ci sto girando attorno da un bel po’ ormai.
         Continuo a parlare al passato di Talco, l’avrai notato.
@@ -541,6 +541,10 @@
         Quando Talco mi ha detto “devo dirti qualcosa di importante”, ero già nel pieno del mio film.
         Mi ha preso la mano, tesə a bestia come non l’avevo mai vistə.
         “Aspetto un bambino”.
+            {
+            - are_two_entities_together(Mentor, PG):
+                Ma che cosa adorabile!   
+            }
         E {player_name}, tutto è diventato grigio.
         Zero, il vuoto nella testa.
         Ci eravamo ripromess3 mille volte che non sarebbe successo.
@@ -637,11 +641,6 @@
             Commento Riccio.
                         
         }
-        {
-            - are_two_entities_together(Mentor, PG):
-            Commento Mentore.
-                        
-        }
         
         Tornare dai miei è come un viaggio nel tempo.
         Scendo, e mi sembra che tutto sia fermo, e questa cosa è rassicurante.
@@ -709,11 +708,6 @@
             Commento Riccio.
                         
         }
-        {
-            - are_two_entities_together(Mentor, PG):
-            Commento Mentore.
-                        
-        }
         
         Ciao {player_name}, e {player_pronouns has him:benvenuto|{player_pronouns has her:benvenuta|benvenutə}} in un nuovo flusso di coscienza di {charNameOne} che non si chiama {charNameOne} e che prima o poi troverà il suo vero nome.
         E forse ci sto prendendo gusto con questi pipponi.
@@ -745,6 +739,11 @@
         E sono cose che noi persone abbiamo già affrontato miliardi di volte.
         Eppure siamo ancora qui.
         E c’è ancora speranza.
+            {
+                - are_two_entities_together(Mentor, PG):
+                    Sono parole piene di conforto, {charNameOne}.
+                    Grazie.       
+            }
             
             + [Risposta blu.]
                 -> color_variation_management(FirstCharacter, blueC)->  
@@ -782,13 +781,12 @@
             Commento Riccio.
                         
         }
-        {
-            - are_two_entities_together(Mentor, PG):
-            Commento Mentore.
-                        
-        }
         
         Sai, {player_name}, l’amore non è come me l’aspettavo.
+            {
+                - are_two_entities_together(Mentor, PG):
+                    Temo sia sempre vero.     
+            }
         Sono una di quelle che dice "Ti amo" dopo due incontri.
         Lo puoi dire, è cringe.
         Ma quando l'ho detto ad Ennio, è stato diverso dalle altre volte.
@@ -849,12 +847,7 @@
             Commento Riccio.
                         
         }
-        {
-            - are_two_entities_together(Mentor, PG):
-            Commento Mentore.
-                        
-        }
-        
+
         C’è questa cosa che mi stupisce sempre.
         Puoi passare anni con una persona, vederla quasi tutti i giorni.
         Studiarci, farci festa, finire nei casini.
@@ -878,6 +871,10 @@
         Mi sembra che più si è grandi, più si finisce per essere soli.
         E io non voglio stare sola.
         Ha senso?
+                {
+                    - are_two_entities_together(Mentor, PG):
+                        ~ change_entity_place(Mentor)  
+                }
         
         //Risposte
             + [Risposta rossa.]
@@ -917,11 +914,7 @@
             Commento Riccio.
                         
         }
-        {
-            - are_two_entities_together(Mentor, PG):
-            Commento Mentore.
-                        
-        }
+
         Sai perché litigo tantissimo con mamma?
         È perché dice che non so mai accontentarmi.
         Detto da quella che mi ha spedito in quell’inferno di ipercompetitività che il Conservatorio.
@@ -947,6 +940,11 @@
         Forse anche di riconoscimento sociale.
         Sono una merda, {player_name}, vero?
         Una delusione.
+            {
+                - are_two_entities_together(Mentor, PG):
+                    Non essere così severa con te, {charNameOne}.
+                    Essere adulte significa spesso capire quanto siamo fallibili.
+            }
         
         + [Risposta rossa.]
             -> color_variation_management(FirstCharacter, redC)->  
