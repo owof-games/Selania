@@ -76,10 +76,10 @@
 //UP: coerenza.
 //DOWN: incoerenza, cose random
     VAR secondChar_purple = 0.00
-    VAR secondChar_Yellow = 0.00
-    VAR secondChar_Blue = 0.00
-    VAR secondChar_Green = 0.00
-    VAR secondChar_Red = 0.00                   
+    VAR secondChar_yellow = 0.00
+    VAR secondChar_blue = 0.00
+    VAR secondChar_green = 0.00
+    VAR secondChar_red = 0.00                   
                      
                     /* ---------------------------------
                     
@@ -96,26 +96,26 @@
     //L'obbiettivo è: beccare almeno il 66% delle risposte.
     //Invece di complicarmi la vita posso usare la matematica.
     
-    ~ temp allColorsValue = secondChar_Red + secondChar_Blue + secondChar_Green + secondChar_Yellow + secondChar_purple
+    ~ temp allColorsValue = secondChar_red + secondChar_blue + secondChar_green + secondChar_yellow + secondChar_purple
     ~ temp minimumPercentValue = ((allColorsValue/100.00)*secondChar_relationshipGoodPercentage)
     
         {debug: La percentuale di risposte coerenti per una buona relazione è di {secondChar_relationshipGoodPercentage}. Il {secondChar_relationshipGoodPercentage}% di tutta la somma dei colori di Riccio (che è {allColorsValue}) è {minimumPercentValue}.}
-        {debug: Il valore di viola è: {FLOAT(secondChar_purple)}, di verde è: {FLOAT(secondChar_Green)}, di rosso è: {FLOAT(secondChar_Red)}, di blu è: {FLOAT(secondChar_Blue)}, di giallo è: {FLOAT(secondChar_Yellow)}}
+        {debug: Il valore di viola è: {FLOAT(secondChar_purple)}, di verde è: {FLOAT(secondChar_green)}, di rosso è: {FLOAT(secondChar_red)}, di blu è: {FLOAT(secondChar_blue)}, di giallo è: {FLOAT(secondChar_yellow)}}
         
         {
             - secondChar_purple > minimumPercentValue:
                     ~ secondChar_relationshipStatus ++
 
-            - secondChar_Green > minimumPercentValue:
+            - secondChar_green > minimumPercentValue:
                     ~ secondChar_relationshipStatus ++  
 
-            - secondChar_Red > minimumPercentValue:
+            - secondChar_red > minimumPercentValue:
                     ~ secondChar_relationshipStatus ++ 
 
-            - secondChar_Blue > minimumPercentValue:
+            - secondChar_blue > minimumPercentValue:
                     ~ secondChar_relationshipStatus ++
 
-            - secondChar_Yellow > minimumPercentValue:
+            - secondChar_yellow > minimumPercentValue:
                     ~ secondChar_relationshipStatus ++
 
             {debug: Una risposta supera il 66 per cento delle scelte e quindi aumento l'inchiostro del secondo personaggio di un livello. Ora è a {secondChar_relationshipStatus}}
@@ -217,36 +217,36 @@
 //Riutilizziamo la stessa logica prodotta dall'affinity calculator, ma con impatti diversi: > 90, >70, >60, > 40
 {debug: passo per secondNaming.}
 
-    ~ temp allColorsValue = secondChar_Red + secondChar_Blue + secondChar_Green + secondChar_Yellow + secondChar_purple
+    ~ temp allColorsValue = secondChar_red + secondChar_blue + secondChar_green + secondChar_yellow + secondChar_purple
     ~ temp minimumPercentValue = (allColorsValue/100.00)
     ~ temp winnerColor = 0
 
-{debug: Il valore di secondChar_Red è {secondChar_Red} , di secondChar_Blue è {secondChar_Blue}, di secondChar_Green è {secondChar_Green}, di secondChar_Yellow è {secondChar_Yellow} e di secondChar_purple è {secondChar_purple}. La somma di tutti i colori è {allColorsValue}. Il valore di minimumPercentValue è {minimumPercentValue}.}
+{debug: Il valore di secondChar_red è {secondChar_red} , di secondChar_blue è {secondChar_blue}, di secondChar_green è {secondChar_green}, di secondChar_yellow è {secondChar_yellow} e di secondChar_purple è {secondChar_purple}. La somma di tutti i colori è {allColorsValue}. Il valore di minimumPercentValue è {minimumPercentValue}.}
 
 //Resetto il valore del nome di Riccio
     ~ secondChar_ActualName = ()
 
     //Verifico quale sia il valore "vincente"
     {
-        - (secondChar_purple > secondChar_Green) && (secondChar_purple > secondChar_Red) && (secondChar_purple > secondChar_Blue) && (secondChar_purple > secondChar_Yellow):
+        - (secondChar_purple > secondChar_green) && (secondChar_purple > secondChar_red) && (secondChar_purple > secondChar_blue) && (secondChar_purple > secondChar_yellow):
                  ~ winnerColor = secondChar_purple
                 {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_purple, che è {secondChar_purple}.}
     
-        - (secondChar_Green > secondChar_purple) && (secondChar_Green > secondChar_Red) && (secondChar_Green > secondChar_Blue) && (secondChar_Green > secondChar_Yellow):
-                 ~ winnerColor = secondChar_Green
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_Green, che è {secondChar_Green}.}
+        - (secondChar_green > secondChar_purple) && (secondChar_green > secondChar_red) && (secondChar_green > secondChar_blue) && (secondChar_green > secondChar_yellow):
+                 ~ winnerColor = secondChar_green
+                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_green, che è {secondChar_green}.}
         
-        - (secondChar_Red > secondChar_Green) && (secondChar_Red > secondChar_purple) && (secondChar_Red > secondChar_Blue) && (secondChar_Red > secondChar_Yellow):
-                 ~ winnerColor = secondChar_Red
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_Red, che è {secondChar_Red}.}
+        - (secondChar_red > secondChar_green) && (secondChar_red > secondChar_purple) && (secondChar_red > secondChar_blue) && (secondChar_red > secondChar_yellow):
+                 ~ winnerColor = secondChar_red
+                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_red, che è {secondChar_red}.}
         
-        - (secondChar_Yellow > secondChar_Green) && (secondChar_Yellow > secondChar_purple) && (secondChar_Yellow > secondChar_Blue) && (secondChar_Yellow > secondChar_Red):
-                 ~ winnerColor = secondChar_Yellow
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_Yellow, che è {secondChar_Yellow}.}
+        - (secondChar_yellow > secondChar_green) && (secondChar_yellow > secondChar_purple) && (secondChar_yellow > secondChar_blue) && (secondChar_yellow > secondChar_red):
+                 ~ winnerColor = secondChar_yellow
+                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_yellow, che è {secondChar_yellow}.}
         
-        - (secondChar_Blue > secondChar_Green) && (secondChar_Blue > secondChar_purple) && (secondChar_Blue > secondChar_Yellow) && (secondChar_Blue > secondChar_Red):
-                 ~ winnerColor = secondChar_Blue
-                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_Blue, che è {secondChar_Blue}.}
+        - (secondChar_blue > secondChar_green) && (secondChar_blue > secondChar_purple) && (secondChar_blue > secondChar_yellow) && (secondChar_blue > secondChar_red):
+                 ~ winnerColor = secondChar_blue
+                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_blue, che è {secondChar_blue}.}
     
     }
 

@@ -179,10 +179,10 @@
             ~ temp_endedPNGPurple = firstChar_purple
             
         - charES == SecondCharacter:
-            ~ temp_endedPNGRed = secondChar_Red
-            ~ temp_endedPNGGreen = secondChar_Green
-            ~ temp_endedPNGBlue = secondChar_Blue
-            ~ temp_endedPNGYellow = secondChar_Yellow
+            ~ temp_endedPNGRed = secondChar_red
+            ~ temp_endedPNGGreen = secondChar_green
+            ~ temp_endedPNGBlue = secondChar_blue
+            ~ temp_endedPNGYellow = secondChar_yellow
             ~ temp_endedPNGPurple = secondChar_purple
             
     

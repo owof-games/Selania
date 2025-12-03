@@ -1518,10 +1518,10 @@ LIST nest_colorParametersChoice = redC, yellowC, blueC, greenC, purpleC
             ~ firstChar_purple += nest_temporaryPurple
         
         - nest_currentTalker == SecondCharacter:
-            ~ secondChar_Red += nest_temporaryRed
-            ~ secondChar_Yellow += nest_temporaryYellow
-            ~ secondChar_Blue += nest_temporaryBlue
-            ~ secondChar_Green += nest_temporaryGreen
+            ~ secondChar_red += nest_temporaryRed
+            ~ secondChar_yellow += nest_temporaryYellow
+            ~ secondChar_blue += nest_temporaryBlue
+            ~ secondChar_green += nest_temporaryGreen
             ~ secondChar_purple += nest_temporaryPurple
         
         - nest_currentTalker == Mentor:

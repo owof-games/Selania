@@ -490,14 +490,14 @@
         - cookingCompanion == SecondCharacter:
             ~ kitchen_storagePurple = secondChar_purple
                 ~ secondChar_purple = 0
-            ~ kitchen_storageYellow = secondChar_Yellow
-                ~ secondChar_Yellow = 0
-            ~ kitchen_storageBlue = secondChar_Blue
-                ~ secondChar_Blue = 0
-            ~ kitchen_storageGreen = secondChar_Green
-                ~ secondChar_Green = 0
-            ~ kitchen_storageRed = secondChar_Red
-                ~ secondChar_Red = 0
+            ~ kitchen_storageYellow = secondChar_yellow
+                ~ secondChar_yellow = 0
+            ~ kitchen_storageBlue = secondChar_blue
+                ~ secondChar_blue = 0
+            ~ kitchen_storageGreen = secondChar_green
+                ~ secondChar_green = 0
+            ~ kitchen_storageRed = secondChar_red
+                ~ secondChar_red = 0
     }
 ->->
 
@@ -521,13 +521,13 @@
     - cookingCompanion == SecondCharacter:
             ~ secondChar_purple = secondChar_purple + kitchen_storagePurple
                 ~ kitchen_storagePurple = 0
-            ~ secondChar_Yellow = secondChar_Yellow + kitchen_storageYellow
+            ~ secondChar_yellow = secondChar_yellow + kitchen_storageYellow
                 ~ kitchen_storageYellow = 0
-            ~ secondChar_Blue = secondChar_Blue + kitchen_storageBlue
+            ~ secondChar_blue = secondChar_blue + kitchen_storageBlue
                 ~ kitchen_storageBlue = 0
-            ~ secondChar_Green = secondChar_Green + kitchen_storageGreen
+            ~ secondChar_green = secondChar_green + kitchen_storageGreen
                 ~ kitchen_storageGreen = 0
-            ~ secondChar_Red = secondChar_Red + kitchen_storageRed
+            ~ secondChar_red = secondChar_red + kitchen_storageRed
                 ~ kitchen_storageRed = 0
  
     

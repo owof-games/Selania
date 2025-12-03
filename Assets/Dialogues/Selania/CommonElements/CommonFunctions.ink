@@ -520,10 +520,10 @@
     
         - partner == SecondCharacter:
             ~ secondChar_purple = secondChar_purple * number
-            ~ secondChar_Yellow = secondChar_Yellow * number
-            ~ secondChar_Blue = secondChar_Blue * number
-            ~ secondChar_Green = secondChar_Green * number
-            ~ secondChar_Red = secondChar_Red * number
+            ~ secondChar_yellow = secondChar_yellow * number
+            ~ secondChar_blue = secondChar_blue * number
+            ~ secondChar_green = secondChar_green * number
+            ~ secondChar_red = secondChar_red * number
 
     }
 ->->
