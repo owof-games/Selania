@@ -27,15 +27,15 @@
             + (dove) [Questo posto è così insolito. Dove mi trovo?]
                 -> color_variation_management(Mentor, purpleC)->
                     {
-                        - trainStopContents has PG:
+                        - contentsTrainStop has PG:
                             Questa? È la fermata del treno.
                             Da qui arrivano le persone che hanno bisogno del nostro aiuto.
-                        - forestContents has PG:
+                        - contentsForest has PG:
                             Ora siamo nella foresta.
                             O meglio, la chiamo così perché.
                             Beh, ci sono tanti alberi.
                             Compreso quello lì tutto brutto e deperito.
-                        - pondContents has PG:
+                        - contentsPond has PG:
                             Questo è lo stagno.
                             Regno dei funghi, dell'umidità e delle zanzare.
                             E lì c'è la serra!
@@ -71,7 +71,7 @@
                         - firstChar_storyStatus == story_storyStarted:
                             Ed è anche arrivata una persona prima, si è sentito il rumore del treno.
                             {
-                                - trainStopContents has PG: 
+                                - contentsTrainStop has PG: 
                                     Ed è lì, di fianco a noi.
                                     {
                                         - are_two_entities_together(FirstCharacter, PG):
@@ -95,7 +95,7 @@
                 Ma non devo essere scortese ora.
                 Mi hai fatto una domanda, e vedrò di rispondere.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     {
-                        - trainStopContents has PG:
+                        - contentsTrainStop has PG:
                             Lì ad est troverai una porta, e ti ritroverai nella tua camera da letto.
                             Basta che ti stenderai a dormire, e tornerai nel mondo da cui vieni.
                         - else:
@@ -104,7 +104,7 @@
                 E se deciderai di tornare, troverai tutto nello stato in cui l'hai lasciato.
                 Ma lascia che ti rubi giusto un secondo!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                 
-            + [{trainStopContents has PG: Posso dare da mangiare a quegli uccellini?|Posso dare da mangiare agli uccellini della stazione?}]
+            + [{contentsTrainStop has PG: Posso dare da mangiare a quegli uccellini?|Posso dare da mangiare agli uccellini della stazione?}]
                     -> color_variation_management(Mentor, yellowC)->
                 Credo ci sia la loro mamma in giro, a recuperare vermetti vari.
                 Ma se hai voglia di fare cose, non ti preoccupare: ho compiti a bizzeffe da proporti!
@@ -255,13 +255,13 @@
                     Ti servirà di sicuro qualcosa per raccogliere gli oggetti!
                     Ecco, tieni uno zainetto.
                     {
-                        - forestContents has PG:
+                        - contentsForest has PG:
                             ~ move_entity(Backpack, Forest)
                         
-                        - trainStopContents has PG:
+                        - contentsTrainStop has PG:
                             ~ move_entity(Backpack, TrainStop)
                         
-                        - pondContents has PG:
+                        - contentsPond has PG:
                             ~ move_entity(Backpack, Pond)                            
                     
                     }

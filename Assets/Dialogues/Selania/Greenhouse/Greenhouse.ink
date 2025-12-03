@@ -2,7 +2,7 @@
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
             
-    {debug: <i>La lista degli oggetti nella stanza è: {greenhouseContents}.}
+    {debug: <i>La lista degli oggetti nella stanza è: {contentsGreenhouse}.}
     {debug: <i>La lista degli oggetti nel deposito è: {safekeepingContents}.}
 
 

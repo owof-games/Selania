@@ -258,9 +258,9 @@
 
 === dog_mentor
     {
-        - trainStopContents has PG:
+        - contentsTrainStop has PG:
             {
-                - trainStopContents has DoggoNoNotes:
+                - contentsTrainStop has DoggoNoNotes:
                     Ma quanto sei carina cagnolina!#speaker:{fifthChar_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:mentore_hurry
                     Ma quanto!
                     Andiamo a fare due passi?

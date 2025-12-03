@@ -5,9 +5,9 @@
     //Storylets speciali
         {
         //Apertura biblioteca
-         - are_two_entities_together(SecondCharacter, PG) && (first_char_main_storylets.five or second_char_main_storylets.three) && kitchenContents hasnt PG && not open_the_library:
+         - are_two_entities_together(SecondCharacter, PG) && (first_char_main_storylets.five or second_char_main_storylets.three) && contentsKitchen hasnt PG && not open_the_library:
                {
-                   - forestContents has PG:
+                   - contentsForest has PG:
                         -> open_the_library
                     
                     - else:
@@ -23,9 +23,9 @@
                } 
                
         //Apertura nido
-        // - are_two_entities_together(SecondCharacter, PG) && (first_char_main_storylets.six or second_char_main_storylets.six) && kitchenContents hasnt PG && not open_nest:
+        // - are_two_entities_together(SecondCharacter, PG) && (first_char_main_storylets.six or second_char_main_storylets.six) && contentsKitchen hasnt PG && not open_nest:
         //         {
-        //            - libraryContents has PG:
+        //            - contentsLibrary has PG:
         //                 -> open_nest
                     
         //             - else:

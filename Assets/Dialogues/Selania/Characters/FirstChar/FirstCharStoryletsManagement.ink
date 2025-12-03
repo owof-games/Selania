@@ -8,7 +8,7 @@
             //Apertura cucina
                 - are_two_entities_together(FirstCharacter, PG) && (first_char_main_storylets.four or second_char_main_storylets.two) and not open_the_kitchen:
                        {
-                           - pondContents has PG:
+                           - contentsPond has PG:
                                -> open_the_kitchen
                             
                             - else:

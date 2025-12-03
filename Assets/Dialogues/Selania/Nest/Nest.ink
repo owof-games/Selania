@@ -3,7 +3,7 @@
 #ambientSounds: {tag_ambientSounds()}
 //Qui Oven avrà solo una funzione di animazione, non serve che ci interagiamo
 
-    {debug: <i>La lista degli oggetti nella stanza è: {nestContents}.}
+    {debug: <i>La lista degli oggetti nella stanza è: {contentsNest}.}
     {debug: <i>La lista degli oggetti nel deposito è: {safekeepingContents}.}
     
         {

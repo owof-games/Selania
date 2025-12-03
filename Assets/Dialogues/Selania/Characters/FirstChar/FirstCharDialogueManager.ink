@@ -130,7 +130,7 @@
                         Uh, mi sa che la cucina è occupata da {charNameTwo}, sta cucinando qualcosa di strano.
                             ->main
 
-                    - kitchenContents has TheKitchenFrog:
+                    - contentsKitchen has TheKitchenFrog:
                         C'è già una certa ranocchia che sta aspettando di cucinare con te.    
                             ->main
                             

@@ -2,7 +2,7 @@
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
 
-    {debug: La lista degli oggetti nella stanza è: {trainStopContents}.}
+    {debug: La lista degli oggetti nella stanza è: {contentsTrainStop}.}
 
     {train_stop == 1: La stazione profuma di aria nevosa e nuovi arrivi.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     

@@ -79,12 +79,12 @@
             -> about_not_mandatory_work    
             
         //Invito a leggere la posta nuova    
-        - trainStopContents has FirstCharacterNotes or trainStopContents has SecondCharacterNotes && not first_character_notes && not second_character_notes:
+        - contentsTrainStop has FirstCharacterNotes or contentsTrainStop has SecondCharacterNotes && not first_character_notes && not second_character_notes:
             {
-                - trainStopContents has FirstCharacterNotes && not first_character_notes && not first_char_new_mail && mentor_tutorialPauses == false:
+                - contentsTrainStop has FirstCharacterNotes && not first_character_notes && not first_char_new_mail && mentor_tutorialPauses == false:
                     -> first_char_new_mail
 
-                - trainStopContents has SecondCharacterNotes && not second_character_notes && not second_char_new_mail && mentor_tutorialPauses == false:
+                - contentsTrainStop has SecondCharacterNotes && not second_character_notes && not second_char_new_mail && mentor_tutorialPauses == false:
                     -> second_char_new_mail
 
                 - else:

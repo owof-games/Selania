@@ -2,7 +2,7 @@
 #background: {tag_background()}
 #ambientSounds: {tag_ambientSounds()}
             
-{debug: <i>La lista degli oggetti nella stanza è: {forestContents}.}
+{debug: <i>La lista degli oggetti nella stanza è: {contentsForest}.}
 
 {forest == 1:La foresta è canto sospeso.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     -> witch_frog_mission_notifier ->

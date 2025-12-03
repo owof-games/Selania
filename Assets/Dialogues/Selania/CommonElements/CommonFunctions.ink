@@ -294,7 +294,7 @@
     //Ho messo (entity_location(SecondCharacter) != Kitchen) perché così non parte mai la cucina autonoma se c'è qualcunx in cucina.
     
         {
-            - player_accessiblePlaces has Kitchen && (not second_char_cooking_tracker) && (entity_location(FirstCharacter) != Kitchen) && second_char_main_storylets.one && kitchenContents hasnt TheKitchenFrog:
+            - player_accessiblePlaces has Kitchen && (not second_char_cooking_tracker) && (entity_location(FirstCharacter) != Kitchen) && second_char_main_storylets.one && contentsKitchen hasnt TheKitchenFrog:
             
                 ~ kitchen_secondCharIsCooking = true
                 ~ move_entity(SecondCharacter, Kitchen)
@@ -341,7 +341,7 @@
 
     //Chitarra
         {
-            - player_accessiblePlaces has Kitchen && (not first_char_cooking_tracker) && (entity_location(SecondCharacter) != Kitchen) && kitchenContents hasnt TheKitchenFrog:
+            - player_accessiblePlaces has Kitchen && (not first_char_cooking_tracker) && (entity_location(SecondCharacter) != Kitchen) && contentsKitchen hasnt TheKitchenFrog:
             
                     ~ kitchen_firstCharIsCooking = true
                     ~ move_entity(FirstCharacter, Kitchen)
@@ -467,7 +467,7 @@
 //Se l'ho letta, quando mi sposterò dalla stazione, il cane se ne andrà
 //Se ci sono lettere da leggere e quella del doggo ancora non è stata letta, 
     {
-        - first_char_story_ended.goodbye && firstChar_mailPause < 0 && trainStopContents hasnt SecondCharacterNotes && not first_character_notes.three:
+        - first_char_story_ended.goodbye && firstChar_mailPause < 0 && contentsTrainStop hasnt SecondCharacterNotes && not first_character_notes.three:
         
                 ~ move_entity(FirstCharacterNotes, TrainStop)
                 {debug: Ho messo la nota della prima personaggia alla fermata del bus.}
@@ -475,7 +475,7 @@
     }
     
     {
-        - second_char_story_ended.goodbye && secondChar_mailPause < 0 && trainStopContents hasnt FirstCharacterNotes && not second_character_notes.three:
+        - second_char_story_ended.goodbye && secondChar_mailPause < 0 && contentsTrainStop hasnt FirstCharacterNotes && not second_character_notes.three:
         
                 ~ move_entity(SecondCharacterNotes, TrainStop)
                 {debug: Ho messo la nota del secondo personaggio alla fermata del bus.}
@@ -484,7 +484,7 @@
     }
     
     {
-        - trainStopContents has DoggoNoNotes:
+        - contentsTrainStop has DoggoNoNotes:
         
                 ~ move_entity(DoggoNoNotes, Safekeeping)
                 {debug: Ho spostato la dogga nel safekeeping.}

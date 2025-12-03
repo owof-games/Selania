@@ -119,15 +119,15 @@ VAR saturationVar = 0
     ~ move_entity(MoonTrees, Safekeeping)
     
     {
-        - libraryContents has NewMoonAnim:
+        - contentsLibrary has NewMoonAnim:
            ~ move_entity(NewMoonAnim, Safekeeping)
-        - libraryContents has FirstQuarter:
+        - contentsLibrary has FirstQuarter:
             ~ move_entity(FirstQuarterAnim, Safekeeping)
-        - libraryContents has FullMoon:
+        - contentsLibrary has FullMoon:
             ~ move_entity(FullMoonAnim, Safekeeping)
-        - libraryContents has ThirdQuarter:
+        - contentsLibrary has ThirdQuarter:
             ~ move_entity(ThirdQuarterAnim, Safekeeping)
-        - libraryContents has RedMoon:
+        - contentsLibrary has RedMoon:
             ~ move_entity(RedMoonAnim, Safekeeping)
           
     }    

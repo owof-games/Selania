@@ -251,7 +251,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 -> color_variation_management(FirstCharacter, purpleC)->
             -
         {
-            - kitchenContents has Bat:
+            - contentsKitchen has Bat:
                 Questo pipistrello mi sta spaventando.
                 Ma c'è da dire che da quando c'è lui in giro ci sono meno zanzare in giro!
 

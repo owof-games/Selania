@@ -16,11 +16,11 @@
         ~ player_somethingStrange ++
             
             {
-                - forestContents has PG:
+                - contentsForest has PG:
                     ~ move_entity(RewriterBook, Forest)
-                - trainStopContents has PG:
+                - contentsTrainStop has PG:
                     ~ move_entity(RewriterBook, TrainStop)
-                - pondContents has PG:
+                - contentsPond has PG:
                     ~ move_entity(RewriterBook, Pond)        
             }
             
@@ -167,9 +167,9 @@
     C'è un cane!
     Non so perché dovrebbe essere la cosa che più mi stupisce di questo posto.
     {
-        - trainStopContents has PG:
+        - contentsTrainStop has PG:
             {
-                - trainStopContents has DoggoNoNotes:
+                - contentsTrainStop has DoggoNoNotes:
                     Hai visto com'è carina? 
                     Lì, sotto il tabellone?
                 

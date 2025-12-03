@@ -1,19 +1,19 @@
 //Lista dei contenuti di un determinato luogo, in modo da tracciare chi è dove
-    VAR bedroomContents = (RoomLoad, PG, settings)
+    VAR contentsBedroom = (RoomLoad, PG, settings)
 
-    VAR trainStopContents = (FromTrainStopToForest, FromTrainStopToBedroom, Birds)
+    VAR contentsTrainStop = (FromTrainStopToForest, FromTrainStopToBedroom, Birds)
 
-    VAR forestContents = (Bench, TheWitch, LeafOneSin, LeafTwoSin, LeafThreeSin, LeafFourSin, LeafFiveSin, LeafOneDx, LeafTwoDx, LeafThreeDx, FromForestToTrainStop, FromForestToPond, FromForestToLibraryBlocked, Arbustini)
+    VAR contentsForest = (Bench, TheWitch, LeafOneSin, LeafTwoSin, LeafThreeSin, LeafFourSin, LeafFiveSin, LeafOneDx, LeafTwoDx, LeafThreeDx, FromForestToTrainStop, FromForestToPond, FromForestToLibraryBlocked, Arbustini)
 
-    VAR pondContents = (FromPondToForest, FromPondToGreenhouseBlocked, FromPondToNest, FromPondToKitchenBlocked, CloudOne, CloudTwo, CloudThree)
+    VAR contentsPond = (FromPondToForest, FromPondToGreenhouseBlocked, FromPondToNest, FromPondToKitchenBlocked, CloudOne, CloudTwo, CloudThree)
 
-    VAR greenhouseContents = (FromGreenhouseToPond,  BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti, ErbaLiccia, FalsaPalude, LanaNotturna, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata)
+    VAR contentsGreenhouse = (FromGreenhouseToPond,  BaccaDellaAddolorata, BarbaDellInciampo, BastoneDellOzioso, BrinaDellImpossibile, CantoDelleCompagne, CardoAspinato, EderaDelleAmanti, ErbaLiccia, FalsaPalude, LanaNotturna, LicheneDegliAbissi, NonTiScordarDiTe, Olobino, LaSpazzata)
 
-    VAR libraryContents = (FromLibraryToForest, FromLibraryToNestBlocked, ReadingPlace)
+    VAR contentsLibrary = (FromLibraryToForest, FromLibraryToNestBlocked, ReadingPlace)
 
-    VAR nestContents = (FromNestToLibrary, ELManagement, redShell, yellowShell, blueShell)
+    VAR contentsNest = (FromNestToLibrary, ELManagement, redShell, yellowShell, blueShell)
 
-    VAR kitchenContents = (FromKitchenToPond, FirstRipple, SecondRipple, ThirdRipple)
+    VAR contentsKitchen = (FromKitchenToPond, FirstRipple, SecondRipple, ThirdRipple)
 
     VAR safekeepingContents = (RoomExit, FirstCharacter, SecondCharacter, ThirdCharacter, FourthCharacter, FifthCharacter, FirstCharacterNotes, SecondCharacterNotes, ThirdCharacterNotes, FourthCharacterNotes, TheFrog, FifthCharacterNotes, MenuSave, MenuQuit,  RewriterBook, FirstRecap, SecondRecap, ThirdRecap, FourthRecap, FrogRecap, DogRecap, WitchRecap, GreenhouseRecap, KitchenRecap, NestRecap, FifthRecap, RulesRecap, Backpack, cultivationKit, firstCharPaint, teaKit, littleLibrary, bowl, secondCharPaint, vase, miniBook, FromLibraryToNestNight, FromLibraryToNest, FromForestToLibrary, RedBee, GoldenBee, BrownBee, MoonTrees, Snail, FromPondToGreenhouseBlooming, WateringCan, TrainNoiseComing, BastonSound, NewMoonAnim, FirstQuarterAnim, FullMoonAnim, ThirdQuarterAnim, RedMoonAnim, nightTable, waterLily, Mentor, FromPondToKitchen, FromPondToGreenhouse, greenShell, purpleShell, KitchenFire, KitchenSmokeOne, KitchenSmokeTwo, KitchenSmokeThree, CookingWithFirstCharOBJ, CookingWithSecondCharOBJ, FirstCharCookingAloneOBJ,  EatingWithSecondCharOBJ, EatingWithFirstCharOBJ, Bat, BatHouseFront, BatHouseRetro, FromLibraryToNestBlockedNight, TrainNoiseGoingAway, StartingNote, DoggoNoNotes, TheKitchenFrog)
     
@@ -23,31 +23,31 @@
 //Funzione per tracciare se una data entità si trova o meno in un determinato luogo
 === function entity_location(entity)
     {
-        - forestContents has entity:
+        - contentsForest has entity:
             ~ return Forest
         
-        - trainStopContents has entity:
+        - contentsTrainStop has entity:
             ~ return TrainStop
         
-        - libraryContents has entity:
+        - contentsLibrary has entity:
             ~ return Library
         
-        - nestContents has entity:
+        - contentsNest has entity:
             ~ return Nest
         
-        - greenhouseContents has entity:
+        - contentsGreenhouse has entity:
             ~ return Greenhouse
         
-        - kitchenContents has entity:
+        - contentsKitchen has entity:
             ~ return Kitchen
         
-        - pondContents has entity:
+        - contentsPond has entity:
             ~ return Pond         
         
         - safekeepingContents has entity:
             ~ return Safekeeping
         
-        - bedroomContents has entity:
+        - contentsBedroom has entity:
             ~ return Bedroom
         
         - bookContents has entity:
@@ -67,31 +67,31 @@
 
     {CurrentLocation:
         - Forest:
-            ~ forestContents -= entity
+            ~ contentsForest -= entity
         
         - TrainStop:
-            ~ trainStopContents -= entity
+            ~ contentsTrainStop -= entity
         
         - Library:
-            ~ libraryContents -= entity
+            ~ contentsLibrary -= entity
         
         - Nest:
-            ~ nestContents-= entity
+            ~ contentsNest-= entity
         
         - Greenhouse:
-            ~ greenhouseContents -= entity
+            ~ contentsGreenhouse -= entity
         
         - Kitchen:
-            ~ kitchenContents -= entity
+            ~ contentsKitchen -= entity
         
         - Pond:
-            ~ pondContents -= entity
+            ~ contentsPond -= entity
             
         - Safekeeping:
             ~ safekeepingContents -= entity
         
         - Bedroom:
-            ~ bedroomContents -= entity
+            ~ contentsBedroom -= entity
             
         - BookPlace:
             ~ bookContents -= entity
@@ -102,31 +102,31 @@
 
     {destination:
         - Forest:
-            ~ forestContents += entity
+            ~ contentsForest += entity
         
         - TrainStop:
-            ~ trainStopContents += entity
+            ~ contentsTrainStop += entity
         
         - Library:
-            ~ libraryContents += entity
+            ~ contentsLibrary += entity
         
         - Nest:
-            ~ nestContents += entity
+            ~ contentsNest += entity
         
         - Greenhouse:
-            ~ greenhouseContents += entity
+            ~ contentsGreenhouse += entity
         
         - Kitchen:
-            ~ kitchenContents += entity
+            ~ contentsKitchen += entity
         
         - Pond:
-            ~ pondContents += entity
+            ~ contentsPond += entity
             
         - Safekeeping:
             ~ safekeepingContents += entity
         
         - Bedroom:
-            ~ bedroomContents += entity
+            ~ contentsBedroom += entity
             
          - BookPlace:
             ~ bookContents += entity 

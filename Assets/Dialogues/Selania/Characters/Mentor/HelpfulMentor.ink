@@ -126,7 +126,7 @@
     + [Sulla stazione.]
             Intendi il luogo dove passo ore a spalare neve?#speaker:{mentor_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_hurry
             La stazione, ad est della foresta, è il posto dove approdano le nuove persone.
-            {trainStopContents has FirstCharacterNotes or trainStopContents has SecondCharacterNotes: E dove arriva la cagnolina postina.}
+            {contentsTrainStop has FirstCharacterNotes or contentsTrainStop has SecondCharacterNotes: E dove arriva la cagnolina postina.}
             È anche il luogo attraverso cui potrai raggiungerci.
             O da cui andartene, quando vorrai.#speaker:{mentor_tag()}  #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)}  #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #portrait:mentore_sorry
                 -> top
@@ -153,7 +153,7 @@
             E a modo suo rilassante.
             Serve ad arrivare alla serra.
             {player_accessiblePlaces has Kitchen: E ad accedere alla cucina.}
-            {pondContents has TheFrog: E poi c'è quella rana.}
+            {contentsPond has TheFrog: E poi c'è quella rana.}
             -> top    
             
     + {(player_accessiblePlaces has Library) or (player_accessiblePlaces has Kitchen) or (player_accessiblePlaces has Nest)}[Sono altri i luoghi di cui vorrei parlare.]
@@ -254,7 +254,7 @@
                 ~ player_somethingStrange --
                 -> helping_mentor
         
-        * (talkingFrog) {pondContents has TheFrog} [C'è una rana blu parlante.]
+        * (talkingFrog) {contentsPond has TheFrog} [C'è una rana blu parlante.]
             {
                 - are_entities_together_in(Mentor, PG, Pond):
                     Ho notato.

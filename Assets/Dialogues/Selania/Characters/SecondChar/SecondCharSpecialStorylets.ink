@@ -193,9 +193,9 @@
     Un
     CANEEEEE!
     {
-        - trainStopContents has PG:
+        - contentsTrainStop has PG:
             {
-                - trainStopContents has DoggoNoNotes:
+                - contentsTrainStop has DoggoNoNotes:
                     L'hai visto?!?! Lì sotto al tabellone!
                 
                 - else:
