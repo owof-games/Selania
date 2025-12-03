@@ -420,6 +420,10 @@
         ~ temp charNameOne = translator(firstChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         ~ secondChar_storyletsForRewritingCount ++
+        {
+            - are_two_entities_together(Mentor, PG):
+               ~ change_entity_place(Mentor)
+        }
 
         Mi sono ricordato ora che non ho invitato nessun amico.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
         Mamma vuole che la festa sia solo per me.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
@@ -429,14 +433,16 @@
         Sapevi che gli uccelli vedono dieci colori?
         DIECI! Mica solo tre come noi!
         E che l'acso, atso, axotolot si fa ricrescere le braccia?
+
             + [Gli chiedo perché ha dato un calcio a {mentorName}.]
                 -> top
             + [Lo lascio continuare.]
             -
+
             {
                 - second_char_main_storylets.one.buffe:
-                Prima hai detto che sei qui perché è pieno di cose buffe.
-                Vuoi sapere una cosa buffissima?
+                    Prima hai detto che sei qui perché è pieno di cose buffe.
+                    Vuoi sapere una cosa buffissima?
 
             }    
         Le capre hanno dei loro accenti!
