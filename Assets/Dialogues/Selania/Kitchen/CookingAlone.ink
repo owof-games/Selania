@@ -25,87 +25,84 @@
     Ci viene detto che dobbiamo preparare qualcosa per i pesci della palude, per ringraziarli per lo spazio che ci hanno offerto.
     E perché non raccontarmi un poco come sta andando questa tua esperienza?
 
-        Come ti sembra questo posto?
-            + [Soffriggo dei cubetti di grano del rispetto.]
-                ~ kitchen_recipeNoun = "Zuppa di grano"
+        Come ti stai approcciando a questo posto?
+            + [Setaccio della polenta analitica.]
+                ~ kitchen_recipeNoun = "Polenta"
      
                
-            + [Impano delle striscioline di seitan malinconico.]
-                ~ kitchen_recipeNoun = "Grigliata di seitan"
+            + [Riscaldo l'acqua per della zuppetta empatica.]
+                ~ kitchen_recipeNoun = "Zuppetta"
 
                 
-            + [Sgrano dei fagioli del conflitto.]
-               ~ kitchen_recipeNoun = "Fagiolata"
+            + [Impasto una focaccia decisa.]
+               ~ kitchen_recipeNoun = "Focaccia"
 
         
-            + [Sbollento delle cimette di broccolo della fiducia.]
-                ~ kitchen_recipeNoun = "Cimetta di broccolo"
+            + [Preparo una panzanella caotica.]
+                ~ kitchen_recipeNoun = "Panzanella"
 
     
-            + [Schiaccio degli spicchi di aglio del distacco.]
-                ~ kitchen_recipeNoun = "Crema d'aglio"
+            + [Friggo della spirituale cicerchiata.]
+                ~ kitchen_recipeNoun = "Cicerchiata"
 
             -    
 
-        Cosa ne pensi del lavoro che stai facendo?
-             + [Tosto del pepe dell'onestà.]
-                ~ kitchen_recipeAdjective = "onesta"
+        E sei {player_pronouns has him:soddisfatto|{player_pronouns has her:soddisfatta|soddisfattə}} del lavoro che stai facendo?
+            
+            + [Aggiungo con decisione della assafetida.]
+                ~ kitchen_recipeAdjective = "decisa"
 
                
-            + [Spargo della curcuma divertente.]
-                ~ kitchen_recipeAdjective = "allegra"
+            + [Spargo con insicurezza del sommacco.]
+                ~ kitchen_recipeAdjective = "insicura"
 
              
-            + [Aggiungo del cumino empatico.]
-               ~ kitchen_recipeAdjective = "empatica"
+            + [Spolvero con disperazione della curcuma.]
+               ~ kitchen_recipeAdjective = "disperata"
 
         
-            + [Grattugio della cannella incondizionata.]
-                ~ kitchen_recipeAdjective = "incondizionata"
+            + [Incorporo con arroganza del cajun.]
+                ~ kitchen_recipeAdjective = "arrogante"
 
     
-            + [Sminuzzo dello zenzero leale.]
-                ~ kitchen_recipeAdjective = "leale"
+            + [Macino con mediocrità del pepe rosa.]
+                ~ kitchen_recipeAdjective = "mediocre"
   
             -      
-        Cosa pensi di {mentorName}?
-            + [Verso una mestolata di brodo del terrore.]
-                ~ kitchen_recipeComplement = "con brodo del terrore"
+        E cosa ne pensi di {mentorName}?
+            //Decoro
+            + [Decoro con della granella di affetto.]
+                ~ kitchen_recipeComplement = "con granella di affetto"
               
-               
-            + [Manteco della noce euforica.]
-                ~ kitchen_recipeComplement = "con noce euforica"
+            + [Abbellisco con delle gocce di cioccolato e sospetto.]
+                ~ kitchen_recipeComplement = "con gocce di cioccolato e sospetto"
    
-            + [Condisco con semi dell'"io? no, no è possibile!".]
-               ~ kitchen_recipeComplement = "con semi dell'<i>io? no, no è possibile!</i>"
+            + [Guarnisco con un battuto di caramello e indifferenza.]
+               ~ kitchen_recipeComplement = "con battuto di caramello e indifferenza"
 
-        
-            + [Incorporo una cucchiata di olio delle lusinghe.]
-                ~ kitchen_recipeComplement = "con olio delle lusinghe"
+            + [Addobbo con strisce di pastella e gratitudine.]
+                ~ kitchen_recipeComplement = "con strisce di pastella e gratitudine"
 
-    
-            + [Sminuzzo una manciata di peperoncini arrapati.]
-                ~ kitchen_recipeComplement = "con peperoncini arrapati"
+            + [Rifinisco con semi di zucca e fastidio.]
+                ~ kitchen_recipeComplement = "con semi di zucca e fastidio"
              
             -
         E come stai in generale?
-            + [Verso una mestolata di brodo del terrore.]
-                ~ kitchen_recipePP = "esitante"
-               
-               
-            + [Manteco della noce euforica.]
-                ~ kitchen_recipePP = "esitante"
-   
-            + [Condisco con semi dell'"io? no, no è possibile!".]
-               ~ kitchen_recipePP = "esitante"
-
         
-            + [Incorporo una cucchiata di olio delle lusinghe.]
-                ~ kitchen_recipePP = "esitante"
+            + [Mi verso un bicchiere di succo gioioso.]
+                ~ kitchen_recipePP = "e contorno di gioia"
+               
+            + [Mi preparo una tazza di tisana rilassata.]
+                ~ kitchen_recipePP = "e contorno di rilassatezza"
+   
+            + [Mi riempio una tazzina di caffè frenetico.]
+               ~ kitchen_recipePP = "e contorno di frenesia"
 
+            + [Mi offro un goccio dil distillato di curiosità.]
+                ~ kitchen_recipePP = "e contorno di curiosità"
     
-            + [Sminuzzo una manciata di peperoncini arrapati.]
-                ~ kitchen_recipePP = "esitante"
+            + [Prendo un bicchiere di acqua annoiata.]
+                ~ kitchen_recipePP = "e contorno di noia"
              
             -
         Bene, direi che il nostro piatto è pronto!
