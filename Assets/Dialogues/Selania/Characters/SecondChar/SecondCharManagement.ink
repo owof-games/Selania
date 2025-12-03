@@ -18,7 +18,7 @@
     VAR secondChar_crowPercentage = 90.00
     VAR secondChar_capibaraPercentage = 70.00
     VAR secondChar_dolphinePercentage = 60.00
-    VAR secondChar_wolfPercentage = 40.00
+    VAR secondChar_wolfPercentage = 30.00
 
 //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
     VAR secondChar_favouritesGifts = (BrinaDellImpossibile, BastoneDellOzioso, LicheneDegliAbissi)
@@ -219,35 +219,57 @@
 
     ~ temp allColorsValue = secondChar_Red + secondChar_Blue + secondChar_Green + secondChar_Yellow + secondChar_purple
     ~ temp minimumPercentValue = (allColorsValue/100.00)
+    ~ temp winnerColor = 0
 
 {debug: Il valore di secondChar_Red è {secondChar_Red} , di secondChar_Blue è {secondChar_Blue}, di secondChar_Green è {secondChar_Green}, di secondChar_Yellow è {secondChar_Yellow} e di secondChar_purple è {secondChar_purple}. La somma di tutti i colori è {allColorsValue}. Il valore di minimumPercentValue è {minimumPercentValue}.}
 
 //Resetto il valore del nome di Riccio
     ~ secondChar_ActualName = ()
+
+    //Verifico quale sia il valore "vincente"
+    {
+        - (secondChar_purple > secondChar_Green) && (secondChar_purple > secondChar_Red) && (secondChar_purple > secondChar_Blue) && (secondChar_purple > secondChar_Yellow):
+                 ~ winnerColor = secondChar_purple
+                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_purple, che è {secondChar_purple}.}
+    
+        - (secondChar_Green > secondChar_purple) && (secondChar_Green > secondChar_Red) && (secondChar_Green > secondChar_Blue) && (secondChar_Green > secondChar_Yellow):
+                 ~ winnerColor = secondChar_Green
+                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_Green, che è {secondChar_Green}.}
+        
+        - (secondChar_Red > secondChar_Green) && (secondChar_Red > secondChar_purple) && (secondChar_Red > secondChar_Blue) && (secondChar_Red > secondChar_Yellow):
+                 ~ winnerColor = secondChar_Red
+                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_Red, che è {secondChar_Red}.}
+        
+        - (secondChar_Yellow > secondChar_Green) && (secondChar_Yellow > secondChar_purple) && (secondChar_Yellow > secondChar_Blue) && (secondChar_Yellow > secondChar_Red):
+                 ~ winnerColor = secondChar_Yellow
+                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_Yellow, che è {secondChar_Yellow}.}
+        
+        - (secondChar_Blue > secondChar_Green) && (secondChar_Blue > secondChar_purple) && (secondChar_Blue > secondChar_Yellow) && (secondChar_Blue > secondChar_Red):
+                 ~ winnerColor = secondChar_Blue
+                {debug: Il valore di winnerColor è {winnerColor}, pari a quello di secondChar_Blue, che è {secondChar_Blue}.}
+    
+    }
+
+    {debug:Il valore da superare per corvo è {minimumPercentValue * secondChar_crowPercentage}; il valore da superare per capibara è {minimumPercentValue * secondChar_capibaraPercentage}; Il valore da superare per delfino è {minimumPercentValue * secondChar_dolphinePercentage}; il valore da superare per lupo è {minimumPercentValue * secondChar_wolfPercentage}}
     
     {
-        - secondChar_purple or secondChar_Green or secondChar_Red or secondChar_Blue or secondChar_Yellow >= (minimumPercentValue * secondChar_crowPercentage):
+        - winnerColor >= (minimumPercentValue * secondChar_crowPercentage):
             ~ secondChar_ActualName += Corvo
-                ->->
         
-        - secondChar_purple or secondChar_Green or secondChar_Red or secondChar_Blue or secondChar_Yellow >= (minimumPercentValue * secondChar_capibaraPercentage):
+        - winnerColor >= (minimumPercentValue * secondChar_capibaraPercentage):
             ~ secondChar_ActualName += Capibara   
-                ->-> 
         
-        - secondChar_purple or secondChar_Green or secondChar_Red or secondChar_Blue or secondChar_Yellow >= (minimumPercentValue * secondChar_dolphinePercentage):
+        - winnerColor >= (minimumPercentValue * secondChar_dolphinePercentage):
             ~ secondChar_ActualName += Delfino    
-                ->->
         
-        - secondChar_purple or secondChar_Green or secondChar_Red or secondChar_Blue or secondChar_Yellow >= (minimumPercentValue * secondChar_wolfPercentage):
+        - winnerColor >= (minimumPercentValue * secondChar_wolfPercentage):
             ~ secondChar_ActualName += Lupo
-                ->->
         
         - else:
             ~ secondChar_ActualName += Grizzly
-                ->->
     }
     
-        ->-> 
+    ->-> 
 
 
 
