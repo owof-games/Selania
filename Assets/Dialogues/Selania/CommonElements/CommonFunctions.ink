@@ -279,7 +279,7 @@
     ~ fifthChar_mailPause --
     
 //Riduzione valore Mindfulness per proporne una diversa poi    
-    ~ lastMindfulness --
+    ~ mentor_lastMindfulness --
 
 //Riduzione stanchezza rana
     ~ frog_tiredValue --

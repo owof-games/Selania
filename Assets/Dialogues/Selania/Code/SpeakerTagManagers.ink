@@ -1,4 +1,4 @@
-LIST speakersForEwWordTag = Influenced, Other
+LIST nest_speakersForEwWordTag = Influenced, Other
 
 /* ---------------------------------
 
@@ -222,7 +222,7 @@ LIST speakersForEwWordTag = Influenced, Other
    Funzioni per la gestione del tag dell'inchiostro: incremento 
 
 ----------------------------------*/
-LIST imagesStates = offState, onState, emptyState
+LIST ink_imagesStates = offState, onState, emptyState
 VAR numberQuestion = 0
 
 === function ink_tag_a (charInkCheck)

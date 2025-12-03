@@ -27,7 +27,7 @@
 
         {
             - are_two_entities_together(Mentor, PG) && (not that_little_liar_storylet):
-                ~ riccioMentoreViciniColpo = true
+                ~ mentor_riccioMentoreViciniColpo = true
                 -> that_little_liar_storylet  
 
             - else:

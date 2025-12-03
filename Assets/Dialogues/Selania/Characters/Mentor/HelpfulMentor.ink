@@ -297,11 +297,11 @@
  === mindfulness
  //Randomizzo i contenuti e nel caso posso usare anche qui i trigger warning.
  LIST mentor_actualMindfulness = firstMind, secondMind, thirdMind, fourthMind, fifthMind
- VAR lastMindfulness = 0
- VAR pauseMindfulness = 10
+ VAR mentor_lastMindfulness = 0
+ VAR mentor_pauseMindfulness = 10
  
  {
-    - lastMindfulness > 0:
+    - mentor_lastMindfulness > 0:
         {
             - mentor_actualMindfulness has firstMind:
                 -> one
@@ -316,7 +316,7 @@
         }
     
     - else:
-        ~ lastMindfulness = pauseMindfulness
+        ~ mentor_lastMindfulness = mentor_pauseMindfulness
         ~ mentor_actualMindfulness = ()
         
          {shuffle:

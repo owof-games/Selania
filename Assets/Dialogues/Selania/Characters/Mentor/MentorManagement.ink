@@ -26,10 +26,8 @@
 
 
 //VARIABILI NARRATIVE
-    VAR riccioMentoreViciniColpo = false
-    VAR riccioMentoreViciniInnaffiatoio = false
+    VAR mentor_riccioMentoreViciniColpo = false
     
-
 
 //Funzione per farsi notare
 === talk_to_me ===
