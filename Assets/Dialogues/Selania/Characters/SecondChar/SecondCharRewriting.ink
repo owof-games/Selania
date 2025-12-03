@@ -594,5 +594,5 @@
             ~ player_movementsCounter = 0
             ~ PG_advance_management(SecondCharacter)
             ~ numberQuestion = 0
-            ~ firstChar_InkLevel = ink_empty
+            ~ secondChar_InkLevel = ink_empty
                 -> main
