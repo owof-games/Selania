@@ -35693,6 +35693,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5202238963676562295, guid: 4e9a3bc34c9ab6c49a50fba6bde3b117, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1863324329}
+    - target: {fileID: 5202238963676562295, guid: 4e9a3bc34c9ab6c49a50fba6bde3b117, type: 3}
+      propertyPath: colorVariables.Array.data[6].variableName
+      value: secondChar_yellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202238963676562295, guid: 4e9a3bc34c9ab6c49a50fba6bde3b117, type: 3}
+      propertyPath: colorVariables.Array.data[11].variableName
+      value: secondChar_blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202238963676562295, guid: 4e9a3bc34c9ab6c49a50fba6bde3b117, type: 3}
+      propertyPath: colorVariables.Array.data[16].variableName
+      value: secondChar_green
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202238963676562295, guid: 4e9a3bc34c9ab6c49a50fba6bde3b117, type: 3}
+      propertyPath: colorVariables.Array.data[21].variableName
+      value: secondChar_red
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
