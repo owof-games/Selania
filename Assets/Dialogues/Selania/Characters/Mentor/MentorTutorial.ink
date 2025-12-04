@@ -151,6 +151,11 @@
         Ma evita assolutamente tutti gli altri posti bloccati, perché sono pericolosi!
         Ma mi stavo dimenticando di dirti cosa devi fare.
         Perché se sei qui, è per uno scopo, uno scopo davvero importante, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+
+                ~ mentor_pauseTalking = mentor_pauseDuration
+                ~ move_entity(FifthRecap, BookPlace)
+                ~ move_entity(RulesRecap, BookPlace)
+                @animation:RewriterBook 
             
             {
                 //Se non ho parlato con nessunx (ovvero: Chitarra, perché senza parlare a Chitarra, Riccio non compare)
@@ -171,11 +176,10 @@
             }
             
         Io devo raccogliere le foglie dalla foresta.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-                ~ mentor_pauseTalking = mentor_pauseDuration
-                ~ move_entity(FifthRecap, BookPlace)
-                @animation:RewriterBook 
+
         
         //Con questa voce evito che "you_are_a_rewriter" compaia subito dopo se le condizioni sono sensate.
+                
                 ~ mentor_tutorialPauses = true
                 ~ actual_speaker = ()
                 -> main
