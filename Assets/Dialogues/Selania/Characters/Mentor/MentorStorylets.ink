@@ -33,7 +33,7 @@
                         
             } 
 
-            + [Preferisco la stazione dei treni, è ordinata, precisa.]
+            + [Preferisco la stazione dei treni, è ordinata e precisa.]
                     -> color_variation_management(Mentor, blueC)->
                 Sì, ne capisco il fascino.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 A volte mi siedo lì e mi godo per qualche istante l'attesa.
@@ -61,7 +61,6 @@
                             Una cosa davvero fastidiosa.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     }
                 
-                
             + [Un po' come prendersi cura delle persone qui.]
                     -> color_variation_management(Mentor, greenC)->
                 Sì, anche se con meno pressioni.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -76,8 +75,6 @@
                 Non saprebbero resistere alle erbacce, al freddo.
                 No, non sono d'accordo, scusa.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
             -
-            
-            
         {
             - player_accessiblePlaces has Kitchen:
                 Ma ora vorrei pensare un attimo a come rendere più carino l'accesso alla cucina.
@@ -231,9 +228,6 @@
                 @animation:RewriterBook
                             
                     -> main
-    
-    
-    
     
     = four
     ~ temp charNameOne = translator(firstChar_ActualName)

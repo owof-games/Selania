@@ -185,12 +185,14 @@
     C: Che te la ritrovi se ti fai andare bene quello che hai?
     M: O quello che dice {charNameOne}.
     M: Qualcosa che è sempre altrove e quindi irraggiungibile?
+
+    //{charNameOne}, non potrai essere felice fintanto che non sai goderti ciò che hai.
     
         + [{mentorName}, tu parli di arrendersi.]
             -> color_variation_management(FirstCharacter, redC)->
             -> color_variation_management(Mentor, blueC)->
             
-        + [{charNameOne}, non potrai essere felice fintanto che non sai goderti ciò che hai. ]
+        + [{mentorName}, razionalmente la felicità non è stabile, ma temporanea.]
             -> color_variation_management(FirstCharacter, blueC)->
             -> color_variation_management(Mentor, blueC)->
         
@@ -259,7 +261,7 @@
     S: Ma così come l'acqua non può essere incendio, così {mentorName} non può essere qualcosa che non è.
     S: O portare nomi che non sa.
 
-        + [Metà delle cose che la voce dice non hanno senso.]
+        + [Metà delle cose che la voce dice sono illogiche.]
                 -> color_variation_management(Mentor, blueC)->
             S: {player_name} non vede, e quindi decide che qualcosa non esiste.
             S: Ma quella cosa esiste anche se {player_name} non vede.

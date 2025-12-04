@@ -22,18 +22,14 @@
                     -> about_colors_choices ->
             }
         
-            //Risposte, di cui una diversa a seconda che abbiamo incontrato o meno Mentore.
             + [Risposta viola.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             
             + [Risposta rossa.]
                 -> color_variation_management(FirstCharacter, redC)->
     
-            + {not welcome} [Risposta blu.]
-                -> color_variation_management(FirstCharacter, blueC)->
-            
-            + {welcome} [Risposta blu.]
-                -> color_variation_management(FirstCharacter, blueC)->    
+            + [Ma una persona non può essere un uccello.]
+                -> color_variation_management(FirstCharacter, blueC)->  
                  
             + [Risposta verde.]
                 -> color_variation_management(FirstCharacter, greenC)->
@@ -78,12 +74,8 @@
         Merda, Luca mi farà il culo.
         Quindi, {player_name}, qual è il messaggio nascosto di questo trip o sogno o quel che è?
         Datti da fare con le stronzate da inconscio, così mi sveglio o ripiglio e vedo di non mandare a puttane lavoro e relazione.
-     
-            //Risposte, di cui una diversa se ho parlato o meno con Mentore.
-            + {not welcome} [Risposta blu.]
-                -> color_variation_management(FirstCharacter, blueC)->
-            
-            + {welcome} [Risposta blu.]
+  
+            + [Nessun messaggio: sono una persona, non il tuo inconscio.]
                 -> color_variation_management(FirstCharacter, blueC)->
             
             + [Risposta gialla.]
@@ -92,7 +84,7 @@
             + [Risposta viola.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             
-            + [Risposta rossa.]
+            + [<i>La pizzico, così capisce che sono reale.]
                 -> color_variation_management(FirstCharacter, redC)->    
                  
             + [Risposta verde.]
@@ -101,16 +93,16 @@
             
         ~ move_entity(Mentor, TrainStop)
         
-        {
-            - not welcome:
-                (Mentore) Vi chiedo scusa, non avrei voluto origliare, ma volevo dirvi che non siete in un sogno, e che posso aiutarvi.
-                E tu quando puoi parlami, e ti spiegherò un po’ di cose.
+            {
+                - not welcome:
+                    (Mentore) Vi chiedo scusa, non avrei voluto origliare, ma volevo dirvi che non siete in un sogno, e che posso aiutarvi.
+                    E tu quando puoi parlami, e ti spiegherò un po’ di cose.
+                
+                - else:
+                    (Mentore) Scusatemi, non avrei voluto origliare, ma ci tenevo a dirti che no, non sei in un sogno {charNameOne}, ma {player_name} può davvero aiutarti.
+                    E {player_name}, ci sono altre cose che posso spiegarti in più rispetto al solo “vai e parla con qualcunə”.
+            }
             
-            - else:
-                (Mentore) Scusatemi, non avrei voluto origliare, ma ci tenevo a dirti che no, non sei in un sogno {charNameOne}, ma {player_name} può davvero aiutarti.
-                E {player_name}, ci sono altre cose che posso spiegarti in più rispetto al solo “vai e parla con qualcunə”.
-        }
-        
         Oook.
         Ok.
         Un fiore parlante.
@@ -175,9 +167,9 @@
         Forse dovrei respirare e bona, alla fine non so come va questa roba.
         Vorrei avere giusto avere carta e penna, e pensare a un pezzo su questa situazione.
         Sono settimane che non ho le energie per crearne uno che uno, manco mezzo accordo.
-        Ma tu invece che idea ti sei {player_pronouns has him:fatto|{player_pronouns has her:fatta|fattə}} di questo posto?
-        
-        //Risposte, di cui una diversa se ho parlato o meno con Mentore.
+        //Ma tu invece che idea ti sei {player_pronouns has him:fatto|{player_pronouns has her:fatta|fattə}} di questo posto?
+        Ma sto dicendo cose senza senso, vero {player_name}?
+
                 
             + [Risposta gialla.]
                 -> color_variation_management(FirstCharacter, yellowC)->
@@ -188,10 +180,7 @@
             + [Risposta viola.]
                 -> color_variation_management(FirstCharacter, purpleC)->
                 
-            + {not welcome} [Risposta blu.]
-                -> color_variation_management(FirstCharacter, blueC)->
-            
-            + {welcome} [Risposta blu.]
+            + [Un terzo delle persone odia il proprio capo, sei in buona compagnia.]
                 -> color_variation_management(FirstCharacter, blueC)->
 
             + [Risposta verde.]
@@ -263,7 +252,6 @@
         Ha senso?
         E mi chiedevo: secondo te, cosa vuol dire fidarsi?
         
-        //Risposte
             + [Risposta verde.]
                 -> color_variation_management(FirstCharacter, greenC)->
                 
@@ -273,7 +261,7 @@
             + [Risposta gialla.]
                 -> color_variation_management(FirstCharacter, yellowC)->
             
-            + [Risposta blu.]
+            + [Concordare delle regole e vederle rispettate.]
                 -> color_variation_management(FirstCharacter, blueC)->
             
             + [Risposta rossa.]
@@ -338,13 +326,12 @@
         Altre, che dovrei fare qualcosa di più grande, che faccia meglio a più persone.
         Non so se ha senso.
         
-        //Risposte
         //Una di queste risposte genera un commento di Chitarra che ci racconta qualcosa simili imprenditore giochi Cortese come esempio tossico.
 
             + [Risposta viola.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             
-            + [Risposta blu.]
+            + [Le energie sono sprecate solo se non le dai una direzione.]
                 -> color_variation_management(FirstCharacter, blueC)->
             
             + [Risposta rossa.]
@@ -390,7 +377,7 @@
         Avevo bisogno di fare qualcosa di diverso.
         Mi aspettavo acqua fredda e schifosa, e invece era tiepida e avvolgente.
         Mi ha fatto sentire così al sicuro, vulnerabile in modo piacevole.
-        Mi ha fatto pensare a cosa penso quando penso a “casa”.
+        Mi ha fatto pensare a cosa provo quando penso a “casa”.
         Quella dove vivo è una catapecchia piena di muffa, ma è calda grazie a Valeria e le altre coinquiline.
         Ultimamente però il continuo ricambio di coinqui e le tracce di chi se ne è andata riempie lo spazio di fantasmi.
         Mi fa sentire precaria, tipo.
@@ -415,15 +402,13 @@
         Ha senso?
         Secondo te una relazione ci cambia? O ci mostra chi siamo davvero?
         
-        //Risposte
-        
             + [Risposta verde.]
                 -> color_variation_management(FirstCharacter, greenC)->
             
             + [Risposta gialla.]
                 -> color_variation_management(FirstCharacter, yellowC)->
                 
-            + [Risposta blu.]
+            + [Non esiste un "chi siamo davvero".]
                 -> color_variation_management(FirstCharacter, blueC)->
                 
             + [Risposta rossa.]
@@ -482,6 +467,7 @@
         Suonerà arrogante, ma vorrei per una volta creare qualcosa di così forte da spazzare tutta questa merda.
         Qualcosa che sia potente e inappellabile.
         Qualcosa che salvi il mondo.
+        Ed è la seconda volta che torno su questo tema, merda.
             {
                 - are_two_entities_together(Mentor, PG):
                     Oh ragazza mia.
@@ -501,8 +487,7 @@
             + [Risposta verde.]
                 -> color_variation_management(FirstCharacter, greenC)->
     
-                
-            + [Risposta blu.]
+            + [I fatti non vanno colorati, ma bisogna saper divulgarli.]
                 -> color_variation_management(FirstCharacter, blueC)->
             -    
         A volte mi chiedo se non abbia senso lasciare il lavoro, rischiare tutto, e dedicarmi solo alla musica.
@@ -565,54 +550,48 @@
         E…
         Madonna, quanto vorrei del vino ora.
         Tu come ti saresti {player_pronouns has him:sentito|{player_pronouns has her:sentita|sentitə}} al mio posto?
-        
-        //Risposte.
-                + [{player_pronouns has him:Tradito|{player_pronouns has her:Tradita|Traditə}}.]
+       
+            + [{player_pronouns has him:Tradito|{player_pronouns has her:Tradita|Traditə}}.]
                     -> color_variation_management(FirstCharacter, redC)->
-                    
-                    Uh.
-                    Scusa per il sospirone.
-                    Ma credo sia stata la prima emozione che mi ha colta.
-                    E mi ha fatto un male boia, {player_name}.
-                    Un male boia.
-                    
-                + [{player_pronouns has him:Incuriosito|{player_pronouns has her:Incuriosita|Incuriositə}} dall'idea di qualcosa di nuovo.]
+                Uh.
+                Scusa per il sospirone.
+                Ma credo sia stata la prima emozione che mi ha colta.
+                E mi ha fatto un male boia, {player_name}.
+                Un male boia.
+                
+            + [{player_pronouns has him:Incuriosito|{player_pronouns has her:Incuriosita|Incuriositə}} dall'idea di qualcosa di nuovo.]
                     -> color_variation_management(FirstCharacter, yellowC)->
-                    
-                    Qualcosa di nuovo con un tizio che ho visto tre volte.
-                    In una città diversa in un altro continente.
-                    Eppure.
-                    Eppure anche qualcosa di diverso da tutto quello che avevo.
-                    Dalla stasi della mia vita.
-                    
-                + [Felice di questa nuova famiglia con Talco.]
+                Qualcosa di nuovo con un tizio che ho visto tre volte.
+                In una città diversa in un altro continente.
+                Eppure.
+                Eppure anche qualcosa di diverso da tutto quello che avevo.
+                Dalla stasi della mia vita.
+                
+            + [Felice di questa nuova famiglia con Talco.]
                     -> color_variation_management(FirstCharacter, greenC)->
-                    
-                    Sei una persona migliore di me allora, {player_name}.
-                    Perché le emozioni che ho provato erano davvero tante, ma non felicità.
-                    Per nessuna delle persone coinvolte.
-                    E per questo mi sento una stronza.
-                    Talco era felice di questa novità.
-                    Io non son stata capace di essere felice per ləi.
-                    
-                + [Una situazione assurda può farmi conoscere cose assurde di me.]
+                Sei una persona migliore di me allora, {player_name}.
+                Perché le emozioni che ho provato erano davvero tante, ma non felicità.
+                Per nessuna delle persone coinvolte.
+                E per questo mi sento una stronza.
+                Talco era felice di questa novità.
+                Io non son stata capace di essere felice per ləi.
+                
+            + [Una situazione assurda può farmi conoscere cose assurde di me.]
                     -> color_variation_management(FirstCharacter, purpleC)->
-                    
-                    Possibile.
-                    E la cosa più assurda sarebbe scoprire che è vero che non mi piacciono i bambini.
-                    A migliaia di chilometri da tutto quello che conosco.
-                    Col mio inglese terribile.
-                    Dipendendo totalmente da una persona che deve prendersi cura di un infante.
-                
-                + [{player_pronouns has him:Confuso|{player_pronouns has her:Confusa|Confusə}} dall'assurdità di questa situazione.]
+                Possibile.
+                E la cosa più assurda sarebbe scoprire che è vero che non mi piacciono i bambini.
+                A migliaia di chilometri da tutto quello che conosco.
+                Col mio inglese terribile.
+                Dipendendo totalmente da una persona che deve prendersi cura di un infante.
+            
+            + [{player_pronouns has him:Confuso|{player_pronouns has her:Confusa|Confusə}} dall'irrazionalità di questa situazione.]
                     -> color_variation_management(FirstCharacter, blueC)->
-                    
-                    Non è assurda, non con Talco.
-                    Ma confusione è una parola che mi ritorna, quando ripenso a quella sera.
-                    Perché la quantità di cose che ho provato è stata immensa.
-                
-                -
-        
+                Con Talco è tutto irrazionale.
+                O razionale, secondo il modo di Talco.
+                Ma <i>confusione</i> è una parola che mi ritorna, quando ripenso a quella sera.
+                Perché la quantità di cose che ho provato è stata immensa.
+            -
+    
         Quella sera ho scoperto che la persona in me che sa fare cose, le sa fare solo se sa che Talco è dalla sua parte.
         Un intero film mi è partito in testa.
         Una roba con Margherita Buy piena di solitudine abbandono e perdita.
@@ -663,15 +642,13 @@
         E ora che sono sempre più vecchi, tornare potrebbe significare restituire il favore.
         Prendermi cura di loro.
         Ma una parte di me ha paura che tornare voglia dire “Ok, ho sbagliato tutto”.
-        E ho paura di finire per finire in un certo tipo di gruppo.
+        E ho paura di finire in un certo tipo di gruppo.
         Quello delle amiche sposate.
         Non è un crimine contro l’umanità, lo so.
         Ma so anche che a volte sono la persona che il contesto mi permette di essere.
         E mi piace la persona che sono ora.
         Ma non so se mi piacerebbe la persona che sarei tornando dai miei, tornando al paesino.
         Credi abbia senso?
-        
-        //Risposte
             
             + [Risposta gialla.]
                 -> color_variation_management(FirstCharacter, yellowC)->  
@@ -679,7 +656,7 @@
             + [Risposta rossa.]
                 -> color_variation_management(FirstCharacter, redC)->
             
-            + [Risposta blu.]
+            + [Test: ti piaci quando scendi in vacanza?]
                 -> color_variation_management(FirstCharacter, blueC)->  
             
             + [Risposta verde.]
@@ -712,7 +689,7 @@
         Ciao {player_name}, e {player_pronouns has him:benvenuto|{player_pronouns has her:benvenuta|benvenutə}} in un nuovo flusso di coscienza di {charNameOne} che non si chiama {charNameOne} e che prima o poi troverà il suo vero nome.
         E forse ci sto prendendo gusto con questi pipponi.
         Mi ricordano quando arriva l’insonnia.
-        Forse mi piace solo perché è una cosa che mi accade di rado.
+        Che forse mi piace solo perché è una cosa che mi accade di rado.
         E a volte si traduce in un rigirarsi nel letto guardando il cellulare, scorrendo video e articoli che ti dicono che il mondo è fottuto.
         E può essere stupido addormentarsi con queste cose, ma boh.
         Forse sapere che non puoi fare nulla è più rassicurante che sapere che puoi fare qualcosa ma non sai cosa.
@@ -745,7 +722,7 @@
                     Grazie.       
             }
             
-            + [Risposta blu.]
+            + [Non so cosa dire, non trovo il filo logico del discorso.]
                 -> color_variation_management(FirstCharacter, blueC)->  
             
             + [Risposta verde.]
@@ -795,7 +772,7 @@
         E poi la routine ha trasformato col tempo quel sapore.
         Ora sa di pane caldo, una cosa semplice ma magica.
         C’è più silenzio quando stiamo assieme.
-        Non mi serve riempire gli spazi di cose intelligenti o parlare di cose fighe per paura che lui si annoi.
+        Non mi serve riempire gli spazi di cose intelligenti o parlare di robe fighe per paura che lui si annoi.
         A volte lo osservo giocare al PC mentre coccolo i suoi gatti e mi basta.
         Gli piace un sacco giocare, perché gli ricorda che se anche sbagli, puoi sempre ricominciare.
         Ci sono sere in cui parlo più col suo coinquilino che non con lui.
@@ -813,8 +790,8 @@
         Per dargli più tempo non posso di certo smollare il lavoro, no?
         E quindi c'’è solo una cosa che posso togliere dalla mia vita.
         E a quel punto, ripartirà mai il treno dalla mia stazione?
-        //Risposte
-            
+        //Hai provato a chiedere al capotreno?
+
             + [Risposta verde.]
                 -> color_variation_management(FirstCharacter, greenC)->
             
@@ -827,7 +804,7 @@
             + [Risposta gialla.]
                 -> color_variation_management(FirstCharacter, yellowC)->    
             
-            + [Risposta blu.]
+            + [Non c'è logica nel tenere un treno fermo.]
                 -> color_variation_management(FirstCharacter, blueC)->    
             -    
             
@@ -875,8 +852,7 @@
                     - are_two_entities_together(Mentor, PG):
                         ~ change_entity_place(Mentor)  
                 }
-        
-        //Risposte
+
             + [Risposta rossa.]
                 -> color_variation_management(FirstCharacter, redC)->
                 
@@ -889,7 +865,7 @@
             + [Risposta gialla.]
                 -> color_variation_management(FirstCharacter, yellowC)-> 
                 
-            + [Risposta blu.]
+            + [Siamo animali sociali, per cui non solo ha senso, ma è scientifico.]
                 -> color_variation_management(FirstCharacter, blueC)->     
             -
         Dopo il nostro primo litigio, Talco mi ha detto che una buona relazione è una relazione scomoda.
@@ -949,7 +925,7 @@
         + [Risposta rossa.]
             -> color_variation_management(FirstCharacter, redC)->  
                 
-        + [Risposta blu.]
+        + [I social favoriscono i sentimenti negativi.]
             -> color_variation_management(FirstCharacter, blueC)->
         
         + [Risposta gialla.]

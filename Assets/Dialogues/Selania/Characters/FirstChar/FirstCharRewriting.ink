@@ -89,7 +89,7 @@
         Però possiamo raccontare la tua storia in un altro modo.
         Tu dici che sei un <b>concentrato di rinunce</b>.
 
-            + [Ma l'hai detto anche tu: non si può avere tutto.]
+            + [Ma l'hai detto anche tu: razionalmente, non si può avere tutto. ]
                 -> color_variation_management(FirstCharacter, blueC)->
                 Non è rinuncia quindi: è accogliere la vita adulta.
                 E imparare come compiere delle scelte, dove andare.
@@ -177,9 +177,10 @@
                         Sei piena d'amore, non trovi?
                 }
                 
-            + [Essere persone adulte significa sopravvivere alle proprie aspettative.]
+            + [Ma le aspettative non sono fatti.]
                 -> color_variation_management(FirstCharacter, blueC)->
-               Ma non è una sconfitta.
+                Ed essere adulti significa sopravvivere alle proprie aspettative.
+                Ma non è una sconfitta.
                {
                 - first_char_main_storylets.twelve:
                     Pensa alla maturità con cui hai parlato dell'invidia che provi.
@@ -220,15 +221,15 @@
         
 
             + [Talco ti ha insegnato a rompere le regole.]
-                -> color_variation_management(FirstCharacter, yellowC)->
+                    -> color_variation_management(FirstCharacter, yellowC)->
                 Il mondo è duro da cambiare, ma l'esempio è una gran cosa.
                 Rompere le aspettative, l'ovvio, è rivoluzionario.
                 {
                     - a_story_of_revenge: O come hai detto per <b>Luna vergine</b>, puoi abbracciare il tuo essere mostro.
                 }
 
-            + [Ma nessunə salva il mondo da solə, {charNameOne}.]
-                -> color_variation_management(FirstCharacter, blueC)->
+            + [È questione di numeri: nessunə salva il mondo da solə.]
+                    -> color_variation_management(FirstCharacter, blueC)->
                 È inevitabile, ma non è un fallimento.
                 {
                     - first_char_main_storylets.twelve:
@@ -309,8 +310,9 @@
                 Aiutate chi è in difficoltà.
                 Perché non credere che qualcuno aiuterà te, se servirà?
                
-            + [Ennio è felice nel suo non cercare di essere speciale.]
+            + [La mediocrità non è una colpa ma un risultato statistico.]
                 -> color_variation_management(FirstCharacter, blueC)->
+                Ennio è felice nel suo non cercare di essere speciale.
                 La mediocrità non è una colpa, ma solo un risultato statistico.
                 {
                     - first_char_main_storylets.twelve:
@@ -380,12 +382,11 @@
             //me ne vado a vivere col moroso.
                 -> color_variation_management(FirstCharacter, greenC)->
                 
-            + (blue) [Eppure hai una vita ricca. Goditela.]
+            + (blue) [Eppure hai oggettivamente una vita ricca. Goditela.]
             //trovare il bello in quello che si ha (per la gioia di Mentore).
-                -> color_variation_management(FirstCharacter, blueC)->
-            
-                    
+                -> color_variation_management(FirstCharacter, blueC)->   
             - 
+
         //Nota: la parte di accettazione del nome è prima dell'aggiornamento, così il nome nuovo compare solo quando viene dichiarato.    
         Grazie, {player_name}.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         Non.

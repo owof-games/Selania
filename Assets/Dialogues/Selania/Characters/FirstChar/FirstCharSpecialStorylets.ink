@@ -51,7 +51,7 @@
         }
         
     Poi ho trovato qualcosa di inaspettato dietro il pontile: una cucina abbandonata.
-    Mi son messa a sistemarla tra una chiacchierata e l’altra, principalmente sperando di trovare qualcosa da mangiare.
+    Mi sono messa a sistemarla, principalmente sperando di trovare qualcosa da bere.
     E man mano mi sono ricordata delle belle chiacchiere che mi son fatta a tavola.
     Il cibo apre alle confidenze.
     E quindi, ecco il mio regalo per te, {player_name}: un posto dove cucinare in compagnia, per conoscerci meglio.
@@ -60,9 +60,7 @@
     Magari scopri anche qualcosa di utile per il tuo lavoro qui.
     Che ne dici?
 
-    //Risposte.    
-    
-        + [Scelta blu.]
+        + [{mentorName} aveva detto di non andare nei posti chiusi.]
              -> color_variation_management(FirstCharacter, blueC)->
     
         + [Scelta rossa.]
@@ -122,26 +120,26 @@
     //Risposte.    
     
         + [La vendetta non è giustizia. A cosa è servita?]
-             -> color_variation_management(FirstCharacter, blueC)->
+                -> color_variation_management(FirstCharacter, blueC)->
             Ma nemmeno la giustizia è giustizia, {player_name}.
             E non so cosa ha scatenato la tipa del racconto.
             Ma sono tante le situazioni in cui una donna non la vede la giustizia.
             Per cui almeno è servita a farla stare meglio, credo.
             
         + [Lui è ricco, ho pensato parlasse di lotta di classe.]
-            -> color_variation_management(FirstCharacter, purpleC)->
+                -> color_variation_management(FirstCharacter, purpleC)->
             Quindi dici tipo che la rabbia è giustificata che per un progetto più grande?
             Però se è ricco ma lei si vendica perché stronzo?
             O magari è stronzo <i>anche</i> perché è ricco?
             
         + [Mi è sembrato un gioco: "cosa succede se sono un mostro?".]
-            -> color_variation_management(FirstCharacter, yellowC)->
+                -> color_variation_management(FirstCharacter, yellowC)->
             Non è male come gioco, vero?
             Mi piacerebbe farlo una volta.
             Credo mi farebbe sentire parti di me che non cago mai.
             
         + [Posso capirla, ma non ha pensato a Irene, e ha generato altro dolore.]
-            -> color_variation_management(FirstCharacter, greenC)->
+                -> color_variation_management(FirstCharacter, greenC)->
             Ed è una cosa che capisco, ma.
             Lui non si è posto questa domanda mi sa, qualsiasi cosa abbia fatto.
             Perché la protagonista è palesemente strapissata.
@@ -150,7 +148,7 @@
             Bisogna sempre ingoiare tutto per proteggere le altre persone?
             
         + [La sua vendetta è una forma di autodifesa.]
-            -> color_variation_management(FirstCharacter, redC)->
+                -> color_variation_management(FirstCharacter, redC)->
             Non credo reggerebbe in un processo, ma mi suona.
             A volte quando ti viene detto che non puoi arrabbiarti, ci metti molto per capire che sei arrabbiata.
             Quindi è un po' come se avesse reagito con ventitré anni di ritardo a quello che Jacopo le ha fatto.

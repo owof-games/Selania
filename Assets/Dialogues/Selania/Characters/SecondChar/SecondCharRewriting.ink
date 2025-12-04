@@ -114,8 +114,8 @@
                 }
 
                                 
-            + [E forse la casa dei vecchi è davvero un posto migliore.]
-                -> color_variation_management(SecondCharacter, blueC)->
+            + [E la casa dei vecchi è un posto attrezzato, organizzato.]
+                    -> color_variation_management(SecondCharacter, blueC)->
                 Una persona anziana ha bisogno di cure, {charNameTwo}.
                 Di persone che le diano quello di cui ha bisogno.
                 È giusto che tu senta la sua mancanza.
@@ -172,7 +172,7 @@
                     Come i racconti che hai trovato in biblioteca!
             }
                    
-        + [Tutto a questo mondo può cambiare. Anche un bambino cocciuto e bugiardo.]
+        + [Tutto a questo mondo cambia. Anche un bambino cocciuto e bugiardo.]
                 -> color_variation_management(SecondCharacter, blueC)->
             Quando sei arrivato qui hai litigato con {mentorName}.
             E mi hai detto molte bugie.

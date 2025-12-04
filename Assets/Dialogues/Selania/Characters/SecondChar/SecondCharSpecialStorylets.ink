@@ -57,7 +57,7 @@
     Prova a immaginare qual è la cosa più bella che puoi trovare.
 
         + [Un laboratorio di chimica?]
-            -> color_variation_management(SecondCharacter, blueC)->
+                -> color_variation_management(SecondCharacter, blueC)->
             Non ci avevo pensato cavolo!
             Magari!
             Va bene: ho trovato la <i>seconda</i> cosa più bella che puoi trovare!
@@ -65,24 +65,24 @@
             Credo!
     
         + [Un campetto da calcio!]
-            -> color_variation_management(SecondCharacter, redC)->
+                -> color_variation_management(SecondCharacter, redC)->
             Ma mi hai ascoltato quando ho parlato?
             Ti sembro uno che gioca a calcio?!?
      
         + [Un luogo dove meditare?]
-            -> color_variation_management(SecondCharacter, purpleC)->
+                -> color_variation_management(SecondCharacter, purpleC)->
             ...
             Davvero?
             La cosa più bella per te è un posto dove devi dormire seduto?    
     
         + [La stanza dei videogiochi!]
-            -> color_variation_management(SecondCharacter, yellowC)->
+                -> color_variation_management(SecondCharacter, yellowC)->
             Circa.
             Non c'è un video.
             Ma con alcuni ci puoi giocare.
             
         + [Una camera con tutti i tuoi amici?]
-            -> color_variation_management(SecondCharacter, greenC)->
+                -> color_variation_management(SecondCharacter, greenC)->
             Sarebbe vuota.
             No.
         -
@@ -132,7 +132,7 @@
                 
         }
 
-        + [Li incollerei a terra, come dice Giracollo.]
+        + [Li incollo, come dice Giracollo: i sassi devono stare fermi.]
              -> color_variation_management(SecondCharacter, blueC)->
             Non mi piace come idea.
             No.

@@ -63,12 +63,12 @@
                 Ma così come l'acqua cancella anche la pietra più dura, {player_name} e {charNameOne} possono piegare le regole più severe.
                 Con l'aiuto di altre gocce.
                 
-            + [Non ho apprezzato la sua mancanza di senso pratico.]
+            + [Non ho apprezzato la sua mancanza di senso logico.]
                    -> color_variation_management(PG, blueC)->
-                {charNameOne} possiede un forte senso pratico.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                {charNameOne} possiede un forte senso logico.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Soltanto, è diverso da quello di {player_name}.
                 O di {mentorName}.
-                Il senso pratico del falco va verso l'alto.
+                Il senso logico del falco lo spinge verso l'alto.
                 Quello della talpa verso il basso.
                 E {charNameOne} segue ora la sua nuova direzione.
                 

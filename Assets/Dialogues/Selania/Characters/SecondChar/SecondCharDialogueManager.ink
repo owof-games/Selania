@@ -107,9 +107,7 @@
         
 
 }
-
-
-                
+             
     = ask
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)

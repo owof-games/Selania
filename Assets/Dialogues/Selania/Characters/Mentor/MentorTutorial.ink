@@ -60,7 +60,7 @@
                 La tua {translator(mentor_ActualName)}.
                 E ora che sei qui, ho uno scopo.
 
-            + [I binari vanno nel nulla e partono da una porta. Non ha senso.]
+            + [I binari collegano il nulla e una porta. Non ha senso.]
                     -> color_variation_management(Mentor, blueC)->
                 Uh, credo dipenda.
                 Nel senso.
@@ -148,7 +148,7 @@
         Ti ho sbloccato la porta della serra, quell'edificio di vetro che dà sullo stagno.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                 -> opening_places ->
         La serra è un bel posto dove rilassarsi, e non solo.
-        Ma evita tutti gli altri posti bloccati, perché sono pericolosi!
+        Ma evita assolutamente tutti gli altri posti bloccati, perché sono pericolosi!
         Ma mi stavo dimenticando di dirti cosa devi fare.
         Perché se sei qui, è per uno scopo, uno scopo davvero importante, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             
@@ -238,7 +238,7 @@
                 Ma no.
                 Noi siamo qui per aiutare, non per fare coercizione.
                             
-            + [Un nome è un nome. Che se ne fanno di uno nuovo?]
+            + [Un nome è un nome. A cosa serve cambiarlo?]
                     -> color_variation_management(Mentor, blueC)->
                 Un nome è come una magia che carichiamo di volta in volta di significato..#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 A volte quella magia non va più bene, e dobbiamo cercare una nuova formula. 
@@ -344,7 +344,6 @@
                                 A modo suo.     
                         }
                         
-                        
                 + [Gli scoiattoli non hanno bisogno di riscriverla, invece?]
                         -> color_variation_management(Mentor, yellowC)->
                     {player_name}, apprezzo la tua creatività, ma mantieni l'attenzione sull'obiettivo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -415,8 +414,6 @@
 
 
 
-
-
 === about_kitchen
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -451,7 +448,6 @@
 
 
 
-
 === about_nest
     Quel posto, quella roba sulla spiaggia. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Non mi piace.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
@@ -471,7 +467,6 @@
     ~ mentor_pauseTalking = mentor_pauseDuration
     ~ mentor_tutorialPauses = true
     -> main
-
 
 
 //Altre informazioni importanti

@@ -26,9 +26,10 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-    Ogni dialogo è una strada.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
-    Ogni strada una scelta.
-    E in questo luogo ogni scelta importante apre cinque strade.
+    Ciò che in te respira ricorda.
+    Ricorda che ogni dialogo è una strada.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    Che ogni strada è una scelta.
+    E che ogni scelta importante apre cinque strade.
     Un vicolo di curiosità e disubbidienza.
     Un sentiero di azione e protesta.
     Un cammino di analisi e comprensione.
@@ -75,9 +76,10 @@
                 È come se {player_name} ci chiedesse di non essere.
                 E questa è una cosa che non è e non sarà.
                 
-            + [Le piante non dovrebbero parlare.]
+            + [Le piante non possono parlare.]
                     -> color_variation_management(PG, blueC)->
-                Non siamo una pianta.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                Le piante raccontano storie da notte a giorno. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                E noi non siamo una pianta.
                 Ma siamo una pianta.
                 E non parliamo.
                 Eppure accade.
