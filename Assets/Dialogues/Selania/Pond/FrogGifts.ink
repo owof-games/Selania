@@ -114,8 +114,12 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
         + {firstChar_giftedObject == () && frog_firstCharObtainedGifts hasnt charOneCultivable} [Vorrei sapere cosa donare a Chitarra.]
             ~ frog_firstCharObtainedGifts += charOneCultivable
         
-            {
-                - (backpack_findedGifts hasnt CantoDelleCompagne) && (backpack_findedGifts hasnt LanaNotturna) && (backpack_findedGifts hasnt NonTiScordarDiTe) && (growthCantoDelleCompagne != stepThree or growthLanaNotturna != stepThree or  growthNonTiScordarDiTe != stepThree):
+            {   
+                - ((growthCantoDelleCompagne != stepThree) && (growthCantoDelleCompagne != notStarted)) or ((growthBaccaDellaAddolorata != stepThree) && (growthBaccaDellaAddolorata != notStarted)) or ((growthNonTiScordarDiTe != stepThree) && (growthNonTiScordarDiTe != notStarted)): 
+                    Sai {player_name}?
+                    Credo stia proprio crescendo nella serra in questo momento.
+
+                - (backpack_findedGifts hasnt CantoDelleCompagne) && (backpack_findedGifts hasnt BaccaDellaAddolorata) && (backpack_findedGifts hasnt NonTiScordarDiTe) && (growthCantoDelleCompagne != stepThree or growthBaccaDellaAddolorata != stepThree or  growthNonTiScordarDiTe != stepThree):
                     Ancora non possiedi niente di adatto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Ma posso fare una cosa: la prossima volta che inizierai a coltivare qualcosa in serra, crescerà un dono adatto.
                     Fanne tesoro.
@@ -132,26 +136,26 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
                         -> closed_exchange
                         
                         
-                -  backpack_findedGifts has CantoDelleCompagne or backpack_findedGifts hasnt LanaNotturna or backpack_findedGifts hasnt NonTiScordarDiTe:
+                -  backpack_findedGifts has CantoDelleCompagne or backpack_findedGifts hasnt BaccaDellaAddolorata or backpack_findedGifts hasnt NonTiScordarDiTe:
                     Già lo possiedi: ti do un indizio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    {backpack_findedGifts has CantoDelleCompagne: Pensa a quanto piacere a Chitarra lo stare con persone amiche, e chiediti cosa ricordi una festa.|{backpack_findedGifts has LanaNotturna: Pensa al bisogno di Chitarra di sapere che non tutto è perduto, che c'è ancora la possibilità di sbocciare. Quale pianta racconta questa cosa?|Chitarra ama suo nonno. Quale pianta può ricordarglielo?}}
+                    {backpack_findedGifts has CantoDelleCompagne: Pensa a quanto piacere a {charNameOne} lo stare con persone amiche, e chiediti cosa ricordi una festa.|{backpack_findedGifts has BaccaDellaAddolorata: Pensa alla difficoltà di {charNameOne} di fare il primo passo, di accogliere il cambiamento. Quale pianta racconta questa cosa?|{charNameOne} ama suo nonno. Quale pianta può ricordarglielo?}}
                         -> closed_exchange
                         
-                - (backpack_findedGifts hasnt CantoDelleCompagne) && (backpack_findedGifts hasnt LanaNotturna) && (backpack_findedGifts hasnt NonTiScordarDiTe) && (growthCantoDelleCompagne == stepThree or growthLanaNotturna == stepThree or  growthNonTiScordarDiTe == stepThree):
+                - (backpack_findedGifts hasnt CantoDelleCompagne) && (backpack_findedGifts hasnt BaccaDellaAddolorata) && (backpack_findedGifts hasnt NonTiScordarDiTe) && (growthCantoDelleCompagne == stepThree or growthBaccaDellaAddolorata == stepThree or  growthNonTiScordarDiTe == stepThree):
                     Hai posseduto qualcosa di perfetto, ma l'hai utilizzato altrove.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Credo però di averne un poco nella mia scorta.
                     Ecco qui un po' di <>
                         {
                             - growthCantoDelleCompagne == stepThree:Canto delle Compagne.
                                     ~ backpack_findedGifts += CantoDelleCompagne
-                            - growthLanaNotturna == stepThree:Lana Notturna.
-                                    ~ backpack_findedGifts += LanaNotturna
+                            - growthBaccaDellaAddolorata == stepThree:Bacca Della Addolorata.
+                                    ~ backpack_findedGifts += BaccaDellaAddolorata
                             - growthNonTiScordarDiTe == stepThree:Non Ti Scordar di Te.
                                     ~ backpack_findedGifts += NonTiScordarDiTe 
                         }
                     
                     Sicuro, adorerà!
-                    Te l'ho messo nell'inventario.
+                    Te l'ho messo nello zaino.
                     @animation: Backpack
                     -> closed_exchange
             }
@@ -160,42 +164,46 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
         ~ frog_firstCharObtainedGifts += charOneCooking
         
             {
-                - (backpack_findedGifts hasnt CantoDelleCompagne) && (backpack_findedGifts hasnt LanaNotturna) && (backpack_findedGifts hasnt NonTiScordarDiTe) && (growthCantoDelleCompagne != stepThree or growthLanaNotturna != stepThree or  growthNonTiScordarDiTe != stepThree):
+                - ((growthCantoDelleCompagne != stepThree) && (growthCantoDelleCompagne != notStarted)) or ((growthBaccaDellaAddolorata != stepThree) && (growthBaccaDellaAddolorata != notStarted)) or ((growthNonTiScordarDiTe != stepThree) && (growthNonTiScordarDiTe != notStarted)): 
+                    Sai {player_name}?
+                    Credo stia proprio crescendo nella serra in questo momento.
+
+                - (backpack_findedGifts hasnt CantoDelleCompagne) && (backpack_findedGifts hasnt BaccaDellaAddolorata) && (backpack_findedGifts hasnt NonTiScordarDiTe) && (growthCantoDelleCompagne != stepThree or growthBaccaDellaAddolorata != stepThree or  growthNonTiScordarDiTe != stepThree):
                     Ancora non possiedi niente di adatto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Ma posso fare una cosa: la prossima volta che inizierai a coltivare qualcosa in serra, crescerà un ingrediente adatto.
                     Fanne tesoro.
                     {
                         - greenhouse_frog_nextCultivableOne == ():
-                            ~ greenhouse_frog_nextCultivableOne = LanaNotturna
+                            ~ greenhouse_frog_nextCultivableOne = BaccaDellaAddolorata
                         - greenhouse_frog_nextCultivableTwo == () && greenhouse_frog_nextCultivableOne != ():
-                            ~ greenhouse_frog_nextCultivableTwo = LanaNotturna
+                            ~ greenhouse_frog_nextCultivableTwo = BaccaDellaAddolorata
                         - greenhouse_frog_nextCultivableThree == () && greenhouse_frog_nextCultivableTwo != ():
-                            ~ greenhouse_frog_nextCultivableThree = LanaNotturna
+                            ~ greenhouse_frog_nextCultivableThree = BaccaDellaAddolorata
                         - else:
                             ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
                     }
                         -> closed_exchange
                         
-                -  backpack_findedGifts has CantoDelleCompagne or backpack_findedGifts has LanaNotturna or backpack_findedGifts has NonTiScordarDiTe:
+                -  backpack_findedGifts has CantoDelleCompagne or backpack_findedGifts has BaccaDellaAddolorata or backpack_findedGifts has NonTiScordarDiTe:
                     Già lo possiedi: ti do un indizio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    {backpack_findedGifts has CantoDelleCompagne: Pensa a quanto piacere a {charNameOne} lo stare con persone amiche, e chiediti cosa ricordi una festa.|{backpack_findedGifts has LanaNotturna: Pensa al bisogno di {charNameOne} di sapere che non tutto è perduto, che c'è ancora la possibilità di sbocciare. Quale pianta racconta questa cosa?|{charNameOne} ama suo nonno. Quale pianta può ricordarglielo?}}
+                    {backpack_findedGifts has CantoDelleCompagne: Pensa a quanto piacere a {charNameOne} lo stare con persone amiche, e chiediti cosa ricordi una festa.|{backpack_findedGifts has BaccaDellaAddolorata: Pensa alla difficoltà di {charNameOne} di fare il primo passo, di accogliere il cambiamento. Quale pianta racconta questa cosa?|{charNameOne} ama suo nonno. Quale pianta può ricordarglielo?}}
                         -> closed_exchange
             
-                - (backpack_findedGifts hasnt CantoDelleCompagne) && (backpack_findedGifts hasnt LanaNotturna) && (backpack_findedGifts hasnt NonTiScordarDiTe) && (growthCantoDelleCompagne == stepThree or growthLanaNotturna == stepThree or  growthNonTiScordarDiTe == stepThree):
+                - (backpack_findedGifts hasnt CantoDelleCompagne) && (backpack_findedGifts hasnt BaccaDellaAddolorata) && (backpack_findedGifts hasnt NonTiScordarDiTe) && (growthCantoDelleCompagne == stepThree or growthBaccaDellaAddolorata == stepThree or  growthNonTiScordarDiTe == stepThree):
                     Hai posseduto qualcosa di perfetto, ma l'hai utilizzato altrove.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Credo però di averne un poco nella mia scorta.
                     Ecco qui un po' di <>
                         {
                             - growthCantoDelleCompagne == stepThree:Canto delle Compagne.
                                     ~ backpack_findedGifts += CantoDelleCompagne
-                            - growthLanaNotturna == stepThree:Lana Notturna.
-                                    ~ backpack_findedGifts += LanaNotturna 
+                            - growthBaccaDellaAddolorata == stepThree:Bacca Della Addolorata.
+                                    ~ backpack_findedGifts += BaccaDellaAddolorata
                             - growthNonTiScordarDiTe == stepThree:Non Ti Scordar di Te.
                                     ~ backpack_findedGifts += NonTiScordarDiTe
                         }
                     
                     Sicuro, insaporirà alla perfezione il tuo piatto!
-                    Te l'ho messo nell'inventario.
+                    Te l'ho messo nello zaino.
                     @animation: Backpack
                     -> closed_exchange
                 
@@ -261,6 +269,10 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
         ~ frog_secondCharObtainedGifts += charTwoCultivable
         
              {
+                - ((growthBrinaDellImpossibile != stepThree) && (growthBrinaDellImpossibile!= notStarted)) or ((growthBastoneDellOzioso!= stepThree) && (growthBastoneDellOzioso != notStarted)) or ((growthLicheneDegliAbissi!= stepThree) && (growthLicheneDegliAbissi != notStarted)): 
+                    Sai {player_name}?
+                    Credo stia proprio crescendo nella serra in questo momento.
+
                 - (backpack_findedGifts hasnt BastoneDellOzioso) && (backpack_findedGifts hasnt BrinaDellImpossibile) && (backpack_findedGifts hasnt LicheneDegliAbissi) && (growthBastoneDellOzioso != stepThree or growthBrinaDellImpossibile != stepThree or LicheneDegliAbissi != stepThree):
                     Ancora non possiedi niente di adatto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Ma posso fare una cosa: la prossima volta che inizierai a coltivare qualcosa in serra, crescerà un dono adatto.
@@ -294,14 +306,18 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
                         }
                     
                     Sicuro, adorerà!
-                    Te l'ho messo nell'inventario.
+                    Te l'ho messo nello zaino.
                     @animation: Backpack
                     -> closed_exchange
             }
             
         + {!ending_cooking_with_second_char && frog_secondCharObtainedGifts hasnt charTwoCooking} [C'è qualcosa che posso usare cucinando con {charNameTwo}?]
             ~ frog_secondCharObtainedGifts += charTwoCooking
-            {
+            {   
+                - ((growthBrinaDellImpossibile != stepThree) && (growthBrinaDellImpossibile!= notStarted)) or ((growthBastoneDellOzioso!= stepThree) && (growthBastoneDellOzioso != notStarted)) or ((growthLicheneDegliAbissi!= stepThree) && (growthLicheneDegliAbissi != notStarted)): 
+                    Sai {player_name}?
+                    Credo stia proprio crescendo nella serra in questo momento.
+
                 - (backpack_findedGifts hasnt BastoneDellOzioso) && (backpack_findedGifts hasnt BrinaDellImpossibile) && (backpack_findedGifts hasnt LicheneDegliAbissi) && (growthBastoneDellOzioso != stepThree or growthBrinaDellImpossibile != stepThree or LicheneDegliAbissi != stepThree):
                     Ancora non possiedi niente di adatto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Ma posso fare una cosa: la prossima volta che inizierai a coltivare qualcosa in serra, crescerà un dono adatto.
@@ -337,7 +353,7 @@ Quindi, come posso aiutarti {player_name}? #speaker:{frog_tag()} #inkA:offState 
                         }
                     
                     Sicuro, adorerà!
-                    Te l'ho messo nell'inventario.
+                    Te l'ho messo nello zaino.
                     @animation: Backpack
                 
             }
