@@ -31,7 +31,7 @@ public class Menu : MonoBehaviour
 
     public void OnPlayButton()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
     public void OnQuitButton()
@@ -49,7 +49,7 @@ public class Menu : MonoBehaviour
             File.Delete(fileName);
         }
 
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
 }
