@@ -72,6 +72,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Da piccola in realtà ero abbastanza un disastro sociale.
         Timida a bestia, bullizzata perché in carne, e secchiona.
         Non la ragazzina più amata dalla scuola, poco ma sicuro.
+        Ora sono meno timida, più in carne, e molto meno secchiona.
         Uh, aspetta che abbasso la fiamma.
         Meglio.
         Però a casa era un piccolo paradiso.
