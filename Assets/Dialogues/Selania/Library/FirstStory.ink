@@ -21,9 +21,7 @@ Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA
 -> DarkLibraryModeOn ->
 ~ enableBigDialogue()
     
-    Mi chiama.<N>La mia rabbia è un gatto che insiste per essere nutrito in continuazione, mi chiama, mi chiama con quell'insistenza che ha costretto sir Isaac Newton a inventare la porticina per i gatti.
-    Ma il mio mi chiama, mi chiama, mi chiama e poi mi ricorda che condivide il novantacinque virgola sei percento del suo DNA con le tigri sopraffacendomi: bevo, disegno, mi drogo, scrivo, mi picchio, dipingo, spacco cose.
-    Poi mi ritrovo però a dover spiegare che cosa stessi facendo ieri sera visto che non rispondevo al telefono o perché non provo piacere guardando gli acquerelli e il disegno sul muro o come mai ho lo zigomo gonfio (vorrei avere il coraggio di rispondere che la prima regola è non parlarne, invece sono porte goffaggine spigoli e maldestrezza) o perché quella sedia si è rotta.
+    Mi chiama.<N>La mia rabbia è un gatto che insiste per essere nutrito in continuazione, mi chiama, mi chiama con quell'insistenza che ha costretto sir Isaac Newton a inventare la porticina per i gatti.<N>Ma il mio mi chiama, mi chiama, mi chiama e poi mi ricorda che condivide il novantacinque virgola sei percento del suo DNA con le tigri sopraffacendomi: bevo, disegno, mi drogo, scrivo, mi picchio, dipingo, spacco cose.<N>Poi mi ritrovo però a dover spiegare che cosa stessi facendo ieri sera visto che non rispondevo al telefono o perché non provo piacere guardando gli acquerelli e il disegno sul muro o come mai ho lo zigomo gonfio (vorrei avere il coraggio di rispondere che la prima regola è non parlarne, invece sono porte goffaggine spigoli e maldestrezza) o perché quella sedia si è rotta.
     È faticosa come il dolore, la rabbia.
     In realtà il nostro è un lavoro di squadra: se non andassi a sgattare in incognito nei social della mia ex, il mio gatto rimarrebbe fuori dalla portata del suo tagliente miagolìo.
     Se non controllassi insistentemente il lavoro degli altri in ufficio.

@@ -20,19 +20,8 @@
     
      {
             - firstChar_ActualName has Triangolo:
-                Qui...
-                Uh.
-                Continua a piacermi questa cosa di essere {charNameOne}, ma non è facilissima.
-                Talco ha rimandato per due volte i nostri incontri, e credo sia una scusa.
-                E a lavoro sembra che non rinnoveranno i contratti a nessunə.
-                Hanno già fatto arrivare tre persone nuove, e Luca sta facendo di tutto per tenercele lontane.
-                Ho questa sensazione strana.
-                Che sia facile dire "goditi le piccole cose" quando tutto va bene.
-                Ma ora è.
-                È difficile.
-                Però, nota positiva: con Ennio stiamo davvero bene.
-                È come se ci fossimo risintonizzat3.
-                E le sere assieme sono tranquillizzanti.
+                Qui...<N>Uh.<N>Continua a piacermi questa cosa di essere {charNameOne}, ma non è facilissima.<N>Talco ha rimandato per due volte i nostri incontri, e credo sia una scusa.<N>E a lavoro sembra che non rinnoveranno i contratti a nessunə.<N>Hanno già fatto arrivare tre persone nuove, e Luca sta facendo di tutto per tenercele lontane.<N>Ho questa sensazione strana.
+                Che sia facile dire "goditi le piccole cose" quando tutto va bene.<N>Ma ora è.<N>È difficile.<N>Però, nota positiva: con Ennio stiamo davvero bene.<N>È come se ci fossimo risintonizzat3.<N>E le sere assieme sono tranquillizzanti.
 
                 
             - firstChar_ActualName has RagazzaOrchestra:
