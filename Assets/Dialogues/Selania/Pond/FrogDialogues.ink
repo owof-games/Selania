@@ -34,7 +34,7 @@
             Eppure.
             Ehi!
             Tu devi essere {player_name}!
-            Io sono Franco la rana!
+            Io sono Franco La Rana!
                 ~ frog_nameDiscovered = true
                 
             {charNameTwo} mi ha parlato di te.
@@ -60,7 +60,13 @@
         - else:
             {shuffle:
                 - Ciao girino!
-                - xx
+                - Ma guarda chi c'è!
+                - Uh, zia Graaak non mi scrive da un bel po'!
+                - Devo assolutamente ricordarmi il compleanno dei gemelli. E preparare tutti i pacchettini.
+                - {player_name}: quando la carpa non c'è, le pulci d'acqua ballano. Anche se non sono molto brave.
+                - Magari se trattengo il fiato a lungo posso volare.
+                - Il mio nome completo è Franco Lelio Arpagone Romualdo Arcezio Nepomiceno Alcuino. Franco La Rana è più facile.
+                - "Gentile signor La Rana, le chiediamo di desistere dal chiederci altre cose assurde sulle lontre. Associazione Mondiale delle Dighe." 
             }#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
             
     }

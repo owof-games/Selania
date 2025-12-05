@@ -110,7 +110,7 @@ LIST nest_speakersForEwWordTag = Influenced, Other
     - frog_nameDiscovered == false:
         ~ return "???"
     - else:
-        ~ return "Franco la rana"
+        ~ return "Franco La Rana"
 
 }
     
