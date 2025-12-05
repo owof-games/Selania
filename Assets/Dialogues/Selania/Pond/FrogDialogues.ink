@@ -107,9 +107,9 @@
                 {debug_frog: condizioni rispettate per poter offrire info su ingrediente per Chitarra.}
                     -> autonomy_mission_verify
                     
-            - secondChar_storyStatus == story_storyStarted && player_accessiblePlaces has Nest && frog_secondCharObtainedGifts hasnt charTwoEmotionalWord:
-                {debug_frog: condizioni rispettate per poter offrire info sul dono per Chitarra.}
-                    -> autonomy_mission_verify
+            // - secondChar_storyStatus == story_storyStarted && player_accessiblePlaces has Nest && frog_secondCharObtainedGifts hasnt charTwoEmotionalWord:
+            //     {debug_frog: condizioni rispettate per poter offrire info sul dono per Chitarra.}
+            //         -> autonomy_mission_verify
                     
             - secondChar_storyStatus == story_storyStarted && player_accessiblePlaces has Library && frog_secondCharObtainedGifts hasnt charTwoLibrary:
                 {debug_frog: condizioni rispettate per poter offrire info su parola per Chitarra.}
