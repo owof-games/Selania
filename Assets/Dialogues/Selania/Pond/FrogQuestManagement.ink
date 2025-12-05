@@ -144,7 +144,7 @@
                 E, girino, quanto ero confuso!
                 Però a volte ho paura di sembrare tonto come una conchiglia, e quindi non chiedo nulla.
                 Invece sono contento che prima hai partecipato alla conversazione tra {charNameOne} e {charNameTwo}, girino.
-                Non hai avuto paura di dire una cosa stupida.
+                Non hai avuto paura di dire una cosa e sembrare stupid{player_pronouns has him:o|{player_pronouns has her:a|ə}}!
                 Quindi: non essere come Franco. E se vedi due persone vicine, prova a chiacchierare con loro.
                 Però una partita tra ananassi io me la guarderei.
                 Dopo lo dico a Giulio, magari ne esce qualcosa.
@@ -177,7 +177,7 @@
                 Uh, una lettera di Tullio.
                 "Franco, di a quel{player_pronouns has her:la|lə} pover{player_pronouns has him:o|{player_pronouns has her:a|ə}} {player_name} quello che devi dir{player_pronouns has him:gli|{player_pronouns has her:le|lə}}!"
                 Uh, è sempre così nervoso.
-                Comunque, {player_name}: sono felice che hai parlato con chi sai tu.
+                Comunque {player_name}: sono felice che hai parlato con chi sai tu.
                 Perché il lavoro che fai è molto delicato.
                 Molto.
                 Ed è bello avere una guida, un'alleata così saggia.
@@ -191,27 +191,71 @@
             - first_character_notes.check or second_character_notes.check && frog_availableCommonMissions has missionSeven:
                 ~ frog_availableCommonMissions -= missionSeven
 
-
-
-                Riferimento al cane, non ha idea di chi sia
-                Stavo per chiederti di leggere una delle lettere che hai ricevuto sulla bacheca, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                Per cui: ecco il tuo dono!
-                -> frog_about_who_questions                        
+                I gemelli stanno facendo lo sciopero del sonno.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                A fatica mi ricordo il mio nome.
+                E tutto perché Giulio non vuole prendergli un cane.
+                Colpa di Dora l'ape.
+                Quella passa il tempo a svolazzare in giro, e poi se ne sta lì sulla riva a bere acqua e raccontare cose.
+                E ha detto ai gemelli che c'è un cane alla fermata del treno.
+                Scusa, sono arrabbiato.
+                Dora è una brava ape, buona come l'alga.
+                Ma ho sonno!
+                E l'altra sera l'ho detto ai gemelli.
+                Li ho fatti sedere tutti e centosedici in cerchio.
+                "Un cane non sa respirare sott'acqua, punto."
+                Ma poi Euforbo, che è il più sveglio dei gemelli, ha un mese e mezzo ma sta già nella classe dei tre mesi, mi dice: "Papà, siamo anfibi."
+                "E quindi?" gli chiedo, sperando solo di andare a dormire.
+                "E quindi sappiamo respirare fuori dall'acqua, papà Franco!"
+                E la sorpresa, {player_name}!
+                Non ci avevo mai pensato, ma respiro fuori dall'acqua!
+                E il mondo ora mi sembra così grande.
+                E pieno di possibilità.
+                Come quella di avere un cane.
+                Ora sto scioperando anche io coi gemelli.
+                Ma non sai quanto ho sonno!
+                E Dora mi ha detto che hai conosciuto il cane del treno!
+                E allora io ti aiuterò con il tuo lavoro.
+                Così magari Giulio capisce che sono un bravo girino, e ci prende il cane!
+                    -> frog_about_who_questions                        
         }
         
     //Missione otto: leggere un libro della biblioteca
         {
             - library_readStories != () && frog_availableCommonMissions has missionEight:
                 ~ frog_availableCommonMissions -= missionEight
-                Stavo per chiederti di leggere una delle storie della biblioteca, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                Per cui: ecco il tuo dono!
-                -> frog_about_who_questions                        
+
+                "Caro zio Gracco."#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                "La algonara è stata inventata nemmeno cento schiuse fa."
+                "Quindi se ci metto la panna no, non è un crimine contro lo stagno."
+                "Tuo nipote Franco."
+                "PS: potresti tenere i gemelli sabato? Vorrei andare alla partita degli ananassi con Tullio e Giulio. Grazie mille."
+                "PPS: non è che mi passeresti anche la ricetta per la frittura di opilione? Grazie mille!"
+                Ehi {player_name}, eccoti cra!
+                Scusa, ero preso dalla corrispondenza.
+                Mi passa tra poco la carpa del pomeriggio, e quella è pignola con la posta.
+                Come si dice? Cerca sempre la squama nel batterio.
+                O era il batterio nella salamandra?
+                No, quella era la parola segreta per il karaoke di cugina Sputt.
+                Cugina è una che canta benissimo, girino!
+                Ha una voce così forte che a volte vengono a lamentarsi anche i topi della biblioteca.
+                E a proposito di biblioteca!
+                Ho visto che ti sei mess{player_pronouns has him:o|{player_pronouns has her:a|ə}} a leggere qualche racconto!
+                Un po' ti invidio: se tocco la carta i libri si rovinano.
+                Però la nostra amica comune a volte mi legge qualche storia.
+                La mia preferita è quella del principe ranocchio.
+                Quando lei lo bacia e le vengono tutte le verruche.
+                Gli umani dovrebbero imparare a lasciarci in pace.
+                E a proposito di pace: vediamo come posso aiutarti!
+                    -> frog_about_who_questions                        
         }
      
 
         {
             - frog_availableCommonMissions == ():
-                Non ho più missioni da offrirti, ma hai bisogno di me, per cui ti aiuterò!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Mmm.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Non ho molto da chiederti ora.
+                Ma come dice sempre zia Graaak: non è una scusa per lavarsene le zampette.
+                Quindi, vediamo come ti posso aiutare!
                     -> frog_about_who_questions 
                 
             - else:
@@ -285,9 +329,15 @@
         - missionOne:
             {
                 - first_character_recap.check && second_character_recap.check && greenhouse_recap.check:
-                    Hai letto le pagine del libro, grande {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ frog_currentMission = ()
+                        
+                        Ma sei un portento, girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
+                        "Una capace di leggere quasi quanto {charNameTwo}."
+                        E tu hai già letto tante ma tante delle pagine del libro che ti è stato donato!
+                        E come dico sempre: la conoscenza è sapere!
+                        E il sapere è sapore per cui: dimmi come posso aiutarti.
+                            ~ frog_currentMission = ()
+
                             -> frog_about_who_questions
                 
                 - else:
@@ -300,10 +350,23 @@
         - missionTwo:
             {
                 - LIST_COUNT(greenhouse_backupCultivable) < 12:
-                    La serra sta crescendo grazie a te, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
+                    
+                    Dove l'ho messo di nuovo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Ah eccolo!
+                    Mi hanno scritto le formiche per dirmi che ti stai prendendo cura della serra!
+                    Ed è una cosa grandiosa girino, e sai perché?
+                    Io no.
+                    Ah no, eccolo, me lo scrivono sempre le formiche.
+                    "Avevamo fame."
+                    Mi sembra una buona motivazione.
+                        {
+                            - are_two_entities_together(SecondCharacter, PG):
+                                Verooo!
+                        }
+                    E a proposito di cose buone: vediamo come posso aiutarti!
                         ~ frog_currentMission = ()
-                            -> frog_about_who_questions
+
+                        -> frog_about_who_questions
                 - else:
                     Ricorda {player_name}: la serra ha bisogno di te.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Torna da me quando avrai almeno tre piante fiorite.
@@ -313,11 +376,21 @@
         - missionThree:
             {
                 - mindfulness:
-                    Grazie per aver parlato con Mentore, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Son sicuro che si sente più utile ora.
-                    Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
-                        ~ frog_currentMission = ()
-                            -> frog_about_who_questions
+                    
+                    Girino!
+                    Mi hanno detto che hai chiesto a {mentorName} di darti qualche consiglio di benessere.
+                    Come lo so?
+                    Perché ora li sta dando a tutte le persone che incontra.
+                    Tullio mi ha anche detto: "Franco, sei una brava persona, ma devi farti due domande prima di chiedere certe cose a {player_name}."
+                    Gli ho chiesto quali fossero le due domande, e lui mi ha baciato sulla testa.
+                    E poi mi ha detto "Per fortuna che sei simpatico."
+                    Ci amiamo così tanto.
+                    Però ora {mentorName} è più felice.
+                    E questo posto è un po' più felice.
+                    E allora io ti rendo un po' più felice: dimmi come posso aiutarti.
+                    ~ frog_currentMission = ()
+
+                        -> frog_about_who_questions
                 - else:
                     Ricorda {player_name}: Mentore vuole condividere con te i suoi consigli per farti sentire meglio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Torna da me quando le avrai parlato del tuo benessere.
@@ -327,9 +400,29 @@
         - missionFour:
             {
                 - little_storylets:
-                    Grazie per aver condiviso le cose che hai scoperto con Mentore, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
+
+                    Questa no.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Nemmeno questa.
+                    {player_name}, tu non sai quanto sia bravo mio marito Tullio ad allungare lo stagno quando parla.
+                    Non arriva mai al punto.
+                    Nemmeno sui bigliettini.
+                    Ah, ecco qui.
+                    "Ricordati di recuperare i gemelli al nido."
+                    No, non era questo.
+                    "Ricordati <b>davvero</b> di recuperare i gemelli al nido. Non come quella volta che sono tornati con l'anatra delle otto da soli."
+                    "A proposito di anatre: le sorelle Qualqui vengono per cena. Mi prendi due etti di termiti e qualche seme? Ti amo."
+                    Dall'arrivo dei gemelli ha un tritone per capello.
+                    Avere centosedici figli non è una passeggiata.
+                    Sempre meglio di zia Graaak, che ormai va per il migliaio.
+                    Non hai idea del casino del ricordare tutti i compleanni, {player_name}!
+                    Ma io dovevo dirti qualcosa.
+                    Cosa?
+                    Ah sì: che il gossip è importante.
+                    Per cui grazie per aver parlato con {mentorName} delle cose insolite che hai incontrato.
+                    Non sai quanto abbia bisogno quella donna di uscire dal suo guscio.
+                    Per cui: vediamo come posso aiutarti!
                         ~ frog_currentMission = ()
+
                             -> frog_about_who_questions
                 - else:
                     Ricorda {player_name}: Mentore ci tiene a sentire le cose che hai scoperto su questo luogo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -341,12 +434,29 @@
             {
                 //TODO: per questa come condizioni mettere anche le altre storie condivise
                 - first_second_chit_chat:
-                    Hai ascoltato la conversazione tra Chitarra e Riccio, e ne sono felice {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Anche se è difficile come posizione per unx riscrittora: spesso una scelta in queste condizioni può far felice una persona, e scontentare l'altra.
-                    Questa cosa accadrà altre volte, per cui: se vedi due personagge nello stesso luogo, prova a vedere se hanno qualcosa da dirsi.
-                    
-                    Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
+
+                    Avannotti!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Era "avannotti".
+                    Non "ananassi."
+                    Franco, hai sempre la testa tra le alghe.
+                    Cosa buffa, {player_name}.
+                    Prima mio marito Tullio e l'altro marito, Giulio, stavano parlando di una partita di pallanuoto tra ananassi.
+                    E, girino, quanto ero confuso!
+                    Però a volte ho paura di sembrare tonto come una conchiglia, e quindi non chiedo nulla.
+                    Invece sono contento che prima hai partecipato alla conversazione tra {charNameOne} e {charNameTwo}, girino.
+                    Non hai avuto paura di dire una cosa e sembrare stupid{player_pronouns has him:o|{player_pronouns has her:a|ə}}!
+                    Quindi: non essere come Franco. E se vedi due persone vicine, prova ancora a chiacchierare con loro.
+                    Però una partita tra ananassi io me la guarderei.
+                    Dopo lo dico a Giulio, magari ne esce qualcosa.
+                    Come quella volta che abbiamo tirato su una band.
+                    Ci chiamavamo Depeche pond.
+                    Ma non è stata una bella idea quella di mettere gli amplificatori in acqua.
+                    I ricci sono ancora arrabbiati con noi.
+                    Ma devo aiutarti, mannaggia alla mia distrazione.
+                    Zio Gracco lo dice sempre: Franco!
+                    Zio Gracco è un rospo di poche parole.
                         ~ frog_currentMission = ()
+
                             -> frog_about_who_questions
                 - else:
                     Ricorda {player_name}: prova a parlare con Riccio e Chitarra quando sono assieme.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -357,11 +467,28 @@
         - missionSix:
             {
                 - witch_intro:
-                    Hai parlato con l'albero, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    E non sta a me chiederti cosa vi siete dett3, ma spero tu possa aver trovato un'alleata in questo percorso.
-                    
-                    Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
+                    Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Ho saputo che finalmente hai parlato con la nostra amica comune!
+                    E tu dirai: "Ma Franco, come fai a sapere sempre tutto?"
+                    E io ti dirò: "Ma Franco è sempre la prima ruota del gatto, ovvio che sa tutto!"
+                    E tu dirai: "Ma i gatti non hanno le ruote."
+                    E allora io dirò: "I gatti hanno tante cose, ma non ce le vogliono fare sapere!"
+                    E poi ti dirò: "Una volta ho conosciuto un gatto con un buffo cappello in testa."
+                    E quando gli ho chiesto: "Giovandomenico, ma cosa ci fai con un cappello così in testa?"
+                    Lui mi ha detto: "Meow!"
+                    I gatti sono così saggi.
+                    Ma zia Graaak dice sempre: tanto va la gatta allo stagno, che ci rimette il girino.
+                    Uh, una lettera di Tullio.
+                    "Franco, di a quel{player_pronouns has her:la|lə} pover{player_pronouns has him:o|{player_pronouns has her:a|ə}} {player_name} quello che devi dir{player_pronouns has him:gli|{player_pronouns has her:le|lə}}!"
+                    Uh, è sempre così nervoso.
+                    Comunque {player_name}: sono felice che hai parlato con chi sai tu.
+                    Perché il lavoro che fai è molto delicato.
+                    Molto.
+                    Ed è bello avere una guida, un'alleata così saggia.
+                    La saggezza ha molte facce, e una porta il volto di Franco.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+                    E ora quindi è il mio momento di aiutarti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         ~ frog_currentMission = ()
+
                             -> frog_about_who_questions
                 - else:
                     Ricorda {player_name}: prova a parlare con l'albero della foresta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -372,11 +499,33 @@
         - missionSeven:
             {
                 - first_character_notes.check or second_character_notes.check:
-                    Hai letto la lettera che ti è stata inviata, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Ricordati di darci un'occhiata ogni tanto, così da sapere come avanza la storia delle persone che hai aiutato.
-                    
-                    Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
+                    I gemelli stanno facendo lo sciopero del sonno.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    A fatica mi ricordo il mio nome.
+                    E tutto perché Giulio non vuole prendergli un cane.
+                    Colpa di Dora l'ape.
+                    Quella passa il tempo a svolazzare in giro, e poi se ne sta lì sulla riva a bere acqua e raccontare cose.
+                    E ha detto ai gemelli del cane alla fermata del treno.
+                    Scusa, sono arrabbiato.
+                    Dora è una brava ape, buona come l'alga.
+                    Ma ho sonno!
+                    E l'altra sera l'ho detto ai gemelli.
+                    Li ho fatti sedere tutti e centosedici in cerchio.
+                    "Un cane non sa respirare sott'acqua, punto."
+                    Ma poi Euforbo, che è il più sveglio dei gemelli, ha un mese e mezzo ma sta già nella classe dei tre mesi, mi dice: "Papà, siamo anfibi."
+                    "E quindi?" gli chiedo, sperando solo di andare a dormire.
+                    "E quindi sappiamo respirare fuori dall'acqua, papà Franco!"
+                    E la sorpresa, {player_name}!
+                    Non ci avevo mai pensato, ma respiro fuori dall'acqua!
+                    E il mondo ora mi sembra così grande.
+                    E pieno di possibilità.
+                    Come quella di avere un cane.
+                    Ora sto scioperando anche io coi gemelli.
+                    Ma non sai quanto ho sonno!
+                    E Dora mi ha detto che hai conosciuto il cane del treno!
+                    E allora io ti aiuterò con il tuo lavoro.
+                    Così magari Giulio capisce che sono un bravo girino, e ci prende il cane!
                         ~ frog_currentMission = ()
+
                             -> frog_about_who_questions
                 - else:
                     Ricorda {player_name}: leggi la lettera che hai ricevuto alla fermata del treno.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
@@ -387,13 +536,30 @@
         - missionEight:
             {
                 - library_readStories != ():
-                    Hai letto una della storie della biblioteca, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    La biblioteca è un posto di riposo, ma non solo.
-                    Anche alle persone che popolano questo posto piace leggere.
-                    E a volte, se avete avuto una lettura in comune, potresti scoprire qualcosa di più su di loro.
-                    
-                    Direi che la missione è conclusa, e quindi possiamo parlare del tuo dono.
+                     "Caro zio Gracco."#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    "La algonara è stata inventata nemmeno cento schiuse fa."
+                    "Quindi se ci metto la panna no, non è un crimine contro lo stagno."
+                    "Tuo nipote Franco."
+                    "PS: potresti tenere i gemelli sabato? Vorrei andare alla partita degli ananassi con Tullio e Giulio. Grazie mille."
+                    "PPS: non è che mi passeresti anche la ricetta per la frittura di opilione? Grazie mille!"
+                    Ehi {player_name}, eccoti cra!
+                    Scusa, ero preso dalla corrispondenza.
+                    Mi passa tra poco la carpa del pomeriggio, e quella è pignola con la posta.
+                    Come si dice? Cerca sempre la squama nel batterio.
+                    O era il batterio nella salamandra?
+                    No, quella era la parola segreta per il karaoke di cugina Sputt.
+                    Cugina è una che canta benissimo, girino!
+                    Ha una voce così forte che a volte vengono a lamentarsi anche i topi della biblioteca.
+                    E a proposito di biblioteca!
+                    Ho visto che hai ascoltato il mio consiglio e hai letto qualche racconto!
+                    Un po' ti invidio: se tocco la carta i libri si rovinano.
+                    Però la nostra amica comune a volte mi legge qualche storia.
+                    La mia preferita è quella del principe ranocchio.
+                    Quando lei lo bacia e le vengono tutte le verruche.
+                    Gli umani dovrebbero imparare a lasciarci in pace.
+                    E a proposito di pace: vediamo come posso aiutarti!
                         ~ frog_currentMission = ()
+                        
                             -> frog_about_who_questions
                 - else:
                     Ricorda {player_name}: leggi una delle storie della biblioteca.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
