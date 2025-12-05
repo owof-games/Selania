@@ -52,8 +52,19 @@ public class AnalyticsManager : MonoBehaviour
     /// </summary>
     private Dictionary<string, ColorVariable> variableNameToColor;
 
+    /// <summary>
+    ///     This variable is considered only at Start() time, after that it's ignored.
+    /// </summary>
+    public static bool IsEnabled;
+
     private async void Start()
     {
+        if (!IsEnabled)
+        {
+            Debug.Log("Talo has been disabled");
+            return;
+        }
+        
         try
         {
             Debug.Log("Starting first phase of analytics manager initialization.", this);
