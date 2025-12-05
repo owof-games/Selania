@@ -11,7 +11,7 @@ C'è una rana bluastra dalle parti dello stagno, e sembra propensa a darmi una m
     
     <b>{frog_currentMission:
         - missionOne:
-            Mi ha invitato a leggere questo libro, e poi tornare da lei.<>
+            Mi ha invitato a leggere altre pagine di questo libro, e poi tornare da lei.<>
             
         - missionTwo:
             Mi ha chiesto di coltivare almeno tre piante alla serra prima di tornare da lei. Ad ora ne ho coltivate: {14 - LIST_COUNT(greenhouse_backupCultivable)}.
