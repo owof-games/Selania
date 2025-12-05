@@ -73,10 +73,10 @@
       {debug_frog: il valore di frog_availableSpecialMissions è {frog_availableSpecialMissions}.}
       {debug_frog: player_accessiblePlaces contiene {player_accessiblePlaces}.}
 
-        {       //Special mission one offre la nota
-            - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionOne) && (player_accessiblePlaces ? Nest) && second_char_main_storylets.four:
-                {debug_frog: condizioni rispettate per poter offrire la prima missione speciale.}
-                    -> special_mission_one
+        {    //Special mission one offre la nota
+            // - frog_pauseSpecialMission < 1 && (frog_availableSpecialMissions has specialMissionOne) && (player_accessiblePlaces ? Nest) && second_char_main_storylets.four:
+            //     {debug_frog: condizioni rispettate per poter offrire la prima missione speciale.}
+            //         -> special_mission_one
                 
             - firstChar_storyStatus == story_storyStarted && firstChar_giftedObject == () && frog_firstCharObtainedGifts hasnt charOneCultivable:
                 {debug_frog: condizioni rispettate per poter offrire info sul dono per Chitarra.}

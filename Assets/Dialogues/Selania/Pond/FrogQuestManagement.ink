@@ -261,8 +261,7 @@
             - else:
             
                 -> missions_dispatcher
-                
-    
+            
         }
 
 ->->
@@ -341,9 +340,12 @@
                             -> frog_about_who_questions
                 
                 - else:
-                    Ricorda {player_name}: leggere è importante!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Torna da me quando avrai esplorato il tuo libro.
-                        -> main
+                        Ehi girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        Ricordati di leggere un po' dal tuo libro magico.
+                        Io ti aspetto qui.
+                        Ma hai visto che bella che è questa rana riflessa nell'acqua?
+                        Ciao bellezza!
+                            -> main
             
             }
             
@@ -368,9 +370,11 @@
 
                         -> frog_about_who_questions
                 - else:
-                    Ricorda {player_name}: la serra ha bisogno di te.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Torna da me quando avrai almeno tre piante fiorite.
-                        -> main            
+                        {player_name}! #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                        Come sta andando con le piante della serra?
+                        Torna qui quando ce ne saranno abbastanza per le formiche!
+                        Se ho capito bene per ora ne hai coltivate {14 - LIST_COUNT(greenhouse_backupCultivable)}.
+                            -> main            
             }
             
         - missionThree:
@@ -388,12 +392,16 @@
                     Però ora {mentorName} è più felice.
                     E questo posto è un po' più felice.
                     E allora io ti rendo un po' più felice: dimmi come posso aiutarti.
-                    ~ frog_currentMission = ()
+                        ~ frog_currentMission = ()
 
                         -> frog_about_who_questions
                 - else:
-                    Ricorda {player_name}: Mentore vuole condividere con te i suoi consigli per farti sentire meglio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Torna da me quando le avrai parlato del tuo benessere.
+                    Ma ecco di nuovo qui il mio girino preferito!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Hai poi chiesto a {mentorName} come stare bene?
+                    Intanto sistemo la posta arretrata.
+                    Che poi se deve andare avanti, non dovrebbe essere "avanzata"?
+                    Però non si muove.
+                    Forse è quindi "posta fermata"?
                         -> main  
             }
             
@@ -425,8 +433,12 @@
 
                             -> frog_about_who_questions
                 - else:
-                    Ricorda {player_name}: Mentore ci tiene a sentire le cose che hai scoperto su questo luogo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Torna da me quando avrai condiviso con lei qualcosa di insolito.
+                    {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Le mie spie mi hanno detto che ancora non hai raccontato stranezze a {mentorName}!
+                    Uh, non ho davvero delle spie.
+                    Giusto qualche girino.
+                    E Dora l'ape.
+                    E la nostra amica che a volte mi aiuta a capire meglio le cose.
                         -> main  
             }        
         
@@ -459,8 +471,12 @@
 
                             -> frog_about_who_questions
                 - else:
-                    Ricorda {player_name}: prova a parlare con Riccio e Chitarra quando sono assieme.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Torna da me quando avrai sentito cosa hanno da dirsi.
+                    Girino, sapevi che se metto la zampa nell'acqua si spezza?speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Ma se poi la tiro fuori, è intera!
+                    Questa è magia!
+                    Continuo a studiare questa cosa mentre tu provi a parlare assieme a {charNameOne} e {charNameTwo}.
+                    Se scopro come succede potrei cambiare il mondo!
+                    E tutti un giorno parleranno di Franco la rana!
                         -> main  
             }         
         
@@ -491,8 +507,9 @@
 
                             -> frog_about_who_questions
                 - else:
-                    Ricorda {player_name}: prova a parlare con l'albero della foresta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    E poi torna da me.
+                    Parla con la nostra amica comune, girino.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Intanto resterò qui a scrivere una lettera di scuse a Tullio e Giulio.
+                    "Cari miei amori. Prometto di non dimenticare mai mai più i gemelli al nido..."
                         -> main  
             } 
         
@@ -528,8 +545,10 @@
 
                             -> frog_about_who_questions
                 - else:
-                    Ricorda {player_name}: leggi la lettera che hai ricevuto alla fermata del treno.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    E poi torna da me.
+                    Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Come diceva Gambusia de Filippi: c'è fitoplancton per te.
+                    Uh, forse non c'entra molto.
+                    Fammi sapere quando hai letto la lettera che ti aspetta alla stazione dei treni.
                         -> main  
             }
         
@@ -559,11 +578,15 @@
                     Gli umani dovrebbero imparare a lasciarci in pace.
                     E a proposito di pace: vediamo come posso aiutarti!
                         ~ frog_currentMission = ()
-                        
+
                             -> frog_about_who_questions
                 - else:
-                    Ricorda {player_name}: leggi una delle storie della biblioteca.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    E poi torna da me.
+                    {player_name}, continuano ad arrivarmi lettere dai topi della biblioteca. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    Non è che riesci a farci un salto e smuovere qualche racconto?
+                    Intanto scelgo la canzone per il prossimo karaoke.
+                    Quasi quasi a questo giro porto "Il ballo del cra cra".
+                    O "Craande, Craande, Craande".
+                    Oppure ripasso anche il balletto con Tullio e Giulio e ci rifacciamo "Craak!... I did it again".
                         -> main  
             }
         
@@ -638,9 +661,11 @@
 }
     
 - (top)
-    Sono affaticato, {player_name}. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-    Torna più tardi.
-    E ricordati di riposare anche tu.
+
+    Girino! #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+    Franco è stanchino ora.
+    Torna più tardi e provo a darti una zampa.
+    Basta che poi me la restituisci, sennò non so come grattare la schiena di zio Gracco.
 
 -> main
 
@@ -814,7 +839,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
 
 
 = notification
-Le condizioni per la missione data dalla rana sono state raggiunte.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+{player_name} ha soddisfatto la richiesta fatta dalla rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
         ~ frog_witch_notification = true
 -> main
 
