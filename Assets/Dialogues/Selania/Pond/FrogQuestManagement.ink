@@ -49,8 +49,14 @@
         {
             - first_character_recap.check && second_character_recap.check && greenhouse_recap.check && frog_availableCommonMissions has missionOne:
                 ~ frog_availableCommonMissions -= missionOne
-                
-                Stavo per chiederti di consultare in profondità il libro che ti è stato donato, ma ho visto che hai già fatto senza di me! Per cui: ecco il tuo dono!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+
+                Ma sei un portento, girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Pensa che ero qui a dirmi "Servirebbe una persona con una bella testolina, più grande di quella di zia Torba."
+                "Una capace di leggere quasi quanto {charNameTwo}."
+                E cosa scopro?
+                Che tu hai già letto tante ma tante delle pagine del libro che ti è stato donato!
+                E come dico sempre: la conoscenza è sapere!
+                E il sapere è sapore per cui: dimmi come posso aiutarti.
                     -> frog_about_who_questions
         }
         
@@ -59,25 +65,68 @@
             - LIST_COUNT(greenhouse_backupCultivable) < 12 && frog_availableCommonMissions has missionTwo:
                 ~ frog_availableCommonMissions -= missionTwo
                 
-                Stavo per chiederti di coltivare almeno tre piante in serra, ma ho visto che hai già fatto senza di me! Per cui: ecco il tuo dono!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                -> frog_about_who_questions
+                Dove l'ho messo di nuovo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Ah eccolo!
+                Mi hanno scritto le formiche per dirmi che ti stai prendendo cura della serra!
+                Ed è una cosa grandiosa girino, e sai perché?
+                Io no.
+                Ah no, eccolo, me lo scrivono sempre le formiche.
+                "Avevamo fame."
+                Mi sembra una buona motivazione.
+                    {
+                        - are_two_entities_together(SecondCharacter, PG):
+                            Verooo!
+                    }
+                E a proposito di cose buone: vediamo come posso aiutarti!
+                    -> frog_about_who_questions
         }
         
     //Missione tre: mindfulness
         {
             - mindfulness && frog_availableCommonMissions has missionThree:
                 ~ frog_availableCommonMissions -= missionThree
-                Stavo per chiederti di parlare di benessere con Mentore, ma ho visto che hai già fatto senza di me! Per cui: ecco il tuo dono!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                -> frog_about_who_questions                      
+
+                Girino!
+                Sei sempre un salto avanti!
+                L'altro giorno un'amica, quell'amica comune sai, quella che ci parla nella testa, quell'amica hai capito no.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                A noi piace molto la compagnia della rana Franco.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                Ecco, lei mi ha fatto notare che {mentorName} ha una fissa.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Una cosa più fissa in testa della passione di mio cugino Gracco per la pasta coi lombrichi.
+                Ama tanto cercare modi per stare bene.
+                Ma nessuno glieli chiede mai.
+                Nessuno, eccetto te, {player_name}!
+                E così ora {mentorName} è più felice.
+                E questo posto è un po' più felice.
+                E allora io ti rendo un po' più felice: dimmi come posso aiutarti.
+                    -> frog_about_who_questions                      
         }
         
     //Missione quattro: gossips 
         {
             - little_storylets && frog_availableCommonMissions has missionFour:
                 ~ frog_availableCommonMissions -= missionFour
-                Stavo per chiederti di raccontare a Mentore le stranezze che hai incontrato in questo luogo, ma ho visto che hai già fatto in autonomia!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                Per cui: ecco il tuo dono!
-                -> frog_about_who_questions                        
+
+                Questa no.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Nemmeno questa.
+                {player_name}, tu non sai quanto sia bravo mio marito Tullio ad allungare lo stagno quando parla.
+                Non arriva mai al punto.
+                Nemmeno sui bigliettini.
+                Ah, ecco qui.
+                "Ricordati di recuperare i gemelli al nido."
+                No, non era questo.
+                "Ricordati <b>davvero</b> di recuperare i gemelli al nido. Non come quella volta che sono tornati con l'anatra delle otto da soli."
+                "A proposito di anatre: le sorelle Qualqui vengono per cena. Mi prendi due etti di termiti e qualche seme? Ti amo."
+                Dall'arrivo dei gemelli ha un tritone per capello.
+                Avere centosedici figli non è una passeggiata.
+                Sempre meglio di zia Graaak, che ormai va per il migliaio.
+                Non hai idea del casino del ricordare tutti i compleanni, {player_name}!
+                Ma io dovevo dirti qualcosa.
+                Cosa?
+                Ah sì: che il gossip è importante.
+                Per cui hai fatto benissimo a parlare con {mentorName} delle cose insolite che hai incontrato.
+                Non sai quanto abbia bisogno quella donna di uscire dal suo guscio.
+                Per cui: vediamo come posso aiutarti!
+                    -> frog_about_who_questions                        
         }
         
         
@@ -85,11 +134,28 @@
         {
             - first_second_chit_chat && frog_availableCommonMissions has missionFive:
                 ~ frog_availableCommonMissions -= missionFive
-                Stavo per dirti di provare a vedere cosa succede quando due persone sono vicine.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                E invece mi hai battuto, assistendo alla conversazione tra Chitarra e Riccio.
-                Questa cosa accadrà altre volte, per cui: se vedi due personagge nello stesso luogo, prova a vedere se hanno qualcosa da dirsi.
-                Nel mentre: ecco il tuo dono!
-                -> frog_about_who_questions                        
+
+                Avannotti!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Era "avannotti".
+                Non "ananassi."
+                Franco, hai sempre la testa tra le alghe.
+                Cosa buffa, {player_name}.
+                Prima mio marito Tullio e l'altro marito, Giulio, stavano parlando di una partita di pallanuoto tra ananassi.
+                E, girino, quanto ero confuso!
+                Però a volte ho paura di sembrare tonto come una conchiglia, e quindi non chiedo nulla.
+                Invece sono contento che prima hai partecipato alla conversazione tra {charNameOne} e {charNameTwo}, girino.
+                Non hai avuto paura di dire una cosa stupida.
+                Quindi: non essere come Franco. E se vedi due persone vicine, prova a chiacchierare con loro.
+                Però una partita tra ananassi io me la guarderei.
+                Dopo lo dico a Giulio, magari ne esce qualcosa.
+                Come quella volta che abbiamo tirato su una band.
+                Ci chiamavamo Depeche pond.
+                Ma non è stata una bella idea quella di mettere gli amplificatori in acqua.
+                I ricci sono ancora arrabbiati con noi.
+                Ma devo aiutarti, mannaggia alla mia distrazione.
+                Zio Gracco lo dice sempre: Franco!
+                Zio Gracco è un rospo di poche parole. 
+                    -> frog_about_who_questions                        
         }
         
     //Missione sei: conoscere la strega
