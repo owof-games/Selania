@@ -143,6 +143,7 @@
                     Hai fatto un lavoro così buono ma così buono, che non ho niente da farti fare.
                     Complimenti girino.
                     Ora non ti resta che riposare!
+                    -> main
             }
                
         }
