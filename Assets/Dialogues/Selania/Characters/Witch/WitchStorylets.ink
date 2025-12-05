@@ -13,6 +13,10 @@
         - witch_intro&& about_nest && not trully_about_nest:
             -> trully_about_nest
         
+        //Dialogo su Franco
+        - closed_mission_verify && not the_witch_and_the_frog:
+            -> the_witch_and_the_frog
+        
         - else:
             -> witch_feedback
 
@@ -26,8 +30,8 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-    Ciò che in te respira ricorda.
-    Ricorda che ogni dialogo è una strada.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    Ciò che in te respira ricorda.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    Ricorda che ogni dialogo è una strada.
     Che ogni strada è una scelta.
     E che ogni scelta importante apre cinque strade.
     Un vicolo di curiosità e disubbidienza.

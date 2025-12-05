@@ -225,21 +225,32 @@
     M: Ma non ti ho mai mai visto in giro.
     M: E ogni giorno vengo a sistemare il sentiero e pulire la serra.
     R: Forse allora non sei venuta ogni giorno.
+    R: O forse mi hai scambiato per Tullio? A volte succede.
     R: O forse non è che hai proprio proprio proprio tutto sotto il tuo controllo.
+    R: Un po' come zio Gracco e il suo problema con l'alcool. E i combustibili in generale.
     M: Impossibile.
-    R: Eppure eccoci cra, con io che so dove sono stato, e tu mi dici che non ricordo bene,
+    M: Controllo tutto, è il mio lavoro.
+    R: Eppure eccoci cra, con io che so dove sono stato, e tu mi dici che non ricordo bene.
     M: Non ho detto che non ricordi bene.
     R: Ma dici che hai tutto sotto il tuo controllo e che non mi hai visto, quindi o non ricordo bene, o mento.
+    R: E la rana non ha un collo e quindi non mento.
     M: Non mi permetterei mai di dirlo.
     R: Infatti non l'hai detto, l'hai implicato.
-    M: Non mi piace il tuo tono.
+    R: Questa me l'ha insegnata stamani mio figlio Euforbo.
+    R: Ma mi ha chiesto di non usare "stazampe" invece di stamani.
+    M: Non mi piace il tuo tono, rana.
     R: Ma non cambia il fatto che mi stai dando o del bugiardo o dello smemorato.
     M: Io non l'ho detto!
-    R: Vuoi ricominciare da capo?
+    R: Ma l'hai implicato.
+    R: E ampliato.
+    R: Che non è ampilato, perché i lati non sono ampi.
+    R: Questo lo dice sempre Euforbo.
     M: AAAAAAAARG!
     M: SEI INSOPPORTABILE!
         ~ change_entity_place(Mentor)
-    R: E comunque non ricordo l'esistenza di nessun mentore, mai.
+    R: No, sono Franco La Rana.
+    R: Non mi ha molto ascoltato.    
+    R: E comunque non ricordo l'esistenza di nessun mentore da queste parti.
         -> main
 
 
