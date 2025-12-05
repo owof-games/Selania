@@ -26,6 +26,8 @@
     VAR frog_pauseSpecialMission = 0
     VAR frog_pauseSpecialMissionMax = 1
 
+    //Altro
+    VAR frog_nameDiscovered = false
 
 
                                     /* ---------------------------------

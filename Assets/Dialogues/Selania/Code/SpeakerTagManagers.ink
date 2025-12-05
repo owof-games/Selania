@@ -106,7 +106,14 @@ LIST nest_speakersForEwWordTag = Influenced, Other
 }
 
 === function frog_tag
-    ~ return "La Rana Parlante"
+{
+    - frog_nameDiscovered == false:
+        ~ return "???"
+    - else:
+        ~ return "Franco la rana"
+
+}
+    
     
 === function PG_tag
     {

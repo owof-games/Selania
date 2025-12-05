@@ -34,6 +34,9 @@
             Eppure.
             Ehi!
             Tu devi essere {player_name}!
+            Io sono Franco la rana!
+                ~ frog_nameDiscovered = true
+                
             {charNameTwo} mi ha parlato di te.
             Ha una bella testolina quel girino!
                 {
