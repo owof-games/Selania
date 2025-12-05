@@ -35,9 +35,6 @@ C'è una rana bluastra dalle parti dello stagno, e sembra propensa a darmi una m
         - missionEight:
             Mi ha chiesto di leggermi qualcosa in biblioteca, e poi tornare da lei.<>
         
-        - missionNine:
-            Mi ha chiesto di parlare con l'albero della foresta, e poi tornare da lei.   <>
-            
         - specialMissionOne:
             Mi ha detto che c'è della tensione tra {charNameTwo} e {mentorName}, e per questo di vedere cosa sta accadendo, e poi tornare da lei.<>
             

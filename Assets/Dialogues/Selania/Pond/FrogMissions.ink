@@ -126,18 +126,7 @@
     @animation:RewriterBook    
     -> main
 
-=== mission_nine
-    ~ temp charNameOne = translator(firstChar_ActualName)
-    ~ temp charNameTwo = translator(secondChar_ActualName)
-    ~ temp mentorName = translator(mentor_ActualName)
-    
-    Sai {player_name}, questo posto offre più alleanze di quanto tu possa immaginare.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-    Perché non provi a parlare con l'albero della foresta? Sono sicuro che potrebbe offrirti un aiuto inaspettato.
-    Poi torna da me, e ti darò quello che ti serve.
-        ~ frog_currentMission += missionNine
-        frog_availableCommonMissions -= missionNine
-    @animation:RewriterBook    
-    -> main
+
     
 === special_mission_one
     ~ temp charNameOne = translator(firstChar_ActualName)

@@ -162,15 +162,38 @@
         {
             - witch_intro && frog_availableCommonMissions has missionSix:
                 ~ frog_availableCommonMissions -= missionSix
-                Stavo per invitarti a parlare con l'albero della foresta, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                Per cui: ecco il tuo dono!
-                -> frog_about_who_questions                        
+
+                Girino!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                Ho saputo che finalmente hai parlato con la nostra amica comune!
+                E tu dirai: "Ma Franco, come fai a sapere sempre tutto?"
+                E io ti dirò: "Ma Franco è sempre la prima ruota del gatto, ovvio che sa tutto!"
+                E tu dirai: "Ma i gatti non hanno le ruote."
+                E allora io dirò: "I gatti hanno tante cose, ma non ce le vogliono fare sapere!"
+                E poi ti dirò: "Una volta ho conosciuto un gatto con un buffo cappello in testa."
+                E quando gli ho chiesto: "Giovandomenico, ma cosa ci fai con un cappello così in testa?"
+                Lui mi ha detto: "Meow!"
+                I gatti sono così saggi.
+                Ma zia Graaak dice sempre: tanto va la gatta allo stagno, che ci rimette il girino.
+                Uh, una lettera di Tullio.
+                "Franco, di a quel{player_pronouns has her:la|lə} pover{player_pronouns has him:o|{player_pronouns has her:a|ə}} {player_name} quello che devi dir{player_pronouns has him:gli|{player_pronouns has her:le|lə}}!"
+                Uh, è sempre così nervoso.
+                Comunque, {player_name}: sono felice che hai parlato con chi sai tu.
+                Perché il lavoro che fai è molto delicato.
+                Molto.
+                Ed è bello avere una guida, un'alleata così saggia.
+                La saggezza ha molte facce, e una porta il volto di Franco.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+                E ora quindi è il mio momento di aiutarti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                    -> frog_about_who_questions                        
         }
         
     //Missione sette: leggere una lettera
         {
             - first_character_notes.check or second_character_notes.check && frog_availableCommonMissions has missionSeven:
                 ~ frog_availableCommonMissions -= missionSeven
+
+
+
+                Riferimento al cane, non ha idea di chi sia
                 Stavo per chiederti di leggere una delle lettere che hai ricevuto sulla bacheca, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Per cui: ecco il tuo dono!
                 -> frog_about_who_questions                        
@@ -184,15 +207,7 @@
                 Per cui: ecco il tuo dono!
                 -> frog_about_who_questions                        
         }
-    
-    //Missione nove: parlare con la strega
-        {
-            - witch_intro && frog_availableCommonMissions has missionNine:
-                ~ frog_availableCommonMissions -= missionNine
-                Stavo per chiederti di fare amicizia con l'albero della foresta, ma mi hai battuto sul tempo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                Per cui: ecco il tuo dono!
-                -> frog_about_who_questions                        
-        }    
+     
 
         {
             - frog_availableCommonMissions == ():
@@ -227,7 +242,7 @@
         //~ frog_maxValueRandomMissionDice = LIST_COUNT(frog_allMissions)
         
         //Tiro il dado
-        ~ frog_randomMissionDice = RANDOM(1,9)
+        ~ frog_randomMissionDice = RANDOM(1,8)
         
         {frog_randomMissionDice:
         
@@ -247,8 +262,6 @@
                 -> mission_seven
             - 8 && player_accessiblePlaces has Library:
                 -> mission_eight
-            - 9 && not witch_intro:
-                -> mission_nine
             - else:
                 {debug_frog: il valore di frog_randomMissionDice è {frog_randomMissionDice}, e la missione associata è già stata fatta. Ritiro il dado.}
                 -> top
@@ -388,19 +401,7 @@
                         -> main  
             }
         
-        - missionNine:
-            {
-                - witch_intro:
-                    Hai parlato con l'albero della foresta, {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    Sono sicuro che troverai in lei una grande alleata in questo lavoro.
-                    Ma nel mentre, parliamo del tuo dono.
-                        ~ frog_currentMission = ()
-                            -> frog_about_who_questions
-                - else:
-                    Ricorda {player_name}: parla con l'albero della foresta.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                    E poi torna da me.
-                        -> main  
-            }    
+  
     
         //Le missioni speciali risolvono il dono direttamente, senza andare a frog_about_who_questions
         - specialMissionOne:
@@ -629,9 +630,6 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
                 - frog_currentMission has missionEight && library_readStories != ():
                     -> notification
                 
-                - frog_currentMission has missionNine && witch_intro:
-                    -> notification
-                    
                 - frog_currentMission has specialMissionOne && special_mission_one_dialogue:
                     -> notification
                     
