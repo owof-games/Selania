@@ -3867,7 +3867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 714a448452b0b184193b4aa831ec8f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OpenLink
-  url: https://www.instagram.com/owofgames/
+  url: https://www.instagram.com/owofgames
   button: {fileID: 1395170488}
 --- !u!114 &1395170488
 MonoBehaviour:
