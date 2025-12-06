@@ -1,9 +1,7 @@
 //Cognome/alias A-E
 
 === adri_allora
-<b>Il mio bellissimo gatto</b> di Adri Allora (ləi).
-
-Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Il mio bellissimo gatto</b> di Adri Allora (ləi).<N>Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
 
     + [Inizio la lettura.]
     //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -22,29 +20,15 @@ Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA
 ~ enableBigDialogue()
     
     Mi chiama.<N>La mia rabbia è un gatto che insiste per essere nutrito in continuazione, mi chiama, mi chiama con quell'insistenza che ha costretto sir Isaac Newton a inventare la porticina per i gatti.<N>Ma il mio mi chiama, mi chiama, mi chiama e poi mi ricorda che condivide il novantacinque virgola sei percento del suo DNA con le tigri sopraffacendomi: bevo, disegno, mi drogo, scrivo, mi picchio, dipingo, spacco cose.<N>Poi mi ritrovo però a dover spiegare che cosa stessi facendo ieri sera visto che non rispondevo al telefono o perché non provo piacere guardando gli acquerelli e il disegno sul muro o come mai ho lo zigomo gonfio (vorrei avere il coraggio di rispondere che la prima regola è non parlarne, invece sono porte goffaggine spigoli e maldestrezza) o perché quella sedia si è rotta.
-    È faticosa come il dolore, la rabbia.
-    In realtà il nostro è un lavoro di squadra: se non andassi a sgattare in incognito nei social della mia ex, il mio gatto rimarrebbe fuori dalla portata del suo tagliente miagolìo.
-    Se non controllassi insistentemente il lavoro degli altri in ufficio.
-    Se non m'impuntassi sul tono svogliato o scocciato.
-    Se non.
-    E invece miagola, miagola, miagola, miagola.
-    E io a dargli corda, a ingrandire il disegno sul muro, a improvvisare un'altra storia a fumetti con gli acquerelli, a spaccare un'altra antina del mobile della cucina, a bere fino a sfinire la mia coscienza (ma poi che male risvegliarsi il mattino dopo sul pavimento del bagno: non ho più l'età per certe cose).
-    Faccio cose brutte in preda al gatto e poi il gatto mi deride per la bruttezza delle cose che ho fatto e m'infuria.
-    Un giorno, mentre pranzavo di fronte al portatile, ho aperto i social dei miei vecchi colleghi per capire come se la stavano passando dopo che mi ero licenziatə
-    e se la passavano splendidamente,
-    come se fosse stata colpa mia tutta l'acredine attraverso la quale bisognava cercare gli altri in ufficio negli ultimi tempi, gli scazzi, le battute passivo-aggressive
-    e il gatto 
-    ha iniziato
-    a miagolare
-    e ho stretto la forchetta fortissimo mentre faticavo a ingoiare il boccone e miagola e il pugno mi tremava e miagola e sentivo il sudore freddo e miagola le tempie che pulsano e miagola non riesco a chiudere gli occhi e miagola inizio a ripetermi in testa le cose e
-    
-    poi non so cos'è successo.
-    Ho respirato.
-    Mi son presə il gatto sulle ginocchia.
-    Ho iniziato ad accarezzarlo.
-    Cos'è che vuoi da me, rabbia?
-    Mi ha rivolto uno sguardo dorato, ha fatto le fusa.
-    E niente: mi ha lasciato quattro buchi sulla coscia con i suoi artigli, 'sta scena m'ha ricordato Frankenstein Junior.
+    È faticosa come il dolore, la rabbia.<N>In realtà il nostro è un lavoro di squadra: se non andassi a sgattare in incognito nei social della mia ex, il mio gatto rimarrebbe fuori dalla portata del suo tagliente miagolìo.<N>Se non controllassi insistentemente il lavoro degli altri in ufficio.<N>Se non m'impuntassi sul tono svogliato o scocciato.<N>Se non.
+    E invece miagola, miagola, miagola, miagola.<N>E io a dargli corda, a ingrandire il disegno sul muro, a improvvisare un'altra storia a fumetti con gli acquerelli, a spaccare un'altra antina del mobile della cucina, a bere fino a sfinire la mia coscienza (ma poi che male risvegliarsi il mattino dopo sul pavimento del bagno: non ho più l'età per certe cose).<N>Faccio cose brutte in preda al gatto e poi il gatto mi deride per la bruttezza delle cose che ho fatto e m'infuria.<N>Un giorno, mentre pranzavo di fronte al portatile, ho aperto i social dei miei vecchi colleghi per capire come se la stavano passando dopo che mi ero licenziatə
+    e se la passavano splendidamente,<N>
+    come se fosse stata colpa mia tutta l'acredine attraverso la quale bisognava cercare gli altri in ufficio negli ultimi tempi, gli scazzi, le battute passivo-aggressive<N>
+    e il gatto<N>
+    ha iniziato<N>
+    a miagolare<N>
+    e ho stretto la forchetta fortissimo mentre faticavo a ingoiare il boccone e miagola e il pugno mi tremava e miagola e sentivo il sudore freddo e miagola le tempie che pulsano e miagola non riesco a chiudere gli occhi e miagola inizio a ripetermi in testa le cose e<N> <N>poi non so cos'è successo.
+    Ho respirato.<N>Mi son presə il gatto sulle ginocchia.<N>Ho iniziato ad accarezzarlo.<N>Cos'è che vuoi da me, rabbia?<N>Mi ha rivolto uno sguardo dorato, ha fatto le fusa.<N>E niente: mi ha lasciato quattro buchi sulla coscia con i suoi artigli, 'sta scena m'ha ricordato Frankenstein Junior.
     
         + [Vorrei leggere ancora.]
         ~ disableBigDialogue()
