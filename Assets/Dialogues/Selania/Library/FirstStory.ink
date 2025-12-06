@@ -315,9 +315,7 @@
             -> main
             
 === beatrice_y_bottura
-<b>Artigli Rosso Ruggine</b> di Beatrice Y. Bottura (she/it).
-
-Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Artigli Rosso Ruggine</b> di Beatrice Y. Bottura (she/it).<N>Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
         + [Inizio la lettura.]
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -335,30 +333,13 @@ Trigger warning: violenza psicologica, abusi fisici.#speaker:{witch_tag()} #inkA
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
     
-    Da qualche parte esiste un pozzo artificiale profondo centinaia di metri, una scala a spirale in metallo porta alle sue interiora. 
-    Sul suo buio fondo si trova un’enorme gabbia, sterile e opprimente.
-    La gabbia è costruita coi materiali più resistenti conosciuti all’uomo: leghe in metalli esotici, violentemente piegate su se stesse infinite volte per creare strati su strati di resistenza.
-    Questa gabbia è costruita per custodire la più terrificante, più feroce di tutte le bestie.
-    Poco più grande di un essere umano, ma abbastanza imponente da sembrare un grattacielo, la bestia giace al centro della sua gabbia, sempre sveglia, sempre affamata.
-    Il suo pelo, un tempo cremisi e dorato, è ormai completamente incolore, ricoperto di sangue secco e sporcizia.
-    La possente creatura non ricorda da quanto tempo giace sul fondo di questo inferno assemblato dall’uomo.
-    Le persone che discendono fino al centro del buco ogni giorno non hanno più timore della bestia.
-    Dopotutto, furono i nonni dei loro nonni a imprigionarla, gli uomini d’oggi non hanno modo di ricordare le paure primordiali che l’animale risvegliò nell’umanità quando fu scoperta.
-    Quindi la tagliano, la pungono, la osservano con interesse e con sadismo ma mai con terrore. 
-    Nonostante sia sempre circondata da uomini, la bestia rimane sola nella sua gabbia. Passa le giornate a pensare alle sue simili, probabilmente decedute da decenni.
-    Non mangia, non dorme, non beve, ormai nemmeno gioca…
-    Finché un giorno, la bestia guarda dentro di sé per l’ennesima volta, cercando un sollievo che sa fin troppo bene non esiste.
-    Invece si rende conto che non riesce più a ricordare i volti del suo branco.
-    Disperata, la sua mente animale va in crisi, cerca ogni angolo di se stessa per trovare la forma dei suoi amati.
-    Ma la bestia trova solo il tocco della compagna di viaggio che è riuscita a tenerla in vita fino a quel momento:
-    Rabbia.
-    Rabbia dedita a riprendersi la vita che ha perso.
-    Rabbia che a breve scagionerà in un abbagliante performance di denti e artigli.
-    Rabbia che porterà fine all’umanità che l’ha imprigionata.
-    
-    Un ululato affilato come un coltello attraversa il pozzo.
-    La paura smarrita dagli uomini torna in loro mentre vedono la gabbia che li teneva al sicuro distrutta dall’interno. Le urla riempiono la stanza e il loro prezioso intelletto umano viene tagliato come burro.
+    Da qualche parte esiste un pozzo artificiale profondo centinaia di metri, una scala a spirale in metallo porta alle sue interiora. <N>Sul suo buio fondo si trova un’enorme gabbia, sterile e opprimente.<N>La gabbia è costruita coi materiali più resistenti conosciuti all’uomo: leghe in metalli esotici, violentemente piegate su se stesse infinite volte per creare strati su strati di resistenza.<N>Questa gabbia è costruita per custodire la più terrificante, più feroce di tutte le bestie.<N>Poco più grande di un essere umano, ma abbastanza imponente da sembrare un grattacielo, la bestia giace al centro della sua gabbia, sempre sveglia, sempre affamata.<N>Il suo pelo, un tempo cremisi e dorato, è ormai completamente incolore, ricoperto di sangue secco e sporcizia.<N>La possente creatura non ricorda da quanto tempo giace sul fondo di questo inferno assemblato dall'uomo.
 
+    Le persone che discendono fino al centro del buco ogni giorno non hanno più timore della bestia.<N>Dopotutto, furono i nonni dei loro nonni a imprigionarla, gli uomini d’oggi non hanno modo di ricordare le paure primordiali che l’animale risvegliò nell’umanità quando fu scoperta.<N>Quindi la tagliano, la pungono, la osservano con interesse e con sadismo ma mai con terrore. <N>Nonostante sia sempre circondata da uomini, la bestia rimane sola nella sua gabbia. Passa le giornate a pensare alle sue simili, probabilmente decedute da decenni.<N>Non mangia, non dorme, non beve, ormai nemmeno gioca…<N>Finché un giorno, la bestia guarda dentro di sé per l’ennesima volta, cercando un sollievo che sa fin troppo bene non esiste.<N>Invece si rende conto che non riesce più a ricordare i volti del suo branco.
+    
+    Disperata, la sua mente animale va in crisi, cerca ogni angolo di se stessa per trovare la forma dei suoi amati.<N>Ma la bestia trova solo il tocco della compagna di viaggio che è riuscita a tenerla in vita fino a quel momento:<N>Rabbia.<N>Rabbia dedita a riprendersi la vita che ha perso.<N>Rabbia che a breve scagionerà in un abbagliante performance di denti e artigli.<N>Rabbia che porterà fine all’umanità che l’ha imprigionata.
+    
+    Un ululato affilato come un coltello attraversa il pozzo.<N>La paura smarrita dagli uomini torna in loro mentre vedono la gabbia che li teneva al sicuro distrutta dall’interno. Le urla riempiono la stanza e il loro prezioso intelletto umano viene tagliato come burro.
 
         + [Vorrei leggere ancora.]
         ~ disableBigDialogue()
