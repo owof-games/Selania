@@ -69,9 +69,7 @@
 
 
 === simo
-<b>SCP</b> di Simo (they/he). Instragram: @il_radioattivo
-
-Trigger violenza, deadnaming, morte.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>SCP</b> di Simo (they/he).<N>Instragram: @il_radioattivo<N>Trigger violenza, deadnaming, morte.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
 //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
@@ -90,68 +88,19 @@ Trigger violenza, deadnaming, morte.#speaker:{witch_tag()} #inkA:offState #inkB:
     ~ enableBigDialogue()
 
 
-    Da anni studio gli SCP. Avete sicuramente presente, dai, quegli eventi paranormali che in qualche
-    modo connettono il nostro mondo a un mondo alternativo, diverso, alieno - questo in realtà non è
-    molto chiaro.
-    Come appaiono? Come oggetti o luoghi che in qualche modo non si comportano come dovrebbero.
-    Da un rasoio elettrico che si accende automaticamente quando lo si direziona verso nord a una sedia
-    che va in autocombustione quando un sente il suono di un tram.
-    Ecco, in questo mio studio, in realtà, ho sempre finito per imbattermi in SCP legati in qualche modo
-    a specifiche emozioni. Tipo lo specchio in grado di percepire se chi lo osserva prova amore
-    (facendone sparire il riflesso), oppure lo stereo che suonava La Cucaracha quando percepiva
-    invidia nell'aria.
-    Però, senza dubbio, l'SCP più strano che ho incontrato è stata una porta. Fra l'altro è stato l'unico
-    SCP con cui ho avuto a che fare in grado di parlare.
-    "<i>Ciao.</i>"
-    "Uh, ciao. Chi sei?"
-    "<i>Io.</i>"
-    "Io chi?"
-    "<i>La porta.</i>"
-    "In che senso “la porta”?"
-    "<i>La porta. La porta. Vedi molte altre porte di fronte a te o nel resto di questo corridoio?</i>"
-    "Beh, ehm, no, cioè, nel senso."
-    "<i>Ti ricordo che dovresti essere tu l'umanoide in grado di parlare, non io. Io teoricamente dovrei
-    essere solo una porta di legno massello.</i>"
-    "Hai ragione, scusami."
-    "<i>Ahahah! Assurdo. È la prima volta che chiedi scusa a una porta, vero?</i>"
-    "Sì. Oddio, beh, in realtà no."
-    "<i>No?</i>"
-    "No. Ero a casa di mia nonna. Un pugno, aveva di nuovo sbagliato a chiamarmi per nome."
-    "<i>Capisco.</i>"
-    "Curioso."
-    "<i>Che cosa?</i>"
-    "Non ho mai chiesto scusa a mia nonna per la porta."
-    "<i>C'è da capire se si meritava le tue scuse.</i>"
-    "No. Ma non importa. Credo. Dopo quella volta l'ho rivista solo una volta. Al suo funerale."
-    "<i>Capisco. Ma hai chiesto scusa alla porta.</i>"
-    "Sì. Non c'entrava nulla, si era solo trovata davanti a me nel momento sbagliato."
-    "<i>Eh, ogni tanto noi porte lo facciamo.</i>"
-    "Di mettervi nel mezzo."
-    "<i>Sì, ma non soltanto.</i>"
-    "Che intendi?"
-    "<i>Intendo che siamo custodi. Non di oggetti, tesori, averi, persone. Nah.</i>"
-    "Ok. Custodi di cosa, allora?"
-    "<i>Pensaci: com'eri prima di quel pugno alla porta? No, non rispondere, lo so già: fuggivi dal
-    mondo, dalle persone, dal giudizio e da chissà che altro.</i>"
-    "Già."
-    "<i>Poi hai incontrato quella porta. Un pugno, un singolo pugno. Da allora tutto è cambiato, vero?</i>"
-    "Già."
-    "<i>Ecco di cosa siamo custodi. Del vostro io, della vostra realtà, della vostra identità. Della vostra
-    rabbia."
-    "Rabbia? È questo che sei?"
-    "<i>Cos'è? Percepisco forse della delusione?</i>"
-    "No, no, anzi. Solo che, boh, ti immaginavo più violenta."
-    "<i>Sì, sì, ci credo, guarda. Magari ti immaginavi che la rabbia fosse, che so, un fucile d'assalto, vero?"
-    "E invece..."
-    "E invece sei una porta decisamente pacata."
-    "<i>Ma sì, che senso avrebbe che io urlassi, strepitassi, sbattessi? Cambierebbe forse qualcosa del mio
-    essere porta? Nah, per nulla.</i>"
-    "Invece..."
-    "<i>Invece se ad aprirmi, sbattermi, rompermi, sfondarmi, sei tu...</i>"
-    "Cosa troverò al di là?"
-    "<i>Al di là di me?</i>"
-    "Sì."
-    "<i>Dai un'occhiata.</i>"
+    Da anni studio gli SCP. Avete sicuramente presente, dai, quegli eventi paranormali che in qualche modo connettono il nostro mondo a un mondo alternativo, diverso, alieno - questo in realtà non è molto chiaro.<N>Come appaiono? Come oggetti o luoghi che in qualche modo non si comportano come dovrebbero.<N>Da un rasoio elettrico che si accende automaticamente quando lo si direziona verso nord a una sedia che va in autocombustione quando un sente il suono di un tram.<N>Ecco, in questo mio studio, in realtà, ho sempre finito per imbattermi in SCP legati in qualche modo a specifiche emozioni.
+
+    Tipo lo specchio in grado di percepire se chi lo osserva prova amore(facendone sparire il riflesso), oppure lo stereo che suonava La Cucaracha quando percepiva invidia nell'aria.<N>Però, senza dubbio, l'SCP più strano che ho incontrato è stata una porta. Fra l'altro è stato l'unico<N>SCP con cui ho avuto a che fare in grado di parlare.<N>"<i>Ciao.</i>"<N>"Uh, ciao. Chi sei?"<N>"<i>Io.</i>"<N>"Io chi?"<N>"<i>La porta.</i>"<N>"In che senso “la porta”?"
+
+    "<i>La porta. La porta. Vedi molte altre porte di fronte a te o nel resto di questo corridoio?</i>"<N>"Beh, ehm, no, cioè, nel senso."<N>"<i>Ti ricordo che dovresti essere tu l'umanoide in grado di parlare, non io. Io teoricamente dovrei essere solo una porta di legno massello.</i>"<N>"Hai ragione, scusami."<N>"<i>Ahahah! Assurdo. È la prima volta che chiedi scusa a una porta, vero?</i>"<N>"Sì. Oddio, beh, in realtà no."<N>"<i>No?</i>"<N>"No. Ero a casa di mia nonna. Un pugno, aveva di nuovo sbagliato a chiamarmi per nome."<N>"<i>Capisco.</i>"
+
+    "Curioso." <N>"<i>Che cosa?</i>"<N>"Non ho mai chiesto scusa a mia nonna per la porta."<N>"<i>C'è da capire se si meritava le tue scuse.</i>"<N>"No. Ma non importa. Credo. Dopo quella volta l'ho rivista solo una volta. Al suo funerale."<N>"<i>Capisco. Ma hai chiesto scusa alla porta.</i>"<N>"Sì. Non c'entrava nulla, si era solo trovata davanti a me nel momento sbagliato."<N>"<i>Eh, ogni tanto noi porte lo facciamo.</i>"<N>"Di mettervi nel mezzo."
+
+    "<i>Sì, ma non soltanto.</i>"<N>"Che intendi?"<N>"<i>Intendo che siamo custodi. Non di oggetti, tesori, averi, persone. Nah.</i>"<N>"Ok. Custodi di cosa, allora?"<N>"<i>Pensaci: com'eri prima di quel pugno alla porta? No, non rispondere, lo so già: fuggivi dal mondo, dalle persone, dal giudizio e da chissà che altro.</i>"<N>"Già."<N>"<i>Poi hai incontrato quella porta. Un pugno, un singolo pugno. Da allora tutto è cambiato, vero?</i>"<N>"Già."<N>"<i>Ecco di cosa siamo custodi. Del vostro io, della vostra realtà, della vostra identità. Della vostra rabbia."
+
+    "Rabbia? È questo che sei?"<N>"<i>Cos'è? Percepisco forse della delusione?</i>"<N>"No, no, anzi. Solo che, boh, ti immaginavo più violenta."<N>"<i>Sì, sì, ci credo, guarda. Magari ti immaginavi che la rabbia fosse, che so, un fucile d'assalto, vero?"<N>"E invece..."<N>"E invece sei una porta decisamente pacata."<N>"<i>Ma sì, che senso avrebbe che io urlassi, strepitassi, sbattessi? Cambierebbe forse qualcosa del mio essere porta? Nah, per nulla.</i>"
+
+    "Invece..."<N>"<i>Invece se ad aprirmi, sbattermi, rompermi, sfondarmi, sei tu...</i>"<N>"Cosa troverò al di là?"<N>"<i>Al di là di me?</i>"<N>"Sì."<N>"<i>Dai un'occhiata.</i>"
 
         + [Vorrei leggere ancora.]
             ~ disableBigDialogue()
