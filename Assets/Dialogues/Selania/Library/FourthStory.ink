@@ -113,9 +113,7 @@
             
 
 === letizia_vaccarella
-<b>Dodici stelle</b> di Letizia Vaccarella (she/her). Instagram: @aidoruinquantumland
-
-Trigger warning: depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Dodici stelle</b> di Letizia Vaccarella (she/her).<N>Instagram: @aidoruinquantumland<N>Trigger warning: depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         + [Inizio la lettura.]
 //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
@@ -133,44 +131,15 @@ Trigger warning: depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offStat
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
     
-    Jodorowsky diceva che qualsiasi guarigione richiede la disobbedienza perché alla base di ogni malattia c'è un divieto.
-    E se da un lato mi dico ma che cazzo ne sa Jodorowsky, lui leggeva i tarocchi di Marsiglia, io sono da Rider-Waite anzi da Waite-Smith; dall'altra, mentre conto le stelle disegnate sulla corona dell'imperatrice, inizio a pensare alla mia malattia. 
-    Credo di averla da sempre, o comunque non mi ricordo di non averla avuta.
-    Di solito i sintomi sono blandi e facili da tenere sotto controllo, per questo guardandomi non diresti mai che sono malata.
-    Ma lei c’è, è sempre lì.
-    Sottopelle, come un fiume nero che scorre in profondità, nascosto agli occhi del mondo, anche a quelli che provano a vedermi per davvero anzi, sopratutto a quelli.
-    A volte si manifesta con un peso nel petto, altre con un tremore nelle mani, ma il sintomo più frequente è il silenzio.
-    Il silenzio che mi avvolge e mi soffoca, che mi impone di abbassare lo sguardo, di sorridere quando non voglio, di accettare tutto con pacata rassegnazione.
-    Osservo la carta tra le dita.
-    L’Imperatrice mi fissa con il suo volto sereno, la corona di stelle che le adorna il capo.
-    Conta le stelle, mi dico.
-    Una, due, tre… Dodici.
-    Come i mesi dell’anno, come le ore di un orologio che segna l’eterno sospeso che è la mia vita.
-    Lei è la creatrice, la Demetra risolta, la dea feconda.
-    Ma io? Io mi sento sterile di parole, di possibilità, soffocata da una prigione senza sbarre.
-    Di nuovo da un medico che non sa dirmi cosa ho.
-    “È stress,” dice. “Forse ansia, forse un problema psicosomatico. Ha provato a perdere qualche chilo?”.
-    Non può vedere il veleno che mi scorre dentro, che si accumula in ogni “sì” detto quando volevo dire “no”, in ogni “va tutto bene”, mi ripeto che dovrei andare da una medica.
-    Torno a casa dai tarocchi, Waite-Smith naturalmente, mescolo le carte 7 volte, le divido per 3 volte in 3 mazzi e per tre volte ne rifaccio un mazzo unico.
-    Chiudo gli occhi, faccio scorrere il mazzo sotto le dita, il pollice accarezza ogni singola lama, cercando di leggere ogni fibra della carta.
-    Non ho una domanda precisa in testa, solo un vago sentire ma so che ormai io e loro ci capiamo anche senza parlare.
-    Lo sento, quel brivido leggero e quel tremore nella pancia, le dita si bloccano su una carta, la giro, la Forza.
-    La donna accarezza il leone, la sua mano sfiora le fauci aperte, ma non c’è paura nel suo volto.
-    Mi domando se anche lei abbia trattenuto la rabbia, per quanto tempo? Avrà dovuto imparare a domarla? 
-    Giro una carta, il Diavolo, la lancio via. Non voglio più domarla. Voglio lasciarla uscire.
-    Un’altra carta, la Morte.
-    Inizio a sperimentare un nuovo sintomo: il calore. Un fuoco che mi cresce dentro, che mi riempie il petto e le mani.
-    Non è febbre, non è dolore.
-    È qualcosa di diverso, qualcosa che non ho mai sentito prima.
-    E allora faccio qualcosa che non ho mai fatto: urlo.
-    Non un grido di paura, non un lamento, ma un urlo vero.
-    Forte, vibrante, un’onda che rompe il silenzio e spazza via anni di obbedienza.
-    E mentre urlo, sento che qualcosa dentro di me cambia.
-    Il fiume nero smette di scorrere in segreto e si trasforma in un incendio che mi brucia, ma non mi distrugge. Mi purifica.
-    Giro il mazzo, l’ultima carta, il Matto.
-    Il viaggiatore con il fagotto sulla spalla, il piede sospeso sull’orlo del precipizio.
-    Un salto nel vuoto, un atto di fede.
-    Lo guardo e sorrido, per la prima volta da mesi, da anni o forse da sempre, è un sorriso che è tutto mio ed è solo per me.
+    Jodorowsky diceva che qualsiasi guarigione richiede la disobbedienza perché alla base di ogni malattia c'è un divieto.<N>E se da un lato mi dico ma che cazzo ne sa Jodorowsky, lui leggeva i tarocchi di Marsiglia, io sono da Rider-Waite anzi da Waite-Smith; dall'altra, mentre conto le stelle disegnate sulla corona dell'imperatrice, inizio a pensare alla mia malattia. <N>Credo di averla da sempre, o comunque non mi ricordo di non averla avuta.<N>Di solito i sintomi sono blandi e facili da tenere sotto controllo, per questo guardandomi non diresti mai che sono malata.<N>Ma lei c’è, è sempre lì.<N>Sottopelle, come un fiume nero che scorre in profondità, nascosto agli occhi del mondo, anche a quelli che provano a vedermi per davvero anzi, sopratutto a quelli.
+    
+    A volte si manifesta con un peso nel petto, altre con un tremore nelle mani, ma il sintomo più frequente è il silenzio.<N>Il silenzio che mi avvolge e mi soffoca, che mi impone di abbassare lo sguardo, di sorridere quando non voglio, di accettare tutto con pacata rassegnazione.<N>Osservo la carta tra le dita.<N>L’Imperatrice mi fissa con il suo volto sereno, la corona di stelle che le adorna il capo.<N>Conta le stelle, mi dico.<N>Una, due, tre… Dodici.<N>Come i mesi dell’anno, come le ore di un orologio che segna l’eterno sospeso che è la mia vita.<N>Lei è la creatrice, la Demetra risolta, la dea feconda. <N>Ma io? Io mi sento sterile di parole, di possibilità, soffocata da una prigione senza sbarre.
+    
+    Di nuovo da un medico che non sa dirmi cosa ho.<N>“È stress,” dice. “Forse ansia, forse un problema psicosomatico. Ha provato a perdere qualche chilo?”.<N>Non può vedere il veleno che mi scorre dentro, che si accumula in ogni “sì” detto quando volevo dire “no”, in ogni “va tutto bene”, mi ripeto che dovrei andare da una medica.<N>Torno a casa dai tarocchi, Waite-Smith naturalmente, mescolo le carte 7 volte, le divido per 3 volte in 3 mazzi e per tre volte ne rifaccio un mazzo unico.<N>Chiudo gli occhi, faccio scorrere il mazzo sotto le dita, il pollice accarezza ogni singola lama, cercando di leggere ogni fibra della carta.<N>Non ho una domanda precisa in testa, solo un vago sentire ma so che ormai io e loro ci capiamo anche senza parlare.<N>Lo sento, quel brivido leggero e quel tremore nella pancia, le dita si bloccano su una carta, la giro, la Forza.<N>La donna accarezza il leone, la sua mano sfiora le fauci aperte, ma non c’è paura nel suo volto.<N>Mi domando se anche lei abbia trattenuto la rabbia, per quanto tempo? Avrà dovuto imparare a domarla? 
+    
+    Giro una carta, il Diavolo, la lancio via. Non voglio più domarla. Voglio lasciarla uscire.<N>Un’altra carta, la Morte.<N>Inizio a sperimentare un nuovo sintomo: il calore. Un fuoco che mi cresce dentro, che mi riempie il petto e le mani.<N>Non è febbre, non è dolore.<N>È qualcosa di diverso, qualcosa che non ho mai sentito prima.<N>E allora faccio qualcosa che non ho mai fatto: urlo.<N>Non un grido di paura, non un lamento, ma un urlo vero.<N>Forte, vibrante, un’onda che rompe il silenzio e spazza via anni di obbedienza.
+    
+    E mentre urlo, sento che qualcosa dentro di me cambia.<N>Il fiume nero smette di scorrere in segreto e si trasforma in un incendio che mi brucia, ma non mi distrugge. Mi purifica.<N>Giro il mazzo, l’ultima carta, il Matto.<N>Il viaggiatore con il fagotto sulla spalla, il piede sospeso sull’orlo del precipizio.<N>Un salto nel vuoto, un atto di fede.<N>Lo guardo e sorrido, per la prima volta da mesi, da anni o forse da sempre, è un sorriso che è tutto mio ed è solo per me.
 
         + [Vorrei leggere ancora.]
             ~ disableBigDialogue()
