@@ -13,53 +13,27 @@
     ~ enableBigDialogue()
     
 
-    Il sole stava tramontando ad occidente e illuminava con i suoi raggi obliqui le chiome degli ulivi.
-    Liliana osservava il viale, dritto, che separava la casa dal cancello; al di là la strada era deserta.
-    Silenziosa, come casa sua.
-    Ogni tanto Artù e Marcella miagolavano, cercando la sua attenzione, mentre lei osservava il mondo fuori: era felice quando richiamavano il suo sguardo, era come tornare a respirare. 
-    La notte non dormiva più.
-    Era arrabbiata, le mani le tremavano sul telefono, i pensieri non smettevano mai di tormentarla.
-    Era arrabbiata con la vita, con Dio.
-    Aveva paura.
-    Era da sola e tutti, tutti lo sapevano e se ne approfittavano: suo fratello, che era stato presente solo nei giorni subito dopo la morte di Alfredo e che poi era tornato alla sua vita di piaceri; suo zio, che aveva blaterato e blaterato di quanto fosse speciale Alfredo e poi aveva cercato di fregarla falciando l’erba e potando gli ulivi facendosi pagare almeno il doppio.
-    Chi te lo può fare sennò?
-    Aveva sputato e lei aveva ingoiato quella verità ed era rimasta in silenzio. 
-    Era settembre e la notte non riusciva a interrompere i ricordi dell’ultimo anno con Alfredo, morto a gennaio: la malattia, il suo volto pallido, che avvizziva come una mela al sole, la paura di rimanere da sola, del futuro.  
-    Di nuovo, dopo mesi, era comparso al cancello suo zio, le mani appoggiate alle barre di metallo.
-    Di suo fratello nemmeno l’ombra.
-    L’erba doveva essere falciata di nuovo e Liliana avrebbe voluto rispondere di no, ma lo lasciò fare e di nuovo pagò troppo. Ne aveva parlato con sua zia, la sorella di lui: è un porco, le aveva detto, dovresti chiudergli il cancello in faccia.
-    Cosa avrebbe dovuto fare? Facile a dirsi, pensava, mentre la notte rimuginava.
-    Era sempre più stanca, sempre più arrabbiata e la rabbia sembrava attaccarsi alle pareti di casa, come la luce del sole e le ombre degli ulivi. 
-    Aveva iniziato ad uscire e, lontano da casa, le sembrava come di vivere piccole parentesi di tranquillità, si sentiva leggera.
-    Il cimitero dove era sepolto Alfredo e la sua vita di prima erano un orizzonte non esplorato.
-    Era da sola.
-    A volte non più sola.
-    Durante i mesi invernali suo zio non venne: meglio così.
-    Vennero l’idraulico però e l’elettricista e lei si sentiva presa in giro, una donna sola incapace di fare ciò che voleva, un peso le si chiudeva sul petto. Perché non riusciva ad essere indipendente?
-    Un giorno suo zio tornò.
-    Lei ne aveva parlato con le sue amiche – le nuove, le vecchie -, ne aveva parlato con la casa.
-    Avrebbe fatto da sola.
-    Avrebbe detto di no, “No”, disse a suo zio quel giorno, “farò da sola, troverò qualcun altro”.
-    Gli occhi di suo zio divennero due fessure, “Chi ti aiuterebbe?” ringhiò “Non c’è nessuno qua!”.
-    Ma Liliana non voleva cedere: No, ripeteva, No, scelgo io da sola.
-    Lo zio stava per aprire il cancello.
-    Liliana tremava: storie di famiglia raccontavano del passato violento di quell’uomo.
-    Liliana era stanca, tremava di rabbia, urlo di nuovo e più forte “NO” mentre lui apriva il cancello che di scatto si chiuse, tranciando di netto le mani dello zio.
-    
-    Qualche giorno dopo Liliana andò al cimitero. Era una giornata di sole: in lontananza la casa sua e di Alfredo brillava sulle chiome degli ulivi. 
+    Il sole stava tramontando ad occidente e illuminava con i suoi raggi obliqui le chiome degli ulivi.<N>Liliana osservava il viale, dritto, che separava la casa dal cancello; al di là la strada era deserta.<N>Silenziosa, come casa sua.<N>Ogni tanto Artù e Marcella miagolavano, cercando la sua attenzione, mentre lei osservava il mondo fuori: era felice quando richiamavano il suo sguardo, era come tornare a respirare. <N>La notte non dormiva più.<N>Era arrabbiata, le mani le tremavano sul telefono, i pensieri non smettevano mai di tormentarla.<N>Era arrabbiata con la vita, con Dio.<N>Aveva paura.
+
+    Era da sola e tutti, tutti lo sapevano e se ne approfittavano: suo fratello, che era stato presente solo nei giorni subito dopo la morte di Alfredo e che poi era tornato alla sua vita di piaceri; suo zio, che aveva blaterato e blaterato di quanto fosse speciale Alfredo e poi aveva cercato di fregarla falciando l’erba e potando gli ulivi facendosi pagare almeno il doppio.<N>Chi te lo può fare sennò?<N>Aveva sputato e lei aveva ingoiato quella verità ed era rimasta in silenzio. <N>Era settembre e la notte non riusciva a interrompere i ricordi dell’ultimo anno con Alfredo, morto a gennaio: la malattia, il suo volto pallido, che avvizziva come una mela al sole, la paura di rimanere da sola, del futuro.  <N>Di nuovo, dopo mesi, era comparso al cancello suo zio, le mani appoggiate alle barre di metallo.<N>Di suo fratello nemmeno l’ombra.
+
+    L’erba doveva essere falciata di nuovo e Liliana avrebbe voluto rispondere di no, ma lo lasciò fare e di nuovo pagò troppo. Ne aveva parlato con sua zia, la sorella di lui: è un porco, le aveva detto, dovresti chiudergli il cancello in faccia.<N>Cosa avrebbe dovuto fare? Facile a dirsi, pensava, mentre la notte rimuginava.<N>Era sempre più stanca, sempre più arrabbiata e la rabbia sembrava attaccarsi alle pareti di casa, come la luce del sole e le ombre degli ulivi. <N>Aveva iniziato ad uscire e, lontano da casa, le sembrava come di vivere piccole parentesi di tranquillità, si sentiva leggera.<N>Il cimitero dove era sepolto Alfredo e la sua vita di prima erano un orizzonte non esplorato.<N>Era da sola.<N>A volte non più sola.
+
+    Durante i mesi invernali suo zio non venne: meglio così.<N>Vennero l’idraulico però e l’elettricista e lei si sentiva presa in giro, una donna sola incapace di fare ciò che voleva, un peso le si chiudeva sul petto. Perché non riusciva ad essere indipendente?<N>Un giorno suo zio tornò.<N>Lei ne aveva parlato con le sue amiche – le nuove, le vecchie -, ne aveva parlato con la casa.<N>Avrebbe fatto da sola.<N>Avrebbe detto di no, “No”, disse a suo zio quel giorno, “farò da sola, troverò qualcun altro”.
+
+    Gli occhi di suo zio divennero due fessure, “Chi ti aiuterebbe?” ringhiò “Non c’è nessuno qua!”.<N>Ma Liliana non voleva cedere: No, ripeteva, No, scelgo io da sola.<N>Lo zio stava per aprire il cancello.<N>Liliana tremava: storie di famiglia raccontavano del passato violento di quell’uomo.<N>Liliana era stanca, tremava di rabbia, urlo di nuovo e più forte “NO” mentre lui apriva il cancello che di scatto si chiuse, tranciando di netto le mani dello zio.<N>Qualche giorno dopo Liliana andò al cimitero. Era una giornata di sole: in lontananza la casa sua e di Alfredo brillava sulle chiome degli ulivi. 
 
         + [Vorrei leggere ancora.]
-        ~ disableBigDialogue()
+            ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
-        ~ disableBigDialogue()
+            ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
             -> main
 
 
 === maura
-<b>Polvere</b> di Maura (she/they). Instagram: @maura_sacca
-Trigger warning: violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+    <b>Polvere</b> di Maura (she/they).<N>Instagram: @maura_sacca<N>Trigger warning: violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
        
         + [Inizio la lettura.]
     //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -78,35 +52,17 @@ Trigger warning: violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:off
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
     
-    Me lo chiede per l'ennesima volta, dopo i miei già innumerevoli no.
-    A questo punto faccio uscire tutta la mia rabbia urlando fino a perdere il respiro.
-    Tirando fuori tutte le cose che mi ero tenuta dentro.
-    E come tutte le volte che provo ad alzare la voce e a farmi sentire lui mi guarda come se fossi pazza.
-    E sì, lo sono.
-    Sono pazza.
-    Quella pazzia che quando fuoriesce non puoi più controllare.
-    Tutte le frasi che avevo cercato di dire con calma, a mezza bocca in quegli anni passati, adesso mi fanno bruciare i polmoni, mi rompono la voce.
-    Pur non avendo più fiato continuo a urlare cercando di prendere il respiro per non morire di asfissia.
-    Ad ogni urlo divento sempre più grande mentre lui si rimpicciolisce.
-    Sono enorme mentre lui è diventato piccolo, così piccolo che posso stringerlo nel palmo della mia mano.
-    Sento che ha paura della mia pazzia.
-    E fa bene.
-    La mia mano comincia a stringersi attorno a lui, facendo attenzione a non coprirgli la faccia perché non voglio perdermi neanche un secondo della sua sofferenza.
-    Prova a parlare, a chiedermi pietà, e io rido.
-    La malvagità stampata sul mio volto - Perché non provi a chiedermelo di nuovo? -.
-    Lui apre la bocca.
-    Urlo più forte - CHIEDIMELO ANCORA! -
-    Nel momento in cui prova di nuovo a prendere fiato lo stringo con entrambe le mani e lo faccio diventare polvere.
-    Raccolgo il cumulo rimasto nella conca della mia mano e lo soffio al vento.
-    Lo guardo volare via con il sorriso sul volto mentre ritorno alle mie dimensioni normali.
-    Mi accorgo che anche la mia pazzia sta volando via.
-    La riacciuffo immediatamente “Tu resti qua con me.
+    Me lo chiede per l'ennesima volta, dopo i miei già innumerevoli no.<N>A questo punto faccio uscire tutta la mia rabbia urlando fino a perdere il respiro.<N>Tirando fuori tutte le cose che mi ero tenuta dentro.<N>E come tutte le volte che provo ad alzare la voce e a farmi sentire lui mi guarda come se fossi pazza.<N>E sì, lo sono.<N>Sono pazza.<N>Quella pazzia che quando fuoriesce non puoi più controllare.
+
+    Tutte le frasi che avevo cercato di dire con calma, a mezza bocca in quegli anni passati, adesso mi fanno bruciare i polmoni, mi rompono la voce.<N>Pur non avendo più fiato continuo a urlare cercando di prendere il respiro per non morire di asfissia <N>Ad ogni urlo divento sempre più grande mentre lui si rimpicciolisce.<N>Sono enorme mentre lui è diventato piccolo, così piccolo che posso stringerlo nel palmo della mia mano.<N>Sento che ha paura della mia pazzia.<N>E fa bene.<N>La mia mano comincia a stringersi attorno a lui, facendo attenzione a non coprirgli la faccia perché non voglio perdermi neanche un secondo della sua sofferenza.
+    
+    Prova a parlare, a chiedermi pietà, e io rido.<N>La malvagità stampata sul mio volto - Perché non provi a chiedermelo di nuovo? -.<N>Lui apre la bocca.<N>Urlo più forte - CHIEDIMELO ANCORA! -<N>Nel momento in cui prova di nuovo a prendere fiato lo stringo con entrambe le mani e lo faccio diventare polvere.<N>Raccolgo il cumulo rimasto nella conca della mia mano e lo soffio al vento.<N>Lo guardo volare via con il sorriso sul volto mentre ritorno alle mie dimensioni normali.<N>Mi accorgo che anche la mia pazzia sta volando via.<N>La riacciuffo immediatamente “Tu resti qua con me.
 
         + [Vorrei leggere ancora.]
-        ~ disableBigDialogue()
+            ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
-        ~ disableBigDialogue()
+            ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
             -> main
