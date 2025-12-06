@@ -164,28 +164,13 @@
                  -> refresh_book_lists ->
         }
         
-<b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they). Instagram: @queerginiawolf
+<b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).<N>Instagram: @queerginiawolf
 
-    Non hai fatto nulla di male.
-    Lanciavi i tuoi fiori nell'aria, il polline rendeva il sentiero giallo per settimane.
-    Accoglievi gli uccelli, offrivi i tuoi vecchi rami ai cani felici che correvano sopra le tue radici.
-    Tenevi ferma la terra, assorbivi l'acqua.
-    Trasformavi il sole in ombra, in aria.
-    Stamani sono passata e ti hanno tagliato.
-    Ci hanno messo tre ore e due minuti a cancellare i tuoi decenni.
-    A segare i tuoi rami fioriti, il tuo tronco su cui le formiche scendevano e salivano.
-    Nel parco è rimasto un vuoto più ampio dello spazio che hai mai occupato.
-    L'ho fatto senza pensarci: ho posato la mano a terra.
-    Ho pregato.
-    E tutto quello che vedevo ha bruciato.
-    Ma.
-    Stasera, tornando niente fuoco, niente fuliggine. 
-    Ma vicino alla tua carcassa il cane e io abbiamo notato un pollone.
-    Tenace e piccolino teso verso l'alto, i rami ancora gemme, la corteccia morbida e rigata.
-    Le macchine che ti hanno tagliato moriranno.
-    Spariranno gli uomini che le hanno comandate.
-    Ma tu, di notte in notte, riprenderai a lanciare i tuoi fiori nell'aria.
-    A rendere gialla la strada verso casa.
+    Non hai fatto nulla di male.<N>Lanciavi i tuoi fiori nell'aria, il polline rendeva il sentiero giallo per settimane.<N>Accoglievi gli uccelli, offrivi i tuoi vecchi rami ai cani felici che correvano sopra le tue radici. <N>Tenevi ferma la terra, assorbivi l'acqua.<N>Trasformavi il sole in ombra, in aria.<N>Stamani sono passata e ti hanno tagliato.<N>Ci hanno messo tre ore e due minuti a cancellare i tuoi decenni.<N>A segare i tuoi rami fioriti, il tuo tronco su cui le formiche scendevano e salivano.<N>Nel parco è rimasto un vuoto più ampio dello spazio che hai mai occupato.
+    
+    L'ho fatto senza pensarci: ho posato la mano a terra.<N>Ho pregato.<N>E tutto quello che vedevo ha bruciato.<N>Ma.<N>Stasera, tornando niente fuoco, niente fuliggine. <N>Ma vicino alla tua carcassa il cane e io abbiamo notato un pollone.<N>Tenace e piccolino teso verso l'alto, i rami ancora gemme, la corteccia morbida e rigata.<N>Le macchine che ti hanno tagliato moriranno.<N>Spariranno gli uomini che le hanno comandate.
+    
+    Ma tu, di notte in notte, riprenderai a lanciare i tuoi fiori nell'aria.<N>A rendere gialla la strada verso casa.
 
         + [Vorrei leggere ancora.]
             ~ disableBigDialogue()
