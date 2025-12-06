@@ -342,10 +342,10 @@
     Un ululato affilato come un coltello attraversa il pozzo.<N>La paura smarrita dagli uomini torna in loro mentre vedono la gabbia che li teneva al sicuro distrutta dall’interno. Le urla riempiono la stanza e il loro prezioso intelletto umano viene tagliato come burro.
 
         + [Vorrei leggere ancora.]
-        ~ disableBigDialogue()
+            ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
-        ~ disableBigDialogue()
+            ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
             -> main

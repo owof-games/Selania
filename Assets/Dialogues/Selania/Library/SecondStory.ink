@@ -13,43 +13,18 @@
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
     
-    "Io li odio."
-    "Chi non li odia, Alchemilla."
-    "Non li sopporto. Vorrei vederli soffrire, agonizzare, bruciare…"
-    Una prepotente lingua di fuoco si alzò a lambire la pentola di peltro che sobbolliva vivacemente, penzolando sul falò.
-    "Se potessi, Alchemilla" borbottò Bergamotto "li infilzerei allo spiedo io stessa.
-    Le braci si arroventarono, illuminandosi di un rosso cupissimo, per un solo istante. Forsizia le rimestò diligentemente. "Lasciatevi andare, ragazze" le esortò. "Ci serve più fuoco."
-    "Villani, prepotenti…"
-    "Maledetti vigliacchi" rimbrottò Bergamotto.
-    "Sudici, lerci…"
-    "È vero che non si lavano? Qualcuna mi spiega perché non si lavano?" si domandò Mimosa. Il fuoco crepitò sommessamente in risposta.
-    "Ridicoli, farabutti…"
-    "Alchemilla, non ti trattenere, ti prego" disse Forsizia, alzando il coperchio per controllare il contenuto della pentola. "Ci serve tanto più fuoco."
-    "E va bene!" sbottò Alchemilla. "Bastardi! Pezzi di merda leccaculo, schifosi fascisti…"
-    "Uomini!" gridò Bergamotto. "Non ne esiste uno che non ti deluda. Fatemi pure cambiare idea!". Le fiamme si innalzarono più vivaci.
-    "Io non sopporto i collaborazionisti" esclamò Mimosa con decisione, aggrottando la fronte. "Senza coraggio, senza spina dorsale, senza… senza testa!. Li odio persino più dei fascisti." La rabbia ribollente di Mimosa ravvivò i ciocchi di legno quasi spenti, che ripresero a bruciare. Forsizia annuiva con approvazione.
-    "Ma perché esistono ancora" singhiozzò Alchemilla. "Avremmo dovuto ucciderli tutti prima."
-    "Possiamo ancora rimediare…" le ricordò Bergamotto.
-    Mimosa sogghignò all’idea. "Forsizia, quanto possiamo lasciarci andare ai sogni di tortura?"
-    "Non serve" rispose Forsizia allegramente, dando una mescolata nel pentolone. "È pronto. A meno che, ovviamente, non vogliate comunque…"
-    "No, grazie" rispose Alchemilla sbuffando. "Sai quanto mi è difficile far uscire la rabbia."
-    "Sei una meraviglia quando ci riesci, però" le sorrise Mimosa. Alchemilla abbassò gli occhi, deliziata.
-    Bergamotto si alzò, avvicinandosi a Forsizia per aiutarla con le mestolate. Mimosa abbracciò stretta Alchemilla, schioccandole un bacio sulla guancia. Il fuoco diventò tutto rosso dall’emozione. Forsizia passò a tutte una ciotola fumante e infine le raggiunse, sedendosi anche lei ad ammirare il fuoco, soddisfatta.
-    -"he hai preparato oggi?" le chiese Alchemilla, ancora un po’ su di giri.
-    "Zuppa di patate" rispose Forsizia, prendendo un’abbondante cucchiaiata. 
-    "La mia preferita!" sospirò felice Bergamotto, prendendo posto anche lei intorno al fuoco.
-    "Ci ho messo un ingrediente segreto stavolta. Vediamo se indovinate."
-    "Mmm… cos’è, paprika dolce?" chiese Alchemilla, assaggiando.
-    "No, secondo me è berberè" disse Mimosa.
-    "Fuochino" rispose Forsizia, ridacchiando.
-    Il fuoco, che poco prima ruggiva alto e incandescente, ora lambiva dolcemente i ciocchi di legno, caldo e avvolgente, illuminando tutte di una dolce, incantevole luce dorata.
+    "Io li odio."<N>"Chi non li odia, Alchemilla."<N>"Non li sopporto. Vorrei vederli soffrire, agonizzare, bruciare…"<N>Una prepotente lingua di fuoco si alzò a lambire la pentola di peltro che sobbolliva vivacemente, penzolando sul falò.<N>"Se potessi, Alchemilla" borbottò Bergamotto "li infilzerei allo spiedo io stessa.<N>Le braci si arroventarono, illuminandosi di un rosso cupissimo, per un solo istante. Forsizia le rimestò diligentemente. "Lasciatevi andare, ragazze" le esortò. "Ci serve più fuoco."<N>"Villani, prepotenti…" <N>"Maledetti vigliacchi" rimbrottò Bergamotto.<N>"Sudici, lerci…"
 
+    "È vero che non si lavano? Qualcuna mi spiega perché non si lavano?" si domandò Mimosa. Il fuoco crepitò sommessamente in risposta.<N>"Ridicoli, farabutti…"<N>"Alchemilla, non ti trattenere, ti prego" disse Forsizia, alzando il coperchio per controllare il contenuto della pentola. "Ci serve tanto più fuoco."<N>"E va bene!" sbottò Alchemilla. "Bastardi! Pezzi di merda leccaculo, schifosi fascisti…"<N>"Uomini!" gridò Bergamotto. "Non ne esiste uno che non ti deluda. Fatemi pure cambiare idea!". Le fiamme si innalzarono più vivaci.<N>"Io non sopporto i collaborazionisti" esclamò Mimosa con decisione, aggrottando la fronte. "Senza coraggio, senza spina dorsale, senza… senza testa!. Li odio persino più dei fascisti." La rabbia ribollente di Mimosa ravvivò i ciocchi di legno quasi spenti, che ripresero a bruciare. Forsizia annuiva con approvazione.<N>"Ma perché esistono ancora" singhiozzò Alchemilla. "Avremmo dovuto ucciderli tutti prima."<N>"Possiamo ancora rimediare…" le ricordò Bergamotto.
+    
+    Mimosa sogghignò all’idea. "Forsizia, quanto possiamo lasciarci andare ai sogni di tortura?"<N>"Non serve" rispose Forsizia allegramente, dando una mescolata nel pentolone. "È pronto. A meno che, ovviamente, non vogliate comunque…"<N>"No, grazie" rispose Alchemilla sbuffando. "Sai quanto mi è difficile far uscire la rabbia."<N>"Sei una meraviglia quando ci riesci, però" le sorrise Mimosa. Alchemilla abbassò gli occhi, deliziata.<N>Bergamotto si alzò, avvicinandosi a Forsizia per aiutarla con le mestolate. Mimosa abbracciò stretta Alchemilla, schioccandole un bacio sulla guancia. Il fuoco diventò tutto rosso dall’emozione. <N>Forsizia passò a tutte una ciotola fumante e infine le raggiunse, sedendosi anche lei ad ammirare il fuoco, soddisfatta.<N>"Che hai preparato oggi?" le chiese Alchemilla, ancora un po’ su di giri.
 
+    "Zuppa di patate" rispose Forsizia, prendendo un’abbondante cucchiaiata. <N>"La mia preferita!" sospirò felice Bergamotto, prendendo posto anche lei intorno al fuoco.<N>"Ci ho messo un ingrediente segreto stavolta. Vediamo se indovinate."<N>"Mmm… cos’è, paprika dolce?" chiese Alchemilla, assaggiando.<N>"No, secondo me è berberè" disse Mimosa.<N>"Fuochino" rispose Forsizia, ridacchiando.<N>Il fuoco, che poco prima ruggiva alto e incandescente, ora lambiva dolcemente i ciocchi di legno, caldo e avvolgente, illuminando tutte di una dolce, incantevole luce dorata.
         + [Vorrei leggere ancora.]
-        ~ disableBigDialogue()
+            ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
-        ~ disableBigDialogue()
+            ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
             -> main
