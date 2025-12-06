@@ -30,9 +30,7 @@
             -> main
 
 === francesca_tosca_raimondi
-<b>Trecentotrenta metri.</b> di Francesca Tosca Raimondi (she/her).
-
-Trigger warning: rabbia domestica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Trecentotrenta metri.</b> di Francesca Tosca Raimondi (she/her).<N>Trigger warning: rabbia domestica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
             + [Inizio la lettura.]
             //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -52,48 +50,20 @@ Trigger warning: rabbia domestica.#speaker:{witch_tag()} #inkA:offState #inkB:of
             ~ enableBigDialogue()
             
             
-        Uno, due, tre, quattro.
-        Quattro per trecentotrenta.
-        A scuola non abbiamo ancora fatto le moltiplicazioni, ma Sara mi ha detto che è così
-        che si capisce dove cadrà il fulmine durante un temporale. Dice che sono
-        “prevedibili”. A me piacciono i lampi perché sembrano pesciolini luminosi tra le
-        nuvole nere. Mi ricordano i fuochi d’artificio. Sembrano magie luminose che
-        allontanano l’oscurità per qualche momento. Il rumore, però, mi fa ancora un po’
-        paura. Arriva all’improvviso e fa tremare le finestre, non riesco a tapparmi le
-        orecchie in tempo e anche se mi nascondo arriva dappertutto, mi rimbomba nella
-        pancia e mi fa venire mal di testa. Non piango più solo perché ormai non mi fa poi
-        così paura. I tuoni mi ricordano la mamma: un momento va tutto bene, il cielo è
-        azzurro e il sole splende, quello dopo lei grida e mi afferra per le braccia e mi scuote
-        e se me ne vado urla e anche se mi nascondo la sua voce mi trova. Di solito mi infilo
-        nell’armadio, mi siedo tra i vestiti e aspetto che smetta.
-        Uno, due, tre.
-        Chissà quanto si è tuffato lontano il pesciolino di luce. Vorrei che anche la mamma
-        fosse prevedibile: vorrei contare con gli occhi chiusi e sapere quando smetterà di
-        piangere. Non so se piange perché è triste, ma i suoi occhi si infuocano e la sua voce
-        si spezza. Ma la mamma non è sempre così; a volte mi bacia, mi coccola, mi dice che
-        mi vuole bene. Non so a cosa credere, però...
-        Papà mi dice che lei mi ama tanto, ma non c’è mai quando la mamma grida a quel
-        modo.
-        Uno, due.
-        Bisognerebbe avere quella magia di luce. Sembra buona per combattere i tuoni che
-        ruggiscono. Sara mi ha detto che i fulmini sono una “conseguenza” dei tuoni, ma
-        non ho capito molto bene cosa significa, non so ancora cercare le parole sul
-        dizionario. Forse la mamma sa il significato, anzi sono sicura che lo sa, è molto
-        intelligente e legge tanti libri. Da qualche tempo a questa parte non me li legge più,
-        dice che posso farlo da sola visto che a scuola ho imparato come si fa. La guardo
-        mentre singhiozza sul divano, la luce ogni tanto va e viene.
-        Uno.
-        Il lampo è caduto vicinissimo su un albero nel cortile! Papà mi ha spiegato che
-        quando una luce è molto forte si dice “abbagliante”. Ecco, era proprio abbagliante.
-        Mi ha messo coraggio. Chissà, forse posso scacciare il buio della mamma e farla
-        stare meglio. Spero solo non mi spinga per terra o, peggio, non mi guardi in silenzio
-        senza parlarmi per giorni. Ma forse ho la magia della luce ora che l’ho vista così da
-        vicino, quindi mi posso rialzare e posso provarci di nuovo, se succede.
-        Abbraccio forte la mia mamma anche se lei non mi guarda. Non me lo dice mai con
-        la voce ma è un po’ come se chiedesse aiuto quando fa così. Forse a volte mi chiede
-        anche scusa senza dirlo. Mi accarezza la testa. Nessuno merita di stare da solo
-        quando piange.
-
+        Uno, due, tre, quattro.<N>Quattro per trecentotrenta.
+        A scuola non abbiamo ancora fatto le moltiplicazioni, ma Sara mi ha detto che è così che si capisce dove cadrà il fulmine durante un temporale. <N>Dice che sono “prevedibili”.<N> A me piacciono i lampi perché sembrano pesciolini luminosi tra le nuvole nere. <N>Mi ricordano i fuochi d’artificio. <N>Sembrano magie luminose che allontanano l’oscurità per qualche momento. <N>Il rumore, però, mi fa ancora un po’paura.
+        
+        Arriva all’improvviso e fa tremare le finestre, non riesco a tapparmi le orecchie in tempo e anche se mi nascondo arriva dappertutto, mi rimbomba nella pancia e mi fa venire mal di testa. Non piango più solo perché ormai non mi fa poi così paura.<N>I tuoni mi ricordano la mamma: un momento va tutto bene, il cielo è azzurro e il sole splende, quello dopo lei grida e mi afferra per le braccia e mi scuote e se me ne vado urla e anche se mi nascondo la sua voce mi trova.
+        
+        Di solito mi infilo nell’armadio, mi siedo tra i vestiti e aspetto che smetta.<N>Uno, due, tre. <N>Chissà quanto si è tuffato lontano il pesciolino di luce.<N>Vorrei che anche la mamma fosse prevedibile: vorrei contare con gli occhi chiusi e sapere quando smetterà di piangere.<N>Non so se piange perché è triste, ma i suoi occhi si infuocano e la sua voce si spezza.<N>Ma la mamma non è sempre così; a volte mi bacia, mi coccola, mi dice che mi vuole bene.
+        
+        Non so a cosa credere, però...<N>Papà mi dice che lei mi ama tanto, ma non c’è mai quando la mamma grida a quel modo.<N>Uno, due.<N>Bisognerebbe avere quella magia di luce. Sembra buona per combattere i tuoni che ruggiscono. <N>Sara mi ha detto che i fulmini sono una “conseguenza” dei tuoni, ma non ho capito molto bene cosa significa, non so ancora cercare le parole sul
+        dizionario.<N>Forse la mamma sa il significato, anzi sono sicura che lo sa, è molto intelligente e legge tanti libri.<N>Da qualche tempo a questa parte non me li legge più, dice che posso farlo da sola visto che a scuola ho imparato come si fa.
+        
+        La guardo mentre singhiozza sul divano, la luce ogni tanto va e viene.<N>Uno.<N>Il lampo è caduto vicinissimo su un albero nel cortile! Papà mi ha spiegato che
+        quando una luce è molto forte si dice “abbagliante”.<N>Ecco, era proprio abbagliante.<N>Mi ha messo coraggio.<N>Chissà, forse posso scacciare il buio della mamma e farla stare meglio.<N>Spero solo non mi spinga per terra o, peggio, non mi guardi in silenzio senza parlarmi per giorni.
+        
+        Ma forse ho la magia della luce ora che l’ho vista così da vicino, quindi mi posso rialzare e posso provarci di nuovo, se succede.<N>Abbraccio forte la mia mamma anche se lei non mi guarda. <N>Non me lo dice mai con la voce ma è un po’ come se chiedesse aiuto quando fa così. <N>Forse a volte mi chiede anche scusa senza dirlo. Mi accarezza la testa. <N>Nessuno merita di stare da solo quando piange.
 
         + [Vorrei leggere ancora.]
             ~ disableBigDialogue()
