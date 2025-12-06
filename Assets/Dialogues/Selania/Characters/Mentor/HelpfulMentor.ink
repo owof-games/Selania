@@ -80,10 +80,7 @@
         
         + [Vorrei consigli su come stare meglio.]
             -> mindfulness -> support
-        
-        + {secondChar_storyStatus == story_storyEnded && firstChar_storyStatus == story_storyEnded} [Mi ridaresti il codice della demo?]
-            -> ending_demo.repeat
-        
+    
         + [Vorrei parlare d'altro.]
             -> helping_mentor
         -

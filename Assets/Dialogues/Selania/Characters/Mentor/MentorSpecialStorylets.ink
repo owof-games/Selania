@@ -295,16 +295,15 @@ Mentore sbrocca
 //Fine della demo
     === ending_demo
     ~ temp mentorName = translator(mentor_ActualName)
-    Sembra che la demo sia finita qui, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
-    Potrai girare ancora per gli spazi aperti.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
-    Continuare a leggere le storie della <b><i>biblioteca</b></i>.
-    E coltivare cosa rimane da coltivare nella <b><i>serra</b></i>.
-    Ma non compariranno nuove persone bisognose.
-    Ti chiedo un favore prima di salutarci, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_sorry
-    Salvati questo codice, e inseriscilo poi nel documento del testing.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
-    O se non hai voglia di rispondere alle domande mandamelo attraverso Queerginia: faresti molto felice entrambe.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Other)} #portrait:mentore_bored
-    - (repeat)
-    Il codice è {player_purple} - {player_yellow} - {player_blue} - {player_green}- {player_red}; {player_firstStepStatus}; {player_secondStepStatus}; {firstChar_ActualName}; {secondChar_ActualName}.
-    E se non te lo sei {player_pronouns has him:segnato|{player_pronouns has her:segnata|segnatə}}, potrai sempre trovarlo uscendo dal gioco.
-    Grazie di cuore.
+
+        Sembra che la demo sia finita qui, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_hurry
+        Potrai girare ancora per gli spazi aperti.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Other)} #portrait:mentore_neutral
+        Continuare a leggere le storie della <b><i>biblioteca</b></i>.
+        E coltivare cosa rimane da coltivare nella <b><i>serra</b></i>.
+        Ma non compariranno nuove persone bisognose.
+        Se te la senti, dopo aver chiuso l'esperienza potrai rispondere a qualche domanda su <i>Selanìa</i>.
+        E aggiungere in wishlist su Steam il gioco.
+        Un gesto semplice che aiuta i giochi indie a essere più visibili.
+        Grazie di cuore, e buona vita.
+        A presto!
         -> helping_mentor
