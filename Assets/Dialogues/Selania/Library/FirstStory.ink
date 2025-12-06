@@ -251,9 +251,7 @@
             -> main
 
 === beatrice
-<b>La rete non esiste</b> di Beatrice (she/her). Instagram: @vistadibea
-
-Trigger warning: depressione, religione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>La rete non esiste</b> di Beatrice (she/her).<N>Instagram: @vistadibea<N>Trigger warning: depressione, religione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
         + [Inizio la lettura.]
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -271,124 +269,41 @@ Trigger warning: depressione, religione.#speaker:{witch_tag()} #inkA:offState #i
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
     
-    Ciao.
-    Ho molte cose che mi frullano dentro ed è molto faticoso mettere ordine. 
-    Ma vorrei raccontarti alcune cose che vorrei che tu sapessi.
+    Ciao.<N>Ho molte cose che mi frullano dentro ed è molto faticoso mettere ordine.<N> Ma vorrei raccontarti alcune cose che vorrei che tu sapessi.
     
-    <b>Capitolo primo: Da dove arrivo.</b>
+    <b>Capitolo primo: Da dove arrivo.</b><N> <N>Sono la più piccola di quattro sorelle, di una famiglia molto cattolica.<N>Da bambina, osservando il mondo che mi circondava, ho imparato che i due dogmi per essere una "buona persona" sono: devi essere d'aiuto; non devi disturbare.<N>Non li ho messi in pratica sempre, ma con il tempo mi sono adattata, e ho scoperto che i due concetti, messi insieme, sono potentissimi.<N>Ti senti davvero "buona" ad ascoltare gli altri, a sforzarti di comprenderne il punto di vista e a cercare di risolvere problemi, di esserci sempre.
     
-    Sono la più piccola di quattro sorelle, di una famiglia molto cattolica. 
-    Da bambina, osservando il mondo che mi circondava, ho imparato che i due dogmi per essere una "buona persona" sono: devi essere d'aiuto; non devi disturbare.
-    Non li ho messi in pratica sempre, ma con il tempo mi sono adattata, e ho scoperto che i due concetti, messi insieme, sono potentissimi. Ti senti davvero "buona" ad ascoltare gli altri, a sforzarti di comprenderne il punto di vista e a cercare di risolvere problemi, di esserci sempre. 
-    Non so se qualcuno ha vissuto un'esperienza simile alla mia, io però, muovendomi con questi due dogmi, ho scoperto che:
-    ogni persona ha tragedie personali che non possiamo immaginare e motivi concreti e reali per fare quello che fa; 
-    non essere di disturbo e ascoltare gli altri e basta, semplicemente, non funziona. Le tue personali esigenze salteranno fuori, e urleranno forte.
-    Ora mi sta succedendo questo. Le mie esigenze urlano forte e a volte non riesco a capire che direzione prendono. 
-    In terapia mi è tornato a galla un ricordo che non sapevo di avere.
-    E scopro che ho un bisogno grande di parlare e di essere ascoltata, anche se darò fastidio, anche se verrò giudicata, anche se non verrò capita. 
+    Non so se qualcuno ha vissuto un'esperienza simile alla mia, io però, muovendomi con questi due dogmi, ho scoperto che:<N>ogni persona ha tragedie personali che non possiamo immaginare e motivi concreti e reali per fare quello che fa;<N>non essere di disturbo e ascoltare gli altri e basta, semplicemente, non funziona. Le tue personali esigenze salteranno fuori, e urleranno forte.<N>Ora mi sta succedendo questo. Le mie esigenze urlano forte e a volte non riesco a capire che direzione prendono. <N>In terapia mi è tornato a galla un ricordo che non sapevo di avere.<N>E scopro che ho un bisogno grande di parlare e di essere ascoltata, anche se darò fastidio, anche se verrò giudicata, anche se non verrò capita. 
     
-    <b>Capitolo secondo: Ricordi che ritornano.</b>
+    <b>Capitolo secondo: Ricordi che ritornano.</b><N> <N>Quando ero bambina, una ragazza, di poco più grande di me e figlia di amici di famiglia, mi ha toccata, nel senso che mi ha messo le mani nelle mutande per un tempo che non riesco a quantificare, ma che è stato per me lunghissimo.<N>Mi ha poi spogliata e ha continuato, senza che io riuscissi a capire cosa stava succedendo e come reagire.<N>Non sono sicura di quanti anni avessi, io credevo tra gli otto e i nove, ma ricostruendo probabilmente era prima delle elementari.
     
-    Quando ero bambina, una ragazza, di poco più grande di me e figlia di amici di famiglia, mi ha toccata, nel senso che mi ha messo le mani nelle mutande per un tempo che non riesco a quantificare, ma che è stato per me lunghissimo. Mi ha poi spogliata e ha continuato, senza che io riuscissi a capire cosa stava succedendo e come reagire. 
-    Non sono sicura di quanti anni avessi, io credevo tra gli otto e i nove, ma ricostruendo probabilmente era prima delle elementari.
-    Questa ragazza era orfana di padre e ricordo che la sensazione che avevo era di non poterne parlare.
-    Era ingiusto parlarne: chi soffre fa cose di cui non si accorge.
-    Poi era giovane.
-    Poi era sesso.
-    E nella mia famiglia di sesso non si parla.
-    Mai. 
+    Questa ragazza era orfana di padre e ricordo che la sensazione che avevo era di non poterne parlare.<N>Era ingiusto parlarne: chi soffre fa cose di cui non si accorge.<N>Poi era giovane.<N>Poi era sesso.<N>E nella mia famiglia di sesso non si parla.<N>Mai. <N>Credo che, se all'epoca non fossi stata una bambina di famiglia cattolica, in un piccolo paese cattolico, sarebbe stato liberatorio e utile parlarne. Ma non era così.<N>Mi sono sentita molto sola.
     
-    Credo che, se all'epoca non fossi stata una bambina di famiglia cattolica, in un piccolo paese cattolico, sarebbe stato liberatorio e utile parlarne. Ma non era così.
-    Mi sono sentita molto sola.
-    
-    Ci ho messo anni (quasi 27) per poterne parlare con qualcuno che non fosse la mia terapeuta.
-    La prima volta che l'ho fatto, con il mio attuale partner, via mail, ho letteralmente vomitato.
-    Ho iniziato a parlarne non perchè mi andava, ma perché il mondo mi si stava sgretolando addosso.
-    Stavo male per tutto ciò che riguardava sesso e affettività, evitavo tutti i tipi di contatto, e avevo iniziato ad avere problemi di memoria riguardo a ciò che mi accadeva legato a quella sfera.
-    Un ragazzo con cui collaboravo, un tipo gentile, simpatico, di cui avevo stima, aveva provato a baciarmi e io ho rimosso la cosa per anni, che se mi avesse chiesto "perché ti sei scansata dal bacio?" avrei potuto rispondere solo "quale bacio?". 
-    Ho recuperato il ricordo solo aggiustando gli altri pezzi.
-    Con il tempo ho sanato un po’ la ferita e ne ho parlato con la mia famiglia, un componente alla volta. 
-    Non è andata bene. 
-    Ho aperto una porta da cui escono cose inaspettate, in momenti inaspettati.
-    E alcune fanno incredibilmente male.
+    Ci ho messo anni (quasi 27) per poterne parlare con qualcuno che non fosse la mia terapeuta.<N>La prima volta che l'ho fatto, con il mio attuale partner, via mail, ho letteralmente vomitato.<N>Ho iniziato a parlarne non perché mi andava, ma perché il mondo mi si stava sgretolando addosso.<N>Stavo male per tutto ciò che riguardava sesso e affettività, evitavo tutti i tipi di contatto, e avevo iniziato ad avere problemi di memoria riguardo a ciò che mi accadeva legato a quella sfera.<N>Un ragazzo con cui collaboravo, un tipo gentile, simpatico, di cui avevo stima, aveva provato a baciarmi e io ho rimosso la cosa per anni, che se mi avesse chiesto "perché ti sei scansata dal bacio?" avrei potuto rispondere solo "quale bacio?". 
 
-    <b>Capitolo terzo: La rete a cui non credo.</b>
+    Ho recuperato il ricordo solo aggiustando gli altri pezzi.<N>Con il tempo ho sanato un po’ la ferita e ne ho parlato con la mia famiglia, un componente alla volta. <N>Non è andata bene. <N>Ho aperto una porta da cui escono cose inaspettate, in momenti inaspettati.<N>E alcune fanno incredibilmente male.
 
-    Da qualche anno abito in una grande città e vengo a contatto con modi di pensare, politiche, termini che non conosco.
-    Nella grande città ho sentito spesso parlare di rete di supporto.
-    Ogni volta che la sentivo nominare pensavo “io a questa rete non credo, non so cos’è, non la vedo. Sono da sola davanti ad un burrone gigantesco”.
-    Parlare dell’abuso che ho vissuto da bambina mi ha portata ad allontanarmi da molti rapporti, vecchi e nuovi, perché ho ricevuto risposte molto dolorose.
-    Anche nei rapporti nuovi mi accorgo di mantenere un distacco voluto, perchè faccio fatica a fidarmi e a sentirmi al sicuro. 
-    Ad un certo punti però è arrivato D.
+    <b>Capitolo terzo: La rete a cui non credo.</b><N> <N>Da qualche anno abito in una grande città e vengo a contatto con modi di pensare, politiche, termini che non conosco.<N>Nella grande città ho sentito spesso parlare di rete di supporto.<N>Ogni volta che la sentivo nominare pensavo “io a questa rete non credo, non so cos’è, non la vedo. Sono da sola davanti ad un burrone gigantesco”.<N>Parlare dell’abuso che ho vissuto da bambina mi ha portata ad allontanarmi da molti rapporti, vecchi e nuovi, perché ho ricevuto risposte molto dolorose.<N>Anche nei rapporti nuovi mi accorgo di mantenere un distacco voluto, perché faccio fatica a fidarmi e a sentirmi al sicuro.<N>Ad un certo punti però è arrivato D.
     
-    D. parla spesso di politica, abusi, minoranze.
-    Lo ascolto con la tazza di tè calda tra le mani, nel salotto del bilocale in cui vivo con il mio ragazzo, affascinata dalle idee che propone.
-    È una persona trans, parla delle difficoltà che ha vissuto e che vive, di problemi economici e famiglia.
-    Parla di rabbia politica, di transfemminismo.
-    Parla di fare rete. 
+    D. parla spesso di politica, abusi, minoranze.<N>Lo ascolto con la tazza di tè calda tra le mani, nel salotto del bilocale in cui vivo con il mio ragazzo, affascinata dalle idee che propone.<N>È una persona trans, parla delle difficoltà che ha vissuto e che vive, di problemi economici e famiglia.<N>Parla di rabbia politica, di transfemminismo.<N>Parla di fare rete. 
     
-    Siamo in pieno lockdown, è un giorno di confronto particolarmente tosto con la mia famiglia. Mi viene da piangere e racconto il perché.
-    Racconto tutto.
-    È la terza volta in vita mia che racconto con la voce quello che mi è successo da bambina.
-    Lui ascolta e dice “mi dispiace tanto”.
+    Siamo in pieno lockdown, è un giorno di confronto particolarmente tosto con la mia famiglia. Mi viene da piangere e racconto il perché.<N>Racconto tutto.<N>È la terza volta in vita mia che racconto con la voce quello che mi è successo da bambina.<N>Lui ascolta e dice “mi dispiace tanto”.
     
-    Inizio a pensare che la rete può esistere. 
-    A quel pensiero faccio quello che ho fatto per tutta la vita: mi impegno per essere d’aiuto.
-    Lo aiuto con il trasloco, lo aiuto con il lavoro, lo aiuto trovando un avvocato per lui, gli trovo due clienti, lo aiuto con sua mamma, gli dò un posto di rilevanza in una community digitale che ho riavviato e in cui so che vorrebbe stare.
-    Ci sono sempre, non ho soldi e gli dico “se hai problemi di soldi io ci sono”. Faccio anche un prestito se serve, non mi frega.
-    Io ci sono. Faccio rete.
+    Inizio a pensare che la rete può esistere. <N>A quel pensiero faccio quello che ho fatto per tutta la vita: mi impegno per essere d’aiuto.<N>Lo aiuto con il trasloco, lo aiuto con il lavoro, lo aiuto trovando un avvocato per lui, gli trovo due clienti, lo aiuto con sua mamma, gli dò un posto di rilevanza in una community digitale che ho riavviato e in cui so che vorrebbe stare.<N>Ci sono sempre, non ho soldi e gli dico “se hai problemi di soldi io ci sono”. Faccio anche un prestito se serve, non mi frega.<N>Io ci sono. Faccio rete.
 
     
-    <b>Capitolo quarto: Non ti fidare.</b>
+    <b>Capitolo quarto: Non ti fidare.</b><N> <N>D: “Mi uccide che in tutto questo io non ho fatto nulla.  <N>Io non sono l'aggressore, e non accetto di esserlo.”<N>D: “Ti ho scritto così a caso per sentirti e tu mi hai risposto in un modo che mi fa pensare che tu stia bene in generale ma male tra di noi, questo crea un bias su cosa dico o non dico.”<N>D. “Un po' ammetto avrei preferito tu fossi per il "tutto bene tra di noi", e andare avanti :D”<N>D: “Mi spiace per il tuo background e capisco che ti porti a vedere la società come fatta in un certo modo. Vorrei aggiungere però che questo non è l'unico modo di vedere le cose e che sono validi anche altri modi di pensarla. E io sono all'opposto su questo.”
     
-    D: “Mi uccide che in tutto questo io non ho fatto nulla. 
-    Io non sono l'aggressore, e non accetto di esserlo.”
-    
-    D: “Ti ho scritto così a caso per sentirti e tu mi hai risposto in un modo che mi fa pensare che tu stia bene in generale ma male tra di noi, questo crea un bias su cosa dico o non dico.”
-    
-    D. “Un po' ammetto avrei preferito tu fossi per il "tutto bene tra di noi", e andare avanti :)”
-    
-    D: “Mi spiace per il tuo background e capisco che ti porti a vedere la società come fatta in un certo modo. Vorrei aggiungere però che questo non è l'unico modo di vedere le cose e che sono validi anche altri modi di pensarla. E io sono all'opposto su questo.”
-    
-    Mi è già successo di sentirmi ed essere usata. Mi è successo di vedere miei giochi diffusi senza il mio nome tra i credits, o di assistere all’elogio di persone che si prendono il merito del mio lavoro o delle mie idee.
-    
-    Mi è già successo che mi escludessero da progetti che avevo avviato io, mi è già successo che mi accusassero di essere io il problema senza il minimo dialogo.
-    Mi è già successo che a fare tutte queste cose fossero persone amiche.
-    
-    Non mi era mai successo però con una persona amica che faceva discorsi politici affini.
-    
-    E quando mi è successo con D. ho avuto una grande certezza: 
-    avevo ragione, la rete non esiste.
+    Mi è già successo di sentirmi ed essere usata. Mi è successo di vedere miei giochi diffusi senza il mio nome tra i credits, o di assistere all’elogio di persone che si prendono il merito del mio lavoro o delle mie idee.<N>Mi è già successo che mi escludessero da progetti che avevo avviato io, mi è già successo che mi accusassero di essere io il problema senza il minimo dialogo.<N>Mi è già successo che a fare tutte queste cose fossero persone amiche.<N>Non mi era mai successo però con una persona amica che faceva discorsi politici affini.<N>E quando mi è successo con D. ho avuto una grande certezza:<N>avevo ragione, la rete non esiste.
     
     
-    <b>Capitolo quarto: Ti odio e ti mordo.</b>
+    <b>Capitolo quarto: Ti odio e ti mordo.</b><N> <N>La rete non esiste.<N>Ora che ne sono certa faccio qualcosa che non ho mai fatto prima: mi permetto di odiare.<N>Decido che non ha senso farmi remore, non c’è nessuno da proteggere qui. <N>E allora parlo e scrivo. <N>Scrivo alle persone di cui vorrei fidarmi e racconto quello che è successo, senza la preoccupazione di dover essere buona, educata, comprensiva. <N>Parlo senza cercare di tutelare chi mi ha fatto male. 
     
-    La rete non esiste. 
-    Ora che ne sono certa faccio qualcosa che non ho mai fatto prima: mi permetto di odiare.
-    Decido che non ha senso farmi remore, non c’è nessuno da proteggere qui. 
-    E allora parlo e scrivo. 
-    Scrivo alle persone di cui vorrei fidarmi e racconto quello che è successo, senza la preoccupazione di dover essere buona, educata, comprensiva. 
-    Parlo senza cercare di tutelare chi mi ha fatto male. 
+    Scopro che queste persone mi ascoltano, che dicono “È terribile”, “Cosa posso fare per te?”, “È molto ingiusto”.<N>Scopro anche un’altra cosa: nessuna di queste persone può fare qualcosa per farmi stare bene del tutto.
     
-    Scopro che queste persone mi ascoltano, che dicono “È terribile”, “Cosa posso fare per te?”, “È molto ingiusto”.
-    Scopro anche un’altra cosa: nessuna di queste persone può fare qualcosa per farmi stare bene del tutto.
+    Ma ognuna fa un pezzetto.<N>E questi pezzetti, anche se piccoli, mi aiutano a non sentirmi più da sola.<N>Mi permetto di occupare spazio, fare brutta figura, di rischiare di essere vista come pazza, egoista, o vittimista. <N>Mi permetto di parlare di quello che è successo, di scriverci un pezzo dentro ad un videogioco amico.<N>Mi permetto di chiedere aiuto, di alzare la voce, di pretendere che il mio dolore sia riconosciuto. <N>Mi permetto di odiarti se non mi rispetti, anche se so che hai una vita difficile anche tu. 
     
-    Ma ognuna fa un pezzetto.
-    E questi pezzetti, anche se piccoli, mi aiutano a non sentirmi più da sola.
-    Mi permetto di occupare spazio, fare brutta figura, di rischiare di essere vista come pazza, egoista, o vittimista. 
-    Mi permetto di parlare di quello che è successo, di scriverci un pezzo dentro ad un videogioco amico.
-    Mi permetto di chiedere aiuto, di alzare la voce, di pretendere che il mio dolore sia riconosciuto. 
-    Mi permetto di odiarti se non mi rispetti, anche se so che hai una vita difficile anche tu. 
-    
-    Anzi, per citare l’amore della mia vita: non è che perché stai male puoi cagarmi in faccia.
-    Sono libera di mordere e di morderti se mi fai male, sono libera di odiarti, sono libera di raccontare la mia storia.
-    
-    E lo sono anche grazie a voi che mi avete ascoltato. 
-
-    Ma è ora che ce lo diciamo e che lo sappiamo: la rete come ce la raccontiamo non esiste.
-    Se senti che qualcuno ti dice “lì sarai al sicuro” o “questo modo di pensare è più inclusivo di quest’altro” metti di fianco a queste frasi un grande punto di domanda.
-    Se esiste una rete è quella il cui collante sei tu, fatta di singole persone che tu scegli e che ti scelgono.
-    E se qualcuno ti fa del male, semplicemente non ne fa parte.
+    Anzi, per citare l’amore della mia vita: non è che perché stai male puoi cagarmi in faccia.<N>Sono libera di mordere e di morderti se mi fai male, sono libera di odiarti, sono libera di raccontare la mia storia.<N> <N>E lo sono anche grazie a voi che mi avete ascoltato.<N>Ma è ora che ce lo diciamo e che lo sappiamo: la rete come ce la raccontiamo non esiste.<N>Se senti che qualcuno ti dice “lì sarai al sicuro” o “questo modo di pensare è più inclusivo di quest’altro” metti di fianco a queste frasi un grande punto di domanda.<N>Se esiste una rete è quella il cui collante sei tu, fatta di singole persone che tu scegli e che ti scelgono.<N>E se qualcuno ti fa del male, semplicemente non ne fa parte.
 
         + [Vorrei leggere ancora.]
             ~ disableBigDialogue()
