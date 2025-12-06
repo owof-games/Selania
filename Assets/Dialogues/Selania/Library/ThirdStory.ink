@@ -32,9 +32,7 @@
 
 
 === loris_casagrandi
-<b>Volevo essere solo cervello</b>, di Loris Casagrandi (he/him - she/her). Instagram: @lorisdesign4exp
-
-Trigger warning: riferimento a gesti ti autolesionismo o violenza.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Volevo essere solo cervello</b>, di Loris Casagrandi (he/him - she/her).<N>Instagram: @lorisdesign4exp<N>Trigger warning: riferimento a gesti ti autolesionismo o violenza.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
         + [Inizio la lettura.]
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -53,17 +51,15 @@ Trigger warning: riferimento a gesti ti autolesionismo o violenza.#speaker:{witc
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
 
-    Volevo essere solo cervello, per non assomigliarti, per dimenticare che ti ho avuto come modello. Pilota di un mecha di carne, player di un avatar non scelto. Eppure non ha funzionato perché avevi plasmato i miei percorsi mentali. Per questo ho strappato tutto e sono ripartito da zero, per scoprire che anche in quel vuoto rimaneva la tua veste.
-    Così mi sono ripreso il mio corpo, ho cercato di strapparmi la pelle perché  non la volevo più addosso. Volevo togliere le forme che vi avevi tatuato, I solchi abitudinari che vi avevi tracciato, i modi di cui non mi sono mai liberato. Ho provato con forza a scavare più a fondo, oltre il muscolo, fino all'osso dove ho trovato di nuovo il tuo marchio. Anche nel midollo ho trovato il sapore dei tuoi traumi, per questo senza più risorse ho provato ad abbracciarmi: lacrime, risa e pianti nei fiumi del mio sangue.
-    In quella follia e in quel caos ho trovato magia, la forza di rendere quel odore di morte una cosa mia, e l'ho urlato a pieni polmoni. Con violenza l'ho urlato alla mia ansia e ai miei errori, l'ho urlato alla tua immagine, l'ho urlato alle tue idee che erano la mia  croce.
-    L'ho gridato in corteo e alle mie etichette, alla vita e alle politiche fasciste.
-    Ed è da allora che come un'accetta che taglia il legno mi faccio strada tra la vita e il sogno. Un colpo alla volta faccio di me il mio unico regno e non mi curo di cosa perdo per strada, ogni fronda tagliata, caduta e abbandonata sarà ricreata o ne rimarrò senza: in ogni caso sarà una nuova cicatrice da me scelta e non inflitta dalla tua cura scellerata.
+    Volevo essere solo cervello, per non assomigliarti, per dimenticare che ti ho avuto come modello. Pilota di un mecha di carne, player di un avatar non scelto. Eppure non ha funzionato perché avevi plasmato i miei percorsi mentali. Per questo ho strappato tutto e sono ripartito da zero, per scoprire che anche in quel vuoto rimaneva la tua veste.<N>Così mi sono ripreso il mio corpo, ho cercato di strapparmi la pelle perché  non la volevo più addosso. Volevo togliere le forme che vi avevi tatuato, I solchi abitudinari che vi avevi tracciato, i modi di cui non mi sono mai liberato. Ho provato con forza a scavare più a fondo, oltre il muscolo, fino all'osso dove ho trovato di nuovo il tuo marchio. Anche nel midollo ho trovato il sapore dei tuoi traumi, per questo senza più risorse ho provato ad abbracciarmi: lacrime, risa e pianti nei fiumi del mio sangue.
+
+    In quella follia e in quel caos ho trovato magia, la forza di rendere quel odore di morte una cosa mia, e l'ho urlato a pieni polmoni. Con violenza l'ho urlato alla mia ansia e ai miei errori, l'ho urlato alla tua immagine, l'ho urlato alle tue idee che erano la mia  croce.<N>L'ho gridato in corteo e alle mie etichette, alla vita e alle politiche fasciste.<N>Ed è da allora che come un'accetta che taglia il legno mi faccio strada tra la vita e il sogno. Un colpo alla volta faccio di me il mio unico regno e non mi curo di cosa perdo per strada, ogni fronda tagliata, caduta e abbandonata sarà ricreata o ne rimarrò senza: in ogni caso sarà una nuova cicatrice da me scelta e non inflitta dalla tua cura scellerata.
     
         + [Vorrei leggere ancora.]
-        ~ disableBigDialogue()
+            ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
-        ~ disableBigDialogue()
+            ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
             -> main
