@@ -36,25 +36,26 @@
             Tu devi essere {player_name}!
             Io sono Franco La Rana!
                 ~ frog_nameDiscovered = true
-                
             {charNameTwo} mi ha parlato di te.
             Ha una bella testolina quel girino!
                 {
                     - are_two_entities_together(SecondCharacter, PG):
-                        Anche la tua mi piace, rana!
+                        Anche la tua mi piace, Franco!
                 }
             E tu sei sicuramente qui per il dono.
             Come si dice: chi dorme non piglia lombrichi.
             Dovrei averlo qui.
             No.
             Dove l'ho messo?
+            L'avranno preso i gemelli?
             Facciamo così: mentre lo cerco ti do qualcosa da fare.
             Ma non una cosa da fare qualsiasi.
             Qualcosa di utile per chi vive questo posto.
             Come dice zia Graaak: una zampa vale l'altra.
-            Non che zia Graaak sia particolarmente pulita.
-            Ma sempre meglio di mio cugino Braaak.
-            Se c'è del fango ce lo trovi sempre.
+            Non che zia Graaak sia particolarmente brava negli affari.
+            Ma sempre meglio di mio cugino Braaak, che ha venduto una foglia di loto intera per una biscia.
+            Al funerale erano tutti molto molto imbarazzati.
+            Tranne la biscia: quella aveva ancora fame.
             Insomma: tu aiuti me, e io aiuto te.
         
         - else:
