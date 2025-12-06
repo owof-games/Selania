@@ -255,9 +255,7 @@ Trigger warning: alcolismo, violenza fisica.#speaker:{witch_tag()} #inkA:offStat
 
 
 === steno_artico
-<b>Questa rabbia, che mi è stata rubata</b> by StenoArtico (he/him, none). Instagram: @stenoartico
-
-Trigger warning: violenza psicologica, abusi fisici, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Questa rabbia, che mi è stata rubata</b> by StenoArtico (he/him, none).<N>Instagram: @stenoartico<N>Trigger warning: violenza psicologica, abusi fisici, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
         + [Inizio la lettura.]
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -276,49 +274,19 @@ Trigger warning: violenza psicologica, abusi fisici, depressione.#speaker:{witch
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
     
-    Arriva sempre,
-    quando sono già a terra,
-    a prendermi a calci nello stomaco
-    quella voce arrabbiata
-    che mi chiama definisce condanna
-    la persona peggiore possibile
-    inutile
-    schifosa.
+    Arriva sempre,<N>quando sono già a terra,<N>a prendermi a calci nello stomaco<N>quella voce arrabbiata<N>che mi chiama definisce condanna<N>la persona peggiore possibile<N>inutile<N>schifosa.
     
-    Ma perché ce l'ha a morte con me?
-    Siamo come un coniglio che si azzanna la zampa
-    intrappolata in una tagliola. 
-    Ma perchè nessuno azzanna il cacciatore?
+    Ma perché ce l'ha a morte con me?<N>
+    Siamo come un coniglio che si azzanna la zampa<N>
+    intrappolata in una tagliola.<N>
+    Ma perchè nessuno azzanna il cacciatore?<N> <N>Da dove arriva?<N>È un'eco dell'infanzia? Il commento di una zia stanca e distratta
+    ormai impresso a carne viva nel cervello?<N>Ma forse questa è una domanda malriposta.
     
-    Da dove arriva?
-    È un'eco dell'infanzia? Il commento di una zia stanca e distratta
-    ormai impresso a carne viva nel cervello?
-    Ma forse questa è una domanda malriposta.
+    Non ha origine,<N>è l’origine: azione e reazione,<N>energia eterna che tocca,<N>rimbalza, trasforma.<N>In fondo tutto è nato da uno scoppio,<N>non da una timida alzata di mano.<N> <N>Questa rabbia, che mi è stata rubata,<N>voglio provare a riabbracciarla.
     
-    Non ha origine,
-    è l’origine: azione e reazione, 
-    energia eterna che tocca, 
-    rimbalza, trasforma.
-    In fondo tutto è nato da uno scoppio,
-    non da una timida alzata di mano.
+    Voglio catturare il suo fulmine a mani nude.<N>Farà male, ma va bene.<N> <N>Voglio spaccare il labirinto di specchi<N>e farne finestre.
     
-    Questa rabbia, che mi è stata rubata, 
-    voglio provare a riabbracciarla.
-    
-    Voglio catturare il suo fulmine a mani nude.
-    Farà male, ma va bene.
-    
-    Voglio spaccare il labirinto di specchi
-    e farne finestre.
-    
-    Voglio puntare questo nuovo uragano lontano,
-    verso i monti della mia mente,
-    trasformare le loro pale eoliche in eliche
-    e farla decollare.
-    
-    Verso dove, ancora non lo so.
-    E mi piace.
-
+    Voglio puntare questo nuovo uragano lontano,<N>verso i monti della mia mente,<N>trasformare le loro pale eoliche in eliche<N>e farla decollare.<N> <N>Verso dove, ancora non lo so.<N>E mi piace.
 
         + [Vorrei leggere ancora.]
         ~ disableBigDialogue()
