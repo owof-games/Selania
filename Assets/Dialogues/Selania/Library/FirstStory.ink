@@ -199,8 +199,7 @@
 
 === b
 // <b>The touch of anger</b> di K.(she/her).
-<b>Il tocco della rabbia</b> di K.(she/her).
-Trigger warning: violenza fisica, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+<b>Il tocco della rabbia</b> di K.(she/her).<N>Trigger warning: violenza fisica, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
         + [Inizio la lettura.]
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
@@ -218,22 +217,11 @@ Trigger warning: violenza fisica, depressione.#speaker:{witch_tag()} #inkA:offSt
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
 
-    Ricordo ancora nitidamente quanto la rabbia fosse un'emozione che temevo profondamente.
-    Da bambina sono cresciuta subendo gli improvvisi scatti d'ira di mio padre, espressione di un trauma generazionale che non ha mai avuto la possibilità di superare.
-    Naturalmente la rabbia è diventata qualcosa che temevo, e ho modellato la mia vita in modo da evitare di esserne bersaglio.
-    Le persone erano contente di me perché ero una ragazza docile che ascoltava gli insegnanti e gli adulti e che non dava mai preoccupazioni ai suoi genitori.
-    A volte mi ritrovo ancora a pensare a quanto del mio vero io ho nascosto a causa dei miei meccanismi di difesa.
-    La mia infanzia non mi ha fornito gli strumenti per controllare questa emozione durante la mia turbolenta adolescenza.
-    Quando sentivo la rabbia crescere dentro di me questa si trasformava presto in frustrazione, che trovava sfogo sotto forma di lacrime che mi rigavano le guance.
-    E quando diventavo bersaglio di insulti, rabbia e bullismo, non potevo contare su questa importante emozione per combattere l'ingiustizia di cui ero vittima.
-    Spesso mi sentivo impotente e privata di qualcosa di importante, se non fondamentale.
-    Quando ripenso a quei momenti, spesso mi vengono le lacrime agli occhi perché mi rendo conto di quanto fossi impotente.
-    Ora capisco quanto sia importante la rabbia.
-    Questa emozione trasformativa ha il potere di spezzare le catene che ci imprigionano, di proteggere i nostri cari e di difendere la nostra posizione di fronte alle ingiustizie.
-    È un'onda potente che si abbatte su ciò che ci fa soffrire e lo spazza via, lasciando spazio alla crescita di qualcosa di nuovo.
-    Imparare a usare la mia rabbia per una buona causa è stato uno dei risultati più gratificanti della mia vita come persona e come donna.
-    E spero che ogni persona là fuori stia vivendo la propria vita al massimo, consapevole di quanto siano preziose tutte le emozioni che proviamo.
-    Anche la rabbia.
+    Ricordo ancora nitidamente quanto la rabbia fosse un'emozione che temevo profondamente.<N>Da bambina sono cresciuta subendo gli improvvisi scatti d'ira di mio padre, espressione di un trauma generazionale che non ha mai avuto la possibilità di superare.<N>Naturalmente la rabbia è diventata qualcosa che temevo, e ho modellato la mia vita in modo da evitare di esserne bersaglio.<N>Le persone erano contente di me perché ero una ragazza docile che ascoltava gli insegnanti e gli adulti e che non dava mai preoccupazioni ai suoi genitori.<N>A volte mi ritrovo ancora a pensare a quanto del mio vero io ho nascosto a causa dei miei meccanismi di difesa.
+
+    La mia infanzia non mi ha fornito gli strumenti per controllare questa emozione durante la mia turbolenta adolescenza.<N>Quando sentivo la rabbia crescere dentro di me questa si trasformava presto in frustrazione, che trovava sfogo sotto forma di lacrime che mi rigavano le guance.<N>E quando diventavo bersaglio di insulti, rabbia e bullismo, non potevo contare su questa importante emozione per combattere l'ingiustizia di cui ero vittima.<N>Spesso mi sentivo impotente e privata di qualcosa di importante, se non fondamentale.<N>Quando ripenso a quei momenti, spesso mi vengono le lacrime agli occhi perché mi rendo conto di quanto fossi impotente.<N>Ora capisco quanto sia importante la rabbia.
+
+    Questa emozione trasformativa ha il potere di spezzare le catene che ci imprigionano, di proteggere i nostri cari e di difendere la nostra posizione di fronte alle ingiustizie.<N>È un'onda potente che si abbatte su ciò che ci fa soffrire e lo spazza via, lasciando spazio alla crescita di qualcosa di nuovo.<N>Imparare a usare la mia rabbia per una buona causa è stato uno dei risultati più gratificanti della mia vita come persona e come donna.<N>E spero che ogni persona là fuori stia vivendo la propria vita al massimo, consapevole di quanto siano preziose tutte le emozioni che proviamo.<N>Anche la rabbia.
 
     // I still remember vividly how anger was an emotion I deeply feared.
     // As a child, I grew up suffering from my father’s sudden outbursts of rage, an expression of a generational trauma he never had the chance to overcome.
@@ -254,10 +242,10 @@ Trigger warning: violenza fisica, depressione.#speaker:{witch_tag()} #inkA:offSt
     // And I hope that every person out there is also living their life to their fullest, knowing how precious each emotion we feel is… anger too.
 
         + [Vorrei leggere ancora.]
-        ~ disableBigDialogue()
+            ~ disableBigDialogue()
            -> book_test_intro
         + [Me ne vado.]
-        ~ disableBigDialogue()
+            ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
             -> main
