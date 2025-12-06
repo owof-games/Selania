@@ -319,7 +319,7 @@ public class DialogueManagerSingleInk : MonoBehaviour
         {
             buttonsEnabled = false;
             // Application.Quit();
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Outro");
         }
         else if (currentLine == "@exit_from_rewriter_book")
         {
