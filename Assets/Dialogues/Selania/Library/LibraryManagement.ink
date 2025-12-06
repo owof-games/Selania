@@ -537,7 +537,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
     = reread_b
     La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
-        + [Rileggo <b>The touch of anger</b> di K.(she/her).]
+        + [Rileggo <b>Il tocco della rabbia</b> di K.(she/her).]
                 -> b
         + {LIST_COUNT(library_readStories) > 1}[Vorrei rileggere qualcosa di diverso.]
                 -> reread

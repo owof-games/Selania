@@ -330,9 +330,10 @@ Trigger warning: violenza psicologica, abusi fisici, depressione.#speaker:{witch
             -> main
 
 === b
-<b>The touch of anger</b> di K.(she/her).
-
+// <b>The touch of anger</b> di K.(she/her).
+<b>Il tocco della rabbia</b> di K.(she/her).
 Trigger warning: violenza fisica, depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
+        
         + [Inizio la lettura.]
         //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
@@ -348,24 +349,41 @@ Trigger warning: violenza fisica, depressione.#speaker:{witch_tag()} #inkA:offSt
         -
     -> DarkLibraryModeOn ->
     ~ enableBigDialogue()
+
+    Ricordo ancora nitidamente quanto la rabbia fosse un'emozione che temevo profondamente.
+    Da bambina sono cresciuta subendo gli improvvisi scatti d'ira di mio padre, espressione di un trauma generazionale che non ha mai avuto la possibilità di superare.
+    Naturalmente la rabbia è diventata qualcosa che temevo, e ho modellato la mia vita in modo da evitare di esserne bersaglio.
+    Le persone erano contente di me perché ero una ragazza docile che ascoltava gli insegnanti e gli adulti e che non dava mai preoccupazioni ai suoi genitori.
+    A volte mi ritrovo ancora a pensare a quanto del mio vero io ho nascosto a causa dei miei meccanismi di difesa.
+    La mia infanzia non mi ha fornito gli strumenti per controllare questa emozione durante la mia turbolenta adolescenza.
+    Quando sentivo la rabbia crescere dentro di me questa si trasformava presto in frustrazione, che trovava sfogo sotto forma di lacrime che mi rigavano le guance.
+    E quando diventavo bersaglio di insulti, rabbia e bullismo, non potevo contare su questa importante emozione per combattere l'ingiustizia di cui ero vittima.
+    Spesso mi sentivo impotente e privata di qualcosa di importante, se non fondamentale.
+    Quando ripenso a quei momenti, spesso mi vengono le lacrime agli occhi perché mi rendo conto di quanto fossi impotente.
+    Ora capisco quanto sia importante la rabbia.
+    Questa emozione trasformativa ha il potere di spezzare le catene che ci imprigionano, di proteggere i nostri cari e di difendere la nostra posizione di fronte alle ingiustizie.
+    È un'onda potente che si abbatte su ciò che ci fa soffrire e lo spazza via, lasciando spazio alla crescita di qualcosa di nuovo.
+    Imparare a usare la mia rabbia per una buona causa è stato uno dei risultati più gratificanti della mia vita come persona e come donna.
+    E spero che ogni persona là fuori stia vivendo la propria vita al massimo, consapevole di quanto siano preziose tutte le emozioni che proviamo.
+    Anche la rabbia.
+
+    // I still remember vividly how anger was an emotion I deeply feared.
+    // As a child, I grew up suffering from my father’s sudden outbursts of rage, an expression of a generational trauma he never had the chance to overcome.
+    // Naturally, anger became something I feared, and I shaped my life to avoid being its target.
+    // People were pleased with me because I was a docile girl who listened to teachers and adults and who never made her parents worry.
+    // Sometimes, I still find myself thinking how much of my true self I hid because of my coping mechanisms.
+    // My childhood left me with no tools to control this emotion during my turbulent teenage years.
+    // When I felt anger swelling up within myself, it would soon become frustration, which found its way outside as tears trickling down my cheeks.
+    // And when I became a target of insults, anger and bullying, I couldn’t count on this important emotion to fight against the injustice I was suffering from.
+    // I often felt powerless and robbed of something important, if not fundamental.
     
-    I still remember vividly how anger was an emotion I deeply feared.
-    As a child, I grew up suffering from my father’s sudden outbursts of rage, an expression of a generational trauma he never had the chance to overcome.
-    Naturally, anger became something I feared, and I shaped my life to avoid being its target.
-    People were pleased with me because I was a docile girl who listened to teachers and adults and who never made her parents worry.
-    Sometimes, I still find myself thinking how much of my true self I hid because of my coping mechanisms.
-    My childhood left me with no tools to control this emotion during my turbulent teenage years.
-    When I felt anger swelling up within myself, it would soon become frustration, which found its way outside as tears trickling down my cheeks.
-    And when I became a target of insults, anger and bullying, I couldn’t count on this important emotion to fight against the injustice I was suffering from.
-    I often felt powerless and robbed of something important, if not fundamental.
+    // When I recall these moments, I often feel tears prickling my eyes because I see how helpless I was.
+    // Now I know how important anger is.
+    // This transformative emotion has the power to break the chains tying us down, to protect our loved ones and to stand our ground in the face of injustice.
+    // It is a strong wave that comes crashing down on what makes you suffer and washes it away, leaving room to grow something new.
     
-    When I recall these moments, I often feel tears prickling my eyes because I see how helpless I was.
-    Now I know how important anger is.
-    This transformative emotion has the power to break the chains tying us down, to protect our loved ones and to stand our ground in the face of injustice.
-    It is a strong wave that comes crashing down on what makes you suffer and washes it away, leaving room to grow something new.
-    
-    Learning to wield my anger for a good cause was one of the most rewarding achievements in my life as a person and as a woman.
-    And I hope that every person out there is also living their life to their fullest, knowing how precious each emotion we feel is… anger too.
+    // Learning to wield my anger for a good cause was one of the most rewarding achievements in my life as a person and as a woman.
+    // And I hope that every person out there is also living their life to their fullest, knowing how precious each emotion we feel is… anger too.
 
         + [Vorrei leggere ancora.]
         ~ disableBigDialogue()
