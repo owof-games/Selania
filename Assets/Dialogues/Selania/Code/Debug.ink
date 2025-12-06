@@ -9,14 +9,13 @@
     VAR debug_frog = false
     
     //per testare i luoghi non subito aperti con calma
-    VAR debug_testLibrary = false
+    VAR debug_testLibrary = true
     VAR debug_testKitchen = false
     VAR debug_testNest = false
     VAR debug_testFrog = false
     
 //Per disabilitare uscite e cose varie in caso di testing con il sistema stocastico    
     VAR debug_stochastic = true
-    
     
     
     
