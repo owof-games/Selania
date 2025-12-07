@@ -13,18 +13,21 @@ public class Menu : MonoBehaviour
 
     void Start()
     {
-        var fileName = Application.persistentDataPath + "/savefile.json";
-        if (File.Exists(fileName))
+        if (continueButton != null)
         {
+            var fileName = Application.persistentDataPath + "/savefile.json";
+            if (File.Exists(fileName))
+            {
 
-            continueButton.interactable = true;
-        }
+                continueButton.interactable = true;
+            }
 
-        else
-        {
+            else
+            {
 
-            continueButton.interactable = false;
+                continueButton.interactable = false;
 
+            }
         }
 
     }
