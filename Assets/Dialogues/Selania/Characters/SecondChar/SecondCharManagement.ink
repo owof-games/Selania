@@ -15,10 +15,13 @@
     VAR secondChar_relationshipGoodPercentage = 66.00
 
 //Valori per definire l'esito del nome
-    VAR secondChar_crowPercentage = 90.00
-    VAR secondChar_capibaraPercentage = 70.00
-    VAR secondChar_dolphinePercentage = 60.00
-    VAR secondChar_wolfPercentage = 30.00
+//come minimo, otteniamo 20% (prendo esattamente la stessa quantità di risposte per ogni colore)
+//quindi divido l'intervallo 20% - 100% in cinque blocchi, a distanza uniforme: 20%-36%, 36%-52%,
+//ecc ecc...
+    VAR secondChar_crowPercentage = 84.00
+    VAR secondChar_capibaraPercentage = 68.00
+    VAR secondChar_dolphinePercentage = 52.00
+    VAR secondChar_wolfPercentage = 36.00
 
 //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
     VAR secondChar_favouritesGifts = (BrinaDellImpossibile, BastoneDellOzioso, LicheneDegliAbissi)
