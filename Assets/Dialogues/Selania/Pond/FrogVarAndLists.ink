@@ -12,7 +12,7 @@
         //Separo la lista totale da quelle disponibili anche per un discorso di TW
     VAR frog_availableCommonMissions = (missionOne, missionTwo, missionThree, missionFour, missionFive, missionSix, missionSeven, missionEight)
         //Nota: per ora sono solo due missioni speciali, poi vediamo.
-    VAR frog_availableSpecialMissions = (specialMissionOne)
+    VAR frog_availableSpecialMissions = (specialMissionTwo)
     
     VAR frog_aboutGiftRequest = ()
     VAR frog_currentMission = ()
