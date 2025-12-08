@@ -278,7 +278,7 @@
     ~ temp charNameThree = translator(thirdChar_ActualName)
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp mentorName = translator(mentor_ActualName)
-
+    ~ temp maxRandomDice = 0
 
         - (top)
         //Dato che no mi fa fare questa cosa direttamente nella variabile, provo così.
@@ -286,6 +286,7 @@
         
         //Tiro il dado
         ~ frog_randomMissionDice = RANDOM(1,8)
+
         
         {frog_randomMissionDice:
         
@@ -307,7 +308,32 @@
                 -> mission_eight
             - else:
                 {debug_frog: il valore di frog_randomMissionDice è {frog_randomMissionDice}, e la missione associata è già stata fatta. Ritiro il dado.}
-                -> top
+                
+                {   
+                    //Faccio in modo di tirare comunque un po' di volte il dado, se però non esce nulla dopo un po', a quel punto passo al piano b.
+                    - maxRandomDice < 9:
+                        ~ maxRandomDice ++
+                            -> top
+
+                                        //E il piano b è: se ci sono "normali" disponibili, ti dico comunque di tornare più tardi (è un problema di condizioni), altrimenti ti dico che hai ripulito tutto.     
+      
+                    - else:
+                        {
+                            - frog_availableCommonMissions != () && frog_availableSpecialMissions != ():
+                                Naa {player_name}, per ora sono qui con le zampe in zampa.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                                Ma torna più tardi e mi invento qualcosa da farti fare!
+                                    -> main
+                            
+                            - else:
+                                Ehi {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
+                                Hai fatto un lavoro così buono ma così buono, che non ho niente da farti fare.
+                                Complimenti girino.
+                                Ora non ti resta che riposare!
+                                    -> main
+                        }    
+
+                }
+                
                 
         }
     

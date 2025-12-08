@@ -138,13 +138,14 @@
                 - frog_availableCommonMissions != () && frog_availableSpecialMissions != ():
                     Naa {player_name}, per ora sono qui con le zampe in zampa.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Ma torna più tardi e mi invento qualcosa da farti fare!
-                    -> main
+                        -> main
+                
                 - else:
                     Ehi {player_name}!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     Hai fatto un lavoro così buono ma così buono, che non ho niente da farti fare.
                     Complimenti girino.
                     Ora non ti resta che riposare!
-                    -> main
+                        -> main
             }
                
         }
