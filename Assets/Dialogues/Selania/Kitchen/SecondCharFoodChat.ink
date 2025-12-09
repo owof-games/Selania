@@ -89,13 +89,13 @@
             + [Statisticamente sì, solo con cose diverse dai prociorsi.]
                 -> color_variation_management(SecondCharacter, blueC)->
                
-            + [Scelta gialla]
+            + [Gli adulti devono imparare dai bambini!]
                 -> color_variation_management(SecondCharacter, yellowC)->
              
             + [Le cose hanno senso se hanno uno scopo. Fare per fare è inutile.]
                 -> color_variation_management(SecondCharacter, redC)->
         
-            + [Scelta verde]
+            + [Il cuore degli adulti è molto molto complicato, {charNameTwo}.]
                 -> color_variation_management(SecondCharacter, greenC)->
     
             + [Scelta viola]
@@ -174,7 +174,7 @@
             + [Il combattivo leone!]
                 -> color_variation_management(SecondCharacter, redC)->
         
-            + [Scelta verde]
+            + [L'affettuoso cane.]
                 -> color_variation_management(SecondCharacter, greenC)->
     
             + [Scelta viola]
@@ -242,7 +242,7 @@
             + [Fregatene. Sii strano come va a te, {charNameTwo}!]
                 -> color_variation_management(SecondCharacter, redC)->
         
-            + [Scelta verde]
+            + [Spesso gli adulti non sanno cosa desiderano, amico mio.]
                 -> color_variation_management(SecondCharacter, greenC)->
     
             + [Scelta viola]
@@ -331,7 +331,7 @@
                 + [E l3 ribelli si oppongono alle punizioni!]
                     -> color_variation_management(SecondCharacter, redC)->
             
-                + [Scelta verde]
+                + [Chi punisce non riesce ad ascoltare il suo cuore.]
                     -> color_variation_management(SecondCharacter, greenC)->
         
                 + [Scelta viola]
@@ -408,7 +408,7 @@
                 + [L'importante è essere lotta, cambiamento, fuoco!]
                     -> color_variation_management(SecondCharacter, redC)->
             
-                + [Scelta verde]
+                + [Concordo con tuo fratello: ciò che conta è essere brave persone.]
                     -> color_variation_management(SecondCharacter, greenC)->
         
                 + [Scelta viola]
@@ -486,7 +486,7 @@
             + [Ogni guerrierə ha bisogno di riposarsi prima della battaglia.]
                 -> color_variation_management(SecondCharacter, redC)->
         
-            + [Scelta verde]
+            + [Hai un tuo nido, un posto sicuro, tutto per te.]
                 -> color_variation_management(SecondCharacter, greenC)->
     
             + [Scelta viola]
@@ -567,7 +567,7 @@
             + [Bimbo, rilassati, non sono un{player_pronouns has her:a|ə} professor{player_pronouns has him:o|{player_pronouns has her:a|ə}}.]
                 -> color_variation_management(SecondCharacter, redC)->
         
-            + [Scelta verde]
+            + [Mi spiace, non volevo farti arrabbiare. Vorrei solo parlare con te.]
                 -> color_variation_management(SecondCharacter, greenC)->
     
             + [Scelta viola]
@@ -682,8 +682,12 @@
             + [Ma perché non guardi i cartoni di nascosto? O prendi i fumetti in biblio?]
                 -> color_variation_management(SecondCharacter, redC)->
         
-            + [Scelta verde]
+            + [Devi sentirti molto solo.]
                 -> color_variation_management(SecondCharacter, greenC)->
+                Si no boh.
+                Non mi dire mica che ti dispiace.
+                Ma a me mi piace stare con gli altri.
+                Ma è così difficile.
     
             + [Scelta viola]
                -> color_variation_management(SecondCharacter, purpleC)->
@@ -752,7 +756,7 @@
             + [L'unica cosa che fa andare avanti è il cambiamento, non le belle bugie.]
                 -> color_variation_management(SecondCharacter, redC)->
         
-            + [Scelta verde]
+            + [Ci sono belle bugie che sono come coperte contro il freddo.]
                 -> color_variation_management(SecondCharacter, greenC)->
     
             + [L'arte mostra ciò che i fatti non sanno raccontare.]

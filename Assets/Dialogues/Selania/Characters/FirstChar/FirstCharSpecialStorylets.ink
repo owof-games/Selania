@@ -72,7 +72,7 @@
         + [Scelta gialla.]
             -> color_variation_management(FirstCharacter, yellowC)->
             
-        + [Scelta verde.]
+        + [Cibo, chiacchiere e intimità: mi piace molto, grazie {charNameOne}.]
             -> color_variation_management(FirstCharacter, greenC)->
         -    
     
@@ -138,7 +138,7 @@
             Mi piacerebbe farlo una volta.
             Credo mi farebbe sentire parti di me che non cago mai.
             
-        + [Posso capirla, ma non ha pensato a Irene, e ha generato altro dolore.]
+        + [Posso capirla, ma non ha pensato a Irene, generando altro dolore.]
                 -> color_variation_management(FirstCharacter, greenC)->
             Ed è una cosa che capisco, ma.
             Lui non si è posto questa domanda mi sa, qualsiasi cosa abbia fatto.

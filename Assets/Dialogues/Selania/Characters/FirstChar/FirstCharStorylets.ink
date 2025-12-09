@@ -31,7 +31,7 @@
             + [Ma una persona non può essere un uccello.]
                 -> color_variation_management(FirstCharacter, blueC)->  
                  
-            + [Risposta verde.]
+            + [È una persona a cui tieni?]
                 -> color_variation_management(FirstCharacter, greenC)->
 
             + [Risposta gialla.]
@@ -78,7 +78,7 @@
             + [Nessun messaggio: sono una persona, non il tuo inconscio.]
                 -> color_variation_management(FirstCharacter, blueC)->
             
-            + [Risposta gialla.]
+            + [Il mio messaggio? Sei un canarino! Ecco, accettalo!]
                 -> color_variation_management(FirstCharacter, yellowC)->
                 
             + [Risposta viola.]
@@ -87,7 +87,7 @@
             + [<i>La pizzico, così capisce che sono reale.]
                 -> color_variation_management(FirstCharacter, redC)->    
                  
-            + [Risposta verde.]
+            + [E se facessimo un bel respiro e ripartissimo da capo?]
                 -> color_variation_management(FirstCharacter, greenC)->
             -
             
@@ -182,7 +182,7 @@
             + [Un terzo delle persone odia il proprio capo, sei in buona compagnia.]
                 -> color_variation_management(FirstCharacter, blueC)->
 
-            + [Risposta verde.]
+            + [Ti mancano, le amiche della band?]
                 -> color_variation_management(FirstCharacter, greenC)->
             -
         
@@ -251,7 +251,7 @@
         Ha senso?
         E mi chiedevo: secondo te, cosa vuol dire fidarsi?
         
-            + [Risposta verde.]
+            + [Sapere di poter essere vulnerabili.]
                 -> color_variation_management(FirstCharacter, greenC)->
                 
             + [Risposta viola.]
@@ -339,7 +339,7 @@
             + [Risposta gialla.]
                 -> color_variation_management(FirstCharacter, yellowC)->
                 
-            + [Risposta verde.]
+            + [Sono le parole di una persona generosa.]
                 -> color_variation_management(FirstCharacter, greenC)->
 
             -    
@@ -401,7 +401,7 @@
         Ha senso?
         Secondo te una relazione ci cambia? O ci mostra chi siamo davvero?
         
-            + [Risposta verde.]
+            + [Ogni relazione esalta aspetti diversi di noi.]
                 -> color_variation_management(FirstCharacter, greenC)->
             
             + [Risposta gialla.]
@@ -483,7 +483,7 @@
             + [Risposta gialla.]
                 -> color_variation_management(FirstCharacter, yellowC)->
             
-            + [Risposta verde.]
+            + [Credo che siamo pien3 di emozioni, non di fatti.]
                 -> color_variation_management(FirstCharacter, greenC)->
     
             + ["Riempire di calore" i fatti li rende inattendibili.]
@@ -566,7 +566,7 @@
                 Eppure anche qualcosa di diverso da tutto quello che avevo.
                 Dalla stasi della mia vita.
                 
-            + [Felice di questa nuova famiglia con Talco.]
+            + [Forse spaventat{player_pronouns has him:o|{player_pronouns has her:a|ə}}, ma anche felice di questa nuova famiglia con Talco.]
                     -> color_variation_management(FirstCharacter, greenC)->
                 Sei una persona migliore di me allora, {player_name}.
                 Perché le emozioni che ho provato erano davvero tante, ma non felicità.
@@ -658,7 +658,7 @@
             + (blue)[Scientificamente, sì: siamo bestie sociali, le persone ci influenzano.]
                 -> color_variation_management(FirstCharacter, blueC)->  
             
-            + [Risposta verde.]
+            + [Potresti confidare queste paure ai tuoi?]
                 -> color_variation_management(FirstCharacter, greenC)->    
                     
             + [Risposta viola.]
@@ -724,7 +724,7 @@
             + [Non so cosa dire, non trovo il filo logico del discorso.]
                 -> color_variation_management(FirstCharacter, blueC)->  
             
-            + [Risposta verde.]
+            + [Fa sentire meno sol3, e più parte di una lunga rete di storie.]
                 -> color_variation_management(FirstCharacter, greenC)->    
                     
             + [Risposta viola.]
@@ -791,7 +791,7 @@
         E a quel punto, ripartirà mai il treno dalla mia stazione?
         //Hai provato a chiedere al capotreno?
 
-            + [Risposta verde.]
+            + [E se Ennio fosse la tua stazione, il tuo arrivo?]
                 -> color_variation_management(FirstCharacter, greenC)->
             
             + [Nel dubbio prendi il controllo del treno e parti.]
@@ -855,7 +855,7 @@
             + [Sì, ma sai già cosa vuoi evitare: fallo.]
                 -> color_variation_management(FirstCharacter, redC)->
                 
-             + [Risposta verde.]
+            + [Talco ti vuole bene anche nella distanza e nel conflitto: non resterai sola.]
                 -> color_variation_management(FirstCharacter, greenC)->    
                     
             + [Risposta viola.]
@@ -933,7 +933,7 @@
         + [Risposta gialla.]
             -> color_variation_management(FirstCharacter, yellowC)->
         
-        + [Risposta verde.]
+        + [Non colpevolizzarti per ciò che provi, {charNameOne}. Sii gentile con te.]
             -> color_variation_management(FirstCharacter, greenC)->     
             
         + [Sei responsabile di ciò che fai, non ciò che provi.]

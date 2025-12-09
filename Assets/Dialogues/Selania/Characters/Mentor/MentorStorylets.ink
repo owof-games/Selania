@@ -160,8 +160,6 @@
              
                 -> main
 
-
-    
     = three
     ~ temp charNameOne = translator(firstChar_ActualName)
     ~ temp charNameTwo = translator(secondChar_ActualName)
@@ -277,7 +275,7 @@
                 Per questo i genitori ci sono.
                 Per proteggerti.
 
-            + [Mi spiace che tu ti senta in colpa.]
+            + [Mi spiace che tu ti senta in colpa, {mentorName}.]
                     -> color_variation_management(Mentor, greenC)->
                 Ma non hai detto che non ho sbagliato.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 Scusa, non è quello il tuo ruolo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry

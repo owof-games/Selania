@@ -94,7 +94,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Le relazioni sono passione e uno scopo condiviso.]
                 -> color_variation_management(FirstCharacter, redC)->
         
-            + [Scelta verde]
+            + [Credo molto nell'idea di cura, supporto, sostegno reciproco.]
                 -> color_variation_management(FirstCharacter, greenC)->
     
             + [Scelta viola]
@@ -174,7 +174,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Un'amicizia non è una onlus, e se si sta male ci si divide.]
                 -> color_variation_management(FirstCharacter, redC)->
         
-            + [Scelta verde]
+            + [Sì: il cuore ha ferita che non potrà chiudersi senza un chiarimento.]
                 -> color_variation_management(FirstCharacter, greenC)->
     
             + [Scelta viola]
@@ -245,7 +245,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Conta quello che si fa, le parole fanno solo casino.]
                 -> color_variation_management(FirstCharacter, redC)->
         
-            + [Scelta verde]
+            + [I sentimenti non si esauriscono se condivisi con più persone.]
                 -> color_variation_management(FirstCharacter, greenC)->
     
             + [Scelta viola]
@@ -338,7 +338,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [È l'unico senso, altrimenti perché siamo viv3?]
                 -> color_variation_management(FirstCharacter, redC)->
         
-            + [Scelta verde]
+            + [Quindi ti senti inadeguata?]
                 -> color_variation_management(FirstCharacter, greenC)->
     
             + [Scelta viola]
@@ -431,7 +431,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 O meglio: magari porta lontano.
                 Ma senza sapere dove arriveremo.
         
-            + [Scelta verde]
+            + [Il perdono è un atto di coraggio, ci rende vulnerabili.]
                 -> color_variation_management(FirstCharacter, greenC)->
     
             + [Quello che conta è cosa fai quando ti viene detto che hai sbagliato.]
@@ -530,7 +530,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [La stanchezza migliore è quella di quando hai portato un cambiamento.]
                 -> color_variation_management(FirstCharacter, redC)->
         
-            + [Scelta verde]
+            + [Il cuore è caldo quando aiutiamo le altre persone, vero?]
                 -> color_variation_management(FirstCharacter, greenC)->
     
             + [Scelta viola]
@@ -598,7 +598,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Dipende da cosa ci fai poi, con quel benessere.]
                 -> color_variation_management(FirstCharacter, redC)->
         
-            + [Scelta verde]
+            + [Quindi riesci a trovare parti di te che altrimenti non vedresti?]
                 -> color_variation_management(FirstCharacter, greenC)->
     
             + [Scelta viola]
@@ -670,7 +670,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Sono i tuoi obiettivi a dirti chi sei, {charNameOne}!]
                 -> color_variation_management(FirstCharacter, redC)->
         
-            + [Scelta verde]
+            + [Sei le relazioni che hai, e per questo non potrai mai perderti.]
                 -> color_variation_management(FirstCharacter, greenC)->
     
             + [Scelta viola]
@@ -747,7 +747,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Tua: chi l'ha fatta la fatica, il lavoro?]
                 -> color_variation_management(FirstCharacter, redC)->
         
-            + [Scelta verde]
+            + [Di chi la ascolta, la legge, la guarda, creando un rapporto con te.]
                 -> color_variation_management(FirstCharacter, greenC)->
     
             + [Scelta viola]

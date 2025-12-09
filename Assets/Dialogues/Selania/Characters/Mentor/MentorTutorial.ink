@@ -49,7 +49,7 @@
                 Un posto dove prenderti cura di te.
                 Non male, no?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             
-            + (chiSei) [Hai detto di essere felice che io sa qui?]
+            + (chiSei) [Che cosa carina, che sei felice che sono qui!]
                     -> color_variation_management(Mentor, greenC)->
                 Sì!
                 Non mi fraintendere: non so di preciso tu chi sia.
@@ -324,7 +324,7 @@
             } 
         Per cui {player_name}: anche se non dovessi accumulare inchiostro, potrai comunque provare ad aiutare la persona, usando il tuo potere dell'epilogo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral    
                 
-                + [Hai un consiglio da darmi Mentore?]
+                + [Come posso fare stare al meglio chi ha bisogno di me?]
                         -> color_variation_management(Mentor, greenC)->
                     Ascolta a cuore aperto.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     Segui i miei consigli.

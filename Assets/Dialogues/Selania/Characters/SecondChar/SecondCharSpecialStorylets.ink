@@ -168,7 +168,7 @@
                         {player_name}, non credo sia il caso di dare a {charNameTwo} altre idee bislacche. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
                 }
             
-        + [Avrei protetto l'aragosta.]
+        + [Mi sarei pres{player_pronouns has him:o|{player_pronouns has her:a|ə}} cura dell'aragosta.]
             -> color_variation_management(SecondCharacter, greenC)->
             Già.
             Alla fine non ha mica fatto nulla lei.

@@ -256,7 +256,7 @@
                 Hai trovato un modo di lottare anche senza la musica.
                 
                     
-            + [Ma il cambiamento parte anche dalla casa. Ad esempio aiutando i tuoi genitori.]
+            + [Ma potresti fare qualcosa di buono anche prendendoti cura dei tuoi genitori.]
                 -> color_variation_management(FirstCharacter, greenC)->
                 {
                     -food_gift_first_char: Magari scoprendo come capire tua madre cucinando assieme.
@@ -378,7 +378,7 @@
             //torno al sud, ricomincio al sicuro.
                 -> color_variation_management(FirstCharacter, yellowC)->
                 
-            + (green) [La stabilità di Ennio è la base per poter cambiare.]
+            + (green) [L'amore e la stabilità di Ennio sono la base per poter cambiare.]
             //me ne vado a vivere col moroso.
                 -> color_variation_management(FirstCharacter, greenC)->
                 
