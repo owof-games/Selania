@@ -67,7 +67,7 @@
                 Le persone a volte fanno cose che non ci aspettiamo.
                 Un <i>Lichene degli abissi</i> con le giuste condizioni invece cresce sempre allo stesso modo.
   
-            + [Invece sono felice che crescano a prescindere da me.]
+            + [Fortunatamente invece crescono a prescindere da me.]
                     -> color_variation_management(Mentor, purpleC)->
                 Senza di te?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 Dobbiamo bagnare il terreno, prepararlo, seminare.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
@@ -283,7 +283,7 @@
                 Spero che almeno lui prima o poi mi perdoni.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     
 
-            + [Il genitore dovrebbe essere il lavoro di una comunità.]
+            + [Come si dice? Crescere unə figliə dovrebbe essere il lavoro di una comunità.]
                     -> color_variation_management(Mentor, purpleC)->
                 Dovrebbe.
                 Ma non è.
@@ -420,7 +420,7 @@
             + [Se ti senti sola, sono qui ad ascoltarti.]
                 -> color_variation_management(Mentor, greenC)->
   
-                
+        
             + [Tu sei sempre con ləi, ləi è sempre con te.]
                 -> color_variation_management(Mentor, purpleC)->
  

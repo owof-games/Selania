@@ -74,7 +74,7 @@
                 La mia mente è limpida e innocente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
                 Non come quella di un bambino, ascoltando le cose che dice il nanerottolo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 
-            + [Magari mi dicono qual è il senso della vita.]
+            + [Magari conoscono il senso della vita.]
                 -> color_variation_management(FirstCharacter, purpleC)->
                 -> color_variation_management(SecondCharacter, redC)->
                 
@@ -202,7 +202,7 @@
             -> color_variation_management(FirstCharacter, greenC)->    
             -> color_variation_management(Mentor, blueC)->
             
-        + [Risposta viola.]
+        + [La felicità è qualcosa che cresce nelle pieghe del quotidiano.]
             -> color_variation_management(FirstCharacter, purpleC)->
             -> color_variation_management(Mentor, blueC)->
         -

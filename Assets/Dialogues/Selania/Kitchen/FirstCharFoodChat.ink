@@ -101,7 +101,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Credo molto nell'idea di cura, supporto, sostegno reciproco.]
                 -> color_variation_management(FirstCharacter, greenC)->
     
-            + [Scelta viola]
+            + [Una relazione è una foresta, una rete di infinite vite diverse.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             -    
         No no taglio io, non ti preoccupare, continua a mischiare.
@@ -181,8 +181,10 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Sì: il cuore ha ferita che non potrà chiudersi senza un chiarimento.]
                 -> color_variation_management(FirstCharacter, greenC)->
     
-            + [Scelta viola]
+            + [Cosa succederebbe se litigassero con te?]
                 -> color_variation_management(FirstCharacter, purpleC)->
+                è quello che è successo.
+                SCRIVERE //SCRIVERE 
             -
         
         Buono comunque questo vino rosso.
@@ -240,7 +242,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Però per fortuna Talco è Talco e ne abbiamo parlato e ci siamo capit3.
         Ha senso vero?
         
-            + [La lingua esprime ciò che la sua cultura ritiene importante.]
+            + [Una lingua esprime ciò che la sua cultura ritiene importante.]
                 -> color_variation_management(FirstCharacter, blueC)->
                
             + [{charNameOne}, basta con "ha senso". Ha senso per voi, no?]
@@ -252,7 +254,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [I sentimenti non si esauriscono se condivisi con più persone.]
                 -> color_variation_management(FirstCharacter, greenC)->
     
-            + [Scelta viola]
+            + [Gliel'avresti detto se non fossi stata ubriaca?]
                 -> color_variation_management(FirstCharacter, purpleC)->
             -
         {
@@ -345,7 +347,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Quindi ti senti inadeguata?]
                 -> color_variation_management(FirstCharacter, greenC)->
     
-            + [Scelta viola]
+            + [Le parole grandi hanno anche grandi poteri.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             -        
         
@@ -537,7 +539,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Il cuore è caldo quando aiutiamo le altre persone, vero?]
                 -> color_variation_management(FirstCharacter, greenC)->
     
-            + [Scelta viola]
+            + [Non rischi di mettere il tuo piacere davanti ai bisogni di chi vuoi aiutare?]
                 -> color_variation_management(FirstCharacter, purpleC)->
             -
         
@@ -605,7 +607,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Quindi riesci a trovare parti di te che altrimenti non vedresti?]
                 -> color_variation_management(FirstCharacter, greenC)->
     
-            + [Scelta viola]
+            + [Ogni cosa che immagina crea nuove versioni di te.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             -    
         Ciotole pulite!
@@ -677,7 +679,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Sei le relazioni che hai, e per questo non potrai mai perderti.]
                 -> color_variation_management(FirstCharacter, greenC)->
     
-            + [Scelta viola]
+            + [Perdersi non è così male, potresti ritrovarti in modi inaspettati.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             -
         Che botta questo vino comunque.
@@ -754,7 +756,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Di chi la ascolta, la legge, la guarda, creando un rapporto con te.]
                 -> color_variation_management(FirstCharacter, greenC)->
     
-            + [Scelta viola]
+            + [Dell'acqua, e delle sue infinite storie.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             -
         

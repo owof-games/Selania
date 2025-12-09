@@ -98,7 +98,7 @@
             + [Il cuore degli adulti è molto molto complicato, {charNameTwo}.]
                 -> color_variation_management(SecondCharacter, greenC)->
     
-            + [Scelta viola]
+            + [Però tu stai comunque bene quando fai queste cose, no?]
                -> color_variation_management(SecondCharacter, purpleC)->
             -    
         
@@ -177,7 +177,7 @@
             + [L'affettuoso cane.]
                 -> color_variation_management(SecondCharacter, greenC)->
     
-            + [Scelta viola]
+            + [Il misterico corvo.]
                -> color_variation_management(SecondCharacter, purpleC)->
             -
         Il profumo è buono.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
@@ -236,7 +236,7 @@
             + [Serve metodo e disciplina per comunicare in modo efficace.]
                 -> color_variation_management(SecondCharacter, blueC)->
                
-            + [Le cose strane sono magiche. I grandi sono noiosi, non strani.]
+            + [Le cose strane sono divertenti!]
                 -> color_variation_management(SecondCharacter, yellowC)->
              
             + [Fregatene. Sii strano come va a te, {charNameTwo}!]
@@ -245,7 +245,7 @@
             + [Spesso gli adulti non sanno cosa desiderano, amico mio.]
                 -> color_variation_management(SecondCharacter, greenC)->
     
-            + [Scelta viola]
+            + [Ciò che è strano porta risposte a domande che non ci siamo ancora fatt3.]
                -> color_variation_management(SecondCharacter, purpleC)->
             -
         
@@ -325,7 +325,7 @@
                 + [È comprovato che le punizioni non siano efficaci.]
                     -> color_variation_management(SecondCharacter, blueC)->
                 
-                + [Fai così tante cose sbagliate da rendere le punizioni inutili!]
+                + [Allora fai così tante cose sbagliate da rendere le punizioni inutili!]
                     -> color_variation_management(SecondCharacter, yellowC)->
                 
                 + [E l3 ribelli si oppongono alle punizioni!]
@@ -334,7 +334,7 @@
                 + [Chi punisce non riesce ad ascoltare il suo cuore.]
                     -> color_variation_management(SecondCharacter, greenC)->
         
-                + [Scelta viola]
+                + [A chi fa bene la punizione? A chi la fa o a chi la subisce?]
                 -> color_variation_management(SecondCharacter, purpleC)->
             -
             
@@ -411,8 +411,8 @@
                 + [Concordo con tuo fratello: ciò che conta è essere brave persone.]
                     -> color_variation_management(SecondCharacter, greenC)->
         
-                + [Scelta viola]
-                -> color_variation_management(SecondCharacter, purpleC)->
+                + [Essere te stesso vuol dire già essere un intero universo.]
+                    -> color_variation_management(SecondCharacter, purpleC)->
                 -
             
             Ho trovato della cannella!
@@ -489,7 +489,7 @@
             + [Hai un tuo nido, un posto sicuro, tutto per te.]
                 -> color_variation_management(SecondCharacter, greenC)->
     
-            + [Scelta viola]
+            + ["Ma i desideri non si possono evocare, né soffocare a piacimento."]
                -> color_variation_management(SecondCharacter, purpleC)->
             -
         
@@ -557,6 +557,7 @@
 
         Mi vuoi sgridare di nuovo?
         Ti ho già chiesto scusa.
+        Ho imparato la lezione.
 
             + [No: voglio solo razionalmente capire meglio alcune cose.]
                 -> color_variation_management(SecondCharacter, blueC)->
@@ -571,7 +572,7 @@
             + [Mi spiace, non volevo farti arrabbiare. Vorrei solo parlare con te.]
                 -> color_variation_management(SecondCharacter, greenC)->
     
-            + [Scelta viola]
+            + [Ora però vorrei imparare io una lezione da te.]
                -> color_variation_management(SecondCharacter, purpleC)->
             -  
         Scusami comunque.
@@ -690,8 +691,9 @@
                 Ma a me mi piace stare con gli altri.
                 Ma è così difficile.
     
-            + [Scelta viola]
+            + [<i>Mi abbasso per un abbraccio.]
                -> color_variation_management(SecondCharacter, purpleC)->
+               //Commento riccio sul fatto che ci ha spinate.
             -
         Guarda!
         La frutta piace anche ai pesci!

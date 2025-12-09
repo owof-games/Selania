@@ -24,7 +24,7 @@
             }
 
         
-            + (dove) [Questo posto è così insolito. Dove mi trovo?]
+            + (dove) [Questo posto è così inaspettato. Dove mi trovo?]
                 -> color_variation_management(Mentor, purpleC)->
                     {
                         - contentsTrainStop has PG:
@@ -354,7 +354,7 @@
                     Forse dovrei scrivere queste cose da qualche parte.
                     Ma se ti dimentichi di qualcosa puoi sempre richiedermela!
                         
-                + [Non dovrei essere io a decidere il mio obiettivo?]
+                + [Preferisco darmi i miei obiettivi da sol{player_pronouns has him:o|{player_pronouns has her:a|ə}}.]
                         -> color_variation_management(Mentor, purpleC)->
                     Il tuo obiettivo <i>qui</i>, perdonami.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     Non avendo altri luoghi in cui andare, mi dimentico che possono esserci sono altre vite, altri obiettivi da raggiungere. 

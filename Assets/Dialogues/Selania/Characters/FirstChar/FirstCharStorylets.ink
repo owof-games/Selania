@@ -22,7 +22,7 @@
                     -> about_colors_choices ->
             }
         
-            + [Risposta viola.]
+            + [Ho sempre pensato che Florence fosse una strega.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             
             + [Mi piacciono le persone che sanno arrabbiarsi!]
@@ -75,13 +75,13 @@
         Quindi, {player_name}, qual è il messaggio nascosto di questo trip o sogno o quel che è?
         Datti da fare con le stronzate da inconscio, così mi sveglio o ripiglio e vedo di non mandare a puttane lavoro e relazione.
   
-            + [Nessun messaggio: sono una persona, non il tuo inconscio.]
+            + [Sono una persona, non il tuo inconscio.]
                 -> color_variation_management(FirstCharacter, blueC)->
             
             + [Sì sì sono il tuo inconscio e tu sei un canarino! Vola canarino, vola!]
                 -> color_variation_management(FirstCharacter, yellowC)->
                 
-            + [Risposta viola.]
+            + [Allora dovrei mostrarti lune di sangue, volpi affamate, rami eterni.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             
             + [<i>La pizzico, così capisce che sono reale.]
@@ -177,10 +177,10 @@
                 No no no.
                 Non di nuovo!
 
-            + [Hai più bisogno di fare cose che di parlare.]
+            + [Tu hai più bisogno di fare cose e parlare meno.]
                 -> color_variation_management(FirstCharacter, redC)->  
                 
-            + [Risposta viola.]
+            + [Respirare è un punto di partenza. L'aria qui è buona.]
                 -> color_variation_management(FirstCharacter, purpleC)->
                 
             + [Un terzo delle persone odia il proprio capo, sei in buona compagnia.]
@@ -258,7 +258,7 @@
             + [Sapere di poter essere vulnerabili.]
                 -> color_variation_management(FirstCharacter, greenC)->
                 
-            + [Risposta viola.]
+            + [La fiducia è una rete che ti accoglie quando cadi.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             
             + [Quando si può essere stran3 assieme. E non si dicono cose banali.]
@@ -267,7 +267,7 @@
             + [Concordare delle regole e vederle rispettate.]
                 -> color_variation_management(FirstCharacter, blueC)->
             
-            + [Sapere che si può finire nella merda assieme e uscirne assieme.]
+            + [La certezza che si può finire nella merda assieme e uscirne assieme.]
                 -> color_variation_management(FirstCharacter, redC)->  
                 
             -
@@ -330,7 +330,7 @@
         
         //Una di queste risposte genera un commento di Chitarra che ci racconta qualcosa simili imprenditore giochi Cortese come esempio tossico.
 
-            + [Risposta viola.]
+            + [Molti "no" hanno cambiato la storia.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             
             + [Le energie sono sprecate solo se non le dai una direzione.]
@@ -416,7 +416,7 @@
             + [È buona solo se ci smuove, se ci evita di ristagnare.]
                 -> color_variation_management(FirstCharacter, redC)->  
                     
-            + [Risposta viola.]
+            + [La relazione è un albero con le radici in due terreni.]
                 //Qualcosa sull'idea che la relazione è una cosa terza, e che esalata alcuni aspetti di noi a scapito di altri.
                 -> color_variation_management(FirstCharacter, purpleC)->
             - 
@@ -480,7 +480,7 @@
             + [Non è arrogante: è nostro dovere cambiare quello che non va!]
                 -> color_variation_management(FirstCharacter, redC)->  
                     
-            + [Risposta viola.]
+            + [<i>Resto in meditativo silenzio.]
                 -> color_variation_management(FirstCharacter, purpleC)->
         
             + [Anche la fantasia salva il mondo, e ti fa sentire potente.]
@@ -632,7 +632,7 @@
         O che c’è una discussione tra i fratelli di tuo padre che va avanti da due anni e non ne sapevi niente.
         Alcune delle amiche che sono tornate a vivere giù hanno trovato un altro modo di far parte di quel cambiamento.
         Anna, che studiava jazz, ha tirato su assieme ad altre persone un festival locale che sta iniziando a ingranare.
-        E Luigia, una ex di Valeria, ora si occupa di recupero e decolonizzazione della storia del suo paesino sul Coghinas.
+        E Luigia, una ex di Valeria, ora si occupa di recupero e, come dice lei, "riterronizzazione" della storia del suo paesino sul Coghinas.
         Altre, che qui facevano occupazioni e proteste e litigavano con la polizia ora sono sposate e raccontano vite che.
         Io.
         Io.
@@ -664,7 +664,7 @@
             + [Potresti confidare queste paure ai tuoi?]
                 -> color_variation_management(FirstCharacter, greenC)->    
                     
-            + [Risposta viola.]
+            + [Luigia e Anna trovando le loro radici sono sbocciate.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             
             -    
@@ -730,7 +730,7 @@
             + [Fa sentire meno sol3, e più parte di una lunga rete di storie.]
                 -> color_variation_management(FirstCharacter, greenC)->    
                     
-            + [Risposta viola.]
+            + [C'è molto coraggio nel riconoscersi parte di qualcosa di così grande.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             
             + [L'unione genera speranza, e la speranza porta cambiamento.]
@@ -799,10 +799,10 @@
             + [Nel dubbio prendi il controllo del treno e parti.]
                 -> color_variation_management(FirstCharacter, redC)->  
                     
-            + [Risposta viola.]
+            + [Cosa vuoi promettergli quando gli dici "ti amo"? E a cosa rinunci?]
                 -> color_variation_management(FirstCharacter, purpleC)->
             
-            + [Hai provato a chiedere al capotreno quando riparte?.]
+            + [Hai provato a chiedere al capotreno quando ripartite?]
                 -> color_variation_management(FirstCharacter, yellowC)->    
             
             + [Non c'è logica nel tenere un treno fermo.]
@@ -860,7 +860,7 @@
             + [Talco ti vuole bene anche nella distanza e nel conflitto: non resterai sola.]
                 -> color_variation_management(FirstCharacter, greenC)->    
                     
-            + [Risposta viola.]
+            + [Hai paura di stare sola, o di sentirti sola?]
                 -> color_variation_management(FirstCharacter, purpleC)->
              
             + [{charNameOne}, tu devi pensare meno e fare più casino.]

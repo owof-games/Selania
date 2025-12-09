@@ -161,7 +161,7 @@
                 Pensavi Ennio fosse noioso, e te ne sei innamorata.
                 La vita ci sorprende sempre quando si tratta di relazioni.
                
-            + [Hai già una casa: La Rifugia e le tue coinquiline.]
+            + [Hai di più: hai La Rifugia e le tue coinquiline.]
                 -> color_variation_management(FirstCharacter, purpleC)->
                 Le tue relazioni creano cose che rimangono, anche se le relazioni stesse dovessero finire.
                 Con le persone che ami sei trasformazione.
@@ -293,7 +293,6 @@
                 Lo dice Ennio quando gioca.
                 L'hai visto quando Talco ha mollato il Conservatorio, eppure si è fattə la sua vita.
                 
-            
             + [Sei amata da molte persone: anche se cadi, non sarai sola.]
                 -> color_variation_management(FirstCharacter, greenC)->
                 Le tue amiche, Ennio, Talco, la tua famiglia.
@@ -304,10 +303,10 @@
                         Non sei sola.
                 }
             
-            + [La Rifugia è la prova che c'è sempre un posto da cui ripartire.]
+            + [La musica e ciò che ti permette di fare saranno sempre con te.]
                 -> color_variation_management(FirstCharacter, purpleC)->
-                Aiutate chi è in difficoltà.
-                Perché non credere che qualcuno aiuterà te, se servirà?
+                Puoi raccontare storie mai sentite.
+                Continuare a provare a cambiare il mondo come vorresti.
                
             + [La mediocrità non è una colpa ma un risultato statistico.]
                 -> color_variation_management(FirstCharacter, blueC)->

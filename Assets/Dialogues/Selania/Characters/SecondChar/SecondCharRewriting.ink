@@ -362,14 +362,13 @@
 
             
             + [Ma puoi essere un adulto in cerca di uno scopo più grande, come {charNameOne}.]
+                -> color_variation_management(SecondCharacter, purpleC)->
                 {
                     - cooking_with_second_char.first_theme:
                         Non uno di quegli adulti che fanno le cose perché devono, come raccontavi in cucina.
                 }
                 E trovare modi inaspettati di aiutare le altre persone, gli animali, il mondo.
-                    -> color_variation_management(SecondCharacter, purpleC)->
-
-                
+                    
             + [Ma puoi essere un adulto che si prende cura delle persone, come {mentorName}.]
                 -> color_variation_management(SecondCharacter, greenC)->
                 E rendere più facile la vita all3 altr3.
@@ -420,35 +419,40 @@
             }     
      
         + (red)[Diventa il più forte, il più coraggioso.]
+            -> color_variation_management(SecondCharacter, redC)->
             Sei un testardo, bugiardo, dispettoso.
             Queste cose unite possono renderti indistruttibile.
             E di cosa avrà mai paura un ragazzo indistruttibile?
-                    -> color_variation_management(SecondCharacter, redC)->
+                    
     
         + (purple)[Tutti abbiamo paura. Condividi questa paura con le altre persone.]
+            -> color_variation_management(SecondCharacter, purpleC)->
             Falle sentire meno sole.
             Meno sbagliate.
             A quel punto saranno pronte a fare il passo.
             A cambiare le cose a loro volta.
             Assieme.
-                   -> color_variation_management(SecondCharacter, purpleC)->
+                   
 
         + (yellow)[L'opposto della paura è la curiosità.]
+            -> color_variation_management(SecondCharacter, yellowC)->
             E tu sei il ritratto della curiosità.
             Guarda le cose che arriveranno chiedendoti "Chissà se..." o "E se invece..." o "Perché accade questo?".
             E a quel punto ogni paura diventerà solo un problema da risolvere.
-                   -> color_variation_management(SecondCharacter, yellowC)->
+                   
                 
         + (green)[I tuoi genitori sono spaventati, aiutatevi a vicenda.]
+            -> color_variation_management(SecondCharacter, greenC)->
             Nessuna persona può cambiare il mondo da sola.
             Ma possiamo partire dal cambiare le cose che ci circondano, un pezzo alla volta.
-                   -> color_variation_management(SecondCharacter, greenC)->
+                   
       
         + (blue)[Con la tua intelligenza puoi rendere il mondo migliore.]
+            -> color_variation_management(SecondCharacter, blueC)->
             Puoi aiutare gli adulti a essere meno tristi.
             E gli animali a non morire.
             E tua nonna a uscire dalla casa dei vecchi.
-                   -> color_variation_management(SecondCharacter, blueC)->
+                   
     
         -
     //Nota: la parte di accettazione del nome è prima dell'aggiornamento, così il nome nuovo compare solo quando viene dichiarato.

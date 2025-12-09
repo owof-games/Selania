@@ -66,7 +66,7 @@
         + [Grande! Mai stare con le mani in mano!]
             -> color_variation_management(FirstCharacter, redC)->
      
-        + [Scelta viola.]
+        + [Sentivo il bisogno di un posto dove fare qualcosa assieme.]
                 -> color_variation_management(FirstCharacter, purpleC)->
     
         + [Che dovremmo inaugurarla con una festa!]
@@ -118,7 +118,6 @@
     Tu che ne pensi della rabbia della tipa del racconto?
     
     //Risposte.    
-    
         + [La vendetta non è giustizia. A cosa è servita?]
                 -> color_variation_management(FirstCharacter, blueC)->
             Ma nemmeno la giustizia è giustizia, {player_name}.
