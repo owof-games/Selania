@@ -72,7 +72,7 @@
                 Il contatto ha risvegliato un ricordo.
                 E quel ricordo, {player_name}, è il tuo sfiorarci.
                 
-            + [Esci dalla mia testa!]
+            + [Ehi tu, esci dalla mia testa! Subito!]
                     -> color_variation_management(PG, redC)->
                 Non siamo nella testa di {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Non più di quanto {player_name} sia nella sua stessa testa.

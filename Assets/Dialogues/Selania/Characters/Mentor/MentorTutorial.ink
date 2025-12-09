@@ -86,7 +86,7 @@
                 Non mi devo agitare.
                 Ecco: le cose hanno il senso che gli diamo.    
                     
-            + [Voglio tornare a casa!]
+            + [Voglio tornare a casa, ora, subito!]
                     -> color_variation_management(Mentor, redC)->
                 Vuoi già andartene?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 Forse devo rivedere il mio benvenuto.
@@ -235,7 +235,7 @@
                 A volte è più facile aprirsi a chi non si conosce.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 E mentre noi riflettiamo sulle loro difficoltà, impariamo anche qualcosa su di noi.
                         
-            + [Non è fare gaslighting?]
+            + [Mi stai chiedendo di fare gaslighting?]
                 -> color_variation_management(Mentor, redC)->
                 No no no assolutamente no.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 Cavolo, devo essere più chiara.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
@@ -330,7 +330,7 @@
                     Segui i miei consigli.
                     E non chiedere all'altra persona di diventare qualcosa che non è.
                         
-                + [Ma non posso dirle: chiamati così e cosà, addio!?]
+                + [Ma non posso dire "Ehi tu chiamati così e cosà" e bona?]
                         -> color_variation_management(Mentor, redC)->
                     Un nuovo nome è una nuova esperienza.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                     E l'esperienza viene dal percorso.

@@ -63,7 +63,7 @@
         + [{mentorName} aveva detto di non andare nei posti chiusi.]
              -> color_variation_management(FirstCharacter, blueC)->
     
-        + [Scelta rossa.]
+        + [Grande! Mai stare con le mani in mano!]
             -> color_variation_management(FirstCharacter, redC)->
      
         + [Scelta viola.]
@@ -147,7 +147,7 @@
             Cazzo, la rabbia che ci vuole per odiare uno per ventitré anni è enorme.
             Bisogna sempre ingoiare tutto per proteggere le altre persone?
             
-        + [La sua vendetta è una forma di autodifesa.]
+        + [La sua non è vendetta, ma ribellione e autodifesa.]
                 -> color_variation_management(FirstCharacter, redC)->
             Non credo reggerebbe in un processo, ma mi suona.
             A volte quando ti viene detto che non puoi arrabbiarti, ci metti molto per capire che sei arrabbiata.

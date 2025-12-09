@@ -123,7 +123,7 @@
                 Ma non credo proprio che funzioni così.
                 Giochi, e il più delle volte perdi senza nemmeno sapere perché.    
                 
-            + [Nel dubbio, conviene agire. Far accadere qualcosa è meglio che aspettare.]
+            + [Nel dubbio si agisce. Fare male è meglio che non fare.]
                     -> color_variation_management(Mentor, redC)->
                 Ma con questo principio, non c'è una azione mirata, consapevole.
                 Poi succede che ci feriamo, o feriamo chi amiamo.
@@ -192,7 +192,7 @@
                 La fantasia è un modo piacevole di affrontare la realtà, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Ma alla lunga rende difficile capire cosa sia vero e cosa no.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                     
-            + [Il mondo è pieno di ingrati.]
+            + [Fregatene: il mondo è pieno di ingrati.]
                     -> color_variation_management(Mentor, redC)->
                 No.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
                 Direi che il mondo è pieno di persone distratte.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
@@ -264,7 +264,7 @@
                 Senza le cose terribili che ci circondano.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 Se non voglio vederle io a cinquant'anni, perché deve vederle un bimbo?
                 
-            + [Alla sua età avevo anche io idee e paure. Si è bambini, non idioti.]
+            + [Alla sua età avevo anche io rabbia e paura. Si è bambini, non idioti.]
                     -> color_variation_management(Mentor, redC)->
                 Non serve che usi quel linguaggio con me, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
                 E non sono d'accordo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral

@@ -156,7 +156,7 @@
         E a un certo punto hai iniziato ad aspettarti amicizie eterne, case in campagna e un amore da film.
         Eppure...
        
-            + [I sogni si trasformano, ma Talco ancora ti aspetta in Islanda.]
+            + [Talco e un'ondata di cambiamenti ti aspettano in Islanda.]
                 -> color_variation_management(FirstCharacter, redC)->
                 Pensavi Ennio fosse noioso, e te ne sei innamorata.
                 La vita ci sorprende sempre quando si tratta di relazioni.
@@ -320,7 +320,7 @@
                         Così da non sentirsi inadeguate.
                 }
             
-            + [Talco ha abbracciato il rischio, parlandoti della maternità.]
+            + [Talco ha rischiato, parlandoti della sua gravidanza.]
                 -> color_variation_management(FirstCharacter, redC)->
                E tu lo hai fatto con l'organizzazione sindacale.
                Con La Rifugia.
@@ -366,7 +366,7 @@
             Come avanzare.
             Come uscire da una vita che non senti più tua.
 
-            + (red) [Una nuova vita ti aspetta in Islanda, con Talco.]
+            + (red) [Rivoluziona la tua vita, raggiungi Talco in Islanda.]
             //me ne vado all’estero da Talco.
                 -> color_variation_management(FirstCharacter, redC)->
             

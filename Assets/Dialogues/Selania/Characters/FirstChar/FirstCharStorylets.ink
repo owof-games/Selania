@@ -25,7 +25,7 @@
             + [Risposta viola.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             
-            + [Risposta rossa.]
+            + [Mi piacciono le persone che sanno arrabbiarsi!]
                 -> color_variation_management(FirstCharacter, redC)->
     
             + [Ma una persona non può essere un uccello.]
@@ -170,11 +170,10 @@
         //Ma tu invece che idea ti sei {player_pronouns has him:fatto|{player_pronouns has her:fatta|fattə}} di questo posto?
         Ma sto dicendo cose senza senso, vero {player_name}?
 
-                
             + [Risposta gialla.]
                 -> color_variation_management(FirstCharacter, yellowC)->
             
-            + [Risposta rossa.]
+            + [Hai più bisogno di fare cose che di parlare.]
                 -> color_variation_management(FirstCharacter, redC)->  
                 
             + [Risposta viola.]
@@ -264,7 +263,7 @@
             + [Concordare delle regole e vederle rispettate.]
                 -> color_variation_management(FirstCharacter, blueC)->
             
-            + [Risposta rossa.]
+            + [Sapere che si può finire nella merda assieme e uscirne assieme.]
                 -> color_variation_management(FirstCharacter, redC)->  
                 
             -
@@ -334,7 +333,7 @@
             + [Le energie sono sprecate solo se non le dai una direzione.]
                 -> color_variation_management(FirstCharacter, blueC)->
             
-            + [Risposta rossa.]
+            + [Siamo viv3 solo quando lottiamo, {charNameOne}! Vai di sindacato!]
                 -> color_variation_management(FirstCharacter, redC)->  
                 
             + [Risposta gialla.]
@@ -411,7 +410,7 @@
             + [Non esiste un "chi siamo davvero".]
                 -> color_variation_management(FirstCharacter, blueC)->
                 
-            + [Risposta rossa.]
+            + [È buona solo se ci smuove, se ci evita di ristagnare.]
                 -> color_variation_management(FirstCharacter, redC)->  
                     
             + [Risposta viola.]
@@ -475,7 +474,7 @@
             }
         
         //In una delle opzioni resti in silenzio. Oppure resti in cinque modi diversi di silenzio?
-            + [Risposta rossa.]
+            + [Non è arrogante: è nostro dovere cambiare quello che non va!]
                 -> color_variation_management(FirstCharacter, redC)->  
                     
             + [Risposta viola.]
@@ -551,7 +550,7 @@
         Madonna, quanto vorrei del vino ora.
         Tu come ti saresti {player_pronouns has him:sentito|{player_pronouns has her:sentita|sentitə}} al mio posto?
        
-            + [{player_pronouns has him:Tradito|{player_pronouns has her:Tradita|Traditə}}.]
+            + [{player_pronouns has him:Tradito|{player_pronouns has her:Tradita|Traditə}}. E arrabbiat{player_pronouns has him:o|{player_pronouns has her:a|ə}}.]
                     -> color_variation_management(FirstCharacter, redC)->
                 Uh.
                 Scusa per il sospirone.
@@ -653,7 +652,7 @@
             + [Risposta gialla.]
                 -> color_variation_management(FirstCharacter, yellowC)->  
             
-            + [Risposta rossa.]
+            + [Datti uno scopo e saprai per cosa lottare, come non perderti.]
                 -> color_variation_management(FirstCharacter, redC)->
             
             + (blue)[Scientificamente, sì: siamo bestie sociali, le persone ci influenzano.]
@@ -731,7 +730,7 @@
             + [Risposta viola.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             
-            + [Risposta rossa.]
+            + [L'unione genera speranza, e la speranza porta cambiamento.]
                 -> color_variation_management(FirstCharacter, redC)->
             
             + [Risposta gialla.]
@@ -795,7 +794,7 @@
             + [Risposta verde.]
                 -> color_variation_management(FirstCharacter, greenC)->
             
-            + [Risposta rossa.]
+            + [Nel dubbio prendi il controllo del treno e parti.]
                 -> color_variation_management(FirstCharacter, redC)->  
                     
             + [Risposta viola.]
@@ -853,7 +852,7 @@
                         ~ change_entity_place(Mentor)  
                 }
 
-            + [Risposta rossa.]
+            + [Sì, ma sai già cosa vuoi evitare: fallo.]
                 -> color_variation_management(FirstCharacter, redC)->
                 
              + [Risposta verde.]
@@ -925,7 +924,7 @@
                     Essere adulte significa spesso capire quanto siamo fallibili.
             }
         
-        + [Risposta rossa.]
+        + [Non accontentarsi è fondamentale, o le lotte poi si spengono.]
             -> color_variation_management(FirstCharacter, redC)->  
                 
         + [Guardiamo i fatti, {charNameOne}: l'erba del vicino è?]

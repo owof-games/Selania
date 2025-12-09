@@ -91,7 +91,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Scelta gialla]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
-            + [Scelta rossa]
+            + [Le relazioni sono passione e uno scopo condiviso.]
                 -> color_variation_management(FirstCharacter, redC)->
         
             + [Scelta verde]
@@ -171,7 +171,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Scelta gialla]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
-            + [Scelta rossa]
+            + [Un'amicizia non è una onlus, e se si sta male ci si divide.]
                 -> color_variation_management(FirstCharacter, redC)->
         
             + [Scelta verde]
@@ -242,7 +242,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Scelta gialla]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
-            + [Scelta rossa]
+            + [Conta quello che si fa, le parole fanno solo casino.]
                 -> color_variation_management(FirstCharacter, redC)->
         
             + [Scelta verde]
@@ -335,7 +335,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Scelta gialla]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
-            + [Scelta rossa]
+            + [È l'unico senso, altrimenti perché siamo viv3?]
                 -> color_variation_management(FirstCharacter, redC)->
         
             + [Scelta verde]
@@ -424,7 +424,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Scelta gialla]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
-            + [Dovremmo farci meno paranoie e agire di più.]
+            + [Dobbiamo farci meno paranoie e agire di più.]
                 -> color_variation_management(FirstCharacter, redC)->
                 Non so.
                 Fare per fare non porta molto lontano.
@@ -524,11 +524,10 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 E magari faccio le cose perché mi piacciono, non perché sono utili.
                 Me lo dice anche Talco.
 
-               
             + [Scelta gialla]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
-            + [Scelta rossa]
+            + [La stanchezza migliore è quella di quando hai portato un cambiamento.]
                 -> color_variation_management(FirstCharacter, redC)->
         
             + [Scelta verde]
@@ -596,7 +595,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Scelta gialla]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
-            + [Scelta rossa]
+            + [Dipende da cosa ci fai poi, con quel benessere.]
                 -> color_variation_management(FirstCharacter, redC)->
         
             + [Scelta verde]
@@ -668,7 +667,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Scelta gialla]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
-            + [Scelta rossa]
+            + [Sono i tuoi obiettivi a dirti chi sei, {charNameOne}!]
                 -> color_variation_management(FirstCharacter, redC)->
         
             + [Scelta verde]

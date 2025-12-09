@@ -27,7 +27,7 @@
                 Le lettere non si danno al postino?
                 E poi ho sentito un treno ma non l'ho visto.
                     
-            + (tu)[Perché <b><i>tu</b></i> sei qui?]
+            + (tu)[Aspetta, prima te: perché <b><i>tu</b></i> sei qui?]
                     -> color_variation_management(SecondCharacter, redC)->
                 Boh, che ne so? #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 Era solo una domanda!
@@ -84,7 +84,7 @@
                 Quello qui non c'è di sicuro!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Ma era comunque freddo e mamma aveva paura che ci annegavo.    
     
-            + (twoRed) [E come ti sei ripreso i giocattoli?]
+            + (twoRed) [E poi ti sei arrabbiato e hai ripreso i giocattoli, giusto?]
                 -> color_variation_management(SecondCharacter, redC)->
                 Non sono mica giocattoli.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 Sono AC-TION-FI-GU-RE-S!
@@ -179,7 +179,7 @@
                 Però lo stagno sbrilluccica.
                 Forse la rana lo trasforma in uno schermo!
                     
-            + [E se lo senti e prudono le orecchie è una bugia.]
+            + [E se lo senti e prudono le orecchie è una bugia, bimbo.]
                 -> color_variation_management(SecondCharacter, redC)->
                 Non sono sto dicendo bugie!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 Mi piacciono gli animali.
@@ -345,13 +345,13 @@
                 Come "Furbo come una volpe".#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 O "Simpatico come {player_name}".
             
-            + {him_liar} [Prima hai detto che tutte le action te le ha rubate tuo padre.]
+            + {him_liar} [Non mi prendere in giro, hai detto che le action le ha rubate papà.]
                     -> color_variation_management(SecondCharacter, redC)->
                 No.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 Ricordi male.
                 Papà è bravo, non fa queste cose. 
             
-            + {her_liar} [Tua mamma si arrabbia spesso?]
+            + {her_liar} [Tua mamma è una che si arrabbia spesso?]
                     -> color_variation_management(SecondCharacter, redC)->
                 Un po'.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                 Non è cattiva, è che sono cattivo io.
@@ -365,7 +365,7 @@
                 Uffi, che noia che fai!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                     
             
-            + {they_liar} [Ma non era il suo regalo di compleanno questo?]
+            + {they_liar} [Ehi bimbo! Avevi detto che questo è il suo regalo di compleanno!]
                     -> color_variation_management(SecondCharacter, redC)->
                 Sì, certo che sì.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Si è dimenticata il compleanno, ma poi ha deciso di farmi questo.
@@ -501,7 +501,7 @@
                 mi toccano.
                     ~ change_entity_place(Mentor)
                     
-            + (sfigati) [Picchiare una così è un po' da sfigati.]
+            + (sfigati) [Va bene difendersi, ma picchiare una così è stupido.]
                     -> color_variation_management(SecondCharacter, redC)->
                 Mi aveva preso il braccio!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 E continuava a dire che sono un bambino e che i bambini qui non ci devono stare.
@@ -810,7 +810,7 @@
                 Cervi zombie.
                 Ho riso tantissimo quella sera!
                         
-            + [Se i grandi ti picchiano, devi fare squadra con gli altri!]
+            + [Se i grandi ti picchiano devi fare squadra con gli altri!]
                     -> color_variation_management(SecondCharacter, redC)->
                 Una volta ci ho provato.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Ma io non piaccio molto agli altri.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
@@ -910,7 +910,7 @@
                 Voglio costruirne una anche io.
                 Forse in biblioteca c'è una guida!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                     
-            + [{charNameTwo}, non devi sempre dare ragione agli adulti.]
+            + [{charNameTwo} mannaggia, non dare sempre ragione ai grandi!]
                 -> color_variation_management(SecondCharacter, redC)->
                 Non è mica facile!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Papà se si arrabbia mi picchia.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
@@ -986,7 +986,7 @@
                 E dicono che ci devo lavorare con le cose in cui sono bravo.
                 Ma io voglio solo imparare cose nuove!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
 
-            + [In realtà non l'ho scelto. Manco mi pagano.]
+            + [Guarda che non l'ho scelto. Manco mi pagano.]
                     -> color_variation_management(SecondCharacter, redC)->
                 Che fregatura.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Nemmeno mamma mi paga per i lavoretti a casa.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
@@ -1180,7 +1180,7 @@
                 E invece è qui.
                 Chi lo dice che non faccio male ai mostri?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                     
-            + [Tuo padre ti picchia, e tu hai imparato da lui a picchiare.]
+            + [Tuo padre ti picchia, e tu hai imparato a picchiare.]
                     -> color_variation_management(SecondCharacter, redC)->
                 NO!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 No.
@@ -1368,11 +1368,18 @@
                 Posso creare un traduttore pescese/umano!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                     
                 
-            + [Facciamo una gara di rutti?!]
-                    -> color_variation_management(SecondCharacter, redC)->
-                Ci sto!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-                Però mi serve della roba frizzante sennò non mi vengono bene.
-                Ma poi mi scappa tanta pipì.
+            // + [Facciamo una gara di rutti?!] -> forse più gialla
+            //         -> color_variation_management(SecondCharacter, redC)->
+            //     Ci sto!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+            //     Però mi serve della roba frizzante sennò non mi vengono bene.
+            //     Ma poi mi scappa tanta pipì.
+
+            + [Bimbo, tu devi cambiare casa. Stai al mare dalla nonna!]
+                -> color_variation_management(SecondCharacter, redC)->
+                Mica è così facile!
+                Una volta però gliel'ho chiesto.
+                E lei mi ha detto "Finisci le elementari, poi ne parliamo".
+                A volte quando sono triste ci penso a questa cosa.
 
             + [Vorresti che venissero anche mamma e papà?]
                     -> color_variation_management(SecondCharacter, greenC)->

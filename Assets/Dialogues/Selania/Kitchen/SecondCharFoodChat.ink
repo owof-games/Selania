@@ -92,7 +92,7 @@
             + [Scelta gialla]
                 -> color_variation_management(SecondCharacter, yellowC)->
              
-            + [Scelta rossa]
+            + [Le cose hanno senso se hanno uno scopo. Fare per fare è inutile.]
                 -> color_variation_management(SecondCharacter, redC)->
         
             + [Scelta verde]
@@ -171,7 +171,7 @@
             + [Scelta gialla]
                 -> color_variation_management(SecondCharacter, yellowC)->
              
-            + [Scelta rossa]
+            + [Il combattivo leone!]
                 -> color_variation_management(SecondCharacter, redC)->
         
             + [Scelta verde]
@@ -239,7 +239,7 @@
             + [Scelta gialla]
                 -> color_variation_management(SecondCharacter, yellowC)->
              
-            + [Scelta rossa]
+            + [Fregatene. Sii strano come va a te, {charNameTwo}!]
                 -> color_variation_management(SecondCharacter, redC)->
         
             + [Scelta verde]
@@ -328,7 +328,7 @@
                 + [Scelta gialla]
                     -> color_variation_management(SecondCharacter, yellowC)->
                 
-                + [Scelta rossa]
+                + [E l3 ribelli si oppongono alle punizioni!]
                     -> color_variation_management(SecondCharacter, redC)->
             
                 + [Scelta verde]
@@ -405,7 +405,7 @@
                 + [Scelta gialla]
                     -> color_variation_management(SecondCharacter, yellowC)->
                 
-                + [Scelta rossa]
+                + [L'importante è essere lotta, cambiamento, fuoco!]
                     -> color_variation_management(SecondCharacter, redC)->
             
                 + [Scelta verde]
@@ -483,7 +483,7 @@
             + [Scelta gialla]
                 -> color_variation_management(SecondCharacter, yellowC)->
              
-            + [Scelta rossa]
+            + [Ogni guerrierə ha bisogno di riposarsi prima della battaglia.]
                 -> color_variation_management(SecondCharacter, redC)->
         
             + [Scelta verde]
@@ -564,7 +564,7 @@
             + [Scelta gialla]
                 -> color_variation_management(SecondCharacter, yellowC)->
              
-            + [Scelta rossa]
+            + [Bimbo, rilassati, non sono un{player_pronouns has her:a|ə} professor{player_pronouns has him:o|{player_pronouns has her:a|ə}}.]
                 -> color_variation_management(SecondCharacter, redC)->
         
             + [Scelta verde]
@@ -679,7 +679,7 @@
             + [Scelta gialla]
                 -> color_variation_management(SecondCharacter, yellowC)->
              
-            + [Scelta rossa]
+            + [Ma perché non guardi i cartoni di nascosto? O prendi i fumetti in biblio?]
                 -> color_variation_management(SecondCharacter, redC)->
         
             + [Scelta verde]
@@ -749,7 +749,7 @@
             + [Scelta gialla]
                 -> color_variation_management(SecondCharacter, yellowC)->
              
-            + [Scelta rossa]
+            + [L'unica cosa che fa andare avanti è il cambiamento, non le belle bugie.]
                 -> color_variation_management(SecondCharacter, redC)->
         
             + [Scelta verde]

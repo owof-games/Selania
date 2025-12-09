@@ -55,9 +55,9 @@
                 O all'altezza per soddisfare {mentorName}?
                 La serra è tiepida, la stazione attende, e le nubi dicono che {player_name} è dove deve essere.
                 
-            + [Sono felice per lei, ma il mondo non dovrebbe fare così paura.]
+            + [Sono felice per lei, ma il mondo non deve farle così paura.]
                     -> color_variation_management(PG, redC)->
-                Non è il mondo a fare paura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                Non è il mondo a farle paura.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Il mondo gira e muta e muore e rinasce.
                 Sono le regole degli uomini a generare la paura.
                 Ma così come l'acqua cancella anche la pietra più dura, {player_name} e {charNameOne} possono piegare le regole più severe.
@@ -134,7 +134,7 @@
                 In primavera l'erba ricresce, il caldo la secca.
                 La rondine crea un nido di paglia.
                             
-            + [Nonostante tutto, mi ha fatto rivalutare la forza della rabbia.]
+            + [La rabbia è sottovalutata. Ha protetto questo bambino.]
                     -> color_variation_management(PG, redC)->
                 La lava scorre e brucia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Col tempo rende il terreno fertile.
