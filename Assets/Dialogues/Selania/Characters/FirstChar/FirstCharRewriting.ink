@@ -112,7 +112,7 @@
                 L'hai detto prima: è stato bello dire "no".
                 Alcune rinunce ti hanno resa potente.
                 
-            + [Puoi sempre viaggiare da Talco, ricominciare.]
+            + [Sorprendi te stessa e fai qualcosa di assurdo, vai da Talco!]
                 -> color_variation_management(FirstCharacter, yellowC)->
                 La cartolina è una porta aperta: Talco ti attende.
                {
@@ -187,7 +187,7 @@
                     Anche da una cosa dolorosa come il tradire le proprie aspettative, tu hai trovato un modo per crescere.
                 }
             
-            + [Hai un padre con cui suonare e ubriacarti.]
+            + [Ma chi ce l'ha un papà con cui suonare e ubriacarsi?!?]
                 -> color_variation_management(FirstCharacter, yellowC)->
                 I tuoi genitori hanno fatto enormi sacrifici per permetterti di studiare.
                 Palese che ti vogliono un bene immenso.
@@ -218,9 +218,8 @@
         ~ temp charNameOne = translator(firstChar_ActualName)
         Più volte hai parlato del tuo bisogno di fare qualcosa di utile, di grande. #speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
         Ti aspettavi di fare qualcosa di buono, di salvare il mondo con le tue canzoni.
-        
-
-            + [Talco ti ha insegnato a rompere le regole.]
+    
+            + [Ma se il gioco è rotto, l'unica vittoria c'è rompendo le regole.]
                     -> color_variation_management(FirstCharacter, yellowC)->
                 Il mondo è duro da cambiare, ma l'esempio è una gran cosa.
                 Rompere le aspettative, l'ovvio, è rivoluzionario.
@@ -374,7 +373,7 @@
             // mollo il lavoro per la musica, per far qualcosa di buono per le altre persone.
                  -> color_variation_management(FirstCharacter, purpleC)->         
             
-            + (yellow) [Puoi tornare dai tuoi e ricominciare da dove sei cresciuta.]
+            + (yellow) [Torna alla tua infanzia, dai tuoi e ricomincia da dove sei cresciuta.]
             //torno al sud, ricomincio al sicuro.
                 -> color_variation_management(FirstCharacter, yellowC)->
                 

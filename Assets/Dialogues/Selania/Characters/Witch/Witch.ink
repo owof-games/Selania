@@ -147,7 +147,7 @@
                 Una luce troppo forte confonde strada e burrone.
                 Un rifugio col tempo può diventare prigione.
          
-            + [Dovrei rimparare a giocare, a prendere le cose alla leggera.]
+            + [Devo riprendere a giocare, a prendere le cose alla leggera.]
                     -> color_variation_management(PG, yellowC)->
                 Le radici ridono quando l'erba fa solletico.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Le foglie ridono quando il vento le sfiora.

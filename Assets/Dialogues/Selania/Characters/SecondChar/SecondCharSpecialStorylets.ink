@@ -159,7 +159,7 @@
             Perché alla fine il primo è in prigione.
             E se ci pensi proprio bene tutti i sassi sono in prigione, perché non si muovono da soli!
     
-        + [Inizierei a saltellare con loro.]
+        + [Inizierei a saltellare in giro con loro. E fare dispetti al sindaco.]
             -> color_variation_management(SecondCharacter, yellowC)->
             Ahah sarebbe divertente!
             Così ci lanciamo contro le finestre poi!

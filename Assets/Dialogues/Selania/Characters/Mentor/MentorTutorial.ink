@@ -348,18 +348,11 @@
                                 A modo suo.     
                         }
                         
-                + [Gli scoiattoli non hanno bisogno di riscriverla, invece?]
+                + [Mi son pers{player_pronouns has him:o|{player_pronouns has her:a|ə}} alla terza frase. Succede sempre.]
                         -> color_variation_management(Mentor, yellowC)->
-                    {player_name}, apprezzo la tua creatività, ma mantieni l'attenzione sull'obiettivo.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                    E gli scoiattoli non si fanno queste domande.
-                    Gli scoiattoli <i>sono</i>, e basta.
-                        {
-                            - are_two_entities_together(SecondCharacter, PG):
-                                Gli scoiattoli si fanno tantissime domande in realtà!
-                                E comunicano con la coda!
-                                    -> color_variation_management(SecondCharacter, yellowC)->
-                                E con tantissimi suoni.   
-                        }
+                    Capita anche a me.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
+                    Forse dovrei scrivere queste cose da qualche parte.
+                    Ma se ti dimentichi di qualcosa puoi sempre richiedermela!
                         
                 + [Non dovrei essere io a decidere il mio obiettivo?]
                         -> color_variation_management(Mentor, purpleC)->

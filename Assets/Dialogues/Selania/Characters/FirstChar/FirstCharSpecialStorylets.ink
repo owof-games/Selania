@@ -69,7 +69,7 @@
         + [Scelta viola.]
                 -> color_variation_management(FirstCharacter, purpleC)->
     
-        + [Scelta gialla.]
+        + [Che dovremmo inaugurarla con una festa!]
             -> color_variation_management(FirstCharacter, yellowC)->
             
         + [Cibo, chiacchiere e intimità: mi piace molto, grazie {charNameOne}.]

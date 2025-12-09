@@ -34,7 +34,7 @@
             + [È una persona a cui tieni?]
                 -> color_variation_management(FirstCharacter, greenC)->
 
-            + [Risposta gialla.]
+            + [Vanno bene due uccellini arancioni? Una bacheca? Dei cespugli?]
                 -> color_variation_management(FirstCharacter, yellowC)->
             
             -
@@ -78,7 +78,7 @@
             + [Nessun messaggio: sono una persona, non il tuo inconscio.]
                 -> color_variation_management(FirstCharacter, blueC)->
             
-            + [Il mio messaggio? Sei un canarino! Ecco, accettalo!]
+            + [Sì sì sono il tuo inconscio e tu sei un canarino! Vola canarino, vola!]
                 -> color_variation_management(FirstCharacter, yellowC)->
                 
             + [Risposta viola.]
@@ -167,12 +167,16 @@
         Forse dovrei respirare e bona, alla fine non so come va questa roba.
         Vorrei avere giusto avere carta e penna, e pensare a un pezzo su questa situazione.
         Sono settimane che non ho le energie per crearne uno che uno, manco mezzo accordo.
-        //Ma tu invece che idea ti sei {player_pronouns has him:fatto|{player_pronouns has her:fatta|fattə}} di questo posto?
         Ma sto dicendo cose senza senso, vero {player_name}?
 
-            + [Risposta gialla.]
-                -> color_variation_management(FirstCharacter, yellowC)->
-            
+            + [Naa, una cosa insensata è una rana che non sa nuotare.]
+                    -> color_variation_management(FirstCharacter, yellowC)->
+                Ehm, come scusa?
+                Uh, forse rivaluto l'idea dell'allucinazione.
+                Fa che non sia come quando ho chiamato mamma ed ero strafatta.
+                No no no.
+                Non di nuovo!
+
             + [Hai più bisogno di fare cose che di parlare.]
                 -> color_variation_management(FirstCharacter, redC)->  
                 
@@ -257,7 +261,7 @@
             + [Risposta viola.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             
-            + [Risposta gialla.]
+            + [Quando si può essere stran3 assieme. E non si dicono cose banali.]
                 -> color_variation_management(FirstCharacter, yellowC)->
             
             + [Concordare delle regole e vederle rispettate.]
@@ -273,7 +277,6 @@
                 -> first_char_closing_storylet ->
                 -> options_first_character
         
-    
     = four
         //Riferimenti per la riscrittura: avere uno scopo
         ~ temp charNameOne = translator(firstChar_ActualName)
@@ -336,7 +339,7 @@
             + [Siamo viv3 solo quando lottiamo, {charNameOne}! Vai di sindacato!]
                 -> color_variation_management(FirstCharacter, redC)->  
                 
-            + [Risposta gialla.]
+            + [E se invece di chiederti se ha senso, decidessi tu che ha senso e basta?]
                 -> color_variation_management(FirstCharacter, yellowC)->
                 
             + [Sono le parole di una persona generosa.]
@@ -404,7 +407,7 @@
             + [Ogni relazione esalta aspetti diversi di noi.]
                 -> color_variation_management(FirstCharacter, greenC)->
             
-            + [Risposta gialla.]
+            + [Però ti manca svolazzare mi sa, vero?]
                 -> color_variation_management(FirstCharacter, yellowC)->
                 
             + [Non esiste un "chi siamo davvero".]
@@ -480,7 +483,7 @@
             + [Risposta viola.]
                 -> color_variation_management(FirstCharacter, purpleC)->
         
-            + [Risposta gialla.]
+            + [Anche la fantasia salva il mondo, e ti fa sentire potente.]
                 -> color_variation_management(FirstCharacter, yellowC)->
             
             + [Credo che siamo pien3 di emozioni, non di fatti.]
@@ -649,7 +652,7 @@
         Ma non so se mi piacerebbe la persona che sarei tornando dai miei, tornando al paesino.
         Credi abbia senso?
             
-            + [Risposta gialla.]
+            + [È gioco: se non lo provi non sai se ti piace.]
                 -> color_variation_management(FirstCharacter, yellowC)->  
             
             + [Datti uno scopo e saprai per cosa lottare, come non perderti.]
@@ -733,7 +736,7 @@
             + [L'unione genera speranza, e la speranza porta cambiamento.]
                 -> color_variation_management(FirstCharacter, redC)->
             
-            + [Risposta gialla.]
+            + [Immaginare è bello perchè ci si stupisce, e stupirci ci rende viv3.]
                 -> color_variation_management(FirstCharacter, yellowC)->  
 
             -
@@ -789,7 +792,6 @@
         Per dargli più tempo non posso di certo smollare il lavoro, no?
         E quindi c'’è solo una cosa che posso togliere dalla mia vita.
         E a quel punto, ripartirà mai il treno dalla mia stazione?
-        //Hai provato a chiedere al capotreno?
 
             + [E se Ennio fosse la tua stazione, il tuo arrivo?]
                 -> color_variation_management(FirstCharacter, greenC)->
@@ -800,7 +802,7 @@
             + [Risposta viola.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             
-            + [Risposta gialla.]
+            + [Hai provato a chiedere al capotreno quando riparte?.]
                 -> color_variation_management(FirstCharacter, yellowC)->    
             
             + [Non c'è logica nel tenere un treno fermo.]
@@ -861,7 +863,7 @@
             + [Risposta viola.]
                 -> color_variation_management(FirstCharacter, purpleC)->
              
-            + [Risposta gialla.]
+            + [{charNameOne}, tu devi pensare meno e fare più casino.]
                 -> color_variation_management(FirstCharacter, yellowC)-> 
                 
             + {not eight.blue} [Razionalmente ci sono decine di modi per non restare solə.]
@@ -927,10 +929,10 @@
         + [Non accontentarsi è fondamentale, o le lotte poi si spengono.]
             -> color_variation_management(FirstCharacter, redC)->  
                 
-        + [Guardiamo i fatti, {charNameOne}: l'erba del vicino è?]
+        + [Guardiamo i fatti, {charNameOne}: l'erba del vicino è...?]
             -> color_variation_management(FirstCharacter, blueC)->
         
-        + [Risposta gialla.]
+        + [Anche tu sembrerai felice sui social, è un gioco senza vincitor3.]
             -> color_variation_management(FirstCharacter, yellowC)->
         
         + [Non colpevolizzarti per ciò che provi, {charNameOne}. Sii gentile con te.]

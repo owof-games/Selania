@@ -41,11 +41,11 @@
                 Ma poi le mani fremono, mi supplicano di sistemare qualcosa.
                 Fatico a stare tranquilla.
                 
-            + [Lo stagno è divertente, succede di tutto.]
+            + [Lo stagno è divertente, gli insetti fanno tantissime cose.]
                     -> color_variation_management(Mentor, yellowC)->
-                Forse succede <i>di troppo</i>.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
-                Non sembra pensare a nulla.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-                L'acqua è lì e lascia che tutto accada, senza pensare al domani.
+                Forse ne fanno troppe.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:mentore_bored
+                Sembrano non pensare a nulla.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
+                E l'acqua è lì e lascia che tutto accada, senza pensare al domani.
                 
             + [La foresta domina: è lotta, è potenza!]
                     -> color_variation_management(Mentor, redC)->
@@ -115,7 +115,7 @@
                 Su questo hai ragione, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 Eppure posso assicurarti che i miei cinquanta e rotti anni si portano addosso anche un bel po' di fatti scricchiolanti e ricordi.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                    
-            + [Quando un gioco ha tantissime regole, smette di essere divertente.]
+            + [Quando un gioco ha tantissime regole non è più divertente.]
                     -> color_variation_management(Mentor, yellowC)->
                 Eppure non sono così tante regole.
                 Forse è solo una: non puoi avere tutto.

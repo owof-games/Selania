@@ -105,7 +105,7 @@
                 Sono cose che puoi capire, che vivi anche tu.
                     
                     
-            + [Tuo fratello però ha trovato il bello anche in questo casino.]
+            + [Tuo fratello però ha trovato la gioia anche in questo casino.]
                 -> color_variation_management(SecondCharacter, yellowC)->
                 Ci sono le sue statue, c'è il suo amico.
                 {
@@ -291,7 +291,7 @@
             Non si è fatto mettere i piedi in testa da nessuno.
             E questo lo fai se pensi ci sia un futuro dove andare.
                     
-        + [Ma sai anche trovare la gioia e la giocosità nel mondo.]
+        + [Ma sai anche trovare la fantasia e la giocosità nel mondo.]
             -> color_variation_management(SecondCharacter, yellowC)->
             Sei arrivato in questo posto sconosciuto e invece di avere paura, ti sei messo a curiosare.
             Ti sei fatto amico una rana parlante.

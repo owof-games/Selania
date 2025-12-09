@@ -384,7 +384,7 @@
                 E allora vado a letto prestissimo e correggo tutta la giornata.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                           
 
-            + [Però non mi hai detto il tuo nome. Sei una spia?]
+            + [Però non mi hai detto il tuo nome. Sei una spia? Un gatto? Un gatto spia?]
                 -> color_variation_management(SecondCharacter, yellowC)->
                 Sì no boh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Una spia non direbbe mai che è una spia.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
@@ -483,7 +483,7 @@
                     ~ change_entity_place(Mentor)
                 Mi ha fatto arrabbiare.
                     
-            + (scherzo) [Perché non le hai fatto uno scherzo?]
+            + (scherzo) [Non era più divertente farle uno scherzo?]
                     -> color_variation_management(SecondCharacter, yellowC)->
                         {
                             - are_two_entities_together(Mentor, PG): Seriamente? 

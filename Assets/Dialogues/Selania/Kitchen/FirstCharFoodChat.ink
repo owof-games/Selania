@@ -67,6 +67,10 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
 
     
     = first_theme
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
         Uh, hai già capito che per me le relazioni sono abbastanza il centro di tutto.
         Vediamo, cosa ti posso raccontare?
         Da piccola in realtà ero abbastanza un disastro sociale.
@@ -88,7 +92,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Realisticamente, le relazioni sono compromesso e imprevedibilità.]
                 -> color_variation_management(FirstCharacter, blueC)->
                
-            + [Scelta gialla]
+            + [Tuo padre è super! Voglio anche io cose che fanno rumore!]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
             + [Le relazioni sono passione e uno scopo condiviso.]
@@ -168,7 +172,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Avevate concordato delle regole per queste situazioni?]
                 -> color_variation_management(FirstCharacter, blueC)->
                
-            + [Scelta gialla]
+            + [Perché parlandole avresti tradito il gruppo? Mi son pers{player_pronouns has him:o|{player_pronouns has her:a|ə}} il nuovo "regole dell'amicizia"?]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
             + [Un'amicizia non è una onlus, e se si sta male ci si divide.]
@@ -239,7 +243,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [La lingua esprime ciò che la sua cultura ritiene importante.]
                 -> color_variation_management(FirstCharacter, blueC)->
                
-            + [Scelta gialla]
+            + [{charNameOne}, basta con "ha senso". Ha senso per voi, no?]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
             + [Conta quello che si fa, le parole fanno solo casino.]
@@ -332,7 +336,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Razionalmente ha senso cambiare solo ciò che si capisce.]
                 -> color_variation_management(FirstCharacter, blueC)->
                
-            + [Scelta gialla]
+            + [Non è che prima di battere un mostro lo studi, no?]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
             + [È l'unico senso, altrimenti perché siamo viv3?]
@@ -421,7 +425,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Ma se poi quella base non la costruisce nessunə, perché si perde lo slancio, il coraggio?
                 Cosa ci abbiamo guadagnato?
                
-            + [Scelta gialla]
+            + [Non ho capito molto, ma di sicuro non mi piacciono l3 poliziott3.]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
             + [Dobbiamo farci meno paranoie e agire di più.]
@@ -524,7 +528,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 E magari faccio le cose perché mi piacciono, non perché sono utili.
                 Me lo dice anche Talco.
 
-            + [Scelta gialla]
+            + [Quando tutto è dovere il piacere è rivoluzionario. Saggi{player_pronouns has him:o|{player_pronouns has her:a|ə}}, vero?]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
             + [La stanchezza migliore è quella di quando hai portato un cambiamento.]
@@ -592,7 +596,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Immaginare plasma il cervello, per cui sì, è empiricamente sensato.]
                 -> color_variation_management(FirstCharacter, blueC)->
                
-            + [Scelta gialla]
+            + [Creare è come viaggiare, è vedere cose inesistenti, è spet-ta-co-la-re!]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
             + [Dipende da cosa ci fai poi, con quel benessere.]
@@ -664,7 +668,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Il carattere è solo una funzione del tuo cervello.]
                 -> color_variation_management(FirstCharacter, blueC)->
                
-            + [Scelta gialla]
+            + [Sono sicur{player_pronouns has him:o|{player_pronouns has her:a|ə}} che ti farai sempre tan-tis-si-me domande serie.]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
             + [Sono i tuoi obiettivi a dirti chi sei, {charNameOne}!]
@@ -741,7 +745,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             + [Realisticamente? Tua. È tuo il punto di vista dell'opera.]
                 -> color_variation_management(FirstCharacter, blueC)->
                
-            + [Scelta gialla]
+            + [Quando giochi ti godi la compagnia, non ti chiedi di chi è chi.]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
             + [Tua: chi l'ha fatta la fatica, il lavoro?]

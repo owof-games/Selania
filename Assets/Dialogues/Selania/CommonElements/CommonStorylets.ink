@@ -43,7 +43,7 @@
         
     (Riccio) Tu cosa fai se ci hanno rapito gli alieni?
     
-            + [L'idea di dormirmela per qualche giorno non mi dispiace!]
+            + [Dormiamo qualche giorno, siii!]
                  -> color_variation_management(FirstCharacter, yellowC)->
                  -> color_variation_management(SecondCharacter, purpleC)->
 
@@ -65,7 +65,7 @@
                 Come i bambini piccoli. No no no.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
                 Mi ci riconosco, totale.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
 
-            + [Spero per loro che non mi leggano nella mente o se ne pentirebbero.]
+            + [Mentre mi leggono la mente penso a cose assurdissime!]
                 -> color_variation_management(FirstCharacter, blueC)->
                 -> color_variation_management(SecondCharacter, yellowC)->
                 
@@ -185,8 +185,6 @@
     C: Che te la ritrovi se ti fai andare bene quello che hai?
     M: O quello che dice {charNameOne}.
     M: Qualcosa che è sempre altrove e quindi irraggiungibile?
-
-    //{charNameOne}, non potrai essere felice fintanto che non sai goderti ciò che hai.
     
         + [{mentorName}, tu parli di arrendersi.]
             -> color_variation_management(FirstCharacter, redC)->
@@ -196,14 +194,13 @@
             -> color_variation_management(FirstCharacter, blueC)->
             -> color_variation_management(Mentor, blueC)->
         
-        + [Risposta gialla.]
+        + [La felicità ce l'hai se trovi il gioco e l'assurdo ovunque.]
             -> color_variation_management(FirstCharacter, yellowC)->
             -> color_variation_management(Mentor, blueC)->
         
-        + [Risposta verde.]
+        + [Non credo nella felicità, ma credo nel piacere dato dalle persone vicine.]
             -> color_variation_management(FirstCharacter, greenC)->    
             -> color_variation_management(Mentor, blueC)->
-
             
         + [Risposta viola.]
             -> color_variation_management(FirstCharacter, purpleC)->

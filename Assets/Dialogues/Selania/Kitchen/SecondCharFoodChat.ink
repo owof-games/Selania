@@ -89,7 +89,7 @@
             + [Statisticamente sì, solo con cose diverse dai prociorsi.]
                 -> color_variation_management(SecondCharacter, blueC)->
                
-            + [Gli adulti devono imparare dai bambini!]
+            + [{charNameTwo}: gli adulti devono imparare tanto dai bambini!]
                 -> color_variation_management(SecondCharacter, yellowC)->
              
             + [Le cose hanno senso se hanno uno scopo. Fare per fare è inutile.]
@@ -168,7 +168,7 @@
             + [L'intelligente civetta.]
                 -> color_variation_management(SecondCharacter, blueC)->
                
-            + [Scelta gialla]
+            + [Un{player_pronouns has him:o|{player_pronouns has her:a|ə}} prociors{player_pronouns has him:o|{player_pronouns has her:a|ə}}!]
                 -> color_variation_management(SecondCharacter, yellowC)->
              
             + [Il combattivo leone!]
@@ -236,7 +236,7 @@
             + [Serve metodo e disciplina per comunicare in modo efficace.]
                 -> color_variation_management(SecondCharacter, blueC)->
                
-            + [Scelta gialla]
+            + [Le cose strane sono magiche. I grandi sono noiosi, non strani.]
                 -> color_variation_management(SecondCharacter, yellowC)->
              
             + [Fregatene. Sii strano come va a te, {charNameTwo}!]
@@ -325,7 +325,7 @@
                 + [È comprovato che le punizioni non siano efficaci.]
                     -> color_variation_management(SecondCharacter, blueC)->
                 
-                + [Scelta gialla]
+                + [Fai così tante cose sbagliate da rendere le punizioni inutili!]
                     -> color_variation_management(SecondCharacter, yellowC)->
                 
                 + [E l3 ribelli si oppongono alle punizioni!]
@@ -402,7 +402,7 @@
                 + [L'unica cosa logica è essere te stesso.]
                     -> color_variation_management(SecondCharacter, blueC)->
                 
-                + [Scelta gialla]
+                + [Allora prova ad essere un dinosauro rosa!]
                     -> color_variation_management(SecondCharacter, yellowC)->
                 
                 + [L'importante è essere lotta, cambiamento, fuoco!]
@@ -480,7 +480,7 @@
             + [Quindi ci impari quello che la scuola non ti insegna.]
                 -> color_variation_management(SecondCharacter, blueC)->
                
-            + [Scelta gialla]
+            + ["Ma ci sono cose che non si possono capire con la riflessione, bisogna viverle."]
                 -> color_variation_management(SecondCharacter, yellowC)->
              
             + [Ogni guerrierə ha bisogno di riposarsi prima della battaglia.]
@@ -561,9 +561,10 @@
             + [No: voglio solo razionalmente capire meglio alcune cose.]
                 -> color_variation_management(SecondCharacter, blueC)->
                
-            + [Scelta gialla]
+            + [Naa, al massimo sgridiamo {mentorName}. Ti sembro un{player_pronouns has him:o|{player_pronouns has her:a|ə}} che ti sgrida?!]
                 -> color_variation_management(SecondCharacter, yellowC)->
-             
+                //Varianti risposta a seconda stato rapporto con Mentore.
+
             + [Bimbo, rilassati, non sono un{player_pronouns has her:a|ə} professor{player_pronouns has him:o|{player_pronouns has her:a|ə}}.]
                 -> color_variation_management(SecondCharacter, redC)->
         
@@ -676,7 +677,7 @@
             + [Statisticamente deve esserci una persona con cui poter legare.]
                 -> color_variation_management(SecondCharacter, blueC)->
                
-            + [Scelta gialla]
+            + [Tu amico mio hai tan-tis-si-ma fantasia, e devi condividerla con qualcunə!]
                 -> color_variation_management(SecondCharacter, yellowC)->
              
             + [Ma perché non guardi i cartoni di nascosto? O prendi i fumetti in biblio?]
@@ -750,7 +751,7 @@
             + [L'arte non è fattuale, per cui sì, è una bella bugia.]
                 -> color_variation_management(SecondCharacter, blueC)->
                
-            + [Scelta gialla]
+            + [Quindi se dici che sei uno scrittore puoi dire tutte le bugie che vuoi?]
                 -> color_variation_management(SecondCharacter, yellowC)->
              
             + [L'unica cosa che fa andare avanti è il cambiamento, non le belle bugie.]
