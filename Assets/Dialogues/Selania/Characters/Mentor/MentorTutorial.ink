@@ -242,7 +242,7 @@
                 Ma no.
                 Noi siamo qui per aiutare, non per fare coercizione.
                             
-            + [Un nome è un nome. A cosa serve cambiarlo?]
+            + [Un nome è soltanto un nome. A cosa serve cambiarlo?]
                     -> color_variation_management(Mentor, blueC)->
                 Un nome è come una magia che carichiamo di volta in volta di significato..#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
                 A volte quella magia non va più bene, e dobbiamo cercare una nuova formula. 

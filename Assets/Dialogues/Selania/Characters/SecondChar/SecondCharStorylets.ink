@@ -11,7 +11,7 @@
         
         Tu perché sei qui?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             
-            + (capire) [Questo luogo è insolito e voglio capirlo.]
+            + (capire) [Questo luogo è insolito e voglio studiarlo, capirlo.]
                     -> color_variation_management(SecondCharacter, blueC)->
                 Anche a me mi piace capire le cose.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 I grandi si arrabbiano se faccio troppe domande. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
@@ -162,7 +162,7 @@
         Ma mi ha detto che sono doni che non mi piacerebbero. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Saranno broccoli?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
         
-            + [Se qualcosa non è mai accaduta, non è per forza impossibile.]
+            + [Una cosa mai accaduta non è per ragionevolmente impossibile.]
                     -> color_variation_management(SecondCharacter, blueC)->
                 Quindi mi credi?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                 Quindi tutto è possibile?
@@ -469,7 +469,7 @@
     - (top)
         {mentorName} dice che prima le hai dato un calcio.#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:PG_neutral
             
-            + (disciplinato) [Credevo tu fossi disciplinato. Che delusione.]
+            + (disciplinato) [Pensavo tu fossi più disciplinato, lucido. Che delusione.]
                     -> color_variation_management(SecondCharacter, blueC)->
                 Ehi! Mica mi chiedi perché lo fatto!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 Vi odio.
@@ -595,7 +595,7 @@
         Sai {player_name}, vorrei nonna qui. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
         Sicuro le piace tantissimo questo posto.
         
-            + [Non parli mai di tuo nonno. Non c'è più?]
+            + [Non parli mai di tuo nonno. Deduco che non c'è più?]
                     -> color_variation_management(SecondCharacter, blueC)->
                 Se ne è andato quando papà era molto piccolo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Più di me.
@@ -701,7 +701,7 @@
         Ma quella di matematica dice sempre che le dispiace per me.
         E non mi piace quando fa così.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
        
-            + [Anche i maschi piangono, e anche gli orsi e gli elefanti.]
+            + [È provato che anche i maschi piangono, e pure gli orsi e gli elefanti.]
                     -> color_variation_management(SecondCharacter, blueC)->
                 Gli orsi mi piacciono.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Sono forti.
@@ -792,7 +792,7 @@
                         Sarebbe fighissimooooooooooooooooooooooooooooooo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             }
             
-            + [Conosci tutto degli animali.]
+            + [Obiettivamente conosci tutto degli animali.]
                     -> color_variation_management(SecondCharacter, blueC)->
                 Tutto, sì!
                 No, non <i>tutto tutto tutto</i>.
@@ -892,7 +892,7 @@
                                 Poi la mamma mi risuscita solo per ammazzarmi di nuovo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                     }
             
-            + [Oggettivamente pescare è una cosa, nuotare un'altra.]
+            + [Obiettivamente pescare è una cosa, nuotare un'altra.]
                     -> color_variation_management(SecondCharacter, blueC)->
                 Esatto!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Ma lei non lo vuole capire.
@@ -959,7 +959,7 @@
         
         Tu hai sempre voluto fare {player_pronouns has him: il riscrittore|{player_pronouns has her: la riscrittora|lə riscrittorə}} come lavoro?#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
         
-            + [Fino a poco fa nemmeno sapevo esistesse questo posto.]
+            + [Fino a poco fa non sapevo esistesse questo posto.]
                     -> color_variation_management(SecondCharacter, blueC)->
                 Figo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Quindi non sono l'unico.
@@ -1162,7 +1162,7 @@
                     Poi papà ha un altro motivo per arrabbiarsi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
             }        
 
-            + [Solo gli animali non sanno controllarsi.]
+            + [Solo gli animali non conoscono la disciplina.]
                     -> color_variation_management(SecondCharacter, blueC)->
                 Allora sono un lupo.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 Una giraffa.
@@ -1252,7 +1252,7 @@
             
             } 
         
-            + [Hai la mente da scienziato, e vuoi verificare tutto.]
+            + [Hai la mente da scienziato e vuoi verificare tutto.]
                     -> color_variation_management(SecondCharacter, blueC)->
                 Lo dice anche mio fratello.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Per questo mi lascia fare gli esperimenti.

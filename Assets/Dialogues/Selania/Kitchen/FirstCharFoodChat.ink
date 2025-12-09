@@ -85,7 +85,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         E sacrificio.
         Credi abbia senso?
         
-            + [Scelta blu]
+            + [Realisticamente, le relazioni sono compromesso e imprevedibilità.]
                 -> color_variation_management(FirstCharacter, blueC)->
                
             + [Scelta gialla]
@@ -165,7 +165,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Anche se Luana si è comportata da stronza.
         Ha senso?
         
-            + [Scelta blu]
+            + [Avevate concordato delle regole per queste situazioni?]
                 -> color_variation_management(FirstCharacter, blueC)->
                
             + [Scelta gialla]
@@ -224,7 +224,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Ma il profumo è magnifico.
         Comunque, unpopular opinion che non è poi molto unpopular: non è che c'è tutta 'sta differenza tra amore e amicizia.
         Credo che una parte di me veda lə tiziə che chiami "amore" solo come unə amicə con cui è anche bello scopare.
-        O anche senza, sesso.
+        O anche senza sesso.
         Però vedi il casino con 'ste parole?
         E di certo non me la sento di dire che una persona viene prima dell'altra solo per questo tipo di cose.
         Tipo che Talco ed Ennio per me sono i miei due grandi amori.
@@ -236,7 +236,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Però per fortuna Talco è Talco e ne abbiamo parlato e ci siamo capit3.
         Ha senso vero?
         
-            + [Scelta blu]
+            + [La lingua esprime ciò che la sua cultura ritiene importante.]
                 -> color_variation_management(FirstCharacter, blueC)->
                
             + [Scelta gialla]
@@ -329,7 +329,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         E le voglio cambiare.
         Ha senso?
         
-            + [Scelta blu]
+            + [Razionalmente ha senso cambiare solo ciò che si capisce.]
                 -> color_variation_management(FirstCharacter, blueC)->
                
             + [Scelta gialla]
@@ -519,8 +519,11 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Ed è bello addormentarsi precarie e con i casini ma sapendo di aver portato un po' di gioia a una persona.
         Ha senso?
 
-            + [Scelta blu]
+            + [Senza distacco finisci per perdere l'obiettivo.]
                 -> color_variation_management(FirstCharacter, blueC)->
+                E magari faccio le cose perché mi piacciono, non perché sono utili.
+                Me lo dice anche Talco.
+
                
             + [Scelta gialla]
                 -> color_variation_management(FirstCharacter, yellowC)->
@@ -587,7 +590,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Bene con me stessa.
         Ha senso?
 
-            + [Scelta blu]
+            + [Immaginare plasma il cervello, per cui sì, è empiricamente sensato.]
                 -> color_variation_management(FirstCharacter, blueC)->
                
             + [Scelta gialla]
@@ -659,7 +662,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Papà dice sempre che ho imparato prima a creare con lo xilofono che a parlare.
         Puoi essere ancora te se perdi qualcosa che ti ha sempre caratterizzatə?
 
-            + [Scelta blu]
+            + [Il carattere è solo una funzione del tuo cervello.]
                 -> color_variation_management(FirstCharacter, blueC)->
                
             + [Scelta gialla]
@@ -736,13 +739,13 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         E a quel punto mi sale un po' un'altra domanda.
         Perché se ciò che creo viene dagli scambi quotidiani, dai ricordi creati assieme, allora di chi è l'opera che si crea?
 
-            + [Scelta blu]
+            + [Realisticamente? Tua. È tuo il punto di vista dell'opera.]
                 -> color_variation_management(FirstCharacter, blueC)->
                
             + [Scelta gialla]
                 -> color_variation_management(FirstCharacter, yellowC)->
              
-            + [Scelta rossa]
+            + [Tua: chi l'ha fatta la fatica, il lavoro?]
                 -> color_variation_management(FirstCharacter, redC)->
         
             + [Scelta verde]

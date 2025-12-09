@@ -487,7 +487,7 @@
             + [Risposta verde.]
                 -> color_variation_management(FirstCharacter, greenC)->
     
-            + [I fatti non vanno colorati, ma bisogna saper divulgarli.]
+            + ["Riempire di calore" i fatti li rende inattendibili.]
                 -> color_variation_management(FirstCharacter, blueC)->
             -    
         A volte mi chiedo se non abbia senso lasciare il lavoro, rischiare tutto, e dedicarmi solo alla musica.
@@ -656,7 +656,7 @@
             + [Risposta rossa.]
                 -> color_variation_management(FirstCharacter, redC)->
             
-            + [Test: ti piaci quando scendi in vacanza?]
+            + (blue)[Scientificamente, sì: siamo bestie sociali, le persone ci influenzano.]
                 -> color_variation_management(FirstCharacter, blueC)->  
             
             + [Risposta verde.]
@@ -865,8 +865,11 @@
             + [Risposta gialla.]
                 -> color_variation_management(FirstCharacter, yellowC)-> 
                 
-            + [Siamo animali sociali, per cui non solo ha senso, ma è scientifico.]
-                -> color_variation_management(FirstCharacter, blueC)->     
+            + {not eight.blue} [Razionalmente ci sono decine di modi per non restare solə.]
+                -> color_variation_management(FirstCharacter, blueC)->
+
+            + {eight.blue} [Te l'ho detto prima: siamo bestie sociali, è inevitabile.]
+                -> color_variation_management(FirstCharacter, blueC)-> 
             -
         Dopo il nostro primo litigio, Talco mi ha detto che una buona relazione è una relazione scomoda.
         Che abbiamo delle teste pigre, e che le relazioni sane ci fanno uscire dalla pigrizia.
@@ -925,7 +928,7 @@
         + [Risposta rossa.]
             -> color_variation_management(FirstCharacter, redC)->  
                 
-        + [I social favoriscono i sentimenti negativi.]
+        + [Guardiamo i fatti, {charNameOne}: l'erba del vicino è?]
             -> color_variation_management(FirstCharacter, blueC)->
         
         + [Risposta gialla.]

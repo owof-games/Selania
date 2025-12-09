@@ -305,7 +305,7 @@
                 }    
             Quando tu giochi non hai paura di nulla.
 
-        + [Eppure tuo fratello per lavoro aggiusta le cose.]
+        + [Eppure sistematicamente tuo fratello per lavoro aggiusta le cose.]
             -> color_variation_management(SecondCharacter, blueC)->
             Vede le cose rotte e le ripara.
             Quindi ci sono cose che si possono aggiustare.

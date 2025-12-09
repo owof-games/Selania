@@ -72,7 +72,7 @@
 
         Animaliiiiiiiiiiii!
         A casa ho una vecchia enciclopedia, era del papà, che è piena di disegni e cose sugli animali.
-        E poi a un mercatino abbiamo trovato una vecchia collezione di riviste sugli insetti.
+        E poi a un mercatino abbiamo trovato una collezione di riviste sugli insetti.
         Poi ho dei modellini di dinosauri.
         Che però ultimamente non mi piacciono più.
         Mentre mi piace disegnare animali inventati mettendo assieme pezzi diversi.
@@ -86,7 +86,7 @@
         Mi sembra che i grandi le cose le fanno perché devono.
         Non lo so mica se si divertono davvero.
 
-            + [Scelta blu]
+            + [Statisticamente sì, solo con cose diverse dai prociorsi.]
                 -> color_variation_management(SecondCharacter, blueC)->
                
             + [Scelta gialla]
@@ -165,7 +165,7 @@
         No, dimmelo tu.
         Che animale sei?
 
-            + [Scelta blu]
+            + [L'intelligente civetta.]
                 -> color_variation_management(SecondCharacter, blueC)->
                
             + [Scelta gialla]
@@ -233,7 +233,7 @@
         Ti dicono una cosa ma ne vogliono un'altra e quindi tu sbagli sempre alla fine.
         E dicono a me che sono strano.
 
-            + [Scelta blu]
+            + [Serve metodo e disciplina per comunicare in modo efficace.]
                 -> color_variation_management(SecondCharacter, blueC)->
                
             + [Scelta gialla]
@@ -312,7 +312,7 @@
             Ma mi annoio.
             Mi annoio.
             Quando ci sono i compiti finisco subito.
-            E non so cosa fare.
+            E non so mica cosa fare.
             A volte leggo.
             A volte faccio cadere le cose per raccoglierle.
             O vado in bagno.
@@ -322,7 +322,7 @@
             Mettiamo le noccioline?
             Le punizioni sono stupide.
 
-                + [Scelta blu]
+                + [È comprovato che le punizioni non siano efficaci.]
                     -> color_variation_management(SecondCharacter, blueC)->
                 
                 + [Scelta gialla]
@@ -399,7 +399,7 @@
             Nonna dice che serve essere furbi.
             Io non so mica se posso essere tutte queste cose.
 
-                + [Scelta blu]
+                + [L'unica cosa logica è essere te stesso.]
                     -> color_variation_management(SecondCharacter, blueC)->
                 
                 + [Scelta gialla]
@@ -477,7 +477,7 @@
         E un libro sugli insetti della città che mi ha dato mio fratello.
         È il mio posto segreto.
 
-            + [Scelta blu]
+            + [Quindi ci impari quello che la scuola non ti insegna.]
                 -> color_variation_management(SecondCharacter, blueC)->
                
             + [Scelta gialla]
@@ -558,7 +558,7 @@
         Mi vuoi sgridare di nuovo?
         Ti ho già chiesto scusa.
 
-            + [Scelta blu]
+            + [No: voglio solo razionalmente capire meglio alcune cose.]
                 -> color_variation_management(SecondCharacter, blueC)->
                
             + [Scelta gialla]
@@ -673,7 +673,7 @@
         Io non so cosa dire.
         E quindi o sto da solo, o devo dire bugie.
 
-            + [Scelta blu]
+            + [Statisticamente deve esserci una persona con cui poter legare.]
                 -> color_variation_management(SecondCharacter, blueC)->
                
             + [Scelta gialla]
@@ -743,7 +743,7 @@
         Per dirsi che possono esistere cose diverse da quelle che si hanno.
         E che l'arte è una bella bugia per farci andare avanti quando le cose fanno schifo.
 
-            + [Scelta blu]
+            + [L'arte non è fattuale, per cui sì, è una bella bugia.]
                 -> color_variation_management(SecondCharacter, blueC)->
                
             + [Scelta gialla]
@@ -755,7 +755,7 @@
             + [Scelta verde]
                 -> color_variation_management(SecondCharacter, greenC)->
     
-            + [Scelta viola]
+            + [L'arte mostra ciò che i fatti non sanno raccontare.]
                -> color_variation_management(SecondCharacter, purpleC)->
             -
         

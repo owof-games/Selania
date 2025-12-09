@@ -51,7 +51,7 @@
                 Nemmeno la nonna pensa così tanto a dormire!
                 Perché tua nonna è in pensione e non deve pensare costantemente a PRODURRE!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
 
-            + [Concordo con te: capiamo tutto!]
+            + [Anche io voglio studiarmi tutto!]
                 -> color_variation_management(FirstCharacter, purpleC)->
                 -> color_variation_management(SecondCharacter, blueC)->
                  
@@ -192,7 +192,7 @@
             -> color_variation_management(FirstCharacter, redC)->
             -> color_variation_management(Mentor, blueC)->
             
-        + [{mentorName}, razionalmente la felicità non è stabile, ma temporanea.]
+        + [{mentorName}, razionalmente la felicità ha una natura temporanea.]
             -> color_variation_management(FirstCharacter, blueC)->
             -> color_variation_management(Mentor, blueC)->
         
