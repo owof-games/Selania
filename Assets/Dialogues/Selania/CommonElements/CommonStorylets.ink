@@ -55,8 +55,8 @@
                 -> color_variation_management(FirstCharacter, purpleC)->
                 -> color_variation_management(SecondCharacter, blueC)->
                  
-                 Sìì! E il nostro team batte il team SIAMO NOIOSI E DORMIAMO SEMPRE DI {charNameOne}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-                Sarò noiosa, ma tu arriverai ai quindici anni più ansioso di un pinscher, nanetto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
+                Sìì! E il nostro team batte il team SIAMO NOIOSI E DORMIAMO SEMPRE DI {charNameOne}!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+                Sarò noiosa, ma tu arriverai ai quindici anni più ansioso di un pinscher, piccoletto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
 
             + [Mi metterei a piangere {player_pronouns has him:terrorizzato|{player_pronouns has her:terrorizzata|terrorizzatə}} in un angolino.]
                     -> color_variation_management(FirstCharacter, greenC)->
@@ -72,7 +72,7 @@
                 Sarebbe divertentissimo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
                 Ora provo a pensare tantissimo alla cacca!
                 La mia mente è limpida e innocente.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
-                Non come quella di un bambino, ascoltando le cose che dice il nanerottolo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
+                Non come quella di un bambino, ascoltando le cose che dice il piccoletto.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
                 
             + [Magari conoscono il senso della vita.]
                 -> color_variation_management(FirstCharacter, purpleC)->
@@ -188,24 +188,43 @@
     
         + [{mentorName}, tu parli di arrendersi.]
             -> color_variation_management(FirstCharacter, redC)->
-            -> color_variation_management(Mentor, blueC)->
+            -> color_variation_management(Mentor, redC)->
+            Non arrendersi, {player_name}, ma accogliere quello che si ha.
+            C: E non vedo differenza, {mentorName}.
             
         + [{mentorName}, razionalmente la felicità ha una natura temporanea.]
             -> color_variation_management(FirstCharacter, blueC)->
             -> color_variation_management(Mentor, blueC)->
+            C: Oh, che bello sentire qualcun{player_pronouns has him:o|{player_pronouns has her:a|ə}} che matcha la mia gioia di vivere.
+            M: Il fatto che sia temporanea non nega la mia teoria.
         
         + [La felicità ce l'hai se trovi il gioco e l'assurdo ovunque.]
             -> color_variation_management(FirstCharacter, yellowC)->
-            -> color_variation_management(Mentor, blueC)->
-        
+            -> color_variation_management(Mentor, yellowC)->
+            C: Credo che quello si chiami "abuso di sostanze".
+            M: Con un linguaggio meno colorito, direi comunque che sì, ha ragione {charNameOne}.
+
         + [Non credo nella felicità, ma credo nel piacere dato dalle persone vicine.]
             -> color_variation_management(FirstCharacter, greenC)->    
-            -> color_variation_management(Mentor, blueC)->
+            -> color_variation_management(Mentor, greenC)->
+            M: Questa è una lettura che potrei apprezzare.
+            C: Woah!
+            C: Vuol dire che {player_name} ha trovato un punto di contatto tra noi?
+            M: Eh sì, mi sa proprio di sì.
             
         + [La felicità è qualcosa che cresce nelle pieghe del quotidiano.]
             -> color_variation_management(FirstCharacter, purpleC)->
             -> color_variation_management(Mentor, blueC)->
+            M: Sono contenta che la vediamo allo stesso modo.
+            C: Le cose che crescono nelle pieghe di solito sono sporche.
+            C: Infestanti.
+            C: E indesiderate.
         -
+    C: Comunque spero tu abbia imparato la lezione, {mentorName}.
+    M: Lezione?
+    C: Sì: che se una persona ti dice che ti ammira, è meglio portarsi a casa il complimento e goderselo.
+    C: Non sono vecchia come te, ma so che non sono tanti gli elogi che ci vengono dati in vita.
+    
         ~ firstChar_pauseTalking = firstChar_pauseDuration
         ~ mentor_pauseTalking = mentor_pauseDuration
     
