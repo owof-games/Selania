@@ -83,8 +83,8 @@
         È più furbo di un pesce rosso.
         Ma {mentorName}.
         Di cosa aveva bisogno {mentorName}?
-        {mentorName} ama dare consigli per far star bene le persone.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
-        {mentorName} crede di potere esistere solo quando si rende utile.
+        <i>{mentorName} ama dare consigli per far star bene le persone.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+        <i>{mentorName} crede di potere esistere solo quando si rende utile.
         Esatto.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
         Quello.
         Chiedile un consiglio.

@@ -264,15 +264,15 @@
     Se sto facendo un buon lavoro.
     Visto che vedono e sentono tutto.
 
-    S: Crediamo che {mentorName} stia facendo un buon lavoro.
-    S: Così come l'acqua che si raccoglie tra le mani per dissetarci.
-    S: Ma così come l'acqua non può essere incendio, così {mentorName} non può essere qualcosa che non è.
-    S: O portare nomi che non sa.
+    <i>Crediamo che {mentorName} stia facendo un buon lavoro.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>Così come l'acqua che si raccoglie tra le mani per dissetarci.
+    <i>Ma così come l'acqua non può essere incendio, così {mentorName} non può essere qualcosa che non è.
+    <i>O portare nomi che non sa.
 
         + [Metà delle cose che la voce dice sono illogiche.]
                 -> color_variation_management(Mentor, blueC)->
-            S: {player_name} non vede, e quindi decide che qualcosa non esiste.
-            S: Ma quella cosa esiste anche se {player_name} non vede.
+            <i>{player_name} non vede, e quindi decide che qualcosa non esiste.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            <i>Ma quella cosa esiste anche se {player_name} non vede.
             Uh, peccato.
             Ma ci sta: questo luogo è così insolito, immagino sia inevitabile non capirlo fino in fondo.
             
@@ -282,7 +282,7 @@
             Prendi prima: ho scoperto che per via della mia incuria sta crescendo del muschio sotto la panchina.
             Però.
             Ringrazia la voce da parte mia.
-            S: Dire una mezza verità porta su una mezza strada.
+            <i>Dire una mezza verità porta su una mezza strada.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
         + [Boh, ha parlato di incendi e acqua, forse hai bruciato qualcosa?]
                 -> color_variation_management(Mentor, yellowC)->
@@ -301,14 +301,14 @@
 
         + [Ha detto tante cose ma la risposta è: no.]
                 -> color_variation_management(Mentor, redC)->
-            S: La frusta che cade senza motivo non porta alcun insegnamento.
+            <i>La frusta che cade senza motivo non porta alcun insegnamento.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             Oh.
             Forse potrei chiedere scusa in qualche modo a...
             Ma a chi?
             Come?
             Ho deciso: pulisco il tronco.
             Potrebbe apprezzare, immagino.
-            S: Noi non abbiamo bisogno di pulizia, il nostro sporco è nido per funghi e insetti.    
+            <i>Noi non abbiamo bisogno di pulizia, il nostro sporco è nido per funghi e insetti.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()} 
         -
     Immagino sia faticoso, avere una voce in testa, così.
     O magari ti fa sentire meno {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}.

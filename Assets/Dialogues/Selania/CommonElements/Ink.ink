@@ -132,7 +132,7 @@
 
     {ink_status:
         - ink_empty:
-            Dopo le molte parole spese <>
+            <i>Dopo le molte parole spese <>
             {
                 - FirstCharacter:
                     con {translator(firstChar_ActualName)}<>
@@ -162,7 +162,7 @@
             }
             ,{player_name} si ritrova {player_pronouns has him:privo|{player_pronouns has her:priva|privə}} di inchiostro. Potrà solo usare il potere dell'epilogo.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         - ink_low:
-            Dopo le molte parole spese <>
+            <i>Dopo le molte parole spese <>
             {
                 - FirstCharacter:
                     con {translator(firstChar_ActualName)}<>
@@ -192,7 +192,7 @@
             }
             ,{player_name} ha a disposizione una goccia di inchiostro. Potrà compiere una riscrittura e usare il potere dell'epilogo.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         - ink_normal:
-           Dopo le molte parole spese <>
+           <i>Dopo le molte parole spese <>
             {
                 - FirstCharacter:
                     con {translator(firstChar_ActualName)}<>
@@ -222,7 +222,7 @@
             }
             ,{player_name} ha a disposizione due gocce di inchiostro. Potrà compiere due riscritture e usare il potere dell'epilogo.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         - ink_medium:
-            Dopo le molte parole spese <>
+            <i>Dopo le molte parole spese <>
             {
                 - FirstCharacter:
                     con {translator(firstChar_ActualName)}<>
@@ -252,7 +252,7 @@
             }
             ,{player_name} ha a disposizione tre gocce di inchiostro. Potrà compiere tre riscritture e usare il potere dell'epilogo.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}       
         - ink_high:
-            Dopo le molte parole spese <>
+            <i>Dopo le molte parole spese <>
             {
                 - FirstCharacter:
                     con {translator(firstChar_ActualName)}<>
@@ -349,19 +349,19 @@
     
     {ink_status:
         - ink_empty:
-            non ha raccolto alcuna goccia di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>non ha raccolto alcuna goccia di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         - ink_low:
-            ha raccolto una goccia di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>ha raccolto una goccia di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         - ink_normal:
-            ha raccolto due gocce di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>ha raccolto due gocce di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         - ink_medium:
-            ha raccolto tre gocce di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}     
+            <i>ha raccolto tre gocce di inchiostro#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}     
         
         - ink_high:
-            ha raccolto tre gocce di inchiostro, e col tempo riceverà da <>
+            <i>ha raccolto tre gocce di inchiostro, e col tempo riceverà da <>
                 {Character:
                     - FirstCharacter:
                         {translator(firstChar_ActualName)} <>

@@ -38,10 +38,10 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
 
 === book_test_intro ===
     
-    La biblioteca mostra le sue storie a {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca mostra le sue storie a {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         
         + {library_readStories != ()} [<i>Voglio rileggere qualcosa.]
-            Ad ora {player_name} ha letto {number_translator(library_readStories)} {libro_libri(library_readStories)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            <i>Ad ora {player_name} ha letto {number_translator(library_readStories)} {libro_libri(library_readStories)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 -> reread
             
         + {library_unreadStories != ()} [<i>Voglio una nuova storia casuale.]
@@ -74,7 +74,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
     -> step_one
 
     = step_one
-    {player_name} desidera una storia veloce come una pulce o lenta come la notte?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>{player_name} desidera una storia veloce come una pulce o lenta come la notte?#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         + {library_shortStories != ()} [<i>Qualcosa di brevissimo (max 1500 battute).]
         //(1500 battute max)
             ~ library_readingDuration += Short
@@ -103,7 +103,8 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
     
     
     = about_transformation
-    La biblioteca offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+
         + {library_readingDuration has Short && library_shortStories^ library_aboutTransformation != ()} [<i>Che racconti di qualcosa che si <b>trasforma</b>.]
             ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutTransformation)
              -> from_list_to_books
@@ -129,7 +130,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
             -> shuffle
         
     = about_questions       
-    La biblioteca offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + {library_readingDuration has Short && library_shortStories^ library_aboutQuestions != ()} [<i>Che parli di chi <b>si pone domande</b>.]
             ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutQuestions)
@@ -157,7 +158,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
             
             
     = about_unprepared
-    La biblioteca offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + {library_readingDuration has Short && library_shortStories^ library_aboutUnprepared != ()} [<i>Che mi colga<b> {player_pronouns has him:impreparato|{player_pronouns has her:impreparata|impreparatə}}</b>].
             ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutUnprepared)
@@ -184,7 +185,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
                 -> shuffle 
 
     = about_monsters
-    La biblioteca offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + {library_readingDuration has Short && library_shortStories^ library_aboutMonsters != ()} [<i>Che parli di <b>cose mostruose</b>.]
             ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutMonsters)
@@ -211,7 +212,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
                 -> shuffle
 
     = about_fire  
-    La biblioteca offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + {library_readingDuration has Short && library_shortStories^ library_aboutFire != ()} [<i>Che racconti di <b>cose che bruciano</b>.]
             ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutFire)
@@ -238,7 +239,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
                 -> shuffle
 
     = about_rebellion
-    La biblioteca offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca offre una storia...#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + {library_readingDuration has Short && library_shortStories^ library_aboutRebellion != ()} [<i>Che urli di <b>sogni e ribellioni</b>.]
             ~ library_proposedBook = LIST_RANDOM(library_shortStories^ library_aboutRebellion)
@@ -456,7 +457,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
     - QueerginiaWolf:
         -> queerginia_wolf
 
-    - else: La biblioteca non riesce a trovare un racconto adatto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    - else: <i>La biblioteca non riesce a trovare un racconto adatto.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         -> book_test_intro
     
 }
@@ -496,7 +497,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
 
     
     = reread_adri_allora
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>Il mio bellissimo gatto</b> di Adri Allora(ləi).]
                 -> adri_allora
@@ -506,7 +507,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
                 -> book_test_intro
     
     = reread_alexias_d_avino
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>Il Riflesso</b> di Alexias D'Avino (lui/lei).]
                 -> alexias_d_avino
@@ -516,7 +517,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
                 -> book_test_intro            
                 
     = reread_aza
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         + [<i>Rileggo <b>Luna vergine</b> di Aza (any).]
                 -> aza
         + {LIST_COUNT(library_readStories) > 1}[<i>Vorrei rileggere qualcosa di diverso.]
@@ -525,7 +526,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
                 -> book_test_intro                 
     
     = reread_steno_artico
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>Questa rabbia, che mi è stata rubata</b> by StenoArtico (he/him, none).]
                 -> steno_artico
@@ -535,7 +536,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
                 -> book_test_intro 
     
     = reread_b
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>Il tocco della rabbia</b> di K.(she/her).]
                 -> b
@@ -545,7 +546,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
                 -> book_test_intro 
                 
     = reread_beatrice
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>La rete non esiste</b> di Beatrice (she/her).]
                 -> beatrice
@@ -555,7 +556,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
                 -> book_test_intro 
                 
     = reread_beatrice_y_bottura
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>Artigli Rosso Ruggine</b> di Beatrice Y. Bottura (she/it).]
                 -> beatrice_y_bottura
@@ -568,7 +569,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
 
                 
     = reread_cecilia_formicola
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>Fuochino</b> di Cecilia Formicola (she/her).]
                 -> cecilia_formicola
@@ -578,7 +579,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
                 -> book_test_intro 
  
     = reread_francesca_tosca_raimondi
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>Trecentotrenta metri</b> di Francesca Tosca Raimondi (she/her).]
                 -> francesca_tosca_raimondi
@@ -589,7 +590,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
     
     
     = reread_kayleig
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>Volevo che mia madre fosse forte</b> di Kayleig (she/her).]
                 -> kayleig
@@ -600,7 +601,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
     
     
     = reread_lamia
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>Il sassolino</b> di Lamia (she/they).]
                 -> lamia
@@ -610,7 +611,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
                 -> book_test_intro 
     
     = reread_loris_casagrandi
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>Volevo essere solo cervello</b> di Loris Casagrandi (he/him - she/her).]
                 -> loris_casagrandi
@@ -620,7 +621,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
                 -> book_test_intro             
     
     = reread_val_lattanzio
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>Home</b> di Val Fausto Lattanzio (he/they).]
                 -> val_fausto_lattanzio
@@ -630,7 +631,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
                 -> book_test_intro        
     
     = reread_romi
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>Il principe sbagliato</b> di Romi (any).]
                 -> romi
@@ -641,7 +642,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
  
  
     = reread_salvo
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>Il cancello</b> di Salvo (he/him).]
                 -> salvo
@@ -651,7 +652,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
                 -> book_test_intro 
                 
     = reread_maura
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>Polvere</b> di Maura (she/they).]
                 -> maura
@@ -661,7 +662,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
                 -> book_test_intro        
     
     = reread_simo
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>SCP</b> di Simo (they/he).]
                 -> simo
@@ -671,7 +672,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
                 -> book_test_intro 
 
     = reread_letizia_vaccarella
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>Dodici Stelle</b> di Letizia Vaccarella (she/her).]
                 -> letizia_vaccarella
@@ -681,7 +682,7 @@ LIST library_allStories = AdriAllora, AlexiasDAvino, Aza, StenoArtico, B, Beatri
                 -> book_test_intro     
     
     = reread_queerginia_wolf
-    La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>La biblioteca si chiede cosa {player_name} voglia rileggere.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
         + [<i>Rileggo <b>Giallo</b> di Queerginia Wolf/Marco Spelgatti (she/he/they).]
                 -> queerginia_wolf

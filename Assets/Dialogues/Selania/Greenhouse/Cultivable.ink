@@ -675,19 +675,19 @@
         -> remove_proposed_cultivable ->
         ~ growthCardoAspinato = stepZero
         
-        Odore di buio, di cielo senza stelle.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Di bosco e nebbia e nessuna strada da imboccare.
-        E una palla soffice deposta sul terreno.
+        <i>Odore di buio, di cielo senza stelle.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Di bosco e nebbia e nessuna strada da imboccare.
+        <i>E una palla soffice deposta sul terreno.
                 -> main
     
     = step_uno
-        Rumore di passi, qualcosa che corre, che fugge, che non arriva mai.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        I peli del fusto vibrano, si sollevano quando {player_name} si avvicina, {player_pronouns has him:lo|{player_pronouns has her:la|lə}} tengono distante.
+        <i>Rumore di passi, qualcosa che corre, che fugge, che non arriva mai.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>I peli del fusto vibrano, si sollevano quando {player_name} si avvicina, {player_pronouns has him:lo|{player_pronouns has her:la|lə}} tengono distante.
                 -> main
     
     = step_due
-        È comparsa una gemma sulla cima dello stelo.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        E dalla gemma emergono filamenti disgustosi, il loro puzzo chiede di provare paura, di allontanarsi, di arrendersi, di evitare ogni contatto.
+        <i>È comparsa una gemma sulla cima dello stelo.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>E dalla gemma emergono filamenti disgustosi, il loro puzzo chiede di provare paura, di allontanarsi, di arrendersi, di evitare ogni contatto.
                 -> main
     
     = step_tre
@@ -696,14 +696,14 @@
         + (colto)[<i>Offro il mio aiuto.]
             ~ growthCardoAspinato = stepThree
             
-            La piante cede, si stende tra le gambe di {player_name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            {player_name} allunga le dita, ne carezza il pelo, e al contatto, sente.
-            Sente la luna, le stelle, le foglie nel vento, l'erba umida.
-            Sente abbracci e sorrisi e mani che sorreggono.
-            La pianta sboccia.
-            Il <b>Cardo aspinato</b> sboccia nel supporto.
-            Nel capire che lasciarsi aiutare è aiutare l'altrə.
-            Nell'accettare che aiutare è aiutarsi.
+            <i>La piante cede, si stende tra le gambe di {player_name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>{player_name} allunga le dita, ne carezza il pelo, e al contatto, sente.
+            <i>Sente la luna, le stelle, le foglie nel vento, l'erba umida.
+            <i>Sente abbracci e sorrisi e mani che sorreggono.
+            <i>La pianta sboccia.
+            <i>Il <b>Cardo aspinato</b> sboccia nel supporto.
+            <i>Nel capire che lasciarsi aiutare è aiutare l'altrə.
+            <i>Nell'accettare che aiutare è aiutarsi.
                 ~ move_entity(BrownBee, Greenhouse)
                 -> ending_cultivation
             
@@ -714,8 +714,8 @@
 === edera_delle_amanti
 
     = TW
-        Attenzione: questa pianta allude a contenuti erotici.
-        {player_name} vuole farla crescere, o preferisce cambiare?
+        <i>Attenzione: questa pianta allude a contenuti erotici.
+        <i>{player_name} vuole farla crescere, o preferisce cambiare?
             + [<i>Voglio andare avanti.]
                 -> step_zero
             
@@ -730,7 +730,7 @@
                         ->  cultivable_test
                     
                     - else:
-                        Al momento la serra non ha domande da porti.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                        <i>Al momento la serra non ha domande da porre a {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                     -> main
                 }
             
@@ -739,36 +739,36 @@
         -> remove_proposed_cultivable ->  
         ~ growthEderaDelleAmanti = stepZero
         
-        Il vaso gronda miele luminoso, calore riempie gli occhi di {player_name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        I polpastrelli hanno fame.
+        <i>Il vaso gronda miele luminoso, calore riempie gli occhi di {player_name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>I polpastrelli hanno fame.
             -> main
     
     = step_uno
-        Rami morbidi si sollevano lungo le pareti della serra.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Le labbra di {player_name} vibrano. 
+        <i>Rami morbidi si sollevano lungo le pareti della serra.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Le labbra di {player_name} vibrano. 
             -> main
           
     = step_due
-        I rami si sfiorano desideranti, colmi, sinuosi. Si avviluppano giocosi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Radici gentili saggiano il legno della serra, lo sfiorano, lo penetrano.
-        Foglie giovani maturano, nutrendosi di questo gioco.
+        <i>I rami si sfiorano desideranti, colmi, sinuosi. Si avviluppano giocosi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Radici gentili saggiano il legno della serra, lo sfiorano, lo penetrano.
+        <i>Foglie giovani maturano, nutrendosi di questo gioco.
             -> main
     
     = step_tre
-        Calore nel ventre.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Un pezzo di serra è abbracciato da foglie e bisbigli.
-        Faticoso è resistere all'idea di tuffarvisi.
+        <i>Calore nel ventre.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Un pezzo di serra è abbracciato da foglie e bisbigli.
+        <i>Faticoso è resistere all'idea di tuffarvisi.
         
             + (colto) [<i>Mi tuffo con loro.]
                 ~ growthEderaDelleAmanti = stepThree
                 
-                Per un attimo {player_name} perde i suoi confini.
-                Diventa un bacio nella notte, dita desiderate tra le cosce.
-                Acqua sulle labbra, pelle nuda sulla terra umida.
-                Pienezza che riempie, la forza dell'<b>Edera delle amanti</b>.
-                Il corpo colmo di piacere.
-                Di fusione.
-                Vivo.
+                <i>Per un attimo {player_name} perde i suoi confini.
+                <i>Diventa un bacio nella notte, dita desiderate tra le cosce.
+                <i>Acqua sulle labbra, pelle nuda sulla terra umida.
+                <i>Pienezza che riempie, la forza dell'<b>Edera delle amanti</b>.
+                <i>Il corpo colmo di piacere.
+                <i>Di fusione.
+                <i>Vivo.
                 
                     ~ move_entity(GoldenBee, Greenhouse)
                     -> ending_cultivation
@@ -785,36 +785,36 @@
         -> remove_proposed_cultivable ->
         ~ growthErbaLiccia = stepZero
         
-        Dal vaso due cespuglietti erbosi.
-        Da {player_name} due pensieri spinosi: quando ho smesso di essere ciò che ero, e sono diventat{player_pronouns has him:o|{player_pronouns has her:a|ə}} ciò che sono?#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Dal vaso due cespuglietti erbosi.
+        <i>Da {player_name} due pensieri spinosi: quando ho smesso di essere ciò che ero, e sono diventat{player_pronouns has him:o|{player_pronouns has her:a|ə}} ciò che sono?#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     
     = step_uno
-        L'erba cresce e i pensieri di {player_name} con lei.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Sono la persona che avrei voluto essere?
-        O ho tradito le promesse del mio passato?
+        <i>L'erba cresce e i pensieri di {player_name} con lei.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Sono la persona che avrei voluto essere?
+        <i>O ho tradito le promesse del mio passato?
             -> main
     
     = step_due
-        I due cespuglietti si sfiorano, si sfiorano i pensieri di {player_name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Le parti di sé che non ci sono più.
-        Quelle nuove.
-        E quelle che si sono trasformate nel tempo.
-        Cosa significa cambiare?
+        <i>I due cespuglietti si sfiorano, si sfiorano i pensieri di {player_name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Le parti di sé che non ci sono più.
+        <i>Quelle nuove.
+        <i>E quelle che si sono trasformate nel tempo.
+        <i>Cosa significa cambiare?
             -> main
     
     = step_tre
-        Il passato è una terra spinosa.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Il ricordo si modella sul bisogno del presente.
-        Il futuro sboccia nella contraddizione.
+        <i>Il passato è una terra spinosa.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Il ricordo si modella sul bisogno del presente.
+        <i>Il futuro sboccia nella contraddizione.
         
         + (colto)[<i>E io rifuggo la coerenza.]
             ~ growthErbaLiccia = stepThree
             
-            Il vaso brulica di erba verde e fresca.
-            L'<b><i>Erba Liccia</b></i> matura quando le sue radici aeree sanno ritrovarsi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            Quando nel cambiamento sanno ritrovarsi.
-            Quando sanno vedere ciò che erano, accogliere ciò che sono, curiosare su ciò che saranno.
+            <i>Il vaso brulica di erba verde e fresca.
+            <i>L'<b><i>Erba Liccia</b></i> matura quando le sue radici aeree sanno ritrovarsi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>Quando nel cambiamento sanno ritrovarsi.
+            <i>Quando sanno vedere ciò che erano, accogliere ciò che sono, curiosare su ciò che saranno.
                     -> ending_cultivation
         
         + [<i>Preferisco aspettare.]
@@ -829,38 +829,38 @@
         -> remove_proposed_cultivable ->
         ~ growthFalsaPalude = stepZero
         
-        Il vento spinge lo sporco sul pavimento, avvicinandolo ai piedi di {player_name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Il vento spinge lo sporco sul pavimento, avvicinandolo ai piedi di {player_name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     
     = step_uno
-        Lo sporco si è accresciuto.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        E ogni sua parte bisbiglia parole.
-        Il nome di {player_name} sembra lontano.
-        Ma riconosce sentimenti che ha già vissuto.
+        <i>Lo sporco si è accresciuto.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>E ogni sua parte bisbiglia parole.
+        <i>Il nome di {player_name} sembra lontano.
+        <i>Ma riconosce sentimenti che ha già vissuto.
             -> main
     
     = step_due
-       Nella calma della serra il pavimento sembra vivo.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-       Foglie e fiori e pistilli avanzano l3 un3 verso l3 altr3.
-       Il sentimento si è fatto movimento.
-       Forse {player_name} non è {player_pronouns has him:solo|{player_pronouns has her:sola|solə}} nel vivere certe emozioni?
+       <i>Nella calma della serra il pavimento sembra vivo.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+       <i>Foglie e fiori e pistilli avanzano l3 un3 verso l3 altr3.
+       <i>Il sentimento si è fatto movimento.
+       <i>Forse {player_name} non è {player_pronouns has him:solo|{player_pronouns has her:sola|solə}} nel vivere certe emozioni?
             -> main
     
     = step_tre
-        La separazione è solo illusione.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>La separazione è solo illusione.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
         + (colto)[<i>Voglio vedere oltre l'illusione.]
             ~ growthFalsaPalude = stepThree
             
-            Il movimento si è fatto unione, si è fatto gruppo.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            E un cespuglio fitto e odoroso illumina il pavimento della serra.
-            E tutta la <b>Falsa Palude</b> sospira.
-            Esule dell'acqua, eppure capace di germogliare.
-            La <b>Falsa Palude</b> è corallo di terra, colonia.
-            Vibrazione vicina e ascolto.
-            Ciò che accade quando il dolore si fa terreno comune.
-            Quando storie diverse riconoscono la propria voce.
-            E ciò che sembrava un ostacolo personale, si dimostra un problema strutturale.
+            <i>Il movimento si è fatto unione, si è fatto gruppo.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>E un cespuglio fitto e odoroso illumina il pavimento della serra.
+            <i>E tutta la <b>Falsa Palude</b> sospira.
+            <i>Esule dell'acqua, eppure capace di germogliare.
+            <i>La <b>Falsa Palude</b> è corallo di terra, colonia.
+            <i>Vibrazione vicina e ascolto.
+            <i>Ciò che accade quando il dolore si fa terreno comune.
+            <i>Quando storie diverse riconoscono la propria voce.
+            <i>E ciò che sembrava un ostacolo personale, si dimostra un problema strutturale.
                 -> ending_cultivation
         
         + [<i>Preferisco aspettare.]
@@ -875,34 +875,34 @@
         -> remove_proposed_cultivable ->
         ~ growthLanaNotturna = stepZero
         
-        Ha quella sensazione, {player_name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Quella di quando la notte {player_pronouns has him:lo|{player_pronouns has her:la|lə}} afferra nel letto, svegliandola, ributtandola in incubi e pensieri quotidiani soffocanti.
-        Di quando si agita tra le coperte, in trappola.
+        <i>Ha quella sensazione, {player_name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Quella di quando la notte {player_pronouns has him:lo|{player_pronouns has her:la|lə}} afferra nel letto, svegliandola, ributtandola in incubi e pensieri quotidiani soffocanti.
+        <i>Di quando si agita tra le coperte, in trappola.
                 -> main
     
     = step_uno
-        Le cose che non può cambiare si affastellano sulla pelle di {player_name}, le cose che non vanno.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Si appesantiscono sulle mani, schiacciano lo stomaco.
-        L'aria è sabbia, le scarse ombre minaccia.
+        <i>Le cose che non può cambiare si affastellano sulla pelle di {player_name}, le cose che non vanno.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Si appesantiscono sulle mani, schiacciano lo stomaco.
+        <i>L'aria è sabbia, le scarse ombre minaccia.
             -> main
     
     = step_due
-        Fare un passo fuori dal letto è come una corsa.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Aprire la porta, accendere una luce.
-        Il mondo fuori dorme, ma {player_name} è {player_pronouns has him:sveglio|{player_pronouns has her:sveglia|svegliə}}.
-        Qualcosa si appoggia sulle sue labbra, sulla sua coscienza.
+        <i>Fare un passo fuori dal letto è come una corsa.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Aprire la porta, accendere una luce.
+        <i>Il mondo fuori dorme, ma {player_name} è {player_pronouns has him:sveglio|{player_pronouns has her:sveglia|svegliə}}.
+        <i>Qualcosa si appoggia sulle sue labbra, sulla sua coscienza.
             -> main
     
     = step_tre
-        Perché il fiore sbocci, la gemma deve spaccarsi, ferirsi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Ma serve attendere il tempo giusto, lasciare che le cose possano maturare.
+        <i>Perché il fiore sbocci, la gemma deve spaccarsi, ferirsi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Ma serve attendere il tempo giusto, lasciare che le cose possano maturare.
         
         + (colto)[<i>Ho imparato ad attendere.]
             ~ growthLanaNotturna = stepThree
             
-            Un unico grande e morbido fiore, i petali soffici si spalancano nella serra.
-            <b>Lana Notturna</b> è una coperta nella notte, una tisana nei giorni bui.
-            Sboccia nelle terre dimenticate, per ricordare che anche quando tutto sembra perduto, da qualche parte cresce il seme del cambiamento.
+            <i>Un unico grande e morbido fiore, i petali soffici si spalancano nella serra.
+            <i><b>Lana Notturna</b> è una coperta nella notte, una tisana nei giorni bui.
+            <i>Sboccia nelle terre dimenticate, per ricordare che anche quando tutto sembra perduto, da qualche parte cresce il seme del cambiamento.
                 -> ending_cultivation
         
         + [<i>Preferisco aspettare.]
@@ -917,36 +917,36 @@
         -> remove_proposed_cultivable ->
         ~ growthLicheneDegliAbissi = stepZero
         
-        Due mondi si incontrano.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Foglie nuove si accrescono.
-        L'aria è piena di possibilità.
+        <i>Due mondi si incontrano.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Foglie nuove si accrescono.
+        <i>L'aria è piena di possibilità.
             -> main
     
     = step_uno
-        Le foglie ora riempiono ogni cosa, vedono solo sé stesse.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Le foglie ora riempiono ogni cosa, vedono solo sé stesse.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
           
     = step_due
-        Fiori come cuori, e un susseguirsi di bisbigli amorosi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Le radici interconnesse, indistricate.
-        Piccoli pruriti taciuti.
-        La volontà di non trovare una separazione.
+        <i>Fiori come cuori, e un susseguirsi di bisbigli amorosi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Le radici interconnesse, indistricate.
+        <i>Piccoli pruriti taciuti.
+        <i>La volontà di non trovare una separazione.
             -> main
           
     = step_tre
-        Dubbi e non detti esplodono come lame.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Ciò che prima era amorevolmente interconnesso ora è imprigionato.
-        Ci sono forze da rilasciare.
+        <i>Dubbi e non detti esplodono come lame.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Ciò che prima era amorevolmente interconnesso ora è imprigionato.
+        <i>Ci sono forze da rilasciare.
 
             + (colto) [<i>Ho qualcuno da salutare.]
                 ~ growthLicheneDegliAbissi = stepThree
                 
-                <b>Lichene degli abissi</b> offre frutti taglienti.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-                Cresce dove ci sono relazioni che non sanno maturare.
-                Storie da lasciare.
-                L'odore delle sue foglie sa di persone allontanate.
-                Di addii dolorosi.
-                E ferite da risanare.
+                <i><b>Lichene degli abissi</b> offre frutti taglienti.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                <i>Cresce dove ci sono relazioni che non sanno maturare.
+                <i>Storie da lasciare.
+                <i>L'odore delle sue foglie sa di persone allontanate.
+                <i>Di addii dolorosi.
+                <i>E ferite da risanare.
                     -> ending_cultivation
                     
              + [<i>Preferisco aspettare.]
@@ -961,34 +961,34 @@
         -> remove_proposed_cultivable ->
         ~ growthNonTiScordarDiTe = stepZero
         
-        Radici cromate si raccolgono in piccoli mucchi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        L'aria odora di terra e ricordi.
+        <i>Radici cromate si raccolgono in piccoli mucchi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>L'aria odora di terra e ricordi.
             -> main
     
     = step_uno
-        L'unione ha portato a una fioritura.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Le radici cespugliose sono sbocciate in qualcosa di nuovo.
-        {player_name} pensa a chi da tempo cammina con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.
+        <i>L'unione ha portato a una fioritura.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Le radici cespugliose sono sbocciate in qualcosa di nuovo.
+        <i>{player_name} pensa a chi da tempo cammina con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.
             -> main
           
     = step_due
-        Nuove congiunzioni si accrescono tra i cespugli radicali.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Ciò che era separato genera nuove storie.
+        <i>Nuove congiunzioni si accrescono tra i cespugli radicali.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Ciò che era separato genera nuove storie.
             -> main
           
     = step_tre
-        Qualcosa di nuovo attende la sua occasione per fiorire.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Qualcosa di nuovo attende la sua occasione per fiorire.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
 
         + (colto) [<i>Penso alle persone che mi compongono.]
             ~ growthNonTiScordarDiTe = stepThree
             
-            {player_name} si sente ramo, si sente radice.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            Si sente le persone che è {player_pronouns has him:stato|{player_pronouns has her:stata|statə}} e quelle che sarà.
-            Le persone che l'hanno {player_pronouns has him:accompagnato|{player_pronouns has her:accompagnata|accompagnatə}} nella sua vita.
-            <b>Non ti scordar di te</b> è la pianta del ricordo.
-            E del costruire.
-            Del celebrare le parti di chi abbiamo incontrato, che continuano a vivere in noi.
-            Del sentirci eredi e messagger3, parte di un percorso intessuto di nomi.
+            <i>{player_name} si sente ramo, si sente radice.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>Si sente le persone che è {player_pronouns has him:stato|{player_pronouns has her:stata|statə}} e quelle che sarà.
+            <i>Le persone che l'hanno {player_pronouns has him:accompagnato|{player_pronouns has her:accompagnata|accompagnatə}} nella sua vita.
+            <i><b>Non ti scordar di te</b> è la pianta del ricordo.
+            <i>E del costruire.
+            <i>Del celebrare le parti di chi abbiamo incontrato, che continuano a vivere in noi.
+            <i>Del sentirci eredi e messagger3, parte di un percorso intessuto di nomi.
                     -> ending_cultivation
                     
             + [<i>Preferisco aspettare.]
@@ -1005,38 +1005,38 @@
         -> remove_proposed_cultivable ->
         ~ growthOlobino = stepZero
         
-        Piccoli bottoni luccicanti osservano la serra.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Le mani di {player_name} sembrano più calde.
+        <i>Piccoli bottoni luccicanti osservano la serra.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Le mani di {player_name} sembrano più calde.
             -> main
     
     = step_uno
-        I muscoli di {player_name} si distendono.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        La mente si fa limpida.
+        <i>I muscoli di {player_name} si distendono.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>La mente si fa limpida.
             -> main
     
     = step_due
-       Ogni morbido fungo sembra sparire nell'altro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-       Il sottile micelio si mescola alle venature del legno.
-       E {player_name}...
-       Perché dovrebbe limitarsi ad essere {player_name}?
+       <i>Ogni morbido fungo sembra sparire nell'altro.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+       <i>Il sottile micelio si mescola alle venature del legno.
+       <i>E {player_name}...
+       <i>Perché dovrebbe limitarsi ad essere {player_name}?
             -> main
     
     = step_tre
-        Il tempo si mescola, ieri è oggidomanimai.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        I confini si sciolgono e un corpo è stanzapiantalucerespiro.
+        <i>Il tempo si mescola, ieri è oggidomanimai.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>I confini si sciolgono e un corpo è stanzapiantalucerespiro.
         
         + (colto)[<i>Mi sciolgo nel tempo.]
             ~ growthOlobino = stepThree
             
-            C'è solo amore.
-            Per le persone care e per quelle mai conosciute, per quelle perse e quelle che verranno.
-            Per l'insetto nel giardino e l'uccello nel cielo.
-            Per l'acqua sulla fronte e la plastica sotto le dita.
-            C'è completezza, non separazione.
-            C'è e non c'è e ci sarà ed è stato ed è qui, ora.
-            L'<b>Olobino</b> è un fungo semplice pieno di potere.
-            Il potere che c'è nel perdere il sé.
-            L'eternità nella collettività.
+            <i>C'è solo amore.
+            <i>Per le persone care e per quelle mai conosciute, per quelle perse e quelle che verranno.
+            <i>Per l'insetto nel giardino e l'uccello nel cielo.
+            <i>Per l'acqua sulla fronte e la plastica sotto le dita.
+            <i>C'è completezza, non separazione.
+            <i>C'è e non c'è e ci sarà ed è stato ed è qui, ora.
+            <i>L'<b>Olobino</b> è un fungo semplice pieno di potere.
+            <i>Il potere che c'è nel perdere il sé.
+            <i>L'eternità nella collettività.
                     -> ending_cultivation
             
             + [<i>Preferisco aspettare.]
@@ -1054,42 +1054,42 @@
         -> remove_proposed_cultivable ->
         ~ growthLaSpazzata = stepZero
         
-        Il pavimento della serra si è spezzato, riempiendosi dell'acqua che viene dallo stagno.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Una singola piccola fogliolina galleggia morbidamente.
-        Un singolo piccolo pensiero stuzzica {player_name}.
+        <i>Il pavimento della serra si è spezzato, riempiendosi dell'acqua che viene dallo stagno.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Una singola piccola fogliolina galleggia morbidamente.
+        <i>Un singolo piccolo pensiero stuzzica {player_name}.
             -> main
          
     = step_uno
-        Molte più foglie riempiono ora la fossa. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Molti più pensieri riempiono la testa di {player_name}.
-        Cos'era quella cosa che avrebbe voluto dire a, sì, sa a chi.
-        Ma non è il caso, alla fine.
-        Non è mai il caso.
-        -> main
+        <i>Molte più foglie riempiono ora la fossa. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Molti più pensieri riempiono la testa di {player_name}.
+        <i>Cos'era quella cosa che avrebbe voluto dire a, sì, sa a chi.
+        <i>Ma non è il caso, alla fine.
+        <i>Non è mai il caso.
+            -> main
     
     = step_due
-        La serra è invasa di foglie, l'acqua si infila sotto vasi e mobili. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        E pensieri come spilli invadono la testa di {player_name}.
-        L'ansia si infila sotto ricordi e sicurezze, e tutto trema.
+        <i>La serra è invasa di foglie, l'acqua si infila sotto vasi e mobili. #speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>E pensieri come spilli invadono la testa di {player_name}.
+        <i>L'ansia si infila sotto ricordi e sicurezze, e tutto trema.
             -> main
     
     = step_tre
-        Il pavimento vuoto scricchiola.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-        Tutto sembra in ordine, eppure la testa di {player_name} è pronta ad esplodere.
+        <i>Il pavimento vuoto scricchiola.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+        <i>Tutto sembra in ordine, eppure la testa di {player_name} è pronta ad esplodere.
 
         + (colto)[<i>C'è qualcosa che devo dire da molto tempo.]
             ~ growthLaSpazzata = stepThree
             
-            Odore di autunno, di foglie umide.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-            Ai piedi di {player_name} resta il foro della <b>Spazzata</b>.
-            La Spazzata è e non è.
-            Si abbuffa delle cose non dette.
-            E quando è sazia, travolge ogni cosa.
-            Ma la pancia di {player_name} è colma di un senso di vuoto.
-            La sensazione di quando ha condiviso qualcosa che riteneva terribile.
-            Per poi scoprire che il mondo non è finito quella volta, e non finirà oggi.
-            Le cose sono sempre peggiori nella propria testa.
-            Ma reali, lasciano segni e ferite.
+           <i>Odore di autunno, di foglie umide.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>Ai piedi di {player_name} resta il foro della <b>Spazzata</b>.
+            <i>La Spazzata è e non è.
+            <i>Si abbuffa delle cose non dette.
+            <i>E quando è sazia, travolge ogni cosa.
+            <i>Ma la pancia di {player_name} è colma di un senso di vuoto.
+            <i>La sensazione di quando ha condiviso qualcosa che riteneva terribile.
+            <i>Per poi scoprire che il mondo non è finito quella volta, e non finirà oggi.
+            <i>Le cose sono sempre peggiori nella propria testa.
+            <i>Ma reali, lasciano segni e ferite.
                     -> ending_cultivation
                     
             + [<i>Preferisco aspettare.]
@@ -1112,7 +1112,7 @@
     }
     @animation:Backpack
     
-    {~ {player_name} ha raccolto|{player_name} ha ricevuto in dono|Tra le dita {player_name} si ritrova|Nello zaino {player_name} ora ha|{player_name} riceve in dono|Ecco per {player_name}} {ingredientTranslator(greenhouse_chosenCultivable)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>{~ {player_name} ha raccolto|{player_name} ha ricevuto in dono|Tra le dita {player_name} si ritrova|Nello zaino {player_name} ora ha|{player_name} riceve in dono|Ecco per {player_name}} {ingredientTranslator(greenhouse_chosenCultivable)}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
     
     ~ backpack_findedGifts += greenhouse_chosenCultivable

@@ -6,7 +6,7 @@
     {debug: <i>La lista degli oggetti nella stanza è: {contentsKitchen}.}
     {debug: <i>La lista degli oggetti nel deposito è: {contentsSafekeeping}.}
 
-    {kitchen == 1:La cucina si apre a nuovi ingredienti e grandi confidenze.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    {kitchen == 1:<i>La cucina si apre a nuovi ingredienti e grandi confidenze.}#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
     ~ book_arrivingFromTracking = Kitchen
     

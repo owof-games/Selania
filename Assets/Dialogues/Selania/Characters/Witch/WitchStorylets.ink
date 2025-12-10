@@ -30,17 +30,17 @@
         ~ temp charNameFour = translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
 
-    Ciò che in te respira ricorda.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
-    Ricorda che ogni dialogo è una strada.
-    Che ogni strada è una scelta.
-    E che ogni scelta importante apre cinque strade.
-    Un vicolo di curiosità e disubbidienza.
-    Un sentiero di azione e protesta.
-    Un cammino di analisi e comprensione.
-    Un viottolo di affetto e cura.
-    Una calle di saggezza e spiritualità.
-    Ogni scelta e ogni passo accumulano visioni del mondo.
-    Raccontando la storia di chi cammina.
+    <i>Ciò che in te respira ricorda.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+    <i>Ricorda che ogni dialogo è una strada.
+    <i>Che ogni strada è una scelta.
+    <i>E che ogni scelta importante apre cinque strade.
+    <i>Un vicolo di curiosità e disubbidienza.
+    <i>Un sentiero di azione e protesta.
+    <i>Un cammino di analisi e comprensione.
+    <i>Un viottolo di affetto e cura.
+    <i>Una calle di saggezza e spiritualità.
+    <i>Ogni scelta e ogni passo accumulano visioni del mondo.
+    <i>Raccontando la storia di chi cammina.
 
 ->->
 
@@ -55,69 +55,69 @@
         ~ saturationVar ++
         //~ move_entity(vase, Bedroom)
         
-        Le nostre radici ci connettono a nuove voci, nuove storie.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+        <i>Le nostre radici ci connettono a nuove voci, nuove storie.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
         <b>Ci.</b>
-        La cicatrice rimane, ma da essa esplode la vita.
-        Torniamo a percepire, e questa è gioia.
-        {player_name} ci ha portato questa gioia.
-        {player_name} cosa si domanda?
+        <i>La cicatrice rimane, ma da essa esplode la vita.
+        <i>Torniamo a percepire, e questa è gioia.
+        <i>{player_name} ci ha portato questa gioia.
+        <i>{player_name} cosa si domanda?
         
             + [Posso sfiorarti?]
                     -> color_variation_management(PG, greenC)->
-                {player_name} sente la voce del Canto delle Compagne.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                {player_name} realizza che è {player_pronouns has him:collegato|{player_pronouns has her:collegata|collegatə}} a {charNameOne}.
-                A {charNameTwo}.
-                A {mentorName}.
-                E ogni collegamento riporta a pochi istanti fa, quando ha sfiorato il suo stesso viso.
-                Il contatto ha risvegliato un ricordo.
-                E quel ricordo, {player_name}, è il tuo sfiorarci.
+                <i>{player_name} sente la voce del Canto delle Compagne.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                <i>{player_name} realizza che è {player_pronouns has him:collegato|{player_pronouns has her:collegata|collegatə}} a {charNameOne}.
+               <i>A {charNameTwo}.
+                <i>A {mentorName}.
+                <i>E ogni collegamento riporta a pochi istanti fa, quando ha sfiorato il suo stesso viso.
+                <i>Il contatto ha risvegliato un ricordo.
+                <i>E quel ricordo, {player_name}, è il tuo sfiorarci.
                 
             + [Ehi tu, esci dalla mia testa! Subito!]
                     -> color_variation_management(PG, redC)->
-                Non siamo nella testa di {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                Non più di quanto {player_name} sia nella sua stessa testa.
-                Non meno di quanto {player_name} sia nella nostra.
-                È come se {player_name} ci chiedesse di non essere.
-                E questa è una cosa che non è e non sarà.
+                <i>Non siamo nella testa di {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                <i>Non più di quanto {player_name} sia nella sua stessa testa.
+                <i>Non meno di quanto {player_name} sia nella nostra.
+                <i>È come se {player_name} ci chiedesse di non essere.
+                <i>E questa è una cosa che non è e non sarà.
                 
             + [Le piante non possono parlare.]
                     -> color_variation_management(PG, blueC)->
-                Le piante raccontano storie da notte a giorno. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                E noi non siamo una pianta.
-                Ma siamo una pianta.
-                E non parliamo.
-                Eppure accade.
-                E ascoltiamo.
-                Elaboriamo.
-                Scopriamo.
-                In te.
-                Con te.
-                Per te.
-                Da te.
+                <i>Le piante raccontano storie da notte a giorno. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                <i>E noi non siamo una pianta.
+                <i>Ma siamo una pianta.
+                <i>E non parliamo.
+                <i>Eppure accade.
+                <i>E ascoltiamo.
+                <i>Elaboriamo.
+                <i>Scopriamo.
+                <i>In te.
+                <i>Con te.
+                <i>Per te.
+                <i>Da te.
                 
             + [Ci piace la gioia!]
                     -> color_variation_management(PG, yellowC)->
-                E a noi piace {player_name}.
-                E tutte le emozioni che genera con le sue azioni.
-                E tutti i tempi che {player_name} vive, ha vissuto e vivrà.
+                <i>E a noi piace {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                <i>E tutte le emozioni che genera con le sue azioni.
+                <i>E tutti i tempi che {player_name} vive, ha vissuto e vivrà.
             
             + [La tua voce mi guida dal mio arrivo.]
                     -> color_variation_management(PG, purpleC)->
-                E la tua guida noi, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-                La separazione è una illusione.
-                {player_name} è noi, noi siamo {charNameOne}.
-                {charNameOne} è {charNameTwo} che è {mentorName}.
-                E {mentorName} è {player_name}.
-                Che è noi.
+                <i>E la tua guida noi, {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                <i>La separazione è una illusione.
+                <i>{player_name} è noi, noi siamo {charNameOne}.
+                <i>{charNameOne} è {charNameTwo} che è {mentorName}.
+                <i>E {mentorName} è {player_name}.
+                <i>Che è noi.
             -
-        Noi siamo sussurro e siamo ascolto. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        Un sorriso attento ai bisogni di {player_name}.
-        Se {player_name} osserva la luna, noi saremo con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.
-        Ecco, sì: oggi saremo la luna.
-        E un sorriso.
+        <i>Noi siamo sussurro e siamo ascolto. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>Un sorriso attento ai bisogni di {player_name}.
+        <i>Se {player_name} osserva la luna, noi saremo con {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.
+        <i>Ecco, sì: oggi saremo la luna.
+        <i>E un sorriso.
             - (nameWitch)
-        Queste radici cercano di imparare le voci del terreno.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        E il terreno ci racconta che {player_name} ha appena compiuto qualcosa di importante.
+        <i>Queste radici cercano di imparare le voci del terreno.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>E il terreno ci racconta che {player_name} ha appena compiuto qualcosa di importante.
         
             ~ player_somethingStrange ++
                 {
@@ -133,9 +133,15 @@
 
 
 === foundLibro
-    Un libro.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-    Carta sgualcita e pagine mancanti.
-    E un nome che è il nome di chi legge queste parole.
+    <i>Un libro.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    <i>Carta sgualcita e pagine mancanti.
+        {
+            - player_nameChosen == true:
+                <i> E un nome: {player_name}.
+            - else:
+                <i>E un nome che è il nome di chi legge queste parole.
+        }
+
 
         ~ move_entity(RewriterBook, Forest)
         ~ move_entity(WitchRecap, BookPlace)
@@ -152,7 +158,7 @@
     ~ temp charNameFour = translator(fourthChar_ActualName)
     ~ temp charNameFive = translator(mentor_ActualName)
 
-        {player_name} <> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+        <i>{player_name} <> #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             {
                 - first_character_recap.check && second_character_recap.check && greenhouse_recap.check:
                     cerca spesso risposte tra le pagine del libro.
@@ -160,12 +166,12 @@
                 - else:
                     cerca di rado risposte tra le pagine del libro.
             }
-        Un libro è ricordo condiviso.
-        Una magia che pronuncia sé stessa.
-        Per questo le pagine si popolano man mano che {player_name} vive.
-        A volte il libro usa la nostra voce.
-        A volte ritrova altri nomi e parole.
-        In una canzone collettiva che guida {player_name} alla comprensione.
+        <i>Un libro è ricordo condiviso.
+        <i>Una magia che pronuncia sé stessa.
+        <i>Per questo le pagine si popolano man mano che {player_name} vive.
+        <i>A volte il libro usa la nostra voce.
+        <i>A volte ritrova altri nomi e parole.
+        <i>In una canzone collettiva che guida {player_name} alla comprensione.
 
     -> main
 

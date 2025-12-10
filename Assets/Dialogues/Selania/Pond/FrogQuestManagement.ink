@@ -89,7 +89,7 @@
                 Girino!
                 Sei sempre un salto avanti!
                 L'altro giorno un'amica, quell'amica comune sai, quella che ci parla nella testa, quell'amica hai capito no.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
-                A noi piace molto la compagnia della rana Franco.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                <i>A noi piace molto la compagnia della rana Franco.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 Ecco, lei mi ha fatto notare che {mentorName} ha una fissa.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                 Una cosa più fissa in testa della passione di mio cugino Gracco per la pasta coi lombrichi.
                 Ama tanto cercare modi per stare bene.
@@ -181,7 +181,7 @@
                 Perché il lavoro che fai è molto delicato.
                 Molto.
                 Ed è bello avere una guida, un'alleata così saggia.
-                La saggezza ha molte facce, e una porta il volto di Franco.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+                <i>La saggezza ha molte facce, e una porta il volto di Franco.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
                 E ora quindi è il mio momento di aiutarti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                     -> frog_about_who_questions                        
         }
@@ -527,7 +527,7 @@
                     Perché il lavoro che fai è molto delicato.
                     Molto.
                     Ed è bello avere una guida, un'alleata così saggia.
-                    La saggezza ha molte facce, e una porta il volto di Franco.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+                    <i>La saggezza ha molte facce, e una porta il volto di Franco.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
                     E ora quindi è il mio momento di aiutarti.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_neutral
                         ~ frog_currentMission = ()
 
@@ -865,7 +865,7 @@ Vorrei recuperare...#speaker:{PG_tag()} #inkA:offState #inkB:offState #inkC:offS
 
 
 = notification
-{player_name} ha soddisfatto la richiesta fatta dalla rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
+<i>{player_name} ha soddisfatto la richiesta fatta dalla rana.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState #portrait: {witch_state()}
         ~ frog_witch_notification = true
 -> main
 

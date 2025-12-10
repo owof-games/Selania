@@ -25,10 +25,10 @@
     
     + {are_two_entities_together(PG, RoomExit) && (not debug_stochastic)} [RoomExit]
     
-            Un letto morbido attende {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()} 
+            <i>Un letto morbido attende {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()} 
             
                 + + (close)[<i>Ho bisogno di riposare.]
-                    Salutiamo {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+                    <i>Salutiamo {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                     @quit
                     -> END
                     
@@ -121,7 +121,7 @@
                 -> library
         
         - else:
-            Legna e carta proteggono la strada.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>Legna e carta proteggono la strada.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     }  
     
@@ -153,7 +153,7 @@
                 -> empty_tempTW ->  
                 -> kitchen
         - else:
-            Un ponte spezzato interrompe il cammino di chi viaggia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+            <i>Un ponte spezzato interrompe il cammino di chi viaggia.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
             -> main
     }        
 
@@ -172,7 +172,7 @@
                     -> empty_tempTW ->  
                     -> nest
             - else:
-                Il relitto di una barca ostacola il cammino di {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+                <i>Il relitto di una barca ostacola il cammino di {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
                 -> main
         }   
 

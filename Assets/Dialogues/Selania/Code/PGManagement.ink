@@ -84,8 +84,8 @@
 
 //Per la scelta del nome
 === name_choice ===
-    Un nome è un incantesimo, una possibilità.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
-    Quale nome verrà pronunciato?
+    <i>Un nome è un incantesimo, una possibilità.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
+    <i>Quale nome verrà pronunciato?
 
         + {name_choice > 1} [Il mio nome è {player_name}.]
             ->->
