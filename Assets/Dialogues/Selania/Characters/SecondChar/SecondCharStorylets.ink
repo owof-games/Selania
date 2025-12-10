@@ -269,7 +269,7 @@
                             - are_two_entities_together(FirstCharacter, PG):
                                 Dio che fatica gli uomini.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed
                                 Anche quando hanno sei anni.
-                                Non ne ho sei!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
+                                Non sono <i>così</i> piccolo!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                         }
                 {not welcome:il fiore parlante è appiccicoso|{mentorName} è appiccicosa}.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
                 Vuole fare amicizia a tutti i costi.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
@@ -434,9 +434,9 @@
         DIECI! Mica solo tre come noi!
         E che l'acso, atso, axotolot si fa ricrescere le braccia?
 
-            + [Gli chiedo perché ha dato un calcio a {mentorName}.]
+            + [Perché hai dato un calcio a {mentorName}?]
                 -> top
-            + [Lo lascio continuare.]
+            + [<i>Lo lascio continuare.]
             -
 
             {
@@ -449,14 +449,9 @@
         Non sono mica tutti dei beeeeeeeeee uguali!
         Solo i colibrì sanno volare all'indietro!
         Tu sai camminare indietro? Secondo me no.
-                {
-                    - are_two_entities_together(FirstCharacter, PG):
-                            Voglio quello che ha preso questo bimbo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_curious
-                }
-
-            + [Gli chiedo perché ha dato un calcio a {mentorName}.]
+            + [Perché hai dato un calcio a {mentorName}?]
                 -> top
-            + [Lo lascio continuare.]
+            + [<i>Lo lascio continuare.]
             -
         I nasi dei cani sotto tutti diversi, non ci sono due cani con lo stesso naso.
         E...
@@ -1041,7 +1036,8 @@
         Oppure imparano il cinese e l'inglese.
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    Sono già stanca solo a sentire tutta questa roba..#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
+                    Sono già stanca solo a sentire tutta questa roba.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #portrait:chitarra_annoyed
+                    Non dovrebbero, che ne so, fare l3 bambin3 e bona?
             }  
         Loro sanno già cosa vogliono fare come lavoro.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         A me mi piacciono solo gli animali.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic

@@ -326,7 +326,7 @@
         Dove in un'altra vita ho ricevuto il mio primo bacio.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             {
                 - are_two_entities_together(FirstCharacter, PG):
-                    Uuuuh, gossip!     
+                    Uuuuh, sono pronta per il thè, ama.
             } 
             {
                 - are_two_entities_together(FirstCharacter, PG):
