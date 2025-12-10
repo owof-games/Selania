@@ -25,7 +25,7 @@
             + [Ho sempre pensato che Florence fosse una strega.]
                 -> color_variation_management(FirstCharacter, purpleC)->
             
-            + [Mi piacciono le persone che sanno arrabbiarsi!]
+            + [<i>Attendo impazientemente che dica altro.]
                 -> color_variation_management(FirstCharacter, redC)->
     
             + [Ma una persona non può essere un uccello.]

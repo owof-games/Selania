@@ -86,7 +86,7 @@
                 Non mi devo agitare.
                 Ecco: le cose hanno il senso che gli diamo.    
                     
-            + [Voglio tornare a casa, ora, subito!]
+            + [<i>Cerco un modo per tornare a casa.]
                     -> color_variation_management(Mentor, redC)->
                 Vuoi già andartene?#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
                 Forse devo rivedere il mio benvenuto.
