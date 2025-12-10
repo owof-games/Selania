@@ -419,7 +419,7 @@
         Altre, che dovrei fare qualcosa di più grande, che faccia meglio a più persone.
         Non so se ha senso.
         
-            + [Molti "no" hanno cambiato la storia.]
+            + (no) [Molti "no" hanno cambiato la storia.]
                 -> color_variation_management(FirstCharacter, purpleC)->
                 ESATTO!
                 Sono paroline potentissime.
