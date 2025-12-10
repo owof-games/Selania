@@ -18,7 +18,10 @@
             -> cooking_with_second_char
         
         + [Ti chiedo ancora un attimo {charNameTwo}.]
-            -> main
+            Oooook.
+            Aspetto.
+            Ma poco poco {player_name}!
+                -> main
   
  
  
@@ -60,6 +63,12 @@
                 }
             
             + [Ho cambiato idea.]
+                Sì no boh.
+                Allora vado a salutare la rana.
+
+                    ~ kitchen_secondCharCookingTogetherInvite = false
+                    ~ kitchen_secondCharCookingTogetherWaiting = 0
+                    ~ move_entity(SecondCharacter, Pond)
             -> main
 
     
@@ -111,33 +120,33 @@
                     {player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
         
-            + [Preparo una base per biscotti sportivi.]
+            + [<i>Preparo una base per biscotti sportivi.]
                 ~ kitchen_recipeNoun = "Biscotti"
                 Bleah.
                 Non i biscotti.
                 Ma lo sport.
                 Bleah!
                
-            + [Stendo della sfoglia per brioches giocose.]
+            + [<i>Stendo della sfoglia per brioches giocose.]
                 ~ kitchen_recipeNoun = "Brioches"
                 E a chi giochi?
                 A me piace tantissimo fare quelli di intelligenza ora.
                 Quando sono a casa di mio fratello posso starci tutto il tempo che voglio!
              
-            + [Impasto un preparato per crostate socievoli.]
+            + [<i>Impasto un preparato per crostate socievoli.]
                ~ kitchen_recipeNoun = "Crostata"
                Nel senso che stai sempre con le persone?
                Sempre?
                Anche dopo la scuola e il lavoro?
         
-            + [Pulisco le formine per gelati artistici.]
+            + [<i>Pulisco le formine per gelati artistici.]
                 ~ kitchen_recipeNoun = "Gelato"
                 Mmm.
                 So che è roba che piace a {charNameOne}.
                 A me mi piace fare le cose.
                 Ma non so se mi piace guardarle.
     
-            + [Raffreddo la frutta per sorbetti sonnacchiosi.]
+            + [<i>Raffreddo la frutta per sorbetti sonnacchiosi.]
                 ~ kitchen_recipeNoun = "Sorbetto"
                 {first_second_chit_chat: Ancora con questa cosa del dormire!|Che balle dormire!}
                 Ci sono così tante cose da fare!
@@ -185,7 +194,7 @@
         Questa è una cosa bellissima!
         Ma tu capisci sempre le persone?
         
-            + [Aggiungo del caramello della perplessità.]
+            + [<i>Aggiungo del caramello della perplessità.]
                 ~ kitchen_recipeAdjective = "della perplessità"
                 Anche io.
                 Sono così difficili.
@@ -194,12 +203,12 @@
                 Ma almeno quello so che se piove starnutisce.
                 Mentre mamma a volte è felice e a volte si arrabbia.
 
-            + [Spolvero del cacao della convinzione.]
+            + [<i>Spolvero del cacao della convinzione.]
                 ~ kitchen_recipeAdjective = "della convinzione"
                 Magari mentre siamo assieme capisco qualcosa da te allora.
                 Magari.
              
-            + [Verso dello sciroppo della negazione.]
+            + [<i>Verso dello sciroppo della negazione.]
                ~ kitchen_recipeAdjective = "della negazione"
                 Magari allora puoi provare anche tu con gli animali.
                 O un'altra cosa che ti piace.
@@ -207,13 +216,13 @@
                 Che non hanno assolutamente senso.
                 Contento lui.
                 
-            + [Grattugio della noce della vicinanza.]
+            + [<i>Grattugio della noce della vicinanza.]
                 ~ kitchen_recipeAdjective = "della vicinanza"
                 Si no boh.
                 Le persone vicine mi sembrano ancora più incasinate.
                 Per loro devo avere almeno tre animali per capirle.
     
-            + [Mescolo della vaniglia della solitudine.]
+            + [<i>Mescolo della vaniglia della solitudine.]
                 ~ kitchen_recipeAdjective = "della solitudine"
                 Già.
                 Si no boh.
@@ -258,7 +267,7 @@
         Voglio solo essere me.
         A te ti piace come ti trattano le altre persone?
 
-            + [Guarnisco con delle ciliege deluse.]
+            + [<i>Guarnisco con delle ciliege deluse.]
                 ~ kitchen_recipeComplement = "con ciliege deluse"
                 A mamma piace tanto quella parola.
                 Delusa.
@@ -267,25 +276,25 @@
                 Te le ricordi più buone.
                 Poi le mangi e bleah!
                
-            + [Decoro con della granella soddisfatta.]
+            + [<i>Decoro con della granella soddisfatta.]
                 ~ kitchen_recipeComplement = "con granella soddisfatta"
                 Deve essere bello.
                 Come l'amico di mio fratello.
                 Mio fratello dice che ha un cuore grande e gli vogliono tutti bene.
              
-            + [Rifinisco con della glassa sofferente.]
+            + [<i>Rifinisco con della glassa sofferente.]
                ~ kitchen_recipeComplement = "con glassa sofferente"
                 Mmm.
                 Mi dispiace.
         
-            + [Aggiungo delle crema migliorante.]
+            + [<i>Aggiungo delle crema migliorante.]
                 ~ kitchen_recipeComplement = "con crema migliorante"
                 Nonna dice che tutto migliora, sempre.
                 Però a me interessa più che una cosa arriva da qualche parte.
                 Mica puoi migliorare all'infinito.
                 Non c'ha senso.
     
-            + [Spalmo della confettura altalenante.]
+            + [<i>Spalmo della confettura altalenante.]
                 ~ kitchen_recipeComplement = "con confettura altalenante"
                 Cioè che dipende dalle persone?
                 O dalla persona?
@@ -349,30 +358,30 @@
                         {player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 }
             
-            + [Preparo un mediocre stampo da cupcake.]
+            + [<i>Preparo un mediocre stampo da cupcake.]
                 ~ kitchen_recipeNoun = "Cupcake"
                     Nonna dice sempre che la virtù sta a metà.
                     Mamma dice che è una frase da perdenti.
 
-            + [Pulisco le migliori formine da muffin.]
+            + [<i>Pulisco le migliori formine da muffin.]
                 ~ kitchen_recipeNoun = "Muffin"
                     Sii.
                     Tra migliori ci capiamo!!!
              
-            + [Infarino la peggior teglia per tartellette.]
+            + [<i>Infarino la peggior teglia per tartellette.]
                ~ kitchen_recipeNoun = "Tartellette "
                     Uh.
                     Io tipo sono il peggiore a ginnastica.
                     Solo Lara è peggio di me.
                     Ma mi batte a inglese.
         
-            + [Riscaldo l'unica piastra da waffle.]
+            + [<i>Riscaldo l'unica piastra da waffle.]
                 ~ kitchen_recipeNoun = "Waffle"
                     Sulla cima.
                     Anche io ci arrivo.
                     Sì sì.
     
-            + [Controllo una disperata teglia da plumcake.]
+            + [<i>Controllo una disperata teglia da plumcake.]
                 ~ kitchen_recipeNoun = "Plumcake"
                     Mi sembra piena di buchi, {player_name}.
                     Che vuole dire?
@@ -426,31 +435,31 @@
             E te?
             Magari poi io parlo tanto e tu cucini e ti agiti?
         
-                + [Trito della menta isolata.]
+                + [<i>Trito della menta isolata.]
                     ~ kitchen_recipeAdjective = "dell'isolamento"
                     Deve essere difficile questo lavoro allora.
                     Perché c'è sempre gente in giro.
                     E devi parlare con noi.
                 
-                + [Sbuccio della vaniglia frenetica.]
+                + [<i>Sbuccio della vaniglia frenetica.]
                     ~ kitchen_recipeAdjective = "della frenesia"
                     Un po' come {mentorName} allora.
                     Che corre sempre da una parte all'altra.
                 
-                + [Spremo del cedro organizzato.]
+                + [<i>Spremo del cedro organizzato.]
                     ~ kitchen_recipeAdjective = "dell'organizzazione"
                     Io ci provo a organizzarmi.
                     Ma non mi viene benissimo.
                     Voglio fare le cose con calma.
                     Ma poi finisco nel caos.
             
-                + [Setaccio della cannella ritardataria.]
+                + [<i>Setaccio della cannella ritardataria.]
                     ~ kitchen_recipeAdjective = "del ritardamento"
                     Lara in classe fa sempre così.
                     Arriva sempre il giorno dopo coi compiti.
                     La maestra dice che Lara si dimenticherà la testa a casa un giorno.
         
-                + [Frullo del caffè caotico.]
+                + [<i>Frullo del caffè caotico.]
                     ~ kitchen_recipeAdjective = "della caoticità"
                     Io non posso bere il caffè.
                     Mamma dice che faccio già abbastanza casini da solo.
@@ -508,24 +517,24 @@
         Magari con te capisco come fare?
         Tu ti senti {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}?
 
-            + [Do una spolverata di moltissimo cacao.]
+            + [<i>Do una spolverata di moltissimo cacao.]
                 ~ kitchen_recipeComplement = "con moltissimo cacao"
                 Però ora hai me!
                 E {charNameOne}!
                 E me!
                 
-            + [Incorporo un poco di marmellata.]
+            + [<i>Incorporo un poco di marmellata.]
                 ~ kitchen_recipeComplement = "con poca marmellata"
                 In effetti già qui hai fatto tante amicizie, vero?
                 Anche con me.
              
-            + [Non aggiungo nulla.]
+            + [<i>Non aggiungo nulla.]
                ~ kitchen_recipeComplement = "senza guarnizioni"
                 Woah.
                 Deve essere bello.
                 Spero di essere anche io tuo amico!
         
-            + [Spennello della glassa solitaria.]
+            + [<i>Spennello della glassa solitaria.]
                 ~ kitchen_recipeComplement = "con glassa solitaria"
                 Mio fratello è uno solitario.
                 Dice che è un orso.
@@ -533,7 +542,7 @@
                 E poi ridono.
                 Non ho mica capito perché.
     
-            + [Farcisco con pochi ma affidabili pezzetti di cioccolato.]
+            + [<i>Farcisco con pochi ma affidabili pezzetti di cioccolato.]
                 ~ kitchen_recipeComplement = "con affidabili pezzetti di cioccolato"
                 Come nonna.
                 Che dice che la vita ti da un grande amore, due grandi amicizie, tre grandi rotture di gatto.
@@ -616,26 +625,26 @@
                     {player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
         
-            + (bugie_innocenti) [Sbuccio delle pesche innocenti.]
+            + (bugie_innocenti) [<i>Sbuccio delle pesche innocenti.]
                 ~ kitchen_recipeNoun = "Pesche"
                 Esatto!
                 Ci sono bugie che non fanno male a nessuno.
                 E sono anche carine!
                
-            + (bugie_omesse) [Affetto delle mele omesse.]
+            + (bugie_omesse) [<i>Affetto delle mele omesse.]
                 ~ kitchen_recipeNoun = "Mele"
                 Come quando non dici che hai fatto una cosa.
                 Fino a quando non ti scoprono.
                 Però poi finisci nei guai.
                 Grossi.
              
-            + (bugie_difensive)[Taglio delle pere difensive.]
+            + (bugie_difensive)[<i>Taglio delle pere difensive.]
                ~ kitchen_recipeNoun = "Pere"
                A scuola servono le bugie per difendersi.
                Tantissime.
                Le maestre pensano sempre che hai fatto qualcosa di brutto.
         
-            + (bugie_nessuna)[Sciacquo delle prugne impeccabili.]
+            + (bugie_nessuna)[<i>Sciacquo delle prugne impeccabili.]
                 ~ kitchen_recipeNoun = "Prugne"
                 Si no boh.
                 Nessuna persona non dice le bugie.
@@ -643,7 +652,7 @@
                 Magari <i>pensi</i> di non dire bugie.
                 Ma le dici comunque.
     
-            + (bugie_autoinganno)[Spremo delle arance dell'autoinganno]
+            + (bugie_autoinganno)[<i>Spremo delle arance dell'autoinganno]
                 ~ kitchen_recipeNoun = "Arance"
                 Come quando mi dico che a ginnastica sono stato bravo.
                 Anche se sono caduto con la faccia sulle scarpe di Tommaso.
@@ -706,17 +715,17 @@
         E ha la piscina e tantissimi giochi.
         A te cosa ti rende interessante?
 
-            + [Shakero un bicchiere vuoto.]
+            + [<i>Shakero un bicchiere vuoto.]
                 ~ kitchen_recipeAdjective = "del vuoto"
                 Non è vero!
                 Abbiamo già parlato tantissimo!
                
-            + [Aggiungo della lavanda empatica.]
+            + [<i>Aggiungo della lavanda empatica.]
                 ~ kitchen_recipeAdjective = "dell'empatia"
                 Come quando io mi faccio male e tu senti dolore?
                 Deve essere faticoso!
              
-            + [Grattugio della scorza di chinotto sportivo.]
+            + [<i>Grattugio della scorza di chinotto sportivo.]
                ~ kitchen_recipeAdjective = "della sportività"
                 Magari conosci Jin.
                 O suo fratello.
@@ -724,13 +733,13 @@
                 È campione di sollevamento pesi.
                 Una volta mi ha alzato con una sola mano!
         
-            + [Misuro dell'acqua di rose erudita.]
+            + [<i>Misuro dell'acqua di rose erudita.]
                 ~ kitchen_recipeAdjective = "dell'erudizione"
                 Anche a me piace sapere le cose.
                 Ma poi devi trovare le persone a cui piacciono le cose che piacciono a te.
                 O ti dicono che sei strano.
     
-            + [Macino del pepe rosa divertito.]
+            + [<i>Macino del pepe rosa divertito.]
                 ~ kitchen_recipeAdjective = "del divertimento"
                 Scherzi e battute!
                 Ma lontano dalle maestre.
@@ -778,12 +787,12 @@
         Come dire bugie quando sei un bambino.
         Per te cosa significa essere grande?
         
-            + [Unisco della cioccolata angosciata.]
+            + [<i>Unisco della cioccolata angosciata.]
                 ~ kitchen_recipeComplement = "con cioccolata angosciata"
                 Vedi?
                 Perché dovrei diventare grande?!?
                
-            + [Caramello delle scorze di limone indipendente.]
+            + [<i>Caramello delle scorze di limone indipendente.]
                 ~ kitchen_recipeComplement = "con limone indipendente"
                 Perché fai quello che vuoi?
                 Questo è bello.
@@ -792,18 +801,18 @@
                 E una lontra.
                 I grandi possono avere uno zoo?
              
-            + [Guarnisco con marshmallow responsabili.]
+            + [<i>Guarnisco con marshmallow responsabili.]
                ~ kitchen_recipeComplement = "con marshmallow responsabili"
                Sì no boh.
                Anche i bambini sono responsabili.
                Quindi non è tanto diverso no?
         
-            + [Spolvero dello zenzero fallito.]
+            + [<i>Spolvero dello zenzero fallito.]
                 ~ kitchen_recipeComplement = "con zenzero fallito"
                 Non voglio diventare grandeeeeeee.
                 Non vogliooooo!
     
-            + [Verso del succo d'ananas esplorativo.]
+            + [<i>Verso del succo d'ananas esplorativo.]
                 ~ kitchen_recipeComplement = "con ananas esplorativo"
                 Non ci avevo pensato.
                 Però posso viaggiare dove voglio.
@@ -847,11 +856,11 @@
                 Il giusto ingrediente renderà la ricetta di {player_name} e {charNameTwo} spaziale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                 E {player_name} potrebbe capire un po' meglio {charNameTwo}. 
 
-                    + [Voglio aggiungere un ingrediente speciale.]
+                    + [<i>Voglio aggiungere un ingrediente speciale.]
                         -> extra_ingredient_management(SecondCharacter)->
                         ~ disableNestDialogue()
                     
-                    + [Ho cambiato idea.]
+                    + [<i>Non aggiungo altro.]
                     -
             A tavola!
             Ho tantissima aquilina!

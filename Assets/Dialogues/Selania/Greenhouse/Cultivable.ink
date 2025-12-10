@@ -662,7 +662,7 @@
                 ~ move_entity(RedBee, Greenhouse)
                 -> ending_cultivation
         
-        + [Preferisco aspettare.]
+        + [<i>Preferisco aspettare.]
                     -> main     
 
               
@@ -693,7 +693,7 @@
     = step_tre
         La resistenza della pianta si fa sempre più debole.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
-        + (colto)[Offro il mio aiuto.]
+        + (colto)[<i>Offro il mio aiuto.]
             ~ growthCardoAspinato = stepThree
             
             La piante cede, si stende tra le gambe di {player_name}.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
@@ -707,7 +707,7 @@
                 ~ move_entity(BrownBee, Greenhouse)
                 -> ending_cultivation
             
-            + [Preferisco aspettare.]
+            + [<i>Preferisco aspettare.]
                     -> main          
 
 
@@ -716,13 +716,13 @@
     = TW
         Attenzione: questa pianta allude a contenuti erotici.
         {player_name} vuole farla crescere, o preferisce cambiare?
-            + [Voglio andare avanti.]
+            + [<i>Voglio andare avanti.]
                 -> step_zero
             
-            + [Voglio rimuoverla, ma solo per ora.]
+            + [<i>Voglio rimuoverla, ma solo per ora.]
                 -> tempCultTW_formula
                 
-            + (rimuovi) [Voglio rimuoverla per sempre.]
+            + (rimuovi) <i>[Voglio rimuoverla per sempre.]
                 -> remove_proposed_cultivable ->
                     ~ greenhouse_chosenCultivable = ()
                 {
@@ -759,7 +759,7 @@
         Un pezzo di serra è abbracciato da foglie e bisbigli.
         Faticoso è resistere all'idea di tuffarvisi.
         
-            + (colto) [Mi tuffo con loro.]
+            + (colto) [<i>Mi tuffo con loro.]
                 ~ growthEderaDelleAmanti = stepThree
                 
                 Per un attimo {player_name} perde i suoi confini.
@@ -773,7 +773,7 @@
                     ~ move_entity(GoldenBee, Greenhouse)
                     -> ending_cultivation
             
-            + [Preferisco aspettare.]
+            + [<i>Preferisco aspettare.]
                     -> main        
 
 === erba_liccia
@@ -808,7 +808,7 @@
         Il ricordo si modella sul bisogno del presente.
         Il futuro sboccia nella contraddizione.
         
-        + (colto)[E io rifuggo la coerenza.]
+        + (colto)[<i>E io rifuggo la coerenza.]
             ~ growthErbaLiccia = stepThree
             
             Il vaso brulica di erba verde e fresca.
@@ -817,7 +817,7 @@
             Quando sanno vedere ciò che erano, accogliere ciò che sono, curiosare su ciò che saranno.
                     -> ending_cultivation
         
-        + [Preferisco aspettare.]
+        + [<i>Preferisco aspettare.]
                     -> main                                      
 
 === falsa_palude
@@ -849,7 +849,7 @@
     = step_tre
         La separazione è solo illusione.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         
-        + (colto)[Voglio vedere oltre l'illusione.]
+        + (colto)[<i>Voglio vedere oltre l'illusione.]
             ~ growthFalsaPalude = stepThree
             
             Il movimento si è fatto unione, si è fatto gruppo.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
@@ -863,7 +863,7 @@
             E ciò che sembrava un ostacolo personale, si dimostra un problema strutturale.
                 -> ending_cultivation
         
-        + [Preferisco aspettare.]
+        + [<i>Preferisco aspettare.]
                 -> main                                 
 
 === lana_notturna
@@ -897,7 +897,7 @@
         Perché il fiore sbocci, la gemma deve spaccarsi, ferirsi.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         Ma serve attendere il tempo giusto, lasciare che le cose possano maturare.
         
-        + (colto)[Ho imparato ad attendere.]
+        + (colto)[<i>Ho imparato ad attendere.]
             ~ growthLanaNotturna = stepThree
             
             Un unico grande e morbido fiore, i petali soffici si spalancano nella serra.
@@ -905,7 +905,7 @@
             Sboccia nelle terre dimenticate, per ricordare che anche quando tutto sembra perduto, da qualche parte cresce il seme del cambiamento.
                 -> ending_cultivation
         
-        + [Preferisco aspettare.]
+        + [<i>Preferisco aspettare.]
                 -> main             
                     
 === lichene_degli_abissi
@@ -938,7 +938,7 @@
         Ciò che prima era amorevolmente interconnesso ora è imprigionato.
         Ci sono forze da rilasciare.
 
-            + (colto) [Ho qualcuno da salutare.]
+            + (colto) [<i>Ho qualcuno da salutare.]
                 ~ growthLicheneDegliAbissi = stepThree
                 
                 <b>Lichene degli abissi</b> offre frutti taglienti.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
@@ -949,7 +949,7 @@
                 E ferite da risanare.
                     -> ending_cultivation
                     
-             + [Preferisco aspettare.]
+             + [<i>Preferisco aspettare.]
                     -> main
                     
 === non_ti_scordar_di_te
@@ -979,7 +979,7 @@
     = step_tre
         Qualcosa di nuovo attende la sua occasione per fiorire.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
 
-        + (colto) [Penso alle persone che mi compongono.]
+        + (colto) [<i>Penso alle persone che mi compongono.]
             ~ growthNonTiScordarDiTe = stepThree
             
             {player_name} si sente ramo, si sente radice.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
@@ -991,7 +991,7 @@
             Del sentirci eredi e messagger3, parte di un percorso intessuto di nomi.
                     -> ending_cultivation
                     
-            + [Preferisco aspettare.]
+            + [<i>Preferisco aspettare.]
                     -> main          
                     
                     
@@ -1025,7 +1025,7 @@
         Il tempo si mescola, ieri è oggidomanimai.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         I confini si sciolgono e un corpo è stanzapiantalucerespiro.
         
-        + (colto)[Mi sciolgo nel tempo.]
+        + (colto)[<i>Mi sciolgo nel tempo.]
             ~ growthOlobino = stepThree
             
             C'è solo amore.
@@ -1039,7 +1039,7 @@
             L'eternità nella collettività.
                     -> ending_cultivation
             
-            + [Preferisco aspettare.]
+            + [<i>Preferisco aspettare.]
                     -> main          
                     
                     
@@ -1077,7 +1077,7 @@
         Il pavimento vuoto scricchiola.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
         Tutto sembra in ordine, eppure la testa di {player_name} è pronta ad esplodere.
 
-        + (colto)[C'è qualcosa che devo dire da molto tempo.]
+        + (colto)[<i>C'è qualcosa che devo dire da molto tempo.]
             ~ growthLaSpazzata = stepThree
             
             Odore di autunno, di foglie umide.#speaker:{witch_tag()} #inkA: offState #inkB:offState #inkC:offState  #inkD:offState  #portrait: {witch_state()}
@@ -1092,7 +1092,7 @@
             Ma reali, lasciano segni e ferite.
                     -> ending_cultivation
                     
-            + [Preferisco aspettare.]
+            + [<i>Preferisco aspettare.]
                     -> main                              
 
 === ending_cultivation
@@ -1122,5 +1122,5 @@
     + {greenhouse_backupCultivable != ()}[<i>Voglio coltivare qualcosa di nuovo.]
             -> cultivable_test
     
-    + [{~ Mi aggiro per la serra.|Osservo ciò che è in crescita.|Ascolto i rumori della serra.|Mi rilasso un attimo.|Mi perdo nei colori dei vasi.}]  
+    + [<i>{~ Mi aggiro per la serra.|Osservo ciò che è in crescita.|Ascolto i rumori della serra.|Mi rilasso un attimo.|Mi perdo nei colori dei vasi.}]  
             -> main    

@@ -28,10 +28,10 @@
     
     Ma Liliana non voleva cedere: No, ripeteva, No, scelgo io da sola.<N>Lo zio stava per aprire il cancello.<N>Liliana tremava: storie di famiglia raccontavano del passato violento di quell’uomo.<N>Liliana era stanca, tremava di rabbia, urlo di nuovo e più forte “NO” mentre lui apriva il cancello che di scatto si chiuse, tranciando di netto le mani dello zio.<N>Qualche giorno dopo Liliana andò al cimitero. Era una giornata di sole: in lontananza la casa sua e di Alfredo brillava sulle chiome degli ulivi. 
 
-        + [Vorrei leggere ancora.]
+        + [<i>Vorrei leggere ancora.]
             ~ disableBigDialogue()
            -> book_test_intro
-        + [Me ne vado.]
+        + [<i>Me ne vado.]
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
             -> main
@@ -40,7 +40,7 @@
 === maura
     <b>Polvere</b> di Maura (she/they).<N>Instagram: @maura_sacca<N>Trigger warning: violenza fisica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
        
-        + [Inizio la lettura.]
+        + [<i>Inizio la lettura.]
     //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has Maura:
@@ -48,9 +48,9 @@
                     ~ library_readStories += Maura
                      -> refresh_book_lists ->
             }  
-        + {library_unreadStories has Maura}[Per ora non me la sento di affrontare questo tema.]
+        + {library_unreadStories has Maura}[<i>Per ora non me la sento di affrontare questo tema.]
                 -> tempTW -> book_test_intro
-        + {library_unreadStories has Maura}[Non presentarmi più questo racconto.]
+        + {library_unreadStories has Maura}[<i>Non voglio più incontrare questa storia.]
             ~ library_unreadStories -= Maura
                 -> refresh_book_lists -> book_test_intro
         -
@@ -65,10 +65,10 @@
     
     Lui apre la bocca.<N>Urlo più forte - CHIEDIMELO ANCORA! -<N>Nel momento in cui prova di nuovo a prendere fiato lo stringo con entrambe le mani e lo faccio diventare polvere.<N>Raccolgo il cumulo rimasto nella conca della mia mano e lo soffio al vento.<N>Lo guardo volare via con il sorriso sul volto mentre ritorno alle mie dimensioni normali.<N>Mi accorgo che anche la mia pazzia sta volando via.<N>La riacciuffo immediatamente “Tu resti qua con me.
 
-        + [Vorrei leggere ancora.]
+        + [<i>Vorrei leggere ancora.]
             ~ disableBigDialogue()
            -> book_test_intro
-        + [Me ne vado.]
+        + [<i>Me ne vado.]
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
@@ -77,7 +77,7 @@
 
 === simo
 <b>SCP</b> di Simo (they/he).<N>Instagram: @il_radioattivo<N>Trigger violenza, deadnaming, morte.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-        + [Inizio la lettura.]
+        + [<i>Inizio la lettura.]
 //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has Simo:
@@ -85,9 +85,9 @@
                     ~ library_readStories += Simo
                      -> refresh_book_lists ->
             }        
-        + {library_unreadStories has Simo}[Per ora non me la sento di affrontare questo tema.]
+        + {library_unreadStories has Simo}[<i>Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + {library_unreadStories has Simo}[Non presentarmi più questo racconto.]
+        + {library_unreadStories has Simo}[<i>Non voglio più incontrare questa storia.]
             ~ library_unreadStories -= Simo
                 -> refresh_book_lists -> book_test_intro
         -
@@ -110,11 +110,11 @@
     
     "E invece..."<N>"E invece sei una porta decisamente pacata."<N>"<i>Ma sì, che senso avrebbe che io urlassi, strepitassi, sbattessi? Cambierebbe forse qualcosa del mio essere porta? Nah, per nulla.</i>"<N>"Invece..."<N>"<i>Invece se ad aprirmi, sbattermi, rompermi, sfondarmi, sei tu...</i>"<N>"Cosa troverò al di là?"<N>"<i>Al di là di me?</i>"<N>"Sì."<N>"<i>Dai un'occhiata.</i>"
 
-        + [Vorrei leggere ancora.]
+        + [<i>Vorrei leggere ancora.]
             ~ disableBigDialogue()
            -> book_test_intro
         
-        + [Me ne vado.]
+        + [<i>Me ne vado.]
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
             -> main
@@ -122,7 +122,7 @@
 
 === letizia_vaccarella
 <b>Dodici stelle</b> di Letizia Vaccarella (she/her).<N>Instagram: @aidoruinquantumland<N>Trigger warning: depressione.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
-        + [Inizio la lettura.]
+        + [<i>Inizio la lettura.]
 //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
             {
                 - library_unreadStories has LetiziaVaccarella:
@@ -130,9 +130,9 @@
                     ~ library_readStories += LetiziaVaccarella
                      -> refresh_book_lists ->
             }        
-        + {library_unreadStories has LetiziaVaccarella}[Per ora non me la sento di affrontare questo tema.]
+        + {library_unreadStories has LetiziaVaccarella}[<i>Per ora non me la sento di affrontare questo tema.]
             -> tempTW -> book_test_intro
-        + {library_unreadStories has LetiziaVaccarella}[Non presentarmi più questo racconto.]
+        + {library_unreadStories has LetiziaVaccarella}[<i>Non voglio più incontrare questa storia.]
             ~ library_unreadStories -= LetiziaVaccarella
                 -> refresh_book_lists -> book_test_intro
         -
@@ -156,11 +156,11 @@
     
     Il fiume nero smette di scorrere in segreto e si trasforma in un incendio che mi brucia, ma non mi distrugge. Mi purifica.<N>Giro il mazzo, l’ultima carta, il Matto.<N>Il viaggiatore con il fagotto sulla spalla, il piede sospeso sull'orlo del precipizio.<N>Un salto nel vuoto, un atto di fede.<N>Lo guardo e sorrido, per la prima volta da mesi, da anni o forse da sempre, è un sorriso che è tutto mio ed è solo per me.
 
-        + [Vorrei leggere ancora.]
+        + [<i>Vorrei leggere ancora.]
             ~ disableBigDialogue()
            -> book_test_intro
         
-        + [Me ne vado.]
+        + [<i>Me ne vado.]
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
             -> main
@@ -185,10 +185,10 @@
     
     Le macchine che ti hanno tagliato moriranno.<N>Spariranno gli uomini che le hanno comandate.<N>Ma tu, di notte in notte, riprenderai a lanciare i tuoi fiori nell'aria.<N>A rendere gialla la strada verso casa.
 
-        + [Vorrei leggere ancora.]
+        + [<i>Vorrei leggere ancora.]
             ~ disableBigDialogue()
            -> book_test_intro
-        + [Me ne vado.]
+        + [<i>Me ne vado.]
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
             -> main

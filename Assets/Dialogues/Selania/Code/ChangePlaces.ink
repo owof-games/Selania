@@ -25,19 +25,18 @@
     
     + {are_two_entities_together(PG, RoomExit) && (not debug_stochastic)} [RoomExit]
     
-            {player_name} sta per risvegliarsi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()} 
+            Un letto morbido attende {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()} 
             
-                + + (close)[Voglio uscire da <i>Selanìa</i>.]
+                + + (close)[<i>Ho bisogno di riposare.]
                     Salutiamo {player_name}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
                     @quit
                     -> END
                     
-                + + [Voglio restare ancora un po'.]
+                + + [<i>Resto ancora un po'.]
                     -> main
-
-    + {are_two_entities_together(PG, RoomExit) && (debug_stochastic == true) && (firstChar_storyStatus == story_storyEnded) && (secondChar_storyStatus == story_storyEnded)} [RoomExit]
     
-            {player_name} sta per risvegliarsi.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()} 
+    //Solo scelta per l'amico stocastico
+    + {are_two_entities_together(PG, RoomExit) && (debug_stochastic == true) && (firstChar_storyStatus == story_storyEnded) && (secondChar_storyStatus == story_storyEnded)} [RoomExit]
             @quit
                 -> END
 

@@ -37,14 +37,14 @@
 
 === greenhouse_entry_check
     La serra attende le tue visioni.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
-        +  {greenhouse_backupCultivable != ()}[Voglio coltivare qualcosa.]
+        +  {greenhouse_backupCultivable != ()}[<i>Voglio coltivare qualcosa.]
                 -> cultivable_test
-        +  [{~ Mi aggiro per la serra.|Osservo ciò che è in crescita.|Ascolto i rumori della serra.|Mi rilasso un attimo.|Mi perdo nei colori dei vasi.}] 
+        +  [<i>{~ Mi aggiro per la serra.|Osservo ciò che è in crescita.|Ascolto i rumori della serra.|Mi rilasso un attimo.|Mi perdo nei colori dei vasi.}] 
                 -> main
 
 
-=== stolen_watering_can
-<i>La serra è smarrita, non trova più il suo innaffiatoio, e ora non sa domandare.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
--> main
+// === stolen_watering_can
+// <i>La serra è smarrita, non trova più il suo innaffiatoio, e ora non sa domandare.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+// -> main
 
     

@@ -25,10 +25,10 @@
     Mimosa abbracciò stretta Alchemilla, schioccandole un bacio sulla guancia. Il fuoco diventò tutto rosso dall’emozione. <N>Forsizia passò a tutte una ciotola fumante e infine le raggiunse, sedendosi anche lei ad ammirare il fuoco, soddisfatta.<N>"Che hai preparato oggi?" le chiese Alchemilla, ancora un po’ su di giri.<N>"Zuppa di patate" rispose Forsizia, prendendo un’abbondante cucchiaiata. <N>"La mia preferita!" sospirò felice Bergamotto, prendendo posto anche lei intorno al fuoco.
     
     "Ci ho messo un ingrediente segreto stavolta. Vediamo se indovinate."<N>"Mmm… cos’è, paprika dolce?" chiese Alchemilla, assaggiando.<N>"No, secondo me è berberè" disse Mimosa.<N>"Fuochino" rispose Forsizia, ridacchiando.<N>Il fuoco, che poco prima ruggiva alto e incandescente, ora lambiva dolcemente i ciocchi di legno, caldo e avvolgente, illuminando tutte di una dolce, incantevole luce dorata.
-        + [Vorrei leggere ancora.]
+        + [<i>Vorrei leggere ancora.]
             ~ disableBigDialogue()
            -> book_test_intro
-        + [Me ne vado.]
+        + [<i>Me ne vado.]
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
                      
@@ -37,7 +37,7 @@
 === francesca_tosca_raimondi
 <b>Trecentotrenta metri.</b> di Francesca Tosca Raimondi (she/her).<N>Trigger warning: rabbia domestica.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #portrait:{witch_state()}
         
-            + [Inizio la lettura.]
+            + [<i>Inizio la lettura.]
             //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
                     {
                         - library_unreadStories has FrancescaToscaRaimondi:
@@ -45,9 +45,9 @@
                             ~ library_readStories += FrancescaToscaRaimondi
                              -> refresh_book_lists ->
                     }  
-                + {library_unreadStories has FrancescaToscaRaimondi}[Per ora non me la sento di affrontare questo tema.]
+                + {library_unreadStories has FrancescaToscaRaimondi}[<i>Per ora non me la sento di affrontare questo tema.]
                         -> tempTW -> book_test_intro
-                + {library_unreadStories has FrancescaToscaRaimondi}[Non presentarmi più questo racconto.]
+                + {library_unreadStories has FrancescaToscaRaimondi}[<i>Non voglio più incontrare questa storia.]
                     ~ library_unreadStories -= FrancescaToscaRaimondi
                         -> refresh_book_lists -> book_test_intro
                 -
@@ -59,7 +59,7 @@
 
         Sembrano magie luminose che allontanano l’oscurità per qualche momento. <N>Il rumore, però, mi fa ancora un po’ paura.<N>Arriva all’improvviso e fa tremare le finestre, non riesco a tapparmi le orecchie in tempo e anche se mi nascondo arriva dappertutto, mi rimbomba nella pancia e mi fa venire mal di testa. Non piango più solo perché ormai non mi fa poi così paura.
         
-        I tuoni mi ricordano la mamma: un momento va tutto bene, il cielo è azzurro e il sole splende, quello dopo lei grida e mi afferra per le braccia e mi scuote e se me ne vado urla e anche se mi nascondo la sua voce mi trova.<N>Di solito mi infilo nell’armadio, mi siedo tra i vestiti e aspetto che smetta.<N>Uno, due, tre. <N>Chissà quanto si è tuffato lontano il pesciolino di luce.<N>Vorrei che anche la mamma fosse prevedibile: vorrei contare con gli occhi chiusi e sapere quando smetterà di piangere.
+        I tuoni mi ricordano la mamma: un momento va tutto bene, il cielo è azzurro e il sole splende, quello dopo lei grida e mi afferra per le braccia e mi scuote e se <i>Me ne vado urla e anche se mi nascondo la sua voce mi trova.<N>Di solito mi infilo nell’armadio, mi siedo tra i vestiti e aspetto che smetta.<N>Uno, due, tre. <N>Chissà quanto si è tuffato lontano il pesciolino di luce.<N>Vorrei che anche la mamma fosse prevedibile: vorrei contare con gli occhi chiusi e sapere quando smetterà di piangere.
         
         Non so se piange perché è triste, ma i suoi occhi si infuocano e la sua voce si spezza.<N>Ma la mamma non è sempre così; a volte mi bacia, mi coccola, mi dice che mi vuole bene.<N>Non so a cosa credere, però...<N>Papà mi dice che lei mi ama tanto, ma non c’è mai quando la mamma grida a quel modo.<N>Uno, due.<N>Bisognerebbe avere quella magia di luce. Sembra buona per combattere i tuoni che ruggiscono
         
@@ -69,11 +69,11 @@
         
         Ma forse ho la magia della luce ora che l’ho vista così da vicino, quindi mi posso rialzare e posso provarci di nuovo, se succede.<N>Abbraccio forte la mia mamma anche se lei non mi guarda. <N>Non me lo dice mai con la voce ma è un po’ come se chiedesse aiuto quando fa così. <N>Forse a volte mi chiede anche scusa senza dirlo. Mi accarezza la testa. <N>Nessuno merita di stare da solo quando piange.
 
-        + [Vorrei leggere ancora.]
+        + [<i>Vorrei leggere ancora.]
             ~ disableBigDialogue()
            -> book_test_intro
         
-        + [Me ne vado.]
+        + [<i>Me ne vado.]
             ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
             -> main
@@ -105,11 +105,11 @@
     
     Non sono più quell’adolescente piena di rabbia.<N>Ho sempre pensato che quella rabbia mi rendesse forte, che fosse come un’armatura che mi avrebbe resa inscalfibile. Ora che non riesco più a ritrovarla, mi domando se non fosse ,forse solo, forse anche, un peso, un peso che mi ero abituata a portare ma senza il quale sono più leggera. Più fragile, ma più leggera.         
             
-        + [Vorrei leggere ancora.]
+        + [<i>Vorrei leggere ancora.]
                 ~ disableBigDialogue()
            -> book_test_intro
         
-        + [Me ne vado.]
+        + [<i>Me ne vado.]
                 ~ disableBigDialogue()
             -> DarkLibraryModeOff ->
             -> main

@@ -60,9 +60,9 @@
 === gender ===
     <i>Quali pronomi fanno sentire {player_name} la persona che è?</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     
-    + {gender> 1} [Mi trovo a mio agio con i pronomi {player_pronouns has him:maschili|{player_pronouns has her:femminili|neutri}}.]
+    + {gender> 1} [Chiamami coi pronomi {player_pronouns has him:maschili|{player_pronouns has her:femminili|neutri}}.]
         ->->
-    + {gender > 1} [Qualcosa è cambiato, questi non sono più i miei pronomi.]
+    + {gender > 1} [<i>Cambio i miei pronomi.]
         -> top
     + ->
     
@@ -90,7 +90,7 @@
         + {name_choice > 1} [Il mio nome è {player_name}.]
             ->->
         
-        + {name_choice > 1}[<i>Non sento più questo nome come mio.]
+        + {name_choice > 1}[<i>Voglio cambiare nome.]
             ~ player_nameChosen = false
             -> top
         

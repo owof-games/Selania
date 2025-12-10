@@ -11,11 +11,11 @@ VAR gift_currentReceiver = ()
     -> main
 
     = backpack
-        Hai con te {list_with_commas(backpack_findedGifts)}.
+        {player_name} ha con sè {list_with_commas(backpack_findedGifts)}.
         ->->
 
     = empty
-        Lo zainetto è vuoto.
+        Lo zainetto di {player_name} è vuoto.
         ->->
 
 
@@ -25,7 +25,7 @@ VAR gift_currentReceiver = ()
     
 /* ---------------------------------
 
-            Coltivabili
+            Lista delle cose che posso donare
 
  ----------------------------------*/
 + {backpack_findedGifts has BaccaDellaAddolorata} [Una bacca della Addolorata.]

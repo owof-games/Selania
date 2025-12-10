@@ -12,10 +12,12 @@
     
 Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
         
-        + [Ci sto!]
+        + [Sono pront{player_pronouns has him:o|{player_pronouns has her:a|ə}}!]
             -> cooking_with_first_char
         
-        + [Ci penso un attimo.]
+        + [Vorrei pensarci un attimo {charNameOne}.]
+            Prenditela con calma {player_name}.
+            Intanto cerco qualcosa da sgranocchiare.
             -> main
  
 
@@ -112,14 +114,14 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             }
         
 
-            + [Soffriggo dei cubetti di grano del rispetto.]
+            + [<i>Soffriggo dei cubetti di grano del rispetto.]
                 ~ kitchen_recipeNoun = "Zuppa di grano"
                 Uh, credo di capire.
                 Il rispetto è una bella cosa coi genitori.
                 Il trattarsi reciprocamente da adulti etc etc, giusto?
                 Una forma di affetto.
                
-            + [Impano delle striscioline di seitan malinconico.]
+            + [<i>Impano delle striscioline di seitan malinconico.]
                 ~ kitchen_recipeNoun = "Grigliata di seitan"
                 Credo mi dispiaccia, vero?
                 Insomma.
@@ -127,7 +129,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 O che non è più.
                 Mi spiace, {player_name}, davvero.
                 
-            + [Sgrano dei fagioli del conflitto.]
+            + [<i>Sgrano dei fagioli del conflitto.]
                ~ kitchen_recipeNoun = "Fagiolata"
                Non so se ti possa consolare, ma è una cosa comune.
                Molte delle mie amiche hanno un rapporto conflittuale coi genitori.
@@ -135,14 +137,14 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                E poi mi chiama "Cocca di papà".
                Stronzə.
         
-            + [Sbollento delle cimette di broccolo della fiducia.]
+            + [<i>Sbollento delle cimette di broccolo della fiducia.]
                 ~ kitchen_recipeNoun = "Cimetta di broccolo"
                 Sento anche io questa cosa.
                 Questa fiducia reciproca.
                 Credo sia la cosa più bella da creare coi propri genitori.
                 Un segno totale d'amore.
     
-            + [Schiaccio degli spicchi di aglio del distacco.]
+            + [<i>Schiaccio degli spicchi di aglio del distacco.]
                 ~ kitchen_recipeNoun = "Crema d'aglio"
                 Merda.
                 Mi spiace {player_name}.
@@ -190,25 +192,25 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Buono comunque questo vino rosso.
         E tu cosa ti aspetti da un'amicizia, {player_name}?
         
-            + [Tosto del pepe dell'onestà.]
+            + [<i>Tosto del pepe dell'onestà.]
                 ~ kitchen_recipeAdjective = "onesta"
                 Come Talco.
                 Quel tipo di persona che se fai una cagata, te la dice.
                
-            + [Spargo della curcuma divertente.]
+            + [<i>Spargo della curcuma divertente.]
                 ~ kitchen_recipeAdjective = "allegra"
                 L'amicizia da balotta quindi.
                 Da cazzeggio assieme.
                 Da oasi nel casino del mondo.
              
-            + [Aggiungo del cumino empatico.]
+            + [<i>Aggiungo del cumino empatico.]
                ~ kitchen_recipeAdjective = "empatica"
                Quel tipo di rapporto che ti fa sentire ascoltata.
                Capita.
                Dove puoi essere te stessa.
                Vorrei tanto essere quel tipo di amica, sai?
         
-            + [Grattugio della cannella incondizionata.]
+            + [<i>Grattugio della cannella incondizionata.]
                 ~ kitchen_recipeAdjective = "incondizionata"
                 Posso capire, ma non mi piace tantissimo come idea.
                 Mi piace che le amicizie ci siano anche nel conflitto.
@@ -217,7 +219,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Tipo se finisce la stima.
                 Terribile.
     
-            + [Sminuzzo dello zenzero leale.]
+            + [<i>Sminuzzo dello zenzero leale.]
                 ~ kitchen_recipeAdjective = "leale"
                 Essere leali significa essere affidabili, vero?
                 Quel tipo di persona che non va in giro a dire i tuoi segreti.
@@ -271,18 +273,18 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Così, a caldo.
         Una persona che ti piace ti dice "Ti amo". Qual è la prima sensazione che provi?
         
-            + [Verso una mestolata di brodo del terrore.]
+            + [<i>Verso una mestolata di brodo del terrore.]
                 ~ kitchen_recipeComplement = "con brodo del terrore"
                 Woah, {player_name}.
                 Questa è intensa.
                 Anche se effettivamente l'amore può far cagare addosso.
                
-            + [Manteco della noce euforica.]
+            + [<i>Manteco della noce euforica.]
                 ~ kitchen_recipeComplement = "con noce euforica"
                 Mi risuona tanto.
                 Detta dalla persona giusta è una parola che ti fa volare, vero?
              
-            + [Condisco con semi dell'"io? no, no è possibile!".]
+            + [<i>Condisco con semi dell'"io? no, no è possibile!".]
                ~ kitchen_recipeComplement = "con semi dell'<i>io? no, no è possibile!</i>"
                 Coff Coff.
                 La sento.
@@ -290,13 +292,13 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Mi è successo anche con Ennio.
                 E a volte mi succede ancora.
         
-            + [Incorporo una cucchiata di olio delle lusinghe.]
+            + [<i>Incorporo una cucchiata di olio delle lusinghe.]
                 ~ kitchen_recipeComplement = "con olio delle lusinghe"
                 Uh, a qualcuno piace quando il suo pelo viene lisciato, vero?
                 Però non rischia di essere una cosa egoista?
                 Più legata a come ti senti che al sentimento che provi per quella persona?
     
-            + [Sminuzzo una manciata di peperoncini arrapati.]
+            + [<i>Sminuzzo una manciata di peperoncini arrapati.]
                 ~ kitchen_recipeComplement = "con peperoncini arrapati"
                 Questa non me l'aspettavo, ma ci sta.
                 Sentirsi amatə è indubbiamente sexy.
@@ -364,25 +366,25 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                     {player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
             
-            + [Infarino confusamente delle tagliatelle.]
+            + [<i>Infarino confusamente delle tagliatelle.]
                 ~ kitchen_recipeNoun = "Tagliatelle"
                 Già.
                 Anche perché sembra sempre che puoi salvare una sola cosa alla volta.
                 Anche se Valeria dice che non è vero, che le lotte son tutte collegate.
                
-            + [Stendo con decisione delle lasagne.]
+            + [<i>Stendo con decisione delle lasagne.]
                 ~ kitchen_recipeNoun = "Lasagne"
                 Uh.
                 Ha senso dire che ti invidio per questa tua chiarezza?
                 Deve essere bello sapere dove si vuole andare.
              
-            + [Affetto con disinteresse delle bruschette.]
+            + [<i>Affetto con disinteresse delle bruschette.]
                ~ kitchen_recipeNoun = "Bruschette"
                Quindi sei più del tipo "Vediamo dove andiamo?"
                Che ha senso magari a livello personale.
                Ma per le grandi cose, boh.
         
-            + [Impasto furiosamente delle arancine.]
+            + [<i>Impasto furiosamente delle arancine.]
                 ~ kitchen_recipeNoun = "Arancine"
                Immagino che la furia sia un modo per guardare a ciò che non va ora.
                A volte mi piacerebbe sapermi arrabbiare.
@@ -394,7 +396,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                         Avrei dovuto imparare da {charNameTwo}.
                 }
                
-            + [Scaldo disperatamente delle tortillas.]
+            + [<i>Scaldo disperatamente delle tortillas.]
                 ~ kitchen_recipeNoun = "Tortillas"
                 È un sentimento.
                 Non so se sia peggio la confusione o la disperazione.
@@ -450,19 +452,19 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Ottimo.
         Comunque non te l'ho mai chiesto, {player_name}: tu ti senti una persona sicura?
 
-            + [Aggiungo con convinzione delle prugne.]
+            + [<i>Aggiungo con convinzione delle prugne.]
                 ~ kitchen_recipeAdjective = "convinte"
                
-            + [Spolvero con titubanza del mais.]
+            + [<i>Spolvero con titubanza del mais.]
                 ~ kitchen_recipeAdjective = "titubanti"
              
-            + [Affetto con autocontrollo delle zucchine.]
+            + [<i>Affetto con autocontrollo delle zucchine.]
                ~ kitchen_recipeAdjective = "disciplinate"
         
-            + [Spremo tempestosamente del chinotto.]
+            + [<i>Spremo tempestosamente del chinotto.]
                 ~ kitchen_recipeAdjective = "tempestose"
     
-            + [Sminuzzo con consapevolezza della cipolla.]
+            + [<i>Sminuzzo con consapevolezza della cipolla.]
                 ~ kitchen_recipeAdjective = "consapevoli"
             -     
         {
@@ -549,19 +551,19 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Anzi no aspetta che sennò ci prende male di sicuro.
         Ti senti di star partecipando a qualcosa di più grande, di trasformativo, con le cose che fai?
 
-            + [Trituro con gioia dell'anice stellato.]
+            + [<i>Trituro con gioia dell'anice stellato.]
                 ~ kitchen_recipeComplement = "con anice stellato."
                
-            + [Aggiungo {player_pronouns has him:pieno|{player_pronouns has her:piena|pienə}} di terrore esistenziale dell'origano.]
+            + [<i>Aggiungo {player_pronouns has him:pieno|{player_pronouns has her:piena|pienə}} di terrore esistenziale dell'origano.]
                 ~ kitchen_recipeComplement = "con origano."
              
-            + [Sbuccio titubante della vaniglia.]
+            + [<i>Sbuccio titubante della vaniglia.]
                ~ kitchen_recipeComplement = "con vaniglia."
         
-            + [Tosto {player_pronouns has him:rassegnato|{player_pronouns has her:rassegnata|rassegnatə}} del coriandolo.]
+            + [<i>Tosto {player_pronouns has him:rassegnato|{player_pronouns has her:rassegnata|rassegnatə}} del coriandolo.]
                 ~ kitchen_recipeComplement = "con coriandolo."
     
-            + [Caramello {player_pronouns has him:sopraffatto|{player_pronouns has her:sopraffatta|sopraffattə}} della salvia.]
+            + [<i>Caramello {player_pronouns has him:sopraffatto|{player_pronouns has her:sopraffatta|sopraffattə}} della salvia.]
                 ~ kitchen_recipeComplement = "con salvia."
             -  
         Che poi è una domanda stupida da farti, vero?
@@ -619,33 +621,33 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 - not cooking_with_second_char:
                     {player_name} prova a parlare, ma le parole rimangono bloccate in gola. Ma gli ingredienti possono parlare per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             }
-            + [Lesso sportivamente delle patate.]
+            + [<i>Lesso sportivamente delle patate.]
                 ~ kitchen_recipeNoun = "Patate"
                 Ti ci vedo a correre e scaricare il nervo.
                 O in piscina.
                 O a ballare.
                 Uh, sarà un caso che non ho citato sport di gruppo?
 
-            + [Friggo con creatività delle mele. ]
+            + [<i>Friggo con creatività delle mele. ]
                 ~ kitchen_recipeNoun = "Mele"
                 Lo sapevo!
                 Ecco perché mi sento capita da te.
                 {player_pronouns has her:unite|unit3} dalla creatività!
 
-            + [Arrostisco scientemente delle melanzane.]
+            + [<i>Arrostisco scientemente delle melanzane.]
                ~ kitchen_recipeNoun = "Melanzane"
                 Ennio fa qualcosa di simile.
                 Quando è teso si mette a studiare qualcosa che ama.
                 O a fare esercizi di fisica.
                 Quando ha perso il lavoro, ha passato un intero fine settimana a fare calcoli prima di dire: "Ok, ora me ne cerco uno nuovo".
         
-            + [Griglio amichevolmente delle pesche.]
+            + [<i>Griglio amichevolmente delle pesche.]
                 ~ kitchen_recipeNoun = "Pesche"
                 Stare assieme è una cosa che cura molte ferite.
                 Forse a volte ho bisogno però di star da sola.
                 Ma mi rendo conto che per altre persone la socialità è una medicina.
     
-            + [Abbrustolisco meditativamente delle bietole.]
+            + [<i>Abbrustolisco meditativamente delle bietole.]
                 ~ kitchen_recipeNoun = "Bietole"
                 Ci ho provato mille volte.
                 Ma non so, non riesco a starmene ferma.
@@ -697,30 +699,30 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         O ti senti qualcosa che non vorresti essere?
         E sì, se ripeto ancora "essere" puoi mandarmi a sbucciare patate per tutto il giorno.
 
-            + [Frullo della zucca camminando in avanti.]
+            + [<i>Frullo della zucca camminando in avanti.]
                 ~ kitchen_recipeAdjective = "avanzanti"
                C'è anche qualcosa di bello nel sapere che si sta compiendo la propria strada, vero?
 
-            + [Pesto dell'ortica con statica soddisfazione.]
+            + [<i>Pesto dell'ortica con statica soddisfazione.]
                 ~ kitchen_recipeAdjective = "soddisfatte"
                 Vorrei sapere cosa si prova ad esser al proprio posto.
                 Ti guardo e mi sembri una persona equilibrata.
                 Deve essere bello.
              
-            + [Schiaccio dei rapanelli girando in tondo.]
+            + [<i>Schiaccio dei rapanelli girando in tondo.]
                ~ kitchen_recipeAdjective = "bloccate"
                 Già.
                 Ne hanno voglia a dire "conosci te stessə" e tutte quelle robe lì.
                 Ma alla fine il più delle volte invece di avanzare, continui a girare su te stessə.
         
-            + [Pulisco dei finferli arretrando.]
+            + [<i>Pulisco dei finferli arretrando.]
                 ~ kitchen_recipeAdjective = "arretranti"
                 Uh.
                 Spero tu non viva male questa cosa.
                 Per quanto può valere, tornare sui propri passi credo sia sempre un segno del conoscersi meglio.
                 Almeno sai dove non vuoi andare.
     
-            + [Sciacquo confusamente della lattuga.]
+            + [<i>Sciacquo confusamente della lattuga.]
                 ~ kitchen_recipeAdjective = "confuse"
                 A volte è solo questione di tempo, vero?
                 Prima di capire dove andare.
@@ -769,34 +771,34 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         La condividi?
         Che ci fai?
 
-            + [Brucio del peperoncino.]
+            + [<i>Brucio del peperoncino.]
                 ~ kitchen_recipeComplement = "con peperoncino"
                 Merda.
                 Spero non per insoddisfazione.
                 Perché non so te, ma è dura essere soddisfattə di quello che si crea.
 
-            + [Spargo ovunque del cardamomo.]
+            + [<i>Spargo ovunque del cardamomo.]
                 ~ kitchen_recipeComplement = "con cardamomo"
                 Un gesto sicuro, deciso.
                 Che alla fine immagino ci stia.
                 Hai creato qualcosa, vuoi che lo conoscano più persone possibile.
                 Credo.
              
-            + [Raggruppo dei chiodi di garofano.]
+            + [<i>Raggruppo dei chiodi di garofano.]
                ~ kitchen_recipeComplement = "con chiodi di garofano"
                 Anche a me piace condividere solo con la cerchia ristretta di am3.
                 Mi fa sentire al sicuro.
                 Ma a volte da quella bolla ci devo uscire.
                 Anche solo per La Rifugia.
         
-            + [Copro dello zenzero.]
+            + [<i>Copro dello zenzero.]
                 ~ kitchen_recipeComplement = "con zenzero"
                 Tieni le tue creature per te.
                 Sarà un gesto di affetto o di insicurezza?
                 O una lotta all'idea che tutto debba essere produttivo?
                 Sarei curiosa di scoprirlo.
     
-            + [Non faccio nulla.]
+            + [<i>Non faccio nulla.]
                 ~ kitchen_recipeComplement = "con essenza del nulla"
                 Perdonami, do sempre per scontato che le persone creino qualcosa.
                 Che poi in parte credo sia vero.
@@ -832,11 +834,11 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
             Il giusto ingrediente renderà la ricetta di {player_name} e {charNameOne} musicale.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             E {player_name} potrebbe capire un po' meglio {charNameOne}.
        
-                + [Voglio aggiungere un ingrediente speciale.]
+                + [<i>Aggiunto un ingrediente speciale.]
                     -> extra_ingredient_management(FirstCharacter)->
                     ~ disableNestDialogue()
                     
-                + [Mi va bene così.]
+                + [<i>Non aggiungo altro.]
                 -
                 
             Andiamo a mangiare, ama!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral

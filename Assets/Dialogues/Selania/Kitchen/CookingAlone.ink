@@ -38,7 +38,7 @@
         Ma mentre cuciniamo, mi dici un po' come stai approcciando questo posto?
         Vai col caos come il famoso Girino Ir Rosponsabile, o sei più una persona ranalitica?
 
-            + [Setaccio della polenta analitica.]
+            + [<i>Setaccio della polenta analitica.]
                     ~ kitchen_recipeNoun = "Polenta"
                 Craande!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Un po' come me.
@@ -46,7 +46,7 @@
                 Uh, ma quella è una mia zampa?
                 Non sapevo di averne quattro!
                
-            + [Riscaldo l'acqua per della zuppetta empatica.]
+            + [<i>Riscaldo l'acqua per della zuppetta empatica.]
                     ~ kitchen_recipeNoun = "Zuppetta"
                 Ah, come la tosse di zia Graaak!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Povera, faceva di quelle bolle sott'acqua.
@@ -54,7 +54,7 @@
                 "Amore, la tosse di tua zia era <i>sintomatica.<i>"
                 "Empatica è quando Graaak dice che gli dispiace per te, ma poi si incazza comunque."
 
-            + [Impasto una focaccia decisa.]
+            + [<i>Impasto una focaccia decisa.]
                     ~ kitchen_recipeNoun = "Focaccia"
                 Un approccio con una direzione precisa.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Un po' come quando Euforbo ha preso la patente.
@@ -63,7 +63,7 @@
                 Decisamente contro la partita di ananassi.
 
         
-            + [Preparo una panzanella caotica.]
+            + [<i>Preparo una panzanella caotica.]
                     ~ kitchen_recipeNoun = "Panzanella"
                 Te l'ho mai raccontata la storia di Girino Ir Rosponsabile?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 È questo tizio leggendario, che da piccolo ha provato le cose più assurde.
@@ -72,7 +72,7 @@
                 E quella rana si chiama Franco La Rana.
                 Cioè me.
     
-            + [Friggo della spirituale cicerchiata.]
+            + [<i>Friggo della spirituale cicerchiata.]
                     ~ kitchen_recipeNoun = "Cicerchiata"
                 Cice.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Cerch.
@@ -99,7 +99,7 @@
         Ma il tuo lavoro invece, {player_name}?
         Sei {player_pronouns has him:soddisfatto|{player_pronouns has her:soddisfatta|soddisfattə}} di quello che stai facendo?
             
-            + [Aggiungo con risolutezza della assafetida.]
+            + [<i>Aggiungo con risolutezza della assafetida.]
                     ~ kitchen_recipeAdjective = "risoluta"
                 Qui il nostro girino sa dove sta andando!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Non tutti possono dirlo.
@@ -108,7 +108,7 @@
                 Ma che ha dimenticato la ricevuta e per questo non mi ha potuto rimandare indietro.
                 Chissà se mi diventano le gambe lunghe anche a me allora?
 
-            + [Spargo con insicurezza del sommacco.]
+            + [<i>Spargo con insicurezza del sommacco.]
                     ~ kitchen_recipeAdjective = "insicura"
                 Ora, so che potrebbe stupirti, ma a volte anche io non so cosa faccio.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Ed è normale.
@@ -117,7 +117,7 @@
                 Pensa che Euforbo l'altro giorno mi ha detto che i dinosauri sono esistiti davvero.
                 Povero girino.     
 
-            + [Spolvero con disperazione della curcuma.]
+            + [<i>Spolvero con disperazione della curcuma.]
                     ~ kitchen_recipeAdjective = "disperata"
                 Conosco quella sensazione, girino. #speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Ma non disperarti: qui le cose vanno sempre bene.
@@ -129,7 +129,7 @@
                 Mi fa capire che mi posso prendere delle responsabilità.
                 Ma che non posso più prendere dei gatti.    
 
-            + [Incorporo con arroganza del cajun.]
+            + [<i>Incorporo con arroganza del cajun.]
                     ~ kitchen_recipeAdjective = "arrogante"
                 Questo è il momento per raccontarti la storia di Bavarana.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Bavarana era questo tipo convinto di sapere tutto lui, e non ascoltava mai nessuno.
@@ -140,7 +140,7 @@
                 Perché alla fine non è che si va tanto lontani senza gli altri.
                 Mi slegheresti la lingua?
     
-            + [Macino con mediocrità del pepe rosa.]
+            + [<i>Macino con mediocrità del pepe rosa.]
                     ~ kitchen_recipeAdjective = "mediocre"
                 Non è male essere mediocri.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Pensa a quel modo di dire: "Non è né carne né pesce."
@@ -167,7 +167,7 @@
         Cosa strana, perché ho provato la febbre e non l'ho.
         Ma tu che ci lavori tanto assieme, che idea ti sei fatt{player_pronouns has him:o|{player_pronouns has her:a|ə}} di {mentorName}?
 
-            + [Decoro con della granella di affetto.]
+            + [<i>Decoro con della granella di affetto.]
                     ~ kitchen_recipeComplement = "con granella di affetto"
                 Eh, ma si vede che tu c'ha il cuore grande.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Come zia Graaak.
@@ -176,7 +176,7 @@
                 Non sapevo che la zia avesse un nipote.
                 Per fortuna che ha me.
               
-            + [Abbellisco con delle gocce di cioccolato e sospetto.]
+            + [<i>Abbellisco con delle gocce di cioccolato e sospetto.]
                     ~ kitchen_recipeComplement = "con gocce di cioccolato e sospetto"
                 Come nei thriller?#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Quindi c'è un crimine?
@@ -186,7 +186,7 @@
                 E magari del malloppo è del cibo.
                 A Franco piace sempre il cibo.
    
-            + [Guarnisco con un battuto di caramello e indifferenza.]
+            + [<i>Guarnisco con un battuto di caramello e indifferenza.]
                     ~ kitchen_recipeComplement = "con battuto di caramello e indifferenza"
                 Ah, come quando dividi la spazzatura.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Uh, una lettera di Giulio.
@@ -199,7 +199,7 @@
                 "Ah, amore, hai dimenticato di nuovo di smaltire i residui di alga."
                 Ma perché tocca sempre a me?
 
-            + [Addobbo con strisce di pastella e gratitudine.]
+            + [<i>Addobbo con strisce di pastella e gratitudine.]
                     ~ kitchen_recipeComplement = "con strisce di pastella e gratitudine"
                 Mi piace la gratitudine!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Anche se a volte mi si brucia un poco.
@@ -209,7 +209,7 @@
                 Che ragazzino sveglio, Euforbo.
                 Ma devo dire di restituire l'intelligenza a Tullio e Giulio: non è carino tenere a lungo le cose prese in prestito.  
 
-            + [Rifinisco con semi di zucca e fastidio.]
+            + [<i>Rifinisco con semi di zucca e fastidio.]
                     ~ kitchen_recipeComplement = "con semi di zucca e fastidio"
                 Ah, come quel modo di dire.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 "Essere una spina nel Franco."
@@ -236,7 +236,7 @@
         Però è importante una cosa: sapere come stanno i girini.
         E quindi, girino: come stai?
         
-            + [Mi verso un bicchiere di succo gioioso.]
+            + [<i>Mi verso un bicchiere di succo gioioso.]
                     ~ kitchen_recipePP = "e contorno di gioia"
                 Il mio sentimento preferito!#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Dopo la fiducia.
@@ -246,7 +246,7 @@
                 E allora facevo finta di essere un fantasma.
                 È facile quando la tua casa è fatta d'acqua.
                
-            + [Mi preparo una tazza di tisana rilassata.]
+            + [<i>Mi preparo una tazza di tisana rilassata.]
                     ~ kitchen_recipePP = "e contorno di rilassatezza"
                 Lo dico sempre a Tullio e Giulio: amori, la vita va presa con rilassatezza.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Fanno così tante cose i miei amorini.
@@ -255,7 +255,7 @@
                 E Giulio invece si occupa della casa.
                 E quando sono sul divano e gli dico "beviamo qualcosa e rilassiamoci" si agitano ancora di più.    
    
-            + [Mi riempio una tazzina di caffè frenetico.]
+            + [<i>Mi riempio una tazzina di caffè frenetico.]
                     ~ kitchen_recipePP = "e contorno di frenesia"
                 C'è una leggenda tra le rane.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 La leggenda di Ranetica.
@@ -270,7 +270,7 @@
                 Ma ciao {player_name}!
                 Che piacere vederti cra!
 
-            + [Mi offro un goccio dil distillato di curiosità.]
+            + <i>[Mi offro un goccio dil distillato di curiosità.]
                     ~ kitchen_recipePP = "e contorno di curiosità"
                 Euforbo è supercurioso.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 L'altro giorno mi ha detto: "Sarei curioso di capire come sei diventato adulto." 
@@ -279,7 +279,7 @@
                 E poi mi ha urlato: "Attento alle macchine!"
                 Non so perché siano tutti così tesi nella mia famiglia.
     
-            + [Prendo un bicchiere di acqua annoiata.]
+            + [<i>Prendo un bicchiere di acqua annoiata.]
                     ~ kitchen_recipePP = "e contorno di noia"
                 Noo, la noia nooo.#speaker:{frog_tag()} #inkA:offState #inkB:offState #inkC:offState #ewWord:{em_state(Other)} #inkD:offState #portrait:frog_kitchen
                 Mi fa venire le bolle nella pancia.
