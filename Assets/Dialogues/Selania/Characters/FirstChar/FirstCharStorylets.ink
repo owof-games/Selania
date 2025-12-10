@@ -609,21 +609,51 @@
                     Che vita difficile vuoi sceglierti!             
             }
         
-        //In una delle opzioni resti in silenzio. Oppure resti in cinque modi diversi di silenzio?
             + [Non è arrogante: è nostro dovere cambiare quello che non va!]
-                -> color_variation_management(FirstCharacter, redC)->  
+                -> color_variation_management(FirstCharacter, redC)-> 
+                Ehm, uh.
+                Ok.
+                Credo abbia senso.
+                Ma sei davvero intens{player_pronouns has him:o|{player_pronouns has her:a|ə}} {player_name}.
+                Intens{player_pronouns has him:o|{player_pronouns has her:a|ə}} per me intendo.
                     
             + [<i>Resto in meditativo silenzio.]
                 -> color_variation_management(FirstCharacter, purpleC)->
+                Forse se è la seconda volta che ci torno è perché è importante.
+                Importante per me.
+                Ha senso, vero?
         
             + [Anche la fantasia salva il mondo, e ti fa sentire potente.]
                 -> color_variation_management(FirstCharacter, yellowC)->
+                Ma non è che mi interessa la potenza.
+                Mi interessa più sapere che le cose sono giuste.
+                Però la fantasia è bella.
             
             + [Credo che siamo pien3 di emozioni, non di fatti.]
                 -> color_variation_management(FirstCharacter, greenC)->
+                Esatto ama, esatto.
+                Cioè: bellini i fatti, davvero.
+                Graziosi.
+                Ma durante il giorno ascolto quello provo, non quello che <b>è</b>.
+                Ha senso?
     
             + ["Riempire di calore" i fatti li rende inattendibili.]
                 -> color_variation_management(FirstCharacter, blueC)->
+                Però se rimangono attendibili e incagabili non servono a nulla.
+                Messa così è una sconfitta a prescindere.
+                {
+                    - are_two_entities_together(SecondCharacter, PG):
+                        Mi piace incagabile!
+                        In-ca-ga-bi-le!
+                        In-ca-ga-bi-leeeeeeeee!
+                        {
+                            - are_two_entities_together(Mentor, PG):
+                                {charNameTwo}!
+                                Anzi, non è colpa tua.
+                                {charNameOne}, le parolacce!
+                                Oh povera me, povera me!
+                        }
+                }
             -    
         A volte mi chiedo se non abbia senso lasciare il lavoro, rischiare tutto, e dedicarmi solo alla musica.
         Non più per fama e concerti, ma per fare del bene.
@@ -785,20 +815,39 @@
         Ma non so se mi piacerebbe la persona che sarei tornando dai miei, tornando al paesino.
         Credi abbia senso?
             
-            + [È gioco: se non lo provi non sai se ti piace.]
-                -> color_variation_management(FirstCharacter, yellowC)->  
+            + [È come un gioco: se non lo provi non sai se ti piace.]
+                -> color_variation_management(FirstCharacter, yellowC)->
+                Credo abbia senso.
+                Ma un gioco lo fermo se non mi va.
+                Mentre tornare su potrebbe essere mooolto più difficile.
             
             + [Datti uno scopo e saprai per cosa lottare, come non perderti.]
                 -> color_variation_management(FirstCharacter, redC)->
+                Un po' come Luigia e Anna, immagino.
+                Si può fare.
+                Ma sono una che si perde spesso per strada, ama.
             
             + (blue)[Scientificamente, sì: siamo bestie sociali, le persone ci influenzano.]
-                -> color_variation_management(FirstCharacter, blueC)->  
+                -> color_variation_management(FirstCharacter, blueC)->
+                Sei una brava persona, non mi fraintendere.
+                Ma riesci a rendere fredda anche una cosa bella come la socialità, {player_name}.
+                E sei riuscit{player_pronouns has him:o|{player_pronouns has her:a|ə}} pure a farmi preoccupare ancora di più.
             
             + [Potresti confidare queste paure ai tuoi?]
-                -> color_variation_management(FirstCharacter, greenC)->    
+                -> color_variation_management(FirstCharacter, greenC)->
+                Non ci avevo pensato.
+                Non so se capirebbero.
+                Forse direbbero che non devo scendere, che ce la fanno da soli.
+                Non so.
+                Potrei provarci. 
                     
             + [Luigia e Anna trovando le loro radici sono sbocciate.]
                 -> color_variation_management(FirstCharacter, purpleC)->
+                Questa è una cosa a cui penso spesso.
+                Al nord sto bene, ma.
+                Ma non mi sento mai davvero <b>a casa</b>.
+                E anche se sono una bestiola ansiosa e guardo sempre al peggio, il dubbio mi viene spesso.
+                E se anche io come loro potessi in realtà fiorire, scendendo?
             
             -    
 
@@ -858,20 +907,41 @@
             }
             
             + [Non so cosa dire, non trovo il filo logico del discorso.]
-                -> color_variation_management(FirstCharacter, blueC)->  
+                -> color_variation_management(FirstCharacter, blueC)->
+                E probabilmente non c'è.
+                Alla fine sono solo emozioni.
+                Non il tuo forte, mi sembra.
             
             + [Fa sentire meno sol3, e più parte di una lunga rete di storie.]
-                -> color_variation_management(FirstCharacter, greenC)->    
+                -> color_variation_management(FirstCharacter, greenC)->
+                Sì!
+                E dà sicurezza, fiducia.
+                Non si tratta nemmeno più di fare qualcosa di stravolgente.
+                Ma di continuare un percorso che avanza da millenni.
                     
             + [C'è molto coraggio nel riconoscersi parte di qualcosa di così grande.]
                 -> color_variation_management(FirstCharacter, purpleC)->
+                Ehm.
+                Non so se sia coraggio.
+                Forse è più un bisogno, {player_name}.
+                Ma mi piace l'idea di sentirmi coraggiosa per una volta, per cui me la porto a casa.
             
             + [L'unione genera speranza, e la speranza porta cambiamento.]
                 -> color_variation_management(FirstCharacter, redC)->
+                La speranza è una gran cosa.
+                Anche se non la conosco molto bene.
+                Non so se si era visto, ma tendo a vedere il peggio nelle cose.
+                Cosa che spesso non mi permette di cambiare nulla.
             
-            + [Immaginare è bello perchè ci si stupisce, e stupirci ci rende viv3.]
-                -> color_variation_management(FirstCharacter, yellowC)->  
-
+            + [Immaginare è bello perché ci si stupisce, e stupirci ci rende viv3.]
+                -> color_variation_management(FirstCharacter, yellowC)->
+                Sai {player_name}?
+                A volte ho l'impressione che l'unica cosa che ci rende adulti è la perdita dello stupore.
+                Tutto è prevedibile.
+                E corri corri guardando solo quello che ti serve.
+                Ed è una cosa grigia.
+                E triste.
+                Ha senso?
             -
             
             -> first_char_closing_storylet ->
@@ -928,18 +998,45 @@
 
             + [E se Ennio fosse la tua stazione, il tuo arrivo?]
                 -> color_variation_management(FirstCharacter, greenC)->
+                Sarebbe una scoperta.
+                Una bella scoperta.
+                Forse non ho mai davvero considerato la possibilità di fermarmi.
+                Alla fine ci ho messo tanto anche a capire che ero in viaggio con lui.
+                Innamorata.
             
             + [Nel dubbio prendi il controllo del treno e parti.]
-                -> color_variation_management(FirstCharacter, redC)->  
+                -> color_variation_management(FirstCharacter, redC)->
+                Ehm.
+                Senza sapere come funziona il treno?
+                E con tutt3 l3 altr3 passegger3 che magari devono andare in altri luoghi?
+                O non andare via affatto?
+                Non è egoista?
                     
             + [Cosa vuoi promettergli quando gli dici "ti amo"? E a cosa rinunci?]
                 -> color_variation_management(FirstCharacter, purpleC)->
+                Merda.
+                Io.
+                Io.
+                Credo di volergli promettere presenza.
+                Di esserci quando starà male, quando avrà bisogno di me.
+                E credo di poter rinunciare a.
+                Al decidere sempre da sola?
+                A cosa dovrei rinunciare?
             
             + [Hai provato a chiedere al capotreno quando ripartite?]
-                -> color_variation_management(FirstCharacter, yellowC)->    
+                -> color_variation_management(FirstCharacter, yellowC)->
+                Sì, ma dice che il treno è stato soppresso e ancora non c'è la vettura sostitutiva.
+                Sai com'è con Trenitalia.
+                No {player_name}, anche perché dovrei essere io la capotreno.
+                E non ho manco idea di dove stiamo andando.    
             
             + [Non c'è logica nel tenere un treno fermo.]
-                -> color_variation_management(FirstCharacter, blueC)->    
+                -> color_variation_management(FirstCharacter, blueC)->
+                Non è vero!
+                Per una manutenzione.
+                Per la pulizia.
+                Per scioperare.
+                Per dare fastidio alla logica di {player_name}.    
             -    
             
             -> first_char_closing_storylet ->
@@ -989,21 +1086,52 @@
 
             + [Sì, ma sai già cosa vuoi evitare: fallo.]
                 -> color_variation_management(FirstCharacter, redC)->
+                Ma tu hai sempre questa visione così chiara del mondo?
+                Di ciò che sei e fai?
+                Perché quasi quasi te la invidio.
                 
             + [Talco ti vuole bene anche nella distanza e nel conflitto: non resterai sola.]
-                -> color_variation_management(FirstCharacter, greenC)->    
+                -> color_variation_management(FirstCharacter, greenC)->
+                Questo.
+                Questo è vero.
+                Mi suona molto, seppur a fatica.
+                Ammetterlo è una cosa grossa.
+                Bella.
+                Ma grossa.    
                     
             + [Hai paura di stare sola, o di sentirti sola?]
                 -> color_variation_management(FirstCharacter, purpleC)->
+                Merda.
+                Ora come ora forse di non sapere stare da sola.
+                Non so come si faccia, {player_name}.
+                La solitudine mi manda nel panico.
+                Anche se poi la compagnia a volte è davvero faticosa.
+                Dovrei imparare a godermi il tempo con me.
              
             + [{charNameOne}, tu devi pensare meno e fare più casino.]
                 -> color_variation_management(FirstCharacter, yellowC)-> 
+                Guarda {player_name}, sarei strafelice se ci riuscissi.
+                Ci ho provato anche con la terapia.
+                Almeno fintanto che la copriva il bonus psicologo.
+                Ma non so, non riesco a non farmi i pipponi.
+                Scusa.
                 
             + {not eight.blue} [Razionalmente ci sono decine di modi per non restare solə.]
                 -> color_variation_management(FirstCharacter, blueC)->
+                    Eppure ora sento l'urgenza di andarmene via di qui.
+                    Lontana da queste frasi da scienziat{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
+                    Pensa un po'.
 
             + {eight.blue} [Te l'ho detto prima: siamo bestie sociali, è inevitabile.]
-                -> color_variation_management(FirstCharacter, blueC)-> 
+                -> color_variation_management(FirstCharacter, blueC)->
+                E come ti ho detto prima, è una cosa molto fredda.
+                E io non riesco a ragionare in quel modo.
+                Immagino sia bello, {player_name}.
+                Bello questo distacco.
+                Rassicurante.
+                Ma non è roba mia.
+                Scusa.
+
             -
         Dopo il nostro primo litigio, Talco mi ha detto che una buona relazione è una relazione scomoda.
         Che abbiamo delle teste pigre, e che le relazioni sane ci fanno uscire dalla pigrizia.
@@ -1060,20 +1188,42 @@
             }
         
         + [Non accontentarsi è fondamentale, o le lotte poi si spengono.]
-            -> color_variation_management(FirstCharacter, redC)->  
+            -> color_variation_management(FirstCharacter, redC)->
+                Già.
+                Anche se non sarebbe male riposare ogni tanto, credo.
+                No?
                 
         + [Guardiamo i fatti, {charNameOne}: l'erba del vicino è...?]
             -> color_variation_management(FirstCharacter, blueC)->
+                Inesistente?
+                Perché chi ce l'ha una casa in centro col giardino?
+                E prima che mi rispondi che ho frainteso: no, non ho frainteso.
+                E ho bisogno di bere.
         
         + [Anche tu sembrerai felice sui social, è un gioco senza vincitor3.]
             -> color_variation_management(FirstCharacter, yellowC)->
+                Uh.
+                No.
+                Cioè: se unə si ingelosisce per la mia vita è messə male male.
+                No?
+                O esagero?
+                Aiuto.
         
         + [Non colpevolizzarti per ciò che provi, {charNameOne}. Sii gentile con te.]
-            -> color_variation_management(FirstCharacter, greenC)->     
+            -> color_variation_management(FirstCharacter, greenC)->
+                Io.
+                Già.
+                Potrebbe essere una cosa carina da fare.
+                Non darmi della merda ogni volta che non provo quello che vorrei provare.
+                Grazie, {player_name}.
             
         + [Sei responsabile di ciò che fai, non ciò che provi.]
             -> color_variation_management(FirstCharacter, purpleC)->
-    
+                Tu e Talco andreste davvero d'accordo.
+                Questa è una cosa che mi dice spesso.
+                E poi alla fine non faccio mai nulla di crudele o che.
+                Al massimo mi intristisco in un angolino e bona.
+                Credi sia una cosa neutra? Non cattiva?
         -     
 
             -> first_char_closing_storylet ->
