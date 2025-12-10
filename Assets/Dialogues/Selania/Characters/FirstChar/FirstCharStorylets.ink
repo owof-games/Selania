@@ -22,21 +22,38 @@
                     -> about_colors_choices ->
             }
         
-            + [Ho sempre pensato che Florence fosse una strega.]
+            + (purple)[Ho sempre pensato che Florence fosse una strega.]
                 -> color_variation_management(FirstCharacter, purpleC)->
+                Dai, palese!
+                Ha una congrega con Kate Bush e Tori Amos.
+                E passano i sabati sera a maledire gli uomini del loro passato.
+                <i>"Women said, "We've been waiting, Waiting to meet you, it's only a matter of time"."#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             
-            + [<i>Attendo impazientemente che dica altro.]
+            + (red)[<i>Attendo impazientemente che dica altro.]
                 -> color_variation_management(FirstCharacter, redC)->
+                Ehm, tutto bene ama?
+                O non l'hai vistə?
+                O ti stai ancora riprendendo dalle pezze?
     
-            + [Ma una persona non può essere un uccello.]
-                -> color_variation_management(FirstCharacter, blueC)->  
+            + (blue)[Ma una persona non può essere un uccello.]
+                -> color_variation_management(FirstCharacter, blueC)->
+                Aspè.
+                Tu devi essere la persona simpatica della festa, vero?
+                E non chiedermi quale festa per favore. 
                  
-            + [È una persona a cui tieni?]
+            + (green)[È una persona a cui tieni?]
                 -> color_variation_management(FirstCharacter, greenC)->
+                Talco è.
+                Sì.
+                Sì.
+                LA persona a cui tengo.
 
-            + [Vanno bene due uccellini arancioni? Una bacheca? Dei cespugli?]
+            + (yellow)[Vanno bene due uccellini arancioni? Una bacheca? Dei cespugli?]
                 -> color_variation_management(FirstCharacter, yellowC)->
-            
+                Che al mercato mio padre comprò.
+                Potremmo cavarci una band forse.
+                Ma non sono Talco.
+        
             -
         
         Merda, Talco sa sempre come tirarmi fuori dai casini!
@@ -77,18 +94,59 @@
   
             + [Sono una persona, non il tuo inconscio.]
                 -> color_variation_management(FirstCharacter, blueC)->
-            
+                {
+                    - one.blue:
+                        E due.
+                        Ok ama, abbiamo capito, ti piacciono le cose letterali.
+                        Ma a me non molto.
+                }
+                Potresti per lo meno improvvisare.
+                Dirmi qualcosa tipo "Lascia il tuo lavoro e il tuo moroso e vai in Islanda."
+                Qualcosa del genere.
+
             + [Sì sì sono il tuo inconscio e tu sei un canarino! Vola canarino, vola!]
                 -> color_variation_management(FirstCharacter, yellowC)->
+                {
+                    - one.yellow:
+                        Ok, allora è un po' una fissa con questi uccellini.
+                }
+                Volare potrebbe non essere male.
+                Dall'alto si possono vedere molte cose.
+                E potrei fare la cacca in testa al mio capo.
                 
             + [Allora dovrei mostrarti lune di sangue, volpi affamate, rami eterni.]
                 -> color_variation_management(FirstCharacter, purpleC)->
+                {
+                    - one.purple:
+                        Dopo il commento su Florence, ora posso pure chiedere la tua mano.
+                }
+                Quindi devo correre per i boschi nuda e cantare alla luna?
+                Perché è un piano che mi piace molto.
             
             + [<i>La pizzico, così capisce che sono reale.]
-                -> color_variation_management(FirstCharacter, redC)->    
+                -> color_variation_management(FirstCharacter, redC)->
+                Ehi!
+                {
+                    - one.red:
+                        Hai intenzione di andare avanti a pizzichi e silenzi?
+                        Perché perdonami ama ma è una roba un po' passivo aggressiva!
+                }
+                Comunque ok, messaggio arrivato: sei reale.
+                O siamo tutt3 e due in un sogno.
                  
             + [E se facessimo un bel respiro e ripartissimo da capo?]
                 -> color_variation_management(FirstCharacter, greenC)->
+                {
+                    - one.green:
+                        Le cose che mi dici mi rassicurano, {player_name}.
+                        Mi piace come mi parli.
+                }
+                Inspiro.
+                Trattengo.
+                Espiro.
+                E va un po' meglio.
+                Piacere di nuovo, sono {charNameOne} anche se non è vero.
+                Ma potrò prima o poi dire il mio nome.
             -
             
         ~ move_entity(Mentor, TrainStop)
@@ -178,16 +236,30 @@
                 Non di nuovo!
 
             + [Tu hai più bisogno di fare cose e parlare meno.]
-                -> color_variation_management(FirstCharacter, redC)->  
+                -> color_variation_management(FirstCharacter, redC)->
+                Mmm, non amo proprio tanto tanto questo modo aggressivo.
+                Ma ha senso.
+                Potrei iniziare buttandoti nello stagno per esempio, no?
                 
             + [Respirare è un punto di partenza. L'aria qui è buona.]
                 -> color_variation_management(FirstCharacter, purpleC)->
+                Già, e non è solo quello, ama.
+                C'è qualcosa di <i>concreto</i> in quest'aria.
+                Come se lentamente mi pulisse via cose che mi appesantiscono.
                 
             + [Un terzo delle persone odia il proprio capo, sei in buona compagnia.]
                 -> color_variation_management(FirstCharacter, blueC)->
+                Bellini i numeri.
+                No, non è vero.
+                Ma per farti felice: bellini i numeri.
+                Ma se è un problema di un terzo delle persone, allora bisogna fare qualcosa a monte, no?
 
             + [Ti mancano, le amiche della band?]
                 -> color_variation_management(FirstCharacter, greenC)->
+                Come l'aria.
+                Quando suoniamo è come se ci capissimo anche meglio di quando parliamo.
+                A volte finiamo un brano ridendo sguaiate.
+                A volte piangendo a dirotto.
             -
         
         Sai {player_name}: mi spiace che Talco non sia qui ma son felice di non essere sola.
@@ -257,19 +329,38 @@
         
             + [Sapere di poter essere vulnerabili.]
                 -> color_variation_management(FirstCharacter, greenC)->
+                Questa è una cosa che mi tocca il cuore, {player_name}.
+                È così bello essere vulnerabili.
+                E così faticoso.
+                Sapere che una persona può accogliere le tue fragilità è la vita.
+                Totale.
                 
             + [La fiducia è una rete che ti accoglie quando cadi.]
                 -> color_variation_management(FirstCharacter, purpleC)->
+                E a volte hai bisogno di cadere.
+                Quando arrivi proprio in alto, ma è un alto che non è tuo.
+                E allora devi mollare la presa, e sperare che qualcuno ti prenda.
+                Ha senso?
             
             + [Quando si può essere stran3 assieme. E non si dicono cose banali.]
                 -> color_variation_management(FirstCharacter, yellowC)->
+                Con Talco posso essere strana, tantissimo.
+                Anche se la cosa difficile a volte è che con le persone a cui piaci perché sei strana, poi non piaci quando sei triste.
             
             + [Concordare delle regole e vederle rispettate.]
                 -> color_variation_management(FirstCharacter, blueC)->
+                Uh.
+                Ma ti hanno spedit{player_pronouns has him:o|{player_pronouns has her:a|ə}} qui per caso col manuale delle istruzioni?
+                Che così ti resetto.
+                Che noia.
             
             + [La certezza che si può finire nella merda assieme e uscirne assieme.]
-                -> color_variation_management(FirstCharacter, redC)->  
-                
+                -> color_variation_management(FirstCharacter, redC)-> 
+                Tu devi essere un{player_pronouns has him:o|{player_pronouns has her:a|ə}} che si caccia spesso nei casini, vero?
+                Mi piace come frase.
+                Ma non c'è solo il casino, no?
+                Anzi: la parte dura è esserci per le cose più piccole e noiose.
+                Ha senso?
             -
         Mi manca, Talco.
         Mi spiace per come le cose siano cambiate.    
@@ -328,23 +419,40 @@
         Altre, che dovrei fare qualcosa di più grande, che faccia meglio a più persone.
         Non so se ha senso.
         
-        //Una di queste risposte genera un commento di Chitarra che ci racconta qualcosa simili imprenditore giochi Cortese come esempio tossico.
-
             + [Molti "no" hanno cambiato la storia.]
                 -> color_variation_management(FirstCharacter, purpleC)->
+                ESATTO!
+                Sono paroline potentissime.
+                Talco dice che alcune parole sono magiche.
+                E "no" sicuramente è magica.
             
-            + [Le energie sono sprecate solo se non le dai una direzione.]
+            + [Le energie sono sprecate solo se non le indirizzi.]
                 -> color_variation_management(FirstCharacter, blueC)->
+                Mmm.
+                Ok.
+                Cioè: ha senso.
+                Ma non era quello il punto per me.
             
             + [Siamo viv3 solo quando lottiamo, {charNameOne}! Vai di sindacato!]
-                -> color_variation_management(FirstCharacter, redC)->  
+                -> color_variation_management(FirstCharacter, redC)-> 
+                Quando si torna nel mondo tu vieni con me.
+                Che con questa energia risolviamo tutti i problemi in quindici giorni.
+                Risolviamo anche la fame nel mondo a 'sto punto.
                 
             + [E se invece di chiederti se ha senso, decidessi tu che ha senso e basta?]
                 -> color_variation_management(FirstCharacter, yellowC)->
+                Ehm.
+                Mmm.
+                Puoi avere ragione.
+                Ma non è che è una cosa così facile ama.
+                Sennò l'avrei tipo già fatto.
                 
             + [Sono le parole di una persona generosa.]
                 -> color_variation_management(FirstCharacter, greenC)->
-
+                Una che ci prova.
+                E poi non è solo generosità.
+                Chi è che vuole vivere in un mondo pieno di merda?
+                Però grazie, sei molto gentile {player_name}.
             -    
         
         A prescindere, ci sono giornate in cui l’unica cosa che mi gasa è la rabbia nella chat delle ribelli.
@@ -406,19 +514,44 @@
         
             + [Ogni relazione esalta aspetti diversi di noi.]
                 -> color_variation_management(FirstCharacter, greenC)->
+                Questa cosa è verissima.
+                A volte non concilio la persona che sono con Talco con quella che sono con Valeria o con Ennio.
+                E mi sento bugiarda.
+                Ma questa cosa che hai detto mi fa stare meglio.
+                Grazie {player_name}.
             
             + [Però ti manca svolazzare mi sa, vero?]
                 -> color_variation_management(FirstCharacter, yellowC)->
+                Ehm.
+                Sì ama.
+                Mi sa di sì.
+                Lo amo, tanto.
+                Ma mi manca svolazzare.
+                Tanto.
                 
             + [Non esiste un "chi siamo davvero".]
                 -> color_variation_management(FirstCharacter, blueC)->
+                Beh: sono abbastanza sicura che tu sia davvero pragmatic{player_pronouns has him:o|{player_pronouns has her:a|ə}}.
+                Con o senza relazioni.
+                Non deve essere male tutta questa sicurezza.
+                Credo.
                 
             + [È buona solo se ci smuove, se ci evita di ristagnare.]
-                -> color_variation_management(FirstCharacter, redC)->  
+                -> color_variation_management(FirstCharacter, redC)->
+                Su quello credo che la relazione abbia poco potere.
+                Sono uscita con tipi de coccio, e non c'era modo di farli smuovere, qualsiasi cosa facessi.
+                E ci sono state volte in cui ero io quella non pronta a fare qualcosa di diverso.
+                Non è sempre colpa della relazione, no?
                     
             + [La relazione è un albero con le radici in due terreni.]
                 //Qualcosa sull'idea che la relazione è una cosa terza, e che esalata alcuni aspetti di noi a scapito di altri.
                 -> color_variation_management(FirstCharacter, purpleC)->
+                Quindi intendi tipo una cosa terza?
+                Che nasce dall'incontro tra le due persone?
+                Mi piace l'idea dell'albero.
+                Alla fine diciamo di curare le relazioni, no?
+                Coltivarle
+                Mi suona molto.
             - 
         
         Una settimana fa mi ha chiesto di andare a convivere.

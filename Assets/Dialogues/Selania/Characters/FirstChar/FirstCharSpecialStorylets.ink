@@ -61,19 +61,48 @@
     Che ne dici?
 
         + [{mentorName} aveva detto di non andare nei posti chiusi.]
-             -> color_variation_management(FirstCharacter, blueC)->
+            -> color_variation_management(FirstCharacter, blueC)->
+                {
+                    - are_two_entities_together(Mentor, PG):
+                        In effetti.
+                        
+                }
+                Forse non avevo ricevuto l'appunto, ama.
+                Pensavo di aver fatto una cosa buona.
     
         + [Grande! Mai stare con le mani in mano!]
             -> color_variation_management(FirstCharacter, redC)->
-     
+                Non esageriamo.
+                Diciamo che ero motivata dalla fame.
+                E dalla nostalgia.
+
         + [Sentivo il bisogno di un posto dove fare qualcosa assieme.]
                 -> color_variation_management(FirstCharacter, purpleC)->
+                Me felice.
+                Temevo non avresti apprezzato.
+                Non vedo l'ora di cucinare assieme ora!
     
         + [Che dovremmo inaugurarla con una festa!]
             -> color_variation_management(FirstCharacter, yellowC)->
+                {
+                    - are_two_entities_together(Mentor, PG):
+                        Oppure, potremmo gioire in modi non pericolosi.  
+                }
+                {
+                    - are_two_entities_together(SecondCharacter, PG):
+                        Sii!
+                        Caramelle!
+                        Festeggiamo il mio compleanno!
+                }
+                Uh.
+                Pensavo a una cosa più tranquilla.
+                Magari con chiacchiere e vino.
             
         + [Cibo, chiacchiere e intimità: mi piace molto, grazie {charNameOne}.]
             -> color_variation_management(FirstCharacter, greenC)->
+                Sono felice che ci capiamo {player_name}.
+                Ho davvero bisogno di sentire un po' di casa.
+                Cucinare assieme potrà aiutarmi.
         -    
     
     Comunque: quando vuoi cucinare con qualcuna di noi, basta che ce lo chiedi.
@@ -120,8 +149,9 @@
     //Risposte.    
         + [La vendetta non è giustizia. A cosa è servita?]
                 -> color_variation_management(FirstCharacter, blueC)->
-            Ma nemmeno la giustizia è giustizia, {player_name}.
-            E non so cosa ha scatenato la tipa del racconto.
+            A volte le cose non devono "servire", ama.
+            E nemmeno la giustizia è giustizia, {player_name}.
+            Io non so cosa ha scatenato la tipa del racconto.
             Ma sono tante le situazioni in cui una donna non la vede la giustizia.
             Per cui almeno è servita a farla stare meglio, credo.
             
