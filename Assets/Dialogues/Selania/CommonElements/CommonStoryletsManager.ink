@@ -22,15 +22,19 @@
                     
         //Chiacchiere tra Chitarra e Mentore
             - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(Mentor, PG) && (actual_speaker == FirstCharacter or actual_speaker == Mentor) && not first_mentor_chit_chat && first_char_main_storylets.one && firstChar_pauseTalking == 0:
-                    -> first_mentor_chit_chat
+                -> first_mentor_chit_chat
         
-        //Chiacchiere tra Riccio e Mentore
+        //Chiacchiere tra Rana  e Mentore
             - are_two_entities_together(Mentor, PG) && are_two_entities_together (TheFrog, PG) && actual_speaker == Mentor && not frog_and_mentor_chit_chat:
                 -> frog_and_mentor_chit_chat
 
         //Feedback da parte di Mentore su pensieri strega se le abbiamo detto che abbiamo parlato con la pianta
             - are_two_entities_together(Mentor, PG) && are_two_entities_together(TheWitch, PG) && actual_speaker == Mentor && little_storylets.talkingWitch && not the_witch_and_the_mentor:
-                -> the_witch_and_the_mentor        
+                -> the_witch_and_the_mentor
+        
+        //Chiacchiera tra Chitarra e Rana                
+            - are_two_entities_together(FirstCharacter, PG) && are_two_entities_together(FirstCharacter, TheFrog) && actual_speaker == FirstCharacter && not frog_and_first_char_chit_chat:
+                -> frog_and_first_char_chit_chat
 
             - else:
                 {

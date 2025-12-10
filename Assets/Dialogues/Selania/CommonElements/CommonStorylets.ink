@@ -358,3 +358,27 @@
 
 
 -> main
+
+
+=== frog_and_first_char_chit_chat
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    C: Credo di avere il mal di testa.
+    R: Lo dice sempre anche Giulio.
+    C: Che è tuo figlio.
+    R: No, che è uno dei miei mariti.
+    R: I miei figli sono Abaco, Aimone, Altobrando, Appasilarco, Azzolino, Borci, Clodoveo, Comunardo
+    C: No aspetta aspetta, ti avevo solo chiesto di.
+    R: Emerenzio, Etelbero, Euforbo, Fulco, Matteo.
+    C: Matteo?
+    C: Un nome così normale?
+    R: L'abbiamo adottato.
+    R: Poi c'è Giosafatta, Gondio, Grimildo, Pierpietro, Piersabato.
+    C: Ti ho solo chiesto dove si trova del vino!
+    R: Zelinda, Veneranda, Uga, Torlonia, Tamatta, Ruslana e Ruslanina.
+    C: Qualcuno mi soffochi, ora.
+         ~ change_entity_place(FirstCharacter)
+
+-> main

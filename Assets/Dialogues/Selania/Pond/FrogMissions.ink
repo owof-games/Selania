@@ -174,9 +174,11 @@
         "Girini in giro", suona bene!
         Potrei farci una canzone trap!
         "Girano i girini col girello nel girotondo".
-        "Girano e si agitano e smuovo il fondo!"
+        "Girano e si agitano e smuovono il fondo!"
         "Sono profondo!"
         E poi?
+        "Ah."
+        O è meglio "Yeah"?
         Ah no, stavo parlando dell'incontro con gli insegnanti.
         Ci sono anni in cui un solo incontro dura settimane.
         Un anno c'erano così tanti girini che abbiamo avuto più tempo speso all'incontro che non con le lezioni.
