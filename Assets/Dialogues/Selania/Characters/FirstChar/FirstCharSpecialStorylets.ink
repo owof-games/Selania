@@ -47,10 +47,8 @@
     E {mentorName} mi sta simpatica, ma adora parlare di lavoro, non la cosa più riposante.
         {
             - are_two_entities_together(Mentor, PG):
-                La mia vita è lavoro, non saprei di cos'altro parlare, {charNameTwo}!
-                        
+                La mia vita è lavoro, non saprei di cos'altro parlare, {charNameTwo}!           
         }
-        
     Poi ho trovato qualcosa di inaspettato dietro il pontile: una cucina abbandonata.
     Mi sono messa a sistemarla, principalmente sperando di trovare qualcosa da bere.
     E man mano mi sono ricordata delle belle chiacchiere che mi son fatta a tavola.
@@ -66,7 +64,6 @@
                 {
                     - are_two_entities_together(Mentor, PG):
                         In effetti.
-                        
                 }
                 Forse non avevo ricevuto l'appunto, ama.
                 Pensavo di aver fatto una cosa buona.

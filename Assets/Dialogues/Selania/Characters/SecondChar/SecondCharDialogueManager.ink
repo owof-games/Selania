@@ -124,7 +124,8 @@
                 + {secondChar_storyletsForRewritingCount >= secondChar_minStoryletsForRewriting && not rewriting_proposal_second_character && not ink_and_rewriting} [{charNameTwo}, ti va di rileggere assieme le cose in modo diverso?]
                         Mi sa che {mentorName} vuole dirti qualcosa prima.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                             {
-                                - are_two_entities_together(Mentor,PG): Sì {player_name}, parliamo un attimo!
+                                - are_two_entities_together(Mentor,PG):
+                                Sì {player_name}, parliamo un attimo!
                             }
                              ~ secondChar_tutorial = true
                                     -> main

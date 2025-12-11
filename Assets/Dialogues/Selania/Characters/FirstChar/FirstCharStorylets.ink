@@ -480,7 +480,6 @@
                 - are_two_entities_together(Mentor, PG):
                     Non è igienico!       
             }
-                
         Avevo bisogno di fare qualcosa di diverso.
         Mi aspettavo acqua fredda e schifosa, e invece era tiepida e avvolgente.
         Mi ha fatto sentire così al sicuro, vulnerabile in modo piacevole.

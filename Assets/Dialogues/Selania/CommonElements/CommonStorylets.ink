@@ -15,7 +15,8 @@
     E poi che senso ha rapirci e lasciarci in un posto figo, così a caso?#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
     
         {
-            - are_two_entities_together(Mentor, PG): Sono felice che apprezzi questi luoghi, {charNameOne}.
+            - are_two_entities_together(Mentor, PG):
+                Sono felice che apprezzi questi luoghi, {charNameOne}.
         }
         
     Io voglio capire TUTTO di questo posto. Tutto!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
@@ -33,12 +34,13 @@
     (Chitarra) E io inizio a pregare che da qualche parte ci sia un'infermeria.
         
         {
-            - are_two_entities_together(Mentor, PG): Fammi vedere se ho dei cerotti da qualche parte.
-            E delle garze.
-            Avrò del disinfettante?
-            Non è mai servito del disinfettante!
-            Devo controllare, subito!
-                ~ change_entity_place(Mentor)
+            - are_two_entities_together(Mentor, PG):
+                Fammi vedere se ho dei cerotti da qualche parte.
+                E delle garze.
+                Avrò del disinfettante?
+                Non è mai servito del disinfettante!
+                Devo controllare, subito!
+                    ~ change_entity_place(Mentor)
         }
         
     (Riccio) Tu cosa fai se ci hanno rapito gli alieni?
