@@ -71,7 +71,6 @@
         PS: mi piace mettere i PS, su internet non ci sono. PPS: ma sono arrivate persone nuove poi? Qualcuna con dei dolci magari?
 }
 
-
 {
     - second_character_notes.one.bookUpdate:
         <b><i>Prima lettera di {charNameTwo}.</b></i>: <>
@@ -162,10 +161,14 @@
     - second_char_main_storylets.one.bookUpdate:
            <b><i>Appunti dalle conversazioni.</b></i> <>
 }
+ {
+        - food_gift_second_char.bookUpdate:
 
-{
-    - ending_cooking_with_second_char.bookUpdate:
-        Cucinando assieme, abbiamo preparato un buon piatto di {kitchen_secondCharRecipe}.<>
+    }
+
+    {
+        - ending_cooking_with_second_char.bookUpdate:
+            Cucinando assieme, {charNameTwo} e {player_name} hanno preparato un buon piatto di {kitchen_secondCharRecipe}.<>
             {
                 - at_table_with_second_char.good_reaction:
                     Dopo aver cucinato assieme, {charNameTwo} ha detto a {player_name} che gli piacciono le persone coerenti.
@@ -173,101 +176,121 @@
                 - at_table_with_second_char.meh_reaction:
                     Dopo aver cucinato assieme, {charNameTwo} ha detto a {player_name} che gli piacciono i cani, ma non gli piace quando fanno le cose a caso. Tipo correre a destra e sinistra e ovunque.Devi andare dove devi andare. Come quando si parla.
             }
+    }
+    {
+        - cooking_with_second_char.first_theme.bookUpdate:
+            Durante l'incontro in cucina, {charNameTwo} 
+    }
+    {
+        - cooking_with_second_char.second_theme.bookUpdate:
+            Durante l'incontro in cucina, {charNameTwo} 
+    }
+    {
+        - cooking_with_second_char.third_theme.bookUpdate:
+            Durante l'incontro in cucina, {charNameTwo} 
+    }
+
+
+{
+    - open_the_library.bookUpdate:
+        Dopo aver aperto la biblioteca, {charNameTwo} ha fatto capire a {player_name} che è la cosa più bella che si possa trovare. Ed è esaltato perché ha trovato dei librogame, e vuole trovare delle matite per scrivere le sue storie.
+}
+
+{
+    - a_story_of_rebellion.bookUpdate:
+        Dopo la lettura de <b>Il sassolino</b> di Lamia, {charNameTwo} ha chiesto esaltato che cosa avrebbe fatto {player_name} in quella situazione. E poi {player_pronouns has him:gli|{player_pronouns has her:le|lə}} ha detto che gli ricorda molto la scuola, che le maestre vogliono che i bambini stiano sempre fermi, e che gli adulti non vedono mai certi problemi.
 }
 {
+    - frog_and_second_char_chit_chat.bookUpdate:
+        {charNameTwo} e Franco la Rana hanno discusso sulla capacità o meno delle rane di nuotare. Franco ha forse convinto {charNameTwo} di non essere un bambino ma un riccio.
+}
+
+{
+    - first_second_chit_chat.bookUpdate:
+        {charNameOne} e {charNameTwo} si sono presentat3, discutendo di alieni e pisolini.
+}
+
+{
+    - about_violence_and_peace.bookUpdate:
+        {mentorName} e {charNameTwo} hanno provato a chiarirsi. {mentorName} con un po' di fatica ha ammesso che non avrebbe dovuto fare male a {charNameTwo}. E quando lui ha reagito senza entusiasmo, ci è rimasta male. A quel punto {charNameTwo} ha detto a {mentorName} che "I grandi chiedono sempre scusa per tutte le cose ma poi le rifanno. Poi piangono e chiedono scusa. E poi le rifanno.". Lei ha detto che ci crede davvero, ma {charNameTwo} se ne è andato.
+}
+
+{
     - second_char_main_storylets.twelve.bookUpdate:
-        {charNameTwo} ama la biblioteca, e l'altra nonna, una che vive al mare, ha tantissimi libri. Ama stare in quel posto, anche perché sua madre e suo padre non ci vanno. E così può passare il tempo che suo fratello e il suo amico, studiare con la nonna del mare. Al mare quando va a letto non deve "correggere le giornate". L'altra nonna è nella "casa dei vecchi", e per questo {charNameTwo} ora vorrebbe andare a vivere con la nonna del mare. E mi ha invitato a leggere i libri della biblioteca che avrà quando sarà grande.
-    
+        {charNameTwo} ha raccontato a {player_name} che ama la biblioteca, e l'altra nonna, una che vive al mare, ha tantissimi libri. Adora stare in quel posto, anche perché sua madre e suo padre non ci vanno. E così può passare il tempo che suo fratello e il suo amico, studiare con la nonna del mare. Al mare quando va a letto non deve "correggere le giornate". L'altra nonna è nella "casa dei vecchi", e per questo {charNameTwo} ora vorrebbe andare a vivere con la nonna del mare. E ha invitato {player_name} a leggere i libri della biblioteca che avrà quando sarà grande.
 }
 
 {
     - second_char_main_storylets.eleven.bookUpdate:
-        Il piccolo chimico {charNameTwo} ama fare pasticci: si è intossicato mischiando prodotti per la pulizia; ha riempito il letto della madre di sabbia; ha distrutto il frullatore dell'amico del fratello. Però ha scoperto cos'è l'elettricità e i fili elettrici nel muro, e questo l'ha reso felice. Ritiene che noi (noi chi {charNameTwo}, noi chi?) non ci facciamo abbastanza domande su questo posto, e che quindi tocchi a lui trovare le risposte.
-    
+        Il piccolo chimico {charNameTwo} ama fare pasticci: si è intossicato mischiando prodotti per la pulizia; ha riempito il letto della madre di sabbia; ha distrutto il frullatore dell'amico del fratello. Però ha scoperto cos'è l'elettricità e i fili elettrici nel muro, e questo l'ha reso felice. Ritiene che "loro" (non abbiamo capito se anche {player_name} è inclus{player_pronouns has him:o|{player_pronouns has her:a|ə}} e se anche noi lo siamo) non si fanno abbastanza domande su questo posto, e che quindi tocchi a lui trovare le risposte.
 }
 
 
 {
     - second_char_main_storylets.ten.bookUpdate:
-        {charNameTwo} mi ha raccontato di un bambino che ha picchiato a scuola. L'ha picchiato fino a farlo piangere, e allora si è arrabbiato ancora di più. La maestra di matematica l'ha messo in castigo. Ora lui si sente in colpa, vorrebbe chiedergli scusa ma il bimbo scappa, e la sorellina una volta gli ha lanciato una scarpa in faccia. Secondo il fratello fare a botte è normale. Il padre dà la colpa a {charNameTwo}, quando lo picchia. E {charNameTwo} vorrebbe né farsi picchiare né picchiare. Ma non sa cosa fare quando è arrabbiato. E ha chiuso dicendo: "Essere adulti è terribile. Ma non è bello nemmeno essere bambini".
-    
+        {charNameTwo} ha raccontato a {player_name} di un bambino che ha picchiato a scuola. L'ha picchiato fino a farlo piangere, e allora si è arrabbiato ancora di più. La maestra di matematica l'ha messo in castigo. Ora lui si sente in colpa, vorrebbe chiedergli scusa ma il bimbo scappa, e la sorellina una volta gli ha lanciato una scarpa in faccia. Secondo il fratello fare a botte è normale. Il padre dà la colpa a {charNameTwo}, quando lo picchia. E {charNameTwo} vorrebbe né farsi picchiare né picchiare. Ma non sa cosa fare quando è arrabbiato. E ha chiuso dicendo: "Essere adulti è terribile. Ma non è bello nemmeno essere bambini"
 }
-
 
 {
     - second_char_main_storylets.nine.bookUpdate:
-        {charNameTwo} e il lavoro. Ovvero: tutti l3 su3 compagn3 fanno mille cose, e lui invece è interessato solo agli animali. Ma ha paura che non esisteranno più animali quando sarà grande per via del cambiamento climatico. E per questo non vuole diventare grande, ma nemmeno restare bambino. Però gli piacerebbe fare il veterinario.
-    
+        {charNameTwo} ha parlato a {player_name} di lavoro. Ovvero: tutt3 l3 su3 compagn3 fanno mille cose, e lui invece è interessato solo agli animali. Ma ha paura che non esisteranno più animali quando sarà grande per via del cambiamento climatico. E per questo non vuole diventare grande, ma nemmeno restare bambino. Però gli piacerebbe fare il veterinario.
 }
 
 
 {
     - second_char_main_storylets.eight.bookUpdate:
-        Ha iniziato a dirmi delle cose sul fratello (che è campione di Karate, che ha una macchina enorme, e muscoli etc.) ma poi ha detto subito che stava mentendo. Suo fratello e suo padre litigano spesso. Il fratello lavora in una officina, crea statue coi pezzi rotti delle auto, e vive con un amico. E va a trovare {charNameTwo} solo quando il padre non c'è. Mentre {charNameTwo} va a trovarlo poco, perché l'amico non gli sembra felice quando {charNameTwo} va da loro. Però fa dei dolci buonissimi.
-    
+        {charNameTwo} ha iniziato a dire a {player_name} delle cose sul fratello (che è campione di Karate, che ha una macchina enorme, e muscoli etc.) ma poi ha detto subito che stava mentendo. Suo fratello e suo padre litigano spesso. Il fratello lavora in una officina, crea statue coi pezzi rotti delle auto, e vive con un amico. E va a trovare {charNameTwo} solo quando il padre non c'è. Mentre {charNameTwo} va a trovarlo poco, perché l'amico non gli sembra felice quando {charNameTwo} va da loro. Però fa dei dolci buonissimi.
 }
 
 
 {
     - second_char_main_storylets.seven.bookUpdate:
-        Abbiamo uno scrittore. O per lo meno, un riscrittore. Perché {charNameTwo} la sera va a letto presto per "correggere le giornate", immaginarle in modo diverso, per far sì che i suoi non litighino, o che sia più forte degli altri bambini così che gli altri divengano suoi amici. E ha provato a leccare la rana.
-    
+        {charNameTwo} sembra avere l'anima di uno scrittore. O per lo meno, un riscrittore. Perché {charNameTwo} la sera va a letto presto per "correggere le giornate", immaginarle in modo diverso, per far sì che i suoi non litighino, o che sia più forte degli altri bambini così che gli altri divengano suoi amici. E ha provato a leccare la rana.
 }
 
 
 {
     - second_char_main_storylets.six.bookUpdate:
-        A quanto pare dalla serra è scomparso l'innaffiatoio. E quando ne ho parlato con {charNameTwo}, mi ha detto che a scuola tutti gli danno la colpa. Che i grandi lo picchiano, anche se lui è felice di non piangere perché "non sono una femmina". Non va d'accordo con le compagne, e le maestre lo mettono sempre in castigo. Anche se sembra che gli abbia dato più fastidio che quella di matematica si sia mostrata dispiaciuta per lui, dopo aver parlato con la nonna. Comunque dice che l'innaffiatoio è dove l'ho lasciato.
-    
+        {charNameTwo} ha detto {player_name} detto che a scuola tutti gli danno la colpa. Che i grandi lo picchiano, anche se lui è felice di non piangere perché "non sono una femmina". Non va d'accordo con le compagne, e le maestre lo mettono sempre in castigo. Anche se sembra che gli abbia dato più fastidio che quella di matematica si sia mostrata dispiaciuta per lui, dopo aver parlato con la nonna. Non sembra piacergli molto, la scuola.
 }
 
 
 {
     - second_char_main_storylets.five.bookUpdate:
-        Sembra che ci sia una rana nello stagno, e {charNameTwo} è preso benissimo. E la rana gli ha detto che ha un regalo per me. Buffo.
-    
+        {charNameTwo} ha raccontato aneddoti sulla nonna. Dice che lei non lo tratta come un bambino, e che gli ha insegnato a barare con le carte. Il tempo passato con lei sembra davvero bello. Il padre a un certo punto se ne è andato, e lei ha aiutato la mamma di {charNameTwo} "a stare bene". Ma quando suo padre è tornato, la madre ha ripreso a trattare male la nonna. Che ha detto a {charNameTwo} che i grandi fanno cose cattive senza saperlo. E poi ha detto che gli dispiace essere scappato di casa. E ha chiesto scusa a {player_name} per le bugie: non è il suo compleanno, la madre non gli ha organizzato alcuna festa. Ha promesso di non mentire più.
 }
 
-
-
-
-// {
-//     //Vanno riordinati- second_char_main_storylets.three.bookUpdate:
-//         {charNameTwo} mi ha parlato di sua nonna. Dice che lei non lo tratta come un bambino, e che gli ha insegnato a barare con le carte. Il tempo passato con lei sembra davvero bello. Il padre a un certo punto se ne è andato, e lei ha aiutato la mamma di {charNameTwo} "a stare bene". Ma quando suo padre è tornato, la madre ha ripreso a trattare male la nonna. Che ha detto a {charNameTwo} che i grandi fanno cose cattive senza saperlo. E poi ha detto che gli dispiace essere scappato di casa. E mi ha chiesto scusa per le bugie: non è il suo compleanno, la madre non gli ha organizzato alcuna festa. Ha promesso di non mentire più.
-    
-// }
+{
+    - second_char_main_storylets.four.bookUpdate:
+        {charNameTwo} ha detto a {player_name} che in realtà non ci sono altri bambini, non ne ha invitati. {charNameTwo} è preso bene dagli animali che vivono qui, è una specie di Wikipedia delle bestiole. Ma quando {player_name} gli ha fatto presente che ha picchiato {mentorName}, non l'ha presa bene. E ha detto che se {mentorName} non lo lascia in pace, chiamerà il suo fortissimo fratello.
+}
 
 
 {
     - second_char_main_storylets.him_liar:
-        {charNameTwo} mi ha chiesto finalmente il nome. E quando ha capito che sono un maschio, si è lamentato di Mentore. Poi ha tirato fuori di nuovo il discorso delle action figures. La madre sembra faccia storie nel comprargli cose, e non vuole prendere niente che lei lega alla violenza. Il fratello lo fa giocare alla Switch.
-    
+        {charNameTwo} ha chiesto a {player_name} il suo nome. E quando ha capito che {player_name} è un ragazzo, si è lamentato di {mentorName}. Poi ha tirato fuori di nuovo il discorso delle action figures. La madre sembra faccia storie nel comprargli cose, e non vuole prendere niente che lei lega alla violenza. Il fratello lo fa giocare alla Switch.
 }
 
 {
     - second_char_main_storylets.her_liar:
-        {charNameTwo} mi ha chiesto finalmente il nome. Ma non ha apprezzato che io sia una ragazza. Dice che le ragazze sono strane. Che sua mamma è strana, ma le vuole bene. Anche se si dimentica le cose, tipo che oggi si è dimenticata il suo compleanno. E non sa che lui è qui.
-    
+        {charNameTwo} ha chiesto a {player_name} il suo nome. Ma non ha apprezzato che {player_name} sia una ragazza. Dice che le ragazze sono strane. Che sua mamma è strana, ma le vuole bene. Anche se si dimentica le cose, tipo che oggi si è dimenticata il suo compleanno. E non sa che lui è qui.
 }
 
 {
     - second_char_main_storylets.they_liar:
-        {charNameTwo} mi ha chiesto finalmente il nome. E quando gli ho detto che uso i pronomi neutri, mi ha detto che vorrebbe anche lui un pronome <i>strano</i>. Non il modo peggiore di reagire, direi. Poi ha detto che sua mamma si è dimenticata il suo compleanno, e anche quello dell'anno scorso. E che l'anno scorso per farsi perdonare gli ha regalato una action figure di Spidreman, anche se lui preferisce le Tartarughe Ninja.
-    
+        {charNameTwo} ha chiesto a {player_name} il suo nome. E quando {player_name} gli ha detto che usa i pronomi neutri, ha risposto che vorrebbe anche lui un pronome <i>strano</i> (ci viene da aggiungere che sarebbe potuta andare peggio). Poi ha detto che sua mamma si è dimenticata il suo compleanno, e anche quello dell'anno scorso. E che l'anno scorso per farsi perdonare gli ha regalato una action figure di Spiderman, anche se lui preferisce le Tartarughe Ninja.
 }
 
 
 {
     - second_char_main_storylets.two.bookUpdate:
-        Non ci sono altri bambini, non ne ha invitati. Il bimbo è preso bene dagli animali che vivono qui, è una specie di Wikipedia delle bestiole. Ma quando gli ho fatto presente che ha picchiato Mentore, non l'ha presa bene. E ha detto che se Mentore non lo lascia in pace, chiamerà il suo fortissimo fratello. A proposito di Mentore: ha detto che le ricorda un {charNameTwo}, e penso che per comodità lo chiamerò così.
-    
+        Sembra che ci sia una rana nello stagno, e {charNameTwo} è preso benissimo. E la rana gli ha detto che ha un regalo per {player_name}.
 }
-
 
 
 {
     - second_char_main_storylets.one.bookUpdate:
-        È comparso un bambino. È partito chiedendomi come mai fossi qui, senza nemmeno presentarsi, senza chiedermi il nome. E poi mi ha raccontato che è il suo compleanno, che sua mamma gli ha promesso una festa FIGHISSIMA (l'ha urlato). E che suo padre gli ha rubato le action figures lo scorso anno, e per questo non potrà venire qui alla festa quest'anno. E mi ha chiesto di cercare i suoi compagni di scuola.
+        È comparso un bambino. È partito chiedendo a {player_name} come mai fosse qui senza presentarsi e senza chiedere a {player_name} il suo nome. Poi ha raccontato che è il suo compleanno, che sua mamma gli ha promesso una festa FIGHISSIMA (l'ha urlato). E che suo padre gli ha rubato le action figures lo scorso anno, e per questo non potrà venire qui alla festa quest'anno. E ha chiesto a {player_name} di cercare i suoi compagni di scuola.
     
 }
 

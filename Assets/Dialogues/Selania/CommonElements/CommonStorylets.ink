@@ -393,7 +393,7 @@
     ~ temp mentorName = translator(mentor_ActualName)
 
     F: E Franco ti dice che non è vero, {charNameTwo}.
-    R: Ma è im-pos-si-bi-le!
+    R: Ma è IM-POS-SI-BI-LE!
     F: No no no, impossibile è un bambino che sa parlare.
     R: Ma io so parlare!
     F: E sei un bambino? Dimostralo!
@@ -402,7 +402,7 @@
     R: E vado a scuola.
     F: Quello lo fanno i girini, non i bambini.
     R: E non sono un girino?
-    F: Hai delle braccia, i girini non li hanno.
+    F: Hai delle braccia, i girini non le hanno.
     R: Quindi sono una rana?
     F: Può darsi.
     F: Sai fare CRAAAAAAC?
@@ -420,14 +420,17 @@
     F: Come ti dicevo prima: le rane non sanno nuotare.
     F: Logico, no?
     R: Mmm.
-    R: Non sono mica convinto.
+    R: Non sono mica tanto convinto.
         {
             - are_two_entities_together(FirstCharacter, PG):
-                Questa roba tra qualche anno si trasformerà in un lunghissimo percorso dalla psicologa.
+                Beeeene!
+                E anche questa roba tra qualche anno si trasformerà in un lunghissimo percorso di psicoterapia.
         }
+    F: Però possiamo chiedere alle foglie.
+    F: Tullio dice sempre che nuotano nell'aria.
         {
             - are_two_entities_together(Mentor, PG):
-                Comincio a sospettare che questa rana faccia più danni di quanto pensassi.
+                Comincio a sospettare che questa rana farà più danni di quanti ne potrò risolvere.
         }
     - (bookUpdate)
     @animation:RewriterBook
