@@ -186,13 +186,7 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ firstChar_storyletsForRewritingCount ++
         
-        {
-            - are_two_entities_together(SecondCharacter, PG):
-            Commento Riccio.
-                        
-        }
 
-            
         {player_name}, ma hai sentito che silenzio che c’è in questo posto?
         Non silenzio silenzio tipo vuoto nello spazio.
         Anche perché ci sono insetti e tutto il resto che fanno un sacco di casino.
@@ -265,6 +259,16 @@
         
         Sai {player_name}: mi spiace che Talco non sia qui ma son felice di non essere sola.
         Potrebbe piacermi la tua compagnia.
+            {
+                - are_two_entities_together(SecondCharacter, PG):
+                    R: E la mia?
+                    Non ti piace la mia?
+                    C: Certo piccoletto.
+                    A parte quando hai passato venti minuti a spiegarmi perché sono gli scarafaggi sono fighi.
+                    R: Avevi detto che ti fanno schifo!
+                    C: E non ho cambiato idea.               
+            }
+
                  
             -> first_char_closing_storylet ->
             -> options_first_character 
@@ -278,12 +282,6 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         ~ firstChar_storyletsForRewritingCount ++
-    
-        {
-            - are_two_entities_together(SecondCharacter, PG):
-            Commento Riccio.
-                        
-        }
 
         Ehi {player_name}!
         Prima ho parlato con {mentorName} che mi ha spiegato che sei qui per aiutarmi.
@@ -378,11 +376,6 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ firstChar_storyletsForRewritingCount ++
         
-        {
-            - are_two_entities_together(SecondCharacter, PG):
-            Commento Riccio.
-                        
-        }
         
         Quando prima sono andata in panico parlando di lavoro, è perché da qualche mese servo in un ristorante.
         Uno di quelli lussuosi, che si gasano tipo perché hanno la sede sia a Buco di Culo Lombardo che a Pechino.
@@ -390,7 +383,15 @@
                 - are_two_entities_together(Mentor, PG):
                     Potremmo evitare le parolacce, {charNameOne}?
                     Oook.
-                    Ano Lombardo.           
+                    Ano Lombardo.
+                        {
+                            - are_two_entities_together(SecondCharacter, PG):
+                                Ano.
+                                Ano ano ano.
+                                Anoooooooooo!
+                                M: {charNameTwo}!
+                                Ano.       
+                        }        
             }
         Ovviamente in posti del genere non ti pagano un cazzo.
             {
@@ -473,18 +474,13 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         ~ firstChar_storyletsForRewritingCount ++
-        
-        {
-            - are_two_entities_together(SecondCharacter, PG):
-            Commento Riccio.
-                        
-        }
 
         Prima mi sono tuffata nello stagno.
             {
                 - are_two_entities_together(Mentor, PG):
                     Non è igienico!       
             }
+                
         Avevo bisogno di fare qualcosa di diverso.
         Mi aspettavo acqua fredda e schifosa, e invece era tiepida e avvolgente.
         Mi ha fatto sentire così al sicuro, vulnerabile in modo piacevole.
@@ -558,7 +554,15 @@
         Una settimana fa mi ha chiesto di andare a convivere.
         Ho risposto subito di sì, presa dalla botta dell'entusiasmo.
         Ma non so se è davvero quello che voglio.
-             
+            {
+                - are_two_entities_together(SecondCharacter, PG):
+                    Io lo so cosa vuoi.
+                    Caramelle.
+                    C: Ti ho già detto che non ne ho, piccoletto.
+                    Ma magari non hai mica controllato bene bene nelle tasche!
+                            
+            }
+                    
                 -> first_char_closing_storylet ->
                 -> options_first_character
         
@@ -571,12 +575,6 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ firstChar_storyletsForRewritingCount ++
         
-        {
-            - are_two_entities_together(SecondCharacter, PG):
-            Commento Riccio.
-                        
-        }
- 
         Ma poi forse non ho sto già davvero vivendo con la mia famiglia?
         Ah, sì, scusa, sto tornando sul pippone delle case di prima.
         Però continuo a pensarci, anche perché ho paura che pensi che sono fredda quando parlo di Ennio.
@@ -671,12 +669,6 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ firstChar_storyletsForRewritingCount ++
         
-        {
-            - are_two_entities_together(SecondCharacter, PG):
-            Commento Riccio.
-                        
-        }
-        
         Ammettiamolo: ci sto girando attorno da un bel po’ ormai.
         Continuo a parlare al passato di Talco, l’avrai notato.
         Ed è perché non ci sentiamo da mesi.
@@ -700,6 +692,19 @@
         Zero, il vuoto nella testa.
         Ci eravamo ripromess3 mille volte che non sarebbe successo.
         Niente figli.
+            {
+                - are_two_entities_together(SecondCharacter, PG):
+                    Perchè?
+                    C: Perchè.
+                    C: Perchè non sono tutti carini come te.
+                    R: Io non sono "carino".
+                    C: Ma hai le guanciottine adorabili!
+                    C: Vieni qui, fattele strizzare.
+                    R: No, no, no!
+                        ~ change_entity_place(SecondCharacter)
+                    C: Dov'ero?
+                    C: Ah sì: niente figli.                
+            }
         Niente partner gelosi.
         Niente a frapporsi tra noi.
         E stava già succedendo comunque col lavoro e con Ennio e il suo Thomas ma cazzo, questa roba!
@@ -780,13 +785,7 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         ~ firstChar_storyletsForRewritingCount ++
-        
-        {
-            - are_two_entities_together(SecondCharacter, PG):
-            Commento Riccio.
-                        
-        }
-        
+
         Tornare dai miei è come un viaggio nel tempo.
         Scendo, e mi sembra che tutto sia fermo, e questa cosa è rassicurante.
         Ma passano i giorni e mi rendo conto della bugia.
@@ -804,6 +803,10 @@
         Tornare giù è un’opzione.
         Voglio molto bene ai miei.
         Conosco poche persone che possono dire “Scendo a casa e sono felice di suonare e ubriacarmi con mio padre”.
+                {
+                    - are_two_entities_together(SecondCharacter, PG):
+                        ~change_entity_place(SecondCharacter)            
+                }
         Farmi salire e studiare è stato uno sforzo enorme per loro.
         E ora che sono sempre più vecchi, tornare potrebbe significare restituire il favore.
         Prendermi cura di loro.
@@ -864,12 +867,6 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         ~ firstChar_storyletsForRewritingCount ++
-        
-        {
-            - are_two_entities_together(SecondCharacter, PG):
-            Commento Riccio.
-                        
-        }
         
         Ciao {player_name}, e {player_pronouns has him:benvenuto|{player_pronouns has her:benvenuta|benvenutə}} in un nuovo flusso di coscienza di {charNameOne} che non si chiama {charNameOne} e che prima o poi troverà il suo vero nome.
         E forse ci sto prendendo gusto con questi pipponi.
@@ -944,7 +941,16 @@
                 E triste.
                 Ha senso?
             -
-            
+            {
+                - are_two_entities_together(SecondCharacter, PG):
+                    R: Scriviamo una storia assieme {charNameOne}?
+                    C: Faccio schifo con le storie.
+                    C: Ma potremmo cantarla!
+                    R: Sono stonato.
+                    C: E chi se ne frega?
+                    R: Allora sìììììììììììì!          
+            }
+
             -> first_char_closing_storylet ->
             -> options_first_character 
     
@@ -959,12 +965,7 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ firstChar_storyletsForRewritingCount ++
         
-        {
-            - are_two_entities_together(SecondCharacter, PG):
-            Commento Riccio.
-                        
-        }
-        
+
         Sai, {player_name}, l’amore non è come me l’aspettavo.
             {
                 - are_two_entities_together(Mentor, PG):
@@ -1050,12 +1051,6 @@
         ~ temp charNameFour= translator(fourthChar_ActualName)
         ~ temp mentorName = translator(mentor_ActualName)
         ~ firstChar_storyletsForRewritingCount ++
-        
-        {
-            - are_two_entities_together(SecondCharacter, PG):
-            Commento Riccio.
-                        
-        }
 
         C’è questa cosa che mi stupisce sempre.
         Puoi passare anni con una persona, vederla quasi tutti i giorni.
@@ -1139,6 +1134,18 @@
         Forse allora il problema della distanza è che può diventare una scusa per abbracciare quella pigrizia.
         Mentre nei rapporti di tutti i giorni questa cosa non la puoi evitare.
         Ha senso?
+                {
+                    - are_two_entities_together(SecondCharacter, PG):
+                        Te te lo chiedi tante volte {charNameOne}.
+                        Cosa?
+                        "Ha senso?"
+                        Lo chiedi sempre.
+                        Lo so piccoletto. Ti dà fastidio?
+                        Mmm.
+                        No.
+                        Ma mi dispiace.
+                        Anche a me.            
+                }
             -> first_char_closing_storylet ->
             -> options_first_character
             
@@ -1151,12 +1158,6 @@
         ~ temp mentorName = translator(mentor_ActualName)
         ~ firstChar_storyletsForRewritingCount ++
         
-        {
-            - are_two_entities_together(SecondCharacter, PG):
-            Commento Riccio.
-                        
-        }
-
         Sai perché litigo tantissimo con mamma?
         È perché dice che non so mai accontentarmi.
         Detto da quella che mi ha spedito in quell’inferno di ipercompetitività che il Conservatorio.
@@ -1181,6 +1182,19 @@
         Provare per una volta un po’ di pace, di sicurezza economica.
         Forse anche di riconoscimento sociale.
         Sono una merda, {player_name}, vero?
+            {
+                - are_two_entities_together(SecondCharacter, PG):
+                    La cacca fa cose suuuuperutili!
+                    Le cose crescono grazie alla cacca.
+                    E la cacca degli uccelli fa fare tanti soldi.
+                    E.
+                    Non ora piccoletto, per favore.
+                    Uh.
+                    Scusa.
+                    Insomma: mi sento una <i>inutile merda</i>.
+                    Di quelle umane piene di antibiotici e conservanti.
+            }                
+
         Una delusione.
             {
                 - are_two_entities_together(Mentor, PG):

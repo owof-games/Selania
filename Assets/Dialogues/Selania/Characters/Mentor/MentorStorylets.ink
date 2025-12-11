@@ -150,8 +150,7 @@
         Ma ora è il momeno di svuotare lo stagno dalle sue cose più schifose.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             {
                 - are_two_entities_together(SecondCharacter, PG): 
-                    Non togliere i girini però!
-                    
+                    Non togliere i girini però!   
             } 
         Prega per me, {player_name}.
                 

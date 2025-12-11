@@ -129,7 +129,7 @@
             }
             {
                 - are_two_entities_together(SecondCharacter, PG):
-                    Mi sà che vado a salutare il pipistrello prima di partire!
+                    Mi sa che vado a salutare il pipistrello prima di partire!
                         ~ change_entity_place(SecondCharacter)
             }
             
