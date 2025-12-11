@@ -604,19 +604,44 @@
         È il mio posto segreto.
 
             + [Quindi ci impari quello che la scuola non ti insegna.]
-                -> color_variation_management(SecondCharacter, blueC)->
+                    -> color_variation_management(SecondCharacter, blueC)->
+                Sì!
+                A me non mi interessa mica la storia.
+                Ci sono solo nomi e mi rompo.
+                E allora prendo i libri sui delfini.
+                Quelli mi piacciono.
                
             + ["Ma ci sono cose che non si possono capire con la riflessione, bisogna viverle."]
-                -> color_variation_management(SecondCharacter, yellowC)->
+                    -> color_variation_management(SecondCharacter, yellowC)->
+                L'hai letto anche tu?!?!
+                Il tipo che l'ha scritto era strano.
+                Ma strano bello.
+                Andava sempre in giro con una bussola e dei pupazzi e una pietra.
+                Mi piacciono le bussole!
              
             + [Ogni guerrierə ha bisogno di riposarsi prima della battaglia.]
-                -> color_variation_management(SecondCharacter, redC)->
+                    -> color_variation_management(SecondCharacter, redC)->
+                Ma io mica voglio fare il guerriero.
+                Ma non mi voglio annoiare con le tabelline.
+                C'è la calcolatrice.
+                E i numeri non si toccano, mentre i delfini sì!
         
             + [Hai un tuo nido, un posto sicuro, tutto per te.]
-                -> color_variation_management(SecondCharacter, greenC)->
+                    -> color_variation_management(SecondCharacter, greenC)->
+                Sì!
+                Cerco sempre di non farmi scoprire perché non voglio vengano altri bambini.
+                Una volta ci sono rimasto quando è chiusa la scuola.
+                Mamma era preoccupata ma mi è piaciuto tantissimo.
+                Pioveva, non si sentiva niente.
+                È stato il mio giorno più bello.
     
             + ["Ma i desideri non si possono evocare, né soffocare a piacimento."]
-               -> color_variation_management(SecondCharacter, purpleC)->
+                -> color_variation_management(SecondCharacter, purpleC)->
+                L'hai letto anche tu!
+                Quella frase me l'ha spiegata mio fratello.
+                E mi è piaciuta, perché ai grandi non piace sempre quando vuoi qualcosa.
+                Ma non è mica che lo faccio apposta.
+                E ora lo dice anche un libro!
             -
         
         Che profumino!
@@ -686,20 +711,38 @@
         Ho imparato la lezione.
 
             + [No: voglio solo razionalmente capire meglio alcune cose.]
-                -> color_variation_management(SecondCharacter, blueC)->
+                    -> color_variation_management(SecondCharacter, blueC)->
+                Non è che mi stai studiando vero?
+                Come le scimmie allo zoo.
+                Non sono mica felici loro.
                
             + [Naa, al massimo sgridiamo {mentorName}. Ti sembro un{player_pronouns has him:o|{player_pronouns has her:a|ə}} che ti sgrida?!]
-                -> color_variation_management(SecondCharacter, yellowC)->
-                //Varianti risposta a seconda stato rapporto con Mentore.
+                    -> color_variation_management(SecondCharacter, yellowC)->
+                Sì no boh.
+                Alle persone grandi piace sempre sgridare.
+                Solo Franco non mi sgrida mai.
+                Ma non ho capito quanto sia grande Franco.
 
             + [Bimbo, rilassati, non sono un{player_pronouns has her:a|ə} professor{player_pronouns has him:o|{player_pronouns has her:a|ə}}.]
-                -> color_variation_management(SecondCharacter, redC)->
+                    -> color_variation_management(SecondCharacter, redC)->
+                Però sei qui per lavorare.
+                E alle persone che lavorano i bambini danno fastidio.
+                Come quando vai in biblioteca e ti prendi bene e fai un po' di rumore e i grandi ti guardano male.
         
             + [Mi spiace, non volevo farti arrabbiare. Vorrei solo parlare con te.]
-                -> color_variation_management(SecondCharacter, greenC)->
+                    -> color_variation_management(SecondCharacter, greenC)->
+                Però quello lo facciamo già.
+                Anche se non parliamo di bugie.    
     
             + [Ora però vorrei imparare io una lezione da te.]
-               -> color_variation_management(SecondCharacter, purpleC)->
+                -> color_variation_management(SecondCharacter, purpleC)->
+                Quindi sono il tuo professore?
+                Allora ti insegno cose sui topi!
+                Sapevi che cantano?
+                E che ogni topo ha un suo odore?
+                E sanno risolvere tantissime cose complicate.
+                Anche i labirinti.
+                Io mi perdo invece nei labirinti!
             -  
         Scusami comunque.
             {
@@ -802,24 +845,46 @@
         E quindi o sto da solo, o devo dire bugie.
 
             + [Statisticamente deve esserci una persona con cui poter legare.]
-                -> color_variation_management(SecondCharacter, blueC)->
+                    -> color_variation_management(SecondCharacter, blueC)->
+                Si no boh.
+                Ai bambini piace il calcio, ma a me no.
+                Oppure parlano di Roblox e Minecraft e io so solo le cose che ho visto sul tablet.
+                E le bambini sono strane.
+                E mi dicono che sono strano.
+                E a volte mi fanno giocare con loro.
+                Ma mi fanno fare sempre il papà o cose così.
+                E mi distraggo e si arrabbiano.
                
             + [Tu amico mio hai tan-tis-si-ma fantasia, e devi condividerla con qualcunə!]
-                -> color_variation_management(SecondCharacter, yellowC)->
+                    -> color_variation_management(SecondCharacter, yellowC)->
+                A volte scrivo storie per mio fratello.
+                E a lui piacciono.
+                Una volta ha anche fatto dei disegni dalle mie storie!
+                Ho il quaderno nascosto sotto il letto.
              
             + [Ma perché non guardi i cartoni di nascosto? O prendi i fumetti in biblio?]
-                -> color_variation_management(SecondCharacter, redC)->
+                    -> color_variation_management(SecondCharacter, redC)->
+                La televisione la controlla mamma.
+                Però non ci avevo pensato alla biblioteca.
+                Lì ci posso andare per leggere.
+                A volte mi accompagna mamma ma poi si mette a fumare fuori con le amiche.
+                Mi piace questo piano, grazie {player_name}!
         
             + [Devi sentirti molto solo.]
-                -> color_variation_management(SecondCharacter, greenC)->
+                    -> color_variation_management(SecondCharacter, greenC)->
                 Si no boh.
                 Non mi dire mica che ti dispiace.
                 Ma a me mi piace stare con gli altri.
                 Ma è così difficile.
     
-            + [<i>Mi abbasso per un abbraccio.]
-               -> color_variation_management(SecondCharacter, purpleC)->
-               //Commento riccio sul fatto che ci ha spinate.
+            + [<i>Mi abbasso offrendo un abbraccio.]
+                -> color_variation_management(SecondCharacter, purpleC)->
+                Sì no boh.
+                Ok.
+                Ecco, scusa.
+                Ti ho spinato mi sa.
+                Mi spiace.
+                Scusa {player_name}!
             -
         Guarda!
         La frutta piace anche ai pesci!
@@ -866,7 +931,7 @@
         Bleah.
         Le spezie sono strane.
         Nei cibi sono buone.
-        Ma da solo fanno bleah.
+        Ma da sole fanno bleah.
         A mio fratello non dico mai bugie.
         E inventiamo tante storie.
         Mio fratello mi dice che le storie sono delle bugie condivise.
@@ -877,19 +942,35 @@
         E che l'arte è una bella bugia per farci andare avanti quando le cose fanno schifo.
 
             + [L'arte non è fattuale, per cui sì, è una bella bugia.]
-                -> color_variation_management(SecondCharacter, blueC)->
+                    -> color_variation_management(SecondCharacter, blueC)->
+                Tu parli strano a volte.
+                Però allora vuole dire che i grandi possono dirle le bugie.
+                Perché io no?
                
             + [Quindi se dici che sei uno scrittore puoi dire tutte le bugie che vuoi?]
-                -> color_variation_management(SecondCharacter, yellowC)->
+                    -> color_variation_management(SecondCharacter, yellowC)->
+                Non ci avevo pensato!
+                E a me piace scrivere.
+                Posso fare come gli investigatori che fanno finta di essere altre persone per risolvere i casi!
              
             + [L'unica cosa che fa andare avanti è il cambiamento, non le belle bugie.]
-                -> color_variation_management(SecondCharacter, redC)->
+                    -> color_variation_management(SecondCharacter, redC)->
+                Eh?
+                Non ho mica capito {player_name}.
+                Cosa devo cambiare?
         
             + [Ci sono belle bugie che sono come coperte contro il freddo.]
-                -> color_variation_management(SecondCharacter, greenC)->
+                    -> color_variation_management(SecondCharacter, greenC)->
+                Le statue di mio fratello sono cose che non esistono mica.
+                Ma le guardo e mi piacciono tanto.
+                Dici una cosa così quindi?
     
             + [L'arte mostra ciò che i fatti non sanno raccontare.]
-               -> color_variation_management(SecondCharacter, purpleC)->
+                    -> color_variation_management(SecondCharacter, purpleC)->
+                A volte parli come un libro.
+                Ma questa cosa la capisco.
+                Quando sei un bambino se spieghi le cose nessuno ti ascolta.
+                Però i libri ti capiscono.
             -
         
         Con la frutta avanzata ci preparo un succo!
