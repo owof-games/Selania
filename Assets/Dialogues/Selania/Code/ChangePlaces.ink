@@ -9,9 +9,9 @@
         -> main_book
     
     //Versione utile se devo testare anche il libro con amico stocastico
-    + {are_two_entities_together(PG, RewriterBook) && debug_stochastic}[RewriterBook]
-           ~ move_entity(PG, BookPlace)
-       -> main_book    
+    // + {are_two_entities_together(PG, RewriterBook) && debug_stochastic}[RewriterBook]
+    //        ~ move_entity(PG, BookPlace)
+    //    -> main_book    
         
     + {are_two_entities_together(PG, miniBook) && !debug_stochastic} [miniBook]
             ~ move_entity(PG, BookPlace)
