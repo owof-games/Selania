@@ -17,6 +17,19 @@ dog
     ~ temp mentorName = translator(mentor_ActualName)
     ~ enableBigDialogue()
 
+{
+    - the_witch_and_the_frog.bookUpdate:
+        Abbiamo spiegato a {player_name} l'importanza del lavoro di Franco La Rana, che fa in modo che ogni pianto venga ascoltato, ogni dolore alleviato. Privo di padroni e leggi se non quella della cura delle altre persone.
+}    
+
+{
+    - the_witch_and_the_mentor.bookUpdate:
+        {mentorName} ha chiesto a {player_name} di intercedere con noi, per sapere cosa noi pensiamo di {mentorName}. Noi abbiamo risposto a {player_name} che {mentorName} sta facendo un buon lavoro, ma che così come l'acqua non può essere incendio, così {mentorName} non può essere qualcosa che non è. Dopo uno scambio con {player_name}, {mentorName} ha detto che deve essere difficile avere una voce in testa, ma che magari fa sentire meno solə.
+}
+{
+    - about_the_book.bookUpdate:
+        Abbiamo anche informato {player_name} che il libro che stringe ora in mano viene aggiornato da noi mano a mano che le cose accadono, anche con ricerche altrui. E speriamo la cosa non {player_pronouns has him:gli|{player_pronouns has her:le|lə}} crei dispiacere, ma la memoria è come neve in primavera.
+}
 
 {witch_feedback.fifth_story_ended_check: cose che scopro sul fungo a fine della fifth storia.}
 
