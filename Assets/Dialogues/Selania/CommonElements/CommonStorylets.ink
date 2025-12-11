@@ -382,3 +382,49 @@
          ~ change_entity_place(FirstCharacter)
 
 -> main
+
+
+=== frog_and_second_char_chit_chat
+    ~ temp charNameOne = translator(firstChar_ActualName)
+    ~ temp charNameTwo = translator(secondChar_ActualName)
+    ~ temp mentorName = translator(mentor_ActualName)
+
+    F: E Franco ti dice che non è vero, {charNameTwo}.
+    R: Ma è im-pos-si-bi-le!
+    F: No no no, impossibile è un bambino che sa parlare.
+    R: Ma io so parlare!
+    F: E sei un bambino? Dimostralo!
+    R: Sono basso.
+    F: Anche io.
+    R: E vado a scuola.
+    F: Quello lo fanno i girini, non i bambini.
+    R: E non sono un girino?
+    F: Hai delle braccia, i girini non li hanno.
+    R: Quindi sono una rana?
+    F: Può darsi.
+    F: Sai fare CRAAAAAAC?
+    R: CRAAAAAAC!
+    F: E sai saltare?
+    R: Sìì!
+    F: E hai uno zio che si chiama Gracco?
+    R: No.
+    F: Forse però non è così importante.
+    F: Quindi sì: non sei un bambino, sei una rana!
+    F: E sai nuotare?
+    R: Sì no boh.
+    R: No.
+    F: Visto?
+    F: Come ti dicevo prima: le rane non sanno nuotare.
+    F: Logico, no?
+    R: Mmm.
+    R: Non sono mica convinto.
+        {
+            - are_two_entities_together(FirstCharacter, PG):
+                Questa roba tra qualche anno si trasformerà in un lunghissimo percorso dalla psicologa.
+        }
+        {
+            - are_two_entities_together(Mentor, PG):
+                Comincio a sospettare che questa rana faccia più danni di quanto pensassi.
+        }
+
+    -> main
