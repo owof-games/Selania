@@ -61,6 +61,7 @@ VAR saturationVar = 0
                     
                     - else:
                         errore
+                            ~ temp y = 1/0
                 } 
 
         }

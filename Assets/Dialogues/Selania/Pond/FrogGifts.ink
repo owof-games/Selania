@@ -119,6 +119,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
             -> mission_objects
         - else:
             ERROR: il valore di frog_aboutGiftRequest è {frog_aboutGiftRequest} e non so a quale parte di dono passare.
+            ~ temp yww = 1/0
     }
 
 //Doni generici
@@ -175,6 +176,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                             ~ frog_first_char_gift = "{ingredientTranslator(CantoDelleCompagne)}"
                         - else:
                             ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
+                            ~ temp yed = 1/0
                     }
                         -> closed_exchange
                         
@@ -271,6 +273,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                             ~ frog_first_char_ingredient = "{ingredientTranslator(BaccaDellaAddolorata)}"
                         - else:
                             ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
+                            ~ temp yqq = 1/0
                     }
                         -> closed_exchange
                         
@@ -439,6 +442,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                             
                         - else:
                             ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
+                            ~ temp yqq = 1/0
                         }
                         -> closed_exchange
                         
@@ -526,6 +530,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                                 
                             - else:
                                 ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
+                                ~ temp yee = 1/0
                         
                         }
                         -> closed_exchange

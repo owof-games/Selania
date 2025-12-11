@@ -712,7 +712,9 @@ Funzione di traduzione da variabile a stringa
         
         }    
 
-    - else: ERRORE: valore di PNG non supportato {PNG}.
+    - else: 
+        ERRORE: valore di PNG non supportato {PNG}.
+        ~ temp yrtrer = 1/0
 
 }
 

@@ -223,6 +223,7 @@
                 //     ~ player_fifthStepStatus += greenStatus
                       - else:
                         ERRORE
+                        ~ temp yww = 1/0
             }
         
         - (player_blue > player_green) && (player_blue > player_red) && (player_blue > player_yellow) && (player_blue > player_purple):
@@ -245,6 +246,7 @@
                 //     ~ player_fifthStepStatus += blueStatus
                       - else:
                         ERRORE
+                        ~ temp ywww = 1/0
             }        
         
         - (player_red > player_green) && (player_red > player_blue) && (player_red > player_yellow) && (player_red > player_purple):
@@ -267,6 +269,7 @@
                 //     ~ player_fifthStepStatus += redStatus
                      - else:
                         ERRORE
+                        ~ temp yrr = 1/0
             }    
         
         - (player_yellow > player_green) && (player_yellow > player_blue) && (player_yellow > player_red) && (player_yellow > player_purple):
@@ -289,6 +292,7 @@
                 //     ~ player_fifthStepStatus += yellowStatus
                      - else:
                         ERRORE
+                        ~ temp yrrr = 1/0
             }    
         
         - (player_purple > player_green) && (player_purple > player_blue) && (player_purple > player_red) && (player_purple > player_yellow):
@@ -311,6 +315,7 @@
                 //     ~ player_fifthStepStatus += purpleStatus
                      - else:
                         ERRORE
+                        ~ temp yrtr = 1/0
             }
         
         - else:
@@ -333,6 +338,7 @@
                 //     ~ player_fifthStepStatus += mixedStatus
                      - else:
                         ERRORE
+                        ~ temp yrwer = 1/0
             }    
     
     }

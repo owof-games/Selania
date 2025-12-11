@@ -300,6 +300,7 @@
                 
         - else:
             <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+            ~ temp yrrttr = 1/0
     }
 
 //Formula chiamata prima dello statement, per tenere conto del rapporto effettivo.
@@ -383,6 +384,7 @@
         - else:
             <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             {debug: <i>Il livello di inchiostro per la prima personaggia è {firstChar_InkLevel}}
+            ~ temp yrryy = 1/0
     
     }
 
@@ -426,5 +428,6 @@
         - else:
             <i>Errore: non riesco a capire quante azioni hai a disposizione.</i>#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
             {debug: <i>Il livello di inchiostro per la prima personaggia è {firstChar_InkLevel}}
+            ~ temp yrrtt = 1/0
     
     }
