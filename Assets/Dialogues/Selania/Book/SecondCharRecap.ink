@@ -233,7 +233,25 @@
         - first_second_chit_chat.bookUpdate:
             {charNameOne} e {charNameTwo} si sono presentat3, discutendo di alieni e pisolini.
     }
-
+    
+    {
+    
+        - frog_second_char_gift != "":
+            {player_name} ha chiesto un consiglio a Franco la Rana su cosa donare a {charNameTwo}, e la risposta di Franco è stata: {frog_second_char_gift}.
+    }
+    
+    {
+    
+        - frog_second_char_ingredient != "":
+            {player_name} ha chiesto un consiglio a Franco la Rana su cosa inserire nel piatto da cucinare con {charNameTwo}, e la risposta di Franco è stata: {frog_second_char_ingredient}.
+    }
+    
+    {
+    
+        - frog_second_novel != "":
+            {player_name} ha chiesto un consiglio a Franco la Rana su un racconto di cui parlare con {charNameTwo}, e la risposta di Franco è stata: {frog_second_novel}.
+    }
+    
     {
         - about_violence_and_peace.bookUpdate:
             {mentorName} e {charNameTwo} hanno provato a chiarirsi. {mentorName} con un po' di fatica ha ammesso che non avrebbe dovuto fare male a {charNameTwo}. E quando lui ha reagito senza entusiasmo, ci è rimasta male. A quel punto {charNameTwo} ha detto a {mentorName} che "I grandi chiedono sempre scusa per tutte le cose ma poi le rifanno. Poi piangono e chiedono scusa. E poi le rifanno.". Lei ha detto che ci crede davvero, ma {charNameTwo} se ne è andato.

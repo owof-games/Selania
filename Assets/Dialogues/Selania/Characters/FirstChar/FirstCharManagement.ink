@@ -37,7 +37,9 @@
         VAR kitchen_firstCharCookingMAXTogetherWaiting = 8
         //Ricetta creata
         VAR kitchen_firstCharRecipe = ""
-        
+        //Suggerimento rana
+        VAR frog_first_char_ingredient = ""
+    
     //Valore quarto ingrediente
         VAR kitchen_firstCharExtraIngredient = ()
         VAR kitchen_firstCharExtraIngredientReaction = notReaction
@@ -45,11 +47,14 @@
 //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
     VAR firstChar_favouritesGifts = (NonTiScordarDiTe, BaccaDellaAddolorata, CantoDelleCompagne)
     VAR firstChar_goodGifts = (ErbaLiccia, Olobino, BastoneDellOzioso, LanaNotturna)
-    
+    //Dono consigliato dalla rana
+    VAR frog_first_char_gift = ""
     
 //Tracciamento del dono
     VAR firstChar_giftedObject = ()
 
+//Tracciamento del racconto
+    VAR frog_first_novel = ""
 
 //Tengo conto delle interazioni avute per aprire la possibilità di avviare la riscrittura
     VAR firstChar_storyletsForRewritingCount = 0

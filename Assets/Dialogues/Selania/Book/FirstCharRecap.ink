@@ -243,6 +243,26 @@
         - first_mentor_chit_chat.bookUpdate:
             Durante una conversazione con {mentorName}, {charNameOne} si è infastidita perché {mentorName} ha definito la felicità "non un luogo da raggiungere, ma qualcosa che si ha dentro", ma {charNameOne} crede sia un privilegio di chi fa il lavoro che ama. E teme che questo significhi che la felicità "te la ritrovi se ti fai andare bene quello che hai".
     }
+    
+    {
+    
+        - frog_first_char_gift != "":
+            {player_name} ha chiesto un consiglio a Franco la Rana su cosa donare a {charNameOne}, e la risposta di Franco è stata: {frog_first_char_gift}.
+    }
+    
+    {
+    
+        - frog_first_char_ingredient != "":
+            {player_name} ha chiesto un consiglio a Franco la Rana su cosa inserire nel piatto da cucinare con {charNameOne}, e la risposta di Franco è stata: {frog_first_char_ingredient}.
+    }
+    
+    {
+    
+        - frog_first_novel != "":
+            {player_name} ha chiesto un consiglio a Franco la Rana su un racconto di cui parlare con {charNameOne}, e la risposta di Franco è stata: {frog_first_novel}.
+    }
+    
+    
     {
         - first_char_main_storylets.twelve.bookUpdate:
             {charNameOne} ha parlato di sua mamma, e del fatto che litigano perché la madre pensa che lei non sappia accontentarsi. Ma {charNameOne} in realtà non si sente all'altezza delle sue aspettative. Soffre perché prova invidia verso chi ha raggiunto dei traguardi, e a volte vorrebbe avere la loro vita. Per questo si sente una delusione.

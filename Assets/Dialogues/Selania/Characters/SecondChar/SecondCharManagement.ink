@@ -26,9 +26,13 @@
 //Tracciamento apprezzamento doni/ingredienti. Tutto ciò che è fuori da questa lista = reazione neutrale/disgustata.
     VAR secondChar_favouritesGifts = (BrinaDellImpossibile, BastoneDellOzioso, LicheneDegliAbissi)
     VAR secondChar_goodGifts = (CantoDelleCompagne, LanaNotturna, LaSpazzata, NonTiScordarDiTe)
-       
+    //Dono consigliato dalla rana
+    VAR frog_second_char_gift = ""   
 //Tracciamento del dono
     VAR secondChar_giftedObject = ()
+    
+//Tracciamento del racconto
+    VAR frog_second_novel = ""    
     
 //Tracciamento attivazione secondo elemento tutorial
     VAR secondChar_tutorial = true
@@ -50,6 +54,8 @@
         VAR kitchen_secondCharCookingMAXTogetherWaiting = 5
         //Ricetta creata
         VAR kitchen_secondCharRecipe = ""
+         //Suggerimento rana
+        VAR frog_second_char_ingredient = ""
     
     //Valore quarto ingrediente
         VAR kitchen_secondCharExtraIngredient = ()
