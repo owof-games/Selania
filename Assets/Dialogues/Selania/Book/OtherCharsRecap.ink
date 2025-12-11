@@ -26,20 +26,19 @@ dog
 
 {
     - witch_feedback.second_story_ended_check.bookUpdate: 
-        Secondo la voce, la storia di {charNameTwo} è stata faticosa per Mentore. Dice che le sue radici sembrano solide, ma il suo tronco ondeggia a ogni accenno di burrasca. E che io posso decidere di essere sostegno, o di lasciarla cadere, e ricominciare.
+        Abbiamo detto a {player_name} che la storia di {charNameTwo} è stata faticosa per {mentorName}, che le sue radici sembrano solide, ma il suo tronco ondeggia a ogni accenno di burrasca. E che {player_name} può decidere di essere sostegno, o di lasciarla cadere, e ricominciare.
 }
 
 {
     - witch_feedback.first_story_ended_check.bookUpdate:
-        Mi hanno anche detto che posso studiare le persone come un libro, come vorrebbe Mentore, ma potrei anche decidere secondo quello che è giusto per me. Che a volte le persone hanno bisogno di venire contraddette, perché la frizzione genera fuoco e il fuoco brucia il vecchio, dando la possibilità al nuovo di crescere.
+        Abbiamo detto a {player_name} che può studiare le persone come un libro, come vorrebbe {mentorName}, ma che può anche decidere secondo quello che è giusto per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}}. Che a volte le persone hanno bisogno di venire contraddette, perché la frizzione genera fuoco e il fuoco brucia il vecchio, dando la possibilità al nuovo di crescere.
 }
-
 
 {
     - witch_intro.bookUpdate:
-        Non è solo un vecchio tronco, comunque. Sembra che venga da qui la voce che mi sento in testa, che mi descrive i luoghi e altre cose di questo posto. Dice che è, anzi, sono tornati a precepirsi. E che saranno la luna e un sorriso.
+        {player_name} ha scoperto che non siamo solo un vecchio tronco, comunque. Attraverso il tronco può parlare con la voce che si sente in testa, che descrive i luoghi e altre cose di questo posto. E abbiamo detto a {player_name} che saremo la luna e un sorriso.
 }
 
-{take_this_book:Un vecchio tronco|Un vecchio tronco, sotto le cui radici ho trovato questo diario.}
+{take_this_book:Un vecchio tronco|Un vecchio tronco, sotto le cui radici è stato trovato questo diario.}
 
 -> rewriter_book_with_flow
