@@ -195,7 +195,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                         
                         - else:
                             {charNameOne} ama suo padre. Quale pianta può ricordarglielo?
-                            ~ frog_first_char_gift = "qualcosa che parli di chi fa parte di noi, delle nostre"
+                            ~ frog_first_char_gift = "qualcosa che parli di chi fa parte di noi, delle nostre radici"
                     }
                     
                     Chiaro, no?
@@ -290,7 +290,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                         
                         - else:
                             {charNameOne} ama suo padre. Quale pianta può ricordarglielo?
-                            ~ frog_first_char_ingredient = "qualcosa che parli di chi fa parte di noi, delle nostre"
+                            ~ frog_first_char_ingredient = "qualcosa che parli di chi fa parte di noi, delle nostre radici"
                     }
                     Chiaro, no?
                         -> closed_exchange
