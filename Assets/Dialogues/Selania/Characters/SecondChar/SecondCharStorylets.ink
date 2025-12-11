@@ -22,9 +22,8 @@
             + (buffe) [Perché è pieno di cose buffe!]
                     -> color_variation_management(SecondCharacter, yellowC)->
                 Uh.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-                Per ora ho esplorato solo la stazione.
+                Per ora ho studiato solo la stazione.
                 E devo capire cos'è quella cosa sul tabellone.
-                Le lettere non si danno al postino?
                 E poi ho sentito un treno ma non l'ho visto.
                     
             + (tu)[Aspetta, prima te: perché <b><i>tu</b></i> sei qui?]

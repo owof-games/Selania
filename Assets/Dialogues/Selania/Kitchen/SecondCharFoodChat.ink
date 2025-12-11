@@ -82,6 +82,10 @@
         Animaliiiiiiiiiiii!
         A casa ho una vecchia enciclopedia, era del papà, che è piena di disegni e cose sugli animali.
         E poi a un mercatino abbiamo trovato una collezione di riviste sugli insetti.
+        E sul tablet ho tre app per riconoscere gli animali.
+        E una me li fa vedere in casa, ed è DI-VER-TEN-TIS-SI-MO quando li faccio andare su cose sbagliate.
+        Come il letto di mamma.
+        O le vecchie videocassete di papà.
         Poi ho dei modellini di dinosauri.
         Che però ultimamente non mi piacciono più.
         Mentre mi piace disegnare animali inventati mettendo assieme pezzi diversi.
@@ -97,18 +101,40 @@
 
             + [Statisticamente sì, solo con cose diverse dai prociorsi.]
                 -> color_variation_management(SecondCharacter, blueC)->
+                Anche i prociorsi si divertono con cose diverse dai grandi.
+                Una volta un prociorso ha passato due ore a rincorrere un gatto.
+                E poi lui si è buttato in acqua.
+                E il gatto gli è stato sulla pancia, perché non sa nuotare.
                
             + [{charNameTwo}: gli adulti devono imparare tanto dai bambini!]
                 -> color_variation_management(SecondCharacter, yellowC)->
+                Si no boh.
+                Io voglio insegnare tante cose agli adulti.
+                Come si fanno gli aerei di carta.
+                Perché le caramelle fanno bene.
+                E che Elio aveva ragione sugli alieni da sempre e dovevano ascoltarlo.
              
             + [Le cose hanno senso se hanno uno scopo. Fare per fare è inutile.]
                 -> color_variation_management(SecondCharacter, redC)->
+                Sì no boh.
+                Che noia.
+                Franco fa tantissimissime cose senza senso.
+                Ma sono le più migliori qui!
         
             + [Il cuore degli adulti è molto molto complicato, {charNameTwo}.]
                 -> color_variation_management(SecondCharacter, greenC)->
+                Che vuol dire?
+                Anche noi abbiamo cose complicate!
+                Tutti i compiti.
+                I bulli.
+                I grandi arrabbiati ma non si capisce mica mai perché.
     
             + [Però tu stai comunque bene quando fai queste cose, no?]
                -> color_variation_management(SecondCharacter, purpleC)->
+               Sì!
+               Tantissimissimo!
+               A volte nemmeno mi accorgo del tempo che passa, e di cosa fanno le altre persone.
+               Mi piace!
             -    
         
         Ho una fame!
@@ -176,18 +202,44 @@
 
             + [L'intelligente civetta.]
                 -> color_variation_management(SecondCharacter, blueC)->
+                Sapevi che le civette vedono il calore con le orecchie?
+                E che i piccoli quando piangono semnbrano bambini?
+                E poi non hanno.
+                Non hanno il sedere!
+                Chissà se fanno le puzzette.
                
             + [Un{player_pronouns has him:o|{player_pronouns has her:a|ə}} prociors{player_pronouns has him:o|{player_pronouns has her:a|ə}}!]
                 -> color_variation_management(SecondCharacter, yellowC)->
+                Sììììì!!!
+                Possiamo tuffarci nell'acqua ora assieme?
+                Mi insegni a nuotare?
+                Rubiamo il miele alle api della serra?
+                Spaventiamo {charNameOne}?
+                Mi fa ridere tantissimissimo quando urla!
              
             + [Il combattivo leone!]
                 -> color_variation_management(SecondCharacter, redC)->
+                Sì no boh.
+                I leoni sono noiosi.
+                Dormono tantissimo.
+                Come i gatti.
+                Però da piccoli sono suuuuperincapaci di camminare.
+                Quello è divertente.
         
             + [L'affettuoso cane.]
                 -> color_variation_management(SecondCharacter, greenC)->
+                I cani copiano tantissime cose degli umani, lo sapevi?
+                Quando cammini si muovono al tuo passo.
+                Poi gli piace tanto guardarci negli occhi per capire che fare.
+                E se stai male stanno male anche loro.
+                Ora che ci penso forse è meglio se non ce ne abbiamo uno a casa.
     
             + [Il misterico corvo.]
                -> color_variation_management(SecondCharacter, purpleC)->
+               Sai che i corvi si insegnano tra loro le cose?
+               E che se li fai arrabbiare se lo ricordano per sempre.
+               Una volta un amico di mamma ha spaventato un corvo con la sua moto.
+               E ora tutte le volte che viene da noi il corvo gli graffia la moto!
             -
         Il profumo è buono.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Ma quindi mangiamo solo dolce oggi?
@@ -244,18 +296,36 @@
 
             + [Serve metodo e disciplina per comunicare in modo efficace.]
                 -> color_variation_management(SecondCharacter, blueC)->
+                Puoi dirlo un bambinese?
+                Ogni volta che un grande dice "disciplina", è solo perché non c'ha voglia di capirmi.
+                Come le maestre che mi mettono in castigo.
+                Tutti mettono in castigo ma nessuno chiede il perché.
                
             + [Le cose strane sono divertenti!]
                 -> color_variation_management(SecondCharacter, yellowC)->
+                Sì!
+                Come le bussole, che sono suuuuperstrane!
+                O quando la benzina fa gli arcobaleni per terra.
+                O papà che si arrabbia con le persone in televisione.
              
             + [Fregatene. Sii strano come va a te, {charNameTwo}!]
                 -> color_variation_management(SecondCharacter, redC)->
+                Sì no boh.
+                Tu lo dici, ma mica sei tu ad andare in punizione!
         
             + [Spesso gli adulti non sanno cosa desiderano, amico mio.]
                 -> color_variation_management(SecondCharacter, greenC)->
+                Sì no boh.
+                Ma io che c'entro?
+                Magari me lo possono dire invece di sgridarmi.
     
             + [Ciò che è strano porta risposte a domande che non ci siamo ancora fatt3.]
                -> color_variation_management(SecondCharacter, purpleC)->
+               Eh?
+               Però le domande mi piacciono.
+               Anche se poi papà dice che gli rompo le palle.
+               Ultimamente mi dice: "Chiedi al tablet, sant'Iddio!".
+               Così posso usare il tablet anche a cena.
             -
         
         No non mettere lo zucchero a velo, non mi piace.
@@ -333,18 +403,39 @@
 
                 + [È comprovato che le punizioni non siano efficaci.]
                     -> color_variation_management(SecondCharacter, blueC)->
+                    LO SAPEVO!
+                    Ti fanno solo arrabbiare.
+                    E piangere.
+                    E a nessuno piace piangere!
                 
                 + [Allora fai così tante cose sbagliate da rendere le punizioni inutili!]
                     -> color_variation_management(SecondCharacter, yellowC)->
+                    Uhm.
+                    So dove la maestra di matematica nasconde i suoi dolci.
+                    E poi come si apre l'armadio vietato di disegno.
+                    E al bidello bruciano gli occhi quando tagliano l'erba!
                 
                 + [E l3 ribelli si oppongono alle punizioni!]
                     -> color_variation_management(SecondCharacter, redC)->
+                    Però poi mi sgridano di più.
+                    Una volta ci ho provato ma hanno chiamato mamma.
+                    E mi hanno dato cinque note.
+                    E mamma era così arrabbiata che mi ha chiuso in camera per un giorno intero.
             
                 + [Chi punisce non riesce ad ascoltare il suo cuore.]
                     -> color_variation_management(SecondCharacter, greenC)->
+                    Si no boh.
+                    Mio fratello però dice una cosa tipo questa qui che hai detto tu.
+                    Che papà è sempre arrabbiato perché non ascolta le sue emozioni.
+                    Magari è una cosa dei grandi?
         
                 + [A chi fa bene la punizione? A chi la fa o a chi la subisce?]
-                -> color_variation_management(SecondCharacter, purpleC)->
+                    -> color_variation_management(SecondCharacter, purpleC)->
+                    A me non mi fa mica bene.
+                    La maestra dice sempre "Mi dispiace metterti in punizione, davvero."
+                    Ma io mica ci credo.
+                    L'altra settimana mi ha messo in castigo otto volte.
+                    Mi sa che non le dispiace così tanto.
             -
             
             Possiamo usare la grattugia?
@@ -410,18 +501,44 @@
 
                 + [L'unica cosa logica è essere te stesso.]
                     -> color_variation_management(SecondCharacter, blueC)->
+                    Sì no boh.
+                    Un cane è un cane.
+                    Un gatto un gatto.
+                    Quindi io posso solo essere io?
                 
                 + [Allora prova ad essere un dinosauro rosa!]
                     -> color_variation_management(SecondCharacter, yellowC)->
+                    Bleah!
+                    I dinosauri sì, ma il rosa è da bambine.
+                    Posso essere un dinosauro gigante che sa volare.
+                    Posso sparare fuoco?
+                    Però non mi piacciono le piume, mi fanno solletico.
+                    Posso avere le squame di acciaio?
+                    Come le statue di mio fratello!
                 
                 + [L'importante è essere lotta, cambiamento, fuoco!]
                     -> color_variation_management(SecondCharacter, redC)->
+                    Il fuoco mi piace.
+                    Ma a casa non me lo fanno toccare perché una volta ho.
+                    È una cosa brutta.
+                    Volevo vedere cosa succede alle code dei gatti.
+                    Ora la vicina non mi parla più.
             
                 + [Concordo con tuo fratello: ciò che conta è essere brave persone.]
                     -> color_variation_management(SecondCharacter, greenC)->
+                    Mio fratello è una brava persona.
+                    Anche il suo amico.
+                    Anche nonna.
+                    Però dicono sempre che la vita è difficile.
+                    Forse non è così bello essere brave persone.
         
                 + [Essere te stesso vuol dire già essere un intero universo.]
                     -> color_variation_management(SecondCharacter, purpleC)->
+                    Questo l'ha detto anche la maestra di scienze.
+                    Che noi per i virus siamo così grandi come la Terra lo è per noi!
+                    A volte sono a letto e penso a tutti questi piccoli virus.
+                    Magari hanno intere città dentro di me.
+                    E ogni volta che respiro si mettono a nuotare nell'aria?
                 -
             
             Ho trovato della cannella!
