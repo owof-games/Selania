@@ -9,7 +9,8 @@
                 Bleah!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         } 
     Comunque ho pensato fosse il caso di dartelo.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
-        
+    - (bookUpdate)
+
         ~ move_entity(WitchRecap, BookPlace)
         ~ move_entity(miniBook, Bedroom)
         ~ move_entity(nightTable, Bedroom)
@@ -107,7 +108,8 @@
     Ah: non ho trovato molta roba, scusa.
     Per cui credo abbia senso che tu ti faccia una cucinata soltanto con ognuna di noi.
     Scusa.
-    
+    - (bookUpdate)
+
         ~ firstChar_pauseTalking = firstChar_pauseDuration
         -> opening_places ->
         -> main
@@ -183,6 +185,7 @@
     
     Comunque mi sa che più tardi mi faccio un altro giro tra i racconti.
     Erano mesi che non mi mettevo a leggere qualcosa.
+    - (bookUpdate) 
         ~ firstChar_pauseTalking = firstChar_pauseDuration
 
         -> main

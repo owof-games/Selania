@@ -588,14 +588,18 @@
     
     = close
         ~ temp charNameTwo = translator(secondChar_ActualName)
+        ~ story_endedStories += story_secondCharStoryEnded
+        ~ secondChar_storyStatus = story_storyEnded
+        ~ player_movementsCounter = 0
+        ~ PG_advance_management(SecondCharacter)
+
             Ora voglio stare ancora un po' qui prima di prendere il treno. #speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #portrait:riccio_neutral
             Mi mancherà la rana!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic
+        
+        - (bookUpdate)
+        
+        ~ numberQuestion = 0
+        ~ secondChar_InkLevel = ink_empty
             @animation:RewriterBook
-            
-            ~ story_endedStories += story_secondCharStoryEnded
-            ~ secondChar_storyStatus = story_storyEnded
-            ~ player_movementsCounter = 0
-            ~ PG_advance_management(SecondCharacter)
-            ~ numberQuestion = 0
-            ~ secondChar_InkLevel = ink_empty
+
                 -> main

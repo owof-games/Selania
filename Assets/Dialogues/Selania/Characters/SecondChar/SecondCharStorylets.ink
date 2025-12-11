@@ -114,7 +114,8 @@
                 - are_two_entities_together(Mentor, PG):
                     Altri bambini? Ma questo posto è pieno di pericoli!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
             }
-              
+        - (bookUpdate)
+
             ~ move_entity(SecondRecap, BookPlace)
                          
         -> second_char_closing_storylet ->
@@ -210,7 +211,8 @@
                          
             Su!
             Valla a vedere, ora!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
-      
+            - (bookUpdate)
+
             -> second_char_closing_storylet ->
             -> options_second_character
 
@@ -408,7 +410,9 @@
                         È molto meno pericoloso!
                         Poi muoio di noia!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             }
-   
+
+        - (bookUpdate)
+
         -> second_char_closing_storylet ->
         -> options_second_character
             
@@ -540,7 +544,9 @@
                         Merda.
                         Mi ero dimenticata quanto fosse schifoso essere bambini.
                 }
-            
+
+        - (bookUpdate)  
+
         -> second_char_closing_storylet ->
         -> options_second_character
 
@@ -655,7 +661,9 @@
             }
         Ti prometto che non dirò più bugie.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Ora però lasciami solo.
-        
+
+        - (bookUpdate)
+
             -> second_char_closing_storylet ->
             -> options_second_character
     
@@ -739,7 +747,8 @@
                 E tu non puoi fare nulla.
                 Ti viene solo più rabbia.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                 Sono ingiusti.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_melanchonic     
-            -
+        - (bookUpdate)
+
         Comunque qui non c'è la scuola e quindi è bello.
                     
         -> second_char_closing_storylet ->            
@@ -837,7 +846,8 @@
             Da quando sono qui però non ho riscritto nulla.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             Però ho provato a leccare la rana.
             Ma mi ha chiesto di non farlo, perché poi sarei stato male.
-                
+
+        - (bookUpdate)        
         -> second_char_closing_storylet ->        
         -> options_second_character     
             
@@ -935,7 +945,8 @@
 
             Forse nello stagno posso imparare a nuotare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
             La rana sembra abbastanza forte da salvarmi nel caso.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-        
+            - (bookUpdate)
+
         -> second_char_closing_storylet ->        
         -> options_second_character 
     
@@ -1116,7 +1127,8 @@
         Ma io non so se bastano.
         Però una cosa è sicura.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Mi piacerebbe tanto fare il veterinario.
-        
+        - (bookUpdate)
+
             -> second_char_closing_storylet ->
             -> options_second_character
     
@@ -1204,7 +1216,8 @@
                         Non sai quanto, ragazzino. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
             }
         Però non è bello nemmeno essere bambini.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
-        
+        - (bookUpdate)
+
             -> second_char_closing_storylet ->
             -> options_second_character 
     
@@ -1302,6 +1315,8 @@
 
             }
         Tocca a me trovare le risposte!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_energy
+        - (bookUpdate)
+         
                 -> second_char_closing_storylet ->
                 -> options_second_character 
     
@@ -1406,6 +1421,6 @@
                                 E poi sono sicuro che tu e nonna Paola vi piacete proprio subito subito!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_emotional
                     }
             
-        
+        - (bookUpdate)
         -> second_char_closing_storylet ->
         -> options_second_character   

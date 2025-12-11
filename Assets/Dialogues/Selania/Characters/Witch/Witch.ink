@@ -100,7 +100,8 @@
         <i>Ma funghi solleticano e distraggono le nostre rinascenti radici.
         <i>Ringraziandoti ancora {player_name} per ora ci congediamo.
         <i>Senza mai davvero lasciarti.
-        
+        - (bookUpdate)
+
             @animation:RewriterBook
 
                 -> main
@@ -161,6 +162,7 @@
         <i>O forse {player_name} può lasciarla cadere, e ricominciare.
         <i>Ora noi ci godiamo la brezza e il sole.
         <i>Ma più tardi tornaci a trovare.
+        - (bookUpdate)
         
             @animation:RewriterBook
 

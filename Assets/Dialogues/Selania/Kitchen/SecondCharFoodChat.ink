@@ -368,8 +368,8 @@
                 ~ kitchen_recipeComplement = "con confettura altalenante"
                 Cioè che dipende dalle persone?
                 O dalla persona?
-                Tipo mamma che un giorno ti adora e poi il giorno dopo non ti parla più?
-            - 
+                Come mamma che un giorno ti adora e poi il giorno dopo non ti parla più?
+            - (bookUpdate) 
         
         Mi sa che questo dolce lo faccio anche a mio fratello.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
             -> fourth_ingredient_dispatcher
@@ -433,7 +433,7 @@
                 + [Chi punisce non riesce ad ascoltare il suo cuore.]
                     -> color_variation_management(SecondCharacter, greenC)->
                     Si no boh.
-                    Mio fratello però dice una cosa tipo questa qui che hai detto tu.
+                    Mio fratello però dice una cosa come questa qui che hai detto tu.
                     Che papà è sempre arrabbiato perché non ascolta le sue emozioni.
                     Magari è una cosa dei grandi?
             
@@ -463,7 +463,7 @@
             + [<i>Infarino la peggior teglia per tartellette.]
                ~ kitchen_recipeNoun = "Tartellette "
                     Uh.
-                    Io tipo sono il peggiore a ginnastica.
+                    Io ad esempio sono il peggiore a ginnastica.
                     Solo Lara è peggio di me.
                     Ma mi batte a inglese.
         
@@ -692,7 +692,7 @@
                 Che dice che la vita ti da un grande amore, due grandi amicizie, tre grandi rotture di gatto.
                 Non abbiamo un gatto.
                 Quindi non ne ho rotto nessuno.
-            -  
+            - (bookUpdate)  
         
         Sono contento che parli di cose serie con me.
         Gli adulti pensano che i bambini siano stupidi.
@@ -1020,7 +1020,8 @@
                 Perché non abbiamo soldi.
                 Però conosco tutti i posto segreti del mio quartiere!
                 E alcuni sono pericolosi!
-            -  
+            - (bookUpdate)
+
         Comunque giuro su tutto tuttissimo che ho smesso di dirti bugie.
         E ho tanta fame, {player_name}.
         Tanta tanta fame!
@@ -1190,7 +1191,7 @@
                     Mi ha fatto pensare una cosa.
                     Mi piacciono i cani.
                     Ma non mi piace quando fanno le cose a caso.
-                    Tipo correre a destra e sinistra e ovunque.
+                    Come correre a destra e sinistra e ovunque.
                     Devi andare dove devi andare.
                     Come quando si parla.
                         @animation:RewriterBook
@@ -1266,7 +1267,8 @@
     E non voglio dormire.
     Voglio fare qualche dispetto.
     A dopo {player_name}!
-
+    - (bookUpdate)
+    
         -> cooking_animations_off ->
         ~ move_entity(SecondCharacter, Pond)
         ~ kitchen_secondCharCookingTogetherInvite = false
@@ -1369,6 +1371,7 @@
     M: Posso abbracciarti?
     R: No.
     R: Ma puoi farmi quella torta al cioccolato?
+- (bookUpdate)
 
     ~ secondChar_pauseTalking = secondChar_pauseDuration
     ~ secondChar_justTalked = true

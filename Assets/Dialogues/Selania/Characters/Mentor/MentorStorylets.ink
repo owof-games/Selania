@@ -82,7 +82,8 @@
                 Ma a proposito di questo posto: mi conviene dare una pulita all'acqua dello stagno.
         }#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
         Grazie per la chiacchierata, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-        
+        - (bookUpdate)
+
              ~ mentor_pauseTalking = mentor_pauseDuration
             @animation:RewriterBook
  
@@ -153,7 +154,8 @@
                     Non togliere i girini però!   
             } 
         Prega per me, {player_name}.
-                
+        - (bookUpdate)
+
              ~ mentor_pauseTalking = mentor_pauseDuration
              @animation:RewriterBook
              
@@ -223,7 +225,8 @@
                 } 
                 ~ mentor_pauseTalking = mentor_pauseDuration
                 @animation:RewriterBook
-                            
+            - (bookUpdate)
+
                     -> main
     
     = four
@@ -298,7 +301,8 @@
         Una mentore deve mantenere un certo distacco per guidarti.
         Non può essere emotiva.
         Vado a riordinare in ordine di data i libri in biblioteca.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
-    
+        - (bookUpdate)
+
              ~ mentor_pauseTalking = mentor_pauseDuration
              @animation:RewriterBook
              
@@ -390,6 +394,7 @@
         Amore per noi.
         Vado a recuperare del terriccio dal sottobosco, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
         Parleremo più tardi.
+        - (bookUpdate)
         
         ~ mentor_pauseTalking = mentor_pauseDuration
         @animation:RewriterBook

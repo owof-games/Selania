@@ -102,6 +102,8 @@
         }
     E ora sposto tutti quei legni così puoi andarci anche tu!
     Chissà se ci sono anche i manga!
+    - (bookUpdate)
+
         ~ secondChar_pauseTalking = secondChar_pauseDuration
         -> opening_places ->
         -> main
@@ -181,6 +183,7 @@
     Ma perché secondo me i grandi non la vedono mica l'aragosta.
     Non vedono mai certi problemi.    
     Mi sa che dopo mi leggo qualcosa di nuovo!
+    - (bookUpdate)
     
         ~ secondChar_pauseTalking = secondChar_pauseDuration
         -> main

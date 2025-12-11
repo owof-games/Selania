@@ -25,18 +25,18 @@ dog
 {witch_feedback.third_story_ended_check: cose che scopro sul fungo a fine della third storia.}
 
 {
-    - witch_feedback.second_story_ended_check: 
+    - witch_feedback.second_story_ended_check.bookUpdate: 
         Secondo la voce, la storia di {charNameTwo} è stata faticosa per Mentore. Dice che le sue radici sembrano solide, ma il suo tronco ondeggia a ogni accenno di burrasca. E che io posso decidere di essere sostegno, o di lasciarla cadere, e ricominciare.
 }
 
 {
-    - witch_feedback.first_story_ended_check:
+    - witch_feedback.first_story_ended_check.bookUpdate:
         Mi hanno anche detto che posso studiare le persone come un libro, come vorrebbe Mentore, ma potrei anche decidere secondo quello che è giusto per me. Che a volte le persone hanno bisogno di venire contraddette, perché la frizzione genera fuoco e il fuoco brucia il vecchio, dando la possibilità al nuovo di crescere.
 }
 
 
 {
-    - witch_intro:
+    - witch_intro.bookUpdate:
         Non è solo un vecchio tronco, comunque. Sembra che venga da qui la voce che mi sento in testa, che mi descrive i luoghi e altre cose di questo posto. Dice che è, anzi, sono tornati a precepirsi. E che saranno la luna e un sorriso.
 }
 

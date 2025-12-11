@@ -168,7 +168,8 @@
         Quindi è un trip.
         Devo idratarmi.
         Devo assolutamente idratarmi.
-        
+        - (bookUpdate)
+
             ~ move_entity(FirstCharacter, Pond)
             ~ move_entity(FirstRecap, BookPlace)
             
@@ -268,7 +269,7 @@
                     R: Avevi detto che ti fanno schifo!
                     C: E non ho cambiato idea.               
             }
-
+        - (bookUpdate)
                  
             -> first_char_closing_storylet ->
             -> options_first_character 
@@ -363,7 +364,8 @@
             -
         Mi manca, Talco.
         Mi spiace per come le cose siano cambiate.    
-             
+        - (bookUpdate)
+
                 -> first_char_closing_storylet ->
                 -> options_first_character
         
@@ -461,7 +463,8 @@
         Gli insulti ai capoccia.
         Il tenere traccia di tutte le ingiustizie.
         La speranza di fargliele ripagare, un giorno o l’altro.
-        
+        - (bookUpdate)
+
             -> first_char_closing_storylet ->
             -> options_first_character
             
@@ -561,7 +564,8 @@
                     Ma magari non hai mica controllato bene bene nelle tasche!
                             
             }
-                    
+
+        - (bookUpdate)            
                 -> first_char_closing_storylet ->
                 -> options_first_character
         
@@ -655,7 +659,8 @@
             -    
         A volte mi chiedo se non abbia senso lasciare il lavoro, rischiare tutto, e dedicarmi solo alla musica.
         Non più per fama e concerti, ma per fare del bene.
-             
+        - (bookUpdate)
+
                 -> first_char_closing_storylet ->
                 -> options_first_character
         
@@ -771,7 +776,8 @@
         Un mese dopo Talco è partitə, e non ci siamo più sentite fino a qualche settimana fa, quando mi ha mandato una cartolina.
         Una foto dellə bimbə.
         “Qualcuno aspetta un tuo abbraccio.”
-        
+        - (bookUpdate)
+
             -> first_char_closing_storylet ->
             -> options_first_character          
     
@@ -851,8 +857,7 @@
                 Ma non mi sento mai davvero <b>a casa</b>.
                 E anche se sono una bestiola ansiosa e guardo sempre al peggio, il dubbio mi viene spesso.
                 E se anche io come loro potessi in realtà fiorire, scendendo?
-            
-            -    
+        - (bookUpdate)   
 
             -> first_char_closing_storylet ->
             -> options_first_character
@@ -949,6 +954,7 @@
                     C: E chi se ne frega?
                     R: Allora sìììììììììììì!          
             }
+        - (bookUpdate)
 
             -> first_char_closing_storylet ->
             -> options_first_character 
@@ -1038,7 +1044,7 @@
                 Per la pulizia.
                 Per scioperare.
                 Per dare fastidio alla logica di {player_name}.    
-            -    
+        - (bookUpdate)   
             
             -> first_char_closing_storylet ->
             -> options_first_character
@@ -1145,6 +1151,8 @@
                         Ma mi dispiace.
                         Anche a me.            
                 }
+        - (bookUpdate)
+
             -> first_char_closing_storylet ->
             -> options_first_character
             
@@ -1238,7 +1246,7 @@
                 E poi alla fine non faccio mai nulla di crudele o che.
                 Al massimo mi intristisco in un angolino e bona.
                 Credi sia una cosa neutra? Non cattiva?
-        -     
+        - (bookUpdate)     
 
             -> first_char_closing_storylet ->
             -> options_first_character

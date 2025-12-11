@@ -87,6 +87,7 @@
             -    
     Bene, direi che abbiamo tutt3 qualcosa a cui pensare.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:chitarra_neutral
     Tipo, dove schiacciarmi quel pisolino.#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_affectionate
+    - (bookUpdate)
             ~ firstChar_pauseTalking = firstChar_pauseDuration
             ~ secondChar_pauseTalking = secondChar_pauseDuration
             ~ actual_speaker = ()
@@ -120,13 +121,12 @@
     Ok.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
     Però va bene così.
     Ora ho voglia solo di cercare qualcosa da mangiare.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
-
-                    {
-                        - are_two_entities_together(FirstCharacter, PG):
-                            Povero piccolo.
-                            Però è stato molto coraggioso, vero?
-                    }
-        
+            {
+                - are_two_entities_together(FirstCharacter, PG):
+                    Povero piccolo.
+                    Però è stato molto coraggioso, vero?
+            }
+    - (bookUpdate)    
                 ~ change_entity_place(SecondCharacter)
                 ~ mentor_pauseTalking = mentor_pauseDuration
                 ~ secondChar_pauseTalking = secondChar_pauseDuration
@@ -163,6 +163,7 @@
             -> color_variation_management(SecondCharacter, greenC)->
                 -    
     Finisce la scena. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
+    - (bookUpdate)
         ~ secondChar_pauseTalking = secondChar_pauseDuration
         ~ mentor_pauseTalking = mentor_pauseDuration
         ~ actual_speaker = ()
@@ -233,12 +234,11 @@
     M: Lezione?
     C: Sì: che se una persona ti dice che ti ammira, è meglio portarsi a casa il complimento e goderselo.
     C: Non sono vecchia come te, ma so che non sono tanti gli elogi che ci vengono dati in vita.
-    
+    - (bookUpdate)
+
         ~ firstChar_pauseTalking = firstChar_pauseDuration
         ~ mentor_pauseTalking = mentor_pauseDuration
-    
-    
--> main
+        -> main
 
 === frog_and_mentor_chit_chat
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -289,6 +289,7 @@
                 C: No, non è vero: non ce la posso fare.
                     ~ change_entity_place(FirstCharacter)
         }
+    - (bookUpdate)    
         -> main
 
 
@@ -354,12 +355,10 @@
     Immagino sia faticoso, avere una voce in testa, così.
     O magari ti fa sentire meno {player_pronouns has him:solo|{player_pronouns has her:sola|solə}}.
     Ho qualcosa su cui riflettere, immagino.
-       
+    - (bookUpdate)   
         ~ firstChar_pauseTalking = firstChar_pauseDuration
         ~ mentor_pauseTalking = mentor_pauseDuration
-
-
--> main
+            -> main
 
 
 === frog_and_first_char_chit_chat
@@ -382,9 +381,9 @@
     R: Zelinda, Veneranda, Uga, Torlonia, Tamatta, Ruslana e Ruslanina.
     C: Qualcuno mi soffochi, ora.
          ~ change_entity_place(FirstCharacter)
+    - (bookUpdate)
 
--> main
-
+        -> main
 
 === frog_and_second_char_chit_chat
     ~ temp charNameOne = translator(firstChar_ActualName)
@@ -428,5 +427,5 @@
             - are_two_entities_together(Mentor, PG):
                 Comincio a sospettare che questa rana faccia più danni di quanto pensassi.
         }
-
-    -> main
+    - (bookUpdate)
+        -> main

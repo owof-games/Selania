@@ -79,6 +79,7 @@
             ~ mentor_pauseTalking = mentor_pauseDuration
             ~ mentor_tutorialPauses = true
                 - (nameSecond)
+                - (bookUpdate)
                 -> main
     
     === addressing_violence
@@ -186,7 +187,8 @@
     E vedere se avrà voglia di perdonarmi.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sad
     Grazie per l'ascolto, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
     Sono sicura che diventerai {player_pronouns has him:un ottimo riscrittore|{player_pronouns has her:un'ottima riscrittora| unə ottimə riscrittorə}}.
-        
+    - (bookUpdate)
+
         ~ change_entity_place(Mentor)
         ~ mentor_pauseTalking = mentor_pauseDuration
         ~ mentor_tutorialPauses = true
@@ -252,6 +254,8 @@
         -    
     Comunque alla fine Liliana con la sua rabbia trova un modo per cambiare.
     E quando riesce a vedere la sua casa come uno spazio brillante, mi ha fatto pensare: questa è l'essenza stessa della riscrittura.
+    - (bookUpdate)
+
         ~ firstChar_pauseTalking = firstChar_pauseDuration
         -> main   
 

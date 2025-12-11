@@ -369,7 +369,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Sentirsi amatə è indubbiamente sexy.
                 Anni fa confondevo a manetta arrapamento e amore.
                 Puoi immaginare i casini che ho combinato.
-            -  
+            - (bookUpdate) 
         
             -> fourth_ingredient_dispatcher
             
@@ -694,7 +694,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     
             + [<i>Caramello {player_pronouns has him:sopraffatto|{player_pronouns has her:sopraffatta|sopraffattə}} della salvia.]
                 ~ kitchen_recipeComplement = "con salvia."
-            -  
+            - (bookUpdate)  
         Che poi è una domanda stupida da farti, vero?
         Sei {player_pronouns has him:un riscrittore|{player_pronouns has her: una riscrittora|unə riscrittorə}}, e stai facendo un lavorone anche solo con me.
         Grazie per questo, {player_name}!
@@ -989,7 +989,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Che poi in parte credo sia vero.
                 Anche questo piatto ha la sua creatività, la sua magia.
                 E spesso cosa è creatività e cosa no ha a che fare con la cultura, non con qualche oggettività del cazzo.
-            -  
+            - (bookUpdate)  
             -> fourth_ingredient_dispatcher
     
     
@@ -1226,6 +1226,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     E ora {player_name}, credo mi farò due passi.
     Mi sento piena e soddisfatta.
     Grazie ancora per questo tempo assieme.
+    - (bookUpdate)
 
             -> cooking_animations_off ->
             ~ move_entity(FirstCharacter, Pond)
@@ -1327,7 +1328,8 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
     E quindi ti ho lasciato qualcosina su uno degli alberi della cucina.
     Spero possa portarti un po' di gioia, {player_name}.
     A dopo.
-
+    - (bookUpdate)
+    
         ~ firstChar_pauseTalking = firstChar_pauseDuration
         ~ firstChar_justTalked = true
 

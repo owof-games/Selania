@@ -12,5 +12,6 @@
     <i>Un vecchio detto dice: "Quando la rana piange, la palude ascolta".
     <i>Franco sorride sempre, ma conosce il pianto di tutt3 noi.
     <i>Non ubbidisce ad alcuna autorità, ad alcuna legge, se non quella della cura delle altre persone.
-
+    - (bookUpdate)
+    
 -> main

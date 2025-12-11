@@ -45,6 +45,8 @@
         {player_name}: devo continuare a vivere una vita che non è la mia?
         O fare il salto e rischiare di perdere tutto.
         O tutto?
+        - (bookUpdate)
+
         Quanto si può sperare di essere felici, a questo mondo?
             @animation:RewriterBook
 
@@ -564,13 +566,14 @@
             ~ firstChar_storyStatus = story_storyEnded
             ~ player_movementsCounter = 0
             ~ PG_advance_management(FirstCharacter)
-            ~ numberQuestion = 0
-            ~ firstChar_InkLevel = ink_empty
-
+            
             Credo resterò ancora un po' in giro.
             Ma senza altri pipponi per te, promesso!
             E cerca di riposarti, non voglio che mi schiodi.
-            
+            - (bookUpdate)
+
+            ~ numberQuestion = 0
+            ~ firstChar_InkLevel = ink_empty
             @animation:RewriterBook
             
         -> main  

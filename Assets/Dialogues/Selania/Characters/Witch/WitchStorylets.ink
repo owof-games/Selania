@@ -41,6 +41,7 @@
     <i>Una calle di saggezza e spiritualità.
     <i>Ogni scelta e ogni passo accumulano visioni del mondo.
     <i>Raccontando la storia di chi cammina.
+    - (bookUpdate)
 
 ->->
 
@@ -118,6 +119,7 @@
             - (nameWitch)
         <i>Queste radici cercano di imparare le voci del terreno.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
         <i>E il terreno ci racconta che {player_name} ha appena compiuto qualcosa di importante.
+        - (bookUpdate)
         
             ~ player_somethingStrange ++
                 {
@@ -130,7 +132,7 @@
                     - not witch_feedback.third_story_ended_check && thirdChar_storyStatus == story_storyEnded:
                         -> witch_feedback.third_story_ended_check
                 }
-
+        
 
 === foundLibro
     <i>Un libro.#speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
@@ -172,7 +174,8 @@
         <i>A volte il libro usa la nostra voce.
         <i>A volte ritrova altri nomi e parole.
         <i>In una canzone collettiva che guida {player_name} alla comprensione.
-
+    
+    - (bookUpdate)
     -> main
 
 
@@ -200,7 +203,7 @@
  
         + [Scelta viola.]
             -> color_variation_management(PG, purpleC)->
-        -        
+        - (bookUpdate)       
             -> main  
 
 

@@ -152,6 +152,8 @@
         Ma mi stavo dimenticando di dirti cosa devi fare.
         Perché se sei qui, è per uno scopo, uno scopo davvero importante, {player_name}.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
 
+        - (bookUpdate)
+
                 ~ mentor_pauseTalking = mentor_pauseDuration
                 ~ move_entity(FifthRecap, BookPlace)
                 ~ move_entity(RulesRecap, BookPlace)
@@ -275,7 +277,8 @@
             }
             - (sbadata)
         A dopo!#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry    
-        
+            - (bookUpdate)
+
             ~ move_entity(RulesRecap, BookPlace)      
             ~ mentor_pauseTalking = mentor_pauseDuration
             //Con questa voce evito che "ink_and_rewriting" compaia subito dopo se le condizioni sono sensate.
@@ -362,16 +365,14 @@
 
             Ricorda {player_name}: sei una guida, ma sta alla persona decidere alla fine chi è, e di cosa ha bisogno.
             Quando te la senti, affronta questo ultimo passaggio e poi torna da me.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_neutral
-            
+            - (bookUpdate)
+
                 ~ mentor_pauseTalking = mentor_pauseDuration
                 @animation:RewriterBook
                 ~ mentor_tutorialPauses = true
                 
                 -> main
         
-        
-
-
 
 //Minitutorial sui minigame
 === about_greenhouse
@@ -404,11 +405,12 @@
     Gli effetti dei doni tra l'altro sono immediati e permanenti.#speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)}#inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)} #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_hurry
     Ed è per questo che ogni riscrittorə può darne solo uno a persona.
     Qualcosa di così forte non può certo essere usato senza coscienza. #speaker:{mentor_tag()} #inkA:{ink_tag_a(fifthChar_InkLevel)} #inkB:{ink_tag_b(fifthChar_InkLevel)} #inkC:{ink_tag_c(fifthChar_InkLevel)}  #inkD:{ink_tag_d(fifthChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:mentore_sorry
+    - (bookUpdate)
+
             @animation:RewriterBook
             ~ mentor_tutorialPauses = true
             ~ mentor_pauseTalking = mentor_pauseDuration
     -> main
-
 
 
 === about_kitchen
@@ -437,6 +439,7 @@
                     O per bruciare cose strane e vedere cosa succede!#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)} #ewWord:{em_state(Influenced)} #portrait:riccio_angry
                     
             }
+    - (bookUpdate)
 
         @animation:RewriterBook
         ~ mentor_tutorialPauses = true
@@ -460,6 +463,8 @@
                 - are_two_entities_together(FirstCharacter, PG): Commento Chitarra!#speaker:{firstChar_tag()} #inkA:{ink_tag_a(firstChar_InkLevel)} #inkB:{ink_tag_b(firstChar_InkLevel)}  #inkC:{ink_tag_c(firstChar_InkLevel)}  #inkD:{ink_tag_d(firstChar_InkLevel)}  #ewWord:{em_state(Influenced)} #portrait:chitarra_annoyed 
                     
             } 
+    - (bookUpdate)
+
     @animation:RewriterBook
     ~ mentor_pauseTalking = mentor_pauseDuration
     ~ mentor_tutorialPauses = true
@@ -495,7 +500,8 @@
     E alcuni di questi possono anche offrirti qualche strumento che, sinceramente, nemmeno avevo calcolato.
     Ma ricorda che non sono passaggi obbligatori.
     Fai sempre e solo quello di cui senti il bisogno.
-
+    - (bookUpdate)
+    
         ~ mentor_pauseTalking = mentor_pauseDuration
         ~ mentor_tutorialPauses = true
         -> main
