@@ -189,7 +189,7 @@
 
     {
         - food_gift_second_char.bookUpdate:
-            {charNameTwo} ha donato a {mentorName} un suo piatto, che si chiama PanTutto. E ha raccontato a {mentorName} e {playerName} che a casa è spesso da solo e per questo ha imparato a cucinare cose inventate. E parlando di cibo e dolci, {charNameTwo} e {mentorName} hanno fatto ufficialmente pace.
+            {charNameTwo} ha donato a {mentorName} un suo piatto, che si chiama PanTutto. E ha raccontato a {mentorName} e {player_name} che a casa è spesso da solo e per questo ha imparato a cucinare cose inventate. E parlando di cibo e dolci, {charNameTwo} e {mentorName} hanno fatto ufficialmente pace.
     }
     {
         - open_the_library.bookUpdate:
