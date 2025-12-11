@@ -9,230 +9,108 @@
     ~ temp mentorName = translator(mentor_ActualName)
         
 
-<b><i>Appunti dalle conversazioni.</b></i> Ho incontrato una persona che mi ha detto di chiamarla Mentore, perché mi farà da guida in questo luogo. E dopo avermi chiesto nomi e pronomi, mi ha {player_pronouns has him:invitato|{player_pronouns has her:invitata|invitatə}} a parlare con le persone che trovo in giro. {you_are_a_rewriter: Per poi dirmi che sono {player_pronouns has him:un riscrittore|{player_pronouns has her:una riscrittora|unə riscrittorə}}, e darmi un po' di indicazioni su cosa dovrei fare.}
-
-{that_little_liar_storylet: Dopo l'arrivo del bimbo, la prima cosa che mi ha chiesto è se son {player_pronouns has him:riuscito|{player_pronouns has her:riuscita|riuscitə}} a mandarlo a casa. Dice che qui non è sicuro per i bambini, che lui le ha tirato un calcio. Ma che le fa tenerezza, e per questo gli sembra un Riccio.}
-
+<b><i>Appunti dalle conversazioni.</b></i> 
 
 {
-    - knowing_fifth_character.five:
-        Da quando sono qui, per la prima volta Mentore ha ammesso di essere stanca. E di sentire caldo. E poi si è lasciata andare ai ricordi: il suo primo bacio, l'uomo che ha sposato. A cui ha dedicato il resto dei suoi giorni, fino a quando non è arrivata qui. E mi ha chiesto cosa significa per me amare un'altra persona. Per poi definirsi una "sciocca romantica", e dirmi che l'amore è ovunque, anche qui. Amore per noi.
-    
+    - the_witch_and_the_mentor.bookUpdate:
+        {mentorName} ha chiesto a {player_name} di intercedere con noi, per sapere cosa noi pensiamo di {mentorName}. Noi abbiamo risposto a {player_name} che {mentorName} sta facendo un buon lavoro, ma che così come l'acqua non può essere incendio, così {mentorName} non può essere qualcosa che non è. Dopo uno scambio con {player_name}, {mentorName} ha detto che deve essere difficile avere una voce in testa, ma che magari fa sentire meno solə.
+}
+{
+    - frog_and_mentor_chit_chat.bookUpdate:
+        {mentorName} e Franco La Rana hanno discusso. E quando {mentorName} si è allontanata, Franco ha aggiunto di non ricordare l'esistenza di alcun mentore da queste parti.
+}
+{
+    - first_mentor_chit_chat.bookUpdate:
+        Dopo che {charNameOne} ha detto a {mentorName} che la invidia perché la sua vita ha uno scopo chiaro, {mentorName} le ha detto che anche lei ha uno scopo, deve solo scoprirlo. A quel punto si sono messe a discutere sul valore della felicità: per {mentorName} è qualcosa da trovare nelle piccole cose, ma per {charNameOne} questa è una frase da persona privilegiata, che fa ciò che ama. Dopo l'intervento di {player_name}, {charNameOne} ha detto a {mentorName} che per lo meno deve imparare a prendersi i commenti di stima e goderseli.
 }
 
-
-
 {
-    - knowing_fifth_character.four:
-        Ora che {charNameTwo} ha trovato il suo nome, Mentore si chiede se non sia stata troppo severa con lui. Dice che era spaventata, e forse ha reagito con violenza. Si è chiesta cosa possa significare essere un genitore che si rende conto che suo figlio, così piccolo, ha già perso la sua strada. E perché non pensa al pallone, o allo studio, invece che al futuro e all'ambiente.
+    - a_story_of_transformation.bookUpdate:
+        Dopo aver letto il racconto <b>Il cancello</b>, {mentorName} ha chiesto a {player_name} se non si è mai sentit{player_pronouns has him:o|{player_pronouns has her:a|ə}} così stanc{player_pronouns has him:o|{player_pronouns has her:a|ə}} da volere sparire per un po' dal mondo.
 }
 
-
 {
-    - knowing_fifth_character.three:
-        Mentore mi ha raccontato che a volte ci sono persone, persone passate da qui, che vorrebbe sentire più spesso. Ma le loro lettere non arrivano, o arrivano sempre più di rado E allora si chiede se ha sbagliato qualcosa.
-    
+    - about_violence_and_peace.bookUpdate:
+        {mentorName} e {charNameTwo} hanno provato a chiarirsi. {mentorName} con un po' di fatica ha ammesso che non avrebbe dovuto fare male a {charNameTwo}. E quando lui ha reagito senza entusiasmo, ci è rimasta male. A quel punto {charNameTwo} ha detto a {mentorName} che "I grandi chiedono sempre scusa per tutte le cose ma poi le rifanno. Poi piangono e chiedono scusa. E poi le rifanno.". Lei ha detto che ci crede davvero, ma {charNameTwo} se ne è andato.
 }
 
-
-
 {
-    - knowing_fifth_character.two:
-        Mentore è rimasta colpita da come {charNameOne} sia stata insieme consapevole delle opinioni delle persone care, eppure capace di non perdere sé stessa. E poi mi ha chiesto di pregare per lei.
+    - addressing_violence.bookUpdate:
+        {mentorName} ha ripreso la conversazione sulla stretta che ha dato al braccio di {charNameTwo}. Ha iniziato dicendo a {player_name} che non le piace arrabbiarsi, ma poi ha tentennato per un po'. E dopo uno scambio con {player_name} ha deciso di chiedere scusa a {charNameTwo}.
+
 }
 
-
+{
+    - that_little_liar_storylet.bookUpdate: 
+        Dopo l'arrivo di {charNameTwo}, la prima cosa che {mentorName} ha chiesto a {player_name} è se è {player_pronouns has him:riuscito|{player_pronouns has her:riuscita|riuscitə}} a mandarlo a casa. Dice che qui non è sicuro per i bambini, che lui le ha tirato un calcio. Ma che le fa tenerezza, e per questo gli sembra un riccio.
+}
 
 {
-    - knowing_fifth_character.one:
-        Durante una chiacchierata, Mentore mi ha raccontato che il suo posto preferito è la serra, perché vedere crescere le cose la fa sentire appagata, la sensazione di permettere con le proprie mani a un altro corpo di crescere al meglio.
+    - knowing_mentor_character.five.bookUpdate:
+        Da quando {player_name} è qui, per la prima volta {mentorName} ha ammesso di essere stanca. E di sentire caldo. E poi si è lasciata andare ai ricordi: il suo primo bacio, l'uomo che ha sposato. A cui ha dedicato il resto dei suoi giorni, fino a quando non è arrivata qui. Ha chiesto a {player_name} cosa significa per {player_pronouns has him:lui|{player_pronouns has her:lei|ləi}} amare un'altra persona. Per poi definirsi una "sciocca romantica", e dirmi che l'amore è ovunque, anche qui. Amore per noi.
+}
+
+{
+    - knowing_mentor_character.four.bookUpdate:
+        Ora che {charNameTwo} ha trovato il suo nome, {mentorName} si chiede se non sia stata troppo severa con lui. Dice che era spaventata, e forse ha reagito con violenza. Si è chiesta cosa possa significare essere un genitore che si rende conto che suo figlio, così piccolo, ha già perso la sua strada. E perché non pensa al pallone, o allo studio, invece che al futuro e all'ambiente.
+}
+
+{
+    - knowing_mentor_character.three.bookUpdate:
+        {mentorName} ha raccontato a {player_name} che a volte ci sono persone, persone passate da qui, che vorrebbe sentire più spesso. Ma le loro lettere non arrivano, o arrivano sempre più di rado E allora si chiede se ha sbagliato qualcosa.
+}
+
+{
+    - knowing_mentor_character.two.bookUpdate:
+        {mentorName} è rimasta colpita da come {charNameOne} sia rimasta così bloccata da tutte le possibilità che ha avuto davanti a sé. Però poi ha aggiunto che forse si è dimenticata di quanto possa essere facile perdere sé stesse quando si è giovani.
+}
+
+{
+    - knowing_mentor_character.one.bookUpdate:
+        Durante una chiacchierata, {mentorName} ha raccontato a {player_name} che il suo posto preferito è la serra, perché vedere crescere le cose la fa sentire appagata, la sensazione di permettere con le proprie mani a un altro corpo di crescere al meglio.
+}
+{
+    - welcome:
+        {player_name} ha incontrato una persona che {player_pronouns has him:gli|{player_pronouns has her:le|lə}} ha detto di chiamarla {mentorName}, perché {player_pronouns has him:gli|{player_pronouns has her:le|lə}} farà da guida in questo luogo. E dopo aver{player_pronouns has him:gli|{player_pronouns has her:le|lə}} chiesto nomi e pronomi, l'ha {player_pronouns has him:invitato|{player_pronouns has her:invitata|invitatə}} a parlare con le persone che trova in giro. {you_are_a_rewriter: Per poi dir{player_pronouns has him:gli|{player_pronouns has her:le|lə}} che è {player_pronouns has him:un riscrittore|{player_pronouns has her:una riscrittora|unə riscrittorə}}, e dar{player_pronouns has him:gli|{player_pronouns has her:le|lə}} un po' di indicazioni su cosa dovrebbe fare.}
 }
 
 
 //Da riordinare
 
-{
-    - knowing_fifth_character.six: prima informazione.
+// {
+//     - knowing_mentor_character.six: prima informazione.
     
-}
+// }
 
-{
-    - knowing_fifth_character.seven: prima informazione.
+// {
+//     - knowing_mentor_character.seven: prima informazione.
     
-}
+// }
 
-{
-    - knowing_fifth_character.eight: prima informazione.
+// {
+//     - knowing_mentor_character.eight: prima informazione.
     
-}
+// }
 
-{
-    - knowing_fifth_character.nine: prima informazione.
+// {
+//     - knowing_mentor_character.nine: prima informazione.
     
-}
+// }
 
-{
-    - knowing_fifth_character.ten: prima informazione.
+// {
+//     - knowing_mentor_character.ten: prima informazione.
     
-}
+// }
 
-{
-    - knowing_fifth_character.eleven: prima informazione.
+// {
+//     - knowing_mentor_character.eleven:
+//     prima informazione.
     
-}
+// }
+// {
+//     - knowing_mentor_character.twelve:
+//     prima informazione.
 
-{
-    - knowing_fifth_character.twelve: prima informazione.
-    
-}
-
-
-
-{
-    - rewriting_proposal_first_character.secret_ending: 
-    Dopo aver concluso la sua riscrittura, {charNameOne} mi ha chiesto qual è secondo me il confine tra essere una brava persona ed essere una manipolatrice, riferendosi a {mentorName}.
-}
-
-{
-    - rewriting_proposal_second_character.secret_ending: 
-    Dopo aver scelto il suo nome, {charNameTwo} mi ha detto che {mentorName} non gli sembra felice. Che gli ricorda mamma quando gira per casa dando cosnigli e dicendo cose sorridendo, per poi rinchiudersi in camera e restare in silenzio per ore.
-}
-
-//Appunto sul dono fatto
-{
-    - fifth_story_gift.ink_outcome:
-    {
-    
-        - fifthChar_giftedObject == EderaDelleAmanti:
-            Ho donato dell'Edera delle Amanti e la reazione è stata:
-        - fifthChar_giftedObject == BaccaDellaAddolorata:
-            Ho donato della Bacca dell'Addolorata e la reazione è stata:
-        - fifthChar_giftedObject == LaSpazzata:
-            Ho donato della Spazz == BrinaDellImpossibile: 
-            Ho donato della Brina dell'Impossibile e la reazione è stata:
-        - fifthChar_giftedObject == CantoDelleCompagne: 
-            Ho donato del Canto delle Compagne e la reazione è stata:
-        - fifthChar_giftedObject == LicheneDegliAbissi: 
-            Ho donato del Lichene degli Abissi e la reazione è stata:
-        - fifthChar_giftedObject == NonTiScordarDiTe: 
-            Ho donato del Non Ti Scordar Di Te e la reazione è stata:
-        - fifthChar_giftedObject == CardoAspinato: 
-            Ho donato del Cardo Aspinato e la reazione è stata:
-    
-    }    
-
-}
-
-
-//Eventuale commento della rana.
-
-{main_story_fifth_character: confessione.}
-
-{main_story_fifth_character.ending: Dopo la nostra conversazione, ha scelto un nuovo nome: {mentor_ActualName}.}
-
-{fifth_character_feedback: Dopo aver aiutato {mentor_ActualName}, {mentor_ActualName} mi ha detto che<>}
-{
-    - fifthChar_possibleStates has Grizzly: feedback Mentore
-        
-    - fifthChar_possibleStates has Lupo: feedback Mentore
-                    
-    - fifthChar_possibleStates has Delfino:feedback Mentore
-                    
-    - fifthChar_possibleStates has Capibara:feedback Mentore
-    
-    - fifthChar_possibleStates has Corvo:feedback Mentore
-}
-
-
-{
-    - first_character_notes.one:
-        <b>Lettere di {charNameOne}.</b></i>
-    
-    
-        Ciao {player_name}, come stai? Alla fine Talco è sempre statə qui, me idiota. E ha creduto alla mia storia! Ora si è messə in testa di insegnare agli scoiattoli a suonare le noci. <>
-
-           {
-                - firstChar_possibleStates has Triangolo:
-                    Io, invece, non riesco a prendere uno strumento in mano da che sono tornata. <>
-                    
-                - firstChar_possibleStates has RagazzaOrchestra:
-                    Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi. <>
-                    
-                - firstChar_possibleStates has FlautoDolce:
-                    Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
-                    E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
-                    Tu e quel posto mi avete reso una mollacciona.
-                    Ma non è così male, alla fine. <>
-                    
-                - firstChar_possibleStates has Ocarina:
-                    Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
-                    Se lo dico a mio padre mi fa ricoverare subito, ma amen.
-                    Sono felice ama, davvero felice. <>
-                    
-                - firstChar_possibleStates has Violino:
-                    Io invece mi sono resa conto che forse, con la musica, possiamo parlare con gli animali.
-                    No, non ho esagerato col vinello.
-                    Ma pensaci, ama: se così fosse, potrei dimostrare che siamo tutt3 collegat3, che potremmo parlarci e comunicare tra noi! <>
-            }
-        Spero che lì vada tutto bene. E che {mentorName} non sia sempre pesantona. Alla prossima lettera. <i>{charNameOne}</i>
-}
-
-{fifth_character_notes.one: Dopo la sua partenza, {mentor_ActualName} mi ha scritto una lettera, dove mi ha raccontato che<>}
-{
-    - fifthChar_possibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
-        
-    - fifthChar_possibleStates has Lupo: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
-                    
-    - fifthChar_possibleStates has Delfino:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
-        E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
-        Tu e quel posto mi avete reso una mollacciona.
-        Ma non è così male, alla fine.
-                    
-    - fifthChar_possibleStates has Capibara:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
-        Se lo dico a mio padre mi fa ricoverare subito, ma amen.
-        Sono felice ama, davvero felice.
-                    
-    - fifthChar_possibleStates has Corvo:
-        sddd
-}
-
-{fifth_character_notes.two: Nella sua seconda lettera {mentor_ActualName} mi ha scritto una lettera, dove mi ha raccontato che<>}
-{
-    - fifthChar_possibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
-        
-    - fifthChar_possibleStates has Lupo: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
-                    
-    - fifthChar_possibleStates has Delfino:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
-        E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
-        Tu e quel posto mi avete reso una mollacciona.
-        Ma non è così male, alla fine.
-                    
-    - fifthChar_possibleStates has Capibara:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
-        Se lo dico a mio padre mi fa ricoverare subito, ma amen.
-        Sono felice ama, davvero felice.
-                    
-    - fifthChar_possibleStates has Corvo:
-        sddd
-}
-
-
-{fifth_character_notes.three: Nella sua terza lettera {mentor_ActualName} mi ha scritto una lettera, dove mi ha raccontato che<>}
-{
-    - fifthChar_possibleStates has Grizzly: Io, invece, non riesco a prendere uno strumento in mano da che sono tornata.
-        
-    - fifthChar_possibleStates has Lupo: Questa piccola idiota invece (me) ha deciso di creare un piccolo esercito di suonatrici in difesa degli alberi.
-                    
-    - fifthChar_possibleStates has Delfino:Io invece per la prima volta sto provando a comporre un brano da cantare con tutte le persone a cui voglio bene.
-        E quando mi demoralizzo, Talco è subito lì a tirarmi su di morale.
-        Tu e quel posto mi avete reso una mollacciona.
-        Ma non è così male, alla fine.
-                    
-    - fifthChar_possibleStates has Capibara:Io invece sto addestrando due topolini per suonare lo xilofono, e se la cavano alla grande!
-        Se lo dico a mio padre mi fa ricoverare subito, ma amen.
-        Sono felice ama, davvero felice.
-                    
-    - fifthChar_possibleStates has Corvo:
-        sddd
-}
+// }
 
 -> rewriter_book_with_flow

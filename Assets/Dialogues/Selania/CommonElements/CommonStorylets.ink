@@ -267,7 +267,6 @@
     R: Ma non cambia il fatto che mi stai dando o del bugiardo o dello smemorato.
     M: Io non l'ho detto!
     R: Ma l'hai implicato.
-    R: E ampliato.
     R: Che non è ampilato, perché i lati non sono ampi.
     R: Questo lo dice sempre Euforbo.
     M: AAAAAAAARG!

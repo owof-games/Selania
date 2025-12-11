@@ -386,6 +386,10 @@
             Dopo aver letto <b>Luna vergine</b> di Aza, {charNameOne} ha raccontato di non avere un buon rapporto con la rabbia, ma di aver sentito il desiderio, leggendo il racconto, di morsicare anche lei il tizio, di tirare fuori gli artigli. E per la prima volta ha visto la rabbia non come qualcosa da evitare ma come un segnale, l'allarme che scatta perché è stato superato un confine invalicabile.
     }
     {
+    - first_mentor_chit_chat.bookUpdate:
+        Dopo che {charNameOne} ha detto a {mentorName} che la invidia perché la sua vita ha uno scopo chiaro, {mentorName} le ha detto che anche lei ha uno scopo, deve solo scoprirlo. A quel punto si sono messe a discutere sul valore della felicità: per {mentorName} è qualcosa da trovare nelle piccole cose, ma per {charNameOne} questa è una frase da persona privilegiata, che fa ciò che ama. Dopo l'intervento di {player_name}, {charNameOne} ha detto a {mentorName} che per lo meno deve imparare a prendersi i commenti di stima e goderseli.
+    }
+    {
         - frog_and_first_char_chit_chat.bookUpdate:
             Anche {charNameOne} ha perso la pazienza con Franco La Rana.
     }
