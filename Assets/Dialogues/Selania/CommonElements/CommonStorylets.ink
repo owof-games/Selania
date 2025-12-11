@@ -90,7 +90,7 @@
     - (bookUpdate)
             ~ firstChar_pauseTalking = firstChar_pauseDuration
             ~ secondChar_pauseTalking = secondChar_pauseDuration
-            ~ actual_speaker = ()
+            @animation:RewriterBook
         -> main    
 
 === about_violence_and_peace
@@ -130,8 +130,7 @@
                 ~ change_entity_place(SecondCharacter)
                 ~ mentor_pauseTalking = mentor_pauseDuration
                 ~ secondChar_pauseTalking = secondChar_pauseDuration
-                ~ actual_speaker = ()
-        
+        @animation:RewriterBook
         -> main
 
 === special_mission_one_dialogue
@@ -164,6 +163,7 @@
                 -    
     Finisce la scena. #speaker:{witch_tag()} #inkA:offState #inkB:offState #inkC:offState #inkD:offState #ewWord:{em_state(Other)} #portrait:{witch_state()}
     - (bookUpdate)
+        @animation:RewriterBook
         ~ secondChar_pauseTalking = secondChar_pauseDuration
         ~ mentor_pauseTalking = mentor_pauseDuration
         ~ actual_speaker = ()
@@ -236,6 +236,7 @@
     C: Non sono vecchia come te, ma so che non sono tanti gli elogi che ci vengono dati in vita.
     - (bookUpdate)
 
+        @animation:RewriterBook
         ~ firstChar_pauseTalking = firstChar_pauseDuration
         ~ mentor_pauseTalking = mentor_pauseDuration
         -> main
@@ -288,7 +289,8 @@
                 C: No, non è vero: non ce la posso fare.
                     ~ change_entity_place(FirstCharacter)
         }
-    - (bookUpdate)    
+    - (bookUpdate)
+        @animation:RewriterBook   
         -> main
 
 
@@ -357,6 +359,7 @@
     - (bookUpdate)   
         ~ firstChar_pauseTalking = firstChar_pauseDuration
         ~ mentor_pauseTalking = mentor_pauseDuration
+        @animation:RewriterBook
             -> main
 
 
@@ -381,7 +384,7 @@
     C: Qualcuno mi soffochi, ora.
          ~ change_entity_place(FirstCharacter)
     - (bookUpdate)
-
+    @animation:RewriterBook
         -> main
 
 === frog_and_second_char_chit_chat
@@ -427,4 +430,5 @@
                 Comincio a sospettare che questa rana faccia più danni di quanto pensassi.
         }
     - (bookUpdate)
+    @animation:RewriterBook
         -> main

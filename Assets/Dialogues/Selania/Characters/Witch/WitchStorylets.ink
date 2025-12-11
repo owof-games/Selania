@@ -42,7 +42,7 @@
     <i>Ogni scelta e ogni passo accumulano visioni del mondo.
     <i>Raccontando la storia di chi cammina.
     - (bookUpdate)
-
+    @animation:RewriterBook
 ->->
 
 
@@ -174,7 +174,7 @@
         <i>A volte il libro usa la nostra voce.
         <i>A volte ritrova altri nomi e parole.
         <i>In una canzone collettiva che guida {player_name} alla comprensione.
-    
+    @animation:RewriterBook
     - (bookUpdate)
     -> main
 
