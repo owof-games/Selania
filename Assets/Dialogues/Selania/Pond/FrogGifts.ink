@@ -259,16 +259,16 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                     La prossima volta che coltivi qualcosa in serra vedrai che sarà il dono giusto per {charNameOne}!
                     {
                         - greenhouse_frog_nextCultivableOne == ():
-                            ~ greenhouse_frog_nextCultivableOne = CantoDelleCompagne
-                            ~ frog_first_char_ingredient = "{ingredientTranslator(CantoDelleCompagne)}"
+                            ~ greenhouse_frog_nextCultivableOne = BaccaDellaAddolorata
+                            ~ frog_first_char_ingredient = "{ingredientTranslator(BaccaDellaAddolorata)}"
                             
                         - greenhouse_frog_nextCultivableTwo == () && greenhouse_frog_nextCultivableOne != ():
-                            ~ greenhouse_frog_nextCultivableTwo = CantoDelleCompagne
-                            ~ frog_first_char_ingredient = "{ingredientTranslator(CantoDelleCompagne)}"
+                            ~ greenhouse_frog_nextCultivableTwo = BaccaDellaAddolorata
+                            ~ frog_first_char_ingredient = "{ingredientTranslator(BaccaDellaAddolorata)}"
                             
                         - greenhouse_frog_nextCultivableThree == () && greenhouse_frog_nextCultivableTwo != ():
-                            ~ greenhouse_frog_nextCultivableThree = CantoDelleCompagne
-                            ~ frog_first_char_ingredient = "{ingredientTranslator(CantoDelleCompagne)}"
+                            ~ greenhouse_frog_nextCultivableThree = BaccaDellaAddolorata
+                            ~ frog_first_char_ingredient = "{ingredientTranslator(BaccaDellaAddolorata)}"
                         - else:
                             ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
                     }
@@ -279,18 +279,20 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                     E l'hai già nello zainetto.
                     Scusa se ho spiato.
                     E ora il tuo amico Franco ti dà un indizio:
-                    {
-                        - backpack_findedGifts has CantoDelleCompagne: 
-                        Pensa a quanto piacere a {charNameOne} lo stare con persone amiche, e chiediti cosa ricordi una festa.
-                            ~ frog_first_char_ingredient = "qualcosa che parli del piacere dello stare con persone amiche"
-                        
+                    {   
+
+
                         - backpack_findedGifts has BaccaDellaAddolorata: 
-                        Pensa alla difficoltà di {charNameOne} di fare il primo passo, di accogliere il cambiamento. Quale pianta racconta questa cosa?
-                            ~ frog_first_char_ingredient = "qualcosa che parli del fare il primo passo, di accogliere il cambiamento"
-                        
-                        - else:
+                            Pensa alla difficoltà di {charNameOne} di fare il primo passo, di accogliere il cambiamento. Quale pianta racconta questa cosa?
+                             ~ frog_first_char_ingredient = "qualcosa che parli del fare il primo passo, di accogliere il cambiamento" 
+
+                        - backpack_findedGifts has NonTiScordarDiTe: 
                             {charNameOne} ama suo padre. Quale pianta può ricordarglielo?
-                            ~ frog_first_char_ingredient = "qualcosa che parli di chi fa parte di noi, delle nostre radici"
+                             ~ frog_first_char_ingredient = "qualcosa che parli di chi fa parte di noi, delle nostre radici"
+
+                        - else:
+                            Pensa a quanto piacere a {charNameOne} lo stare con persone amiche, e chiediti cosa ricordi una festa.
+                                ~ frog_first_char_ingredient = "qualcosa che parli del piacere dello stare con persone amiche"
                     }
                     Chiaro, no?
                         -> closed_exchange
@@ -308,10 +310,6 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                     E quindi ci penso io a ridartelo!
                     Ecco qui un po' di <>
                         {
-                            - growthCantoDelleCompagne == stepThree:Canto delle Compagne.
-                                    ~ backpack_findedGifts += CantoDelleCompagne
-                                    ~ frog_first_char_gift = "{ingredientTranslator(CantoDelleCompagne)}"
-                                    
                             - growthBaccaDellaAddolorata == stepThree:Bacca Della Addolorata.
                                     ~ backpack_findedGifts += BaccaDellaAddolorata
                                     ~ frog_first_char_gift = "{ingredientTranslator(BaccaDellaAddolorata)}"
@@ -319,9 +317,14 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                             - growthNonTiScordarDiTe == stepThree:Non Ti Scordar di Te.
                                     ~ backpack_findedGifts += NonTiScordarDiTe
                                     ~ frog_first_char_gift = "{ingredientTranslator(NonTiScordarDiTe)}"
+
+                            - growthCantoDelleCompagne == stepThree:Canto delle Compagne.
+                                    ~ backpack_findedGifts += CantoDelleCompagne
+                                    ~ frog_first_char_gift = "{ingredientTranslator(CantoDelleCompagne)}"
+
                         }
                     
-                    Te l'ho messo nello zaino.
+                    Ce l'hai già nello zaino.
                     Sono così veloce che ti sono sembrato fermo, vero?
                     @animation: Backpack
                     -> closed_exchange
@@ -510,16 +513,16 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                         {
                         
                             - greenhouse_frog_nextCultivableOne == ():
-                                ~ greenhouse_frog_nextCultivableOne = BastoneDellOzioso
-                                ~ frog_second_char_ingredient = "{ingredientTranslator(BastoneDellOzioso)}"
+                                ~ greenhouse_frog_nextCultivableOne = BrinaDellImpossibile
+                                ~ frog_second_char_ingredient = "{ingredientTranslator(BrinaDellImpossibile)}"
                                 
                             - greenhouse_frog_nextCultivableTwo == () && greenhouse_frog_nextCultivableOne != ():
-                                ~ greenhouse_frog_nextCultivableTwo = BastoneDellOzioso
-                                ~ frog_second_char_ingredient = "{ingredientTranslator(BastoneDellOzioso)}"
+                                ~ greenhouse_frog_nextCultivableTwo = BrinaDellImpossibile
+                                ~ frog_second_char_ingredient = "{ingredientTranslator(BrinaDellImpossibile)}"
                                 
                             - greenhouse_frog_nextCultivableThree == () && greenhouse_frog_nextCultivableTwo != ():
-                                ~ greenhouse_frog_nextCultivableThree = BastoneDellOzioso
-                                ~ frog_second_char_ingredient = "{ingredientTranslator(BastoneDellOzioso)}"
+                                ~ greenhouse_frog_nextCultivableThree = BrinaDellImpossibile
+                                ~ frog_second_char_ingredient = "{ingredientTranslator(BrinaDellImpossibile)}"
                                 
                             - else:
                                 ERROR: non ci sono slot nextCultivable liberi, o la formula ha riscontrato un errore.
@@ -533,17 +536,21 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                     Scusa se ho spiato.
                     E ora il tuo amico Franco ti dà un indizio:
                         {
-                            -backpack_findedGifts has BastoneDellOzioso:
-                                Pensa a quanto piacere a {charNameTwo} a viversi le cose per il piacere di farle. Quale pianta racconta questa storia?
-                                ~ frog_second_char_ingredient = "qualcosa che parli del viversi le cose per il piacere di farle"
                             
                             -backpack_findedGifts has BrinaDellImpossibile: 
                                 Pensa al bisogno di {charNameTwo} di comprendere che le ferite non ci bloccano nel passato. Quale pianta può aiutarlo?
                                 ~ frog_second_char_ingredient = "qualcosa che aiuti a comprendere le ferite che bloccano nel passato"
                             
-                            - else:
+                            
+                            -backpack_findedGifts has LicheneDegliAbissi:
                                 La relazione tra i genitori di {charNameTwo} è poco equilibrata. Quale pianta può farglielo capire?
                                     ~ frog_second_char_ingredient = "qualcosa che aiuti a capire che la relazione tra i suoi genitori non è equilibrata"
+
+                            
+                            - else:
+                                Pensa a quanto piacere a {charNameTwo} a viversi le cose per il piacere di farle. Quale pianta racconta questa storia?
+                                    ~ frog_second_char_ingredient = "qualcosa che parli del viversi le cose per il piacere di farle"
+
                         }
                     Chiaro, no?
                         -> closed_exchange
@@ -560,11 +567,7 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                     Perché tu l'avevi già la cosa perfetta per {charNameTwo}, solo che poi l'hai già usata.
                     Ma Franco il camion è qui per aiutarti!
                     Ecco qui un po' di <>
-                        {
-                            - growthBastoneDellOzioso == stepThree:Bastone dell'Ozioso.
-                                    ~ backpack_findedGifts += BastoneDellOzioso
-                                    ~ frog_second_char_gift = "{ingredientTranslator(BastoneDellOzioso)}"
-                                    
+                        {            
                             - growthBrinaDellImpossibile == stepThree:Brina dell'Impossibile.
                                     ~ backpack_findedGifts += BrinaDellImpossibile
                                     ~ frog_second_char_gift = "{ingredientTranslator(BrinaDellImpossibile)}"
@@ -572,7 +575,10 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                             - growthLicheneDegliAbissi == stepThree:Lichene degli Abissi.
                                     ~ backpack_findedGifts += LicheneDegliAbissi       
                                     ~ frog_second_char_gift = "{ingredientTranslator(LicheneDegliAbissi)}"
-                                    
+
+                            - growthBastoneDellOzioso == stepThree:Bastone dell'Ozioso.
+                                    ~ backpack_findedGifts += BastoneDellOzioso
+                                    ~ frog_second_char_gift = "{ingredientTranslator(BastoneDellOzioso)}"
                         }
                     No dai, rimaniamo con Franco la rana, sennò poi ti confondi.
                     Te l'ho messo nello zaino.
