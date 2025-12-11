@@ -15,78 +15,34 @@
 
 {
     - first_character_notes.three.bookUpdate:
-        <b><i>Terza lettera di {charNameOne}.</b></i>: <>
-        Ciao ama!
+        <b><i>Terza lettera di {charNameOne}.</b></i><N>Ciao ama!
     
      {
             - firstChar_ActualName has Triangolo:
                 Qui...<N>Uh.<N>Continua a piacermi questa cosa di essere {charNameOne}, ma non è facilissima.<N>Talco ha rimandato per due volte i nostri incontri, e credo sia una scusa.<N>E a lavoro sembra che non rinnoveranno i contratti a nessunə.<N>Hanno già fatto arrivare tre persone nuove, e Luca sta facendo di tutto per tenercele lontane.<N>Ho questa sensazione strana.
+                
                 Che sia facile dire "goditi le piccole cose" quando tutto va bene.<N>Ma ora è.<N>È difficile.<N>Però, nota positiva: con Ennio stiamo davvero bene.<N>È come se ci fossimo risintonizzat3.<N>E le sere assieme sono tranquillizzanti.
 
             - firstChar_ActualName has RagazzaOrchestra:
-                Ti sto scrivendo da... Boston!
-                Ok no, questa battuta fa ridere solo una volta.
-                Ti sto scrivendo in realtà <i>dal</i> Boston.
-                Un pub dove Talco giura di aver beccato Björk più di una volta.
-                Un posticino adorabile a Reykjavík.
-                I primi giorni qui sono stati assurdi.
-                Thomas è adorabile ora che è nel suo ambiente naturale.
-                E Talco.
-                Madonna, non l'avrei pensato, ma spacca come genitore.
-                Ennio sta continuando a dirmi che gli manco.
-                Che casa sua è aperta.
-                Ma non ha più parlato della possibilità che lui venga qui.
-                E...
-                Mi va bene così.
-                Per la seconda volta nella mia vita posso fare un reset.
-                Posso provare a essere me stessa.
-                Ma con una consapevolezza che non avevo a diciannove anni.
-                Forse anche per questo sfacciatamente mi sono proposta per suonare in una band locale.
-                E tra qualche sera porteremo due pezzi a un festival jazz.
-                Io.
-                Jazz.
-                Mai pensato.
-                E invece la vita può sempre sorprenderci, vero?
-                E tu?
-                Come stai?
-                Come sta {charNameTwo}?
-                E {mentorName}?
-                Mi mancate.
+                Ti sto scrivendo da... Boston!<N>Ok no, questa battuta fa ridere solo una volta.<N>Ti sto scrivendo in realtà <i>dal</i> Boston.<N>Un pub dove Talco giura di aver beccato Björk più di una volta.<N>Un posticino adorabile a Reykjavík.<N>I primi giorni qui sono stati assurdi.<N>Thomas è adorabile ora che è nel suo ambiente naturale.<N>E Talco.<N>Madonna, non l'avrei pensato, ma spacca come genitore.
+
+                Ennio sta continuando a dirmi che gli manco.<N>Che casa sua è aperta.<N>Ma non ha più parlato della possibilità che lui venga qui.<N>E...<N>Mi va bene così.<N>Per la seconda volta nella mia vita posso fare un reset.<N>Posso provare a essere me stessa.<N>Ma con una consapevolezza che non avevo a diciannove anni.
+
+                Forse anche per questo sfacciatamente mi sono proposta per suonare in una band locale.<N>E tra qualche sera porteremo due pezzi a un festival jazz.<N>Io.<N>Jazz.<N>Mai pensato.<N>E invece la vita può sempre sorprenderci, vero?
+                
+                E tu?<N>Come stai?<N>Come sta {charNameTwo}?<N>E {mentorName}?<N>Mi mancate.
 
             - firstChar_ActualName has FlautoDolce:
-                Stai parlando ufficialmente con la presidentessa di 'sto cazzo de La Rifugia.
-                Siamo una associazione a modino.
-                Ed anche se è una cosa piccola, ne sono felice.
-                E tra le varie, stiamo tirando su un sistema di finanziamento per cantanti emergenti senza cittadinanza.
-                Ed è un casino burocratico che aiuto.
-                Ma la musica che stanno portando quest3 figliol3, non ne hai idea.
-                Per la prima volta ci sono storie e cose che proprio non capisco.
-                E mi va bene così.
-                Ci ho messo una vita a capire che non posso farmi sempre capire da tutt3, ma non per questo la mia storia non conta.
-                E ora sto imparando a fare lo stesso con loro.
-                Sto diventando una persona adulta?
-                Cringe.
-                Ma intanto di mando un abbraccio giganterrimo.
+                Stai parlando ufficialmente con la presidentessa di 'sto cazzo de La Rifugia.<N>Siamo una associazione a modino.<N>Ed anche se è una cosa piccola, ne sono felice.<N>E tra le varie, stiamo tirando su un sistema di finanziamento per cantanti emergenti senza cittadinanza.<N>Ed è un casino burocratico che aiuto.<N>Ma la musica che stanno portando quest3 figliol3, non ne hai idea.<N>Per la prima volta ci sono storie e cose che proprio non capisco.<N>E mi va bene così.
+
+                Ci ho messo una vita a capire che non posso farmi sempre capire da tutt3, ma non per questo la mia storia non conta.<N>E ora sto imparando a fare lo stesso con loro.<N>Sto diventando una persona adulta?<N>Cringe.<N>Ma intanto di mando un abbraccio giganterrimo.
                 
             - firstChar_ActualName has Ocarina:
-                Qui oggi la malinconia imperversa.
-                Mi manca Valeria, mi mancano le ragazze.
-                La Rifugia continua anche senza di me e una piccola piccola parte di me che è vanitosa, si è sentita subito dimenticabile.
-                Ma sono felice perché hanno fatto il primo concerto grandicello di beneficenza.
-                Grandi!
-                E ho riscritto a Talco, raccontandolə quello che sto combinando qui.
-                La prima volta mi ha detto che spostarmi per spostarmi potevo andare da ləi, ma ora sembra più tranquillə sul tema.
-                Ci sono state anche le prime questioni pratiche da affrontare.
-                Tipo che non ho la patente e qui i mezzi pubblici col cavolo che funzionano come su.
-                Per un po' Ennio mi ha detto che avrebbe potuto fare avanti e indietro lui per portarmi a un ipotetico lavoro.
-                Ma poi papà ha fatto un giro di telefonate e mi ha recuperato questo motorino che sicuro sicuro è più vecchio di me.
-                E ora provo a farci avanti e indietro per il cortile dei miei e mi sento come quando ho imparato ad usare la bici da piccola.
-                Ma con più lividi e graffi perché solo la Madonna sa quante volte sono cascata.
-                L'altra sera, dolorante e un po' alticcia, stavo per raccontare di te, del posto.
-                Ma poi le parole non sono venute.
-                Come se fosse proprio un'altra lingua.
-                E forse è meglio così.
-                Credo.
+                Qui oggi la malinconia imperversa.<N>Mi manca Valeria, mi mancano le ragazze.<N>La Rifugia continua anche senza di me e una piccola piccola parte di me che è vanitosa, si è sentita subito dimenticabile.<N>Ma sono felice perché hanno fatto il primo concerto grandicello di beneficenza.<N>Grandi!<N>E ho riscritto a Talco, raccontandolə quello che sto combinando qui.
+
+                La prima volta mi ha detto che spostarmi per spostarmi potevo andare da ləi, ma ora sembra più tranquillə sul tema.<N>Ci sono state anche le prime questioni pratiche da affrontare.<N>Tipo che non ho la patente e qui i mezzi pubblici col cavolo che funzionano come su.<N>Per un po' Ennio mi ha detto che avrebbe potuto fare avanti e indietro lui per portarmi a un ipotetico lavoro.<N>Ma poi papà ha fatto un giro di telefonate e mi ha recuperato questo motorino che sicuro sicuro è più vecchio di me.<N>E ora provo a farci avanti e indietro per il cortile dei miei e mi sento come quando ho imparato ad usare la bici da piccola.
+
+                Ma con più lividi e graffi perché solo la Madonna sa quante volte sono cascata.<N>L'altra sera, dolorante e un po' alticcia, stavo per raccontare di te, del posto.<N>Ma poi le parole non sono venute.<N>Come se fosse proprio un'altra lingua.<N>E forse è meglio così.<N>Credo.
                 
             - firstChar_ActualName has Violino:
                 Sono passati mesi, spero che lì le cose vadano bene.
