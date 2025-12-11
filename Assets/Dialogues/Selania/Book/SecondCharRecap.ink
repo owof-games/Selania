@@ -16,28 +16,39 @@
 
 {
     - second_character_notes.three.bookUpdate:
-    <b><i>Terza lettera di {charNameTwo}.</b></i>: <>
-        Ciao {player_name}. <>
+    <b><i>Terza lettera di {charNameTwo}.</b></i> <><N>
+        Ciao {player_name}. <><N>
 
            {
-                - secondChar_ActualName has Riccio:
-                    Ti scrivo da casa di mio fratello. Novità: ora vivo qui! All'inizio il suo amico non era contento, ma ora mi insegna anche a fare i dolci! Fa anche delle caramelle superbuone. Papà non è più tornato. Mamma non ha nemmeno fatto storie quando me ne sono andato. Non mi sento mica felice. Sì no boh. Che cosa strana da scrivere. Però le cose sono diverse. A volte abbasso le spine. A volte mi addormento sul divano mentre guardo i telefilm con mio fratello. E non ho mica paura. Spero che tu non abbia paura. Salutami {mentorName}. Ti voglio bene. <>
- 
                 - secondChar_ActualName has Grizzly:
-                    Sono SUPER ARRABBIATO. CON MIO FRATELLO. Non avevamo mai litigato, mai. Ma l'altro giorno è venuto a casa e mi ha detto che sto diventando come papà. Papà si è incazzato con lui e mi ha difeso. Mio fratello dice che sto diventando un bullo. Che un suo amico maestro a scuola gli ha detto che me la prendo coi più piccoli. Papà gli ha detto che mi faccio rispettare. E che non sono una checca come lui. Lui mio fratello. Non sono mica abituato a mio padre così. Ma poi in camera mi è preso male tutto. Mi manca mio fratello. Mi mancate voi. Vorrei sapere cosa fare. <>
+                    Sono SUPER ARRABBIATO. <N>CON MIO FRATELLO. <N>Non avevamo mai litigato, mai. <N>Ma l'altro giorno è venuto a casa e mi ha detto che sto diventando come papà. <N>Papà si è incazzato con lui e mi ha difeso.
+                    
+                    Mio fratello dice che sto diventando un bullo. <N>Che un suo amico maestro a scuola gli ha detto che me la prendo coi più piccoli. <N>Papà gli ha detto che mi faccio rispettare. <N>E che non sono una checca come lui. <N>Lui mio fratello. <N>Non sono mica abituato a mio padre così.
+                    
+                    Ma poi in camera mi è preso male tutto. <N>Mi manca mio fratello. <N>Mi mancate voi. <N>Vorrei sapere cosa fare. <><N>
                     
                 - secondChar_ActualName has Lupo:
-                    Oggi sono triste, e non so perché. Ho dato un pugno a un ragazzo delle medie, ma non mi è mica piaciuto. A casa le cose vanno bene, ma. Sì no boh. Mica pensavo che è così faticoso. Mamma e papà sono tranquilli solo se siamo assieme. Mi sembra un lavoro. E se sono giù si preoccupano tantissimo. E se si preoccupano tornano a litigare. Non so mica cosa fare. Forse {mentorName} li può aiutare? Mi mancate. <b>{charNameTwo}</b>. <>
+                    Oggi sono triste, e non so perché. <N>Ho dato un pugno a un ragazzo delle medie, ma non mi è mica piaciuto. <N>A casa le cose vanno bene, ma. <N>Sì no boh. <N>Mica pensavo che è così faticoso. <N>Mamma e papà sono tranquilli solo se siamo assieme. <N>Mi sembra un lavoro. 
+                    
+                    E se sono giù si preoccupano tantissimo. <N>E se si preoccupano tornano a litigare. <N>Non so mica cosa fare. <N>Forse {mentorName} li può aiutare? <N>Mi mancate. <N><b>{charNameTwo}</b>. <><N>
 
                     
                 - secondChar_ActualName has Delfino:
-                    Se non l'hai capito nell'ultima lettera solo l'ultima frase non era vera: tutte le altre lo erano. Però è successa una cosa divertente, {player_name}! La prof di matematica mi ha detto che le mie bugie sono storie. E che le storie sono da conservare. E quindi abbiamo aperto assieme a altri bambini un giornale della scuola. Faremo uscire per tutto il resto dell'anno i nostri racconti e le notizie. Mi ha solo chiesto di non scrivere più quella parolaccia che lei ha detto. E di non dire niente sulla preside o si arrabbia. E allora ti saluto dicendoti quella parolaccia, perché poi non la potrò più scrivere. "Per il catarro del cammello!" Che schifo, {player_name}. Ma lì ci sono i cammelli? Un saluto. <>
+                    Se non l'hai capito nell'ultima lettera solo l'ultima frase non era vera: tutte le altre lo erano. <N>Però è successa una cosa divertente, {player_name}! <N>La prof di matematica mi ha detto che le mie bugie sono storie. <N>E che le storie sono da conservare. <N>E quindi abbiamo aperto assieme a altri bambini un giornale della scuola.
+                    
+                    Faremo uscire per tutto il resto dell'anno i nostri racconti e le notizie. <N>Mi ha solo chiesto di non scrivere più quella parolaccia che lei ha detto. <N>E di non dire niente sulla preside o si arrabbia. <N>E allora ti saluto dicendoti quella parolaccia, perché poi non la potrò più scrivere. <N>"Per il catarro del cammello!" <N>Che schifo, {player_name}. <N>Ma lì ci sono i cammelli? <N>Un saluto. <><N>
                     
                 - secondChar_ActualName has Capibara:
-                    Questo cervellino (il mio cervellino) ha trovato una soluzione. Ho parlato con la prof di matematica, e le ho detto delle mie paure. Degli animali che spariscono, dei boschi che bruciano. Dei ghiacciai. Lei mi ha detto che possiamo raccogliere dei soldi ma sì no boh. Io pensavo all'associazione di mio fratello e del suo fidanzato, e loro insegnano a non avere paura non a spendere soldi. Allora mi ha fatto fare una lezione in classe su queste cose. Ho spiegato le paure. E poi ho detto che se ci mettiamo assieme ci sono anche le soluzioni. Alcuni compagni hanno detto che ci possiamo trovare nel campetto il pomeriggio. E quindi forse qualcosa sta iniziando, {player_name}. Non so cosa faremo, però è bello non farlo da solo. E vorrei tanto tu fossi qui con me, ora. Secondo me ci diresti tantissime cose sagge. Salutami la rana. {charNameTwo}. <>
+                    Questo cervellino (il mio cervellino) ha trovato una soluzione. <N>Ho parlato con la prof di matematica, e le ho detto delle mie paure. <N>Degli animali che spariscono, dei boschi che bruciano. <N>Dei ghiacciai. <N>Lei mi ha detto che possiamo raccogliere dei soldi ma sì no boh. <N>Io pensavo all'associazione di mio fratello e del suo fidanzato, e loro insegnano a non avere paura non a spendere soldi. <N>Allora mi ha fatto fare una lezione in classe su queste cose. 
+                    
+                    Ho spiegato le paure. <N>E poi ho detto che se ci mettiamo assieme ci sono anche le soluzioni. <N>Alcuni compagni hanno detto che ci possiamo trovare nel campetto il pomeriggio. <N>E quindi forse qualcosa sta iniziando, {player_name}. <N>Non so cosa faremo, però è bello non farlo da solo. <N>E vorrei tanto tu fossi qui con me, ora. <N>Secondo me ci diresti tantissime cose sagge. <N>Salutami la rana. <N>{charNameTwo}. <><N>
                     
                 - secondChar_ActualName has Corvo:
-                    Ieri è successa una cosa fighissima. Ti ricordi quell'amica di mio fratello, che dovevo conoscere al mare? Sta da tre giorni da lui perché dice che è stata buttata fuori di casa. E mi ha raccontato tante cose che mica sapevo. Cose brutte che vengono fatte agli animali. Ma, {player_name}: non aveva paura. Lei dice che sono sveglio, e che per questo non devo avere paura perché posso capire tutto. E che magari un giorno trovo un modo per salvare gli animali. Mi ha regalato un romanzo di Ursula LeGuin (ho dovuto guardare la copertina, è un nome difficile). Non sapevo di potere imparare cose dai romanzi. Oggi ho chiesto alla maestra di matematica di darmi dei libri sull'ambiente. Ci sono così tante cose da imparare, {player_name}, così tante! Spero ci vedremo presto. Salutami la rana! <b>{charNameTwo}</b>. <>
+                    Ieri è successa una cosa fighissima. <N>Ti ricordi quell'amica di mio fratello, che dovevo conoscere al mare? <N>Sta da tre giorni da lui perché dice che è stata buttata fuori di casa. <N>E mi ha raccontato tante cose che mica sapevo. <N>Cose brutte che vengono fatte agli animali. 
+                    
+                    Ma, {player_name}: non aveva paura. <N>Lei dice che sono sveglio, e che per questo non devo avere paura perché posso capire tutto. <N>E che magari un giorno trovo un modo per salvare gli animali. <N>Mi ha regalato un romanzo di Ursula LeGuin (ho dovuto guardare la copertina, è un nome difficile). <N>Non sapevo di potere imparare cose dai romanzi. 
+                    
+                    Oggi ho chiesto alla maestra di matematica di darmi dei libri sull'ambiente. <N>Ci sono così tante cose da imparare, {player_name}, così tante! <N>Spero ci vedremo presto. <N>Salutami la rana! <N><b>{charNameTwo}</b>. <><N>
             }
         PS: Ma poi hai scoperto cos'è quel tronco nella foresta? PPS: Ho un segreto che riguarda la serra, ma te lo dirò con la prossima lettera! Ciao ciao!
 }
@@ -45,71 +56,84 @@
 
 {
     - second_character_notes.two.bookUpdate:
-        <b><i>Seconda lettera di {charNameTwo}.</b></i>: <>
-        Che strano. Ho lasciato l'altra lettera sul comodino di notte. E poi è sparita. Non so mica se ti è arrivata. O se papà l'ha buttata. <>
+        <b><i>Seconda lettera di {charNameTwo}.</b></i> <><N>Che strano: ho lasciato l'altra lettera sul comodino di notte.<N>E poi è sparita.<N>Non so mica se ti è arrivata.<N>O se papà l'ha buttata.
 
            {
-                - secondChar_ActualName has Riccio:
-                    Le cose a scuola vanno male. L'altro giorno ho picchiato un bambino perché mi ha chiamato "strano". E l'ho spinto dalle scale. Ora sono in sospensione, a casa. Papà è sparito da due giorni. Mamma piange in camera. Io non so come mi sento. Però ho ripreso a fare esperimenti. In un vecchio libro un bambino disegnava la porta sul muro, e andava in un altro mondo. Forse se trovo il modo posso tornare da voi. Mi mancate. Ciao. <>
-                    
+
                 - secondChar_ActualName has Grizzly: 
-                    Se l'ha buttata urlo di nuovo, vediamo che mi dice poi. Però ti dovevo dire questa cosa: sono nella squadra di calcio. Non sono mica bravo, sinceramente. Questa roba delle forza e della velocità non è roba mia proprio. Però dice l'allenatore che ho strategia. Mamma me l'ha fatto fare perché dice che devo scaricare tutta questa "rabbia da ragazzino". E non mi chiama più bambino. Negli spogliatoi ci sono state delle risse. Ho dato un pugno straforte a uno più grande. E ora a scuola non mi rompono più le scatole. Se qualcuno ti rompe le scatole {player_name} chiamami E ti aiuto io. Ciao! <>
+                    Se l'ha buttata urlo di nuovo, vediamo che mi dice poi. <N>Però ti dovevo dire questa cosa: sono nella squadra di calcio. <N>Non sono mica bravo, sinceramente. <N>Questa roba delle forza e della velocità non è roba mia proprio. <N>Però dice l'allenatore che ho strategia. <N>Mamma me l'ha fatto fare perché dice che devo scaricare tutta questa "rabbia da ragazzino". 
+                    
+                    E non mi chiama più bambino. <N>Negli spogliatoi ci sono state delle risse. <N>Ho dato un pugno straforte a uno più grande. <N>E ora a scuola non mi rompono più le scatole. <N>Se qualcuno ti rompe le scatole {player_name} chiamami E ti aiuto io. <N>Ciao! <><N>
                     
                 - secondChar_ActualName has Lupo:
-                    Ma non credo: le cose negli ultimi giorni vanno meglio. Con l'amico di mio fratello ho fatto dei muffin per lui e mamma. E poi gli ho detto che mi dispiace quando litigano. E che ho capito che essere grandi fa schifo, ma che ci sono anche cose belle. Come andare al mare. Mamma si è messa a piangere. Papà è stato in silenzio tantissimo. E ho iniziato a pensare che mi avrebbe picchiato. Invece ha detto: domani si fa vacanza e si va a nuotare tutti assieme. Mamma l'ha abbracciato, e si è mangiata un intero muffin. Ti dico poi come è andata! A presto. <>
+                    Ma non credo: le cose negli ultimi giorni vanno meglio. <N>Con l'amico di mio fratello ho fatto dei muffin per lui e mamma. <N>E poi gli ho detto che mi dispiace quando litigano. <N>E che ho capito che essere grandi fa schifo, ma che ci sono anche cose belle. <N>Come andare al mare. <N>Mamma si è messa a piangere.
+                    
+                    Papà è stato in silenzio tantissimo. <N>E ho iniziato a pensare che mi avrebbe picchiato. <N>Invece ha detto: domani si fa vacanza e si va a nuotare tutti assieme. <N>Mamma l'ha abbracciato, e si è mangiata un intero muffin. <N>Ti dico poi come è andata! <N>A presto. <><N>
                     
                 - secondChar_ActualName has Delfino:
-                    In questi giorni ho ripreso a dire delle bugie. Ma invece di dirle piccole, le sto dicendo grandissime. E questa cosa fa divertire i miei nuovi amici. E anche qualche maestra. Mamma dice che da grande devo fare il comico. Papà è banale e dice che devo fare il politico. Mio fratello è preoccupato, perché teme che mi metto nei pasticci. Gioco: una di queste cose che ho detto non è vera. Tu lo capisci quale? Salutami la rana! <b>{charNameTwo}</b>. <>
+                    In questi giorni ho ripreso a dire delle bugie. <N>Ma invece di dirle piccole, le sto dicendo grandissime. <N>E questa cosa fa divertire i miei nuovi amici. <N>E anche qualche maestra. <N>Mamma dice che da grande devo fare il comico. <N>Papà dice che devo fare il politico. <N>Mio fratello è preoccupato, perché teme che mi metto nei pasticci. 
+                    Gioco: una di queste cose che ho detto non è vera. <N>Tu lo capisci quale? <N>Salutami la rana! <N><b>{charNameTwo}</b>. <><N>
                     
                 - secondChar_ActualName has Capibara:
-                    Dopo che gli ho detto che lui usa quella parola con mio fratello perché ha paura, non mi parla più. Mamma dice che lui ha paura di tutte le cose, ma non lo sa dire. Le ho detto che ci sono delle associazioni. Lei ha sorriso e mi ha detto che sto davvero diventando grande. Però continuo a pensarci a questa cosa delle associazioni. Tu lo sai che io ho paura per gli animali. E mi hai insegnato che le cose si affrontano con gli amici. Magari non sono bravo a farmi degli amici, ma sono bravo a parlare degli animali. E forse ci riesco a fare qualcosa così, come mio fratello fa per i suoi amici. Devo solo capire cosa. Vorrei tanto chiederlo alla rana. Salutamela! <>
+                    Dopo che gli ho detto che lui usa quella parola con mio fratello perché ha paura, non mi parla più. <N>Mamma dice che lui ha paura di tutte le cose, ma non lo sa dire. <N>Le ho detto che ci sono delle associazioni. <N>Lei ha sorriso e mi ha detto che sto davvero diventando grande. <N>Però continuo a pensarci a questa cosa delle associazioni.
+                    
+                    Tu lo sai che io ho paura per gli animali. <N>E mi hai insegnato che le cose si affrontano con gli amici. <N>Magari non sono bravo a farmi degli amici, ma sono bravo a parlare degli animali. <N>E forse ci riesco a fare qualcosa così, come mio fratello fa per i suoi amici. <N>Devo solo capire cosa. <N>Vorrei tanto chiederlo alla rana. <N>Salutamela! <><N>
                     
                 - secondChar_ActualName has Corvo:
-                    Ultimamente parliamo di più. Gli piace parlare di politica. Secondo me dice cose stupide, ma forse nelle sue cose stupide c'è lui, le sue paure. Almeno così dice l'amico di mio fratello. Oggi siamo stati da nonna. Ho dovuto insistere perché avevano paura che ci rimanevo male. Si no boh. Mi è spiaciuto quando non mi ha riconosciuto. Però è sempre la nonna. Quando mamma ha parlato con l'infermiera ho preso un mazzo di carte. Era sporco e mancava l'asso di picche. Ma nonna ha ricordato tutti i trucchi e mi ha stracciato. Stammi bene! <b>{charNameTwo}</b>. <>
+                    Ultimamente parliamo di più. <N>Gli piace parlare di politica. <N>Secondo me dice cose stupide, ma forse nelle sue cose stupide c'è lui, le sue paure. <N>Almeno così dice l'amico di mio fratello. <N>Oggi siamo stati da nonna. <N>Ho dovuto insistere perché avevano paura che ci rimanevo male.
+                    
+                    Si no boh. <N>Mi è spiaciuto quando non mi ha riconosciuto. <N>Però è sempre la nonna. <N>Quando mamma ha parlato con l'infermiera ho preso un mazzo di carte. <N>Era sporco e mancava l'asso di picche. <N>Ma nonna ha ricordato tutti i trucchi e mi ha stracciato.<N> Stammi bene! <N><b>{charNameTwo}</b>. <><N>
      
             }
-        PS: mi piace mettere i PS, su internet non ci sono. PPS: ma sono arrivate persone nuove poi? Qualcuna con dei dolci magari?
+        PS: mi piace mettere i PS, su internet non ci sono.<N>PPS: ma sono arrivate persone nuove poi? Qualcuna con dei dolci magari?
 }
 
 {
     - second_character_notes.one.bookUpdate:
-        <b><i>Prima lettera di {charNameTwo}.</b></i>: <>
-    
-        Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}. Cioè a te. Anche se non ho mica capito come te la mando la lettera. Ma come sta la rana? Hai scoperto poi se è elettrica? <>
+        <b><i>Prima lettera di {charNameTwo}.</b></i><N>Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}. <N>Cioè a te. <N>Anche se non ho mica capito come te la mando la lettera. <N>Ma come sta la rana? <N>Hai scoperto poi se è elettrica?
 
            {
-                - secondChar_ActualName has Riccio:
-                    Qui le cose sono strane. Forse perché sono uguali a prima. Ora passo più tempo in camera. Papà è contento perché dice che non rompo. Mamma è preoccupata perché vuole che gioco con gli altri. A volte guardo fuori dalla finestra e basta. E vado a letto e non correggo più nulla. Mi addormento, e aspetto. A volte voglio tornare lì da voi. Ma non so cosa fare. La prof di matematica mi guarda male. Ci sentiamo {player_name}. <>
-                    
                 - secondChar_ActualName has Grizzly:
-                    Oggi per la prima volta ho litigato con papà. Nel senso che non è stato mica lui a cominciare ma io. Ha cercato di picchiarmi e gli ho urlato che è un bullo. E poi ho preso i miei libri e glieli ho tirati contro. Lui si è arrabbiato così tanto, {player_name}! E allora ho urlato. Urlato come un orso. Che si dice che ho bramito quindi. E lui se ne è andato sbattendo la porta, urlando a mamma che ha tirato su un deficiente. Però sono felice perché ho meno paura ora. Mamma mi guarda strano. Ma so che tu mica mi avresti guardato così. <>
+                    Oggi per la prima volta ho litigato con papà. <N>Nel senso che non è stato mica lui a cominciare ma io. <N>Ha cercato di picchiarmi e gli ho urlato che è un bullo. <N>E poi ho preso i miei libri e glieli ho tirati contro. <N>Lui si è arrabbiato così tanto, {player_name}! <N>E allora ho urlato. 
+                    
+                    Urlato come un orso. <N>Che si dice che ho bramito quindi. <N>E lui se ne è andato sbattendo la porta, urlando a mamma che ha tirato su un deficiente. <N>Però sono felice perché ho meno paura ora. <N>Mamma mi guarda strano. <N>Ma so che tu mica mi avresti guardato così. <><N>
                     
                 - secondChar_ActualName has Lupo: 
-                    L'altro giorno ho parlato con l'amico di mio fratello. Gli ho detto che per me siamo un branco ma che secondo me lui mica mi ci vede in questo branco. E lui mi ha detto una cosa strana. Che non ce l'ha con me. Ma che non sa parlare coi bambini. Allora gli ho detto di non parlarmi come un bambino. Che so cosa sono i lupi, le frazioni, l'elettricità. Lui ha riso e mi ha detto: "Ma sai creare un muffin?". E mi ha insegnato a fare i muffin. Mi sono divertito tanto. E voglio portartene uno. <>
+                    L'altro giorno ho parlato con l'amico di mio fratello. <N>Gli ho detto che per me siamo un branco ma che secondo me lui mica mi ci vede in questo branco. <N>E lui mi ha detto una cosa strana. <N>Che non ce l'ha con me. <N>Ma che non sa parlare coi bambini. <N>Allora gli ho detto di non parlarmi come un bambino.
+                    
+                    Che so cosa sono i lupi, le frazioni, l'elettricità. <N>Lui ha riso e mi ha detto: "Ma sai creare un muffin?". <N>E mi ha insegnato a fare i muffin. <N>Mi sono divertito tanto. <N>E voglio portartene uno. <><N>
                     
                 - secondChar_ActualName has Delfino:
-                    A scuola sto finendo tantissimo nei guai. Ho iniziato a fare qualche dispetto ai bambini prepotenti. Secondo me hanno funzionato, ma le maestre si sono arrabbiate. Soprattutto per l'inchiostro sulle loro scarpe. Ma non è colpa mia se si sono messe in mezzo! Però mi sono fatto due nuovi amici, e l'altro giorno abbiamo passato mezz'ora in castigo assieme. Quando la maestra di matematica è tornata e ha trovato la stanza tutta legata con lo spago, ha detto una parolaccia grossa. Ma grossa grossa. Quando l'ho ridetta a mio fratello è scoppiato a ridere. Ma forse qui non te la scrivo, per ora. <>
+                    A scuola sto finendo tantissimo nei guai. <N>Ho iniziato a fare qualche dispetto ai bambini prepotenti. <N>Secondo me hanno funzionato, ma le maestre si sono arrabbiate. <N>Soprattutto per l'inchiostro sulle loro scarpe. <N>Ma non è colpa mia se si sono messe in mezzo! <N>Però mi sono fatto due nuovi amici, e l'altro giorno abbiamo passato mezz'ora in castigo assieme.
+                    
+                    Quando la maestra di matematica è tornata e ha trovato la stanza tutta legata con lo spago, ha detto una parolaccia grossa. <N>Ma grossa grossa. <N>Quando l'ho ridetta a mio fratello è scoppiato a ridere. <N>Ma forse qui non te la scrivo, per ora. <><N>
                     
                 - secondChar_ActualName has Capibara:
-                    Ieri ho avuto una conversazione da grandi con mio fratello. Me l'ha fatta perché ho chiamato il suo amico "frocio" quando mi ha sgridato. E non avevo fatto nulla di male. A parte mettere della tempera nel suo frullatore. Mio fratello mi ha spiegato perché fa male quella parola. E perché papà la usa quando è arrabbiato. Mi ha detto che tantissime persone usano quella parola come scusa per fare del male ad altre persone. E lo fanno perché hanno paura. E poi mi ha portato in una associazione che serve per chi è come mio fratello o il suo amico e non vuole più avere paura. E io non avevo mai capito che si possono fare tutte queste cose assieme. Mi è dispiaciuto tantissimo aver fatto male al suo amico. Però sono anche contento che mi hanno detto le cose per bene dopo tutti questi anni. E tu hai paura di alcune persone? <>
+                    Ieri ho avuto una conversazione da grandi con mio fratello. <N>Me l'ha fatta perché ho chiamato il suo amico "frocio" quando mi ha sgridato. <N>E non avevo fatto nulla di male. <N>A parte mettere della tempera nel suo frullatore. <N>Mio fratello mi ha spiegato perché fa male quella parola. <N>E perché papà la usa quando è arrabbiato.
+                    
+                    Mi ha detto che tantissime persone usano quella parola come scusa per fare del male ad altre persone. <N>E lo fanno perché hanno paura. <N>E poi mi ha portato in una associazione che serve per chi è come mio fratello o il suo amico e non vuole più avere paura. <N>E io non avevo mai capito che si possono fare tutte queste cose assieme. <N>Mi è dispiaciuto tantissimo aver fatto male al suo amico. 
+                    
+                    Però sono anche contento che mi hanno detto le cose per bene dopo tutti questi anni. <N>E tu hai paura di alcune persone? <><N>
                     
                 - secondChar_ActualName has Corvo:
-                    L'altro giorno ho detto a mamma e papà che voglio diventare un veterinario. Per studiare e salvare gli animali. Mamma ha detto che allora forse dovrei diventare un etologo (questo l'ho fatto scrivere a lei, che però vuole sapere chi sei, è preoccupata). Quando poi ne ho parlato con mio fratello, mi ha detto che questa estate se voglio mi fa conoscere una persona che fa una cosa bellissima: salva gli animali dai laboratori. Mio fratello dice che studiare è importante, ma che per cambiare le cose devo capire come lottare. Avevo capito che dovevo lasciarla via la rabbia, {player_name}. Ma lui mi dice che la rabbia serve. Va solo mandata nella giusta direzione. Ti scriverò appena scopro qual è quella giusta e quale è quella sbagliata. <>
+                    L'altro giorno ho detto a mamma e papà che voglio diventare un veterinario. <N>Per studiare e salvare gli animali. <N>Mamma ha detto che allora forse dovrei diventare un etologo (questo l'ho fatto scrivere a lei, che però vuole sapere chi sei, è preoccupata). <N>Quando poi ne ho parlato con mio fratello, mi ha detto che questa estate se voglio mi fa conoscere una persona che fa una cosa bellissima: salva gli animali dai laboratori. 
+                    
+                    Mio fratello dice che studiare è importante, ma che per cambiare le cose devo capire come lottare. <N>Avevo capito che dovevo lasciarla via la rabbia, {player_name}. <N>Ma lui mi dice che la rabbia serve. <N>Va solo mandata nella giusta direzione. <N>Ti scriverò appena scopro qual è quella giusta e quale è quella sbagliata. <><N>
                 
      
             }
-          PS: come sta {mentorName}? Mi spiace per come l'ho trattata mentre ero lì, sai? Ma non dirglielo. Per ora per lo meno. Ciao!
+          PS: come sta {mentorName}? Mi spiace per come l'ho trattata mentre ero lì, sai? Ma non dirglielo. Per ora per lo meno. <N>Ciao!
 }
 
 //Appunto sul dono fatto
 
 {
-    - second_story_gift.ink_outcome: <b><i>Appunti su dono e riscrittura:</b></i> <>
+    - second_story_gift.ink_outcome: <b><i>Appunti su dono e riscrittura:</b></i> <><N>
 }
 
     {
 
-        - second_character_feedback.bookUpdate: Dopo aver aiutato {charNameTwo}, Mentore mi ha detto che <>
+        - second_character_feedback.bookUpdate: Dopo aver aiutato {charNameTwo}, Mentor ha detto a {player_name} che <>
                 {
                 - secondChar_ActualName has Grizzly:
                     "il nostro bambino" ha abbracciato il lato rabbioso, e l'ha fatto proprio. E lei non è una fan della rabbia.
@@ -117,35 +141,34 @@
                 - secondChar_ActualName has Lupo: forse un giorno la nonna e il fratello di {charNameTwo} torneranno a vivere sotto il tetto dei genitori. E questo senso di famiglia così forte per lei sarebbe un finale davvero felice.
                 
                 - secondChar_ActualName has Delfino:
-                    è perplessa, perché ho reso {charNameTwo} un giullare.
+                    è perplessa, perché {player_name} ha reso {charNameTwo} un giullare.
                                 
                 - secondChar_ActualName has Capibara:
                     non sempre il mondo può essere come vuole lei, e che non è una grande fan dell'idea che l'unione faccia la forza.
                 
                 - secondChar_ActualName has Corvo:
                     non avrei potuto ottenere un esito migliore. Che ce lo vede a studiare nuovi modi per curare le persone, o ridurre la fame nel mondo. O creare una begonia totalmente nera.
-
             }
 
     }
 
-    {rewriting_proposal_second_character.close.bookUpdate: Dopo la nostra conversazione, {charNameTwo} ha scelto un nuovo nome: <b><i>{charNameTwo}.}
+    {rewriting_proposal_second_character.close.bookUpdate: Dopo la conversazione con {player_name}, {charNameTwo} ha scelto un nuovo nome: <b><i>{charNameTwo}.}
 
     {secondAffinityFeedback:
-        Il valore massimo di inchiostro che ho ricevuto è stato: {fromInkToNumbers(SecondCharacter)}. <>
+        Il valore massimo di inchiostro che {player_name} ha raggiunto è stato: {fromInkToNumbers(SecondCharacter)}. <>
     }
 
     {
         - second_story_gift.ink_outcome:
             {
                 - secondChar_favouritesGifts has secondChar_giftedObject:
-                Gli ho donato <b><i>{secondChar_giftedObject}</b></i> ed era entusiasta! <>
+                {player_name} gli ha donato <b><i>{secondChar_giftedObject}</b></i> ed era entusiasta! <>
                 
                 - secondChar_goodGifts has secondChar_giftedObject:
-                Gli ho donato <b><i>{secondChar_giftedObject}</b></i> ed ha abbastanza apprezzato. <>
+                {player_name} gli ha donato <b><i>{secondChar_giftedObject}</b></i> ed ha abbastanza apprezzato. <>
                 
                 - else:
-                Gli ho donato <b><i>{secondChar_giftedObject}</b></i> e non ha apprezzato per nulla. <>
+                {player_name} gli ha donato <b><i>{secondChar_giftedObject}</b></i> e non ha apprezzato per nulla. <>
             
             }
     }        
@@ -153,7 +176,7 @@
 
     {
         - rewriting_proposal_second_character.bookUpdate: 
-            Dopo il dono, {charNameTwo} mi ha detto che da quando la nonna è nella casa dei vecchi, tutto fa schifo. Suo padre è tornato e litiga sempre con sua madre. Se il padre non c'è, la madre si incazza con lui, e gli dice di smetterla di piangere e di fare il grande. Le maestre sono "fastidiose". Il fratello dice che il mondo è un posto orribile e irreparabile. Gli animali spariranno tutti per colpa nostra. I grandi fanno schifo e per questo non vuole crescere. E ha inventato la storia del compleanno perché se non inventa motivi, nessuno lo ascolta.
+            Dopo il dono, {charNameTwo} ha detto a {player_name} che da quando la nonna è nella casa dei vecchi, tutto fa schifo. Suo padre è tornato e litiga sempre con sua madre. Se il padre non c'è, la madre si incazza con lui, e gli dice di smetterla di piangere e di fare il grande. Le maestre sono "fastidiose". Il fratello dice che il mondo è un posto orribile e irreparabile. Gli animali spariranno tutti per colpa nostra. I grandi fanno schifo e per questo non vuole crescere. E ha inventato la storia del compleanno perché se non inventa motivi, nessuno lo ascolta.
     }
 
 
