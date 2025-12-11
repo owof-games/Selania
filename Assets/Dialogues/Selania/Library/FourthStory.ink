@@ -1,7 +1,7 @@
 //Cognome/alias S - Z
 
 === salvo
-<b>Il cancello</b> di Salvo (he/him).
+<b>Il cancello</b> di Salvo (he/him).<N>Instagram: @about_to_tore.
     //Se è la prima volta che leggo il libro, lo levo dalle storie non lette, lo sposto in quelle lette e lo levo dalle liste che lo contengono. Se ci arrivo in rilettura, non faccio nulla.
         {
             - library_unreadStories has Salvo:

@@ -58,6 +58,7 @@
         
         Merda, Talco sa sempre come tirarmi fuori dai casini!
         E avevo giurato ad Ennio che non sarebbero più successe cose imbarazzanti.
+        E invece eccomi qui, di nuovo non incapace di combinarne una buona.
         Per la cronaca Ennio è il mio ragazzo, mentre Talco è lə miə amə.
         Ma perché te lo sto dicendo?
         Non è che ho preso dei funghi e manco me ne sono resa conto?
@@ -118,7 +119,7 @@
                 -> color_variation_management(FirstCharacter, purpleC)->
                 {
                     - one.purple:
-                        Dopo il commento su Florence, ora posso pure chiedere la tua mano.
+                        Dopo il commento su Florence, ora chiedo direttamente la tua mano.
                 }
                 Quindi devo correre per i boschi nuda e cantare alla luna?
                 Perché è un piano che mi piace molto.
@@ -198,7 +199,7 @@
         Ma mi sento la testa libera.
         Riesco ad ascoltare i miei pensieri.
         Non per forza una cosa buona.
-        E le canzoncine della pubblicità ancorate nel mio cervello.
+        Ci sono le canzoncine della pubblicità ancorate nel mio cervello.
         Che sfigata.
         O magari è perché prima ho preso una botta assurda contro il vetro della serra e mi sono resettata il cervello?
                 {
@@ -213,7 +214,7 @@
         Una band davvero figa!
         E facciamo volontariato, circa.
         Le amo.
-        Uh, e ora che ci penso, anche a lavoro saranno incazzati a bestia.
+        Uh, e ora che ci penso, anche a lavoro saranno incazzati abbestia.
         Non che me ne freghi un granché per Luca, il capo: è una gran testa di cazzo.
         Come ogni capo.
         Però le colleghe possono essere nella merda: se manca una di noi, si devono smazzare più lavoro.
@@ -294,7 +295,7 @@
         {player_pronouns has him:Povero|{player_pronouns has her:Povera|Poverə}}.
         Dice che c’è qualcosa che mi blocca.
         E che quando mi fiderò di te potrò chiederti aiuto e sbloccarmi e tornare a casa.
-        Tipo una versione di D&D con le quest scritte da una millennial.
+        Tipo una versione emo di D&D.
         Stavo per dirle: guarda ama, mi fido già di {player_name}!
         Sono un labrador e mi fido sempre di tutti subito.
         Poi ho pensato che non è vero.
@@ -323,7 +324,7 @@
         Mi piace stare con le persone.
         Io non so se sono davvero bloccata in qualcosa, come dice {mentorName}.
         Ma forse è vero che in qualche modo non mi muovo nella mia vita da un po’.
-        Con Talco mi sono messa in situazioni strane perché mi fidavo di lei.
+        Con Talco mi sono messa in situazioni strane perché mi fidavo di ləi.
         Ha senso?
         E mi chiedevo: secondo te, cosa vuol dire fidarsi?
         
@@ -455,7 +456,7 @@
                 Però grazie, sei molto gentile {player_name}.
             -    
         
-        A prescindere, ci sono giornate in cui l’unica cosa che mi gasa è la rabbia nella chat delle ribelli.
+        A prescindere, ci sono giornate in cui l’unica cosa che mi tira giù dal letto è la rabbia nella chat delle ribelli.
         Gli insulti ai capoccia.
         Il tenere traccia di tutte le ingiustizie.
         La speranza di fargliele ripagare, un giorno o l’altro.
