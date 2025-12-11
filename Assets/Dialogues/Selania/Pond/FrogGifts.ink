@@ -230,6 +230,11 @@ Quindi, cosa può fare Franco la rana per te, {player_name}? #speaker:{frog_tag(
                     Sono così veloce che ti sono sembrato fermo, vero?
                     @animation: Backpack
                         -> closed_exchange
+                - else:
+                TODO: capire perché passa da qui in alcuni casi, cosa sto dimenticando
+                    Non ho niente da consigliarti girino, per ora
+                    ~ temp rrtg = 1/0
+                    -> closed_exchange        
             }
             
         + {!ending_cooking_with_first_char && frog_firstCharObtainedGifts hasnt charOneCooking} [C'è qualcosa che posso usare cucinando con {charNameOne}?]
