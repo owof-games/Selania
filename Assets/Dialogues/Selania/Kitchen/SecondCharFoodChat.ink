@@ -113,7 +113,14 @@
                 Come si fanno gli aerei di carta.
                 Perché le caramelle fanno bene.
                 E che Elio aveva ragione sugli alieni da sempre e dovevano ascoltarlo.
-             
+    
+            + [Però tu stai comunque bene quando fai queste cose, no?]
+               -> color_variation_management(SecondCharacter, purpleC)->
+               Sì!
+               Tantissimissimo!
+               A volte nemmeno mi accorgo del tempo che passa, e di cosa fanno le altre persone.
+               Mi piace!
+
             + [Le cose hanno senso se hanno uno scopo. Fare per fare è inutile.]
                 -> color_variation_management(SecondCharacter, redC)->
                 Sì no boh.
@@ -127,14 +134,7 @@
                 Anche noi abbiamo cose complicate!
                 Tutti i compiti.
                 I bulli.
-                I grandi arrabbiati ma non si capisce mica mai perché.
-    
-            + [Però tu stai comunque bene quando fai queste cose, no?]
-               -> color_variation_management(SecondCharacter, purpleC)->
-               Sì!
-               Tantissimissimo!
-               A volte nemmeno mi accorgo del tempo che passa, e di cosa fanno le altre persone.
-               Mi piace!
+                I grandi arrabbiati ma non si capisce mica mai perché.   
             -    
         
         Ho una fame!
@@ -200,6 +200,30 @@
         No, dimmelo tu.
         Che animale sei?
 
+            + [L'affettuoso cane.]
+                -> color_variation_management(SecondCharacter, greenC)->
+                I cani copiano tantissime cose degli umani, lo sapevi?
+                Quando cammini si muovono al tuo passo.
+                Poi gli piace tanto guardarci negli occhi per capire che fare.
+                E se stai male stanno male anche loro.
+                Ora che ci penso forse è meglio se non ce ne abbiamo uno a casa.
+                
+            + [Il combattivo leone!]
+                -> color_variation_management(SecondCharacter, redC)->
+                Sì no boh.
+                I leoni sono noiosi.
+                Dormono tantissimo.
+                Come i gatti.
+                Però da piccoli sono suuuuperincapaci di camminare.
+                Quello è divertente.
+        
+            + [Il misterico corvo.]
+               -> color_variation_management(SecondCharacter, purpleC)->
+               Sai che i corvi si insegnano tra loro le cose?
+               E che se li fai arrabbiare se lo ricordano per sempre.
+               Una volta un amico di mamma ha spaventato un corvo con la sua moto.
+               E ora tutte le volte che viene da noi il corvo gli graffia la moto!
+            
             + [L'intelligente civetta.]
                 -> color_variation_management(SecondCharacter, blueC)->
                 Sapevi che le civette vedono il calore con le orecchie?
@@ -215,31 +239,7 @@
                 Mi insegni a nuotare?
                 Rubiamo il miele alle api della serra?
                 Spaventiamo {charNameOne}?
-                Mi fa ridere tantissimissimo quando urla!
-             
-            + [Il combattivo leone!]
-                -> color_variation_management(SecondCharacter, redC)->
-                Sì no boh.
-                I leoni sono noiosi.
-                Dormono tantissimo.
-                Come i gatti.
-                Però da piccoli sono suuuuperincapaci di camminare.
-                Quello è divertente.
-        
-            + [L'affettuoso cane.]
-                -> color_variation_management(SecondCharacter, greenC)->
-                I cani copiano tantissime cose degli umani, lo sapevi?
-                Quando cammini si muovono al tuo passo.
-                Poi gli piace tanto guardarci negli occhi per capire che fare.
-                E se stai male stanno male anche loro.
-                Ora che ci penso forse è meglio se non ce ne abbiamo uno a casa.
-    
-            + [Il misterico corvo.]
-               -> color_variation_management(SecondCharacter, purpleC)->
-               Sai che i corvi si insegnano tra loro le cose?
-               E che se li fai arrabbiare se lo ricordano per sempre.
-               Una volta un amico di mamma ha spaventato un corvo con la sua moto.
-               E ora tutte le volte che viene da noi il corvo gli graffia la moto!
+                Mi fa ridere tantissimissimo quando urla!   
             -
         Il profumo è buono.#speaker:{secondChar_tag()} #inkA:{ink_tag_a(secondChar_InkLevel)} #inkB:{ink_tag_b(secondChar_InkLevel)}  #inkC:{ink_tag_c(secondChar_InkLevel)}  #inkD:{ink_tag_d(secondChar_InkLevel)}#ewWord:{em_state(Influenced)} #portrait:riccio_neutral
         Ma quindi mangiamo solo dolce oggi?
@@ -400,20 +400,6 @@
             E infatti una volta Cristian della terza si è fatto la pipì addosso.
             Mettiamo le noccioline?
             Le punizioni sono stupide.
-
-                + [È comprovato che le punizioni non siano efficaci.]
-                    -> color_variation_management(SecondCharacter, blueC)->
-                    LO SAPEVO!
-                    Ti fanno solo arrabbiare.
-                    E piangere.
-                    E a nessuno piace piangere!
-                
-                + [Allora fai così tante cose sbagliate da rendere le punizioni inutili!]
-                    -> color_variation_management(SecondCharacter, yellowC)->
-                    Uhm.
-                    So dove la maestra di matematica nasconde i suoi dolci.
-                    E poi come si apre l'armadio vietato di disegno.
-                    E al bidello bruciano gli occhi quando tagliano l'erba!
                 
                 + [E l3 ribelli si oppongono alle punizioni!]
                     -> color_variation_management(SecondCharacter, redC)->
@@ -421,14 +407,14 @@
                     Una volta ci ho provato ma hanno chiamato mamma.
                     E mi hanno dato cinque note.
                     E mamma era così arrabbiata che mi ha chiuso in camera per un giorno intero.
+
+                + [È comprovato che le punizioni non siano efficaci.]
+                    -> color_variation_management(SecondCharacter, blueC)->
+                    LO SAPEVO!
+                    Ti fanno solo arrabbiare.
+                    E piangere.
+                    E a nessuno piace piangere!
             
-                + [Chi punisce non riesce ad ascoltare il suo cuore.]
-                    -> color_variation_management(SecondCharacter, greenC)->
-                    Si no boh.
-                    Mio fratello però dice una cosa tipo questa qui che hai detto tu.
-                    Che papà è sempre arrabbiato perché non ascolta le sue emozioni.
-                    Magari è una cosa dei grandi?
-        
                 + [A chi fa bene la punizione? A chi la fa o a chi la subisce?]
                     -> color_variation_management(SecondCharacter, purpleC)->
                     A me non mi fa mica bene.
@@ -436,6 +422,21 @@
                     Ma io mica ci credo.
                     L'altra settimana mi ha messo in castigo otto volte.
                     Mi sa che non le dispiace così tanto.
+
+                + [Allora fai così tante cose sbagliate da rendere le punizioni inutili!]
+                    -> color_variation_management(SecondCharacter, yellowC)->
+                    Uhm.
+                    So dove la maestra di matematica nasconde i suoi dolci.
+                    E poi come si apre l'armadio vietato di disegno.
+                    E al bidello bruciano gli occhi quando tagliano l'erba!
+                    
+                + [Chi punisce non riesce ad ascoltare il suo cuore.]
+                    -> color_variation_management(SecondCharacter, greenC)->
+                    Si no boh.
+                    Mio fratello però dice una cosa tipo questa qui che hai detto tu.
+                    Che papà è sempre arrabbiato perché non ascolta le sue emozioni.
+                    Magari è una cosa dei grandi?
+            
             -
             
             Possiamo usare la grattugia?
@@ -499,13 +500,29 @@
             Nonna dice che serve essere furbi.
             Io non so mica se posso essere tutte queste cose.
 
+                + [Essere te stesso vuol dire già essere un intero universo.]
+                    -> color_variation_management(SecondCharacter, purpleC)->
+                    Questo l'ha detto anche la maestra di scienze.
+                    Che noi per i virus siamo così grandi come la Terra lo è per noi!
+                    A volte sono a letto e penso a tutti questi piccoli virus.
+                    Magari hanno intere città dentro di me.
+                    E ogni volta che respiro si mettono a nuotare nell'aria?
+
                 + [L'unica cosa logica è essere te stesso.]
                     -> color_variation_management(SecondCharacter, blueC)->
                     Sì no boh.
                     Un cane è un cane.
                     Un gatto un gatto.
                     Quindi io posso solo essere io?
-                
+    
+                + [Concordo con tuo fratello: ciò che conta è essere brave persone.]
+                    -> color_variation_management(SecondCharacter, greenC)->
+                    Mio fratello è una brava persona.
+                    Anche il suo amico.
+                    Anche nonna.
+                    Però dicono sempre che la vita è difficile.
+                    Forse non è così bello essere brave persone.
+
                 + [Allora prova ad essere un dinosauro rosa!]
                     -> color_variation_management(SecondCharacter, yellowC)->
                     Bleah!
@@ -523,22 +540,7 @@
                     È una cosa brutta.
                     Volevo vedere cosa succede alle code dei gatti.
                     Ora la vicina non mi parla più.
-            
-                + [Concordo con tuo fratello: ciò che conta è essere brave persone.]
-                    -> color_variation_management(SecondCharacter, greenC)->
-                    Mio fratello è una brava persona.
-                    Anche il suo amico.
-                    Anche nonna.
-                    Però dicono sempre che la vita è difficile.
-                    Forse non è così bello essere brave persone.
-        
-                + [Essere te stesso vuol dire già essere un intero universo.]
-                    -> color_variation_management(SecondCharacter, purpleC)->
-                    Questo l'ha detto anche la maestra di scienze.
-                    Che noi per i virus siamo così grandi come la Terra lo è per noi!
-                    A volte sono a letto e penso a tutti questi piccoli virus.
-                    Magari hanno intere città dentro di me.
-                    E ogni volta che respiro si mettono a nuotare nell'aria?
+                   
                 -
             
             Ho trovato della cannella!
@@ -603,22 +605,6 @@
         E un libro sugli insetti della città che mi ha dato mio fratello.
         È il mio posto segreto.
 
-            + [Quindi ci impari quello che la scuola non ti insegna.]
-                    -> color_variation_management(SecondCharacter, blueC)->
-                Sì!
-                A me non mi interessa mica la storia.
-                Ci sono solo nomi e mi rompo.
-                E allora prendo i libri sui delfini.
-                Quelli mi piacciono.
-               
-            + ["Ma ci sono cose che non si possono capire con la riflessione, bisogna viverle."]
-                    -> color_variation_management(SecondCharacter, yellowC)->
-                L'hai letto anche tu?!?!
-                Il tipo che l'ha scritto era strano.
-                Ma strano bello.
-                Andava sempre in giro con una bussola e dei pupazzi e una pietra.
-                Mi piacciono le bussole!
-             
             + [Ogni guerrierə ha bisogno di riposarsi prima della battaglia.]
                     -> color_variation_management(SecondCharacter, redC)->
                 Ma io mica voglio fare il guerriero.
@@ -634,6 +620,14 @@
                 Mamma era preoccupata ma mi è piaciuto tantissimo.
                 Pioveva, non si sentiva niente.
                 È stato il mio giorno più bello.
+
+            + [Quindi ci impari quello che la scuola non ti insegna.]
+                    -> color_variation_management(SecondCharacter, blueC)->
+                Sì!
+                A me non mi interessa mica la storia.
+                Ci sono solo nomi e mi rompo.
+                E allora prendo i libri sui delfini.
+                Quelli mi piacciono.
     
             + ["Ma i desideri non si possono evocare, né soffocare a piacimento."]
                 -> color_variation_management(SecondCharacter, purpleC)->
@@ -642,6 +636,14 @@
                 E mi è piaciuta, perché ai grandi non piace sempre quando vuoi qualcosa.
                 Ma non è mica che lo faccio apposta.
                 E ora lo dice anche un libro!
+
+            + ["Ma ci sono cose che non si possono capire con la riflessione, bisogna viverle."]
+                    -> color_variation_management(SecondCharacter, yellowC)->
+                L'hai letto anche tu?!?!
+                Il tipo che l'ha scritto era strano.
+                Ma strano bello.
+                Andava sempre in giro con una bussola e dei pupazzi e una pietra.
+                Mi piacciono le bussole!     
             -
         
         Che profumino!
@@ -709,20 +711,7 @@
         Mi vuoi sgridare di nuovo?
         Ti ho già chiesto scusa.
         Ho imparato la lezione.
-
-            + [No: voglio solo razionalmente capire meglio alcune cose.]
-                    -> color_variation_management(SecondCharacter, blueC)->
-                Non è che mi stai studiando vero?
-                Come le scimmie allo zoo.
-                Non sono mica felici loro.
-               
-            + [Naa, al massimo sgridiamo {mentorName}. Ti sembro un{player_pronouns has him:o|{player_pronouns has her:a|ə}} che ti sgrida?!]
-                    -> color_variation_management(SecondCharacter, yellowC)->
-                Sì no boh.
-                Alle persone grandi piace sempre sgridare.
-                Solo Franco non mi sgrida mai.
-                Ma non ho capito quanto sia grande Franco.
-
+            
             + [Bimbo, rilassati, non sono un{player_pronouns has her:a|ə} professor{player_pronouns has him:o|{player_pronouns has her:a|ə}}.]
                     -> color_variation_management(SecondCharacter, redC)->
                 Però sei qui per lavorare.
@@ -733,7 +722,13 @@
                     -> color_variation_management(SecondCharacter, greenC)->
                 Però quello lo facciamo già.
                 Anche se non parliamo di bugie.    
-    
+
+            + [No: voglio solo razionalmente capire meglio alcune cose.]
+                    -> color_variation_management(SecondCharacter, blueC)->
+                Non è che mi stai studiando vero?
+                Come le scimmie allo zoo.
+                Non sono mica felici loro.
+
             + [Ora però vorrei imparare io una lezione da te.]
                 -> color_variation_management(SecondCharacter, purpleC)->
                 Quindi sono il tuo professore?
@@ -743,8 +738,15 @@
                 E sanno risolvere tantissime cose complicate.
                 Anche i labirinti.
                 Io mi perdo invece nei labirinti!
+
+            + [Naa, al massimo sgridiamo {mentorName}. Ti sembro un{player_pronouns has him:o|{player_pronouns has her:a|ə}} che ti sgrida?!]
+                    -> color_variation_management(SecondCharacter, yellowC)->
+                Sì no boh.
+                Alle persone grandi piace sempre sgridare.
+                Solo Franco non mi sgrida mai.
+                Ma non ho capito quanto sia grande Franco.
             -  
-        Scusami comunque.
+        Scusa {player_name}.
             {
                 - food_gift_second_char:
                     Sono contento di aver fatto pace con {mentorName}.
@@ -844,6 +846,14 @@
         Io non so cosa dire.
         E quindi o sto da solo, o devo dire bugie.
 
+            + [Ma perché non guardi i cartoni di nascosto? O prendi i fumetti in biblio?]
+                    -> color_variation_management(SecondCharacter, redC)->
+                La televisione la controlla mamma.
+                Però non ci avevo pensato alla biblioteca.
+                Lì ci posso andare per leggere.
+                A volte mi accompagna mamma ma poi si mette a fumare fuori con le amiche.
+                Mi piace questo piano, grazie {player_name}!
+
             + [Statisticamente deve esserci una persona con cui poter legare.]
                     -> color_variation_management(SecondCharacter, blueC)->
                 Si no boh.
@@ -854,29 +864,21 @@
                 E a volte mi fanno giocare con loro.
                 Ma mi fanno fare sempre il papà o cose così.
                 E mi distraggo e si arrabbiano.
-               
-            + [Tu amico mio hai tan-tis-si-ma fantasia, e devi condividerla con qualcunə!]
-                    -> color_variation_management(SecondCharacter, yellowC)->
-                A volte scrivo storie per mio fratello.
-                E a lui piacciono.
-                Una volta ha anche fatto dei disegni dalle mie storie!
-                Ho il quaderno nascosto sotto il letto.
-             
-            + [Ma perché non guardi i cartoni di nascosto? O prendi i fumetti in biblio?]
-                    -> color_variation_management(SecondCharacter, redC)->
-                La televisione la controlla mamma.
-                Però non ci avevo pensato alla biblioteca.
-                Lì ci posso andare per leggere.
-                A volte mi accompagna mamma ma poi si mette a fumare fuori con le amiche.
-                Mi piace questo piano, grazie {player_name}!
-        
+
             + [Devi sentirti molto solo.]
                     -> color_variation_management(SecondCharacter, greenC)->
                 Si no boh.
                 Non mi dire mica che ti dispiace.
                 Ma a me mi piace stare con gli altri.
                 Ma è così difficile.
-    
+
+            + [Tu amico mio hai tan-tis-si-ma fantasia, e devi condividerla con qualcunə!]
+                    -> color_variation_management(SecondCharacter, yellowC)->
+                A volte scrivo storie per mio fratello.
+                E a lui piacciono.
+                Una volta ha anche fatto dei disegni dalle mie storie!
+                Ho il quaderno nascosto sotto il letto.
+
             + [<i>Mi abbasso offrendo un abbraccio.]
                 -> color_variation_management(SecondCharacter, purpleC)->
                 Sì no boh.
@@ -941,12 +943,6 @@
         Per dirsi che possono esistere cose diverse da quelle che si hanno.
         E che l'arte è una bella bugia per farci andare avanti quando le cose fanno schifo.
 
-            + [L'arte non è fattuale, per cui sì, è una bella bugia.]
-                    -> color_variation_management(SecondCharacter, blueC)->
-                Tu parli strano a volte.
-                Però allora vuole dire che i grandi possono dirle le bugie.
-                Perché io no?
-               
             + [Quindi se dici che sei uno scrittore puoi dire tutte le bugie che vuoi?]
                     -> color_variation_management(SecondCharacter, yellowC)->
                 Non ci avevo pensato!
@@ -958,19 +954,25 @@
                 Eh?
                 Non ho mica capito {player_name}.
                 Cosa devo cambiare?
-        
+            
             + [Ci sono belle bugie che sono come coperte contro il freddo.]
                     -> color_variation_management(SecondCharacter, greenC)->
                 Le statue di mio fratello sono cose che non esistono mica.
                 Ma le guardo e mi piacciono tanto.
                 Dici una cosa così quindi?
-    
+
             + [L'arte mostra ciò che i fatti non sanno raccontare.]
                     -> color_variation_management(SecondCharacter, purpleC)->
                 A volte parli come un libro.
                 Ma questa cosa la capisco.
                 Quando sei un bambino se spieghi le cose nessuno ti ascolta.
-                Però i libri ti capiscono.
+                Però i libri ti capiscono.    
+
+            + [L'arte non è fattuale, per cui sì, è una bella bugia.]
+                    -> color_variation_management(SecondCharacter, blueC)->
+                Tu parli strano a volte.
+                Però allora vuole dire che i grandi possono dirle le bugie.
+                Perché io no?
             -
         
         Con la frutta avanzata ci preparo un succo!

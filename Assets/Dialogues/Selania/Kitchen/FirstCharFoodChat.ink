@@ -188,7 +188,13 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Mi sembrava che farlo avrebbe significato tradire il gruppo, che invece si era più ancorato all'idea di lasciare cadere le cose.
         Anche se Luana si è comportata da stronza.
         Ha senso?
-        
+    
+            + [Un'amicizia non è una onlus, e se si sta male ci si divide.]
+                -> color_variation_management(FirstCharacter, redC)->
+                Una amicizia è anche una onlus.
+                Non è che te ne vai quando le cose non vanno bene, no?
+            
+            
             + [Avevate concordato delle regole per queste situazioni?]
                 -> color_variation_management(FirstCharacter, blueC)->
                 Certo.
@@ -197,7 +203,15 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Mmm.
                 No.
                 Non c'è.
-               
+        
+            + [Sì: il cuore ha ferite che non si chiuderanno senza un chiarimento.]
+                -> color_variation_management(FirstCharacter, greenC)->
+                Penso tanto a Luana.
+                A volte mi manca.
+                A volte vorrei capire cosa è successo.
+                Se le cose potrebbero andare diversamente.
+                E tutte queste domande fanno un male boia.
+       
             + [Perché parlandole avresti tradito il gruppo? Mi son pers{player_pronouns has him:o|{player_pronouns has her:a|ə}} il nuovo "regole dell'amicizia"?]
                 -> color_variation_management(FirstCharacter, yellowC)->
                 Ma è ovvio che.
@@ -207,19 +221,6 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Ma puoi comunque romperle.
                 Ha senso?
              
-            + [Un'amicizia non è una onlus, e se si sta male ci si divide.]
-                -> color_variation_management(FirstCharacter, redC)->
-                Una amicizia è anche una onlus.
-                Non è che te ne vai quando le cose non vanno bene, no?
-        
-            + [Sì: il cuore ha ferite che non si chiuderanno senza un chiarimento.]
-                -> color_variation_management(FirstCharacter, greenC)->
-                Penso tanto a Luana.
-                A volte mi manca.
-                A volte vorrei capire cosa è successo.
-                Se le cose potrebbero andare diversamente.
-                E tutte queste domande fanno un male boia.
-    
             + [Cosa succederebbe se litigassero con te?]
                 -> color_variation_management(FirstCharacter, purpleC)->
                 In realtà è quello che è successo.
@@ -284,36 +285,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Perché dietro quella parola c'è una botta infinita di aspettative.
         Però per fortuna Talco è Talco e ne abbiamo parlato e ci siamo capit3.
         Ha senso vero?
-        
-            + [Una lingua esprime ciò che la sua cultura ritiene importante.]
-                -> color_variation_management(FirstCharacter, blueC)->
-                Ma una lingua è una roba viva.
-                La cultura, pure.
-                E quando le cose cambiano, cambiano entrambe, no?
-                Mica viviamo in un museo a cielo aperto, tipo.
-               
-            + [{charNameOne}, basta con "ha senso". Ha senso per voi, no?]
-                -> color_variation_management(FirstCharacter, yellowC)->
-                Sì.
-                Ma a volte due cose con un senso ti servono, anche solo per capire dove stai andando.
-                Ha senso?
-             
-            + [Conta quello che si fa, le parole fanno solo casino.]
-                -> color_variation_management(FirstCharacter, redC)->
-                Mmm.
-                Non credo.
-                Non è che conta tipo perché fai le cose, invece?
-                Cioè: ti posso dare uno schiaffo per difendermi o per attaccarti.
-                E sono due schiaffi proprio diversi, no?
-        
-            + [I sentimenti non si esauriscono se condivisi con più persone.]
-                -> color_variation_management(FirstCharacter, greenC)->
-                Questo.
-                Sì.
-                Questo è vero.
-                Non facilissimo da far capire, sai?
-                Ma vero.
-    
+
             + [L'avresti detto se non fossi stata ubriaca?]
                 -> color_variation_management(FirstCharacter, purpleC)->
                 Credo di sì.
@@ -321,6 +293,36 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Perché l'ho pensato a lungo.
                 Non ho più avuto il coraggio di dirlo di nuovo.
                 Ma resta vero comunque, no?
+            
+            + [Conta quello che si fa, le parole fanno solo casino.]
+                -> color_variation_management(FirstCharacter, redC)->
+                Mmm.
+                Non credo.
+                Non è che conta tipo perché fai le cose, invece?
+                Cioè: ti posso dare uno schiaffo per difendermi o per attaccarti.
+                E sono due schiaffi proprio diversi, no?
+            
+            + [{charNameOne}, basta con "ha senso". Ha senso per voi, no?]
+                -> color_variation_management(FirstCharacter, yellowC)->
+                Sì.
+                Ma a volte due cose con un senso ti servono, anche solo per capire dove stai andando.
+                Ha senso?
+             
+            + [Una lingua esprime ciò che la sua cultura ritiene importante.]
+                -> color_variation_management(FirstCharacter, blueC)->
+                Ma una lingua è una roba viva.
+                La cultura, pure.
+                E quando le cose cambiano, cambiano entrambe, no?
+                Mica viviamo in un museo a cielo aperto, tipo.
+                   
+    
+            + [I sentimenti non si esauriscono se condivisi con più persone.]
+                -> color_variation_management(FirstCharacter, greenC)->
+                Questo.
+                Sì.
+                Questo è vero.
+                Non facilissimo da far capire, sai?
+                Ma vero.
             -
         {
             - contentsKitchen has Bat:
@@ -400,14 +402,6 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         E le voglio cambiare.
         Ha senso?
         
-            + [Razionalmente ha senso cambiare solo ciò che si capisce.]
-                -> color_variation_management(FirstCharacter, blueC)->
-                E quando decidi che cosa hai capito e cosa no?
-                Perché tutto è un gran casino.
-                E tante cose cambiano di significato col tempo.
-                E quindi cosa facciamo?
-                Non cambiamo nulla?
-               
             + [Non è che prima di battere un mostro lo studi, no?]
                 -> color_variation_management(FirstCharacter, yellowC)->
                 Ehm.
@@ -420,15 +414,7 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Sì, credo?
                 Però non sempre sei prontə ad agire.
                 Quindi se non fai cose, se non cambi cose, non sei viva?
-        
-            + [Quindi ti senti inadeguata?]
-                -> color_variation_management(FirstCharacter, greenC)->
-                Bingo.
-                Già.
-                Totale.
-                Lo so che è una cosa comune.
-                Ma non è che mi fa stare proprio meglio.
-    
+
             + [Le parole grandi hanno anche grandi poteri.]
                 -> color_variation_management(FirstCharacter, purpleC)->
                 {
@@ -439,7 +425,25 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Penso a quando Talco ha deciso di chiamarsi Talco.
                 E a quel punto, con quella parola, è diventata la persona che è sempre statə.
                 Le parole sono sempre enormi.
-                Ha senso?
+                Ha senso?    
+        
+            + [Quindi ti senti inadeguata?]
+                -> color_variation_management(FirstCharacter, greenC)->
+                Bingo.
+                Già.
+                Totale.
+                Lo so che è una cosa comune.
+                Ma non è che mi fa stare proprio meglio.
+            
+            + [Razionalmente ha senso cambiare solo ciò che si capisce.]
+                -> color_variation_management(FirstCharacter, blueC)->
+                E quando decidi che cosa hai capito e cosa no?
+                Perché tutto è un gran casino.
+                E tante cose cambiano di significato col tempo.
+                E quindi cosa facciamo?
+                Non cambiamo nulla?    
+    
+            
             -        
         
         Aspetta, ho visto delle forbici prima.
@@ -517,20 +521,20 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 -> color_variation_management(FirstCharacter, blueC)->
                 Ma se poi quella base non la costruisce nessunə, perché si perde lo slancio, il coraggio?
                 Cosa ci abbiamo guadagnato?
-               
-            + [Non ho capito molto, ma di sicuro non mi piacciono l3 poliziott3.]
-                -> color_variation_management(FirstCharacter, yellowC)->
-                Siamo in due.
-                Non può diventare tutto una punizione, no?
-                No?
-             
+            
             + [Dobbiamo farci meno paranoie e agire di più.]
                 -> color_variation_management(FirstCharacter, redC)->
                 Non so.
                 Fare per fare non porta molto lontano.
                 O meglio: magari porta lontano.
                 Ma senza sapere dove arriveremo.
-        
+               
+            + [Non ho capito molto, ma di sicuro non mi piacciono l3 poliziott3.]
+                -> color_variation_management(FirstCharacter, yellowC)->
+                Siamo in due.
+                Non può diventare tutto una punizione, no?
+                No?
+
             + [Il perdono è un atto di coraggio, ci rende vulnerabili.]
                 -> color_variation_management(FirstCharacter, greenC)->
                 E la soluzione per me è nella vulnerabilità.
@@ -545,7 +549,8 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Anche se è difficile, ama.
                 Madonna se è difficile.
                 Perché dove lo metti comunque il senso di colpa?
-                Però è un bel punto di partenza.
+                Però è un bel punto di partenza.     
+            
             -
         
         <i>Più gorgonzola, meno poliziott3.</i>
@@ -628,11 +633,15 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Insomma: è bello lottare per le cose grandi.
         Ed è bello addormentarsi precarie e con i casini ma sapendo di aver portato un po' di gioia a una persona.
         Ha senso?
-
-            + [Senza distacco finisci per perdere l'obiettivo.]
-                -> color_variation_management(FirstCharacter, blueC)->
-                E magari faccio le cose perché mi piacciono, non perché sono utili.
-                Me lo dice anche Talco.
+        
+            + [Il cuore è caldo quando aiutiamo le altre persone, vero?]
+                -> color_variation_management(FirstCharacter, greenC)->
+                C'è quel momento.
+                Tipo quando vedi qualcunə che è lì e cucina e mangia in compagnia, per la prima volta da tempo.
+                E ti fa un sorriso sincero.
+                E tu sei lì stanca a bestia e incazzata con mezzo mondo.
+                E ti sciogli.
+                Ed è tutto così vivo.
 
             + [Quando tutto è dovere il piacere è rivoluzionario. Saggi{player_pronouns has him:o|{player_pronouns has her:a|ə}}, vero?]
                 -> color_variation_management(FirstCharacter, yellowC)->
@@ -647,16 +656,12 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Ma.
                 No, non so che altro dire.
                 Ti do ragione e bona a questo giro.
-        
-            + [Il cuore è caldo quando aiutiamo le altre persone, vero?]
-                -> color_variation_management(FirstCharacter, greenC)->
-                C'è quel momento.
-                Tipo quando vedi qualcunə che è lì e cucina e mangia in compagnia, per la prima volta da tempo.
-                E ti fa un sorriso sincero.
-                E tu sei lì stanca a bestia e incazzata con mezzo mondo.
-                E ti sciogli.
-                Ed è tutto così vivo.
-    
+
+            + [Senza distacco finisci per perdere l'obiettivo.]
+                -> color_variation_management(FirstCharacter, blueC)->
+                E magari faccio le cose perché mi piacciono, non perché sono utili.
+                Me lo dice anche Talco.
+
             + [Non rischi di mettere il tuo piacere davanti ai bisogni di chi vuoi aiutare?]
                 -> color_variation_management(FirstCharacter, purpleC)->
                 Io.
@@ -721,6 +726,31 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         Bene con me stessa.
         Ha senso?
 
+            + [Ogni cosa che immagini crea nuove versioni di te.]
+                -> color_variation_management(FirstCharacter, purpleC)->
+                Anche se l'idea di un universo pieno di me è terrificante, la frase mi suona molto.
+                Un po' come se provassi a vedere quello che non ho, non sono, non sono stata.
+                Così poi posso anche fare cose nel mondo, fuori, diverse.
+                E quindi quelle versioni di me vivono in me?
+                Ha senso?  
+               
+            + [Creare è come viaggiare, è vedere cose inesistenti, è spet-ta-co-la-re!]
+                -> color_variation_management(FirstCharacter, yellowC)->
+                Talco diceva sempre una cosa del genere.
+                "Sono poverə ma viaggio più di te."
+                E poi toccava un libro o un quadro o che e, insomma, si capisce vero?
+
+            + [Quindi riesci a trovare parti di te che altrimenti non vedresti?]
+                -> color_variation_management(FirstCharacter, greenC)->
+                Esatto.
+                Non sono proprio bravissima a vedermi.
+                Per quanto mi tiri un sacco di pipponi, lo so.
+                Ma mentre creo, mi vedo davvero.
+
+            + [Dipende da cosa ci fai poi, con quel benessere.]
+                -> color_variation_management(FirstCharacter, redC)->
+                Un pisolino, vale?
+        
             + [Immaginare plasma il cervello, per cui sì, è empiricamente sensato.]
                 -> color_variation_management(FirstCharacter, blueC)->
                 Ora facciamo un gioco, {player_name}.
@@ -728,31 +758,6 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Empatica.
                 Lo senti?
                 Lo senti il tuo cervello cambiare?
-               
-            + [Creare è come viaggiare, è vedere cose inesistenti, è spet-ta-co-la-re!]
-                -> color_variation_management(FirstCharacter, yellowC)->
-                Talco diceva sempre una cosa del genere.
-                "Sono poverə ma viaggio più di te."
-                E poi toccava un libro o un quadro o che e, insomma, si capisce vero?
-             
-            + [Dipende da cosa ci fai poi, con quel benessere.]
-                -> color_variation_management(FirstCharacter, redC)->
-                Un pisolino, vale?
-        
-            + [Quindi riesci a trovare parti di te che altrimenti non vedresti?]
-                -> color_variation_management(FirstCharacter, greenC)->
-                Esatto.
-                Non sono proprio bravissima a vedermi.
-                Per quanto mi tiri un sacco di pipponi, lo so.
-                Ma mentre creo, mi vedo davvero.
-    
-            + [Ogni cosa che immagini crea nuove versioni di te.]
-                -> color_variation_management(FirstCharacter, purpleC)->
-                Anche se l'idea di un universo pieno di me è terrificante, la frase mi suona molto.
-                Un po' come se provassi a vedere quello che non ho, non sono, non sono stata.
-                Così poi posso anche fare cose nel mondo, fuori, diverse.
-                E quindi quelle versioni di me vivono in me?
-                Ha senso?
             -    
         Ciotole pulite!
         Do una sciacquata anche ai bicchieri, che ho visto che c'è del vino rosso sotto al lavello.
@@ -818,19 +823,6 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Dai, dimmi come fare {player_name}!
                 Dimmi come resettarmi il cervello!
                
-            + [Sono sicur{player_pronouns has him:o|{player_pronouns has her:a|ə}} che ti farai sempre tan-tis-si-me domande serie.]
-                -> color_variation_management(FirstCharacter, yellowC)->
-                Ehm.
-                Colpita e affondata.
-                Però te l'avevo detto dall'inizio, che mi tiro un sacco di pipponi, no?
-             
-            + [Sono i tuoi obiettivi a dirti chi sei, {charNameOne}!]
-                -> color_variation_management(FirstCharacter, redC)->
-                La maggior parte delle volte il mio obiettivo è "non morire di fame questo mese".
-                O "pagare in qualche modo la bolletta dell'acqua".
-                O "non piangere in bagno a lavoro".
-                Cosa dicono di me questi obiettivi?
-        
             + [Sei le relazioni che hai, e per questo non potrai mai perderti.]
                 -> color_variation_management(FirstCharacter, greenC)->
                 A volte mi rendo conto di usare frasi o modi di fare di chi voglio bene.
@@ -838,7 +830,13 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Quando l'ho detto a Talco mi ha detto che è spaventoso, che è come perdersi.
                 Ma per me è il contrario: è tipo come avere delle boe dentro di me con cui orientarmi.
                 Ha senso?
-    
+
+            + [Sono sicur{player_pronouns has him:o|{player_pronouns has her:a|ə}} che ti farai sempre tan-tis-si-me domande serie.]
+                -> color_variation_management(FirstCharacter, yellowC)->
+                Ehm.
+                Colpita e affondata.
+                Però te l'avevo detto dall'inizio, che mi tiro un sacco di pipponi, no?
+
             + [Perdersi non è così male, potresti ritrovarti in modi inaspettati.]
                 -> color_variation_management(FirstCharacter, purpleC)->
                 Da piccola mi sono persa nel bosco.
@@ -846,6 +844,13 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 E ho imparato una cosa assurda: che sono meno fifona di quanto penso.
                 E che nei casini me la sfango bene.
                 Per cui sì, mi suona tantissimo quello che hai detto.
+
+            + [Sono i tuoi obiettivi a dirti chi sei, {charNameOne}!]
+                -> color_variation_management(FirstCharacter, redC)->
+                La maggior parte delle volte il mio obiettivo è "non morire di fame questo mese".
+                O "pagare in qualche modo la bolletta dell'acqua".
+                O "non piangere in bagno a lavoro".
+                Cosa dicono di me questi obiettivi?
             -
         Che botta questo vino comunque.
         {
@@ -909,16 +914,6 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
         E a quel punto mi sale un po' un'altra domanda.
         Perché se ciò che creo viene dagli scambi quotidiani, dai ricordi creati assieme, allora di chi è l'opera che si crea?
 
-            + [Realisticamente? Tua. È tuo il punto di vista dell'opera.]
-                -> color_variation_management(FirstCharacter, blueC)->
-                Avrei di che ridire anche su questo.
-                Perché è un punto di vista creato con le altre persone, no?
-               
-            + [Quando giochi ti godi la compagnia, non ti chiedi di chi è chi.]
-                -> color_variation_management(FirstCharacter, yellowC)->
-                Good point.
-                Ma {player_name}, hai visto anche tu che non so stare senza farmi domande complicate, vero?
-             
             + [Tua: chi l'ha fatta la fatica, il lavoro?]
                 -> color_variation_management(FirstCharacter, redC)->
                 E la fatica attorno a me?
@@ -926,7 +921,12 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Le sere in cui ho dato buca ad Ennio perché presa dalla creazione.
                 Le riflessioni infinite con Valeria e le altre per capire cosa non funziona e cosa sì.
                 Non è fatica la loro? Non è lavoro?
-        
+
+            + [Realisticamente? Tua. È tuo il punto di vista dell'opera.]
+                -> color_variation_management(FirstCharacter, blueC)->
+                Avrei di che ridire anche su questo.
+                Perché è un punto di vista creato con le altre persone, no?
+
             + [Di chi la ascolta, la legge, la guarda, creando un rapporto con te.]
                 -> color_variation_management(FirstCharacter, greenC)->
                 Mmm.
@@ -934,12 +934,17 @@ Quindi {player_name}, iniziamo a cucinare assieme? #speaker:{firstChar_tag()} #i
                 Anche se è un po' sempre quella roba "separare l'opera dall'autorə".
                 Che mi fa tanto "Critico J.K.Rowling ma spendo soldi in roba di Harry Potter".
                 Però l'idea del rapporto con chi mi ascolta mi piace molto molto molto.
-    
+
             + [Dell'acqua, e delle sue infinite storie.]
                 -> color_variation_management(FirstCharacter, purpleC)->
                 È una bella visione.
                 Così mi inserisco in una lunga conversazione, che non è né l'inizio né la fine.
                 E fa meno paura ogni prova, ogni rischio.
+            
+            + [Quando giochi ti godi la compagnia, non ti chiedi di chi è chi.]
+                -> color_variation_management(FirstCharacter, yellowC)->
+                Good point.
+                Ma {player_name}, hai visto anche tu che non so stare senza farmi domande complicate, vero?
             -
         
         Merda, credo di aver raggiunto dei livelli di pesantezza da record.
