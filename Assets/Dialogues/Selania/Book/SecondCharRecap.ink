@@ -39,7 +39,7 @@
                 - secondChar_ActualName has Corvo:
                     Ieri è successa una cosa fighissima. Ti ricordi quell'amica di mio fratello, che dovevo conoscere al mare? Sta da tre giorni da lui perché dice che è stata buttata fuori di casa. E mi ha raccontato tante cose che mica sapevo. Cose brutte che vengono fatte agli animali. Ma, {player_name}: non aveva paura. Lei dice che sono sveglio, e che per questo non devo avere paura perché posso capire tutto. E che magari un giorno trovo un modo per salvare gli animali. Mi ha regalato un romanzo di Ursula LeGuin (ho dovuto guardare la copertina, è un nome difficile). Non sapevo di potere imparare cose dai romanzi. Oggi ho chiesto alla maestra di matematica di darmi dei libri sull'ambiente. Ci sono così tante cose da imparare, {player_name}, così tante! Spero ci vedremo presto. Salutami la rana! <b>{charNameTwo}</b>. <>
             }
-        PS: Ma poi hai scoperto cos'è quella statua nella foresta? PPS: Ho un segreto che riguarda la serra, ma te lo dirò con la prossima lettera! Ciao ciao!
+        PS: Ma poi hai scoperto cos'è quel tronco nella foresta? PPS: Ho un segreto che riguarda la serra, ma te lo dirò con la prossima lettera! Ciao ciao!
 }
 
 

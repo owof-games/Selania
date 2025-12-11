@@ -454,13 +454,11 @@
         Sono a lezione e mi sto rompendo e quindi ho deciso di scrivere a {player_name}.#speaker:{secondChar_tag()} #inkA:offState #inkB:offState #inkC:offState  #inkD:offState #ewWord:{em_state(Other)} #portrait:unknown
         Cioè a te.
         Anche se non ho mica capito come te la mando la lettera.
-        Ma come sta la rana?#
+        Ma come sta la rana?
         Hai scoperto poi se è elettrica?
-            
             {
 
                 - secondChar_ActualName has Grizzly:
-                    
                     Oggi per la prima volta ho litigato con papà.
                     Nel senso che non è stato mica lui a cominciare ma io.
                     Ha cercato di picchiarmi e gli ho urlato che è un bullo.
@@ -476,7 +474,6 @@
                     Salutami la rana!
                     
                 - secondChar_ActualName has Lupo:
-                    
                     L'altro giorno ho parlato con l'amico di mio fratello.
                     Gli ho detto che per me siamo un branco ma che secondo me lui mica mi ci vede in questo branco.
                     E lui mi ha detto una cosa strana.
@@ -489,9 +486,7 @@
                     Mi sono divertito tanto.
                     E voglio portartene uno.
                   
-    
                 - secondChar_ActualName has Delfino:
-                    
                     A scuola sto finendo tantissimo nei guai.
                     Ho iniziato a fare qualche dispetto ai bambini prepotenti.
                     Secondo me hanno funzionato, ma le maestre si sono arrabbiate.
@@ -503,12 +498,10 @@
                     Quando l'ho ridetta a mio fratello è scoppiato a ridere.
                     Ma forse qui non te la scrivo, per ora.
                    
-                    
                 - secondChar_ActualName has Capibara:
-                    
                     Ieri ho avuto una conversazione da grandi con mio fratello.
                     Me l'ha fatta perché ho chiamato il suo amico "frocio" quando mi ha sgridato.
-                    E non avevo fatto nulla di male.
+                    Non avevo fatto nulla di male!
                     A parte mettere della tempera nel suo frullatore.
                     Mio fratello mi ha spiegato perché fa male quella parola.
                     E perché papà la usa quando è arrabbiato.
@@ -520,9 +513,7 @@
                     Però sono anche contento che mi hanno detto le cose per bene dopo tutti questi anni.
                     E tu hai paura di alcune persone?
                     
-                    
                 - secondChar_ActualName has Corvo:
-                    
                     L'altro giorno ho detto a mamma e papà che voglio diventare un veterinario.
                     Per studiare e salvare gli animali.
                     Mamma ha detto che allora forse dovrei diventare un etologo (questo l'ho fatto scrivere a lei, che però vuole sapere chi sei, è preoccupata).
@@ -532,9 +523,8 @@
                     Ma lui mi dice che la rabbia serve.
                     Va solo mandata nella giusta direzione.
                     Ti scriverò appena scopro qual è quella giusta e quale è quella sbagliata.
-                
             }
-            
+
             PS: come sta {mentorName}? Mi spiace per come l'ho trattata mentre ero lì, sai?
             Ma non dirglielo. Per ora per lo meno.
             Ciao!
@@ -559,12 +549,10 @@
         O se papà l'ha buttata.
             
             {
-
                 - secondChar_ActualName has Grizzly:
-                
                     Se l'ha buttata urlo di nuovo, vediamo che mi dice poi.
                     Però ti dovevo dire questa cosa: sono nella squadra di calcio.
-                    Non sono mica bravo, sinceramente.
+                    Non sono mica bravo.
                     Questa roba delle forza e della velocità non è roba mia proprio.
                     Però dice l'allenatore che ho strategia.
                     Mamma me l'ha fatto fare perché dice che devo scaricare tutta questa "rabbia da ragazzino".
@@ -577,7 +565,6 @@
                     Ciao!
     
                 - secondChar_ActualName has Lupo:
-                
                     Ma non credo: le cose negli ultimi giorni vanno meglio.
                     Con l'amico di mio fratello ho fatto dei muffin per lui e mamma.
                     E poi gli ho detto che mi dispiace quando litigano.
@@ -592,13 +579,12 @@
                     A presto.
                     
                 - secondChar_ActualName has Delfino:
-                
                     In questi giorni ho ripreso a dire delle bugie.
                     Ma invece di dirle piccole, le sto dicendo grandissime.
                     E questa cosa fa divertire i miei nuovi amici.
                     E anche qualche maestra.
                     Mamma dice che da grande devo fare il comico.
-                    Papà è banale e dice che devo fare il politico.
+                    Papà dice che devo fare il politico.
                     Mio fratello è preoccupato, perché teme che mi metto nei pasticci.
                     Gioco: una di queste cose che ho detto non è vera.
                     Tu lo capisci quale?
@@ -606,7 +592,6 @@
                     <b>{charNameTwo}</b>.
                     
                 - secondChar_ActualName has Capibara:
-                
                     Dopo che gli ho detto che lui usa quella parola con mio fratello perché ha paura, non mi parla più.
                     Mamma dice che lui ha paura di tutte le cose, ma non lo sa dire.
                     Le ho detto che ci sono delle associazioni.
@@ -621,7 +606,6 @@
                     Salutamela!
                 
                 - secondChar_ActualName has Corvo:
-                
                     Ultimamente parliamo di più.
                     Gli piace parlare di politica.
                     Secondo me dice cose stupide, ma forse nelle sue cose stupide c'è lui, le sue paure.
@@ -658,7 +642,6 @@
                 {
      
                 - secondChar_ActualName has Grizzly:
-                    
                     Sono SUPER ARRABBIATO.
                     CON MIO FRATELLO.
                     Non avevamo mai litigato, mai.
@@ -676,7 +659,6 @@
                     Vorrei sapere cosa fare.
                     
                 - secondChar_ActualName has Lupo:
-                    
                     Oggi sono triste, e non so perché.
                     Ho dato un pugno a un ragazzo delle medie, ma non mi è mica piaciuto.
                     A casa le cose vanno bene, ma.
@@ -692,7 +674,6 @@
                     <b>{charNameTwo}</b>.
                     
                 - secondChar_ActualName has Delfino:
-                    
                     Se non l'hai capito nell'ultima lettera solo l'ultima frase non era vera: tutte le altre lo erano.
                     Però è successa una cosa divertente, {player_name}!
                     La prof di matematica mi ha detto che le mie bugie sono storie.
@@ -709,7 +690,6 @@
                     <b>{charNameTwo}</b>.
                     
                 - secondChar_ActualName has Capibara:
-        
                     Questo cervellino (il mio cervellino) ha trovato una soluzione.
                     Ho parlato con la prof di matematica, e le ho detto delle mie paure.
                     Degli animali che spariscono, dei boschi che bruciano.
@@ -728,8 +708,7 @@
                     <b>{charNameTwo}</b>.
                 
                 - secondChar_ActualName has Corvo:
-                
-                    Ieri è successa una cosa fighissima.
+                    Ieri è successa una cosa bel-lis-si-MAAAAAA!
                     Ti ricordi quell'amica di mio fratello, che dovevo conoscere al mare?
                     Sta da tre giorni da lui perché dice che è stata buttata fuori di casa.
                     E mi ha raccontato tante cose che mica sapevo.
@@ -744,10 +723,9 @@
                     Spero ci vedremo presto.
                     Salutami la rana!
                     <b>{charNameTwo}</b>.
-                    
             }
         
-        PS: Ma poi hai scoperto cos'è quella statua nella foresta? 
+        PS: Ma poi hai scoperto cos'è quel tronco nella foresta? 
         PPS: Ho un segreto che riguarda la serra, ma te lo dirò con la prossima lettera! Ciao ciao!
         
         {
