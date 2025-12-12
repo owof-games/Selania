@@ -124,7 +124,7 @@
                }
                {
                     - cooking_with_first_char.first_theme:
-                        E già una volta ti sei ricostruita una vita, quando sei arrivata al Nord.
+                        E già una volta ti sei ricostruita una vita, quando sei arrivata al nord.
                 }
             
             + [Hai detto che quando rinunci a te creando, trovi tutto.]
